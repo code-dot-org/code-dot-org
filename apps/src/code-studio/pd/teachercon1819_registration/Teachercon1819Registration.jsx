@@ -15,8 +15,8 @@ export default class Teachercon1819Registration extends FormController {
     regionalPartnerId: PropTypes.number,
     applicationType: PropTypes.string.isRequired,
     course: PropTypes.string,
-    city: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
+    city: PropTypes.string,
+    date: PropTypes.string,
     email: PropTypes.string.isRequired,
     firstName: PropTypes.string,
     lastName: PropTypes.string,
@@ -33,7 +33,10 @@ export default class Teachercon1819Registration extends FormController {
       preferredFirstName: this.props.firstName,
       lastName: this.props.lastName,
       phone: this.props.phone,
-      course: this.props.course
+      course: this.props.course,
+      applicationType: this.props.applicationType,
+      city: this.props.city,
+      date: this.props.date
     };
   }
 
@@ -43,18 +46,25 @@ export default class Teachercon1819Registration extends FormController {
    * @override
    */
   getPageComponents() {
-    const pageComponents = [
-      Joining,
-      TravelPlans,
-    ];
+    if (
+        this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions['decline'] ||
+        this.state.data.ableToAttend === 'No'
+    ) {
+      return [Joining];
+    } else {
+      const pageComponents = [
+        Joining,
+        TravelPlans,
+      ];
 
-    if (this.props.applicationType === "Teacher") {
-      pageComponents.push(CoursePlans);
+      if (this.props.applicationType === "Teacher") {
+        pageComponents.push(CoursePlans);
+      }
+
+      pageComponents.push(Releases);
+
+      return pageComponents;
     }
-
-    pageComponents.push(Releases);
-
-    return pageComponents;
   }
 
   /**

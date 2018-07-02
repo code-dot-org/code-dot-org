@@ -1,4 +1,5 @@
-"ga":
+---
+ga:
   data:
     unplugged:
       Unplug1:
@@ -187,9 +188,9 @@
           digiteach seo.
       ComputationalThinking:
         title: Smaointeoireacht Ríomhaireachtúil
-        desc: "Úsáidfidh na daltaí céimeanna sa smaointeoireacht ríomhaireachtúil
-          (.i. miondealú, meaitseáil patrún, teibiú, algartam) chun cluiche a imirt
-          gan rialacha gan treoracha."
+        desc: Úsáidfidh na daltaí céimeanna sa smaointeoireacht ríomhaireachtúil (.i.
+          miondealú, meaitseáil patrún, teibiú, algartam) chun cluiche a imirt gan
+          rialacha gan treoracha.
       FunctionalSuncatchers:
         title: Móibílí Gréine
         desc: Sa cheacht seo, cruthóidh na daltaí algartam le hathróga agus le feidhmeanna
@@ -197,8 +198,8 @@
           dhéanamh as sreangáin agus coirníní.
       SongwritingParameters:
         title: Ceapadh Ceoil
-        desc: "Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi
-          fheidhmeanna."
+        desc: Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi
+          fheidhmeanna.
       DiceRace:
         title: 'Algartaim Fhíorshaoil: An Rás Díslí'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil.
@@ -249,7 +250,7 @@
           chuid de ríomhchlár níos mó. Tar éis an cheacht seo, tuigfidh na daltaí
           an fáth a bhfuil feidhmeanna chomh háisiúil.  '
       BinaryImages:
-        title: "Íomhánna Dénártha"
+        title: Íomhánna Dénártha
         desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna
           agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis
           a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap
@@ -290,9 +291,6 @@
           and the Distance Formula can be used to measure the distance between two
           points on the plane, and then decide whether those two points (or game characters)
           are touching.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -380,7 +378,7 @@
           siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh
           mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."
       courseD_unplugged_binaryImages:
-        title: "Íomhánna Dénártha"
+        title: Íomhánna Dénártha
         desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna
           agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis
           a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap
@@ -393,8 +391,8 @@
           taobh thiar de chluiche díslí.
       courseE_unplugged_songwritingParameters:
         title: Ceapadh Ceoil le Paraiméadair
-        desc: "Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi
-          fheidhmeanna."
+        desc: Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi
+          fheidhmeanna.
       courseE_unplugged_internet:
         title: An tIdirlíon
         desc: Seolfaidh na daltaí teachtaireachtaí ar pháipéar a léiríonn prótacail
@@ -406,8 +404,8 @@
           dalta amháin ann.
       courseE_unplugged_songwriting:
         title: Ceapadh Ceoil
-        desc: "Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi
-          fheidhmeanna."
+        desc: Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi
+          fheidhmeanna.
       courseF_unplugged_tangrams:
         title: Algartaim Tangraim
         desc: Taispeánann an ceacht seo rud éigin tábhachtach faoi algartaim. Mura
@@ -434,36 +432,167 @@
           an fáth a bhfuil feidhmeanna chomh háisiúil.  '
       swipeRightPassThrough:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''
+      PlantASeed_2018:
+        title: 'Algartaim Fhíorshaoil: Síol a Chur'
+        desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil,
+          ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta,
+          agus an ról tábhachtach a imríonn algartaim inti.
+      UnplugHappyMaps_2018:
+        title: Mapaí Meidhreacha
+        desc: Cruthóidh na daltaí algartaim shimplí (treoracha) chun carachtar a threorú
+          trí chathair ghríobháin le hordú amháin.
+      GoingPlacesSafely_2018:
+        title: Ag Taisteal Slán Sábháilte
+        desc: Tá an tIdirlíon cumhachtach, ach uaireanta contúirteach freisin. Foghlaimeoidh
+          na daltaí conas is féidir fanacht slán sábháilte ar an Idirlíon.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: An Teagmhas Mór
+        desc: Foghlaimeoidh na daltaí faoi "teagmhais" sa ríomhchlárú, gníomhartha
+          a ndéanann an ríomhaire monatóireacht leanúnach orthu. Brúfaidh an múinteoir
+          cnaipí ar chianrialtán páipéir, agus freagróidh na daltaí, ag brath ar an
+          gcnaipe a bhí brúite.
+      GraphPaperProgramming_2018:
+        title: Ríomhchlárú ar Ghrafpháipéar
+        desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide
+          as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a
+          atáirgeadh.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Gníomhaíocht Dhíphlugáilte
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Gníomhaíocht Dhíphlugáilte
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Coinníollacha
+        desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh
+          siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh
+          mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."
+      DigitalFootprint_2018:
+        title: Do Lorg Digiteach
+        desc: Foghlaimeoidh na daltaí go bhfágann siad "lorg digiteach" nuair a chuireann
+          siad faisnéis fúthu féin ar líne, agus go mbaineann torthaí leis an lorg
+          digiteach seo.
+      BinaryImages_2018:
+        title: Íomhánna Dénártha
+        desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna
+          agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis
+          a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap
+          sin mar a thaispeánann sé an chaoi a stórálann an ríomhaire faisnéis níos
+          casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.
+      PaperPlanes_2018:
+        title: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
+        desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil,
+          ag úsáid eitleán páipéir mar shampla. Díríonn sé ar an ríomheolaíocht níos
+          ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
+      GettingLoopy_2018:
+        title: Bí Lúbach
+        desc: Tugann an ceacht seo buneolas ar lúba (treoracha athdhéanta) sa ríomhchlárú
+          trí ghníomhaíocht damhsa. Foghlaimeoidh na daltaí cóiréagrafaíocht shimplí
+          agus déanfaidh siad an damhsa arís is aris eile.
+      BinaryBracelets_2018:
+        title: Bráisléid Dhénártha
+        desc: Déanfaidh gach dalta bráisléad mar léiriú dénártha ar an chéad litir
+          ina (h)ainm. Foghlaimeoidh na daltaí gur féidir sonraí a stóráil agus a
+          léiriú ar níos mó ná bealach amháin.
+      MoveItMoveIt_2018:
+        title: Bog é, Bog é
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Códáil Sealaíochta
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

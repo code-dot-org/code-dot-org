@@ -1,4 +1,4 @@
-no:
+"no":
   errors:
     messages:
       not_saved: 'Vennligst korriger følgende feil:'
@@ -69,7 +69,7 @@ no:
   try_k8intro: "Prøv vårt introduksjonskurs i informatikk for elever opp til 8. klasse (15-25 timer)"
   k8intro: "Introduksjonskurs i informatikk for elever opp til 8. klasse (15-25 timer)"
   already_started: "Har du allerede startet? Fortsett her >> "
-  demos: 'Administrator: Alle demoer'
+  demos: "Administrator: Alle demoer"
   continue: 'Fortsett'
   prize: 'premie'
   more_info: 'Mer info'
@@ -85,6 +85,7 @@ no:
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
     clever: 'Smartkonto'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Har du glemt passordet ditt?'
     need_confirmation: "Mottok du ikke instruksjoner om hvordan du bekrefter?"
     need_unlock: "Mottok du ingen instruksjoner om hvordan du låser opp?"
@@ -114,15 +115,25 @@ no:
     valid_password: "Gyldig passord!"
     invalid_password: "Passordet må bestå av minimum seks tegn"
     mismatch_password: "De to passordene du skrev inn samsvarer ikke"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine foreldre eller verge til å bruke tjenestene til Code.org."
+    agree_us_website: "Jeg aksepterer å bruke et nettsted som er basert i USA."
+    my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
     student_terms: "Jeg aksepterer <a href='http://code.org/tos'>brukerbetingelsene</a>  til Code.org. Hvis jeg er under 13 år, bekrefter jeg ved å sende inn dette skjemaet at jeg har tillatelse fra mine foreldre eller verge til å bruke tjenestene til Code.org.<br/><br/>Epost-adresser lagres ikke i en form som gjør at vi kan kontakte elever. Code.org vil aldri sende epost til elever, unntatt for passordpåminnelser. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer informasjon."
     teacher_terms: "Jeg aksepterer brukerbetingelsene til Code.org. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer informasjon om personvern."
     additional_information: "Vi trenger noen flere opplysninger for å fortsette registreringen din."
+    user_type_button: "Update Account Type"
     user_type_label: "Kontotype"
     user_type_teacher: "Lærer"
     user_type_student: "elev"
     field_is_required: "må fylles ut"
     accept_terms: "Du må gå med på å opprette en konto"
     error: "En feil har oppstått."
+    email_preference_question: "Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Ja"
+    email_preference_no: "Nei"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Informasjon til skolen (valgfritt)'
     school_country: 'Landet til skolen'
@@ -171,6 +182,7 @@ no:
       email: 'E-postadresse'
       submit: 'Send'
     reset_errors:
+      captcha_required: 'Fyll ut CAPTCHA for å lage nytt passord.'
       invalid_email: 'Det ser ut til at du har registrert deg med en ugyldig e-post adresse. Vennligst send epost til support@code.org for å få tilsendt en lenke for tilbakestilling av passord.'
     change_form:
       title: 'Endre passordet ditt'
@@ -220,7 +232,7 @@ no:
       provider_managed_section: "Denne seksjonen er administrert av en annen leverandør, og du mangler tilgang. Spør læreren om å registrere deg via %{provider} og last seksjonen på nytt."
     mail:
       student_disassociated:
-        subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet som din elev.'
+        subject: "Melding fra Code.org: %{student_name} er ikke lenger tilknyttet som din elev."
   reports:
     error:
       access_denied: "Du har ikke tilgang til denne personens statistikk"
@@ -348,11 +360,12 @@ no:
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
     email_confirm_wrong_email: '(Feil e-postadresse?)'
     email_resend_confirm: 'Send bekreftelse på nytt'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
     current_password_hint: '(vi trenger ditt gjeldende passord for å bekrefte dine endringer)'
     delete: 'Slett kontoen'
     delete_text: "Klikk på knappen under for å slette kontoen din."
-    delete_text_teacher_note: 'NB: Hvis du sletter din konto, slettes ikke dine elevers kontoer.'
+    delete_text_teacher_note: "NB: Hvis du sletter din konto, slettes ikke dine elevers kontoer."
     delete_confirm: 'Er du sikker på at du vil slette denne kontoen?'
     deleted_user: 'slettet bruker'
     no_password_because_oauth: 'Ingen passord fordi du logger inn med en tredjepartsleverandør.'
@@ -363,10 +376,11 @@ no:
     create_personal_login_under_13_parent_email: 'Foreldre/foresatt epost'
     create_personal_login_info: 'Hvis du vil fortsette å bruke din Code.org konto, selv etter slutten av skoleåret, kan du opprette din egen personlige pålogging nedenfor.'
     create_personal_login_terms: "Ved å opprette en personlig pålogging, godtar jeg Code.org <a href='%{terms_of_service_url}', target='_blank'> sine vilkår for bruk</a>. Hvis jeg er under 13 år, bekrefter jeg at jeg har mine foreldre eller verges tillatelse til å bruke Code.org tjenestene selv uten en lærer."
-    create_personal_login_email_note: 'Merk: E-postadresser er ikke lagret i et format som tillater oss å kontakte studentene. Studenter vil aldri få epost fra Code.org, unntatt ved passordgjenoppretting. Se våre <a href=''%{privacy_policy_url}'', target=''_blank''> retningslinjer for personvern</a> for mer informasjon.'
+    create_personal_login_email_note: "Merk: E-postadresser er ikke lagret i et format som tillater oss å kontakte studentene. Studenter vil aldri få epost fra Code.org, unntatt ved passordgjenoppretting. Se våre <a href='%{privacy_policy_url}', target='_blank'> retningslinjer for personvern</a> for mer informasjon."
     enter_new_login_info: 'Angi ny påloggingsinformasjon'
     confirm_secret_words: 'Bekreft at det er deg ved å angi gjeldende hemmelige ord'
     enter_parent_email: "Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)"
+    update: "Oppdater konto"
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -448,6 +462,7 @@ no:
     student_not_found: "En eller flere elever ble ikke funnet."
     all_students_must_be_in_current_section: "Alle elever må være innrullert i din avdeling."
     already_enrolled_in_new_section: "Du kan ikke flytte disse elevene fordi de allerede er i den nye seksjonen."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Lære i Code Studio"
     description: "Alle kan lære programmering. Lag egne spill, programmer og tegninger ved å kode."
@@ -455,6 +470,8 @@ no:
   gender:
     male: 'Mann'
     female: 'Kvinne'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Foretrekker å ikke svare'
   user_type:
     student: 'elev'
@@ -702,7 +719,7 @@ no:
     sign_out: 'Hvis du ikke ønsker å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.'
   terms_interstitial:
     title: "Oppdaterte tjenestebetingelser og personvernbetingelser"
-    intro_desc: 'Vi har oppdatert våre tjenestebetingelser og personvernbetingelser, som du kan se nedenunder. Endringene gjelder fra 24 august 2016. Den største endringen: Vi vil <i>ikke lenger lagre epost-adressene til elevenes kontoer på Code Studio</i>. Dette er viktig for oss, og vi håper det setter en ny personvernstandard for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige endringer via epost.'
+    intro_desc: "Vi har oppdatert våre tjenestebetingelser og personvernbetingelser, som du kan se nedenunder. Endringene gjelder fra 24 august 2016. Den største endringen: Vi vil <i>ikke lenger lagre epost-adressene til elevenes kontoer på Code Studio</i>. Dette er viktig for oss, og vi håper det setter en ny personvernstandard for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige endringer via epost."
     intro_instructions: "Du vil måtte akseptere disse nye betingelsene for at elever yngre enn 13 år kan ha full tilgang på all den nyeste funksjonaliteten i Code Studio. Når du registrerer en konto for en elev under 13, vil du måtte bekrefte at skolen har foreldrenes tillatelse til å samle inn elevens personlige informasjon til bruk i skolen, herunder til undervisningsprogrammer som Code Studio."
     tos: "Vilkår"
     privacy: "Personvern"
@@ -718,25 +735,25 @@ no:
     message_with_suggestion: "Vennlist kontroller at følgende informasjon er korrekt, eller oppdater etter behov."
     save: "Lagre"
   race_interstitial:
-    title: 'Valgfritt: Hjelp oss å spore fremdriften av forbedringen av mangfoldet innen programmering'
+    title: "Valgfritt: Hjelp oss å spore fremdriften av forbedringen av mangfoldet innen programmering"
     message: "Oppgi din etnisitet (kryss av alle som passer)"
     races:
       - 
-        white: Hvit
+        white: "Hvit"
       - 
-        black: Afrikansk
+        black: "Afrikansk"
       - 
-        hispanic: Latinamerikansk
+        hispanic: "Latinamerikansk"
       - 
-        asian: Asiatisk
+        asian: "Asiatisk"
       - 
-        hawaiian: Hawaii eller stillehavsøyene
+        hawaiian: "Hawaii eller stillehavsøyene"
       - 
-        american_indian: Amerikansk urbefolkning
+        american_indian: "Amerikansk urbefolkning"
       - 
-        other: Andre
+        other: "Andre"
       - 
-        opt_out: Ønsker ikke å si
+        opt_out: "Ønsker ikke å si"
     submit: "Send"
     decline: "Lukk"
   zendesk_too_young_message: 'Beklager, yngre brukere kan ikke logge på nettstedet for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be en forelder eller lærer å kontakte oss for deg.'
@@ -762,7 +779,7 @@ no:
     delete: "Slett"
     import: "Importer"
     share_link_import_bad_link_header: "Lenke ikke gjenkjent"
-    share_link_import_bad_link_body: 'Vi kunne ikke importere lenken. Kontroller at du bruker en kobling fra en Minecraft: Agent puslespill, og at du har kopiert hele koblingen.'
+    share_link_import_bad_link_body: "Vi kunne ikke importere lenken. Kontroller at du bruker en kobling fra en Minecraft: Agent puslespill, og at du har kopiert hele koblingen."
     share_link_import_error_header: "Noe gikk galt."
     share_link_import_error_body: "Det oppstod et problem ved import av lenken. Vennligst prøv igjen."
     exit: "Tilbake til kurset"
@@ -867,6 +884,7 @@ no:
     csd5_2: 'Kapittel 2: Problemløsing med data'
     csd6_1: 'Kapittel 1: Maskinvare utganger'
     csd6_2: 'Kapittel 2: Maskinvareinnganger'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
@@ -880,6 +898,11 @@ no:
     csp_ap_1: 'Kapittel 1: AP Tech oppsett'
     csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Enhet 2: Digital informasjon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Spørsmål til refleksjon'
   external_links:
     disclaimer: Ansvarsfraskrivelse
@@ -984,3 +1007,14 @@ no:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Alle kurs'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Jeg samtykker'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ja'

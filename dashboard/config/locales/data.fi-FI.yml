@@ -1,4 +1,5 @@
-"fi":
+---
+fi:
   data:
     game:
       name:
@@ -301,120 +302,8 @@
         maze_3_3: Miten pääsisin possun luo? Varmistathan, etten törmää TNT-laatikoihin!
         maze_3_4: Argh! Kirjoita minulle ohjelma, jolla pääsen TNT-laatikoiden ohi
           possun luo.
-        bounce_1_basketball: Liitä lohko "kun nuoli vasemmalle" -lohkoon ja paina
-          "Suorita". Liikuta kättä käyttäen vasenta nuolta, kohteen saavuttamiseksi.
-        bounce_2_basketball: Liitä lohko "kun nuoli oikealle"- ja "kun nuoli vasemmalle"
-          -lohkoon. Liikuta kättä saavuttaaksesi molemmat kohteet.
-        bounce_5_basketball: Olemme lähettämässä pallon alas kohti kättä. Liitä "kun
-          pallo osuu käteen" lohkoon toinen lohko, varmistaaksesi että pallo osuu
-          lippuun.
-        bounce_6_basketball: Nyt lippu on yläreunassa. Sinun tulee liittää lohkot
-          kumpaankin "kun pallo osuu" lohkoon, jotta pystyt ratkaisemaan tämän tehtävän.
-        bounce_7_basketball: Liitä toimintolohko kuhunkin "kun" lohkoon. Pomputa palloa,
-          kunnes se osuu maaliin.
-        bounce_10_basketball: Yläreunassa on nyt maali. Liitä "lisää piste" ja "lisää
-          piste vastustajalle" lohkot "kun pallo osuu maaliin" ja "kun pallo ohittaa
-          käden" lohkoihin saadaksesi aikaan pelin. Kokeile, kuinka monta pistettä
-          pystyt keräämään, ennen kuin vastustajasi saa kaksi pistettä.
-        bounce_11_basketball: Voit nyt lisätä lohkoja "suoritettaessa" lohkoon. Sinun
-          tulee lisätä uusi "laukaise uusi pallo" lohko useampaan, kuin yhteen paikkaan.
-          Kokeile myös vaihtaa taustaa tai sekä käden ja pallon nopeutta ja katso
-          kuinka monta pistettä pystyt keräämään ennen kuin vastustajasi saa kaksi
-          pistettä!
-        bounce_12_basketball: Luo oma Koripallo-pelisi. Voit muuttaa kaikkia sääntöjä.
-          Kun olet valmis, napsauta Valmis antaaksesi ystäviesi kokeilla peliäsi heidän
-          puhelimissaan.
-        bounce_1_sports: Mene lipulle! Liitä lohko "kun nuoli vasemmalle" -lohkoon
-          ja paina "Suorita" liikuttaaksesi pelaajan lipulle.
-        bounce_2_sports: Nyt on kaksi lippua! Lisää lohko "kun vasen nuoli"- ja "kun
-          oikea nuoli" -lohkoihin saadaksesi pelaajan liikkumaan kahteen suuntaan.
-        bounce_5_sports: Jääkiekko kiekko aikoo lentää alas kohti pelaaja! Liittää
-          lohko "kun pallo osuu pelaaja" -lohkoon osuaksesi lippuun.
-        bounce_6_sports: Nyt lippu on yläreunassa. Sinun tulee liittää lohkot kumpaankin
-          "kun pallo osuu" lohkoon, jotta pystyt ratkaisemaan tämän tehtävän.
-        bounce_7_sports: Liitä toimintolohko kuhunkin "kun" lohkoon. Pomputa palloa,
-          kunnes se osuu maaliin.
-        bounce_10_sports: Yläreunassa on nyt maali. Liitä "lisää piste" ja "lisää
-          piste vastustajalle" lohkot "kun pallo osuu maaliin" ja "kun pallo ohittaa
-          käden" lohkoihin saadaksesi aikaan pelin. Kokeile, kuinka monta pistettä
-          pystyt keräämään, ennen kuin vastustajasi saa kaksi pistettä!
-        bounce_11_sports: Voit nyt lisätä lohkoja "suoritettaessa" lohkoon. Sinun
-          tulee lisätä uusi "laukaise uusi pallo" lohko useampaan, kuin yhteen paikkaan.
-          Kokeile myös vaihtaa taustaa tai sekä käden ja pallon nopeutta ja katso
-          kuinka monta pistettä pystyt keräämään ennen kuin vastustajasi saa kaksi
-          pistettä!
-        bounce_12_sports: 'Luo oma peli! Olet vastuussa täällä: Voi muokata kaikkia
-          sääntöjä, sekoita ja yhdistä urheilulaijeja, ole luova! Kun olet valmis,
-          napsauta Valmis ja voit jakaa pelisi niin, että kaverisikin voivat pelata
-          sitä omilla puhelimillaan.'
-        bounce_1: Liitä lohko "kun nuoli vasemmalle" -lohkoon ja paina Suorita. Liikuta
-          mailaa käyttäen vasenta nuolta, kunnes se osuu lippuun.
-        bounce_2: Liitä lohko "kun nuoli oikealle" -lohkoon ja paina Suorita. Liikuta
-          mailaa käyttäen oikeaa nuolta, kunnes se osuu lippuun.
-        bounce_3: Yritä nyt jotain vastaavaa "kun nuoli ylös"-lohkon kanssa. Liikuta
-          maila yläreunassa olevaan lippuun.
-        bounce_4: Tällä kertaa sinun täytyy lisätä neljä lohkoa. Liikuta mailaa, niin
-          että se osuu kaikkiin neljään lippuun ratkaistaksesi tämän tehtävän.
-        bounce_5: Nyt laukaisemme pallon alas kohti mailaa. Liitä "kun pallo osuu
-          mailaan" lohkoon toinen lohko, jonka ansiosta pallo osuu lippuun.
-        bounce_6: Nyt lippu on yläreunassa. Sinun tulee liittää lohkot kumpaankin
-          "kun pallo osuu" lohkoon, jotta pystyt ratkaisemaan tämän tehtävän.
-        bounce_7: Liitä toimintolohko kuhunkin "kun" lohkoon. Pumputa palloa, kunnes
-          se osuu maaliin.
-        bounce_10: Yläreunassa on nyt maali. Liitä "lisää piste" ja "lisää piste vastustajalle"
-          lohkot "kun pallo osuu maaliin" ja "kun pallo ohittaa mailan" lohkoihin
-          saadaksesi aikaan pelin. Kokeile, kuinka monta pistettä pystyt keräämään,
-          ennen kuin vastustajasi saa kaksi pistettä.
-        bounce_11: Voit nyt lisätä lohkoja "suoritettaessa" lohkoon. Sinun tulee lisätä
-          uusi "laukaise uusi pallo" lohko useampaan, kuin yhteen paikkaan. Kokeile
-          myös vaihtaa taustaa ja sekä mailan, että pallon nopeutta ja katso kuinka
-          monta pistettä pystyt keräämään ennen kuin vastustajasi saa kaksi pistettä.
-        bounce_12: Luo oma Bounce-pelisi. Voi muokata kaikkea ulkonäköön ja sääntöihin
-          liittyvää. Kun olet valmis, napsauta Valmis ja voit jakaa pelisi niin, että
-          kaverisikin voivat pelata sitä omilla älypuhelimillaan.
         Custom_builder: Piirrä haluamanlaisesi taso vetämällä lohkoja työkaluista
           työtilaan. Valitse "Suorita" kun olet valmis.
-        flappy_1: Liitä lohko "napsautuksella"-lohkoon ja paina "Suorita". Napsauta
-          ruutua siirtääksesi Flappy maaliin.
-        flappy_2: Olemme nyt lisänneet hieman maata. Liitä lohko "maahan osuttaessa"-lohkoon.
-          Koodisi tulee suorittaa "lopeta peli" kun Flappy törmää.
-        flappy_3: '"Suoritettaessa"-lohko antaa sinun ajaa koodia pelisi käynnistyessä.
-          Kokeile asettaa tason nopeus ja räpyttely.'
-        flappy_4: Flappy lentää esteiden läpi ellet kirjoita koodia joka saa hänet
-          törmäämään. Liitä lohko "esteeseen osuttaessa"-lohkoon. Koodisi täytyy sisältää
-          "lopeta peli" kun Flappy törmää ensimmäisiin putkiin.
-        flappy_5: Lisätään peliin tulostaulu ja lasketaan pisteitä kun Flappy ohittaa
-          esteitä. Lisää "ohitettaessa este"-lohko ja kokeile saada pisteitä lennättämällä
-          Flappy ensimmäisten putkien ohi.
-        flappy_6: Kokeile, pystytkö vielä saamaan pisteitä, jos laitat Flappyn räpyttelemään
-          pienemmän tai suuremman määrän.
-        flappy_7: Seuraavaksi, kokeile muuttaa taustakuvaa liittämällä toinen lohko
-          "suoritettaessa"-lohko.
-        flappy_8: Voit asettaa ulkoasuun liittyvät asiat koska tahansa, ei vain pelin
-          käynnistyessä. Kokeile asettaa SATUNNAINEN kohtaus kun muita tapahtumia
-          tapahtuu, esim. kun ohitat esteen.
-        flappy_9: 'Asioita sotkemaan: kun osutaan esteeseen, ei lopeteta peliä vaan
-          kokeile asettaa pisteet takaisin 0:aan.'
-        flappy_11: Luo oma Flappy-pelisi. Voit muuttaa kaikkia ulkoasuun ja sääntöihin
-          liittyviä asioita, myös painovoimaa. Kun olet valmis, napsauta Valmis antaaksesi
-          ystäviesi kokeilla peliäsi heidän puhelimissaan.
-        flappy_k1_1: Pelaa Flappy-peliä
-        flappy_k1_2: Liitä lohko "napsautuksella"-lohkoon ja paina "Suorita". Napsauta
-          ruutua siirtääksesi Flappy maaliin.
-        flappy_k1_3: Olemme nyt lisänneet hieman maata. Liitä lohko "maahan osuttaessa"-lohkoon.
-          Koodisi tulee suorittaa "lopeta peli" kun Flappy törmää.
-        flappy_k1_4: '"Suoritettaessa"-lohko antaa sinun ajaa koodia pelisi käynnistyessä.
-          Kokeile asettaa tason nopeus ja räpyttely.'
-        flappy_k1_5: Flappy lentää esteiden läpi ellet kirjoita koodia joka saa hänet
-          törmäämään. Liitä lohko "esteeseen osuttaessa"-lohkoon. Koodisi täytyy sisältää
-          "lopeta peli" kun Flappy törmää ensimmäisiin putkiin.
-        flappy_k1_6: Lisätään peliin tulostaulu ja lasketaan pisteitä kun Flappy ohittaa
-          esteitä. Lisää "ohitettaessa este"-lohko ja kokeile saada pisteitä lennättämällä
-          Flappy ensimmäisten putkien ohi.
-        flappy_k1_7: Kokeile voitko saada useita pisteitä esteiden ohittamisesta
-        flappy_k1_8: Seuraavaksi, kokeile muuttaa taustakuvaa liittämällä toinen lohko
-          "suoritettaessa"-lohko.
-        flappy_k1_9: Kokeile muuttaa pelaajaa liittämällä "aseta pelaaja"-lohko "suoritettaessa"-lohkoon.
         jigsaw_1: Klikkaa lohkoa
         jigsaw_2: Vedä lohko kohteeseen
         jigsaw_3: Asettele lohkot kuvaksi
@@ -827,9 +716,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Tähtien Sota: Kasaa koodista Galaksi - Johdanto'
         starwars_typing: 'Tähtien Sota: Kasaa koodista Galaksi - JavaScript'
         starwars_events: 'Tähtien Sota: Kasaa koodista Galaksi - Tapahtumat'
@@ -885,6 +771,22 @@
         applab_intro_sounds: Sovelluslabra - Kuvat ja Äänet
         applab_intro_designmode: Sovelluslabra - Suunnittelumoodi
         applab_intro_share: Sovelluslabra - Jaa Sovelluksesi
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Silmukat
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan
@@ -939,8 +841,8 @@
         length_parameter: Osaatko päivittää tämän funktion niin, että se käyttää "pituus"
           parametria?
         frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
-        frozen_circle_function_in_circle_turn: "Älä unohda kääntyä luotuasi kunkin
-          ympyrän."
+        frozen_circle_function_in_circle_turn: Älä unohda kääntyä luotuasi kunkin
+          ympyrän.
         frozen_circle_function_with_parameter_circle: Käytä "Luo ympyrä"-lohkoa ja
           muuta kokoa.
         frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa
@@ -975,7 +877,7 @@
           kukasta ja tekee hunajaa jos se ei ole kukassa
         repeat_full_circle: Syötä se määrä kertoja, jonka zombin pitää liikkua tehdäkseen
           täysi ympyrä
-        place_length_variable: 'Korvaa kysymysmerkit vetämällä pituusmuuttuja tähän '
+        place_length_variable: Korvaa kysymysmerkit vetämällä pituusmuuttuja tähän
         arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
         right_arrow_fireball: Käytä oikeaa nuolta ampuaksesi tulipalloja
         name_function: Kirjoita funktiosi nimi tähän

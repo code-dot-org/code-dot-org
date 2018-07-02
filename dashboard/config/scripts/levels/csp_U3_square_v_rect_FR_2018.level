@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:37:41.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "<img src=\"https://images.code.org/2f9b8b6a1c42b7c6c881f89867352907-image-1506460228029.png\" style=\"float: right\">\r\n\r\nIn this lesson you wrote code to make the turtle draw squares. Briefly describe how the code for drawing a rectangle would be different than drawing a square.  (Example rectangle at right)",
+    "instructions_important": "false",
+    "placeholder": "Enter your response here",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "D/JJ6+OvdS1Z2ODDWSyzihlbynyuX0VoDGQ7teD7Gc7UUbq/lHNP97A+aZkl\nMdRyNbZBMgwi5jD9Yq1zS1QaGCAFkF74vLI59TMaGLKH82jl/kMcOrc4iCuf\nLh7/9U33NbvHCmlhfe6NhnZrrZjCoembc4id4MDEZPuFCSVZKA3og1/Nm5yQ\nObLtA7jxad0rMnBHLJtstqGi6fspcaIr4pA3ceisyzY6qHJnAHOBH25ROm3N\nF0WfqvVvr0Q2QvKy2Zt2jeqt5tCh+BQEAHNxLQVOy0y2j5ulQ5AIlhQLPlts\nMuv7q66wN7kB8EXyyKY0eXPck/wW2TZpgWtbnMrUUadZs4mvhNGpwvw5p6QQ\ntAwCri7t4gwEYgsR0qcw5fvngT0mrEWaJfc76ULYbvyxJ/uf8BZ53oijkGrQ\n8HStyBQ=\n",
+    "parent_level_id": 10020,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-26 21:12:36 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-26 21:16:27 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-09-26 21:16:50 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-03 17:09:09 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+}]]></config>
+</FreeResponse>

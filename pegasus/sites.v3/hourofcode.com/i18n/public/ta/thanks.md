@@ -38,13 +38,13 @@ As a thank you for helping make it possible for students to start learning compu
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. புதிய திறமைகளை கற்றுக்கொள்ள நீங்கள் பள்ளியில் இருக்க வேண்டியதில்லை. Invite a local politician or policy maker to visit your school for the Hour of Code. இது ஒரு மணி நேரத்திற்கு அப்பால் உங்கள் பகுதியில் கணினி அறிவியல் ஆதரவு உருவாக்க உதவ முடியும்.
 
-Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+உங்கள் சொந்த நிகழ்விற்கான இந்த [ சுவரொட்டிகள், பதாகைகள், ஸ்டிக்கர்கள், வீடியோக்கள் மற்றும் பலவற்றை ](<%= resolve_url('/promote/resources') %>) பயன்படுத்தவும்.
 
 ## 2. Find a local volunteer to help you with your event.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Plan your Hour of Code
 

@@ -1,0 +1,23 @@
+name 'U2L18 Match terms to cups and beans analogy_2018'
+title 'Asymmetric Encryption Assessment 2 - Match the terms to their counterpart in the Cups and Beans Activity'
+height '65'
+question 'The number of beans Alice chooses to put in the cup initially'
+answer 'Private key'
+question 'A sealed cup of beans that Alice puts on the table'
+answer 'Public key'
+question 'Bob adding beans to the cup'
+answer 'Encrypting a message'
+question 'Alice dumping the beans out of the cup and counting off her original number'
+answer 'Decrypting a message'
+
+
+teacher_markdown <<MARKDOWN
+Answers:
+
+- The number of beans Alice chooses to put in the cup initially: Private key
+- A sealed cup of beans that Alice puts on the table: Public key
+- Bob adding beans to the cup: Encrypting a message
+- Alice dumping the beans out of the cup and counting off her original number: Decrypting a message
+
+
+MARKDOWN

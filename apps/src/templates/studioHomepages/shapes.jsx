@@ -31,7 +31,16 @@ const shapes = {
       login_type: PropTypes.string,
       code: PropTypes.string.isRequired,
     })
-  )
+  ),
+  teacherAnnouncement: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    type: PropTypes.string,
+    id: PropTypes.string.isRequired,
+  }),
 };
 
 export default shapes;

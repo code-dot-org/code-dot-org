@@ -35,13 +35,13 @@ Begynd din Hour-of-Code med at inspirere dit barn of snak med barnet om, hvordan
 - Den oprindelige Code.org indlednings video med Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh (der er [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versioner)
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Præsident Obama opfordrer alle elever til at lære at programmere](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find flere inspirerende [ressourcer](<%= resolve_url('https://code.org/inspire') %>) og [videoer](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Det er helt i orden, at både du og dit barn aldrig har prøvet at programmere før. Her er nogle ideer der kan introducere jer til Hour-of-Code aktiviteter:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Fortæl om ting fra hverdagen, der indeholder programmer/kode.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
 
@@ -61,7 +61,7 @@ It’s okay to respond:
 
 ## 6) Celebrate
 
-[Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 Del billeder og video af jeres Hour of Code på sociale medier. Brug #HourOfCode og @codeorg så vi også kan dele jeres succes!
 
@@ -73,7 +73,7 @@ Del billeder og video af jeres Hour of Code på sociale medier. Brug #HourOfCode
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
 
 <%= view :signup_button %>

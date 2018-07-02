@@ -4,7 +4,7 @@ css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# How make a random color
+# How to make a random color
 
 <div style="width: 400px; margin: auto">
 

@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Assignment and Expressions\r\n\r\nYou know that **variables can hold a single value**. You also know that **expressions are always evaluated to a single value**. Why don't we try storing that single value in a variable so that we can use it many times in our programs.\r\n\r\n# Do This\r\n\r\nThis program generates a random multiple of 10 (10, 20, 30, 40 etc) and stores it in the variable `size`\r\n\r\n* **Run the progam** to see how it works\r\n* **Change the numbers used in the expression on line 3** to see how it affects this simple animation",

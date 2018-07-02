@@ -1,0 +1,18 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2018-03-20T00:03:26.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD U2 Project Template_2018",
+    "hide_share_and_remix": "true",
+    "markdown_instructions": "# Add HTML\r\n\r\nNext, you should add the HTML to your pages.\r\n\r\n# Do This\r\n* For each of the new pages that you've created, add HTML to make the page you sketched in your project guide.\r\n* You may also add more HTML to the pages you've already created.\r\n",
+    "parent_level_id": 9087,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Weblab>

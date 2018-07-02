@@ -14,13 +14,11 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './shapes';
-import {projectChanged} from '../code-studio/initApp/project';
+import {projectChanged, isOwner, getCurrentId} from '../code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
-// TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
-//       is deleted, so nothing is selected.
 // TODO: Warn about duplicate-named animations.
 
 // Args: {SerializedAnimationList} animationList
@@ -323,31 +321,22 @@ export function setInitialAnimationList(serializedAnimationList) {
 }
 
 export function addBlankAnimation() {
-  const key = createUuid();
-  return (dispatch, getState) => {
-    // Special behavior here:
-    // By pushing an animation that is "loadedFromSource" but has a null
-    // blob and dataURI, Piskel will know to create a new document with
-    // the given dimensions.
-    dispatch(addAnimationAction(
-      key,
-      {
-        name: generateAnimationName('animation', getState().animationList.propsByKey),
-        sourceUrl: null,
-        frameSize: {x: 100, y: 100},
-        frameCount: 1,
-        looping: true,
-        frameDelay: 4,
-        version: null,
-        loadedFromSource: true,
-        saved: false,
-        blob: null,
-        dataURI: null,
-        hasNewVersionThisSession: false
-      }));
-    dispatch(selectAnimation(key));
-    projectChanged();
-  };
+  // To avoid special cases and saving tons of blank animations to our server,
+  // we're actually adding a secret blank library animation any time the user
+  // picks "Draw my own."  As soon as the user makes any changes to the
+  // animation it gets saved as a custom animation in their own project, just
+  // like we do with other library animations.
+  return addLibraryAnimation(
+    {
+      name: 'animation',
+      sourceUrl: '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
+      frameSize: {x: 100, y: 100},
+      frameCount: 1,
+      looping: true,
+      frameDelay: 4,
+      version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz',
+    }
+  );
 }
 
 /**
@@ -450,7 +439,7 @@ export function cloneAnimation(key) {
       key: newAnimationKey,
       props: Object.assign({}, sourceAnimation, {
         name: generateAnimationName(sourceAnimation.name + '_copy', animationList.propsByKey),
-        version: null,
+        version: sourceAnimation.version,
         saved: false
       })
     });
@@ -555,8 +544,9 @@ export function deleteAnimation(key) {
 function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
-    const state = getState().animationList;
-    const sourceUrl = animationSourceUrl(key, state.propsByKey[key]);
+    const state = getState();
+    const sourceUrl = animationSourceUrl(key, state.animationList.propsByKey[key],
+      state.pageConstants && state.pageConstants.channelId);
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -569,17 +559,27 @@ function loadAnimationFromSource(key, callback) {
 
         // Log data about when this scenario occurs
         firehoseClient.putRecord(
-         'analysis-events',
-            {
-              study: 'animation_no_load',
-              study_group: 'animation_no_load_with_buttons',
-              event: 'animation_not_loaded',
-              data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
-                'animationName': state.propsByKey[key].name, 'error': err.message})
-            }
+          {
+            study: 'animation_no_load',
+            study_group: 'animation_no_load_v4',
+            event: isOwner() ? 'animation_not_loaded_owner' : 'animation_not_loaded_viewer',
+            project_id: getCurrentId(),
+            data_json: JSON.stringify({
+              'sourceUrl': sourceUrl,
+              'mainJsonSourceUrl': state.animationList.propsByKey[key].sourceUrl,
+              'version': state.animationList.propsByKey[key].version,
+              'animationName': state.animationList.propsByKey[key].name,
+              'error': err.message
+            })
+          },
+          {includeUserId: true}
         );
 
-        dispatch(reportError(`Sorry, we couldn't load animation "${state.propsByKey[key].name}".`, "anim_load", key));
+        if (isOwner()) {
+          // Display error dialog
+          dispatch(reportError(`Sorry, we couldn't load animation "${state.animationList.propsByKey[key].name}".`, "anim_load", key));
+        }
+
         return;
       }
 
@@ -670,7 +670,9 @@ function startLoadingPendingFramesFromSourceAction() {
 function loadPendingFramesFromSource(key, props, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
-    const sourceUrl = animationSourceUrl(key, props);
+    const state = getState();
+    const sourceUrl = animationSourceUrl(key, props,
+      state.pageConstants && state.pageConstants.channelId);
     dispatch(startLoadingPendingFramesFromSourceAction());
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
@@ -693,27 +695,34 @@ function loadPendingFramesFromSource(key, props, callback) {
  * the spritesheet.
  * @param {!AnimationKey} key
  * @param {!SerializedAnimationProps} props
- * @param {boolean} withVersion - Whether to request a specific version of the
- *        animation if pulling from the local project.
+ * @param {string} channelId - Used to differentiate library animations
  * @returns {string}
  */
-export function animationSourceUrl(key, props, withVersion = false) {
-  // TODO: (Brad) We want to get to where the client doesn't know much about
-  //       animation versions, by switching to Chris' new Files API.
-  //       in the meantime, be able to request versions only when we export
-  //       JSON for levelbuilders to use.
+export function animationSourceUrl(key, props, channelId) {
+  // If the animation has a sourceUrl it's external (from the library,
+  // a levelbuilder, or an uploaded image) - and we may need to run it through
+  // the media proxy.
+  // ChannelId differentiates anims included by levelbuilders from project animations
+  const fromLibraryOrLevelbuilder = props.sourceUrl && !props.sourceUrl.includes('v3/animations/' + channelId);
+  const uploadedAnimation = props.sourceUrl && props.sourceUrl.includes('v3/animations/' + channelId);
 
-  // 1. If the animation has a sourceUrl it's external (from the library
-  //    or some other outside source, not the animation API) - and we may need
-  //    to run it through the media proxy.
-  if (props.sourceUrl) {
+  // No need to append a version for animations in the library/from levelbuilders
+  // or if the srcUrl points to an uploaded animation and contains a version
+  const versionNotNeeded = fromLibraryOrLevelbuilder || (uploadedAnimation && props.sourceUrl.includes('?version'));
+
+  if (versionNotNeeded) {
     return assetPrefix.fixPath(props.sourceUrl);
+  } else if (uploadedAnimation) {
+    if (props.version) {
+      return assetPrefix.fixPath(props.sourceUrl) + '?version=' + props.version;
+    } else {
+      return assetPrefix.fixPath(props.sourceUrl) + '?version=latestVersion';
+    }
   }
 
-  // 2. Otherwise it's local to this project, and we should use the animation
-  //    key to look it up in the animations API.
-  return animationsApi.basePath(key) + '.png' +
-      ((withVersion && props.version) ? '?version=' + props.version : '');
+  // Animations that are not from the library, levelbuilder, or uploaded, should
+  // use the animation key and version to look it up in the animations API.
+  return animationsApi.basePath(key) + '.png?version=' + (props.version || '');
 }
 
 /**
@@ -723,12 +732,12 @@ export function animationSourceUrl(key, props, withVersion = false) {
  * @param {SerializedAnimationList} serializedList
  * @return {SerializedAnimationList} with aboslute sourceUrls for every animation.
  */
-export function withAbsoluteSourceUrls(serializedList) {
+export function withAbsoluteSourceUrls(serializedList, channelId) {
   let list = _.cloneDeep(serializedList);
   list.orderedKeys.forEach(key => {
     let props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, props, true);
+    const relativeUrl = animationSourceUrl(key, props, channelId);
     const sourceLocation = document.createElement('a');
     sourceLocation.href = relativeUrl;
     props.sourceUrl = sourceLocation.href;

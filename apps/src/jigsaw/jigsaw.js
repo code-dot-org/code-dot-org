@@ -9,7 +9,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
 var dom = require('../dom');
 import {getStore} from '../redux';
@@ -120,7 +120,6 @@ Jigsaw.init = function (config) {
   }
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
-  // TODO (br-pair) : I think this is something that's happening in all apps?
   config.loadAudio = function () {
     studioApp().loadAudio(skin.winSound, 'win');
     studioApp().loadAudio(skin.startSound, 'start');

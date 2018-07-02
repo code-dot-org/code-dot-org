@@ -59,7 +59,7 @@ da:
   courses: 'kurser'
   courses_page:
     title_student: "Lære om Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Unplugged aktivitet'
   of: "af"
   more: "MERE"
@@ -69,7 +69,7 @@ da:
   try_k8intro: "Prøv vores grundskole introduktionskursus i programmering (15-25 timer)"
   k8intro: "Grundskole introduktion til datalogi kursus (15-25 timer)"
   already_started: "Allerede startet? Fortsæt her >> "
-  demos: 'Admin: Alle demoer'
+  demos: "Admin: Alle demoer"
   continue: 'Fortsæt'
   prize: 'præmie'
   more_info: 'Mere information'
@@ -85,6 +85,7 @@ da:
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Glemt din adgangskode?'
     need_confirmation: "Har du ikke modtaget bekræftelsesinstruktioner?"
     need_unlock: "Ikke modtaget lås op instruktioner?"
@@ -114,15 +115,25 @@ da:
     valid_password: "Gyldig adgangskode!"
     invalid_password: "Adgangskoden skal være på mindst 6 tegn"
     mismatch_password: "De to adgangskoder du har indtastet stemmer ikke overens"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
+    agree_us_website: "Jeg accepterer at bruge en hjemmeside baseret i USA."
+    my_data_to_us: "Data fra min brug af dette websted kan sendes til og gemmes eller behandles i USA."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig."
+    user_type_button: "Update Account Type"
     user_type_label: "Kontotype"
     user_type_teacher: "Lærer"
     user_type_student: "Elev"
     field_is_required: "krævet"
     accept_terms: "Du skal acceptere at oprette en konto"
     error: "Der opstod en fejl."
+    email_preference_question: "Kan vi e-maile dig om opdateringer til vores kurser, lokale muligheder eller andre nyheder om computervidenskab?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Ja"
+    email_preference_no: "Nej"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Skoleoplysninger (valgfri)'
     school_country: 'Skolens land'
@@ -171,6 +182,7 @@ da:
       email: 'Email adresse'
       submit: 'Indsend'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Det ser ud, som du har tilmeldt en ugyldig e-mail-adresse. Send en email til email support@code.org for at modtage et link til at få adgang.'
     change_form:
       title: 'Skift din adgangskode'
@@ -201,7 +213,7 @@ da:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Hemmeligt ord'
       email: 'E-mail'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -220,7 +232,7 @@ da:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org besked: %{student_name} er ikke længere tilknyttet som din elev.'
+        subject: "Code.org besked: %{student_name} er ikke længere tilknyttet som din elev."
   reports:
     error:
       access_denied: "Du har ikke adgang til denne persons statistikker"
@@ -348,11 +360,12 @@ da:
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
     email_confirm_wrong_email: '(Forkert e-mail?)'
     email_resend_confirm: 'Gensend bekræftelsesmail'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
     current_password_hint: '(vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)'
     delete: 'Slet din konto'
     delete_text: "Klikkes på knappen nedenfor, slettes din konto."
-    delete_text_teacher_note: 'Bemærk venligst: Sletning af din konto vil ikke slette dine studerendes konti.'
+    delete_text_teacher_note: "Bemærk venligst: Sletning af din konto vil ikke slette dine studerendes konti."
     delete_confirm: 'Sikker på, at du vil slette din konto?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -363,10 +376,11 @@ da:
     create_personal_login_under_13_parent_email: 'Forældres/værges e-mail adresse'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Fuldført'
     tried: 'Forsøgt'
@@ -448,6 +462,7 @@ da:
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
     already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Lære om Code Studio"
     description: "Enhver kan lære programmering. Lav spil, apps og kunst med kode."
@@ -455,6 +470,8 @@ da:
   gender:
     male: 'Mand'
     female: 'Kvinde'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Foretrækker ikke at svare'
   user_type:
     student: 'studerende'
@@ -702,12 +719,12 @@ da:
     sign_out: 'Hvis du ikke ønsker at give din alder kan <a href="%{url}"> logge ud</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Termer"
     privacy: "Privatlivspolitik"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "Udskriv"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -718,25 +735,25 @@ da:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Gem"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Andre
+        other: "Andre"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "Indsend"
     decline: "Luk"
   zendesk_too_young_message: 'Beklager, yngre brugere kan ikke logge på vores websted. Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at logge på eller spørg dine forældre eller lærer om at kontakte os for dig.'
@@ -762,7 +779,7 @@ da:
     delete: "Slet"
     import: "Importér"
     share_link_import_bad_link_header: "Ukendt delingslink"
-    share_link_import_bad_link_body: 'Vi kunne ikke importere delingslinket. Sørg for, at du bruger et link fra en Minecraft: Agent-opgave, og at du har kopieret hele linket.'
+    share_link_import_bad_link_body: "Vi kunne ikke importere delingslinket. Sørg for, at du bruger et link fra en Minecraft: Agent-opgave, og at du har kopieret hele linket."
     share_link_import_error_header: "Der gik noget galt"
     share_link_import_error_body: "Vi kunne ikke importere delingslinket. Prøv igen."
     exit: "Vend tilbage til kursus"
@@ -865,8 +882,9 @@ da:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ da:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -984,3 +1007,14 @@ da:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Jeg er enig'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ja'

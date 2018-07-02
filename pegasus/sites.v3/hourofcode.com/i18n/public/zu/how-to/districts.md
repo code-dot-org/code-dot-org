@@ -23,7 +23,7 @@ nav: how_to_nav
 
 IHora loKufingqwa liyisi nyathelo sokuqala kuhambo lokufunda kabanzi ngokuba ithekhinoloji isebenza kanjani kanye nokuba ama aplikheyishini amasofthiwe adalwa kanjani. Ukuqhubekela phambili ngalohambo:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Thamela](<%= resolve_url('https://code.org/professional-development-workshops') %>) eyosuku olulodwa, ingqungquthela yomuntu-okhona ukuthola imfundiso evela kumkhuthazi wekhompyutha sayensi onesipiliyoni. (abafundisi baseMelika kuphela)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

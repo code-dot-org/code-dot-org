@@ -1,0 +1,30 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "turn",
+    "blockText": "{SPRITE} turn {DIRECTION} {N} degrees",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "N",
+        "type": "Number"
+      },
+      {
+        "name": "DIRECTION",
+        "options": [
+          [
+            "right",
+            "\"right\""
+          ],
+          [
+            "left",
+            "\"left\""
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Skriv en pressemelding. ** Du kan bruke [dette eksempelet](%= resolve_url('/promote/official-press-release') %) som veiledning.
 
-9. **Finn likesinnede.** Besøk [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) for å lære mer om utdanningstilbudet innen informatikk i ditt fylke. Signer underskriftskampanjen du finner der, og Code.org vil oppdatere deg om hvordan de forsøker å påvirke myndighetene.
+9. **Connect locally.** Visit [code.org/promote](%= codeorg_url('/promote') %) to learn more about computer science education in your state. Signer underskriftskampanjen du finner der, og Code.org vil oppdatere deg om hvordan de forsøker å påvirke myndighetene.
 
 <%= view :signup_button %>

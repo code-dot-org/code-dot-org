@@ -130,8 +130,17 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
       });
 
   // Pull selectionStart and selectionEnd from the target element, if available,
-  // and expose them on the sandboxed event object
-  if (event.target) {
+  // and expose them on the sandboxed event object. (Safari will throw if we
+  // we ask for these properties on elements that aren't a TEXTAREA or these
+  // 5 INPUT types)
+  if (event.target &&
+      ((event.target.tagName === 'INPUT' &&
+       (event.target.type === 'text' ||
+        event.target.type === 'search' ||
+        event.target.type === 'password' ||
+        event.target.type === 'url' ||
+        event.target.type === 'tel')) ||
+      event.target.tagName === 'TEXTAREA')) {
     ['selectionStart', 'selectionEnd'].forEach((eventTargetPropName) => {
       if (event.target[eventTargetPropName] !== undefined) {
         newEvent[eventTargetPropName] = event.target[eventTargetPropName];

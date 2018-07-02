@@ -173,7 +173,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Animate Your Picture\r\n\r\n<img style=\"float:right\" src=\"https://images.code.org/d2ad362f37d0e5f9b98691654256d2fb-image-1469469372823.gif\">\r\n\r\nNow that everything is in the right place, you can make them move using the properties and methods you have learned.\r\n\r\n# Do This\r\n\r\nUse `rotationSpeed`, `rotationToDirection`, `getSpeed`, `getDirection`, and `setSpeed` to animate your scene, as seen in the image to the right.  ",

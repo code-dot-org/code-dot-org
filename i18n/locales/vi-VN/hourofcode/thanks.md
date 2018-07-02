@@ -3,18 +3,18 @@ title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": <%= hoc_s(:meta_tag_og_title) %>
-  "og:description": <%= hoc_s(:meta_tag_og_description) %>
-  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": http://<%=request.host%>
+  "og:url": "http://<%=request.host%>"
   "twitter:card": nguời chơi
-  "twitter:site": '@codeorg'
-  "twitter:url": http://<%=request.host%>
-  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
-  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
-  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -33,13 +33,13 @@ Như một lời cảm ơn vì đã giúp thực hiện nó khả thi cho các b
 
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Bạn không cần phải ở trong trường học để tìm hiểu kỹ năng mới. Invite a local politician or policy maker to visit your school for the Hour of Code. Nó có thể giúp xây dựng hỗ trợ cho khoa học máy tính trong khu vực của bạn vượt quá một giờ.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](%= resolve_url('/promote/resources#sample-emails') %) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Bạn không cần phải đang học ở trong trường để học những kỹ năng mới. Invite a local politician or policy maker to visit your school for the Hour of Code. Điều này có thể giúp xây dựng hỗ trợ cho khoa học máy vi tính trong khu vực của bạn hơn một giờ.
 
-Sử dụng các [áp phích, biểu ngữ, stickers, video và nhiều hơn nữa](%= resolve_url('/promote/resources') %) cho sự kiện của riêng bạn.
+Sử dụng các [áp phích, biểu ngữ, nhãn dán, video và nhiều hơn nữa](%= resolve_url('/promote/resources') %) cho sự kiện của riêng bạn.
 
 ## 2. Tìm một người tình nguyện địa phương để giúp bạn với sự kiện của bạn.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](%= codeorg_url('/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Plan your Hour of Code
 

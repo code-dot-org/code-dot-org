@@ -1,4 +1,5 @@
-"ca":
+---
+ca:
   data:
     game:
       name:
@@ -315,122 +316,9 @@
           de TNT!
         maze_3_4: Argh! Escriu-me un programa que em porti al voltant de la TNT i
           al porc.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Uneix un altre bloc al de "quan tecla a l'esquerra"  i prem "Executar".
-          Mou la pala utilitzant la fletxa esquerra per arribar a l'objectiu final.
-        bounce_2: Uneix un altre bloc als de "quan tecla a la dreta" i "quan tecla
-          a la esquerra". Mou la pala per arribar a tots dos objectius finals.
-        bounce_3: Ara provar alguna cosa similar amb el bloc "quan fletxa cap amunt".
-          Mou la pala cap a l'objectiu final a la part superior.
-        bounce_4: Aquesta vegada has d' afegir quatre blocs. Mou la pala a tots quatre
-          objectius per completar aquest puzle.
-        bounce_5: Anem a llançar una pilota  cap a la pala. Uneix un bloc al bloc
-          "quan bola colpeja pala" per assegurar que la pilota arriba a l'objectiu
-          final.
-        bounce_6: Ara l'objectiu final és a la part superior. Cal unir blocs a tots
-          dos blocs "quan toca la bola " per resoldre aquest puzle.
-        bounce_7: Uneix blocs a cadascun dels blocs "quan". Bota la pilota fins que
-          arribi a l'objectiu final.
-        bounce_10: Ara hi ha un objectiu a la part superior. Uneix els blocs "puntuació"
-          i "puntuació oponent"  als blocs "quan bola arriba a la meta" i "quan bola
-          passa de llarg" per fer un joc. Mira quants punts pots anotar abans que
-          el seu oponent anoti dues vegades.
-        bounce_11: Ara pots unir blocs al bloc "En executar". Has de col·locar el
-          nou bloc "Llança nova pilota" a més d'un lloc. A més a més, prova de canviar
-          l'escena o la velocitat de la pala i la pilota i mira quants punts pots
-          fer abans que el teu oponent en faci dos.
-        bounce_12: Fes el teu propi joc de botar. Pots canviar totes els efectes visuals
-          i les normes. Quan estiguis, fes clic a Finalitza per a què els teus amics
-          hi juguin al seus mòbils.
         Custom_builder: Arrossega el blocs de la caixa d'eines a l'àrea de treball
           per a dibuixar el nivell que vulguis crear. Prem "Executa" quan estiguis
           a punt.
-        flappy_1: Uneix un bloc al bloc "quan faci clic", i prem "Executa". Fes clic
-          a o toca la pantalla per moure en Flappy fins la meta.
-        flappy_2: Ara hem afegit el terra. Afegeix un bloc al bloc "quan toqui el
-          terra". El teu codi necessita un "fi del joc" quan Flappy xoqui.
-        flappy_3: El bloc "En executar" et permet executar codi quan comença el joc.  Intenta
-          establir la velocista del nivell i l'aleteig cap a la meta.
-        flappy_4: Flappy volarà a través dels obstacles a menys que li escriguis un
-          codi per fer-lo xocar. Afegeix un bloc al bloc de "quan toqui un obstacle".
-          El teu codi necessita un 'FI DEL JOC' quan en Flappy xoqui amb el primer
-          conjunt de canonades.
-        flappy_5: Afegim un marcador, i compta els punts quan Flappy passi un obstacle.
-          Afegeix un bloc "quan passa un obstacle", després suma un punt quan Flappy
-          vole a través del primer conjunt de canonades.
-        flappy_6: Mira si  pots marcar un punt després de fer que Flappy aletegi més
-          ràpid o més lent.
-        flappy_7: A continuació, prova de canviar l'escena afegint un altre bloc al
-          bloc "quan s'executa".
-        flappy_8: Pots configurar les imatges en qualsevol moment, i no només quan
-          comença el joc. Intenta establir una escena a l'atzar, RANDOM, quan tinguin
-          lloc altres esdeveniments, per exemple, quan superi un obstacle.
-        flappy_9: Per embolicar-ho, quan es xoqui amb un obstable, en lloc d'acabar
-          el joc prova de posar el marcador a zero.
-        flappy_11: Crea el teu propi joc Flappy. Pots canviar tots els aspectes visuals
-          i les normes, fins i tot la gravetat. Quan hagis acabat, fes clic a Finalitza
-          per fer que els teus amics hi juguin amb els seus mòbils.
-        flappy_k1_1: Juga a Flappy
-        flappy_k1_2: Uneix un bloc al bloc "quan faci clic", i prem "Executa". Fes
-          clic a o toca la pantalla per moure en Flappy fins la meta.
-        flappy_k1_3: Ara hem afegit el terra. Afegeix un bloc al bloc "quan toqui
-          el terra". El teu codi necessita un "fi del joc" quan Flappy xoqui.
-        flappy_k1_4: El bloc "En executar" et permet executar codi quan comença el
-          joc.  Intenta establir la velocista del nivell i l'aleteig cap a la meta.
-        flappy_k1_5: Flappy volarà a través dels obstacles a menys que li escriguis
-          un codi per fer-lo xocar. Afegeix un bloc al bloc de "quan toqui un obstacle".
-          El teu codi necessita un 'FI DEL JOC' quan en Flappy xoqui amb el primer
-          conjunt de canonades.
-        flappy_k1_6: Afegim un marcador, i compta els punts quan Flappy passi un obstacle.
-          Afegeix un bloc "quan passa un obstacle", després suma un punt quan Flappy
-          vole a través del primer conjunt de canonades.
-        flappy_k1_7: Mira si pots marcar múltiples punts passant un obstacle
-        flappy_k1_8: A continuació, prova de canviar l'escena afegint un altre bloc
-          al bloc "quan s'executa".
-        flappy_k1_9: Intenta-ho canviant el jugador a través d'afegir un bloc de "estableix
-          jugador" al bloc "quan executa".
         jigsaw_1: Fés clic en el bloc
         jigsaw_2: Arrossegueu el bloc a l'objectiu
         jigsaw_3: Organitzar els blocs per formar la imatge
@@ -837,9 +725,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Construint una Galaxia amb Codi - Introducció'
         starwars_typing: 'Star Wars: Creant una Galaxia amb Codi - JavaScript'
         starwars_events: 'Star Wars: Creant una galaxia amb codi - Esdeveniments'
@@ -895,6 +780,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Bucles
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc

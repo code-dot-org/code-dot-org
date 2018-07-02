@@ -1,0 +1,16 @@
+name 'CB_Question_7_2018'
+
+wrong 'To determine the users who post messages most frequently'
+wrong 'To determine the time of day that the site is most active'
+right 'To determine the topics that many users are posting about'
+wrong 'To determine which posts from a particular user have received the greatest number of comments'
+
+markdown <<MARKDOWN
+A certain social media Web site allows users to post messages and to comment on other messages that have been posted. When a user posts a message, the message itself is considered data. In addition to the data, the site stores the following meta data.
+
+- The time the message was posted
+- The name of the user who posted the message
+- The names of any users who comment on the message and the times the comments were made
+
+For which of the following goals would it be more useful to analyze the data instead of the metadata?
+MARKDOWN

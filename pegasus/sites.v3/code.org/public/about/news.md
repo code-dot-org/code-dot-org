@@ -39,19 +39,21 @@ theme: responsive
 
 [/col-50]
 
-## Press Kit
+## Press Inquiries
 
-For all press and media inquiries: 
+For all press and media inquiries or to obtain a full press kit, please contact: 
 
 - [press@code.org](mailto:press@code.org)
 - Min Yoo, Code.org - (360) 499-3250
 
-[Download hi-res version of Code.org logo](https://www.dropbox.com/scl/fi/3qxs2z7ukocwc7apbn3mc/Code.org%20Logo.zip?dl=0)
+## Code.org Logo and Brand Assets 
 
 **Note**: The CODE&reg; logo design is a registered trademark of Code.org. You may not use the Code.org trademarked logo without explicit permission from Code.org, and even then only in reference to Code.org. Mashups or combinations of the Code.org logo with other logos or initiatives are expressly prohibited.
 
-Download hi-res photo of Code.org founder [Hadi Partovi](https://code.org/images/HadiPartoviHeadshot.jpg)
+Please [view our brand assets usage policy](/about/brand-usage) for more information on how you may use the Code.org logo and trademark.
 
+- [Download hi-res version of Code.org logo](https://www.dropbox.com/scl/fi/3qxs2z7ukocwc7apbn3mc/Code.org%20Logo.zip?dl=0)
+- [Download hi-res photo of Code.org founder Hadi Partovi](https://code.org/images/HadiPartoviHeadshot.jpg)
 
 ## Partnership Logo
 

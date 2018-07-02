@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-06-06T22:47:06.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "markdown_instructions": "**Make a prediction:** Here’s a sprite called `alien1`!   \r\n\r\nWhat do you think will happen when you click on it?  ",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions": "What do you think will happen when you click on the alien?  "
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-13 19:51:22 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
-import color from "../../util/color";
+import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -27,25 +27,6 @@ export const COLUMNS_WITHOUT_THUMBNAILS = {
 };
 
 const styles = {
-  table: {
-    width: '100%',
-  },
-  cell: {
-    border: '1px solid gray',
-    padding: 10,
-    fontSize: 14,
-  },
-  nameCell: {
-    border: '1px solid gray',
-    padding: 10,
-    fontSize: 14,
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
-  headerCell: {
-    border: '1px solid gray',
-    padding: 10,
-    backgroundColor: color.teal,
-  },
   thumbnailCell: {
     border: '1px solid gray',
     width: THUMBNAIL_SIZE,
@@ -142,18 +123,18 @@ class ProjectsList extends React.Component {
     const channel = encodeURIComponent(rowData.channel);
 
     const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
-    return <a href={url} target="_blank">{name}</a>;
+    return <a href={url} style={tableLayoutStyles.link} target="_blank">{name}</a>;
   };
 
   getColumns = (sortable) => {
     const thumbnailColumn = {
       property: 'thumbnailUrl',
       header: {
-        props: {style: styles.headerCell},
+        props: {style:tableLayoutStyles.headerCell},
       },
       cell: {
         format: thumbnailFormatter,
-        props: {style: styles.thumbnailCell}
+        props: {style: tableLayoutStyles.cell},
       }
     };
     const standardColumns = [
@@ -161,47 +142,47 @@ class ProjectsList extends React.Component {
         property: 'name',
         header: {
           label: commonMsg.projectName(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
           format: this.nameFormatter,
-          props: {style: styles.nameCell}
+          props: {style: tableLayoutStyles.cell},
         }
       },
       {
         property: 'studentName',
         header: {
           label: commonMsg.studentName(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          props: {style: styles.cell}
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
         property: 'type',
         header: {
           label: commonMsg.projectType(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
           format: typeFormatter,
-          props: {style: styles.cell}
+          props: {style: tableLayoutStyles.cell},
         }
       },
       {
         property: 'updatedAt',
         header: {
           label: commonMsg.lastEdited(),
-          props: {style: styles.headerCell},
+          props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
           format: dateFormatter,
-          props: {style: styles.cell}
+          props: {style: tableLayoutStyles.cell},
         }
       },
     ];
@@ -211,10 +192,6 @@ class ProjectsList extends React.Component {
   };
 
   render() {
-    const sortableOptions = {
-      // Dim inactive sorting icons in the column headers
-      default: {color: 'rgba(255, 255, 255, 0.2 )'}
-    };
 
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
@@ -231,7 +208,7 @@ class ProjectsList extends React.Component {
       <Table.Provider
         className="pure-table pure-table-striped"
         columns={columns}
-        style={styles.table}
+        style={tableLayoutStyles.table}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="channel" />

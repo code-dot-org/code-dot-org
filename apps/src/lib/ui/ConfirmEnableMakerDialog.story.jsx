@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
-      .storiesOf('ConfirmEnableMakerDialog', module)
+      .storiesOf('MakerToolkit/ConfirmEnableMakerDialog', module)
       .add('overview', () => {
         return (
           <ConfirmEnableMakerDialog

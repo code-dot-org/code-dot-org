@@ -1,10 +1,10 @@
 {
   "continue": "Улантуу",
-  "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
-  "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
-  "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to playing your game.",
+  "nextLevel": "Куттуктайбыз! Бул тапшырманы бүтүрдүңүз.",
+  "no": "Жок",
+  "numBlocksNeeded": "Бул тапшырманы %1 блок менен аткарса болот.",
+  "reinfFeedbackMsg": "Оюнуңарды ойноого кайтуу үчүн \"Кайра аракет кыл\" баскычын бассаңар болот.",
   "share": "Share",
   "shareGame": "Share your game:",
-  "yes": "Yes"
+  "yes": "Ооба"
 }

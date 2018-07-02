@@ -163,9 +163,6 @@ el:
       CollisionDetection:
         title: Έλεγχος Σύγκρουσης και το Πυθαγόρειο Θεώρημα
         desc: Ο καθορισμός του πότε τα αντικείμενα στην οθόνη ακουμπούν μεταξύ τους είναι μία συμαντική πτυχή στα περισσότερα παιχνίδια. Σε αυτό το μάθημα θα δούμε πως το Πυθαγόρειο Θεώρημα και η Φόρμουλα Απόστασης μπορούν να χρησιμοποιηθούν για να μετρήσουμε την απόσταση μεταξύ δύο σημείων στο επίπεδο και στη συνέχεια να αποφασίσουμε αν αυτά τα σημεία (ή οι χαρακτήρες του παιχνιδού) ακουμπούν μεταξύ τους.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -265,3 +262,96 @@ el:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+        desc: Αυτό το μάθημα αναφέρει τους τρόπους που χρησιμοποιούνται οι αλγόριθμοι στην καθημερινή μας ζωή, παίρνοντας ως παράδειγμα το φύτεμα ενός σπόρου. Επίσης εστιάζει στη μεγαλύτερη εικόνα της επιστήμης των υπολογιστών και στον σημαντικό ρόλο που παίζουν οι αλγόριθμοι.
+      UnplugHappyMaps_2018:
+        title: Χαρούμενοι Χάρτες
+        desc: Οι μαθητές δημιουργούν απλούς αλγορίθμους (σύνολα εντολών) για να μετακινήσουν έναν ήρωα σε ένα λαβύρινθο χρησιμοποιώντας μια απλή εντολή.
+      GoingPlacesSafely_2018:
+        title: Πηγαίνοντας σε Μέρη με Ασφάλεια
+        desc: Το διαδίκτυο (internet) είναι ένα δυνατό, αλλά ορισμένες φορές επικίνδυνο, περιβάλλον. Οι δάσκαλοι εισάγουν την έννοια της ασφάλειας κατά τη διάρκεια της περιήγησης στο διαδίκτυο.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Το Μεγάλο Γεγονός
+        desc: Οι μαθητές εισάγονται στην προγραμματιστική έννοια των "συμβάντων", δηλαδή των ενεργειών τις οποίες διαρκώς παρακολουθεί ο υπολογιστής. Ο δάσκαλος θα πατά κουμπιά σε ένα χάρτινο τηλεκοντρόλ και οι μαθητές θα αντιδρούν ανάλογα με το ποιο κουμπί πατήθηκε.
+      GraphPaperProgramming_2018:
+        title: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
+        desc: Οι μαθητές γράφουν έναν αλγόριθμο (ένα σύνολο οδηγιών) χρησιμοποιώντας ένα σύνολο προκαθορισμένων εντολών για να κατευθύνουν τους συμμαθητές τους να αναπαραγάγουν μια ζωγραφιά.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Αποσυνδεδεμένη Δραστηριότητα
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Αποσυνδεδεμένη Δραστηριότητα
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Έλεγχοι
+        desc: Για να μάθουν τις προτάσεις υπό συνθήκη, οι μαθητές παίζουν ένα παιχνίδι με τράπουλα και δημιουργούν προτάσεις του τύπου "Αν τραβήξω κόκκινο χρώμα, παίρνω έναν πόντο" και "αν τραβήξω μαύρο χρώμα, παίρνεις εσύ έναν πόντο".
+      DigitalFootprint_2018:
+        title: Το Ψηφιακό σου Αποτύπωμα
+        desc: Οι δάσκαλοι εισάγουν τους μαθητές στην ιδέα ότι αν βάζουν στο διαδίκτυο πληροφορίες για τον εαυτό τους δημιουργείται ένα ψηφιακό αποτύπωμα ή μονοπάτι που έχει και τις συνέπειές του.
+      BinaryImages_2018:
+        title: Δυαδικές Εικόνες
+        desc: Αν και πολλοί πιστεύουν ότι δυαδικό σημαίνει μια σειρά μηδενικών και μονάδων, τα προηγούμενα μαθήματά μας έδειξαν στους μαθητές ότι οι πληροφορίες μπορούν να αναπαρίστανται με μια ποικιλία δυαδικών επιλογών. Αυτό το μάθημα επεκτείνει την έννοια αυτή ακόμα περισσότερο, δείχνοντας πώς ο υπολογιστής μπορεί να αποθηκεύει σε δυαδική μορφή ακόμα πιο πολύπλοκες πληροφορίες (όπως εικόνες και χρώματα).
+      PaperPlanes_2018:
+        title: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
+        desc: Αυτό το μάθημα αναφέρει πώς χρησιμοποιούμε αλγορίθμους στην καθημερινή μας ζωή και συγκεκριμένα όταν φτιάχνουμε σαΐτες. Αυτό το μάθημα εστιάζει στη μεγαλύτερη εικόνα της επιστήμης των υπολογιστών και στον σημαντικό ρόλο που παίζουν οι αλγόριθμοι.
+      GettingLoopy_2018:
+        title: Παίρνοντας Επαναληπτικά
+        desc: Αυτό το μάθημα εισάγει την προγραμματιστιμή έννοια των βρόχων (επαναλαμβανόμενων οδηγιών) μέσω μιας δραστηριότητας χορού. Οι μαθητές θα μάθουν μια απλή χορογραφία και θα τους ζητηθεί να την επαναλάβουν.
+      BinaryBracelets_2018:
+        title: Δυαδικά Βραχιόλια
+        desc: Οι μαθητές φτιάχνουν βραχιόλια ως δυαδικές αναπαραστάσεις του πρώτου γράμματος του ονόματός τους. Οι μαθητές μαθαίνουν ότι τα δεδομένα μπορούν να αναπαρασταθούν και να αποθηκευτούν με περισσότερους από έναν τρόπους.
+      MoveItMoveIt_2018:
+        title: Μετακίνησέ το, Μετακίνησέ το
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Προγραμματισμός Ρελέ
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

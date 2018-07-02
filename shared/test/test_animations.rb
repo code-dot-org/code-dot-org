@@ -53,11 +53,8 @@ class AnimationsTest < FilesApiTestBase
     @api.get_object(dog_image_filename)
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    @api.delete_object(dog_image_filename)
-    assert successful?
-
-    @api.delete_object(cat_image_filename)
-    assert successful?
+    soft_delete(dog_image_filename)
+    soft_delete(cat_image_filename)
   end
 
   def test_unsupported_media_type
@@ -72,8 +69,7 @@ class AnimationsTest < FilesApiTestBase
     @api.post_file(mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
 
-    @api.delete_object(mismatched_filename)
-    assert successful?
+    soft_delete(mismatched_filename)
   end
 
   def test_extension_case_sensitivity
@@ -91,18 +87,92 @@ class AnimationsTest < FilesApiTestBase
     @api.get_object(different_case_filename)
     assert not_found?
 
-    @api.delete_object(filename)
-    assert successful?
+    soft_delete(filename)
   end
 
   def test_nonexistent_animation
     filename = @api.randomize_filename('nonexistent.png')
     delete_all_animation_versions(filename)
 
-    @api.delete_object(filename) # Not a no-op - creates a delete marker
+    soft_delete(filename) # Not a no-op - creates a delete marker
+
+    Honeybadger.expects(:notify).never
+    @api.get_object(filename)
+    assert not_found?
+  end
+
+  def test_get_bad_version_returns_latest_version
+    # We have a number of projects with known incorrect version ids in their
+    # animation manifest. As a recovery action, when the client asks for an
+    # animation and the animation exists but the particular version they asked
+    # for does not, we will send back the latest version of that animation.
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create and replace our first version, so we have a known missing version id
+    v1_version_id = upload(filename, 'stub-v1-body')
+    v1b_version_id = replace_version(filename, v1_version_id, 'stub-v1b-body')
+    refute_equal v1_version_id, v1b_version_id
+
+    # Create a second version
+    v2_file_data = 'stub-v2-body'
+    upload(filename, v2_file_data)
+
+    # Ask for the missing version
+    Honeybadger.expects(:notify).once
+    @api.get_object_version(filename, v1_version_id)
     assert successful?
 
-    @api.get_object(filename)
+    # Check that we got the latest version
+    assert_equal v2_file_data, last_response.body
+
+    delete_all_animation_versions(filename)
+  end
+
+  def test_get_bad_version_returns_latest_nondeleted_version
+    # As above, but if the latest version of the animation is "deleted" we want
+    # to send back the most recent non-deleted version of the animation, which
+    # is probably as close as we can get to what the client is searching for.
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create and replace our first version, so we have a known missing version id
+    v1_version_id = upload(filename, 'stub-v1-body')
+    v1b_version_id = replace_version(filename, v1_version_id, 'stub-v1b-body')
+    refute_equal v1_version_id, v1b_version_id
+
+    # Create a second version
+    v2_file_data = 'stub-v2-body'
+    upload(filename, v2_file_data)
+
+    # Delete the animation
+    soft_delete(filename)
+
+    # Ask for the missing version
+    Honeybadger.expects(:notify).once
+    @api.get_object_version(filename, v1_version_id)
+    assert successful?
+
+    # Check that we got the last version before the delete
+    assert_equal v2_file_data, last_response.body
+
+    delete_all_animation_versions(filename)
+  end
+
+  def test_get_bad_version_is_404_when_all_versions_are_deleted
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation
+    v1_version_id = upload(filename, 'stub-v1-body')
+
+    # Delete every version (clean slate)
+    delete_all_animation_versions(filename)
+
+    # Ask for an invalid version
+    # No Honeybadger notification on this case - it's an expected 404.
+    Honeybadger.expects(:notify).never
+    @api.get_object_version(filename, v1_version_id)
     assert not_found?
   end
 
@@ -116,8 +186,7 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(dest_image_filename)
 
     # Upload copy_source.png and check the response
-    @api.post_file(source_image_filename, source_image_body, 'image/png')
-    assert successful?
+    upload(source_image_filename, source_image_body)
 
     # Copy copy_source.png to copy_dest.png
     @api.copy_object(source_image_filename, dest_image_filename)
@@ -128,11 +197,8 @@ class AnimationsTest < FilesApiTestBase
     assert_equal source_image_body, @api.get_object(dest_image_filename)
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    @api.delete_object(source_image_filename)
-    assert successful?
-
-    @api.delete_object(dest_image_filename)
-    assert successful?
+    soft_delete(source_image_filename)
+    soft_delete(dest_image_filename)
   end
 
   def test_copy_nonexistent_animation
@@ -154,17 +220,14 @@ class AnimationsTest < FilesApiTestBase
 
     # Create an animation file
     v1_file_data = 'stub-v1-body'
-    @api.post_file(filename, v1_file_data, 'image/png')
-    assert successful?
+    upload(filename, v1_file_data)
 
     # Overwrite it.
     v2_file_data = 'stub-v2-body'
-    @api.post_file(filename, v2_file_data, 'image/png')
-    assert successful?
+    upload(filename, v2_file_data)
 
     # Delete it.
-    @api.delete_object(filename)
-    assert successful?
+    soft_delete(filename)
 
     # List versions.
     versions = @api.list_object_versions(filename)
@@ -184,16 +247,11 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(filename)
 
     # Create an animation file
-    v1_file_data = 'stub-v1-body'
-    @api.post_file(filename, v1_file_data, 'image/png')
-    assert successful?
-    original_version_id = JSON.parse(last_response.body)['versionId']
+    original_version_id = upload(filename, 'stub-v1-body')
 
     # Overwrite it, specifying the same version
     v2_file_data = 'stub-v2-body'
-    @api.post_file_version(filename, original_version_id, v2_file_data, 'image/png')
-    new_version_id = JSON.parse(last_response.body)['versionId']
-    assert successful?
+    new_version_id = replace_version(filename, original_version_id, v2_file_data)
 
     # Make sure only one version exists
     versions = @api.list_object_versions(filename)
@@ -207,12 +265,207 @@ class AnimationsTest < FilesApiTestBase
     # Make sure that one version has the newest content
     assert_equal v2_file_data, @api.get_object_version(filename, new_version_id)
 
-    @api.delete_object(filename)
+    soft_delete(filename)
+  end
+
+  def test_restore_previous_animation
+    filename = @api.randomize_filename('animation.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    original_version_id = upload(filename, v1_file_data)
+
+    # Overwrite it.
+    v2_file_data = 'stub-v2-body'
+    second_version_id = upload(filename, v2_file_data)
+
+    # Restore
+    response = restore_version(filename, original_version_id)
+    restored_version_id = response[:version_id]
+    restored_file_data = @api.get_object_version(filename, restored_version_id)
+
+    #Check that the restored version id is neither of the previous version ids
+    refute_equal original_version_id, restored_version_id
+    refute_equal second_version_id, restored_version_id
+
+    #Check that the restored body is the same as the one to which it was restored
+    assert_equal v1_file_data, restored_file_data
+
+    soft_delete(filename)
+  end
+
+  def test_restore_previous_animation_with_invalid_version
+    filename = @api.randomize_filename('animation.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    original_version_id = upload(filename, 'stub-v1-body')
+
+    # Overwrite it.
+    v2_file_data = 'stub-v2-body'
+    second_version_id = upload(filename, v2_file_data)
+
+    # Restore
+    response = restore_version(filename, 'bad_version_id')
+    restored_version_id = response[:version_id]
+    restored_file_data = @api.get_object(filename, restored_version_id)
+    restored_metadata = AnimationBucket.new.get(@channel_id, filename)[:metadata]
+
+    # Check that the latest version is the restored version
+    latest_file_data = @api.get_object(filename)
+    assert_equal restored_file_data, latest_file_data
+
+    #Check that the restored version id is neither of the previous version ids
+    refute_equal original_version_id, restored_version_id
+    refute_equal second_version_id, restored_version_id
+
+    #Check that the restored body is the same as the most recent animation
+    assert_equal v2_file_data, restored_file_data
+
+    #Check that the metadata exists and includes the expected keys and values
+    #Observed inconsistency with metadata using underline and hyphen - check both for resiliency
+    assert_equal '0', restored_metadata['abuse-score'] ? restored_metadata['abuse-score'] : restored_metadata['abuse_score']
+    refute_nil restored_metadata['failed-restore-at'] ? restored_metadata['failed-restore-at'] : restored_metadata['failed_restore_at']
+    assert_equal 'bad_version_id', restored_metadata['failed-restore-from-version'] ? restored_metadata['failed-restore-from-version'] : restored_metadata['failed_restore_from_version']
+
+    soft_delete(filename)
+  end
+
+  def test_restore_deleted_animation_with_invalid_version_does_nothing
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    upload(filename, 'stub-v1-body')
+
+    # Delete it.
+    soft_delete(filename)
+
+    # List object versions
+    versions_old = @api.list_object_versions(filename)
+    assert successful?
+
+    # Attempt restore with bad version ID
+    response = restore_version(filename, 'bad_version_id')
+
+    # Response indicates mot modified
+    assert_equal 'NOT_MODIFIED', response[:status]
+
+    # List object versions, check nothing changed.
+    versions_new = @api.list_object_versions(filename)
+    assert_equal versions_old, versions_new
+
+    soft_delete(filename)
+  end
+
+  def test_doesnt_mask_unrelated_errors
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Stub copy_object to give an error
+    BucketHelper.s3.stubs(:copy_object).raises("Test Error")
+
+    # Create an animation file
+    original_version_id = upload(filename, 'stub-v1-body')
+
+    # Check that restoring raises an error per above stub
+    assert_raises do
+      restore_version(filename, original_version_id)
+    end
+
+    soft_delete(filename)
+  end
+
+  def test_get_object_with_latest_version
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    upload(filename, 'stub-v1-body')
+    latest_version_id = upload(filename, 'stub-v2-body')
+
+    # Delete it.
+    soft_delete(filename)
+
+    # Attempt to get object with special key to get latestVersion
+    response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
+    assert_equal response[:version_id], latest_version_id
+  end
+
+  def test_get_object_with_latest_version_of_non_deleted
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    upload(filename, 'stub-v1-body')
+    latest_version_id = upload(filename, 'stub-v2-body')
+
+    # Attempt to get object with special key to get latestVersion
+    response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
+    assert_equal response[:version_id], latest_version_id
+
+    soft_delete(filename)
+  end
+
+  def test_get_object_with_latest_version_for_missing_animation
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Attempt to get object with special key to get latestVersion
+    response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
+    assert_equal response[:status], 'NOT_FOUND'
   end
 
   private
 
+  #
+  # Upload a new version of an animation.
+  # @param [String] filename of the animation
+  # @param [String] body of the animation
+  # @return [String] S3 version id of the newly uploaded animation
+  #
+  def upload(filename, body)
+    @api.post_file(filename, body, 'image/png')
+    assert successful?
+    JSON.parse(last_response.body)['versionId']
+  end
+
+  #
+  # Replace an existing version of an animation.
+  # The old version is deleted.  The uploaded file gets a new version id.
+  # @param [String] filename of the animation
+  # @param [String] version to be deleted/replaced
+  # @param [String] body of the animation
+  # @return [String] S3 version id of the uploaded animation
+  #
+  def replace_version(filename, version, body)
+    @api.post_file_version(filename, version, body, 'image/png')
+    assert successful?
+    JSON.parse(last_response.body)['versionId']
+  end
+
+  #
+  # Deletes the file via the API, which actually just puts a delete marker
+  # on the end of its history.
+  # @param [String] filename of the animation
+  #
+  def soft_delete(filename)
+    @api.delete_object(filename)
+    assert successful?
+  end
+
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
+  end
+
+  #
+  # Attempts to restore the file to the named version
+  # @param [String] filename of the animation
+  # @param [String] version - S3 version id
+  def restore_version(filename, version)
+    # We use AnimationBucket directly because there's no public API for this.
+    # It does happen as part of a project restore though.
+    AnimationBucket.new.restore_previous_version(@channel_id, filename, version, nil)
   end
 end

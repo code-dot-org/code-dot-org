@@ -69,7 +69,7 @@ tr:
   try_k8intro: "İlk ve Orta Okula yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin (15-25 saat)"
   k8intro: "K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)"
   already_started: "Zaten başladınız mı? Buradan devam edin >> "
-  demos: 'Yönetici: Tüm Demolar'
+  demos: "Yönetici: Tüm Demolar"
   continue: 'Devam'
   prize: 'ödül'
   more_info: 'Daha fazla bilgi'
@@ -85,6 +85,7 @@ tr:
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
     clever: 'Akıllı Hesap'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Şifrenizi mi unuttunuz?'
     need_confirmation: "Onay talimatlarını almadınız mı?"
     need_unlock: "Kilit açma talimatlarını almadınız mı?"
@@ -114,15 +115,25 @@ tr:
     valid_password: "Geçerli parola!"
     invalid_password: "Parola en az 6 karakter olmalıdır"
     mismatch_password: "Girdiğiniz iki parola aynı değil"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
+    agree_us_website: "Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyorum."
+    my_data_to_us: "Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir."
     student_terms: "Code.org <a href='http://code.org/tos'> hizmet şartlarına</a> bağlı olmayı kabul edersiniz. Eğer ben 13 yaşını altında isem, ebeveyn veya yasal velimin Code.org Hizmetlerini kullanma izni verdiğini bu formu göndererek onaylıyorum. <br/> <br/> E-posta adresleri öğrencilerle bağlantı kurmamız için herhangi bir formda depolanmaz. Öğrenciler şifre kurtarma dışında Code.org'dan herhangi bir e-posta almaz. Daha fazla bilgi için <a href='http://code.org/privacy'> Gizlilik Politikamıza</a> bakınız."
     teacher_terms: "Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum. Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik politikamıza göz atın</a>."
     additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
+    user_type_button: "Update Account Type"
     user_type_label: "Hesap Türü"
     user_type_teacher: "Öğretmen"
     user_type_student: "öğrenci"
     field_is_required: "gerekli"
     accept_terms: "Hesap oluşturmak için kabul etmelisiniz"
     error: "Bir hata oluştu."
+    email_preference_question: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Evet"
+    email_preference_no: "Hayır"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Okul bilgileri (isteğe bağlı)'
     school_country: 'Okulun bulunduğu ülke'
@@ -171,6 +182,7 @@ tr:
       email: 'E-posta adresi'
       submit: 'Gönder'
     reset_errors:
+      captcha_required: 'Şifreni değiştirmek için lütfen robot olmadığını kanıtla.'
       invalid_email: 'Geçersiz e-posta adresi ile kayıt olmuşsunuz gibi görünüyor. Parola kurtarma bağlantısı için support@code.org a e-posta gönderin.'
     change_form:
       title: 'Şifrenizi değiştirin'
@@ -217,7 +229,7 @@ tr:
       provider_managed_section: "Bu bölüm, bir başka sağlayıcı tarafından yönetilmektedir ve katılım sağlanamaz. Lütfen öğretmeninden seni %{provider} üzerinden eklemesini iste  ve bu bölümü yeniden senkronize et."
     mail:
       student_disassociated:
-        subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
+        subject: "Code.org bildirim: %{student_name} artık senin öğrencin değil."
   reports:
     error:
       access_denied: "Bu kişinin istatistiklerine erişemezsiniz"
@@ -345,11 +357,12 @@ tr:
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
     email_confirm_wrong_email: '(Yanlış e-posta adresi?)'
     email_resend_confirm: 'Onay yönergelerini yeniden gönder'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(Eğer değiştirmek istemiyorsanız boş bırakın)"
     current_password_hint: '(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)'
     delete: 'Hesabını Sil'
     delete_text: "Aşağıdaki düğmeye tıklamak hesabınızı siler."
-    delete_text_teacher_note: 'Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin hesaplarını silmez.'
+    delete_text_teacher_note: "Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin hesaplarını silmez."
     delete_confirm: 'Hesabınızı silmek istediğinize emin misiniz?'
     deleted_user: 'silinen kullanıcı'
     no_password_because_oauth: 'Şifre yok çünkü bir üçüncü taraf sağlayıcı ile giriş yaptınız.'
@@ -360,10 +373,11 @@ tr:
     create_personal_login_under_13_parent_email: 'Ebeveyn eposta adresi (şifreni kurtarmak için)'
     create_personal_login_info: 'Code.org hesabınızı öğretim yılı bitiminden sonra kullanmaya devam etmek istiyorsanız, altta kendi girişinizi yapın.'
     create_personal_login_terms: "Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}', target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
-    create_personal_login_email_note: Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a> bakınız.
+    create_personal_login_email_note: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a> bakınız."
     enter_new_login_info: 'Oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
     enter_parent_email: "Ebeveyn ya da velinizin elektronik posta adresini girin (şifre kurtarmak için)"
+    update: "Update Account"
   user_level:
     completed: 'Tamamlandı'
     tried: 'Denenmiş'
@@ -445,6 +459,7 @@ tr:
     student_not_found: "Öğrenci ve öğretmen bulunamadı."
     all_students_must_be_in_current_section: "Bütün öğrenciler şu anda sınıfınıza kayıtlı olmalıdır."
     already_enrolled_in_new_section: "Öğrenciler zaten başka bir bölümde bulunduğundan onları başka yere taşıyamazsınız."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Code Studio'da Öğrenin"
     description: "Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar ve sanat yarat."
@@ -452,6 +467,8 @@ tr:
   gender:
     male: 'Erkek'
     female: 'Kadın'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Cevap vermemeyi tercih ederim'
   user_type:
     student: 'öğrenci'
@@ -552,7 +569,7 @@ tr:
     20-hour:
       title: 'Hızlandırılmış Kurs'
       body: 'Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.'
-      body_short: 'Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış bir sürümünde öğrenin.'
+      body_short: 'Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış kurslarımızda öğrenin.'
     hoc2014:
       try_new_tutorial: 'Yeni Kodlama Saati öğreticimizi beta halinde deneyin'
       try_frozen: 'Karlar Ülkesi''nden Anna ve Elsa ile birlikte bir sanatçı'
@@ -699,7 +716,7 @@ tr:
     sign_out: 'Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a> çıkış yapabilirsiniz.'
   terms_interstitial:
     title: "Güncellenen Hizmet ve Gizlilik Politikası şartları"
-    intro_desc: 'Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016''dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio''daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik.'
+    intro_desc: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
     intro_instructions: "Kod Studio tüm son özelliklerine tam erişim sınıfında 13 yaşın altındaki öğrenciler için bu yeni şartları kabul gerekir.  13 yaşından küçük bir öğrenci için bir hesap kayıt olurken okul kullanımı için öğrencinin kişisel bilgilerin toplanması ve kod Studio gibi eğitim programları da dahil olmak üzere okul parası için ebeveyn izni olduğundan emin olun istenecektir."
     tos: "Şartlar"
     privacy: "Gizlilik Politikası"
@@ -715,25 +732,25 @@ tr:
     message_with_suggestion: "Lütfen aşağıdaki bilgileri doğru olduğundan emin olun veya gerektiği gibi güncelleştirin."
     save: "Kaydet"
   race_interstitial:
-    title: 'Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki ilerlememizi izlememize yardımcı olun'
+    title: "Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki ilerlememizi izlememize yardımcı olun"
     message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
       - 
-        white: Beyaz
+        white: "Beyaz"
       - 
-        black: Siyahi veya Afrika kökenli Amerikalı
+        black: "Siyahi veya Afrika kökenli Amerikalı"
       - 
-        hispanic: İspanyol veya Latin
+        hispanic: "İspanyol veya Latin"
       - 
-        asian: Asyalı
+        asian: "Asyalı"
       - 
-        hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
+        hawaiian: "Yerel Hawaii veya diğer Pasifik Adalı"
       - 
-        american_indian: Amerikalı Kızılderili / Alaska Yerlisi
+        american_indian: "Amerikalı Kızılderili / Alaska Yerlisi"
       - 
-        other: Diğer
+        other: "Diğer"
       - 
-        opt_out: Söylememek istemiyorum
+        opt_out: "Söylememek istemiyorum"
     submit: "Gönder"
     decline: "Kapat"
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
@@ -759,7 +776,7 @@ tr:
     delete: "Sil"
     import: "İçeri Aktar"
     share_link_import_bad_link_header: "Paylaşım bağlantısı tanınmıyor"
-    share_link_import_bad_link_body: 'Bu paylaşım bağlantısını içeri aktaramadık. Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı kopyaladığından emin ol.'
+    share_link_import_bad_link_body: "Bu paylaşım bağlantısını içeri aktaramadık. Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı kopyaladığından emin ol."
     share_link_import_error_header: "Bir sorun oluştu."
     share_link_import_error_body: "Paylaşım bağlantısını içeri aktarırken bir sorun oluştu. Lütfen tekrar dene."
     exit: "Kursa dön"
@@ -849,9 +866,9 @@ tr:
     main_course: 'Ana ders'
     extra_course_content: 'İlave kurs içeriği'
     csf_e_1: 'Kurs E ye hazırlık (isteğe bağlı)'
-    csf_e_2: 'E dersi içeriği'
+    csf_e_2: 'E Kursu İçeriği'
     csf_f_1: 'Kurs F''ye hazırlık (isteğe bağlı)'
-    csf_f_2: 'F dersi içeriği'
+    csf_f_2: 'F Kursu İçeriği'
     csd1_1: 'Bölüm 1: Problem çözme süreci'
     csd1_2: 'Bölüm 2: Bilgisayar ve Problem çözme'
     csd2_1: 'Bölüm 1: Web içerik ve HTML'
@@ -864,9 +881,10 @@ tr:
     csd5_2: 'Bölüm 2: Veri problemlerini çözme'
     csd6_1: 'Bölüm 1: Donanım çıktısı'
     csd6_2: 'Bölüm 1: Donanım girdisi'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
-    csp1_2: Interneti icat etme
-    csp2_1: Karmaşık bilgileri kodlama ve sıkıştırma
+    csp1_2: 'Interneti icat etme'
+    csp2_1: 'Karmaşık bilgileri kodlama ve sıkıştırma'
     csp2_2: 'Bölüm 2: Veriyi İşleme ve Görselleştirme'
     csp3_1: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
     csp4_1: 'Bölüm 1: Büyük Verilerin Dünyası ve Şifreleme'
@@ -877,6 +895,11 @@ tr:
     csp_ap_1: 'Bölüm 1: AP teknik kurulum'
     csp_ap_2: 'Bölüm 2: AP performans görevini keşfet'
     csp_ap_3: 'Bölüm 2: AP performans görevini yarat'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Ünite 2: Sayısal bilgi'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Yansıma İstemleri'
   external_links:
     disclaimer: Yasal uyarı
@@ -981,3 +1004,14 @@ tr:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Tüm Kurslar'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Kabul ediyorum'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Evet'

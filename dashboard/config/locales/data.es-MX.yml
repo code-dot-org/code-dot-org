@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   data:
     game:
       name:
@@ -37,7 +38,7 @@
         NetSim: Simulador de Internet
         Custom: Artista
         CustomStudio: Laboratorio de juegos
-        Gamelab: Game Lab
+        Gamelab: Laboratorio de juego
     trophy:
       name:
         Bronze: Bronce
@@ -172,9 +173,9 @@
           la tierra esté plana?"
         maze_karel_1_8: Ayúdame a llenar el agujero en el otro extremo del campo,
           con la menor cantidad posible de bloques.
-        maze_karel_1_9: 'Hacerme quitar todas estas pilas de tierra. Trata de usar
-          la menor cantidad de bloques que sea posible. Sugerencia: prueba usando
-          un bloque "mientras".'
+        maze_karel_1_9: 'Hazme quitar todas estas pilas de tierra. Trata de usar la
+          menor cantidad de bloques que sea posible. Sugerencia: prueba usando un
+          bloque "mientras".'
         maze_karel_1_10: Estoy trabajando hasta tarde, así que está oscuro afuera,
           y no sé qué tan grandes son las pilas. Ahora no tengo todas las opciones
           que solía tener en el bloque "mientras". Muéveme a lo largo del campo y
@@ -314,133 +315,9 @@
         maze_3_3: "¿Cómo llego al cerdo? ¡Asegúrate de no pasar por la caja de TNT!"
         maze_3_4: "¡Argh! Escríbeme un programa que me haga esquivar al TNT y llegue
           hasta el cerdo."
-        bounce_1_basketball: Une un bloque al bloque "cuando flecha izquierda" y presiona
-          "Ejecutar". Mueve la mano usando la flecha izquierda para alcanzar el objetivo
-          final.
-        bounce_2_basketball: Une un bloque a los bloques "cuando flecha derecha" y
-          "cuando flecha izquierda". Mueve la mano para alcanzar los 2 objetivos finales.
-        bounce_5_basketball: Lanzaremos una pelota hacia la mano. Añade un bloque
-          al bloque "cuando la bola golpee mano" para asegurar que la pelota llegue
-          a la bandera.
-        bounce_6_basketball: Ahora la bandera está en la parte superior. Necesitas
-          añadir bloques a ambos bloques "cuando la bola golpee" para resolver este
-          acertijo.
-        bounce_7_basketball: Coloca bloques cada uno de lo bloques "cuando". Bota
-          la pelota hasta que toque la bandera.
-        bounce_10_basketball: Ahora hay una meta en la parte superior. Une los bloques
-          "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota
-          alcanza la meta" y "cuando pelota pierde mano" para crear un juego. Prueba
-          cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
-        bounce_11_basketball: Ahora puedes unir bloques al bloque "cuando ejecute".
-          Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar.
-          También, trata de cambiar la escena o la velocidad de la mano y la pelota
-          y ver cuantos puntos puedes anotar antes de que tu oponente anote dos veces!
-        bounce_12_basketball: Crea tu propio juego de baloncesto. Puedes cambiar todas
-          las reglas. Cuando hayas terminado, haz clic en finalizar para permitir
-          a tus amigos/as probar el juego en sus teléfonos.
-        bounce_1_sports: ¡Llegar a la bandera! Coloque un bloque en "cuando flecha"
-          bloquear y pulse "Ejecutar" para mover el jugador a la bandera.
-        bounce_2_sports: ¡Ahora hay dos banderas! Coloque un bloque en "cuando flecha
-          izquierda" y "cuando flecha derecha" para mover a tu jugador en las dos
-          direcciones.
-        bounce_5_sports: La pastilla de hockey se deslizará hacia el jugador. Coloque
-          un bloque en "cuando la bola golpea al jugador".
-        bounce_6_sports: Ahora la bandera está en la parte superior. Necesitas añadir
-          bloques a ambos bloques "cuando la bola golpee" para resolver este acertijo.
-        bounce_7_sports: Coloca bloques cada uno de lo bloques "cuando". Bota la pelota
-          hasta que toque la bandera.
-        bounce_10_sports: Ahora hay una meta en la parte superior. Une los bloques
-          "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota
-          alcanza la meta" y "cuando pelota pierde mano" para crear un juego. Prueba
-          cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
-        bounce_11_sports: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes
-          que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
-          trata de cambiar la escena o la velocidad de la mano y la pelota y ver cuantos
-          puntos puedes anotar antes de que tu oponente anote dos veces!
-        bounce_12_sports: Crea tu propio juego. Puedes cambiar todas las reglas y
-          mezclar deportes. ¡Puedes ser creativo! Cuando estés listo haz clic en Terminar
-          para que tus amigos prueben tu juego en sus teléfonos.
-        bounce_1: Une un bloque al bloque "cuando flecha izquierda" y presiona "Ejecutar
-          Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo
-          final.
-        bounce_2: Une un bloque a los bloques "cuándo flecha derecha" y "cuándo flecha
-          izquierda". Mueve la paleta para alcanzar ambos objetivos finales.
-        bounce_3: Ahora intenta algo similar con el bloque "cuándo flecha arriba".
-          Mueve la paleta hacia el objetivo final en la parte superior.
-        bounce_4: Esta vez tienes que añadir cuatro bloques. Mueve la paleta a los
-          cuatro objetivos finales para completar este puzzle.
-        bounce_5: Vamos a lanzar una pelota hacia la paleta. Une un bloque al bloque
-          "cuando la pelota golpea la paleta" para asegurar que la pelota alcance
-          el objetivo final.
-        bounce_6: Ahora el objetivo final está en la parte superior. Tienes que unir
-          bloques a ambos bloques de "cuando la pelota choca" para resolver este puzzle.
-        bounce_7: Une bloques a cada uno de los bloques "cuando". Rebota la pelota
-          hasta que alcance el objetivo final.
-        bounce_10: Ahora hay una meta en la parte superior. Une los bloques "anotar
-          punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza
-          la meta" y "cuando pelota pasa de largo" para crear un juego. Prueba cuantos
-          puntos puedes anotar antes de que tu oponente anote dos veces.
-        bounce_11: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que
-          colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
-          trata de cambiar la escena o la velocidad de la paleta y la pelota y ver
-          cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
-        bounce_12: Crea tu propio juego "Rebote". Puedes cambiar todos los efectos
-          visuales y las reglas. Cuando estés listo, haz clic en Terminar para que
-          tus amigos prueben tu juego en sus teléfonos.
         Custom_builder: Arrastra los bloques desde la caja de herramientas al espacio
           de trabajo para dibujar el nivel que deseas crear. Presiona "Ejecutar" cuando
           estés listo.
-        flappy_1: Adjunta un bloque a "cuando se haga clic en el bloque", entonces
-          presiona "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia
-          el objetivo.
-        flappy_2: Ahora hemos agregado el suelo. Adjunta un bloque al bloque "cuando
-          golpee el suelo". Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy golpee
-          el suelo.
-        flappy_3: El bloque "cuando ejecute" te permite ejecutar el código cuando
-          tu juego inicie. Intenta establecer la velocidad del nivel y el aleteo al
-          objetivo.
-        flappy_4: Flappy volará entre los obstáculos a menos que escribas el código
-          que lo hará estrellarse. Adjunta un bloque al bloque "cuando golpea un obstáculo".
-          Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle en el primer
-          conjunto de tubos.
-        flappy_5: Ahora agreguemos el marcador, y contaremos los puntos cuando Flappy
-          pase los obstáculos. Agrega al bloque "cuando pase un obstáculo", y entonces
-          anota un punto cuando Flappy vuele entre el primer conjunto de tubos.
-        flappy_6: Ve si puedes anotar un punto haciendo que Flappy aletee más rápido
-          o más lento.
-        flappy_7: A continuación, trata de cambiar el fondo adjuntando otro bloque
-          al bloque "cuando ejecute".
-        flappy_8: Puedes poner elementos visuales en cualquier momento, no sólo cuando
-          comience el juego. Intenta establecer una escena AL AZAR cuando sucedan
-          otros eventos, por ejemplo, al superar un obstáculo.
-        flappy_9: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar
-          el juego, intente ajustar el marcador de nuevo a 0.
-        flappy_11: Crea tu propio juego Flappy, puedes cambiar todos los efectos visuales
-          y las reglas, hasta la gravedad. Cuando finalices, haz clic en Terminar
-          para que tus amigos prueben tu juego en sus teléfonos.
-        flappy_k1_1: Jugar Flappy
-        flappy_k1_2: Adjunta un bloque a "cuando se haga clic en el bloque", entonces
-          presiona "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia
-          el objetivo.
-        flappy_k1_3: Ahora hemos agregado el suelo. Adjunta un bloque al bloque "cuando
-          golpee el suelo". Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy golpee
-          el suelo.
-        flappy_k1_4: El bloque "cuando ejecute" te permite ejecutar el código cuando
-          tu juego inicie. Intenta establecer la velocidad del nivel y el aleteo al
-          objetivo.
-        flappy_k1_5: Flappy volará entre los obstáculos a menos que escribas el código
-          que lo hará estrellarse. Adjunta un bloque al bloque "cuando golpea un obstáculo".
-          Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle en el primer
-          conjunto de tubos.
-        flappy_k1_6: Ahora agreguemos el marcador, y contaremos los puntos cuando
-          Flappy pase los obstáculos. Agrega al bloque "cuando pase un obstáculo",
-          y entonces anota un punto cuando Flappy vuele entre el primer conjunto de
-          tubos.
-        flappy_k1_7: Ve si puedes anotar puntos múltiples al pasar un obstáculo
-        flappy_k1_8: A continuación, trata de cambiar el fondo adjuntando otro bloque
-          al bloque "cuando ejecute".
-        flappy_k1_9: Trata de cambiar el jugador colocando un bloque "colocar jugador"
-          al bloque "cuando ejecute".
         jigsaw_1: Haz clic en el bloque
         jigsaw_2: Arrastra el bloque al objetivo
         jigsaw_3: Acomoda los bloques para formar una imagen
@@ -749,22 +626,24 @@
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_artist_angles: Ángulos en Artist
+        CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
+          recolector'
+        CSF_collector_repeat_loops: Bucles de repetición de colector
+        CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación:
+          El recolector'
+        CSF_create_functions: Crear funciones
+        CSF_debugging_k1_blocks: Depuración
+        CSF_debugging_text_blocks: Depuración
+        CSF_EF_cs_matters: Importancia de las Ciencias de la Computación
+        CSF_maze_intro_k1_blocks: Introducción a Code Studio
+        CSF_maze_intro_text_blocks: Introducción a Code Studio
         CSF_my_robotic_friends: Mis amigos robóticos
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_Power_of_Words: Poder de las palabras
+        CSF_Super_Digital_Citizen: Super ciudadano digital
+        CSF_stevie_big_project: Stevie y el gran proyecto
+        CSF_unspotted_bugs: Errores desapercibidos
+        CSF_zuck_loops_short: Bucles de repetición
         frozen_intro: Prueba la Hora del Código
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
@@ -775,19 +654,23 @@
         infinity_playlab_intro: Jugar Lab - introducción
         infinity_playlab_events: Jugar Lab - eventos
         infinity_playlab_repeat_forever: Jugar Lab - repetir para siempre
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_concept_how_computers_work: Presentando cómo funcionan las computadoras
+        csd_concept_computer: 'Cómo funcionan las computadoras: ¿Qué hace a una computadora
+          una computadora?'
+        csd_concept_binary_data: 'Cómo funcionan las computadoras: Binario & Datos'
+        csd_concept_circuits_logic: 'Cómo funcionan las computadoras: Circuitos &
+          Lógica'
+        csd_concept_memory_cpu_input_output: 'Cómo funcionan las computadoras: Memoria,
+          CPU, Entrada y Salida'
+        csd_concept_hardware_software: 'Cómo funcionan las computadoras: Hardware
+          & Software'
+        csd_concept_search: Cómo funciona la búsqueda
+        csd_external_amazon_data: Cómo se utilizan los grandes datos en los sistemas
+          de recomendación de Amazon para cambiar nuestras vidas
+        csd_external_netflix_data: "¿Cómo hace Netflix sugerencias de programas de
+          televisión y películas?"
+        csd_external_waze_data: "¿Por qué hay tantos usuarios obsesionados con Waze?"
+        csd_gamelab_animation_tab: La pestaña de animación
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -797,12 +680,12 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_gamelab_velocity: Velocidad
+        csd_weblab_intro_1: Introducción a Web Lab - Parte 1
+        csd_weblab_intro_2: Introducción a Web Lab - Parte 2
+        csd_weblab_css_1: Introducción a CSS - Parte 1
+        csd_weblab_css_2: Introducción a CSS - Parte 2
+        csd_weblab_intro_3: Introducción a Web Lab - Parte 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -863,9 +746,6 @@
         alg_16_biggame_collision_detection: CS en álgebra - Big Game detección de
           colisiones
         alg_17_sambat_compound_booleans: CS en álgebra - compuestos booleanos
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Construyendo una Galaxia con Código - Introducción'
         starwars_typing: 'Star Wars: Construyendo una Galaxia con Código - JavaScript'
         starwars_events: 'Star Wars: Construyendo una Galaxia con Código - Eventos'
@@ -886,43 +766,59 @@
         iceage_intro: Hora de código Era del Hielo - Introducción
         iceage_events: Hora de Código Era del Hielo - Eventos
         iceage_repeat: Hora de Código Era del Hielo - Repetir comando
-        mc_2016_intro: Hora de Code de Minecraft - Introducción
-        mc_2016_loops: Hora de Code de Minecraft - Bucles
-        mc_2016_events: Hora de Code de Minecraft - Eventos
-        mc_2016_spawn: Hora de Code de Minecraft
-        mc_2016_congrats: Hora de Code de Minecraft - Felicitaciones
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
-        mc_2017_congratulations: Hora de Code de Minecraft - Felicitaciones
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        mc_2016_intro: Hora del código de Minecraft - Introducción
+        mc_2016_loops: Hora del código de Minecraft - Ciclos
+        mc_2016_events: Hora del código de Minecraft - Eventos
+        mc_2016_spawn: Hora del código de Minecraft - Generar
+        mc_2016_congrats: Hora del código de Minecraft - Felicidades
+        applab_hoc_welcome: Hora del código de App Lab - Bienvenida
+        applab_hoc_setproperty: Hora del código de App Lab - setProperty
+        applab_hoc_onevent: Hora del código de App Lab - onEvent
+        applab_hoc_designmode: Hora del código de App Lab - Modo de diseño
+        applab_hoc_share: Hora del código de App Lab - Compartir
+        mc_2017_agent_intro: Hora del código de Minecraft - El agente
+        mc_2017_repeat: Hora del código de Minecraft - Repetir ciclos
+        mc_2017_functions: Hora del código de Minecraft - Funciones
+        mc_2017_congratulations: Hora del código de Minecraft - Felicidades
+        mc_2017_puzzle_1: Hora del código de Minecraft - El agente
+        mc_2017_puzzle_3: Hora del código de Minecraft - Repetir ciclos
+        mc_2017_puzzle_8: Hora del código de Minecraft - Funciones
+        mc_2017_puzzle_12: Hora del código de Minecraft - Juego libre
+        hint_videos_d_11_3_first: 'Videos sugeridos: D.11.3 Primero'
+        hint_videos_d_11_3_last: 'Videos sugeridos: D.11.3 Último'
+        hint_videos_d_11_4_first: 'Videos sugeridos: D.11.4 Primero'
+        hint_videos_d_11_4_last: 'Videos sugeridos: D.11.4 Último'
+        hint_videos_d_11_5_first: 'Videos sugeridos: D.11.5 Primero'
+        hint_videos_d_11_5_last: 'Videos sugeridos: D.11.5 Último'
+        hint_videos_d_11_6_first: 'Videos sugeridos: D.11.6 Primero'
+        hint_videos_d_11_6_last: 'Videos sugeridos: D.11.6 Último'
+        hint_videos_d_11_7_first: 'Videos sugeridos: D.11.7 Primero'
+        hint_videos_d_11_7_last: 'Videos sugeridos: D.11.7 Último'
+        hint_videos_d_11_9_first: 'Videos sugeridos: D.11.9 Primero'
+        hint_videos_d_11_9_last: 'Videos sugeridos: D.11.9 Último'
+        hint_videos_d_11_11_first: 'Videos sugeridos: D.11.11 Primero'
+        hint_videos_d_11_11_last: 'Videos sugeridos: D.11.11 Último'
+        applab_intro_welcome: App Lab - Comenzando
+        applab_intro_events: App Lab - Hazlo interactivo
+        applab_intro_sounds: App Lab - Imágenes y sonidos
+        applab_intro_designmode: App Lab - Modo de diseño
+        applab_intro_share: App Lab - Comparte tu aplicación
+        csd_applab_arrays: Introducción a los Arrays
+        CSF_skinOverview_Harvester: El recolector
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: El recolector
+        CSF_harvester_loops_K1: Ciclos en Harvester
+        CSF_scrat_loops_K1: Ciclos en Ice Age
+        CSF_scrat_loops_CF: Ciclos en Ice Age
+        CSF_if_allskins: El Bloque If
+        CSF_ifelse_allskins: Usando Bloques "If/Else"
+        CSF_ifelseifelse_allskins: Usando Bloques "If/ElseIf/Else"
+        CSF_loops_AB: Bucles
+        csd_gamelab_booleans: Expresiones Booleanas
+        csd_gamelab_conditional_statements: Sentencias Condicionales
+        csd_gamelab_if_else: Sentencias If/Else
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

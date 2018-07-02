@@ -25,14 +25,14 @@
   submit: "Dorëzo"
   twentyhours_heading: "Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike"
   twentyhours_text: "E përfunduat orën tuaj të parë te kodimit? Tani mësoni më shumë për Shkencen Kompjuterike dhe konceptet e programimit në kursin në vazhdim."
-  og_title: Çdo fëmijë meriton mundësinë
+  og_title: 'Çdo fëmijë meriton mundësinë'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Çdo student në çdo shkollë e meriton të ketë mundësinë për të studiuar shkenca kompjuterike. Po ndryshon gjithçka."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Ora e kodimit po vjen"
   csedweek_og_description: "Ora e Kodimit është një lëvizje globale që i përfshin dhjetëra miliona studentë në mbi 180 shtete dhe mbi 45 gjuhë. "
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Bashkohuni në <a href=\"http://hourofcode.com\"> Orën e Kodimit</a><br/>8-14 Dhjetor, 2014<br/>"
   hoc2014_students: "Studentët"
@@ -335,7 +335,7 @@
   homepage_banner_link_prizes: 'Bashkoju ngjarjes më të madhe të mësimit në histori. '
   homepage_banner_text_main: "Code.org dhe Bordi i Kolegjit bashkohen për të nxitur larmishmërinë në shkencat kompjuterike."
   homepage_banner_text_link: "Mëso më shumë"
-  homepage_banner_privacy_main: Ne e kemi rifreskuar linjën tonë të privacisë që të përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.
+  homepage_banner_privacy_main: 'Ne e kemi rifreskuar linjën tonë të privacisë që të përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.'
   homepage_banner_privacy_link: "Mëso më shumë"
   homepage_banner_20k_teachers: "20.000 mësues të trajnuar, dhe tani mësimi i shkencës kompjuterike në klasa.\n"
   homepage_banner_20k_teachers_link: "Mëso më shumë"
@@ -377,6 +377,8 @@
   homepage_header_donors: "Code.org falenderon të gjithë mbështetësit"
   homepage_donors_seall: "Shiko të gjitha"
   homepage_donors_donate: "Dhuro"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Mëso më shumë"
   contact_form_topic_student: "Unë jam një student"
   contact_form_topic_parent: "Unë jam një prind"
   contact_form_topic_teacher: "Unë jam një mësues"
@@ -504,8 +506,10 @@
   video_title_real_madrid: "Ora e Kodit me Real Madritin"
   video_title_marco_belinelli: "Ora e Koditit me Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh në Shkencat Kompjuterike"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 minutë"
   video_2min: "2 min"
+  video_3min: "3 min"
   video_5min: "5 min"
   speak_another_language: "Speak another language?"
   help_translate: "Help us translate."
@@ -529,7 +533,7 @@
   volunteer_engineer_submission_field_company_placeholder: "Firma (ose Universiteti)"
   volunteer_engineer_submission_field_experience_level: "Niveli i eksperiencës"
   volunteer_engineer_submission_field_location: "Lokacioni"
-  volunteer_engineer_submission_field_location_desc: "Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only."
+  volunteer_engineer_submission_field_location_desc: "Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. Please enter just your city or zip code to protect your privacy."
   volunteer_engineer_submission_field_location_placeholder: "Kodi postal, qyteti dhe shteti, ose adresa e rrugës"
   volunteer_engineer_submission_field_location_flexibility: "I can volunteer by... (select all that apply)"
   volunteer_engineer_submission_checkbox_after_hoc: "I’m interested in volunteering year-round"
@@ -545,6 +549,10 @@
   volunteer_engineer_submission_field_email: "Adresa Email-it"
   volunteer_engineer_submission_field_email_desc: "Email adresa yte nuk do të shpërndahet, por do ju dërgojmë kërkesat nga mësuesit."
   volunteer_engineer_submission_field_email_placeholder: "Adresa Email-it"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: 'Po'
+  volunteer_engineer_submission_field_email_preference_no: 'Jo'
   volunteer_engineer_submission_final_paragraph: "Ju do të jeni listuar në hartën e mësuesve lokal për t'ju kontaktuar rreth Orës së Kodit ose mundësive tjera vullnetare. Email-i juaj dhe adresa e saktë ASNJËHERË nuk do të shpërndahet nga ana jonë. Por informata tjetër (duke përfshirë lokacionin e përafërt) do të jetë e shikueshme nga ana e mësuesve lokal."
   volunteer_engineer_submission_checkbox_contact: 'Unë pranoj mësuesit të më kontaktojnë për mundësit vullnetare (Vërejtje: email adresa yte nuk do të shpërdahet)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Unë vërtetoj që jam të paktën 18 vjeç."
@@ -626,18 +634,12 @@
   dashboard_course_csp: "Ap® Parimet e Shkencave Kompjuterike"
   dashboard_course_csp_desc: "Code.org ka dizenjuar një kurs rigoroz, përfshirës dhe të përshtatshëm i cili eksploron idetë fillestare të kompjuterizimit."
   dashboard_landing_loading: "Në ngarkim..."
-  dashboard_action_edit: "Redakto"
-  dashboard_action_save: "Ruaj"
-  dashboard_action_save_all: "Ruaj të gjitha"
   dashboard_action_cancel: "Anulo"
   dashboard_action_delete: "Fshi"
   dashboard_action_delete_yes: 'Po'
   dashboard_action_delete_no: 'Jo'
   dashboard_action_confirm: "Fshirje?"
-  dashboard_action_remove: "Hiq"
-  dashboard_action_remove_confirm: "Heqje?"
   dashboard_action_done: "Përfunduar"
-  dashboard_action_required: "e domosdoshme"
   dashboard_action_print_certificates: "Shtyp Certifikatat"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
@@ -713,28 +715,15 @@
   dashboard_sections_assign_activity: "Assign Course"
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
-  dashboard_students_add_student: "Shto studentë"
-  dashboard_students_add_students: "Shto studentë të shumëfishtë"
   dashboard_students_add_multiple: 'Shkruaj emrat e studentëve të tu, një për çdo rresht:'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "Ti ke krijuar një seksion të ri! Tani shto studentë duke përdorur butonat lartë <b>Shto studentë</b> dhe <b>Shto studentë të shumëfishtë</b>."
-  dashboard_students_placeholder_name: "Emri Studentit"
   dashboard_students_name: "Emri"
   dashboard_students_progress: "Ecuri"
-  dashboard_students_age: "Mosha"
-  dashboard_students_gender: "Gjini"
   dashboard_students_male: "Mashkull"
   dashboard_students_female: "Femër"
-  dashboard_students_secret: "I/e Fshehtë"
-  dashboard_students_password: "fjalekalim"
-  dashboard_students_username: 'Emri i përdoruesit: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: "Nivelet e Përfunduar"
   dashboard_students_total_lines: "Rreshta Kodi"
-  dashboard_students_show_secret: "Trego sekretin"
-  dashboard_students_auto_generated: "Auto-gjeneruar"
-  dashboard_students_reset_secret: "Rivendos sekretin"
-  dashboard_students_reset_password: "Rivendos fjalëkalimin"
   dashboard_students_share_section: "Shpërndaje këtë faqe logimi për seksionin me studentet tuaj:"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Printo kartat me informacinin e logimit të studentëve të tu."
@@ -765,7 +754,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Plani mësimor"
   dashboard_curriculum_overview: "Pamja e përgjithshme e Planit Mësimor K-5"
   dashboard_overview: "Përmbledhja"
@@ -783,12 +775,13 @@
   dashboard_curriculum_csins: 'Shkencat kompjuterike si pjesë e shkencës:'
   dashboard_curriculum_csp: 'Ap® Parimet e Shkencave Kompjuterike:'
   dashboard_curriculum_ecs: 'Explorimi i Shkencave Kompjuterike:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Të tjera/ë"
   dashboard_login_word: "Fjalë"
   dashboard_login_picture: "Figurë"
   dashboard_login_none: "Email"
-  dashboard_new_password: "fjalëkalim i ri"
   dashboard_stage: "Fazë"
   dashboard_puzzle: "Enigmë"
   dashboard_question: "Question"
@@ -950,14 +943,30 @@
   coursee_name: "Course E"
   coursef-draft_name: Course F
   coursef_name: "Course F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Kurs i Avancuar"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -965,6 +974,34 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unit 5: Data and Society'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Unit 1: The Internet'
+  csp2-2017_name: 'Unit 2: Digital Information'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
+  csp1-2018_name: 'Unit 1: The Internet'
+  csp2-2018_name: 'Unit 2: Digital Information'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -975,6 +1012,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full Test - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -998,14 +1036,19 @@
   math_category_name: "Matematikë"
   hoc_category_name: "Ora e Kodimit"
   csf_category_name: "CS Fundamentals"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "CS Principles"
+  csp17_category_name: "CS Principles ('17-'18)"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratori i Aplikacioneve"
+  gamelab_name: "Game Lab"
   basketball_name: "Realizo një lojë basketbolli"
   sports_name: "Krijo lojën tënde sportive"
   applab_gradelevel: "Moshat 13 +"
@@ -1064,12 +1107,12 @@
   course2_gradelevel: "Moshat 6-18"
   course3_gradelevel: "Moshat 8-18"
   course4_gradelevel: "Moshat 10-18"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "Klasat 8+"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "Moshat 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "Moshat 10-18"
   codeorg_platformtext: "Shfletuesit modern, telefonat e mençur, tabletat"
   codeintl_platformtext: "Browserat e kohës, smartphones, tableta"
@@ -1172,12 +1215,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar në 34 gjuhë."
   codeintl_longdescription: "Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar ne 34 gjuhë."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1460,12 +1503,13 @@
   header_documentation: "Documentation"
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "Përshëndetje %{username}"
   user_header_settings: "Llogaria ime"
   user_header_logout: "Dil"
   user_header_signin: "Futu"
-  view_all_sections: "View All Sections"
+  view_all_sections: "View all sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

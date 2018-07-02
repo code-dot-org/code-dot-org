@@ -1,0 +1,24 @@
+name 'CSP Unit 2 Ch2 MC data cleaning_2018'
+title 'Data Cleaning'
+description ' '
+question ' '
+wrong 'Translate all states into their two-letter state code'
+wrong 'Group similar areas of study into a single area of study. For example: grouping Applied Mathematics and Mathematics together into "Mathematics"'
+right 'Round up all non-integer values for "Likelihood of staying in state"'
+wrong 'Removing the entire row with home state "adsfas" and recomputing'
+
+markdown <<MARKDOWN
+The next 3 questions all refer to data collected in a hypothetical survey of high school seniors, and a student, Amara, who is working with this data.
+
+The survey of high school seniors asked:
+
+* What state do you live in?
+* How likely are you to attend college in your home state? (on a scale of 1-5, 5 meaning "very likely")
+* What do you plan to study?
+ 
+  Amara does an initial computation on the data to make a summary table. A small segment is shown below. 
+ 
+  ![](https://images.code.org/ff9364011a142bbef6eab000897d8db4-image-1470316223714.png)
+
+Amara is tasked with cleaning the data to prepare it for further analysis. Which of the following would be the **least appropriate** modifications to make to the data to prepare it for further analysis?
+MARKDOWN

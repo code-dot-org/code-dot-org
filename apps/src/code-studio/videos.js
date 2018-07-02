@@ -254,7 +254,11 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
 // This is exported (and placed on window) because it gets accessed externally for our video test page.
 videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
   var key = (videoInfo ? videoInfo.key : undefined);
-  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(),
+
+  // Handle URLs with either youtube.com or youtube-nocookie.com.
+  var noCookie = videoInfo.src.indexOf("youtube-nocookie.com") !== -1;
+
+  testImageAccess(youTubeAvailabilityEndpointURL(noCookie) + '?' + Math.random(),
       // Called when YouTube availability check succeeds.
       function () {
         // Track event in Google Analytics.
@@ -270,11 +274,15 @@ videos.onYouTubeBlocked = function (youTubeBlockedCallback, videoInfo) {
   );
 };
 
-function youTubeAvailabilityEndpointURL() {
+function youTubeAvailabilityEndpointURL(noCookie) {
   if (window.document.URL.toString().indexOf('force_youtube_fallback') >= 0) {
     return 'https://unreachable-test-subdomain.example.com/favicon.ico';
   }
-  return "https://www.youtube.com/favicon.ico";
+  if (noCookie) {
+    return "https://www.youtube-nocookie.com/favicon.ico";
+  } else {
+    return "https://www.youtube.com/favicon.ico";
+  }
 }
 
 // Precondition: $('#video') must exist on the DOM before this function is called.

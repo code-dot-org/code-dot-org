@@ -1,5 +1,5 @@
 ---
-title: '<%= hoc_s(:title_how_to_districts) %>'
+title: <%= hoc_s(:title_how_to_districts) %>
 layout: wide
 nav: how_to_nav
 ---
@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Την ώρα του κώδικα είναι μόνο το πρώτο βήμα σε ένα ταξίδι για να μάθετε περισσότερα σχετικά με το πώς λειτουργεί η τεχνολογία και πώς μπορείτε να δημιουργήσετε εφαρμογές λογισμικού. Για να συνεχίσετε αυτό το ταξίδι:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Συμμετέχετε](<%= resolve_url('https://code.org/professional-development-workshops') %>) σε ημερήσιο εργαστήριο προσωπικά ώστε να λάβετε οδηγίες από έναν έμπειρο εισηγητή της επιστήμης των υπολογιστών. (μόνο εκπαιδευτές από Η.Π.Α.)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

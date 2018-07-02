@@ -1,4 +1,5 @@
-"sl":
+---
+sl:
   errors:
     messages:
       not_saved: 'Prosim popravite sledeče napake:'
@@ -92,11 +93,12 @@
     facebook: Facebook
     windowslive: Microsoft račun
     clever: Pameten račun
+    powerschool: Powerschool Account
     forgot_password: Si pozabil/a svoje geslo?
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
-    not_linked: "Žal, tvoj Code.org račun ni povezan s tvojim %{provider}. Žal se
-      morate prijaviti z vnosom gesla spodaj."
+    not_linked: Žal, tvoj Code.org račun ni povezan s tvojim %{provider}. Žal se morate
+      prijaviti z vnosom gesla spodaj.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
       sign in through your Clever Portal instead.
   signup_form:
@@ -136,6 +138,13 @@
     valid_password: Veljavno geslo!
     invalid_password: Geslo mora imeti vsaj 6 znakov
     mismatch_password: Vneseni gesli nista enaki
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Strinjam se z <a href='http://code.org/tos'> pogoji storitve</a>
       Code.org Če sem mlajši od 13 let, potrjujem s predložitvijo tega obrazca, da
       imam dovoljenje svojih staršev ali zakonitega skrbnika za uporabo storitev Code.org.
@@ -144,12 +153,19 @@
     teacher_terms: Strinjam se z <a href='http://code.org/tos'> pogoji storitve</a>
       Code.org
     additional_information: Potrebujemo nekaj dodatnih informacij za uspešno prijavo.
+    user_type_button: Update Account Type
     user_type_label: Account Type
     user_type_teacher: Učitelj/ica
     user_type_student: Učenec
     field_is_required: se zahtevan(o)
     accept_terms: Moraš se strinjati, če želiš ustvariti račun
     error: An error occurred.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Da
+    email_preference_no: Ne
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -172,14 +188,14 @@
     school_organization_name: School/Organization Name
     school_organization_zip: School/Organization Zip Code
   signin_form:
-    title: "Že imate račun? Vpišite se"
+    title: Že imate račun? Vpišite se
     login: Elektronska pošta
     login_username: Email or Username
     password: Geslo
     remember: Zapomni si me
     submit: Vpis
   signin:
-    try_heading: "Želiš poskusiti kodirati brez prijave?"
+    try_heading: Želiš poskusiti kodirati brez prijave?
     try_hoc: Poizkusite najprej eno Uro kode
     try_20hours: Poizkusite naš 20 urni Uvod v računalništvo
   signinsection:
@@ -200,6 +216,7 @@
       email: Elektronska pošta
       submit: Pošlji
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
@@ -231,7 +248,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Skrivna beseda
       email: Elektronska pošta
       google_classroom: Google Classroom
       clever: Clever
@@ -247,7 +264,7 @@
         prijavo tukaj in jih potem poskusi ponovno dodati
       section_not_found: Odseka s kodo "%{section_code}" ni bilo mogoče najti.
       blank_code: Vnesite šifro razdelka
-      cant_join_own_section: "Žal se ne morete pridružiti svojemu razdelku."
+      cant_join_own_section: Žal se ne morete pridružiti svojemu razdelku.
       provider_managed_section: This section is managed by another provider and cannot
         be joined. Please ask your teacher to add you via %{provider} and re-sync
         their section.
@@ -331,13 +348,13 @@
     user:
       classroom: Učiteljeva domača stran
       district_dashboard: Nadzorna plošča za okrožje
-      label: "Živjo %{username}"
+      label: Živjo %{username}
       stats: Moj napredek
       settings: Moj račun
       logout: Izpis
       signin: Prijava
       signup: Ustvari račun
-      already_registered: "Že registrirani?"
+      already_registered: Že registrirani?
       pair_programming: Programiranje parov
       team: Ekipa
       driver: Voznik
@@ -384,6 +401,7 @@
     email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'
     email_confirm_wrong_email: "(Napačen email naslov?)"
     email_resend_confirm: Ponovno pošlji potrditvena navodila
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(pusti prazno, če tega nočeš spremeniti)"
     current_password_hint: "(potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)"
     delete: Izbriši svoj račun
@@ -416,18 +434,19 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Zaključeno
     tried: Poskus
   home:
     title: Studio za kodiranje
     description: Code Studio je dom spletnih tečajev, ki jih je ustvaril Code.org
-    lines_of_code: "ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE"
+    lines_of_code: ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE
     lines_of_code_linebreak: "%{students_count} MILIJONOV ŠTUDENTOV JE NAPISALO<br/>%{lines_count}
       VRSTIC KODE"
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
-    signin_message: "Že registrirani? %{link}"
+    signin_message: Že registrirani? %{link}
     student_reg_link: Vpis študenta
     teacher_reg_link: Vpis učitelja
     signin_directions: Uporabi račun za sledenje napredka.<br/> Učitelji pa sledite
@@ -582,18 +601,20 @@
       bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional
       Learning."
   move_students:
-    new_section_dne: "Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite
-      drugo šifro odseka."
+    new_section_dne: Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite
+      drugo šifro odseka.
     section_code_cant_be_current_section: Trenutni odsek ne more biti enak kot nov
       odsek.
-    current_section_dne: "Žal, oddelek %{current_section_code} ne obstaja. Prosimo
-      vnesite drugo šifro odseka."
+    current_section_dne: Žal, oddelek %{current_section_code} ne obstaja. Prosimo
+      vnesite drugo šifro odseka.
     student_ids_not_entered: Prosimo vnesite student_ids.
     student_not_found: Eden ali več učencev ni bilo najdenih.
     all_students_must_be_in_current_section: Vsi učenci morajo trenutno biti vključeni
       v vaš odsek.
     already_enrolled_in_new_section: Teh učencev ne more premakniti, ker jih ta učitelj
       že ima v drugem odseku.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Learn on Code Studio
     description: Kdorkoli se lahko nauči računalništva. S kodo ustvari igre, aplikacije
@@ -601,7 +622,9 @@
     try_hour_of_code: Poizkusi Uro za kodo!
   gender:
     male: Moški
-    female: "Ženska"
+    female: Ženska
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Raje ne bi odgovoril
   user_type:
     student: Učenec
@@ -689,7 +712,7 @@
   not_started: The student has not attempted this level.
   share_code:
     title: Klikni 'Zaženi', da vidiš svoj program v akciji
-    bounce_og_title: Oglejte si moje Bounce igre
+    bounce_og_title: Oglejte si moje igro Skokica
     flappy_og_title: Oglejte si mojo Flappy igro
     studio_og_title: Oglejte si moj Play Lab App
     check_out_what_i_made: Poglej, kaj sem naredil
@@ -904,9 +927,9 @@
   age_interstitial:
     age: Tvoja starost
     header: Posodobitev podatkov o računu
-    message: "Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek
+    message: Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek
       o starosti učencev. <br/>Kot vedno, code.org podatkov ne bo nikoli posodil,
-      prodal ali delil s tretjimi osebami."
+      prodal ali delil s tretjimi osebami.
     sign_out: Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.
   terms_interstitial:
     title: Updated Terms of Service and Privacy Policy
@@ -948,7 +971,7 @@
     message: Please tell us your race (check all that apply)
     races:
     - white: Bela
-    - black: "Črna ali Afroameričan"
+    - black: Črna ali Afroameričan
     - hispanic: Hispanic ali Latino
     - asian: Azijske
     - hawaiian: Domorodec Havajev ali drugega Pacifiškega otoka
@@ -1037,8 +1060,8 @@
         storitve</a> spletne strani Code.org in zato ga ni mogoče deliti z drugimi.
       policy_violation: This project contains information that cannot be shared with
         others. Please contact the app owner to fix the contents of their app.
-      contact_us: "Če menite, da je prišlo do napake, prosimo <a href='https://code.org/contact'>kontaktirajte
-        nas.</a>"
+      contact_us: Če menite, da je prišlo do napake, prosimo <a href='https://code.org/contact'>kontaktirajte
+        nas.</a>
       go_to_code_studio: Pojdi v Code studio
       report_abuse_form:
         intro: If you have encountered offensive content, threats, cyberbullying,
@@ -1055,7 +1078,7 @@
         abuse_type:
           question: Kako ta vsebina krši %{link_start}Pogoje storitve%{link_end}?
           harassment: Grožnje, ustrahovanje, nadlegovanje
-          offensive: "Žaljiva vsebina"
+          offensive: Žaljiva vsebina
           infringement: Kršitev avtorskih pravic
           other: Drugi
         detail: Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.
@@ -1112,6 +1135,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1125,6 +1149,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1267,3 +1296,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Strinjam se
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Da

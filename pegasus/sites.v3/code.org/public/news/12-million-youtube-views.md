@@ -7,9 +7,9 @@ theme: responsive
 
 # Code.Org Short Film With Bill Gates, Mark Zuckerberg, will.i.am, and Chris Bosh Gets Over 12 Million Views, Tops YouTube List
 
-**Education non-profit debuts short film citing leaders from all walks of life saying more students should learn to code.**
+**Education nonprofit debuts short film citing leaders from all walks of life saying more students should learn to code.**
 
-SEATTLE, March 12, 2013 - Code.org, a non-profit focused on computer programming education, launched two weeks ago with a short film starring Bill Gates, Mark Zuckerberg, Twitter founder Jack Dorsey, Zappos CEO Tony Hsieh, Dropbox CEO Drew Houston, will.i.am of the Black Eyed Peas, Chris Bosh of the Miami Heat, and others. The film, featured at www.Code.org, generated a tremendous response and has been viewed over 12 million times in the two weeks since its release. Additionally, in the first 48 hours after it was available, the film topped YouTube’s “most popular” chart.
+SEATTLE, March 12, 2013 - Code.org, a nonprofit focused on computer programming education, launched two weeks ago with a short film starring Bill Gates, Mark Zuckerberg, Twitter founder Jack Dorsey, Zappos CEO Tony Hsieh, Dropbox CEO Drew Houston, will.i.am of the Black Eyed Peas, Chris Bosh of the Miami Heat, and others. The film, featured at www.Code.org, generated a tremendous response and has been viewed over 12 million times in the two weeks since its release. Additionally, in the first 48 hours after it was available, the film topped YouTube’s “most popular” chart.
 
 In addition to the strong number of film views, Code.org received staggering support from the community:
 
@@ -25,4 +25,4 @@ Directed by Lesley Chilcott, (*An Inconvenient Truth*, *Waiting for Superman*), 
 
 ---
 
-Code.org is a public 501c3 non-profit. Founded by twins Ali and Hadi Partovi, Code.org’s vision is that every student in every school should have the opportunity to learn to code. [http://code.org](http://code.org)
+Code.org is a public 501c3 nonprofit. Founded by twins Ali and Hadi Partovi, Code.org’s vision is that every student in every school should have the opportunity to learn to code. [http://code.org](http://code.org)

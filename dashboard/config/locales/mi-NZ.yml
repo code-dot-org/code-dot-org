@@ -1,4 +1,5 @@
-"mi":
+---
+mi:
   errors:
     messages:
       not_saved: 'Tēnā whakatikaina ngā hapa e haere ake nei:'
@@ -23,7 +24,7 @@
       user:
         name: Ingoa Whakaatu
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
-        email: "Īmēra"
+        email: Īmēra
         parent_email: Parent/guardian email
         personal_email: Personal email address
         username: Ingoa Kaiwhakamahi
@@ -47,7 +48,7 @@
   next_resource: Rauemi tōmuri
   done_with_module: Done with this Learning Module
   cancel: Whakakore
-  okay: "Āe"
+  okay: Āe
   heading_x_of_y: "%{heading} (whārangi %{x} o %{y})"
   add_teacher_form:
     code:
@@ -96,6 +97,7 @@
     facebook: Pukamata
     windowslive: Pūkete Microsoft
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Kua wareware i a koe tō kupuhipa?
     need_confirmation: Kāore koe i whiwhi ki ngā tohutohu whakaū?
     need_unlock: Kāore koe i whiwhi ki ngā tohutohu wetemaukati?
@@ -141,6 +143,13 @@
     valid_password: Kupuhipa whai mana!
     invalid_password: Me kaua tō kupuhipa e iti ake i te 6 pūāhua
     mismatch_password: He rerekē ngā kupuhipa e rua kua whakaurua e koe
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: E whakaae ana ahau ki ngā here o Code.org <a href='http://code.org/tos'>
       ngā ture ratonga</a>. Mehemea he tamariki ake ahau i te 13 tau, e whakaū ana
       ahau mā te tāpae i tēnei puka kua whakaaetia taku whakamahi i ngā ratonga o
@@ -154,12 +163,19 @@
       ētahi mōhiohio anō mō te tūmataititanga.
     additional_information: Me whiwhi mātou ki ētahi mōhiohio anō kia āhei tonu tō
       waitohu mai.
+    user_type_button: Update Account Type
     user_type_label: Momo Pūkete
     user_type_teacher: Teacher
     user_type_student: Student
     field_is_required: me mātua
     accept_terms: Me mātua whakaae koe ki te waihanga pūkete
     error: An error occurred.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Āe
+    email_preference_no: Kāore
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -183,7 +199,7 @@
     school_organization_zip: School/Organization Zip Code
   signin_form:
     title: He pūkete kē tāu? Takiuru
-    login: "Īmēra"
+    login: Īmēra
     login_username: Email or Username
     password: Kupuhipa
     remember: Maumahara i ahau
@@ -211,6 +227,7 @@
       email: Wāhitau īmēra
       submit: Tāpaetia
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
@@ -243,7 +260,7 @@
     type:
       picture: Picture Password
       word: Secret Words
-      email: "Īmēra"
+      email: Īmēra
       google_classroom: Google Classroom
       clever: Clever
   follower:
@@ -373,10 +390,10 @@
     for_teachers_only: Mā ngā Pouako Anake
     title:
       one: 'Tō pouako:'
-      other: "Ō pouako:"
+      other: 'Ō pouako:'
     remove: "(tangohia te pouako)"
     confirm:
-      remove: "Āe rānei e hiahia ana koe ki te tango i tēnei pouako?"
+      remove: Āe rānei e hiahia ana koe ki te tango i tēnei pouako?
     students:
       dashboard: Haere ki Paemana Pouako
     user_not_found: Kāore te pouako i kitea.
@@ -399,6 +416,7 @@
     email_confirm_needed_required: 'Kāore anō tō wāhitau īmēra %{email} kia whakaūngia:'
     email_confirm_wrong_email: "(Wāhitau īmēra hē?)"
     email_resend_confirm: Tukuna anō ngā tohutohu whakaū
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(waiho kia wātea ki te kore koe e hiahia ki te panoni)"
     current_password_hint: "(me whiwhi mātou ki tō kupuhipa onāianei ki te whakaū
       i ō panonitanga)"
@@ -406,7 +424,7 @@
     delete_text: Mā te pāwhiri i te pātene o raro nei ka muku i tō pūkete.
     delete_text_teacher_note: 'Kia mōhio ai koe: e kore ngā pūkete o ngā ākonga e
       mukua ina mukua tō ake pūkete.'
-    delete_confirm: "Āe rānei e hiahia ana koe ki te muku i tō pūkete?"
+    delete_confirm: Āe rānei e hiahia ana koe ki te muku i tō pūkete?
     deleted_user: deleted user
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
@@ -432,6 +450,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Kua oti
     tried: Kua ngana
@@ -617,6 +636,8 @@
       onāianei i tō wāhanga.
     already_enrolled_in_new_section: Tē taea e koe ēnei ākonga te whakawhiti, nā te
       mea, kei wāhanga kē rātou me tētahi atu pouako.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Ako mā Code Studio
     description: E āhei ana te tangata ahakoa ko wai te ako i te pūtaiao rorohiko.
@@ -625,6 +646,8 @@
   gender:
     male: Tāne
     female: Wahine
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Kāore i te hiahia kia uruparetia
   user_type:
     student: Student
@@ -666,7 +689,7 @@
     copyright: Manatārua
     more: More
     feedback: Tuku urupare
-    translate: "Āwhinatia mātou ki te whakamāori ki tō reo"
+    translate: Āwhinatia mātou ki te whakamāori ki tō reo
     support: Tautoko
     support_url: http://support.code.org
     tos_short: Ngā Ture
@@ -720,8 +743,8 @@
   lesson_plan: Mahere Akoranga
   view_lesson_plan: Tirotiro Mahere Akoranga
   pdf_download: Tikiake i te PDF
-  download_coming_soon: "Ākuanei ka puta mai te ngohe tikiake."
-  video_coming_soon: "Ākuanei ka Puta te Ataata!"
+  download_coming_soon: Ākuanei ka puta mai te ngohe tikiake.
+  video_coming_soon: Ākuanei ka Puta te Ataata!
   not_started: Kāore anō te ākonga kia whakamātau i tēnei taumata.
   share_code:
     title: Pāwhiri 'Whakahaere' kia kitea taku papatono e rere ana
@@ -940,7 +963,7 @@
     correct_body: Koinā te whakautu tika.
   dialog:
     ok: Ka Pai
-    startover_title: "Āe rānei e hiahia ana koe ki te tīmata anō?"
+    startover_title: Āe rānei e hiahia ana koe ki te tīmata anō?
     startover_body: Mā tēnei ka tautuhi anō te panga ki tōna hanga i te tīmatanga,
       ā, ka tautahi hoki i te katoa o te raraunga kua tāpiritia, kua panonihia rānei
       e koe.
@@ -1071,12 +1094,12 @@
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
     really_delete: Delete?
-    delete_yes: "Āe"
+    delete_yes: Āe
     delete_no: Kāore
     saved: Kua Tiakina
     not_saved: Kāore anō kia tiakina
     cancel: Whakakore
-    delete_confirm_title: "Āe rānei e hiahia ana koe ki te muku i tēnei tūmahi?"
+    delete_confirm_title: Āe rānei e hiahia ana koe ki te muku i tēnei tūmahi?
     delete_confirm_text: Mā te muku i tō tūmahi ka poroa rawatia i tō rārangi Aku
       Tūmahi. Ko te katoa o ngā tāngata nāu te honongaitua o tēnei tūmahi i tiri ki
       a rātou, ka kore e kite tonu i tō tūmahi.
@@ -1173,6 +1196,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1186,6 +1210,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Karo
@@ -1331,3 +1360,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: I agree
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Āe

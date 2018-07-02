@@ -23,14 +23,14 @@ style_min: true
 
 <div class="col-50">
 
-Code.org&reg; is a non-profit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+Code.org&reg; is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org provides the leading curriculum for K-12 computer science in the largest school districts in the United States and Code.org also organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
 
 
 </div>
 
 <div style="clear: both;"></div>
 
-## Diversity of students in our courses</h2>
+## The majority of our students are girls or underrepresented minorities</h2>
 
 <img src="/images/infographics/fit-800/diversity-courses-updated-05-23.png" class ="col-95">
 
@@ -62,13 +62,13 @@ See all past [news and announcements](/about/news).
 
 | Code.org Goal | Accomplishment                                                                                                                                                                                                                                                                                                    |
 |------| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Improve diversity in CS | In our online courses, 45% of students are girls and 48% are underrepresented minorities. In our high school classrooms, 37% are girls, and 56% African American or Hispanic.                                                                                                                                     |
+| Improve diversity in CS | 45% of Code.org students are girls, 48% are underrepresented minorities, and 49% of US students are on free and reduced meals. Read more about [our approach to diversity](/diversity).                                                                                                                           |
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female)                                                                                                                                                                      |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org).                                                                                                                                                                                                                    |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled.                                                                    |
 | Prep new CS teachers | We've prepared 72,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).                                                                                                                                                                                    |
 | Change school district curriculum | We've partnered with [180 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a regional partner](/educate/districts).|
-| Set up policies to support CS | Policies changed in over 40 U.S. states to establish CS education standards, make CS courses count towards high school graduation, etc (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                      |
+| Set up policies to support CS | Policies changed in 43 U.S. states to establish CS education standards, make CS courses count towards high school graduation, etc. (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                          |
 | Go global | Our courses are available in over 50 languages, used in 180+ countries.                                                                                                                                                                                                                                           |
 <center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
 
@@ -81,13 +81,10 @@ In 2013, Code.org was launched by twin brothers [Hadi](/about/leadership/hadi_pa
 
 To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes.
 
-Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community.
+Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and [we thank all the partners and individuals who have supported our impact over the years](https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924).
 
-- [Code.org 2014 Annual Report](/about/2014)
-- [Code.org 2015 Annual Report](/about/2015)
-- [Code.org 2016 Annual Report](/about/2016)
-- [Code.org 2017 Annual Report](/about/2017)
-- [Code.org core values and messaging guidelines](/about/values)
+- [Code.org 2017 Annual Report](/about/2017) (Past reports: [2016](/about/2016), [2015](/about/2015), [2014](/about/2014))
+- [Our core values and messaging guidelines](/about/values)
 - [Our curriculum and pedagogy philosophy](/educate/curriculum/values)
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
 

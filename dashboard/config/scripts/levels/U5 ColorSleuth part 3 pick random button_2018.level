@@ -1,0 +1,75 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-04T23:02:59.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U5 ColorSleuth Template_2018",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "setProperty"
+        ],
+        "matchType": "exact",
+        "minTimes": 5,
+        "message": "There should be at least 5 calls to setProperty - one for each of the 4 buttons to set the background color initially, then a final call that sets the background-color of one of the buttons to something else."
+      },
+      {
+        "entries": [
+          "randomNumber"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "There should be a call to randomNumber(min,max) in the code as part of generating a random button ID like \"button\"+some number"
+      }
+    ],
+    "teacher_markdown": "**Common Mistake**\r\n\r\n* It's likely that some students will forget to remove the quotation marks and accidentally try to use `\"randButtonID\"` as the id in setProperty like this:\r\n\r\n`setProperty(\"randButtonID\", \"background-color\", diffColor);`\r\n\r\nThere should be no quotation marks *because you want to use the value stored in randButtonID not the string \"randButtonID\".*  It should look like the example in the instructions:\r\n\r\n`setProperty(randButtonID, \"background-color\", diffColor);`\r\n",
+    "markdown_instructions": "# You try it - Pick a button at random to make a different color\r\n\r\nWe've included the code discussed on the previous page below. \r\n\r\nThe last lines of your code should look something like this:\r\n\r\n\r\n    var diffColor = rgb(250, 175, 20);\r\n    var randButtonId = \"button\"+randomNumber(1,4);   // create a random button Id\r\n    setProperty(randButtonId, \"background-color\", diffColor);  // set its color to diffColor\r\n\r\n\r\nNotice that there is really only one new line - to make the `randButtonID` variable.  \r\nThe other change is to replace *\"button3\"* as the id in setProperty with *randButtonID*.\r\n\r\nSuggestion:\r\nAdd `console.log(randButtonId)` somewhere after you generate the button ID so you can see which button is supposed to have the different color.  It might be hard to spot!",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 7582,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "Add log conditions for randomNumber"
+}]]></config>
+  <blocks/>
+</Applab>

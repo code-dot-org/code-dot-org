@@ -9,10 +9,10 @@ import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
-import Permission from '../../permission';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
   container: {
@@ -55,8 +55,6 @@ export default class WorkshopTable extends React.Component {
     if (this.props.onWorkshopsReceived) {
       this.props.onWorkshopsReceived(this.props.workshops);
     }
-
-    this.permission = new Permission();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -175,7 +173,15 @@ export default class WorkshopTable extends React.Component {
       cell: {
         format: this.formatFacilitators
       }
+    }, {
+      property: 'regional_partner_name',
+      header: {
+        label: 'Regional Partner',
+        transforms: [sortable]
+      }
     });
+
+    columns.push();
 
     if (this.props.showStatus) {
       columns.push({
@@ -265,16 +271,17 @@ export default class WorkshopTable extends React.Component {
   };
 
   formatManagement = (manageData) => {
-    const {id, subject, state} = manageData;
+    const {id, subject, state, date} = manageData;
 
     return (
       <WorkshopManagement
         workshopId={id}
         subject={subject}
         viewUrl={`/workshops/${id}`}
+        date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
-        showSurveyUrl={state === 'Ended'}
+        showSurveyUrl={state === 'Ended' || [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(subject)}
       />
     );
   };
@@ -289,7 +296,7 @@ export default class WorkshopTable extends React.Component {
       row => _.merge(row, {
         enrollments: `${row.enrolled_teacher_count} / ${row.capacity}`,
         date: row.sessions[0].start,
-        manage: {id: row.id, subject: row.subject, state: row.state}
+        manage: {id: row.id, subject: row.subject, state: row.state, date: row.sessions[0].start}
       })
     );
 

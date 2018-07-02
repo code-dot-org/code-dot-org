@@ -1,0 +1,53 @@
+name 'cspu5_assess2_hello_exam_prep'
+wrong 'Wow, big word.'
+wrong 'Did you say something? That was so short.'
+wrong 'Use that word on the SAT.'
+right 'I have never heard that before.'
+wrong 'Nothing will be printed.'
+
+
+markdown <<MARKDOWN
+## *str*.length
+
+In JavaScript you can find the number of characters in String by using `.length`.  For example:
+    
+    var name = "Victoria";
+    console.log(name.length);  // will display 8 - the number of characters in "Victoria"
+
+---
+
+For the next **two** questions, consider the following JavaScript code segment.  
+
+    var word = prompt(“Enter a word”);
+
+    if( word.length > 10){
+        console.log(“Wow, big word.”);
+    }
+    else{
+        if( word.length < 3 ){
+            console.log(“Did you say something? That was so short.”);
+        }
+        else{
+            if( word.length > 6){
+                console.log(“Use that word on the SAT.”);
+            }
+            else{
+                console.log(“I have never heard that before.”);
+            }
+        }
+    }
+
+If the above code segment is run, and “hello” is entered at the prompt, what will be displayed in the console?
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 6, 8, 9** -- requires incorporating new knowledge about strings, plus nested if reasoning.
+
+Going through the code line by line:
+
+* The variable word is set to "hello", which has a length of 5
+* Since the length of the word is not greater than 10, we go into the else statement
+* Inside the else statement, since the length of hello is not less than 3, we go into the else statement
+* Since the word length is not greater than 6, we go into the else statement where the code displays "I have never heard that before." in the console
+MARKDOWN

@@ -3,7 +3,7 @@ import EligibilityConfirmDialog from './EligibilityConfirmDialog';
 
 export default storybook => {
   return storybook
-    .storiesOf('EligibilityConfirmDialog', module)
+    .storiesOf('MakerToolkit/Discounts/EligibilityConfirmDialog', module)
     .addStoryTable([
       {
         name: 'Confirm Dialog',

@@ -508,7 +508,7 @@ NetSimLobby.prototype.onWireTableChange_ = function () {
 NetSimLobby.prototype.getUserSections_ = function (callback) {
   var memberSectionsRequest = $.ajax({
     dataType: 'json',
-    url: '/v2/sections/membership'
+    url: '/api/v1/sections/membership'
   });
 
   var ownedSectionsRequest = $.ajax({
@@ -579,10 +579,6 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
  * @private
  */
 NetSimLobby.prototype.makeShardIDFromSeed_ = function (seed) {
-  // TODO (bbuchanan) : Hash shard ID, more likely to ensure it's unique
-  //                    and fits within 48 characters.
-  // Maybe grab this MIT-licensed implementation via node?
-  // https://github.com/blueimp/JavaScript-MD5
   return ('ns_' + this.levelKey_ + '_' + seed).substr(0, 48);
 };
 

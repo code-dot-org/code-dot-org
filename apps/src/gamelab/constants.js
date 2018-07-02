@@ -7,6 +7,11 @@ module.exports.GameLabInterfaceMode = utils.makeEnum(
   'ANIMATION'
 );
 
+module.exports.LocationPickerMode = utils.makeEnum(
+  'IDLE',
+  'SELECTING',
+);
+
 /** @const {number} */
 module.exports.GAME_WIDTH = 400;
 

@@ -5,12 +5,12 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Kako organizirati događaj Čas Kodiranja
 
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
 
 ## 2. During your event
@@ -31,15 +31,15 @@ nav: how_to_nav
 - Podijelite slike događaja na Facebook i Twitter. 
 - Use the hashtag **#HourOfCode**
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## Budi domaćin Noć Porodičnog Koda sa Časom Kodiranja i pozovi roditelej da učestvuju
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Razmisli da budete domaćin na K-5 noćnom događaju i da pozovete roditelje da se pridruže jednom satu računarstva. Ovo je odličan način da se uključe veće zajednice i da se podstaknu roditelji da podrže informatiku u Vašoj školi. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## Primjer plana događaja
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 

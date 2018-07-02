@@ -7,40 +7,40 @@ nav: promote_nav
 
 # Contoh siaran pers untuk pejabat terpilih
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Untuk Segera Rilis   
+[** DATE </ strong>]   
+Hubungi: [** INFORMASI KONTAK </ strong>]  
   
+</p> 
 
-
-<mark strong = "crwd-tanda"> 
+<strong mark = "crwd-mark"> 
 
 <center>
-  GUBERNUR / SENATOR / ASSEMBLYMEMBER / PERWAKILAN / WALIKOTA / Councilmember [MASUKKAN NAMA] [BERPARTISIPASI DALAM JAM KODE DENGAN MAHASISWA LOCAL] </ strong> <br /> Komunitas datang bersama-sama untuk meningkatkan kesadaran tentang pentingnya pendidikan ilmu komputer dengan berpartisipasi dalam Pekan Pendidikan Ilmu Komputer
+  GUBERNUR / SENATOR / MAJELAJARMEMBER / REPRESENTATIF / WAKTU / COUNCILMEMBER [INSERT NAME] [BERPARTISIPASI DALAM JAM KODE DENGAN SISWA LOKAL] </ strong> <br /> Komunitas berkumpul untuk meningkatkan kesadaran akan pentingnya pendidikan ilmu komputer dengan berpartisipasi dalam Pekan Pendidikan Ilmu Komputer
 </center>
 
   
   
 
 
-** DATE </ strong> - [ ** INSERT NAME </ strong> ] bergabung dengan anggota kepala sekolah dan fakultas dari <** INSERT NAMA SEKOLAH </ strong> ], pemimpin bisnis dan keluarga lokal hari ini untuk [ < strong> NAMA EVENT </ strong> ] untuk berpartisipasi dalam Jam Kode sebagai bagian dari Pekan Pendidikan Ilmu Komputer . [INSERT NAME] dan anggota masyarakat termasuk di antara puluhan juta orang di seluruh dunia untuk berpartisipasi dalam acara pembelajaran terbesar sepanjang sejarah.</p> 
+** DATE </ strong> - [** INSERT NAME </ strong>] bergabung dengan anggota kepala sekolah dan fakultas dari <** INSERT NAMA SEKOLAH </ strong>], pemimpin bisnis dan keluarga lokal hari ini untuk [< strong> NAMA EVENT </ strong>] untuk berpartisipasi dalam Jam Kode sebagai bagian dari Pekan Pendidikan Ilmu Komputer. [INSERT NAME] dan anggota masyarakat termasuk di antara puluhan juta orang di seluruh dunia untuk berpartisipasi dalam acara pembelajaran terbesar sepanjang sejarah.</p> 
 
 [ ** INSERT DETAIL PERISTIWAAN, GUNAKAN DESKRIPTIF DAN BAHASA KUANTIFIABLE. UNTUK CONTOH: </ strong>]   
 "Sekolah Dasar Daniels Run mengadakan acara Hour of Code sepanjang sekolah untuk mengekspos mahasiswanya ke ilmu komputer. Lebih dari 700 siswa dari semua kelas melakukan setidaknya satu jam kode. Dan selusin orang tua dan sukarelawan dari masyarakat membantu sepanjang hari dan membawa anak-anak berkumpul untuk sebuah majelis yang menampilkan mengapa ilmu komputer penting dalam kehidupan siswa-siswa ini. "</p> 
 
 [ ** CONTOH TEKS SAMPEL UNTUK KONTEKS: </ strong>]   
-Komputer ada dimana-mana, namun lebih sedikit sekolah yang mengajar ilmu komputer daripada 10 tahun yang lalu. Anak perempuan dan siswa dengan warna sangat kurang terwakili. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.</p> 
+Komputer ada dimana-mana, namun lebih sedikit sekolah yang mengajar ilmu komputer daripada 10 tahun yang lalu. Anak perempuan dan siswa dengan warna sangat kurang terwakili. Kabar baiknya adalah kita mengubah ini menjadi lebih baik. The Hour of Code adalah pintu gerbang menuju penyediaan semua siswa akses terhadap pendidikan sains komputer berkualitas tinggi.</p> 
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! dan Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Berkat Hour of Code, ilmu komputer ada di homepage Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher semua memulai Hour of Code dengan video. Lebih dari 100 mitra berkumpul untuk mendukung gerakan ini.
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[** INSERT QUOTE DARI SPOKESPERSON, CONTOH DI BAWAH INI: </ strong>]   
+"Kita perlu mendorong dan merangkul minat siswa kita dalam ilmu komputer," kata [** INSERT NAME </ strong>]. "Setiap siswa berhak mendapatkan kesempatan untuk belajar ilmu komputer untuk mengakses karir terbaik abad ke-21."</p> 
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[** INSERT INFORMASI LEBIH LANJUT TENTANG KEJADIAN ANDA DAN / ATAU ORGANISASI ANDA </ strong>]</p> 
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[** INSERT QUOTE DARI ORGANISASI LAIN ATAU SESEORANG YANG MENGIKAT KEJADIAN </ strong>]</p> 
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+Untuk informasi lebih lanjut tentang [EVENT / PROGRAM / DLL </ strong>], kunjungi [** Sisipan INSERT </ strong>] atau hubungi [** INSERT CONTACT INFORMATION </ strong>]</p> 
 
   
   

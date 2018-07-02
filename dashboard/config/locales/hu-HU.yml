@@ -1,4 +1,5 @@
-"hu":
+---
+hu:
   errors:
     messages:
       not_saved: 'Kérjük, javítsd a következő hibákat:'
@@ -36,7 +37,7 @@
         error:
           future: nem lehet a jövőben
   hello: Helló világ
-  welcome_back: "Üdv újra, %{name}"
+  welcome_back: Üdv újra, %{name}
   your_professional_learning_plan: Saját Profi Tanulmányi Terv
   see_your_learning_plan: Tekintsd meg a tanulmányi tervedet
   submit: Elküldés
@@ -58,7 +59,7 @@
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
-    submit: "Írja le a véleményét"
+    submit: Írja le a véleményét
   appname: Code.org
   stage: szakasz
   stage_number: Szint %{number}
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Microsoft fiók
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Elfelejtette jelszavát?
     need_confirmation: Nem kapta meg a megerősítő instrukciókat?
     need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
@@ -136,9 +138,16 @@
     valid_username: Elérhető!
     invalid_username: Felhasználónév minimum 5 karakter hosszú
     taken_username: Felhasználónév már foglalt
-    valid_password: "Érvényes jelszó!"
+    valid_password: Érvényes jelszó!
     invalid_password: A jelszónak legalább 6 karakter hosszúnak kell lennie
     mismatch_password: A megadott két jelszó nem egyezik
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói
       szabályaiba</a>. Ha 13 éves kor alatt regisztráltam, ezen űrlap kitöltésével
       igazolom, hogy a szüleim vagy a törvényes gyámom beleegyezett, hogy használjam
@@ -147,12 +156,19 @@
     teacher_terms: Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói
       szabályaiba</a>.
     additional_information: Még szükségünk van néhány adatra  a regisztráció folytatásához.
+    user_type_button: Update Account Type
     user_type_label: Fióktípus
     user_type_teacher: Tanár
     user_type_student: Diák
     field_is_required: szükséges
     accept_terms: El kell fogadnia, hogy létre hozzon egy fiókot
     error: An error occurred.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Igen
+    email_preference_no: Nem
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Az iskolai információ (opcionális)
     school_country: Iskola országa
@@ -163,7 +179,7 @@
     homeschool: Homeschool
     after_school: After School
     other: Egyéb
-    state: "Állam"
+    state: Állam
     district: Kerület
     other_district_not_listed: Más, fel nem sorolt kerület
     district_name: Kerület neve
@@ -186,12 +202,12 @@
     try_hoc: Először próbáld meg a Kódolás Óráját
     try_20hours: Próbáld ki a 20 órás bevezetést a számítógép-tudományba
   signinsection:
-    welcome: "Üdvözlünk itt: %{section_name}"
+    welcome: 'Üdvözlünk itt: %{section_name}'
     name: Válaszd ki a neved
     picture: Keress egy titkos képet
-    words: "Írd be a titkos szavaidat"
+    words: Írd be a titkos szavaidat
     login: Bejelentkezés
-    invalid_login: "Érvénytelen bejelentkezés, kérjük próbáld meg újra"
+    invalid_login: Érvénytelen bejelentkezés, kérjük próbáld meg újra
     pair_programming: Van egy társam a számítógépnél
     student_privacy: Tudjon meg többet, hogy miért nem jelenik meg a teljes neve <a
       href='%{student_privacy_blog}' target='_blank'> itt</a>.
@@ -203,11 +219,12 @@
       email: E-mail cím
       submit: Elküldés
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
       title: Jelszó módosítása
-      new_password: "Új jelszó"
+      new_password: Új jelszó
       confirm_password: Erősítse meg új jelszavát
       submit: Jelszavam módosítása
   welcome_email:
@@ -231,7 +248,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Titkos szó
       email: Email
       google_classroom: Google Classroom
       clever: Okos
@@ -258,7 +275,7 @@
     error:
       access_denied: Nincs jogosultságod megtekinteni ennek a személynek a statisztikáit
   crud:
-    new_model: "Új %{model}"
+    new_model: Új %{model}
     show: Mutat
     edit: Szerkeszt
     edit_model: "%{model} módosítása"
@@ -303,7 +320,7 @@
       professional_learning: Professzionális tanulás
       documentation: Dokumentáció
       tutorials: Gyakorlatok
-      educate_overview: "Áttekintés oktatóknak"
+      educate_overview: Áttekintés oktatóknak
       educate_elementary: Alsó tagozat
       educate_middle: Felső tagozat
       educate_high: Középiskola
@@ -319,8 +336,8 @@
       about_partners: Partnerek
       about_team: Teljes csapat
       about_news: Sajtósarok
-      about_evaluation: "Értékelés"
-      about_jobs: "Állás"
+      about_evaluation: Értékelés
+      about_jobs: Állás
       about_contact: Kapcsolat
       about_faqs: GYIK
       learn: Tanulj
@@ -331,7 +348,7 @@
     user:
       classroom: Tanári kezdőlap
       district_dashboard: Tankerületi munkafelület
-      label: "Üdv %{username}"
+      label: Üdv %{username}
       stats: Fejlődésem
       settings: Profilom
       logout: Kijelentkezés
@@ -385,6 +402,7 @@
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
     email_confirm_wrong_email: "(Helytelen e-mail cím?)"
     email_resend_confirm: Megerősítés újraküldése
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(hagyd üresen, ha nem akarod megváltoztatni)"
     current_password_hint: "(szükségünk van a jelenlegi jelszavadra a módosítások
       végrehajtásához)"
@@ -418,6 +436,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Befejezve
     tried: Próbáltam
@@ -428,7 +447,7 @@
     lines_of_code_linebreak: "%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ
       TANULÓ"
     all_courses: 1., 2. és 3. tanfolyam áttekintése
-    lesson_plans: "Óravázlatok"
+    lesson_plans: Óravázlatok
     signin_message: Már regisztráltál? %{link}
     student_reg_link: Diák Bejelentkezés
     teacher_reg_link: Tanári bejelentkezés
@@ -463,7 +482,7 @@
       alapfogalmait. A kurzus általános iskolai használatra lett kitalálva, de mindenki
       számára jó időtöltés lehet.
     test_videos_help: Teszteld az új videó lejátszót az iskolában
-    try_beta_courses: "ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak"
+    try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak
     use_as_teacher: használd ezt az oldalt tanárként
     heading_hoc2014: "<h2>A Kódolás Órája</h2><h1>Minden korosztálynak</h1>"
     heading_elementary: "<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai
@@ -597,6 +616,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
@@ -605,6 +626,8 @@
   gender:
     male: Férfi
     female: Nő
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Inkább nem válaszolok
   user_type:
     student: Diák
@@ -693,9 +716,9 @@
   slow_loading: Ez tovább tart majd, mint szokásosan...
   try_reloading: Próbálja meg újratölteni az oldalt
   next_stage: Befejezve! Folytatás a következő pályára
-  download_pdf: "Óravázlat"
-  lesson_plan: "Óravázlat"
-  view_lesson_plan: "Óravázlat megtekintése"
+  download_pdf: Óravázlat
+  lesson_plan: Óravázlat
+  view_lesson_plan: Óravázlat megtekintése
   pdf_download: Letöltés PDF-ben
   download_coming_soon: Hamarosan lesz letölthető tevékenység.
   video_coming_soon: Hamarosan lesz videó!
@@ -712,8 +735,8 @@
     address_not_allowed: Olyan, mintha címet tartalmazna. Próbálj módosítani a szövegen.
     email_not_allowed: Olyan, mintha e-mail címet tartalmazna. Próbálj módosítani
       a szövegen.
-    profanity_not_allowed: "Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
-      módosítani a szövegen."
+    profanity_not_allowed: Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
+      módosítani a szövegen.
   builder:
     created: Létrehoztál egy új szkriptet.
     destroyed: Töröltél egy szkriptet.
@@ -913,7 +936,7 @@
     startover_title: Biztosan újra szeretnéd kezdeni?
     startover_body: Visszaállítja a kiindulási állapotot és töröl minden blokkot,
       amit hozzáadtál a programhoz, vagy amit megváltoztattál.
-    startover_ok: "Újrakezdés"
+    startover_ok: Újrakezdés
     startover_cancel: Mégsem
   time:
     hour: 1 óra
@@ -988,7 +1011,7 @@
     completed_too_many_blocks: elkészült, túl sok a blokk
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
-    assessment: "értékelés"
+    assessment: értékelés
     submitted: elküldve
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
@@ -997,9 +1020,9 @@
   project:
     projects: Projektek
     create: Projekt létrehozása
-    create_a_project: "Új projekt létrehozása:"
-    new: "Új létrehozása"
-    rename: "Átnevezés"
+    create_a_project: 'Új projekt létrehozása:'
+    new: Új létrehozása
+    rename: Átnevezés
     save: Mentés
     delete: Törlés
     import: Importálás
@@ -1113,7 +1136,7 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "Összefoglaló"
+    required: Összefoglaló
     content: Tartalom
     practice: Tanítási gyakorlatok
     peer_review: Peer Review
@@ -1138,6 +1161,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: '1. fejezet: Az információ ábrázolása és továbbítása'
     csp1_2: '2. fejezet: Az internet feltalálása'
     csp2_1: '1. fejezet: Összetett információk kódolása és tömörítése'
@@ -1151,6 +1175,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '2. fejezet: Digitális információ'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
@@ -1293,3 +1322,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Egyetértek
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Igen

@@ -1,5 +1,5 @@
 require_relative '../src/env'
-require_relative '../forms/volunteer_engineer_submission_2015'
+require_relative '../src/forms'
 require 'minitest/autorun'
 
 class VolunteerFormsTest < Minitest::Test

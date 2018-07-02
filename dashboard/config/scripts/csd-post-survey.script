@@ -1,0 +1,7 @@
+hidden false
+login_required true
+exclude_csf_column_in_legend true
+has_verified_resources true
+
+stage 'CSD post-course survey', flex_category: 'csdSurvey'
+assessment 'csd-post-survey-2017-levelgroup-2018-2nd-semester', progression: 'CS Discoveries Post-course Survey'

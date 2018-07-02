@@ -91,6 +91,59 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not_equal script_level_id, script.script_levels[4].id
   end
 
+  test 'cannot rename a script without a new_name' do
+    l = create :level
+    dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    old_script = Script.add_script(
+      {name: 'old script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    new_script = Script.add_script(
+      {name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'new script name', new_script.name
+
+    # a new script was created
+    refute_equal old_script.id, new_script.id
+  end
+
+  test 'can rename a script between original name and new_name' do
+    l = create :level
+    dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    old_script = Script.add_script(
+      {name: 'old script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    new_script = Script.add_script(
+      {name: 'new script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'new script name', new_script.name
+
+    # the old script was renamed
+    assert_equal old_script.id, new_script.id
+
+    old_script = Script.add_script(
+      {name: 'old script name', new_name: 'new script name'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal 'old script name', old_script.name
+
+    # the script was renamed back to the old name
+    assert_equal old_script.id, new_script.id
+  end
+
   test 'should remove empty stages' do
     scripts, _ = Script.setup([@script_file])
     assert_equal 2, scripts[0].stages.count
@@ -436,6 +489,104 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script.summarize(false)[:stages]
   end
 
+  test 'summarize includes has_verified_resources' do
+    script = create(:script, name: 'resources-script')
+
+    script.has_verified_resources = true
+    assert script.has_verified_resources
+    summary = script.summarize
+    assert summary[:has_verified_resources]
+
+    script.has_verified_resources = false
+    refute script.has_verified_resources
+    summary = script.summarize
+    refute summary[:has_verified_resources]
+  end
+
+  test 'summarize includes has_lesson_plan' do
+    script = create(:script, name: 'resources-script')
+
+    script.has_lesson_plan = true
+    assert script.has_lesson_plan
+    summary = script.summarize
+    assert summary[:has_lesson_plan]
+
+    script.has_lesson_plan = false
+    refute script.has_lesson_plan
+    summary = script.summarize
+    refute summary[:has_lesson_plan]
+  end
+
+  test 'summarize includes show_course_unit_version_warning' do
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
+
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
+    csp1_2018 = create(:script, name: 'csp1-2018')
+    create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
+
+    refute csp1_2017.summarize[:show_course_unit_version_warning]
+
+    user = create(:student)
+    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+
+    create(:user_script, user: user, script: csp1_2018)
+    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+
+    create(:user_script, user: user, script: csp1_2017)
+    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+  end
+
+  test 'summarize includes show_script_version_warning' do
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo')
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo')
+    user = create(:student)
+
+    refute foo17.summarize[:show_script_version_warning]
+
+    refute foo17.summarize(true, user)[:show_script_version_warning]
+
+    create(:user_script, user: user, script: foo18)
+    assert foo17.summarize(true, user)[:show_script_version_warning]
+    refute foo18.summarize(true, user)[:show_script_version_warning]
+
+    create(:user_script, user: user, script: foo17)
+    assert foo17.summarize(true, user)[:show_script_version_warning]
+    assert foo18.summarize(true, user)[:show_script_version_warning]
+  end
+
+  test 'summarize only shows one version warning' do
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
+    create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
+
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
+
+    user = create(:student)
+    create(:user_script, user: user, script: csp1_2018)
+    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(true, user)[:show_script_version_warning]
+  end
+
+  test 'summarize includes versions' do
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
+    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
+
+    versions = foo17.summarize[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'foo-2018', versions[0][:name]
+    assert_equal '2018', versions[0][:version_year]
+    assert_equal '2018', versions[0][:version_title]
+    assert_equal 'foo-2017', versions[1][:name]
+    assert_equal '2017', versions[1][:version_year]
+    assert_equal '2017', versions[1][:version_title]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
@@ -762,5 +913,325 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 3, bonus_levels3[1][:stageNumber]
     assert_equal 2, bonus_levels3[0][:levels].length
     assert_equal 2, bonus_levels3[1][:levels].length
+  end
+
+  test 'can make a challenge level not a challenge level' do
+    l = create :level
+    old_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}', challenge: true
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script = Script.add_script(
+      {name: 'challengeTestScript'},
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+    )
+    assert script.script_levels.first.challenge
+
+    script = Script.add_script(
+      {name: 'challengeTestScript'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+    )
+
+    refute script.script_levels.first.challenge
+  end
+
+  test 'can make a bonus level not a bonus level' do
+    l = create :level
+    old_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}', bonus: true
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script = Script.add_script(
+      {name: 'challengeTestScript'},
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+    )
+    assert script.script_levels.first.bonus
+
+    script = Script.add_script(
+      {name: 'challengeTestScript'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+    )
+
+    refute script.script_levels.first.bonus
+  end
+
+  test 'can unset the project_widget_visible attribute' do
+    l = create :level
+    old_dsl = <<-SCRIPT
+      project_widget_visible true
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+    assert script.project_widget_visible
+
+    script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+
+    refute script.project_widget_visible
+  end
+
+  test 'can unset the script_announcements attribute' do
+    l = create :level
+    old_dsl = <<-SCRIPT
+      script_announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+    assert script.script_announcements
+
+    script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+
+    refute script.script_announcements
+  end
+
+  test 'can set custom curriculum path' do
+    l = create :level
+    dsl = <<-SCRIPT
+      has_lesson_plan true
+      curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
+      stage 'Stage1'
+      level '#{l.name}'
+      stage 'Stage2'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'curriculumTestScript',
+        properties: Script.build_property_hash(script_data),
+      },
+      script_data[:stages],
+    )
+    assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.stages.first.lesson_plan_html_url
+    with_locale(:'it-IT') do
+      assert_equal CDO.curriculum_url('it-IT', 'foo/2'), script.stages.last.lesson_plan_html_url
+    end
+
+    script.curriculum_path = '//example.com/foo/{LESSON}'
+    assert_equal '//example.com/foo/1', script.stages.first.lesson_plan_html_url
+    assert_equal '//example.com/foo/2', script.stages.last.lesson_plan_html_url
+
+    script.curriculum_path = nil
+    assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.stages.first.lesson_plan_html_url
+  end
+
+  test 'clone script with suffix' do
+    scripts, _ = Script.setup([@script_file])
+    script = scripts[0]
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('copy')
+    assert_equal 'test-fixture-copy', script_copy.name
+
+    # Validate levels.
+    assert_equal 5, script_copy.levels.count
+    script_copy.levels.each_with_index do |level, i|
+      level_num = i + 1
+      assert_equal "Level #{level_num}_copy", level.name
+      old_level = Level.find_by_name("Level #{level_num}")
+      assert_equal old_level.level_num, level.level_num
+      assert_equal old_level.id, level.parent_level_id
+      assert_equal '_copy', level.name_suffix
+    end
+
+    # Validate stages. We've already done some validation of level contents, so
+    # this time just validate their names.
+    assert_equal 2, script_copy.stages.count
+    stage1 = script_copy.stages.first
+    stage2 = script_copy.stages.last
+    assert_equal(
+      'Level 1_copy,Level 2_copy,Level 3_copy',
+      stage1.script_levels.map(&:levels).flatten.map(&:name).join(',')
+    )
+    assert_equal(
+      'Level 4_copy,Level 5_copy',
+      stage2.script_levels.map(&:levels).flatten.map(&:name).join(',')
+    )
+  end
+
+  test 'clone script with inactive variant' do
+    script_file = File.join(self.class.fixture_path, "test-fixture-variants.script")
+    scripts, _ = Script.setup([script_file])
+    script = scripts[0]
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('copy')
+    assert_equal 'test-fixture-variants-copy', script_copy.name
+
+    assert_equal 1, script_copy.script_levels.count
+    sl = script_copy.script_levels.first
+
+    assert_equal 'Level 1_copy', sl.levels.first.name
+    assert sl.active?(sl.levels.first)
+
+    assert_equal 'Level 2_copy', sl.levels.last.name
+    refute sl.active?(sl.levels.last)
+
+    # Ignore level names, since we are just testing whether the
+    # variants / active / endvariants structure is correct.
+    new_dsl_regex = <<-SCRIPT
+stage 'Stage1'
+variants
+  level '[^']+'
+  level '[^']+', active: false
+endvariants
+    SCRIPT
+
+    assert_match Regexp.new(new_dsl_regex), ScriptDSL.serialize_to_string(script_copy)
+  end
+
+  test "assignable_info: returns assignable info for a script" do
+    script = create(:script, name: 'fake-script', hidden: true)
+    assignable_info = script.assignable_info
+
+    assert_equal("fake-script *", assignable_info[:name])
+    assert_equal("fake-script", assignable_info[:script_name])
+    assert_equal("other", assignable_info[:category])
+  end
+
+  test "assignable_info: correctly translates script info" do
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'script' => {
+          'category' => {
+            'csp17_category_name' => 'CSP Test'
+          },
+          'name' => {
+            'csp1-2017' => {
+              'title' => 'CSP Unit 1 Test'
+            }
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    script = build(:script, name: 'csp1-2017')
+    assignable_info = script.assignable_info
+
+    assert_equal('CSP Unit 1 Test', assignable_info[:name])
+    assert_equal('CSP Test', assignable_info[:category])
+  end
+
+  test "self.valid_scripts: does not return hidden scripts when user is a student" do
+    student = create(:student)
+
+    scripts = Script.valid_scripts(student)
+    refute has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: does not return hidden scripts when user is a teacher" do
+    teacher = create(:teacher)
+
+    scripts = Script.valid_scripts(teacher)
+    refute has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: returns hidden scripts when user is an admin" do
+    admin = create(:admin)
+
+    scripts = Script.valid_scripts(admin)
+    assert has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: returns hidden scripts when user has hidden script access" do
+    teacher = create(:teacher)
+    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
+
+    scripts = Script.valid_scripts(teacher)
+    assert has_hidden_script?(scripts)
+  end
+
+  test "self.valid_scripts: returns alternate script if user has a course experiment with an alternate script" do
+    user = create(:user)
+    script = create(:script)
+    alternate_script = build(:script)
+
+    Course.stubs(:has_any_course_experiments?).returns(true)
+    Rails.cache.stubs(:fetch).returns([script])
+    script.stubs(:alternate_script).returns(alternate_script)
+
+    scripts = Script.valid_scripts(user)
+    assert_equal [alternate_script], scripts
+  end
+
+  test "self.valid_scripts: returns original script if user has a course experiment with no alternate script" do
+    user = create(:user)
+    script = create(:script)
+
+    Course.stubs(:has_any_course_experiments?).returns(true)
+    Rails.cache.stubs(:fetch).returns([script])
+    script.stubs(:alternate_script).returns(nil)
+
+    scripts = Script.valid_scripts(user)
+    assert_equal [script], scripts
+  end
+
+  test "get_assessment_script_levels returns an empty list if no level groups" do
+    script = create(:script, name: 'test-no-levels')
+    level_group_script_level = script.get_assessment_script_levels
+    assert_equal level_group_script_level, []
+  end
+
+  test "get_assessment_script_levels returns a list of script levels" do
+    script = create(:script, name: 'test-level-group')
+    level_group = create(:level_group, name: 'assessment 1')
+    script_level = create(:script_level, levels: [level_group], assessment: true, script: script)
+
+    assessment_script_levels = script.get_assessment_script_levels
+    assert_equal assessment_script_levels[0], script_level
+  end
+
+  private
+
+  def has_hidden_script?(scripts)
+    scripts.any?(&:hidden)
   end
 end

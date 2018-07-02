@@ -13,7 +13,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## Разпространете новината
 
-Tell your friends about the **#HourOfCode**!
+Кажете на приятелите си за **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

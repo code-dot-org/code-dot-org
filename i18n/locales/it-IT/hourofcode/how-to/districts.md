@@ -23,7 +23,7 @@ nav: how_to_nav
 
 L'Ora del Codice è solo il primo passo in un viaggio per imparare di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio:
 
-- Incoraggia gli studenti a continuare ad [imparare online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Frequentate](%= resolve_url('https://code.org/professional-development-workshops') %) un seminario di un giorno, per ricevere istruzioni da un esperto di informatica. (Solo per gli USA)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

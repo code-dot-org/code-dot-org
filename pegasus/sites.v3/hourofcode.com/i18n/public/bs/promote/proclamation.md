@@ -14,11 +14,11 @@ nav: promote_nav
 
 [DATE]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+S obzirom da je računalna tehnologija sastavni dio moderne kulture i da transformira kako se ljudi odnose jedni sa drugima i kako se odnose sa svijetom;
 
 Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+S obzirom da polje računarstva podupire sektor tehnoloških informacija naše ekonomije, koji je značajan doprinosilac ekonomskom učinku Sjedinjeni Američki država;
 
 Whereas the field of computer science is a foundational science for the digital age;
 

@@ -31,6 +31,7 @@ require 'cdo/safe_names'
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
+  include Pd::SharedWorkshopConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -61,6 +62,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   before_validation :autoupdate_user_field
   after_save :enroll_in_corresponding_online_learning, if: -> {!owner_deleted? && (user_id_changed? || email_changed?)}
+  after_save :authorize_teacher_account
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -135,9 +137,15 @@ class Pd::Enrollment < ActiveRecord::Base
     teachercon_enrollments, non_teachercon_enrollments = enrollments.partition do |enrollment|
       enrollment.workshop.teachercon?
     end
+    local_summer_enrollments, regular_enrollments = non_teachercon_enrollments.partition do |enrollment|
+      enrollment.workshop.local_summer?
+    end
 
-    filter_for_regular_survey_completion(non_teachercon_enrollments, select_completed) +
-        filter_for_teachercon_survey_completion(teachercon_enrollments, select_completed)
+    (
+      filter_for_regular_survey_completion(regular_enrollments, select_completed) +
+      filter_for_teachercon_survey_completion(teachercon_enrollments, select_completed) +
+      filter_for_local_summer_survey_completion(local_summer_enrollments, select_completed)
+    )
   end
 
   before_create :assign_code
@@ -156,13 +164,11 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
-      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
-    elsif workshop.local_summer?
-      pd_new_workshop_survey_url(code)
-    elsif workshop.teachercon?
-      pd_new_teachercon_survey_url(code)
+      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
+    elsif workshop.local_summer? || workshop.teachercon?
+      pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
     else
-      CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
+      CDO.code_org_url "/pd-workshop-survey/#{code}", CDO.default_scheme
     end
   end
 
@@ -261,6 +267,10 @@ class Pd::Enrollment < ActiveRecord::Base
     deduplicate_school_info(school_info_attr, self)
   end
 
+  def authorize_teacher_account
+    user.permission = UserPermission::AUTHORIZED_TEACHER if user && [COURSE_CSD, COURSE_CSP].include?(workshop.course)
+  end
+
   private_class_method def self.filter_for_regular_survey_completion(enrollments, select_completed)
     ids_with_processed_surveys, ids_without_processed_surveys =
       enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
@@ -285,6 +295,16 @@ class Pd::Enrollment < ActiveRecord::Base
     end
 
     selected_completed ? completed_surveys : uncompleted_surveys
+  end
+
+  private_class_method def self.filter_for_local_summer_survey_completion(local_summer_enrollments, select_completed)
+    completed_surveys, uncompleted_surveys = local_summer_enrollments.partition do |enrollment|
+      workshop = enrollment.workshop
+      user = enrollment.user
+      Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: user, day: 5)
+    end
+
+    select_completed ? completed_surveys : uncompleted_surveys
   end
 
   private

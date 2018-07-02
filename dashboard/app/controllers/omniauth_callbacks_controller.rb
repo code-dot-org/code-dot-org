@@ -5,7 +5,69 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/:provider/callback
   def all
-    @user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])
+    if should_connect_provider?
+      connect_provider
+    else
+      login
+    end
+  end
+
+  # GET /users/auth/:provider/connect
+  def connect
+    return head(:bad_request) unless current_user&.migrated? && AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(params[:provider])
+
+    session[:connect_provider] = 2.minutes.from_now
+    redirect_to omniauth_authorize_path(current_user, params[:provider])
+  end
+
+  # Call GET /users/auth/:provider/connect and the callback will trigger this code path
+  def connect_provider
+    return head(:bad_request) unless can_connect_provider?
+
+    auth_hash = request.env['omniauth.auth']
+    provider = auth_hash.provider.to_s
+    return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+
+    # TODO: some of this won't work right for non-Google providers, because info comes in differently
+    new_data = nil
+    if auth_hash.credentials && (auth_hash.credentials.token || auth_hash.credentials.expires_at || auth_hash.credentials.refresh_token)
+      new_data = {
+        oauth_token: auth_hash.credentials.token,
+        oauth_token_expiration: auth_hash.credentials.expires_at,
+        oauth_refresh_token: auth_hash.credentials.refresh_token
+      }.to_json
+    end
+    email = auth_hash.info.email
+    hashed_email = nil
+    hashed_email = User.hash_email(email) unless email.blank?
+    auth_option = AuthenticationOption.new(
+      user: current_user,
+      email: email,
+      hashed_email: hashed_email || '',
+      credential_type: provider,
+      authentication_id: auth_hash.uid,
+      data: new_data
+    )
+
+    if auth_option.save
+      return head(:no_content)
+    else
+      render status: :unprocessable_entity,
+             json: auth_option.errors.as_json(full_messages: true),
+             content_type: 'application/json'
+    end
+  end
+
+  def login
+    auth_hash = request.env['omniauth.auth']
+    auth_params = request.env['omniauth.params']
+
+    # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
+    if request.env["omniauth.auth"].provider.to_s == 'powerschool'
+      auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
+    end
+
+    @user = User.from_omniauth(auth_hash, auth_params)
 
     # Set user-account locale only if no cookie is already set.
     if @user.locale &&
@@ -19,11 +81,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
-    elsif @user.provider == 'clever' && @user.persisted?
-      handle_clever_signin(@user)
+    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(@user.provider) && @user.persisted?
+      handle_untrusted_email_signin(@user)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
-      check_and_apply_clever_takeover(@user)
+      check_and_apply_oauth_takeover(@user)
       sign_in_user
     elsif allows_silent_takeover(@user)
       silent_takeover(@user)
@@ -58,20 +120,44 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to new_user_registration_url
   end
 
-  # Clever signins have unique requirements, and must be handled a bit outside the normal flow
-  def handle_clever_signin(user)
-    force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.cleveremailalreadytaken')
+  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
+  skip_before_action :verify_authenticity_token, only: :powerschool
+
+  def extract_powerschool_data(auth)
+    # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
+    args = JSON.parse(auth.extra.response.message.to_json)['args']
+    auth_info = auth.info.merge(OmniAuth::AuthHash.new(
+      user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
+      email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
+      name: {
+        first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
+        last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
+      },
+      )
+    )
+    auth.info = auth_info
+    auth
+  end
+
+  # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
+  def handle_untrusted_email_signin(user)
+    force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
+
+    # We used to check this based on sign_in_count, but we're explicitly logging it now
+    seen_oauth_takeover_dialog = (!!user.seen_oauth_connect_dialog) || user.sign_in_count > 1
 
     # If account exists (as looked up by Clever ID) and it's not the first login, just sign in
-    if user.persisted? && user.sign_in_count > 0 && !force_takeover
+    if user.persisted? && seen_oauth_takeover_dialog && !force_takeover
       sign_in_user
     else
       # Otherwise, it's either the first login, or a user who must connect -
       # offer to connect the Clever account to an existing one, or insist if needed
-      session['clever_link_flag'] = true
+      session['clever_link_flag'] = user.provider
       session['clever_takeover_id'] = user.uid
       session['clever_takeover_token'] = user.oauth_token
       session['force_clever_takeover'] = force_takeover
+      user.seen_oauth_connect_dialog = true
+      user.save!
       sign_in_user
     end
   end
@@ -118,5 +204,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
     allow_takeover && lookup_user
+  end
+
+  def should_connect_provider?
+    return current_user && session[:connect_provider].present?
+  end
+
+  def can_connect_provider?
+    return false unless current_user&.migrated?
+
+    connect_flag_expiration = session.delete :connect_provider
+    connect_flag_expiration&.future?
   end
 end

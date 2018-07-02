@@ -1,8 +1,9 @@
-/* global dashboard */
 import React, {PropTypes} from 'react';
 var VersionRow = require('./VersionRow');
 var sourcesApi = require('../clientApi').sources;
 var filesApi = require('../clientApi').files;
+import project from '@cdo/apps/code-studio/initApp/project';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * A component for viewing project version history.
@@ -86,8 +87,24 @@ var VersionHistory = React.createClass({
 
   onClearPuzzle: function () {
     this.setState({showSpinner: true});
+    firehoseClient.putRecord(
+      {
+        study: 'project-data-integrity',
+        study_group: 'v3',
+        event: 'clear-puzzle',
+        project_id: project.getCurrentId(),
+        data_json: JSON.stringify({
+          isOwner: project.isOwner(),
+          currentUrl: window.location.href,
+          shareUrl: project.getShareUrl(),
+          currentSourceVersionId: project.getCurrentSourceVersionId(),
+        }),
+      },
+      {includeUserId: true}
+    );
+
     this.props.handleClearPuzzle()
-      .then(() => dashboard.project.save(true))
+      .then(() => project.save(true))
       .then(() => location.reload());
   },
 

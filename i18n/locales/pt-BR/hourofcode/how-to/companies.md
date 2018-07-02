@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Inspire alunos e voluntários para a Hora do Código
 
-Code.org oferece a oportunidade para seus functionários [conectar](%= resolve_url('https://code.org/volunteer') %) com salas de aula fazendo a Hora do Código, onde eles podem compartilhar as experiências profissionais e inspirar estudantes a estudarem ciência da computação.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Cadastre-se](%= resolve_url('https://code.org/volunteer') %) para ser um voluntário.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - Para mais informações em como inventivar funcionários e conectar seus funcionários com as salas de aula veja o nosso [guia para parceiros empresariais](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Outras formas por meio das quais empresas podem apoiar a Hora do Código:
 
-- Peça ao seu CEO para [enviar um e-mail empresarial](%= resolve_url('/promote/resources#sample-emails') %) destacando a importância da ciência da computação e inventivando funcionários a passar seus conhecimentos a diante. 
+- Peça ao seu CEO para [enviar um e-mail empresarial](%= resolve_url('/promote/resources#sample-emails') %) destacando a importância da ciência da computação e inventivando funcionários a passar seus conhecimentos a diante.
 - Organize um Happy Hour da Hora do Códico com seus colegas de trabalho para testar as [atividades](%= resolve_url('/learn') %).
 - Promova um evento da Hora do Código para uma sala de aula local com alunos ou parceiros sem fins lucrativos para realizar uma Hora do Código no escritório da sua empresa. Veja o guia abaixo.
 
@@ -25,7 +25,7 @@ Code.org oferece a oportunidade para seus functionários [conectar](%= resolve_u
 ## Promova a sua Hora do Código
 
 - Promova seu evento da [Hora do Código](%= resolve_url('/promote') %) e incentive outras pessoas a organizarem eventos também.
-- Incentive os **engenheiros de software** da sua empresa a ir a uma sala de aula local para ajudar a conduzir uma Hora do Código e inspirar os alunos a estudar ciência da computação. Eles podem se [cadastrar](%= resolve_url('https://code.org/volunteer/engineer') %) para conectarem-se a uma sala de aula.
+- Incentive os **engenheiros de software** da sua empresa a ir a uma sala de aula local para ajudar a conduzir uma Hora do Código e inspirar os alunos a estudar ciência da computação. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2) Veja esse guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -37,7 +37,7 @@ Organizamos vários [tutoriais divertidos de uma hora](%= resolve_url('/learn') 
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 4) Avalie suas necessidades tecnológicas (computadores são opcionais)
+## 4. Avalie suas necessidades tecnológicas — não é preciso ter computadores
 
 A melhor experiência da Hora do Código inclui computadores conectados à Internet. Mas você **não** precisa de um computador para cada participante, e pode inclusive realizar a Hora do Código sem computador nenhum.
 
@@ -57,17 +57,17 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 **Mostre um vídeo inspirador:**
 
 - O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- O [vídeo Mundial da Hora do Código](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [O presidente Obama pede a todos os alunos que aprendam ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encontre mais vídeos inspiradores [ aqui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideias para apresentar sua atividade da Hora do Código aos alunos:**
 
-- Explique de que forma a tecnologia interfere em nossas vidas, usando exemplos que sensibilizem tanto meninos como meninas - fale sobre a tecnologia que salva vidas, ajuda e conecta as pessoas. 
+- Explique de que forma a tecnologia interfere em nossas vidas, usando exemplos que sensibilizem tanto meninos como meninas - fale sobre a tecnologia que salva vidas, ajuda e conecta as pessoas.
 - Se você trabalha em uma empresa de tecnologia, demonstre produtos divertidos e inovadores nos quais sua empresa está trabalhando.
 - Se você não trabalha em uma empresa de tecnologia, aborde as maneiras com que sua empresa usa a tecnologia para resolver problemas e atingir objetivos.
 - Convide engenheiros de software da sua empresa para falar sobre o motivo de terem escolhido estudar ciência da computação e sobre os projetos nos quais eles trabalham.
-- Veja dicas para deixar as meninas interessadas em ciência da computação [aqui](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. É hora de programar!
 
@@ -103,7 +103,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
 ## 7) Comemore
 
-- [Imprima certificados](%= resolve_url('https://code.org/certificates') %) para os participantes e alunos.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](%= resolve_url('/promote/resources#stickers') %).
 - [Encomende camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para seus funcionários.
 - Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso também!

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Làm thế nào để mang "Giờ lập trình" tới cộng đồng trường học
 
-## Hãy để mọi học sinh đều có cơ hội tham gia!
+## Hãy lôi kéo tất cả các trường học tham gia, để mọi học sinh đều có cơ hội học tập!
 
 1. **Tuyển chọn các trường học địa phương.** Chia sẻ [email này](%= resolve_url('/promote/resources#sample-emails') %) và [bản hướng dẫn giáo viên](%= resolve_url('/how-to') %), hoặc đăng một [đoạn quảng cáo ngắn](%= resolve_url('/promote/stats') %) trên thư tin/ trang tin địa phương.
 
@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Một Giờ Lập Trình chỉ là bước đầu tiên trên hành trình học tập sâu hơn về cách công nghệ hoạt động và cách tạo ra các ứng dụng phần mềm. Để tiếp tục hành trình này:
 
-- Khuyến khích học sinh tiếp tục [học trực tuyến](%= resolve_url('https://code.org/learn/beyond') %).
-- [Tham dự](%= resolve_url('https://code.org/professional-development-workshops') %) hội thảo trực tiếp, trong ngày để nhận hướng dẫn từ cố vấn khoa học máy tính giàu kinh nghiệm. (chỉ các cố vấn người Mỹ)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -66,7 +66,7 @@ nav: promote_nav
 
 因為《編程一小時》，計算機科學已經登上谷歌，MSN，雅虎和迪斯尼的主頁。 超過100位合作夥伴共同支持這項活動。 世界上每個蘋果專賣店都會舉辦一個《編程一小時》, 而且像奧巴馬總統和加拿大總理賈斯廷·特魯多這樣的領導人寫了他們的第一行編程作為競選活動的一部分。
 
-今年, 讓我們把它變得更大。 我要求你加入代碼2017的《編程一小時》。 請參與在計算機科學教育週的編程一小時活動, <%= campaign_date('full')%>。
+今年, 讓我們把它變得更大。 I’m asking you to join the Hour of Code <%= campaign_date('year') %>. 請參與在計算機科學教育週的編程一小時活動, <%= campaign_date('full')%>。
 
 幫助宣傳，實際舉辦一場活動，邀請當地學校報名加入，或者自己嘗試編程一小時-每個人都能從這項基礎學習中獲益。
 
@@ -78,7 +78,7 @@ nav: promote_nav
 
 ** 主題行: **我們可以為您提供主機和《編程一小時》嗎？
 
-在12月之間 4-10, 10% 的世界各地的學生將通過在他們自己的學校做《編程一小時》活動來慶祝計算機科學教育週。 這是讓每個孩子都有機會了解到我們周圍的技術是如何工作的。
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [我們的組織/我的名字] 很樂意幫助 [學校名稱] 運行《編程一小時》活動。 我們可以幫助老師在他們的教室裡主持一個小《編程一小時》 (我們甚至不需要電腦!) 或者如果你想舉辦一個學校大會, 我們可以安排一個演講者談論技術是如何運作的, 以及成為一個軟件工程師的感覺。
 

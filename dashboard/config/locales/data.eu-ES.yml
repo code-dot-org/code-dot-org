@@ -1,4 +1,5 @@
-"eu":
+---
+eu:
   data:
     game:
       name:
@@ -31,7 +32,7 @@
         Wordsearch: Hizki salda
         Webapp: App laborategia
         ArtistEC: Artista
-        TextMatch: 'Testua erlazionatu '
+        TextMatch: Testua erlazionatu
         StudioEC: Jokoen Laborategia
         Applab: App laborategia
         NetSim: Internet simulagailua
@@ -313,128 +314,8 @@
           pasatuko!
         maze_3_4: Ene! Idatz iezaidazu programa bat TNT sahiestu eta txerriarenganaino
           iristeko
-        bounce_1_basketball: Itsatsi bloke bat "ezkerreko gezia sakatzean" blokeari
-          eta sakatu "Hasi". Mugitu eskua ezkerralderako gezia erabiliz bukaerako
-          helburura iristeko.
-        bounce_2_basketball: Itsatsi bloke bat "eskuineko gezia sakatzean" eta "ezkerreko
-          gezia sakatzean" blokei. Mugitu eskua bukaerako bi helburuetara iristeko.
-        bounce_5_basketball: Pilota bat botako dugu eskurantz. Itsatsi bloke bat "pilotak
-          eskua jotzen duenean" blokeari ziurtatzeko pilota banderara iristen dela.
-        bounce_6_basketball: Orain, bandera goiko partean dago. Bloke batzuk gehitu
-          behar dituzu "pilotak jotzen duenean" bi blokeetan ariketa hau ebazteko.
-        bounce_7_basketball: Itsatsi blokeak "... jotzean" eta "... sakatzean" bloke
-          guztiei. Errebotatu pilota bandera jotzen duen arte.
-        bounce_10_basketball: Orain, helburu bat dago goiko partean. Itsatsi "tantoa
-          eman" eta "aurkariari tantoa eman" blokeak "pilota helburuan" eta "pilotak
-          eskua jotzen ez duenean" blokeei joko bat egiteko. Ikusi zenbat tanto lor
-          ditzakezun zure aurkariak bi tanto lortu aurretik.
-        bounce_11_basketball: Orain, blokeak gehitu ditzakezu "martxan dagoenean"
-          blokean. "bota beste pilota bat" bloke berria gehitu behar duzu toki batean
-          baino gehiagotan. Era berean, saia zaitez eszena aldatzen, edo eskuaren
-          eta pilotaren abiadura, eta ikusi ea zenbat tanto eskura ditzakezun zure
-          aurkariak bi tanto eskuratu aurretik!
-        bounce_12_basketball: Sor ezazu zure Saskibaloi joko propioa. Arau guztiak
-          alda ditzakezu. Prest daukazunean, klik egin Amaitu zure lagunek probatu
-          ahal izan dezaten zure jokoa haien telefonoetan.
-        bounce_1_sports: Iritsi banderara! Itsatsi bloke bat "ezkerreko gezia sakatzean"
-          blokeari eta sakatu "Hasi" jokalariak banderara mugitzeko.
-        bounce_2_sports: Orain bi bandera daude! Itsatsi bloke bat "ezkerreko gezia
-          sakatzean" blokeari eta "ezkuineko gezia sakatzean" blokei zure jokalaria
-          bi norabideetan mugiarazteko.
-        bounce_5_sports: Hockey-pastilla jokalariarengana irristatuko da! Blokeren
-          bat atxiki behar diozu "Pilotak jokalaria jotzen duenean" blokeari bandera
-          jotzeko.
-        bounce_6_sports: Orain, bandera goiko partean dago. Bloke batzuk gehitu behar
-          dituzu "pilotak jotzen duenean" bi blokeetan ariketa hau ebazteko.
-        bounce_7_sports: Itsatsi blokeak "... jotzean" eta "... sakatzean" bloke guztiei.
-          Errebotatu pilota bandera jotzen duen arte.
-        bounce_10_sports: Orain, helburu bat dago goiko partean. Itsatsi "tantoa eman"
-          eta "aurkariari tantoa eman" blokeak "pilota helburuan" eta "pilotak eskua
-          jotzen ez duenean" blokeei joko bat egiteko. Ikusi zenbat tanto lor ditzakezun
-          zure aurkariak bi tanto lortu aurretik!
-        bounce_11_sports: Orain, blokeak gehitu ditzakezu "martxan dagoenean" blokean.
-          "bota beste pilota bat" bloke berria gehitu behar duzu toki batean baino
-          gehiagotan. Era berean, saia zaitez eszena aldatzen, edo eskuaren eta pilotaren
-          abiadura, eta ikusi ea zenbat tanto eskura ditzakezun zure aurkariak bi
-          tanto eskuratu aurretik!
-        bounce_12_sports: Sor ezazu zure joko propioa! Arau guztiak alda ditzakezu
-          eta kirolak nahastu. Izan zaitez sortzaile! Prest daukazunean, klik egin
-          Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
-        bounce_1: Itsatsi bloke bat "ezkerrerako gezia sakatzean" blokeari eta sakatu
-          "Hasi". Mugitu erraketa ezkerralderako gezia erabiliz bukaerako helburura
-          iristeko.
-        bounce_2: Itsatsi bloke bat "eskuinerako gezia sakatzean" eta "ezkerrerako
-          gezia sakatzean" blokei. Mugitu erraketa bukaerako bi helburuetara iristeko.
-        bounce_3: Orain, saiatu antzeko zerbait "gorako gezia sakatzean" blokearekin.
-          Mugitu erraketa goi parteko bukaerako helbururaino.
-        bounce_4: Orain, lau bloke gehitu behar dituzu. Mugitu erraketa bukaerako
-          lau helburuetaraino ariketa honi amaiera emateko.
-        bounce_5: Pilota bat botako dugu erraketarantz. Itsatsi bloke bat "pilotak
-          erraketa jotzen duenean" blokeari ziurtatzeko pilota bukaerako helburura
-          iristen dela.
-        bounce_6: Orain, bukaerako helburua goiko partean dago. Bloke batzuk gehitu
-          behar dituzu "pilotak jotzen duenean" bi blokeetan ariketa hau ebazteko.
-        bounce_7: Itsatsi blokeak "... jotzean" eta "... sakatzean" bloke guztiei.
-          Errebotatu pilota bukaerako helburua jotzen duen arte.
-        bounce_10: Orain, helburu bat dago goiko partean. Itsatsi "tantoa eman" eta
-          "aurkariari tantoa eman" blokeak "pilota helburuan" eta "pilotak erraketa
-          jotzen ez duenean" blokeei joko bat egiteko. Ikusi zenbat tanto lor ditzakezun
-          zure aurkariak bi tanto lortu aurretik.
-        bounce_11: Orain, blokeak gehitu ditzakezu "martxan dagoenean" blokean. "bota
-          beste pilota bat" bloke berria gehitu behar duzu toki batean baino gehiagotan.
-          Era berean, saia zaitez eszena aldatzen, edo erraketaren eta pilotaren abiadura,
-          eta ikusi ea zenbat tanto eskura ditzakezun zure aurkariak bi tanto eskuratu
-          aurretik.
-        bounce_12: Sor ezazu zure Errebote joko propioa. Ikuste-efektu eta arau guztiak
-          alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek probatu ahal
-          izan dezaten zure jokoa haien telefonoetan.
         Custom_builder: Arrastatu blokeak tresna-kutxatik lan-ingurunera, sortu nahi
           duzun maila marrazteko. Sakatu "Hasi" prest zaudenean.
-        flappy_1: Itsatsi bloke bat "klikatzean" blokeari; ondoren, sakatu "Hasi".
-          Klikatu edo ukitu pantaila Flappy mugiarazteko helbururaino.
-        flappy_2: Orain, lurzorua gehitu dugu. Itsatsi bloke bat "lurzorua jotzean"
-          blokeari. Zure kodeak 'JOKOA AMAITU' behar du Flappyk tupust egiten duenean.
-        flappy_3: '"Martxan dagoenean" blokeak ahalbidetzen dizu kodea exekutatzea
-          zure jokoa hasten denean. Saia zaitez mailako abiadura eta hegalen mugimendua
-          finkatzen helburuaren arabera.'
-        flappy_4: Flappyk oztopoak zeharkatuko ditu, oztopo baten kontra talka egitean
-          hil dadin beharrezko kodea idazten ez duzun bitartean. Gehitu bloke bat
-          "oztopo bat jotzen duenean" blokeari. Zure kodeak, "JOKOA AMAITU" behar
-          du, Flappyk lehenengoko tutu multzoarekin talka egiten duenean.
-        flappy_5: Orain markatzailea gehituko dugu; horrela, Flappyk oztopoak gainditzen
-          dituenean, puntuak zenbatuko ditugu. Aldatu "oztopoa gainditzean" blokea
-          Flappyk lehenengoko tutu multzoan zehar hegan egiten duenean puntu bat markatzeko.
-        flappy_6: Saiatu puntu bat lortzen Flappyri arinago edo motelago hegan eginaraziz.
-        flappy_7: Jarraian, saia zaitez atzealdea aldatzen "martxan dagoenean" blokeari
-          beste bloke bat erantsiz.
-        flappy_8: Edozein unetan alda ditzakezu irudiak, ez bakarrik jokoa hasten
-          denean. Saia zaitez atzealde berri bat AUSAZ ezartzen beste gertaera batzuk
-          jazotzen direnean, oztopo bat gainditzean, adibidez.
-        flappy_9: Gauzak nahasteko, oztopo batekin topo egitean, jokoa bukatu beharrean,
-          saiatu markatzailea berriro 0-an jartzen.
-        flappy_11: Sortu zure Flappy jokoa. Ikus-efektuak eta arauak alda ditzakezu,
-          baita grabitatea ere. Bukatzean, klik egin Amaiera-n, zure lagunek euren
-          telefonoetan proba dezaten.
-        flappy_k1_1: Jolastu Flappy
-        flappy_k1_2: Itsatsi bloke bat "klikatzean" blokeari; ondoren, sakatu "Hasi".
-          Klikatu edo ukitu pantaila Flappy mugiarazteko helbururaino.
-        flappy_k1_3: Orain, lurzorua gehitu dugu. Itsatsi bloke bat "lurzorua jotzean"
-          blokeari. Zure kodeak 'JOKOA AMAITU' behar du Flappyk tupust egiten duenean.
-        flappy_k1_4: '"Martxan dagoenean" blokeak ahalbidetzen dizu kodea exekutatzea
-          zure jokoa hasten denean. Saia zaitez mailako abiadura eta hegalen mugimendua
-          finkatzen helburuaren arabera.'
-        flappy_k1_5: Flappyk oztopoak zeharkatuko ditu, oztopo baten kontra talka
-          egitean hil dadin beharrezko kodea idazten ez duzun bitartean. Gehitu bloke
-          bat "oztopo bat jotzen duenean" blokeari. Zure kodeak, "JOKOA AMAITU" behar
-          du, Flappyk lehenengoko tutu multzoarekin talka egiten duenean.
-        flappy_k1_6: Orain markatzailea gehituko dugu; horrela, Flappyk oztopoak gainditzen
-          dituenean, puntuak zenbatuko ditugu. Aldatu "oztopoa gainditzean" blokea
-          Flappyk lehenengoko tutu multzoan zehar hegan egiten duenean puntu bat markatzeko.
-        flappy_k1_7: Saiatu puntu anitzak lortzen traba bat gainditzean.
-        flappy_k1_8: Jarraian, saia zaitez atzealdea aldatzen "martxan dagoenean"
-          blokeari beste bloke bat erantsiz.
-        flappy_k1_9: Saiatu jokalaria aldatzen. Horretarako "jokalaria ipini" blokea
-          gehitu "martxan dagoenean" blokeari.
         jigsaw_1: Klikatu blokea
         jigsaw_2: Arrastatu blokea helburura
         jigsaw_3: Antolatu blokeak irudia osatzeko
@@ -843,9 +724,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Sarrera'
         starwars_typing: Star Wars - Code-ren bitartez galaxia bat eraikitzen - JavaScript
         starwars_events: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Gertaerak'
@@ -905,6 +783,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Itzuliak
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian

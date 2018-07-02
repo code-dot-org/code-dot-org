@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:36:46.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "In order to analyze data with a computer, we need to clean the data first. Based on your experience today, would you say that data analysis is a perfectly objective process? Why or why not? (Limit to about 100 words)\r\n",
+    "title": "Reflection: Is data analysis objective?",
+    "encrypted_solution": "ITreMU8+gVNmMRByyCzqMnGzKk+u5RlKlOTRzN0QpvY2jMwOP6IR9lIgYZzd\ncePI/BX2buPsVeHj4U3E6ULmMdT7OIc15RrX4tNhJL+IqHD+NtG4aoasgL+k\njfd7uL10FR7OZ6tg81PtQJYwnBMv/90lZNPdYSH4WCPoLvWdn9vpAqBKZAz8\nzxXuoShO+OJF6A1MgB5RTfUYlkeP34iI8zwBmeqOmsO3w5ipvKvz8f1dbf3o\ns7LteeT/T0G362jJXL+7Ry12tjsxsufkQWyEiVvDAu+CW9Igy4XYoFZmbNuz\n39Q81PMtJa90lSY9BSq1i6zmu0x0XCSB0Tc/qPD4b8pM2AZ7OcYc/O7ysI5g\nC7VfUAKIrLPRV6LbN5IDvWA8zu74e68Tc8MUnk8wbiyAxw44dNTUmgSswozJ\nsvTwd3InUFiN/mwUbuBDvtXI71qPF/lc5likbhEmWtBSMScAOqovBFiWaeDv\nZEsTj6R1VsY=\n",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 5622,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

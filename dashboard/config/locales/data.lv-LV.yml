@@ -1,4 +1,5 @@
-"lv":
+---
+lv:
   data:
     game:
       name:
@@ -58,7 +59,7 @@
       instructions:
         maze_2_2: 'Vai vari man palīdzēt notvert nerātno cūku? Saliec vairākus "kustēties
           uz priekšu" blokus kopā un spied "Skriet" lai palīdzēt man tur nonākt. '
-        maze_2_1: "Šī cūka ir man traucē. Palīdzi man to atrast!"
+        maze_2_1: Šī cūka ir man traucē. Palīdzi man to atrast!
         maze_2_2_5: Izseko ceļu un aizved mani līdz muļķīgajai cūkai. Izvairies no
           Dinamīta, savādāk spalvas lidos!
         maze_2_3: Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)
@@ -78,8 +79,8 @@
         maze_2_10: Pēdēja prakses reize - vai vari atrisināt, izmantojot tikai 4 blokus?
         maze_2_11: Dārgais cilvēks. Es zombijs. Es izsalcis. Vajag... tikt... līdz
           saulespuķei... Vari mani tu nogādāt, izmantojot tikai 5 blokus?
-        maze_2_12: "Šeit ir ļoti līdzīgi, bet nedaudz savādāk Vai vari atrisināt,
-          izmantojot tikai 5 blokus?"
+        maze_2_12: Šeit ir ļoti līdzīgi, bet nedaudz savādāk Vai vari atrisināt, izmantojot
+          tikai 5 blokus?
         maze_2_13: 'Izmanto jauno "Ja" bloku, lai ļautu man izlemt kad pagriezties.
           Padoms: tev jāizmanto tikai vēl viens bloks, bet iemācies kā to uzstādīt
           pašam nākamajā reizē.'
@@ -128,23 +129,23 @@
         turtle_4_3: Šis ir kods, ko tu uzrakstīji, lai uzzīmētu vienu trijstūril.
           Vai vari pievienot "atkārtot" un "pagriezt" blokus lai izveidotu skaistu
           puķi?
-        turtle_4_4: "Šis ir kods no iepriekšējās mīklas, bet pagriežot tikai 36 grādus
+        turtle_4_4: 'Šis ir kods no iepriekšējās mīklas, bet pagriežot tikai 36 grādus
           pēc katra trijstūra uzzīmēšanas. Cik reizes ir jāatkārto šī darbība? (Padoms:
-          pēc 360 grādu griešanas, zīmējums izveidos pilnu apli)"
-        turtle_4_5: "Šis ir kods no iepriekšējās mīklas, atkārtojot pagriezienus 36
+          pēc 360 grādu griešanas, zīmējums izveidos pilnu apli)'
+        turtle_4_5: 'Šis ir kods no iepriekšējās mīklas, atkārtojot pagriezienus 36
           reizes. Cik grādu lenķim vajadzētu būt katrā pagriezienā? (Padoms: pēc 360
-          grādu pagriešanas, zīmējums izveidos pilnu apli)"
+          grādu pagriešanas, zīmējums izveidos pilnu apli)'
         turtle_4_6: Vai tu vari uzzīmēt kvadrātu ar malu garumu 20 pikseļi, izmantojot
           tikai 3 blokus?
-        turtle_4_7: "Šis ir kods, lai uzzīmētu kvadrātu no iepriekšējās mīklas. Vai
+        turtle_4_7: 'Šis ir kods, lai uzzīmētu kvadrātu no iepriekšējās mīklas. Vai
           tu vari atkārtot to, lai uzzīmētu 10 blakus esošus kvadrātus kā pakāpienus?
-          Padoms: Tev vajag izmantot tikai papildus 2 blokus."
-        turtle_4_8: "Šis ir risinājums iepriekšējai mīklai. Vai vari pievienot klāt
-          vēl tikai 2 blokus, lai pabeigtu zīmējumu?"
-        turtle_4_9: "Šis ir risinājums iepriekšējai mīklai. Cik grādu leņķa pagriezienu
-          jāizmanto, lai pabeigtu zīmējumu? (Iespējams vajadzēs minēt dažas reizes)"
-        turtle_4_10: "Šis ir risinājums iepriekšējai mīklai. Cik daudz reizes nepieciešams
-          atkārtot šo darbību, lai pabeigtu zīmējumu?"
+          Padoms: Tev vajag izmantot tikai papildus 2 blokus.'
+        turtle_4_8: Šis ir risinājums iepriekšējai mīklai. Vai vari pievienot klāt
+          vēl tikai 2 blokus, lai pabeigtu zīmējumu?
+        turtle_4_9: Šis ir risinājums iepriekšējai mīklai. Cik grādu leņķa pagriezienu
+          jāizmanto, lai pabeigtu zīmējumu? (Iespējams vajadzēs minēt dažas reizes)
+        turtle_4_10: Šis ir risinājums iepriekšējai mīklai. Cik daudz reizes nepieciešams
+          atkārtot šo darbību, lai pabeigtu zīmējumu?
         turtle_4_11: Mēģini izmainīt skaitļus "pagrieziens" un "atkārtot" blokos,
           lai veidot citus zīmējumus. Vai arī izmēģini mainīt citas koda daļas, lai
           zīmēt ko vien vēlies.
@@ -205,9 +206,9 @@
         turtle_2_9: Izmanto "Skaitīt ar" cilpu, lai uzzīmētu sniegavīru ģimeni, kurā
           ģimenes locekļu augumi ir 110, 100, 90, 80 un 70. Visiem sniegavīriem vajadzētu
           būt 60 pikseļu attālumā vienam no otra.
-        turtle_2_10: "Šeit ir kods eksperimentēšanai ar dažādām spirālēm. Kas notiek,
-          ja Tu pamaini apgriezienu daudzumu? Vai arī ciklā uzliec nejaušu krāsu?
-          \ Uzzīmē jebko, ko gribi."
+        turtle_2_10: Šeit ir kods eksperimentēšanai ar dažādām spirālēm. Kas notiek,
+          ja Tu pamaini apgriezienu daudzumu? Vai arī ciklā uzliec nejaušu krāsu?  Uzzīmē
+          jebko, ko gribi.
         maze_karel_2_1: 'Pamēģini izmantot blokus, lai palīdzētu man noņemt visas
           čupiņas un aizpildīt visas bedres. Mēģini daudzo bloku vietā izmantot cilpas.
           Norādījums: Tu vari ielikt  vienu cilpa iekšā otrā cilpā.'
@@ -254,8 +255,10 @@
         turtle_3_8: Rediģē ''uzzīmē māju'' tā, lai tas atrastos labajā apakšējā stūrī
           pēc jaunas mājas zīmēšanas. Lieto šo modificēto funkciju, lai uzzīmētu trīs
           mājas.
-        turtle_3_9: |
-          Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības? izmēģini to un tad uzzīmē veselu rindu ar mājām.
+        turtle_3_9: 'Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības?
+          izmēģini to un tad uzzīmē veselu rindu ar mājām.
+
+'
         turtle_3_10: Tu esi apguvis daudz! Tagad izmanto to lai zīmētu visu ko tu
           vēlies. Centies uzzīmēt zvaigzni vai spirāli vai daiļu sniegpārsliņu.
         maze_karel_debug_seq_1: Esi sveicināts atkļūdošanā! Mans kods nestrādā pareizi.
@@ -301,117 +304,8 @@
           dinamīta kastē!
         maze_3_4: Aahh! Uzraksti man programmu, kas aizved mani apkārt dinamītam un
           noved pie cūkas.
-        bounce_1_basketball: Pievieno bloku pie "kad kreisā bultiņa" un spied "Palaist".
-          Parvieto roku pa kreisi izmantojot kreiso bultiņu kamēr sasniegsi karodziņu.
-        bounce_2_basketball: Pievieno blokus pie "kad kreisā bultiņa" un "kad labā
-          bultiņa", spied "Palaist". Parvieto roku pa kreisi un pa labi kamēr sasniegsi
-          abus karodziņus.
-        bounce_5_basketball: Kad bumba sasniedz roku tai jāatsitas. Pievieno bloku
-          pie "kad bumba atsitas pret roku" tā lai atsitoties bumba sasniegtu karodziņu.
-        bounce_6_basketball: Tagad karodziņš ir augšā. Tev vajag pievienot blokus
-          abiem "kad bumba atsitas" blokiem, lai atrisinātu šo uzdevumu.
-        bounce_7_basketball: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot,
-          kamēr tā sasniedz karodziņu.
-        bounce_10_basketball: Tagad augšā ir grozs! Pievieno "gūt punktu" un "ieskaitīt
-          punktu pretiniekam" blokus pie blokiem "bumba grozā" un "kad bumba netrāpa
-          rokai", lai izveidotu spēli. Mēģini iegūt cik vien dauz punktus vari, kamēr
-          pretinieks nav ieguvis divus punktus.
-        bounce_11_basketball: Tagad vari pievienot blokus pie "kad izpilda" bloka.
-          Pievieno "mest jaunu bumbu" bloku vairākās vietās. Pamēģini arī mainīt fona
-          attēlu vai rokas un bumbas ātrumu, mēģini savākt cik vien daudz vari punktus
-          kamēr pretinieks nav ieguvis 2 punktus!
-        bounce_12_basketball: Izveido savu spēli "Basketbols". Vari mainīt visus noteikumus,
-          pielāgot izskatu. Kad pabeigts, spied "Pabeigt" un aicini draugus spēlēt
-          tavu spēli.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Tagad karodziņš ir augšā. Tev vajag pievienot blokus abiem
-          "kad bumba atsitas" blokiem, lai atrisinātu šo uzdevumu.
-        bounce_7_sports: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot,
-          kamēr tā sasniedz karodziņu.
-        bounce_10_sports: Tagad augšā ir grozs! Pievieno "gūt punktu" un "ieskaitīt
-          punktu pretiniekam" blokus pie blokiem "bumba grozā" un "kad bumba netrāpa
-          rokai", lai izveidotu spēli. Mēģini iegūt cik vien dauz punktus vari, kamēr
-          pretinieks nav ieguvis divus punktus!
-        bounce_11_sports: Tagad vari pievienot blokus pie "kad izpilda" bloka. Pievieno
-          "mest jaunu bumbu" bloku vairākās vietās. Pamēģini arī mainīt fona attēlu
-          vai rokas un bumbas ātrumu, mēģini savākt cik vien daudz vari punktus kamēr
-          pretinieks nav ieguvis 2 punktus!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Pievieno bloku pie "kad kreisā bulta" un spied "Palaist". Parvieto
-          dēlīti ar labo bultu lai sasniegtu mērķi.
-        bounce_2: Pievieno bloku pie "kad labā bulta" un "kad kreisā bulta" blokiem.
-          Parvieto dēlīti ar labo bultu lai sasniegtu abus mērķus.
-        bounce_3: Tagad izmēģini ko līdzīgu ar "kad bulta uz augšu" bloku. Pārvieto
-          dēlīti, lai sasniegtu augšējo mērķi.
-        bounce_4: "Šoreiz tev vajag pievienot četrus blokus. Pārvieto airi uz visiem
-          četriem gala mērķiem, lai pabeigto šo puzli."
-        bounce_5: Liksim, lai bumba lido lejā dēlīša virzienā. Pievieno bloku pie
-          "kad bumba atsit dēlīti", lai nodrošinātu, ka bumba sasniedz mērķi.
-        bounce_6: Tagad gala mērķis ir augšā. Tev vajag pievienot blokus abiem "kad
-          bumba trāpa" blokiem, lai atrisinātu šo puzli.
-        bounce_7: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot, kamēr
-          tā sasniedz mērķi.
-        bounce_10: Tagad augšā ir mērķis. Pievieno "pieskaiti punktu" un "pieskaiti
-          pretiniekam punktu" blakus "kad bumba mērķī" un "kad bumba neatsitas pret
-          dēlīti" blokiem, lai veidotu spēli, Paskat, cik punktus tu var nopelnīt,
-          pirms pretinieks nopelna divtik.
-        bounce_11: Tagad vari pievienot blokus pie "kad palaists" bloka. Pievieno
-          jaunu "palaist" bumbu bloku vairākās vietās. Pamēģini arī'mainīt fona attēlu
-          vai dēlīša un bumbas ātrumu, un skaties, cik var savākt punktus, kamēr pretinieks
-          nav uzvarējis!
-        bounce_12: Izveido savu spēli "Pong". Vari mainīt visus noteikumus, pielāgot
-          izskatu. Kad pabeigts, spied "Gatavs" un aicini draugus spēlēt tavu spēli.
         Custom_builder: Vel blokus no rīku kastes uz darba virsmas lai izveidotu tādu
           līmeni, kādu vēlies. Spied "Palaist", kad ir gatavs.
-        flappy_1: Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist".
-          Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.
-        flappy_2: Tagad ir pievienota zeme. Pieliec bloku pie "kad atsitos pret zemi".
-          Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas zemē.
-        flappy_3: '"Kad palaists" bloks vienmēr izpilda kodu, kad spēle ir iesākta.
-          Pielāgo līmeņa ātrumu un lidošanas uz mērķi ātrumu.'
-        flappy_4: Flappy lido cauri šķēršļiem, ja vien tu neliksi viņam ietriekties.
-          Pievieno bloku pie "kad ieskrien šķērslī". Tavam kodam vajag "BEIGT SPĒLI",
-          kad Flappy ietriecas pirmajās caurulēs.
-        flappy_5: Pievienosim rezultātu tabulu un skaitīsim punktus, kad Flappy pārvar
-          šķērsli. Pievieno bloku pie "kad pārvar šķērsli" un saņem punktus, kad Flappy
-          izvairās no pirmajām caurulēm.
-        flappy_6: Pārbaudi, vai vari saņemt punktus, ja Flappy vēzē spārnus ātrāk
-          vai lēnāk.
-        flappy_7: Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad palaists"
-          bloka.
-        flappy_8: Tu vari mainīt izskatu jebkad, ne tikai iesākoties spēlei. Izmēģini
-          uzstādījumu RANDOM fons, kad kaut kas notiek, piemēram, kad izvairās no
-          šķēršļa.
-        flappy_9: Lai pamainītu lietas, tā vietā, lai beigtu spēli, kad atduries pret
-          šķērsli, iestati punktu skaitu atpakaļ uz 0.
-        flappy_11: Izveido pats savu Flappy spēli. Tu vari mainīt visus vizuālos efektus
-          un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied Pabeigt, lai ļautu
-          draugiem izmēģināt tavu spēli savos telefonos.
-        flappy_k1_1: Spēlēt Flappy spēli
-        flappy_k1_2: Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist".
-          Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.
-        flappy_k1_3: Tagad ir pievienota zeme. Pieliec bloku pie "kad atsitos pret
-          zemi". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas zemē.
-        flappy_k1_4: '"Kad palaists" bloks vienmēr izpilda kodu, kad spēle ir iesākta.
-          Pielāgo līmeņa ātrumu un lidošanas uz mērķi ātrumu.'
-        flappy_k1_5: Flappy lido cauri šķēršļiem, ja vien tu neliksi viņam ietriekties.
-          Pievieno bloku pie "kad ieskrien šķērslī". Tavam kodam vajag "BEIGT SPĒLI",
-          kad Flappy ietriecas pirmajās caurulēs.
-        flappy_k1_6: Pievienosim rezultātu tabulu un skaitīsim punktus, kad Flappy
-          pārvar šķērsli. Pievieno bloku pie "kad pārvar šķērsli" un saņem punktus,
-          kad Flappy izvairās no pirmajām caurulēm.
-        flappy_k1_7: Vai vari nopelnīt vairāk punktus, lidojot caur pirmo šķērsli?
-        flappy_k1_8: Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad
-          palaists" bloka.
-        flappy_k1_9: Mēģini mainīt spēlētāji, pieliekot "uzstādi spēlētāju" bloku
-          pie "Kad palaists".
         jigsaw_1: Spied uz bloka
         jigsaw_2: Aizvelc bloku līdz mērķi
         jigsaw_3: Sakārto blokus tā, lai izveidotu attēlu
@@ -598,8 +492,8 @@
           ABOVE
         maze_wordsearch_k_16: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu
           BELOW
-        maze_wordsearch_k_20: "Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad
-          citu, lai pateiktu STORY"
+        maze_wordsearch_k_20: Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad
+          citu, lai pateiktu STORY
         applab_ec_simple: Izveido savu aplikāciju, lietojot rīkus, kas atrodas instrumentu
           kastē.
         turtle_ec_1_2: 'Tagad uzzīmē kvadrātu. Ievēro: izmanto savu mīļāko krāsu,
@@ -820,9 +714,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
         starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
         starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
@@ -878,6 +769,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Cikli
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Pārvieto "pārvietot" bloku un pielipini zem cita bloka
@@ -891,7 +798,7 @@
           kategorijās
         set_sprite_image: Pievieno "uzstādi tēlu attēlam" bloku pie "kad stāsts sakas"
           bloka, lai iespējotu tēlu šim stāstam
-        studio_say_text: "Šajās pēdiņās uzraksti, ko vēlies, lai tavs tēls teiktu"
+        studio_say_text: Šajās pēdiņās uzraksti, ko vēlies, lai tavs tēls teiktu
         jigsaw_click: Klikšķini uz šī bloka!
         move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists"
           bloka, lai Elza ietu uz priekšu
@@ -945,7 +852,7 @@
           nospiešanas
         playlab_add_move: Atkārtošanas blokā pievieno blokus "pārvietot"
         playlab_add_score: Pievieno šeit punktu blokus
-        playlab_add_blocks: "Šeit pievieno savus blokus"
+        playlab_add_blocks: Šeit pievieno savus blokus
         set_variable: Velc skaitļu bloku te, lai noteiktu mainīgo
         place_variable: Ievelc mainīgo šajā blokā
         bee_for_loop: Velc lielāko nektāra vērtību, kādu gribi savākt.

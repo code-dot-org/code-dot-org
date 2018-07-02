@@ -1,0 +1,44 @@
+name 'cspu5_assess2_weight_exam_prep'
+type 'multi2'
+
+wrong '30'
+wrong '50'
+wrong '75'
+right '125'
+right '200'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/03f7dc7457ac82d993e500a9bd8775e3-image-1475998304228.png" style="float: right">
+A programmer designed a program for an airline to determine whether there is an extra fee on a checked bag.  The logic is shown in the flow chart at right.  The code they wrote (see below) runs without error, but unfortunately it _does not_ work as intended.
+
+
+
+What is the problem? Consider the list of values below and choose two that if assigned to weight will result in the incorrect message being displayed as the response (choose 2)?
+
+	1. var weight = promptNum("How much does your luggage weigh?");
+	2. if (weight > 50){
+    3. 	setText("response", "There is a 25 dollar fee to take this luggage");
+	4. } else if (weight > 120){
+    5. 	setText("response", "Your luggage is too heavy for this flight");
+	6. } else {
+    7. 	setText("response", "Your luggage is accepted as is");
+	8. }
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lessons 7, 8, 9 (primarily 9)**
+
+This code will work if the luggage is under 50 pounds because it will go into the else statement and setText to "Your luggage is accepted as is"; however, there is an error with the if and else if statement. The if and else if statement should be switched because the code will never enter the else if statement. Any luggage over 120 pounds will set the text incorrectly because it will automatically go into the first if statement. The correct code should look like:
+
+     var weight = promptNum("How much does your luggage weigh?");
+     if (weight > 120){
+         setText("response", "Your luggage is too heavy for this flight");
+     } else if (weight > 50){
+         setText("response", "There is a 25 dollar fee to take this luggage");
+     } else {
+         setText("response", "Your luggage is accepted as is");
+     }
+
+It should check if the weight of the luggage is above 120 pounds before checking if it is above 50 pounds.
+MARKDOWN

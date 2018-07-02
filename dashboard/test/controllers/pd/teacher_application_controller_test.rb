@@ -8,6 +8,10 @@ class Pd::TeacherApplicationControllerTest < ::ActionController::TestCase
     @teacher = create :teacher
   end
 
+  setup do
+    Pd::TeacherApplication.any_instance.stubs(:regional_partner_name)
+  end
+
   test_redirect_to_sign_in_for :new
   test 'redirects to new teacher application' do
     sign_in @teacher

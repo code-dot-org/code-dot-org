@@ -1,7 +1,6 @@
+hidden false
 login_required true
+has_verified_resources true
 
-stage 'Participate in a longitudinal study!'
-named_level 'Click Here!'
-
-stage 'CSP Post-Course Survey'
-assessment 'CSP post-assessment survey'
+stage 'CSP post-course survey', flex_category: 'cspSurvey'
+assessment 'csp-post-survey-2018-levelgroup', progression: 'CS Principles Post-course Survey'

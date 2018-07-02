@@ -7,9 +7,8 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Using Multiframe Animations\r\n\r\nIn the sample defender game the sprites themselves were animated. Before getting started on programming this game, take a minute to get familiar with this new way of animating sprites.\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation Tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n* Remember you can use `setAnimation` to give your sprites animations you've created in the Animation Tab.\r\n",
+    "markdown_instructions": "# Using Multiframe Animations\r\n\r\nIn the sample defender game the sprites themselves were animated. Before getting started on programming this game, take a minute to get familiar with this new way of animating sprites.\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation Tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n* Remember you can use `setAnimation` to give your sprites animations you've created in the Animation Tab.",
     "submittable": "false",
-    "start_blocks": "var sprite1, sprite2;\r\n\r\nsprite1 = createSprite(100,100);\r\nsprite2 = createSprite(300,300);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -32,9 +31,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
-    "show_d_pad": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"81ebaa85-e30c-4586-ac54-70af53ed0244\",\r\n    \"3fa83709-7269-4999-ac04-614e7d733fec\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"81ebaa85-e30c-4586-ac54-70af53ed0244\": {\r\n      \"name\": \"alienPink_walk_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/lzl-Y3hpcYBiPrr8ygQR_g/81ebaa85-e30c-4586-ac54-70af53ed0244.png?version=iPgNXx5J5CwS3w1eztL8Cg5Qz64QAIwX\",\r\n      \"frameSize\": {\r\n        \"x\": 114,\r\n        \"y\": 154\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 10,\r\n      \"version\": \"iPgNXx5J5CwS3w1eztL8Cg5Qz64QAIwX\"\r\n    },\r\n    \"3fa83709-7269-4999-ac04-614e7d733fec\": {\r\n      \"name\": \"ladybug_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/sXPIhCI4SB8cJGwBOGdHXpZOBTXWpj_E/ladybug.png\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 36\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 10,\r\n      \"version\": \"sXPIhCI4SB8cJGwBOGdHXpZOBTXWpj_E\"\r\n    }\r\n  }\r\n}",
     "project_template_level_name": "CSD U3 AnimationsMulti introducing multiframe template",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
@@ -140,11 +137,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 20:08:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 20:39:25 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-20 19:55:49 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 20:08:15 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 20:39:25 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-20 19:55:49 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-23 21:00:48 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"start_animations\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,0 +1,17 @@
+{
+  "category": "Behaviors",
+  "config": {
+    "func": "addBehaviorSimple",
+    "blockText": "{SPRITE} begins {BEHAVIOR}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "BEHAVIOR",
+        "type": "Behavior"
+      }
+    ]
+  }
+}

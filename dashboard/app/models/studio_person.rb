@@ -41,7 +41,6 @@ class StudioPerson < ActiveRecord::Base
     end
 
     FirehoseClient.instance.put_record(
-      'analysis-events',
       {
         study: 'studio_person_audit',
         event: 'studio_person_merge',
@@ -81,7 +80,6 @@ class StudioPerson < ActiveRecord::Base
     users.second.update!(studio_person: StudioPerson.create!(emails: users.second.email))
 
     FirehoseClient.instance.put_record(
-      'analysis-events',
       {
         study: 'studio_person_audit',
         event: 'studio_person_split',
@@ -107,7 +105,6 @@ class StudioPerson < ActiveRecord::Base
     update!(emails: (emails_as_array << normalized_email).join(','))
 
     FirehoseClient.instance.put_record(
-      'analysis-events',
       {
         study: 'studio_person_audit',
         event: 'studio_person_add_email_to_emails',

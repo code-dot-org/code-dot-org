@@ -55,16 +55,3 @@ Scenario: Submit anything, teacher is able to unsubmit
   Then I click selector ".show-handle .fa-chevron-left"
   And I wait until I don't see selector "#unsubmit"
   Then I sign out
-
-Scenario: 'Help & Tips' and 'Instruction' tabs are visible
-  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?enableExperiments=resourcesTab"
-  When I click selector ".uitest-helpTab"
-  And I wait until ".editor-column" contains text "Turtle Programming"
-  And I click selector ".uitest-instructionsTab"
-  And I wait until ".editor-column" contains text "Given only 4 turtle commands,"
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?disableExperiments=resourcesTab"
-
-Scenario: Do not display resources tab when there are no videos
-  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/3?enableExperiments=resourcesTab"
-  And element ".uitest-helpTab" is not visible
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/3?disableExperiments=resourcesTab"

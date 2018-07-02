@@ -1,0 +1,42 @@
+name 'v2 U1L9 Student Lesson Introduction_2018'
+title 'The Need for Addressing'
+
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 1: Lesson 9 - The Need for Addressing
+
+## Background
+
+In this lesson we use the Internet Simulator to communicate with more than one person at a time.  This introduces problems because without the right protocols it's hard to tell which message is meant for which person. In this lesson you will begin to investigate how a message is broadcast over a network and how we can ensure a message is delivered to the right person.  It requires inventing some kind of addressing protocol, but careful, it's easy for messages to get clobbered!
+
+## Vocabulary
+
+* **IP Address** - A number assigned to any item that is connected to the Internet.
+* **Packets** - Small chunks of information that have been carefully formed from larger chunks of information.
+* **Protocol** - A set of rules governing the exchange or transmission of data between devices.
+
+## Lesson
+
+* Play Battleship unplugged
+* Play Battleship using an Internet simulator
+* Invent an communication system for use in the Battleship game
+* Learn about the requirements of an internet addressing protocol
+* Invent an efficient and flexible addressing protocol for the battleship game
+
+
+## Resources
+
+* Broadcast Battleship Game Board - Activity Guide ([PDF](https://docs.google.com/document/d/1oKi5_35xB-6Np5stnbGq7MCKnRZVC5qCVUQmAJByrTI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1oKi5_35xB-6Np5stnbGq7MCKnRZVC5qCVUQmAJByrTI/export?format=doc))
+* Invent a Binary Protocol for Battleship - Activity Guide ([PDF](https://docs.google.com/document/d/1hq1UNK1Q4K0LHqmu0_yeO0a0NQKHzC8W--Q0QaISHVI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hq1UNK1Q4K0LHqmu0_yeO0a0NQKHzC8W--Q0QaISHVI/export?format=doc))
+* Broadcast Battleship Rules - Activity Guide ([PDF](https://docs.google.com/document/d/1r1r1JScAThVhJog9VJ-gbQx0zyxT3dXFLMEkp6m5Awg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1r1r1JScAThVhJog9VJ-gbQx0zyxT3dXFLMEkp6m5Awg/export?format=doc))
+* IP and DNS Video Worksheet (Optional) - Video Worksheet  ([PDF](https://docs.google.com/document/d/1YSWsBrwuzqG0TzVXyH7Boi7XUrlPuslHxwZy0vVVjZY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1YSWsBrwuzqG0TzVXyH7Boi7XUrlPuslHxwZy0vVVjZY/export?format=doc))
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [KEY: Video Guide for "IP Addresses and DNS"](https://docs.google.com/document/d/1mA79m88_TnGXCo-t7DUqivlQtz7rXG3POLJadUGXiwg/edit?usp=sharing)
+MARKDOWN

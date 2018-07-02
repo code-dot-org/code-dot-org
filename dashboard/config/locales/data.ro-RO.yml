@@ -1,4 +1,5 @@
-"ro":
+---
+ro:
   data:
     game:
       name:
@@ -22,7 +23,7 @@
         Farmer3: Fermierul 3
         Unplug10: Internetul
         Artist5: Artistul 5
-        Unplug11: "Încheiere"
+        Unplug11: Încheiere
         MazeEC: Labirintul
         Bounce: Săritură
         Flappy: Pasărea Flappy
@@ -67,7 +68,7 @@
           s-ar putea să mă enervez!
         maze_2_5: Există o modalitate prin care pot ajunge la porcușorul nătâng folosind
           doar 2 blocuri. Poți să-ți dai seama cum?
-        maze_2_6: "Încearcă să mă duci la intrusul verde folosind doar trei blocuri."
+        maze_2_6: Încearcă să mă duci la intrusul verde folosind doar trei blocuri.
         maze_2_7: Ajută-mă să alung acest purceluş rău folosind cel mai mic număr
           de blocuri. Încearcă să folosești mai mult de un bloc "repetă ori".
         maze_2_8: 'Când un bloc este gri, inseamnă că nu poți să-l ștergi. Rezolvă
@@ -110,12 +111,12 @@
           întorci făcând clic pe numărul în blocul de întoarcere.'
         turtle_1_5: Acum, pentru antrenament , desenează un triunghi, pe urmă un pătrat
           pentru a obține un plic.
-        turtle_1_6: "Îți poți da seama cum să desenezi acest triunghi și acest pătrat?
+        turtle_1_6: 'Îți poți da seama cum să desenezi acest triunghi și acest pătrat?
           Indiciu: Desenează mai întâi triunghiul, apoi dă-ți seama cât de mult să
-          întorci înainte de a desena pătratul."
-        turtle_1_7: "În regulă, hai să facem lucrurile un pic mai complicate - vezi
+          întorci înainte de a desena pătratul.'
+        turtle_1_7: În regulă, hai să facem lucrurile un pic mai complicate - vezi
           dacă poți desena acești ochelari verzi. Pătratele au 100 de pixeli pe fiecare
-          parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!"
+          parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!
         turtle_1_8: Ok, încearcă să îți dai seama ce se întamplă dacă rulezi acest
           cod (sau apasă "Rulează" pentru a-l încerca). Apoi repetă-l de câte ori
           e nevoie ca să completezi desenul. Culorile vor fi diferite de fiecare dată.
@@ -217,10 +218,10 @@
         turtle_2_10: Aici ai un cod ca să încerci să experimentezi cu diferite spirale.
           Ce se întamplă dacă schimbi cu cât se face întoarcerea? Sau dacă setezi
           o culoare la întâmplare în buclă? Desenează orice îți place.
-        maze_karel_2_1: "Încearcă să folosești blocurile ca să mă ajuţi să elimin
+        maze_karel_2_1: 'Încearcă să folosești blocurile ca să mă ajuţi să elimin
           toate grămezile şi să umplu toate gropile din pământ. Încearcă să folosești
           bucle în loc să utilizezi prea multe blocuri. Sugestie: poți amplasa o buclă
-          în interiorul altei bucle."
+          în interiorul altei bucle.'
         maze_karel_2_2: Ne-am definit propriul nostru bloc numit "umple 5", care este
           acum în categoria Funcţiilor. Foloseşte-l ca să mă ajuţi să umplu această
           groapă.
@@ -289,156 +290,33 @@
           să-mi fac câmpul plat?
         maze_karel_debug_function_3: 'Editează acest program, astfel incât să elimin
           toate grămezile de pe domeniul meu. '
-        turtle_5_1: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+        turtle_5_1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
-        turtle_5_2: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_2: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
-        turtle_5_3: "Încearcă să execuți acest program, şi fă modificări pentru a
-          vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l
-          şi înlocuiește-l cu ceva total diferit)"
-        turtle_5_4: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_3: Încearcă să execuți acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
-        turtle_5_5: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_4: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
-        turtle_5_6: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_5: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_6: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
+          înlocuiește-l cu ceva total diferit)
         maze_3_1: Am nevoie să ajung la acel porcușor! Tastează două chemări de mutare();
           să-mi recuperez ouălele.
         maze_3_2: Scrie-mi un program, ca să reușesc să ajung până la porcușor.
         maze_3_3: Cum să ajung la porcușor? Asigură-te că nu intru în cutia cu TNT!
         maze_3_4: Argh! Scrie-mi un program care mă duce de jur împrejurul minelor
           de TNT şi până la porcușor.
-        bounce_1_basketball: Atașează un bloc la blocul "când săgeată stânga" şi apasă
-          "Rulează". Mută mana folosind săgeata stânga pentru a ajunge la ţinta finală.
-        bounce_2_basketball: Atașează un bloc la blocurile "când săgeată dreapta"
-          și "când săgeată stânga". Mută mana pentru a atinge ambele ținte finale.
-        bounce_5_basketball: Vom trimite o minge sa zboare în jos spre mana. Ataşează
-          un bloc la blocul "când mingea lovește mana" pentru a garanta ca mingea
-          atinge obiectivul țintă.
-        bounce_6_basketball: Acum obiectivul țintă se află în partea de sus. Ai nevoie
-          să atașezi blocuri la ambele blocuri "când mingea lovește" pentru a rezolva
-          puzzle-ul.
-        bounce_7_basketball: Atașează blocuri la fiecare dintre blocurile "când".
-          Fă bila să ricoșeze până ajunge la țintă.
-        bounce_10_basketball: Există acum un cos în partea de sus. Atașează blocurile
-          "scor" și "scor oponent" la blocurile "când mingea este in cos" și "când
-          bila ratează cosul" ca să faci un joc. Vezi câte puncte poți înscrie înainte
-          ca oponentul tău să înscrie de două ori.
-        bounce_11_basketball: Acum poți atașa blocuri la blocul "rulează". Trebuie
-          să atașezi noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea,
-          încearcă să schimbi scena sau viteza mainii și a mingii şi vezi cât de multe
-          puncte poți înscrie înainte ca adversarul să înscrie de două ori!
-        bounce_12_basketball: Crează propriul tău joc de baschet. Poți modifica toate
-          regulile. Când ai terminat, apasă Finalizeaza pentru a permite prietenilor
-          tăi să încerce jocul pe telefoanele lor.
-        bounce_1_sports: Trebuie sa ajungi la steag! Ataseaza un bloc "cand sageata
-          stanga" si apasa "Ruleaza" pentru a misca jucatorul catre steag.
-        bounce_2_sports: Există două steaguri acum! Ataşaţi un bloc la "atunci când
-          săgeată stanga" şi "săgeată dreapta când" pentru a face personajul sa se
-          deplaseze în două direcţii.
-        bounce_5_sports: Pucul de hokey va zbura catre jucator! Ataseaza un bloc la
-          blocul "cand mingea loveste jucatorul" pentru a lovi steagul.
-        bounce_6_sports: Acum obiectivul țintă se află în partea de sus. Ai nevoie
-          să atașezi blocuri la ambele blocuri "când mingea lovește" pentru a rezolva
-          puzzle-ul.
-        bounce_7_sports: Atașează blocuri la fiecare dintre blocurile "când". Fă bila
-          să ricoșeze până ajunge la țintă.
-        bounce_10_sports: Există un acum un gol în partea de sus. Atașează blocurile
-          "scor" și "scor oponent" la blocurile "când bila este in gaură" și "când
-          bila ratează paleta" ca să faci un joc. Vezi câte puncte poți înscrie înainte
-          ca oponentul tău să înscrie de două ori!
-        bounce_11_sports: Acum poți atașa blocuri la blocul "rulează". Trebuie să
-          atașezi noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea,
-          încearcă să schimbi scena sau viteza mainii și a mingii şi vezi cât de multe
-          puncte poți înscrie înainte ca adversarul să înscrie de două ori!
-        bounce_12_sports: Crează propriul tău joc. Poți modifica toate imaginile şi
-          regulile, mixeaza sporturi, fii creativ. Când ai terminat, apasă Distribuie
-          pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
-        bounce_1: Atașează un bloc la blocul "când săgeată stânga" şi apasă "Rulează
-          programul". Mută paleta folosind săgeata stânga pentru a ajunge la ţinta
-          finală.
-        bounce_2: Atașează un bloc la blocurile "când săgeată dreapta" și "când săgeată
-          stânga". Mută paleta pentru a atinge ambele ținte finale.
-        bounce_3: Acum, încearcă ceva similar cu blocul "când săgeata în sus". Mută
-          padela până la obiectivul final din partea de sus.
-        bounce_4: De data aceasta ai nevoie să adăugi patru blocuri. Mută paletele
-          la toate cele patru obiective pentru a finaliza acest puzzle.
-        bounce_5: Vom trimite o bilă sa zboare în jos spre palete. Ataşează un bloc
-          la blocul "când bila lovește paleta" pentru a garanta ca bila atinge obiectivul
-          țintă.
-        bounce_6: Acum obiectivul țintă se află în partea de sus. Ai nevoie să atașezi
-          blocuri la ambele blocuri "când bila lovește" pentru a rezolva puzzle-ul.
-        bounce_7: Atașează blocuri la fiecare din blocurile "când". Fă bila să ricoșeze
-          până ajunge la țintă.
-        bounce_10: Există un acum un gol în partea de sus. Atașează blocurile "scor"
-          și "scor oponent" la blocurile "când bila este in gaură" și "când bila ratează
-          paleta" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca oponentul
-          tău să înscrie de două ori.
-        bounce_11: Acum poți atașa blocuri la blocul "rulează". Trebuie să atașezi
-          noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea, încearcă
-          să schimbi scena sau viteza paletei și a mingii şi vezi cât de multe puncte
-          poți înscrie înainte ca adversarul să înscrie de două ori.
-        bounce_12: Crează propriul tău joc Țopăială. Poți modifica toate imaginile
-          şi regulile. Când ai terminat, apasă Distribuie pentru a permite prietenilor
-          tăi să încerce jocul pe telefoanele lor.
         Custom_builder: Folosește blocuri din caseta de instrumente în spațiul de
           lucru pentru a putea desena nivelul dorit. Apasă "Rulează Programul" atunci
           când ești gata.
-        flappy_1: Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul".
-          Fă clic sau atinge ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.
-        flappy_2: Acum am adăugat și ceva teren.  Ataşează un bloc la blocul "când
-          ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului"
-          atunci când Flappy se prăbușește.
-        flappy_3: Blocul "când rulează" îți permite să rulezi codul atunci când îți
-          începe jocul.  Încearcă să setezi nivelul vitezei şi a datului din aripi
-          către ţintă.
-        flappy_4: Flappy va zbura printre obstacole dacă nu scrii codul pentru a-l
-          face să se accidenteze. Ataşează un bloc la blocul "când lovește un obstacol".
-          Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci când Flappy
-          s-a prăbuşit în primul set de conducte.
-        flappy_5: Hai să adăugăm un tabel de scor, și numărător puncte atunci când
-          Flappy trece de obstacole. Adaugă-le la blocul "când trece de un obstacol",
-          și apoi înscrie un punct de scor zburându-l pe Flappy prin primul set de
-          conducte.
-        flappy_6: Verifică dacă încă mai poți înscrie un punct după ce-l faci pe Flappy
-          să dea din aripi mai mult sau mai puțin.
-        flappy_7: Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc la
-          blocul "atunci când rulaţi".
-        flappy_8: Poți seta vizuale oricând, nu doar atunci când începe jocul. Încearcă
-          să setezi o scenă aleatorie când alte incidente se întâmplă.
-        flappy_9: Pentru diversitate, în locul opririi jocului, încearcă setarea scorului
-          la 0 atunci când lovești un obstacol.
-        flappy_11: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele vizuale
-          şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi clic pe
-          Terminare pentru a permite prietenilor să încerce jocul pe telefoanele lor.
-        flappy_k1_1: Joacă Flappy
-        flappy_k1_2: Atașează un bloc la blocul "când clic", apoi apasă "Rulează Programul".
-          Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy la țintă.
-        flappy_k1_3: Acum am adăugat și ceva teren.  Ataşează un bloc la blocul "când
-          ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului"
-          atunci când Flappy se prăbușește.
-        flappy_k1_4: Blocul "când rulează" îți permite să rulezi codul atunci când
-          îți începe jocul.  Încearcă să setezi nivelul vitezei şi a datului din aripi
-          către ţintă.
-        flappy_k1_5: Flappy va zbura printre obstacole dacă nu scrii codul pentru
-          a-l face să se accidenteze. Ataşează un bloc la blocul "când lovește un
-          obstacol". Codul tău trebuie să se încheie cu "Sfârşitul jocului" atunci
-          când Flappy s-a prăbuşit în primul set de conducte.
-        flappy_k1_6: Hai să adăugăm un tabel de scor, și numărător puncte atunci când
-          Flappy trece de obstacole. Adaugă-le la blocul "când trece de un obstacol",
-          și apoi înscrie un punct de scor zburându-l pe Flappy prin primul set de
-          conducte.
-        flappy_k1_7: Vedeți dacă puteţi înscrie mai multe puncte pentru a-l face să
-          treacă un obstacol
-        flappy_k1_8: Apoi, încercaţi să schimbaţi scena prin ataşarea unui alt bloc
-          la blocul "atunci când rulaţi".
-        flappy_k1_9: Încercaţi schimbarea jucătorului prin ataşarea un bloc "setare
-          jucător" la blocul "atunci când rulează".
         jigsaw_1: Fă clic pe bloc
         jigsaw_2: Trage blocul către ţintă
         jigsaw_3: Aranjează blocurile pentru a forma imaginea
@@ -517,8 +395,8 @@
           2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune"
           de două ori?
         studio_playlab_3: O puteți ajuta pe tenismenă să ajungă la pavilion?
-        studio_playlab_4: "Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
-          la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?"
+        studio_playlab_4: Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
+          la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
         studio_playlab_5: Îl puteți ajuta pe robotul spatial să spună "Salutări pamantenilor"
           când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe
           Rulare
@@ -655,7 +533,7 @@
     video:
       name:
         maze_intro: Intro Labirint
-        artist_intro: 'Intro Artist '
+        artist_intro: Intro Artist
         farmer_intro: Intro Fermier
         flappy_intro: Introducere Flappy
         loop_times: Bloc Repetă ori
@@ -667,7 +545,7 @@
         loop_while: Bloc În timp ce
         loop_for: Bloc Contor
         parameters: Funcții cu Parametrii
-        hoc_wrapup: "Încheierea Orei de Programare"
+        hoc_wrapup: Încheierea Orei de Programare
         Unplug1: Ce este informatica?
         Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
@@ -678,7 +556,7 @@
         Unplug8: Abstractizare
         Unplug9: Programare de releu
         Unplug10: Internet
-        Unplug11: "Încheiere"
+        Unplug11: Încheiere
         C1_happy_maps_unplugged: Hărţi Fericite
         C1_moveitmoveit_unplugged: Mutaţi-l, mutați-l
         C1_bigevent_unplugged: Marele eveniment
@@ -687,7 +565,7 @@
         C1_maze_intro_sequencing: Introducere în secvențierea unui labirint
         C1_maze_debugging: Labirint Depanare
         C1_bee_level_intro: Albină Nivel - Introducere
-        C1_artist_intro: 'Intro Artist '
+        C1_artist_intro: Intro Artist
         C1_spelling_bee_intro: Introducere în Albina ortografiind
         C1_zuck_repeat_loop: Bucle de Labirint
         C1_bee_loops: Bucle de Ortografie
@@ -697,7 +575,7 @@
         C1_building_foundation: Construirea unei Fundaţii
         C1_going_places_safely: Mergând în locuri în siguranţă
         C2_maze_intro: Intro Labirint
-        C2_artist_intro: 'Intro Artist '
+        C2_artist_intro: Intro Artist
         C2_zuck_repeat_loop: Bucle de Labirint
         C2_artist_loops: Bucle de Artist
         C2_artist_debugging: Depanare Artist
@@ -713,7 +591,7 @@
         C2_digital_footprint: Amprenta ta Digitală
         C2_digital_footprint_v2: Amprenta ta Digitală
         C3_maze_level_4: Bucle de Labirint
-        C3_artist_intro: 'Intro Artist '
+        C3_artist_intro: Intro Artist
         C3_artist_functions: Funcţii de Artist
         C3_bee_functions: Funcţii de Ortografie
         C3_bee_conditionals: Condiţii de Ortografie
@@ -864,9 +742,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Programarea unei galaxii - Introducere'
         starwars_typing: 'Star Wars: Programarea unei galaxii - JavaScript'
         starwars_events: 'Star Wars: Programarea unei galaxii - Evenimente'
@@ -922,6 +797,22 @@
         applab_intro_sounds: Laborator de applicații - imagini şi sunete
         applab_intro_designmode: Laborator de aplicații - mod de proiectare
         applab_intro_share: Laborator de applicații - Distribuie applicația ta
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Bucle
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
@@ -955,8 +846,8 @@
           în interior"
         snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
           fulgi de zăpadă!
-        degrees_per_side: "Împărțiți 360 la numărul de laturi pentru a obține mărimea
-          în grade a fiecărui unghi."
+        degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
+          în grade a fiecărui unghi.
         set_sides: Utilizaţi acest bloc ca să setați "laturi" la numărul necesar pentru
           a finaliza puzzle-ul.
         set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.

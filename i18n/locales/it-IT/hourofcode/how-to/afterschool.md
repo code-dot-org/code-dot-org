@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Come insegnare un'Ora del Codice nel doposcuola
 
-Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! Se hai bisogno di una mano, puoi trovare (solo per gli USA) un [volontario locale](%= resolve_url('https://code.org/volunteer/local') %) che ti aiuti a tenere l'Ora del Codice nella tua aula.
+Unisciti al movimento ed introduci un gruppo di studenti alla loro prima ora di informatica seguendo questi passi. L'Ora del Codice è facile da eseguire - anche per i principianti! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -97,7 +97,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 [/col-33]
 
-- [Stampa gli attestati](%= resolve_url('https://code.org/certificates') %) per i tuoi studenti.
+- [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - Stampa gli adesivi ["Ho completato un'Ora del Codice!"](%= resolve_url('/promote/resources#stickers') %)
 - [Ordina T-shirt personalizzate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per i tuoi studenti (solo per gli USA).
 - Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
@@ -112,7 +112,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 ## Altre risorse dell'Ora del Codice per gli insegnanti:
 
-- Scopri le [buone pratiche](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) consigliate dagli organizzatori delle passate edizioni dell'Ora del Codice (in inglese). 
+- Scopri le [buone pratiche](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) consigliate dagli organizzatori delle passate edizioni dell'Ora del Codice (in inglese).
 - Guarda la registrazione del nostro webinar [Guida per l'Educatore all'Ora del Codice (in inglese)](https://youtu.be/EJeMeSW2-Mw)
 - Visita il [Forum dell'Ora del Codice](http://forum.code.org/c/plc/hour-of-code) per ricevere consigli, opinioni e assistenza da altri organizzatori (in inglese). <% if @country == 'us' %>
 - Controlla le [FAQ dell'Ora del Codice](https://hourofcode.com/it#faq). <% end %>
@@ -121,7 +121,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 L'Ora del Codice è solo il primo passo in un viaggio per imparare di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio:
 
-- Incoraggia gli studenti a continuare ad [imparare online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Frequentate](%= resolve_url('https://code.org/professional-development-workshops') %) un seminario di un giorno, per ricevere istruzioni da un esperto di informatica. (Solo per gli USA)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

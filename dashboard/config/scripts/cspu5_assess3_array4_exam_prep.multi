@@ -1,0 +1,27 @@
+name 'cspu5_assess3_array4_exam_prep'
+wrong '0'
+wrong '1'
+right '2'
+wrong '8'
+wrong 'Error. Index 3 does not exist.'
+
+markdown <<MARKDOWN
+What does the following code segment display?
+
+![](https://images.code.org/b38be773f99dbc29c547787d09c4dd03-image-1477187292727.png)
+
+    data <- [3, 5, 8, 2, 1]
+    REMOVE(data, 3)
+    DISPLAY(data[3])
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Going through the code line by line:
+
+* An array named _data_ contains "3,5,8,2,1"
+* You remove the number at index 3.
+* Remember that after removing, the numbers after the removed index are shifted to the left
+* Now, the array looks like: data = [3,5,2,1]
+* The number at index three is now 2. Therefore, 2 is displayed
+
+MARKDOWN

@@ -7,9 +7,9 @@ nav: promote_nav
 
 # Muestra del comunicado a la prensa para los funcionarios electos
 
-Para publicación inmediata   
-[**FECHA**]   
-contacto: [**INFORMACIÓN**]  
+Para publicación inmediata [**fecha**] de  
+  
+contacto: [****de la información de contacto]  
   
 
 

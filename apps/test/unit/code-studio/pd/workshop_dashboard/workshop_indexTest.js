@@ -1,9 +1,15 @@
-import WorkshopIndex from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_index';
+import {WorkshopIndex} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_index';
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import Permission from '@cdo/apps/code-studio/pd/permission';
+import Permission, {
+  Facilitator,
+  CsfFacilitator,
+  Organizer,
+  ProgramManager,
+  WorkshopAdmin
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 describe("WorkshopIndex", () => {
   const fakeRouter = {
@@ -22,14 +28,22 @@ describe("WorkshopIndex", () => {
     // to the list of buttons to which it has access
     let permissionButtonMap = new Map([
       [
-        "facilitator",
+        Facilitator,
         [
           "Facilitator Survey Results",
           "Filter View"
         ]
       ],
       [
-        "workshop_organizer",
+        CsfFacilitator,
+        [
+          "New Workshop",
+          "Facilitator Survey Results",
+          "Filter View"
+        ]
+      ],
+      [
+        Organizer,
         [
           "New Workshop",
           "Attendance Reports",
@@ -37,7 +51,15 @@ describe("WorkshopIndex", () => {
         ]
       ],
       [
-        "workshop_admin",
+        ProgramManager,
+        [
+          "New Workshop",
+          "Attendance Reports",
+          "Filter View"
+        ]
+      ],
+      [
+        WorkshopAdmin,
         [
           "New Workshop",
           "Attendance Reports",
@@ -46,12 +68,12 @@ describe("WorkshopIndex", () => {
       ]
     ]);
 
-    permissionButtonMap.forEach(function (buttons, permission) {
-      it(permission + " has " + buttons.length + " buttons", () => {
-        new Permission().setPermission(permission);
+    permissionButtonMap.forEach(function (buttons, permissionName) {
+      it(permissionName + " has " + buttons.length + " buttons", () => {
+        const permission = new Permission([permissionName]);
 
         let workshopIndex = shallow(
-            <WorkshopIndex/>, {context}
+            <WorkshopIndex permission={permission}/>, {context}
         );
 
         expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(buttons.length);

@@ -12,7 +12,7 @@ const createProjectsStore = function () {
 
 export default storybook => {
   return storybook
-    .storiesOf('GallerySwitcher', module)
+    .storiesOf('Projects/GallerySwitcher', module)
     .addStoryTable([
       {
         name: 'Gallery Switcher with My Projects selected initially',

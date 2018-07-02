@@ -5,34 +5,34 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Ниже приведен пример обзорных поддержку Недели Компьютерные науки, образования и ее цели, которые могут быть использованы государством, местные законодатели, лидеры бизнеса и т. д.
+### Ниже приведен пример обзорных поддержку Недели Образование Компьютерные науки и ее цели, которые могут быть использованы штатом, местные законодатели, лидерами бизнеса и т. д.
 
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
-**Title: Computing…Where the Jobs Are**
+**Заголовок: Вычисление... Где находятся рабочие места**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**[ИМЯ] и [Рассмотреть вопрос о СОАВТОРСТВЕ с преподавателем, инспектором или бизнес лидером]**
 
 Компьютеры есть везде. Они в наших карманах. Они на наших стенах. Они в наших автомобилях. Они являются важной частью нашей инфраструктуры, от электросетей до светофоров, до внутренней работы наших финансовых рынков. И все эти компьютеры имеют однно общее свойство. Требуется программное обеспечение, чтобы сказать им, что делать.
 
 Но кто именно будет писать это программное обеспечение?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. Вы ошибаетесь. В самом деле изучением информатики стало заниматься меньше студентов, стало меньше школ информатики, чем десять лет назад.
+Учитывая, как быстро наш мир преобразовывается технологиями вы могли бы ожидать несколько студентов, изучающих информатику в K-12 образование сегодня на небывалом высоком уровне. Вы ошибаетесь. В самом деле изучением информатики стало заниматься меньше студентов, стало меньше школ информатики, чем десять лет назад.
 
 В то время, когда спрос на квалифицированных программистов достиг пика, мы стали выпускать меньше компьютерщиков. Даже в это время высокой безработицы, тысячи рабочих мест, многие из них прямо здесь, в **[INSERT STATE/CITY]**, будут незаполнены изза отсутствия достаточного количества людей с нужным навыком.
 
 Почему это? И как можно исправить?
 
-Проблема начинается в наших школах. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Проблема начинается в наших школах. Девять из десяти из наших школ, не предлагают классы компьютерного программирования. **[SCHOOL DISTRICT]** в последний год, только **[NUMBER]** студентов взяли расширенное размещение на уровне колледжа Компьютерной Науки Экзамен, только **[%]** из всех студентов кто взял расширенное размещения на уровне колледжа в нашем штате. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
 Почти все основные вычислительные новшества были изобретены здесь, в этой стране, но мы находимся в опасности потерять это лидерство, если мы не сделаем что-то сейчас.
 
 Нам нужно внести некоторые изменения.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[НЕОБЕЗАТЕЛЬНО ДЛЯ ШТАТОВ ГОСУДАРСТВ, ГДЕ ЭТО ОТНОСИТЬСЯ]**
 
 One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 

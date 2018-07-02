@@ -38,6 +38,7 @@
   "drawUpperWave": "üst dalğa çək",
   "drawLowerWave": "alt dalğa çək",
   "drawSticker": "etiket çək",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "hündürlük",
   "hideTurtle": "rəssamı gizlət",
   "jump": "atıl",
@@ -73,6 +74,8 @@
   "penDown": "karandaşı endir",
   "penTooltip": "Şəkil çəkməyi başlamaq və ya dayandırmaq üçün karandaşı endirir və ya qaldırır.",
   "penUp": "karandaşı qaldır",
+  "pointTo": "point to",
+  "pixels": "piksel",
   "reinfFeedbackMsg": "Bu da sizin rəsm əsəri! Üzərində işləməyə davam edin və ya növbəti tapmacaya keçin.",
   "setAlpha": "alfa seç",
   "setCharacter": "set character to {character}",
@@ -91,5 +94,6 @@
   "turnTooltip": "Rəssamı qeyd olunmuş dərəcə qədər sola və ya sağa döndərir.",
   "turtleVisibilityTooltip": "Rəssamı görünən və ya görünməz edir.",
   "widthTooltip": "Karandaşın qalınlığını dəyişir.",
+  "withSize": "with size",
   "wrongColour": "Sizin şəkliniz səhv rəngdədir. Bu tapmaca üçün bu %1 olmalıdır."
 }

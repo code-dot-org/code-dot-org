@@ -1,4 +1,5 @@
-"fr":
+---
+fr:
   data:
     failure_message_overrides:
       Code Studio Puzzle Challenge 1 - Artist_failure_message_override: "Belle tentative !
@@ -35,65 +36,55 @@
         \nEssayez à nouveau pour réussir."
       Course 4 Artist Vars 10_failure_message_override: Assurez-vous d'utiliser la
         variable des côtés!
-      Course 4 Playlab For Loops 4b_failure_message_override: |-
-        Remember, both characters
-        should get to their flags in the same number of moves!
-      Course 4 Playlab For Loops 5b_failure_message_override: |-
-        Remember, both characters
-        need to stop in the same place.
+      Course 4 Playlab For Loops 4b_failure_message_override: N'oubliez pas, les deux
+        personnages doivent atteindre leur drapeau avec le même nombre de déplacements!
+      Course 4 Playlab For Loops 5b_failure_message_override: N'oubliez pas, les deux
+        personnages doivent s'arrêter au même endroit.
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"
-      Kiki_StarWars_Test_5_failure_message_override: Game over!
-      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
-      MC HOC 2016 Level 2-2_failure_message_override: |-
-        Use `move forward` and `turn`
-        commands to get your chicken moving.
-      MC HOC 2016 Level 3_failure_message_override: |-
-        Use a `forever do` block and
-        `move forward` and `turn` commands to keep your chicken wandering.
-      MC HOC 2016 Level 4_failure_message_override: |-
-        If the chickens are all moving
-        in the same direction, use `turn random` to make the chickens turn randomly
-        left or right.
-      MC HOC 2016 Level 5_failure_message_override: |-
-        Try using 'Forever Do' with
-        'Move a Step Toward the Player'.
-      MC HOC 2016 Level 6_failure_message_override: |-
-        Use the `spawn zombie` command
-        under `when night` to spawn at least three zombies. Then, add `move a step
-        toward player` to their `when spawned` event with a loop to help them chase
-        you. If they’re too fast, add a `wait` command to slow them down.
-      MC HOC 2016 Level 8_failure_message_override: |-
-        You need to use the exploding
-        Creeper to blow up the wall so you can reach your sheep.
+      Kiki_StarWars_Test_5_failure_message_override: Perdu!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Perdu!
+      MC HOC 2016 Level 2-2_failure_message_override: Utilise les commandes "avancer"
+        et "tourner" pour déplacer ton poulet.
+      MC HOC 2016 Level 3_failure_message_override: Utilise les commandes "toujours
+        faire", "avancer" et "tourner" pour garder votre poulet errant.
+      MC HOC 2016 Level 4_failure_message_override: Si les poulets vont tous dans
+        la même direction, utilise "tourner au hasard" pour faire en sorte que les
+        poulets tournent aléatoirement à droite ou à gauche.
+      MC HOC 2016 Level 5_failure_message_override: Essaye d'utiliser "toujours faire"
+        avec "faire un pas vers le joueur".
+      MC HOC 2016 Level 6_failure_message_override: Utilise la commande "créer zombie"
+        sous "quand la nuit" pour créer au moins trois zombies. Puis, ajoute "faire
+        un pas vers le joueur" à l'évènement "quand créé", avec une boucle, pour les
+        aider à te prendre en chasse. S'ils sont trop rapide, ajoute la commande "attendre"
+        pour les ralentir.
+      MC HOC 2016 Level 8_failure_message_override: Tu dois utiliser la Liane explosive
+        exploser le mur et ainsi atteindre ton mouton.
       MC HOC 2016 New Drop_failure_message_override: |-
-        Use the arrow keys to walk
-        to the sheep and press space bar or click the game board to use the sheep.
-        And, don’t forget to add the 'Drop' block to your code.
-      MC HOC 2016 New Spawn_failure_message_override: |-
-        Place `spawn sheep` under
-        `when run`.
-      MC HOC 2016 New Walk_failure_message_override: |-
-        To open the door, press the
-        space bar or touch the game board while facing it. Walk inside to continue.
-      MC HOC 2016 SCORE LEVEL_failure_message_override: |-
-        If you're having trouble
-        tagging 5 Golems, try changing the score to 2 per tag.
-      MC HOC 2016 Village Test_failure_message_override: |-
-        You need to make the Iron
-        Golem chase and attack the zombies to win.
+        Utilise les flèches clavier pour marcher jusqu'au mouton et appuie sur la barre espace ou clique sur le plateau de jeu pour utiliser le mouton.
+        Et, n'oublie pas d'ajouter le bloc "Chute" à ton code.
+      MC HOC 2016 New Spawn_failure_message_override: Place "créer un mouton" sous
+        "quand courir".
+      MC HOC 2016 New Walk_failure_message_override: Pour ouvrir la porte, appuie
+        sur la touche espace ou touche le plateau de jeu en faisant face à la porte.
+        Entre pour continuer.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Si tu as du mal à marquer
+        5 Golems, essaye de changer le score à 2 par marque.
+      MC HOC 2016 Village Test_failure_message_override: Vous devez faire en sorte
+        que le Golem de fer poursuive et attaque les zombies pour gagner.
+      Valentine_playlab_01_failure_message_override: Presque! Essaye encore.
       WhileAdventure_failure_message_override: Félicitations! Tu as collecté X pièces!
-      courseE_playLab_scaffold3_failure_message_override: |-
-        You must add two or more
-        new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: |-
-        You must add two or more
-        new actors that move to your game.
-      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
-      sample1_failure_message_override: Congratulations!  You gathered X coins!
-      sample4_failure_message_override: Congratulations!  You gathered X coins!
+      courseE_playLab_scaffold3_failure_message_override: Tu dois ajouter au moins
+        deux nouveaux acteurs au jeu et les programmer pour bouger.
+      courseE_playLab_scaffold3_2018_failure_message_override: Tu dois ajouter au
+        moins deux nouveaux acteurs au jeu et les programmer pour bouger.
+      grade4_scaffolded_project3_failure_message_override: Tu dois ajouter au moins
+        deux nouveaux acteurs qui bougent à ton jeu.
+      kikiTesta_failure_message_override: Félicitations! Tu as réuni X pièces!
+      sample1_failure_message_override: Félicitations! Tu as réuni X pièces!
+      sample4_failure_message_override: Félicitations! Tu as réuni X pièces!
       sample6_failure_message_override: |-
-        Not quite.  Keep trying!  [Move to Play
+        Pas assez. Continue d'essayer!  [Move to Play
         Zone]
-      sample8_failure_message_override: Congratulations!  You gathered X coins!
+      sample8_failure_message_override: Félicitations! Tu as réuni X pièces!

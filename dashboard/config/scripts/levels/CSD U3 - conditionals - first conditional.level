@@ -32,7 +32,6 @@
     "debugger_disabled": "true",
     "markdown_instructions": "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\r\n# If Statement\r\n\r\nThe Boolean expressions you used earlier allow us to ask questions, but in order to _respond to those questions_, we need to use an `if` statement.\r\n\r\n`if` statements usually go inside your draw loop because we want to check them each time the loop runs. \r\n\r\n# Do This\r\n\r\nThe race car program you wrote earlier is loaded here for you.\r\n\r\n* Add an `if` statement after you update the position of the race car.\r\n* Move the Boolean expression from the console.log statement to the condition of the if statement.\r\n* Inside the `if` statement add a statement to draw text on the screen to say \"Winner\".\r\n",
     "callout_json": "[]",
-    "show_d_pad": "false",
     "project_template_level_name": "CSD U3 - car template",
     "instructions_important": "false",
     "hide_animation_mode": "false",

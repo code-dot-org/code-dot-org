@@ -49,6 +49,7 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "markdown_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An `if` command will come in handy here. Add a `move forward` command in the correct place to mine these blocks.",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

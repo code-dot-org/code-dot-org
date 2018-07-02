@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Код сааты технологиялардын иштешин терең изилдөөдө саякатындагы жана програмдык жабдууларды өндүрүүдөгү биринчи эле кадам. Бул саякатты улантуу үчүн:
 
-- Окуучуларды [онлайн үйрөнүүнү](<%= resolve_url('https://code.org/learn/beyond') %>) улантууга чакыргыла.
-- Компүтердик технологиялар боюнча тажрыйбалуу адистер өткөзгөн 1 күндүк семинар-практикумга [катышкыла](<%= resolve_url('https://code.org/professional-development-workshops') %>). (АКШ үчүн гана)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

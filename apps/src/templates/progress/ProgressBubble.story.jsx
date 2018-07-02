@@ -6,7 +6,7 @@ const statuses = Object.values(LevelStatus);
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressBubble', module)
+    .storiesOf('Progress/ProgressBubble', module)
     .addStoryTable(
       statuses.map(status => ({
         name: `bubble status: ${status}`,
@@ -47,6 +47,55 @@ export default storybook => {
               icon: "fa-document"
             }}
             disabled={true}
+          />
+        )
+      }, {
+        name:'hidden tooltips bubble',
+        description: 'should not have tooltips',
+        story: () => (
+          <ProgressBubble
+            level={{
+              levelNumber: 3,
+              status: LevelStatus.perfect,
+              url: "/foo/bar",
+              icon: "fa-document"
+            }}
+            hideToolTips={true}
+            disabled={false}
+          />
+        )
+      }, {
+        name:'pairing icon bubble - perfect',
+        description: 'should show the paring icon, completed perfectly',
+        story: () => (
+          <ProgressBubble
+            level={{
+              levelNumber: 3,
+              status: LevelStatus.perfect,
+              url: "/foo/bar",
+              icon: "fa-document",
+              paired: true
+            }}
+            hideToolTips={true}
+            disabled={false}
+            pairingIconEnabled={true}
+          />
+        )
+      }, {
+        name:'pairing icon bubble - attempted',
+        description: 'should show the paring icon, attempted',
+        story: () => (
+          <ProgressBubble
+            level={{
+              levelNumber: 3,
+              status: LevelStatus.attempted,
+              url: "/foo/bar",
+              icon: "fa-document",
+              paired: true
+            }}
+            hideToolTips={true}
+            disabled={false}
+            pairingIconEnabled={true}
           />
         )
       }])

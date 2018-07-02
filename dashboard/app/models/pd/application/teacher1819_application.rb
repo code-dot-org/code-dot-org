@@ -20,6 +20,7 @@
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
 #  properties                          :text(65535)
+#  deleted_at                          :datetime
 #
 # Indexes
 #
@@ -100,8 +101,9 @@ module Pd::Application
       Pd::Application::ApplicationBase.statuses.except('interview')
     end
 
+    VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
     validates_uniqueness_of :user_id
-    validates_presence_of :course
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
@@ -420,7 +422,9 @@ module Pd::Application
     end
 
     def district_name
-      school.try(:school_district).try(:name).try(:titleize)
+      school ?
+        school.try(:school_district).try(:name).try(:titleize) :
+        sanitize_form_data_hash[:school_district_name]
     end
 
     def school_name
@@ -494,12 +498,16 @@ module Pd::Application
     end
 
     def principal_approval_url
-      pd_application_principal_approval_url(application_guid)
+      pd_application_principal_approval_url(application_guid) if application_guid
     end
 
     # @override
     def check_idempotency
       Pd::Application::Teacher1819Application.find_by(user: user)
+    end
+
+    def teachercon_registration
+      Pd::Teachercon1819Registration.find_by_pd_application_id(id)
     end
 
     def meets_criteria
@@ -534,22 +542,6 @@ module Pd::Application
 
     def principal_approval
       sanitize_form_data_hash[:principal_approval] || ''
-    end
-
-    def date_accepted
-      accepted_at.try(:strftime, '%b %e')
-    end
-
-    def assigned_workshop
-      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
-    end
-
-    def registered_workshop
-      if pd_workshop_id
-        Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user) ? 'Yes' : 'No'
-      else
-        ''
-      end
     end
 
     # Called once after the application is submitted, and the principal approval is done
@@ -603,12 +595,13 @@ module Pd::Application
     end
 
     # @override
-    def self.csv_header(course)
+    def self.csv_header(course, user)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push(
           'Principal Approval',
+          'Principal Approval Form',
           'Meets Criteria',
           'Total Score',
           'Regional Partner',
@@ -619,28 +612,46 @@ module Pd::Application
           'School City',
           'School State',
           'School Zip Code',
+          'Date Submitted',
           'Notes',
           'Status'
         )
+        columns.push('Locked') if can_see_locked_status?(user)
         csv << columns
       end
     end
 
     # @override
-    def self.cohort_csv_header
+    def self.cohort_csv_header(optional_columns)
+      columns = [
+        'Date Accepted',
+        'Applicant Name',
+        'District Name',
+        'School Name',
+        'Email',
+        'Status',
+        'Assigned Workshop'
+      ]
+      if optional_columns[:registered_workshop]
+        columns.push 'Registered Workshop'
+      end
+      if optional_columns[:accepted_teachercon]
+        columns.push 'Accepted Teachercon'
+      end
+
       CSV.generate do |csv|
-        csv << ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
-                'Email', 'Assigned Workshop', 'Registered Workshop']
+        csv << columns
       end
     end
 
     # @override
-    def to_csv_row
+    def to_csv_row(user)
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push(
           principal_approval,
+          principal_approval_url,
           meets_criteria,
           total_score,
           regional_partner_name,
@@ -651,32 +662,50 @@ module Pd::Application
           school_city,
           school_state,
           school_zip_code,
+          created_at.to_date.iso8601,
           notes,
           status
         )
+        row.push locked? if self.class.can_see_locked_status?(user)
         csv << row
       end
     end
 
     # @override
-    def to_cohort_csv_row
+    def to_cohort_csv_row(optional_columns)
+      columns = [
+        date_accepted,
+        applicant_name,
+        district_name,
+        school_name,
+        user.email,
+        status,
+        workshop_date_and_location
+      ]
+      if optional_columns[:registered_workshop]
+        if workshop.try(:local_summer?)
+          columns.push(registered_workshop? ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+      if optional_columns[:accepted_teachercon]
+        if workshop.try(:teachercon?)
+          columns.push(pd_teachercon1819_registration ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+
       CSV.generate do |csv|
-        csv << [
-          date_accepted,
-          applicant_name,
-          district_name,
-          school_name,
-          user.email,
-          assigned_workshop,
-          registered_workshop
-        ]
+        csv << columns
       end
     end
 
-    # @override
-    # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      labels_to_remove = (course == 'csd' ?
+    # memoize in a hash, per course
+    FILTERED_LABELS = Hash.new do |h, key|
+      labels_to_remove = (
+      if key == 'csd'
         [
           :csp_which_grades,
           :csp_course_hours_per_week,
@@ -684,19 +713,30 @@ module Pd::Application
           :csp_terms_per_year,
           :csp_how_offer,
           :csp_ap_exam
-        ] : [
+        ]
+      else
+        [
           :csd_which_grades,
           :csd_course_hours_per_week,
           :csd_course_hours_per_year,
           :csd_terms_per_year
         ]
+      end
       )
+
       # school contains NCES id
       # the other fields are empty in the form data unless they selected "Other" school,
       # so we add it when we construct the csv row.
       labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Filter out extraneous answers based on selected program (course)
+    def self.filtered_labels(course)
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
+      FILTERED_LABELS[course]
     end
 
     # @override
@@ -774,12 +814,41 @@ module Pd::Application
       # Map back to actual workshops by reconstructing the friendly_date_range
       workshops = Pd::Workshop.where(id: workshop_ids)
       hash[:able_to_attend_multiple].each do |response|
-        selected_workshop = workshops.find {|w| response.start_with?(w.friendly_date_range)}
-        return selected_workshop if selected_workshop
+        workshops_for_date = workshops.select {|w| response.start_with?(w.friendly_date_range)}
+        return workshops_for_date.first if workshops_for_date.size == 1
+
+        location = response.scan(/in (.+) hosted/).first.try(:first) || ''
+        workshops_for_date_and_location = workshops_for_date.find {|w| w.location_address == location} || workshops_for_date.first
+        return workshops_for_date_and_location if workshops_for_date_and_location
       end
 
       # No match? Return the first workshop
       workshops.first
+    end
+
+    # @override
+    def self.can_see_locked_status?(user)
+      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
+    end
+
+    # override
+    def self.prefetch_associated_models(applications)
+      super(applications)
+
+      # also prefetch schools
+      prefetch_schools applications.map(&:school_id).uniq.compact
+    end
+
+    def self.prefetch_schools(school_ids)
+      return if school_ids.empty?
+
+      School.includes(:school_district).where(id: school_ids).each do |school|
+        Rails.cache.write get_school_cache_key(school.id), school, expires_in: CACHE_TTL
+      end
+    end
+
+    def self.get_school_cache_key(school_id)
+      "Pd::Application::Teacher1819Application.school(#{school_id})"
     end
 
     protected
@@ -816,11 +885,12 @@ module Pd::Application
     end
 
     def school
-      school_id = sanitize_form_data_hash[:school]
-      if school_id == '-1'
-        nil
-      else
-        School.find(school_id)
+      school_id = self.school_id
+      return nil unless school_id
+
+      # attempt to retrieve from cache
+      cache_fetch self.class.get_school_cache_key(school_id) do
+        School.includes(:school_district).find_by(id: school_id)
       end
     end
   end

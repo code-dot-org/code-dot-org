@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Inspiráld a tanulókat és az érdeklődőket a "Kódolás Órájára"!
 
-Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Feliratkozás](<%= resolve_url('https://code.org/volunteer') %>) jelentkezőknek.
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
 ## További "Kódolás Órája" support társaságok részére:
 
-- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
 - Szervezz egy "Kódolás Órája" eseményt a tanulók egy helyi osztályának, vagy nonprofit partnereknek szervezhetik a "Kódolás Óráját" a cég irodájában. Nézd meg a hogyan szervezzek eseményt útmutatót lejjebb.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
 ## 1. Promote your Hour of Code
 
 - Támogasd a [Kódolás Órája](<%= resolve_url('/promote') %>) eseményedet és biztass másokat is szervezésre.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Ők [regisztrálhatnak](<%= resolve_url('https://code.org/volunteer/engineer') %>) hogy csatlakozzanak egy osztályba.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - Ha technológiai cég vagy tarts érdekes és látványos bemutatót és mutasd be, hogy milyen innováción dolgozik a vállalat éppen.
 - Ha nem egy technológiai cég vagy, akkor vitassátok meg, hogy milyen technológiák alkalmazásával lehetne problémákat megoldani és új célokat elérni.
 - Győzz meg programozókat a vállalatodtól, hogy mondják el miért lettek programozók és jelenleg milyen projekteken dolgoznak épp.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 ## 7) Ünnepelj
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - [Nyomtass "Teljesítettem a Kódolás Óráját!"](<%= resolve_url('/promote/resources#stickers') %>) matricákat a tanulóknak.
 - [Rendelj egyedi pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Oszd meg a "Kódolás Órája"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!

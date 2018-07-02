@@ -10,10 +10,12 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
+  setStageExtrasScriptIds,
   setOAuthProvider,
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
 $(document).ready(showHomepage);
@@ -30,6 +32,7 @@ function showHomepage() {
   const query = queryString.parse(window.location.search);
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
+  store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setOAuthProvider(homepageData.provider));
 
   let courseId;
@@ -48,28 +51,9 @@ function showHomepage() {
     store.dispatch(beginEditingNewSection(courseId, scriptId));
   }
 
-  // Default teacher announcement.
-  let announcementHeading = i18n.announcementHeadingFacilitatorApp();
-  let announcementDescription = i18n.announcementDescriptionFacilitatorApp();
-  let announcementLink = "https://code.org/facilitator";
-  let announcementId = "facilitator_app";
-  let announcementType = "";
+  const announcement = getTeacherAnnouncement(announcementOverride);
 
-  // Optional override of teacher announcement.
-  if (
-    announcementOverride &&
-    announcementOverride.teacher_announce_heading &&
-    announcementOverride.teacher_announce_description &&
-    announcementOverride.teacher_announce_url &&
-    announcementOverride.teacher_announce_id) {
-
-    // Use the override.
-    announcementHeading = announcementOverride.teacher_announce_heading;
-    announcementDescription = announcementOverride.teacher_announce_description;
-    announcementLink = announcementOverride.teacher_announce_url;
-    announcementId = announcementOverride.teacher_announce_id;
-    announcementType = announcementOverride.teacher_announce_type;
-  }
+  measureVideoConnectivity();
 
   ReactDOM.render (
     <Provider store={store}>
@@ -133,17 +117,7 @@ function showHomepage() {
 
         {isTeacher && (
           <TeacherHomepage
-            announcements={[
-              {
-                heading: announcementHeading,
-                buttonText: i18n.learnMore(),
-                description: announcementDescription,
-                link: announcementLink,
-                image: "",
-                type: announcementType,
-                id: announcementId
-              }
-            ]}
+            announcement={announcement}
             courses={homepageData.courses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
@@ -174,12 +148,54 @@ function showHomepage() {
   );
 }
 
+/**
+ * Return the teacher announcement that we should pass into TeacherHomepage.
+ * @param {object} override - An optional override announcement.
+ * @return {object} An announcement to display.
+ */
+function getTeacherAnnouncement(override) {
+  // Start with default teacher announcement.
+  let announcement = {
+    heading: i18n.announcementHeadingPrivacyGdpr(),
+    buttonText: i18n.learnMore(),
+    description: i18n.announcementDescriptionPrivacyGdpr(),
+    link: "https://code.org/privacy-may2018",
+    image: "",
+    type: "bullhorn",
+    id: "privacy_gdpr"
+  };
+
+  // But for now, no announcement (unless there's an override).
+  announcement = null;
+
+  // Optional override of teacher announcement (typically via DCDO).
+  // Note that teacher_announce_type is optional.
+  if (override &&
+    override.teacher_announce_heading &&
+    override.teacher_announce_description &&
+    override.teacher_announce_url &&
+    override.teacher_announce_id) {
+
+    // Use the override.
+    announcement = {
+      heading: override.teacher_announce_heading,
+      buttonText: i18n.learnMore(),
+      description: override.teacher_announce_description,
+      link: override.teacher_announce_url,
+      type: override.teacher_announce_type,
+      id: override.teacher_announce_id
+    };
+  }
+
+  return announcement;
+}
+
 window.CleverTakeoverManager = function (options) {
   this.options = options;
   const self = this;
 
   const linkCleverDiv = $('<div>');
-  function showLinkCleverModal(cancel, submit) {
+  function showLinkCleverModal(cancel, submit, providerToLink) {
     $(document.body).append(linkCleverDiv);
 
     ReactDOM.render(
@@ -188,13 +204,14 @@ window.CleverTakeoverManager = function (options) {
         handleCancel={cancel}
         handleSubmit={submit}
         forceConnect={options.forceConnect === 'true'}
+        providerToLink={providerToLink}
       />,
       linkCleverDiv[0]
     );
   }
 
   if (self.options.cleverLinkFlag) {
-    showLinkCleverModal(onCancelModal, onConfirmLink);
+    showLinkCleverModal(onCancelModal, onConfirmLink, self.options.cleverLinkFlag);
   }
 
   function closeLinkCleverModal() {

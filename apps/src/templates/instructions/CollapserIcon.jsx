@@ -26,6 +26,7 @@ var CollapserIcon = function (props) {
 
   return (
     <i
+      id="ui-test-collapser"
       style={styles.showHideButton}
       onClick={props.onClick}
       className={iconClass + " fa"}

@@ -1,0 +1,84 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:37:54.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Use a single command to move the turtle to the edge of the screen. (Click to see full instructions)",
+    "markdown_instructions": "# A New Way to Move\r\nThe `moveForward()` turtle command that we've used so far moves the turtle the same amount every time (25 pixels in fact). Similarly, `turnLeft()` turns the turtle to the left exactly 90 degrees. Today we are going to see how some functions can **accept input**, such as a number, to more exactly control behavior. For example, you can write `moveForward(103)` to move the turtle exactly 103 pixels if you like.\r\n\r\n# Do This:\r\n\r\n**How far is it to the top edge of the screen?**\r\n\r\nRun the program to see the new version of `moveForward()` in action. Then **changing only the number supplied to `moveForward()`**, move the turtle to the top edge of the screen. Experiment to find out the distance in pixels between where the turtle starts and the top edge of the screen.\r\n\r\nOnce you've found it, compare with a neighbor to see that you're seeing the same thing and click **Finish** to move on.  \r\n\r\n**Note:** There might be slight differences depending on whether you get the turtle to just touch the edge, or go off the screen entirely.",
+    "start_blocks": "moveForward(100);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "app_width": "320",
+    "app_height": "480",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "XIyDFfwYBokeTqvZrNoM0bBCcTCdyPqtuvHbdqthQ7mpnUQ52qo0SN08r38A\nJXlH\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "turnLeft:0"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "For this exercise you only need to move forward.  Try to find the edge of the screen."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to give the moveForward command a parameter like moveForward(100)"
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 3096,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:25:58 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-31 20:28:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\",\"teacher_markdown\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

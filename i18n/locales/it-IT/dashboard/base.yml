@@ -3,7 +3,7 @@ it:
     messages:
       not_saved: 'Per favore correggi i seguenti errori:'
       too_young: 'Questo contenuto ha attivi dei limiti di età e non è disponibile per gli studenti più giovani.'
-      teacher_must_accept_terms: 'Questo contenuto ha restrizioni di età in corso e non è disponibile per gli studenti più giovani. Chiedi al tuo/a insegnante di accettare i Termini di Servizio aggiornati per accedere a questo contenuto. Il/La tuo/a insegnante può farlo effettuando il login a Code Studio e cliccando sul bottone "Revisiona Termini Aggiornati" in alto nella pagina iniziale di Code Studio.'
+      teacher_must_accept_terms: 'Questo contenuto ha restrizioni di età in corso e non è disponibile per gli studenti più giovani. Chiedi al tuo (o alla tua) insegnante di accettare i Termini di Servizio aggiornati per accedere a questo contenuto. Il tuo (o la tua) insegnante può farlo effettuando il login in Code Studio e cliccando sul bottone "Revisiona Termini Aggiornati" in alto nella pagina iniziale di Code Studio.'
       pair_programmer: 'Attualmente stai programmando in coppia con uno studente che non ha accesso a questo contenuto. Per accedervi, ferma la programmazione in coppia e riprova.'
   activerecord:
     errors:
@@ -59,7 +59,7 @@ it:
   courses: 'Corsi'
   courses_page:
     title_student: "Impara su Code Studio"
-    title_teacher: "Insegna con Code Studio"
+    title_teacher: "Insegna Informatica"
   unplugged_activity: 'Attività Tradizionale'
   of: "di"
   more: "DI PIÙ"
@@ -69,7 +69,7 @@ it:
   try_k8intro: "Prova il nostro corso introduttivo di informatica per scuole elementari e medie inferiori (in 20 lezioni)"
   k8intro: "Corso introduttivo di informatica per scuole elementari e medie inferiori (in 20 lezioni)"
   already_started: "Hai già iniziato? Riprendi qui >> "
-  demos: 'Amministratore: Tutte le dimostrazioni'
+  demos: "Amministratore: Tutte le dimostrazioni"
   continue: 'Prosegui'
   prize: 'Premio'
   more_info: 'Più informazioni'
@@ -85,11 +85,12 @@ it:
     facebook: 'Facebook'
     windowslive: 'Account Microsoft'
     clever: 'Account Clever'
+    powerschool: 'Account Powerschool'
     forgot_password: 'Hai dimenticato la tua password?'
     need_confirmation: "Non hai ricevuto le istruzioni di conferma?"
     need_unlock: "Non hai ricevuto le istruzioni di sblocco?"
     not_linked: "Purtroppo il tuo account Code.org non è collegato al tuo %{provider}. Dovrai accedere digitando la password qui sotto."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "Purtroppo il tuo account Code.org non è collegato al tuo %{provider}. Per favore, accedi dal portale Clever."
   signup_form:
     student_count: '%{count} studenti si sono già iscritti.'
     teacher_count: '%{count} insegnanti si sono già iscritti.'
@@ -114,15 +115,25 @@ it:
     valid_password: "Password valida!"
     invalid_password: "La password deve essere lunga almeno 6 caratteri"
     mismatch_password: "Le due password che hai inserito non corrispondono"
+    agree_tos_privacy: "Accetto i <a href='http://code.org/tos'>Termini di Servizio</a> e l'<a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
+    under_13_consent: "Se ho meno di 13 anni, confermo di avere l’autorizzazione dei miei genitori o del mio tutore legale all’utilizzo dei servizi di Code.org."
+    agree_us_website: "Accetto di utilizzare un sito Web con sede negli Stati Uniti."
+    my_data_to_us: "I dati relativi al mio utilizzo di questo sito Web possono essere inviati e archiviati o elaborati negli Stati Uniti."
     student_terms: "Accetto di essere legato ai <a href='http://code.org/tos'> Termini di Servizio </a> di Code.org. Se ho meno di 13 anni, confermo, sottoscrivendo a questo modulo che ho il permesso da parte di un genitore o di un tutore legale di usare i servizi di Code.org. <br/><br/>Gli indirizzi email non sono salvati in un modo che ci permetta di contattare gli studenti. Gli studenti non riceveranno mai email da Code.org se non per il recupero della password. Per più informazioni, leggere la nostra <a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
     teacher_terms: "Accetto di essere vincolato ai <a href='http://code.org/tos'>Termini di Servizio</a> di Code.org. Per ulteriori informazioni sulla privacy, leggi la nostra <a href='http://code.org/privacy'>Informativa sulla Privacy</a>."
     additional_information: "Abbiamo bisogno di alcune informazioni aggiuntive per continuare la tua iscrizione."
+    user_type_button: "Aggiorna Tipologia di Account"
     user_type_label: "Tipo di account"
     user_type_teacher: "Insegnante"
     user_type_student: "Studente"
     field_is_required: "è un dato obbligatorio"
     accept_terms: "Devi accettare le condizioni per creare un account"
     error: "Si è verificato un errore."
+    email_preference_question: "Consenti l’invio di aggiornamenti sui nostri corsi, opportunità a livello locale o altre notizie informatiche?"
+    email_preference_privacy: "(Vedi la nostra informativa sulla privacy)"
+    email_preference_yes: "Sì"
+    email_preference_no: "No"
+    email_preference_required: "Devi specificare una preferenza relativa all'indirizzo email."
   school_info:
     title: 'Informazioni sulla scuola (opzionale)'
     school_country: 'Paese della Scuola'
@@ -171,6 +182,7 @@ it:
       email: 'Indirizzo di posta elettronica'
       submit: 'Invia'
     reset_errors:
+      captcha_required: 'Completa il CAPTCHA per impostare una nuova password.'
       invalid_email: 'Sembra tu ti sia loggato con un indirizzo email non valido. Invia una mail a support@code.org per ricevere il link per il recupero della password.'
     change_form:
       title: 'Cambia la tua password'
@@ -220,7 +232,7 @@ it:
       provider_managed_section: "Questa sezione è gestita da un altro provider e non può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider} e risincronizza la loro sezione."
     mail:
       student_disassociated:
-        subject: 'Notifica da Code.org: %{student_name} non è più iscritto come tuo studente.'
+        subject: "Notifica da Code.org: %{student_name} non è più iscritto come tuo studente."
   reports:
     error:
       access_denied: "Non hai accesso alle statistiche di questa persona"
@@ -348,11 +360,12 @@ it:
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email} non è stato confermato:'
     email_confirm_wrong_email: '(Indirizzo di posta elettronica sbagliato?)'
     email_resend_confirm: 'Reinvia le istruzioni di conferma'
+    new_email_hint: '(assicurarti di poter ricevere messaggi a questo indirizzo email)'
     new_password_hint: "(lascialo vuoto se non vuoi cambiarlo)"
     current_password_hint: '(inserisci la tua password corrente per confermare i cambiamenti)'
     delete: 'Elimina il tuo account'
     delete_text: "Cliccando sul pulsante qua sotto elimini il tuo account."
-    delete_text_teacher_note: Nota che eliminando il tuo account non verranno eliminati gli account dei tuoi studenti.
+    delete_text_teacher_note: "Nota che eliminando il tuo account non verranno eliminati gli account dei tuoi studenti."
     delete_confirm: 'Sei sicuro di voler eliminare il tuo account?'
     deleted_user: 'utente eliminato'
     no_password_because_oauth: 'Nessuna password perché ti sei loggato con provider di terze parti.'
@@ -363,10 +376,11 @@ it:
     create_personal_login_under_13_parent_email: 'Email del genitore/tutore (per recuperare la tua password)'
     create_personal_login_info: 'Se vuoi continuare ad usare il tuo account Code.org anche dopo la fine dell''anno scolastico, puoi creare le tue credenziali di accesso personali, in basso.'
     create_personal_login_terms: "Creando le mie informazioni d'accesso personali, accetto di essere vincolato dalle <a href='%{terms_of_service_url}', target='_blank'>condizioni d'uso</a>di Code.org. Se ho meno 13 anni, confermo di avere il permesso del mio genitore o tutore di usare i servizi di Code.org anche senza insegnante."
-    create_personal_login_email_note: 'Nota: Gli indirizzi email non sono memorizzati in una forma tale da permetterci di contattare gli studenti. Gli studenti non riceveranno mai email da Code.org tranne per il recupero della password. Consulta le nostre <a href=''%{privacy_policy_url}'', target=''_blank''>politiche per il rispetto della privacy</a> per ulteriori informazioni.'
+    create_personal_login_email_note: "Nota: Gli indirizzi email non sono memorizzati in una forma tale da permetterci di contattare gli studenti. Gli studenti non riceveranno mai email da Code.org tranne per il recupero della password. Consulta le nostre <a href='%{privacy_policy_url}', target='_blank'>politiche per il rispetto della privacy</a> per ulteriori informazioni."
     enter_new_login_info: 'Inserisci le nuove informazioni di accesso'
     confirm_secret_words: 'Conferma la tua identità inserendo le tue parole segrete'
     enter_parent_email: "Inserisci l'email del tuo genitore o tutore (per il recupero della password)"
+    update: "Aggiorna Account"
   user_level:
     completed: 'Completato'
     tried: 'Provato'
@@ -434,8 +448,8 @@ it:
     announcement_csf_pilot: "<strong>Insegnanti di scuola elementare:</strong> Partecipate all'aggiornamento dei nostri corsi di Fondamenti di Informatica! Cerchiamo insegnanti per guidare un curriculum di Fondamenti di Informatica durante l'inverno e primavera del 2017. Non vediamo l'ora di ascoltare il tuo feedback prima che questi aggiornamenti vengano applicati ad Agosto 2017."
     announcement_student_privacy: "In Code.org prendiamo la privacy dei nostri studenti molto seriamente. Per proteggere la privacy dei tuoi studenti, abbiamo apportato modifiche alla pagina di accesso della tua sezione per evitare di mostrare i nomi completi. Sebbene questo aggiornamento dovrebbe ridurre le preoccupazioni circa la privacy per la pagina di accesso, invitiamo ancora gli utenti a <i>non usare nomi per gli studenti</i>."
     announcement_apcsp_recruitment: "<strong>Insegnanti di Principi di Informatica:</strong> I tuoi studenti potrebbero figurare nel prossimo video virale di Code.org incoraggiando gli studenti all'esame di Principi di Informatica di quest'anno. Stiamo invitando tutti gli studenti di Principi di Informatica ad inviare a una clip video di 10-20 secondi su Twitter, Instagram, o Facebook dicendo \"Sto sostenendo l'esame di #PrincipiDiInformatica perché...\". I migliori compariranno nel nostro video e gli studenti vincitori riceveranno il premio Code.org!"
-    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
-    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_apcsp_recruitment2: "Quest'anno si aspettano numeri da record all'esame avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata, ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti di Principi d'Informatica a sostenere l'esame. Per ringraziarti, ti <a href='%{gift_url}' target='_blank'>manderemo un regalo</a>. Gli studenti possono anche incoraggiare i compagni in tutto il Paese con la nostra <a href='%{challenge_url}' target='_blank'>#APCSP video sfida</a>."
+    announcement_apcsp_recruitment3: "Quest'anno si aspettano numeri da record all'esame avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata, ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti di Principi d'Informatica a sostenere l'esame e potresti vincere <a href='%{gift_url}' target='_blank'>una carta regalo, un laptop, o un altro bel regalo</a>! Condividi <a href='%{video_url}' target='_blank'>questo video</a> acciocché i tuoi studenti possano sentire l'incoraggiamento di altri studenti in tutto il Paese già iscritti all'esame."
     announcement_csp_deadline: "Richiamo finale per gli insegnanti di scuola superiore! Prendi il comando dell'Informatica nella tua scuola e metti in pratica i nostri programmi di apprendimento professionali e di alta qualità <strong>senza assolutamente nessun costo per te e la tua scuola</strong>. Le richiesti di partecipazione si chiudono il 14 Aprile."
     announcement_applab_export: "Sviluppo App, il nostro ambiente di programmazione basato sul web, ora supporta l'esportazione di codice! È possibile iniziare a creare App lavorando con i blocchi, quindi esportare il codice per modificarlo in qualsiasi ambiente di sviluppo professionale desiderato."
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
@@ -448,6 +462,7 @@ it:
     student_not_found: "Non sono stati trovati uno o più studenti."
     all_students_must_be_in_current_section: "Tutti gli studenti da spostare devono appartenere alla tua classe."
     already_enrolled_in_new_section: "Non puoi spostare questi studenti perché appartengono già ad una classe di questo insegnante."
+    third_party_login: "Non puoi spostare gli studenti in una classe sincronizzata con un strumento di terze parti."
   share:
     title: "Impara su Code Studio"
     description: "Chiunque può imparare l'informatica. Realizza giochi, app e lavori artistici con la programmazione."
@@ -455,6 +470,8 @@ it:
   gender:
     male: 'Maschile'
     female: 'Femminile'
+    non_binary: 'Non-binario'
+    not_listed: 'Preferred term not listed'
     none: 'Preferisco non rispondere'
   user_type:
     student: 'Studente'
@@ -480,7 +497,7 @@ it:
     secure: 'Versione sicura'
     report_abuse: 'Segnala un abuso'
     built_on_code_studio: 'Costruito con Code Studio'
-    make_my_own_app: 'Crea la tua App'
+    make_my_own_app: 'Creo la mia App'
     how_it_works: 'Come funziona'
     try_hour_of_code: 'Prova un Ora di Programmazione!'
   reference_area:
@@ -569,7 +586,7 @@ it:
       cta: "Scopri come"
     hoc-encryption:
       title: "Crittografia semplice"
-      body: "Students will learn techniques to create and crack encrypted messages."
+      body: "Gli studenti impareranno tecniche per creare e decifrare un messaggio cifrato."
     weblab:
       title: "Sviluppo Web (versione provvisoria)"
       body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
@@ -702,7 +719,7 @@ it:
     sign_out: 'Se non desideri fornire la tua età puoi <a href="%{url}">uscire</a>.'
   terms_interstitial:
     title: "Aggiornati i termini e le condizioni della privacy"
-    intro_desc: 'Abbiamo aggiornato i nostri Termini di Servizio e la nostra Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi a partire dal 24 agosto 2016. La modifica più importante: noi <i>non memorizzeremo più le e-mail degli account degli studenti su Code studio.</i> Questo è molto importante per noi, e speriamo che stabilisca un nuovo standard per la privacy degli studenti nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre modifiche via e-mail.'
+    intro_desc: "Abbiamo aggiornato i nostri Termini di Servizio e la nostra Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi a partire dal 24 agosto 2016. La modifica più importante: noi <i>non memorizzeremo più le e-mail degli account degli studenti su Code studio.</i> Questo è molto importante per noi, e speriamo che stabilisca un nuovo standard per la privacy degli studenti nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre modifiche via e-mail."
     intro_instructions: "È necessario accettare questi nuovi termini per gli studenti con un'età minore di 13 anni nella tua classe per avere accesso completo alle ultime caratteristiche di Code studio. Registrando uno studente con un'età minore di 13 anni, ti verrà chiesto se la tua scuola abbia il consenso dei genitori per la raccolta di dati personali dello studente per uso e beneficio della scuola, tra cui programmi educativi come Code studio."
     tos: "Termini di servizio"
     privacy: "Informativa sulla privacy"
@@ -718,25 +735,25 @@ it:
     message_with_suggestion: "Per favore verifica che le seguenti informazioni siano corrette e aggiornale se necessario."
     save: "Salva"
   race_interstitial:
-    title: 'Optionale: Aiutaci a tracciare i vostri progressi per superare le diversità in informatica'
+    title: "Optionale: Aiutaci a tracciare i vostri progressi per superare le diversità in informatica"
     message: "Si prega di riferirci la gara (controllare che tutti partecipino)"
     races:
       - 
-        white: Bianco
+        white: "Bianco"
       - 
-        black: Neri o afroamericani
+        black: "Neri o afroamericani"
       - 
-        hispanic: Ispano o Latino
+        hispanic: "Ispano o Latino"
       - 
-        asian: Asiatico
+        asian: "Asiatico"
       - 
-        hawaiian: Nativi hawaiani o altre isole del Pacifico
+        hawaiian: "Nativi hawaiani o altre isole del Pacifico"
       - 
-        american_indian: Nativo Americano Indiano/Alaska
+        american_indian: "Nativo Americano Indiano/Alaska"
       - 
-        other: Altro
+        other: "Altro"
       - 
-        opt_out: Preferisco non dirlo
+        opt_out: "Preferisco non dirlo"
     submit: "Invia"
     decline: "Chiudi"
   zendesk_too_young_message: 'Siamo spiacenti, gli utenti più giovani non possono accedere al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai tuoi genitori o insegnanti di contattarci al posto tuo.'
@@ -762,7 +779,7 @@ it:
     delete: "Elimina"
     import: "Importa"
     share_link_import_bad_link_header: "Collegamento di condivisione non riconosciuto"
-    share_link_import_bad_link_body: 'Non siamo riusciti a importare il collegamento di condivisione. Assicurati di usare un collegamento creato da un rompicapo di Minecraft: Agent e di aver copiato il collegamento completo.'
+    share_link_import_bad_link_body: "Non siamo riusciti a importare il collegamento di condivisione. Assicurati di usare un collegamento creato da un rompicapo di Minecraft: Agent e di aver copiato il collegamento completo."
     share_link_import_error_header: "Si è verificato un errore."
     share_link_import_error_body: "Si è verificato un errore durante l'importazione del collegamento di condivisione. Riprova."
     exit: "Ritorna al corso"
@@ -847,13 +864,13 @@ it:
     practice: 'Pratiche d''insegnante'
     peer_review: 'Valutazioni dei parigrado'
     ramp_up: 'Ramp-Up'
-    end_of_course_project: 'End of Course Project'
+    end_of_course_project: 'Progetto di Fine Corso'
     optional_stages: 'Optional Stages'
     main_course: 'Corso principale'
-    extra_course_content: 'Contenuti extra corso'
-    csf_e_1: 'Approfondimenti al Corso E (facoltativo)'
+    extra_course_content: 'Contenuti supplementari'
+    csf_e_1: 'Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)'
     csf_e_2: 'Contenuti del Corso E'
-    csf_f_1: 'Approfondimenti al Corso F (facoltativo)'
+    csf_f_1: 'Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi precedenti)'
     csf_f_2: 'Contenuti del Corso F'
     csd1_1: 'Capitolo 1: il Problem Solving'
     csd1_2: 'Capitolo 2: Computers e Problem Solvig'
@@ -867,6 +884,7 @@ it:
     csd5_2: 'Capitolo 2: Risoluzione dei problemi di dati'
     csd6_1: 'Capitolo 1: Output Hardware'
     csd6_2: 'Capitolo 2: Input Hardware'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Capitolo 1: Rappresentazione e trasmissione delle informazioni'
     csp1_2: 'Capitolo 2: Inventare Internet'
     csp2_1: 'Capitolo 1: Codifica e compressione delle informazioni complesse'
@@ -880,6 +898,11 @@ it:
     csp_ap_1: 'Capitolo 1: Installazione di AP Tech'
     csp_ap_2: 'Capitolo 2: AP analizzare il Task Performance'
     csp_ap_3: 'Capitolo 3: AP creare il Task Performance'
+    csp_postap_1: 'Capitolo 1: Manipolare e visualizzare dati'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unità 2: Informazioni digitali'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Punti di riflessione'
   external_links:
     disclaimer: Limiti di responsabilità
@@ -984,3 +1007,14 @@ it:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Corsi Avanzati'
+  cookie_banner:
+    message: 'Continuando a navigare nel nostro sito o cliccando su "Accetto", accetti la memorizzazione dei cookie sul tuo computer o dispositivo.'
+    more_information: "Leggi l'informativa sulla privacy di Code.org."
+    accept: 'Accetto'
+  gdpr_dialog:
+    heading: 'Accetti di utilizzare un sito web con sede negli Stati Uniti?'
+    message: 'I dati del tuo utilizzo di questo sito possono essere inviati e memorizzati o elaborati negli Stati Uniti.'
+    link_intro: 'Per ulteriori informazioni vedi la nostra'
+    privacy_policy: 'informativa sulla privacy'
+    logout: 'Esci'
+    yes: 'Sì'

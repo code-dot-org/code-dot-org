@@ -1,0 +1,98 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2018-04-23T23:09:52.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "artist",
+    "embed": "false",
+    "instructions": "Now make a square using Artist!",
+    "markdown_instructions": "Great!  Now let's make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.\r\n___\r\nEach side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.",
+    "instructions_important": "true",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "start_direction": "90",
+    "x": "100",
+    "y": "100",
+    "free_play": "false",
+    "impressive": "false",
+    "discard_background": "false",
+    "disable_sharing": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_artist_ramp8_1\",\r\n  \"callout_text\": \"You can change this number.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": -90,\r\n     \"y\": 30\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"courseE_artist_ramp8_2\",\r\n  \"callout_text\": \"Click here to type in the number of times to repeat your code.\",\r\n  \"element_id\": \"#callMe2\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": -52,\r\n     \"y\": 20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "ideal": "4",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To draw a side, use the <xml><block type=\\\"draw_move_by_constant\\\"><title name=\\\"DIR\\\">moveForward</title><title name=\\\"VALUE\\\">100</title></block></xml> block, and change the 100 to a 200.\",\"hint_id\":\"courseF_artist_ramp8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9cb9c43896bbf914b1814cc2a2c780bc/courseF_artist_ramp8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To draw 4 sides, put the <xml><block type=\\\"draw_move_by_constant\\\"><title name=\\\"DIR\\\">moveForward</title><title name=\\\"VALUE\\\">200</title></block></xml> block inside of a repeat loop and make sure the loop is set to draw 4 times.\\n\\nDon't forget to turn afterward!\",\"hint_id\":\"courseF_artist_ramp8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/406cd3ecd41622a1eb168fc1ce38c2f7/courseF_artist_ramp8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your turn will also go inside of the <xml><block type=\\\"controls_repeat\\\"><title name=\\\"TIMES\\\">3</title></block></xml> loop.\",\"hint_id\":\"courseF_artist_ramp8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/04771c522942e22a16d33c649f224c23/courseF_artist_ramp8.mp3\"}]",
+    "video_key": "C2_artist_loops",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/ebab39c2931b439520becd8980cf4e1c-image-1490379820506.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 8933,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:34:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 02:12:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-08 15:03:32 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-08 15:04:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-08 15:04:46 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-08 15:07:21 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant" limit="1" id="callMe">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="controls_repeat" id="callMe2">
+          <title name="TIMES">3</title>
+        </block>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#843179</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">200</title>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

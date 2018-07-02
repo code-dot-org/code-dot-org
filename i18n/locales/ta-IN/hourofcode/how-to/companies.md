@@ -5,127 +5,131 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# உங்கள் நிறுவனத்தின் கோட் ஹவர் எப்படி கொண்டு வர வேண்டும்
 
-## Inspire students and volunteer for the Hour of Code
+## மாணவர்களுக்கு ஊக்குவித்தல் மற்றும் கோடரியின் மணிநேரத்திற்கு தன்னார்வத் தொண்டர்
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Sign up](%= resolve_url('https://code.org/volunteer') %) to volunteer.
-- For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
+- பணியாளர்களை உற்சாகப்படுத்தும் மற்றும் வகுப்பறைகள் மூலம் உங்கள் பணியாளர்களை ஊக்குவிப்பதற்கான மேலும் விவரங்களுக்கு, எங்கள் [ பெருநிறுவன கூட்டாளர்களுக்கான வழிகாட்டி ](%= localized_file('/files/hoc-corporate-toolkit.pdf') %) என்பதைப் பார்க்கவும்.
 
-## Additional ways companies can support the Hour of Code:
+## கோட் ஹவர் நிறுவனங்களுக்கு கூடுதல் வழிகளை நிறுவனங்கள் ஆதரிக்கலாம்:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- உங்கள் தலைமை நிர்வாகிக்கு கணினி விஞ்ஞானத்தின் முக்கியத்துவத்தை வலியுறுத்தி, வார்த்தைகளை பரப்புவதற்கு ஊக்குவிக்கும் ஊழியர்களை வலியுறுத்துவதற்கு [ நிறுவன-அளவிலான மின்னஞ்சலை அனுப்பவும் ](%= fix_url('/promote/resources#sample-emails') %) .
+- [ செயல்களை ](%= resolve_url('/learn') %) முயற்சி செய்ய கோட் ஹேர்டு ஹவர் ஒரு மணிநேரத்தை வழங்கவும்.
+- மாணவர்களின் உள்ளூர் வகுப்பறைக்கு ஒரு கோட் நிகழ்வின் ஒரு மணிநேரத்தை அல்லது உங்கள் நிறுவன அலுவலகத்தில் கோடீஸ்வரத்தைச் செய்ய இலாபம் ஈட்டும் கூட்டாளர்களுக்கு ஒரு மணி நேரம் நடத்தவும். கீழே எப்படி வழிகாட்ட வேண்டும் என்பதைக் காண்க.
 
-# How to host an Hour of Code event with students
+# மாணவர்களுடன் கோட் நிகழ்வின் ஒரு மணிநேரத்தை எவ்வாறு நடத்துவது
 
-## 1. Promote your Hour of Code
+## 1. உங்களுடைய கோடை மணிநேரத்தை ஊக்குவிக்கவும்
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+- உங்கள் [ குறியீடு கோப்பின் ](%= fix_url('promote') %) நிகழ்வை ஊக்குவிக்கவும், மற்றவர்களுக்கு ஹோஸ்ட் செய்ய ஊக்குவிக்கவும்.
+- உங்கள் நிறுவனத்தின் மென்பொருள் பொறியியலாளர்களை கோட்பாட்டின் ஒரு மணி நேரத்திற்கு வழிநடத்தும் மற்றும் கணினி அறிவியல் ஆய்வு செய்ய மாணவர்களுக்கு ஊக்குவிப்பதற்காக ஒரு உள்ளூர் வகுப்பறையைப் பார்வையிட ஊக்குவிக்கவும் They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 2. இந்த வீடியோவை எப்படி பார்க்க வேண்டும் <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. Choose an activity
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+பல்வேறு வயதுவந்தோரால் உருவாக்கப்பட்ட அனைத்து வயதினரும் பங்கேற்பாளர்களுக்கு பல்வேறு [ வேடிக்கை, மணிநேர-நீண்ட நடவடிக்கைகள் ](%= resolve_url('/learn') %) வழங்குகிறோம். [ அவற்றை முயற்சிக்கவும்! ](%= fix_url('learn') %)
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+** குறியீட்டு நடவடிக்கைகளின் அனைத்து மணிநேரமும் </ strong> குறைந்தபட்சத் தேவைக்கேற்ப, மற்றும் சுய-வழிகாட்டுதல் தேவைப்படும் - பங்கேற்பாளர்கள் தங்கள் வேகத்தில் மற்றும் திறன் அளவிலான பணியை அனுமதிக்கும்.</p> 
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 4. Plan your technology needs - computers are optional
+## 4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். கோட் அனுபவம் இன் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடையும்.
 
-**Plan Ahead!** Do the following before your event starts:
+** திட்டமிட்டே திட்டமிடுங்கள்! </ strong> உங்கள் நிகழ்வு தொடங்கும் முன் பின்வரும்தை செய்யுங்கள்:</p> 
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. They’ll also see that computer science is social and collaborative.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
-
-<img src="/images/fit-350/group_ipad.jpg" />
-
-## 5. Start your Hour of Code off with an inspiring video
-
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
-
-**Show an inspirational video:**
-
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
-
-**Ideas to introduce your Hour of Code activity to students:**
-
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
-
-## 6. Code!
-
-**Direct participants to the activity**
-
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
-
-**When participants come across difficulties it's okay to respond:**
-
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
-
-**What to do if someone finishes early?**
-
-- They can try another Hour of Code activity at hourofcode.com/learn
-- Or, ask them to help a friend who are having trouble with the activity.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
-
-## 7) Celebrate
-
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-
-[col-33]
-
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
+- கணினிகள் அல்லது சாதனங்களில் சோதனை நடவடிக்கைகளை மேற்கொள்ளுங்கள். அவர்கள் ஒலி மற்றும் வீடியோ உலாவிகளில் ஒழுங்காக இயங்குவதை உறுதிசெய்க
+- ஹெட்ஃபோன்களை வழங்கவும், அல்லது பங்கேற்பாளர்களை நீங்கள் தேர்வு செய்யும் செயல்பாடு ஒலி மூலம் சிறந்ததாக வேலை செய்யும்
+- ** போதுமான சாதனங்கள் இல்லையா? </ strong> [ ஜோடி நிரலாக்க ](https://www.youtube.com/watch?v=vgkahOzFH2Q) என்பதைப் பயன்படுத்துக. பங்கேற்பாளர்கள் பங்காளியாக இருக்கும் போது, அவர்கள் ஒருவருக்கொருவர் உதவி மற்றும் அமைப்பாளர் குறைவாக நம்பியிருக்கிறார்கள். அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.</li> 
+    
+    - ** குறைவான பட்டையகலம் உள்ளதா? </ strong> நிகழ்வின் முன் வீடியோக்களைக் காண்பிப்பதற்கான திட்டம், எனவே ஒவ்வொரு பங்கேற்பாளரும் தங்கள் சொந்த வீடியோக்களைப் பதிவிறக்குவதில்லை. அல்லது unplugged / ஆஃப்லைன் செயல்களை முயற்சிக்கவும்.</li> </ul> 
+        
+        <img src="/images/fit-350/group_ipad.jpg" />
+        
+        ## 5. கோட் ஆஃப் ஹார்ட் உங்கள் எழுச்சியூட்டும் வீடியோவுடன் தொடங்கவும்
+        
+        பங்கேற்பாளர்களை ஊக்குவிப்பதன் மூலம் உங்கள் கோட் ஆப் ஹீட்டை உதைத்து, கணினி அறிவியல் எவ்வாறு நம் வாழ்க்கையின் ஒவ்வொரு பகுதியையும் பாதிக்கிறது என்பதைப் பற்றி விவாதிக்கவும். உங்கள் நிறுவனத்தில் கணினி அறிவியல் மற்றும் உங்கள் பங்கைத் தொடர நீங்கள் என்ன ஊக்கமளித்தது என்பதைப் பற்றி மேலும் அறியவும்.
+        
+        **ஒரு தூண்டுதலாக வீடியோவை காட்டு:**
+        
+        - பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நடிகர் கிரிஸ் பாஷ் ([ 1 நிமிடம் </ a > [ 5 நிமிடம் ](https://www.youtube.com/watch?v=nKIu9yen5nc), மற்றும் <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 நிமிட ](https://www.youtube.com/watch?v=qYZF6oIZtfc) பதிப்புகள்).
+        - [ குறியீட்டு உலகளாவிய வீடியோவின் ஹவர் ](https://www.youtube.com/watch?v=KsOIlDT145A)
+        -  ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களும் கணினி அறிவியலைக் கற்றுக் கொள்ளுமாறு அழைப்பு விடுத்துள்ளனர்.</li> 
+            
+            - மேலும் தூண்டுதல் வீடியோ [ இங்கே ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) கண்டறியவும்.</ul> 
+            
+            **மாணவர்களுக்கான உங்கள் குறியீட்டு நடவடிக்கையை அறிமுகப்படுத்த சிந்தனைகள்:**
+            
+            - வாழ்க்கையை காப்பாற்றுவது, மக்கள் உதவுதல், மக்களை இணைப்பது போன்ற தொழில்நுட்பங்களைப் பற்றி பேசுதல் - சிறுவர்கள் மற்றும் பெண்கள் இருவருக்கும் கவனித்துக்கொள்வதற்கான வழிகளால் தொழில்நுட்பங்கள் பாதிக்கப்படுவது வழிகாட்டுதல்.
+            - நீங்கள் ஒரு தொழில்நுட்ப நிறுவனம் என்றால், டெமோ வேடிக்கை, உங்கள் நிறுவனம் வேலை புதுமையான தயாரிப்புகள்.
+            - நீங்கள் ஒரு தொழில்நுட்ப நிறுவனமாக இல்லாவிட்டால், பிரச்சினைகள் தீர்க்க மற்றும் இலக்குகளை அடைய உங்கள் நிறுவனம் தொழில்நுட்பத்தை பயன்படுத்தும் வழிகளைப் பற்றி விவாதிக்கவும்.
+            - உங்கள் நிறுவனத்திடமிருந்து மென்பொருள் பொறியாளர்களை அழைக்கவும், அவர்கள் கணினி அறிவியல் மற்றும் அவர்கள் வேலை செய்யும் திட்டங்களை ஆய்வு செய்ய முடிவுசெய்தது பற்றி பேசவும்.
+            - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+            
+            ## 6. கோட்!
+            
+            **நடவடிக்கைக்கு நேரடி பங்கேற்பாளர்கள்**
+            
+            - வைட்போர்டில் செயல்பாட்டு இணைப்பை எழுதுங்கள். பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் [ தேர்ந்தெடுத்த செயல்பாட்டிற்கான தகவல்களைப் பட்டியலிடப்பட்ட இணைப்பைக் கண்டறியவும்](%= fix_url('learn') %).
+            - இளைய மாணவர்களுக்கு, முன்னோக்கி செயல்படும் பக்கத்தை ஏற்றவும் அல்லது அதை ஒரு புக்மார்க்காக சேமிக்கவும்.
+            
+            **பங்கேற்பாளர்கள் சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை:**
+            
+            - "எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "
+            - "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது."
+            - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
+            
+            **ஆரம்பத்தில் யாராவது முடிந்தால் என்ன செய்வது?**
+            
+            - அவர்கள் hourofcode.com/learn மணிக்கு மற்றொரு நடவடிக்கை கோட் நடவடிக்கை முயற்சி செய்யலாம்
+            - அல்லது, நடவடிக்கை மூலம் சிக்கல் கொண்ட ஒரு நண்பருக்கு உதவ அவர்களைக் கேளுங்கள்.
+            
+            [col-33]
+            
+            ![](/images/fit-250/highschoolgirls.jpeg)
+            
+            [/col-33]
+            
+            [col-33]
+            
+            ![](/images/fit-300/group_ar.jpg)
+            
+            [/col-33]
 
 <p style="clear:both">&nbsp;</p>
 
-<%= view :signup_button %>
+            
+            ## 7) கொண்டாடுங்கள்
+            
+            - [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
+            - [ அச்சிடு "நான் ஒரு கோட் மணிநேரம் செய்தேன்!" ](%= fix_url('/promote/resources#stickers') %) ஸ்டிக்கர்கள்
+            - உங்கள் ஊழியர்களுக்கான [ தனிப்பயன் டி-ஷர்டுகளை ஆர்டர் செய்யவும் ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
+            - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!
+            
+            [col-33]
+            
+            ![](/images/fit-250/celebrate2.jpeg)
+            
+            [/col-33]
+            
+            [col-33]
+            
+            ![](/images/fit-260/highlight-certificates.jpg)
+            
+            [/col-33]
+            
+            [col-33]
+            
+            ![](/images/fit-300/boy-certificate.jpg)
+            
+            [/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+            
+            <%= view :signup_button %>

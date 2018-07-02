@@ -31,7 +31,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "start_blocks": "ellipse(200, 300, 200, 200);\r\nellipse(200, 300, 150, 150);\r\nellipse(200, 300, 100, 100);",
-    "show_d_pad": "false",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # How to teach one Hour of Code in after-school classes and clubs
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
+- [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - [Nyomtass "Teljesítettem a Kódolás Óráját!"](%= resolve_url('/promote/resources#stickers') %) matricákat a tanulóknak.
 - [Rendeljen személyre szabott pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) az iskolának.
 - Oszd meg a "Kódolás Órája"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
@@ -110,7 +110,7 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét. <% end %>
@@ -119,7 +119,7 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 A Kódolás Órája esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Itt tudod folytatni ezt az utat:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Vegyél részt](%= resolve_url('https://code.org/professional-development-workshops') %) egy egynapos tréningen, hogy tanácsokat kapj tapasztalt emberektől, facilitátoroktól. (Csak Egyesült Államok oktatóinak)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

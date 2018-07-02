@@ -37,10 +37,8 @@ class PeerReview < ActiveRecord::Base
   belongs_to :level
   belongs_to :level_source
 
-  after_update :mark_user_level, if: :status_changed?
+  after_update :mark_user_level, if: -> {status_changed? || data_changed?}
 
-  REVIEWS_PER_SUBMISSION = 2
-  REVIEWS_FOR_CONSENSUS = 2
   SYSTEM_DELETED_DATA = ''.freeze
 
   before_save :add_assignment_to_audit_trail, if: :reviewer_id_changed?
@@ -49,7 +47,7 @@ class PeerReview < ActiveRecord::Base
     append_audit_trail message
   end
 
-  before_save :add_status_to_audit_trail, if: :status_changed?
+  before_save :add_status_to_audit_trail, if: -> {reviewer_id? && (status_changed? || data_changed?)}
   def add_status_to_audit_trail
     append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
   end
@@ -83,6 +81,8 @@ class PeerReview < ActiveRecord::Base
         peer_review.update!(reviewer: user)
         peer_review
       else
+        # There are no peer reviews that haven't been done. So instead, get a peer review
+        # that was done for this script, clone it, and assign it to the user
         review_to_clone = get_potential_reviews(script, user).sample
 
         if review_to_clone
@@ -91,7 +91,7 @@ class PeerReview < ActiveRecord::Base
           new_review
         else
           # If we get here, it means that every review in the pool was either submitted by this user
-          # or has been reviewed by this user. Oh well, return nothing.
+          # or has been reviewed by this user. Return nothing
           nil
         end
       end
@@ -100,7 +100,8 @@ class PeerReview < ActiveRecord::Base
 
   def self.get_review_for_user(script, user)
     PeerReview.get_potential_reviews(script, user).where(
-      status: nil
+      status: nil,
+      data: nil
     ).where(
       'reviewer_id is null or created_at < now() - interval 1 day'
     ).take
@@ -109,51 +110,11 @@ class PeerReview < ActiveRecord::Base
   def mark_user_level
     user_level = UserLevel.find_by!(user: submitter, level: level)
 
-    # Instructor feedback should override all other feedback
     if from_instructor
       user_level.update!(best_result: accepted? ? Activity::REVIEW_ACCEPTED_RESULT : Activity::REVIEW_REJECTED_RESULT)
       update_column :audit_trail, append_audit_trail("#{status.upcase} by instructor #{reviewer_id} #{reviewer.name}")
-
-      # There's no need for the outstanding peer reviews to stick around because the instructor has reviewed them. So
-      # they are safe to delete.
-      PeerReview.where(submitter: submitter, reviewer: nil, status: nil, level: level).destroy_all
-      return
-    end
-
-    if escalated? && user_level.best_result == Activity::UNREVIEWED_SUBMISSION_RESULT && !from_instructor
-      # If this has been escalated, create a review for an instructor to review
-      create_escalated_duplicate
-      return
-    end
-
-    # Ignore negative peer feedback after a submission has already been approved
-    return if user_level.best_result == Activity::REVIEW_ACCEPTED_RESULT
-
-    # Only look at reviews for the most recent submission
-    most_recent = submitter.last_attempt(level).try(:level_source_id)
-    return unless level_source_id == most_recent
-
-    # Find all current PeerReviews for this submission
-    reviews = PeerReview.where(
-      submitter: submitter,
-      script: script,
-      level: level,
-      level_source_id: most_recent
-    ).where.not(status: nil)
-
-    # Need at least `REVIEWS_FOR_CONSENSUS` reviews to accept/reject
-    return unless reviews.size >= REVIEWS_FOR_CONSENSUS
-
-    if reviews.all?(&:accepted?)
-      user_level.update!(best_result: Activity::REVIEW_ACCEPTED_RESULT)
-      update_column :audit_trail, append_audit_trail("ACCEPTED by user id #{reviewer_id}")
-    elsif reviews.all?(&:rejected?)
-      user_level.update!(best_result: Activity::REVIEW_REJECTED_RESULT)
-      update_column :audit_trail, append_audit_trail("REJECTED by user id #{reviewer_id}")
     else
-      # No consensus: escalate the review (i.e. create an escalated review based on this one)
-      create_escalated_duplicate
-      update_column :audit_trail, append_audit_trail("NO CONSENSUS after review by user id #{reviewer_id}")
+      update_column :audit_trail, append_audit_trail("REVIEWED by user id #{reviewer_id} #{reviewer.try(:name)}")
     end
   end
 
@@ -176,15 +137,15 @@ class PeerReview < ActiveRecord::Base
         level: user_level.level,
       ).destroy_all
 
-      REVIEWS_PER_SUBMISSION.times do
-        create!(
-          submitter_id: user_level.user.id,
-          from_instructor: false,
-          script: user_level.script,
-          level: user_level.level,
-          level_source_id: level_source_id
-        )
-      end
+      peer_review = create!(
+        submitter_id: user_level.user.id,
+        from_instructor: false,
+        script: user_level.script,
+        level: user_level.level,
+        level_source_id: level_source_id
+      )
+
+      peer_review.create_escalated_duplicate
     end
   end
 
@@ -192,7 +153,9 @@ class PeerReview < ActiveRecord::Base
     if user &&
         script.has_peer_reviews? &&
         Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
-      reviews_done = PeerReview.where(reviewer: user, script: script, status: PeerReview.statuses.values).size
+      # Completed peer reviews won't always have status set, but will either have status
+      # or some content in the review
+      reviews_done = PeerReview.where(reviewer: user, script: script).where('status IS NOT NULL or data IS NOT NULL').size
 
       if reviews_done >= script.peer_reviews_to_complete
         Plc::EnrollmentModuleAssignment::COMPLETED
@@ -228,9 +191,9 @@ class PeerReview < ActiveRecord::Base
   def summarize
     return {
       id: id,
-      status: status.nil? ? LEVEL_STATUS.not_tried : LEVEL_STATUS.perfect,
-      name: status.nil? ? I18n.t('peer_review.review_in_progress') : I18n.t('peer_review.link_to_submitted_review'),
-      result: status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT,
+      status: review_completed? ? LEVEL_STATUS.perfect : LEVEL_STATUS.not_tried,
+      name: review_completed? ? I18n.t('peer_review.link_to_submitted_review') : I18n.t('peer_review.review_in_progress'),
+      result: review_completed? ? ActivityConstants::BEST_PASS_RESULT : ActivityConstants::UNSUBMITTED_RESULT,
       locked: false
     }
   end
@@ -285,7 +248,6 @@ class PeerReview < ActiveRecord::Base
       unit_name: plc_course_unit.name,
       level_name: user_level.level.name,
       submission_date: reviews.any? && reviews.first.created_at.strftime("%-m/%-d/%Y"),
-      escalation_date: reviews.escalated.any? && reviews.escalated.first.updated_at.strftime("%-m/%-d/%Y"),
       escalated_review_id: status == 'escalated' ? escalated_review.id : nil,
       review_ids: reviews.pluck(:id, :status),
       status: status,
@@ -305,14 +267,14 @@ class PeerReview < ActiveRecord::Base
     script_level ? build_script_level_path(script_level) : level_path(level)
   end
 
-  private
-
-  def append_audit_trail(message)
-    self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
+  # A review is done if there is either a marked status, or if there is any feedback in
+  # the written section
+  def review_completed?
+    (status == 'accepted' || status == 'rejected') || data?
   end
 
   def create_escalated_duplicate
-    PeerReview.find_or_create_by(
+    PeerReview.find_or_create_by!(
       submitter: submitter,
       reviewer: nil,
       script: script,
@@ -320,5 +282,11 @@ class PeerReview < ActiveRecord::Base
       level_source_id: level_source_id,
       status: 2
     )
+  end
+
+  private
+
+  def append_audit_trail(message)
+    self.audit_trail = (audit_trail || '') + "#{message} at #{Time.zone.now}\n"
   end
 end

@@ -1,0 +1,27 @@
+name 'cspu5_assess4_arrayContains_exam_prep'
+right '<img src="https://images.code.org/99c0eea5fde75505c0944d51eb7d158c-image-1477858747345.png">'
+wrong '<img src="https://images.code.org/87a777b49173464b7c9f40764cbeff44-image-1477858764367.png">'
+wrong '<img src="https://images.code.org/28bf8cd0b36d75a07401b0ecca4670ed-image-1477858803028.png">'
+wrong '<img src="https://images.code.org/671bf0979f2e8fa96dadb243ff359035-image-1477858815668.png">'
+wrong '<img src="https://images.code.org/f69aea612485e19043cd5969b0dbb436-image-1477858829201.png">'
+
+
+markdown <<MARKDOWN
+**Message to Students:** This test covers material related to lists and list processing.  To avoid confusion between the various ways that programming languages index lists, all of the questions on this test will use the AP CS Principles pseudo code, which uses 1-based indexing for arrays (ie. the first index of an array is 1 as opposed to 0).  Please see the AP CS Principles Exam Reference guide.
+
+After running the following code segment, what is contained in the array _data_?
+
+
+![](https://images.code.org/2945671b977f78f02507ea8d305f1b60-image-1477858852015.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Going through the code line by line:
+
+* i is set to 1
+* The code inside the loop runs until i equals 5 (the length of the data)
+* Inside the loop, the data at index i is set to the value of the next index. Therefore, each number in the array is shifted down by one.
+* i is then incremented by one each time, until it reaches 5
+* Note that when i = 5, nothing is done to the value at index 5 because the loop has stopped by then
+* Thus, shifting all values down one index except for the last one, the data = [3,1,8,4,4] at the end
+MARKDOWN

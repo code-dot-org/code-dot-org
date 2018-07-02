@@ -3,18 +3,18 @@ title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": <%= hoc_s(:meta_tag_og_title) %>
-  "og:description": <%= hoc_s(:meta_tag_og_description) %>
-  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": http://<%=request.host%>
+  "og:url": "http://<%=request.host%>"
   "twitter:card": оюнчу
-  "twitter:site": '@codeorg'
-  "twitter:url": http://<%=request.host%>
-  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
-  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
-  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -39,7 +39,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 2. Иш-чараңарга жардам берүүчү жергиликтүү ыктыярчыларды тапкыла.
 
-Окуучуларыңарга информатиканын мүмкүнчүлүктөрү жөнүндө классыңарга келип же алыстан видеочат арыкылуу айтып берүүчү ыктыярчыларды [биздин ыктыярчылар картабыздан издегиле](%= resolve_url('https://code.org/volunteer/local') %).
+[Search our volunteer map](%= codeorg_url('/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Өздүк Код саатыңарды пландаштыргыла
 

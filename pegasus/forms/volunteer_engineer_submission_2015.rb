@@ -1,5 +1,3 @@
-require pegasus_dir 'forms/volunteer_engineer_submission'
-
 class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   # Ability for volunteers to have a custom unsubscribe preference from teacher
   # requests was added during HoC 2015. They had two options to unsubscribe: until the
@@ -29,6 +27,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     result[:allow_contact_b] = required data[:allow_contact_b]
     result[:age_18_plus_b] = required data[:age_18_plus_b]
     result[:unsubscribed_s] = nil_if_empty data[:unsubscribed_s]
+    result[:email_preference_opt_in_s] = required enum(data[:email_preference_opt_in_s].to_s.strip.downcase, ['yes', 'no'])
 
     result
   end
@@ -101,7 +100,17 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     results
   end
 
-  def self.process(data)
+  def self.process_with_ip(data, created_ip)
+    if data['email_preference_opt_in_s'] && created_ip && data['email_s']
+      EmailPreferenceHelper.upsert!(
+        email: data['email_s'],
+        opt_in: data['email_preference_opt_in_s'] == 'yes',
+        ip_address: created_ip,
+        source: EmailPreferenceHelper::FORM_VOLUNTEER,
+        form_kind: '0'
+      )
+    end
+
     {}.tap do |results|
       location = search_for_address(data['location_s'])
       results.merge! location.to_solr if location
@@ -114,7 +123,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     # UNSUBSCRIBE_HOC means a volunteer said "I want to unsubscribe until the next Hour of Code".
     # We don't want them to be getting volunteer requests until then.  So, if we're not currently
     # in Hour of Code, don't show that volunteer, and do that by including UNSUBSCRIBE_HOC here.
-    unless ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
+    unless ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", CDO.default_hoc_mode))
       query += " -unsubscribed_s:\"#{UNSUBSCRIBE_HOC}\""
     end
 

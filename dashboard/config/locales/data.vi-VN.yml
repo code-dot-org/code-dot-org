@@ -1,4 +1,5 @@
-"vi":
+---
+vi:
   data:
     game:
       name:
@@ -12,7 +13,7 @@
         Artist2: Nghệ sĩ 2
         Unplug5: Các hàm
         Farmer: người nông dân
-        Unplug6: "Điều kiện"
+        Unplug6: Điều kiện
         Artist3: nghệ sĩ 3
         Unplug7: Viết nhạc
         Farmer2: Người nông dân 2
@@ -31,8 +32,9 @@
         Wordsearch: Tìm kiếm từ/ từ vựng
         Webapp: Phòng thí nghiệm ứng dụng
         ArtistEC: nghệ sĩ
-        TextMatch: |
-          Hợp ngữ cảnh
+        TextMatch: 'Hợp ngữ cảnh
+
+'
         StudioEC: Phòng trò chơi
         Applab: Phòng thí nghiệm ứng dụng
         NetSim: bộ mô phỏng internet
@@ -41,7 +43,7 @@
         Gamelab: Kho Trò chơi
     trophy:
       name:
-        Bronze: "Đồng"
+        Bronze: Đồng
         Silver: Bạc
         Gold: Vàng
     concept:
@@ -78,13 +80,13 @@
           di chuyển, lần lượt.'
         maze_2_9: Ok, hãy thử khối lệnh mới " lặp lại cho đến khi" nó sẽ lặp lại hành
           động cho đến khi gặp được những chú lợn phiền toái.
-        maze_2_10: "Được rồi, lần cuối để luyện tập nhé - Bạn có thể giải quyết trò
-          này chỉ bằng 4 khối được không?"
+        maze_2_10: Được rồi, lần cuối để luyện tập nhé - Bạn có thể giải quyết trò
+          này chỉ bằng 4 khối được không?
         maze_2_11: Bạn thân mến. Là tôi zombie đây... Tôi đói quá... Tôi cần tới chỗ
           có hoa hướng dương. Bạn có thể giúp tôi tới nơi mà chỉ cần sử dụng 5 khối
           lệnh không?
-        maze_2_12: "Được rồi, nó cũng tương tự nhưng chỉ hơi khác một chút. Liệu bạn
-          có thể thực hiện chỉ với 5 khối không?"
+        maze_2_12: Được rồi, nó cũng tương tự nhưng chỉ hơi khác một chút. Liệu bạn
+          có thể thực hiện chỉ với 5 khối không?
         maze_2_13: 'Sử dụng khối lệnh mới "nếu như" cho tôi quyết định khi nào thì
           chuyển/vòng lại. Gợi ý: bạn chỉ cần nhiều hơn 1 khối, nhưng để tìm hiểu
           chúng tôi thiết lập nó như thế nào thì bạn có thể thực hiện như vậy vào
@@ -136,23 +138,23 @@
           trên màn hình để vẽ những hình tam giác này.
         turtle_4_3: Ok, đây là lệnh mà bạn viết để vẽ một hình tam giác. Bạn có thể
           thêm khối "lặp lại" và "quay" để tạo thành một bông hoa thật đẹp?
-        turtle_4_4: "Đây là các lệnh của câu đố trước, nhưng chỉ quay 36 độ sau khi
+        turtle_4_4: 'Đây là các lệnh của câu đố trước, nhưng chỉ quay 36 độ sau khi
           vẽ một tam giác. Việc này cần phải lặp lại bao nhiêu lần? (Gợi ý: sau khi
-          quay 360 độ hình vẽ sẽ trở thành một đường tròn)"
-        turtle_4_5: "Đây là các lệnh của câu đố trước, nhưng lặp lại việc quay 36
+          quay 360 độ hình vẽ sẽ trở thành một đường tròn)'
+        turtle_4_5: 'Đây là các lệnh của câu đố trước, nhưng lặp lại việc quay 36
           lần. Vậy mỗi lần cần quay bao nhiêu độ? (Gợi ý: sau khi quay 360 độ hình
-          vẽ sẽ trở thành một đường tròn)"
+          vẽ sẽ trở thành một đường tròn)'
         turtle_4_6: Chỉ sử dụng 3 khối lệnh, bạn có thể vẽ một hình vuông có cạnh
           là 20 pixel không?
-        turtle_4_7: "Đây là các lệnh để vẽ hình vuông từ câu đố trước. Bạn có thể
+        turtle_4_7: 'Đây là các lệnh để vẽ hình vuông từ câu đố trước. Bạn có thể
           lặp lại các lệnh đó để vẽ 10 hình vuông liền kề giống như một cái thang
-          không? Gợi ý: bạn chỉ cần thêm 2 khối lệnh."
-        turtle_4_8: "Đây là lời giải của câu đố vừa rồi. Bạn có thể thêm 2 khối lệnh
-          nữa để hoàn thành hình vẽ không?"
-        turtle_4_9: "Đây là lời giải của câu đố vừa rồi. Bạn cần quay bao nhiêu độ
-          để hoàn thành hình vẽ? (Bạn có thể cần phải đoán một vài lần)"
-        turtle_4_10: "Đây là lời giải của câu đố vừa rồi. Bạn cần phải lặp lại bao
-          nhiêu lần để hoàn thành hình vẽ?"
+          không? Gợi ý: bạn chỉ cần thêm 2 khối lệnh.'
+        turtle_4_8: Đây là lời giải của câu đố vừa rồi. Bạn có thể thêm 2 khối lệnh
+          nữa để hoàn thành hình vẽ không?
+        turtle_4_9: Đây là lời giải của câu đố vừa rồi. Bạn cần quay bao nhiêu độ
+          để hoàn thành hình vẽ? (Bạn có thể cần phải đoán một vài lần)
+        turtle_4_10: Đây là lời giải của câu đố vừa rồi. Bạn cần phải lặp lại bao
+          nhiêu lần để hoàn thành hình vẽ?
         turtle_4_11: Hãy thử đổi những số trong những khối "xoay" và "lặp lai" để
           tạo những mô hình khác nhau. Ngoài ra, có thể thử thay đổi phần còn lại
           của lệnh để vẽ bất kỳ thứ gì bạn muốn.
@@ -218,9 +220,9 @@
         turtle_2_9: Sử dụng vòng lặp "thuật đếm" để vẽ nên một gia đình người tuyết
           với chiều cao là 110, 100, 90, 80 và 70. Tất cả người tuyết đều lớn hơn
           60 điểm ảnh.
-        turtle_2_10: "Đây là một vài đoạn mã khác nhau để thử nghiệm với các độ khó
+        turtle_2_10: Đây là một vài đoạn mã khác nhau để thử nghiệm với các độ khó
           khác nhau. Điều gì sẽ xảy ra nếu bạn thay đổi thứ tự tất cả? Hoặc chọn một
-          màu ngẫu nhiên trong vòng lặp? Vẽ bất cứ điều gì bạn muốn."
+          màu ngẫu nhiên trong vòng lặp? Vẽ bất cứ điều gì bạn muốn.
         maze_karel_2_1: Thử dùng các khối lệnh để giúp tôi san phẳng các ụ đất và
           lấp đầy các hố đất. Sử dụng vòng lặp để giảm số khối lệnh phải viết. Gợi
           ý, bạn có thể đặt một vòng lặp ở trong một vòng lặp.
@@ -286,8 +288,10 @@
           hố và san bằng các ụ đất.
         maze_karel_debug_function_1: Bạn nên thay đổi chương trình này như thế nào
           để giúp tôi san phẳng các ụ đất?
-        maze_karel_debug_function_2: |
-          Hãy sủa lỗi chương trình này để tôi có thể làm cho ruộng của tôi thật phẳng!
+        maze_karel_debug_function_2: 'Hãy sủa lỗi chương trình này để tôi có thể làm
+          cho ruộng của tôi thật phẳng!
+
+'
         maze_karel_debug_function_3: Sửa chương trình này để tôi có thể san phẳng
           các ụ đất trên đồng.
         turtle_5_1: Thử chạy chương trình này, và tạo vài thay đổi để xem điều gì
@@ -315,121 +319,8 @@
           vào hộp TNT!
         maze_3_4: Ah! Viết cho tôi một chương trình để đưa tôi vong quan TNT và đến
           với chú lợn.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Đính kèm một khối với khối "mũi tên trái" và bấm "chạy". Di chuyển
-          chân vịt sử dụng mũi tên để đến mục tiêu kết thúc.
-        bounce_2: Đính kèm với khối "mũi tên phải" và bấm "chạy" và "mũi tên trái.
-          Di chuyển chân vịt đển tìm mục tiêu kết thúc của cả hai.
-        bounce_3: Bây giờ thử một cái gì đó tương tự khối "mũi tên trái". Di chuyển
-          chân vịt để đạt mục thiêu kết thúc hàng đầu.
-        bounce_4: Lúc này bạn cần thêm bốn khổi. Di chuyển chân vịt đến cả bốn mục
-          tiêu kết thúc để hoàn thành câu đố.
-        bounce_5: chúng tôi sẽ gửi quả bóng bay xuống hướng tới các chân vịt. Đính
-          kèm khối "khi quả bóng chạm chân vịt" để đảm bảo quả bóng tìm thấy mục tiêu
-          kết thúc.
-        bounce_6: Bây giờ mục tiêu kết thúc là ở hàng đầu. Bạn cần đính kèm khối cùng
-          với khối "khi quả bóng chạm" để giải quyết câu đố này.
-        bounce_7: Đính kèm khối với mỗi khối "khi". Trả bóng cho đến khi quả bóng
-          chạm mục tiêu kết thúc.
-        bounce_10: Đó là một mục tiêu hàng đầu. Đính kèm khối "điểm số" và "điểm đối
-          thủ" với khối "khi quả bóng vào goal" và "khi quả bóng lỡ chân vịt" để chơi
-          trò chơi. Xem xem bạn cần có bao nhiêu điểm để đứng trước đối thủ của mình
-          hai lần.
-        bounce_11: Bạn không thể đính kèm khối với khối "khi chạy". Bạn có thể đính
-          kèm khối mới "bắn quả bóng mới" ở nhiều nơi. Ngoài ra, thử thay đổi cảnh
-          phông hoặc tối độ của quả bóng và chận vịt và nhìn xem bạn cầu bao nhiêu
-          điểm để có thể đứng trước đối thủ của bạn 2 lần.
-        bounce_12: Tạo cho bạn trò chơi di chuyển bóng riêng. Bạn có thể thay đổi
-          tất cả cá hình ảnh và quy tắc. Khi bạn đã làm xong, nhấp vào Kết thúc để
-          bạn vè có thể dùng thử trò chơi trên điện thoại của họ.
         Custom_builder: Kéo khổi từ hộp công cụ không gian làm việc đê vẻ cấp độ bạn
           muốn tạo. Bấm "Chạy" khi bạn đã sẵn sàng.
-        flappy_1: Đính kèm khối "khi nhấp vào" sau đó bấm "chạy". Nhấp hoặc chạm vào
-          màn hình để di chuyển Flappy đến mục tiêu.
-        flappy_2: Bây giờ chúng ta thêm một vài vị trí. Đính kèm khối lệnh "khi quả
-          bóng chạm vị trí". Mã của bạn cần để "kết thúc" khi Flappy rơi xuống đất.
-        flappy_3: Khối "khi chạy" cho phép bạn chạy mã khi bạn bắt đầu trò chơi. Cố
-          gắng thiết lập tốc độ cấp và bay đến mục tiêu.
-        flappy_4: Flappy sẽ bay qua những trở ngại trừ khi bạn viết mã để làm nó vỡ
-          ra. Bắt lấy khối "khi gặp chướng ngại". Đoạn mã của bạn cần là "kết thúc"
-          khi chú Flappy đâm vào cột đầu tiên.
-        flappy_5: Hãy thêm một bảng điểm, và đến điểm khi Flappy vượt qua các chướng
-          ngại. Thêm khối "khi vượt qua các chướng ngại", và sau đó ghi số điểm khi
-          Flappy bay qua cột đầu tiên.
-        flappy_6: Xem nếu bạn cần còn ghi điểm sau khi Flappy bay một số lượng nhỏ
-          hơn hoặc lớn hơn.
-        flappy_7: Sau đó, thử thay đổi bối cảnh bằng cách bắt lấy khối "khi chạy"
-          khác.
-        flappy_8: Bạn có thể đặt hình ảnh bất cứ lúc nào, không chri khi trò chơi
-          bắt đầu. Thử để ngẫu nhiên khi các sự kiện khác xảy ra, ví dụ, khi vượt
-          chướng ngại vật.
-        flappy_9: "Để kết hợp chúng, khi gặp một chướng ngại, thay vì kết thíc trò
-          chơi hoặc thiết lập chi trở lại từ số 0."
-        flappy_11: Tạo trò chơi Flappy của riêng bạn. Bạn có thể thay đổi hình ảnh,
-          luật chơi, thậm chí là trọng lực của trò chơi. Sau khí hoàn thành, nhấp
-          vào "Hoàn thành" để giúp bạn của bạn có thể chơi thử trò chơi bạn vừa làm
-          ra.
-        flappy_k1_1: Chơi Plappy
-        flappy_k1_2: Đính kèm khối "khi nhấp vào" sau đó bấm "chạy". Nhấp hoặc chạm
-          vào màn hình để di chuyển Flappy đến mục tiêu.
-        flappy_k1_3: Bây giờ chúng ta thêm một vài vị trí. Đính kèm khối lệnh "khi
-          quả bóng chạm vị trí". Mã của bạn cần để "kết thúc" khi Flappy rơi xuống
-          đất.
-        flappy_k1_4: Khối "khi chạy" cho phép bạn chạy mã khi bạn bắt đầu trò chơi.
-          Cố gắng thiết lập tốc độ cấp và bay đến mục tiêu.
-        flappy_k1_5: Flappy sẽ bay qua những trở ngại trừ khi bạn viết mã để làm nó
-          vỡ ra. Bắt lấy khối "khi gặp chướng ngại". Đoạn mã của bạn cần là "kết thúc"
-          khi chú Flappy đâm vào cột đầu tiên.
-        flappy_k1_6: Hãy thêm một bảng điểm, và đến điểm khi Flappy vượt qua các chướng
-          ngại. Thêm khối "khi vượt qua các chướng ngại", và sau đó ghi số điểm khi
-          Flappy bay qua cột đầu tiên.
-        flappy_k1_7: Xem nếu bạn có thể ghi nhiều điểm kép để vượt chướng ngại vật
-        flappy_k1_8: Sau đó, thử thay đổi bối cảnh bằng cách bắt lấy khối "khi chạy"
-          khác.
-        flappy_k1_9: Hãy thử thay đổi người chơi bằng cách gắn một khối "chọn người
-          chơi" vào khối "khi chạy".
         jigsaw_1: Nhấp vào khối
         jigsaw_2: Kéo các khối vào các vị trí cho sẵn
         jigsaw_3: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
@@ -620,8 +511,8 @@
           Việt nghĩa là: gỡ lỗi của chương trình)'
         maze_wordsearch_k_15: Di chuyển tôi theo hướng để đánh vần chữ ABOVE
         maze_wordsearch_k_16: Di chuyển tôi theo hướng để đánh vần chữ BELOW
-        maze_wordsearch_k_20: "Đây là bài kiểm tra!!! Di chuyển tôi theo hướng để
-          đánh vần chữ STORY"
+        maze_wordsearch_k_20: Đây là bài kiểm tra!!! Di chuyển tôi theo hướng để đánh
+          vần chữ STORY
         applab_ec_simple: Tạo ra các ứng dụng của bạn bằng cách sử dụng các khối trong
           thanh công cụ.
         turtle_ec_1_2: 'Bây giờ, vẽ một hình vuông. Lưu ý: sử dụng màu sắc yêu thích
@@ -653,7 +544,7 @@
         Unplug3: lập trình đồ thị trên giấy
         Unplug4: các bước lập trình
         Unplug5: Các hàm
-        Unplug6: "Điều kiện"
+        Unplug6: Điều kiện
         Unplug7: Sáng tác nhạc
         Unplug8: Trừu tượng
         Unplug9: Chương trình chuyển tiếp
@@ -675,7 +566,7 @@
         C1_playlab_storytelling: 'Phòng trò chơi: Kể chuyện'
         C1_planting_seed: Trồng một hạt giống
         C1_building_foundation: Xây dựng nền tảng
-        C1_going_places_safely: "Đến nơi an toàn"
+        C1_going_places_safely: Đến nơi an toàn
         C2_maze_intro: Giới thiệu về mê cung
         C2_artist_intro: Giới thiệu về nghệ sĩ
         C2_zuck_repeat_loop: Vòng lặp mê cung
@@ -686,12 +577,12 @@
         C2_bee_conditionals: 'Ong: Các điều kiện'
         C2_playlab_createstory: 'Phòng trò chơi: Kể chuyện'
         C2_graph_paper: lập trình đồ thị trên giấy
-        C2_conditionals_with_cards: "Điều kiện"
+        C2_conditionals_with_cards: Điều kiện
         C2_binary_bracelets: Vòng đeo tay nhị phân
         C2_relay_programming: Chương trình chuyển tiếp
         C2_paper_airplanes: Máy bay giấy
-        C2_digital_footprint: 'Dấu chân kỹ thuật số '
-        C2_digital_footprint_v2: 'Dấu chân kỹ thuật số '
+        C2_digital_footprint: Dấu chân kỹ thuật số
+        C2_digital_footprint_v2: Dấu chân kỹ thuật số
         C3_maze_level_4: Vòng lặp mê cung
         C3_artist_intro: Giới thiệu về nghệ sĩ
         C3_artist_functions: 'Nghệ sĩ: chức năng'
@@ -707,7 +598,7 @@
         C3_computational_thinking: suy nghĩ máy móc
         C3_dice_race: Vòng quay xúc sắc
         C3_internet: Kết nối mạng
-        C3_crowdsourcing: "Đa nguồn"
+        C3_crowdsourcing: Đa nguồn
         C3_functional_suncatchers: Chức năng của tấm hứng ánh nắng
         C3_songwriting_with_parameters: Sáng tác nhạc với tham số
         C4_intro: Giới thiệu
@@ -722,7 +613,7 @@
         C4_function_edit: Chỉnh sửa hàm
         C4_function_create: Tạo ra hàm
         C4_function_parameters: Hàm và tham số
-        C4_conditionals: "Điều kiện"
+        C4_conditionals: Điều kiện
         C4_unplugged_algorithms: Các thuật toán với Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Biến trong bao bọc
@@ -843,9 +734,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
         starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
         starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
@@ -901,6 +789,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Giới thiệu Danh sách
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Vòng lặp
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác
@@ -956,13 +860,13 @@
         length_parameter: Bạn có thể viết lại hàm này để nó sử dụng tham số "chiều
           dài" không?
         frozen_diamond_repeat: Sử dụng các khối lặp lại để vẽ ra hình này.
-        frozen_circle_function_in_circle_turn: "Đừng quên xoay một góc thích hợp sau
-          khi tạo mỗi vòng tròn."
+        frozen_circle_function_in_circle_turn: Đừng quên xoay một góc thích hợp sau
+          khi tạo mỗi vòng tròn.
         frozen_circle_function_with_parameter_circle: Sử dụng khối "tạo ra một vòng
           tròn" và thay đổi kích thước.
         frozen_snowflake_branch: Sử dụng khối "tạo ra một nhánh bông tuyết"
-        frozen_create_square: "Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình
-          vuông"
+        frozen_create_square: Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình
+          vuông
         playlab_drag_say: Kéo khối "nói" ở đây và gõ "Xin chào"
         playlab_use_twice: Sử dụng khối này hai lần và nhớ thay đổi số thứ tự của
           diễn viên
@@ -988,9 +892,9 @@
         edit_add_parameter: Nhấp vào chỉnh sửa để thêm một tham số trong hàm của bạn
         add_and_drag_parameter: Viết tên tham số của bạn vào đây, bấm vào "Thêm",
           và sau đó kéo nó vào định nghĩa hàm của bạn
-        fill_in_actor: "Điền vào các dấu ??? với con số tương ứng với mỗi diễn viên
-          (1, 2 và 3)"
-        repeat: "Đặt khối bên trong vòng lặp để lặp lại lệnh"
+        fill_in_actor: Điền vào các dấu ??? với con số tương ứng với mỗi diễn viên
+          (1, 2 và 3)
+        repeat: Đặt khối bên trong vòng lặp để lặp lại lệnh
         if_bee_nectar: Sử dụng khối lệnh "nếu" để để giúp ong tự quyết định có lấy
           mật hoa hay không lấy
         if_else_bee: Sử dụng các khối lệnh "nếu/thì" để ong lấy được mật hoa từ một
@@ -1007,7 +911,7 @@
           trên khi ta nhấn phím mũi tên lên?
         Infinity_move_directions_callout_arrow: Sử dụng các mũi tên để đi chuyển
         Infinity_move_collide_callout: Phát âm thanh khi sự kiện này xảy ra.
-        Infinity_repeat_callout: "Đặt khối lệnh di chuyển ở trong vị trí này"
+        Infinity_repeat_callout: Đặt khối lệnh di chuyển ở trong vị trí này
         craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
         craft_drag_block_callout: Kéo một khối "moveForward();" và thả xuống bên dưới
           khối gỗ khác

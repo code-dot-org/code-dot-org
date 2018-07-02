@@ -15,7 +15,6 @@ import SurveySupportSection from './SurveySupportSection';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
-const STATUS_WINDOWS_DRIVERS = 'statusWindowsDrivers';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
@@ -25,7 +24,6 @@ const initialState = {
   caughtError: null,
   [STATUS_SUPPORTED_BROWSER]: Status.WAITING,
   [STATUS_APP_INSTALLED]: Status.WAITING,
-  [STATUS_WINDOWS_DRIVERS]: Status.WAITING,
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
   [STATUS_BOARD_COMPONENTS]: Status.WAITING,
@@ -85,9 +83,6 @@ export default class SetupChecklist extends Component {
         .then(() => this.detectStep(STATUS_BOARD_CONNECT,
             () => setupChecker.detectCorrectFirmware()))
 
-        // If we got this far, the drivers must be good.
-        .then(() => this.succeed(STATUS_WINDOWS_DRIVERS))
-
         // Can we initialize components successfully?
         .then(() => this.detectStep(STATUS_BOARD_COMPONENTS,
             () => setupChecker.detectComponentsInitialize()))
@@ -102,13 +97,6 @@ export default class SetupChecklist extends Component {
         // catch clause - make sure to report the error out.
         .catch(error => {
           const extraErrorInfo = {};
-          // If board connection failed, also mark the drivers step failed
-          // so we display additional help information (it will only be
-          // visible on Windows either way).
-          if (this.state[STATUS_BOARD_PLUG] === Status.FAILED ||
-            this.state[STATUS_BOARD_CONNECT] === Status.FAILED) {
-            extraErrorInfo[STATUS_WINDOWS_DRIVERS] = Status.FAILED;
-          }
           this.setState({caughtError: error, ...extraErrorInfo});
           trackEvent('MakerSetup', 'ConnectionError');
           if (console && typeof console.error === 'function') {
@@ -233,21 +221,25 @@ export default class SetupChecklist extends Component {
           </h2>
           <div className="setup-status">
             {this.renderPlatformSpecificSteps()}
-            {isWindows() &&
-              <ValidationStep
-                stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
-                stepName="Adafruit drivers installed"
-              >
-                We can't actually check this, but you should double-check that
-                you have the <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">Adafruit Windows Driver</a> installed.
-              </ValidationStep>
-            }
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
             >
+              {this.state.caughtError && this.state.caughtError.reason &&
+                <pre>
+                  {this.state.caughtError.reason}
+                </pre>
+              }
               We couldn't detect a Circuit Playground board.
               Make sure your board is plugged in, and click <a href="#" onClick={this.redetect.bind(this)}>re-detect</a>.
+              {isWindows() &&
+                <p>
+                  If your board is plugged in, you may be missing the <strong>Adafruit Windows Drivers</strong>.
+                  Follow the
+                  instructions <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">on this page</a> to
+                  install the drivers and try again.
+                </p>
+              }
               {this.surveyLink()}
             </ValidationStep>
             <ValidationStep

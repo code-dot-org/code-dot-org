@@ -16,8 +16,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
 
     @script = create(:script)
+    @section_with_script = create(:section, user: @teacher, script: Script.flappy_script)
+    @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_course = create(:course, name: 'csp')
+    @csp_course = create(:course, name: 'csp-2017')
     @csp_script = create(:script, name: 'csp1')
     create(:course_script, course: @csp_course, script: @csp_script, position: 1)
   end
@@ -521,6 +523,201 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 0, @teacher.scripts.size
   end
 
+  test "update: can update section you own" do
+    Course.stubs(:valid_course_id?).returns(true)
+
+    sign_in @teacher
+    section_with_script = create(
+      :section,
+      user: @teacher,
+      script_id: Script.flappy_script.id,
+      login_type: Section::LOGIN_TYPE_WORD,
+      grade: "1",
+      stage_extras: true,
+      pairing_allowed: false,
+      hidden: true
+    )
+
+    post :update, params: {
+      id: section_with_script.id,
+      course_id: @course.id,
+      name: "My Section",
+      login_type: Section::LOGIN_TYPE_PICTURE,
+      grade: "K",
+      stage_extras: false,
+      pairing_allowed: true,
+      hidden: false
+    }
+    assert_response :success
+
+    # Cannot use section_with_script.reload because login_type has changed
+    section_with_script = Section.find(section_with_script.id)
+
+    assert_equal(@course.id, section_with_script.course_id)
+    assert_nil(section_with_script.script_id)
+    assert_equal("My Section", section_with_script.name)
+    assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
+    assert_equal("K", section_with_script.grade)
+    assert_equal(false, section_with_script.stage_extras)
+    assert_equal(true, section_with_script.pairing_allowed)
+    assert_equal(false, section_with_script.hidden)
+  end
+
+  test "update: course_id is cleared if not provided and script has no default course" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: @course.id)
+
+    refute_nil section.course_id
+
+    post :update, params: {
+      id: section.id
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.course_id
+  end
+
+  test "update: sets course to script's default course if course_id is not provided" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      script_id: @csp_script.id
+    }
+    section.reload
+    assert_response :success
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_script.course.id, section.course_id
+  end
+
+  test "update: script_id is cleared if not provided" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: @csp_script.id)
+
+    refute_nil section.script_id
+
+    post :update, params: {
+      id: section.id
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.script_id
+  end
+
+  test "update: course_id is not updated if invalid" do
+    Course.stubs(:valid_course_id?).returns(false)
+
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      course_id: 1,
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.course_id
+  end
+
+  test "update: script_id is not updated if invalid" do
+    Script.stubs(:valid_script_id?).returns(false)
+
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      script_id: 1,
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.script_id
+  end
+
+  test "update: cannot update section you dont own" do
+    other_teacher = create(:teacher)
+    sign_in other_teacher
+    post :update, params: {
+      id: @section.id,
+      course_id: @course.id,
+    }
+    assert_response :forbidden
+  end
+
+  test "update: cannot update section if not logged in " do
+    post :update, params: {
+      id: @section.id,
+      course_id: @course.id,
+    }
+    assert_response :forbidden
+  end
+
+  test "update: can set course and script" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    post :update, as: :json, params: {
+      id: section.id,
+      course_id: @csp_course.id,
+      script_id: @csp_script.id
+    }
+    assert_response :success
+    section.reload
+    assert_equal(@csp_course.id, section.course_id)
+    assert_equal(@csp_script.id, section.script_id)
+  end
+
+  test "update: non-matching course/script rejected" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    post :update, params: {
+      id: section.id,
+      course_id: @course.id,
+      script_id: Script.artist_script.id
+    }
+    assert_response 400
+  end
+
+  test "update: can set course-less script" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    post :update, params: {
+      id: section.id,
+      script_id: Script.artist_script.id
+    }
+    assert_response :success
+    section.reload
+    assert_nil section.course_id
+    assert_equal(Script.artist_script.id, section.script_id)
+  end
+
+  test "update: setting a script results in UserScripts for students" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    student = create(:follower, section: section).student_user
+
+    assert_nil UserScript.find_by(script: Script.artist_script, user: student)
+
+    post :update, params: {
+      id: section.id,
+      script_id: Script.artist_script.id
+    }
+
+    assert_not_nil UserScript.find_by(script: Script.artist_script, user: student)
+  end
+
+  test "update: can set script from nested script param" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    post :update, as: :json, params: {
+      id: section.id,
+      script: {id: @script.id}
+    }
+    assert_response :success
+    section.reload
+    assert_equal(@script.id, section.script_id)
+  end
+
   test 'logged out cannot delete a section' do
     delete :destroy, params: {id: @section.id}
     assert_response :forbidden
@@ -621,5 +818,85 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       sharing_disabled: true,
     }
     assert_response :forbidden
+  end
+
+  test 'anonymous user cannot access student_script_ids' do
+    get :student_script_ids, params: {id: @section_with_script.id}
+    assert_response :forbidden
+  end
+
+  test 'teacher can access student_script_ids' do
+    sign_in @teacher
+
+    get :student_script_ids, params: {id: @section_with_script.id}
+    assert_response :success
+    ids = JSON.parse(@response.body)
+    assert_equal({'studentScriptIds' => [Script.flappy_script.id]}, ids)
+
+    # make sure we include other scripts which the student has progress in
+    create(:user_script, user: @student_with_script, script: Script.frozen_script)
+
+    get :student_script_ids, params: {id: @section_with_script.id}
+    assert_response :success
+    ids = JSON.parse(@response.body)
+    assert_equal({'studentScriptIds' => [Script.flappy_script.id, Script.frozen_script.id]}, ids)
+  end
+
+  test 'student cannot access student_script_ids' do
+    sign_in @student_with_script
+    get :student_script_ids, params: {id: @section_with_script.id}
+    assert_response :forbidden
+  end
+
+  test "membership: returns status 403 'Forbidden' when not signed in" do
+    get :membership
+    assert_response :forbidden
+  end
+
+  test "membership: returns section names and ids for student" do
+    sign_in @student_with_script
+    get :membership
+    assert_response :success
+    expected_response = [{id: @section_with_script.id, name: @section_with_script.name}].as_json
+    assert_equal(expected_response, json_response)
+  end
+
+  test "membership: returns section names and ids for teacher" do
+    new_section = create(:section, user: @teacher, login_type: 'word')
+    new_teacher = create :teacher
+    new_section.students << new_teacher
+
+    sign_in new_teacher
+    get :membership
+    assert_response :success
+    expected_response = [{id: new_section.id, name: new_section.name}].as_json
+    assert_equal(expected_response, json_response)
+  end
+
+  test "membership: returns empty array for student sections if none exist for student" do
+    student = create(:student)
+    sign_in student
+    get :membership
+    assert_response :success
+    assert_equal([], json_response)
+  end
+
+  test "membership: returns empty array for student sections if none exist for teacher" do
+    sign_in @teacher
+    get :membership
+    assert_response :success
+    assert_equal([], json_response)
+  end
+
+  test "valid_scripts: returns 403 'Forbidden' when not signed in" do
+    get :valid_scripts
+    assert_response :forbidden
+  end
+
+  test "valid_scripts: returns scripts for any signed in user" do
+    user = create(:user)
+    sign_in user
+    get :valid_scripts
+    assert_response :success
   end
 end

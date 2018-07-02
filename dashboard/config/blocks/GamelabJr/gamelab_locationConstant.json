@@ -1,0 +1,31 @@
+{
+  "category": "Location",
+  "config": {
+    "func": "locationConstant",
+    "blockText": "{DIR}",
+    "returnType": "Location",
+    "args": [
+      {
+        "name": "DIR",
+        "options": [
+          [
+            "north",
+            "'north'"
+          ],
+          [
+            "south",
+            "'south'"
+          ],
+          [
+            "east",
+            "'east'"
+          ],
+          [
+            "west",
+            "'west'"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -5,6 +5,7 @@ import { ViewType, setViewTypeNonThunk } from '@cdo/apps/code-studio/viewAsRedux
 import reducer, {
   initProgress,
   isPerfect,
+  getPercentPerfect,
   mergeProgress,
   mergePeerReviewProgress,
   disablePostMilestone,
@@ -585,6 +586,7 @@ describe('progressReduxTest', () => {
             levelNumber: undefined,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           },
           {
             status: 'not_tried',
@@ -597,6 +599,7 @@ describe('progressReduxTest', () => {
             levelNumber: 1,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           },
           {
             status: 'not_tried',
@@ -609,6 +612,7 @@ describe('progressReduxTest', () => {
             levelNumber: 2,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           }
         ],
         [
@@ -623,6 +627,7 @@ describe('progressReduxTest', () => {
             levelNumber: 1,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           },
           {
             status: 'perfect',
@@ -635,6 +640,7 @@ describe('progressReduxTest', () => {
             levelNumber: 2,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           },
           {
             status: 'attempted',
@@ -647,6 +653,7 @@ describe('progressReduxTest', () => {
             levelNumber: 3,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           }
         ]
       ];
@@ -1124,6 +1131,42 @@ describe('progressReduxTest', () => {
         },
       };
       assert.isTrue(isPerfect(state, levelId));
+    });
+  });
+
+  describe('getPercentPerfect', () => {
+    it('excludes concept levels', () => {
+      const levels = [{
+        isConceptLevel: true,
+        status: LevelStatus.perfect,
+      }, {
+        isConceptLevel: true,
+        status: LevelStatus.perfect,
+      }, {
+        isConceptLevel: false,
+        status: LevelStatus.perfect,
+      }, {
+        isConceptLevel: false,
+        status: LevelStatus.not_tried,
+      }];
+      assert.equal(getPercentPerfect(levels), 0.5);
+    });
+
+    it('only counts perfect levels', () => {
+      const levels = [{
+        status: LevelStatus.perfect,
+      }, {
+        status: LevelStatus.passed,
+      }, {
+        status: LevelStatus.attempted,
+      }, {
+        status: LevelStatus.not_tried,
+      }];
+      assert.equal(getPercentPerfect(levels), 0.25);
+    });
+
+    it('returns zero when there are no levels', () => {
+      assert.equal(getPercentPerfect([]), 0);
     });
   });
 

@@ -1,8 +1,9 @@
-"cs":
+---
+cs:
   data:
     unplugged:
       Unplug1:
-        title: "Úvod do počítačové vědy"
+        title: Úvod do počítačové vědy
         desc: Tato lekce představí koncept informatiky a vysvětlí, co dělá počítačový
           vědec. Také dá studentům možnost zkusit si roli počítačového vědce. Na konci
           lekce každý student shrne to, co se naučil. Možná, že nebudete chtít dětem
@@ -70,11 +71,11 @@
         video: Unplug6
       Unplug7:
         title: Psaní Písně
-        desc: "Čtení textů písní je docela intuitivní dobrodružství pro většinu studentů.
-          \ Vezmeme nějakou činnost, která je již všeobecně známo a posuneme ji do
-          solidního vzdělání na definování a volání funkcí. Jakmile se studenti se
-          obeznámí s procesem definování/volání, přidáváme zvláštní schopnosti, které
-          přicházejí spolu s předáváním parametrů do volání těchto funkcí."
+        desc: Čtení textů písní je docela intuitivní dobrodružství pro většinu studentů.  Vezmeme
+          nějakou činnost, která je již všeobecně známo a posuneme ji do solidního
+          vzdělání na definování a volání funkcí. Jakmile se studenti se obeznámí
+          s procesem definování/volání, přidáváme zvláštní schopnosti, které přicházejí
+          spolu s předáváním parametrů do volání těchto funkcí.
         pdfs:
         - unplug7
         video: Unplug7
@@ -86,7 +87,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "Štafetové Programování"
+        title: Štafetové Programování
         desc: V této lekci vezmeme myšlenku z předchozí aktivity (4. programování
           s milimetrovým papírem) a využití těchto dovednost ke zdůraznění významu
           dokončení programů, které fungují v posloupnosti a často kontrolních programů
@@ -110,7 +111,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: "Šťastné mapy"
+        title: Šťastné mapy
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy
           bludištěm pomocí jediného příkazu.
       MoveIt:
@@ -213,7 +214,7 @@
           tuto aktivitu před (nebo spolu s) lekcí abstrakce, aby si se opravdu strefil
           hit do jádra myšlenky.
       MadGlibs:
-        title: "Šílená Glibs hra"
+        title: Šílená Glibs hra
         desc: Abstrakce je jednou z nejdůležitějších dovedností pro počítačového vědce,
           aby pochopil.  Tato aktivita bude mít vaše studenty analýzu příběhů o rozdíly,
           které lze  abstrahovat pryč. Tyto abstrahované příběhy se stávají šablony
@@ -269,9 +270,6 @@
           většiny her. V této lekci se budeme zabývat, jak Pythagorova věta a vzorec
           vzdálenosti slouží k měření vzdálenosti mezi dvěma body v rovině a pak se
           rozhodnout, zda tyto dva body (nebo postavy her) se dotýkají.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -303,7 +301,7 @@
           životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také
           na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       courseA_unplugged_happyMaps:
-        title: "Šťastné mapy"
+        title: Šťastné mapy
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy
           bludištěm pomocí jediného příkazu.
       courseA_unplugged_goingPlacesSafely:
@@ -344,7 +342,7 @@
         desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
           příkazů k řízení svých spolužáků k reprodukci výkresu.
       courseD_unplugged_relayProgramming:
-        title: "Štafetové programování"
+        title: Štafetové programování
         desc: Studenti běží štafetový závod, kde kreslí pomlčky přes dvůr, aby napsali
           algoritmus založený na obrázku "programování s milimetrovým papírem". Mohou
           psát pouze jednu instrukci v době, a pokud je někde chyba, budou muset vymazat
@@ -407,36 +405,164 @@
           proč kombinace kousky kódu do funkce je užitečnou praxí.  '
       swipeRightPassThrough:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmy ze života: Zasadit semínko'
+        desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním
+          životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také
+          na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      UnplugHappyMaps_2018:
+        title: Šťastné mapy
+        desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy
+          bludištěm pomocí jediného příkazu.
+      GoingPlacesSafely_2018:
+        title: Cestování bezpečně
+        desc: Internet je mocný, ale občas nebezpečné místo. Učitelé představit, jak
+          zůstat v bezpečí při procházení Internetu.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Velká událost
+        desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou
+          akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře
+          vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
+      GraphPaperProgramming_2018:
+        title: Programování na milimetrovém papíru
+        desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
+          příkazů k řízení svých spolužáků k reprodukci výkresu.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivita bez počítače
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivita bez počítače
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Podmínky
+        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a
+          vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod"
+          a "Vytáhnu-li černou kartu, dostanu bod."
+      DigitalFootprint_2018:
+        title: Tvé digitální stopy
+        desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
+          vytvoří digitální stopu nebo "stopu", která má své důsledky.
+      BinaryImages_2018:
+        title: Binární obrázky
+        desc: Ačkoli mnoho lidí si myslí binárně, doslovně jako  nuly a jedničky,
+          naše předchozí kurzy učí studenty, že informace lze znázornit v různých
+          binárních volbách.  V této lekci tento koncept posuneme jeden krok dále,
+          jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace
+          (např. obrázky a barvy).
+      PaperPlanes_2018:
+        title: 'Algoritmy ze života: Papírová letadla'
+        desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě,
+          konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší
+          obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      GettingLoopy_2018:
+        title: Bláznit
+        desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
+          taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
+          instruováni to opakovat.
+      BinaryBracelets_2018:
+        title: Binární náramky
+        desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich
+          jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než
+          jedním způsobem.
+      MoveItMoveIt_2018:
+        title: Pohyb, pohyb
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Štafetové programování
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

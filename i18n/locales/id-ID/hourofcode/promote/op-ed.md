@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Pergi ke [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) untuk menemukan informasi spesifik negara tentang ilmu komputer.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
 **Judul: Komputasi... Dimana Pekerjaannya Ada**
 

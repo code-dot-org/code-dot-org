@@ -6,36 +6,45 @@ import YourSchool from '@cdo/apps/templates/census2017/YourSchool';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import initResponsive from '@cdo/apps/code-studio/responsive';
 
 registerReducers({isRtl, responsive});
 
-$(document).ready(showYourSchool);
+$(document).ready(initYourSchool);
 
 function showYourSchool() {
   const rawSchoolId = $('#your-school').data("parameters-schoolId");
   const rawSchoolZip = $('#your-school').data("parameters-schoolZip");
+  const yourschoolElement = $('#your-school');
   const prefillData = {
-    userName: $('#your-school').data("parameters-user-name"),
-    userEmail: $('#your-school').data("parameters-user-email"),
-    isTeacher: $('#your-school').data("parameters-is-teacher"),
-    schoolCountry: $('#your-school').data("parameters-school-country"),
+    userName: yourschoolElement.data("parameters-user-name"),
+    userEmail: yourschoolElement.data("parameters-user-email"),
+    isTeacher: yourschoolElement.data("parameters-is-teacher"),
+    schoolCountry: yourschoolElement.data("parameters-school-country"),
     schoolId: rawSchoolId ? rawSchoolId.toString() : undefined,
-    schoolType: $('#your-school').data("parameters-school-type"),
-    schoolName: $('#your-school').data("parameters-school-name"),
-    schoolState: $('#your-school').data("parameters-school-state"),
+    schoolType: yourschoolElement.data("parameters-school-type"),
+    schoolName: yourschoolElement.data("parameters-school-name"),
+    schoolState: yourschoolElement.data("parameters-school-state"),
     schoolZip: rawSchoolZip ? rawSchoolZip.toString() : undefined,
   };
 
   ReactDOM.render(
     <Provider store={getStore()}>
       <YourSchool
-        alertHeading={$('#your-school').data("parameters-alert-heading")}
-        alertText={$('#your-school').data("parameters-alert-text")}
-        alertUrl={$('#your-school').data("parameters-alert-url")}
-        hideMap={$('#your-school').data("parameters-hide-map")}
+        alertHeading={yourschoolElement.data("parameters-alert-heading")}
+        alertText={yourschoolElement.data("parameters-alert-text")}
+        alertUrl={yourschoolElement.data("parameters-alert-url")}
+        hideMap={yourschoolElement.data("parameters-hide-map")}
+        fusionTableId={yourschoolElement.data("parameters-table-id")}
         prefillData={prefillData}
+        currentCensusYear={yourschoolElement.data("parameters-school-year")}
       />
     </Provider>,
-    $('#your-school')[0]
+    yourschoolElement[0]
   );
+}
+
+function initYourSchool() {
+  initResponsive();
+  showYourSchool();
 }

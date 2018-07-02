@@ -428,19 +428,6 @@ button {
 #promote-page h2 {
   margin-bottom: 10px;
 }
-#promote-page .download-fact-sheet {
-  margin: 8px 0px;
-  font-size: 15px;
-}
-#promote-page .download-fact-sheet a:link,
-#promote-page .download-fact-sheet a:visited {
-  color: #FFF;
-}
-#promote-page .download-fact-sheet a:hover,
-#promote-page .download-fact-sheet a:active {
-  color: #FFF;
-  text-decoration: underline;
-}
 #promote-page .main-video {
   float: left;
   width: 586px;

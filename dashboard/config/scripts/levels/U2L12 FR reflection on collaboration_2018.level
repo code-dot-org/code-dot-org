@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:36:36.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "*NOTE: The following is modification of one of the prompts given on the AP Create Performance task.*\r\n\r\nDescribe the development process of discovering your data story and creating a visualization.  Describe the difficulties and/or opportunities you encountered along the way, and describe the collaborative process between you and your partner.\r\n\r\nPlease limit your response to about 200 words.",
+    "title": "Personal Reflection: Collaboration",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 5621,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

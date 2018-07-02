@@ -74,7 +74,7 @@ zh-CN:
         title: 移动它，移动它
         desc: 学生们创建简单的算法 (指令集) 通过迷宫使用单个命令，移动角色。
       PlantASeed:
-        title: 真实算法： 播种一颗种子
+        title: '真实算法： 播种一颗种子'
         desc: 这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
       BuildingAFoundation:
         title: 打基础
@@ -146,8 +146,8 @@ zh-CN:
         title: 二进制图像
         desc: 虽然很多人认为作为二进制就是严格的 0 和 1，我们之前的课程教导学生可以在各种二进制选项中表示信息。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息 (如图像和颜色)。
       VideoGamesCoordinatePlanes:
-        title: 视频游戏和坐标平面
-        desc: 理解你喜欢玩的视频游戏实际上由如何代数驱动！探索代数表达式和坐标平面如何帮助我们理解视频游戏工作的原理，随后开始规划你接下来要开发的视频游戏。
+        title: 电子游戏和坐标平面
+        desc: 理解你喜欢玩的电子游戏实际上由如何代数驱动！探索代数表达式和坐标平面如何帮助我们理解电子游戏工作的原理，随后开始规划你接下来要开发的电子游戏。
       Contracts:
         title: 合同、 域和范围
         desc: 契约为我们提供我们一种理解和讨论函数的途径。本课我们将了解契约如何帮助我们理解新的编程语言或函数。
@@ -163,9 +163,6 @@ zh-CN:
       CollisionDetection:
         title: 碰撞检测与毕氏定理
         desc: 确定屏幕上对象的触摸时间点是大多数游戏的一个重要方面。本课我们学习如何应用毕氏定理和距离公式测量平面上的两个点之间的距离，然后再决定那两个点 (或游戏角色) 是否有接触。
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: 线下循环
         desc: 在这节课中，你会学到循环。
@@ -182,7 +179,7 @@ zh-CN:
         title: 不用电脑的活动
         desc: 今天，你将会学到成为一个数字公民意味着什么。
       courseE_unplugged_privateInformation:
-        title: 常识教育： 私人和个人信息 
+        title: '常识教育： 私人和个人信息 '
         desc: 今天，你会学会隐私和个人信息之间的区别！
       courseF_unplugged_powerOfWords:
         title: 不用电脑的活动
@@ -191,7 +188,7 @@ zh-CN:
         title: ''
         desc: '翻译丢失: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
-        title: 真实算法： 播种一颗种子
+        title: '真实算法： 播种一颗种子'
         desc: 这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
       courseA_unplugged_happyMaps:
         title: 快乐地图
@@ -265,3 +262,96 @@ zh-CN:
       brad-repro-bug-000:
         title: Brad报告错误000
         desc: "# Brad报告错误 000 \\r \n# # 尝试重新创建 bug 布鲁克报告 \\r \n过程如下: \\r \n1。从线下开始。填充信息。点击保存并发布. \n2。\"破坏\" 级别 \\r \n3。做个具有相同的内容和相同的名称的\"markdown\" 级别。选中进行加密。保存"
+      courseB_unplugged_MRF_2018:
+        title: '翻译丢失：en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: '翻译丢失：en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: '真实算法： 播种一颗种子'
+        desc: 这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
+      UnplugHappyMaps_2018:
+        title: 快乐地图
+        desc: 学生们创建简单的算法 (指令集) 通过迷宫使用单个命令，移动角色。
+      GoingPlacesSafely_2018:
+        title: 去安全的地方
+        desc: 互联网既功能强大又是危险的领域。教师们讲解如何在浏览互联网时保证安全。
+      courseA_unplugged_loops_2018:
+        title: 线下循环
+        desc: 在这节课中，你会学到循环。
+      BigEvent_2018:
+        title: 大事件
+        desc: 学生们将学习编程概念中的"事件"，即计算机不断监控时的行动。老师在纸上按遥控按钮而学生们根据不同的按钮做某些动作，作为回应。
+      GraphPaperProgramming_2018:
+        title: 图纸上编程
+        desc: 学生们使用一组预定义的命令模块写一个算法 (一组指令) 来指导同学们复制一幅图画。
+      courseD_unplugged_digitalCitizenship_2018:
+        title: 不用电脑的活动
+        desc: 今天，你将会学到成为一个数字公民意味着什么。
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: 不用电脑的活动
+        desc: 今天，你会学习到在互联网上意味着什么，能做什么。
+      Conditionals_2018:
+        title: 条件语句
+        desc: 为了学习有关条件语句，学生们在玩卡片游戏的同时遵守一些规则，比如"如果我画一张红色的卡片，我得一分"以及"如果我画一张黑色的卡片，你得一分。"
+      DigitalFootprint_2018:
+        title: 你的数字足迹
+        desc: 教师向学生介绍，把关于自己的信息放在网上会留下数字足迹，或者叫做“痕迹”，从而导致某些后果。
+      BinaryImages_2018:
+        title: 二进制图像
+        desc: 虽然很多人认为作为二进制就是严格的 0 和 1，我们之前的课程教导学生可以在各种二进制选项中表示信息。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息 (如图像和颜色)。
+      PaperPlanes_2018:
+        title: '生活中的算法: 纸飞机'
+        desc: 这节课程以制作纸飞机的方法为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
+      GettingLoopy_2018:
+        title: 越来越糊涂
+        desc: 本课通过舞蹈活动介绍循环 (用来重复的指令) 的编程概念。学生们将学习简单的编排，然后跟着老师的指示，再重复它。
+      BinaryBracelets_2018:
+        title: 二进制的手镯
+        desc: 学生制作手镯，以二进制形式表示他们名字的首字母。学生们会学会数据能以多种方式表示和存储。
+      MoveItMoveIt_2018:
+        title: 移动它，移动它！
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: 创建并实践公平非常的伟大。
+        desc: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解共享和灵感的创新过程。同时也促进了创新的表达，以及创新中的公平。
+      courseE_unplugged_CnC_2018:
+        title: 数字共享
+        desc: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解尊重他人的所有权和版权的益处和挑战，特别是在数字作品领域。鼓励学生们要成为良好的数字公民，尊重艺术家的版权是重要的一部分。
+      RelayProgramming_2018:
+        title: 编程接力
+        desc: 这次活动会从对"调试和坚持"的简短课程开始，然后会很快进入钟表竞赛。学生们会被分队，并一起编一个一次只能执行一条指令的程序。

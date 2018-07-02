@@ -66,7 +66,7 @@ Los ordenadores están por todas partes, cambiando todas las industrias en el pl
 
 Con la Hora del Código, la informática ha estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Cada Apple Store en el mundo ha organizado una hora de código, y líderes como el presidente Obama y el primer ministro canadiense Justin Trudeau escribieron sus primeras líneas de código como parte de la campaña.
 
-Este año, vamos a hacerlo aún más grande. Te pido que te unas a la Hora del Código 2017. Por favor, participa en un evento de la Hora del Código para la Semana de educación en informática, <%= campaign_date('full')%>.
+Este año, vamos a hacerlo aún más grande. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Por favor, participa en un evento de la Hora del Código para la Semana de educación en informática, <%= campaign_date('full')%>.
 
 Corre la voz. Organiza un evento. Pide a una escuela local que se inscriba. O haz tu mismo la Hora del Código - todos pueden beneficiarse de aprender los conceptos básicos.
 
@@ -78,7 +78,7 @@ Comienza en http://hourofcode.com/<%= @country %>
 
 **Asunto:** ¿Podemos ayudarte a organizar la Hora del código?
 
-En Diciembre del 4 al 10, el diez por ciento de los estudiantes de todo el mundo celebrarán la Semana de Educación en Informática haciendo un evento de Hora del Código en su escuela. Es una oportunidad para todos los niños de aprender cómo funciona la tecnología que nos rodea.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Nuestra organización / Mi nombre] me encantaría ayudar a [nombre de la escuela] a organizar un evento de la Hora del código. Podemos ayudar a los profesores a organizar una hora de código en sus aulas (¡ni siquiera necesitamos computadoras!) O si desea organizar una asamblea escolar, podemos hacer arreglos para que un orador hable sobre cómo funciona la tecnología y cómo es ser un ingeniero de software.
 

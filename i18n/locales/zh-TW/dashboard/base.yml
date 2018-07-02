@@ -69,7 +69,7 @@ zh-TW:
   try_k8intro: "試試我們為年級 K-8 所設計的計算機科學課程（15-25 小時）"
   k8intro: "K-8 資訊科學介紹課程 （15-25 小時）"
   already_started: "已經開始了嗎？從這裡繼續 >>"
-  demos: 管理者：所有範例展示
+  demos: "管理者：所有範例展示"
   continue: '繼續'
   prize: '獎品'
   more_info: '更多的資訊'
@@ -85,6 +85,7 @@ zh-TW:
     facebook: 'Facebook'
     windowslive: '微軟帳戶'
     clever: 'Clever 帳號'
+    powerschool: 'Powerschool Account'
     forgot_password: '忘了密碼？'
     need_confirmation: "沒有收到確認說明嗎？"
     need_unlock: "沒有收到解鎖說明嗎？"
@@ -114,15 +115,25 @@ zh-TW:
     valid_password: "密碼有效！"
     invalid_password: "密碼必須要 6 個字元以上"
     mismatch_password: "你輸入的兩次密碼不一致"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "如果我未滿 13 歲，我確認已獲得我的父母或法定監護人的同意來使用 Code.org 服務。"
+    agree_us_website: "我同意使用位於美國境內的網站。"
+    my_data_to_us: "我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。"
     student_terms: "我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a href='http://code.org/privacy'>隱私權政策</a>。"
     teacher_terms: "我同意 Code.org 的服務條款約束。有關隱私的詳細資訊，請參閱我們的 <a href='Http://code.org/privacy'> 隱私政策</a>。"
     additional_information: "我們還需要一些其他資訊來完成你的註冊。"
+    user_type_button: "Update Account Type"
     user_type_label: "帳戶類型"
     user_type_teacher: "教師"
     user_type_student: "學生"
     field_is_required: "必填"
     accept_terms: "你必須同意以建立一個帳戶"
     error: "發生錯誤。"
+    email_preference_question: "我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "是"
+    email_preference_no: "否"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: '學校資訊（非必填）'
     school_country: '學校所屬國家'
@@ -171,6 +182,7 @@ zh-TW:
       email: '電子信箱地址'
       submit: '提交'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: '你註冊用的信箱似乎無效，請電郵 support@code.org 以取得密碼恢復的連結。'
     change_form:
       title: '更改您的密碼'
@@ -220,7 +232,7 @@ zh-TW:
       provider_managed_section: "這個學習小組是由另一位提供者管理的，你無法加入。請詢問你的老師是否能透過 %{provider} 將你加入，並重新同步他們的學習小組。"
     mail:
       student_disassociated:
-        subject: Code.org 通知： %{student_name} 已不再是你的學生。
+        subject: "Code.org 通知： %{student_name} 已不再是你的學生。"
   reports:
     error:
       access_denied: "你不能存取此人的統計資料"
@@ -309,7 +321,7 @@ zh-TW:
     popup:
       progress_for_user: "%{name} 的進度"
       progress: '你的學習進度'
-      lines: 程式碼總計行數：%{lines}
+      lines: '程式碼總計行數：%{lines}'
       close: '關閉'
       mastery: '觀念'
       puzzle_map: '所有階段'
@@ -348,11 +360,12 @@ zh-TW:
     email_confirm_needed_required: '您的信箱 %{email} 尚未驗證：'
     email_confirm_wrong_email: '（錯誤的電子信箱？）'
     email_resend_confirm: '重新發送確認說明'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "（如果你不想變更它就保留空白）"
     current_password_hint: '（我們需要你現在的密碼以確認變更）'
     delete: '刪除您的帳號'
     delete_text: "點擊下方按鈕將刪除你的帳號。"
-    delete_text_teacher_note: 請注意：刪除你的帳號並不會也刪除你的學生帳號。
+    delete_text_teacher_note: "請注意：刪除你的帳號並不會也刪除你的學生帳號。"
     delete_confirm: '確定要刪除你的帳戶？'
     deleted_user: '已刪除的用戶'
     no_password_because_oauth: '沒有密碼，因為你使用第三方帳戶登入。'
@@ -363,10 +376,11 @@ zh-TW:
     create_personal_login_under_13_parent_email: '家長/監護人的電子郵件'
     create_personal_login_info: '如果你想要在學年結束後繼續使用你的 Code.org 帳號，可以建立自己的登入帳號。'
     create_personal_login_terms: "建立個人登入帳號代表我同意遵守 Code.org 的<a href='%{terms_of_service_url}', target='_blank'>服務條款</a>。如果我的年齡小於13歲，我已經取得父母或法定監護人的允許在沒有老師的指導下使用 Code.org 的服務。"
-    create_personal_login_email_note: 注意： 電子郵件位址的儲存形式並不允許我們聯繫學生。學生將永遠不會為收到來自 Code.org 的電子郵件，除了密碼恢復。請參閱我們的 <a href='%{privacy_policy_url}', target='_blank'> 隱私政策</a> 的詳細資訊。
+    create_personal_login_email_note: "注意： 電子郵件位址的儲存形式並不允許我們聯繫學生。學生將永遠不會為收到來自 Code.org 的電子郵件，除了密碼恢復。請參閱我們的 <a href='%{privacy_policy_url}', target='_blank'> 隱私政策</a> 的詳細資訊。"
     enter_new_login_info: '輸入你新的登入資訊'
     confirm_secret_words: '為了確認是你本人請輸入目前的通關密語'
     enter_parent_email: "輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)"
+    update: "Update Account"
   user_level:
     completed: '已完成'
     tried: '已體驗'
@@ -396,7 +410,7 @@ zh-TW:
     online: 在線上
     see_details: 查看詳細資訊
     view_course: 檢視課程
-    prize_info: 參加獎（僅限美國公立學校教師）：班級獎金最高 $1,000 元美元。
+    prize_info: '參加獎（僅限美國公立學校教師）：班級獎金最高 $1,000 元美元。'
     tryfirst: '或者，你可以先體驗，以後再註冊：'
     trynow: '快來試試'
     add_hint_help: '請協助我們添加小提示到 Code.org 的教程'
@@ -448,6 +462,7 @@ zh-TW:
     student_not_found: "無法找到其中的一個或多個學生。"
     all_students_must_be_in_current_section: "所有的學生都必須在你的學習小組中。"
     already_enrolled_in_new_section: "你無法移動這些學生，因為這個教師已經把他們放到另一個學習小組了。"
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "在 Code Studio 上學習"
     description: "任何人都可以學習計算機科學，用程式來建立遊戲、應用程式及藝術作品。"
@@ -455,6 +470,8 @@ zh-TW:
   gender:
     male: '男性'
     female: '女性'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: '不想回答'
   user_type:
     student: '學生'
@@ -702,7 +719,7 @@ zh-TW:
     sign_out: '如果您不想提供年齡，您可以選擇<a href="%{url}">登出</a>。'
   terms_interstitial:
     title: "更新後的服務條款和隱私政策"
-    intro_desc: 我們已更新了服務條款和隱私政策，如下所示。這些改更自 2016 年 8 月 24 日起生效。最大的變化是：我們將<strong>不再把學生帳戶使用的電子信箱儲存在 Code Studio。</strong>這對我們來說是一大改變，我們希望它在教育技術中為學生隱私起個新的標準。我們已經通過電子郵件給你發送了其他的修改摘要。
+    intro_desc: "我們已更新了服務條款和隱私政策，如下所示。這些改更自 2016 年 8 月 24 日起生效。最大的變化是：我們將<strong>不再把學生帳戶使用的電子信箱儲存在 Code Studio。</strong>這對我們來說是一大改變，我們希望它在教育技術中為學生隱私起個新的標準。我們已經通過電子郵件給你發送了其他的修改摘要。"
     intro_instructions: "若你要小於 13 歲的學生能使用 Code Studio 上的完整功能，你必須接受這些新的條款。若要為 13 歲以下的學生註冊一個帳戶，則需要確認你的學校是否有其父母的同意學校收集並使用學生個人資訊，以利用在包括像 Code Studio 這樣的教育計劃。"
     tos: "服務條款"
     privacy: "隱私政策"
@@ -718,25 +735,25 @@ zh-TW:
     message_with_suggestion: "請檢查下方的資料是否正確，若必要時進行更新。"
     save: "儲存"
   race_interstitial:
-    title: 非必填：幫助我們追蹤我們的進展以改善在計算機科學的多樣性
+    title: "非必填：幫助我們追蹤我們的進展以改善在計算機科學的多樣性"
     message: "請告訴我們你的種族（選擇）"
     races:
       - 
-        white: 白人
+        white: "白人"
       - 
-        black: 黑人/非裔美國人
+        black: "黑人/非裔美國人"
       - 
-        hispanic: 西班牙裔或拉丁裔
+        hispanic: "西班牙裔或拉丁裔"
       - 
-        asian: 亞裔
+        asian: "亞裔"
       - 
-        hawaiian: 夏威夷原住民或其他太平洋群島原住民
+        hawaiian: "夏威夷原住民或其他太平洋群島原住民"
       - 
-        american_indian: 美國印地安人/阿拉斯加原住民
+        american_indian: "美國印地安人/阿拉斯加原住民"
       - 
-        other: 其它
+        other: "其它"
       - 
-        opt_out: 不想說
+        opt_out: "不想說"
     submit: "提交"
     decline: "關閉"
   zendesk_too_young_message: '抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。'
@@ -762,7 +779,7 @@ zh-TW:
     delete: "删除"
     import: "匯入"
     share_link_import_bad_link_header: "無法辨識分享連結"
-    share_link_import_bad_link_body: '我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。'
+    share_link_import_bad_link_body: "我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。"
     share_link_import_error_header: "發生錯誤。"
     share_link_import_error_body: "匯入分享連結時發生問題。請再試一次。"
     exit: "返回課程"
@@ -855,18 +872,19 @@ zh-TW:
     csf_e_2: '課程 E 內容'
     csf_f_1: '升至課程 F (可選擇的)'
     csf_f_2: '課程 F 內容'
-    csd1_1: 第 1 章：解決問題的流程
-    csd1_2: 第 2 章：計算機與問題解決能力
-    csd2_1: 第 1 章：網站內容和 HTML
-    csd2_2: 第 2 章：樣式和 CSS
-    csd3_1: 第 1 章：圖像和動畫
-    csd3_2: 第 2 章：創建遊戲
-    csd4_1: 第 1 章：用戶為中心的設計
-    csd4_2: 第 2 章︰ 應用程式原型
-    csd5_1: 第 1 章：表達信息
-    csd5_2: 第 2 章：解決數據問題
-    csd6_1: 第 1 章：硬體輸出
-    csd6_2: 第 2 章：硬體輸入
+    csd1_1: '第 1 章：解決問題的流程'
+    csd1_2: '第 2 章：計算機與問題解決能力'
+    csd2_1: '第 1 章：網站內容和 HTML'
+    csd2_2: '第 2 章：樣式和 CSS'
+    csd3_1: '第 1 章：圖像和動畫'
+    csd3_2: '第 2 章：創建遊戲'
+    csd4_1: '第 1 章：用戶為中心的設計'
+    csd4_2: '第 2 章︰ 應用程式原型'
+    csd5_1: '第 1 章：表達信息'
+    csd5_2: '第 2 章：解決數據問題'
+    csd6_1: '第 1 章：硬體輸出'
+    csd6_2: '第 2 章：硬體輸入'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ zh-TW:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '單元 2：數位資訊'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: '反射提示'
   external_links:
     disclaimer: 免責聲明
@@ -890,10 +913,10 @@ zh-TW:
     capsule_title: '你有網路嗎？'
     capsule_desc: '使用在線 Web 式的 <a href="%{url}">%{app_name}</a>。'
     instructions_headline: '沒有網路？'
-    instructions: 給教師的指南： 如果你的網路很慢，這些課程都可以下載並離線安裝。選擇你的語言和平台，然後下載和安裝在教室的所有電腦上。你可以使用 USB 隨身碟一次安裝所有電腦上。註：學生將不能登錄並在 Code Studio 上保存進度，也無法列印證書。你可以提前<a href="%{url}">在這裡列印證書</a>。
+    instructions: '給教師的指南： 如果你的網路很慢，這些課程都可以下載並離線安裝。選擇你的語言和平台，然後下載和安裝在教室的所有電腦上。你可以使用 USB 隨身碟一次安裝所有電腦上。註：學生將不能登錄並在 Code Studio 上保存進度，也無法列印證書。你可以提前<a href="%{url}">在這裡列印證書</a>。'
     minecraft_name: '一小時玩 Minecraft'
-    starwars_blocks_name: 星際大戰：用程式建立一個銀河系（程式積木）
-    starwars_javascript_name: 星際大戰：用程式建立一個銀河系（JavaScript）
+    starwars_blocks_name: '星際大戰：用程式建立一個銀河系（程式積木）'
+    starwars_javascript_name: '星際大戰：用程式建立一個銀河系（JavaScript）'
     download_message: '下載 %{app_name} 以離線使用（136MB）'
     download_in_Albanian: '下載 Albanian 版：'
     download_in_Arabic: '下載 Arabic 版：'
@@ -984,3 +1007,14 @@ zh-TW:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: '我同意'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: '是'

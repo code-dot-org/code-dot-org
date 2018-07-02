@@ -48,6 +48,7 @@
 #  terms_of_service_version :integer
 #  urm                      :boolean
 #  races                    :string(255)
+#  primary_contact_info_id  :integer
 #
 # Indexes
 #

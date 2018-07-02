@@ -1,0 +1,30 @@
+name 'cspu5_assess1_turtle_exam_prep'
+wrong '<img src="https://images.code.org/ac7439091c092e532c17167ce1ae91b5-image-1475973196221.png" width=150>'
+wrong '<img src="https://images.code.org/417e418722135ce9582fff8919bf40a0-image-1475973196221.png" width=150>'
+right '<img src="https://images.code.org/f8b00bf5f5af3f23a6c635f2dbf7ae8f-image-1475973196223.png" width=150>'
+wrong '<img src="https://images.code.org/ccf8ed897987be60cd0ce71151d6e6aa-image-1475973196211.png" width=150>'
+wrong '<img src="https://images.code.org/fab07507d8bc055039d4daf671faa47e-image-1475973196219.png" width=150>'
+
+
+markdown <<MARKDOWN
+What is a possible output when the following code segment executes?  The ending position of the turtle is shown in each diagram.  The starting position is shown as a white triangle in cases where the turtle starts and ends in different locations.
+
+![](https://images.code.org/7ed8c4b7f1c7b898ec6183db9309c8b9-image-1475973072499.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lessons 7, 8** -- requires transfer of turtle and simple repeat loops
+
+Going through the code line by line while keeping track of the value of "turn",
+
+* The variable "turn" is set to 0
+* The code enters a for loop that will run 4 times
+* Breaking down the code within the loop, the turtle moves forward each time
+* Now, if "turn" is 0 then the turtle will turnLeft and "turn" is set to 1
+* However, if "turn" is not 0, the turtle will turnRight and "turn" is set back to 0
+* As the loop runs 4 times and "turn" is initially set to 0 and "turn" changes between 1 and 0, the turtle will move forward, turn left, forward, turn right, forward, turn left, and forward turn right
+
+The most important idea in this problem is the if-else statement. If a statement is true, enter the first set of code. Otherwise, execute the other piece of code.
+
+
+MARKDOWN

@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## विद्यार्थी आणि स्वयंसेवकांना अवर ऑफ कोड विषयी प्रोत्साहित करणे
 
-Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- स्वयंसेवक होण्यासाठी [नोंदणी](<%= resolve_url('https://code.org/volunteer') %>) करा.
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
 ## अवर ऑफ कोड ला कंपन्या अजून खालीलप्रमाणे प्रकारे मदत करू शकतात:
 
-- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
 - स्थानिक विद्यार्थ्यांसाठी शाळेत किंवा सामाजिक संस्थेतील भागीदारांसाठी अवर ऑफ कोड चे आयोजन आपल्या कंपनीत करावे. त्याच्या नियोजनाची मार्गदर्शक पुस्तिका खाली पहावी.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
 ## 1. Promote your Hour of Code
 
 - तुमच्या [अवर ऑफ कोड](<%= resolve_url('/promote') %>) कार्यक्रमाचा प्रचार करणे आणि इतरांना त्याचे आयोजन करण्यास प्रोत्साहित करणे.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. ते येथे [नोंदणी करून](<%= resolve_url('https://code.org/volunteer/engineer') %>) शाळेशी संलग्न होऊ शकतात.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - तुम्ही तंत्रज्ञान क्षेत्रातील कंपनी असाल तर तुम्ही काम करीत असलेल्या रंजक आणि नाविन्यपूर्ण उत्पादनांचे प्रात्यक्षिक दाखवावे.
 - तुमची कंपनी तंत्रज्ञान क्षेत्रातील नसेल तर, तुम्ही तंत्रज्ञानाचा वापर, समस्या सोडवण्यास व लक्ष्य साध्य करण्यास कसे वापरता त्याविषयी चर्चा करा.
 - तुमच्या कंपनीतील साॅफ्टवेअर अभियंत्यांना बोलावून, त्यांनी संगणक शास्त्र शिकण्याचा आणि त्यातील प्रकल्पांवर काम करण्याचा निर्णय का घेतला, याविषयी बोलण्यास सांगणे.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 ## ७) प्रकल्पपूर्ती साजरी करणे
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - ["I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) असे स्टीकर्स छापणे.
 - तुमच्या कर्मचाऱ्यांकरिता [विशेष (सानुकूल) बनवलेले टी शर्ट](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) मागवणे.
 - या घटनेची छायाचित्रे आणि व्हिडीओ सोशल मेडिया (समाज माध्यमे) वर उपलब्ध करावी. #HourOfCode आणि @codeorg हे वापरून तसे केल्यास तुमचे यशसुद्धा उठून दिसेल!

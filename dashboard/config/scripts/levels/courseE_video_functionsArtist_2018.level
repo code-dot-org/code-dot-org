@@ -8,7 +8,8 @@
     "video_key": "C3_artist_functions",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": ""

@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Diffondi un comunicato stampa.** [Utilizza questo esempio](%= resolve_url('/promote/official-press-release') %) come modello.
 
-9. **Fai squadra nella tua zona.** Visita [www.programmailfuturo.it](https://www.programmailfuturo.it/) per saperne di più sull'insegnamento dell'informatica nel tuo paese. 
+9. **Connect locally.** Visit [code.org/promote](%= codeorg_url('/promote') %) to learn more about computer science education in your state. 
 
 <%= view :signup_button %>

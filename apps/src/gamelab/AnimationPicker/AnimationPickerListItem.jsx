@@ -77,7 +77,7 @@ class AnimationPickerListItem extends React.Component {
     const iconImageSrc = this.props.category ? `/blockly/media/gamelab/animation-previews/${this.props.category}.png` : '';
 
     return (
-      <div style={styles.root} onClick={this.props.onClick}>
+      <div style={styles.root} onClick={this.props.onClick} className="uitest-animation-picker-item">
         <div style={thumbnailStyle}>
           {this.props.animationProps &&
               <AnimationPreview

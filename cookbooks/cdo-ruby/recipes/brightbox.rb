@@ -21,6 +21,19 @@ packages.each do |name|
   end
 end
 
+# Remove old Ruby version packages if present.
+if (old = node['cdo-ruby']['old_version'])
+  %W[
+    ruby#{old}-dev
+    ruby#{old}
+  ].each do |pkg|
+    apt_package pkg do
+      action :purge
+      notifies :run, 'execute[apt-get autoremove]', :immediately
+    end
+  end
+end
+
 cookbook_file '/etc/gemrc' do
   action :create_if_missing
   source 'gemrc'

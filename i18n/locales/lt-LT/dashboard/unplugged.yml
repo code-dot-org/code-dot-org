@@ -163,9 +163,6 @@ lt:
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
         desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -265,3 +262,96 @@ lt:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+      UnplugHappyMaps_2018:
+        title: Laimingieji žemėlapiai
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų veikėją per labirintą, naudodami vieną komandą.
+      GoingPlacesSafely_2018:
+        title: Saugus naršymas internete
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko, kaip būti saugiam naršant internete.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Didelis įvykis
+        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo to, kuris mygtukas bus nuspaustas.
+      GraphPaperProgramming_2018:
+        title: Programavimas ant languoto popieriaus
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis naudodamasis, kitas mokinys turės nupiešti piešinį.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Veikla be kompiuterių
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Veikla be kompiuterių
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Sąlyginiai sakiniai
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“ arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+      DigitalFootprint_2018:
+        title: Virtualūs pirštų antspaudai
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų galima sekti ir tai gali turėti pasėkmių.
+      BinaryImages_2018:
+        title: Dvejetainiai vaizdai
+        desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus kalbama apie informatiką ir algoritmų svarbą joje.
+      GettingLoopy_2018:
+        title: Kartojimo supratimas
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami) šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+      BinaryBracelets_2018:
+        title: Dvejetainės apyrankės
+        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi daugiau nei vienu būdu.
+      MoveItMoveIt_2018:
+        title: Judėk, judėk
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programavimas komandoje
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

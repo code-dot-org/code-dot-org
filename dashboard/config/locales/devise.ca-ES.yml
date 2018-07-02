@@ -1,4 +1,5 @@
-"ca":
+---
+ca:
   devise:
     confirmations:
       confirmed: La teva adreça d'email s'ha confirmat correctament.

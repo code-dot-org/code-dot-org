@@ -5,39 +5,39 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# کس طرح آپ اپنے پورے اسکول ڈسٹرکٹ کے لیے آور-آف-کوڈ لاسکتے ہیں۔
+# کس طرح آپ اپنے پورے اسکول ڈسٹرکٹ کے لیے آور-آف-کوڈ لاسکتے ہیں۔.
 
-[col-33]
+[کال -33]
 
 ![](/images/fit-275/highlight-obama.png)&nbsp;&nbsp;&nbsp;![](/images/fit-246/dan.jpg)
 
-[/col-33]
+[/ Col-33]
 
 <p style="clear:both">&nbsp;</p>
 
-## !ہر اسکول کی شمولیت، ہر اسٹوڈینٹ کا سیکھنا ممکن بنائیں
+## ! ہر اسکول کی شمولیت، ہر اسٹوڈینٹ کا سیکھنا ممکن بنائیں!
 
-1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager.pdf)
-
-2. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts.
-
-3. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
-
-4. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
-
-5. **Issue a proclamation or resolution.** See this [sample resolution](<%= resolve_url('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
-
-6. **Draft an op-ed**. Consider publishing an opinion piece in your local paper. See this [sample op-ed](<%= resolve_url('/promote/op-ed') %>) supporting comupter supportive of Computer Science Education Week and its goals.
-
-7. **Spread the word.** [Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+1. ** ہمارے ایک صفحہ کو پڑھیں </ strong> پر کیوں کمپیوٹر سائنس تعلیم ضروری ہے، اور آپ کو کوڈ کے قیام کی حمایت سے کیسے کوشش کر سکتی ہے. [ یہاں ایک پیسہ حاصل کریں ](/files/hoc-one-pager.pdf)</p></li> 
     
-    - Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)
-    - Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)   
-          
+    - ** مقامی اسکولوں اور اضلاع کو بھرتی کریں. </ strong> استعمال کریں [ یہ ای میل ](٪= resolve_url('/promote/resources#sample-emails') ٪) یا <a href = "٪ = حل_رل ('/ فروغ / اعداد و شمار')٪ "> اس بلب </a> شروع ہونے والے نقطہ کے طور پر، اور اس  کس طرح نظر آتے ہیں اسکولوں اور اضلاع کے لئے.</p></li> 
         
-
-8. **Issue a press release.** [Use this sample](<%= resolve_url('/promote/official-press-release') %>) as a guide.
-
-9. **Connect locally.** Visit [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
-
-<%= view :signup_button %>
+        - ** کوڈ آف ایونٹ کی میزبانی کریں. </ strong> ایک نمونہ رن کے لئے ہمارے [ ایونٹ کس طرح کی رہنمائی ](٪= حل_url('/how-to/events') ٪) ملاحظہ کریں. شو، ذرائع ابلاغ کی کٹ اور دیگر ایونٹ پلاننگ وسائل. ایونٹ ہوسٹنگ کوڈ کو فروغ دینے اور شراکت میں اضافہ کرنے کا ایک بڑا طریقہ ہے.</p></li> 
+            
+            - ** کمپیوٹر سائنس تعلیم ہفتہ (<٪ = campaign_date ('short')٪>) کے دوران ایک ایونٹ میں شرکت کریں. </ strong> [ کلاس روم اور اسکول تلاش کریں. ](٪= resolve_url('/events') ٪) آپ کے ضلع، شہر یا ریاست میں حصہ لینے.</p></li> 
+                
+                - ** ایک اعلان یا قرارداد کا مسئلہ. </ strong> یہ <a href="٪= حل_ورل('resources/proclamation')٪ نمونہ حل </a> کے تعاون سے کمپیوٹر سائنس تعلیم ہفتہ اور اس کے مقاصد کو حاصل کرسکتا ہے. ریاست اور مقامی قانون سازوں کے ذریعہ استعمال کیا جائے.</p></li> 
+                    
+                    - ** ایک اختیاری ڈرافٹ </ strong>. اپنے مقامی کاغذ میں ایک رائے ٹکڑا شائع کرنے پر غور کریں. Ulrikke (ubh) کمپیوٹر سے باہر نکلنے کے بعد امریکہ کے باہر کمپیوٹر سائنس تعلیم ہفتہ کو حوالہ جات سے بچنے کے بعد دوبارہ دوبارہ جانا چاہئے. 14 دن پہلے نئی تبصرہ ترجمہ کے لئے متن کمپیوٹر سائنس تعلیم ہفتہ اور اس کے اہداف کے معاون معاونت کی حمایت کی اس [ نمونہ اوپیڈ ](٪= solution_url('/promote/op-ed') ٪) ملاحظہ کریں.</p></li> 
+                        
+                        - <مضبوط> لفظ پھیلانا. </ strong> [ قیام کا اشتراک کریں فیس بک پر ویڈیو کا کوڈ ](https://www.facebook.com/sharer/sharer.php؟u=http٪3A٪2F٪2Fhourofcode.com٪2Fus) اور <a href = "https://twitter.com/intent/tweet؟url=http٪3A٪2F٪2Fhourofcode.com&amp؛text=I٪27m٪20participating٪20in٪20this ٪ 20٪٪ 27s٪ 20٪ 23HourOfCode٪ 2C٪ 20are٪ 20You٪ 3F٪ 20٪ 40codeorg & original_referer = https٪ 3A٪ 2F٪ 2Fwww.google.com٪ 2Furl٪ 3Fq٪ 3Dhttps٪ 253A٪ 252F٪ 252Ftwitter.com٪ 252Fshare ٪ 253 فاششگزار٪ 253 ڈی٪ 2526 پمپ 253 سے متعلق٪ 253 ڈوڈورج٪ 2526amp٪ 253 بکس٪ 253DI٪ 252527m٪ 252 حصہ لینے٪ 252 بائن٪ 252 بطیس٪ 252 بیئر٪ 252527٪ 252 بی٪ 252523٪ 25252C٪ 25252C٪ 252٪ 252٪ 25253F٪ 252B٪ 252540codeorg٪ 252640٪ 253Dhttp ٪ 25253A٪ 25252F٪ 25252Fhourofcode.com٪ 26sa٪ 3DD٪ 26sntz٪ 3D1٪ 26usg٪ 3DAFQjNENEGGTUbKZfMlEh9Aj5w0iswz6PYQ & related = codeorg & hashtags = "> ٹویٹر پر آپ کی حمایت کے بارے میں بات کریں </a>. قیامت کا کوڈ کرتے ہوئے واقعات کی تصاویر یا آپ کے اور دیگر بالغوں کا ایک ویڈیو اشتراک کریں. اس کوڈ پر آپ پہلے ہی غلط استعمال کی رپورٹ کر چکے / چکی ہیں. ہیلپ ڈیسک جلد از جلد اس معاملے کو دیکھے گا. اس تصویر پر آپ پہلے ہی غلط استعمال کی رپورٹ کر چکے / چکی ہیں. یا، ان نمونے ٹویٹس کا استعمال کریں:
+                            
+                            - ہر طالب علم، لڑکے یا لڑکی کو کمپیوٹر سائنس سیکھنے کا موقع ہونا چاہئے. ایک #HourOfCode کے ساتھ شروع کرنے میں ہمارے ساتھ شامل کریں [ https://hourofcode.com ](٪= solution_url('/') ٪)
+                            - آج، ہم قیامت کوڈ تحریک میں شامل ہونے پر فخر کر رہے ہیں. کیا تم میں ہو #HourOfCode [ https://hourofcode.com ](٪= solution_url('/') ٪)   
+                                  
+                                
+                        
+                        - ** ایک پریس ریلیز کا مسئلہ. </ strong> [ اس نمونے کا استعمال کریں ](٪= حل_ورل('/ پروموٹ / آفیسر-یئر- ریئیر') ٪) ایک گائیڈ کے طور پر.</p></li> 
+                            
+                            - **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. وہاں درخواست نامہ پر دستخط کریں اور آپ Code.org سے اپنی مقامی، ریاستی اور وفاقی وکالت کی کوششوں پر اپ ڈیٹس حاصل کریں گے.</ol> 
+                            
+                            <%= view :signup_button %>

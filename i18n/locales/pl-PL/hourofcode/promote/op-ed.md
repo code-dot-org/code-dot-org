@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
 **Title: Computing…Where the Jobs Are**
 
@@ -22,7 +22,7 @@ But who exactly is going to write this software?
 
 Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+W czasach, gdy zapotrzebowanie na wykwalifikowanych programistów nigdy wcześniej nie było większe, kształcimy mniej informatyków. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
 Why is this? And how can we address it?
 

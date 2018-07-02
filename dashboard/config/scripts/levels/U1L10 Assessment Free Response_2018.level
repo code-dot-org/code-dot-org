@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:48.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Encoding Text",
+    "markdown_instructions": "Many languages do not use the characters of U.S. English. Suppose you wanted to be able to encode the characters of every language on earth within a single protocol. Guess how many characters would need to be encoded and calculate the number of bits that would be required per character. Then discuss the benefits and drawbacks of using this single unified system.\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 1931,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

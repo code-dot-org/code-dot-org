@@ -19,45 +19,44 @@ social:
   "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 <%
-    facebook = {:u=>"http://#{request.host}/us"}
+  facebook = {:u=>"http://#{request.host}/us"}
 
-    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
 # آور-آف-کوڈ کو ھوسٹ کرنے کے لیے سائن-اَپ کرنے کا شکریہ!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+کمپیوٹر سائنس سیکھنا شروع کرنے کے لئے طلباء کے لئے ممکنہ طور پر بنانے کے لئے شکریہ کے طور پر، ہم آپ کو پیشہ ور طباعت شدہ پوسٹروں کے مفت سیٹ آپ کے کلاس روم کے لئے متنوع کردار کے ماڈل کی نمائش دینا چاہتے ہیں. چیک آؤٹ پر پیشکش کوڈ ** FREEPOSTERS </ strong> استعمال کریں. (نوٹ: یہ صرف آخری وقت کے دوران دستیاب ہے اور آپ شپنگ اخراجات کو پورا کرنے کی ضرورت ہوگی. چونکہ یہ پوسٹر امریکہ سے جہاز کرتے ہیں، کینیڈا اور بین الاقوامی سطح پر شپنگ کی ترسیل کے اخراجات بہت زیادہ ہوسکتے ہیں. ہم سمجھتے ہیں کہ یہ آپ کے بجٹ میں نہیں ہوسکتا ہے، اور ہم آپ کو کلاس روم کیلئے [ پی ڈی ایف فائلیں ](https://code.org/inspire) پرنٹ کرنے کے لئے حوصلہ افزائی کرتے ہیں.)> [ <بٹن> پوسٹر حاصل کریں </ بٹن> ](https://store.code.org/products/code-org-posters-set-of-12) پیشکش کوڈ فریپسٹرز کا استعمال کریں</p> 
 
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+<% if @country == 'us' %> Ozobot، ڈیکسٹر انڈسٹری، چھوٹی بٹس، اور ونڈر ورکشاپ کی سخاوت کا شکریہ، 100 طبقہ سے زائد روبوٹ یا سرکٹس کو اپنی کلاس کے لئے منتخب کیا جائے گا! ایک سیٹ حاصل کرنے کے اہل ہونے کے لئے، قیامت کے کوڈ کے بعد Code.org سے بھیجا گیا سروے کو مکمل کرنے کے لئے یقینی بنائیں. Code.org جیتنے والی کلاس روم منتخب کریں گے. اس دوران، کچھ روبوٹکس اور سرکٹس کی سرگرمیوں کو چیک کریں. براہ کرم نوٹ کریں کہ یہ صرف امریکی اسکولوں کے لئے کھلا ہے <% end %>
 
-<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> ** کوڈ کا وقت <٪ = مہم کی تاریخ ('full')٪> کے دوران چلتا ہے اور ہم نئے سبق اور دیگر دلچسپ اپ ڈیٹس کے بارے میں رابطے میں رہیں گے جیسے وہ باہر آتے ہیں. اس دوران، اب آپ کیا کر سکتے ہیں </ strong></p> 
 
-## 1. Spread the word in your school and community
+## 1. آپ کے اسکول اور کمیونٹی میں لفظ پھیلانا
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+آپ نے صرف قیامت کے کوڈ تحریک میں شمولیت اختیار کی. اپنے دوستوں کو ** #HourOfCode </ strong> کے ساتھ بتائیں!</p> 
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. آپ کو نئی اسکلز سیکھنے کے لیے کسی اسکول میں ہونا ضروری نہیں۔ Invite a local politician or policy maker to visit your school for the Hour of Code. یہ آپ کے علاقہ میں کمپیوٹر سائنس کے لیے سپورٹ بنانے میں ایک گھنٹہ سے بڑھ کر مددگار ہوگا۔
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> دوسروں کو حوصلہ افزائی کریں کہ [ ہمارے نمونہ ای میلز کے ساتھ حصہ لیں. ](٪= حل_ورل('/ پیومیٹ / حوالہ جات#sample_emails') ٪) اپنے پرنسپل سے رابطہ کریں اور اپنے اسکول میں ہر کلاس روم کو سائن اپ کرنے کے لئے چیلنج کریں. مقامی گروپ - لڑکے / لڑکی سکاؤٹس کلب، چرچ، یونیورسٹی، سابقہ گروہ، مزدور یونین، یا کچھ دوست بھی شامل کریں. آپ کو نئی اسکلز سیکھنے کے لیے کسی اسکول میں ہونا ضروری نہیں۔. ایک مقامی سیاستدان یا پالیسی سازی کو مدعو کرنے کے لئے اپنے اسکول کا دورہ کریں. یہ ایک گھنٹہ سے باہر آپ کے علاقے میں کمپیوٹر سائنس کے لئے تعاون کی تعمیر میں مدد مل سکتی ہے.
 
-ان [ پوسٹرز، بینرز، اسٹیکرز، ویڈیوز اور مزید کچھ](<%= resolve_url('/promote/resources') %>) خود اپنے ایونٹ کے لیے استعمال کریں۔
+ان [ پوسٹرز، بینرز، اسٹیکرز، ویڈیوز اور مزید کچھ](<%= resolve_url('/promote/resources') %>) خAVود اپنے ایونٹ کے لیے استعمال کریں۔.
 
-## 2. Find a local volunteer to help you with your event.
+## 2. اپنے ایونٹ کے ساتھ آپ کی مدد کرنے کے لئے مقامی رضاکارانہ تلاش کریں.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Plan your Hour of Code
+## 3. آپ کے کوڈ کا قیام کی منصوبہ بندی کریں
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+اپنے کلاس روم کے لئے [ کوڈ کا سرگرمی ](https://hourofcode.com/learn) منتخب کریں اور [ جائزہ لیں یہ کس طرح رہنمائی ](٪= resolve_url('/how-to') ٪).
 
-# Go beyond an Hour of Code
+# ایک گھنٹہ کوڈ سے باہر جاؤ
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> کوڈ کا ایک گھنٹہ صرف آغاز ہے. چاہے آپ منتظم ہیں، استاد، یا وکیل ہیں، ہمارے پاس [ پیشہ ورانہ ترقی، نصاب، اور وسائل ہیں جو آپ کو کمپیوٹر سائنس کے اسکولوں کو آپ کے اسکول میں لانے یا اپنی پیشکشوں کو بڑھانے میں مدد کرنے کے لۓ ہے. ](https://code.org/yourschool). اگر آپ پہلے ہی کمپیوٹر سائنس سیکھتے ہیں، تو CS سیکنڈر ہفتہ کے دوران آپ کے انتظامیہ، والدین، اور کمیونٹی سے ریلی کی مدد سے ان وسائل کا استعمال کریں.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+آپ کے اسکول کو فٹ ہونے کے لۓ آپ کے بہت سے انتخاب ہیں. قیامت کے کوڈ سبق کی پیشکش کی زیادہ تر تنظیموں میں نصاب اور پیشہ ورانہ ترقی بھی دستیاب ہے. اگر آپ کو سبق پسند ہے تو، مزید جانے کے بارے میں پوچھیں. آپ کو شروع کرنے میں مدد کرنے کے لئے، ہم نے ایک بہت سے [ نصاب فراہم کرنے والے کو نمایاں کیا ہے جو آپ یا آپ کے طالب علموں کو ایک گھنٹہ سے باہر جانے میں مدد ملے گی. ](https://hourofcode.com/beyond)
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> کوڈ کا ایک گھنٹہ صرف آغاز ہے. قیامت کے کوڈ سبق کی پیشکش کی زیادہ سے زیادہ اداروں کو بھی مزید جانے کے لئے نصاب دستیاب ہے. آپ کو شروع کرنے میں مدد کرنے کے لئے، ہم نے ایک بہت سے [ نصاب فراہم کرنے والے کو نمایاں کیا ہے جو آپ یا آپ کے طالب علموں کو ایک گھنٹہ سے باہر جانے میں مدد ملے گی. ](https://hourofcode.com/beyond)
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Code.org بھی آپ کو یا آپ کی قیمت میں 25 سے زائد زبانوں میں ترجمہ کردہ مکمل [ تعارف کمپیوٹر سائنس کورس ](https://code.org/educate/curriculum/cs-fundamentals- بین الاقوامی) پیش کرتا ہے. اسکول. <% end %>
 
 <%= view 'popup_window.js' %>

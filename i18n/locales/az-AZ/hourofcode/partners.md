@@ -11,7 +11,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Latın Amerikası Tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Afrika tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Avstraliya tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Çin tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Fransa tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# İndoneziya tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# İrlandiya tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'in' %>
 
-# India Partners
+# Hindistan tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Yaponiya tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Hollandiya tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Yeni Zelandiya tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# Birləşmiş Krallıq tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,7 +107,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Kanada tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
@@ -131,7 +131,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Activity Partners
+# Fəaliyyət tərəfdaşları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

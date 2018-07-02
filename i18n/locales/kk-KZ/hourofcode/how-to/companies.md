@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Студенттеріңізді "Кодтау Сағаты" үшін шабыттандырып, жолнұсқа болыңыз
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- Еріктілік білдіріп, қатысу үшін [тіркеліңіз](%= resolve_url('https://code.org/volunteer') %).
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Кәсіпшіліктердің "Кодтау Сағатын" қолдауы үшін басқа да әдістер:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
 - Жергілікті оқушыларға немесе бейкоммерциялық түрде серіктестестеріңізге өзіңіздің кәсіпшілік аяңызда "Кодтау Сағатын" өткізіңіз.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](%= resolve_url('
 ## 1. Promote your Hour of Code
 
 - Өзіңіздің ["Кодтау Сағатын"](%= resolve_url('/promote') %) жарнамалап, басқаларын да іс-шараға тартуға талпыныңыз.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Олар сыныппен байланыста болулары үшін, [тіркеле](%= resolve_url('https://code.org/volunteer/engineer') %) алады.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -64,11 +64,11 @@ We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for
     
     **Ideas to introduce your Hour of Code activity to students:**
     
-    - Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+    - Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
     - Сіздер технологиялық серіктестік болсаңыздар, өздеріңіздің жасаған қызықты да көңілді тапсырма түрлерін өткізулеріңізге болады.
     - Егер де технологиялық серіктестік болмасаңыздар, технология арқылы қалай мақсаттарға жетуге болатынын және де қандай қажеттіліктері бар екенін ойлап көріңіз.
     - Өз серіктестігіңізден әр түрлі бағдарлама жасаушыларды шақырып, олардың осы жолға қалай келгенін, қандай жұмыстар атқаратынын және басқа да қызықтыратын әңгіме айтуларын сұраңыз.
-    - [Мына сілтеме бойынша](%= resolve_url('https://code.org/girls') %) компьютерлік салада қыз балалардың қызығушылығын арттыратын салдар кеңестерін іздестіріп көріңіз.
+    - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
     
     ## 6. Code!
     
@@ -105,7 +105,7 @@ We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for
     
     ## 7) Марапаттаңыз
     
-    - [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
+    - [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
     - ["Кодтау Сағатын бітірдім!"](%= resolve_url('/promote/resources#stickers') %) деген жапсырмалар басып шығарыңыз.
     - Жұмыс берушілеріңізге [арнайы жасалған жеңіл жейдешелерге](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) тапсырыс беріңіз.
     - Әлеуметтік жүйелерге "Кодтау Сағатынан" жиналған суреттер мен видеоларды салып, біз де сіздің табысыңызды жариялауымыз үшін #HourOfCode хэштэгін, және де @codeorg аккаунтын белгілеңіз!

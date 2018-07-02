@@ -1,4 +1,5 @@
-"da":
+---
+da:
   data:
     game:
       name:
@@ -306,120 +307,8 @@
           ind i TNT boksen!
         maze_3_4: Argh! Skriv mig et program, som får mig omkring TNT'en og hen til
           grisen.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Vedhæft en blok til "når venstre pil"-blokken og tryk på "Kør Program".
-          Flyt battet ved hjælp af venstre pil for at nå slut-målet.
-        bounce_2: Vedhæft en blok til "når højre pil" og "når venstre pil" blokkene.
-          Flyt battet for at nå begge slut-mål.
-        bounce_3: Nu prøve noget lignende med "når op pil" blokken. Flyt battet for
-          at nå målet øverst.
-        bounce_4: Denne gang har du har brug for at tilføje fire blokke. Flyt battet
-          til alle fire mål for at løse opgaven.
-        bounce_5: Vi vil sende en bold flyvende ned mod pagajen. Vedhæft en blok til
-          "når bolden rammer pagajen"-blokken for at sikre at bolden når slut-målet.
-        bounce_6: Nu er målet øverst. Du skal knytte blokke til begge "når bold rammer"-blokkene
-          for at løse denne opgave.
-        bounce_7: Tilføj blokke til hver af "når"-blokkene. Ram bolden indtil den
-          rammer slut-målet.
-        bounce_10: Der er nu et mål på toppen. Vedhæft "score point" og "score modstander-point"-blokke
-          til "når bolden i mål" og "når bolden misser paddel"-blokkene for at gøre
-          et spil klar. Se hvor mange point du kan score før din modstander scorer
-          to gange.
-        bounce_11: Du kan nu vedhæfte blokke til "Hvornår spillet starter" blokken.
-          Du skal vedhæfte den nye "lancere nye bold" blok i mere end ét sted. Også
-          prøve at ændre scenen eller hastigheden af pagajen og bolden og se, hvor
-          mange point du kan score før din modstander scorer to gange.
-        bounce_12: Opret dit eget Hoppe spil. Du kan ændre alle visuelle og reglerne.
-          Når du er færdig, klik på del for at lade venner prøve dit spil på deres
-          telefoner.
         Custom_builder: Træk blokke fra værktøjskassen til arbejdsområdet for at tegne
           det niveau, du ønsker at oprette. Tryk på "Kør Program", når du er klar.
-        flappy_1: Vedhæft en blok til "når der klikkes" blokken, derefter tryk på
-          "Kør Program". Klik på eller tryk på skærmen for at flytte Flappy til målet.
-        flappy_2: Vi har nu tilføjet noget jord.  Vedhæft en blok til "når rammer
-          jorden"-blok.  Din kode skal 'SLUTTE SPILLET' når Flappy falder.
-        flappy_3: '"Når spillet starter"-blokken tillader dig at køre kode, når dit
-          spil startes.  Prøv indstilling af niveau hastighed og flapping mod målet.'
-        flappy_4: Flappy vil flyve gennem forhindringer, medmindre du skriver kode
-          for at få ham til at falde ned. Vedhæft en blok til "når ramte en hindring"-blok.
-          Din kode skal 'SLUTTE SPILLET' når Flappy rammer det første sæt af rør.
-        flappy_5: Lad os tilføje en resultattavle, og tælle point når Flappy klarer
-          sig forbi forhindringer. Føj til "når passerer en hindring"-blokken, og
-          derefter scorer et point ved at flyve Flappy gennem det første sæt af rør.
-        flappy_6: Se om du stadig kan score et point efter at have fået Flappy til
-          flappe mere eller mindre.
-        flappy_7: Næste, forsøge at ændre scenen ved at vedhæfte en anden blok til
-          den "når kør program" blok.
-        flappy_8: Du kan indstille visuelle ting når som helst, ikke bare når spillet
-          starter. Prøv at sætte en tilfældig scene, når andre begivenheder sker,
-          for eksempel, når de passerer en hindring.
-        flappy_9: For at blande tingene, så prøv at sætte score til 0, når man rammer
-          en forhindring, stedet for at afslutte spillet.
-        flappy_11: Opret dit egen Flappy spil. Du kan ændre alle visuelle ting og
-          alle regler, selv tyngdekraften. Når du er færdig, klik på del for at lade
-          dine venner prøve dit spil på deres mobil-telefoner.
-        flappy_k1_1: Spil Flappy
-        flappy_k1_2: Vedhæft en blok til "når der klikkes" blokken, derefter tryk
-          på "Kør Program". Klik på eller tryk på skærmen for at flytte Flappy til
-          målet.
-        flappy_k1_3: Vi har nu tilføjet noget jord.  Vedhæft en blok til "når rammer
-          jorden"-blok.  Din kode skal 'SLUTTE SPILLET' når Flappy falder.
-        flappy_k1_4: '"Når spillet starter"-blokken tillader dig at køre kode, når
-          dit spil startes.  Prøv indstilling af niveau hastighed og flapping mod
-          målet.'
-        flappy_k1_5: Flappy vil flyve gennem forhindringer, medmindre du skriver kode
-          for at få ham til at falde ned. Vedhæft en blok til "når ramte en hindring"-blok.
-          Din kode skal 'SLUTTE SPILLET' når Flappy rammer det første sæt af rør.
-        flappy_k1_6: Lad os tilføje en resultattavle, og tælle point når Flappy klarer
-          sig forbi forhindringer. Føj til "når passerer en hindring"-blokken, og
-          derefter scorer et point ved at flyve Flappy gennem det første sæt af rør.
-        flappy_k1_7: Se om du kan score flere point for at klare forbi en hindring
-        flappy_k1_8: Næste, forsøge at ændre scenen ved at vedhæfte en anden blok
-          til den "når kør program" blok.
-        flappy_k1_9: Prøv at ændre afspilleren ved at knytte et "sæt spiller" blok
-          til "når kører" blokken.
         jigsaw_1: Klik på blokken
         jigsaw_2: Træk blokken til målet
         jigsaw_3: Flyt blokkene så de danner billedet
@@ -825,9 +714,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Byg en Galakse med Code - Introduktion'
         starwars_typing: 'Star Wars: Byg en Galakse med Code - JavaScript'
         starwars_events: 'Star Wars: Byg en Galakse med Code - begivenheder'
@@ -883,6 +769,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Sløjfer
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok

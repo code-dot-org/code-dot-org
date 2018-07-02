@@ -1,0 +1,16 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenUpArrow",
+    "blockText": "when up arrow pressed",
+    "args": [
+
+    ],
+    "eventBlock": true
+  }
+}

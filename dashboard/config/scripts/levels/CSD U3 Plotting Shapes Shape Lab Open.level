@@ -178,7 +178,6 @@
       "return": null,
       "comment": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Drawing Shapes\r\n\r\nExplore using this tool that lets you draw different colored shapes. \r\n\r\nMake sure you hit \"Run\" and try out turning on the grid to help you place shapes precisely.\r\n\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59 PM.png)",

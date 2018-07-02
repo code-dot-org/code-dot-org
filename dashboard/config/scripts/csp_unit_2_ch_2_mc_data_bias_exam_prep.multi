@@ -1,0 +1,18 @@
+name 'CSP Unit 2 Ch 2 MC data bias_exam_prep'
+title 'Data Bias'
+type 'multi2'
+description ' '
+
+question ' ' 
+
+wrong 'She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.'
+right 'She learns that responses were collected only by mobile app.'
+right 'She learns that the survey was only available to students who scored at the top 10% on the PSAT.'
+wrong 'She learns the survey was available to complete in both digital and paper form.'
+markdown <<MARKDOWN
+This question refers to the same data from the High School Survey about college plans from the previous question.
+
+Amara plans to use the survey data to create a visualization and short write up about students’ plans for college, but first she wants to learn more about how the survey was conducted. Of the following things she might learn about the survey, which are the **most likely** sources of bias in the results based how it was collected?
+
+Choose <u>two</u> answers.
+MARKDOWN

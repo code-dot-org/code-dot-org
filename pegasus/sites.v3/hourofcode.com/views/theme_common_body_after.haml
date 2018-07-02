@@ -1,8 +1,6 @@
 :javascript
   $(function() {
-    selectize = $('#language-dropdown select').selectize({
-      plugins: ['fast_click']
-    });
+    selectize = $('#language-dropdown select').selectize();
     $('#language-dropdown').attr('style', 'visibility: visible;');
 
     // When nav hamburger is clicked, toggle responsive menu

@@ -2,16 +2,17 @@ import _ from 'lodash';
 import {expect} from '../../../../util/configuredChai';
 import {
   CIRCUIT_PLAYGROUND_PORTS,
+  CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
   REDBOARD_PORTS,
   FLORA_PORTS,
   OSX_DEFAULT_PORTS,
-  OTHER_BAD_SERIALPORTS
+  OTHER_BAD_SERIALPORTS,
 } from './sampleSerialPorts';
 import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPort
 import {ConnectionFailedError} from '@cdo/apps/lib/kits/maker/MakerError';
 import {
   findPortWithViableDevice,
-  getPreferredPort
+  getPreferredPort,
 } from '@cdo/apps/lib/kits/maker/portScanning';
 
 describe("maker/portScanning.js", function () {
@@ -44,6 +45,14 @@ describe("maker/portScanning.js", function () {
           })
           .catch(done);
     });
+
+    it(`allows the Circuit Playground Express`, () => {
+      ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
+      return findPortWithViableDevice()
+        .then(port => {
+          expect(port).to.equal('COM5');
+        });
+    });
   });
 
   describe(`getPreferredPort(portList)`, () => {
@@ -52,12 +61,26 @@ describe("maker/portScanning.js", function () {
         // Try random port order to prove that it doesn't matter
         const ports = _.shuffle([
           circuitPlaygroundPort,
+          ...CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
           ...FLORA_PORTS,
           ...REDBOARD_PORTS,
           ...OSX_DEFAULT_PORTS,
           ...OTHER_BAD_SERIALPORTS
         ]);
-        expect(getPreferredPort(ports)).to.equal(circuitPlaygroundPort);
+        expect(getPreferredPort(ports)).to.deep.equal(circuitPlaygroundPort);
+      });
+    });
+
+    it('picks a Circuit Playground Express over other ports', () => {
+      CIRCUIT_PLAYGROUND_EXPRESS_PORTS.forEach(expressPort => {
+        const ports = _.shuffle([
+          expressPort,
+          ...FLORA_PORTS,
+          ...REDBOARD_PORTS,
+          ...OSX_DEFAULT_PORTS,
+          ...OTHER_BAD_SERIALPORTS,
+        ]);
+        expect(getPreferredPort(ports)).to.equal(expressPort);
       });
     });
 

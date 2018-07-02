@@ -1,4 +1,5 @@
-"de":
+---
+de:
   data:
     game:
       name:
@@ -286,8 +287,8 @@
           das Loch zu füllen?
         maze_karel_debug_if: Hilfe! Repariere das Programm, damit mein Feld komplett
           flach wird.
-        maze_karel_debug_if_else: "Überprüfe dieses Programm auf Fehler und beseitige
-          sie, damit ich alle Löcher auffüllen und alle Erdhaufen entfernen kann."
+        maze_karel_debug_if_else: Überprüfe dieses Programm auf Fehler und beseitige
+          sie, damit ich alle Löcher auffüllen und alle Erdhaufen entfernen kann.
         maze_karel_debug_function_1: Was musst du am Programm ändern, damit es mir
           hilft, alle Erdhaufen zu entfernen?
         maze_karel_debug_function_2: Kannst du dieses Programm für mich auf Fehler
@@ -319,145 +320,9 @@
           die TNT-Kiste laufe!
         maze_3_4: Argh! Schreibe mir ein Programm, das mich um den TNT-Sprengstoff
           herum zum Schwein bringt.
-        bounce_1_basketball: |-
-          Berühre die Fahne. \r
-          Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und starte das Programm mit „Ausführen“ \r
-          \r
-          Klicke mit der Maus auf den Linkspfeil, um die Hand zur Fahne zu bewegen.
-        bounce_2_basketball: Nun gibt es zwei Fahnen. Hänge einen Baustein an die
-          „wenn-Pfeil-nach-rechts“- und „wenn-Pfeil-nach-links“-Bausteine. Bewege
-          den Schläger, um beide Ziele zu erreichen.
-        bounce_5_basketball: |-
-          Wir lassen nun einen Ball nach unten in Richtung der Hand fliegen.\r
-          \r
-          Hänge einen Baustein an den "wenn Ball die Hand trifft"-Baustein, damit der Ball das Ziel erreicht.
-        bounce_6_basketball: Jetzt ist das Ziel oben. Nun musst du Bausteine an beide
-          "Wenn Ball auftrifft"-Bausteine anhängen um diese Aufgabe zu lösen.
-        bounce_7_basketball: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den
-          Ball hüpfen, bis er das Ziel trifft.
-        bounce_10_basketball: |-
-          Jetzt ist das Tor oben. Programmiere das ein Spiel so: Hänge die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und „Wenn Ball die Hand verfehlt“.\r
-          \r
-          Starte das Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei Punkte erzielt.
-        bounce_11_basketball: |-
-          Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein anhängen. Den neuen Baustein „neuen Ball werfen“ musst Du an mehr als einer Stelle einsetzen. Versuche auch die Geschwindigkeit der Hand und des Balls zu verändern .\r
-          \r
-          Starte das Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei Punkte erzielt.
-        bounce_12_basketball: Erstelle Dein eigenes Basketball-Spiel. Du kannst die
-          Regeln ändern. Wenn Du fertig bist, klicke auf fertigstellen, um Deine Freunde
-          das Spiel auf ihrem Handys ausprobieren zu lassen.
-        bounce_1_sports: |-
-          Berühre die Fahne. \r
-          Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und starte das Programm mit „Ausführen“ \r
-          \r
-          Klicke mit der Maus auf den Linkspfeil, um den Spieler zur Fahne zu bewegen.
-        bounce_2_sports: Nun gibt es zwei Fahnen. Hänge je einen Baustein an die „wenn-Pfeil-nach-rechts“-
-          und „wenn-Pfeil-nach-links“-Bausteine, damit Du den Spieler in beide Richtungen
-          bewegen kannst.
-        bounce_5_sports: |-
-          Wir lassen nun einen Hockey-Puck nach unten in Richtung vom Spieler fliegen.\r
-          \r
-          Hänge einen Baustein an den "wenn Ball den Spieler trifft"-Baustein, damit der Ball das Ziel erreicht.
-        bounce_6_sports: Jetzt ist das Ziel oben. Nun musst du Bausteine an beide
-          "Wenn Ball auftrifft"-Bausteine anhängen um diese Aufgabe zu lösen.
-        bounce_7_sports: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball
-          hüpfen, bis er das Ziel trifft.
-        bounce_10_sports: |-
-          Jetzt ist das Tor oben. Programmiere das ein Spiel so: Hänge die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und „Wenn Ball die Hand verfehlt“.\r
-          \r
-          Starte das Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei Punkte erzielt.
-        bounce_11_sports: |-
-          Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein anhängen. Den neuen Baustein „neuen Ball werfen“ musst Du an mehr als einer Stelle einsetzen. Versuche auch die Geschwindigkeit der Hand und des Balls zu verändern .\r
-          \r
-          Starte das Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei Punkte erzielt.
-        bounce_12_sports: "Jetzt bist Du an der Reihe: Erstelle dein eigenes Spiel.
-          Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\r\n\\r
-          \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das
-          Spiel auf ihren Smartphones ausprobieren."
-        bounce_1: Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und
-          drücke „Ausführen“. Bewege den Schläger mit dem Linkspfeil, um das Ziel
-          zu erreichen.
-        bounce_2: Hänge einen Baustein an die „wenn-Pfeil-nach-rechts“- und „wenn-Pfeil-nach-links“-Bausteine.
-          Bewege den Schläger, um beide Ziele zu erreichen.
-        bounce_3: Versuche nun, etwas Ähnliches mit dem „wenn-Pfeil nach-oben“-Baustein
-          zu erreichen. Bewege den Schläger zum Ziel am oberen Rand.
-        bounce_4: Jetzt musst du vier Bausteine anhängen. Bewege den Schläger zu allen
-          vier Zielen, um diese Aufgabe zu lösen.
-        bounce_5: Wir lassen nun einen Ball nach unten in Richtung Schläger fliegen.
-          Hänge einen Baustein an den "wenn Ball den Schläger trifft"-Baustein, um
-          sicherzustellen, dass der Ball das Ziel erreicht.
-        bounce_6: Jetzt ist das Ziel oben. Du musst Bausteine an beide "Wenn Ball
-          auftrifft"-Bausteine anhängen, um diese Aufgabe zu lösen.
-        bounce_7: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball hüpfen,
-          bis er das Ziel trifft.
-        bounce_10: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt erzielen“ und
-          „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und „Wenn Ball
-          Schläger verfehlt“, um ein Spiel zu erzeugen. Finde heraus, wie viele Punkte
-          du erreichen kannst, bevor dein Gegner zwei Punkte erhält.
-        bounce_11: Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein anhängen.
-          Du musst den neuen Baustein „neuen Ball werfen“ an mehr als einer Stelle
-          einsetzen. Versuche, die Geschwindigkeit des Schlägers und des Balls zu
-          verändern und probiere, wie viele Punkte Du machen kannst, bevor dein Gegner
-          zwei Mal punktet.
-        bounce_12: Erstelle dein eigenes Bounce-Spiel. Du kannst die Bilder und Regeln
-          ändern. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde
-          das Spiel auf ihren Smartphones ausprobieren.
         Custom_builder: Ziehe Bausteine aus deiner Werkzeugkiste auf den Arbeitsplatz,
           um den Level zu zeichnen, den du erstellen möchtest. Drücke auf "Ausführen",
           wenn du bereit bist.
-        flappy_1: Hänge einen Baustein an den „Beim Klicken“-Baustein an und drücke
-          dann auf „Ausführen“. Klicke oder berühre den Bildschirm, um Flappy zum
-          Ziel zu bewegen.
-        flappy_2: Jetzt haben wir etwas Boden hinzugefügt.  Hänge einen Baustein an
-          den „Wenn den Boden getroffen“-Baustein.  Dein Code muss das Spiel beenden,
-          wenn Flappy abstürzt.
-        flappy_3: Der „wenn Ausführen“-Baustein ermöglicht das Ausführen des Codes,
-          wenn dein Spiel beginnt.  Stelle die Levelgeschwindigkeit ein und flattere
-          zum Ziel.
-        flappy_4: Flappy wird durch die Hindernisse fliegen, bist du Code schreibst,
-          der ihn zum Abstürzen bringt. Hänge einen Baustein an den „Wenn ein Hindernis
-          getroffen wird“-Baustein. Dein Code muss das Spiel beenden, wenn Flappy
-          gegen das erste Hindernis stößt.
-        flappy_5: Fügen wir eine Punkteanzeige hinzu und geben immer dann Punkte,
-          wenn Flappy durch ein Hindernis fliegt. Hänge den Baustein an den „Wenn
-          Hindernis überwunden“-Baustein und hole dir einen Punkt, indem du Flappy
-          durch das erste Hindernis fliegst.
-        flappy_6: Versuche, ob du auch dann einen Punkt erzielen kannst, wenn Flappy
-          schwächer oder stärker flattert.
-        flappy_7: Versuche als nächstes, die Szene zu ändern, indem du einen weiteren
-          Baustein zum "wenn Ausführen" Baustein hinzufügst.
-        flappy_8: Du kannst jederzeit Hintergründe festlegen, nicht nur zu Spielbeginn.
-          Versuche, einen zufälligen Hintergrund zu setzen, wenn andere Ereignisse
-          stattfinden, zum Beispiel wenn ein Hindernis überwunden wird.
-        flappy_9: 'Jetzt sorgen wir für etwas Abwechslung: Statt das Spiel zu beenden,
-          setze den Punktestand auf 0 zurück, wenn du auf ein Hindernis triffst.'
-        flappy_11: Programmiere Dein eigenes "Flappy"-Spiel. Du kannst alle Bilder
-          und Regeln ändern, sogar die Schwerkraft. Wenn Du fertig bist, klicke auf
-          "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
-        flappy_k1_1: Flappy spielen
-        flappy_k1_2: Füge dem "Beim Klicken"-Baustein einen weiteren Baustein hinzu
-          und drücke dann "Ausführen". Klicke oder tippe auf den Bildschirm, um Flappy
-          zum Ziel zu bewegen.
-        flappy_k1_3: Nun haben wir etwas Boden hinzugefügt. Füge dem "Wenn auf Boden
-          gestürzt"-Baustein einen weiteren Baustein hinzu. Dein Programm benötigt
-          einen "Spiel beendet"-Baustein, wenn Flappy zu Boden stürzt.
-        flappy_k1_4: Der "Wenn ausführen" Baustein erlaubt dir Code auszuführen, wenn
-          dein Spiel startet. Versuche die Geschwindigkeit zu ändern und zum Ziel
-          zu fliegen.
-        flappy_k1_5: Flappy fliegt durch Hindernisse hindurch, es sei denn, du programmierst
-          ihn so, dass er abstürzt. Füge einen Baustein zum "Wenn Hindernis getroffen"-Baustein
-          hinzu. Dein Code muss das Spiel beenden, wenn Flappy gegen die ersten Rohre
-          fliegt.
-        flappy_k1_6: Füge einen Punktezähler hinzu, der Punkte zählt, wenn Flappy
-          es an Hindernissen vorbeischafft. Füge ihn zum "Wenn Hindernis überwunden"-Baustein
-          hinzu und erziele einen Punkt, indem du Flappy durch die erste Reihe von
-          Rohren fliegst.
-        flappy_k1_7: Versuche mehrere Punkte zu erzielen, indem du den ersten Hindernis
-          umfliegst.
-        flappy_k1_8: Versuche als nächstes die Szene zu ändern indem du einen weitern
-          Baustein zum "Wenn ausführen" Baustein hinzufügst.
-        flappy_k1_9: Versuche den Charakter zu ändern, indem du einen "Spieler setzen"-Baustein
-          zum "wenn Ausführen"-Baustein hinzufügst.
         jigsaw_1: Klicke auf den Baustein
         jigsaw_2: Ziehe den Baustein zum Ziel
         jigsaw_3: Ordne die Teile an um das Bild zu erstellen
@@ -880,9 +745,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code – Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code – JavaScript'
         starwars_events: 'Star Wars: Erbaue ein Galaxie aus Code – Ereignisse'
@@ -939,6 +801,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Einführung in Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Schleifen
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den

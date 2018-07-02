@@ -4,6 +4,7 @@
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env}")
 - user_type = request.cookies[cookie_key]
+- user_type = "student" if user_type == "student_y"
 
 %script=view 'google_analytics.js', user_type: user_type
 

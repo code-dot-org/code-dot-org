@@ -59,7 +59,7 @@ th:
   courses: 'คอร์ส'
   courses_page:
     title_student: "เรียนกับ Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'กิจกรรมถอดปลั๊ก'
   of: "ของ"
   more: "เพิ่มเติม"
@@ -69,7 +69,7 @@ th:
   try_k8intro: "ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)"
   k8intro: "K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)"
   already_started: "พร้อมที่จะเริ่มแล้วหรือยัง.  ต่อทางนี้"
-  demos: 'Admin: ตัวสาธิตทั้งหมด'
+  demos: "Admin: ตัวสาธิตทั้งหมด"
   continue: 'ต่อไป'
   prize: 'รางวัล'
   more_info: 'ข้อมูลเพิ่มเติม'
@@ -85,6 +85,7 @@ th:
     facebook: 'เฟซบุค'
     windowslive: 'บัญชี Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'ลืมรหัสผ่าน?'
     need_confirmation: "ไม่ได้รับการยืนยันคำแนะนำ?"
     need_unlock: "ไม่ได้รับคำแนะนำในการปลดล็อค?"
@@ -114,15 +115,25 @@ th:
     valid_password: "รหัสผ่านถูกต้อง"
     invalid_password: "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร"
     mismatch_password: "รหัสผ่านที่คุณป้อนไม่ตรงกัน"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "ข้าพเจ้ายอมรับผูกพันตาม<a href='http://code.org/tos'>เงื่อนไขการให้บริการ</a>ของ Code.org ถ้าหากข้าพเจ้าอายุต่ำกว่า 13 ปี ข้าพเจ้ายืนยัน โดยส่งแบบฟอร์มนี้ว่า มีคุณพ่อคุณแม่หรือผู้ปกครองตามกฎหมายอนุญาตให้ใช้บริการ Code.org. <br/> <br/> ไม่มีการจัดเก็บที่อยู่อีเมล์ในแบบฟอร์มที่ให้เราได้ติดต่อนักเรียน นักเรียนจะไม่รับอีเมล์จาก Code.org ยกเว้นการกู้คืนรหัสผ่าน ดูข้อมูลเพิ่มเติมจาก <a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา"
     teacher_terms: "ข้าพเจ้ายอมรับผูกพันตามเงื่อนไขการให้บริการของ Code.org สำหรับข้อมูลเพิ่มเติมเกี่ยวกับความเป็นส่วนตัว ดูได้จาก<a href='http://code.org/privacy'>นโยบายความเป็นส่วนตัว</a>ของเรา"
     additional_information: "เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ"
+    user_type_button: "Update Account Type"
     user_type_label: "ประเภทบัญชี"
     user_type_teacher: "ครู"
     user_type_student: "นักเรียน"
     field_is_required: "จำเป็น"
     accept_terms: "คุณต้อง ยอมรับ เพื่อสร้างบัญชี"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "ใช่"
+    email_preference_no: "ไม่ใช่"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -171,6 +182,7 @@ th:
       email: 'ที่อยู่อีเมล'
       submit: 'ส่ง'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'เปลี่ยนรหัสผ่านของคุณ'
@@ -201,7 +213,7 @@ th:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'ข้อความล๊อกอิน'
       email: 'อีเมล'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -220,7 +232,7 @@ th:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'การแจ้งเตือนของ Code.org: ขณะนี้ %{student_name} ไม่เเป็นนักเรียนของคุณ'
+        subject: "การแจ้งเตือนของ Code.org: ขณะนี้ %{student_name} ไม่เเป็นนักเรียนของคุณ"
   reports:
     error:
       access_denied: "คุณไม่สามารถเข้าถึงสถิติของบุคคลนี้"
@@ -253,15 +265,15 @@ th:
         artist: 'วาดอะไรสักอย่างสิ'
         calculate: 'Calculate something'
         applab: 'สร้างแอพ "ห้องทดลองแอพ"'
-        gamelab: 'Make a Game Lab project'
-        weblab: 'Make a Web Lab (beta) project'
+        gamelab: 'สร้างโปรเจคเกมแลป'
+        weblab: 'สร้างโปรเจคเว็บแลป (เบต้า)'
       home: "Home"
       my_dashboard: "My Dashboard"
       courses: "คอร์ส"
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
       sections: "Sections"
-      help_support: "Help and support"
+      help_support: "การช่วยเหลือและสนับสนุน"
       report_bug: "Report bug"
       teacher_community: "Teacher community"
       professional_learning: "Professional Learning"
@@ -288,8 +300,8 @@ th:
       about_contact: "Contact Us"
       about_faqs: "FAQs"
       learn: "Learn"
-      stats: "Stats"
-      help_us: "Help Us"
+      stats: "สถิติ"
+      help_us: "ช่วยเรา"
       teach: "Teach"
       about: "About"
     user:
@@ -348,11 +360,12 @@ th:
     email_confirm_needed_required: 'อีเมล์ %{email} ของคุณยังไม่ได้รับการยืนยัน：'
     email_confirm_wrong_email: '(อีเมล์ไม่ถูกต้องหรือเปล่า?)'
     email_resend_confirm: 'ส่งคำแนะนำการยืนยันตัวอีกครั้ง'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(ปล่อยว่างไว้ถ้าคุณไม่ต้องการเปลี่ยน)"
     current_password_hint: '(we need your current password to confirm your changes)'
-    delete: 'Delete your account'
-    delete_text: "Clicking the button below will delete your account."
-    delete_text_teacher_note: 'Please note: deleting your account will not delete your students'' accounts.'
+    delete: 'Delete Account'
+    delete_text: "Deleting your account will erase all information and progress connected to this account."
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -363,10 +376,11 @@ th:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'สมบูรณ์'
     tried: 'Tried'
@@ -448,6 +462,7 @@ th:
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
     already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "เรียนกับ Code Studio"
     description: "Anyone can learn computer science. Make games, apps and art with code."
@@ -455,13 +470,15 @@ th:
   gender:
     male: 'ชาย'
     female: 'หญิง'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'ไม่ต้องการตอบ'
   user_type:
     student: 'นักเรียน'
     teacher: 'ครู'
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
-    help_from_html: 'เราระลึกถึงเหล่าวิศวกรจาก Google Microsoft Facebook และ Twitter รวมถึงคนอื่น ๆ ที่ช่วยกันสร้างบทเรียนนี้ขึ้นมา'
+    help_from_html: 'เราขอขอบคุณเหล่าวิศวกรจาก กูเกิล ไมโครซอฟท์ เฟสบุคส์ และ ทวิตเตอร์ รวมถึงคนอื่น ๆ ที่ช่วยกันสร้างสรรค์บทเรียนนี้ขึ้นมา'
     help_from_html_old: 'เหล่าวิศวกรจาก Google Microsoft Facebook และ Twitter ได้ช่วยกันสร้างบทเรียนนี้ขึ้น'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
@@ -484,7 +501,7 @@ th:
     how_it_works: 'มันทำงานได้อย่างไร'
     try_hour_of_code: 'Try an Hour of Code!'
   reference_area:
-    title: 'ต้องการความช่วยเหลือเหรอ?'
+    title: 'ต้องการความช่วยเหลือ?'
     subtitle: 'ดูวิดีโอและคำใบ้พวกนี้'
     teacher: 'ดูทางเลือก'
     teacher_no_solution: 'Stop seeing solution'
@@ -493,11 +510,11 @@ th:
     direction: 'Start Direction (in degrees)'
   video:
     tab: 'วิดีโอ'
-    notes: 'ไม่มีวิดีโอเหรอ? แสดงบันทึกย่อแทนซิ'
+    notes: 'ไม่มีวิดีโอหรือ? อ่านบันทึกย่อแทนก็ได้นะ'
     notes_coming_soon: 'เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้'
     autoplay_option: 'วิดีโอเริ่มเล่นอัตโนมัติ'
     download: 'ดาวน์โหลดวิดีโอ'
-    show_notes: 'Show Notes'
+    show_notes: 'แสดงเป็นข้อความ'
     show_video: 'Show Video'
   compatibility:
     upgrade:
@@ -521,7 +538,7 @@ th:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: "Check out my Bounce Game"
     flappy_og_title: "Check out my Flappy Game"
-    studio_og_title: "Check out my Play Lab App"
+    studio_og_title: "มาลองแอปเพลย์แลป ของฉัน"
     check_out_what_i_made: "Check out what I made"
     og_description: "I wrote the code myself with Code.org"
     phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
@@ -580,14 +597,14 @@ th:
     starwars:
       title: "Star Wars"
     infinity:
-      title: "Infinity Play Lab"
+      title: "เรื่องราวและเกม"
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
     minecraft:
       title: "Minecraft"
       body: "Explore a Minecraft world through code."
     minecraft2016:
       title: "Minecraft"
-      body: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง"
+      body: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง"
     hero:
       title: "Minecraft"
       body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
@@ -621,7 +638,7 @@ th:
     caption_by_name_age: "by %{name}, age %{age}"
     caption_time_ago: "%{time_ago} ago"
     header: "แกลเลอรี่"
-    header_playlab: "Stories and games"
+    header_playlab: "เรื่องราวและเกม"
     header_artist: "ศิลปิน"
     report_abuse: "รายงานการละเมิด"
   landing:
@@ -631,14 +648,14 @@ th:
     support: "Get Help"
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
-    help_support: "Help and support"
+    help_support: "การช่วยเหลือและสนับสนุน"
     documentation: "Documentation"
     tutorials: "Tutorials"
   multi:
     wrong_title: "Incorrect answer"
-    wrong_body: "The answer you've entered is not correct.  Please try again!"
+    wrong_body: "คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
   multi-submittable:
@@ -667,10 +684,10 @@ th:
     submit-complete-title: "Submit your assessment"
     submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
   match:
-    wrong_title: "Incorrect solution"
-    wrong_body: "The solution you've entered is not correct.  Please try again!"
+    wrong_title: "คำตอบไม่ถูกต้อง"
+    wrong_body: "โซลูชันที่คุณใส่ไม่ถูกต้อง กรุณาลองอีกครั้ง"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
   contract_match:
     wrong_title: "Incorrect answer"
     badname: "Your contract has the wrong name."
@@ -684,12 +701,12 @@ th:
     open_response_title: "Thanks"
     open_response_body: "Thanks for your response!"
     correct_title: "Correct"
-    correct_body: "That is the correct answer."
+    correct_body: "เป็นคำตอบที่ถูกต้อง"
   dialog:
     ok: "ตกลง"
     startover_title: "คุณจะเริ่มต้นใหม่จริงๆหรือ ?"
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: "เริ่มใหม่"
+    startover_ok: "เริ่มเล่นใหม่"
     startover_cancel: "ยกเลิก"
   time:
     hour: '1 hour'
@@ -702,12 +719,12 @@ th:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Terms of Service"
     privacy: "นโยบายความเป็นส่วนตัว"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "พิมพ์"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -718,25 +735,25 @@ th:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "บันทึก"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: อาชีพอื่น ๆ
+        other: "อาชีพอื่น ๆ"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "ส่ง"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
@@ -756,20 +773,20 @@ th:
     projects: "Projects"
     create: "Create Project"
     create_a_project: 'Create a new project:'
-    new: "Create New"
-    rename: "Rename"
+    new: "สร้างใหม่"
+    rename: "ตั้งชื่อใหม่"
     save: "บันทึก"
     delete: "ลบ"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
-    my_projects: "My Projects"
+    my_projects: "โปรเจคของฉัน"
     project_gallery: "Projects"
-    publish: "Publish"
-    unpublish: "Unpublish"
+    publish: "เผยแพร่"
+    unpublish: "ไม่เผยแพร่"
     share: "แบ่งปัน"
     share_title: Share your project
     share_copy_link: "Copy the link:"
@@ -794,8 +811,8 @@ th:
     cancel: 'ยกเลิก'
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
-    view_all: 'View My Projects'
-    remix: 'Remix'
+    view_all: 'ดูโปรเจคของฉัน'
+    remix: 'รีมิกซ์'
     click_to_remix: "Click \"Remix\" to spin-off your own version!"
     edit_project: 'Edit Project'
     sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
@@ -865,8 +882,9 @@ th:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ th:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -984,3 +1007,14 @@ th:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'ฉันเห็นด้วย'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'ใช่'

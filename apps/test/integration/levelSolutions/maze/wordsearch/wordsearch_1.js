@@ -1,4 +1,4 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
 
 var reqBlocks = function () {
@@ -37,7 +37,7 @@ module.exports = {
       customValidator: function () {
         // Make sure pegman made it to the end, rather than ending as soon as
         // he tried to leave the path
-        return Maze.pegmanX === 3 && Maze.pegmanY === 1;
+        return Maze.controller.pegmanX === 3 && Maze.controller.pegmanY === 1;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveEast',

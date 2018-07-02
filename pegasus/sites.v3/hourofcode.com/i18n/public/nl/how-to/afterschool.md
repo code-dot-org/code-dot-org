@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Zo kunt u een 'Hour of 'Code' onderwijzen op de na-schoolse opvang of in een club
 
-Word lid van de beweging en laat een groep studenten kennismaken met hun eerste 'Hour of Code' met deze stappen. Het 'Hour of Code' is makkelijk te geven - zelfs voor beginners! Wilt u een extra set handen om te helpen, dan kunt u een [ lokale vrijwilliger](<%= resolve_url('https://code.org/volunteer/local') %>) vragen om te helpen een 'Hour of Code' te geven in uw klas.
+Word lid van de beweging en laat een groep studenten kennismaken met hun eerste 'Hour of Code' met deze stappen. Het 'Hour of Code' is makkelijk te geven - zelfs voor beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 [/col-33]
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [Print de "Ik heb meegedaan met CodeUur!"](<%= resolve_url('/promote/resources#stickers') %>) stickers voor uw leerlingen.
 - [Bestel custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) voor uw school.
 - Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
@@ -110,7 +110,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Bekijk het [CodeUur FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen kunt maken. Zet deze reis voort:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Woon](<%= resolve_url('https://code.org/professional-development-workshops') %>) een 1-dag in-persoon workshop bij, om instructie te krijgen over programmeren van een ervaren programmeur. (Alleen VS leraren)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

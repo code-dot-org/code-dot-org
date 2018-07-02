@@ -1,0 +1,6 @@
+name 'courseE_multi_farmer_predict2_2018'
+question 'What do you think will happen in this puzzle when you press \'Run\'?'
+wrong 'The farmer will walk until she can\'t walk any further, then try to pick a pumpkin that\'s not there.', feedback: 'Incorrect. The \'repeat until at pumpkin\' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+right 'The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.', feedback: 'Correct!'
+wrong 'The farmer will not walk anywhere because there\'s no pumpkin in the first place.', feedback: 'Incorrect. There is a pumpkin and the \'repeat until at pumpkin\' block will make sure that the farmer does not keep going once she reaches the pumpkin.'
+wrong 'I don\'t know.', feedback: 'The \'repeat until at pumpkin\' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.'

@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Εμπνεύστε μαθητές και εθελοντές για την Ώρα του Κώδικα
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Εγγραφή](%= resolve_url('https://code.org/volunteer') %) εθελοντών.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Πρόσθετοι τρόποι υποστήριξης της Ώρας του Κώδικα από εταιρείες:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
 - Φιλοξενήστε κάποια εκδήλωση για την Ώρα του Κώδικα για μια τοπική σχολική τάξη μαθητών ή για έναν μη κερδοσκοπικό οργανισμό στα γραφεία της εταιρείας σας. Δείτε τον σχετικό οδηγό παρακάτω.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](%= resolve_url('
 ## 1. Promote your Hour of Code
 
 - Προωθήστε τη δική σας εκδήλωση [Ώρα του κώδικα](%= resolve_url('/promote') %) και ενθαρρύνετε κι άλλους να την φιλοξενήσουν.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Μπορούν να [εγγραφούν](%= resolve_url('https://code.org/volunteer/engineer') %) για να συνδεθούν με μια τάξη.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - - Αν είστε εταιρία τεχνολογίας, παρουσιάστε διασκεδαστικά, καινοτόμα προϊόντα πάνω στα οποία εργάζεται η εταιρία σας.
 - - Αν δεν είστε τέτοιου είδους εταιρία, συζητήστε τρόπους χρήσης της τεχνολογίας από την εταιρία σας για να επιλύσει προβλήματα και να ολοκληρώσει τους στόχους της.
 - - Καλέστε προγραμματιστές από την εταιρία σας να μιλήσουν σχετικά με τους λόγους που τους οδήγησαν να μελετήσουν την επιστήμη των υπολογιστών και για τα έργα στα οποία εργάζονται.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for
 
 ## 7) Γιορτάστε
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - Εκτυπώστε αυτοκόλλητα [«Έκανα μια Ώρα του Κώδικα!»](%= resolve_url('/promote/resources#stickers') %).
 - [Παραγγείλτε σχετικά t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) για τους εργαζόμενούς σας.
 - Μοιραστείτε φωτογραφίες και βίντεο της εκδήλωσής σας στα μέσα κοινωνικής δικτύωσης. Χρησιμοποιήστε #HourOfCode και @codeorg, ώστε να μπορούμε να αναδείξουμε την επιτυχία σας επίσης!

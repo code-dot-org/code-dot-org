@@ -1,7 +1,7 @@
 class AssignSectionsToCourses < ActiveRecord::Migration[5.0]
   def change
-    csp = Course.find_by_name('csp')
-    csd = Course.find_by_name('csd')
+    csp = Course.find_by_name('csp-2017')
+    csd = Course.find_by_name('csd-2017')
 
     # In some scenarios, csd/csp might not have been seeded yet. In that case,
     # there should be no need to run this migration.

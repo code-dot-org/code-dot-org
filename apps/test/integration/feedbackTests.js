@@ -54,7 +54,7 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     });
   });
 
-  it ("returns EMPTY_BLOCK_FAIL when an empty contianer block is present", function () {
+  it ("returns EMPTY_BLOCK_FAIL when an empty container block is present", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_BLOCK_FAIL,
       blockXml: '<xml>' +
@@ -86,6 +86,23 @@ describe("checkForEmptyContainerBlockFailure_", function () {
   it ("returns EMPTY_FUNCTION_BLOCK_FAIL when an empty function block is present", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
+      blockXml: '<xml>' +
+                  '<block type="when_run"><next>' +
+                    '<block type="procedures_callnoreturn">' +
+                      '<title name="NAME">do something</title>' +
+                    '</block>' +
+                  '</next></block>' +
+                  '<block type="procedures_defnoreturn">' +
+                    '<mutation/>' +
+                    '<title name="NAME">do something</title>' +
+                  '</block>' +
+                '</xml>'
+    });
+  });
+
+  it ("returns ALL_PASS when an empty function block is present, but not called", function () {
+    checkResultForBlocks({
+      result: TestResults.ALL_PASS,
       blockXml: '<xml>' +
                   '<block type="when_run"><next></next></block>' +
                   '<block type="procedures_defnoreturn">' +

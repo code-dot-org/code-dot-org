@@ -1,4 +1,5 @@
-"sq":
+---
+sq:
   data:
     game:
       name:
@@ -277,8 +278,8 @@
         maze_karel_debug_seq_1: MIrë se vini në debugging! Kodi im nuk punon si duhet.
           Mund ta shënoni si problem dhe ta rregulloni në mënyrë që të më shtrohet
           fusha dhe të jetë gati për mbjellje?
-        maze_karel_debug_seq_2: "Çfarë problemi ka me këtë program? Si mund ta rregullosh
-          në mënyrë që të heq këtë grumbull?"
+        maze_karel_debug_seq_2: Çfarë problemi ka me këtë program? Si mund ta rregullosh
+          në mënyrë që të heq këtë grumbull?
         maze_karel_debug_repeat: Rregulloje këtë program për mua, që fusha ime të
           jetë e sheshtë dhe e mirë.
         maze_karel_debug_while: Si mund të ndryshosh këtë program për të më ndihmuar
@@ -287,8 +288,8 @@
           e sheshtë.
         maze_karel_debug_if_else: Rregullo këtë program në mënyrë që të mbush gropat
           dhe të heq gjithë grumbujt.
-        maze_karel_debug_function_1: "Çfarë duhet të ndryshosh në këtë program që
-          të më ndihmosh të heq gjithë grumbujt?"
+        maze_karel_debug_function_1: Çfarë duhet të ndryshosh në këtë program që të
+          më ndihmosh të heq gjithë grumbujt?
         maze_karel_debug_function_2: A mund të rregullosh këtë program për mua që
           ta bëj fushën time të sheshtë?
         maze_karel_debug_function_3: 'Modifiko këtë program që të heq gjithë grumbujt
@@ -318,135 +319,8 @@
           së TNT!
         maze_3_4: Argh! Më shkruaj një program që më nxjerr nga TNT dhe më çon drejt
           derrkucit.
-        bounce_1_basketball: Bashkangjit një bllok me bllokun "kur shigjeta majtas"
-          dhe shtyp "Ekzekuto". Lëviz dorën  duke përdorur shigjetën e majtë për të
-          arritur në objektivin e fundit.
-        bounce_2_basketball: Bashkangjit një bllok me bllokun "kur shigjeta  djathtas"
-          dhe  "kur shigjeta  majtas". Lëviz dorën  për të arritur të dy objektivat  e
-          fundit.
-        bounce_5_basketball: Ne jemi duke dërguar një top fluturues poshtë drejt dorës.
-          Bashkangjit një bllok tek blloku "Kur topi godet dorën" për tu siguruar
-          që topi arrin flamurin.
-        bounce_6_basketball: Tani flamuri është në majë.Ti duhet të bashkangjitësh
-          blloqet tek të dy blloqet "Kur topi godet " për të zgjidhur këtë puzzle.
-        bounce_7_basketball: Bashkangjit blloqe tek çdo bllok "kur". Hidh topin derisa
-          të godasë flamurin.
-        bounce_10_basketball: Tani ka një shënjestër në krye! Bashkangjisni blloqet
-          "pikët e shënuara " dhe "pikët e shënuara të kundërshtarit" me blloqet "kur
-          topi është në shënjestër" dhe " kur topi humbet shënjestrën" për të bërë
-          një lojë. Shih se sa shumë pikë ju mund të shënoni para se kundërshtari
-          juaj të shënoj dy herë.
-        bounce_11_basketball: Ti tani mund të bashkangjitësh blloqe tek blloku "kur
-          ekzekutohet". Ti duhet të bashkangjitësh bllokun e ri "hidh topin e ri"
-          në më shumë se një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose
-          shpejtësinë e dorës dhe topit dhe shiko se sa shumë pikë mund të shënosh
-          përpara se kundërshtari jot të shënojë dy herë!
-        bounce_12_basketball: Krijo lojën tënde te Basketbollit. Ti mund të ndryshosh
-          të gjitha rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët
-          të provojnë lojën tënde në telefonat e tyre.
-        bounce_1_sports: Shko te flamuri! Bashkangjit një bllok te blloku "kur shigjeta
-          majtas" dhe shtypni "Run" për të lëvizur lojtarin te flamuri.
-        bounce_2_sports: Ka dy flamuj tani! Bashkangjit një bllok në  blloqet "kur
-          shigjeta majtas" dhe "kur shigjeta  djathtas " për të bërë lojtarin tuaj  të
-          lëviz  në dy drejtime.
-        bounce_5_sports: Topi hokeji do të bjerë poshtë në drejtimin e  lojtarit!
-          Bashkangjit një bllok në bllokun "kur topi godet lojtarin"  për të goditur
-          flamurin.
-        bounce_6_sports: Tani flamuri është në majë.Ti duhet të bashkangjitësh blloqet
-          tek të dy blloqet "Kur topi godet " për të zgjidhur këtë puzzle.
-        bounce_7_sports: Bashkangjit blloqe tek çdo bllok "kur". Hidh topin derisa
-          të godasë flamurin.
-        bounce_10_sports: Tani ka një shënjestër në krye! Bashkangjisni blloqet "pikët
-          e shënuara " dhe "pikët e shënuara të kundërshtarit" me blloqet "kur topi
-          është në shënjestër" dhe " kur topi humbet dorën" për të bërë një lojë.
-          Shih se sa shumë pikë ju mund të shënoni para se kundërshtari juaj të shënoj
-          dy herë.
-        bounce_11_sports: Ti tani mund të bashkangjitësh blloqe tek blloku "kur ekzekutohet".
-          Ti duhet të bashkangjitësh bllokun e ri "hidh topin e ri" në më shumë se
-          një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose shpejtësinë
-          e dorës dhe topit dhe shiko se sa shumë pikë mund të shënosh përpara se
-          kundërshtari jot të shënojë dy herë!
-        bounce_12_sports: 'Krijo lojën tuaj! Ju jeni përgjegjësi këtu: ju mund të
-          ndryshoni të gjitha rregullat, përzieni dhe përshtasni aktivitet ,behuni
-          kreative! Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë
-          lojën tënde në telefonat e tyre.'
-        bounce_1: Bashkangjit një bllok me bllokun "kur shigjeta majtas" dhe shtyp
-          "Ekzekuto". Lëviz raketën duke përdorur shigjetën e majtë për të arritur
-          në objektivin e fundit.
-        bounce_2: Bashkangjit një bllok me bllokqet "kur shigjeta  djathtas" dhe  "kur
-          shigjeta  majtas". Lëviz raketën  për të arritur të dy objektivat  e fundit.
-        bounce_3: Tani provo dicka të ngjashëm me bllokun "kur shigjeta lart". Lëviz
-          raketën për tek objektivi i fundit në majë.
-        bounce_4: Këtë herë ti duhet të shtosh katër blloqe. Lëviz raketën tek të
-          katërt objektivët e fundit për të përfunduar këtë puzzle.
-        bounce_5: Ne jemi duke dërguar një top fluturues poshtë drejt raketën. Bashkangjit
-          një bllok tek blloku "kur topi godet godet raketën" për tu siguruar që topi
-          arrin objektivin final.
-        bounce_6: Tani objektivi final është në majë.Ti duhet të bashkangjitësh blloqe
-          tek të dy blloqet "kur topi godet" për të zgjidhur këtë puzzle.
-        bounce_7: Bashkangjit blloqe tek çdo bllok "kur". Hidh topin derisa të godasë
-          objektivin final.
-        bounce_10: Tani është një shënjestër në krye! Bashkangjisni blloqet "pikët
-          e shënuara " dhe "pikët e shënuara të kundërshtarit" me blloqet "kur topi
-          është në shënjestër" dhe " kur topi humbet raketën" për të bërë një lojë.
-          Shih se sa shumë pikë ju mund të shënoni para se kundërshtari juaj të shënoj
-          dy herë.
-        bounce_11: Ti, tani, mund të bashkangjitësh blloqe tek blloku "when run".
-          Ti duhet të bashkangjitësh bllokun e ri "launch new ball" në më shumë se
-          një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose shpejtësinë
-          e lopatës dhe topit dhe shiko se sa shumë pikë mund të shënosh përpara se
-          kundërshtari jot të shënojë dy herë.
-        bounce_12: Krijo lojën tënde Bounce. Ti mund të ndryshosh të gjithë pamjet
-          dhe rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të
-          provojnë lojën tënde në telefonat e tyre.
         Custom_builder: Lëviz blloqet nga toolboxi tek vendi i punës për të vizatuar
           nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.
-        flappy_1: Bashkangjit një bllok tek blloku "kur klikon" dhe më pas shtyp "Ekzekuto".
-          Kliko ose shtyp ekranin për të lëvizur Flappyn tek objektivi.
-        flappy_2: Tani kemi shtuar pjesë toke. Bashko një bllok me bllokun "when hit
-          the gorund". Kodi jot duhet të 'PËRFUNDOJË LOJA" kur Flappy përplaset.
-        flappy_3: Blloku "when run" të lejon ty ta ekzekutosh kodin kur fillon loja
-          jote. Provo të vendosësh nivelin eshpejtësisë dhe të fluturosh tek objektivi.
-        flappy_4: Flappy do të fluturojë nëpër pengesa, vetëm nëse ti shkruan në kod
-          që ta përplasësh atë. Bashko një bllok me bllokun "when hit an obstacle".
-          Kodi jot duhet të 'PËRFUNDOJE LOJËN' kur Flappy rrëzohet në grupin e parë
-          të tubave.
-        flappy_5: Le të shtojmë një tabelë pikësh dhe të numërojmë pikët kur Flappy
-          i kalon pengesat. Shtoje tek blloku "when pass an obstacle" dhe pastaj shëno
-          një pikë duke bërë Flappyn të fluturojë nëpër grupin e parë të tubave.
-        flappy_6: Shiko nëse mund të shënosh një pikë edhe pasi ke bërë Flappyn të
-          fluturojë si në sasi të vogël ashtu edhe në të madhe.
-        flappy_7: Më pas, përpiqu të ndryshosh pamjen duke bashkuar një bllok tjetër
-          me bllokun "when run".
-        flappy_8: Ti mund të vendosësh pamje në çdo kohë, jo vetëm kur fillon loja.
-          Provo vendosjen e një pamjeje të RASTËSISHME kur ndodhin evente të tjera,
-          për shembull, kur je duke kaluar një pengesë.
-        flappy_9: Për ti përzierë gjërat, kur je duke gjuajtur një pengesë, në vend
-          të mbaroni lojën provoni të vendosni pikët përsëri 0.
-        flappy_11: Krijo lojën tënde Flappy. Ti mund të ndryshosh të githa pamjet
-          dhe rregullat, edhe gravitetin madje. Kur të përfundosh, kliko Përfundo,
-          që të lejosh shokët të provojnë lojën tënde në telefonat e tyre.
-        flappy_k1_1: Luaj Flappy
-        flappy_k1_2: Bashkangjit një bllok tek blloku "when click" dhemë pas shtyp
-          "Run". Kliko ose shtyp ekranin për të lëvizur Flappyn tek objektivi.
-        flappy_k1_3: Tani kemi shtuar pjesë toke. Bashko një bllok me bllokun "when
-          hit the gorund". Kodi jot duhet të 'PËRFUNDOJË LOJA" kur Flappy përplaset.
-        flappy_k1_4: Blloku "when run" të lejon ty ta ekzekutosh kodin kur fillon
-          loja jote. Provo të vendosësh nivelin e shpejtësisë dhe të fluturosh tek
-          objektivi.
-        flappy_k1_5: Flappy do të fluturojë nëpër pengesa, vetëm nëse ti shkruan në
-          kod që ta përplasësh atë. Bashko një bllok me bllokun "when hit an obstacle".
-          Kodi jot duhet të 'PËRFUNDOJE LOJËN' kur Flappy rrëzohet në grupin e parë
-          të tubave.
-        flappy_k1_6: Le të shtojmë një tabelë pikësh dhe të numërojmë pikët kur Flappy
-          i kalon pengesat. Shtoje tek blloku "when pass an obstacle" dhe pastaj shëno
-          një pikë duke bërë Flappyn të fluturojë nëpër grupin e parë të tubave.
-        flappy_k1_7: Shih nëse mund të shënosh shumë pikë duke bërë atë që të kalojë
-          një pengesë
-        flappy_k1_8: Më pas, përpiqu të ndryshosh pamjen duke bashkuar një bllok tjetër
-          me bllokun "when run".
-        flappy_k1_9: Provo të ndryshosh lojtarin duke bashkangjitur bllokun "set player"
-          tek blloku "when run".
         jigsaw_1: Kliko bllokun
         jigsaw_2: Lëviz bllokun tek objektivi
         jigsaw_3: Vendos blloqet që të formojnë një imazh
@@ -675,7 +549,7 @@
         loop_for: Blloku Counter
         parameters: Funksionet me parametra
         hoc_wrapup: Përmbledhja e Orës së Kodimit
-        Unplug1: "Çfarë është CS?"
+        Unplug1: Çfarë është CS?
         Unplug2: Te menduarit kompjuterikë
         Unplug3: Programimi grafik me leter
         Unplug4: Algoritmet
@@ -830,7 +704,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Hyrja në Funksione
         csp_applab_functions_parameters: Funksionet me parametra
-        csp_applab_loops: 'cikle '
+        csp_applab_loops: cikle
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -870,9 +744,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Lufta e yjeve: Ndërto një Galaksi me  kode prezantimi'
         starwars_typing: 'Lufta e yjeve: Ndërto  një Galaksi me kode JavaScripti'
         starwars_events: 'Lufta e yjeve: Ndërto një Galaksi me Kode Ngjarjesh'
@@ -928,6 +799,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: cikle
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër
@@ -974,8 +861,8 @@
         edit_function: Kliko këtu për të redaktuar funksionin tënd.
         create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
           "Krijo një Funksion".
-        house_hint: "Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
-          Ne do ta riparojmë atë në puzzle-in tjetër."
+        house_hint: Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
+          Ne do ta riparojmë atë në puzzle-in tjetër.
         edit_draw_square: Përdor këtë buton për të redaktuar funksionin dhe shtoje
           në cikël.
         edit_get_nectar: Përdor këtë buton për të redaktuar funksionin dhe ndrysho

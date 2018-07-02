@@ -163,9 +163,6 @@ kk:
       CollisionDetection:
         title: Қақтығыстарды анықтау және Пифагор теоремасы
         desc: Экрандағы объектілердің орнын анықтау көптеген ойынның маңызды бөлігі болып табылады. Бұл сабақта біз Пифагор теоремасы және Қашықтық формуласымен кеңістіктегі екі нүкте арақашықтығын анықтауда қолданатын боламыз, және бұл екі нүкте (немесе ойын кейіпкерлері) түйісе ме соны тексереміз.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -265,3 +262,96 @@ kk:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
+        desc: Бұл сабақта біз алгоритмдердің күнделікті өмірде қалай пайдалануға болатынын көрсету үшін тұқым себу мысалын алып отырмыз. Және де информатиканың терең жақтарына үңіліп, ондағы алгоритмдердің маңызды рөл атқаратыны айтылады.
+      UnplugHappyMaps_2018:
+        title: Көңілді Карталар
+        desc: Оқушылар кейіпкерді жалғыз команда арқылы лабиринт ішінде қозғалтудың қарапайым алгоритмдерін құрады (нұсқаулықтар жасайды).
+      GoingPlacesSafely_2018:
+        title: Қауіпсіз Жерді Табу
+        desc: Ғаламтор қуатты сонымен қатар қауіпті орын болып табылады. Оқытушылар Ғаламторды қалай қауіпсіз қолдану болатындығы жайында айтады.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Үлкен Оқиға
+        desc: Оқушылар компьютердің үнемі бақылап отыратын, бағдарламалаудың "оқиғалар" атты ұғымымен таныс болады. Оқытушылар қағаздағы алыстан басқару пультін басады. Ал оқушылар болса соған тиісінше әрекет етеді.
+      GraphPaperProgramming_2018:
+        title: Миллиметрлік Бағдарламалау
+        desc: Оқушылар алдын ала анықталған командаларды пайдаланып, сыныптастарының сурет салулары үшін алгоритмдер (нұсқаулықтар жиынтығы) жазады.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Іс-әрекеттерді өшіру
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Іс-әрекеттерді өшіру
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Шарттар
+        desc: Шартты операторларды оқу кезінде, оқушылар сарта ойынын ойнайды және мынандай ереже жасайды "Егер мен қызыл карта салсам, онда мен ұпай аламын " және "Егер мен қара карта салсам, онда сен ұпай аласың."
+      DigitalFootprint_2018:
+        title: Сіздің сандық іздеріңіз
+        desc: Оқытушылар оқушыларға өздері туралы ақпаратты сайтта орналастырулары арқылы, сандық із немесе "із" қалдыратындары туралы ойды ұсынады.
+      BinaryImages_2018:
+        title: Екілік Суреттер
+        desc: Көп адамдар екілік жүйені тек нөлдер мен бірлерден тұрады деп ойласа, біздің алдыңғы сабақтарымыз оқушыларға ақпарат басқа да екілік опциялардан тұратынын үйретті. Бұл сабақ одан да ары тереңдетіліп, бұдан да қиын ақпаратты (мысалы, суреттер мен түстер) екілік жүйеде компьютердің қалай сақтайтынын көрсетеді.
+      PaperPlanes_2018:
+        title: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
+        desc: Бұл сабақта біз күнделікті өмірде алгоритмдерді пайдалануға шақырып, қағаз ұшақ жасаймыз. Және де информатиканың терең жақтарына үңіліп, ондағы алгоритмдердің маңызды рөл атқаратыны айтылады.
+      GettingLoopy_2018:
+        title: Ілмектерді үйрену
+        desc: Бұл сабақ би қимылдары арқылы цикл (қайталанатын нұсқаулықтар) ұғымымен таныстырады. Оқушылар қарапайым хореографияны оқып, одан кейін оларды қайталап көреді.
+      BinaryBracelets_2018:
+        title: Екілік Білезіктер
+        desc: Оқушылар өздерінің есімдерінің, алғашқы әріптерінің екілік жүйедегі нұсқасына ұқсас білезіктер жасайды. Бұдан оқушылар мәліметтерді көрсету мен сақтаудың бірнеше жолы бар екенін үйренеді.
+      MoveItMoveIt_2018:
+        title: Қозғал, Қозғал
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Релелік Бағдарламалау
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

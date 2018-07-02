@@ -1,36 +1,47 @@
 
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+import FeedbacksList from "./FeedbacksList";
+import TeacherFeedback from "./TeacherFeedback";
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
-import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {
+  toggleInstructionsCollapsed,
+  setInstructionsMaxHeightNeeded,
+  setInstructionsRenderedHeight,
+  setInstructionsHeight
+} from '../../redux/instructions';
+import color from "../../util/color";
+import styleConstants from '../../styleConstants';
+import commonStyles from '../../commonStyles';
+import Instructions from './Instructions';
+import CollapserIcon from './CollapserIcon';
+import HeightResizer from './HeightResizer';
+import msg from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
+import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
-var instructions = require('../../redux/instructions');
-var color = require("../../util/color");
-var styleConstants = require('../../styleConstants');
-var commonStyles = require('../../commonStyles');
+const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-var Instructions = require('./Instructions');
-var CollapserIcon = require('./CollapserIcon');
-var HeightResizer = require('./HeightResizer');
-var msg = require('@cdo/locale');
+const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
-var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
-var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
+const TabType = {
+  INSTRUCTIONS: 'instructions',
+  RESOURCES: 'resources',
+  COMMENTS: 'comments'
+};
 
-var MIN_HEIGHT = RESIZER_HEIGHT + 60;
-
-var styles = {
+const styles = {
   main: {
     position: 'absolute',
     marginLeft: 15,
@@ -78,7 +89,7 @@ var styles = {
   },
 };
 
-var audioStyle = {
+const audioStyle = {
   wrapper: {
     float: 'right',
   },
@@ -94,8 +105,8 @@ var audioStyle = {
   }
 };
 
-var TopInstructions = React.createClass({
-  propTypes: {
+class TopInstructions extends Component {
+  static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     puzzleNumber: PropTypes.number.isRequired,
@@ -113,19 +124,19 @@ var TopInstructions = React.createClass({
     documentationUrl: PropTypes.string,
     ttsMarkdownInstructionsUrl:  PropTypes.string,
     levelVideos: PropTypes.array,
-    // TODO (epeach) - remove after resources tab A/B testing
-    // provides access to script id for level data
-    app: PropTypes.string,
-    scriptName: PropTypes.string,
-    stagePosition: PropTypes.number,
-    levelPosition: PropTypes.number,
-    scriptId: PropTypes.number,
-    serverLevelId: PropTypes.number,
-  },
+    mapReference: PropTypes.string,
+    referenceLinks: PropTypes.array,
+    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
+    readOnlyWorkspace: PropTypes.bool,
+    serverLevelId:PropTypes.number,
+    user: PropTypes.number
+  };
 
-  state:{
-    helpTabSelected: false,
-  },
+  state = {
+    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
+      experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) ? TabType.COMMENTS : TabType.INSTRUCTIONS,
+    feedbacks: []
+  };
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -138,11 +149,21 @@ var TopInstructions = React.createClass({
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
-  },
+
+    if (this.props.viewAs === ViewType.Student && experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB)) {
+      $.ajax({
+        url: '/api/v1/teacher_feedbacks/get_feedbacks?student_id='+this.props.user+'&level_id='+this.props.serverLevelId,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8',
+      }).done(data => {
+        this.setState({feedbacks: data});
+      });
+    }
+  }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.adjustMaxNeededHeight);
-  },
+  }
 
   /**
    * Height can get below min height iff we resize the window to be super small.
@@ -153,7 +174,7 @@ var TopInstructions = React.createClass({
         nextProps.height < nextProps.maxHeight) {
       this.props.setInstructionsRenderedHeight(Math.min(nextProps.maxHeight, MIN_HEIGHT));
     }
-  },
+  }
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -161,35 +182,47 @@ var TopInstructions = React.createClass({
    * @param {number} delta
    * @returns {number} How much we actually changed
    */
-  handleHeightResize: function (delta) {
-    var minHeight = MIN_HEIGHT;
-    var currentHeight = this.props.height;
+  handleHeightResize = (delta) => {
+    const currentHeight = this.props.height;
 
-    var newHeight = Math.max(minHeight, currentHeight + delta);
+    let newHeight = Math.max(MIN_HEIGHT, currentHeight + delta);
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
-  },
+  };
 
   /**
    * Calculate how much height it would take to show top instructions with our
    * entire instructions visible and update store with this value.
    * @returns {number}
    */
-  adjustMaxNeededHeight() {
-    const maxNeededHeight = $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) +
+
+  adjustMaxNeededHeight = () => {
+    let element;
+    switch (this.state.tabSelected) {
+      case TabType.RESOURCES:
+        element = this.refs.helpTab;
+        break;
+      case TabType.INSTRUCTIONS:
+        element = this.refs.instructions;
+        break;
+      case TabType.COMMENTS:
+        element = this.refs.commentTab;
+        break;
+    }
+    const maxNeededHeight = $(ReactDOM.findDOMNode(element)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
     return maxNeededHeight;
-  },
+  };
 
   /**
    * Handle a click of our collapser button by changing our collapse state, and
    * updating our rendered height.
    */
-  handleClickCollapser() {
+  handleClickCollapser = () => {
     const collapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
@@ -199,39 +232,27 @@ var TopInstructions = React.createClass({
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
-  },
+  };
 
   /**
    * Handle a click on the Documentation PaneButton.
    */
-  handleDocumentationClick() {
+  handleDocumentationClick = () => {
     const win = window.open(this.props.documentationUrl, '_blank');
     win.focus();
-  },
+  };
 
-  handleHelpTabClick() {
-    this.setState({helpTabSelected: true});
-    this.recordResourcesTabButtonClick();
-  },
+  handleHelpTabClick = () => {
+    this.setState({tabSelected: TabType.RESOURCES});
+  };
 
-  handleInstructionTabClick() {
-    this.setState({helpTabSelected: false});
-  },
+  handleInstructionTabClick = () => {
+    this.setState({tabSelected: TabType.INSTRUCTIONS});
+  };
 
-  //TODO - remove 'wip' from study. There for just testing purposes
-  recordResourcesTabButtonClick() {
-    firehoseClient.putRecord(
-      'analysis-events',
-      {
-        study: 'instructions-resources-tab',
-        study_group: 'resources-tab',
-        event: 'resources-tab-click',
-        script_id: this.props.scriptId,
-        level_id: this.props.serverLevelId,
-        data_json: JSON.stringify({'AppType': this.props.app, 'ScriptName': this.props.scriptName, 'StagePosition': this.props.stagePosition, 'LevelPosition': this.props.levelPosition}),
-      }
-    );
-  },
+  handleCommentTabClick = () => {
+    this.setState({tabSelected: TabType.COMMENTS});
+  };
 
   render() {
     const mainStyle = [
@@ -244,12 +265,29 @@ var TopInstructions = React.createClass({
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
-    const logText = JSON.stringify({'AppType': this.props.app, 'ScriptName': this.props.scriptName, 'StagePosition': this.props.stagePosition, 'LevelPosition': this.props.levelPosition});
+
+    // Only display the help tab when there are one or more videos or
+    // additional resource links.
+    const videosAvailable = this.props.levelVideos && this.props.levelVideos.length > 0;
+    const levelResourcesAvailable = this.props.mapReference !== null ||
+      (this.props.referenceLinks && this.props.referenceLinks.length > 0);
+
+    const displayHelpTab = videosAvailable || levelResourcesAvailable;
+
+    const displayFeedbackStable = experiments.isEnabled(experiments.COMMENT_BOX_TAB) && this.props.viewAs === ViewType.Teacher;
+
+    const displayFeedbackDevTeacher = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
+      this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
+
+    const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
+      this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
+
+    const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
           <div style={styles.paneHeaderOverride}>
-            {!this.state.helpTabSelected && ttsUrl &&
+            {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl &&
               <InlineAudio src={ttsUrl} style={audioStyle}/>
             }
             {this.props.documentationUrl &&
@@ -260,45 +298,48 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
-            {(experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) &&
-              <div style={styles.helpTabs}>
+            <div style={styles.helpTabs}>
+              <InstructionsTab
+                className="uitest-instructionsTab"
+                onClick={this.handleInstructionTabClick}
+                style={this.state.tabSelected === TabType.INSTRUCTIONS ? styles.highlighted : null}
+                text={msg.instructions()}
+              />
+              {displayHelpTab &&
                 <InstructionsTab
-                  className="uitest-instructionsTab"
-                  onClick={this.handleInstructionTabClick}
-                  style={this.state.helpTabSelected ? null : styles.highlighted}
-                  text={msg.instructions()}
+                  className="uitest-helpTab"
+                  onClick={this.handleHelpTabClick}
+                  style={this.state.tabSelected === TabType.RESOURCES ? styles.highlighted : null}
+                  text={msg.helpTips()}
                 />
-                {this.props.levelVideos.length > 0 &&
-                  <InstructionsTab
-                    className="uitest-helpTab"
-                    onClick={this.handleHelpTabClick}
-                    style={this.state.helpTabSelected ? styles.highlighted : null}
-                    text={msg.helpTips()}
-                  />
-                }
-              </div>
-            }
+              }
+              {displayFeedback &&
+                <InstructionsTab
+                  className="uitest-feedback"
+                  onClick={this.handleCommentTabClick}
+                  style={this.state.tabSelected === TabType.COMMENTS ? styles.highlighted : null}
+                  text={msg.feedback()}
+                />
+              }
+            </div>
             {!this.props.isEmbedView &&
               <CollapserIcon
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            {(!experiments.isEnabled('resources_tab') || !experiments.isEnabled('resourcesTab')) &&
-              <div style={styles.title}>
-                {msg.puzzleTitle({
-                  stage_total: this.props.stageTotal,
-                  puzzle_number: this.props.puzzleNumber
-                })}
-              </div>
-            }
           </div>
         </PaneHeader>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
-            {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
-            {!this.props.hasContainedLevels &&
-              <div ref="instructions">
-                {!this.state.helpTabSelected &&
+            <div ref="instructions">
+              {this.props.hasContainedLevels &&
+                <ContainedLevel
+                  ref="instructions"
+                  hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
+                />
+              }
+              {!this.props.hasContainedLevels && this.state.tabSelected === TabType.INSTRUCTIONS &&
+                <div>
                   <Instructions
                     ref="instructions"
                     renderedMarkdown={processMarkdown(this.props.markdown,
@@ -306,16 +347,32 @@ var TopInstructions = React.createClass({
                     onResize={this.adjustMaxNeededHeight}
                     inTopPane
                   />
-                }
-                {this.state.helpTabSelected &&
-                  <HelpTabContents
-                    scriptId={this.props.scriptId}
-                    serverLevelId={this.props.serverLevelId}
-                    logText={logText}
-                    videoData={videoData}
+                  <TeacherOnlyMarkdown/>
+                </div>
+              }
+            </div>
+            {this.state.tabSelected === TabType.RESOURCES &&
+              <HelpTabContents
+                ref="helpTab"
+                videoData={videoData}
+                mapReference={this.props.mapReference}
+                referenceLinks={this.props.referenceLinks}
+              />
+            }
+            {this.state.tabSelected === TabType.COMMENTS &&
+              <div>
+                {this.props.viewAs === ViewType.Teacher &&
+                  <TeacherFeedback
+                    ref="commentTab"
+                    withUnreleasedFeatures={displayFeedbackDevTeacher}
                   />
                 }
-                <TeacherOnlyMarkdown/>
+                {this.props.viewAs === ViewType.Student &&
+                  <FeedbacksList
+                    feedbacks={this.state.feedbacks}
+                    ref="commentTab"
+                  />
+                }
               </div>
             }
           </div>
@@ -323,49 +380,46 @@ var TopInstructions = React.createClass({
             <HeightResizer
               position={this.props.height}
               onResize={this.handleHeightResize}
-            />}
+            />
+          }
         </div>
       </div>
     );
   }
-});
-module.exports = connect(function propsFromStore(state) {
-  return {
-    isEmbedView: state.pageConstants.isEmbedView,
-    hasContainedLevels: state.pageConstants.hasContainedLevels,
-    puzzleNumber: state.pageConstants.puzzleNumber,
-    stageTotal: state.pageConstants.stageTotal,
-    height: state.instructions.renderedHeight,
-    expandedHeight: state.instructions.expandedHeight,
-    maxHeight: Math.min(state.instructions.maxAvailableHeight,
-      state.instructions.maxNeededHeight),
-    markdown: state.instructions.longInstructions,
-    noVisualization: state.pageConstants.noVisualization,
-    collapsed: state.instructions.collapsed,
-    documentationUrl: state.pageConstants.documentationUrl,
-    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
-    levelVideos: state.instructions.levelVideos,
-    app: state.instructions.app,
-    scriptName: state.instructions.scriptName,
-    stagePosition: state.instructions.stagePosition,
-    levelPosition: state.instructions.levelPosition,
-    scriptId: state.instructions.scriptId,
-    serverLevelId: state.instructions.serverLevelId,
-  };
-}, function propsFromDispatch(dispatch) {
-  return {
+}
+export default connect(state => ({
+  isEmbedView: state.pageConstants.isEmbedView,
+  hasContainedLevels: state.pageConstants.hasContainedLevels,
+  puzzleNumber: state.pageConstants.puzzleNumber,
+  stageTotal: state.pageConstants.stageTotal,
+  height: state.instructions.renderedHeight,
+  expandedHeight: state.instructions.expandedHeight,
+  maxHeight: Math.min(state.instructions.maxAvailableHeight,
+    state.instructions.maxNeededHeight),
+  markdown: state.instructions.longInstructions,
+  noVisualization: state.pageConstants.noVisualization,
+  collapsed: state.instructions.collapsed,
+  documentationUrl: state.pageConstants.documentationUrl,
+  ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+  levelVideos: state.instructions.levelVideos,
+  mapReference: state.instructions.mapReference,
+  referenceLinks: state.instructions.referenceLinks,
+  viewAs: state.viewAs,
+  readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+  serverLevelId: state.pageConstants.serverLevelId,
+  user: state.pageConstants.userId
+}), dispatch => ({
     toggleInstructionsCollapsed() {
-      dispatch(instructions.toggleInstructionsCollapsed());
+      dispatch(toggleInstructionsCollapsed());
     },
     setInstructionsHeight(height) {
-      dispatch(instructions.setInstructionsHeight(height));
+      dispatch(setInstructionsHeight(height));
     },
     setInstructionsRenderedHeight(height) {
-      dispatch(instructions.setInstructionsRenderedHeight(height));
+      dispatch(setInstructionsRenderedHeight(height));
     },
     setInstructionsMaxHeightNeeded(height) {
-      dispatch(instructions.setInstructionsMaxHeightNeeded(height));
+      dispatch(setInstructionsMaxHeightNeeded(height));
     }
-  };
-}, null, { withRef: true }
+}), null, { withRef: true }
 )(Radium(TopInstructions));

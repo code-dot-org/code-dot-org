@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://code.org/images/icons/medium-monogram-white.png
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - image/png
+      Content-Length:
+      - '622'
+      Connection:
+      - keep-alive
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - no-cache="set-cookie"
+      - public, max-age=43200, s-maxage=21600
+      Content-Language:
+      - en-US
+      Content-Security-Policy:
+      - 'default-src ''self'' https:; script-src ''self'' https: ''unsafe-inline''
+        https://vaas.acapela-group.com ''unsafe-eval''; style-src ''self'' https:
+        ''unsafe-inline''; img-src ''self'' https: data: blob:; font-src ''self''
+        https: data:; connect-src ''self'' https: https://api.pusherapp.com wss://ws.pusherapp.com
+        wss://*.firebaseio.com http://localhost:8080; media-src ''self'' https: http://vaas.acapela-group.com;
+        report-uri //code.org/https/mixed-content; frame-ancestors ''self'' http://*.disney.com
+        http://*.diznee.net code.org studio.code.org'
+      Date:
+      - Wed, 07 Mar 2018 16:50:41 GMT
+      Last-Modified:
+      - Tue, 20 Feb 2018 18:43:21 GMT
+      Server:
+      - nginx/1.11.5
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 varnish-v4, 1.1 f46e4d7bc5419470a70eb57aa9c935c8.cloudfront.net (CloudFront)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - ''
+      X-Varnish:
+      - 68514445 67956010
+      X-Varnish-Cache:
+      - HIT
+      X-Varnish-Node:
+      - fe-i-0cc228d18a51c7eeb
+      Age:
+      - '11621'
+      X-Cache:
+      - Hit from cloudfront
+      X-Amz-Cf-Id:
+      - jqipZlId4CrnFPVNAUg3qdJIsbOHwA1VZConb35-SXgm8zaZ2gLZjA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAOVBMVEVHcEzt7/Hh4+Xm6Oro6+3s7fDU1djq7u7r7u/W3d7o6uzi5OaysrLa3d7j5eft7/H4+vz09vnx8/W6OqQzAAAAD3RSTlMA8We+gOQvSngR1KYJQ5Mv7RbfAAAB1UlEQVR42uyX2Y7kIAxFs4e1wP7/f50lTTQ5UToaQT9yX8t1sLjcYIb0w+rAR3VgB3ZgBwql6Ukq0AtQ5p1y8sRbUBOdfgtUZwdolwfeyqJtvAPRYkBxeGgxf1ASwStAVEPTQ4sbefLuskwA2lXvBTP2hP09ADVFEJf8tmJMhUcgieuGFkd9toTLEUgJrf7kl0023wFJ3Hkqbpa0AgcvtKQZGBWWtAOHWWhJFdAyf7SkBjhtyN/VksnWABeP/F0ssa4OONp7/ool01gFNHm5B6JYMtcCV8v8FUu2tFYCZWL+iiWfXA10AfkrlqxSC+T59rlYIloLZGzjaUkDMGlE/r4sSQ1AmZm/7Tg/DcCUkL/DEm0CZuRvOtps63DcBmhuBSJ/5TTWA8ufEelWYBKDuURbgZyedk2tQF5KXn4C6AIsqQEekZvOSt3x5xpg/jsjWie3mz04qQOKs5xL4+W+rwDqmY49fRHO/PlcBdT0b8/kskI4xzrV6ZqdVd6BOMk+X6aFKYMH4gsQ35dQhprj3nRCHokE8hHAAfv8RMRSUXggKoEwxLI4lrCFwWfm5j/fKaNfIF8W8ksZY/F7kVnfHj4ZknNrM3+n+nu5AzuwAzvw94amgQAozjEB0tO7AgAAAABJRU5ErkJggg==
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 21:42:34 GMT
+- request:
+    method: post
+    uri: "<AZURE_ENDPOINT>/moderate/v1.0/ProcessImage/Evaluate"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAOVBMVEVHcEzt7/Hh4+Xm6Oro6+3s7fDU1djq7u7r7u/W3d7o6uzi5OaysrLa3d7j5eft7/H4+vz09vnx8/W6OqQzAAAAD3RSTlMA8We+gOQvSngR1KYJQ5Mv7RbfAAAB1UlEQVR42uyX2Y7kIAxFs4e1wP7/f50lTTQ5UToaQT9yX8t1sLjcYIb0w+rAR3VgB3ZgBwql6Ukq0AtQ5p1y8sRbUBOdfgtUZwdolwfeyqJtvAPRYkBxeGgxf1ASwStAVEPTQ4sbefLuskwA2lXvBTP2hP09ADVFEJf8tmJMhUcgieuGFkd9toTLEUgJrf7kl0023wFJ3Hkqbpa0AgcvtKQZGBWWtAOHWWhJFdAyf7SkBjhtyN/VksnWABeP/F0ssa4OONp7/ool01gFNHm5B6JYMtcCV8v8FUu2tFYCZWL+iiWfXA10AfkrlqxSC+T59rlYIloLZGzjaUkDMGlE/r4sSQ1AmZm/7Tg/DcCUkL/DEm0CZuRvOtps63DcBmhuBSJ/5TTWA8ufEelWYBKDuURbgZyedk2tQF5KXn4C6AIsqQEekZvOSt3x5xpg/jsjWie3mz04qQOKs5xL4+W+rwDqmY49fRHO/PlcBdT0b8/kskI4xzrV6ZqdVd6BOMk+X6aFKYMH4gsQ35dQhprj3nRCHokE8hHAAfv8RMRSUXggKoEwxLI4lrCFwWfm5j/fKaNfIF8W8ksZY/F7kVnfHj4ZknNrM3+n+nu5AzuwAzvw94amgQAozjEB0tO7AgAAAABJRU5ErkJggg==
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - "<AZURE_API_KEY>"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '253'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Apim-Request-Id:
+      - bb10a0a3-020d-40ef-9226-3b622e0e903d
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Tue, 17 Apr 2018 21:42:34 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Message":"Image Size Error","TrackingId":"USE_ibiza_dde113ad-945f-42bf-9488-a1b7ceac729e_ContentModerator.S0_13a7a0c3-c4c0-41b9-a68c-60db4c879507","Errors":[{"Title":"Image
+        Size Error","Message":"Image size 80x80 in pixels is not in allowed range."}]}'
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 21:42:34 GMT
+recorded_with: VCR 3.0.3

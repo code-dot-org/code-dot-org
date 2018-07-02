@@ -1,7 +1,11 @@
 class LevelLoader
+  def self.for_each_file(path, &block)
+    Dir.glob(Rails.root.join(path)).sort.map(&block)
+  end
+
   def self.load_custom_levels
     level_index = Level.includes(:game).to_a.index_by(&:name)
-    Dir.glob(Rails.root.join('config/scripts/**/*.level')).sort.map do |path|
+    for_each_file('config/scripts/**/*.level') do |path|
       load_custom_level(path, level_index)
     end
   end

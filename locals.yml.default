@@ -22,6 +22,12 @@ dashboard_enable_pegasus: true
 # If false, dashboard will try to use a prepackaged version from S3.
 #use_my_apps: true
 
+# Allows your local server to render non-English locales, defaults to false.
+# If false, choosing a locale other than English will have no effect.
+# Note: You may need to be in an incognito window to see changes
+# due to a difference in the language cookie between production and localhost.
+#load_locales: true
+
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
@@ -38,6 +44,12 @@ dashboard_enable_pegasus: true
 # Whether to stub schools and school_districts table with much smaller data,
 # saving a total of 4 min 30 sec during rake seed. Default: true (in development).
 #stub_school_data: false
+
+
+# The Fusion Table ID for the census map shown at code.org/yourschool.  If this
+# is set to the ID for the production site, be careful not to run
+# update_census_map as it will overwrite that table.
+#census_map_table_id: ''
 
 
 # Encryption key required for decoding certain protected level sources.

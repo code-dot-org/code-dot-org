@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
 /**
   * Many of our hints include Blockly blocks. Unfortunately, Blockly
@@ -7,30 +7,22 @@ import React, {PropTypes} from 'react';
   * React render method once we're confident that this component is in
   * the DOM.
   */
-var ReadOnlyBlockSpace = React.createClass({
-  propTypes: {
+export default class ReadOnlyBlockSpace extends React.Component {
+  static propTypes = {
     block: PropTypes.object.isRequired,
-  },
+  };
 
-  getInitialState: function () {
-    return {
-      height: 100,
-      blockSpace: undefined
-    };
-  },
+  state = {
+    height: 100,
+    blockSpace: undefined,
+  };
 
-  componentDidUpdate: function () {
-    if (this.state.blockSpace) {
-      this.state.blockSpace.blockSpaceEditor.svgResize();
-    }
-  },
-
-  componentDidMount: function () {
-    if (!document.body.contains(this.refs.container)) {
+  componentDidMount() {
+    if (!document.body.contains(this.container)) {
       return new Error('ReadOnlyBlockSpace component MUST be rendered into a container that already exists in the DOM');
     }
 
-    let blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(this.refs.container, this.props.block, {
+    let blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(this.container, this.props.block, {
       noScrolling: true
     });
 
@@ -43,18 +35,28 @@ var ReadOnlyBlockSpace = React.createClass({
     // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
       height,
-      blockSpace
+      blockSpace,
     });
-  },
+  }
 
-  render: function () {
+  componentDidUpdate() {
+    if (this.state.blockSpace) {
+      this.state.blockSpace.blockSpaceEditor.svgResize();
+    }
+  }
+
+  render() {
     const style = {
       maxHeight: this.state.height,
-      paddingBottom: 10
+      paddingBottom: 10,
     };
 
-    return (<div className="block-space" ref="container" style={style}/>);
+    return (
+      <div
+        className="block-space"
+        ref={(container) => { this.container = container; }}
+        style={style}
+      />
+    );
   }
-});
-
-module.exports = ReadOnlyBlockSpace;
+}

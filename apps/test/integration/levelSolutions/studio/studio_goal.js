@@ -1,4 +1,4 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 
 // Level has two goals, one above and 1 below.

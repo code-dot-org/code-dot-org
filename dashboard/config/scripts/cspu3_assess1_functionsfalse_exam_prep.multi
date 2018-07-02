@@ -1,0 +1,32 @@
+name 'cspu3_assess1_functionsfalse_exam_prep'
+wrong 'Functions are reusable programming abstractions.'
+wrong 'Functions help reduce the complexity of writing and maintaining programs.'
+right 'Functions cannot make calls to other functions within the same program.'
+wrong  'Functions help break a problem into logical chunks.'
+wrong 'Once defined, a function can be called many times from different parts of a program.'
+
+markdown <<MARKDOWN
+Which of the following is NOT true about functions in programming?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This is a tricky question because the correct answer effectively makes a double-negative.  It is NOT true that functions CANNOT call other functions.  In other words: functions *can* call other functions.  
+
+Students should be very familiar with this fact after completing this unit since writing and calling functions from other functions is basically the primary focus.
+
+This answer refers to the fact that in defining a function you can call other functions that you have written.
+
+For example:
+
+```
+function drawFlower(){
+    drawpetal();
+    drawpetal();
+    drawpetal();
+    drawpetal();
+}
+```
+
+Assuming that `drawpetal()` is some other function you wrote (and does something) this is an example of one function calling another.
+
+MARKDOWN

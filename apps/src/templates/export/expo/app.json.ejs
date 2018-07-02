@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "<%- appName %>",
+    "description": "<%- appName %> from Code.org App Lab.",
+    "slug": "<%- appName.replace(/([^a-zA-Z0-9_\-]+)/gi, '-') %>",
+    "privacy": "public",
+    "sdkVersion": "25.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./appassets/icon.png",
+    "splash": {
+      "image": "./appassets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "packagerOpts": {
+      "assetExts": [
+        "html",
+        "css",
+        "j",
+        "jpg",
+        "jpeg",
+        "png",
+        "gif",
+        "mp3",
+        "woff2",
+        "txt"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "org.code.studio.applab.<%- projectId.replace(/([^a-zA-Z0-9\-]+)/gi, '-') %>",
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "org.code.studio.applab.app_<%- projectId.replace(/([^a-zA-Z0-9\_]+)/gi, '_') %>",
+      "permissions": [],
+      "versionCode": 1
+    }
+  }
+}

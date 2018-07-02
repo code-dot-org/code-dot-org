@@ -1,4 +1,5 @@
-"fil":
+---
+fil:
   errors:
     messages:
       not_saved: 'Pakiwasto ang mga sumusunod na error:'
@@ -48,7 +49,7 @@
   next_resource: Susunod na resource
   done_with_module: Done with this Learning Module
   cancel: Kanselahin
-  okay: Okay
+  okay: Okey
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
   add_teacher_form:
     code:
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Account sa Microsoft
     clever: Clever na Account
+    powerschool: Powerschool Account
     forgot_password: Hindi matandaan ang password?
     need_confirmation: Hindi nakatanggap ng kumpirmasyon?
     need_unlock: Hindi nakatanggap kung paano mag unlock?
@@ -144,6 +146,13 @@
     valid_password: Mali ang na-type na password!
     invalid_password: Ang Password ay dapat may at least 6 characters
     mismatch_password: Ang passwords na iyong inenter ay hindi tugma sa isa't isa
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Ako ay sumang-ayon na mapailalim sa Code.org na <a href='http://code.org/tos'>mga
       palatuntunin</a>. Kung ako ay mas bata pa 13 taong gulang, kinokompirma ko ito
       sa pamamagitan ng pagpasa ng form na ito na nagpapakita na mayroon akong pahintulot
@@ -158,12 +167,19 @@
       sa privacy</a>.
     additional_information: Kailangan namin ng karagdagang impormasyon para maituloy
       ang pag-sign up sa iyo.
+    user_type_button: Update Account Type
     user_type_label: Uri ng Account
     user_type_teacher: Teacher
     user_type_student: Estudyante
     field_is_required: ay kailangan
     accept_terms: Kailangan mong sumang-ayon para gumawa ng account
     error: May problemang naganap.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Oo
+    email_preference_no: Hindi
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Impormasyon ng Paaralan (opsyonal)
     school_country: Bansa ng Paaralan
@@ -214,6 +230,7 @@
       email: Email address
       submit: Ipasa
     reset_errors:
+      captcha_required: Mangyaring punan ang CAPTCHA para ma-reset ang iyong password.
       invalid_email: Parang nagsign-up ka gamit ang email address na hindi balido.
         Paki-email sa support@code.org para makatanggap ng password na recovery link.
     change_form:
@@ -401,6 +418,7 @@
     email_confirm_needed_required: 'Ang email address mong %{email} ay hindi pa nakukumpirma:'
     email_confirm_wrong_email: "(Maling email address?)"
     email_resend_confirm: Ipadalang muli ang mga instruksyon sa pag-kumpirma
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(Iwan ito na walang laman kung ayaw mong baguhin ito)"
     current_password_hint: "(kailangan namin ang iyong kasalukuyang password para
       kumpirmahin ang iyong mga binago)"
@@ -440,6 +458,7 @@
       ng iyong kasalukuyang mga secret na mga pulong
     enter_parent_email: Ilagay ang iyong mga magulang, o tagapangalaga na email address
       (para sa password recovery)
+    update: Update Account
   user_level:
     completed: Nakompleto
     tried: Sinubukan
@@ -643,6 +662,8 @@
       naka-enrol sa iyong seksiyon.
     already_enrolled_in_new_section: Hindi mo maaring ilipat ang mga estudyanteng
       ito dahil nasa bagong seksiyon na sila.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Mag-aral sa Code Studio
     description: Kahit sino man ay maaring matuto ng computer science. Gumawa ng mga
@@ -651,6 +672,8 @@
   gender:
     male: Lalaki
     female: Babae
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Mas mabuti na hindi sagutin
   user_type:
     student: Estudyante
@@ -821,7 +844,8 @@
       title: Star Wars
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan
+        ng mga karakter sa Disney Infinity.
     minecraft:
       title: Minecraft
       body: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code.
@@ -831,10 +855,10 @@
         sariling bersyon ng Minecraft.
     hero:
       title: Minecraft
-      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
-        through Minecraft with code.
+      body: Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain!
+        Maglakbay sa Minecraft sa pamamagitan ng code.
     sports:
-      title: Sports
+      title: Mga Palakasan
       body: Gumawa ka ng basketbol na laro o mix at match sa mga palakasan.
     text-compression:
       title: Text Compression
@@ -906,16 +930,16 @@
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: Thank you
+    wrong_title: Maraming Salamat
     wrong_body: Salamat sa pagpasa ng sagot.
-    correct_title: Thank you
+    correct_title: Maraming Salamat
     correct_body: Salamat sa pagpasa ng sagot.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: Thank you
+    wrong_title: Maraming Salamat
     wrong_body: Salamat sa pagpasa ng mga sagot.
-    correct_title: Thank you
+    correct_title: Maraming Salamat
     correct_body: Salamat sa pagpasa ng mga sagot.
     hide_survey_last_answer: Ang survey na ito ay anonymous. Pakibisita sa dashboard
       ng guro para sa buong resulta, Tandaan na ang mga resulta ay makikita lang kung
@@ -925,9 +949,9 @@
       guro ay maaari pa ring makakita ng iyong mga sagot para sa buong klase, ngunit
       walang pangalan na nakalakip.
   level_group-submittable:
-    wrong_title: Thank you
+    wrong_title: Maraming Salamat
     wrong_body: Salamat sa pagpasa ng mga sagot.
-    correct_title: Thank you
+    correct_title: Maraming Salamat
     correct_body: Salamat sa pagpasa ng mga sagot.
     unsubmit-title: Huwag na ipasa ang iyong assessment
     unsubmit-body: Ang pagbawi sa pagpasa ng iyong assessment ay mag-rereset ng petsa
@@ -1175,7 +1199,7 @@
     content: Content
     practice: Teacher Practices
     peer_review: Peer Review
-    ramp_up: Ramp-Up
+    ramp_up: Pabilisin
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
     main_course: Pangunahing Kurso
@@ -1196,6 +1220,7 @@
     csd5_2: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
     csd6_1: 'Kabanata 1: Output ng Hardware'
     csd6_2: 'Kabanata 2: Input ng Hardware'
+    csd_survey: Post-Course Survey
     csp1_1: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
     csp1_2: 'Kabanata 2: Pag-imbento ng Internet'
     csp2_1: 'Kabanata 1: Pag-encode at Pag-compress ng Komplikadong Impormasyon'
@@ -1209,6 +1234,11 @@
     csp_ap_1: 'Kabanata 1: AP Tech na Setup'
     csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
     csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Pagmunimuni na mga Prompt
   external_links:
     disclaimer: Disclaimer
@@ -1353,3 +1383,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Buong mga Kurso
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Ako ay sumasang-ayon
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Oo

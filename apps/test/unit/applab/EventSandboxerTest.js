@@ -388,19 +388,38 @@ describe('EventSandboxer', function () {
 
   describe('hoisted event target properties', () => {
     it('copies "selectionStart" from the original event target to the new event', () => {
-      const originalEvent = {target: {selectionStart: Math.random()}};
+      const originalEvent = {target: {tagName: 'TEXTAREA', selectionStart: Math.random()}};
       const newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.equal(newEvent.selectionStart, originalEvent.target.selectionStart);
     });
 
     it('copies "selectionEnd" from the original event target to the new event', () => {
-      const originalEvent = {target: {selectionEnd: Math.random()}};
+      const originalEvent = {target: {tagName: 'TEXTAREA', selectionEnd: Math.random()}};
+      const newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.equal(newEvent.selectionEnd, originalEvent.target.selectionEnd);
+    });
+
+    it('copies "selectionStart" from the original event target to the new event if the target is the text type of INPUT', () => {
+      const originalEvent = {target: {tagName: 'INPUT', type: 'text', selectionStart: Math.random()}};
+      const newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.equal(newEvent.selectionStart, originalEvent.target.selectionStart);
+    });
+
+    it('copies "selectionEnd" from the original event target to the new event', () => {
+      const originalEvent = {target: {tagName: 'TEXTAREA', selectionEnd: Math.random()}};
       const newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.equal(newEvent.selectionEnd, originalEvent.target.selectionEnd);
     });
 
     it('does not add selectionStart or selectionEnd to the new event if they are missing or undefined', () => {
-      const originalEvent = {target: {selectionEnd: undefined}};
+      const originalEvent = {target: {tagName: 'TEXTAREA', selectionEnd: undefined}};
+      const newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.isFalse(newEvent.hasOwnProperty('selectionStart'));
+      assert.isFalse(newEvent.hasOwnProperty('selectionEnd'));
+    });
+
+    it('does not add selectionStart or selectionEnd to the new event if the target is the range type of INPUT', () => {
+      const originalEvent = {target: {tagName: 'INPUT', type: 'range', selectionStart: 3, selectionEnd: 3}};
       const newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.isFalse(newEvent.hasOwnProperty('selectionStart'));
       assert.isFalse(newEvent.hasOwnProperty('selectionEnd'));

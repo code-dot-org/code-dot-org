@@ -1,4 +1,5 @@
-"ga":
+---
+ga:
   data:
     game:
       name:
@@ -25,7 +26,7 @@
         Unplug11: Clabhsúr
         MazeEC: An Chathair Ghríobháin
         Bounce: Preabadh
-        Flappy: "Éan Flapach"
+        Flappy: Éan Flapach
         Jigsaw: Míreanna Mearaí
         MazeStep: 'Cathair Ghríobháin: Mód Céime'
         Wordsearch: Cuardach focal
@@ -42,7 +43,7 @@
       name:
         Bronze: Cré-umha
         Silver: Airgead
-        Gold: "Ór"
+        Gold: Ór
     concept:
       description:
         sequence: Seicheamh
@@ -217,9 +218,9 @@
         turtle_2_10: Seo é cód lenar féidir bíseanna éagsúla a tharraingt. Cad a tharlaíonn
           nuair a athraíonn tú an uillinn? Nó má úsáideann tú dath randamach laistigh
           den lúb? Déan cibé rud is rogha leat.
-        maze_karel_2_1: "Úsáid na blocanna chun cabhrú liom na cairn go léir a bhaint
+        maze_karel_2_1: 'Úsáid na blocanna chun cabhrú liom na cairn go léir a bhaint
           agus na poill go léir a líonadh. Déan iarracht lúba a úsáid in áit go leor
-          blocanna. Leid: is féidir lúb amháin a chur isteach i lúb eile!"
+          blocanna. Leid: is féidir lúb amháin a chur isteach i lúb eile!'
         maze_karel_2_2: Chruthaíomar ár mbloc féin darb ainm "líon 5", atá sa chatagóir
           "Feidhmeanna" anois. Bain úsáid aisti chun cabhrú liom an poll seo a líonadh.
         maze_karel_2_3: Úsáid an fheidhm nua "líon 5" le tabhairt orm na poill go
@@ -312,146 +313,8 @@
           leis an mbosca TNT!
         maze_3_4: Muise! Scríobh clár a chabhróidh liom an TNT a sheachaint agus an
           mhuc a shroicheadh.
-        bounce_1_basketball: Ceangail bloc nua leis an mbloc "nuair a bhrúitear an
-          tsaighead chlé" agus cliceáil "Rith". Bog an lámh leis an tsaighead chlé
-          chun an sprioc a bhaint amach.
-        bounce_2_basketball: Ceangail bloc nua leis na blocanna "nuair a bhrúitear
-          an tsaighead dheas" agus "nuair a bhrúitear an tsaighead chlé". Bog an lámh
-          chun an dá sprioc a bhaint amach.
-        bounce_5_basketball: Caithfimid liathróid anuas i dtreo na láimhe. Ceangail
-          bloc leis an mbloc "nuair a bhuaileann liathróid lámh" le cinntiú go sroichfidh
-          an liathróid an bhratach.
-        bounce_6_basketball: Anois tá an bhratach ag barr an scáileáin. Caithfidh
-          tú blocanna a cheangal leis an dá bhloc "nuair a bhuaileann liathróid..."
-          chun an dúshlán seo a réiteach.
-        bounce_7_basketball: Ceangail blocanna le gach bloc "nuair...". Preab an liathróid
-          go dtí go sroichfidh sí an bhratach.
-        bounce_10_basketball: Anois tá báire ag barr an scáileáin. Ceangail blocanna
-          "tabhair pointe don imreoir" agus "tabhair pointe don chéile comhraic" leis
-          na blocanna "nuair a théann liathróid i mbáire" agus "nuair a théann liathróid
-          thar lámh" chun cluiche a chruthú. Cé mhéad pointe an féidir leatsa a fháil
-          sula bhfaighidh do chéile comhraic dhá phointe?
-        bounce_11_basketball: Anois is féidir leat blocanna a cheangal leis an mbloc
-          "nuair a ritear é". Caithfidh tú an bloc nua "tosaigh liathróid nua" a cheangal
-          i níos mó ná áit amháin. Athraigh an radharc, luas na láimhe, nó luas na
-          liathróide, agus féach cé mhéad pointe is féidir leat a fháil sula bhfaighidh
-          do chéile comhraic dhá phointe!
-        bounce_12_basketball: Cruthaigh do chluiche cispheile féin. Is féidir leat
-          na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh"
-          agus lig do chairde an cluiche a imirt ar a nguthán.
-        bounce_1_sports: Sroich an bhratach! Ceangail bloc feiliúnach leis an mbloc
-          "nuair a bhrúitear an tsaighead chlé" agus cliceáil "Rith" chun cabhrú leis
-          an imreoir an bhratach a bhaint amach.
-        bounce_2_sports: Tá dhá bhratach ann anois! Ceangail blocanna leis na blocanna
-          "nuair a bhrúitear an tsaighead chlé" agus "nuair a bhrúitear an tsaighead
-          dheas" chun cabhrú leis an imreoir dul sa dá threo.
-        bounce_5_sports: Tá an cnag haca ar tí dul i dtreo an imreora! Ceangail bloc
-          leis an mbloc "nuair a bhuaileann liathróid imreoir" chun an bhratach a
-          bhualadh.
-        bounce_6_sports: Anois tá an bhratach ag barr an scáileáin. Caithfidh tú blocanna
-          a cheangal leis an dá bhloc "nuair a bhuaileann liathróid..." chun an dúshlán
-          seo a réiteach.
-        bounce_7_sports: Ceangail blocanna le gach bloc "nuair...". Preab an liathróid
-          go dtí go sroichfidh sí an bhratach.
-        bounce_10_sports: Anois tá báire ag barr an scáileáin! Ceangail blocanna "tabhair
-          pointe don imreoir" agus "tabhair pointe don chéile comhraic" leis na blocanna
-          "nuair a théann liathróid i mbáire" agus "nuair a théann liathróid thar
-          lámh" chun cluiche a chruthú. Cé mhéad pointe an féidir leatsa a fháil sula
-          bhfaighidh do chéile comhraic dhá phointe?
-        bounce_11_sports: Anois is féidir leat blocanna a cheangal leis an mbloc "nuair
-          a ritear é". Caithfidh tú an bloc nua "tosaigh liathróid nua" a cheangal
-          i níos mó ná áit amháin. Athraigh an radharc, luas na láimhe, nó luas na
-          liathróide, agus féach cé mhéad pointe is féidir leat a fháil sula bhfaighidh
-          do chéile comhraic dhá phointe!
-        bounce_12_sports: 'Cruthaigh do chluiche féin! Is tusa atá i gceannas ar gach
-          uile rud: is féidir leat na rialacha nó fiú an spórt féin a athrú - tá cead
-          do chinn agat! Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus
-          lig do chairde an cluiche a imirt ar a guthán.'
-        bounce_1: Ceangail bloc nua leis an mbloc "nuair a bhrúitear an tsaighead
-          chlé" agus cliceáil "Rith". Bog an slacán leis an tsaighead chlé chun an
-          sprioc a bhaint amach.
-        bounce_2: Ceangail bloc nua leis na blocanna "nuair a bhrúitear an tsaighead
-          dheas" agus "nuair a bhrúitear an tsaighead chlé". Bog an slacán chun an
-          dá sprioc a bhaint amach.
-        bounce_3: Anois déan rud éigin mar an gcéanna leis an mbloc "nuair a bhrúitear
-          an tsaighead suas". Aistrigh an slacán go dtí an sprioc ag an mbarr.
-        bounce_4: Anois caithfidh tú ceithre bhloc a chur leis. Ansin, aistrigh an
-          slacán go dtí na ceithre sprioc chun an dúshlán a chríochnú.
-        bounce_5: Caithfimid liathróid anuas i dtreo an tslacáin. Ceangail bloc leis
-          an mbloc "nuair a bhuaileann liathróid slacán" le cinntiú go sroichfidh
-          an liathróid an sprioc.
-        bounce_6: Anois tá an sprioc ag barr an scáileáin. Caithfidh tú blocanna a
-          cheangal leis an dá bhloc "nuair a bhuaileann liathróid..." chun an dúshlán
-          a réiteach.
-        bounce_7: Ceangail blocanna le gach bloc "nuair...". Preab an liathróid go
-          dtí go sroichfidh sí an sprioc.
-        bounce_10: Anois tá báire ag barr an scáileáin. Ceangail blocanna "tabhair
-          pointe don imreoir" agus "tabhair pointe don chéile comhraic" leis na blocanna
-          "nuair a théann liathróid i mbáire" agus "nuair a théann liathróid thar
-          slacán" chun cluiche a chruthú. Cé mhéad pointe an féidir leatsa a fháil
-          sula bhfaighidh do chéile comhraic dhá phointe?
-        bounce_11: Anois is féidir leat blocanna a cheangal leis an mbloc "nuair a
-          ritear é". Caithfidh tú an bloc nua "tosaigh liathróid nua" a cheangal i
-          níos mó ná áit amháin. Athraigh an radharc nó luas an tslacáin freisin,
-          agus féach cé mhéad pointe is féidir leat a fháil sula bhfaighidh do chéile
-          comhraic dhá phointe.
-        bounce_12: Cruthaigh do chluiche liathróide féin. Is féidir leat an leagan
-          amach agus na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe,
-          cliceáil "Críochnaigh" agus lig do chairde an cluiche a imirt ar a nguthán.
         Custom_builder: Tarraing blocanna ón mbosca uirlisí go dtí an spás oibre chun
           leibhéal nua a chruthú. Cliceáil "Rith" nuair a bheidh tú réidh.
-        flappy_1: Ceangail bloc leis an mbloc "nuair a chliceáiltear", ansin cliceáil
-          "Rith". Cliceáil nó tapáil an scáileán le Flappy a threorú chuig an sprioc.
-        flappy_2: Tá an talamh ann anois. Ceangail bloc leis an mbloc "nuair a bhuailtear
-          an talamh". Ní mór duit deireadh a chur leis an gcluiche nuair a bhuaileann
-          Flappy leis an talamh.
-        flappy_3: Is féidir cód a rith nuair a thosaíonn an cluiche trí bhlocanna
-          a cheangal leis an mbloc "nuair a ritear é". Socraigh luas an leibhéil,
-          ansin eitil go dtí an sprioc.
-        flappy_4: Eitleoidh Flappy trí chonstaicí go dtí go scríobhfaidh tú cód a
-          dhéanann a mhalairt. Ceangail bloc leis an mbloc "nuair a bhuailtear in
-          éadan constaice". Caithfidh tú deireadh a chur leis an gcluiche nuair a
-          bhuaileann Flappy leis an chéad dá phíopa.
-        flappy_5: Cuirimis scórchlár leis an gcluiche. Tabhair pointí do Flappy nuair
-          a ghlanann sé constaicí, trí bhloc nua a cheangal leis an mbloc "nuair a
-          ghlantar constaic". Ansin, gnóthaigh pointe amháin trí Flappy a eitilt trí
-          an chéad dá phíopa.
-        flappy_6: An féidir leat pointe a ghnóthú fós má ghreadann Flappy a sciatháin
-          níos laige nó níos láidre?
-        flappy_7: Anois, athraigh an radharc trí bhloc eile a cheangal leis an mbloc
-          "nuair a ritear é".
-        flappy_8: Is féidir leat an radharc a athrú nuair a thosaíonn an cluiche nó
-          am ar bith tar éis sin. Bain triail as radharc randamach a shocrú nuair
-          a ghlanann Flappy constaic, mar shampla.
-        flappy_9: Mar athrú, nuair a bhuaileann Flappy le constaic, athraigh an scór
-          go 0, in áit deireadh a chur leis an gcluiche.
-        flappy_11: Cruthaigh do chluiche Flappy féin. Is féidir leat an leagan amach
-          agus na rialacha go léir a athrú, an domhantarraingt san áireamh! Nuair
-          a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde an
-          cluiche a imirt ar a nguthán.
-        flappy_k1_1: Imir Flappy
-        flappy_k1_2: Ceangail bloc leis an mbloc "nuair a chliceáiltear", ansin cliceáil
-          "Rith". Cliceáil nó tapáil an scáileán le Flappy a threorú chuig an sprioc.
-        flappy_k1_3: Tá an talamh ann anois. Ceangail bloc leis an mbloc "nuair a
-          bhuailtear an talamh". Ní mór duit deireadh a chur leis an gcluiche nuair
-          a bhuaileann Flappy leis an talamh.
-        flappy_k1_4: Is féidir cód a rith nuair a thosaíonn an cluiche trí bhlocanna
-          a cheangal leis an mbloc "nuair a ritear é". Socraigh luas an leibhéil,
-          ansin eitil go dtí an sprioc.
-        flappy_k1_5: Eitleoidh Flappy trí chonstaicí go dtí go scríobhfaidh tú cód
-          a dhéanann a mhalairt. Ceangail bloc leis an mbloc "nuair a bhuailtear in
-          éadan constaice". Caithfidh tú deireadh a chur leis an gcluiche nuair a
-          bhuaileann Flappy leis an chéad dá phíopa.
-        flappy_k1_6: Cuirimis scórchlár leis an gcluiche. Tabhair pointí do Flappy
-          nuair a ghlanann sé constaicí, trí bhloc nua a cheangal leis an mbloc "nuair
-          a ghlantar constaic". Ansin, gnóthaigh pointe amháin trí Flappy a eitilt
-          trí an chéad dá phíopa.
-        flappy_k1_7: An féidir leat níos mó ná pointe amháin a ghnóthú nuair a ghlanann
-          tú constaic?
-        flappy_k1_8: Anois, athraigh an radharc trí bhloc eile a cheangal leis an
-          mbloc "nuair a ritear é".
-        flappy_k1_9: Anois, athraigh an t-imreoir trí bhloc "socraigh imreoir" a cheangal
-          leis an mbloc "nuair a ritear é".
         jigsaw_1: Cliceáil an bloc
         jigsaw_2: Tarraing an bloc go dtí an sprioc
         jigsaw_3: Leag amach na blocanna ar an bpictiúr
@@ -787,8 +650,8 @@
         CSF_maze_intro_k1_blocks: Eolas bunúsach ar an Stiúideo Códála
         CSF_maze_intro_text_blocks: Eolas bunúsach ar an Stiúideo Códála
         CSF_my_robotic_friends: Mo Chairde Róbatacha
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_Power_of_Words: Cumhacht na Teanga
+        CSF_Super_Digital_Citizen: Sárshaoránach Digiteach
         CSF_stevie_big_project: Stiofán agus an Tionscadal Mór
         CSF_unspotted_bugs: Fabhtanna nár tugadh faoi deara
         CSF_zuck_loops_short: Lúbanna "Athdhéan"
@@ -802,18 +665,24 @@
         infinity_playlab_intro: Súgradh is Dáiríre - Réamhrá
         infinity_playlab_events: Súgradh is Dáiríre - Teagmhais
         infinity_playlab_repeat_forever: Súgradh is Dáiríre - Athdhéan go deo
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: Cad is Ríomhaire ann, i ndáiríre?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
+        csd_concept_how_computers_work: 'An chaoi a n-oibríonn ríomhairí: Brollach'
+        csd_concept_computer: 'An chaoi a n-oibríonn ríomhairí: Cad is ríomhaire ann,
+          i ndáiríre?'
+        csd_concept_binary_data: 'An chaoi a n-oibríonn ríomhairí: Dénárchódú agus
+          Sonraí'
+        csd_concept_circuits_logic: 'An chaoi a n-oibríonn ríomhairí: Ciorcaid agus
+          Loighic'
+        csd_concept_memory_cpu_input_output: 'An chaoi a n-oibríonn ríomhairí: Cuimhne,
+          LAP, Ionchur agus Aschur'
+        csd_concept_hardware_software: 'An chaoi a n-oibríonn ríomhairí: Crua-earraí
+          agus Bogearraí'
         csd_concept_search: Conas a Oibríonn Inneall Cuardaigh
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
+        csd_external_amazon_data: An chaoi a n-úsáideann Amazon mórshonraí i gcórais
+          mholta chun do shaol a athrú
+        csd_external_netflix_data: Cén chaoi a molann Netflix scannáin agus cláir
+          theilifíse duit?
+        csd_external_waze_data: Cén fáth a bhfuil go leor daoine go hiomlán gafa le
+          Waze?
         csd_gamelab_animation_tab: An Cluaisín Beochana
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -889,9 +758,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Tóg do Réaltra Féin le Cód - Réamhrá'
         starwars_typing: 'Star Wars: Tóg do Réaltra Féin le Cód - JavaScript'
         starwars_events: 'Star Wars: Tóg do Réaltra Féin le Cód - Teagmhais'
@@ -915,38 +781,54 @@
         mc_2016_events: Uair Chódála Minecraft - Teagmhais
         mc_2016_spawn: Uair Chódála Minecraft - Sceitheadh
         mc_2016_congrats: Uair Chódála Minecraft - Comhghairdeas
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        applab_hoc_welcome: Uair Chódála sa tSaotharlann Aipeanna - Fáilte
+        applab_hoc_setproperty: Uair Chódála sa tSaotharlann Aipeanna - setProperty
+        applab_hoc_onevent: Uair Chódála sa tSaotharlann Aipeanna - onEvent
+        applab_hoc_designmode: Uair Chódála sa tSaotharlann Aipeanna - Mód Deartha
+        applab_hoc_share: Uair Chódála sa tSaotharlann Aipeanna - Comhroinnt
+        mc_2017_agent_intro: Uair Chódála Minecraft - An Gníomhaire
+        mc_2017_repeat: Uair Chódála Minecraft - Lúba Athdhéanta
+        mc_2017_functions: Uair Chódála Minecraft - Feidhmeanna
         mc_2017_congratulations: Uair Chódála Minecraft - Comhghairdeas
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        mc_2017_puzzle_1: Uair Chódála Minecraft - An Gníomhaire
+        mc_2017_puzzle_3: Uair Chódála Minecraft - Lúba Athdhéanta
+        mc_2017_puzzle_8: Uair Chódála Minecraft - Feidhmeanna
+        mc_2017_puzzle_12: Uair Chódála Minecraft - Saorimirt
+        hint_videos_d_11_3_first: 'Físeáin Chabhracha: D.11.3 Tús'
+        hint_videos_d_11_3_last: 'Físeáin Chabhracha: D.11.3 Deireadh'
+        hint_videos_d_11_4_first: 'Físeáin Chabhracha: D.11.4 Tús'
+        hint_videos_d_11_4_last: 'Físeáin Chabhracha: D.11.4 Deireadh'
+        hint_videos_d_11_5_first: 'Físeáin Chabhracha: D.11.5 Tús'
+        hint_videos_d_11_5_last: 'Físeáin Chabhracha: D.11.5 Deireadh'
+        hint_videos_d_11_6_first: 'Físeáin Chabhracha: D.11.6 Tús'
+        hint_videos_d_11_6_last: 'Físeáin Chabhracha: D.11.6 Deireadh'
+        hint_videos_d_11_7_first: 'Físeáin Chabhracha: D.11.7 Tús'
+        hint_videos_d_11_7_last: 'Físeáin Chabhracha: D.11.7 Deireadh'
+        hint_videos_d_11_9_first: 'Físeáin Chabhracha: D.11.9 Tús'
+        hint_videos_d_11_9_last: 'Físeáin Chabhracha: D.11.9 Deireadh'
+        hint_videos_d_11_11_first: 'Físeáin Chabhracha: D.11.11 Tús'
+        hint_videos_d_11_11_last: 'Físeáin Chabhracha: D.11.11 Deireadh'
+        applab_intro_welcome: An tSaotharlann Aipeanna - Tús Maith
+        applab_intro_events: An tSaotharlann Aipeanna - Idirghníomhaíocht
+        applab_intro_sounds: An tSaotharlann Aipeanna - Íomhánna agus Fuaimeanna
+        applab_intro_designmode: An tSaotharlann Aipeanna - An Mód Deartha
+        applab_intro_share: An tSaotharlann Aipeanna - Foilsigh d'Aip
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: An Buainteoir
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: An Buainteoir
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Lúba
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile
@@ -977,12 +859,12 @@
           oibre"
         repeat_blocks_2: (2) Tarraing an bloc "athdhéan" anseo, agus cuir na blocanna
           liatha taobh istigh de
-        snowflake_dropdown: "Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
-          a chruthú!"
+        snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
+          a chruthú!
         degrees_per_side: Roinn 360 ar líon na dtaobhanna le teacht ar mhéid gach
           uillinne (céimeanna).
-        set_sides: "Úsáid an bloc seo chun líon na dtaobh a shocrú agus an dúshlán
-          a chríochnú."
+        set_sides: Úsáid an bloc seo chun líon na dtaobh a shocrú agus an dúshlán
+          a chríochnú.
         set_length: Úsáid an bloc seo chun an luach "fad" a shocrú.
         which_equation: Cén chothromóid a dhéanfaidh na taobhanna níos giorra i gcruthanna
           a bhfuil níos mó taobhanna acu?
@@ -996,10 +878,10 @@
           cliceáil "Cruthaigh Feidhm".
         house_hint: Ná bí buartha murar cosúil le teach é an pictiúr. Feabhsóimid
           sa chéad dúshlán eile é.
-        edit_draw_square: "Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
-          lúb a chur léi."
-        edit_get_nectar: "Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
-          an treo ina gcasann an Beach le neachtar a fháil a athrú."
+        edit_draw_square: Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
+          lúb a chur léi.
+        edit_get_nectar: Úsáid an cnaipe seo chun an fheidhm a chur in eagar agus
+          an treo ina gcasann an Beach le neachtar a fháil a athrú.
         logic_category: Oscail an rialtán "Loighic" chun teacht ar an mbloc "má/i
           ngach cás eile".
         length_parameter: An féidir leat an fheidhm seo a athrú chun úsáid a bhaint
@@ -1013,8 +895,8 @@
         frozen_create_square: Ceangail níos mó blocanna anseo le cearnóg a chruthú
         playlab_drag_say: Tarraing an bloc "abair" anseo agus cuir "dia dhuit" isteach
           ann
-        playlab_use_twice: "Úsáid an bloc seo faoi dhó, agus ná dearmad uimhir an
-          aisteora a athrú"
+        playlab_use_twice: Úsáid an bloc seo faoi dhó, agus ná dearmad uimhir an aisteora
+          a athrú
         playlab_move_girl: Úsáid an bloc "téigh ar dheis" chun an Cailín Leadóige
           a aistriú
         playlab_play_sound: Cuir bloc "seinn fuaim" anseo
@@ -1049,13 +931,13 @@
           ciorcal iomlán a dhéanamh
         place_length_variable: Tarraing an athróg "fad" anseo agus cuir in ionad na
           gcomharthaí ceiste í
-        arrows_move_actor: "Úsáid na saighde chun an t-aisteoir a aistriú"
-        right_arrow_fireball: "Úsáid an tsaighead dheas chun meallta tine a chaitheamh"
+        arrows_move_actor: Úsáid na saighde chun an t-aisteoir a aistriú
+        right_arrow_fireball: Úsáid an tsaighead dheas chun meallta tine a chaitheamh
         name_function: Scríobh ainm na feidhme anseo
         Infinity_move_right_runbutton: Cuir bloc "téigh" anseo
         Infinity_move_directions_callout: Cén bloc a aistreoidh Baymax suas nuair
           a bhrúifear an tsaighead suas?
-        Infinity_move_directions_callout_arrow: "Úsáid na saighde seo le stiúradh"
+        Infinity_move_directions_callout_arrow: Úsáid na saighde seo le stiúradh
         Infinity_move_collide_callout: Seinn fuaim nuair a tharlaíonn an teagmhas
           seo.
         Infinity_repeat_callout: Cuir blocanna Téigh isteach anseo

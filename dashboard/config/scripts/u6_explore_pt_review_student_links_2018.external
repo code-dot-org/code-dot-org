@@ -1,0 +1,51 @@
+name 'U6 Explore PT Review - Student Links_2018'
+css 'unplugged'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Explore PT Prep - Reviewing the Task
+
+## Overview
+
+This lesson contains a series of activities you can use to help students familiarize themselves with Explore Performance Task, how it is scored, and some example tasks provided by the College Board.
+
+## Lesson
+
+* Review the Explore Performance Task.
+* Review Sample Tasks and Scoring Guidelines.
+
+## Resources
+
+**College Board Documents**
+
+* [AP CSP Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf?course=ap-computer-science-principles) - College Board Student Handout
+* [Explore Performance Task - Scoring Guidelines 2018](https://apcentral.collegeboard.org/pdf/2018-explore-performance-tasks-sg.pdf?course=ap-computer-science-principles) - College Board Doc
+
+**College Board Explore PT Samples**
+
+* [Explore - Computational Artifact: Sample C](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-explore-sample-c-artifact.pdf)
+* [Explore - Written Responses: Sample C](https://secure-media.collegeboard.org/ap/pdf/computer-science-principles/ap17-csp-explore-sample-c.pdf)
+
+**Annotated Explore PT Samples:**
+
+* [CB Explore PT - Sample C (8/8)](https://docs.google.com/document/d/14iaqQRDIFkT4KNYT-e28COW7-TpPqVaH7dXi4pwD1SQ/export?format=pdf) - Annotated PT Sample (copy as [MS Word](https://docs.google.com/document/d/14iaqQRDIFkT4KNYT-e28COW7-TpPqVaH7dXi4pwD1SQ/export?format=doc), [Google Doc](https://docs.google.com/document/d/14iaqQRDIFkT4KNYT-e28COW7-TpPqVaH7dXi4pwD1SQ/copy))
+* [CB Explore PT - Sample D (5/8)](https://docs.google.com/document/d/1eIqblp17o77rcx6e0CoSSzeZTP18fjWewrRSp-m24xE/export?format=pdf) - Annotated PT Sample (copy as [MS Word](https://docs.google.com/document/d/1eIqblp17o77rcx6e0CoSSzeZTP18fjWewrRSp-m24xE/export?format=doc), [Google Doc](https://docs.google.com/document/d/1eIqblp17o77rcx6e0CoSSzeZTP18fjWewrRSp-m24xE/copy))
+* [CB Explore PT - Sample E (2/8) ](https://docs.google.com/document/d/1EKti2uzUlvqZWuxTB65zcNUZaqEFmYjnLR-3_kw2INw/export?format=pdf) - Annotated PT Sample (copy as [MS Word](https://docs.google.com/document/d/1EKti2uzUlvqZWuxTB65zcNUZaqEFmYjnLR-3_kw2INw/export?format=doc), [Google Doc](https://docs.google.com/document/d/1EKti2uzUlvqZWuxTB65zcNUZaqEFmYjnLR-3_kw2INw/copy))
+
+
+
+**(optional) Digital Portfolio Setup**
+
+* [AP Digital Portfolio Student Guide](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf) - College Board Handout
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
+
+**Warning:**
+
+We have ***included links on this student page to the the scoring commentary** for the sample tasks. If you you want students to try applying the scoring guidelines to tasks without knowing ahead of time you’ll have to invoke some kind of honor system or strategy to have them hold off looking.
+MARKDOWN

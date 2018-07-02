@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Hour of Code 는 컴퓨터과학기술이 어떻게 동작하고, 응용프로그램(앱) 들을 어떻게 만들어 낼 수 있는지 배울 수 있는 긴 여행의 첫 번째 시작입니다. 이 여행을 계속하려면:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [참여해보세요](<%= resolve_url('https://code.org/professional-development-workshops') %>) 컴퓨터과학 전문가와 함께 여러가지들을 배울 수 있는 하루 짜리 워크숍들에 개인적으로 참여할 수 있습니다. (US educators only)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

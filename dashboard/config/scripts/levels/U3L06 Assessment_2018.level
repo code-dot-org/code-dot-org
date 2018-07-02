@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:37:56.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Function Parameters",
+    "markdown_instructions": "It is said that *functions with parameters generalize the behavior of a more specific command and allow programmers to use functions instead of duplicated code.* Explain what this means to you using the difference between turnLeft() and turnLeft(angle) as an example.\n\n",
+    "encrypted_solution": "TZiMDgcIqrLKpwAaZfp7gPlrho9MrgqU28SfsJbUQkncws2HKpR1VNlJpDpG\n/u6ZfT1R9v4TfWulMP06CRAVyx1pynXMDeN/m5AQZz/VHldV7sZFZ3wZDnus\nlB0oCNJP/05E0bxxet/ZqkZBKyZqdOjkRD6tZFN7foMaKWN5XLzWmSGWVRxm\nM5vZXgPmaoeRhakqXSDF8Kwmxl/jqEyACr7s93RDFkygTnz/n2bM5BxiDja1\npTkcZkszo1qgiIwmlytXHgIXUtNSBK2ov29RmBr1Ru0C1GUKG0UM7/DFCt4P\nDLuXyy2CMN8WuYjmygU4D+Ar0K7rrLSyEtSVVpNT1o1JOFygF9RhdcFbYUxk\nIYLKZsOzWX9Kam26UekhcBnriavIHpbSFp9pzIzcmIqr9IjCMkhQEztIDhyF\nAPSTadCktWCaD8cq2hWmc+rMROY0FQuZf2ecxi8KT3dGP9TI8H9DYYeIfhGx\n03RWC2BvUf5ilhOgox4ok9WXq43mty6XYM3EmvCWZZ9iUGAeXHqlkw==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2432,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

@@ -14,7 +14,7 @@ class UserLevelTest < ActiveSupport::TestCase
     @driver_user_level.navigator_user_levels << @navigator_user_level
   end
 
-  test "best? perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
+  test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
     # these exist in production. example:
     # #<UserLevel id: 28907915, user_id: 852686, level_id: 5,
     # attempts: 0, created_at: "2014-03-10 21:57:19", updated_at:
@@ -27,13 +27,12 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: nil
     )
 
-    refute ul.best?
     refute ul.perfect?
     refute ul.finished?
     refute ul.passing?
   end
 
-  test "best? perfect? finished? and passing? for best result" do
+  test "perfect? finished? and passing? for best result" do
     ul = UserLevel.create(
       user: @user,
       level: @level,
@@ -41,13 +40,12 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::BEST_PASS_RESULT
     )
 
-    assert ul.best?
     assert ul.perfect?
     assert ul.finished?
     assert ul.passing?
   end
 
-  test "best? perfect? finished? and passing? for barely optimal result" do
+  test "perfect? finished? and passing? for barely optimal result" do
     ul = UserLevel.create(
       user: @user,
       level: @level,
@@ -55,13 +53,12 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::MAXIMUM_NONOPTIMAL_RESULT + 1
     )
 
-    refute ul.best?
     assert ul.perfect?
     assert ul.finished?
     assert ul.passing?
   end
 
-  test "best? perfect? finished? and passing? for barely passing result" do
+  test "perfect? finished? and passing? for barely passing result" do
     ul = UserLevel.create(
       user: @user,
       level: @level,
@@ -69,13 +66,12 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    refute ul.best?
     refute ul.perfect?
     assert ul.finished?
     assert ul.passing?
   end
 
-  test "best? perfect? finished? and passing? for barely finishing result" do
+  test "perfect? finished? and passing? for barely finishing result" do
     ul = UserLevel.create(
       user: @user,
       level: @level,
@@ -83,13 +79,12 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_FINISHED_RESULT
     )
 
-    refute ul.best?
     refute ul.perfect?
     assert ul.finished?
     refute ul.passing?
   end
 
-  test "best? perfect? finished? and passing? for not finishing result" do
+  test "perfect? finished? and passing? for not finishing result" do
     ul = UserLevel.create(
       user: @user,
       level: @level,
@@ -97,13 +92,12 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_FINISHED_RESULT - 5
     )
 
-    refute ul.best?
     refute ul.perfect?
     refute ul.finished?
     refute ul.passing?
   end
 
-  test "best? perfect? finished? and passing? for free play result" do
+  test "perfect? finished? and passing? for free play result" do
     ul = UserLevel.create(
       user: @user,
       level: @level,
@@ -111,7 +105,6 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::FREE_PLAY_RESULT
     )
 
-    refute ul.best?
     assert ul.perfect?
     assert ul.finished?
     assert ul.passing?
@@ -227,8 +220,7 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test "authorized_teacher cant become locked" do
     teacher = create :teacher
-    cohort = create :cohort
-    teacher.cohorts << cohort
+    teacher.permission = UserPermission::AUTHORIZED_TEACHER
 
     stage = create(:stage, lockable: true)
 

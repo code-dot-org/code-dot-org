@@ -1,0 +1,112 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:38:12.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "penUp": null,
+      "penDown": null,
+      "forLoop_i_0_4": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "Y0KVjpIVnrHBZ9d3TIvgfPYUmwZSFOIEnty9hmHVWMPWh2EiXn41Jv/TWCui\nwcEE\n",
+    "embed": "false",
+    "instructions": "Use a loop to draw a square. Then add another loop to draw many squares each one rotated some amount. (Click to see full instructions)",
+    "markdown_instructions": "# Getting Started with Loops\r\n\r\nA **loop** is a block of code that is repeated or \"looped through\" in a program. You will be creating a loop using the `for` loop block.\r\n\r\nWe'll start by experimenting with a program similar to what you saw in the video.\r\n\r\n# Do This:\r\n* **Drag** out a `for` loop block.\r\n* **Inside the loop:**\r\n\t* **Add** a call to `moveForward`.\r\n    * **Add** a call `turnLeft`. (HINT: try turning by 137 degrees to start. You can change after that.)\r\n    \r\n![](https://images.code.org/4da4a0c8a10a3c9637df96507fece183-image-1443038466204.gif)\r\n\r\n* **Run** the program to see the loop in action.\r\n* **Experiment:**\r\n * **Change** the number of times the loop runs.\r\n * **Increase** the run speed to see how fast loops can execute.\r\n * **How many times** can the loop run before you can no longer tell the difference in the image?\r\n \r\n**Move on** once you feel like you have a decent grasp of using a `for` loop: setting the number of times to repeat, running the program, and setting the run speed.\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "video_key": "csp_applab_loops",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "The problem asks you to use moveForward and your code has no moveForward commands in it."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "The problem asks you to turnLeft and your code has no turnLeft commands in it."
+      },
+      {
+        "entries": [
+          "[forInit]",
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You should have a loop in this code."
+      },
+      {
+        "entries": [
+          "[forTest]",
+          "moveForward:1",
+          "turnLeft:1",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "For this test App Lab is expecting that inside the loop, you will moveForward before turning left."
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 3174,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 21:22:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-12 14:55:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

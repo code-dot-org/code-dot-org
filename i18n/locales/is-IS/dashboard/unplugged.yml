@@ -163,9 +163,6 @@ is:
       CollisionDetection:
         title: Skynjun árekstra og regla Pýþagórasar
         desc: Það er mikilvægur þáttur í flestum leikjum að skynja hvenær hlutir á skjánum snertast. Í þessari námseiningu munum við skoða hvernig regla Pýþagórasar og fjarlægðarformúlan nýtast til að mæla fjarlægðina milli tveggja punkta á skjánum og hvernig við ákveðum hvort þessi tveir punktar (eða leikverur) snertist.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Lykkjur án tölvu
         desc: Í þessum tíma munt þú læra um lykkjur!
@@ -265,3 +262,96 @@ is:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Algrím úr raunheimi: Sá fræi'
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.
+      UnplugHappyMaps_2018:
+        title: Krúttleg kort
+        desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern ferðast um völundarhús með einni skipun.
+      GoingPlacesSafely_2018:
+        title: Ferðast í öryggi
+        desc: Internetið er öflugur en stundum hættulegur staður. Kennarar kynna hvernig þarf að passa sig þegar farið er um netið.
+      courseA_unplugged_loops_2018:
+        title: Lykkjur án tölvu
+        desc: Í þessum tíma munt þú læra um lykkjur!
+      BigEvent_2018:
+        title: Stórviðburður
+        desc: Nemendur fá kynningu á forritunarhugtakinu "atvik" sem eru aðgerðir sem tölvan er stöðugt að vakta. Kennarinn ýtir á hnapp á pappírsfjarstýringu og nemendur bregðast mismunandi við eftir því á hvaða hnapp var ýtt.
+      GraphPaperProgramming_2018:
+        title: Forritun rúðublaða
+        desc: Nemendur skrifa algrím (röð leiðbeininga) með fyrirfram ákveðnum skipunum til að stýra bekkjarfélögum í að endurskapa teikningu.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Verkefni án tölvu
+        desc: Í dag munt þú læra hvað það þýðir að hafa stafrænt ríkisfang.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Verkefni án tölvu
+        desc: Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við þig á netinu.
+      Conditionals_2018:
+        title: Skilyrði
+        desc: Nemendur læra um skilyrtar setningar með því að spila á spil og búa til reglur eins og "ef ég dreg rautt spil, fæ ég stig" og "ef ég dreg svart spil, færð þú stig."
+      DigitalFootprint_2018:
+        title: Stafræna fótsporið þitt
+        desc: Kennarinn kynnir fyrir nemendum þá hugmynd að með því að setja upplýsingar um sig á netið búi þeir til stafrænt fótspor eða slóð sem getur haft afleiðingar.
+      BinaryImages_2018:
+        title: Tvíundarmyndir
+        desc: Þó margir ímyndi sér að tvíundir takmarkist alfarið við núll og einn, kenndu fyrri námskeið nemendum okkar að það er hægt að nota ýmsar aðrar tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari upplýsingar (svo sem myndir og liti) með tvíundarsniði.
+      PaperPlanes_2018:
+        title: 'Algrím úr raunheimi: Pappírsskutlur'
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi og tekur sem dæmi að búa til pappírsskutlu. Einnig er horft almennar til tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.
+      GettingLoopy_2018:
+        title: Lykkjulæti
+        desc: Þessi kennslustund kynnir forritunarhugtakið lykkju (endurteknar skipanir) með dansi. Nemendur læra einföld dansspor og fá síðan fyrirmæli um að endurtaka þau.
+      BinaryBracelets_2018:
+        title: Stafræn armbönd
+        desc: Nemendur búa til armbönd sem sýna fyrsta stafinn í nafni hvers með gildi hans í tvenndarkerfi. Nemendur læra að það er hægt að tákna og geyma gögn á ýmsa vegu.
+      MoveItMoveIt_2018:
+        title: Hreyfa sig, hreyfa sig
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Boðhlaupsforritun
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

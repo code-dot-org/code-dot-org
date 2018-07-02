@@ -1,8 +1,9 @@
-"sk":
+---
+sk:
   data:
     game:
       name:
-        Unplug1: "Úvod do vedy o počítačoch (informatiky)"
+        Unplug1: Úvod do vedy o počítačoch (informatiky)
         Maze: Bludisko
         Multi: Viacnásobný výber
         Unplug2: Algoritmické myslenie
@@ -18,7 +19,7 @@
         Farmer2: Farmár 2
         Unplug8: Abstrakcia
         Artist4: Postava 4
-        Unplug9: "Štafetové programovanie"
+        Unplug9: Štafetové programovanie
         Farmer3: Farmár 3
         Unplug10: Internet
         Artist5: Postava 5
@@ -250,8 +251,8 @@
         maze_karel_debug_seq_1: Vitaj pri ladení programov! Môj kód nepracuje správne.
           Môžeš nájsť problém a opraviť ho tak, aby bolo pole vyrovnané a pripravené
           na sadenie?
-        maze_karel_debug_seq_2: "Čo je zlé v tomto programe? Ako ho opraviť, aby sa
-          odstránila kôpka?"
+        maze_karel_debug_seq_2: Čo je zlé v tomto programe? Ako ho opraviť, aby sa
+          odstránila kôpka?
         maze_karel_debug_repeat: Vylaď tento program tak, aby pole bolo čisté a rovné.
         maze_karel_debug_while: Ako by si zmenil tento program, aby si mi pomohol
           vyplniť jamu?
@@ -288,119 +289,8 @@
         maze_3_3: Ako by som sa len dostal k tomu prasaťu? Dávaj pozor aby som neskočil
           na škatuľu s TNT!
         maze_3_4: Grr! Napíš mi program, ktorý ma dostane okolo TNT k tomu prasaťu.
-        bounce_1_basketball: Pripoj blok k bloku "ak ľavá šípka" a stlač "Spustiť".
-          Pohni rukou pomocou ľavej šípky a dojdi až do cieľu.
-        bounce_2_basketball: Pripoj blok k blokom "ak pravá šípka" a "ak ľavá šípka".
-          Pohni rukou a dojdi do oboch cieľov.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Teraz je vlajka hore. Musíš pripojiť bloky k obom "ak
-          sa lopta dotke" blokom, aby si vyriešil úlohu.
-        bounce_7_basketball: Pripoj bloky ku každému z "ak" blokov. Skáč s loptou
-          až kým sa nedotkne vlajky.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Vytvor si svoju vlastnú basketbalovú hru. Môžeš zmeniť
-          pravidlá. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať
-          kamaráti na svojich telefónoch.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Teraz je vlajka hore. Musíš pripojiť bloky k obom "ak sa
-          lopta dotke" blokom, aby si vyriešil úlohu.
-        bounce_7_sports: Pripoj bloky ku každému z "ak" blokov. Skáč s loptou až kým
-          sa nedotkne vlajky.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
-          the paddle using the left arrow to reach the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
-          Move the paddle to reach both finish targets.
-        bounce_3: Now try something similar with the "when up arrow" block. Move the
-          paddle to the finish target at the top.
-        bounce_4: This time you need to add four blocks. Move the paddle to all four
-          finish targets to complete this puzzle.
-        bounce_5: We're going to send a ball flying down towards the paddle. Attach
-          a block to the "when ball hits paddle" block to ensure the ball reaches
-          the finish target.
-        bounce_6: Now the finish target is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7: Attach blocks to each of the "when" blocks. Bounce the ball until
-          it hits the finish target.
-        bounce_10: There is a now a goal at the top. Attach the "score point" and
-          "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses paddle" blocks to make a game. See how many points you can score
-          before your opponent scores twice.
-        bounce_11: You can now attach blocks to the "when run" block. You have to
-          attach the new "launch new ball" block in more than one place. Also, try
-          changing the scene or the speed of the paddle and the ball and see how many
-          points you can score before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
         Custom_builder: Drag blocks from the toolbox to the workspace to draw the
           level you wish to create. Press "Run" when you are ready.
-        flappy_1: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          run" block.
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
-          of ending the game try setting the score back to 0.
-        flappy_11: Create your own Flappy game. You can change all the visuals and
-          all the rules, even the gravity. When you're done, click Finish to let friends
-          try your game on their phones.
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
         jigsaw_1: Klikni na blok
         jigsaw_2: Presuň blok do cieľa
         jigsaw_3: Usporiadaj bloky tak, aby sa vytvoril obrázok
@@ -590,7 +480,7 @@
         maze_intro: Maze Intro
         artist_intro: Artist Intro
         farmer_intro: Farmer Intro
-        flappy_intro: "Úvod do Flappy"
+        flappy_intro: Úvod do Flappy
         loop_times: Blok Opakovať x-krát
         loop_until: Repeat Until Block
         if: If Block
@@ -601,7 +491,7 @@
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
-        Unplug1: "Čo je to CS?"
+        Unplug1: Čo je to CS?
         Unplug2: Algoritmické myslenie
         Unplug3: Programovanie na milimetrovom papieri
         Unplug4: Algoritmy
@@ -609,7 +499,7 @@
         Unplug6: Podmienky
         Unplug7: Písanie pesničiek s parametrami
         Unplug8: Abstrakcia
-        Unplug9: "Štafetové programovanie"
+        Unplug9: Štafetové programovanie
         Unplug10: Internet
         Unplug11: Zhrnutie
         C1_happy_maps_unplugged: Veselé mapy
@@ -641,7 +531,7 @@
         C2_graph_paper: Programovanie na milimetrovom papieri
         C2_conditionals_with_cards: Podmienky
         C2_binary_bracelets: Binárne náramky
-        C2_relay_programming: "Štafetové programovanie"
+        C2_relay_programming: Štafetové programovanie
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Tvoj digitálny otlačok
         C2_digital_footprint_v2: Tvoj digitálny otlačok
@@ -663,7 +553,7 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Dekorácie
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: "Úvod"
+        C4_intro: Úvod
         C4_loops_zombie: Cykly
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
@@ -672,7 +562,7 @@
         C4_for_loops_bee: For Loops
         C4_for_loops_no_bee: For Loops
         C4_math_artist: Programming the Artist with Math
-        C4_function_edit: "Úprava funkcií"
+        C4_function_edit: Úprava funkcií
         C4_function_create: Tvorba funkcií
         C4_function_parameters: Functions with Parameters
         C4_conditionals: Podmienky
@@ -699,10 +589,10 @@
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
-        frozen_intro: "Úvod do Hodiny kódu"
-        frozen_loops: "Úvod do cyklov"
-        frozen_functions: "Úvod do funkcií"
-        playlab_intro: "Úvod do Play Lab"
+        frozen_intro: Úvod do Hodiny kódu
+        frozen_loops: Úvod do cyklov
+        frozen_functions: Úvod do funkcií
+        playlab_intro: Úvod do Play Lab
         playlab_events: Play Lab Udalosti
         playlab_repeat_forever: Play Lab Doživotné opakovanie
         tutorial_puzzle_challenge: Tutoriál - Puzzle výzva
@@ -754,7 +644,7 @@
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: "Úvod do funkcií"
+        csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Functions with Parameters
         csp_applab_loops: Cykly
         csp_applab_turtle: Turtle Programming
@@ -796,9 +686,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Budovanie Galaxie s kódom - Úvod'
         starwars_typing: 'Star Wars: Budovanie Galaxie s kódom - JavaScript'
         starwars_events: 'Star Wars: Budovanie Galaxie s kódom - Udalosti'
@@ -827,14 +714,14 @@
         applab_hoc_onevent: App Lab Hour of Code - onEvent
         applab_hoc_designmode: AppLab Hour of Code - Design Mode
         applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        mc_2017_agent_intro: Hodina kódu Minecraft - Agent
+        mc_2017_repeat: Hodina kódu Minecraft - Zopakuj Cykly
+        mc_2017_functions: Hodina kódu Minecraft - Funkcie
         mc_2017_congratulations: Hodina kódu Minecraft - Gratulujeme
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
+        mc_2017_puzzle_1: Hodina kódu Minecraft - Agent
+        mc_2017_puzzle_3: Hodina kódu Minecraft - Zopakuj Cykly
+        mc_2017_puzzle_8: Hodina kódu Minecraft - Funkcie
+        mc_2017_puzzle_12: Hodina kódu Minecraft - Voľná hra
         hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
         hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
         hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
@@ -854,6 +741,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Cykly
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

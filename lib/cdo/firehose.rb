@@ -3,7 +3,6 @@ require 'singleton'
 # A wrapper client to the AWS Firehose service.
 # @example
 #   FirehoseClient.instance.put_record(
-#     'analysis-events',
 #     {
 #       study: 'underwater basket weaving', # REQUIRED
 #       study_group: 'control',             # OPTIONAL
@@ -18,6 +17,9 @@ require 'singleton'
 #       data_json: "{\"key\":\"value\"}"    # OPTIONAL
 #     }
 #   )
+
+STREAM_NAME = 'analysis-events'.freeze
+
 class FirehoseClient
   include Singleton
 
@@ -31,14 +33,13 @@ class FirehoseClient
     @firehose = Aws::Firehose::Client.new(region: REGION)
   end
 
-  # Posts a record to the indicated stream.
-  # @param stream_name [String] The steam to put the data in.
+  # Posts a record to the analytics stream.
   # @param data [hash] The data to insert into the stream.
-  def put_record(stream_name, data)
+  def put_record(data)
     data_with_common_values = add_common_values(data)
 
     if [:development, :test].include? rack_env
-      CDO.log.info "Skipped sending record to #{stream_name}: "
+      CDO.log.info "Skipped sending record to #{STREAM_NAME}: "
       CDO.log.info data
       return
     end
@@ -49,7 +50,7 @@ class FirehoseClient
     # for documentation.
     @firehose.put_record(
       {
-        delivery_stream_name: stream_name,
+        delivery_stream_name: STREAM_NAME,
         record: {data: data_with_common_values.to_json}
       }
     )

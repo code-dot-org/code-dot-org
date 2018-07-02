@@ -1,7 +1,6 @@
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
-%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,geometry&v=3.7"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
@@ -151,12 +150,24 @@
       %div
         %input#email.form-control{name: "email_s", placeholder: "Private contact email", type: "text", required: "", value: email_s}/
 
+    .form-group
+      %label.control-label{for: "email-preference"}
+        Can we email you about updates to our courses, local opportunities, or other computer science news?
+        %a{href: '/privacy', target: '_blank'}
+          (See our privacy policy)
+      %span.form-required-field *
+      %div
+        %select#email-preference.form-control{name: "email_preference_optin_s", type: "select", required: true}
+          %option{value: "", selected: true, disabled: true}
+          %option{value: "yes"} Yes
+          %option{value: "no"} No
+
   -if mode == 'review'
     .form-group
       %input#form-mode{name: "form_mode", type: "hidden", value: 'review'}/
 
   .form-group.submit-btn
-    %button#btn-submit.btn.btn-default{type: "submit"} Submit
+    %button#btn-submit{type: "submit"} Submit
 
     -if mode == 'review'
       %button#btn-cancel.btn.btn-danger{type: "button"} Cancel

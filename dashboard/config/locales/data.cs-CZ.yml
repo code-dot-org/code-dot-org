@@ -1,8 +1,9 @@
-"cs":
+---
+cs:
   data:
     game:
       name:
-        Unplug1: "Úvod do počítačové vědy"
+        Unplug1: Úvod do počítačové vědy
         Maze: Bludiště
         Multi: Více voleb
         Unplug2: Aritmetické Myšlení
@@ -18,7 +19,7 @@
         Farmer2: Farmářka 2
         Unplug8: Abstrakce
         Artist4: Malíř 4
-        Unplug9: "Štafetové programování"
+        Unplug9: Štafetové programování
         Farmer3: Farmář 3
         Unplug10: Internet
         Artist5: Umělec 5
@@ -290,118 +291,9 @@
         maze_3_3: Jak se jen dostanu k tomu prasátku? Ujisti se, že nenarazím do krabice
           s TNT!
         maze_3_4: Grrr! Napiš mi program, který mě dostane kolem TNT k tomu praseti.
-        bounce_1_basketball: Připoj blok k bloku "když šipka vlevo" a stiskni tlačítko
-          "Spustit". Přesuň ruku pomocí levé šipky k dosažení cíle.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Teď je vlajka nahoře. Musíte připojit bloky k oběma blokům
-          "když puk zasáhne", abyste vyřešili tuto hádanku.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Vytvořte si vlastní basketbalovou hru. Můžete změnit
-          všechna pravidla. Až budete hotovi, klepněte na tlačítko Dokončit a nechte
-          vaše kamarády vyzkoušet hru na jejich telefonech.
-        bounce_1_sports: Dostaňte se k vlajce! Připojte blok k bloku "když vlevo šipka"a
-          stiskněte tlačítko "Spustit", aby se hráč dostal k vlajce.
-        bounce_2_sports: Nyní jsou tam dvě vlajky. Připojte blok k blokům "když šipka
-          ukazující vlevo" a "když šipka ukazující vpraco", aby se hráč mohl pohybovat
-          v obou směrech.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Vlajka je teď nahoře. Musíte připojit bloky k oběma blokům
-          "když puk zasáhne", abyste vyřešili tuto hádanku.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: Vytvoř si vlastní hru! Můžeš měnit všechny pravidla, míchat
-          sporty.. Buď kreativní! Až budeš hotov, klepni na tlačítko dokončit, abys
-          nechal přátele zkusit tvou hru na svých telefonech.
-        bounce_1: Připoj blok k bloku "šipka vlevo" a stiskni tlačítko "Run". Přesuň
-          pálku pomocí levé šipky k dosažení cíle.
-        bounce_2: Připoj blok k blokům "šipka vpravo" a "šipka vpravo". Přesunuj pálku
-          k dosažení obou cílů.
-        bounce_3: Teď zkus něco podobného s blokem "šipka nahoru". Přesunuj pálku
-          k dokončení úkolu nahoře.
-        bounce_4: Tentokrát, je třeba přidat čtyři bloky. Přesunuj pálku k dokončení
-          všech čtyř úkolů a dokončení hádanky.
-        bounce_5: Pošleme míč směrem dolů k pálce. Přidej blok k bloku "když míč dopadne
-          na pálku", abys zajistil, že se míč dostane ke konečnému terči.
-        bounce_6: Teď je splněný úkol nahoře. Potřebuješ spojit oba bloky "když se
-          míč dotkne", abys dokončil hádanku.
-        bounce_7: Připoj bloky ke každému bloku "když". Odrážej míč dokud nenarazí
-          do konečného terče.
-        bounce_10: Nyní je cíl na vrcholu. Spoj bloky "skóre" a "skóre protihráče"
-          s bloky "když je míč v cíli" a "když míč mine pálku", abys vytvořil hru.
-          Podívej se, kolik bodů můžeš získat předtím, než tvůj protihráč skóruje
-          dvakrát.
-        bounce_11: Nyní můžeš připojit bloky k bloku "při spuštění". Musíš připojit
-          nové "spuštění nového míče" bloku do více míst než jednom. Také zkus změnit
-          scénu nebo rychlost pádla a míče, abys viděl kolik bodů můžeš skórovat než
-          tvůj soupeř skóruje dvakrát.
-        bounce_12: Vytvoř si vlastní hru Bounce. Můžeš měnit všechny vizuální efekty
-          a pravidla. Až budeš hotov, klepni na tlačítko Finish, abys nechal přátele
-          zkusit tvou hru na svých telefonech.
         Custom_builder: Přetáhni bloky z panelu nástrojů na pracovní plochu, abys
           nakreslil úroveň, kterou chceš vytvořit. Jakmile budeš připraven, stiskni
           tlačítko "Run".
-        flappy_1: Připoj blok k bloku "když klikneš" a potom stiskni "Spustit". Klikej
-          nebo ťukej na obrazovku, abys dostal Flappyho do cíle.
-        flappy_2: Teď jsme přidali terén. Připoj blok k bloku "když se dotkne země".
-          Tvůj kód musí zajistit 'konec hry', když Flappy narazí.
-        flappy_3: Blok "po spuštění" ti umožňuje spuštění kódu poté co hra začne.
-          Vyzkoušej nastavení rychlosti a let na cíl.
-        flappy_4: Flappy proletí skrz překážky, pokud nenapíšeš kód, aby naboural.
-          Připoj blok k bloku "když se dotkne překážky". Tvůj kód musí zajistit 'konec
-          hry', když Flappy narazí do první sady trubek.
-        flappy_5: Přidej tabulku s přehledem skóre a počítej body, když Flappy mine
-          překážku. Přidej to k bloku "když mine překážku" a potom získej body, když
-          Flappy proletí první sadou trubek.
-        flappy_6: Podívejme se, jestli můžeš pořád získat body i potom, co Flappy
-          uletí menší či větší vzdálenost.
-        flappy_7: Teď zkus změnit scénu připojením jiného bloku k bloku "po spuštění".
-        flappy_8: Obraz můžeš nastavit kdykoliv, ne jen na začátku hry. Vyzkoušej
-          nastavení NÁHODNÉ scény, když dojde k jiným událostem, například, když mine
-          překážku.
-        flappy_9: Zamíchat věci nahoru při nárazu na překážku a namísto ukončení hry
-          zkuste nastavit skóre zpět na 0.
-        flappy_11: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled a všechna
-          pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
-          a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
-        flappy_k1_1: Hrát psa
-        flappy_k1_2: Připoj blok k bloku "když klikneš" a potom stiskni "Spustit".
-          Klikej nebo ťukej na obrazovku, abys dostal Flappyho do cíle.
-        flappy_k1_3: Teď jsme přidali terén. Připoj blok k bloku "když se dotkne země".
-          Tvůj kód musí 'UKONČIT HRU', když Flappy narazí.
-        flappy_k1_4: Blok "po spuštění" ti umožňuje spuštění kódu poté co hra začne.
-          Vyzkoušej nastavení rychlosti a let na cíl.
-        flappy_k1_5: Flappy proletí skrz překážky, pokud nenapíšeš kód, aby naboural.
-          Připoj blok k bloku "když vrazí do překážky". Tvůj kód musí 'UKONČIT HRU',
-          když Flappy narazí do první sady trubek.
-        flappy_k1_6: Přidej tabulku s přehledem skóre a počítej body, když Flappy
-          proletí překážkama. Přidej to k bloku "když proletí překážkami" a potom
-          získej body, když Flappy proletí první sadou trubek.
-        flappy_k1_7: Pokud uvidíš, že můžeš skórovat více body, vytvoř přes to překážku
-        flappy_k1_8: Teď zkus změnit scénu připojením jiného bloku k bloku "po spuštění".
-        flappy_k1_9: Zkus změnit přehrávač připojením bloku "set player" do bloku
-          "při spuštění".
         jigsaw_1: Klepněte na blok
         jigsaw_2: Přetáhni blok na cíl
         jigsaw_3: Uspořádej bloky, aby vytvořily obraz
@@ -518,9 +410,9 @@
           že ji má moc rád. Použije povel "actor throw" na Sida (actor 1), aby hodil
           srdce na babičku (actor 2)! Nastav náladu Granny na spojenost, když se jí
           zasáhnou srdce.
-        studio_iceage_free_play: "Čas vytvořit si vlastní hru nebo příběh! Když budeš
+        studio_iceage_free_play: Čas vytvořit si vlastní hru nebo příběh! Když budeš
           hotov, klepni na Finish, abys nechal přátelé si zkusit tvou hru na jejich
-          mobilech, tabletech nebo Pc!"
+          mobilech, tabletech nebo Pc!
         studio_gumball_hello1: Anais chce mít nějaké nové přátele. Pomůžeš jí, aby
           řekla "Ahoj" přetažením bloku "say" do pracovní oblasti se zadáním uvnitř
           slova "hello"?
@@ -591,10 +483,10 @@
           Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
     video:
       name:
-        maze_intro: "Úvod Bludiště"
-        artist_intro: "Úvod Malíř"
-        farmer_intro: "Úvod Farmářka"
-        flappy_intro: "Úvod do Flappy"
+        maze_intro: Úvod Bludiště
+        artist_intro: Úvod Malíř
+        farmer_intro: Úvod Farmářka
+        flappy_intro: Úvod do Flappy
         loop_times: Blok Opakovat n-krát
         loop_until: Blok Opakovat Dokud
         if: Blok Pokud
@@ -616,7 +508,7 @@
         Unplug9: Relay programování
         Unplug10: Internet
         Unplug11: Shrnutí
-        C1_happy_maps_unplugged: "Šťastné mapy"
+        C1_happy_maps_unplugged: Šťastné mapy
         C1_moveitmoveit_unplugged: Pohyb, pohyb
         C1_bigevent_unplugged: Velká událost
         C1_getting_loopy: Bláznit
@@ -624,7 +516,7 @@
         C1_maze_intro_sequencing: Bludiště sekvenování Intro
         C1_maze_debugging: 'Bludiště: ladění'
         C1_bee_level_intro: Včelí Level - Úvod
-        C1_artist_intro: "Úvod Malíř"
+        C1_artist_intro: Úvod Malíř
         C1_spelling_bee_intro: Hláskování Intro
         C1_zuck_repeat_loop: Bludištní cykly
         C1_bee_loops: Včelí cykly
@@ -633,8 +525,8 @@
         C1_planting_seed: Sázení semínka
         C1_building_foundation: Budování nadace
         C1_going_places_safely: Cestování bezpečně
-        C2_maze_intro: "Úvod Bludiště"
-        C2_artist_intro: "Úvod Malíř"
+        C2_maze_intro: Úvod Bludiště
+        C2_artist_intro: Úvod Malíř
         C2_zuck_repeat_loop: Bludištní cykly
         C2_artist_loops: Umělec cykly
         C2_artist_debugging: Umělecké ladění
@@ -645,12 +537,12 @@
         C2_graph_paper: Programování Na Milimetrovém Papíru
         C2_conditionals_with_cards: Podmínky
         C2_binary_bracelets: Binární náramky
-        C2_relay_programming: "Štafetové programování"
+        C2_relay_programming: Štafetové programování
         C2_paper_airplanes: Papírová letadla
         C2_digital_footprint: Tvé digitální stopy
         C2_digital_footprint_v2: Tvé digitální stopy
         C3_maze_level_4: Bludištní cykly
-        C3_artist_intro: "Úvod Malíř"
+        C3_artist_intro: Úvod Malíř
         C3_artist_functions: Umělec funkce
         C3_bee_functions: Včelí funkce
         C3_bee_conditionals: Včela podmínky
@@ -667,7 +559,7 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funkční náhrdelníky
         C3_songwriting_with_parameters: Psaní písniček s parametry
-        C4_intro: "Úvod"
+        C4_intro: Úvod
         C4_loops_zombie: Smyčky
         C4_bee_conditional: Včela podmínky
         C4_variables_artist: Proměnné - umělec
@@ -703,10 +595,10 @@
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
-        frozen_intro: "Úvod do Hodiny kódu"
-        frozen_loops: "Úvod do cyklů"
-        frozen_functions: "Úvod do funkcí"
-        playlab_intro: "Úvod do Play Labu"
+        frozen_intro: Úvod do Hodiny kódu
+        frozen_loops: Úvod do cyklů
+        frozen_functions: Úvod do funkcí
+        playlab_intro: Úvod do Play Labu
         playlab_events: Play Lab události
         playlab_repeat_forever: Play Lab trvalé opakování
         tutorial_puzzle_challenge: Výukový program Puzzle výzva
@@ -758,7 +650,7 @@
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: "Úvod do funkcí"
+        csp_applab_functions: Úvod do funkcí
         csp_applab_functions_parameters: Funkce s Parametry
         csp_applab_loops: Smyčky
         csp_applab_turtle: Turtle Programming
@@ -800,9 +692,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
         starwars_typing: 'Hvězdné války: Budování Galaxy s kódem - JavaScript'
         starwars_events: 'Hvězdné války: Budování Galaxy s kódem - události'
@@ -858,6 +747,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Smyčky
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

@@ -22,13 +22,13 @@
 %div= hoc_s(:hoc_faq_behind_hoc_a).gsub(/%{partner_url}/, resolve_url('/partners'))
 
 %h2= hoc_s(:hoc_faq_host_q)
-%div= hoc_s(:hoc_faq_host_a).gsub('/how-to', resolve_url('/how-to')).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_host_a).gsub('/how-to', resolve_url('/how-to')).gsub(/%{codeorg_url}\/?/, codeorg_url('/'))
 
 %h2= hoc_s(:hoc_faq_devices_q)
-%div= hoc_s(:hoc_faq_devices_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org')).gsub(/%{unplugged_url}/, resolve_url('https://code.org/curriculum/unplugged'))
+%div= hoc_s(:hoc_faq_devices_a).gsub(/%{codeorg_url}\/?/, codeorg_url('/')).gsub(/%{partner_url}/, 'code.org').gsub(/%{unplugged_url}\/?/, codeorg_url('/curriculum/unplugged'))
 
 %h2= hoc_s(:hoc_faq_need_computers_q)
-%div= hoc_s(:hoc_faq_need_computers_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{pair_programming_research}/, 'http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning').gsub(/%{pair_programming_video}/, 'https://www.youtube.com/watch?v=vgkahOzFH2Q').gsub(/%{unplugged_url}/, resolve_url('https://code.org/curriculum/unplugged'))
+%div= hoc_s(:hoc_faq_need_computers_a).gsub(/%{codeorg_url}\/?/, codeorg_url('/')).gsub(/%{pair_programming_research}/, 'http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning').gsub(/%{pair_programming_video}/, 'https://www.youtube.com/watch?v=vgkahOzFH2Q').gsub(/%{unplugged_url}\/?/, codeorg_url('/curriculum/unplugged'))
 
 -if @country == 'us'
   %h2= hoc_s(:hoc_faq_logo_q)
@@ -42,19 +42,19 @@
 %div= hoc_s(:hoc_faq_tutorial_a).gsub('/tutorial-guidelines', resolve_url('/tutorial-guidelines'))
 
 %h2= hoc_s(:hoc_faq_account_q)
-%div= hoc_s(:hoc_faq_account_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_account_a).gsub(/%{codeorg_url}\/?/, codeorg_url('/'))
 
 %h2= hoc_s(:hoc_faq_certificates_q)
-%div= hoc_s(:hoc_faq_certificates_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_certificates_a).gsub(/%{codeorg_url}\/?/, codeorg_url('/'))
 
 %h2= hoc_s(:hoc_faq_high_school_q)
-%div= hoc_s(:hoc_faq_high_school_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
+%div= hoc_s(:hoc_faq_high_school_a).gsub(/%{codeorg_url}\/?/, codeorg_url('/')).gsub(/%{partner_url}/, 'code.org')
 
 %h2= hoc_s(:hoc_faq_scratch_q)
-%div= hoc_s(:hoc_faq_scratch_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
+%div= hoc_s(:hoc_faq_scratch_a).gsub(/%{codeorg_url}\/?/, codeorg_url('/')).gsub(/%{partner_url}/, 'code.org')
 
 %h2= hoc_s(:hoc_faq_count_hoc_q)
-%div= hoc_s(:hoc_faq_count_hoc_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+%div= hoc_s(:hoc_faq_count_hoc_a).gsub(/%{codeorg_url}\/?/, codeorg_url('/'))
 
 %h2= hoc_s(:hoc_faq_map_q)
 %div= hoc_s(:hoc_faq_map_a)

@@ -46,7 +46,7 @@ def load_configuration
     'build_apps'                  => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
-    'census_map_table_id'         => rack_env == :production ? '1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13' : nil,
+    'census_map_table_id'         => rack_env == :development ? nil : '1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13',
     'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",
@@ -71,7 +71,7 @@ def load_configuration
     'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
-    'partners'                    => %w(ar br italia ro sg tr uk za),
+    'partners'                    => %w(),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -200,6 +200,10 @@ class CDOImpl < OpenStruct
     canonical_hostname('hourofcode.com')
   end
 
+  def advocacy_hostname
+    canonical_hostname('advocacy.code.org')
+  end
+
   def circle_run_identifier
     ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}-#{ENV['CIRCLE_NODE_INDEX']}" : nil
   end
@@ -235,6 +239,18 @@ class CDOImpl < OpenStruct
     site_url('code.org', path, scheme)
   end
 
+  def advocacy_url(path = '', scheme = '')
+    site_url('advocacy.code.org', path, scheme)
+  end
+
+  CURRICULUM_LANGUAGES = Set['/es-mx', '/it-it', '/th-th']
+
+  def curriculum_url(locale, path = '')
+    locale = '/' + locale.downcase.to_s
+    locale = nil unless CURRICULUM_LANGUAGES.include? locale
+    "https://curriculum.code.org#{locale}/#{path}"
+  end
+
   def default_scheme
     rack_env?(:development) || ENV['CI'] ? 'http:' : 'https:'
   end
@@ -256,7 +272,7 @@ class CDOImpl < OpenStruct
   end
 
   def rack_env?(env)
-    rack_env == env
+    rack_env.to_sym == env.to_sym
   end
 
   # Sets the slogger to use in a test.
@@ -353,12 +369,12 @@ CDO ||= CDOImpl.new
 ##########
 
 def rack_env
-  CDO.rack_env
+  CDO.rack_env.to_sym
 end
 
 def rack_env?(*env)
   e = *env
-  e.include? rack_env
+  e.include? rack_env.to_sym
 end
 
 def with_rack_env(temporary_env)

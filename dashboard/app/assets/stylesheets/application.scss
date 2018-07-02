@@ -173,8 +173,7 @@ img.video_thumbnail {
 }
 
 .header-wrapper {
-  &.hide_on_mobile,
-  .hide_on_mobile {
+  &.hide_on_mobile {
     @media screen and (max-device-width: 500px) {
       display: none;
     }
@@ -377,6 +376,13 @@ img.video_thumbnail {
 
   .project_updated_at {
     font-size: 10px;
+    .project-save-error {
+      background-color: $dark_red;
+      padding: 0 5px;
+      margin-top: 2px;
+      font-size: 12px;
+      display: inline-block;
+    }
   }
 
   #hamburger {
@@ -1583,10 +1589,25 @@ a.download-video {
   }
   .itemblock {
     display: table;
+
+    input[type=radio] {
+      margin-top: -4px;
+      margin-right: 4px;
+    }
+
+    label {
+      display: inline-block;
+    }
   }
   .labelblock {
     display: table-cell;
     width: 140px;
+    vertical-align: middle;
+  }
+  .labelblock-wide {
+    display: table-cell;
+    width: 350px;
+    padding-right: 10px;
     vertical-align: middle;
   }
   .school-info-labelblock {
@@ -3065,4 +3086,26 @@ code {
 #survey-submission-thankyou {
   color: $purple;
   font-size: 18px;
+}
+
+hr.danger {
+  border-color: $red;
+  border-width: medium;
+}
+
+h2.danger {
+  color: $red;
+}
+
+.account-page-section-break {
+  margin-top: 6em;
+}
+
+#change-user-type-status {
+  vertical-align: middle;
+}
+
+.label-bold {
+  font-weight: bold;
+  color: $dark_charcoal;
 }

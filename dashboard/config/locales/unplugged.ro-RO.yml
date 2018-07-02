@@ -1,4 +1,5 @@
-"ro":
+---
+ro:
   data:
     unplugged:
       Unplug1:
@@ -53,7 +54,7 @@
         video: Unplug4
       Unplug5:
         title: Funcţii
-        desc: "În această lecție, elevii vor crea un suncatcher din șir, mărgele și
+        desc: În această lecție, elevii vor crea un suncatcher din șir, mărgele și
           un talisman special. Elevii vor urma o serie de pași repetitivi, apoi li
           se va cere să identifice anumite seturi de ”competențe” care vor fi multiplicate
           de câteva ori. Odată definite acele competențe, ele vor fi apelate dintr-un
@@ -63,7 +64,7 @@
           acesta să funcționeze în mod eficient, elevii trebuie să facă abstracție
           de detaliile materialelor lor și să formuleze termeni vagi pentru materialele
           de lucru al unui individ. Această utilizare a unor substituienți generici
-          este o introducere minunată în variabile."
+          este o introducere minunată în variabile.
         pdfs:
         - unplug5
         video: Unplug5
@@ -104,8 +105,8 @@
         video: Unplug9
       Unplug10:
         title: Internetul
-        desc: "În această lecție, elevii își vor imagina că parcurg Internetul, în
-          timp ce vor învăța despre adresele web, IP-uri și DNS."
+        desc: În această lecție, elevii își vor imagina că parcurg Internetul, în
+          timp ce vor învăța despre adresele web, IP-uri și DNS.
         pdfs:
         - unplug10
         video: Unplug10
@@ -238,8 +239,8 @@
           noi, distractive și trăznite.
       ForLoopFun:
         title: Pentru distracția cu bucle
-        desc: "Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
-          vom învăța cum să folosim bucle cu structură extra încorporată."
+        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
+          vom învăța cum să folosim bucle cu structură extra încorporată.
       SongwritingWithParameters:
         title: Compozitie cu parametri
         desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
@@ -268,10 +269,10 @@
           programare sau o funcție.
       DesignRecipe:
         title: Rețeta pentru design
-        desc: "În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
+        desc: În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
           mai sofisticate solicită o abordare mai în profunzime. Rețeta Design este
           o abordare structurată în scrierea funcţiilor, care include teste de scriere
-          menite să verifice dacă funcţia funcționează cum era de aşteptat."
+          menite să verifice dacă funcţia funcționează cum era de aşteptat.
       Booleans:
         title: Boolean și Logică
         desc: Booleenii sunt al patrulea și ultimul tip de date despre care vei învăța
@@ -290,9 +291,6 @@
           Teorema lui Pitagora şi Formula Distanței pot fi folosite pentru a măsura
           distanţa dintre două puncte pe un plan, pentru ca apoi să decidem dacă aceste
           două puncte (sau caractere ale jocului) se ating.
-      ! '':
-        title: "[șir gol]"
-        desc: "[șir gol]"
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -426,8 +424,8 @@
           cu) lecţia despre abstractizare ca idea să fie întradevăr înțeleasă.
       courseF_unplugged_forLoopFun:
         title: Pentru distracția cu bucle
-        desc: "Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
-          vom învăța cum să folosim bucle cu structură extra încorporată."
+        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
+          vom învăța cum să folosim bucle cu structură extra încorporată.
       courseF_unplugged_songwritingParameters:
         title: Compozitie cu parametri
         desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
@@ -437,36 +435,169 @@
           este o practică așa de utilă.  '
       swipeRightPassThrough:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      courseB_unplugged_loopyMRF_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      DiceRace_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      courseE_unplugged_privateInformation_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      SongwritingParameters_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      Internet_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      Crowdsourcing_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      TangramAlgorithms_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      courseF_unplugged_powerOfWords_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      EnvelopeVariables_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      ForLoopFun_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      SongwritingWithParameters_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      PlantASeed_2018:
+        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
+          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
+          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
+          în care algoritmii joacă un rol esențial.
+      UnplugHappyMaps_2018:
+        title: Hărţi Fericite
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj printr-un labirint folosind o singură comandă.
+      GoingPlacesSafely_2018:
+        title: Mergând în locuri în siguranţă
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
+          arată cum poate fi sigură navigarea pe Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Marele eveniment
+        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
+          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
+          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
+          în funcție de butonul care a fost apăsat.
+      GraphPaperProgramming_2018:
+        title: Programare pe Hârtie Milimetrică
+        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
+          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
+          un desen.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Activitate fără Calculator
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Activitate fără Calculator
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Condiţionale
+        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
+          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
+          și ”Dacă trag o carte neagră, tu obții un punct.”'
+      DigitalFootprint_2018:
+        title: Amprenta ta Digitală
+        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
+          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+      BinaryImages_2018:
+        title: Imagini binare
+        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
+          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
+          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
+          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
+          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
+          sistem binar.
+      PaperPlanes_2018:
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
+          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
+          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
+          informatică și rolul esențial pe care îl joacă algoritmii.
+      GettingLoopy_2018:
+        title: Transformând în Buclă
+        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
+          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
+          simplă, apoi vor fi instruiți să o repete.
+      BinaryBracelets_2018:
+        title: Brăţări Binare
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
+          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
+          multe feluri.
+      MoveItMoveIt_2018:
+        title: Mutaţi-l, mutați-l
+        desc: "[șir gol]"
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programare de releu
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

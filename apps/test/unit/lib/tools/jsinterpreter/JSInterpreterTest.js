@@ -127,6 +127,57 @@ describe("The JSInterpreter class", function () {
         });
       });
 
+      describe("nativeCallsBackInterpreter stateful async function can access getCurrentState()", () => {
+        it('will execute nativeCallsBackInterpreterFunc that uses getCurrentState() properly from within evalInCurrentScope', () => {
+          jsInterpreter.parse({
+            code: '',
+            initGlobals: () => {
+              expect(jsInterpreter.interpreter).not.to.be.null;
+              const nativeCallsBackInterpreterFunc = jsInterpreter.interpreter.makeNativeMemberFunction({
+                nativeFunc: () => {
+                  var state = jsInterpreter.getCurrentState();
+                  if (!state.__callCount) {
+                    state.__callCount = 1;
+                  } else {
+                    state.__callCount++;
+                  }
+                  if (state.__callCount < 3) {
+                    state.doneExec_ = false;
+                  } else {
+                    state.doneExec_ = true;
+                    return state.__callCount;
+                  }
+                },
+                dontMarshal: false,
+                nativeParentObj: {},
+                maxDepth: 5,
+                nativeCallsBackInterpreter: true,
+              });
+              jsInterpreter.interpreter.setProperty(
+                jsInterpreter.globalScope,
+                'nativeCallsBackInterpreterFunc',
+                jsInterpreter.interpreter.createNativeFunction(nativeCallsBackInterpreterFunc)
+              );
+            },
+          });
+          expect(jsInterpreter.evalInCurrentScope('nativeCallsBackInterpreterFunc()').valueOf()).to.equal(3);
+        });
+      });
+
+      describe("customMarshalGlobalProperties available to eval", () => {
+        it('can access customMarshalGlobalProperties property from within evalInCurrentScope', () => {
+          const nativeParent = { testProp: 7 };
+          const jsInterpreterWithGlobalProps = new JSInterpreter({
+            studioApp: {hideSource: true},
+            customMarshalGlobalProperties: { testProp: nativeParent },
+          });
+          jsInterpreterWithGlobalProps.parse({
+            code: '',
+          });
+          expect(jsInterpreterWithGlobalProps.evalInCurrentScope('testProp').valueOf()).to.equal(7);
+        });
+      });
+
       describe("native event callbacks", () => {
         let lastCallback, config;
 
@@ -336,7 +387,7 @@ myCallback("this message is coming from inside the interpreter");
 
     function getCurrentLine() {
       const interpreter = jsInterpreter.interpreter;
-      const interpreterValue = interpreter.getProperty(interpreter.globalScope, 'currentLine');
+      const interpreterValue = interpreter.getProperty(interpreter.global, 'currentLine');
       if (interpreterValue === interpreter.UNDEFINED) {
         return undefined;
       }

@@ -6,10 +6,14 @@ module Pd
       view_options(full_width: true)
 
       is_workshop_admin = current_user.permission? UserPermission::WORKSHOP_ADMIN
+      regional_partners = is_workshop_admin ? RegionalPartner.all : current_user.regional_partners
+      serialized_partners = regional_partners.map do |regional_partner|
+        RegionalPartnerSerializer.new(regional_partner).attributes
+      end
+
       @script_data = {
         props: {
-          regionalPartnerName: current_user.regional_partners.first.try(:name),
-          regionalPartners: RegionalPartner.select("id, name"),
+          regionalPartners: serialized_partners,
           isWorkshopAdmin: is_workshop_admin,
           canLockApplications: is_workshop_admin
         }.to_json

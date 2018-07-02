@@ -118,7 +118,7 @@ is:
         text: "Við getum sett \"fara áfram\" kubbinn í \"endurtaka\" kubbinn og skrifað tölu í kubbinn sem segir honum hve oft hann á að endurtaka sig."
       6:
         image: 'notes/hoc2_6.jpg'
-        text: 'Og þetta er mikilvægt: þú getur sett fleiri en eina skipun inn í "endurtaka" kubbinn.'
+        text: "Og þetta er mikilvægt: þú getur sett fleiri en eina skipun inn í \"endurtaka\" kubbinn."
       7:
         image: 'notes/hoc2_7.jpg'
         text: "Njóttu þess að nota nýja \"endurtaka\" kubbinn!"
@@ -138,7 +138,7 @@ is:
     if:
       1:
         image: 'notes/hoc4_1.jpg'
-        text: 'Hæ, ég heiti Bill! Nú skulum við læra nýtt undirstöðuhugtak: "Ef" setningar. Það er svoleiðis sem tölvur taka ákvarðanir.'
+        text: "Hæ, ég heiti Bill! Nú skulum við læra nýtt undirstöðuhugtak: \"Ef\" setningar. Það er svoleiðis sem tölvur taka ákvarðanir."
       2:
         image: 'notes/hoc4_2.jpg'
         text: "Þú notar \"Ef\" setningar á hverjum degi. Áður en þú ferð út á morgnana, segir þú EF það rignir úti, þá þarf ég að fara í jakka."
@@ -259,7 +259,7 @@ is:
         text: "Ef þér líkaði við þessa fyrstu klukkustund kóðunar, heimsæktu þá code.org til að halda áfram að mennta þig í forritun! Ef þú klárar 20 klst. kennsluna okkar, þá hefur þú fengið góðan grunn í forritun og getur byrjað að læra að skrifa öpp, leiðbeiningar vélmenna, leiki og hvað sem er."
       4:
         image: 'notes/hoc6_4.jpg'
-        text: 'Tölvutæknin er að breyta öllu sem við gerum og það skiptir ekki máli hvað þú ert gamall/gömul: forritun er skemmtileg, hún er skapandi og allir geta lært að forrita!'
+        text: "Tölvutæknin er að breyta öllu sem við gerum og það skiptir ekki máli hvað þú ert gamall/gömul: forritun er skemmtileg, hún er skapandi og allir geta lært að forrita!"
     20_wrapup:
       1:
         image: 'notes/bird.png'
@@ -388,7 +388,7 @@ is:
         text: "Eru ekki býflugur frábærar? Í næstu þrautum er markmið þitt að hjálpa býflugunni að komast til blómanna og sækja blómasafa úr blómunum og fljúga yfir að býflugnabúinu til að búa til hunang. Til þess notar þú kubbana \"sækja blómasafa\" og \"búa til hunang\"."
       2:
         image: 'notes/C1_bee_level_intro_2.png'
-        text: 'Hvert blóm hefur mismunandi magn blómasafa: 1, 2, 3 eða meira. Við vitum hve mikinn safa rauðu blómin hafa út frá litlu tölunni í horninu. Gættu þess að taka allan blómasafann úr hverju blómi áður en þú færir býfluguna áfram. Hvert býflugnabú getur aðeins innihaldið visst magn af hunangi: 1, 2, 3 eða meira. Gættu þess að búa til það magn í hverju búi.'
+        text: "Hvert blóm hefur mismunandi magn blómasafa: 1, 2, 3 eða meira. Við vitum hve mikinn safa rauðu blómin hafa út frá litlu tölunni í horninu. Gættu þess að taka allan blómasafann úr hverju blómi áður en þú færir býfluguna áfram. Hvert býflugnabú getur aðeins innihaldið visst magn af hunangi: 1, 2, 3 eða meira. Gættu þess að búa til það magn í hverju búi."
       3:
         image: 'notes/C1_bee_level_intro_3.png'
         text: "Ef þér tekst að sækja allan safann og búa til allt hunangið, þá hefurðu leyst þrautina og getur farið í næstu þraut. Annars verður þú að reyna aftur við þrautina. Gerðu tilraunir og upplifðu það að forrita býflugu!"
@@ -524,7 +524,7 @@ is:
         text: "Það sem mér finnst mest gaman á netinu er að geta spilað skemmtilega leiki. Fékk stig! Mér finnst líka gaman að teikna og búa til nýja hluti og deila með vinum mínum. Það er svalt! Stundum heimsæki ég vefi þar sem ég læri eitthvað nýtt en ég fer bara á vefi sem hæfa mér. Vá, risaeðlur!"
       6:
         image: 'notes/C1_going_places_safely_6.png'
-        text: 'Internetið er mjög skemmtilegur staður. En alveg eins og maður þarf að passa sig að fara yfir götu, þarf maður að fara varlega á netinu. Hér eru þrjár reglur til að muna. Regla númer 1: Alltaf spyrja foreldri fyrst. Regla númer 2: Aðeins tala við fólk sem þú þekkir. Regla númer 3: Haltu þig við staði sem eru hæfilegir fyrir þig.'
+        text: "Internetið er mjög skemmtilegur staður. En alveg eins og maður þarf að passa sig að fara yfir götu, þarf maður að fara varlega á netinu. Hér eru þrjár reglur til að muna. Regla númer 1: Alltaf spyrja foreldri fyrst. Regla númer 2: Aðeins tala við fólk sem þú þekkir. Regla númer 3: Haltu þig við staði sem eru hæfilegir fyrir þig."
       7:
         image: 'notes/C1_going_places_safely_7.png'
         text: "Vá, þetta var gaman! Matartími. Ég skrái mig út núna. Hlakka til að skrá mig inn aftur til að sjá hvert ég farið næst."
@@ -1106,7 +1106,7 @@ is:
         text: "Algengustu notin fyrir tvíundir er í \"ef\" setningu. Þetta er klassískt í forritun. Forritið keyrir og í því segir að ef eitthvað er satt, þá eigi að gera eitthvað. Eða það er ekki satt og þá á að gera eitthvað annað. En hvað ef þú vilt gera eitthvað svolítið flóknara? Í stað \"ef\" setningar vilt þú kannske vinna með mynd eða hljóð í tölvunni."
       3:
         image: 'notes/C4_unplugged_binary_3.png'
-        text: 'Tölva þekkir aðeins tvíundir, en mynd er ekki tvíundir, hún er ekki 0 og 1 svo hvernig leysir maður það? Hér er dæmi: Þú ert með þessa fallegu mynd. Nú er mynd í grunninn bara tegund af upplýsingum. Allar upplýsingar er hægt að umkóða í tvíundum með einhverjum hætti, maður þarf bara að finna aðferð til þess.'
+        text: "Tölva þekkir aðeins tvíundir, en mynd er ekki tvíundir, hún er ekki 0 og 1 svo hvernig leysir maður það? Hér er dæmi: Þú ert með þessa fallegu mynd. Nú er mynd í grunninn bara tegund af upplýsingum. Allar upplýsingar er hægt að umkóða í tvíundum með einhverjum hætti, maður þarf bara að finna aðferð til þess."
       4:
         image: 'notes/C4_unplugged_binary_4.png'
         text: "Ímyndum okkur að við setjum net yfir þennan pandabjörn og í hverjum möskva ætlum við að ákveða hvort ferningurinn er meira svartur eða meira hvítur. Síðan ætlum við að lita hann þannig. Nú er hver hver möskvi í netinu annaðhvort svartur eða hvítur og látum svörtu möskvana vera 0 (tvíund) og þá hvítu vera 1 (hina tvíundina). Í lokin hefur maður bara safn af 0 og 1. Þannig getur þú táknað þessa mynd með tvíundum."
@@ -1247,7 +1247,7 @@ is:
         text: "Kennslustundinni í tölvunarmiðaðri hugsun er ætlað að kenna þér hvernig á að taka stórt erfitt vandamál og sundurliða það í nokkur einfaldari vandamál. Markmið þessarar kennslustundar er að skrifa fyrirmæli sem einhver annar getur fylgt til að teikna eitt af skrímslunum í kennsluáætluninni."
       2:
         image: 'notes/unplug2_2.png'
-        text: 'Nemendur munu skiptast í hópa til að skrifa fyrirmæli og síðan skiptast þeir á þeim við annan hóp sem þarf að teikna skrímslið. Hóparnir munu skrifa fyrirmæli með því að nota fjögur þrep tölvumiðaðrar hugsunar: sundurgreiningu, mynstrakennsl, útdrátt og algrím.'
+        text: "Nemendur munu skiptast í hópa til að skrifa fyrirmæli og síðan skiptast þeir á þeim við annan hóp sem þarf að teikna skrímslið. Hóparnir munu skrifa fyrirmæli með því að nota fjögur þrep tölvumiðaðrar hugsunar: sundurgreiningu, mynstrakennsl, útdrátt og algrím."
       3:
         image: 'notes/unplug2_3.png'
         text: "Fyrst munu hóparnir sundurgreina verkefnið sem merkir að búa til áætlun. Síðan munu þeir leita að mynstrum í skrímslunum sem eru í efninu. Þegar þeir rekast á mismunandi einkenni á skrímslunum munu þeir draga út eða fjarlægja þau atriði. Til dæmis hefur eitt skrímslið 'vegitas' augu en annað hefur 'spritem' augu. En þau hafa bæði augu svo að við getum skrifað línu sem segir að skrímslið hafi _____ augu."
@@ -1260,7 +1260,7 @@ is:
         text: "Í forritun með grafpappír, hjálpum við að útskýra forritun með því að reyna að hjálpa fólki að skapa teikningar eingöngu með örvum og táknum. Einn fær litla teikningu á grafpappír og hann þarf að fara í gegnum hana með því að nota aðeins tilteknar örvar og reyna að lýsa hvernig á að endurgera þessa teikningu."
       2:
         image: 'notes/unplug3_2.png'
-        text: 'Í þessu verkefni eru þetta einu táknin sem má nota: fara einn reit áfram, einn reit aftur á bak, fara einn reit upp, fara einn reit niður, skipta í næsta lit, og fylla reit með lit. Þegar við höfum skráð þetta sem kóða, getum við afhent það öðrum, sem getur lesið kóðann og reynt að endurgera myndina.'
+        text: "Í þessu verkefni eru þetta einu táknin sem má nota: fara einn reit áfram, einn reit aftur á bak, fara einn reit upp, fara einn reit niður, skipta í næsta lit, og fylla reit með lit. Þegar við höfum skráð þetta sem kóða, getum við afhent það öðrum, sem getur lesið kóðann og reynt að endurgera myndina."
     unplug4:
       1:
         image: 'notes/unplug4_1.png'
@@ -1394,7 +1394,7 @@ is:
         text: "Til hamingju! Þér tókst það! Þú forritaðir BB-8. Nú held ég að við séum tilbúin fyrir eitthvað erfiðara. Skellum okkur í það. Nú þegar þú hefur lært grunnatriði í forritun, ætlum við að fara aftur til fortíðar og búa til leik með R2-D2 og C-3PO."
       3:
         image: 'notes/starwars_events_3.JPG'
-        text: Til að búa til leik, þurfum við að læra nokkuð sem leikjaforritarar nota á hverjum degi. Það eru atvik. Atvik segja forriti að hlusta eða bíða eftir því að eitthvað gerist. Og þegar það gerist þá framkvæmir forritið einhverja aðgerð.
+        text: "Til að búa til leik, þurfum við að læra nokkuð sem leikjaforritarar nota á hverjum degi. Það eru atvik. Atvik segja forriti að hlusta eða bíða eftir því að eitthvað gerist. Og þegar það gerist þá framkvæmir forritið einhverja aðgerð."
       4:
         image: 'notes/starwars_events_4.JPG'
         text: "Nokkur dæmi um atvik eru þegar mús er smellt, ýtt er á örvarlykil eða þegar pikkað er á snertiskjá."
@@ -1469,7 +1469,7 @@ is:
         text: "Til hamingju! Þér tókst það! Þú forritaðir BB-8. Nú held ég að við séum tilbúin fyrir eitthvað erfiðara. Skellum okkur í það. Nú þegar þú hefur lært grunnatriði í forritun, ætlum við að fara aftur til fortíðar og búa til leik með R2-D2 og C-3PO."
       3:
         image: 'notes/starwars_blocks_events_3.JPG'
-        text: Til að búa til leik, þurfum við að læra nokkuð sem leikjaforritarar nota á hverjum degi. Það eru atvik. Atvik segja forriti að hlusta eða bíða eftir því að eitthvað gerist. Og þegar það gerist þá framkvæmir forritið einhverja aðgerð.
+        text: "Til að búa til leik, þurfum við að læra nokkuð sem leikjaforritarar nota á hverjum degi. Það eru atvik. Atvik segja forriti að hlusta eða bíða eftir því að eitthvað gerist. Og þegar það gerist þá framkvæmir forritið einhverja aðgerð."
       4:
         image: 'notes/starwars_blocks_events_4.JPG'
         text: "Nokkur dæmi um atvik eru þegar mús er smellt, ýtt er á örvarlykil eða þegar pikkað er á snertiskjá."
@@ -1534,7 +1534,7 @@ is:
         text: "Ef þú vilt eyða kubbi, skaltu bara fjarlægja hann úr stæðunni og draga hann aftur inn í verkfærakassann."
       12:
         image: 'notes/mc_intro_12.JPG'
-        text: 'Til að afturkalla breytingar og fara aftur þangað sem borðið byrjaði, notar þú Byrja aftur hnappinn efst til hægri á vinnusvæðinu. Eitt í viðbót: sérðu litla þríhyrninginn á "snúa" kubbunum? Þegar þú sérð þessa þríhyrninga þýðir það að þú getur valið annan valkost. Förum að kóða!'
+        text: "Til að afturkalla breytingar og fara aftur þangað sem borðið byrjaði, notar þú Byrja aftur hnappinn efst til hægri á vinnusvæðinu. Eitt í viðbót: sérðu litla þríhyrninginn á \"snúa\" kubbunum? Þegar þú sérð þessa þríhyrninga þýðir það að þú getur valið annan valkost. Förum að kóða!"
     mc_repeat:
       1:
         image: 'notes/mc_repeat_1.JPG'
@@ -1704,7 +1704,7 @@ is:
         text: "Hæ, ég heiti Jens og ég er yfirmaður hönnunar á Minecraft. Næsta klukkutímann munt þú búa til þinn eigin Minecraft leik. Þetta lítur út eins og Minecraft en heimurinn hefur stöðvast. Kindurnar hreyfast ekki, hænurnar verpa ekki og uppvakningarnir standa bara kyrrir. Það er þitt verkefni að bæta við kóða svo að Minecraft heimurinn virki."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'Ég heiti Melissa og ég vinn við notendarannsóknir hjá Minecraft. Ég hef sérstakan áhuga á því hvernig fólk hugsar um og á samskipti við tölvutækni svo að það er fullkomið starf fyrir mig að geta tvinnað saman tölvuhönnun og sálfræði: hvað fólk hugsar og gerir.'
+        text: "Ég heiti Melissa og ég vinn við notendarannsóknir hjá Minecraft. Ég hef sérstakan áhuga á því hvernig fólk hugsar um og á samskipti við tölvutækni svo að það er fullkomið starf fyrir mig að geta tvinnað saman tölvuhönnun og sálfræði: hvað fólk hugsar og gerir."
       3:
         image: 'notes/mc_2016_intro_3.jpg'
         text: "Þú sérð að skjárinn þinn skiptist í þrjá aðalhluta. 1) Vinstra megin er Minecraft leikurinn. Þessa stundina er heimurinn frosinn en við ætlum að laga það með kóða."
@@ -1812,7 +1812,7 @@ is:
         text: "Next I'll choose the type of event. There's lots of options you can pick from but right now I'll leave it as a regular old click."
       5:
         image: 'notes/applab_intro_events_5.png'
-        text: 'Finally I''ll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: "On the event that the button is clicked run all this code."'
+        text: "Finally I'll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: \"On the event that the button is clicked run all this code.\""
       6:
         image: 'notes/applab_intro_events_6.png'
         text: "Let's test it. Blocks outside an onEvent still run right away so the screen starts blue."
@@ -1909,16 +1909,16 @@ is:
     mc_2017_agent_intro:
       1:
         image: 'notes/mc_2017_agent_intro_1.png'
-        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you''re going to love it!'
+        text: "Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you're going to love it!"
       2:
         image: 'notes/mc_2017_agent_intro_2.png'
         text: "Wait a minute - there's a hole in the track! (screaming)"
       3:
         image: 'notes/mc_2017_agent_intro_3.png'
-        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let''s make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy: I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy: Does anyone know how to write Minecraft code?'
+        text: "Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let's make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I'm just gonna gather some of this terracotta. Wait. Guys, I can't mine! Preston: Same. Lizzy: I can't either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can't mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don't know. Stampy: Does anyone know how to write Minecraft code?"
       4:
         image: 'notes/mc_2017_agent_intro_4.png'
-        text: '(poof) Preston: What is that? Stampy: I''ve never seen one of these before. Lizzy: It''s so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I''ll go.'
+        text: "(poof) Preston: What is that? Stampy: I've never seen one of these before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
       5:
         image: 'notes/mc_2017_agent_intro_5.png'
         text: "Oh, okay, hey, so I'm in the real world now. I'm going to go try to find the Minecraft offices."
@@ -1946,22 +1946,22 @@ is:
     mc_2017_repeat:
       1:
         image: 'notes/mc_2017_repeat_1.png'
-        text: 'Stampy: I wonder what Stacy is up to?'
+        text: "Stampy: I wonder what Stacy is up to?"
       2:
         image: 'notes/mc_2017_repeat_2.png'
-        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
+        text: "Stacy: Woah, I think I'm in the right place. This is amazing!"
       3:
         image: 'notes/mc_2017_repeat_3.png'
         text: "I feel like I'm back in Minecraft! Hello. How are you? Hello?"
       4:
         image: 'notes/mc_2017_repeat_4.png'
-        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
+        text: "Oh, there's a creeper. You don't do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!"
       5:
         image: 'notes/mc_2017_repeat_5.png'
-        text: 'Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn''t happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you''re learning?'
+        text: "Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it's pretty awesome. I'm a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I've probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn't happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can't, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you're learning?"
       6:
         image: 'notes/mc_2017_repeat_6.png'
-        text: 'Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there''s actually some of that coming up in the levels ahead, so go ahead and give loops a try.'
+        text: "Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there's actually some of that coming up in the levels ahead, so go ahead and give loops a try."
       7:
         image: 'notes/mc_2017_repeat_7.png'
         text: "In the next level, you can use a loop to move the Agent along the path. Drag the repeat block into the workspace and place the move forward block inside the repeat block. This tells the computer to do the same thing many times in a row without having to drag a whole bunch of blocks into the workspace. You can choose how many times to repeat by putting a number in the repeat block."
@@ -1970,14 +1970,14 @@ is:
         text: "You can put turns and multiple commands in the repeat block too, but for now try using a repeat to move the Agent forward a few steps. Remember, if you get stuck on a puzzle you can always hit the blue reset button and try again."
       9:
         image: 'notes/mc_2017_repeat_9.png'
-        text: 'If you are thinking about having a cool job like Katie''s, go ahead and click the show code button when you finish every level. That''s going to actually show you the Javascript code that someone like Katie uses when she''s actually programming Minecraft. Katie: Yeah, good luck everyone!'
+        text: "If you are thinking about having a cool job like Katie's, go ahead and click the show code button when you finish every level. That's going to actually show you the Javascript code that someone like Katie uses when she's actually programming Minecraft. Katie: Yeah, good luck everyone!"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
-        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour. Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+        text: "Preston: I'm not trying to brag, but I'm pretty good at parkour. Lizzy: Let's sleep so it's day when Stacy comes back."
       2:
         image: 'notes/mc_2017_functions_2.png'
-        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I''m having in my game. I think I can use a function. Let me just open this.'
+        text: "Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I'm having in my game. I think I can use a function. Let me just open this."
       3:
         image: 'notes/mc_2017_functions_3.png'
         text: "So a function is a specific set of instructions to accomplish a certain task, kind of like a recipe. In the next few levels, you'll have access to functions that you can use to solve the puzzles."
@@ -1993,32 +1993,32 @@ is:
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
-        text: 'Preston: Congratulations!'
+        text: "Preston: Congratulations!"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
-        text: 'Lizzy: Congratulations!'
+        text: "Lizzy: Congratulations!"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
-        text: 'Stampy: Congratulations, you did it!'
+        text: "Stampy: Congratulations, you did it!"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
-        text: 'Stacy: Congratulations guys, you totally rocked that! And now that you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve learned about loops, functions, and what a software Agent does.'
+        text: "Stacy: Congratulations guys, you totally rocked that! And now that you've completed the Hour of Code, you can start coding in Minecraft. You've learned about loops, functions, and what a software Agent does."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
         text: "Now, it's time for the free play level, where you are the developer. Use any remaining time to write your own functions to explore, mine, and build."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
-        text: 'You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click ''Finish'' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!'
+        text: "You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click 'Finish' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
-        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it''s doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it''s not just staircases. I can tell the Agent to do anything I want, and it will do it for me.'
+        text: "Stacy: And I'm back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it's doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it's not just staircases. I can tell the Agent to do anything I want, and it will do it for me."
       8:
         image: 'notes/mc_2017_congratulations_8.png'
-        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used code!'
+        text: "Stampy: How did you do that? Stacy: It was easy, actually. I just used code!"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
-        text: 'Everywhere you look, computers are changing the world. Whether they''re on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don''t often ask: "How do computers work?" In this series, you''re going to learn how computers really work, starting with what makes a computer a computer. Then, you''ll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds.'
+        text: "Everywhere you look, computers are changing the world. Whether they're on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don't often ask: \"How do computers work?\" In this series, you're going to learn how computers really work, starting with what makes a computer a computer. Then, you'll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds."
       2:
         image: 'notes/csd_concept_how_computers_work_2.png'
         text: "After that, you'll learn how computers use circuits to do everything from simple math to simulating entire virtual worlds. Next, you'll zoom out and look at the different parts of a computer that actually input, output, and store all that information. Finally, you'll take a look at what code actually is and how software controls hardware. So whether you're just curious about the devices you use every day or you want to design the innovations of the future, the first step is learning how computers work."
@@ -2071,10 +2071,10 @@ is:
         text: "Well, if you have a single wire with electricity flowing through it, the signal could either be on or off. That's not a lot of choices, but it's a really important start. With one wire, we can represent a yes or no, true or false, a one or zero, or anything else with only two options. This on/off state of a single wire is called a bit, and it's the smallest piece of information a computer can store."
       6:
         image: 'notes/csd_concept_binary_data_6.png'
-        text: 'If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system.'
+        text: "If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system."
       7:
         image: 'notes/csd_concept_binary_data_7.png'
-        text: 'In the decimal number system, we have ten digits from zero to nine, and that''s how we''ve all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number.'
+        text: "In the decimal number system, we have ten digits from zero to nine, and that's how we've all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number."
       8:
         image: 'notes/csd_concept_binary_data_8.png'
         text: "Here's how this works. In a decimal number system we're all used to, each position in a number has a different value. There's a 1 position, the 10 position, the 100 position, and so on. For example, a 9 in the 100 position is a 900. In binary, each position also carries a value. But instead of multiplying by 10 each time, we multiply by 2. So there's the 1 position, the 2 position, the 4 position, the 8 position, and so on. For example, the number 9 in binary is 1001. To calculate the value, we add 1 times 8, plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this math because computers do it for us. What's important is that any number can be represented with only ones and zeros, or by a bunch of wires that are on or off. The more wires you use, the larger the numbers you can store. With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With just 32 wires, you can store all the way from 0 to over 4 billion. Using the binary number system, you can represent any number you like."
@@ -2163,14 +2163,14 @@ is:
         text: "The more complicated a task is and the more information that is input or output, the more processing power and memory a computer needs. Typing letters on a screen may be easy but to do complicated 3d graphics or record a high-definition movie, modern computers often have multiple CPUs to process all that information and many gigabytes of memory to store it."
       12:
         image: 'notes/csd_concept_memory_cpu_input_output_12.png'
-        text: 'No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world.'
+        text: "No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world."
     csd_concept_hardware_software:
       1:
         image: 'notes/csd_concept_hardware_software_1.png'
         text: "Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com. One of the best things about working in tech, and at Amazon in particular, is that I get to bring my dog with me to work every day. My job is to help make sure software gets out the door and her job is to nap under my desk and snore very loudly."
       2:
         image: 'notes/csd_concept_hardware_software_2.png'
-        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox.'
+        text: "My name is Jerome Holman, and I'm a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox."
       3:
         image: 'notes/csd_concept_hardware_software_3.png'
         text: "When you look inside a computing device you see a bunch of circuits, chips, wires, speakers, plugs, and all sorts of other stuff. This is the hardware."

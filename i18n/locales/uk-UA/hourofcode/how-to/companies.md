@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Надихніть учнів та запропонуйте допомогу для Години коду
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Зареєструйтеся](%= resolve_url('https://code.org/volunteer') %), щоби запропонувати допомогу.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Додаткові способи підтримки Години коду для компаній:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
 - Проведіть захід Години коду для місцевого класу учнів, або дозвольте неприбутковій організації провести Годину коду в офісі вашої компанії. Див. посібник з проведення заходів нижче.
 
@@ -25,11 +25,11 @@ Code.org offers the opportunity for your employees to [connect](%= resolve_url('
 ## 1. Promote your Hour of Code
 
 - Просувайте свій захід [Години коду](%= resolve_url('/promote') %) та заохочуйте інших до проведення.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Вони можуть [зареєструватися](%= resolve_url('https://code.org/volunteer/engineer') %), щоби їх зв'язали з класом.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3. Choose an activity
+## 3. Вибрати діяльність
 
 We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Спробуйте їх!](%= resolve_url('/learn') %)
 
@@ -63,11 +63,11 @@ We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - Якщо ви — технічна компанія, покажіть цікаві, інноваційні продукти, над якими працює ваша компанія.
 - Якщо ви не технічна компанія, обговоріть шляхи, якими ваша компанія використовує технології для розв'язання задач та досягнення цілей.
 - Запросіть програмних інженерів зі своєї компанії поговорити про те, чому вони вирішили вивчати інформатику, та про проекти, над якими вони працюють.
-- Поради для зацікавлення інформатикою дівчаток можна знайти [тут](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for
 
 ## 7) Урочисто відзначте
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - Надрукуйте [наліпки «Я зробив Годину коду!»](%= resolve_url('/promote/resources#stickers') %)
 - [Замовте спеціальні футболки](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) для своїх працівників.
 - Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!

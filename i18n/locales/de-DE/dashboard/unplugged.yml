@@ -163,9 +163,6 @@ de:
       CollisionDetection:
         title: Kollisionserkennung und der Satz des Pythagoras
         desc: Bei vielen Spielen ist es erforderlich, zu bestimmen, wann sich Objekte auf dem Bildschirm berühren. In dieser Lektion finden wir heraus, wie der Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden, ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -265,3 +262,96 @@ de:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Real-Life-Algorithmen: Pflanze Samen'
+        desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
+      UnplugHappyMaps_2018:
+        title: Glücklich Karten
+        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+      GoingPlacesSafely_2018:
+        title: Sicher unterwegs
+        desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer erklären, wie Schüler sicher im Internet navigieren.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Der große Event
+        desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren auf die verschiedenen Tasten.
+      GraphPaperProgramming_2018:
+        title: Programmieren auf Millimeterpapier
+        desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden anweisen, ein Bild zu reproduzieren.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivität ohne Computer
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivität ohne Computer
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Bedingungen
+        desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.
+      DigitalFootprint_2018:
+        title: Dein digitaler Fußabdruck
+        desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins Internet stellt, und erläutern mögliche Konsequenzen.
+      BinaryImages_2018:
+        title: Binärbilder
+        desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen binären Techniken repräsentiert werden können.  Diese Lektion entwickelt das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie Bilder und Farben als Binärcode speichern können.
+      PaperPlanes_2018:
+        title: 'Alltagsalgorithmen: Papierflieger'
+        desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
+      GettingLoopy_2018:
+        title: Schöne Schleifen
+        desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte Anweisungen) anhand einer Tanzaktivität eingeführt. Schüler lernen eine einfache Choreografie und werden angewiesen, diese zu wiederholen.
+      BinaryBracelets_2018:
+        title: Binäre Armbänder
+        desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise repräsentiert und gespeichert werden können.
+      MoveItMoveIt_2018:
+        title: Bewegung, Bewegung
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Relais-Programmierung
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

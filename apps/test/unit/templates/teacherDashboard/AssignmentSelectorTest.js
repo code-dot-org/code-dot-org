@@ -21,8 +21,8 @@ const defaultProps = {
     // course with scripts
     '29_null': {
       id: 29,
-      name: "CS Discoveries",
-      script_name: "csd",
+      name: "CS Discoveries 2017",
+      script_name: "csd-2017",
       category: "Full Courses",
       position: 1,
       category_priority: 0,
@@ -31,6 +31,10 @@ const defaultProps = {
       scriptAssignIds: ['null_168'],
       assignId: "29_null",
       path: '//localhost-studio.code.org:3000/courses/csd',
+      assignment_family_name: 'csd',
+      assignment_family_title: 'CS Discoveries',
+      version_year: '2017',
+      version_title: "'17-'18",
     },
     // script in course
     'null_168': {
@@ -43,7 +47,11 @@ const defaultProps = {
       courseId: null,
       scriptId: 168,
       assignId: "null_168",
-      path: "//localhost-studio.code.org:3000/s/csd1"
+      path: "//localhost-studio.code.org:3000/s/csd1",
+      assignment_family_name: 'csd1',
+      assignment_family_title: 'Unit 1: Problem Solving',
+      version_year: '2017',
+      version_title: '2017',
     },
     // script not in course
     'null_6': {
@@ -56,10 +64,29 @@ const defaultProps = {
       courseId: null,
       scriptId: 6,
       assignId: "null_6",
-      path: "//localhost-studio.code.org:3000/s/flappy"
+      path: "//localhost-studio.code.org:3000/s/flappy",
+      assignment_family_name: 'flappy',
+      assignment_family_title: 'Make a Flappy game',
+      version_year: '2017',
+      version_title: '2017',
     }
   },
-  primaryAssignmentIds: ['29_null', 'null_6'],
+  assignmentFamilies: [
+    {
+      assignment_family_title: "CS Discoveries",
+      category: "Full Courses",
+      position: 1,
+      category_priority: 0,
+      assignment_family_name: 'csd',
+    },
+    {
+      assignment_family_title: "Make a Flappy game",
+      category: "Hour of Code",
+      position: 4,
+      category_priority: 2,
+      assignment_family_name: 'flappy',
+    }
+  ],
 };
 
 const hiddenSectionProps = {
@@ -76,7 +103,7 @@ const hiddenSectionProps = {
     scriptId: 36,
   },
   assignments: defaultProps.assignments,
-  primaryAssignmentIds: defaultProps.primaryAssignmentIds,
+  assignmentFamilies: defaultProps.assignmentFamilies,
 };
 
 describe('AssignmentSelector', () => {
@@ -102,7 +129,7 @@ describe('AssignmentSelector', () => {
         section={null}
       />
     );
-    wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+    wrapper.find('select').at(0).simulate('change', {target: {value: 'csd'}});
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
@@ -121,22 +148,6 @@ describe('AssignmentSelector', () => {
         }}
       />
     );
-    assert.equal(wrapper.find('select').length, 2);
-    assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: 29,
-      scriptId: 168,
-    });
-
-    // Change primary so secondary is deselected
-    wrapper.find('select').at(0).simulate('change', {target: {value: 'null_null'}});
-    assert.equal(wrapper.find('select').length, 1);
-    assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
-      courseId: null,
-      scriptId: null,
-    });
-
-    // Change primary so secondary is selected again
-    wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
@@ -167,7 +178,7 @@ describe('AssignmentSelector', () => {
         {...defaultProps}
       />
     );
-    wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+    wrapper.find('select').at(0).simulate('change', {target: {value: 'csd'}});
     assert.equal(wrapper.find('select').length, 2);
     const secondary = wrapper.find('select').at(1);
     assert.equal(secondary.find('option').length, 2);
@@ -181,7 +192,7 @@ describe('AssignmentSelector', () => {
 
   it('can select script in second dropdown after selecting primary', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps}/>);
-    wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+    wrapper.find('select').at(0).simulate('change', {target: {value: 'csd'}});
     wrapper.find('select').at(1).simulate('change', {target: {value: 'null_168'}});
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
@@ -191,15 +202,14 @@ describe('AssignmentSelector', () => {
 
   it('hides second dropdown after selecting "" primary', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps}/>);
-    wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+    wrapper.find('select').at(0).simulate('change', {target: {value: 'csd'}});
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
       scriptId: null,
     });
 
-    // Select "" in the first dropdown
-    wrapper.find('select').at(0).simulate('change', {target: {value: 'null_null'}});
+    wrapper.find('select').at(0).simulate('change', {target: {value: ''}});
     assert.equal(wrapper.find('select').length, 1);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: null,
@@ -318,7 +328,7 @@ describe('AssignmentSelector', () => {
     });
 
     it('gets called when primary dropdown changes', () => {
-      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      wrapper.find('select').at(0).simulate('change', {target: {value: 'csd'}});
       expect(spy).to.have.been.calledOnce
         .and.to.have.been.calledWith({
           courseId: 29,
@@ -327,7 +337,7 @@ describe('AssignmentSelector', () => {
     });
 
     it('gets called when secondary dropdown changes', () => {
-      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      wrapper.find('select').at(0).simulate('change', {target: {value: 'csd'}});
       spy.reset();
       wrapper.find('select').at(1).simulate('change', {target: {value: 'null_168'}});
       expect(spy).to.have.been.calledOnce
@@ -356,7 +366,7 @@ describe('AssignmentSelector', () => {
     });
 
     it('disables the secondary dropdown', () => {
-      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      wrapper.find('select').at(0).simulate('change', {target: {value: 'csd'}});
       const secondDropdown = wrapper.find('select').at(1);
       expect(secondDropdown).to.have.prop('disabled', true);
     });

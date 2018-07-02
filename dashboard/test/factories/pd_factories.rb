@@ -3,8 +3,8 @@ FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
+    funded false
     on_map true
-    funded true
     course Pd::Workshop::COURSES.first
     subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     trait :teachercon do
@@ -14,6 +14,10 @@ FactoryGirl.define do
     trait :local_summer_workshop do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+    end
+    trait :fit do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_FIT
     end
     capacity 10
     transient do
@@ -26,16 +30,21 @@ FactoryGirl.define do
       enrolled_unattending_users 0
       num_completed_surveys 0
       randomized_survey_answers false
+      assign_session_code false
+    end
+    trait :with_codes_assigned do
+      assign_session_code true
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << build(
-          :pd_session,
+        params = [{
           workshop: workshop,
           start: evaluator.sessions_from + i.days,
           duration_hours: evaluator.each_session_hours
-        )
+        }]
+        params.prepend :with_assigned_code if evaluator.assign_session_code
+        workshop.sessions << build(:pd_session, *params)
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -51,6 +60,11 @@ FactoryGirl.define do
         teacher = create :teacher
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
+    end
+
+    trait :funded do
+      funded true
+      funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
     end
 
     after(:create) do |workshop, evaluator|
@@ -86,6 +100,10 @@ FactoryGirl.define do
     association :workshop, factory: :pd_workshop
     start {Date.today + 9.hours}
     self.end {start + duration_hours.hours}
+
+    trait :with_assigned_code do
+      after :build, &:assign_code
+    end
   end
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
@@ -738,6 +756,8 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application
+
   # default to do_you_approve: other
   factory :pd_principal_approval1819_application_hash, parent: :pd_principal_approval1819_application_hash_common do
     approved_other
@@ -835,7 +855,7 @@ FactoryGirl.define do
       contact_phone "1597534862"
       contact_relationship "it's complicated"
       dietary_needs "Food Allergy"
-      dietary_needs_food_allergy_details "memories"
+      dietary_needs_details "memories"
       how_traveling "Amtrak or regional train service"
       liability_waiver "Yes"
       live_far_away "Yes"
@@ -854,7 +874,7 @@ FactoryGirl.define do
       with_full_form_data
     end
 
-    trait :withdrawn do
+    trait :declined do
       teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
     end
 
@@ -863,9 +883,50 @@ FactoryGirl.define do
       with_full_form_data
     end
 
-    trait :partner_registration do
+    trait :facilitator_accepted do
+      able_to_attend 'Yes'
+      with_full_form_data
+    end
+
+    trait :facilitator_declined do
+      able_to_attend 'No'
+    end
+
+    trait :partner_accepted do
+      with_full_form_data
+
       after :build do |hash|
         hash['ableToAttend'] = "Yes"
+        hash.delete('teacherAcceptSeat')
+        hash['travelCovered'] = Pd::Teachercon1819Registration.options[:travel_covered].first
+      end
+    end
+
+    trait :partner_declined do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "No"
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :lead_facilitator_accepted do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "Yes"
+        hash['city'] = 'Phoenix'
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :lead_facilitator_declined do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "No"
+        hash['city'] = 'Phoenix'
         hash.delete('teacherAcceptSeat')
       end
     end
@@ -878,6 +939,7 @@ FactoryGirl.define do
     end
 
     association :pd_application, factory: :pd_teacher1819_application
+    association :user, factory: :teacher
     form_data {form_data_hash.to_json}
   end
 
@@ -905,12 +967,16 @@ FactoryGirl.define do
       contact_phone "1597534862"
       contact_relationship "it's complicated"
       dietary_needs "Food Allergy"
-      dietary_needs_food_allergy_details "memories"
+      dietary_needs_details "memories"
       how_traveling "Amtrak or regional train service"
       liability_waiver "Yes"
       live_far_away "Yes"
       need_hotel "No"
       photo_release "Yes"
+    end
+
+    trait :declined do
+      able_to_attend "No"
     end
   end
 
@@ -921,5 +987,13 @@ FactoryGirl.define do
 
     association :pd_application, factory: :pd_facilitator1819_application
     form_data {build(:pd_fit_weekend1819_registration_hash, status).to_json}
+  end
+
+  factory :pd_workshop_daily_survey, class: 'Pd::WorkshopDailySurvey' do
+    form_id 12345
+    sequence(:submission_id)
+    association :pd_workshop
+    association :user
+    day 5
   end
 end

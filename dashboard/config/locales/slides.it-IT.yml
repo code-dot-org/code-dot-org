@@ -1,4 +1,5 @@
-"it":
+---
+it:
   slides:
     maze_intro:
       1:
@@ -2144,11 +2145,11 @@
           i numeri mi consenete di usare i colori corretti e mi indica dove.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "È molto specifico quindi sono in grado di seguire le indicazioni e
-          il dipinto risulterà meraviglioso. È un ottimo algoritmo. Se le istruzioni
+        text: È molto specifico quindi sono in grado di seguire le indicazioni e il
+          dipinto risulterà meraviglioso. È un ottimo algoritmo. Se le istruzioni
           non fossero state abbastanza specifiche, i miei lupi non sarebbero venuti
           così bene. Quando si vuole che qualcosa diventi esattamente come la si è
-          pianificata, è meglio essere estremamente precisi."
+          pianificata, è meglio essere estremamente precisi.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
@@ -2438,7 +2439,7 @@
       2:
         image: notes/tutorial_puzzle_challenge_2.png
         text: |-
-          Posso cambiare il numero dei pixel o la lunghezza della linea usando questo menù a tendina.
+          Posso cambiare il numero dei pixel o la lunghezza della linea usando questo menù a discesa.
           Quanto era lunga? Non ricordo.....
           Se hai bisogno di rivedere le istruzioni, le trovi sotto il bottone "Esegui". In questo caso ho utilizzato il blocco "Vai avanti" e sceglierò 100 pixels. Posso cancellare un blocco trascinandolo nella cassetta degli attrezzi oppure nel cestino dei rifiuti. Adesso lo rimetto a posto.
       3:
@@ -3531,8 +3532,12 @@
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
-        text: |
-          Mi chiamo Mei'lani, studio informatica e sono una stagista in Code.org. Mi piace l'informatica perché è davvero creativa. Devo risolvere problemi. Devo far funzionare tutto come voglio. Ma devo anche essere la progettista e l'artista e fare tutte le scelte dal punto di vista creativo.
+        text: 'Mi chiamo Mei''lani, studio informatica e sono una stagista in Code.org.
+          Mi piace l''informatica perché è davvero creativa. Devo risolvere problemi.
+          Devo far funzionare tutto come voglio. Ma devo anche essere la progettista
+          e l''artista e fare tutte le scelte dal punto di vista creativo.
+
+'
       2:
         image: notes/applab_intro_welcome_2.png
         text: Costruire la tua app è facile con Sviluppo App! Sia che tu sia un principiante,
@@ -3547,7 +3552,7 @@
       4:
         image: notes/applab_intro_welcome_4.png
         text: Il blocco `setProperty` cambia le caratteristiche degli elementi sul
-          tuo schermo. Come i bottoni, le etichette o l'intero schermo. Prima devi
+          tuo schermo. Come i pulsanti, le etichette o l'intero schermo. Prima devi
           definire quale elemento vuoi cambiare. Se passi sopra ad un elemento della
           tua app, puoi vedere il suo nome o ID. Quindi seleziona questo ID dal primo
           elenco a discesa.
@@ -3942,431 +3947,432 @@
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png
-        text: 'Everywhere you look, computers are changing the world. Whether they''re
-          on our desktops, in our homes, our pockets, or just about anywhere else.
-          But while most of us use this revolutionary technology daily, we don''t
-          often ask: "How do computers work?" In this series, you''re going to learn
-          how computers really work, starting with what makes a computer a computer.
-          Then, you''ll look at how information is represented inside the computer
-          using tiny electrical signals going on and off at mind-boggling speeds.'
+        text: |-
+          Dovunque guardi, i computer stanno cambiando il mondo.
+          Che si trovino sulle nostre scrivanie, nelle nostre case, nelle nostre tasche o in qualsiasi altro posto. Ma nonostante la maggior parte di noi usi ogni giorno questa rivoluzionaria tecnologia, non ci chiediamo tanto spesso: "Come funzionano i computer"? In questa serie, imparerai come funzionano realmente i computer, a partire da ciò che fa sì che un computer sia un computer. Poi, vedrai come sono rappresentati i dati all'interno del computer utilizzando segnali elettrici che vengono accesi e spenti a velocità sbalorditive.
       2:
         image: notes/csd_concept_how_computers_work_2.png
-        text: After that, you'll learn how computers use circuits to do everything
-          from simple math to simulating entire virtual worlds. Next, you'll zoom
-          out and look at the different parts of a computer that actually input, output,
-          and store all that information. Finally, you'll take a look at what code
-          actually is and how software controls hardware. So whether you're just curious
-          about the devices you use every day or you want to design the innovations
-          of the future, the first step is learning how computers work.
+        text: 'Dopo di che, imparerai come i computer usano i circuiti integrati per
+          fare tutto: da semplici operazioni matematiche, alla simulazione di interi
+          mondi virtuali. Poi potrai allargare lo sguardo e osservare le diverse parti
+          di un computer che gestiscono gli ingressi e le uscite e memorizzano tutti
+          questi dati. Infine, darai un''occhiata a cos''è il software e come questo
+          controlla l''hardware. Quindi, che tu sia solo curioso di capire i dispositivi
+          che usi ogni giorno o che tu voglia progettare l''innovazione del futuro,
+          il primo passo è imparare come funzionano i computer.'
     csd_concept_computer:
       1:
         image: notes/csd_concept_computer_1.png
-        text: My name is May-Li Khoe and I'm a designer and an inventor. So some of
-          the things I've designed have been at Apple, and now I design products for
-          kids to use so that they can have an easier time in school. My other jobs
-          include DJ-ing and dancing.
+        text: |-
+          Mi chiamo May-Li Khoe e sono progettista ed inventrice.
+          Alcune delle cose che ho progettato, sono finite alla Apple e ora progetto prodotti per rendere la scuola più facile ai bambini.
+          Faccio anche altri lavori come la DJ e la ballerina.
       2:
         image: notes/csd_concept_computer_2.png
-        text: Computers are everywhere! They're in people's pockets, they're in people's
-          cars, people have them on their wrists. They might be in your backpack right
-          now. But what makes a computer a computer? What does make a computer a computer
-          anyway? And how does it even work?
+        text: |-
+          I computer sono ovunque!
+          Sono nelle tasche delle persone, nelle loro macchine, ai loro polsi.
+          Possono essere nei vostri zaini proprio adesso.
+          Ma cosa rende un computer un computer?
+          E come funziona?
       3:
         image: notes/csd_concept_computer_3.png
-        text: Hi I'm Nat! I was one of the original designers of the Xbox. I've been
-          working with computers since I was maybe seven years old and now I work
-          on virtual reality. As humans, we've always built tools to help us solve
-          problems. Tools like a wheelbarrow, a hammer, or a printing press, or a
-          tractor-trailer.
+        text: |-
+          Ciao, sono Nat!
+          Sono uno dei primi progettisti dell'Xbox.
+          Lavoro con il computer più o meno da quando avevo sette anni
+          e adesso lavoro sulla realtà virtuale.
+          Come umani, abbiamo sempre creato strumenti per aiutarci a risolvere problemi.
+          Strumenti come una carriola, un martello, una macchina da stampa o un camion.
       4:
         image: notes/csd_concept_computer_4.png
-        text: All of these inventions helped us with manual work. Over time, people
-          began to wonder if a machine could be designed and built to help us with
-          the thinking work we do, like solving equations or tracking the stars in
-          the sky. Rather than moving or manipulating physical things like dirt and
-          stone, these machines would need to be designed to manipulate information.
-          As the pioneers of computer science explored how to design a thinking machine,
-          they realized that it had to perform four different tasks.
+        text: |-
+          Tutte queste invenzioni ci hanno aiutati con il lavoro manuale.
+          Nel tempo le persone hanno iniziato a chiedersi se fosse stato possibile progettare e costruire macchine che ci aiutassero nel ragionamento, come risolvere equazioni o mappare le stelle nel cielo.
+          Invece di muovere o manipolare oggetti fisici come terra e sassi, queste macchine avrebbero dovuto essere progettate per manipolare dati.
+          Quando i pionieri dell'informatica studiarono come progettare una macchina che ragiona, capirono che questa doveva eseguire quattro diverse attività.
       5:
         image: notes/csd_concept_computer_5.png
-        text: It would need to take input, store information process it and then output
-          the results. Now this might sound simple, but these four things are common
-          to all computers. That's what makes a computer a computer.
+        text: |-
+          Doveva acquisire dati in ingresso (INPUT),
+          memorizzare dati (STORAGE),
+          elaborarli (PROCESSING),
+          e fornire dati in uscita (OUTPUT).
+          Ora questo può sembrare semplice, ma queste quattro cose sono comuni a tutti i computer.
+          Questo è ciò che rende un computer un computer.
       6:
         image: notes/csd_concept_computer_6.png
-        text: Computers started out as basic calculators, which was already really
-          awesome at the time, and they were only manipulating numbers back then.
-          But now we can use them to talk to each other, we can use them to play games,
-          control robots, and do any crazy thing that you could probably imagine.
-          Modern computers look nothing like those clunky old machines but they still
-          do these same four things.
+        text: |-
+          I computer iniziarono come semplici calcolatrici, il che all'epoca era già impressionante, e si limitavano ad elaborare e restituire numeri.
+          Ma ora possiamo usarli per parlarci, li possiamo usare per fare dei giochi, per controllare dei robot e probabilmente fare qualsiasi cosa che tu possa immaginare.
+          I computer moderni non assomigliano affatto a quelle vecchie goffe macchine, ma continuano a fare quelle stesse quattro cose.
       7:
         image: notes/csd_concept_computer_7.png
-        text: First, we're going to talk about input. You can tell computers what
-          to do with the keyboard, you can tell them what to do with the mouse, the
-          microphone, the camera. All these different inputs give a computer information,
-          which is then stored in memory.
+        text: |-
+          Prima di tutto parleremo degli input.
+          Puoi dire al computer cosa fare con la tastiera, puoi dirlo con il mouse, il microfono o la telecamera.
+          Tutti questi input forniscono dati al computer, che devono essere archiviati in una memoria.
       8:
         image: notes/csd_concept_computer_8.png
-        text: A computer's processor takes information from memory. It manipulates
-          it or changes it using an algorithm, which is just a series of commands.
-          And then it sends the processed information back to be stored in memory
-          again. This continues until the processed information is ready to be output.
+        text: |-
+          Il processore del computer prende i dati dalla memoria, li manipola e li trasforma usando un algoritmo, che è semplicemente costituito da una serie di istruzioni.
+          Quindi invia alla memoria i dati elaborati.
+          Questo continua fino a che l'elaborazione dei dati ha fornito un risultato.
       9:
         image: notes/csd_concept_computer_9.png
-        text: How a computer outputs information depends on what the computer is designed
-          to do. A computer display can show text, photos, videos, or interactive
-          games -- even virtual reality! The output of a computer may even include
-          signals to control a robot.
+        text: |-
+          Il modo in cui un computer fornisce i dati in uscita, dipende dallo scopo per il quale è stato progettato.
+          Lo schermo di un computer può mostrare testo, foto, filmati o giochi interattivi... e anche realtà virtuale!
+          L'output di un computer può anche includere dei segnali per controllare un robot.
       10:
         image: notes/csd_concept_computer_10.png
-        text: And who knows what the computers of tomorrow will be like? My hope is
-          that you get to help decide what you want the computers of tomorrow to look
-          like. But across all computers, regardless of the different types of technology
-          they use, they're always doing those same four things. They take in information,
-          they store it as data, they process it, and then they output the results.
+        text: |-
+          I computer che usiamo oggi appaiono molto diversi dalle prime macchine realizzate. E chissà come saranno i computer di domani?
+          Spero che tu possa aiutare a definire come saranno fatti i computer di domani.
+          Ma tutti i computer, indipendentemente dalla tecnologia che usano, fanno sempre le stesse quattro cose.
+          Ricevono dei dati in ingresso (INPUT),
+          li memorizzano (STORAGE),
+          li elaborano (PROCESSING),
+          e infine danno dei risultati in uscita (OUTPUT).
     csd_concept_binary_data:
       1:
         image: notes/csd_concept_binary_data_1.png
-        text: Hi! My name is Limor Fried, and I'm an engineer here at Adafruit Industries.
-          And this is where I do engineering and design, and I design circuits for
-          fashion and music and technology.
+        text: |-
+          Ciao! Mi chiamo Limor Fried e sono un'ingegnera qui alle Adafruit Industries.
+          E qui è dove sviluppo i miei progetti, dove progetto circuiti per la moda, la musica e la tecnologia.
       2:
         image: notes/csd_concept_binary_data_2.png
-        text: My name is Federico Gomez Suarez, and I'm a software developer with
-          Microsoft Hack for Good. And I look into using technology to help us solve
-          some of the big social problems of our times.
+        text: |-
+          Io sono Federico Gomez Suarez e sono uno sviluppatore di software con Microsoft Hack for Good.
+          E cerco di usare la tecnologia per aiutarci a risolvere alcuni dei grandi problemi sociali del nostro tempo.
       3:
         image: notes/csd_concept_binary_data_3.png
-        text: You may have heard that computers work on ones and zeros. But almost
-          nobody today actually deals directly with these ones and zeros. But ones
-          and zeroes do play a big role in how computers work on the inside.
+        text: |-
+          Puoi aver sentito dire che il funzionamento dei computer è basato su uni e zeri.
+          Ma quasi nessuno oggi in realtà si occupa direttamente di questi uni e zeri.
+          Ma uni e zeri giocano un ruolo fondamentale nel funzionamento interno dei computer.
       4:
         image: notes/csd_concept_binary_data_4.png
-        text: Inside a computer are electric wires and circuits that carry all the
-          information in a computer. How do you store or represent information using
-          electricity?
+        text: |-
+          All'interno di un computer ci sono fili e circuiti elettrici che trasportano tutti i dati.
+          Come si fa a memorizzare o rappresentare i dati usando l'elettricità?
       5:
         image: notes/csd_concept_binary_data_5.png
-        text: Well, if you have a single wire with electricity flowing through it,
-          the signal could either be on or off. That's not a lot of choices, but it's
-          a really important start. With one wire, we can represent a yes or no, true
-          or false, a one or zero, or anything else with only two options. This on/off
-          state of a single wire is called a bit, and it's the smallest piece of information
-          a computer can store.
+        text: |-
+          Dunque, se hai un singolo filo percorso da elettricità, il segnale può essere acceso o spento (ON o OFF).
+          Non sono molte possibilità, ma è veramente un ottimo inizio.
+          Con un filo, possiamo rappresentare un sì o un no, vero o falso, uno o zero, o qualunque altra cosa che abbia due opzioni.
+          Questo stato acceso/spento di un singolo filo è chiamato BIT, ed è il più piccolo dato che un computer può memorizzare.
       6:
         image: notes/csd_concept_binary_data_6.png
-        text: 'If you use more wires you get more bits: more ones and zeros. With
-          more bits you can represent more complex information. But to understand
-          that, we need to learn about something called the binary number system.'
+        text: |-
+          Se usi più fili ("wires"), hai a disposizione più BIT: quindi più uni e zeri.
+          Con più BIT puoi rappresentare dati più complessi.
+          Ma per capire questo, dobbiamo imparare qualcosa sul SISTEMA NUMERICO BINARIO.
       7:
         image: notes/csd_concept_binary_data_7.png
-        text: 'In the decimal number system, we have ten digits from zero to nine,
-          and that''s how we''ve all learned to count. In the binary number system,
-          we only have two digits: zero and one. With these two digits, we can count
-          up to any number.'
+        text: |-
+          Nel sistema numerico decimale, abbiamo 10 cifre da 0 a 9, ed è il modo in cui tutti abbiamo imparato a contare.
+          Nel sistema numerico binario, abbiamo solo due cifre: zero e uno.
+          Con queste due cifre possiamo contare fino a qualunque numero.
       8:
         image: notes/csd_concept_binary_data_8.png
-        text: Here's how this works. In a decimal number system we're all used to,
-          each position in a number has a different value. There's a 1 position, the
-          10 position, the 100 position, and so on. For example, a 9 in the 100 position
-          is a 900. In binary, each position also carries a value. But instead of
-          multiplying by 10 each time, we multiply by 2. So there's the 1 position,
-          the 2 position, the 4 position, the 8 position, and so on. For example,
-          the number 9 in binary is 1001. To calculate the value, we add 1 times 8,
-          plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this
-          math because computers do it for us. What's important is that any number
-          can be represented with only ones and zeros, or by a bunch of wires that
-          are on or off. The more wires you use, the larger the numbers you can store.
-          With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With
-          just 32 wires, you can store all the way from 0 to over 4 billion. Using
-          the binary number system, you can represent any number you like.
+        text: |-
+          Ecco come funziona.
+          Nel sistema decimale, siamo tutti abituati al fatto che la posizione di ogni cifra ha un valore diverso.
+          C'è la posizione 1, la posizione 10, la posizione 100, e così via.
+          Per esempio, un 9 nella posizione 100 equivale a 900.
+          Anche in binario ogni posizione ha un particolare valore.
+          Ma invece di moltiplicare per 10 ogni volta, si moltiplica per 2.
+          Quindi, c'è la posizione 1, la posizione 2, la posizione 4, la posizione 8, e così via.
+          Per esempio, il numero 9 in binario diventa 1001.
+          Per calcolare il valore, sommiamo 1x8+0x4+0x2+1x1.
+          Quasi nessuno fa questi calcoli, perché il computer lo fa per noi.
+          Il fatto importante è che ogni numero può essere rappresentato semplicemente da uni e zeri o da un gruppo di fili che sono accesi o spenti.
+          Più fili usi, più grandi sono i numeri che puoi memorizzare.
+          Con 8 fili, puoi memorizzare numeri tra 0 e 255.
+          Che corrisponde a 8 uni.
+          Con solo 32 fili, è possibile memorizzare da 0 a oltre 4 miliardi.
+          Usando il sistema numerico binario, puoi rappresentare qualunque numero.
       9:
         image: notes/csd_concept_binary_data_9.png
-        text: But what about other types of information? Like text, images, or sound?
-          It turns out that all these things can also be represented with numbers.
-          Think of all the letters in the alphabet. You could assign a number to each
-          letter. A could be 1, B could be 2, and so on. You can then represent any
-          word or paragraph as a sequence of numbers. And as we saw, these numbers
-          can be stored as on or off electrical signals. Every word you see on every
-          webpage or your phone is represented using a system like this.
+        text: |-
+          Ma come fare con altri tipi di dati?
+          Come testo, immagini o suoni?
+          Anche tutti questi dati possono essere rappresentate con numeri.
+          Pensa a tutte le lettere dell'alfabeto.
+          Puoi assegnare un numero ad ogni lettera.
+          A può essere 1, B può essere 2 ecc.
+          Puoi quindi rappresentare ogni parola o frase con una sequenza di numeri.
+          E come si vede, questi numeri possono essere memorizzati come segnali elettrici accesi o spenti.
+          Ogni parola che vedi in ogni pagina web o sul tuo telefono è rappresentata usando un sistema come questo.
       10:
         image: notes/csd_concept_binary_data_10.png
-        text: Now, let's consider photos, videos, and all the graphics you see on
-          a screen.
+        text: Ora consideriamo foto, video e tutta la grafica che vedi su uno schermo.
       11:
         image: notes/csd_concept_binary_data_11.png
-        text: All of these images are made out of teeny dots called pixels, and each
-          pixel has a color. Each of the colors can be represented with numbers. When
-          you consider the typical image has millions of these pixels, and the typical
-          video shows 30 images per second now we're talking about a lot of data here.
+        text: |-
+          Tutte queste immagini sono fatte di piccolissimi puntini chiamati PIXEL e ogni pixel ha un colore.
+          Ogni colore può essere rappresentato con dei numeri.
+          Una tipica immagine ha milioni di questi pixel e un tipico video visualizza 30 immagini al secondo, quindi stiamo parlando proprio di molti dati.
       12:
         image: notes/csd_concept_binary_data_12.png
-        text: Every sound is basically a series of vibrations in the air. Vibrations
-          can be represented graphically as a waveform. Any point on this waveform
-          can be represented by a number. And this way, any sound can be broken down
-          into a series of numbers. If you want higher quality sound, you will pick
-          32-bit audio or an 8-bit audio. More bits means a higher range of numbers.
+        text: |-
+          Ogni suono è costituito da una serie di vibrazioni dell'aria.
+          Le vibrazioni possono essere rappresentate graficamente con una forma d'onda.
+          Ogni punto in questa forma d'onda può essere rappresentato con dei numeri.
+          E in questo modo, ogni suono può essere trasformato in una serie di numeri.
+          Se vuoi una migliore qualità del suono, scegli un sistema audio a 32 bit o a 8 bit?
+          Più bit significa un intervallo di numeri più ampio.
       13:
         image: notes/csd_concept_binary_data_13.png
-        text: When you use a computer to write code or make your own app, you're not
-          dealing directly with these ones and zeros. But you will be dealing with
-          images or sound or video. So if you want to understand how computers work
-          on the inside, it all comes down these simple ones and zeros and the electrical
-          signals in the circuits behind them.
+        text: |-
+          Quando usi un computer per scrivere programmi o per creare la tua app, non hai direttamente a che fare con questi uni e zeri.
+          Ma gestisci immagini, suoni o video.
+          Quindi, se vuoi capire come funzionano i computer al loro interno, tutto si basa su questi uni e zeri e sui segnali elettrici nei circuiti.
     csd_concept_circuits_logic:
       1:
         image: notes/csd_concept_circuits_logic_1.png
-        text: One of the coolest things I've discovered about circuits is circuitry
-          can be an art form like if I have a creative idea, I can get that creative
-          idea out using circuits. So if you have ideas, you can use technology to
-          make those ideas come to life.
+        text: |-
+          Una delle cose più fantastiche che ho scoperto sui circuiti elettrici è che possono assumere una forma artistica: se ho un'idea creativa, posso realizzarla con dei circuiti.
+          Quindi, se hai delle idee, puoi usare la tecnologia per fargli prendere vita!
       2:
         image: notes/csd_concept_circuits_logic_2.png
-        text: Every input or output of a computer is effectively a type of information,
-          which can be represented by on or off electrical signals or ones and zeros.
+        text: Ogni ingresso (INPUT) o uscita (OUTPUT) di un computer è un tipo di
+          dato che può essere rappresentata con segnali elettrici accesi (ON) o spenti
+          (OFF) o con uni e zeri.
       3:
         image: notes/csd_concept_circuits_logic_3.png
-        text: In order to process the information that comes in as input, and to make
-          the information that is output, a computer needs to modify and combine the
-          input signals. To do this, a computer uses millions of teeny electronic
-          components, which come together to form circuits.
+        text: |-
+          Per elaborare i dati ricevuti in ingresso (INPUT) e per generare quelli in uscita (OUTPUT), un computer deve modificare e combinare i dati in ingresso.
+          Per fare ciò, un computer usa milioni di minuscoli componenti elettronici, che insieme formano i circuiti.
       4:
         image: notes/csd_concept_circuits_logic_4.png
-        text: Let's take a closer look at how circuits can modify and process information
-          that's represented in ones and zeros. This is an incredibly simple circuit.
-          It takes an electrical signal, on or off, and it flips it. So if the signal
-          you give it is a 1, the circuit gives you a 0, and if you give the circuit
-          a 0, it gives you a 1. The signal that goes in is not the same as the signal
-          that comes out, and so we call this circuit NOT.
+        text: |-
+          Guardiamo più da vicino come i circuiti possono modificare i dati rappresentati con uni e zeri.
+          Questo è un circuito semplicissimo.
+          Prende un segnale elettrico, ON o OFF, e lo inverte.
+          Quindi, se il segnale che fornisci è 1, il circuito ti risponde 0 e se dai al circuito uno 0, lui ti restituisce un 1.
+          Il segnale che entra NON è uguale a quello che esce, perciò chiamiamo questo circuito NOT.
       5:
         image: notes/csd_concept_circuits_logic_5.png
-        text: More complicated circuits can take multiple signals and combine them,
-          and give you a different result. In this example, a circuit will take two
-          electrical signals, now each one might be a 1 or a 0. If either of the signals
-          coming in is a 0, then the result is also a 0. This circuit will only give
-          you a 1, if the first signal and the second signal are both a 1, and so
-          we call the circuit AND.
+        text: |-
+          Dei circuiti più complessi possono combinare insieme alcuni segnali e fornire in uscita diversi risultati.
+          In questo esempio, un circuito riceve in ingresso due segnali, ognuno può essere 1 o 0.
+          Se entrambi i segnali in ingresso sono 0, allora anche il risultato è 0.
+          Questo circuito restituisce 1 solo se il primo segnale e (AND) il secondo segnale sono entrambi 1, perciò chiamiamo questo circuito AND.
       6:
         image: notes/csd_concept_circuits_logic_6.png
-        text: There are many small circuits like this that perform simple logical
-          calculations. By connecting these circuits together, we can make more complex
-          circuits that perform more complex calculations.
+        text: |-
+          Ci sono molti piccoli circuiti come questo che svolgono semplici operazioni logiche.
+          Collegando insieme questi circuiti, possiamo creare circuiti più complessi che eseguono operazioni più complesse.
       7:
         image: notes/csd_concept_circuits_logic_7.png
-        text: For example, you can make a circuit that adds 2 bits together called
-          an adder. This circuit takes in 2 individual bits, each one a 1 or a 0,
-          and adds them together to calculate the sum. The sum can be 0 plus 0 equals
-          0, 0 plus 1 equals 1, or 1 plus 1 equals 2. You need two wires coming out
-          because it can take up to two binary digits to represent the sum. Once you
-          have a single adder for adding two bits of information, you can put together
-          multiples of these adder circuits side-by-side to add together much larger
-          numbers.
+        text: |-
+          Per esempio, puoi realizzare un circuito che somma due bit, chiamato sommatore (ADDER).
+          Questo circuito riceve in ingresso due singoli bit, ognuno 1 o 0, e li elabora per calcolare la somma.
+          La somma può essere 0+0=0, 0+1=1 oppure 1+1=10 (2 in binario).
+          Hai bisogno di due fili in uscita, perché servono due cifre binarie per rappresentare la somma.
+          Ora che hai un singolo sommatore per due bit di informazione, puoi collegare insieme molti di questi sommatori per elaborare numeri più grandi.
       8:
         image: notes/csd_concept_circuits_logic_8.png
-        text: For example, here's how an 8-bit adder adds the numbers 25 and 50. Each
-          number is represented using 8 bits, resulting in 16 different electrical
-          signals that go into the circuit. The circuit for an 8-bit adder has lots
-          of little adders inside of it, which together, calculate the sum.
+        text: |-
+          Per esempio, ecco come un sommatore da 8 bit addiziona i numeri 25 e 50.
+          Ogni numero è rappresentato usando 8 bit, si hanno quindi 16 differenti segnali elettrici in ingresso al circuito.
+          Il circuito di un sommatore da 8 bit contiene molti piccoli sommatori, che insieme calcolano la somma.
       9:
         image: notes/csd_concept_circuits_logic_9.png
-        text: Different electrical circuits can perform other simple calculations
-          like subtraction or multiplication. In fact, all the information processing
-          your computer does is just lots and lots of small simple operations put
-          together. Each individual operation done by a computer is so, so simple
-          it could be done by a human, but these circuits inside computers are way
-          way faster.
+        text: |-
+          Altri circuiti elettrici possono eseguire altre semplici operazioni, come sottrazione o moltiplicazione.
+          Infatti, tutte le elaborazioni che il tuo computer svolge non sono niente altre che tantissime semplici operazioni messe insieme.
+          Ogni singola operazione svolta da un computer è così semplice che potrebbe essere svolta da una persona, ma questi circuiti dentro al computer sono estremamente più veloci.
       10:
         image: notes/csd_concept_circuits_logic_10.png
-        text: Back in the day, these circuits were big and clunky, and an 8-bit adder
-          could be as big as a fridge, and it would take minutes for them to perform
-          a simple calculation. Today, computer circuits are microscopic in size,
-          and way way faster. Why are smaller computers also faster? Well, because
-          the smaller the circuit is, the less distance the electrical signal has
-          to go. Electricity moves at just about the speed of light, which is why
-          modern circuits can perform billions of calculations per second.
+        text: |-
+          Tanto tempo fa, questi circuiti erano grandi e lenti, un sommatore da 8 bit poteva essere grande come un frigorifero e ci metteva dei minuti per eseguire un semplice calcolo.
+          Oggi, i circuiti dei computer sono di dimensioni microscopiche ed estremamente più veloci.
+          Perché computer più piccoli sono anche più veloci?
+          Beh, perché più piccoli sono i circuiti, più breve è la distanza che deve percorrere il segnale elettrico.
+          L'elettricità si muove quasi alla velocità della luce, per questo i circuiti moderni possono eseguire miliardi di calcoli al secondo.
       11:
         image: notes/csd_concept_circuits_logic_11.png
-        text: So whether you're playing a game, recording a video, or exploring the
-          cosmos, everything you could possibly do with technology requires lots of
-          information to be processed extremely quickly. Underneath all this complexity
-          is just lots of teeny little circuits that turn binary signals into websites,
-          videos, music, and games. These circuits can even help us decode DNA to
-          diagnose and cure disease. So what would you like to do with all these circuits?
+        text: |-
+          Così, sia che tu stia giocando, producendo un video o esplorando il cosmo, o qualunque altra cosa tu possa fare con la tecnologia, richiede di elaborare molti dati molto velocemente.
+          Sotto tutta questa complessità ci sono solo tantissimi minuscoli circuiti che trasformano segnali binari in siti web, video, musica e giochi.
+          Questi circuiti possono anche aiutarci a decodificare il DNA per diagnosticare e curare delle malattie.
+          Allora, cosa vorresti fare tu con tutti questi circuiti?
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
-        text: Hi, my name is Madison Maxey. I have a company called Loomia, and we
-          focus on making smart fabrics for smart clothing and smart soft good products.
-          The sky's the limit when it comes to textiles.
+        text: |-
+          Ciao, mi chiamo Madison Maxey.
+          Ho un'azienda chiamata Loomia in cui produciamo tessuti "intelligenti" per vestiti adattabili ed altri oggetti flessibili.
+          Non ci sono limiti quando si tratta di tessuti.
       2:
         image: notes/csd_concept_memory_cpu_input_output_2.png
-        text: My name is Danielle Applestone, and I'm CEO of Othermachine Company.
-          We build a desktop milling machine. A milling machine takes a rotating cutting
-          tool and moves it through material to create a 3D object.
+        text: |-
+          Il mio nome è Danielle Applestone e sono l'amministratrice delegata dell'azienda Othermachine Company.
+          Costruiamo una fresa da tavolo.
+          Una fresa utilizza un utensile rotante per incidere un materiale e creare oggetti 3D.
       3:
         image: notes/csd_concept_memory_cpu_input_output_3.png
-        text: Under the hood, all computers do the same four basic things. They input
-          information, store and process the information, and then, output information.
-          Each of these things is done by a different part of the computer.
+        text: |-
+          Alla fin fine, tutti i computer fanno le stesse quattro cose.
+          Ricevono dati in ingresso (INPUT), memorizzano ed elaborano dati, e quindi restituiscono un risultato in uscita (OUTPUT).
+          Ognuna di queste attività è svolta da un diverso elemento del computer.
       4:
         image: notes/csd_concept_memory_cpu_input_output_4.png
-        text: There are input devices that take input from the outside world and convert
-          it into binary information. There is memory to store this information. There's
-          a central processing unit or CPU, where all the calculations are done. And,
-          finally, there are output devices that take information and convert it into
-          a physical output.
+        text: |-
+          Ci sono i dispositivi di ingresso (INPUT) che rilevano fenomeni nel mondo esterno e li convertono in dati in binario.
+          C'è la memoria per memorizzare questi dati.
+          C'è un'unità centrale di elaborazione CPU (Central Processing Unit), dove vengono eseguiti tutti i calcoli.
+          E, infine, ci sono i dispositivi di uscita (OUTPUT) che convertono i dati di uscita in forma fisica.
       5:
         image: notes/csd_concept_memory_cpu_input_output_5.png
-        text: Let's talk about input first. Computers can take many different types
-          of input, like the keyboard of a computer, the touchpad of a phone, a camera,
-          a microphone, or a GPS. But even the sensors on a car, a thermostat, or
-          a drone are also different input devices.
+        text: |-
+          Prima di tutto, parliamo degli ingressi (INPUT).
+          I computer possono acquisire dati da molti tipi di dispositivi di ingresso, come la tastiera di un computer, lo schermo tattile di un telefono, una telecamera, un microfono o un GPS.
+          Ma anche i sensori di un'auto, di un termostato o di un drone sono dispositivi di ingresso.
       6:
         image: notes/csd_concept_memory_cpu_input_output_6.png
-        text: Now, let's look at a simple example of how input travels through a computer
-          and becomes output. When you press a key on your keyboard - let's say the
-          letter "B". The keyboard converts the letter to a number. That number is
-          sent as binary, ones and zeros, into the computer.
+        text: |-
+          Ora, osserviamo un semplice esempio di come i dati in ingresso viaggiano attraverso un computer e diventano uscite.
+          Quando premi un tasto su una tastiera, diciamo la lettera "B", la tastiera converte la lettera in un numero.
+          Questo numero viene spedito al computer in formato binario (uni e zeri).
       7:
         image: notes/csd_concept_memory_cpu_input_output_7.png
-        text: Starting from this number, the CPU calculates how to display the letter
-          "B" pixel by pixel. The CPU requests step-by-step instructions from memory,
-          which tell it how to draw the letter "B". The CPU runs these instructions
-          and stores the results as pixels in memory.
+        text: |-
+          A partire da questo numero, la CPU deve calcolare come visualizzare, pixel per pixel, la lettera "B".
+          La CPU richiede alla memoria, una dopo l'altra, le istruzioni per poter disegnare la lettera "B".
+          La CPU esegue queste istruzioni ed invia alla memoria il risultato come insieme di pixel.
       8:
         image: notes/csd_concept_memory_cpu_input_output_8.png
-        text: Finally, this pixel information is sent in binary to the screen. The
-          screen is an output device, which converts the binary signals into the tiny
-          lights and colors that make up what you see.
+        text: |-
+          Infine, questi pixel vengono spediti allo schermo in formato binario.
+          Lo schermo è un dispositivo di uscita che converte i segnali binari nei colori dei puntini luminosi che costituiscono l'immagine che vediamo.
       9:
         image: notes/csd_concept_memory_cpu_input_output_9.png
-        text: This all happens so quickly it feels instantaneous, but to display each
-          letter a computer runs thousands of instructions, starting from the moment
-          your finger presses the key point.
+        text: Tutto ciò avviene così velocemente che sembra istantaneo, ma per visualizzare
+          ogni lettera, un computer esegue migliaia di istruzioni, iniziando dall'istante
+          in cui il tuo dito preme il tasto.
       10:
         image: notes/csd_concept_memory_cpu_input_output_10.png
-        text: In that example, the output device was the screen, but there are many
-          different types of output which take a binary signal from the computer and
-          do something in the physical world. For example, a speaker will play sound,
-          and a 3D printer will print an object. Output devices can also control physical
-          motion like a robotic arm, the motor of a car, or the cutting tool of the
-          milling machine that my company makes. New types of inputs and outputs let
-          computers interact with the world in entirely new ways. This has been helped
-          out by improvements to the speed and size of the memory and CPU.
+        text: |-
+          In questo esempio, il dispositivo di uscita era lo schermo, ma ce ne sono molte altre tipologie che ricevono un segnale binario dal computer e fanno qualcosa nel mondo esterno.
+          Per esempio, un altoparlante riproduce dei suoni e una stampante 3D realizza degli oggetti.
+          I dispositivi di uscita possono anche controllare il movimento di un oggetto, come un braccio robotico, il motore di un auto o l'utensile da taglio della fresa prodotta dalla mia azienda.
+          Nuovi tipi di dispositivi di ingresso e di uscita permettono ai computer di interagire con il mondo in modi del tutto nuovi.
+          Questo si è reso possibile grazie all'aumento della velocità e della miniaturizzazione di memoria e CPU.
       11:
         image: notes/csd_concept_memory_cpu_input_output_11.png
-        text: The more complicated a task is and the more information that is input
-          or output, the more processing power and memory a computer needs. Typing
-          letters on a screen may be easy but to do complicated 3d graphics or record
-          a high-definition movie, modern computers often have multiple CPUs to process
-          all that information and many gigabytes of memory to store it.
+        text: |-
+          Più un'attività è complicata e con tanti dati che richiede in ingresso o restituisce in uscita più il computer deve avere potenza di elaborazione e capacità di memoria.
+          Scrivere delle lettere su uno schermo può essere semplice, ma per realizzare una grafica complessa in 3D o produrre un film ad alta definizione, spesso i computer moderni sono dotati di CPU multiple per elaborare tutti i dati e molti gigabytes (GB) di memoria per memorizzarli.
       12:
         image: notes/csd_concept_memory_cpu_input_output_12.png
-        text: 'No matter what it is you want to do with the computer, every single
-          action is about: inputting information from the physical world, storing
-          and processing that information, and getting some output back into the physical
-          world.'
+        text: |-
+          Non importa che cosa vuoi fare con il computer, ogni singola azione riguarda:
+          inserire dati dal mondo esterno,
+          memorizzare ed elaborare questi dati
+          e restituire un risultato al mondo esterno.
     csd_concept_hardware_software:
       1:
         image: notes/csd_concept_hardware_software_1.png
-        text: Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com.
-          One of the best things about working in tech, and at Amazon in particular,
-          is that I get to bring my dog with me to work every day. My job is to help
-          make sure software gets out the door and her job is to nap under my desk
-          and snore very loudly.
+        text: |-
+          Ciao, sono Erica Gomez e sono una responsabile tecnica in Amazon.com.
+          Uno dei vantaggi di lavorare in ambito tecnologico, e in particolare in Amazon, è che posso portare la mia cagnolina con me al lavoro tutti i giorni.
+          Il mio lavoro è di aiutare a fare in modo che il software veda la luce e il suo lavoro è quello di appisolarsi sotto la mia scrivania e russare molto forte.
       2:
         image: notes/csd_concept_hardware_software_2.png
-        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and
-          I have a really fun job: Basically bringing the hardware and the software
-          together to give you all the games that you love on your Xbox.'
+        text: 'Il mio nome è Jerome Holman e sono un responsabile di programma nel
+          Team Xbox e ho un lavoro davvero divertente: fondamentalmente unisco hardware
+          e software per farvi avere tutti i giochi che amate sulla vostra Xbox.'
       3:
         image: notes/csd_concept_hardware_software_3.png
-        text: When you look inside a computing device you see a bunch of circuits,
-          chips, wires, speakers, plugs, and all sorts of other stuff. This is the
-          hardware.
+        text: |-
+          Quando guardate dentro ad un computer vedete un mucchio di circuiti, circuiti integrati, fili, altoparlanti, connettori e molto altro.
+          Questo è l'HARDWARE.
       4:
         image: notes/csd_concept_hardware_software_4.png
-        text: But what you don't see is the software. Software is all of the computer
-          programs, or code, running on this machine. Software can be anything from
-          apps and games to webpages and the data science software that me and my
-          teams use at Amazon to understand how customers behave.
+        text: |-
+          Ma quello che non vedete è il SOFTWARE.
+          Il software è l'insieme di tutti i programmi eseguiti nel computer.
+          Un programma (detto anche CODICE) può essere un'applicazione per giocare, una pagina web, o un'applicazione per analizzare i dati come quella che io e il mio gruppo qui in Amazon usiamo per capire come si comportano i clienti.
       5:
         image: notes/csd_concept_hardware_software_5.png
-        text: But how do the hardware and the software interact with one another?
-          Let's start at looking at a computer's central processing unit, or CPU.
+        text: |-
+          Ma come interagiscono tra loro hardware e software?
+          Iniziamo analizzando l'unità centrale di elaborazione (CPU).
       6:
         image: notes/csd_concept_hardware_software_6.png
-        text: The CPU is the master chip that controls all the other parts of the
-          computer. A CPU needs to do different things so inside it has smaller, simpler
-          parts that handle specific tasks. It has circuits to do simple math and
-          logic. It has other circuits to send and receive information to and from
-          different parts of the computer.
+        text: |-
+          La CPU è il principale circuito integrato che controlla tutte le altre parti del computer.
+          Una CPU deve fare varie cose, per questo all'interno è suddivisa in componenti più piccoli che gestiscono specifiche attività.
+          Ha un componente per eseguire semplici operazioni matematiche e logiche.
+          E ne ha altri per inviare e ricevere dati da e verso altre parti del computer.
       7:
         image: notes/csd_concept_hardware_software_7.png
-        text: The real magic of the CPU is how it knows which circuits to use and
-          when to use them. The CPU receives simple commands that tell it which circuit
-          to use to do a specific job. For example, an "add" command tells the CPU
-          to use its outer circuit to calculate a new number. And then the "store"
-          command tells the CPU to use a different circuit to save that result into
-          memory.
+        text: |-
+          La vera magia della CPU sta nel sapere quali componenti usare e quando.
+          La CPU riceve semplici istruzioni che le dicono quale componente usare per un particolare lavoro.
+          Per esempio, un'istruzione di SOMMA (ADD) dice alla CPU di usare il componente matematico-logico per calcolare un nuovo numero.
+          E l'istruzione MEMORIZZA (STORE) dice alla CPU di usare un componente diverso per archiviare il risultato in memoria.
       8:
         image: notes/csd_concept_hardware_software_8.png
-        text: Just like numbers, all of these simple commands can be represented in
-          binary ones and zeros or on and off electrical signals. The binary commands
-          are stored in memory and the CPU fetches and executes them in sequence one
-          after the other. This sequence of commands is, in fact, a very simple computer
-          program.
+        text: |-
+          Proprio come i numeri, tutte queste semplici istruzioni possono essere rappresentate con gli uni e zeri del sistema binario ovvero segnali elettrici accesi e spenti.
+          Le istruzioni scritte in binario sono archiviate in memoria e la CPU le recupera ed esegue in sequenza una dopo l'altra.
+          Infatti, questa sequenza di istruzioni è un programma molto semplice, detto codice binario.
       9:
         image: notes/csd_concept_hardware_software_9.png
-        text: Binary code is the most basic form of software and it controls all the
-          hardware of a computer. These days, nobody writes software in binary. It
-          would take forever!
+        text: |-
+          Il codice binario è la forma più semplice di software e controlla tutto l'hardware di un computer.
+          Al giorno d'oggi nessuno scrive più codice binario.
+          Ci vorrebbe un'eternità!
       10:
         image: notes/csd_concept_hardware_software_10.png
-        text: Today, the software we write looks more like this (Python), or this
-          (Ruby), or even this (Blockly). Programming languages like these let you
-          type in commands in something that looks a lot like English.
+        text: |-
+          Oggi, il software che scriviamo ha questo aspetto questo (Python),
+          o questo (Ruby)
+          o anche questo (Blockly).
+          I linguaggi di programmazione come questi permettono di scrivere programmi usando un linguaggio più simile a quello umano (in inglese).
       11:
         image: notes/csd_concept_hardware_software_11.png
-        text: To draw a rectangle on the screen, you just need a single command. This
-          high-level command is converted into hundreds, or thousands, of simpler
-          binary commands that the CPU understands. Software tells the CPU what to
-          do, but when you're listening to music, and browsing the web, and chatting
-          with a friend, your computer is running multiple pieces of software all
-          at once.
+        text: |-
+          Per disegnare un rettangolo sullo schermo, serve un'unica istruzione.
+          Quest'istruzione di alto livello è convertita in centinaia o migliaia di semplici istruzioni binarie che la CPU è in grado di capire.
+          Il software dice alla CPU cosa fare, ma quando ascolti musica, navighi sul web e chiacchieri con un amico, il computer utilizza più programmi contemporaneamente.
       12:
         image: notes/csd_concept_hardware_software_12.png
-        text: So, how do all of these programs get on the computer in the first place,
-          and how can the CPU run them all at once? To find out we'll have to take
-          a look at the operating system.
+        text: |-
+          Innanzitutto, come fanno tutti questi programmi ad arrivare sul computer?
+          E come può la CPU eseguirli tutti insieme?
+          Per scoprirlo dobbiamo dare un'occhiata al sistema operativo.
       13:
         image: notes/csd_concept_hardware_software_13.png
-        text: The operating system of the computer is the master program that manages
-          how software gets to use the hardware of the computer. For example, I helped
-          create the Windows operating system that runs on most personal computers.
+        text: |-
+          Il sistema operativo (OS) di un computer è il programma principale che decide come il software deve usare l'hardware del computer.
+          Ad esempio, io ho creato il sistema operativo Windows installato su molti computer.
       14:
         image: notes/csd_concept_hardware_software_14.png
-        text: The operating system is a program with special abilities that let it
-          control the other software on the computer. It lets you install new programs
-          by loading them into your computer's memory. It decides when a program is
-          run by the central processing unit, and whether that program can access
-          the computer's input and output devices. And when you think your computer
-          is running many programs at once, in reality, it's the operating system
-          that's quickly switching between programs sharing that CPU for fractions
-          of a second.
+        text: |-
+          Il sistema operativo è un programma con speciali caratteristiche che gli permettono di controllare gli altri programmi eseguiti dal computer.
+          Ti permette di installare nuovi programmi caricandoli nella memoria del tuo computer.
+          Decide quando un programma deve essere eseguito dalla CPU e se può accedere ai dispositivi di ingresso e uscita del computer.
+          E quando pensi che il tuo computer stia eseguendo molti programmi contemporaneamente, in realtà, è il sistema operativo che velocemente fa eseguire alla CPU un programma dopo l'altro ognuno per qualche frazione di secondo.
       15:
         image: notes/csd_concept_hardware_software_15.png
-        text: Inside every computer is an operating system managing software that
-          controls the computer's hardware.
+        text: All'interno di ogni computer c'è un sistema operativo che gestisce il
+          software che controlla l'hardware del computer.
       16:
         image: notes/csd_concept_hardware_software_16.png
-        text: The software is a series of commands made of simple binary code, and
-          that binary code is just electrical signals flowing through billions of
-          tiny circuits.
+        text: Il software è l'insieme dei programmi, ognuno dei quali è una sequenza
+          di istruzioni scritte col sistema binario e queste istruzioni in binario
+          corrispondono a segnali elettrici che scorrono attraverso miliardi di minuscoli
+          circuiti.
       17:
         image: notes/csd_concept_hardware_software_17.png
-        text: Computers have the potential to do all kinds of amazing things. But
-          the only thing that makes the computer smart, or useful, is you. When you
-          learn to code you get to define the problem you want to solve, and write
-          the software that turns those ideas into reality.
+        text: |-
+          I computer hanno la potenzialità di fare cose fantastiche.
+          Ma l'unica cosa che rende i computer intelligenti o utili, sei tu.
+          Quando impari a programmare, devi definire il problema da risolvere e scrivere il software che trasforma queste idee in realtà.

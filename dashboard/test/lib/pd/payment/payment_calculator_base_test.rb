@@ -32,15 +32,18 @@ module Pd::Payment
       create :pd_workshop_participant, workshop: workshop_no_regional_partner, enrolled: true, attended: true
 
       regional_partner_urban = create :regional_partner, urban: true
-      workshop_regional_partner_urban = create :pd_ended_workshop, regional_partner: regional_partner_urban
+      program_manager_urban = (create :regional_partner_program_manager, regional_partner: regional_partner_urban).program_manager
+      workshop_regional_partner_urban = create :pd_ended_workshop, organizer: program_manager_urban
       create :pd_workshop_participant, workshop: workshop_regional_partner_urban, enrolled: true, attended: true
 
       regional_partner_non_urban = create :regional_partner, urban: false
-      workshop_regional_partner_non_urban = create :pd_ended_workshop, regional_partner: regional_partner_non_urban
+      program_manager_non_urban = (create :regional_partner_program_manager, regional_partner: regional_partner_non_urban).program_manager
+      workshop_regional_partner_non_urban = create :pd_ended_workshop, organizer: program_manager_non_urban
       create :pd_workshop_participant, workshop: workshop_regional_partner_non_urban, enrolled: true, attended: true
 
       regional_partner_nil_urban = create :regional_partner, urban: nil
-      workshop_regional_partner_nil_urban = create :pd_ended_workshop, regional_partner: regional_partner_nil_urban
+      program_manager_nil_urban = (create :regional_partner_program_manager, regional_partner: regional_partner_nil_urban).program_manager
+      workshop_regional_partner_nil_urban = create :pd_ended_workshop, organizer: program_manager_nil_urban
       create :pd_workshop_participant, workshop: workshop_regional_partner_nil_urban, enrolled: true, attended: true
 
       summary_no_regional_partner = PaymentCalculatorBase.instance.calculate workshop_no_regional_partner

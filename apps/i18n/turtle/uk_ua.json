@@ -38,6 +38,7 @@
   "drawUpperWave": "намалювати хвилю догори",
   "drawLowerWave": "намалювати хвилю вниз",
   "drawSticker": "намалювати наклейку",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "висота",
   "hideTurtle": "приховати художника",
   "jump": "стрибок",
@@ -73,6 +74,8 @@
   "penDown": "опустити олівець",
   "penTooltip": "Піднімає або опускає олівець, щоб почати або завершити малювання сліду.",
   "penUp": "підняти олівець",
+  "pointTo": "point to",
+  "pixels": "пікселів",
   "reinfFeedbackMsg": "Ось готовий малюнок! Продовжуй роботу над ним, або перейди до наступної задачі.",
   "setAlpha": "встановити альфа",
   "setCharacter": "set character to {character}",
@@ -91,5 +94,6 @@
   "turnTooltip": "Повертає художника ліворуч або праворуч на вказану кількість градусів.",
   "turtleVisibilityTooltip": "Приховує або показує художника.",
   "widthTooltip": "Змінює ширину олівця.",
+  "withSize": "with size",
   "wrongColour": "Ваша картинка неправильного кольору. Для цього завдання вона має бути %1."
 }

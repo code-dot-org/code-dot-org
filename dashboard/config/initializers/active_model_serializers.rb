@@ -4,7 +4,7 @@ class StringSerializer < ActiveModel::Serializer
     @object.to_s
   end
 end
-class FixnumSerializer < StringSerializer; end
+class IntegerSerializer < StringSerializer; end
 class HashSerializer < ActiveModel::Serializer
   def attributes(obj)
     @object.as_json

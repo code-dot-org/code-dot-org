@@ -83,8 +83,19 @@ end
 Each of these activities can either be used alone or with other computer science lessons on related concepts.
 <br/>
 
-<a href="https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf" target="_new">Course A-F Curriculum Book (v2)</a>  | <a href="https://code.org/curriculum/docs/csf/A-F_supplies_v2.pdf" target="_new">Course A-F Supply List</a> | <a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a>
-<br/>
+
+<a href="https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf" target="_new">2018 Course A-F Curriculum Book</a> 
+
+<a href="https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf" target="_new">2017 Course A-F Curriculum Book (v2)</a>  
+
+<a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a> 
+
+<a href="https://code.org/curriculum/docs/csf/A-F_supplies_v2.pdf" target="_new">Course A-F Supply List</a>
+
+<a href="https://code.org/curriculum/docs/k-5/flashCards.pdf" target="_new">CSF Flashcards</a> 
+
+<!-- | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a> -->
+
 
 <table cellpadding="10">
   <colgroup>

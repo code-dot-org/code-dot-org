@@ -69,7 +69,7 @@ fi:
   try_k8intro: "Kokeile ala-asteen johdantoa tietojenkäsittelytieteeseen (15-25 tuntia)"
   k8intro: "Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)"
   already_started: "Aloititko jo? Jatka tästä >> "
-  demos: 'Ylläpitäjä: Kaikki demot'
+  demos: "Ylläpitäjä: Kaikki demot"
   continue: 'Jatka'
   prize: 'palkinto'
   more_info: 'Lisätietoja'
@@ -85,6 +85,7 @@ fi:
     facebook: 'Facebook'
     windowslive: 'Microsoft-tili'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Unohditko salasanasi?'
     need_confirmation: "Etkö saanut vahvistusviestiä?"
     need_unlock: "Etkö saanut avausohjeita?"
@@ -114,15 +115,25 @@ fi:
     valid_password: "Salasana kelpaa!"
     invalid_password: "Salasanan tulee olla vähintään 6 merkkiä pitkä"
     mismatch_password: "Antamasi salasanat eivät täsmää"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Hyväksyn Code.org <a href='http://code.org/tos'> käyttöehdot</a>. Jos olen alle 13-vuotiaat, vahvistan lähettämällä tämän lomakkeen, että minulla on minun vanhemman tai laillisen huoltajan lupaa käyttää Code.org. <br/> <br/> Sähköpostiosoitteita ei tallenneta millään tavalla, jonka avulla voimme ottaa yhteyttä opiskelijoiden. Opiskelijat eivät tule saamaan ikinä sähköpostia Code.org:ilta paitsi unohtuneen salasanan takaisin saamisessa. Katso meidän <a href='http://code.org/privacy'> yksityisyydensuoja</a> lisätietoja."
     teacher_terms: "Hyväksyn Code.org käyttöehdot sitovat. Saat lisätietoja meidän tietosuojasta <a href='http://code.org/privacy'> yksityisyydensuoja</a>."
     additional_information: "Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista."
+    user_type_button: "Update Account Type"
     user_type_label: "Tilin tyyppi"
     user_type_teacher: "Opettaja"
     user_type_student: "Oppilas"
     field_is_required: "vaaditaan"
     accept_terms: "Sinun on hyväksyttävä luodaksesi tili"
     error: "Virhe."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Kyllä"
+    email_preference_no: "Ei"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Koulun tiedot (valinnainen)'
     school_country: 'Koulun maa'
@@ -171,6 +182,7 @@ fi:
       email: 'Sähköpostiosoite'
       submit: 'Jatka'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Näyttää siltä, että olet rekisteröitynyt virheellisellä sähköpostiosoitteella. Lähetä sähköpostia support@code.org saadaksesi salasanan palautuslinkin.'
     change_form:
       title: 'Salasanan vaihtaminen'
@@ -201,7 +213,7 @@ fi:
     remove: '(poista osio)'
     type:
       picture: 'Kuvallinen Salasana'
-      word: 'Secret Words'
+      word: 'Salasana'
       email: 'Sähköposti'
       google_classroom: 'Google Classroom'
       clever: 'Fiksu'
@@ -220,7 +232,7 @@ fi:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org ilmoitus: oppilasta %{student_name} ei ole enää yhdistetty sinuun.'
+        subject: "Code.org ilmoitus: oppilasta %{student_name} ei ole enää yhdistetty sinuun."
   reports:
     error:
       access_denied: "Sinulla ei ole oikeutta katsella tämän henkilön tietoja"
@@ -348,11 +360,12 @@ fi:
     email_confirm_needed_required: 'Sinun sähköpostiosoitettasi %{email} ei ole vahvistettu:'
     email_confirm_wrong_email: '(Väärä sähköpostiosoite?)'
     email_resend_confirm: 'Lähetä vahvistusohjeet uudestaan'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(jätä tyhjäksi jos et halua vaihtaa)"
     current_password_hint: '(anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)'
     delete: 'Poista tilisi'
     delete_text: "Klikkaamalla alla olevaa painiketta poistat tilisi."
-    delete_text_teacher_note: 'Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi käyttäjätilejä.'
+    delete_text_teacher_note: "Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi käyttäjätilejä."
     delete_confirm: 'Oletko varma, että haluat poistaa käyttäjätilisi?'
     deleted_user: 'poistettu käyttäjä'
     no_password_because_oauth: 'Ei salasanaa koska kirjaudut kolmannelta osapuolelta.'
@@ -363,10 +376,11 @@ fi:
     create_personal_login_under_13_parent_email: 'Huoltajan sähköpostiosoite'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Valmis'
     tried: 'Kokeili'
@@ -448,6 +462,7 @@ fi:
     student_not_found: "Yhtä tai enempää oppilasta ei löytynyt."
     all_students_must_be_in_current_section: "Kaikki opiskelijat pitää olla tällä hetkellä kirjoilla ryhmässäsi."
     already_enrolled_in_new_section: "Et voit liikuttaa näitä oppilaita koska tämä opettaja on liikuttanu heidät jo eri ryhmään."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Opiskele Code Studio:ssa"
     description: "Kuka tahansa voi oppia tietojenkäsittelyä. Rakenna koodaamalla pelejä, sovelluksia ja taidetta."
@@ -455,6 +470,8 @@ fi:
   gender:
     male: 'Mies'
     female: 'Nainen'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'En halua vastata'
   user_type:
     student: 'Oppilas'
@@ -702,12 +719,12 @@ fi:
     sign_out: 'Jos et halua kertoa ikääsi voit <a href="%{url}">kirjautua ulos</a>.'
   terms_interstitial:
     title: "Päivitetyt käyttöehdot ja Tietosuojakäytäntö"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Ehdot"
     privacy: "Yksityisyyskäytäntö"
     privacy_notice: "Tietosuoja"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Hyväksy"
     print: "Tulosta"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -718,25 +735,25 @@ fi:
     message_with_suggestion: "Tarkista seuraavat tiedot tai päivitä tarvittaessa."
     save: "Tallenna"
   race_interstitial:
-    title: 'Valinnainen: Auta meitä seuraamaan edistymistämme kohti monimuotoista tietojenkäsittelyä'
+    title: "Valinnainen: Auta meitä seuraamaan edistymistämme kohti monimuotoista tietojenkäsittelyä"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: Valkoinen
+        white: "Valkoinen"
       - 
-        black: Musta tai afroamerikkalainen
+        black: "Musta tai afroamerikkalainen"
       - 
-        hispanic: Hispaano tai Latino
+        hispanic: "Hispaano tai Latino"
       - 
-        asian: Aasialainen
+        asian: "Aasialainen"
       - 
-        hawaiian: Havaijilainen tai muilta Tyynenmeren saarilta
+        hawaiian: "Havaijilainen tai muilta Tyynenmeren saarilta"
       - 
-        american_indian: Amerikan intiaani/Alaskalainen
+        american_indian: "Amerikan intiaani/Alaskalainen"
       - 
-        other: Muut
+        other: "Muut"
       - 
-        opt_out: En halua vastata
+        opt_out: "En halua vastata"
     submit: "Jatka"
     decline: "Sulje"
   zendesk_too_young_message: 'Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a> -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin puolestasi.'
@@ -762,7 +779,7 @@ fi:
     delete: "Poista"
     import: "Tuo"
     share_link_import_bad_link_header: "Jakolinkkiä ei tunnistettu"
-    share_link_import_bad_link_body: 'Emme voineet tuoda tuota jakolinkkiä. Varmista, että käytät Minecraft: Agent -tehtävän linkkiä ja että olet kopioinut koko linkin.'
+    share_link_import_bad_link_body: "Emme voineet tuoda tuota jakolinkkiä. Varmista, että käytät Minecraft: Agent -tehtävän linkkiä ja että olet kopioinut koko linkin."
     share_link_import_error_header: "Jokin meni pieleen."
     share_link_import_error_body: "Jakolinkin tuomisessa tapahtui virhe. Yritä uudelleen."
     exit: "Takaisin kurssiin"
@@ -867,6 +884,7 @@ fi:
     csd5_2: 'Luku 2: Tieto-ongelmien ratkaisu'
     csd6_1: 'Luku 1: Laitteiston palaute'
     csd6_2: 'Luku 2: Laitteiston syöte'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ fi:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Vastuuvapauslauseke
@@ -984,3 +1007,14 @@ fi:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Hyväksyn'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Kyllä'

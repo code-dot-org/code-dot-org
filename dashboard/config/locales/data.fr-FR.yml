@@ -1,4 +1,5 @@
-"fr":
+---
+fr:
   data:
     game:
       name:
@@ -262,10 +263,10 @@
         turtle_3_5: 'Maintenant, crée une nouvelle fonction «Dessiner une maison»
           et utilise-la pour y mettre deux chats. Indice : crée une fonction à l''aide
           du bloc «Faire quelque chose» et écris ton propre texte pour nommer le bloc.'
-        turtle_3_6: "À l'aide de «Dessiner un carré» comme exemple, ajoute une entrée
+        turtle_3_6: 'À l''aide de «Dessiner un carré» comme exemple, ajoute une entrée
           appelée «Longueur» à «Dessiner un triangle». Puis, dessine des triangles
-          de différentes tailles. (Indice : clique sur l'étoile pour ajouter une entrée
-          à une fonction)"
+          de différentes tailles. (Indice : clique sur l''étoile pour ajouter une
+          entrée à une fonction)'
         turtle_3_7: Ajoute une entrée nommée « Longueur » à la fonction « Dessiner
           une maison » et construis une grande maison pour l'éléphant (avec des côtés
           de 150 pixels de long).
@@ -286,8 +287,8 @@
           et nivelé.
         maze_karel_debug_while: Comment devrais-tu modifier ce programme pour m'aider
           à combler le trou?
-        maze_karel_debug_if: "À l’aide ! Répare ce programme afin que mon champ soit
-          complètement plat."
+        maze_karel_debug_if: À l’aide ! Répare ce programme afin que mon champ soit
+          complètement plat.
         maze_karel_debug_if_else: Débogue ce programme pour que je puisse remplir
           les trous et supprimer tous les tas.
         maze_karel_debug_function_1: Que dois-tu changer dans ce programme pour m'aider
@@ -321,146 +322,14 @@
           différent à la place.)
         maze_3_1: J’ai besoin de parvenir à ce cochon ! Écris quelques lignes pour
           que je puisse bouger et récupérer mes œufs.
-        maze_3_2: "Écris-moi un programme pour que je puisse aller jusqu'à ce cochon."
+        maze_3_2: Écris-moi un programme pour que je puisse aller jusqu'à ce cochon.
         maze_3_3: Comment dois-je arriver au cochon ? Attention à ce que je ne rentre
           pas dans la boite de TNT !
         maze_3_4: Argh ! Écris-moi un programme qui me permet d'éviter le TNT et d’arriver
           au cochon.
-        bounce_1_basketball: Attache un bloc au bloc « Quand flèche vers la gauche »
-          et appuie sur « Exécuter ». Déplace la main à l'aide de la flèche de gauche
-          pour atteindre la cible visée.
-        bounce_2_basketball: Attache un bloc aux blocx « Quand flèche vers la droite »
-          et « Quand flèche vers la gauche » et appuie sur « Exécuter ». Déplace la
-          main pour atteindre les deux cibles visées.
-        bounce_5_basketball: Nous allons faire voler une balle vers le bas, jusqu’à
-          la main. Attache un bloc au bloc « Quand la balle touche la raquette » pour
-          veiller à ce que la balle atteigne le drapeau.
-        bounce_6_basketball: Maintenant le drapeau est en haut. Tu dois attacher des
-          blocs aux deux blocs « Quand le balle touche… » pour résoudre ce puzzle.
-        bounce_7_basketball: Attache des blocs à tous les blocs « Quand ». Fais rebondir
-          la balle jusqu'à ce qu'elle touche le drapeau.
-        bounce_10_basketball: Il y a maintenant un but en haut. Attache les blocs
-          « Marquer un point » et « Marquer un point pour l’adversaire » aux blocs
-          « Quand la balle dans le but » et « Quand la balle manque la main » pour
-          créer un jeu. Vois combien de points tu peux marquer avant que ton adversaire
-          marque deux fois.
-        bounce_11_basketball: Tu peux maintenant attacher des blocs au bloc « Lors
-          du lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle »
-          à plusieurs endroits. Essaie également de changer la scène ou la vitesse
-          de la main et de la balle pour voir combien de points tu peux marquer avant
-          que ton adversaire marque deux fois!
-        bounce_12_basketball: Crée ton propre jeu de basketball. Tu peux changer toutes
-          les règles. Quand tu as fini, clique «Terminer» pour que tes amis puissent
-          essayer ton jeu sur leur téléphone.
-        bounce_1_sports: Rendez-vous au drapeau! Attachez un bloc au bloc "Quand la
-          flèche gauche" et appuyez sur "Exécuter" pour déplacer le joueur au drapeau.
-        bounce_2_sports: Il y a deux drapeaux maintenant! Attachez un bloc aux blocs
-          "Quand flèche à gauche" et "Quand flèche à droite" pour faire bouger votre
-          joueur dans deux directions.
-        bounce_5_sports: La rondelle de hockey va voler vers le bas vers le joueur!
-          Attachez un bloc au bloc "quand le ballon touche le joueur" pour frapper
-          le drapeau.
-        bounce_6_sports: Maintenant le drapeau est en haut. Tu dois attacher des blocs
-          aux deux blocs « Quand le balle touche… » pour résoudre ce puzzle.
-        bounce_7_sports: Attache des blocs à tous les blocs « Quand ». Fais rebondir
-          la balle jusqu'à ce qu'elle touche le drapeau.
-        bounce_10_sports: Maintenant, il ya un but au sommet! Attachez les blocs «points
-          de points» et «points adverses» aux blocs «Quand la balle dans le but» et
-          «Quand la balle rate la main» pour faire une partie. Voyez combien de points
-          vous pouvez marquer avant que votre adversaire marque deux fois!
-        bounce_11_sports: Tu peux maintenant attacher des blocs au bloc « Lors du
-          lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle »
-          à plusieurs endroits. Essaie également de changer la scène ou la vitesse
-          de la main et de la balle pour voir combien de points tu peux marquer avant
-          que ton adversaire marque deux fois!
-        bounce_12_sports: 'Créez votre propre jeu! Vous êtes responsable ici: vous
-          pouvez changer toutes les règles, mélanger et faire correspondre les sports,
-          soyez créatifs! Lorsque vous avez terminé, cliquez sur Terminer pour laisser
-          les amis essayer votre jeu sur leurs téléphones.'
-        bounce_1: Attache un bloc au bloc « Quand flèche vers la gauche »  et appuie
-          sur « Exécuter ». Déplace la raquette à l'aide de la flèche de gauche pour
-          atteindre la cible visée.
-        bounce_2: Attache un bloc aux blocs « Quand flèche vers la droite »  et «
-          Quand flèche vers la gauche ». Déplace la raquette pour atteindre les deux
-          cibles visées.
-        bounce_3: Maintenant, essaie quelque chose de semblable avec le bloc « Quand
-          flèche vers le haut ». Déplace la raquette jusqu’à la cible visée en haut.
-        bounce_4: Cette fois, tu dois ajouter quatre blocs. Déplace la raquette vers
-          chacune des quatre cibles visées pour terminer ce puzzle.
-        bounce_5: Nous allons faire voler une balle vers le bas, jusqu’à la raquette.
-          Attache un bloc au bloc «Quand la balle touche la raquette» pour veiller
-          à ce que la balle atteigne la cible visée.
-        bounce_6: Maintenant la cible visée est en haut. Il faudra attacher des blocs
-          aux deux blocs « Quand la balle touche » pour résoudre ce puzzle.
-        bounce_7: Attache des blocs à chacun des blocs « Quand ». Fais rebondir la
-          balle jusqu'à ce qu'elle frappe la cible visée.
-        bounce_10: Il y a maintenant un but en haut. Attache les blocs « Marquer un
-          point » et « Marquer un point pour l’adversaire » aux blocs « Quand la balle
-          dans le but » et « Quand la balle manque la raquette » pour créer un jeu.
-          Vois combien de points tu peux marquer avant que ton adversaire marque deux
-          fois.
-        bounce_11: Tu peux maintenant attacher des blocs au bloc « Lors du lancement ».
-          Tu dois attacher le nouveau bloc « Lancer une nouvelle balle » à plusieurs
-          endroits. Essaie également de changer la scène ou la vitesse de la raquette
-          et de la balle pour voir combien de points tu peux marquer avant que ton
-          adversaire marque deux fois.
-        bounce_12: Crée ton propre jeu de Casse-briques à rebond Tu peux modifier
-          tous les visuels et les règles. Lorsque tu as fini, clique sur «Terminer»
-          pour laisser tes amis essayer ton jeu sur leur téléphone.
         Custom_builder: Fais glisser les blocs depuis la boîte à outils jusqu'à l'espace
           de travail pour dessiner le niveau que tu souhaites créer. Clique sur « Exécuter »
           quand tu es prêt.
-        flappy_1: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter
-          ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
-        flappy_2: Maintenant, nous avons rajouté un sol.  Attache un bloc au bloc
-          «Quand touche le sol».  Ton code doit présenter «FIN DU JEU» lorsque Flappy
-          s’écrase.
-        flappy_3: Le bloc « Lors du lancement » te permet d'exécuter le code au démarrage
-          de ton jeu.  Essaie de régler la vitesse et de battre des ailes jusqu’à
-          la cible.
-        flappy_4: Flappy volera parmi les obstacles, sauf si tu écris du code pour
-          qu’il en heurte quelques uns. Attache un bloc au bloc «Quand heurte un obstacle»
-          Ton code doit présenter «FIN DU JEU» lorsque Flappy s’écrase dans la première
-          série de tuyaux.
-        flappy_5: Nous allons ajouter un tableau de bord et compter les points lorsque
-          Flappy dépasse les obstacles. Ajoute au bloc « Quand passe un obstacle »
-          et ensuite marque un point en faisant voler Flappy au travers la première
-          série de tuyaux.
-        flappy_6: Regarde si tu peux encore marquer un point en changeant l’intensité
-          de la force que Flappy met dans ses battements d'ailes.
-        flappy_7: Ensuite, essaie de changer la scène en attachant un autre bloc au
-          bloc « Lors du lancement ».
-        flappy_8: Tu peux changer l'apparence à tout moment, pas seulement au démarrage
-          du jeu. Essaie de choisir un arrière-plan ALÉATOIRE lorsque d'autres événements
-          se produisent, par exemple, lors du dépassement d'un obstacle.
-        flappy_9: Pour tout mélanger, lorsque tu heurte un obstacle, plutôt que d’arrêter
-          le jeu, essaie de remettre le score à 0.
-        flappy_11: Crée ton propre jeu Flappy. Tu peux modifier tous les visuels et
-          toutes les règles, même la gravité. Lorsque tu as fini, clique sur «Terminer»
-          pour laisser tes amis essayer ton jeu sur leur téléphone.
-        flappy_k1_1: Jouer à Flappy l’oiseau
-        flappy_k1_2: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter
-          ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
-        flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
-          « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase."
-        flappy_k1_4: Le bloc « lors du lancement » vous permet d'exécuter du code
-          au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le
-          battement d'ailes.
-        flappy_k1_5: Flappy volera à travers les obstacles à moins que vous mettiez
-          en place le code pour qu'il s'écrase. Attachez un bloc au bloc « lors de
-          la rencontre avec un obstacle ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase sur un tuyau pour la première fois.
-        flappy_k1_6: Ajoutons un tableau de scores, et comptons les points quand Flappy
-          passe les obstacles. Ajoutez les bonnes instructions au bloc « lors du dépassement
-          d'un obstacle », puis marquez des points en faisant voler Flappy à travers
-          les tuyaux.
-        flappy_k1_7: Regarde si tu peux marquer plusieurs points en dépassant des
-          obstacles.
-        flappy_k1_8: Ensuite, essayez de changer l'arrière-plan en attachant un autre
-          bloc à bloc « lors du lancement ».
-        flappy_k1_9: Essaie de modifier le joueur en attachant un bloc « Définir le
-          personnage » au bloc « Lors du lancement ».
         jigsaw_1: Clique sur le bloc
         jigsaw_2: Glisse le bloc vers la cible
         jigsaw_3: Organise les blocs pour former l'image
@@ -698,7 +567,7 @@
         Unplug4: Algorithmes
         Unplug5: Fonctions
         Unplug6: Instructions conditionnelles
-        Unplug7: "Écriture de chansons"
+        Unplug7: Écriture de chansons
         Unplug8: Abstraction
         Unplug9: Programmation de relais
         Unplug10: Internet
@@ -785,33 +654,38 @@
         CSF_maze_intro_k1_blocks: Intro à Code Studio
         CSF_maze_intro_text_blocks: Intro à Code Studio
         CSF_my_robotic_friends: Mes amis les robots
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_Power_of_Words: Le pouvoir des mots
+        CSF_Super_Digital_Citizen: Le super citoyen numérique
         CSF_stevie_big_project: Stevie et le grand projet
         CSF_unspotted_bugs: Bugs passés inaperçus
-        CSF_zuck_loops_short: Bouclers de répétition
+        CSF_zuck_loops_short: Boucles de répétition
         frozen_intro: Introduction à l'Heure de Code
         frozen_loops: Introduction aux Boucles
         frozen_functions: Introduction aux Fonctions
         playlab_intro: Introduction au Labo de jeux
-        playlab_events: "Évènements du Labo de jeux"
+        playlab_events: Évènements du Labo de jeux
         playlab_repeat_forever: Répétition à l’infinie du Labo de jeux
         tutorial_puzzle_challenge: Tutoriel Défi du puzzle
         infinity_playlab_intro: Labo de jeux - Introduction
-        infinity_playlab_events: 'Labo de jeux - Événements '
+        infinity_playlab_events: Labo de jeux - Événements
         infinity_playlab_repeat_forever: Labo de jeux  - Répétition à l’infinie
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
+        csd_concept_how_computers_work: Introduction sur le fonctionnement des ordinateurs
+        csd_concept_computer: 'Comment fonctionnent les ordinateurs : De quoi est
+          fait un ordinateur?'
+        csd_concept_binary_data: 'Comment fonctionnent les ordinateurs : Binaire &
+          données'
+        csd_concept_circuits_logic: 'Comment fonctionnent les ordinateurs : Circuits
+          & logique'
+        csd_concept_memory_cpu_input_output: 'Comment fonctionnent les ordinateurs :
+          Mémoire, CPU, entrées et sorties'
+        csd_concept_hardware_software: 'Comment fonctionnent les ordinateurs : Matériel
+          et logiciel'
+        csd_concept_search: Comment fonctionne la recherche
+        csd_external_amazon_data: Comment le Big Data est utilisé dans le système
+          de recommandations d'Amazon pour changer nos vies
+        csd_external_netflix_data: Comment Netflix crée des suggestions de films et
+          d'émissions de télévision?
+        csd_external_waze_data: Pourquoi tant d'utilisateurs sont passionnés par Waze?
         csd_gamelab_animation_tab: L’onglet Animation
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
@@ -887,9 +761,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars : Construire une galaxie avec du code - Introduction'
         starwars_typing: 'Star Wars : Construire une galaxie avec du code - JavaScript'
         starwars_events: 'Star Wars : Construire une galaxie avec du code - Événements'
@@ -916,38 +787,54 @@
         mc_2016_events: Minecraft Hour of Code - Événements
         mc_2016_spawn: Minecraft Heure du Code - Spawn
         mc_2016_congrats: Minecraft Hour of Code - Félicitations
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        applab_hoc_welcome: Heure de Code dans App Lab - Bienvenue
+        applab_hoc_setproperty: Heure de Code dans App Lab - setProperty
+        applab_hoc_onevent: Heure de Code dans App Lab - onEvent
+        applab_hoc_designmode: Heure de Code dans App Lab - Mode Création
+        applab_hoc_share: Heure de Code dans App Lab - Partager
+        mc_2017_agent_intro: Minecraft Hour of Code - L'Agent
+        mc_2017_repeat: Minecraft Heure du code - Les boucles
+        mc_2017_functions: Minecraft Hour of Code - Les fonctions
         mc_2017_congratulations: Minecraft Hour of Code - Félicitations
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        mc_2017_puzzle_1: Minecraft Hour of Code - L'Agent
+        mc_2017_puzzle_3: Minecraft Heure du code - Les boucles
+        mc_2017_puzzle_8: Minecraft Hour of Code - Les fonctions
+        mc_2017_puzzle_12: Minecraft Hour of Code - Bac à sable
+        hint_videos_d_11_3_first: 'Astuces en vidéo: D.11.3 en premier'
+        hint_videos_d_11_3_last: 'Astuces en vidéo: D.11.3 en dernier'
+        hint_videos_d_11_4_first: 'Astuces en vidéo: D.11.4 en premier'
+        hint_videos_d_11_4_last: 'Astuces en vidéo: D.11.4 en dernier'
+        hint_videos_d_11_5_first: 'Astuces en vidéo: D.11.5 en premier'
+        hint_videos_d_11_5_last: 'Astuces en vidéo: D.11.5 en dernier'
+        hint_videos_d_11_6_first: 'Astuces en vidéo: D.11.6 en premier'
+        hint_videos_d_11_6_last: 'Astuces en vidéo: D.11.6 en dernier'
+        hint_videos_d_11_7_first: 'Astuces en vidéo: D.11.7 en premier'
+        hint_videos_d_11_7_last: 'Astuces en vidéo: D.11.7 en dernier'
+        hint_videos_d_11_9_first: 'Astuces en vidéo: D.11.9 en premier'
+        hint_videos_d_11_9_last: 'Astuces en vidéo: D.11.9 en dernier'
+        hint_videos_d_11_11_first: 'Astuces en vidéo: D.11.11 en premier'
+        hint_videos_d_11_11_last: 'Astuces en vidéo: D.11.11 en dernier'
+        applab_intro_welcome: App Lab - Démarrage
+        applab_intro_events: App Lab - Rendez-le interactif
+        applab_intro_sounds: App Lab - Images et sons
+        applab_intro_designmode: App Lab - Mode création
+        applab_intro_share: App Lab - Partagez votre application
+        csd_applab_arrays: Introduction sur les Arrays
+        CSF_skinOverview_Harvester: La moissonneuse
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: La moissonneuse
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: Le bloc conditionnel if
+        CSF_ifelse_allskins: Utiliser les blocs If/Else
+        CSF_ifelseifelse_allskins: Utiliser les blocs If/ElseIf/Else
+        CSF_loops_AB: Boucles
+        csd_gamelab_booleans: Expressions booléennes
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
@@ -963,8 +850,8 @@
           organisés en catégories.
         set_sprite_image: Attache un bloc « Définir l'image du personnage » au bloc
           « Lorsque l'histoire commence » pour activer un personnage pour cette histoire.
-        studio_say_text: "Écris ce que tu souhaites que ton personnage dise entre
-          ces guillemets"
+        studio_say_text: Écris ce que tu souhaites que ton personnage dise entre ces
+          guillemets
         jigsaw_click: Clique sur ce bloc!
         move_elsa_forward: Fais glisser un bloc «Avancer» et emboite-le sous le bloc
           « Lors du lancement » pour faire avancer Elsa.
@@ -1038,8 +925,8 @@
           pour dessiner un triangle
         edit_add_parameter: Clique sur » Modifier » pour ajouter un paramètre à ta
           fonction
-        add_and_drag_parameter: "Écris le nom de ton paramètre ici, clique sur «Ajouter»,
-          et glisse-le ensuite dans la définition de ta fonction."
+        add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur «Ajouter»,
+          et glisse-le ensuite dans la définition de ta fonction.
         fill_in_actor: Remplace les ??? par les nombres qui correspondent à chacun
           des acteurs (1, 2, et 3)
         repeat: Place des blocs à l'intérieur de la boucle pour répéter les commandes
@@ -1054,7 +941,7 @@
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
         right_arrow_fireball: Utilise la flèche « vers la droite » pour tirer des
           boules de feu
-        name_function: "Écris le nom de ta fonction ici"
+        name_function: Écris le nom de ta fonction ici
         Infinity_move_right_runbutton: Ajouter le bloc « Déplacer » ici
         Infinity_move_directions_callout: Quel bloc soulèvera Baymax lorsque tu appuies
           sur la flèche «vers le haut» ?

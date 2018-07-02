@@ -114,33 +114,53 @@ module Pd::Form
   end
 
   def form_data_hash=(hash)
-    write_attribute :form_data, hash.to_json
+    self.form_data = hash.to_json
   end
 
   def form_data_hash
-    form_data ? JSON.parse(form_data) : {}
+    @form_data_hash ||=
+      form_data ? JSON.parse(form_data) : {}
   end
 
   def sanitize_form_data_hash
-    form_data_hash.transform_keys {|key| key.underscore.to_sym}
+    @sanitized_form_data_hash ||=
+      form_data_hash.transform_keys {|key| key.underscore.to_sym}
   end
 
   def sanitize_and_trim_form_data_hash
-    hash = sanitize_form_data_hash
-
     # empty fields may come about when the user selects then unselects an
     # option. They should be treated as if they do not exist
-    hash.delete_if do |_, value|
-      value.blank?
-    end
+    @sanitized_and_trimmed_form_data_hash ||=
+      sanitize_form_data_hash.reject do |_, value|
+        value.blank?
+      end
   end
 
   def public_sanitized_form_data_hash
-    sanitize_form_data_hash.select {|key| self.class.public_fields.include? key}
+    @public_sanitized_form_data_hash ||=
+      sanitize_form_data_hash.select {|key| self.class.public_fields.include? key}
+  end
+
+  def form_data=(json)
+    write_attribute :form_data, json
+    clear_memoized_values
   end
 
   def clear_form_data
-    write_attribute :form_data, {}.to_json
+    self.form_data = {}.to_json
+  end
+
+  def reload
+    super.tap do
+      clear_memoized_values
+    end
+  end
+
+  def clear_memoized_values
+    @form_data_hash = nil
+    @sanitized_form_data_hash = nil
+    @sanitized_and_trimmed_form_data_hash = nil
+    @public_sanitized_form_data_hash = nil
   end
 
   # Returns whether the owner of the form (through an associated user_id or pd_enrollment_id) has

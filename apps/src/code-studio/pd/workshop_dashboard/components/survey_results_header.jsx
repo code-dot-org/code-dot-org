@@ -10,6 +10,7 @@ import {
 import moment from 'moment';
 import {DATE_FORMAT} from '../workshopConstants';
 import { workshopShape } from '../types.js';
+import FreeResponseSection from './survey_results/free_response_section';
 
 const organizerViewApiRoot = '/api/v1/pd/workshop_organizer_survey_report_for_course/';
 const facilitatorViewApiRoot = '/api/v1/pd/workshops/';
@@ -299,27 +300,11 @@ export default class SurveyResultsHeader extends React.Component {
     if (this.state.workshopSurveyData && this.state.selectedWorkshopId) {
       const thisWorkshop = this.state.workshopSurveyData['this_workshop'];
 
-      const freeResponseAnswers = freeResponseQuestions.map((question, i) => {
-        return (
-          <div key={i} className="well">
-            <b>{question['text']}</b>
-            {
-              thisWorkshop[question['key']].map((answer, j) => {
-                return !!(_.trim(answer)) && (
-                  <li key={j}>
-                    {answer}
-                  </li>
-                );
-              })
-            }
-          </div>
-        );
-      });
-
       return (
-        <div>
-          {freeResponseAnswers}
-        </div>
+        <FreeResponseSection
+          questions={freeResponseQuestions}
+          responseData={thisWorkshop}
+        />
       );
     }
   }

@@ -68,7 +68,7 @@ I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma meno d
 
 Con l'Ora del Codice, l'informatica è stata sulle homepage di Google, MSN, Yahoo! e Disney. Più di 100 partner si sono uniti per supportare questo movimento. Ogni Apple Store nel mondo ha ospitato un'Ora del Codice e leader come il Presidente Obama ed il primo ministro canadese Justin Trudeau hanno scritto le prime righe di codice come parte della campagna.
 
-Quest'anno facciamo in modo che cresca ancora di più. Partecipa all'Ora del Codice 2017. Sarebbe ottimo se ti facessi coinvolgere in un evento dell'Ora del Codice durante la Settimana di Educazione all'Informatica, <%= campaign_date('full') %>.
+Quest'anno facciamo in modo che cresca ancora di più. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Sarebbe ottimo se ti facessi coinvolgere in un evento dell'Ora del Codice durante la Settimana di Educazione all'Informatica, <%= campaign_date('full') %>.
 
 Spargi la voce. Organizza un evento. Chiedi ad una scuola di iscriversi. Prova tu stesso l'Ora del Codice — Chiunque può trarre beneficio dell'apprendimento dei concetti fondamentali dell'informatica.
 
@@ -80,7 +80,7 @@ Per iniziare vai su http://hourofcode.com/<%= @country %>
 
 **Oggetto:** Possiamo aiutarvi ad ospitare un Ora del Codice?
 
-Tra il 4 e il 10 dicembre, il dieci per cento degli studenti di tutto il mondo celebrerà la Settimana di Educazione all'Informatica partecipando ad un evento dell'Ora del Codice nella propria scuola. Per ogni bambino è un'opportunità per imparare come funziona la tecnologia intorno a noi.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Alla nostra organizzazione / Mio nome] piacerebbe aiutare la scuola [nome della scuola] a svolgere un evento dell'Ora del Codice. Possiamo aiutare gli insegnanti ad ospitare un'Ora del Codice nelle loro classi (non abbiamo nemmeno bisogno computer!) o, se preferite organizzare un'assemblea di tutta la scuola, possiamo partecipare come testimonial per spiegare come funziona la tecnologia e cosa significa essere un ingegnere informatico.
 

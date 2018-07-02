@@ -38,6 +38,6 @@ nav: how_to_nav
     
     - **Emiteti un comunicat de presa** [Utilizati acest document](<%= resolve_url('/promote/official-press-release') %>) ca model.
     
-    - **Conectati-va local** Viziteaza [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) pentru a afla mai multe despre tehnologia computerelor in zona ta. Semneaza petita si vei primi actualizari din partea Code.org privind eforturile lor de avocatură locale, statale si federale.</ol> 
+    - **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Semneaza petita si vei primi actualizari din partea Code.org privind eforturile lor de avocatură locale, statale si federale.</ol> 
     
     <%= view :signup_button %>

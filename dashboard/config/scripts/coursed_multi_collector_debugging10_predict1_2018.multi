@@ -1,0 +1,6 @@
+name 'courseD_multi_collector_debugging10_predict1_2018'
+question 'Look closely at the code below.  Why won\'t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
+wrong 'Laurel will turn the wrong way when making a square.', feedback: 'Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.'
+wrong 'The loop does not run long enough for Laurel to get to all of the treasure. ', feedback: 'Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.'
+right 'Laurel turns the wrong way *and* the loop doesn\'t run long enough for Laurel to get all of the treasure.', feedback: 'Correct!'
+wrong 'I don\'t know.', feedback: 'Laurel turns the wrong way *and* the loop doesn\'t run long enough for Laurel to get all of the treasure.'

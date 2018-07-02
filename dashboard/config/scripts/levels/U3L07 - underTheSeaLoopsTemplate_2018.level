@@ -1,0 +1,142 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:38:12.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_min_max": null,
+      "functionParams_none": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "functionParams_n": {
+        "paramButtons": {
+          "minArgs": 1
+        }
+      },
+      "callMyFunction": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        }
+      },
+      "callMyFunction_n": {
+        "paramButtons": {
+          "minArgs": 1
+        }
+      },
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "hide_view_data_button": "true",
+    "start_blocks": "// Prepare Turtle to Draw\r\nhide();\r\npenUp();\r\n\r\n// These six functions draw everything. Order matters\r\n// for how different parts of the picture are layered.\r\ndrawBackground();\r\ndrawAllSeagrass();\r\ndrawAllSeaStars();\r\ndrawAllFish();\r\ndrawAllBubbles();\r\ndrawAllSunbeams();\r\n\r\n// To do: Repeatedly draw sea grass\r\nfunction drawAllSeagrass(){\r\n  moveTo(randomNumber(0,320),450);\r\n  turnTo(0);\r\n  drawSeagrass(randomNumber(5,20));\r\n}\r\n\r\n// To do: Repeatedly draw sea stars \r\nfunction drawAllSeaStars(){\r\n  moveTo(randomNumber(0,320), randomNumber(360,450));\r\n  drawSeaStar(randomNumber(10,30));  \r\n}\r\n\r\n// To do: Repeatedly draw fish\r\nfunction drawAllFish(){\r\n  moveTo(randomNumber(0,320),randomNumber(0,300));\r\n\tdrawFish(randomNumber(5,20),randomNumber(200,255),randomNumber(100,150),120);\r\n}\r\n\r\n// To do: Repeatedly draw bubbles\r\nfunction drawAllBubbles(){\r\n  moveTo(randomNumber(0,320),randomNumber(0,450));\r\n  drawBubble(randomNumber(1,5));\r\n}\r\n\r\n// To do: Repeatedly draw sunbeams\r\nfunction drawAllSunbeams(){\r\n  moveTo(randomNumber(-50,320),0);\r\n  turnTo(randomNumber(165,175));\r\n  drawSunbeam(randomNumber(100,400));  \r\n}\r\n\r\n// Make the background by drawing a large blue dot\r\nfunction drawBackground(){\r\n  penColor(\"DarkBlue\");\r\n  dot(1000);\r\n}\r\n\r\n// Draw a five-pointed star with a wide pen of the given size\r\nfunction drawSeaStar(size){\r\n  penRGB(255,0,255);\r\n  penWidth(10);\r\n  penDown();\r\n  turnTo(0);\r\n  \r\n  moveForward(size);\r\n  turnRight(144);\r\n  moveForward(size);\r\n  turnRight(144);  \r\n  moveForward(size);\r\n  turnRight(144);\r\n  moveForward(size);\r\n  turnRight(144);\r\n  moveForward(size);\r\n  turnRight(144);\r\n  \r\n  penUp();\r\n}\r\n\r\n// Switches between left and right arcs to make seaGrass with the given radius\r\nfunction drawSeagrass(radius){\r\n  penRGB(0,randomNumber(100,200),0);\r\n  penWidth(3);\r\n  penDown();\r\n  arcLeft(30,radius);\r\n  \r\n  // Repeatedly switch between left and right\r\n  for(var i = 0; i < 3; i++){\r\n    arcRight(60,radius);\r\n    arcLeft(60,radius);\r\n  }\r\n  penUp();\r\n}\r\n\r\n// Draws a fish at the current turtle location with the given size and color\r\nfunction drawFish(size, red, green, blue){\r\n  penRGB(red,green,blue);\r\n  penWidth(size);\r\n  penDown();\r\n  \r\n  // Fish body\r\n  dot(size);\r\n  turnTo(90);\r\n  moveForward(size);\r\n  \r\n  // Fish tail\r\n  turnLeft(30);\r\n  moveForward(size);\r\n  turnRight(120);\r\n  moveForward(size);\r\n  turnRight(120);\r\n  moveForward(size);\r\n  turnRight(120);\r\n  \r\n  penUp();\r\n}\r\n\r\n// Bubbles are semi-transparent dots\r\nfunction drawBubble(size){\r\n  penRGB(100,100,255,0.2);\r\n  dot(size);\r\n}\r\n\r\n// Sunbeams are semi-transparent lines\r\nfunction drawSunbeam(size){\r\n  penDown();\r\n  penWidth(randomNumber(1,15));\r\n  penRGB(255,255,255,0.1);\r\n  moveForward(size);\r\n  penUp();\r\n}",
+    "submittable": "false",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "You need to call moveTo in a for loop."
+      }
+    ],
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 3216,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-30 19:43:30 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

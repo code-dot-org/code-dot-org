@@ -130,7 +130,7 @@ function createStore(reducer, initialState) {
   // of production bundles, and because it causes a lot of console noise and
   // makes our unit tests fail. To enable, append ?enableExperiments=reduxLogging
   // to your url
-  var enableReduxDebugging = experiments.isEnabled('reduxLogging');
+  var enableReduxDebugging = experiments.isEnabled(experiments.REDUX_LOGGING);
   if (process.env.NODE_ENV !== "production" && enableReduxDebugging) {
     var reduxLogger = createLogger({
       collapsed: true,

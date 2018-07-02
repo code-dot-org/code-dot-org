@@ -1,13 +1,14 @@
-"lt":
+---
+lt:
   data:
     unplugged:
       Unplug1:
         title: Informatikos įvadas
-        desc: "Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama,
+        desc: Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama,
           ką dirba IT specialistas. Mokiniams bus suteikta galimybė pasijusti IT specialisto
           kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką
           jis ar ji išmoko. Jūs galite būti linkę praleisti  įvairių sąvokų paaiškinimus,
-          tačiau jas mokyti galima labai žaismingai."
+          tačiau jas mokyti galima labai žaismingai.
         pdfs:
         - unplug1
         video: Unplug1
@@ -102,10 +103,10 @@
         video: Unplug10
       Unplug11:
         title: Apibendrinimas
-        desc: "Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti
-          visus savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
+        desc: Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti visus
+          savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
           kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo
-          susidomės."
+          susidomės.
         pdfs:
         - unplug11
         video: Unplug11
@@ -119,9 +120,9 @@
           veikėją per labirintą, naudodami vieną komandą.
       PlantASeed:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
           pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
       BuildingAFoundation:
         title: Laiptuota piramidė
         desc: Students build a structure using only provided supplies. Structures
@@ -129,8 +130,8 @@
           and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
         title: Kartojimo supratimas
-        desc: "Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu."
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
       RelayProgramming:
         title: Programavimas komandoje
         desc: Mokiniai dalyvaus estafetėje, kur kiekvienas dalyvis, nubėgęs prie lapo,
@@ -157,9 +158,9 @@
           naudodamasis, kitas mokinys turės nupiešti piešinį.
       PaperPlanes:
         title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: "Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip
-          pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip
-          pat bus kalbama apie informatiką ir algoritmų svarbą joje."
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
       BinaryBracelets:
         title: Dvejetainės apyrankės
         desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
@@ -256,9 +257,6 @@
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -286,9 +284,9 @@
         desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
           pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
       courseA_unplugged_happyMaps:
         title: Laimingieji žemėlapiai
         desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
@@ -315,13 +313,13 @@
           and students discuss the idea of being persistent when things get complicated.
       courseC_unplugged_paperPlanes:
         title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: "Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip
-          pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip
-          pat bus kalbama apie informatiką ir algoritmų svarbą joje."
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
       courseC_unplugged_gettingLoopy:
         title: Kartojimo supratimas
-        desc: "Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu."
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
       courseC_unplugged_binaryBracelets:
         title: Dvejetainės apyrankės
         desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
@@ -395,36 +393,165 @@
           functions is such a helpful practice.  '
       swipeRightPassThrough:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+      UnplugHappyMaps_2018:
+        title: Laimingieji žemėlapiai
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
+          veikėją per labirintą, naudodami vieną komandą.
+      GoingPlacesSafely_2018:
+        title: Saugus naršymas internete
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
+          kaip būti saugiam naršant internete.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Didelis įvykis
+        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
+          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
+          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
+          to, kuris mygtukas bus nuspaustas.
+      GraphPaperProgramming_2018:
+        title: Programavimas ant languoto popieriaus
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
+          naudodamasis, kitas mokinys turės nupiešti piešinį.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Veikla be kompiuterių
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Veikla be kompiuterių
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Sąlyginiai sakiniai
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+      DigitalFootprint_2018:
+        title: Virtualūs pirštų antspaudai
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
+          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
+          galima sekti ir tai gali turėti pasėkmių.
+      BinaryImages_2018:
+        title: Dvejetainiai vaizdai
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
+      GettingLoopy_2018:
+        title: Kartojimo supratimas
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+      BinaryBracelets_2018:
+        title: Dvejetainės apyrankės
+        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
+          kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
+          daugiau nei vienu būdu.
+      MoveItMoveIt_2018:
+        title: Judėk, judėk
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programavimas komandoje
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

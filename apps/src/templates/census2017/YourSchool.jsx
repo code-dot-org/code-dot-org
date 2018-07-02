@@ -1,15 +1,13 @@
-import $ from 'jquery';
+/* global adjustScroll */
 import React, { PropTypes, Component } from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import {UnconnectedCensusForm as CensusForm, censusFormPrefillDataShape} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
-import MobileNotification from '../MobileNotification';
 import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from "@cdo/locale";
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import CensusMap from './CensusMap';
 
 const styles = {
   heading: {
@@ -38,23 +36,70 @@ class YourSchool extends Component {
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
-    hideMap: PropTypes.bool
+    fusionTableId: PropTypes.string,
+    hideMap: PropTypes.bool,
+    currentCensusYear: PropTypes.number,
   };
 
-  componentDidMount() {
-    if (!this.props.hideMap) {
-      $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
+  state = {
+    schoolDropdownOption: undefined,
+    showExistingInaccuracy: false,
+    existingInaccuracy: false
+  };
+
+  handleTakeSurveyClick = (schoolDropdownOption, existingInaccuracy) => {
+    this.setState({
+      schoolDropdownOption: schoolDropdownOption,
+      showExistingInaccuracy: existingInaccuracy,
+      existingInaccuracy: existingInaccuracy
+    });
+    adjustScroll('form');
+  };
+
+  handleMapSchoolDropdownChange = (option) => {
+    this.handleSchoolDropdownChange(option);
+    if (option && option.value === '-1') {
+      adjustScroll('form');
     }
-  }
+  };
+
+  handleSchoolDropdownChange = (option) => {
+    this.setState({
+      schoolDropdownOption: option,
+      showExistingInaccuracy: false,
+      existingInaccuracy: false
+    });
+  };
+
+  handleExistingInaccuracyChange = (option) => {
+    this.setState({
+      existingInaccuracy: option,
+    });
+  };
+
+  hasLocation = (school) => {
+    return !!(school.latitude && school.longitude);
+  };
 
   render() {
-    const {responsiveSize} = this.props;
-    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
+    const schoolDropdownOption = this.state.schoolDropdownOption;
+    const schoolId = schoolDropdownOption ? schoolDropdownOption.value.toString() : '';
+    let schoolForMap;
+    if (schoolDropdownOption && schoolId !== '-1') {
+      schoolForMap = schoolDropdownOption.school;
+    }
+    const showExistingInaccuracy = this.state.showExistingInaccuracy;
+    const existingInaccuracy = this.state.existingInaccuracy;
+
+    // Don't show the special announcement for now.
+    const showSpecialAnnouncement = false;
 
     return (
       <div>
-        <SpecialAnnouncementActionBlock/>
-        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && desktop && (
+        {showSpecialAnnouncement && (
+          <SpecialAnnouncementActionBlock/>
+        )}
+        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && (
           <Notification
             type={NotificationType.bullhorn}
             notice={this.props.alertHeading}
@@ -66,15 +111,6 @@ class YourSchool extends Component {
             width="100%"
           />
         )}
-        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && !desktop && (
-          <MobileNotification
-            notice={this.props.alertHeading}
-            details={this.props.alertText}
-            buttonText={i18n.learnMore()}
-            buttonLink={this.props.alertUrl}
-            newWindow={true}
-          />
-        )}
         <h1 style={styles.heading}>
           {i18n.yourSchoolHeading()}
         </h1>
@@ -83,20 +119,37 @@ class YourSchool extends Component {
         </h3>
         <YourSchoolResources/>
         {!this.props.hideMap && (
-           <div>
+           <div id="map">
              <h1 style={styles.heading}>
-               Put your school on the map
+               Does your school teach Computer Science?
              </h1>
              <h3 style={styles.description}>
-               {i18n.yourSchoolMapDesc()}
-               If you are located in the US, please <a href="#form">fill out the form below</a>.
-               If you are outside the US, <a href="/learn/local">add your school here</a>.
+               Find your school on the map to see if computer science is already being offered.
+               Can't find your school on the map? <a href="#form">Fill out the survey below</a>.
              </h3>
-             <ProtectedStatefulDiv ref="map"/>
+             <SchoolAutocompleteDropdown
+               value={this.props.prefillData ? this.props.prefillData['schoolId'] : undefined}
+               fieldName="census-map-school-dropdown"
+               schoolDropdownOption={schoolDropdownOption}
+               onChange={this.handleMapSchoolDropdownChange}
+               schoolFilter={this.hasLocation}
+             />
+             <br/>
+             <CensusMap
+               fusionTableId={this.props.fusionTableId}
+               school={schoolForMap}
+               onTakeSurveyClick={this.handleTakeSurveyClick}
+             />
            </div>
         )}
         <CensusForm
           prefillData={this.props.prefillData}
+          schoolDropdownOption={schoolDropdownOption}
+          onSchoolDropdownChange={this.handleSchoolDropdownChange}
+          showExistingInaccuracy={showExistingInaccuracy}
+          existingInaccuracy={existingInaccuracy}
+          onExistingInaccuracyChange={this.handleExistingInaccuracyChange}
+          initialSchoolYear={this.props.currentCensusYear}
         />
       </div>
     );

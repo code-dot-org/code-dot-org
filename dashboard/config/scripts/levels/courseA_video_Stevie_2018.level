@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-03-20T15:17:38.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSF_stevie_big_project",
+    "instructions_important": "false",
+    "display_name": "Stevie and the Big Project",
+    "encrypted_teacher_markdown": "cMagjIxjRAdtc99Jc7SCbl2qxbFgq8GmJud1ksCs2I/IDmG8ZoOJUyEo+duv\nhaZeDs7VYZex9h3E2MkZrw4fVZmT3ebdwa9nTpovTRDXLjxbt0wsz87LfyAV\nTL+K4iVCJCX4iuLZ+QFmjNtQLFoRMNXVX40EapN1BPdpFhnSjYHZCtz4ivG+\n23oNwGL23atig3S61ij4iqxAX6WwWIFlfZqR+wvf9+QjLyfxqfO95AhxJtbz\nfQ+DGiPpk/OrQbNQJdZ7kwNt6LRSfhgXj3LJsGyEcikFip3gFskNbnfirSY0\nbG6r1QbST1WNSqLrDKtQr2+pFPmqcG3czTjjH339xiqVtlMlQmVOqFWJQX0c\n4scgeY9PbEv8WOhSWgi7o9qmiTcWzaHehsYcGE3LQ+HZriSWH0981331aYjC\nKui76FYdE8O5ipvdbLaWxMYQEY6SLnw4yWhsZbEs7deEBzxMFfQZmpwH+kxD\nDZotIHDsILL2ZA98ii5MXxaDpPJFh+wKz5a+0tcBv2WJ3tQKR3gQQ2deAUH+\nmA3QMRa8Xq17ZuyzLZVZtUou6pLF5KzGhPOs0Wp/EEK5lKesTRkDOvfy4E44\ns2fpL10M5IHqId0Kq4YID0rK6Aj2cuCqUaLpEhu+ZgmKK2kt3KFvOAcubXMh\nOJN2z4AIvOGsP/xyK5PcNVIzq9RDPzVyGQ9ZwZRl5SA2vE3cc3ha0hy+5JHg\n78zIeEv/X4wU/tRBb7LH/NK0Hhe+wuGRXNAXnuC36H5UVDGuUlU6B4GPePkd\n3UiA5KOu/6zkf8ZQzcwwlZGM1Tnzs8/5fj5d4dlC6lR66ip2NT/xtc8oThlO\noTLszrAr4rmDro5JsFCrpS1EJJeCqPwLvKy/Dslv8gZoelUeFPOwXh/HTPdj\nNNm4VFVwe2sNQO3iAwcUklSEoeqxWMTukC0LI3ZrxLFPZWc7o/c94AXMX0N7\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 8654,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 18:08:31 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

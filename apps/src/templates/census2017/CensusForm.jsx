@@ -7,6 +7,8 @@ import {howManyStudents, roleOptions, courseTopics, frequencyOptions, pledge} fr
 import SchoolAutocompleteDropdownWithLabel from './SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ReactTooltip from 'react-tooltip';
 import { styles } from './censusFormStyles';
 
 export const censusFormPrefillDataShape = PropTypes.shape({
@@ -18,12 +20,18 @@ export const censusFormPrefillDataShape = PropTypes.shape({
   schoolType: PropTypes.string,
   schoolName: PropTypes.string,
   schoolState: PropTypes.string,
-  schoolZip: PropTypes.string,
+  schoolZip: PropTypes.string
 });
 
 class CensusForm extends Component {
   static propTypes = {
     prefillData: censusFormPrefillDataShape,
+    initialSchoolYear: PropTypes.number,
+    schoolDropdownOption: PropTypes.object,
+    onSchoolDropdownChange: PropTypes.func,
+    showExistingInaccuracy: PropTypes.bool,
+    existingInaccuracy: PropTypes.bool,
+    onExistingInaccuracyChange: PropTypes.func
   };
 
   constructor(props) {
@@ -38,13 +46,14 @@ class CensusForm extends Component {
       selectedTopics: [],
       otherTopicsDesc: '',
       schoolName: prefillData['schoolName'] || '',
+      schoolYear: this.props.initialSchoolYear,
+      showSchoolYearDropdown: false,
       submission: {
         name: prefillData['userName'] || '',
         email: prefillData['userEmail'] || '',
         role: prefillData['isTeacher'] ? 'TEACHER' : '',
         country: prefillData['schoolCountry'] || 'United States',
         hoc: '',
-        nces: prefillData['schoolId'] || '',
         schoolName: prefillData['schoolName'] || '',
         schoolCity: '',
         schoolState: prefillData['schoolState'] || '',
@@ -57,13 +66,23 @@ class CensusForm extends Component {
         followUpFrequency: '',
         followUpMore: '',
         acceptedPledge: false,
-        share: ''
+        share: '',
+        optIn: '',
+        existingInaccuracyReason: ''
       },
       errors: {
         invalidEmail: false
       }
     };
   }
+
+  showSchoolYearDropdown = () => {
+    this.setState({showSchoolYearDropdown: true});
+  };
+
+  handleSchoolYearChange = (event) => {
+    this.setState({schoolYear: event ? event.value : this.props.initialSchoolYear});
+  };
 
   handleChange = (field, event) => {
     this.setState({
@@ -72,6 +91,10 @@ class CensusForm extends Component {
         [field]: event.target.value
       }
     }, this.checkShowFollowUp);
+  };
+
+  handleSchoolDropdownChange = (field, event) => {
+    this.props.onSchoolDropdownChange(event);
   };
 
   handleDropdownChange = (field, event) => {
@@ -187,9 +210,19 @@ class CensusForm extends Component {
     });
   }
 
+  schoolId() {
+    if (this.props.schoolDropdownOption) {
+      return this.props.schoolDropdownOption.value;
+    } else if (this.props.prefillData && this.props.prefillData['schoolId']) {
+      return this.props.prefillData['schoolId'];
+    } else {
+      return '';
+    }
+  }
+
   validateSchoolDropdown() {
     if (this.state.submission.country === "United States") {
-      if (this.state.submission.nces) {
+      if (this.schoolId()) {
         return false;
       } else {
         return true;
@@ -201,7 +234,7 @@ class CensusForm extends Component {
 
   validateSchool() {
     const {submission} = this.state;
-    if (submission.country === "United States" && submission.nces === "-1") {
+    if (submission.country === "United States" && this.schoolId() === "-1") {
       return (this.validateNotBlank(submission.schoolName) || this.validateNotBlank(submission.schoolState) || this.validateNotBlank(submission.schoolCity)
       || this.validateNotBlank(submission.schoolType) || this.validateNotBlank(submission.schoolZip));
     } else {
@@ -221,6 +254,11 @@ class CensusForm extends Component {
     return this.state.showFollowUp && this.state.submission.followUpFrequency === '';
   }
 
+  validateExistingInaccuracyReason() {
+    return this.props.existingInaccuracy &&
+      this.validateNotBlank(this.state.submission.existingInaccuracyReason);
+  }
+
   validateSubmission() {
     this.setState({
       errors: {
@@ -236,7 +274,9 @@ class CensusForm extends Component {
         afterSchool: this.validateNotBlank(this.state.submission.afterSchool),
         tenHours: this.validateNotBlank(this.state.submission.tenHours),
         twentyHours: this.validateNotBlank(this.state.submission.twentyHours),
-        share: this.validateNotBlank(this.state.submission.share)
+        share: this.validateNotBlank(this.state.submission.share),
+        optIn: this.validateNotBlank(this.state.submission.optIn),
+        existingInaccuracyReason: this.validateExistingInaccuracyReason()
       }
     }, this.censusFormSubmit);
   }
@@ -254,9 +294,11 @@ class CensusForm extends Component {
         !errors.tenHours &&
         !errors.twentyHours &&
         !errors.country &&
-        !errors.share) {
+        !errors.share &&
+        !errors.optIn &&
+        !errors.existingInaccuracyReason) {
       $.ajax({
-        url: "/dashboardapi/v1/census/CensusYourSchool2017v5",
+        url: "/dashboardapi/v1/census/CensusYourSchool2017v7",
         type: "post",
         dataType: "json",
         data: $('#census-form').serialize()
@@ -294,8 +336,18 @@ class CensusForm extends Component {
                             errors.twentyHours ||
                             errors.country ||
                             errors.nces ||
-                            errors.share);
+                            errors.share ||
+                            errors.optIn ||
+                            errors.existingInaccuracyReason);
     const US = submission.country === "United States";
+    const prefillData = this.props.prefillData || {};
+    let schoolId = prefillData['schoolId'] || '';
+    const schoolDropdownOption = this.props.schoolDropdownOption;
+    if (schoolDropdownOption) {
+      schoolId = undefined;
+    }
+    const showSchoolNotFound = US && (schoolId === '-1' || (schoolDropdownOption && schoolDropdownOption.value === "-1"));
+    const showExistingInaccuracy = this.props.showExistingInaccuracy;
 
     return (
       <div id="form">
@@ -303,7 +355,6 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
-        <input type="hidden" id="school_year" name="school_year" value="2017"/>
           <CountryAutocompleteDropdown
             onChange={this.handleDropdownChange.bind("country")}
             value={submission.country}
@@ -312,12 +363,13 @@ class CensusForm extends Component {
           />
           {US && (
             <SchoolAutocompleteDropdownWithLabel
-              setField={this.handleDropdownChange}
-              value={submission.nces}
+              setField={this.handleSchoolDropdownChange}
+              value={schoolId}
+              schoolDropdownOption={schoolDropdownOption}
               showErrorMsg={errors.nces}
             />
           )}
-          {US && this.state.submission.nces === "-1" && (
+          {showSchoolNotFound && (
             <SchoolNotFound
               onChange={this.handleChange}
               schoolName={submission.schoolName}
@@ -344,6 +396,37 @@ class CensusForm extends Component {
                 />
               </label>
             </div>
+          )}
+          {!this.state.showSchoolYearDropdown && (
+             <div>
+               <div style={styles.question}>
+                 Please answer the questions below about the {this.props.initialSchoolYear}-{this.props.initialSchoolYear+1} school year.
+                 (<a onClick={this.showSchoolYearDropdown}>Answer for a different school year.</a>)
+               </div>
+             <input type="hidden" id="school_year" name="school_year" value={this.props.initialSchoolYear}/>
+             </div>
+          )}
+          {this.state.showSchoolYearDropdown && (
+            <label style={styles.dropdownBox}>
+              <span style={styles.question}>
+                Choose a school year:
+              </span>
+              <select
+                name="school_year"
+                value={this.state.schoolYear}
+                onChange={this.handleSchoolYearChange}
+                style={styles.dropdown}
+              >
+                {[this.props.initialSchoolYear - 1, this.props.initialSchoolYear, this.props.initialSchoolYear + 1].map((schoolYear) => (
+                  <option
+                    value={schoolYear}
+                    key={schoolYear}
+                  >
+                    {schoolYear} - {schoolYear + 1}
+                  </option>
+                ))}
+              </select>
+            </label>
           )}
           <div style={styles.question}>
             How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
@@ -457,8 +540,8 @@ class CensusForm extends Component {
               </select>
             </label>
           </div>
-          <div style={{marginTop: 20, marginLeft: 38}}>
-            <label>
+          <div style={styles.checkboxLine}>
+            <label style={styles.clickable}>
               <input
                 type="checkbox"
                 name="other_classes_under_20_hours"
@@ -470,6 +553,71 @@ class CensusForm extends Component {
               </span>
             </label>
           </div>
+
+          {showExistingInaccuracy && (
+            <div>
+              <div style={styles.checkboxLine}>
+                <label style={styles.clickable}>
+                  <input
+                    type="checkbox"
+                    name="inaccuracy_reported"
+                    checked={this.props.existingInaccuracy}
+                    onChange={(event) => this.props.onExistingInaccuracyChange(event.target.checked)}
+                  />
+                  <span style={styles.existingInaccuracy}>
+                    {i18n.censusExistingInaccuracy()}
+                  </span>
+                </label>
+                <span data-tip data-for="existing-inaccuracy">
+                  <FontAwesome icon="question-circle"/>
+                </span>
+              </div>
+
+              <ReactTooltip
+                id="existing-inaccuracy"
+                class="react-tooltip-hover-stay"
+                role="tooltip"
+                effect="solid"
+                place="bottom"
+                offset={{bottom: 23, right: 7}}
+                delayHide={1000}
+              >
+                <div style={styles.existingInaccuracyTooltip}>
+                  {i18n.censusExistingInaccuracyTip()}
+                  &nbsp;
+                  <a
+                    href="/yourschool/about"
+                    target="_blank"
+                  >
+                    {i18n.censusExistingInaccuracyTipLink()}
+                  </a>
+                </div>
+              </ReactTooltip>
+            </div>
+          )}
+
+          {this.props.existingInaccuracy && (
+            <div>
+              <label>
+                <div style={styles.question}>
+                  {i18n.censusExistingInaccuracyReason()}
+                </div>
+                {errors.existingInaccuracyReason && (
+                  <div style={styles.errors}>
+                    {i18n.censusRequiredExistingInaccuracyReason()}
+                  </div>
+                )}
+                <textarea
+                  type="text"
+                  name="inaccuracy_comment"
+                  value={this.state.submission.existingInaccuracyReason}
+                  onChange={this.handleChange.bind(this, 'existingInaccuracyReason')}
+                  style={styles.textArea}
+                />
+              </label>
+            </div>
+          )}
+
           {showFollowUp && (
             <div>
               <div style={styles.question}>
@@ -618,6 +766,37 @@ class CensusForm extends Component {
               <span style={styles.asterisk}> *</span>
             </label>
           </div>
+
+          <div>
+            {errors.optIn && (
+               <div style={styles.errors}>
+                 Required. Please let us know if we can email you.
+               </div>
+            )}
+            <span style={styles.share}>
+              Can we email you about updates to our courses, local opportunities, or other computer science news?
+              &nbsp;
+              <a
+                href="/privacy"
+                target="_blank"
+              >
+                (See our privacy policy)
+              </a>
+            </span>
+
+            <select
+              name="opt_in"
+              value={this.state.submission.optIn}
+              onChange={this.handleChange.bind(this, 'optIn')}
+              style={styles.dropdown}
+            >
+              <option value="" disabled>{i18n.yesNo()}</option>
+              <option value="true">{i18n.yes()}</option>
+              <option value="false">{i18n.no()}</option>
+            </select>
+            <span style={styles.asterisk}> *</span>
+          </div>
+
           <div>
             <label>
               <div style={styles.question}>
@@ -648,6 +827,7 @@ class CensusForm extends Component {
               </label>
             </div>
           )}
+
           {showErrorMsg && (
             <div style={styles.errors}>
               {i18n.censusRequired()}

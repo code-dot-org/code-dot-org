@@ -39,6 +39,6 @@ Do your shopping at [smile.amazon.com](https://smile.amazon.com/) to donate a % 
 
 <br />
 <br />
-*Code.org is registered as a public 501(c)(3) non-profit organization.
+*Code.org is registered as a public 501(c)(3) nonprofit organization.
 Contributions to Code.org are tax-deductible to the extent permitted by law.
 Code.org's tax identification number is 46-0858543.*

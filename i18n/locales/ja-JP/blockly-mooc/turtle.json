@@ -38,6 +38,7 @@
   "drawUpperWave": "上向きの波 を かく",
   "drawLowerWave": "下向きの波 を かく",
   "drawSticker": "スタンプ",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "高さ",
   "hideTurtle": "アーティストを隠す",
   "jump": "ジャンプ",
@@ -73,6 +74,8 @@
   "penDown": "鉛筆を置く。\n\n",
   "penTooltip": "鉛筆を持ち上げたり、下げたりして、描くのを始めたり、止めたりします。",
   "penUp": "鉛筆を持ち上げる",
+  "pointTo": "point to",
+  "pixels": "ピクセル",
   "reinfFeedbackMsg": "カッコイイ絵が書けたね！もういちど、べつの絵を書いてもいいし、つぎのパズルに すすんでもいいよ。",
   "setAlpha": "アルファ値は",
   "setCharacter": "キャラクターを{character} にする",
@@ -91,5 +94,6 @@
   "turnTooltip": "指定した角度でアーティストを左まはた右に向ける",
   "turtleVisibilityTooltip": "アーティストを表示または非表示",
   "widthTooltip": "鉛筆の幅を変更",
+  "withSize": "with size",
   "wrongColour": "あなたの絵は間違った色を使っています。このパズル では%1でなくてはいけません。"
 }

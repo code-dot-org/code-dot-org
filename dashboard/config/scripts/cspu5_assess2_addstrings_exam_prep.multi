@@ -1,0 +1,28 @@
+name 'cspu5_assess2_addstrings_exam_prep'
+right '5hello'
+wrong '5 + hello'
+wrong 'error on num + str: type mismatch'
+wrong 'result'
+
+markdown <<MARKDOWN
+What is the output of the following JavaScript code segment?
+
+    var num = 5;
+    var str = “hello”;
+    var result = num + str;
+    console.log(result);
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 6**
+
+The most important idea in this problem is that when a number is added to a string, the number is treated like a string.
+
+Going through the code line by line:
+
+* A variable num holds the integer 5
+* A variable str holds the string "hello"
+* Evaluating the right side first, num + str combines the two together to get "5hello"
+* Variable result is set to "5hello"
+* The result is then printed out, and since result holds "5hello", "5hello" is the output for this code
+MARKDOWN

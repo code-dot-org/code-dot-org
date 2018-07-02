@@ -1,3 +1,4 @@
+---
 'no':
   data:
     unplugged:
@@ -72,11 +73,11 @@
         video: Unplug6
       Unplug7:
         title: Låtskriving
-        desc: "Å lese en tekst er en ganske kjent aktivitet for for de fleste elever.
+        desc: Å lese en tekst er en ganske kjent aktivitet for for de fleste elever.
           Vi vil ta en aktivitet som allerede er kjent, og benytte den for å gi en
           god opplæring i å definere og kalle funksjoner. Når elevene er blitt kjent
           med definere/kalle prosessen, vi vil legge til ekstra funksjoner, kombinert
-          med med passerende parametre."
+          med med passerende parametre.
         pdfs:
         - unplug7
         video: Unplug7
@@ -274,14 +275,11 @@
           skille mellom verdiene. Dette er hvor kondisjoner trengs...
       CollisionDetection:
         title: Collision Detection og Pytagoras læresetning
-        desc: "Å finne ut når objekter på skjermen berører hverandre er et viktig
-          aspekt i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning
+        desc: Å finne ut når objekter på skjermen berører hverandre er et viktig aspekt
+          i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning
           og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
           på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører
-          hverandre."
-      ! '':
-        title: ''
-        desc: ''
+          hverandre.
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgaven skal du lære om løkker!
@@ -419,37 +417,166 @@
           forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig
           nyttig praksis.  '
       swipeRightPassThrough:
-        title: "Økt med rekruttering rekrutterings scenarier"
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        title: Økt med rekruttering rekrutterings scenarier
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
-        title: "Økt med rekruttering rekrutterings scenarier"
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        title: Økt med rekruttering rekrutterings scenarier
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''
+      PlantASeed_2018:
+        title: 'Virkelige algoritmer: Plante et frø'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
+          ved hjelp av plante et frø som et eksempel. Det fokuserer også på det store
+          bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+      UnplugHappyMaps_2018:
+        title: Glade Kart
+        desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte
+          en figur gjennom en labyrint med én kommando.
+      GoingPlacesSafely_2018:
+        title: Trygg reise
+        desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere
+          hvordan å være trygg når du navigerer på Internett.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: I denne oppgaven skal du lære om løkker!
+      BigEvent_2018:
+        title: Den store begivenheten
+        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
+          handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll
+          og elevene svarer basert på hvilken knapp som er trykket.
+      GraphPaperProgramming_2018:
+        title: Millimeterpapirprogrammering
+        desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en
+          samling med instruksjoner) for å styre klassekameratene sine til å lage
+          en tegning.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Frakoblet Aktivitet
+        desc: I dag skal du lære hva det vil si å være en digital borger.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Frakoblet Aktivitet
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
+      Conditionals_2018:
+        title: Betingelser
+        desc: For å lære om betingete instruksjoner skal elevene spille et kortspill
+          og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis
+          jeg tegner et svart kort, får du et poeng."
+      DigitalFootprint_2018:
+        title: Dine digitale fotavtrykk
+        desc: Lærere introdusere elever ideen at sette informasjon om seg selv online
+          skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
+      BinaryImages_2018:
+        title: Binære Bilder
+        desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser
+          vårt forrige kurs elevene at den informasjonen kan bli representert i en
+          rekke av binære alternativer. Denne leksjonen tar det konseptet et steg
+          videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
+          informasjon (som for eksempel bilder og farger) binært også.
+      PaperPlanes_2018:
+        title: 'Algoritmer fra virkeligheten: Papirfly'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
+          i dette tilfellet for å å lage et papirfly. Det fokuserer også på det store
+          bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+      GettingLoopy_2018:
+        title: Gå i spinn
+        desc: Denne leksjonen introduserer programmeringen av konseptet av sløyfer
+          (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel
+          koreografi, og deretter bli bedt om å gjenta den.
+      BinaryBracelets_2018:
+        title: Binær armbånd
+        desc: Elevene skal lage armbånd som en binær representasjon av den første
+          bokstaven i navnet. Elevene lærer at data kan være representert og lagret
+          på mer enn én måte.
+      MoveItMoveIt_2018:
+        title: Flytt den, flytt den
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Relé-programmering
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

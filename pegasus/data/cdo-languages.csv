@@ -10,7 +10,7 @@ cs,cs,cs,cs-CZ,Čeština,Czech,TRUE,TRUE,cs,Czech,FALSE,TRUE,FALSE,TRUE,FALSE
 da,da,da,da-DK,Dansk,Danish,TRUE,TRUE,da,Danish,TRUE,TRUE,TRUE,TRUE,FALSE
 de,de,de,de-DE,Deutsch,German,TRUE,TRUE,de,German,TRUE,TRUE,TRUE,TRUE,FALSE
 el,el,el,el-GR,Ελληνικά,Greek,TRUE,TRUE,el,Greek,FALSE,FALSE,FALSE,FALSE,FALSE
-en-GB,gb,en,en-GB,Engish (UK),English (UK),FALSE,TRUE,en-GB,"English, United Kingdom",FALSE,TRUE,TRUE,TRUE,FALSE
+en-GB,gb,en,en-GB,English (UK),English (UK),FALSE,TRUE,en-GB,"English, United Kingdom",FALSE,TRUE,TRUE,TRUE,FALSE
 en,en,en,en-US,English,English,TRUE,TRUE,en,English,TRUE,TRUE,TRUE,TRUE,FALSE
 es,es,es,es-ES,Español (España),Spanish (Spain),TRUE,TRUE,es-ES,Spanish,TRUE,TRUE,TRUE,TRUE,TRUE
 es-MX,la,es,es-MX,Español (México),Spanish (Mexico),TRUE,TRUE,es-MX,"Spanish, Mexico",TRUE,TRUE,TRUE,TRUE,TRUE

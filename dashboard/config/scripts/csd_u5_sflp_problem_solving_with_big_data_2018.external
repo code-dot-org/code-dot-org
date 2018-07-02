@@ -1,0 +1,12 @@
+name 'CSD-U5-SFLP Problem Solving with Big Data_2018'
+display_name 'Overview'
+markdown <<MARKDOWN
+# Overview
+
+This lesson covers how data is collected and used by a organizations to solve problems in the real world. The class looks at three scenarios that could be solved using data and brainstorms the types of data they would want to solve them and how they could collect the data.  Each scenario also includes a video about a real-world service that has solved a similar problem with data.
+
+
+## Resources
+
+* [Data in the Real World](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - Activity Guide
+MARKDOWN

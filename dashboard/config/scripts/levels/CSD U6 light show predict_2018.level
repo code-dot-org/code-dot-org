@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-12T20:52:42.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "markdown_instructions": "# Put on a Light Show\r\n\r\nThis app lets you put on a light show with the LED.\r\n\r\nLook at the code with your partner and answer the following questions:\r\n\r\n* What does this line of code do: `setProperty(\"screen\", \"background-color\", rgb(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255)));`?\r\n\r\nOnce you have answered the question, run the code and click the buttons to see what happens.",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSDUDL03P09\",\r\n  \"callout_text\": \"What does this line do?\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"setProperty(\\\"screen\\\",\\\"background-color\\\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255))) });\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "parent_level_id": 10395,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-24 23:26:36 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-24 23:27:12 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:04:00 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 00:29:58 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 01:44:14 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 01:45:50 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-18 01:48:18 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-21 22:40:14 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-21 22:42:11 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-22 00:09:03 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-27 01:16:04 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-02-27 01:19:11 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</FreeResponse>

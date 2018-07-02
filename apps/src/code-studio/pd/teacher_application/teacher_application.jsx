@@ -13,7 +13,7 @@ import {
   FormGroup,
   ControlLabel
 } from 'react-bootstrap';
-import {otherString, ButtonList} from '../form_components/button_list.jsx';
+import {otherString, ButtonList} from '../form_components/ButtonList.jsx';
 import {validateDistrictData} from './district_dropdown_helper.js';
 import SummerProgramContent from './SummerProgramContent';
 import {getWorkshopForState} from './applicationConstants.js';

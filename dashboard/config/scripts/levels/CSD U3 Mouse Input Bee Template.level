@@ -6,10 +6,8 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "function draw(){\r\n  \r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -32,7 +30,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/4TwrQUly6PDa9O2izubCkg/632b7a80-3526-48b4-8b27-333199f6d3cf.png?version=NSixfcN8r9yoB788st2wA1ZyhYX3gFD9\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 86\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"NSixfcN8r9yoB788st2wA1ZyhYX3gFD9\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4c542e7a-9e93-41da-988e-c0c2c611a601\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/2ZesVwycWBmJLyddR2syE8rrnadjgBChyVkYkFIeNp4/4c542e7a-9e93-41da-988e-c0c2c611a601.png?version=bU7Zt1.iFxTyhHoGbUeuWfp2AQJDlJF0\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 86\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"bU7Zt1.iFxTyhHoGbUeuWfp2AQJDlJF0\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
@@ -42,10 +40,14 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "start_blocks": "function draw(){\r\n  \r\n}",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-26 22:23:45 +0000\",\"changed\":[\"start_animations\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-27 19:16:44 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

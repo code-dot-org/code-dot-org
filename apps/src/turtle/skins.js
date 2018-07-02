@@ -24,6 +24,7 @@ exports.load = function (assetUrl, id) {
         height: 100,
         numHeadings: 36,
         numFrames: 10,
+        visible: true,
       },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
@@ -45,8 +46,8 @@ exports.load = function (assetUrl, id) {
         height: 100,
         numHeadings: 18,
         numFrames: 20,
+        visible: true,
       },
-      decorationAnimationNumFrames: 19,
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       linePatterns: {
@@ -119,6 +120,7 @@ exports.load = function (assetUrl, id) {
     height: 51,
     numHeadings: 180,
     numFrames: 1,
+    visible: true,
   };
 
   // Get properties from config

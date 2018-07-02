@@ -1,4 +1,5 @@
-"id":
+---
+id:
   data:
     game:
       name:
@@ -315,128 +316,12 @@
         maze_3_2: Buatkan saya sebuah program, sehingga saya bisa mencapai babi itu.
         maze_3_3: Bagaimanacara saya bisa menangkap babi itu? Pastikan saya tidak
           menabrak kotak TNT!
-        maze_3_4: |
-          Waduh! Buatkan saya sebuah program yang membantu saya mencapai babi tetapi menghindari TNT.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Tempatkan satu blok ke blok "Jika anak panah kiri" dan tekan "Jalankan
-          Program". Gerakkan menggunakan tombol panah kiri untuk mencapai target.
-        bounce_2: Tempelkan sebuah blok ke blok "Jika anak panah kanan" dan blok "Jika
-          anak panah kiri". Pindahkan dayung untuk mencapai kedua target.
-        bounce_3: Sekarang cobalah sesuatu yang mirip dengan blok "ketika panah keatas".
-          Jalankan dayung untuk mencapai target diatas.
-        bounce_4: Kali ini Anda perlu menambahkan empat blok. Pindahkan dayung untuk
-          mencapai keempat target dan menyelesaikan teka-teki ini.
-        bounce_5: Kami akan melemparkan bola menuju dayung. Tempelkan satu blok ke
-          blok "ketika bola mengenai dayung" untuk memastikan bola mencapai garis
-          finish.
-        bounce_6: Sekarang target garis finish ada di atas. Anda harus tempelkan blok
-          kepada dua blok "Ketika bola mengenai" untuk memecahkan teka-teki ini.
-        bounce_7: Tempelkan blok untuk masing-masing blok "Jika". Pantulkan bola sampai
-          mengenai target.
-        bounce_10: Ada sebuah target di atas. Tempelkan blok "Skor poin" dan blok
-          "Skor poin lawan" ke blok "Jika bola di target" dan blok "Jika bola meleset
-          dari dayung" untuk membuat permainan. Lihat berapa banyak poin yang Anda
-          bisa dapat, sebelum lawan Anda mendapat dua kali lebih banyak.
-        bounce_11: Anda sekarang dapat menempatkan blok-blok kepada blok "ketika permainan
-          dimulai". Anda harus menempelkan blok "luncuran bola baru" lebih dari satu
-          tempat. Lalu cobalah mengubah adegan atau kecepatan kayuh dan bola dan untuk
-          melihat berapa banyak poin yang Anda dapat sebelum lawan Anda mendapatkan
-          poin dua kali lebih banyak.
-        bounce_12: Buatlah game Bounce anda sendiri. Anda dapat merubah semua visualisasi
-          dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
-          agar ia mencoba pada ponselnya.
+        maze_3_4: 'Waduh! Buatkan saya sebuah program yang membantu saya mencapai
+          babi tetapi menghindari TNT.
+
+'
         Custom_builder: Tarik blok dari toolbox ke ruang kerja untuk menggambar tingkat
           yang Anda ingin buat. Tekan "Jalankan Program" ketika Anda selesai.
-        flappy_1: Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan
-          Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.
-        flappy_2: Sekarang kita telah menambahkan beberapa permukaan.  Tempelkan blok
-          ke blok "ketika mencapai permukaan".  Kode Anda memerlukan 'PERMAINAN BERAKHIR'
-          ketika Flappy menghantam permukaan.
-        flappy_3: Blok "ketika permainan dimulai" memungkinkan Anda untuk menjalankan
-          kode untuk memulai permainan.  Cobalah mengatur tingkat kecepatan dan cara
-          mengepak untuk menuju target.
-        flappy_4: Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk
-          membuatnya menabrak. Temaptkan blok-blok ke dalam blok "ketika mengenai
-          hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam
-          sekumpulan pipa.
-        flappy_5: Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy
-          melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian
-          raihlah Skor lebih dengan membuat Flappy terbang melalui sekumpulan pipa.
-        flappy_6: Perhatikan apakah Anda masih bisa mendapat Skor setelah mengubah
-          Flappy mengepak sayap lebih banyak atau lebih sedikit.
-        flappy_7: Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang
-          lain ke blok "ketika menjalankan".
-        flappy_8: Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika
-          permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika
-          event berganti, misalnya ketika melewati penghalang.
-        flappy_9: Untuk mencampurkan berbagai hal, ketika mengenai sebuah rintangan,
-          daripada mengakhiri permainan cobalah atur nilai kembali ke 0.
-        flappy_11: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
-          dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
-          agar ia mencoba pada ponselnya.
-        flappy_k1_1: Mainkan Flappy
-        flappy_k1_2: Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan
-          Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.
-        flappy_k1_3: Sekarang kami telah menambahkan beberapa permukaan.  Tempelkan
-          blok ke blok "Jika mengenai permukaan".  Kode Anda memerlukan 'Permainan
-          berakhir' jika Flappy menghantam permukaan.
-        flappy_k1_4: Blok "ketika permainan dimulai" memungkinkan Anda untuk menjalankan
-          kode untuk memulai permainan.  Cobalah mengatur tingkat kecepatan dan cara
-          mengepak untuk menuju target.
-        flappy_k1_5: Flappy akan terbang melalui hambatan kecuali Anda menulis kode
-          untuk membuatnya menabrak. Lampirkan blok ke blok "ketika mengenai hambatan".
-          Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam set pipa pertama.
-        flappy_k1_6: Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy
-          melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian
-          raihlah Skor lebih dengan membuat Flappy terbang melalui set pipa pertama.
-        flappy_k1_7: Lihat jika Anda dapat mencetak nilai beberapa poin karena melewati
-          hambatan
-        flappy_k1_8: Selanjutnya, cobalah mengubah adegan dengan melampirkan blok
-          yang lain ke blok "ketika menjalankan".
-        flappy_k1_9: Cobalah mengubah pemain dengan menempatkan "mengatur pemain"
-          blok ke blok "ketika menjalankan".
         jigsaw_1: Klik blok
         jigsaw_2: Tarik blok ke target
         jigsaw_3: Atur blok untuk membentuk gambar
@@ -658,7 +543,7 @@
         maze_intro: Introduksi labirin
         artist_intro: Introduksi Artis
         farmer_intro: Apa itu Petani?
-        flappy_intro: 'Introduksi untuk Flappy '
+        flappy_intro: Introduksi untuk Flappy
         loop_times: Blok Ulangi
         loop_until: Blok Ulangi Sampai
         if: Blok Jika (if)
@@ -755,14 +640,14 @@
         CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
         CSF_collector_repeat_loops: Collector Repeat Loops
         CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
+        CSF_create_functions: Membuat fungsi
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
+        CSF_EF_cs_matters: Perihal ilmu komputer
         CSF_maze_intro_k1_blocks: Intro to Code Studio
         CSF_maze_intro_text_blocks: Intro to Code Studio
         CSF_my_robotic_friends: Teman-teman robot saya
-        CSF_Power_of_Words: Power of Words
+        CSF_Power_of_Words: Kemampuan kata-kata
         CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
@@ -779,17 +664,18 @@
         infinity_playlab_repeat_forever: Play Lab - ulangi selamanya
         csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
+        csd_concept_binary_data: 'Cara Kerja Komputer: Biner & Data'
+        csd_concept_circuits_logic: 'Cara Kerja Komputer: Sirkuit & Logika'
+        csd_concept_memory_cpu_input_output: 'Cara Kerja Komputer: Memori, CPU, Input,
           & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_concept_hardware_software: 'Cara Kerja Komputer: Perangkat Keras & Perangkat
+          Lunak'
+        csd_concept_search: Cara Kerja Pencarian
+        csd_external_amazon_data: Bagaimana Data Besar Digunakan Di Amazon Sistem
+          Rekomendasi Untuk Mengubah Kehidupan Kita
+        csd_external_netflix_data: Bagaimana Netflix Membuat Acara TV dan Saran Film?
+        csd_external_waze_data: Mengapa Banyak Pengguna terobsesi Dengan Waze?
+        csd_gamelab_animation_tab: Tab Animasi
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -799,12 +685,12 @@
         csd_gamelab_sprites_2: Animating Sprites
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_gamelab_velocity: Percepatan
+        csd_weblab_intro_1: Introduksi ke Web Lab - Bagian 1
+        csd_weblab_intro_2: Introduksi ke Web Lab - Bagian 2
+        csd_weblab_css_1: Introduksi ke CSS - Bagian 1
+        csd_weblab_css_2: Introduksi ke CSS - Bagian 2
+        csd_weblab_intro_3: Introduksi ke Web Lab - Bagian 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -868,9 +754,6 @@
         alg_16_biggame_collision_detection: CS didalam Aljabar - Deteksi Benturan
           Big Game/Permainan Besar
         alg_17_sambat_compound_booleans: CS didalam Aljabar - GabunganBoolean
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - Pendahuluan'
         starwars_typing: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - JavaScript'
         starwars_events: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - Acara'
@@ -927,6 +810,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Pengenalan untuk array
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Loop
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

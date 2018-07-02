@@ -1,4 +1,5 @@
-"pl":
+---
+pl:
   data:
     game:
       name:
@@ -59,9 +60,9 @@
         maze_2_2: Czy możesz pomóc mi złapać niesforną świnkę? Poustawiaj na sobie
           kilka bloków "idź do przodu" i naciśnij "Uruchom", aby pomóc mi się tam
           dostać.
-        maze_2_1: "Świnka powoduje jeżenie moich piórek. Pomóż mi ją znaleźć!"
-        maze_2_2_5: "Śledź drogę i doprowadzić mnie do tej głupiej świnki. Unikaj
-          TNT, bo inaczej polecą pióra!"
+        maze_2_1: Świnka powoduje jeżenie moich piórek. Pomóż mi ją znaleźć!
+        maze_2_2_5: Śledź drogę i doprowadzić mnie do tej głupiej świnki. Unikaj TNT,
+          bo inaczej polecą pióra!
         maze_2_3: Prowadź mnie do tego zielonego zła! (Uważaj na pola z TNT)
         maze_2_4: Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie
           mogę się zezłościć!
@@ -165,9 +166,9 @@
         maze_karel_1_6: Usuń wszystkie sterty śmieci, używając możliwie najmniejszej
           liczby bloków. Nową możliwością w rozwijanym menu w bloku dopóki jest warunek,
           czy tam, gdzie stoję jest sterta śmieci, czy otwór.
-        maze_karel_1_7: 'Wow, znalazłem naprawdę głęboki otwór! Nie wiem, ile szufelek
+        maze_karel_1_7: Wow, znalazłem naprawdę głęboki otwór! Nie wiem, ile szufelek
           śmieci tam się zmieści. Czy mógłbyś napisać program, który wypełni otwór
-          aż do poziomu ziemi? '
+          aż do poziomu ziemi?
         maze_karel_1_8: Pomóż mi wypełnić otwór na końcu tego pola, używając możliwie
           najmniejszej liczby bloków.
         maze_karel_1_9: 'Spowoduj, abym usunął wszystkie te sterty śmieci. Zrób to
@@ -302,125 +303,9 @@
           na pole z TNT!
         maze_3_4: Argh! Napisz mi program, który poprowadzi mnie wokół pól z TNT i
           doprowadzi mnie do świnki.
-        bounce_1_basketball: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij
-          "Uruchom". Przesuwaj paletkę używając strzałki w lewo, aby osiągnąć cel.
-        bounce_2_basketball: Dołącz blok do bloków "kiedy strzałka w prawo" i "kiedy
-          strzałka w lewo". Przesuwaj paletkę, aby osiągnąć oba cele.
-        bounce_5_basketball: Mamy zamiar skierować piłkę lecącą w dół w kierunku paletki.
-          Dołącz blok do bloku "kiedy piłka uderza paletkę", aby upewnić się, że piłka
-          doleci do flagi.
-        bounce_6_basketball: Teraz flaga jest na górze. Musisz dołączyć bloki do obu
-          bloków "kiedy piłka uderza", aby rozwiązać tę łamigłówkę.
-        bounce_7_basketball: Dołącz bloki do każdego z bloków "kiedy". Odbijaj piłeczkę,
-          aż dosięgnie flagę.
-        bounce_10_basketball: Teraz cel jest u góry. Dołącz bloki "punkt wyniku" i
-          "punkt wyniku przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy
-          piłka mija paletkę", aby utworzyć grę. Zobacz, ile zdobędziesz punktów,
-          zanim Twój przeciwnik zdobędzie dwa punkty.
-        bounce_11_basketball: Możesz teraz dołączyć bloki do bloku "po uruchomieniu".
-          Musisz dołączyć nowy blok "wyrzuć nową piłkę" w więcej niż w jednym miejscu.
-          Również spróbuj zmienić scenerię lub szybkość paletki oraz piłki i zobacz,
-          ile zdobędziesz punktów, zanim Twój przeciwnik zdobędzie dwa punkty!
-        bounce_12_basketball: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie
-          zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi znajomi mogli
-          zagrać w Twoją grę na swoich telefonach.
-        bounce_1_sports: Osiągnij flagę! Dołącz blok do bloku "kiedy strzałka w lewo"
-          i naciśnij "Uruchom", aby przesunąć gracza ku fladze.
-        bounce_2_sports: Teraz są dwie flagi! Dołącz blok do bloków "kiedy strzałka
-          w lewo" i "kiedy strzałka w prawo", aby Twój gracz poruszał się w dwóch
-          kierunkach.
-        bounce_5_sports: Krążek hokejowy leci do dołu w kierunku gracza! Dołącz blok
-          do bloku "kiedy piłka uderza gracza", aby dosięgnąć flagi.
-        bounce_6_sports: Teraz flaga jest na górze. Musisz dołączyć bloki do obu bloków
-          "kiedy piłka uderza", aby rozwiązać tę łamigłówkę.
-        bounce_7_sports: Dołącz bloki do każdego z bloków "kiedy". Odbijaj piłeczkę,
-          aż dosięgnie flagę.
-        bounce_10_sports: Teraz cel jest u góry. Dołącz bloki "punkt wyniku" i "punkt
-          wyniku przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy piłka
-          mija paletkę", aby utworzyć grę. Zobacz, ile zdobędziesz punktów, zanim
-          Twój przeciwnik zdobędzie dwa punkty!
-        bounce_11_sports: Możesz teraz dołączyć bloki do bloku "po uruchomieniu".
-          Musisz dołączyć nowy blok "wyrzuć nową piłkę" w więcej niż w jednym miejscu.
-          Również spróbuj zmienić scenerię lub szybkość paletki oraz piłki i zobacz,
-          ile zdobędziesz punktów, zanim Twój przeciwnik zdobędzie dwa punkty!
-        bounce_12_sports: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie
-          zasady i pomieszać różne zawody - bądź kreatywny. Kiedy skończysz, kliknij
-          przycisk "Zakończ", aby Twoi znajomi mogli zagrać w Twoją grę na swoich
-          telefonach.
-        bounce_1: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij "Uruchom".
-          Przesuń paletkę używając lewej strzałki, aby osiągnąć ostateczny cel.
-        bounce_2: Dołącz blok do bloków "kiedy strzałka w prawo" i "kiedy strzałka
-          w lewo". Przesuwaj paletkę, aby osiągnąć ostateczne cele.
-        bounce_3: Teraz spróbuj czegoś podobnego z blokiem "kiedy strzałka w górę".
-          Przenieś paletkę do miejsca końcowego na górze.
-        bounce_4: Tym razem musisz dodać cztery bloki. Przenieś paletki do wszystkich
-          czterech miejsc końcowych, by zakończyć układankę.
-        bounce_5: Mamy zamiar skierować piłkę lecącą w dół w kierunku paletki. Dołącz
-          blok do bloku "kiedy piłka uderza paletkę", aby upewnić się, że piłka osiąga
-          ostateczny cel.
-        bounce_6: Teraz ostateczny cel jest na górze. Musisz dołączyć bloki do obu
-          bloków "kiedy piłka uderza", aby rozwiązać tę łamigłówkę.
-        bounce_7: Dołącz bloki do każdego z bloków "kiedy". Odbijaj piłeczkę, aż osiągnie
-          ostateczny cel.
-        bounce_10: Cel teraz jest u góry. Dołącz bloki "punkt wyniku" i "punkt wyniku
-          przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy piłka mija rakietkę",
-          aby utworzyć grę. Zobacz, ile zdobędziesz punktów, zanim Twój przeciwnik
-          zdobędzie dwa punkty.
-        bounce_11: Możesz teraz dołączyć bloki do bloku "po uruchomieniu". Musisz
-          dołączyć nowy blok "wypuść nową piłkę" w więcej niż w jednym miejscu. Również,
-          spróbuj zmienić scenerię lub szybkość rakietki oraz piłki i zobacz, ile
-          punktów zdobędziesz, zanim Twój przeciwnik zdobędzie dwa punkty.
-        bounce_12: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie efekty
-          wizualne i zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi
-          znajomi mogli zagrać na swoich telefonach.
         Custom_builder: Przeciągnij bloki z przybornika do obszaru roboczego, aby
           narysować poziom, który chcesz utworzyć. Naciśnij przycisk "Uruchom", gdy
           jesteś gotowy.
-        flappy_1: Dołącz blok do bloku "po kliknięciu", a następnie naciśnij przycisk
-          "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca
-          docelowego.
-        flappy_2: Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie na
-          ziemię".  Twój kod powinien kończyć grę, kiedy Flappy rozbija się.
-        flappy_3: Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu gry.
-          Spróbuj ustawić poziom prędkości i pofrunąć do miejsca docelowego.
-        flappy_4: Flappy poleci przez przeszkody chyba, że napiszesz kod, który spowoduje,
-          że się rozbije. Dołącz blok do bloku "kiedy uderzy w przeszkodę". Twój kod
-          powinien kończyć grę, kiedy Flappy rozbija się na pierwszym zestawie rur.
-        flappy_5: Dodajmy tablicę wyników i liczmy punkty, kiedy Flappy mija przeszkody.
-          Dodaj blok do bloku "kiedy minie przeszkodę", a następnie zdobądź punkt
-          przelatując Flappym przez pierwszy zestaw rur.
-        flappy_6: Zobacz, czy potrafisz zdobywać punkty, gdy Flappy fruwa na małą
-          lub dużą wysokość.
-        flappy_7: Następnie, spróbuj zmienić scenę dołączając inny blok do bloku "po
-          uruchomieniu".
-        flappy_8: Efekty wizualne możesz ustawić w dowolnym momencie, nie tylko, gdy
-          gra się zaczyna. Spróbuj ustawić losową scenę, kiedy dzieje się coś innego,
-          na przykład, kiedy Flappy mija przeszkodę.
-        flappy_9: Dla zmyłki, po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
-          ustawić wynik z powrotem na 0.
-        flappy_11: Utwórz swoją własną grę z Flappym. Możesz zmienić wszystkie efekty
-          wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
-          przycisk "Zakończ", aby swoim znajomym udostępnić grę na telefony.
-        flappy_k1_1: Zagraj z Flappym
-        flappy_k1_2: Dołącz blok do bloku "po kliknięciu", a następnie naciśnij przycisk
-          "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do miejsca
-          docelowego.
-        flappy_k1_3: Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie
-          na ziemię".  Twój kod powinien kończyć grę, kiedy Flappy rozbija się.
-        flappy_k1_4: Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu
-          gry. Spróbuj ustawić poziom prędkości i pofrunąć do miejsca docelowego.
-        flappy_k1_5: Flappy poleci przez przeszkody chyba, że napiszesz kod, który
-          spowoduje, że się rozbije. Dołącz blok do bloku "kiedy uderzy w przeszkodę".
-          Twój kod powinien kończyć grę, kiedy Flappy rozbija się na pierwszym zestawie
-          rur.
-        flappy_k1_6: Dodajmy tablicę wyników i liczmy punkty, kiedy Flappy mija przeszkody.
-          Dodaj blok do bloku "kiedy minie przeszkodę", a następnie zdobądź punkt
-          przelatując Flappym przez pierwszy zestaw rur.
-        flappy_k1_7: Zobacz, czy możesz zdobyć wiele punktów przechodząc kilka przeszkód
-        flappy_k1_8: Następnie, spróbuj zmienić scenę dołączając inny blok do bloku
-          "po uruchomieniu".
-        flappy_k1_9: Spróbuj zmienić gracza dołączając blok "ustaw gracza" do bloku
-          "po uruchomieniu".
         jigsaw_1: Kliknij blok
         jigsaw_2: Przeciągnij blok do miejsce docelowego
         jigsaw_3: Ułóż bloki, by utworzyć obrazek
@@ -849,9 +734,6 @@
           w Wielkiej Grze (Big Game)
         alg_17_sambat_compound_booleans: Informatyka w Algebrze - złożone wartości
           logiczne
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - Wstęp'
         starwars_typing: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - JavaScript'
         starwars_events: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - Zdarzenia'
@@ -908,6 +790,22 @@
         applab_intro_sounds: App Lab - Obrazy i Dźwięki
         applab_intro_designmode: App Lab - Tryb Projektowania
         applab_intro_share: App Lab - Udostępnij Swoją Apkę
+        csd_applab_arrays: Wprowadzenie do tablic
+        CSF_skinOverview_Harvester: Kombajn
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Pętle z BB-8
+        CSF_harvester_skinOverview_K-1: Kombajn
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Pętle
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

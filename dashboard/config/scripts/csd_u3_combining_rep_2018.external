@@ -1,0 +1,15 @@
+name 'CSD U3 combining rep_2018'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+### Can you decode this binary string?
+
+
+
+# 1000011
+
+
+
+### What information do you need to help you decode it?
+
+MARKDOWN

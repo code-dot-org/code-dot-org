@@ -59,7 +59,7 @@ mt:
   courses: 'Korsijiet'
   courses_page:
     title_student: "Tgħallem fil-Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Attivita bla kompjuter'
   of: "ta'"
   more: "AKTAR"
@@ -69,7 +69,7 @@ mt:
   try_k8intro: "Ipprova il-kors 'Introduzzjoni tax-xjenza tal-kompjuter' ghal studenti tal-primarja (15-25 siegha)"
   k8intro: "Introduzzjoni ghall-kors tax-xjenza tal-kompjuter ghal-studenti tal-primarja (15-25 siegha)"
   already_started: "Diġà bdejt? Kompli hawn >> "
-  demos: 'Admin: Demos kollha'
+  demos: "Admin: Demos kollha"
   continue: 'Continue'
   prize: 'premju'
   more_info: 'Aktar informazzjoni'
@@ -85,6 +85,7 @@ mt:
     facebook: 'Facebook'
     windowslive: 'Account tal-Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Insejt il-Password?'
     need_confirmation: "Ma rcevejtx istruzzjonijiet tal-konferma?"
     need_unlock: "Ma rcevejtx istruxzzjonijiet biex tanlokkja?"
@@ -114,15 +115,25 @@ mt:
     valid_password: "Il-password valida!"
     invalid_password: "Il-password irid ikun mill-inqas 6 karattri"
     mismatch_password: "-Żewġ passwords li daħħalt ma jaqblux"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "Hemm bżonn xi informazzjoni addizzjonali biex tkompli tirregistra."
+    user_type_button: "Update Account Type"
     user_type_label: "Account Type"
     user_type_teacher: "Teacher"
     user_type_student: "Student"
     field_is_required: "hija meħtieġa"
     accept_terms: "You must agree to create an account"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Yes"
+    email_preference_no: "No"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -171,6 +182,7 @@ mt:
       email: 'Indirizz elettroniku'
       submit: 'Submit'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Ibdel il-password tiegħek'
@@ -214,7 +226,7 @@ mt:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Notifika minghand Code.org: %{student_name} m''għadux assoċjat bhala student tiegħek.'
+        subject: "Notifika minghand Code.org: %{student_name} m'għadux assoċjat bhala student tiegħek."
   reports:
     error:
       access_denied: "M'għandekx aċċess għal istatistici ta' din il-persuna"
@@ -342,11 +354,12 @@ mt:
     email_confirm_needed_required: 'L-indirizz tal-email: tiegħek %{email} ma ġiex ikkonfermat:'
     email_confirm_wrong_email: '(Indirizz elettroniku ħażin?)'
     email_resend_confirm: 'Erga ibghat l''istruzzjonijiet tal-konferma'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(ħalli vojt jekk ma tixtieqx tibdel)"
     current_password_hint: '(neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet tiegħek)'
     delete: 'Ħassar l''Account tiegħek'
     delete_text: "Meta tikklikkja l-buttuna hawn taħt jithassarlek l'Account."
-    delete_text_teacher_note: 'Innota: Billi tħassar tal-kont tiegħek mhux se jħassar il-kontijiet ta'' l-istudenti tiegħek.'
+    delete_text_teacher_note: "Innota: Billi tħassar tal-kont tiegħek mhux se jħassar il-kontijiet ta' l-istudenti tiegħek."
     delete_confirm: 'Żgur tixtieq tħassar l''Account tiegħek?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -357,10 +370,11 @@ mt:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Lesta'
     tried: 'Ppruvat'
@@ -442,6 +456,7 @@ mt:
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
     already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Tgħallem fil-Code Studio"
     description: "Kulħadd jistgħa jitgħallem ix-xjenza tal-kompjuter. Ghamel logħob, apps u arti b ' kodiċi."
@@ -449,6 +464,8 @@ mt:
   gender:
     male: 'Maskili'
     female: 'Femminili'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Nippreferi li ma nwegiebx'
   user_type:
     student: 'Student'
@@ -696,12 +713,12 @@ mt:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "It-Termini tas-Servizz"
     privacy: "Poliza dwar il-Privatezza"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "Print"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -712,25 +729,25 @@ mt:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Save"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Other
+        other: "Other"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "Submit"
     decline: "Agħlaq"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
@@ -756,7 +773,7 @@ mt:
     delete: "Delete"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Lura għall-kors"
@@ -859,8 +876,9 @@ mt:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -874,6 +892,11 @@ mt:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -978,3 +1001,14 @@ mt:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'I agree'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Yes'

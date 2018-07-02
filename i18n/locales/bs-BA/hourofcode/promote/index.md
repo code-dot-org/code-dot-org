@@ -9,11 +9,11 @@ nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Get your community involved in the Hour of Code
+# Uključi svoju zajednicu u Čas Kodiranja
 
 ## 1. Reci svima
 
-Tell your friends about the **#HourOfCode**!
+Recite svojim prijateljima o **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
@@ -27,7 +27,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 4. Promote Hour of Code in your community
 
-[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+[Regrutiraj lokalnu grupu](%= resolve_url('/promote/resources#sample-emails') %)dječak/djevojčica klub izviđača, crkvu, univerzitet, grupu veterana, sindikat, ili čak neke prijatelje. Ne morate biti u školi da naučite nove vještine. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
 
 ## 5. Pitajte lokalno izabranog u zajednici da podrži Sata programiranja
 

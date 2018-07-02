@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "var pan = createSprite(200, 200);\r\npan.setAnimation(\"pan\");\r\n\r\nfunction draw() {\r\n  background(\"palegreen\");\r\n  pan.rotation = pan.rotation + 1;\r\n  drawSprites();\r\n}",

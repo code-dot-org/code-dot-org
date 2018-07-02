@@ -6,12 +6,13 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @regional_partner_1 = create :regional_partner
-    @regional_partner_2 = create :regional_partner
+    pms = create_list :regional_partner_program_manager, 2
+    @program_manager_1, @program_manager_2 = pms.map(&:program_manager)
+    @regional_partner_1, @regional_partner_2 = pms.map(&:regional_partner)
 
-    @workshop_1 = create :pd_workshop, num_sessions: 1, sessions_from: Date.today, regional_partner: @regional_partner_1
-    @workshop_2 = create :pd_workshop, num_sessions: 1, sessions_from: 3.months.from_now.to_date, regional_partner: @regional_partner_1
-    @workshop_3 = create :pd_workshop, regional_partner: @regional_partner_2
+    @workshop_1 = create :pd_workshop, num_sessions: 1, sessions_from: Date.today, organizer: @program_manager_1
+    @workshop_2 = create :pd_workshop, num_sessions: 1, sessions_from: 3.months.from_now.to_date, organizer: @program_manager_1
+    @workshop_3 = create :pd_workshop, organizer: @program_manager_2
   end
 
   test 'raises error if no applicable payment terms' do
@@ -53,9 +54,10 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)
     term_3 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
 
-    assert_equal term_1, Pd::PaymentTerm.for_workshop(create(:pd_workshop, num_sessions: 1, sessions_from: 2.months.from_now.to_date, regional_partner: @regional_partner_1, course: Pd::Workshop::COURSE_CSF))
-    assert_equal term_2, Pd::PaymentTerm.for_workshop(create(:pd_workshop, num_sessions: 1, sessions_from: 2.months.from_now.to_date, regional_partner: @regional_partner_1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP))
-    assert_equal term_3, Pd::PaymentTerm.for_workshop(create(:pd_workshop, num_sessions: 1, sessions_from: 2.months.from_now.to_date, regional_partner: @regional_partner_1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1))
+    params = {num_sessions: 1, sessions_from: 2.months.from_now.to_date, organizer: @program_manager_1}
+    assert_equal term_1, Pd::PaymentTerm.for_workshop(create(:pd_workshop, **params, course: Pd::Workshop::COURSE_CSF))
+    assert_equal term_2, Pd::PaymentTerm.for_workshop(create(:pd_workshop, **params, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP))
+    assert_equal term_3, Pd::PaymentTerm.for_workshop(create(:pd_workshop, **params, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1))
   end
 
   test 'validations for payment terms' do

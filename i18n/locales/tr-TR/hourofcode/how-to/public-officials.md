@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Bir basın açıklaması düzenle.**Kılavuz olarak [bu örnekten](%= resolve_url('/promote/official-press-release') %) faydalanabilirsin.
 
-9. **Çevrenle bağlantıda kal.** Bölgendeki bilgisayar bilimleri eğitimleri hakkında daha fazla bilgi almak için [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) adresini ziyaret edin. Burada yer alan formu imzalayın ve Code.org un yerel bölgelerde ve hükümetler nezdinde yaptığı savunmalardan haberdar olun.
+9. **Connect locally.** Visit [code.org/promote](%= codeorg_url('/promote') %) to learn more about computer science education in your state. Burada yer alan formu imzalayın ve Code.org un yerel bölgelerde ve hükümetler nezdinde yaptığı savunmalardan haberdar olun.
 
 <%= view :signup_button %>

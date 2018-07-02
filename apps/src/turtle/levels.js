@@ -95,7 +95,7 @@ var levels = module.exports = {
   // Level 2: Square (without repeat).
   '1_2': {
     answer: answer(1, 2),
-    ideal: 11,
+    ideal: 8,
     toolbox: toolbox(1, 2),
     startBlocks: startBlocks(1, 2),
     requiredBlocks: [
@@ -120,7 +120,7 @@ var levels = module.exports = {
   // Level 4: Triangle.
   '1_4': {
     answer: answer(1, 4),
-    ideal: 6,
+    ideal: 4,
     toolbox: toolbox(1, 4),
     startBlocks: startBlocks(1, 4),
     requiredBlocks: [
@@ -211,7 +211,7 @@ var levels = module.exports = {
   '2_1': {
     instructionsImportant: true,
     answer: answer(2, 1),
-    ideal: 8,
+    ideal: 6,
     toolbox: toolbox(2, 1),
     startBlocks: startBlocks(2, 1),
     requiredBlocks: [
@@ -625,7 +625,7 @@ var levels = module.exports = {
   // Level 2: Two triangles.
   '4_2': {
     answer: answer(4, 2),
-    ideal: 10,
+    ideal: 8,
     toolbox: toolbox(4, 2),
     startBlocks: startBlocks(4, 2),
     requiredBlocks: [

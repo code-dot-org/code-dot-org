@@ -1,0 +1,16 @@
+name 'CSD-U5-SFLP Automating Data Decisions_2018'
+display_name 'Level Overview'
+markdown <<MARKDOWN
+# Overview
+
+You'll see an example of how a computer could be used to complete essentially every step of the data problem solving process. You'll create rules, or an algorithm, that a computer could use to make a decision automatically.
+
+## Resources
+
+* [Automating Data Decisions](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Resource (copy as [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
+* [Automating Data Decisions](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Automating Data Decisions - Exemplar ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))
+MARKDOWN

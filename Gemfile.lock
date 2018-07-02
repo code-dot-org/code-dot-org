@@ -49,11 +49,27 @@ GIT
       activemodel (>= 4.0)
 
 GIT
+  remote: https://github.com/wjordan/gctools.git
+  revision: 729c6bbb32c4bcc2ebfed16543991e4d126f09cc
+  ref: ruby-2.5
+  specs:
+    gctools (0.2.4)
+
+GIT
   remote: https://github.com/wjordan/geocoder.git
   revision: 2da20897188b57f777df89f90e45cf331c5b014f
   ref: rack-request-fix
   specs:
     geocoder (1.3.7)
+
+GIT
+  remote: https://github.com/wjordan/haml.git
+  revision: 22739a012fb34765d9d4b733f997862547a2b9cf
+  ref: cdo
+  specs:
+    haml (5.0.4)
+      temple (>= 0.8.0)
+      tilt
 
 GIT
   remote: https://github.com/wjordan/image_optim.git
@@ -136,7 +152,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/sprockets.git
-  revision: 69ead85e8f9f8ef293090064e582847b1d659ec6
+  revision: df60ba28584d51235cb0af23cef1b2bbd9d8d2dc
   ref: concurrent_asset_bundle_3.x
   specs:
     sprockets (3.7.1)
@@ -188,6 +204,8 @@ GEM
       activemodel (= 5.0.6)
       activesupport (= 5.0.6)
       arel (~> 7.0)
+    activerecord-import (0.22.0)
+      activerecord (>= 3.2)
     activesupport (5.0.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
@@ -198,9 +216,9 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     afm (0.2.2)
-    annotate (2.7.1)
+    annotate (2.7.2)
       activerecord (>= 3.2, < 6.0)
-      rake (>= 10.4, < 12.0)
+      rake (>= 10.4, < 13.0)
     ansi (1.5.0)
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
@@ -223,7 +241,7 @@ GEM
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
     bindata (2.3.1)
-    binding_of_caller (0.7.2)
+    binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
@@ -236,8 +254,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
-    celluloid (0.16.0)
-      timers (~> 4.0.0)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (0.0.9)
@@ -275,17 +291,17 @@ GEM
     cucumber-core (1.5.0)
       gherkin (~> 4.0)
     cucumber-wire (0.0.1)
-    daemons (1.2.3)
+    daemons (1.2.6)
     dalli (2.7.6)
     dalli-elasticache (0.2.0)
       dalli (>= 1.0.0)
-    debug_inspector (0.0.2)
+    debug_inspector (0.0.3)
     declarative (0.0.9)
     declarative-option (0.1.0)
-    devise (4.2.0)
+    devise (4.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.1)
+      railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
     devise_invitable (1.6.0)
@@ -296,7 +312,7 @@ GEM
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
-    eventmachine (1.2.0.1)
+    eventmachine (1.2.5)
     execjs (2.7.0)
     exifr (1.2.5)
     eyes_core (3.14.2)
@@ -321,7 +337,7 @@ GEM
       redis (~> 3.2)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.14)
+    ffi (1.9.23)
     firebase (0.2.6)
       httpclient
       json
@@ -329,7 +345,6 @@ GEM
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     fspath (3.1.0)
-    gctools (0.2.4)
     gemoji (2.1.0)
     gherkin (4.0.0)
     globalid (0.4.1)
@@ -355,12 +370,10 @@ GEM
       multi_json (~> 1.11)
       os (~> 0.9)
       signet (~> 0.7)
-    haml (4.0.7)
-      tilt
-    haml-rails (0.9.0)
+    haml-rails (1.0.0)
       actionpack (>= 4.0.1)
       activesupport (>= 4.0.1)
-      haml (>= 4.0.6, < 5.0)
+      haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
     haml_lint (0.27.0)
@@ -369,16 +382,15 @@ GEM
       rake (>= 10, < 13)
       rubocop (>= 0.50.0)
       sysexits (~> 1.1)
-    hashdiff (0.3.0)
+    hashdiff (0.3.7)
     hashery (2.1.2)
     hashie (3.4.4)
     highline (1.6.21)
-    hitimes (1.2.4)
-    honeybadger (2.6.0)
-    html2haml (2.0.0)
+    honeybadger (3.3.0)
+    html2haml (2.2.0)
       erubis (~> 2.7.0)
-      haml (~> 4.0.0)
-      nokogiri (~> 1.6.0)
+      haml (>= 4.0, < 6)
+      nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -387,7 +399,7 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.8.2.2)
     hurley (0.2)
-    i18n (0.9.1)
+    i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     image_size (1.5.0)
     in_threads (1.4.0)
@@ -421,10 +433,10 @@ GEM
       addressable (~> 2.3)
     le (2.7.2)
     libv8 (3.16.14.15)
-    listen (2.10.1)
-      celluloid (~> 0.16.0)
-      rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     little-plugger (1.1.4)
     logging (2.2.2)
       little-plugger (~> 1.1)
@@ -433,7 +445,7 @@ GEM
       actionpack (>= 4, < 5.1)
       activesupport (>= 4, < 5.1)
       railties (>= 4, < 5.1)
-    loofah (2.1.1)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -447,11 +459,11 @@ GEM
     mime-types-data (3.2016.0521)
     mini_magick (4.5.1)
     mini_mime (1.0.0)
-    mini_portile2 (2.1.0)
-    minitest (5.11.1)
-    minitest-around (0.3.2)
+    mini_portile2 (2.3.0)
+    minitest (5.11.3)
+    minitest-around (0.4.1)
       minitest (~> 5.0)
-    minitest-reporters (1.1.10)
+    minitest-reporters (1.2.0.beta3)
       ansi
       builder
       minitest (>= 5.0)
@@ -462,7 +474,7 @@ GEM
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mustermann (1.0.0.beta2)
+    mustermann (1.0.1)
     mysql2 (0.3.21)
     naturally (2.1.0)
     net-http-persistent (2.9.4)
@@ -470,10 +482,10 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
     netrc (0.11.0)
-    newrelic_rpm (3.16.0.318)
+    newrelic_rpm (4.8.0.341)
     nio4r (2.2.0)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     oauth (0.5.1)
     oauth2 (1.2.0)
       faraday (>= 0.8, < 0.10)
@@ -499,6 +511,9 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
+    omniauth-openid (1.0.1)
+      omniauth (~> 1.0)
+      rack-openid (~> 1.3.1)
     open_uri_redirections (0.2.1)
     openid_connect (1.0.3)
       activemodel
@@ -526,16 +541,17 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
+    pg (1.0.0)
     phantomjs (1.9.7.1)
     powerpack (0.1.1)
     progress (3.3.1)
-    public_suffix (3.0.0)
+    public_suffix (3.0.2)
     pusher (1.3.1)
       httpclient (~> 2.7)
       multi_json (~> 1.0)
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
-    rack (2.0.3)
+    rack (2.0.4)
     rack-cache (1.6.1)
       rack (>= 0.4)
     rack-mini-profiler (0.10.1)
@@ -546,9 +562,12 @@ GEM
       httpclient (>= 2.4)
       multi_json (>= 1.3.6)
       rack (>= 1.1)
+    rack-openid (1.3.1)
+      rack (>= 1.1.0)
+      ruby-openid (>= 2.1.8)
     rack-parser (0.7.0)
       rack
-    rack-protection (2.0.0.beta2)
+    rack-protection (2.0.1.rc1)
       rack
     rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
@@ -586,9 +605,9 @@ GEM
     raindrops (0.19.0)
     rake (11.3.0)
     rambling-trie (1.0.0)
-    rb-fsevent (0.9.7)
-    rb-inotify (0.9.7)
-      ffi (>= 0.5.0)
+    rb-fsevent (0.10.2)
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
     rdoc (4.2.2)
       json (~> 1.4)
     recaptcha (4.6.3)
@@ -600,10 +619,11 @@ GEM
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
       uber (< 0.2.0)
-    rerun (0.10.0)
-      listen (~> 2.7, >= 2.7.3)
-    responders (2.2.0)
-      railties (>= 4.2.0, < 5.1)
+    rerun (0.13.0)
+      listen (~> 3.0)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rest-client (2.0.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -611,7 +631,7 @@ GEM
     retriable (3.0.2)
     retryable (2.0.4)
     rinku (2.0.4)
-    rmagick (2.15.4)
+    rmagick (2.16.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -632,11 +652,13 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-openid (2.7.0)
     ruby-prof (0.15.9)
     ruby-progressbar (1.9.0)
     ruby-rc4 (0.1.5)
-    ruby_parser (3.8.2)
-      sexp_processor (~> 4.1)
+    ruby_dep (1.3.1)
+    ruby_parser (3.11.0)
+      sexp_processor (~> 4.9)
     rubyzip (1.2.1)
     safe_yaml (1.0.4)
     sass (3.4.22)
@@ -653,8 +675,8 @@ GEM
     selenium-webdriver (3.8.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
-    sequel (4.45.0)
-    sexp_processor (4.7.0)
+    sequel (5.9.0)
+    sexp_processor (4.10.1)
     shotgun (0.9.1)
       rack (>= 1.0)
     signet (0.7.3)
@@ -662,15 +684,15 @@ GEM
       faraday (~> 0.9)
       jwt (~> 1.5)
       multi_json (~> 1.10)
-    simplecov (0.12.0)
+    simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.0)
-    sinatra (2.0.0.beta2)
-      mustermann (= 1.0.0.beta2)
+    simplecov-html (0.10.2)
+    sinatra (2.0.1.rc1)
+      mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.0.beta2)
+      rack-protection (= 2.0.1.rc1)
       tilt (~> 2.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -692,10 +714,11 @@ GEM
       i18n
       json (>= 1.4.3)
     sysexits (1.2.0)
+    temple (0.8.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
-    thin (1.7.0)
+    thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
@@ -703,14 +726,12 @@ GEM
     thread_safe (0.3.6)
     tilt (2.0.8)
     timecop (0.8.1)
-    timers (4.0.4)
-      hitimes
     ttfunk (1.4.0)
     twilio-ruby (4.11.1)
       builder (>= 2.1.2)
       jwt (~> 1.0)
       multi_json (>= 1.3.0)
-    tzinfo (1.2.4)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
     uglifier (3.0.0)
@@ -735,7 +756,7 @@ GEM
     validates_email_format_of (1.6.3)
       i18n
     vcr (3.0.3)
-    warden (1.2.6)
+    warden (1.2.7)
       rack (>= 1.0)
     watir (6.10.3)
       selenium-webdriver (~> 3.4, >= 3.4.1)
@@ -748,7 +769,7 @@ GEM
       activesupport
       httpclient (>= 2.4)
       multi_json
-    webmock (2.1.0)
+    webmock (3.3.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -769,6 +790,7 @@ DEPENDENCIES
   acmesmith
   active_model_serializers!
   active_record_query_trace
+  activerecord-import
   acts_as_list
   addressable
   annotate
@@ -789,7 +811,7 @@ DEPENDENCIES
   daemons
   dalli
   dalli-elasticache
-  devise (~> 4.2.0)
+  devise (~> 4.4.0)
   devise_invitable (~> 1.6.0)
   execjs
   eyes_selenium (= 3.14.2)
@@ -800,12 +822,12 @@ DEPENDENCIES
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
   full-name-splitter!
-  gctools
+  gctools!
   gemoji
   geocoder!
   google-api-client
   google_drive
-  haml
+  haml!
   haml-rails
   haml_lint
   highline (~> 1.6.21)
@@ -825,24 +847,26 @@ DEPENDENCIES
   launchy
   le (~> 2.2)
   lograge
+  loofah (~> 2.2.1)
   marked-rails
   mini_magick
   minitest (~> 5.5)
   minitest-around
-  minitest-reporters
+  minitest-reporters (~> 1.2.0.beta3)
   mocha
   mysql2 (~> 0.3.13)
   naturally
   net-http-persistent
   net-scp
   net-ssh
-  newrelic_rpm (~> 3.16.0)
-  nokogiri (~> 1.6.1)
+  newrelic_rpm (~> 4.8.0)
+  nokogiri (~> 1.8.2)
   octokit
   oj
   omniauth-clever (~> 1.2.1)!
-  omniauth-facebook (~> 4.0.0.rc1)
+  omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.3.1)
+  omniauth-openid
   omniauth-openid-connect!
   omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
@@ -852,6 +876,7 @@ DEPENDENCIES
   paranoia
   pdf-reader
   petit!
+  pg
   phantomjs (~> 1.9.7.1)
   pusher (~> 1.3.1)
   rack-cache
@@ -865,7 +890,7 @@ DEPENDENCIES
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)
   redis-slave-read!
-  rerun (~> 0.10.0)
+  rerun
   responders (~> 2.0)
   rest-client (~> 2.0)
   retryable
@@ -875,12 +900,13 @@ DEPENDENCIES
   rubocop (~> 0.52)
   ruby-prof
   ruby-progressbar
+  ruby_dep (~> 1.3.1)
   sass-rails!
   scss_lint
   sdoc
   seamless_database_pool!
   selenium-webdriver (= 3.8.0)
-  sequel (~> 4.30)
+  sequel
   shotgun
   simplecov (~> 0.9)
   sinatra (~> 2.0.0.beta2)
@@ -907,7 +933,7 @@ DEPENDENCIES
   youtube-dl.rb
 
 RUBY VERSION
-   ruby 2.2.7p470
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1

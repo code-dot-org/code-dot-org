@@ -1,0 +1,19 @@
+name 'Cleaning Data_2018'
+markdown <<MARKDOWN
+# Why is it Important to Clean Data?
+
+
+Data and data analytics have become a key factor in problem solving.  Thanks to the internet, people have been able to crowd source data collection and develop even more insights about many prominent issues around the world-- ranging from election statistics to restaurant reviews.  Leveraging the internet is an effective way to collect and share data, but can introduce problems when users input their information in different ways.  To counteract the issues that come along with non-standardized data , it is necessary to ‘clean’ it.  Through this process all inaccuracies, inconsistencies, and irrelevant data is either removed or corrected.  
+
+
+## Limitations of the Computer
+Using computational tools to analyze data has made it much easier to find trends and patterns in large datasets. When preparing data for this kind of analysis, however, it’s important to remember that the computer is much less “intelligent” than we might imagine. Small discrepancies in the data may prevent accurate interpretation of trends and patterns and can even make it impossible to use the data at all. Cleaning data is therefore an important step in analyzing it, and in many contexts, it may actually take the largest amount of time.
+
+## In the Curriculum
+In lesson 13 students will follow a guide in Code Studio, which demonstrates the common techniques of filtering and sorting data, to familiarize themselves with its contents. Then they will correct errors they find in the data by either hand-correcting invalid values or deleting them. Finally they will categorize any free-text columns that were collected to prepare them for analysis. This lesson introduces many new skills with spreadsheets and reveals the sometimes subjective nature of data analysis.  The main purpose here is have students independently apply some of the data manipulation skills (in spreadsheets) that they’ve learned over the past few lessons, to a new dataset that is relatively uncurated. This is the beginning of the process of “extracting knowledge from data”: look at the data and clean it up so that you can process it using computational tools.
+
+
+
+
+
+MARKDOWN

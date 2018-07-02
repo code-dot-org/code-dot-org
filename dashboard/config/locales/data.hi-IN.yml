@@ -1,8 +1,9 @@
-"hi":
+---
+hi:
   data:
     game:
       name:
-        Unplug1: "कंप्यूटर विज्ञान का परिचय"
+        Unplug1: कंप्यूटर विज्ञान का परिचय
         Maze: The Maze
         Multi: Multiple Choice Stuffs
         Unplug2: Computational Thinking
@@ -10,9 +11,9 @@
         Artist: The Artist
         Unplug4: Algorithms
         Artist2: The Artist 2
-        Unplug5: "कार्य"
+        Unplug5: कार्य
         Farmer: The Farmer
-        Unplug6: "शर्तें"
+        Unplug6: शर्तें
         Artist3: The Artist 3
         Unplug7: Song Writing
         Farmer2: The Farmer 2
@@ -20,7 +21,7 @@
         Artist4: The Artist 4
         Unplug9: Relay Programming
         Farmer3: The Farmer 3
-        Unplug10: "इंटरनेट"
+        Unplug10: इंटरनेट
         Artist5: The Artist 5
         Unplug11: Wrap-up
         MazeEC: The Maze
@@ -41,8 +42,8 @@
     trophy:
       name:
         Bronze: Bronze
-        Silver: "चाँदी"
-        Gold: "सोना"
+        Silver: चाँदी
+        Gold: सोना
     concept:
       description:
         sequence: Sequence
@@ -52,7 +53,7 @@
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: "कार्य"
+        function: कार्य
         parameters: Functions with parameters
     level:
       instructions:
@@ -295,119 +296,8 @@
           of TNT!
         maze_3_4: Argh! Write me a program that gets me around the TNT and to the
           pig.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
-          the paddle using the left arrow to reach the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
-          Move the paddle to reach both finish targets.
-        bounce_3: Now try something similar with the "when up arrow" block. Move the
-          paddle to the finish target at the top.
-        bounce_4: This time you need to add four blocks. Move the paddle to all four
-          finish targets to complete this puzzle.
-        bounce_5: We're going to send a ball flying down towards the paddle. Attach
-          a block to the "when ball hits paddle" block to ensure the ball reaches
-          the finish target.
-        bounce_6: Now the finish target is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7: Attach blocks to each of the "when" blocks. Bounce the ball until
-          it hits the finish target.
-        bounce_10: There is a now a goal at the top. Attach the "score point" and
-          "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses paddle" blocks to make a game. See how many points you can score
-          before your opponent scores twice.
-        bounce_11: You can now attach blocks to the "when run" block. You have to
-          attach the new "launch new ball" block in more than one place. Also, try
-          changing the scene or the speed of the paddle and the ball and see how many
-          points you can score before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
         Custom_builder: Drag blocks from the toolbox to the workspace to draw the
           level you wish to create. Press "Run" when you are ready.
-        flappy_1: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          run" block.
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
-          of ending the game try setting the score back to 0.
-        flappy_11: Create your own Flappy game. You can change all the visuals and
-          all the rules, even the gravity. When you're done, click Finish to let friends
-          try your game on their phones.
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
         jigsaw_1: Click the block
         jigsaw_2: Drag the block to the target
         jigsaw_3: Arrange the blocks to form the image
@@ -603,7 +493,7 @@
         if: If Block
         if_else: If/else Block
         if_else_scrat: If/else Block
-        function: "कार्य"
+        function: कार्य
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
@@ -612,8 +502,8 @@
         Unplug2: Computational Thinking
         Unplug3: Graph Paper Programming
         Unplug4: Algorithms
-        Unplug5: "कार्य"
-        Unplug6: "शर्तें"
+        Unplug5: कार्य
+        Unplug6: शर्तें
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
@@ -646,7 +536,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: "शर्तें"
+        C2_conditionals_with_cards: शर्तें
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Relay Programming
         C2_paper_airplanes: Paper Airplanes
@@ -671,7 +561,7 @@
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: "फंदे"
+        C4_loops_zombie: फंदे
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -682,7 +572,7 @@
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: "शर्तें"
+        C4_conditionals: शर्तें
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -763,7 +653,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: "फंदे"
+        csp_applab_loops: फंदे
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -803,9 +693,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
         starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
         starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
@@ -861,6 +748,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: फंदे
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -965,11 +868,11 @@
         craft_run_button_callout: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ
         craft_drag_block_callout: '"moveForward();" ब्लॉक को खींचें और उसे दूसरे ब्लॉक
           के नीचे इस्तेमाल करें'
-        craft_callout_preplaced: "आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक
-          रखे हैं"
-        craft_inside_repeat: "ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ"
-        craft_callout_preplaced_house: "यह कोड आपके घर का निर्माण शुरू करेगा। क्या
-          आप इसे खत्म कर सकते हैं?"
-        craft_what_is_iron: "इस लौह का खनन करें!"
-        craft_callout_moveforward: "यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के
-          लिए कमांड जोड़ सकते हैं?"
+        craft_callout_preplaced: आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक
+          रखे हैं
+        craft_inside_repeat: ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ
+        craft_callout_preplaced_house: यह कोड आपके घर का निर्माण शुरू करेगा। क्या
+          आप इसे खत्म कर सकते हैं?
+        craft_what_is_iron: इस लौह का खनन करें!
+        craft_callout_moveforward: यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के
+          लिए कमांड जोड़ सकते हैं?

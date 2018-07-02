@@ -1,0 +1,17 @@
+%p
+  Hello
+  = "#{@name}" + ','
+
+%p
+  The following person has requested to connect with their local Code.org Regional Partner
+  = link_to('through this form', 'https://studio.code.org/pd/regional_partner_contact/new')
+  and we've identified that they are in your region. Please follow up with them directly at your convenience.
+
+= render partial: 'form_body'
+
+%p
+  Best,
+  %br
+  Tanya Parker
+  %br
+  Product Manager, Code.org

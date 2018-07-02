@@ -9,14 +9,14 @@ uk:
     errors:
       messages:
         blank: "необхідне"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "необхідні"
+        invalid_plural: "недійсні"
     attributes:
       user:
         name: 'Ім''я користувача'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Електронна пошта'
-        parent_email: 'Parent/guardian email'
+        parent_email: 'Електронна пошта батьків/опікуна'
         personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
         username: 'ім''я користувача'
         password: 'пароль'
@@ -59,7 +59,7 @@ uk:
   courses: 'курси'
   courses_page:
     title_student: "Навчання у Студії коду"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Безмашинна вправа'
   of: "з"
   more: "БІЛЬШЕ"
@@ -69,7 +69,7 @@ uk:
   try_k8intro: "Спробуйте наш вступний курс інформатики для 5-8 класів (15-25 годин)"
   k8intro: "Вступ в курс інформатики для 5-8 класів (15-25 годин)"
   already_started: "Готові почати? Продовжимо тут >> "
-  demos: 'Адмін: Всі демо'
+  demos: "Адмін: Всі демо"
   continue: 'Далі'
   prize: 'приз'
   more_info: 'Детальніше'
@@ -85,11 +85,12 @@ uk:
     facebook: 'Facebook'
     windowslive: 'обліковий запис Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Забули свій пароль?'
     need_confirmation: "Не отримали вказівок підтвердження?"
     need_unlock: "Не отримали вказівок розблокування?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    not_linked: "Вибачте, ваш профіль Code.org не пов'язан з вашим %{provider}. Вам доведеться увійти, набравши свій пароль нижче."
+    use_clever: "Вибачте, ваш профіль Code.org не пов'язан з вашим %{provider}. Будь ласка, увійдіть через ваш Clever Portal замість цього."
   signup_form:
     student_count: '%{count} учнів вже зареєструвались.'
     teacher_count: '%{count} вчителів вже зареєструвались.'
@@ -114,15 +115,25 @@ uk:
     valid_password: "Вірний пароль!"
     invalid_password: "Пароль має складатися хоча б із %d символів"
     mismatch_password: "Введені вами паролі не збігаються"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Я погоджуюсь із <a href='http://code.org/tos'>умовами користування</a> Code.org. Якщо мені менше 13 років, надсиланням цієї форми я підтверджую, що мої батьки чи законні опікуни надали дозвіл користуватися послугами Code.org. <br/><br/>Електронні адреси не зберігаються у формі, яка дозволяла би нам зв'язуватися з учнями. Учні ніколи не отримуватимуть листів від Code.org, за винятком відновлення паролю. Перегляньте нашу <a href='http://code.org/privacy'>політику конфіденційності</a> для отримання додаткової інформації."
     teacher_terms: "Я погоджуюсь з умовами надання послуг Code.org. Для ознайомлення із докладнішою інформацією про приватність, перегляньте нашу <a href='http://code.org/privacy'>політику конфіденційності</a>."
     additional_information: "Нам потрібна додаткова інформація, щоб продовжити реєстрацію."
+    user_type_button: "Update Account Type"
     user_type_label: "Тип облікового запису"
     user_type_teacher: "Вчитель"
     user_type_student: "учень"
     field_is_required: "необхідне"
     accept_terms: "Потрібно погодитись, щоб створити обліковий запис"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Так"
+    email_preference_no: "Ні"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -171,6 +182,7 @@ uk:
       email: 'Адреса електронної пошти'
       submit: 'Надіслати'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Змінити пароль'
@@ -201,7 +213,7 @@ uk:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Таємне слово'
       email: 'Електронна пошта'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -220,7 +232,7 @@ uk:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Повідомлення Code.org: %{student_name} відтепер не є вашим учнем.'
+        subject: "Повідомлення Code.org: %{student_name} відтепер не є вашим учнем."
   reports:
     error:
       access_denied: "Ви не маєте доступу до статистики цієї людини"
@@ -348,11 +360,12 @@ uk:
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
     email_confirm_wrong_email: '(Неправильна електронна адреса?)'
     email_resend_confirm: 'Надіслати повідомлення з підтвердженням повторно'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(залишіть порожнім, якщо ви не хочете змінювати)"
     current_password_hint: '(нам потрібний ваш поточний пароль, щоб підтвердити зміни)'
     delete: 'Видалення облікового запису'
     delete_text: "Клацання розташованої нижче кнопки призведе до видалення облікового запису."
-    delete_text_teacher_note: 'Будь ласка, зверніть увагу: видалення облікового запису не видалить облікових записів ваших учнів.'
+    delete_text_teacher_note: "Будь ласка, зверніть увагу: видалення облікового запису не видалить облікових записів ваших учнів."
     delete_confirm: 'Ви впевнені, що бажаєте видалити обліковий запис?'
     deleted_user: 'видалений користувач'
     no_password_because_oauth: 'Паролю немає, оскільки ви входите за допомогою стороннього постачальника.'
@@ -363,10 +376,11 @@ uk:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Завершено'
     tried: 'Спробував'
@@ -448,6 +462,7 @@ uk:
     student_not_found: "Одного чи більше учнів не знайдено."
     all_students_must_be_in_current_section: "Всі учні повинні бути зараховані у ваші групи."
     already_enrolled_in_new_section: "Ви не можете перемістити цих учнів, бо вчитель зарахував їх в іншу групу."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Навчання у Студії коду"
     description: "Кожен може вивчати інформатику. Створюй ігри, програмки та твори з кодом."
@@ -455,6 +470,8 @@ uk:
   gender:
     male: 'Чоловік'
     female: 'Жінка'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Не волію відповідати'
   user_type:
     student: 'учень'
@@ -702,7 +719,7 @@ uk:
     sign_out: 'Якщо Ви не бажаєте надавати інформацію про свій вік, Ви можете <a href="%{url}">вийти з системи</a>.'
   terms_interstitial:
     title: "Оновлені умови надання послуг та політики конфіденційності"
-    intro_desc: 'Ми оновили наші умови користування та політику конфіденційності. Зміни вступили в силу з 24 серпня 2016 року. Найбільша зміна: ми більше <i>не будемо зберігати електронні адреси для облікових записів учнів у Студії коду.</i> Для нас це дуже важливо, і ми сподіваємось, що це задасть новий стандарт учнівської конфіденційності в освітніх технологіях. Ми надіслали Вам коротку інформацію про зміни на електронну скриньку.'
+    intro_desc: "Ми оновили наші умови користування та політику конфіденційності. Зміни вступили в силу з 24 серпня 2016 року. Найбільша зміна: ми більше <i>не будемо зберігати електронні адреси для облікових записів учнів у Студії коду.</i> Для нас це дуже важливо, і ми сподіваємось, що це задасть новий стандарт учнівської конфіденційності в освітніх технологіях. Ми надіслали Вам коротку інформацію про зміни на електронну скриньку."
     intro_instructions: "Вам потрібно прийняти ці нові умови, щоб Ваші учні, молодші 13 років, мали повний доступ до останніх можливостей Студії коду. Коли реєструєте обліковий запис для учня, молодшого 13 років, потрібно підтвердити, що Ваша школа має згоду батьків на збір особистих даних учня для використання у школі, включно з освітніми програмами, такими як Студія коду."
     tos: "Умови надання послуг"
     privacy: "Політика конфіденційності"
@@ -718,25 +735,25 @@ uk:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "зберегти"
   race_interstitial:
-    title: 'За бажанням: Допоможіть нам відстежувати прогрес для підвищення різноманіття у галузі інформатики'
+    title: "За бажанням: Допоможіть нам відстежувати прогрес для підвищення різноманіття у галузі інформатики"
     message: "Вкажіть свою расову приналежність (позначте всі потрібні варіанти)"
     races:
       - 
-        white: Білий
+        white: "Білий"
       - 
-        black: Чорний або Афроамериканець
+        black: "Чорний або Афроамериканець"
       - 
-        hispanic: Іспаномовний або латиноамериканець
+        hispanic: "Іспаномовний або латиноамериканець"
       - 
-        asian: Азіат
+        asian: "Азіат"
       - 
-        hawaiian: Корінний житель Гавайських островів або інших островів Тихого океану
+        hawaiian: "Корінний житель Гавайських островів або інших островів Тихого океану"
       - 
-        american_indian: Американський індіанець/корінний житель Аляски
+        american_indian: "Американський індіанець/корінний житель Аляски"
       - 
-        other: Інше
+        other: "Інше"
       - 
-        opt_out: Не волію відповідати
+        opt_out: "Не волію відповідати"
     submit: "Надіслати"
     decline: "Закрити"
   zendesk_too_young_message: 'На жаль, молодші користувачі не можуть входити на цей сайт підтримки. Ви можете користуватись <a href="http://support.code.org">support.code.org</a> не входячи в обліковий запис, або попросіть своїх батьків чи вчителя зв''язатися з нами.'
@@ -762,7 +779,7 @@ uk:
     delete: "Видалити"
     import: "Імпорт"
     share_link_import_bad_link_header: "Посилання на завдання не розпізнано"
-    share_link_import_bad_link_body: 'Не вдалось імпортувати посилання на завдання. Перевірте, чи це дійсно посилання із завдання Minecraft: Agent, яке ви повністю скопіювали.'
+    share_link_import_bad_link_body: "Не вдалось імпортувати посилання на завдання. Перевірте, чи це дійсно посилання із завдання Minecraft: Agent, яке ви повністю скопіювали."
     share_link_import_error_header: "Щось пішло не так."
     share_link_import_error_body: "Під час імпорту цього посилання на завдання виникла проблема. Спробуйте ще раз."
     exit: "Повернутися до курсу"
@@ -849,37 +866,43 @@ uk:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    main_course: 'Головний курс'
+    extra_course_content: 'Додатковий вміст курсу'
     csf_e_1: 'Ramp Up to Course E (Optional)'
-    csf_e_2: 'Course E Content'
+    csf_e_2: 'Зміст курсу E'
     csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
+    csf_f_2: 'Зміст курсу F'
+    csd1_1: 'Глава 1: Процес вирішення проблем'
+    csd1_2: 'Глава 2: Комп''ютери та вирішення проблем'
+    csd2_1: 'Глава 1: Веб-контент та HTML'
+    csd2_2: 'Глава: Стилізація та CSS'
+    csd3_1: 'Глава 1: Зображення та анімації'
+    csd3_2: 'Глава 2: Побудова ігор'
+    csd4_1: "Глава 1: Використуйте\nЦентрований дизайн"
+    csd4_2: 'Глава 2: Прототипування додатків'
+    csd5_1: 'Глава 1: Представлення інформації'
+    csd5_2: 'Глава 2: Вирішення проблем із даними'
+    csd6_1: 'Глава 1: Програмування з обладнанням'
+    csd6_2: 'Глава 2: Побудова фізичних прототипів'
+    csd_survey: 'Post-Course Survey'
+    csp1_1: 'Глава 1: Представлення та передача інформації'
+    csp1_2: 'Глава 2: Винайти інтернет'
+    csp2_1: 'Глава 1: Кодування та стиснення складної інформації'
+    csp2_2: 'Глава 2. Маніпулювання та візуалізація даних'
+    csp3_1: 'Глава 1: Мови програмування та алгоритми'
+    csp4_1: 'Глава 1: Світ великих даних та шифрування'
+    csp5_1: 'Глава 1: Програмування, кероване подіями'
+    csp5_2: 'Глава 2: Програмування з структурами даних'
     cspSurvey: 'Survey'
     cspAssessment: 'Chapter Assessment'
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Розділ 2: Цифрова інформація'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Відмова від відповідальності
@@ -984,3 +1007,14 @@ uk:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Погоджуюся'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Так'

@@ -101,6 +101,7 @@ class HeightResizer extends React.Component {
 
     return (
       <div
+        id="ui-test-resizer"
         style={mainStyle}
         onMouseDown={this.onMouseDown}
         onMouseUp={this.onMouseUp}

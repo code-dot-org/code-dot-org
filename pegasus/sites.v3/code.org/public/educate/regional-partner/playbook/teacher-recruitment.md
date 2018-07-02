@@ -2,6 +2,7 @@
 title: Teacher and District Recruitment
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Teacher and District Recruitment
@@ -22,7 +23,8 @@ Review the [2018 Teacher Application Process Document](https://docs.google.com/d
 
 ### What are the important dates I need to know about?
 - Jan. 16: Applications open!
-- April 6: Priority deadline for all Group 3 applications
+- March 30: Priority Deadline for applications
+- April 6: Priority deadline for Group 3 to accept applications to TeacherCon
 - April - July: Application link will remain open for Group 1 and 2, and as needed for Group 3
 - April 20: Deadline for accepting teachers for TeacherCon 1
 - May 18: Deadline for accepting teachers for TeacherCon 2

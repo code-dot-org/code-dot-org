@@ -59,7 +59,7 @@ el:
   courses: 'Τες'
   courses_page:
     title_student: "Μάθετε με κώδικα Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Αποσυνδεδεμένη Δραστηριότητα'
   of: "του"
   more: "ΠΕΡΙΣΣΟΤΕΡΑ"
@@ -69,7 +69,7 @@ el:
   try_k8intro: "Δοκιμάστε το εισαγωγικό μάθημα K-8, στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)"
   k8intro: "Εισαγωγή Κ-8 στο Μάθημα της Επιστήμης Υπολογιστών (15-25 ώρες)"
   already_started: "Έχεις ήδη ξεκινήσει; Συνέχισε εδώ >> "
-  demos: 'Διαχειριστής: Όλα τα Demo'
+  demos: "Διαχειριστής: Όλα τα Demo"
   continue: 'Συνέχεια'
   prize: 'βραβείο'
   more_info: 'Περισσότερες πληροφορίες'
@@ -85,6 +85,7 @@ el:
     facebook: 'Facebook'
     windowslive: 'Λογαριασμός Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Ξέχασες τον κωδικό σου;'
     need_confirmation: "Δεν έλαβες τις οδηγίες επιβεβαίωσης;"
     need_unlock: "Δεν έλαβες τις οδηγίες ξεκλειδώματος;"
@@ -114,15 +115,25 @@ el:
     valid_password: "Έγκυρος κωδικός πρόσβασης!"
     invalid_password: "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 6 χαρακτήρες"
     mismatch_password: "Οι δύο κωδικοί πρόσβασης που καταχωρήσατε δεν ταιριάζουν"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Συμφωνώ με τους <a href='http://code.org/tos'>όρους χρήσης</a> του Code.org. Εάν είμαι κάτω των 13 ετών, με την υποβολή της παρούσας φόρμας επιβεβαιώνω ότι διαθέτω άδεια του γονέα ή κηδεμόνα μου για να χρησιμοποιήσω τις υπηρεσίες του Code.org.<br/><br/>Οι ηλεκτρονικές διευθύνσεις ταχυδρομείου δεν αποθηκεύονται σε μορφές που να επιτρέπουν την επικοινωνία με τους μαθητές. Οι μαθητές δεν θα λάβουν ποτέ ηλεκτρονικά μηνύματα από το Code.org εκτός εάν πρόκειται για τη διαδικασία ανάκτησης κωδικού. Δείτε την <a href='http://code.org/privacy'>πολιτική ιδιωτικότητας</a> για περισσότερες πληροφορίες."
     teacher_terms: "Συμφωνώ με τους όρους χρήσης υποηρεσιών του Code.org. Για περισσότερες πληροφορίες σχετικά με την ιδιωτικότητα, δείτε την <a href='http://code.org/privacy'>πολιτική ιδιωτικότητας</a>."
     additional_information: "Χρειαζόμαστε κάποιες επιπλέον πληροφορίες για να συνεχιστεί η εγγραφή σας."
+    user_type_button: "Update Account Type"
     user_type_label: "Τύπος λογαριασμού"
     user_type_teacher: "Καθηγητής"
     user_type_student: "φοιτητής/μαθητής"
     field_is_required: "απαιτείται"
     accept_terms: "Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Ναι"
+    email_preference_no: "Όχι"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Πληροφορίες σχολείου (προαιρετικό)'
     school_country: 'Χώρα σχολείου'
@@ -171,6 +182,7 @@ el:
       email: 'Διεύθυνση email'
       submit: 'Υποβολή'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Αλλαγή κωδικού'
@@ -201,7 +213,7 @@ el:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Μυστική λέξη'
       email: 'Ηλεκτρονικό ταχυδρομείο'
       google_classroom: 'Google Classroom'
       clever: 'Εξυπνο'
@@ -220,7 +232,7 @@ el:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Ειδοποίηση από την Code.org: ο μαθητής %{student_name} δεν είναι πλέον δικός σας.'
+        subject: "Ειδοποίηση από την Code.org: ο μαθητής %{student_name} δεν είναι πλέον δικός σας."
   reports:
     error:
       access_denied: "Δεν έχεις πρόσβαση στα στατιστικά αυτού του ατόμου"
@@ -348,11 +360,12 @@ el:
     email_confirm_needed_required: 'Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου %{email}  δεν έχει επιβεβαιωθεί:'
     email_confirm_wrong_email: '(Λάθος διεύθυνση ηλεκτρονικού ταχυδρομείου;)'
     email_resend_confirm: 'Επανάληψη αποστολής οδηγιών επιβεβαίωσης'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(άστο κενό εάν δεν θέλεις να τον αλλάξεις)"
     current_password_hint: '(χρειαζόμαστε τον τωρινό κωδικό σου για να επιβαιβεωθούν οι αλλαγές)'
     delete: 'Διαγράψτε τον λογαριασμό σας'
     delete_text: "Κάνοντας κλικ στο παρακάτω κουμπί , θα διαγράψετε τον λογαριασμό σας."
-    delete_text_teacher_note: 'Σημειώστε: με τη διαγραφή του λογαριασμού σας δε θα διαγραφεί ο λογαριασμός των μαθητών σας.'
+    delete_text_teacher_note: "Σημειώστε: με τη διαγραφή του λογαριασμού σας δε θα διαγραφεί ο λογαριασμός των μαθητών σας."
     delete_confirm: 'Είστε βέβαιοι οτι θέλετε να διαγράψετε τον λογαριασμό σας?'
     deleted_user: 'διεγραμμένος χρήστης'
     no_password_because_oauth: 'Δεν απαιτείται κωδικός διότι εισέρχεστε με εξωτερικό πάροχο.'
@@ -363,10 +376,11 @@ el:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Ολοκληρώθηκε'
     tried: 'Δοκιμάστηκε'
@@ -448,6 +462,7 @@ el:
     student_not_found: "Δεν ήταν δυνατή η εύρεση ενός ή περισσότερων μαθητών."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
     already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Μάθετε με κώδικα Studio"
     description: "Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια, εφαρμογές και τέχνη με τη χρήση κώδικα."
@@ -455,6 +470,8 @@ el:
   gender:
     male: 'Αγόρι'
     female: 'Κορίτσι'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Προτιμώ να μην απαντήσω'
   user_type:
     student: 'φοιτητής/μαθητής'
@@ -702,12 +719,12 @@ el:
     sign_out: 'Εάν δεν επιθυμείτε να παρέχετε την ηλικία σας, μπορείτε να <a href="%{url}">αποσυνδεθείτε</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Όροι"
     privacy: "Πολιτική Aπορρήτου"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "Εκτύπωσε"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -718,25 +735,25 @@ el:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Αποθήκευση"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Άλλα
+        other: "Άλλα"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "Υποβολή"
     decline: "Κλείσιμο"
   zendesk_too_young_message: 'Συγγνώμη, νεαρότεροι χρήστες δεν μπορείτε να συνδεθείτε στον ιστότοπο υποστήριξης. Μπορείτε να περιηγηθείτε στο <a href="http://support.code.org">support.code.org</a> χωρίς σύνδεση ή να ζητήσετε από τους γονείς σας ή το δάσκαλό σας να επικοινωνήσει μαζί μας.'
@@ -762,7 +779,7 @@ el:
     delete: "Διαγραφή"
     import: "Εισαγωγή"
     share_link_import_bad_link_header: "Η σύνδεση κοινής χρήσης δεν αναγνωρίζεται"
-    share_link_import_bad_link_body: 'Δεν ήταν δυνατή η εισαγωγή αυτής της σύνδεσης κοινής χρήσης. Βεβαιώσου ότι χρησιμοποιείς σύνδεση από παζλ του Minecraft: Agent και ότι αντέγραψες ολόκληρη τη σύνδεση.'
+    share_link_import_bad_link_body: "Δεν ήταν δυνατή η εισαγωγή αυτής της σύνδεσης κοινής χρήσης. Βεβαιώσου ότι χρησιμοποιείς σύνδεση από παζλ του Minecraft: Agent και ότι αντέγραψες ολόκληρη τη σύνδεση."
     share_link_import_error_header: "Κάτι δεν πήγε καλά."
     share_link_import_error_body: "Παρουσιάστηκε πρόβλημα με την εισαγωγή αυτής της σύνδεσης κοινής χρήσης. Δοκίμασε ξανά."
     exit: "Επιστροφή στο Μάθημα"
@@ -865,8 +882,9 @@ el:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ el:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -984,3 +1007,14 @@ el:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Συμφωνώ'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ναι'

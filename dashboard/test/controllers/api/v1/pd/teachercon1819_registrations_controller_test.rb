@@ -33,11 +33,11 @@ module Api::V1::Pd
     end
 
     test 'only regional partner users can submit partner registrations' do
-      partner = create :workshop_organizer, :as_regional_partner_program_manager
+      partner = create :program_manager
 
       assert_no_difference 'Pd::Teachercon1819Registration.count' do
-        put :create_partner, params: {
-          form_data: build(:pd_teachercon1819_registration_hash, :partner_registration),
+        put :create_partner_or_lead_facilitator, params: {
+          form_data: build(:pd_teachercon1819_registration_hash, :partner_accepted),
           regionalPartnerId: partner.regional_partners.first.id
         }
         assert_response :forbidden
@@ -45,8 +45,8 @@ module Api::V1::Pd
 
       assert_creates Pd::Teachercon1819Registration do
         sign_in partner
-        put :create_partner, params: {
-          form_data: build(:pd_teachercon1819_registration_hash, :partner_registration),
+        put :create_partner_or_lead_facilitator, params: {
+          form_data: build(:pd_teachercon1819_registration_hash, :partner_accepted),
           regionalPartnerId: partner.regional_partners.first.id
         }
         assert_response :success

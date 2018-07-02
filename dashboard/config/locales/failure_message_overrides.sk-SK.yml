@@ -1,68 +1,51 @@
-"sk":
+---
+sk:
   data:
     failure_message_overrides:
-      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Code Studio Puzzle Challenge Var - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: Pekný pokus!
+        Skús to znova aby to bolo správne.
       Course 4 Artist Vars 10_failure_message_override: |-
         Make sure you use the sides
         variable!
-      Course 4 Playlab For Loops 4b_failure_message_override: |-
-        Remember, both characters
-        should get to their flags in the same number of moves!
-      Course 4 Playlab For Loops 5b_failure_message_override: |-
-        Remember, both characters
-        need to stop in the same place.
+      Course 4 Playlab For Loops 4b_failure_message_override: Pamätaj si, že by sa
+        obe postavy mali dostať na ich vlajky s rovnakým počtom hlasov!
+      Course 4 Playlab For Loops 5b_failure_message_override: Pamätaj si, že sa obe
+        postavy musia zastaviť na rovnako mieste.
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"
-      Kiki_StarWars_Test_5_failure_message_override: Game over!
-      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
+      Kiki_StarWars_Test_5_failure_message_override: Koniec hry!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Koniec hry!
       MC HOC 2016 Level 2-2_failure_message_override: |-
         Use `move forward` and `turn`
         commands to get your chicken moving.
@@ -100,19 +83,21 @@
       MC HOC 2016 Village Test_failure_message_override: |-
         You need to make the Iron
         Golem chase and attack the zombies to win.
-      WhileAdventure_failure_message_override: |-
-        Congratulations!  You gathered X
-        coins!
+      Valentine_playlab_01_failure_message_override: Skoro! Skús ešte raz.
+      WhileAdventure_failure_message_override: Gratulujem!  Zhromaždil si X mincí!
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: |-
+        You must add two
+        or more new actors to your game and program them to move.
       grade4_scaffolded_project3_failure_message_override: |-
         You must add two or more
         new actors that move to your game.
-      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
-      sample1_failure_message_override: Congratulations!  You gathered X coins!
-      sample4_failure_message_override: Congratulations!  You gathered X coins!
+      kikiTesta_failure_message_override: Gratulujem!  Zhromaždil si X mincí!
+      sample1_failure_message_override: Gratulujem!  Zhromaždil si X mincí!
+      sample4_failure_message_override: Gratulujem!  Zhromaždil si X mincí!
       sample6_failure_message_override: |-
         Not quite.  Keep trying!  [Move to Play
         Zone]
-      sample8_failure_message_override: Congratulations!  You gathered X coins!
+      sample8_failure_message_override: Gratulujem!  Zhromaždil si X mincí!

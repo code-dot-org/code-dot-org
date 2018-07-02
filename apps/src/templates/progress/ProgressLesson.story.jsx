@@ -26,7 +26,7 @@ const defaultProps = {
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressLesson', module)
+    .storiesOf('Progress/ProgressLesson', module)
     .addStoryTable([
       {
         name:'progress lesson',

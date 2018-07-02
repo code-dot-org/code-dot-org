@@ -1,4 +1,4 @@
-var tiles = require('./tiles');
+var tiles = require('@code-dot-org/maze').tiles;
 var Direction = tiles.Direction;
 var MoveDirection = tiles.MoveDirection;
 var TurnDirection = tiles.TurnDirection;
@@ -23,24 +23,24 @@ var API_FUNCTION = function (fn) {
  * @return {boolean} True if there is a path.
  */
 var isPath = function (direction, id) {
-  var effectiveDirection = Maze.pegmanD + direction;
+  var effectiveDirection = Maze.controller.pegmanD + direction;
   var square;
   var command;
   switch (tiles.constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
-      square = Maze.map.getTile(Maze.pegmanY - 1, Maze.pegmanX);
+      square = Maze.controller.map.getTile(Maze.controller.pegmanY - 1, Maze.controller.pegmanX);
       command = 'look_north';
       break;
     case Direction.EAST:
-      square = Maze.map.getTile(Maze.pegmanY, Maze.pegmanX + 1);
+      square = Maze.controller.map.getTile(Maze.controller.pegmanY, Maze.controller.pegmanX + 1);
       command = 'look_east';
       break;
     case Direction.SOUTH:
-      square = Maze.map.getTile(Maze.pegmanY + 1, Maze.pegmanX);
+      square = Maze.controller.map.getTile(Maze.controller.pegmanY + 1, Maze.controller.pegmanX);
       command = 'look_south';
       break;
     case Direction.WEST:
-      square = Maze.map.getTile(Maze.pegmanY, Maze.pegmanX - 1);
+      square = Maze.controller.map.getTile(Maze.controller.pegmanY, Maze.controller.pegmanX - 1);
       command = 'look_west';
       break;
   }
@@ -66,29 +66,29 @@ var move = function (direction, id) {
     return;
   }
   // If moving backward, flip the effective direction.
-  var effectiveDirection = Maze.pegmanD + direction;
+  var effectiveDirection = Maze.controller.pegmanD + direction;
   var command;
   switch (tiles.constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
-      Maze.pegmanY--;
+      Maze.controller.pegmanY--;
       command = 'north';
       break;
     case Direction.EAST:
-      Maze.pegmanX++;
+      Maze.controller.pegmanX++;
       command = 'east';
       break;
     case Direction.SOUTH:
-      Maze.pegmanY++;
+      Maze.controller.pegmanY++;
       command = 'south';
       break;
     case Direction.WEST:
-      Maze.pegmanX--;
+      Maze.controller.pegmanX--;
       command = 'west';
       break;
   }
   Maze.executionInfo.queueAction(command, id);
-  if (Maze.subtype.isWordSearch()) {
-    Maze.subtype.markTileVisited(Maze.pegmanY, Maze.pegmanX, false);
+  if (Maze.controller.subtype.isWordSearch()) {
+    Maze.controller.subtype.markTileVisited(Maze.controller.pegmanY, Maze.controller.pegmanX, false);
   }
   if (Maze.shouldCheckSuccessOnMove()) {
     Maze.checkSuccess();
@@ -103,14 +103,14 @@ var move = function (direction, id) {
 var turn = function (direction, id) {
   if (direction === TurnDirection.RIGHT) {
     // Right turn (clockwise).
-    Maze.pegmanD += TurnDirection.RIGHT;
+    Maze.controller.pegmanD += TurnDirection.RIGHT;
     Maze.executionInfo.queueAction('right', id);
   } else {
     // Left turn (counterclockwise).
-    Maze.pegmanD += TurnDirection.LEFT;
+    Maze.controller.pegmanD += TurnDirection.LEFT;
     Maze.executionInfo.queueAction('left', id);
   }
-  Maze.pegmanD = tiles.constrainDirection4(Maze.pegmanD);
+  Maze.controller.pegmanD = tiles.constrainDirection4(Maze.controller.pegmanD);
 };
 
 /**
@@ -120,7 +120,7 @@ var turn = function (direction, id) {
  * @param {string} id ID of block that triggered this action.
  */
 var turnTo = function (newDirection, id) {
-  var currentDirection = Maze.pegmanD;
+  var currentDirection = Maze.controller.pegmanD;
   if (isTurnAround(currentDirection, newDirection)) {
     var shouldTurnCWToPreferStageFront = currentDirection - newDirection < 0;
     var relativeTurnDirection = shouldTurnCWToPreferStageFront ? TurnDirection.RIGHT : TurnDirection.LEFT;
@@ -210,35 +210,35 @@ exports.isPathLeft = API_FUNCTION(function (id) {
 });
 
 exports.pilePresent = API_FUNCTION(function (id) {
-  var x = Maze.pegmanX;
-  var y = Maze.pegmanY;
-  return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) > 0;
+  var x = Maze.controller.pegmanX;
+  var y = Maze.controller.pegmanY;
+  return Maze.controller.map.isDirt(y, x) && Maze.controller.map.getValue(y, x) > 0;
 });
 
 exports.holePresent = API_FUNCTION(function (id) {
-  var x = Maze.pegmanX;
-  var y = Maze.pegmanY;
-  return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) < 0;
+  var x = Maze.controller.pegmanX;
+  var y = Maze.controller.pegmanY;
+  return Maze.controller.map.isDirt(y, x) && Maze.controller.map.getValue(y, x) < 0;
 });
 
 exports.currentPositionNotClear = API_FUNCTION(function (id) {
-  var x = Maze.pegmanX;
-  var y = Maze.pegmanY;
-  return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) !== 0;
+  var x = Maze.controller.pegmanX;
+  var y = Maze.controller.pegmanY;
+  return Maze.controller.map.isDirt(y, x) && Maze.controller.map.getValue(y, x) !== 0;
 });
 
 exports.fill = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction('putdown', id);
-  var x = Maze.pegmanX;
-  var y = Maze.pegmanY;
-  Maze.map.setValue(y, x, Maze.map.getValue(y, x) + 1);
+  var x = Maze.controller.pegmanX;
+  var y = Maze.controller.pegmanY;
+  Maze.controller.map.setValue(y, x, Maze.controller.map.getValue(y, x) + 1);
 });
 
 exports.dig = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction('pickup', id);
-  var x = Maze.pegmanX;
-  var y = Maze.pegmanY;
-  Maze.map.setValue(y, x, Maze.map.getValue(y, x) - 1);
+  var x = Maze.controller.pegmanX;
+  var y = Maze.controller.pegmanY;
+  Maze.controller.map.setValue(y, x, Maze.controller.map.getValue(y, x) - 1);
 });
 
 exports.notFinished = API_FUNCTION(function () {
@@ -258,45 +258,49 @@ exports.loopHighlight = API_FUNCTION(function (id) {
  * whether or not we're a Bee level
  */
 exports.getNectar = API_FUNCTION(function (id) {
-  Maze.subtype.getNectar(id);
+  if (Maze.controller.subtype.tryGetNectar()) {
+    Maze.executionInfo.queueAction("nectar", id);
+  }
 });
 
 exports.makeHoney = API_FUNCTION(function (id) {
-  Maze.subtype.makeHoney(id);
+  if (Maze.controller.subtype.tryMakeHoney()) {
+    Maze.executionInfo.queueAction("honey", id);
+  }
 });
 
 exports.atFlower = API_FUNCTION(function (id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
+  var col = Maze.controller.pegmanX;
+  var row = Maze.controller.pegmanY;
   Maze.executionInfo.queueAction("at_flower", id);
-  return Maze.subtype.isFlower(row, col, true);
+  return Maze.controller.subtype.isFlower(row, col, true);
 });
 
 exports.atHoneycomb = API_FUNCTION(function (id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
+  var col = Maze.controller.pegmanX;
+  var row = Maze.controller.pegmanY;
   Maze.executionInfo.queueAction("at_honeycomb", id);
-  return Maze.subtype.isHive(row, col, true);
+  return Maze.controller.subtype.isHive(row, col, true);
 });
 
 exports.nectarRemaining = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("nectar_remaining", id);
-  return Maze.subtype.nectarRemaining(true);
+  return Maze.controller.subtype.nectarRemaining(true);
 });
 
 exports.honeyAvailable = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("honey_available", id);
-  return Maze.subtype.honeyAvailable();
+  return Maze.controller.subtype.honeyAvailable();
 });
 
 exports.nectarCollected = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("nectar_collected", id);
-  return Maze.subtype.nectars_.length;
+  return Maze.controller.subtype.nectars_.length;
 });
 
 exports.honeyCreated = API_FUNCTION(function (id) {
   Maze.executionInfo.queueAction("honey_created", id);
-  return Maze.subtype.honey_;
+  return Maze.controller.subtype.honey_;
 });
 
 /**
@@ -304,39 +308,51 @@ exports.honeyCreated = API_FUNCTION(function (id) {
  */
 
 exports.getCorn = API_FUNCTION(function (id) {
-  Maze.subtype.getCorn(id);
+  if (Maze.controller.subtype.tryGetCorn()) {
+    Maze.executionInfo.queueAction("get_corn", id);
+  }
 });
 
 exports.getPumpkin = API_FUNCTION(function (id) {
-  Maze.subtype.getPumpkin(id);
+  if (Maze.controller.subtype.tryGetPumpkin()) {
+    Maze.executionInfo.queueAction("get_pumpkin", id);
+  }
 });
 
 exports.getLettuce = API_FUNCTION(function (id) {
-  Maze.subtype.getLettuce(id);
+  if (Maze.controller.subtype.tryGetLettuce()) {
+    Maze.executionInfo.queueAction("get_lettuce", id);
+  }
 });
 
 exports.atCorn = API_FUNCTION(function (id) {
-  return Maze.subtype.atCorn(id);
+  Maze.executionInfo.queueAction('at_corn', id);
+  return Maze.controller.subtype.atCorn(id);
 });
 
 exports.atPumpkin = API_FUNCTION(function (id) {
-  return Maze.subtype.atPumpkin(id);
+  Maze.executionInfo.queueAction('at_pumpkin', id);
+  return Maze.controller.subtype.atPumpkin(id);
 });
 
 exports.atLettuce = API_FUNCTION(function (id) {
-  return Maze.subtype.atLettuce(id);
+  Maze.executionInfo.queueAction('at_lettuce', id);
+  return Maze.controller.subtype.atLettuce(id);
 });
 
 exports.hasCorn = API_FUNCTION(function (id) {
-  return Maze.subtype.hasCorn(id);
+  Maze.executionInfo.queueAction('has_corn', id);
+  return Maze.controller.subtype.hasCorn(id);
 });
 
 exports.hasPumpkin = API_FUNCTION(function (id) {
-  return Maze.subtype.hasPumpkin(id);
+  Maze.executionInfo.queueAction('has_pumpkin', id);
+  return Maze.controller.subtype.hasPumpkin(id);
 });
 
 exports.hasLettuce = API_FUNCTION(function (id) {
-  return Maze.subtype.hasLettuce(id);
+  Maze.executionInfo.queueAction('has_lettuce', id);
+  return Maze.controller.subtype.hasLettuce(id);
 });
 
 /**
@@ -344,15 +360,19 @@ exports.hasLettuce = API_FUNCTION(function (id) {
  */
 
 exports.plant = API_FUNCTION(function (id) {
-  Maze.subtype.plant(id);
+  if (Maze.controller.subtype.tryPlant()) {
+    Maze.executionInfo.queueAction('plant', id);
+  }
 });
 
 exports.atSoil = API_FUNCTION(function (id) {
-  return Maze.subtype.atSoil(id);
+  Maze.executionInfo.queueAction('at_soil', id);
+  return Maze.controller.subtype.atSoil(id);
 });
 
 exports.atSprout = API_FUNCTION(function (id) {
-  return Maze.subtype.atSprout(id);
+  Maze.executionInfo.queueAction('at_sprout', id);
+  return Maze.controller.subtype.atSprout(id);
 });
 
 /**
@@ -360,7 +380,9 @@ exports.atSprout = API_FUNCTION(function (id) {
  */
 
 exports.collect = API_FUNCTION(function (id) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
-  Maze.subtype.collect(id, row, col);
+  var col = Maze.controller.pegmanX;
+  var row = Maze.controller.pegmanY;
+  if (Maze.controller.subtype.tryCollect(row, col)) {
+    Maze.executionInfo.queueAction('pickup', id);
+  }
 });

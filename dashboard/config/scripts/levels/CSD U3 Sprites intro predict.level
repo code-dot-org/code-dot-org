@@ -34,7 +34,6 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "show_d_pad": "false",
     "callout_json": "[]",
     "start_blocks": "var mySprite = createSprite(300, 100);\r\ndrawSprites();",
     "hide_animation_mode": "true",

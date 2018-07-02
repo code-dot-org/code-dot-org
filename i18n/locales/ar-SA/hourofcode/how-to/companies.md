@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## ألهم الطلاب والمتطوعين لساعة من البرمجة
 
-يوفر موقع code.org الفرصة لموظفي شركتك [ليتواصلوا](%= resolve_url('https://code.org/volunteer') %) مع الفصول المحلية التي تدرس ساعة من البرمجة ليشاركوا خبراتهم في التقنية ويلهموا الطلاب لدراسة علوم الحاسب.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [سجل](%= resolve_url('https://code.org/volunteer') %) للتطوع.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - لمزيد من التعليمات حول تشجيع الموظفين وربط الموظفين بالفصول الدراسية، تحقق من [دليل الشركاء المتعاونين](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## طرق إضافية للشركات لدعم "ساعة من البرمجة":
 
-- اسأل المدير التنفيذي الخاص بك ل[ إرسال بريد إلكتروني على مستوى الشركة](%= resolve_url('/promote/resources#sample-emails') %) مؤكدا لهم على أهمية علوم الحاسب الآلي، وتشجيع العاملين على نشر الكلمة. 
+- اسأل المدير التنفيذي الخاص بك ل[ إرسال بريد إلكتروني على مستوى الشركة](%= resolve_url('/promote/resources#sample-emails') %) مؤكدا لهم على أهمية علوم الحاسب الآلي، وتشجيع العاملين على نشر الكلمة.
 - استضف "ساعة ممتعة من ساعة من برمجة" مع زملاء العمل لتجربة[ الأنشطة](%= resolve_url('/learn') %).
 - استضف حدث "ساعة من البرمجة" لفصول دراسية محلية للطلاب أو شركاء غير ربحيين للقيام ب"ساعة من البرمجة" في مكتب الشركة. انظر حدث دليل الاستخدام أدناه.
 
@@ -25,7 +25,7 @@ nav: how_to_nav
 ## 3) اعلن عن "ساعة من البرمجة" الخاص بك
 
 - اعلن عن [ ساعة من البرمجة](%= resolve_url('/promote') %) الخاص بك وشجع الآخرين على الاستضافة.
-- شجع مهندسي البرمجيات في شركتك لزيارة أحد الفصول الدراسية المحلية للمساعدة في "ساعة من البرمجة" والهام الطلاب لدراسة علوم الكمبيوتر. يمكنهم [ التسجيل ](%= resolve_url('https://code.org/volunteer/engineer') %) ليكونوا متصلين بأحد الفصول الدراسية.
+- شجع مهندسي البرمجيات في شركتك لزيارة أحد الفصول الدراسية المحلية للمساعدة في "ساعة من البرمجة" والهام الطلاب لدراسة علوم الكمبيوتر. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2-شاهد هذا الفديو <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -39,20 +39,20 @@ nav: how_to_nav
 
 ## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+للحصول علي أفضل خبره في وقت التعليمات البرمجية ، يجب ان تكون أجهزه الكمبيوتر متصلة بإنترنت. أنت لا تحتاج إلى ** كمبيوتر لأي مشارك ** ويمكنك القيام التعليمات البرمجية-وقت حتى من دون كمبيوتر.
 
-**Plan Ahead!** Do the following before your event starts:
+** قبل الخطة! ** قبل بدء النشاط ، قم بما يلي:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. سيعرفون ان علوم الحاسوب اجتماعية و تعاونية.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- جرب الانشطه علي أجهزه الكمبيوتر أو الاجهزه. تاكد من ان الصوت والفيديو يعملان بشكل صحيح في المستعرضات.
+- إذا كان الحدث الذي تختاره هو حدث صوتي ، الرجاء توفير سماعات الراس أو طلب المشاركين لإحضار سماعات الراس الخاصة بهم.
+- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). وعندما يعمل الأطفال في فرق ، فانهم سيساعدون بعضهم بعضا ويحتاجون إلى اقل من المنظم. سيعرفون ان علوم الحاسوب اجتماعية و تعاونية.
+- ** الإنترنت الخاص بك سرعه منخفضه ؟ ** خطه لعرض أشرطه الفيديو علي الجزء الامامي من الحدث ، بحيث كل طالب لن تضطر إلى تحميل الفيديو. أو حاول الانشطه التي لا تتطلب اتصال بإنترنت.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. رمز--أبدا ساعتك مع الفيديو الملهم
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
+أبدا بالهام المشاركين في الحدث الخاص بك وقت التعليمات البرمجية وشرح كيفيه تاثير علم الكمبيوتر في كل جزء من حياتنا. مشاركه المزيد من المعلومات التي قد تلهمك في علوم الكمبيوتر ودورك في الشركة.
 
 **Show an inspirational video:**
 
@@ -61,31 +61,31 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity to students:**
+**أفكار لإدخال فعاليه وقت التعليمات البرمجية:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- شرح اثر التكنولوجيا علي حياتنا بطريقه تهم كلا من الفتات والفتيان. (الحديث عن إنقاذ الأرواح ، ومساعده الناس ، والاتصال بالناس).
+- إذا كنت شركه التكنولوجيا ، والشركة تعمل علي العروض المرح ، والمنتجات المبتكرة.
+- إذا كنت لا شركه التكنولوجيا ، والشركة تستخدم التكنولوجيا لحل المشاكل وتحقيق أهدافها.
+- اختار مهندسو البرمجيات في شركتك علوم الحاسب الألى وقرروا العمل علي المشاريع ودعوتهم للحديث عنها.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Code!
 
-**Direct participants to the activity**
+**المشاركون المباشرون في النشاط**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- اكتب رابط البرنامج التعليمي على السبورة. اعثر على الرابط هنا [ معلومات عن البرنامج التعليمي الذي اخترته](%= resolve_url('/learn') %) تحت عدد المشاركين.
+- المتعلمين الشباب ، قبل تثبيت صفحه التعليم أو تسجيل كاشاره مرجعيه.
 
-**When participants come across difficulties it's okay to respond:**
+**عندما يواجه شخص ما صعوبات ، فانه من الجيد الاجابه علي النحو التالي:**
 
 - “I don’t know. Let’s figure this out together.”
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?**
+**ما الذي يجب عليك فعله عندما ينتهي أحدهم مبكرا؟**
 
-- They can try another Hour of Code activity at hourofcode.com/learn
-- Or, ask them to help a friend who are having trouble with the activity.
+- يمكنك تجربه نشاط آخر في وقت التعليمات البرمجية من Hourofcode.com/learn
+- أو يمكنه مساعده أصدقائه بمشكله.
 
 [col-33]
 
@@ -101,11 +101,11 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 <p style="clear:both">&nbsp;</p>
 
-## 7) Celebrate
+## 7) الاحتفال
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
+- [ طباعة "فعلت ساعة من التعليمات البرمجية"!](%= resolve_url('/promote/resources#stickers') %) ملصقات.
+- [ ترتيب مخصص تي شيرت](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لموظّفيك.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]

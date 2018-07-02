@@ -141,7 +141,7 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: 'node_modules/@code-dot-org/craft/src/assets',
+          cwd: 'node_modules/@code-dot-org/craft/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/craft',
         },
@@ -431,11 +431,13 @@ describe('entry tests', () => {
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
-    'levelbuilder_craft':          './src/sites/studio/pages/levelbuilder_craft.js',
+    'levelbuilder_craft':           './src/sites/studio/pages/levelbuilder_craft.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
+    'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
+    'shared_blockly_functions/edit':'./src/sites/studio/pages/shared_blockly_functions/edit.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/_dialog':               './src/sites/studio/pages/levels/_dialog.js',
@@ -451,8 +453,8 @@ describe('entry tests', () => {
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'projects/index':               './src/sites/studio/pages/projects/index.js',
-    'projects/public':            './src/sites/studio/pages/projects/public.js',
-    'projects/featured':          './src/sites/studio/pages/projects/featured.js',
+    'projects/public':              './src/sites/studio/pages/projects/public.js',
+    'projects/featured':            './src/sites/studio/pages/projects/featured.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'schoolInfoInterstitial':       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras':         './src/sites/studio/pages/scripts/stage_extras.js',
@@ -494,8 +496,7 @@ describe('entry tests', () => {
     'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
     'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
 
-    pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
-
+    'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
     'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
@@ -528,8 +529,12 @@ describe('entry tests', () => {
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
 
+    'census_reviewers/review_reported_inaccuracies': './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
+
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js'
+    'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
+
+    cookieBanner: './src/cookieBanner/cookieBanner.js',
   };
 
   // Create a config for each of our bundles
@@ -629,7 +634,8 @@ describe('entry tests', () => {
       host: '0.0.0.0',
       watchOptions: {
         aggregateTimeout: 1000,
-        poll: 1000
+        poll: 1000,
+        ignored: /^node_modules\/[^@].*/
       },
     }
   };

@@ -1,0 +1,13 @@
+name 'cspu3_assess1_loop_or_function2_exam_prep'
+right 'Loop'
+wrong 'Function(s)'
+
+markdown <<MARKDOWN
+For this scenario related to turtle drawing, indicate whether it is better to write a loop or a function (or a set of functions) to handle the task:
+
+**Drawing a hexagon (six-sided shape)** 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+To draw a hexagon, a six straight lines are drawn with 120 degrees between each line. In other words, a loop can be used to draw one line and turn 120 degrees, repeated six times.
+MARKDOWN

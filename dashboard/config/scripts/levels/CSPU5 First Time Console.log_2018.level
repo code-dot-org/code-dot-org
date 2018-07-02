@@ -1,0 +1,78 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-04T23:00:39.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setPosition": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Exploring console.log\r\n\r\n<img src=\"https://images.code.org/cdc253db1b9a3685eaf5ea4b6bc30766-image-1444337429645.png\" style=\"width: 250px; float: right; border: solid 1px black; margin-right: 10px\">\r\n\r\nIn the last level, we saw a new command: `console.log`. You should have noticed that it prints out text in the Debug Console below the code workspace.\r\n\r\nThe Debug Console area is an important tool for programmers.  You've seen it display error messages, but you can also have your program display messages there.  \r\n\r\nYou can find `console.log` in the **Variables** code toolbox, and it is the command you use to send messages to the console -- it's just about the simplest thing you can do to make your code generate output.\r\n\r\n**You try it:** Add a console.log statement to say your name\r\n\r\n* Drag out a `console.log` statement into the workspace and add it below the 2 statements there.\r\n\r\n* Following the lead of the first two lines - update the code so that it says your name.\r\n\r\n* The output should look something like this: \r\n\r\n![](https://images.code.org/64c82c1bf7ecb859d84192e5bffb3488-image-1477338603375.png)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "instructions": "Add a 3 console.log messages and test them out. (Click to see full instructions.)",
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "JlXGp6bTBvKm7NMaEQmnK1PcvCqbQoubcDogX9JuRn242tfQsGAxE44+2Mqn\nTRNn\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "start_blocks": "console.log(\"Hello, there!\");\r\nconsole.log(\"My Name is:\");",
+    "palette_category_at_start": "variables",
+    "log_conditions": [
+      {
+        "entries": [
+          "console.log"
+        ],
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "There should be at least 3 console.log commands executed here."
+      }
+    ],
+    "parent_level_id": 6738,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

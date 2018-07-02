@@ -5,43 +5,43 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Aşağıda, devletler, yerel yasama organları, iş liderleri vb. tarafından kullanılabilek Bilgisayar Bilimleri Eğitim Haftasıeditöryel desteği ve amaçlarını bulunmaktadır.
 
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
-**Title: Computing…Where the Jobs Are**
+**Başlık: Hesaplanıyor... İşler nerede**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**[NAME] tarafından ve [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
 Bigisayarlar her yerde. Ceplerimizde. Duvarlarımızda. Arabalarımızda. Elektrik şebekelerinden trafik ışıklarına ve finans sektörünün en ufak birimlerine kadar, altyapımızın kritik bir parçasıdırlar. Ve bütün bu bilgisayarların tek bir ortak noktası var. Ne yapacaklarını söyleyecek yazılımlara ihtiyaçları var.
 
 Fakat tam olarak kimler bu yazılımı yazacak?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Dünyamızın teknoloji ile ne kadar hızlı değiştiğini düşünün, bilgisayar bilimi dallarında okuyan öğrenci sayısının tüm zamanların en yüksek seviyesinde olduğunu bekleyebilirsin. Yanılıyorsun. Aslında, on yıl öncesine göre daha az öğrenci bilgisayar bilimlerinde okuyor, daha az okul bu alanda eğitim veriyor.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+Yetenekli yazılımcılara ihtiyacımız olduğu zamanlara yetersiz sayıda bilgisayar mühendisi ile giriyoruz. Yüksek işsizlik seviyesine rağmen tonlarca iş fırsatı, çoğu burada **[INSERT STATE/CITY]**, doğru beceri setleriyle donatılmış birey eksikliğinden doldurulamamakta.
 
-Why is this? And how can we address it?
+Neden böyle? Ve bunu nasıl çözebiliriz?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Bu sorun orta okul ve lise eğitimlerinde başlıyor. 10 okuldan 9'u bilgisayar programlama derslerini müfredatlarında bulundurmuyor. **[SCHOOL DISTRICT]** geçen yıl, **[NUMBER]** sayıda öğrencinin girdiği üniversite seviyesinde İleri Düzey Yerleştirme Programı Bilgisayar Bilimleri sınavından, sadece **[%]** geçerli dereceyi aldı. Kısacası bu yüksek ücretli, can alıcı iş imkanı için öğrencilerimizi hazırlamakta veya teşvik etmekte yeterli şeyleri yapmıyoruz.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Hemen hemen tüm büyük programlama inovasyonları bu ülkede icat edilmiştir ama şimdi bir şey yapmazsak bu liderliği kaybetme riski altındayız.
 
 Bazı değişiklikler yapmalıyız.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Titiz bir bilgisayar bilimleri eğitimi, lise matematik veya fen bölümleri mezuniyet gereksinimlerinde olumlu bir değişime sebep olacaktır. **[INSERT STATE]**'de bilgisayar bilim dersleri seçmelidir. Akademik talepler göz önüne alındığında, öğrencilerin seçmeli bilgisayar bilimleri derslerini almaya gücü yetmiyor. Ve bu değişikliğin yapılması büyük bir etki oluşturabilir. Bilgisayar bilimi eğitiminin mezuniyet gereksinimi sayıldığı devletlerde, eğitime katılan yetersiz hizmet alan azınlıklardan öğrenci sayısı, eğitimin seçmeli olduğu devletlere oranla yüzde elli daha fazla.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+Ayrıca, bilgisayar bilimlerine ve yazılıma ilgi duymalarını sağlamak adına genç yaştaki öğrencilerle de çalışmalıyız. Çocuklarımız sadece uygulamaları kullanmak ve oyun oynamak yerine bunları nasıl yaratacaklarını da öğrenmeliler. Çocuklar kodlamanın temellerini ikinci sınıf gibi erken bir çağda öğrenebilirler. 
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Daha fazla bilgisayar bilimleri öğretmenini işe almalıyız ve onları mesleki gelişimleri için teşvik etmeliyiz. Bugün öğretmenlerin erişebileceği, öğrencileri için son teknolojik gelişmelere hakim olabilecekleri birçok çevrimiçi kaynak bulunmakta.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+Bureau of Labor Firmasının istatistiklerine göre 2020 yılına doğru bilim, teknoloji, mühendislik ve matematik alanında 9.2 milyon iş hacmi olacak. Bu işlerin yarısı -4.6 milyon- bilgisayar ve bilgi teknolojileri üzerine olacak. Ve bilgisayar bilimleri yükselerek 21. yüzyılın temel bilgi birikimlerinden olacak. Eğer çocuklarımıza gerekli becerileri kazanmaları için fırsat yaratmazsak, bu işleri kim yapacak?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Bu hafta, <%= campaign_date('full') %>, Bilgisayar bilimleri eğitimi haftası. Bu hafta boyunca **[STATE]** okullarımızda, öğrencilerimiz ulusal kodlama saatine dahil olacak, bilgisayar bilimlerinin gizemini çözecek ve umarız ki daha fazla bilgi edinmek için iştahları açılacak. Ben de onlarla olacağım ve seni de katılmaya davet ediyorum. Herkes kodlamayı öğrenmeli. Daha fazla bilgi edinmek ve başlamak için https://hourofcode.com/<%= @country %> sitesini ziyaret edin. Ve **[STATE]** 'da daha fazla okula erişebilmemiz için çabalarımızı destekleyin.
 
 <%= view :signup_button %>

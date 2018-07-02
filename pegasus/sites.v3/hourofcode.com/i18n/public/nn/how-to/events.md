@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Førebuingar før Kodetimen
 
 - Bestem stad, dato og tidspunkt.
-- Send [eit brev](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) for å invitere ordføraren, skuleleiaren, stortingspolitikaren eller ein lokal bedriftsleiar til å komme å preike. Sjekk ut vår[slik-gjer-du-det-verktøykasse](<%=resolve_url('/files/elected-official.pdf')%>) for meir info om når du inviterer ein folkevald til ein Kodetime.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Inviter media/presse til dømes lokale nyheitstasjonar, aviser, bloggarar innan undervisning og It. Sjå [pressepakka](<%= resolve_url('/promote/press-kit') %>) vår for hjelp.
 
 ## 2. Under Kodetimen
@@ -39,7 +39,7 @@ Vurdér å vere vert for born frå 1.-5. klasse og inviter foreldre til ein time
 
 **Arrangement:** Kodeveka med kick-off-samling for heile skulen
 
-**Dato:** 5. desember (starten på Kodeveka)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Tid:** I løpet av skuledagen, helst på føremiddagen. Ca 1 time.
 

@@ -126,7 +126,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 - Das Original-Launch-Video von Code.org Start video, mit Bill Gates, Mark Zuckerberg und NBA-Star Chris Bosh (es stehen mehrere Versionen zur Verfügung: [1 Minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 Minuten](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9 Minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- [Präsident Obama ruft alle Schülerinnen und Schüler dazu auf, sich mit Informatik zu beschäftigen](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 

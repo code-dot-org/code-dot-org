@@ -6,9 +6,8 @@ import {generateAuthoredHints} from './authoredHintUtils';
 import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
+import codegen from './lib/tools/jsinterpreter/codegen';
 
-// TODO (br-pair) : This is to expose methods we need in the global namespace
-// for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
   arrangeBlockPosition: (...args) => studioApp().arrangeBlockPosition(...args),
@@ -77,6 +76,28 @@ export default function (app, levels, options) {
 
     blocksCommon.install(Blockly, blockInstallOptions);
     options.blocksModule.install(Blockly, blockInstallOptions);
+
+    if (level) {
+      const levelCustomBlocksConfig = !level.customBlocks ? [] :
+        JSON.parse(level.customBlocks).map(blockConfig =>
+          ({ config: blockConfig, category: 'Custom' }));
+      const sharedBlocksConfig = level.sharedBlocks || [];
+      const customBlocksConfig = [
+        ...sharedBlocksConfig,
+        ...levelCustomBlocksConfig,
+      ];
+      if (options.blocksModule.installCustomBlocks && customBlocksConfig.length > 0) {
+        options.blocksModule.installCustomBlocks(
+          Blockly,
+          blockInstallOptions,
+          customBlocksConfig,
+          options.level,
+          level.hideCustomBlocks && !options.level.edit_blocks,
+        );
+      }
+    }
+
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
   }
 
   function onReady() {

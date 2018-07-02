@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
 import RGBColor from 'rgbcolor';
-import constants from './constants';
+import {Position} from './constants';
+import {dataURIFromURI} from './imageUtils';
 import './polyfills';
 
 /**
@@ -230,25 +231,6 @@ export function isInfiniteRecursionError(err) {
 }
 
 /**
- * IE9 throws an exception when trying to access the media field of a stylesheet
- */
-export function browserSupportsCssMedia() {
-  var styleSheets = document.styleSheets;
-  for (var i = 0; i < styleSheets.length; i++) {
-    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
-    try {
-      if (rules.length > 0) {
-        // see if we can access media
-        rules[0].media;
-      }
-    } catch (e) {
-      return false;
-    }
-  }
-  return true;
-}
-
-/**
  * Remove escaped characters and HTML to convert some rendered text to what should appear in user-edited controls
  * @param text
  * @returns String that has no more escape characters and multiple divs converted to newlines
@@ -359,16 +341,6 @@ export function showUnusedBlockQtip(targetElement) {
   };
 
   showGenericQtip(targetElement, title, message, position);
-}
-
-/**
- * Converts degrees into radians.
- *
- * @param {number} degrees - The degrees to convert to radians
- * @return {number} `degrees` converted to radians
- */
-export function degreesToRadians(degrees) {
-    return degrees * (Math.PI / 180);
 }
 
 /**
@@ -554,35 +526,35 @@ export function normalize(vector) {
  */
 export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
   switch (position) {
-    case constants.Position.OUTTOPOUTLEFT:
-    case constants.Position.TOPOUTLEFT:
-    case constants.Position.MIDDLEOUTLEFT:
-    case constants.Position.BOTTOMOUTLEFT:
-    case constants.Position.OUTBOTTOMOUTLEFT:
+    case Position.OUTTOPOUTLEFT:
+    case Position.TOPOUTLEFT:
+    case Position.MIDDLEOUTLEFT:
+    case Position.BOTTOMOUTLEFT:
+    case Position.OUTBOTTOMOUTLEFT:
       return -spriteWidth;
-    case constants.Position.OUTTOPLEFT:
-    case constants.Position.TOPLEFT:
-    case constants.Position.MIDDLELEFT:
-    case constants.Position.BOTTOMLEFT:
-    case constants.Position.OUTBOTTOMLEFT:
+    case Position.OUTTOPLEFT:
+    case Position.TOPLEFT:
+    case Position.MIDDLELEFT:
+    case Position.BOTTOMLEFT:
+    case Position.OUTBOTTOMLEFT:
       return 0;
-    case constants.Position.OUTTOPCENTER:
-    case constants.Position.TOPCENTER:
-    case constants.Position.MIDDLECENTER:
-    case constants.Position.BOTTOMCENTER:
-    case constants.Position.OUTBOTTOMCENTER:
+    case Position.OUTTOPCENTER:
+    case Position.TOPCENTER:
+    case Position.MIDDLECENTER:
+    case Position.BOTTOMCENTER:
+    case Position.OUTBOTTOMCENTER:
       return (containerWidth - spriteWidth) / 2;
-    case constants.Position.OUTTOPRIGHT:
-    case constants.Position.TOPRIGHT:
-    case constants.Position.MIDDLERIGHT:
-    case constants.Position.BOTTOMRIGHT:
-    case constants.Position.OUTBOTTOMRIGHT:
+    case Position.OUTTOPRIGHT:
+    case Position.TOPRIGHT:
+    case Position.MIDDLERIGHT:
+    case Position.BOTTOMRIGHT:
+    case Position.OUTBOTTOMRIGHT:
       return containerWidth - spriteWidth;
-    case constants.Position.OUTTOPOUTRIGHT:
-    case constants.Position.TOPOUTRIGHT:
-    case constants.Position.MIDDLEOUTRIGHT:
-    case constants.Position.BOTTOMOUTRIGHT:
-    case constants.Position.OUTBOTTOMOUTRIGHT:
+    case Position.OUTTOPOUTRIGHT:
+    case Position.TOPOUTRIGHT:
+    case Position.MIDDLEOUTRIGHT:
+    case Position.BOTTOMOUTRIGHT:
+    case Position.OUTBOTTOMOUTRIGHT:
       return containerWidth;
   }
 }
@@ -596,35 +568,35 @@ export function xFromPosition(position, containerWidth = 0, spriteWidth = 0) {
  */
 export function yFromPosition(position, containerHeight = 0, spriteHeight = 0) {
   switch (position) {
-    case constants.Position.OUTTOPOUTLEFT:
-    case constants.Position.OUTTOPLEFT:
-    case constants.Position.OUTTOPCENTER:
-    case constants.Position.OUTTOPRIGHT:
-    case constants.Position.OUTTOPOUTRIGHT:
+    case Position.OUTTOPOUTLEFT:
+    case Position.OUTTOPLEFT:
+    case Position.OUTTOPCENTER:
+    case Position.OUTTOPRIGHT:
+    case Position.OUTTOPOUTRIGHT:
       return -spriteHeight;
-    case constants.Position.TOPOUTLEFT:
-    case constants.Position.TOPLEFT:
-    case constants.Position.TOPCENTER:
-    case constants.Position.TOPRIGHT:
-    case constants.Position.TOPOUTRIGHT:
+    case Position.TOPOUTLEFT:
+    case Position.TOPLEFT:
+    case Position.TOPCENTER:
+    case Position.TOPRIGHT:
+    case Position.TOPOUTRIGHT:
       return 0;
-    case constants.Position.MIDDLEOUTLEFT:
-    case constants.Position.MIDDLELEFT:
-    case constants.Position.MIDDLECENTER:
-    case constants.Position.MIDDLERIGHT:
-    case constants.Position.MIDDLEOUTRIGHT:
+    case Position.MIDDLEOUTLEFT:
+    case Position.MIDDLELEFT:
+    case Position.MIDDLECENTER:
+    case Position.MIDDLERIGHT:
+    case Position.MIDDLEOUTRIGHT:
       return (containerHeight - spriteHeight) / 2;
-    case constants.Position.BOTTOMOUTLEFT:
-    case constants.Position.BOTTOMLEFT:
-    case constants.Position.BOTTOMCENTER:
-    case constants.Position.BOTTOMRIGHT:
-    case constants.Position.BOTTOMOUTRIGHT:
+    case Position.BOTTOMOUTLEFT:
+    case Position.BOTTOMLEFT:
+    case Position.BOTTOMCENTER:
+    case Position.BOTTOMRIGHT:
+    case Position.BOTTOMOUTRIGHT:
       return containerHeight - spriteHeight;
-    case constants.Position.OUTBOTTOMOUTLEFT:
-    case constants.Position.OUTBOTTOMLEFT:
-    case constants.Position.OUTBOTTOMCENTER:
-    case constants.Position.OUTBOTTOMRIGHT:
-    case constants.Position.OUTBOTTOMOUTRIGHT:
+    case Position.OUTBOTTOMOUTLEFT:
+    case Position.OUTBOTTOMLEFT:
+    case Position.OUTBOTTOMCENTER:
+    case Position.OUTBOTTOMRIGHT:
+    case Position.OUTBOTTOMOUTRIGHT:
       return containerHeight;
   }
 }
@@ -759,4 +731,36 @@ export function interpolateColors(from, to, value) {
   const g = fromRGB.g * (1 - value) + toRGB.g * value;
   const b = fromRGB.b * (1 - value) + toRGB.b * value;
   return `rgb(${r}, ${g}, ${b})`;
+}
+
+/**
+ * Return a random id which will be consistent for this browser tab or window as long as it remains
+ * open, including if this page is reloaded or if we navigate away and then back to it. The id will
+ * be different for other tabs, including tabs in other browsers or on other machines. Unfortunately,
+ * duplicating a browser tab will result in two tabs with the same id, but this is not common.
+ * @returns {string} A string representing a float between 0 and 1.
+ */
+export function getTabId() {
+  let tabId = tryGetSessionStorage('tabId', false);
+  if (tabId) {
+    return tabId;
+  }
+  trySetSessionStorage('tabId', Math.random() + '');
+  return tryGetSessionStorage('tabId', false);
+}
+
+export function createHiddenPrintWindow(src) {
+  dataURIFromURI(src).then(data => {
+    var iframe = $('<iframe style="position: absolute; visibility: hidden;"></iframe>'); // Created a hidden iframe with just the desired image as its contents
+    iframe.appendTo("body");
+    iframe[0].contentWindow.document.write(`<img src="${data}" style="border: 1px solid #000;" onload="if (document.execCommand('print', false, null)) {  } else { window.print(); }"/>`);
+  });
+}
+
+export function calculateOffsetCoordinates(element, clientX, clientY) {
+  const rect = element.getBoundingClientRect();
+  return {
+    x: Math.round((clientX - rect.left) * element.offsetWidth / rect.width),
+    y: Math.round((clientY - rect.top) * element.offsetHeight / rect.height),
+  };
 }

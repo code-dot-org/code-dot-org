@@ -1,10 +1,11 @@
 class VideosController < ApplicationController
   before_action :authenticate_user!, except: [:test, :embed]
+  before_action :require_levelbuilder_mode, except: [:test, :embed, :index]
   check_authorization except: [:test, :embed]
   load_and_authorize_resource except: [:test, :embed]
   after_action :allow_iframe, only: :embed
 
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: [:edit, :update]
 
   def test
     @video = Video.first
@@ -31,55 +32,57 @@ class VideosController < ApplicationController
     @videos = Video.all
   end
 
-  def show
-  end
-
   def new
     @video = Video.new
   end
 
   def edit
+    @s3_metadata = Video.s3_metadata(@video.download)
   end
 
   def create
-    @video = Video.new(video_params)
+    filename = upload_to_s3
+    @video = Video.new(video_params.merge(download: "https://videos.code.org/#{filename}"))
 
-    respond_to do |format|
-      if @video.save
-        format.html {redirect_to @video, notice: I18n.t('crud.created', Video.model_name.human)}
-        format.json {render action: 'show', status: :created, location: @video}
-      else
-        format.html {render action: 'new'}
-        format.json {render json: @video.errors, status: :unprocessable_entity}
-      end
+    if @video.save
+      Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
+      Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download)
+
+      redirect_to videos_path, notice: I18n.t('crud.created', model: Video.model_name.human)
+    else
+      render action: 'new'
     end
   end
 
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
-    respond_to do |format|
-      if @video.update(video_params)
-        format.html {redirect_to @video, notice: I18n.t('crud.updated', model: Video.model_name.human)}
-        format.json {head :no_content}
-      else
-        format.html {render action: 'edit'}
-        format.json {render json: @video.errors, status: :unprocessable_entity}
-      end
-    end
-  end
+    filename = upload_to_s3
 
-  # DELETE /videos/1
-  # DELETE /videos/1.json
-  def destroy
-    @video.destroy
-    respond_to do |format|
-      format.html {redirect_to videos_url}
-      format.json {head :no_content}
+    if @video.update(video_params.merge(download: "https://videos.code.org/#{filename}"))
+      Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
+      Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download)
+
+      redirect_to videos_path, notice: I18n.t('crud.updated', model: Video.model_name.human)
+    else
+      render action: 'edit'
     end
   end
 
   private
+
+  def upload_to_s3
+    raise 'Expected a video/mp4 (.mp4) file' unless video_params[:download].content_type == 'video/mp4'
+
+    filename = File.basename(video_params[:download].original_filename).parameterize + '.mp4'
+    AWS::S3.upload_to_bucket(
+      'videos.code.org',
+      "levelbuilder/#{filename}",
+      video_params[:download],
+      acl: 'public-read',
+      no_random: true,
+    )
+  end
 
   def allow_iframe
     response.headers['X-Frame-Options'] = 'ALLOWALL'
@@ -103,7 +106,11 @@ class VideosController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def video_params
-    params.require(:video).permit(:name, :key, :youtube_code)
+    params.require(:video).permit(:key, :youtube_code, :download)
+  end
+
+  def i18n_params
+    params.permit(:title)
   end
 
   # This is to fix a ForbiddenAttributesError CanCan issue.

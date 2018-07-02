@@ -13,7 +13,7 @@ var flappyMsg = require('./locale');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var dom = require('../dom');
 var constants = require('./constants');

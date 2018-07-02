@@ -1,4 +1,5 @@
-"it":
+---
+it:
   data:
     failure_message_overrides:
       Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Bel tentativo!
@@ -73,10 +74,14 @@
         Golem, prova a cambiare le regole, aggiungendo 2 punti per ogni Golem preso.
       MC HOC 2016 Village Test_failure_message_override: Per vincere, devi dare la
         caccia al Golem di Ferro e attaccare gli zombie.
+      Valentine_playlab_01_failure_message_override: Quasi!  Prova ancora.
       WhileAdventure_failure_message_override: Congratulazioni! Hai raccolto X monete!
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: |-
+        You must add two
+        or more new actors to your game and program them to move.
       grade4_scaffolded_project3_failure_message_override: |-
         You must add two or more
         new actors that move to your game.

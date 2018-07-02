@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Opublikujcie komunikat prasowy.** [ Skorzystajcie z tego przykładu](<%= resolve_url('/promote/official-press-release') %>).
 
-9. **Skorzystajcie z lokalnych powiązań.** Odwiedźcie, [ < % = resolve_url('https://code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) aby dowiedzieć się więcej o edukacji informatycznej w Waszym stanie. Podpiszcie petycję u siebie i otrzymacie uaktualnienie od Code.org na rzecz Waszych zabiegów o wsparcie lokalne, stanowe i federalne.
+9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Podpiszcie petycję u siebie i otrzymacie uaktualnienie od Code.org na rzecz Waszych zabiegów o wsparcie lokalne, stanowe i federalne.
 
 <%= view :signup_button %>

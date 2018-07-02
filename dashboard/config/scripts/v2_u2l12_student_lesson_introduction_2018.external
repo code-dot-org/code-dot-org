@@ -1,0 +1,42 @@
+name 'v2 U2L12 Student Lesson Introduction_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 2: Lesson 12 - Discover a Data Story
+
+## Background
+
+In the previous lesson we learned how to use a data visualization tool to create a visualization. 
+Sometimes data in its raw state is simply too big to be able to look at and derive any meaning. Even when the data is summarized in a table it can be difficult to “see” what the data shows.  
+
+The point of this lesson is that **data visualization is a useful tool for discovery**.  In today’s activity you and a partner will investigate some sets of data on your own and use visualization to discover a connection or trend. There are several datasets for you to choose from. 
+
+## Vocabulary
+
+* **README:** A document providing background information about a dataset.
+* **CSV:** Abbreviation of “comma-separated values,” this is a widely-used format for storing data.
+* **Raw data:** The original data as it was collected.
+* **Summary table:** A table of aggregate information about a dataset (e.g., the average, sum, count of some values).
+
+## Lesson
+
+* Explore the 5 datasets with a partner.
+* Choose one to explore more deeply.
+* Use visualization to discover an interesting connection, trend or pattern.
+* Present one along with responses to prompts.
+
+## Resources
+
+* Activity Guide - Discover a Data Story - Activity Guide ([PDF](https://docs.google.com/document/d/1UjKC6300gXuBVQbax38SS3-iaj0-C7sKXUgr7QyCR2s/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1UjKC6300gXuBVQbax38SS3-iaj0-C7sKXUgr7QyCR2s/export?format=doc))
+* Data Visualization 101: How to design charts and graphs - [link](http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf)
+* Rubric - Discover a Data Story - Rubric ([PDF](https://docs.google.com/document/d/1MhysMf-36JRKw_-txcl-4T_Cz0G4rK_zCVWuueDGPig/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1MhysMf-36JRKw_-txcl-4T_Cz0G4rK_zCVWuueDGPig/export?format=doc))
+* Data sets - [Folder](https://drive.google.com/folderview?id=0B6iNirqJ5EuVbUZURElxLUZzdU0&usp=sharing)
+	* College Ranking Data
+    * International Health & Wealth Data
+    * Movie Rating Data
+    * Personality Test Data
+    * Twitter Data 
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

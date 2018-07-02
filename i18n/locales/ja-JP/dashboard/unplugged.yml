@@ -74,7 +74,7 @@ ja:
         title: 動かせ！動かせ！
         desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
       PlantASeed:
-        title: 現実のアルゴリズム：種を植えましょう
+        title: '現実のアルゴリズム：種を植えましょう'
         desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
       BuildingAFoundation:
         title: ピラミッドをたてよう
@@ -163,9 +163,6 @@ ja:
       CollisionDetection:
         title: 衝突検出とピタゴラスの定理
         desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -191,7 +188,7 @@ ja:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
-        title: 現実のアルゴリズム：種を植えましょう
+        title: '現実のアルゴリズム：種を植えましょう'
         desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
       courseA_unplugged_happyMaps:
         title: ハッピーマップ
@@ -265,3 +262,96 @@ ja:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: '現実のアルゴリズム：種を植えましょう'
+        desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
+      UnplugHappyMaps_2018:
+        title: ハッピーマップ
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
+      GoingPlacesSafely_2018:
+        title: 安全な道を通って行く
+        desc: インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: The Big Event
+        desc: ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。
+      GraphPaperProgramming_2018:
+        title: プログラミングのグラフ用紙
+        desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
+      courseD_unplugged_digitalCitizenship_2018:
+        title: コンピューターを使わない活動
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: コンピューターを使わない活動
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: 条件
+        desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。
+      DigitalFootprint_2018:
+        title: あなたのデジタルフットプリント
+        desc: Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.
+      BinaryImages_2018:
+        title: バイナリ画像
+        desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
+      PaperPlanes_2018:
+        title: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+        desc: この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。
+      GettingLoopy_2018:
+        title: Getting Loopy
+        desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。
+      BinaryBracelets_2018:
+        title: バイナリブレスレット
+        desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+      MoveItMoveIt_2018:
+        title: 動かせ！動かせ！
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: プログラミングをリレーする
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

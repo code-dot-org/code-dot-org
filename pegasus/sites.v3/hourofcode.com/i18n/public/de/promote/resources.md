@@ -7,9 +7,9 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Mach die Stunde des Code bekannt
+# Machen Sie "Hour of Code" bekannt
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Veranstalten Sie eine Hour-of-Code? [ Hier die Anleitung](<%= hoc_uri('/resources/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -33,7 +33,7 @@ nav: promote_nav
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Download einer hochauflösenden Version](http://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
@@ -66,7 +66,7 @@ Computers are everywhere, changing every industry on the planet. But fewer than 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
@@ -78,7 +78,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Can we help you host and Hour of Code?
 
-Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 

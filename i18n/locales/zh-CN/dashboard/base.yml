@@ -44,7 +44,7 @@ zh-CN:
   add_teacher_form:
     code:
       label: '添加一个老师:'
-      placeholder: "单元代码(ABCDEF)"
+      placeholder: "小组代码(ABCDEF)"
       instructions: "请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。"
       instructions_short: "输入你的6位小组代码"
     submit: '添加老师'
@@ -59,7 +59,7 @@ zh-CN:
   courses: '课程'
   courses_page:
     title_student: "在代码工作室学习"
-    title_teacher: "用代码工作室来教学"
+    title_teacher: "教授计算机科学"
   unplugged_activity: '不用电脑的活动'
   of: "的"
   more: "更多"
@@ -69,7 +69,7 @@ zh-CN:
   try_k8intro: "尝试我们的K-8计算机科学入门课程（15-25小时）"
   k8intro: "K-8计算机科学入门课程（15-25小时）"
   already_started: "已经开始了吗？从这里继续 >> "
-  demos: 管理员： 所有演示
+  demos: "管理员： 所有演示"
   continue: '继续'
   prize: '奖品'
   more_info: '更多信息'
@@ -85,6 +85,7 @@ zh-CN:
     facebook: 'Facebook'
     windowslive: '微软账户'
     clever: 'Clever 账号'
+    powerschool: 'Powerschool 帐户'
     forgot_password: '忘记密码？'
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
@@ -114,15 +115,25 @@ zh-CN:
     valid_password: "有效的密码 ！"
     invalid_password: "密码必须至少为 6 个字符"
     mismatch_password: "您输入的两个密码不匹配"
-    student_terms: "我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用 Code.org 服务。<1><br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中。学生不会收到除密码重置的邮件外的任何邮件。查看我们的<a href='http://code.org/privacy'>隐私政策</a>来获取更多信息。"
+    agree_tos_privacy: "我同意 <a href='http://code.org/tos'>服务条款</a> 和 <a href='http://code.org/privacy'>隐私策略</a>。"
+    under_13_consent: "如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。"
+    agree_us_website: "我同意使用美国的网站。"
+    my_data_to_us: "我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。"
+    student_terms: "电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='http://code.org/privacy'>隐私政策</a>。"
     teacher_terms: "我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'> 隐私政策</a>。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
+    user_type_button: "更新帐户类型"
     user_type_label: "帐户类型"
     user_type_teacher: "老师"
     user_type_student: "学生"
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
     error: "发生错误。"
+    email_preference_question: "我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？"
+    email_preference_privacy: "(请参阅我们的隐私政策)"
+    email_preference_yes: "是"
+    email_preference_no: "不"
+    email_preference_required: "你必须指定一个电子邮件地址。"
   school_info:
     title: '学校信息（选填）'
     school_country: '学校所在国家'
@@ -171,6 +182,7 @@ zh-CN:
       email: '电子邮件地址'
       submit: '提交'
     reset_errors:
+      captcha_required: '请填写验证码以重置您的密码。'
       invalid_email: '您也许用了无效的电子邮件地址来登录。请联系support@code.org 来获得恢复密码的链接。'
     change_form:
       title: '更换密码'
@@ -217,7 +229,7 @@ zh-CN:
       provider_managed_section: "这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过%{provider} 将你加入，并重新同步该小组。"
     mail:
       student_disassociated:
-        subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
+        subject: "Code.org 提醒: %{student_name} 已不再是您的学生。"
   reports:
     error:
       access_denied: "您没有权限访问此人的信息。"
@@ -306,7 +318,7 @@ zh-CN:
     popup:
       progress_for_user: "%{name}的进度"
       progress: '您的进度'
-      lines: 代码总行数： %{lines}
+      lines: '代码总行数： %{lines}'
       close: '关闭'
       mastery: '概念'
       puzzle_map: '阶段'
@@ -345,11 +357,12 @@ zh-CN:
     email_confirm_needed_required: '你的电子邮件地址%{email} 尚未被确认：'
     email_confirm_wrong_email: '（错误的电子邮件地址？）'
     email_resend_confirm: '重新发送确认指令'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "（如果你不想改变它，就留空白）"
     current_password_hint: '（我们需要您的当前密码以确认您的更改）'
-    delete: '删除你的帐号'
-    delete_text: "点击下面的按钮将会删除你的帐号"
-    delete_text_teacher_note: 请注意：删除你的帐号并不会同时删除你学生的帐号。
+    delete: '删除帐号'
+    delete_text: "删除账号会擦除连接到这个账号的所有信息和进度。"
+    delete_text_teacher_note: "请注意：删除你的帐号并不会同时删除你学生的帐号。"
     delete_confirm: '你确定删除这个帐号吗？'
     deleted_user: '已删除的用户'
     no_password_because_oauth: '无需密码，因为你使用第三方账号登录。'
@@ -360,10 +373,11 @@ zh-CN:
     create_personal_login_under_13_parent_email: '父母/监护人电子邮箱地址'
     create_personal_login_info: '如果想将你的Code.org账户在学年完成后也还保留，你需要在下面创建自己的账户。'
     create_personal_login_terms: "通过创建个人账户，我同意接受Code.org的<a href='%{terms_of_service_url}', target='_blank'>服务条款</a>。如果我在13岁以下，我已经确定了我的父母或法定监护人已经允许我在没有老师的情况下来使用Code.org的服务。"
-    create_personal_login_email_note: 注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。
+    create_personal_login_email_note: "注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。"
     enter_new_login_info: '输入新的登录信息'
     confirm_secret_words: '输入你当前的秘密单词来确认你的身份'
     enter_parent_email: "输入你的父母或监护人的电子邮件地址（用于恢复密码）"
+    update: "更新帐户"
   user_level:
     completed: '已完成'
     tried: '试过了'
@@ -393,7 +407,7 @@ zh-CN:
     online: 在线
     see_details: 查看详细信息
     view_course: 查看课程
-    prize_info: 奖品为参与 （仅限美国公立学校教师）： 最高在课堂奖励 1000 元。
+    prize_info: '奖品为参与 （仅限美国公立学校教师）： 最高在课堂奖励 1000 元。'
     tryfirst: '或者你也可以先试一试，过会儿再注册：'
     trynow: '现在就试试'
     add_hint_help: '请帮助我们将智能提示添加到 Code.org 教程'
@@ -440,11 +454,12 @@ zh-CN:
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_cant_be_current_section: "当前章节不能与新建单元相同。"
-    current_section_dne: "抱歉，章节%{current_section_code} 不存在。请输入不同的章节代码。"
+    current_section_dne: "抱歉，小组%{current_section_code} 不存在。请输入一个不同的小组代码。"
     student_ids_not_entered: "请提供 student_ids。"
     student_not_found: "无法找到这一个或多个学生。"
     all_students_must_be_in_current_section: "所有的学生都必须注册到您的章节中。"
     already_enrolled_in_new_section: "您无法移动这些学生，因为他们已经在这个新的小组里了。"
+    third_party_login: "不能将从第三方工具同步的学生移动到另一个小组。"
   share:
     title: "在代码工作室学习"
     description: "任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。"
@@ -452,6 +467,8 @@ zh-CN:
   gender:
     male: '男性'
     female: '女性'
+    non_binary: '非二进制'
+    not_listed: '期望的术语未列出'
     none: '不愿回答'
   user_type:
     student: '学生'
@@ -587,7 +604,7 @@ zh-CN:
       body: "在你自己的《我的世界》中编写各种动物和其他生物。"
     hero:
       title: "我的世界"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+      body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
     sports:
       title: "运动"
       body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
@@ -699,7 +716,7 @@ zh-CN:
     sign_out: '如果你不想提供你的年龄你可以 <a href="%{url}">注销</a>。'
   terms_interstitial:
     title: "更新的服务条款和隐私政策"
-    intro_desc: 我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。
+    intro_desc: "我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。"
     intro_instructions: "你需要为你教室里的 13 岁以下的学生接受这些新的条款来完全拥有代码工作室访问权限中的所有最新功能。 当你为13岁以下的学生注册帐户，你要确认你的学校有父母的同意来收集学生的个人信息来为学校的所使用，包括代码工作室这样的教育程序。"
     tos: "条目"
     privacy: "隐私政策"
@@ -715,25 +732,25 @@ zh-CN:
     message_with_suggestion: "请检查下面的信息是否正确，或是否需要更新。"
     save: "保存​​"
   race_interstitial:
-    title: 可选︰ 帮助我们跟踪进展来提高在计算机科学中的多元化。
+    title: "可选︰ 帮助我们跟踪进展来提高在计算机科学中的多元化。"
     message: "请告诉我们您的种族（选择所有适用的项目）"
     races:
       - 
-        white: 白人
+        white: "白人"
       - 
-        black: 黑人或非裔美国人
+        black: "黑人或非裔美国人"
       - 
-        hispanic: 西班牙裔或拉丁裔
+        hispanic: "西班牙裔或拉丁裔"
       - 
-        asian: 亚裔
+        asian: "亚裔"
       - 
-        hawaiian: 夏威夷土著或其他太平洋岛民
+        hawaiian: "夏威夷土著或其他太平洋岛民"
       - 
-        american_indian: 美国印第安/阿拉斯加原住民
+        american_indian: "美国印第安/阿拉斯加原住民"
       - 
-        other: 其他
+        other: "其他"
       - 
-        opt_out: 不想说
+        opt_out: "不想说"
     submit: "提交"
     decline: "关闭"
   zendesk_too_young_message: '对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org"> support.code.org</a> 或让你的父母或老师来联系我们。'
@@ -759,7 +776,7 @@ zh-CN:
     delete: "刪除"
     import: "导入"
     share_link_import_bad_link_header: "分享的链接无法识别"
-    share_link_import_bad_link_body: 无法导入共享链接。请确保这个链接是来源于《我的世界：代理人关卡》，并且完整复制了整个链接。
+    share_link_import_bad_link_body: "无法导入共享链接。请确保这个链接是来源于《我的世界：代理人关卡》，并且完整复制了整个链接。"
     share_link_import_error_header: "出错了。"
     share_link_import_error_body: "导入该共享链接时出错。请再试一次。"
     exit: "返回课程"
@@ -843,7 +860,7 @@ zh-CN:
     content: '内容'
     practice: '教学训练'
     peer_review: '互相检查'
-    ramp_up: 'Ramp-Up'
+    ramp_up: '热身'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: '主要课程'
@@ -852,31 +869,37 @@ zh-CN:
     csf_e_2: '课程E的内容'
     csf_f_1: '提升到课程F（可选）'
     csf_f_2: '课程F的内容'
-    csd1_1: 第 1 章︰ 解决问题的流程
-    csd1_2: 第 2 章︰ 计算机和解决问题的能力
-    csd2_1: 第 1 章︰ 网站内容和 HTML
-    csd2_2: 第 2 章︰ 样式和 CSS
-    csd3_1: 第 1 章︰图像和动画
-    csd3_2: 第 2 章︰ 创建游戏
-    csd4_1: 第 1 章︰ 用户为中心的设计
-    csd4_2: 第 2 章︰ 应用程序原型
-    csd5_1: 第 1 章︰ 表达信息
-    csd5_2: 第 2 章︰ 解决数据问题
-    csd6_1: 第 1 章︰ 硬件输出
-    csd6_2: 第 2 章︰ 硬件输入
-    csp1_1: 第一章：表达和传输信息
-    csp1_2: 第二章：发明互联网
-    csp2_1: 第一章：编码和压缩复杂信息
-    csp2_2: 第二章：使用和可视化数据
-    csp3_1: 第一章：编程语言和算法
-    csp4_1: 第一章：大数据和加密的世界
-    csp5_1: 第一章：事件驱动编程
-    csp5_2: 第二章：用数据结构编程
+    csd1_1: '第 1 章︰ 解决问题的流程'
+    csd1_2: '第 2 章︰ 计算机和解决问题的能力'
+    csd2_1: '第 1 章︰ 网站内容和 HTML'
+    csd2_2: '第 2 章︰ 样式和 CSS'
+    csd3_1: '第 1 章︰图像和动画'
+    csd3_2: '第 2 章︰ 创建游戏'
+    csd4_1: '第 1 章︰ 用户为中心的设计'
+    csd4_2: '第 2 章︰ 应用程序原型'
+    csd5_1: '第 1 章︰ 表达信息'
+    csd5_2: '第 2 章︰ 解决数据问题'
+    csd6_1: '第 1 章︰ 用硬件编程'
+    csd6_2: '第 2 章︰ 创建物理原型'
+    csd_survey: '课后问卷'
+    csp1_1: '第一章：表达和传输信息'
+    csp1_2: '第二章：发明互联网'
+    csp2_1: '第一章：编码和压缩复杂信息'
+    csp2_2: '第二章：使用和可视化数据'
+    csp3_1: '第一章：编程语言和算法'
+    csp4_1: '第一章：大数据和加密的世界'
+    csp5_1: '第一章：事件驱动编程'
+    csp5_2: '第二章：用数据结构编程'
     cspSurvey: '调查'
     cspAssessment: '章节测验'
-    csp_ap_1: 第一章：安装
-    csp_ap_2: 第二章：浏览成绩工具
-    csp_ap_3: 第三章：创建性能工具
+    csp_ap_1: '第一章：安装'
+    csp_ap_2: '第二章：浏览成绩工具'
+    csp_ap_3: '第三章：创建性能工具'
+    csp_postap_1: '第一章：使用和可视化数据'
+    csp_postap_2: '第二章：应用程序和数据库'
+    csp2_1_2018: '第2单元︰ 数字信息'
+    csp3_1_2018: '单元3：编程入门'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: '反思提示'
   external_links:
     disclaimer: 免责声明
@@ -887,7 +910,7 @@ zh-CN:
     capsule_title: '你有网络吗？'
     capsule_desc: '使用在线的，基于网页的 <a href="%{url}">%{app_name}</a>。'
     instructions_headline: '没有网络？'
-    instructions: 给教师的指导︰ 如果你的网络条件不好，这些《编程一小时》教程都是可用于下载和安装供脱机使用。选择您的语言和平台、 下载和安装在你的教室里所有的计算机上。你可能想要使用 USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、 保存进度，或打印证书。教师可提前 <a href="%{url}">打印证书</a>。
+    instructions: '给教师的指导︰ 如果你的网络条件不好，这些《编程一小时》教程都是可用于下载和安装供脱机使用。选择您的语言和平台、 下载和安装在你的教室里所有的计算机上。你可能想要使用 USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、 保存进度，或打印证书。教师可提前 <a href="%{url}">打印证书</a>。'
     minecraft_name: '我的世界 编程一小时'
     starwars_blocks_name: '星球大战: 用代码构建一个星系（块）'
     starwars_javascript_name: '星球大战: 用代码构建一个星系-JavaScript'
@@ -981,3 +1004,14 @@ zh-CN:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: '完整课程'
+  cookie_banner:
+    message: '通过继续浏览我们的网站或单击 "我同意", 您同意在你的计算机或设备上存储 cookie。'
+    more_information: "查看 Code.org 的隐私政策。"
+    accept: '我同意'
+  gdpr_dialog:
+    heading: '你同意使用一个美国的网站吗？'
+    message: '你使用本网站的数据可能会发送到美国，并被存储或处理。'
+    link_intro: '有关详细信息, 请参阅我们'
+    privacy_policy: '隐私条款'
+    logout: '注销'
+    yes: '是'

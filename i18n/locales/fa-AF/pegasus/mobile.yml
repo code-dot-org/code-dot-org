@@ -9,15 +9,15 @@
   upgrade_ie_link: "Learn more"
   en: "Computer Science"
   computer_science_edweek: "Computer Science Education Week"
-  csedweek_dates: "December 8-14, 2014"
+  csedweek_dates: "December 3-9, 2018"
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: "Anybody can learn."
   learn_now: "Learn Now"
   petition_message: "Every student in every school should have the opportunity to learn computer science"
-  petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message: 'If you agree, sign your name and join our mailing list along with # others.'
+  petition_sign_message_support: 'If you support us, sign your name and join our mailing list along with # others.'
   petition_join_others: 'Join # others'
   name: "Name"
   email: "Email"
@@ -31,8 +31,8 @@
   og_description: "Every student in every school deserves the opportunity to study computer science."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Computer Science Education Week"
-  csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description: "December 3-9, 2018. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Join the <a href=\"http://hourofcode.com\">Hour of Code</a><br/>December 8 - 14, 2014<br/>"
   hoc2014_students: "Students"
@@ -383,6 +383,8 @@
   homepage_header_donors: "Code.org thanks its supporters"
   homepage_donors_seall: "See all"
   homepage_donors_donate: "Donate"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Learn more"
   contact_form_topic_student: "I'm a student"
   contact_form_topic_parent: "I'm a parent"
   contact_form_topic_teacher: "I'm a teacher/educator"
@@ -510,8 +512,10 @@
   video_title_real_madrid: "Hour of Code with Real Madrid"
   video_title_marco_belinelli: "Hour of Code with Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh on Computer Science"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 min"
   video_2min: "2 min"
+  video_3min: "3 min"
   video_5min: "5 min"
   speak_another_language: "Speak another language?"
   help_translate: "Help us translate."
@@ -525,7 +529,7 @@
   volunteer_engineer_submission_intro_background: "The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13."
   volunteer_engineer_submission_intro_recruit: 'Teachers would love to have somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).'
   volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
-  volunteer_engineer_submission_intro_signup: "Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class=\"form-required-field\">*</span> are required."
+  volunteer_engineer_submission_intro_signup: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the <a href=\"/volunteer/local\">volunteer map</a>. Fields marked with a <span class=\"form-required-field\">*</span> are required."
   volunteer_engineer_submission_intro_links: "Are you a teacher looking for volunteers? Find a local volunteer on our <a href=\"%{volunteer_local}\">volunteer map</a>."
   volunteer_engineer_submission_update_information: "Update your information"
   volunteer_engineer_submission_header_shared: "Information shared with teachers on volunteer map"
@@ -535,8 +539,8 @@
   volunteer_engineer_submission_field_company_placeholder: "Company (or University)"
   volunteer_engineer_submission_field_experience_level: "Experience level"
   volunteer_engineer_submission_field_location: "Location"
-  volunteer_engineer_submission_field_location_desc: "Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. If you are concerned about privacy, please use your work/school address or your city only."
-  volunteer_engineer_submission_field_location_placeholder: "ZIP code, city and state/country, or street address"
+  volunteer_engineer_submission_field_location_desc: "Your location will be used to allow teachers to search for nearby volunteers and will be shown as a pin on the map. Please enter just your city or zip code to protect your privacy."
+  volunteer_engineer_submission_field_location_placeholder: "ZIP code, city and state/country"
   volunteer_engineer_submission_field_location_flexibility: "I can volunteer by... (select all that apply)"
   volunteer_engineer_submission_checkbox_after_hoc: "I’m interested in volunteering year-round"
   volunteer_engineer_submission_field_time_commitment: "Time commitment"
@@ -551,6 +555,10 @@
   volunteer_engineer_submission_field_email: "Email address"
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: "Email address"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
+  volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_final_paragraph: "You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers."
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -632,18 +640,12 @@
   dashboard_course_csp: "AP® Computer Science Principles"
   dashboard_course_csp_desc: "Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing."
   dashboard_landing_loading: "Loading..."
-  dashboard_action_edit: "Edit"
-  dashboard_action_save: "Save"
-  dashboard_action_save_all: "Save all"
   dashboard_action_cancel: "Cancel"
   dashboard_action_delete: "Delete"
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: "Delete?"
-  dashboard_action_remove: "Remove"
-  dashboard_action_remove_confirm: "Remove?"
   dashboard_action_done: "Done"
-  dashboard_action_required: "required"
   dashboard_action_print_certificates: "Print certificates"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
@@ -719,35 +721,22 @@
   dashboard_sections_assign_activity: "Assign Course"
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
-  dashboard_students_add_student: "Add student"
-  dashboard_students_add_students: "Add multiple students"
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_placeholder_name: "Student Name"
   dashboard_students_name: "Name"
   dashboard_students_progress: "Progress"
-  dashboard_students_age: "Age"
-  dashboard_students_gender: "Gender"
   dashboard_students_male: "Male"
   dashboard_students_female: "Female"
-  dashboard_students_secret: "Secret"
-  dashboard_students_password: "Password"
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: "Completed Levels"
   dashboard_students_total_lines: "Lines of Code"
-  dashboard_students_show_secret: "Show secret"
-  dashboard_students_auto_generated: "Auto-generated"
-  dashboard_students_reset_secret: "Reset secret"
-  dashboard_students_reset_password: "Reset password"
   dashboard_students_share_section: "Ask your students to go to <a href=%{join_url}>%{join_url}</a> and type in the section code (%{section_code})"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Print out cards with your students' login information."
   dashboard_students_secret_picture_title: "Secret Picture"
   dashboard_students_secret_picture: "This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in."
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word_title: "Secret Word"
+  dashboard_students_secret_word_title: "Secret Words"
   dashboard_students_secret_word: "This section uses <b>word</b> as its secret type.  It means that each of your students has a pair of secret words used in place of a password to sign in.  Students should use the sign in web address given above to sign in."
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. '
   dashboard_students_join_link: "Tell your students to create their own accounts and join your section at"
@@ -771,7 +760,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
   dashboard_overview: "Overview"
@@ -787,14 +779,15 @@
   dashboard_teacher_worksheet: "teacher worksheet"
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
   dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: 'Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Other"
   dashboard_login_word: "Word"
   dashboard_login_picture: "Picture"
   dashboard_login_none: "Email"
-  dashboard_new_password: "new password"
   dashboard_stage: "Stage"
   dashboard_puzzle: "Puzzle"
   dashboard_question: "Question"
@@ -956,14 +949,30 @@
   coursee_name: "Course E"
   coursef-draft_name: Course F
   coursef_name: "Course F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -971,6 +980,34 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unit 5: Data and Society'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Unit 1: The Internet'
+  csp2-2017_name: 'Unit 2: Digital Information'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
+  csp1-2018_name: 'Unit 1: The Internet'
+  csp2-2018_name: 'Unit 2: Digital Information'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -981,6 +1018,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Full Test - 50 questions"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1004,14 +1042,19 @@
   math_category_name: "Math"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "CS Principles"
+  csp17_category_name: "CS Principles ('17-'18)"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ages 13+"
@@ -1070,12 +1113,12 @@
   course2_gradelevel: "Ages 6-18"
   course3_gradelevel: "Ages 8-18"
   course4_gradelevel: "Ages 10-18"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
-  coursed_gradelevel: "Grade 8+"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
+  coursed_gradelevel: "Ages 7-11"
+  coursee_gradelevel: "Ages 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1178,12 +1221,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1466,12 +1509,13 @@
   header_documentation: "Documentation"
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "Hi %{username}"
   user_header_settings: "Account settings"
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"
-  view_all_sections: "View All Sections"
+  view_all_sections: "View all sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

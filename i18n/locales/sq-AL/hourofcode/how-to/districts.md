@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. Për të vazhduar këtë udhëtim:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Ndiq](%= resolve_url('https://code.org/professional-development-workshops') %) një seminar 1-ditor për të marrë më shumë informacion nga një udhëzues me eksperience në shkenca kompjuterike (Vetëm udhëzues britanik)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

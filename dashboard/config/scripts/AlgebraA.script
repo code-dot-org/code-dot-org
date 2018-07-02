@@ -1,5 +1,6 @@
 hidden 'false'
 login_required 'true'
+has_lesson_plan true
 
 stage 'Calc: Evaluation Blocks'
 level 'Calc Circles of Eval .1'

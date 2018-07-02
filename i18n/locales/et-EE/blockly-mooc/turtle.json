@@ -38,6 +38,7 @@
   "drawUpperWave": "joonista ülemine laine",
   "drawLowerWave": "joonista alumine laine",
   "drawSticker": "joonista kleeps",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "kõrgus",
   "hideTurtle": "peida kunstnik",
   "jump": "hüppa",
@@ -73,6 +74,8 @@
   "penDown": "pliiats alla",
   "penTooltip": "Tõstab või langetab pliiatsi joonistamise alustamiseks või lõpetamiseks.",
   "penUp": "pliiats üles",
+  "pointTo": "point to",
+  "pixels": "piksli võrra",
   "reinfFeedbackMsg": "Siin on sinu joonistus! Jätka selle kallal töötamist või alusta järgmise ülesandega.",
   "setAlpha": "seada alfa",
   "setCharacter": "määra tegelene {character}",
@@ -91,5 +94,6 @@
   "turnTooltip": "Pöörab kunstnikku vasakule või paremale etteantud nurga võrra.",
   "turtleVisibilityTooltip": "Teeb kunstniku nähtavaks või peidab selle.",
   "widthTooltip": "Muudab pliiatsi laiust.",
+  "withSize": "with size",
   "wrongColour": "Sinu pilt on valet värvi. Selle mõistatuse jaoks peab värv olema %1."
 }

@@ -51,11 +51,12 @@
     "disable_procedure_autopopulate": "false",
     "background": "soccer",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"What do you think Kiki will say when you hit `Run`?\",\"hint_id\":\"courseF_playlab_variables2b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/22e175a7f728afe513869b4774286212/courseF_playlab_variables2b.mp3\"}]",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-24 18:54:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 15:26:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-24 18:54:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 15:26:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-18 22:01:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "variables": 1
@@ -254,25 +255,6 @@
                 <title name="NUM">???</title>
               </block>
             </value>
-          </block>
-        </category>
-        <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="wander">
-              <arg name="actor"/>
-            </mutation>
-          </block>
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="jump">
-              <arg name="height"/>
-              <arg name="actor"/>
-            </mutation>
-          </block>
-          <block type="procedures_callnoreturn" inline="false">
-            <mutation name="patrol">
-              <arg name="actor"/>
-              <arg name="speed"/>
-            </mutation>
           </block>
         </category>
         <category name="Variables ">

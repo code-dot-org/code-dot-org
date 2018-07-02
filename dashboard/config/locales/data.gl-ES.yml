@@ -1,4 +1,5 @@
-"gl":
+---
+gl:
   data:
     game:
       name:
@@ -310,129 +311,9 @@
           de TNT!
         maze_3_4: Argh! Escríbeme un programa que me faga pasar polo TNT e chegar
           ao porco.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Conecte un bloque ao bloque "cando premer na frecha para a esquerda"
-          e clic en "Executar". Mova a raqueta usando a frecha para a esquerda para
-          alcanzar o obxectivo final.
-        bounce_2: Conecte un bloque aos bloques "cando premer na frecha para a dereita"
-          e "cando premer na frecha para a esquerda". Mova a raqueta para alcanzar
-          ambos os obxectivos finais.
-        bounce_3: Agora, tente algo semellante co bloque "cando premer na frecha para
-          cima". Mova a raqueta o obxectivo final no cume.
-        bounce_4: Desta vez, vostede precisa agregar catro bloques. Mova a raqueta
-          para todos os catro obxetivos finais para completar este desafío.
-        bounce_5: Imos lanzar unha bóla en dirección á raqueta. Conecte un bloque
-          ao bloque "cando a bóla bata na raqueta" para garantir que a bóla atinxa
-          o obxetivo.
-        bounce_6: Agora o obxetivo está no cume. Vostede precisa conectar bloques
-          en ambos os bloques "cando a bóla bata" para resolver este desafío.
-        bounce_7: Conecte os bloques a cada un dos bloques "cando". Faga a bóla quicar
-          até que ela atinxa o obxetivo.
-        bounce_10: Agora hai un obxetivo na parte de cima. Conecte os bloques "marque
-          un punto" e "marque un punto para o oponente" aos bloques "cando a bóla
-          atinxir o obxetivo" e "cando a bóla non acertar a raqueta" para facer un
-          xogo. Vexa cantos puntos Consegue marcar antes que seu oponente marque dúas
-          veces.
-        bounce_11: Agora Pode conectar bloques ao bloque "cando o xogo comeza". Vostede
-          ten que anexar o novo bloque "xogue unha nova bóla" en máis dun lugar. Alén
-          diso, tente mudar o escenario ou a velocidade da raqueta e da bóla e vexa
-          cantos puntos Pode marcar antes de seu oponente marcar dúas veces.
-        bounce_12: Cree seu propio xogo de rebote. Pode mudar o visual e todas as
-          regras. Cando terminar, clic en Concluír para que seus amigos poidan xogar
-          seu xogo en seus teléfonos móbeis.
         Custom_builder: Arrastre os bloques da caixa de ferramentas para a área de
           traballo para debuxar o nivel que vostede desexa crear. Cando estivese pronto,
           clic en "Executar".
-        flappy_1: Liga un bloque ao bloque "cando premer" e, despois, preme en "Executar".
-          Para moveres o paxariño até ao obxetivo, preme na pantalla.
-        flappy_2: Agora pasamos a ter chan. Liga un bloque ao bloque "cando bater
-          no chan". O teu código ten que TERMINAR O XOGO' cando o paxariño caer ao
-          chan.
-        flappy_3: O bloque "cando o xogo comeza" permite que vostede execute o código
-          cando o xogo comeza. Defina a velocidade do nivel e voe en dirección ao
-          obxetivo.
-        flappy_4: O paxariño vai atravesar os obstáculos, a menos que vostede programe
-          para facelo bater. Conecte un bloque ao bloque "cando atinxir un obstáculo".
-          Seu programa precisa 'TERMINAR O XOGO' cando o paxariño bater nos obstáculos.
-        flappy_5: Imos agregar un panel de puntuación e aumentar os puntos cando o
-          paxariño pasar polos obstáculos. Faga iso no bloque "cando pasar un obstáculo",
-          e entón marque un punto cando o paxariño pasar polo primeiro conxunto de
-          obstáculos.
-        flappy_6: Vexa se vostede aínda pode marcar un punto despois de facer o paxariño
-          bater as ás máis ou menos.
-        flappy_7: De seguida, tente mudar a escena conectando outro bloque ao bloque
-          "cando o xogo comeza".
-        flappy_8: Pode definir o visual a calquera momento, non só cando o xogo comeza.
-          Tente crear un escenario aleatorio cando outros eventos aconteceren, por
-          exemplo, ao pasar un obstáculo.
-        flappy_9: Para mesturar as cousas, ao contrario de terminar o xogo cando bater
-          nun obstáculo, tente facer a puntuación volver a 0.
-        flappy_11: Cree seu propio xogo Flappy Bird. Pode mudar o visual e todas as
-          regras, até mesmo a gravidade. Cando terminar, clic en Concluír para que
-          seus amigos xoguen seu xogo nos seus teléfonos móbeis.
-        flappy_k1_1: Xogar Flappy Bird
-        flappy_k1_2: Liga un bloque ao bloque "cando premer" e, despois, preme en
-          "Executar". Para moveres o paxariño até ao obxetivo, preme na pantalla.
-        flappy_k1_3: Agora pasamos a ter chan. Liga un bloque ao bloque "cando bater
-          no chan". O teu código ten que TERMINAR O XOGO' cando o paxariño caer ao
-          chan.
-        flappy_k1_4: O bloque "cando o xogo comeza" permite que vostede execute o
-          código cando o xogo comeza. Defina a velocidade do nivel e voe en dirección
-          ao obxetivo.
-        flappy_k1_5: O paxariño vai atravesar os obstáculos, a menos que vostede programe
-          para facelo bater. Conecte un bloque ao bloque "cando atinxir un obstáculo".
-          Seu programa precisa 'TERMINAR O XOGO' cando o paxariño bater nos obstáculos.
-        flappy_k1_6: Imos agregar un panel de puntuación e aumentar os puntos cando
-          o paxariño pasar polos obstáculos. Faga iso no bloque "cando pasar un obstáculo",
-          e entón marque un punto cando o paxariño pasar polo primeiro conxunto de
-          obstáculos.
-        flappy_k1_7: Vexa se consegue marcar varios puntos ao facelo superar un obstáculo
-        flappy_k1_8: De seguida, tente mudar a escena conectando outro bloque ao bloque
-          "cando o xogo comeza".
-        flappy_k1_9: Tente alterar o xogador anexando un bloque "defina o xogador"
-          ao bloque "cando o xogo comeza".
         jigsaw_1: Clica no bloque
         jigsaw_2: Arrastre o bloque para o obxetivo
         jigsaw_3: Organiza os bloques para formar a imaxe
@@ -847,9 +728,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Construíndo unha galáxia con código - Introdución'
         starwars_typing: 'Star Wars: Construíndo unha galáxia con código - JavaScript'
         starwars_events: 'Star Wars: Construíndo unha galáxia con código - Eventos'
@@ -907,6 +785,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Bucles
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Arrastre un bloque "avance" e encáixeo por debaixo do outro bloque

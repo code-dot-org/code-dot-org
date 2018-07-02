@@ -3,8 +3,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   include Api::CsvDownload
   include Pd::Application::RegionalPartnerTeacherconMapping
 
-  load_and_authorize_resource class: 'Pd::Workshop', only: [:show, :update, :create, :destroy, :start, :end, :summary]
-  before_action :load_collection, only: [:index, :filter]
+  COLLECTION_ACTIONS = [:index, :filter].freeze
+  before_action :load_workshops, only: COLLECTION_ACTIONS
+
+  load_and_authorize_resource class: 'Pd::Workshop', only:
+    [:show, :update, :create, :destroy, :start, :end, :summary] + COLLECTION_ACTIONS
 
   # GET /api/v1/pd/workshops
   def index
@@ -17,12 +20,14 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
 
     if params[:organizer_view]
-      @workshops = @workshops.organized_by(current_user)
+      @workshops = @workshops.organized_by(current_user).or(@workshops.where(regional_partner: current_user.regional_partners)).order(:id)
     end
 
     if (current_user.admin? || current_user.permission?(UserPermission::WORKSHOP_ADMIN)) && params[:workshop_id]
       @workshops = ::Pd::Workshop.where(id: params[:workshop_id])
     end
+
+    @workshops = @workshops.exclude_summer if params[:exclude_summer]
 
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   end
@@ -30,7 +35,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def workshops_user_enrolled_in
     authorize! :workshops_user_enrolled_in, Pd::Workshop
 
-    workshops = ::Pd::Enrollment.for_user(current_user).map do |enrollment|
+    enrollments = ::Pd::Enrollment.for_user(current_user).all.
+      reject do |enrollment|
+        future_or_current_teachercon_or_fit?(enrollment.workshop)
+      end
+    workshops = enrollments.map do |enrollment|
       Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
 
@@ -116,7 +125,14 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
-    if @workshop.update(workshop_params)
+
+    # The below user types have permission to set the regional partner. CSF Facilitators
+    # can initially set the regional partner, but cannot edit it once it is set.
+    can_update_regional_partner = current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) ||
+      current_user.permission?(UserPermission::PROGRAM_MANAGER) ||
+      current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+
+    if @workshop.update(workshop_params(can_update_regional_partner))
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -161,24 +177,23 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   private
 
-  def load_collection
-    # We need to do this to get around an annoying CanCanCan issue - when we load a
-    # collection of workshops, only the current user is loaded as a facilitator (if they
-    # are a facilitator). The load_collection action within CanCanCan does not seem to
-    # correctly join workshops and workshop_facilitators. Therefore, we need to write our
-    # own action to do loading
-    authenticate_user!
-
-    unless current_user.admin? || current_user.workshop_admin? ||
-      current_user.workshop_organizer? || current_user.facilitator?
-      raise CanCan::AccessDenied.new
-    end
+  def load_workshops
+    # Load the workshop collection through scopes that include all associated users, not just the current user.
+    #
+    # Since CanCanCan filters collections with INNER JOIN on associations, loading a workshop
+    # collection for a facilitator has the side effect of only retrieving the current user as a facilitator
+    # and ignoring other facilitators.
+    #
+    # We could potentially specify the ability as a scope and block, but these types of abilities
+    # can't be combined and therefore won't work with our current complex logic in ability.rb
+    #
+    # See https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities#hash-of-conditions
 
     @workshops =
       if current_user.admin? || current_user.workshop_admin?
         Pd::Workshop.all
       else
-        Pd::Workshop.facilitated_or_organized_by(current_user)
+        Pd::Workshop.managed_by(current_user)
       end
   end
 
@@ -218,17 +233,27 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
   end
 
-  def workshop_params
-    params.require(:pd_workshop).permit(
+  def workshop_params(can_update_regional_partner = true)
+    allowed_params = [
       :location_name,
       :location_address,
       :capacity,
       :on_map,
       :funded,
+      :funding_type,
       :course,
       :subject,
       :notes,
-      sessions_attributes: [:id, :start, :end, :_destroy]
-    )
+      :regional_partner_id,
+      sessions_attributes: [:id, :start, :end, :_destroy],
+    ]
+
+    allowed_params.delete :regional_partner_id unless can_update_regional_partner
+
+    params.require(:pd_workshop).permit(*allowed_params)
+  end
+
+  def future_or_current_teachercon_or_fit?(workshop)
+    [Pd::Workshop::SUBJECT_TEACHER_CON, Pd::Workshop::SUBJECT_FIT].include?(workshop.subject) && workshop.state != Pd::Workshop::STATE_ENDED
   end
 end

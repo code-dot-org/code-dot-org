@@ -163,9 +163,6 @@ et:
       CollisionDetection:
         title: Kokkupõrke tuvastamine ja Pythagorase teoreem
         desc: Ekraanil olevate objektide teineteise puudutamise hetke välja selgitamine on tähtis aspekt enamuste mängude juures. Selles tunnis me vaatame, kuidas Pythagorase teoreemi ja kauguse valemit saab kasutada tasandil oleva kahe punkti kauguse mõõtmiseks ja seejärel saab otsustada, kas need kaks punkti (või mängu tegelast) puudutavad teineteist.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: Selles õppetunnis õpid sa tundma tsükleid!
@@ -265,3 +262,96 @@ et:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Päris elu algoritmid: Seemenda'
+        desc: Selles õppetunnis näidatakse seemendamise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
+      UnplugHappyMaps_2018:
+        title: Happy Maps
+        desc: Õpilased loovad lihtsaid algoritme (juhendite komplekte), et liigutada tegelast läbi labürindi kasutades ainult üht käsku.
+      GoingPlacesSafely_2018:
+        title: Läheb asukohta turvaliselt
+        desc: Internet on võimas, kuid vahest ka ohtlik koht. Õpetajad õpetavad, kuidas end Internetis surfates kaitsta.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: Selles õppetunnis õpid sa tundma tsükleid!
+      BigEvent_2018:
+        title: Suursündmus
+        desc: Õpilastele õpetatakse programmeerimismõistet "sündmused", need on tegevused, mida arvuti pidevalt jälgib. Õpetaja vajutab nuppe paberist kaugjuhtimispuldil ja õpilased reageerivad vastavalt sellele, millist nuppu vajutati.
+      GraphPaperProgramming_2018:
+        title: Millimeetripaberi programmeerimine
+        desc: Õpilased kirjutavad eelmääratletud käskude komplekti kasutades algoritmi (komplekti juhiseid), mis juhendab klassikaaslasi, kuidas joonistust kopeerida.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Lahutatud tegevus
+        desc: Täna saate teada, mida tähendab olla digitaalne kodanik.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Lahutatud tegevus
+        desc: Täna saate teada, mida teha, kui keegi on internetis pahatahtlik.
+      Conditionals_2018:
+        title: Tingimuslaused
+        desc: 'Tingimuslausete kohta õppimiseks mängivad õpilased kaardimängu ja loovad reegleid nagu: "Kui tõmban kaardi, saan mina punkti" ja "Kui tõmban musta kaardi, saad sina punkti."'
+      DigitalFootprint_2018:
+        title: Sinu digitaalne jalajälg
+        desc: Õpetajad selgitavad õpilastele ideed, et enda kohta teabe jätmine Internetti jätab digitaalse jalajälje või "jälje", millel on tagajärjed.
+      BinaryImages_2018:
+        title: Binaarsed pildid
+        desc: Kuigi paljude inimeste jaoks on binaarandmed kõigest nullid ja ühed, õppisid õpilased eelmistel kursustel, et teavet saab esitada mitmel binaarsel kujul. Selles õppetunnis astutakse selles teemas samm edasi ja näidatakse, kiuidas arvuti salvestab binaarandmetena veelgi komplekssemat teavet (näiteks pilte ja värve).
+      PaperPlanes_2018:
+        title: 'Päris elu algoritmid: paberlennukid'
+        desc: Selles õppetunnis näidatakse paberlennukite tegemise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
+      GettingLoopy_2018:
+        title: Muutub tsükliliseks
+        desc: Selles õppetunnis õpetatakse tantsu teel tsüklite (korduvate juhiste) programmeerimismõistet. Õpilased õpivad ära lihtsa koreograafia, mida nad peavad siis kordama.
+      BinaryBracelets_2018:
+        title: Binaarsed käevõrud
+        desc: Õpilased teevad käevõrud, mis kujutavad nende nime esitähte binaarkujul. Õpilased õpivad, et andmeid saab salvestada mitmel kujul.
+      MoveItMoveIt_2018:
+        title: Liiguta, liiguta
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Relee Programmeerimine
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

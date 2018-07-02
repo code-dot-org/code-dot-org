@@ -1,4 +1,5 @@
-"gl":
+---
+gl:
   data:
     unplugged:
       Unplug1:
@@ -285,9 +286,6 @@
           e a fórmula da distancia poden ser usados para medir a distancia entre dous
           puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo)
           están se tocando.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -430,36 +428,167 @@
           códigos en funcións é unha práctica útil.  '
       swipeRightPassThrough:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmos da Vida Real: Planta unha Semente'
+        desc: Esta lección presenta como usamos os algoritmos na nosa vida diaria,
+          usando o acto de plantar unha semente como exemplo. Tamén se concentra no
+          cadro xeral da informática e como os algoritmos desempeñan un papel fundamental.
+      UnplugHappyMaps_2018:
+        title: Mapas Felices
+        desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
+          mover un personaxe a través dun labirinto usando un único comando.
+      GoingPlacesSafely_2018:
+        title: Ir a Sitios en modo Seguro
+        desc: A internet é poderosa, pero ás veces perigosa. Os profesores mostran
+          como navegar en seguranza pola Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: O Gran Evento
+        desc: Os alumnos son introducidos ao concepto de "eventos" en programación,
+          que son accións que un computador monitora constantemente. O profesor vai
+          apertar os botóns de forma remota, e os alumnos van reaccionar de acordo
+          co botón presionado.
+      GraphPaperProgramming_2018:
+        title: Programación en Papel Cadriculado
+        desc: Os alumnos escriben un algoritmo (un conxunto de instrucións) usando
+          un conxunto predefinido de comandos para orientar os seus compañeiros de
+          clase na reprodución dun debuxo.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Actividade off-line
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Actividade off-line
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Condicionais
+        desc: Para aprender sobre estruturas condicionais, o alumno xoga un xogo de
+          cartas e crea regras como "se eu tomo unha carta vermella, eu gaño un punto",
+          e "se eu tomo unha carta negra, vostede gaña un punto"
+      DigitalFootprint_2018:
+        title: A túa pegada dixital
+        desc: Os profesores informan aos alumnos de que colocar informacións persoais
+          online crea unha pegada dixital ou un "rastro" que ten consecuencias.
+      BinaryImages_2018:
+        title: Imaxes binárias
+        desc: Aínda que moitas persoas vexan o binário estritamente como ceros e uns,
+          nosos cursos anteriores ensinaron aos alumnos que as informacións poden
+          ser representadas por unha grande variedade de opcións binárias. Esta clase
+          leva ese concepto un paso adiante, unha vez que demostra como un computador
+          tamén pode almacenar informacións aínda máis complexas (como imaxes e cores)
+          en binário.
+      PaperPlanes_2018:
+        title: 'Algoritmos da vida real: avión de papel'
+        desc: Esta lección mostra como usamos algoritmos na nosa vida, especificamente
+          ao facer avións de papel. Esta lección tamén presenta a informática de forma
+          xeral, e como os algoritmos teñen un papel esencial.
+      GettingLoopy_2018:
+        title: Bucleándose
+        desc: Esta clase introduce o concepto de programación de bucles (loops, ou
+          instrucións repetidas) por medio dunha actividade de danza. Os alumnos van
+          aprender unha coreografia simple e daquela se lles dirá que a repitan.
+      BinaryBracelets_2018:
+        title: Pulseiras Binarias
+        desc: Os alumnos crean pulseiras como representacións binárias da primeira
+          letra dos seus nomes. Os alumnos aprenden que os datos poden ser representados
+          e almacenados de máis dunha forma.
+      MoveItMoveIt_2018:
+        title: Creando camiños
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programación baixo presión
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

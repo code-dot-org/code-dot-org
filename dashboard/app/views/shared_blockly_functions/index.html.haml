@@ -1,0 +1,7 @@
+%h1= 'Blockly Functions'
+= link_to 'Create a New Blockly Function', new_shared_blockly_function_path
+
+%h2= 'Edit an existing function'
+%ul
+  - SharedBlocklyFunction.all.each do |b|
+    %li= link_to b.name, edit_shared_blockly_function_path(id: b.id)

@@ -9,27 +9,27 @@ nav: how_to_nav
 
 ## Hour of Codeを使って小中高生に対するボランティア活動
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [ボランティア](%= resolve_url('https://code.org/volunteer') %)として登録する。
-- For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
+- 貴社の技術者と地域の小中学校を繋ぐための詳細については、[パートナー企業のためのガイド](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %)をご覧下さい
 
 ## 企業がHour of Codeを支援するためのその他の方法
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
 - Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 # How to host an Hour of Code event with students
 
-## 1. Promote your Hour of Code
+## 1. あなたのHour of Codeを宣伝する
 
 - [あなたのHour of Codeのイベントを宣伝](%= resolve_url('/promote') %)しましょう。
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. [ここから](%= resolve_url('https://code.org/volunteer/engineer') %)登録して、学校とつながることができます。
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 2. 以下の、このビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3. Choose an activity
+## 3. アクティビティの選択
 
 We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [ぜひ試してみましょう！](%= resolve_url('/learn') %)
 
@@ -50,7 +50,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. あなたの時間を鼓舞するビデオで始める
 
 まず、コンピュータサイエンスがどのように我々の生活にインパクトを与えているのか伝えましょう。 Share more about what inspired you to pursue computer science and your role at your company.
 
@@ -63,11 +63,11 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Code!
 
@@ -103,8 +103,8 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## 7) クロージング
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
+- [Hour of Codeをやったよ！](%= resolve_url('/promote/resources#stickers') %)のステッカーを印刷して配布する。
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
 

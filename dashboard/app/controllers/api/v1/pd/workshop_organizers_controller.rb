@@ -9,7 +9,9 @@ class Api::V1::Pd::WorkshopOrganizersController < ApplicationController
 
   # GET /api/v1/pd/workshop_organizers
   def index
-    organizers = User.joins(:permissions).where(user_permissions: {permission: UserPermission::WORKSHOP_ORGANIZER})
+    organizers = User.joins(:permissions).where(
+      user_permissions: {permission: [UserPermission::WORKSHOP_ORGANIZER, UserPermission::PROGRAM_MANAGER]}
+    )
     render json: organizers, each_serializer: Api::V1::Pd::WorkshopOrganizerSerializer
   end
 end

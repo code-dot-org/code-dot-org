@@ -1,0 +1,15 @@
+name 'cspu4_assess1_phishing_exam_prep'
+wrong 'You accidentally run a piece of code that automatically spreads from one computer to another, exploiting a common vulnerability'
+right 'You get an email from the IT support desk that asks you to send a reply email with your username and password to verify your account'
+wrong 'You get an unwanted email trying to sell you a low quality product or service that seems "fishy.”'
+wrong 'You accidentally install a piece of software that monitors your activity to steal personal information like your passwords, date of birth, social security number, etc.'
+
+markdown <<MARKDOWN
+Which of the following scenarios is most characteristic of a phishing attack.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Phishing:** The activity of defrauding an online account holder of financial information by posing as a legitimate company.
+
+In this case, receiving an email that requires you to send personal information (such as a password) is considered a phishing attack. 
+MARKDOWN

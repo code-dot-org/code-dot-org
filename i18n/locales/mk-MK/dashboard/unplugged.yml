@@ -163,9 +163,6 @@ mk:
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
         desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -265,3 +262,57 @@ mk:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ""
+        desc: ""
+      courseB_unplugged_loopyMRF_2018:
+        title: ""
+        desc: ""
+      DiceRace_2018:
+        title: ""
+        desc: ""
+      courseE_unplugged_privateInformation_2018:
+        title: ""
+        desc: ""
+      SongwritingParameters_2018:
+        title: ""
+        desc: ""
+      Internet_2018:
+        title: ""
+        desc: ""
+      Crowdsourcing_2018:
+        title: ""
+        desc: ""
+      TangramAlgorithms_2018:
+        title: ""
+        desc: ""
+      courseF_unplugged_powerOfWords_2018:
+        title: ""
+        desc: ""
+      EnvelopeVariables_2018:
+        title: ""
+        desc: ""
+      ForLoopFun_2018:
+        title: ""
+        desc: ""
+      SongwritingWithParameters_2018:
+        title: ""
+        desc: ""
+      PlantASeed_2018:
+        title: 'Real-life Algorithms: Plant a Seed'
+        desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
+      UnplugHappyMaps_2018:
+        title: Happy Maps
+        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+      GoingPlacesSafely_2018:
+        title: Going Places Safely
+        desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: The Big Event
+        desc: Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.

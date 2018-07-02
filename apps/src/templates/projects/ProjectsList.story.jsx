@@ -29,7 +29,7 @@ const STUB_PROJECTS_DATA = [
 
 export default storybook => {
   return storybook
-    .storiesOf('ProjectsList', module)
+    .storiesOf('Projects/ProjectsList', module)
     .addStoryTable([
       {
         name: 'basic projects list without thumbnails column',

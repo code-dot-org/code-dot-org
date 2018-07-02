@@ -1,9 +1,10 @@
-"lv":
+---
+lv:
   errors:
     messages:
       not_saved: 'Lūdzu, izlabojiet šādas kļūdas:'
-      too_young: "Šim saturam ir vecuma ierobežojums, un tas nav pieejams jaunākiem
-        skolēniem."
+      too_young: Šim saturam ir vecuma ierobežojums, un tas nav pieejams jaunākiem
+        skolēniem.
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft konts
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Aizmirsi savu paroli?
     need_confirmation: Nesaņēmi apstiprinājuma instrukcijas?
     need_unlock: Nesaņēmi atslēgšanas norādijumus?
@@ -138,6 +140,13 @@
     valid_password: Derīga parole!
     invalid_password: Parolē jābūt vismaz 6 rakstzīmēm
     mismatch_password: Abas ievadītās paroles nesakrīt
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Piekrītu Code.org <a href='http://code.org/tos'> lietošanas noteikumiem</a>.
       Ja es esmu jaunāks par 13 gadiem, iesniedzot šo veidlapu, apstiprinu, ka man
       ir vecāku vai likumīgā aizbildņa atļauja lietot Code.org pakalpojumus.<br/>Lietotājiem,
@@ -146,12 +155,19 @@
     teacher_terms: Es piekrītu Code.org <a href='http://code.org/tos'>lietošanas noteikumiem</a>.
     additional_information: Mums nepieciešama papildus informācija, lai turpinātu
       Tavu pieteikumu.
+    user_type_button: Update Account Type
     user_type_label: Account Type
     user_type_teacher: Skolotāja
     user_type_student: Students
     field_is_required: ir nepieciešams
     accept_terms: You must agree to create an account
     error: An error occurred.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Jā
+    email_preference_no: Nē
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -202,6 +218,7 @@
       email: E-pasta adrese
       submit: Iesniegt
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
@@ -233,7 +250,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Slepenais vārds
       email: E-pasts
       google_classroom: Google Classroom
       clever: Clever
@@ -386,6 +403,7 @@
     email_confirm_needed_required: 'Jūsu e-pasta adrese %{email} nav apstiprināta:'
     email_confirm_wrong_email: "(Nepareiza e-pasta adrese?)"
     email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(atstājiet tukšu, ja nevēlaties mainīt to)"
     current_password_hint: "(nepieciešama jūsu pašreizējā parole, lai apstiprinātu
       izmaiņas)"
@@ -419,6 +437,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Pabeigts
     tried: Mēģināts
@@ -459,9 +478,9 @@
     tryfirst: 'Vai vari izmēģināt sākumā un pierakstīties vēlāk:'
     trynow: Izmēģini tūlīt
     add_hint_help: Lūdzu palīdziet mums pievienot gudrus padomus Code.org pamācībās
-    20hour_overview: "šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
+    20hour_overview: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
       pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet
-      tas sagādās prieku mācīties visos vecumos."
+      tas sagādās prieku mācīties visos vecumos.
     test_videos_help: Izmēģinat mūsu jauno video atskaņotāju savā skolā
     try_beta_courses: Jaunums! Izmēģinat mūsu BETA kursus K-5 (sākumskolas) skolēniem
     use_as_teacher: Izmantojiet šo vietni, kā skolotājs
@@ -595,6 +614,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Mācies Code Studio
     description: Jebkurš var apgūt datorzinības. Izveido spēles aplikācijas un mākslu
@@ -603,6 +624,8 @@
   gender:
     male: Vīrietis
     female: Sieviete
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Nēlos atbildēt
   user_type:
     student: Students
@@ -729,9 +752,9 @@
         koda apmācību!
     20-hour:
       title: Accelerated Course
-      body: "šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
+      body: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
         Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās
-        prieku mācīties visos vecumos."
+        prieku mācīties visos vecumos.
       body_short: Learn basic computer science in an accelerated version of courses
         2-4.
     hoc2014:
@@ -819,11 +842,11 @@
     header_artist: Mākslinieks
     report_abuse: Report Abuse
   landing:
-    prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē,
+    prerelease: Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē,
       ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju
-      saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti."
-    prerelease_hoc2014: "Šī pamācība ir <span class='betatext'>beta</span >stadijā.
-      Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes."
+      saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti.
+    prerelease_hoc2014: Šī pamācība ir <span class='betatext'>beta</span >stadijā.
+      Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes.
     report_bug: Kļūdas ziņojums
     support: Saņemt palīdzību
     support_url: "//support.code.org"
@@ -1117,6 +1140,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1130,6 +1154,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1272,3 +1301,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: es piekrītu
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Jā

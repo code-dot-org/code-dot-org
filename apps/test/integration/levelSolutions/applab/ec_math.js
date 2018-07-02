@@ -1,7 +1,7 @@
 import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
-var TestResults = require('@cdo/apps/constants').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 import {globalFunctions} from '@cdo/apps/dropletUtils';
 import sinon from 'sinon';
 
@@ -97,7 +97,7 @@ module.exports = {
     },
 
     {
-      description: 'randomNumber shows up in autocomplete',
+      description: 'randomNumber and Math.random show up in autocomplete by matching ran',
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -105,11 +105,82 @@ module.exports = {
         assert.equal($(".ace_autocomplete").is(":visible"), false,
           'no autocomplete to start');
 
-        testUtils.typeAceText('randomNumb');
+        testUtils.typeAceText('ran');
         assert.equal($(".ace_autocomplete").is(":visible"), true,
           'we have autocomplete options after typing');
         assert.equal(/randomNumber/.test($(".ace_autocomplete").text()), true,
           'our autocomplete options contain randomNumber');
+        assert.equal(/Math.random/.test($(".ace_autocomplete").text()), true,
+          'our autocomplete options contain Math.random');
+        assert.equal(/createCanvas/.test($(".ace_autocomplete").text()), false,
+          'our autocomplete options do not contain createCanvas');
+
+        // clear contents before run
+        testUtils.setAceText('');
+
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: 'randomNumber shows up in autocomplete by matching Numb',
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#show-code-header").click();
+        assert.equal($(".ace_autocomplete").is(":visible"), false,
+          'no autocomplete to start');
+
+        testUtils.typeAceText('Numb');
+        assert.equal($(".ace_autocomplete").is(":visible"), true,
+          'we have autocomplete options after typing');
+        assert.equal(/randomNumber/.test($(".ace_autocomplete").text()), true,
+          'our autocomplete options contain randomNumber');
+
+        // clear contents before run
+        testUtils.setAceText('');
+
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: 'randomNumber does not show up in autocomplete when typing omNumb',
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#show-code-header").click();
+        assert.equal($(".ace_autocomplete").is(":visible"), false,
+          'no autocomplete to start');
+
+        testUtils.typeAceText('omNumb');
+
+        assert.equal($(".ace_autocomplete").is(":visible"), false,
+          'no autocomplete after typing');
 
         // clear contents before run
         testUtils.setAceText('');
@@ -175,6 +246,42 @@ module.exports = {
 
         assert.equal(/See examples/.test($(".tooltipster-content").text()),
           true, 'tooltip has examples link');
+
+        // clear contents before run
+        testUtils.setAceText('');
+
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: 'Math.min and Math.max shows up in autocomplete by matching math',
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#show-code-header").click();
+        assert.equal($(".ace_autocomplete").is(":visible"), false,
+          'no autocomplete to start');
+
+        testUtils.typeAceText('math');
+        assert.equal($(".ace_autocomplete").is(":visible"), true,
+          'we have autocomplete options after typing');
+        assert.equal(/Math.min/.test($(".ace_autocomplete").text()), true,
+          'our autocomplete options contain Math.min');
+        assert.equal(/Math.max/.test($(".ace_autocomplete").text()), true,
+          'our autocomplete options contain Math.max');
 
         // clear contents before run
         testUtils.setAceText('');

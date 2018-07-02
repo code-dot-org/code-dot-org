@@ -1,0 +1,22 @@
+name 'courseF_markdown_events_intro'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **In this lesson...**
+
+### Think about your favorite video game. How do you control it? It probably uses arrow keys, a controller, or even your finger. 
+
+### Does the game know at what time the user will press and arrow key or move the controller? 
+
+### No! The game only knows what to do when the user does something. 
+
+### What if you wanted to make different code run when something new happens, just like your favorite video game? Let's find out!
+
+---
+
+## **Blocks to Know**
+
+![](https://images.code.org/2b6bffdf4950598e3f4e394756c9c172-image-1524769774061.png)
+
+![](https://images.code.org/64f4daccdcb1ca4440b711d36996e827-image-1524769789060.png)
+MARKDOWN

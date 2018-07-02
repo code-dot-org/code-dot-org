@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-- Zachęć uczniów do kontynuowania [nauki online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Weź udział](%= resolve_url('https://code.org/professional-development-workshops') %) w jednodniowych warsztatach, aby otrzymać wskazówki od doświadczonego instruktora informatyki. (Tylko dla edukatorów z USA)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -40,10 +40,21 @@
     "hide_view_data_button": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "start_blocks": "write('Test Applab Containing Free Response Level');"
+    "start_blocks": "write('Test Applab Containing Free Response Level');",
+    "map_reference": "/docs/csd-1718/maker_leds/index.html",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "makerlab_enabled": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-14 18:42:26 +0000\",\"changed\":[],\"changed_by_id\":702,\"changed_by_email\":\"erin@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

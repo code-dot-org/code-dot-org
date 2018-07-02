@@ -8,11 +8,13 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  regional_partner_id :integer
+#  user_id             :integer
 #
 # Indexes
 #
 #  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
 #  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
+#  index_pd_teachercon1819_registrations_on_user_id              (user_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
@@ -23,6 +25,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
   belongs_to :regional_partner, class_name: 'RegionalPartner'
+  belongs_to :user
 
   YES = 'Yes'.freeze
   NO = 'No'.freeze
@@ -30,6 +33,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   after_create :update_application_status
   def update_application_status
+    return unless pd_application
+
     if waitlisted?
       pd_application.update!(status: "waitlisted")
     elsif declined?
@@ -41,9 +46,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   def send_teachercon_confirmation_email
     if regional_partner_id?
       Pd::Teachercon1819RegistrationMailer.regional_partner(self).deliver_now
-    else
-      return unless pd_application.workshop && pd_application.workshop.teachercon?
+    elsif pd_application_id?
+      return unless pd_application.try(:workshop) && pd_application.workshop.teachercon?
       Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
+    else
+      Pd::Teachercon1819RegistrationMailer.lead_facilitator(self).deliver_now
     end
   end
 
@@ -62,7 +69,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       address_state: get_all_states_with_dc.to_h.values,
       how_traveling: [
         'I will drive by myself',
-        'I will carpool with another TeacherCon attendee',
+        'I will carpool with another TeacherCon attendee (Please note who):',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',
@@ -109,6 +116,10 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         "2 trimesters",
         "Full year",
         "I'm not sure",
+      ],
+      travel_covered: [
+        "Code.org is covering my trip",
+        "I am covering my trip"
       ]
     }.freeze
   end
@@ -129,7 +140,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       :need_hotel,
       :photo_release,
       :liability_waiver,
-      :agree_share_contact,
     ].freeze
   end
 
@@ -177,7 +187,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
     # some fields are required based on the values of other fields
 
-    if hash[:live_far_away] == YES
+    if hash[:live_far_away] == YES && !regional_partner_id?
       requireds.concat [
         :address_street,
         :address_city,
@@ -192,11 +202,34 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       ]
     end
 
+    if hash[:dietary_needs].try(:include?, 'Food Allergy')
+      requireds.concat [
+        :dietary_needs_details
+      ]
+    end
+
+    if pd_application
+      requireds.concat [
+        :agree_share_contact
+      ]
+    end
+
+    if regional_partner_id?
+      requireds.concat [
+        :travel_covered
+      ]
+    end
+
     return requireds
   end
 
   def accepted?
-    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+    accept_status ==
+      if pd_application.try(:application_type) == 'Teacher'
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+      else
+        YES
+      end
   end
 
   def waitlisted?
@@ -205,10 +238,58 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   end
 
   def declined?
-    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+    accept_status ==
+      if pd_application.try(:application_type) == 'Teacher'
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+      else
+        NO
+      end
+  end
+
+  # Simplified string representing whether the registrant accepted the teachercon seat
+  def accepted_seat_simplified
+    if accepted?
+      'Yes'
+    elsif accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date]
+      'Yes, but I have a conflict'
+    elsif accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other]
+      "Yes, but I can't for another reason"
+    else
+      'No'
+    end
   end
 
   def accept_status
-    sanitize_form_data_hash.try(:[], :teacher_accept_seat)
+    if pd_application.try(:application_type) == "Teacher"
+      sanitize_form_data_hash.try(:[], :teacher_accept_seat)
+    elsif pd_application.try(:application_type) == "Facilitator" || pd_application.nil?
+      sanitize_form_data_hash.try(:[], :able_to_attend)
+    end
+  end
+
+  def date_accepted
+    pd_application.try(&:date_accepted) || created_at.to_date.iso8601
+  end
+
+  def applicant_name
+    hash = sanitize_form_data_hash
+    "#{hash[:preferred_first_name]} #{hash[:last_name]}"
+  end
+
+  def email
+    user.try(:email) || sanitize_form_data_hash[:email]
+  end
+
+  def regional_partner_name
+    regional_partner.try(:name)
+  end
+
+  def course_name
+    pd_application.try(&:course_name)
+  end
+
+  # at the time of registration
+  def teachercon_city
+    sanitize_form_data_hash[:city]
   end
 end

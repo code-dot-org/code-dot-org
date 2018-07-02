@@ -1,71 +1,93 @@
+import sinon from 'sinon';
+
 import { expect } from '../../util/configuredChai';
-import Cell from '@cdo/apps/maze/cell';
-import DirtDrawer from '@cdo/apps/maze/dirtDrawer';
-import Farmer from '@cdo/apps/maze/farmer';
+
 import Maze from '@cdo/apps/maze/maze';
-import MazeMap from '@cdo/apps/maze/mazeMap';
+import ResultsHandler from '@cdo/apps/maze/results/resultsHandler';
+import { MazeController } from '@code-dot-org/maze';
 
 describe("Maze", function () {
-  var dirtMap = [
-    [{
-      "tileType": 2
-    }, {
-      "tileType": 1,
-      "value": 1
-    }, {
-      "tileType": 1,
-      "value": -1
-    }],
-  ];
+  let maze;
+  let clock;
 
-  describe("scheduleDirtChange", function () {
-    let maze;
+  beforeEach(function () {
+    clock = sinon.useFakeTimers();
+    maze = new Maze();
+    maze.controller = new MazeController({
+      map: [[]]
+    }, {
+      movePegmanAnimationSpeedScale: 1
+    }, {
+      level: {}
+    });
+    maze.resultsHandler = new ResultsHandler(maze.controller, {});
+    maze.prepareForExecution_();
+  });
+
+  afterEach(function () {
+    clock.restore();
+  });
+
+  describe("animation queue", function () {
+    let animateActionSpy;
+    let finishAnimationsSpy;
+    let getActionsSpy;
 
     beforeEach(function () {
-      document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
-      maze = new Maze();
-      maze.map = MazeMap.deserialize(dirtMap, Cell);
-      maze.subtype = new Farmer(maze, {}, {
-        skin: {
-          dirt: 'dirt.png'
-        },
-        level: {},
-      });
-      maze.subtype.createDrawer(document.getElementById('svgMaze'));
-      maze.pegmanX = 0;
-      maze.pegmanY = 0;
+      animateActionSpy = sinon.stub(maze, 'animateAction_');
+      finishAnimationsSpy = sinon.stub(maze, 'finishAnimations_');
+      getActionsSpy = sinon.stub(maze.executionInfo, 'getActions');
+      getActionsSpy.returns(new Array(2));
     });
 
-    it("can cycle through all types", function () {
-      var dirtId = DirtDrawer.cellId('', maze.pegmanX, maze.pegmanY);
-      var image;
+    afterEach(function () {
+      animateActionSpy.restore();
+      finishAnimationsSpy.restore();
+      getActionsSpy.restore();
+    });
 
-      // image starts out nonexistant
-      expect(document.getElementById(dirtId), 'image starts out nonexistant').to.be.null;
+    it("is initiated by scheduleAnimations", function () {
+      maze.scheduleAnimations_(false);
+      expect(finishAnimationsSpy.called).to.be.false;
+      clock.tick(999);
+      expect(finishAnimationsSpy.called).to.be.false;
+      clock.tick(1);
+      expect(finishAnimationsSpy.called).to.be.true;
+    });
 
-      maze.scheduleFill_();
-      image = document.getElementById(dirtId);
-      // image now exists and is dirt
-      expect(image).not.to.be.null;
-      expect(image.getAttribute('x'), 'image is dirt').to.equal("-550");
+    it("can be rate-adjusted", function () {
+      const scheduleSingleAnimationSpy = sinon.stub(maze, 'scheduleSingleAnimation_');
 
-      maze.scheduleDig_();
-      image = document.getElementById(dirtId);
-      // tile is flat, image is therefore hidden
-      expect(image, 'image now exists').not.to.be.null;
-      expect(image.getAttribute('visibility'), 'tile is flat, image is therefore hidden').to.equal('hidden');
+      expect(finishAnimationsSpy.called).to.be.false;
 
-      maze.scheduleDig_();
-      image = document.getElementById(dirtId);
-      // image is a holde
-      expect(image, 'image now exists').not.to.be.null;
-      expect(image.getAttribute('x'), 'image is a hole').to.equal("-500");
+      expect(maze.stepSpeed).to.equal(100);
+      expect(maze.scale.stepSpeed).to.equal(5);
+      expect(maze.controller.skin.movePegmanAnimationSpeedScale).to.equal(1);
 
-      maze.scheduleFill_();
-      image = document.getElementById(dirtId);
-      // tile is flat, image is therefore hidden
-      expect(image, 'image now exists').not.to.be.null;
-      expect(image.getAttribute('visibility'), 'tile is flat, image is therefore hidden').to.equal('hidden');
+      maze.scheduleAnimations_(false);
+      expect(scheduleSingleAnimationSpy.withArgs(0, new Array(2), false, 500).calledOnce).to.be.true;
+
+      maze.stepSpeed = 200;
+      maze.scheduleAnimations_(false);
+      expect(scheduleSingleAnimationSpy.withArgs(0, new Array(2), false, 1000).calledOnce).to.be.true;
+
+      maze.scale.stepSpeed = 1;
+      maze.scheduleAnimations_(false);
+      expect(scheduleSingleAnimationSpy.withArgs(0, new Array(2), false, 200).calledOnce).to.be.true;
+
+      scheduleSingleAnimationSpy.restore();
+    });
+
+    it("can be canceled by a reset", function () {
+      const controllerResetSpy = sinon.stub(maze.controller, 'reset');
+
+      maze.scheduleAnimations_(false);
+      expect(finishAnimationsSpy.called).to.be.false;
+      maze.reset_();
+      clock.tick(1000);
+      expect(finishAnimationsSpy.called).to.be.false;
+
+      controllerResetSpy.restore();
     });
   });
 });

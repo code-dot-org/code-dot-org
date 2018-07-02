@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Даярдык
 
 - Өткөзүүчү жерди, күнүн жана убактысын тактагыла.
-- Жергиликтүү мэрге, депутатка, бийлик өкүлүнө же таасирдүү бизнесменге сөз сүйлөөгө чакырган [кат](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit)жөнөткүлө. Код саатына шайланган бийлик өкүлү катышса [кандай кылуу керек топтомобуздан](<%=resolve_url('/files/elected-official.pdf')%>) кенен маалымат табасыңар.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Медиаларды - жаңылык каналдарын, гезиттерди, билим/технология блогерлерин чакыргыла. Биздин [Пресс-киттен](<%= resolve_url('/promote/press-kit') %>) жардам алгыла.
 
 ## 2. Иш-чара учурунда
@@ -39,7 +39,7 @@ nav: how_to_nav
 
 **Иш-чара:** Мектептер аралык информатика апталыгынын ассамблеясы
 
-**Күнү:** 5-декабрь (Мектептер аралык компүтердик илим апталыгынын башталышы)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Убактысы:** Окуу күнүндө. Түшкө чейин болгону жакшы. Узактыгы - 1 сааттын тегереги.
 

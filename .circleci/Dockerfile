@@ -46,15 +46,15 @@ RUN apt-get update && \
 		  python python-dev
 
 # install ruby
-RUN wget https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz && \
-    tar -xzvf ruby-2.2.3.tar.gz && \
-    rm ruby-2.2.3.tar.gz && \
-    cd ruby-2.2.3 && \
+RUN wget https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz && \
+    tar -xzvf ruby-2.5.0.tar.gz && \
+    rm ruby-2.5.0.tar.gz && \
+    cd ruby-2.5.0 && \
     ./configure && \
     make -j"$(nproc)" && \
     make install && \
     cd .. && \
-    rm -r ruby-2.2.3
+    rm -r ruby-2.5.0
 
 # install bundler
 RUN gem install bundler && \
@@ -79,7 +79,7 @@ RUN apt-get install -y unzip
 RUN curl --output /tmp/firefox.deb https://s3.amazonaws.com/circle-downloads/firefox-mozilla-build_47.0.1-0ubuntu1_amd64.deb \
   && echo 'ef016febe5ec4eaf7d455a34579834bcde7703cb0818c80044f4d148df8473bb  /tmp/firefox.deb' | sha256sum -c \
   && sudo dpkg -i /tmp/firefox.deb || sudo apt-get -f install  \
-  && sudo apt-get install -y libgtk3.0-cil-dev \
+  && apt-get update && apt-get install -y libgtk3.0-cil-dev \
   && rm -rf /tmp/firefox.deb
 
 # install chrome
@@ -99,9 +99,19 @@ RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.co
       && sudo chmod +x /usr/local/bin/chromedriver
 
 # install mysql
-RUN apt-get install -y mysql-server-5.6
+RUN curl -sSL -o /tmp/mysql-apt-config_0.8.9-1_all.deb https://dev.mysql.com/get/mysql-apt-config_0.8.9-1_all.deb \
+  && echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections \
+  && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/mysql-apt-config_0.8.9-1_all.deb || apt-get -fy install \
+  && rm -rf /tmp/mysql-apt-config_0.8.9-1_all.deb \
+  && apt-get update \
+  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    mysql-server \
+    libmysqlclient-dev
+RUN service mysql start \
+  && echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql \
+  && service mysql stop
 
 # install a couple more things from config.yml
-RUN apt-get -y install parallel libmagickwand-dev imagemagick
+RUN apt-get update && apt-get -y install parallel libmagickwand-dev imagemagick
 
 USER circleci

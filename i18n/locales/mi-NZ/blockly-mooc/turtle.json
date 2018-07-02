@@ -38,6 +38,7 @@
   "drawUpperWave": "tāngia te ngaru o runga",
   "drawLowerWave": "tāngia te ngaru o raro",
   "drawSticker": "tāngia te tohu",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "teitei",
   "hideTurtle": "hunaia te rehetoi",
   "jump": "peke",
@@ -73,6 +74,8 @@
   "penDown": "penerākau ki raro",
   "penTooltip": "Ka hikitia, ka whakahekea rānei te penerākau ki te tīmata, ki te whakamutu rānei i te mahi tā.",
   "penUp": "penerākau ki runga",
+  "pointTo": "point to",
+  "pixels": "pika",
   "reinfFeedbackMsg": "Anei tō tānga! Mahi tonu, e koke rānei ki te panga e whai ake ana.",
   "setAlpha": "tautuhia te tae māmā",
   "setCharacter": "set character to {character}",
@@ -91,5 +94,6 @@
   "turnTooltip": "Ka hurihia te rehetoi ki te taha mauī, matau rānei mā tētahi putu.",
   "turtleVisibilityTooltip": "Ka ari, ka aringaro rānei te rehetoi.",
   "widthTooltip": "Ka panonihia te whāroa o te penerākau.",
+  "withSize": "with size",
   "wrongColour": "Kei te hē te tae o tō tānga. Mō tēnei panga, me %1 kē."
 }

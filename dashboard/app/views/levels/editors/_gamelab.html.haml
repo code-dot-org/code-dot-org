@@ -29,10 +29,6 @@
   = boolean_check_box f, :all_animations_single_frame
 
 .field
-  = f.label :show_d_pad
-  = boolean_check_box f, :show_d_pad
-
-.field
   = f.label :expand_debugger, 'Expand Debugger by Default'
   = boolean_check_box f, :expand_debugger
 
@@ -68,7 +64,7 @@
           "click_count": 5,
           "button_color": "blue"
         }
-  = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
+  ~ f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
   :javascript
     levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
@@ -79,6 +75,25 @@
 .field
   =f.label 'Disable code debugger (Console is still enabled)'
   = boolean_check_box f, :debugger_disabled
+
+.field
+  = f.label 'Immediately show the results of setup code changes in the playspace?'
+  :ruby
+    selector = f.select :auto_run_setup, options_for_select([
+      ['No', nil],
+      ['Yes, run the draw loop once', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_loop],
+      ['Yes, call drawSprites()', SharedConstants::GAMELAB_AUTORUN_OPTIONS.draw_sprites],
+      ['Yes, run some other JavaScript', SharedConstants::GAMELAB_AUTORUN_OPTIONS.custom],
+    ], selected: @level.auto_run_setup)
+  = selector
+  = f.label 'Custom setup code'
+  = f.text_field :custom_setup_code
+
+.field
+  = f.label 'Validation code'
+  %p
+    This is a snippet of javascript that is run after every draw loop. Call levelSuccess() in here to stop the level as a success. You can also pass a number into levelSuccess() to give the student a non-perfect test result (see <a href="https://github.com/code-dot-org/code-dot-org/blob/101fbfd2dcdd635d7359e991559ba782f9fd00be/apps/src/constants.js#L33-L106">TestResults</a> for the list of valid test results).
+  = f.text_area :validation_code
 
 .field
   =f.label 'Animations are paused by default'
@@ -126,7 +141,7 @@
         The sourceUrl should point to an image or spritesheet - not an animated gif.
       %li <tt>frameDelay</tt> can be from slowest to fastest: 60, 45, 30, 20, 15, 10, 5, 4, 3, 2, 1.
       %li <tt>looping</tt> is true is if the animation plays repeatedly or false if it plays once.
-  = f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
+  ~ f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
   #level-start-animations-validation
 
 :javascript

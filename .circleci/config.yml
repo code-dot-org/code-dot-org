@@ -10,7 +10,7 @@ jobs:
   build:
     parallelism: 2
     docker:
-      - image: wjordan/code-dot-org:trusty
+      - image: wjordan/code-dot-org:0.5
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -55,17 +55,21 @@ jobs:
             sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
             sudo apt-get update
             sudo apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
+            wget https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb && sudo dpkg -i tidy-5.4.0-64bit.deb
             sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
 
       # restore gems cache
       - restore_cache:
-          key: code-dot-org-bundle-v6-{{ checksum "Gemfile.lock" }}
+          key: code-dot-org-bundle-v7-{{ checksum "Gemfile.lock" }}
 
-      # restore npm cache
+      # as recommended: https://circleci.com/docs/2.0/yarn/
       - restore_cache:
+          name: Restore Yarn Package Cache
           keys:
-            - code-dot-org-node-v8-{{ checksum "apps/package.json" }}
-            - code-dot-org-node-v8-
+            - yarn-packages-{{ .Branch }}-{{ checksum "apps/yarn.lock" }}
+            - yarn-packages-{{ .Branch }}
+            - yarn-packages-production
+            - yarn-packages-
 
       # start mysql
       - run: sudo service mysql start && mysql -V
@@ -74,6 +78,10 @@ jobs:
           name: install dependencies
           command: |
             bundle check --path=/home/circleci/project/vendor/bundle || bundle install --deployment --path=/home/circleci/project/vendor/bundle --jobs=4 --retry=3 --without ''
+
+      - run:
+          name: set yarn version
+          command: sudo apt-get install yarn=1.6.0-1
 
       - run:
           name: setup locals.yml
@@ -100,14 +108,6 @@ jobs:
             dashboard_workers: 5
             skip_seed_all: true
             " >> locals.yml
-            yarn -V
-
-      - run:
-          name: fix weird gem issue
-          command: |
-            bundle exec gem install rmagick
-            bundle update rmagick
-            sudo ldconfig /usr/local/lib
 
       - run:
           name: rake install
@@ -117,7 +117,7 @@ jobs:
             RAKE_VERBOSE: true
 
       - save_cache:
-          key: code-dot-org-bundle-v6-{{ checksum "Gemfile.lock" }}
+          key: code-dot-org-bundle-v7-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
 
@@ -127,10 +127,12 @@ jobs:
           command: |
             mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
 
+      # as recommended: https://circleci.com/docs/2.0/yarn/
       - save_cache:
-          key: code-dot-org-node-v8-{{ checksum "apps/package.json" }}
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ .Branch }}-{{ checksum "apps/yarn.lock" }}
           paths:
-            - apps/node_modules
+            - apps/node_modules/
             - /home/circleci/.cache/yarn
 
       - run:
@@ -153,6 +155,10 @@ jobs:
             override_pegasus: \"localhost.code.org\"
             dashboard_port: 3000
             pegasus_port: 3000
+            animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
+            assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
+            files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
+            sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
             " >> locals.yml
 
       - restore_cache:
@@ -176,8 +182,11 @@ jobs:
           name: run ui tests
           command: |
             bundle exec rake circle:run_ui_tests --trace
-            cookbooks/test.sh
           no_output_timeout: 20m
+
+      - run:
+          name: Cookbook integration tests (if branch name matches cookbook name)
+          command: cookbooks/test.sh
 
       - run:
           name: deployment

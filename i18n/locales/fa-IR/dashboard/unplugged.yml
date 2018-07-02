@@ -163,9 +163,6 @@ fa:
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
         desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -265,3 +262,96 @@ fa:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+        desc: اين درس روش هایی را جستجومیکند که ما از الگوریتم ها در زندگی روزمره خود استفاده کنیم، به عنوان مثال با استفاده از عمل کاشت بذر. همچنین به تصویر بزرگتر علم کامپیوتر و اینکه چگونه الگوریتم ها نقشی ضروری ایفا میکنند تمرکز میکند.
+      UnplugHappyMaps_2018:
+        title: نقشه های شاد
+        desc: دانش آموزان الگوریتم های (مجموعه هایی از دستورالعمل ها) ساده ای را میسازند تا یک شخصیت را از درون یک هزارتو رد کنند با استفاده از یک تک دستور.
+      GoingPlacesSafely_2018:
+        title: با خیال راحت سفرکردن
+        desc: اینترنت یک مکان قدرتمند، اما گاهی خطرناک است. معلمان نشان میدهند که چگونه در حالی که در اینترنت میگردیم ایمن بمانیم.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: رویداد بزرگ
+        desc: دانش آموزان با مفهومِ برنامه نویسیِ "رویدادها" آشنا میشوند، که اقداماتی هستند که یک کامپیوتر همواره آنها را تحت نظر دارد. معلم دکمه های روی کنترل از راه دور کاغذی را فشار میدهد و دانش آموزان بسته به اینکه کدام دکمه فشار داده شده است واکنش نشان می دهند.
+      GraphPaperProgramming_2018:
+        title: برنامه نویسی روی کاغذ شطرنجی 
+        desc: دانش آموزان یک الگوریتم (مجموعه ای از دستورالعمل ها) را با استفاده از مجموعه ای از فرمان های از پیش تعریف شده مینویسند تا همکلاسی های خود را برای بازتولید یک نقاشی هدایت کنند.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: فعالیت کلاسی
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: فعالیت کلاسی
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: مشروط
+        desc: برای یادگیری درباره عبارات شرطی، دانش آموزان یک بازی با کارت انجام میدهند و قوانینی مانند "اگر من کارت قرمز را بیرون کشیدم, یک امتیاز دریافت میکنم" و "اگر کارت سیاه را بیرون کشیدم، تو یک امتیاز دریافت میکنی" را ایجاد میکنند.
+      DigitalFootprint_2018:
+        title: ردپای دیجیتالی شما
+        desc: معلمان به دانش آموزان نشان میدهند که قرار دادن اطلاعات در باره خود در اینترنت یک رد پای دیجیتالی یا یک مسیر ایجاد می کند که عواقبی دارد.
+      BinaryImages_2018:
+        title: تصاویر دوتایی
+        desc: با اینکه بسیاری از مردم دودویی را صرفاً صفر و یک می دانند، دوره های قبلی ما به دانش آموزان درس داد که اطلاعات می توانند با جفت های دیگری نیز نشان داده شوند. این درس آن مفهوم را یک گام پیشتر میبرد با نشان دادن اینکه چگونه یک کامپیوتر می تواند اطلاعات پیچیده تری (مانند تصاویر و رنگ ها) را با دودویی ذخیره کند.
+      PaperPlanes_2018:
+        title: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
+        desc: اين درس روش هایی را جستجومیکند که ما از الگوریتم ها در زندگی روزمره خود استفاده کنیم، به طور مشخص ساختن یک موشک کاغذی. همچنین به تصویر بزرگتر علم کامپیوتر و اینکه چگونه الگوریتم ها نقشی ضروری ایفا میکنند تمرکز میکند.
+      GettingLoopy_2018:
+        title: سر گیجه گرفتن
+        desc: این درس مفهوم برنامه نویسی حلقه ها (تکرار دستورالعمل ها) را از طریق یک فعالیت رقص معرفی میکند. دانش آموزان یک رقص ساده را یاد خواهند گرفت، و سپس راهنمایی میشوند که آن را تکرار کنند.
+      BinaryBracelets_2018:
+        title: دستبند دودویی
+        desc: دانش آموزان دستبندهایی را ایجاد میکنند که حرف اول نامشان را در دستگاه دودویی نشان میدهد. دانش آموزان یاد میگیرند که داده ها می توانند به طرق مختلف نمایندگی و ذخیره شوند.
+      MoveItMoveIt_2018:
+        title: حرکت کن، حرکت کن
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: برنامه نویسی رله
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

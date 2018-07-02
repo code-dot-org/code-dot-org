@@ -8,7 +8,8 @@
     "skin": "applab",
     "code_functions": {
       "deleteRecord": null,
-      "console.log": null
+      "console.log": null,
+      "ifElseBlock": null
     },
     "edit_code": true,
     "embed": "false",
@@ -44,10 +45,23 @@
     "markdown_instructions": "# Deleting Records Continued...\r\n\r\nThe other difference with `deleteRecord` is that the database **sends back a boolean called `success`.** \r\n\r\nUsing the `success` boolean, you can write a callback function that will behave differently based on whether or not `deleteRecord` ran successfully.\r\n\r\n* If the database was able to successfully delete the specified record, `success` will be set to **true** in the callback function. \r\n* If the database was **not** able to delete the record, `success` will be **false.**\r\n\r\nLet's do a little more experimentation with `deleteRecord` on a sample database.  **We've given you a new database that has about 40 songs in it.** You have a few different things to try so don't miss them.\r\n\r\n# Do This:\r\n\r\n* **Click View Data.** Look at the \"mySongs\" table and **find the ID of the song \"Little Bunny Foo Foo.\"** \r\n* **Drag out the `deleteRecord` block.**\r\n  * Set the table name to \"mySongs.\"\r\n  * Set the `id` of the object to delete to the ID of \"Little Bunny Foo Foo.\"\r\n* **Add an `if` statement to the callback function.**\r\n  * If `success` is true, print \"Record deleted successfully\" to the console.\r\n  * Otherwise, print \"Could not delete record\" to the console.\r\n* **Run the code.**\r\n  * Verify that you deleted \"Little Bunny Foo Foo\" from the list of songs.\r\n* **Run the exact same code again.**\r\n  * This will attempt to delete a record with the ID you just deleted. See what happens...",
     "instructions": "Find the id of \"Little Bunny Foo Foo\" in the data table \"mySongs\".  Use the deleteRecord command to delete it.  See what happens when you try to delete an ID a second time. (Click for full Instructions).",
     "encrypted_examples": "vrk2r+1W3WyKV1/6afHE5ew7AQLK3Ri/qHzPzib2NDtqXhWE/c0x40/MLWt8\n5gqn\n",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-31 23:54:12 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

@@ -38,6 +38,7 @@
   "drawUpperWave": "tegn øvre bølge",
   "drawLowerWave": "tegn lavere bølge",
   "drawSticker": "tegn klistermærke",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "højde",
   "hideTurtle": "skjul kunstner",
   "jump": "hop",
@@ -73,6 +74,8 @@
   "penDown": "blyant ned",
   "penTooltip": "Lyfter eller sænker blyanten for at starte eller stoppe tegning.",
   "penUp": "blyant op",
+  "pointTo": "point to",
+  "pixels": "pixels",
   "reinfFeedbackMsg": "Her er din tegning! Fortsæt med at arbejde på den eller gå videre til næste opgave.",
   "setAlpha": "sæt alfa",
   "setCharacter": "set character to {character}",
@@ -91,5 +94,6 @@
   "turnTooltip": "Drejer figuren  til venstre eller højre med det angivne antal grader.",
   "turtleVisibilityTooltip": "Gør kunstneren synlig eller usynlig.",
   "widthTooltip": "Ændrer bredden på blyanten.",
+  "withSize": "with size",
   "wrongColour": "Dit billede har den forkerte farve.  Til denne opgave skal det være %1."
 }

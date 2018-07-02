@@ -1,0 +1,44 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2018-03-19T23:32:55.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "gamelab",
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "var balloon = createSprite(200, 200);\r\nballoon.setAnimation(\"balloon\");\r\nballoon.scale = 0.1;\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update Values\r\n  balloon.scale = balloon.scale + 0.001;\r\n\r\n  // Draw Animations\r\n  drawSprites();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true",
+    "start_animations": "{\n    \"orderedKeys\": [\n        \"balloon\",\n        \"pop\"\n    ],\n    \"propsByKey\": {\n        \"balloon\": {\n            \"name\": \"balloon\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/balloon.png\",\n            \"sourceSize\": {\n                \"x\": 444,\n                \"y\": 598\n            },\n            \"frameSize\": {\n                \"x\": 444,\n                \"y\": 598\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"pop\": {\n            \"name\": \"pop\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/pop.png\",\n            \"sourceSize\": {\n                \"x\": 600,\n                \"y\": 465\n            },\n            \"frameSize\": {\n                \"x\": 600,\n                \"y\": 465\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
+    "show_debug_watch": "true",
+    "parent_level_id": 5053,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Gamelab>

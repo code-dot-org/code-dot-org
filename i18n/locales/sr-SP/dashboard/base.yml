@@ -59,7 +59,7 @@ sr:
   courses: 'курсеви'
   courses_page:
     title_student: "Научите о Code Studio-ју"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Активност ван мреже'
   of: "од"
   more: "ВИШЕ"
@@ -69,7 +69,7 @@ sr:
   try_k8intro: "Пробај наш К-8 курс Увод у рачунарство (15-25 часова)"
   k8intro: "К-8 курс Увод у рачунарство (15-25 часова)"
   already_started: "Већ почели? Наставите овде >>"
-  demos: 'Администратор: Сви демои'
+  demos: "Администратор: Сви демои"
   continue: 'Настави'
   prize: 'награда'
   more_info: 'Више информација'
@@ -85,6 +85,7 @@ sr:
     facebook: 'Facebook'
     windowslive: 'Мајкрософт налог'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Заборавили сте лозинку?'
     need_confirmation: "Нисте примили инструкције за потврду?"
     need_unlock: "Нисте примили инструкције за откључавање?"
@@ -114,15 +115,25 @@ sr:
     valid_password: "Валидна лозинка!"
     invalid_password: "Лозинка мора имати барем 6 знакова"
     mismatch_password: "Лозинке се не поклапају"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    student_terms: "Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "Потребне су нам додатне информације како би смо могли да наставимо са процесом регистрације."
+    user_type_button: "Update Account Type"
     user_type_label: "Врста налога"
     user_type_teacher: "Учитељ"
     user_type_student: "студент"
     field_is_required: "је обавезан"
     accept_terms: "Морате се сложити да бисте креирали свој налог"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Да"
+    email_preference_no: "не"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -171,6 +182,7 @@ sr:
       email: 'Емаил адреса'
       submit: 'Пошаљи'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Промените вашу лозинку'
@@ -201,7 +213,7 @@ sr:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Тајна реч'
       email: 'Електронска пошта'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -220,7 +232,7 @@ sr:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org обавештење: студент%{student_name} више се не сматра вашим учеником.'
+        subject: "Code.org обавештење: студент%{student_name} више се не сматра вашим учеником."
   reports:
     error:
       access_denied: "Немате приступ овој особи"
@@ -348,11 +360,12 @@ sr:
     email_confirm_needed_required: 'Ваша електронска пошта %{email} није потврђена:'
     email_confirm_wrong_email: '(Погрешна електронска пошта?)'
     email_resend_confirm: 'Поново пошаљи упутства о потврди'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(остави празно ако не желиш промијенити)"
     current_password_hint: '(потребна нам је твоја тренутна лозинка како би потврдили твоје промјене)'
     delete: 'Обришите ваш налог'
     delete_text: "Обришите ваш налог кликом на доње дугме."
-    delete_text_teacher_note: 'Напомена: брисање вашег налога неће резултирати брисањем налога ваших ученика.'
+    delete_text_teacher_note: "Напомена: брисање вашег налога неће резултирати брисањем налога ваших ученика."
     delete_confirm: 'Да ли сте сигурни да желите да обришете свој налог?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -363,10 +376,11 @@ sr:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Готово'
     tried: 'Покушао'
@@ -448,6 +462,7 @@ sr:
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
     already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Научите о Code Studio-ју"
     description: "Свако може да научи компјутерску науку. Да направи игрице, апликације и уметност помоћу кодирања."
@@ -455,6 +470,8 @@ sr:
   gender:
     male: 'Мушко'
     female: 'Женско'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Желим задржати приватност'
   user_type:
     student: 'студент'
@@ -702,12 +719,12 @@ sr:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Услови коришћења"
     privacy: "Политика приватности"
     privacy_notice: "Privacy Notice"
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
+    accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept: "Accept"
     print: "Одштампај"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -718,25 +735,25 @@ sr:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Сачувај"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: "White"
       - 
-        black: Black or African American
+        black: "Black or African American"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: Asian
+        asian: "Asian"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: Други
+        other: "Други"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "Пошаљи"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
@@ -762,7 +779,7 @@ sr:
     delete: "Обриши"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
@@ -865,8 +882,9 @@ sr:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ sr:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -984,3 +1007,14 @@ sr:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Слажем се'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Да'

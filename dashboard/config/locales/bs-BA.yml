@@ -1,14 +1,15 @@
-"bs":
+---
+bs:
   errors:
     messages:
       not_saved: 'Ispravi ove greške:'
       too_young: Ovaj sadržaj ima podešeno dobno ograničenje i nije dostupan mlađim
         studentima.
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
+      teacher_must_accept_terms: Ovaj sadržaj ima dobna ograničenja i nije dostupan
+        za mlađe učenike. Pitaj svog nastavnika da prihvati ažurirane Uslove korištenja
+        da ti da pristup za ovaj sadržaj. Tvoj nastavnik ovo može uraditi prijavom
+        na Code Studio i klikajući na dugme "Pregledaj ažurirane uslove" na vrhu početne
+        stranice Code Studija.
       pair_programmer: You are currently pair programming with a student who does
         not have access to this content. To access this content, stop pair programming
         and try again.
@@ -26,7 +27,7 @@
         parent_email: Parent/guardian email
         personal_email: Personal email address
         username: Korisničko ime
-        password: "Šifra"
+        password: Šifra
         password_confirmation: Potvrda šifre
         current_password: Trenutna šifra
         locale: Jezik
@@ -51,7 +52,7 @@
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'
-      placeholder: "Šifra Odjeljenja (ABCDEF)"
+      placeholder: Šifra Odjeljenja (ABCDEF)
       instructions: Molimo unesite kôd koji je sa vama podijelio vaš učitelj. To je
         kôd od 6 slova tipa "ABCDEF".
       instructions_short: Enter your 6 letter section code
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft Račun
     clever: Pametni račun
+    powerschool: Powerschool Account
     forgot_password: Zaboravio/la si šifru?
     need_confirmation: Nisi primio/la upute za potvrdu?
     need_unlock: Nisi primio/la upute za otključavanje?
@@ -138,6 +140,13 @@
     valid_password: Ispravna lozinka!
     invalid_password: Lozinka mora biti duga najmanje 6 znakova
     mismatch_password: Dvije lozinke koje ste unijeli se ne podudaraju
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Slažem se da ću poštovati <a href='http://code.org/tos'>uvjete
       korištenja</a> Code.org. Ako imam manje od 13 godina, potvrđujem slanjem ovog
       obrasca da moj roditelj ili zakonski staratelj daje dozvolu za korištenje usluga
@@ -147,12 +156,19 @@
       Code.org.
     additional_information: Trebamo dodatne informacije kako bismo nastavili vašu
       prijavu.
+    user_type_button: Update Account Type
     user_type_label: Tip računa
     user_type_teacher: Učitelj
     user_type_student: Učenik
     field_is_required: je neophodno
     accept_terms: Morate pristati da bi napravili račun
-    error: An error occurred.
+    error: Došlo je do greške.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Da
+    email_preference_no: Ne
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Informacije o školi (nije obavezno)
     school_country: School Country
@@ -167,7 +183,7 @@
     district: District
     other_district_not_listed: Other district not listed above
     district_name: District Name
-    school: "Škola"
+    school: Škola
     other_school_not_listed: Druga škola nije navedena iznad
     school_name: School Name
     school_zip: School Zip Code
@@ -178,11 +194,11 @@
     title: Već imate račun? Prijavite se
     login: E-mail ili korisničko ime
     login_username: Email or Username
-    password: "Šifra"
+    password: Šifra
     remember: Zapamti me
     submit: Prijava
   signin:
-    try_heading: "Želite probati kodiranje bez prijave?"
+    try_heading: Želite probati kodiranje bez prijave?
     try_hoc: Prvo isprobaj Sat Kodiranja
     try_20hours: Probaj naš 20-satni Uvod u Informatiku
   signinsection:
@@ -193,8 +209,8 @@
     login: Prijava
     invalid_login: Invalid login, please try again
     pair_programming: I have a partner at my computer
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    student_privacy: Nauči više o tome zašto ne vidiš svoje puno ime<a href='%{student_privacy_blog}'
+      target='_blank'>ovdje</a>.
   password:
     reset_form:
       title: Zaboravio/la si šifru?
@@ -203,6 +219,7 @@
       email: E-mail adresa
       submit: Potvrdi
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
@@ -230,8 +247,8 @@
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Slikovna lozinka
+      word: Tajne riječi
       email: Email
       google_classroom: Google učionica
       clever: Clever
@@ -297,30 +314,30 @@
       course_catalog: Course Catalog
       project_gallery: Projekti
       sections: Sections
-      help_support: Help and support
+      help_support: Pomoć i podrška
       report_bug: Report bug
       teacher_community: Teacher community
       professional_learning: Professional Learning
-      documentation: Documentation
+      documentation: Dokumentacija
       tutorials: Tutorials
       educate_overview: Educator Overview
-      educate_elementary: Elementary School
+      educate_elementary: Osnovna škola
       educate_middle: Middle School
-      educate_high: High School
+      educate_high: Srednja škola
       educate_hoc: Sat Kodiranja
       educate_partner: Partner sa nama
       educate_beyond: Beyond Code.org
       educate_inspire: Inspiriraj učenika
       educate_community: Online Community
       educate_tools: Tools and Videos
-      about_us: About Us
+      about_us: O nama
       about_leadership: Leadership
       about_donors: Donatori
       about_partners: Partners
       about_team: Full Team
       about_news: Newsroom
       about_evaluation: Evaluation
-      about_jobs: Jobs
+      about_jobs: Poslovi
       about_contact: Contact Us
       about_faqs: FAQs
       learn: Learn
@@ -339,7 +356,7 @@
       signup: Napravi račun
       already_registered: Jeste li već registrirani?
       pair_programming: Programiranje u Paru
-      team: Team
+      team: Tim
       driver: Driver
       navigator: Navigator
     popup:
@@ -384,6 +401,7 @@
     email_confirm_needed_required: 'Vaša e-mail adresa %{email} nije još potvrđena:'
     email_confirm_wrong_email: "(Pogrešna e-mail adresa?)"
     email_resend_confirm: Ponovno slanje uputa za potvrđivanje
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(ostavi prazno ako ne želiš promijeniti)"
     current_password_hint: "(za potvrdu promjene treba nam tvoja trenutna lozinka)"
     delete: Ukloni svoj račun
@@ -416,6 +434,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Unesi email adresu od svog roditelja ili staratelja (za obnovu
       lozinke)
+    update: Update Account
   user_level:
     completed: Kompletirano
     tried: Pokušano
@@ -589,10 +608,12 @@
       Please enter a different section code.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    all_students_must_be_in_current_section: Svi učenici trenutno moraju biti upisani
+      u vaše odjeljenje.
+    already_enrolled_in_new_section: Ne možete premjestiti ove učenike zato što su
+      oni već u novom odjeljenju.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Naučite o Code Studiu
     description: Svako može naučiti računarske znanosti, te pisati kod za igre, aplikacije
@@ -600,7 +621,9 @@
     try_hour_of_code: Try an Hour of Code!
   gender:
     male: Muško
-    female: "Žensko"
+    female: Žensko
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Radije ne bih odgovorio/la
   user_type:
     student: Učenik
@@ -723,8 +746,8 @@
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
       title: Flappy kôd
-      body: "Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
-        tutorijal izrade Flappy kôda!"
+      body: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
+        tutorijal izrade Flappy kôda!
     20-hour:
       title: Ubrzani Kurs
       body: Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja i nformatike.
@@ -781,12 +804,12 @@
     unplugged:
       title: Unplugged Lessons
       audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      body: Mi smo za tebe sastavili listu van mrežni aktivnosti da ih koristiš u
+        svom razredu. Sad možeš podučavati osnove računarstva, bilo da imaš računare
+        u razredu ili ne! Pokušaj koristiti ove lekcije kao samostalne kurseve ili
+        kao dopunske lekcije za bilo koji kurs računarstva.
+      body_short: Ako nemate računara, pokušajte ove van mrežne aktivnosti u Vašem
+        razredu.
     unplugged_conditionals:
       title: Uvjeti
       body: Learn about algorithms and conditional statements in this “unplugged”
@@ -807,7 +830,7 @@
     activity_count: U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b>
       aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike
       i snimke ekrana da biste vidjeli svaki program na djelu.
-    want_to_make_your_own: "Želite li napraviti svoj vlastiti?"
+    want_to_make_your_own: Želite li napraviti svoj vlastiti?
     how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
       save your work to the gallery.
     more: Više &rarr;
@@ -827,8 +850,8 @@
     support: Potraži Pomoći
     support_url: "//support.code.org"
     help_resources: Help and Resources
-    help_support: Help and Support
-    documentation: Documentation
+    help_support: Pomoć i podrška
+    documentation: Dokumentacija
     tutorials: Tutorials
   multi:
     wrong_title: Netačan odgovor
@@ -928,7 +951,7 @@
     privacy_notice: Privacy Notice
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    accept: Prihvati
     print: Isprintaj
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
@@ -937,8 +960,8 @@
       updated terms.
     review_terms: Pregledajte ažurirane uslove
   school_info_interstitial:
-    title: "Želimo da donesemo računarstvo do svakog učenika - pomozite nam da pratimo
-      naš napredak!"
+    title: Želimo da donesemo računarstvo do svakog učenika - pomozite nam da pratimo
+      naš napredak!
     message: Molimo ispod unesite informacije o svojoj školi.
     message_with_suggestion: Molimo da potvrdite da je sljedeća informacija tačna,
       ili ažurirajte ako je potrebno.
@@ -993,7 +1016,7 @@
     exit: Povratak na Kurs
     my_projects: Moji Projekti
     project_gallery: Projekti
-    publish: Publish
+    publish: Objavi
     unpublish: Unpublish
     share: Podijeli
     share_title: Podijeli svoj projekat
@@ -1037,8 +1060,9 @@
     abuse:
       tos: Ovaj projekat je prijavljen da krši <a href='http://code.org/tos'>Uvjete
         Korištenja</a> Code.org-a i zbog toga ne može biti podijeljen sa ostalima.
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: Ovaj projekat sadrži informacije koje ne mogu biti podijeljene
+        sa drugima. Molimo kontaktirajte vlasnika aplikacije da popravi sadržaje svoje
+        aplikacije.
       contact_us: Ako mislite da je ovo greška, molimo Vas da nas <a href='https://code.org/contact'>kontaktirate.</a>
       go_to_code_studio: Idi u Code Studio
       report_abuse_form:
@@ -1064,11 +1088,11 @@
           Privatnosti%{link_end} i %{link_start_tos}Uvjetima Korištenja%{link_end}
   peer_review:
     accepted:
-      name: Accepted
+      name: Prihvaćeno
       description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
         requirements"
     rejected:
-      name: Rejected
+      name: Odbijeno
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
@@ -1109,9 +1133,10 @@
     csd4_1: 'Chapter 1: User Centered Design'
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd5_2: 'Poglavlje 2: Rješavanje problema podataka'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1125,28 +1150,33 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od
+      strane Code.org-a.
+    disclaimer_text: Ova stranica može imati politike privatnosti koje se razlikuju
+      od onih na Code.org-u. Mi smo izabrali ova sredstva od trećih strana zato što
+      mislimo da će Vam biti od koristi. Iako mi nismo direktno odgovorni za sadržaj
+      ove stranice, molimo<a href='%{support_url}'>kontaktirajke podršku</a> ako nađete
+      sporni sadržaj, ili ako povezana stranice više nije dostupna.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Imate li internet?
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
+    instructions_headline: Nema interneta?
+    instructions: 'Instrukcije za nastavnike: ako imate slabu internetsku uslugu,
+      ovi tutorijali Sata Kodiranja su dostupni za preuzimanje i instaliranje za izvanmrežno
+      korištenje. Izaberite Vaš jezik i platformu, preuzmite i instalirajte ih na
+      sve računare u Vašoj učionici. Možda želite koristiti USB uređaj da na njega
+      jednom preuzmete i instalirate na sve računare. Bilješka: učenici se neće moći
+      prijaviti na Code Studio, sačuvati napredak, ili isprintati certifikate. Nastavnici
+      mogu unaprijed isprintati certifikate <a href="%{url}}">ovdje</a>.'
     minecraft_name: Minecraft Hour Of Code
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
@@ -1216,7 +1246,7 @@
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Idite na pregled kursa
   view_all_units: Vidi sve jedinice
   pd:
     survey:
@@ -1267,3 +1297,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Slažem se
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Da

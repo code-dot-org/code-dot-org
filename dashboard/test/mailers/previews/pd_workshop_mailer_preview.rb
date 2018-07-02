@@ -18,6 +18,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF
   end
 
+  def teacher_enrollment_receipt__csd_summer_workshop
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+  end
+
   def teacher_enrollment_receipt__csp_summer_workshop
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
   end
@@ -34,12 +38,40 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
   end
 
+  def teacher_enrollment_receipt__formatted_notes
+    notes = <<-NOTES.strip_heredoc
+      This is a multi-line, formatted notes section, with preserved whitespace:
+
+      I have skipped lines ^,
+      double  spaces,
+        and indentation.
+    NOTES
+
+    mail :teacher_enrollment_receipt, workshop_params: {notes: notes}
+  end
+
   def teacher_enrollment_reminder__csf
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF
   end
 
-  def teacher_enrollment_reminder__csp_summer_workshop
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+  def teacher_enrollment_reminder__csd_summer_workshop_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csd_summer_workshop_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP,
+      options: {days_before: 3}
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csp_summer_workshop_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      options: {days_before: 3}
   end
 
   def teacher_enrollment_reminder__csp_1_10_day
@@ -59,6 +91,11 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def teacher_enrollment_reminder_csd_1_3_day
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
+      options: {days_before: 3}
+  end
+
+  def teacher_enrollment_reminder_csd_unit_6_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNIT_6,
       options: {days_before: 3}
   end
 
@@ -146,7 +183,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   private
 
-  def mail(method, course = nil, subject = nil, options: nil, target: :enrollment)
+  def mail(method, course = nil, subject = nil, options: nil, target: :enrollment, workshop_params: {})
     unless course
       course = DEFAULT_COURSE
       subject = DEFAULT_SUBJECT
@@ -154,9 +191,16 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
     facilitator = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
     organizer = build :workshop_organizer, name: 'Oscar Organizer', email: 'oscar_organizer@example.net'
-    workshop = build :pd_workshop, organizer: organizer, num_sessions: 2, course: course, subject: subject,
-      location_name: 'Code.org office', location_address: '1501 4th Ave, Suite 900, Seattle, WA',
+    default_workshop_params = {
+      organizer: organizer,
+      num_sessions: 2,
+      course: course,
+      subject: subject,
+      location_name: 'Code.org office',
+      location_address: '1501 4th Ave, Suite 900, Seattle, WA',
       facilitators: [facilitator]
+    }
+    workshop = build :pd_workshop, default_workshop_params.merge(workshop_params)
 
     teacher = build :teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net'
 

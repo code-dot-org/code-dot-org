@@ -1,4 +1,4 @@
-- survey_url = "https://docs.google.com/forms/d/e/1FAIpQLSd7MppqXJi4FpURELDH3RyMG6PgevBVPaH373K0h-FSI_3FUg/viewform?usp=pp_url&entry.796977513&entry.999252886&entry.692842963=__other_option__&entry.692842963.other_option_response=#{current_user.id}"
+- survey_url = "https://docs.google.com/forms/d/e/1FAIpQLSdiF0n7c5Skxb1Vlp_AuLOiu9p13wrOhzCx0FcLmHwXPsStKA/viewform?usp=pp_url&entry.796977513&entry.999252886&entry.692842963=__other_option__&entry.692842963.other_option_response=#{current_user.id}"
 
 #diversity_survey
   #surveythanks{style: "display: none; "}
@@ -52,7 +52,7 @@
               %input{id: "radio_#{index}", type: "radio", name: "survey[diversity_farm]", value: index}
               %label{for: "radio_#{index}"}= text
 
-      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2017}
+      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2018}
 
       #submit
         %button.btn-primary#submitSurvey{type: "submit"} Submit

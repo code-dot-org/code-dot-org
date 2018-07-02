@@ -12,18 +12,16 @@ var tiles = require('./tiles');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
+import AppView from '../templates/AppView';
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
-var constants = require('../constants');
 import {getStore} from '../redux';
-var KeyCodes = constants.KeyCodes;
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {KeyCodes, TestResults, ResultType} from '../constants';
 
 var SquareType = tiles.SquareType;
 
-import {TestResults, ResultType} from '../constants';
 
 import '../util/svgelement-polyfill';
 import {SignInState} from '../code-studio/progressRedux';

@@ -1,6 +1,7 @@
 :ruby
   cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
   user_type = request.cookies[cookie_key]
+  user_type = "student" if user_type == "student_y"
 
   hamburger_options = {}
   hamburger_options[:level] = nil
@@ -32,20 +33,20 @@
 =inline_css 'hamburger.css'
 
 #language_dir{class: language_dir_class}
-  #pageheader2-wrapper
+  #pageheader-wrapper
     #pageheader
       .content
         #left
           #logo-wrapper
             - if current_user
-              %a{:href=>CDO.studio_url("/home")}
+              %a.linktag#logo-signedin{:href=>CDO.studio_url("/home")}
                 %img#logo{:src=>'/images/logo.png'}
             - else
-              %a{:href=>CDO.code_org_url}
+              %a.linktag#logo-signedout{:href=>CDO.code_org_url}
                 %img#logo{:src=>'/images/logo.png'}
           #headerlinks.desktop-feature
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
-              %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+              %a.headerlink.linktag{id: entry[:id], href: entry[:url]}= entry[:title]
 
         #right
           #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}

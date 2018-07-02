@@ -5,51 +5,51 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+### Aşağıda, Bilgisayar Bilimleri Eğitim Haftasını destekleyen bir örnek çözüm ve bu programın eyalet ve yerel yasama organları tarafından kullanılabilecek hedefleri bulunmaktadır.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[MECLİS,SENATO,DEVLET, EYLEM VEYA ŞEHİR KARARI VEYA SONA ERME ###] Bilgisayar Bilimi Eğitim Haftası, bilgisayar biliminin toplumu dönüştürmede oynadığı önemli rolü ve bilgisayar bilincinin yeniliği nasıl sağladığını ve ekonomik fırsatlar yarattığını vurgular;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[MECLİS VEYA SENATO KARARI ###]
 
-[DATE]
+[TARİH]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Hesaplama teknolojisi modern kültürün ayrılmaz bir parçası iken ve insanların birbirleriyle ve çevrelerindeki dünyayla nasıl etkileşime girdiğini değiştirirken;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Bilgisayar bilimi sanayiyi dönüştürürken, yeni ticaret alanları yaratıyor, bilimin her alanında yeniliği sürüyor ve kurulu ekonomik sektörlerde üretkenliği artıyor;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Abd ekonomisinin çıkışına önemli katkıda bulunan bilgisayar bilimi alanı, ekonomimizin bilgi teknolojisi sektörünü desteklemektedir;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Bilgisayar bilimi alanı, dijital çağın temel bilimidir;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Bilişim teknolojisi sektörü, yeni yeniliklerin araştırılması ve geliştirilmesi yoluyla ekonomik iyileşmeye yardımcı olmak için benzersiz bir konumdadır;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Bilgisayar bilimindeki işler için görünüm, ülkenin her yerinde 500.000'i aşkın açık bilgisayar pozisyonuyla aydınlatılmışken;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Öğrencilere yüksek kaliteli bilgisayar bilimleri etkinliklerine katılma şansını sunmak onları alanın sunduğu zengin fırsatlara ve hayatları boyunca onlara hizmet edecek eleştirel düşünme becerilerine bırakır;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Tüm öğrenciler, ilk ve orta öğrenim seviyesinde bilgisayar bilimi öğrenmek için gerekli kalifiye öğretmenlere, teknolojiye ve yaşa uygun müfredata erişim de dahil olmak üzere bilgisayar bilimleri eğitiminde kapsamlı bir hazırlık yapmayı hak ediyor;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Bilgisayar bilimleri eğitiminde, mezuniyet şartlarına bilgisayar biliminin eklenmesi ve bilgisayar bilimleri öğretmenleri için mesleki gelişim sağlanması da dahil olmak üzere zorluklar bulunmaktadır;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Bilgisayar Bilimleri Eğitim Haftası boyunca Kodlama Saatine katılarak bilgisayar bilimleri alanının gizemini aralayıp açıklayarak ve daha fazla öğrenciyi bilgisayar bilimi konusunda daha fazla çalışmaya teşvik etmeye hizmet ederken;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Bilgisayar bilimleri, kadın katılımcıları ve her seviyeden, branştan yetersiz temsil edilen azınlıklardan katılımcıları etkileyebilmesi gibi takdire şayan eşitlik bariyerlerine sahiptir;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Bilgisayar bilimi alanında ilk kadınlardan biri olan Grace Murray Hopper, yeni yazılım dilleri geliştirdi ve bilgisayar bilimlerinde pek çok ilerlemenin temelini atan bilgisayar sistemleri için öncül standartlar geliştirdi; ve
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Bilgisayar Bilimleri Haftası <%= campaign_date('start-long') %>, Grace Hopper'ın doğum günü onuruna belirlenmiştir. Bilgisayar Bilimleri Haftası: şimdi, bu nedenle olması gekenler
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Kararlaştırılmış, [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) Belirlenmiş Bilgisayar Bilimleri Haftasını destekleyin (<%= campaign_date('full') %>);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) okulları, eğiticileri, ebeveynleri ve politika yapıcıları Bilgisayar Bilim Eğitim Haftası'na öğrencilerinin Kod Yasasına katılmalarını sağlayarak katılmalarını teşvik eder;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) okulları, öğretmenleri, araştırmacıları, üniversiteleri, iş liderlerini ve kural koyucuları öğretmenlerin bilgisayar bilimlerinde sürdürülebilir öğrenme deneyimlerini tüm eğitim seviyelerinde sağlamak için en ileri mesleki gelişimi almalarını ve öğrencileri bilgisayar bilimi kavramlarına maruz bırakmaya teşvik etmelerini sağlayacak mekanizmaları tanımlamalarını teşvik eder;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) kural koyucuları, bilgisayar bilimleri sınıflarının mezuniyet gerekliliklerine karşı matematik veya fen kredileri olarak sayılmasını engelleyen engelleri kaldırmaya teşvik eder;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) mevcut programlar aracılığıyla, kadınlar ve yetersiz temsil edilen azınlıklar da dahil olmak üzere herkesi bilgisayar bilimleri alanında teşvik eder.
 
 <%= view :signup_button %>

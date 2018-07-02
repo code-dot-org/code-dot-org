@@ -38,6 +38,7 @@
   "drawUpperWave": "dibuixa una onada alta",
   "drawLowerWave": "dibuixa una onada baixa",
   "drawSticker": "draw sticker",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "alçcada",
   "hideTurtle": "amaga l'artista",
   "jump": "salt",
@@ -73,6 +74,8 @@
   "penDown": "baixa el llapis",
   "penTooltip": "Puja o baixa el llapis per començar o deixar de dibuixar.",
   "penUp": "puja el llapis",
+  "pointTo": "point to",
+  "pixels": "píxels",
   "reinfFeedbackMsg": "Aquí tens el dibuix! Segueix treballant-hi o continua al puzzle següent.",
   "setAlpha": "establir alfa",
   "setCharacter": "set character to {character}",
@@ -91,5 +94,6 @@
   "turnTooltip": "Gira l'artista cap a l'esquerra o dreta segons el nombre especificat de graus.",
   "turtleVisibilityTooltip": "Fer l'artista visible o invisible.",
   "widthTooltip": "Canvia el gruix del llapis.",
+  "withSize": "with size",
   "wrongColour": "La teva imatge té el color malament. Per a aquest puzzle necessita ser %1."
 }

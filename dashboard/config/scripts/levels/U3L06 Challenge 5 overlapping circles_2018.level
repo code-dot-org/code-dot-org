@@ -1,0 +1,142 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:37:54.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveBackward": null,
+      "dot": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "arcLeft": null,
+      "arcRight": null,
+      "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
+        "params": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "This image is created just using dot() and penColor() but, how are we going to get those circles to be transparent?  If you haven't gotten the hint yet: check out the documentation!",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": "0.5",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "app_width": "320",
+    "app_height": "480",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "markdown_instructions": "# Transparency - Red, Green, Blue, Alpha\r\n\r\nThere is another command that lets you set the pen color called `penRGB(r,g,b,a)`.\r\n\r\n* The first 3 parameters are for values (in the range 0-255) for the red, green, and blue channels. \r\n* The 4th parameter `a` stands for \"alpha\".  The \"alpha channel\" for color lets you set the level of **opacity** as a decimal value between 0 and 1 - it is interpreted as a percentage, so 0.5 equates to 50% opaque.  For example: `penRGB(113, 102, 160, 0.5)`.\r\n\r\n# Do This:\r\n\r\n**Read the Documentation:** To figure out how to use `penRGB()` go read the documentation, paying special attention to the syntax used to give a command **multiple values**.\r\n\r\n<img src=\"https://images.code.org/3247af8d88da11a042d0bd9a76b49f12-image-1441982501960.png\" style=\"height: 250px; float: left; margin: 10px\">\r\n\r\n**Draw the circles: ** \r\n\r\nUse `penRGB()` and `dot()` to draw two overlapping circles as shown in the image.\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "b7beInscIUpPOSy/abrlSHYIZJeaBRfAbjrsHHHd9x6Qy8tHvYnVnEoJQKxz\n6z9N\n",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem"
+      },
+      {
+        "entries": [
+          "penRGB:4"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to set the pen color using the 4-param version of penRGB(r,g,b,a) at least twice."
+      },
+      {
+        "entries": [
+          "dot:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete this task you need to draw at least 2 dots."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "To complete this task you need to move forward at least once. Make sure you use a parameter too!"
+      }
+    ],
+    "instructions_important": "false",
+    "teacher_markdown": "The alpha channel is, oddly, specified as a decimal value between 0 and 1, while the three RGB values are all specified as integers in the range 0-255.  That’s because the transparency is a percentage, not a color.  So an alpha value of 0.5 means “50% transparent.\r\n\r\nValidation note: we don't check to see if the student actually drew this exact figure. We check that the student:\r\n\r\n* called `penRGBA(r,g,b,a)` at least twice\r\n* drew at least 2 dots\r\n* moved forward at least once",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 2138,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:46:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-02 23:31:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

@@ -9,15 +9,15 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Реклама и полезная статистика
+# Рекламные Объявления и Полезная Статистика
 
-## Используйте эту короткую рекламу в информационных бюллетенях
+## Используйте эти короткие рекламные объявления в информационных бюллетенях
 
-### Bring computer science to your school. Start with an Hour of Code!
+### Привнесите компьютерную науку в вашу школу. Начните с Часа Кода!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. Но не менее половины школ преподают информатику! Но есть и хорошие новости: мы можем это изменить. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+С технологиями изменяющими все отрасли на планете, знания в компьютерных науках стали частью хорошего всестороннего образования. Но только менее половины всех школ преподают компьютерные науки! Но есть и хорошие новости: мы можем это изменить. Если в последние годы вы слышали о Часе Кода, вы возможно знаете, что он вошел в историю. 100 миллионов студентов уже открыли для себя, как доступна и увлекательна может быть компьютерная наука, проходя всего лишь один Час Кода.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Час Кода это одночасовое введение в компьютерную науку, разработанное чтобы снять покров таинственности с программирования и показать что любой может изучить его основы. Узнайте больше на <http://HourofCode.com>, попробуйте Час Кода сами, или проведите Час Кода чтобы ввести других в мир вычислительной техники!
 
 <a id="infographics"></a>
 

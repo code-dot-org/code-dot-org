@@ -1,0 +1,28 @@
+name 'CSD U2 L7 Overview_2018'
+display_name 'Lesson Overview'
+
+markdown <<MARKDOWN
+# Overview
+
+This lesson covers how to use content created by others on a website while respecting the rights of the original creator of that content. After first studying Creative Commons licensing, the class learns how to add images to web pages and give proper attribution when doing so.
+
+## Vocabulary
+
+* **Citation** - A quotation from or reference to a book, paper, or author, especially in a scholarly work.
+* **Copyright** - the exclusive legal right, given to an originator or an assignee to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same.
+* **Creative Commons** - A public copyright licenses that enable the free distribution of an otherwise copyrighted work. A CC license is used when an author wants to give people the right to share, use, and build upon a work that they have created.
+* **Intellectual Property** - A work or invention that is the result of creativity, such as a manuscript or a design, to which one has rights and for which one may apply for a patent, copyright, trademark, etc.
+
+## Introduced Code
+
+*  **[Image](//docs.code.org/weblab/img/)** - `<img />`
+
+## Resources
+
+* [Creative Commons Overview](https://www.youtube.com/watch?v=HKfqoPYJdVc) - Video
+* [Licensing Your Work - Activity Guide](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Licensing Your Work - Activity Guide Exemplar](https://docs.google.com/document/d/1SKmMFXaXJM4eEXTXaH2JXXwO15pmVArrVK98WG8sSh8/export?format=pdf)
+MARKDOWN

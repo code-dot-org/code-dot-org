@@ -15,10 +15,13 @@ import {
   PUBLISH_SUCCESS,
   PUBLISH_FAILURE,
 } from './templates/publishDialog/publishDialogRedux';
+import {createHiddenPrintWindow} from './utils';
+import testImageAccess from './code-studio/url_test';
+import {TestResults, KeyCodes} from './constants';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
-var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha"];
+var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha", "comment"];
 
 /**
  * Bag of utility functions related to building and displaying feedback
@@ -40,9 +43,6 @@ var codegen = require('./lib/tools/jsinterpreter/codegen');
 var msg = require('@cdo/locale');
 var dom = require('./dom');
 var FeedbackBlocks = require('./feedbackBlocks');
-var constants = require('./constants');
-var TestResults = constants.TestResults;
-var KeyCodes = constants.KeyCodes;
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons');
 var CodeWritten = require('./templates/feedback/CodeWritten');
@@ -124,8 +124,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     feedbackBlocks = new FeedbackBlocks(
         options,
         this.getMissingBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
-        this.getMissingBlocks_(recommendedBlocks, maxRecommendedBlocksToFlag),
-        this.studioApp_);
+        this.getMissingBlocks_(recommendedBlocks, maxRecommendedBlocksToFlag));
   }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -471,14 +470,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  function createHiddenPrintWindow(src) {
-    var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
-    iframe.appendTo("body");
-    iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
-    iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
-    $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
-  }
-
   var printButton = feedback.querySelector('#print-button');
   if (printButton) {
     dom.addClickTouchEvent(printButton, function () {
@@ -659,7 +650,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
   var message;
 
   // If a message was explicitly passed in, use that.
-  if (options.feedbackType !== TestResults.ALL_PASS &&
+  if (options.feedbackType < TestResults.ALL_PASS &&
       options.level && options.level.failureMessageOverride) {
     message = options.level.failureMessageOverride;
   } else if (options.message) {
@@ -781,6 +772,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
       // Success.
       case TestResults.ALL_PASS:
       case TestResults.FREE_PLAY:
+      case TestResults.BETTER_THAN_IDEAL:
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel = (options.response &&
           (options.response.message === "no more levels"));
@@ -898,6 +890,22 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
     });
   }
 
+  var sharingFacebook = sharingDiv.querySelector('#sharing-facebook');
+  if (sharingFacebook) {
+    testImageAccess(
+      'https://facebook.com/favicon.ico'  + "?" + Math.random(),
+      () => $(sharingFacebook).show()
+    );
+  }
+
+  var sharingTwitter = sharingDiv.querySelector('#sharing-twitter');
+  if (sharingTwitter) {
+    testImageAccess(
+      'https://twitter.com/favicon.ico'  + "?" + Math.random(),
+      () => $(sharingTwitter).show()
+    );
+  }
+
   //  SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   if (sharingPhone && options.sendToPhone) {
@@ -997,12 +1005,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=fal
  * @return {boolean}
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
-  return (feedbackType === TestResults.ALL_PASS ||
-    feedbackType === TestResults.PASS_WITH_EXTRA_TOP_BLOCKS ||
-    feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
-    feedbackType === TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
-    feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||
-    feedbackType === TestResults.FREE_PLAY);
+  return feedbackType >= TestResults.MINIMUM_PASS_RESULT;
 };
 
 /**
@@ -1263,14 +1266,23 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
  *   are found.
  */
 FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
-  var emptyBlock = this.getEmptyContainerBlock_();
+  const emptyBlock = this.getEmptyContainerBlock_();
   if (!emptyBlock) {
     return TestResults.ALL_PASS;
   }
 
-  var type = emptyBlock.type;
+  const type = emptyBlock.type;
   if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+    const emptyBlockInfo = emptyBlock.getProcedureInfo();
+    const findUsages = block =>
+      block.type === emptyBlockInfo.callType &&
+      block.getTitleValue('NAME') === emptyBlockInfo.name;
+
+    if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
+      return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+    } else {
+      return TestResults.ALL_PASS;
+    }
   }
 
   // Block is assumed to be "if" or "repeat" if we reach here.
@@ -1567,6 +1579,9 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else if (this.hasExtraTopBlocks() && Blockly.showUnusedBlocks) {
     return TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
+  } else if (isFinite(this.studioApp_.IDEAL_BLOCK_NUM) &&
+    numEnabledBlocks < this.studioApp_.IDEAL_BLOCK_NUM) {
+    return TestResults.BETTER_THAN_IDEAL;
   } else {
     return TestResults.ALL_PASS;
   }

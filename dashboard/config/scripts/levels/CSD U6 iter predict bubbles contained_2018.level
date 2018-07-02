@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-12T20:53:01.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "markdown_instructions": "# Fish Bubbles\r\n\r\nThis program uses the sound sensor in the same way as the clouds program.  How many bubbles will move when you blow on the board?",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 10681,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-11 17:05:56 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</FreeResponse>

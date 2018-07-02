@@ -48,7 +48,10 @@ export default class FacilitatorListFormPart extends React.Component {
 
   renderRemoveButton(i) {
     return (
-      <Button onClick={this.handleRemoveClick.bind(null, i)} >
+      <Button
+        id={`remove-facilitator${i}-btn`}
+        onClick={this.handleRemoveClick.bind(null, i)}
+      >
         <i className="fa fa-minus" />
       </Button>
     );
@@ -116,7 +119,10 @@ export default class FacilitatorListFormPart extends React.Component {
       this.props.facilitators[i].id > 0 && filteredAvailableFacilitators.length >= 1 ) {
 
       addButton = (
-        <Button onClick={this.handleAddClick}>
+        <Button
+          onClick={this.handleAddClick}
+          id="add-facilitator-btn"
+        >
           <i className="fa fa-plus"/>
         </Button>
       );
@@ -134,6 +140,7 @@ export default class FacilitatorListFormPart extends React.Component {
         <Col sm={8}>
           <select
             className="form-control"
+            id={`facilitator${i}`}
             value={facilitator.id}
             data-index={i}
             onChange={this.handleFacilitatorChange}

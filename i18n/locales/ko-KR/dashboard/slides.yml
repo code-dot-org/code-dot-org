@@ -118,7 +118,7 @@ ko:
         text: "\"앞으로 이동하기\" 블럭 1개를  \"반복(횟수)\" 블럭 안에 집어 넣고, 반복할 횟수를 숫자로 입력하면 됩니다."
       6:
         image: 'notes/hoc2_6.jpg'
-        text: '그리고 이렇게 하는 것은 매우 중요합니다: 여러 개의 명령 블럭을 "반복(횟수)" 블럭 안에 넣어 실행시킬 수 있기 때문입니다.'
+        text: "그리고 이렇게 하는 것은 매우 중요합니다: 여러 개의 명령 블럭을 \"반복(횟수)\" 블럭 안에 넣어 실행시킬 수 있기 때문입니다."
       7:
         image: 'notes/hoc2_7.jpg'
         text: "\"반복(횟수)\" 블럭을 잘 사용해 보세요!"
@@ -138,7 +138,7 @@ ko:
     if:
       1:
         image: 'notes/hoc4_1.jpg'
-        text: '안녕하세요? 저는 빌 입니다! 이제 새로운 기초 개념들을 배워 봅시다: "만약" 명령문입니다. 이 명령문을 이용해서, 컴퓨터가 생각하는 것처럼 만들 수 있습니다.'
+        text: "안녕하세요? 저는 빌 입니다! 이제 새로운 기초 개념들을 배워 봅시다: \"만약\" 명령문입니다. 이 명령문을 이용해서, 컴퓨터가 생각하는 것처럼 만들 수 있습니다."
       2:
         image: 'notes/hoc4_2.jpg'
         text: "\"만약\"? 이라는 생각은 매우 일상적입니다. \"만약\"에 밖에 비가 내리면? 우산을 가지고 나가야 합니다."
@@ -259,7 +259,7 @@ ko:
         text: "처음 해 본, Hour of Code 가 재미있으면, http://code.org 를 통해 컴퓨터과학(정보과학)의 기초개념들을 더 배워보세요!  그 과정을 끝내고 나면, 프로그래밍을 위한 기초적인 지식을 모두 배울 수 있게 됩니다. 여러분들은 스마트폰 앱 만들기, 로봇 조종, 게임 만들기 등, 원하는 것을 모두 할 수 있는 기본적인 지식들을 얻게 되는 거에요!"
       4:
         image: 'notes/hoc6_4.jpg'
-        text: '컴퓨터과학(정보과학)에서 배우는 지식과 기술들은 모든 사람들의 생활 방식을 바꿔가고 있습니다 : 프로그래밍은 재미있고, 창의적인 과정이며, 누구나 배울 수 있습니다!'
+        text: "컴퓨터과학(정보과학)에서 배우는 지식과 기술들은 모든 사람들의 생활 방식을 바꿔가고 있습니다 : 프로그래밍은 재미있고, 창의적인 과정이며, 누구나 배울 수 있습니다!"
     20_wrapup:
       1:
         image: 'notes/bird.png'
@@ -388,7 +388,7 @@ ko:
         text: "꿀벌들은 정말 멋진 곤충입니다. 다음 퍼즐들의 목표는 꿀벌을 꽃으로 이동시켜서 꽃꿀을 뽑고, 벌집으로 이동시켜서 꿀을 만드는 것입니다. \"꽃꿀 얻기\" 와 \"꿀 만들기\" 블록을 사용하면 됩니다."
       2:
         image: 'notes/C1_bee_level_intro_2.png'
-        text: '모든 꽃은 서로 다른 양의 꽃꿀을 가지고 있습니다: 1, 2, 3, 또는 그 이상. 빨강 꽃의 모서리에는 꽃꿀의 양이 나타나 있다는 것을 알 수 있습니다. 앞으로 이동하기 전에 꽃의 꽃꿀을 모두 뽑아내세요. 그리고, 모든 벌집은 그 만큼의 꿀을 보관할 수 있습니다: 1, 2, 3, 또는 그 이상. 따라서, 해당 벌집이 보관할 수 있을 만큼 씩만 꿀을 만들어야 합니다.'
+        text: "모든 꽃은 서로 다른 양의 꽃꿀을 가지고 있습니다: 1, 2, 3, 또는 그 이상. 빨강 꽃의 모서리에는 꽃꿀의 양이 나타나 있다는 것을 알 수 있습니다. 앞으로 이동하기 전에 꽃의 꽃꿀을 모두 뽑아내세요. 그리고, 모든 벌집은 그 만큼의 꿀을 보관할 수 있습니다: 1, 2, 3, 또는 그 이상. 따라서, 해당 벌집이 보관할 수 있을 만큼 씩만 꿀을 만들어야 합니다."
       3:
         image: 'notes/C1_bee_level_intro_3.png'
         text: "모든 꽃꿀을 모아서 꿀을 만들어야 다음 퍼즐로 갈 수 있습니다. 이리 저리 살펴보고 \"꿀벌\" 프로그래머가 되어 보세요."
@@ -524,7 +524,7 @@ ko:
         text: "인터넷을 하면서 가장 좋아하는 것은, 재미있는 게임들을 하는 것입니다. 점수! 그리고, 어떤 모양을 그리거나, 새로운 것들을 만들고 친구들과 공유하는 것도 좋아합니다. 멋져요! 웹사이트들에 접속하면서 새로운 것들을 많이 배우지만, 저는 항상 저에게 적당한 사이트만 접속합니다. 와, 공룡들이네요!"
       6:
         image: 'notes/C1_going_places_safely_6.png'
-        text: '인터넷은 아주 아주 재미있는 곳이에요. 하지만, 여러분들이 집 주변의 길을 건널 때 안전에 조심해야하는 것처럼, 온라인에 접속해있을 때에는 매우 조심해야 합니다. 인터넷을 사용할 때 반드시 기억하고 조심해야할 3가지가 있습니다. 규칙 1: 항상 먼저 부모님께 물어봐야 한다. 규칙 2: 아는 사람들과만 이야기해야 한다. 규칙 3: 자신에게 적합한 곳에만 접속해야 한다.'
+        text: "인터넷은 아주 아주 재미있는 곳이에요. 하지만, 여러분들이 집 주변의 길을 건널 때 안전에 조심해야하는 것처럼, 온라인에 접속해있을 때에는 매우 조심해야 합니다. 인터넷을 사용할 때 반드시 기억하고 조심해야할 3가지가 있습니다. 규칙 1: 항상 먼저 부모님께 물어봐야 한다. 규칙 2: 아는 사람들과만 이야기해야 한다. 규칙 3: 자신에게 적합한 곳에만 접속해야 한다."
       7:
         image: 'notes/C1_going_places_safely_7.png'
         text: "와 너무 재미있었어요! 이제 저녁이네요. 이제 끝내야 할 것 같아요. 아 이제 다음에 언제 또 하게 될지 너무 기대되요."
@@ -1106,7 +1106,7 @@ ko:
         text: "2진 체계를 사용하는 가장 일반적인 방법은 조건문 입니다. 조건문은 프로그래밍에서 가장 오래된 개념 중 하나 입니다. 프로그램이 실행되다가 어떤 것이 참이면, 그에 따른 작업을 합니다. 만약 거짓이면 다른 작업을 하고요. 여러분은 더 복잡한 작업들도 원할 수 있습니다. 조건문 말고 컴퓨터로 이미지나 사운드 같은 것을 작업하는 것 같은 것들입니다."
       3:
         image: 'notes/C4_unplugged_binary_3.png'
-        text: '컴퓨터는 2진 체계만 이해할 수 있습니다. 이미지는 0 과 1 로만 구성된 2진 체계가 아닌데 어떻게 이미지를 표현할 수 있는 것 일까요? 여기 예시가 있습니다: 이런 멋진 그림입니다. 그림은 기본적으로 정보의 형태라고 볼 수 있습니다. 모든 정보는 2진 체계를 이용해 여러 가지 형태로 저장될 수 있습니다. 어떻게 그렇게 할 수 있는지 이해할 수 있을 것입니다.'
+        text: "컴퓨터는 2진 체계만 이해할 수 있습니다. 이미지는 0 과 1 로만 구성된 2진 체계가 아닌데 어떻게 이미지를 표현할 수 있는 것 일까요? 여기 예시가 있습니다: 이런 멋진 그림입니다. 그림은 기본적으로 정보의 형태라고 볼 수 있습니다. 모든 정보는 2진 체계를 이용해 여러 가지 형태로 저장될 수 있습니다. 어떻게 그렇게 할 수 있는지 이해할 수 있을 것입니다."
       4:
         image: 'notes/C4_unplugged_binary_4.png'
         text: "자 이 팬더곰 이미지 위에 격자를 그린다고 생각해 봅시다. 그렇게 만들어진 사각형들이 있는데 어떤 사각형이 더 검고, 어떤 사각형이 더 흰지 결정할 것입니다. 그런 방법을 컬러로도 적용할 수 있습니다. 이제 각각의 사각형은 검정 또는 흰색이고, 검정 사각형들은 0(2진수) 으로 흰색 사각형들은 1(2진수) 로 표현할 수 있습니다. 그리고 그렇게 다 하고 나면 1과 0의 뭉텅이들이 됩니다. 이렇게 표현하는 방법이 2진 체계를 이용해서, 이 이미지를 표현하는 방법이라고 할 수 있습니다."
@@ -1247,7 +1247,7 @@ ko:
         text: "컴퓨팅사고력(computational thinking) 에 대한 이번 레슨은 여러분들에게, 큰 문제를 어떻게 보다 간단한 여러 개의 작은 문제들로 나눌 수 있는지 알려드리기 위한 목적이 있습니다. 이번 레슨의 목표는 수업 계획에 포함되어있는 몬스터들 중 하나를 똑같이 그릴 수 있도록 하는, 한 세트의 명령어들을 만들어 내는 것입니다."
       2:
         image: 'notes/unplug2_2.png'
-        text: '명령들을 작성하기 위해서 학생들은 여러 개의 모둠으로 나뉠 것이고, 몬스터를 그리는데 필요한 명령어 세트를 만들어서 다른 모둠과 바꾸게 될 것입니다. 각 모둠들은 다음과 같은 컴퓨팅사고의 4단계를 따라 명령어들을 만들게 될 것입니다: 분해, 패턴 찾기, 추상화, 알고리즘.'
+        text: "명령들을 작성하기 위해서 학생들은 여러 개의 모둠으로 나뉠 것이고, 몬스터를 그리는데 필요한 명령어 세트를 만들어서 다른 모둠과 바꾸게 될 것입니다. 각 모둠들은 다음과 같은 컴퓨팅사고의 4단계를 따라 명령어들을 만들게 될 것입니다: 분해, 패턴 찾기, 추상화, 알고리즘."
       3:
         image: 'notes/unplug2_3.png'
         text: "첫 번째 그룹들은 게임을 만들어내기 위한 계획을, 보다 작은 작업들로 분해할 것입니다. 그 다음에 카타로그에 나와있는 모든 몬스터들 사이에 어떤 패턴들이 있는지 살펴보게 될 것입니다. 몬스터들 사이의 차이를 발견하면, 그러한 자세한 차이들을 추상화하거나 고려하지 않을 수 있게 될 것입니다. 즉, 카탈로그의 한 몬스터는 베지터 눈을 가지고 있고, 다른 몬스터는 스프라이트 눈을 가지고 있습니다. 하지만, 두 몬스터 모두 눈을 가지고 있기 때문에, 몬스터는 어떤 눈을 가지고 있다고 작성할 수 있습니다."
@@ -1260,7 +1260,7 @@ ko:
         text: "모눈 종이 프로그래밍에서는, 화살표와 낙서들만 사용해서 어떤 그림을 똑같이 그려낼 수 있는 방법에 대해서 설명할 것입니다. 한 사람은 그림이 그려진 모눈 종이를 가지고 있는데, 그 사람은 화살표들만 이용해서, 그 그림을 어떻게 똑같이 그려낼 수 있는지 설명해야 합니다."
       2:
         image: 'notes/unplug3_2.png'
-        text: '이번 활동에서 사용할 수 있는 기호들은 다음과 같습니다: 한 칸 앞으로 이동, 한 칸 뒤로 이동, 한 칸 위로 이동, 한 칸 아래로 이동, 색 바꾸기, 색으로 모눈 채우기. 이런 기호들을 사용해서 코드를 만들고 나면, 다른 사람에게 주어서 코드를 읽어 그림을 똑같이 그려보도록 할 것입니다.'
+        text: "이번 활동에서 사용할 수 있는 기호들은 다음과 같습니다: 한 칸 앞으로 이동, 한 칸 뒤로 이동, 한 칸 위로 이동, 한 칸 아래로 이동, 색 바꾸기, 색으로 모눈 채우기. 이런 기호들을 사용해서 코드를 만들고 나면, 다른 사람에게 주어서 코드를 읽어 그림을 똑같이 그려보도록 할 것입니다."
     unplug4:
       1:
         image: 'notes/unplug4_1.png'
@@ -1335,7 +1335,7 @@ ko:
     starwars_intro:
       1:
         image: 'notes/starwars_intro_1.JPG'
-        text: '안녕하세요. 저는 캐슬린 케네디이고, 스타워즈: 깨어난 포스 영화의 제작자입니다. 오늘 여러분은 스타워즈에 나오는 별들 중 하나에서 작업을 하게 될 것인데, BB-8은 공처럼 생긴 드로이드입니다. BB-8 의 모든 동작과 움직임은 컴퓨터 소프트웨어를 통해 이루어집니다. 컴퓨터과학(정보과학) 은 마켓팅, 헬스케어, 영화까지 모든 산업에 영향을 줍니다. 실제로, 수백명의 컴퓨터 엔지니어들이 함께 작업해서, 스타워즈 같은 영화를 만들어내는 것입니다.'
+        text: "안녕하세요. 저는 캐슬린 케네디이고, 스타워즈: 깨어난 포스 영화의 제작자입니다. 오늘 여러분은 스타워즈에 나오는 별들 중 하나에서 작업을 하게 될 것인데, BB-8은 공처럼 생긴 드로이드입니다. BB-8 의 모든 동작과 움직임은 컴퓨터 소프트웨어를 통해 이루어집니다. 컴퓨터과학(정보과학) 은 마켓팅, 헬스케어, 영화까지 모든 산업에 영향을 줍니다. 실제로, 수백명의 컴퓨터 엔지니어들이 함께 작업해서, 스타워즈 같은 영화를 만들어내는 것입니다."
       2:
         image: 'notes/starwars_intro_2.JPG'
         text: "안녕하세요, 저는 레이첼 로즈입니다. 저는 ILM의 수석 R&D 엔지니어로서, 애니메이션과 크리쳐 개발 팀을 이끌고 있습니다. 스타워즈: 깨어난 포스에서, 저는 예술가들이, 머나 먼 우주 어딘가에 실제로 있을 것 같은 캐릭터들의 장식을 만드는 것을 돕고 있습니다."
@@ -1394,7 +1394,7 @@ ko:
         text: "축하합니다, 해냈습니다! 여러분이 BB-8 을 프로그래밍 했습니다. 이제 더 어려운 것을 할 준비가 되었다고 생각합니다. 여러분은 이제 프로그래밍의 기초를 배웠기 때문에, R2-D2와 C3PO를 주연으로 하는 여러분 만의 게임을 만들 때가 왔습니다."
       3:
         image: 'notes/starwars_events_3.JPG'
-        text: '게임을 만들기 위해서는, 게임 프로그래머들이 매일 사용하는 것들을 배워야 합니다: 이벤트라는 것이죠. 프로그램은 어떤 이벤트가 발생하는지 살펴보거나 기다렸다가, 어떤 이벤트가 발생하면 그때 지정해준 작업을 수행하게 됩니다.'
+        text: "게임을 만들기 위해서는, 게임 프로그래머들이 매일 사용하는 것들을 배워야 합니다: 이벤트라는 것이죠. 프로그램은 어떤 이벤트가 발생하는지 살펴보거나 기다렸다가, 어떤 이벤트가 발생하면 그때 지정해준 작업을 수행하게 됩니다."
       4:
         image: 'notes/starwars_events_4.JPG'
         text: "여러 가지 이벤트들 중 몇가지 예시는, 마우스 클릭, 방향 버튼, 화면 터치 등 입니다."
@@ -1432,7 +1432,7 @@ ko:
     starwars_blocks_intro:
       1:
         image: 'notes/starwars_blocks_intro_1.JPG'
-        text: '안녕하세요. 저는 캐슬린 케네디이고, 스타워즈: 깨어난 포스 영화의 제작자입니다. 오늘 여러분은 스타워즈에 나오는 별들 중 하나에서 작업을 하게 될 것인데, BB-8은 공처럼 생긴 드로이드입니다. BB-8 의 모든 동작과 움직임은 컴퓨터 소프트웨어를 통해 이루어집니다. 컴퓨터과학(정보과학) 은 마켓팅, 헬스케어, 영화까지 모든 산업에 영향을 줍니다. 실제로, 수백명의 컴퓨터 엔지니어들이 함께 작업해서, 스타워즈 같은 영화를 만들어내는 것입니다.'
+        text: "안녕하세요. 저는 캐슬린 케네디이고, 스타워즈: 깨어난 포스 영화의 제작자입니다. 오늘 여러분은 스타워즈에 나오는 별들 중 하나에서 작업을 하게 될 것인데, BB-8은 공처럼 생긴 드로이드입니다. BB-8 의 모든 동작과 움직임은 컴퓨터 소프트웨어를 통해 이루어집니다. 컴퓨터과학(정보과학) 은 마켓팅, 헬스케어, 영화까지 모든 산업에 영향을 줍니다. 실제로, 수백명의 컴퓨터 엔지니어들이 함께 작업해서, 스타워즈 같은 영화를 만들어내는 것입니다."
       2:
         image: 'notes/starwars_blocks_intro_2.JPG'
         text: "안녕하세요, 저는 레이첼 로즈입니다. 저는 ILM의 수석 R&D 엔지니어로서, 애니메이션과 크리쳐 개발 팀을 이끌고 있습니다. 스타워즈: 깨어난 포스에서, 저는 예술가들이, 머나 먼 우주 어딘가에 실제로 있을 것 같은 캐릭터들의 장식을 만드는 것을 돕고 있습니다."
@@ -1469,7 +1469,7 @@ ko:
         text: "축하합니다, 해냈습니다! 여러분이 BB-8 을 프로그래밍 했습니다. 이제 더 어려운 것을 할 준비가 되었다고 생각합니다. 여러분은 이제 프로그래밍의 기초를 배웠기 때문에, R2-D2와 C3PO를 주연으로 하는 여러분 만의 게임을 만들 때가 왔습니다."
       3:
         image: 'notes/starwars_blocks_events_3.JPG'
-        text: '게임을 만들기 위해서는, 게임 프로그래머들이 매일 사용하는 것들을 배워야 합니다: 이벤트라는 것이죠. 프로그램은 어떤 이벤트가 발생하는지 살펴보거나 기다렸다가, 어떤 이벤트가 발생하면 그때 지정해준 작업을 수행하게 됩니다.'
+        text: "게임을 만들기 위해서는, 게임 프로그래머들이 매일 사용하는 것들을 배워야 합니다: 이벤트라는 것이죠. 프로그램은 어떤 이벤트가 발생하는지 살펴보거나 기다렸다가, 어떤 이벤트가 발생하면 그때 지정해준 작업을 수행하게 됩니다."
       4:
         image: 'notes/starwars_blocks_events_4.JPG'
         text: "여러 가지 이벤트들 중 몇가지 예시는, 마우스 클릭, 방향 버튼, 화면 터치 등 입니다."
@@ -1534,7 +1534,7 @@ ko:
         text: "만약에 블록을 삭제하고 싶으면 그 블록을 끌어서 다시 툴 박스에 가져다 놓으면 돼요."
       12:
         image: 'notes/mc_intro_12.JPG'
-        text: 실행 취소를 하고 싶거나 레벨 시작 단계로 돌아가고 싶으면, 작업 공간 오른쪽 위에 있는 다시 시작 버튼을 사용하세요. 그리고 돌기 블록들에 있는 이 작은 삼각형 보이죠? 이런 삼각형이 보이면 다른 옵션을 고를 수 있다는 뜻이에요. 그럼, 코딩을 시작해 볼까요!
+        text: "실행 취소를 하고 싶거나 레벨 시작 단계로 돌아가고 싶으면, 작업 공간 오른쪽 위에 있는 다시 시작 버튼을 사용하세요. 그리고 돌기 블록들에 있는 이 작은 삼각형 보이죠? 이런 삼각형이 보이면 다른 옵션을 고를 수 있다는 뜻이에요. 그럼, 코딩을 시작해 볼까요!"
     mc_repeat:
       1:
         image: 'notes/mc_repeat_1.JPG'
@@ -1704,7 +1704,7 @@ ko:
         text: "안녕하세요, 저는 Minecraft의 리드 크리에이티브 디자이너 젠스라고 합니다. 다음 시간에는 여러분이 직접 Minecraft 게임을 만들어 볼 텐데요. 이 화면은 Minecraft 같지만 게임 속 세상이 멈춰 있습니다. 양이 움직이지도, 닭이 알을 낳지도 않고 좀비들은 그냥 가만히 서 있기만 하죠. 여기에 코드를 추가해 움직이게 만드는 건 여러분께 달렸습니다."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: 사람들이 생각하고 행동하는 방식을 관찰할 수 있어요.'
+        text: "My name is Melissa and I am a user researcher at Minecraft. What I'm really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: 사람들이 생각하고 행동하는 방식을 관찰할 수 있어요."
       3:
         image: 'notes/mc_2016_intro_3.jpg'
         text: "화면이 크게 세 부분으로 나눠진 게 보이시나요? 1) 왼쪽 부분은 Minecraft 게임입니다. 지금은 게임이 멈춰 있지만 코드를 추가해서 움직이게 할 거예요."
@@ -1812,7 +1812,7 @@ ko:
         text: "Next I'll choose the type of event. There's lots of options you can pick from but right now I'll leave it as a regular old click."
       5:
         image: 'notes/applab_intro_events_5.png'
-        text: 'Finally I''ll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: "On the event that the button is clicked run all this code."'
+        text: "Finally I'll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: \"On the event that the button is clicked run all this code.\""
       6:
         image: 'notes/applab_intro_events_6.png'
         text: "Let's test it. Blocks outside an onEvent still run right away so the screen starts blue."
@@ -1909,16 +1909,16 @@ ko:
     mc_2017_agent_intro:
       1:
         image: 'notes/mc_2017_agent_intro_1.png'
-        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you''re going to love it!'
+        text: "Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you're going to love it!"
       2:
         image: 'notes/mc_2017_agent_intro_2.png'
         text: "Wait a minute - there's a hole in the track! (screaming)"
       3:
         image: 'notes/mc_2017_agent_intro_3.png'
-        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let''s make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy: I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy: Does anyone know how to write Minecraft code?'
+        text: "Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let's make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I'm just gonna gather some of this terracotta. Wait. Guys, I can't mine! Preston: Same. Lizzy: I can't either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can't mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don't know. Stampy: Does anyone know how to write Minecraft code?"
       4:
         image: 'notes/mc_2017_agent_intro_4.png'
-        text: '(poof) Preston: What is that? Stampy: I''ve never seen one of these before. Lizzy: It''s so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I''ll go.'
+        text: "(poof) Preston: What is that? Stampy: I've never seen one of these before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
       5:
         image: 'notes/mc_2017_agent_intro_5.png'
         text: "Oh, okay, hey, so I'm in the real world now. I'm going to go try to find the Minecraft offices."
@@ -1946,22 +1946,22 @@ ko:
     mc_2017_repeat:
       1:
         image: 'notes/mc_2017_repeat_1.png'
-        text: 'Stampy: I wonder what Stacy is up to?'
+        text: "Stampy: I wonder what Stacy is up to?"
       2:
         image: 'notes/mc_2017_repeat_2.png'
-        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
+        text: "Stacy: Woah, I think I'm in the right place. This is amazing!"
       3:
         image: 'notes/mc_2017_repeat_3.png'
         text: "I feel like I'm back in Minecraft! Hello. How are you? Hello?"
       4:
         image: 'notes/mc_2017_repeat_4.png'
-        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
+        text: "Oh, there's a creeper. You don't do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!"
       5:
         image: 'notes/mc_2017_repeat_5.png'
-        text: 'Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn''t happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you''re learning?'
+        text: "Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it's pretty awesome. I'm a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I've probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn't happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can't, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you're learning?"
       6:
         image: 'notes/mc_2017_repeat_6.png'
-        text: 'Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there''s actually some of that coming up in the levels ahead, so go ahead and give loops a try.'
+        text: "Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there's actually some of that coming up in the levels ahead, so go ahead and give loops a try."
       7:
         image: 'notes/mc_2017_repeat_7.png'
         text: "In the next level, you can use a loop to move the Agent along the path. Drag the repeat block into the workspace and place the move forward block inside the repeat block. This tells the computer to do the same thing many times in a row without having to drag a whole bunch of blocks into the workspace. You can choose how many times to repeat by putting a number in the repeat block."
@@ -1970,14 +1970,14 @@ ko:
         text: "You can put turns and multiple commands in the repeat block too, but for now try using a repeat to move the Agent forward a few steps. Remember, if you get stuck on a puzzle you can always hit the blue reset button and try again."
       9:
         image: 'notes/mc_2017_repeat_9.png'
-        text: 'If you are thinking about having a cool job like Katie''s, go ahead and click the show code button when you finish every level. That''s going to actually show you the Javascript code that someone like Katie uses when she''s actually programming Minecraft. Katie: Yeah, good luck everyone!'
+        text: "If you are thinking about having a cool job like Katie's, go ahead and click the show code button when you finish every level. That's going to actually show you the Javascript code that someone like Katie uses when she's actually programming Minecraft. Katie: Yeah, good luck everyone!"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
-        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour. Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+        text: "Preston: I'm not trying to brag, but I'm pretty good at parkour. Lizzy: Let's sleep so it's day when Stacy comes back."
       2:
         image: 'notes/mc_2017_functions_2.png'
-        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I''m having in my game. I think I can use a function. Let me just open this.'
+        text: "Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I'm having in my game. I think I can use a function. Let me just open this."
       3:
         image: 'notes/mc_2017_functions_3.png'
         text: "So a function is a specific set of instructions to accomplish a certain task, kind of like a recipe. In the next few levels, you'll have access to functions that you can use to solve the puzzles."
@@ -1993,32 +1993,32 @@ ko:
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
-        text: 'Preston: Congratulations!'
+        text: "Preston: Congratulations!"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
-        text: 'Lizzy: Congratulations!'
+        text: "Lizzy: Congratulations!"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
-        text: 'Stampy: Congratulations, you did it!'
+        text: "Stampy: Congratulations, you did it!"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
-        text: 'Stacy: Congratulations guys, you totally rocked that! And now that you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve learned about loops, functions, and what a software Agent does.'
+        text: "Stacy: Congratulations guys, you totally rocked that! And now that you've completed the Hour of Code, you can start coding in Minecraft. You've learned about loops, functions, and what a software Agent does."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
         text: "Now, it's time for the free play level, where you are the developer. Use any remaining time to write your own functions to explore, mine, and build."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
-        text: 'You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click ''Finish'' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!'
+        text: "You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click 'Finish' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
-        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it''s doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it''s not just staircases. I can tell the Agent to do anything I want, and it will do it for me.'
+        text: "Stacy: And I'm back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it's doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it's not just staircases. I can tell the Agent to do anything I want, and it will do it for me."
       8:
         image: 'notes/mc_2017_congratulations_8.png'
-        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used code!'
+        text: "Stampy: How did you do that? Stacy: It was easy, actually. I just used code!"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
-        text: 'Everywhere you look, computers are changing the world. Whether they''re on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don''t often ask: "How do computers work?" In this series, you''re going to learn how computers really work, starting with what makes a computer a computer. Then, you''ll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds.'
+        text: "Everywhere you look, computers are changing the world. Whether they're on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don't often ask: \"How do computers work?\" In this series, you're going to learn how computers really work, starting with what makes a computer a computer. Then, you'll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds."
       2:
         image: 'notes/csd_concept_how_computers_work_2.png'
         text: "After that, you'll learn how computers use circuits to do everything from simple math to simulating entire virtual worlds. Next, you'll zoom out and look at the different parts of a computer that actually input, output, and store all that information. Finally, you'll take a look at what code actually is and how software controls hardware. So whether you're just curious about the devices you use every day or you want to design the innovations of the future, the first step is learning how computers work."
@@ -2071,10 +2071,10 @@ ko:
         text: "Well, if you have a single wire with electricity flowing through it, the signal could either be on or off. That's not a lot of choices, but it's a really important start. With one wire, we can represent a yes or no, true or false, a one or zero, or anything else with only two options. This on/off state of a single wire is called a bit, and it's the smallest piece of information a computer can store."
       6:
         image: 'notes/csd_concept_binary_data_6.png'
-        text: 'If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system.'
+        text: "If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system."
       7:
         image: 'notes/csd_concept_binary_data_7.png'
-        text: 'In the decimal number system, we have ten digits from zero to nine, and that''s how we''ve all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number.'
+        text: "In the decimal number system, we have ten digits from zero to nine, and that's how we've all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number."
       8:
         image: 'notes/csd_concept_binary_data_8.png'
         text: "Here's how this works. In a decimal number system we're all used to, each position in a number has a different value. There's a 1 position, the 10 position, the 100 position, and so on. For example, a 9 in the 100 position is a 900. In binary, each position also carries a value. But instead of multiplying by 10 each time, we multiply by 2. So there's the 1 position, the 2 position, the 4 position, the 8 position, and so on. For example, the number 9 in binary is 1001. To calculate the value, we add 1 times 8, plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this math because computers do it for us. What's important is that any number can be represented with only ones and zeros, or by a bunch of wires that are on or off. The more wires you use, the larger the numbers you can store. With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With just 32 wires, you can store all the way from 0 to over 4 billion. Using the binary number system, you can represent any number you like."
@@ -2163,14 +2163,14 @@ ko:
         text: "The more complicated a task is and the more information that is input or output, the more processing power and memory a computer needs. Typing letters on a screen may be easy but to do complicated 3d graphics or record a high-definition movie, modern computers often have multiple CPUs to process all that information and many gigabytes of memory to store it."
       12:
         image: 'notes/csd_concept_memory_cpu_input_output_12.png'
-        text: 'No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world.'
+        text: "No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world."
     csd_concept_hardware_software:
       1:
         image: 'notes/csd_concept_hardware_software_1.png'
         text: "Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com. One of the best things about working in tech, and at Amazon in particular, is that I get to bring my dog with me to work every day. My job is to help make sure software gets out the door and her job is to nap under my desk and snore very loudly."
       2:
         image: 'notes/csd_concept_hardware_software_2.png'
-        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox.'
+        text: "My name is Jerome Holman, and I'm a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox."
       3:
         image: 'notes/csd_concept_hardware_software_3.png'
         text: "When you look inside a computing device you see a bunch of circuits, chips, wires, speakers, plugs, and all sorts of other stuff. This is the hardware."

@@ -23,7 +23,7 @@ nav: how_to_nav
 
 ساعت کد تنها اولین گام در سفری برای کسب اطلاعات بیشتر در مورد چگونگی کارکرد فن آوری و نحوه ایجاد نرم افزارهای کاربردی است. برای ادامه این سفر:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- در یک کارگاه یک روزه ی حضوری، برای کمک و راهنمایی گرفتن از یک فرد مجرب در علوم کامپیوتر[شرکت کنید](%= resolve_url('https://code.org/professional-development-workshops') %). (تنها برای مدرسین ساکن آمریکا)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

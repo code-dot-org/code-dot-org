@@ -17,7 +17,7 @@ nav: promote_nav
 
 S nástupom technológií, ktoré menia každé jedno odvetvie na planéte, sa počítačové znalosti stali súčasťou pokročilých zručností. Avšak len na menej než polovici škôl sa učí informatika! Dobrou správou je, že sme na ceste tento stav zmeniť. Ak ste minulý rok počuli o Hodine Kódu, možno už viete, že zmenila históriu. 100 miliónov študentov už objavilo, ako dostupná a zábavná môže informatika byť len vďaka jednej Hodine Kódu.
 
-Hodina Kódovania je jednohodinový úvod do informatiky, navrhnutý s cieľom demystifikovať kód a ukázať, že základy kódovania sa môže naučiť každý. Naučte sa viac na <http://HourofCode.com>, skúste Hoinu sami alebo zorganizujte Hodinu Kódu a predstavte ostatným svet počítačov!
+Hodina Kódu je jednohodinový úvod do informatiky, navrhnutý s cieľom demystifikovať kód a ukázať, že základy programovania sa môže naučiť každý. Naučte sa viac na <http://HourofCode.com>, skúste Hodinu sami alebo zorganizujte Hodinu Kódu a predstavte ostatným svet počítačov!
 
 <a id="infographics"></a>
 

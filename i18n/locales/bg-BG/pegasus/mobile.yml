@@ -16,7 +16,7 @@
   anybody_can_learn: "Всеки може да се научи."
   learn_now: "Научете сега"
   petition_message: "Всеки ученик в училище трябва да има възможност да учи компютърни науки"
-  petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете се към # всички останали.'
+  petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете се към # други.'
   petition_sign_message_support: 'Ако ни подкрепяте, запишете се.  Присъединете се # към другите.'
   petition_join_others: 'Присъединете се към # другите'
   name: "Име"
@@ -25,14 +25,14 @@
   submit: "Изпрати"
   twentyhours_heading: "Опитайте нашите въвеждащи курсове по компютърни науки"
   twentyhours_text: "Завършихте ли първия Час на кодиране? Научете повече за основните понятия в компютърните науки и програмиране в този следващ курс."
-  og_title: Всяко дете заслужава възможност
+  og_title: 'Всяко дете заслужава възможност'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Всеки ученик във всяко училище заслужава възможност да учи компютърни науки."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code идва"
   csedweek_og_description: "Hour of Code е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 45 езика."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Присъединете се към <a href=\"http://hourofcode.com\"> Часът на кодирането</a> <br/>на 8-14 декември 2014 г. <br/>"
   hoc2014_students: "Ученици"
@@ -365,6 +365,8 @@
   homepage_header_donors: "Code.org благодари на своите привърженици"
   homepage_donors_seall: "Вижте всички"
   homepage_donors_donate: "Дарения"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Научете повече"
   contact_form_topic_student: "Аз съм ученик"
   contact_form_topic_parent: "Аз съм родител"
   contact_form_topic_teacher: "Аз съм учител/обучител"
@@ -492,8 +494,10 @@
   video_title_real_madrid: "Russell Okung с Real Madrid"
   video_title_marco_belinelli: "Hour of Code с Marco Belinelli"
   video_title_chris_bosh: "Крис Бош за компютърните науки"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 мин."
   video_2min: "2 мин."
+  video_3min: "3 min"
   video_5min: "5 мин."
   speak_another_language: "Говорите друг език?"
   help_translate: "Помогнете ни с превода."
@@ -533,6 +537,10 @@
   volunteer_engineer_submission_field_email: "Имейл адрес"
   volunteer_engineer_submission_field_email_desc: "Вашият имейл адрес няма да бъде споделен, но ние ще Ви изпратим заявки от учителите."
   volunteer_engineer_submission_field_email_placeholder: "Имейл адрес"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Вижте нашата политика за поверителност)"
+  volunteer_engineer_submission_field_email_preference_yes: 'Да'
+  volunteer_engineer_submission_field_email_preference_no: 'Не'
   volunteer_engineer_submission_final_paragraph: "Вие ще бъдете отбелязан на картата в помощ на местните учители, за да се свържем с Вас за Часът на кода или други възможности за доброволчество. Вашата електронна поща и точния адрес няма да бъдат споделяни. Но друга информация (включително приблизителното местоположение) ще бъде публична и видима от местните учители."
   volunteer_engineer_submission_checkbox_contact: 'Съгласен съм, учителите да могат да се свържат с мен за доброволческа помощ (Забележка: Вашият имейл адрес няма да бъде споделен)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -614,18 +622,12 @@
   dashboard_course_csp: "AP ® Принципи на компютърните науки"
   dashboard_course_csp_desc: "Code.org е проектирал взискателен, ангажиращ и достъпен курс, който изследва фундаменталните идеи на изчислителната техника."
   dashboard_landing_loading: "Зареждане..."
-  dashboard_action_edit: "Редактирай"
-  dashboard_action_save: "Запазване"
-  dashboard_action_save_all: "Запазване на всичко"
   dashboard_action_cancel: "Отмяна"
   dashboard_action_delete: "Изтриване"
   dashboard_action_delete_yes: 'Да'
   dashboard_action_delete_no: 'Не'
   dashboard_action_confirm: "Да се изтрие ли?"
-  dashboard_action_remove: "Премахване"
-  dashboard_action_remove_confirm: "Премахване?"
   dashboard_action_done: "Готово"
-  dashboard_action_required: "изисквания"
   dashboard_action_print_certificates: "Печат на сертификати"
   dashboard_assessments_view: 'Виж оценките в:'
   dashboard_assessments_none: "Няма оценки"
@@ -701,28 +703,15 @@
   dashboard_sections_assign_activity: "Присвояване на курс"
   dashboard_error_none_selected: "Не сте избрали ученици, които да преместите. Моля, изберете поне един ученик."
   dashboard_error_other_section: "Ако премествате ученици между собствените си раздели, изберете вашия раздел от падащото меню. Само изберете \"Друг раздел\", за да преместите вашите ученици в различен учителски раздел."
-  dashboard_students_add_student: "Добавяне на ученик"
-  dashboard_students_add_students: "Добавяне на няколко ученика"
   dashboard_students_add_multiple: 'Въведете или поставете имената на вашите ученици, по едно име на ред:'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "Създали сте нов раздел! Сега добавете вашите ученици, използвайки <b>Добавяне на ученик</b> и <b>Добавяне на няколко ученици</b> от бутоните по-горе."
-  dashboard_students_placeholder_name: "Име на ученика"
   dashboard_students_name: "Име"
   dashboard_students_progress: "Прогрес"
-  dashboard_students_age: "Възраст"
-  dashboard_students_gender: "Пол"
   dashboard_students_male: "Мъж"
   dashboard_students_female: "Жена"
-  dashboard_students_secret: "Парола"
-  dashboard_students_password: "Парола"
-  dashboard_students_username: 'Потребителско име: %{student_username}'
-  dashboard_students_email: 'Имейл: %{student_email}'
   dashboard_students_completed_levels: "Завършени нива"
   dashboard_students_total_lines: "Редове с код"
-  dashboard_students_show_secret: "Покажи тайната дума"
-  dashboard_students_auto_generated: "Автоматично генерирана"
-  dashboard_students_reset_secret: "Смяна на тайната дума"
-  dashboard_students_reset_password: "Възстанови парола"
   dashboard_students_share_section: "Споделете този код за раздел с вашите ученици:"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Отпечатайте карти с информация за влизане в сайта на вашите ученици."
@@ -753,7 +742,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Ако не разполагате с компютри, <a href='%{unplugged_url}'> Опитайте тези уроци без компютър</a> в класната стая."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Учебна програма"
   dashboard_curriculum_overview: "K-5 преглед на програмата"
   dashboard_overview: "Общ преглед"
@@ -771,12 +763,13 @@
   dashboard_curriculum_csins: 'Компютърни науки в науката:'
   dashboard_curriculum_csp: 'AP ® Принципи на компютърните науки:'
   dashboard_curriculum_ecs: 'Изследване на компютърните науки:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Предучилище"
   dashboard_grade_other: "Друго"
   dashboard_login_word: "Дума"
   dashboard_login_picture: "Картина"
   dashboard_login_none: "Имейл"
-  dashboard_new_password: "нова парола"
   dashboard_stage: "Етап"
   dashboard_puzzle: "Пъзел"
   dashboard_question: "Въпрос"
@@ -839,7 +832,7 @@
   carousel_heading_international: "Уроци на вашия език"
   carousel_heading_domestic: "Уроци на английски"
   carousel_heading_beginners: "Уроци за K-8"
-  carousel_heading_beyond_beginners: Уроци за начинаещи
+  carousel_heading_beyond_beginners: 'Уроци за начинаещи'
   carousel_heading_javascript: "Уроци, които преподават Javascript"
   carousel_heading_beyond_javascript: "Уроци, които преподават Javascript"
   carousel_heading_unplugged: "Нямате устройство или интернет? Опитайте \"ънплъгд\" уроците по компютърни науки"
@@ -938,14 +931,30 @@
   coursee_name: "Course E"
   coursef-draft_name: Course F
   coursef_name: "Course F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Ускорен курс"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(стар) Урок 1: Цифрова информация'
-  cspunit2_name: '(стар) Раздел 2: Интернет'
-  cspunit3_name: '(стар) Раздел 3: програмиране'
-  cspunit4_name: '(стар) Раздел 4: данни'
-  cspunit5_name: '(стар) Раздел 5: Изследване и създаване на PT'
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  cspunit1_name: "(стар) Урок 1: Цифрова информация"
+  cspunit2_name: "(стар) Раздел 2: Интернет"
+  cspunit3_name: "(стар) Раздел 3: програмиране"
+  cspunit4_name: "(стар) Раздел 4: данни"
+  cspunit5_name: "(стар) Раздел 5: Изследване и създаване на PT"
   cspunit6_name: 'Пост AP: Бази данни в приложения'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -953,8 +962,36 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unit 5: Data and Society'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Раздел 1: Интернет'
+  csp2-2017_name: 'Част 1 - Дигитална информация'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
+  csp1-2018_name: 'Раздел 1: Интернет'
+  csp2-2018_name: 'Част 1 - Дигитална информация'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'Раздел 1: Интернет'
-  csp2_name: Част 1 - Дигитална информация
+  csp2_name: 'Част 1 - Дигитална информация'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Unit 3: Intro Programming (version A)'
   csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
@@ -963,6 +1000,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Пълен тест - 50 въпроса"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -986,14 +1024,19 @@
   math_category_name: "Математика"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS основи"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "\"15-\" 16 CS принципи"
   csp17_category_name: "\"15-\" 16 CS принципи"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "CS принципи практически тест"
   research_studies_category_name: "Research Studies"
   applab_name: "Лаборатория за приложения"
+  gamelab_name: "Играта лаборатория"
   basketball_name: "Направете баскетболна игра"
   sports_name: "Спорт"
   applab_gradelevel: "Възраст 13 +"
@@ -1052,12 +1095,12 @@
   course2_gradelevel: "Възраст 6 + (необходими са умения за четене)"
   course3_gradelevel: "Възраст 8 + (след курс 2)"
   course4_gradelevel: "Възраст 10 + (след курс 3)"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "Клас 8 +"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "Възраст 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "Възраст 10 + (след курс 3)"
   codeorg_platformtext: "Съвременни браузъри, смартфони, таблети"
   codeintl_platformtext: "Съвременни браузъри, смартфони, таблети"
@@ -1160,12 +1203,12 @@
   course2_shortdescription_congrats: "За учениците с базисни умения за четене, този курс се основава на курс 1. Учениците ще създават програми за решаване на проблеми и ще разработват интерактивни игри или истории, които ще могат да споделят. Препоръчва се за класове от 2-5."
   course3_shortdescription_congrats: "Готови ли сте за следващото ниво? Учениците ще задълбаят в темите по програмиране, въведени в предишните курсове, за да намират гъвкави решения на по-сложни проблеми. До края на този курс те ще създават интерактивни истории и игри, които ще могат да споделят. Препоръчва се за класове от 4-5."
   course4_shortdescription_congrats: "Готови ли сте да стигнете по-далеч? Учениците ще се задълбочат в темите по програмиране, въведени в предишни курсове, за да намират гъвкави решения за по-сложни проблеми. До края на този курс те ще създават интерактивни истории и игри, които да могат да споделят. Препоръчва се за класове от 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Научете основните понятия на компютърните науки с drag and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторенията-цикли, условията и основните алгоритми. Наличен на 34 езика."
   codeintl_longdescription: "Научете основните понятия на компютърните науки с drag and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторенията-цикли, условията и основните алгоритми. Наличен на 34 езика."
   thinkersmithspanish_longdescription: "Използвайки въведените вече функции, учениците ще трябва да се насочват взаимно без предварително обсъждане. Урока показва връзката между символи и действия"
@@ -1378,7 +1421,7 @@
   makeschool_beyond_longdescription: "Имате ли някакви умения в ObjectiveC? Научете се да програмирате iPhone игра в рамките на един час! Ние ще ви преведем през този процес, за да напишете кода, да тествате и играете играта си изцяло в браузъра и след това, да я споделите във Facebook с приятелите си! Не е необходим предварителен опит с iPhone. Ще разберете какво са променливите, методите и обектите."
   appinventor_beyond_longdescription: "Забавни, бързи видео уроци ще ви преведат през изграждането на три прости приложения за Вашия андроид телефон или таблет. Курсът е предназначен за начинаещи и за експерти. В този Час на кодирането ще се научите да изграждате собствени програми. Представете си възможността да споделите собствените си приложения с вашите приятели! Тези дейности са подходящи индивидуално и за класове."
   touchdevelop_beyond_longdescription: "TouchDevelop ви позволява да създавате приложения за iPad, iPhone, Android, PC, Mac, Windows Phone. Нашият touch-friendly редактор прави кодирането забавно, дори на вашия телефон или таблет!"
-  codehs_beyond_longdescription: Научете основите на програмирането с кучето Карел, забавно, достъпно и визуално въведение в програмирането, където давате команди на компютъра, така както давате команди на куче. Този урок е страхотен ако се води от учител, но също така може да се направи самостоятелно
+  codehs_beyond_longdescription: 'Научете основите на програмирането с кучето Карел, забавно, достъпно и визуално въведение в програмирането, където давате команди на компютъра, така както давате команди на куче. Този урок е страхотен ако се води от учител, но също така може да се направи самостоятелно'
   udemy_beyond_longdescription: 'Независимо дали не сте виждали линия  код или кодирането е Вашия живот, Udemy има курсове за Вас, преподавани от професионални инструктори. [Забележка: изисква се плащане]'
   lynda_beyond_longdescription: 'Научете как да програмирате, създавате и изграждате уеб приложения на базата на обектно ориентираното програмиране в C и C++ и как да пишете на Java. Нашите разработени уроци може да Ви помогнат да се научите да развивате и създавате мобилни приложения, да работите с PHP и MySQL бази данни, да започнете с езика на статистическата обработка R и много повече. [Забележка: изисква се плащане]'
   edx_beyond_longdescription: "CS50x е курс на Харвардския университет за представянето на интелектуалната стойност на компютърните науки и изкуството на програмирането за специалисти и неспециалисти с или без предварителен опит в програмирането. Темите включват абстракция, алгоритми, структури от данни, капсулиране, управление на ресурсите, сигурност, софтуерно инженерство и уеб програмиране. Изучават се C, PHP и JavaScript плюс SQL, CSS и HTML."
@@ -1448,12 +1491,13 @@
   header_documentation: "Documentation"
   csp_name: "\"15-\" 16 CS принципи"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "Здравейте %{username}"
   user_header_settings: "Моят акаунт"
   user_header_logout: "Изход"
   user_header_signin: "Вход"
-  view_all_sections: "View All Sections"
+  view_all_sections: "Покажи всички раздели"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

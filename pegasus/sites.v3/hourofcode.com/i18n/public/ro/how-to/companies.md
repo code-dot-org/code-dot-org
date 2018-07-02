@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Inspirați elevi şi oferiți-vă ca voluntar pentru Ora de Programare
 
-Code.org oferă posibilitatea pentru angajaţii dumneavoastră să [ se conecteze](<%= resolve_url('https://code.org/volunteer') %>) cu săli de clasă are fac o oră cod in zona, unde pot împărtăşi din experienţa lor din cariera tehnica şi pot inspira studenţi să studieze informatică.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Înscrieți-vă](<%= resolve_url('https://code.org/volunteer') %>) ca voluntar.
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - Pentru mai multe instrucţiuni pe încurajarea angajaţilor şi punerea in legatura a angajaţilor dumneavoastră cu săli de clasă, a verifica [ ghidul nostru pentru parteneri corporativi](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
 ## Modalități suplimentare prin care companiile pot sprijini Ora de Programare:
 
-- Adresaţi-vă CEO-ului pentru a [ trimite un e-mail la nivel de companie](<%= resolve_url('/promote/resources#sample-emails') %>), subliniind importanţa Informaticii şi încurajand angajaţii sa distribui informatia. 
+- Adresaţi-vă CEO-ului pentru a [ trimite un e-mail la nivel de companie](<%= resolve_url('/promote/resources#sample-emails') %>), subliniind importanţa Informaticii şi încurajand angajaţii sa distribui informatia.
 - Găzduiți o Oră de Programare cu colegii dvs pentru a încerca [lectiile](<%= resolve_url('/learn') %>).
 - Gazduiți un eveniment Ora de Programare pentru o clasă locală de elevi sau copii dintr-un centru de plasament. Ei pot susține o Oră de Programare in sediul companiei dvs. A se vedea mai jos ghidul how-to al evenimentului.
 
@@ -25,7 +25,7 @@ Code.org oferă posibilitatea pentru angajaţii dumneavoastră să [ se conectez
 ## 1. Promoveaza ora ta de cod
 
 - Promovați-vă evenimentul [Ora de Programare](<%= resolve_url('/promote') %>) și incurajați-i și pe alții să organizeze unul.
-- Încurajați **inginerii software** din compania dumneavoastră să viziteze o sală de clasă locală pentru a ajuta în coordonarea unui eveniment Hour of Code și pentru a inspira elevii să studieze informatica. Ei se pot [înscrie](<%= resolve_url('https://code.org/volunteer/engineer') %>) pentru a fi conectați cu o clasă de elevi.
+- Încurajați **inginerii software** din compania dumneavoastră să viziteze o sală de clasă locală pentru a ajuta în coordonarea unui eveniment Hour of Code și pentru a inspira elevii să studieze informatica. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Priveşte acest video indrumator <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,13 +63,13 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 **Idei pentru a prezenta o oră cod elevilor:**
 
-- Explica-le elevilor modurile in care tehnologia are impact asupra vietilor noastre, cu exemple pe care atat baietii cat si fetele le vor intelege(salvarea vietilor, ajutarea oamenilor, conectarea lor etc.). 
+- Explica-le elevilor modurile in care tehnologia are impact asupra vietilor noastre, cu exemple pe care atat baietii cat si fetele le vor intelege(salvarea vietilor, ajutarea oamenilor, conectarea lor etc.).
 - - Daca sunteti o companie Tech, faceti demonstratii distractive cu produsele la care compania dvs lucreaza in prezent.
 - - Daca nu sunteti o companie tech, discutati modurile in care compania foloseste tehnologia pentru a rezolva problemele cu care se confrunta in drumul catre succes.
 - Invita ingineri software din compania ta sa vorbeasca despre motivele pentru care au inceput sa studieze tehnologia computerelor si programarea si proiectele la care lucreaza in prezent.
-- Vezi sugestii pentru a le stârni fetelor interesul în informatică [aici](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
-## 6. Codeaza!
+## 6. Codați!
 
 **Directionati participanţii catre activitate**
 
@@ -103,7 +103,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 ## 7) Sărbătoriti
 
-- [Printați diplome](<%= resolve_url('https://code.org/certificates') %>) pentru elevii dumneavoastră.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - [Imprima autocolante pe care scrie "Am făcut o Oră de Programare!"](<%= resolve_url('/promote/resources#stickers') %>).
 - [Comandă tricouri personalizate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pentru angajații tăi.
 - Distribuiti fotografii şi înregistrări video ale evenimentului dumneavoastra Hour of Code pe social media. Utilizati #HourOfCode şi @codeorg, astfel încât putem evidenţia si noi succesul dumneavoastră!

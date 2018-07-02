@@ -1,4 +1,5 @@
-"my":
+---
+my:
   errors:
     messages:
       not_saved: 'Please correct the following errors:'
@@ -32,21 +33,21 @@
         current_password: Current password
         locale: Language
         age: Age
-        gender: "က်ား/မ"
+        gender: က်ား/မ
         edit_header: Edit Account Details
         error:
           future: can't be in the future
-  hello: "မဂၤလာပါ ကမာၻၾကီး"
+  hello: မဂၤလာပါ ကမာၻၾကီး
   welcome_back: Welcome back, %{name}
   your_professional_learning_plan: Your Professional Learning Plan
   see_your_learning_plan: See your learning plan
-  submit: "ပေးပို့ပါ"
+  submit: ပေးပို့ပါ
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
   next_resource: Next resource
   done_with_module: Done with this Learning Module
-  cancel: "ပယ်ဖျတ်သည်"
+  cancel: ပယ်ဖျတ်သည်
   okay: Okay
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
@@ -79,7 +80,7 @@
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: "ဆက်လုပ်ပါ"
+  continue: ဆက်လုပ်ပါ
   prize: prize
   more_info: More info
   auth:
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Microsoft Account
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Forgot your password?
     need_confirmation: Didn't receive confirmation instructions?
     need_unlock: Didn't receive unlock instructions?
@@ -139,6 +141,13 @@
     valid_password: Valid password!
     invalid_password: Password must be at least 6 characters
     mismatch_password: The two passwords you entered do not match
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>. If I am under 13 years of age, I confirm by submitting this
       form that I have my parent or legal guardian's permission to use the Code.org
@@ -150,12 +159,19 @@
       information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: We need some additional information to continue signing
       you up.
+    user_type_button: Update Account Type
     user_type_label: Account Type
     user_type_teacher: Teacher
     user_type_student: Student
     field_is_required: is required
     accept_terms: You must agree to create an account
     error: An error occurred.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: 'Yes'
+    email_preference_no: 'No'
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -204,8 +220,9 @@
       instructions: Enter your email address associated with your account below and
         we'll send you password reset instructions.
       email: Email address
-      submit: "ပေးပို့ပါ"
+      submit: ပေးပို့ပါ
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
@@ -270,7 +287,7 @@
     edit: Edit
     edit_model: Edit %{model}
     update: Update
-    submit: "ပေးပို့ပါ"
+    submit: ပေးပို့ပါ
     destroy: Destroy
     back: Back
     confirm: Are you sure?
@@ -300,7 +317,7 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
-      my_dashboard: "ကျွန်ုပ်ကျောက်သင်ပုံး"
+      my_dashboard: ကျွန်ုပ်ကျောက်သင်ပုံး
       courses: Courses
       course_catalog: Course Catalog
       project_gallery: Projects
@@ -375,7 +392,7 @@
     user_not_found: The teacher could not be found.
     student_teacher_disassociated: You have left section %{section_code} with %{teacher_name}.
     panel:
-      answer_viewer: "ဆရာအဖွဲ့"
+      answer_viewer: ဆရာအဖွဲ့
       student: Student
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
@@ -392,6 +409,7 @@
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: "(Wrong email address?)"
     email_resend_confirm: Resend confirmation instructions
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
     delete: Delete your account
@@ -423,6 +441,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Completed
     tried: Tried
@@ -493,7 +512,7 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: "ဆက်သင်ယူရန်"
+    announcement_learn_more_button: ဆက်သင်ယူရန်
     announcement_try_now_button: Try now
     announcement_host_an_hour_button: Host an Hour
     announcement_watch_video_button: Watch video
@@ -600,6 +619,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because they are
       already in the new section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with
@@ -608,6 +629,8 @@
   gender:
     male: Male
     female: Female
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Prefer not to answer
   user_type:
     student: Student
@@ -679,7 +702,7 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      link: "ဆက်သင်ယူရန်"
+      link: ဆက်သင်ယူရန်
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -910,11 +933,11 @@
     correct_body: That is the correct answer.
   dialog:
     ok: "​ကောင်းပြီ"
-    startover_title: "အစက ပြန်စချင်တာ သေချာရဲ့လား?"
+    startover_title: အစက ပြန်စချင်တာ သေချာရဲ့လား?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: "အစက ပြန်စပါ"
-    startover_cancel: "ပယ်ဖျတ်သည်"
+    startover_ok: အစက ပြန်စပါ
+    startover_cancel: ပယ်ဖျတ်သည်
   time:
     hour: 1 hour
     day: day
@@ -948,7 +971,7 @@
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accept
-    print: "ပုံနှိပ်သည်"
+    print: ပုံနှိပ်သည်
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
@@ -975,7 +998,7 @@
     - american_indian: American Indian/Alaska Native
     - other: Other
     - opt_out: Prefer not to say
-    submit: "ပေးပို့ပါ"
+    submit: ပေးပို့ပါ
     decline: Close
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
@@ -1000,11 +1023,11 @@
     rename: Rename
     save: Save
     delete: Delete
-    import: "ထည့်သွင်းပါ"
+    import: ထည့်သွင်းပါ
     share_link_import_bad_link_header: share link ကို မသိပါဘူး
-    share_link_import_bad_link_body: "ဒီ share link ကို ထည့်လို့မရပါဘူး Minecraft:Agent
-      puzzle က link ဆိုတာသေချာလား link အပြည့်အစုံကို ကူးခဲ့လား ပြန်စစ်ကြည့်ပါ"
-    share_link_import_error_header: "တစ်ခုခုမှားယွင်းနေတယ်"
+    share_link_import_bad_link_body: ဒီ share link ကို ထည့်လို့မရပါဘူး Minecraft:Agent
+      puzzle က link ဆိုတာသေချာလား link အပြည့်အစုံကို ကူးခဲ့လား ပြန်စစ်ကြည့်ပါ
+    share_link_import_error_header: တစ်ခုခုမှားယွင်းနေတယ်
     share_link_import_error_body: share link ကို project ထဲထည့်သွင်းရမှာ ပြသနာတက်နေပါတယ်
       နောက်တစ်ခေါက်ကြိုးစားပါ
     exit: Return to Course
@@ -1025,7 +1048,7 @@
       to start a project.
     close: Close
     more: More
-    name: "အမည္"
+    name: အမည္
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
@@ -1038,9 +1061,9 @@
     really_delete: Delete?
     delete_yes: 'Yes'
     delete_no: 'No'
-    saved: "သိမ်းထားပြီးပါပြီ"
+    saved: သိမ်းထားပြီးပါပြီ
     not_saved: Not saved
-    cancel: "ပယ်ဖျတ်သည်"
+    cancel: ပယ်ဖျတ်သည်
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able
@@ -1133,6 +1156,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1146,6 +1170,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1288,3 +1317,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: I agree
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: 'Yes'

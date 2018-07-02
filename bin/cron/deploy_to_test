@@ -40,7 +40,7 @@ def main
 rescue Exception => e
   ChatClient.message(
     'infra-test',
-    "EXCEPTION: #{e.message}",
+    "EXCEPTION: #{e.message}\n```\n#{e.class}\n#{e.backtrace}\n```",
     color: 'red'
   )
   DevelopersTopic.set_dtt TOPIC_DTT_FAILED

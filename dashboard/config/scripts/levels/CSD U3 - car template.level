@@ -6,10 +6,8 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "var finishLine = createSprite(40, 200);\r\nfinishLine.setAnimation(\"finish_line\");\r\n\r\nvar raceCar = createSprite(400, 200);\r\nraceCar.setAnimation(\"race_car\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update\r\n  raceCar.x = raceCar.x - 2;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -32,7 +30,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"finish_line\",\r\n    \"6adbac7a-0e3f-4640-ae37-54a94a97d542\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"finish_line\": {\r\n      \"name\": \"finish_line\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/ZmPw5xh7H5t1cAqt3rnDPA/finish_line.png?version=EF4Q6UwymbxNBc81zzKZEPhh1ql4gwvO\",\r\n      \"frameSize\": {\r\n        \"x\": 81,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"EF4Q6UwymbxNBc81zzKZEPhh1ql4gwvO\"\r\n    },\r\n    \"6adbac7a-0e3f-4640-ae37-54a94a97d542\": {\r\n      \"name\": \"race_car\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FZmPw5xh7H5t1cAqt3rnDPA%2F6adbac7a-0e3f-4640-ae37-54a94a97d542.png%3Fversion%3D_QE8AAH3dC365E.Ytt7Jk9Ce6MFxp47q\",\r\n      \"frameSize\": {\r\n        \"x\": 131,\r\n        \"y\": 71\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_QE8AAH3dC365E.Ytt7Jk9Ce6MFxp47q\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"finish_line\",\r\n    \"6adbac7a-0e3f-4640-ae37-54a94a97d542\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"finish_line\": {\r\n      \"name\": \"finish_line\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/hUob3tuGZ6sV-ny5a5kcQw/finish_line.png?version=AaWAlmNEIOliNXVQqza3.zjoW1WEgILe\",\r\n      \"frameSize\": {\r\n        \"x\": 81,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"AaWAlmNEIOliNXVQqza3.zjoW1WEgILe\"\r\n    },\r\n    \"6adbac7a-0e3f-4640-ae37-54a94a97d542\": {\r\n      \"name\": \"race_car\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/hUob3tuGZ6sV-ny5a5kcQw/6adbac7a-0e3f-4640-ae37-54a94a97d542.png?version=e3pbmOdctna0bVL0xyJ58727_PqYN_EI\",\r\n      \"frameSize\": {\r\n        \"x\": 131,\r\n        \"y\": 71\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"e3pbmOdctna0bVL0xyJ58727_PqYN_EI\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
@@ -40,10 +38,16 @@
     "pause_animations_by_default": "false",
     "hide_share_and_remix": "false",
     "show_debug_watch": "true",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "start_blocks": "var finishLine = createSprite(40, 200);\r\nfinishLine.setAnimation(\"finish_line\");\r\n\r\nvar raceCar = createSprite(400, 200);\r\nraceCar.setAnimation(\"race_car\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update\r\n  raceCar.x = raceCar.x - 2;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-26 22:22:15 +0000\",\"changed\":[\"start_animations\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-27 19:12:24 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -30,7 +30,7 @@ ja:
           future: 現在までの日付にする
   hello: "世界の皆さん、こんにちは"
   welcome_back: "Welcome Back, %{name}"
-  your_professional_learning_plan: "専門的な学習計画"
+  your_professional_learning_plan: "プロフェッショナル学習計画"
   see_your_learning_plan: "学習計画を参照してください。"
   submit: 送信
   unsubmit: 取り消す
@@ -69,7 +69,7 @@ ja:
   try_k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
   k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
   already_started: "すでに開始しましたか？ここで再開する >>"
-  demos: 管理者： 全部のデモ
+  demos: "管理者： 全部のデモ"
   continue: '次へ'
   prize: '受賞'
   more_info: 'もっと見る'
@@ -84,12 +84,13 @@ ja:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft アカウント'
-    clever: 'Clever Account'
+    clever: 'Cleverアカウント'
+    powerschool: 'Powerschoolアカウント'
     forgot_password: 'パスワードをお忘れですか？'
     need_confirmation: "確認Eメールが届かない"
     need_unlock: "ロック解除用のEメールが届いていない"
     not_linked: "申し訳ありませんが、あなたのCode.org アカウントは %{provider} にリンクしていません。以下のパスワードを入力してサインインして下さい。"
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "申し訳ありませんが、あなたのCode.orgアカウントは%{provider}にリンクしていません。代わりにCleverポータルからサインインしてください。"
   signup_form:
     student_count: '%{count} 人の生徒がサインアップ済みです。'
     teacher_count: '%{count} 人の教師がサインアップ済みです。'
@@ -114,15 +115,25 @@ ja:
     valid_password: "有効なパスワード ！"
     invalid_password: "パスワードを%d文字以上で入力"
     mismatch_password: "入力した 2 つのパスワードが一致しません"
+    agree_tos_privacy: "<a href='http://code.org/tos'>利用規約</a>および<a href='http://code.org/privacy'>プライバシーポリシー</a>に同意します。"
+    under_13_consent: "13歳未満の場合、Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。"
+    agree_us_website: "米国に拠点を置くウェブサイトを使用することに同意します。"
+    my_data_to_us: "当サイトの利用に関する私の情報は、米国に送信され、米国にて保管または処理される場合があります。"
     student_terms: "Code.org <a href='http://code.org/tos'> サービス利用規約</a> に拘束されることに同意します。13 才未満の場合、私は親または法定後見人による Code.org サービス使用の許可を得て、フォームを提出することを確認します <br/> <br/>。メール アドレスは、私たちが学生に連絡することができる形式では保存されません。パスワード回復のため以外では、学生がCode.org からメールを受け取ることはありません。詳しくは、 <a href='http://code.org/privacy'> プライバシー ポリシー</a> を参照してください。"
     teacher_terms: "Code.org 利用規約に拘束されることに同意します。プライバシーの詳細については、 <a href='http://code.org/privacy'> プライバシー ポリシー</a> を参照してください。"
     additional_information: "サインアップを続けるために、私たちはさらにいくつかの情報が必要です。"
+    user_type_button: "アカウントタイプを更新"
     user_type_label: "アカウントの種類"
     user_type_teacher: "先生"
     user_type_student: "生徒"
     field_is_required: "が必要です"
     accept_terms: "アカウントを作成することに、同意が必要です。"
-    error: "An error occurred."
+    error: "エラーが発生しました。"
+    email_preference_question: "当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？"
+    email_preference_privacy: "(当社のプライバシー ポリシーを参照してください)"
+    email_preference_yes: "はい"
+    email_preference_no: "いいえ"
+    email_preference_required: "メール設定を指定しなくてはなりません。"
   school_info:
     title: '学校名(任意)'
     school_country: '学校のある国'
@@ -171,6 +182,7 @@ ja:
       email: 'Eメールアドレス'
       submit: '送信'
     reset_errors:
+      captcha_required: 'パスワードをリセットするにはCAPTCHAを入力してください。'
       invalid_email: '無効なメール アドレスでサインアップしたようです。support@code.org にメールして、パスワードの回復リンクを受信してください。'
     change_form:
       title: 'パスワードを変更'
@@ -200,7 +212,7 @@ ja:
       remove: '本当に、このセクションから離れてよいですか？'
     remove: '(セクションを削除)'
     type:
-      picture: 'Picture Password'
+      picture: '画像パスワード'
       word: '秘密の言葉'
       email: 'Eメール'
       google_classroom: 'Google Classroom'
@@ -217,10 +229,10 @@ ja:
       section_not_found: "'%{section_code}' というセクションはありません"
       blank_code: "セクションのコードを入力してください"
       cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
-      provider_managed_section: "このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider} 経由で追加し、そのセクションを再同期するよう、先生に依頼してください。"
+      provider_managed_section: "このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider}経由で追加し、そのセクションを再同期するよう先生に依頼してください。"
     mail:
       student_disassociated:
-        subject: 'あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません'
+        subject: "あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません"
   reports:
     error:
       access_denied: "統計情報へのアクセス権がありません"
@@ -229,7 +241,7 @@ ja:
     show: '表示'
     edit: '編集'
     edit_model: '%{model} を編集'
-    update: '更新のプログラム'
+    update: '更新'
     submit: '送信'
     destroy: '破壊'
     back: '戻る'
@@ -241,7 +253,7 @@ ja:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "入力したEメールアドレスはこのアカウントのメールアドレスと一致しません。"
+        user_type_change_email_mismatch: "入力したメールアドレスはこのアカウントのメールアドレスと一致しません。"
         personal_login_created_email: '個人ログインの作成が完了しました。あなたのEメールアドレスとパスワードを使用してアカウントにサインインすることができます。'
         personal_login_created_username: '個人ログインの作成が完了しました。あなたのユーザー名 (%{username}) とパスワードを使用してアカウントにサインインすることができます。'
   nav:
@@ -264,7 +276,7 @@ ja:
       help_support: "ヘルプとサポート"
       report_bug: "バグを報告"
       teacher_community: "先生のコミュニティ"
-      professional_learning: "専門的な学習"
+      professional_learning: "プロフェッショナル ラーニング"
       documentation: "ドキュメント"
       tutorials: "チュートリアル"
       educate_overview: "教育の概要"
@@ -348,25 +360,27 @@ ja:
     email_confirm_needed_required: 'あなたのメール アドレス %{email} はまだ確認されていません。'
     email_confirm_wrong_email: 'メールアドレスをご確認ください'
     email_resend_confirm: '確認手順の再送信'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "（変更したくない場合は空白のままにしてください）"
     current_password_hint: '(変更を確認するためにあなたの現在のパスワードが必要です)'
-    delete: 'アカウントを削除します。'
+    delete: 'アカウントを削除'
     delete_text: "下のボタンをクリックすると、あなたのアカウントが削除されます。"
-    delete_text_teacher_note: '注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。'
+    delete_text_teacher_note: "注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。"
     delete_confirm: 'このアカウントを削除しますか？'
     deleted_user: '削除されたユーザー'
     no_password_because_oauth: 'サード パーティ プロバイダーを使用してサインインしたため、パスワードはありません。'
     no_password_because_sponsored: 'あなたのパスワードの管理については、あなたの先生に聞いてください。'
     create_personal_login: '個人ログインを作成する'
-    create_personal_login_under_13_info: '学年の終了後も、Code.org アカウントを使用し続ける場合は、親または保護者に手伝ってもらい、以下より、あなた自身の個人のログインを作成してください。'
+    create_personal_login_under_13_info: 'クラスが終わったあとも、Code.org アカウントを使用し続ける場合は、親または保護者に手伝ってもらい、あなたの個人ログインを作ってください。'
     create_personal_login_under_13_username: "ユーザー名 (本名を使用しないこと)"
     create_personal_login_under_13_parent_email: '親/保護者Eメールアドレス'
-    create_personal_login_info: '学年の終了後も、Code.org アカウントを使用し続ける場合は、以下より、あなた自身の個人のログインを作成してください。'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: 'Enter your new login information'
-    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
-    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    create_personal_login_info: '学年が終わったあとも、Code.orgアカウントを使い続ける時は、あなたの個人ログインを作ってください。'
+    create_personal_login_terms: "個人ログインを作ることによって、Code.org <a href='%{terms_of_service_url}', target='_blank'>利用規約</a>によって拘束されることに同意します。13 歳未満の場合、私の親または保護者人の同意を得て Code.org サービスを使用することを確認します。"
+    create_personal_login_email_note: "注: 私たちが電子メール アドレスを使って学生に連絡することはありません。パスワード回復の場合を除き、Code.org からメールを受信することはありません。詳細は <a href='%{privacy_policy_url}', target='_blank'>プライバシーポリシー</a> を参照してください。"
+    enter_new_login_info: '新しいログイン情報の入力'
+    confirm_secret_words: '秘密の単語を入力してあなたであることを確認'
+    enter_parent_email: "あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。"
+    update: "アカウントを更新"
   user_level:
     completed: '完了'
     tried: '試してみました'
@@ -448,6 +462,7 @@ ja:
     student_not_found: "学生は見つかりませんでした。"
     all_students_must_be_in_current_section: "すべての学生は、現在あなたのセクションに在籍している必要があります。"
     already_enrolled_in_new_section: "この先生は既に彼らを別セクションに持っているため、これらの学生は移動できません。"
+    third_party_login: "生徒をサードパーティツールと同期しているセクションへ移動できません。"
   share:
     title: "コード スタジオで学ぶ"
     description: "誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。"
@@ -455,6 +470,8 @@ ja:
   gender:
     male: '男性'
     female: '女性'
+    non_binary: '非バイナリ'
+    not_listed: 'Preferred term not listed'
     none: '答えたくない'
   user_type:
     student: '生徒'
@@ -592,8 +609,8 @@ ja:
       title: "マインクラフト"
       body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
-      title: "Sports"
-      body: "Make a basketball game or mix and match across sports."
+      title: "スポーツ"
+      body: "バスケットボールゲームや、様々なスポーツの混合競技をつくろう！"
     text-compression:
       title: "Text Compression"
       body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
@@ -702,7 +719,7 @@ ja:
     sign_out: '年齢を公表しくない場合は、<a href="%{url}"> サインアウト</a> してください。'
   terms_interstitial:
     title: "最新の利用規約とプライバシー ポリシー"
-    intro_desc: '下記の通りサービス利用規約、およびプライバシー ポリシーを更新しました。変更は、2016 年 8 月 24 日現在有効です。 最大の変更: <i>コード スタジオには、生徒用アカウントのメール アドレスを保存しなくなります。</i>これは私たちにとって大きな決断であり、これが教育技術における学生プライバシーの新しい基準となることを期待します。他の変更点の要約は、電子メールでお送りしました。'
+    intro_desc: "下記の通りサービス利用規約、およびプライバシー ポリシーを更新しました。変更は、2016 年 8 月 24 日現在有効です。 最大の変更: <i>コード スタジオには、生徒用アカウントのメール アドレスを保存しなくなります。</i>これは私たちにとって大きな決断であり、これが教育技術における学生プライバシーの新しい基準となることを期待します。他の変更点の要約は、電子メールでお送りしました。"
     intro_instructions: "あなたのクラスの13 才以下の学生が、コード ・スタジオのすべての最新機能へフル アクセスするためには、新しい条項に同意する必要があります。 13才以下の学生アカウントを登録する場合、あなたの学校は、コード ・スタジオ等の教育プログラムを含む学校での使用と利用のため、学生の個人情報の収集に親の同意がなされていることが確認されます。"
     tos: "利用規約"
     privacy: "プライバシー ポリシー"
@@ -718,25 +735,25 @@ ja:
     message_with_suggestion: "次の情報が正しいことを確認し、必要に応じて更新してください。"
     save: "保存"
   race_interstitial:
-    title: 'オプション: コンピュータ ・ サイエンスにおける多様性の向上の取り組みのため、ご協力ください'
+    title: "オプション: コンピュータ ・ サイエンスにおける多様性の向上の取り組みのため、ご協力ください"
     message: "あなたの人種 (該当するものすべてチェック) を教えてください。"
     races:
       - 
-        white: 白人
+        white: "白人"
       - 
-        black: 黒人、またはアフリカ系アメリカ人
+        black: "黒人、またはアフリカ系アメリカ人"
       - 
-        hispanic: ヒスパニックまたはラテン系
+        hispanic: "ヒスパニックまたはラテン系"
       - 
-        asian: アジア系
+        asian: "アジア系"
       - 
-        hawaiian: ハワイおよび他の太平洋諸島系
+        hawaiian: "ハワイおよび他の太平洋諸島系"
       - 
-        american_indian: アメリカインディアン/アラスカ ネイティブ
+        american_indian: "アメリカインディアン/アラスカ ネイティブ"
       - 
-        other: その他
+        other: "その他"
       - 
-        opt_out: 答えたくない
+        opt_out: "答えたくない"
     submit: "送信"
     decline: "閉じる"
   zendesk_too_young_message: 'ご迷惑致しますが、若い方はこのサポートサイトのサインインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をサインインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。'
@@ -762,7 +779,7 @@ ja:
     delete: "削除（さくじょ）"
     import: "インポート"
     share_link_import_bad_link_header: "共有リンクが認識されません"
-    share_link_import_bad_link_body: '共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。'
+    share_link_import_bad_link_body: "共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。"
     share_link_import_error_header: "問題が発生しました。"
     share_link_import_error_body: "共有リンクのインポート時に問題が発生しました。もう一度やり直してください。"
     exit: "コースに戻る"
@@ -856,17 +873,18 @@ ja:
     csf_f_1: 'Ramp Up to Course F (Optional)'
     csf_f_2: 'Course F Content'
     csd1_1: '第 1章: 問題解決プロセス'
-    csd1_2: 第 2 章コンピューターと問題解決
-    csd2_1: 第 1 章： Web コンテンツと HTML
-    csd2_2: 第 2 章：スタイルと CSS
+    csd1_2: '第 2 章コンピューターと問題解決'
+    csd2_1: '第 1 章： Web コンテンツと HTML'
+    csd2_2: '第 2 章：スタイルと CSS'
     csd3_1: '第 1 章: 画像とアニメーション'
     csd3_2: '第2章: ゲームを作る'
-    csd4_1: 第 1 章：ユーザーを中心にしたデザイン
-    csd4_2: 第 2 章：アプリのプロトタイピング
-    csd5_1: 第1章：情報を表現する
-    csd5_2: 第 2 章：データ問題を解決
-    csd6_1: 第 1 章：ハードウェア出力
-    csd6_2: 第 2 章：ハードウェア入力
+    csd4_1: '第 1 章：ユーザーを中心にしたデザイン'
+    csd4_2: '第 2 章：アプリのプロトタイピング'
+    csd5_1: '第1章：情報を表現する'
+    csd5_2: '第 2 章：データ問題を解決'
+    csd6_1: '第 1 章：ハードウェア出力'
+    csd6_2: '第 2 章：ハードウェア入力'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ ja:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '第 2 章: デジタル情報'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: 免責事項
@@ -984,3 +1007,14 @@ ja:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'すべてのコース'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: '賛成する'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'プライバシーポリシー'
+    logout: 'ログアウト'
+    yes: 'はい'

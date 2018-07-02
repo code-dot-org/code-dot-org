@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Kodetimen er bare første steg på en reise for å lære seg mer om hvordan teknologien fungerer og hvordan du kan lage dine egne programmer. For å fortsette på denne reisen:
 
-- Oppmuntre elevene til å fortsette egen læring [på Internett](%= resolve_url('https://code.org/learn/beyond') %).
-- [Delta](%= resolve_url('https://code.org/professional-development-workshops') %) på et endags-seminar for å lære av en erfaren informatikklærer. (Bare i USA.)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

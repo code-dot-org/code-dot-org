@@ -1,5 +1,5 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var constants = require('@cdo/apps/constants');
+import * as constants from '@cdo/apps/constants';
+const {TestResults} = constants;
 
 var levelDef = {
   'startDirection': 1, // Direction.EAST,

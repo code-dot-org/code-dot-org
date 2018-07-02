@@ -1,7 +1,9 @@
 # coding: utf-8
+require 'cdo/url_converter'
+
+# coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
-
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
 
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
@@ -38,25 +40,12 @@ def page_load(wait_until_unload)
 end
 
 def replace_hostname(url)
-  if ENV['DASHBOARD_TEST_DOMAIN']
-    raise 'Should not use learn.code.org' unless /\/\/learn.code.org\//.match(url).nil?
-    url = url.
-      gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
-  end
-  if ENV['PEGASUS_TEST_DOMAIN']
-    url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
-  end
-  if ENV['HOUROFCODE_TEST_DOMAIN']
-    url = url.gsub(/\/\/hourofcode.com\//, "//" + ENV['HOUROFCODE_TEST_DOMAIN'] + "/")
-  end
-  if ENV['CSEDWEEK_TEST_DOMAIN']
-    url = url.gsub(/\/\/csedweek.org\//, "//" + ENV['CSEDWEEK_TEST_DOMAIN'] + "/")
-  end
-
-  # Convert http to https
-  url = url.gsub(/^http:\/\//, 'https://') unless url.start_with? 'http://localhost'
-  # Convert x.y.code.org to x-y.code.org
-  url.gsub(/(\w+)\.(\w+)\.code\.org/, '\1-\2.code.org')
+  UrlConverter.new(
+    dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
+    pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
+    hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
+    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN']
+  ).replace_origin(url)
 end
 
 # When an individual step fails in a call to steps, one gets no feedback about
@@ -94,7 +83,13 @@ When /^I go to the newly opened tab$/ do
 end
 
 When /^I switch to the first iframe$/ do
+  $default_window = @browser.window_handle
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
+end
+
+# Can switch out of iframe content
+When /^I switch to the default content$/ do
+  @browser.switch_to.window $default_window
 end
 
 When /^I close the instructions overlay if it exists$/ do
@@ -146,6 +141,17 @@ end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
+end
+
+When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|
+  wait_short_until do
+    element_text = @browser.execute_script("return $(#{selector.dump}).text();")
+    !element_text.include? text
+  end
+end
+
+When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+  wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
 
 def jquery_is_element_visible(selector)
@@ -345,9 +351,11 @@ When /^I press the SVG text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
-When /^I select the "([^"]*)" option in dropdown "([^"]*)"$/ do |option_text, element_id|
-  select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
-  select.select_by(:text, option_text)
+When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, element_id, load|
+  page_load(load) do
+    select = Selenium::WebDriver::Support::Select.new(@browser.find_element(:id, element_id))
+    select.select_by(:text, option_text)
+  end
 end
 
 When /^I open the topmost blockly category "([^"]*)"$/ do |name|
@@ -807,12 +815,22 @@ And(/^I set the language cookie$/) do
   debug_cookies(@browser.manage.all_cookies)
 end
 
-Given(/^I sign in as "([^"]*)"/) do |name|
+Given(/^I sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
     Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "#signin-button"
+    And I wait to see ".header_user"
+  }
+end
+
+Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
+  steps %Q{
+    And check that the url contains "/users/sign_in"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
@@ -909,15 +927,16 @@ And /^I create a new section$/ do
   }
 end
 
-And /^I create a new section with course "([^"]*)"(?: and unit "([^"]*)")?$/ do |primary, secondary|
+And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
     When I press the new section button
     Then I should see the new section dialog
 
     When I select email login
-    Then I wait to see "#uitest-primary-assignment"
+    Then I wait to see "#uitest-assignment-family"
 
-    When I select the "#{primary}" option in dropdown "uitest-primary-assignment"
+    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
+    And I select the "#{version_year}" option in dropdown "assignment-version-year"
   }
 
   if secondary
@@ -961,6 +980,44 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
+    And I click selector "#signup-button"
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I create a student in the eu named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_up?force_in_eu=1"
+    And I wait to see "#user_name"
+    And I select the "Student" option in dropdown "user_user_type"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "16" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
+    And I click selector "#user_data_transfer_agreement_accepted"
+    And I click selector "#signup-button"
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I create a young student named "([^"]*)"$/) do |name|
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_up"
+    And I wait to see "#user_name"
+    And I select the "Student" option in dropdown "user_user_type"
+    And I type "#{name}" into "#user_name"
+    And I type "#{email}" into "#user_email"
+    And I type "#{password}" into "#user_password"
+    And I type "#{password}" into "#user_password_confirmation"
+    And I select the "10" option in dropdown "user_user_age"
+    And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button"
     And I wait until I am on "http://studio.code.org/home"
   }
@@ -971,13 +1028,15 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
 
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
-    Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    Given I am on "http://studio.code.org/users/sign_up"
     And I wait to see "#user_name"
+    And I select the "Teacher" option in dropdown "user_user_type"
     And I wait to see "#schooldropdown-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
+    And I select the "Yes" option in dropdown "user_email_preference_opt_in"
     And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button" to load a new page
     And I wait until I am on "http://studio.code.org/home"
@@ -1340,9 +1399,10 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
   expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
 
-Then /^the section table row at index (\d+) has script path "([^"]+)"$/ do |row_index, expected_path|
+Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
+  link_index = (assignment_type == 'primary') ? 0 : 1
   href = @browser.execute_script(
-    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(1)').attr('href');"
+    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');"
   )
   # ignore query params
   actual_path = href.split('?')[0]
@@ -1377,10 +1437,35 @@ def get_section_id_from_table(row_index)
   section_id
 end
 
-Then /^I scroll the save button into view$/ do
-  @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
+Then /^I scroll the "([^"]*)" element into view$/ do |selector|
+  @browser.execute_script("$('#{selector}')[0].scrollIntoView(true)")
 end
 
 Then /^I open the section action dropdown$/ do
   steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
+end
+
+saved_url = nil
+Then /^I save the URL$/ do
+  saved_url = @browser.current_url
+end
+
+Then /^current URL is different from the last saved URL$/ do
+  expect(@browser.current_url).not_to include(saved_url)
+end
+
+Then /^I sign out using jquery$/ do
+  code = <<-JAVASCRIPT
+    window.signOutComplete = false;
+    function onSuccess() {
+      window.signOutComplete = true;
+    }
+    $.ajax({
+      url:'/users/sign_out',
+      method: 'GET',
+      success: onSuccess
+    });
+  JAVASCRIPT
+  @browser.execute_script(code)
+  wait_short_until {@browser.execute_script('return window.signOutComplete;')}
 end

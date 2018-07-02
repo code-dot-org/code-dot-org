@@ -9,15 +9,15 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Blurbs and Useful Stats
+# Blurbs at kapaki-pakinabang na Stats
 
-## Use this short blurb in newsletters
+## Gamitin itong maiksing blurb sa newsletter
 
-### Bring computer science to your school. Start with an Hour of Code!
+### Dalhin ng computer science sa iyong paaralan. Magsimula sa Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Binabago ng teknolohiya ng bawat industriya sa planeta, ang kaalaman sa computing ay naging bahagi ng isang komprehnsibong kakayahan. Ngunit mas kaunti ng kalahati sa lahat ng mga paaralan ang nagtuturi ng computer science! Ang mabuting balita ay, tayo patungo sa daan upang baguhin ito. Kung narinig mo na ng tungkol sa Hou of Code sa nakaraang taon, maaaring alam mo ng gumawa ito ng kasaysayan. 100 milyong mga estudyante ngayon ang nakatuklas kung gaano kadaling gamitin at kasaya ang computer science sa pamamagitan ng paggawa ng isang Hour of Code.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Ang Hour of Code ay isang oras na pagpapakilala sa computer science, dinisenyo upang gawing simple ang code at ipakita na kahit sino ay pwedeng matutunan ng pangunahing kaalaman. Matuto ng higit pa sa <http://HourofCode.com>, sumubok ng isang oras sa iyong sarili, o mag-host ng kaganapan sa Hour of Code upang ipakilaka ang iba sa mundo ng computing!
 
 <a id="infographics"></a>
 

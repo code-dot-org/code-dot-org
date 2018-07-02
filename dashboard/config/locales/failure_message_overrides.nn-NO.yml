@@ -1,4 +1,5 @@
-"nn":
+---
+nn:
   data:
     failure_message_overrides:
       Code Studio Puzzle Challenge 1 - Artist_failure_message_override: |-
@@ -86,9 +87,12 @@
         5 Golem, prøv å endre poenga til 2 per merking.
       MC HOC 2016 Village Test_failure_message_override: Du må få Jerngolemane til
         å jakte på og angripe zombiane for å vinne.
+      Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: Gratulerer! Du har samla X myntar!
       courseE_playLab_scaffold3_failure_message_override: Du må leggje til to eller
         fleire nye aktørar til spelet ditt og kode dei til å røre på seg.
+      courseE_playLab_scaffold3_2018_failure_message_override: Du må leggje til to
+        eller fleire nye aktørar til spelet ditt og kode dei til å røre på seg.
       grade4_scaffolded_project3_failure_message_override: Du må legge til to eller
         fleire nye aktørar som kan røre på seg til spelet ditt.
       kikiTesta_failure_message_override: Gratulerer! Du har samla X myntar!

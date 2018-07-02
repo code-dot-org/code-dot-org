@@ -1,4 +1,5 @@
-"bs":
+---
+bs:
   slides:
     maze_intro:
       1:
@@ -170,7 +171,7 @@
           Tech na studij računarstva. Isprobajmo naš novi blok "ponavljaj dok".
       2:
         image: notes/hoc3_2.jpg
-        text: "Što da nismo znali koliko daleko ptica treba ići dok ne dođe do svinje?"
+        text: Što da nismo znali koliko daleko ptica treba ići dok ne dođe do svinje?
       3:
         image: notes/hoc3_3.jpg
         text: Ako stavimo blok "idi naprijed" unutar bloka "ponavljaj dok ne bude",
@@ -310,8 +311,8 @@
         text: Zdravo ja sam Janete, i ja sam inžinjer u Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: "Što ako želimo nacrtati nekoliko trokutova sa stranicama različitih
-          dužina?"
+        text: Što ako želimo nacrtati nekoliko trokutova sa stranicama različitih
+          dužina?
       3:
         image: notes/stage15_3.jpg
         text: Možemo napisati sav taj kôd ručno ili možemo koristiti funkciju s parametrima.
@@ -339,10 +340,10 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: "Čestitamo! U posljednjem riješenom zadatku si napisao/la kôd kojim
-          možeš BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez grananja
-          puteva ili tunela bilo koje dužine, bez obzira radi li se o zombiju, ptici,
-          svemirskom vozilu ili čak samovozećem automobilu."
+        text: Čestitamo! U posljednjem riješenom zadatku si napisao/la kôd kojim možeš
+          BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez grananja puteva
+          ili tunela bilo koje dužine, bez obzira radi li se o zombiju, ptici, svemirskom
+          vozilu ili čak samovozećem automobilu.
       2:
         image: notes/hoc6_2.jpg
         text: Osnovni pojmovi koje si koristio/la se nalaze u srcu svake aplikacije
@@ -1038,11 +1039,11 @@
           course of action.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: Think about your favorite video game. Do you earn more points for some
-          actions than you do for others? This occurs because the computer is using
-          conditionals. It's the way a computer makes a decision. How about, if you
-          hit the target, you earn ten points. Else, you lose three. When you know
-          how conditionals work, you can create all kinds of exciting games.
+        text: Razmisli o svojo najdražoj video igri. Dobivaš li više poena za jedne
+          akcije nego za druge? Ovo se događa zato što računar koristi uslove. To
+          je način na koji računar donosi odluku. Recimo, ako pogodiš metu, dobivaš
+          deset poena. Ako ne, gubiš tri poena. Kada znaš kako funkcionišu uslovi,
+          možeš kreirati sve vrste uzbudljivi igrica.
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
@@ -2896,9 +2897,8 @@
           of them, they can turn left. Or turn right if they run into a tree.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: U ovo slučaju, ne želimo da padnemo u lavu. Lako je izbjeći lavu. Možemo
+          je vidjeti na ekranu. Ali šta je sa lavom ispod kamena koju ne možemo vidjeti?
       5:
         image: notes/mc_if_statements_5.JPG
         text: After we mine the stone, we'll need to check if there's any lava in
@@ -2909,13 +2909,12 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Čestitamo! Upravo ste naučili osnovne elemente računarstva.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Sad možete koristiti ove blokove da napravite vlastitu kreaciju. Nema
+          više instrukcija i zagonetki da se riješe. Možete napraviti šta god želite.
+          Izbor je Vaš.
       3:
         image: notes/mc_congrats_share_3.JPG
         text: "[students talking] It's about to get real. Shear. I made an L out of
@@ -2923,18 +2922,17 @@
           a house out of wool!"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Kada si gotov sa pravljenjem svoje kreacije, izaberi opciju podijeli
+          da dobiješ link da podijeliš sa svojim prijateljima. Zabavi se!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Čestitamo! Upravo ste naučili osnovne elemente računarstva.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Sad možete koristiti ove blokove da napravite vlastitu kreaciju. Nema
+          više instrukcija i zagonetki da se riješe. Možete napraviti šta god želite.
+          Izbor je Vaš.
       3:
         image: notes/mc_congrats_no_share_3.JPG
         text: "[students talking] It's about to get real. Shear. I made an L out of
@@ -2946,9 +2944,8 @@
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Ako bi želio napraviti vlastitu igru, zaista je lako. Sve što trebaš
+          je nekoliko osnova programiranja i možeš početi igrati igru koju si napravio.
       2:
         image: notes/gumball_intro_2.JPG
         text: Do you have a favorite video game? We're going to take one step toward
@@ -3030,9 +3027,8 @@
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Ako bi želio napraviti vlastitu igru, zaista je lako. Sve što trebaš
+          je nekoliko osnova programiranja i možeš početi igrati igru koju si napravio.
       2:
         image: notes/iceage_intro_2.JPG
         text: Do you have a favorite video game? We're going to take one step toward
@@ -3140,8 +3136,7 @@
           we'll build our program.
       6:
         image: notes/mc_2016_intro_6.jpg
-        text: If you forget what to do, the instructions for each level are at the
-          top.
+        text: Ako zaboraviš šta treba uraditi, upute za svako razinu su na vrhu.
       7:
         image: notes/mc_2016_intro_7.jpg
         text: To start off, we're going to program a chicken. Let's drag the "move
@@ -3460,7 +3455,7 @@
           to love it!'
       2:
         image: notes/mc_2017_agent_intro_2.png
-        text: Wait a minute - there's a hole in the track! (screaming)
+        text: Čekaj malo - na pruzi ima rupa! (vrištanje)
       3:
         image: notes/mc_2017_agent_intro_3.png
         text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a
@@ -3508,8 +3503,7 @@
           rails, it places it underneath itself.
       11:
         image: notes/mc_2017_agent_intro_11.png
-        text: If you forget what to do, the instructions for each level are at the
-          top.
+        text: Ako zaboraviš šta treba uraditi, upute za svako razinu su na vrhu.
       12:
         image: notes/mc_2017_agent_intro_12.png
         text: If you want to try again, you can hit the blue reset button to reset
@@ -3604,7 +3598,7 @@
         text: 'Lizzy: Congratulations!'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: Congratulations, you did it!'
+        text: 'Stampi: Čestitam, uspio si!'
       4:
         image: notes/mc_2017_congratulations_4.png
         text: 'Stacy: Congratulations guys, you totally rocked that! And now that

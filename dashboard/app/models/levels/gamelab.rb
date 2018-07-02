@@ -34,7 +34,6 @@ class Gamelab < Blockly
     hide_animation_mode
     start_in_animation_tab
     all_animations_single_frame
-    show_d_pad
     soft_buttons
     submittable
     data_properties
@@ -46,6 +45,9 @@ class Gamelab < Blockly
     pause_animations_by_default
     start_animations
     teacher_markdown
+    auto_run_setup
+    custom_setup_code
+    validation_code
   )
 
   # List of possible skins, the first is used as a default.
@@ -66,12 +68,17 @@ class Gamelab < Blockly
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
-          show_d_pad: true,
-          edit_code: true,
           show_debug_watch: true
         }
       )
     )
+  end
+
+  # By default, level types that inherit from Blockly will try to store a bunch
+  # of fields as normalized xml, discarding anything that's not actually XML.
+  # Gamelab doesn't use blockly, so don't do that to any of our fields.
+  def xml_blocks
+    %w()
   end
 
   def update_palette
@@ -81,6 +88,14 @@ class Gamelab < Blockly
   rescue JSON::ParserError => e
     errors.add(:code_functions, "#{e.class.name}: #{e.message}")
     return false
+  end
+
+  def uses_droplet?
+    true
+  end
+
+  def age_13_required?
+    true
   end
 
   def self.palette

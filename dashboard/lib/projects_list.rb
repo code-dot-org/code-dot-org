@@ -66,17 +66,92 @@ module ProjectsList
       end
       if project_group == 'all'
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
-        return fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
+        return include_featured(limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
       fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
     end
 
+    def include_featured(limit:)
+      published = fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
+      featured = fetch_featured_published_projects
+      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
+        featured[project_type].push(published[project_type]).flatten!.uniq!
+      end
+      return featured
+    end
+
+    def fetch_featured_published_projects
+      featured_published_projects = {}
+      PUBLISHED_PROJECT_TYPE_GROUPS.each do |project_group, project_types|
+        featured_published_projects[project_group] = []
+        project_types.each do |project_type|
+          featured_published_projects[project_group] <<
+          fetch_featured_projects_by_type(project_type)
+        end
+        featured_published_projects[project_group].flatten!
+      end
+      return featured_published_projects
+    end
+
+    def project_and_featured_project_and_user_fields
+      [
+        :storage_apps__id___id,
+        :storage_apps__storage_id___storage_id,
+        :storage_apps__value___value,
+        :storage_apps__project_type___project_type,
+        :storage_apps__published_at___published_at,
+        :featured_projects__featured_at___featured_at,
+        :featured_projects__unfeatured_at___unfeatured_at,
+        :users__name___name,
+        :users__birthday___birthday,
+        :users__properties___properties,
+      ]
+    end
+
+    def fetch_featured_projects_by_type(project_type)
+      storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
+      user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
+      project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
+        select(*project_and_featured_project_and_user_fields).
+        join(storage_apps, id: :storage_app_id).
+        join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
+        join(:users, id: Sequel[:user_storage_ids][:user_id]).
+        where(unfeatured_at: nil,
+          project_type: project_type.to_s,
+          abuse_score: 0,
+          state: 'active'
+        ).
+        exclude(published_at: nil).
+        order(Sequel.lit('RAND()')).limit(24).all
+      extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
+    end
+
+    def extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
+      data_for_featured_project_cards = []
+      project_featured_project_user_combo_data.each do |project_details|
+        project_details_value = JSON.parse(project_details[:value])
+        channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+        data_for_featured_project_card = {
+          "channel" => channel,
+          "name" => project_details_value['name'],
+          "thumbnailUrl" =>  StorageApps.make_thumbnail_url_cacheable(project_details_value['thumbnailUrl']),
+          "type" => project_details[:project_type],
+          "publishedAt" => project_details[:published_at],
+          "studentName" => UserHelpers.initial(project_details[:name]),
+          "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday])
+        }
+        data_for_featured_project_cards << data_for_featured_project_card
+      end
+      return data_for_featured_project_cards
+    end
+
     private
 
-    # e.g. '/p/applab' -> 'applab'
+    # e.g. '/projects/applab' -> 'applab', or
+    # 'https://studio.code.org/projects/weblab' --> 'weblab'
     def project_type(level)
-      level && level.split('/')[2]
+      level && level.split('/').last
     end
 
     # pull various fields out of the student and project records to populate
@@ -132,7 +207,7 @@ module ProjectsList
     #
     # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
-    # @returns [hash, nil] containing feilds relevant to the published project or
+    # @returns [hash, nil] containing fields relevant to the published project or
     #  nil when the user has sharing_disabled = true
     def get_published_project_and_user_data(project_and_user)
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties])

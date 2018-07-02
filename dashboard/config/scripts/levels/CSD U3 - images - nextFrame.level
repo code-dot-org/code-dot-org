@@ -68,7 +68,6 @@
       "comment": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Next Frame\r\n\r\nOn the last level the animation you used continously looped through the animation and never stopped. Sometimes we want to control when the animation changes.  When you want to create a sequence but not have it loop you can click the button in the anmations tab *** show example***. Then in the code you can control when you move to the next frame using `nextFrame`. \r\n\r\n\r\n# Do This\r\n\r\nThere is a sprite already created for you and 4 images loaded into the animations tab. Make the sprite change frames each time the space bar is pressed down.\r\n\r\n* Create a conditional to respond to the space bar\r\n* Inside the conditional call `nextFrame` to move the sprite to the next frame",

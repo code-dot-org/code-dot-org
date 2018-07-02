@@ -94,8 +94,20 @@ class Stage < ActiveRecord::Base
     end
   end
 
+  def localized_lesson_plan
+    if script.curriculum_path?
+      path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
+
+      if path.include? '{LOCALE}'
+        CDO.curriculum_url I18n.locale, path.split('{LOCALE}/').last
+      else
+        path
+      end
+    end
+  end
+
   def lesson_plan_html_url
-    "#{lesson_plan_base_url}/Teacher"
+    localized_lesson_plan || "#{lesson_plan_base_url}/Teacher"
   end
 
   def lesson_plan_pdf_url
@@ -171,6 +183,7 @@ class Stage < ActiveRecord::Base
           id: script_level.id,
           position: script_level.position,
           named_level: script_level.named_level?,
+          bonus_level: !!script_level.bonus,
           progression: script_level.progression,
           path: script_level.path,
         }

@@ -163,9 +163,6 @@ eu:
       CollisionDetection:
         title: Kolisio detekzioa eta Pitagorasen teorema
         desc: Pantailan dauden objektuek elkarren artean talka egiten duten jakitea oso garrantzitsua da joko gehienetan. Ikastaro honetan Pitagorasen teorema eta Distantzia formula nola erabili ikusiko dugu plano batean dauden bi puntuen (edo objetu, pertsonaia...) arteko distantzia neurtu eta ea elkar ukitzen duten jakiteko.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -265,3 +262,96 @@ eu:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
+      UnplugHappyMaps_2018:
+        title: Mapa Zoriontsuak
+        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto baten barnean gidatuko dute komando bakar bat erabiliz.
+      GoingPlacesSafely_2018:
+        title: Joan segurtasunez
+        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek adieraziko dute nola nabigatu modu seguruan interneten.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Gertaera Handia
+        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko dituzte.
+      GraphPaperProgramming_2018:
+        title: Paperean marraztuz programatu
+        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Lineaz kanpoko ekintza
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Lineaz kanpoko ekintza
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Baldintzak
+        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut, puntu bat lortzen duzu."'
+      DigitalFootprint_2018:
+        title: Zure aztarna digitala
+        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
+      BinaryImages_2018:
+        title: Irudi bitarrak
+        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua gordetzeko gai dela (irudi eta kolore bezalakoak).
+      PaperPlanes_2018:
+        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak diren bere zati esentzialetako bat.
+      GettingLoopy_2018:
+        title: Iteratzen
+        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu egin beharko dute.
+      BinaryBracelets_2018:
+        title: Eskumuturreko bitarrak
+        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela ikasten dute honela.
+      MoveItMoveIt_2018:
+        title: Mugi ezazu, mugi ezazu!
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Txandaka programatzen
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

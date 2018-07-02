@@ -59,7 +59,7 @@ ko:
   courses: 'courses'
   courses_page:
     title_student: "Code Studio 배우기"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: '언플러그드 활동'
   of: "중"
   more: "전체단계"
@@ -69,7 +69,7 @@ ko:
   try_k8intro: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 과정(15-25시간) 해보기"
   k8intro: "유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스"
   already_started: "학습 계속하기 >>"
-  demos: '관리자: 모든 퍼즐'
+  demos: "관리자: 모든 퍼즐"
   continue: '계속하기'
   prize: '상품'
   more_info: '자세히'
@@ -85,6 +85,7 @@ ko:
     facebook: 'Facebook'
     windowslive: '마이크로소프트 계정'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: '비밀번호를 잊으셨나요?'
     need_confirmation: "확인 메일을 받지 못 했나요?"
     need_unlock: "잠김 해제 메일을 받지 못 했나요?"
@@ -114,15 +115,25 @@ ko:
     valid_password: "사용 가능한 비밀번호!"
     invalid_password: "비밀번호는 최소 6 문자 이상이어야 합니다"
     mismatch_password: "입력한 비밀번호가 일치하지 않습니다."
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "본인이 13세 미만일 경우, 본인은 본인의 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
+    agree_us_website: "본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다."
+    my_data_to_us: "본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다."
     student_terms: "나는 Code.org <a href='http://code.org/tos'>서비스 약관</a>을 준수하는 것에 동의합니다. 13세 미만일 경우 Code.org 서비스를 이용하기 위해 부모님이나 법적 보호자의 허락을 받은 양식을 제출하여 확인합니다.<br/><br/>학생들과 연락하기 위해 허용된 양식에 이메일은 저장되지 않습니다. 학생들은 비밀번호 복구를 제외한 어떠한 이메일도 Code.org로 부터 받지 않습니다. 자세한 내용은 <a href='http://code.org/privacy'>개인정보 보호정책</a>을 참조하세요."
     teacher_terms: "Code.org 서비스 약관을 준수할 것을 동의합니다. 개인정보보호에 대한 자세한 내용은 <a href='http://code.org/privacy'>개인정보 보호정책</a>을 참조하세요."
     additional_information: "가입하기 위해서는 추가적인 정보가 필요합니다."
-    user_type_label: "계좌 타자"
+    user_type_button: "Update Account Type"
+    user_type_label: "계정 유형"
     user_type_teacher: "선생님"
     user_type_student: "student"
     field_is_required: "이(가) 필요합니다."
     accept_terms: "회원가입에 동의해야 합니다."
     error: "An error occurred."
+    email_preference_question: "당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "예"
+    email_preference_no: "아니요"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: '학교 정보(선택사항)'
     school_country: '학교 국가정보'
@@ -171,6 +182,7 @@ ko:
       email: '이메일'
       submit: '제출하기'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: '잘못된 이메일 주소로 가입을 한 것으로 보입니다. 암호복구 링크를 받기 위해서 support@code.org 로 메일을 보내주시기 바릅니다.'
     change_form:
       title: '비밀번호 변경'
@@ -201,7 +213,7 @@ ko:
     remove: '(섹션 삭제)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: '비밀단어'
       email: '이메일'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -220,7 +232,7 @@ ko:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다.'
+        subject: "Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다."
   reports:
     error:
       access_denied: "이 학생의 학습 상황에 접근할 수 없습니다"
@@ -241,7 +253,7 @@ ko:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        user_type_change_email_mismatch: "제공하신 이메일 주소가 계정에 저장된 주소와 맞지 않습니다."
         personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
@@ -309,7 +321,7 @@ ko:
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: '내 진도'
-      lines: 총 %{lines} 라인
+      lines: '총 %{lines} 라인'
       close: 'CLOSE'
       mastery: '개념'
       puzzle_map: '단계들'
@@ -348,11 +360,12 @@ ko:
     email_confirm_needed_required: '당신의 이메일 주소 Email%{email}는 확인되지 않았습니다:'
     email_confirm_wrong_email: '(잘못된 이메일 주소?)'
     email_resend_confirm: '이메일 확인 재발송'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(바꾸고 싶지 않으면, 비워 두세요)"
     current_password_hint: '(수정하기 위해 비밀번호를 한 번 더 입력해 주세요.)'
     delete: '당신의 계정을 삭제합니다.'
     delete_text: "아래 버튼을 클릭하면 당신의 계정이 삭제될 것입니다."
-    delete_text_teacher_note: '반드시 참고: 당신의 계정을 삭제하는 것은 당신의 학생들의 계정을 삭제하진 않을 것입니다.'
+    delete_text_teacher_note: "반드시 참고: 당신의 계정을 삭제하는 것은 당신의 학생들의 계정을 삭제하진 않을 것입니다."
     delete_confirm: '정말로 당신의 계정을 삭제하시겠습니까?'
     deleted_user: '삭제된 사용자'
     no_password_because_oauth: '타사 공급자부터 로그인 했기 때문에 비밀번호 없습니다.'
@@ -363,10 +376,11 @@ ko:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: '완료'
     tried: '시도함'
@@ -448,6 +462,7 @@ ko:
     student_not_found: "한 명 이상의 학생을 찾을 수 없습니다."
     all_students_must_be_in_current_section: "모든 학생들은 당신의 섹션에 등록되어야 합니다."
     already_enrolled_in_new_section: "이 학생들은 다른 섹션에 등록하였기 때문에 이동이 불가능합니다."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Code Studio 배우기"
     description: "누구든지 컴퓨터 과학을 배우고, 코드를 이용해서 게임, 앱, 예술을 만들 수 있습니다."
@@ -455,6 +470,8 @@ ko:
   gender:
     male: '남'
     female: '여'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: '응답 안 함'
   user_type:
     student: 'student'
@@ -702,7 +719,7 @@ ko:
     sign_out: '나이 정보를 제출하기 원하지 않으시면 <a href="%{url}">탈퇴</a>를 하실 수 있습니다.'
   terms_interstitial:
     title: "업데이트 된 서비스약관 및 개인정보 보호정책"
-    intro_desc: '아래와 같이 서비스 약관과 개인보호 보호정책을 업데이트 했습니다. 업데이트 내역은 2016년 8월 24일 부터 적용됩니다. 가장 큰 변경사항: <i>Code Studio의 학생계정은 이제 이메일을 저장하지 않습니다.</i> 이것은 교육기술이 학생 개인정보 보호를 위한 새로운 기준을 수립하는것으로 큰 의미가 있습니다. 이메일을 통해 다른 변경사항에 대한 내용을 발송했습니다.'
+    intro_desc: "아래와 같이 서비스 약관과 개인보호 보호정책을 업데이트 했습니다. 업데이트 내역은 2016년 8월 24일 부터 적용됩니다. 가장 큰 변경사항: <i>Code Studio의 학생계정은 이제 이메일을 저장하지 않습니다.</i> 이것은 교육기술이 학생 개인정보 보호를 위한 새로운 기준을 수립하는것으로 큰 의미가 있습니다. 이메일을 통해 다른 변경사항에 대한 내용을 발송했습니다."
     intro_instructions: "강의에서 13세 미만의 학생들이 코드스튜디오의 모든 최신기능에 접근하기 위해 새로운 조건들을 수락해야 합니다. 13세 미만의 학생계정을 등록 할 때, Code Studio 같은 교육프로그램들과 학교의 사용 및 혜택에 대한 학생 개인정보 수집을 위해 학부모가 승인하였음을 확인하는 메시지가 표시됩니다."
     tos: "이용 약관"
     privacy: "개인정보보호 정책"
@@ -718,25 +735,25 @@ ko:
     message_with_suggestion: "다음 정보가 올바른지 확인하고 필요하면 수정하세요."
     save: "저장"
   race_interstitial:
-    title: '선택사항: 컴퓨터과학의 다양성 개선에 대한 우리의 진행 상황을 추적하도록 도와주세요.'
+    title: "선택사항: 컴퓨터과학의 다양성 개선에 대한 우리의 진행 상황을 추적하도록 도와주세요."
     message: "당신의 민족을 알려주세요 (해당사항에 모두 체크)"
     races:
       - 
-        white: 백인
+        white: "백인"
       - 
-        black: 흑인 또는 아프리카계 미국인
+        black: "흑인 또는 아프리카계 미국인"
       - 
-        hispanic: 히스패닉 또는 라틴계
+        hispanic: "히스패닉 또는 라틴계"
       - 
-        asian: 동양인
+        asian: "동양인"
       - 
-        hawaiian: 하와이 태생 또는 다른 태평양제도 태생
+        hawaiian: "하와이 태생 또는 다른 태평양제도 태생"
       - 
-        american_indian: 아메리칸 인디언/알래스카 원주민
+        american_indian: "아메리칸 인디언/알래스카 원주민"
       - 
-        other: 기타
+        other: "기타"
       - 
-        opt_out: 말하지 않는 것을 선호한다
+        opt_out: "말하지 않는 것을 선호한다"
     submit: "제출하기"
     decline: "닫기"
   zendesk_too_young_message: '어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.'
@@ -762,7 +779,7 @@ ko:
     delete: "삭제"
     import: "가져오기"
     share_link_import_bad_link_header: "공유 링크를 인식할 수 없습니다"
-    share_link_import_bad_link_body: '공유 링크를 가져올 수 없습니다. Minecraft: Agent 퍼즐에서 제공되는 링크 전체를 복사했는지 확인해주세요.'
+    share_link_import_bad_link_body: "공유 링크를 가져올 수 없습니다. Minecraft: Agent 퍼즐에서 제공되는 링크 전체를 복사했는지 확인해주세요."
     share_link_import_error_header: "오류가 발생했습니다."
     share_link_import_error_body: "공유 링크를 가져오는 중 문제가 발생했습니다. 다시 시도해주세요."
     exit: "코스로 돌아가기"
@@ -867,6 +884,7 @@ ko:
     csd5_2: '2 장: 데이터 문제 해결하기'
     csd6_1: '1 장: 하드웨어 출력'
     csd6_2: '2 장: 하드웨어 입력'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ ko:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '유닛 2: 디지털 정보'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: 경고
@@ -984,3 +1007,14 @@ ko:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: '동의합니다'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: '예'

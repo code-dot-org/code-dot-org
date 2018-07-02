@@ -7,16 +7,15 @@ import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import ApplicantSearch from './applicant_search';
+import AdminNavigationButtons from './admin_navigation_buttons';
 import Spinner from '../components/spinner';
-import {
-  UnmatchedFilter,
-  RegionalPartnerDropdownOptions as dropdownOptions
-} from './constants';
+import {RegionalPartnerPropType} from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string.isRequired,
+    regionalPartnerFilter: RegionalPartnerPropType.isRequired,
+    showRegionalPartnerDropdown: PropTypes.bool,
     isWorkshopAdmin: PropTypes.bool
   };
 
@@ -26,13 +25,17 @@ export class Summary extends React.Component {
     this.state = {
       loading: true,
       applications: null,
-      regionalPartnerName: this.props.regionalPartnerName,
-      regionalPartnerFilter: UnmatchedFilter
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
+      this.load(nextProps.regionalPartnerFilter);
+    }
+  }
+
   componentWillMount() {
-    this.load();
+    this.load(this.props.regionalPartnerFilter);
   }
 
   componentWillUnmount() {
@@ -45,13 +48,13 @@ export class Summary extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter = this.state.regionalPartnerFilter) {
+  load(regionalPartnerFilter) {
     this.abortLoad();
     this.setState({loading: true});
 
     let url = '/api/v1/pd/applications';
     if (this.props.isWorkshopAdmin) {
-      url += `?${$.param({regional_partner_filter: regionalPartnerFilter})}`;
+      url += `?${$.param({regional_partner_value: regionalPartnerFilter.value})}`;
     }
 
     this.loadRequest = $.ajax({
@@ -66,13 +69,6 @@ export class Summary extends React.Component {
     });
   }
 
-  handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerName = selected.label;
-    const regionalPartnerFilter = selected.value;
-    this.setState({regionalPartnerName, regionalPartnerFilter});
-    this.load(selected.value);
-  };
-
   render() {
     if (this.state.loading) {
       return <Spinner />;
@@ -81,13 +77,12 @@ export class Summary extends React.Component {
       <div>
         <ApplicantSearch/>
         {this.props.isWorkshopAdmin &&
-          <RegionalPartnerDropdown
-            onChange={this.handleRegionalPartnerChange}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
-            additionalOptions={dropdownOptions}
-          />
+          <AdminNavigationButtons/>
         }
-        <h1>{this.state.regionalPartnerName}</h1>
+        {this.props.showRegionalPartnerDropdown &&
+          <RegionalPartnerDropdown/>
+        }
+        <h1>{this.props.regionalPartnerFilter.label}</h1>
         <div className="row">
           <SummaryTable
             id="summary-csf-facilitators"
@@ -126,7 +121,7 @@ export class Summary extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerName: state.regionalPartnerName,
-  regionalPartners: state.regionalPartners,
+  regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin,
+  showRegionalPartnerDropdown: state.regionalPartners.length > 1
 }))(Summary);

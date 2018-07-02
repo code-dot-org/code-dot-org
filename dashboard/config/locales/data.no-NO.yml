@@ -1,3 +1,4 @@
+---
 'no':
   data:
     game:
@@ -300,117 +301,8 @@
           kommer borti boksen med TNT!
         maze_3_4: Argh! Skriv meg et program for å komme meg rundt sprengstoffet og
           helt frem til grisen.
-        bounce_1_basketball: Fest en blokk til "når venstre pil"-blokken og klikk
-          "Kjør". Bruk venstre pil til å flytten hånden til målet.
-        bounce_2_basketball: Fest en blokk til "når høyre pil"- og "når venstre pil"-blokkene.
-          Flytt hånden for å nå begge målene.
-        bounce_5_basketball: Vi skal sende en ball mot hånden. Fest en blokk til "når
-          ballen treffer hånden"-blokken, for å være sikker på at ballen når flagget.
-        bounce_6_basketball: Nå er flagget på toppen. Du må feste blokker til begge
-          "når ballen treffer"-blokkene for å løse denne oppgaven.
-        bounce_7_basketball: Fest blokkene til begge "når"-blokkene. Sprett ballen
-          til den treffer flagget.
-        bounce_10_basketball: Nå er målet på toppen! Fest "skår poeng"- og "motstanderen
-          skårer poeng"-blokker til "når ballen er i mål" og "når ballen bommer på
-          hånden"-blokkene for å lage et spill. Se hvor mange poeng du kan få før
-          motstanderen får to poeng.
-        bounce_11_basketball: Nå kan du feste blokker til "når kjør"-blokken. Du må
-          feste en ny "kast ny ball"-blokk på mer enn ett sted. Du kan også endre
-          scenen eller hastigheten på hånden og ballen for å se hvor mange poeng du
-          kan få før motstanderen skårer to poeng!
-        bounce_12_basketball: Lag ditt eget basketballspill. Du kan endre alle reglene.
-          Klikk ferdig når du er fornøyd og la vennene dine prøve spillet på telefonene
-          sine.
-        bounce_1_sports: Kom deg til flagget! Koble en blokk til "når venstre pil"-blokken
-          og trykk "Kjør" for å flytte spillfiguren til flagget.
-        bounce_2_sports: Nå er det to flagg! Koble en blokk til "når venstre pil"-
-          og "når høyre pil"-blokkene for å kunne flytte spillfiguren i to retninger.
-        bounce_5_sports: Hockey-pucken kommer til å fly ned mot spillfiguren! Koble
-          en blokk til "når ball treffer spilleren"-blokken for å treffe flagget.
-        bounce_6_sports: Nå er flagget på toppen. Du må feste blokker til begge "når
-          ballen treffer"-blokkene for å løse denne oppgaven.
-        bounce_7_sports: Fest blokkene til begge "når"-blokkene. Sprett ballen til
-          den treffer flagget.
-        bounce_10_sports: Nå er det et mål på toppen! Fest blokkene "øk poeng" og
-          "øk motstanderens poeng" til blokkene "når ballen er i mål" og "når ballen
-          bommer på rekkerten" for å lage et spill. Se hvor mange poeng du greier
-          å få før motstanderen din får to poeng!
-        bounce_11_sports: Nå kan du feste blokker til "når kjør"-blokken. Du må feste
-          en ny "kast ny ball"-blokk på mer enn ett sted. Du kan også endre scenen
-          eller hastigheten på hånden og ballen for å se hvor mange poeng du kan få
-          før motstanderen skårer to poeng!
-        bounce_12_sports: 'Lag ditt eget spill! Du bestemmer: Du kan endre på alle
-          regler, blande og sette sammen ulike sporter. Vær kreativ! Når du er ferdig,
-          trykk "Fullført" for å dele spillet med vennene dine, så de kan prøve det
-          på sine telefoner!'
-        bounce_1: Fest en blokk til «Når pil venstre» blokken og trykk «Kjør». Flytt
-          åren ved å bruke venstre pil for å nå målet.
-        bounce_2: Fest en blokk til «når pil høyre» og «når pil venstre» blokkene.
-          Flytt åren for å nå begge målene.
-        bounce_3: Prøv noe lignende med «når opp pil» blokken. Flytt åren til målet
-          på toppen.
-        bounce_4: Denne gangen trenger du å legge til fire blokker. Flytt åren til
-          alle fire mål for å fullføre denne oppgaven.
-        bounce_5: Vi skal sende en ball flygende ned mot åren. Fest en blokk til «når
-          en ball treffer åren» blokken for å være sikker på at ballen når mål.
-        bounce_6: Nå er sluttmålet på toppen. Du trenger å feste blokker til begge
-          «når en ball treffer» blokkene for å løse denne oppgaven.
-        bounce_7: Fest blokker til alle «når» blokkene. Sprett ballen helt til den
-          treffer sluttmålet.
-        bounce_10: Det er nå et mål på toppen. Fest «skår et poeng» og «skår motstanderen
-          et poeng» blokkene til «når en ball i mål» og «når en ball bommer på åren»
-          blokkene for å lage et spill. Se hvor mange poeng du greier å skåre før
-          motstanderen din skårer to ganger.
-        bounce_11: Du kan nå feste blokker til «når den kjører» blokken. Du må feste
-          den nye «kast ny ball» blokken på mer enn en plass. Også, prøv å skifte
-          scenen eller farten på kontrolleren og ballen og se hvor mange poeng du
-          kan skåre før motstanderen din har skåret to ganger.
-        bounce_12: Opprett ditt eget Sprett spill. Du kan endre alle bilder og reglene.
-          Når du er ferdig, klikk Fullfør for å la venner prøve spillet på sine telefoner.
         Custom_builder: Dra blokker fra verktøykassen til arbeidsområdet for å tegne
           nivået du vil opprette. Trykk "Kjør" når du er klar.
-        flappy_1: Fest en blokk til "når klikk"-blokken, og trykk "Kjør". Klikk eller
-          trykk på skjermen for å fly Flappy til målet.
-        flappy_2: Vi har nå lagt til en bakke.  Fest en blokk til "når traff bakken"-blokken.
-          Koden må "Avslutte spillet" når Flappy krasjer.
-        flappy_3: Med "Når kjørt"-blokken kan du kjøre kode når spillet starter.  Prøv
-          å sette farten og flaks til målet.
-        flappy_4: Flappy vil fly gjennom hindringer med mindre du skriver kode for
-          å få ham til å krasje. Fest en blokk til "når treffer en hindring"-blokken.
-          Koden må "Avslutte spillet" når Flappy krasjer inn i det første rørsettet.
-        flappy_5: La oss legge til en resultattavle og telle poeng når Flappy kommer
-          seg forbi hindringer. Utvid blokken "når passert hindring" og se at du får
-          poeng når du flyr Flappy forbi de første rørene.
-        flappy_6: Se om du fortsatt kan få poeng hvis Flappy flakser mer eller mindre.
-        flappy_7: Prøv å endre scenen ved å feste en annen blokk til "når den kjører"-blokken.
-        flappy_8: Du kan angi visuelle effekter når som helst, ikke bare når spillet
-          starter. Prøv å sette en tilfeldig scene når andre hendelser skjer, for
-          eksempel når du passerer en hindring.
-        flappy_9: For å blande ting, når du treffer et hinder, i stedet for å avslutte
-          spillet Prøv innstillingen score tilbake til 0.
-        flappy_11: Lag ditt eget Flappy-spill! Du kan endre alle bilder og alle regler,
-          selv tyngdekraften. Når du er ferdig, klikk Fullfør og du kan la vennene
-          dine prøve spillet på sine telefoner.
-        flappy_k1_1: Spill Flappy
-        flappy_k1_2: Fest en blokk til "når klikk"-blokken og trykk "Start". Klikk
-          eller trykk på skjermen for å fly Flakse til målet.
-        flappy_k1_3: Vi har nå lagt til en bakke.  Fest en blokk "når traff bakken"-blokken.
-          Koden må "Avslutte spillet" når Flakse krasjer.
-        flappy_k1_4: Med "Når startet"-blokken kan du koden som skal kjøre når spillet
-          starter.  Prøv å sette farten og så flakse i vei til målet.
-        flappy_k1_5: Flakse vil fly gjennom hindringer med mindre du skriver kode
-          for å få han til å krasje. Feste en blokk "når truffet en hindring" blokken.
-          Koden må "Avslutte spillet" når Flakse krasjer inn i det første settet av
-          rør.
-        flappy_k1_6: La oss legge til en resultattavle og telle poeng når Flakse kommer
-          seg forbi hindringer. Legge til blokken "når hinder passert" se at du får
-          poeng år du flyr Flakse forbi de første rørene.
-        flappy_k1_7: Se hvis du kan score flere poeng for å klare og komme forbi et
-          hinder
-        flappy_k1_8: Det neste du kan prøve er å endre scenen ved å feste en annen
-          blokk til blokk "når kjørt"-blokken.
-        flappy_k1_9: Prøv å endre spilleren ved å legge ved en "sett spilleren" blokk
-          til "når kjørt"-blokken.
         jigsaw_1: Klikk blokken
         jigsaw_2: Dra klossen til målet
         jigsaw_3: Ordne blokkene for å danne bildet
@@ -726,18 +618,20 @@
         infinity_playlab_intro: Spill-Lab – introduksjon
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
-        csd_concept_how_computers_work: Introducing How Computers Work
+        csd_concept_how_computers_work: Introduser hvordan datamaskiner virker
         csd_concept_computer: 'Hvordan datamaskiner fungerer: Hva gjør en datamaskin
           til en datamaskin?'
         csd_concept_binary_data: 'Hvordan datamaskiner fungerer: Binær og data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
+        csd_concept_circuits_logic: 'Hvordan datamaskiner virker: Kretser og logikk'
+        csd_concept_memory_cpu_input_output: 'Hvordan datamaskiner virker: Minne,
+          prosesser, inn- og ut-data'
+        csd_concept_hardware_software: 'Hvordan datamaskiner virker: Maskinvare &
+          programvare'
         csd_concept_search: Hvordan søk fungerer
         csd_external_amazon_data: Hvordan Stordata brukes i Amazon Anbefalings systemer
           kan endre livene våre
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
+        csd_external_netflix_data: Hvordan lager Netflix forslagene til serier og
+          filmer?
         csd_external_waze_data: Hvorfor er så mange brukere opptatt av «Waze»?
         csd_gamelab_animation_tab: Animasjons-lab
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
@@ -814,9 +708,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Skap en galakse med kode - introduksjon'
         starwars_typing: 'Star Wars: Skap en galakse med kode - JavaScript'
         starwars_events: 'Star Wars: Skap en galakse med kode - Hendelser'
@@ -872,6 +763,22 @@
         applab_intro_sounds: App Lab - Bilder og lyder
         applab_intro_designmode: 'App Lab: Design modus'
         applab_intro_share: App Lab - del Appen din
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Løkker
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken

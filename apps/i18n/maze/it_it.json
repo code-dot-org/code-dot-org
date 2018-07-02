@@ -10,7 +10,7 @@
   "collectorCollectedNothing": "Continua a scrivere codice! Devi raccogliere quanti più oggetti puoi.",
   "collectorCollectedSome": "Ottimo lavoro! Hai raccolto {count} oggetti!",
   "collectorCollectedNotEnough": "Continua a programmare! Hai bisogno di raccogliere almeno {goal, plural,one {1 articolo}other {# articoli}}",
-  "collectorCollectedTooMany": "Quello spazio non ha abbastanza elementi da raccogliere, per me.",
+  "collectorCollectedTooMany": "Con questo percorso non riesco a collezionare abbastanza elementi.",
   "collectorTooManyBlocks": "Puoi usare solo {blockLimit} blocchi. Controlla il tuo codice e prova di nuovo!",
   "continue": "Prosegui",
   "corn": "pannocchia",

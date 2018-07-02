@@ -5,7 +5,7 @@ import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
-    .storiesOf('Dialog', module)
+    .storiesOf('Dialogs/Dialog', module)
     .addStoryTable([
       {
         name: 'basic example',

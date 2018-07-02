@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "project_template_level_name": "Course F: Play Lab Project Template",
+    "project_template_level_name": "Course F: Play Lab Project Template_2018",
     "edge_collisions": "false",
     "projectile_collisions": "true",
     "allow_sprites_outside_playspace": "true",
@@ -42,11 +42,14 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "remove_items_when_actor_collides": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-11 22:11:32 +0000\",\"changed\":[\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-12-11 22:11:32 +0000\",\"changed\":[\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-01 00:21:09 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Studio>

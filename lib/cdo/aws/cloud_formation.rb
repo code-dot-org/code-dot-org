@@ -41,6 +41,7 @@ module AWS
 
     class << self
       attr_accessor :daemon
+      attr_accessor :daemon_instance_id
       attr_accessor :log_resource_filter
       CloudFormation.log_resource_filter = []
 
@@ -60,15 +61,13 @@ module AWS
       end
 
       # Fully qualified domain name, with optional pre/postfix.
-      # prod_stack_name is used to control partially-migrated resources in production.
-      def subdomain(prefix = nil, postfix = nil, prod_stack_name: true)
-        name = (rack_env?(:production) && !prod_stack_name) ? nil : cname
-        subdomain = [prefix, name, postfix].compact.join('-')
+      def subdomain(prefix = nil, postfix = nil)
+        subdomain = [prefix, cname, postfix].compact.join('-')
         [subdomain.presence, DOMAIN].compact.join('.').downcase
       end
 
-      def studio_subdomain(prod_stack_name: true)
-        subdomain nil, 'studio', prod_stack_name: prod_stack_name
+      def studio_subdomain
+        subdomain nil, 'studio'
       end
 
       def adhoc_image_id
@@ -79,12 +78,18 @@ module AWS
       end
 
       # Lookup ACM certificate for ELB and CloudFront SSL.
+      # Choose latest expiration among multiple active matching certificates.
       ACM_REGION = 'us-east-1'.freeze
       def certificate_arn
-        Aws::ACM::Client.new(region: ACM_REGION).
-        list_certificates(certificate_statuses: ['ISSUED']).
+        acm = Aws::ACM::Client.new(region: ACM_REGION)
+        wildcard = "*.#{DOMAIN}"
+        acm.
+          list_certificates(certificate_statuses: ['ISSUED']).
           certificate_summary_list.
-          find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
+          select {|cert| cert.domain_name == wildcard || cert.domain_name == DOMAIN}.
+          map {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate}.
+          select {|cert| cert.subject_alternative_names.include? wildcard}.
+          max_by(&:not_after).
           certificate_arn
       end
 
@@ -310,6 +315,9 @@ module AWS
         change_status = route53_client.get_change({id: change_id}).change_info.status
         CDO.log.info "DNS update status - #{change_status}"
         CDO.log.info "Wait up to the configured Time To Live (#{DNS_TTL} seconds) to lookup new IP address."
+        stack.outputs.each do |output|
+          CDO.log.info "#{output.output_key}: #{output.output_value}"
+        end
       end
 
       def stop
@@ -373,7 +381,10 @@ module AWS
 
       def update_certs
         Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.bundle_exec './update_certs', subdomain
+          RakeUtils.bundle_exec './update_certs',
+            subdomain,
+            studio_subdomain,
+            subdomain('origin')
         end
       end
 
@@ -462,7 +473,7 @@ module AWS
           raise "\nError on #{action}."
         end
         CDO.log.info "\nStack #{action} complete." unless ENV['QUIET']
-        CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
+        CDO.log.info "Don't forget to remove AWS resources by running `rake adhoc:delete` after you're done testing your instance!" if action == :create
       end
 
       def render_template(template: TEMPLATE, dry_run: false)

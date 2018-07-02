@@ -1,0 +1,298 @@
+---
+sk:
+  data:
+    function_names:
+      x: x
+      details: detaily
+      draw eyebrow: nakresliť obočie
+      draw pupil: nakresliť žiaka
+      draw a circle: nakresli kružnicu
+      draw a car: nakresliť auto
+      draw_rect: nakresliť_obdĺžnik
+      draw square: nakresliť štvorec
+      jump to controller top left: prejsť na ovládači doľava hore
+      jump to middle: prejsť do stredu
+      draw a button: nakresliť tlačidlo
+      draw cord: nakresliť kábel
+      draw R pad: nakresliť R podložku
+      draw left leg: nakresliť ľavú nohu
+      draw right leg: nakresliť pravú nohu
+      draw body and arms: nakresliť telo a ruky
+      draw a head: nakresliť hlavu
+      draw sitting stick figure: nakresliť sediaceho panáčika
+      draw head: nakresliť hlavu
+      draw arms: nakresliť ruky
+      jump to neck: skočiť na krk
+      draw O: nakresliť O
+      draw D: nakresliť D
+      draw E: nakresliť E
+      draw ear stems: nakresliť uši
+      big gear: veľké koleso
+      small gear: malé koleso
+      draw a hexagon: nakresli šesťuholník
+      draw a flower: nakresli kvetinu
+      draw a square: nakresli štvorec
+      draw a snowflake: nakresli snehovú vločku
+      draw 3 hexagons: nakresliť 3 šesťuholníky
+      draw 4 hexagons: nakresliť 4 šesťuholníky
+      draw 5 hexagons: nakresliť 5 šesťuholníkov
+      get 2 nectar: získať 2 nektáre
+      collect purple nectar: pozbierať fialový nektár
+      get 5: zobrať 5
+      move and get nectar: posunúť a zobrať nektár
+      move and get 4: posunúť a dostať 4
+      get 7 nectar make 7 honey: zobrať 7 nektárov a spraviť 7 medov
+      get 7 make 7: zobrať 7 a spraviť 7
+      get 7: zobrať 7
+      move and get 3: posunúť a dostať 3
+      draw a tree: nakresli strom
+      draw triangle: nakresliť trojuholník
+      draw circle: nakresliť kruh
+      draw goal: nakresliť cieľ
+      graph: graf
+      draw waves: jnakresliť vlny
+      draw a wave: nakresliť vlnu
+      draw a small triangle: nakresliť malý trojuholník
+      draw a medium triangle: nakresliť stredný trojuholník
+      draw a large triangle: nakresliť veľký trojuholník
+      draw a big triangle: nakresliť obrovský trojuholník
+      draw a triangle: nakresli trojuholník
+      draw a house: nakresli dom
+      check purple flower: skontrolovať fialovú kvetinu
+      check flower make honey: skontrolovať kvetinu a spraviť med
+      get nectar or make honey: zobrať nektár alebo spraviť med
+      make 3 honey: vyrob 3 medy
+      get 5 nectar: získaj 5 nektárov
+      make all honey: vyrob všetok med
+      draw a star: nakresli hviezdu
+      game has been won: hra bola vyhraná
+      draw: nakresli
+      draw bit: draw bit
+      draw a polygon: nakresli mnohouholník
+      draw a shape: nakresli tvar
+      get 2 and make 2: získaj 2 a vyrob 2
+      draw a pinwheel: nakresli veterník
+      drawTree: nakresliStrom
+      drawHouse: nakresliDom
+      drawBranch: nakresliHaluz
+      drawSky: nakresliOblohu
+      fillScreen: vyplňObrazovku
+      drawHouseLayer: nakresliVrstvuDomu
+      swap: zameň
+      dropR: pustiP
+      grabL: chyťĽ
+      dropL: pustiĽ
+      init: spusti
+      grabR: chyťP
+      do something: robenie niečoho
+      filter_pixel: filter_pixel
+      draw_image: draw_image
+      witch ending: witch ending
+      story: story
+      starting path: starting path
+      jump: skoč
+      patrol: patrol
+      fill in bg: fill in bg
+      draw grid1: draw grid1
+      draw lines: draw lines
+      Draw a Square Line: Draw a Square Line
+      Draw a triangle: Draw a triangle
+      Draw a Cube: Draw a Cube
+      draw a cube: draw a cube
+      draw an octagon 20: draw an octagon 20
+      Draw a square: Draw a square
+      cube: cube
+      do something2: do something2
+      jump upper right: jump upper right
+      draw a line of  squares: draw a line of  squares
+      draw a line of squares: draw a line of squares
+      Draw Square Line: Draw Square Line
+      jump upper left: jump upper left
+      draw a line of octagons: draw a line of octagons
+      draw a square line: draw a square line
+      Draw a Square: Draw a Square
+      draw a square 20: draw a square 20
+      draw a square 40: draw a square 40
+      draw a triangle with length: draw a triangle with length
+      Draw a Triangle with length: Nakresliť Trojuholník s dĺžkou
+      draw a triangle wioth length: nakresliť trojuholník s dĺžkou
+      draw a sqaure: nakresliť štvorec
+      triangle: trojuholník
+      draw a spiral shape: nakresliť tvar špirály
+      get 3 nectar: získať 3 nektáre
+      get many nectar: získať veľa nektáru
+      get nectar make honey: get nectar make honey
+      draw an octagon: nakresliť osemuholník
+      draw octagons: nakresliť osemuholníky
+      shift down: posunúť nadol
+      level_up: level_up
+      score_points: score_points
+      set score: nastaviť skóre
+      draw a line of hexagons: draw a line of hexagons
+      shift down/forward: shift down/forward
+      shift down/backward: shift down/backward
+      get nectar: 'získať nektár
+
+'
+      make honey up and over: make honey up and over
+      setActors: setActors
+      popCharacter: popCharacter
+      patrol left right: patrol left right
+      empty function: empty function
+      check guess: check guess
+      Jump: Skočiť
+      test: test
+      build bridge: postaviť most
+      run right: bežať doprava
+      spin right: otočiť doprava
+      grow forever: rásť navždy
+      draw grass: nakresliť trávu
+      sun: slnko
+      draw windows: nakresliť okná
+      square: štvorec
+      draw a door: nakresliť dvere
+      rectangle: obdĺžnik
+      diamond: diamant
+      window: okno
+      n-sided shape: n-stranný tvar
+      draw a loop: nakresliť slučku
+      draw spiral circle: nakresliť špirálu
+      draw roof: nakresliť strechu
+      draw rectangle: nakresliť obdĺžnik
+      move: presunúť
+      function 1: funkcia 1
+      function 2: funkcia 2
+      turn corner: otočiť sa na rohu
+      destroy and move: zničiť a posunúť sa
+      clear path: vyčistiť cestu
+      clear cacti: odstrániť kaktus
+      place and move: umiestniť a posunúť
+      cover lava: zakryť lávu
+      build short bridge: postaviť krátky most
+      build long bridge: postaviť dlhý most
+      create trail: vytvoriť stopu
+      move and fill: move and fill
+      fix right corner: fix right corner
+      fix left corner: fix left corner
+      make segment: make segment
+      fix long path: fix long path
+      fix short path: fix short path
+      place 3 tracks: place 3 tracks
+      clear right corner: clear right corner
+      clear left corner: clear left corner
+      draw a spiral edge: draw a spiral edge
+      draw a pentagon: draw a pentagon
+      artist jump around: artist jump around
+      Draw lenses: Draw lenses
+      25 pixel square: 25 pixel square
+      draw eye: draw eye
+      Make a Dot: Make a Dot
+      bubble sort: bubble sort
+      move right: posunúť doprava
+      say number: say number
+      move up: posunúť nahor
+      move down: posunúť nadol
+      move left: posunúť doľava
+      kill alien: kill alien
+      click: click
+      Send Actor 1 to opposite: Send Actor 1 to opposite
+      blink actor 1: blink actor 1
+      my function: my function
+      Squares row: Squares row
+      draw first part of heart: draw first part of heart
+      check win: check win
+      curvy corner: curvy corner
+      make triangle: make triangle
+      my behavior: my behavior
+      '"simple" solution': '"simple" solution'
+      potential solution: potential solution
+      my design: my design
+      get 3 nectar or honey: get 3 nectar or honey
+      move and collect: move and collect
+      check nectar or honey: check nectar or honey
+      row of nectar: row of nectar
+      rowOfNectar: rowOfNectar
+      move and check: move and check
+      win game: vyhrať hru
+      lose game: prehrať hru
+      keep playing: pokračovať v hre
+      Ask a question: Opýtať sa otázku
+      draw pinwheel: nakresliť veterník
+      draw background: nakresliť pozadie
+      move and get nectar with counter: move and get nectar with counter
+      pick row: pick row
+      draw flame: draw flame
+      draw fire: draw fire
+      booster: booster
+      draw line of triangles: draw line of triangles
+      draw a window: draw a window
+      draw a plane of squares: draw a plane of squares
+      draw hexagon: draw hexagon
+      draw line of hexagons: draw line of hexagons
+      staggered squares: staggered squares
+      draw line of polygons: draw line of polygons
+      draw polygon: draw polygon
+      honey nectar: honey nectar
+      move and make honey: move and make honey
+      collect all nectar: collect all nectar
+      get all nectar: get all nectar
+      get pumpkin: get pumpkin
+      harvest: harvest
+      get corn and come back: get corn and come back
+      pick along path: pick along path
+      check square for corn: check square for corn
+      get all pumpkins: get all pumpkins
+      pumpkin square: pumpkin square
+      navigate: navigate
+      check and pick: check and pick
+      find pumpkin: find pumpkin
+      wander path: wander path
+      get produce: get produce
+      check for corn: check for corn
+      corn rectangle: corn rectangle
+      lettuce stairs: lettuce stairs
+      pick veggie: pick veggie
+      corn and pumpkin: corn and pumpkin
+      go get pumpkins: go get pumpkins
+      go get lettuce: go get lettuce
+      garden square: garden square
+      get corn come back: get corn come back
+      checker: checker
+      Make gingham: Make gingham
+      black outline: black outline
+      draw a square2: draw a square2
+      filled square: filled square
+      get only nectar: get only nectar
+      only make honey: only make honey
+      collect row: collect row
+      rowOfNectarOrHoney: rowOfNectarOrHoney
+      collect stairs: collect stairs
+      collect: zbieraj
+      move and increment: move and increment
+      do something3: do something3
+      Robin Fly: Robin Fly
+      Robot Jump: Robot Jump
+      Center Dragon: Center Dragon
+      Dragon Fly: Dragon Fly
+      Knight Surge: Knight Surge
+      Stop Dragon: Stop Dragon
+      Knight Jump: Knight Jump
+      robotThinking: robotThinking
+      fill area with color: fill area with color
+      draw a line of triangles: draw a line of triangles
+      check flower: check flower
+      get next row: get next row
+      check space: check space
+      follow path: follow path
+      physics: physics
+      initialization: initialization
+      Make Actor 1 Jump: Make Actor 1 Jump
+      Choose Number: Choose Number
+      Move Bird: Move Bird
+      turn left: otočiť vľavo
+      move forward: posunúť dopredu
+      turn right: otočiť vpravo
+      drawDot: drawDot
+      draw a rectangle: draw a rectangle
+      Which Course for My Students?: Which Course for My Students?
+      draw a heart: draw a heart

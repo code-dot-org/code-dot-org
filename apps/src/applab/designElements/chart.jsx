@@ -58,10 +58,8 @@ class ChartProperties extends React.Component {
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}
         />
-      </div>);
-
-    // TODO (bbuchanan):
-    // chart-specific properties!
+      </div>
+    );
   }
 }
 

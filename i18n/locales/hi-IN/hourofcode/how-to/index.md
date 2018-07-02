@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>एक घंटा कोड का कैसे पढ़ानेकी तकनीक</h1>
 
-आंदोलन में शामिल होने और छात्रों के एक समूह इन चरणों के साथ कंप्यूटर विज्ञान के अपने पहले घंटे के लिए परिचय: The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+इस आंदोलन से जुड़ें और छात्रों के एक समूह को इन चरणों के साथ कंप्यूटर विज्ञान के उनके पहले घंटे का परिचय दें। अवर ओफ कोड को चलाना आसान है - किसी नौसिखिये के लिए भी! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -21,30 +21,30 @@ Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources'
 
 ## 4. Plan your technology needs - computers are optional
 
-अवर ओफ कोड के उत्तम अनुभव के लिए इन्टरनेट से जुड़ा हुए संगणक की आवश्यकता है. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+अवर ओफ कोड के उत्तम अनुभव के लिए इन्टरनेट से जुड़ा हुए संगणक की आवश्यकता है. लेकिन आपको हर बच्चे के लिए कंप्यूटर की ज़रूरत **नहीं हैं**, यहाँ तक कि, किसी कंप्यूटर के बिना भी आप ऑवर ऑफ़ कोड उपयोग कर सकते हैं।
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+ट्यूटोरियल की कंप्यूटर या अन्य उपकरणों पे जाँच करे, ताकि ये सुनिश्चित हो जाए की वे ब्राउज़र पे ऑडियोऔर विडिओ के साथ ठीक से काम रहे हैं. ** कम बैंडविड्थ है? </ strong> कक्षा के सामने वीडियो दिखाने की योजना बनाएं, इसलिए प्रत्येक छात्र अपने स्वयं के वीडियो डाउनलोड नहीं कर रहा है। या अनप्लग / ऑफ़लाइन ट्यूटोरियल का इस्तेमाल करें ।</p> 
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+अपनी कक्षा के लिए हेडफ़ोन प्रदान करें, या छात्रों को स्वयं लाने के लिए कहें, यदि आपके द्वारा चुना गया ट्यूटोरियल ध्वनि के साथ सबसे अच्छा काम करता है।
 
-आपके पास **पर्याप्त संगणकीय उपकरण नहीं हैं? ** [ साथ मिलके (युगुल) प्रोग्रामिंग ](https://www.youtube.com/watch?v=vgkahOzFH2Q) करें । When students partner up, they help each other and rely less on the teacher. सभी को पता चलता है की संगणक शास्त्र साथ मिलके कम करने का सामाजिक शास्त्र है|
+आपके पास **पर्याप्त संगणकीय उपकरण नहीं हैं? ** [ साथ मिलके (युगुल) प्रोग्रामिंग ](https://www.youtube.com/watch?v=vgkahOzFH2Q) करें । जब छात्र भागीदारी करते हैं, तो वे एक-दूसरे की मदद करते हैं और शिक्षक पर कम निर्भर करते हैं। सभी को पता चलता है की संगणक शास्त्र साथ मिलके कम करने का सामाजिक शास्त्र है|
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Start your Hour of Code off with an inspiring speaker or video
 
-**Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **प्रेरणादायी व्हिडीओ दिखाइए:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls')%).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
 
 ## 6. Code!
 
@@ -79,7 +79,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates')%) for your students.
+- [Print certificates](%= codeorg_url('/certificates')%) for your students.
 - [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
@@ -101,7 +101,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond')%).
-- [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

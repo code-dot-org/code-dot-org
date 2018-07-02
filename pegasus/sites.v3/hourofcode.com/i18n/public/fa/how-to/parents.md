@@ -35,13 +35,13 @@ nav: how_to_nav
 - سایت code.org فیلم هایی از بیل گیتز ، مارک زوکربرگ ، و ستاره ان بی ای کریس بوش آماده کرده است .( فیلم ها در نسخه های [1 دقیقه ای](https://www.youtube.com/watch?v=qYZF6oIZtfc) ، [5 دقیقه ای ](https://www.youtube.com/watch?v=nKIu9yen5nc)و [9 دقیقه ای ](https://www.youtube.com/watch?v=dU1xS07N-FA)موجودند )
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [آقای اوباما رییس جمهور آمریکا به تمام دانش آموزان می گوید که کامپیوتر بیاموزند](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- [منابع](<%= resolve_url('https://code.org/inspire') %>) و [ویدیوهای](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)الهام بخش بیشتری پیدا کنید.
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 هیچ مشکلی نیست، اگر شما و فرزندتان هر دو در علم کامپیوتر تازه وارد هستید. در اینجا ایده هایی برای آشنایی با تمرین های ساعت کد هست:
 
 - اثرات فن آوری بر زندگی ما را توضیح دهید، با مثال هایی که هم دخترها و هم پسرها به آنها علاقمند هستند (بحث در مورد نجات زندگی اشخاص، کمک به مردم، ایجاد ارتباط بین مردم، و غیره).
 - چیزهایی که در زندگی روزمره از کد استفاده میکنند را لیست کنید.
-- در [اینجا](<%= resolve_url('https://code.org/girls') %>) روشهایی را برای علاقمند کردن دختران به علوم کامپیوتر ببینید.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ایده های بیشتر می خواهید؟ یک نگاه به [الگوی برنامه ی درسی](/files/AfterschoolEducatorLessonPlanOutline.docx) برای بهترین تمرینها از طرف مربیان مجرب ما بیاندازید.
 
@@ -61,7 +61,7 @@ nav: how_to_nav
 
 ## 8) جشن بگیرید
 
-برای فرزندتان (و خودتان!).[گواهینامه ها را چاپ کنید](<%= resolve_url('https://code.org/certificates') %>).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!
 
@@ -73,7 +73,7 @@ nav: how_to_nav
 
 ساعت کد تنها اولین گام در سفری برای کسب اطلاعات بیشتر در مورد چگونگی کارکرد فن آوری و نحوه ایجاد نرم افزارهای کاربردی است. برای ادامه این سفر:
 
-- فرزندتان را به ادامه ی [یادگیری آنلاین](<%= resolve_url('https://code.org/learn/beyond') %>)تشویق کنید.
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - به [ترویج](<%= resolve_url('/promote') %>) آموزش علوم رایانه در منطقه مدرسه فرزندتان کمک کنید.
 
 <%= view :signup_button %>

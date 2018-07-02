@@ -43,6 +43,7 @@ module Rack
           # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
           policies += [
             "default-src 'self' https:",
+            "frame-src 'self' https: blob:",
             "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
             "style-src 'self' https: 'unsafe-inline'",
             "img-src 'self' https: data: blob:",

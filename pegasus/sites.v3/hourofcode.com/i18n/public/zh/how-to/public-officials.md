@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **發佈電子報。**[以此例子](<%= resolve_url('/promote/official-press-release') %>)為作指引。
 
-9. **本地連接。**訪問 [< %= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) 瞭解更多關於電腦科學教育在你的狀態。 在請願書上那裡簽名，你會得到 在Code.org當地、州和聯邦的努力宣傳。
+9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. 在請願書上那裡簽名，你會得到 在Code.org當地、州和聯邦的努力宣傳。
 
 <%= view :signup_button %>

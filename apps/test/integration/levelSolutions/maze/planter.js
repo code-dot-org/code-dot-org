@@ -1,5 +1,5 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
-var Planter = require('@cdo/apps/maze/planter');
+import {TestResults} from '@cdo/apps/constants';
+var PlanterHandler = require('@cdo/apps/maze/results/planter');
 
 var levelDef = {
   'startDirection': 1, // Direction.EAST,
@@ -27,7 +27,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === Planter.TerminationValue.PLANT_IN_NON_SOIL;
+        return Maze.executionInfo.terminationValue() === PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +
@@ -48,7 +48,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === Planter.TerminationValue.PLANT_IN_NON_SOIL;
+        return Maze.executionInfo.terminationValue() === PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +
@@ -79,7 +79,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === Planter.TerminationValue.DID_NOT_PLANT_EVERYWHERE;
+        return Maze.executionInfo.terminationValue() === PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +

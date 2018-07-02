@@ -3,7 +3,10 @@ CREATE table analysis.outreach_stats_by_year AS
   SELECT 'State' region_type,
          ug.state region,
          ug.state state,
-         DATE_PART(year,us.created_at::DATE) AS year,
+         sy1.school_year school_year,
+        -- old ways of getting the year:
+             -- coalesce(sy1.school_year, sy2.school_year) as school_year, 
+             -- DATE_PART(year,us.created_at::DATE) AS year,
          COUNT(DISTINCT u.id) teachers,
          COUNT(DISTINCT f.student_user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
@@ -11,7 +14,7 @@ CREATE table analysis.outreach_stats_by_year AS
          COUNT(DISTINCT CASE WHEN up.basic_proficiency_at IS NOT NULL THEN f.student_user_id ELSE NULL END) students_proficient,
          COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
          COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
-         COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball') THEN f.student_user_id ELSE NULL END) students_hoc
+         COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc
   FROM dashboard_production_pii.users u
     JOIN dashboard_production_pii.user_geos ug 
       ON ug.user_id = u.id
@@ -27,6 +30,8 @@ CREATE table analysis.outreach_stats_by_year AS
       ON u_students.id = us.user_id
     LEFT JOIN dashboard_production.user_proficiencies up 
       ON up.user_id = u_students.id
+    LEFT JOIN analysis.school_years sy1 on us.started_at between sy1.started_at and sy1.ended_at
+    --LEFT JOIN analysis.school_years sy2 on us.created_at  between sy2.started_at and sy2.ended_at
   WHERE country = 'United States'
   AND   u_students.current_sign_in_at IS NOT NULL
   AND   u_students.user_type = 'student'
@@ -36,15 +41,18 @@ CREATE table analysis.outreach_stats_by_year AS
   SELECT 'City' region_type,
          ug.city|| ', ' ||ug.state region,
          ug.state state,
-         DATE_PART(year,us.created_at::DATE) AS year,
-         COUNT(DISTINCT u.id) teachers,
+        sy1.school_year school_year,
+        -- old ways of getting the year:
+             -- coalesce(sy1.school_year, sy2.school_year) as school_year, 
+             -- DATE_PART(year,us.created_at::DATE) AS year,       
+        COUNT(DISTINCT u.id) teachers,
          COUNT(DISTINCT f.student_user_id) students,
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
          COUNT(DISTINCT CASE WHEN u_students.urm = 1 THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.urm IN (0,1) THEN f.student_user_id ELSE NULL END),0) pct_urm,
          COUNT(DISTINCT CASE WHEN up.basic_proficiency_at IS NOT NULL THEN f.student_user_id ELSE NULL END) students_proficient,
          COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
          COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
-         COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball') THEN f.student_user_id ELSE NULL END) students_hoc
+         COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc
   FROM dashboard_production_pii.users u
     JOIN dashboard_production_pii.user_geos ug 
       ON ug.user_id = u.id
@@ -60,12 +68,15 @@ CREATE table analysis.outreach_stats_by_year AS
       ON u_students.id = us.user_id
     LEFT JOIN dashboard_production.user_proficiencies up 
       ON up.user_id = u_students.id
+    LEFT JOIN analysis.school_years sy1 on us.started_at between sy1.started_at and sy1.ended_at
+    --LEFT JOIN analysis.school_years sy2 on us.created_at  between sy2.started_at and sy2.ended_at
   WHERE country = 'United States'
   AND   u_students.current_sign_in_at IS NOT NULL
   AND   u_students.user_type = 'student'
   AND   ug.city IS NOT NULL
   AND   ug.state IS NOT NULL
-  GROUP BY 1,2,3,4;
+  GROUP BY 1,2,3,4
+  ;
 
 GRANT ALL PRIVILEGES ON analysis.outreach_stats_by_year TO GROUP admin;
 GRANT SELECT ON analysis.outreach_stats_by_year TO GROUP reader, GROUP reader_pii;

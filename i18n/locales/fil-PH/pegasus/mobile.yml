@@ -313,7 +313,7 @@
   homepage_slot_text_frozen: "Frozen kasama sina Anna at Elsa"
   homepage_slot_text_teacher: "Dashboard ng Guro"
   homepage_slot_text_studio: "Ang lahat ng aming mga tutorial"
-  homepage_slot_text_course4: "Course 4"
+  homepage_slot_text_course4: "Kursong 4"
   homepage_slot_text_shop: "Tindahan"
   homepage_slot_text_flappy: "Flappy Code"
   homepage_action_text_hoc: "Isang Hour of Code para sa bawat estudyante."
@@ -377,6 +377,8 @@
   homepage_header_donors: "Pinasasalamatan ng Code.org ang mag tagasuporta nito"
   homepage_donors_seall: "Tingnan lahat"
   homepage_donors_donate: "Mag-donate"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Matuto nang higit pa"
   contact_form_topic_student: "Ako ay estudyante"
   contact_form_topic_parent: "Ako ay magulang"
   contact_form_topic_teacher: "Ako ay guro/tagapagturo"
@@ -440,7 +442,7 @@
   minecraft_adventurer: "Tagapaglakbay sa Minecraft"
   minecraft_tutorials: "Mga Tutoryal sa Minecraft Hour of Code"
   minecraft_specs: "Maraming wika | Modernong mga browser at mga tablet | Baitang 2+"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_description: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
   minecraft_agent_button: "Panimula"
   minecraft_designer_description: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
   minecraft_designer_button: "Panimula"
@@ -465,12 +467,12 @@
   sports_page_title: "Palakasan sa Hour of Code"
   sports_og_title: "Sikapin ang iyong sarili. Kahit na sino ay maaaring matuto."
   sports_og_description: "Ang mga kampeon at mga nakakuha ng gintong medalya ay hinihikayat na subukan ang Hour of Code. I-code ang iyong sariling laro sa palakasan."
-  sports_title: "Code your own sports game"
+  sports_title: "Mag-code ng sarili mong laro sa palakasan"
   sports_watch_video: "Panoorin ang mga video"
   sports_video_title: "Sikapin ang iyong sarili. Kahit na sino ay maaaring matuto."
   sports_select_theme: "Pumili ng iyong tema sa tutoryal"
   sports_basketball_title: "Gumawa ng isang basketbol na laro"
-  sports_all_sports_title: "Mix and match across sports"
+  sports_all_sports_title: "Maghalo at magtugma sa iba't ibang palakasan"
   sports_featured_athletes: "Tingnan ang mga nakatampok na mga manlalaro"
   sports_athletes_title: "Nakatampok na mga Manlalaro"
   sports_athlete_Draymond: "Draymond Greem, Gold Medalist sa Olympic at Kampeon sa NBA, Golden State Warriors"
@@ -504,8 +506,10 @@
   video_title_real_madrid: "Hour of Code kasama si Real Madrid"
   video_title_marco_belinelli: "Hour of Code kasama si Marco Belinelli"
   video_title_chris_bosh: "Si Chris Bosh tungkol sa Computer Science"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 minuto"
   video_2min: "2 minuto"
+  video_3min: "3 min"
   video_5min: "5 minuto"
   speak_another_language: "Nagsasalita ng ibang wika?"
   help_translate: "Tulungan kaming mag-salin."
@@ -545,6 +549,10 @@
   volunteer_engineer_submission_field_email: "Email address"
   volunteer_engineer_submission_field_email_desc: "Ang iyong email address ay hindi ibabahagi kailan man, ngunit kami ay magpapadala sa iyo ng mga kahilingan mula sa mga guro."
   volunteer_engineer_submission_field_email_placeholder: "Email address"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: 'Oo'
+  volunteer_engineer_submission_field_email_preference_no: 'Hindi'
   volunteer_engineer_submission_final_paragraph: "Ikaw ay ililista sa isang mapa para sa mga lokal na mga guro na makipag-ugnayan sa iyo para sa Hour of Code o ibang mga oportunidad sa pagboluntaryo. Ang iyong email at eksaktong address ay HINDI namin ibabahagi. Ngunit ang ibang impormasyon (kalakip na ang tinatantyang lokasyon) ay publikong makikita ng mga lokal na guro."
   volunteer_engineer_submission_checkbox_contact: 'Sumasang-ayon ako na ang mga guro ay maaaring makipag-ugnayan sa akin para sa mga oportunidad na magboluntaryo (Tandaan: ang iyong email address ay hindi ibabahagi)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Pinapatunayan ko na ako ay hindi bababa sa 18 taong gulang."
@@ -626,18 +634,12 @@
   dashboard_course_csp: "AP® na mga Prinsipyo sa Computer Science"
   dashboard_course_csp_desc: "Ang Code.org ay nagdisenyo ng isang mabagsik, kawili-wili, at madaling malaman na kurso na tumutuklas sa mga panguhing ideya ng computing."
   dashboard_landing_loading: "Loading..."
-  dashboard_action_edit: "Mag-Edit"
-  dashboard_action_save: "I-save"
-  dashboard_action_save_all: "I-save lahat"
   dashboard_action_cancel: "Kanselahin"
   dashboard_action_delete: "I-delete"
   dashboard_action_delete_yes: 'Oo'
   dashboard_action_delete_no: 'Hindi'
   dashboard_action_confirm: "I-delete?"
-  dashboard_action_remove: "Alisin"
-  dashboard_action_remove_confirm: "Tanggalin?"
   dashboard_action_done: "Tapos na"
-  dashboard_action_required: "kinakailangan"
   dashboard_action_print_certificates: "Magprinta ng mga sertipiko"
   dashboard_assessments_view: 'Tingnan ang pagsusuri sa:'
   dashboard_assessments_none: "Karamihan sa mga guro ay sumusukat sa pag-unlad ng kanilang mga estudyante gamit ang \"View Progress\"na tab. Kung ikaw ay interesadong magbigay ng karagdagang pagtatasa sa iyong mga estudyante, maaari kang makahanap ng mga inirekomendang mga katanungan at mga bahagi sa banghay-aralin. Ito ay ginagawa sa labas ng Code.org."
@@ -713,28 +715,15 @@
   dashboard_sections_assign_activity: "Magtakda ng Kurso"
   dashboard_error_none_selected: "Hindi ka pumili ng anumang estudyante na ililipat. Mangyaring pumili ng kahit isang estudyante."
   dashboard_error_other_section: "Kung ikaw ay naglilipat ng mga estudyante sa pagitan ng iyong sariling mga seksyon mula sa mga dropdown. Piliin lang ang 'Other Section' para ilipat ang iyong mga estudyante sa seksiyon ng ibang guro."
-  dashboard_students_add_student: "Magdagdag ng estudyante"
-  dashboard_students_add_students: "Magdagdag ng maraming estudyante"
   dashboard_students_add_multiple: 'I-type o i-paste ang mga pangalan ng iyong mga mag-aaral, isa sa bawat linya:'
   dashboard_students_new_google_classroom_section: "Para makadagdag ng mga estudyante, gamitin ang <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> at pagkatapos ay i-click ang <b>Sync students from Google Classrom</b> na button sa itaas."
   dashboard_students_new_section: "Nalikha mo ang isang bagong seksyon! Ngayon idagdag ang iyong mga mag-aaral gamit ang <b> Magdagdag ng mag-aaral </b> at <b>Magdagdag ng maramihang mga mag-aaral </b> sa mga pindutan sa itaas."
-  dashboard_students_placeholder_name: "Pangalan ng Estudyante"
   dashboard_students_name: "Pangalan"
   dashboard_students_progress: "Progreso"
-  dashboard_students_age: "Edad"
-  dashboard_students_gender: "Kasarian"
   dashboard_students_male: "Lalaki"
   dashboard_students_female: "Babae"
-  dashboard_students_secret: "Sekreto"
-  dashboard_students_password: "Password"
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: "Mga Nakumpletong Level"
   dashboard_students_total_lines: "Mga Linya ng Code"
-  dashboard_students_show_secret: "Ipakita ang sekreto"
-  dashboard_students_auto_generated: "Auto-generated"
-  dashboard_students_reset_secret: "I-reset ang sekreto"
-  dashboard_students_reset_password: "I-reset ang password"
   dashboard_students_share_section: "Ibahagi itong section sign in page sa iyong mga estudyante:"
   dashboard_students_share_section_secondary: 'Sa kabilang panig, ibahagi ang sign in na pahina ng seksiyong ito sa iyong mga estudyante:'
   dashboard_students_print_info: "I-print ang mga card na may inpormasyon ng iyong mga estudyante."
@@ -765,7 +754,10 @@
   dashboard_coursed: 'Kursong D: '
   dashboard_coursee: 'Kursong E: '
   dashboard_coursef: 'Kursong F: '
+  dashboard_pre-express: 'Pre-reader na Pinabilis na Kurso: '
+  dashboard_express: 'Pinabilis na Kurso: '
   dashboard_unplugged: "Kung wala kang mga kompyuter, <a href='%{unplugged_url}'>subukan ang mga unplugged na mga aralin</a> sa iyong silid-aralan."
+  dashboard_tools: 'Mga Kagamitan: '
   dashboard_curriculum: "Kurikulum"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
   dashboard_overview: "Buod"
@@ -783,12 +775,13 @@
   dashboard_curriculum_csins: 'Computer Science sa Agham:'
   dashboard_curriculum_csp: 'AP® na mga Prinsipyo ng Computer Science:'
   dashboard_curriculum_ecs: 'Pagtuklas sa Computer Science:'
+  dashboard_curriculum_csd: 'Mga Natuklasan sa Computer Science: '
+  dashboard_curriculum_apcsa: 'AP Computer Science sa Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Iba"
   dashboard_login_word: "Salita"
   dashboard_login_picture: "Picture"
   dashboard_login_none: "Email"
-  dashboard_new_password: "bagong password"
   dashboard_stage: "Yugto"
   dashboard_puzzle: "Palaisipan"
   dashboard_question: "Tanong"
@@ -926,7 +919,7 @@
   hourofcode_name: "Klasiko na Maze"
   playlab_name: "Play Lab"
   infinity_name: "Infinity Play Lab"
-  artist_name: "Artist"
+  artist_name: "Artista"
   monstercoding_name: "Pag-program na Paghahanap sa Misteryosong Isla"
   allcancode_name: "Takbo Marco!"
   csfirst_name: "CS First"
@@ -935,9 +928,9 @@
   texasinstruments_name: "10 Minuto ng Pag-code"
   teacherled_name: "Pinamumunuan ng Guro na mga Banghay-Aralin"
   course1_name: "Kurso 1"
-  course2_name: "Course 2"
-  course3_name: "Course 3"
-  course4_name: "Course 4"
+  course2_name: "Kursong 2"
+  course3_name: "Kursong 3"
+  course4_name: "Kursong 4"
   coursea-draft_name: Kursong A
   coursea_name: "Kursong A"
   courseb-draft_name: Kursong B
@@ -950,14 +943,30 @@
   coursee_name: "Kursong E"
   coursef-draft_name: Kursong F
   coursef_name: "Kursong F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Bagong Kursong D na Iskript
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Pinabilis na Kurso"
-  express_name: "Express Course"
+  express_name: "Mabilis na Kurso"
   pre-express_name: Pre-reader na Kursong Express
-  cspunit1_name: '(luma) Yunit 1: Digital na Impormasyon'
-  cspunit2_name: '(luma) Yunit 2: Ang Internet'
-  cspunit3_name: '(luma) Yunit 3: Pagprogram'
-  cspunit4_name: '(luma) Yunit 5: Datos'
-  cspunit5_name: '(luma) Yunit 5: Pagtuklas at Paglikha ng PT'
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Mabilis na Kurso
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  cspunit1_name: "(luma) Yunit 1: Digital na Impormasyon"
+  cspunit2_name: "(luma) Yunit 2: Ang Internet"
+  cspunit3_name: "(luma) Yunit 3: Pagprogram"
+  cspunit4_name: "(luma) Yunit 5: Datos"
+  cspunit5_name: "(luma) Yunit 5: Pagtuklas at Paglikha ng PT"
   cspunit6_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -965,6 +974,34 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Yunit 5: Mga Datos at Lipunan'
   csd6_name: 'Yunit 6: Pisikal na Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Yunit 5: Mga Datos at Lipunan'
+  csd6-2017_name: 'Yunit 6: Pisikal na Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Yunit 5: Mga Datos at Lipunan'
+  csd6-2018_name: 'Yunit 6: Pisikal na Computing'
+  csp1-2017_name: 'Yunit 1: Ang Internet'
+  csp2-2017_name: 'Yunit 2: Digital na Impormasyon'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Tuklasin ang PT Prep'
+  csp-create-2017_name: 'AP: Maglikha ng PT Prep'
+  csppostap-2017_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
+  csp1-2018_name: 'Yunit 1: Ang Internet'
+  csp2-2018_name: 'Yunit 2: Digital na Impormasyon'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Tuklasin ang PT Prep'
+  csp-create-2018_name: 'AP: Maglikha ng PT Prep'
+  csppostap-2018_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
   csp1_name: 'Yunit 1: Ang Internet'
   csp2_name: 'Yunit 2: Digital na Impormasyon'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -975,6 +1012,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP na Performance Tasks
   csppostap_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Buong Pagsusulit - 50 na mga tanong"
   csp-explore_name: 'AP: Tuklasin ang PT Prep'
   csp-create_name: 'AP: Maglikha ng PT Prep'
@@ -998,16 +1036,21 @@
   math_category_name: "Math"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "Internasyonal na CS Fundamentals"
   csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
   csp17_category_name: "Mga Prinsipyo ng CS"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "Pag-ensayo na Pagsubok sa mga Prinsipyo ng CS"
   research_studies_category_name: "Research Studies"
   applab_name: "App na Lab"
+  gamelab_name: "Game Lab"
   basketball_name: "Gumawa ng isang basketbol na laro"
-  sports_name: "Code your own sports game"
+  sports_name: "Mag-code ng sarili mong laro sa palakasan"
   applab_gradelevel: "Edad 13+"
   applab_shortdescription_congrats: "Ang App Lab ay isang kapaligiran sa pagprogram kung saan maaari kang gumawa ng mga simpleng mga apps. Magdisenyo ng app, mag-code gamit ang mga bloke, o JavaScript para mapagana ito, pagkatapos ay ibahagi ang iyong app sa ilang segundo lang"
   codeorg_gradelevel: "Edad 4-104"
@@ -1062,15 +1105,15 @@
   teacherled_gradelevel: "Mga edad 5+"
   course1_gradelevel: "Edad 4+ (bago pa nagbabasa)"
   course2_gradelevel: "Mga edad 6-18"
-  course3_gradelevel: "Ages 8-18"
-  course4_gradelevel: "Ages 10-18"
+  course3_gradelevel: "Mga edad na 8-18"
+  course4_gradelevel: "Mga edad na 10-18"
   coursea_gradelevel: "Baitang 5+"
   courseb_gradelevel: "Baitang 6+"
   coursec_gradelevel: "Baitang 7+"
   coursed_gradelevel: "Baitang 8+"
   coursee_gradelevel: "Baitang 9+"
   coursef_gradelevel: "Baitang 10+"
-  accelerated_gradelevel: "Ages 10-18"
+  accelerated_gradelevel: "Mga edad na 10-18"
   codeorg_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
   codeintl_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
   thinkersmithspanish_platformtext: "Unplugged"
@@ -1158,10 +1201,10 @@
   projguts_shortdescription: "Subukan ang pagmomodelo at simulation gamit ang bato/paper/gunting"
   hourofcode_shortdescription: "Matutong magcode kasama si Mark Zuckerberg at ang Angry Birds!"
   frozen_shortdescription: "Gamitin natin ang code para samahan sina Anna at Elsa sa kanilang pagtuklas sa mahika at kagandahan ng yelo."
-  starwars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
-  playlab_shortdescription: "Create a story or make a game with Play Lab!"
-  infinity_shortdescription: "Use Play Lab to create a story or game starring Disney Infinity characters."
-  artist_shortdescription: "Draw cool pictures and designs with the Artist!"
+  starwars_shortdescription: "Matutong mag-program ng mga droids, at lumikha ng sarili mong Star Wars na laro sa isang malayong malayo na kalawakan."
+  playlab_shortdescription: "Lumikha ng kuwento o gumawa ng laro sa Play Lab!"
+  infinity_shortdescription: "Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan ng mga karakter sa Disney Infinity."
+  artist_shortdescription: "Gumuhit ng magagandang larawan at mga disenyo gamit ang Artist!"
   monsterocding_shortdescription: "Isang makulay na pansariling gabay sa pagprogram na paglalakbay para sa mga bata."
   allcancode_shortdescription: "Isang nakaka-engganyong laro para gabayan si Marco gamit ang biswal na wika sa pagprogram."
   csfirst_shortdescription: "Mag-animate ng kuwento tungkol sa dalawang karakter na nasa laot. Magdagdag ng iyong sariling style!"
@@ -1172,12 +1215,12 @@
   course2_shortdescription_congrats: "Para sa mga estudyante na may kakayahan sa pangunahing kaalaman sa pagbabasa, ang kursong ito ay bumubuo sa Kursong 1. Ang mga estudyante ay lilikha ng mga programa na lulutas ng mga problema at gagawa ng mga inter-aktib na laro o mga kuwento na maari nilang maibahagi. Nirerekomenda sa mga nasa gradong 2-5."
   course3_shortdescription_congrats: "Handa na para sa susunod na antas? Ang mga estudyante ay susulong sa mas malalim pa na mga paksa sa pagprogram na pinakilala sa nakaraang mga kurso para makahanap ng flexible na mga solusyon para sa mga kumplikadong problema. Pagkatapos ng kursong ito, ang mga esyudyante ay lilikha ng mga inter-aktib na mga kuwento at laro na maaari nilang ibahagi sa kahit na sino. Inirerekomenda sa mga nasa gradong 4-5."
   course4_shortdescription_congrats: "Handa nang lulusob? Ang mga estudyante ay lulusob sa mas malalim pa na mga paksa sa pagprogram na pinakilala sa nakaraang mga kurso para makahanap ng magandang solusyon sa mga mahihirap na problema. Pagkatapos ng kursong ito, ang mga estudyante ay lilikha ng mga interk-aktib na mga kuwento at mga laro na maaari nilang ibahagi sa kahit na sino. Inirerekomenda sa mga nasa gradong 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "Isang panimula sa computer science para sa mga hindi pa marunong magbasa."
+  courseb_shortdescription_congrats: "Isang panimula sa computer science para sa mga hindi marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba para sa mga nakakatandang mga estudyante.)"
+  coursec_shortdescription_congrats: "Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro."
+  coursed_shortdescription_congrats: "Mabilis na dinaanan ang mga konsepto mula sa Kursong C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at iba pa."
+  coursee_shortdescription_congrats: "Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function."
+  coursef_shortdescription_congrats: "Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro."
   codeorg_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   codeintl_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1217,7 +1260,7 @@
   projguts_longdescription: "Nakakatulong ang \"unplugged\" na activity sa mga mag-aaral upang malaman kung paano ang pagmomodelo at simulation sa pamamagitan ng pagkakaroon ng isang pangkat ng mga mag-aaral na maglaro ng iba't ibang mga bersyon ng larong Bato/Papel/Gunting, at makita ang resulta ng iba't ibang modelo ng eksperimento."
   hourofcode_longdescription: "Placeholder para sa bagong code.org/hoc"
   frozen_longdescription: "Gumamit tayo ng code para samahan sina Anna at Elsa sa kanilang pagtuklas sa mahika at kagandahan ng yelo. Ikaw ay lilikha ng mga niyebe at mga paterno habang ikaw ay nag-iceskate at gumawa ng isang kahanga-hangang lugar sa taglamig na maaari mong ibahagi sa iyong mga kaibigan!"
-  starwars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  starwars_longdescription: "Matutong mag-program ng mga droids, at lumikha ng sarili mong Star Wars na laro sa isang malayong malayo na kalawakan."
   playlab_longdescription: "Lumikha ng kwento o gumawa ng laro sa Play Lab! Gumawa ng mga hayop, mga pirata, mga zombie, mga ninja, at marami pang mga galaw ng mga karakter, gumawa ng mga tunog, kumuha ng puntos, at kahit ng maghagis ng bolang apoy!"
   monstercoding_longdescription: "Ang Mystery Island Coding Quest ng Monster Coding ay naghahandog ng isang paglalakbay na puno ng saya na magtuturo nang iilang pangunahing konsepto ng pag-program sa mga bata. Bawat gawain na nakabase sa bloke ay bumubuo sa nakaraan, nagpapakilala sa mga bata sa mga Functions, Boolean Values, Loops, If/Else na mga pahayag, at Arrays, gamit ang mga makulay na naka-animate ng mga graphics, at mga audio na mga instruksiyon."
   allcancode_longdescription: "Ang mga estudyante ay maglalaro ng isang laro na nakabase sa pagkikipagsapalaran sa isang orihinal na kuwento. Sila ang maggagabay kay Marko - ang pangunahing karakter - sa bawat antas sa pamamagitan ng pagbigay sa kanya ng bawat hakbang na mga instruksyon sa anyo ng biswal na wika ng pag-program na ginagamit ng Hour of Code. Sila ay ipapakilala sa mga pagsunod-sunod ng mga utos, pag-uulit at mga kondisyon nang hindi nila namamalayan."
@@ -1460,6 +1503,7 @@
   header_documentation: "Dokumentasyon"
   csp_name: "Mga Prinsipyo ng CS"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Buong mga Kurso"
   user_header_label: "Mabuhay %{username}"
   user_header_settings: "Account Ko"
@@ -1492,5 +1536,5 @@
   syncing_students: "Nag-sync sa iyong mga estudyante"
   syncing_students_instructions: 'Kung ang iyong seksiyon sa Code.org ay hindi pareho sa iyong lista ng mga estudyante sa Google Classroom, i-click ang "Sync students from Google Classroom" na button sa "Manage students" na tab:'
   google_sign_in_instruct: 'Mula dito, sila ay dapat pipili sa "Sign in with Google Account" na opsyon:'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: 'Minecraft: Ang Paglalakbay ng Bayani'
   applab-intro_name: Panimula ng App Lab

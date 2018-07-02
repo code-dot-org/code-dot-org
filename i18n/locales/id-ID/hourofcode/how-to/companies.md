@@ -5,27 +5,27 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# Bagaimana caranya membawa Jam Pemrograman ke perusahaan Anda
+# Bagaimana caranya membawa Hour of Code ke perusahaan Anda
 
-## Memberikan inspirasi kepada siswa dan relawan untuk Jam Pemrograman
+## Berikan inspirasi kepada siswa dan relawan untuk Hour of Code
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Mendaftar](%= resolve_url('https://code.org/volunteer') %) untuk menjadi sukarelawan.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - Untuk petunjuk lebih lanjut tentang mendorong karyawan dan menghubungkan karyawan Anda dengan ruang kelas, lihat [ panduan untuk mitra perusahaan ](%= localized_file('/files/hoc-corporate-toolkit.pdf') %) kami.
 
 ## Cara tambahan bagi perusahaan untuk dapat mendukung Jam Pemrograman:
 
-- Mintalah CEO Anda untuk [ mengirim email ke seluruh perusahaan ](%= resolve_url('/promote/resources#sample-emails') %) yang menekankan pentingnya ilmu komputer dan mendorong karyawan untuk menyebarkan berita. 
+- Mintalah CEO Anda untuk [ mengirim email ke seluruh perusahaan ](%= resolve_url('/promote/resources#sample-emails') %) yang menekankan pentingnya ilmu komputer dan mendorong karyawan untuk menyebarkan berita.
 - Tuan rumah Jam Kode Happy Hour dengan rekan kerja untuk mencoba [ kegiatan ](%= resolve_url('/learn') %).
 - Jadi Penyelenggara sebuah acara untuk Jam Pemrograman untuk sebuah siswa ruang kelas lokal atau mitra nir laba untuk melakukan Jam Pemrograman di kantor perusahaan Anda. Lihat panduan acara dibawah ini.
 
 # Bagaimana meng-host acara Hour of Code dengan siswa
 
-## 1. Promote your Hour of Code
+## 1. Promosikan Hour of Code Anda
 
 - Promosikan [Jam Pemrograman](%= resolve_url('/promote') %) Anda dan memberikan dorongan kepada lainnya untuk menjadi penyelenggara juga.
-- Doronglah insinyur perangkat lunak di perusahaan Anda untuk mengunjungi kelas lokal untuk membantu memimpin Hour of Code dan mengilhami siswa untuk belajar ilmu komputer. Mereka dapat [mendaftar](%= resolve_url('https://code.org/volunteer/engineer') %) untuk dapat dihubungkan dengan sebuah ruang kelas.
+- Doronglah insinyur perangkat lunak di perusahaan Anda untuk mengunjungi kelas lokal untuk membantu memimpin Hour of Code dan mengilhami siswa untuk belajar ilmu komputer. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -58,23 +58,23 @@ Pengalaman Jam Pemrograman terbaik termasuk komputer yang terhubung dengan inter
         **Tampilkan rekaman gambar yang menginspirasi:**
         
         - Asli Kode.org peluncuran video, menampilkan Bill Gates, Mark Zuckerberg, dan bintang NBA Chris Bosh (ada [ 1 menit </ a >, [ 5 menit ](https://www.youtube.com/watch?v=nKIu9yen5nc), dan <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 menit ](https://www.youtube.com/watch?v=qYZF6oIZtfc) versi).
-        - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+        - [ video Hour of Code di seluruh dunia ](https://www.youtube.com/watch?v=KsOIlDT145A)
         - [ Presiden Obama memanggil semua siswa untuk belajar ilmu komputer ](https://www.youtube.com/watch?v=6XvmhE1J9PY).
         - Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
         
         **Ide untuk memperkenalkan Hour Anda dari Kode kegiatan untuk siswa:**
         
-        - Jelaskan bagaimana teknologi memengaruhi kehidupan kita, dengan contoh yang akan dipikirkan anak laki-laki dan anak perempuan - ceritakan tentang teknologi yang menyelamatkan jiwa, membantu orang, menghubungkan orang. 
+        - Jelaskan bagaimana teknologi memengaruhi kehidupan kita, dengan contoh yang akan dipikirkan anak laki-laki dan anak perempuan - ceritakan tentang teknologi yang menyelamatkan jiwa, membantu orang, menghubungkan orang.
         - Jika Anda adalah sebuah perusahaan teknologi, demonstrasikan secara menyenangkan dan inovatif produk-produk yang sedang perusahaan Anda kerjakan.
         - Jika Anda tidak perusahaan teknologi, bahas cara-cara yang perusahaan Anda menggunakan teknologi untuk memecahkan masalah dan mencapai tujuan.
         - Undang software engineer dari perusahaan Anda untuk berbicara mengenai alasan mengapa mereka memutuskan untuk belajar ilmu pengetahuan komputer dan berbicara mengenai proyek-proyek yang sedang mereka kerjakan.
-        - Lihat tips agar anak gadis tertarik dalam ilmu komputer [di sini](%= resolve_url('https://code.org/girls') %).
+        - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
         
         ## 6. Kode!
         
         **Arahkan peserta langsung ke aktivitas**
         
-        - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
+        - Tulis link kegiatan di papan tulis. Temukan link yang tercantum di informasi[ untuk aktivitas yang dipilih](%= resolve_url('/learn') %) di bawah jumlah peserta.
         - Untuk siswa yang lebih muda, buka halaman aktivitas di depan waktu atau simpan sebagai bookmark.
         
         **Ketika para peserta menemukan kesulitan, tidak apa-apa untuk menanggapi secara langsung:**
@@ -105,7 +105,7 @@ Pengalaman Jam Pemrograman terbaik termasuk komputer yang terhubung dengan inter
         
         ## 7) Merayakan
         
-        - [sertifikat Print](%= resolve_url('https://code.org/certificates') %) bagi peserta dan siswa.
+        - [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
         - [Cetak stiker "Aku telah menyelesaikan satu Jam Pemrograman!"](%= resolve_url('/promote/resources#stickers') %) untuk siswa.
         - [Orde custom t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) bagi karyawan Anda.
         - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!

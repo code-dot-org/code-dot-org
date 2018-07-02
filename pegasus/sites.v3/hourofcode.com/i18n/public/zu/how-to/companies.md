@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Gqugquzela abafundi ubese uvolontiyela iHora loKufingqwa
 
-Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Bhalisela](<%= resolve_url('https://code.org/volunteer') %>) ukuvolontiya.
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
 ## Ezinye izindlela izinkampani ezingaxhasa ngayo iHora loKufingqwa:
 
-- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
 - Hlelela ikilasi labafundi bendawo umcimbi weHora loKufingqwa okanye uthole abalingani abanga funi inzuzo ukuba benze iHora loKufingqwa kukantolo yamahovizi akho. Bona indlela yokwenza lapha ezansi.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
 ## 1. Promote your Hour of Code
 
 - Tshela abanye ngomcimbi wakho we [iHora loKufingqwa](<%= resolve_url('/promote') %>) uphinde ubakhuthaze ukuthi nabo bahlele eyabo imicimbi.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Banga [bhalisa](<%= resolve_url('https://code.org/volunteer/engineer') %>) ukuba baxhunyiswane nekilasi.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha iqhaza kanye noku xoxa ng
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - Uma niyinkampani yethekhi, khombisani ngemikhiqizo ethokozisayo futhi eqanjwe kabusha enisebenza phuzu kwayo.
 - Uma ningasiyo inkampani yethekhi, xoxa ngezindlela inkampani yakho esebenzisa ithekhinoloji ukuxazulula izinkinga kanye nokufeza imigomo yazo.
 - Mema onjiniyela besofthiwe abavela kunkampani yakho ukuzokhuluma ngokuba kungani bethethe isinqumo sokufunda ikhompyutha sayensi nangama phrojekthi abasebenza kuwo.
-- Bona amathiphu okuthola amantombazane ukuba alangazelele ikhompyutha sayensi [lapha](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha iqhaza kanye noku xoxa ng
 
 ## 7) Zithokozise
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - [Phrinta "Ngenze iHora loKufingqela!"](<%= resolve_url('/promote/resources#stickers') %>) izitembu.
 - [Faka isicelo sokuthenga amahembe akhethekile](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) abasebenzi bakho.
 - Yabelana ngezithombe kanye namavidiyo omcimbi wakho weHora loKufingqwa kwezokusakaza. Sebenzisa #iHoraloKufingqwa kanye @codeorg ukuze sikwazi ukugqamisa ngempumelelo yakho, nawe!

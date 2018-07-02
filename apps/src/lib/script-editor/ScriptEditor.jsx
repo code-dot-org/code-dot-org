@@ -48,6 +48,8 @@ const ScriptEditor = React.createClass({
     stageExtrasAvailable: PropTypes.bool,
     stageLevelData: PropTypes.string,
     hasVerifiedResources: PropTypes.bool,
+    hasLessonPlan: PropTypes.bool,
+    curriculumPath: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
   },
 
@@ -193,6 +195,27 @@ const ScriptEditor = React.createClass({
             Check if this course has resources for verified teachers, and we
             want to notify non-verified teachers that this is the case.
           </p>
+        </label>
+        <label>
+          Lesson Plan
+          <input
+            name="has_lesson_plan"
+            type="checkbox"
+            defaultChecked={this.props.hasLessonPlan}
+            style={styles.checkbox}
+          />
+          <p>
+            Check if this course has lesson plans (on Curriculum Builder or in
+            PDF form) that we should provide links to.
+          </p>
+        </label>
+        <label>
+          Curriculum Path
+          <input
+            name="curriculum_path"
+            defaultValue={this.props.curriculumPath}
+            style={styles.input}
+          />
         </label>
         <label>
           Professional Learning Course. When filled out, the course unit associated with

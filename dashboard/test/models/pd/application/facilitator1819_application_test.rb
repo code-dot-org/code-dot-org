@@ -6,6 +6,15 @@ module Pd::Application
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
+      @fit_workshop = create :pd_workshop, :fit
+      @workshop = create :pd_workshop
+      @application = create :pd_facilitator1819_application
+      @application_with_fit_workshop = create :pd_facilitator1819_application,
+        pd_workshop_id: @workshop.id, fit_workshop_id: @fit_workshop.id
+    end
+    setup do
+      @application.reload
+      @application_with_fit_workshop.reload
     end
 
     test 'course is filled in from the form program before validation' do
@@ -49,11 +58,8 @@ module Pd::Application
     end
 
     test 'only one application allowed per user' do
-      teacher = create :teacher
-      create :pd_facilitator1819_application, user: teacher
-
       e = assert_raises ActiveRecord::RecordInvalid do
-        create :pd_facilitator1819_application, user: teacher
+        create :pd_facilitator1819_application, user: @application.user
       end
       assert_equal 'Validation failed: User has already been taken', e.message
     end
@@ -121,11 +127,10 @@ module Pd::Application
       end
     end
 
-    test 'to_csv method' do
-      application = create :pd_facilitator1819_application
-      application.update(regional_partner: @regional_partner, status: 'accepted', notes: 'notes')
+    test 'to_csv_row method' do
+      @application.update!(regional_partner: @regional_partner, status: 'accepted', notes: 'notes')
 
-      csv_row = application.to_csv_row
+      csv_row = @application.to_csv_row(nil)
       csv_answers = csv_row.split(',')
       assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
       assert_equal 'notes', csv_answers[-2]
@@ -133,8 +138,25 @@ module Pd::Application
       assert_equal 'accepted', csv_answers[-4]
     end
 
+    test 'csv_header and row return same number of columns' do
+      mock_user = mock
+
+      header = Facilitator1819Application.csv_header('csp', mock_user)
+      row = @application.to_csv_row(mock_user)
+      assert_equal CSV.parse(header).length, CSV.parse(row).length,
+        "Expected header and row to have the same number of columns"
+    end
+
+    test 'to_cohort_csv' do
+      optional_columns = {registered_workshop: true, accepted_teachercon: false}
+      assert (header = Facilitator1819Application.cohort_csv_header(optional_columns))
+      assert (row = @application.to_cohort_csv_row(optional_columns))
+      assert_equal CSV.parse(header).length, CSV.parse(row).length,
+        "Expected header and row to have the same number of columns"
+    end
+
     test 'send_decision_notification_email only sends to waitlisted and declined' do
-      mock_mail = stub
+      mock_mail = mock
       mock_mail.stubs(:deliver_now).returns(nil)
 
       Pd::Application::Facilitator1819ApplicationMailer.expects(:accepted).times(0)
@@ -146,105 +168,183 @@ module Pd::Application
       Pd::Application::Facilitator1819ApplicationMailer.expects(:declined).times(1).returns(mock_mail)
       Pd::Application::Facilitator1819ApplicationMailer.expects(:waitlisted).times(1).returns(mock_mail)
 
-      application = create :pd_facilitator1819_application
       Pd::Application::Facilitator1819Application.statuses.values.each do |status|
-        application.update(status: status)
-        application.send_decision_notification_email
+        @application.update(status: status)
+        @application.send_decision_notification_email
       end
     end
 
     test 'locking an application with fit_workshop_id automatically enrolls user' do
-      application = create :pd_facilitator1819_application
-      workshop = create :pd_workshop
-
-      application.fit_workshop_id = workshop.id
-      application.status = "accepted"
+      @application.fit_workshop_id = @fit_workshop.id
+      @application.status = "accepted"
 
       assert_creates(Pd::Enrollment) do
-        application.lock!
+        @application.lock!
       end
-      assert_equal Pd::Enrollment.last.workshop, workshop
-      assert_equal Pd::Enrollment.last.id, application.auto_assigned_fit_enrollment_id
+      assert_equal Pd::Enrollment.last.workshop, @fit_workshop
+      assert_equal Pd::Enrollment.last.id, @application.auto_assigned_fit_enrollment_id
     end
 
     test 'updating and re-locking an application with an auto-assigned FIT enrollment will delete old enrollment' do
-      application = create :pd_facilitator1819_application
-      first_workshop = create :pd_workshop
-      second_workshop = create :pd_workshop
+      first_workshop = @fit_workshop
+      second_workshop = create :pd_workshop, :fit
 
-      application.fit_workshop_id = first_workshop.id
-      application.status = "accepted"
-      application.lock!
+      @application.fit_workshop_id = first_workshop.id
+      @application.status = "accepted"
+      @application.lock!
 
-      first_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
+      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
 
-      application.unlock!
-      application.fit_workshop_id = second_workshop.id
-      application.lock!
+      @application.unlock!
+      @application.fit_workshop_id = second_workshop.id
+      @application.lock!
 
       assert first_enrollment.reload.deleted?
-      assert_not_equal first_enrollment.id, application.auto_assigned_fit_enrollment_id
+      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
     end
 
     test 'upading the application to unaccepted will also delete the autoenrollment' do
-      application = create :pd_facilitator1819_application
-      workshop = create :pd_workshop
+      @application.fit_workshop_id = @fit_workshop.id
+      @application.status = "accepted"
+      @application.lock!
+      first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
 
-      application.fit_workshop_id = workshop.id
-      application.status = "accepted"
-      application.lock!
-      first_enrollment = Pd::Enrollment.find(application.auto_assigned_fit_enrollment_id)
-
-      application.unlock!
-      application.status = "waitlisted"
-      application.lock!
+      @application.unlock!
+      @application.status = "waitlisted"
+      @application.lock!
 
       assert first_enrollment.reload.deleted?
 
-      application.unlock!
-      application.status = "accepted"
+      @application.unlock!
+      @application.status = "accepted"
 
       assert_creates(Pd::Enrollment) do
-        application.lock!
+        @application.lock!
       end
 
-      assert_not_equal first_enrollment.id, application.auto_assigned_fit_enrollment_id
+      assert_not_equal first_enrollment.id, @application.auto_assigned_fit_enrollment_id
     end
 
     test 'assign_default_workshop! saves the default workshop' do
-      application = create :pd_facilitator1819_application
-      workshop = create :pd_workshop
-      application.expects(:find_default_workshop).returns(workshop)
+      @application.expects(:find_default_workshop).returns(@fit_workshop)
 
-      application.assign_default_workshop!
-      assert_equal workshop.id, application.reload.pd_workshop_id
+      @application.assign_default_workshop!
+      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
     end
 
     test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      workshop = create :pd_workshop
-      application = create :pd_facilitator1819_application, pd_workshop_id: workshop.id
-      application.expects(:find_default_workshop).never
+      @application.update! pd_workshop_id: @fit_workshop.id
+      @application.expects(:find_default_workshop).never
 
-      application.assign_default_workshop!
-      assert_equal workshop.id, application.reload.pd_workshop_id
+      @application.assign_default_workshop!
+      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
     end
 
     test 'assign_default_fit_workshop! saves the default fit workshop' do
-      application = create :pd_facilitator1819_application
-      workshop = create :pd_workshop
-      application.expects(:find_default_fit_workshop).returns(workshop)
+      @application.expects(:find_default_fit_workshop).returns(@fit_workshop)
 
-      application.assign_default_fit_workshop!
-      assert_equal workshop.id, application.reload.fit_workshop_id
+      @application.assign_default_fit_workshop!
+      assert_equal @fit_workshop.id, @application.reload.fit_workshop_id
     end
 
     test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
-      workshop = create :pd_workshop
-      application = create :pd_facilitator1819_application, fit_workshop_id: workshop.id
-      application.expects(:find_default_fit_workshop).never
+      @application_with_fit_workshop.expects(:find_default_fit_workshop).never
 
-      application.assign_default_fit_workshop!
-      assert_equal workshop.id, application.reload.fit_workshop_id
+      @application_with_fit_workshop.assign_default_fit_workshop!
+      assert_equal @fit_workshop.id, @application_with_fit_workshop.reload.fit_workshop_id
+    end
+
+    test 'fit_workshop returns the workshop associated with the assigned fit workshop id' do
+      assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
+    end
+
+    test 'fit_workshop returns nil if the assigned workshop has been deleted' do
+      @fit_workshop.destroy!
+      assert_nil @application_with_fit_workshop.fit_workshop
+    end
+
+    test 'registered_fit_workshop? returns true when the applicant is enrolled in the assigned fit workshop' do
+      create :pd_enrollment, workshop: @fit_workshop, user: @application_with_fit_workshop.user
+      assert @application_with_fit_workshop.registered_fit_workshop?
+    end
+
+    test 'registered_fit_workshop? returns false when the applicant is not enrolled in the assigned fit workshop' do
+      refute @application_with_fit_workshop.registered_fit_workshop?
+    end
+
+    test 'registered_fit_workshop? returns false when no fit workshop is assigned' do
+      @application_with_fit_workshop.update! fit_workshop_id: nil
+      refute @application_with_fit_workshop.registered_fit_workshop?
+    end
+
+    test 'workshop cache' do
+      create :pd_enrollment, workshop: @fit_workshop, user: @application_with_fit_workshop.user
+
+      # Original query: Workshop, Session, Enrollment
+      assert_queries 3 do
+        assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
+      end
+
+      # Cached
+      assert_queries 0 do
+        assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
+        assert @application_with_fit_workshop.registered_fit_workshop?
+      end
+    end
+
+    test 'workshop cache prefetch' do
+      # Workshop, Session, Enrollment
+      assert_queries 3 do
+        Facilitator1819Application.prefetch_associated_models([@application_with_fit_workshop])
+      end
+
+      assert_queries 0 do
+        assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
+
+        # also prefetches assigned workshop
+        assert_equal @workshop, @application_with_fit_workshop.workshop
+      end
+    end
+
+    test 'fit_cohort' do
+      included = [
+        create(:pd_facilitator1819_application, :locked, fit_workshop_id: @fit_workshop.id, status: :accepted),
+        create(:pd_facilitator1819_application, :locked, fit_workshop_id: @fit_workshop.id, status: :waitlisted)
+      ]
+
+      excluded = [
+        # not locked
+        create(:pd_facilitator1819_application, fit_workshop_id: @fit_workshop.id, status: :accepted),
+
+        # not accepted or waitlisted
+        @application_with_fit_workshop,
+
+        # no workshop
+        @application
+      ]
+
+      fit_cohort = Facilitator1819Application.fit_cohort
+
+      included.each do |application|
+        assert fit_cohort.include? application
+      end
+      excluded.each do |application|
+        refute fit_cohort.include? application
+      end
+    end
+
+    test 'memoized filtered_labels' do
+      Facilitator1819Application::FILTERED_LABELS.clear
+
+      filtered_labels_csd = Facilitator1819Application.filtered_labels('csd')
+      assert filtered_labels_csd.key? :csd_csp_fit_availability
+      refute filtered_labels_csd.key? :csf_availability
+      assert_equal ['csd'], Facilitator1819Application::FILTERED_LABELS.keys
+
+      filtered_labels_csf = Facilitator1819Application.filtered_labels('csf')
+      refute filtered_labels_csf.key? :csd_csp_fit_availability
+      assert filtered_labels_csf.key? :csf_availability
+      assert_equal ['csd', 'csf'], Facilitator1819Application::FILTERED_LABELS.keys
     end
   end
 end

@@ -1,5 +1,5 @@
 :ruby
-  options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request, page_mode: page_mode }
+  options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request }
 
   contents = Hamburger.get_hamburger_contents(options)
 
@@ -23,5 +23,5 @@
             - target = entry[:target] ? entry[:target] : "_self"
             %a{id: entry[:id], href: entry[:url], target: target}= entry[:title]
 
-  #hamburger-icon{class: contents[:visibility]}
-    %span
+  #hamburger-icon.clicktag{class: contents[:visibility]}
+    %span{style: "pointer-events: none"}

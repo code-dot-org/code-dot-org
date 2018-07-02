@@ -32,7 +32,10 @@ video_player: true
   - url = "https://www.youtube.com/watch?v=ip051U7Rvds"
   - facebook = {u: url}
   - twitter = {url: url, related: 'codeorg', text: "#{I18n.t(:sports_og_description)} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
-  =view :display_video_thumbnail, id: 'athletes_video', video_code: 'ip051U7Rvds', play_button: 'center', facebook: facebook, twitter: twitter, download_path: '//videos.code.org/social/athletes-hour-of-code.mp4', letterbox: 'false'
+  - if %w(es-ES es-MX).include? request.locale
+    = view :display_video_thumbnail, id: 'athletes_video_es', video_code: 'f6pwwPnx7B4', play_button: 'center', facebook: facebook, twitter: twitter, download_path: '//videos.code.org/social/athletes-hour-of-code-es.mp4', letterbox: 'false'
+  - else
+    = view :display_video_thumbnail, id: 'athletes_video', video_code: 'ip051U7Rvds', play_button: 'center', facebook: facebook, twitter: twitter, download_path: '//videos.code.org/social/athletes-hour-of-code.mp4', letterbox: 'false'
   %a{href: "#featured-athletes"}
     = I18n.t(:sports_featured_athletes)
 .tutorials-container
@@ -61,7 +64,6 @@ video_player: true
   - videos << { id: 'steph_curry',  code: 'NYzN0a1U8mI', text: I18n.t(:video_title_steph_curry),  duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-steph-curry.mp4"}
   - videos << { id: 'draymond_green',  code: 'uJZyqeiAtlA', text: I18n.t(:video_title_draymond_green),  duration: I18n.t(:video_1min), download: "//videos.code.org/social/athlete-draymond-green.mp4"}
   - videos << { id: 'russell_okung',   code: '-aGEKVvoyLI', text: I18n.t(:video_title_russell_okung),   duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-russell-okung.mp4"}
-  - videos << { id: 'real_madrid',     code: 'EmJQKAR-78g', text: I18n.t(:video_title_real_madrid),     duration: I18n.t(:video_1min)}
   - videos << { id: 'marco_belinelli', code: 'Zh6E99aySI4', text: I18n.t(:video_title_marco_belinelli), duration: I18n.t(:video_2min)}
   - videos << { id: 'chris_bosh',      code: 'kx3DxBbweGY', text: I18n.t(:video_title_chris_bosh),      duration: I18n.t(:video_1min), download: "//videos.code.org/social/athlete-chris-bosh.mp4"}
 
@@ -70,7 +72,7 @@ video_player: true
       - url = "https://www.youtube.com/watch?v=#{video[:code]}"
       - facebook = {u: url}
       - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
-      =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download], letterbox: 'false'
+      = view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download], letterbox: 'false'
 
   %div{style: 'clear: both'}
 

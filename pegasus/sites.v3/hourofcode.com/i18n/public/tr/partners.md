@@ -5,13 +5,13 @@ Kod Saati, Kod Saatleri ve Bilgisayar Bilimleri Eğitim Haftası Danışma ve De
 
 [ Danışma Komitesi ](<%= resolve_url('/advisory-committee') %>), K-12, akademi, kar amacı gütmeyen kuruluşlar, kâr amacı gütmeyen kuruluşlar ve uluslararası kuruluşlardan temsilcilerden oluşmaktadır. Bu komite, Kodlama Saati kampanyası için stratejiyi yönlendirir.
 
-[ Gözden Geçirme Komitesi ](<%= resolve_url('/review-committee') %>) Danışma Komitesi'nin değerlendirme tablosunu kullanarak faaliyetleri değerlendiren ve tavsiye eden K-12 sınıfındaki 15 eğitimciden oluşur. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[ Gözden Geçirme Komitesi ](<%= resolve_url('/review-committee') %>) Danışma Komitesi'nin değerlendirme tablosunu kullanarak faaliyetleri değerlendiren ve tavsiye eden K-12 sınıfındaki 15 eğitimciden oluşur. Bu eğitimciler, yüzlerce etkinlik ortağı tarafından sunulan öğrenci yönlendirmeli ve öğretmen yönlendirmeli ders planlarını gözden geçirirken etkinliklerin eğitimsel değerini, öğrencilerin ilgisini çekip çekmeyeceğini ve farklı öğrenci gruplarına hitap edip etmeyeceğini değerlendirir.
 
 Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her öğrenci için bilgisayar bilimlerine bir giriş sunma vizyonuna katkıda bulunmuştur.
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Latin Amerika Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Afrika Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Avustralya Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Çin Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Fransa Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# Endonezya Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# İrlanda Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'in' %>
 
-# India Partners
+# Hindistan Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Japon Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Hollanda Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Yeni Zelanda Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# İngiltere Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,7 +107,7 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Kanada Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
@@ -131,13 +131,13 @@ Her iki komitenin çalışmaları ve özveri, Kod Saatinin başarısı ve her ö
 
 ---
 
-# Activity Partners
+# Etkinlik Ortakları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastructure Partners and Tools
+# Altyapı ortakları ve araçları
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

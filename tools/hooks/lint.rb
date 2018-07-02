@@ -10,7 +10,12 @@ SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'
 def filter_eslint_apps(modified_files)
   modified_files.select do |f|
     (f.end_with?(".js", ".jsx")) &&
-      !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/apps\/lib\//) || f.match(/shared\//))
+      !(f.end_with?('.min.js') ||
+        f.match(/public\/.+package\//) ||
+        f.match(/apps\/lib\//) ||
+        f.match(/shared\//) ||
+        f.match(/dashboard\/config\/blocks/)
+       )
   end
 end
 

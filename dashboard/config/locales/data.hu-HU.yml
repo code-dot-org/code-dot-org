@@ -1,4 +1,5 @@
-"hu":
+---
+hu:
   data:
     game:
       name:
@@ -22,7 +23,7 @@
         Farmer3: A Farmer 3
         Unplug10: Az internet
         Artist5: A Művész 5
-        Unplug11: "Összefoglaló"
+        Unplug11: Összefoglaló
         MazeEC: A labirintus
         Bounce: Visszapattanós
         Flappy: Flappy madár
@@ -63,8 +64,8 @@
         maze_2_2_5: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp,
           vagy repülsz!
         maze_2_3: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
-        maze_2_4: "Őrizd meg a nyugalmad, és segíts megkeresni Rossz Disznót. Egyébként
-          lehet, hogy dühös leszek!"
+        maze_2_4: Őrizd meg a nyugalmad, és segíts megkeresni Rossz Disznót. Egyébként
+          lehet, hogy dühös leszek!
         maze_2_5: Van egy 2 utasításból álló út a malachoz. Kitalálod?
         maze_2_6: Próbálj meg elvezetni a zöld behatolóhoz nem több, mint 3 utasítás
           használatával.
@@ -249,7 +250,7 @@
         turtle_3_4: Lássuk, tudod-e használni a "rajzoljon egy négyzetet" és a "rajzolj
           egy háromszöget" (és pár másik blokkot), hogy egy házat rajzolj az oroszlán
           körül.
-        turtle_3_5: 'Most készíts egy új "rajzoljon házat" függvényt, majd használd,
+        turtle_3_5: 'Most készíts egy új "rajzoljon egy házat" függvényt, majd használd,
           hogy otthont adj két macskának.  Tipp: használd a "csinálj valamit" blokkot,
           és írj bele a mezőbe, hogy elnevezd.'
         turtle_3_6: 'Figyeld meg a "rajzoljon egy négyzetet" példáját, és a "rajzolj
@@ -265,9 +266,9 @@
           függvényt? Próbáld ki, aztán rajzolj egy egész házsort.
         turtle_3_10: Sokat tanultál! Most ezt a tudást használd arra, hogy szabadon
           rajzolj. Próbálhatsz rajzolni csillagot, spirált, vagy egy izgalmas hópehelyhet.
-        maze_karel_debug_seq_1: "Üdvözölünk hibakeresés földjén! A kódom nem fut helyesen.
+        maze_karel_debug_seq_1: Üdvözölünk hibakeresés földjén! A kódom nem fut helyesen.
           Látod már a problémát, és ki tudod javítani, hogy előkészíthessem a földet
-          az ültetéshez?"
+          az ültetéshez?
         maze_karel_debug_seq_2: Mi a baj ezzel a programmal? Hogyan lehet kijavítani,
           hogy eltávolíthassam a földhányásokat?
         maze_karel_debug_repeat: Irtsd ki a programhibákat, hogy a földem sima és
@@ -304,130 +305,14 @@
           az egészet, és írhat helyette valami teljesen mást)
         maze_3_1: El kell kapnom a malacot. Gépelj be néhány move(); (mozgás()) utasítást,
           hogy visszakapjam a tojásaimat.
-        maze_3_2: "Írj egy programot, hogy megtehessem az egész utat a malachoz."
+        maze_3_2: Írj egy programot, hogy megtehessem az egész utat a malachoz.
         maze_3_3: Hogy jussak el a malachoz? Vigyázz, nehogy belefussak egy doboz
           TNT-be!
         maze_3_4: Ahh! Írj nekem egy programot, amivel elkerülhetem a TNT-t és eljuthatok
           a malachoz.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Csatolj egy blokkot a "balra nyíl esetén" blokkhoz, majd nyomd meg
-          a "Futtatás" gombot. Mozgasd az ütőt a bal nyíllal, hogy elérd a célt.
-        bounce_2: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl esetén"
-          blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
-        bounce_3: Most próbálj meg valami hasonlót  a "felfelé nyílnál" blokkal.  Mozgasd
-          az ütőt, hogy elérd a fenti célt.
-        bounce_4: Itt az idő, hogy bevezessünk négy új blokkot. Mozgasd az ütőt mind
-          a négy irányba, hogy megoldd ezt a feladatot.
-        bounce_5: El fogjuk dobni a labdát az ütő felé. Csatoljunk egy blokkot az
-          "ha a labda eltalálja az ütőt" blokkhoz, hogy a labda biztosan elérje a
-          célját.
-        bounce_6: A cél most fönt van. Csatolj egy-egy blokkot mindkét "ha a labda..."
-          blokkhoz, hogy megoldd a rejtvényt.
-        bounce_7: Csatolj blokkot minden "ha..." blokkhoz. Pattogtasd a labdát addig,
-          amíg el nem éri a célját.
-        bounce_10: A kapu most fönt van. Kapcsold össze a  "pontszám" és a "pontot
-          szerez az ellenfél" blokkokat a "ha a labda célba ér" és a "ha a labda nem
-          találja el az ütőt" blokkal, hogy elkészüljön a játék. Próbáld ki, hány
-          pontot gyűjtesz, mielőtt az ellenfél két pontot szerez.
-        bounce_11: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj
-          "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret,
-          vagy az ütő és a labda sebességét, és lássuk, hány pontod lesz, mielőtt
-          az ellenfél két pontot szerez.
-        bounce_12: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet
-          és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid
-          is kipróbálhassák a játékodat a telefonjukon.
         Custom_builder: Húzd a blokkokat az eszköztárból a munkaterületre, és állítsd
           be rajta a szintet amit szeretnél létrehozni. Nyomd meg a "Futtatás"-t,
           ha kész vagy.
-        flappy_1: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd meg a
-          "Futtatás"-t. Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a célba
-          segítsd.
-        flappy_2: Most már talaj is van. Csatolj egy blokkot a "ha becsapódik a talajba"
-          blokkhoz. Kell, hogy legyen "JÁTÉK VÉGE", amikor Flappy ütközik.
-        flappy_3: A "futtatáskor" blokk segítségével fut végig a programod, amikor
-          a játék elindul. Próbálj különböző sebességeket beállítani és elrepülni
-          a célig.
-        flappy_4: Flappy át fog repülni az akadályokon, hacsak te nem írsz egy olyan
-          parancsot, amitől nekik ütközik. Csatolj egy blokkot a "ha akadálynak ütközik"
-          blokkhoz. Ha Flappy nekiütközik az első csöveknek, akkor itt a "JÁTÉK VÉGE".
-        flappy_5: Használjunk eredményjelzőt, és nőjön eggyel a pontszám, amikor Flappy
-          áthalad egy akadályon. Add hozzá a "ha átjut egy akadályon" blokkhoz, és
-          azután szerezz pontot Flappy-vel átrepülve az első csövek között.
-        flappy_6: Kíváncsi vagyok, hogy át tudnál-e menni az első akadályon, hogyha
-          átállítanád Flappy csapásait kisebbre vagy nagyobbra.
-        flappy_7: A következőkben próbáld megváltoztatni a jelenetet úgy, hogy a "futtatáskor"
-          blokkhoz egy újabb blokkot csatolsz.
-        flappy_8: Bármikor átállíthatod a játék környezetét, nem csak akkor, amikor
-          elkezdődik. Próbáld ki a VÉLETLEN hátteret különböző eseményekhez párosítani,
-          például ahhoz, ha Flappy átjut egy akadályon.
-        flappy_9: Változtassuk meg úgy a dolgokat, hogy amikor leüt egy akadályt,
-          ahelyett hogy véget érne a játék, inkább állítsa vissza a pontokat 0-ra.
-        flappy_11: Hozz létre egy saját Flappy játékot! Meg tudod változtatni a kinézetet
-          és az összes szabályt, sőt még a gravitációt is. Ha elkészültél, kattints
-          a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
-        flappy_k1_1: Flappy játék
-        flappy_k1_2: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd meg
-          a "Futtatás"-t. Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a célba
-          segítsd.
-        flappy_k1_3: Nos mi hozzáadtuk a talajt. Csatolj egy blokkot a "ha becsapódik
-          a talajba" blokkhoz. Ha Flappy ütközik, itt a "VÉGE A JÁTÉKNAK".
-        flappy_k1_4: A "futtatáskor" blokk segítségével fut végig a programod, amikor
-          a játék elindul. Próbálj különböző sebességeket beállítani és elrepülni
-          a célig.
-        flappy_k1_5: Flappy át fog repülni az akadályokon, hacsak te nem írsz egy
-          olyan parancsot, amitől nekik ütközik. Csatolj  egy blokkot a "amikor akadálynak
-          ütközik" blokkhoz. Ha Flappy nekiütközik az első csöveknek, akkor itt a
-          "VÉGE A JÁTÉKNAK".
-        flappy_k1_6: Adjunk hozzá egy eredményjelzőt, és számoljuk  pontokat, amikor
-          Flappy áthalad egy akadályon. Adjuk az "amikor áthalad egy akadályon" blokkhoz,
-          és azután szerezzünk pontot Flappy-vel átrepülve az első csövek között.
-        flappy_k1_7: Nézd meg, tudsz-e szerezni több pontot az akadályokon való átjutással!
-        flappy_k1_8: A következőkben próbáld megváltoztatni a jelenetet úgy, hogy
-          a "futtatáskor" blokkhoz egy újabb blokkot csatolsz.
-        flappy_k1_9: Próbálj kiválasztani más játékost a "játékos beállítása" blokk
-          csatolásával a "futtatáskor" blokk alá.
         jigsaw_1: Kattints a blokkra
         jigsaw_2: Húzd a blokkot a célhoz
         jigsaw_3: Rendezd el a blokkokat, hogy a képet adják ki
@@ -517,10 +402,10 @@
         studio_playlab_8: Ki tudnád egészíteni egy blokkal, ami a pontokat számolja,
           és egy másik blokkal, ami hangot ad, ha az egyszarvú nekifut egy varázslónak?
           Aztán mozgasd az egyszarvút a nyilakkal, amíg pontot nem szerzel.
-        studio_playlab_9: "Állítsd be ennek a földönkívüli inváziónak a hátterét,
-          és segíts az Űrrobotnak gyorsabban eljutni a földönkívülihez. Utána használd
+        studio_playlab_9: Állítsd be ennek a földönkívüli inváziónak a hátterét, és
+          segíts az Űrrobotnak gyorsabban eljutni a földönkívülihez. Utána használd
           a nyíl billentyűket, hogy elérjen a földönkívülihez, és figyelmeztetni tudjon
-          másokat"
+          másokat
         studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész
           gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_iceage_hello1: Sid összeakar mindenkit gyűjteni egy új kalandra. Tudsz
@@ -658,7 +543,7 @@
         Unplug8: Absztrakció
         Unplug9: Váltó programozás
         Unplug10: Internet
-        Unplug11: "Összefoglaló"
+        Unplug11: Összefoglaló
         C1_happy_maps_unplugged: Vidám térképek
         C1_moveitmoveit_unplugged: Mozgás, mozgás
         C1_bigevent_unplugged: A nagy esemény
@@ -843,9 +728,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: A galaxis építése kóddal - Bevezetés'
         starwars_typing: 'Star Wars: A galaxis építése kóddal - JavaScript'
         starwars_events: 'Star Wars: A galaxis építése kóddal - Események'
@@ -901,11 +783,27 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Ciklusok
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
         run: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat
-        watch_again: 'Kattints ide, hogy újra megnézhesd a videót '
+        watch_again: Kattints ide, hogy újra megnézhesd a videót
         gray_block_explanation: A szürke blokkok nem törölhetők. Így is meg tudod
           oldani a feladatot?
         show_code_explanation: Kattints ide, hogy lásd a kódot, amit írtál
@@ -915,7 +813,7 @@
           vannak rendezve
         set_sprite_image: Illeszd a "szereplő beállítása" blokkot az "amikor a történet
           kezdődik" blokkhoz, hogy a szereplő része legyen a történetnek
-        studio_say_text: "Írd idézőjelek közé a szereplő által mondani kívánt szöveget"
+        studio_say_text: Írd idézőjelek közé a szereplő által mondani kívánt szöveget
         jigsaw_click: Kattints erre a blokkra!
         move_elsa_forward: Húzd a "menj előre" blokkot és illeszd azt a "futtatáskor"
           blokk alá ahhoz, hogy Elsa előre lépjen
@@ -989,21 +887,21 @@
         write_draw_triangle_function: Húzz ide olyan blokkokat az eszköztárból, amelyek
           egy háromszöget rajzolnak
         edit_add_parameter: Kattints a szerkesztésre, hogy paramétert adj a függvényedhez
-        add_and_drag_parameter: "Írd be ide a paramétered nevét, kattints a hozzáadásra,
-          majd húzd a függvényed leírásába"
-        fill_in_actor: "Írd be a ??? helyére a szereplőknek megfelelő számokat (1,
-          2, és 3)"
+        add_and_drag_parameter: Írd be ide a paramétered nevét, kattints a hozzáadásra,
+          majd húzd a függvényed leírásába
+        fill_in_actor: Írd be a ??? helyére a szereplőknek megfelelő számokat (1,
+          2, és 3)
         repeat: Tedd a blokkokat a ciklusok belsejébe a parancsok ismétléséhez!
         if_bee_nectar: Használd a "ha" blokkot, hogy eldöntsd hogy a méhnek kell-e
           nektárt kapnia
         if_else_bee: Használd a "ha/különben" blokkot, hogy a méh nektárt kapjon a
           virágból, és mézet csináljon, ha az nem virág
-        repeat_full_circle: "Írd be a számát, hogy hányszor kell a zombinak mozognia,
-          hogy egy teljes kört leírjon"
+        repeat_full_circle: Írd be a számát, hogy hányszor kell a zombinak mozognia,
+          hogy egy teljes kört leírjon
         place_length_variable: Húzd a hossza változót ide a kérdőjelek helyére
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
         right_arrow_fireball: A jobbra nyíllal tudod kilőni a tűzgolyókat
-        name_function: "Írd be a függvény nevét ide"
+        name_function: Írd be a függvény nevét ide
         Infinity_move_right_runbutton: Itt adj hozzá mozgasd blokkot
         Infinity_move_directions_callout: Melyik blokk mozgatja majd Baymaxot fölfelé,
           ha megnyomjuk a fel gombot?

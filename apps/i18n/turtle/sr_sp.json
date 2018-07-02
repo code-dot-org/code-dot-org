@@ -38,6 +38,7 @@
   "drawUpperWave": "нацртајте горњи талас",
   "drawLowerWave": "нацртајте доњи талас",
   "drawSticker": "нацртајте печат",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "висина",
   "hideTurtle": "сакриј уметника",
   "jump": "скок",
@@ -73,6 +74,8 @@
   "penDown": "Спусти оловку",
   "penTooltip": "листа љубитеља оловке, да почну или престану цртати.",
   "penUp": "Узми оловку",
+  "pointTo": "point to",
+  "pixels": "пиксели",
   "reinfFeedbackMsg": "Овде је Ваш цртеж! Наставите да радите на њему или наставите даље.",
   "setAlpha": "поставите алфа",
   "setCharacter": "set character to {character}",
@@ -91,5 +94,6 @@
   "turnTooltip": "Окреће уметника улево или удесно за одређени број степени.",
   "turtleVisibilityTooltip": "Чини уметника видљивим или невидљивим.",
   "widthTooltip": "Мења ширину оловке.",
+  "withSize": "with size",
   "wrongColour": "Ваша је слика погрешне боје. За слагалицу, мора бити %1."
 }

@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-03T15:26:21.000Z",
+  "level_num": "custom",
+  "user_id": 532,
+  "properties": {
+    "markdown_instructions": "**Short Answer:** Cecelia would like to write an app to help manage a trip to the grocery store.  The app will maintain a shopping list (a list of words) of all the items to buy.  Describe how Cecelia might use a second list in the app.  What else might be tracked? Describe how the list would be used and updated in the app.\r\n",
+    "instructions_important": "false",
+    "encrypted_solution": "ODdI/rm05mwKW5uPLgPHOI6GxLRNHlLoZdpL2IlxWsZ7pFGXiJ8eI8f4oyh9\nSQ3yovDIaxticzU9YmorW1GGrUHDKlJ88XI9CFC8pzHfjv7xOZ6f6v+/vsFJ\nNuU/0P+kqCz4HD3Z+C0FbIMoyWIj3yOFU5ruu844JN8cNxd+vrsfNVN4Gg+I\ntHlsc4wojER2THCXck2xqAk8D8R6NIwvyVECa6iRwoBvhLnhcs6T6KXmapF9\nvGIK1pusQHNrNXsRxG0spPl21PK2uuZs6749cZm1hJRR8/DP0QwtFvjZJpGL\n/Dbnz/HeGGapVlM6Klca23DpK3T8aMIUgtDlJAyFmJv6Ve8uPQwhcNij2JSe\nyoXaJgB/UhwjrKOUoDAkxyEdFxrulMVQl/A0GmIOijwFEafLaEbEw7YOvdE+\nRGltZ7cIxQTHQ4QU3TNNj2WiSSQk3M3VjTvPAZ5KvCVhJtpmFoW8p72C6E1Z\nyL+eudxEiS/YPBMmz65frEe32qWiLXOsrBYlbVsFk+p8sq8Q4LRAz6OxCXZn\n+cn3EFkX8VJsLnX6eNtnjFPJw0uVOZ8xPJcIG4kqt55hd5bjJIgcI1L0SSmX\nwhlyvOqEfb61btS9Nvh5NRxq9B49ku13G1SJoqCF9dZ/InJlD7oYQv9B3Qk7\nWoYl6oot2IuNQd28iQFSmv+pIPPDxGhScnvHa1qXAVhM0w/eIHMA/8ru+KXv\nmWpvzEqGWQrNkznTKDKCkAZzN8A3czyhsPzPntufppHI9IHxc+liAizxZE+4\nZQs+0Lz+8A==\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 7200,
+    "name_suffix": "_exam_prep"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

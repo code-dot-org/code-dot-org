@@ -16,7 +16,7 @@
     "slider_speed": "0.7",
     "video_key": "C3_artist_functions",
     "embed": "false",
-    "markdown_instructions": "Here is a puzzle that uses a function that we have defined. \r\n",
+    "markdown_instructions": "Here is a puzzle that uses a function that we have defined. ",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -39,11 +39,17 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "contained_level_names": [
-      "courseE_prediction_artistFunction1"
-    ]
+      "courseE_prediction_artistFunction1_2018"
+    ],
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-28 17:51:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

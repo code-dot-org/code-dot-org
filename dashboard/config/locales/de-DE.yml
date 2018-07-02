@@ -1,4 +1,5 @@
-"de":
+---
+de:
   errors:
     messages:
       not_saved: 'Bitte korrigiere die folgenden Fehler:'
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Microsoft-Konto
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Passwort vergessen?
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
@@ -141,6 +143,13 @@
     valid_password: Gültiges Passwort!
     invalid_password: Das Passwort muss mindestens 6 Zeichen lang sein
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: Falls ich unter 13 Jahre alt bin, bestätige ich, dass ich die
+      Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen.
+    agree_us_website: Ich akzeptiere die Nutzung einer Website mit Sitz in den USA.
+    my_data_to_us: Daten aus meiner Nutzung dieser Site können in die USA geschickt
+      werden und dort gespeichert und verarbeitet werden.
     student_terms: Ich stimme den <a href='http://code.org/tos'>Nutzungsbedingungen</a>
       des Code.org Service zu. Falls ich unter 13 Jahren alt bin, dann bestätige ich
       hiermit das ich die Erlaubnis meiner Erziehungsberechtigten habe, die Code.org
@@ -153,19 +162,26 @@
       bzgl. Datenschutz, siehe unsere <a href='http://code.org/privacy'>Datenschutz-Bestimmungen</a>.
     additional_information: Wir benötigen noch ein paar weitere Informationen, um
       mit deiner Anmeldung fortzufahren.
+    user_type_button: Update Account Type
     user_type_label: Kontentyp
     user_type_teacher: Lehrer
     user_type_student: Schüler
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
-    error: An error occurred.
+    error: Ein Fehler ist aufgetreten.
+    email_preference_question: Dürfen wir dich per E-Mail über Neuigkeiten zu unseren
+      Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?
+    email_preference_privacy: "(Siehe unsere Datenschutzerklärung)"
+    email_preference_yes: Ja
+    email_preference_no: Nein
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Schulinformationen (optional)
     school_country: Land der Schule
     select_school_type: Wähle die Art der Schule
     charter: Charta
     private: Privat
-    public: "Öffentlich"
+    public: Öffentlich
     homeschool: Schule zu Hause
     after_school: Nach Schule
     other: Andere
@@ -209,11 +225,12 @@
       email: E-Mail-Adresse
       submit: Absenden
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Du scheinst dich mit einer ungültigen E-Mail-Adresse eingeloggt
         zu haben. Bitte emaile support@code.org um einen Link zur Wiederherstellung
         deines Passwortes zu erhalten.
     change_form:
-      title: "Ändere dein Passwort"
+      title: Ändere dein Passwort
       new_password: Neues Passwort
       confirm_password: Neues Passwort bestätigen
       submit: Mein Passwort ändern
@@ -230,7 +247,7 @@
   parent_mailer:
     student_associated_subject: Login information for Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Willkommen bei Code.org!
   section:
     your_section:
       one: 'Dein Bereich:'
@@ -241,7 +258,7 @@
     remove: "(Bereich löschen)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Geheimwort
       email: E-Mail
       google_classroom: Google Classroom
       clever: Schlau
@@ -327,7 +344,7 @@
       educate_inspire: Inspiriere einen Schüler/eine Schülerin
       educate_community: Online Community
       educate_tools: Hilfsmittel und Videos
-      about_us: "Über uns "
+      about_us: 'Über uns '
       about_leadership: Die Leitung
       about_donors: Sponsoren
       about_partners: Partner
@@ -341,7 +358,7 @@
       stats: Statistiken
       help_us: Helfen Sie uns
       teach: Unterrichten
-      about: "Über"
+      about: Über
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Landkreis-Dashboard
@@ -398,6 +415,7 @@
     email_confirm_needed_required: 'Deine E-Mail-Adresse %{email} ist noch nicht bestätigt:'
     email_confirm_wrong_email: "(Falsche E-Mail-Adresse?)"
     email_resend_confirm: Anmeldebestätigung erneut senden
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(freilassen, wenn du nichts verändern möchtest)"
     current_password_hint: "(wir benötigen dein aktuelles Passwort, um deine Änderungen
       zu bestätigen)"
@@ -432,6 +450,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -441,7 +460,7 @@
     lines_of_code: "%{lines_count} VON SCHÜLERN ERSTELLTE CODEZEILEN"
     lines_of_code_linebreak: "%{lines_count} CODE-ZEILEN, <br/> VON %{students_count}
       MILLIONEN SCHÜLERN GESCHRIEBEN"
-    all_courses: "Übersicht der Level 1, 2 und 3"
+    all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
     student_reg_link: Schüler-Anmeldung
@@ -464,7 +483,7 @@
     student_left_off: 'Wo du aufgehört hast:'
     student_finished: Du hast alle Code.org-Tutorials abgeschlossen. Wähle einen anderen
       Kurs  %{online_link} oder in deiner %{local_school_link}
-    local_school: "örtlichen Schule."
+    local_school: örtlichen Schule.
     online: online
     see_details: Zeige Details
     view_course: Zeige Kurs
@@ -616,6 +635,8 @@
       Sektion eingeschrieben sein.
     already_enrolled_in_new_section: Sie können diese Schüler nicht bewegen, weil
       dieser Lehrer sie bereits in einer anderen Sektion hat.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Mit Code Studio lernen
     description: Jeder kann Informatik lernen. Mache Spiele, Apps und Kunst mit Code.
@@ -623,6 +644,8 @@
   gender:
     male: Männlich
     female: Weiblich
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Möchte ich nicht beantworten
   user_type:
     student: Schüler
@@ -688,7 +711,7 @@
     autoplay_option: Autoplay Videos
     download: Video herunterladen
     show_notes: Show Notes
-    show_video: Show Video
+    show_video: Video anzeigen
   compatibility:
     upgrade:
       unsupported_message: Ihr Browser wird nicht unterstützt. Bitte aktualisieren
@@ -714,7 +737,7 @@
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
   download_pdf: Unterrichtsplan öffnen
   lesson_plan: Stundenplan
-  view_lesson_plan: "Überblick des Unterrichtsplans"
+  view_lesson_plan: Überblick des Unterrichtsplans
   pdf_download: PDF herunterladen
   download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
   video_coming_soon: 'Demnächst: Video!'
@@ -1141,7 +1164,7 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "Übersicht"
+    required: Übersicht
     content: Inhalt
     practice: Lehrer Übungen
     peer_review: Peer Review
@@ -1166,6 +1189,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1179,6 +1203,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Einheit 2: Digitale Informationen'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Haftungsausschluss
@@ -1322,3 +1351,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Ich stimme zu
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Ja

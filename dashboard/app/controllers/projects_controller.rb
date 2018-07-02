@@ -2,9 +2,10 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
-  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
+  before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
+  protect_from_forgery except: :export_config
   include LevelsHelper
 
   TEMPLATES = %w(projects).freeze
@@ -86,6 +87,9 @@ class ProjectsController < ApplicationController
     gamelab_jr: {
       name: 'New Game Lab Jr Project',
       levelbuilder_required: true,
+    },
+    spritelab: {
+      name: 'New Sprite Lab Project',
     },
     makerlab: {
       name: 'New Maker Lab Project',
@@ -237,11 +241,16 @@ class ProjectsController < ApplicationController
       return
     end
     return if redirect_under_13_without_tos_teacher(@level)
-    redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
+    channel = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
       data: initial_data,
       type: params[:key]
+    )
+    redirect_to(
+      action: 'edit',
+      channel_id: channel,
+      enableMaker: params['enableMaker'] ? true : nil
     )
   end
 
@@ -292,7 +301,7 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     no_footer = sharing
     # if the game doesn't own the sharing footer, treat it as a legacy share
-    @is_legacy_share = sharing && !@game.owns_footer_for_share?
+    @legacy_share_style = sharing && !@game.owns_footer_for_share?
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -301,7 +310,6 @@ class ProjectsController < ApplicationController
       no_footer: no_footer,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing,
-      is_legacy_share: @is_legacy_share,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
@@ -317,7 +325,6 @@ class ProjectsController < ApplicationController
     end
 
     FirehoseClient.instance.put_record(
-      'analysis-events',
       study: 'project-views',
       event: project_view_event_type(iframe_embed, sharing),
       # allow cross-referencing with the storage_apps table.
@@ -363,10 +370,42 @@ class ProjectsController < ApplicationController
       remix_parent_id: remix_parent_id,
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
-    AnimationBucket.new.copy_files src_channel_id, new_channel_id
-    SourceBucket.new.copy_files src_channel_id, new_channel_id
+    animation_list = AnimationBucket.new.copy_files src_channel_id, new_channel_id
+    SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  def export_create_channel
+    return if redirect_under_13_without_tos_teacher(@level)
+    src_channel_id = params[:channel_id]
+    begin
+      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return head :bad_request
+    end
+    storage_app = StorageApps.new(storage_id('user'))
+    src_data = storage_app.get(src_channel_id)
+    data = initial_data
+    data['name'] = "Exported: #{src_data['name']}"
+    data['hidden'] = true
+    new_channel_id = ChannelToken.create_channel(
+      request.ip,
+      storage_app,
+      data: data,
+      type: params[:key],
+      remix_parent_id: remix_parent_id,
+    )
+    render json: {channel_id: new_channel_id}
+  end
+
+  def export_config
+    return if redirect_under_13_without_tos_teacher(@level)
+    if params[:script_call]
+      render js: "#{params[:script_call]}(#{firebase_options.to_json});"
+    else
+      render json: firebase_options
+    end
   end
 
   def set_level

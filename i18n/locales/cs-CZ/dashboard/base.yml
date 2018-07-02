@@ -9,8 +9,8 @@ cs:
     errors:
       messages:
         blank: "je požadováno"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "jsou potřeba"
+        invalid_plural: "jsou neplatné"
     attributes:
       user:
         name: 'Zobrazit jméno'
@@ -59,7 +59,7 @@ cs:
   courses: 'kurzy'
   courses_page:
     title_student: "Poznat Code studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Aktivita bez počítače'
   of: "z"
   more: "VÍCE"
@@ -69,7 +69,7 @@ cs:
   try_k8intro: "Vyzkoušej náš kurz K-8 Úvod do informatiky (15-25 hodin)"
   k8intro: "Kurz K-8 Úvod do počítačové vědy (15-25 hodin)"
   already_started: "Už jsi začal? Pokračuj zde >> "
-  demos: 'Admin: Všechny Ukázky'
+  demos: "Admin: Všechny Ukázky"
   continue: 'Pokračovat'
   prize: 'odměna'
   more_info: 'Více informací'
@@ -85,6 +85,7 @@ cs:
     facebook: 'Facebook'
     windowslive: 'Microsoft účet'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Zapomněl jsi heslo?'
     need_confirmation: "Nedostal jsi instrukce pro potvrzení?"
     need_unlock: "Nezískal si instrukce pro odemčení?"
@@ -114,15 +115,25 @@ cs:
     valid_password: "Platné heslo!"
     invalid_password: "Heslo musí obsahovat nejméně 6 znaků"
     mismatch_password: "Zadaná dvě hesla se neshodují"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Souhlasím, že budu dodržovat <a href='http://code.org/tos'>podmínky služeb</a>. Pokud jsem mladší 13 let, přihlášením potvrzuji souhlas rodičů nebo mého zákonného zástupce s používáním služeb Code.org.<br/><br/> E-mailové adresy se neukládají. Studenti nebudou dostávat e-maily od Code.org s výjimkou obnovení hesla. Pro více informací navštivte<a href='http://code.org/privacy'>zásady ochrany osobních údajů</a>."
     teacher_terms: "Souhlasím, že budu dodržovat podmínky služeb Code.org. Více informací najdete na <a href='http://code.org/privacy'>Zásady ochrany osobních údajů</a>."
     additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
+    user_type_button: "Update Account Type"
     user_type_label: "Typ účtu"
     user_type_teacher: "Učitel"
     user_type_student: "student"
     field_is_required: "je požadováno"
     accept_terms: "Musíte souhlasit pro vytvoření účtu"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Ano"
+    email_preference_no: "Ne"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Název školy (nepovinné)'
     school_country: 'Země školy'
@@ -171,6 +182,7 @@ cs:
       email: 'E-mailová adresa'
       submit: 'Odeslat'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Změň si heslo'
@@ -201,7 +213,7 @@ cs:
     remove: '(odstranit sekci)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Tajné slovo'
       email: 'E-mail'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -220,7 +232,7 @@ cs:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org upozornění: %{student_name} už není vašim studentem.'
+        subject: "Code.org upozornění: %{student_name} už není vašim studentem."
   reports:
     error:
       access_denied: "Nemáš přístup k statistikám této osoby"
@@ -348,11 +360,12 @@ cs:
     email_confirm_needed_required: 'Vaše e-mailová adresa %{email} nebyla potvrzena:'
     email_confirm_wrong_email: '(Špatná e-mailová adresa?)'
     email_resend_confirm: 'Znovu odeslat instrukce o potvrzení'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(zanech prázdné, pokud nechceš provést změnu)"
     current_password_hint: '(potřebujeme tvé aktuální heslo pro potvrzení změn)'
     delete: 'Vymazat účet'
     delete_text: "Klepnutím na následující tlačítko se vymaže váš účet."
-    delete_text_teacher_note: 'Upozornění: smazáním účtu nebudou vymazané vaše studentské účty.'
+    delete_text_teacher_note: "Upozornění: smazáním účtu nebudou vymazané vaše studentské účty."
     delete_confirm: 'Jste si jisti, že chcete vymazat tento účet?'
     deleted_user: 'odstraněný uživatel'
     no_password_because_oauth: 'Bez hesla, protože se přihlašujete pomocí jiného poskytovatele.'
@@ -363,10 +376,11 @@ cs:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Dokončeno'
     tried: 'Vyzkoušeno'
@@ -448,6 +462,7 @@ cs:
     student_not_found: "Nelze nalézt jednoho nebo více studentů."
     all_students_must_be_in_current_section: "Všichni studenti musí být zapsáni v tvoji v sekci."
     already_enrolled_in_new_section: "Tyto studenty nelze přesunout, protože tento učitel je již má v další části."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Poznat Code studio"
     description: "Každý se může naučit informatiku. Udělejte hry, aplikace a umění s kódem."
@@ -455,6 +470,8 @@ cs:
   gender:
     male: 'Muž'
     female: 'Žena'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Raději bych neodpovídal/a'
   user_type:
     student: 'student'
@@ -702,7 +719,7 @@ cs:
     sign_out: 'Když si nepřeješ poskytovat svůj věk můžeš <a href="%{url}"> se odhlásit</a>.'
   terms_interstitial:
     title: "Aktualizované podmínky služeb a ochrana osobních údajů"
-    intro_desc: Aktualizovali jsme naše smluvní podmínky a ochranu osobních údajů. Změny jsou platné od 24. srpna 2016. Největší změnou je, že <i> už více nebudeme uchovávat e-mailové adresy studentských účtů na Studiu kódu. </i> Je to pro nás velký krok a doufáme, že jsme nastavili nový standard pro soukromí studentů v technologiích ve vzdělávání. Souhrn změn sme vám poslali e-mailem.
+    intro_desc: "Aktualizovali jsme naše smluvní podmínky a ochranu osobních údajů. Změny jsou platné od 24. srpna 2016. Největší změnou je, že <i> už více nebudeme uchovávat e-mailové adresy studentských účtů na Studiu kódu. </i> Je to pro nás velký krok a doufáme, že jsme nastavili nový standard pro soukromí studentů v technologiích ve vzdělávání. Souhrn změn sme vám poslali e-mailem."
     intro_instructions: "Je třeba, aby jste potvrdili tyto podmínky u studentů mladších 13 let ve vaší třídě, aby získali plný přístup ke všem nejnovějším funkcím ve Studiu kódu. Při registraci účtu pro tyto studenty, je potřeba potvrdit, že vaše škola má souhlas rodičů pro shromažďování osobních údajů studenta a jejich využívání ve prospěch školy, zahrnující vzdělávací programy jako je Studio kódu."
     tos: "Podmínky"
     privacy: "Zásady ochrany osobních údajů"
@@ -718,25 +735,25 @@ cs:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Uložit"
   race_interstitial:
-    title: 'Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity'
+    title: "Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity"
     message: "Prosím vyberte vaši rasovou příslušnost (označte všechna platná políčka)"
     races:
       - 
-        white: Běloch
+        white: "Běloch"
       - 
-        black: Černoch nebo Afroameričan
+        black: "Černoch nebo Afroameričan"
       - 
-        hispanic: Hispánec nebo Latino
+        hispanic: "Hispánec nebo Latino"
       - 
-        asian: Asiat
+        asian: "Asiat"
       - 
-        hawaiian: Rodilý havajčan nebo ostrovan z Pacifiku
+        hawaiian: "Rodilý havajčan nebo ostrovan z Pacifiku"
       - 
-        american_indian: Indián/Aljašan
+        american_indian: "Indián/Aljašan"
       - 
-        other: Ostatní
+        other: "Ostatní"
       - 
-        opt_out: Preferujeme neuvést
+        opt_out: "Preferujeme neuvést"
     submit: "Odeslat"
     decline: "Zavřít"
   zendesk_too_young_message: 'Promiň, mladší uživatelé se nemohou přihlásit do našeho webového serveru podpory. Můžeš procházet <a href="http://support.code.org"> support.code.org</a> bez přihlášení nebo požádat rodiče nebo učitele, aby nás kontaktovali.'
@@ -762,7 +779,7 @@ cs:
     delete: "Odstranit"
     import: "Importovat"
     share_link_import_bad_link_header: "Odkaz pro sdílení nebyl rozpoznán"
-    share_link_import_bad_link_body: 'Daný odkaz pro sdílení se nám nepodařilo naimportovat. Ověřte, zda používáte odkaz z hádanky Minecraft: Agent a zda jste zkopírovali úplný odkaz.'
+    share_link_import_bad_link_body: "Daný odkaz pro sdílení se nám nepodařilo naimportovat. Ověřte, zda používáte odkaz z hádanky Minecraft: Agent a zda jste zkopírovali úplný odkaz."
     share_link_import_error_header: "Něco se nepovedlo."
     share_link_import_error_body: "Došlo k problému při importu daného odkazu pro sdílení. Zkuste to znovu."
     exit: "Návrat ke kurzu"
@@ -865,8 +882,9 @@ cs:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ cs:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '2. lekce: Digitální informace'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Zřeknutí se
@@ -984,3 +1007,14 @@ cs:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Souhlasím'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ano'

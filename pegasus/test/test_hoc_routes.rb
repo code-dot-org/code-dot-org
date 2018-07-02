@@ -5,7 +5,7 @@ require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
 
 # Set up the rack environment to be test and recreate the Gatekeeper and DCDO in that mode.
-CDO.rack_env = 'test'
+CDO.rack_env = :test
 def redefine_const_without_warning(const, value)
   self.class.send(:remove_const, const)
   self.class.const_set(const, value)

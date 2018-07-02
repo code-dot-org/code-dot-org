@@ -7,6 +7,7 @@ import { mergeActivityResult, activityCssClass } from './activityUtils';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
 import { ViewType, SET_VIEW_TYPE } from './viewAsRedux';
+import { processedLevel } from '@cdo/apps/templates/progress/progressHelpers';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -78,6 +79,8 @@ export default function reducer(state = initialState, action) {
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
+      scriptDescription: action.scriptDescription,
+      betaTitle: action.betaTitle,
       courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress
@@ -282,7 +285,7 @@ export function processedStages(stages, isPlc) {
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
     saveAnswersBeforeNavigation, stages, peerReviewStage, scriptId, scriptName,
-    scriptTitle, courseId, isFullProgress}) => ({
+    scriptTitle, scriptDescription, betaTitle, courseId, isFullProgress}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
@@ -292,6 +295,8 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   scriptId,
   scriptName,
   scriptTitle,
+  scriptDescription,
+  betaTitle,
   courseId,
   isFullProgress,
 });
@@ -399,32 +404,26 @@ const isCurrentLevel = (currentLevelId, level) => {
  * about and (b) determines current status based on the current state of
  * state.levelProgress
  */
-const levelWithStatus = ({levelProgress, currentLevelId}, level) => {
+const levelWithStatus = ({levelProgress, levelPairing = {}, currentLevelId}, level) => {
   if (level.kind !== LevelKind.unplugged) {
     if (!level.title || typeof(level.title) !== 'number') {
       throw new Error('Expect all non-unplugged levels to have a numerical title');
     }
   }
   return {
+    ...processedLevel(level),
     status: statusForLevel(level, levelProgress),
-    url: level.url,
-    name: level.name,
-    progression: level.progression,
-    kind: level.kind,
-    icon: level.icon,
-    isUnplugged: level.kind === LevelKind.unplugged,
-    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isCurrentLevel: isCurrentLevel(currentLevelId, level),
-    isConceptLevel: level.is_concept_level,
+    paired: levelPairing[level.activeId],
   };
 };
 
 /**
  * Get level data for all lessons/stages
  */
-export const levelsByLesson = ({stages, levelProgress, currentLevelId}) => (
+export const levelsByLesson = ({stages, levelProgress, levelPairing, currentLevelId}) => (
   stages.map(stage => (
-    stage.levels.map(level => levelWithStatus({levelProgress, currentLevelId}, level))
+    stage.levels.map(level => levelWithStatus({levelProgress, levelPairing, currentLevelId}, level))
   ))
 );
 
@@ -447,6 +446,17 @@ export const isPerfect = (state, levelId) => (
   !!state.levelProgress &&
     state.levelProgress[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT
 );
+
+export const getPercentPerfect = levels => {
+  const puzzleLevels = levels.filter(level => !level.isConceptLevel);
+  if (puzzleLevels.length === 0) {
+    return 0;
+  }
+
+  const perfected = puzzleLevels.reduce((accumulator, level) =>
+    accumulator + (level.status === LevelStatus.perfect), 0);
+  return perfected / puzzleLevels.length;
+};
 
 /**
  * Given a level and levelProgress (both from our redux store state), determine

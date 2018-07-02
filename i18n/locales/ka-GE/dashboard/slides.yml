@@ -118,7 +118,7 @@ ka:
         text: "შეგვიძლია ბლოკი \"წინ გადაადგილება\" ჩავსვათ \"გამეორების\" ბლოკში და ჩავწეროთ, რამდენჯერ უნდა გამეორდეს მოქმედება."
       6:
         image: 'notes/hoc2_6.jpg'
-        text: 'და ეს მნიშვნელოვანია: გამეორების ბლოკში ერთზე მეტი ბრძანების ჩასმა შეგიძლიათ.'
+        text: "და ეს მნიშვნელოვანია: გამეორების ბლოკში ერთზე მეტი ბრძანების ჩასმა შეგიძლიათ."
       7:
         image: 'notes/hoc2_7.jpg'
         text: "გამოიყენეთ ახალი ბლოკი \"გამეორება\"!"
@@ -138,7 +138,7 @@ ka:
     if:
       1:
         image: 'notes/hoc4_1.jpg'
-        text: ჰეი, მე ვარ ბილი! ვისწავლოთ ახალი მნიშვნელოვანი ცნება "თუ". ის კომპიუტერს გადაწყვეტილებების მიღებაშ იეხმარება.
+        text: "ჰეი, მე ვარ ბილი! ვისწავლოთ ახალი მნიშვნელოვანი ცნება \"თუ\". ის კომპიუტერს გადაწყვეტილებების მიღებაშ იეხმარება."
       2:
         image: 'notes/hoc4_2.jpg'
         text: "დააკვირდით, თქვენ თვითონაც ხშირად იყენებთ \"თუ\"–ს გადაწყვეტილების მისაღებად. მაგალითად, ყოველ დილით ფიქრობთ \"თუ გარეთ წვიმს, ქოლგას ავიღებ\"."
@@ -259,7 +259,7 @@ ka:
         text: "თუ მოგეწონათ კოდის თქვენი პირველი საათი, ეწვიეთ code.org-ს და გააგრძელეთ პროგრამირების სწავლა. როცა დაასრულებთ ჩვენს ოცსაათან კურსს, პროგრამირების საფუძვლები სრულად გექნებათ გავლილი და შეძლებთ დაიწყოთ მობილური აპლიკაციების, რობოტების ინსტრუქციების, თამაშების... ნებისმიერი რამის პროგრამირების სწავლა."
       4:
         image: 'notes/hoc6_4.jpg'
-        text: 'ტექნოლოგიები ცვლის ყველაფერს და არა აქვს მნიშვნელობა, ახალგაზრდა ხართ თუ აღარ: პროგრამირება სახალისოა, კრეატიული და მისი სწავლა ყველას შეუძლია!'
+        text: "ტექნოლოგიები ცვლის ყველაფერს და არა აქვს მნიშვნელობა, ახალგაზრდა ხართ თუ აღარ: პროგრამირება სახალისოა, კრეატიული და მისი სწავლა ყველას შეუძლია!"
     20_wrapup:
       1:
         image: 'notes/bird.png'
@@ -388,7 +388,7 @@ ka:
         text: "არ გგონიათ, რომ ფუტკრები სუპერ-მაგრები არიან? თავსატეხების შემდეგ ნაკრებში თქვენი მიზანი იქნება, დაეხმაროთ ფუტკარს მივიდეს ყვავილებთან, მოკრიბოს ნექტრი და შემდეგ გააკეთოთ სკებში თაფლი. ამ სავარჯიშოში დაგჭირდებათ ბლოკები \"ნექტარის მოპოვება\" და \"თაფლის გაკეთება\"."
       2:
         image: 'notes/C1_bee_level_intro_2.png'
-        text: 'ყოველ ყვავილს ნექტარის განსხვავებული რაოდენობა აქვს: 1, 2, 3 ან მეტი. ვიცით, რამდენი ნექტარი არის წითელ ყვავილებში - კუთხეში პატარა რიცხვის მიხედვით. დარწმუნდით, რომ ნექტარი მთლიანად აიღეთ და მხოლოდ შემდეგ გადადით წინ. ამის გარდა, გაითვალისწინეთ რომ ყოველ სკაში მხოლოდ 1, 2, 3 ან მეტი თაფლი შეიძლება მოთავსდეს, ამიტომ გააკეთეთ ზუსტად იმდენი თაფლი, რამდენის დატევაც შეუძლია კონკრეტულ სკას.'
+        text: "ყოველ ყვავილს ნექტარის განსხვავებული რაოდენობა აქვს: 1, 2, 3 ან მეტი. ვიცით, რამდენი ნექტარი არის წითელ ყვავილებში - კუთხეში პატარა რიცხვის მიხედვით. დარწმუნდით, რომ ნექტარი მთლიანად აიღეთ და მხოლოდ შემდეგ გადადით წინ. ამის გარდა, გაითვალისწინეთ რომ ყოველ სკაში მხოლოდ 1, 2, 3 ან მეტი თაფლი შეიძლება მოთავსდეს, ამიტომ გააკეთეთ ზუსტად იმდენი თაფლი, რამდენის დატევაც შეუძლია კონკრეტულ სკას."
       3:
         image: 'notes/C1_bee_level_intro_3.png'
         text: "თუ შეძლებთ და მთელ ნექტარს მოაგროვებთ და მთელ თაფლს გააკეთებთ, შემდეგ დონეზე გადახვალთ. სხვა შემთხვევაში, თავიდან მოგიწევთ ამ თავსატეხის გავლა. ითამაშეთ და იგრძენით, რას ნიშნავს, იყო პროგრამისტი!"
@@ -524,7 +524,7 @@ ka:
         text: "ინტერნეტში ყველაზე მეტად ის მომწონს, რომ მხიარული თამაშების თამაში შემიძლია. ქულების დაგროვება! ასვე ხატვა, ახალი რაღაცების შემქნა და მეგობრებთან მათი გაზიარება მიყვარს. მაგარია! ხანდახან ვეწვევი ვებსაიტებს, სადაც რამე ახალის სწავლა შემიძლია, მაგრამ ყოველთვის მხოლოდ ჩემ შესაფერის საიტებზე ვარ. ვაჰ, დინოზავრები!"
       6:
         image: 'notes/C1_going_places_safely_6.png'
-        text: 'ინტერნეტი ძალიან სახალისო ადგილია. მაგრამ ონლაინ გასვლისას ისევე ფრთხილად უნდა იყოთ, როგორც სამეზობლოში გასვლისას. სამი წესი უნდა დაიმახსოვროთ. პირველი: ყოველთვის ჰკითხეთ ნებართვა მშობლებს. მეორე: მარტო იმ ადამიანებს ესაუბრეთ, რომელთაც იცნობთ. მესამე: ეწვიეთ თქვენთვის შესაფერის ადგილებს.'
+        text: "ინტერნეტი ძალიან სახალისო ადგილია. მაგრამ ონლაინ გასვლისას ისევე ფრთხილად უნდა იყოთ, როგორც სამეზობლოში გასვლისას. სამი წესი უნდა დაიმახსოვროთ. პირველი: ყოველთვის ჰკითხეთ ნებართვა მშობლებს. მეორე: მარტო იმ ადამიანებს ესაუბრეთ, რომელთაც იცნობთ. მესამე: ეწვიეთ თქვენთვის შესაფერის ადგილებს."
       7:
         image: 'notes/C1_going_places_safely_7.png'
         text: "ვაჰ, როგორ ვიმხიარულეთ! ვახშამის დროა - გავდივარ ქსელიდან. მაგრამ ერთი სული მაქვს, ისევ როდის შემოვალ და ახალ ადგილებს ვნახავ."
@@ -1106,7 +1106,7 @@ ka:
         text: "ბინარულობის გამოყენების ყველაზე გავრცელებული გზა არის \"თუ\" დებულებები - პროგრამირების კლასიკური ელემენტი. პროგრამა გაშვებულია და გვეუბნება \"თუ რაღაც ჭეშმარიტია, გააკეთე ეს. თუ არა, გააკეთე რაღაც სხვა.\" დავუშვათ, რაღაც უფრო რთულის შექმნა გინდათ: მაგალითად, \"თუ\" დებულების მაგივრად გამოსახულებაზე ან ხმაზე მოქმედება."
       3:
         image: 'notes/C4_unplugged_binary_3.png'
-        text: კომპიუტერმა მარტო ბინარული სისტემა იცის, მაგრამ სურთი არ არის ბინარული, ის არ შედგება ნულებისა და ერთიანებისგან.. რა გავაკეთოთ? ავიღოთ მაგალითი - აი, ეს მშვენიერი სურათი. სურათი არის რაღაც სახის ინფორმაცია. ნებისმიერი ინფორმაცია შეიძლება ავსახოთ ბინარულად - მთავარია, მოვიფიქროთ, როგორ.
+        text: "კომპიუტერმა მარტო ბინარული სისტემა იცის, მაგრამ სურთი არ არის ბინარული, ის არ შედგება ნულებისა და ერთიანებისგან.. რა გავაკეთოთ? ავიღოთ მაგალითი - აი, ეს მშვენიერი სურათი. სურათი არის რაღაც სახის ინფორმაცია. ნებისმიერი ინფორმაცია შეიძლება ავსახოთ ბინარულად - მთავარია, მოვიფიქროთ, როგორ."
       4:
         image: 'notes/C4_unplugged_binary_4.png'
         text: "წარმოიდგინეთ, რომ ამ პანდას უნდა დავადოთ ბადე და ყოველი კვადრატისთვის უნდა გადავწყვიტოთ, ის უფრო შავია, თუ უფრო თეთრი - შემდეგ კი უნდა შევღებოთ გადაწყვეტილების შესაბამისად. ამ ბადეზე ყოველი კვადრატი ან შავია, ან თეთრი და ვთქვათ, რომ შავი კვარდატი არის ნული (ბინარული ციფრი) და თეთრი კვადრატი არის ერთი (მეორე ბინარული ციფრი). ბოლოს მხოლოდ ნულები და ერთიანები დაგრჩებათ - აი, როგორ გამოვსახოთ სურათი ბინარული სისტემით."
@@ -1247,7 +1247,7 @@ ka:
         text: "ეს არის გამოთვლითი აზროვნების გაკვეთილი, რომელმაც უნდა გასწავლოთ, როგორ დაშალოთ დიდი, რთული პრობლემა რამდენიმე უფრო მარტივ ამოცანად. ამ გაკვეთლის მიზანია დაწეროთ ინსტრუქციები, რომელთა მიხედვითაც ნებისმიერი შეძლებს დახატოს გაკვეთილის გეგმაში მოცემული ერთ-ერთი მონსტრი."
       2:
         image: 'notes/unplug2_2.png'
-        text: 'მოსწავლები იყოფიან ორ ჯგუფად და წერენ ინსტრუქციებს, შემდეგ კი ცვლიან ნამუშევრებს ერთმანეთში და მათ მიხედვით ხატავენ მონსტრს. ჯგუფები ინსტრუქციების გამოთვლითი აზროვნების ოთხი ნაბიჯის გამოყენებით დაწერენ: დაშლა, შაბლონის განსაზღვრა, აბსტრაგირება და ალგორითმები.'
+        text: "მოსწავლები იყოფიან ორ ჯგუფად და წერენ ინსტრუქციებს, შემდეგ კი ცვლიან ნამუშევრებს ერთმანეთში და მათ მიხედვით ხატავენ მონსტრს. ჯგუფები ინსტრუქციების გამოთვლითი აზროვნების ოთხი ნაბიჯის გამოყენებით დაწერენ: დაშლა, შაბლონის განსაზღვრა, აბსტრაგირება და ალგორითმები."
       3:
         image: 'notes/unplug2_3.png'
         text: "პირველი ჯგუფები დაანაწევრებენ დავალებას, ანუ შექმნიან თამაშის გეგმას. შემდეგ ისინი გადაარჩევენ მონსტრებს და შექმნიან შაბლონს - ყველა სხვაობას გამოყოფენ ან წაშლიან. მაგალითად, ერთ მონსტრს აქვს ელფის თვალები, მეორეს კი - ტროლის თვალები. მთავარია, რომ ორივეს აქვს თვალები, ამიტომ ჩვენ დავწერთ ხაზს, რომელიც ამბობს: მონსტრს აქვს *ცარიელი* თვალები."
@@ -1260,7 +1260,7 @@ ka:
         text: "გრაფიკული პროგრამირება ქაღალდზე კარგად ხსნის კოდის არსს. ამ დავალებაში მოსწავლეებმა მხოლოდ ისრებითა და კონტურებით უნდა სცადონ სურათის გადახატვა. ერთი მიიღებს საწყის სურათს და მხოლოდ კონკრეტული ისრების გამოყენებით უნდა ახსნას, როგორ უნდა გაიმერონ ეს ნახატი სხვებმა."
       2:
         image: 'notes/unplug3_2.png'
-        text: 'ამ აქტივობაში მხოლოდ ამ სიმბოლოების გამოყენება შეგიძლიათ: ერთი კვადრატით წინ, უკან, ზემოთ ან ქვემოთ გადაადგლება, შემდეგ ფერზე შეცვლა და თქვენი კვადრატის შეღებვა. როცა კოდის წერას დავასრულებთ, გადავცეთ იგი სხვა ადამიანს და ვანხოთ, თუ გამოუვა სურათის გამეორება.'
+        text: "ამ აქტივობაში მხოლოდ ამ სიმბოლოების გამოყენება შეგიძლიათ: ერთი კვადრატით წინ, უკან, ზემოთ ან ქვემოთ გადაადგლება, შემდეგ ფერზე შეცვლა და თქვენი კვადრატის შეღებვა. როცა კოდის წერას დავასრულებთ, გადავცეთ იგი სხვა ადამიანს და ვანხოთ, თუ გამოუვა სურათის გამეორება."
     unplug4:
       1:
         image: 'notes/unplug4_1.png'
@@ -1335,7 +1335,7 @@ ka:
     starwars_intro:
       1:
         image: 'notes/starwars_intro_1.JPG'
-        text: გამარჯობა, მე ვარ ქეთლინ კენედი, ვარსკვლავური ომების პროდიუსერი. დღეს თქვენ იმუშავებთ ჩვენს ერთ-ერთ ვარსკვლავთან, BB-8-სთან. BB-8 არის სფერული დროიდი. ყველა მის მოქმედებასა და მოძრაობას მართავს პროგრამა. კომპიუტერული მეცნიერება გავლენას ახდენს ყველა ინდუსტრიაზე, მარკეტინგით დაწყებული, ჯანმრთელობის დაზღვევით გაგრძელებული, კინოინდუსტრიით დასრულებული. ვარსკვლავური ომების ბოლო ნაწილის შექმნაზე ასობით პროგრამისტი მუშაობდა.
+        text: "გამარჯობა, მე ვარ ქეთლინ კენედი, ვარსკვლავური ომების პროდიუსერი. დღეს თქვენ იმუშავებთ ჩვენს ერთ-ერთ ვარსკვლავთან, BB-8-სთან. BB-8 არის სფერული დროიდი. ყველა მის მოქმედებასა და მოძრაობას მართავს პროგრამა. კომპიუტერული მეცნიერება გავლენას ახდენს ყველა ინდუსტრიაზე, მარკეტინგით დაწყებული, ჯანმრთელობის დაზღვევით გაგრძელებული, კინოინდუსტრიით დასრულებული. ვარსკვლავური ომების ბოლო ნაწილის შექმნაზე ასობით პროგრამისტი მუშაობდა."
       2:
         image: 'notes/starwars_intro_2.JPG'
         text: "გამარჯობა, მე რეიჩელ როუზი ვარ. მე ვარ ILM-ში კვლევისა და განვითარების განყოფილების უფროსი და ანიმაციისა და შემოქმედების გუნდს ვხელმძღვანელობ. ვარსკვლავური ომების ახალ ნაწილში ჩემი მოვალეობაა ვუხელმძღვანელო ხელოვანთა გუნდებს და ერთად შევქმნათ პერსონაჟების უფრო რეალისტური სურათი."
@@ -1394,7 +1394,7 @@ ka:
         text: "გილოცავთ, თქვენ ეს შეძელით! თქვენ დააპროგრამეთ BB-8. მე ვფიქრობ, ახლა მზად ვართ უფრო რთული დავალებისთვის. ახლა, როცა პროგრამირების საფუძვლები უკვე იცით, დავბრუნდეთ დროში და შევქმნათ თქვენი საკუთარი თამაში, მთავარ როლებში კი R2-D2 და C3PO გვყავდეს."
       3:
         image: 'notes/starwars_events_3.JPG'
-        text: თამაშის შესაქმნელად ისეთი რამე უნდა ვისწავლოთ, რასაც პროგრამისტები ყოველ დღე იყენებენ - მოვლენები. მოვლენა აცნობებს თქვენს პროგრამას, რომ რაღაცას უნდა დაუცადოს. როცა ეს რაღაც - მოვლენა - მოხდება, პროგრამა გარკვეულ ქმედებას განახორციელებს.
+        text: "თამაშის შესაქმნელად ისეთი რამე უნდა ვისწავლოთ, რასაც პროგრამისტები ყოველ დღე იყენებენ - მოვლენები. მოვლენა აცნობებს თქვენს პროგრამას, რომ რაღაცას უნდა დაუცადოს. როცა ეს რაღაც - მოვლენა - მოხდება, პროგრამა გარკვეულ ქმედებას განახორციელებს."
       4:
         image: 'notes/starwars_events_4.JPG'
         text: "მოვლენა შეიძლება იყოს: მაუსის დაკლიკვა, ისრის ღილაკზე დაჭერა, ეკრანზე შეხება."
@@ -1432,7 +1432,7 @@ ka:
     starwars_blocks_intro:
       1:
         image: 'notes/starwars_blocks_intro_1.JPG'
-        text: გამარჯობა, მე ვარ ქეთლინ კენედი, ვარსკვლავური ომების პროდიუსერი. დღეს თქვენ იმუშავებთ ჩვენს ერთ-ერთ ვარსკვლავთან, BB-8-სთან. BB-8 არის სფერული დროიდი. ყველა მის მოქმედებასა და მოძრაობას მართავს პროგრამა. კომპიუტერული მეცნიერება გავლენას ახდენს ყველა ინდუსტრიაზე, მარკეტინგით დაწყებული, ჯანმრთელობის დაზღვევით გაგრძელებული, კინოინდუსტრიით დასრულებული. ვარსკვლავური ომების ბოლო ნაწილის შექმნაზე ასობით პროგრამისტი მუშაობდა!
+        text: "გამარჯობა, მე ვარ ქეთლინ კენედი, ვარსკვლავური ომების პროდიუსერი. დღეს თქვენ იმუშავებთ ჩვენს ერთ-ერთ ვარსკვლავთან, BB-8-სთან. BB-8 არის სფერული დროიდი. ყველა მის მოქმედებასა და მოძრაობას მართავს პროგრამა. კომპიუტერული მეცნიერება გავლენას ახდენს ყველა ინდუსტრიაზე, მარკეტინგით დაწყებული, ჯანმრთელობის დაზღვევით გაგრძელებული, კინოინდუსტრიით დასრულებული. ვარსკვლავური ომების ბოლო ნაწილის შექმნაზე ასობით პროგრამისტი მუშაობდა!"
       2:
         image: 'notes/starwars_blocks_intro_2.JPG'
         text: "გამარჯობა, მე რეიჩელ როუზი ვარ. მე ვარ ILM-ში კვლევისა და განვითარების განყოფილების უფროსი და ანიმაციისა და შემოქმედების გუნდს ვხელმძღვანელობ. ვარსკვლავური ომების ახალ ნაწილში ჩემი მოვალეობაა ვუხელმძღვანელო ხელოვანთა გუნდებს და ერთად შევქმნათ პერსონაჟების უფრო რეალისტური სურათი შორეულ გალაქტიკაში."
@@ -1469,7 +1469,7 @@ ka:
         text: "გილოცავთ, თქვენ ეს შეძელით! თქვენ დააპროგრამეთ BB-8. მე ვფიქრობ, ახლა მზად ვართ უფრო რთული დავალებისთვის. ახლა, როცა პროგრამირების საფუძვლები უკვე იცით, დავბრუნდეთ დროში და შევქმნათ თქვენი საკუთარი თამაში, მთავარ როლებში კი R2-D2 და C3PO გვყავდეს."
       3:
         image: 'notes/starwars_blocks_events_3.JPG'
-        text: თამაშის შესაქმნელად ისეთი რამე უნდა ვისწავლოთ, რასაც პროგრამისტები ყოველ დღე იყენებენ - მოვლენები. მოვლენა აცნობებს თქვენს პროგრამას, რომ რაღაცას უნდა დაუცადოს. როცა ეს რაღაც - მოვლენა - მოხდება, პროგრამა გარკვეულ ქმედებას განახორციელებს.
+        text: "თამაშის შესაქმნელად ისეთი რამე უნდა ვისწავლოთ, რასაც პროგრამისტები ყოველ დღე იყენებენ - მოვლენები. მოვლენა აცნობებს თქვენს პროგრამას, რომ რაღაცას უნდა დაუცადოს. როცა ეს რაღაც - მოვლენა - მოხდება, პროგრამა გარკვეულ ქმედებას განახორციელებს."
       4:
         image: 'notes/starwars_blocks_events_4.JPG'
         text: "მოვლენა შეიძლება იყოს: მაუსის დაკლიკვა, ისრის ღილაკზე დაჭერა, ეკრანზე შეხება."
@@ -1534,7 +1534,7 @@ ka:
         text: "თუ ბლოკის წაშლა მოგინდებათ, უბრალოდ გადაიტანეთ ის უკან, ინსტრუმენტების პანელზე."
       12:
         image: 'notes/mc_intro_12.JPG'
-        text: 'ცვლილებების გასაუქმებლად და საწყის პოზიციაში დასაბრუნებლად გამოიყენეთ სამუშაო სივრცის მარჯვენა ზედა კუთხეში განლაგებული ღილაკი "ხელახლა დაწყება". და კიდევ: ხედავთ პატარა სამკუთხედებს მოტრიალების ბლოკებზე? ყოველთვის, როცა სამკუთხედს ხედავთ, ეს ნიშნავს, რომ რამდენიმე ვარიანტიდან არჩევა შეგიძლიათ. დავიწყოთ კოდის წერა!'
+        text: "ცვლილებების გასაუქმებლად და საწყის პოზიციაში დასაბრუნებლად გამოიყენეთ სამუშაო სივრცის მარჯვენა ზედა კუთხეში განლაგებული ღილაკი \"ხელახლა დაწყება\". და კიდევ: ხედავთ პატარა სამკუთხედებს მოტრიალების ბლოკებზე? ყოველთვის, როცა სამკუთხედს ხედავთ, ეს ნიშნავს, რომ რამდენიმე ვარიანტიდან არჩევა შეგიძლიათ. დავიწყოთ კოდის წერა!"
     mc_repeat:
       1:
         image: 'notes/mc_repeat_1.JPG'
@@ -1704,7 +1704,7 @@ ka:
         text: "სალამი, მე ჯენსი მქვია და მე მაინკრაფტის მთავარი დიზაინერი ვარ. შემდეგი ერთი საათის განმავლობაში თქვენ მაინკრაფტის საკუთარ თამაშს შექმნით. ეს უკვე ჰგავს მაინკრაფტს, მაგრამ სამყარო გაჩერებულია. ცხვარი არ მოძრაობს, ქათამი კვერცხს არ დებს და ზომბიც თავისთვის დგას გაუნძრევლად. ახლა თქვენი ჯერია – დაამატეთ კოდი და გააცოცხლეთ მაინკრაფტის სამყარო."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'მე მქვია მელისა და ჩემი საქმე მაინკრაფტის ფარგლებში არის მომხმარებლის კვლევა. რაც ნამდვილად მაინტერესებს არის ის, თუ როგორ შედიან ადამიანები ინტერაქციაში ტექნოლოგიებთან, ასე რომ ამ სამუშაოს ფარგლებში ერთმანეთს კომპიუტერულ მეცნიერებასა და ფსიქოლოგიას ვუთავსებ ერთმანეთს: როგორ ფიქრობენ და იქცევიან ადამიანები.'
+        text: "მე მქვია მელისა და ჩემი საქმე მაინკრაფტის ფარგლებში არის მომხმარებლის კვლევა. რაც ნამდვილად მაინტერესებს არის ის, თუ როგორ შედიან ადამიანები ინტერაქციაში ტექნოლოგიებთან, ასე რომ ამ სამუშაოს ფარგლებში ერთმანეთს კომპიუტერულ მეცნიერებასა და ფსიქოლოგიას ვუთავსებ ერთმანეთს: როგორ ფიქრობენ და იქცევიან ადამიანები."
       3:
         image: 'notes/mc_2016_intro_3.jpg'
         text: "როგორც ხედავთ, თქვენი ეკრანი სამ ძირითად ნაწილადაა დაყოფილი. 1) მარცხნივ მაინკრაფტის თამაშია. ახლა სამყარო გაყინულია, მაგრამ ამას კოდის მეშვეობით გამოვასწორებთ."
@@ -1812,7 +1812,7 @@ ka:
         text: "Next I'll choose the type of event. There's lots of options you can pick from but right now I'll leave it as a regular old click."
       5:
         image: 'notes/applab_intro_events_5.png'
-        text: 'Finally I''ll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: "On the event that the button is clicked run all this code."'
+        text: "Finally I'll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: \"On the event that the button is clicked run all this code.\""
       6:
         image: 'notes/applab_intro_events_6.png'
         text: "Let's test it. Blocks outside an onEvent still run right away so the screen starts blue."
@@ -1909,16 +1909,16 @@ ka:
     mc_2017_agent_intro:
       1:
         image: 'notes/mc_2017_agent_intro_1.png'
-        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you''re going to love it!'
+        text: "Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you're going to love it!"
       2:
         image: 'notes/mc_2017_agent_intro_2.png'
         text: "Wait a minute - there's a hole in the track! (screaming)"
       3:
         image: 'notes/mc_2017_agent_intro_3.png'
-        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let''s make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy: I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy: Does anyone know how to write Minecraft code?'
+        text: "Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let's make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I'm just gonna gather some of this terracotta. Wait. Guys, I can't mine! Preston: Same. Lizzy: I can't either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can't mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don't know. Stampy: Does anyone know how to write Minecraft code?"
       4:
         image: 'notes/mc_2017_agent_intro_4.png'
-        text: '(poof) Preston: What is that? Stampy: I''ve never seen one of these before. Lizzy: It''s so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I''ll go.'
+        text: "(poof) Preston: What is that? Stampy: I've never seen one of these before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
       5:
         image: 'notes/mc_2017_agent_intro_5.png'
         text: "Oh, okay, hey, so I'm in the real world now. I'm going to go try to find the Minecraft offices."
@@ -1946,22 +1946,22 @@ ka:
     mc_2017_repeat:
       1:
         image: 'notes/mc_2017_repeat_1.png'
-        text: 'Stampy: I wonder what Stacy is up to?'
+        text: "Stampy: I wonder what Stacy is up to?"
       2:
         image: 'notes/mc_2017_repeat_2.png'
-        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
+        text: "Stacy: Woah, I think I'm in the right place. This is amazing!"
       3:
         image: 'notes/mc_2017_repeat_3.png'
         text: "I feel like I'm back in Minecraft! Hello. How are you? Hello?"
       4:
         image: 'notes/mc_2017_repeat_4.png'
-        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
+        text: "Oh, there's a creeper. You don't do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!"
       5:
         image: 'notes/mc_2017_repeat_5.png'
-        text: 'Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn''t happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you''re learning?'
+        text: "Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it's pretty awesome. I'm a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I've probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn't happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can't, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you're learning?"
       6:
         image: 'notes/mc_2017_repeat_6.png'
-        text: 'Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there''s actually some of that coming up in the levels ahead, so go ahead and give loops a try.'
+        text: "Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there's actually some of that coming up in the levels ahead, so go ahead and give loops a try."
       7:
         image: 'notes/mc_2017_repeat_7.png'
         text: "In the next level, you can use a loop to move the Agent along the path. Drag the repeat block into the workspace and place the move forward block inside the repeat block. This tells the computer to do the same thing many times in a row without having to drag a whole bunch of blocks into the workspace. You can choose how many times to repeat by putting a number in the repeat block."
@@ -1970,14 +1970,14 @@ ka:
         text: "You can put turns and multiple commands in the repeat block too, but for now try using a repeat to move the Agent forward a few steps. Remember, if you get stuck on a puzzle you can always hit the blue reset button and try again."
       9:
         image: 'notes/mc_2017_repeat_9.png'
-        text: 'If you are thinking about having a cool job like Katie''s, go ahead and click the show code button when you finish every level. That''s going to actually show you the Javascript code that someone like Katie uses when she''s actually programming Minecraft. Katie: Yeah, good luck everyone!'
+        text: "If you are thinking about having a cool job like Katie's, go ahead and click the show code button when you finish every level. That's going to actually show you the Javascript code that someone like Katie uses when she's actually programming Minecraft. Katie: Yeah, good luck everyone!"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
-        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour. Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+        text: "Preston: I'm not trying to brag, but I'm pretty good at parkour. Lizzy: Let's sleep so it's day when Stacy comes back."
       2:
         image: 'notes/mc_2017_functions_2.png'
-        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I''m having in my game. I think I can use a function. Let me just open this.'
+        text: "Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I'm having in my game. I think I can use a function. Let me just open this."
       3:
         image: 'notes/mc_2017_functions_3.png'
         text: "So a function is a specific set of instructions to accomplish a certain task, kind of like a recipe. In the next few levels, you'll have access to functions that you can use to solve the puzzles."
@@ -1993,32 +1993,32 @@ ka:
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
-        text: 'Preston: Congratulations!'
+        text: "Preston: Congratulations!"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
-        text: 'Lizzy: Congratulations!'
+        text: "Lizzy: Congratulations!"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
-        text: 'Stampy: Congratulations, you did it!'
+        text: "Stampy: Congratulations, you did it!"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
-        text: 'Stacy: Congratulations guys, you totally rocked that! And now that you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve learned about loops, functions, and what a software Agent does.'
+        text: "Stacy: Congratulations guys, you totally rocked that! And now that you've completed the Hour of Code, you can start coding in Minecraft. You've learned about loops, functions, and what a software Agent does."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
         text: "Now, it's time for the free play level, where you are the developer. Use any remaining time to write your own functions to explore, mine, and build."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
-        text: 'You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click ''Finish'' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!'
+        text: "You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click 'Finish' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
-        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it''s doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it''s not just staircases. I can tell the Agent to do anything I want, and it will do it for me.'
+        text: "Stacy: And I'm back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it's doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it's not just staircases. I can tell the Agent to do anything I want, and it will do it for me."
       8:
         image: 'notes/mc_2017_congratulations_8.png'
-        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used code!'
+        text: "Stampy: How did you do that? Stacy: It was easy, actually. I just used code!"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
-        text: 'Everywhere you look, computers are changing the world. Whether they''re on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don''t often ask: "How do computers work?" In this series, you''re going to learn how computers really work, starting with what makes a computer a computer. Then, you''ll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds.'
+        text: "Everywhere you look, computers are changing the world. Whether they're on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don't often ask: \"How do computers work?\" In this series, you're going to learn how computers really work, starting with what makes a computer a computer. Then, you'll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds."
       2:
         image: 'notes/csd_concept_how_computers_work_2.png'
         text: "After that, you'll learn how computers use circuits to do everything from simple math to simulating entire virtual worlds. Next, you'll zoom out and look at the different parts of a computer that actually input, output, and store all that information. Finally, you'll take a look at what code actually is and how software controls hardware. So whether you're just curious about the devices you use every day or you want to design the innovations of the future, the first step is learning how computers work."
@@ -2071,10 +2071,10 @@ ka:
         text: "Well, if you have a single wire with electricity flowing through it, the signal could either be on or off. That's not a lot of choices, but it's a really important start. With one wire, we can represent a yes or no, true or false, a one or zero, or anything else with only two options. This on/off state of a single wire is called a bit, and it's the smallest piece of information a computer can store."
       6:
         image: 'notes/csd_concept_binary_data_6.png'
-        text: 'If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system.'
+        text: "If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system."
       7:
         image: 'notes/csd_concept_binary_data_7.png'
-        text: 'In the decimal number system, we have ten digits from zero to nine, and that''s how we''ve all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number.'
+        text: "In the decimal number system, we have ten digits from zero to nine, and that's how we've all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number."
       8:
         image: 'notes/csd_concept_binary_data_8.png'
         text: "Here's how this works. In a decimal number system we're all used to, each position in a number has a different value. There's a 1 position, the 10 position, the 100 position, and so on. For example, a 9 in the 100 position is a 900. In binary, each position also carries a value. But instead of multiplying by 10 each time, we multiply by 2. So there's the 1 position, the 2 position, the 4 position, the 8 position, and so on. For example, the number 9 in binary is 1001. To calculate the value, we add 1 times 8, plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this math because computers do it for us. What's important is that any number can be represented with only ones and zeros, or by a bunch of wires that are on or off. The more wires you use, the larger the numbers you can store. With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With just 32 wires, you can store all the way from 0 to over 4 billion. Using the binary number system, you can represent any number you like."
@@ -2163,14 +2163,14 @@ ka:
         text: "The more complicated a task is and the more information that is input or output, the more processing power and memory a computer needs. Typing letters on a screen may be easy but to do complicated 3d graphics or record a high-definition movie, modern computers often have multiple CPUs to process all that information and many gigabytes of memory to store it."
       12:
         image: 'notes/csd_concept_memory_cpu_input_output_12.png'
-        text: 'No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world.'
+        text: "No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world."
     csd_concept_hardware_software:
       1:
         image: 'notes/csd_concept_hardware_software_1.png'
         text: "Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com. One of the best things about working in tech, and at Amazon in particular, is that I get to bring my dog with me to work every day. My job is to help make sure software gets out the door and her job is to nap under my desk and snore very loudly."
       2:
         image: 'notes/csd_concept_hardware_software_2.png'
-        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox.'
+        text: "My name is Jerome Holman, and I'm a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox."
       3:
         image: 'notes/csd_concept_hardware_software_3.png'
         text: "When you look inside a computing device you see a bunch of circuits, chips, wires, speakers, plugs, and all sorts of other stuff. This is the hardware."

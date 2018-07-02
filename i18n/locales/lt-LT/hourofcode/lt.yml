@@ -275,9 +275,9 @@ lt:
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Specialus renginys'
   map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
-  meta_tag_og_title: Štai ir Programavimo valanda
+  meta_tag_og_title: 'Štai ir Programavimo valanda'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
-  meta_tag_twitter_title: Štai ir Programavimo valanda
+  meta_tag_twitter_title: 'Štai ir Programavimo valanda'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
   twitter_default_text: "Aš dalyvauju šių metų \"Programavimo valandoje\" (#HourOfCode), o tu? @codeorg"
   hoc_faq_title: 'DUK'
@@ -325,12 +325,12 @@ lt:
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "Mūsų svetainė greičiausiai pasiekė 15 mln. žmonių."
   stats_i18n: "Students are learning in over 45 languages"
-  stats_tumblr: 'Tumblr: 3.5 years'
-  stats_facebook: 'Facebook: 3 years'
-  stats_twitter: 'Twitter: 2.5 years'
-  stats_pinterest: 'Pinterest: 2 years'
-  stats_instagram: 'Instagram: 14 months'
-  stats_hoc: 'The Hour of Code: 5 days'
+  stats_tumblr: "Tumblr: 3.5 years"
+  stats_facebook: "Facebook: 3 years"
+  stats_twitter: "Twitter: 2.5 years"
+  stats_pinterest: "Pinterest: 2 years"
+  stats_instagram: "Instagram: 14 months"
+  stats_hoc: "The Hour of Code: 5 days"
   stats_global: "Over 100M students have tried an Hour of Code"
   stats_girls_more: "More girls tried computer science than in the last 70 years"
   stats_females: "Participation of females in computer science is only 20% of high school courses, university courses, and the workforce."
@@ -433,20 +433,20 @@ lt:
   learn_banner_heading: 'PROGRAMAVIMO VALANDA'
   learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
   learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a> or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers: "Teachers: <a id='teacher_banner_host'>Host an hour</a> or <a id='teacher_banner_howto'>read the How-To Guide</a>"
   learn_robotics_banner_heading: 'Robotics and Circuits'
   learn_robotics_banner_blurb: 'Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware.'
   tutorial_athlete_name: "Code your own sports game"
-  tutorial_moana_name: 'Moana: Wayfinding with Code'
-  tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_moana_name: "Moana: Wayfinding with Code"
+  tutorial_star-wars_name: "Star Wars: Building a Galaxy with Code"
   tutorial_gumadventure_name: "Gumball's Coding Adventure"
   tutorial_mchoc_name: "Minecraft Hour of Code"
-  tutorial_vidnews_name: 'Vidcode: Code the News'
+  tutorial_vidnews_name: "Vidcode: Code the News"
   tutorial_kodable-pre_name: "Kodable (pre-readers welcome)"
   tutorial_highseas_name: "Adventure on the High Seas"
   tutorial_capython_name: "Python Turtle Graphics"
   tutorial_frzn_name: "Code with Anna and Elsa"
-  tutorial_cocom_name: 'CodeCombat: Escape Dungeon!'
+  tutorial_cocom_name: "CodeCombat: Escape Dungeon!"
   tutorial_play-lab_name: "Play Lab"
   tutorial_boxisland_name: "Box Island"
   tutorial_textcomp_name: "Text Compression"
@@ -455,7 +455,7 @@ lt:
   tutorial_foos_name: "codeSpark Academy with The Foos"
   tutorial_tynkerdd_name: "Dragon Dash"
   tutorial_tynkerana_name: "Analog Clock STEM Kit"
-  tutorial_vidcard_name: 'Vidcode: Bestie Greeting Card'
+  tutorial_vidcard_name: "Vidcode: Bestie Greeting Card"
   tutorial_spritebox_name: "Spritebox Coding"
   tutorial_tynkerch_name: "Counter Hack"
   tutorial_lightbot_name: "Lightbot"
@@ -463,7 +463,7 @@ lt:
   tutorial_code_name: "Write your first computer program"
   tutorial_tinspire_name: "10 Minutes of Code for the TI-Nspire CX"
   tutorial_itchbounceball_name: "ITCH Bouncing Ball (in Scratch)"
-  tutorial_vidclim_name: 'Vidcode: Climate Science & Code'
+  tutorial_vidclim_name: "Vidcode: Climate Science & Code"
   tutorial_matlab_name: "Learn to Code with MATLAB"
   tutorial_flap_name: "Make a Flappy game"
   tutorial_galaxy_name: "Galaxy Game Jam"
@@ -484,7 +484,7 @@ lt:
   tutorial_tynkerapp_name: "Build an App"
   tutorial_tynkerpup_name: "Puppy Adventure"
   tutorial_livecode_name: "LiveCode Sound Boards"
-  tutorial_cocomgame_name: 'CodeCombat: Build Your Own žaidimas!'
+  tutorial_cocomgame_name: "CodeCombat: Build Your Own žaidimas!"
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
   tutorial_code-avengers_name: "Build a Game with JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
@@ -505,7 +505,7 @@ lt:
   tutorial_frogger_name: "Make your own 3D Frogger game"
   tutorial_tynkereco_name: "Ecological Pyramid STEM Kit"
   tutorial_mitedarc_name: "MIT Education Arcade"
-  tutorial_khan_name: 'Khan Academy: Drawing with Code'
+  tutorial_khan_name: "Khan Academy: Drawing with Code"
   tutorial_tynkerd_name: "Debugger"
   tutorial_cdmy_name: "Codecademy"
   tutorial_codestersdance_name: "Dance Moves"
@@ -524,7 +524,7 @@ lt:
   tutorial_touchdevelop_name: "TouchDevelop"
   tutorial_tynkercc_name: "Code Commander"
   tutorial_bamboo_name: "Bamboo JS"
-  tutorial_robojav_name: 'Robots and Java: An introduction to Java'
+  tutorial_robojav_name: "Robots and Java: An introduction to Java"
   tutorial_roboba_name: "Learn Algebra with RoboBlockly"
   tutorial_knodsnake_name: "JavaScript Snake"
   tutorial_soccharater_name: "Character Building"
@@ -532,7 +532,7 @@ lt:
   tutorial_robomesh_name: "Program VEX IQ Robots with Blockly"
   tutorial_amaze_name: "A-Maze-thing"
   tutorial_codestersds_name: "Dream Sequence"
-  tutorial_knodtext_name: 'Text Adventure: Python'
+  tutorial_knodtext_name: "Text Adventure: Python"
   tutorial_alicegar_name: "Animating with Alice and Garfield"
   tutorial_codesterstransform_name: "Transformation Puzzles"
   tutorial_flexfrog_name: "Flexbox Froggy"
@@ -541,7 +541,7 @@ lt:
   tutorial_robobm_name: "Learn Math with RoboBlockly"
   tutorial_codingrobots_name: "Learn One Hour Coding with RoboBlockly"
   tutorial_robob_name: "Learn Robotics with RoboBlockly"
-  tutorial_coders_name: 'Coders Strike Back: an introduction to bot programming'
+  tutorial_coders_name: "Coders Strike Back: an introduction to bot programming"
   tutorial_tynkerhw_name: "Learn to Code with Hot Wheels"
   tutorial_tynkermh_name: "Learn to Code with Monster High"
   tutorial_caphoto_name: "Build a Photo Booth App"
@@ -550,18 +550,18 @@ lt:
   tutorial_bbot_name: "Bomberbot Fun and Easy Coding Activities"
   tutorial_scratchg_name: "Programming Games in Scratch"
   tutorial_roboticfriends_name: "My Robotic Friends"
-  tutorial_sjforest_name: 'ScratchJr: Can I Make a Spooky Forest?'
-  tutorial_sjgreet_name: 'ScratchJr: Can I Make My Characters Greet Each Other?'
-  tutorial_sjsunset_name: 'ScratchJr: Can I Make the Sun Set?'
+  tutorial_sjforest_name: "ScratchJr: Can I Make a Spooky Forest?"
+  tutorial_sjgreet_name: "ScratchJr: Can I Make My Characters Greet Each Other?"
+  tutorial_sjsunset_name: "ScratchJr: Can I Make the Sun Set?"
   tutorial_fufafrenz_name: "fuzzFamily Frenzy"
   tutorial_bbcgeo_name: "Bitsbox Coding + Geometry"
   tutorial_chspixel_name: "CodeHS Pixel Art"
   tutorial_hummingbird_name: "Creating a Game with Hummingbird"
   tutorial_recoloring_name: "Recoloring the Universe"
   tutorial_bbcchem_name: "Bitsbox Coding + Chemistry"
-  tutorial_floalgo_name: 'Coding: Algorithms Lesson Plan'
-  tutorial_flocond_name: 'Coding: Conditionals Lesson Plan'
-  tutorial_floloops_name: 'Coding: For Loops Lesson Plan'
+  tutorial_floalgo_name: "Coding: Algorithms Lesson Plan"
+  tutorial_flocond_name: "Coding: Conditionals Lesson Plan"
+  tutorial_floloops_name: "Coding: For Loops Lesson Plan"
   tutorial_pgts_name: "Rock, Paper, Scissors"
   tutorial_ozo_name: "The OzoBlockly Tutorial"
   tutorial_bbcla_name: "Bitsbox Coding + Language Arts"
@@ -578,11 +578,11 @@ lt:
   tutorial_box_name: "Box Island"
   tutorial_hopgame_name: "Hopscotch Game Design Workshop"
   tutorial_icontrol_name: "iControl"
-  tutorial_cocomteach_name: 'CodeCombat: Veikla su mokytoju'
+  tutorial_cocomteach_name: "CodeCombat: Veikla su mokytoju"
   tutorial_bbcmathii_name: "Bitsbox Coding + Math (K-2)"
   tutorial_bbcphys_name: "Bitsbox Coding + Physics"
   tutorial_bitsbox_name: "Build Crazy Apps with Bitsbox"
-  tutorial_tlcemo_name: 'Emotion Machine: Create-a-Face Card'
+  tutorial_tlcemo_name: "Emotion Machine: Create-a-Face Card"
   tutorial_crd_name: "Conditionals with Cards"
   tutorial_bbcbio_name: "Bitsbox Coding + Biology"
   tutorial_ticklebb8_name: "BB-8 Swing"
@@ -599,13 +599,13 @@ lt:
   tutorial_hopquiz_name: "Quiz Creator"
   tutorial_unfortunate_name: "A Series of Unfortunate Events"
   tutorial_cha_name: "Computer History Activity"
-  tutorial_elaseq_name: 'Writing and Coding: ELA Integration with Common Core Standards'
+  tutorial_elaseq_name: "Writing and Coding: ELA Integration with Common Core Standards"
   tutorial_bbcmathi_name: "Bitsbox Coding + Math (3-5)"
   tutorial_tlcpixel_name: "Pixel Puzzles"
   tutorial_arduino_name: "Arduino Activity"
   tutorial_introrobo_name: "Introduction to Robotics"
   tutorial_tlcinvis_name: "Invisible Palming Activity"
-  tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
+  tutorial_tlcjflap_name: "JFLAP: Creating Finite State Machines"
   tutorial_procolor_name: "Drive to School with Ozobot"
   tutorial_spiralsfinch_name: "Spirals with the Finch"
   tutorial_ozoi_name: "Ozobot and OzoCodes Intro"
@@ -636,7 +636,7 @@ lt:
   tutorial_tynkercan_name: "Physics Cannon 2-Player Game Kit"
   tutorial_grokflags_name: "Flags of the World (Python Turtle)"
   tutorial_robomind_name: "Program a virtual robot with RoboMind"
-  tutorial_scratchanimwork_name: 'Animate Your Name: Educator Guide'
+  tutorial_scratchanimwork_name: "Animate Your Name: Educator Guide"
   tutorial_adventureq_name: "Adventure with Q"
   tutorial_khan-es_name: "An introduction to JavaScript"
   tutorial_kpt_name: "An introduction to JavaScript"
@@ -650,7 +650,7 @@ lt:
   tutorial_baypt_name: "Code Baymax"
   tutorial_code-combat_name: "CodeCombat"
   tutorial_mky_name: "CodeMonkey"
-  tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
+  tutorial_spellcraft_name: "CodeSpells: Spellcraft"
   tutorial_pirates_name: "Coding Pirates"
   tutorial_csfirst_name: "CS First"
   tutorial_loopedy_name: "Dance the Loopedy-Loop"
@@ -673,20 +673,20 @@ lt:
   tutorial_pixie_name: "PIXIE Challenges"
   tutorial_play_name: "Play Lab"
   tutorial_robomind-nl_name: "Program a virtual robot"
-  tutorial_spheroi_name: 'Blocks 1: Intro'
-  tutorial_spherol_name: 'Blocks 3: Lights'
-  tutorial_spherov_name: 'Blocks 4: Variables'
-  tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_spheroi_name: "Blocks 1: Intro"
+  tutorial_spherol_name: "Blocks 3: Lights"
+  tutorial_spherov_name: "Blocks 4: Variables"
+  tutorial_swb_name: "Star Wars: Building a Galaxy with Code"
+  tutorial_build-a-galaxy_name: "Star Wars: Building a Galaxy with Code"
   tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
   tutorial_tchr_name: "Teacher Led Lesson Plans"
   tutorial_robogame_name: "The Robot Games"
   tutorial_tap_name: "Tynker on Tablets"
   tutorial_cintl_name: "Write your first computer program"
   tutorial_itchstop_name: "ITCH Stop Frame Animation (Scratch)"
-  tutorial_tynkerpn_name: 'Peep: Nature Walk'
-  tutorial_tynkerpd_name: 'Peep: Dance with Friends'
-  tutorial_persistence_name: 'Persistence: Building a Foundation'
+  tutorial_tynkerpn_name: "Peep: Nature Walk"
+  tutorial_tynkerpd_name: "Peep: Dance with Friends"
+  tutorial_persistence_name: "Persistence: Building a Foundation"
   tutorial_getloopy_name: "Getting Loopy"
   tutorial_createface_name: "Create-a-Face"
   tutorial_happymaps_name: "Happy Maps"
@@ -706,8 +706,8 @@ lt:
   tutorial_wolframn_name: "Ninja Name Generator"
   tutorial_soloweb_name: "Your First Webpage in an Hour!"
   tutorial_bloxmobapp_name: "Build YOUR mobile APP"
-  tutorial_khanweb_name: 'Khan Academy: Webpages'
-  tutorial_khandata_name: 'Khan Academy: Databases'
+  tutorial_khanweb_name: "Khan Academy: Webpages"
+  tutorial_khandata_name: "Khan Academy: Databases"
   tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
   tutorial_googlelogo_name: "Create your own Google logo"
   tutorial_playtune_name: "Play That Tune App"
@@ -741,7 +741,7 @@ lt:
   tutorial_codehsjsgraph_name: "JavaScript Graphics with CodeHS"
   tutorial_thunkable_name: "Learn How to Build 10 Apps in 1 Hour!"
   tutorial_hopcrossyroad_name: "Make Crossy Road on iPad/iPhone"
-  tutorial_switchglitch_name: 'Switch & Glitch: Robot Adventure'
+  tutorial_switchglitch_name: "Switch & Glitch: Robot Adventure"
   tutorial_codecar_name: "Code Car Simulator"
   tutorial_codesterscp_name: "The Coordinate Plane"
   tutorial_grokpetblock_name: "Virtual Pet (micro:bit Blockly)"
@@ -751,8 +751,8 @@ lt:
   tutorial_grokdisease_name: "Disease Epidemic"
   tutorial_techec_name: "Explaining Closures in JS"
   tutorial_rgbegin_name: "RoboGarden - Beginner"
-  tutorial_myradream_name: 'Actimator: Myra''s Dream'
-  tutorial_thinkfun_name: 'Robot Repair: Can You Fix the Robot Brain?'
+  tutorial_myradream_name: "Actimator: Myra's Dream"
+  tutorial_thinkfun_name: "Robot Repair: Can You Fix the Robot Brain?"
   tutorial_hopfireworks_name: "Make a Fireworks App on iPad/iPhone"
   tutorial_grokspace_name: "Space (Blockly)"
   tutorial_codehspython_name: "Code in Python with CodeHS"
@@ -786,7 +786,7 @@ lt:
   tutorial_nclabdrone_name: "Let's Build a Drone!"
   tutorial_gpbcircle_name: "Make an Interactive Color Circle"
   tutorial_gpbpaint_name: "Make Your Own Paint Editor"
-  tutorial_cocomarcade_name: 'CodeCombat: Sudėjimas arkadinis žaidimas!'
+  tutorial_cocomarcade_name: "CodeCombat: Sudėjimas arkadinis žaidimas!"
   tutorial_techcpp_name: "7 Features of C++17 that will simplify your code"
   tutorial_beetik_name: "Code the Music of Franz Liszt"
   tutorial_codedj_name: "Compose Music with Code DJ"
@@ -794,7 +794,7 @@ lt:
   tutorial_codehsrn_name: "Creating Apps with React Native"
   tutorial_codehswd_name: "Web Design with CodeHS"
   tutorial_turtlerobot_name: "Turtle Robot"
-  tutorial_ozoevo_name: 'Intro to Evo: Evo''s Force Field'
+  tutorial_ozoevo_name: "Intro to Evo: Evo's Force Field"
   tutorial_ozoexped_name: "Ozobot Expedition to Neptune"
   tutorial_ozojourney_name: "Magellan's Journey"
   tutorial_ozocodes_name: "Write your Name with OzoCodes"
@@ -820,15 +820,15 @@ lt:
   tutorial_kodpizzapre_name: "Pizza Party! (pre-reader)"
   tutorial_kodpizza_name: "Pizza Party!"
   tutorial_kodwomen_name: "Women in Tech"
-  tutorial_tfunplug_name: 'Robot Repair: Can You Fix the Robot Brain? (Unplugged)'
+  tutorial_tfunplug_name: "Robot Repair: Can You Fix the Robot Brain? (Unplugged)"
   tutorial_lbvariables_name: "Variables with Littlebits"
   tutorial_lbfunctions_name: "Fun with Functions & littleBits"
   tutorial_lblogic_name: "Lessons in Logic with littleBits"
-  tutorial_lbworld_name: 'littleBits: Change the world arcade challenge'
+  tutorial_lbworld_name: "littleBits: Change the world arcade challenge"
   tutorial_lbloops_name: "Leap into loops with littleBits!"
-  tutorial_lbtug_name: 'littleBits: Tug of War'
-  tutorial_lbpotato_name: 'littleBits: Hot Potato...of Doom!'
-  tutorial_lbguitar_name: 'littlebits: Rockstar Guitar'
+  tutorial_lbtug_name: "littleBits: Tug of War"
+  tutorial_lbpotato_name: "littleBits: Hot Potato...of Doom!"
+  tutorial_lbguitar_name: "littlebits: Rockstar Guitar"
   tutorial_lbio_name: "Inputs & Outputs with littleBits"
   tutorial_wonpuppy_name: "Dash the Puppy (E3)"
   tutorial_woncue_name: "Cue's Starter Guide"
@@ -836,14 +836,14 @@ lt:
   tutorial_wontrip_name: "Dash's Road Trip (F2)"
   tutorial_woncollect_name: "Dash the Collector (B1)"
   tutorial_wonsecret_name: "Cue's Secret Message"
-  tutorial_hsscience_name: 'Hopscotch: Make Interactive Science Models on Your iPad/iPhone!'
+  tutorial_hsscience_name: "Hopscotch: Make Interactive Science Models on Your iPad/iPhone!"
   tutorial_popculture_name: "Pop Culture Data Science"
   tutorial_legorobust_name: "Robust Structures – LEGO® Education WeDo 2.0"
   tutorial_legoplants_name: "Plants and Pollinators – LEGO® Education WeDo 2.0"
   tutorial_legopark_name: "Autonomous Parking – LEGO® MINDSTORMS® Education EV3"
   tutorial_legodetect_name: "Object Detection – LEGO® MINDSTORMS® Education EV3"
   tutorial_legolight_name: "Automatic Headlights – LEGO® MINDSTORMS® Education EV3"
-  tutorial_alexa_name: 'Amazon Alexa Fact Skill Tutorial: My School Facts'
+  tutorial_alexa_name: "Amazon Alexa Fact Skill Tutorial: My School Facts"
   tutorial_grokpetmicro_name: "Virtual Pet (micro:bit MicroPython)"
   tutorial_pirateplunder_name: "Pirate Plunder"
   tutorial_cadj_name: "DR DJ Device"
@@ -853,7 +853,7 @@ lt:
   tutorial_accai_name: "Accenture Intelligent Space Exploration"
   tutorial_vceclipse_name: "Code the Eclipse"
   tutorial_pmzero_name: "Pac-Man ZERO"
-  tutorial_hsela_name: 'Telling stories: ELA + coding'
+  tutorial_hsela_name: "Telling stories: ELA + coding"
   tutorial_ticklear_name: "What's AR?"
   tutorial_bcrobot_name: "BlocksCAD Robot"
   tutorial_bcsnow_name: "BlocksCAD Snowflake"
@@ -861,14 +861,14 @@ lt:
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "Diggin' Dwarf"
   tutorial_rmedr_name: "Program VEX EDR Robots with Blockly"
-  tutorial_dksky_name: 'DevKit: Build the Sky Fall App'
-  tutorial_dkcurrency_name: 'DevKit: Build the Currency King App'
-  tutorial_dkriver_name: 'DevKit: Build the River Monsters App'
-  tutorial_dkball_name: 'DevKit: Build the Bouncing Ball App'
-  tutorial_spheroit_name: 'Blocks 2: If/Then Else'
+  tutorial_dksky_name: "DevKit: Build the Sky Fall App"
+  tutorial_dkcurrency_name: "DevKit: Build the Currency King App"
+  tutorial_dkriver_name: "DevKit: Build the River Monsters App"
+  tutorial_dkball_name: "DevKit: Build the Bouncing Ball App"
+  tutorial_spheroit_name: "Blocks 2: If/Then Else"
   tutorial_gameofcodes_name: "Game Of Codes"
   tutorial_blocklygames_name: "Blockly Games"
-  tutorial_spherohello_name: 'Text 1: Hello World'
+  tutorial_spherohello_name: "Text 1: Hello World"
   tutorial_spheroarcade_name: "Sphero Arcade Playground"
   tutorial_bcpy1_name: "World of Python"
   tutorial_bcpy2_name: "World of Python 2"
@@ -916,7 +916,7 @@ lt:
   tutorial_itchbio_shortdescription: "Create your own game to name the parts of a biological cell with ITCH (Scratch for Classrooms)"
   tutorial_itchj_shortdescription: "Learn how to make a character jump and land on platform with ITCH (Scratch for Teachers)"
   tutorial_tickleo_shortdescription: "With Tickle, an user-friendly coding app, you can easily program the Orca to swim in a number of ways by simply dragging and dropping coding blocks to create a command for it to follow."
-  tutorial_hopgeo_shortdescription: 'Build your own Geometry Jumper game: dodge obstacles as they fly at you!'
+  tutorial_hopgeo_shortdescription: "Build your own Geometry Jumper game: dodge obstacles as they fly at you!"
   tutorial_tynkermult_shortdescription: "Make a fun multiplication game!"
   tutorial_monster_shortdescription: "A colorful self-guided programming adventure for children."
   tutorial_tynkerapp_shortdescription: "Program a custom version of your favorite game!"
@@ -943,7 +943,7 @@ lt:
   tutorial_frogger_shortdescription: "Create and share your own 3D game "
   tutorial_tynkereco_shortdescription: "Code an interactive ecological pyramid."
   tutorial_mitedarc_shortdescription: "Have your sprite collect coins and get points."
-  tutorial_khan_shortdescription: 'Khan Academy: Drawing with Code teaches you how to code using JavaScript by designing your very own snowman'
+  tutorial_khan_shortdescription: "Khan Academy: Drawing with Code teaches you how to code using JavaScript by designing your very own snowman"
   tutorial_tynkerd_shortdescription: "Fight bugs to save the motherboard!"
   tutorial_cdmy_shortdescription: "Learn JavaScript programming, in a web-browser"
   tutorial_codestersdance_shortdescription: "Design your own dance routine and program a sprite to perform it! "
@@ -1133,7 +1133,7 @@ lt:
   tutorial_gpp_shortdescription: "Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing."
   tutorial_foosgame_shortdescription: "Design and code your own video game with codeSpark Academy with The Foos."
   tutorial_solopython_shortdescription: "Letter Counter in Python"
-  tutorial_kodableint_shortdescription: 'Students will be introduced to programming with the most foundational concept: Sequence.'
+  tutorial_kodableint_shortdescription: "Students will be introduced to programming with the most foundational concept: Sequence."
   tutorial_kodableadv_shortdescription: "Students will build on foundational programming concepts and learn about higher level, JavaScript code."
   tutorial_tynkertj_shortdescription: "Use Python to save the toxic jungle!"
   tutorial_wolframa_shortdescription: "Want to find out how old you are in seconds?"
@@ -1257,7 +1257,7 @@ lt:
   tutorial_kodchoose_shortdescription: "Write a Choose Your Own Adventure story using \"If statements\"!"
   tutorial_kodpizzapre_shortdescription: "Help Dominic's Pizza develop an algorithm for their new mobile app!"
   tutorial_kodpizza_shortdescription: "Help Dominic's Pizza develop an algorithm for their new mobile app!"
-  tutorial_kodwomen_shortdescription: 'Technology: is it for all or just some? Explore inequalities in tech.'
+  tutorial_kodwomen_shortdescription: "Technology: is it for all or just some? Explore inequalities in tech."
   tutorial_tfunplug_shortdescription: "Enjoy this fun, unplugged CS activity that teaches Boolean logic concepts."
   tutorial_lbvariables_shortdescription: "Having fun is not a variable with this littleBits Code Kit tutorial."
   tutorial_lbfunctions_shortdescription: "The fun don't stop when you combine function-based code blocks & littleBits."
@@ -1291,7 +1291,7 @@ lt:
   tutorial_accai_shortdescription: "Teach an Artificial Intelligence robot to explore a new planet!"
   tutorial_vceclipse_shortdescription: "Code a solar eclipse simulation with JavaScript!"
   tutorial_pmzero_shortdescription: "Create and program a 3D Pac-Man Maze World"
-  tutorial_hsela_shortdescription: 'Telling stories: ELA + coding'
+  tutorial_hsela_shortdescription: "Telling stories: ELA + coding"
   tutorial_ticklear_shortdescription: "Anyone can now code virtual and AR characters and program real devices to interact with them – seamlessly blending imagination and reality into a single experience!"
   tutorial_bcrobot_shortdescription: "With only two blocks, students can design, create, and think in 3D! They can build their own robot, while learning underlying math and computational thinking concepts."
   tutorial_bcsnow_shortdescription: "Students will use BlocksCAD to think, design, and create in 3D!"
@@ -1317,7 +1317,7 @@ lt:
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode \"The Signal,\" a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
   tutorial_mchoc_longdescription: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
-  tutorial_vidnews_longdescription: 'It''s the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. "Breaking News: 400 students at Roosevelt participate in the Hour of Code"'
+  tutorial_vidnews_longdescription: "It's the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. \"Breaking News: 400 students at Roosevelt participate in the Hour of Code\""
   tutorial_kodable-pre_longdescription: "Kodable is a self-guided game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary."
   tutorial_highseas_longdescription: "Animate an ocean wave to create a setting, then tell a story that takes place on the high seas."
   tutorial_capython_longdescription: "Python is an engaging and simple language to learn. Learn about using modules, functions, loops, and lists, all while creating fun images with the help of your turtle buddies. Geometry has never been so much fun!"
@@ -1390,12 +1390,12 @@ lt:
   tutorial_buildpong_longdescription: "Pong is one of the earliest arcade video games and the very first sports arcade video game. It is a table tennis sports game featuring simple two-dimensional graphics. The aim of the game is for the PLAYER to score on the COMPUTER while defending its GOAL. In this project, the COMPUTER is programmed with basic artificial intelligence so it can respond to the PLAYER."
   tutorial_tynkerdrones_longdescription: "Learn to program connected devices by solving the \"Crash Course\" puzzles, where you navigate virtual drones and robots through obstacles. Then you're ready to create programs to control real drones and robots. Requires an iPad or Android tablet and a supported toy."
   tutorial_carla_longdescription: "\"Programming with Carla\" is a series of short activities that guide students through building a simple chatbot, whilst learning about core concepts like variables and conditionals. The activities have been carefully designed to address common misconceptions that new programmers have about these topics by offering many opportunities for practice, as well as targeted hints and feedback.\n"
-  tutorial_globaloria_longdescription: 'In MakeQuest you learn to edit JavaScript code through a playful action game, and master computer science concepts like variables and functions. Create your own game by remixing and expanding on our game code in the Sandbox. Publish and share your game with friends!  Teachers: lesson plans and subject-specific extension activities are included.'
+  tutorial_globaloria_longdescription: "In MakeQuest you learn to edit JavaScript code through a playful action game, and master computer science concepts like variables and functions. Create your own game by remixing and expanding on our game code in the Sandbox. Publish and share your game with friends!  Teachers: lesson plans and subject-specific extension activities are included."
   tutorial_capost_longdescription: "Starting to learn HTML and CSS is easy and fun with this digital postcard. Learn about adding headings, paragraphs, images and links to create a holiday card or birthday celebration to share with friends and family."
   tutorial_marco_longdescription: "Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it."
   tutorial_codestersflappybike_longdescription: "In this activity, students use our drag-to-text toolkit to start coding in Python right away! Students are guided through a series of learning activities that teach them to build a complete game! After they finish, they are challenged to use what they learned about syntax, dot notation, events, variables, parameters and game mechanics to create a new game. "
   tutorial_kanopong_longdescription: "Learn to code by building this classic arcade game in an hour!"
-  tutorial_tynkerright_longdescription: 'Create your own Bill of Rights project: change the background, add more questions, keep score, add animations.'
+  tutorial_tynkerright_longdescription: "Create your own Bill of Rights project: change the background, add more questions, keep score, add animations."
   tutorial_flatverse_longdescription: "Learn the essentials to programming a game where it's eat or be eaten!"
   tutorial_touchdevelop_longdescription: "The touch-friendly editor will guide you in creating pixel art, solving the bear puzzle, or making your own jumping bird game. "
   tutorial_tynkercc_longdescription: "Prepare your army for battle! Code the attack logic of each member of your army to exploit your enemy's weaknesses and emerge from battles victorious. As you learn, you unlock new characters that you can program. Build up your army, then battle with friends. Whose code is best?"
@@ -1492,7 +1492,7 @@ lt:
   tutorial_firstcomp_longdescription: "Few things are as exciting as computers. And now you'll get to design your very own one - this time out of paper. Get to know the CPU, RAM and ROM, Mass Storage and GPU. Draw your first application. Get your scissors, pens and papers out!"
   tutorial_mazefinch_longdescription: "In this activity, you will use a very simple programming language to make the Finch robot move and turn. Then you will write programs to help the robot complete a maze! You do not need any prior programming experience, and you can use a laptop or a Chromebook. "
   tutorial_tlccc_longdescription: "Data on computers is stored as long sequences of characters – ultimately as binary 1s and 0s. The idea with compression is that we use an algorithm to change the way the information is represented so that fewer characters are needed to store exactly the same information."
-  tutorial_tlcdoodle_longdescription: 'Scenery in films is often computer generated. Ever wondered how they do it? Next time you find yourself drawing doodles, draw an algorithmic doodle and explore algorithms for drawing nature. The algorithms are recursive: that is they describe one step and then tell you just to draw the next step in the same way, following the algorithm from the start.'
+  tutorial_tlcdoodle_longdescription: "Scenery in films is often computer generated. Ever wondered how they do it? Next time you find yourself drawing doodles, draw an algorithmic doodle and explore algorithms for drawing nature. The algorithms are recursive: that is they describe one step and then tell you just to draw the next step in the same way, following the algorithm from the start."
   tutorial_tlcpunch_longdescription: "Demonstrate how early computers were able to find data stored on punch cards and show that it is the same algorithm as the magic trick in the 'Australian Magician's Dream' Activity. It aims to show in a visual way how a search algorithm works. In doing so you demonstrate a practical use of binary numbers, a divide and conquer algorithm for searching and explore the computational thinking trick of translating solutions between problem areas."
   tutorial_finchfract_longdescription: "This activity uses recursion to draw Koch fractals with the Finch robot. It assumes that students have been introduced to the idea of recursion, but completing this activity will help them to develop a deeper understanding of this concept via a physical representation of recursion. This activity is appropriate for students taking introductory or advanced computer science courses that use Python or Java."
   tutorial_tlcmind_longdescription: "This introduces the use of logical reasoning through the use of algebra to prove that an algorithm always works. It shows how abstraction and logical reasoning can be used to evaluate algorithms."
@@ -1501,7 +1501,7 @@ lt:
   tutorial_oralhist_longdescription: "The Computing Educators Oral History Project is a collection of interviews as well as teaching materials and tools tied to the CEOHP collection."
   tutorial_tlcmicro_longdescription: "This video can be used as a general introduction to human computer interaction (HCI) and in particular why so many gadgets areharder to use than need be. Design does make a difference and it is important that interfaces are evaluated to check they are easy to use."
   tutorial_imathematician_longdescription: "This, teacher led, activity provides the opportunity for pupils to use a cross curricular approach to computer science and mathematics.  \n\nPupils will create a computer program to solve a variation of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's Dilemma.\n"
-  tutorial_tlcmagic_longdescription: 'In exploring how the magic works, you learn about computational thinking: especially the importance of evaluation to algorithmic thinking. You explore both testing and hazard analysis. The magic trick shows how computer scientists, engineers (and magicians) have to check their algorithms thoroughly. They must think carefully about how things might go wrong as well as checking they will go right.'
+  tutorial_tlcmagic_longdescription: "In exploring how the magic works, you learn about computational thinking: especially the importance of evaluation to algorithmic thinking. You explore both testing and hazard analysis. The magic trick shows how computer scientists, engineers (and magicians) have to check their algorithms thoroughly. They must think carefully about how things might go wrong as well as checking they will go right."
   tutorial_scratchmus_longdescription: "With Scratch, you can create your own interactive games, stories, animations -- and share them with your friends. To get started, make an interactive music project. Activity cards and a workshop guide are also available for free on scratch.mit.edu"
   tutorial_scratchanim_longdescription: "With Scratch, you can create your own interactive games, stories, animations -- and share them with your friends. To get started, animate the letters of your name, initials, or a favorite word. Activity cards and a workshop guide are also available for free on scratch.mit.edu."
   tutorial_scratchfly_longdescription: "With Scratch, you can create your own interactive games, stories, animations -- and share them with your friends. To get started, learn how to make your own flying character. Activity cards and a workshop guide are also available for free on scratch.mit.edu. "
@@ -1512,7 +1512,7 @@ lt:
   tutorial_tynkercan_longdescription: "Make an awesome 2-player cannon game and challenge your friends to play with you! You'll start with a partially programmed version of the game, so you need to program the left cannon. Once you've got both cannons firing, you'll set up platforms and other items to knock over. Make it your own by adding extra features and customizing the theme!"
   tutorial_grokflags_longdescription: "This activity is designed to give you your first experience programming, and has been specially designed for the Hour of Code. Use the programming language Python and its turtle module to draw flags from around the world!"
   tutorial_robomind_longdescription: "Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. "
-  tutorial_scratchanimwork_longdescription: 'This guide offers ideas for leading a one-hour workshop using Scratch. Students will gain experience with coding as they animate their names or a favorite word. This educator guide is designed for use with this Scratch tutorial: scratch.mit.edu/name'
+  tutorial_scratchanimwork_longdescription: "This guide offers ideas for leading a one-hour workshop using Scratch. Students will gain experience with coding as they animate their names or a favorite word. This educator guide is designed for use with this Scratch tutorial: scratch.mit.edu/name"
   tutorial_adventureq_longdescription: "Adventure with Q is a lesson plan for teachers (or anyone) to use to introduce programming logic in a group setting. The activity consists of different quests for kids to complete. Kids learn the basic commands through helping Q the alien in his forest adventure. "
   tutorial_khan-es_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
   tutorial_kpt_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
@@ -1549,8 +1549,8 @@ lt:
   tutorial_pixie_longdescription: "Hour of Code tutorial with Pixie"
   tutorial_play_longdescription: "Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!"
   tutorial_robomind-nl_longdescription: "Students learn the basics of programming by controlling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. "
-  tutorial_spheroi_longdescription: "Everyone starts somewhere. Welcome to your first Lightning Lab activity!\n\nFollow the steps to get a quick video overview of the app, learn how to create programs using the block-based interface, and gain an understanding of loops. After that, test your skills and curiosity by playing a game with your robot and the app.\n"
-  tutorial_spherol_longdescription: "Dive into the power of lights in this activity. You will discover different methods to control Sphero's lights and then build programs to put the lights to work. You will create a program that powers a robotic Jack-o'-Lantern, turns Sphero into a sensor-based spinning top, and also get creative with long exposure light art."
+  tutorial_spheroi_longdescription: "Welcome to your first blocks activity! This is a great place to start for most users, and can be used for the \"Hour of Code.\" Follow the steps to get an overview of the app, learn how to create programs using block coding, and gain an understanding of loops and operators."
+  tutorial_spherol_longdescription: "You will learn a new use for the lights on your robot. In this activity, you will build a spinning top program where the gyroscopic spin rate will control the main LEDs, and you will use the concepts of normalization and absolute value. This is a great activity after you complete Blocks 2, and can be used for the \"Hour of Code.\""
   tutorial_spherov_longdescription: "It's time for another classic game powered by Sphero. Learn how to use variables, loop until, and randomness within bounds to bring Hot Potato to life. When you're all done, grab some friends and start tossing. Don't get caught with the Sphero when the time runs out!"
   tutorial_swb_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_build-a-galaxy_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
@@ -1582,8 +1582,8 @@ lt:
   tutorial_wolframn_longdescription: "In this activity, students develop a name generator that transforms their name into ninja names."
   tutorial_soloweb_longdescription: "Go to www.sololearn.com and install HTML and CSS apps or open the relevant lessons on the web (Android users can install the unified SoloLearn app).  Complete 2 modules (Overview and HTML Basics) in HTML and 2 modules (The Basics and Working w/Text) and first 5 lessons of the 3rd module (Properties) in CSS. Get the template at https://code.sololearn.com/WKeg2CtzpRts/ and follow the instructions."
   tutorial_bloxmobapp_longdescription: "Create your own mobile app.  Learn the sequencing and systems thinking to create apps you and your friends can use.  Design using chat Blox, quizzes, flashcards, calendars, maps, pictures and more into stories or interactive apps that work on any iOS or Android phone.  Anyone and everyone can create a mobile app.  Your content, Your customization, Your APP on Your Phone."
-  tutorial_khanweb_longdescription: 'Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card.'
-  tutorial_khandata_longdescription: 'Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store.'
+  tutorial_khanweb_longdescription: "Khan Academy: Webpages teaches you how to make webpages with HTML tags and CSS, finishing up by making your very own greeting card."
+  tutorial_khandata_longdescription: "Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store."
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
   tutorial_googlelogo_longdescription: "Use your creativity and imagination to bring the Google logo to life using code. Make the letters dance, tell a story or create a game. With Scratch and CS First, anyone can become a designer and programmer for the day!"
   tutorial_playtune_longdescription: "A blocks language is used to solve musical puzzles by writing code to match tunes played on a piano keyboard. Sequence, selection, and repetition algorithms are needed to solve the puzzles. After the 9th level, users can create their own tune and download it as an app for an Android device. Students can also modify the app by following a link to the App Inventor source code."
@@ -1597,17 +1597,17 @@ lt:
   tutorial_codehsdigipixel_longdescription: "Learn how images are stored and displayed on computers using pixels. Explore how images are encoded as a grid of color values, and make your own digital images using binary and hexadecimal color codes!"
   tutorial_ccbinary_longdescription: "Make a Scratch game in which you play the notes of a song as they scroll down the stage. You'll score ten points for every correct note you play. Each note corresponds to a binary number."
   tutorial_codehsturtle_longdescription: "Learn the basics of programming by drawing shapes on your screen with Tracy the Turtle! Turtle Graphics (or LOGO) is a beginner friendly way to explore programming concepts and bring creativity into programming in a visual way."
-  tutorial_grokhd_longdescription: 'Continue those Blockly programming skills! This course builds on what you learned in the Frozen Fractals activity: https://hourofcode.com/grokffblock. This activity is designed to introduce branching decisions in programming. Use the Blockly version of Python and its turtle module to draw and colour hydrangea flowers!'
+  tutorial_grokhd_longdescription: "Continue those Blockly programming skills! This course builds on what you learned in the Frozen Fractals activity: https://hourofcode.com/grokffblock. This activity is designed to introduce branching decisions in programming. Use the Blockly version of Python and its turtle module to draw and colour hydrangea flowers!"
   tutorial_grokem_longdescription: "This activity is designed to give you your first experience programming, and has been specially designed for the Hour of Code. Use the programming language Python to explore emoticons and text manipulation."
   tutorial_kodmaze_longdescription: "Build your own mazes to solve and share! Students will pair geometry with programming to build solvable mazes based on given challenges. Challenges include mazes with simple shapes, fractions, symmetry, and specified angles."
-  tutorial_codestersa_longdescription: 'In this activity, designed for students with some coding experience, students use our drag-to-text toolkit to build an game with player controls! Students learn about variables, randomly generated numbers, game design, and multiple types of events and event triggers, all while scrambling to stay out of the way as asteroids hurtle toward their spaceship! Prereq: variables, parameters.'
+  tutorial_codestersa_longdescription: "In this activity, designed for students with some coding experience, students use our drag-to-text toolkit to build an game with player controls! Students learn about variables, randomly generated numbers, game design, and multiple types of events and event triggers, all while scrambling to stay out of the way as asteroids hurtle toward their spaceship! Prereq: variables, parameters."
   tutorial_cmdodo_longdescription: "A game-based platform for 2nd to 4th graders to learn and practice math with the same easy-to use interface enjoyed in CodeMonkey's \"Coding Adventure\". In 60 interactive challenges, students will improve their math skills with exciting new characters, features and challenges. Using a pixel ruler and protractor to measure distances and angles, students will help the Dodo get to the eggs."
   tutorial_tynkerspace_longdescription: "Your astronaut's ship has crash-landed!  Luckily, you're there to help. Use drag-and-drop programming to help your character collect spare parts while avoiding aliens and obstacles. Can you find a ship to bring your astronaut home?"
   tutorial_gfbloons_longdescription: "In this lesson you will code a shooting monkey tower from the popular Bloons Tower Defense game. By the end of the lesson you will know the angle finding maths and algorithms commonly used in many of today's most popular tower defense games. You will be able to apply this knowledge in your own game. Gamefroot Hour of Code tutorials use a visual programming language using blocks where students simply drag and drop visual blocks to write code."
   tutorial_raspipong_longdescription: "Recreate the classic game of Pong using a Sense HAT and some Python code. This activity can be completed online using the Sense HAT emulator, or by using a Raspberry Pi and the Sense HAT hardware."
   tutorial_codehsvr_longdescription: "Learn the basics of building virtual reality worlds using HTML and the A-Frame JavaScript Library. Through this activity, students will build their own virtual reality worlds that are compatible with VR devices, including smartphone VR headsets!"
   tutorial_codesterstp_longdescription: "In this activity, students use Python to practice performing transformations on the coordinate plane! The lesson includes demonstrations, direct instruction, and challenges that ask students to program and identify various static transformations!"
-  tutorial_codestersbb_longdescription: 'Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. Advised prereq knowledge: variables, dot notation, events, negative numbers'
+  tutorial_codestersbb_longdescription: "Students use our drag-to-text toolkit to start coding in Python right away! In this self-guided activity, students complete a series of direct-instruction activities in which they build a pull and shoot basketball game! Students explore variables, events, basic syntax, creating random coordinates. Advised prereq knowledge: variables, dot notation, events, negative numbers"
   tutorial_gfcrossyroad_longdescription: "In this suite of introductory coding lessons you will learn about making your own Crossy Road style mini-game. You will learn how to code algorithms and sequences, inputs / outputs, loops and iteration, selection and if-statements, and comparative operators and think like a computer scientist. This suite of lessons is aligned with the New Zealand and Australian (Victorian) digital technologies curriculum and designed to help young people AND educators embrace coding in their schools, classrooms and coding clubs. Gamefroot Hour of Code tutorials use a visual programming language using blocks where students simply drag and drop visual blocks to write code."
   tutorial_googleww_longdescription: "In this activity, you'll code three unique scenes from the film using Blockly, an introductory coding language, to help Wonder Woman navigate obstacles and reach her goal. You'll use the power of sequences, variables, loops and conditionals to help Diana train against her opponents."
   tutorial_codehsjsapp_longdescription: "CodeHS is compatible with all up-to-date browsers except Internet Explorer. Chrome is our preferred / recommended browser, but Firefox and Safari should work fine as well, assuming they are up to date."
@@ -1689,7 +1689,7 @@ lt:
   tutorial_florobot_longdescription: "In this lesson, students will build their literacy skills while diving into the field of robotics. They'll watch Flocabulary's educational hip-hop video to find out what a robot is and see examples of robots in daily life. They'll close-read short passages about robots, discuss tasks that robots are well suited for and finish the lesson by designing their own robot to solve a specific problem."
   tutorial_isavesanta_longdescription: "In this teacher-led festive activity, adapted for the Hour of Code, the children explore create a computer game using Scratch to save Santa. They design algorithms, use conditional statements as well as test and debug their work. Includes step-by-step lesson plan, pupil resources, support cards and pre-written program templates."
   tutorial_iorder_longdescription: "This teacher led activity, adapted for the Hour of Code, develops computational thinking and coding skills using Scratch 2.0. The children program an ice-cream stand simulation and/or game and, in doing so, design algorithms, use repetition, conditional statements, test and debug their work. Includes step-by-step lesson plan, pupil support materials, and pre-written Scratch 2.0 program templates for teacher and pupils."
-  tutorial_ianimate_longdescription: 'This teacher-led seasonal activity, adapted for the Hour of Code, introduces children to creating computer animations. The children will create frames, add artwork and animate a simple Christmas scene. Lots of ideas for differentiation, extension and enrichment from making a very simple animated sequence to more able pupils: animating backgrounds as well as characters and objects, adding 3D effects (e.g. shadows), creating more frames for smoother movement, switching backgrounds to create scene changes, and animating more than one object.'
+  tutorial_ianimate_longdescription: "This teacher-led seasonal activity, adapted for the Hour of Code, introduces children to creating computer animations. The children will create frames, add artwork and animate a simple Christmas scene. Lots of ideas for differentiation, extension and enrichment from making a very simple animated sequence to more able pupils: animating backgrounds as well as characters and objects, adding 3D effects (e.g. shadows), creating more frames for smoother movement, switching backgrounds to create scene changes, and animating more than one object."
   tutorial_iloveada_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides an opportunity to teach cross-curricular computing with history. Children research Ada Lovelace an important historical figure in computer science and the world's first computer programmer! They then use basic HTML to create a multimedia webpage showcasing their findings and skills as web masters. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
   tutorial_kodflash_longdescription: "Flash! Clap! This hands-on, wild weather lesson teaches conditional statements with lightning and thunder. Students will learn about why thunder always follows lightning and will examine the logic statement \"if there is lightning, then thunder will follow.\" Count the seconds between the two to see how far away the storm is!"
   tutorial_kodchoose_longdescription: "Choose your own adventure! Through a series of \"If statements\", students will alter the storyline and ending to a narrative they write. Like a program's path changes based on conditions, the path a character takes through a narrative can change too. Get creative and lead the Kodable fuzzFamily on multiple adventures within one story that can have varying conclusions."
@@ -1731,7 +1731,7 @@ lt:
   tutorial_pmzero_longdescription: "In one hour you create a simple version of a Pac-Man game. You draw the characters in 2D and turn them into 3D. You create your own maze. Then you program the game using AgentCubes. With only 11 IF/THEN rules you create sophisticated AI. Even with just two smart ghosts you will have your hands full to win the game."
   tutorial_hsela_longdescription: "Students will practice identifying narrative elements while bringing their favorite story, poem or historical event to life. Learning to code gives students another format and media for expressing their creativity and communicating with others. Show them how to program their own interactive stories, and wait for the smiles. 1-hour lesson plan, no prior coding experience required."
   tutorial_ticklear_longdescription: "You will learn the basic concept of AR (Augmented Reality), its current applications and its possibilities in the future and the basic concepts of programming using motion blocks and event blocks under an AR/3D environment."
-  tutorial_bcrobot_longdescription: "Using BlocksCAD, a free online software designed to teach students coding and Computer Aided Design, students will design a 3D snowflake. Using shape and translate blocks, students will be exposed to computational thinking to construct something they can 3D print!"
+  tutorial_bcrobot_longdescription: "Using BlocksCAD, a free online software designed to teach students coding and Computer Aided Design, students will design a 3D Robot. Using shapes, translate, and rotate blocks, students will be exposed to computational thinking to construct something they can 3D print!"
   tutorial_bcsnow_longdescription: "Using BlocksCAD, a free online software designed to teach students coding and Computer Aided Design, students will design a 3D snowflake. Using shapes, translate, rotate, and loop blocks, students will be exposed to computational thinking to construct something they can 3D print!"
   tutorial_ifly_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical systems through robotics. Using a visual drag-and-drop programming environment and drones, pupils learn that physical systems can be programmed and controlled through algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
   tutorial_idowedo_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical programming (robotics). Children design and build models using construction bricks and bring them to life with code! Using a visual drag-and-drop programming environment and LEGO™ WeDo parts (motor and hub and optional sensors), pupils learn that physical systems can be programmed and controlled using algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
@@ -1741,15 +1741,15 @@ lt:
   tutorial_dkcurrency_longdescription: "Build the awesome Currency King game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Currency King template, and follow along with the video tutorial!"
   tutorial_dkriver_longdescription: "Build the awesome River Monsters game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the River Monsters template, and follow along with the video tutorial!"
   tutorial_dkball_longdescription: "Build the awesome Bouncing Ball game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Bouncing Ball template, and follow along with the video tutorial!"
-  tutorial_spheroit_longdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
+  tutorial_spheroit_longdescription: "Learn your first \"if/then, else\" condition by building a fun game where you will be throwing Sphero and guessing animal sounds. This is a great activity after you complete Blocks 1, and can be used for the \"Hour of Code.\""
   tutorial_gameofcodes_longdescription: "Build an awesome Dragon game to defend the wall, then export it as a standalone app (for iOS, Android, PC, and Mac)."
   tutorial_blocklygames_longdescription: "Blockly Games is a series of educational games that teach programming. It is designed for children who have not had prior experience with computer programming but who wish to learn at a more challenging pace. By the end of these games, players are ready to use conventional text-based languages."
   tutorial_spherohello_longdescription: "Have you conquered Blocks and need a new challenge? Take the logic you have learned with block-based programming and begin to learn how to program with just text. In this first Text activity learn the basics of the text canvas, loops, and some tips to get started with your first lines of JavaScript code."
   tutorial_spheroarcade_longdescription: "In this arcade-style playground, you can recreate classic games with a Sphero SPRK+ robot while learning the basics of game design. You'll build your very own robotic renditions of some famous games like Pong, Bop It, and Pac-Man. Each game uses Sphero in a different way such as rolling on the floor, detecting gestures, or using Sphero as a joystick."
-  tutorial_bcpy1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in Python, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
-  tutorial_bcpy2_longdescription: 'This Hour of Code lesson is a follow-up course to World of Python. You''ll learn more advanced coding concepts in Python based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
-  tutorial_bcjs1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
-  tutorial_bcjs2_longdescription: 'This Hour of Code lesson is a follow-up course to World of JavaScript. You''ll learn more advanced coding concepts in JavaScript based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcpy1_longdescription: "This Hour of Code lesson teaches you some basic concepts of coding in Python, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
+  tutorial_bcpy2_longdescription: "This Hour of Code lesson is a follow-up course to World of Python. You'll learn more advanced coding concepts in Python based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
+  tutorial_bcjs1_longdescription: "This Hour of Code lesson teaches you some basic concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
+  tutorial_bcjs2_longdescription: "This Hour of Code lesson is a follow-up course to World of JavaScript. You'll learn more advanced coding concepts in JavaScript based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -3739,9 +3739,9 @@ lt:
   tutorial_pixie_string_detail_programming_languages: "Blocks"
   tutorial_play_string_detail_programming_languages: "do-not-show"
   tutorial_robomind-nl_string_detail_programming_languages: "Blocks"
-  tutorial_spheroi_string_detail_programming_languages: "Blocks, C/C++"
-  tutorial_spherol_string_detail_programming_languages: "Blocks, C/C++"
-  tutorial_spherov_string_detail_programming_languages: "Blocks, C/C++"
+  tutorial_spheroi_string_detail_programming_languages: "Blocks, JavaScript"
+  tutorial_spherol_string_detail_programming_languages: "Blocks, JavaScript"
+  tutorial_spherov_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_swb_string_detail_programming_languages: "do-not-show"
   tutorial_build-a-galaxy_string_detail_programming_languages: "do-not-show"
   tutorial_alicesims_string_detail_programming_languages: "Blocks"
@@ -3931,7 +3931,7 @@ lt:
   tutorial_dkcurrency_string_detail_programming_languages: "Blocks"
   tutorial_dkriver_string_detail_programming_languages: "Blocks"
   tutorial_dkball_string_detail_programming_languages: "Blocks"
-  tutorial_spheroit_string_detail_programming_languages: "Blocks, C/C++"
+  tutorial_spheroit_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_gameofcodes_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_blocklygames_string_detail_programming_languages: "Blocks"
   tutorial_spherohello_string_detail_programming_languages: "JavaScript"

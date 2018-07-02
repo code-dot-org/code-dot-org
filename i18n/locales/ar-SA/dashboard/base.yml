@@ -59,7 +59,7 @@ ar:
   courses: 'الدروس'
   courses_page:
     title_student: "تعلّم على كود استوديو"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'نشاط غير موصول'
   of: "من"
   more: "أكثر"
@@ -69,7 +69,7 @@ ar:
   try_k8intro: "قم بتجربة المقدمة عن درس \"علوم الكمبيوتر\" للمستوى المبتدئ والمتوسط (من 15 إلى 25 ساعة)"
   k8intro: "مقدمة عن درس \"علوم الكمبيوتر\" للمستوى المبتدئ والمتوسط (من 15 إلى 25 ساعة)"
   already_started: "بدأت بالفعل؟ أكمل من هنا >>  "
-  demos: 'المشرف:  جميع العروض التوضيحية'
+  demos: "المشرف:  جميع العروض التوضيحية"
   continue: 'الاستمرار'
   prize: 'جائزة'
   more_info: 'المزيد من المعلومات'
@@ -85,6 +85,7 @@ ar:
     facebook: 'فيس بوك'
     windowslive: 'حساب Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'هل نسيت كلمة المرور؟'
     need_confirmation: "لم تستلم تعليمات تأكيد الحساب؟"
     need_unlock: "لم تتلقى تعليمات فتح الحساب؟"
@@ -114,15 +115,25 @@ ar:
     valid_password: "كلمة المرور متاحة!"
     invalid_password: "كلمة المرور يجب ان تكون على الاقل 6 احرف"
     mismatch_password: "كلمة المرور التي ادخلتها غير متطابقة"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "إذا كان عمري أقل من 13 عامًا، أؤكد أنني قد حصلت على إذن من والدي أو الوصي القانوني باستخدام خدمات Code.org."
+    agree_us_website: "أوافق على استخدام موقع على شبكة الإنترنت مقره في الولايات المتحدة."
+    my_data_to_us: "قد تُرسَل بيانات عن استخدامي لهذا الموقع إلى الولايات المتحدة وتُخزّن أو تُعالج فيها."
     student_terms: "أوافق على الالتزام <a href='http://code.org/tos'> شروط الخدمة</a> Code.org. إذا كنت دون سن 13 عاماً، اؤكد بتقديم هذه الاستمارة بان أحد والدي أو وأي امري اذن باستخدام الخدمات Code.org. <br/> <br/> لا يتم تخزين عناوين البريد الإلكتروني في شكل يسمح لنا بالاتصال بالطلاب. سوف يتلقى الطلاب ابدأ رسائل البريد الإلكتروني من Code.org باستثناء استرداد كلمة المرور. الاطلاع على <a href='http://code.org/privacy'> سياسة الخصوصية</a> لمزيد من المعلومات."
     teacher_terms: "أوافق على الالتزام بشروط الخدمة Code.org. لمزيد من المعلومات حول الخصوصية، راجع لدينا <a href='http://code.org/privacy'> سياسة الخصوصية</a>."
     additional_information: "نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع."
+    user_type_button: "Update Account Type"
     user_type_label: "نوع الحساب"
     user_type_teacher: "المدرس"
     user_type_student: "طالب"
     field_is_required: "مطلوب"
     accept_terms: "يجب عليك الموافقة على إنشاء حساب"
     error: "An error occurred."
+    email_preference_question: "هل يمكننا إرسال بريد إلكتروني إليك حول تحديثات دوراتنا أو الفرص المحلية أو أخبار علوم الكمبيوتر الأخرى؟"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "نعم"
+    email_preference_no: "لا"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -171,6 +182,7 @@ ar:
       email: 'البريد الإلكتروني'
       submit: 'تسجيل'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'تغيير كلمة مرور حسابك'
@@ -202,7 +214,7 @@ ar:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'الكلمة السرية'
       email: 'البريد الإلكتروني'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -221,7 +233,7 @@ ar:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب.'
+        subject: "إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب."
   reports:
     error:
       access_denied: "لا يوجد لديك الصلاحيات للوصول إلى إحصائيات الخاصة بهذا المستخدم"
@@ -349,11 +361,12 @@ ar:
     email_confirm_needed_required: 'لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:'
     email_confirm_wrong_email: '(عنوان بريد إلكتروني خاطئ؟)'
     email_resend_confirm: 'إعادة إرسال رسالة تعليمات عملية التأكيد'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(اتركه فارغاً إذا كنت لا ترغب في تغييره)"
     current_password_hint: '(أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)'
     delete: 'إحذف الحساب الخاص بك'
     delete_text: "النقر على الزر أدناه سيؤدي إلى حذف الحساب الخاص بك."
-    delete_text_teacher_note: يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف حسابات طلابك.
+    delete_text_teacher_note: "يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف حسابات طلابك."
     delete_confirm: 'هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟'
     deleted_user: 'عضو محذوف'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -364,10 +377,11 @@ ar:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'أكمل'
     tried: 'حاول'
@@ -449,6 +463,7 @@ ar:
     student_not_found: "لا يمكن إيجاد الطالب أو مجموعة الطلاب."
     all_students_must_be_in_current_section: "يجب على جميع الطلاب أن تلتحق بقسمك في الوقت الحالي."
     already_enrolled_in_new_section: "لا يمكنك نقل هؤلاء الطلاب لأن هذا المدرّس قد حصل عليهم في قسم أخر."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "تعلّم على كود استوديو"
     description: "أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع التعليمات البرمجية."
@@ -456,6 +471,8 @@ ar:
   gender:
     male: 'ذكر'
     female: 'أنثى'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'أفضل عدم الإجابة'
   user_type:
     student: 'طالب'
@@ -703,7 +720,7 @@ ar:
     sign_out: 'إذا كنت لا ترغب بالإدلاء بعمرك، يمكنك <a href="%{url}"> تسجيل الخروج</a>.'
   terms_interstitial:
     title: "تحديث شروط الخدمة وسياسة الخصوصية"
-    intro_desc: 'قمنا بتحديث لدينا شروط الخدمة وسياسة الخصوصية، كما هو موضح أدناه. فهذه التغييرات اعتبارا من 24 أغسطس 2016.  أكبر تغيير: أننا سوف <i>لم نعد نخزن عناوين البريد الإلكتروني لحسابات الطلاب في "استوديو البرمجية".</i> هذا فرق كبير بالنسبة لنا، ونحن نأمل أن يضع معياراً جديداً لخصوصية الطالب في التعليم والتكنولوجيا. لقد أرسلنا لك ملخص للتغييرات الأخرى عبر البريد الإلكتروني.'
+    intro_desc: "قمنا بتحديث لدينا شروط الخدمة وسياسة الخصوصية، كما هو موضح أدناه. فهذه التغييرات اعتبارا من 24 أغسطس 2016.  أكبر تغيير: أننا سوف <i>لم نعد نخزن عناوين البريد الإلكتروني لحسابات الطلاب في \"استوديو البرمجية\".</i> هذا فرق كبير بالنسبة لنا، ونحن نأمل أن يضع معياراً جديداً لخصوصية الطالب في التعليم والتكنولوجيا. لقد أرسلنا لك ملخص للتغييرات الأخرى عبر البريد الإلكتروني."
     intro_instructions: "سوف تحتاج إلى قبول هذه الشروط الجديدة للطلاب تحت سن ال 13 في الفصول الدراسية الخاصة بك للوصول الكامل إلى جميع أحدث الميزات في \"الاستوديو التعليمات البرمجية\".  عند تسجيل حساب لطالب دون سن 13، سيتم مطالبتك بتأكيد أن المدرسة الخاصة بك بموافقة الوالدين لجمع المعلومات الشخصية للطالب لاستخدام والاستفادة من المدرسة، بما في ذلك البرامج التعليمية مثل Studio التعليمات البرمجية."
     tos: "شروط الخدمة"
     privacy: "سياسة الخصوصية"
@@ -719,25 +736,25 @@ ar:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "حفظ"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: أبيض
+        white: "أبيض"
       - 
-        black: أسود أو أمريكي من أصل أفريقي
+        black: "أسود أو أمريكي من أصل أفريقي"
       - 
-        hispanic: Hispanic or Latino
+        hispanic: "Hispanic or Latino"
       - 
-        asian: آسيوي
+        asian: "آسيوي"
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: "Native Hawaiian or other Pacific Islander"
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: "American Indian/Alaska Native"
       - 
-        other: أخرى
+        other: "أخرى"
       - 
-        opt_out: Prefer not to say
+        opt_out: "Prefer not to say"
     submit: "تسجيل"
     decline: "إغلاق"
   zendesk_too_young_message: 'عذراً، لا يمكن للمستخدمين الصغار تسجيل الدخول إلى موقع دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> دون تسجيل الدخول أو الطلب من والديك أو معلمك التواصل معنا نيابة عنك.'
@@ -763,7 +780,7 @@ ar:
     delete: "حذف"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "العودة إلى الدورة التدريبية"
@@ -866,8 +883,9 @@ ar:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -881,6 +899,11 @@ ar:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
@@ -985,3 +1008,14 @@ ar:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'أوافق'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'نعم'

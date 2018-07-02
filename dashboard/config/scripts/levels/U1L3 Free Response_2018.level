@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:31.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Sending Complex Messages",
+    "placeholder": "Enter your reflection here",
+    "markdown_instructions": "How did collaboration impact the development of your protocol? What challenges did working in a group present and in what ways did it positively impact your final product?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2212,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

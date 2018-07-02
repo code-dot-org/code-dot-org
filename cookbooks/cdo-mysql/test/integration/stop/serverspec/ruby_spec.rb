@@ -2,7 +2,7 @@ require 'serverspec'
 set :backend, :exec
 
 describe 'mysql::default' do
-  describe package('mysql-server-5.6') do
+  describe package('mysql-server') do
     it {should be_installed}
   end
 

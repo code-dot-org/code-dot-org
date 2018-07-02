@@ -15,7 +15,7 @@ import projects, {
 import publishDialogReducer, {
   showPublishDialog,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
-import { PublishableProjectTypesUnder13, PublishableProjectTypesOver13 } from '@cdo/apps/util/sharedConstants';
+import { AlwaysPublishableProjectTypes, AllPublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
@@ -46,17 +46,20 @@ $(document).ready(() => {
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
   store.dispatch(selectGallery(initialState));
+  const url = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
 
   $.ajax({
     method: 'GET',
-    url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+    url: url,
     dataType: 'json'
   }).done(projectLists => {
     store.dispatch(setProjectLists(projectLists));
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
       <Provider store={store}>
-        <PublicGallery />
+        <PublicGallery
+          projectValidator={projectsData.projectValidator}
+        />
       </Provider>,
       publicGallery);
   });
@@ -83,9 +86,9 @@ window.onShowConfirmPublishDialog = function (projectId, projectType) {
   getStore().dispatch(showPublishDialog(projectId, projectType));
 };
 
-window.PublishableProjectTypesUnder13 = PublishableProjectTypesUnder13;
+window.AlwaysPublishableProjectTypes = AlwaysPublishableProjectTypes;
 
-window.PublishableProjectTypesOver13 = PublishableProjectTypesOver13;
+window.AllPublishableProjectTypes = AllPublishableProjectTypes;
 
 function setupReduxSubscribers(store) {
   let state = {};

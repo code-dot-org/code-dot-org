@@ -1,0 +1,33 @@
+name 'v2 U2L6 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+# Unit 2: Lesson 6 - Encode an Experience
+
+## Background
+
+Throughout this unit you have learned a sequence of increasingly complex encodings of information, with higher level encodings like images and formatted text making use of lower level encodings like binary numbers, ASCII characters, and even lower still the bits themselves. When creating a binary encoding scheme, we do not always have to consider the actual bits. When we say a pixel is composed of three numbers, it is not actually important that those numbers are encoded in bits, just that there exists some way to represent numbers. This practice of temporarily ignoring details which are unnecessary for the problem at hand is referred to as abstraction, and is the source of the complex computational systems we use everyday. Making use of this tool it is possible to encode practically any object, system, event, or idea. For this project you will be designing your own encoding and responding to associated reflection questions. This project serves both as a review of the material covered in the first unit, and as a practice AP Performance Task in anticipation of the two you will complete later this year.
+
+## Vocabulary
+
+* **Abstraction:** Removing unnecessary details to focus on the essential characteristics. To break problems up into separate parts which can then be solved separately and recombined to form a complete solution. To focus on and use something based only on what it does and without concern for how that functionality is accomplished.
+
+## Lesson
+
+* Select a personally meaningful experience to encode.
+* Design a way to encode it into bits.
+* Consult with a peer to check your thinking.
+* Create a visual representation of your idea.
+* Complete a project description and respond to reflection questions.
+
+## Resources
+
+* Encode an Experience - Activity Guide ([PDF](https://docs.google.com/document/d/1kmIJlEyS4V6kU47vzyZMlENsdgLJoV-ZLyYQ2RIjuN8/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1kmIJlEyS4V6kU47vzyZMlENsdgLJoV-ZLyYQ2RIjuN8/export?format=doc))
+* Encode and Experience Templates - Project Templates ([PDF](https://docs.google.com/document/d/1Qao_Qq5Z4Ta1ns_K3T7wip53MLQvJOouwFHIP2zmKsE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Qao_Qq5Z4Ta1ns_K3T7wip53MLQvJOouwFHIP2zmKsE/export?format=doc))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,4 +1,5 @@
-"lt":
+---
+lt:
   data:
     failure_message_overrides:
       Code Studio Puzzle Challenge 1 - Artist_failure_message_override: Gražus bandymas!
@@ -33,8 +34,8 @@
         Bandyk dar kartą!
       Code Studio Puzzle Challenge Var - Artist_failure_message_override: Gražus bandymas!
         Bandyk dar kartą!
-      Course 4 Artist Vars 10_failure_message_override: "Įsitikinkite, kad naudojate
-        pusių kintam!"
+      Course 4 Artist Vars 10_failure_message_override: Įsitikinkite, kad naudojate
+        pusių kintam!
       Course 4 Playlab For Loops 4b_failure_message_override: |-
         Remember, both characters
         should get to their flags in the same number of moves!
@@ -43,8 +44,8 @@
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"
-      Kiki_StarWars_Test_5_failure_message_override: "Žaidimas baigtas!"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "Žaidimas baigtas!"
+      Kiki_StarWars_Test_5_failure_message_override: Žaidimas baigtas!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Žaidimas baigtas!
       MC HOC 2016 Level 2-2_failure_message_override: |-
         Use `move forward` and `turn`
         commands to get your chicken moving.
@@ -82,10 +83,14 @@
       MC HOC 2016 Village Test_failure_message_override: |-
         You need to make the Iron
         Golem chase and attack the zombies to win.
+      Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: Sveikinu!  Jūs surinkote X monetų!
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: |-
+        You must add two
+        or more new actors to your game and program them to move.
       grade4_scaffolded_project3_failure_message_override: |-
         You must add two or more
         new actors that move to your game.

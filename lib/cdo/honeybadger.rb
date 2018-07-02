@@ -1,4 +1,4 @@
-require 'honeybadger'
+require 'honeybadger/ruby'
 require_relative 'env'
 
 # Honeybadger extensions for command error logging
@@ -28,20 +28,13 @@ module Honeybadger
   #   Attempts to parse the underlying exception from stderr,
   #   and logs captured stdout and environment variables (with sensitive values hidden) in the context.
   #
+  #  Note - this is intended for cronjobs, and will log to the CronJobs Honeybadger project
   # command - the command that was executed
   # status - exitstatus from the command (non-zero for failure)
   # stdout - captured stdout from the command
   # stderr - captured stderr from the command
   def self.notify_command_error(command, status, stdout, stderr)
     return if stderr.to_s.empty? && status == 0
-    ENV['HONEYBADGER_LOGGING_LEVEL'] = 'error'
-
-    # Configure and start Honeybadger
-    honeybadger_config = Honeybadger::Config.new(
-      env: ENV['RACK_ENV'],
-      api_key: CDO.cronjobs_honeybadger_api_key
-    )
-    Honeybadger.start(honeybadger_config)
 
     error_message, backtrace = parse_exception_dump stderr
 
@@ -59,7 +52,25 @@ module Honeybadger
       }
     }
 
-    Honeybadger.notify(opts)
+    notify_cronjob_error opts
+  end
+
+  # notify_cronjob_error - logs a Honeybadger error in the Cronjobs project
+  # See https://docs.honeybadger.io/ruby/gem-reference/api.html#honeybadger-notify-error-opts
+  def self.notify_cronjob_error(opts)
+    # Configure and start Honeybadger
+    Honeybadger.configure do |config|
+      config.env = ENV['RACK_ENV']
+      config.api_key = CDO.cronjobs_honeybadger_api_key
+      config.logging.path = "STDOUT"
+      config.logging.level = "ERROR"
+      config.logging.tty_level = 'ERROR'
+      config.report_data = true
+    end
+
+    result = Honeybadger.notify(opts)
+    Honeybadger.flush # these events are sometimes getting swallowed without this
+    result
   end
 
   # parse_exception_from_stderr - attempts to parse an exception message and stacktrace from a stderr capture

@@ -15,8 +15,8 @@ var BaseDialog = React.createClass({
     handleKeyDown: PropTypes.func,
     hideBackdrop: PropTypes.bool,
     fullWidth: PropTypes.bool,
+    fullHeight: PropTypes.bool,
     useUpdatedStyles: PropTypes.bool,
-    useDeprecatedGlobalStyles: PropTypes.bool,
     noModalStyles: PropTypes.bool,
     children: PropTypes.node,
     fixedWidth: PropTypes.number,
@@ -78,6 +78,11 @@ var BaseDialog = React.createClass({
         marginLeft: '-45%'
       });
     }
+    if (this.props.fullHeight) {
+      bodyStyle = {
+        height: '80%'
+      };
+    }
 
     let wrapperClassNames = "";
     let modalClassNames = "modal";
@@ -92,7 +97,7 @@ var BaseDialog = React.createClass({
         height: this.props.fixedHeight,
         maxHeight: !this.props.fixedHeight && '80vh',
         overflowX: 'hidden',
-        overflowY: this.props.fixedHeight ? 'hidden' : 'auto',
+        overflowY: (this.props.fixedHeight || this.props.fullHeight) ? 'hidden' : 'auto',
         borderRadius: 4,
       };
       bodyStyle = Object.assign({}, bodyStyle, {
@@ -108,10 +113,6 @@ var BaseDialog = React.createClass({
         cursor: 'pointer',
         fontSize: 24,
       };
-    } else if (this.props.useDeprecatedGlobalStyles) {
-      modalClassNames = "modal dash_modal in";
-      modalBodyClassNames = "modal-body dash_modal_body";
-      modalBackdropClassNames = "modal-backdrop in";
     } else if (this.props.noModalStyles) {
       modalClassNames = "";
       modalBodyClassNames = "";
@@ -127,7 +128,7 @@ var BaseDialog = React.createClass({
       >
         <div style={modalBodyStyle} className={modalBodyClassNames}>
           {!this.props.uncloseable && !this.props.hideCloseButton && (this.props.useUpdatedStyles ?
-            <i className="fa fa-times" style={xCloseStyle} onClick={this.closeDialog}/> :
+            <i id="x-close" className="fa fa-times" style={xCloseStyle} onClick={this.closeDialog}/> :
             <div id="x-close" className="x-close" onClick={this.closeDialog}></div>
           )}
           {this.props.children}

@@ -20,6 +20,7 @@
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
 #  properties                          :text(65535)
+#  deleted_at                          :datetime
 #
 # Indexes
 #
@@ -42,10 +43,16 @@ module Pd::Application
     include RegionalPartnerTeacherconMapping
     include SerializedProperties
 
+    CACHE_TTL = 30.seconds.freeze
+
     serialized_attrs %w(
       pd_workshop_id
       auto_assigned_enrollment_id
     )
+
+    has_one :pd_teachercon1819_registration,
+      class_name: 'Pd::Teachercon1819Registration',
+      foreign_key: 'pd_application_id'
 
     before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
     def destroy_autoenrollment
@@ -55,8 +62,38 @@ module Pd::Application
       self.auto_assigned_enrollment_id = nil
     end
 
+    # Queries for locked and (accepted or withdrawn) and assigned to a teachercon workshop
+    # @param [ActiveRecord::Relation<Pd::Application::WorkshopAutoenrolledApplication>] applications_query
+    #   (optional) defaults to all
+    # @note this is not chainable since it inspects pd_workshop_id from serialized attributes,
+    #   which must be done in the model.
+    # @return [array]
+    def self.teachercon_cohort(applications_query = all)
+      teachercon_ids = Pd::Workshop.
+        in_year(2018).
+        where(subject: Pd::Workshop::SUBJECT_TEACHER_CON).
+        pluck(:id)
+
+      return applications_query.
+        where(type: descendants.map(&:name)). # this is an abstract class, so query descendant types
+        where(status: [:accepted, :withdrawn]).
+        where.not(locked_at: nil).
+        includes(:pd_teachercon1819_registration).
+        all.
+        select {|application| application.pd_workshop_id && teachercon_ids.include?(application.pd_workshop_id)}
+    end
+
     def workshop
-      Pd::Workshop.find(pd_workshop_id) if pd_workshop_id
+      return nil unless pd_workshop_id
+
+      # attempt to retrieve from cache
+      cache_fetch self.class.get_workshop_cache_key(pd_workshop_id) do
+        Pd::Workshop.includes(:sessions, :enrollments).find_by(id: pd_workshop_id)
+      end
+    end
+
+    def workshop_date_and_location
+      workshop.try(&:date_and_location_name)
     end
 
     # override
@@ -96,6 +133,11 @@ module Pd::Application
       return Pd::Workshop::COURSE_CSP if course == 'csp'
     end
 
+    def registered_workshop?
+      # inspect the cached workshop.enrollments rather than querying the DB
+      workshop&.enrollments&.any? {|e| e.user_id == user.id} if pd_workshop_id
+    end
+
     # Assigns the default workshop, if one is not yet assigned
     def assign_default_workshop!
       return if pd_workshop_id
@@ -129,6 +171,33 @@ module Pd::Application
         ).
         order_by_scheduled_start.
         first
+    end
+
+    def self.prefetch_associated_models(applications)
+      prefetch_workshops applications.map(&:pd_workshop_id).uniq.compact
+    end
+
+    def self.prefetch_workshops(workshop_ids)
+      return if workshop_ids.empty?
+
+      Pd::Workshop.includes(:sessions, :enrollments).where(id: workshop_ids).each do |workshop|
+        Rails.cache.write get_workshop_cache_key(workshop.id), workshop, expires_in: CACHE_TTL
+      end
+    end
+
+    def self.get_workshop_cache_key(workshop_id)
+      "Pd::Application::WorkshopAutoenrolledApplication.workshop(#{workshop_id})"
+    end
+
+    # Attempts to fetch a value from the Rails cache, executing the supplied block
+    # when the specified key doesn't exist or has expired
+    # @param key [String] cache key
+    # @yieldreturn [Object] the raw, uncached, object.
+    #   Note, when this is run, the result will be stored in the cache
+    def cache_fetch(key, &block)
+      Rails.cache.fetch(key, expires_in: CACHE_TTL) do
+        yield
+      end
     end
   end
 end

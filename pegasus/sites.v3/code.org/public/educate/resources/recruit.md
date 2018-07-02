@@ -39,7 +39,7 @@ Hear from current students as they talk about the topics covered in each course 
 
 ### **Sign up for CS Discoveries**
 
-<%=view :display_video_thumbnail, id: "signup", video_code: "g4qfsH8bc8s", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "g4qfsH8bc8s", play_button: 'center' %>
 
 [**YouTube**](http://www.youtube.com/watch?v=g4qfsH8bc8s) |
 [**Download**](https://videos.code.org/cs-discoveries/what-is-cs-discoveries.mp4)
@@ -165,7 +165,7 @@ No matter what you want to do one day—whether it’s art, medicine, or history
 
 **[SCHOOL NAME]** is offering new computer science program next fall that will unlock an entirely new future for students. With this program, even the youngest learners will begin to learn the basics of how technology works. They’ll move away from just learning how to *use* technology, and instead start to *create* their own programs with the foundations of computer science. The program will introduce computer sciecne concepts to these youngsters, such as logic, problem-solving, and creativity. **Why is this important for even elementary school students?** Introducing computer science in elementary school allows students to enjoy the possibilities of creating with code before stereotypes set in. But that’s only the beginning of why every student should have the opportunity to learn computer science. [Watch this inspiring video](http://www.youtube.com/watch?v=nKIu9yen5nc) to learn more. 
 
-We can bring this to *even more* elementary school students through a local program in partnership with Code.org, a non-profit dedicated to giving every K-12 student in the US the opportunity to learn computer science. Ask your school or district to have [more elementary school teachers trained](https://code.org/professional-development-workshops) (absolutely free, and no experience necessary)! 
+We can bring this to *even more* elementary school students through a local program in partnership with Code.org, a nonprofit dedicated to giving every K-12 student in the US the opportunity to learn computer science. Ask your school or district to have [more elementary school teachers trained](https://code.org/professional-development-workshops) (absolutely free, and no experience necessary)! 
 
 
 <br />

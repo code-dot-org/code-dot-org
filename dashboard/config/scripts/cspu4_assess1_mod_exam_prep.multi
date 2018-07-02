@@ -1,0 +1,30 @@
+name 'cspu4_assess1_mod_exam_prep'
+type 'multi2'
+right '9 MOD 8'
+right '1 MOD 16'
+wrong '52 MOD 32'
+wrong '9 MOD 64'
+
+markdown <<MARKDOWN
+Pick the two expressions involving  the Modulo operation that compute to the exact same value (choose 2)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Modulo:** A modulo is an operation that helps find the remainder of a number. Specifically, given two numbers, x and y, the result of the modulo operation is the remainder after doing *x divided by y*.
+
+General example:
+
+* x%y is read as "x MOD y"
+* the remainder after x/y
+* y goes into x a certain number of times, and the remaining number is left
+
+
+For the question choices:
+
+* 9 MOD 8 : 8 goes into 9 one time, with a remainder of 1
+* 1 MOD 16: 16 goes into 16 zero times, with a remainder of 1
+* 52 MOD 32: 32 goes into 52 once, with a remainder of 20
+* 9 MOD 64: 64 goes into 9 zero times, with a remainder of 9
+
+Since 9 MOD 8 and 1 MOD 16 both have a remainder of 1, they compute to the same value.
+MARKDOWN

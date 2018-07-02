@@ -15,9 +15,9 @@
       "rect": null,
       "comment_Drawing": null,
       "noFill": null,
-      "declareAssign_x": null
+      "declareAssign_x": null,
+      "assign_x": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
@@ -54,11 +54,13 @@
     "start_blocks": "var petalSize = 50;\r\n\r\n//Set Up\r\nnoStroke();\r\nbackground(\"ForestGreen\");\r\n\r\n// Petals\r\nfill(\"red\");\r\nellipse(150,200,petalSize,petalSize);\r\nellipse(200,150,petalSize,petalSize);\r\nellipse(250,200,petalSize,petalSize);\r\nellipse(200,250,petalSize,petalSize);\r\n\r\n// Flower Center\r\nfill(\"black\");\r\nellipse(200,200,50,50);",
     "markdown_instructions": "# Using a Variable Many Times\r\n\r\nThis program has only one variable called `petalSize` but it uses it 8 different times. This makes it easy to quickly make lots of changes to how your picture is drawn.\r\n\r\n# Do This\r\n\r\n* Change the number assigned to `petalSize` so the red petals touch one another.\r\n* Try to find the size that makes the most sense. Compare your answer with someone around you.",
     "encrypted_examples": "patmYjHc8lK+xuVMuo6uuuA5KfGMargpfEOtQ8LV7lrsDf/IIixiSKMmWG8H\necGy6WTbjoZtTfoZXmoVuPg8eA==\n",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:34:32 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 18:47:07 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:34:32 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 18:47:07 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-07 06:58:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

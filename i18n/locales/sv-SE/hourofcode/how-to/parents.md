@@ -35,13 +35,13 @@ Inled din Hour of Code genom att inspirera deltagarna och diskutera hur datavete
 - Originalvideon från lanseringen av Code.org, där bland annat Bill Gates, Mark Zuckerberg och basketstjärnan Chris Bosh är med (det finns olika versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuter](https://www.youtube.com/watch?v=dU1xS07N-FA) långa)
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama uppmanar alla elever att lära sig datavetenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Hitta fler inspirerande [resurser](%= resolve_url('https://code.org/inspire') %) och [videor](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Det är helt okej om du inte har någon, eller liten erfarenhet av IT. Här är några idéer för hur du startar din Hour of Code aktivitet:
 
 - Förklara hur teknik påverkar våra liv, med exempel som alla elever i klassrummet kommer att bry sig om och inte endast ett fåtal (berätta om appar och teknik som används för att rädda liv, hjälpa människor, spela musik och spela spel, o. s. v.).
 - Lista saker som använder kod i vardagslivet.
-- Se tips på hur man kan få tjejer intresserade av datavetenskap [här](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 Vill ha fler idéer? Kolla in vår [mall lektionsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) för bästa upplägg från erfarna utbildare.
 
@@ -61,7 +61,7 @@ Det är okej att svara:
 
 ## 6) Fira
 
-[Skriv ut diplom](%= resolve_url('https://code.org/certificates') %) för ditt barn och dig själv.
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
 
@@ -73,7 +73,7 @@ Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #H
 
 Hour of Code är bara första steget på en resa för att lära dig mer om hur teknik fungerar och hur du skapar egna program. För att fortsätta den här resan:
 
-- Uppmuntra ditt baran att fortsätta att [lära sig mer på nätet](%= resolve_url('https://code.org/learn/beyond') %).
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
 - Stötta ditt barns skola i att komma igång med It-utbildning av eleverna.
 
 <%= view :signup_button %>

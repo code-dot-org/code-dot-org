@@ -1,0 +1,40 @@
+%p
+  %b Name:
+  - if @form[:title]
+    = "#{@form[:title]}" + ' '
+  = "#{@form[:first_name]}" + ' ' + "#{@form[:last_name]}"
+  %br
+  %b Email:
+  = "#{@form[:email]}"
+  %br
+  %b Job Role:
+  = "#{@form[:role]}"
+  %br
+  %b Job Title:
+  = "#{@form[:job_title]}"
+
+%p
+  %b School State:
+  = "#{@form[:school_state]}"
+  %br
+  %b School District:
+  = @form[:school_district] ? "#{@form[:school_district]}" : "None"
+  %br
+  %b School Name:
+  = @form[:school_name] ? "#{@form[:school_name]}" : "None"
+  %br
+  %b School Type:
+  = "#{@form[:school_type].capitalize}"
+  %br
+  %b Grade Levels:
+  = "#{@form[:grade_levels].join(', ')}"
+  %br
+  %b Program:
+  - if @form[:program]
+    = "#{@form[:program].map {|item| item.gsub(/\((.*)\)/, '').strip}.join(', ')}"
+  - else
+    = "None"
+
+%p
+  %b Message:
+  = @form[:notes] ? "#{@form[:notes]}" : "None"

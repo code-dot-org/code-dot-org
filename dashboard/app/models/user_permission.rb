@@ -19,11 +19,6 @@ class UserPermission < ActiveRecord::Base
   belongs_to :user
 
   VALID_PERMISSIONS = [
-    # Grants access to creating professional development workshops.
-    CREATE_PROFESSIONAL_DEVELOPMENT_WORKSHOP =
-      'create_professional_development_workshop'.freeze,
-    # Grants access to viewing all workshops in all cohorts in their district.
-    DISTRICT_CONTACT = 'district_contact'.freeze,
     # Grants access to managing workshops and workshop attendance.
     FACILITATOR = 'facilitator'.freeze,
     # Grants access to viewing hidden scripts.
@@ -45,7 +40,12 @@ class UserPermission < ActiveRecord::Base
     PLC_REVIEWER = 'plc_reviewer'.freeze,
     # Grants ability to view teacher markdown and level examples.
     # Also prevents account from being locked
-    AUTHORIZED_TEACHER = 'authorized_teacher'.freeze
+    AUTHORIZED_TEACHER = 'authorized_teacher'.freeze,
+    # Granted to regional partner program managers.
+    # Initially has the same abilities as workshop organizer.
+    PROGRAM_MANAGER = 'program_manager'.freeze,
+    # Grants access to review reported inaccuracies in census data
+    CENSUS_REVIEWER = 'census_reviewer'.freeze,
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack

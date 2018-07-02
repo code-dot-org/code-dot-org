@@ -1,0 +1,30 @@
+name 'Unit 4 Lesson 3 Introduction_2018'
+markdown <<MARKDOWN
+# Unit 4: Lesson 3 - Identifying People with Data
+
+## Background
+
+While there are many potential benefits associated with the collection and analysis of large amounts of data, these advances pose a constant risk to our collective security and privacy. Large-scale data breaches mean that the details of our personal, professional, and financial lives may be at risk. In order to prevent personal data from being linked to an individual person, personally identifying information, such as name, address, or identification number, is often removed from publicly available data. Nevertheless, through the use of computational analysis it is often possible to “re-identify” individuals within data based on seemingly innocuous information. 
+
+## Lesson
+
+* Investigate: World's Biggest Data Breaches
+* How Unique are You: Data Privacy Lab
+* Connect the Dots: Research Yourself Online
+
+## Resources
+
+* Interactive Infographic: <a href="http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/" target="_blank">World's Biggest Data Breaches</a>
+* Tool: <a href="http://aboutmyinfo.org/" target="_blank">Data Privacy Lab</a>
+* Activity Guide - Research Yourself - Activity Guide ([PDF](https://docs.google.com/document/d/1UGgDu9oXLnM9Ak4MEY8XsVjSUb-xKi2F9HSrZSQI_9w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1UGgDu9oXLnM9Ak4MEY8XsVjSUb-xKi2F9HSrZSQI_9w/export?format=doc))
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[KEY]
+
+Activity Guide KEY: <a href="https://docs.google.com/document/d/1EOS84o6f-w1zUTS7tO5Br8RqWwMO3aH7mPa9K_Lkjxg/edit?usp=sharing" target="_blank">Research Yourself</a>
+
+[/KEY]
+MARKDOWN

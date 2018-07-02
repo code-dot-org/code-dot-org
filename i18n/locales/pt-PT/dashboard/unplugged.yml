@@ -163,9 +163,6 @@ pt:
       CollisionDetection:
         title: Detecção de colisão e o teorema de Pitágoras
         desc: Determinar quando os objetos na tela se tocam é um aspecto importante na maioria dos jogos. Nesta lição, vamos ver como o teorema de Pitágoras e a fórmula da distância podem ser usados para medir a distância entre dois pontos no plano, e então decidir se esses dois pontos (ou personagens do jogo) estão se tocando.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: Nesta aula, vais aprender mais sobre os ciclos!
@@ -265,3 +262,96 @@ pt:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Algoritmos da Vida Real: Plante uma Semente'
+        desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental.
+      UnplugHappyMaps_2018:
+        title: Mapas felizes
+        desc: Estudantes criam um algoritmo simples (conjunto de instruções) para mover a personagem através de um labirinto usando um único comando.
+      GoingPlacesSafely_2018:
+        title: Ir a Locais de um modo Seguro
+        desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram como navegar em segurança pela Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: Nesta aula, vais aprender mais sobre os ciclos!
+      BigEvent_2018:
+        title: O Grande Evento
+        desc: Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.
+      GraphPaperProgramming_2018:
+        title: Programação em Papel Quadriculado
+        desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Atividade offline
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Atividade offline
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Condicionais
+        desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
+      DigitalFootprint_2018:
+        title: Seu rastro digital
+        desc: Os professores informam aos alunos que colocar informações pessoais online cria um rastro digital, ou uma "trilha" que tem consequências.
+      BinaryImages_2018:
+        title: Imagens binárias
+        desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns, nossos cursos anteriores ensinaram aos alunos que as informações podem ser representadas por uma grande variedade de opções binárias. Esta aula leva esse conceito um passo adiante, uma vez que demonstra como um computador também pode armazenar informações ainda mais complexas (como imagens e cores) em binário.
+      PaperPlanes_2018:
+        title: 'Algoritmos da Vida Real: Aviões de Papel'
+        desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente na hora de fazer aviões de papel. Esta lição também apresenta a ciência da computação de forma geral, e como os algoritmos têm um papel essencial.
+      GettingLoopy_2018:
+        title: Repetindo
+        desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma coreografia simples e então serão instruídos a repeti-la.
+      BinaryBracelets_2018:
+        title: Pulseiras binárias
+        desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
+      MoveItMoveIt_2018:
+        title: Criando caminhos
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programação Relay
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

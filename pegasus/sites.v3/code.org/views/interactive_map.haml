@@ -3,40 +3,59 @@
 
 - require 'state_abbr'
 
+- advocacy_variation ||= false
+- fill_color = advocacy_variation ? '#0094a3' : '#3E484F'
+- stroke_color = advocacy_variation ? 'white' : '#7A7A7A'
+- hover_color = advocacy_variation ? '#59cad3' : '#59cad3'
+- click_color = advocacy_variation ? '#ffa400' : '#0094a3'
+
 #state-list.phone-feature
-  %h2 Choose a State
+  - if advocacy_variation
+    %h2 See what’s happening in your state
+  - else
+    %h2 Choose a State
+
   %form
     %select.dropdown#state-dropdown
       %option
       -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
         %option{value:abbr}= state
 
-%h2.tablet-feature Choose a State
+- if advocacy_variation
+  %h2.tablet-feature See what’s happening in your state
+- else
+  %h2.tablet-feature Choose a State
+
 #map.tablet-feature
 #infobox.greybox.col-33
   %p.info
     Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
-  %ul
-    %li.states-link
-      Only
-      = succeed " allow students to count computer science courses toward high school graduation." do
-        %strong= credit_count
-        states
-    %li
-      There are currently
-      %strong
-        = format_integer_with_commas(jobs_nationwide)
-      open computing jobs nationwide.
 
-    %li
-      Last year, only
-      %strong
-        = format_integer_with_commas(grads_nationwide)
-      computer science students graduated into the workforce.
-  %p.info
-    See a
-    = succeed "." do
-      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'} summary of state efforts
+  %strong= hs_access_count
+  states have adopted a policy to give all high school students access to CS courses (and of those, only
+  = k12_access_count
+  states give all K-12 students access)
+
+  %strong= format_integer_with_commas(jobs_nationwide)
+  Open computing jobs nationwide
+
+  %strong
+    = format_integer_with_commas(grads_nationwide)
+  Computer science students graduated into the workforce last year
+
+  .summary-button
+    %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'}
+      %button
+        See a summary of state efforts
+  %p#sources
+    %span
+      Sources:
+    %a{href: "http://www.conference-board.org/", style: "color: #BCC2C6", target: '_blank'} The Conference Board
+    and
+    =succeed "." do
+      %a{href: "http://nces.ed.gov/", style: "color: #BCC2C6", target: '_blank'} National Center for Education Statistics
+    =succeed "." do
+      %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", style: "color: #BCC2C6", target: '_blank'} More info
 
 :javascript
   var webServiceLocation = '/promote/state/';
@@ -106,11 +125,11 @@
 
       // Map styling
       stateHoverAnimation: 0,
-      stateStyles: {fill: '#3E484F', stroke: '#7A7A7A'},
-      labelBackingStyles: {fill: '#3E484F', stroke: '#7A7A7A'},
-      labelBackingHoverStyles: {fill: '#DCDF8A'},
-      stateHoverStyles: {fill: '#DCDF8A'},
-      stateClickStyles: {fill: '#B9BF15', persistent: false}
+      stateStyles: {fill: "#{fill_color}", stroke: "#{stroke_color}"},
+      labelBackingStyles: {fill: "#{fill_color}", stroke: "#{stroke_color}"},
+      labelBackingHoverStyles: {fill: "#{hover_color}"},
+      stateHoverStyles: {fill: "#{hover_color}"},
+      stateClickStyles: {fill: "#{click_color}", persistent: false}
     });
 
     // "Click" the current state if page is loaded with state in URL.

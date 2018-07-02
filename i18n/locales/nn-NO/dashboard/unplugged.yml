@@ -163,9 +163,6 @@ nn:
       CollisionDetection:
         title: Oppdage kollisjon og Pytagoras læresetning
         desc: Å finne ut når objekter på skjermen rørar kverandre er eit viktig aspekt i dei fleste videospel. No skal vi sjå på korleis Pythagoras læresetning og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter på eit plan, og så avgjøre om dei to punkta (eller spelefigurane) rører kvarandre.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgåve skal du lære om løkker!
@@ -265,3 +262,96 @@ nn:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Verkelege algoritmar: Plante eit frø'
+        desc: Denne oppgåva viser korleis vi bruker algoritmer i dagleglivet, her med det å plante eit frø som døme. Den fokuserer og på det større biletet av informatikk og korleis algoritmer er ein viktig del av det.
+      UnplugHappyMaps_2018:
+        title: Glade Kart
+        desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte ein figur gjennom ein labyrint med berre ein kommando.
+      GoingPlacesSafely_2018:
+        title: Går stader trygt
+        desc: Internettet er ein mektig, men nokre gongar ein farleg stad. Lærarar introduserer korleis du skal vere trygg når du navigerer på nettet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: I denne oppgåve skal du lære om løkker!
+      BigEvent_2018:
+        title: Den store hendinga
+        desc: Eleven blir introdusert for programmeringskonseptet "hending" som er handlingar som datamaskina overvåkar. Læraren trykker på knappar på ein papirfjernkontroll og elevane svarer basert på kva knapp som er trykka på.
+      GraphPaperProgramming_2018:
+        title: Programmering på millimeterpapir
+        desc: Elevene nyttar forhåndsbestemte kommandoar til å lage ei algoritme (ei samling med instruksjonar) for å styre klassekameratane sine til å lage e teikning.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivitet utan datamaskinar
+        desc: I dag skal du lære kva det vil seie å vere ein digital borgar.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivitet utan datamaskinar
+        desc: I dag skal du lære kva du skal gjere om nokon er slemme på nett.
+      Conditionals_2018:
+        title: Betingelser
+        desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss eg trekk eit svart kort, får du poeng."
+      DigitalFootprint_2018:
+        title: Dine digitale fotspor
+        desc: Lærarar introduserer for elevane ideen om å putte informasjon om seg sjølv på nett skapar eit digital fotavtrykk eller "sti" som har konsekvensar.
+      BinaryImages_2018:
+        title: Binære bilete
+        desc: Selv om mange tenker på binærsystemet som kun 0 og 1, viser det førre kurset vårt at den informasjonen kan bli representert i ei rekke av binære alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til dømes bilete og fargar) binært óg.
+      PaperPlanes_2018:
+        title: 'Verkelege algoritmar: Papirfly'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i det daglege, i dette tilfellet for å å lage eit papirfly. Det fokuserer også på det store bildet av informatikk og korleis algoritmar spelar ei essensiell rolle.
+      GettingLoopy_2018:
+        title: Me blir sløyfete
+        desc: Denne leksjonen introduserer programmeringskonseptet løkker (gjentatt instruksjon) gjennom ein danseaktivitet. Elevane vil lære enkel koreografi, og deretter bli bedt om å gjenta den.
+      BinaryBracelets_2018:
+        title: Binær armbånd
+        desc: Elevene skal lage armbånd som ein binær representasjon av den første bokstaven i navnet sitt. Elevane lærar at data kan bli representert og lagra på meir enn ein måte.
+      MoveItMoveIt_2018:
+        title: Flytt den, flytt den
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programmeringsstafett
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

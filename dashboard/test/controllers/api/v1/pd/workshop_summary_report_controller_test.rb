@@ -7,6 +7,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     organizer_name
     organizer_id
     organizer_email
+    regional_partner_name
     workshop_dates
     on_map
     funded
@@ -46,17 +47,22 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   setup_all do
     @workshop_admin = create :workshop_admin
     @organizer = create :workshop_organizer
+    @program_manager = create :program_manager
+
+    # CSF workshop for this regional partner
+    @workshop = create :pd_ended_workshop, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     # CSF workshop for this organizer.
-    @workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
-    create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
+    @organizer_workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, attended: true
 
     # Non-CSF workshop from a different organizer
     @other_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS,
       subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
   end
 
-  [:admin, :workshop_organizer].each do |user_type|
+  [:admin, :workshop_organizer, :program_manager].each do |user_type|
     test_user_gets_response_for :index, user: user_type
   end
 
@@ -74,8 +80,21 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     assert_payment_fields response.first
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers do not get payment info' do
     sign_in @organizer
+
+    get :index
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert response.first
+    assert_common_fields response.first
+    refute_payment_fields response.first
+  end
+
+  test 'program managers do not get payment info' do
+    sign_in @program_manager
 
     get :index
     assert_response :success
@@ -92,11 +111,22 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal 2, response.count
+    assert_equal 3, response.count
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers only see their own workshops' do
     sign_in @organizer
+
+    get :index
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 1, response.count
+    assert_equal @organizer_workshop.id, response.first['workshop_id']
+  end
+
+  test 'program managers only see their own workshops' do
+    sign_in @program_manager
 
     get :index
     assert_response :success
@@ -113,8 +143,8 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal 2, response.count
-    assert_equal [@workshop.id, @other_workshop.id].sort, response.map {|line| line['workshop_id']}.sort
+    assert_equal 3, response.count
+    assert_equal [@workshop.id, @organizer_workshop.id, @other_workshop.id].sort, response.map {|line| line['workshop_id']}.sort
   end
 
   test 'filter by schedule' do
@@ -158,16 +188,15 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   test 'filter by course' do
     sign_in @workshop_admin
 
-    # @workshop is CSF; @other_workshop is not
+    # @workshop and @organizer_workshop are CSF; @other_workshop is not
     {
-      'csf' => @workshop,
-      '-csf' => @other_workshop
-    }.each do |course_param, workshop|
+      'csf' => [@workshop.id, @organizer_workshop.id],
+      '-csf' => [@other_workshop.id]
+    }.each do |course_param, expected|
       get :index, params: {course: course_param}
       assert_response :success
       response = JSON.parse(@response.body)
-      assert_equal 1, response.count
-      assert_equal workshop.id, response.first['workshop_id']
+      assert_equal expected, response.map {|r| r['workshop_id']}.uniq.sort
     end
   end
 
@@ -177,20 +206,20 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     assert_response :success
     response = CSV.parse(@response.body)
 
-    # 3 rows (header + workshop rows)
-    assert_equal 3, response.count
+    # 4 rows (header + workshop rows)
+    assert_equal 4, response.count
     assert_equal EXPECTED_COMMON_FIELDS.count + EXPECTED_PAYMENT_FIELDS.count, response.first.count
   end
 
   test 'includes unpaid workshops' do
-    unpaid_workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSD
+    unpaid_workshop = create :pd_ended_workshop, organizer: @program_manager, course: Pd::Workshop::COURSE_CSD
     create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     sign_in @workshop_admin
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal 3, response.count
+    assert_equal 4, response.count
     unpaid_report = response.find {|row| row['workshop_id'] == unpaid_workshop.id}
     assert_not_nil unpaid_report
     refute unpaid_report['qualified']

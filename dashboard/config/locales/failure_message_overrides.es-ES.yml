@@ -1,4 +1,5 @@
-"es":
+---
+es:
   data:
     failure_message_overrides:
       Code Studio Puzzle Challenge 1 - Artist_failure_message_override: "¡Buen intento!
@@ -77,8 +78,12 @@
         para etiquetar 5 Golems, intente cambiar la 1: 40 por etiqueta.'
       MC HOC 2016 Village Test_failure_message_override: Necesita hacer la persecución
         del Golem de hierro y atacar a los zombies para ganar.
+      Valentine_playlab_01_failure_message_override: "¡Casi! Inténtalo de nuevo."
       WhileAdventure_failure_message_override: "¡Felicitaciones! Usted recogió X monedas!"
       courseE_playLab_scaffold3_failure_message_override: |-
+        Debe agregar dos o más
+        Nuevos actores a tu juego y programarlos para que se muevan.
+      courseE_playLab_scaffold3_2018_failure_message_override: |-
         Debe agregar dos o más
         Nuevos actores a tu juego y programarlos para que se muevan.
       grade4_scaffolded_project3_failure_message_override: |-

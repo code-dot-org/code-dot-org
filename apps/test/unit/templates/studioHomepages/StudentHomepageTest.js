@@ -3,7 +3,7 @@ import { assert, expect } from 'chai';
 import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
-import SectionsTable from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
 import { courses, topCourse, joinedSections } from './homepagesTestData';
 import { combineReducers, createStore } from 'redux';
@@ -98,7 +98,7 @@ describe('StudentHomepage', () => {
           codeOrgUrlPrefix="http://localhost:3000/"
           canLeave={false}
         />
-    ).find(StudentSections).dive().find(SectionsTable).dive({context: {store}}).dive();
+    ).find(StudentSections).dive().find(SectionsAsStudentTable).dive({context: {store}}).dive();
     expect(wrapper).to.containMatchingElement(
         <td>ClassOneCode</td>
     );

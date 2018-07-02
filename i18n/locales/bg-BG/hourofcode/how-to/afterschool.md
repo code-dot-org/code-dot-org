@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Как да преподавате Hour of Code след училище
 
-Присъединете се към движението и въведете група от ученици в първия им час по компютърни науки с тези стъпки. Часът на кода е лесен за изпълнение - дори и за начинаещи! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Присъединете се към движението и въведете група от ученици в първия им час по компютърни науки с тези стъпки. Часът на кода е лесен за изпълнение - дори и за начинаещи! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ nav: how_to_nav
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
+- [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - [ Разпечатайте "Направих Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) стикери за вашите ученици.
 - [ поръчайте тениски](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) за вашето училище.
 - Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
@@ -110,7 +110,7 @@ nav: how_to_nav
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Прегледайте [ часът на кода често задавани въпроси](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ nav: how_to_nav
 
 Hour of Code е само първата стъпка в пътешествието в изучаването на това, как технологията работи и как да създавате софтуерни приложения. За да продължите това пътуване:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Дасе присъединят](%= resolve_url('https://code.org/professional-development-workshops') %)към 1-деневен уоркшоп, за да получат обучение от опитни фасилитатори. (Само за учители от САЩ)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

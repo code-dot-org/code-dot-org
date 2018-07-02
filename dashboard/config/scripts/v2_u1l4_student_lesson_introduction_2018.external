@@ -1,0 +1,26 @@
+name 'v2 U1L4 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+
+markdown <<MARKDOWN
+# Unit 1: Lesson 4 - Number Systems
+
+## Background
+
+There are many different number systems, and you've probably heard of a couple of them! The number system we typically use for things like expressing the cost of something is called base-10, but there are lots of other systems that are used for different purposes. All of these systems share two things: first, they all use symbols or markings to represent values; and second, they all have rules for how to move from one value to the next. Today we're going to explore different patterns that can be represented with three symbols (a circle, triangle, and square), and develop our own rules for moving from one set of patterns to the next.
+
+## Lesson
+
+* Count using circles, triangles, and squares.
+* Create a number systems with non-numeric symbols. 
+* Write the rules for counting with your number system.
+
+## Resources
+
+
+* Activity Guide - Number Systems: Circle-Triangle-Square - Worksheet ([PDF](https://docs.google.com/document/d/1vFg7GG-kFJGw9MgxQ5g3yW7R5rE6f3udVK3C9Hj9P6E/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1vFg7GG-kFJGw9MgxQ5g3yW7R5rE6f3udVK3C9Hj9P6E/export?format=doc))
+* <a href="http://www.unc.edu/~rowlett/units/roman.html" target="_blank">Roman and ‘Arabic’ Numerals</a>
+
+MARKDOWN

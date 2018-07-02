@@ -38,6 +38,7 @@
   "drawUpperWave": "draw upper wave",
   "drawLowerWave": "draw lower wave",
   "drawSticker": "draw sticker",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "բարձրություն",
   "hideTurtle": "hide artist",
   "jump": "ցատկել",
@@ -73,6 +74,8 @@
   "penDown": "pencil down",
   "penTooltip": "Lifts or lowers the pencil, to start or stop drawing.",
   "penUp": "pencil up",
+  "pointTo": "point to",
+  "pixels": "pixels",
   "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setAlpha": "set alpha",
   "setCharacter": "set character to {character}",
@@ -91,5 +94,6 @@
   "turnTooltip": "Turns the artist left or right by the specified number of degrees.",
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "Changes the width of the pencil.",
+  "withSize": "with size",
   "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
 }

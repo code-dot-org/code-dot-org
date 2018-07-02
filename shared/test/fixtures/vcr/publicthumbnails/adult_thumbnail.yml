@@ -1,0 +1,238 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Apr 2018 23:29:24 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 23:29:23 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: ASCII-8BIT
+      string: stub-thumbnail-body
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 04+ScXDCwvvm3GtTkSCZvA==
+      Content-Length:
+      - '19'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Apr 2018 23:29:24 GMT
+      X-Amz-Version-Id:
+      - vxkfGF1MxbPX7UCTS0EoGKvzi0K_yyh8
+      Etag:
+      - '"d38f927170c2c2fbe6dc6b53912099bc"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 23:29:23 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Apr 2018 23:29:24 GMT
+      Last-Modified:
+      - Tue, 17 Apr 2018 23:29:24 GMT
+      Etag:
+      - '"d38f927170c2c2fbe6dc6b53912099bc"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - vxkfGF1MxbPX7UCTS0EoGKvzi0K_yyh8
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '19'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: stub-thumbnail-body
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 23:29:23 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Amz-Copy-Source:
+      - cdo-v3-files/files_test/1/1/.metadata/thumbnail.png
+      X-Amz-Meta-Abuse-Score:
+      - '15'
+      X-Amz-Metadata-Directive:
+      - REPLACE
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Apr 2018 23:29:25 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - vxkfGF1MxbPX7UCTS0EoGKvzi0K_yyh8
+      X-Amz-Version-Id:
+      - Rb1x0YIMpRHj8jgxIWwIefoa5Pm1uoZS
+      Content-Type:
+      - application/xml
+      Content-Length:
+      - '234'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2018-04-17T23:29:25.000Z</LastModified><ETag>&quot;d38f927170c2c2fbe6dc6b53912099bc&quot;</ETag></CopyObjectResult>
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 23:29:24 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Apr 2018 23:29:25 GMT
+      Last-Modified:
+      - Tue, 17 Apr 2018 23:29:25 GMT
+      Etag:
+      - '"d38f927170c2c2fbe6dc6b53912099bc"'
+      X-Amz-Meta-Abuse-Score:
+      - '15'
+      X-Amz-Version-Id:
+      - Rb1x0YIMpRHj8jgxIWwIefoa5Pm1uoZS
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '19'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: stub-thumbnail-body
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 23:29:24 GMT
+- request:
+    method: delete
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Tue, 17 Apr 2018 23:29:26 GMT
+      X-Amz-Version-Id:
+      - NV9FHKng5jSUxbyi1liZ1txWlXFFjA6e
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 23:29:25 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 17 Apr 2018 23:29:25 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>DD2CE2B76F5CE29A</RequestId><HostId>9+sLfPfkkjpJGeHuEX/3wQDo8XVIeXZbrR+UxF0qHYpuAgk1luf0II58rLuwEarDlA0r8xSbTVs=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 23:29:25 GMT
+recorded_with: VCR 3.0.3

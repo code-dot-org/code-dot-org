@@ -30,7 +30,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Hide your treasure\r\n<img style=\"float: right\" src=\"https://images.code.org/2bcf0ba8d5efe69c4531627f2c4d2a1f-image-1472600812452.gif\" />\r\nYour enemies are still after your treasure.  Use the arrow keys to move the person around the screen.  Can you change the code so that she can push the treasure behind the tree?\r\n\r\n# Do This\r\n\r\nUse `displace`, `collide`, `bounce`, or `bounceOff` to make the sprites interact in the right way.\r\n\r\n[//]: # (https://images.code.org/732942eef4d0c288bf445a4478aee6ec-image-1470947222110.png)\r\n\r\n[//]: # (https://images.code.org/1458d90cb97f3bd37508fa0ec3d997f8-image-1470947222109.png)\r\n\r\n[//]: # (https://images.code.org/56da2ef5cef40080e0d677c86aec3901-image-1470947222108.png)",

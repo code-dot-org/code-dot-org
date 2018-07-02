@@ -27,36 +27,36 @@ social:
 
 # Hvala za prijavu za domaćina Sata programiranja!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Budući da su ove plakate poslane iz Sjedinjeni Američki država, troškovi transporta mogu biti prilično visoki ako se šalje u Kanadu ili internacionalno. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
 <br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+<% if @country == 'us' %> Zahvaljujući darežljivosti Ozobot-a, Dexter industrija, littleBits-a, i Radionica Čuda, preko 100 učionica će biti izabrano da dobije robote ili sklopove za njihov čas! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org će izabrati učionice koje su pobijedile. U međuvremenu, provjeri neke aktivnosti robotike i krugova. Imajte na umu da je ovo samo za Američke škole. <% end %>
 
 <br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
 ## 1. Spread the word in your school and community
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Upravo si se pridružio pokretu Čas Kodiranja. Reci svojim prijateljima sa **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Ne morate biti u školi da naučite nove vještine. Invite a local politician or policy maker to visit your school for the Hour of Code. To može pomoći u izgradnji podrške za računarstvo preko jednog sata u tvom području.
 
 Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 
-## 2. Find a local volunteer to help you with your event.
+## 2. Pronađi lokalnog volontera da ti pomogne sa događajem.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Plan your Hour of Code
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Izaberite [aktivnost Časa Kodiranja](https://hourofcode.com/learn)za svoju učionicu i [pregledaj ovaj kako uraditi vodič](<%= resolve_url('/how-to') %>).
 
 # Go beyond an Hour of Code
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> Čas Kodiranja tek počinje. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+You have many choices to fit your school. Mnoge organizacije koje nude tutorijale Časa Kodiranja također imaju nastavni plan i dostupan profesionalni razvoj. Ako pronađete lekciju koja Vam se sviđa, tražite da idete dalje. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> Čas Kodiranja tek počinje. Većina organizacija koje nude lekcije Časa Kodiranja također imaju dostupan nastavni plan da nastave dalje. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
 Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 

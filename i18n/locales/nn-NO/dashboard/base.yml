@@ -69,7 +69,7 @@ nn:
   try_k8intro: "Eller prøv vår barneskuleintroduksjon til informatikkurs (15-25 timar)"
   k8intro: "Barneskuleintroduksjon til informatikkurs (15-25 timar)"
   already_started: "Allereie starta? Hald fram her >> "
-  demos: 'Administrator: Alle demoar'
+  demos: "Administrator: Alle demoar"
   continue: 'Hald fram'
   prize: 'premie'
   more_info: 'Meir info'
@@ -85,6 +85,7 @@ nn:
     facebook: 'Facebook'
     windowslive: 'Microsoft-konto'
     clever: 'Smartkonto'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Har du gløymt passordet ditt?'
     need_confirmation: "Har du ikkje motteke instruksjonar om korleis du stadfester?"
     need_unlock: "Har du ikkje motteke instruksjonar om korleis du låser opp?"
@@ -114,15 +115,25 @@ nn:
     valid_password: "Gyldig passord!"
     invalid_password: "Passordet må ha minst seks teikn"
     mismatch_password: "Dei to passorda du skreiv inn er ikkje like"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine foreldre eller verge til å bruke tjenestene til Code.org."
+    agree_us_website: "Jeg aksepterer å bruke et nettsted som er basert i USA."
+    my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
     student_terms: "Eg aksepterer <a href='http://code.org/tos'>vilkåra</a> til Code.org. Om eg er under 13 år, bekreftar eg ved å sende inn dette skjemaet at eg har løyve frå mine foreldre eller verge til å bruke tenestene til Code.org.<br/><br/>Epostadresser blir ikkje lagra i ei form som gjer at vi kan kontakte elevar. Code.org vil aldri sende epost til elevar, med unntak for passordpåminning. Sjå våre <a href='http://code.org/privacy'>vilkår for personvern</a> for meir informasjon."
     teacher_terms: "Eg aksepterer brukarvilkåra til Code.org. Sjå våre <a href='http://code.org/privacy'>vilkår for personvern</a> for meir informasjon om personvern."
     additional_information: "Vi treng nokre tilleggsopplysingar for å fortsette registreringa di."
+    user_type_button: "Update Account Type"
     user_type_label: "Kontotype"
     user_type_teacher: "Lærar"
     user_type_student: "Elev"
     field_is_required: "er påkreva"
     accept_terms: "Du må gå med på å opprette ein konto"
     error: "Ein feil har oppstått."
+    email_preference_question: "Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Ja"
+    email_preference_no: "Nei"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Informasjon til skulen (valfritt)'
     school_country: 'Landet til skulen'
@@ -171,6 +182,7 @@ nn:
       email: 'E-postadresse'
       submit: 'Send inn'
     reset_errors:
+      captcha_required: 'Fyll ut CAPTCHA for å lage nytt passord.'
       invalid_email: 'Det kan sjå ut som om du ikkje har ei gyldig epostadresse registrert hos oss. Send ein epost til support@code.org for å få ei ''gjenopprett passord''-lenke.'
     change_form:
       title: 'Endre passordet ditt'
@@ -203,7 +215,7 @@ nn:
       picture: 'Bildepassord'
       word: 'Hemmelege ord'
       email: 'E-post'
-      google_classroom: 'Google Klasserom'
+      google_classroom: 'Google Classroom'
       clever: 'Clever'
   follower:
     invite_sent: 'Invitasjon er sendt'
@@ -220,7 +232,7 @@ nn:
       provider_managed_section: "Denne seksjonen er administrert av ein annan leverandør, og du har ikkje tilgang. Spør læraren din om å legge deg til via %{provider} og last seksjonen på nytt."
     mail:
       student_disassociated:
-        subject: 'Melding fra Code.org: %{student_name} er ikkje lenger tilknytta som din elev.'
+        subject: "Melding fra Code.org: %{student_name} er ikkje lenger tilknytta som din elev."
   reports:
     error:
       access_denied: "Du har ikkje tilgang til statistikk om denne personen"
@@ -249,12 +261,12 @@ nn:
       finished_hoc: "Eg har fullført Kodetimen min"
       sign_in_to_save: 'Logg inn for å lagre framgangen'
       free_play:
-        playlab: 'Lag ein app'
+        playlab: 'Lag ein app i Spel-lab'
         artist: 'Teikn noko'
         calculate: 'Calculate something'
-        applab: 'Lag ein app'
-        gamelab: 'Lag eit Spellab-prosjekt'
-        weblab: 'Lag eit Weblab-prosjekt (beta)'
+        applab: 'Lag ein app i Spel-lab'
+        gamelab: 'Lag eit prosjekt i Spel-lab'
+        weblab: 'Lag eit Nett-lab-prosjekt (beta)'
       home: "Heim"
       my_dashboard: "Kontrollpanel"
       courses: "Kurs"
@@ -348,11 +360,12 @@ nn:
     email_confirm_needed_required: 'E-postadressa di %{email} er ikkje blitt stadfesta:'
     email_confirm_wrong_email: '(Feil e-postadresse?)'
     email_resend_confirm: 'Send ny stadfesting'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(la stå tomt dersom du ikkje vil forandre det)"
     current_password_hint: '(vi treng passordet ditt for å stadfeste endringane dine)'
     delete: 'Slett kontoen din'
     delete_text: "Klikk på knappen under for å sletta kontoen din."
-    delete_text_teacher_note: 'Merk: Du vil ikkje slette nokon av elevane dine sine kontoar ved å slette din eigen konto.'
+    delete_text_teacher_note: "Merk: Du vil ikkje slette nokon av elevane dine sine kontoar ved å slette din eigen konto."
     delete_confirm: 'Er du sikker på at du vil sletta kontoen din?'
     deleted_user: 'sletta brukar'
     no_password_because_oauth: 'Ingen passord fordi du logga på via ein tredjepartsleverandør.'
@@ -363,10 +376,11 @@ nn:
     create_personal_login_under_13_parent_email: 'Epost til foreldre/føresette'
     create_personal_login_info: 'Om du vil fortsette å bruke Code.org-kontoen din utanom skulen, lag din eigen konto nedanfor.'
     create_personal_login_terms: "Ved å lage ein personleg pålogging godtar eg Code.org <a href='%{terms_of_service_url}', target='_blank'>sine vilkår for bruk</a>. Viss eg er under 13 år gammal stadfester eg at mine foreldre eller føresette har gitt meg lov til å bruke Code.org sine tenester utan ein lærar tilstade."
-    create_personal_login_email_note: 'Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre <a href=''%{privacy_policy_url}'', target=''_blank''>retningsliner for personvern</a> for meir informasjon.'
+    create_personal_login_email_note: "Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre <a href='%{privacy_policy_url}', target='_blank'>retningsliner for personvern</a> for meir informasjon."
     enter_new_login_info: 'Skriv inn den nye påloggingsinformasjonen'
     confirm_secret_words: 'Stadfest at det er deg ved å skrive gjeldande hemmelege ord'
     enter_parent_email: "Skriv inn epostadressa til ein av dine føresette (for å gjenopprette passord)"
+    update: "Oppdater konto"
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -448,6 +462,7 @@ nn:
     student_not_found: "Kunne ikkje finne ein eller fleire elevar."
     all_students_must_be_in_current_section: "Alle elevar må vere registert i di gruppe."
     already_enrolled_in_new_section: "Du kan ikkje flytte desse elevane fordi dei allereie er i den nye seksjonen."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Lær i Code Studio"
     description: "Alle kan lære programmering. Lag spel, appar og kunst med kode."
@@ -455,6 +470,8 @@ nn:
   gender:
     male: 'Mann'
     female: 'Kvinne'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Foretrekker å ikkje svare'
   user_type:
     student: 'Elev'
@@ -521,7 +538,7 @@ nn:
     title: "Klikk \"Kjør\" for å sjå programmet mitt i aksjon"
     bounce_og_title: "Sjekk ut sprette-spelet mitt"
     flappy_og_title: "Sjekk ut Flakse-spelet mitt"
-    studio_og_title: "Sjekk ut Play Lab App'en min"
+    studio_og_title: "Sjekk ut appen min i Spel-lab"
     check_out_what_i_made: "Sjekk ut det eg har laga"
     og_description: "Eg skreiv koden sjølv med Code.org"
     phone_number_not_allowed: "Det ser ut som om det er eit telefonnummer i det. Prøv å endre teksten."
@@ -541,9 +558,9 @@ nn:
       unused: "Ubrukte nivå"
   upsell:
     applab:
-      title: 'App Lab'
-      body: "App Lab er eit programmeringsmiljø kor du kan lage enkle appar. Lag ein app, programmer med blokkar eller JavaScript for å få det til å virke, deretter kan du dele appen på få sekundar."
-      body_short: "Design en app, blokkar med kode eller JavaScript for å få det til å fungere, deretter kan du dele din app i løpet av sekundar."
+      title: 'App-lab'
+      body: "App-lab er eit programmeringsmiljø kor du kan lage enkle appar. Lag ein app, programmer med blokker eller JavaScript for å få det til å virke, deretter kan du dele appen på få sekunder."
+      body_short: "Design ein app, blokker med kode eller JavaScript for å få det til å fungere, deretter kan du dele appen din i løpet av sekunder."
       audience: 'Alder 13+'
       cta: 'Lær korleis'
     hoc:
@@ -571,7 +588,7 @@ nn:
       title: "Enkel kryptering"
       body: "Studentene lærer teknikker for å lage og knekke krypterte meldinger."
     weblab:
-      title: "Web Lab (beta)"
+      title: "Nett-lab (beta)"
       body: "Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med HTML og CSS. Design din webside og del siden din i løpet av sekunder."
       audience: "Alder 13+"
       cta: "Lær korleis"
@@ -580,7 +597,7 @@ nn:
     starwars:
       title: "Star Wars"
     infinity:
-      title: "Infinity Spill-lab"
+      title: "Infinity i Spel-lab"
       body: "Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar."
     minecraft:
       title: "Minecraft"
@@ -702,7 +719,7 @@ nn:
     sign_out: 'Dersom du ikkje ynskjer å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.'
   terms_interstitial:
     title: "Oppdaterte tenestevilkår og retningslinjer for personvern"
-    intro_desc: 'Vi har oppdatert våre vilkår for teneste og personvern, som du kan sjå nedanfor. Endringane gjeld frå 24 august 2016. Den største endringa: Vi vil <i>ikkje lenger lagre epost-adressene til elevane sine kontoar på Code Studio</i>. Dette er viktig for oss, og vi håpar det set ein ny standard for personvern for elevar innan opplæringsteknologi. Vi har sendt deg ei oppsummering av øvrige endringar via epost.'
+    intro_desc: "Vi har oppdatert våre vilkår for teneste og personvern, som du kan sjå nedanfor. Endringane gjeld frå 24 august 2016. Den største endringa: Vi vil <i>ikkje lenger lagre epost-adressene til elevane sine kontoar på Code Studio</i>. Dette er viktig for oss, og vi håpar det set ein ny standard for personvern for elevar innan opplæringsteknologi. Vi har sendt deg ei oppsummering av øvrige endringar via epost."
     intro_instructions: "Du må akseptere dei nye vilkåra for at elevar yngre enn 13 år skal ha full tilgang på dei nyaste funksjonane i Code Studio. Når du registrerer ein konto for ein elev under 13 år, vil du måtte bekrefte at skulen har godkjenning frå føresatte til å samle inn eleven sin personlege informasjon til bruk i skulen, herunder program som Code Studio."
     tos: "Vilkår"
     privacy: "Personvern"
@@ -718,25 +735,25 @@ nn:
     message_with_suggestion: "Vennlist kontroller at følgende informasjon er korrekt, eller oppdater etter behov."
     save: "Lagre"
   race_interstitial:
-    title: 'Valfritt: Hjelp oss å spora framdrifta av forbetringa av mangfaldet innan programmering.'
+    title: "Valfritt: Hjelp oss å spora framdrifta av forbetringa av mangfaldet innan programmering."
     message: "Oppgi din etnisitet (kryss av alle som passar)"
     races:
       - 
-        white: Kvit
+        white: "Kvit"
       - 
-        black: Afrikansk
+        black: "Afrikansk"
       - 
-        hispanic: Latinamerikansk
+        hispanic: "Latinamerikansk"
       - 
-        asian: Asiatisk
+        asian: "Asiatisk"
       - 
-        hawaiian: Hawaii eller Stillehavsøyane
+        hawaiian: "Hawaii eller Stillehavsøyane"
       - 
-        american_indian: Amerikansk urbefolkning
+        american_indian: "Amerikansk urbefolkning"
       - 
-        other: Anna
+        other: "Anna"
       - 
-        opt_out: Ynskjer ikkje å svare
+        opt_out: "Ynskjer ikkje å svare"
     submit: "Send inn"
     decline: "Lukk"
   zendesk_too_young_message: 'Beklager, yngre brukarar kan ikkje logge inn på nettstaden for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be ein forelder eller lærer om å kontakte oss for deg.'
@@ -762,7 +779,7 @@ nn:
     delete: "Slett"
     import: "Importér"
     share_link_import_bad_link_header: "Lenke ikkje attkjend"
-    share_link_import_bad_link_body: 'Vi kunne ikke importere lenken. Kontroller at du brukar ei lenke frå ei Minecraft: Agent-oppgåve, og at du har kopiert hele lenka.'
+    share_link_import_bad_link_body: "Vi kunne ikke importere lenken. Kontroller at du brukar ei lenke frå ei Minecraft: Agent-oppgåve, og at du har kopiert hele lenka."
     share_link_import_error_header: "Noke gjekk gale."
     share_link_import_error_body: "Det oppstod eit problem ved import av lenka. Prøv igjen."
     exit: "Attende til kurset"
@@ -783,7 +800,7 @@ nn:
     name: "Namn"
     updated: "Oppdatert"
     project_type: "Prosjekttype"
-    help_text: "Klikk <strong> Lag ein app</strong> eller <strong>Tegn noko</strong> under for å lage eit nytt Spill-lab eller kunstprosjekt!<br/>Du kan komme tilbake og jobbe på prosjekta dine når som helst."
+    help_text: "Klikk <strong>Lag ein app</strong> eller <strong>Teikn noko</strong> under for å lage eit prosjekt!<br/>Du kan komme tilbake og jobbe på prosjekta dine når som helst."
     need_help: "Treng du hjelp for å kome i gong?"
     thumbnail_help: "Ikke riktig miniatyrbildet for prosjektet? Kjør din app for å generere et nytt miniatyrbilde. Merk at det kan ta et par timer før miniatyrbildet er oppdatert overalt."
     really_delete: 'Slette?'
@@ -867,6 +884,7 @@ nn:
     csd5_2: 'Kapittel 2: Problemløsing med data'
     csd6_1: 'Kapittel 1: Maskinvare utganger'
     csd6_2: 'Kapittel 2: Maskinvareinnganger'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
@@ -880,11 +898,16 @@ nn:
     csp_ap_1: 'Kapittel 1: AP Tech oppsett'
     csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Eining 2: Digital informasjon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Spørsmål til refleksjon'
   external_links:
     disclaimer: Fråskrive seg ansvar
     leaving_domain: Du forlet no dette domenet, til eit område som ikkje blir styrt av Code.org.
-    disclaimer_text: Denne nettstaden kan ha vilkår for personvern som avvik frå vilkåra til Code.org. Vi har vald desse tredjeparts ressursane fordi vi trur dei vil vere nyttig for deg. Vi er ikkje direkte ansvarleg for innhaldet på denne nettstaden, ver vennleg å <a href='%{support_url}'>kontakt support</a> om du finn innhaldet støytande, eller om den kobla sida ikkje lenger er tilgjengeleg.
+    disclaimer_text: Denne nettstaden kan ha vilkår for personvern som avvik frå vilkåra til Code.org. Vi har vald desse tredjeparts ressursane fordi vi trur dei vil vere nyttig for deg. Vi er ikkje direkte ansvarleg for innhaldet på denne nettstaden, ver vennleg å <a href='%{support_url}'>kontakte brukerstøtte</a> om du finn innhaldet støytande, eller om lenka til sida ikkje lenger er tilgjengeleg.
   hoc_download:
     title: 'Kodetimen nedlastingar'
     capsule_title: 'Har du internett?'
@@ -984,3 +1007,14 @@ nn:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Alle kurs'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Eg er einig'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Ja'

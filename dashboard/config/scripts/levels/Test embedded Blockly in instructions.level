@@ -1,0 +1,44 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2018-04-09T19:20:57.000Z",
+  "level_num": "custom",
+  "user_id": 1483,
+  "properties": {
+    "skin": "artist",
+    "embed": "false",
+    "instructions": "As a block element, we should be able to include XML representing a valid Blockly block or blocks.\r\n\r\n<xml>\r\n  <block type=\"draw_move_by_constant\">\r\n    <title name=\"DIR\">moveForward</title>\r\n    <title name=\"VALUE\">100</title>\r\n  </block>\r\n</xml>\r\n\r\nWe also support Blockly XML as an inline element like so: <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "impressive": "false",
+    "discard_background": "false",
+    "disable_sharing": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Artist>

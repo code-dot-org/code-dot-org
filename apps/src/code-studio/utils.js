@@ -70,3 +70,13 @@ export function environmentSpecificCookieName(name) {
 
   return `${name}_${rack_env}`;
 }
+
+/**
+ * Given a host name (e.g. studio.code.org) return the site's root domain
+ * (e.g. code.org).  Useful for getting the domain on which we will set a cookie.
+ * @param {string} hostname - A host name
+ * @returns {string} The root domain name for the host name
+ */
+export function getRootDomainFromHostname(hostname) {
+  return hostname.split('.').slice(-2).join('.');
+}

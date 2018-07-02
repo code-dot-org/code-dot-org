@@ -1,0 +1,10 @@
+name 'CB_Question_18_exam_prep'
+
+wrong 'Data compression is only useful for files being transmitted over the Internet.'
+wrong 'Regardless of the compression technique used, once a data file is compressed, it cannot be restored to its original state.'
+wrong 'Sending a compressed version of a file ensures that the contents of the file cannot be intercepted by an unauthorized user.'
+right 'There are trade-offs involved in choosing a compression technique for storing and transmitting data.'
+
+markdown <<MARKDOWN
+Which of the following is a true statement about data compression?
+MARKDOWN

@@ -163,9 +163,6 @@ bg:
       CollisionDetection:
         title: Collision Detection и Питагорова теорема
         desc: Определянето на момента, когато обекти на екрана се докосват, е важен аспект на повечето игри. В този урок ние ще разгледаме как Питагоровата теорема и формулата за разстояние може да се използват за измерване на разстоянието между две точки от равнината и след това да прецени дали тези две точки (или герои от игра) се докосват.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: В този урок вие ще научите за повторенията!
@@ -265,3 +262,96 @@ bg:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Реални алгоритми: Засадете семената'
+        desc: Този урок ни показва, че ние използваме алгоритми и в ежедневието ни, като засаждане на семена например. Той се фокусира върху по-голямата картина на компютърните науки и как алгоритмите играят съществена роля в тях.
+      UnplugHappyMaps_2018:
+        title: Щастливи карти
+        desc: Учениците създават прости алгоритми (набор от инструкции), за да преместят героя си през лабиринта с помощта на една команда.
+      GoingPlacesSafely_2018:
+        title: Достигаме безопасно до места
+        desc: Интернет е мощно, но понякога опасно място. Учителите ще въведат правила за безопасност на учениците при навигиране в Интернет.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: В този урок вие ще научите за повторенията!
+      BigEvent_2018:
+        title: Голямото събитие
+        desc: Учениците ще се запознават с концепцията за "събития", действия, при които компютърът постоянно следи за нещо. Учителят ще натиска бутони на хартиено дистанционно, а учениците ще реагират според натиснатия бутон.
+      GraphPaperProgramming_2018:
+        title: Програмиране на милиметрова хартия
+        desc: Учениците ще напишат алгоритъм (набор от инструкции) с помощта на предварително определени команди, за да насочат своите съученици да възпроизведат предварително начертана рисунка.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Ънплъгд дейност
+        desc: Днес ще научите какво означава да бъдеш дигитален гражданин.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Ънплъгд дейност
+        desc: Днес ще научите какво да направите, ако някой се отбелязл като онлайн.
+      Conditionals_2018:
+        title: Условия
+        desc: За да научат за условията, учениците играят на карти и трябва да създадат правила като "Ако изтеглиш червена карта, аз получавам точка" и "Ако изтеглиш черна карта, ще получиш точка."
+      DigitalFootprint_2018:
+        title: Вашите дигитални отпечатъци
+        desc: Учителите запознават учениците си с идеята, че пускането на информация за себе си онлайн създава дигитални отпечатъци или "следа", която има последствия.
+      BinaryImages_2018:
+        title: Бинарни образи(картини)
+        desc: Въпреки че много хора мислят за бинарния код като за нули и единици, в нашите предишни курсове учениците научиха, че информацията може да бъде представена в различни варианти.  Този урок развива тази концепция с една стъпка напред, тъй като илюстрира как  компютърът може да съхранява още по-сложна информация (като изображения и цветове) с двоичен код.
+      PaperPlanes_2018:
+        title: 'Реални алгоритми: Хартиени самолети'
+        desc: Този урок показва как ние използваме алгоритми в ежедневието ни, по-специално при хартиените самолетчета. Този урок също се фокусира върху по-голямата картина на компютърните науки, в които алгоритмите играят съществена роля.
+      GettingLoopy_2018:
+        title: Да повтаряме
+        desc: Този урок въвежда програмирането на повторения (повтаря указанията) чрез танц. Учениците ще научат проста хореография, след което ще се научат да я повтарят.
+      BinaryBracelets_2018:
+        title: Двоични гривни
+        desc: Учениците ще създават гривни като заменят първите букви в имената си с цифри. Учениците учат, че данните могат да бъдат представени и съхранени по повече от един начин.
+      MoveItMoveIt_2018:
+        title: Преместете го, преместете го
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Щафетно програмиране
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

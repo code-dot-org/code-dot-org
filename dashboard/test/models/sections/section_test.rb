@@ -20,7 +20,7 @@ class SectionTest < ActiveSupport::TestCase
   test "destroying section destroys appropriate followers" do
     delete_time = Time.now - 1.day
     already_deleted_follower = create :follower, section: @section
-    Timecop.travel(delete_time) do
+    Timecop.freeze(delete_time) do
       already_deleted_follower.destroy
     end
     follower = create :follower, section: @section
@@ -35,7 +35,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test "restoring section restores appropriate followers" do
     old_deleted_follower = create :follower, section: @section
-    Timecop.travel(Time.now - 1.day) do
+    Timecop.freeze(Time.now - 1.day) do
       old_deleted_follower.reload.destroy
     end
     new_deleted_follower = create :follower, section: @section
@@ -92,12 +92,13 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'adding student preserves their share setting when section share is enabled' do
     section = create :section, sharing_disabled: false
-    student = create :student, sharing_disabled: true
+    student = create :student, age: 11, sharing_disabled: true
+
     section.add_student student
     assert student.sharing_disabled?
   end
 
-  test 'removing a student from their last section resets student share setting' do
+  test 'removing a student from their last section enables student sharing when over 13' do
     section1 = Section.create @default_attrs
     section1.sharing_disabled = true
 
@@ -105,6 +106,7 @@ class SectionTest < ActiveSupport::TestCase
     section2.sharing_disabled = true
 
     student = create :student
+    student.age = 15
     section1.add_student student
     section2.add_student student
 
@@ -112,6 +114,24 @@ class SectionTest < ActiveSupport::TestCase
     assert student.sharing_disabled?
     section1.remove_student student, section1, {}
     refute student.sharing_disabled?
+  end
+
+  test 'removing a student from their last section restricts sharing when under 13' do
+    section1 = Section.create @default_attrs
+    section1.sharing_disabled = true
+
+    section2 = Section.create @default_attrs
+    section2.sharing_disabled = true
+
+    student = create :student
+    student.age = 11
+    section1.add_student student
+    section2.add_student student
+
+    section2.remove_student student, section2, {}
+    assert student.sharing_disabled?
+    section1.remove_student student, section1, {}
+    assert student.sharing_disabled?
   end
 
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
@@ -267,6 +287,14 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
   end
 
+  test 'externally_rostered?' do
+    [Section::LOGIN_TYPE_GOOGLE_CLASSROOM, Section::LOGIN_TYPE_CLEVER].each do |type|
+      assert Section.new(login_type: type).externally_rostered?
+    end
+
+    refute Section.new.externally_rostered?
+  end
+
   test 'name safe students' do
     def verify(actual, expected)
       section = create :section
@@ -314,12 +342,6 @@ class SectionTest < ActiveSupport::TestCase
 
     expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
     assert_equal expected_url, section.teacher_dashboard_url
-  end
-
-  test 'clean_data' do
-    section = create :section
-    section.clean_data
-    assert_equal Section::SYSTEM_DELETED_NAME, section.reload.name
   end
 
   test 'default_script: no script or course assigned' do
@@ -520,8 +542,8 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     setup_all do
-      @csd2 = create_script_with_levels('csd2', :weblab)
-      @csd3 = create_script_with_levels('csd3', :gamelab)
+      @csd2 = create_script_with_levels('csd2-2017', :weblab)
+      @csd3 = create_script_with_levels('csd3-2017', :gamelab)
     end
 
     test 'returns true when all conditions met' do

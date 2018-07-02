@@ -25,14 +25,14 @@
   submit: "යොමු කරන්න"
   twentyhours_heading: "අප විසින් පිරිනමන පරිගණක විද්‍යා පිවිසුම් පාඨමාලාව උත්සාහ කර බලන්න"
   twentyhours_text: "ඔබගේ පළමු  Hour of Code වැඩසටහන අවසන්ද? මෙම පාඨමාලාවේ පසුවට මූලික පරිගණක විද්‍යාව සහ  ක්‍රමලේඛන සංකලප තව දුරටත් ඉගෙනගන්න."
-  og_title: Hour of Code වැඩසටහන ළඟදීම
+  og_title: 'Hour of Code වැඩසටහන ළඟදීම'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "පරිගණක විද්‍යාව හැදෑරීමේ අවස්තාව, සෑම පාසලකම සිටින සෑම දරුවෙකුටම ලැබිය යුතු වේ. එය සෑමදෙයක්ම වෙනස් කරමින් පවතී."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code ළඟදීම"
-  csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description: "December 3-9, 2018. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Hour of Code</a> වැඩසටහන සමග එක්වන්න<br/>දෙසැම්බර් 8 - 14, 2014<br/>"
   hoc2014_students: "සිසුන්"
@@ -383,6 +383,8 @@
   homepage_header_donors: "Code.org එහි අනුග්‍රාහකයින්ට තුති පුදයි"
   homepage_donors_seall: "සියල්ල බලන්න"
   homepage_donors_donate: "පරිත්‍යාග"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "වැඩිදුර ඉගෙන ගන්න"
   contact_form_topic_student: "මම ශිෂ්‍යයෙක්"
   contact_form_topic_parent: "මම දෙමාපියෙක්"
   contact_form_topic_teacher: "මම ගුරුවරයෙකු / අධ්යාපනඥයෙකු"
@@ -510,8 +512,10 @@
   video_title_real_madrid: "Hour of Code with Real Madrid"
   video_title_marco_belinelli: "Hour of Code with Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh on Computer Science"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 min"
   video_2min: "2 min"
+  video_3min: "3 min"
   video_5min: "5 min"
   speak_another_language: "ඔබ තවත් භාෂාවක් කතා කරනවා ද?"
   help_translate: "පරිවර්තනයෙන් සහාය වන්න."
@@ -551,6 +555,10 @@
   volunteer_engineer_submission_field_email: "විද්‍යුත් තැපැල් ලිපිනය"
   volunteer_engineer_submission_field_email_desc: "ඔබගේ විද්‍යුත් තැපැල් ලිපිනය බෙදා නොගැනේ, නමුත් අපි ඔබගේ ඉල්ලීම ගුරුවරු හරහා යවනවා."
   volunteer_engineer_submission_field_email_placeholder: "විද්‍යුත් තැපැල් ලිපිනය"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: 'ඔව්'
+  volunteer_engineer_submission_field_email_preference_no: 'නැහැ'
   volunteer_engineer_submission_final_paragraph: "Hour of Code හෝ වෙනත් ස්වේච්ඡා කටයුතුසදහා ප්‍රාදේශීය ගුරුවරුන්ට ඇමතීම සදහා ඔබව සිතියම මත ලැයිස්තු ගත කරාවි. අප ඔබේ විද්‍යුත් තැපෑල සහ නියම ලිපිනිය කිසිදු අවස්ථාවක වෙනත් පාර්වශයක් සමග බෙදා නොගනී. නමුත් ප්‍රාදේශීය ගුරුවරුන්ට ප්රසිද්ධියේ වෙනත් තොරතුරු(ආසන්නතම ස්ථානය ඇතුලත්ව) නැරබීය හැකිවේ."
   volunteer_engineer_submission_checkbox_contact: 'ගුරුවරුන් විසින් ස්වේච්ඡා අවස්ථා සඳහා මාව සම්බන්ධ කරගත හැකි බවට, මම එකඟ වෙමි. (සැ. යු.: ඔබගේ Email ලිපිනය වෙනත් පාර්ශවයන් සමග බෙදාගනු නොලැබේ)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
@@ -628,22 +636,16 @@
   dashboard_course_csins: "විද්‍යාවේ පරිගණක විද්‍යාව "
   dashboard_course_csins_desc: "ආකෘති නිර්මාණය සහ අනුරූපන සන්දර්භය තුල පරිගණක විද්යාව සංකල්ප හැඳින්වීමක් ඉදිරිපත් කිරීමට Code.org GUTSව්යාපෘතිය මෙයින් අදහස් සමග අත්වැල් බැඳගෙන ඇත."
   dashboard_course_ecs: "පරිගණක විද්‍යාව ගවේශණය"
-  dashboard_course_ecs_desc: පරිගණක විද්‍යාව ගවේෂණය එක් අවුරුදු කොටස 6 කින් සමන්විත පාඨමාලාවකි. මානව පරිගණක අන්තර් ක්රියාකාරිත්වය. ප්රශ්නය විසඳීම, වෙබ් නිර්මාණ, ක්රමලේඛ, තොරතුරු තාක්ෂණය සහ දත්ත විශ්ලේෂණය, සහ රොබෝ විද්යාව.
+  dashboard_course_ecs_desc: 'පරිගණක විද්‍යාව ගවේෂණය එක් අවුරුදු කොටස 6 කින් සමන්විත පාඨමාලාවකි. මානව පරිගණක අන්තර් ක්රියාකාරිත්වය. ප්රශ්නය විසඳීම, වෙබ් නිර්මාණ, ක්රමලේඛ, තොරතුරු තාක්ෂණය සහ දත්ත විශ්ලේෂණය, සහ රොබෝ විද්යාව.'
   dashboard_course_csp: "AP® පරිගණක විද්‍යා මූලධර්ම"
   dashboard_course_csp_desc: "Code.org සිත් ඇදගන්නා සුලු සහ ඕන විටක ලබා ගත හැකි පරිගණක විද්‍යාවේ මූලිකාංග අධ්‍යනය කල හැකි පාඨමාලා නිර්මාණය කර තිබේ."
   dashboard_landing_loading: "පූරණය වෙමින්..."
-  dashboard_action_edit: "සංස්කරණය කරන්න"
-  dashboard_action_save: "සුරකින්න"
-  dashboard_action_save_all: "සියලුම දේ සුරකින්න"
   dashboard_action_cancel: "අවලංගු කරන්න"
   dashboard_action_delete: "මකන්න"
   dashboard_action_delete_yes: 'ඔව්'
   dashboard_action_delete_no: 'නැහැ'
   dashboard_action_confirm: "මකනවා ද?"
-  dashboard_action_remove: "ඉවත් කරන්න"
-  dashboard_action_remove_confirm: "ඉවත් කරනවා ද?"
   dashboard_action_done: "හරි"
-  dashboard_action_required: "අවශ්‍යයි"
   dashboard_action_print_certificates: "සහතික මුද්‍රණය කරන්න"
   dashboard_assessments_view: 'ඇගයීම් දැක්ම:'
   dashboard_assessments_none: "බොහොමයක් ගුරුවරුන් සිසුන්ගේ ප්රගතිය ගණනය කරනුයේ ප්රගති තීරුව යොදාගෙන. ඔබගේ සිසුන්ට අමතර ඇගයීම් කැමති නම්, lesson plans හරහා නිර්දේශිත ප්‍රශ්න හා ක්ෂේත්‍රය සොයාගත හැක. මෙය කරනුයේ Code Studio පිටතසිටය්."
@@ -719,28 +721,15 @@
   dashboard_sections_assign_activity: "පාඨමාලාව පවරන්න"
   dashboard_error_none_selected: "කරුණාකර එක සිසුවෙක් වත් තෝරන්න."
   dashboard_error_other_section: "ඔබ ඔබේ ම කොටස් අතර සිසුන් මාරු කරන්නේ නම්, ඔබේ කොටස dropdown මෙනුවෙන් තෝරන්න. ඔබගේ සිසුන් වෙනත් ගුරුවරුයෙකුගේ කොටසකට මාරු කිරීමට 'වෙනත් කොටස්' යන්න තෝරන්න."
-  dashboard_students_add_student: "සිසුවෙක් එක් කරන්න"
-  dashboard_students_add_students: "සිසුන් පිරිසක් ඇතුලත් කරන්න"
   dashboard_students_add_multiple: 'එක් පේළියකට එක බැගින් වනසේ  ඔබගේ සිසුන් නම් ටයිප් කරන්න හෝ  paste  කරන්න :'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "ඔබ නව කොටසක් නිර්මාණය කර ඇත! දැන් ඔබගේ සිසුන් ඇතුලත් කිරීමට <b> සිසුවෙකු ඇතුලත් කරන්න </b> සහ <b> සිසුන් ඇතුලත් කරන්න </b> යන ඉහත බොත්තම් භාවිතා කරන්න."
-  dashboard_students_placeholder_name: "සිසුවාගේ නම"
   dashboard_students_name: "නම"
   dashboard_students_progress: "ප්‍රගතිය"
-  dashboard_students_age: "වයස"
-  dashboard_students_gender: "ලිංගභේදය"
   dashboard_students_male: "පිරිමි"
   dashboard_students_female: "ගැහැණු"
-  dashboard_students_secret: "රහස්‍ය"
-  dashboard_students_password: "මුර පදය"
-  dashboard_students_username: 'පරිශීලක නාමය: %{student_username}'
-  dashboard_students_email: 'ඊ මේල් ලිපිනය: %{student_email}'
   dashboard_students_completed_levels: "සම්පූර්ණ කර ඇති මට්ටම්"
   dashboard_students_total_lines: "කේත පේලි"
-  dashboard_students_show_secret: "රහස පෙන්වන්න"
-  dashboard_students_auto_generated: "ස්වයංක්රීය-ජනනය"
-  dashboard_students_reset_secret: "රහස තිබූ පරිදිම සකසන්න"
-  dashboard_students_reset_password: "මුර පදය නැවත සකස් කරන්න"
   dashboard_students_share_section: "මෙම කොටසේ පිවිසුම් පිටුව ඔබේ සිසුන් සමඟ බෙදා ගන්න:"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "ඔබේ සිසුන්ගේ පිවිසුම් තොරතුරු සමඟ කාඩ්පත් මුද්‍රණය කරන්න."
@@ -771,7 +760,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ <a href='%{unplugged_url}'>මෙම එළිදැක්වූ පාඩම් උත්සාහ කරන්න</a>."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "විෂයමාලාව"
   dashboard_curriculum_overview: "K-5 විශය මාලාවේ සාරංශය"
   dashboard_overview: "දළ විශ්ලේෂණය"
@@ -789,12 +781,13 @@
   dashboard_curriculum_csins: 'විද්‍යාවේ පරිගණක විද්‍යාව:'
   dashboard_curriculum_csp: 'AP® පරිගණක විද්‍යා මූලධර්ම:'
   dashboard_curriculum_ecs: 'පරිගණක විද්‍යාව ගවේශණය:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "පෙරපාසල්"
   dashboard_grade_other: "වෙනත්"
   dashboard_login_word: "වචනය"
   dashboard_login_picture: "පින්තූරය"
   dashboard_login_none: "විද්‍යුත් තැපැල"
-  dashboard_new_password: "නව මුරපදය"
   dashboard_stage: "අදියර"
   dashboard_puzzle: "ප්‍රහේලිකාව"
   dashboard_question: "ප්‍රශ්නය"
@@ -857,7 +850,7 @@
   carousel_heading_international: "ඔබේ බසින් හවුල්කරු නිබන්ධන"
   carousel_heading_domestic: "හවුල්කරු නිබන්ධන සිංහල බසින් ඇත"
   carousel_heading_beginners: "K - 8 ශ්‍රේණි සදහා හවුල්කරු නිබන්ධන"
-  carousel_heading_beyond_beginners: ආධුනිකයින් හට පාඩම්
+  carousel_heading_beyond_beginners: 'ආධුනිකයින් හට පාඩම්'
   carousel_heading_javascript: "ජාවාස්ක්‍රිප්ට් උගන්වන සහකරු නිබන්ධන"
   carousel_heading_beyond_javascript: "ජාවා ස්ක්‍රිප්ට් ඉගෙන ගත හැකි පාඩම්"
   carousel_heading_unplugged: "උපාංගයක් හෝ අන්තර්ජාලය නොමැති ද? 'එළිදැක්වූ පරිගණක විද්‍යාව' උත්සාහ කරන්න"
@@ -884,7 +877,7 @@
   third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "සහභාගි වන්නන්"
   teachers_notes: "ගුරුවරයාගේ තුණ්ඩු"
-  teachers_notes_hoc: ගුරුවරුනි :වැදගත්  අධ්යාපක සටහන් මෙතනින් කියවන්න.
+  teachers_notes_hoc: 'ගුරුවරුනි :වැදගත්  අධ්යාපක සටහන් මෙතනින් කියවන්න.'
   previous: "පෙරට"
   next: "ඊළඟ"
   older_systems: "   පැරණි පද්ධතියන් හි   වැඩකරන හවුල්කරු නිබන්ධන"
@@ -956,14 +949,30 @@
   coursee_name: "Course E"
   coursef-draft_name: Course F
   coursef_name: "Course F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "කඩිනම් පාඨමාලා"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
-  cspunit2_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
-  cspunit3_name: '(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය'
-  cspunit4_name: '(පැරණි) 4 වෙනි ඒකකය: දත්ත'
-  cspunit5_name: '(පැරණි) ඒකකය 5: PT ගවේෂණය කර තනන්න'
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  cspunit1_name: "ඒකක 1: ඩිජිටල් තොරතුරු"
+  cspunit2_name: "පාඩම් අංක 2: අන්තර්ජාලය"
+  cspunit3_name: "(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය"
+  cspunit4_name: "(පැරණි) 4 වෙනි ඒකකය: දත්ත"
+  cspunit5_name: "(පැරණි) ඒකකය 5: PT ගවේෂණය කර තනන්න"
   cspunit6_name: 'පසු-AP: යෙදුම් තුළ දත්ත සංචිත'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -971,6 +980,34 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unit 5: Data and Society'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
+  csp2-2017_name: '2වන ඒකකය: අංකිත තොරතුරු'
+  csp3-2017_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
+  csp1-2018_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
+  csp2-2018_name: '2වන ඒකකය: අංකිත තොරතුරු'
+  csp3-2018_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
   csp2_name: '2වන ඒකකය: අංකිත තොරතුරු'
   csp3_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
@@ -981,6 +1018,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "පූර්ණ පරීක්ෂණය - 50 ප්රශ්න"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1004,14 +1042,19 @@
   math_category_name: "ගණිත"
   hoc_category_name: "පැයේ කේතය"
   csf_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
   csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය"
   research_studies_category_name: "Research Studies"
   applab_name: "මෘදුකාංග විද්‍යාගාරය"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "වයස් 13+"
@@ -1070,12 +1113,12 @@
   course2_gradelevel: "අවුරුදු 6 සිට 18 දක්වා"
   course3_gradelevel: "වයස අවුරුදු 8-18"
   course4_gradelevel: "වයස අවුරුදු 10-18"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "8 ශ්‍රේණියේ සිට ඉහලට"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "වයස 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "වයස අවුරුදු 10-18"
   codeorg_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
   codeintl_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
@@ -1178,12 +1221,12 @@
   course2_shortdescription_congrats: "මූලික කියවීමේ හැකියාවන් සහිත සිසුන් සඳහා, මෙම පාඨමාලාව පලමු පාඨමාලාව මත පදනම් වේ. මෙහිදී සිසුන් විසින් ගැටළුවක් විසඳීම සඳහා ක්‍රමලේඛ සැකසීම සහ අන්තර් ක්‍රියාකාරී ක්‍රීඩා නිපදවීම හෝ බෙදාගත හැකි කතාන්දර නිපදවීම සිදුකරනු ඇත. 2 සිට 5 ශ්‍රේණි සඳහා නිර්දේශිතයි."
   course3_shortdescription_congrats: "මීළඟ අදියර සඳහා ඔබ සූදානම්ද? මෙම අදියරේදී සිසුන් විසින් පෙර පාඩම් වලදී උගත් ක්‍රමලේඛන සංකල්ප පිළිබඳ තවත් ගැඹුරින් හදාරමින් සංකීර්ණ ගැටළු වෙත විසඳුම් සොයනු ඇත. මෙම පාඩම අවසානයේදී, සිසුන් විසින් අන්තර්ක්‍රියා සහිත කතාන්දර සහ ක්‍රීඩා නිර්මාණය කරනු ඇත. 4 සිට 5 ශ්‍රේණි සඳහා නිර්දේශිතයි."
   course4_shortdescription_congrats: "තවත් ඉදිරියට යාමට ඔබ සූදානම්ද? මෙම අදියරේදී සිසුන් විසින් පෙර පාඩම් වලදී උගත් ක්‍රමලේඛන සංකල්ප පිළිබඳ තවත් ගැඹුරින් හදාරමින් සංකීර්ණ ගැටළු වෙත විසඳුම් සොයනු ඇත. මෙම පාඩම අවසානයේදී, සිසුන් විසින් අන්තර්ක්‍රියා සහිත කතාන්දර සහ ක්‍රීඩා නිර්මාණය කරනු ඇත. 4 සිට 8 ශ්‍රේණි සඳහා නිර්දේශිතයි."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "මුලිකව පරිගණක විද්‍යාවේ සංකල්ප drag and drop ක්‍රමලේඛනය මගින් ඉගෙන ගන්න. මෙය ක්‍රීඩාවකට සමාන වූ, Angry Birds and Plants vs. Zombies ක්‍රීඩා ඇසුරින් Bill Gates, Mark Zuckerberg විසින් මෙහෙයවන නිබන්ධනයකි. repeat-loops, conditionals සහ මූලික ඇල්ගොරිතම මෙමගින් ඉගෙනගත හැක. භාෂා 34කින් ලබාගත හැකියි."
   codeintl_longdescription: "මුලිකව පරිගණක විද්‍යාවේ සංකල්ප drag and drop ක්‍රමලේඛනය මගින් ඉගෙන ගන්න. මෙය ක්‍රීඩාවකට සමාන වූ, Angry Birds and Plants vs. Zombies ක්‍රීඩා ඇසුරින් Bill Gates, Mark Zuckerberg විසින් මෙහෙයවන නිබන්ධනයකි. repeat-loops, conditionals සහ මූලික ඇල්ගොරිතම මෙමගින් ඉගෙනගත හැක. භාෂා 34කින් ලබාගත හැකියි."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1396,11 +1439,11 @@
   makeschool_beyond_longdescription: "ObjectiveC දන්නවද? අයිෆෝන් ගේම් එකක් හදන්න පැයකින් ඉගෙන ගන්න. අපි ඔබට සෑදීමට සහ පරික්ශා කිරීමට වෙබ් බ්‍රව්සරය තුලින්ම උදව් කරන්නම්. ඔබ ඉන්පසු ඔබේ ෆේස්බුක් මිතුරන් සමග මෙය බෙදාගත හැකියි. පෙර දැනුම අවශ්‍ය නොවේ. නමුත් විචල්‍යන්, ශ්‍රිත හා වස්තු අඳුරාගැනීමට ඔබට හැකිවිය යුතුය."
   appinventor_beyond_longdescription: "විනෝදාත්මක, ඉක්මන් වීඩියෝ නිබන්ධන ඔබගේ Android දුරකථනය හෝ ටැබ්ලටය සඳහා සරල යෙදුම් තුනක් ගොඩ හරහා ඔබව රැගෙන. සමානව බෙදාහදා ගැනීම අදුනික සහ විශේෂඥයන් සඳහා නිර්මාණය කර ඇති,මෙම hour of code මගින් ඔබට පෙර සූදානමක් ලබා දෙනෙවා  ඔබේ ම යෙදුම් ගොඩනැගීමට පෙර. ඔබේ මිතුරන් සමග ඔබගේ යෙදුම නිර්මාණ බෙදා සිතා බලන්න! මෙම කටයුතු පුද්ගලයන් සඳහා සහ මෙරට ප්රමුඛ පෙළේ පන්ති ගුරුවරුන් සඳහා සුදුසු ය"
   touchdevelop_beyond_longdescription: "ඔබ iPad, iPhone, Android, PC, Mac, Windows Phone මගින් TouchDevelop එක මගින් යෙදුම් නිර්මාණය කරන්න. අපගේ touch-friendly editor එක මගින් කේතනය පහසු කරයි!"
-  codehs_beyond_longdescription: Karel, බල්ලා සමඟ වැඩසටහන් පිළිබඳ මූලික දේ ඉගෙනගන්න,විනෝදාත්මක, කේතනය සඳහා ප්රවේශවීමේ සහ දෘශ්ය ප්‍රවේශයක්හ ඳුන්වාදෙයි,එහිදී පරිගණකයට  විධාන  ලබාදීම  සුනඛයෙකුට විධාන ලබාදෙන ලෙස ලබාදිය හැකිය.ගුරුවරයෙකු විසින්  මෙම නිබන්ධනයට නායකත්වය ලබාදෙන්නේ නම් වඩාත් ගැලපේ ,නමුත් ස්වාධීනවද එය සිදු කළ හැකිය.
-  udemy_beyond_longdescription: ඔබ මීට පෙර කේත පේලියක් නොදැකපු කෙනෙක් වුවත්, ජීවත්වීමට කේතනය කරන කෙනෙකු වුවත්, Udemy තුළින් ඔබටම ගැලපෙන පාඨමාලාවක් සොයාගත හැකියි. මෙය වෘත්තිමය උපදේශකයින් මගින් පිරිනැමේ. [මුදල් ගෙවා ලබා ගත යුතුයි.]
+  codehs_beyond_longdescription: 'Karel, බල්ලා සමඟ වැඩසටහන් පිළිබඳ මූලික දේ ඉගෙනගන්න,විනෝදාත්මක, කේතනය සඳහා ප්රවේශවීමේ සහ දෘශ්ය ප්‍රවේශයක්හ ඳුන්වාදෙයි,එහිදී පරිගණකයට  විධාන  ලබාදීම  සුනඛයෙකුට විධාන ලබාදෙන ලෙස ලබාදිය හැකිය.ගුරුවරයෙකු විසින්  මෙම නිබන්ධනයට නායකත්වය ලබාදෙන්නේ නම් වඩාත් ගැලපේ ,නමුත් ස්වාධීනවද එය සිදු කළ හැකිය.'
+  udemy_beyond_longdescription: 'ඔබ මීට පෙර කේත පේලියක් නොදැකපු කෙනෙක් වුවත්, ජීවත්වීමට කේතනය කරන කෙනෙකු වුවත්, Udemy තුළින් ඔබටම ගැලපෙන පාඨමාලාවක් සොයාගත හැකියි. මෙය වෘත්තිමය උපදේශකයින් මගින් පිරිනැමේ. [මුදල් ගෙවා ලබා ගත යුතුයි.]'
   lynda_beyond_longdescription: 'ඉගෙන ගන්න කොහොමද වෙබ් යෙදුම් කේතනය කිරීමට, නිර්මාණය කිරීමට object-oriented වැඩසටහන් වන C සහ C++ මගින් සහ Java ලියන ආකාරය. ජංගම යෙදුම් සංවර්ධනය කිරීමට සහ නිර්මාණය කිරීමට අපගේ සංවර්ධක නිබන්ධන බාවිතයෙන් ඉගෙන ගැනීමට හැකිය, PHP සහ MySQL දත්ත සමුදායන් සමග වැඩ කරන ආකාරය, ආරම්භ කරන්න සංඛ්යා ලේඛන සැකසුම් භාෂා R සහ තවත් භාෂා සමග.[සටහන: ගෙවිය යුතු නැත]'
   edx_beyond_longdescription: "CS50x එක  Harvard College හි   අදුන්වා දීමක් ,බුද්ධිමය ව්‍යවසායක්  පරිගණක  විද්‍යාවේ  සහ  ක්‍රමලේඛන  කලාව  ප්‍රධාන සහ ප්‍රදාන නොවෙන  අයුරින් ,ක්‍රමලේඛනය අත්දැකීමක් ඇති  හෝ නොමැති අයට abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development මාතෘකා යටතේ  කරුණු ඇතුලත් වේ.එයට C, PHP, and JavaScript plus SQL, CSS, and HTML බෂා ඇතුලත්වේ. CS50x වන on-campus අනුවාදය Harvard's second-largest course."
-  coursera_beyond_longdescription: ස්ටැන්ෆර්ඩ් ගේ CS 101 පන්තියේ නික් Parlante (නොමිලේ!) උගන්වා ඇත. CS101 ශූන්ය පෙර-අත්දැකීම් ප්රේක්ෂක සඳහා වන පරිගණක විද්යා අත්යවශ්ය අදහස් උගන්වනවා. Play හා පරිගණක බලය හා සීමාවන් ජීවිතය ගෙන ඒමට කේතය කෙටි බිටු අත්හදා බැලීම්. , පරිගණක කුමක්ද, දෘඩාංග කුමක්ද මෘදුකාංග දේ අන්තර්ජාලය මෙයයි CS101 අද පරිගණක මත පොදු පසුබිම සපයයි. මීට පෙර අත්දැකීම් වෙබ් බ්රව්සරය භාවිතා කිරීමේ හැකියාව හැර වෙනත් අවශ්ය වේ.
+  coursera_beyond_longdescription: 'ස්ටැන්ෆර්ඩ් ගේ CS 101 පන්තියේ නික් Parlante (නොමිලේ!) උගන්වා ඇත. CS101 ශූන්ය පෙර-අත්දැකීම් ප්රේක්ෂක සඳහා වන පරිගණක විද්යා අත්යවශ්ය අදහස් උගන්වනවා. Play හා පරිගණක බලය හා සීමාවන් ජීවිතය ගෙන ඒමට කේතය කෙටි බිටු අත්හදා බැලීම්. , පරිගණක කුමක්ද, දෘඩාංග කුමක්ද මෘදුකාංග දේ අන්තර්ජාලය මෙයයි CS101 අද පරිගණක මත පොදු පසුබිම සපයයි. මීට පෙර අත්දැකීම් වෙබ් බ්රව්සරය භාවිතා කිරීමේ හැකියාව හැර වෙනත් අවශ්ය වේ.'
   udacity_beyond_longdescription: "මෙම පාඨමාලාවේදී ඔබට   පරිගණක විද්‍යාවේ ප්‍රදාන සංකල්ප සහ ඔබගේම පරිගණක වැඩසටහනක් වෙබ් crawler ආධාරයෙන් නිර්මාණය කිරීමට ඉගෙන ගැනීමට  හැකි වෙනවා . මෙහිදී මුලික වැඩසටහන් දෙනුමක් අවශ්‍ය නැත. අරම්භාකයින්ට මෙයට සම්බන්ධ විය හැක! මෙම වැඩසටහන අවසානයේදී ඔබට Phython වැඩසටහන් ලිවීමට හැකිය. මෙම පාඨමාලාවෙන් පසුව අතරමැදි මට්ටමේ පරිගණක පාඨමාලාවට සම්බන්ධ විය හැක."
   teachingtree_beyond_longdescription: "TeachingTree කාටත් අධ්යාපන අන්තර්ගතයන් සංවිධානය ඉඩ දෙන විවෘත වේදිකාවකි. සිසුන් ඉක්මනින් තනි තනි සංකල්ප ඉගෙන ගැනීම සඳහා ඔවුන්ට අවශ්ය නිශ්චිත ක්ලිප් ප්රවේශ සඳහා අපගේ ඉලක්කය වේ. හැමෝම වීඩියෝ හෝ සලකුණු සංකල්ප එකතු කිරීමෙන් උදව් කිරීමට දිරිමත් කරනවා."
   kodu_beyond_longdescription: "කෝඩු මගින් දරුවන්ට එක්ස් බොක්ස් හෝ පරිගණකය මගින් පහසුවෙන් පරිගණක ක්‍රීඩා නිර්මාණය කර හැකියි. නිර්මාණශීලිත්වය, විචක්ශණශීලි බව හා ක්‍රමලේඛනය ඉගැන්වීමට කෝඩු භාවිත කල හැක. පෙර දැනුමක් නැති වැඩිහිටියෙකුට හෝ කුඩා දරුවෙකුට කෝඩු භාවිත කල හැක. පරිගණකය සඳහා කෝඩු නොමිලේම ලබා ගත හැක. එක්සත් ජනපදයේ එක්ස් බොක්ස් වෙලඳපොලෙන් මෙය එක්ස් බොක්ස් සඳහා මිලදී ගත හැක. මෙය ඩොලර් 5ක් පමණ වනු ඇත."
@@ -1466,12 +1509,13 @@
   header_documentation: "Documentation"
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "ආයුබෝවන් %{username}"
   user_header_settings: "මගේ ගිණුම"
   user_header_logout: "නික්මෙන්න"
   user_header_signin: "පුරන්න"
-  view_all_sections: "View All Sections"
+  view_all_sections: "View all sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

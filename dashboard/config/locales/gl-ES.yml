@@ -1,4 +1,5 @@
-"gl":
+---
+gl:
   errors:
     messages:
       not_saved: 'Por favor, corrixe os seguintes erros:'
@@ -15,7 +16,7 @@
   activerecord:
     errors:
       messages:
-        blank: "é obrigatorio"
+        blank: é obrigatorio
         blank_plural: obrigatorio
         invalid_plural: inválidas
     attributes:
@@ -96,20 +97,21 @@
     facebook: Facebook
     windowslive: Conta da Microsoft
     clever: Conta intelixente
+    powerschool: Powerschool Account
     forgot_password: Esqueceu o seu contrasinal?
     need_confirmation: Non recebeu as instrucións de confirmación?
     need_unlock: Non recibiches as instrucións de desbloqueo?
-    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
-      have to sign in by typing your password below.
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    not_linked: Sentímolo, pero a súa conta de Code.org non está ligada ao seu %{provider}.
+      Terá vostede que iniciar sesión escribindo o seu contrasinal.
+    use_clever: Sentímolo, pero a súa conta de Code.org non está ligada ao seu %{provider}.
+      Terá vostede que iniciar sesión a través do seu Portal Intelixente.
   signup_form:
     student_count: "%{count} alumnos xa crearon unha conta."
     teacher_count: "%{count} profesores xa crearon unha conta."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
-    hoc_already_signed_up_heading: Get started without logging in
+    overview: Rexístrese para seguir os seus progresos ou administrar a súa aula.
+      <a href="/">Pode explorar as etapas e os desafíos</a> sen ter unha conta, pero
+      cómpre un rexistro para gardar os avances e os proxectos.
+    hoc_already_signed_up_heading: Comezar sen iniciar sesión
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
       event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
@@ -124,7 +126,7 @@
       can also continue to browse the various stages and puzzles</a> without creating
       an account.
     teacher_educator_guide: Consultar a guía do profesor
-    title: Sign up for Code.org
+    title: Rexístrese en Code.org
     school_name: Nome da escola (opcional)
     school_address: Enderezo da escola (opcional)
     address_placeholder: Enderezo, cidade e código postal
@@ -133,54 +135,69 @@
     age: Idade
     user_type: Alumno ou profesor?
     submit: Crear conta
-    teacher: "É un profesor?"
+    teacher: É un profesor?
     valid_username: Dispoñíbel!
     invalid_username: O nome de usuario ten que ter, polo menos, 5 caracteres
     taken_username: O nome de usuario xa existe
     valid_password: Contrasinal válido!
     invalid_password: O contrasinal  ten que ter, polo menos, 6 caracteres
     mismatch_password: Os dous contrasinais que metiches non se corresponden
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Acepto os <a href='http://code.org/tos'>Termos de uso</a> de Code.org.
       Se son menor de 13 anos, declaro neste formulario que teño autorización de meus
       pais para usar os servizos de Code.org.<br/><br/>Os enderezos de correo non
       son gardados, o que impide a Code.org contactar cos alumnos, exceto cando para
       recuperar o contrasinal. Consulta a nosa <a href='http://code.org/privacy'>Política
       de privacidade</a> para saber máis.
-    teacher_terms: Concordo cos<a href='http://code.org/tos'>Termos de utilización</a>
-      da Code.org.
+    teacher_terms: Acepto os Termos de Servizo de Code.org. Para máis información
+      sobre privacidade, consulte a nosa <a href='http://code.org/privacy'>política
+      de privacidade</a>.
     additional_information: Necesitamos máis informacións para continuarmos o proceso
       de creacción da conta.
-    user_type_label: Account Type
+    user_type_button: Update Account Type
+    user_type_label: Tipo de conta
     user_type_teacher: Profesor
     user_type_student: Estudante
-    field_is_required: "é obrigatorio"
-    accept_terms: You must agree to create an account
-    error: An error occurred.
+    field_is_required: é obrigatorio
+    accept_terms: Debe estar de acordo para crear unha conta
+    error: Ocorreu un erro.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Si
+    email_preference_no: Non
+    email_preference_required: You must specify an email preference.
   school_info:
-    title: School Information (optional)
-    school_country: School Country
-    select_school_type: School Type
-    charter: Charter
-    private: Private
-    public: Public
-    homeschool: Homeschool
-    after_school: After School
+    title: Información da escola (opcional)
+    school_country: País da escola
+    select_school_type: Tipo de escola
+    charter: Concertada
+    private: Privada
+    public: Pública
+    homeschool: Escola na casa
+    after_school: Actividade extraescolar
     other: Outros
-    state: State
-    district: District
-    other_district_not_listed: Other district not listed above
-    district_name: District Name
-    school: School
-    other_school_not_listed: Other school not listed above
-    school_name: School Name
-    school_zip: School Zip Code
-    school_address: School Address
-    school_organization_name: School/Organization Name
-    school_organization_zip: School/Organization Zip Code
+    state: Estado
+    district: Distrito
+    other_district_not_listed: Outro distrito non listado arriba
+    district_name: Nome do distrito
+    school: Escola
+    other_school_not_listed: Outra escola non listada arriba
+    school_name: Nome da escola
+    school_zip: Código postal da escola
+    school_address: Enderezo da escola
+    school_organization_name: Nome da escola ou organización
+    school_organization_zip: Código postal da escola ou organización
   signin_form:
     title: Xa ten conta? Inicie a sesión
     login: E-mail
-    login_username: Email or Username
+    login_username: Enderezo electrónico ou nome de usuario
     password: Contrasinal
     remember: Lembrarme
     submit: Iniciar Sesión
@@ -194,20 +211,21 @@
     picture: Agora atope a súa foto secreta
     words: Agora dixite as súas palabras secretas
     login: Iniciar Sesión
-    invalid_login: Invalid login, please try again
+    invalid_login: Inicio de sesión non válido; por favor, tente de novo
     pair_programming: Estou traballando a medias no ordenador
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    student_privacy: Saiba máis sobre por que non está vendo o seu nome completo <a
+      href='%{student_privacy_blog}' target='_blank'>aquí</a>.
   password:
     reset_form:
       title: Esqueceu o seu contrasinal?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Introduza o seu enderezo de correo electrónico e enviarémoslle
+        as instruccións para restablecer o seu contrasinal.
       email: Enderezo de email
       submit: Enviar
     reset_errors:
-      invalid_email: It looks like you may have signed up with an invalid email address.
-        Please email support@code.org to receive a password recovery link.
+      captcha_required: Pro favor, cubra o CAPTCHA para recuperar o seu contrasinal.
+      invalid_email: Semella que se inscribiu cun enderezo non válido. Envíe um correo
+        a support@code.org para recibir unha ligazón de recuperación de contrasinal.
     change_form:
       title: Cambiar contrasinal
       new_password: Novo contrasinal
@@ -224,20 +242,20 @@
 
       %{name}
   parent_mailer:
-    student_associated_subject: Login information for Code.org
+    student_associated_subject: Información de inicio de sesión para Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: "¡Benvida a Code.org!"
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: "%{section_code} with %{teacher_name}"
+      one: 'O teu grupo:'
+      other: 'Os teus grupos:'
+    code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
-      remove: Are you sure you want to leave this section?
-    remove: "(remove section)"
+      remove: "¿Seguro que queres abandonar este grupo?"
+    remove: "(eliminar grupo)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Contrasinal de imaxe
+      word: Palabras secretas
       email: E-mail
       google_classroom: Google Classroom
       clever: Clever
@@ -254,9 +272,9 @@
       section_not_found: Non foi posíbel atopar unha sección co código '%{section_code}'.
       blank_code: Insira un código de sección
       cant_join_own_section: Non podes entrar na túa propria sección.
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: Este grupo está xestionado por outro provedor e non
+        te podes unir. Por favor, pídelle á túa mestra que te agregue a través de
+        %{provider} e que sincronice os grupos.
     mail:
       student_disassociated:
         subject: 'Notificación de Code.org: %{student_name} deixou de ser o seu alumno.'
@@ -280,12 +298,12 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
-        personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
-        personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+        user_type_change_email_mismatch: O enderezo de correo que forneceches non
+          cadra co enderezo desta conta
+        personal_login_created_email: Creaches un inicio de sesión correctamente.
+          Agora xa podes iniciar sesión co teu enderezo e contrasinal
+        personal_login_created_username: Creaches un inicio de sesión correctamente.
+          Agora xa podes iniciar sesión co teu nome de usuario (%{username}) e contrasinal
   nav:
     header:
       finished_hoc: Rematei a miña Hora de Código
@@ -337,12 +355,12 @@
     user:
       classroom: Páxina inicial do profesor
       district_dashboard: Panel do distrito
-      label: Olá, %{username}
+      label: Ola, %{username}
       stats: Mi progreso
       settings: A miña conta
       logout: Pechar sesión
       signin: Iniciar Sesión
-      signup: Crear conta
+      signup: Crear unha conta
       already_registered: Xa creaches unha conta?
       pair_programming: Programación por parellas
       team: Team
@@ -390,6 +408,7 @@
     email_confirm_needed_required: 'O seu enderezo de e-mail %{email} non foi confirmado:'
     email_confirm_wrong_email: "(Enderezo de e-mail errado?)"
     email_resend_confirm: Reenviar instrucións de confirmación
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(deixe en branco se non quixese facer alteración)"
     current_password_hint: "(necesitamos o seu contrasinal actual para confirmar os
       seus cambios)"
@@ -423,6 +442,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Concluído
     tried: Probado
@@ -597,10 +617,12 @@
       Please enter a different section code.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    all_students_must_be_in_current_section: Todo o alumnado debe estar inscrito no
+      teu grupo.
+    already_enrolled_in_new_section: No puedes mover a estes estudantes porque xa
+      están no novo grupo.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Aprende no Code Studio
     description: Todos poden aprender a programar. Constrúe xogos, aplicacións e deseños
@@ -609,6 +631,8 @@
   gender:
     male: Masculino
     female: Feminino
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Prefiro non responder
   user_type:
     student: Estudante
@@ -638,7 +662,7 @@
       Ltd. Todos os dereitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Todos os dereitos reservados. The Amazing World of Gumball
       é marca rexistrada e &copy; 2015 Cartoon Network.
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+    code_from_html: Code.org usa p5.play, que ten licenza de <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Sostido por Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
@@ -662,7 +686,7 @@
     title: Necesitas axuda?
     subtitle: Ve estes vídeos e suxestións
     teacher: Ver a solución
-    teacher_no_solution: Stop seeing solution
+    teacher_no_solution: Deixar de ver a solución
     auth_error: Vostede non está autorizado a ver a solución.
     submit: Actualize a Localización do Artista
     direction: Dirección de inicio (en graos)
@@ -672,8 +696,8 @@
     notes_coming_soon: As notas deste vídeo estarán dispoñíbeis en breve.
     autoplay_option: visualización automatica de vídeos
     download: Baixar Vídeo
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: Amosar notas
+    show_video: Amosar video
   compatibility:
     upgrade:
       unsupported_message: Your browser is not supported. Please upgrade your browser
@@ -912,7 +936,7 @@
     correct_title: Certo
     correct_body: A túa resposta é correcta.
   dialog:
-    ok: OK
+    ok: Aceptar
     startover_title: Estás seguro de que queres empezar de novo?
     startover_body: Esta acción vai reiniciar o teu puzzle ao estado inicial e reiniciar
       todos os datos que agregaches ou alteraches.
@@ -1030,7 +1054,7 @@
     close: Pechar
     more: Máis
     name: Nome
-    updated: "Última actualización"
+    updated: Última actualización
     project_type: Tipo de proxecto
     help_text: Clica en <strong>Desenvolver unha aplicación</strong> ou <strong>Desenhar
       algunha cousa</strong> para entrares nun novo Laboratorio de xogos ou faceres
@@ -1138,6 +1162,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1151,6 +1176,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1293,3 +1323,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Acepto
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Si

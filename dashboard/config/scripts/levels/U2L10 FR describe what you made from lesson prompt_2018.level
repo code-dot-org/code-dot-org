@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:36:34.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "What was the most interesting visualization you were able to create with the data set provided? What did it help you discover about the data?\r\n\r\nMake sure that your response includes the following:\r\n\r\n1. What type of chart it was\r\n2. What specific data it plotted\r\n3. What it helped you discover and/or *why* it was the most interesting to you\r\n\r\nTry to keep your response to 150 words or less (5-7 sentences).",
+    "submittable": "true",
+    "title": "Personal Reflection",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 5620,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

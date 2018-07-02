@@ -25,15 +25,15 @@
   submit: "Надіслати"
   twentyhours_heading: "Спробуйте наш курс вступу до інформатики"
   twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні поняття комп'ютерних наук та програмування на подальших курсах."
-  og_title: Програмування є основоположним
-  og_title_soon: "The Hour of Code is coming"
-  og_title_here: "The Hour of Code is here!"
+  og_title: 'Програмування є основоположним'
+  og_title_soon: "Наближається Година коду"
+  og_title_here: "Прийшла Година коду!"
   og_description: "Технології змінюють все. Кожен учень у кожній школі заслуговує на те, щоб мати можливість вивчати інформатику."
-  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
+  og_description_celeb: "Спробуйте нові підручники та вигравайте відео-чат зі знаменитістю для вас чи вашого класу!"
   csedweek_og_title: "Година коду вже тут"
   csedweek_og_description: "Година коду є глобальним рухом, який залучає десятки мільйони учнів різного віку із більш як 180 країн, які розмовляють 45 мовами."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
-  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "Година коду відбудится 4-10 грудня 2017 року. Інформатика є основоположною навчання для кожного студента."
+  csedweek_og_description_here: "Прийшла Година коду. Інформатика є основоположною навчання для кожного студента."
   hoc2014_heading: "Приєднуйтеся до <a href=\"http://hourofcode.com\">Години коду</a> <br/> 8-14 грудня 2014 року <br/>"
   hoc2014_students: "Учні"
   hoc2014_try: "Спробувати"
@@ -74,12 +74,12 @@
   congratulations_on_completing_course2: "Вітаємо із завершенням курсу 2"
   congratulations_on_completing_course3: "Вітаємо із завершенням курсу 3"
   congratulations_on_completing_course4: "Вітаємо із завершенням курсу 4"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
+  congratulations_on_completing_coursea: "Вітаємо із завершенням Курсу A"
+  congratulations_on_completing_courseb: "Вітаємо із завершенням Курсу B"
+  congratulations_on_completing_coursec: "Вітаємо із завершенням Курсу C"
+  congratulations_on_completing_coursed: "Вітаємо із завершенням Курсу D"
+  congratulations_on_completing_coursee: "Вітаємо із завершенням Курсу E"
+  congratulations_on_completing_coursef: "Вітаємо із завершенням Курсу F"
   congratulations_on_completing_accelerated: "Вітаємо із завершенням прискореного курсу"
   congrats_next_tutorials_title: "Перейти до наступного рівня"
   congrats_next_tutorials_desc: "Спробуйте цей короткий, 1-годинний підручник, або <a href=\"%{current_path}/next\">підручники наших партнерів</a>."
@@ -205,25 +205,25 @@
   just_did_course2: "Щойно завершено Курс 2 - подивіться! @codeorg"
   just_did_course3: "Щойно завершено Курс 3 - подивіться! @codeorg"
   just_did_course4: "Щойно завершено Курс 4 - подивіться! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_coursea: "Я щойно завершив Курс 1 - подивіться! @codeorg"
+  just_did_courseb: "Я щойно завершив Курс 2 - подивіться! @codeorg"
+  just_did_coursec: "Я щойно завершив Курс 3 - подивіться! @codeorg"
+  just_did_coursed: "Я щойно завершив Курс 4 - подивіться! @codeorg"
+  just_did_coursee: "Я щойно завершив Курс 5 - подивіться! @codeorg"
+  just_did_coursef: "Я щойно завершив Курс 6 - подивіться! @codeorg"
   just_did_accelerated: "Щойно завершено Прискорений курс - подивіться! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_hoc_donor: 'Я щойно завершив #HourOfCode - подивіться! (Спасибі %{donor_twitter} за підтрімку @codeorg)'
+  just_did_course1_donor: "Я щойно завершив Курс 1 - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_course2_donor: "Я щойно завершив Курс 2 - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_course3_donor: "Я щойно завершив Курс 3 - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_course4_donor: "Я щойно завершив Курс 1- подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_coursea_donor: "Я щойно завершив Курс A - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_courseb_donor: "Я щойно завершив Курс B - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_coursec_donor: "Я щойно завершив Курс C - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_coursed_donor: "Я щойно завершив Курс D - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_coursee_donor: "Я щойно завершив Курс E - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_coursef_donor: "Я щойно завершив Курс F - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
+  just_did_accelerated_donor: "Я щойно завершив Прискорений курс - подивіться! Спасибі %{donor_twitter} за підтрімку @codeorg"
   twitter_teach_cs: "9 з 10 людей погоджуються із тим, інформатику потрібно викладати у школах. http://youtu.be/nKIu9yen5nc. Відвідайте https://code.org/."
   twitter_cs_foundational: "Інформатика є основою, яку має вивчати кожен учень.\nhttps://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Вивчати Годину Коду"
@@ -236,7 +236,7 @@
   lines_of_code: "ДОСІ НАПИСАНО <b># РЯДКІВ КОДУ</b>."
   lines_of_code_alt: "УЧНЯМИ НАПИСАНО <b>#</b> РЯДКІВ КОДУ"
   who_has_done_hoc: 'Хто пройшов Годину коду #HourOfCode? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
+  who_has_done_hoc_donor: 'Хто закінчив #HourOfCode? (Спасибі %{donor_twitter} за підтрімку @codeorg)'
   hoc_leaderboards: "Лідери Години коду"
   students_and_lines: "%{students} учнів пройшли Годину коду і написали  %{lines} рядків коду."
   start_hoc: "Почати Годину коду"
@@ -260,12 +260,12 @@
   studiobar_donate_body: "На кожен долар пожертв ми навчимо одну дитину"
   studiobar_shop_title: "Магазин"
   studiobar_shop_body: "Ламайте стереотипи. Гордо носіть наш логотип."
-  homepage_stats_students: "of US students have accounts on Code.org"
-  homepage_stats_female: "of our students are female"
-  homepage_stats_teachers: "teachers use Code.org"
-  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_students: "студентів США мають облікові записи на Code.org"
+  homepage_stats_female: "наших учнів - жінки"
+  homepage_stats_teachers: "викладачів користуються Code.org"
+  homepage_stats_hourofcodde: "студентів світу спробували Годину коду"
   homepage_stats_policy: "states changed policy to support computer science"
-  homepage_stats_title: "We're making a difference"
+  homepage_stats_title: "Ми змінюємо світ"
   homepage_hero_text_malala: "&ldquo;Я закликаю дівчат у всіх країнах\nвивчити одну Годину коду&rdquo; \nМалала, лауеат Нобелівскої премії миру"
   homepage_hero_text_susan: |-
     &ldquo;Якщо ви можете змінити технології,
@@ -284,9 +284,9 @@
     кращі можливості в світі.&rdquo;
     Сатья, Генеральный директор Microsoft
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Інформатика наділяє учнів можливістю
+    створити світ майбутньго.&rdquo;
+    Сатья Наделла, CEO Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Якщо вмієте програмувати, ви можете
     вибирати стежину в житті.&rdquo;
@@ -313,8 +313,8 @@
   homepage_hero_text_stat_loc: "#loc рядків коду, написаних учнями"
   homepage_hero_text_stat_students: "#student_count облікових записів учнів у Студії коду"
   homepage_hero_text_stat_served: 'Година коду: навчились #served'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+  homepage_hero_hoc_is_coming: "Наближається Година коду"
+  homepage_hero_hoc_is_here: "Прийшла Година коду"
   homepage_slot_text_hoc: "Година Коду"
   homepage_slot_text_frozen: "Крижане серце з Анною і Ельзою"
   homepage_slot_text_teacher: "Панель вчителя"
@@ -334,7 +334,7 @@
   homepage_action_text_girlvideo: "Залучайте дівчат"
   homepage_action_text_learn: "Початок навчання"
   homepage_action_text_signpetition: "Підписати петицію"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_action_text_wincelebritychat: "Виграй чат зі знаменітостю"
   homepage_signpetition_dropdown: "Підписати нашу петицію &#x25BE;"
   homepage_diversity_pledge: "Приєднатись до петиції про різноманіття"
   homepage_banner_text_prizes: 'Година коду наближається знову, 7-13 грудня. '
@@ -354,7 +354,7 @@
   homepage_slot_text_title_hoc: "Година коду"
   homepage_slot_text_blurb_hoc: "Кожен може навчитися. Почніть сьогодні"
   homepage_slot_text_link_hoc: "Спробуйте годину коду"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
+  homepage_slot_text_link_about_hoc: "Про Годину Коду"
   homepage_slot_text_link_host: "Провести Годину Коду"
   homepage_slot_text_link_hocserved: "# вже спробували"
   homepage_solot_text_link_volunteer: "Волонтер для Години коду"
@@ -378,11 +378,13 @@
   homepage_slot_text_link_buy: "Взяти участь"
   homepage_slot_text_link_donate: "Зробити пожертвування"
   homepage_slot_text_link_shop: "Футболки, капелюхи та інше"
-  homepage_slot_text_link_administrators: "Bring CS to your school"
+  homepage_slot_text_link_administrators: "Привнесить Інформатику до вашої школи"
   homepage_header_codestudio: "Творчість учнів Студії Коду"
   homepage_header_donors: "Code.org дякує своїм помічникам"
   homepage_donors_seall: "Подивитися усіх"
   homepage_donors_donate: "Підтримати"
+  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_below_hero_announcement_link_text: "Дізнайтеся більше"
   contact_form_topic_student: "Я учень"
   contact_form_topic_parent: "Я батько/мати"
   contact_form_topic_teacher: "Я вчитель/педагог"
@@ -441,7 +443,7 @@
   mc_gradelevel: "Вік 6+"
   mc_platformtext: "Сучасні браузери, смартфони, планшети"
   mc_specs: "Багато мов | Сучасні браузери та планшети| Вік 6-106"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: 'Minecraft: Подорож героя'
   minecraft_designer: "Майнкрафт - Розробник"
   minecraft_adventurer: "Майнкрафт - Пригоди"
   minecraft_tutorials: "Підручники Години коду від Майнкрафт"
@@ -455,17 +457,17 @@
   minecraft_no_internet: "Немає Інтернету?"
   minecraft_download_adventurer: "Завантажуйте оффлайнову версію Майнкрафт - Пригод."
   minecraft_subtitle: "Година коду від Майнкрафт"
-  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_store_camps: "Безкоштовні табори Години коду в магазині Microsoft"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Реєструйся</a> на безкоштовні майстерні Години коду від Minecraft у магазинах Microsoft у Австралії, Канаді, Пуерто Ріко чи США. Дізнайся, чому кодування підходить для всіх та поєднує в собі творчість, вирішення проблем та багато веселощів."
+  minecraft_host_event: "Проведіть Годину коду від Minecraft"
+  minecraft_teach_resources: "Ресурси вчителя та план уроку."
   minecraft_leader_guide: "Download resources to help you plan and lead an event."
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
   minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
   minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_future: "Допожить всій молоді стати готовими до майбутнього"
+  minecraft_future_description: "Дізнайтесь, як інші школи та некомерційні організації привносять цифрові навичкі, від цифровій грамотності до навчання інформатиці, до їх спільноти. Розгляньте різні моделі, отримуйте поради та хитрощі та <a href='%{minecraft_future_url}', target='_blank'>отримуйте ресурси</a>, що вони знайшли найцинішими."
   minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   sports_page_title: "Спортивна Година коду"
@@ -504,14 +506,16 @@
   video_title_obama: "Президент Обама про інформатику"
   video_title_hoc_is_here: "Година коду вже тут - навчитись може кожен"
   video_title_anybody_can_learn: "Навчитись може кожен"
-  video_title_steph_curry: "Hour of Code with Steph Curry"
+  video_title_steph_curry: "Година коду зі Стефом Каррі"
   video_title_draymond_green: "Година коду з Дреймондом Гріном"
   video_title_russell_okung: "Година коду з Расселом Окунгом"
   video_title_real_madrid: "Година коду з Реал Мадрид"
   video_title_marco_belinelli: "Година коду з Марко Белінеллі"
   video_title_chris_bosh: "Кріс Бош про інформатику"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 хв"
   video_2min: "2 хв"
+  video_3min: "3 min"
   video_5min: "5 хв"
   speak_another_language: "Інша мова?"
   help_translate: "Допоможіть нам з перекладом."
@@ -551,6 +555,10 @@
   volunteer_engineer_submission_field_email: "Адреса електронної пошти"
   volunteer_engineer_submission_field_email_desc: "Ваша адреса електронної пошти ніколи не передаватиметься, але ми надішлемо вам запити від учителів."
   volunteer_engineer_submission_field_email_placeholder: "Адреса електронної пошти"
+  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: 'Так'
+  volunteer_engineer_submission_field_email_preference_no: 'Ні'
   volunteer_engineer_submission_final_paragraph: "Ви з'явитесь на карті, щоб місцеві вчителі могли зв'язатися з Вами для Години коду чи інших волонтерських заходів. Ваша адреса електронної пошти чи поштова адреса НІКОЛИ не буде оприлюднена. Але інша інформація (включаючи приблизне розташування) буде публічно доступною місцевим вчителям."
   volunteer_engineer_submission_checkbox_contact: 'Я погоджуюсь, що вчителі можуть зв''язуватися зі мною для волонтерських заходів (Примітка: ваша адреса електронної пошти не повідомлятиметься)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Я підтверджую, що мені щонайменше 18 років."
@@ -632,18 +640,12 @@
   dashboard_course_csp: "AP® принципи інформатики"
   dashboard_course_csp_desc: "Code.org розробив докладний, цікавий та доступний курс дослідження основоположних принципів інформатики."
   dashboard_landing_loading: "Завантаження..."
-  dashboard_action_edit: "Редагувати"
-  dashboard_action_save: "зберегти"
-  dashboard_action_save_all: "Зберегти все"
   dashboard_action_cancel: "Скасувати"
   dashboard_action_delete: "Видалити"
   dashboard_action_delete_yes: 'Так'
   dashboard_action_delete_no: 'Ні'
   dashboard_action_confirm: "Видалити?"
-  dashboard_action_remove: "Видалити"
-  dashboard_action_remove_confirm: "Видалити?"
   dashboard_action_done: "Готово"
-  dashboard_action_required: "необхідні"
   dashboard_action_print_certificates: "Друкувати сертифікати"
   dashboard_assessments_view: 'Перегляд оцінок в:'
   dashboard_assessments_none: "Більшість вчителів оцінюють прогрес своїх учнів, користуючись закладкою \"Перегляд прогресу\". Якщо потрібно ставити додаткові оцінки, можна скористатись рекомендованими запитаннями та областями у планах уроків. Це робиться за межами Студії коду."
@@ -719,28 +721,15 @@
   dashboard_sections_assign_activity: "Призначити курс"
   dashboard_error_none_selected: "Ви не обрали жодного учня для переміщення. Будь ласка, оберіть хоча б одного учня."
   dashboard_error_other_section: "Якщо ви переміщуте учнів між власними групами, оберіть групу з випадного меню. Обирайте \"Інша група\" лише якщо Ви хочете перемістити учнів у групу іншого вчителя."
-  dashboard_students_add_student: "Додати учня"
-  dashboard_students_add_students: "Додати учнів"
   dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному на рядок:'
-  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
+  dashboard_students_new_google_classroom_section: "Щоб додати учнів, використуйте <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі."
   dashboard_students_new_section: "Ви створили нову групу! Тепер додавайте учнів, використовуючи кнопки <b>Додати учня</b> та <b>Додати учнів</b>."
-  dashboard_students_placeholder_name: "Ім'я учня"
   dashboard_students_name: "Ім’я"
   dashboard_students_progress: "Прогрес"
-  dashboard_students_age: "Вік"
-  dashboard_students_gender: "Стать"
   dashboard_students_male: "Чоловік"
   dashboard_students_female: "Жінка"
-  dashboard_students_secret: "Таємний код"
-  dashboard_students_password: "пароль"
-  dashboard_students_username: 'Ім''я користувача: %{student_username}'
-  dashboard_students_email: 'Електронна скринька: %{student_email}'
   dashboard_students_completed_levels: "Завершені рівні"
   dashboard_students_total_lines: "Рядків коду"
-  dashboard_students_show_secret: "Показати таємний код"
-  dashboard_students_auto_generated: "Створено автоматично"
-  dashboard_students_reset_secret: "Скинути таємний код"
-  dashboard_students_reset_password: "Скинути пароль"
   dashboard_students_share_section: "Надайте адресу сторінки входу для своїх учнів:"
   dashboard_students_share_section_secondary: 'Або ж поділіться зі своїми учнями сторінкою входу цього розділу:'
   dashboard_students_print_info: "Роздрукуйте картки з вхідною інформацією своїх учнів."
@@ -765,13 +754,16 @@
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
   dashboard_course4: 'Курс 4 (beta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Курс A: '
+  dashboard_courseb: 'Курс B: '
+  dashboard_coursec: 'Курс C: '
+  dashboard_coursed: 'Курс D: '
+  dashboard_coursee: 'Курс E: '
+  dashboard_coursef: 'Курс F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Швидкий Курс: '
   dashboard_unplugged: "Якщо немає комп'ютерів, <a href='%{unplugged_url}'>спробуйте ці безмашинні вправи</a> у своєму класі."
+  dashboard_tools: 'Інструменти: '
   dashboard_curriculum: "Навчальний план"
   dashboard_curriculum_overview: "Огляд навчальної програми"
   dashboard_overview: "Огляд"
@@ -789,12 +781,13 @@
   dashboard_curriculum_csins: 'Інформатика в науці:'
   dashboard_curriculum_csp: 'AP® принципи інформатики:'
   dashboard_curriculum_ecs: 'Вивчення інформатики:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Kлас"
   dashboard_grade_other: "Інше"
   dashboard_login_word: "Слово"
   dashboard_login_picture: "Зображення"
   dashboard_login_none: "Електронна пошта"
-  dashboard_new_password: "новий пароль"
   dashboard_stage: "Етап"
   dashboard_puzzle: "Завдання"
   dashboard_question: "Питання"
@@ -857,7 +850,7 @@
   carousel_heading_international: "Підручники вашою мовою"
   carousel_heading_domestic: "Підручники англійською мовою"
   carousel_heading_beginners: "Посібники для середніх класів від партнерів"
-  carousel_heading_beyond_beginners: Посібники для початківців
+  carousel_heading_beyond_beginners: 'Посібники для початківців'
   carousel_heading_javascript: "Посібники з вивчення Javascript"
   carousel_heading_beyond_javascript: "Посібники з вивчення JavaScript"
   carousel_heading_unplugged: "Немає пристроїв або Інтернету? Спробуйте безмашинні вправи"
@@ -956,14 +949,30 @@
   coursee_name: "Курс Ґ"
   coursef-draft_name: Курс Д
   coursef_name: "Курс Д"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "Прискорений курс"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: 'Розділ 1: Цифрова інформація'
-  cspunit2_name: 'Розділ 2: Інтернет'
-  cspunit3_name: 'Розділ 3: Програмування'
-  cspunit4_name: 'Розділ 4: Дані'
-  cspunit5_name: 'Розділ 5: Дослідження та створення PT'
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  cspunit1_name: "Розділ 1: Цифрова інформація"
+  cspunit2_name: "Розділ 2: Інтернет"
+  cspunit3_name: "Розділ 3: Програмування"
+  cspunit4_name: "Розділ 4: Дані"
+  cspunit5_name: "Розділ 5: Дослідження та створення PT"
   cspunit6_name: 'Після-АР: Бази даних у програмах'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -971,6 +980,34 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Розділ 5: Дані та суспільство'
   csd6_name: 'Розділ 6: Фізичні обчислення'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Розділ 5: Дані та суспільство'
+  csd6-2017_name: 'Розділ 6: Фізичні обчислення'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Розділ 5: Дані та суспільство'
+  csd6-2018_name: 'Розділ 6: Фізичні обчислення'
+  csp1-2017_name: 'Розділ 1: Інтернет'
+  csp2-2017_name: 'Розділ 2: Цифрова інформація'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Після довишівської підготовки: Бази даних у програмах'
+  csp1-2018_name: 'Розділ 1: Інтернет'
+  csp2-2018_name: 'Розділ 2: Цифрова інформація'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Після довишівської підготовки: Бази даних у програмах'
   csp1_name: 'Розділ 1: Інтернет'
   csp2_name: 'Розділ 2: Цифрова інформація'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -981,6 +1018,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Після довишівської підготовки: Бази даних у програмах'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Повний тест - 50 запитань"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1004,14 +1042,19 @@
   math_category_name: "Математика"
   hoc_category_name: "Година коду"
   csf_category_name: "Основи інформатики"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'В розробці: курси А—Д'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 принципи інформатики"
   csp17_category_name: "'16-'17 принципи інформатики"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "Практичний тест з принципів інформатики"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Ігрова лабораторія"
   basketball_name: "Зроби гру в баскетбол"
   sports_name: "Закодуй власну спортивну гру"
   applab_gradelevel: "Вік 13+"
@@ -1070,12 +1113,12 @@
   course2_gradelevel: "Вік 6-18"
   course3_gradelevel: "Вік 8-18"
   course4_gradelevel: "Вік 10-18"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "8+ класи"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "Вік 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"
@@ -1178,12 +1221,12 @@
   course2_shortdescription_congrats: "Цей курс для учнів з базовими навичками читаннябазується на Курсі 1. Учні створюватимуть програми для розв'язування задач та розробки інтерактивних ігор чи історій, якими можна поділитись. Рекомандовано для 2-5 класів."
   course3_shortdescription_congrats: "Готові до наступного рівня? Учні глибше розглянуть теми з програмування, з якими ознайомились у попередньому курсі, і шукатимуть гнучкіших рішень складніших завдань. До кінця цього курсу учні навчаться створювати інтерактивні історії та ігри, якими зможуть поділитись. Рекомендовано для 4-5 класів."
   course4_shortdescription_congrats: "Готові йти далі? Учні глибше розглянуть теми з програмування, з якими ознайомились у попередньому курсі, і шукатимуть гнучкіших рішень складніших завдань. До кінця цього курсу учні навчаться створювати інтерактивні історії та ігри, якими зможуть поділитись. Рекомендовано для 4-8 класів."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами."
   codeintl_longdescription: "Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами."
   thinkersmithspanish_longdescription: "За допомогою визначеного словника робота, учні навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей. Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває навик відлагодження. \"Мої друзі-роботи\" працює найкраще як групова діяльність, і містить робочі аркуші вчителя для використання у класі."
@@ -1466,12 +1509,13 @@
   header_documentation: "Documentation"
   csp_name: "'16-'17 принципи інформатики"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "Привіт %{username}"
   user_header_settings: "Мій профіль"
   user_header_logout: "Вийти"
   user_header_signin: "Вхід"
-  view_all_sections: "View All Sections"
+  view_all_sections: "View all sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

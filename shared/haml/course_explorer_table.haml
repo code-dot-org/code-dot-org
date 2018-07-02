@@ -48,6 +48,7 @@
 
   csp_learn_more_link = CDO.code_org_url('/educate/professional-learning/cs-principles')
   courses << {
+    id: "csp",
     name: "CS Principles",
     starts: 9,
     ends: 12,
@@ -60,10 +61,10 @@
     img: "/shared/images/teacher-announcement/csp-widgets.png",
     description: "Computer Science Principles covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms. The curriculum is flexible to be taught as a normal course or as an AP course.
       <ul>
-        <li> <strong>Length:</strong> Full-year course (120-180 hours) </li>
+        <li> <strong>Length:</strong> Full-year course (100-180 hours) </li>
         <li> <strong>Recommended age:</strong> Ages 13-18 </li>
         <li> <strong>Prerequisites:</strong> None </li>
-        <li> <strong>Optional professional learning:</strong> Free 1-week summer workshop, four 1-day workshops throughout the academic year, and online support. <a href='#{csp_learn_more_link}'>Learn more</a> </li>
+        <li> <strong>Optional professional learning:</strong> 1-week summer workshop, four 1-day workshops throughout the academic year, and online support. <a href='#{csp_learn_more_link}'>Learn more</a> </li>
         <li> <strong>Cost to use Curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English only </li>
       </ul>"
@@ -71,6 +72,7 @@
 
   csd_learn_more_link = CDO.code_org_url('/educate/professional-learning/cs-discoveries')
   courses << {
+    id: "csd",
     name: "CS Discoveries",
     starts: 6,
     ends: 10,
@@ -83,16 +85,17 @@
     img: "/shared/images/fit-500/courses/logo_csd.jpg",
     description: "CS Discoveries is an introductory course that empowers students to engage with Computer Science as a medium for creativity, communication, problem solving, and fun.
       <ul>
-        <li> <strong>Length:</strong> Semester or full-year course (150+ hours) </li>
+        <li> <strong>Length:</strong> Semester or full-year course (50-150 hours) </li>
         <li> <strong>Recommended age:</strong> Ages 11-16 </li>
         <li> <strong>Prerequisites:</strong> None </li>
-        <li> <strong>Optional professional learning:</strong> Free 1-week summer workshop, four 1-day workshops throughout the academic year, and online support. <a href='#{csd_learn_more_link}'>Learn more</a> </li>
+        <li> <strong>Optional professional learning:</strong> 1-week summer workshop, four 1-day workshops throughout the academic year, and online support. <a href='#{csd_learn_more_link}'>Learn more</a> </li>
         <li> <strong>Cost to use Curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English only </li>
       </ul>"
   }
 
   courses << {
+    id: "csf",
     name: "CS Fundamentals",
     starts: 0,
     ends: 5,
@@ -114,6 +117,7 @@
   }
 
   courses << {
+    id: "pre",
     name: "Pre-reader Express",
     starts: 0,
     ends: 2,
@@ -136,6 +140,7 @@
   }
 
   courses << {
+    id: "exp",
     name: "CS Fundamentals: Express",
     starts: 3,
     ends: 12,
@@ -167,7 +172,7 @@
         .arrow_box_content{style: "overflow: hidden"}
           - if course[:img]
             .left{style: "float: left; width: 30%"}
-              %a{href: course[:link] || course[:course_link]}
+              %a.linktag{id: "image-#{course[:id]}", href: course[:link] || course[:course_link]}
                 %img.courseimage{src: course[:img]}
           .right{style: "float: left; width: 65%"}
             .title
@@ -181,12 +186,12 @@
                   %br/
                   =course[:description2]
             - if course[:link]
-              %a{href: course[:link], style: "text-decoration: none"}
+              %a.linktag{id: "link-#{course[:id]}", href: course[:link], style: "text-decoration: none"}
                 %button.launch{style: "font-size: 12px"}
                   Learn more
             - if course[:course_link]
               &nbsp;
-              %a{href: course[:course_link]}
+              %a.linktag{id: "course-link-#{course[:id]}", href: course[:course_link]}
                 %button.course-explorer-gray-button{style: "font-size: 12px"}
                   View course
         .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course[:regular_order]}}
@@ -199,11 +204,11 @@
 
 - if responsive
   .courseexplorer.courses.smallresponsive{style: "margin-left: 0px; margin-top: 30px;"}
-    .coursebodycontainer{ style: "position: relative; overflow: hidden; clear: both"}
+    .coursebodycontainer{style: "position: relative; overflow: hidden; clear: both"}
       .coursebodymain{style: "width: 100%"}
         - courses.sort_by {|i| i[:responsive_small_order]}.each_with_index do |course, course_index|
           .course.breakable{class: "course-#{course[:regular_order]}", data: {courseindex: course[:regular_order]}}
-            .courserow{style: "float: left; width: 100%"}
+            .courserow.clicktag{id: "click-#{course[:id]}", style: "float: left; width: 100%"}
               .left
                 .title
                   =course[:name]
@@ -220,7 +225,7 @@
           .title
             Professional Learning
         .right{style: 'float:right; margin-top: -26px;'}
-          %a{:href => CDO.code_org_url('/educate/professional-learning')}
+          %a.linktag#professional-learning{:href => CDO.code_org_url('/educate/professional-learning')}
             .course-explorer-gray-button.professional-learning-button.mobile-button
               Learn more
     .cleardiv{style: "clear: both"}
@@ -257,9 +262,9 @@
             - unless course[:starts] == 0 || course_index == (index_course_first_same_line + 1)
               %div{class: "bar-#{course[:starts]}"}
                 &nbsp;
-            - courserow_class = "courserow bar-#{course[:ends] - course[:starts] + 1}"
+            - courserow_class = "courserow clicktag bar-#{course[:ends] - course[:starts] + 1}"
             - courserow_class += " lighter" if course[:lighter]
-            %div{class: courserow_class}
+            %div{id: "click-#{course[:id]}", class: courserow_class}
               .left
                 .title
                   =course[:name]
@@ -281,7 +286,7 @@
         .title
           Professional Learning for all grade levels
       .right{style: 'float:right; margin-top: -26px;'}
-        %a{:href => CDO.code_org_url('/educate/professional-learning')}
+        %a.linktag#professional-learning-nonresponsive{:href => CDO.code_org_url('/educate/professional-learning')}
           .course-explorer-gray-button.professional-learning-button
             Learn more
   .cleardiv{style: "clear: both"}

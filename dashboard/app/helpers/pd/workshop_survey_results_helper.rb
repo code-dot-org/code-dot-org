@@ -37,6 +37,8 @@ module Pd::WorkshopSurveyResultsHelper
   TEACHERCON_MULTIPLE_CHOICE_FIELDS = (Pd::TeacherconSurvey.public_required_fields & Pd::TeacherconSurvey.options.keys).freeze
   TEACHERCON_FIELDS_IN_SUMMARY = (Pd::TeacherconSurvey.public_fields).freeze
 
+  include Pd::JotForm
+
   # The output is a hash where
   # - Multiple choice answers (aka scored answers) that are not facilitator specific turn
   #   into an average of all responses
@@ -158,5 +160,177 @@ module Pd::WorkshopSurveyResultsHelper
     sum_hash.default = nil
 
     sum_hash
+  end
+
+  def generate_workshop_daily_session_summary(workshop)
+    # TODO: (mehal) - Logic to only allow this for selected summer workshops
+    summary = {
+      this_workshop: {},
+    }
+
+    questions = get_questions_for_forms(workshop)
+
+    summary['questions'] = questions
+
+    summary[:this_workshop] = generate_workshops_survey_summary(workshop, questions)
+
+    summary[:facilitators] = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
+
+    summary
+  end
+
+  def generate_workshops_survey_summary(workshop, questions)
+    surveys = get_surveys_for_workshops(workshop)
+
+    workshop_summary = {}
+
+    # Each session has a general response section.
+    # Some also have a facilitator response section
+    questions.each do |session, response_sections|
+      surveys_for_session = surveys[session]
+
+      next unless surveys_for_session
+
+      session_summary = {
+        response_count: surveys[session][:response_count]
+      }
+
+      response_sections.each do |response_section, section_questions|
+        session_summary[response_section] = {}
+        section_questions.each do |q_key, question|
+          if question[:answer_type] == 'text'
+            if response_section == :facilitator
+              # For facilitator specific free responses, we want a hash of facilitator IDs
+              # to an array of all of their specific responses
+              facilitator_responses = Hash.new
+              surveys_for_session[:facilitator]&.each do |survey|
+                next unless survey[q_key].presence
+                facilitator_responses[survey['facilitatorId'].to_i] = (facilitator_responses[survey['facilitatorId'].to_i] || []).append survey[q_key]
+              end
+
+              if current_user&.facilitator?
+                facilitator_responses.slice! current_user.id
+              end
+              session_summary[:facilitator][q_key] = facilitator_responses
+            else
+              # Otherwise, we just want a list of all responses
+              sum = surveys_for_session[response_section].map {|survey| survey[q_key]}.reduce([], :append).compact
+              session_summary[response_section][q_key] = sum
+            end
+          else
+            if response_section == :facilitator
+              # For facilitator specific responses, keep track of both a sum total of all
+              # responses, and the number of responses for that facilitator. Then divide
+              # sum by responses to get the average for that facilitator.
+              facilitator_response_sums = {}
+
+              surveys_for_session[:facilitator].each do |survey|
+                survey[q_key].each do |facilitator, answer|
+                  if facilitator_response_sums[facilitator].nil?
+                    facilitator_response_sums[facilitator] = {responses: 0, sum: 0}
+                  end
+                  facilitator_response_sums[facilitator][:responses] += 1
+                  facilitator_response_sums[facilitator][:sum] += answer
+                end
+              end
+
+              facilitator_response_averages = {}
+
+              facilitator_response_sums.each do |facilitator_id, response_sums|
+                facilitator_response_averages[facilitator_id] = (response_sums[:sum] / response_sums[:responses].to_f).round(2)
+              end
+              session_summary[:facilitator][q_key] = facilitator_response_averages
+            else
+              # For non facilitator specific responses, just return a frequency map with
+              # nulls removed
+              # [1, 1, 2, 2, 3, 5, 7, 7, 7, 7, 7, nil, nil] => {1: 2, 2: 2, 3: 1, 5: 1, 7: 5}
+              summary = surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.transform_values(&:size)
+              session_summary[response_section][q_key] = summary.reject {|k, _| k.nil?}
+            end
+          end
+        end
+      end
+
+      workshop_summary[session] = session_summary
+    end
+
+    workshop_summary
+  end
+
+  def get_surveys_for_workshops(workshop)
+    responses = {
+      'Pre Workshop' => {
+        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, day: 0).map(&:form_data_hash)
+      },
+      'Day 1' => {
+        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_1'], day: 1).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 1).map {|x| x.form_data_hash(show_hidden_questions: true)}
+      },
+      'Day 2' => {
+        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_2'], day: 2).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 2).map {|x| x.form_data_hash(show_hidden_questions: true)}
+      },
+      'Day 3' => {
+        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_3'], day: 3).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 3).map {|x| x.form_data_hash(show_hidden_questions: true)}
+      },
+      'Day 4' => {
+        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_4'], day: 4).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 4).map {|x| x.form_data_hash(show_hidden_questions: true)}
+      },
+      'Day 5' => {
+        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_5'], day: 5).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 5).map {|x| x.form_data_hash(show_hidden_questions: true)}
+      },
+    }
+
+    responses.each do |k, v|
+      responses[k][:response_count] = v[:general].size
+    end
+
+    responses
+  end
+
+  def get_questions_for_forms(workshop)
+    {
+      'Pre Workshop' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_0'], workshop)
+      },
+      'Day 1' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_1'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+      },
+      'Day 2' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_2'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+      },
+      'Day 3' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_3'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+      },
+      'Day 4' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_4'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+      },
+      'Day 5' => {
+        general: get_summary_for_form(CDO.jotform_forms['local']['day_5'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+      }
+    }
+  end
+
+  private
+
+  def get_summary_for_form(form_id, workshop)
+    survey = Pd::SurveyQuestion.find_by(form_id: form_id)
+    summary = survey&.summarize || {}
+
+    summary.each do |_, question|
+      if question[:text].match? '{.*}'
+        question[:text] = question[:text].gsub '{workshopCourse}', workshop.course
+      end
+    end
+
+    summary
   end
 end

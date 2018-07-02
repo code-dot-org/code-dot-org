@@ -2,15 +2,22 @@ import React from 'react';
 import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {combineReducers, createStore} from 'redux';
-import manageStudents from './manageStudentsRedux';
+import manageStudents, {RowType, blankStudentTransfer} from './manageStudentsRedux';
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
+import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import {Provider} from 'react-redux';
 
 const initialState = {
   manageStudents: {
     loginType: '',
     studentData: {},
-    sectionId: null,
+    addStatus: {},
   },
+  sectionData: {
+    section: {
+      id: 53,
+    },
+  }
 };
 
 // Student names out of alphabetical order to demonstrate
@@ -29,6 +36,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -43,6 +51,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -57,6 +66,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -74,6 +84,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -88,6 +99,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -101,6 +113,7 @@ const wordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -118,6 +131,7 @@ const pictureAccountData = [
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -132,6 +146,7 @@ const pictureAccountData = [
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -146,6 +161,7 @@ const pictureAccountData = [
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -162,6 +178,7 @@ const googleData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -175,6 +192,7 @@ const googleData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -191,6 +209,7 @@ const cleverData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -204,11 +223,12 @@ const cleverData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
 export default storybook => {
-  const store = createStore(combineReducers({manageStudents}), initialState);
+  const store = createStore(combineReducers({manageStudents, teacherSections, sectionData}), initialState);
   storybook
     .storiesOf('ManageStudentsTable', module)
     .addStoryTable([
@@ -219,8 +239,12 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={passwordAccountData}
-              id={53}
+              editingData={{}}
               loginType={SectionLoginType.email}
+              addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -232,8 +256,12 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={wordAccountData}
-              id={53}
+              editingData={{}}
               loginType={SectionLoginType.word}
+              addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -245,8 +273,12 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={pictureAccountData}
-              id={53}
+              editingData={{}}
               loginType={SectionLoginType.picture}
+              addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -258,8 +290,12 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={googleData}
-              id={53}
+              editingData={{}}
               loginType={SectionLoginType.google_classroom}
+              addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )
@@ -271,8 +307,12 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={cleverData}
-              id={53}
+              editingData={{}}
               loginType={SectionLoginType.clever}
+              addStatus={{}}
+              transferData={blankStudentTransfer}
+              transferStatus={{}}
+              sectionId={53}
             />
           </Provider>
         )

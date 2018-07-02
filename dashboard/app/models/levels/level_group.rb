@@ -89,12 +89,55 @@ ruby
     end
   end
 
+  def assign_attributes(params)
+    @pages = nil
+    super(params)
+  end
+
   def plc_evaluation?
     levels.map(&:class).uniq == [EvaluationMulti]
   end
 
   # Surveys: How many students must complete a survey before any results are shown.
   SURVEY_REQUIRED_SUBMISSION_COUNT = 5
+
+  # Perform a deep copy of this level by cloning all of its sublevels
+  # using the same suffix, and write them to the new level definition file.
+  def clone_with_suffix(new_suffix)
+    new_name = "#{base_name}#{new_suffix}"
+    return Level.find_by_name(new_name) if Level.find_by_name(new_name)
+
+    level = super(new_suffix)
+    level.clone_sublevels_with_suffix(new_suffix)
+    level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
+    level
+  end
+
+  # Clone the sublevels, adding the specified suffix to the level name. Also
+  # updates this level to reflect the new level names.
+  def clone_sublevels_with_suffix(new_suffix)
+    new_properties = properties
+
+    if new_properties['texts']
+      new_properties['texts'].map! do |text|
+        Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
+        text['level_name'] << new_suffix
+        text
+      end
+    end
+
+    if new_properties['pages']
+      new_properties['pages'].map! do |page|
+        page['levels'].map! do |level_name|
+          Level.find_by_name(level_name).clone_with_suffix(new_suffix)
+          level_name << new_suffix
+        end
+        page
+      end
+    end
+
+    update!(properties: new_properties)
+  end
 
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
   def self.get_sublevel_result(sublevel, sublevel_response)
@@ -170,7 +213,7 @@ ruby
   #           {result: "I like making games, and I also like the lifestyle."},
   #           {}]}]}]
   #
-
+  # TODO(caleybrock): remove once assessments tab is converted to react
   def self.get_survey_results(script, section)
     level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
 
@@ -197,14 +240,70 @@ ruby
     end.compact
   end
 
+  # Surveys: Returns all anonymous survey results, given a script and a section.
+  #
+  # The results look like this.  For each level_group_id, levelgroup_results is an array
+  # wih an entry per contained sublevel.  Inside each entry is an array of results
+  # which has been shuffled to increase student anonymity.  There is an entry for each
+  # student who has submitted the overall LevelGroup, whether they have given a valid
+  # answer to that sublevel question or not, which explains the empty hashes
+  # intermingled with real results.
+  # [ 23432:
+  #   { stage_name: "Stage 30: Anonymous student survey",
+  #     levelgroup_results: [
+  #       {
+  #         type: "multi",
+  #         question: "Computer science is fun",
+  #         results: [
+  #           {answer_index: 0},
+  #           {},
+  #           {answer_index: 0}],
+  #         answer_texts: ["Agree", "Disagree", "Not sure"]}},
+  #       {
+  #         type: "free_response",
+  #         question: "Why are you doing this class?  Give at least two reasons.",
+  #         results: [
+  #           {result: ""},
+  #           {result: "I like making games, and I also like the lifestyle."},
+  #           {}]}]}]
+  def self.get_summarized_survey_results(script, section)
+    level_group_script_levels = script.script_levels.select do |sl|
+      sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && sl.anonymous?
+    end
+
+    surveys_by_level_group = {}
+
+    # Go through each anonymous long-assessment LevelGroup.
+    level_group_script_levels.each do |script_level|
+      level_group = script_level.levels[0]
+      levelgroup_results = get_levelgroup_survey_results(script_level, section).
+        each_with_index do |result, index|
+          result[:question_index] = index
+        end
+
+      # We will have results, even empty ones, for each student that submitted
+      # an answer.
+      student_count = levelgroup_results.empty? ? 0 : levelgroup_results.first[:results].length
+      next unless student_count >= SURVEY_REQUIRED_SUBMISSION_COUNT
+
+      # All the results for one LevelGroup for a group of students.
+      surveys_by_level_group[level_group.id] = {
+        stage_name: script_level.stage.localized_title,
+        levelgroup_results: levelgroup_results
+      }
+    end
+
+    surveys_by_level_group
+  end
+
   # @param {User} current_user - The currently signed in user
   # @param {User} user - The optional user we're trying to see the attempt of
   # @param {Level} level - The sublevel we'd like the last attempt for
-  def self.get_sublevel_last_attempt(current_user, user, level)
+  def self.get_sublevel_last_attempt(current_user, user, level, script)
     # if given an alternative user, we want to show that user's solution (for
     # teachers viewing students' solutions), otherwise show that of the current_user
     (user || current_user).
-      try(:last_attempt, level).
+      try(:last_attempt, level, script).
       try(:level_source).
       try(:data)
   end

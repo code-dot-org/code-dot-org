@@ -5,58 +5,58 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-## Cara menarik untuk menarik perhatian media terhadap Kegiatan Hour of Code anda
+## Cara menarik media ke acara Hour of Code Anda
 
-*For all press and media inquiries, contact <press@code.org>*
+*Untuk semua pertanyaan pers dan media, hubungi <press@code.org>*
 
-### Tips
+### Tips Utama
 
-- Hubungi media dua minggu sebelum kegiatan melalui email. Tindaklanjuti dengan email dan telepon jika belum menerima respon awal.
-- Minta staff sekolah atau sukarelawan untuk mengambil foto untuk dibagikan atau dikirim kepada pers.
-- Tuliskan mengenai Hour of Code pada homepage website anda dan pada koran sekolah anda. Posting rincian kegiatan anda, dan gambar dari aktivitas pelajar.
-- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
-
-### Panduan langkah demi langkah:
-
-**1. Plan your event**
-
-- Rencanakan pertemuan awal Hour of Code anda.
-- Kirim [surat](<%= resolve_url('/promote/resources#sample-emails') %>) kepada orang tua. Minta mereka untuk menyebarkan berita.
-- Kirim [surat](<%= resolve_url('/promote/resources#sample-emails') %>) untuk mengundang walikota Anda, anggota kongres, gubernur atau pebisnis berpengaruh untuk menghadiri dan berbicara kepada murid-murid Anda.
-- Selengarakan aktivitas kelompok(seperti melakukan aktivitas tanpa perangkat keras). atau pamerkan apa yang dibuat pelajar dan aktivitasnya.
-- Menunjukkan [video Hour of Code ](<%= resolve_url('/') %>)dari Code.org atau salah satu dari [ini](<%= resolve_url('/promote/resources#videos') %>) untuk menginspirasi.
-
-**2. Identify specific local reporters that cover education or local events.**
-
-Think a local newspaper, TV station, radio station or blog.
-
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
-
-**3. Contact local media**
-
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](<%= resolve_url('/promote/resources#sample-emails') %>).**
-
-**4. Prepare to field questions about your school event. Here are some examples:**
-
-*Why is your school doing an Hour of Code?*
-
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
-
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
-
-*Why is this important?*
-
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
-
-**More details and a quote you can use in materials**
-
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
-
-**About Code.org**
-
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
-
-  
-Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
-
-<%= view :signup_button %>
+- Jangkau media dua minggu sebelum acara Anda melalui email. Tindak lanjuti melalui email dan telepon jika Anda tidak menerima tanggapan awal.
+- Mintalah anggota staf sekolah atau sukarela untuk mengambil foto untuk dibagikan secara online atau kirim ke pers.
+- Tuliskan tentang Hour of Code di beranda situs web Anda dan di koran sekolah Anda. Kirimkan rincian acara Anda, dan gambar kegiatan siswa.
+- Di Facebook dan Twitter, bagikan pembaruan tentang rencana Anda, umumkan kejadian dan gambar pos Anda selama 5-11 Desember. Gunakan hashtag ** #HourOfCode </ strong> agar Code.org dapat melihat dan mempromosikan acara Anda.</li> </ul> 
+    
+    ### Panduan selangkah demi selangkah:
+    
+    **1. Rencanakan acara Anda**
+    
+    - Rencanakan sebuah majelis untuk memulai Hour of Code.
+    - Kirim [ surat ](<%= resolve_url('/promote/resources#sample-emails') %>) kepada orang tua. Mintalah mereka untuk menyebarkan berita.
+    - Kirim [ surat ](<%= resolve_url('/promote/resources#sample-emails') %>) untuk mengundang walikota, kongres, gubernur, atau pebisnis berpengaruh Anda untuk hadir dan berbicara dengan siswa Anda. .
+    - Atur aktivitas kelompok (seperti demonstrasi aktivitas pemrograman 'tidak terpasang'), atau pamer kegiatan yang dibuat oleh siswa dan yang dipimpin.
+    - Tampilkan <a href="%="_1_"_id="_1_"> </a> </a> dari Code of Code </a> atau salah satu dari <a href = "% = resolve_url ('/ promotion / resources # videos')% "> ini </a> untuk menginspirasi.
+    
+    **2. Identifikasi wartawan lokal tertentu yang mencakup pendidikan atau acara lokal.**
+    
+    Pikirkan koran lokal, stasiun TV, stasiun radio atau blog.
+    
+    Lihatlah secara online untuk mencari informasi kontak reporter. Jika Anda tidak dapat menemukannya, hubungi publikasi untuk bertanya, atau kirim email ke alamat umum tips@PUBLICATIONNAME.com dan mintalah agar pesan Anda diarahkan ke reporter yang benar.
+    
+    **3. Hubungi media lokal**
+    
+    Cara terbaik untuk menjangkau adalah melalui email. Harus singkat dan berkomunikasi: mengapa orang lain peduli dengan acara ini? Sertakan informasi kontak (termasuk nomor ponsel) untuk siapa yang akan berada di lokasi pada acara tersebut. ** Lihat [ contoh pitch ke media ](<%= resolve_url('/promote/resources#sample-emails') %>). </ strong></p> 
+    
+    **4. Siapkan pertanyaan tentang acara sekolah Anda. Berikut adalah beberapa contohnya:**
+    
+    *Mengapa sekolah Anda melakukan Hour of Code?*
+    
+    Sementara kita semua tahu bahwa penting bagi siswa untuk belajar menavigasi dunia jenuh teknologi saat ini, banyak guru tidak berpengalaman dalam ilmu komputer dan tidak tahu harus memulai dari mana. Acara ini merupakan kesempatan bagi kita semua untuk melihat ilmu komputer.
+    
+    Kami berharap hal itu akan memicu minat siswa untuk terus belajar. Penelitian juga menunjukkan bahwa anak-anak dapat mengambil konsep pemrograman sebelum mereka tahu bagaimana membaca dan menulis. Sebenarnya, otak mereka lebih mudah menerima bahasa komputer di usia muda, sama seperti bahasa asing.
+    
+    *Mengapa ini penting?*
+    
+    Teknologi mengubah setiap industri di planet ini. Pada tahun 2015, 7 juta bukaan di A.S. berada dalam pekerjaan-termasuk seni dan desain-yang menghargai keterampilan pengkodean Tapi 75 persen sekolah di A.S. tidak mengajarkan ilmu komputer. Sudah waktunya kita mengejar sampai abad ke-21. Kami tahu bahwa terlepas dari apa yang dilakukan siswa kami saat mereka dewasa, apakah mereka masuk ke bidang kedokteran, bisnis, politik, atau seni, mengetahui bagaimana membangun teknologi akan memberi mereka kepercayaan diri dan keunggulan kompetitif.
+    
+    **Keterangan lebih lanjut dan kutipan yang bisa Anda gunakan dalam bahan**
+    
+    "The Hour of Code dirancang untuk mendemistifikasi kode dan menunjukkan bahwa ilmu komputer bukanlah ilmu roket - siapapun dapat mempelajari dasar-dasarnya," kata Hadi Partovi, pendiri dan CEO Code.org. "Lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Permintaan untuk pendidikan sains komputer abad ke-21 yang relevan melintasi semua perbatasan dan tidak mengenal batas. "
+    
+    **Tentang Code.org**
+    
+    Code.org adalah organisasi non-profit publik 501c3 yang didedikasikan untuk memperluas partisipasi dalam ilmu komputer dan meningkatkan partisipasi perempuan dan siswa warna yang kurang terwakili. Visinya adalah setiap siswa di setiap sekolah harus memiliki kesempatan untuk belajar pemrograman komputer. Setelah diluncurkan pada tahun 2013, Code.org menyelenggarakan kampanye Hour of Code - yang telah mengenalkan lebih dari 100 juta siswa ke sains komputer sampai saat ini - dan bermitra dengan 70 distrik sekolah umum secara nasional untuk memperluas program sains komputer. Code.org didukung oleh sumbangan dermawan dari perusahaan, yayasan dan individu dermawan, termasuk Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network dan lain-lain. Untuk informasi lebih lanjut, silakan kunjungi: [<%= resolve_url('code.org')%>](<%= resolve_url('https://code.org') %>).
+    
+      
+    Temukan lebih banyak sumber dan contoh email [ di sini ](<%= resolve_url('/promote') %>).
+    
+    <%= view :signup_button %>

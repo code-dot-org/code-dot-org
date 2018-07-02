@@ -1,4 +1,5 @@
-"de":
+---
+de:
   data:
     unplugged:
       Unplug1:
@@ -263,9 +264,9 @@
           das du selbst erstellen wirst.
       Contracts:
         title: Verträge, Domäne und Bereich
-        desc: "Über Verträge kann das Konzept der Funktionen besser vermittelt und
+        desc: Über Verträge kann das Konzept der Funktionen besser vermittelt und
           besprochen werden. In dieser Lektion helfen uns Verträge, eine neue Programmiersprache
-          oder Funktion besser zu verstehen."
+          oder Funktion besser zu verstehen.
       DesignRecipe:
         title: Das Design-Rezept
         desc: Im letzten Teil haben Studenten einige einfache Funktionen geschrieben.
@@ -291,9 +292,6 @@
           Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die
           Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden,
           ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -439,36 +437,168 @@
           zu Funktionen so nützlich ist.  '
       swipeRightPassThrough:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''
+      PlantASeed_2018:
+        title: 'Real-Life-Algorithmen: Pflanze Samen'
+        desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum
+          Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild
+          der Informatik und der Rolle von Algorithmen vermittelt.
+      UnplugHappyMaps_2018:
+        title: Glücklich Karten
+        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
+          um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+      GoingPlacesSafely_2018:
+        title: Sicher unterwegs
+        desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer
+          erklären, wie Schüler sicher im Internet navigieren.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Der große Event
+        desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine
+          Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt
+          auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren
+          auf die verschiedenen Tasten.
+      GraphPaperProgramming_2018:
+        title: Programmieren auf Millimeterpapier
+        desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen
+          einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden
+          anweisen, ein Bild zu reproduzieren.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktivität ohne Computer
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktivität ohne Computer
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Bedingungen
+        desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
+          für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich
+          einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen
+          Punkt" erstellen.
+      DigitalFootprint_2018:
+        title: Dein digitaler Fußabdruck
+        desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck
+          oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins
+          Internet stellt, und erläutern mögliche Konsequenzen.
+      BinaryImages_2018:
+        title: Binärbilder
+        desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen
+          Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen
+          binären Techniken repräsentiert werden können.  Diese Lektion entwickelt
+          das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie
+          Bilder und Farben als Binärcode speichern können.
+      PaperPlanes_2018:
+        title: 'Alltagsalgorithmen: Papierflieger'
+        desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben
+          behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes
+          Bild der Informatik und der Rolle von Algorithmen vermittelt.
+      GettingLoopy_2018:
+        title: Schöne Schleifen
+        desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte
+          Anweisungen) anhand einer Tanzaktivität eingeführt. Schüler lernen eine
+          einfache Choreografie und werden angewiesen, diese zu wiederholen.
+      BinaryBracelets_2018:
+        title: Binäre Armbänder
+        desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben
+          ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise
+          repräsentiert und gespeichert werden können.
+      MoveItMoveIt_2018:
+        title: Bewegung, Bewegung
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Relais-Programmierung
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Kod-Saati eğitimleri için öğrenci ve gönüllülere ilham verin
 
-Code.org, teknoloji alanındaki kariyer deneyimlerini paylaşmaları ve bu alanda çalışmak isteyen öğrencilere ilham verebilmeleri için, çalışanlarınıza, Kod-Saati uygulayan yerel sınıflara [bağlanma](%= resolve_url('https://code.org/volunteer') %) fırsatı sunar.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- Gönüllü olarak [kayıt olun](%= resolve_url('https://code.org/volunteer') %).
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - Çalışanlarınızı teşvik etmek ve onların sınıflara bağlanması hakkında daha fazla açıklama için klavuza[ bakınız](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Şirketlerin kod-saatini destekleyebilecekleri diğer yollar:
 
-- Bilgisayar bilimlerin önemini vurgulamak ve çalışanları teşvik etmek amacıyla şirket kapsamında [eposta](%= resolve_url('/promote/resources#sample-emails') %) ile duyuru yapmak için CEO' nuz dan ricada bulunun. 
+- Bilgisayar bilimlerin önemini vurgulamak ve çalışanları teşvik etmek amacıyla şirket kapsamında [eposta](%= resolve_url('/promote/resources#sample-emails') %) ile duyuru yapmak için CEO' nuz dan ricada bulunun.
 - Çalışma arkadaşlarınızla Kod-Saati Mutlu Saattir [aktiviteleri](%= resolve_url('/learn') %) düzenleyin.
 - Yaşadığınız yerdeki okul sınıflarına veya kar amacı gütmeyen ortaklara özel olarak şirket ofisinizde bir "Kod-Saati" etkinliği düzenleyin. Nasıl yapılacağını görmek için aşağıdaki kılavuza göz atın.
 
@@ -25,7 +25,7 @@ Code.org, teknoloji alanındaki kariyer deneyimlerini paylaşmaları ve bu aland
 ## 1. Kod-Saatinizi tanıtın
 
 - Kendi [Kod-Saati](%= resolve_url('/promote') %) etkinliğinizi tanıtın ve diğer insanları da bunun için teşvik edin.
-- Şirketinizdeki yazılım mühendislerini yerel sınıflardaki öğrencilere Kod-Saatinde liderlik etmeleri için cesaretlendirin ve bilgisayar bilimi öğrencilerine ilham vermelerini sağlayın. Yazılım mühendisleri buradan [kayıt](%= resolve_url('https://code.org/volunteer/engineer') %) olarak sınıflara bağlanabilir.
+- Şirketinizdeki yazılım mühendislerini yerel sınıflardaki öğrencilere Kod-Saatinde liderlik etmeleri için cesaretlendirin ve bilgisayar bilimi öğrencilerine ilham vermelerini sağlayın. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Nasıl Yapılır videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin 
 
 **Kod-Saati etkinliğini tanıtmak için fikirler:**
 
-- Teknolojinin hayatımıza etkisini hem kız hem de erkekleri ilgilendirecek şekilde açıklayın. (hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin). 
+- Teknolojinin hayatımıza etkisini hem kız hem de erkekleri ilgilendirecek şekilde açıklayın. (hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin).
 - Eğer bir teknoloji şirketi iseniz, şirket eğlenceli demolar, yenilikçi ürünler üzerinde çalışıyordur.
 - Eğer bir teknoloji şirketi değilseniz, şirket sorunları çözmek ve hedeflerine ulaşmak için teknolojiyi kullanır.
 - Şirketinizdeki yazılım mühendislerini neden bilgisayar bilimini seçtiler ve projeler üzerinde çalışmaya karar verdiler bunun hakkında konuşması için davet ediyoruz.
-- Kızların bilgisayar bilimi ile ilgilenmesine ilişkin ipuçları için [buraya](%= resolve_url('https://code.org/girls') %) bakın.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Kodlayın!
 
@@ -103,7 +103,7 @@ Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin 
 
 ## 7) Kutlama
 
-- Katılımcılar ve öğrenciler için [sertifika basın](%= resolve_url('https://code.org/certificates') %).
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - ["Bir Kod-Saati tamamladım!"](%= resolve_url('/promote/resources#stickers') %) çıkartmaları basılır.
 - Çalışanlarınız için [özel sipariş t-shirtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!

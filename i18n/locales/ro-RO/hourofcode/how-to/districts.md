@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Hour of Code este doar primul pas într-o călătorie pentru a afla mai multe despre modul în care tehnologia funcționează şi cum se creează aplicațiile software. Pentru a continua această călătorie:
 
-- Incurajeaza studentii sa continuie la [invata online](%= resolve_url('https://cod.org/invat/dincolo') %).
-- [Participați](%= resolve_url('https://code.org/professional-development-workshops') %) la un atelier de lucru de o zi, în persoană, pentru a primi instrucțiuni de la un facilitator experimentat în informatică. (Numai pentru educatori din SUA)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

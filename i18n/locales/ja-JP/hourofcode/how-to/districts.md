@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # How to bring the Hour of Code to your entire school district
 
-## すべての学校が参加して、 すべての生徒が学ぶ！
+## すべての生徒が参加し、すべての生徒が学ぶ！
 
 1. **Recruit local schools.** Share [this email](%= resolve_url('/promote/resources#sample-emails') %) and [teacher how to guide](%= resolve_url('/how-to') %), or include a [short blurb](%= resolve_url('/promote/stats') %) in newsletters/district communications.
 
@@ -23,7 +23,7 @@ nav: how_to_nav
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -9,7 +9,16 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     role: 'School Administrator',
     job_title: 'title',
     grade_levels: ['High School'],
-    school_state: 'NY'
+    school_state: 'NY',
+    opt_in: 'Yes'
+  }
+
+  MATCHED_FORM_DATA = {
+    school_type: 'public',
+    school_district_other: false,
+    school_district: 'District',
+    school_state: 'OH',
+    school_zipcode: '45242'
   }
 
   test 'Test district validation' do
@@ -92,65 +101,91 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
   end
 
-  test 'Updates regional partner' do
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '1200390',
-          grade_levels: ['High School']
-        }
-      ).to_json
-    )
+  test 'Matches regional partner' do
+    state = 'OH'
+    zip = '45242'
 
-    assert_equal 'A+ College Ready', regional_partner_contact.regional_partner.name
+    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner.mappings.find_or_create_by!(state: state)
+    regional_partner.mappings.find_or_create_by!(zip_code: zip)
 
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '1200390',
-          grade_levels: ['Middle School']
-        }
-      ).to_json
-    )
+    regional_partner_contact = create :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      {
+        school_type: 'public',
+        school_district_other: false,
+        school_district: 'District',
+        school_state: state,
+        school_zipcode: zip
+      }
+    ).to_json
 
-    assert_equal 'Academy for CS Education - Florida International University', regional_partner_contact.regional_partner.name
+    assert_equal regional_partner.id, regional_partner_contact.regional_partner_id
+  end
 
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '1200390',
-          grade_levels: ['Elementary School']
-        }
-      ).to_json
-    )
+  # If matched and regional partner has one pm, send matched email to pm
+  test 'Matched with one regional partner pm' do
+    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner.mappings.find_or_create_by!(state: 'OH')
+    regional_partner.mappings.find_or_create_by!(zip_code: '45242')
 
-    assert_nil regional_partner_contact.regional_partner
+    create :regional_partner_program_manager, regional_partner: regional_partner
 
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '4800004',
-          grade_levels: ['High School']
-        }
-      ).to_json
-    )
+    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    mail = ActionMailer::Base.deliveries.first
 
-    assert_equal 'Center for STEM Education, The University of Texas at Austin', regional_partner_contact.regional_partner.name
+    assert_equal 'A school administrator would like to connect with you', mail.subject
+    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal 2, ActionMailer::Base.deliveries.count
+  end
 
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '100005',
-          grade_levels: ['Elementary School']
-        }
-      ).to_json
-    )
+  # If matched and regional partner with multiple pms, send matched email to all pms
+  test 'Matched with two regional partner pms' do
+    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner.mappings.find_or_create_by!(state: 'OH')
+    regional_partner.mappings.find_or_create_by!(zip_code: '45242')
 
-    assert_nil regional_partner_contact.regional_partner
+    create :regional_partner_program_manager, regional_partner: regional_partner
+    create :regional_partner_program_manager, regional_partner: regional_partner
+
+    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    mail = ActionMailer::Base.deliveries.first
+
+    assert_equal 'A school administrator would like to connect with you', mail.subject
+    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal 3, ActionMailer::Base.deliveries.count
+  end
+
+  # If matched but no regional partner pms, send unmatched email
+  test 'Matched with zero regional partner pms' do
+    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner.mappings.find_or_create_by!(state: 'OH')
+    regional_partner.mappings.find_or_create_by!(zip_code: '45242')
+
+    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    mail = ActionMailer::Base.deliveries.first
+
+    assert_equal ['tawny@code.org'], mail.to
+    assert_equal 'A school administrator wants to connect with Code.org', mail.subject
+    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal 2, ActionMailer::Base.deliveries.count
+  end
+
+  test 'Unmatched' do
+    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    mail = ActionMailer::Base.deliveries.first
+
+    assert_equal ['tawny@code.org'], mail.to
+    assert_equal 'A school administrator wants to connect with Code.org', mail.subject
+    assert_equal ['tanya_parker@code.org'], mail.from
+    assert_equal 2, ActionMailer::Base.deliveries.count
+  end
+
+  test 'Receipt email' do
+    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    mail = ActionMailer::Base.deliveries.last
+
+    assert_equal ['foo@bar.com'], mail.to
+    assert_equal 'Thank you for contacting us', mail.subject
+    assert_equal ['tanya_parker@code.org'], mail.from
   end
 end

@@ -1,10 +1,5 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
-module OPS
-  API = 'api'.freeze unless defined? API
-  DASHBOARDAPI = 'dashboardapi'.freeze unless defined? DASHBOARDAPI
-end
-
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
@@ -65,19 +60,42 @@ Dashboard::Application.routes.draw do
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
   # User-facing section routes
-  resources :sections, only: [:show, :update] do
+  resources :sections, only: [:show] do
     member do
       post 'log_in'
     end
   end
   # Section API routes (JSON only)
   concern :section_api_routes do
-    resources :sections, only: [:index, :show, :create, :destroy] do
-      resources :students, only: [:index], controller: 'sections_students'
+    resources :sections, only: [:index, :show, :create, :update, :destroy] do
+      resources :students, only: [:index, :update], controller: 'sections_students' do
+        collection do
+          post 'bulk_add'
+          get 'completed_levels_count'
+        end
+        member do
+          post 'remove'
+        end
+      end
       member do
         post 'join'
         post 'leave'
         post 'update_sharing_disabled'
+        get 'student_script_ids'
+      end
+      collection do
+        get 'membership'
+        get 'valid_scripts'
+      end
+    end
+  end
+
+  # Used in react assessments tab
+  concern :assessments_routes do
+    resources :assessments, only: [:index] do
+      collection do
+        get 'section_responses'
+        get 'section_surveys'
       end
     end
   end
@@ -116,8 +134,13 @@ Dashboard::Application.routes.draw do
     patch '/dashboardapi/users', to: 'registrations#update'
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
+    patch '/users/email', to: 'registrations#set_email'
+    patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
+    get '/users/auth/:provider/connect', to: 'omniauth_callbacks#connect'
+    get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
+    get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -162,6 +185,8 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
+        get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
+        get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
       get '/angular', to: 'projects#angular'
     end
@@ -177,6 +202,10 @@ Dashboard::Application.routes.draw do
   # /lang/xx shortcut for all routes
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
   get '*i18npath/lang/:locale', to: 'home#set_locale'
+
+  resources :blocks, constraints: {id: /[^\/]+/}
+
+  resources :shared_blockly_functions, path: '/functions'
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
@@ -279,7 +308,7 @@ Dashboard::Application.routes.draw do
 
   # internal support tools
   get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
-  post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
+  post '/admin/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
   get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
@@ -293,6 +322,8 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
+  get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
+  post '/census/review', to: 'census_reviewers#create'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -311,48 +342,13 @@ Dashboard::Application.routes.draw do
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+  # Experiments are get requests so that a user can click on a link to join or leave an experiment
   get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
+  get '/experiments/set_single_user_experiment/:experiment_name', to: 'experiments#set_single_user_experiment'
+  get '/experiments/disable_single_user_experiment/:experiment_name', to: 'experiments#disable_single_user_experiment'
 
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
-
-  concern :ops_routes do
-    # /ops/district/:id
-    resources :districts do
-      member do
-        get 'teachers'
-      end
-    end
-    resources :cohorts do
-      member do
-        get 'teachers'
-        delete 'teachers/:teacher_id', action: 'destroy_teacher'
-      end
-    end
-    resources :workshops do
-      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
-        resources :workshop_attendance, path: '/attendance', shallow: true do
-        end
-      end
-      member do
-        get 'teachers'
-      end
-    end
-
-    get 'attendance/download/:workshop_id', action: 'attendance', controller: 'workshop_attendance'
-    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
-    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
-    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
-    post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
-  end
-
-  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
-    concerns :ops_routes
-  end
-
-  namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
-    concerns :ops_routes
-  end
 
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
   get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
@@ -385,6 +381,7 @@ Dashboard::Application.routes.draw do
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
+        get :local_workshop_daily_survey_report, action: :local_workshop_daily_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
@@ -399,7 +396,8 @@ Dashboard::Application.routes.draw do
 
       # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
       post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
-      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner'
+      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
+      post 'teachercon_lead_facilitator_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
       post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
@@ -418,11 +416,13 @@ Dashboard::Application.routes.draw do
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 
-      resources :applications, controller: 'applications', only: [:index, :show, :update] do
+      resources :applications, controller: 'applications', only: [:index, :show, :update, :destroy] do
         collection do
           get :quick_view
           get :cohort_view
           get :search
+          get :teachercon_cohort
+          get :fit_cohort
         end
       end
     end
@@ -445,6 +445,15 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
+    get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
+    get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
+    get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
+
+    get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
+    post 'post_course_survey/submit', to: 'post_course_survey#submit'
+    get 'post_course_survey/:course_initials', to: 'post_course_survey#new'
+
     namespace :application do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
@@ -452,9 +461,13 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-    get 'teachercon_registration/partner', to: 'teachercon1819_registration#partner'
+    get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
+    get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
+
+    delete 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#destroy'
+    delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#destroy'
 
     get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
@@ -470,7 +483,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
     get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
-    get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
     get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
@@ -499,11 +511,13 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+  # Used in angular assessments tab
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes
+    concerns :assessments_routes
   end
 
   # Wildcard routes for API controller: select all public instance methods in the controller,
@@ -552,7 +566,9 @@ Dashboard::Application.routes.draw do
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
-      get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
+      get 'regional_partners/:school_district_id/:course', to: 'regional_partners#for_school_district_and_course', defaults: {format: 'json'}
+      get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
+      get 'regional_partners/capacity', to: 'regional_partners#capacity'
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
@@ -563,9 +579,17 @@ Dashboard::Application.routes.draw do
       # Routes used by the peer reviews admin pages
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+      resources :teacher_feedbacks, only: [:create] do
+        collection do
+          get 'get_feedback_from_teacher'
+          get 'get_feedbacks'
+        end
+      end
     end
   end
 
+  post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
@@ -577,7 +601,7 @@ Dashboard::Application.routes.draw do
   # the constraint on :q to match anything but a slash.
   # @see http://guides.rubyonrails.org/routing.html#specifying-constraints
   get '/dashboardapi/v1/districtsearch/:q/:limit', to: 'api/v1/school_districts#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
-  get '/dashboardapi/v1/schoolsearch/:q/:limit', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
+  get '/dashboardapi/v1/schoolsearch/:q/:limit(/:use_new_search)', to: 'api/v1/schools#search', defaults: {format: 'json'}, constraints: {q: /[^\/]+/}
 
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}

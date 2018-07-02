@@ -1,0 +1,15 @@
+name 'U1 Ch1 Assessment question 4 to 8 bit_exam_prep'
+wrong '2<sup>1</sup> = 2 times as many values'
+
+wrong '2<sup>2</sup> = 4 times as many values'
+
+wrong '2<sup>3</sup> = 8 times as many values'
+
+right '2<sup>4</sup> = 16 times as many values'
+
+markdown <<MARKDOWN
+Two students have developed a protocol in which they send 4-bit messages to each other. They decide to modify their protocol to start sending 8-bit messages instead. How many more values can be represented in an 8-bit message than a 4-bit message?
+
+
+
+MARKDOWN

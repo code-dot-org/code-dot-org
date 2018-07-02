@@ -18,7 +18,6 @@ const menuStyle = {
   backgroundColor: BACKGROUND_COLOR,
   borderRadius: 2,
   boxShadow: "3px 3px 3px gray",
-  marginTop: TAIL_HEIGHT,
   textAlign: 'left',
   maxWidth: 200,
 };
@@ -46,6 +45,10 @@ export default class PopUpMenu extends Component {
       top: PropTypes.number.isRequired,
       left: PropTypes.number.isRequired,
     }).isRequired,
+    offset: PropTypes.shape({
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
+    }),
     children: PropTypes.any,
     className: PropTypes.string,
     isOpen: PropTypes.bool,
@@ -63,6 +66,7 @@ export default class PopUpMenu extends Component {
       >
         <MenuBubble
           targetPoint={this.props.targetPoint}
+          offset={this.props.offset}
           className={this.props.className}
           children={this.props.children}
           showTail={this.props.showTail}
@@ -78,6 +82,10 @@ class MenuBubbleUnwrapped extends Component {
       top: PropTypes.number.isRequired,
       left: PropTypes.number.isRequired,
     }).isRequired,
+    offset: PropTypes.shape({
+      x: PropTypes.number.isRequired,
+      y: PropTypes.number.isRequired,
+    }),
     children: PropTypes.any,
     className: PropTypes.string,
     showTail: PropTypes.bool,
@@ -110,10 +118,13 @@ class MenuBubbleUnwrapped extends Component {
 
   render() {
     const {targetPoint, className} = this.props;
+    const marginTop = this.props.offset ? this.props.offset.y : TAIL_HEIGHT;
+    const marginLeft = this.props.offset ? this.props.offset.x : -STANDARD_PADDING;
     const style = {
       ...menuStyle,
       ...targetPoint,
-      marginLeft: -STANDARD_PADDING,
+      marginTop: marginTop,
+      marginLeft: marginLeft,
     };
 
     return (
@@ -158,10 +169,14 @@ class Item extends Component {
     first: PropTypes.bool,
     last: PropTypes.bool,
     color: PropTypes.string,
+    openInNewTab: PropTypes.bool,
+    className: PropTypes.string,
   };
 
   render() {
-    const {first, last, onClick, children, href} = this.props;
+    const {first, last, onClick, children, href, openInNewTab, className} = this.props;
+    const defaultClassName = 'pop-up-menu-item';
+    const classList = className ? `${defaultClassName} ${className}` : defaultClassName;
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
     }
@@ -185,21 +200,26 @@ class Item extends Component {
     const textStyle = {
       color: this.props.color? this.props.color : color.dark_charcoal,
       textDecoration: 'none', // Remove underline from anchor tags
+      fontFamily: "'Gotham 4r', sans-serif"
     };
+
+    const target = openInNewTab ? "_blank" : "";
+
     return (
       <div style={paddingStyle}>
         {this.props.href &&
           <a
-            className="pop-up-menu-item"
+            className={classList}
             href={href}
             style={{...textStyle, ...areaStyle}}
+            target={target}
           >
             {children}
           </a>
         }
         {!this.props.href &&
           <div
-            className="pop-up-menu-item"
+            className={classList}
             style={textStyle}
             onClick={onClick}
           >

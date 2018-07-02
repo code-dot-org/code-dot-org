@@ -35,13 +35,13 @@ nav: how_to_nav
 - Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - [ Видео за световния Час на кода](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Намери още вдъхновяващи [ ресурси](%= resolve_url('https://code.org/inspire') %) и [ видеа](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Не е лошо ако Вие и детето сте новаци в компютърните науки. Ето някои идеи, за да въведете дейността Hour of Code:
 
 - Обяснете начина как технологията въздейства на живота ни, с примери, които ще впечатлят момчета и момичета (спасяване на живот, помощ за хората, свързване на хора и др.).
 - Съставете списък с неща, които използват код в ежедневния живот.
-- Вижте съвети за въвличане на момичета в компютърните науки [тук](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 Искате повече идеи? Вижте нашия [ шаблон урок план](/files/AfterschoolEducatorLessonPlanOutline.docx) за най-добрите практики от опитни педагози.
 
@@ -61,7 +61,7 @@ nav: how_to_nav
 
 ## 7) Празник
 
-[ Отпечатайте сертификат](%= resolve_url('https://code.org/certificates') %) за детето си(и за себе си).
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 
@@ -73,7 +73,7 @@ nav: how_to_nav
 
 Hour of Code е само първата стъпка в пътешествието в изучаването на това, как технологията работи и как да създавате софтуерни приложения. За да продължите това пътуване:
 
-- Насърчете детето да продължи да [ учи онлайн](%= resolve_url('https://code.org/learn/beyond') %).
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
 - Помогнете [в насърчаването](%= resolve_url('/promote') %)на Cs образованието в училището на детето ви.
 
 <%= view :signup_button %>

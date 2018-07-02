@@ -1,0 +1,9 @@
+name 'CSPFinal_Question_5_exam_prep'
+wrong 'No, public key encryption allows the credit card information to be read by the public.'
+wrong 'No, the internet protocols are open standards and thus everything sent over the internet is sent "in the clear".'
+right 'Yes, public key encryption is built upon computationally hard problems that even powerful computers cannot easily solve.'
+wrong 'Yes, public key encryption is secure because it transmits credit card information in binary.'
+
+markdown <<MARKDOWN
+A coffee shop is considering accepting orders and payments through their phone app and have decided to use public key encryption to encrypt their customers’ credit card information. Is this a secure form of payment?
+MARKDOWN

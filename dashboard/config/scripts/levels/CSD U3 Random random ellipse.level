@@ -15,7 +15,6 @@
       "comment_Drawing": null,
       "randomNumber_min_max": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Random Numbers\r\n\r\n`randomNumber()` chooses a random number between a minimum and maximum value. You can use this code instead of writing in the specific number.  If you make your drawings with random numbers it will look a little bit different every time you run your program.\r\n\r\n# Do This\r\n\r\n* Run the program several times to see how it works.\r\n* Change the numbers inside `randomNumber` and run the code again a few times to see what changes.",

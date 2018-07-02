@@ -402,21 +402,14 @@ class ApiControllerTest < ActionController::TestCase
       }
     ]
 
-    response_body = JSON.parse(@response.body)
-    # Since the order of the levelgroup_results with the response isn't defined, we manually
-    # compare the actual and expected responses.
-    # TODO(asher): Generalize this to somewhere where it can be reused.
-    assert_equal 1, response_body.length
-    assert_equal ['stage', 'levelgroup_results'], response_body[0].keys
-    assert_equal expected_response[0]['stage'], response_body[0]['stage']
-    assert_equal expected_response[0]['levelgroup_results'].count,
-      response_body[0]['levelgroup_results'].count
-    expected_response[0]['levelgroup_results'].each do |result|
-      assert response_body[0]['levelgroup_results'].include? result
-    end
-    response_body[0]['levelgroup_results'].each do |result|
-      assert expected_response[0]['levelgroup_results'].include? result
-    end
+    actual_response = JSON.parse(@response.body)
+    assert_equal 1, actual_response.length
+    assert_equal ['stage', 'levelgroup_results'], actual_response[0].keys
+    assert_equal expected_response[0]['stage'], actual_response[0]['stage']
+    assert_levelgroup_results_match(
+      expected_response[0]['levelgroup_results'],
+      actual_response[0]['levelgroup_results']
+    )
   end
 
   test "should get surveys for section with script with single page anonymous level_group assessment" do
@@ -541,7 +534,14 @@ class ApiControllerTest < ActionController::TestCase
       }
     ]
 
-    assert_equal expected_response, JSON.parse(@response.body)
+    actual_response = JSON.parse(@response.body)
+    assert_equal 1, actual_response.length
+    assert_equal ['stage', 'levelgroup_results'], actual_response[0].keys
+    assert_equal expected_response[0]['stage'], actual_response[0]['stage']
+    assert_levelgroup_results_match(
+      expected_response[0]['levelgroup_results'],
+      actual_response[0]['levelgroup_results']
+    )
   end
 
   test "no anonymous survey data via assessment call" do
@@ -1270,6 +1270,62 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 1, data['students'].length
   end
 
+  test "should get paginated section level progress" do
+    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].keys.length
+    assert_equal 3, data['pagination']['total_pages']
+
+    get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].keys.length
+
+    # third page has only one student (of 5 total)
+    get :section_level_progress, params: {section_id: @section.id, page: 3, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 1, data['students'].keys.length
+
+    # if we request 1 per page, page 6 should still work (because page 5 gave
+    # us a full page of data), but page 7 should fail
+    get :section_level_progress, params: {section_id: @section.id, page: 6, per: 1}
+    assert_response :success
+    get :section_level_progress, params: {section_id: @section.id, page: 7, per: 1}
+    assert_response 416
+  end
+
+  test "should get section level progress with specific script" do
+    script = Script.find_by_name('algebra')
+    get :section_level_progress, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+    assert_response :success
+  end
+
+  test "should get paginated section level progress with specific script" do
+    script = Script.find_by_name('algebra')
+
+    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].keys.length
+    assert_equal 3, data['pagination']['total_pages']
+
+    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 2, data['students'].keys.length
+
+    # third page has only one student (of 5 total)
+    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 1, data['students'].keys.length
+  end
+
   test "should get paired icons for paired user levels" do
     sl = create :script_level
     driver_ul = create(
@@ -1599,5 +1655,69 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
       {method: "get", path: "/api/student_progress/2/15"}
     )
+  end
+
+  #
+  # Given two arrays, checks that they represent equivalent bags (or multisets)
+  # of elements.
+  #
+  # Equivalent:     [1, 1, 2], [1, 2, 1]
+  # Not equivalent: [1, 1, 2], [1, 2, 2]
+  #
+  # Optionally takes a comparator block.  If omitted, == comparison is used.
+  #
+  # equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a,b| a%10 == b%10}
+  #
+  # @param [Array] bag_a
+  # @param [Array] bag_b
+  # @param [Block] (optional) comparator
+  # @return [Boolean] true if sets are equivalent, false if not
+  #
+  def equivalent_bags?(bag_a, bag_b)
+    bag_b_remaining = bag_b.clone
+    bag_a.each do |a|
+      match_index = bag_b_remaining.find_index do |b|
+        if block_given?
+          yield a, b
+        else
+          a == b
+        end
+      end
+      if match_index.nil?
+        return false
+      else
+        bag_b_remaining.delete_at match_index
+      end
+    end
+    bag_b_remaining.empty?
+  end
+
+  test 'equivalent_bags? helper' do
+    assert equivalent_bags? [], []
+    assert equivalent_bags? [1, 1, 1, 2, 2], [2, 1, 2, 1, 1]
+    refute equivalent_bags? [1, 1, 1, 2, 2], [1, 1, 2, 2, 2]
+    assert equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a, b| a % 10 == b % 10}
+    refute equivalent_bags?([2, 3, 4], [11, 12, 13]) {|a, b| a % 10 == b % 10}
+  end
+
+  def assert_levelgroup_results_match(expected_results, actual_results)
+    match = equivalent_bags?(expected_results, actual_results) do |expected, actual|
+      expected['type'] == actual['type'] &&
+        expected['question'] == actual['question'] &&
+        expected['answer_texts'] == actual['answer_texts'] &&
+        equivalent_bags?(expected['results'], actual['results'])
+    end
+    assert match, <<MESSAGE
+Mismatched results:
+
+Expected:
+
+#{expected_results.join("\n")}
+
+Actual:
+
+#{actual_results.join("\n")}
+
+MESSAGE
   end
 end

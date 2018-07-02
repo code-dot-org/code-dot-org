@@ -23,7 +23,7 @@ nav: how_to_nav
 
 ही शिकण्याची यात्रा चालू राहण्यासाठी, तंत्रज्ञान कसे काम करते आणि साॅफ्टवेअर अप्लिकेशन कसे बनवावे हे जाणण्याची, अवर ऑफ कोड ही पहिली पायरी आहे:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- अनुभवी संगणक मदतनिसांकडून सूचना घेण्यासाठी एक दिवसीय कार्यशाळेला स्वत: [उपस्थित](%= resolve_url('https://code.org/professional-development-workshops') %) राहावे. (फक्त अमेरिकेतील शिक्षकांसाठी)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -18,7 +18,7 @@ def create_storage_id_cookie
 end
 
 def storage_decrypt(encrypted)
-  decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
+  decrypter = OpenSSL::Cipher.new 'AES-128-CBC'
   decrypter.decrypt
   decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   plain = decrypter.update(encrypted)
@@ -56,7 +56,7 @@ def valid_encrypted_channel_id(encrypted)
 end
 
 def storage_encrypt(plain)
-  encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
+  encrypter = OpenSSL::Cipher.new('AES-128-CBC')
   encrypter.encrypt
   encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   encrypted = encrypter.update(plain.to_s)

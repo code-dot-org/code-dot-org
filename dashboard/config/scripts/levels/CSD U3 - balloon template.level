@@ -6,7 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "var balloon = createSprite(200, 200);\r\nballoon.setAnimation(\"balloon\");\r\nballoon.scale = 0.1;\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update Values\r\n  balloon.scale = balloon.scale + 0.001;\r\n\r\n  // Draw Animations\r\n  drawSprites();\r\n}",

@@ -1,4 +1,5 @@
-"pt-BR":
+---
+pt-BR:
   data:
     game:
       name:
@@ -37,7 +38,7 @@
         NetSim: Simulador de internet
         Custom: Artista
         CustomStudio: Laboratório
-        Gamelab: Game Lab
+        Gamelab: Laboratório de Jogos
     trophy:
       name:
         Bronze: Bronze
@@ -205,9 +206,9 @@
         turtle_2_8: Esse desafio é um pouco complicado. Use a função "desenhe um boneco
           de neve" e o novo bloco "pule para a frente" (na categoria Ações). Desenhe
           3 bonecos de neve com cores diferentes, separados por 100 pixels.
-        turtle_2_9: Use um laço "conte com" para desenhar uma família de bonecos de
-          neve, com alturas de 110, 100, 90, 80 e 70. Os bonecos de neve devem ser
-          separados por 60 pixels.
+        turtle_2_9: Use um laço "contar com" para desenhar uma família de bonecos
+          de neve, com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem
+          estar separados por 60 pixels.
         turtle_2_10: Aqui, temos alguns códigos para que você experimente em diferentes
           espirais. O que acontece se você alterar a quantidade de voltas? Ou definir
           uma cor aleatória no laço? Desenhe o que você quiser.
@@ -307,134 +308,9 @@
           pelas dinamites!
         maze_3_4: Argh! Escreva um programa que me faça chegar ao porco sem passar
           pela dinamite.
-        bounce_1_basketball: Conecte um bloco ao bloco "quando clicar na seta para
-          a esquerda" e clique em "Executar". Mova a mão usando a seta para a esquerda
-          para alcançar o objetivo final.
-        bounce_2_basketball: Conecte um bloco aos blocos "quando clicar na seta para
-          a direita" e "quando clicar na seta para a esquerda". Mova a mão para alcançar
-          ambos os objetivos finais.
-        bounce_5_basketball: Vamos lançar uma bola em direção à mão. Conecte um bloco
-          ao bloco "quando a bola bater na mão" para garantir que a bola atinja a
-          bandeira.
-        bounce_6_basketball: Agora a bandeira está no topo. Você precisa conectar
-          blocos a ambos os blocos "quando a bola bater" para resolver este desafio.
-        bounce_7_basketball: Conecte os blocos a cada um dos blocos "quando". Faça
-          a bola quicar até que ela atinja a bandeira.
-        bounce_10_basketball: Agora há um alvo na parte de cima! Conecte os blocos
-          "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando
-          a bola chega ao alvo" e "quando a bola não acerta a mão" para fazer um jogo.
-          Veja quantos pontos você consegue marcar antes que seu oponente marque duas
-          vezes.
-        bounce_11_basketball: Agora você pode conectar blocos ao bloco "quando o jogo
-          começa". Você tem que conectar o novo bloco "jogue uma nova bola" em mais
-          de um lugar. Além disso, tente mudar o cenário ou a velocidade da mão e
-          da bola e veja quantos pontos você consegue marcar antes de seu oponente
-          marcar duas vezes!
-        bounce_12_basketball: Crie seu próprio jogo de basquete. Você pode mudar todas
-          as regras. Quando terminar, clique em Concluir para permitir que seus amigos
-          possam testar seu jogo em seus smartphones.
-        bounce_1_sports: Vá até a bandeira! Anexe um bloco ao bloco "quando seta para
-          esquerda" e clique em "Executar" para mover o jogador até a bandeira.
-        bounce_2_sports: Agora há duas bandeiras! Anexe um bloco aos blocos "quando
-          seta para esquerda" e "quando seta para direita" para fazer com que seu
-          jogador se mova nas duas direções.
-        bounce_5_sports: O disco de hóquei vai deslizar até o jogador! Anexe um bloco
-          ao bloco "quando a bola atinge o jogador" para acertar a bandeira.
-        bounce_6_sports: Agora a bandeira está no topo. Você precisa conectar blocos
-          a ambos os blocos "quando a bola bater" para resolver este desafio.
-        bounce_7_sports: Conecte os blocos a cada um dos blocos "quando". Faça a bola
-          quicar até que ela atinja a bandeira.
-        bounce_10_sports: Agora há um alvo na parte de cima! Conecte os blocos "marque
-          um ponto" e "marque um ponto para o oponente" aos blocos "quando a bola
-          chega ao alvo" e "quando a bola não acerta a mão" para fazer um jogo. Veja
-          quantos pontos você consegue marcar antes que seu oponente marque duas vezes!
-        bounce_11_sports: Agora você pode conectar blocos ao bloco "quando o jogo
-          começa". Você tem que conectar o novo bloco "jogue uma nova bola" em mais
-          de um lugar. Além disso, tente mudar o cenário ou a velocidade da mão e
-          da bola e veja quantos pontos você consegue marcar antes de seu oponente
-          marcar duas vezes!
-        bounce_12_sports: 'Crie seu próprio jogo! Aqui, você está no comando: você
-          pode mudar todas as regras, misturar e combinar esportes, e criar o que
-          quiser! Quando terminar, clique em Concluir para deixar seus amigos experimentarem
-          seu jogo em seus smartphones.'
-        bounce_1: Conecte um bloco ao bloco "quando clicar na seta para a esquerda"
-          e clique em "Executar". Mova a raquete usando a seta para a esquerda para
-          alcançar o objetivo final.
-        bounce_2: Conecte um bloco aos blocos "quando clicar na seta para a direita"
-          e "quando clicar na seta para a esquerda". Mova a raquete para alcançar
-          ambos os objetivos finais.
-        bounce_3: Agora, tente algo semelhante com o bloco "quando clicar na seta
-          para cima". Mova a raquete o objetivo final no topo.
-        bounce_4: Desta vez, você precisa adicionar quatro blocos. Mova a raquete
-          para todos os quatro alvos finais para completar este desafio.
-        bounce_5: Vamos lançar uma bola em direção à raquete. Conecte um bloco ao
-          bloco "quando a bola bater na raquete" para garantir que a bola atinja o
-          alvo.
-        bounce_6: Agora o alvo está no topo. Você precisa conectar blocos em ambos
-          os blocos "quando a bola bater" para resolver este desafio.
-        bounce_7: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar
-          até que ela atinja o alvo.
-        bounce_10: Agora há um alvo na parte de cima. Conecte os blocos "marque um
-          ponto" e "marque um ponto para o oponente" aos blocos "quando a bola atingir
-          o alvo" e "quando a bola não acertar a raquete" para fazer um jogo. Veja
-          quantos pontos você consegue marcar antes que seu oponente marque duas vezes.
-        bounce_11: Agora você pode conectar blocos ao bloco "quando o jogo começa".
-          Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar.
-          Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e
-          veja quantos pontos você pode marcar antes de seu oponente marcar duas vezes.
-        bounce_12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual
-          e todas as regras. Quando terminar, clique em Concluir para que seus amigos
-          possam jogar seu jogo em seus celulares.
         Custom_builder: Arraste os blocos da caixa de ferramentas para a área de trabalho
           para desenhar o nível que você deseja criar. Quando estiver pronto, clique
           em "Executar".
-        flappy_1: Conecte um bloco ao bloco "quando clicar" e então clique em "Executar".
-          Clique ou toque na tela para mover o passarinho até o alvo.
-        flappy_2: Agora que já temos uma base. Conecte um bloco ao bloco "quando bater
-          no chão". Seu código precisa 'TERMINAR O JOGO' quando o passarinho bater.
-        flappy_3: O bloco "quando o jogo começa" permite que você execute o código
-          quando o jogo começa. Defina a velocidade do nível e voe em direção ao alvo.
-        flappy_4: O passarinho vai atravessar os obstáculos, a menos que você programe
-          para fazê-lo bater. Conecte um bloco ao bloco "quando atingir um obstáculo".
-          Seu programa precisa 'TERMINAR O JOGO' quando o passarinho bater nos obstáculos.
-        flappy_5: Vamos adicionar um painel de pontuação e aumentar os pontos quando
-          o passarinho passar pelos obstáculos. Faça isso no bloco "quando passar
-          um obstáculo", e então marque um ponto quando o passarinho passar pelo primeiro
-          conjunto de obstáculos.
-        flappy_6: Veja se você ainda pode marcar um ponto depois de fazer o passarinho
-          bater as asas mais ou menos.
-        flappy_7: Em seguida, tente mudar a cena conectando outro bloco ao bloco "quando
-          o jogo começa".
-        flappy_8: Você pode definir o visual a qualquer momento, não apenas quando
-          o jogo começa. Tente criar um cenário ALEATÓRIO quando outros eventos acontecerem,
-          por exemplo, ao passar um obstáculo.
-        flappy_9: Para misturar as coisas, ao invés de terminar o jogo quando bater
-          em um obstáculo, tente fazer a pontuação voltar a 0.
-        flappy_11: Crie seu próprio jogo Flappy Bird. Você pode mudar o visual e todas
-          as regras, até mesmo a gravidade. Quando terminar, clique em Concluir para
-          que seus amigos joguem seu jogo em seus celulares.
-        flappy_k1_1: Jogar Flappy Bird
-        flappy_k1_2: Conecte um bloco no bloco "quando clicar" e, em seguida, clique
-          em "Executar". Clique ou toque na tela para mover o passarinho em direção
-          ao alvo.
-        flappy_k1_3: Agora que já temos uma base. Conecte um bloco ao bloco "quando
-          bater no chão". Seu código precisa 'TERMINAR O JOGO' quando o passarinho
-          bater.
-        flappy_k1_4: O bloco "quando o jogo começa" permite que você execute o código
-          quando o jogo começa. Defina a velocidade do nível e voe em direção ao alvo.
-        flappy_k1_5: O passarinho vai atravessar os obstáculos, a menos que você programe
-          para fazê-lo bater. Conecte um bloco ao bloco "quando atingir um obstáculo".
-          Seu programa precisa 'TERMINAR O JOGO' quando o passarinho bater nos obstáculos.
-        flappy_k1_6: Vamos adicionar um painel de pontuação e aumentar os pontos quando
-          o passarinho passar pelos obstáculos. Faça isso no bloco "quando passar
-          um obstáculo", e então marque um ponto quando o passarinho passar pelo primeiro
-          conjunto de obstáculos.
-        flappy_k1_7: Veja se você consegue marcar vários pontos ao fazê-lo superar
-          um obstáculo
-        flappy_k1_8: Em seguida, tente mudar a cena conectando outro bloco ao bloco
-          "quando o jogo começa".
-        flappy_k1_9: Tente alterar o jogador anexando um bloco "defina o jogador"
-          ao bloco "quando o jogo começa".
         jigsaw_1: Clique no bloco
         jigsaw_2: Arraste o bloco para o alvo
         jigsaw_3: Organize os blocos para formar a imagem
@@ -744,22 +620,22 @@
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
         CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
+        CSF_artist_angles: Ângulos em Artista
+        CSF_collector_k1_blocks: 'Fundamentos do CS: O Coletor'
+        CSF_collector_repeat_loops: Laços Repita em Coletor
+        CSF_collector_text_blocks: 'Fundamentos do CS: O Coletor'
         CSF_create_functions: Criar Funções
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_EF_cs_matters: Questões de Ciência da Computação
+        CSF_maze_intro_k1_blocks: Introdução para o Code Studio
+        CSF_maze_intro_text_blocks: Introdução para o Code Studio
         CSF_my_robotic_friends: Meus amigos robóticos
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_Power_of_Words: Poder das Palavras
+        CSF_Super_Digital_Citizen: Cidadão Super Digital
+        CSF_stevie_big_project: Stevie e o Grande Projeto
+        CSF_unspotted_bugs: Erros Não Reportados
+        CSF_zuck_loops_short: Repita as rotações
         frozen_intro: Introdução à Hora de Código
         frozen_loops: Introdução aos Laços
         frozen_functions: Introdução às Funções
@@ -770,19 +646,21 @@
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
+        csd_concept_how_computers_work: Introdução de como os computadores funcionam
+        csd_concept_computer: 'Como computadores funcionam: O que faz um computador,
+          ser um computador?'
+        csd_concept_binary_data: 'Como os computadores funcionam: Binário & Dados'
+        csd_concept_circuits_logic: 'Como computadores funcionam: Circuitos e Lógica'
+        csd_concept_memory_cpu_input_output: 'Como computadores funcionam: CPU, entrada
+          e saída'
+        csd_concept_hardware_software: 'Como computadores funcionam: Hardware e Software'
+        csd_concept_search: Como funciona as pesquisas
+        csd_external_amazon_data: Como grandes dados são usados em sistemas de recomendação
+          da Amazon para mudar as nossas vidas
+        csd_external_netflix_data: Como a Netflix faz sugestões para programas de
+          TV e filmes?
+        csd_external_waze_data: Por que tantos usuários são obcecados com Waze?
+        csd_gamelab_animation_tab: A Guia de Animação
         csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
         csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
@@ -793,11 +671,11 @@
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocidade
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
+        csd_weblab_intro_2: Introdução ao Web Lab - Parte 2
+        csd_weblab_css_1: Introdução para CSS - Parte 1
+        csd_weblab_css_2: Introdução para CSS - Parte 2
+        csd_weblab_intro_3: Introdução ao Web Lab - Parte 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -863,9 +741,6 @@
           jogo - detecção de colisão
         alg_17_sambat_compound_booleans: Ciência da computação em álgebra - booleanos
           compostos
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
         starwars_typing: 'Star Wars: Construindo uma galáxia com código - JavaScript'
         starwars_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
@@ -890,38 +765,54 @@
         mc_2016_events: Hora do Código Minecraft - Eventos
         mc_2016_spawn: Hora do Código Minecraft - Invocar
         mc_2016_congrats: Hora do Código Minecraft - Parabéns
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
+        applab_hoc_welcome: Aplicativo Laboratório Hora do Código - Seja bem-vindo
+        applab_hoc_setproperty: Aplicativo Laboratório Hora do Código - setProperty
+        applab_hoc_onevent: Aplicativo Laboratório Hora do Código - onEvent
+        applab_hoc_designmode: Aplicativo Laboratório Hora do Código - Modo Design
         applab_hoc_share: LabApp Hora do Código - Compartilhar
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        mc_2017_agent_intro: Hora do Código Minecraft - O Agente
+        mc_2017_repeat: Hora do Código Minecraft - Loops repetitivos
+        mc_2017_functions: Hora do Código Minecraft - Funções
         mc_2017_congratulations: Hora do Código Minecraft - Parabéns
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
+        mc_2017_puzzle_1: Hora do Código Minecraft - O Agente
+        mc_2017_puzzle_3: Hora do Código Minecraft - Loops repetitivos
+        mc_2017_puzzle_8: Hora do Código Minecraft - Funções
+        mc_2017_puzzle_12: Hora do Código Minecraft - Jogo Livre
+        hint_videos_d_11_3_first: 'Vídeo-dica: D.11.3 Primeiro'
+        hint_videos_d_11_3_last: 'Vídeo-dica: D.11.3 Último'
+        hint_videos_d_11_4_first: 'Vídeo-dica: D.11.4 Primeiro'
+        hint_videos_d_11_4_last: 'Vídeo-dica: D.11.4 Último'
+        hint_videos_d_11_5_first: 'Vídeo-dica: D.11.5 Primeiro'
+        hint_videos_d_11_5_last: 'Vídeo-dica: D.11.5 Último'
+        hint_videos_d_11_6_first: 'Vídeo-dica: D.11.6 Primeiro'
+        hint_videos_d_11_6_last: 'Vídeo-dica: D.11.6 Último'
+        hint_videos_d_11_7_first: 'Vídeo-dica: D.11.7 Primeiro'
+        hint_videos_d_11_7_last: 'Vídeo-dica: D.11.7 Último'
+        hint_videos_d_11_9_first: 'Vídeo-dica: D.11.9 Primeiro'
+        hint_videos_d_11_9_last: 'Vídeo-dica: D.11.9 Último'
+        hint_videos_d_11_11_first: 'Vídeo-dica: D.11.11 Primeiro'
+        hint_videos_d_11_11_last: 'Vídeo-dica: D.11.11 Último'
+        applab_intro_welcome: Laboratório de App - Como começar
+        applab_intro_events: Laboratório de Aplicativo - Faça-o Interativo
+        applab_intro_sounds: Laboratório de Aplicativo - Imagens e Sons
+        applab_intro_designmode: Laboratório de Aplicativo - Modo de Design
+        applab_intro_share: Laboratório de Aplicativo - Compartilhe seu Aplicativo
+        csd_applab_arrays: Introdução a Arrays
+        CSF_skinOverview_Harvester: A Colheitadeira
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: A Colheitadeira
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Repetições na Era do gelo
+        CSF_scrat_loops_CF: Repetições na Era do gelo
+        CSF_if_allskins: O Bloco Se
+        CSF_ifelse_allskins: Usando Blocos "Se/Senão"
+        CSF_ifelseifelse_allskins: Usando Blocos "Se/SenãoSe/Senão"
+        CSF_loops_AB: Laços
+        csd_gamelab_booleans: Expressões Booleanas
+        csd_gamelab_conditional_statements: Instruções Condicionais
+        csd_gamelab_if_else: Instrução Se/Senão
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

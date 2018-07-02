@@ -163,9 +163,6 @@ ar:
       CollisionDetection:
         title: اكتشاف التصادم ونظرية فيثاغورس
         desc: تحديد عند لمس الأشياء على الشاشة أحد جوانب هامة لمعظم الألعاب. في هذا الدرس سنلقي نظرة على كيفية استخدام نظرية فيثاغورس وصيغة المسافة قياس المسافة بين نقطتين على متن الطائرة، ومن ثم تقرر ما إذا كان لمس تلك نقطتان (أو لعبة الأحرف).
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -265,3 +262,96 @@ ar:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+        desc: هذا الدرس يستدعي طرق استخدامنا للخوارزميات في حياتنا اليومية، إستخدام إجراء زرع البذور كمثال. كما يركز على الصورة الأكبر لعلوم الحاسب الآلي وكيف تلعب الخوارزميات جزءا أساسيا.
+      UnplugHappyMaps_2018:
+        title: الخرائط السعيدة
+        desc: الطلاب إنشاء خوارزميات بسيطة (مجموعات من التعليمات) لنقل حرف من خلال متاهة استخدام أمر واحد.
+      GoingPlacesSafely_2018:
+        title: الذهاب للأماكن بأمان
+        desc: شبكة الإنترنت قوية، ولكن في بعض الأحيان مكان خطير . يقدم المدرسين كيفية البقاء آمناً أثناء تصفح الإنترنت.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: الحدث الكبير
+        desc: يتم تقديم الطلاب إلى مفهوم "الأحداث"، وهي الإجراءات التي تراقب جهاز كمبيوتر باستمرار للبرمجة. المعلم سوف اضغط الأزرار على ورقة بعد وسيكون رد فعل الطلاب استناداً إلى أي يتم الضغط على زر.
+      GraphPaperProgramming_2018:
+        title: برمجة ورقة الرسم البياني
+        desc: الطلاب كتابة خوارزمية (مجموعة من التعليمات) باستخدام مجموعة من معرفة مسبقاً الأوامر لتوجيه زملائهم في إعادة إنشاء رسم.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: نشاط غير موصول
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: نشاط غير موصول
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: الجمل الشرطية
+        desc: لمعرفة المزيد حول عبارات شرطية، تلعب لعبة بطاقة الطلاب وإنشاء قواعد مثل "إذا كان لي أن أوجه بطاقة حمراء، احصل على نقطة" و "إذا كنت التعادل بطاقة سوداء، تحصل نقطة"
+      DigitalFootprint_2018:
+        title: البصمة الرقمية الخاصة بك
+        desc: إدخال المدرسين إلى الطلاب فكرة أن وضع معلومات عن أنفسهم على الإنترنت يخلق البصمة الرقمية أو "درب" له عواقب.
+      BinaryImages_2018:
+        title: صور ثنائية
+        desc: دوراتنا السابقة على الرغم من أن الكثير من الناس يعتقدون من ثنائي دقة أصفار وآحاد، يدرس الطلاب أن المعلومات يمكن أن تكون ممثلة في مجموعة متنوعة من الخيارات الثنائية.  هذا الدرس يأخذ هذا المفهوم خطوة أخرى إلى الأمام كما أنه يوضح كيف يمكن لجهاز كمبيوتر تخزين معلومات أكثر تعقيداً (مثل الصور والألوان) بصورة ثنائية، كذلك.
+      PaperPlanes_2018:
+        title: 'خوارزميات من واقع الحياة : طائرات ورقية'
+        desc: ينادي هذا الدرس طرق نستخدم الخوارزميات في حياتنا اليومية، وعلى وجه التحديد صنع الطائرات الورقية. هذا الدرس أيضا يركز على الصورة الأكبر لعلوم الحاسوب وكيف خوارزميات تلعب دوراً أساسيا.
+      GettingLoopy_2018:
+        title: القبض على المعتوهون
+        desc: هذا الدرس يقدم مفهوم البرمجة للحلقات (التعليمات المتكررة) من خلال نشاط رقص. الطلاب سوف تتعلم الرقص بسيطة، ثم أن تصدر تعليمات إلى تكرار ذلك.
+      BinaryBracelets_2018:
+        title: أساور الثنائية
+        desc: الطلاب إنشاء أساور تمثيل ثنائي للحرف الأول من الاسم. يتعلم الطلاب أن يمكن تمثيل البيانات وتخزينها في أكثر من طريقة واحدة.
+      MoveItMoveIt_2018:
+        title: حركها , حركها
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: برمجة السباق
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

@@ -1,0 +1,33 @@
+name 'v2 U3L02 Student Lesson Introduction_2018'
+title 'The Need for Algorithms'
+display_name 'Lesson Vocabulary & Resources'
+css 'unplugged'
+markdown <<MARKDOWN
+# Unit 3: Lesson 02 - The Need for Algorithms
+
+## Vocabulary
+
+* **Algorithm:** A precise sequence of instructions for processes that can be executed by a computer and are implemented using programming languages.  (NOTE: this is the definition from the AP CS Principles framework).
+* **Low level programming language:** A programming language that captures only the most primitive operations available to a machine.  Anything that a computer can do can be represented with combinations of low level commands.
+* **High level programming language:** A programming language with many commands and features designed to make  common tasks easier to program.  Any high level functionality is encapsulated as combinations of low level commands.
+
+## Lesson
+
+* Write instructions to find the smallest card in a row of playing cards
+* Compare solutions with classmates and come up with the mimimal set of instructions needed to do this
+* Define a "human machine language" for this task and implement your algorithm with it.
+* Test out and refine your algorithm
+
+## Resources
+
+* Human Machine Language - Activity Guide ([PDF](https://docs.google.com/document/d/1OGN091PuMtj8mrRLpfhV1oGJxz9dHDaqwJ-PGyenxbU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OGN091PuMtj8mrRLpfhV1oGJxz9dHDaqwJ-PGyenxbU/export?format=doc))
+* Minimum Card Algorithm - Activity Guide ([PDF](https://docs.google.com/document/d/1FLEhLLb0j5zIC3s2R3qpq8VTHsm4QxRQ-DAKJXHUe2A/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1FLEhLLb0j5zIC3s2R3qpq8VTHsm4QxRQ-DAKJXHUe2A/export?format=doc))
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[KEY: Minimum Card Algorithm](https://docs.google.com/document/d/1CjJ3TPgH9d1kZ2BhXyiMsmjsgyAS2m_zgj6fQvtf5u0) - Example of a student response
+
+[KEY: Human Machine Language](https://docs.google.com/document/d/1FlyC0DVAWhd44Ee6uK0ZzA5eP_mPv2cGeTYlI-dqwJE) - Answers to example programs and Find Min with Human Machine Language.
+MARKDOWN

@@ -51,6 +51,7 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "markdown_instructions": "Every house starts with a wall. Build the first part of your house by putting the `place` and `move forward` commands inside the repeat loop.",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

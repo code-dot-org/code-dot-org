@@ -3,6 +3,7 @@ require 'active_support/core_ext/object/try'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'cdo/aws/s3'
 require 'honeybadger'
+require 'cdo/firehose'
 
 #
 # BucketHelper
@@ -79,11 +80,12 @@ class BucketHelper
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
       category = category_from_file_type(File.extname(filename))
 
-      {filename: filename, category: category, size: fileinfo.size}
+      {filename: filename, category: category, size: fileinfo.size, timestamp: fileinfo.last_modified}
     end
   end
 
   def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
+    if_modified_since = nil if if_modified_since == ''
     begin
       owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
@@ -91,7 +93,7 @@ class BucketHelper
     end
     key = s3_path owner_id, channel_id, filename
     begin
-      s3_object = s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
+      s3_object = s3_get_object(key, if_modified_since, version)
       {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
@@ -107,7 +109,7 @@ class BucketHelper
 
   def get_abuse_score(encrypted_channel_id, filename, version = nil)
     response = get(encrypted_channel_id, filename, nil, version)
-    if response.nil?
+    if response.nil? || response[:status] == 'NOT_FOUND'
       0
     else
       metadata = response[:metadata]
@@ -173,6 +175,45 @@ class BucketHelper
     response
   end
 
+  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, user_id)
+    return unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
+
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    # check current version id without pulling down the whole object.
+    current_version = s3.get_object_tagging(bucket: @bucket, key: key).version_id
+
+    return if version_to_replace == current_version
+
+    FirehoseClient.instance.put_record(
+      study: 'project-data-integrity',
+      study_group: 'v3',
+      event: 'replace-non-current-main-json',
+
+      project_id: encrypted_channel_id,
+      user_id: user_id,
+
+      data_json: {
+        replacedVersionId: version_to_replace,
+        currentVersionId: current_version,
+        tabId: tab_id,
+        key: key,
+
+        # Server timestamp indicating when the first version of main.json was saved by the browser
+        # tab making this request. This is for diagnosing problems with writes from multiple browser
+        # tabs.
+        firstSaveTimestamp: timestamp
+      }.to_json
+    )
+  rescue Aws::S3::Errors::NoSuchKey
+    # Because create and update operations are both handled as PUT OBJECT,
+    # we sometimes call this helper when we're creating a new object and there's
+    # no existing object to check against.  In such a case we can be confident
+    # that we're not replacing a non-current version so no logging needs to
+    # occur - we can ignore this exception.
+  end
+
   #
   # Copy an object within a channel, creating a new object in the channel.
   #
@@ -227,16 +268,127 @@ class BucketHelper
 
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)
-  def restore_previous_version(encrypted_channel_id, filename, version_id)
+  def restore_previous_version(encrypted_channel_id, filename, version_id, user_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
+    version_restored = false
+
+    unless version_id.nil? || version_id.empty?
+      begin
+        response = s3.copy_object(
+          bucket: @bucket,
+          key: key,
+          copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
+        )
+        version_restored = true
+      rescue Aws::S3::Errors::NoSuchVersion
+        # Do nothing - we'll attempt the fallback below.
+      rescue Aws::S3::Errors::InvalidArgument => err
+        # On invalid version, try the fallback - otherwise reraise.
+        raise unless invalid_version_id?(err)
+      end
+    end
+
+    # Try restoring the latest version
+    unless version_restored
+      if object_exists?(key)
+        response = s3.copy_object(
+          bucket: @bucket,
+          key: key,
+          copy_source: "#{@bucket}/#{key}",
+          metadata_directive: 'REPLACE',
+          metadata: {
+            abuse_score: get_abuse_score(encrypted_channel_id, filename).to_s,
+            failed_restore_at: Time.now.to_s,
+            failed_restore_from_version: version_id || ''
+          }
+        )
+        version_restored = true
+        Honeybadger.notify(
+          error_class: "#{self.class.name}Warning",
+          error_message: "Restore at Specified Version Failed. Restored most recent.",
+          context: {
+            source: "#{@bucket}/#{key}?versionId=#{version_id}"
+          }
+        )
+      else
+        # Couldn't restore specific version and didn't find a latest version either.
+        # It is probably deleted.
+        # In this case, we want to do nothing.
+        response = {status: 'NOT_MODIFIED'}
+        Honeybadger.notify(
+          error_class: "#{self.class.name}Warning",
+          error_message: "Restore at Specified Version Failed on deleted object. No action taken.",
+          context: {
+            source: "#{@bucket}/#{key}?versionId=#{version_id}"
+          }
+        )
+      end
+    end
+
+    if version_restored
+      # If we get this far, the restore request has succeeded.
+      log_restored_file(
+        project_id: encrypted_channel_id,
+        user_id: user_id,
+        filename: filename,
+        source_version_id: version_id,
+        new_version_id: response.version_id
+      )
+    end
+
+    response.to_h
   end
 
   protected
 
+  #
+  # Check if the given error indicates a badly-formatted version ID was passed.
+  # @param [Exception] err
+  # @return [Boolean] true if err was caused by an invalid version ID
+  #
+  def invalid_version_id?(err)
+    # S3 returns an InvalidArgument exception with a particular message for this case.
+    err.is_a?(Aws::S3::Errors::InvalidArgument) && err.message =~ %r{Invalid version id specified}
+  end
+
+  def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
+    owner_id, channel_id = storage_decrypt_channel_id(project_id)
+    key = s3_path owner_id, channel_id, filename
+    FirehoseClient.instance.put_record(
+      study: 'project-data-integrity',
+      study_group: 'v3',
+      event: 'version-restored',
+
+      # Make it easy to limit our search to restores in the sources bucket for a certain project.
+      project_id: project_id,
+      data_string: @bucket,
+
+      user_id: user_id,
+      data_json: {
+        restoredVersionId: source_version_id,
+        newVersionId: new_version_id,
+        bucket: @bucket,
+        key: key,
+        filename: filename,
+      }.to_json
+    )
+  end
+
+  def object_exists?(key)
+    response = s3.get_object(bucket: @bucket, key: key)
+    response && !response[:delete_marker]
+  rescue Aws::S3::Errors::NoSuchKey
+    false
+  end
+
   def s3_path(owner_id, channel_id, filename = nil)
     "#{@base_dir}/#{owner_id}/#{channel_id}/#{Addressable::URI.unencode(filename)}"
+  end
+
+  # Extracted so we can override with special behavior in AnimationBucket.
+  def s3_get_object(key, if_modified_since, version)
+    s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
   end
 end

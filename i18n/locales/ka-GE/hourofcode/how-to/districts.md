@@ -23,7 +23,7 @@ nav: how_to_nav
 
 კოდის ერთი საათი ტექნოლოგიების მუშაობისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. ამ მოგზაურობის გასაგრძელებლად:
 
-- ურჩიეთ მოსწავლეებს, რომ გააგრძელონ [ონლაინ სწავლა](%= resolve_url('https://code.org/learn/beyond') %).
-- [დაესწარით ](%= resolve_url('https://code.org/professional-development-workshops') %) ერთდღიან ვორქშოპს და გაიარეთ ინსტრუქტაჟი კომპიუტერული მეცნიერებების გამოცდილი ქომაგისგან. (მხოლოდ აშშ–ის პედაგოგებისთვის)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

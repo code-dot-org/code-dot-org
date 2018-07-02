@@ -2,6 +2,21 @@ import React, {Component, PropTypes} from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
 import {connect} from 'react-redux';
+import i18n from "@cdo/locale";
+
+const styles = {
+  clear: {
+    clear: 'both'
+  },
+  linkBox: {
+    textAlign: 'center',
+    width: '100%',
+    marginTop: 10,
+  },
+  link: {
+    display: 'inline-block'
+  },
+};
 
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -23,6 +38,9 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
     }),
+    // Project Validators need access to view more links for App Lab and Game Lab, hidden for everyone else.
+    // TODO: Erin B - remove when we have profanity filter and/or enough featured projects.
+    projectValidator: PropTypes.bool
   };
 
   /**
@@ -52,7 +70,19 @@ class PublicGallery extends Component {
         <ProjectCardGrid
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
+          projectValidator={this.props.projectValidator}
         />
+        <div style={styles.clear}/>
+        <div style={styles.linkBox}>
+          <a
+            href="https://support.code.org/hc/en-us/articles/360001143952"
+            style={styles.link}
+          >
+            <h3>
+              {i18n.reportAbuse()}
+            </h3>
+          </a>
+        </div>
       </div>
     );
   }

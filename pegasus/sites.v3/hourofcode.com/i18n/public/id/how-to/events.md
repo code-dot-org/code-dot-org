@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Siapkan acara Anda
 
 - Tentukan tempat, tanggal, dan waktu.
-- Kirim [ surat ](https://docs.google.com/a/ code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) untuk mengundang walikota, kongres, gubernur, atau bisnis berpengaruh Anda. orang untuk berbicara. Lihat [ toolkit kami ](<%=resolve_url('/files/elected-official.pdf')%>) saat menjadi tuan rumah pejabat terpilih selama Jam Kode untuk info lebih lanjut.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Undang media/pers, misalnya stasiun berita lokal, koran, blogger edukasi/teknologi. Lihat [paket media](<%= resolve_url('/promote/press-kit') %>) kami untuk bantuan.
 
 ## 2. Selama acara Anda
@@ -21,7 +21,7 @@ nav: how_to_nav
     
 - Ide lain untuk acara: 
     - Mintalah pemimpin industri lokal untuk mendiskusikan pekerjaannya yang melibatkan ilmu komputer.
-    - Invite a local politician and have students teach him or her how to code.
+    - Mintalah seorang politisi lokal dan mintalah siswa untuk mengajarkan kepadanya bagaimana cara memberi kode.
     - Mintalah sekelompok siswa menunjukkan aktivitas yang tidak dicabut.
     - Mintalah sekelompok siswa mengajar kepala sekolah atau sekelompok guru cara mengode.
     - Jika sekolah Anda sudah mengajar ilmu komputer, pelajarilah proyek demo.
@@ -39,7 +39,7 @@ nav: how_to_nav
     
     **Acara:** Pertemuan pembukaan Pekan Pendidikan Ilmu Komputer
     
-    ** Tanggal: </ strong> 5 Desember (dimulainya Pekan Pendidikan Ilmu Komputer)</p> 
+    **Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
     
     **Waktu:** Saat sekolah. Lebih dianjurkan acara pagi. Perkiraan sekitar satu jam.
     

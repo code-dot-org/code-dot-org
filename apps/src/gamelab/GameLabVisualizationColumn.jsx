@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
@@ -12,9 +13,18 @@ import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './GridOverlay';
+import {
+  cancelLocationSelection,
+  selectLocation,
+  updateLocation,
+  isPickingLocation
+} from './locationPickerModule';
+import { calculateOffsetCoordinates } from '../utils';
+import dom from '../dom';
 
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
+const MODAL_Z_INDEX = 1050;
 
 const styles = {
   containedInstructions: {
@@ -25,10 +35,17 @@ const styles = {
 class GameLabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
+    isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
+    spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
+    pickingLocation: PropTypes.bool.isRequired,
     showGrid: PropTypes.bool.isRequired,
-    toggleShowGrid: PropTypes.func.isRequired
+    toggleShowGrid: PropTypes.func.isRequired,
+    cancelPicker: PropTypes.func.isRequired,
+    selectPicker: PropTypes.func.isRequired,
+    updatePicker: PropTypes.func.isRequired,
+    mobileControlsConfig: PropTypes.object.isRequired,
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -36,6 +53,26 @@ class GameLabVisualizationColumn extends React.Component {
   state = {
     mouseX: -1,
     mouseY: -1
+  };
+
+  pickerPointerMove = e => {
+    if (this.props.pickingLocation) {
+      this.props.updatePicker(calculateOffsetCoordinates(
+        this.divGameLab,
+        e.clientX,
+        e.clientY,
+      ));
+    }
+  };
+
+  pickerPointerUp = e => {
+    if (this.props.pickingLocation) {
+      this.props.selectPicker(calculateOffsetCoordinates(
+        this.divGameLab,
+        e.clientX,
+        e.clientY,
+      ));
+    }
   };
 
   componentWillReceiveProps(nextProps) {
@@ -49,6 +86,12 @@ class GameLabVisualizationColumn extends React.Component {
         $("#grid-overlay")[0].style.display = 'none';
       }
     }
+    // Also manually raise/lower the zIndex of the playspace when selecting a
+    // location because of the protected div
+    const zIndex = nextProps.pickingLocation ? MODAL_Z_INDEX : 0;
+    const visualizationOverlay = document.getElementById('visualizationOverlay');
+    this.divGameLab.style.zIndex = zIndex;
+    visualizationOverlay.style.zIndex = zIndex;
   }
 
   onMouseMove = (mouseX, mouseY) => this.setState({mouseX, mouseY});
@@ -85,54 +128,86 @@ class GameLabVisualizationColumn extends React.Component {
   }
 
   render() {
+    const { isResponsive, isShareView, mobileControlsConfig } = this.props;
+    const { dpadVisible, spaceButtonVisible, mobileOnly } = mobileControlsConfig;
+    const mobileControlsOk = (dom.isMobile() && isShareView) ? true : !mobileOnly;
+    const dpadStyle = {
+      display: (dpadVisible && mobileControlsOk) ? 'inline' : 'none',
+    };
+    const spaceButtonStyle = {
+      display: (spaceButtonVisible && mobileControlsOk) ? 'inline' : 'none',
+    };
     const divGameLabStyle = {
+      touchAction: 'none',
       width: GAME_WIDTH,
       height: GAME_HEIGHT
     };
+    if (this.props.pickingLocation) {
+      divGameLabStyle.zIndex = MODAL_Z_INDEX;
+    }
+    const spriteLab = this.props.spriteLab;
     return (
       <span>
         <ProtectedVisualizationDiv>
-          <div id="divGameLab" style={divGameLabStyle} tabIndex="1">
-          </div>
+          <Pointable
+            id="divGameLab"
+            style={divGameLabStyle}
+            tabIndex="1"
+            onPointerMove={this.pickerPointerMove}
+            onPointerUp={this.pickerPointerUp}
+            elementRef={el => this.divGameLab = el}
+          />
           <VisualizationOverlay
             width={GAME_WIDTH}
             height={GAME_HEIGHT}
             onMouseMove={this.onMouseMove}
           >
             <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
-            <CrosshairOverlay/>
-            <TooltipOverlay providers={[coordinatesProvider()]}/>
+            <CrosshairOverlay flip={spriteLab} />
+            <TooltipOverlay providers={[coordinatesProvider(spriteLab)]}/>
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <GameButtons>
-          <div id="studio-dpad" className="studio-dpad-none">
-            <button id="studio-dpad-button" className="arrow">
-              <img src="/blockly/media/1x1.gif" className="dpad-btn icon21"/>
-            </button>
-          </div>
 
           <ArrowButtons/>
 
           <CompletionButton />
 
-          {!this.props.isShareView && this.renderGridCheckbox()}
+          {!spriteLab && !this.props.isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {this.renderAppSpaceCoordinates()}
+        {!spriteLab && this.renderAppSpaceCoordinates()}
+        <div id="studio-dpad-container" className={isResponsive ? "responsive" : undefined}>
+          <div id="studio-dpad">
+            <div id="studio-dpad-rim" style={dpadStyle} />
+            <div id="studio-dpad-cone" style={dpadStyle} />
+            <button id="studio-dpad-button" style={dpadStyle} />
+            <button id="studio-space-button" style={spaceButtonStyle}/>
+          </div>
+        </div>
         {this.props.awaitingContainedResponse && (
           <div style={styles.containedInstructions}>
             {i18n.predictionInstructions()}
           </div>
         )}
         <BelowVisualization />
+        {this.props.pickingLocation &&
+          <div className={"modal-backdrop"} onClick={() => this.props.cancelPicker()} />}
       </span>
     );
   }
 }
 
 export default connect(state => ({
+  isResponsive: state.pageConstants.isResponsive,
   isShareView: state.pageConstants.isShareView,
+  spriteLab: state.pageConstants.isBlockly,
   awaitingContainedResponse: state.runState.awaitingContainedResponse,
-  showGrid: state.gridOverlay
+  mobileControlsConfig: state.mobileControlsConfig,
+  showGrid: state.gridOverlay,
+  pickingLocation: isPickingLocation(state.locationPicker),
 }), dispatch => ({
-  toggleShowGrid: mode => dispatch(toggleGridOverlay(mode))
+  toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
+  cancelPicker: () => dispatch(cancelLocationSelection()),
+  updatePicker: loc => dispatch(updateLocation(loc)),
+  selectPicker: loc => dispatch(selectLocation(loc)),
 }))(GameLabVisualizationColumn);

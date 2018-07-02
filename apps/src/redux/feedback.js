@@ -11,7 +11,7 @@ const initialState = {
   displayingCode: false,
   displayingShareControls: false,
 
-
+  isChallenge: false,
   isPerfect: true,
   blocksUsed: 0,
   blockLimit: undefined,
@@ -21,7 +21,7 @@ const initialState = {
     message: '',
     code: '',
   },
-  canShare: false,
+  feedbackImage: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -48,19 +48,21 @@ export default function reducer(state = initialState, action) {
   }
   if (action.type === SET_FEEDBACK_DATA) {
     const {
+      isChallenge,
       isPerfect,
       blocksUsed,
       displayFunometer,
       studentCode,
-      canShare,
+      feedbackImage,
     } = action;
     return {
       ...state,
+      isChallenge,
       isPerfect,
       blocksUsed,
       displayFunometer,
       studentCode,
-      canShare,
+      feedbackImage,
     };
   }
   if (action.type === SET_ACHIEVEMENTS) {

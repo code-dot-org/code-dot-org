@@ -9,15 +9,15 @@ ru:
     errors:
       messages:
         blank: "требуется"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "необходимы"
+        invalid_plural: "недопустимы"
     attributes:
       user:
         name: 'Отобразить имя'
         name_example: 'Отображаемое имя<br/>(например, Крутой Кодер или Джейн С.)'
         email: 'Электронная почта'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'Электронная почта родителя/опекуна'
+        personal_email: "Личная электронная почта <a href=\"%{url}\"> (нажмите сюда, если у Вас нет электронной почты)</a>"
         username: 'имя пользователя'
         password: 'пароль'
         password_confirmation: 'Подтверждение пароля'
@@ -69,7 +69,7 @@ ru:
   try_k8intro: "Попробуйте наш курс «Введение в информатику» для учеников до 8 класса (15-25 часов)"
   k8intro: "Курс «Введение в информатику» для учеников до 8 класса (15-25 часов)"
   already_started: "Уже начали? Продолжить здесь >> "
-  demos: 'Администратор: Все демоверсии'
+  demos: "Администратор: Все демоверсии"
   continue: 'Продолжить'
   prize: 'подарок'
   more_info: 'Подробнее'
@@ -84,12 +84,13 @@ ru:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Учетная запись Майкрософт'
-    clever: 'Clever Account'
+    clever: 'Аккаунт Clever'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Забыли пароль?'
     need_confirmation: "Не получили инструкции по подтверждению?"
     need_unlock: "Не получили инструкции для разблокированию?"
     not_linked: "Извините, но вам надо ввести ваш пароль внизу, чтобы продолжить. Ваша учётная запись не зарегистрирована в %{provider}."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "Извините, Ваш аккаунт в Code.org не соединён с Вашим %{provider}. Пожалуйста, войдите в Ваш портал Clever."
   signup_form:
     student_count: 'Зарегистрировано учеников: %{count}.'
     teacher_count: 'Зарегистрировано учителей: %{count}.'
@@ -114,15 +115,25 @@ ru:
     valid_password: "Действительный пароль!"
     invalid_password: "Пароль должен содержать не менее 6 символов"
     mismatch_password: "Введенные пароли не совпадают"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "Если мне меньше 13 лет, я подтверждаю, что у меня есть разрешение моего родителя или законного опекуна на использование Code.org."
+    agree_us_website: "Я согласен использовать веб-сайт, находящийся на территории США."
+    my_data_to_us: "Данные о моем использовании настоящего веб-сайта могут направляться в США, а также храниться или обрабатываться на территории США."
     student_terms: "Я согласен с <a href='http://code.org/tos'>условиями предоставления услуг</a> Code.org. Если я моложе 13 лет, я подтверждаю, отправляя эту форму, что у меня есть разрешение от моего родителя или законного опекуна на использование услуг Code.org. <br/> <br/> Адреса электронной почты не сохраняются в той форме, которая позволила бы нам связываться со студентами. Студенты никогда не будут получать письма от Code.org, за исключением случаев восстановления пароля. Смотрите нашу <a href='http://code.org/privacy'>политику конфиденциальности</a> для получения дополнительной информации."
     teacher_terms: "Я согласен с условиями предоставления услуг Code.org. За дополнительными сведения о конфиденциальности обратитесь к нашим <a href='http://code.org/privacy'>правилам конфиденциальности</a>."
     additional_information: "Чтобы продолжить регистрацию, нам нужна дополнительная информация."
+    user_type_button: "Обновление типа учетной записи"
     user_type_label: "Тип Учётной Записи"
     user_type_teacher: "Учитель"
     user_type_student: "Ученик"
     field_is_required: "требуется"
     accept_terms: "Вы должны принять условия перед созданием учетной записи"
     error: "Произошла ошибка."
+    email_preference_question: "Согласны ли вы получать по электронной почте новости о наших курсах, информацию о региональных возможностях или другие новости в области информатики?"
+    email_preference_privacy: "(См. нашу политику конфиденциальности)"
+    email_preference_yes: "Да"
+    email_preference_no: "Нет"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Школьная информация (по желанию)'
     school_country: 'Страна твоей школы'
@@ -171,6 +182,7 @@ ru:
       email: 'Адрес электронной почты'
       submit: 'Отправить'
     reset_errors:
+      captcha_required: 'Пожалуйста, заполните поле CAPTCHA, чтобы сбросить Ваш пароль.'
       invalid_email: 'Похоже, Вы зарегистрировались с неверным адрес электронной почты. Пожалуйста, напишите об этом в support@code.org, и Вы получите ссылку на восстановление пароля.'
     change_form:
       title: 'Смена пароля'
@@ -188,7 +200,7 @@ ru:
       
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Входные данные для Code.org'
   teacher_mailer:
     new_teacher_subject: 'Добро пожаловать на Code.org!'
   section:
@@ -200,8 +212,8 @@ ru:
       remove: 'Вы хотите выйти из раздела?'
     remove: '(удалить раздел)'
     type:
-      picture: 'Picture Password'
-      word: 'Secret Words'
+      picture: 'Графический пароль'
+      word: 'Тайные слова'
       email: 'Электронная почта'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -217,10 +229,10 @@ ru:
       section_not_found: "Не удается найти раздел с кодом '%{section_code}'."
       blank_code: "Введите код раздела"
       cant_join_own_section: "К сожалению, вы не можете присоединиться к своему разделу."
-      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
+      provider_managed_section: "Этот раздел добавлен другим провайдер и не может быть добавлен. Пожалуйста, попросите Вашего учителя, что он добавил Вас через %{provider}, и перезагрузите раздел."
     mail:
       student_disassociated:
-        subject: 'Уведомление от Code.org: %{student_name} больше не является вашим учеником.'
+        subject: "Уведомление от Code.org: %{student_name} больше не является вашим учеником."
   reports:
     error:
       access_denied: "Вы не имеете доступа к статистике этого пользователя"
@@ -241,9 +253,9 @@ ru:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
+        user_type_change_email_mismatch: "Адрес электронной почты, который Вы ввели, не совпадает с адресом почты для этого аккаунта"
+        personal_login_created_email: 'Вы успешно создали персональный логин. Теперь Вы можете войти в свой аккаунт при помощи пароля и адреса электронной почты'
+        personal_login_created_username: 'Вы успешно создали персональный логин. Теперь Вы можете войти в свой аккаунт при помощи имени (%{username}) и пароля'
   nav:
     header:
       finished_hoc: "Я закончил свой час кода"
@@ -253,10 +265,10 @@ ru:
         artist: 'Нарисуйте что-нибудь'
         calculate: 'Calculate something'
         applab: 'Создать приложение'
-        gamelab: 'Make a Game Lab project'
-        weblab: 'Make a Web Lab (beta) project'
+        gamelab: 'Создать проект Игровой Лаборатории'
+        weblab: 'Создать проект Web-Лаборатории (beta)'
       home: "На главную"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Моя доска"
       courses: "курсы"
       course_catalog: "Каталог курсов"
       project_gallery: "Проекты"
@@ -348,25 +360,27 @@ ru:
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтвержден:'
     email_confirm_wrong_email: '(Неверный адрес электронной почты?)'
     email_resend_confirm: 'Повторно выслать инструкции по подтверждению'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(оставьте поле пустым, если не хотите ничего менять)"
     current_password_hint: '(нам нужен Ваш текущий пароль для подтверждения изменений)'
     delete: 'Удалить свою учетную запись'
     delete_text: "Нажатие на кнопку ниже удалит вашу учетную запись."
-    delete_text_teacher_note: 'Обратите внимание: удаление вашей учетной записи не удалит учетные записи ваших учеников.'
+    delete_text_teacher_note: "Обратите внимание: удаление вашей учетной записи не удалит учетные записи ваших учеников."
     delete_confirm: 'Вы действительно хотите удалить свою учетную запись?'
     deleted_user: 'пользователь удален'
     no_password_because_oauth: 'Нет пароля, поскольку вы вошли с другого компьютера.'
     no_password_because_sponsored: 'Обратитесь к учителю для управления вашим паролем.'
-    create_personal_login: 'Create a personal login'
-    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
+    create_personal_login: 'Создать персональный логин'
+    create_personal_login_under_13_info: 'Если Вы хотите продолжить пользоваться своим аккаунтом Code.org даже после окончания учебного года, попросите своего родителя/опекуна помочь создать свой персональный логин ниже.'
     create_personal_login_under_13_username: "Имя пользователя (не используйте своё настоящее имя!)"
     create_personal_login_under_13_parent_email: 'Адрес электронной почты родителя/опекуна'
-    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: 'Enter your new login information'
-    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    create_personal_login_info: 'Если Вы хотите продолжить пользоваться своим аккаунтом Code.org даже после окончания учебного года, Вы можете создать свой логин ниже.'
+    create_personal_login_terms: "Создавая персональный профиль, я соглашаюсь <a href='%{terms_of_service_url}', target='_blank'>с правилами поведения Code.org</a>. Если мне 13 лет или менее, я подтверждаю, что у меня есть разрешение моего родителя или опекуна, чтобы пользоваться сервисами Code.org даже без участия учителя."
+    create_personal_login_email_note: "Внимание: Адреса электронной почты не размещаются таким образом, чтобы мы могли контактировать с учениками. Ученики никогда не будут получать электронные письма от Code.org, за исключением восстановления пароля. Просмотрите наши <a href='%{privacy_policy_url}', target='_blank'>правила по политике конфиденциальности</a> для дальнейшей информации."
+    enter_new_login_info: 'Введите Вашу новую информацию о профиле'
+    confirm_secret_words: 'Подтвердите свою личность, введя свои секретные слова'
     enter_parent_email: "Введите адрес электронной почты своих родителей или опекунов (для восстановления пароля)"
+    update: "Обновить учетную запись"
   user_level:
     completed: 'Завершено'
     tried: 'Пытался'
@@ -448,6 +462,7 @@ ru:
     student_not_found: "Один или несколько учеников не могут быть найдены."
     all_students_must_be_in_current_section: "Все ученики должны быть зачислены в вашу группу."
     already_enrolled_in_new_section: "Вы не можете переместить этих учеников, потому что этот учитель зарегистрировал их в другой группе."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Учиться в студии кода"
     description: "Каждый может изучать информатику. Создавайте игры, приложения и произведения искусства с помощью программирования."
@@ -455,6 +470,8 @@ ru:
   gender:
     male: 'Мужской'
     female: 'Женский'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Предпочитаю не отвечать'
   user_type:
     student: 'Ученик'
@@ -606,9 +623,9 @@ ru:
       title: "Условные операторы"
       body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
-      title: "Widgets"
+      title: "Виджеты"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Ages 14+"
+      audience: "Возраст 14+"
       cta: "Узнать подробности"
   gallery:
     students_drew_these_with_code: "Ученики нарисовали это с помощью кода!"
@@ -702,7 +719,7 @@ ru:
     sign_out: 'Если вы не хотите указывать свой возраст, вы можете <a href="%{url}"> выйти из системы</a>.'
   terms_interstitial:
     title: "Обновленные Условия предоставления услуг и условия конфиденциальности"
-    intro_desc: 'Мы обновили наши Условия предоставления услуг и Политику конфиденциальности, как показано ниже. Изменения вступают в силу с 24 августа 2016 года.  Самое большое отличие: мы <i>больше не будем хранить адреса электронной почты для учетных записей студентов на Code Studio.</i> Это важно для нас, и мы надеемся тем самым установить новый стандарт конфиденциальности в технологии обучения. Мы отправили вам список остальных изменений по электронной почте.'
+    intro_desc: "Мы обновили наши Условия предоставления услуг и Политику конфиденциальности, как показано ниже. Изменения вступают в силу с 24 августа 2016 года.  Самое большое отличие: мы <i>больше не будем хранить адреса электронной почты для учетных записей студентов на Code Studio.</i> Это важно для нас, и мы надеемся тем самым установить новый стандарт конфиденциальности в технологии обучения. Мы отправили вам список остальных изменений по электронной почте."
     intro_instructions: "Вам нужно принять эти новые условия для студентов младше 13 лет в вашем классе, чтобы иметь полный доступ ко всем новым функциям в Code Studio.  При регистрации учетной записи студента младше 13 лет, вам будет предложено подтвердить, что ваша школа имеет согласие родителей на сбор личной информации студентов для использования на благо школы, включая образовательные программы, такие как Code Studio."
     tos: "Условия предоставления услуг"
     privacy: "Политика конфиденциальности"
@@ -718,25 +735,25 @@ ru:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Сохранить"
   race_interstitial:
-    title: 'Дополнительно: Помогите нам отслеживать наш прогресс в направлении улучшения разнообразия в области компьютерных наук'
+    title: "Дополнительно: Помогите нам отслеживать наш прогресс в направлении улучшения разнообразия в области компьютерных наук"
     message: "Пожалуйста, укажите вашу расу (отметьте всё, что подходит)"
     races:
       - 
-        white: Белый
+        white: "Белый"
       - 
-        black: Черный или Афроамериканец
+        black: "Черный или Афроамериканец"
       - 
-        hispanic: Испанец или Латиноамериканец
+        hispanic: "Испанец или Латиноамериканец"
       - 
-        asian: Азиат
+        asian: "Азиат"
       - 
-        hawaiian: Коренной житель Гавайских островов или других островов Тихого океана
+        hawaiian: "Коренной житель Гавайских островов или других островов Тихого океана"
       - 
-        american_indian: Американский Индеец / Коренной Житель Аляски
+        american_indian: "Американский Индеец / Коренной Житель Аляски"
       - 
-        other: Другое
+        other: "Другое"
       - 
-        opt_out: Предпочитаю не отвечать
+        opt_out: "Предпочитаю не отвечать"
     submit: "Отправить"
     decline: "Закрыть"
   zendesk_too_young_message: 'Извините, но пользователи твоего возраста не могут авторизоваться на нашем сайте поддержки. Вы можете зайти на страницу <a href="http://support.code.org">support.code.org</a> без авторизации или попросить своих родителей или учителя связаться с нами за тебя.'
@@ -762,7 +779,7 @@ ru:
     delete: "Удалить"
     import: "Импортировать"
     share_link_import_bad_link_header: "Ссылка общего доступа не распознана"
-    share_link_import_bad_link_body: 'Не удалось импортировать ссылку общего доступа. Убедитесь, что вы используете ссылку из задачи Minecraft: Исполнитель и что вы скопировали ссылку целиком.'
+    share_link_import_bad_link_body: "Не удалось импортировать ссылку общего доступа. Убедитесь, что вы используете ссылку из задачи Minecraft: Исполнитель и что вы скопировали ссылку целиком."
     share_link_import_error_header: "Что-то пошло не так."
     share_link_import_error_body: "При импорте ссылки общего доступа возникла проблема. Попробуйте еще раз."
     exit: "Вернуться к курсу"
@@ -865,8 +882,9 @@ ru:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ ru:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Урок 2: Цифровая информация'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Отказ от ответственности
@@ -984,3 +1007,14 @@ ru:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Я согласен(на)'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Да'

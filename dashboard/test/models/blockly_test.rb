@@ -26,12 +26,12 @@ class BlocklyTest < ActiveSupport::TestCase
   <block type="simple_move_right"></block>
   <block type="simple_move_left"></block>
 
-  <block type="category">
-    <title name="CATEGORY">Functions</title>
+  <block type="custom_category">
+    <title name="CUSTOM">PROCEDURE</title>
   </block>
 
-  <block type="category">
-    <title name="CATEGORY">Variables</title>
+  <block type="custom_category">
+    <title name="CUSTOM">VARIABLE</title>
   </block>
 </xml>
 XML
@@ -220,5 +220,25 @@ XML
     I18n.backend.store_translations test_locale, custom_i18n
 
     assert_nil level.localized_authored_hints
+  end
+
+  test 'uses_droplet for StudioEC levels' do
+    level = Level.new(
+      name: 'test studioEC level',
+      type: 'Blockly',
+      game: Game.studio_ec,
+    )
+
+    assert level.uses_droplet?
+  end
+
+  test 'does not use droplet for maze levels' do
+    level = Level.new(
+      name: 'test studioEC level',
+      type: 'Blockly',
+      game_id: Game.by_name('Maze'),
+    )
+
+    refute level.uses_droplet?
   end
 end

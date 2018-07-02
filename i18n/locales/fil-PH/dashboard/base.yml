@@ -39,7 +39,7 @@ fil:
   next_resource: Susunod na resource
   done_with_module: Done with this Learning Module
   cancel: "Kanselahin"
-  okay: "Okay"
+  okay: "Okey"
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
   add_teacher_form:
     code:
@@ -69,7 +69,7 @@ fil:
   try_k8intro: "Subukan ang pang K-8 na Kursong Introduksyon sa Computer Science (15-25 oras)"
   k8intro: "K-8 Intro to Computer Science Course (15-25 oras)"
   already_started: "Nag simula na? Mag simula ulit dito >> "
-  demos: 'Admin: Lahat ng Demos'
+  demos: "Admin: Lahat ng Demos"
   continue: 'Magpatuloy'
   prize: 'Gantimpala'
   more_info: 'Para sa maraming kaalaman'
@@ -85,6 +85,7 @@ fil:
     facebook: 'Facebook'
     windowslive: 'Account sa Microsoft'
     clever: 'Clever na Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Hindi matandaan ang password?'
     need_confirmation: "Hindi nakatanggap ng kumpirmasyon?"
     need_unlock: "Hindi nakatanggap kung paano mag unlock?"
@@ -114,15 +115,25 @@ fil:
     valid_password: "Mali ang na-type na password!"
     invalid_password: "Ang Password ay dapat may at least 6 characters"
     mismatch_password: "Ang passwords na iyong inenter ay hindi tugma sa isa't isa"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Ako ay sumang-ayon na mapailalim sa Code.org na <a href='http://code.org/tos'>mga palatuntunin</a>. Kung ako ay mas bata pa 13 taong gulang, kinokompirma ko ito sa pamamagitan ng pagpasa ng form na ito na nagpapakita na mayroon akong pahintulot mula sa aking mga magulang o legal na tagapangalaga na gumamit sa mga serbisyo ng Code.org.<br/><br/>Ang mga email address ay hindi naka-store sa isang form na magbibigay paraan sa amin na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hindi makakatanggap ng mga email mula sa Code.org maliban sa password na recovery. Tingnan ang aming <a href='http://code.org/privacy'>patakaran sa privacy</a> para sa karagdagang impormasyon."
     teacher_terms: "Ako ay sumang-ayon na mapailalim sa Code.org na mga palatuntunin. Para sa karagdagang impormasyon tungkol sa privacy, tingnan ang aming <a href='http://code.org/privacy'>patakaran sa privacy</a>."
     additional_information: "Kailangan namin ng karagdagang impormasyon para maituloy ang pag-sign up sa iyo."
+    user_type_button: "Update Account Type"
     user_type_label: "Uri ng Account"
     user_type_teacher: "Teacher"
     user_type_student: "Estudyante"
     field_is_required: "ay kailangan"
     accept_terms: "Kailangan mong sumang-ayon para gumawa ng account"
     error: "May problemang naganap."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Oo"
+    email_preference_no: "Hindi"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Impormasyon ng Paaralan (opsyonal)'
     school_country: 'Bansa ng Paaralan'
@@ -171,6 +182,7 @@ fil:
       email: 'Email address'
       submit: 'Ipasa'
     reset_errors:
+      captcha_required: 'Mangyaring punan ang CAPTCHA para ma-reset ang iyong password.'
       invalid_email: 'Parang nagsign-up ka gamit ang email address na hindi balido. Paki-email sa support@code.org para makatanggap ng password na recovery link.'
     change_form:
       title: 'Palitan ang iyong password'
@@ -220,7 +232,7 @@ fil:
       provider_managed_section: "Ang seksyon na ito ay pinamahalaan ng ibang provider at hindi maaaring masalihan. Pakisabihan ang iyong guro na idagdag ka gamit ang %{provider} at ire-sync ang kanilang seksyon."
     mail:
       student_disassociated:
-        subject: 'Notipikasyon ng Code.org: Si %{student_name} ay hindi mo na estudyante.'
+        subject: "Notipikasyon ng Code.org: Si %{student_name} ay hindi mo na estudyante."
   reports:
     error:
       access_denied: "Wala kang access sa stats ng taong ito"
@@ -348,11 +360,12 @@ fil:
     email_confirm_needed_required: 'Ang email address mong %{email} ay hindi pa nakukumpirma:'
     email_confirm_wrong_email: '(Maling email address?)'
     email_resend_confirm: 'Ipadalang muli ang mga instruksyon sa pag-kumpirma'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(Iwan ito na walang laman kung ayaw mong baguhin ito)"
     current_password_hint: '(kailangan namin ang iyong kasalukuyang password para kumpirmahin ang iyong mga binago)'
     delete: 'Burahin ang iyong account'
     delete_text: "Ang pagpindut sa button sa baba ay magbubura ng iyong account."
-    delete_text_teacher_note: 'Paki-tandaan: ang pagbura ng iyong account ay hindi magbubura sa mga account ng iyong mga estudyante.'
+    delete_text_teacher_note: "Paki-tandaan: ang pagbura ng iyong account ay hindi magbubura sa mga account ng iyong mga estudyante."
     delete_confirm: 'Sigurado ka bang gusto mong burahin ang account na ito?'
     deleted_user: 'naburang user'
     no_password_because_oauth: 'Walang password dahil nagsign-in ka gaming ang isang third-party na provider.'
@@ -363,10 +376,11 @@ fil:
     create_personal_login_under_13_parent_email: 'Magulang/Tagapangala na email address'
     create_personal_login_info: 'Kung gusto mo pa ring gamitin ang iyong Code.org na account kahit pagkatapos ng school year, maaring kang maglikha ng iyong sariling login sa baba.'
     create_personal_login_terms: "Sa paglikha ng personal na login, ako ay sumasang-ayon na masailalaim sa mga <a href='%{terms_of_service_url}', target='_blank'>alituntunin</a> ng Code.org. Kung ako ay nasa baba ng 13 taong gulang, kinukompirma ko na ako ay maayrong pahintulot mula sa aking mga magulang o legal na taga-pangalaga na gumamit sa mga serbisyo ng Code.org kahit na walang guro."
-    create_personal_login_email_note: 'Tandaan: Ang mga email address ay hindi nakastore sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hinding-hindi makatanggap ng mga emails mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming <a href=''%{privacy_policy_url}'', target=''_blank''>patakaran sa privacy</a> para sa karagdagan impormasyon.'
+    create_personal_login_email_note: "Tandaan: Ang mga email address ay hindi nakastore sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hinding-hindi makatanggap ng mga emails mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming <a href='%{privacy_policy_url}', target='_blank'>patakaran sa privacy</a> para sa karagdagan impormasyon."
     enter_new_login_info: 'Ipasok ang iyong bagong login na impormasyon'
     confirm_secret_words: 'Ikompirma na ikaw talaga ito sa pamamagitan ng paglagay ng iyong kasalukuyang mga secret na mga pulong'
     enter_parent_email: "Ilagay ang iyong mga magulang, o tagapangalaga na email address (para sa password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'Nakompleto'
     tried: 'Sinubukan'
@@ -448,6 +462,7 @@ fil:
     student_not_found: "Isa o higit pang mga estudyante ang hindi matagpuan."
     all_students_must_be_in_current_section: "Lahat ng mga estudyante ay dapat kasalukuyang naka-enrol sa iyong seksiyon."
     already_enrolled_in_new_section: "Hindi mo maaring ilipat ang mga estudyanteng ito dahil nasa bagong seksiyon na sila."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Mag-aral sa Code Studio"
     description: "Kahit sino man ay maaring matuto ng computer science. Gumawa ng mga laro, mga apps at mga sining gamit ang code."
@@ -455,6 +470,8 @@ fil:
   gender:
     male: 'Lalaki'
     female: 'Babae'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Mas mabuti na hindi sagutin'
   user_type:
     student: 'Estudyante'
@@ -581,7 +598,7 @@ fil:
       title: "Star Wars"
     infinity:
       title: "Infinity Play Lab"
-      body: "Use Play Lab to create a story or game starring Disney Infinity characters."
+      body: "Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan ng mga karakter sa Disney Infinity."
     minecraft:
       title: "Minecraft"
       body: "Tuklasin ang mundo ng Minecraft sa pamamagitan ng code."
@@ -590,9 +607,9 @@ fil:
       body: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
     hero:
       title: "Minecraft"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+      body: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
     sports:
-      title: "Sports"
+      title: "Mga Palakasan"
       body: "Gumawa ka ng basketbol na laro o mix at match sa mga palakasan."
     text-compression:
       title: "Text Compression"
@@ -642,23 +659,23 @@ fil:
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
   multi-submittable:
-    wrong_title: "Thank you"
+    wrong_title: "Maraming Salamat"
     wrong_body: "Salamat sa pagpasa ng sagot."
-    correct_title: "Thank you"
+    correct_title: "Maraming Salamat"
     correct_body: "Salamat sa pagpasa ng sagot."
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
   level_group:
-    wrong_title: "Thank you"
+    wrong_title: "Maraming Salamat"
     wrong_body: "Salamat sa pagpasa ng mga sagot."
-    correct_title: "Thank you"
+    correct_title: "Maraming Salamat"
     correct_body: "Salamat sa pagpasa ng mga sagot."
     hide_survey_last_answer: "Ang survey na ito ay anonymous. Pakibisita sa dashboard ng guro para sa buong resulta, Tandaan na ang mga resulta ay makikita lang kung may hindi bababa sa 5 estudyang ang nagpasa sa survery na ito."
     survey_submission_thankyou: "Salamat sa pagpasa sa pagsisiyasat na ito! Ang pagsiyasat ay nalinis na para gawing anonymous ang iyong mga sagot. Tandaan na ang iyong guro ay maaari pa ring makakita ng iyong mga sagot para sa buong klase, ngunit walang pangalan na nakalakip."
   level_group-submittable:
-    wrong_title: "Thank you"
+    wrong_title: "Maraming Salamat"
     wrong_body: "Salamat sa pagpasa ng mga sagot."
-    correct_title: "Thank you"
+    correct_title: "Maraming Salamat"
     correct_body: "Salamat sa pagpasa ng mga sagot."
     unsubmit-title: "Huwag na ipasa ang iyong assessment"
     unsubmit-body: "Ang pagbawi sa pagpasa ng iyong assessment ay mag-rereset ng petsa at oras ng pagpasa. Sigurado ka ba?"
@@ -702,7 +719,7 @@ fil:
     sign_out: 'Kung hindi mo nais magbigay ng edad mo maari kang <a href="%{url}">mag-sign out</a>.'
   terms_interstitial:
     title: "Binago ang mga Palatuntunan at ang Privacy Policy"
-    intro_desc: 'Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay <i>hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio.</i> Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email.'
+    intro_desc: "Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay <i>hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio.</i> Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email."
     intro_instructions: "Kailangan mong tanggapin ang mga bagong pamatayan para sa mga estudyante na wala pang 13 taong gulang sa iyong silid-aralan para magkaroon ng buong access sa lahat ng mga bagong katangian ng Code Studio. Kung magrehistro ng account para sa estudyante na wala pang 13 taong gulang, pagsasabihan ka na ikompirma kung ang iyong paaralan ay may pahintulot ng mga magulang para sa koleksyon ng mga personal na impormasyon ng mga estudyante para sa paggamit at pakinabang ng paaralan, kalakip na dito ang mga educational na mga programa gaya ng Code Studio."
     tos: "Mga Palatuntunan"
     privacy: "Privacy Policy"
@@ -718,25 +735,25 @@ fil:
     message_with_suggestion: "Pakitiyak kung ang sumusunod na mga impormasyon ay tama, o baguhin ito kung kinakailangan."
     save: "I-save"
   race_interstitial:
-    title: 'Opsyonal: Tulungan niyo kaming subaybayan ang ating pag-unlad tungo sa pagpapabuti ng pagkakaiba-iba sa computer science'
+    title: "Opsyonal: Tulungan niyo kaming subaybayan ang ating pag-unlad tungo sa pagpapabuti ng pagkakaiba-iba sa computer science"
     message: "Mangyaring sabihan niyo kami sa iyong lahi (lagyan ng tsek ang angkop sa iyo)"
     races:
       - 
-        white: Puti
+        white: "Puti"
       - 
-        black: Itim o Aprikano-Amerikano
+        black: "Itim o Aprikano-Amerikano"
       - 
-        hispanic: Hispano o Latino
+        hispanic: "Hispano o Latino"
       - 
-        asian: Asyano
+        asian: "Asyano"
       - 
-        hawaiian: Katutubong Hawayano o ibang pang nasa Pasipiko
+        hawaiian: "Katutubong Hawayano o ibang pang nasa Pasipiko"
       - 
-        american_indian: Amerikanong-Indiyano/Katutubong Alaska
+        american_indian: "Amerikanong-Indiyano/Katutubong Alaska"
       - 
-        other: Iba
+        other: "Iba"
       - 
-        opt_out: Mas gustong hindi sabihin
+        opt_out: "Mas gustong hindi sabihin"
     submit: "Ipasa"
     decline: "Isara"
   zendesk_too_young_message: 'Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi maaring mag-sign in sa aming support na site. Maari kang mag-browse sa <a href="http://support.code.org">support.code.org</a> kahit hindi naka-sign in o magpatulong sa iyong magulang o guro para makipag-ugnayan sa amin para sa iyo.'
@@ -762,7 +779,7 @@ fil:
     delete: "I-delete"
     import: "Mag-Import"
     share_link_import_bad_link_header: "Ang Share na Link ay hindi kinikilala"
-    share_link_import_bad_link_body: 'Hindi namin ma-import ang share na link na iyan. Siguraduhing ikaw ay gumagamit ng link mula sa Minecraft: Agent puzzle, at nakopya mo ang buong link.'
+    share_link_import_bad_link_body: "Hindi namin ma-import ang share na link na iyan. Siguraduhing ikaw ay gumagamit ng link mula sa Minecraft: Agent puzzle, at nakopya mo ang buong link."
     share_link_import_error_header: "May nangyaring mali."
     share_link_import_error_body: "May problema sa pag-import ng share na link na iyan. Pakisubukan ulit."
     exit: "Bumalik sa Kurso"
@@ -846,7 +863,7 @@ fil:
     content: 'Content'
     practice: 'Teaching Practices'
     peer_review: 'Peer Review'
-    ramp_up: 'Ramp-Up'
+    ramp_up: 'Pabilisin'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: 'Pangunahing Kurso'
@@ -867,6 +884,7 @@ fil:
     csd5_2: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
     csd6_1: 'Kabanata 1: Output ng Hardware'
     csd6_2: 'Kabanata 2: Input ng Hardware'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
     csp1_2: 'Kabanata 2: Pag-imbento ng Internet'
     csp2_1: 'Kabanata 1: Pag-encode at Pag-compress ng Komplikadong Impormasyon'
@@ -880,6 +898,11 @@ fil:
     csp_ap_1: 'Kabanata 1: AP Tech na Setup'
     csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
     csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Pagmunimuni na mga Prompt'
   external_links:
     disclaimer: Disclaimer
@@ -984,3 +1007,14 @@ fil:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Buong mga Kurso'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'Ako ay sumasang-ayon'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'Oo'

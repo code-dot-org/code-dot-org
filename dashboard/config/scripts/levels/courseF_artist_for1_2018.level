@@ -32,18 +32,24 @@
     "examples_required": "false",
     "never_autoplay_video": "true",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you draw something like this:\\n\\n![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)\",\"hint_id\":\"courseF_artist_for1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3f647ea7b3b4586ad0d4bc878e643b86/courseF_artist_for1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you draw something like this:\\n\\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)\",\"hint_id\":\"courseF_artist_for1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3f647ea7b3b4586ad0d4bc878e643b86/courseF_artist_for1_2018.mp3\"}]",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_artist_for1_1\",\r\n  \"callout_text\": \"The toolbox is in \\\"category\\\" mode to make more room for your code.  The `for` loops live in here.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "display_name": "For Loops Freeplay (Beginning)",
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 22:43:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:43:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-05 00:43:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-27 20:38:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -103,8 +109,8 @@
             </value>
           </block>
         </category>
-        <category name="Loops" id="callMe">
-          <block type="controls_for_counter" inline="true" editable="false">
+        <category name="Loops">
+          <block type="controls_for_counter" inline="true">
             <mutation counter="counter"/>
             <value name="FROM">
               <block type="math_number">
@@ -133,7 +139,7 @@
             <title name="VAR">counter</title>
           </block>
         </category>
-        <category name="Color">
+        <category name="Brushes">
           <block type="draw_colour" inline="true" id="draw-color">
             <value name="COLOUR">
               <block type="colour_picker">
@@ -145,6 +151,25 @@
             <value name="COLOUR">
               <block type="colour_random"/>
             </value>
+          </block>
+          <block type="alpha" inline="true" id="alpha">
+            <value name="VALUE">
+              <block type="math_number_dropdown">
+                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_width" inline="false">
+            <value name="WIDTH">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
           </block>
         </category>
       </xml>

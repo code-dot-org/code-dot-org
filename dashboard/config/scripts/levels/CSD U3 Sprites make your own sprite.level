@@ -24,7 +24,6 @@
       "rect": null,
       "fill": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Make Your Own Sprite\r\n\r\nYou now know how to create a sprite, set its properties with dot notation, and draw sprites using `drawSprites`. It's time to put all these pieces together on your own.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/2f9214a801a60af226fa604a9b6533f5-image-1466008001402.26.15 AM.png\" style=\"float:right; width:200px\">\r\n\r\nThis program creates a red sprite in the bottom right hand corner of the screen.\r\n\r\n* **Write code** that creates a new separate sprite in the top left corner of the screen.\r\n* Be careful with your dot notation, and use the code for the first sprite as a guide.\r\n* Try to make your image look as close as possible to the image at the right.",

@@ -60,6 +60,7 @@ class Certificate extends Component {
     certificateId: PropTypes.string,
     randomDonorTwitter: PropTypes.string,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    userAge: PropTypes.number,
   };
 
   personalizeCertificate(session) {
@@ -79,7 +80,7 @@ class Certificate extends Component {
   }
 
   render() {
-    const {responsiveSize, tutorial, certificateId, randomDonorTwitter} = this.props;
+    const {responsiveSize, tutorial, certificateId, randomDonorTwitter, userAge} = this.props;
     const certificate = certificateId || 'blank';
     const personalizedCertificate = `${dashboard.CODE_ORG_URL}/api/hour/certificate/${certificate}.jpg`;
     const blankCertificate = blankCertificates[tutorial] || blankCertificates.hourOfCode;
@@ -155,6 +156,7 @@ class Certificate extends Component {
             facebook={facebook}
             twitter={twitter}
             print={print}
+            userAge={userAge}
           />
         </div>
       </div>

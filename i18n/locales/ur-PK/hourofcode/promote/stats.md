@@ -13,11 +13,11 @@ nav: promote_nav
 
 ## اس مختصر بلرب کو نیوزلیٹر میں استعمال کریں
 
-### Bring computer science to your school. Start with an Hour of Code!
+### اپنے اسکول میں کمپیوٹر سائنس لے لو. ایک گھنٹہ کوڈ کے ساتھ شروع کریں!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔ If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+سیارے پر ہر صنعت کو تبدیل کرنے کی ٹیکنالوجی کے ساتھ، کمپیوٹنگ علم ایک گول گولیاں کا حصہ بن گیا ہے. لیکن نصف اسکولوں میں کم سے کم کمپیوٹر سائنس سیکھتے ہیں! اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔. اگر آپ گزشتہ سال کے قیام کے بارے میں سنا تو، آپ کو یہ معلوم ہوسکتا ہے کہ اس نے تاریخ بنایا ہے. 100 ملین طالب علموں کو اب پتہ چلا ہے کہ کس طرح تکلیف اور مزہ کمپیوٹر سائنس صرف ایک گھنٹہ کوڈ کر رہا ہے.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+کوڈ کا قیام ایک گھنٹہ کمپیوٹر سائنس سے متعارف کرایا جاتا ہے، جس میں کوڈ کو ڈسٹیسیٹیٹ کرنے کے لئے ڈیزائن کیا گیا ہے اور ظاہر ہوتا ہے کہ کسی کو بنیادی طور پر سیکھ سکتے ہیں. [ http://HourofCode.com ](http://HourofCode.com) پر مزید جانیں، ایک گھنٹہ خود کو آزمائیں، یا کمپیوٹنگ کی دنیا میں دوسروں کو متعارف کرنے کیلئے ایک گھنٹے کے ایونٹ کی میزبانی کریں!
 
 <a id="infographics"></a>
 

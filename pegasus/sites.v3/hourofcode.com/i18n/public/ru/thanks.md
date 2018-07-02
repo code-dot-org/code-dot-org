@@ -27,37 +27,37 @@ social:
 
 # Спасибо за регистрацию на проведение Часа Кода!
 
-As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+В качестве благодарности за то, что у студентов появилась возможность начать изучать информатику, мы бы хотели подарить вам бесплатный набор профессионально напечатанных постеров, демонстрирующих различные ролевые модели для вашей аудитории. Используйте промо-код **FREEPOSTERS** при оформлении заказа. (Примечание: вам нужно будет оплатить стоимость доставки. Поскольку эти постеры доставляются из США, стоимость доставки может быть достаточно высокой для Канады и других стран. Мы понимаем, что это может не укладываться в ваш бюджет и, в таком случае, мы рекомендуем распечатать для вашей аудитории [PDF файлы](https://code.org/inspire) самостоятельно.)  
+<br /> [<button>Скачать постеры</button>](https://store.code.org/products/code-org-posters-set-of-12) Используйте промо-код FREEPOSTERS
 
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+<% if @country == 'us' %> Спасибо великодушию компаниям Ozobot, Dexter Industries, littleBits и Wonder Workshop, а также более сотни классов будут выбраны чтобы получить роботы или схемыдля их классов! Чтобы иметь право на получение комплекта, убедитесь что вы выполнили опрос отправленным от Code.org после Часа Кода. Code.org выберет победивших классов. А пока, просмотрите несколько наших робототехнических и схематических заданий. Пожалуйста обратите внимание что эта функция доступна только для школ на территории Соединённых Штатов. <% end %>
 
-<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **Час Кода идёт во время <%= campaign_date('full') %> и мы будем на связи про наши новые обучения и других захватывающих обновлениях которые скоро выйдут. А пока, Что мы можем сделать сейчас?**
 
-## 1. Spread the word in your school and community
+## Расскажите об этом мероприятии своей школе и окружению
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Вы только что присоединились к движению Часа Кода. Расскажите вашим друзьям вместе с **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. И совсем не обязательно быть школьником или студентом, чтобы получить новые знания. Invite a local politician or policy maker to visit your school for the Hour of Code. Это всего за час поможет получить поддержку в понимании важности изучения информационных технологий в том числе в вашем районе.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Поощряйте других чтобы они участвовали [вместе с нашим образцом письма.](<%= resolve_url('/promote/resources#sample-emails') %>) Свяжитесь с вашим директором и дайте вызов каждому классу зарегистрироваться. Наймите местную группу - мальчиков или девочек из скаутов, университетов, группу ветеранов, профсоюзников или даже некоторых друзей. И совсем не обязательно быть школьником или студентом, чтобы получить новые знания. Пригласите местного политика или разработчика правил чтобы он или она посетили вашу школу для Часа Кода. Это может помочь создать поддержку компьютерных наук в вашем районе, меньше чем за час.
 
 Используйте эти [плакаты, баннеры, наклейки, видео и многое другое](<%= resolve_url('/promote/resources') %>) для вашего мероприятия.
 
 ## 2. Найти местных волонтеров (добровольцев), которые помогут вам с организацией Вашего мероприятия.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Plan your Hour of Code
+## Запланируйте ваш Час Кода
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Выберете [занятие Часа Кода](https://hourofcode.com/learn) для вашего класса и просмотрите это руководство</а>.</p> 
 
-# Go beyond an Hour of Code
+# Иди за грань Часа Кода
 
-<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
+<% if @country == 'us' %> Час Кода это только начало. Если даже вы администратор, учитель, или адвокат, мы имеем [ профессиональное развитее, программа, и ресурсы, чтобы помочь вам принести ваш научно-компьютерный класс в вашу школу или расширить ваши предложения.](https://code.org/yourschool) Если вы уже учите компьютерной науке, используйте эти ресурсы во время Недели Образования Компьютерной Науке чтобы собрать поддержку от администратора, родителей, и местности.
 
-You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+У вас есть много вариантов чтобы соответствовать вашей школе. Большинство организации предлагают обучения Часа Кода, а также программа и профессиональное развитее доступны. Если вы найдёте урок который вам нравиться, попросите о том чтобы идти дальше. Чтобы помочь вам начать, мы выделили номер [программы провайдера который поможет вам или вашим студентам идти дальше часа.](https://hourofcode.com/beyond)
 
-<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
+<% else %> Час Кода это только начало. Большинство организаций предлагает уроки Часа Кода, а также имеем программы доступны чтобы идти дальше. Чтобы помочь вам начать, мы выделили номер [программы провайдера который поможет вам или вашим студентам идти дальше часа.](https://hourofcode.com/beyond)
 
-Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
+Code.org также предлагает полный [вводный Компьютерно-Научные курсы](https://code.org/educate/curriculum/cs-fundamentals-international) которые переведены на более 25 языков абсолютно бесплатно для вас и вашей школы. <% end %>
 
 <%= view 'popup_window.js' %>

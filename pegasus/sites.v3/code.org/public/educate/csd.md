@@ -52,9 +52,9 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 [col-33]
 
-[<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](/files/CSDiscoveries-Curriculum-Guide.pdf)</center>
+[<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](https://docs.google.com/document/d/1hzG2yKUrvXKGq_ee0E1fAyxbzRL_8-bbldgyLG7m_X4/edit#)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">The  <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
+<div style="margin-left: 15px; margin-top: 5px;">The  <a href="https://docs.google.com/document/d/1hzG2yKUrvXKGq_ee0E1fAyxbzRL_8-bbldgyLG7m_X4/edit#", target=_"blank">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
 
 [/col-33]
 
@@ -254,7 +254,7 @@ Some schools may want to use parts of the CS Discoveries curriculum without runn
 * Containers that can hold water
 * [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.***
 
-\*** Participants in our 2018-19 Professional Learning Program who are teaching in schools with 50%+ free and reduced meal rates are eligibe to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
+\*** Participants in our 2018-19 Professional Learning Program who are teaching in schools with 50%+ free and reduced meal rates are eligible to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
 
 ### <a name="pathway"></a>How does CS Discoveries fit with the other Code.org courses?
 
@@ -273,8 +273,8 @@ We are now accepting applications for the 2017-18 Professional Learning Program 
 
 <a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
 
-If you are interested in joining in 2018-19, sign up below.
+Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
-[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
+[<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 -->

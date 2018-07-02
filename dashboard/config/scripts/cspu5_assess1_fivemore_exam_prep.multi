@@ -1,0 +1,22 @@
+name 'cspu5_assess1_fivemore_exam_prep'
+wrong '-2'
+wrong '3'
+wrong '5'
+wrong '8'
+right 'Error. Unknown Identifier: x'
+
+
+markdown <<MARKDOWN
+What is the output to the console after the following code segment is executed?
+
+![](https://images.code.org/10d0533482fbd62ad2937b3c5cbf04f7-image-1518809560642.32.22 AM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 5** - application of local scope and debugging
+
+* The function "fiveMore()" is called.
+* Inside this function, a new variable "x" is set to 5
+* The computer exits this function and moves on to line 5 where a variable y is created
+* The value of y is set to "3 + x" **However**, the variable x was initiated locally inside "fiveMore()" and is not accessible outside of the function. Therefore, there is an error because the variable x does not exist outside the method.
+MARKDOWN

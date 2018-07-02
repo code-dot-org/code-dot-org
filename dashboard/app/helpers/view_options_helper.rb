@@ -14,6 +14,7 @@ module ViewOptionsHelper
     :is_external_project_level,
     :is_channel_backed,
     :is_legacy_share,
+    :legacy_share_style,
     :is_challenge_level,
     :post_milestone_mode,
     :is_bonus_level,
@@ -31,7 +32,8 @@ module ViewOptionsHelper
     :user_id,
     :has_contained_levels,
     :next_level_url,
-    :responsive_content
+    :responsive_content,
+    :answerdash
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

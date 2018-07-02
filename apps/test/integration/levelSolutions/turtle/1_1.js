@@ -1,4 +1,4 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 
 var rblocks = function () {
@@ -29,6 +29,49 @@ module.exports = {
         '<xml>' +
         solution +
         '</xml>'
+    },
+    {
+      description: "Solution using more than the ideal number of blocks",
+      expected: {
+        result: true,
+        testResult: TestResults.TOO_MANY_BLOCKS_FAIL
+      },
+      missingBlocks: [],
+      xml:
+      `<xml>
+        <block type="when_run">
+          <next>
+            <block type="jump_by_constant_dropdown">
+              <title name="DIR">jumpBackward</title>
+              <title name="VALUE">50</title>
+              <next>
+                <block type="jump_by_constant_dropdown">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">50</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_turn_by_constant_restricted">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">100</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>`
     },
     {
       description: "User doesnt add any blocks.  Should fail.",

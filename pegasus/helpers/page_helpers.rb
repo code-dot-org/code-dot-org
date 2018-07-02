@@ -60,7 +60,12 @@ end
 # Returns a concatenated, minified CSS string from all CSS files in the given paths,
 # along with a digest of same.
 def combine_css(*paths)
-  files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request.site, path, '*.css'))}.flatten
+  # Special case in which we want advocacy.code.org to receive styling from code.org.
+  # We still serve up the combined CSS from advocacy.code.org, rather than reach across to code.org,
+  # to avoid CORS errors for the web font that is included in this combined CSS.
+  request_site = request.site == "advocacy.code.org" ? "code.org" : request.site
+
+  files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request_site, path, '*.css'))}.flatten
   css = files.sort_by(&File.method(:basename)).map do |i|
     IO.read(i)
   end.join("\n\n")

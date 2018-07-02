@@ -163,30 +163,27 @@ fr:
       CollisionDetection:
         title: La détection de collision et le théorème de Pythagore
         desc: Déterminer quand les objets sur l'écran se touchent est un aspect important de la plupart des jeux. Dans le cadre de cette leçon, nous verrons comment le Théorème de Pythagore et la formule de distance peuvent servir à mesurer la distance entre deux points sur le plan et décider ensuite si ces deux points (ou les personnages du jeu) se touchent.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        title: Boucles débranchées
+        desc: Dans cette leçon, tu découvriras les boucles!
       courseB_unplugged_MRF:
         title: Activité manuelle
-        desc: In this lesson, you will 'program' your friends!
+        desc: Dans cette leçon, tu "programmeras" tes amis!
       courseB_unplugged_loopyMRF:
         title: Activité manuelle
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
+        desc: Tout comme dans "Mon ami robotisé", vous allez programmé vos amis, mais cette fois avec des boucles!
       courseC_Unplugged_ScreenOutTheMean:
         title: Activité manuelle
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant en ligne.
       courseD_unplugged_digitalCitizenship:
         title: Activité manuelle
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
       courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Education au sens commun : information privée et personnelle '
+        desc: Aujourd'hui, tu apprendras la différence entre l'information privée et personnelle!
       courseF_unplugged_powerOfWords:
         title: Activité manuelle
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant en ligne.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -265,3 +262,96 @@ fr:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title:
+        desc:
+      courseB_unplugged_loopyMRF_2018:
+        title:
+        desc:
+      DiceRace_2018:
+        title:
+        desc:
+      courseE_unplugged_privateInformation_2018:
+        title:
+        desc:
+      SongwritingParameters_2018:
+        title:
+        desc:
+      Internet_2018:
+        title:
+        desc:
+      Crowdsourcing_2018:
+        title:
+        desc:
+      TangramAlgorithms_2018:
+        title:
+        desc:
+      courseF_unplugged_powerOfWords_2018:
+        title:
+        desc:
+      EnvelopeVariables_2018:
+        title:
+        desc:
+      ForLoopFun_2018:
+        title:
+        desc:
+      SongwritingWithParameters_2018:
+        title:
+        desc:
+      PlantASeed_2018:
+        title: 'Algorithmes du monde réel: Planter une graine'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, en utilisant comme exemple l’action de planter une graine. Elle se concentre également sur la vue d’ensemble de l'informatique et la façon dont les algorithmes jouent un rôle essentiel.
+      UnplugHappyMaps_2018:
+        title: Cartes Joyeuses
+        desc: Les élèves créent des algorithmes simples (ensemble d'instructions) pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+      GoingPlacesSafely_2018:
+        title: Se déplacer en toute sécurité
+        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants présentent comment rester en sécurité en naviguant sur Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: Dans cette leçon, tu découvriras les boucles!
+      BigEvent_2018:
+        title: Le Grand Événement
+        desc: Les élèves découvrent le concept de la programmation d’«événements», qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant appuiera sur des boutons à distance et les élèves réagiront en fonction du bouton choisi.
+      GraphPaperProgramming_2018:
+        title: Programmation sur papier quadrillé
+        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant un ensemble de commandes prédéfinies pour diriger leurs camarades afin de reproduire un dessin.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Activité manuelle
+        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Activité manuelle
+        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant en ligne.
+      Conditionals_2018:
+        title: Instructions conditionnelles
+        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent à un jeu de cartes et créent des règles comme «Si je tire une carte rouge, je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+      DigitalFootprint_2018:
+        title: Ton empreinte numérique
+        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne des informations personnelles crée une empreinte numérique ou une « trace » qui a des conséquences.
+      BinaryImages_2018:
+        title: Les images binaires
+        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement des zéros et des uns, nos précédents cours ont enseigné aux élèves que les informations peuvent être représentées d’une variété d'options binaires.  Cette leçon emmène ce concept encore plus loin puisqu'elle illustre comment un ordinateur peut stocker des informations encore plus complexes (telles que les images et les couleurs) également en binaire.
+      PaperPlanes_2018:
+        title: 'Algorithmes du monde réel: Avions en papier'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes dans notre vie quotidienne, plus précisément en faisant des avions en papier. Cette leçon se concentre également sur l'informatique en général et la façon dont les algorithmes jouent un rôle essentiel.
+      GettingLoopy_2018:
+        title: Tourner en rond
+        desc: Cette leçon présente le concept de programmation des boucles (instructions répétées) par le biais d’une activité de danse. Les élèves apprendront une chorégraphie simple, puis devront la répéter.
+      BinaryBracelets_2018:
+        title: Bracelets binaires
+        desc: Les élèves créent des bracelets comme des représentations binaires de la première lettre de leur nom. Les élèves apprennent que les données peuvent être représentées et stockées de plus d’une façon.
+      MoveItMoveIt_2018:
+        title: Bouge, Bouge
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programmation de relais
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

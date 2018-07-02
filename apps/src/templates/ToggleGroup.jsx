@@ -1,9 +1,9 @@
 /** @file Row of buttons for switching editor modes. */
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import ToggleButton from './ToggleButton';
 
-const ToggleGroup = React.createClass({
-  propTypes: {
+export default class ToggleGroup extends Component {
+  static propTypes = {
     selected: PropTypes.string,
     activeColor: PropTypes.string,
     onChange: PropTypes.func.isRequired,
@@ -26,15 +26,15 @@ const ToggleGroup = React.createClass({
       });
       return error;
     }
-  },
+  };
 
   setSelected(selected) {
     this.props.onChange(selected);
-  },
+  }
 
   render() {
     return <span>{this.renderChildren()}</span>;
-  },
+  }
 
   renderChildren() {
     // Remove falsy children to make sure first and last buttons are rounded properly.
@@ -59,5 +59,4 @@ const ToggleGroup = React.createClass({
       );
     });
   }
-});
-export default ToggleGroup;
+}

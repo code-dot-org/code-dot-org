@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **보도 자료를 발행하세요.** [이 샘플](%= resolve_url('/promote/official-press-release') %)을 사용하세요.
 
-9. **지역적으로 연결하세요.** 여러분의 주에서 컴퓨터과학 교육에 대해 좀 더 배우기 위해 [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %)를 방문하세요. 그 곳에 있는 청원서에 등록하면, 여러분들은 Code.org 로부터 지역, 주, 연방 정부의 긍정적 노력과 호응에 대한 진행사항들을 알 수 있게 될 것입니다.
+9. **Connect locally.** Visit [code.org/promote](%= codeorg_url('/promote') %) to learn more about computer science education in your state. 그 곳에 있는 청원서에 등록하면, 여러분들은 Code.org 로부터 지역, 주, 연방 정부의 긍정적 노력과 호응에 대한 진행사항들을 알 수 있게 될 것입니다.
 
 <%= view :signup_button %>

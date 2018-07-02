@@ -1,17 +1,18 @@
-"lt":
+---
+lt:
   errors:
     messages:
       not_saved: 'Ištaisyk šias klaidas:'
-      too_young: "Šis turinys turi amžiaus apribojimą ir yra neprieinamas jaunesniems
-        mokiniams."
+      too_young: Šis turinys turi amžiaus apribojimą ir yra neprieinamas jaunesniems
+        mokiniams.
       teacher_must_accept_terms: Šis turinys turi amžiaus apribojimą ir yra neprieinamas
         jaunesniems mokiniams. Paprašykite savo mokytojo priimti atnaujintas naudojimosi
         sąlygas, kad jums būtų suteikta prieiga prie šio turinio. Jūsų mokytojas tai
         gali padaryti prisijungęs prie Kodavimo studijos ir paspaudęs "Peržiūrėti
         antaujintas sąlygas" mygtuką, esantį Kodavimo studijos namų puslapio viršuje.
-      pair_programmer: "Šiuo metu jūs programuojate poroje su mokiniu, kuris neturi
+      pair_programmer: Šiuo metu jūs programuojate poroje su mokiniu, kuris neturi
         prieigos prie šio turinio. Norint gauti prieigą prie šio turinio, nustokite
-        programuoti poroje ir pabandykite dar kartą."
+        programuoti poroje ir pabandykite dar kartą.
   activerecord:
     errors:
       messages:
@@ -57,7 +58,7 @@
       instructions_short: Enter your 6 letter section code
     submit: Pridėk mokytoją
   add_hint_form:
-    placeholder: "Įvesk savo suflerį čia"
+    placeholder: Įvesk savo suflerį čia
     submit: Pridėk suflerį
   appname: Code.org
   stage: Etapas
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsoft paskyra
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Užmiršai savo slaptažodį?
     need_confirmation: Negavai patvirtinimo instrukcijų?
     need_unlock: Negavai atrakinimo instrukcijų?
@@ -139,18 +141,32 @@
     valid_password: Galiojantis slaptažodis!
     invalid_password: Slaptažodį turi sudaryti mažiausiai 6 simboliai
     mismatch_password: Slaptažodžiai nesutampa
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Aš sutinku su Code.org<a href='http://code.org/tos'>sąlygomis</a>.
       Jeigu man yra mažiau nei 13 metų, aš patvirtinu, kad turiu savo tėvų ar globejų
       leidimą naudotis Code.org paslaugomis.<br/>Naudotojams, jaunesniems nei 13 metų,
       el. pašto adresai nėra išsaugomi taip, kad galėtume su jais susisiekti.
     teacher_terms: Sutinku su Code.org<a href='http://code.org/tos'>taisyklėmis</a>.
     additional_information: Mums reikia papildomos informacijos, kad galėtum prisiregistruoti.
+    user_type_button: Update Account Type
     user_type_label: Paskyros tipas
     user_type_teacher: Mokytojas
     user_type_student: Mokinys
     field_is_required: reikalingas
     accept_terms: Turite sutikti, norint sukurti paskyrą
     error: An error occurred.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Taip
+    email_preference_no: Ne
+    email_preference_required: You must specify an email preference.
   school_info:
     title: Mokyklos informacija (neprivaloma)
     school_country: School Country
@@ -187,7 +203,7 @@
     welcome: Sveiki atvykę į %{section_name}
     name: Pasirink savo vardą
     picture: Atrask savo prisijungimo paveikslėlį
-    words: "Įvesk savo prisijungimo žodžius"
+    words: Įvesk savo prisijungimo žodžius
     login: Prisijungti
     invalid_login: Netinkamas prisijungimas, mėginkite dar kartą
     pair_programming: Kompiuteriu dalinuosi su klasioku
@@ -196,11 +212,12 @@
   password:
     reset_form:
       title: Užmiršai savo slaptažodį?
-      instructions: "Įveskite savo el. pašto adresą, ir atsiųsime jums slaptažodžio
-        keitimo nuorodą."
+      instructions: Įveskite savo el. pašto adresą, ir atsiųsime jums slaptažodžio
+        keitimo nuorodą.
       email: El. pašto adresas
       submit: Pateikti
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Panašu, kad užsiregistravote su neegzistuojančiu el. pašto adresu.
         Parašykite mums laišką adresu support@code.org, kad galėtumėte gauti slaptažodžio
         keitimo nuorodą.
@@ -233,7 +250,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Slaptas pasaulis
       email: El. pašto adresas
       google_classroom: Google Classroom
       clever: Clever
@@ -248,7 +265,7 @@
       no_teacher: Nepavyko rasti nieko prisijungusio su '%{teacher_email_or_code}'.
         Prašome paprašyti to žmogaus prisiregistruoti čia, o tada mėginkite dar kartą
       section_not_found: Nepavyko rasti grupės su kodu '%{section_code}'.
-      blank_code: "Įveskite grupės kodą"
+      blank_code: Įveskite grupės kodą
       cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
       provider_managed_section: This section is managed by another provider and cannot
         be joined. Please ask your teacher to add you via %{provider} and re-sync
@@ -312,9 +329,9 @@
       educate_hoc: "„Programavimo valanda“"
       educate_partner: Būkite mūsų partneriais
       educate_beyond: Už Code.org ribų
-      educate_inspire: "Įkvėpkite mokinius"
+      educate_inspire: Įkvėpkite mokinius
       educate_community: Virtuali bendruomenė
-      educate_tools: "Įrankiai ir vaizdo įrašai"
+      educate_tools: Įrankiai ir vaizdo įrašai
       about_us: About Us
       about_leadership: Leadership
       about_donors: Donors
@@ -386,6 +403,7 @@
     email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
     email_confirm_wrong_email: "(Klaidingas el. pašto adresas?)"
     email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(palikite tuščią, jei nenorite pakeisti)"
     current_password_hint: "(įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)"
     delete: Pašalinti savo paskyrą
@@ -418,6 +436,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Baigta
     tried: Išbandyta
@@ -457,9 +476,9 @@
     tryfirst: 'Arba iš pradžių galite pamėginti, o prisiregistruoti vėliau:'
     trynow: Išmėginkite dabar
     add_hint_help: Padėkite mums sukurti gudrius suflerius Code.org pamokėlėms
-    20hour_overview: "Šis 20-ties valandų informatikos kursas supažindina su programavimo
+    20hour_overview: Šis 20-ties valandų informatikos kursas supažindina su programavimo
       pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
-      esant bet kurioje amžiaus grupėje."
+      esant bet kurioje amžiaus grupėje.
     test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
     try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
@@ -592,6 +611,8 @@
       in your section.
     already_enrolled_in_new_section: You cannot move these students because this teacher
       already has them in another section.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Mokytis su „Code Studio“
     description: Kiekvienas gali išmokti informatikos. Kurk žaidimus, programėles
@@ -600,6 +621,8 @@
   gender:
     male: Vyras
     female: Moteris
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Nenoriu atsakyti
   user_type:
     student: Mokinys
@@ -611,8 +634,8 @@
       patarėjams</a> už jų pagalbą kuriant „Code Studio“.
     help_from_html: Dėkojame Google, Microsoft, Facebook, Twitter ir daugeliui kitų
       inžinierių ir žmonių, kurie padėjo sukurti šias pamokėles.
-    help_from_html_old: "Šią medžiagą padėjo sukurti inžinieriai iš Google, Microsoft,
-      Facebook ir Twitter."
+    help_from_html_old: Šią medžiagą padėjo sukurti inžinieriai iš Google, Microsoft,
+      Facebook ir Twitter.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Visos teisės
       saugomos.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Visos teisės saugomos.<br />Frozen&#8482; &copy; %{current_year} Disney. Visos
@@ -660,7 +683,7 @@
   video:
     tab: Vaizdo įrašas.
     notes: Nerodo vaizdo? Rodyti tekstą.
-    notes_coming_soon: "Šiam vaizdo įrašui dar nėra pastabų."
+    notes_coming_soon: Šiam vaizdo įrašui dar nėra pastabų.
     autoplay_option: Automatiškas vaizdo įrašų paleidimas
     download: Atsisiųsti vaizdo įrašą
     show_notes: Show Notes
@@ -711,7 +734,7 @@
     created: Jūs sukūrėte naują scenarijų.
     destroyed: Jūs sunaikinote scenarijų.
     manage: Sukurti etapus
-    view: "Žiūrėti"
+    view: Žiūrėti
     back: Atgal į scenarijus
     success: Tu sėkmingai redagavai blokus.
     level:
@@ -736,9 +759,9 @@
         Code pamokėles!
     20-hour:
       title: Pagreitintas kursas
-      body: "Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais.
+      body: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais.
         Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet
-        kurioje amžiaus grupėje."
+        kurioje amžiaus grupėje.
       body_short: Išmok informatikos pagrindų pagreitintuose kursuose (panašiuose
         į 2-4 kursus).
     hoc2014:
@@ -749,7 +772,7 @@
       title: Galerija
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
     gamelab:
-      title: "Žaidimų laboratorija"
+      title: Žaidimų laboratorija
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Amžius 13+
@@ -766,9 +789,9 @@
     frozen:
       title: Ledo šalis
     starwars:
-      title: "Žvaigždžių karai"
+      title: Žvaigždžių karai
     infinity:
-      title: "Žaidimų laboratorija „Infinity“"
+      title: Žaidimų laboratorija „Infinity“
       body: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus
         Infinity personažai.
     minecraft:
@@ -812,9 +835,9 @@
   gallery:
     students_drew_these_with_code: Mokiniai nupiešė juos parašę kodą!
     students_made_these_with_code: Mokinių sukurti pavyzdžiai.
-    picture_count: "Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b>
+    picture_count: Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b>
       piešinių parašydami savo kompiuterines programas. Nuspausk ant šių piešinių,
-      kad pamatytum parašytas programas."
+      kad pamatytum parašytas programas.
     activity_count: Per pastarąsias <b>%{days}</b> dienas, mokiniai programuodami
       sukūrė <b>%{count}</b> programėlių ir piešinių.
     want_to_make_your_own: Norėtum sukurti savo?
@@ -828,10 +851,10 @@
     header_artist: Menininkas
     report_abuse: Praneškite apie piktnaudžiavimą
   landing:
-    prerelease: "Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad
-      tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
-    prerelease_hoc2014: "Šios pamokėlės yra <span class='betatext'>beta versijoje</span>.
-      Į pasiūlymus ir klaidų pranešimus bus atsižvelgta."
+    prerelease: Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad
+      tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas.
+    prerelease_hoc2014: Šios pamokėlės yra <span class='betatext'>beta versijoje</span>.
+      Į pasiūlymus ir klaidų pranešimus bus atsižvelgta.
     report_bug: Pranešti apie problemą
     support: Pagalba
     support_url: "//support.code.org"
@@ -894,7 +917,7 @@
     baddomaintype: Vienas arba daugiau elementų yra netinkamo tipo arba jų eiliškumas
       yra netinkamas.
   text_match:
-    placeholder: "Įveskite savo atsakymą čia"
+    placeholder: Įveskite savo atsakymą čia
     open_response_title: Ačiū
     open_response_body: Ačiū už atsakymą!
     correct_title: Teisingai
@@ -912,10 +935,10 @@
   age_interstitial:
     age: Tavo amžius
     header: Paskyros informacijos atnaujinimas
-    message: "Šiuo metu mes atnaujiname privatumo apsaugą, kad Jūsų duomenys būtų
-      dar saugesni. Norėdami tai padaryti, mums reikia, kad visi naudotojai įvestų
-      savo amžių.<br/>Kaip ir visuomet, code.org niekada neparduos ir neišduos Jūsų
-      asmeninių duomenų tretiesiems asmenims."
+    message: Šiuo metu mes atnaujiname privatumo apsaugą, kad Jūsų duomenys būtų dar
+      saugesni. Norėdami tai padaryti, mums reikia, kad visi naudotojai įvestų savo
+      amžių.<br/>Kaip ir visuomet, code.org niekada neparduos ir neišduos Jūsų asmeninių
+      duomenų tretiesiems asmenims.
     sign_out: Jeigu nenori skelbti savo amžiaus, gali <a href="%{url}">atsijungti</a>.
   terms_interstitial:
     title: Updated Terms of Service and Privacy Policy
@@ -1058,7 +1081,7 @@
           žemiau. Į Jūsų pranešimą mes reaguosime labai rimtai, ištirsime numatyta
           tvarka ir imsimės atitinkamų veiksmų.
         validation:
-          email: "Įvesk el. pašto adresą"
+          email: Įvesk el. pašto adresą
           age: Pasirink amžių
           abuse_type: Pagrįsk, kaip šis turinys pažeidžia Naudojimosi sąlygas
           abuse_detail: Prašom pateikti išsamią informaciją dėl turinio, apie kurį
@@ -1067,7 +1090,7 @@
         abuse_type:
           question: Kaip šis turinys pažeidžia %{link_start}Naudojimosi sąlygas%{link_end}?
           harassment: Grasinimai, patyčios, priekabiavimas
-          offensive: "Įžeidžiantis turinys"
+          offensive: Įžeidžiantis turinys
           infringement: Autorinių teisių pažeidimas
           other: Kita
         detail: Prašome nurodyti kuo daugiau informacijos dėl turinio, kurį Jūs pranešate.
@@ -1124,6 +1147,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1137,6 +1161,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unit 2: Digital Information'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1160,9 +1189,9 @@
       progress, or print certificates. Teachers may print certificates ahead of time
       <a href="%{url}">here</a>.'
     minecraft_name: Minecraft „Programavimo valanda”
-    starwars_blocks_name: "Žvaigždžių karai: Programuojame galaktiką (Blokais)"
-    starwars_javascript_name: "Žvaigždžių karai: Programuojame galaktiką (JavaScript
-      kalba)"
+    starwars_blocks_name: 'Žvaigždžių karai: Programuojame galaktiką (Blokais)'
+    starwars_javascript_name: 'Žvaigždžių karai: Programuojame galaktiką (JavaScript
+      kalba)'
     download_message: Parsisiųsti %{app_name} naudojimui neprisijungus (136MB)
     download_in_Albanian: 'Download in Albanian:'
     download_in_Arabic: 'Download in Arabic:'
@@ -1280,3 +1309,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Sutinku
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Taip

@@ -7,8 +7,8 @@ content-type: text/ng-template
 #nav{"ng-show"=>"section.id"}
   #goback{style: "float:left"}
     %div
-      %span{style: "color: #00adbc; font-size: 18px; font-weight: 'bold';"} &nbsp; &#8249; &nbsp;
-      %a{"ng-href" => CDO.studio_url("/home/#classroom-sections"), style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight:'bold';"}=I18n.t('view_all_sections')
+      %span{style: "color: #00adbc; font-size: 25px; font-weight: 700; margin-right: 8px; line-height: 25px;"} &#8249;
+      %a{"ng-href" => CDO.studio_url("/home/#classroom-sections"), style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight: 700; line-height: 25px; text-decoration: none"}=I18n.t('view_all_sections')
       %div{style: "font-size: 24px; font-weight: 'bolder'; padding: 12px;"}= '{{section.name}}'
 
   .section-select{style: "float:right"}
@@ -49,12 +49,6 @@ content-type: text/ng-template
       %div{'ng-show' => 'section && editingAll(section.students)', style: "height:40px"}
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;
-
-  .managebuttons{style: "float:right; margin-bottom: 9px;", "ng-if" => "tab == 'manage' && teacher_managed_section(section)"}
-    %span{"ng-if" => "section.login_type !== 'email'"}
-      %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
-      %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')
-    %button.btn.btn-white{"ng-click" => "showModal()", "ng-controller" => "MovingStudentsController"}= I18n.t('dashboard_sections_move_students')
 
 .clear
 

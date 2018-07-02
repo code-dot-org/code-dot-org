@@ -1,6 +1,7 @@
 import React from 'react';
-import CohortViewTable from './cohort_view_table';
+import {CohortViewTable} from './cohort_view_table';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+import { WorkshopTypes } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default storybook => {
   storybook
@@ -14,29 +15,42 @@ export default storybook => {
             data={[
               {
                 id: 1,
-                date_accepted: '11/1/2017',
+                date_accepted: '2017-11-01',
                 applicant_name: 'Poppy Pomfrey ',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
                 email: 'nurse@hogwarts.edu',
                 notified: 'Yes',
-                assigned_workshop: 'Seattle, 5/1',
-                registered_workshop: 'Seattle, 5/1'
+                assigned_workshop: 'TeacherCon Chicago',
+                accepted_teachercon: 'Yes'
               },
               {
                 id: 2,
-                date_accepted: '12/1/2017',
+                date_accepted: '2017-12-01',
                 applicant_name: 'Filius Flitwick',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
                 email: 'short@hogwarts.edu',
                 notified: 'Yes',
                 assigned_workshop: 'TeacherCon Chicago',
-                registered_workshop: 'TeacherCon Chicago'
+                accepted_teachercon: 'No'
               }
             ]}
             viewType="teacher"
             path="path"
+            regionalPartnerFilter={{
+              value: 2,
+              label: "WNY Stem Hub"
+            }}
+            regionalPartners={[
+              {
+                id: 1,
+                workshop_type: WorkshopTypes.local_summer
+              },{
+                id: 2,
+                workshop_type: WorkshopTypes.teachercon
+              }
+            ]}
           />
         )
       }, {
@@ -46,7 +60,7 @@ export default storybook => {
             data={[
               {
                 id: 1,
-                date_accepted: '11/1/2017',
+                date_accepted: '2017-11-01',
                 applicant_name: 'Poppy Pomfrey ',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
@@ -59,7 +73,7 @@ export default storybook => {
               },
               {
                 id: 2,
-                date_accepted: '12/1/2017',
+                date_accepted: '2017-12-01',
                 applicant_name: 'Filius Flitwick',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
@@ -73,6 +87,19 @@ export default storybook => {
             ]}
             viewType="facilitator"
             path="path"
+            regionalPartnerFilter={{
+              value: 1,
+              label: "A+ College Ready"
+            }}
+            regionalPartners={[
+              {
+                id: 1,
+                workshop_type: WorkshopTypes.local_summer
+              },{
+                id: 2,
+                workshop_type: WorkshopTypes.teachercon
+              }
+            ]}
           />
         )
       }

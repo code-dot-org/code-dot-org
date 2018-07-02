@@ -240,29 +240,29 @@ class SectionApiHelperTest < SequelTestCase
           script_name: 'flappy',
           category: 'Hour of Code',
           position: 7,
-          category_priority: 2
+          category_priority: 3
         }
         assert_equal expected, flappy_script
       end
 
       it 'includes default csp scripts' do
         script_ids = DashboardSection.valid_scripts.map {|script| script[:script_name]}
-        assert_includes script_ids, 'csp1'
-        assert_includes script_ids, 'csp2'
+        assert_includes script_ids, 'csp1-2017'
+        assert_includes script_ids, 'csp2-2017'
         refute_includes script_ids, 'csp2-alt'
-        assert_includes script_ids, 'csp3'
+        assert_includes script_ids, 'csp3-2017'
       end
 
       it 'includes default csp scripts for user without experiment' do
         user_id = 1
         valid_scripts = DashboardSection.valid_scripts(user_id)
         script_names = valid_scripts.map {|script| script[:script_name]}
-        assert_includes script_names, 'csp1'
-        assert_includes script_names, 'csp2'
+        assert_includes script_names, 'csp1-2017'
+        assert_includes script_names, 'csp2-2017'
         refute_includes script_names, 'csp2-alt'
-        assert_includes script_names, 'csp3'
+        assert_includes script_names, 'csp3-2017'
 
-        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2'}[:name]
+        assert_equal 'Unit 2: Digital Information', valid_scripts.find {|s| s[:script_name] == 'csp2-2017'}[:name]
       end
 
       it 'only hits the database to check hidden script access on subsequent requests without experiment' do
@@ -279,10 +279,10 @@ class SectionApiHelperTest < SequelTestCase
         user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
         valid_scripts = DashboardSection.valid_scripts(user_id)
         script_names = valid_scripts.map {|script| script[:script_name]}
-        assert_includes script_names, 'csp1'
-        refute_includes script_names, 'csp2'
+        assert_includes script_names, 'csp1-2017'
+        refute_includes script_names, 'csp2-2017'
         assert_includes script_names, 'csp2-alt'
-        assert_includes script_names, 'csp3'
+        assert_includes script_names, 'csp3-2017'
 
         # Without an entry in the i18n gsheet, the script name is shown.
         assert_equal 'csp2-alt', valid_scripts.find {|s| s[:script_name] == 'csp2-alt'}[:name]
@@ -306,7 +306,7 @@ class SectionApiHelperTest < SequelTestCase
 
           # Initially, the user sees the default scripts.
           script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-          assert_includes script_names, 'csp2'
+          assert_includes script_names, 'csp2-2017'
           refute_includes script_names, 'csp2-alt'
 
           Dashboard.db[:experiments].insert(
@@ -321,14 +321,14 @@ class SectionApiHelperTest < SequelTestCase
           # the default scripts.
           Timecop.travel 59
           script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-          assert_includes script_names, 'csp2'
+          assert_includes script_names, 'csp2-2017'
           refute_includes script_names, 'csp2-alt'
 
           # Beyond 60 seconds after the experiment is set, the user sees the
           # alternate scripts.
           Timecop.travel 2
           script_names = DashboardSection.valid_scripts(user_id).map {|script| script[:script_name]}
-          refute_includes script_names, 'csp2'
+          refute_includes script_names, 'csp2-2017'
           assert_includes script_names, 'csp2-alt'
 
           Timecop.return
@@ -356,16 +356,16 @@ class SectionApiHelperTest < SequelTestCase
         test_locale = :"te-ST"
         I18n.locale = test_locale
         custom_i18n = {
-          "csp_name" => "CS Principles",
+          "csp-2017_name" => "CS Principles",
           "full_course_category_name" => "Full Courses"
         }
         I18n.backend.store_translations test_locale, custom_i18n
 
-        csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp'}
+        csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp-2017'}
         expected = {
           id: 15,
           name: 'CS Principles',
-          script_name: 'csp',
+          script_name: 'csp-2017',
           category: 'Full Courses',
           position: 0,
           category_priority: 0,
@@ -403,393 +403,6 @@ class SectionApiHelperTest < SequelTestCase
     before do
       DashboardSection.clear_caches
       FakeDashboard.use_fake_database
-    end
-
-    describe 'create' do
-      it 'creates a row in the database with defaults' do
-        params = {
-          user: {id: 15, user_type: 'teacher'}
-        }
-        Dashboard.db.transaction(rollback: :always) do
-          row_id = DashboardSection.create(params)
-
-          row = Dashboard.db[:sections].where(id: row_id).first
-          assert_equal 15, row[:user_id]
-          assert_equal 'New Section', row[:name]
-          assert_equal 'word', row[:login_type]
-          assert_nil row[:script_id]
-          assert_nil row[:course_id]
-          assert_nil row[:grade]
-          assert !row[:code].nil?
-          assert_equal false, row[:stage_extras]
-          assert_equal true, row[:pairing_allowed]
-        end
-      end
-
-      it 'creates a row in the database with name' do
-        params = {
-          user: {id: 15, user_type: 'teacher'},
-          name: 'My cool section'
-        }
-        Dashboard.db.transaction(rollback: :always) do
-          row_id = DashboardSection.create(params)
-
-          row = Dashboard.db[:sections].where(id: row_id).first
-          assert_equal 15, row[:user_id]
-          assert_equal 'My cool section', row[:name]
-          assert_equal 'word', row[:login_type]
-          assert_nil row[:script_id]
-          assert_nil row[:course_id]
-          assert_nil row[:grade]
-          assert !row[:code].nil?
-          assert_equal false, row[:stage_extras]
-          assert_equal true, row[:pairing_allowed]
-        end
-      end
-
-      it 'creates a row with a course_id and no script_id' do
-        params = {
-          user: {id: 15, user_type: 'teacher'},
-          course_id: FakeDashboard::COURSES[0][:id]
-        }
-        Dashboard.db.transaction(rollback: :always) do
-          row_id = DashboardSection.create(params)
-
-          row = Dashboard.db[:sections].where(id: row_id).first
-          assert_equal 15, row[:user_id]
-          assert_equal 'New Section', row[:name]
-          assert_equal 'word', row[:login_type]
-          assert_nil row[:script_id]
-          assert_equal params[:course_id], row[:course_id]
-          assert_nil row[:grade]
-          assert !row[:code].nil?
-          assert_equal false, row[:stage_extras]
-          assert_equal true, row[:pairing_allowed]
-        end
-      end
-
-      it 'creates a row with a script_id and no course_id' do
-        params = {
-          user: {id: 15, user_type: 'teacher'},
-          script_id: 1
-        }
-        Dashboard.db.transaction(rollback: :always) do
-          row_id = DashboardSection.create(params)
-
-          row = Dashboard.db[:sections].where(id: row_id).first
-          assert_equal 15, row[:user_id]
-          assert_equal 'New Section', row[:name]
-          assert_equal 'word', row[:login_type]
-          assert_equal 1, row[:script_id]
-          assert_nil row[:course_id]
-          assert_nil row[:grade]
-          refute_nil row[:code]
-          assert_equal false, row[:stage_extras]
-          assert_equal true, row[:pairing_allowed]
-        end
-      end
-
-      it 'creates a row with both a script_id and a course_id' do
-        params = {
-          user: {id: 15, user_type: 'teacher'},
-          course_id: FakeDashboard::COURSES[0][:id],
-          script_id: 1
-        }
-        Dashboard.db.transaction(rollback: :always) do
-          row_id = DashboardSection.create(params)
-
-          row = Dashboard.db[:sections].where(id: row_id).first
-          assert_equal 15, row[:user_id]
-          assert_equal 'New Section', row[:name]
-          assert_equal 'word', row[:login_type]
-          assert_equal 1, row[:script_id]
-          assert_equal params[:course_id], row[:course_id]
-          assert_nil row[:grade]
-          refute_nil row[:code]
-          assert_equal false, row[:stage_extras]
-          assert_equal true, row[:pairing_allowed]
-        end
-      end
-
-      it 'does not create with alternate script id for user without experiment' do
-        user_id = 15
-        script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
-        params = {
-          user: {id: user_id, user_type: 'teacher'},
-          course_id: FakeDashboard::COURSE_CSP[:id],
-
-          # For some reason, params[:script][:id] and params[:script_id] can
-          # both be used to set the script id. However, only
-          # params[:script][:id] is specified by the REST API client, and only
-          # params[:script][:id] is checked for validity. Therefore, only test
-          # params[:script][:id], here and below.
-          script: {id: script_id}
-        }
-        Dashboard.db.transaction(rollback: :always) do
-          row_id = DashboardSection.create(params)
-
-          row = Dashboard.db[:sections].where(id: row_id).first
-          assert_equal user_id, row[:user_id]
-          assert_nil row[:script_id]
-          assert_equal params[:course_id], row[:course_id]
-        end
-      end
-
-      it 'creates with alternate script id for user with experiment' do
-        user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
-        script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
-        params = {
-          user: {id: user_id, user_type: 'teacher'},
-          course_id: FakeDashboard::COURSE_CSP[:id],
-          script: {id: script_id}
-        }
-        Dashboard.db.transaction(rollback: :always) do
-          row_id = DashboardSection.create(params)
-
-          row = Dashboard.db[:sections].where(id: row_id).first
-          assert_equal user_id, row[:user_id]
-          assert_equal script_id, row[:script_id]
-          assert_equal params[:course_id], row[:course_id]
-        end
-      end
-    end
-
-    describe 'update_if_owner' do
-      it 'assigns a script to a section without one' do
-        Dashboard.db.transaction(rollback: :always) do
-          params = {
-            user: {id: 15, user_type: 'teacher'}
-          }
-          section_id = DashboardSection.create(params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_nil row[:course_id]
-          assert_nil row[:script_id]
-
-          script_id = FakeDashboard::SCRIPTS[0][:id]
-
-          update_params = {
-            id: section_id,
-            user: {id: 15, user_type: 'teacher'},
-            script: {id: script_id},
-            pairing_allowed: true,
-            stage_extras: false
-          }
-          DashboardSection.update_if_owner(update_params)
-
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal script_id, row[:script_id]
-        end
-      end
-
-      it 'assigns a course to a section without one' do
-        Dashboard.db.transaction(rollback: :always) do
-          params = {
-            user: {id: 15, user_type: 'teacher'}
-          }
-          section_id = DashboardSection.create(params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_nil row[:course_id]
-          assert_nil row[:script_id]
-
-          course_id = FakeDashboard::COURSES[0][:id]
-
-          update_params = {
-            id: section_id,
-            user: {id: 15, user_type: 'teacher'},
-            course_id: course_id,
-            pairing_allowed: true,
-            stage_extras: false
-          }
-          DashboardSection.update_if_owner(update_params)
-
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal course_id, row[:course_id]
-        end
-      end
-
-      it 'assigns a course and script to a section' do
-        Dashboard.db.transaction(rollback: :always) do
-          params = {
-            user: {id: 15, user_type: 'teacher'}
-          }
-          section_id = DashboardSection.create(params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_nil row[:course_id]
-          assert_nil row[:script_id]
-
-          course_id = FakeDashboard::COURSES[0][:id]
-          script_id = FakeDashboard::SCRIPTS[0][:id]
-
-          update_params = {
-            id: section_id,
-            user: {id: 15, user_type: 'teacher'},
-            course_id: course_id,
-            script: {id: script_id},
-            pairing_allowed: true,
-            stage_extras: false
-          }
-          DashboardSection.update_if_owner(update_params)
-
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal course_id, row[:course_id]
-          assert_equal script_id, row[:script_id]
-        end
-      end
-
-      it 'does not assign invalid script ids to user without experiment' do
-        Dashboard.db.transaction(rollback: :always) do
-          params = {
-            user: {id: 15, user_type: 'teacher'}
-          }
-          section_id = DashboardSection.create(params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_nil row[:course_id]
-          assert_nil row[:script_id]
-
-          course_id = FakeDashboard::COURSE_CSP[:id]
-          script_id = 999
-
-          update_params = {
-            id: section_id,
-            user: {id: 15, user_type: 'teacher'},
-            course_id: course_id,
-            script: {id: script_id},
-            pairing_allowed: true,
-            stage_extras: false
-          }
-
-          DashboardSection.update_if_owner(update_params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal course_id, row[:course_id]
-          assert_nil row[:script_id], 'does not assign invalid script ids'
-
-          script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
-          DashboardSection.update_if_owner(update_params.merge(script: {id: script_id}))
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal course_id, row[:course_id]
-          assert_nil row[:script_id],
-            'does not assign alternate script ids to user without experiment'
-        end
-      end
-
-      it 'assigns alternate script ids to user with experiment' do
-        Dashboard.db.transaction(rollback: :always) do
-          user_id = FakeDashboard::CSP2_ALT_EXPERIMENT[:min_user_id]
-          params = {
-            user: {id: user_id, user_type: 'teacher'}
-          }
-          section_id = DashboardSection.create(params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_nil row[:course_id]
-          assert_nil row[:script_id]
-
-          course_id = FakeDashboard::COURSE_CSP[:id]
-          script_id = FakeDashboard::SCRIPT_CSP2_ALT[:id]
-
-          update_params = {
-            id: section_id,
-            user: {id: user_id, user_type: 'teacher'},
-            course_id: course_id,
-            script: {id: script_id},
-            pairing_allowed: true,
-            stage_extras: false
-          }
-
-          DashboardSection.update_if_owner(update_params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal course_id, row[:course_id]
-          assert_equal script_id, row[:script_id]
-        end
-      end
-
-      it 'replaces a script assignment with a course assignment' do
-        Dashboard.db.transaction(rollback: :always) do
-          params = {
-            user: {id: 15, user_type: 'teacher'},
-            script_id: 1
-          }
-          section_id = DashboardSection.create(params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_nil row[:course_id]
-          assert_equal 1, row[:script_id]
-
-          course_id = FakeDashboard::COURSES[0][:id]
-
-          update_params = {
-            id: section_id,
-            user: {id: 15, user_type: 'teacher'},
-            course_id: course_id,
-            pairing_allowed: true,
-            stage_extras: false
-          }
-          DashboardSection.update_if_owner(update_params)
-
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal course_id, row[:course_id]
-          assert_nil row[:script_id]
-        end
-      end
-
-      it 'replaces a course assignment with a script assignment' do
-        Dashboard.db.transaction(rollback: :always) do
-          course_id = FakeDashboard::COURSES[0][:id]
-          script_id = FakeDashboard::SCRIPTS[0][:id]
-
-          params = {
-            user: {id: 15, user_type: 'teacher'},
-            course_id: course_id
-          }
-          section_id = DashboardSection.create(params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal course_id, row[:course_id]
-          assert_nil row[:script_id]
-
-          update_params = {
-            id: section_id,
-            user: {id: 15, user_type: 'teacher'},
-            course_id: nil,
-            script: {id: script_id},
-            pairing_allowed: true,
-            stage_extras: false
-          }
-          DashboardSection.update_if_owner(update_params)
-
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_nil row[:course_id]
-          assert_equal script_id, row[:script_id]
-        end
-      end
-
-      it 'replaces a course and script assignment with an empty assignment' do
-        Dashboard.db.transaction(rollback: :always) do
-          course_id = FakeDashboard::COURSES[0][:id]
-          script_id = FakeDashboard::SCRIPTS[0][:id]
-
-          params = {
-            user: {id: 15, user_type: 'teacher'},
-            course_id: course_id,
-            script_id: script_id,
-          }
-          section_id = DashboardSection.create(params)
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_equal course_id, row[:course_id]
-          assert_equal 1, row[:script_id]
-
-          update_params = {
-            id: section_id,
-            user: {id: 15, user_type: 'teacher'},
-            course_id: nil,
-            script_id: nil,
-            pairing_allowed: true,
-            stage_extras: false
-          }
-          DashboardSection.update_if_owner(update_params)
-
-          row = Dashboard.db[:sections].where(id: section_id).first
-          assert_nil row[:course_id]
-          assert_nil row[:script_id]
-        end
-      end
     end
 
     describe 'teachers' do
@@ -857,6 +470,7 @@ class SectionApiHelperTest < SequelTestCase
                 secret_picture_path: nil,
                 location: "/v2/users/#{FakeDashboard::STUDENT[:id]}",
                 age: nil,
+                # completed_levels_count is deprecated and will always be 0
                 completed_levels_count: 0
               }
             ],
@@ -894,7 +508,8 @@ class SectionApiHelperTest < SequelTestCase
                 secret_picture_path: nil,
                 location: "/v2/users/#{FakeDashboard::STUDENT[:id]}",
                 age: nil,
-                completed_levels_count: 1
+                # completed_levels_count is deprecated and will always be 0
+                completed_levels_count: 0
               }
             ],
             students

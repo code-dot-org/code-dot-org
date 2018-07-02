@@ -2,22 +2,30 @@
  * Workshop management buttons (view, edit, delete).
  */
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from './confirmation_dialog';
-import Permission from '../../permission';
+import {
+  PermissionPropType,
+  Organizer,
+  ProgramManager
+} from '../permission';
 
-export default class WorkshopManagement extends React.Component {
+export class WorkshopManagement extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
 
   static propTypes = {
+    permission: PermissionPropType.isRequired,
     workshopId: PropTypes.number.isRequired,
     subject: PropTypes.string,
     viewUrl: PropTypes.string.isRequired,
     editUrl: PropTypes.string,
     onDelete: PropTypes.func,
-    showSurveyUrl: PropTypes.bool
+    showSurveyUrl: PropTypes.bool,
+    date: PropTypes.string
   };
 
   static defaultProps = {
@@ -25,16 +33,22 @@ export default class WorkshopManagement extends React.Component {
     onDelete: null
   };
 
-  componentWillMount() {
-    if (this.props.showSurveyUrl) {
-      this.permission = new Permission();
+  constructor(props) {
+    super(props);
 
+    if (props.showSurveyUrl) {
       let surveyBaseUrl;
 
-      if (this.props.subject === '5-day Summer') {
+      if (
+        [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(props.subject)
+        && new Date(this.props.date).getFullYear() >= 2018
+      ) {
+        // TODO(Andrew/Mehal): Now that this includes Teachercon it should be renamed
+        surveyBaseUrl = "local_summer_workshop_daily_survey_results";
+      } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = "local_summer_workshop_survey_results";
       } else {
-        surveyBaseUrl = this.permission.isOrganizer ? "organizer_survey_results" : "survey_results";
+        surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager) ? "organizer_survey_results" : "survey_results";
       }
 
       this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
@@ -147,3 +161,7 @@ export default class WorkshopManagement extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.permission
+}))(WorkshopManagement);

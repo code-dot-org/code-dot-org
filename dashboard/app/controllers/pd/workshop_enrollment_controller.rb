@@ -7,7 +7,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   # GET /pd/workshops/1/enroll
   def new
-    view_options(no_footer: true)
+    view_options(no_footer: true, answerdash: true)
     @workshop = ::Pd::Workshop.find_by_id params[:workshop_id]
 
     if @workshop.nil?

@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Hvordan undervise i kodetimen </h1>
 
-Bli med og introduser en gruppe elever til deres første time i informatikk ved å følge disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig](%= resolve_url('https://code.org/volunteer/local') %) som kan hjelpe til med å organisere Kodetimen for klassen din.
+Bli med og introduser en gruppe elever til deres første time i informatikk ved å følge disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Se denne veiledningsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,18 +33,18 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 ## 5. Start Kodetimen med en inspirerende foreleser eller en video
 
-**Inviter en [lokal frivillig](%= resolve_url('https://code.org/volunteer/local') %) som kan inspirere elevene ved å fortelle om det mangfold av muligheter som finnes innenfor informatikkens verden.** Tusenvis av frivillige over hele verden står klar til å hjelpe deg med Kodetimen enten ved å komme på besøk i klasserommet, eller ved å delta ved videosamtale.
+**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Vis en inspirerende video:**
 
 - Den opprinnelige lanseringsvideoen fra Code.org med Bill Gates, Mark Zuckerberg og NBA-stjerne Chris Bosh. (Finnes i versjoner på [1 minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA).)
-- Finn flere inspirerende [ressurser](%= resolve_url('https://code.org/inspire') %) og [videoer](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Det er helt greit om hverken du eller elevene har noen tidligere erfaring med informatikk. Her er noen tips til hvordan du kan introdusere Kodetimen:**
 
 - Forklar hvordan informasjonsteknologi påvirker livene våre. Bruk gjerne eksempler som både jenter og gutter kan kjenne seg igjen i (snakk om hvordan teknologi kan redde liv, forenkle hverdagen vår, om sosiale medier og kommunikasjon, o. l.).
 - Gå sammen i klassen om å lage en liste over ting vi bruker i hverdagen, som inneholder programkode.
-- Vi har samlet [noen tips](%= resolve_url('https://code.org/girls')%) for å få jenter mer interessert i informatikk.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
 
 ## 6. Koding!
 
@@ -79,7 +79,7 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 [/col-33]
 
-- [Skriv ut diplomer](%= resolve_url('https://code.org/certificates')%) til elevene.
+- [Print certificates](%= codeorg_url('/certificates')%) for your students.
 - [Skriv ut "Jeg gjennomførte Kodetimen!"](%= resolve_url('/promote/resources#stickers') %)-klistremerker til elevene.
 - [Bestill t-skjorter ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skolen din.
 - Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
@@ -101,7 +101,7 @@ Ta med hodetelefoner til elevene dine, eller be de ta med sine egne, dersom oppl
 
 Kodetimen er bare første steg på en reise for å lære seg mer om hvordan teknologien fungerer og hvordan du kan lage dine egne programmer. For å fortsette på denne reisen:
 
-- Oppmuntre elevene til å fortsette å [lære på nettet](%= resolve_url('https://code.org/learn/beyond')%).
-- [Delta](%= resolve_url('https://code.org/professional-development-workshops') %) på et endags-seminar for å lære av en erfaren informatikklærer. (Bare i USA.)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

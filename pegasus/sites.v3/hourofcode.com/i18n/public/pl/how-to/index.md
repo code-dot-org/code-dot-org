@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Jak przeprowadzić jedną Godzinę Kodowania</h1>
 
-Przyłącz się do inicjatywy i pomóż grupie uczniów zapoznać się z informatyką za pomocą następujących kroków. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli chcieliby Państwo dodatkowych rąk do pomocy, można znaleźć [ wolontariusza w okolicy](<%= resolve_url('https://code.org/volunteer/local') %>), który pomoże przeprowadzić Godzinę Kodowania w Waszej klasie.
+Przyłącz się do inicjatywy i pomóż grupie uczniów zapoznać się z informatyką za pomocą następujących kroków. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,18 +33,18 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 ## 5. Rozpocznij swoją Godzinę Kodowania od obejrzenia inspirującego filmu
 
-**Zaproś [lokalnego wolontariusza](<%= resolve_url('https://code.org/volunteer/local') %>), aby zainspirował Twoich uczniów opowieścią o wachlarzu możliwości w dziedzinie informatyki.** Tysiące wolontariuszy na całym świecie jest gotowych do pomocy przy Twojej Godzinie Kodowania, albo odwiedzając klasę albo za pośrednictwem wideo-rozmowy z uczniami!
+**Invite a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Pokaż inspirujący film:**
 
 - W oryginalnym wideo Code.org występują Bill Gates, Mark Zuckerberg i gwiazda NBA Chris Bosh. (Do wyboru są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) oraz [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Znajdź więcej inspirujących [zasobów](<%= resolve_url('https://code.org/inspire') %>) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Jeśli Ty i Twoi uczniowie jesteście nowicjuszami w informatyce, to nie problem. Oto kilka pomysłów na rozpoczęcie Godziny Kodowania:**
 
 - Wyjaśnij, jak technologia wpływa na nasze życie, używając przykładów, które zainteresują zarówno chłopców, jak i dziewczęta (opowiedz o ratowaniu życia, pomaganiu ludziom, łączeniu ludzi itp.).
 - Wymieńcie wspólnie rzeczy, które używają kodu w życiu codziennym.
-- Zobacz [tutaj](<%= resolve_url('https://code.org/girls') %>) porady, jak zainteresować informatyką dziewczęta.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
 
 ## 6. Programuj!
 
@@ -79,7 +79,7 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 [/col-33]
 
-- [Wydrukuj świadectwa](<%= resolve_url('https://code.org/certificates') %>) dla swoich uczniów.
+- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
 - [Wydrukuj naklejki "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) dla swoich uczniów.
 - [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twojej szkoły.
 - Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
@@ -101,7 +101,7 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-- Zachęć uczniów do kontynuowania [nauki online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Weź udział](<%= resolve_url('https://code.org/professional-development-workshops') %>) w jednodniowych warsztatach, aby otrzymać wskazówki od doświadczonego instruktora informatyki. (Tylko dla edukatorów z USA)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -14,52 +14,6 @@ describe('achievements', () => {
     });
   });
 
-  describe('numberOfBlocks', () => {
-    it('returns null if block limit is undefined', () => {
-      const state = {
-        feedback: {
-          blockLimit: undefined,
-        }
-      };
-      expect(achievements.numberOfBlocks(state)).to.be.null;
-    });
-
-    it('returns null if block limit is Infinity', () => {
-      const state = {
-        feedback: {
-          blockLimit: Infinity,
-        }
-      };
-      expect(achievements.numberOfBlocks(state)).to.be.null;
-    });
-
-    it('is achieved if blocks used is under the limit', () => {
-      const state = {
-        feedback: {
-          blocksUsed: 7,
-          blockLimit: 11,
-        }
-      };
-      expect(achievements.numberOfBlocks(state)).to.include({
-        isAchieved: true,
-        message: 'Fewer than 11 blocks used!',
-      });
-    });
-
-    it('is not achieved if blocks used is under the limit', () => {
-      const state = {
-        feedback: {
-          blocksUsed: 17,
-          blockLimit: 11,
-        }
-      };
-      expect(achievements.numberOfBlocks(state)).to.include({
-        isAchieved: false,
-        message: 'Using too many blocks',
-      });
-    });
-  });
-
   describe('usingHints', () => {
 
     it('is achieved if you used one hint', () => {

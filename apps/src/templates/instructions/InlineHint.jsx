@@ -1,5 +1,4 @@
-/* eslint-disable react/no-danger */
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
@@ -10,9 +9,8 @@ import { convertXmlToBlockly } from './utils';
 import VideoThumbnail from '../VideoThumbnail';
 import { videoDataShape } from '../types';
 
-const InlineHint = React.createClass({
-
-  propTypes: {
+class InlineHint extends React.Component {
+  static propTypes = {
     block: PropTypes.object, // XML
     borderColor: PropTypes.string,
     content: PropTypes.string.isRequired,
@@ -20,32 +18,34 @@ const InlineHint = React.createClass({
     ttsUrl: PropTypes.string,
     ttsMessage: PropTypes.string,
     isBlockly: PropTypes.bool,
-  },
+  };
 
   componentDidMount() {
     if (this.props.isBlockly) {
       convertXmlToBlockly(ReactDOM.findDOMNode(this));
     }
-  },
+  }
 
-  onVideoClick() {
+  onVideoClick = () => {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'hint-videos',
         event: 'click',
         data_string: this.props.video.key,
       },
-      { includeUserId: true }
+      { includeUserId: true },
     );
-  },
+  };
 
   render() {
+    /* eslint-disable react/no-danger */
     return (
-      <ChatBubble borderColor={this.props.borderColor} ttsUrl={this.props.ttsUrl} ttsMessage={this.props.ttsMessage}>
-        <div
-          dangerouslySetInnerHTML={{ __html: this.props.content }}
-        />
+      <ChatBubble
+        borderColor={this.props.borderColor}
+        ttsUrl={this.props.ttsUrl}
+        ttsMessage={this.props.ttsMessage}
+      >
+        <div dangerouslySetInnerHTML={{ __html: this.props.content }} />
         {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
         {this.props.video &&
           <VideoThumbnail
@@ -55,9 +55,9 @@ const InlineHint = React.createClass({
         }
       </ChatBubble>
     );
+    /* eslint-enable react/no-danger */
   }
-
-});
+}
 
 export const StatelessInlineHint = Radium(InlineHint);
 export default connect(state => ({

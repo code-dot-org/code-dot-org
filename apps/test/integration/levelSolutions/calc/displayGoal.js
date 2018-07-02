@@ -1,4 +1,4 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var Calc = require('@cdo/apps/calc/calc.js');
 var EquationSet = require('@cdo/apps/calc/equationSet.js');
 var Equation = require('@cdo/apps//calc/equation.js');

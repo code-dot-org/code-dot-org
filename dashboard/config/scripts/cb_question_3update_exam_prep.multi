@@ -1,0 +1,14 @@
+name 'CB_Question_3update_exam_prep'
+wrong 'ASCII Character: <code> A </code>'
+right 'ASCII Character: <code> B </code>'
+wrong 'ASCII Character: <code> D </code>'
+wrong 'The table does not contain the value represented by the binary number <code>0100  0010</code>'
+
+markdown <<MARKDOWN
+ASCII is a character-encoding scheme that uses a numeric value to represent each character. For example, the uppercase letter "G" is represented by the decimal (base 10) value 71. A partial list of characters and their corresponding ASCII values are shown in the table below. 
+
+<img src="https://images.code.org/b904412c88623430eb43aea06b334af7-image-1461448943197.PNG" width="500">
+
+ASCII characters can also be represented by binary numbers. According to ASCII character encoding, which of the following letters is represented by the 8-bit binary value: `0100 0010`
+
+MARKDOWN

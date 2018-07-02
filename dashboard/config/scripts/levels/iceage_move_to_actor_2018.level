@@ -51,6 +51,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "remove_items_when_actor_collides": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

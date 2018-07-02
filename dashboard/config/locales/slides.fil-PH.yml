@@ -1,4 +1,5 @@
-"fil":
+---
+fil:
   slides:
     maze_intro:
       1:
@@ -4195,371 +4196,434 @@
           na makina ngunit sila ay gumagawa pa rin ng parehong apat na mga bagay.
       7:
         image: notes/csd_concept_computer_7.png
-        text: First, we're going to talk about input. You can tell computers what
-          to do with the keyboard, you can tell them what to do with the mouse, the
-          microphone, the camera. All these different inputs give a computer information,
-          which is then stored in memory.
+        text: Una, pag-uusapan natin ang tungkol sa input. Maaari mong sabihan ang
+          kompyuter kung ano ang gagawin nito gamit ang keyboard, maaari mo silang
+          sabihan kung ano ang dapat gagawin sa mouse, sa mikropono, at sa kamera.
+          Lahat ng mga ito ay iba't ibang mga inputs na nagbibigay ng impormasyon
+          sa kompyuter, kung saan iniimbak ito sa memory.
       8:
         image: notes/csd_concept_computer_8.png
-        text: A computer's processor takes information from memory. It manipulates
-          it or changes it using an algorithm, which is just a series of commands.
-          And then it sends the processed information back to be stored in memory
-          again. This continues until the processed information is ready to be output.
+        text: Ang mga prosesor ng kompyuter ay kumukuha ng mga impormasyon mula sa
+          memory. Ito ay nagmamanipula nito at nagbabago nito gamit ang isang algoritmo,
+          kung saan ito ay mga serye ng mga utos lang. At pagkatapos ay pinapadala
+          nito ang mga naprosesong improsmasyon pabalik para iimbak sa memory ulit.
+          Ito ay magpapatuloy hanggang sa ang naprosesong impormasyon ay handa nang
+          ipalabas.
       9:
         image: notes/csd_concept_computer_9.png
-        text: How a computer outputs information depends on what the computer is designed
-          to do. A computer display can show text, photos, videos, or interactive
-          games -- even virtual reality! The output of a computer may even include
-          signals to control a robot.
+        text: Kung paano nagpapalabas ng mga impormasyon ang kompyuter ay nakadepende
+          kung ano ang dinisenyo nitong gagawin. Ang display ng kompyuter ay maaaring
+          magpakita ng mga teksto, mga larawan, mga video, o mga inter-aktib na mga
+          laro -- kahit na ang virtual reality! Ang output ng kompyuter ay maaari
+          ding maglakip ng mga signal na magkokontrol sa isang robot.
       10:
         image: notes/csd_concept_computer_10.png
-        text: And who knows what the computers of tomorrow will be like? My hope is
-          that you get to help decide what you want the computers of tomorrow to look
-          like. But across all computers, regardless of the different types of technology
-          they use, they're always doing those same four things. They take in information,
-          they store it as data, they process it, and then they output the results.
+        text: At sino ang nakakaalam kung ano ang maging kompyuter sa kinabukasan?
+          Ako ay umaasa na ikaw ay makakatulong sa pagpasya kung ano ang gusto mong
+          mga kompyuter sa kinabukasan. Ngunit sa kabila ng lahat ng mga kompyuter,
+          hindi alintana ang iba't ibang tipo ng teknolohiyang ginagamit dito, sila
+          ay gumagawa pa rin sa mga parehang apat na bagay na mga iyon. Sila ay kumukuha
+          ng mga impormasyon, nag-imbak dito bilang isang datos, nagproproseso nito,
+          at pagkatapos sila ay nagpapalabas ng mga resulta.
     csd_concept_binary_data:
       1:
         image: notes/csd_concept_binary_data_1.png
-        text: Hi! My name is Limor Fried, and I'm an engineer here at Adafruit Industries.
-          And this is where I do engineering and design, and I design circuits for
-          fashion and music and technology.
+        text: Hi! Ang aking pangalan ay Limor Fried, at ako ay isang inhinyero dito
+          sa Adafruit Industries. At ito ay kung saan ginagawa ko ang pag-inhinyero
+          at pagdisenyo, at ako ang nagdidisenyo sa mga circuits para sa fashion at
+          sa musika at teknolohiya.
       2:
         image: notes/csd_concept_binary_data_2.png
-        text: My name is Federico Gomez Suarez, and I'm a software developer with
-          Microsoft Hack for Good. And I look into using technology to help us solve
-          some of the big social problems of our times.
+        text: Ang aking pangalan ay Federico Gomez Suarez, at ako ay isang software
+          developer sa Microsoft Hack for Good. At ako ay nakatingin sa paggamit ng
+          teknolohiya para makatulong na lutasin ang iilang mga malalaking sosyal
+          na mga problema sa panahon natin.
       3:
         image: notes/csd_concept_binary_data_3.png
-        text: You may have heard that computers work on ones and zeros. But almost
-          nobody today actually deals directly with these ones and zeros. But ones
-          and zeroes do play a big role in how computers work on the inside.
+        text: Maaaring nakarinig ka na na ang mga kompyuter ay gumagamit ng mga ones
+          at zeros. Ngunit halos walang tuwirang nakikipag-ugnayan sa mga ones at
+          zeros na ito. Ngunit ang ones at zeroes ay may malaking papel na ginagampanan
+          sa kung paano gumagana ang mga kompyuter sa loob.
       4:
         image: notes/csd_concept_binary_data_4.png
-        text: Inside a computer are electric wires and circuits that carry all the
-          information in a computer. How do you store or represent information using
-          electricity?
+        text: Sa loob ng kompyuter ay mga elektrik na mga wires at circuits na nagdadala
+          sa lahat ng mga impormasyon sa isang kompyuter. Paano mo ba itago o irepresenta
+          ang mga impormasyon gamit ang kuryente?
       5:
         image: notes/csd_concept_binary_data_5.png
-        text: Well, if you have a single wire with electricity flowing through it,
-          the signal could either be on or off. That's not a lot of choices, but it's
-          a really important start. With one wire, we can represent a yes or no, true
-          or false, a one or zero, or anything else with only two options. This on/off
-          state of a single wire is called a bit, and it's the smallest piece of information
-          a computer can store.
+        text: Kung mayroon kang isang wire na may dumadaloy na kuryente sa loob nito,
+          ang signal ay maaaring on o off. Iyan ay hindi isang pulutong na pagpipilian,
+          ngunit ito ay lubhang napakaimportanteng simula. Gamit ang isang wire, maaari
+          tayong magrepresenta ng oo o hindi, tama o mali, isa o zero, or kahit na
+          anong may dalawang pagpipilian lang. Ang on/off na estadong ito sa isang
+          wire ay tinatawag na bit, at ito ang pinakamaliit na piraso ng impormasyon
+          na maaaring itago ng kompyuter.
       6:
         image: notes/csd_concept_binary_data_6.png
-        text: 'If you use more wires you get more bits: more ones and zeros. With
-          more bits you can represent more complex information. But to understand
-          that, we need to learn about something called the binary number system.'
+        text: 'Kung ikaw ay gumagamit ng maraming mga wire, magkakaroon ka ng mas
+          maraming mga bits: maraming ones at zeroes. Kapag may maraming mga bits,
+          maaari kang magrepresenta ng mas komplikadong mga impormasyon. Ngunit para
+          maintindihan natin ito, kailangan nating matutunan ang tungkol sa tinatawag
+          na binary number system.'
       7:
         image: notes/csd_concept_binary_data_7.png
-        text: 'In the decimal number system, we have ten digits from zero to nine,
-          and that''s how we''ve all learned to count. In the binary number system,
-          we only have two digits: zero and one. With these two digits, we can count
-          up to any number.'
+        text: 'Sa decimal number system, mayroon tayong sampung digits mula sa zero
+          hanggang sa siyam, at diyan tayo natututo kung paano magbilang. Sa binary
+          number system, mayroon lang tayong dalawang digits: zero at isa. Gamit ang
+          dalawang mga digit na ito, maaari tayong magbilang hanggang sa anumang numero.'
       8:
         image: notes/csd_concept_binary_data_8.png
-        text: Here's how this works. In a decimal number system we're all used to,
-          each position in a number has a different value. There's a 1 position, the
-          10 position, the 100 position, and so on. For example, a 9 in the 100 position
-          is a 900. In binary, each position also carries a value. But instead of
-          multiplying by 10 each time, we multiply by 2. So there's the 1 position,
-          the 2 position, the 4 position, the 8 position, and so on. For example,
-          the number 9 in binary is 1001. To calculate the value, we add 1 times 8,
-          plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this
-          math because computers do it for us. What's important is that any number
-          can be represented with only ones and zeros, or by a bunch of wires that
-          are on or off. The more wires you use, the larger the numbers you can store.
-          With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With
-          just 32 wires, you can store all the way from 0 to over 4 billion. Using
-          the binary number system, you can represent any number you like.
+        text: Ito ay kung paano ito gumagana. Sa decimal number system, lahat tayo
+          ay nasanay, na bawat posisyon sa isang numero ay may iba't ibang halaga.
+          Mayroon tayong 1 na posisyon, ang 10 na posisyon, ang 100 na posisyon, at
+          iba pa. Halimbawa, ang 9 sa 100 na posisyon ay 900. Sa binary, bawat posisyon
+          ay nagdadala rin ng halaga. Ngunit sa halip na i-multiply ito sa 10 sa bawat
+          pagkakataon, i-multiply natin ito sa 2. Kaya mayroon na tayong 1 na posisyon,
+          2 na posisyon, ang 4 na posisyon, ang 8 na posisyon at iba pa. Halimbawa,
+          ang numerong 9 sa binary ay 1001. Para ma-calculate natin ang halaga, idadag
+          natin ang 1 times 8, dagdagan ng 0 times 4, dagdagan ng 0 times 2, dagdagan
+          ng 1 times 1. Halos walang sinumang gumagawa nito dahil ang mga kompyuter
+          na ang gumagawa nito para sa atin. Ang importante ay kahit anong numero
+          ay maaaring irepresenta gamit ang ones at zeros lang, o sa pamagitan ng
+          mga wires lang na on o off. Kapag marami ang wires na gagamitin mo, lalaki
+          din ang mga numero na maaari mong ilagay. Sa 8 na mga wires, maaari ka nang
+          maglagay ng mga numero sa pagitan ng 0 at 255. Iyang ay walong mga ones.
+          Sa 32 na mga wires lang, maaari ka nang maglagay mula sa 0 hanggang sa 4
+          na bilyon. Gamit ang binary number system, maaari mong irepresenta ang kahit
+          anumang numero na gusto mo.
       9:
         image: notes/csd_concept_binary_data_9.png
-        text: But what about other types of information? Like text, images, or sound?
-          It turns out that all these things can also be represented with numbers.
-          Think of all the letters in the alphabet. You could assign a number to each
-          letter. A could be 1, B could be 2, and so on. You can then represent any
-          word or paragraph as a sequence of numbers. And as we saw, these numbers
-          can be stored as on or off electrical signals. Every word you see on every
-          webpage or your phone is represented using a system like this.
+        text: Ngunit paano na ang ibang tipo ng mga impormasyon? Gaya ng teksto, mga
+          larawan, o tunog? Lilitaw na lahat ng mga bagay na ito ay maaari din nating
+          irepresenta gamit ang numero. Isipin ang mga letra sa alpabeto. Maaari kang
+          magtakda ng isang numero sa bawat letra. A ay maaaring maging 1, B ay maaring
+          maging 2, at iba pa. Maaari mo nang irepresenta ang kahit na anong salita
+          o talata bilang isang sunod-sunod na mga numero. At gaya ng nakikita natin,
+          ang mga numerong ito ay maaaring iimbak bilang isang on o off na mga elektrikal
+          na mga singnals. Bawat salita na makikita mo sa bawat webpage o sa iyong
+          telepono ay kinakatawan gamit ang sistema na kagaya nito.
       10:
         image: notes/csd_concept_binary_data_10.png
-        text: Now, let's consider photos, videos, and all the graphics you see on
-          a screen.
+        text: Ngayon, bigyan nating konsiderasyon ang mga larawan, mga video, at lahat
+          ng mga graphics na makikita mo sa isang screen.
       11:
         image: notes/csd_concept_binary_data_11.png
-        text: All of these images are made out of teeny dots called pixels, and each
-          pixel has a color. Each of the colors can be represented with numbers. When
-          you consider the typical image has millions of these pixels, and the typical
-          video shows 30 images per second now we're talking about a lot of data here.
+        text: Lahat ng mga larawang ito ay binubuo ng mga maliliit na mga tuldok na
+          tinatawag na pixels, at bawat pixel ay mayroong kulay. Bawat isa sa mga
+          kulay ay maaaring irepresenta bilang isang numero. Kung bibigyan mong diin
+          ang isang karaniwang larawan ay mayroon itong milyung-milyon na mga pixel
+          na ito, at ang karaniwang video ay nagpapakita ng 30 na mga larawan sa bawat
+          segundo, at ngayon ay nag-uusap na tayo tungkol sa napakalaking mga datos
+          dito.
       12:
         image: notes/csd_concept_binary_data_12.png
-        text: Every sound is basically a series of vibrations in the air. Vibrations
-          can be represented graphically as a waveform. Any point on this waveform
-          can be represented by a number. And this way, any sound can be broken down
-          into a series of numbers. If you want higher quality sound, you will pick
-          32-bit audio or an 8-bit audio. More bits means a higher range of numbers.
+        text: Bawat tunog ay isang serye ng mga pagyanig lang sa hangin. Ang pagyanig
+          ay maaaring irepresenta graphically bilang isang waveform. Anumang punto
+          sa waveform na ito ay maaaring irepresenta bilang isang numero. At sa ganitong
+          paraan, anumang tunog ay maaari nating pasimplehin sa isang serye ng mga
+          numero. Kung gusto mo nang mas mataas na kalidad ng tunog, pipili ka ng
+          32-bit na audio o isang 8-bit na audio. Ang ibig sabihin ng mas maraming
+          bit ay mas malaking hanay ng mga numero.
       13:
         image: notes/csd_concept_binary_data_13.png
-        text: When you use a computer to write code or make your own app, you're not
-          dealing directly with these ones and zeros. But you will be dealing with
-          images or sound or video. So if you want to understand how computers work
-          on the inside, it all comes down these simple ones and zeros and the electrical
-          signals in the circuits behind them.
+        text: Kapag ikaw ay gumagamit ng kompyuter para magsulat ng code o gumawa
+          ng sarili mong app, hindi ka direktang gumagamit ng mga ones at zeros. Ngunit
+          ikaw ay gagamit ng mga larawan, o tunog, o video. Kaya kung gusto mong malaman
+          kung paano gumagana ang mga kompyuter sa loob, lahat ng mga ito ay babalik
+          sa mga simpleng ones at zeros at mga elektrikal na mga signal sa loob ng
+          mga circuits sa likod nito.
     csd_concept_circuits_logic:
       1:
         image: notes/csd_concept_circuits_logic_1.png
-        text: One of the coolest things I've discovered about circuits is circuitry
-          can be an art form like if I have a creative idea, I can get that creative
-          idea out using circuits. So if you have ideas, you can use technology to
-          make those ideas come to life.
+        text: Isa sa mga pinakaastig na mga bagay na natuklasan ko tungkol sa mga
+          circuits ay ang mga circuitry ay maaari maging isang anyo ng sining gaya
+          na kung mayroon akong malikhaing ideya, maaari kung gawin ang malikhaing
+          ideyang ito gamit ang mga circuits. Kaya kung may mga ideya ka, maaari mong
+          gamitin ang teknolohiya para maisabuhay mo ang mga ideyang iyon.
       2:
         image: notes/csd_concept_circuits_logic_2.png
-        text: Every input or output of a computer is effectively a type of information,
-          which can be represented by on or off electrical signals or ones and zeros.
+        text: Bawat input o output ng kompyuter ay talagang isang uri ng impormasyon,
+          na maaaring i-representa gamit ang on o off na mga elektrikal na mga signals
+          o ones at zeros.
       3:
         image: notes/csd_concept_circuits_logic_3.png
-        text: In order to process the information that comes in as input, and to make
-          the information that is output, a computer needs to modify and combine the
-          input signals. To do this, a computer uses millions of teeny electronic
-          components, which come together to form circuits.
+        text: Para maproseso natin ang mga impormasyon na pumasok bilang mga input,
+          at para magawa natin ang impormasyong iyon bilang isang output. ang kompyuter
+          ay kailangan niyang baguhin at ipagsama ang mga input na mga signals. Para
+          magawa ito, ang kompyuter ay gumagamit ng milyung-milyong malilit na mga
+          bahagi, na pinagsama para bumuo sa mga circuits.
       4:
         image: notes/csd_concept_circuits_logic_4.png
-        text: Let's take a closer look at how circuits can modify and process information
-          that's represented in ones and zeros. This is an incredibly simple circuit.
-          It takes an electrical signal, on or off, and it flips it. So if the signal
-          you give it is a 1, the circuit gives you a 0, and if you give the circuit
-          a 0, it gives you a 1. The signal that goes in is not the same as the signal
-          that comes out, and so we call this circuit NOT.
+        text: Gagawa tayo ng mas malapitang pagtingin sa kung paano ang mga circuits
+          nagbabago at nagproseso ng mga impormaston na kinatawan bilang mga ones
+          at zeros. Ito ay isang sobrang napakasimpleng circuit. Kumukuha lang ito
+          ng mga elektrikal na mga signal, on o off, at binaliktad ito. Kaya kung
+          ang signal na binigay mo ay 1, ang circuit ay magbibigay sa iyo ng 0, at
+          kung bibigyan mo ang circuit ng 0, ito ay magbibigay sa iyo ng 1. Ang signal
+          na pumasok ay hindi parehang signal na lumabas, at kaya tinatawag natin
+          ang circuit na ito na NOT.
       5:
         image: notes/csd_concept_circuits_logic_5.png
-        text: More complicated circuits can take multiple signals and combine them,
-          and give you a different result. In this example, a circuit will take two
-          electrical signals, now each one might be a 1 or a 0. If either of the signals
-          coming in is a 0, then the result is also a 0. This circuit will only give
-          you a 1, if the first signal and the second signal are both a 1, and so
-          we call the circuit AND.
+        text: Ang mas kumplikado pang mga circuit ay maaaring kumuha ng maraming mga
+          signal at ipagsama ang mga ito, at magbigay sa iyo ng iba't ibang resulta.
+          Sa halimbawang ito, ang circuit ay maaaring kumuha ng dalawang elektrikal
+          na mga signal, ngayon ang bawat isa ay maaaring isang 1 o isang 0. Kung
+          aliman sa mga signal na pumasok ay 0, ang resulta ay maging 0 din. Ang circuit
+          na ito ay magbibigay lang ng 1, kung ang unang signal at ang pangalawang
+          signal ay parehong 1, at kaya tinatawag natin ang circuit na ito na AND.
       6:
         image: notes/csd_concept_circuits_logic_6.png
-        text: There are many small circuits like this that perform simple logical
-          calculations. By connecting these circuits together, we can make more complex
-          circuits that perform more complex calculations.
+        text: Mayroong maraming maliliit na mga circuit kagaya nito na gumagawa ng
+          mga simpleng lohikal na mga kalkulasyon. Sa pamamagitan ng pagkonekta sa
+          mga circuits na ito, maaari tayong makagawa ng mas kumplikadong mga circuit
+          na maaaring magsasagawa ng mas kumplikadong mga kalkulasyon.
       7:
         image: notes/csd_concept_circuits_logic_7.png
-        text: For example, you can make a circuit that adds 2 bits together called
-          an adder. This circuit takes in 2 individual bits, each one a 1 or a 0,
-          and adds them together to calculate the sum. The sum can be 0 plus 0 equals
-          0, 0 plus 1 equals 1, or 1 plus 1 equals 2. You need two wires coming out
-          because it can take up to two binary digits to represent the sum. Once you
-          have a single adder for adding two bits of information, you can put together
-          multiples of these adder circuits side-by-side to add together much larger
-          numbers.
+        text: Halimbawa, maaari kang gumawa ng isang circuit na magdagdag ng 2 bits
+          na tinatawag na isang adder. Ang circuit na ito ay kukuha ng dalawang indibidwal
+          na mga bits, bawat isa ay maaaring isang 1 o isang 0, at isama-sama niya
+          ang mga ito para makuha ang kabuuan. Ang kabuuan ay maaring 0 dinagdagan
+          ng 0 ay 0, 0 dinagdagan ng 1 ay 1, o 1 dinagdagan ng 1 ay 2. Kailangan mo
+          nang dalawang wire na lalabas dahil maaari itong aabot sa dalawang binary
+          digits para kumatawan sa kabuuan. Kapag mayroong ka ng isang adder para
+          sa pagdagdag ng dalawang bits ng impormasyon, maaari mo silang ipagsama
+          ang mga adder na circuits na ito para makadagdag ng mas malaki pang mga
+          numero.
       8:
         image: notes/csd_concept_circuits_logic_8.png
-        text: For example, here's how an 8-bit adder adds the numbers 25 and 50. Each
-          number is represented using 8 bits, resulting in 16 different electrical
-          signals that go into the circuit. The circuit for an 8-bit adder has lots
-          of little adders inside of it, which together, calculate the sum.
+        text: Halimbawa, ito ay kung paano ang 8-bit adder magdadag ng mga numerong
+          25 at 50. Bawat numero ay irepresenta gamit ang 8 bits, na nagresulta sa
+          18 na ibabang elektrikal na signal na papasok sa circuit. Ang circuit para
+          sa isang 8-bit adder ay mayroong napakaraming maliliit na mga adder sa loob
+          nito, na pinagsama, para makuha ang kabuuan.
       9:
         image: notes/csd_concept_circuits_logic_9.png
-        text: Different electrical circuits can perform other simple calculations
-          like subtraction or multiplication. In fact, all the information processing
-          your computer does is just lots and lots of small simple operations put
-          together. Each individual operation done by a computer is so, so simple
-          it could be done by a human, but these circuits inside computers are way
-          way faster.
+        text: Iba-ibang mga elektrikal na mga circuits ay maaaring gagawa ng ibang
+          simpleng kalkulasyon gaya ng pagbabawas o pagpaparami. Sa katunayan, lahat
+          ng mga pagproseso ng mga impormasyon sa iyong kompyuter ay isa lang napakaraming
+          malilit na mga simpleng operasyon na pinagsama. Bawat indibidwal na operasyon
+          na ginagawa ng kompyuter ay napakasimple lang na maaari lang magawa ng tao,
+          ngunit ang mga circuits sa loob ng mga kompyuter ay talagang mas mabilis.
       10:
         image: notes/csd_concept_circuits_logic_10.png
-        text: Back in the day, these circuits were big and clunky, and an 8-bit adder
-          could be as big as a fridge, and it would take minutes for them to perform
-          a simple calculation. Today, computer circuits are microscopic in size,
-          and way way faster. Why are smaller computers also faster? Well, because
-          the smaller the circuit is, the less distance the electrical signal has
-          to go. Electricity moves at just about the speed of light, which is why
-          modern circuits can perform billions of calculations per second.
+        text: Noong una, ang mga circuit na ito ay malalaki at mababagal, at ang 8-bit
+          na adder ay maaaring kasing laki ng isang ref, at aabot ito nang ilang minuto
+          bago nito magawa ang isang simpleng kalkulasyon. Ngayon, ang mga circuits
+          ng kompyuter ay lubhang maliliit ang laki, at lubhang mas mabilis. Bakit
+          ang mga maliliit na mga kompyuter ay mas mabilis din? Ito ay dahil ang mga
+          maliliit na mga circuit, ay mas malapit ang distansya na paglalakbayan ng
+          mga elektrical na mga signal. Ang kuryente ay gumagalaw sa bilis ng liwanag,
+          kung saan ang naging dahilan kung bakit ang mga modernong circuits ay maaaring
+          gumawa ng bilyung-bilyong mga kalkulasyon kada segundo.
       11:
         image: notes/csd_concept_circuits_logic_11.png
-        text: So whether you're playing a game, recording a video, or exploring the
-          cosmos, everything you could possibly do with technology requires lots of
-          information to be processed extremely quickly. Underneath all this complexity
-          is just lots of teeny little circuits that turn binary signals into websites,
-          videos, music, and games. These circuits can even help us decode DNA to
-          diagnose and cure disease. So what would you like to do with all these circuits?
+        text: Kaya kung ikaw man ay naglalaro ng isang laro, nagtatala ng isang video,
+          o naggalugad sa kalawakan, lahat ng maaari mong magawa gamit ang teknolohiya
+          ay nangangailangan ng napakaraming impormasyon na kailangan iproseso nang
+          madalian. Sa likod ng kasalimuutang ito ay ang mga maliliit lang na mga
+          circuit na gumagamit ng mga binary na mga signal para gawing mga websites,
+          mga videos, musika, at mga laro. Ang mga circuits na ito ay maaari ding
+          makatulong sa atin na mag-decode ng mga DNA para makapag-diagnose at makagamot
+          ng mga sakit. Kaya ano ang gusto mong gawin sa mga lahat ng mga circuits
+          na ito?
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
-        text: Hi, my name is Madison Maxey. I have a company called Loomia, and we
-          focus on making smart fabrics for smart clothing and smart soft good products.
-          The sky's the limit when it comes to textiles.
+        text: Hi, ang pangalan ko ay Madison Maxey. Mayroon akong kumpanya na tinatawag
+          na Loomia, at kami ay nagtutuon sa paggawa ng matatatalinong mga tela para
+          sa matalinong mga kasuotan at matalinong malambot at mabuting mga produkto.
+          Kung ito ay tungkol sa mga tela, ang daming mga posibilidad.
       2:
         image: notes/csd_concept_memory_cpu_input_output_2.png
-        text: My name is Danielle Applestone, and I'm CEO of Othermachine Company.
-          We build a desktop milling machine. A milling machine takes a rotating cutting
-          tool and moves it through material to create a 3D object.
+        text: Ang pangalan ko ay Danielle Applestone, at ako ang CEO ng Othermachine
+          Company. Gumagawa kami ng isang desktop na paggiling na makina. Ang paggiling
+          na makina ay gumagamit ng isang umiikot na pangputol na kagamitan at pinagalaw
+          ito sa isang materyal para makalikha ng isang 3D na object.
       3:
         image: notes/csd_concept_memory_cpu_input_output_3.png
-        text: Under the hood, all computers do the same four basic things. They input
-          information, store and process the information, and then, output information.
-          Each of these things is done by a different part of the computer.
+        text: Sa likod nito, lahat ng mga kompyuter ay gumagawa lang ng apat na mga
+          pangunahing bagay. Sila ay nag-input ng mga impormasyon, nag-imbak at nagproseso
+          ng mga impormasyon, at pagkatapos, nagpalabas ng mga impormasyon. Bawat
+          isa sa mga bagay na ito ay ginagawa sa iba't ibang bahagi ng kompyuter.
       4:
         image: notes/csd_concept_memory_cpu_input_output_4.png
-        text: There are input devices that take input from the outside world and convert
-          it into binary information. There is memory to store this information. There's
-          a central processing unit or CPU, where all the calculations are done. And,
-          finally, there are output devices that take information and convert it into
-          a physical output.
+        text: Mayroong mga pang-input na mga kagamitan na kumukuha ng mga input mula
+          sa labas ng mundo at gumawa nitong binary na impormasyon. Mayroong memory
+          para ilagay ang mga impormasyong ito. Mayroon ding isang central process
+          unit o CPU, kung saan ginagawa ang lahat ng mga kalkulasyon. At, sa wakas,
+          mayroong mga pang-out na mga kagamitan na kumukuha ng mga impormasyon at
+          ginawa itong isang pisikal na output.
       5:
         image: notes/csd_concept_memory_cpu_input_output_5.png
-        text: Let's talk about input first. Computers can take many different types
-          of input, like the keyboard of a computer, the touchpad of a phone, a camera,
-          a microphone, or a GPS. But even the sensors on a car, a thermostat, or
-          a drone are also different input devices.
+        text: Pag-usapan muna natin ang tungkol sa mga input. Ang mga kompyuter ay
+          maaaring kumuha ng naparakaraming tipo ng input, gaya ng keyboard ng isang
+          kompyuter, touchpad ng telepono, ang kamera, ang mikropono, o ang GPS. Kahit
+          na nga mga sensor na nasa sasakyan, sa thermostat, o isang drone ay mga
+          iba't ibang klase din na mga pang-input na mga kagamitan.
       6:
         image: notes/csd_concept_memory_cpu_input_output_6.png
-        text: Now, let's look at a simple example of how input travels through a computer
-          and becomes output. When you press a key on your keyboard - let's say the
-          letter "B". The keyboard converts the letter to a number. That number is
-          sent as binary, ones and zeros, into the computer.
+        text: Ngayon, tingnan natin ang isang simpleng halimba kung paano naglakbay
+          ang input sa kompyuter at naging isang output. Kapag nagpindot ka ng isang
+          key sa iyong keyboard - sabihin na nating letrang "B". Ang keyboard ay nagpalit
+          sa letra sa isang numero. Ang numerong iyon ay pinadala bilang isang binary,
+          ones at zeros, sa loob ng kompyuter.
       7:
         image: notes/csd_concept_memory_cpu_input_output_7.png
-        text: Starting from this number, the CPU calculates how to display the letter
-          "B" pixel by pixel. The CPU requests step-by-step instructions from memory,
-          which tell it how to draw the letter "B". The CPU runs these instructions
-          and stores the results as pixels in memory.
+        text: Simula sa numerong ito, ang CPU ay nagtataya kung paano niya ipakita
+          ang letrang "B" pixel sa pixel. Ang CPU ay humiling ng sunod-sunod na mga
+          instruksion mula sa memory, na nagsasabi dito kung paano iguhit ang letrang
+          "B". Ang CPU ay nagpapatakbo sa mga instruksiyong ito at naglagay sa mga
+          resulta bilang isang mga pixels sa loob ng memory.
       8:
         image: notes/csd_concept_memory_cpu_input_output_8.png
-        text: Finally, this pixel information is sent in binary to the screen. The
-          screen is an output device, which converts the binary signals into the tiny
-          lights and colors that make up what you see.
+        text: Sa wakas. ang pixel na impormasyong ito ay pinadala bilang binary sa
+          screen. Ang screen ay isang pang-output na kagamitan, na nag-convert ng
+          mga binary na mga signal sa maliliit na mga liwanag at mga kulay na bumubuo
+          sa makikita mo.
       9:
         image: notes/csd_concept_memory_cpu_input_output_9.png
-        text: This all happens so quickly it feels instantaneous, but to display each
-          letter a computer runs thousands of instructions, starting from the moment
-          your finger presses the key point.
+        text: Ang lahat ng ito ay nangyari kaagad nang hindi mo namamalayan, ngunit
+          ang pagpakita ng isang letra ay nangangailangan ng libu-libong mga instruksiyon,
+          simula sa mga sandaling pinindot mo ang key point sa iyong mga daliri.
       10:
         image: notes/csd_concept_memory_cpu_input_output_10.png
-        text: In that example, the output device was the screen, but there are many
-          different types of output which take a binary signal from the computer and
-          do something in the physical world. For example, a speaker will play sound,
-          and a 3D printer will print an object. Output devices can also control physical
-          motion like a robotic arm, the motor of a car, or the cutting tool of the
-          milling machine that my company makes. New types of inputs and outputs let
-          computers interact with the world in entirely new ways. This has been helped
-          out by improvements to the speed and size of the memory and CPU.
+        text: Sa halimbawang iyan, ang pang-output na kagamitan ay ang screen, pero
+          mayroon pang napakaraming tipo ng output na kukuha ng mga binary signal
+          mula sa isang kompyuter at gumagawa ng isang bagay sa pisikal na mundo.
+          Halimbawa, ang mga speaker ay nagpapatunog ng tunog, ang 3D na printer ay
+          naglimbag ng isang kagamitan. Ang mga pang-output na mga kagamitan at maaari
+          ding magkontrol sa mga pisikal na galaw gaya ng isang robotic na kamay,
+          ang motor ng isang sasakyan, o ang panggupit na kagamitan ng panggiling
+          na makina na ginagawa ng aking kumpanya. Ang mga bagong tipo ng mga inputs
+          at mga outputs ay nagbigay daan sa mga kompyuter na makipag-ugnayan sa mundo
+          sa sadyang mga bagong pamamaraan. Ito ay lubhang natutulungan sa pamamagitan
+          ng pagpapahusay sa mga bilis at laki ng mga memory at ng CPU.
       11:
         image: notes/csd_concept_memory_cpu_input_output_11.png
-        text: The more complicated a task is and the more information that is input
-          or output, the more processing power and memory a computer needs. Typing
-          letters on a screen may be easy but to do complicated 3d graphics or record
-          a high-definition movie, modern computers often have multiple CPUs to process
-          all that information and many gigabytes of memory to store it.
+        text: Kapag mas kumplido ang gawain, mas kakailanganin nito ang maraming impormasyon
+          sa input o output, at mas malaking enerhiya at memory din ang kakailanganin
+          ng kompyuter. Ang pag-type ng mga letra sa isang screen ay maaaring madali
+          lang ngunit ang paggawa ng mga kumplikadong 3d na mga graphics o ang pag-rekord
+          ng isang high-definition na pelikula, ang mga modernong kompyuter ay kadalasan
+          gumagamit ng maraming mga CPU para maproseso ang lahat ng mga impormasyong
+          ito at maraming gigabytes ng memory para itago ang mga ito.
       12:
         image: notes/csd_concept_memory_cpu_input_output_12.png
-        text: 'No matter what it is you want to do with the computer, every single
-          action is about: inputting information from the physical world, storing
-          and processing that information, and getting some output back into the physical
-          world.'
+        text: 'Kahit na ano ang gusto mong gawin sa isang kompyuter, bawat aksyon
+          ay tungkol sa: pag-input ng impormasyon mula sa pisikal na mundo, pagtatago
+          at pagproseso ng impormasyong ito, at pagpadala ng output pabalik sa pisikal
+          na mundo.'
     csd_concept_hardware_software:
       1:
         image: notes/csd_concept_hardware_software_1.png
-        text: Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com.
-          One of the best things about working in tech, and at Amazon in particular,
-          is that I get to bring my dog with me to work every day. My job is to help
-          make sure software gets out the door and her job is to nap under my desk
-          and snore very loudly.
+        text: Hi, ang pangalan ko ay si Erika Gomez at akong ay isang engineering
+          manager sa Amazon.com. Isa sa mga pinakamagandang bagay sa pagtatrabaho
+          sa tech, in partikular sa Amazon, ay maaari kong madala ang aking aso sa
+          trabaho araw-araw. Ang aking trabaho ay sigurahin na ang mga software ay
+          mailalabas at ang kanyang trabaho ay ang malakas na paghilik sa ilalim ng
+          aking desk.
       2:
         image: notes/csd_concept_hardware_software_2.png
-        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and
-          I have a really fun job: Basically bringing the hardware and the software
-          together to give you all the games that you love on your Xbox.'
+        text: 'Ang pangalan ko ay Jerome Holman, at ako ay isang Program Manager sa
+          koponan ng Xbox at ako ay mayroong napakasayang trabaho: Pagsamasama sa
+          hardware at software para mabigyan ka ng lahat ng mga laro na gusto mo sa
+          iyong Xbox.'
       3:
         image: notes/csd_concept_hardware_software_3.png
-        text: When you look inside a computing device you see a bunch of circuits,
-          chips, wires, speakers, plugs, and all sorts of other stuff. This is the
-          hardware.
+        text: Kapag tumingin ka sa loob ng isang kagamitan sa pag-compute, makakakita
+          ka ng iilang mga circuits, mga chips, mga wires, mga speakers, mga plugs
+          at lahat ng iba't ibang mga bagay. Ito ang hardware.
       4:
         image: notes/csd_concept_hardware_software_4.png
-        text: But what you don't see is the software. Software is all of the computer
-          programs, or code, running on this machine. Software can be anything from
-          apps and games to webpages and the data science software that me and my
-          teams use at Amazon to understand how customers behave.
+        text: Ngunit ang hindi mo nakikita ay ang software. Ang software ay ang lahat
+          ng mga programa ng kompyuter, o code, na pinapatakbo sa makinang ito. Ang
+          software ay maaaring kahit na ano mula sa mga apps at mga laro hanggang
+          sa mga webpages at mga data science na mga software na ako at ang aking
+          grupo ay gumagamit sa Amazon para maintindihan ang galaw ng mga kustomer.
       5:
         image: notes/csd_concept_hardware_software_5.png
-        text: But how do the hardware and the software interact with one another?
-          Let's start at looking at a computer's central processing unit, or CPU.
+        text: Ngunit paano ba nakipag-ugnayan ang hardware at software sa bawat isa?
+          Magsimula tayong tumingin sa central processing unit ng kompyuter, o CPU.
       6:
         image: notes/csd_concept_hardware_software_6.png
-        text: The CPU is the master chip that controls all the other parts of the
-          computer. A CPU needs to do different things so inside it has smaller, simpler
-          parts that handle specific tasks. It has circuits to do simple math and
-          logic. It has other circuits to send and receive information to and from
-          different parts of the computer.
+        text: Ang CPU ay ang master chip na nagkokontrol sa lahat ng ibang mga bahagi
+          ng kompyuter. Ang CPU ay nangangailang gumawa ng iba't ubang mga bagay kaya
+          sa loob nito ay ang mga maliliit at simpleng mga bahagi na gumagawa ng isang
+          partikular na gawain. Mayroon itong mga circuit na gumagawa ng simpleng
+          matematika at lohika. Mayroon din itong ibang mga circuit para magpadala
+          at tumanggap ng mga impormasyon papunta at pabalik sa iba't ibang bahagi
+          ng kompyuter.
       7:
         image: notes/csd_concept_hardware_software_7.png
-        text: The real magic of the CPU is how it knows which circuits to use and
-          when to use them. The CPU receives simple commands that tell it which circuit
-          to use to do a specific job. For example, an "add" command tells the CPU
-          to use its outer circuit to calculate a new number. And then the "store"
-          command tells the CPU to use a different circuit to save that result into
-          memory.
+        text: Ang tunay na mahika ng CPU ay kung paano nito malalaman kung aling mga
+          circuit ang gagamitin at kung kailan ito gagamitin. Ang CPU ay tatanggap
+          ng mga simpleng utos na nagsasabi nito kung aling circuit ang gagamitin
+          para sa isang tiyak na gawain. Halimbawa, ang "add" na utos ay nagsasabi
+          sa CPU na gamitin ang panlabas na circuit para makuha ang bagong numero.
+          At pagkatapos ang "store" na utos ang nagsasabi sa CPU na gumamit ng ibang
+          circuit para mag-save sa resultang ito sa memory.
       8:
         image: notes/csd_concept_hardware_software_8.png
-        text: Just like numbers, all of these simple commands can be represented in
-          binary ones and zeros or on and off electrical signals. The binary commands
-          are stored in memory and the CPU fetches and executes them in sequence one
-          after the other. This sequence of commands is, in fact, a very simple computer
-          program.
+        text: Gaya ng mga numero, lahat ng mga simpleng utos ay maaaring irepresenta
+          sa binary na ones at zeros o on at off na mga elektrikal na mga signal.
+          Ang mga utos sa binary ay nakalagay sa memory at ang CPU ang kumukuha at
+          nagpapatakbo nito sa pagkakasunod-sunod na isa pagkatapos ng isa. Ang pagkakasunod
+          ng mga utos ay, sa totoo lang, isang simpleng programa sa kompyuter.
       9:
         image: notes/csd_concept_hardware_software_9.png
-        text: Binary code is the most basic form of software and it controls all the
-          hardware of a computer. These days, nobody writes software in binary. It
-          would take forever!
+        text: Ang binary code ay ang pinakapangunahing anyo ng software at ito ay
+          nagkokontrol sa lahat ng hardware ng isang kompyuter. Sa mga araw na ito,
+          walang sinuman ang nagsusulat ng software sa binary. Hindi ito matatapos!
       10:
         image: notes/csd_concept_hardware_software_10.png
-        text: Today, the software we write looks more like this (Python), or this
-          (Ruby), or even this (Blockly). Programming languages like these let you
-          type in commands in something that looks a lot like English.
+        text: Ngayon ang software na isusulat natin ay katulad nito (Python), o nito
+          (Ruby), o kahit na nito (Blockly). Ang mga wika na pangprogram gaya nito
+          ay nagbibigay-daan sa iyo na mag-type ng mga utos sa isang bagay na parang
+          katulad lang ng Ingles.
       11:
         image: notes/csd_concept_hardware_software_11.png
-        text: To draw a rectangle on the screen, you just need a single command. This
-          high-level command is converted into hundreds, or thousands, of simpler
-          binary commands that the CPU understands. Software tells the CPU what to
-          do, but when you're listening to music, and browsing the web, and chatting
-          with a friend, your computer is running multiple pieces of software all
-          at once.
+        text: Para makaguhit ng parisukat sa screen, kailangan mo lang ng isang utos.
+          Ang high-level na utos na ito ay ginawang daan-daang, o libu-libibong mga
+          simpleng utos sa binary na maiintindihan ng CPU. Ang software ang nagsasabi
+          sa CPU kung ano ang gagawin, ngunit kapag ikaw ay nakikinig sa musika, at
+          nagbrowse sa web, at nakipag-chat sa iyong kaibigan, ang iyong kompyuter
+          ay nagpapatakbo ng maraming mga piraso ng software nang sabay-sabay.
       12:
         image: notes/csd_concept_hardware_software_12.png
-        text: So, how do all of these programs get on the computer in the first place,
-          and how can the CPU run them all at once? To find out we'll have to take
-          a look at the operating system.
+        text: Kaya, paano napunta ang lahat ng mga programang ito sa iyong kompyuter,
+          at paano nagawa ng CPU na patakbuhin ang lahat ng sabay-sabay? Para malaman
+          ito, kakailanganin nating tingnan ang operating system.
       13:
         image: notes/csd_concept_hardware_software_13.png
-        text: The operating system of the computer is the master program that manages
-          how software gets to use the hardware of the computer. For example, I helped
-          create the Windows operating system that runs on most personal computers.
+        text: Ang operating system ng isang kompyuter ay ang maestro na programa na
+          nangangasiwa kung paano ang software gumagamit ng hardware ng kompyuter.
+          Halimbawa, tumutulong ako sa paglikha ng Windows na operating system na
+          tumatakbo sa karamihang mga personal na mga kompyuter.
       14:
         image: notes/csd_concept_hardware_software_14.png
-        text: The operating system is a program with special abilities that let it
-          control the other software on the computer. It lets you install new programs
-          by loading them into your computer's memory. It decides when a program is
-          run by the central processing unit, and whether that program can access
-          the computer's input and output devices. And when you think your computer
-          is running many programs at once, in reality, it's the operating system
-          that's quickly switching between programs sharing that CPU for fractions
-          of a second.
+        text: Ang operating system ay isang programan na may espesyal na kakayahan
+          na nagbibigay-daan para makontrol nito ang ibang mga software sa kompyuter.
+          Hinahayaan nitong mag-install ka na mga bagong programa sa pamamagitan ng
+          pagload sa mga ito sa iyong memory ng kompyuter. Nagpapasya ito kung kailan
+          ang programa ipapatakbo ng central processing unit, at kung ang programa
+          ba ay maaaring mag-access sa mga input at output na kagamitan ng kompyuter.
+          At kung naisip mo na ang iyong kompyuter ay nagpapatakbo ng maraming mga
+          programa nang sabay-sabay, sa totoo lang, ang operating system ang mabilis
+          na palipat-lipat sa mga programa na naghahati sa CPU sa loob ng praksiyon
+          ng segundo.
       15:
         image: notes/csd_concept_hardware_software_15.png
-        text: Inside every computer is an operating system managing software that
-          controls the computer's hardware.
+        text: Sa loob ng bawat kompyuter ay isang operating system managing software
+          na kumukontrol sa hardware ng kompyuter.
       16:
         image: notes/csd_concept_hardware_software_16.png
-        text: The software is a series of commands made of simple binary code, and
-          that binary code is just electrical signals flowing through billions of
-          tiny circuits.
+        text: Ang software ay isang serye ng mga utos na ginawang simpleng binary
+          na code, at ang binary code na ito ay mga elektrikal na mga signals lang
+          na dumadaloy sa bilyun-bilyung malilit na mga circuits.
       17:
         image: notes/csd_concept_hardware_software_17.png
-        text: Computers have the potential to do all kinds of amazing things. But
-          the only thing that makes the computer smart, or useful, is you. When you
-          learn to code you get to define the problem you want to solve, and write
-          the software that turns those ideas into reality.
+        text: Ang mga kompyuter ay mayroong pontensyal na magawa ang lahat ng kamangha-mangha
+          na mga bagay. Ngunit ang tanging bagay lang na nagpapatalino sa kompyuter,
+          o naging kapaki-pakinabang nito, ay ikaw. Kapag ikaw ay natutong magcode,
+          maaari mo nang ilarawan ang mga problema na gusto mong lutasin, at magsulat
+          ng mga software na nagsasabuhay sa mga ideyang iyon.

@@ -1,4 +1,5 @@
-"sk":
+---
+sk:
   slides:
     maze_intro:
       1:
@@ -165,7 +166,7 @@
           na Georgia Tech. Poďme si vyskúšať nový "opakuj dovtedy" blok.
       2:
         image: notes/hoc3_2.jpg
-        text: "Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasa?"
+        text: Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasa?
       3:
         image: notes/hoc3_3.jpg
         text: Ak vložíme "pohni sa vpred" blok do "opakuj dovtedy" bloku, vták sa

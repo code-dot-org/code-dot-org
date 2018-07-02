@@ -1,0 +1,12 @@
+name 'U2L13 Assessment4_2018'
+title 'Assessment: Question 3'
+question 'The Caesar Cipher has 25 different shifts to try. How many possibilities are there to try in a random substitution cipher?'
+wrong '26'
+wrong '26 x 25'
+right '26 × 25 × 24 ×···× 3 × 2 x 1'
+wrong '26^26'
+teacher_markdown <<MARKDOWN
+Answer:
+
+- 26 × 25 × 24 ×···× 3 × 2 x 1
+MARKDOWN

@@ -31,6 +31,7 @@
  * @property {boolean} isExternalProjectLevel
  * @property {boolean} isChannelBacked
  * @property {boolean} isLegacyShare
+ * @property {boolean} legacyShareStyle
  * @property {PostMileStoneMode} postMilestoneMode
  * @property {string} puzzleRatingsUrl
  * @property {string} authoredHintViewRequestsUrl
@@ -114,6 +115,8 @@
  * @property {boolean} submittable
  * @property {boolean} final_level
  * @property {array} levelVideos
+ * @property {string} mapReference
+ * @property {array} referenceLinks
  */
 
 /**

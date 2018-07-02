@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Animating with Counters\r\n\r\nThe counter pattern can be used to increase the value of a variable each time the draw loop runs. You can use this to create smooth motion in your programs. You're going to try out a few ways of using this.\r\n\r\n# Do This\r\n\r\nThis program uses the counter pattern with a variable called `xPos`.\r\n\r\n* **Read the program** and make a prediction of how it will run.\r\n* **Run the program** to check your prediction\r\n* **Change the code** so that `xPos` changes by different amounts each draw loop. For example instead of `xPos = xPos + 1` you could try:\r\n\t* `xPos = xPos + 2`\r\n    * `xPos = xPos + 5`\r\n    * `xPos = xPos + 0.1`",

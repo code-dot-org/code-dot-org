@@ -1,0 +1,14 @@
+.react-tooltip-hover-stay {
+  xfont-size: 20px !important;
+  pointer-events: auto !important;
+}
+
+.react-tooltip-hover-stay:hover {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.react-tooltip-hover-stay a {
+  color: white;
+  text-decoration: none;
+}

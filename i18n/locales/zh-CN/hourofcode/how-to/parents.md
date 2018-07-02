@@ -33,19 +33,19 @@ nav: how_to_nav
 **播放鼓舞人心的视频：**
 
 - Code.org推出的原始视频有比尔·盖茨，马克·扎克伯格和NBA球星克里斯 - 波什（它们分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)版本）
-- [编程一小时 全球视频 ](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [全球 编程一小时活动 视频 ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [奥巴马总统号召所有对的学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- 找到更多鼓舞人心的 [资源](%= resolve_url('https://code.org/inspire') %) 和 [视频](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 因为您和您的孩子对计算机科学感到陌生而无从下手？这里有一些可以帮助介绍您“编程一小时”活动的点子：
 
 - 用一些男孩和女孩都会关心的例子，来解释技术是如何影响我们的生活的。比如，拯救生命，帮助别人，联系他人等等。
 - 列举日常生活中需要使用程序的情况。（比如做一些有规律的事情）
-- [这里](%= resolve_url('https://code.org/girls') %)是一些能让女孩对计算机科学感兴趣的小技巧。
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 更多的点子？看看我们富有经验的教育者总结出的[教学模板](/files/AfterschoolEducatorLessonPlanOutline.docx)。
 
-## 5）激动人心的时刻-编程！
+## 5）编程！
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
@@ -61,7 +61,7 @@ nav: how_to_nav
 
 ## 6）庆祝
 
-为你的孩子打印一张[证书](%= resolve_url('https://code.org/certificates') %)（别忘了给你自己的那份）。
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
 
@@ -73,7 +73,7 @@ nav: how_to_nav
 
 “编程一小时”只是在学习编程语言的过程中所迈出的第一步。在了解技术如何工作和如何编写一个应用程序的道路上仍有很长的道路要走。继续你的旅程：
 
-- 鼓励你的孩子继续[在线上学习](%= resolve_url('https://code.org/learn/beyond') %)。
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
 - 帮助我们在您的孩子所在的学区促进计算机科学相关的教育。
 
 <%= view :signup_button %>

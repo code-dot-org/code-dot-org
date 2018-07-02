@@ -27,7 +27,6 @@
     "free_play": "false",
     "text_mode_at_start": "false",
     "hide_animation_mode": "false",
-    "show_d_pad": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",

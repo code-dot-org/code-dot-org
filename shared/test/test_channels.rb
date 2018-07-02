@@ -40,14 +40,28 @@ class ChannelsTest < Minitest::Test
     post '/v3/channels', {shouldPublish: true, projectType: 'bogus', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?, 'cannot publish invalid project type'
 
-    young_user = {name: ' xavier', birthday: 12.years.ago.to_datetime}
-    ChannelsApi.any_instance.stubs(:current_user).returns(young_user)
+    young_user_cannot_share = {
+      name: ' xavier',
+      birthday: 12.years.ago.to_datetime,
+      properties: {"sharing_disabled": true}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(young_user_cannot_share)
 
     post '/v3/channels', {shouldPublish: true, projectType: 'playlab', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.redirection?, 'young user can publish playlab project'
 
     post '/v3/channels', {shouldPublish: true, projectType: 'applab', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    assert last_response.client_error?, 'young user cannot publish advanced project type'
+    assert last_response.client_error?, 'young user cannot publish advanced project type if sharing is disabled'
+
+    young_user_can_share = {
+      name: ' xavier',
+      birthday: 12.years.ago.to_datetime,
+      properties: {"sharing_disabled": false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(young_user_can_share)
+
+    post '/v3/channels', {shouldPublish: true, projectType: 'applab', key: 'val'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?, 'young user can publish advanced project type if sharing is enabled'
   end
 
   def test_update_channel
@@ -190,7 +204,55 @@ class ChannelsTest < Minitest::Test
 
   def test_publish_permissions
     # only whitelisted project types can be published
-    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+
+    # over 13 and sharing is disabled
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {"sharing_disabled": true}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    assert_cannot_publish('applab')
+    assert_cannot_publish('gamelab')
+    assert_can_publish('artist')
+    assert_can_publish('playlab')
+    assert_cannot_publish('weblab')
+    assert_cannot_publish('foo')
+
+    # over 13 and sharing is enabled
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {"sharing_disabled": false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    assert_can_publish('applab')
+    assert_can_publish('gamelab')
+    assert_can_publish('artist')
+    assert_can_publish('playlab')
+    assert_cannot_publish('weblab')
+    assert_cannot_publish('foo')
+
+    # under 13 sharing disabled
+    stub_user = {
+      name: ' xavier',
+      birthday: 12.years.ago.to_datetime,
+      properties: {"sharing_disabled": true}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    assert_cannot_publish('applab')
+    assert_cannot_publish('gamelab')
+    assert_can_publish('artist')
+    assert_can_publish('playlab')
+    assert_cannot_publish('weblab')
+    assert_cannot_publish('foo')
+
+    # under 13 sharing enabled
+    stub_user = {
+      name: ' xavier',
+      birthday: 12.years.ago.to_datetime,
+      properties: {"sharing_disabled": false}.to_json
+    }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
     assert_can_publish('gamelab')
@@ -206,9 +268,12 @@ class ChannelsTest < Minitest::Test
       assert_cannot_publish('artist', channel_id)
     end
 
-    # users under age 13 cannot publish applab, gamelab or weblab projects,
-    # but can publish artist or playlab projects.
-    stub_user = {name: ' xavier', birthday: 12.years.ago.to_datetime}
+    # users with sharing disabled cannot share applab or  gamelab projects
+    stub_user = {
+      name: ' xavier',
+      birthday: 12.years.ago.to_datetime,
+      properties: {"sharing_disabled": true}.to_json
+    }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
     assert_cannot_publish('gamelab')

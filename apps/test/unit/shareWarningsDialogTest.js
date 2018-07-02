@@ -20,8 +20,8 @@ describe('ShareWarningsDialog', function () {
     return dom.tagName === tagName && dom.innerHTML === text;
   }
 
-  function isDataPromptDiv(childComponent) {
-    return isTagWithText(childComponent, 'DIV', msg.shareWarningsStoreData());
+  function isDataPromptHighlightSpan(childComponent) {
+    return isTagWithText(childComponent, 'SPAN', msg.shareWarningsStoreDataHighlight());
   }
 
   function isAgeDiv(childComponent) {
@@ -41,13 +41,13 @@ describe('ShareWarningsDialog', function () {
     var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
       componentInstance, ShareWarnings)[0];
 
-    var dataPromptDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings,
-      isDataPromptDiv);
+    var dataPromptSpans = ReactTestUtils.findAllInRenderedTree(shareWarnings,
+      isDataPromptHighlightSpan);
     var ageDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings, isAgeDiv);
     var ageDropdowns = ReactTestUtils.scryRenderedComponentsWithType(shareWarnings,
       AgeDropdown);
 
-    assert.strictEqual(dataPromptDivs.length, 0, 'zero data prompt divs');
+    assert.strictEqual(dataPromptSpans.length, 0, 'zero data prompt highlight spans');
     assert.strictEqual(ageDivs.length, 1, 'one age div');
     assert.strictEqual(ageDropdowns.length, 1, 'one age dropdown div');
   });
@@ -65,13 +65,13 @@ describe('ShareWarningsDialog', function () {
     var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
       componentInstance, ShareWarnings)[0];
 
-    var dataPromptDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings,
-      isDataPromptDiv);
+    var dataPromptSpans = ReactTestUtils.findAllInRenderedTree(shareWarnings,
+      isDataPromptHighlightSpan);
     var ageDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings, isAgeDiv);
     var ageDropdowns = ReactTestUtils.scryRenderedComponentsWithType(shareWarnings,
       AgeDropdown);
 
-    assert.strictEqual(dataPromptDivs.length, 1);
+    assert.strictEqual(dataPromptSpans.length, 1);
     assert.strictEqual(ageDivs.length, 0);
     assert.strictEqual(ageDropdowns.length, 0);
   });
@@ -89,13 +89,13 @@ describe('ShareWarningsDialog', function () {
     var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
       componentInstance, ShareWarnings)[0];
 
-    var dataPromptDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings,
-      isDataPromptDiv);
+    var dataPromptSpans = ReactTestUtils.findAllInRenderedTree(shareWarnings,
+      isDataPromptHighlightSpan);
     var ageDivs = ReactTestUtils.findAllInRenderedTree(shareWarnings, isAgeDiv);
     var ageDropdowns = ReactTestUtils.scryRenderedComponentsWithType(shareWarnings,
       AgeDropdown);
 
-    assert.strictEqual(dataPromptDivs.length, 1);
+    assert.strictEqual(dataPromptSpans.length, 1);
     assert.strictEqual(ageDivs.length, 1);
     assert.strictEqual(ageDropdowns.length, 1);
   });

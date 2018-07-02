@@ -7,13 +7,13 @@ nav: how_to_nav
 
 # Etüt/Sosyal etkinlik veya okul sonrası faaliyetler için Kod Saati nasıl öğretilir
 
-Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! Sınıfınızda Kod-Saati eğitimleri için yardım isterseniz [ yerel bir gönüllü](<%= resolve_url('https://code.org/volunteer/local') %>) bulabilirsiniz.
+Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Bir eğitim seçin
+## 2. Bir öğretici içerik seçin
 
-Çeşitli ortaklarımız tarafından oluşturulmuş, [eğlenceli, saatlik eğitimleri](<%= resolve_url('/learn') %>) her yaştan katılımcılarımıza sunuyoruz. [Bunları deneyin!](<%= resolve_url('/learn') %>)
+Platformumuzda, farklı iş-ortaklarımız tarafından geliştirilmiş, tüm yaş gruplarına uygun, [eğlenceli ve öğretici, pek çok kod-saati içeriği ](<%= resolve_url('/learn') %>) sunulmaktadır. [Bunları deneyin!](<%= resolve_url('/learn') %>)
 
 Çok az bir hazırlık süresi gerektiren ve kendi kendine yapılabilen - katılımcılara kendi tempo ve yetenek seviyelerinde çalışmaya izin veren **tüm Kod-Saati faaliyetleri**.
 
@@ -95,7 +95,7 @@ Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin 
 
 [/col-33]
 
-- Öğrencileriniz için [sertifika basın](<%= resolve_url('https://code.org/certificates') %>).
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - Öğrencileriniz için ["Kod-Saati!" ](<%= resolve_url('/promote/resources#stickers') %>) çıkartmaları yazdırın.
 - Okulunuz için [özel sipariş t-shirtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
@@ -110,7 +110,7 @@ Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin 
 
 ## Eğitimciler için diğer Kod-Saati kaynakları
 
-- Daha önce düzenlenmiş Kod-Saati etkinliklerinden, [en iyi uygulamalar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)a bir göz atın. 
+- Daha önce düzenlenmiş Kod-Saati etkinliklerinden, [en iyi uygulamalar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)a bir göz atın.
 - [Eğitimci rehberliğinde Kod-Saati web seminerimizi](https://youtu.be/EJeMeSW2-Mw) izleyin.
 - Diğer eğitmenlerle fikir alış-verişinde bulunmak ve birbirinizi destelemek için [ Kod-Saati Forum](http://forum.code.org/c/plc/hour-of-code)u ziyaret edin. <% if @country == 'us' %>
 - [ Kodlama Saati SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). gözden geçirin. <% end %>
@@ -119,8 +119,7 @@ Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin 
 
 Kodlama Saati teknolojinin nasıl çalıştığı ve yazılım uygulamalarının nasıl yapıldığını öğrenmeye giden yolculukta sadece bir ilk adımdır. Bu yolculuğa devam etmek için:
 
-- Öğrencileri,  çevrimiçi öğrenmeye </ 0> devam etmeye teşvik edin.</li> 
-    
-    - Deneyimli bir bilgisayar bilimci ile 1 günlük yüz yüze atölyeye [katılın](<%= resolve_url('https://code.org/professional-development-workshops') %>). (Sadece ABD eğitmenleri için)</ul> 
-    
-    <%= view :signup_button %>
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

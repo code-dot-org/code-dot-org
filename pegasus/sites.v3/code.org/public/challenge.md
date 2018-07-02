@@ -1,6 +1,6 @@
 ---
 <%
-  share_image = (DCDO.get('hoc_mode', nil) == 'soon-hoc') ? 'hoc-student-challenge.jpg' : 'celeb-challenge.jpg'
+  share_image = (DCDO.get('hoc_mode', CDO.default_hoc_mode) == 'soon-hoc') ? 'hoc-student-challenge.jpg' : 'celeb-challenge.jpg'
 %>
 title: #HourOfCode Challenge
 theme: responsive
@@ -47,20 +47,20 @@ social:
 ## What are they looking for?
 <a name="lookingfor"></a>
 <a name="stephen"></a>
-### Stephen Curry 
-I'm lucky to have gone to the NBA playoffs with the Golden State Warriors, but we would never have been there without teamwork. Show me what your team can create when you work together.   
+### Stephen Curry
+I'm lucky to have gone to the NBA playoffs with the Golden State Warriors, but we would never have been there without teamwork. Show me what your team can create when you work together.
 
 *To tag Stephen, use @StephenCurry30 on [Twitter](https://twitter.com/StephenCurry30), @StephenCurryOfficial on [Facebook](https://www.facebook.com/StephenCurryOfficial/), or @stephencurry30 on [Instagram](https://www.instagram.com/stephencurry30/).*
 
 <a name="stacy"></a>
 ### Stacy Hinojosa (StacyPlays)
-Have you played the newest Minecraft activity, Hero's Journey? Did you know I helped develop it? I've been vlogging since 2013, so I know a lot about Minecraft. But there's always more for me to learn and I want to see what you can create in [Minecraft](https://code.org/minecraft) when you play it.    
+Have you played the newest Minecraft activity, Hero's Journey? Did you know I helped develop it? I've been vlogging since 2013, so I know a lot about Minecraft. But there's always more for me to learn and I want to see what you can create in [Minecraft](https://code.org/minecraft) when you play it.
 
 *To tag Stacy, use @stacysays on [Twitter](https://twitter.com/stacysays) or @stacyhinojosa on [Facebook](https://www.facebook.com/stacyhinojosa/).*
 
 <a name="hadi"></a>
 ### Hadi Partovi
-The team of software engineers at Code.org love to build apps, and they created our newest program, App Lab. I challenge you to join them as a software engineer this week and build something fun using JavaScript in [App Lab](https://code.org/educate/applab). 
+The team of software engineers at Code.org love to build apps, and they created our newest program, App Lab. I challenge you to join them as a software engineer this week and build something fun using JavaScript in [App Lab](https://code.org/educate/applab).
 
 *To tag Hadi, use @hadip on [Twitter](https://twitter.com/hadip), @HadiPartovi on [Facebook](https://www.facebook.com/hadi/), or @hadipartovi on [Instagram](https://www.instagram.com/hadipartovi/).*
 
@@ -95,20 +95,20 @@ You can submit and post as many times as you like - but tag only one celebrity p
 
 <a name="howtowin"></a>
 ## How do I increase my chances of winning?
-The celebrities will work with Code.org to pick a winner. <a href="#lookingfor">Read about what each celebrity is looking for</a>, then, increase your chances to win with photos or videos of yourself or your class. They'd also love to see the apps, games, or artwork your students created, so add a link to your students' work! 
+The celebrities will work with Code.org to pick a winner. <a href="#lookingfor">Read about what each celebrity is looking for</a>, then, increase your chances to win with photos or videos of yourself or your class. They'd also love to see the apps, games, or artwork your students created, so add a link to your students' work!
 
 The posts that have the most cool stuff will have a great chance of being selected, so include a link to the coolest code creations you made on Code.org, an ANIGIF of the app you made, or a fun video explaining your Hour of Code activity. Get creative!
 
 Posts with more likes, shares, and retweets will also have a higher likelihood of winning. Add an [Hour of Code frame](www.facebook.com/fbcameraeffects/tryit/1761789857455398/) to your Facebook profile picture to really get into the spirit.
 
-And since you can post as many entries as you want, across Facebook, Twitter, and Instagram, feel free to make multiple posts to increase your chances. The idea isn't to spam the internet and annoy your friends, it's to celebrate computer science. So please try to make the content you post worthwhile for all of us. 
+And since you can post as many entries as you want, across Facebook, Twitter, and Instagram, feel free to make multiple posts to increase your chances. The idea isn't to spam the internet and annoy your friends, it's to celebrate computer science. So please try to make the content you post worthwhile for all of us.
 
-## How do you get the project link to share? 
+## How do you get the project link to share?
 When you're done with one of our Hour of Code activities, click "Finish" on the last level you'll receive a share link. You can also take a video of you or your students demo-ing their app and share that.
 
 [col-50]
 
-<img src="/images/fill-420x345/share-button.png"> 
+<img src="/images/fill-420x345/share-button.png">
 
 [/col-50]
 

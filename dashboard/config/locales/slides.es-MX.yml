@@ -1,4 +1,5 @@
-"es-MX":
+---
+es-MX:
   slides:
     maze_intro:
       1:
@@ -582,8 +583,8 @@
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: "Éstos son tus bloques de dibujo. Usa el correcto para mover al artistas
-          donde necesita ir para completar las lineas grises."
+        text: Éstos son tus bloques de dibujo. Usa el correcto para mover al artistas
+          donde necesita ir para completar las lineas grises.
       2:
         image: notes/C1_artist_intro_2.png
         text: Estos son bloques de tu salto. Cuando los usas, tu artista se mueve
@@ -946,8 +947,8 @@
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: "Éste es el nivel de ortografía. Utilice las piezas del puzzle para
-          mover a la abeja. Al moverse, recogerá las letras para deletrear la palabra."
+        text: Éste es el nivel de ortografía. Utilice las piezas del puzzle para mover
+          a la abeja. Al moverse, recogerá las letras para deletrear la palabra.
       2:
         image: notes/C1_spelling_bee_intro_2.png
         text: Vea si puede deletrear la palabra que se da en el cuadro debajo de la
@@ -1019,8 +1020,8 @@
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: "Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
-          sea menor, igual o mayor que un número, ENTONCES haz algo."
+        text: Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
+          sea menor, igual o mayor que un número, ENTONCES haz algo.
       2:
         image: notes/C2_bee_conditionals_2.png
         text: Esto es útil cuando no sabemos cuanto néctar o miel obtener, como vemos
@@ -1033,8 +1034,8 @@
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: "Ésta es la lección de brazaletes binarios. ¡Vamos a codificar nuestras
-          iniciales en un brazalete que podemos usar y mostrar a todos nuestros amigos!"
+        text: Ésta es la lección de brazaletes binarios. ¡Vamos a codificar nuestras
+          iniciales en un brazalete que podemos usar y mostrar a todos nuestros amigos!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: El binario es una forma de representar información utilizando sólo dos
@@ -1218,11 +1219,11 @@
           varias veces. Hacer un bucle, es hacer la misma actividad varias veces.
       2:
         image: notes/C2_bee_loops_2.png
-        text: "Éste es el bloque de repetición. Lo que pongas dentro el bloque de
-          repetición repetirá las acciones el número de veces que le digas. Por ejemplo,
-          en éste nivel, haremos que algo que arrastre hacia fuera, mueva hacia adelante
-          y obtenga el néctar tres veces, simplemente lo arrastre hacia fuera cada
-          uno y repetiremos la acción tres veces. ¡Ha sido fácil!"
+        text: Éste es el bloque de repetición. Lo que pongas dentro el bloque de repetición
+          repetirá las acciones el número de veces que le digas. Por ejemplo, en éste
+          nivel, haremos que algo que arrastre hacia fuera, mueva hacia adelante y
+          obtenga el néctar tres veces, simplemente lo arrastre hacia fuera cada uno
+          y repetiremos la acción tres veces. ¡Ha sido fácil!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
@@ -1421,8 +1422,8 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: "Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
-          sea menor, igual o mayor que un número, ENTONCES haz algo."
+        text: Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
+          sea menor, igual o mayor que un número, ENTONCES haz algo.
       2:
         image: notes/C3_bee_conditionals_2.png
         text: Esto es útil cuando no sabemos cuanto néctar o miel obtener, como vemos
@@ -2550,11 +2551,10 @@
           quien escribirá el siguiente paso.
       3:
         image: notes/unplug9_3.png
-        text: "Ésta es una excelente manera de entender la idea de depuración, la
-          necesidad de corregir tu propio trabajo y la necesidad de revisar el trabajo
-          que la gente hace antes de ti. Rápidamente, entenderás lo importante que
-          es tener cuidado en tu codificación cuando todo el equipo está dependiendo
-          de ti."
+        text: Ésta es una excelente manera de entender la idea de depuración, la necesidad
+          de corregir tu propio trabajo y la necesidad de revisar el trabajo que la
+          gente hace antes de ti. Rápidamente, entenderás lo importante que es tener
+          cuidado en tu codificación cuando todo el equipo está dependiendo de ti.
     unplug10:
       1:
         image: notes/unplug10_1.png
@@ -2782,14 +2782,14 @@
           está llena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "Направихме игра в която неможете да губите печелите точки от всичко.
+        text: Направихме игра в която неможете да губите печелите точки от всичко.
           В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
           долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
-          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!"
+          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "След като сте направите играта, изберете сподели за да я споделите
-          с приятели или да играете на телефон. Забавлявайте се!"
+        text: След като сте направите играта, изберете сподели за да я споделите с
+          приятели или да играете на телефон. Забавлявайте се!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -2909,14 +2909,14 @@
           está llena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "Направихме игра в която неможете да губите печелите точки от всичко.
+        text: Направихме игра в която неможете да губите печелите точки от всичко.
           В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
           долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
-          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!"
+          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "След като сте направите играта, изберете сподели за да я споделите
-          с приятели или да играете на телефон. Забавлявайте се!"
+        text: След като сте направите играта, изберете сподели за да я споделите с
+          приятели или да играете на телефон. Забавлявайте се!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -3157,10 +3157,10 @@
           cosas."
       2:
         image: notes/gumball_repeat_2.JPG
-        text: "Éste es el bloque de repetición por siempre. Cualquier cosa dentro
-          de este bloque pasará por siempre en el juego. Si queremos que un actor
-          haga algo repetidamente sin que el jugador haga nada, pondremos eso bloques
-          dentro del bloque de repetición por siempre."
+        text: Éste es el bloque de repetición por siempre. Cualquier cosa dentro de
+          este bloque pasará por siempre en el juego. Si queremos que un actor haga
+          algo repetidamente sin que el jugador haga nada, pondremos eso bloques dentro
+          del bloque de repetición por siempre.
       3:
         image: notes/gumball_repeat_3.JPG
         text: En el siguiente rompecabezas, nuestro objetivo es ayudar al actor a
@@ -3245,10 +3245,10 @@
           cosas."
       2:
         image: notes/iceage_repeat_2.JPG
-        text: "Éste es el bloque de repetición por siempre. Cualquier cosa dentro
-          de este bloque pasará por siempre en el juego. Si queremos que un actor
-          haga algo repetidamente sin que el jugador haga nada, pondremos eso bloques
-          dentro del bloque de repetición por siempre."
+        text: Éste es el bloque de repetición por siempre. Cualquier cosa dentro de
+          este bloque pasará por siempre en el juego. Si queremos que un actor haga
+          algo repetidamente sin que el jugador haga nada, pondremos eso bloques dentro
+          del bloque de repetición por siempre.
       3:
         image: notes/iceage_repeat_3.JPG
         text: En el siguiente rompecabezas, nuestro objetivo es ayudar al actor a
@@ -3378,171 +3378,176 @@
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
-        text: My name is Mei'lani. I'm an intern at code.org and I'm also a computer
-          science student. I like computer science because it's really creative. I
-          get to be the problem solver. I get to make everything function how I want
-          it to. But I also get to be the designer. I get to be the artist and choose
-          everything on the creative side of it.
+        text: Mi nombre es Mei'lani. Soy una pasante en code.org y soy también estudiante
+          de ciencias de la computación. Me gusta porque es muy creativa. Puedo ser
+          la que soluciona los problemas y decidir como funciona todo. Pero también
+          logro ser la diseñadora. Puedo ser la artista y determinar todo desde el
+          lado creativo.
       2:
         image: notes/applab_intro_welcome_2.png
-        text: Making your own apps is easy with App Lab! Whether you're new to coding
-          or have some experience. App Lab is a great tool for building new apps and
-          sharing them with your friends.
+        text: "¡Hacer tus propias aplicaciones es muy fácil con App Lab! Sin importar
+          que seas nuevo programando o si tienes alguna experiencia. App Lap es una
+          buena herramienta para la creación de nuevas aplicaciones que puedes compartir
+          con tus amigos."
       3:
         image: notes/applab_intro_welcome_3.png
-        text: This is a App Lab. On the left side is your app. On the right side is
-          the code that will make it run. You build your program by dragging in blocks
-          from the toolbox. To start you'll just have one block called 'setProperty'.
+        text: Esta es App Lab. Del lado izquierdo se encuentra tu aplicación. Del
+          lado derecho se encuentra el código que hará que se ejecute. Construyes
+          tu programa arrastrando en bloques desde la caja de herramientas. Para empezar
+          sólo necesitas un bloque denominado 'setProperty'.
       4:
         image: notes/applab_intro_welcome_4.png
-        text: The set property block changes the look of the elements on your screen.
-          Like the buttons, labels, or even the screen itself. First you need to decide
-          which element you want to change. If you hover over an element in your app
-          you can see the name or ID here. Then go select that ID from the first drop
-          down.
+        text: El bloque de configuración de propiedades cambia la apariencia de los
+          elementos en su pantalla. Como los botones, rótulos, o incluso la pantalla
+          en sí. Primero necesitas decidir cuál elemento deseas cambiar. Si pasas
+          el ratón por un elemento en su aplicación podrás ver el nombre o el ID aquí.
+          Luego ve a seleccionar ese ID desde el primer menú.
       5:
         image: notes/applab_intro_welcome_5.png
-        text: Elements have lots of properties you can change like their text color,
-          background color or font size. You can see the full list and choose which
-          property you want to change in the second drop down.
+        text: Los elementos tienen un montón de propiedades. Puedes cambiar su color
+          de texto, tamaño de fuente o color de fondo. Puedes ver la lista completa
+          y seleccionar qué propiedad deseas cambiar en el segundo menú.
       6:
         image: notes/applab_intro_welcome_6.png
-        text: The last drop down is where you'll write the value you want to use value
-          you want to use. The block will make a suggestion for you. But you can always
-          type in different colors or numbers yourself.
+        text: El último menú es donde escribirás el valor que deseas utilizar. El
+          bloque hará una sugerencia. Pero siempre puedes ingresar diferentes colores
+          o números.
       7:
         image: notes/applab_intro_welcome_7.png
-        text: Once you're done, the block reads a bit like a sentence:'Set button1's
-          background color to green.' Hit run to see the changes you're building in
-          code. If you reset you can drag in more blocks to change other things about
-          your app. Like the text!
+        text: 'Una vez que termines, el bloque se lee un poco como una oración: ''Establece
+          el color de fondo de button1 a verde''. Ejecútalo para ver los cambios que
+          se está construyendo en el código. Si reestableces puede arrastrar más bloques
+          para cambiar otras cosas acerca de tu aplicación. ¡Como el texto!'
       8:
         image: notes/applab_intro_welcome_8.png
-        text: For this tutorial we'll be working in block mode but App Lab also supports
-          working in text.
+        text: Para este tutorial vamos a trabajar en modo de bloques pero App Lab
+          también te permite trabajar con texto.
       9:
         image: notes/applab_intro_welcome_9.png
-        text: Either way you'll be programming in JavaScript, the language of the
-          web. Each level has a goal, instructions and an image of what you're aiming
-          to create.
+        text: De cualquier manera se va a estar programando en JavaScript, el lenguaje
+          de la web. Cada nivel tiene una meta, instrucciones y una imagen de lo que
+          se pretende crear.
       10:
         image: notes/applab_intro_welcome_10.png
-        text: If you're ever stuck, click on this picture and it will show you exactly
-          how to complete the level. But see if you can do it on your own first.
+        text: Si alguna vez tienes dificultades, haz clic en la imagen y semostrará
+          exactamente cómo completar el nivel. Pero intenta hacerlo primero por tu
+          cuenta.
       11:
         image: notes/applab_intro_welcome_11.png
-        text: Once you've completed the goal for this level click Finish to move on.
-          That's all there is to it! Hit the orange "continue" button to go to the
-          next level and start your adventure with an App Lab!
+        text: Una vez que hayas completado la meta para este nivel haz clic en Terminar
+          para seguir adelante. ¡Esto es todo! ¡Selecciona el botón naranja "Continuar"
+          para ir al siguiente nivel y empezar tu aventura con App Lab!
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png
-        text: Apps are really cool because it's kind of like starting your own business
-          I mean, you get to design everything from the ground up, you get to manage
-          everything, and you're the owner of this piece of work that you just created
-          with code.
+        text: Las aplicaciones son geniales porque son como comenzar tu propio negocio,
+          es decir, diseñar todo desde el comienzo, administrarlo, y ser el dueño
+          de esta obra que acabas de crear con código.
       2:
         image: notes/applab_intro_events_2.png
-        text: Now that you can change the look of your app let's make it interactive
-          by responding to events! Events are user actions like clicking a button,
-          scrolling through a menu, or hovering over a picture. Interactive apps need
-          ways to respond to events, like playing a sound when I click this button.
-          To do this in App Lab you need to use a new block called 'onEvent'.
+        text: Ahora que puedes cambiar la apariencia de tu aplicación ¡hagámosla interactivo
+          respondiendo a eventos! Los eventos son acciones del usuario como hacer
+          clic al botón, moversé por el menú o sobre una imagen. Las aplicaciones
+          interactivas necesitan siempre responder a eventos, como reproducir un sonido
+          cuando hago clic este botón. Para hacer esto en App Lab se necesita usar
+          un nuevo bloque denominado 'onEvent'.
       3:
         image: notes/applab_intro_events_3.png
-        text: This program sets the screen to blue. I want the screen to turn green
-          when I click this button. First I'll need to drag in an onEvent block. By
-          hovering I know the button's ID is "bigButton" so I'll select that in the
-          first drop-down.
+        text: Este programa configura la pantalla en azul. Yo quiero que la pantalla
+          se cambie a verde cuando haga clic en este botón. Primero necesitaré arrastrar
+          un bloque de onEvent. Pasando por el, sé que el nombre del botón es "bigButton"
+          así que lo seleccionaré en el primer menú desplegable.
       4:
         image: notes/applab_intro_events_4.png
-        text: Next I'll choose the type of event. There's lots of options you can
-          pick from but right now I'll leave it as a regular old click.
+        text: Luego seleccionare el tipo de evento. Hay un montón de opciones que
+          se pueden escoger pero ahora voy a dejarlo como un clic cualquiera.
       5:
         image: notes/applab_intro_events_5.png
-        text: 'Finally I''ll add code inside the on event that will change the background
-          color of the screen. You can read this block like a sentence: "On the event
-          that the button is clicked run all this code."'
+        text: 'Finalmente añadiré el código dentro del evento que cambiará el color
+          de fondo de la pantalla. Puedes leer este bloque como una oración: "En el
+          evento que se hace clic en el botón se ejecuta todo este código."'
       6:
         image: notes/applab_intro_events_6.png
-        text: Let's test it. Blocks outside an onEvent still run right away so the
-          screen starts blue.
+        text: Probémoslo. Bloques afuera de un onEvent todavía se ejecutan justo después
+          así que la pantalla empieza azul.
       7:
         image: notes/applab_intro_events_7.png
-        text: And when I click the big button the code inside my onEvent runs and
-          my screen turns green.
+        text: Y cuando hago clic en el botón grande se ejecuta el código dentro de
+          mi onEvent y mi pantalla se pone verde.
       8:
         image: notes/applab_intro_events_8.png
-        text: If you want to change more things after the event, like the text on
-          the screen just add more code to the onEvent
+        text: Si desea cambiar más cosas después de este evento, como el texto en
+          la pantalla sólo añada más código para el onEvent
       9:
         image: notes/applab_intro_events_9.png
-        text: To make your program respond to more events add more onEvent blocks.
-          Just make sure not to put them inside of each other. Now it's time to try
-          it out for yourself. Have fun!
+        text: Para hacer que su programa responda a más eventos añada mas bloques
+          de onEvent. Solo asegñurese de no colocarlos uno dentro del otro. Ahora
+          es momento de intentarlo por cuenta propia. ¡Diviértase!
     applab_intro_sounds:
       1:
         image: notes/applab_intro_sounds_1.png
-        text: Next you'll learn about adding images and sounds to your app. Let's
-          start by checking out the sound options.
+        text: A continuación usted aprenderá sobre agregar imágenes y sonidos a su
+          aplicación. Empecemos revisando las opciones de sonido.
       2:
         image: notes/applab_intro_sounds_2.png
-        text: In the tool box you'll find a new block called "playSound". Drag it
-          into the workspace. You can pick a sound to play by clicking the drop-down
-          then clicking "Choose".
+        text: En la caja de herramientas usted encontrará un nuevo bloque llamado
+          "playSound". Arrástrelo al área de trabajo. Usted puede seleccionar un sonido
+          haciendo clic en el menú desplegable y luego haciendo clic en "Choose".
       3:
         image: notes/applab_intro_sounds_3.png
-        text: From here you can either upload a sound file from your computer, or
-          search for a sound from the sound library. The sound library has lots of
-          different categories like instruments, background music or animals.
+        text: Desde aquí usted puede carga un archivo de sonido desde su computadora,
+          o buscar un sonido de la librería de sonidos. Esta tiene diferentes categorías
+          como instrumentos, música de fondo o animales.
       4:
         image: notes/applab_intro_sounds_4.png
-        text: Once you've got the sound you want, click "Choose". When this block
-          runs, it will play the sound you chose.
+        text: Una vez que haya escogido el sonido que quiere, haga clic en "Choose".
+          Cuando el bloque se ejecute, se reproducirá el sonido que se escogió.
       5:
         image: notes/applab_intro_sounds_5.png
-        text: To add images to your elements you can just use the setProperty block.
-          Select the image property in the second drop-down
+        text: Para agregar imágenes a sus elementos usted puede usar el bloque setProperty.
+          Seleccione la propiedad de la imagen en el segundo menú desplegable
       6:
         image: notes/applab_intro_sounds_6.png
-        text: Then select "Choose" from the third drop down.
+        text: Luego selecione "Choose" de la tercera pestaña desplegable.
       7:
         image: notes/applab_intro_sounds_7.png
-        text: From here you can upload an image from your computer or you can look
-          through a huge library of icons in the icon library.
+        text: Desde acá usted puede subir una imagen de su computadora o bueno revisar
+          una gran librería de iconos en la librería de iconos.
       8:
         image: notes/applab_intro_sounds_8.png
-        text: Back in code mode you can use the "setProperty" block to change the
-          icon color of your icon. Once you've picked what image your icon to use
-          click "Run" to see how it looks.
+        text: De vuelta en el modo de código usted puede usar el bloque "setProperty"
+          para cambiar el color de icono de su icono. Una vez que haya seleccionado
+          que icono va a usar haga clic en "Run" para ver como se ve.
       9:
         image: notes/applab_intro_sounds_9.png
-        text: That's all there is to it! Now you can start adding images and sounds
-          to make your apps even more fun and dynamic.
+        text: "¡Esto es todo al respecto! Ahora usted ya puede a empezar a agregar
+          imágenes y sonidos para hacer sus aplicaciones aún mas divertidas y dinámicas."
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png
-        text: To build your own apps you're going to need to start designing screens
-          and elements from scratch. App Lab makes this easy to do with Design Mode.
+        text: Para construir tus propias aplicaciones vas a necesitar empezar diseñando
+          pantallas y elementos desde cero. App Lab hace esto fácil de hacer con el
+          Modo de Diseño.
       2:
         image: notes/applab_intro_designmode_2.png
-        text: Use the switch on top of your app to go into Design Mode.
+        text: Utilice el interruptor en la parte superior de su aplicación para entrar
+          en modo de diseño.
       3:
         image: notes/applab_intro_designmode_3.png
-        text: You can add new elements by dragging them onto the screen. You can move
-          them around to different locations and change their size by dragging the
-          bottom right corner.
+        text: Puedes agregar nuevos elementos arrastrándolos a la pantalla. Puedes
+          moverlos a diferentes lugares y cambiar su tamaño arrastrando la esquina
+          inferior derecha.
       4:
         image: notes/applab_intro_designmode_4.png
-        text: To change an element's properties use the controls on the right. For
-          example, it's really easy to change this button's text, color, and font
-          size.
+        text: Para cambiar las propiedades de un elemento utilice los controles a
+          la derecha. Por ejemplo, es muy fácil cambiar el texto, color y tamaño de
+          la fuente de este botón.
       5:
         image: notes/applab_intro_designmode_5.png
-        text: When you add a new element to your screen it'll get a generic ID like
-          button1. It's a good idea to change this button's ID to something more meaningful
-          like "rightButton". So that you'll know which one it is when you go to the
-          program.
+        text: Cuando agregue un nuevo elemento a su pantalla obtendrá una indentiicación
+          genérica como button1. Es una buena idea cambiar el identificador de este
+          botón a algo más significativo como "botonDerecho". Así sabrá cuál es cuando
+          vaya al programa.
       6:
         image: notes/applab_intro_designmode_6.png
         text: If you add an element to your app by mistake, just drag it out or hit
@@ -3709,10 +3714,11 @@
           try again.
       9:
         image: notes/mc_2017_repeat_9.png
-        text: 'If you are thinking about having a cool job like Katie''s, go ahead
-          and click the show code button when you finish every level. That''s going
-          to actually show you the Javascript code that someone like Katie uses when
-          she''s actually programming Minecraft. Katie: Yeah, good luck everyone!'
+        text: 'Si usted estan pensando en tener un trabajo genial como el de Katie,
+          siga adelante y haga clic en el botón de mostrar código cuando usted finalice
+          cada nivel. Eso hará que se muestre el código Javascript que alguien como
+          Katie usa cuando ella esta realmente programando Minecraft. Katie: Si, ¡Buena
+          suerte a todos!'
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
@@ -3725,32 +3731,32 @@
           a function. Let me just open this.'
       3:
         image: notes/mc_2017_functions_3.png
-        text: So a function is a specific set of instructions to accomplish a certain
-          task, kind of like a recipe. In the next few levels, you'll have access
-          to functions that you can use to solve the puzzles.
+        text: Así que una función es conjunto específico de instrucciones para llevar
+          a cabo una determinada tarea, como una receta. En los próximos niveles,
+          usted tendrá acceso a funciones que puede usar para resolver los rompecabezas.
       4:
         image: notes/mc_2017_functions_4.png
-        text: Look at the code in the function when it's in the workspace to see what
-          it does.
+        text: Mira el código en la función cuanto está en el espacio de trabajo para
+          ver lo que hace.
       5:
         image: notes/mc_2017_functions_5.png
-        text: Then, find the block with that name in the toolbox and drag it from
-          the toolbox to the when run block.
+        text: Luego, busque un bloque con ese nombre en la caja de herramientas y
+          arrástrelo desde la caja de herramientas hasta cuando se ejecuta el bloque.
       6:
         image: notes/mc_2017_functions_6.png
-        text: Remember, you can use the same function every time you need to run the
-          same set of instructions to do something, like build a bridge. Good luck,
-          I know you can do it!
+        text: Recuerde, usted puede usar la misma función cada vez que usted necesite
+          ejecutar la misma configuración de instrucciones para hacer algo, como construir
+          un puente. Buena suerte, ¡Yo se que usted puede hacerlo!
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
-        text: 'Preston: Congratulations!'
+        text: 'Preston: ¡Felicidades!'
       2:
         image: notes/mc_2017_congratulations_2.png
-        text: 'Lizzy: Congratulations!'
+        text: 'Lizzy: ¡Felicidades!'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: Congratulations, you did it!'
+        text: 'Stampy: ¡Felicidades, lo has conseguido!'
       4:
         image: notes/mc_2017_congratulations_4.png
         text: 'Stacy: Congratulations guys, you totally rocked that! And now that
@@ -3769,11 +3775,11 @@
           coding with the Agent. Have fun, and good job!'
       7:
         image: notes/mc_2017_congratulations_7.png
-        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show
-          you what it can do. Look, it''s doing it! I told it to build a staircase
-          out of these terra cotta blocks, now we can just use this to get out of
-          here. And you guys, it''s not just staircases. I can tell the Agent to do
-          anything I want, and it will do it for me.'
+        text: 'Stacy: ¡Y estoy de regreso! Okey, chicos, ¡este es el agente! Les mostraré
+          qué puede hacer. Mire ¡está haciéndolo! Yo le dije a él para construir una
+          escalera fuera de estos bloques de terracota, ahora sólo podemos utilizar
+          esto para salir de acá. Y chicos, no son sólo escaleras. Puedo decirle al
+          agente que haga lo que yo quiera, y lo hará para mí.'
       8:
         image: notes/mc_2017_congratulations_8.png
         text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used
@@ -3941,97 +3947,104 @@
           video shows 30 images per second now we're talking about a lot of data here.
       12:
         image: notes/csd_concept_binary_data_12.png
-        text: Every sound is basically a series of vibrations in the air. Vibrations
-          can be represented graphically as a waveform. Any point on this waveform
-          can be represented by a number. And this way, any sound can be broken down
-          into a series of numbers. If you want higher quality sound, you will pick
-          32-bit audio or an 8-bit audio. More bits means a higher range of numbers.
+        text: Cada sonido es básicamente una serie de vibraciones en el aire. Las
+          vibraciones pueden representarse gráficamente como una onda. Cualquier punto
+          en esta onda puede ser representado por un número. Y de esta manera, cualquier
+          sonido puede ser dividido en una serie de números. Si usted quiere una calidad
+          de sonido alta, seleccionaría un audio de 32-bit o uno de 8-bit. Mayor número
+          de bits significa mayor rango de números.
       13:
         image: notes/csd_concept_binary_data_13.png
-        text: When you use a computer to write code or make your own app, you're not
-          dealing directly with these ones and zeros. But you will be dealing with
-          images or sound or video. So if you want to understand how computers work
-          on the inside, it all comes down these simple ones and zeros and the electrical
-          signals in the circuits behind them.
+        text: Cuando usted usa una computadora para escribir código o para hacer su
+          propia aplicación, usted no está trabajando directamente con estos ceros
+          y unos. Pero si está trabajando con imágenes o sonido o vídeos. Así que
+          si quiere entender cómo funcionan las computadoras por dentro, todo se reduce
+          a estos simples ceros y unos y las señales eléctricas en los circuitos detrás
+          de ellos.
     csd_concept_circuits_logic:
       1:
         image: notes/csd_concept_circuits_logic_1.png
-        text: One of the coolest things I've discovered about circuits is circuitry
-          can be an art form like if I have a creative idea, I can get that creative
-          idea out using circuits. So if you have ideas, you can use technology to
-          make those ideas come to life.
+        text: Una de las mejores cosa que he descubierto sobre circuitos es que la
+          circuitería puede ser una forma de arte si poseo una idea creativa, puedo
+          lograr esa idea creativa usando circuitos. Así que si usted tiene ideas,
+          puede usar la tecnología para hacer que esas ideas cobren vida.
       2:
         image: notes/csd_concept_circuits_logic_2.png
-        text: Every input or output of a computer is effectively a type of information,
-          which can be represented by on or off electrical signals or ones and zeros.
+        text: Cada entrada o salida de la computadora es efectivamente un tipo de
+          información, que puede ser representado por señales de encendido o apagado
+          o ceros y unos.
       3:
         image: notes/csd_concept_circuits_logic_3.png
-        text: In order to process the information that comes in as input, and to make
-          the information that is output, a computer needs to modify and combine the
-          input signals. To do this, a computer uses millions of teeny electronic
-          components, which come together to form circuits.
+        text: Para lograr procesar la información que ingresa como entrada y para
+          generar la información que sale, una computadora necesita modificar y combinar
+          las señales de entrada. Para hacer esto, una computadora usa millones de
+          componentes electrónicos teeny, que al juntarse todos forman los circuitos.
       4:
         image: notes/csd_concept_circuits_logic_4.png
-        text: Let's take a closer look at how circuits can modify and process information
-          that's represented in ones and zeros. This is an incredibly simple circuit.
-          It takes an electrical signal, on or off, and it flips it. So if the signal
-          you give it is a 1, the circuit gives you a 0, and if you give the circuit
-          a 0, it gives you a 1. The signal that goes in is not the same as the signal
-          that comes out, and so we call this circuit NOT.
+        text: Echemos un vistazo mas de cerca a cómo los circuitos pueden ser modificados
+          y procesar información que es representada con ceros y unos. Este es increíblemente
+          un circuito simple. Utiliza una señal eléctrica, encendida o apagada, y
+          la voltea. Así que si la señal que proporciona es un 1, el circuito proporciona
+          un cero, y si usted ingresa un 0 al circuito, el mismo retornará un 1. La
+          señal que entra no es la misma que sale, y así denominamos este circuito
+          como NOT.
       5:
         image: notes/csd_concept_circuits_logic_5.png
-        text: More complicated circuits can take multiple signals and combine them,
-          and give you a different result. In this example, a circuit will take two
-          electrical signals, now each one might be a 1 or a 0. If either of the signals
-          coming in is a 0, then the result is also a 0. This circuit will only give
-          you a 1, if the first signal and the second signal are both a 1, and so
-          we call the circuit AND.
+        text: Circuitos más complicados pueden realizar señales múltiples y combinarlas,
+          y dará un resultado diferente. Por ejemplo, un circuito con dos señales
+          eléctricas, donde cada uno debe ser un 1 o un 0. Si alguno de las señales
+          que entra es un 0, el resultado es también un cero. Este circuito sólo retornará
+          un 1, si la primera y la segunda señal son ambas un 1, este se denomina
+          circuito AND.
       6:
         image: notes/csd_concept_circuits_logic_6.png
-        text: There are many small circuits like this that perform simple logical
-          calculations. By connecting these circuits together, we can make more complex
-          circuits that perform more complex calculations.
+        text: Hay muchos pequeños circuitos como este que realiza cálculos sencillos
+          lógicos. Mediante la conexión de estos circuitos juntos, podemos hacer circuitos
+          más complejos que realizan cálculos más complejos.
       7:
         image: notes/csd_concept_circuits_logic_7.png
-        text: For example, you can make a circuit that adds 2 bits together called
-          an adder. This circuit takes in 2 individual bits, each one a 1 or a 0,
-          and adds them together to calculate the sum. The sum can be 0 plus 0 equals
-          0, 0 plus 1 equals 1, or 1 plus 1 equals 2. You need two wires coming out
-          because it can take up to two binary digits to represent the sum. Once you
-          have a single adder for adding two bits of information, you can put together
-          multiples of these adder circuits side-by-side to add together much larger
-          numbers.
+        text: Por ejemplo, usted puede hacer un circuito que agregue 2 bits juntos
+          denominado sumador. Este circuito toma dos bits individuales, cada uno un
+          1 o un 0, y los coloca juntos para calcular la suma de ellos. La suma puede
+          ser 0 mas 0 igual a 0, 0 mas 1 igual a 1, o 1 mas 1 igual a 2. Usted necesita
+          dos cables de salida porque puede necesitarse hasta dos bits de salida para
+          representar la suma. Una vez que usted tiene un sumador simple para añadir
+          dos bits de información, usted puede colocar juntos varios de estos circuitos
+          sumadores lado a lado para agregar una mayor cantidad de números.
       8:
         image: notes/csd_concept_circuits_logic_8.png
-        text: For example, here's how an 8-bit adder adds the numbers 25 and 50. Each
-          number is represented using 8 bits, resulting in 16 different electrical
-          signals that go into the circuit. The circuit for an 8-bit adder has lots
-          of little adders inside of it, which together, calculate the sum.
+        text: Por ejemplo, así es cómo un sumador de 8-bit suma el numero 25 y 50.
+          Cada número es presentado usando 8 bits, resultando en 16 señales eléctricas
+          diferentes que entran al circuito. El circuito para una sumador de 8-bit
+          posee muchos sumadores pequeños dentro de él, que todos juntos, calculan
+          la suma.
       9:
         image: notes/csd_concept_circuits_logic_9.png
-        text: Different electrical circuits can perform other simple calculations
-          like subtraction or multiplication. In fact, all the information processing
-          your computer does is just lots and lots of small simple operations put
-          together. Each individual operation done by a computer is so, so simple
-          it could be done by a human, but these circuits inside computers are way
-          way faster.
+        text: Diferentes circuitos eléctricos pueden realizar otros cálculos simples
+          como la resta o multiplicación. De hecho, toda esta información que está
+          procesando su computadora es cantidades enormes de pequeños operadores simples
+          colocados juntos. Cada operador individual realizado por una computadora
+          es tan, tan simple que puede ser hecho por un humano, pero estos circuitos
+          dentro de las computadoras son muy muy rápidos.
       10:
         image: notes/csd_concept_circuits_logic_10.png
-        text: Back in the day, these circuits were big and clunky, and an 8-bit adder
-          could be as big as a fridge, and it would take minutes for them to perform
-          a simple calculation. Today, computer circuits are microscopic in size,
-          and way way faster. Why are smaller computers also faster? Well, because
-          the smaller the circuit is, the less distance the electrical signal has
-          to go. Electricity moves at just about the speed of light, which is why
-          modern circuits can perform billions of calculations per second.
+        text: Antiguamente, estos circuitos eran grandes e inadecuados, y un sumador
+          de 8-bit podía ser tan grande como un refrigerador y podía tomar minutos
+          para que se realizara un cáculo sencillo. Hoy en día, circuitos computacionales
+          son de tamaño microscópico, y muy muy rápidos. ¿Por qué las computadoras
+          pequeñas son también pequeñas? Bueno, porque mientras más pequeño sea el
+          circuito, menor es la distancia que la señal eléctrica debe recorrer. La
+          electricidad se mueve a la velocidad de la luz, lo cual explica por qué
+          circuitos modernos pueden realizar billones de cálculos por segundo.
       11:
         image: notes/csd_concept_circuits_logic_11.png
-        text: So whether you're playing a game, recording a video, or exploring the
-          cosmos, everything you could possibly do with technology requires lots of
-          information to be processed extremely quickly. Underneath all this complexity
-          is just lots of teeny little circuits that turn binary signals into websites,
-          videos, music, and games. These circuits can even help us decode DNA to
-          diagnose and cure disease. So what would you like to do with all these circuits?
+        text: Así que si usted está jugando un juego, grabando un vídeo, o viendo
+          los cosmos, cualquier cosa que usted puede hacer con tecnología requiere
+          cantidades enormes de información que será procesada rápidamente. Por debajo
+          de toda esta complejidad sólo están los pequeños circuitos que convierten
+          señales binarias en sitios web, vídeos, música y juegos. Estos circuitos
+          pueden incluso ayudarnos a decodificar el ADN para diagnosticar y curar
+          la enfermedad.¿Así que qué es lo que va a hacer con todos estos circuitos?
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
@@ -4040,9 +4053,10 @@
           The sky's the limit when it comes to textiles.
       2:
         image: notes/csd_concept_memory_cpu_input_output_2.png
-        text: My name is Danielle Applestone, and I'm CEO of Othermachine Company.
-          We build a desktop milling machine. A milling machine takes a rotating cutting
-          tool and moves it through material to create a 3D object.
+        text: Mi nombre es Danielle Applestone y soy CEO de Othermachine Company.
+          Construimos una fresadora de sobremesa. Una fresadora usa un instrumento
+          de corte giratorio moviéndolo a través de un material para crear un objeto
+          3D.
       3:
         image: notes/csd_concept_memory_cpu_input_output_3.png
         text: Under the hood, all computers do the same four basic things. They input
@@ -4063,49 +4077,51 @@
           a drone are also different input devices.
       6:
         image: notes/csd_concept_memory_cpu_input_output_6.png
-        text: Now, let's look at a simple example of how input travels through a computer
-          and becomes output. When you press a key on your keyboard - let's say the
-          letter "B". The keyboard converts the letter to a number. That number is
-          sent as binary, ones and zeros, into the computer.
+        text: Ahora, veamos como un simple ejemplo de cómo una entrada viaja a través
+          de la computadora y se convierte en salida. Cuando usted presiona una tecla
+          en su teclaso - digamos la leta "B". El teclado convierte la letra en un
+          número. Ese número es enviado como binario, ceros y unos, dentro de la computadora.
       7:
         image: notes/csd_concept_memory_cpu_input_output_7.png
-        text: Starting from this number, the CPU calculates how to display the letter
-          "B" pixel by pixel. The CPU requests step-by-step instructions from memory,
-          which tell it how to draw the letter "B". The CPU runs these instructions
-          and stores the results as pixels in memory.
+        text: Empezando por este número, el CPU calcula cómo mostrar la letra "B"
+          pixel por pixel. El CPU pide instrucciones paso a paso de la memoria, que
+          dice cómo dibujar la letra "B". El CPU ejecuta estas instrucciones y almacena
+          en la memoria el resultado como píxeles.
       8:
         image: notes/csd_concept_memory_cpu_input_output_8.png
-        text: Finally, this pixel information is sent in binary to the screen. The
-          screen is an output device, which converts the binary signals into the tiny
-          lights and colors that make up what you see.
+        text: Finalmente, esta información en píxel es enviada en binario a la pantalla.
+          La pantalla es un dispositivo de salida, el cual convierte las señales binarias
+          en las pequeñas luces y colores que conforman lo que se ve.
       9:
         image: notes/csd_concept_memory_cpu_input_output_9.png
-        text: This all happens so quickly it feels instantaneous, but to display each
-          letter a computer runs thousands of instructions, starting from the moment
-          your finger presses the key point.
+        text: Todo esto sucede tan rápido que se siente instantáneo, pero para mostrar
+          cada letra una computadora ejecuta miles de instrucciones, empezando desde
+          el momento que su dedo presiona el punto clave.
       10:
         image: notes/csd_concept_memory_cpu_input_output_10.png
-        text: In that example, the output device was the screen, but there are many
-          different types of output which take a binary signal from the computer and
-          do something in the physical world. For example, a speaker will play sound,
-          and a 3D printer will print an object. Output devices can also control physical
-          motion like a robotic arm, the motor of a car, or the cutting tool of the
-          milling machine that my company makes. New types of inputs and outputs let
-          computers interact with the world in entirely new ways. This has been helped
-          out by improvements to the speed and size of the memory and CPU.
+        text: En ese ejemplo, el dispositivo de salida fue la pantalla pero hay varios
+          diferentes tipos de salida que toman una señal binaria de la computadora
+          y hacen algo con el ella en el mundo físico. Por ejemplo, una corneta reproducirá
+          un sonido, y una impresora 3D imprimirá un objeto. Dispositivos de salida
+          pueden también controlar movimientos físicos como el brazo de un robot,
+          el motor de un carro, o la herramienta cortadora de la máquina fresadora
+          que mi compañia posee. Nuevos tipos de entradas y salidas permiten que computadoras
+          interactúen con el mundo en nuevas maneras. Esto ha sido facilitado por
+          mejoras a la velocidad y tamaño de l memoria y CPU.
       11:
         image: notes/csd_concept_memory_cpu_input_output_11.png
-        text: The more complicated a task is and the more information that is input
-          or output, the more processing power and memory a computer needs. Typing
-          letters on a screen may be easy but to do complicated 3d graphics or record
-          a high-definition movie, modern computers often have multiple CPUs to process
-          all that information and many gigabytes of memory to store it.
+        text: Mientras más complicada sea la tarea y más información que es entrada
+          o salida, mayor sera el poder de procesamiento y memoria que una computadora
+          necesita. Escribir letras en una pantalla puede ser sencillo pero para hacer
+          gráficos complicados en 3D o grabar una película en alta definición, computadoras
+          modernas a menudo tienen múltiples CPUs para procesar toda esa información
+          y muchos gigabytes de memoria para almacenarlo.
       12:
         image: notes/csd_concept_memory_cpu_input_output_12.png
-        text: 'No matter what it is you want to do with the computer, every single
-          action is about: inputting information from the physical world, storing
-          and processing that information, and getting some output back into the physical
-          world.'
+        text: 'No importa qué es lo que quiere hacer con la computadora, cada acción
+          sencilla trata sobre: introduciendo información del mundo físico, almacenando
+          y procesando esa información, y obteniendo alguna salida que retorne al
+          mundo físico.'
     csd_concept_hardware_software:
       1:
         image: notes/csd_concept_hardware_software_1.png
@@ -4121,15 +4137,16 @@
           together to give you all the games that you love on your Xbox.'
       3:
         image: notes/csd_concept_hardware_software_3.png
-        text: When you look inside a computing device you see a bunch of circuits,
-          chips, wires, speakers, plugs, and all sorts of other stuff. This is the
-          hardware.
+        text: Cuando se mira dentro de un dispositivo informático uno ve un montón
+          de circuitos, chips, cables, altavoces, enchufes y todo tipo de cosas. Esto
+          es lo que se conoce como el hardware.
       4:
         image: notes/csd_concept_hardware_software_4.png
-        text: But what you don't see is the software. Software is all of the computer
-          programs, or code, running on this machine. Software can be anything from
-          apps and games to webpages and the data science software that me and my
-          teams use at Amazon to understand how customers behave.
+        text: Pero lo que no ves es el software. Este es todo los programas de la
+          computadora, o código que se ejecuta en este equipo. El software puede ser
+          cualquier cosas desde aplicaciones y juegos hasta páginas web y el software
+          de ciencia de los datos que mi equipo de Amazon y yo usamos para entender
+          cómo se comportan los clientes.
       5:
         image: notes/csd_concept_hardware_software_5.png
         text: But how do the hardware and the software interact with one another?
@@ -4181,28 +4198,29 @@
           a look at the operating system.
       13:
         image: notes/csd_concept_hardware_software_13.png
-        text: The operating system of the computer is the master program that manages
-          how software gets to use the hardware of the computer. For example, I helped
-          create the Windows operating system that runs on most personal computers.
+        text: El sistema operativo de la computadora es el programa principal que
+          gestiona cómo el software consigue usar el hardware de la computadora. Por
+          ejemplo, yo ayudé a crear el sistema operativo de Windows que se ejecuta
+          en la mayoría de computadoras personales.
       14:
         image: notes/csd_concept_hardware_software_14.png
-        text: The operating system is a program with special abilities that let it
-          control the other software on the computer. It lets you install new programs
-          by loading them into your computer's memory. It decides when a program is
-          run by the central processing unit, and whether that program can access
-          the computer's input and output devices. And when you think your computer
-          is running many programs at once, in reality, it's the operating system
-          that's quickly switching between programs sharing that CPU for fractions
-          of a second.
+        text: El sistema operativo es un programa con habilidades especiales que permiten
+          controlar el otro software en la computadora. Permite instalar nuevos programa
+          cargándolos en la memoria del su computadora. Él decido cuándo un programa
+          es ejecutado por la unidad de procesamiento central, y si ese programa puede
+          acceder al sistema de salida o entrada del dispositivo. Y cuándo usted piensa
+          que su computadora está ejecutando varios programa al mismo tiempo, en realidad,
+          es el sistema operativo que funciona rápido cambiando entre los programas
+          que comparte ese CPU por fracciones de un segundo.
       15:
         image: notes/csd_concept_hardware_software_15.png
-        text: Inside every computer is an operating system managing software that
-          controls the computer's hardware.
+        text: Dentro de cada computadora hay un sistema operativo manejando un software
+          que controla el hardware de la computadora.
       16:
         image: notes/csd_concept_hardware_software_16.png
-        text: The software is a series of commands made of simple binary code, and
-          that binary code is just electrical signals flowing through billions of
-          tiny circuits.
+        text: El software es una serie de comandos hechos de un código binario simple,
+          y ese código binario simple son sólo señales eléctricas fluyendo a través
+          de millones de pequeños circuitos.
       17:
         image: notes/csd_concept_hardware_software_17.png
         text: Computers have the potential to do all kinds of amazing things. But

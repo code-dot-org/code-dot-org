@@ -25,14 +25,14 @@
   submit: "제출하기"
   twentyhours_heading: "컴퓨터과학(정보과학) 과정을 시도해 보세요."
   twentyhours_text: "Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍 기초개념들을 학습해 보세요."
-  og_title: 모든 아이들에게 기회가 주어져야 합니다.
+  og_title: '모든 아이들에게 기회가 주어져야 합니다.'
   og_title_soon: "The Hour of Code is coming"
-  og_title_here: "The Hour of Code is here!"
+  og_title_here: "Hour of Code 가 여기 있습니다!"
   og_description: "모든 학교의 모든 학생은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다. 이것은 모든 것을 변화시킬 것입니다."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code 가 여기 있습니다"
   csedweek_og_description: "Hour of Code 는 180개 이상의 나라에서 45개 이상의 언어로, 나이에 상관없이 수천만 명의 학생들과 함께하려는 전세계적 운동입니다."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "Hour of Code 가 2018년 12월 3일~9일에 옵니다. 컴퓨터 사이언스는 모든 학생들이 배우기 위한 기초입니다."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Hour of Code</a><br/>를 해보세요. December 8 - 14, 2014<br/>"
   hoc2014_students: "학생들"
@@ -205,10 +205,10 @@
   just_did_course2: "과정2를 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course3: "과정3을 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course4: "과정4를 완료했습니다. - @codeorg 를 살펴보세요!"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursea: "방금 코스 A를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_courseb: "방금 코스 B를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_coursec: "방금 코스 C를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_coursed: "방금 코스 D를 끝냈습니다 - 확인해보세요! @codeorg"
   just_did_coursee: "I just finished Course E - check it out! @codeorg"
   just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "속진 과정을 완료했습니다. - @codeorg 를 살펴보세요!"
@@ -365,6 +365,8 @@
   homepage_header_donors: "Code.org는 후원자 여러분에게 감사의 인사를 드립니다."
   homepage_donors_seall: "모두 보기"
   homepage_donors_donate: "기부하기"
+  homepage_below_hero_announcement_text: "당사는 귀하의 개인 정보를 관리하며 당사의 업데이트된 개인 정보 보호 정책은 5월 25일에 발효됩니다."
+  homepage_below_hero_announcement_link_text: "더 알아보기"
   contact_form_topic_student: "학생입니다."
   contact_form_topic_parent: "부모입니다."
   contact_form_topic_teacher: "교사/교육자입니다."
@@ -492,8 +494,10 @@
   video_title_real_madrid: "Real Madrid와 함께하는 Hour of Code"
   video_title_marco_belinelli: "Marco Belinelli와 함께하는 Hour of Code"
   video_title_chris_bosh: "컴퓨터공학을 지지하는 크리스 보쉬"
+  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1분"
   video_2min: "2분"
+  video_3min: "3 min"
   video_5min: "5분"
   speak_another_language: "다른 언어를 할 줄 아나요?"
   help_translate: "번역하는 것을 도와주세요."
@@ -533,6 +537,10 @@
   volunteer_engineer_submission_field_email: "이메일"
   volunteer_engineer_submission_field_email_desc: "여러분의 이메일 주소는 절대 공유되지 않을 것입니다. 그러나 우리는 선생님들의 요청을 여러분들께 전달할 것입니다."
   volunteer_engineer_submission_field_email_placeholder: "이메일"
+  volunteer_engineer_submission_field_email_preference: "당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_yes: '예'
+  volunteer_engineer_submission_field_email_preference_no: '아니요'
   volunteer_engineer_submission_final_paragraph: "여러분은 지역 선생님들의 Hour of Code 활동 등이 가능한 자원봉사자 명단에 들어갈 것입니다. 여러분의 이메일과 주소는 절대로 공개되지 않습니다만 아래의 정보들(정확한 위치를 포함한 정보들) 은 지역 선생님들에게 안내가 될 것입니다."
   volunteer_engineer_submission_checkbox_contact: '선생님들이 자원봉사자를 구하실 때 저에게 연락주시는 것에 동의합니다. (참고: 여러분의 이메일 주소가 공유 되지는 않을 것입니다.)'
   volunteer_engineer_submission_checkbox_age_18_plus: "18세 이상임을 증명합니다."
@@ -614,18 +622,12 @@
   dashboard_course_csp: "AP ® 컴퓨터 과학 원리"
   dashboard_course_csp_desc: "Code.org는 컴퓨팅의 기초 아이디어를 탐구 하기 위한 엄격하고, 매력적이면서 접근하기 쉬운 과정을 설계 했다."
   dashboard_landing_loading: "Loading..."
-  dashboard_action_edit: "편집"
-  dashboard_action_save: "저장"
-  dashboard_action_save_all: "모두 저장"
   dashboard_action_cancel: "취소"
   dashboard_action_delete: "삭제"
   dashboard_action_delete_yes: '예'
   dashboard_action_delete_no: '아니요'
   dashboard_action_confirm: "삭제하시겠습니까?"
-  dashboard_action_remove: "삭제"
-  dashboard_action_remove_confirm: "삭제할까요?"
   dashboard_action_done: "완료"
-  dashboard_action_required: "필수 항목"
   dashboard_action_print_certificates: "인증서 인쇄하기"
   dashboard_assessments_view: '평가 결과 보기:'
   dashboard_assessments_none: "평가 결과 없음"
@@ -701,35 +703,22 @@
   dashboard_sections_assign_activity: "코스 배정"
   dashboard_error_none_selected: "당신은 이동시킬 학생을 선택하지 않았습니다. 최소 한 명 이상의 학생을 선택하세요."
   dashboard_error_other_section: "만약 여러분의 섹션으로 학생들을 이동시킬 것이라면, 드롭다운 목록에서 섹션을 선택하세요. 학생들을 다른 선생님의 섹션으로 이동시키려면 '다른 섹션'을 선택합니다."
-  dashboard_students_add_student: "학생 추가"
-  dashboard_students_add_students: "여러 학생 추가"
   dashboard_students_add_multiple: '학생들의 이름을 한 줄에 하나씩 입력하거나 붙여넣기 하세요.'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "새로운 섹션을 만들었습니다! <b>학생 추가</b> <b>여러 학생 추가</b> 버튼을 눌러 학생들을 추가하세요."
-  dashboard_students_placeholder_name: "학생 이름"
   dashboard_students_name: "이름"
   dashboard_students_progress: "진행도"
-  dashboard_students_age: "나이"
-  dashboard_students_gender: "성별"
   dashboard_students_male: "남"
   dashboard_students_female: "여"
-  dashboard_students_secret: "비밀보호"
-  dashboard_students_password: "password"
-  dashboard_students_username: '사용자명: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: "단계 완료"
   dashboard_students_total_lines: "총 코드 라인"
-  dashboard_students_show_secret: "비밀보호 보기"
-  dashboard_students_auto_generated: "자동생성"
-  dashboard_students_reset_secret: "비밀보호 재설정"
-  dashboard_students_reset_password: "비밀번호 재설정"
   dashboard_students_share_section: "이 섹션의 로그인 페이지를 학생들에게 공유하기:"
   dashboard_students_share_section_secondary: '또는, 학생들에게 이 섹션의 로그인 페이지를 공유하세요:'
   dashboard_students_print_info: "학생 로그인 정보와 함께 카드 출력하기."
   dashboard_students_secret_picture_title: "비밀 그림"
   dashboard_students_secret_picture: "이 섹션의 비밀 형식으로 <b>그림</b>을 사용합니다.  그것은 각 학생의 비밀 그림에 로그인 하는 암호 대신 사용 되는 의미 합니다.  학생 웹 주소에 로그인 위에 주어진 부호를 사용 해야 합니다."
   dashboard_students_reset_picture: "학생들의 비밀그림을 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b> 할 수 있습니다. 새로운 비밀그림은 학생이 로그인하면 생성될 것입니다."
-  dashboard_students_secret_word_title: "비밀 단어"
+  dashboard_students_secret_word_title: "비밀단어"
   dashboard_students_secret_word: "이 섹션의 비밀 형식으로 <b>그림</b>을 사용합니다.  그것은 각 학생의 비밀 그림에 로그인 하는 암호 대신 사용 되는 의미 합니다.  학생 웹 주소에 로그인 위에 주어진 부호를 사용 해야 합니다."
   dashboard_students_reset_word: '학생들의 비밀단어를 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b> 할 수 있습니다. 새로운 비밀단어는 학생이 로그인하면 생성될 것입니다.'
   dashboard_students_join_link: "학생들에게 계정을 만들고 섹션에 참여하라고 하세요:"
@@ -753,7 +742,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "컴퓨터가 없다면, 수업에 <a href='%{unplugged_url}'>이러한 언플러그드 활동을 시도해보세요.</a>"
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "교과 과정"
   dashboard_curriculum_overview: "K-5(초등 5학년) 교육과정 살펴보기"
   dashboard_overview: "개요"
@@ -771,12 +763,13 @@
   dashboard_curriculum_csins: '과학 영역의 컴퓨터 과학:'
   dashboard_curriculum_csp: 'AP ® 컴퓨터 과학 원리:'
   dashboard_curriculum_ecs: '컴퓨터과학 살펴보기'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "기타"
   dashboard_login_word: "단어"
   dashboard_login_picture: "그림"
   dashboard_login_none: "이메일"
-  dashboard_new_password: "새 비밀번호"
   dashboard_stage: "단계"
   dashboard_puzzle: "퍼즐"
   dashboard_question: "질문"
@@ -839,7 +832,7 @@
   carousel_heading_international: "한국어로 제공되는 협찬 튜토리얼"
   carousel_heading_domestic: "영어로 제공되는 협찬 튜토리얼들"
   carousel_heading_beginners: "K-8(유치원-초1) 학생들을 위한 협찬 튜토리얼"
-  carousel_heading_beyond_beginners: 처음하는 사람들을 위한 튜토리얼
+  carousel_heading_beyond_beginners: '처음하는 사람들을 위한 튜토리얼'
   carousel_heading_javascript: "Javascript 를 교육할 수 있는 협찬 튜토리얼들"
   carousel_heading_beyond_javascript: "Javascript 를 교육할 수 있는 튜토리얼들"
   carousel_heading_unplugged: "적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요."
@@ -938,21 +931,65 @@
   coursee_name: "과정 E"
   coursef-draft_name: 과정 F
   coursef_name: "과정 F"
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: "빠른 과정"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: CS 원리 1단원
-  cspunit2_name: CS 원리 2단원
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS 원리 4단원
-  cspunit5_name: CS 원리 5단원
-  cspunit6_name: CS 원리 6단원
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  cspunit1_name: "CS 원리 1단원"
+  cspunit2_name: "CS 원리 2단원"
+  cspunit3_name: "CS Principles Unit 3"
+  cspunit4_name: "CS 원리 4단원"
+  cspunit5_name: "CS 원리 5단원"
+  cspunit6_name: 'CS 원리 6단원'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: '5단원: 데이터와 사회'
   csd6_name: '6단원: 피지컬 컴퓨팅'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: '5단원: 데이터와 사회'
+  csd6-2017_name: '6단원: 피지컬 컴퓨팅'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: '5단원: 데이터와 사회'
+  csd6-2018_name: '6단원: 피지컬 컴퓨팅'
+  csp1-2017_name: '유닛 1: 인터넷'
+  csp2-2017_name: '유닛 2: 디지털 정보'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: 앱 안의 데이터베이스'
+  csp1-2018_name: '유닛 1: 인터넷'
+  csp2-2018_name: '유닛 2: 디지털 정보'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: 앱 안의 데이터베이스'
   csp1_name: '유닛 1: 인터넷'
   csp2_name: '유닛 2: 디지털 정보'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -963,6 +1000,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: 앱 안의 데이터베이스'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "전체 테스트 - 50 문항"
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -986,14 +1024,19 @@
   math_category_name: "계산"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS 기초"
+  csf_2017_category_name: "CS Fundamentals (2017)"
+  csf_2018_category_name: "CS Fundamentals (2018)"
   csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: '개발중: 코스 A - F'
-  csd_category_name: "CS Discoveries"
+  csd_category_name: "CS Discoveries ('17-'18)"
+  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "CS의 원리"
   csp17_category_name: "'16 - '17 CS 원리"
+  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "컴퓨터과학(정보과학) 기초/개념/원리 연습 테스트"
   research_studies_category_name: "Research Studies"
   applab_name: "앱 연구실"
+  gamelab_name: "Game Lab"
   basketball_name: "농구 게임 만들기"
   sports_name: "당신만의 스포츠게임을 코딩하세요"
   applab_gradelevel: "13세 이상"
@@ -1052,12 +1095,12 @@
   course2_gradelevel: "6-18 세"
   course3_gradelevel: "8-18 세"
   course4_gradelevel: "나이 10세-13세"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "8 학년 이상"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "나이 8세-12세"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "나이 10세-13세"
   codeorg_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   codeintl_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
@@ -1160,12 +1203,12 @@
   course2_shortdescription_congrats: "글을 읽고 이해하는 능력이 있는 학생들을 위해 과정1이 설계되어있습니다. 학생들은 문제 해결 프로그램을 만들거나, 인터랙티브 게임/스토리들을 만들어 다른 친구들과 공유할 수 있습니다. 2-5학년 학생들에게 권장됩니다."
   course3_shortdescription_congrats: "다음 레벨로 넘어갈 준비가 되었나요? 학생들은 좀 더 복잡한 문제들에 대한 유연한 해법을 찾기 위해 이전의 과정에서 소개된 프로그래밍 주제를 깊이 탐구할 것입니다. 이 과정을 완료하고나면 학생들은 상호작용 가능한 스토리와 게임을 만들고 다른 사람들과 공유할 수 있습니다. 4-5학년 학생들에게 권장합니다."
   course4_shortdescription_congrats: "더 나아갈 준비가 되었나요? 학생들은 좀 더 복잡한 문제들에 대한 유연한 해법을 찾기 위해 이전의 과정에서 소개된 프로그래밍 주제를 깊이 탐구할 것입니다. 이 과정을 완료하고나면 학생들은 상호작용 가능한 스토리와 게임을 만들고 다른 사람들과 공유할 수 있습니다. 초등학교 4학년 - 중학교 2학년 학생들에게 권장합니다."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
   codeintl_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1448,12 +1491,13 @@
   header_documentation: "문서"
   csp_name: "'16 - '17 CS 원리"
   csd_name: "CS Discoveries"
+  csd_2018_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
   user_header_label: "안녕하세요? %{username} 님"
   user_header_settings: "내 계정"
   user_header_logout: "로그아웃"
   user_header_signin: "로그인"
-  view_all_sections: "View All Sections"
+  view_all_sections: "View all sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."

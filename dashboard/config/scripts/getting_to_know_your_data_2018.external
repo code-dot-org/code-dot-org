@@ -1,0 +1,59 @@
+name 'Getting to Know Your Data_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+# Getting to Know Your Data
+
+Before analyzing a dataset you'll want to familiarize yourself with the data. Computational tools like a spreadsheet make it easy to quickly get a sense of what your data looks like.
+
+---
+
+## Make a copy of the data
+
+You will need to get your own copy of the data to clean. If your data is currently in a Google Sheet you'll need to "Make a copy" of the data, as shown below.
+
+**Do This:** Make your own copy of the data collected by your class
+
+![](https://images.code.org/52f5a4b1304a7b74add7551db31590bf-image-1453401438419.gif)
+
+*Making a copy of the dataset*
+
+---
+
+## Filtering Your Data
+
+Your data may be too large to look at all at once. One way to address this problem is to **filter the data** so that you are only looking at some of the rows. Here's how you can do it in Google Sheets.
+
+**Do This:** Follow the example in the animation below. Filter your own data on one of its columns
+
+![](https://images.code.org/755bee755392bf0fa5495d2daa3109e2-image-1453478942214.gif)
+
+*Filtering the dataset so that only rows in which a person slept for 7 hours are shown.*
+
+---
+
+## More Complex Filtering
+
+Filters may include more than one value, just check all the values you'd like to include. You can even use a conditional statement as a filter. For example, you can make a filter that will only show values if the value is less than some number you specify. It's also possible to filter on multiple columns at the same time. More complex filters help refine how you look at your data.
+
+**Do This:** Add filters to two different columns. In one column choose at least two values. In the other column use a Conditional filter, as shown below.
+
+![](https://images.code.org/f6f068910c7251409748417c9323c134-image-1453479998755.gif)
+
+*Filtering to include people who feel "Good" or "Great" and who slept 7 hours or more.*
+
+---
+
+## Sorting Data
+
+**Sorting will reorder your rows of data by one of the columns**. This makes it easy to see the smallest or largest value in each column. You may also notice patterns in your data once it is in sorted order.
+
+**Do This:** Sort your data by at least one of the columns, both A -> Z and Z -> A
+
+![](https://images.code.org/6f26617b9fb3752ca8f273c6b4de0219-image-1453483577941.gif)
+
+*Sorting the dataset by number of hours worked, both from smallest to largest and from largest to smallest*
+
+---
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

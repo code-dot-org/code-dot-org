@@ -1,4 +1,5 @@
-"pt":
+---
+pt:
   errors:
     messages:
       not_saved: 'Por favor, corrige os seguintes erros:'
@@ -16,7 +17,7 @@
   activerecord:
     errors:
       messages:
-        blank: "é obrigatório"
+        blank: é obrigatório
         blank_plural: are required
         invalid_plural: are invalid
     attributes:
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Outlook
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
@@ -135,13 +137,20 @@
     age: Idade
     user_type: Aluno ou professor?
     submit: Criar conta
-    teacher: "É um professor?"
+    teacher: É um professor?
     valid_username: Disponível!
     invalid_username: O nome de utilizador tem de ter, pelo menos, 5 caracteres
     taken_username: O nome de utilizador já existe
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavras-passe que digitaste não correspondem
+    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
+      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services.
+    agree_us_website: I agree to using a website based in the United States.
+    my_data_to_us: Data from my use of this site may be sent to and stored or processed
+      in the United States.
     student_terms: Concordo com os <a href='http://code.org/tos'>Termos de utilização</a>
       do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário,
       que tenho autorização dos meus pais para usar os serviços do Code.org.<br/><br/>Os
@@ -154,12 +163,19 @@
       política de privacidade</a>.
     additional_information: Precisamos de mais informações para continuarmos o processo
       de criação da conta.
+    user_type_button: Update Account Type
     user_type_label: Tipo de conta
     user_type_teacher: Professor
     user_type_student: Aluno
-    field_is_required: "é obrigatório"
+    field_is_required: é obrigatório
     accept_terms: Você deve concordar em criar uma conta
     error: An error occurred.
+    email_preference_question: Can we email you about updates to our courses, local
+      learning opportunities, or other computer science news?
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: Sim
+    email_preference_no: Não
+    email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
     school_country: School Country
@@ -211,6 +227,7 @@
       email: Endereço de e-mail
       submit: OK
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
@@ -242,7 +259,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Palavra secreta
       email: E-mail
       google_classroom: Google Classroom
       clever: Clever
@@ -395,6 +412,7 @@
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
     email_confirm_wrong_email: "(Endereço de e-mail errado?)"
     email_resend_confirm: Reenviar instruções de confirmação
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(deixa em branco se não pretenderes alterá-la)"
     current_password_hint: "(precisamos da tua palavra-passe para confirmarmos as
       tuas alterações)"
@@ -428,6 +446,7 @@
     confirm_secret_words: Confirm that it is you by entering your current secret words
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
+    update: Update Account
   user_level:
     completed: Concluído
     tried: Tentado
@@ -610,6 +629,8 @@
       inscritos na sua seção.
     already_enrolled_in_new_section: Você não pode mover estes estudantes porque este
       professor já os tem noutra seção.
+    third_party_login: You cannot move students to a section that is synced with a
+      third party tool.
   share:
     title: Aprende no Code Studio
     description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos
@@ -618,6 +639,8 @@
   gender:
     male: Masculino
     female: Feminino
+    non_binary: Non-binary
+    not_listed: Preferred term not listed
     none: Prefiro não responder
   user_type:
     student: Aluno
@@ -1043,7 +1066,7 @@
     close: Fechar
     more: Mais
     name: Nome
-    updated: "Última atualização"
+    updated: Última atualização
     project_type: Tipo de projeto
     help_text: Clica em <strong>Desenvolver uma aplicação</strong> ou <strong>Desenhar
       alguma coisa</strong> para entrares num novo Laboratório de jogos ou fazeres
@@ -1152,6 +1175,7 @@
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
+    csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -1165,6 +1189,11 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Unidade 1: Informação Digital'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
@@ -1307,3 +1336,16 @@
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
   courses_category: Full Courses
+  cookie_banner:
+    message: By continuing to browse our site or clicking "I agree," you agree to
+      the storing of cookies on your computer or device.
+    more_information: See Code.org's Privacy Policy.
+    accept: Concordar
+  gdpr_dialog:
+    heading: Do you agree to using a web site based in the United States?
+    message: Data from your use of this site may be sent to and stored or processed
+      in the United States.
+    link_intro: For details see our
+    privacy_policy: privacy policy
+    logout: Logout
+    true: Sim

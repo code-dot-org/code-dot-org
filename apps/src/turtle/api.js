@@ -203,6 +203,10 @@ ArtistAPI.prototype.turnLeft = function (angle, id) {
   this.log.push(['RT', -angle, id]);
 };
 
+ArtistAPI.prototype.pointTo = function (angle, id) {
+  this.log.push(['PT', angle, id]);
+};
+
 ArtistAPI.prototype.globalAlpha = function (alpha, id) {
   this.log.push(['GA', alpha, id]);
 };
@@ -235,8 +239,8 @@ ArtistAPI.prototype.showTurtle = function (id) {
   this.log.push(['ST', id]);
 };
 
-ArtistAPI.prototype.drawSticker = function (sticker, id) {
-  this.log.push(['sticker', sticker, id]);
+ArtistAPI.prototype.drawSticker = function (sticker, size, id) {
+  this.log.push(['sticker', sticker, size, id]);
 };
 
 ArtistAPI.prototype.setArtist = function (artist, id) {

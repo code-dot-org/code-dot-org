@@ -5,52 +5,52 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# Contoh siaran akhbar untuk pegawai yang dilantik
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Untuk Keluaran Segera  
+[**TARIKH**]  
+Sila Hubungi: [**MAKLUMAT ORANG HUBUNGAN**]  
   
 
 
-<strong>
+<strong> 
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  GABENOR/SENATOR/AHLIPARLIMEN/WAKIL/DATUKBANDAR/AHLIMAJLIS [MASUKKAN NAMA][TELAH MENGAMBIL BAHAGIAN DALAM HOUR OF CODE BERSAMA DENGAN PELAJAR-PELAJAR TEMPATAN]</strong><br /> Semua komuniti telah bekerjasama untuk memupuk kesedaran tentang kepentingan pendidikan sains komputer dengan mengambil bahagian dalam Minggu Pendidikan Sains Komputer
 </center>
 
 <br /> <br /></p> 
 
 <p>
-  <strong>DATE</strong> - [<strong>INSERT NAME</strong>] joined the principal and faculty members of [<strong>INSERT NAME OF SCHOOL</strong>], business leaders and local families today for [<strong>NAME OF EVENT</strong>] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+  <strong>TARIKH</strong> - [<strong>MASUKKAN NAMA</strong>] telah menyertai pengetua dan ahli fakulti [<strong>MASUKKAN NAMA SEKOLAH</strong>], pemimpin-pemimpin perniagaan dan keluarga tempatan pada hari ini untuk [<strong>NAMA ACARA</strong>] untuk mengambil bahagian dalam Hour of Code sebagai sebahagian daripada Minggu Pendidikan Sains Komputer . [MASUKKAN NAMA] dan ahli-ahli komuniti merupakan antara berpuluhan juta orang di seluruh dunia yang telah mengambil bahagian dalam acara pembelajaran yang terbesar dalam sejarah.
 </p>
 
 <p>
-  [<strong>INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:</strong>]<br /> “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+  [<strong>MASUKKAN BUTIRAN ACARA, GUNAKAN BAHASA YANG DESKRIPTIF DAN BOLEH DIKUANTITIKAN. SEBAGAI COMTOHNYA:</strong>]<br /> "Sekolah Rendah Daniels Run telah menganjurkan sebuah acara Hour of Code yang melibatkan seluruh sekolah untuk mendedahkan para pelajar kepada sains komputer. Lebih daripada 700 pelajar daripada semua gred telah melaksanakan sekurang-kurangnya satu Hour of Code. Dan juga beberapa orang ibu bapa dan sukarelawan daripada komuniti telah membantu melancarkan acara pada hari tersebut dan membawa kanak-kanak bersama untuk hadir ke perhimpunan yang mempamerkan mengapa sains komputer adalah penting dalam kehidupan para pelajar."
 </p>
 
 <p>
-  [<strong>SAMPLE STOCK TEXT FOR CONTEXT:</strong>]<br /> Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+  [<strong>CONTOH TEKS STANDARD UNTUK KONTEKS:</strong>]<br /> Komputer ada di mana-mana tempat sahaja, tetapi masih lagi sikit sekolah yang mengajar sains komputer berbanding dengan 10 tahun yang lalu. Kanak-kanak perempuan dan pelajar yang mempunyai warna kulit yang berbeza tidak diberikan langsung pendedahan. Berita baiknya ialah kita sedang mengubah situasi ini menjadi lebih baik. Hour of Code merupakan suatu jalan perhubungan untuk memberikan akses kepada pendidikan sains komputer yang berkualiti tinggi kepada semua pelajar.
 </p>
 
 <p>
-  Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+  Lebih daripada 100 juta pelajar dari seluruh dunia sudah telah mencuba suatu Hour of Code. Terima kasih kepada Hour of Code, sains komputer telah dipaparkan pada laman Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher semua merasmikan Hour of Code dengan video-video. Lebih daripada 100 rakan kongsi telah bersama untuk menyokong gerakan ini.
 </p>
 
 <p>
-  [<strong>INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “We need to encourage and embrace our students’ interest in computer science,” said [<strong>INSERT NAME</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+  [<strong>MASUKKAN PETIKAN DARIPADA JURUCAKAP, CONTOHNYA DI BAWAH:</strong>] <br /> "Kita haruslah menggalakkan dan menerima minat pelajar-pelajar kita dalam sains komputer," dikatakan oleh [<strong>MASUKKAN NAMA</strong>]. "Setiap pelajar berlayak untuk mempunyai peluang untuk belajar sains komputer untuk mengakses kepada pekerjaan yang terbaik pada abad ke-21."
 </p>
 
 <p>
-  [<strong>INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION</strong>]
+  [<strong>MASUKKAN LEBIH BANYAK MAKLUMAT MENGENAI ACARA ANDA DAN/ATAU ORGANISASI ANDA</strong>]
 </p>
 
 <p>
-  [<strong>INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT</strong>]
+  [<strong>MASUKKAN PETIKAN DARIPADA ORGANISASI YANG LAIN ATAU SESEORANG YANG TELAH MENGHADIRI ACARA TERSEBUT</strong>]
 </p>
 
 <p>
-  For more information about [<strong>EVENT/PROGRAM/ETC</strong>], visit [<strong>INSERT WEBSITE</strong>] or contact [<strong>INSERT CONTACT INFORMATION</strong>]
+  Untuk maklumat yang lebih lanjut mengenai [<strong>ACARA/PROGRAM/DAN SEBAGAINYA</strong>], lawati [<strong>MASUKKAN LAMAN SESAWANG</strong>] atau hubungi [<strong>MASUKKAN MAKLUMAT KENALAN</strong>]
 </p>
 
 <p>

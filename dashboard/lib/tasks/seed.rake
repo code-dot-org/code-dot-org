@@ -30,17 +30,28 @@ namespace :seed do
     'course2',
     'course3',
     'course4',
-    'csp1',
-    'csp2',
-    'csp3',
+    'coursea-2017',
+    'coursea-2018',
+    'csp1-2017',
+    'csp2-2017',
+    'csp3-2017',
     'csp3-a',
     'csp3-research-mxghyt',
-    'csp4',
-    'csp5',
+    'csp4-2017',
+    'csp5-2017',
     'csp-ap',
-    'csp-explore',
-    'csp-create',
-    'csppostap',
+    'csp-explore-2017',
+    'csp-create-2017',
+    'csp-post-survey',
+    'csppostap-2017',
+    'csp1-2018',
+    'csp2-2018',
+    'csp3-2018',
+    'csp4-2018',
+    'csp5-2018',
+    'csp-explore-2018',
+    'csp-create-2018',
+    'csppostap-2018',
     'events',
     'flappy',
     'frozen',
@@ -60,6 +71,11 @@ namespace :seed do
     update_scripts
   end
 
+  # Update scripts in the database from their file definitions.
+  #
+  # @param [Hash] opts the options to update the scripts with.
+  # @option opts [Boolean] :incremental Whether to only process modified scripts.
+  # @option opts [Boolean] :ui_test Whether to only update ui test scripts.
   def update_scripts(opts = {})
     # optionally, only process modified scripts to speed up seed time
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
@@ -77,7 +93,15 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls].freeze
+  SCRIPTS_DEPENDENCIES = [
+    :environment,
+    :games,
+    :custom_levels,
+    :dsls,
+    :blocks,
+    :shared_blockly_functions,
+  ].freeze
+
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -98,7 +122,7 @@ namespace :seed do
 
   task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2018).each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
     end
   end
@@ -136,6 +160,14 @@ namespace :seed do
 
   task import_custom_levels: :environment do
     LevelLoader.load_custom_levels
+  end
+
+  task blocks: :environment do
+    Block.load_records
+  end
+
+  task shared_blockly_functions: :environment do
+    SharedBlocklyFunction.load_records
   end
 
   # Generate the database entry from the custom levels json file
@@ -181,37 +213,6 @@ namespace :seed do
 
   task state_cs_offerings: :environment do
     Census::StateCsOffering.seed
-  end
-
-  # Seeds the data in regional_partners
-  task regional_partners: :environment do
-    RegionalPartner.transaction do
-      RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
-    end
-  end
-
-  task regional_partners_school_districts: :environment do
-    seed_regional_partners_school_districts(false)
-  end
-
-  task force_regional_partners_school_districts: :environment do
-    seed_regional_partners_school_districts(true)
-  end
-
-  def seed_regional_partners_school_districts(force)
-    # use a much smaller dataset in environments that reseed data frequently.
-    mapping_tsv = CDO.stub_school_data ?
-        'test/fixtures/regional_partners_school_districts.tsv' :
-        'config/regional_partners_school_districts.tsv'
-
-    expected_count = `grep -v 'NO PARTNER' #{mapping_tsv} | wc -l`.to_i - 1
-    raise "#{mapping_tsv} contains no data" unless expected_count > 0
-    RegionalPartnersSchoolDistrict.transaction do
-      if (RegionalPartnersSchoolDistrict.count < expected_count) || force
-        # This step can take up to 1 minute to complete when not using stubbed data.
-        RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv(mapping_tsv)
-      end
-    end
   end
 
   MAX_LEVEL_SOURCES = 10_000
@@ -289,11 +290,11 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
-  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
+  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
+  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
+  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]
 end

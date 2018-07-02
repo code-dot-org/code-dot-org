@@ -93,7 +93,8 @@ export const dropletBuiltinConfigBlocks = [
   {func: 'Math.abs', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathAbs' },
   {func: 'Math.max', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMax' },
   {func: 'Math.min', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMin' },
-  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' }
+  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' },
+  {func: 'Math.pow', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathPow' }
 ];
 
 /**
@@ -132,6 +133,7 @@ standardConfig.blocks = [
   {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
   {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
+  {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math' },
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
@@ -519,19 +521,87 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 
   return {
     getCompletions(editor, session, pos, prefix, callback) {
+      // Ensure our updateCompletionsOverride is installed - note that we must wait
+      // until a completor object has been created to install the hook. This
+      // getCompletions() function will be called from within the original
+      // updateCompletions() call, which is ok to run without our hook. We need
+      // to make sure subsequent calls to updateCompletions() are overriden
+      installAceUpdateCompletionsHook(editor);
       const token = editor.session.getTokenAt(pos.row, pos.column);
-      if (prefix.length === 0 || token.type === 'comment') {
+      // Ignore cases where:
+      // * the prefix is empty
+      // * we are in a comment
+      // * the prefix is a number with less than 3 digits (matches Atom semantics)
+      if (prefix.length === 0 || token.type === 'comment' ||
+          (prefix.length < 3 && !isNaN(Number(prefix)))) {
         callback(null, []);
         return;
       }
-      if (isPositionAfterDot(session, pos)) {
-        // Following a dot, we autocomplete from methodsAndProperties:
-        callback(null, methodsAndProperties);
-      } else {
-        callback(null, apis);
-      }
+      // Following a dot, we autocomplete from methodsAndProperties:
+      const list = isPositionAfterDot(session, pos) ? methodsAndProperties : apis;
+
+      // Filter our list to contain substring word matches:
+      const filteredList = filterListBasedOnWordMatches(prefix, list);
+      callback(null, filteredList);
     }
   };
+}
+
+function filterListBasedOnWordMatches(prefix, list) {
+  // Filter our list to contain substring word matches based on camelCase,
+  // snake_case or Global.method:
+  const modifiedPrefix = prefix.replace(/_|\./g, '').toLowerCase();
+  return list.filter(completion => {
+    const { value } = completion;
+    // https://stackoverflow.com/a/34680912
+    const edges = /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
+    const words = value.replace('.', '_').replace(edges, '$1_').split('_');
+    // Transform words into phrases that we consider to be "matches": e.g.
+    // words ['get', 'Time'] become phrases ['getTime', 'Time']
+    const phrases = words.map((word, index) => words.slice(index).join(''));
+    for (const phrase of phrases) {
+      if (phrase.toLowerCase().indexOf(modifiedPrefix) === 0) {
+        return completion;
+      }
+    }
+  });
+}
+
+/**
+ * Install our own updateCompletions method to override the default ace
+ * behavior so that we can modify the filtering behavior
+ * @param {AceEditor} editor
+ */
+function installAceUpdateCompletionsHook(editor) {
+  if (editor.completer.updateCompletions !== updateCompletionsOverride) {
+    originalUpdateCompletions = editor.completer.updateCompletions;
+    editor.completer.updateCompletions = updateCompletionsOverride;
+  }
+}
+
+var originalUpdateCompletions;
+
+/**
+ * Our overridden updateCompletions method, installed so that we can modify the
+ * filtering behavior
+ * @param {completor} this
+ * @param {boolean} keepPopupPosition
+ */
+function updateCompletionsOverride(keepPopupPosition) {
+  if (keepPopupPosition && this.base && this.completions) {
+    const pos = this.editor.getCursorPosition();
+    const prefix = this.editor.session.getTextRange({start: this.base, end: pos});
+
+    // Repopulate all 3 properties of the FilteredList (stored in this.completions)
+    // with a new list, filtered by our algorithm, but not yet filtered by ace's
+    // algorithm. Ensure that filterText is blank so that the original
+    // updateCompletions() won't just return immediately
+
+    this.completions.all = filterListBasedOnWordMatches(prefix, this.completions.all);
+    this.completions.filtered = this.completions.all;
+    this.completions.filterText = "";
+  }
+  return originalUpdateCompletions.call(this, keepPopupPosition);
 }
 
 /**
@@ -742,9 +812,15 @@ export function setParamAtIndex(index, value, block) {
   // We have a block. Parse it to find our first socket.
   let token = block.start;
   let paramNumber = -1;
+  // Accounts for the additional socket depth from using arrays and indices as
+  // parameters
+  let socketDepth = 0;
   do {
     if (token.type === 'socketStart') {
-      paramNumber++;
+      if (socketDepth === 0) {
+        paramNumber++;
+      }
+      socketDepth++;
       if (paramNumber !== index) {
         token = token.next;
         continue;
@@ -754,6 +830,13 @@ export function setParamAtIndex(index, value, block) {
       editor.populateSocket(socket, value);
       editor.redrawPalette();
       editor.redrawMain();
+      break;
+    }
+    if (token.type === 'socketEnd') {
+      socketDepth--;
+      if (socketDepth < 0) {
+        break;
+      }
     }
     token = token.next;
   } while (token);

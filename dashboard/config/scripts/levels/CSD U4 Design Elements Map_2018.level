@@ -1,0 +1,18 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2018-04-30T18:04:01.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Design Mode Elements",
+    "teacher_markdown": "#### Developing Good Programming Habits\r\n\r\nFollowing clear and consistent naming conventions is an important habit to develop, but the benefits are rarely immediately obvious to students. It really pays off in the long term to be a stickler for well named IDs, particularly because it will save your own sanity when it comes time to read your students' programs, but it will also simplify the process of combining each student's screen into a full team app.",
+    "reference": "/docs/csd/design-mode-elements/index.html",
+    "parent_level_id": 9811,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</Map>

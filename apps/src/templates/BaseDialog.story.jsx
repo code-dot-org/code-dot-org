@@ -10,7 +10,7 @@ const EXAMPLE_DIALOG_BODY = (
 
 export default storybook => {
   return storybook
-    .storiesOf('BaseDialog', module)
+    .storiesOf('Dialogs/BaseDialog', module)
     .addStoryTable([
       {
         name:'hiding the backdrop',
@@ -63,20 +63,6 @@ export default storybook => {
             </BaseDialog>
           </ExampleDialogButton>
         )
-      }, {
-        name: 'old style',
-        description: `Dialogs with the useDeprecatedGlobalStyles flag
-                        rely on global css. Don't do this.`,
-        story: () => (
-          <BaseDialog hideBackdrop={true} useDeprecatedGlobalStyles>
-            <div className="modal-content no-modal-icon">
-              <p className="dialog-title">Titles go in p.dialog-title tags?!?!?</p>
-              Wrap dialog content inside a
-              {' '}<code>{'<div class="model-content no-modal-icon"/>'}</code>{' '}
-              because this component won't do that for you...
-            </div>
-          </BaseDialog>
-        )
-      }
+      },
     ]);
 };

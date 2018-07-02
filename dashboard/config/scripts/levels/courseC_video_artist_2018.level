@@ -7,7 +7,8 @@
   "properties": {
     "video_key": "C2_artist_intro",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": "Taking this out of the artist level in which it was embedded"

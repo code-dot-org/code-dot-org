@@ -7,7 +7,7 @@ import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections
 import ContentContainer from "@cdo/apps/templates/ContentContainer";
 import JoinSection from "@cdo/apps/templates/studioHomepages/JoinSection";
 import JoinSectionNotifications from "@cdo/apps/templates/studioHomepages/JoinSectionNotifications";
-import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";
+import SectionsAsStudentTable from "@cdo/apps/templates/studioHomepages/SectionsAsStudentTable";
 
 describe('StudentSections', () => {
   const defaultProps = {
@@ -15,7 +15,7 @@ describe('StudentSections', () => {
     canLeave: false,
   };
 
-  it('does not render a SectionsTable when not enrolled in any sections', () => {
+  it('does not render a SectionsAsStudentTable when not enrolled in any sections', () => {
     const wrapper = shallow(
       <StudentSections
         {...defaultProps}
@@ -38,7 +38,7 @@ describe('StudentSections', () => {
     );
   });
 
-  it('renders a SectionsTable when enrolled in one or more sections', () => {
+  it('renders a SectionsAsStudentTable when enrolled in one or more sections', () => {
     const wrapper = shallow(
       <StudentSections
         {...defaultProps}
@@ -52,7 +52,7 @@ describe('StudentSections', () => {
         description={i18n.enrollmentDescription()}
       >
         <JoinSectionNotifications/>
-        <SectionsTable
+        <SectionsAsStudentTable
           sections={sections}
           isTeacher={false}
           canLeave={defaultProps.canLeave}

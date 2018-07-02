@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>چگونه ساعت کدنویسی را تدریس کنیم</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,18 +33,18 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 ## 5. Start your Hour of Code off with an inspiring speaker or video
 
-**Invite a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invite a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **ویدئوهای الهام بخش را نمایش دهید:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- [منابع](<%= resolve_url('https://code.org/inspire') %>) و [ویدیوهای](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)الهام بخش بیشتری پیدا کنید.
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls')%>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
 
 ## 6. Code!
 
@@ -79,7 +79,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 [/col-33]
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates')%>) for your students.
+- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!
@@ -101,7 +101,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 ساعت کد تنها اولین گام در سفری برای کسب اطلاعات بیشتر در مورد چگونگی کارکرد فن آوری و نحوه ایجاد نرم افزارهای کاربردی است. برای ادامه این سفر:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond')%>).
-- در یک کارگاه یک روزه ی حضوری، برای کمک و راهنمایی گرفتن از یک فرد مجرب در علوم کامپیوتر[شرکت کنید](<%= resolve_url('https://code.org/professional-development-workshops') %>). (تنها برای مدرسین ساکن آمریکا)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

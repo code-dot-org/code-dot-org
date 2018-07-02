@@ -1,4 +1,5 @@
-"et":
+---
+et:
   data:
     game:
       name:
@@ -299,118 +300,8 @@
           vastu ei kõnni!
         maze_3_4: Oih! Kirjuta programm, mis viiks mind põrsa juurde nii, et ma ei
           puudutaks TNT-dünamiiti.
-        bounce_1_basketball: Kinnita plokk "kui vasak nool" ploki külge ja vajuta
-          "käivita". Liiguta kätt, et vasakut noolt liigutada ja sihtmärgini jõuda.
-        bounce_2_basketball: Kinnita plokke nii "kui vasak nool" ja "kui parem nool"
-          plokkide külge. Liiguta kätt, et mõlema sihtmärgini jõuda.
-        bounce_5_basketball: Me viskame palli käe suunas. Kinnita üks plokk "kui pall
-          põrkab käe pihta" ploki külge, et olla kindel, et pall jõuab lipuni.
-        bounce_6_basketball: Nüüd on lipp ülemises ääres. Sa pead kinnitama plokke
-          mõlema "kui pall põrkab vastu" ploki külge, et ülesanne lahendada.
-        bounce_7_basketball: Kinnita kummagi "kui" ploki külge teisi plokke. Põrgata
-          palli kuni see lipu pihta läheb.
-        bounce_10_basketball: Nüüd on üleval värav. Mängu loomiseks kinnita plokid
-          „lisa punkt“ ja „lisa vastase punkt“ plokkide "kui pall läheb väravasse"
-          ja "kui pall läheb reketist mööda" külge. Vaata, mitu punkti saad sina,
-          enne kui sinu vastane saab kaks punkti.
-        bounce_11_basketball: Nüüd saad kinnitada plokke "kui käivitatakse" ploki
-          külge. Pead kinnitama "viska uus pall" ploki rohkem kui ühte kohta. Proovi
-          ka stseeni muuta või käe või palli kiirust muuta ja vaata mitu punkti saad
-          enne kui sinu vastane saab kaks punkti!
-        bounce_12_basketball: Tee oma korvpallimäng. Sa võid kõiki reegleid muuta.
-          Kui oled lõpetanud vajuta "Lõpeta" ja lase sõpradel oma mängu nende telefonis
-          proovida.
-        bounce_1_sports: Mine lipu juurde! Lisa ploki külge plokk "kui vasak nool"
-          ja vajuta «Käivita», et mängija lipuni liigutada.
-        bounce_2_sports: Nüüd on mängus kaks lippu! Lisa plokke plokkidele "kui vasak
-          nool" ja "kui parem nool", et sinu mängija saaks liikuda kahes suunas.
-        bounce_5_sports: Hokilitter lendab mängija poole! Kinnita üks plokk "kui pall
-          põrkab mängija vastu" ploki külge, et lipule pihta saada.
-        bounce_6_sports: Nüüd on lipp ülemises ääres. Selle ülesande lahendamseks
-          pead plokke kinnitama mõlema "kui pall põrkab vastu" ploki külge.
-        bounce_7_sports: Kinnita kummagi "kui" ploki külge teisi plokke. Põrgata palli
-          kuni see lipu pihta läheb.
-        bounce_10_sports: Nüüd on ülemises ääres värav! Kinnita "skoori punkt" ja
-          "vastane skoorib punkti" plokid "kui pall on väravas" ja "kui pall läheb
-          käest mööda" plokkide külge, et teha mäng. Vaata mitu punkti saad enne kui
-          sinu vastane saab kaks punkti!
-        bounce_11_sports: Nüüd saad kinnitada plokke "kui käivitatakse" ploki külge.
-          Pead kinnitama "viska uus pall" ploki rohkem kui ühte kohta. Proovi ka stseeni
-          muuta või käe või palli kiirust muuta ja vaata mitu punkti saad enne kui
-          sinu vastane saab kaks punkti!
-        bounce_12_sports: 'Loo oma mäng! Sina otsustad: sa võid kõiki reegleid muuta,
-          spordialasid omavahel siduda, ole loov! Kui lõpetad, klõpsa "Lõpeta" ja
-          lase sõpradel oma mängu nende telefonis proovida.'
-        bounce_1: Lisa ploki „kui hoitakse vasaknoolt“ külge plokk ja vajuta nuppu
-          „Käivita“. Kasuta sihtmärgini jõudmiseks vasaknoolt.
-        bounce_2: Lisa plokkide „kui hoitakse paremnoolt“ ja „kui hoitakse vasaknoolt“
-          külge uus plokk. Liigu nii, et jõuaksid mõlema sihtmärgini.
-        bounce_3: Nüüd proovi ploki „kui hoitakse ülesnoolt“ abil midagi sarnast.
-          Liigu üleval oleva sihtmärgi juurde.
-        bounce_4: Seekord pead lisama neli plokki. Mõistatuse lahendamiseks liiguta
-          reket kõigi nelja sihtmärgi juurde.
-        bounce_5: Nüüd laseme pallil kukkuda allapoole reketi suunas. Kinnita ploki
-          „kui pall puudutab reketit“ külge plokk, et pall jõuaks sihtmärgini.
-        bounce_6: Sihtmärk on nüüd üleval. Selle mõistatuse lahendamiseks pead kinnitama
-          plokid mõlema „kui pall puudutab“ ploki külge.
-        bounce_7: Lisa plokk mõlema ploki „kui“ külge. Põrgata palli, kuni see jõuab
-          sihtmärgini.
-        bounce_10: Nüüd on üleval värav. Mängu loomiseks kinnita plokid „lisa punkt“
-          ja „lisa vastase punkt“ plokkide "kui pall läheb väravasse" ja "kui pall
-          läheb reketist mööda" külge. Vaata, mitu punkti saad sina, enne kui sinu
-          vastane saab kaks punkti.
-        bounce_11: Nüüd saad kinnitada ploki „pärast käivitamist“ külge plokid. Sa
-          pead kinnitama uue ploki „viska uus pall“ rohkem kui ühte kohta. Lisaks
-          proovi muuta stseeni või reketi ja palli kiirust ning vaata, mitu punkti
-          sa saad, enne kui sinu vastane saab kaks punkti.
-        bounce_12: Loo oma Bounce'i mäng. Võid kõiki visuaalseid elemente ja reegleid
-          muuta. Kui oled valmis, vajuta nuppu "Valmis" ning lase sõpradel telefoni
-          peal mängu proovida.
         Custom_builder: Lohista plokid tööriistakastist tööruumi, et joonistada soovitud
           tase. Kui oled valmis, vajuta nuppu „Käivita“.
-        flappy_1: Kinnita ploki „kui klikid“ külge plokk ja vajuta nuppu „Käivita“.
-          Kliki või puuduta ekraani, et Flappy liiguks sihtmärgi suunas.
-        flappy_2: Nüüd lisasime maapinna.  Lisa ploki „kui puudutab maapinda“ külge
-          plokk.  Sinu kood peab 'MÄNGU LÕPETAMA', kui Flappy teeb kokkupõrke.
-        flappy_3: Plokk „pärast käivitamist“ käivitab mängu alustamisel sinu koodi.  Proovi
-          määrata taseme kiirus ja lenda sihtmärgini.
-        flappy_4: Flappy lendab takistustest läbi, kui sa pole kirjutanud koodi, mille
-          abil ta teeb kokkupõrke. Kinnita ploki „kui põrkab vastu takistust“ külge
-          plokk. Kui Flappy esimeste torude vastu lendab, peab sinu kood 'MÄNGU LÕPETAMA'.
-        flappy_5: Lisame tabloo ja loeme, mitu korda pääseb Flappy takistustest mööda.
-          Lisa plokile „kui möödub takistusest“ plokk ja võida punkt, kui Flappy esimeste
-          torude vahelt läbi lendab.
-        flappy_6: Vaata, kas sa ikka suudad punkte saada, kui paned Flappy vähemal
-          või rohkemal määral tiibu lehvitama.
-        flappy_7: Järgmiseks võid proovida muuta tausta, lisades veel ühe ploki "pärast
-          käivitamist" plokile.
-        flappy_8: Visuaalseid elemente saad lisada igal ajal, mitte ainult siis, kui
-          mäng algab. Proovi valida stseen JUHUSLIK teiste sündmuste jaoks, näiteks
-          takistusest möödumiseks.
-        flappy_9: Et asi oleks natuke huvitavam, proovi teha nii, et takistuse vastu
-          põrgates mitte mäng ei lõppe, vaid punktid lähevad nulli.
-        flappy_11: Loo oma Bounce'i mäng. Võid muuta kõiki visuaalseid elemente, reegleid
-          ja isegi gravitatsiooni. Kui oled valmis, vajuta nuppu „Valmis“ ning lase
-          sõpradel telefonis mängu proovida.
-        flappy_k1_1: Mängi Flappyt
-        flappy_k1_2: Kinnita ploki „kui klikid“ külge plokk ja vajuta nuppu „Käivita“.
-          Kliki või puuduta ekraani, et Flappy liiguks sihtmärgi suunas.
-        flappy_k1_3: Nüüd lisasime maapinna.  Lisa ploki „kui puudutab maapinda“ külge
-          plokk.  Sinu kood peab 'MÄNGU LÕPETAMA', kui Flappy teeb kokkupõrke.
-        flappy_k1_4: Plokk „pärast käivitamist“ käivitab mängu alustamisel sinu koodi.  Proovi
-          määrata taseme kiirus ja lenda sihtmärgini.
-        flappy_k1_5: Flappy lendab takistustest läbi, kui sa pole kirjutanud koodi,
-          mille abil ta teeb kokkupõrke. Kinnita ploki „kui põrkab vastu takistust“
-          külge plokk. Kui Flappy esimeste torude vastu lendab, peab sinu kood 'MÄNGU
-          LÕPETAMA'.
-        flappy_k1_6: Lisame tabloo ja loeme, mitu korda pääseb Flappy takistustest
-          mööda. Lisa plokile „kui möödub takistusest“ plokk ja võida punkt, kui Flappy
-          esimeste torude vahelt läbi lendab.
-        flappy_k1_7: Vaata, kas saad takistusest möödumiste eest mitu punkti
-        flappy_k1_8: Järgmiseks võid proovida muuta tausta, lisades veel ühe ploki
-          "pärast käivitamist" plokile.
-        flappy_k1_9: Proovi vahetada mängijat, kinnitades ploki „pärast käivitamist“
-          külge ploki „vali mängija“.
         jigsaw_1: Kliki plokil
         jigsaw_2: Lohista plokk sihtmärgile
         jigsaw_3: Korrasta plokke, et tekiks pilt
@@ -682,7 +573,7 @@
         C3_computational_thinking: Arvutuslik mõtlemine
         C3_dice_race: Täringuralli
         C3_internet: Internet
-        C3_crowdsourcing: "Ühistegevused"
+        C3_crowdsourcing: Ühistegevused
         C3_functional_suncatchers: Funktsionaalsed päikesepüüdjad
         C3_songwriting_with_parameters: Laulukirjutamine parameetritega
         C4_intro: Sissejuhatus
@@ -818,9 +709,6 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: galaktika loomine koodiga – sissejuhatus'
         starwars_typing: 'Star Wars: galaktika loomine koodiga – JavaScript'
         starwars_events: 'Star Wars: galaktika loomine koodiga – sündmused'
@@ -876,6 +764,22 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops in Harvester
+        CSF_scrat_loops_K1: Loops in Ice Age
+        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_if_allskins: The If Block
+        CSF_ifelse_allskins: Using If/Else Blocks
+        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_loops_AB: Tsüklid
+        csd_gamelab_booleans: Boolean Expressions
+        csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla
@@ -928,8 +832,8 @@
         length_parameter: Kas oskad seda funktsiooni uuendada, et see kasutaks parameetrit
           „pikkus“?
         frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
-        frozen_circle_function_in_circle_turn: "Ära unusta peale igat ringi loomist
-          keerata."
+        frozen_circle_function_in_circle_turn: Ära unusta peale igat ringi loomist
+          keerata.
         frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja
           muuda suurus.
         frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki

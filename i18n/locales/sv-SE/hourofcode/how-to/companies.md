@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Inspirera elever och volontära till Hour of Code
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Anmäl dig](%= resolve_url('https://code.org/volunteer') %) som volontär.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Ytterligare sätt ditt företag kan stödja Hour of Code:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
 - Var värt för ett Hour of Code evenemang för en lokal skola eller ideell förening på ditt företags kontor. Se evenemangsguiden nedan.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](%= resolve_url('
 ## 1. Promote your Hour of Code
 
 - Marknadsföra evenemanget [Hour of Code](%= resolve_url('/promote') %) och uppmuntra andra att vara med.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. De kan [registrera sig](%= resolve_url('https://code.org/volunteer/engineer') %) för att bli matchade med en skola.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - Om du är ett teknikföretag, visa upp kul, innovativa produkter ditt företag arbetar på.
 - Om du inte är ett teknikföretag, berätta om hur ditt företag använder teknik för att lösa problem och nå mål.
 - Bjuda in programmerare från företaget att tala om varför de beslutade att studera datavetenskap och de projekt som de arbetar på.
-- Se tips på hur man kan få tjejer intresserade av datavetenskap [här](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Koda!
 
@@ -103,7 +103,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 ## 7) Fira
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - [Skriva ut "Jag gjorde en timme av kod!"](%= resolve_url('/promote/resources#stickers') %) klistermärken för dina elever.
 - [Beställ t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) för dina anställda.
 - Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!

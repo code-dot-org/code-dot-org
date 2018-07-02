@@ -5,73 +5,73 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Paano magturo ng isang Hour of Code sa after-school na klase at samahan
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+Sumali sa kilusan at ipakilala ang grupo ng mga studyante sa kanilang unang oras ng computer science sa mga hakbang na ito. Ang Oras ng Code ay madaling gumana - kahit para sa mga baguhan! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Panoorin ang video kung paano <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. Pumili ng Pagtuturo
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Subukan nyo na!](<%= resolve_url('/learn') %>)
+Nagbibigay kami ng iba't ibang kasiyahan , oras ang haba ng pagtuturi para sa lahat ng edad, ginawa ng iba't ibang kasosyo. [Subukan ang mga ito!](<%= resolve_url('/learn') %>)</p> 
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+Ang lahat ng mga tutorial ng Oras ng Code </ strong> ay nangangailangan ng kaunting prep-time para sa mga organizer, at self-guided - na nagpapahintulot sa mga bata na magtrabaho sa sarili nilang bilis at antas ng kasanayan.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+Kailangan mo ba ng lesson plan para sa pagkatapos ng eskwelag Oras ng Code? Tignan mo itong template !</p> 
 
-## 3. Promote your Hour of Code
+## 3. Paunlarin ang iyong Hour of Code
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+Paunlarin ang iyong Oras ng Code gamit itong mga kasangkapan at hikayatin ang iba na i-host ang kanilang sariling mga kaganapan.</p> 
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planuhin ang pangangailangan ng iyong teknolohiya - ang computer ay opsyonal
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Ang pinakamahusay na karanasan sa Hour of Code ay kabilang ang internet-connected computers. Ngunit **hindi** mo na Kailangan ng computer sa bawat child, at pwede mong gawin ang Hour of Code kahit wala kang computer.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Siguruhing subukan ang mga pagtuturo sa computer ng mga studyante o sa mga aparato para masigurong gumagana ito ng maaayos sa mga browsers ng may kasamang tunog at video. **Mayroong mababang bandwidth?** Plano mo bang magpakita ng video sa harap ng klase, para hindi na kailangang mag-download ng sariling video ng bawat studyante. O subukan ang unplugged/ offline na mga pagtuturo.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+Maglaan ng headphones para sa iyong klase, o kaya ay pagdalhin ang mga studyante ng sarili nila, kung ang pagtuturong napili mo ay mas maayos kung may tunog.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**Walang sapat na aparato**Gumamit ng [pares na programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Kapag nag kapareha ang mga studyante, tinutulungan nila ang isa't isa at hindi masyadong umaasa sa guro. Makikita din nila na ang computer science ay panlipunan at pakikipagtulungan.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Simulan mo ang iyong Hour of Code ng isang kagila-gilalas na video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+I-kick off ang iyong Hour of Code sa pamamagitan ng pagpukaw sa mga kalahok at pinapaliwanag kung paano nakakaapekto ang computer science sa bawat bahagi ng ating buhay.
 
-**Show an inspirational video:**
+**Magpakita ng nakakapukaw na video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Ang orihinal na Code.org ay naglunsad ng video, tinatampok sina Bill Gates, Mark Zuckerberg, at ang NBA star na si Chris Bosh - mayroong [isang minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [Limang minuto](https://www.youtube.com/watch?v=nKIu9yen5nc), at [Siyam na minuto](https://www.youtube.com/watch?v=dU1xS07N-FA) na mga bersyong available.
+- Ang [Hour of Code na Pambuong Mundong Video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Si Presidente Obama ay nananawagan sa lahat ng mga estudyante na pag aralan ang computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Makakahanap ka ng mga kagila-gilalas na videos [dito](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Ayos lang kahit ikaw ay baguhan lamang sa Computer Science. Narito ang ilan sa mga ideya kung pano ipakilala ang iyong aktibidad sa Hour of Code:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- Ipaliwanag ang mga paraan na nakakaapekto ang teknolohiya sa ating buhay, na may mga halimbawa ng mga lalaki at babae ang tungkol sa (Makipag-usap tungkol sa apps at teknolohiya na ginagamit upang i-save ang buhay, tulungan ang mga tao, kumonekta sa mga tao atbp.).
 - Ilista ang mga bagay na ginagamit ang code sa pang-araw-araw na buhay.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- Tignan ng mga payo kung paano makuha ang interes ng mga kababaihan sa computer science [dito](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Kailangan ng iba pang gabay?** I-download itong [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Mag-Code!
 
-**Direct participants to the activity**
+**Patnubayan ang mga kalahok sa aktibidad**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+- Isulat ang link ng pagtuturo sa whiteboard. Hanapin sa mga link na nakalistang [impormasyon ng iyong napiling pagtuturo](<%= resolve_url('/learn') %>)sa ilalim ng bilang ng mga kalahok.
 
-**When someone comes across difficulties it's okay to respond:**
+**Kung mayroong isang nahihirapan ay ayos na na tumugon:**
 
-- "Hindi ko alam. Ito ay sama-sama nating sagutin."
-- "Ang teknolohiya ay hindi palaging naayon sa ating kagustuhan."
-- "Ang pag-aaral kung paano mag-program ay katulad ng pag-aaral ng isang bagong wika; hindi ka kaagad maging mahusay na magsalita."
+- "Hindi ko alam. Subukan nating alaman ito ng magkasama"
+- "Ang teknolohiya ay hindi palaging nakaayon sa ating kagustuhan."
+- "Ang pag-aaral kung paano mag-program ay katulad ng pag-aaral ng isang bagong wika; hindi ka kaagad maging mahusay."
 
-**What to do if someone finishes early?**
+**Anong gagawin kung mayroong natapos ng mas maaga?**
 
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Or, ask those who finish early to help others who are having trouble.
+- Hikayatin ang mga kalahok na sumubok ng ibang aktibidad ng Hour of Code sa [hourofcode.com/learn](<%= resolve_url('/learn') %>)
+- O, humingi ng tulong sa mga unang natapos para tulungan ang mga nahihirapan.
 
 [col-33]
 
@@ -87,7 +87,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate
+## 7. Magdiwang
 
 [col-33]
 
@@ -95,10 +95,10 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 [/col-33]
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-- [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-- Ibahagi ang mga larawan at video sa mga nangyayari sa Hour of Code sa social media. Gamitin ang #HourOfCode at @codeorg para maaari rin namin na i-highlight ang iyong pinagtatagumpayan!
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
+- [I-print ang "Gumawa ako ng Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers para sa iyong mga estudyante.
+- [Umorder ng pasadyang mga t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sa iyong paaralan.
+- Ibahagi ang mga larawan at video sa mga nangyayari sa iyong Hour of Code sa social media. Gamitin ang #HourOfCode at @codeorg para maaari rin naming i-highlight ang iyong pinagtatagumpayan!
 
 [col-33]
 
@@ -108,18 +108,18 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 <p style="clear:both">&nbsp;</p>
 
-## Other Hour of Code resources for educators
+## Iba pang pagkukunan ng Hour of Code para sa mga tagapagturo
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Tignan mo [pinakamahusay na kasanayan](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) mula sa mga nakaraang organizers ng Hour of Code.
+- Panoorin ang pagtatala ng aming [Gabay ng Tagapagturo doon sa Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- Bisitahin ang[Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) para makakuha ng payo, pananaw at suporta mula sa ibang organisasyon. <% if @country == 'us' %>
+- I-review ang [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Ano ang susunod pagkatapos ng Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Ang Hour of Code ay unang hakbang lamang sa ekspedisyon upang mas matutunan kung paano gumagana ang teknolohiya at kung paano gumawa ng software applications. Para magpatuloy sa ekspedisyon:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

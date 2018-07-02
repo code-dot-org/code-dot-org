@@ -48,6 +48,7 @@ export default class Congrats extends Component {
             tutorial={tutorial}
             certificateId={certificateId}
             randomDonorTwitter={randomDonorTwitter}
+            userAge={userAge}
           />
           {userType === "teacher" && isEnglish && (
             <TeachersBeyondHoc/>

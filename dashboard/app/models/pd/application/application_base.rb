@@ -20,6 +20,7 @@
 #  decision_notification_email_sent_at :datetime
 #  accepted_at                         :datetime
 #  properties                          :text(65535)
+#  deleted_at                          :datetime
 #
 # Indexes
 #
@@ -41,6 +42,8 @@ module Pd::Application
     include ApplicationConstants
     include Pd::Form
 
+    acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
     OTHER = 'Other'.freeze
     OTHER_WITH_TEXT = 'Other:'.freeze
     YES = 'Yes'.freeze
@@ -56,7 +59,8 @@ module Pd::Application
       gender_identity: [
         'Female',
         'Male',
-        OTHER,
+        'Non-binary',
+        'Preferred term not listed',
         'Prefer not to answer'
       ],
 
@@ -182,15 +186,18 @@ module Pd::Application
     end
 
     # Override in derived class to provide headers
+    # @param course [String] course name used to choose fields, since they differ between courses
+    # @param user [User] requesting user - used to handle field visibility differences
     # @return [String] csv text row of column headers, ending in a newline
-    def self.csv_header
+    def self.csv_header(course, user)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
     # Override in derived class to provide the relevant csv data
+    # @param user [User] requesting user - used to handle field visibility differences
     # @return [String] csv text row of values, ending in a newline
     #         The order of fields must be consistent between this and #self.csv_header
-    def to_csv_row
+    def to_csv_row(user)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
@@ -225,23 +232,36 @@ module Pd::Application
       raise 'Abstract method must be overridden in base class'
     end
 
+    def self.can_see_locked_status?(user)
+      true
+    end
+
     # Include additional text for all the multi-select fields that have the option
     def full_answers
-      sanitize_form_data_hash.tap do |hash|
-        additional_text_fields.each do |field_name, option, additional_text_field_name|
-          next unless hash.key? field_name
+      @full_answers ||= begin
+        sanitize_form_data_hash.tap do |hash|
+          additional_text_fields.each do |field_name, option, additional_text_field_name|
+            next unless hash.key? field_name
 
-          option ||= OTHER_WITH_TEXT
-          additional_text_field_name ||= "#{field_name}_other".to_sym
-          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
-          hash.delete additional_text_field_name
-        end
-      end.slice(*self.class.filtered_labels(course).keys)
+            option ||= OTHER_WITH_TEXT
+            additional_text_field_name ||= "#{field_name}_other".to_sym
+            hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+            hash.delete additional_text_field_name
+          end
+        end.slice(*self.class.filtered_labels(course).keys)
+      end
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
     def full_answers_camelized
-      full_answers.transform_keys {|k| k.to_s.camelize(:lower)}
+      @full_answers_camelized ||=
+        full_answers.transform_keys {|k| k.to_s.camelize(:lower)}
+    end
+
+    def clear_memoized_values
+      super
+      @full_answers = nil
+      @full_answers_camelized = nil
     end
 
     def generate_application_guid
@@ -260,6 +280,10 @@ module Pd::Application
     def unlock!
       return unless locked?
       update! locked_at: nil
+    end
+
+    def email
+      user.try(:email) || sanitize_form_data_hash[:alternate_email]
     end
 
     def regional_partner_name
@@ -292,6 +316,11 @@ module Pd::Application
 
     def course_name
       COURSE_NAME_MAP[course.to_sym]
+    end
+
+    # displays the iso8601 date (yyyy-mm-dd)
+    def date_accepted
+      accepted_at.try {|datetime| datetime.to_date.iso8601}
     end
   end
 end

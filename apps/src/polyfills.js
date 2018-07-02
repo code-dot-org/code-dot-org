@@ -1,4 +1,9 @@
 /**
+ * "Pointer Events Polyfill" to support pointer events on Safari
+ */
+import 'pepjs';
+
+/**
  * A low-performance polyfill for toBlob based on toDataURL. Adapted from:
  * https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
  */

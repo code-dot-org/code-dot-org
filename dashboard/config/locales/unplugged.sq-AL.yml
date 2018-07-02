@@ -1,4 +1,5 @@
-"sq":
+---
+sq:
   data:
     unplugged:
       Unplug1:
@@ -289,9 +290,6 @@
           e Pitagores dhe Formula e Distances mund te perdoren per te percaktuar largesine
           e dy pikave ne nje avion, dhe me pas te percaktojme nese ato dy pika ( apo
           personazhe lojrash) po takojne ne ndonje pike.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -437,36 +435,169 @@
           kombinuar pjesët e kodit në funksione, është një praktikë kaq ndihmuese.  '
       swipeRightPassThrough:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       swipeRightPassThrough-test123:
         title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
+        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
+          this session we'll use a tool called \"Swipe Right for CS\", which has been
+          developed by our partners at MIT. In Swipe Right for CS, you will read through
+          some student profiles and consider specific statements that you might use
+          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
+          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
+          series of quotes that you might say to each student. You will swipe right
+          on quotes that you think would be effective in convincing students to enroll
+          in the course and swipe left on statements that you think will not be effective.
+          During the session we will discuss as a group your thoughts on the types
+          of statements that are most effective in getting a student to enroll in
+          CS, and you will have a chance to see how other people in your workshop
+          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
+          we'll send you to the game, and pass along the Code.org email address you're
+          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
+          as follows:\r\n1. started with an `unplugged` level. populated with info.
+          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
+          level with the same content and same name. checked to box to encrypt it.
+          hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmet e jetës-Reale: Mbill një Farë'
+        desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona
+          të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull.
+          Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe
+          se si algoritmat luajnë një rol esencial.
+      UnplugHappyMaps_2018:
+        title: Hartat e Gëzuara
+        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
+          një personazh midis një labirinti duke përdorur një komandë të vetme.
+      GoingPlacesSafely_2018:
+        title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+        desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit
+          prezantojnë si të qëndrojmë të sigurtë ndërsa navigojmë në Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Eventi i Madh
+        desc: Studentët janë prezantuar me konceptet e programimit të "eventeve",
+          të cilat janë veprime që monitoron një kompjuter në mënyrë të vazhdueshme.
+          Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë
+          në varësi të butonit që është shtypur.
+      GraphPaperProgramming_2018:
+        title: Programimi me grafikë
+        desc: Studentët shkruajnë një algoritëm (grup instruksionesh) duke përdorur
+          një grup komandash të paracaktuara për të drejtuar shokët e tyre të klasës
+          që të ribëjnë një vizatim.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktiviteti Unplugged
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktiviteti Unplugged
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Kushtoret
+        desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një
+          lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe,
+          unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një
+          pikë."
+      DigitalFootprint_2018:
+        title: Gjurmët e Tua Dixhitale
+        desc: Mësuesit i prezantojnë studentëve idenë që futja e informacionit online
+          rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.
+      BinaryImages_2018:
+        title: Imazhet Binare
+        desc: Edhe pse shumë njerëz mendojnë për binarët si zero dhe njësha striktë,
+          kurset tona të mëparshme i mësuan studentëve që informacioni mund të paraqitet
+          në opsione të ndryshme binare. Ky mësim merr këtë koncept një hap më larg
+          kur ilustron se si një kompjuter mund të ruajë edhe informacione më komplekse
+          (si psh imazhe dhe ngjyra) në binarë, gjithashtu.
+      PaperPlanes_2018:
+        title: 'Algoritmet e Jetës-Reale: Planet në Letër'
+        desc: Ky mësim tregon mënyra se si ne të përdorim algoritmat në jetën e përditshme,
+          në mënyrë specifike të të bërit aeroplanë letre. Ky mësim gjithashtu fokusohet
+          në figura më të mëdha të shkencës kompjuterike dhe se si algoritmet luajnë
+          një rol të rëndësishëm.
+      GettingLoopy_2018:
+        title: Duke u Çmëndur
+        desc: Ky mësim ju prezanton me konceptin e programimit të cikleve (instruksione
+          të përsëritshme) ndërmjet një aktiviteti kërcimi. Studentët do të mësojnë
+          koreografi të thjeshta, më pas do të udhëzohen ta përsërisin atë.
+      BinaryBracelets_2018:
+        title: Byzylykët Binarë
+        desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së
+          parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen
+          dhe të ruhen në më shumë se një mënyrë.
+      MoveItMoveIt_2018:
+        title: Lëvize atë, lëvize atë
+        desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the creative
+          process of sharing and inspiration.  Along with that comes the promotion
+          of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
+          and Creativity, this lesson exists to help students understand the challenges
+          and beneﬁts of respecting ownership and copyright, particularly in digital
+          environments. Students should be encouraged to respect artists’ rights as
+          an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Programimi transmetues
+        desc: This activity will begin with a short lesson on debugging and persistence,
+          then will quickly move to a race against the clock as students break into
+          teams and work together to write a program one instruction at a time.

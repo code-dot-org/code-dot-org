@@ -7,9 +7,9 @@ nav: how_to_nav
 
 # Cum să predați o Oră de Programare în after-school-uri și cluburi
 
-Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de informatică urmând aceşti paşi. Ora de cod este ușor de rulat - chiar și pentru începători! Dacă doriţi un set suplimentar de mâini de ajutor, puteţi găsi un [voluntar local](<%= resolve_url('https://code.org/volunteer/local') %>) pentru a ajuta la derularea unei Ore de Cod în clasa dvs.
+Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de informatică urmând aceşti paşi. Ora de cod este ușor de rulat - chiar și pentru începători! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
-## 1. Priveşte acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Vizionați acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Alegeți un tutorial
 
@@ -56,7 +56,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 **Aveți nevoie de îndrumări suplimentare?** Descărcați acest [plan de lecție șablon](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Codeaza!
+## 6. Codați!
 
 **Directionati participanţii catre activitate**
 
@@ -95,9 +95,9 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 [/col-33]
 
-- [Printați certificate](<%= resolve_url('https://code.org/certificates') %>) pentru elevii dumneavoastră.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [Imprima autocolante cu textul "Am făcut o Ora de Programare!"](<%= resolve_url('/promote/resources#stickers') %>) pentru elevii dumneavoastră.
-- [Comandă tricouri personalizate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pentru angajații tăi.
+- [Comandați tricouri personalizate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pentru școala dumneavoastră.
 - Distribuiti fotografii şi înregistrări video ale evenimentului dumneavoastra Hour of Code pe social media. Utilizati #HourOfCode şi @codeorg, astfel încât putem evidenţia si noi succesul dumneavoastră!
 
 [col-33]
@@ -110,7 +110,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 ## Alte resurse de o oră de cod pentru educatori
 
-- Vedeți [cele mai bune practici](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) de la organizatorii de Ore de Cod din trecut. 
+- Vedeți [cele mai bune practici](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) de la organizatorii de Ore de Cod din trecut.
 - Urmăriți înregistrarea noastră de la [Webinar - Ghidul educatorului la webinarul Hour of Code](https://youtu.be/EJeMeSW2-Mw).
 - Vizitaţi [Forum-ul Hour of Code](http://forum.code.org/c/plc/hour-of-code) pentru a obţine sfaturi, informații din interior şi sprijin de la alți organizatori. <% if @country == 'us' %>
 - Revedeti [ sectiunea Intrebari Frecvente ale site-ului Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-i pe particip
 
 Hour of Code este doar primul pas într-o călătorie pentru a afla mai multe despre modul în care tehnologia funcționează şi cum se creează aplicațiile software. Pentru a continua această călătorie:
 
-- Incurajeaza studentii sa continuie la [invata online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Participați](<%= resolve_url('https://code.org/professional-development-workshops') %>) la un atelier de lucru de o zi, în persoană, pentru a primi instrucțiuni de la un facilitator experimentat în informatică. (Numai pentru educatori din SUA)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

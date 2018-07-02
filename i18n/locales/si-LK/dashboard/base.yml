@@ -9,15 +9,15 @@ si:
     errors:
       messages:
         blank: "අවශ්‍යයි"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "අවශ්‍ය වේ"
+        invalid_plural: "වලංගු නැත"
     attributes:
       user:
         name: 'ප්‍රදර්ශක නාමය'
-        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
+        name_example: 'ප්‍රදර්ශන නම<br/>(e.g. Cool Coder or Jane S.)'
         email: 'විද්‍යුත් තැපැල'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'මාපිය/භාරකරු e-තැපෑල'
+        personal_email: "පෞද්ගලික e-තැපැල් ලිපිනය <a href=\"%{url}\">(ඔබට e-තැපැල් ලිපිනයක් නැති නම් මෙතන ඔබන්න)</a>"
         username: 'පරිශීලක නාමය'
         password: 'මුර පදය'
         password_confirmation: 'මුර පදය ස්ථිර කිරීම'
@@ -59,7 +59,7 @@ si:
   courses: 'පාඨමාලාව'
   courses_page:
     title_student: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'අපේනුගත ක්‍රියාකාරකම'
   of: "ගේ"
   more: "වැඩි"
@@ -69,7 +69,7 @@ si:
   try_k8intro: "පරිඝණක විද්‍යා පඨමාලාව සදහා වු අපේ K-8 හැදින්වීම උත්සහකරන්න (පැය 15-25 ක්)"
   k8intro: "K-8 පරිඝණක විද්‍යා පඨමාලාව - හැදින්වීම (පැය 15-25 ක්)"
   already_started: "දැනටමත් ආරම්භකරාද? මෙතනින් නැවත ආරම්භකරන්න >> "
-  demos: 'Admin: සියලු ආදර්ශනය වර්ග'
+  demos: "Admin: සියලු ආදර්ශනය වර්ග"
   continue: 'කරගෙන යන්න'
   prize: 'ත්‍යාගය'
   more_info: 'වැඩිදුර තොරතුරු'
@@ -84,18 +84,19 @@ si:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft ගිණුම'
-    clever: 'Clever Account'
+    clever: 'දක්ෂ ගිණුම'
+    powerschool: 'Powerschool Account'
     forgot_password: 'ඔබගේ මුරපදය අමතකද?'
     need_confirmation: "තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?"
     need_unlock: "අගුළු හැරීමේ උපදෙස් ලැබී නැත් ද?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    not_linked: "සමාවන්න, ඔබගේ Code.org ගිණුම %{provider} ට සම්බන්ධ වී නොමැත. ඔබට ඔබේ මුරපදය (password) යොදා ඇතුලත් විය හැක."
     use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: 'සිසුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
     teacher_count: 'ගුරුවරුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
     overview: 'ගිණුමකට   අත්සන්වන්න  ඔබගේ ප්‍රගතිය බැලීමට නැතහොත් පාලනය කිරීමට.<a href="/">ඔබට විවිද අවදි ප්‍රහේලිකාවේ සොයන්න හැකය.</a>ගිණුමක් නොමැතිව ,නමුත්  ඔබට අත්සන්වන්න වෙනවා ගිණුමට  ඔබගේ ප්‍රගතිය  සහ  ව්‍යාපෘති දිගුකාලීනව තබා ගැනීමට.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_heading: 'ඇතුළත් නොවී ආරම්භ කරන්න'
+    hoc_already_signed_up_content: 'ඔබ Hour of Code ඉගැන්වීමට ලියාපදිංචි වී ඇත! ඔබටත් ඔබගේ සිසුන් හටත් මෙම වැඩසටහන සඳහා සහභාගී වීමට Code Studio හි ලියාපදිංචි වීමට අවශ්‍යතාවයක් නැත. ආරම්භ වීමට, ඔබගේ පන්තිය සඳහා<a href="%{learn_url}">නිබන්ධනයක් තෝරා ගැනීමට</a> ඔවුන් හා ලින්ක් එක බෙදාගන්න.<br/><br/>ඔබ Hour of Code රසවිඳ තව දුරටත් යාමට කැමති නම්, ඔබට මුරපදයක් යොදා Code Studio ගිණුමක් සාඳා ඔබගේ සිසුන් එහි ඇති <a href="%{educate_url}">දිගු පාඨමාලා</a>හි යෙඳවිය හැකිය.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'අධ්‍යාපක මඟපෙන්වීම දකින්න'
     title: "Code.org සඳහා ලියාපදිංචි වන්න"
@@ -114,15 +115,25 @@ si:
     valid_password: "මුර පදය වලංගුයි!"
     invalid_password: "Password එක අකුරු 6ට වැඩිවිය යුතුයි"
     mismatch_password: "යෙදු මුර පද දෙක සමාන වී නැත"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "මම එකග වෙනවා  Code.org එකත්  සමග එහි <a href='http://code.org/tos'>නීති සහ රෙගුලාසි </a>මට  13ට  වඩා අඩුනම් වයස.මම තහවරු  කරනවා මෙම පත්‍රිකාව මගේ දෙමාපියන්ගේ  හෝ නිත්‍යානුකුල බාරකරුගේ  අනුමැතිය ගත්  බව මෙම  Code.org සේවාව ලබාගනිම <br/><br/>විද්‍යුත් තැපෑලය ශිෂ්‍ය   පිට පතෙහි දක්වා නැත.ශිෂ්වයන්  කිසිම දිනෙක  විද්‍යුත් තැපෑලයක්  Code.org  වලින් නොලැබේ මුර පදය වෙනස් කිරීමට හැර.අපේ <a href='http://code.org/privacy'>පෞද්ගලික නිතිය </a>මෙම දත වලට \n\n"
     teacher_terms: "මම Code.org සේවා නියමයන් මගින් බැඳී සිටීමට එකඟ වෙමි. වැඩි විස්තර සඳහා, අපගේ රහස්‍ය ප්‍රතිපත්තිය බලන්න<a href='http://code.org/privacy'> රහස්‍ය ප්‍රතිපත්තිය </a>."
     additional_information: "ඔබට ඇතුලු වීමට තව තොරතුරු කිහිපයක් අවශ්‍යව ඇත."
+    user_type_button: "Update Account Type"
     user_type_label: "ගිණුම් වර්ගය"
     user_type_teacher: "ගුරු වරයා"
     user_type_student: "ශිෂ්‍යයා"
     field_is_required: "අවශ්‍යයි"
     accept_terms: "ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය"
     error: "An error occurred."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "ඔව්"
+    email_preference_no: "නැහැ"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -171,6 +182,7 @@ si:
       email: 'විද්‍යුත් තැපැල් ලිපිනය'
       submit: 'යොමු කරන්න'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'ඔබේ මුරපදය වෙනස් කරන්න'
@@ -201,7 +213,7 @@ si:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'රහස් පදය'
       email: 'විද්‍යුත් තැපැල'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -220,7 +232,7 @@ si:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: '"Code.org" හි නිවේදනයි: %{student_name} තවදුරටත් ඔබගේ ශිෂ්‍යකු නොවේ.'
+        subject: "\"Code.org\" හි නිවේදනයි: %{student_name} තවදුරටත් ඔබගේ ශිෂ්‍යකු නොවේ."
   reports:
     error:
       access_denied: "ඔබට මෙම පුද්ගලයාගේ සංඛ්‍යානයන් සඳහා ප්‍රවේශ විය නොහැක"
@@ -348,11 +360,12 @@ si:
     email_confirm_needed_required: 'ඔබේ විද්යුත් තැපැල් ලිපිනය %{email} තහවුරු කර නොමැත:'
     email_confirm_wrong_email: 'වැරදි විද්යුත් තැපැල් ලිපිනය'
     email_resend_confirm: 'තහවුරු උපදෙස් නැවත භාරදෙන්න'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(ඔබට එය වෙනස් කිරීම අවශ්‍ය නොවේ නම් හිස්ව තබන්න)"
     current_password_hint: '(ඔබ සිදුකළ වෙනස්කම් තහවුරු කිරීමට දැනට භාවිතා කරන මුරපදය ලබාදෙන්න)'
     delete: 'ඔබගේ ගිණුම මකන්න'
     delete_text: "පහත බොත්තම ක්ලික් කිරීමෙන් ඔබගේ ගිණුම මකනු ඇත."
-    delete_text_teacher_note: 'සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ ගිණුම් ඉවත් නොවේ.'
+    delete_text_teacher_note: "සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ ගිණුම් ඉවත් නොවේ."
     delete_confirm: 'ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -363,10 +376,11 @@ si:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    update: "Update Account"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -448,6 +462,7 @@ si:
     student_not_found: "සිසුන් එක් අයෙක් හෝ ඊට වැඩි ගණනක් සොයා ගැනීමට නොහැකි විය."
     all_students_must_be_in_current_section: "සියලුම සිසුන් දැන් ඔබගේ කොටසට ඇතුළත් වී සිටිය යුතුය."
     already_enrolled_in_new_section: "මෙම ගුරුවරයා විසින් මෙම සිසුන් වෙනත් කොටසකට ඇතුලත් කර තිබෙන නිසා ඔබට මෙම සිසුන් ඉවත් කල නොහැකියි."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
     description: "ඕනෑම කෙනෙකුට පරිගණක විද්යාව ඉගෙනගන්න පුළුවන්. කේතය සමඟ ක්රීඩා, යෙදුම් හා කලා කරන්න."
@@ -455,6 +470,8 @@ si:
   gender:
     male: 'පිරිමි'
     female: 'ගැහැණු'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'පිළිතුරු නොදීමට කැමතියි'
   user_type:
     student: 'ශිෂ්‍යයා'
@@ -702,7 +719,7 @@ si:
     sign_out: 'ඔබට ඔබගේ වයස ඉදිරිපත් කල නොහැකි නම් <a href="%{url}">ඉවත් විය</a> හැක.'
   terms_interstitial:
     title: "යාවත්කාලීන කරන ලද සේවා කොන්දේසි සහ පෞද්ගලිකත්වය සුරැකීමේ ප්‍රතිපත්ති"
-    intro_desc: පහත සඳහන් පරිදි අප අපගේ සේවා කොන්දේසි අලුත් කර තිබේ. 2016 අගෝස්තු 24 සිට මේවා ක්‍රියාත්මක වනු ඇත. සැලකිය යුතු වෙනසක් වන්නේ අප තවදුරටත් සිසුන්ගේ ඊ මේල් ලිපින ගබඩා කරගෙන නොතබාගැනීමයි. අධ්‍යාපනයේදි සිසුන්ගේ පෞද්ගලිකත්වය ආරක්ශා කිරීමේ එක් වැදගත් පියවරක් ලෙස අප මෙය සලකනු ලබනවා. අනෙකුත් වෙනස් වීම් වල සාරාංශයක් ඔබ වෙත ඊ මේල් එකකින් එවා ඇත.
+    intro_desc: "පහත සඳහන් පරිදි අප අපගේ සේවා කොන්දේසි අලුත් කර තිබේ. 2016 අගෝස්තු 24 සිට මේවා ක්‍රියාත්මක වනු ඇත. සැලකිය යුතු වෙනසක් වන්නේ අප තවදුරටත් සිසුන්ගේ ඊ මේල් ලිපින ගබඩා කරගෙන නොතබාගැනීමයි. අධ්‍යාපනයේදි සිසුන්ගේ පෞද්ගලිකත්වය ආරක්ශා කිරීමේ එක් වැදගත් පියවරක් ලෙස අප මෙය සලකනු ලබනවා. අනෙකුත් වෙනස් වීම් වල සාරාංශයක් ඔබ වෙත ඊ මේල් එකකින් එවා ඇත."
     intro_instructions: "කෝඩ් ස්ටුඩියෝ තුල ඇති නවතම සහ සියලුම පහසුකම් ලබා ගැනීමට නම් ඔබට අවුරුදු 13න් පහල සිසුන් වෙනුවෙන් නව කොන්දේසි වෙත එකඟ වීමට සිදු වනු ඇත. අවුරුදු 13න් පහල සිසුන් ලියාපදිංචි කිරීමේදි ඔබට ඒ සඳහා ඔවුන්ගේ දෙමාපිය අනුමැතිය තිබිය යුතු අතර, සිසුන්ගේ පෞද්ගලික තොරතුරු භාවිතා කරන්නේ ඔබේ පාසලේ සුභ සිද්ධිය හා වෙනත් අධ්‍යාපන කටයුතු සඳහා පමණක් බවට ඔබ විසින් සහතික විය යුතු වේ."
     tos: "සේවා නියම"
     privacy: "රහස්‍යතා ප්‍රතිපත්තිය"
@@ -718,25 +735,25 @@ si:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "සුරකින්න"
   race_interstitial:
-    title: 'විකල්ප: පරිගණක විද්‍යා ක්ෂේත්‍රය තුළ විවිධත්වය වර්ධනය කිරීමට අප දරන ප්‍රයත්නයේ ප්‍රගතිය මැනීමට අපට උදව් කරන්න'
+    title: "විකල්ප: පරිගණක විද්‍යා ක්ෂේත්‍රය තුළ විවිධත්වය වර්ධනය කිරීමට අප දරන ප්‍රයත්නයේ ප්‍රගතිය මැනීමට අපට උදව් කරන්න"
     message: "ඔබේ ජාතිය සඳහන් කරන්න (අදාළ වන සියල්ල ලකුණු කරන්න)"
     races:
       - 
-        white: සුදු ජාතික
+        white: "සුදු ජාතික"
       - 
-        black: අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත
+        black: "අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත"
       - 
-        hispanic: ලතින් ඇමරිකානු
+        hispanic: "ලතින් ඇමරිකානු"
       - 
-        asian: ආසියානු
+        asian: "ආසියානු"
       - 
-        hawaiian: හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී
+        hawaiian: "හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී"
       - 
-        american_indian: ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික
+        american_indian: "ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික"
       - 
-        other: වෙනත්
+        other: "වෙනත්"
       - 
-        opt_out: පිළිතුරු දීමට අකැමතියි
+        opt_out: "පිළිතුරු දීමට අකැමතියි"
     submit: "යොමු කරන්න"
     decline: "වසන්න"
   zendesk_too_young_message: 'සමාවෙන්න,උපකාරක වෙබ් අඩවියට වයසින් බාල සිසුන් සඳහා sign in වියනොහක.සොයන්න <a href="http://support.code.org">support.code.org</a> signing in නොවී හෝ ඔබ වෙනුවෙන් දෙමාපියන් හෝ ගුරුවන් සම්බන්ද කරන්න.'
@@ -762,7 +779,7 @@ si:
     delete: "මකන්න"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "පාඨමාලාව වෙත ආපසු යන්න"
@@ -865,8 +882,9 @@ si:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
@@ -880,6 +898,11 @@ si:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: '2වන ඒකකය: අංකිත තොරතුරු'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: වියාචනය
@@ -984,3 +1007,14 @@ si:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Full Courses'
+  cookie_banner:
+    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
+    more_information: "See Code.org's Privacy Policy."
+    accept: 'මම එකඟයි'
+  gdpr_dialog:
+    heading: 'Do you agree to using a web site based in the United States?'
+    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
+    link_intro: 'For details see our'
+    privacy_policy: 'privacy policy'
+    logout: 'Logout'
+    yes: 'ඔව්'

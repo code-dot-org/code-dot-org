@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:31.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Sending Binary Messages",
+    "placeholder": "Enter your response here.",
+    "markdown_instructions": "Provide an example of a question that could NOT be answered with a single binary message. Explain why this is the case, making reference to the definition of a binary message. \r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 1891,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-30 15:24:48 +0000\",\"changed\":[\"notes\",\"markdown_instructions\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2017-09-06 14:23:26 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":37,\"changed_by_email\":\"brook@code.org\"}]"
+}]]></config>
+</FreeResponse>

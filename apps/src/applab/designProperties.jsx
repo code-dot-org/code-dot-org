@@ -3,10 +3,10 @@ import React, {PropTypes} from 'react';
 import applabMsg from '@cdo/applab/locale';
 import color from "../util/color";
 import elementLibrary from './designElements/library';
-import * as elementUtils from './designElements/elementUtils';
 import DeleteElementButton from './designElements/DeleteElementButton';
 import ElementSelect from './ElementSelect';
 import DuplicateElementButton from './designElements/DuplicateElementButton';
+import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
 
 let nextKey = 0;
 
@@ -15,11 +15,13 @@ export default class DesignProperties extends React.Component {
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
+    onCopyElementToScreen: PropTypes.func.isRequired,
     onChangeElement: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired,
     onDuplicate: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   state = {selectedTab: TabType.PROPERTIES};
@@ -52,9 +54,10 @@ export default class DesignProperties extends React.Component {
     const isScreen = (elementType === elementLibrary.ElementType.SCREEN);
     // For now, limit duplication to just non-screen elements
 
+    const onlyOneScreen = (this.props.screenIds.length === 1);
+
     // First screen is not deletable
-    const isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
-        elementUtils.getScreens().length === 1;
+    const isOnlyScreen = (isScreen && onlyOneScreen);
 
     const tabHeight = 35;
     const borderColor = color.lighter_gray;
@@ -205,6 +208,12 @@ export default class DesignProperties extends React.Component {
                 />
                 }
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
+                {!onlyOneScreen && !isScreen &&
+                <CopyElementToScreenButton
+                  handleCopyElementToScreen={this.props.onCopyElementToScreen}
+                  screenIds={this.props.screenIds}
+                />
+                }
               </div>
               <PropertyComponent
                 element={this.props.element}

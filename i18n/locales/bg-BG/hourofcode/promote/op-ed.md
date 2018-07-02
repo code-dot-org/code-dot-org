@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Отидете на [ <%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %), за да намерите конкретна информация за компютърните науки.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
 **Заглавие: Компютинг... Когато работните места са**
 

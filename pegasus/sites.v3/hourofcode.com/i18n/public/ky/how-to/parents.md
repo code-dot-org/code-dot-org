@@ -35,13 +35,13 @@ nav: how_to_nav
 - Code.org тааныштыруу видеосу, Билл Гейтс, Марк Цукерберг жана NBA жылдызы Крис Бош тартылган (Анын [1 мүнөт](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 мүнөт](https://www.youtube.com/watch?v=nKIu9yen5nc) жана [9 мүнөт](https://www.youtube.com/watch?v=dU1xS07N-FA) версиялары бар)
 - The [Код сааты дүйнөдө видеосу](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Президент Обама окуучуларды компүтердик илимди өздөштүрүүгө чакырат](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Дагы башка шыктандыруучу [ресурстар](<%= resolve_url('https://code.org/inspire') %>) жана [виделор](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Өзүңүз жана балаңыз дагы компүтер менен тааныш болбосо - эч нерсе эмес. Код сааты иш-чараңызды тааныштыруунун айрым идеялары:
 
 - Технологиянын жашообузга тийгизген таасиринен мисал бергиле - балдарга жана кыздарга тең кызык болсун (өмүр сактаган, жардам берген, кишилерди байланыштырган ж. б.).
 - Турмуштагы код колдонгон нерселердин тизмеси.
-- Кыздарды компүтердик илимге кызыктыруучу кеңештер [бул жерде](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 Жаңы идеялар керекпи? Тажрыйбалуу уюштуруучулардан алынган [сабактын үлгү-планын](/files/AfterschoolEducatorLessonPlanOutline.docx) көрүңүз.
 
@@ -61,7 +61,7 @@ nav: how_to_nav
 
 ## 6) Майрамдагыла
 
-Балаңызга (жан өзүңүзгө) [сертификат чыгаргыла](<%= resolve_url('https://code.org/certificates') %>).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 Код саатыңыздын фото жана видеолорун социалдык желелерде бөлүшкүлө. #HourOfCode ж-а @codeorg хештег колдонуп, ийгилигиңизди бизге дагы билдиргиле!
 
@@ -73,7 +73,7 @@ nav: how_to_nav
 
 Код сааты технологиялардын иштешин терең изилдөө саякатындагы жана програмдык жабдууларды өндүрүүдөгү биринчи эле кадам. Бул саякатты улантуу үчүн:
 
-- Балаңызды [онлайн үйрөнүүнү](<%= resolve_url('https://code.org/learn/beyond') %>) улантууга чакыргыла.
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - Компүтердик билимди балаңыздын мектебинде [илгерилетүүгө](<%= resolve_url('/promote') %>) жардам бериңиз.
 
 <%= view :signup_button %>

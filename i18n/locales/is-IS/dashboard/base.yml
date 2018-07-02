@@ -69,7 +69,7 @@ is:
   try_k8intro: "Prófaðu Inngang að tölvunarfræði fyrir 13 - 14 ára (11-25 klst.)"
   k8intro: "Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)"
   already_started: "Ekki að byrja núna? Taktu upp þráðinn hér >> "
-  demos: 'Umsjón: Öll sýnidæmi'
+  demos: "Umsjón: Öll sýnidæmi"
   continue: 'Áfram'
   prize: 'verðlaun'
   more_info: 'Nánar'
@@ -85,6 +85,7 @@ is:
     facebook: 'Facebook'
     windowslive: 'Microsoft reikning'
     clever: 'Clever aðgangur'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Gleymt lykilorð?'
     need_confirmation: "Fékkstu ekki sendar leiðbeiningar um staðfestingu?"
     need_unlock: "Fékkstu ekki leiðbeiningar um opnun?"
@@ -114,15 +115,25 @@ is:
     valid_password: "Gilt lykilorð!"
     invalid_password: "Lykilorð verður að vera að minnsta kosti 6 stafir"
     mismatch_password: "Lykilorðin tvö sem þú slóst inn eru ekki eins"
+    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
+    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+    agree_us_website: "I agree to using a website based in the United States."
+    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "Ég samþykki að hlíta <a href='http://code.org/tos'>þjónustuskilmálum</a> Code.org. Ef ég er yngri en 13 ára, staðfesti ég með því að senda inn þetta form að ég hef leyfi foreldra eða löglegs forráðamanns til að nota þjónustu Code.org.<br/><br/>Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í <a href='http://code.org/privacy'>persónuverndarstefnu</a> okkar."
     teacher_terms: "Ég samþykki að hlíta þjónustuskilmálum Code.org. Nánari upplýsingar um persónuvernd má finna í <a href='http://code.org/privacy'>persónuverndarstefnu</a> okkar."
     additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
+    user_type_button: "Update Account Type"
     user_type_label: "Tegund aðgangs"
     user_type_teacher: "Kennari"
     user_type_student: "nemandi"
     field_is_required: "er nauðsynlegt"
     accept_terms: "Þú verður að samþykkja að stofna aðgang"
     error: "Villa kom upp."
+    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
+    email_preference_privacy: "(See our privacy policy)"
+    email_preference_yes: "Já"
+    email_preference_no: "Nei"
+    email_preference_required: "You must specify an email preference."
   school_info:
     title: 'Upplýsingar skóla (val)'
     school_country: 'Land skóla'
@@ -171,6 +182,7 @@ is:
       email: 'Netfang'
       submit: 'Senda inn'
     reset_errors:
+      captcha_required: 'Vinsamlegast kláraðu skynprófið til að endurstilla leyniorðið.'
       invalid_email: 'Svo virðist sem þú hafir skráð þig með ógildu netfangi. Vinsamlegast sendu póst á support@code.org til að fá tengil fyrir endurstillingu lykilorðs.'
     change_form:
       title: 'Breyta lykilorði'
@@ -220,7 +232,7 @@ is:
       provider_managed_section: "Þessi hópur er í umsjón annars aðila og ekki hægt að tengja hann. Biddu kennarann að tengja þig í gegnum %{provider} og spegla svo þann hóp."
     mail:
       student_disassociated:
-        subject: 'Orðsending frá Code.org: %{student_name} er ekki lengur skráð(ur) sem nemandi þinn.'
+        subject: "Orðsending frá Code.org: %{student_name} er ekki lengur skráð(ur) sem nemandi þinn."
   reports:
     error:
       access_denied: "Þú hefur ekki aðgang að upplýsingum um þennan aðila"
@@ -348,11 +360,12 @@ is:
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
     email_confirm_wrong_email: '(Rangt netfang?)'
     email_resend_confirm: 'Endursenda leiðbeiningar um staðfestingu'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(hafðu autt ef þú vilt ekki breyta því)"
     current_password_hint: '(við þurfum að fá núverandi lykilorð þitt til að staðfesta breytingarnar)'
     delete: 'Eyða aðgangi þínum'
     delete_text: "Að smella á hnappinn fyrir neðan eyðir aðgangi þínum."
-    delete_text_teacher_note: 'Vinsamlegast athugaðu: þó þú eyðir þínum aðgangi, eyðir það ekki aðgangi nemenda þinna.'
+    delete_text_teacher_note: "Vinsamlegast athugaðu: þó þú eyðir þínum aðgangi, eyðir það ekki aðgangi nemenda þinna."
     delete_confirm: 'Ertu viss um að þú viljir eyða aðgangi þínum?'
     deleted_user: 'notanda var eytt'
     no_password_because_oauth: 'Ekkert lykilorð því þú skráir þig inn frá þriðja aðila.'
@@ -363,10 +376,11 @@ is:
     create_personal_login_under_13_parent_email: 'Netfang foreldris/forráðamanns'
     create_personal_login_info: 'Ef þú vilt halda áfram að nota Code.org eftir lok skólaársins, getur þú stofnað þinn eigin aðgang hér fyrir neðan.'
     create_personal_login_terms: "Með því að stofna minn eigin aðgang, samþykki ég að undirgangast <a href='%{terms_of_service_url}', target='_blank'>þjónustuskilmála</a> Code.org. Ef ég er yngri en 13 ára, staðfesti ég að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustu Code.org án kennara."
-    create_personal_login_email_note: 'Athugið: Netföng eru ekki vistuð þannig að við getum haft samband við nemendur. Nemendur munu aldrei fá tölvupósta frá Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar má finna í <a href=''%{privacy_policy_url}'', target=''_blank''>persónuverndarstefnu</a> okkar.'
+    create_personal_login_email_note: "Athugið: Netföng eru ekki vistuð þannig að við getum haft samband við nemendur. Nemendur munu aldrei fá tölvupósta frá Code.org nema þegar þeir þurfa að endurheimta aðgangsorð. Nánari upplýsingar má finna í <a href='%{privacy_policy_url}', target='_blank'>persónuverndarstefnu</a> okkar."
     enter_new_login_info: 'Færðu inn nýju innskráningarupplýsingarnar þínar'
     confirm_secret_words: 'Staðfestu að þetta sért þú með því að slá inn núverandi leyniorð'
     enter_parent_email: "Skráðu netfang foreldris eða forráðamanns (ef leyniorð skyldi gleymast)"
+    update: "Update Account"
   user_level:
     completed: 'Lokið'
     tried: 'Reynt'
@@ -448,6 +462,7 @@ is:
     student_not_found: "Einn eða fleiri nemendur fundust ekki."
     all_students_must_be_in_current_section: "Allir nemendurnir verða að vera skráðir í hópinn þinn."
     already_enrolled_in_new_section: "Þú getur ekki fært þessa nemendur vegna þess að þessi kennari er þegar með þá í öðrum hópi."
+    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "Lærðu í Kóðastúdíóinu"
     description: "Allir geta lært tölvunarfræði. Búðu til leiki, öpp og list með kóða."
@@ -455,6 +470,8 @@ is:
   gender:
     male: 'Karlkyns'
     female: 'Kvenkyns'
+    non_binary: 'Non-binary'
+    not_listed: 'Preferred term not listed'
     none: 'Kýs að svara ekki'
   user_type:
     student: 'nemandi'
@@ -569,7 +586,7 @@ is:
       cta: "Læra hvernig"
     hoc-encryption:
       title: "Einföld dulkóðun"
-      body: "Students will learn techniques to create and crack encrypted messages."
+      body: "Nemendur munu læra aðferðir til að búa til og þýða dulkóðuð skilaboð."
     weblab:
       title: "Vefsmiðja (beta)"
       body: "Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði."
@@ -654,7 +671,7 @@ is:
     correct_title: "Takk fyrir"
     correct_body: "Takk fyrir að senda inn svör."
     hide_survey_last_answer: "Þessi könnun er nafnlaus. Þú getur séð samanteknar niðurstöður á stjórnborði kennara. Athugaðu að niðurstöður sjást ekki nema a.m.k. fimm nemendur hafi svarað."
-    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
+    survey_submission_thankyou: "Kærar þakkir fyrir að senda inn þessa könnun! Allar upplýsingar um þig hafa verið fjarlægðar úr svörunum. Athugaðu að kennarinn mun samt geta séð hvernig allur bekkurinn svaraði en án þess að nöfn komi fram."
   level_group-submittable:
     wrong_title: "Takk fyrir"
     wrong_body: "Takk fyrir að senda inn svör."
@@ -702,7 +719,7 @@ is:
     sign_out: 'Viljir þú ekki gefa upp aldur getur þú <a href="%{url}">skráð þig út</a>.'
   terms_interstitial:
     title: "Nýjungar í þjónustuskilmálum og persónuverndarstefnu"
-    intro_desc: Frá og með 24. ágúst 2016 hafa gilt nýir þjónustuskilmálar og persónuverndarstefna hjá okkur, sbr. hér fyrir neðan. Stærsta breytingin er að við munum <i>ekki lengur geyma netföng nemenda sem skráðir eru í Kóðastúdíóið.</i> Fyrir okkur er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun nemenda þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit annarra breytinga í tölvupósti.
+    intro_desc: "Frá og með 24. ágúst 2016 hafa gilt nýir þjónustuskilmálar og persónuverndarstefna hjá okkur, sbr. hér fyrir neðan. Stærsta breytingin er að við munum <i>ekki lengur geyma netföng nemenda sem skráðir eru í Kóðastúdíóið.</i> Fyrir okkur er þetta stórmál og við vonum að þetta verði nýtt viðmið í persónuverndun nemenda þar sem tölvutækni er notuð við kennslu. Við höfum sent þér yfirlit annarra breytinga í tölvupósti."
     intro_instructions: "Þú þarft að samþykkja þessa nýju skilmála fyrir nemendur þína yngri en 13 ára til að þeir fái fullan aðgang að því allra nýjasta í Kóðastúdíóinu. Þegar aðgangur er skráður fyrir nemanda undir 13 ára aldri, verður þú beðin/n að staðfesta að skólinn hafi fengið samþykki forráðamanns fyrir því að safna megi persónulegum gögnum um nemandann til notkunar og hagsbóta fyrir skólann, þar á meðal í kennsluverkefnum eins og Kóðastúdíóinu."
     tos: "Skilmálar"
     privacy: "Persónuvernd"
@@ -718,25 +735,25 @@ is:
     message_with_suggestion: "Vinsamlegast staðfestu að eftirfarandi upplýsingar séu réttar, eða uppfærðu þær ef með þarf."
     save: "Vista"
   race_interstitial:
-    title: 'Ef vill: Hjálpaðu okkur að fylgjast með viðleitni okkar til að fá sem flesta hópa með í tölvunarfræði'
+    title: "Ef vill: Hjálpaðu okkur að fylgjast með viðleitni okkar til að fá sem flesta hópa með í tölvunarfræði"
     message: "Segðu okkur frá kynþætti þínum (merktu við allt sem á við)"
     races:
       - 
-        white: Hvít/ur
+        white: "Hvít/ur"
       - 
-        black: Svartur/svört eða afrísk-amerísk/ur
+        black: "Svartur/svört eða afrísk-amerísk/ur"
       - 
-        hispanic: Latnesk-amerísk/ur
+        hispanic: "Latnesk-amerísk/ur"
       - 
-        asian: Asísk/ur
+        asian: "Asísk/ur"
       - 
-        hawaiian: Hawaii frumbyggi eða af annarri Kyrrahafsþjóð
+        hawaiian: "Hawaii frumbyggi eða af annarri Kyrrahafsþjóð"
       - 
-        american_indian: Amerískur indíáni / Alaska frumbyggi
+        american_indian: "Amerískur indíáni / Alaska frumbyggi"
       - 
-        other: Annað
+        other: "Annað"
       - 
-        opt_out: Vil ekki gefa upp
+        opt_out: "Vil ekki gefa upp"
     submit: "Senda inn"
     decline: "Loka"
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
@@ -762,7 +779,7 @@ is:
     delete: "Eyða"
     import: "Flytja inn"
     share_link_import_bad_link_header: "Óþekktur tengill fyrir deilingu"
-    share_link_import_bad_link_body: 'Við gátum ekki flutt inn þennan tengil til að deila. Gættu þess að þú sért að nota tengil úr Minecraft: Umba þraut og að þú hafir afritað allan tengilinn.'
+    share_link_import_bad_link_body: "Við gátum ekki flutt inn þennan tengil til að deila. Gættu þess að þú sért að nota tengil úr Minecraft: Umba þraut og að þú hafir afritað allan tengilinn."
     share_link_import_error_header: "Eitthvað fór úrskeiðis."
     share_link_import_error_body: "Það kom upp vandamál við að flytja inn þennan tengil fyrir deilingu. Reyndu aftur."
     exit: "Til baka í námskeið"
@@ -846,7 +863,7 @@ is:
     content: 'Innihald'
     practice: 'Kennsluaðferðir'
     peer_review: 'Álit samnemenda'
-    ramp_up: 'Ramp-Up'
+    ramp_up: 'Efling'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: 'Aðalnámskeið'
@@ -867,6 +884,7 @@ is:
     csd5_2: 'Kafli 2: Lausn vandamála með gögn'
     csd6_1: 'Kafli 1: Úttak vélbúnaðar'
     csd6_2: 'Kafli 2: Inntak vélbúnaðar'
+    csd_survey: 'Post-Course Survey'
     csp1_1: 'Kafli 1: Framsetning og flutningur upplýsinga'
     csp1_2: 'Kafli 2: Að finna upp internetið'
     csp2_1: 'Kafli 1: Að umkóða og þjappa margbrotnar upplýsingar'
@@ -880,6 +898,11 @@ is:
     csp_ap_1: 'Kafli 1: AP - Tækniumhverfið'
     csp_ap_2: 'Kafli 2: AP - Skilningsverkefni'
     csp_ap_3: 'Kafli 3: AP - Sköpunarverkefni'
+    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp2_1_2018: 'Kafli 2 - Stafrænar upplýsingar'
+    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Kvaðningar um íhugun'
   external_links:
     disclaimer: Afsal ábyrgðar
@@ -984,3 +1007,14 @@ is:
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
   courses_category: 'Heil námskeið'
+  cookie_banner:
+    message: 'Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki" samþykkir þú vistun smygilda (cookies) á tölvu þinni eða tæki.'
+    more_information: "Sjá persónuverndarstefnu Code.org."
+    accept: 'Sammála'
+  gdpr_dialog:
+    heading: 'Samþykkir þú að nota vef sem er staðsettur í Bandaríkjunum?'
+    message: 'Gögn um notkun þína á þessum vef kunna að verða send til og geymd eða greind í Bandaríkjunum.'
+    link_intro: 'Nánari upplýsingar hér: '
+    privacy_policy: 'persónuverndarstefna'
+    logout: 'Útskráning'
+    yes: 'Já'

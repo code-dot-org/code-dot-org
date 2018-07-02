@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - 지역 신문, 지역 미디어, 지역 교육/공학 블로거들을 초대하세요. [프레스 키트](<%= hoc_uri('/resources/press-kit') %>)를 살펴보시면 됩니다.
 
 ## 2. During your event
@@ -39,7 +39,7 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 **이벤트:** 학교 전체 컴퓨터 과학 교육 주간 시작 모임
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **시간:** 수업일중. 아침-점심사이 대략 1시간.
 
