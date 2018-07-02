@@ -22,13 +22,12 @@ describe("Local Summer Workshop Daily Survey Results class", () => {
               'general': {
                 'q1': {text: 'Day 1 Matrix header', answer_type: 'none'},
                 'q2': {text: 'Day 1 Matrix...Matrix 1', answer_type: 'singleSelect', options: ['Poor', 'Fair', 'Good', 'Great', 'Excellent']},
-                'q3': {text: 'Day 1 Matrix...Matrix 2', answer_type: 'singleSelect', options: ['Poor', 'Fair', 'Good', 'Great', 'Excellent']},
-                'q4': {text: 'Scale 2', answer_type: 'scale', max_value: '5', options: ['1', '2', '3', '4', '5']},
+                'q3': {text: 'Scale 2', answer_type: 'scale', max_value: '5', options: ['1', '2', '3', '4', '5']},
                 'f1': {text: 'Day 1, Free Response 1', answer_type: 'text'},
-                'f2': {text: 'Day 1, Free Response 2', answer_type: 'text'}
               },
               'facilitator': {
-                'q1': {text: 'Day 1 Facilitator question', answer_type: 'text'}
+                'q1': {text: 'Day 1 Facilitator question 1', answer_type: 'text'},
+                'q2': {text: 'Day 1 Facilitator question 2', answer_type: 'text'}
               }
             }
         }}
@@ -46,10 +45,20 @@ describe("Local Summer Workshop Daily Survey Results class", () => {
           },
           'Day 1': {
             'general': {
-
+              'q1': {},
+              'q2': {1: 2, 4: 5},
+              'q3': {2: 3, 3: 3, 4: 1},
+              'f1': ['g', 'h', 'i']
             },
             'facilitator': {
-
+              'q1': {
+                1: ['j', 'k', 'l'],
+                2: ['m', 'n', 'o']
+              },
+              'q2': {
+                1: ['p', 'q', 'r'],
+                2: ['s', 't', 'u']
+              }
             },
             response_count: 12
           }
@@ -62,6 +71,16 @@ describe("Local Summer Workshop Daily Survey Results class", () => {
       />
     );
     expect(results.find('Tab')).to.have.length(2);
-    //expect(results.find('Tab').at(0).find('SingleChoiceResponse')).to.have.length(2);
+    let firstTab = results.find('Tab').first();
+    let lastTab = results.find('Tab').last();
+
+    expect(firstTab.find('SingleChoiceResponses')).to.have.length(3);
+    expect(firstTab.find('TextResponses')).to.have.length(2);
+
+    expect(lastTab.find('SingleChoiceResponses')).to.have.length(2);
+    expect(lastTab.find('TextResponses')).to.have.length(3);
+
+    expect(firstTab.find('h3').map((x) => x.text())).to.deep.equal(['General Questions']);
+    expect(lastTab.find('h3').map((x) => x.text())).to.deep.equal(['General Questions', 'Facilitator Specific Questions']);
   });
 });
