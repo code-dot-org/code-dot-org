@@ -7,7 +7,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializer < ActiveModel::Serializer
     super(attrs).tap do |data|
       object.workshop.sessions.each_with_index do |session, i|
         data["session_#{i + 1}_date".to_sym] = session.formatted_date
-        data["session_#{i + 1}_attendance".to_sym] = session.attendances.exists?(teacher_id: object.resolve_user.try(:id))
+        data["session_#{i + 1}_attendance".to_sym] = session.attendances.where(pd_enrollment_id: object.id).exists?
       end
     end
   end

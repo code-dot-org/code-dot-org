@@ -5,28 +5,28 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# דוגמה להודעה לעיתונות לנבחרי ציבור
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+לפרסום מיידי   
+** [תאריך] **   
+קשר: ** פרטי קשר **  
   
 
 
 <strong>
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  המושל/המושלת/ח"כ/נציג הציבור/נציגת הציבור/ראש העיר/ראשת העיר/חבר המועצה/חברת המועצה [שם] [השתתף/פה במיזם "שעה של קוד" עם תלמידים מקומיים] </strong> <br /> חברי הקהילה התאחדו כדי להעלות את המודעות לחשיבות החינוך בתחום מדעי המחשב ולקחו חלק בשבוע החינוך בתחום מדעי המחשב
 </center>
 
 <br /> <br /></p> 
 
 <p>
-  <strong>DATE</strong> - [<strong>INSERT NAME</strong>] joined the principal and faculty members of [<strong>INSERT NAME OF SCHOOL</strong>], business leaders and local families today for [<strong>NAME OF EVENT</strong>] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+  <strong> תאריך </strong> - <strong> [שם] </strong> וחברי הקהילה הצטרפו היום למנהל/ת וסגל המורים של <strong> [שם בית הספר] </strong> , אנשי עסקים מובילים ומשפחות מקומיות ל <strong> [שם האירוע] </strong> כדי לקחת חלק ב"שעה של קוד" במסגרת שבוע החינוך בתחום מדעי המחשב. [שם] וחברי הקהילה היו בין עשרות מיליוני האנשים ברחבי העולם שלקחו חלק באירוע הלמידה הגדול ביותר בתולדות האנושות.
 </p>
 
 <p>
-  [<strong>INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:</strong>]<br /> “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+  <strong> [פרטים על האירוע, בשפה תיאורית וניתנת לכימות]. לדוגמה: </strong> <br /> "בית הספר היסודי ע"ש שמעון פרס קיים אירוע "שעה של קוד" לכל תלמידי בית הספר כדי לחשוף את תלמידיו למדעי המחשב. למעלה מ-700 תלמידים מכל הכיתות השתתפו לפחות ב"שעה של קוד" אחת. עשרות הורים ומתנדבים מקרב הקהילה עזרו ביום זה והציגו בפני הילדים את החשיבות של מדעי המחשב חשובים בחייהם של התלמידים."
 </p>
 
 <p>

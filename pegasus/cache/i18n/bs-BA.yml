@@ -1,4 +1,5 @@
-"bs-BA":
+---
+bs-BA:
   hour_of_code: Sat Kodiranja
   hello: Pozdrav svijete
   'yes': Da
@@ -55,7 +56,7 @@
   hoc2014_host: Budite domaćin
   hoc2014_everyone: Svi
   hoc2014_support: Pružite podršku &#x25BE;
-  hoc2014_whatishoc: "Šta je to Sat Kodiranja?"
+  hoc2014_whatishoc: Šta je to Sat Kodiranja?
   csedweek_map_header: "# CSEdWeek / Sat Kodiranja događaji širom svijeta"
   csedweek_map_signup: Prijavi svoj događaj
   csedweek_map_search_placeholder: Potraži Sat Kodiranja događaje
@@ -89,22 +90,22 @@
   n_participants: "# učesnika"
   go: Kreni
   thank_you_: Hvala!
-  congratulations: "Čestitamo!"
-  congratulations_on_completing_hoc: "Čestitamo na završetku jednog Sata Kodiranja"
+  congratulations: Čestitamo!
+  congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
   congratulations_volunteer: 'Čestitamo: Sada kada si probao/la Sat Kodiranja, <a
     href="https://code.org/volunteer"> prijavi se kao volonter u učionici </a> i pomozi
     učenicima da nauče Sat Kodiranja!'
-  congratulations_on_completing_course1: "Čestitamo na završetku Kursa 1"
-  congratulations_on_completing_course2: "Čestitamo na završetku Kursa 2"
-  congratulations_on_completing_course3: "Čestitamo na završetku Kursa 3"
-  congratulations_on_completing_course4: "Čestitamo na završetku Kursa 4"
+  congratulations_on_completing_course1: Čestitamo na završetku Kursa 1
+  congratulations_on_completing_course2: Čestitamo na završetku Kursa 2
+  congratulations_on_completing_course3: Čestitamo na završetku Kursa 3
+  congratulations_on_completing_course4: Čestitamo na završetku Kursa 4
   congratulations_on_completing_coursea: Congratulations on completing Course A
   congratulations_on_completing_courseb: Congratulations on completing Course B
   congratulations_on_completing_coursec: Congratulations on completing Course C
   congratulations_on_completing_coursed: Congratulations on completing Course D
   congratulations_on_completing_coursee: Congratulations on completing Course E
   congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: "Čestitamo na završetku Ubrzanog Kursa"
+  congratulations_on_completing_accelerated: Čestitamo na završetku Ubrzanog Kursa
   congrats_next_tutorials_title: Probaj sada ove tutorijale
   congrats_next_tutorials_desc: Probaj ove kraće, tutorijale od 1 sat ili probaj <a
     href="%{current_path}/next">partnerski tutorijal</a>.
@@ -340,7 +341,7 @@
   students_and_lines: "%{students} učenika je učestvovalo u Hour of Code i napisalo
     %{lines} linija koda."
   start_hoc: Započni sa Hour of Code sada
-  contact_form_topic_press: "Štampa/mediji (intervju ili govor)"
+  contact_form_topic_press: Štampa/mediji (intervju ili govor)
   stats_nina: '"Svaki dan je imao isti rezultat&mdash; 100%-tni angažman." - Nina
     Nichols Peery, Nastavnik'
   stats_student: '"Znao sam da ovo je <b>životna</b> prilika."-Mariana Alzate, učenik
@@ -486,12 +487,15 @@
   homepage_header_donors: Code.org zahvaljuje svojim pristalicama
   homepage_donors_seall: Pogledaj sve
   homepage_donors_donate: Doniraj
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_below_hero_announcement_link_text: Nauči više
   contact_form_topic_student: Ja sam učenik
   contact_form_topic_parent: Ja sam roditelj
   contact_form_topic_teacher: Ja sam učitelj/edukator
   contact_form_topic_outside_us: Ja sam izvan SAD-a
   contact_form_topic_contribution: Dobrotvorni doprinos
-  contact_form_topic_partner: "Želim biti partner"
+  contact_form_topic_partner: Želim biti partner
   contact_form_topic_other: Ostalo
   contact_form_label_topic: Tema
   contact_form_label_email: Vaša e-mail adresa
@@ -605,8 +609,8 @@
     Write code to journey through Minecraft biomes.
   sports_page_title: Sat Kodiranja - Sportovi
   sports_og_title: Daj sve od sebe. Svako može naučiti.
-  sports_og_description: "Šampioni i dobitnici zlatnih medalja vas ohrabruju da probate
-    Sat Kodiranja. Isprogramiraj vlastite sportske igre."
+  sports_og_description: Šampioni i dobitnici zlatnih medalja vas ohrabruju da probate
+    Sat Kodiranja. Isprogramiraj vlastite sportske igre.
   sports_title: Code your own sports game
   sports_watch_video: Pogledaj video
   sports_video_title: Daj sve od sebe. Svako može naučiti.
@@ -658,8 +662,10 @@
   video_title_real_madrid: Sat Kodiranja sa Real Madrid
   video_title_marco_belinelli: Sat Kodiranja sa Marco Belinelli
   video_title_chris_bosh: Chris Bosh o Računarstvu
+  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 min
   video_2min: 2 min
+  video_3min: 3 min
   video_5min: 5 min
   speak_another_language: Da li govoriš neki drugi jezik?
   help_translate: Pomozi nam da prevedemo.
@@ -724,6 +730,12 @@
   volunteer_engineer_submission_field_email_desc: Tvoja e-mail adresa nikada neće
     biti podijeljena, ali ćemo ti slati zahtjeve od nastavnika.
   volunteer_engineer_submission_field_email_placeholder: E-mail adresa
+  volunteer_engineer_submission_field_email_preference: Can we email you about updates
+    to our courses, volunteer opportunities, or other computer science news?
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
+  volunteer_engineer_submission_field_email_preference_yes: Da
+  volunteer_engineer_submission_field_email_preference_no: Ne
   volunteer_engineer_submission_final_paragraph: Biti ćeš dodat/a na mapu da bi lokalni
     nastavnici mogli da te kontaktiraju za Sat Kodiranja ili druge volonterske mogućnosti.
     Tvoj e-mail i adresa NIKADA neće biti podijeljeni od naše strane. Ali ostale informacije
@@ -765,10 +777,10 @@
   volunteer_engineer_submission_num_volunteers_10: 10 volontera
   volunteer_engineer_submission_num_volunteers_25: 25 volontera
   volunteer_engineer_submission_num_volunteers_50: 50 volontera
-  volunteer_engineer_submission_type_task_onsite: "Želim da posjetiš moju učionicu
-    zbog tehničke pomoći i inspiracije"
-  volunteer_engineer_submission_type_task_remote: "Želim da putem Skype-a kažeš nekoliko
-    riječi inspiracije djeci u mojoj učionici"
+  volunteer_engineer_submission_type_task_onsite: Želim da posjetiš moju učionicu
+    zbog tehničke pomoći i inspiracije
+  volunteer_engineer_submission_type_task_remote: Želim da putem Skype-a kažeš nekoliko
+    riječi inspiracije djeci u mojoj učionici
   volunteer_engineer_submission_type_task_mentor: Tražim mentora koji bi me pripremio/la
     za kodiranje sa mojim studentima
   petition_age: Starost
@@ -803,7 +815,7 @@
   dashboard_landing_print_progress: Napredak printanja
   dashboard_landing_available_title: Dostupni kursevi
   dashboard_landing_available_courses: Ovo su kursevi trenutno dostupni tvojim učenicima.
-  dashboard_landing_more_tutorials: "Želiš li vidjeti još više tutorijala?"
+  dashboard_landing_more_tutorials: Želiš li vidjeti još više tutorijala?
   dashboard_landing_more_tutorials_desc: Imamo još tutorijala <a href="/learn/beyond">
     naših partnera. </a> Nauči programirati sa robotima, napravi web stranice, napravi
     vlastitu aplikaciju ili istraži druge jezike kao C++, Ruby ili Python!
@@ -849,18 +861,12 @@
   dashboard_course_csp_desc: Code.org je dizajnirao rigorozne, zanimljive i pristupačne
     kurseve koji istražuju fundamentalne ideje računarstva.
   dashboard_landing_loading: Učitavam...
-  dashboard_action_edit: Uredi
-  dashboard_action_save: Snimi
-  dashboard_action_save_all: Snimi sve
   dashboard_action_cancel: Poništi
   dashboard_action_delete: Izbriši
   dashboard_action_delete_yes: Da
   dashboard_action_delete_no: Ne
   dashboard_action_confirm: Izbrisati?
-  dashboard_action_remove: Ukloni
-  dashboard_action_remove_confirm: Ukloniti?
   dashboard_action_done: Završeno
-  dashboard_action_required: neophodno
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -875,7 +881,7 @@
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_percent: Postotak
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
@@ -922,7 +928,7 @@
   dashboard_sections_table_pairing_allowed: Programiranje u Paru
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Učenici
-  dashboard_sections_table_code: "Šifra odjeljenja"
+  dashboard_sections_table_code: Šifra odjeljenja
   dashboard_sections_name: Ime Odjeljenja
   dashboard_sections_choose_secret: Ako želite napraviti račune za svoje učenike,
     odaberite tajnu<b>riječ</b> ili <b>sliku</b> za to odjeljenje.
@@ -944,7 +950,7 @@
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Drugi učitelj
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
@@ -968,8 +974,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: Dodaj učenika
-  dashboard_students_add_students: Dodaj više učenika
   dashboard_students_add_multiple: 'Upiši ili zalijepi imena svojih učenika, jedno
     ime za svaki red:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -977,23 +981,12 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: Napravili ste novo odjeljenje! Sad dodajte svoje
     učenike korištenjem gornjih tipki <b>Dodaj učenika</b> i <b>Dodaj više učenika</b>.
-  dashboard_students_placeholder_name: Ime učenika
   dashboard_students_name: Ime
   dashboard_students_progress: Napredak
-  dashboard_students_age: Starost
-  dashboard_students_gender: Spol
   dashboard_students_male: Muško
-  dashboard_students_female: "Žensko"
-  dashboard_students_secret: Tajna
-  dashboard_students_password: "Šifra"
-  dashboard_students_username: 'Korisničko ime: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
+  dashboard_students_female: Žensko
   dashboard_students_completed_levels: Završeni Nivoi
   dashboard_students_total_lines: Linije Koda
-  dashboard_students_show_secret: Prikaži tajnu
-  dashboard_students_auto_generated: Auto-generisani
-  dashboard_students_reset_secret: Resetuj tajnu
-  dashboard_students_reset_password: Resetuj šifru
   dashboard_students_share_section: 'Podijeli stranicu za prijavu u ovo odjeljenje
     svojim učenicima:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1036,8 +1029,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Nastavni plan
   dashboard_curriculum_overview: Pregled nastavnog plana razredne nastave
   dashboard_overview: Pregled
@@ -1055,12 +1051,13 @@
   dashboard_curriculum_csins: 'Ralunarstvo u Nauci:'
   dashboard_curriculum_csp: 'AP® Principi Računarstva:'
   dashboard_curriculum_ecs: 'Istraživajući Računarstvo:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: predškolski
   dashboard_grade_other: Ostalo
   dashboard_login_word: Riječ
   dashboard_login_picture: Slika
   dashboard_login_none: Email
-  dashboard_new_password: nova šifra
   dashboard_stage: Nivo
   dashboard_puzzle: Zadatak
   dashboard_question: Pitanje
@@ -1069,7 +1066,7 @@
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Ispravno
-  dashboard_correctness_incorrect: Incorrect
+  dashboard_correctness_incorrect: Netačno
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
   dashboard_status: Status
@@ -1094,8 +1091,8 @@
   dashboard_sections_password_account_creation: Tekstna šifra koju je napravio učenik
   dashboard_sections_login_type_explanation: Ova tabela objašnjava koji od načina
     prijave <b>slika, riječ ili e-mail</b> želite odabrati za odjeljenje.
-  dashboard_faq: "Često Postavljana Pitanja"
-  dashboard_faq_k5: "Česta pitanja za mlađi uzrast (do petog razreda)"
+  dashboard_faq: Često Postavljana Pitanja
+  dashboard_faq_k5: Česta pitanja za mlađi uzrast (do petog razreda)
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. Decembra!
   code_sign_up: Prijavite se za sudjelovanje u Sedmici Edukacije o Računarstvu
   host_an_hour: Host an hour
@@ -1151,7 +1148,7 @@
   carousel_heading_webpages: Nauči praviti web stranice
   carousel_heading_robots: Nauči programirati robote
   carousel_heading_ide: Platforme popularne među nastavnicima
-  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_desktop: Naučite da kodirate na računaru
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
@@ -1164,8 +1161,8 @@
     here.</a>
   how_to_teach_hoc: Kako Predavati Sat Kodiranja
   more_resources_educators: Dodatni resursi za nastavnike i edukatore
-  beyond_submission: "Želiš li ponuditi tutorijal za Više od Sata? Pregledaj kriterijume
-    i formu za podnošenje tutorijala."
+  beyond_submission: Želiš li ponuditi tutorijal za Više od Sata? Pregledaj kriterijume
+    i formu za podnošenje tutorijala.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
   participants: učesnici
@@ -1234,8 +1231,8 @@
   course4_name: Kurs 4
   coursea-draft_name: Kurs A
   coursea_name: Kurs A
-  courseb-draft_name: Course B
-  courseb_name: Course B
+  courseb-draft_name: Kurs B
+  courseb_name: Kurs B
   coursec-draft_name: Course C
   coursec_name: Course C
   coursed-draft_name: Course D
@@ -1244,9 +1241,25 @@
   coursee_name: Course E
   coursef-draft_name: Course F
   coursef_name: Course F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: Ubrzani Kurs
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: 'Unit 3: Programming'
@@ -1259,6 +1272,34 @@
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
+  csd1-2017_name: 'Unit 1: Problem Solving'
+  csd2-2017_name: 'Unit 2: Web Development'
+  csd3-2017_name: 'Unit 3: Animation and Games'
+  csd4-2017_name: 'Unit 4: The Design Process'
+  csd5-2017_name: 'Unit 5: Data and Society'
+  csd6-2017_name: 'Unit 6: Physical Computing'
+  csd1-2018_name: 'Unit 1: Problem Solving'
+  csd2-2018_name: 'Unit 2: Web Development'
+  csd3-2018_name: 'Unit 3: Animation and Games'
+  csd4-2018_name: 'Unit 4: The Design Process'
+  csd5-2018_name: 'Unit 5: Data and Society'
+  csd6-2018_name: 'Unit 6: Physical Computing'
+  csp1-2017_name: 'Jedinica 1: internet'
+  csp2-2017_name: 'Unit 2: Digital Information'
+  csp3-2017_name: 'Unit 3: Algorithms and Programming'
+  csp4-2017_name: 'Unit 4: Big Data and Privacy'
+  csp5-2017_name: 'Unit 5: Building Apps'
+  csp-explore-2017_name: 'AP: Explore PT Prep'
+  csp-create-2017_name: 'AP: Create PT Prep'
+  csppostap-2017_name: 'Post AP: Databases in Apps'
+  csp1-2018_name: 'Jedinica 1: internet'
+  csp2-2018_name: 'Unit 2: Digital Information'
+  csp3-2018_name: 'Unit 3: Algorithms and Programming'
+  csp4-2018_name: 'Unit 4: Big Data and Privacy'
+  csp5-2018_name: 'Unit 5: Building Apps'
+  csp-explore-2018_name: 'AP: Explore PT Prep'
+  csp-create-2018_name: 'AP: Create PT Prep'
+  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'Jedinica 1: internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1269,6 +1310,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
+  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Full Test - 50 questions
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1296,14 +1338,19 @@
   math_category_name: Matematika
   hoc_category_name: Sat Kodiranja
   csf_category_name: CS Fundamentals
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
+  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
+  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: Laboratorij za Aplikacije
+  gamelab_name: Game Lab
   basketball_name: Napravi igru košarke
   sports_name: Code your own sports game
   applab_gradelevel: Ages 13+
@@ -1368,7 +1415,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Razred 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: Dob 8-12
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Dob 10+ (nakon Kursa 3)
   codeorg_platformtext: Savremeni browser-i, mobiteli, tableti
@@ -2022,23 +2069,23 @@
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
+  header_educate_elementary: Osnovna škola
   header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_high: Srednja škola
   header_educate_hoc: Sat Kodiranja
   header_educate_partner: Partner sa nama
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspiriraj učenika
   header_educate_community: Online Community
   header_educate_tools: Tools and Videos
-  header_about_us: About Us
+  header_about_us: O nama
   header_about_leadership: Leadership
   header_about_donors: Donatori
   header_about_partners: Partners
   header_about_team: Full Team
   header_about_news: Newsroom
   header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
+  header_about_jobs: Poslovi
   header_about_contact: Contact Us
   header_about_faqs: FAQs
   header_learn: Learn
@@ -2050,9 +2097,10 @@
   header_help_support: 'Pomoć i podrška '
   header_report_bug: Report bug
   header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_documentation: Dokumentacija
   csp_name: CS Principles
   csd_name: CS Discoveries
+  csd_2018_name: CS Discoveries
   full_course_category_name: Full Courses
   user_header_label: Zdravo, %{username}
   user_header_settings: Moj račun
@@ -2113,9 +2161,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

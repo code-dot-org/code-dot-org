@@ -54,7 +54,7 @@
           - contained_level = @level.contained_levels.first
           -# if we have a student user, show their level. otherwise show teacher's
           - user = @user || current_user
-          - if user.last_attempt(contained_level).try(:level_source).try(:data)
+          - if user.last_attempt(contained_level, @script).try(:level_source).try(:data)
             - contained_user_level = user.user_level_for(@script_level, contained_level)
             .level
               %button.btn.btn-info#clear-response{"data-user-level-url" => url_for(contained_user_level)}

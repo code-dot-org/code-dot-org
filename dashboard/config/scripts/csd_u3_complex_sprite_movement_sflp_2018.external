@@ -1,0 +1,10 @@
+name 'CSD U3 complex sprite movement SFLP_2018'
+display_name 'Lesson Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# Overview
+
+The class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement, such as simulating gravity, making a sprite jump, and allowing a sprite to float left or right. In the final levels the class combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects coins. 
+
+
+MARKDOWN

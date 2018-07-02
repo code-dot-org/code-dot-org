@@ -1,0 +1,22 @@
+---
+driver:
+  name: dokken
+  chef_version: 12.7.2
+transport:
+  name: dokken
+provisioner:
+  name: dokken
+verifier:
+  root_path: '/opt/verifier'
+  sudo: false
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      image: dokken/ubuntu-14.04
+      pid_one_command: /sbin/init
+    run_list:
+      - recipe[apt]
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-i18n]

@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-03T15:25:54.000Z",
+  "level_num": "custom",
+  "user_id": 532,
+  "properties": {
+    "markdown_instructions": "A _pseudocode_ program is started below that asks the user for input and stores the value in a variable.  Continue writing pseudocode to accomplish this task: \r\n\r\nIf the hour is within the school day (8 to 15) then display  “Nice to see you!”, Otherwise, display “It’s time to go home!\r\n\r\n    DISPLAY (“Enter the hour of day (0-23)”)\r\n    hour <- INPUT ()",
+    "encrypted_solution": "Qy4eU/4yFuIXm5DSRMsN+I00FKZayvApRDpWpq5AulJUlB53HV78D4pX6/qq\n68Zi06VKb5ZgFI31WETsuJ7RhXnnvG31zlhFvW0CXB8fd23ZcX1O+0ujHZ2G\nsO8z17EjJ3OHTK9j3gqT2fY4VhMQfJWMIoQzRFt59bsnDHDH84TNyov1yQT2\nKcnxTzfb9rktr+P6zPaP5xbEhJ6NTBtt0Lcvte5GCi1Pup3TaIFY9f0u53Fb\nZpzr6eRPQTdqrMYWjw2nqsNmTCRVwee41KiEN0HERx6zyWgk6whR6GdebQRN\neNN1W2kibc9KBQwVTcsQHpJQPCP20Ln6MjOAYxQXw8xss5S5Iqi1qpQZLIVX\ncLOb84K3A1ZW2tl1CQJ7BD6XAWiexqJ11XHK5KVIaBFzmfgVPIY0H081MNOa\nbqV88BX97k8dMwr/1Bd4oSvAItaW70Yl3BQOlGJNjF9ynfDGsfqWROpf42a2\nA8KoIRDd9DbqCQxU78rIrkqc/pbZqVprYenNhlII/8vsxzdXVb4z7IiuRrzS\nlJcmhZV7QP0RGQlrNjnHxHAitIhlcsyjYhvi+60Kw/xwk/u6pJI75MSzAIKH\nUnwWdBzZHgCvsAfpvHUf88pV8zk9eKCvfD/wnH9Oxj7mzh8gUKo/+jJrqAZx\n6Lye4K/7sbDVJlzGNgJTprGFNpN7vdxLonnaFgArkfPLs0mNfBb83fOmTOYU\nMnYcIy3b7RWd+ot7zKL7SSUUP0q6TlANHSqvwFmt17FKu1KhGF6lQ+dOvnTB\nTMG6hlm2tTLYv3TqcMH5stlg/MRiFhZWC3h+jLj/PwR38YZtiMcty460qK0W\nCvM5K841fbAkFte1zfw7Ep1g4740U6GJLl29kk0AqTbmQShW09PX24csk7Ag\n3sO0WXCRlWU3ee7dPr/MihhmVxiNrUI7+fOKndHFHMc0bD4v8ICRSkS6z9vP\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "parent_level_id": 6675,
+    "name_suffix": "_exam_prep"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

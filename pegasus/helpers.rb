@@ -108,6 +108,10 @@ def language_dir_class(locale=request.locale)
   end
 end
 
+def curriculum_url(resource)
+  CDO.curriculum_url(request.locale, resource)
+end
+
 def verify_signature(token)
   request.body.rewind
   payload_body = request.body.read

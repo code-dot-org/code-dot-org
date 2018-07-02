@@ -1,0 +1,81 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2018-04-11T16:43:55.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "instructions_important": "true",
+    "goal": "{\"startX\":100,\"startY\":0}",
+    "scale": "{\"snapRadius\":2}",
+    "app_specific_fail_error": "Your code looks good - it will flap with each click. But you need to click many times to flap to the target.",
+    "success_condition": "function successCondition() {\r\n\t        return Flappy.avatarY <= 40;\r\n\t      }",
+    "failure_condition": "function failureCondition() {\r\n\t        return Flappy.avatarY > Flappy.MAZE_HEIGHT;\r\n\t      }",
+    "video_key": "flappy_intro",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "default_flap": "NORMAL",
+    "free_play": "false",
+    "ground": "false",
+    "obstacles": "false",
+    "score": "false",
+    "shareable": "false",
+    "authored_hints": "[]",
+    "parent_level_id": 9576,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 02:21:03 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions_important\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-27 18:43:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 18:47:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 19:25:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:53:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:55:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:00:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:59:43 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="flappy_setSpeed">
+              <title name="VALUE">Flappy.LevelSpeed.NORMAL</title>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideGround" deletable="false">
+          <next>
+            <block type="flappy_endGame"/>
+          </next>
+        </block>
+        <block type="flappy_whenClick" deletable="false">
+          <next>
+            <block type="flappy_flap_height">
+              <title name="VALUE">Flappy.FlapHeight.NORMAL</title>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideObstacle" deletable="false">
+          <next>
+            <block type="flappy_endGame"/>
+          </next>
+        </block>
+        <block type="flappy_whenEnterObstacle" deletable="false"/>
+      </xml>
+    </start_blocks>
+  </blocks>
+</Flappy>

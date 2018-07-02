@@ -8,6 +8,8 @@ module Pd::Application
         return head :not_found
       end
 
+      view_options(answerdash: true)
+
       return render :logged_out unless current_user
       return render :not_teacher unless current_user.teacher?
 

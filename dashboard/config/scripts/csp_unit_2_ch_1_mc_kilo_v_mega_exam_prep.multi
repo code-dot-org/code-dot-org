@@ -1,0 +1,8 @@
+name 'CSP Unit 2 Ch 1 MC kilo v mega_exam_prep'
+title 'How much bigger?'
+description ' '
+question 'Approximately how much bigger (how many more bytes) is a megabyte than a kilobyte?'
+right '1,000 times bigger'
+wrong '100,000 times bigger'
+wrong '1,000,000 times bigger'
+wrong '1,000,000,000 times bigger'

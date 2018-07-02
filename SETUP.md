@@ -10,12 +10,12 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    - When done, check for correct versions of these dependencies:
 
      ```
-     ruby --version  # --> ruby 2.2.3
+     ruby --version  # --> ruby 2.5.0
      node --version  # --> v6.9.0
      npm --version   # --> 3.10.8
-     yarn -V         # --> 0.23.2
+     yarn --version  # --> 1.6.0
      ```
-1. `git clone https://github.com/code-dot-org/code-dot-org.git`
+1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
 1. `gem install bundler`
 1. `rbenv rehash`
 1. `cd code-dot-org`
@@ -41,9 +41,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. Run `rbenv init`
     1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
     1. Pick up those changes: `source ~/.bash_profile`
-1. Install Ruby 2.2.3
-    1. `rbenv install 2.2.3`
-    1. Set the global version of Ruby: `rbenv global 2.2.3`
+1. Install Ruby 2.5.0
+    1. `rbenv install 2.5.0`
+    1. Set the global version of Ruby: `rbenv global 2.5.0`
     1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
 1. Set up [nvm](https://github.com/creationix/nvm)
     1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
@@ -58,9 +58,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node, npm, and yarn
     1. `nvm install 6.9.0 && nvm alias default 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
-    1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
+    1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0`
     1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
-1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
+1. (El Capitan only) Ensure that openssl is linked: `brew link --force openssl`
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
         ```
@@ -74,19 +74,19 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv ruby-build npm ruby2.3-dev`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv ruby-build npm ruby2.5-dev`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. Install Node and Nodejs
     1. Type `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
     1. And then `sudo apt-get install -y nodejs`
-1. Install Ruby 2.2.3 with rbenv
-     1. `rbenv install 2.2.3`
-     1. `rbenv global 2.2.3`
+1. Install Ruby 2.5.0 with rbenv
+     1. `rbenv install 2.5.0`
+     1. `rbenv global 2.5.0`
      1. `rbenv rehash`
 1. Install yarn
     1. First, type `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
     1. Then `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. And lastly, `sudo apt-get update && sudo apt-get install yarn=0.23.2-1`
+    1. And lastly, `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
    1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. Read the following notes, then go back up to the overview and run the commands there. 
@@ -101,8 +101,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 * Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
-  2. Memory Settings for the VM should be 2 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
-  3. If your VM is slow, try increasing the number of processors to 4 and increasing the memory settings up to 8 GB. 
+  2. Memory Settings for the VM should be 8 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
   1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
   1. `cd code-dot-org`
@@ -152,5 +151,11 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
 - `gem install rmagick -v 2.15.4`
+
+### Recomended hardware
+While it's possible to run the server locally without these, we've found the following hardware specifications to be best for fast development.
+- Memory: minimum of 8GB RAM for `dashboard-server` and `yarn`
+- Storage: The repository takes up 16GB
+
 
 [ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso

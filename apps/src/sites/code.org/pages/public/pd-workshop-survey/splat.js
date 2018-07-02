@@ -4,9 +4,7 @@ import ReactDOM from 'react-dom';
 import VariableFormGroup from '@cdo/apps/code-studio/pd/workshop_survey/VariableFormGroup';
 
 $(document).ready(function () {
-  $('#pd-workshop-survey-form').find("select").selectize({
-    plugins: ['fast_click']
-  });
+  $('#pd-workshop-survey-form').find("select").selectize();
 
   $('#pd-workshop-survey-form').submit(function (event) {
     PdWorkshopSurveyFormSubmit(event);

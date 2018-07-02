@@ -54,7 +54,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Upload your own image\r\n\r\nSo the image you uploaded probably was not the size you wanted was it? You can fix that!  There is a property for sprites called `scale`.  **Scale controls the width and the height of the sprite at once.** Using scale is better than  using width and height for images because...\r\n1. It's one property instead of two.\r\n2. You keep the image ratio and it doesn't distort it.\r\n\r\n**To make the image smaller you want to use a scale less than 1. To make the image bigger you want to use a number greater than 1. A scale of 1 would keep it the same.**\r\n\r\n# Do This\r\n\r\n* Resize your kite using `scale` to better fit the picture.",

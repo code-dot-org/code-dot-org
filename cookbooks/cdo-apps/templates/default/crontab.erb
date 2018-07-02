@@ -53,10 +53,9 @@
       cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
-      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'fetch_external_resources'), notify:'dev+crontab@code.org'
       cronjob at:'30 16,17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
-      cronjob at:'0 * * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
-      cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'start_broken_link_checker'), notify:'dev+crontab@code.org'
+      cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
     end
 
@@ -67,36 +66,38 @@
 
     if node.chef_environment == 'test' && node.name == 'test' # 'real' test only
       # This should be run shortly after the commit_content job run on levelbuilder.
-      cronjob at:'20 23 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
+      cronjob at:'20 22 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
       cronjob at:'*/2 * * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'snapshot')
     end
 
     if node.chef_environment == 'levelbuilder'
-      cronjob at:'0 20 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
-      cronjob at:'18 23 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'18 22 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       # This should be run shortly after the commit_content job, running on both levelbuilder and
       # staging.
-      cronjob at:'5 20 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
+      cronjob at:'5 19 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
     end
 
     if node.chef_environment == 'production' # production daemon
       cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
-      cronjob at:'5 6 * * *', do:deploy_dir('bin', 'cron', 'send_workshop_reminder_emails')
       cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'* 14 * * 1', do:dashboard_dir('bin','scheduled_pd_application_emails')
       cronjob at:'10 */12 * * *', do:dashboard_dir('bin','refresh_pd_workshop_material_orders')
+      cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'index_users_in_solr')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
-      cronjob at:'12 3 * * *', do:deploy_dir('bin', 'cron', 'update_pledge_map')
       cronjob at:'19 4 * * *', do:deploy_dir('bin', 'cron', 'update_census_map')
+      cronjob at:'0 9 * * 1-5', do:deploy_dir('bin', 'cron', 'check_for_census_inaccuracy_reports')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'5 16 * * *', do:deploy_dir('bin', 'cron', 'calculate_workshop_survey_results')
       cronjob at:'10 5 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_s3')
       cronjob at:'00 17 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
+      cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'regional_partner_reporting')
+      cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')
@@ -114,7 +115,6 @@
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
-      cronjob at:'55 8 * * *', do:deploy_dir('bin', 'cron', 'ops_data_pull')
       cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
     end
   end

@@ -10,7 +10,6 @@
       "ellipse": null,
       "declareAssign_x": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "var xPosition = 50;\r\n\r\nellipse(xPosition, 350, 100, 100);",

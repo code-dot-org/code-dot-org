@@ -3,9 +3,13 @@ require 'test_helper'
 class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestCase
   setup do
     @organizer = create :workshop_organizer
+    @program_manager = create :program_manager
     @facilitator = create :facilitator
 
-    @workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator]
+    @organizer_workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator]
+    @organizer_workshop_enrollment = create :pd_enrollment, workshop: @organizer_workshop
+
+    @workshop = create :pd_workshop, organizer: @program_manager, facilitators: [@facilitator]
     @enrollment = create :pd_enrollment, workshop: @workshop
 
     @unrelated_workshop = create :pd_workshop
@@ -35,8 +39,25 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal @unrelated_enrollment.email, response_json[0]['email']
   end
 
-  test 'workshop organizers can see enrollemnts in their workshops' do
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'workshop organizers can see enrollments in their workshops' do
     sign_in @organizer
+    get :index, params: {workshop_id: @organizer_workshop.id}
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal 1, response_json.length
+    assert_equal @organizer_workshop_enrollment.email, response_json[0]['email']
+  end
+
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'workshop organizers cannot see enrollments in workshops they are not organizing' do
+    sign_in @organizer
+    get :index, params: {workshop_id: @unrelated_workshop.id}
+    assert_response :forbidden
+  end
+
+  test 'program managers can see enrollments in their workshops' do
+    sign_in @program_manager
     get :index, params: {workshop_id: @workshop.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
@@ -44,8 +65,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal @enrollment.email, response_json[0]['email']
   end
 
-  test 'workshop organizers cannot see enrollments in workshops they are not organizing' do
-    sign_in @organizer
+  test 'program managers cannot see enrollments in workshops they are not organizing' do
+    sign_in @program_manager
     get :index, params: {workshop_id: @unrelated_workshop.id}
     assert_response :forbidden
   end
@@ -83,16 +104,36 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     refute Pd::Enrollment.exists?(@unrelated_enrollment.id)
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers can delete enrollments from their own workshops' do
     sign_in @organizer
+
+    delete :destroy, params: {workshop_id: @organizer_workshop.id, id: @organizer_workshop_enrollment.id}
+    assert_response :success
+    refute Pd::Enrollment.exists?(@organizer_workshop_enrollment.id)
+  end
+
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'organizers cannot delete enrollments from workshops they are not organizing' do
+    sign_in @organizer
+
+    delete :destroy, params: {
+      workshop_id: @unrelated_workshop.id,
+      id: @unrelated_enrollment.id
+    }
+    assert_response :forbidden
+  end
+
+  test 'program managers can delete enrollments from their own workshops' do
+    sign_in @program_manager
 
     delete :destroy, params: {workshop_id: @workshop.id, id: @enrollment.id}
     assert_response :success
     refute Pd::Enrollment.exists?(@enrollment.id)
   end
 
-  test 'organizers cannot delete enrollments from workshops they are not organizing' do
-    sign_in @organizer
+  test 'program managers cannot delete enrollments from workshops they are not organizing' do
+    sign_in @program_manager
 
     delete :destroy, params: {
       workshop_id: @unrelated_workshop.id,

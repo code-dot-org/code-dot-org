@@ -59,7 +59,7 @@ const style = {
     ...INPUT_OUTPUT_SHARED_STYLE,
     maxHeight: DEBUG_INPUT_HEIGHT,
     height: DEBUG_INPUT_HEIGHT,
-    lineHeight: DEBUG_INPUT_HEIGHT,
+    lineHeight: DEBUG_INPUT_HEIGHT + 'px',
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none',

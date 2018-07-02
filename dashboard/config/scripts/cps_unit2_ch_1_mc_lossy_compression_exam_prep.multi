@@ -1,0 +1,23 @@
+name 'CPS Unit2 Ch 1 MC lossy compression_exam_prep'
+title 'Compression'
+description ' '
+question ' '
+right 'Lossy compression'
+wrong 'Lossless compression'
+wrong 'Fast Fourier Transform compression'
+wrong 'Tailored compression'
+
+markdown <<MARKDOWN
+A raw digital sound file samples a sound wave at some interval and measures the height of the wave at each point.  Thus, raw sound is recorded as a list of numbers. 
+
+In very broad terms the **MP3 audio compression** algorithm identifies frequencies and volume levels - low and high - that are outside the range of  human hearing and removes the data representing these frequencies from the original.  This technique results in a smaller audio file that sounds exactly the same to the human ear.  
+
+This technique is an example of what type of compression?
+
+
+
+
+
+
+
+MARKDOWN

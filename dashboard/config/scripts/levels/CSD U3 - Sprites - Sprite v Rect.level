@@ -38,7 +38,6 @@
       "textFont": null,
       "textSize": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Sprites vs Rect\r\n\r\nCurently sprites and rectangles seem really similar. It will become clear later on why sprites are more powerful than basic shapes. Before you get there though it is important to call out a major difference in the way sprites and rectangles draw.\r\n\r\n# Do This\r\nCan you will figure out the difference by just trying this?\r\n\r\n* Create a rectangle with a width and height of 30\r\n* Set the fill for the rectangle to a different color than gray (So its clear which is the rectangle)\r\n* Create a sprite and give it the same x and y values as you gave the rectangle\r\n* Make sure to call `drawSprites` in the draw loop\r\n* Run the program\r\n* Can you see the difference?",

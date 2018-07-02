@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Πως να διδάξετε την Ώρα του Κώδικα σε τάξεις και ομάδες εκτός σχολικού ωραρίου
 
-Γίνετε μέλος του κινήματος και εισάγετε μια ομάδα μαθητών στην πρώτη τους ώρα Επιστήμης Υπολογιστών με αυτά τα βήματα. Η Ώρα του Κώδικα είναι εύκολο να υλοποιηθεί - ακόμα και για αρχάριους! Αν θα θέλατε επιπλέον βοήθεια, μπορείτε να βρείτε έναν [τοπικό εθελοντή](<%=resolve_url('https://code.org/volunteer/local')%>) για να σας βοηθήσει να πραγματοποιήσετε μια Ώρα Κώδικα στην τάξη σας.
+Γίνετε μέλος του κινήματος και εισάγετε μια ομάδα μαθητών στην πρώτη τους ώρα Επιστήμης Υπολογιστών με αυτά τα βήματα. Η Ώρα του Κώδικα είναι εύκολο να υλοποιηθεί - ακόμα και για αρχάριους! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 [/col-33]
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - Εκτυπώστε αυτοκόλλητα για τους μαθητές σας.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - Μοιραστείτε φωτογραφίες και βίντεο της εκδήλωσής σας στα μέσα κοινωνικής δικτύωσης. Χρησιμοποιήστε #HourOfCode και @codeorg, ώστε να μπορούμε να αναδείξουμε την επιτυχία σας επίσης!
@@ -110,7 +110,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Δείτε την [ώρα του κώδικα FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 Την ώρα του κώδικα είναι μόνο το πρώτο βήμα σε ένα ταξίδι για να μάθετε περισσότερα σχετικά με το πώς λειτουργεί η τεχνολογία και πώς μπορείτε να δημιουργήσετε εφαρμογές λογισμικού. Για να συνεχίσετε αυτό το ταξίδι:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Συμμετέχετε](<%= resolve_url('https://code.org/professional-development-workshops') %>) σε ημερήσιο εργαστήριο προσωπικά ώστε να λάβετε οδηγίες από έναν έμπειρο εισηγητή της επιστήμης των υπολογιστών. (μόνο εκπαιδευτές από Η.Π.Α.)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

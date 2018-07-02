@@ -5,7 +5,8 @@
   "level_num": "custom",
   "user_id": 684,
   "properties": {
-    "video_key": "CSF_Power_of_Words"
+    "video_key": "CSF_Power_of_Words",
+    "name_suffix": "_2018"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2017-07-10 20:41:48 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"

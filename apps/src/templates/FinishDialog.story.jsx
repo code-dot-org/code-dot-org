@@ -1,10 +1,11 @@
 import { UnconnectedFinishDialog as FinishDialog } from './FinishDialog';
 import ExampleDialogButton from '../util/ExampleDialogButton';
 import React from 'react';
+import progress from '@cdo/apps/code-studio/progressRedux';
 
 const dialogWrapper = {
   padding: 40,
-  width: 375,
+  width: 450,
   backgroundColor: 'gray',
 };
 
@@ -17,12 +18,12 @@ const achievements = [
   {
     isAchieved: true,
     iconUrl: '',
-    message: 'Achievement got',
+    message: 'First attempt!',
   },
   {
-    isAchieved: false,
+    isAchieved: true,
     iconUrl: '',
-    message: 'Achievement missed',
+    message: 'Effecient!',
   },
 ];
 
@@ -42,9 +43,53 @@ const studentCode = {
   message,
 };
 
+const levels = [];
+for (let i = 0; i < 20; i++) {
+  levels.push({
+    activeId: 1818 + i,
+    freePlay: false,
+    icon: null,
+    ids: [1818 + i],
+    is_concept_level: false,
+    kind: 'puzzle',
+    position: i + 1,
+    title: i + 1,
+    url: '#',
+  });
+}
+
+const mockProgress = {
+  currentLevelId: '123',
+  professionalLearningCourse: false,
+  saveAnswersBeforeNavigation: false,
+  stages: [{
+    id: 40,
+    levels,
+  }],
+  peerReviewStage: false,
+  scriptId: 1,
+  scriptName: 'test',
+  scriptTitle: 'Test Script',
+  courseId: null,
+  currentStageId: 40,
+  hasFullProgress: false,
+  levelProgress: {
+    1815: 17,
+    1818: 100,
+    1819: 30,
+    1820: 100,
+    1824: 17,
+    1826: 17,
+    1829: 17,
+    1830: 100,
+    1831: 100,
+  },
+};
+
 export default storybook =>
   storybook
-    .storiesOf('FinishDialog', module)
+    .storiesOf('Dialogs/FinishDialog', module)
+    .withReduxStore({progress}, {progress: mockProgress})
     .addStoryTable([
       {
         name: 'Dialog with overlay',
@@ -108,7 +153,7 @@ export default storybook =>
               achievements={achievements}
               studentCode={studentCode}
               showFunometer
-              canShare
+              feedbackImage="base64..image"
             />
           </div>
         ),
@@ -158,6 +203,25 @@ export default storybook =>
               blocksUsed={98}
               achievements={[]}
               studentCode={studentCode}
+            />
+          </div>
+        ),
+      },
+      {
+        name: 'Perfect Finish of challenge level',
+        description: 'Perfectly finished a challenge level',
+        story: () => (
+          <div style={dialogWrapper}>
+            <FinishDialog
+              hideBackdrop
+
+              isChallenge
+              isPerfect
+              blockLimit={98}
+              blocksUsed={98}
+              achievements={achievements}
+              studentCode={studentCode}
+              showFunometer
             />
           </div>
         ),

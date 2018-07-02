@@ -1,0 +1,35 @@
+name 'cspu5_assess2_pseudoCode_exam_prep'
+right '<code>You passed!</code>'
+wrong '<code>Time to start studying again!</code>'
+wrong '<code>You passed!</code> and <code>Time to start studying again! </code>'
+wrong 'Nothing will be displayed'
+wrong 'An error will occur on line 7; you cannot have an IF inside an ELSE statement'
+
+markdown <<MARKDOWN
+Consider the following segment given in pseudo code (see reference from previous question):
+
+    IF (grade >= 70)
+    {
+        DISPLAY(“You passed!”)
+    } 
+    ELSE 
+    {
+        IF(grade <= 70){
+          DISPLAY(“Time to start studying again!”)
+        }
+    }
+    
+    
+What will be displayed if grade is set to 70?
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lessons 8, 9** -- nested if similar to else-if
+
+Going through the code line by line if variable grade is set to 70:
+
+* The IF statement checks to see if grade is greater than or equal to 70.
+* Since 70 = 70, the condition is true and the code inside the first IF statement will be executed.
+* "You passed!" is displayed.
+MARKDOWN

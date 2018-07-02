@@ -11,6 +11,26 @@
   line-height: 1.2em
 }
 
+.btn-gray-override {
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Gotham 4r",sans-serif;
+  border-style: solid;
+  border-width: 1px;
+  text-decoration: none;
+  border-color: rgb(187, 187, 187);
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(91, 103, 112);
+  background-color: rgb(231, 232, 234);
+  box-shadow: rgba(255, 255, 255, 0.73) 0px 2px 0px 0px inset;
+  height: 34px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 0px;
+}
+
 .breakoutquote {
   background-color: #586771;
   color: #fff;

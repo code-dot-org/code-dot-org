@@ -1,0 +1,22 @@
+name 'CSD-U5-SFLP Patterns and Representation_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+This lesson looks closer at what is needed to create a system of representation.  Groups create systems that can represent any letter in the alphabet using only a single stack of cards, then create messages with their systems and exchange with other groups to ensure the system worked as intended.   The class discusses commonalities between working systems while recognizing that there are many possible working solutions.
+## Vocabulary
+
+* **Decode** - to change how information is represented so that it can be read by a person
+* **Encode** - to change how information is represented so that it can be read by a computer
+
+
+## Resources
+
+* [Representing Information](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Representing Information](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Exemplar 1 ([PDF](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))
+* [Representing Information](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Exemplar 2 ([PDF](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))
+
+MARKDOWN

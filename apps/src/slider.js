@@ -21,7 +21,7 @@
  * @fileoverview A slider control in SVG.
  * @author fraser@google.com (Neil Fraser)
  */
-var SVG_NS = require('./constants').SVG_NS;
+import {SVG_NS} from './constants';
 var dom = require('./dom');
 var trySetSessionStorage = require('./utils').trySetSessionStorage;
 

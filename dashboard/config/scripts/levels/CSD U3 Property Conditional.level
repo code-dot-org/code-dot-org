@@ -63,7 +63,6 @@
       "comment": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Doing More With Conditionals\r\nUsing conditionals to figure out which key was pressed is pretty useful, but we can also use conditionals with any value in our program, including sprite properties!\r\n\r\nWith your neighbor, discuss the kinds of boolean questions you could use with the following sprite properties:\r\n\r\n- `sprite.x` and `sprite.y`\r\n- `sprite.width` and `sprite.height`\r\n- `sprite.shapeColor`\r\n- `sprite.visibility`\r\n\r\n# Do This\r\nHere's a program similar to one you just made, it uses `keyDown()` to move the sprite around the screen when you click the arrow keys. You're going to add some additional conditionals to this program to do the following:\r\n\r\n- Change the color of the sprite if it goes into the top quarter of the screen\r\n- Rotate the sprite if it goes into the left quarter of the screen\r\n- Make the sprite invisible if it goes into the bottom quarter of the screen\r\n- Make the sprite larger if it goes into the right quarter of the screen\r\n\r\n_BTW, if you're looking for the `keyDown()` block, you'll notice that it's now in the 'Game Lab' category._ \r\n",

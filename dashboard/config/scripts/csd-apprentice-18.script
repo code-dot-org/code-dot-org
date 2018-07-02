@@ -1,0 +1,32 @@
+professional_learning_course 'CS Discoveries Facilitator in Training 2018-2019'
+login_required true
+student_detail_progress_view true
+
+stage 'Apprentice Reflection Overview', flex_category: 'required'
+named_level 'welcome-apprentice-18'
+
+stage 'Day 1'
+level 'morning-prep-monday'
+level 'feel-monday'
+level 'csd-pushDL-unit1'
+
+stage 'Day 2'
+level 'morning-prep-tuesday'
+level 'feel-tuesday'
+level 'instructional-strategy-tuesday'
+level 'csd-pushDL-unit2'
+
+stage 'Day 3'
+level 'morning-prep-wednesday'
+level 'feel-wednesday'
+level 'getting-buy-in-wednesday'
+level 'csd-pushDL-unit2'
+
+stage 'Day 4'
+level 'morning-prep-thursday'
+level 'feel-thursday'
+level 'recruiting-thursday'
+level 'csd-pushDL-unit3'
+
+stage 'Wrap Up'
+named_level 'apprentice-congrats'

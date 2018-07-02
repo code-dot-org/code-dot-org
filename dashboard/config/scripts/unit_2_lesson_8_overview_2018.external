@@ -1,0 +1,20 @@
+name 'Unit 2 Lesson 8 Overview_2018'
+display_name 'Lesson Overview'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Overview
+
+This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. The class begins by investigating and modifying the new CSS styles on a Desserts of the World page. Afterwards, everyone applies this new knowledge to their personal websites.
+
+## Introduced Code
+
+*  **[Background Color](//docs.code.org/weblab/background-color/)** - `background-color: value;`
+*  **[Float](//docs.code.org/weblab/float/)** - `float: value;`
+*  **[Margin](//docs.code.org/weblab/margin/)** - `margin: value;`
+*  **[Width](//docs.code.org/weblab/width/)** - `width: value;`
+*  **[Height](//docs.code.org/weblab/height/)** - `height: value;`
+*  **[Border Style](//docs.code.org/weblab/border-style/)** - `border-style: value;`
+*  **[Border Width](//docs.code.org/weblab/border-width/)** - `border-width: value;`
+*  **[Border Color](//docs.code.org/weblab/border-color/)** - `border-color: value;`
+
+MARKDOWN

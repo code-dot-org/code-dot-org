@@ -27,17 +27,23 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There are lots of helpful blocks in the workspace already.  Don't delete them all! \\n\\nUse the \\\"Step\\\" button to go through and figure out where the code goes wrong.\",\"hint_id\":\"courseC_maze_debugging5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8e72f349ebb18190e5a24825667121c1/courseC_maze_debugging5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?\",\"hint_id\":\"courseC_maze_debugging5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6cf665b1bc1bd82f45b693684ab804b0/courseC_maze_debugging5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There are lots of helpful blocks in the workspace already.  Don't delete them all! \\n\\nUse the \\\"Step\\\" button to go through and figure out where the code goes wrong.\",\"hint_id\":\"courseC_maze_debugging5_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8e72f349ebb18190e5a24825667121c1/courseC_maze_debugging5_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can change the direction of the turn block by clicking on the dropdown.\",\"hint_id\":\"courseC_maze_debugging5_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f196a9dc65f4c2f15163de7fbc5f47bb/courseC_maze_debugging5_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?\",\"hint_id\":\"courseC_maze_debugging5_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6cf665b1bc1bd82f45b693684ab804b0/courseC_maze_debugging5_2018.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_debugging5_1\",\r\n  \"callout_text\": \"These blocks are locked and cannot be deleted!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-19 20:34:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-19 20:35:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-19 20:36:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-28 05:18:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-09-19 20:34:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-19 20:35:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-19 20:36:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-28 05:18:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-27 00:03:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

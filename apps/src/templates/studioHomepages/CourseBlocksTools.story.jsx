@@ -3,7 +3,7 @@ import CourseBlocksTools from './CourseBlocksTools';
 
 export default storybook => {
   return storybook
-    .storiesOf('CourseBlocksTools', module)
+    .storiesOf('Courses/CourseBlocksTools', module)
     .withReduxStore()
     .addStoryTable([
       {

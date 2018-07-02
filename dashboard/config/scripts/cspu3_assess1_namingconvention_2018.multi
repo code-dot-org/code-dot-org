@@ -1,0 +1,18 @@
+name 'cspu3_assess1_namingconvention_2018'
+wrong 'A function name should indicate how long the function takes to run.'
+wrong 'Two functions with similar behavior should be given identical names to indicate the relationship between them.'
+right 'A function name should be as descriptive as possible to indicate what the function does.'
+wrong 'Function names should be organized alphabetically.'
+wrong 'The function name should begin with a number that indicates the order in which it should be executed.'
+
+
+markdown <<MARKDOWN
+What is one important naming convention of functions?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The most important part of naming a function is that it describes what the function does so that the original developer and other developers can quickly and easily have an understanding of the code. With a descriptive name for the function, this helps with the readability and manageability of their code. Although some functions have identical code within them, functions should not have identical names.
+
+* Note: As functions can be shifted throughout the development of a program, numbering the functions or organizing them alphabetically are not crucial in their naming conventions.
+
+MARKDOWN

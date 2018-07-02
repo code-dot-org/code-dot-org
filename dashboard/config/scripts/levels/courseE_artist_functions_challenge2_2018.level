@@ -40,6 +40,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_artist_functions_challenge2_callout1\",\r\n  \"callout_text\": \"Keep this program going by adding more code to the bottom.\",\r\n  \"element_id\": \"#blue\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"courseE_artist_functions_challenge2_callout2\",\r\n  \"callout_text\": \"If you don't like this design, change it to anything you want!\",\r\n  \"element_id\": \"#function\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right bottom\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/ebc0f571ffe0f421c9add100ed5163e0=levelbuilder/27787.png",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

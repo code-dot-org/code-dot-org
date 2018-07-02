@@ -35,6 +35,8 @@ class Course < ApplicationRecord
   serialized_attrs %w(
     teacher_resources
     has_verified_resources
+    family_name
+    version_year
   )
 
   def to_param
@@ -45,6 +47,14 @@ class Course < ApplicationRecord
     I18n.t("data.course.name.#{name}.title", default: name)
   end
 
+  def localized_assignment_family_title
+    I18n.t("data.course.name.#{name}.assignment_family_title", default: localized_title)
+  end
+
+  def localized_version_title
+    I18n.t("data.course.name.#{name}.version_title", default: version_year)
+  end
+
   def self.file_path(name)
     Rails.root.join("config/courses/#{name}.course")
   end
@@ -52,6 +62,7 @@ class Course < ApplicationRecord
   def self.load_from_path(path)
     serialization = File.read(path)
     hash = JSON.parse(serialization)
+
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'], hash['alternate_scripts'])
     course.properties = hash['properties']
@@ -173,6 +184,12 @@ class Course < ApplicationRecord
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
+    info[:assignment_family_name] = family_name || name
+    info[:assignment_family_title] = localized_assignment_family_title
+    info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
+    info[:version_title] = localized_version_title
+    # For now, all course versions visible in the UI are stable.
+    info[:is_stable] = true
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
@@ -181,17 +198,18 @@ class Course < ApplicationRecord
   end
 
   # Get the set of valid courses for the dropdown in our sections table. This
-  # should be static data for users without experiments enabled, but contains
-  # localized strings so we can only cache on a per locale basis.
-  def self.valid_courses(user = nil)
-    # Do not cache if the user might have an experiment enabled which puts them
+  # should be static data for users without any course experiments enabled, but
+  # contains localized strings so we can only cache on a per locale basis.
+  #
+  # @param [User] user Whose experiments to check for possible script substitutions.
+  def self.valid_courses(user: nil)
+    # Do not cache if the user might have a course experiment enabled which puts them
     # on an alternate script.
-    return Course.courses_for_user_with_experiments(user) if user && has_any_course_experiments?(user)
+    if user && has_any_course_experiments?(user)
+      return Course.valid_courses_without_cache(user: user)
+    end
     Rails.cache.fetch("valid_courses/#{I18n.locale}") do
-      Course.
-        all.
-        select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
-        map(&:assignable_info)
+      Course.valid_courses_without_cache
     end
   end
 
@@ -204,13 +222,20 @@ class Course < ApplicationRecord
 
   # Get the set of valid courses for the dropdown in our sections table, using
   # any alternate scripts based on any experiments the user belongs to.
-  def self.courses_for_user_with_experiments(user)
-    Course.
-      all.
-      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+  def self.valid_courses_without_cache(user: nil)
+    course_infos = Course.
+      where(name: ScriptConstants::CATEGORIES[:full_course]).
       map {|course| course.assignable_info(user)}
+
+    # Only return stable course versions.
+    # * Currently, all course versions are stable.
+    # * In the future, stability will be set as a property by the levelbuilder.
+    #
+    # Group courses by family when showing multiple versions of each course.
+    course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]}
   end
 
+  # Returns whether the course id is valid, even if it is not "stable" yet.
   # @param course_id [String] id of the course we're checking the validity of
   # @return [Boolean] Whether this is a valid course ID
   def self.valid_course_id?(course_id)
@@ -222,6 +247,7 @@ class Course < ApplicationRecord
       name: name,
       id: id,
       title: localized_title,
+      assignment_family_title: localized_assignment_family_title,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
@@ -230,8 +256,20 @@ class Course < ApplicationRecord
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
       end,
       teacher_resources: teacher_resources,
-      has_verified_resources: has_verified_resources?
+      has_verified_resources: has_verified_resources?,
+      versions: summarize_versions
     }
+  end
+
+  # Returns an array of objects showing the name and version year for all courses
+  # sharing the family_name of this course, including this one.
+  def summarize_versions
+    return [] unless family_name
+    Course.
+      where("properties -> '$.family_name' = ?", family_name).
+      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
+      sort_by {|info| info[:version_year]}.
+      reverse
   end
 
   # If a user has no experiments enabled, return the default set of scripts.
@@ -296,6 +334,23 @@ class Course < ApplicationRecord
     end
 
     default_course_script
+  end
+
+  # @param user [User]
+  # @return [Boolean] Whether the user has progress on another version of this course.
+  def has_other_version_progress?(user)
+    return nil unless user && family_name
+    user_script_ids = user.user_scripts.pluck(:script_id)
+
+    Course.
+      joins(:default_course_scripts).
+      # select only courses in the same course family.
+      where("properties -> '$.family_name' = ?", family_name).
+      # exclude the current course.
+      where.not(id: id).
+      # select only courses with scripts which the user has progress in.
+      where('course_scripts.script_id' => user_script_ids).
+      count > 0
   end
 
   @@course_cache = nil

@@ -7,7 +7,7 @@ nav: how_to_nav
 <%= view :signup_button %>
 
 # How-to Guide for Volunteers
-### Make a difference in a classroom today! 
+### Make a difference in a classroom today!
 
 ## Why volunteer?
 Check out some testimony from past volunteers:
@@ -17,11 +17,11 @@ Check out some testimony from past volunteers:
 - “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
 
 ## Anyone can volunteer
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students. 
+**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. 
+You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
 
-<a href="https://code.org/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button> 
+<a href=codeorg_url("/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button>
 
 **Anyone passionate about expanding opportunity**: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
 
@@ -54,10 +54,10 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 |1-5 minutes  |[Show an inspirational video](<%= resolve_url('promote/resources#videos') %>).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |5-10 minutes |Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>What or who inspired you?</li><li>How did you get interested in computer science?</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone.</li><br>Ask the students questions and leave time for Q&A.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul>|
 |30-60 minutes|**Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.                                                                                                                                                                                                                                     |
-|1-3 minutes  |Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+|1-3 minutes  |Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
 |After|**Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.|
 
-### **After the Event:** 
+### **After the Event:**
 - Share your photos and stories with Code.org at giving@code.org.
 - Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
 - Share about your experience on social media #HourOfCode!
@@ -67,8 +67,8 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 ## How you get selected as a technical volunteer of guest speaker
 - Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
 - Try to make your profile as complete as possible to increase the chance that a teacher will select you.
-- A teacher will contact you through this form (your email address will never be shared with the teacher). 
-*If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.* 
+- A teacher will contact you through this form (your email address will never be shared with the teacher).
+*If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
 ## Volunteering during the Hour of Code FAQ
 

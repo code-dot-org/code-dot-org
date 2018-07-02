@@ -1,0 +1,34 @@
+name 'cspu5_assess3_listAppend_exam_prep'
+wrong '1'
+wrong '2'
+wrong '3'
+right '6'
+wrong 'Error. There is no index 2.'
+
+markdown <<MARKDOWN
+Consider the following code segment that appends numbers to a list one at a time.
+
+    data <- []
+    APPEND (data, 2)
+    APPEND (data, 6)
+    APPEND (data, 9)
+    APPEND (data, 3)
+    APPEND (data, 1)
+    
+What is the value of data[2] after the code above is executed (Assume indexing begins with 1)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 13**
+
+Going through the code line by line while keeping track of what data looks like after each call:
+
+* data = []
+* Note that appending a number puts the number at the end of the current list
+* APPEND (data, 2). data = [2]
+* APPEND (data, 6). data = [2,6]
+* APPEND (data, 9). data = [2,6,9]
+* APPEND (data, 3). data = [2,6,9,3]
+* APPEND (data, 1). data = [2,6,9,3,1]
+* At index 2, data[2] = 6
+MARKDOWN

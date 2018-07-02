@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-03-20T15:17:43.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "C1_playlab_storytelling",
+    "instructions": "Need a better playlab/events combo",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "parent_level_id": 5127,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

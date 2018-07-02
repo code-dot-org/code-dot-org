@@ -1,0 +1,36 @@
+name 'cspu5_assess3_array3_exam_prep'
+wrong'<img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">'
+wrong'<img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">'
+wrong'<img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">'
+wrong'<img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">'
+right '<img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">'
+
+
+markdown <<MARKDOWN
+The following questions are about performing operations on lists using INSERT, REMOVE, and APPEND.  The pseudocode documentation is here for your reference.
+
+![](https://images.code.org/fa2b569b6f726f3eef45b335c8b3f68a-image-1479104624852.png)
+
+What is stored in list data after the following code segment is run?
+
+![](https://images.code.org/fa70121349599e447b52b1a222688f56-image-1477186832757.png)
+
+    data <- [0,1,2]
+    INSERT(data, 1, 3)
+    INSERT(data, 2, 4)
+    INSERT(data, 3, 5)
+    DISPLAY(data)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 13**
+
+Going through the code line by line:
+
+* An array named _data_ is given, it contains "0,1,2"
+* Remember that with the INSERT method, everything after the inserted index is shifted to the right
+* A value of 3 is inserted at index 1. data = [3,0,1,2]
+* A value of 4 is inserted at index 2. data = [3,4,0,1,2]
+* A value of 5 is inserted at index 3. data = [3,4,5,0,1,2]
+* The data now holds "3,4,5,0,1,2"
+MARKDOWN

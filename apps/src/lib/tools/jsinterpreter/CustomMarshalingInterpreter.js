@@ -3,6 +3,18 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 
+const DEFAULT_MAX_STEPS = 5e5;
+
+const defaultExecutionInfo = {
+  ticks: DEFAULT_MAX_STEPS,
+  checkTimeout: function () {
+    if (this.ticks-- < 0) {
+      throw 'Infinity';
+    }
+  },
+  isTerminated: () => false,
+};
+
 /**
  * Property access wrapped in try/catch. This is in an indepedendent function
  * so the JIT compiler can optimize the calling function.
@@ -29,7 +41,6 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       }
       thisInterpreter.asyncFunctionList = [];
       thisInterpreter.customMarshaler = customMarshaler;
-      thisInterpreter.globalScope = scope;
       if (opt_initFunc) {
         opt_initFunc(thisInterpreter, scope);
       }
@@ -113,6 +124,9 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         return this.UNDEFINED;
       } else {
         customMarshalValue = obj.data[name];
+        if (typeof customMarshalValue === 'undefined') {
+          return super.getProperty(obj, name);
+        }
       }
     } else {
       const nativeParent = this.getNativeParent_(obj, name);
@@ -153,7 +167,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
        * 2. custom marshaled objects can only be mounted on the global scope. Therefore
        *    only look up a native parent if we are asking for a property on the global scope.
        */
-      obj === this.globalScope &&
+      obj === this.global &&
       /**
        * 3. Assuming the above conditions pass, lookup the native parent among the list
        * of global properties specified in the custom marshaler's configuration.
@@ -184,7 +198,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       if (this.shouldBlockCustomMarshalling_(name, obj)) {
         return false;
       } else {
-        return name in obj.data;
+        return (name in obj.data) || super.hasProperty(obj, name);
       }
     } else {
       if (this.getNativeParent_(obj, name)) {
@@ -215,6 +229,16 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     name = name.toString();
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
+        if (!obj.data.hasOwnProperty(name) && value instanceof Interpreter.Object) {
+          // When assigning an interpreter object as a property on a
+          // CustomMarshal object that doesn't already have a native property
+          // with the same name, assume that we expect the object to be
+          // used purely within the interpreter by student code.
+
+          // This allows interpreter arrays, objects, and functions to be tacked
+          // on to CustomMarshal objects
+          return super.setProperty(obj, name, value, opt_descriptor);
+        }
         obj.data[name] = this.marshalInterpreterToNative(value);
       }
     } else {
@@ -376,16 +400,20 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * Generate code for each of the given events, and evaluate it using the
    * provided APIs as context. Note that this does not currently support custom marshaling.
    *
-   * @param {Object} apis - Context to be set as globals in the interpreted runtime.
+   * @param {Object} scope - Context to be set as globals in the interpreted runtime.
    * @param {Object} events - Mapping of hook names to the corresponding handler code.
    *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
    * @param {string} [evalCode] - Optional extra code to evaluate.
    * @return {{hooks: Array<{name: string, func: Function}>, interpreter: CustomMarshalingInterpreter}} Mapping of
    *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
    */
-  static evalWithEvents(apis, events, evalCode = '', customMarshalObjectList) {
+  static evalWithEvents(scope, events, evalCode = '', customMarshalObjectList) {
     let interpreter, currentCallback, lastReturnValue;
     const hooks = [];
+    const apis = {
+      executionInfo: defaultExecutionInfo,
+      ...scope,
+    };
 
     Object.keys(events).forEach(event => {
       let {code, args} = events[event];
@@ -488,7 +516,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       maxDepth = Infinity; // default to infinite levels of depth
     }
     if (this.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
-      return this.customMarshaler.createCustomMarshalObject(nativeVar, nativeParentObj);
+      return this.customMarshaler.createCustomMarshalObject(this, nativeVar, nativeParentObj);
     }
     if (nativeVar instanceof Array) {
       retVal = this.createObject(this.ARRAY);
@@ -551,14 +579,19 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * Note that this does not currently support custom marshaling.
    *
    * @param code {string} - the code to evaluation
-   * @param globals {Object} - An object of globals to be added to the scope of code being executed
+   * @param scope {Object} - An object of globals to be added to the scope of code being executed
    * @param {Object} opts - Additional options to control behavior
    * @param {Array} opts.asyncFunctionList - list of functions to treat asynchronously
    * @param {boolean} opts.legacy - If true, code will be run natively via an eval-like method,
    *     otherwise it will use the js interpreter.
    * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
    */
-  static evalWith(code, globals, {asyncFunctionList, legacy}={}) {
+  static evalWith(code, scope, {asyncFunctionList, legacy}={}) {
+    const globals = {
+      executionInfo: defaultExecutionInfo,
+      ...scope,
+    };
+
     if (legacy) {
       // execute JS code "natively"
       var params = [];

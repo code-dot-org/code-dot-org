@@ -38,6 +38,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

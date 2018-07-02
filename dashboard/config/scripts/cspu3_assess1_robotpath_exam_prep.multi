@@ -1,0 +1,49 @@
+name 'cspu3_assess1_robotpath_exam_prep'
+height '160'
+layout 'wrap'
+
+wrong '<img src="https://images.code.org/4275938ab726def3e12cf63e7e988e46-image-1474951484955.png">'
+right '<img src="https://images.code.org/b90c1048ba2858d9e0f18aeff4092df2-image-1474951687373.png">'
+wrong '<img src="https://images.code.org/ce5963013611c6921bcb336e1bbc650c-image-1474951692390.png">'
+wrong '<img src="https://images.code.org/c2bea7610ef45907b1b941d2b9356a38-image-1474951696047.png">'
+wrong '<img src="https://images.code.org/bc098bf2fa9dd848194285f2d13446df-image-1474951698945.png">'
+
+
+markdown <<MARKDOWN
+The next two questions use a robot in a grid of squares.  The robot is represented as a triangle, which is initially facing up, towards the top of the grid.  The robot is moved according to the following instructions.
+
+| Instruction | Explanation |
+|----------------|---------------------------------------------------------------------------------------------|
+| MOVE_FORWARD() | The robot moves one square forward in the direction it is facing.                           |
+| ROTATE_RIGHT() | The robot rotates in place 90 degrees clockwise (i.e., makes an in-place right turn).       |
+| ROTATE_LEFT()  | The robot rotates in place 90 degrees counterclockwise (i.e., makes an in-place left turn). |
+| REPEAT n TIMES | The block of instructions contained between the braces { } is repeated n times.             |
+
+Consider the following program which uses commands from the pseudocode described above.
+
+	REPEAT 4 TIMES {
+      MOVE_FORWARD()
+      MOVE_FORWARD()
+      MOVE_FORWARD()
+      ROTATE_RIGHT()
+      MOVE_FORWARD()
+      ROTATE_RIGHT()
+      MOVE_FORWARD()
+      ROTATE_RIGHT()
+	}
+
+
+Which of the following images shows the path and ending location of the robot that will result from executing the code above. The starting location of the robot is shown as dotted triangle for cases where the robot does not start and end at the same location.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Break down the lines of code inside the loop to see the main path of the robot. It is helpful to draw on paper to have a visual understanding of the code. A breakdown of the code:
+
+* Move forward 3 spaces
+* Rotate to the right and move forward 1 space
+* Rotate to the right and move forward 1 space
+* Rotate right
+
+You should end up with a hook-like shape. Keeping your pen on the paper, repeat these steps four times. You will end up with multiple squares on the paper, and thus arrive to the answer. When given a block of code, it is key to go through it line by line to understand what the robot is doing.
+
+MARKDOWN

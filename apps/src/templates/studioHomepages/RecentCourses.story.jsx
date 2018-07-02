@@ -48,7 +48,7 @@ const topCourse = {
 
 export default storybook => {
   return storybook
-    .storiesOf('RecentCourses', module)
+    .storiesOf('Homepages/RecentCourses', module)
     .withReduxStore()
     .addStoryTable([
       {

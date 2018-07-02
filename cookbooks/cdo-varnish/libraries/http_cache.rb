@@ -7,6 +7,8 @@ class HttpCache
 
   # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language).freeze
+  COUNTRY_HEADER = %w(CloudFront-Viewer-Country).freeze
+  WHITELISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
@@ -71,7 +73,7 @@ class HttpCache
         behaviors: [
           {
             path: '/api/hour/*',
-            headers: LANGUAGE_HEADER,
+            headers: WHITELISTED_HEADERS,
             # Allow the company cookie to be read and set to track company users for tutorials.
             cookies: whitelisted_cookies + ['company']
           },
@@ -98,13 +100,13 @@ class HttpCache
               /pd-program-registration*
               /poste*
             ),
-            headers: LANGUAGE_HEADER,
+            headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
           {
             path: '/dashboardapi/*',
             proxy: 'dashboard',
-            headers: LANGUAGE_HEADER,
+            headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           }
         ],
@@ -130,7 +132,7 @@ class HttpCache
               /v3/animations/*
               /v3/files/*
             ),
-            headers: LANGUAGE_HEADER,
+            headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
           {
@@ -142,12 +144,12 @@ class HttpCache
               /api/user_progress/*
               /milestone/*
             ),
-            headers: LANGUAGE_HEADER + ['User-Agent'],
+            headers: WHITELISTED_HEADERS + ['User-Agent'],
             cookies: whitelisted_cookies
           },
           {
             path: CACHED_SCRIPTS_MAP.values,
-            headers: LANGUAGE_HEADER,
+            headers: WHITELISTED_HEADERS,
             cookies: default_cookies
           },
           {
@@ -157,7 +159,7 @@ class HttpCache
           },
           {
             path: '/api/*',
-            headers: LANGUAGE_HEADER,
+            headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
           {
@@ -169,7 +171,7 @@ class HttpCache
           {
             path: '/v2/*',
             proxy: 'pegasus',
-            headers: LANGUAGE_HEADER,
+            headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies
           },
           {
@@ -180,7 +182,7 @@ class HttpCache
         ],
         # Default Dashboard paths are session-specific, whitelist all session cookies and language header.
         default: {
-          headers: LANGUAGE_HEADER,
+          headers: WHITELISTED_HEADERS,
           cookies: whitelisted_cookies
         }
       }

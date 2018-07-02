@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Skicka ut en press information**[ använd detta exempel ](<%= resolve_url('/promote/official-press-release') %>) som en guide.
 
-9. **Hitta vänner** Besök [< % = resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) att lära sig mer om datavetenskaplig utbildning i ditt område. Skriv under uppropet och du kommer att få uppdatering från Code.org om vad som är på gång.
+9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Skriv under uppropet och du kommer att få uppdatering från Code.org om vad som är på gång.
 
 <%= view :signup_button %>

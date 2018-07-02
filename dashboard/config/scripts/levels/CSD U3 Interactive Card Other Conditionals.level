@@ -173,7 +173,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Other Conditionals\r\nThe _surprise_ in your card comes from conditionals that don't directly respond to user input, but to some other element of your card. This could be triggered by a variable that gets updated as the user interacts with your card, or a Sprite moving into a certain part of the screen.\r\n\r\n# Do This\r\nFor each of the remaining items on your interactions table:\r\n\r\n* Add an `if` block (or `if-else` block if you need a fallback action) inside the draw loop.\r\n* Add the appropriate Boolean comparison block to the condition (eg. `<`, `>`, or `==`).\r\n* Add the necessary actions inside the `if` block.\r\n\r\n**Challenge:** Can you create more sophisticated conditionals by nesting them or using compound booleans?",

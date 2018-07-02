@@ -1,0 +1,23 @@
+name 'cspu5_assess1_increase_exam_prep'
+wrong '5'
+wrong '8'
+wrong '10'
+right '13'
+wrong 'Error.  Cannot make a new variable x inside function increase()'
+
+markdown <<MARKDOWN
+What is the output to the console after the following code segment is executed?
+
+![](https://images.code.org/8dcfa81e04df71d5f696bf629f2231bf-image-1518821364804.48.52 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 5** - application of local v. global
+
+Going through each line of code:
+
+* 1: A variable x is set to the value 10
+* 2: The function "increase()" is called where a separate local variable that is also named "x" is set to the value 5
+* 3: Exiting the function "increase()", in line 3 the value of x is still 10 because the local variable inside "increase()" is not accessible outside outside the function. Thus, in line 3, x = x + 3 which equals 10 + 3 = 13
+* Printing the value of x, the computer outputs "13"
+MARKDOWN

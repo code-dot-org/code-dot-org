@@ -1,0 +1,11 @@
+name 'CSPFinal_Question_9update_exam_prep'
+wrong 'At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.'
+wrong 'The number system you use to view data has no effect on the underlying digital data.'
+wrong 'Binary can be used to represent more complex, higher level abstractions, including but not limited to numbers, characters, and colors.'
+right 'When data is large enough computers switch to using decimal representation instead of binary, because you can represent larger numbers with fewer digits.'
+
+markdown <<MARKDOWN
+Number systems with different bases such as binary (base-2), octal (base-8), decimal (base-10), and hexadecimal (base-16), are all used to view and represent digital data.  
+
+Which of the following is **NOT** true about representing digital data?
+MARKDOWN

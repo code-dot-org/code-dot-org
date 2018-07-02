@@ -11,10 +11,12 @@ import { MAX_PROJECTS_PER_CATEGORY } from '@cdo/apps/templates/projects/projectC
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
+  const url = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
+
   registerReducers({projects});
   $.ajax({
     method: 'GET',
-    url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+    url: url,
     dataType: 'json'
   }).done(projectLists => {
     getStore().dispatch(setProjectLists(projectLists));

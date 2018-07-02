@@ -162,7 +162,6 @@
       "return": null,
       "comment": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Make it Your Own\r\n\r\nNow that we've created a simple game, take some time to explore the environment on your own and add to your game. You'll notice that there are a bunch of new blocks available to you in the toolbox - take a look around and try some out!",

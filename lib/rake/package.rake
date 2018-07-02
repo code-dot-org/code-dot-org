@@ -30,17 +30,27 @@ namespace :package do
       # Don't build apps if there are staged changes
       Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
 
+      # Store initial commit hash to make sure it doesn't change out from under us during the build
+      packager = apps_packager
+      expected_commit_hash = packager.commit_hash
+
       ChatClient.wrap('Building apps') {Rake::Task['build:apps'].invoke}
 
-      # Check that building apps did not generate unexpected changes either.
-      Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
+      unless rack_env?(:adhoc)
+        # Check that building apps did not generate unexpected changes either.
+        Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
 
-      ChatClient.wrap('Testing apps') {Rake::Task['test:apps'].invoke}
+        ChatClient.wrap('Testing apps') {Rake::Task['test:apps'].invoke}
+      end
 
       # upload to s3
-      packager = apps_packager
-      package = packager.upload_package_to_s3('/build/package')
-      ChatClient.log "Uploaded apps package to S3: #{packager.commit_hash}"
+      package = packager.create_package('/build/package', expected_commit_hash: expected_commit_hash)
+
+      unless rack_env?(:adhoc)
+        packager.upload_package_to_s3(package)
+        ChatClient.log "Uploaded apps package to S3: #{packager.commit_hash}"
+      end
+
       packager.decompress_package(package)
     end
 

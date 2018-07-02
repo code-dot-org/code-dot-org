@@ -44,7 +44,7 @@ Sebenzisa lokhu [amaphosta, amabhena, izitembu, amavidiyo kanye nokunye okuningi
 
 ## 2. Thola ivolontiya yendawo ukukusiza ngomcimbi wakho.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Plan your Hour of Code
 

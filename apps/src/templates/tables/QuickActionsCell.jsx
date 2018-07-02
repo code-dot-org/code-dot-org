@@ -3,37 +3,55 @@ import color from "../../util/color";
 import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
 import styleConstants from '../../styleConstants';
 import throttle from 'lodash/debounce';
+import FontAwesome from '../FontAwesome';
+
+export const QuickActionsCellType = {
+  header: 'header',
+  body: 'body'
+};
 
 const styles = {
-  actionButton:{
-    border: '1px solid ' + color.white,
+  icon: {
     paddingLeft: 5,
     paddingRight: 5,
     paddingTop: 4,
     paddingBottom: 4,
-    borderRadius: 5,
-    color: color.lighter_gray,
-    margin: 3,
     cursor: 'pointer',
   },
+  actionButton: {
+    [QuickActionsCellType.body]: {
+      border: '1px solid ' + color.white,
+      borderRadius: 5,
+      color: color.darker_gray,
+      margin: 3,
+    },
+    [QuickActionsCellType.header]: {
+      fontSize: 20,
+      lineHeight: '15px',
+      color: color.darker_gray,
+    }
+  },
   hoverFocus: {
-    backgroundColor: color.lighter_gray,
-    border: '1px solid ' + color.light_gray,
-    borderRadius: 5,
-    paddingTop: 4,
-    paddingBottom: 4,
-    paddingLeft: 5,
-    paddingRight: 5,
-    color: color.white,
+    [QuickActionsCellType.body]: {
+      backgroundColor: color.lighter_gray,
+      border: '1px solid ' + color.light_gray,
+      borderRadius: 5,
+      color: color.white,
+    },
   },
 };
 
-class QuickActionsCell extends Component {
+export default class QuickActionsCell extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.array
-    ]).isRequired
+    ]).isRequired,
+    type: PropTypes.oneOf(Object.keys(QuickActionsCellType))
+  };
+
+  static defaultProps = {
+    type: QuickActionsCellType.body
   };
 
   state = {
@@ -81,17 +99,33 @@ class QuickActionsCell extends Component {
   };
 
   render() {
+    const {type} = this.props;
     const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};
+
+    const icons = {
+      header: 'cog',
+      body: 'chevron-down'
+    };
+
+    const styleByType = type === QuickActionsCellType.header ?
+      styles.actionButton["header"] :
+      this.state.open ?
+        styles.hoverFocus["body"] :
+        styles.actionButton["body"];
+
+    const iconStyle = {
+      ...styles.icon,
+      ...styleByType
+    };
 
     return (
       <span ref={span => this.icon = span}>
-        <a
-          icon="chevron-down"
-          style={this.state.open ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}
+        <FontAwesome
+          icon={icons[type]}
+          style={iconStyle}
           onClick={this.state.canOpen ? this.open : undefined}
-        >
-          <i className="fa fa-chevron-down ui-test-section-dropdown"></i>
-        </a>
+          className="ui-test-section-dropdown"
+        />
         <PopUpMenu
           targetPoint={targetPoint}
           isOpen={this.state.open}
@@ -104,5 +138,3 @@ class QuickActionsCell extends Component {
     );
   }
 }
-
-export default QuickActionsCell;

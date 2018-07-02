@@ -6,7 +6,7 @@ transport:
   name: sftp
 provisioner:
   name: chef_zero
-  require_chef_omnibus: 12.6.0
+  require_chef_omnibus: 12.7.2
 platforms:
   - name: ubuntu-14.04
     run_list:

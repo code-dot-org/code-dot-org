@@ -40,7 +40,6 @@
       "assign_x": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Save the Fish\r\n<img style=\"float: right; height: 200px;\" src=\"https://images.code.org/c92db34c78faa59c2d8a3f0df7fe92aa-image-1472492951133.gif\" />\r\nYour fish is in danger!  The shark is swimming faster than the fish, but we can use the counter pattern to make the fish get faster as the program runs.   Can use use the counter pattern inside the draw loop to change the program to match the animation on the right?\r\n\r\n# Do This\r\nUse `setSpeedAndDirection` inside the draw loop to increase the speed of the sprite by 1 each time the draw loop is called.\r\n\r\n[//]: # (https://images.code.org/a87dac6c803751292c6fb11a63623e3f-image-1471466985600.png)\r\n\r\n[//]: # (https://images.code.org/b63256ffb19a98d9d20f3b3b79364006-image-1471467188241.png)\r\n\r\n[//]: # (https://images.code.org/c92db34c78faa59c2d8a3f0df7fe92aa-image-1472492951133.gif)",

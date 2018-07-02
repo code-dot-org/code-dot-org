@@ -1,0 +1,16 @@
+name 'cspu5_assess3_whileTrue_exam_prep'
+wrong 'While loops terminate after a fixed number of loops that is pre-determined'
+wrong 'While loops terminate after a fixed number of loops that is determined after the loop executes once.'
+right 'While loops run as long as a given boolean condition is true.'
+wrong 'While loops run as long as a given boolean condition is false.'
+wrong 'While loops are known as “forever loops” and never stop until the program is halted by the user.'
+
+markdown <<MARKDOWN
+Which of the following is true about while loops in JavaScript?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 11**
+
+Unlike a for loop that runs a specific amount of times, a while loop will run until the specified condition is false. Once the condition is false, the program exits the while loop and does not run the code inside the while loop.
+MARKDOWN

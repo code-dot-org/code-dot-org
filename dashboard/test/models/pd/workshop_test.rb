@@ -1,15 +1,32 @@
 require 'test_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
+  include Pd::WorkshopConstants
+
   freeze_time
 
   self.use_transactional_test_case = true
   setup_all do
-    @organizer = create(:workshop_organizer)
+    @organizer = create(:program_manager)
     @workshop = create(:pd_workshop, organizer: @organizer)
+
+    @workshop_organizer = create(:workshop_organizer)
+    @organizer_workshop = create(:pd_workshop, organizer: @workshop_organizer)
   end
   setup do
     @workshop.reload
+
+    @organizer_workshop.reload
+  end
+
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'query by workshop organizer' do
+    # create a workshop with a different organizer, which should not be returned below
+    create(:pd_workshop)
+
+    workshops = Pd::Workshop.organized_by @workshop_organizer
+    assert_equal 1, workshops.length
+    assert_equal workshops.first, @organizer_workshop
   end
 
   test 'query by organizer' do
@@ -45,29 +62,61 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshops = Pd::Workshop.enrolled_in_by teacher
     assert_equal 1, workshops.length
-    assert_equal workshops.first, @workshop
+    assert_equal @workshop, workshops.first
   end
 
-  test 'facilitated_or_organized_by' do
+  test 'enrolled_in_by scope variations' do
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: 'nomatch@ex.net'
+    assert_empty Pd::Workshop.enrolled_in_by(teacher)
+
+    # Email match only
+    enrollment.update!(email: teacher.email)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # UserId only
+    enrollment.update!(email: 'nomatch@ex.net', user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # Both email and user id. Should still find workshop exactly once
+    enrollment.update!(email: teacher.email, user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+  end
+
+  test 'exclude_summer scope' do
+    summer_workshop = create :pd_workshop, :local_summer_workshop
+    teachercon = create :pd_workshop, :teachercon
+
+    assert Pd::Workshop.exclude_summer.exclude? summer_workshop
+    assert Pd::Workshop.exclude_summer.exclude? teachercon
+    assert Pd::Workshop.exclude_summer.include? @workshop
+  end
+
+  test 'managed_by' do
     user = create :workshop_organizer
     user.permission = UserPermission::FACILITATOR
+    regional_partner = create(:regional_partner_program_manager, program_manager: user).regional_partner
 
     expected_workshops = [
       create(:pd_workshop, facilitators: [user]),
+      create(:pd_workshop, organizer: user),
+      create(:pd_workshop, regional_partner: regional_partner),
+
+      # combos
       create(:pd_workshop, num_facilitators: 1, organizer: user),
       create(:pd_workshop, facilitators: [user], organizer: user),
-      create(:pd_workshop, organizer: user)
+      create(:pd_workshop, regional_partner: regional_partner, facilitators: [user], organizer: user)
     ]
 
     # extra (not included)
-    create :pd_workshop, num_facilitators: 1
+    create :pd_workshop, num_facilitators: 1, regional_partner: create(:regional_partner)
 
-    filtered = Pd::Workshop.facilitated_or_organized_by(user)
-    assert_equal 4, filtered.count
+    filtered = Pd::Workshop.managed_by(user)
+    assert_equal 6, filtered.count
     assert_equal expected_workshops.map(&:id).sort, filtered.pluck(:id).sort
 
-    assert_equal 3, filtered.organized_by(user).count
-    assert_equal 2, filtered.facilitated_by(user).count
+    assert_equal 4, filtered.organized_by(user).count
+    assert_equal 3, filtered.facilitated_by(user).count
   end
 
   test 'query by attended teacher' do
@@ -89,13 +138,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'query by state' do
-    workshop_not_started = @workshop
+    workshops_not_started = [@workshop, @organizer_workshop]
     workshop_in_progress = create :pd_workshop, started_at: Time.now
     workshop_ended = create :pd_ended_workshop
 
     not_started = Pd::Workshop.in_state(Pd::Workshop::STATE_NOT_STARTED)
-    assert_equal 1, not_started.count
-    assert_equal workshop_not_started.id, not_started[0][:id]
+    assert_equal workshops_not_started.length, not_started.count
+    assert_equal workshops_not_started, not_started
 
     in_progress = Pd::Workshop.in_state(Pd::Workshop::STATE_IN_PROGRESS)
     assert_equal 1, in_progress.count
@@ -134,7 +183,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.end!
     assert_equal 'Ended', @workshop.state
     assert_equal 'Ended', @workshop.state
-    assert @workshop.sessions.first.code.nil?
+    assert_not_nil @workshop.sessions.first.code
   end
 
   test 'start is idempotent' do
@@ -317,11 +366,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'friendly name' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF, location_name: 'Code.org',
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, location_name: 'Code.org',
       sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
-    assert_equal 'CS Fundamentals workshop on 09/01/16 at Code.org', workshop.friendly_name
+    assert_equal 'Admin workshop on 09/01/16 at Code.org', workshop.friendly_name
 
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
@@ -351,6 +400,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # combined
     assert_equal [workshop_pivot.id],
       Pd::Workshop.scheduled_start_on_or_after(pivot_date).scheduled_start_on_or_before(pivot_date).pluck(:id)
+  end
+
+  test 'in_year' do
+    # before
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.new(2016, 12, 31)
+
+    workshops_this_year = [
+      create(:pd_workshop, num_sessions: 1, sessions_from: Date.new(2017, 1, 1)),
+      create(:pd_workshop, num_sessions: 1, sessions_from: Date.new(2017, 12, 31))
+    ]
+
+    # after
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.new(2018, 12, 31)
+
+    assert_equal workshops_this_year.map(&:id), Pd::Workshop.in_year(2017).pluck(:id)
   end
 
   test 'future scope' do
@@ -414,35 +478,39 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # Workshops with 0 (not counting deleted), 1 and 2 enrollments
     workshops = [
       @workshop,
+      @organizer_workshop,
       build(:pd_workshop, num_enrollments: 1),
       build(:pd_workshop, num_enrollments: 2)
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_enrollment_count.pluck(:id)
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_enrollment_count(desc: false).pluck(:id)
-    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_enrollment_count(desc: true).pluck(:id)
+    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count.map {|w| w.enrollments.count}
+    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
+    assert_equal [2, 1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
   end
 
   test 'order_by_enrollment_count with duplicates' do
     workshops = [
       @workshop,
+      @organizer_workshop,
       build(:pd_workshop),
       build(:pd_workshop, num_enrollments: 1),
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
-    assert_equal [1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
+    assert_equal [0, 0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
+    assert_equal [1, 0, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
   end
 
   test 'order_by_state' do
+    @workshop.started_at = Time.now
     workshops = [
       build(:pd_ended_workshop), # Ended
-      build(:pd_workshop, started_at: Time.now), # In Progress
+      # build(:pd_workshop, started_at: Time.now), # In Progress
       @workshop, # Not Started
+      @organizer_workshop # Not Started
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
@@ -656,7 +724,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal enrollments.pluck(:id).sort, @workshop.unattended_enrollments.pluck(:id).sort
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizer_or_facilitator?' do
+    facilitator = create :facilitator
+    @organizer_workshop.facilitators << facilitator
+    another_organizer = create :workshop_organizer
+    another_facilitator = create :facilitator
+
+    assert @organizer_workshop.organizer_or_facilitator?(@workshop_organizer)
+    assert @organizer_workshop.organizer_or_facilitator?(facilitator)
+    refute @organizer_workshop.organizer_or_facilitator?(another_organizer)
+    refute @organizer_workshop.organizer_or_facilitator?(another_facilitator)
+  end
+
+  test 'organizer_or_facilitator? with program manager organizer' do
     facilitator = create :facilitator
     @workshop.facilitators << facilitator
     another_organizer = create :workshop_organizer
@@ -730,10 +811,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'suppress_reminders?' do
     suppressed = [
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_FIT),
       create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
       create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
       create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
-      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT)
     ]
 
     refute @workshop.suppress_reminders?
@@ -858,6 +940,178 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'friendly_location with no location returns tba' do
     workshop = build :pd_workshop, location_address: '', processed_location: nil
     assert_equal 'Location TBA', workshop.friendly_location
+  end
+
+  test 'workshops organized by a non program manager are not assigned regional partner' do
+    workshop = create :pd_workshop
+    assert_nil workshop.regional_partner
+  end
+
+  test 'workshops organized by a program manager are assigned the regional partner' do
+    regional_partner = create :regional_partner
+    program_manager = create :program_manager, regional_partner: regional_partner
+    workshop = create :pd_workshop, organizer: program_manager
+
+    assert_equal regional_partner, workshop.regional_partner
+  end
+
+  test 'csf funded workshops require a funding type' do
+    workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSF,
+      funded: true, funding_type: nil
+    refute workshop.valid?
+
+    workshop.funding_type = Pd::Workshop::FUNDING_TYPE_FACILITATOR
+    assert workshop.valid?
+  end
+
+  test 'csf unfunded workshops do not accept a funding type' do
+    workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSF,
+      funded: false, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR
+    refute workshop.valid?
+
+    workshop.funding_type = nil
+    assert workshop.valid?
+  end
+
+  test 'non-csf workshops do not accept a funding type' do
+    [
+      [{funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR}, false],
+      [{funded: false, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR}, false],
+      [{funded: true, funding_type: nil}, true],
+      [{funded: false, funding_type: nil}, true]
+    ].each do |params, expected_validity|
+      workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSP, **params
+      assert_equal(
+        expected_validity,
+        workshop.valid?,
+        "Expected #{params} to be #{expected_validity ? 'valid' : 'invalid'}"
+      )
+    end
+  end
+
+  test 'funded_friendly_name' do
+    [
+      [
+        {funded: false},
+        'No'
+      ],
+      [
+        {course: Pd::Workshop::COURSE_CSP, funded: true},
+        'Yes'
+      ],
+      [
+        {course: Pd::Workshop::COURSE_CSF, funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_PARTNER},
+        'Yes: partner'
+      ],
+      [
+        {course: Pd::Workshop::COURSE_CSF, funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR},
+        'Yes: facilitator'
+      ]
+    ].each do |params, expected|
+      workshop = build :pd_workshop, **params
+      assert_equal(
+        expected,
+        workshop.funding_summary,
+        "Expected #{params} funded_friendly_name to be #{expected}"
+      )
+    end
+  end
+
+  test 'nearest' do
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+
+    assert_equal target, Pd::Workshop.nearest
+  end
+
+  test 'nearest is independent of creation order' do
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+
+    nearest_workshop = Pd::Workshop.nearest
+    assert_equal target, nearest_workshop
+
+    # Also make sure attributes are included
+    assert_equal target.course, nearest_workshop.course
+    assert_equal 1, nearest_workshop.sessions.count
+  end
+
+  test 'nearest with no matches returns nil' do
+    assert_nil Pd::Workshop.none.nearest
+  end
+
+  test 'nearest combined with subject and enrollment' do
+    user = create :teacher
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.day,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+
+    create :pd_enrollment, :from_user, user: user, workshop: target
+
+    same_subject_farther = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
+
+    different_subject_closer = create :pd_workshop, num_sessions: 1, sessions_from: Date.today,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
+    create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
+
+    # closer, not enrolled
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+
+    found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
+    assert_equal target, found
+  end
+
+  test 'with_nearest_attendance_by' do
+    teacher = create :teacher
+
+    # 2 workshops on the same day
+    workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day
+
+    # Attend first session from one
+    create :pd_attendance, session: workshops[0].sessions[0], teacher: teacher
+    nearest_workshop = Pd::Workshop.with_nearest_attendance_by(teacher)
+    assert_equal workshops[0], nearest_workshop
+
+    # Also make sure attributes are included
+    assert_equal workshops[0].course, nearest_workshop.course
+    assert_equal 2, nearest_workshop.sessions.count
+
+    # Attend second session (today, now nearest) from the other
+    create :pd_attendance, session: workshops[1].sessions[1], teacher: teacher
+    assert_equal workshops[1], Pd::Workshop.with_nearest_attendance_by(teacher)
+  end
+
+  test 'nearest_attended_or_enrolled_in_by' do
+    teacher = create :teacher
+    other_teacher = create :teacher
+
+    # 2 workshops on the same day for each course
+    csd_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSD
+    csp_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSP
+
+    # Enroll in the first of each
+    create :pd_enrollment, :from_user, user: teacher, workshop: csd_workshops[0]
+    create :pd_enrollment, :from_user, user: teacher, workshop: csp_workshops[0]
+
+    assert_nil Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(other_teacher)
+
+    # No attendances, expect enrolled workshop
+    assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
+
+    # Now enroll in and attend the second csp workshop, expect the attended one
+    create :pd_enrollment, :from_user, user: teacher, workshop: csp_workshops[1]
+    create :pd_attendance, teacher: teacher, session: csp_workshops[1].sessions.first
+    assert_equal csp_workshops[1], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
+
+    # Switch workshops half way through. (Yes this actually happened in the wild)
+    # No problem. Return the one associated with the most recent attendance
+    create :pd_attendance, teacher: teacher, session: csp_workshops[0].sessions.last
+    assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
   end
 
   private

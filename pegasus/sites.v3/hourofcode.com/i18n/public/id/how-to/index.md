@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Bagaimana mengajar satu jam Hour of Code</h1>
 
-Bergabung dengan gerakan dan kenalkan para pelajar tentang satu jam pertama mereka dalam mempelajari ilmu komputer dengan langkah-langkah berikut. Kelas pemograman satu jam ini sungguh mudah untuk dilakukan - bahkan untuk pemula sekalipun! Jika Anda ingin set ekstra tangan untuk membantu, Anda dapat menemukan [relawan lokal](<%= resolve_url('https://code.org/volunteer/local') %>) untuk membantu menjalankan Jam Kode di kelas Anda.
+Bergabung dengan gerakan dan perkenalkan sekelompok pelajar untuk jam pertama ilmu komputer mereka dengan langkah-langkah berikut. Hour of Code mudah dijalankan - bahkan untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -21,11 +21,11 @@ Promosikan Jam Kode Anda [ dengan alat ini ](<%= resolve_url('/promote/resources
 
 ## 4. Rencanakan kebutuhan teknologi Anda - komputer bersifat opsional
 
-Pengalaman Jam Pemrograman terbaik termasuk komputer yang terhubung dengan internet. Tetapi Anda **tidak** memerlukan sebuah komputer untuk setiap peserta, dan Anda bahkan dapat melakukan Hour of Code tanpa menggunakan komputer sama sekali.
+Pengalaman Jam Pemrograman terbaik termasuk komputer yang terhubung dengan internet. Tetapi Anda **tidak** memerlukan komputer untuk setiap anak, dan Anda bahkan dapat melakukan Hour of Code tanpa komputer sama sekali.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Pastikan untuk menguji tutorial pada komputer siswa atau perangkat untuk memastikan mereka bekerja dengan baik pada browser dengan suara dan video. **bandwidth rendah?** Berencana untuk menampilkan video di depan kelas, jadi setiap siswa tidak men-download video mereka sendiri. Atau coba tutorial unplugged / offline.
 
-Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik mereka sendiri, jika tutorial Anda berjalan lebih baik dengan suara.
+Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik mereka sendiri, jika tutorial yang Anda pilih, akan lebih baik dijalankan dengan suara.
 
 ** Tidak punya cukup perangkat? </ strong> Gunakan [ pemrograman pasangan ](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu pengetahuan komputer bersifat sosial dan kolaborasi.</p> 
 
@@ -33,18 +33,18 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 ## 5. Mulai Jam Anda dari Kode off dengan speaker inspirasi atau video yang
 
-** Undang [relawan lokal](<%= resolve_url('https://code.org/volunteer/local') %>) untuk menginspirasi siswa Anda dengan berbicara tentang luasnya kemungkinan di komputer ilmu. ** Ada ribuan sukarelawan di seluruh dunia yang siap membantu Jam Kode Anda melalui kunjungan kelas atau obrolan video dengan murid-murid Anda!
+**Invite a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Tampilkan rekaman gambar yang menginspirasi:**
 
 - Asli Kode.org peluncuran video, menampilkan Bill Gates, Mark Zuckerberg, dan bintang NBA Chris Bosh. (Ada [ 1 menit ](https://www.youtube.com/watch?v=qYZF6oIZtfc), <a href = "https://www.youtube.com/watch?v = nKIu9yen5nc "> 5 menit </a>, dan [ 9 menit ](https://www.youtube.com/watch?v=dU1xS07N-FA) versi yang tersedia)
-- Temukan lebih banyak [sumber daya](<%= resolve_url('https://code.org/inspire') %>) dan [video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) yang inspiratif.
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Tidak apa-apa jika Anda dan siswa Anda baru mengenal ilmu komputer. Berikut adalah beberapa gagasan untuk memperkenalkan aktivitas Jam Kode Anda:**
 
 - Jelaskan bagaimana teknologi mempengaruhi kehidupan kita, dengan contoh yang akan diperhatikan anak laki-laki dan anak perempuan (berbicara tentang menyelamatkan nyawa, membantu orang, menghubungkan orang, dll.).
 - Sebagai sebuah kelas, daftarkan hal-hal yang menggunakan kode dalam kehidupan sehari-hari.
-- Lihat tips untuk mendapatkan anak perempuan tertarik pada komputer ilmu [sini](<%= resolve_url('https://code.org/girls')%>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
 
 ## 6. Kode!
 
@@ -79,7 +79,7 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 [/col-33]
 
-- [sertifikat Cetak ](<%= resolve_url('https://code.org/certificates')%>) bagi siswa Anda.
+- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
 - [Cetak stiker "Aku telah menyelesaikan Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) untuk siswa.
 - [Pesanan kustom t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) untuk sekolah Anda.
 - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
@@ -101,7 +101,7 @@ Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa milik me
 
 Hour of Code adalah langkah pertama dalam suatu perjalanan untuk mempelajari lebih lanjut bagaimana teknologi bekerja dan bagaimana membuat aplikasi perangkat lunak. Untuk melanjutkan perjalanan ini:
 
-- Mendorong siswa untuk terus [belajar secara online ](<%= resolve_url('https://code.org/learn/beyond')%>).
-- [Hadiri](<%= resolve_url('https://code.org/professional-development-workshops') %>) workshop 1-hari, di-orang untuk menerima instruksi dari berpengalaman komputer ilmu fasilitator. (Hanya pengajar AS)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

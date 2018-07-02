@@ -15,6 +15,7 @@
   },
   "published": true,
   "notes": "NOTE: I added an \"answer\" field to the JSON encoding for the encrypted strings.  This should be ignored by Elijah's interpreter.  But I thought some sort of key should go SOMEWHERE since I really used, you know, random substitution and didn't want to have to crack all of them to find out.  So they're all in one place....\r\n\r\n{\"title\":\"Encrypted Sample 1\",\"answer\": \"Hitchhiker's guide to the galaxy - Far out in the uncharted backwaters of the unfashionable...\"\r\n{\"title\":\"Encrypted Sample 2\",\"answer\":\"Aloe Black song - Feeling my way through the darkness...\"\r\n{\"title\":\"Encrypted Sample 3\",\"answer\":\"Gettysburg Address -- Four score and seven years ago...\"\r\n{\"title\":\"Encrypted Sample 4\",\"answer\":\"I'm Happy Lyrics--It might seem crazy what I'm about to say...\"\r\n{\"title\":\"Encrypted Sample 5\",\"answer\":\"I Have a Dream speech -- so even though we face...\"",
+  "audit_log": "[{\"changed_at\":\"2018-05-10 20:53:22 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

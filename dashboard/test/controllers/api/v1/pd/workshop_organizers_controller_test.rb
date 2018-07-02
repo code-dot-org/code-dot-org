@@ -3,7 +3,7 @@ require 'test_helper'
 class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCase
   test_user_gets_response_for :index, response: :success, user: :workshop_admin
 
-  [:teacher, :workshop_organizer].each do |user_type|
+  [:teacher, :workshop_organizer, :program_manager].each do |user_type|
     test_user_gets_response_for :index, response: :forbidden, user: user_type
   end
 

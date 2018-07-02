@@ -38,13 +38,19 @@ require 'cdo/cron'
 self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
 
 # Don't provision daemon where manually-provisioned daemon instances already exist.
+# Track Instance ID of manually-provisioned daemon instances that already exist and can't be referenced dynamically
 # TODO migrate stacks to cloudformation-provisioned instances.
-self.daemon = 'Daemon' unless %w(
-  autoscale-prod
-  test
-  staging
-  levelbuilder
-).include? stack_name
+if %w(autoscale-prod test staging levelbuilder).include? stack_name
+  self.daemon_instance_id = {
+    'autoscale-prod' => 'i-436d69dd',
+    'test' => 'i-f85e6666',
+    'staging' => 'i-57a3afc7',
+    'levelbuilder' => 'i-03a540ccf70cc8138'
+  }[stack_name]
+else
+  self.daemon = 'Daemon'
+end
+
 # Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
 self.daemon = 'WebServer' if rack_env?(:adhoc) && !frontends
 -%>
@@ -346,7 +352,7 @@ Resources:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
       AutoScalingGroupName: !Ref Frontends
-      MinSize: 5
+      MinSize: 4
       Recurrence: <%= Cdo::Cron.weekdays_at '4am' %>
   ClassroomScaleDown:
     Type: AWS::AutoScaling::ScheduledAction
@@ -401,10 +407,8 @@ Resources:
         app.downcase.to_sym,
         subdomain('origin'),
         app == 'Dashboard' ?
-          # TODO: Set prod_stack_name: false after production cutover to CloudFormation-managed CloudFront distribution,
-          # to update CloudFront aliases to the production CNAME entries.
-          [studio_subdomain(prod_stack_name: true)] :
-          [subdomain(prod_stack_name: true)] + (CDO.partners).map{|x| subdomain(nil, x, prod_stack_name: true)},
+          [studio_subdomain] :
+          [subdomain] + (CDO.partners + ['advocacy']).map{|x| subdomain(nil, x)},
         {
           AcmCertificateArn: certificate_arn,
           MinimumProtocolVersion: 'TLSv1',
@@ -527,6 +531,46 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
 <%end-%>
+  DaemonStorageUtilizationAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
+      AlarmDescription: Send page if daemon storage utilization exceeds 80% for an hour
+      AlarmName: <%="#{stack_name}_daemon_high_storage_utilization" %>
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: Filesystem
+          Value: '/dev/xvda1'
+        - Name: MountPath
+          Value: '/'
+        - Name: InstanceId
+          Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
+      EvaluationPeriods: 60
+      MetricName: DiskSpaceUtilization
+      Namespace: 'System/Linux'
+      Period: 60
+      Statistic: Average
+      Threshold: 80
+      TreatMissingData: missing
+  DaemonMemoryUtilizationAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
+      AlarmDescription: Send page if daemon memory utilization exceeds 87% for 5 minutes
+      AlarmName: <%="#{stack_name}_daemon_high_memory_utilization" %>
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: InstanceId
+          Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
+      EvaluationPeriods: 5
+      MetricName: MemoryUtilization
+      Namespace: 'System/Linux'
+      Period: 60
+      Statistic: Maximum
+      Threshold: 87
+      TreatMissingData: missing
 <% if database -%>
   Database:
     Type: AWS::RDS::DBInstance
@@ -565,3 +609,9 @@ Outputs:
   PegasusURL:
     Value: "https://<%=subdomain%>"
     Description: Pegasus URL
+# display information about how to ssh to console if this is a single instance adhoc environment
+<% if rack_env?(:adhoc) && !frontends -%>
+  SSHServerName:
+    Value: <%=subdomain%>
+    Description: SSH server name
+<%end-%>

@@ -2,6 +2,8 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
+import Notification from '../Notification';
+import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
 import StudentSections from './StudentSections';
@@ -12,12 +14,19 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 
+const styles = {
+  clear: {
+    clear: 'both',
+    height: 30
+  }
+};
+
 export default class TeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
     courses: shapes.courses,
     topCourse: shapes.topCourse,
-    announcements: PropTypes.array.isRequired,
+    announcement: shapes.teacherAnnouncement,
     queryStringOpen: PropTypes.string,
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
@@ -110,15 +119,18 @@ export default class TeacherHomepage extends Component {
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
+    $('#teacher_reminders').appendTo(ReactDOM.findDOMNode(this.refs.teacherReminders)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   }
 
   render() {
-    const { courses, topCourse, joinedSections } = this.props;
+    const { courses, topCourse, announcement, joinedSections } = this.props;
     const { ncesSchoolId, censusQuestion, schoolYear } = this.props;
     const { teacherId, teacherName, teacherEmail } = this.props;
     const { canViewAdvancedTools, isEnglish, queryStringOpen } = this.props;
+
+    // Don't show the special announcement for now.
+    const showSpecialAnnouncement = false;
 
     return (
       <div>
@@ -130,9 +142,27 @@ export default class TeacherHomepage extends Component {
           ref="flashes"
         />
         <ProtectedStatefulDiv
-          ref="termsReminder"
+          ref="teacherReminders"
         />
-        {this.state.showCensusBanner && isEnglish && (
+        {isEnglish && showSpecialAnnouncement && (
+          <SpecialAnnouncementActionBlock/>
+        )}
+        {announcement && (
+          <div>
+            <Notification
+              type={announcement.type || "bullhorn"}
+              notice={announcement.heading}
+              details={announcement.description}
+              dismissible={false}
+              buttonText={announcement.buttonText}
+              buttonLink={announcement.link}
+              newWindow={true}
+              analyticId={announcement.id}
+            />
+            <div style={styles.clear}/>
+          </div>
+        )}
+        {this.state.showCensusBanner && (
            <div>
              <CensusTeacherBanner
                ref={this.bindCensusBanner}

@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. მოემზადეთ ღონისძიებისთვის
 
 - განსაზღვრეთ ადგილი, თარიღი და დრო.
-- გაუგზავნეთ [წერილი](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) და მოიწვიეთ სპიკერად ქალაქის მერი, მთავრობის სხვა წარმომადგენელი ან გავლენიანი ბიზნესმენი. თუ თქვენს ღონისძიებას მთავრობის წარმომადგენელი ეწვევა, მეტი ინფორმაციის მისაღებად გადახედეთ ჩვენს [თუ-როგორ ინსტრუმენტების კომპლექტს](<%=resolve_url('/files/elected-official.pdf')%>).
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - დაპატიჟეთ მედია/პრესა. მაგალითად ადგილობრივი რადიო, გაზეთი, ბლოგერები. ნახეთ ჩვენი [დანართი პრესისთვის](<%= resolve_url('/promote/press-kit') %>).
 
 ## 2. ღონისძიების განმავლობაში
@@ -39,7 +39,7 @@ nav: how_to_nav
 
 **ღონისძიება:** სკოლაში კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის გახსნა
 
-**თარიღი:** 5 დეკემბერი (კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის დასაწყისი)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **დრო:** სასკოლო დროს. სასურველია თორმეტი საათისკენ. ხანგრძლივობა დაახლოებით 1 საათი.
 

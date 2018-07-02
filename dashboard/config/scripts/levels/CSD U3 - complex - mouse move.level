@@ -72,7 +72,6 @@
       "comment_Drawing": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# mouseDidMove\r\n\r\nWe can also use Boolean expressions to check whether or not the mouse has moved. The `mouseDidMove` block will return `false` if the mouse is still, but `true` if the mouse has been moving.\r\n\r\n# Do This\r\nRight now, this program just displays a salt shaker sprite. You'll need to use `mouseDidMove` so that you can \"shake\" the salt by moving the mouse back and forth.\r\n\r\n* Add a conditional that checks if `mouseDidMove`.\r\n* If the conditional is true, rotate the salt sprite randomly to the left or right.\r\n\r\n_Challenge: Can you keep track of how many times the `mouseDidMove` shakes the salt, and then rotate it right side up after 100 shakes?_",
@@ -99,9 +98,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "callout_json": "[]",
-    "start_blocks": "var salt = createSprite (200, 200);\r\nsalt.setAnimation(\"salt\");\r\nsalt.rotation = 150;\r\n\r\nfunction draw() {\r\n  background(\"skyblue\");\r\n  \r\n  // If mouseDidMove, rotate the salt randomly to the left or right\r\n  \r\n  drawSprites();\r\n}",
     "hide_animation_mode": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\": {\r\n      \"name\": \"salt\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/z_qn83ftD6Be6o4jqROXGw/30cff2ca-74f5-47a9-b863-d3777b89b368.png?version=pD_G4aOqeo06a7_kV.wGAvOPmupLzWAU\",\r\n      \"frameSize\": {\r\n        \"x\": 95,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"pD_G4aOqeo06a7_kV.wGAvOPmupLzWAU\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\": {\r\n      \"name\": \"salt\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/ccdnzSzhf2kJL4Lm6QrdYNGiGgzRnzDJpZLzfBsKFs0/30cff2ca-74f5-47a9-b863-d3777b89b368.png?version=yA2tln0BDT.7U2r9wxbBQH1lY9Cx_4Hl\",\r\n      \"frameSize\": {\r\n        \"x\": 95,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"yA2tln0BDT.7U2r9wxbBQH1lY9Cx_4Hl\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
@@ -112,11 +110,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "top_level_procedure_autopopulate": "false",
+    "start_blocks": "var salt = createSprite (200, 200);\r\nsalt.setAnimation(\"salt\");\r\nsalt.rotation = 150;\r\n\r\nfunction draw() {\r\n  background(\"skyblue\");\r\n  \r\n  // If mouseDidMove, rotate the present randomly to the left or right\r\n  \r\n  drawSprites();\r\n}",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-02 16:56:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-02 16:56:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-23 21:03:55 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-27 19:13:39 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

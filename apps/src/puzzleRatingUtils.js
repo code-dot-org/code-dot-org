@@ -3,6 +3,8 @@
  * Ratings, aka the Fun-O-Meter.
  */
 
+import locale from '@cdo/locale';
+
 import $ from 'jquery';
 import { trySetLocalStorage } from './utils';
 var dom = require('./dom');
@@ -19,7 +21,9 @@ module.exports = puzzleRatingUtils;
 puzzleRatingUtils.buildPuzzleRatingButtons = function () {
   var buttonContainer = document.createElement('div');
   buttonContainer.id = 'puzzleRatingButtons';
-  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')();
+  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')({
+    label: locale.puzzleRatingQuestion()
+  });
 
   var buttons = buttonContainer.querySelectorAll('.puzzle-rating-btn');
   var buttonClickHandler = function () {

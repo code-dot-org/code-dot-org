@@ -9,9 +9,13 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "display_name": "End of Course Projects"
+    "display_name": "Video: CS Matters",
+    "name_suffix": "_2018"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-12 00:09:01 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

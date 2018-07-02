@@ -6,3 +6,6 @@ linters:
     exclude:
       - '/**/pegasus/**/*.haml'
       - 'pegasus/**/*.haml'
+exclude:
+- '/**/pegasus/test/fixtures/**/*.haml'
+- 'pegasus/test/fixtures/**/*.haml'

@@ -44,7 +44,7 @@ Gebruik deze [posters, banners, stickers, video's en meer](<%= resolve_url('/pro
 
 ## 2. Vind een vrijwilliger uit de buurt die u kunt helpen met uw evenement.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Plan your Hour of Code
 

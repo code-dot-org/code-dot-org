@@ -6,9 +6,13 @@ import BaseDialog from './BaseDialog';
 import GeneratedCode from './feedback/GeneratedCode';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
+import Confetti from 'react-dom-confetti';
+import StageProgress from '@cdo/apps/code-studio/components/progress/StageProgress';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import React, { Component, PropTypes } from 'react';
 import color from '../util/color';
 import msg from '@cdo/locale';
+import { shareProject } from '@cdo/apps/code-studio/headerShare';
 
 const styles = {
   pageWrapper: {
@@ -21,21 +25,28 @@ const styles = {
     left: 0,
     right: 0,
     margin: 'auto',
-    zIndex: 1050,
+    zIndex: 1040,
   },
   modal: {
-    width: 375,
+    position: 'relative',
+    width: 450,
     backgroundColor: color.white,
     borderRadius: 10,
   },
   header: {
     backgroundColor: color.light_teal,
-    height: 40,
+    height: 50,
     width: '100%',
     borderRadius: '10px 10px 0px 0px',
   },
   content: {
-    padding: '42px 56px 5px',
+    padding: '8px 0 5px',
+    textAlign: 'center',
+  },
+  confetti: {
+    position: 'relative',
+    left: '50%',
+    top: 150,
   },
   bubbleContainer: {
     width: 74,
@@ -45,9 +56,9 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.light_teal,
     backgroundColor: color.white,
-    margin: 'auto',
-    position: 'relative',
-    top: -30,
+    position: 'absolute',
+    top: -25,
+    left: -20,
     padding: 8,
   },
   bubble: {
@@ -65,17 +76,18 @@ const styles = {
     justifyContent: 'center',
   },
   blockCountWrapper: {
-    textAlign: 'center',
+    color: color.white,
+    textAlign: 'right',
+    marginRight: 10,
   },
   blockCountLabel: {
     fontSize: 20,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.dark_charcoal,
+    fontFamily: '"Gotham 5r", sans-serif',
     verticalAlign: 'middle',
   },
   blockCount: {
     fontSize: 30,
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     margin: 7,
     verticalAlign: 'middle',
   },
@@ -87,30 +99,70 @@ const styles = {
   },
   blockCountDescriptor: {
     borderRadius: 5,
-    borderWidth: 1,
-    borderStyle: 'solid',
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
     padding: 5,
     verticalAlign: 'middle',
+    background: color.white,
+  },
+  mastery: {
+    display: 'inline-block',
+  },
+  share: {
+    float: 'left',
+    width: 180,
+    height: 200,
+    paddingTop: 20,
+  },
+  thumbnail: {
+    width: 150,
+    height: 150,
+    backgroundSize: 'cover',
+    marginLeft: 15,
+    border: '1px solid',
+  },
+  shareButton: {
+    background: color.cyan,
+    color: color.white,
+  },
+  achievementWrapper: {
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  achievementsHeading: {
+    margin: '20px auto 0',
+    color: color.light_gray,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 16,
   },
   achievements: {
-    width: 217,
     display: 'block',
-    margin: '14px 0px 0px',
-    padding: '0px 23px',
-    borderColor: color.light_teal,
-    borderWidth: 1,
+    margin: '4px auto 4px',
+    borderColor: color.lighter_gray,
+    borderWidth: "1px 0",
     borderStyle: 'solid',
-    borderRadius: 5,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
     color: color.dark_charcoal,
+    overflow: 'hidden',
   },
   achievementIcon: {
-    width: 16,
+    color: color.teal,
+    marginRight: 6,
+    fontSize: 32,
+    verticalAlign: 'middle',
+  },
+  achievementText: {
+    verticalAlign: 'middle',
   },
   achievementRow: {
-    margin: 4,
+    padding: 10,
+    boxSizing: 'border-box',
+    textAlign: 'left',
+  },
+  achievementRowNonShare: {
+    width: '50%',
+    float: 'left',
   },
   generatedCodeWrapper: {
     padding: '30px 25px 15px 25px',
@@ -119,8 +171,8 @@ const styles = {
   },
   funometer: {
     marginTop: 5,
+    marginLeft: 20,
     display: 'flex',
-    flexDirection: 'row-reverse',
     minHeight: 32,
   },
   button: {
@@ -167,6 +219,7 @@ export class UnconnectedFinishDialog extends Component {
     onContinue: PropTypes.func,
     onReplay: PropTypes.func,
 
+    isChallenge: PropTypes.bool,
     isPerfect: PropTypes.bool,
     blocksUsed: PropTypes.number,
     blockLimit: PropTypes.number,
@@ -177,11 +230,12 @@ export class UnconnectedFinishDialog extends Component {
       message: PropTypes.string,
     })),
     showFunometer: PropTypes.bool,
-    canShare: PropTypes.bool,
+    getShareUrl: PropTypes.func,
     studentCode: PropTypes.shape({
       message: PropTypes.string,
       code: PropTypes.string,
     }),
+    feedbackImage: PropTypes.string,
   };
 
   componentWillReceiveProps(nextProps) {
@@ -270,18 +324,18 @@ export class UnconnectedFinishDialog extends Component {
         <span style={styles.blockCountLabel}>
           {msg.numBlocksUsedLabel()}:
         </span>
+        <span style={styles.blockCount}>
+          <Odometer
+            defaultValue={this.state.blocksCounted ? this.props.blocksUsed : 0}
+            value={this.props.blocksUsed}
+            onRest={() => this.setState({blocksCounted: true})}
+          />
+          {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
+        </span>
         <span
           style={tooManyBlocks ?
             styles.blockCountPass : styles.blockCountPerfect}
         >
-          <span style={styles.blockCount}>
-            <Odometer
-              defaultValue={this.state.blocksCounted ? this.props.blocksUsed : 0}
-              value={this.props.blocksUsed}
-              onRest={() => this.setState({blocksCounted: true})}
-            />
-            {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
-          </span>
           {this.getBlockCountDescription()}
         </span>
       </div>
@@ -289,10 +343,6 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   getAchievements() {
-    if (!this.props.achievements || this.props.achievements.length === 0) {
-      return null;
-    }
-
     const defaultStyles = this.props.achievements.map(() => ({
       color: this.state.achievementsHightlighted ? 1 : 0,
     }));
@@ -325,6 +375,7 @@ export class UnconnectedFinishDialog extends Component {
                 <div
                   style={{
                     ...styles.achievementRow,
+                    ...(!this.props.feedbackImage && styles.achievementRowNonShare),
                     color: interpolateColors(
                       color.lighter_gray,
                       color.dark_charcoal,
@@ -333,13 +384,13 @@ export class UnconnectedFinishDialog extends Component {
                   }}
                   key={index}
                 >
-                  <img
-                    src={style.color > 0 ?
-                      achievement.successIconUrl :
-                      achievement.failureIconUrl}
+                  <FontAwesome
+                    icon="check-circle-o"
                     style={styles.achievementIcon}
                   />
-                  {achievement.message}
+                  <span style={styles.achievementText}>
+                    {achievement.message}
+                  </span>
                 </div>
               );
             })}
@@ -409,6 +460,9 @@ export class UnconnectedFinishDialog extends Component {
       return null;
     }
 
+    const confetti = this.props.isChallenge && this.props.isPerfect && this.state.blocksCounted;
+    const showAchievements = this.props.achievements && this.props.achievements.length !== 0;
+
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
@@ -422,8 +476,12 @@ export class UnconnectedFinishDialog extends Component {
             <div
               style={styles.modal}
             >
+              <div style={styles.confetti}>
+                <Confetti active={confetti} />
+              </div>
               <div style={styles.header}>
                 {this.getBubble()}
+                {this.getBlockCounter()}
               </div>
               {this.state.showingCode ?
                 <div style={styles.generatedCodeWrapper}>
@@ -433,9 +491,44 @@ export class UnconnectedFinishDialog extends Component {
                     style={styles.generatedCode}
                   />
                 </div> :
-                <div style={styles.content}>
-                  {this.getBlockCounter()}
-                  {this.getAchievements()}
+                <div
+                  style={{
+                    ...styles.content,
+                    ...(this.props.feedbackImage && {minHeight: 277}),
+                  }}
+                >
+                  <div style={styles.mastery}>
+                    <StageProgress stageTrophyEnabled />
+                  </div>
+                  {this.props.feedbackImage &&
+                    <div style={styles.share}>
+                      <div
+                        style={{
+                          ...styles.thumbnail,
+                          backgroundImage: `url(${this.props.feedbackImage})`,
+                        }}
+                      />
+                      <button
+                        style={styles.shareButton}
+                        onClick={() => shareProject(this.props.getShareUrl())}
+                      >
+                        {msg.share()}
+                      </button>
+                    </div>
+                  }
+                  {showAchievements &&
+                    <div
+                      style={{
+                        ...styles.achievementWrapper,
+                        ...(this.props.feedbackImage && {marginLeft: 180}),
+                      }}
+                    >
+                      <div style={styles.achievementsHeading}>
+                        {msg.achievements()}
+                      </div>
+                      {this.getAchievements()}
+                    </div>
+                  }
                   {this.getFunometer()}
                 </div>}
             </div>
@@ -451,13 +544,14 @@ export class UnconnectedFinishDialog extends Component {
 
 export default connect(state => ({
   isOpen: state.feedback.displayingFeedback,
+  isChallenge: state.feedback.isChallenge,
   isPerfect:  state.feedback.isPerfect,
   blocksUsed: state.feedback.blocksUsed,
   blockLimit: state.feedback.blockLimit,
   achievements: state.feedback.achievements,
   showFunometer: state.feedback.displayFunometer,
-  canShare: state.feedback.canShare,
   studentCode: state.feedback.studentCode,
+  feedbackImage: state.feedback.feedbackImage,
 }), dispatch => ({
   onReplay: () => dispatch(hideFeedback()),
 }))(UnconnectedFinishDialog);

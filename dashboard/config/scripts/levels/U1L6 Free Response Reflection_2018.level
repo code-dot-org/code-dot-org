@@ -1,0 +1,17 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-26T22:50:39.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Number Systems",
+    "markdown_instructions": " In 50 words or less, describe the concept of a number system. \n\nWhy are rules required for a number system to be useful?\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 1914,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

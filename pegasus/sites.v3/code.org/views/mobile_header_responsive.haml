@@ -2,6 +2,7 @@
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]
+- user_type = "student" if user_type == "student_y"
 
 #pageheader-wrapper
   - pageheader_class = request.path_info == '/' ? 'pageheader-translucent' : ''

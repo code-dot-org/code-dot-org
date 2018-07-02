@@ -163,7 +163,7 @@ class Notification extends Component {
       return null;
     }
     return (
-      <div>
+      <div className="announcement-notification">
         <div style={[styles.colors[type], mainStyle]}>
           {type !== NotificationType.course && (
             <div style={[styles.iconBox, styles.colors[type]]}>

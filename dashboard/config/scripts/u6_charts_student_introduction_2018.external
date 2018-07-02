@@ -1,0 +1,23 @@
+name 'U6 - Charts - Student Introduction_2018'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Visualizing Data
+
+## Background
+
+You've already learned about charts and visualizations and how they can help people make sense of data. In this lesson, you will learn how to use the `drawChartFromRecords` command in App Lab to add visualizations to your apps. This command uses the data stored in your app's database.
+
+## Vocabulary
+
+* `drawChartFromRecords` - the App Lab command for drawing a chart in a Chart UI element, using the records stored in a database. 
+
+## Lesson
+
+* Introduction to `drawChartFromRecords` command.
+* Create a scatter chart in App Lab.
+* Create a line chart in App Lab.
+* Customize a chart using the `options` parameter of `drawChartFromRecords`.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

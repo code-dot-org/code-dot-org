@@ -39,6 +39,7 @@
     "markdown_instructions": "Underneath this cloud, there might be a flower with an unknown amount of nectar, or a honeycomb with an unknown amount of honey.  \r\n\r\nCan you write a program that can handle either?",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

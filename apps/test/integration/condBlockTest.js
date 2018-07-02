@@ -111,7 +111,9 @@ describe('functional_cond_number', function () {
     validatePairs(block, [0, 2]);
 
     Blockly.BlockSpaceEditor.copy_(block);
-    Blockly.mainBlockSpace.paste(Blockly.clipboard_);
+    Blockly.mainBlockSpace.paste({
+      dom: Blockly.Xml.textToDom(Blockly.clipboard_).firstChild,
+    });
 
     assert(Blockly.mainBlockSpace.getAllBlocks().length === 2);
     var pasted = Blockly.mainBlockSpace.getAllBlocks()[1];

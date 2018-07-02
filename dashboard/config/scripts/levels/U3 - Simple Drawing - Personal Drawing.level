@@ -60,7 +60,6 @@
     "instructions": "DO This",
     "markdown_instructions": "# Your Own Drawing\r\n\r\nIt is your turn to create your own drawing. You should have drawn out your plan on paper first.\r\n\r\n# Do This\r\nAs a reminder make sure you hit the objectives:\r\n\r\n* Creates an identifiable and named object or design (i.e. no random splatters of shapes)\r\n* Uses at least 10 shapes or text items (rect, ellipse, regularPolygon, text)\r\n* Uses at least 4 different color fills\r\n* Uses at least 2 different color outlines\r\n* Contains at least 3 different logical blocks of code with comments\r\n",
     "start_blocks": "// Create your drawing here",
-    "show_d_pad": "false",
     "hide_animation_mode": "true",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",

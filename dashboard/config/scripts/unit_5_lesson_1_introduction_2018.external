@@ -1,0 +1,44 @@
+name 'Unit 5 Lesson 1 Introduction_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5: Lesson 1 - Buttons and Events
+
+## Background
+
+Modern programming is often event-driven rather than sequential. Sequential programs start at a beginning point and progress to the end point in a way that can be perfectly predicted when the program begins running. 
+
+Event-driven programs do not progress in a predictable order. User-generated events (e.g. mouse clicks, button press, key presses, etc.) are each handled individually by pieces of code, one per event.  For example, you want to write code so that when a user clicks button1 something different happens from when they click button2. 
+
+Event-driven programs like these are dynamic but also bring challenges since you don't know what order user-events might happen in.  It can lead to unpredictable program execution and an associated set of challenges.
+
+## Vocabulary
+
+
+* **User Interface (UI)** - The "User Interface" or UI of an app refers to how a person (user) interacts with the computer or app.
+ * **UI Elements** or objects, like buttons, images, text boxes, pull down menus, screens and so on.
+ * **UI Events** or controls, like *click, scroll, move mouse, type keyboard key*, etc.
+
+* **Event-driven program** -  a program designed to run blocks of code or functions in response to specified events (e.g. a mouse click)
+* **Event handling** - an overarching term for the coding tasks involved in making your app respond to events by triggering functions.
+ * **Event listener** - a command (`onEvent` in App Lab) that can be set up to trigger a function when a particular type of event occurs on a particular UI element.
+ * **Callback function** - a function specified as part of an event listener; it is written by the programmer but *called* by the system as the result of an event trigger.
+
+
+
+## Lesson
+
+* Introduction to App Lab's **Design Mode**
+* Introduction to event handling with `onEvent`
+* Event Driven Programming Patterns
+* Debugging common Event-Driven problems
+* Making a small "Chaser Game"
+
+## Resources
+
+* Video: Introduction to Design Mode (embedded in code studio)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

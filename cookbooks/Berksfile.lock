@@ -1,6 +1,8 @@
 DEPENDENCIES
   apt (~> 2.6.0)
   build-essential (~> 2.1.3)
+  cdo-analytics
+    path: cdo-analytics
   cdo-apps
     path: cdo-apps
   cdo-authorized-keys
@@ -15,6 +17,8 @@ DEPENDENCIES
     path: cdo-github-access
   cdo-home-ubuntu
     path: cdo-home-ubuntu
+  cdo-i18n
+    path: cdo-i18n
   cdo-java-7
     path: cdo-java-7
   cdo-mysql
@@ -45,11 +49,11 @@ DEPENDENCIES
     path: cdo-varnish
   chef-client (~> 4.2.0)
   chef_client_updater
-    git: git://github.com/wjordan/chef_client_updater.git
+    git: https://github.com/wjordan/chef_client_updater.git
     revision: c15baa2bc783f515912665a7b1de00df5d7f0a3e
     branch: update_rubygems_fix
   ixgbevf
-    git: git://github.com/wjordan/chef-ixgbevf.git
+    git: https://github.com/wjordan/chef-ixgbevf.git
     revision: 969318033aecd49dbbd57d9dafd03a84959d7736
     branch: cdo
   ntp (~> 1.8.6)
@@ -63,10 +67,15 @@ GRAPH
     seven_zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.1.3)
-  cdo-apps (0.2.280)
+  cdo-analytics (0.0.0)
+    apt (~> 2.6.0)
+    ark (>= 0.0.0)
+  cdo-apps (0.2.299)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
+    cdo-analytics (>= 0.0.0)
     cdo-cloudwatch-extra-metrics (>= 0.0.0)
+    cdo-i18n (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
     cdo-networking (>= 0.0.0)
@@ -92,9 +101,13 @@ GRAPH
     poise-service (>= 0.0.0)
   cdo-github-access (0.1.8)
   cdo-home-ubuntu (0.1.3)
+  cdo-i18n (0.0.0)
+    apt (~> 2.6.0)
+    cdo-java-7 (>= 0.0.0)
   cdo-java-7 (0.1.1)
     build-essential (>= 0.0.0)
-  cdo-mysql (0.1.4)
+  cdo-mysql (0.1.11)
+    apt (~> 2.6.0)
   cdo-networking (0.1.1)
     ixgbevf (>= 0.0.0)
   cdo-newrelic (0.1.18)
@@ -102,7 +115,7 @@ GRAPH
   cdo-nginx (0.0.12)
     apt (>= 0.0.0)
     ssl_certificate (>= 0.0.0)
-  cdo-nodejs (0.2.20)
+  cdo-nodejs (0.2.24)
     nodejs (>= 0.0.0)
   cdo-postfix (0.2.7)
     apt (>= 0.0.0)
@@ -111,7 +124,9 @@ GRAPH
     redisio (>= 0.0.0)
   cdo-repository (0.2.18)
     cdo-github-access (>= 0.0.0)
-  cdo-ruby (0.2.11)
+  cdo-ruby (0.2.13)
+    apt (~> 2.6.0)
+    sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
   cdo-solr (0.1.8)
     apt (>= 0.0.0)
@@ -119,7 +134,7 @@ GRAPH
     cdo-java-7 (>= 0.0.0)
     poise-service (>= 0.0.0)
   cdo-users (0.1.20)
-  cdo-varnish (0.3.175)
+  cdo-varnish (0.3.183)
     apt (>= 0.0.0)
   chef-client (4.2.4)
     cron (>= 1.2.0)

@@ -13,7 +13,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
-    @admin = create :admin
+    @project_validator = create :project_validator
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
@@ -822,6 +822,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
     sign_in @teacher
 
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt)
+        )
+      )
+
     user_storage_id = storage_id_for_user_id(@student.id)
 
     level = create :applab
@@ -839,10 +849,88 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#codeApp'
     assert_select '#notStarted', 0
+    assert_includes response.body, fake_last_attempt
+  end
+
+  test 'loads applab if you are a project validator viewing a student and they have a channel id' do
+    sign_in @project_validator
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt)
+        )
+      )
+
+    user_storage_id = storage_id_for_user_id(@student.id)
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+    assert_includes response.body, fake_last_attempt
+  end
+
+  test 'does not load applab if you are viewing a student but do not have permission' do
+    sign_in @teacher
+
+    other_student = create :student
+    user_storage_id = storage_id_for_user_id(other_student.id)
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: other_student,
+          level_source: create(:level_source, data: fake_last_attempt)
+        )
+      )
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    create :channel_token, level: level, storage_id: user_storage_id
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage,
+      id: script_level.position,
+      user_id: other_student.id,
+      section_id: @section.id
+    }
+
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+    refute_includes response.body, fake_last_attempt
   end
 
   test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
     sign_in @teacher
+
+    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
+    User.any_instance.
+      expects(:user_level_for).
+      returns(
+        create(:user_level,
+          user: @student,
+          level_source: create(:level_source, data: fake_last_attempt)
+        )
+      )
 
     level = create :applab
     script_level = create :script_level, levels: [level]
@@ -857,6 +945,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '#notStarted'
     assert_select '#codeApp', 0
+    refute_includes response.body, fake_last_attempt
   end
 
   test 'shows expanded teacher panel when student is chosen' do
@@ -1104,8 +1193,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal POST_MILESTONE_MODE.all, assigns(:view_options)[:post_milestone_mode]
   end
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   test "should not see examples if an unauthorized teacher is signed in" do
-    CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     sign_in create(:teacher)
 
@@ -1118,12 +1209,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should see examples if an authorized teacher is signed in" do
-    CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     authorized_teacher = create(:teacher)
-    cohort = create(:cohort)
-    cohort.teachers << authorized_teacher
-    cohort.save!
+    authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert authorized_teacher.authorized_teacher?
     sign_in authorized_teacher
 
@@ -1257,6 +1346,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level
+    experiment.destroy
   end
 
   test "should present experiment level if in the section experiment" do
@@ -1272,6 +1362,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level
+    experiment.destroy
   end
 
   test "should present experiment level if in one of the experiments" do
@@ -1288,6 +1379,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level
+    experiment1.destroy
+    experiment2.destroy
   end
 
   test "should not present experiment level if not in the experiment" do
@@ -1303,6 +1396,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       )
     )
     assert_equal assigns(:level), level2
+    experiment.destroy
   end
 
   test "hidden_stage_ids for user not signed in" do
@@ -1311,6 +1405,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     hidden = JSON.parse(response.body)
     assert_equal [], hidden
+  end
+
+  test "hidden_stage_ids for user signed in" do
+    SectionHiddenStage.create(section_id: @section.id, stage_id: @custom_stage_1.id)
+
+    sign_in @student
+    response = get :hidden_stage_ids, params: {script_id: @script.name}
+    assert_response :success
+
+    hidden = JSON.parse(response.body)
+    assert_equal [@custom_stage_1.id.to_s], hidden
   end
 
   def put_student_in_section(student, teacher, script)
@@ -1466,7 +1571,29 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script.update(redirect_to: new_script.name)
 
     get :show, params: {script_id: script.name, stage_position: '1', id: '2'}
-    assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/1"
+    assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/2"
+  end
+
+  test 'should redirect to 2017 version in script family' do
+    cats1 = create :script, name: 'cats1', family_name: 'cats', version_year: '2017'
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    end
+
+    cats1.update!(is_stable: true)
+    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+
+    create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_stable: true
+    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+
+    # do not redirect within script family if the requested script exists
+    cats = create :script, name: 'cats'
+    create :script_level, script: cats
+    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    assert_response :success
   end
 
   test "should indicate challenge levels as challenge levels" do

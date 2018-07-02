@@ -121,11 +121,29 @@ class RegionalPartnerContactComponent extends FormComponent {
             componentClass: 'textarea'
           })
         }
-
+        {
+          this.buildButtonsFromOptions({
+            name: 'optIn',
+            label: (
+              <div style={{display: 'inline-block'}}>
+                Can we email you about updates to Code.org courses, local opportunities, or other computer science news?
+                &nbsp;
+                <a
+                  href={`${window.dashboard.CODE_ORG_URL}/privacy`}
+                  target="_blank"
+                >
+                  (See our privacy policy)
+                </a>
+              </div>
+            ),
+            type: 'radio',
+            required: true
+          })
+        }
       </FormGroup>
     );
   }
 }
 
 RegionalPartnerContactComponent.associatedFields =
-  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes'];
+  ['firstName', 'lastName', 'title', 'email', 'role', 'jobTitle', 'gradeLevels', 'program', 'notes', 'optIn'];

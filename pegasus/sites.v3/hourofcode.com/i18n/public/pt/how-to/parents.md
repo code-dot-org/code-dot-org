@@ -33,15 +33,15 @@ Dê o pontapé inicial na sua Hora do Código inspirando seu filho e debatendo s
 **Mostre um vídeo inspirador:**
 
 - O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- O [vídeo Mundial da Hora do Código](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Encontre mais [recursos](<%= resolve_url('https://code.org/inspire') %>) e [vídeos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspiradores.
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Tudo bem se você e seu filho não tiverem experiência com ciência da computação. Confira algumas ideias para começar sua atividade da Hora do Código:
 
 - Explique de que forma a tecnologia interfere em nossas vidas, usando exemplos que sensibilizem tanto meninos como meninas (fale sobre salvar vidas, ajudar e conectar pessoas etc.).
 - Monte uma lista com as coisas que usam a programação na vida cotidiana.
-- Veja dicas para deixar as meninas interessadas em ciência da computação [aqui](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 Quer mais ideias? Confira nosso [modelo de plano de aula](/files/AfterschoolEducatorLessonPlanOutline.docx) para as melhores práticas, preparado por educadores experientes.
 
@@ -61,7 +61,7 @@ Tudo bem responder:
 
 ## 6) Comemore
 
-[Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para seu filho (e para você!).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso também!
 
@@ -73,7 +73,7 @@ Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais
 
 A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar essa jornada:
 
-- Incentive seu filho a continuar [a aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - Ajude a [promover](<%= resolve_url('/promote') %>) o ensino de ciência da computação na escola do seu filho.
 
 <%= view :signup_button %>

@@ -1,0 +1,21 @@
+name 'Unit 2 Lesson 7 Overview_2018'
+display_name 'Lesson Overview'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Overview
+
+This lesson introduces CSS as a way to style elements on the page. The class learns the basic syntax for CSS rule-sets and then explores properties that impact HTML text elements.  Finally, everyone applies text styles to their personal websites.
+## Vocabulary
+
+* **CSS** - CSS stands for Cascading Style Sheets. CSS allows each HTML element to be styled according to certain set of rules.
+* **CSS Selector** - Specifies the part of the code which the style should be applied to.
+
+## Introduced Code
+
+*  **[Color](//docs.code.org/weblab/color/)** - `color: value;`
+*  **[Text Align](//docs.code.org/weblab/text-align/)** - `text-align: value;`
+*  **[Text Decoration](//docs.code.org/weblab/Text-Dec/)** - `text-decoration: value;`
+*  **[Font Family](//docs.code.org/weblab/font-family/)** - `font-family:value;`
+*  **[Font Size](//docs.code.org/weblab/font-size/)** - `font-size:value;`
+
+MARKDOWN

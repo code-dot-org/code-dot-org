@@ -87,3 +87,27 @@ When /^I ensure droplet is in block mode$/ do
     STEPS
   end
 end
+
+When /^I add code "([^"]+)" to ace editor$/ do |code|
+  steps 'I ensure droplet is in text mode'
+  add_code_to_editor(code)
+end
+
+def add_code_to_editor(code)
+  script =
+    "var aceEditor = __TestInterface.getDroplet().aceEditor;\n" \
+    "aceEditor.textInput.focus();\n" \
+    "aceEditor.onTextInput(\"#{code}\");\n"
+
+  @browser.execute_script(script)
+end
+
+When /^ace editor code is equal to "([^"]+)"$/ do |expected_code|
+  actual_code = get_ace_editor_code
+  expect(actual_code).to eq(expected_code)
+end
+
+def get_ace_editor_code
+  script = 'return __TestInterface.getDroplet().aceEditor.getValue().trim();'
+  @browser.execute_script(script)
+end

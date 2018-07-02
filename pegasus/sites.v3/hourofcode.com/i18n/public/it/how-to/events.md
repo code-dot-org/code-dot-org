@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepara il tuo evento
 
 - Stabilisci un luogo, la data e l'ora.
-- Invia [una lettera](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) per invitare il sindaco dalla tua città, le autorità locali, o più in generale le persone influenti ad intervenire. Per maggiori informazioni, scopri il nostro [manuale](<%=resolve_url('/files/elected-official.pdf')%>) per ospitare un amministratore pubblico durante un'Ora del Codice (in inglese).
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Invita la stampa, ad es. giornalisti o blogger. Guarda il nostro [kit per la stampa](<%= resolve_url('/promote/press-kit') %>) per avere qualche suggerimento.
 
 ## 2. Durante il tuo evento
@@ -39,7 +39,7 @@ Puoi organizzare una serata, invitando i genitori degli alunni della scuola prim
 
 **Evento:** assemblea scolastica per l'inizio della "Settimana di Educazione Informatica"
 
-**Data:** <%= campaign_date('full') %> (Settimana di Educazione Informatica)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Quando:** durante l'orario scolastico, preferibilmente a metà mattina. Durata 1 ora circa.
 

@@ -31,7 +31,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# More Collision Blocks\r\n\r\nThree new types of sprite interactions have been added to the toolbox, `sprite.collide()`, `sprite.bounce()`, and `sprite.bounceOff()`. How do you think they'll affect the sprites?\r\n\r\n# Do This\r\n\r\n* Switch out the displace block for the `sprite.collide()`, `sprite.bounce()`, and `sprite.bounceOff()` blocks. ( [Show me where](#triggercallout=code_triggered) )\r\n\t* *Hint: If you're having trouble doing this with blocks then switch over to text mode.*\r\n* Discuss with a neighbor: What is the difference between the four different sprite interactions? What do you think the purpose of each block is?\r\n\r\n\r\n[//]: #  (https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png)\r\n\r\n[//]: #  (https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png)",

@@ -41,6 +41,7 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/54076e1a8ac6b368fffef1ea2c2f9772=development/2090.png",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

@@ -18,7 +18,7 @@ const styles = {
   textItem: {
     backgroundColor: color.teal,
     padding: 25,
-    height: 260,
+    minHeight: 260,
     boxSizing: 'border-box'
   },
   subheading: {
@@ -31,7 +31,7 @@ const styles = {
   },
   image: {
     width: 485,
-    height: 260
+    minHeight: 260
   },
   description: {
     paddingRight: 10,
@@ -50,7 +50,7 @@ const styles = {
   },
 };
 
-class UnconnectedTwoColumnActionBlock extends Component {
+export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
@@ -60,7 +60,8 @@ class UnconnectedTwoColumnActionBlock extends Component {
     description: PropTypes.string.isRequired,
     buttons: PropTypes.arrayOf(PropTypes.shape({
       url: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
+      text: PropTypes.string.isRequired,
+      target: PropTypes.string,
     })),
   };
 
@@ -101,6 +102,7 @@ class UnconnectedTwoColumnActionBlock extends Component {
                     href={button.url}
                     color={Button.ButtonColor.gray}
                     text={button.text}
+                    target={button.target}
                   />
                   &nbsp;
                   &nbsp;
@@ -116,7 +118,7 @@ class UnconnectedTwoColumnActionBlock extends Component {
   }
 }
 
-const TwoColumnActionBlock = connect(state => ({
+export const TwoColumnActionBlock = connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
   isRtl: state.isRtl,
 }))(UnconnectedTwoColumnActionBlock);
@@ -171,7 +173,7 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/images/fill-540x289/teacher-apps.png')}
+        imageUrl={pegasus('/images/professional-learning/fill-540x289/teacher-apps-4.png')}
         subHeading={i18n.specialAnnouncementHeading()}
         description={i18n.specialAnnouncementDescription()}
         buttons={[

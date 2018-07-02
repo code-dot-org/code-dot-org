@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:35:37.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Encoding B&W Images",
+    "markdown_instructions": "Please answer the following 3 questions in the space below.\r\n\r\n1. What are the **dimensions** (width and height) of the **largest image** we can make with the pixelation widget? \r\n\r\n2. How many **total bits** would there be in the the largest possible image we could make with the pixelation widget (assuming 1 bit per pixel)?\r\n\r\n3. How many **total bits** bits would it take to represent **the smallest possible image** (i.e. an image with one pixel)?\r\n",
+    "encrypted_solution": "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\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 2437,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

@@ -1,6 +1,7 @@
 require 'rack/request'
 require 'ipaddr'
 require 'json'
+require 'country_codes'
 
 module Cdo
   module RequestExtension
@@ -47,7 +48,7 @@ module Cdo
       parts = host_parts.split('.')
 
       if parts.count >= 3
-        domains = (%w(studio learn) + CDO.partners).map {|x| x + '.code.org'}
+        domains = (%w(studio learn advocacy) + CDO.partners).map {|x| x + '.code.org'}
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end
@@ -91,7 +92,7 @@ module Cdo
       )
 
       encryptor = ActiveSupport::MessageEncryptor.new(
-        key_generator.generate_key('encrypted cookie'),
+        key_generator.generate_key('encrypted cookie')[0, ActiveSupport::MessageEncryptor.key_len],
         key_generator.generate_key('signed encrypted cookie')
       )
 
@@ -100,6 +101,15 @@ module Cdo
       warden.first.first
     rescue
       return nil
+    end
+
+    def country
+      env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] ||
+        location&.country_code
+    end
+
+    def gdpr?
+      gdpr_country_code?(country)
     end
   end
 end

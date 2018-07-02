@@ -13,6 +13,7 @@ require_relative '../../lib/cdo/shared_constants/pd/facilitator1819_application_
 require_relative '../../lib/cdo/shared_constants/pd/teacher1819_application_constants'
 require_relative '../../lib/cdo/shared_constants/pd/principal_approval1819_application_constants'
 require_relative '../../lib/cdo/shared_constants/pd/teachercon1819_registration_constants'
+require_relative '../../lib/cdo/shared_constants/pd/shared_workshop_constants'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
@@ -67,18 +68,28 @@ end
 
 def main
   shared_content = generate_multiple_constants %w(
+    GAMELAB_AUTORUN_OPTIONS
     LEVEL_KIND
     LEVEL_STATUS
     SECTION_LOGIN_TYPE
     POST_MILESTONE_MODE
-    PUBLISHABLE_PROJECT_TYPES_UNDER_13
-    PUBLISHABLE_PROJECT_TYPES_OVER_13
+    ALWAYS_PUBLISHABLE_PROJECT_TYPES
+    ALL_PUBLISHABLE_PROJECT_TYPES
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabGoalBlocks.js")
   generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/gamelab/sharedGamelabBlocks.js")
+
+  generate_shared_js_file(
+    generate_multiple_constants(
+      %w(COURSES SUBJECTS STATES WORKSHOP_TYPES),
+      source_module: Pd::SharedWorkshopConstants,
+      transform_keys: false
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/sharedWorkshopConstants.js"
+  )
 
   generate_shared_js_file(
     generate_multiple_constants(

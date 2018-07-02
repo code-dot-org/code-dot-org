@@ -152,13 +152,17 @@ Test.prototype.publicLogUrl = function () {
 // Connect up "Copy Rerun Command" buttons
 new Clipboard('button.copy-button');
 
+function keyify(str) {
+  return str.replace(/\//g, '_');
+}
+
 // Build a cache of tests for this run.
 var tests = {};
 var rows = document.querySelectorAll('tbody tr');
 rows.forEach(row => {
   let test = new Test(row);
   tests[test.browser] = tests[test.browser] || {};
-  tests[test.browser][test.feature] = test;
+  tests[test.browser][keyify(test.feature)] = test;
 });
 
 function testFromS3Key(key) {
@@ -176,20 +180,7 @@ function testFromS3Key(key) {
     return undefined;
   }
 
-  // Incrementally replace underscores with slashes and try again, in case
-  // this was a test from a subdirectory.
-  // Example:
-  //   Feature: features/applab/tooltips.feature
-  //   Key    : {browser}_applab_tooltips_output.html
-  // If we ever have an ambiguous case (someone creates
-  // features/applab_tooltips.feature) then this will be a problem - but it is
-  // unlikely.
-  var test = tests[browser][feature];
-  while (!test && feature.indexOf('_') >= 0) {
-    feature = feature.replace(/_/, '/'); // Replaces first underscore only.
-    test = tests[browser][feature];
-  }
-  return test;
+  return tests[browser][keyify(feature)];
 }
 
 function calculateBrowserProgress(browser) {
@@ -382,3 +373,15 @@ function toggleHideSucceeded() {
 }
 let hideSucceededButton = document.querySelector('#hide-succeeded-button');
 hideSucceededButton.onclick = toggleHideSucceeded;
+
+// Help text
+const helpLink = document.querySelector('#help-link');
+const helpText = document.querySelector('#help-text');
+function toggleHelpText() {
+  if (getComputedStyle(helpText).display === 'none') {
+    helpText.style.display = 'block';
+  } else {
+    helpText.style.display = 'none';
+  }
+}
+helpLink.onclick = toggleHelpText;

@@ -7,15 +7,27 @@
 }
 
 #map-footer {
+  font-size: 13px;
+  padding-top: 5px;
+}
+
+#map-footer #left {
+  float: left;
+  margin-right: 40px;
+}
+
+#map-footer #left a {
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+#map-footer #right {
   float: right;
-  padding-top: 10px;
-  padding-bottom: 20px;
 }
 
 #footer-text {
-  font-family: 'Gotham 7r' sans-serif;
-  font-size: 20px;
-  margin-right: 25px;
+  font-family: 'Gotham 4r', sans-serif;
+  vertical-align: top;
+  margin-right: 15px;
 }
 
 .signup-button {
@@ -67,10 +79,94 @@
   float: left;
 }
 
+.color-small {
+  display: inline-block;
+  border: 1px solid;
+  height: 10px;
+  width: 10px;
+  margin-right: 8px;
+}
+
 .green {
-  background: #00FF00;
+  background: #66DC57;
 }
 
 .blue {
-  background: #6699FF;
+  background: #989CF8;
+}
+
+.yellow {
+  background: #FFFDA6;
+}
+
+.white {
+  background: #FFFFFF;
+}
+
+.census-info-window h4 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.census-info-window hr {
+  border-color: blue;
+  background-color: blue;
+  margin: 2px;
+}
+
+.census-info-window .census-message {
+  font-family: 'Gotham 3r', sans-serif;
+  text-align: center;
+}
+
+.census-info-window .census-message a {
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.census-info-window .button-container {
+  max-width: 280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.census-info-window a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.census-info-window .button-link-div {
+  flex: 1 0;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+.census-info-window .button {
+  vertical-align: middle;
+  word-wrap: break-word;
+  height: 100%;
+  color: white;
+  background-color:orange;
+  border-color: orange;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.census-info-window .button:hover {
+  color: orange;
+  background-color: white;
+}
+
+.census-info-window .button-text {
+  display: inline-block;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.census-info-window .inaccuracy-link {
+  text-align: center;
+  font-size: 11px;
 }

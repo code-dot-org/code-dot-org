@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Debugging: Watchers\r\n\r\nOnce you have multiple counter variables it can become difficult to keep track of how your program is running. **If you want to debug your code, it's useful to be able to see the values of your different variables as they change.**\r\n\r\nYou can add a **watcher** to a variable at any time by typing `$watch` followed by the name of your variable into the Debug Console. This example shows how you would create watchers for the variables `x` and `y`. Notice they've now **been added to the \"Watch\" window** to the right.\r\n\r\n![](https://images.code.org/c5cddda5572e73e3f082287aa076e4a8-image-1465327628344.25.11 PM.png)\r\n\r\nWhile your program is running, the values of `x` and `y` in the \"Watch\" window will update to show their current value.\r\n\r\n# Do This\r\n\r\nThis program draws a dot that slowly grows in size. You want to know **the value of `size` when the dot totally covers the screen.**\r\n\r\n* **Create a watcher** for `size` by running the command `$watch size` in the Debug Console.\r\n* **Run the program** and observe the value of `size` change in the \"Watch\" window.\r\n* **Talk to a neighbor**. How large is `size` when the dot covers the whole screen?",

@@ -39,7 +39,7 @@ Over the course of the week, you will join with hundreds of teachers from across
   <br>
 TeacherCon accomodations as well as all conference sessions will take place at:
 
-[Sheraton Grand Phoenix](http://www.sheratonphoenixdowntown.com/)
+<a href="http://www.sheratonphoenixdowntown.com/", target=_"blank">Sheraton Grand Phoenix</a>
 <br> 340 North 3rd Street
 <br> Phoenix, AZ 85004
   
@@ -61,7 +61,7 @@ We also have a room set aside for you at our conference hotel, so you don’t ne
 <summary>**What if I choose to drive to TeacherCon?**</summary>
   <p>
   <br>
-If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card at the end of August to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
+If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card to help cover the cost of mileage. For those who choose to carpool with another attendee, please noted that only one gift card will be provided per vehicle. **No additional reimbursements will be provided for driving**.
 </p>
 </details>
 
@@ -69,15 +69,15 @@ If you choose to drive to TeacherCon instead of fly, and are driving over 25 mil
 <summary>**Will I need additional transportation once I arrive at TeacherCon?**</summary>
   <p>
   <br>
-You will not need to rent a vehicle while at TeacherCon since all conference sessions and meals will take place on site at the hotel. If your Regional Event is off-site, transportation options will be provided. If you are flying, you will need to arrange your own transportation to and from the airport (ex: SuperShuttle, ride share or taxi). Plan to pay for this upfront but we will provide you a gift card that will cover the cost once you arrive at the hotel. (see expenses covered for details, below).
+You will not need to rent a vehicle while at TeacherCon since all conference sessions and meals will take place on site at the hotel. If your Regional Event is off-site, transportation options will be provided. If you are flying, you will need to arrange your own transportation to and from the airport (ex: SuperShuttle, ride share or taxi). Plan to pay for this upfront but we will provide you a gift card that will cover the cost once you register at the conference. (see expenses covered for details, below).
 </p>
 </details>
 
 <details>
 <summary>**Can I share a ride from the airport to the hotel with fellow TeacherCon attendees?**</summary>
-<p>
-<br>
-For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at any of the [designated rideshare pickup locations at PHX Sky Harbor](https://www.skyharbor.com/ParkingTransportation/ride-share). Then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the pickup location, make sure to ask others nearby if they are part of TeacherCon.
+  <p>
+  <br>
+For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at any of the <a href="https://www.skyharbor.com/ParkingTransportation/ride-share" target=_"blank">designated rideshare pickup locations at PHX Sky Harbor</a>. Then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the pickup location, make sure to ask others nearby if they are part of TeacherCon.
 </p> 
 </details>
 
@@ -89,11 +89,11 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 
 **These include:**
 
-* Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
+* Flights to and from your assigned TeacherCon Location **OR** a $150 gift card for attendees driving over 25 miles one-way.
 * A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
-All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
+All participants will receive a $300 gift card upon their registration at the conference to cover any additional expenses such as meals we do not provide, and other travel-related incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
 </p>
 </details>
 
@@ -149,48 +149,56 @@ We expect you to attend for the full conference. Make plans to be with us from R
 ## **Previous Email Updates**
 This section will be updated as emails are sent for this event.
 
+<a href="http://go.pardot.com/webmail/153401/409103220/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 1: Book your travel to Code.org's TeacherCon!</a>
+
 <a id="prework"></a>
 ## **Prework**
 <details>
 <summary>**CS Discoveries**</summary>
  <p>
  <br>
-More information coming soon!
-</details>
+**Check out the CS Discoveries Curriculum Guide (20 min)**<br>
+The <a href="https://docs.google.com/document/d/1hzG2yKUrvXKGq_ee0E1fAyxbzRL_8-bbldgyLG7m_X4/edit#", target=_"blank">2018-19 Curriculum Guide for CS Discoveries</a> is an important resource that contains information about the classroom and student practices that flow throughout the course, overviews of each unit, descriptions of the tools used throughout the course, implementation considerations, and more! To prepare for TeacherCon, we recommend that you review the following sections:
+
+* **Code.org Values and Philosophy (pages 2-3):** Our values permeate and drive the creation of every lesson we write. When we design learning experiences, we draw from a variety of teaching and learning strategies all with the goal of constructing an equitable and engaging learning environment.
+* **Instructional Strategies (pages 4-9):** We believe the instructional strategies listed in this section support a positive classroom culture and ultimately student learning.
+* **Problem Solving Process (page 12):** Our Problem Solving Process is a tool for structured problem solving that we have woven throughout the entire course to promote student growth and development.
+* **Curriculum Overview and Goals (page 13-14):** Learn more about what’s going on in the curriculum and what we hope students will learn throughout the year.
+
+**Get a sneak preview of your week at TeacherCon! (2 min)**<br>
+We're so excited to meet you in a few short weeks. [Visit our schedule](https://code.org/files/2018-TCSchedule-CSD.pdf) for CS Discoveries teachers to get a sense of how we'll spend our time together.
+
+**Sign up to receive conference updates directly to your phone (2 min - _Optional_)**<br>
+We will be using Remind to send general event updates while we’re in Phoenix. Remind is a messaging tool that helps us keep in touch with you via text message or the free Remind app without requiring you to give us any of your personal information. 
+
+<a href="http://remind.com/join/codeorgphx", target=_"blank">Click here</a> to receive reminders about TeacherCon Phoenix. Please note that this is not the only way we will communicate important conference updates and that this step is completely optional.
+<br></details>
 
 <details>
 <summary>**CS Principles**</summary>
  <p>
  <br>
-More information coming soon!
-</details>
+**Check out the CS Principles Curriculum Guide (15 min)**<br>
+The <a href="https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#", target=_"blank">2018-19 Curriculum Guide for CS Principles</a> is an important resource that contains information about the classroom and student practices that flow throughout the course, overviews of each unit, descriptions of the tools used throughout the course, implementation considerations, and more! To prepare for your workshop, we recommend that you review the following sections:
 
-<a id="who"></a>
-## **Who's Who at TeacherCon?**
-<details>
-<summary>**Code.org Staff**</summary>
- <p>
- <br>
-More information coming soon!
-</details>
+* **Code.org Values and Philosophy (pages 2-3):** Our values permeate and drive the creation of every lesson we write. When we design learning experiences, we draw from a variety of teaching and learning strategies all with the goal of constructing an equitable and engaging learning environment.
+* **Instructional Strategies (pages 4-9):** We believe the instructional strategies listed in this section support a positive classroom culture and ultimately student learning.
+* **Curriculum Overview and Goals (page 11):** Learn more about what’s going on in the curriculum and what we hope your students will learn throughout the year.
 
-<details>
-<summary>**Session Lead Facilitators**</summary>
- <p>
- <br>
-More information coming soon!
-</details>
+**Dive into AP CS Principles! (45 min)** <br>
+Watch this required <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course/course-overview-modules-teachers", target=_"blank">series of videos</a> from the College Board for useful context about how AP CS Principles, came to be, the goals of the course, and how it was constructed. Note: if you don’t plan to teach this as an AP course, that’s ok! We still recommend watching most of the videos, and skipping sections 3 (Assessment) and 5 (AP Course Audit).
 
-<details>
-<summary>**Regional Partners**</summary>
- <p>
- <br>
-More information coming soon!
-</p>
+**Get a sneak preview of your week (2 min)**<br>
+We’re so excited to meet you in a few short weeks. [Visit our schedule](https://code.org/files/2018-TCSchedule-CSP.pdf) for CS Principles teachers to get a sense of how we’ll spend our time together. 
+
+**Sign up to receive conference updates directly to your phone (2 min - _Optional_)**<br>
+We will be using Remind to send general event updates while we’re in Phoenix. Remind is a messaging tool that helps us keep in touch with you via text message or the free Remind app without requiring you to give us any of your personal information. 
+
+<a href="http://remind.com/join/codeorgphx", target=_"blank">Click here</a> to receive reminders about TeacherCon Phoenix. Please note that this is not the only way we will communicate important conference updates and that this step is completely optional.
 </details>
 
 ## **Contact Us**
-Check out our <a href="https://docs.google.com/document/d/1kyf-LMuqZx3Jne-q-Ce8MOaWJQm67VekO_kYKr9EFPQ/edit#, target="_blank">FAQ's!</a>
+Check out our <a href="https://docs.google.com/document/d/1kyf-LMuqZx3Jne-q-Ce8MOaWJQm67VekO_kYKr9EFPQ/edit#", target=_"blank">FAQ's!</a>
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
 

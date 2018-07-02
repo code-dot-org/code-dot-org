@@ -65,7 +65,6 @@ class Blockly < Level
     project_template_level_name
     hide_share_and_remix
     is_project_level
-    edit_code
     code_functions
     palette_category_at_start
     failure_message_override
@@ -74,6 +73,9 @@ class Blockly < Level
     contained_level_names
     encrypted_examples
     disable_if_else_editing
+    show_type_hints
+    thumbnail_url
+    include_shared_functions
   )
 
   before_save :update_ideal_level_source
@@ -130,7 +132,8 @@ class Blockly < Level
   def normalize_xml(attr)
     attr_val = send(attr)
     if attr_val.present?
-      normalized_attr = Nokogiri::XML(attr_val, &:noblanks).serialize(save_with: XML_OPTIONS).strip
+      attr_doc = Nokogiri::XML(attr_val) {|config| config.strict.noblanks}
+      normalized_attr = attr_doc.serialize(save_with: XML_OPTIONS).strip
       send("#{attr}=", normalized_attr)
     end
   end
@@ -158,6 +161,12 @@ class Blockly < Level
     0
   end
 
+  CATEGORY_CUSTOM_NAMES = {
+    Behavior: 'Behaviors',
+    Location: 'Locations',
+    PROCEDURE: 'Functions',
+    VARIABLE: 'Variables',
+  }
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
@@ -169,6 +178,13 @@ class Blockly < Level
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
+        xml.child << category_node
+        block.remove
+      elsif block.attr('type') == 'custom_category'
+        custom_type = block.xpath('title').text
+        category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
+        category_node['custom'] = custom_type
         xml.child << category_node
         block.remove
       else
@@ -185,11 +201,21 @@ class Blockly < Level
     return xml_string if xml.nil?
     xml.xpath('/xml/category').map(&:remove).each do |category|
       category_name = category.xpath('@name')
-      category_xml = <<-XML.strip_heredoc.chomp
-        <block type="category">
-          <title name="CATEGORY">#{category_name}</title>
-        </block>
-      XML
+      custom_category = category.xpath('@custom')
+      category_xml =
+        if custom_category.present?
+          <<-XML.strip_heredoc.chomp
+            <block type="custom_category">
+              <title name="CUSTOM">#{custom_category}</title>
+            </block>
+          XML
+        else
+          <<-XML.strip_heredoc.chomp
+            <block type="category">
+              <title name="CATEGORY">#{category_name}</title>
+            </block>
+          XML
+        end
       block = Nokogiri::XML(category_xml, &:noblanks).child
       xml << block
       xml << category.children
@@ -217,20 +243,11 @@ class Blockly < Level
       app_options[:skinId] = skin_id if skin_id
 
       # Set some values that Blockly expects on the root of its options string
-
-      droplet = game.try(:uses_droplet?)
-      #TODO(ram) normalize or remove the edit_code field
-      if edit_code == "false"
-        droplet = false
-      elsif edit_code == true
-        droplet = true
-      end
-
       app_options.merge!(
         {
           baseUrl: Blockly.base_url,
           app: game.try(:app),
-          droplet: droplet,
+          droplet: uses_droplet?,
           pretty: Rails.configuration.pretty_apps ? '' : '.min',
         }
       )
@@ -269,8 +286,13 @@ class Blockly < Level
 
       if is_a? Blockly
         level_prop['startBlocks'] = try(:project_template_level).try(:start_blocks) || start_blocks
-        level_prop['toolbox'] = try(:project_template_level).try(:toolbox_blocks) || toolbox_blocks
+        level_prop['toolbox'] =
+          try(:project_template_level).try(:toolbox_blocks) ||
+          toolbox_blocks ||
+          default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
+        level_prop['sharedBlocks'] = shared_blocks
+        level_prop['sharedFunctions'] = shared_functions if include_shared_functions
       end
 
       if is_a? Applab
@@ -294,6 +316,7 @@ class Blockly < Level
       level_prop['startDirection'] = level_prop['startDirection'].to_i if level_prop['startDirection'].present?
       level_prop['sliderSpeed'] = level_prop['sliderSpeed'].to_f if level_prop['sliderSpeed']
       level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
+      level_prop['editCode'] = uses_droplet?
 
       # Blockly requires these fields to be objects not strings
       %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
@@ -321,19 +344,25 @@ class Blockly < Level
     options.freeze
   end
 
-  def localized_failure_message_override
-    if should_localize? && failure_message_override
-      I18n.t("data.failure_message_overrides").
-        try(:[], "#{name}_failure_message_override".to_sym)
+  def get_localized_property(property_name)
+    if should_localize? && try(property_name)
+      I18n.t("data.#{property_name.pluralize}.#{name}_#{property_name.singularize}", default: nil)
     end
+  end
+
+  def localized_failure_message_override
+    get_localized_property("failure_message_overrides")
+  end
+
+  def localized_markdown_instructions
+    get_localized_property("markdown_instructions")
   end
 
   def localized_authored_hints
     return unless authored_hints
 
     if should_localize?
-      translations = I18n.t("data.authored_hints").
-        try(:[], "#{name}_authored_hint".to_sym)
+      translations = get_localized_property("authored_hints")
 
       return unless translations.instance_of? Hash
 
@@ -364,7 +393,7 @@ class Blockly < Level
 
   def localized_instructions
     if custom?
-      loc_val = I18n.t("data.instructions").try(:[], "#{name}_instruction".to_sym)
+      loc_val = get_localized_property("instructions")
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
@@ -373,6 +402,18 @@ class Blockly < Level
         I18n.t("data.level.instructions").try(:[], "#{name}_#{level_num}".to_sym)
       end.compact.first
       return val unless val.nil?
+    end
+  end
+
+  def localized_toolbox_blocks
+    if should_localize? && toolbox_blocks
+      block_xml = Nokogiri::XML(toolbox_blocks, &:noblanks)
+      block_xml.xpath('//../category').each do |category|
+        name = category.attr('name')
+        localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+        category.set_attribute('name', localized_name) if localized_name
+      end
+      return block_xml.serialize(save_with: XML_OPTIONS).strip
     end
   end
 
@@ -396,5 +437,35 @@ class Blockly < Level
     # remove nil and empty strings from examples
     return if examples.nil?
     self.examples = examples.select(&:present?)
+  end
+
+  # This should just return false, but we have a few levels.js levels that use
+  # droplet (starwars, and a few test levels). They all have level records of
+  # type 'Blockly', so they can't override this as needed
+  def uses_droplet?
+    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? game.name
+  end
+
+  def default_toolbox_blocks
+    nil
+  end
+
+  # Clear 'is_project_level' from cloned levels
+  def clone_with_name(name)
+    level = super(name)
+    level.update!(is_project_level: false)
+    level
+  end
+
+  def shared_blocks
+    Rails.cache.fetch("blocks/#{type}", force: !Script.should_cache?) do
+      Block.where(level_type: type).map(&:block_options)
+    end
+  end
+
+  def shared_functions
+    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
+      SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
+    end.join
   end
 end

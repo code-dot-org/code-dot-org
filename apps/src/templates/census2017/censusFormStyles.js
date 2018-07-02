@@ -4,6 +4,13 @@ export const styles = {
   formHeading: {
     marginTop: 20
   },
+  checkboxLine: {
+    marginTop: 20,
+    marginLeft: 38
+  },
+  clickable: {
+    cursor: 'pointer'
+  },
   question: {
     fontSize: 16,
     fontFamily: '"Gotham 3r", sans-serif',
@@ -32,6 +39,15 @@ export const styles = {
     color: color.charcoal,
     marginRight: 20,
     marginLeft: 20
+  },
+  existingInaccuracy: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    marginRight: 20,
+    marginLeft: 20
+  },
+  existingInaccuracyTooltip : {
+    width: 270
   },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -90,7 +106,8 @@ export const styles = {
     height: 25,
     width: 390,
     fontFamily: '"Gotham 3r", sans-serif',
-    padding: 5
+    padding: 5,
+    maxWidth: "80%"
   },
   textArea: {
     height: 100,

@@ -1,4 +1,4 @@
-var TestResults = require('@cdo/apps/constants.js').TestResults;
+import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
 
 var REPEAT_REQUIREMENT = {
@@ -56,7 +56,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 3 && Maze.subtype.honey_ === 3;
+        return Maze.controller.subtype.nectars_.length === 3 && Maze.controller.subtype.honey_ === 3;
       },
       xml: '<xml>' + NOOP_REPEAT_START + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -76,7 +76,7 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_FINISHED
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 3 && Maze.subtype.honey_ === 3;
+        return Maze.controller.subtype.nectars_.length === 3 && Maze.controller.subtype.honey_ === 3;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -96,7 +96,7 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_FINISHED
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 2 && Maze.subtype.honey_ === 3;
+        return Maze.controller.subtype.nectars_.length === 2 && Maze.controller.subtype.honey_ === 3;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',

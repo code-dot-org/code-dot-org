@@ -4,7 +4,7 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressPill', module)
+    .storiesOf('Progress/ProgressPill', module)
     .addStoryTable([
       {
         name: 'single level pill',

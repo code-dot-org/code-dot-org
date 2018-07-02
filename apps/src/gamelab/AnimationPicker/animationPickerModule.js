@@ -111,10 +111,6 @@ export function handleUploadComplete(result) {
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
 
-    // TODO (bbuchanan): This sequencing feels backwards.  Eventually, we
-    // ought to preview and get dimensions from the local filesystem, async
-    // with the upload itself, but that will mean refactoring away from the
-    // jQuery uploader.
     loadImageMetadata(sourceUrl, metadata => {
       const animation = _.assign({}, metadata, {
         name: uploadFilename,

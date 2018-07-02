@@ -1,0 +1,40 @@
+name 'cspu5_assess4_mysteryReturn_exam_prep'
+wrong 'The procedure returns true when data is in ascending order'
+wrong 'The procedure returns false when data is in descending order'
+right 'The procedure returns the number of times adjacent items are in ascending order'
+wrong 'The procedure returns how long it takes to find two numbers in ascending order'
+wrong 'The procedure counts how long it takes to find two numbers in descending order and returns that number'
+
+
+markdown <<MARKDOWN
+Which of the following best describes the value returned by the procedure below?
+
+    PROCEDURE mystery (data)
+    {
+        count = 0
+        i = 1
+        REPEAT UNTIL (i = LENGTH(data))
+        {
+            IF (data[i] < data[i+1])
+            {
+                count = count + 1
+            }
+            i = i+1
+        }
+        RETURN (count)
+    }
+
+The answers below refer to values being in _ascending_ and _descending_ order.  Ascending order means increasing, as in: [1, 2, 5, 8].  Descending order means decreasing, as in [20, 15, 7, 3].
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Looking at the code, _count_ is set to 0 and at the very end, _count_ is returned. Therefore, we already know that a count of something will be returned. Going through the code:
+
+* i is set to 1
+* The code inside the loop is repeated until it reaches the end of the data length
+* If the data at index i is less that the value at the next index, count is incremented by one
+* i is incremented by 1 until it reaches the end of the list
+
+Since count is returned, the number of adjacent items that are in ascending order is returned.
+MARKDOWN

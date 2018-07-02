@@ -1,9 +1,7 @@
 /* jshint globals: $ */
 
 $(document).ready(function () {
-  $('#pd-workshop-survey-form').find("select").selectize({
-    plugins: ['fast_click']
-  });
+  $('#pd-workshop-survey-form').find("select").selectize();
 
   $('#pd-workshop-survey-form').submit(function (event) {
     PdWorkshopSurveyFormSubmit(event);

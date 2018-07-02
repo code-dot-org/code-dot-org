@@ -17,9 +17,9 @@ The program kicks off with a 5-day summer workshop where you'll have an opportun
 
 This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd). 
 
-**Applications for the 2018-19 [CS Discoveries Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
+**Applications for the 2018-19 [CS Discoveries Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
-[<button>Tell me when applications open!</button>](https://studio.code.org/pd/regional_partner_contact/new)
+[<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 [/col-50]
 

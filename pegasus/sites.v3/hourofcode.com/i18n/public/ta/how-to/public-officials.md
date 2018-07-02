@@ -5,7 +5,7 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire community.
+# உங்கள் முழு சமூகத்திற்கும் கோடரியின் காலத்தை எவ்வாறு கொண்டு வர வேண்டும்.
 
 [col-33]
 
@@ -15,29 +15,29 @@ nav: how_to_nav
 
 <p style="clear:both">&nbsp;</p>
 
-## Get every school participating, every student learning!
+## ஒவ்வொரு பள்ளிக்கும் ஒவ்வொரு மாணவர்களுக்கும் கற்றுக்கொடுங்கள்!
 
-1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager.pdf)
+1. கணினி விஞ்ஞான கல்வி ஏன் முக்கியம், மற்றும் கோடரியின் ஆதரவை வழங்குவதன் மூலம் நீங்கள் எவ்வாறு உதவ முடியும் என்பதில் ** எங்கள் ஒரு பேஜர் வாசிக்கவும் **. [ இங்கே ஒரு பேஜரைப் பெறுக. ](/files/hoc-one-pager.pdf)
 
-2. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts.
+2. ** உள்ளூர் பள்ளிகளையும் மாவட்டங்களையும் சேர்ப்பது. ** [ இந்த மின்னஞ்சலை ](<%= resolve_url('/promote/resources#sample-emails') %>) அல்லது [ இந்த மின்னஞ்சலை ](<%= resolve_url('/promote/stats') %>) தொடக்க புள்ளியாகக் கொண்டு, [ பள்ளிகளுக்கும் மாவட்டங்களுக்கும்](<%= resolve_url('/how-to') %>).
 
-3. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+3. ** கோட் நிகழ்வில் ஒரு மணிநேரத்தை நடத்தவும். ** ஒரு மாதிரி ஓட்டத்திற்காக எங்கள் [ வழிகாட்டி எப்படி வழிகாட்ட வேண்டும் ](<%= resolve_url('/how-to/events') %>) நிகழ்ச்சியில், மீடியா அவுட்ரீச் கிட் மற்றும் பிற நிகழ்வு திட்டமிடல் வளங்கள். ஒரு நிகழ்வை ஹோஸ்ட் செய்வது கோடரியின் மணிநேர ஊக்குவிப்பு மற்றும் அதிகரிக்கும் பங்கேற்புக்கான சிறந்த வழியாகும்.
 
-4. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
+4. ** கணினி விஞ்ஞான கல்வி வாரம் (<%= campaign_date ('short') %>) போது நிகழ்வைச் சேருங்கள். ** [ வகுப்பறைகள் மற்றும் பள்ளிகளைக் கண்டறியவும் ](<%= resolve_url('/events') %>) உங்கள் மாவட்டத்தில், நகரத்தில் அல்லது மாநிலத்தில் பங்கேற்கிறீர்கள்.
 
-5. **Issue a proclamation or resolution.** See this [sample resolution](<%= resolve_url('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+5. ** பிரகடனம் அல்லது தீர்மானத்தை வெளியீடு. ** கணினி அறிவியல் கல்வி வாரத்தின் ஆதரவையும், அதன் இலக்குகளையும் ஆதரிக்கும் [ மாதிரி தீர்மானம் ](<%= resolve_url('resources/proclamation') %>) மாநில மற்றும் உள்ளூர் சட்டமன்ற உறுப்பினர்கள் பயன்படுத்த வேண்டும்.
 
-6. **Draft an op-ed**. Consider publishing an opinion piece in your local paper. See this [sample op-ed](<%= resolve_url('/promote/op-ed') %>) supporting comupter supportive of Computer Science Education Week and its goals.
-
-7. **Spread the word.** [Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+6. ** ஓப்பன்-எடிட் வரைதல் </ strong>. உங்கள் உள்ளூர் காகிதத்தில் ஒரு கருத்தை வெளியிடுவதைக் கருதுக. கணினி அறிவியல் கல்வி வாரத்தின் ஆதரவையும், அதன் இலக்குகளையும் ஆதரிக்கும் இந்த [ மாதிரி op-ed ](<%= resolve_url('/promote/op-ed') %>) ஐக் காண்க.</p></li> 
     
-    - Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)
-    - Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com](<%= resolve_url('/') %>)   
-          
+    - ** வார்த்தை பரவலாம். ** [ மணிநேரத்தைப் பகிர் பேஸ்புக் பற்றிய கோட் வீடியோ மற்றும் ](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) [ ட்விட்டரில் உங்கள் ஆதரவைப் பற்றி பேசவும் ](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). நிகழ்வின் படங்கள் அல்லது கோப்பின் மணிநேரத்தின் பிற மற்றும் பிற பெரியவர்களின் வீடியோவைப் பகிரலாம். ** #HourOfCode </ strong> என்ற ஹேஸ்டேக் பயன்படுத்தவும், எனவே Code.org (@ code.org) அதைப் பார்க்கவும், ஆதரவை மேம்படுத்தவும் முடியும். அல்லது, இந்த மாதிரி ட்வீட் பயன்படுத்தவும்:</p> 
         
-
-8. **Issue a press release.** [Use this sample](<%= resolve_url('/promote/official-press-release') %>) as a guide.
-
-9. **Connect locally.** Visit [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
-
-<%= view :signup_button %>
+        - ஒவ்வொரு மாணவர், பையன் அல்லது பெண், கணினி அறிவியல் கற்று கொள்ள வாய்ப்பு வேண்டும். ஒரு #HourOfCode [ https://hourofcode.com ](<%= resolve_url('/') %>) உடன் தொடங்கி எங்களுக்கு சேரவும்
+        - இன்று, கோட் இயக்கத்தின் மணிநேரத்தில் சேர நாங்கள் பெருமிதம் கொள்கிறோம். நீங்கள் உள்ளே இருக்கின்றீர்களா? #HourOfCode [ https://hourofcode.com ](<%= resolve_url('/') %>)   
+              
+            </li> 
+        
+        - ** பத்திரிகை வெளியீட்டை வெளியீடு. ** [ இந்த மாதிரி ](<%= resolve_url('/promote/official-press-release') %>) வழிகாட்டியாகப் பயன்படுத்தவும்.
+        
+        - **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. அங்கு மனுவை கையெழுத்திடுங்கள், மேலும் உங்கள் உள்ளூர், மாநில மற்றும் கூட்டாட்சி வாதிடும் முயற்சிகளில் கோட்நிக்கிலிருந்து புதுப்பிப்புகள் கிடைக்கும்.</ol> 
+        
+        <%= view :signup_button %>

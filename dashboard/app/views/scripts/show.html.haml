@@ -1,5 +1,5 @@
 -# This variable will get any data we need to pass along to scriptOverview.js
-- scriptOverviewData = { scriptData: @script.summarize }
+- scriptOverviewData = { scriptData: @script.summarize(true, current_user) }
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
 - content_for(:head) do
@@ -16,25 +16,16 @@
 - else
   - course_link = @script.course_link(params[:section_id])
   - if course_link
+    - course_title = @script.course_title || I18n.t('view_all_units')
     #script-breadcrumb
       %a{href: course_link}
         %i.fa.fa-chevron-left
         %span
-          = I18n.t('view_all_units')
+          = course_title
   #landingpage
     #notification
     -# This div ends up being owned by ScriptOverviewHeader in react
-    #lesson
-      #heading
-        %h1
-          = data_t_suffix('script.name', @script.name, 'title')
-          - if @script.beta?
-            %span.betatext
-              = t('beta')
-
-        %p
-          = data_t_suffix('script.name', @script.name, 'description')
-
+    #lesson-heading-extras
       - if @script.banner_image
         %p
           - path = script_next_path(@script)
@@ -70,11 +61,22 @@
           - @script.courses.each do |course|
             %li= link_to course_path(course)
       - levels = Script.get_from_cache(@script.name).stages.map{ |stage| stage.script_levels.map{ |sl| sl.level }}.flatten
+      .row
+        .span1
+          = "Index"
+        .span3
+          = "Level name"
+        .span3
+          = "Template level"
+        .span3
+          = "Contained levels"
       - levels.each_with_index do |level, index|
         .row
           .span1
             = index + 1
           .span3
             = level.name
-          .span8
-            = level.instructions
+          .span3
+            = level.properties['project_template_level_name']
+          .span3
+            = level.properties['contained_level_names'].try {|names| names.join(", ")}

@@ -23,6 +23,27 @@ class SiteTest < Minitest::Test
     assert_equal 200, post('/custom-certificates').status
   end
 
+  def test_get_list
+    header 'host', 'code.org'
+
+    # Ensure GET requests to valid paths are allowed.
+    %w(
+      /
+      /curriculum/6-8
+      /curriculum/6-8/1
+      /curriculum/unplugged/css/jumbotron-banner.css
+    ).each do |path|
+      assert_equal 200, get(path).status
+    end
+
+    # Ensure GET requests to invalid paths return a 404 error.
+    %w(
+      /curriculum/6-8/missing
+    ).each do |path|
+      assert_equal 404, get(path).status
+    end
+  end
+
   module ::NewRelic
     class Agent
       def self.set_transaction_name(name)

@@ -7,39 +7,39 @@ nav: how_to_nav
 
 # Kod Saatı tədbirini necə təşkil edə bilərsiniz
 
-## 1. Prepare for your event
+## 1. Tədbiriniz üçün hazırlayın
 
-- Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Məkanı, tarixini və vaxtı müəyyənləşdirin.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
 
-## 2. During your event
+## 2. Tədbir zamanı
 
 - Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
 - Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
       
     
-- Other event ideas: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+- Digər hadisə fikirləri: 
+    - Yerli sənaye liderini kompüter biliklərini əhatə edən işlərini müzakirə etmək üçün dəvət edin.
+    - Yerli bir siyasətçini dəvət et və şagirdlərə necə kodu öyrədin.
+    - Bir qrup tələbə fiqurlu bir fəaliyyət göstərməlidir.
+    - Bir qrup şagirdin əsasını və ya bir müəllim qrupunu necə kodlaşdırdığını öyrənin.
+    - Məktəbiniz artıq kompüter biliklərini öyrədərsə, tələbələrin demo layihələri var.
 
-## 3. Share how it went
+## 3. Onun necə getdiyini deyin
 
 - Share pictures of your event on Facebook and Twitter. 
 - Use the hashtag **#HourOfCode**
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## Kodun saatı ilə Ailə Məcəlləsi gecəsini keçirin və valideynləri iştirak etməyə dəvət edir
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Bir K-5 axşamına ev sahibliyi etməyi və valideynlərin bir saatlıq kompüter biliklərinə qatılmasına dəvət edirəm. Bu, daha böyük icma ilə məşğul olmaq və məktəbinizdəki kompüter elmləri üçün valideyn dəstəyini təşviq etmək üçün yaxşı bir yoldur. Ailə Məcəlləsi gecəsində tərəfdaşlarımız planlaşdırma siyahısı, təqdimatçının skripti, dəvətnamə e-poçtları, posterlər, güc nöqtələri və daha çoxu öz hadisəinizi idarə etmək üçün bütünlükdə bir hadisə dəsti yaratmışdır. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## Nümunə Tədbir Planı
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,8 +54,8 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 | 10:00 - 10:05 | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                       |
 | 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
 | 10:15 - 10:30 | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.            |
-| 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40 - 11:00 | Students demo an unplugged activity and how computer science can be taught without using computers.                                              |
-| 11:00 - 11:05 | Teacher who helped bring school-wide event gives closing remarks.                                                                                |
+| 10:30 - 10:40 | Şagirdlər məktəb üçün bir saat kod nümayişi edirlər. Fun twist: onlara əsas, siyasətçi və ya digər tələbə öyrətmək var!                          |
+| 10:40 - 11:00 | Şagirdlər fiqurlu bir fəaliyyəti və kompüter istifadə etmədən necə kompüter biliklərini necə öyrədə bilərlər.                                    |
+| 11:00 - 11:05 | Məktəbdə baş verən hadisəni gətirən müəllimi yekun nitq verir.                                                                                   |
 
 <%= view :signup_button %>

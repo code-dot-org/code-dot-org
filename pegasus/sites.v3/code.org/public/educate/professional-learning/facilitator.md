@@ -129,7 +129,7 @@ The <a href="https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ
 </details>
 
 <br>
-Have a question? Let us know by writing to <facilitators@code.org>
+Have a question? Let us know by writing to facilitators@code.org.
 
 
 <!--

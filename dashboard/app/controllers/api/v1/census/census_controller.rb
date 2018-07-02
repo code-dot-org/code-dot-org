@@ -20,13 +20,16 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_data,
     :topic_web_design,
     :topic_game_design,
+    :topic_ethical_social,
     :topic_other,
     :topic_other_description,
     :topic_do_not_know,
     :class_frequency,
     :tell_us_more,
     :pledged,
-    :share_with_regional_partners
+    :share_with_regional_partners,
+    :inaccuracy_reported,
+    :inaccuracy_comment
   ].freeze
 
   CHECKBOX_FIELDS = [
@@ -39,9 +42,19 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_data,
     :topic_web_design,
     :topic_game_design,
+    :topic_ethical_social,
     :topic_other,
     :topic_do_not_know,
-    :pledged
+    :pledged,
+    :inaccuracy_reported
+  ].freeze
+
+  FREE_TEXT_FIELDS = [
+    :submitter_email_address,
+    :submitter_name,
+    :topic_other_description,
+    :tell_us_more,
+    :inaccuracy_comment
   ].freeze
 
   # POST /dashboardapi/v1/census/<form_version>
@@ -81,12 +94,25 @@ class Api::V1::Census::CensusController < ApplicationController
 
     # Checkboxes don't get submitted if they aren't checked.
     # Set them to false if they are nil
-    CHECKBOX_FIELDS.map do |field|
+    CHECKBOX_FIELDS.each do |field|
       census_params[field] = false unless census_params[field]
     end
+
+    # The database cannot handle utf8mb4 characters.
+    # Strip them out before saving.
+    FREE_TEXT_FIELDS.each do |field|
+      census_params[field] = census_params[field].strip_utf8mb4 unless census_params[field].nil?
+    end
+
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
+    when 'CensusYourSchool2017v7'
+      submission = ::Census::CensusYourSchool2017v7.new census_params
+      template = 'census_form_receipt'
+    when 'CensusYourSchool2017v6'
+      submission = ::Census::CensusYourSchool2017v6.new census_params
+      template = 'census_form_receipt'
     when 'CensusYourSchool2017v5'
       submission = ::Census::CensusYourSchool2017v5.new census_params
       template = 'census_form_receipt'
@@ -118,6 +144,16 @@ class Api::V1::Census::CensusController < ApplicationController
         Poste2.send_message(template, recipient)
       end
       render json: {census_submission_id: submission.id}, status: :created
+
+      if params[:opt_in]
+        EmailPreference.upsert!(
+          email: submission.submitter_email_address,
+          opt_in: params[:opt_in],
+          ip_address: request.ip,
+          source: EmailPreference::FORM_ACCESS_REPORT,
+          form_kind: "0"
+        )
+      end
     else
       render json: errors, status: :bad_request
     end

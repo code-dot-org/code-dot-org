@@ -41,6 +41,7 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/14e17d7ed081b06f898e00f4d1e7bf62=levelbuilder/32682.png",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

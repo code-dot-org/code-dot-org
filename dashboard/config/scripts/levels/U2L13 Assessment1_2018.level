@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:40:13.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Assessment: Question 1",
+    "markdown_instructions": "What is a Caesar cipher?  As part of your answer demonstrate encrypting the plaintext messages: `CS IS COOL` with a caesar cipher.\r\n",
+    "encrypted_solution": "uXxx1JJgtYx/kEEnV3qs9VeHuYt5er2a2Z7lcyxTssB9p6alS2Umvw4hKGNU\no/qqXQI6cv3+Zb7CUvN8b1J/cv0caJtMlS1iKfwLtPsPCkCoyQ8Vi6eQJKzI\nsPU2fd9C5WqOKj9NTwWhOacGrX8VfbNxxPcuDy3+WOsV6n44L0DCsMzld28d\nEBqoM9akytU7P0QFPK7R4ax+Emmg86BorDBaSKqhElu9fd0c+nmj06ZZJqzV\n9eTVV+k5578y4hJmJUfsPHBnD22+zt7caU9AalwPXJjQgz/bgNZASFJj/C+L\nP2uUkVcMr7F7lJjWjg3LEBrwsdq3mNclB1z60HpkeAmq6Ra7ueC8hXxXQ4Tz\nPeSRZZZjLP/4q69zbjBBZUHJ8N3B4FSECSwFZLnIQ+PbPYcnqYecAxBTwf9h\nHzApGoJZER1pgVfvoKYluEqQ6nUriTJJBrYo9bNjNbkfHQhlRjkWHkqALth7\nfKIvMcRxuVMfkoLYXMiEoI9aFJtFwNllWBf+8XE6ZU0MGX25L7nFHA==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 2543,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

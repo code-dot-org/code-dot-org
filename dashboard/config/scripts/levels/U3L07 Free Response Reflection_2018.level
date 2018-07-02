@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:38:14.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Looping and Random Numbers",
+    "markdown_instructions": "When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.  \n\nThere is no hard-and-fast rule as to which is better, but what do you think?  What kinds of circumstances would lead you to writing a function versus using a loop?\n\n\n",
+    "encrypted_solution": "gAdPm3QFXyYErYi4738hZNnDmQOENLPo/CDBioI10axTAvjNSVyvi7UH78M9\nLQk+Q5/H+De4HXAa5CaLEmzCENt2h6CoyCDjk80QtGG9/5C8uwLnam8mNaML\n9kBPwu6rt0Uv+RJyCviwy0cJnBarZMeS2U8R+fyE5KlyPiAvye34LTIEdnTX\nr/svJo5Zp9tQEZ0Iv0drHHhYSntL1v9W0AxjBYeI6oRseSpbgZ04tfvrq0qp\nqkJZ1iycY6p6JEnLMXJwQWxaFH5gPTdyWk6OsZ3/YviPQAGJRS4wAkbHmYkT\n3lxvki5CRrV/waVGPkDlg7k0iKCUAaaguzsQJc32iNdwPK5OJogYmXSgLy7s\n3ypO5Aqn9O+WoWvLYHDrwDh34ViHRzZchPSfVDARBtX2ANKMFHWfmKL9wZsW\n0CLq6xwtK4Zgh35rFSu5Q6RPwi8ymvrWWeQCo7PjCKnOgo7pMqKs8Lv8kz/l\nLmy52udyNVwmIzhMxL6BsGwPM+i9GxaL5v1bRyneE7fiQz0fA9qbuxSx6OKC\noh1hbQVUdTTMyjUzADQsWxE6Aha0Gf1DuwK8uU42mOdXJ3wODcTHzCfqAvmN\n/xZixB8WGjPaOaD1vG925w0K8wYQFZRvQoss1dwEM1LqISMmO9TOvQc66I2b\npTyuGM3SiZ3tFrDogVoQZ3oFUmnMjCaJHvmQsM7MpOCgm0k7If0WC6Dotylz\nxlmbdG0tSsr1AUwwdji0cvuHMPkFBqrGAGTO9gCzHFI3MUYuAG69wwFAHHiM\naqCXCcQCIFmjVpWS3en5iuMO03KljxNbFNsS2u4H2CVJQdNcjUV2sfWYq4TN\n6qkFOUMX+lzEfPrDJhzwvpLUcE8HLpCu9qxtvdkMFDYFYdPCJk67q+zll4MR\nFRomaohDPq+4HNn9MyhJtwLjPNu2IQyQQi2fytbNz3b9HlfXXba1rtJKVKrP\nRp8s0bcLVOrn5B65oMgwQOwWyyjLJrEc62+foNyL9/vB/JhhgGSwiCaWJlmj\nQHWSUA80OAMlauGXymTiNWtRCGANz9aXkx0iLgbRcNFKHKgYWBw8OKmBxHwO\nLLs/2vhOFlU6Q0F26+SYjiaHNilPo1w+zdJ54g2W5leThAvZgvsO4DtiZI6P\nkROoT7BpIPuq4eK4zAyzgeXwPHfZi9xrsSFI2FPIcXmOsb57VHRWGJ+1iEcQ\n1Z9WS5cOLebf8cXSbAdV2+91grR4JJcgx48VAVuHFO336pDNxIa0winLw0Y=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2264,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

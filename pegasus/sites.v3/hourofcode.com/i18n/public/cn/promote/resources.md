@@ -66,7 +66,7 @@ nav: promote_nav
 
 因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都会举办一个《编程一小时》, 而且像奥巴马总统和加拿大总理贾斯廷·特鲁多这样的领导人写了他们的第一行编程作为竞选活动的一部分。
 
-今年, 让我们把它变得更大。 我要求你加入代码2017的《编程一小时》。 请参与在计算机科学教育周的编程一小时活动, <%= campaign_date('full')%>。
+今年, 让我们把它变得更大。 I’m asking you to join the Hour of Code <%= campaign_date('year') %>. 请参与在计算机科学教育周的编程一小时活动, <%= campaign_date('full')%>。
 
 帮助宣传，实际举办一场活动，邀请当地学校报名加入，或者自己尝试编程一小时-每个人都能从这项基础学习中获益。
 
@@ -78,7 +78,7 @@ nav: promote_nav
 
 ** 主题行: **我们可以为您提供主机和《编程一小时》吗？
 
-在12月之间 4-10, 10% 的世界各地的学生将通过在他们自己的学校做《编程一小时》活动来庆祝计算机科学教育周。 这是让每个孩子都有机会了解到我们周围的技术是如何工作的。
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [我们的组织/我的名字] 很乐意帮助 [学校名称] 运行《编程一小时》活动。 我们可以帮助老师在他们的教室里主持一个小《编程一小时》 (我们甚至不需要电脑!) 或者如果你想举办一个学校大会, 我们可以安排一个演讲者谈论技术是如何运作的, 以及成为一个软件工程师的感觉。
 
@@ -160,6 +160,6 @@ nav: promote_nav
 
 诚挚地，
 
-[您的名字], [职位]
+[Your Name], [Title]
 
 <%= view :signup_button %>

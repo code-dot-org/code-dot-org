@@ -3,7 +3,7 @@ import ImageResourceCard from './ImageResourceCard';
 
 export default storybook => {
   return storybook
-    .storiesOf('ImageResourceCard', module)
+    .storiesOf('Cards/ImageResourceCard', module)
     .withReduxStore()
     .addStoryTable([
       {

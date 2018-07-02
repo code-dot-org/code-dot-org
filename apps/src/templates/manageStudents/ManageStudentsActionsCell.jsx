@@ -4,30 +4,37 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudents, RowType} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
 const styles = {
   xIcon: {
     paddingRight: 5,
+  },
+  saveButton: {
+    marginRight: 5,
   }
 };
 
 class ManageStudentActionsCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
-    sectionId: PropTypes.number.isRequired,
+    sectionId: PropTypes.number,
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
+    rowType: PropTypes.oneOf(Object.values(RowType)),
+    loginType: PropTypes.string,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
+    addStudent: PropTypes.func,
   };
 
   state = {
@@ -39,8 +46,8 @@ class ManageStudentActionsCell extends Component {
     const {removeStudent, id, sectionId} = this.props;
     this.setState({requestInProgress: true});
     $.ajax({
-        url: `/v2/sections/${sectionId}/students/${id}`,
-        method: 'DELETE',
+        url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
+        method: 'POST',
     }).done(() => {
         removeStudent(id);
     }).fail((jqXhr, status) => {
@@ -64,45 +71,74 @@ class ManageStudentActionsCell extends Component {
   };
 
   onCancel = () => {
-    this.props.cancelEditingStudent(this.props.id);
+    if (this.props.rowType === RowType.NEW_STUDENT) {
+      this.props.removeStudent(this.props.id);
+    } else {
+      this.props.cancelEditingStudent(this.props.id);
+    }
   };
 
   onSave = () => {
-    this.props.saveStudent(this.props.id);
+    if (this.props.rowType === RowType.NEW_STUDENT) {
+      this.onAdd();
+    } else {
+      this.props.saveStudent(this.props.id);
+    }
+  };
+
+  onAdd = () => {
+    this.props.addStudent(this.props.id);
   };
 
   render() {
+    const {rowType, isEditing, loginType} = this.props;
+    const canDelete = [SectionLoginType.word, SectionLoginType.picture, SectionLoginType.email].includes(loginType);
     return (
       <div>
-        {!this.props.isEditing &&
+        {!isEditing &&
           <QuickActionsCell>
             <PopUpMenu.Item
               onClick={this.onEdit}
             >
               {i18n.edit()}
             </PopUpMenu.Item>
-            <MenuBreak/>
-            <PopUpMenu.Item
-              onClick={this.onRequestDelete}
-              color={color.red}
-            >
-              <FontAwesome icon="times-circle" style={styles.xIcon}/>
-              {i18n.removeStudent()}
-            </PopUpMenu.Item>
+            {canDelete &&
+              <MenuBreak/>
+            }
+            {canDelete &&
+              <PopUpMenu.Item
+                onClick={this.onRequestDelete}
+                color={color.red}
+              >
+                <FontAwesome icon="times-circle" style={styles.xIcon}/>
+                {i18n.removeStudent()}
+              </PopUpMenu.Item>
+            }
           </QuickActionsCell>
         }
-        {this.props.isEditing &&
+        {(isEditing && (rowType !== RowType.ADD)) &&
           <div>
             <Button
               onClick={this.onSave}
-              color={Button.ButtonColor.white}
+              color={Button.ButtonColor.orange}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
+              style={styles.saveButton}
             />
             <Button
               onClick={this.onCancel}
-              color={Button.ButtonColor.blue}
+              color={Button.ButtonColor.gray}
               text={i18n.cancel()}
+            />
+          </div>
+        }
+        {(rowType === RowType.ADD) &&
+          <div>
+            <Button
+              onClick={this.onAdd}
+              color={Button.ButtonColor.gray}
+              text={i18n.add()}
+              disabled={this.props.isSaving || this.props.disableSaving}
             />
           </div>
         }
@@ -112,8 +148,14 @@ class ManageStudentActionsCell extends Component {
           isOpen={this.state.deleting}
           style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
         >
-          <h2 style={styles.heading}>{i18n.removeStudent()}</h2>
-          <div>{i18n.removeStudentConfirm()}</div>
+          <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
+          <div>
+            {i18n.removeStudentConfirm1() + ' '}
+            <a target="_blank" href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
+              {i18n.removeStudentConfirm2()}
+            </a>
+            {' ' + i18n.removeStudentConfirm3()}
+          </div>
           <DialogFooter>
             <Button
               text={i18n.dialogCancel()}
@@ -147,5 +189,8 @@ export default connect(state => ({}), dispatch => ({
   },
   saveStudent(id) {
     dispatch(saveStudent(id));
+  },
+  addStudent(id) {
+    dispatch(addStudents([id]));
   },
 }))(ManageStudentActionsCell);

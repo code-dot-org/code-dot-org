@@ -6,27 +6,26 @@ import { connect } from 'react-redux';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
+import CohortCalculator from './cohort_calculator';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
-import {
-  RegionalPartnerDropdownOptions as dropdownOptions,
-  UnmatchedFilter
-} from './constants';
+import {RegionalPartnerPropType} from './constants';
 
 const styles = {
   button: {
-    margin: '20px auto'
+    margin: '20px 20px 20px auto'
   }
 };
 
 class CohortView extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string.isRequired,
-    isWorkshopAdmin: PropTypes.bool,
+    regionalPartnerFilter: RegionalPartnerPropType,
+    showRegionalPartnerDropdown: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+      role: PropTypes.string.isRequired
     })
   };
 
@@ -37,22 +36,22 @@ class CohortView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    regionalPartnerName: this.props.regionalPartnerName,
-    regionalPartnerFilter: UnmatchedFilter
   };
 
   componentWillMount() {
-    this.load();
+    this.load(this.props.regionalPartnerFilter);
   }
 
-  load(selected = null) {
-    let url = this.getJsonUrl();
-    if (this.props.isWorkshopAdmin) {
-      const regionalPartnerFilter = selected ? selected.value : this.state.regionalPartnerFilter;
-      const regionalPartnerName = selected ? selected.label : this.state.regionalPartnerName;
-      this.setState({ regionalPartnerName, regionalPartnerFilter });
+  componentWillReceiveProps(nextProps) {
+    if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
+      this.load(nextProps.regionalPartnerFilter);
+    }
+  }
 
-      url += `&regional_partner_filter=${regionalPartnerFilter}`;
+  load(regionalPartnerFilter) {
+    let url = this.getJsonUrl();
+    if (this.props.showRegionalPartnerDropdown) {
+      url += `&regional_partner_value=${regionalPartnerFilter.value}`;
     }
 
     $.ajax({
@@ -63,21 +62,17 @@ class CohortView extends React.Component {
       .done(data => {
         this.setState({
           loading: false,
-          applications: data
+          applications: data,
         });
       });
   }
 
-  handleRegionalPartnerChange = (selected) => {
-    this.load(selected);
-  };
-
-  getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.path.replace('_cohort', '')}`;
+  getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.role}`;
   getJsonUrl = () => this.getApiUrl();
   getCsvUrl = () => {
     let url = this.getApiUrl('.csv');
-    if (this.props.isWorkshopAdmin && this.state.regionalPartnerFilter) {
-      url += `&regional_partner_filter=${this.state.regionalPartnerFilter}`;
+    if (this.props.showRegionalPartnerDropdown && this.props.regionalPartnerFilter) {
+      url += `&regional_partner_value=${this.props.regionalPartnerFilter.value}`;
     }
 
     return url;
@@ -87,22 +82,40 @@ class CohortView extends React.Component {
     window.open(this.getCsvUrl());
   };
 
+  handleViewAllClick = () => {
+    this.context.router.push(`/${this.props.route.role}`);
+  };
+
   render() {
     if (this.state.loading) {
       return (
-        <Spinner/>
+        <Spinner />
       );
     } else {
+      let accepted = 0;
+      let registered = 0;
+      if (this.state.applications !== null) {
+        accepted = this.state.applications
+        .filter(app => app.status === 'accepted')
+        .length;
+        registered = this.state.applications
+          .filter(app => app.registered_workshop === 'Yes')
+          .length;
+      }
       return (
         <div>
-          {this.props.isWorkshopAdmin &&
-            <RegionalPartnerDropdown
-              onChange={this.handleRegionalPartnerChange}
-              regionalPartnerFilter={this.state.regionalPartnerFilter}
-              additionalOptions={dropdownOptions}
+          {this.state.applications &&
+            <CohortCalculator
+              role={this.props.route.role}
+              regionalPartnerFilterValue={this.props.regionalPartnerFilter.value}
+              accepted={accepted}
+              registered={registered}
             />
           }
-          <h1>{this.state.regionalPartnerName}</h1>
+          {this.props.showRegionalPartnerDropdown &&
+            <RegionalPartnerDropdown/>
+          }
+          <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Col md={6} sm={6}>
             <Button
@@ -110,6 +123,12 @@ class CohortView extends React.Component {
               onClick={this.handleDownloadCsvClick}
             >
               Download CSV
+            </Button>
+            <Button
+              style={styles.button}
+              onClick={this.handleViewAllClick}
+            >
+              View all applications
             </Button>
           </Col>
           <CohortViewTable
@@ -124,6 +143,6 @@ class CohortView extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerName: state.regionalPartnerName,
-  isWorkshopAdmin: state.permissions.workshopAdmin
+  regionalPartnerFilter: state.regionalPartnerFilter,
+  showRegionalPartnerDropdown: state.regionalPartners.length > 1
 }))(CohortView);

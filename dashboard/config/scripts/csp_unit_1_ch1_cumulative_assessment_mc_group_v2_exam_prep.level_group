@@ -1,0 +1,19 @@
+name 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep'
+title 'CS Principles Unit 1 Ch 1 Assessment'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_exam_prep'
+level 'CSP Unit 1 Ch 1 MC binary def_exam_prep'
+level 'CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep'
+level 'CSPFinal_Question_7_exam_prep'
+level 'CSPFinal_Question_9update_exam_prep'
+level 'CSPFinal_Question_8update_exam_prep'
+
+page
+level 'CSPFinal_Question_1_exam_prep'
+level 'CSPFinal_Question_2_exam_prep'
+level 'CSP Unit 1 Ch 1 MC bits to make 512_exam_prep'
+level 'CB_Question_3update_exam_prep'
+level 'U1 Ch1 Assessment question 4 to 8 bit_exam_prep'

@@ -10,6 +10,7 @@ class RegionalPartnersController < ApplicationController
     current_sign_in_at
     sign_in_count
     users.created_at
+    provider
   ).freeze
 
   # GET /regional_partners
@@ -74,7 +75,7 @@ class RegionalPartnersController < ApplicationController
 
   # GET /regional_partners/:id/remove_program_manager
   def remove_program_manager
-    @regional_partner.program_managers.delete(params[:program_manager_id])
+    @regional_partner.program_managers.destroy(params[:program_manager_id])
     redirect_to @regional_partner
   end
 
@@ -101,6 +102,8 @@ class RegionalPartnersController < ApplicationController
       name
       group
       urban
+      cohort_capacity_csd
+      cohort_capacity_csp
       attention
       street
       apartment_or_suite

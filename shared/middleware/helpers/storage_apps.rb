@@ -178,13 +178,13 @@ class StorageApps
     return true
   end
 
-  def increment_abuse(channel_id)
+  def increment_abuse(channel_id, amount = 10)
     _owner, id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : 10)
+    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
 
     update_count = @table.where(id: id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
@@ -247,5 +247,91 @@ class StorageApps
         projectType: row[:project_type],
       }
     )
+  end
+
+  #
+  # Given an encrypted channel id, attempt to determine the channel's
+  # project type.
+  # This isn't always possible - we aren't consistent about storing project
+  # type information with the channel.
+  #
+  # @param [String] channel_id - an encrypted channel id
+  # @return [String] The discovered project type, or 'unknown' if the type
+  #   can't be determiend with given information.
+  # @raise [NotFound] if the channel does not exist or is not shareable.
+  #
+  def project_type_from_channel_id(channel_id)
+    project_type_from_merged_row(get(channel_id))
+  end
+
+  #
+  # Looks up the set of ancestors in the remix history for a particular project.
+  # This can require several queries, so be careful exposing this in the UI
+  # for external users - right now this is designed as a utility for internal
+  # use only.
+  #
+  # Note: It should be possible to reduce the number of queries by joining the
+  #   table against itself.  Worth investigating if we wanted to expose this
+  #   to users.
+  #
+  # @param [String] channel_id the child project channel id where we start
+  #   our search.
+  # @param [Integer] depth (optional) how many ancestors to retrieve.  Default
+  #   to just one - this could get expensive if a project has a very deep
+  #   remix ancestry.
+  # @return [Array<String>] list of channel IDs of ancestor projects in reverse
+  #   chronological order, up to the provided limit.
+  #
+  def self.remix_ancestry(channel_id, depth: 1)
+    [].tap do |ancestors|
+      _, id = storage_decrypt_channel_id(channel_id)
+      next_row = PEGASUS_DB[:storage_apps].where(id: id).first
+      while next_row&.[](:remix_parent_id)
+        next_row = PEGASUS_DB[:storage_apps].where(id: next_row[:remix_parent_id]).first
+        ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
+        break if ancestors.size >= depth
+      end
+    end
+  rescue
+    []
+  end
+
+  private
+
+  #
+  # Discovering a channel's project type is a real mess.  We don't usually
+  # need to do this because the project type is usually part of the URL,
+  # but for a few APIs this is needed.
+  #
+  # @param [Hash] row - A storage_apps merged row value as returned by
+  #   `merged_row_value` or `get`.
+  # @returns [String] The discovered project type, or 'unknown' if the type
+  #   can't be determined with given information.
+  #
+  def project_type_from_merged_row(row)
+    # We can derive channel project type from a few places.
+    #
+    # 1. The `project_type` column in the storage_apps table.
+    #    This is often NULL for "hidden" levels, which includes project-backed
+    #    script levels.
+    return row[:projectType] if row[:projectType]
+
+    # 2. The projectType property in the `value` JSON column.
+    #    Apparently this is sometimes filled out _instead_ of the column.
+    return row['projectType'] if row['projectType']
+
+    # 3. The level property in the `value` JSON column.
+    #    These are consistently values like "/projects/gamelab" or
+    #    "/projects/calc" and can be used to reconstruct a project type if
+    #    the `project_type` column doesn't have it.
+    level = row['level']
+    match_data = /^#{'/projects/'}([^\/]+)$/.match(level)
+    return match_data[1] if match_data
+
+    # Some number of projects don't contain a project type in any of these
+    # places.  We suspect a number of them are pixelation widget projects.
+    # Others have no content on S3, and may be just-created stub projects.
+    # Report these as 'unknown'.
+    'unknown'
   end
 end

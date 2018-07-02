@@ -111,11 +111,12 @@
     "markdown_instructions": "# Finishing Touches\r\n\r\nAdd any finishing touches still needed to make your innovation awesome. If you have time, test out your innovation with some potential users to gather feedback and find opportunities for improvement. When you're totally finished, click the \"Submit\" button to turn it in!",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "encrypted_examples": "DsaJIN/YVtqP0kp1O/1j9lam9Bs1zyAoYrQ9WMWg3U+i/ytY0s4TOOl39ALd\nwcdeCut9ja+vCzUZmbIAfqmnyKmw6brW69tLNjeAJXLWPBk/43Uh3oaRlwh5\nEKlzN4BKU/RtzgtGCVkuoMyiMlqet8OtRZXkKpH/igNQ9XSJCzNR/mYTHPCk\nRjFAMI8voU8GVHCB2gGLx2bVGUSuIp9EiQ==\n",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-09 19:10:37 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-09 19:10:37 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 21:41:46 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

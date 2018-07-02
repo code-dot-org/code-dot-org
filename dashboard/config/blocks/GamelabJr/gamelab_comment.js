@@ -1,0 +1,1 @@
+function comment(text) { /* no-op */ }

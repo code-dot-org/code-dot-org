@@ -17,8 +17,15 @@
       email <a href="mailto:facilitators@code.org">facilitators@code.org</a> for support.
 
 - else
-
-  %p
-    This Code.org account is not linked to a current Regional Partner. Please
-    confirm that you're using the same Code.org account you use as a Regional
-    Partner. Please email <a href="mailto:partner@code.org">partner@code.org</a> for support.
+  - if params[:action] == 'partner'
+    %p
+      This Code.org account is not linked to a current Regional Partner. Please
+      confirm that you're using the same Code.org account you use as a Regional
+      Partner. Please email <a href="mailto:partner@code.org">partner@code.org</a>
+      for support.
+  - elsif params[:action] = 'lead_facilitator'
+    %p
+      This Code.org account is not linked to a current facilitator. Please
+      confirm that you're using the same Code.org account you use as a facilitator.
+      Please email <a href="mailto:facilitator@code.org">facilitator@code.org</a>
+      for support.

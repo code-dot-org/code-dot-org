@@ -7,9 +7,11 @@ import Hammer from "hammerjs";
 import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import GameController from '@code-dot-org/craft/src/js/game/GameController';
-import FacingDirection from '@code-dot-org/craft/src/js/game/LevelMVC/FacingDirection';
-import {convertActionPlaneEntitiesToConfig} from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
+import {
+  GameController,
+  FacingDirection,
+  utils as CraftUtils,
+} from '@code-dot-org/craft';
 import dom from '../../dom';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
 import MusicController from '../../MusicController';
@@ -488,7 +490,7 @@ Craft.clearPlayerState = function () {
 };
 
 Craft.initializeAppLevel = function (levelConfig) {
-  convertActionPlaneEntitiesToConfig(levelConfig);
+  CraftUtils.convertActionPlaneEntitiesToConfig(levelConfig);
 
   // Fluff plane is no longer configured by level builders, pass in an empty plane
   const fluffPlane = [];

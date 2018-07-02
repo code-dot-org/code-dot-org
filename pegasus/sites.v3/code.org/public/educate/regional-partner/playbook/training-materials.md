@@ -2,8 +2,9 @@
 title: training materials
 nav: regional_partner_playbook_nav
 ---
-
+<meta name="robots" content="noindex">
 <a id="top"></a>
+
 # Training Materials
 
 ## Table of Contents
@@ -22,9 +23,29 @@ ________________
 <br/>
 ## Virtual Trainings
 
+June 2018
+
+- June 6 Local Summer Workshop Survey Webinar ([Recording](https://code.zoom.us/recording/share/N2iO1YPEycRHhGLdK6hPR20ekbqVC3_Q8E6YEhohAISwIumekTziMw), [Slides](https://docs.google.com/presentation/d/1iUtqVZH0bTVJeXnJ6EFMEFLFlwreV4YA-lnvXXvy7QQ/edit#slide=id.g3bbed00ae1_0_0))
+
+
+May 2018
+
+- May 3 Local Summer Workshop Webinar ([Recording](https://code.zoom.us/recording/play/JXG9NjNVlbnsm8vGmU8LRiwCPGzVeCya6v3KiLGBEOxqyxRBY9GDZUQEMMy_XzGn), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
+- May 1 View into the Code.org Funding Model ([Recording](https://code.zoom.us/recording/share/W5BoJRfbxk_LRq1MgcQye8dlD7VXYKZk0ORiGBf0tEqwIumekTziMw), [Slides](https://drive.google.com/file/d/1kackyrWrkMLQbxPhYzlctIhjQRTRHj-h/view?usp=sharing))
+
+April 2018
+
+- Apr 27 Federal EIR Grant Q&A with Michelle ([Recording](https://code.zoom.us/recording/share/5KSPF0GpkNSoDF1L7ZgBIljrp-BzgKA4PZkGw2Otq6WwIumekTziMw), [Slides](https://drive.google.com/file/d/1Ty_EX5loAj_mqG41gbioK1VDqkWu3USj/view?usp=sharing))
+- Apr 5 Preparing for Your First CS Fundamentals Workshop ([Video](https://code.zoom.us/recording/share/JitvrbyVnzbGFQjvDfpHmH201xikzVgEM7Z_JNjkT9k), [Slides](https://drive.google.com/file/d/1_Ovx0cYkaAxOiaSfzJ8ZxtI1x6lrzhqq/view?usp=sharing))
+
+
+March 2018
+
+- Mar 16 Federal Grant Consortia Webinar ([Video](https://code.zoom.us/recording/play/DaPic_y7f-R80ZsdTan8wtrgPgfTmV6NqRHe9cVBYi7Ra9UhQIFavOH_cHfi5cgy), [Slides](https://drive.google.com/file/d/1zp-eIO7XyY9TGVv76741vEcFRlLBf-sM/view?usp=sharing))
 
 February 2018
 
+- Feb 15 Teacher Recruitment Office Hours & Video Chat with Hadi ([Video](https://zoom.us/recording/play/zhCfZbsJmnYHyNbLHu45FbO7Hb5Q5-frDAEMcU9xEc3mQMS91AGbXBzQW2C9RYKR))
 - Feb 1 Teacher Recruitment Strategies ([Video](https://code.zoom.us/recording/play/1zNBEQIEdZz1mNF1ZB1dfMc712T8QZytT8S3-9HKcinn7aL8SHdwLLaE9Ufd2j0Q), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
 
 January 2018
@@ -128,19 +149,20 @@ January 2017:
 [**Back to the top**](#top)
 <br/>
 
+
 ________________
 <a id="mar18"></a>
 <br/>
 
 ## Regional Partner Summit (March 2018)
-Please review the following resources for the March 2018 Regional Partner Summit.  More resources will be added up to and through the summit. 
+Please review the following resources for the March 2018 Regional Partner Summit.
 
+- **See all March Summit Resources here: <a href="http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit</a>**
 - [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
-- Nominate your fellow Regional Partners - [form](https://goo.gl/forms/LpvgerOhqNycItj23)
-- Sign up to deliver 5-minute Lightening Talks during the summit - [form](https://goo.gl/forms/6dVAKAM9qtkVAm5G2)
 
 [**Back to the top**](#top)
 <br/>
+
 ________________
 <a id="sep17"></a>
 <br/>
@@ -286,5 +308,3 @@ ________________
 
 [**Back to the top**](#top)
 <br/>
-
-

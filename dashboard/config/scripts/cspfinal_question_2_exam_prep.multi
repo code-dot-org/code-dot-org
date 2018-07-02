@@ -1,0 +1,8 @@
+name 'CSPFinal_Question_2_exam_prep'
+wrong 'High bandwidth, high latency'
+wrong 'Low bandwidth, high latency'
+wrong 'High bandwidth, low latency'
+right 'Low bandwidth, low latency'
+markdown <<MARKDOWN
+A user clicks on a website, and it begins to load immediately, but it takes a long time to load completely and pictures appear slowly, one by one.  Which of the following is demonstrated through this situation?
+MARKDOWN

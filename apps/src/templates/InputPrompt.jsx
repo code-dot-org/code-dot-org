@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 
 const fontSize = 18;
 const styles = {
@@ -28,20 +28,20 @@ const styles = {
 /**
  * Simple input dialog to prompt for user input.
  */
-const InputPrompt = React.createClass({
-  propTypes: {
+export default class InputPrompt extends Component {
+  static propTypes = {
     question: PropTypes.string.isRequired,
     onInputReceived: PropTypes.func.isRequired,
-  },
+  };
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.onInputReceived(this.refs.answer.value);
-  },
+  };
 
   componentDidMount() {
     this.refs.answer.focus();
-  },
+  }
 
   render() {
     return (
@@ -54,5 +54,4 @@ const InputPrompt = React.createClass({
       </form>
     );
   }
-});
-export default InputPrompt;
+}

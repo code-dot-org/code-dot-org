@@ -25,6 +25,29 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
 
   before_save :update_regional_partner
 
+  after_create :send_regional_partner_contact_emails
+  def send_regional_partner_contact_emails
+    form = sanitize_and_trim_form_data_hash
+
+    if regional_partner_id
+      partner = RegionalPartner.find(regional_partner_id)
+      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner)
+
+      if regional_partner_program_managers.empty?
+        matched_but_no_pms = true
+        Pd::RegionalPartnerContactMailer.unmatched(form, 'tawny@code.org', matched_but_no_pms).deliver_now
+      else
+        regional_partner_program_managers.each do |rp_pm|
+          Pd::RegionalPartnerContactMailer.matched(form, rp_pm).deliver_now
+        end
+      end
+    else
+      Pd::RegionalPartnerContactMailer.unmatched(form, 'tawny@code.org').deliver_now
+    end
+
+    Pd::RegionalPartnerContactMailer.receipt(form).deliver_now
+  end
+
   def self.required_fields
     [
       :first_name,
@@ -33,6 +56,7 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
       :role,
       :job_title,
       :grade_levels,
+      :opt_in
     ]
   end
 
@@ -42,7 +66,8 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
         title: %w(Mr. Mrs. Ms. Dr.),
         role: ['Teacher', 'School Administrator', 'District Administrator'],
         gradeLevels: ['High School', 'Middle School', 'Elementary School'],
-        program: ['CS Fundamentals (Pre-K - 5th grade)', 'CS Discoveries (6 - 10th grade)', 'CS Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)']
+        program: ['CS Fundamentals (Pre-K - 5th grade)', 'CS Discoveries (6 - 10th grade)', 'CS Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)'],
+        opt_in: ['Yes', 'No']
       }
     )
   end
@@ -51,6 +76,14 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
     if errors.messages[:form_data].include? 'schoolDistrictData'
       return_data[:general_error] = 'Please fill out the fields about your school above'
     end
+  end
+
+  def email
+    sanitize_form_data_hash[:email]
+  end
+
+  def opt_in?
+    sanitize_form_data_hash[:opt_in].downcase == "yes"
   end
 
   private
@@ -80,26 +113,10 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
   end
 
   def update_regional_partner
-    return if sanitize_form_data_hash[:grade_levels] == ['Elementary School']
+    hash = sanitize_form_data_hash
+    zipcode = hash[:school_zipcode]
+    state = hash[:school_state]
 
-    school_district = SchoolDistrict.find_by_id(sanitize_form_data_hash[:school_district])
-
-    return unless school_district
-
-    possible_partners = school_district.regional_partners_school_districts
-
-    if possible_partners.size == 1
-      self.regional_partner = possible_partners.first.regional_partner
-    elsif possible_partners.size > 1
-      grade_levels = sanitize_form_data_hash[:grade_levels]
-
-      if grade_levels.include? 'High School'
-        self.regional_partner = possible_partners.find_by(course: 'csp').try(:regional_partner)
-      elsif grade_levels.include? 'Middle School'
-        self.regional_partner = possible_partners.find_by(course: 'csd').try(:regional_partner)
-      end
-
-      self.regional_partner = possible_partners.first.regional_partner if regional_partner.nil?
-    end
+    self.regional_partner = RegionalPartner.find_by_region(zipcode, state)
   end
 end

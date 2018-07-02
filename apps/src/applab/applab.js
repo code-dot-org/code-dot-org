@@ -475,12 +475,6 @@ Applab.init = function (config) {
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
-
-    // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
-    // resize our visualization (user can still resize with grippy)
-    if (!utils.browserSupportsCssMedia()) {
-      studioApp().resizeVisualization(300);
-    }
   };
 
   config.afterEditorReady = function () {
@@ -576,9 +570,6 @@ Applab.init = function (config) {
     designMode.renderDesignWorkspace();
     designMode.loadDefaultScreen();
 
-    getStore().dispatch(actions.changeInterfaceMode(
-      Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
-
     designMode.configureDragAndDrop();
 
     var designModeViz = document.getElementById('designModeViz');
@@ -624,7 +615,7 @@ Applab.init = function (config) {
   config.level.levelBlocks = config.dropletConfig.blocks;
 
   getStore().dispatch(actions.changeInterfaceMode(
-    Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
+    (!Applab.isReadOnlyView && Applab.startInDesignMode()) ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   Applab.reactInitialProps_ = {
     onMount: onMount
@@ -739,7 +730,7 @@ Applab.render = function () {
     Applab.reactMountPoint_);
 };
 
-Applab.exportApp = function () {
+Applab.exportApp = function (expoOpts) {
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
@@ -747,7 +738,8 @@ Applab.exportApp = function () {
     // TODO: find another way to get this info that doesn't rely on globals.
     window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
-    html
+    html,
+    expoOpts
   );
 };
 

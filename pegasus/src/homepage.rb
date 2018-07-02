@@ -124,8 +124,9 @@ class Homepage
 
   def self.get_blocks(request)
     if request.language == "en"
-      [
+      @en_blocks_entries ||= [
         {
+          id: "students-en",
           type: "block",
           title: "homepage_slot_text_title_students",
           text: "homepage_slot_text_blurb_students_courses",
@@ -151,13 +152,14 @@ class Homepage
         },
 
         {
+          id: "educators-en",
           type: "block",
           title: "homepage_slot_text_title_educators",
           text: "homepage_slot_text_blurb_educators",
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: "/educate",
-          image: "/shared/images/courses/logo_tall_teacher2.jpg",
+          image: "/images/homepage/ap-feature-2017.jpg",
           links:
             [
               {
@@ -176,6 +178,7 @@ class Homepage
         },
 
         {
+          id: "hoc-en",
           type: "block",
           title: "homepage_slot_text_title_hoc",
           text: "homepage_slot_text_blurb_hoc",
@@ -201,6 +204,7 @@ class Homepage
         },
 
         {
+          id: "advocate-en",
           type: "block",
           title: "homepage_slot_text_link_buy",
           text: "homepage_slot_text_blurb_advocates",
@@ -224,10 +228,11 @@ class Homepage
               }
             ]
         }
-      ]
+      ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
-      [
+      @non_en_blocks_entries ||= [
         {
+          id: "students-nonen",
           type: "blockshort",
           title: "homepage_slot_text_title_students",
           text: "homepage_slot_text_blurb_students",
@@ -237,15 +242,17 @@ class Homepage
           image: "/shared/images/courses/logo_tall_elementary.jpg"
         },
         {
+          id: "educators-nonen",
           type: "blockshort",
           title: "homepage_slot_text_title_educators",
           text: "homepage_slot_text_blurb_educators",
           color1: "0, 148, 202",
           color2: "89, 185, 220",
           url: CDO.studio_url("/courses?view=teacher"),
-          image: "/shared/images/courses/logo_tall_teacher2.jpg"
+          image: "/images/homepage/ap-feature-2017.jpg"
         },
         {
+          id: "hoc-nonen",
           type: "blockshort",
           title: "homepage_slot_text_title_hoc",
           text: "homepage_slot_text_blurb_hoc",
@@ -255,6 +262,7 @@ class Homepage
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
+          id: "flappy-nonen",
           type: "blockshort",
           title: "studiobar_flappy_title",
           text: "studiobar_flappy_body",
@@ -263,7 +271,7 @@ class Homepage
           url: CDO.studio_url("/s/flappy/reset"),
           image: "/shared/images/courses/logo_tall_flappy.jpg"
         }
-      ]
+      ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     end
   end
 
@@ -279,15 +287,10 @@ class Homepage
   end
 
   def self.get_census(request)
-    census_announcement = DCDO.get('census_announcement', nil)
-
-    # Whether we show non-rotating background image and center options on desktop.
-    show_census_layout = request.language == "en"
-
-    # Whether we have a special announcement to also show.
-    show_census_announcement = census_announcement && census_announcement['homepage_text'] && census_announcement['homepage_subtext'] && request.language == "en"
-
-    return show_census_layout, show_census_announcement, census_announcement
+    # While showing the professional-learning-2018 banner in "en", use the
+    # census layout (no cycling through hero images) but don't show the census
+    # announcement itself.
+    return request.language == "en", false, nil
   end
 
   def self.get_heroes_arranged(request)
@@ -331,5 +334,14 @@ class Homepage
     end
 
     return heroes_arranged, hero_display_time
+  end
+
+  def self.get_below_hero_announcement
+    {
+      showing: false,
+      text: "homepage_below_hero_announcement_text",
+      link: "/privacy-may2018",
+      link_text: "homepage_below_hero_announcement_link_text"
+    }
   end
 end

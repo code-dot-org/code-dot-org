@@ -1,0 +1,31 @@
+name 'cspu5_assess4_dataReturns_exam_prep'
+wrong '3'
+wrong '4'
+wrong '9'
+wrong '10'
+right '16'
+
+markdown <<MARKDOWN
+Assuming that the list _data_ below is given as the parameter to the procedure, what is returned by the following procedure?
+
+![](https://images.code.org/896a8f5e608e4a789ac8cda962a096ef-image-1477861894494.png)
+
+    PROCEDURE mystery(data)
+    {
+    	val = 0
+        FOR EACH item IN data 
+        {
+         	IF (item > val) 
+        	{
+       		 val = item 
+       		}
+        }
+        RETURN (val)
+    }
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Looking at the code, val is set to 0. Going through the data, if the current item in the data is greater than val, set val to the current item. At the very end, val is returned.
+
+In other words, the largest number in data is set to val. In this case, 16 will be returned.
+MARKDOWN

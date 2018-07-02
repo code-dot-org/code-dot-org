@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require_relative '../../dashboard/config/environment'
+
+count = Census::CensusSubmission.unresolved_reported_inaccuracies.count
+
+if count > 0
+  message = count == 1 ? "There is 1 reported inaccuracy to review. " : "There are #{count} reported inaccuracies to review. "
+  noun = count == 1 ? "it" : "them"
+  message += "Somebody with census_review permissions should go to https://studio.code.org/census/review to look at #{noun}."
+  result = ChatClient.message 'access_report', message
+  unless result
+    raise "Failed to send message to access_report channel: #{result}"
+  end
+end

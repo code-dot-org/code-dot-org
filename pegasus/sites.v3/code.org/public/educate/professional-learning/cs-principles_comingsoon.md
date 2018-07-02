@@ -17,9 +17,9 @@ Our CS Principles Professional Learning program offers year round support design
 
 The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. 
 
-**Applications for the 2018-19 [CS Principles Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** If you are interested in joining in 2018-19, sign up below. 
+**Applications for the 2018-19 [CS Principles Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
-<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open!</button>
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
 
 [/col-50]
 

@@ -1,0 +1,40 @@
+name 'cspu5_assess4_listContains_exam_prep'
+right '<img src="https://images.code.org/d183803e65f00d76cc5ebcd16d331759-image-1477860190404.png">'
+wrong '<img src="https://images.code.org/1616322e66c0b1bdf84525480e2b0afe-image-1477860200184.png">'
+wrong '<img src="https://images.code.org/02d78ce777071ddea88d0273fe54c411-image-1477860209929.png">'
+wrong '<img src="https://images.code.org/2af1c24a3f4266f374f788e96cd36e9f-image-1477860218619.png">'
+
+
+markdown <<MARKDOWN
+The following program processes the list data shown below. After running the following program, what is contained in the list?
+
+![](https://images.code.org/ee961914a74f367c2f121211f49017e0-image-1477860323413.png)
+
+    i = 1
+    val = 0
+    n = LENGTH(data)
+    REPEAT n TIMES
+    {	
+        val = val + data[i]
+        data[i] = val
+        i = i + 1
+    }
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Going through the code line by line as it repeats while keeping track of data[]:
+
+* Currently, data = [2,3,1,2]
+* i is set to 1, val is set to 0, and n is set to the length of data which n = 4
+* The loop repeats 4 times. Every time it loops: val equals the current val plus the data at index i, the data at index i is set to val, and i is incremented by one.
+* First repetition: current val = 0, i = 1, data[i] = 2. val = 0 + 2 = 2. data[1] = 2
+* Current data = = [2,3,1,2]
+* Second repetition: current val = 2, i = 2, data[i] = 3. val = 2 + 3 = 5. data[2] = 5
+* Current data = = [2,5,1,2]
+* Third repetition: current val = 5, i = 3, data[i] = 1. val = 5 + 1 = 6. data[3] = 6
+* Current data = = [2,5,6,2]
+* Fourth repetition: current val = 6, i = 4, data[i] = 2. val = 6 + 2 = 8
+* Final data = = [2,5,6,8]
+
+**In summary:** This code adds the current index value to the previous index value, resulting in the accumulative sum of the data.
+MARKDOWN

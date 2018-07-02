@@ -8,7 +8,8 @@
     "video_key": "CSF_debugging_text_blocks",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",

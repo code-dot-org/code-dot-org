@@ -1,0 +1,18 @@
+name 'courseF_markdown_loops_intro'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# In this lesson...
+
+### Imagine you want your character to move forward **5** times. This would be pretty easy- just drag out **5** move forward blocks. Now, imagine you want your character to move forward **5,000** times! 
+
+### How long would it take you to drag out **5,000** blocks? 
+
+### Wish there was an easy way to do this? There is!
+
+---
+
+## Blocks to Know
+
+![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)
+MARKDOWN

@@ -1,0 +1,17 @@
+name 'courseF_markdown_nestedloops_end'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **You just learned "nested loops"!**
+
+### **A nested loop is a loop within a loop.** Think of it like an outer loop, with another loop that got all comfy and cozy and nested inside the outer loop. 
+
+### Nested loops are great for repeating patterns of patterns. They can be very powerful if used correctly!
+
+---
+
+## **Vocab to Know**
+
+### __Nested Loops__ - A loop within a loop
+
+MARKDOWN

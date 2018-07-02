@@ -173,7 +173,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Laying Out Your Background\r\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\r\n\r\n# Do This\r\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\r\n\r\n* First, figure out what the lowest layer in your image is (this should use the `background()` block) and add it to the very top of the draw loop.\r\n* Next, layer each additional drawing block in the order you want them to appear in the stack.\r\n* Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well.\r\n\r\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?",

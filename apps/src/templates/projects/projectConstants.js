@@ -62,6 +62,28 @@ export const PROJECT_TYPE_MAP = {
   weblab: i18n.projectTypeWeblab(),
 };
 
+export const FEATURED_PROJECT_TYPE_MAP = {
+  applab: i18n.projectTypeApplab(),
+  artist: i18n.projectTypeDrawing(),
+  frozen: i18n.projectTypeDrawing(),
+  gamelab: i18n.projectTypeGamelab(),
+  playlab: i18n.projectTypePlaylab(),
+  gumball: i18n.projectTypePlaylab(),
+  infinity: i18n.projectTypePlaylab(),
+  iceage: i18n.projectTypePlaylab(),
+  minecraft_adventurer: i18n.projectTypeMinecraft(),
+  minecraft_designer: i18n.projectTypeMinecraft(),
+  minecraft_hero: i18n.projectTypeMinecraft(),
+  bounce: i18n.projectTypeEvents(),
+  flappy: i18n.projectTypeEvents(),
+  starwars: i18n.projectTypeEvents(),
+  starwarsblocks_hour: i18n.projectTypeEvents(),
+  sports: i18n.projectTypeEvents(),
+  basketball: i18n.projectTypeEvents(),
+  artist_k1: i18n.projectTypeK1(),
+  playlab_k1: i18n.projectTypeK1(),
+};
+
 // The project table uses the channels API to populate the personal projects
 // and the data needs to be filtered and mapped before displaying.
 export const convertChannelsToProjectData = function (projects) {

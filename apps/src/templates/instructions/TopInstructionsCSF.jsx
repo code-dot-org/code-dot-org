@@ -166,8 +166,8 @@ const styles = {
   },
 };
 
-var TopInstructions = React.createClass({
-  propTypes: {
+class TopInstructions extends React.Component {
+  static propTypes = {
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
     hints: PropTypes.arrayOf(PropTypes.shape({
@@ -212,97 +212,23 @@ var TopInstructions = React.createClass({
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     showInstructionsDialog: PropTypes.func.isRequired,
-  },
+  };
 
-  defaultProps: {
+  static defaultProps = {
     hasContainedLevels: false,
     isEmbedView: false,
     noVisualization: false,
-  },
+  };
 
-  getInitialState() {
-    return {
-      rightColWidth: {
-        collapsed: undefined,
-        uncollapsed: undefined,
-        empty: 10
-      },
-      promptForHint: false,
-      displayScrollButtons: true
-    };
-  },
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.shouldDisplayCollapserButton() && this.getRightColWidth() === undefined) {
-      // Update right col width now that we know how much space it needs, and
-      // rerender if it has changed. One thing to note is that if we end up
-      // resizing our column significantly, it can result in our maxNeededHeight
-      // being inaccurate. This isn't that big a deal except that it means when we
-      // adjust maxNeededHeight below, it might not be as large as we want.
-      const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
-
-      // setting state in componentDidUpdate will trigger another
-      // re-render and is discouraged; unfortunately in this case we
-      // can't do it earlier in the lifecycle as we need to examine the
-      // actual DOM to determine the desired value. We are careful to
-      // only actually update the state when it has changed, which will
-      // prevent the possibility of an infinite loop and should serve to
-      // minimize excess rerenders.
-      let rightColWidth = Object.assign({}, this.state.rightColWidth);
-      rightColWidth[this.getCurrentRightColWidthProperty()] = width;
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({ rightColWidth });
-    }
-
-    this.adjustMaxNeededHeight();
-
-    if (this.refs && this.refs.instructions) {
-      const contentContainer = this.refs.instructions.parentElement;
-      const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
-      if (canScroll !== this.state.displayScrollButtons) {
-        // see comment above
-        // eslint-disable-next-line react/no-did-update-set-state
-        this.setState({
-          displayScrollButtons: canScroll
-        });
-      }
-    }
-
-    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
-    if (gotNewHint) {
-      const images = ReactDOM.findDOMNode(this.refs.instructions).getElementsByTagName('img');
-      for (let i = 0, image; (image = images[i]); i++) {
-        image.onload = image.onload || this.scrollInstructionsToBottom;
-      }
-    }
-
-    if (this.props.feedback || this.state.promptForHint || gotNewHint) {
-      this.scrollInstructionsToBottom();
-    }
-
-    if (!this.props.collapsed && !prevProps.collapsed) {
-      const minHeight = this.getMinHeight();
-      const maxHeight = this.props.maxHeight;
-      const heightOutOfBounds = this.props.height < minHeight || this.props.height > maxHeight;
-
-      if (heightOutOfBounds) {
-        const newHeight = Math.max(Math.min(this.props.height, maxHeight), minHeight);
-        this.props.setInstructionsRenderedHeight(newHeight);
-      }
-    }
-  },
-
-  componentWillUpdate(nextProps, nextState) {
-    const gotNewFeedback = !this.props.feedback && nextProps.feedback;
-    if (gotNewFeedback) {
-      this.setState({
-        promptForHint: false
-      });
-      if (nextProps.collapsed) {
-        this.handleClickCollapser();
-      }
-    }
-  },
+  state = {
+    rightColWidth: {
+      collapsed: undefined,
+      uncollapsed: undefined,
+      empty: 10
+    },
+    promptForHint: false,
+    displayScrollButtons: true
+  };
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -312,7 +238,7 @@ var TopInstructions = React.createClass({
 
     // Might want to increase the size of our instructions after our icon image
     // has loaded, to make sure the image fits
-    $(ReactDOM.findDOMNode(this.refs.icon)).load(function () {
+    $(ReactDOM.findDOMNode(this.icon)).load(function () {
       const minHeight = this.getMinHeight();
       if (this.props.height < minHeight) {
         this.props.setInstructionsRenderedHeight(minHeight);
@@ -324,7 +250,7 @@ var TopInstructions = React.createClass({
     // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
-  },
+  }
 
   /**
    * When collapsed, height can change when we get additional feedback
@@ -344,7 +270,79 @@ var TopInstructions = React.createClass({
     if (shouldUpdateHeight) {
       this.props.setInstructionsRenderedHeight(newHeight);
     }
-  },
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    const gotNewFeedback = !this.props.feedback && nextProps.feedback;
+    if (gotNewFeedback) {
+      this.setState({
+        promptForHint: false
+      });
+      if (nextProps.collapsed) {
+        this.handleClickCollapser();
+      }
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.shouldDisplayCollapserButton() && this.getRightColWidth() === undefined) {
+      // Update right col width now that we know how much space it needs, and
+      // rerender if it has changed. One thing to note is that if we end up
+      // resizing our column significantly, it can result in our maxNeededHeight
+      // being inaccurate. This isn't that big a deal except that it means when we
+      // adjust maxNeededHeight below, it might not be as large as we want.
+      const width = $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true);
+
+      // setting state in componentDidUpdate will trigger another
+      // re-render and is discouraged; unfortunately in this case we
+      // can't do it earlier in the lifecycle as we need to examine the
+      // actual DOM to determine the desired value. We are careful to
+      // only actually update the state when it has changed, which will
+      // prevent the possibility of an infinite loop and should serve to
+      // minimize excess rerenders.
+      let rightColWidth = Object.assign({}, this.state.rightColWidth);
+      rightColWidth[this.getCurrentRightColWidthProperty()] = width;
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ rightColWidth });
+    }
+
+    this.adjustMaxNeededHeight();
+
+    if (this.instructions) {
+      const contentContainer = this.instructions.parentElement;
+      const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
+      if (canScroll !== this.state.displayScrollButtons) {
+        // see comment above
+        // eslint-disable-next-line react/no-did-update-set-state
+        this.setState({
+          displayScrollButtons: canScroll
+        });
+      }
+    }
+
+    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
+    if (gotNewHint) {
+      const images = ReactDOM.findDOMNode(this.instructions).getElementsByTagName('img');
+      for (let i = 0, image; (image = images[i]); i++) {
+        image.onload = image.onload || this.scrollInstructionsToBottom;
+      }
+    }
+
+    if (this.props.feedback || this.state.promptForHint || gotNewHint) {
+      this.scrollInstructionsToBottom();
+    }
+
+    if (!this.props.collapsed && !prevProps.collapsed) {
+      const minHeight = this.getMinHeight();
+      const maxHeight = this.props.maxHeight;
+      const heightOutOfBounds = this.props.height < minHeight || this.props.height > maxHeight;
+
+      if (heightOutOfBounds) {
+        const newHeight = Math.max(Math.min(this.props.height, maxHeight), minHeight);
+        this.props.setInstructionsRenderedHeight(newHeight);
+      }
+    }
+  }
 
   /**
    * @param {boolean} collapsed whether or not the height should be
@@ -355,17 +353,17 @@ var TopInstructions = React.createClass({
    * collapsed
    */
   getMinHeight(collapsed=this.props.collapsed) {
-    if (this.refs.containedLevel) {
+    if (this.containedLevel) {
       return MIN_CONTAINED_LEVEL_HEIGHT;
     }
-    const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
-    const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
-        this.refs.scrollButtons.getWrappedInstance().getMinHeight() : 0;
+    const collapseButtonHeight = getOuterHeight(this.collapser, true);
+    const scrollButtonsHeight = (!collapsed && this.scrollButtons) ?
+        this.scrollButtons.getWrappedInstance().getMinHeight() : 0;
 
-    const minIconHeight = this.refs.icon ?
-      getOuterHeight(this.refs.icon, true) : 0;
+    const minIconHeight = this.icon ?
+      getOuterHeight(this.icon, true) : 0;
     const minInstructionsHeight = this.props.collapsed ?
-      getOuterHeight(this.refs.instructions, true) : 0;
+      getOuterHeight(this.instructions, true) : 0;
 
     const domNode = $(ReactDOM.findDOMNode(this));
     const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
@@ -379,7 +377,7 @@ var TopInstructions = React.createClass({
 
     return Math.max(leftColHeight, middleColHeight, rightColHeight) +
         resizerHeight + margins;
-  },
+  }
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -387,14 +385,14 @@ var TopInstructions = React.createClass({
    * @param {number} delta
    * @returns {number} How much we actually changed
    */
-  handleHeightResize: function (delta = 0) {
+  handleHeightResize = (delta = 0) => {
     const minHeight = this.getMinHeight();
     const currentHeight = this.props.height;
 
     let newHeight = Math.max(minHeight, currentHeight + delta);
-    if (this.refs.containedLevel) {
+    if (this.containedLevel) {
       const maxContainedLevelHeight =
-        getOuterHeight(this.refs.containedLevel, true) +
+        getOuterHeight(this.containedLevel, true) +
         RESIZER_HEIGHT +
         CONTAINED_LEVEL_PADDING;
       newHeight = Math.min(newHeight, maxContainedLevelHeight);
@@ -404,30 +402,30 @@ var TopInstructions = React.createClass({
 
     this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
-  },
+  };
 
   /**
    * Calculate how much height it would take to show top instructions with our
    * entire instructions visible and update store with this value.
    * @returns {number}
    */
-  adjustMaxNeededHeight() {
+  adjustMaxNeededHeight = () => {
     const minHeight = this.getMinHeight();
-    const instructionsContent = this.refs.instructions;
+    const instructionsContent = this.instructions;
     const maxNeededHeight = (this.props.hasContainedLevels ?
-        getOuterHeight(this.refs.containedLevel, true) + CONTAINED_LEVEL_PADDING :
+        getOuterHeight(this.containedLevel, true) + CONTAINED_LEVEL_PADDING :
         getOuterHeight(instructionsContent, true)) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
     return maxNeededHeight;
-  },
+  };
 
   /**
    * Handle a click to our collapser icon by changing our collapse state, and
    * updating our rendered height.
    */
-  handleClickCollapser() {
+  handleClickCollapser = () => {
     const nextCollapsed = !this.props.collapsed;
     this.props.toggleInstructionsCollapsed();
 
@@ -437,14 +435,14 @@ var TopInstructions = React.createClass({
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
-  },
+  };
 
   /**
    * @return {Element} scrollTarget
    */
-  getScrollTarget() {
-    return this.refs.instructions.parentElement;
-  },
+  getScrollTarget = () => {
+    return this.instructions.parentElement;
+  };
 
   /**
    * Manually scroll instructions to bottom. When we have multiple
@@ -455,7 +453,7 @@ var TopInstructions = React.createClass({
    * can scroll up to.
    */
   scrollInstructionsToBottom() {
-    const instructions = this.refs.instructions;
+    const instructions = this.instructions;
     if (!instructions) {
       // If we have a contained level instead of instructions, do nothing
       return;
@@ -467,12 +465,12 @@ var TopInstructions = React.createClass({
     } else {
       scrollBy(contentContainer, contentContainer.scrollHeight);
     }
-  },
+  }
 
   /**
    * Handle a click to the hint display bubble (lightbulb)
    */
-  handleClickBubble() {
+  handleClickBubble = () => {
     // If we don't have authored hints to display, clicking bubble shouldnt do anything
     if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
       this.setState({
@@ -482,23 +480,23 @@ var TopInstructions = React.createClass({
         this.handleClickCollapser();
       }
     }
-  },
+  };
 
-  dismissHintPrompt() {
+  dismissHintPrompt = () => {
     this.setState({
       promptForHint: false
     });
-  },
+  };
 
-  showHint() {
+  showHint = () => {
     this.dismissHintPrompt();
     this.props.showNextHint();
     this.props.clearFeedback();
-  },
+  };
 
   shouldDisplayHintPrompt() {
     return this.state && this.state.promptForHint && !this.props.collapsed;
-  },
+  }
 
   shouldDisplayCollapserButton() {
     // if we have "extra" (non-instruction) content, we should always
@@ -510,7 +508,7 @@ var TopInstructions = React.createClass({
     // Otherwise, only show the button if we have two versions of
     // instruction we want to toggle between
     return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
-  },
+  }
 
   shouldIgnoreShortInstructions() {
     // if we have no long instructions, never ignore the short ones.
@@ -527,11 +525,11 @@ var TopInstructions = React.createClass({
     // instructions and only show long.
     let dist = levenshtein(this.props.longInstructions, this.props.shortInstructions);
     return dist <= 10;
-  },
+  }
 
   shouldDisplayShortInstructions() {
     return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
-  },
+  }
 
   getAvatar() {
     // Show the "sad" avatar if there is failure feedback. Otherwise,
@@ -539,7 +537,7 @@ var TopInstructions = React.createClass({
     return this.props.feedback && this.props.feedback.isFailure
       ? this.props.failureAvatar
       : this.props.smallStaticAvatar;
-  },
+  }
 
   /**
    * this.state.rightColWidth contains three key/value pairs, reflecting the
@@ -557,13 +555,13 @@ var TopInstructions = React.createClass({
     } else {
       return 'empty';
     }
-  },
+  }
 
   getRightColWidth() {
     return this.state.rightColWidth[this.getCurrentRightColWidthProperty()];
-  },
+  }
 
-  render: function () {
+  render() {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
     const topInstructionsHeight = this.props.height - resizerHeight;
 
@@ -588,7 +586,7 @@ var TopInstructions = React.createClass({
             }}
           >
             <div style={containedLevelStyles.level} className="contained-level">
-              <ContainedLevel ref="containedLevel" />
+              <ContainedLevel ref={(c) => { this.containedLevel = c; }} />
             </div>
           </div>
           {!this.props.collapsed && !this.props.isEmbedView &&
@@ -641,12 +639,12 @@ var TopInstructions = React.createClass({
             >
               {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
               {this.getAvatar() &&
-                <PromptIcon src={this.getAvatar()} ref="icon"/>
+                <PromptIcon src={this.getAvatar()} ref={(c) => { this.icon = c; }}/>
               }
             </div>
           </div>
           <div
-            ref="instructions"
+            ref={(c) => { this.instructions = c; }}
             className="csf-top-instructions"
             style={[
               styles.instructions,
@@ -656,7 +654,7 @@ var TopInstructions = React.createClass({
           >
             <ChatBubble ttsUrl={ttsUrl}>
               <Instructions
-                ref="instructions"
+                ref={(c) => { this.instructions = c; }}
                 renderedMarkdown={renderedMarkdown}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
@@ -700,7 +698,7 @@ var TopInstructions = React.createClass({
           </div>
           <div>
             <CollapserButton
-              ref="collapser"
+              ref={(c) => { this.collapser = c; }}
               style={[
                 styles.collapserButton,
                 this.props.isMinecraft && craftStyles.collapserButton,
@@ -715,7 +713,7 @@ var TopInstructions = React.createClass({
                   this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons,
                   this.props.isMinecraft && (this.props.isRtl ? craftStyles.scrollButtonsRtl : craftStyles.scrollButtons),
                 ]}
-                ref="scrollButtons"
+                ref={(c) => { this.scrollButtons = c; }}
                 getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
@@ -730,7 +728,8 @@ var TopInstructions = React.createClass({
       </div>
     );
   }
-});
+}
+
 module.exports = connect(function propsFromStore(state) {
   return {
     overlayVisible: state.instructions.overlayVisible,

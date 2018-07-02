@@ -20,6 +20,10 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   setup do
+    # Expect any scripts/courses to be valid unless specified by test
+    Course.stubs(:valid_course_id?).returns(true)
+    Script.stubs(:valid_script_id?).returns(true)
+
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
     @course = create(:course)
@@ -156,89 +160,5 @@ class SectionsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to section_path(id: @picture_section.code)
-  end
-
-  test "update: can update section you own" do
-    sign_in @teacher
-    section_with_script = create(:section, user: @teacher, script_id: Script.flappy_script.id)
-    post :update, params: {
-      id: section_with_script.id,
-      course_id: @course.id
-    }
-    assert_response :success
-    section_with_script.reload
-    assert_equal(@course.id, section_with_script.course_id)
-    assert_nil section_with_script.script_id
-  end
-
-  test "update: cannot update section you dont own" do
-    other_teacher = create(:teacher)
-    sign_in other_teacher
-    post :update, params: {
-      id: @regular_section.id,
-      course_id: @course.id,
-    }
-    assert_response :forbidden
-  end
-
-  test "update: cannot update section if not logged in " do
-    post :update, params: {
-      id: @regular_section.id,
-      course_id: @course.id,
-    }
-    assert_response :redirect
-  end
-
-  test "update: can set course and script" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
-    post :update, as: :json, params: {
-      id: section.id,
-      course_id: @course.id,
-      script_id: @script_in_course.id
-    }
-    assert_response :success
-    section.reload
-    assert_equal(@course.id, section.course_id)
-    assert_equal(@script_in_course.id, section.script_id)
-  end
-
-  test "update: non-matching course/script rejected" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
-    post :update, params: {
-      id: section.id,
-      course_id: @course.id,
-      script_id: Script.artist_script.id
-    }
-    assert_response 400
-  end
-
-  test "update: can set course-less script" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
-    post :update, params: {
-      id: section.id,
-      script_id: Script.artist_script.id
-    }
-    assert_response :success
-    section.reload
-    assert_nil section.course_id
-    assert_equal(Script.artist_script.id, section.script_id)
-  end
-
-  test "upate: setting a script results in UserScripts for students" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
-    student = create(:follower, section: section).student_user
-
-    assert_nil UserScript.find_by(script: Script.artist_script, user: student)
-
-    post :update, params: {
-      id: section.id,
-      script_id: Script.artist_script.id
-    }
-
-    assert_not_nil UserScript.find_by(script: Script.artist_script, user: student)
   end
 end

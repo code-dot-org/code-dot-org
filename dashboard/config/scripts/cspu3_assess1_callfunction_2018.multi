@@ -1,0 +1,14 @@
+name 'cspu3_assess1_callfunction_2018'
+wrong '<img src="https://images.code.org/a7bbce613052542fb5b33602f1b606f7-image-1475365208948.png" width=100>'
+right '<img src="https://images.code.org/aac23634cf2eb7044d6bc64899f44358-image-1475365212178.png" width=100>'
+wrong '<img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>'
+wrong '<img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>'
+wrong '<img src="https://images.code.org/ad0b09401b04aa0ce4b6c5df5e6b83ef-image-1475365216499.png" width=150>'
+
+markdown <<MARKDOWN
+Which of the following will call the function drawStar?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The name of the function is "drawStar", it does not need to note the type "function" in front of it. For every function, parenthesis follow it. Parameters can be put inside the parenthesis to note any specific boundaries for a particular function. For this language's syntax, each line is followed by a semi-colon ";".
+MARKDOWN

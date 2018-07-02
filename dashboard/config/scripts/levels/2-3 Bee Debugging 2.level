@@ -33,6 +33,7 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?\",\r\n  \"hint_id\": \"2-3_Bee_Debugging_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

@@ -1,0 +1,7 @@
+name 'courseF_multi_artist_predict1_2018'
+
+question 'Based on the code below, what do you think will happen if you press "Run"?'
+right 'The artist will draw the triangle from the last level four times in a rotated pattern.', feedback: 'Correct!'
+wrong 'The artist will draw the triangle from the last level four times in a straight line.', feedback: 'Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.'
+wrong 'The artist will draw three squares in a rotated pattern.', feedback: 'Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.'
+wrong 'I don\'t know.', feedback: 'The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.'

@@ -142,11 +142,12 @@
     "makerlab_enabled": "true",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "encrypted_examples": "UQpKOpvD+etVH5I6m+h1ilodL3Th7+QglhaD7OzpqJQN6sicluqem/zbLUvc\nOB/w+nzPwukHFjp3oFVdfiAuKg==\n",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-30 16:31:11 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-30 16:31:11 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 21:39:02 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

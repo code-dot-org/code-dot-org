@@ -51,7 +51,8 @@
     ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",

@@ -1,0 +1,10 @@
+name 'CB_Question_11_2018'
+
+wrong 'When the problem can be solved in a reasonable time and an approximate solution is acceptable'
+wrong 'When the problem can be solved in a reasonable time and an exact solution is needed'
+right 'When the problem cannot be solved in a reasonable time and an approximate solution is acceptable'
+wrong 'When the problem cannot be solved in a reasonable time and an exact solution is needed'
+
+markdown <<MARKDOWN
+Under which of the following conditions is it most beneficial to use a heuristic approach to solve a problem?
+MARKDOWN

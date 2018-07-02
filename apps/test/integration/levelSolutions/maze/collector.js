@@ -33,7 +33,7 @@ module.exports = {
       description: "Collector collected just some",
       expected: {
         result: true,
-        testResult: TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL
+        testResult: TestResults.APP_SPECIFIC_IMPERFECT_PASS
       },
       customValidator: () => Maze.executionInfo.terminationValue() === 6, // COLLECTED_ENOUGH_BUT_NOT_ALL
       xml: '<xml>' +

@@ -4,8 +4,11 @@ import i18n from "@cdo/locale";
 import {editStudent} from './manageStudentsRedux';
 
 const GENDERS = {
+  '': '',
   m: i18n.genderMale(),
-  f: i18n.genderFemale()
+  f: i18n.genderFemale(),
+  n: i18n.genderNonBinary(),
+  o: i18n.genderNotListed(),
 };
 
 class ManageStudentGenderCell extends Component {
@@ -40,6 +43,7 @@ class ManageStudentGenderCell extends Component {
             name="age"
             value={this.props.editedValue}
             onChange={this.onChangeGender}
+            style={{width: 120}}
           >
            {Object.keys(GENDERS).map(gender => <option key={gender} value={gender}>{GENDERS[gender]}</option>)}
           </select>

@@ -61,7 +61,6 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "show_d_pad": "false",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

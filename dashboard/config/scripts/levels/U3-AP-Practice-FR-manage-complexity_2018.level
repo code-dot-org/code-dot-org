@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:38:09.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "# AP Practice - Performance Task Response\r\n\r\nThe AP Create Performance task asks you to write about an abstraction that you developed and wrote into your code. Most of the time that means identifying a function or procedure you wrote to help \"manage complexity\" in your program.\r\n\r\nHere is the actual prompt from the Create Performance Task:\r\n\r\n<div style=\"width: 70%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt\">\r\n\r\n<b>2d.</b> Capture and paste a program code segment that contains an abstraction you developed individually on your own (marked with a <b>rectangle</b>). This abstraction must integrate mathematical and logical concepts. Explain how your abstraction helped manage the complexity of your program.\r\n<br>\r\n<i>(Must not exceed 200 words)</i>\r\n\r\n</div>\r\n\r\n<br>\r\n\r\nBelow is a segment of code from an \"under the sea\" program with a rectangle drawn around a portion of the code identifying an abstraction. Imagine that you wrote this and are composing an AP response about how this abstraction manages complexity.  (Note: ignore the requirement that the abstraction integrate \"mathematical and logical concepts\" for this practice response.  Just write about managing complexity).\r\n\r\n![](https://images.code.org/d98fa58fce78eff86fd734f32e2960e4-image-1507913593511.png)\r\n\r\nExplain how the abstraction marked with the rectangle in the code above helps manage complexity of this program.",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "100",
+    "placeholder": "Write your response here",
+    "encrypted_solution": "24zZSDLSPyWBTAN3D9if2A7616gc+jOaOqAHlyBdbqqV1OMRoPt6eb3FtKbQ\nwiRUQW/6oGsgZjQUUaR9aHVlVoDoYx2m6T0PlKOVfeczrGUDhX7BzPUEQRXB\n5eOho9ReO33x0h3f0HoR2bsAXYIQi92Bd280WIVOAcaVvLmWdCsOtf8SfAC2\nmHk/5mf/Rqwkhcg7udFrmAtODaIlznx7J1vIN0jO6ERyQTvMr0rOGt75bwLK\nOCqBzbHz+Od4NryUoDbgv3RkeiTGbZmLPOSnKiM00f4i/ApbtWMtoIDEHQ8C\nPRsqCEQW9MmqgajQtIWLTIiGZx3ltz+QQQyxM7t2NlBa2HcxlT2fw2oIq/AC\nyAAGjynuaEbv7JemDgePglTNls82b3E1MnXYdXYaVIsU5ktDQnTIwQYf7E9L\nWcSeK+pcuU4aKZf9tzJofx2O7ii1uRASqA3ANeF72r5i/7RVNqsmeO+O+TPv\nEj+6s/nCxvdh8WetYg5Gweq03JKEC1NbM8mjty66wEyo6KOlD9YEH3+mFNcy\n4+E0I0q2ckN2mmS3jDRBG7aSdN6fH+Gkx2D29tvi6Wfqfc/IYDt20S0khjvp\nDQ1YOwhcX5rf8gWwiPSpJfWb+VCyzxyNT+BNLj6ErbFcrBBrz6kERBFjqaZ+\nImwatHIxkdH6BhdaI0KyqG7ohEzZrldcJkv/PWVsz7H06Q0QMvtFjQk9/DRF\nqeM9rL7i5lVfJsXUkhHRoXrRbs+akt2+X0a/RLxSQe9Xrg1Nbbc5clUoM8ft\nngU1twMkORrOGiIHUStGjbYU8i+qohcOSwwfR0HJd6TUf5QFKjnrtJzSNGI3\nu06RGdN4V0rjGpqwZIo/uk+PBTEpJyj9SL9c5TY/gq2UU6n+FZ6bcMaxQXC6\nRaUOM4mOb04+73vDvoJlTQpWZ2o3REeI+IpDDEB5oQVPWNr7Vldj6xST22Rc\n9fIiN2+93LPEqEonxlLPdOUgn9+vhXYn1m8WHGNBYoz+KTLTMPXCVrtJXHjq\nYqRR6OmsjAeVnv2xQMbh7VAdoTYnMTIjfeIRY6eXdXx3e6SJhpoqWo6Xcihd\ndIaL7Q2GoMzbvpWnHytuuF4GdTBNuIfQsamQrAiHWzPudM87gvCi9dkZKPZQ\nPJCFMXduOQzxUEkXGYaoFSU+MUHH1+juBc4N2JAUM58pmoD62ueVT+Wy12oh\ncuM33uBNhI++G20zIUgmlAPtyfEyCQT4wgA2UInn/wJHStt09+Htb38ZguVI\nNE4LZ8s27wJs8n1G0qzb+Hg5fJgkrTT44NpzvUEUjg==\n",
+    "parent_level_id": 10222,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "\r\n",
+  "audit_log": "[{\"changed_at\":\"2017-10-13 17:08:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-13 19:51:55 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-24 21:27:34 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-25 14:53:29 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+}]]></config>
+</FreeResponse>

@@ -23,6 +23,9 @@ const styles = {
     paddingTop: 6,
     paddingBottom: 6,
     minWidth: 70,
+    lineHeight: '18px',
+    marginTop: 3,
+    marginBottom: 3,
   },
   text: {
     display: 'inline-block',

@@ -1,0 +1,67 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:40:34.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "moveForward": null,
+      "turnRight": null,
+      "turnLeft": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Improve the button by choosing a descriptive and meaningful ID. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "markdown_instructions": "# Descriptive IDs\r\n\r\n**You try it** - give your buttons **descriptive and meaningful IDs** rather than the default `button1`, `button2` and so forth.\r\n\r\nAfter you change the ID in Design Mode remember to:\r\n\r\n* **Change the event handler code** so that it correctly references the new IDs of the buttons\r\n* **Run - Test - Debug ** the program to make sure it works, and debug any problems.\r\n\r\n<details><summary><strong>Reminder:</strong> Rules About IDs [click to expand]</summary>\r\n\r\nIn making descriptive and meaningful IDs there **are some rules about IDs** you need to know.  IDs...\r\n\r\n<li> are case sensitive</li>\r\n<li> cannot contain spaces.\r\n<li>  *must* begin with a letter (A-Z or a-z) and may be followed by any number of digits and letters.\r\n<li>  can contain hyphens (\"-\"), underscores (\"_\"), colons (\":\"), or periods (\".\").\r\n\r\n</details>\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "MAva1D4+YVWqI9vsYHYaJmMsvmKw1FjeRXyumb2JboZ0Ox5aK9Bd3zrlz6nR\n5yDr\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel_2018",
+    "show_debug_watch": "false",
+    "parent_level_id": 6716,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

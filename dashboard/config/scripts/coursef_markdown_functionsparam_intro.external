@@ -1,0 +1,20 @@
+name 'courseF_markdown_functionsparam_intro'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **In this lesson...**
+
+### Now that you know all about functions, what if you wanted to customize it some more? 
+
+### Imagine that you want to create a function that will draw squares. You want to draw lots of squares, but in different sizes. 
+
+### Right now, you would have to make a separate function for each different sized square. Today you'll learn how to fix this problem!
+
+---
+
+## Blocks to Know
+
+![](https://images.code.org/eb183a00daf494ab1cb75cfd326ad682-image-1524774645842.png)
+
+![](https://images.code.org/edb96dd070e68c811347c8181584d8da-image-1524774679293.png)
+MARKDOWN

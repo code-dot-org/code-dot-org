@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-去 [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) 查找关于计算机科学不同地区的特定信息。
+Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
 
 **标题：计算机化......任何有工作的地方**
 

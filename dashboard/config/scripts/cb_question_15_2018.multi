@@ -1,0 +1,16 @@
+name 'CB_Question_15_2018'
+
+wrong 'Approximately how many miles did the animal travel in one week?'
+wrong 'Does the animal travel in groups with other tracked animals?'
+right 'Do the movement patterns of the animal vary according to the weather?'
+wrong 'In what geographic locations does the animal typically travel?'
+
+markdown <<MARKDOWN
+Biologists often attach tracking collars to wild animals. For each animal, the following geolocation data is collected at frequent intervals.
+
+- The time
+- The date
+- The location of the animal
+
+Which of the following questions about a particular animal could NOT be answered using **only** the data collected from the tracking collars? 
+MARKDOWN

@@ -78,7 +78,6 @@
       "console.log": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "submittable": "false",

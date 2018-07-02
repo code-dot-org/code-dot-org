@@ -5,12 +5,15 @@ require 'cdo/aws/s3'
 require 'csv'
 
 def main
-  applications = Pd::Application::Teacher1819Application.
-    left_outer_joins(:regional_partner).
-    pluck(:course, :name, :locked_at, :status)
+  applications = []
+
+  Pd::Application::Teacher1819Application.find_each do |app|
+    reg = Pd::Teachercon1819Registration.find_by_pd_application_id(app.id)
+    applications.push [app.course, app.regional_partner.try(:name), app.locked_at, app.status, reg.try(:accepted_seat_simplified)]
+  end
 
   output = CSV.generate(col_sep: "\t") do |csv|
-    csv << %w(course name locked_at status)
+    csv << %w(course name locked_at application_status registration_status)
     applications.each {|row| csv << row}
   end
 

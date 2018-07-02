@@ -1,0 +1,22 @@
+name 'CSD-U5-SFLP ASCII and Binary Representation_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+Learn how the ASCII system uses On-Off patterns to represent the alphabet, then use it to create your own binary system for representing the alphabet. 
+
+## Vocabulary
+
+* **ASCII** - ASCII - American Standard Code for Information Interchange.  ASCII is the universally recognized raw text format that any computer can understand.
+* **Binary** - A way of representing information using only two options.
+* **Bit** - A contraction of "Binary Digit".  A bit is the single unit of information in a computer, typically represented as a 0 or 1.
+
+
+## Resources
+
+* [ASCII - Activity Guide](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))
+MARKDOWN

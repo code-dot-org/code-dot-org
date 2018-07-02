@@ -1,0 +1,17 @@
+name 'CSP Unit 2 ch 2 MC trends as predictors_exam_prep'
+title 'Search Trends'
+description ' '
+question ' '
+
+wrong 'Search trends are imperfect predictors of future events that fully represent society at large.'
+wrong 'Search trends are accurate and reliable predictors of future events that fully represent society at large.'
+right 'Search trends are imperfect predictors of future events that may not fully represent society at large.'
+wrong 'Search trends are accurate and reliable predictors of future events that may not fully represent society at large.'
+
+markdown <<MARKDOWN
+The AP CS Principles framework contains the following statement:
+
+`7.1.1G Search trends are predictors.` 
+
+Which of the following is the *most accurate* statement about using search trends as predictors of future events?
+MARKDOWN

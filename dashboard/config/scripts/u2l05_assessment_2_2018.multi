@@ -1,0 +1,14 @@
+name 'U2L05 Assessment 2_2018'
+title 'Packets and Making a Reliable Internet: Question 2'
+question 'Which of the following is NOT true about packets?'
+wrong 'Packets are numbered so if they arrive out of order the message can be reassembled.'
+right 'A message sent across the Internet can always be contained in a single packet'
+wrong 'Packets are routed on different paths from sender to receiver.'
+wrong 'The receiver computer must confirm to the sending computer that each packet was received.'
+
+
+teacher_markdown <<MARKDOWN
+answer:
+
+- B. A message sent across the Internet can always be contained in a single packet.
+MARKDOWN

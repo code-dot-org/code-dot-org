@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:36:09.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "Consider the Google Trends graph of dogs and cats below (same graph as previous question).\r\n\r\nGive a plausible explanation or hypothesis for the spike in dog searches that occurred between 2014 and 2015 that would lead to further investigation or research. Give your explanation and what you would want to investigate next.\r\n\r\n<a href=\"https://images.code.org/bd40b81c105978fe26ff787a6bf82795-image-1469633006237.png\" target=_blank><img src=\"https://images.code.org/bd40b81c105978fe26ff787a6bf82795-image-1469633006237.png\"><br>Click to Enlarge</a>",
+    "submittable": "true",
+    "title": "What would you investigate further?",
+    "encrypted_solution": "2UxcsbT+MMpKLloyXf1lqHVi5xsfsc+HVS4nNOUthrKtwJ7hOswTBMtx1bV2\n5TWstaDTY8lgbrkI4xzTlfUMC0ynKagssOT2XYJiqMeG1eUWnlE5esLeHcnw\nUAm1/N9oIbhGOPE893cScOyTFEVQwcxCtGv85q/zCazYvcE1J6bMKJIkgV2m\ntPZ928+w+jRV1a3zc2IM8efaFbvgtFpTDSD1il+yBK8ciuzDacc3Y8idTcDj\n2icZeJK/U4rgpG7BKI17aI9f1pl+CII3sIEFLvexV/GTNSzeyAIX1FohQ+HK\nHx6kh27shhZhnbm0ZVJchLhgVwU6/NE5hN0fJIR6WSlIo0BeIhg2nDJftwFf\nyy7luGVxpk9AMZAI6HWOuHACYKYns3Y+/iNcjMDtvfEeROKalKBhXd9D3bpB\ngWoJjW6Y6B1hWtke+6K75uO5CZ8zEFuXl3JQyQyxNamm3DfMRC1jU9zVhtRn\nMRFXI/TWjIYjaOWvT3GtTApiMAXhZzFnPoggIZKJP1yd291Df0tU53I1lkg9\nFRkEc8BAeGpwIi6ttznvveSZgMUNz1PZ1SglK46UGDZGci5jLtDrMUiDY56y\n0Plidw54ROvjAWCq4P3CdL1KDUocCAQlP1BiC7ElRrgpKcgfhCzOqh3qGXBl\nML1WNyTWuaxasoW0kliQWHgrj5yBguiXBHzy8aPVyU5cQLaNJenWjuPZ3jQB\nvs2/4ibJfcuNyQJzdFBalU+HYN32KGBGjomnqXY5ztUcdj7Evm/5+VdN3GqJ\ncrkvkk1DKyfduOmALyMuu7ckGK69qFTSNEHgZo+N0y4RavNIlpLzPbaeTCfJ\nJOKlrZ4jSgVl6JuBZwPK/x5wq1KVDkU9BdDeJrtisI4XFP/DkIeYcKm6XIyE\nf0F3ZQFoNxxXflFMX5leGpbksdgBGeULk2ZNGlMhDqfU6mULE6Hu9TnNVn4m\n8Mg6RIRUH3V/Vue9uUB4aDZIHhWdutCsxLza8yL4HXWQ8HCBOLy1uQRgncBI\nL7SSl2svBtnP54ePMU86jhhjFLOgSq73Xfk2WIYt77KaC4JRfWX56BcvO+Zx\n0JjvdqxlFK1Wy0fuPAom8Fp+bypnF6ArvJOOugwXAQdaV98NjEow+HaQlHsZ\nOuBjMFlZGDNVVBfmmPTutLS4udfLTkhgDVFjrx4ZAYIsO+QdzYuZgWFOyi7q\nENFszoW0GVXemYrJhvtRCx7c1FfgXNt/KPAfJ5J4tT+hT+unsJwj491YAuO3\nSF0X/v7bDXm2sGqAhQBi0beMnhSRdEwV2bxqwK2+ZX9cW3PgPOQSRz7g6uuv\nwwQ=\n",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "parent_level_id": 5615,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-04 19:57:50 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2017-10-13 16:23:23 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"},{\"changed_at\":\"2017-12-14 20:56:02 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]"
+}]]></config>
+</FreeResponse>

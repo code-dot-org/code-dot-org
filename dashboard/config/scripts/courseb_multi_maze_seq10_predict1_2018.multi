@@ -1,0 +1,7 @@
+name 'courseB_multi_maze_seq10_predict1_2018'
+question 'Look at the program below. What will happen when you click "Run"?'
+wrong 'Scrat will get to the acorn.', feedback: 'Incorrect. Scrat breaks the ice with his first move.'
+right 'Scrat will break the ice right away.', feedback: 'Correct!'
+wrong 'Scrat will not move at all.', feedback: 'Incorrect. Scrat breaks the ice with his first move.'
+wrong 'I don\'t know.', feedback: 'Scrat breaks the ice with his first move.'
+

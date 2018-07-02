@@ -6,7 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "var apple = createSprite(200, 200);\r\napple.setAnimation(\"apple_green\");\r\napple.scale = 0.1;\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update Values\r\n  apple.scale = apple.scale + 0.01;\r\n\r\n  // Draw Animations\r\n  drawSprites();\r\n}",

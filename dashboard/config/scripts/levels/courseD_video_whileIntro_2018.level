@@ -8,7 +8,8 @@
     "video_key": "loop_while",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": ""

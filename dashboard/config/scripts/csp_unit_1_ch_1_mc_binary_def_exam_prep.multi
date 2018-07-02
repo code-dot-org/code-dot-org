@@ -1,0 +1,9 @@
+name 'CSP Unit 1 Ch 1 MC binary def_exam_prep'
+title 'What\'s Binary?'
+description ''
+question 'What is the best explanation for why digital data is represented in computers in binary?'
+wrong 'The binary number system is the only system flexible enough to allow for representing data other than numbers.'
+wrong 'As a consequence of history: early pioneers of computing were making secret codes in binary, and this simply evolved into modern computing.'
+wrong 'It\'s impossible to build a computing machine that uses anything but binary to represent numbers'
+right 'It\'s easier, cheaper, and more reliable to build machines and devices that only have to distinguish between binary states.'
+

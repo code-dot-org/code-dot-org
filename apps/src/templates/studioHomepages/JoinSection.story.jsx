@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
-    .storiesOf('JoinSection', module)
+    .storiesOf('Homepages/JoinSection', module)
     .addStoryTable([
       {
         name: 'Join Section - no sections yet',

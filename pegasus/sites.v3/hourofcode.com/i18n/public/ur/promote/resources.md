@@ -23,7 +23,7 @@ nav: promote_nav
 
 ## سوشل میڈیا پر اسے پوسٹ کریں
 
-[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![تصویر](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![تصویر](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![تصویر](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -31,26 +31,26 @@ nav: promote_nav
 
 ## آور-آف-کوڈ کے لوگو کو برسرعام کرنے کے لیے استعمال کریں
 
-[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![تصویر](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[ہیک ریورس ورژن ڈاؤن لوڈ کریں](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**"کوڈ کا قیام" ٹریڈ مارک کیا جاتا ہے. ہم اس کے استعمال کو روکنے کے لئے نہیں چاہتے ہیں، لیکن ہم اس بات کو یقینی بنانا چاہتے ہیں کہ یہ چند حدود میں فٹ بیٹھتے ہیں.**
 
-1. "آور-آف-کوڈ" کا کوئی بھی حوالہ (ریفرنس) ایک ایسے انداز میں استعمال کیا جانا چاہیئے جو کہ یہ تاثر نہ دے کہ یہ آپ کا ذاتی برانڈ نیم ہے، بلکہ اس کے بجائے آور-اف-کوڈ کو بنیادی سطح (گراس روٹ) کی تحریک کے حوالے سے لیا جائے۔ **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+1. "آور-آف-کوڈ" کا کوئی بھی حوالہ (ریفرنس) ایک ایسے انداز میں استعمال کیا جانا چاہیئے جو کہ یہ تاثر نہ دے کہ یہ آپ کا ذاتی برانڈ نیم ہے، بلکہ اس کے بجائے آور-اف-کوڈ کو بنیادی سطح (گراس روٹ) کی تحریک کے حوالے سے لیا جائے۔ "کوڈ کا قیام" ٹریڈ مارک کیا جاتا ہے. ہم اس کے استعمال کو روکنے کے لئے نہیں چاہتے ہیں، لیکن ہم اس بات کو یقینی بنانا چاہتے ہیں کہ یہ چند حدود میں فٹ بیٹھتے ہیں. غلط مثال: "ACME کارپوریشن کی طرف سے کوڈ کا قیام کریں". </ strong>
+2. آپ کے ویب سائٹ پر اور اے پی پی کی تفصیلات میں، "سب سے اہم مقامات" میں ایک "TM" سپرسکل کا استعمال کریں.
 3. اپنی ویب سائیٹ اور ایپ ڈسکرپشن، دونوں میں "آور-آف-کوڈ" کا ذکر سب سے نمایاں مقامات پر "TM" کے سپراسکرپٹ کا استعمال کرتے ہوئے کریں۔
     
     *اپنی ویب سائیٹ اور ایپ ڈسکرپشن، دونوں میں "آور-آف-کوڈ" کا ذکر سب سے نمایاں مقامات پر "TM" کے سپراسکرپٹ کا استعمال کرتے ہوئے کریں۔*
 
-4. No use of "Hour of Code" in app names.
+4. اے پی پی کے نام میں "قیامت کا کوڈ" کا استعمال نہیں.
 
 <a id="stickers"></a>
 
 ## اپنے اسٹوڈینٹس کو دینے کے لیے یہ اسٹیکرز دیں
 
-(Stickers are 1" diameter, 63 per sheet)  
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+(اسٹیکرز 1 "قطر ہیں، 63 فیٹ شیٹ)  
+[![تصویر](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -58,108 +58,108 @@ nav: promote_nav
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### سائن اپ کرنے کے لئے اپنے اسکول، آجر، یا دوستوں سے پوچھیں
 
-**Subject line:** Join me and over 100 million students for an Hour of Code
+** موضوع کی لائن: </ strong> مجھے ایک گھنٹے کے کوڈ کے لۓ 100 ملین سے زائد طلباء میں شامل ہوں</p> 
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+سیارے پر ہر صنعت کو تبدیل کرنے، کمپیوٹر ہر جگہ ہیں. لیکن نصف اسکولوں میں کم سے کم کمپیوٹر سائنس سیکھتے ہیں. اچھی خبر ہے، ہم اس کو تبدیل کرنے کے راستے پر ہیں! اگر آپ نے پہلے ہی کوڈ کا قیام کے بارے میں سنا ہے، تو آپ شاید اس کی تاریخ کو جان سکیں گے. 100 ملین سے زائد طالب علموں نے ایک گھنٹے کی کوشش کی ہے.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+کوڈ کے قیام کے ساتھ، کمپیوٹر سائنس گوگل، MSN، یاہو، اور ڈزنی کے گھروں پر ہے. اس تحریک کی حمایت کے لئے 100 سے زیادہ شراکت داروں کے ساتھ مل کر شامل ہو گئے ہیں. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+اس سال، چلو یہ بھی بڑا بناتے ہیں. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. کمپیوٹر سائنس تعلیم ہفتہ کے دوران ایک گھنٹہ کوڈ ایونٹ کے ساتھ ملوث ہو جاؤ، <٪ = campaign_date ('full')٪>.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+لفظ باہر نکلیں. ایک تقریب کی میزبانی کریں. سائن اپ کرنے کے لئے ایک مقامی اسکول سے پوچھیں. یا کوڈ کا قیام اپنے آپ کو آزمائیں - ہر کوئی بنیادی طور پر سیکھنے سے فائدہ اٹھا سکتا ہے.
 
-Get started at http://hourofcode.com/<%= @country %>
+http://hourofcode.com/ پر شروع کریں<%= @country %>
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### اسکول میں رضاکارانہ:
 
-**Subject line:** Can we help you host and Hour of Code?
+** موضوع کی لائن: </ strong> کیا ہم آپ کی میزبانی اور کوڈ کا قیام کر سکتے ہیں؟</p> 
 
-Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+\[ہماری تنظیم / میرا نام\] \[اسکول کا نام\] مدد کرنے کے لئے پیار کرے گا. ہم اساتذہ کو اپنے کلاس روم میں ایک گھنٹے کی میزبانی کرنے میں مدد کرسکتے ہیں (ہمیں کمپیوٹر کی ضرورت بھی نہیں ہے!) یا اگر آپ اسکول کے اسمبلی کی میزبانی کرنا چاہتے ہیں تو، ہم کس طرح ٹیکنالوجی کام کرتا ہے اور اس کے بارے میں بات کرنے کے بارے میں بات کرنے کے لئے ایک اسپیکر کا انتظام کرسکتے ہیں. سافٹ ویئر انجنیئر بنیں.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+طالب علم ان کے اپنے اطلاقات یا کھیل بنائے گی جو وہ اپنے والدین کو دکھا سکتے ہیں، اور ہم بھی اس وقت کوڈ سرٹیفکیٹ پرنٹ کریں گے جو وہ گھر لے سکتے ہیں. اور، یہ مزہ ہے! انٹرایکٹو، ہاتھوں پر سرگرمیوں کے ساتھ، طالب علموں کو ایک مناسب انداز میں کمپیوٹنگ سوچ مہارتوں کو سیکھنا ہوگا.
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+سیارے پر ہر صنعت کو تبدیل کرنے، کمپیوٹر ہر جگہ ہیں. لیکن نصف اسکولوں میں کم سے کم کمپیوٹر سائنس سیکھتے ہیں. اچھی بات یہ ہے کہ، ہم اس کو تبدیل کرنے کے راستے پر ہیں! اگر آپ نے پہلے سے ہی قیامت کے کوڈ کے بارے میں سنا ہے تو، آپ کو اس کی تاریخ معلوم ہوسکتی ہے - دنیا بھر میں 100 ملین سے زائد طالب علموں نے ایک گھنٹے کی کوشش کی ہے.
 
-Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+کوڈ آفس کا شکریہ، کمپیوٹر سائنس گوگل، MSN، یاہو، اور ڈزنی کے گھروں پر ہے. اس تحریک کی حمایت کے لئے 100 سے زیادہ شراکت داروں کے ساتھ مل کر شامل ہو گئے ہیں. دنیا میں ہر ایپل اسٹور نے ایک گھنٹہ کوڈ کی میزبانی کی ہے، اور صدر اوبامہ اور کینیڈا کے وزیر اعظم جسٹن ٹوڈوؤو جیسے یہاں تک کہ رہنماؤں نے اپنی پہلی لائنوں کو مہم کے حصہ کے طور پر لکھا.
 
-You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
+آپ http://hourofcode.com/ پر واقعہ کے بارے میں مزید پڑھ سکتے ہیں. یا، ہمیں بتائیں کہ آپ کس طرح [اسکول کا نام] حصہ لے سکتے ہیں اس بارے میں بات کرنے کے لئے کچھ وقت شیڈول کرنا چاہتے ہیں.
 
-Thanks!
+شکریہ!
 
-[Your name], [Your organization]
+[آپ کا نام]، [آپ کا تنظیم]
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### اپنے ایونٹ میں شرکت کیلئے میڈیا کو مدعو کریں:
 
-**Subject line:** Local school joins mission to introduce students to computer science
+** موضوع کی لائن: </ strong> مقامی اسکول کمپیوٹر سائنس میں طلباء کو متعارف کرانے کا مشن شامل ہے</p> 
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔
+کمپیوٹر ہر جگہ ہیں، ہر سیارے کو سیارے میں تبدیل کر لیتے ہیں، لیکن نصف اسکولوں میں سے کم کمپیوٹر کمپیوٹر سائنس سیکھتے ہیں. کمپیوٹر سائنس کی کلاسیں اور ٹیک صنعت میں گرلز اور اقلیتوں کو سختی سے کمتر قرار دیا جاتا ہے. اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+کوڈ کے قیام کے ساتھ، کمپیوٹر سائنس گوگل، MSN، یاہو، اور ڈزنی کے گھروں پر ہے. اس تحریک کی حمایت کے لئے 100 سے زیادہ شراکت داروں کے ساتھ مل کر شامل ہو گئے ہیں. دنیا میں ہر ایپل سٹور نے ایک گھنٹہ کوڈ کی میزبانی کی ہے. یہاں تک کہ صدر اوبامہ نے اپنی پہلی لائن کو ایک مہم کے طور پر لکھا تھا.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
+اس وجہ سے [XII] طالب علموں میں سے ہر ایک کو [اسکول NAME] تاریخ میں سب سے بڑا سیکھنے کے واقعہ پر شامل ہو رہا ہے: کوڈ آفس، کمپیوٹر سائنس تعلیم ہفتہ کے دوران (<٪ = campaign_date ('full')٪>) .
 
-I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+میں لکھ رہا ہوں کہ آپ کو ہماری کٹوف اسمبلی میں شرکت کرنے کے لئے مدعو کرنا اور بچوں کو دیکھنے کے لئے [DATE] پر سرگرمی شروع کرنا ہے.
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+کوڈ کا قیام، غیر منافع بخش Code.org اور 100 سے زائد دیگر، ایک عالمی تحریک ہے جس کا یقین ہے کہ آج کے طالب علموں کو 21st صدی کی کامیابی کے لئے اہم مہارت حاصل کرنے کے لئے تیار ہیں. براہ مہربانی ہمارے ساتھ شامل ہوں.
 
-**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
+** رابطہ: </ strong> [آپ کا NAME]، [TITLE]، سیل: (212) 555-5555 ** جب: </ strong> [آپ کے ایونٹ کے DATE اور TIME] ** کہاں: </ strong> [ایڈریس اور ہدایات]</p> 
 
-I look forward to being in touch.
+میں رابطے میں ہونے کا منتظر ہوں.
 
-[Your Name]
+[تمھارا نام]
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### اپنے اسکول کے ایونٹ کے بارے میں والدین کو بتائیں:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+<مضبوط> موضوع کی لائن: </ strong> ہمارے طلبا مستقبل کو ایک گھنٹہ کوڈ کے ساتھ تبدیل کر رہے ہیں
 
-Dear Parents,
+پیارے والدین،
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+ہم ٹیکنالوجی کی طرف سے گھیر دنیا میں رہتے ہیں. اور ہم جانتے ہیں کہ جو بھی میدان ہمارے طالب علموں کو بالغوں میں منتقل کرنے کا انتخاب کرتے ہیں، کامیاب ہونے کی صلاحیت رکھتے ہیں وہ کس طرح ٹیکنالوجی کام کرتا ہے سمجھتے ہیں.
 
-But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
+لیکن ہم صرف ایک چھوٹا سا حصہ سیکھ رہے ہیں ** کس طرح </ strong> ٹیکنالوجی کام کرتا ہے. تمام نصف اسکولوں میں سے کم کمپیوٹر سائنس کو سکھاتا ہے.</p> 
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+اسی وجہ سے ہمارا پورا اسکول تاریخ میں سب سے بڑا سیکھنے والے واقعہ پر شامل ہو رہا ہے: کوڈ آفس، کمپیوٹر سائنس تعلیم ہفتہ کے دوران (<٪ = مہم کی تاریخ ('مکمل')٪>). دنیا بھر میں 100 ملین سے زائد طالب علموں کو پہلے سے ہی ایک گھنٹہ کوڈ کی کوشش کی ہے.
 
-Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+کوڈ کا ہمارے قیام ایک بیان کر رہا ہے کہ [اسکول NAME] ان فاؤنڈیشنل 21st صدی کی مہارت کو سکھانے کے لئے تیار ہے. پروگرامنگ کی سرگرمیوں کو اپنے طالب علموں کو لے کر جاری رکھنے کے لئے، ہم اپنے قیامت کے کوڈ کو بہت بڑا واقعہ بنانا چاہتے ہیں. میں آپ کو رضاکارانہ طور پر، مقامی ذرائع ابلاغ تک پہنچنے کے لئے حوصلہ افزائی کرتا ہوں، سماجی میڈیا چینلز پر خبروں کا اشتراک کریں اور کمیونٹی میں اضافی کوڈ آف ایونٹ کی میزبانی کرنے پر غور کریں.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+یہ [ٹاؤن / شہر NAME] میں تعلیم کے مستقبل کو تبدیل کرنے کا ایک موقع ہے.
 
-See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+تفصیلات کے لئے http://hourofcode.com/<٪=country٪> ملاحظہ کریں، اور لفظ پھیلانے میں مدد کریں.
 
-Sincerely,
+مخلص،
 
-Your principal
+آپ کا پرنسپل
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### آپ کے اسکول کے ایونٹ میں ایک مقامی سیاستدان مدعو کریں:
 
-**Subject line:** Join our school as we change the future with an Hour of Code
+** موضوع کی لائن: </ strong> ہمارے اسکول میں شمولیت اختیار کریں جیسے ہم مستقبل کے ایک گھنٹہ کے ساتھ آئیں گے</p> 
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+پیارے [میئر / گورنر / نمائندہ / سینٹرٹر آخری NAME]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+کیا آپ جانتے تھے کہ کمپیوٹنگ امریکہ میں اجرت کا # 1 ذریعہ ہے؟ ملک بھر میں 500،000 سے زیادہ کمپیوٹنگ ملازمتیں کھلی ہیں، لیکن پچھلے سال صرف 42،969 کمپیوٹر سائنس طلباء نے قابلیت میں گریجویشن کی.
 
-Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+کمپیوٹر سائنس آج کل * ہر </ em> انڈسٹری کے لئے بنیاد رکھتا ہے، پھر بھی زیادہ تر اسکول اس کو نہیں سکھاتے ہیں. [اسکول NAME] میں، ہم اس کو تبدیل کرنے کی کوشش کر رہے ہیں.</p> 
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+اسی وجہ سے ہمارا پورا اسکول تاریخ میں سب سے بڑا سیکھنے والے واقعہ پر شامل ہو رہا ہے: کوڈ آفس، کمپیوٹر سائنس تعلیم ہفتہ کے دوران (<٪ = مہم کی تاریخ ('مکمل')٪>). دنیا بھر میں 100 ملین سے زائد طالب علموں کو پہلے سے ہی ایک گھنٹہ کوڈ کی کوشش کی ہے.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+میں آپ کو قیامت کے کوڈ کے واقعہ میں شامل ہونے کے لئے مدعو کرنے کے لئے لکھ رہا ہوں اور ہمارے ککف اسمبلی میں بات کروں گا. یہ [DATE، TIME، PLACE] پر لے جائے گا، اور یہ ایک مضبوط بیان کرے گا کہ [ریاست یا شہر کا نام] ہمارے طالب علموں کو 21st صدی کی مہارت کو اہمیت سکھانے کے لئے تیار ہے. ہم اس بات کو یقینی بنانا چاہتے ہیں کہ ہمارے طالب علم مستقبل کی ٹیکنالوجی کو پیدا کرنے کے لۓ سب سے آگے رہیں.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+براہ کرم مجھ سے رابطہ کریں [فون نمبر یا ای میل ایڈریس]. میں اپ کے جواب کا منتظر.
 
-Sincerely,
+مخلص،
 
-[Your Name], [Title]
+[آپ کا نام]، [عنوان]
 
 <%= view :signup_button %>

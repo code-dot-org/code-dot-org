@@ -1,0 +1,95 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2018-04-11T16:43:49.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "skin": "collector",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "2",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "instructions": "Order these blocks to collect the treasure and solve the puzzle.",
+    "markdown_instructions": "*\"Sequence matters!\"* \r\n\r\nThe blocks you need are already in the workspace, but not connected.  \r\nOrder these blocks to collect the treasure and solve the puzzle.",
+    "instructions_important": "false",
+    "min_collected": "1",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The program will only run the blocks that are connected to the <xml><block type=\\\"when_run\\\"/></xml> block.\",\"hint_id\":\"courseC_collector_prog3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/91eeb7839bb8776b9a12ea6f4daefcb2/courseC_collector_prog3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to run your code one line at a time.  Do you see where the code goes wrong?\",\"hint_id\":\"courseC_collector_prog3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b1c98ad231fb26803a2865514eeec66/courseC_collector_prog3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.\",\"hint_id\":\"courseC_collector_prog3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/257e59216628d26981bd80dfe2c40d2e/courseC_collector_prog3.mp3\"}]",
+    "ideal": "6",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 6424,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "Sequence matters. Blocks already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:09:36 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:13:44 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:36:31 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="maze_move" deletable="false" editable="false">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_turn" deletable="false" editable="false">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="collector_collect" deletable="false" editable="false"/>
+        <block type="maze_move" deletable="false" editable="false">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_move" deletable="false" editable="false">
+          <title name="DIR">moveForward</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_move">
+              <title name="DIR">moveForward</title>
+              <next>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="collector_collect">
+                          </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

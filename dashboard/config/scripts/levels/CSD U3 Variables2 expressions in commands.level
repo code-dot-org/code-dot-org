@@ -30,7 +30,6 @@
       "textSize": null,
       "background": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions": "Use expressions inside a drawing command",

@@ -1,0 +1,17 @@
+name 'CSP Unit 2 Ch 1 metadata_exam_prep'
+title 'data'
+description ' '
+question ' '
+
+wrong 'megadata'
+wrong 'superdata'
+right 'metadata'
+wrong 'predata'
+
+markdown <<MARKDOWN
+The image below shows an encoding for a black and white pixel image.  The first two bytes of the data (circled in red) are used to encode the width and height of the image.
+
+What is the best term for this type of "data about the data"?
+
+![](https://images.code.org/2c8176f4d417465876c036a3d4cb0ad8-image-1470152993359.png)
+MARKDOWN

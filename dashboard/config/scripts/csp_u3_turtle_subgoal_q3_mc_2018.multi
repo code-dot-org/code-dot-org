@@ -1,0 +1,18 @@
+name 'csp_U3_turtle_subgoal_q3_mc_2018'
+question 'Which of the following is NOT part of defining a function?'
+wrong 'Giving the function a name'
+wrong 'Identifying the parameters of the function'
+right 'Giving the parameters a value'
+wrong 'Adding code to the body of the function'
+
+teacher_markdown <<MARKDOWN
+In creating a function you might define the *names* of the funciton's parameters but they don't get *values* until you call the function.
+
+Here is an example of identifying (defining) the function's parameters:
+
+`function drawShape(size, color)`
+
+versus giving the parameters a value (calling):
+
+`drawShape(150, "red")`
+MARKDOWN

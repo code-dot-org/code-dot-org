@@ -1,6 +1,6 @@
 import appMain from "@cdo/apps/appMain";
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import Artist from "@cdo/apps/turtle/turtle";
+import Artist from "@cdo/apps/turtle/artist";
 import blocks from "@cdo/apps/turtle/blocks";
 import skins from "@cdo/apps/turtle/skins";
 import levels from "@cdo/apps/turtle/levels";

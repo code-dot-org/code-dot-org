@@ -70,6 +70,7 @@ export default class LinkCleverAccountModal extends React.Component {
     handleCancel: PropTypes.func,
     isOpen: PropTypes.bool,
     forceConnect: PropTypes.bool,
+    providerToLink: PropTypes.string,
   };
 
   constructor(props) {
@@ -85,11 +86,26 @@ export default class LinkCleverAccountModal extends React.Component {
     this.props.handleSubmit();
   };
 
+  getStringsForProvider = (provider) => {
+    return {
+      title: locale[provider + "ConnectDialogTitle"](),
+      content: locale[provider + "ConnectDialogText"](),
+      forceConnectTitle: locale[provider + "ForceConnectDialogTitle"](),
+      forceConnectContent: locale[provider + "ForceConnectDialogContent"](),
+      connectDeny: locale[provider + "ConnectDeny"](),
+      connectConfirm: locale[provider + "ConnectConfirm"](),
+    };
+  };
+
   render = () => {
-    const title = locale.cleverConnectDialogTitle();
-    const content = locale.cleverConnectDialogText();
-    const forceConnectTitle = locale.cleverForceConnectDialogTitle();
-    const forceConnectContent = locale.cleverForceConnectDialogContent();
+    const {
+      title,
+      content,
+      forceConnectTitle,
+      forceConnectContent,
+      connectDeny,
+      connectConfirm,
+    } = this.getStringsForProvider(this.props.providerToLink);
     return (
       <BaseDialog
         useUpdatedStyles
@@ -114,14 +130,14 @@ export default class LinkCleverAccountModal extends React.Component {
               onClick={this.cancel}
               style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
             >
-              {locale.cleverConnectDeny()}
+              {connectDeny}
             </button>
           }
           <button
             onClick={this.ok}
             style={Object.assign({},styles.buttonPrimary)}
           >
-            {locale.cleverConnectConfirm()}
+            {connectConfirm}
           </button>
         </div>
       </BaseDialog>

@@ -23,7 +23,7 @@ nav: promote_nav
 
 ## Bunları sosial mediada bölüşün
 
-[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![şəkil](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![şəkil](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![şəkil](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -31,7 +31,7 @@ nav: promote_nav
 
 ## Təbliğat üçün Kod Saatının loqosunu istifadə edin
 
-[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![şəkil](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Yüksək ölçülü versiyasını endir](http://images.code.org/share/hour-of-code-logo.zip)
 
@@ -47,10 +47,10 @@ nav: promote_nav
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Tələbələrinizə vermək üçün bu etiketləri çap edin
 
 (Stickers are 1" diameter, 63 per sheet)  
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![şəkil](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -58,15 +58,15 @@ nav: promote_nav
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### Məktəbə, işəgötürənə və ya dostlarınıza soruşun:
 
 **Subject line:** Join me and over 100 million students for an Hour of Code
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Kompüterlər hər yerdə, planetin hər bir sənayesini dəyişir. But fewer than half of all schools teach computer science. Yaxşı xəbərdir, biz bunu dəyişdirmək yolundayız! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 100-dən çox tərəfdaş bu hərəkata dəstək olmaq üçün birləşdi. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+Bu il daha da böyük olaq. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
@@ -78,19 +78,19 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Can we help you host and Hour of Code?
 
-Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. Və, bu əyləncəli! İnteraktiv, əlamətdar fəaliyyətlərlə tələbələr hesablama düşünmə bacarıqlarını asanlıqla öyrənə biləcəklər.
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+Kompüterlər hər yerdə, planetin hər bir sənayesini dəyişir. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
 
-Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 100-dən çox tərəfdaş bu hərəkata dəstək olmaq üçün birləşdi. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
 
-Thanks!
+Təşəkkür edirik!
 
 [Your name], [Your organization]
 
@@ -100,9 +100,9 @@ Thanks!
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik.
+Kompüterlər dünyanın hər yerində dəyişir, lakin bütün məktəblərin yarısından azı kompüter biliklərini öyrədirlər. Qızlar və azlıqlar kompüter bilikləri siniflərində və texnoloji sənayedə ciddi şəkildə az təmsil olunurlar. Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. 100-dən çox tərəfdaş bu hərəkata dəstək olmaq üçün birləşdi. Every Apple Store in the world has hosted an Hour of Code. Hətta Prezident Obama kampaniyanın bir hissəsi kimi ilk kodunu yazdı.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 

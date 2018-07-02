@@ -1,7 +1,7 @@
 /* global dashboard */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AbuseExclamation from '../components/abuse_exclamation';
+import AbuseExclamation from '../components/AbuseExclamation';
 import showProjectAdmin from '../showProjectAdmin';
 
 /**

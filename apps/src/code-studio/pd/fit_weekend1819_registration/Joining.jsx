@@ -36,9 +36,9 @@ export default class Joining extends LabeledFormComponent {
         <p>
           Congratulations on your acceptance to Code.org’s Facilitator Development
           Program for {this.props.course}! Please complete this registration
-          form <strong>within two weeks</strong>, and
-          contact <a href="mailto:facilitators@code.org">facilitators@code.org</a>
-          with any questions.
+          form <strong>within two weeks</strong>, and contact&nbsp;
+          <a href="mailto:facilitators@code.org">facilitators@code.org</a> with any
+          questions.
         </p>
 
         <h4>Section 1: Are you joining us?</h4>

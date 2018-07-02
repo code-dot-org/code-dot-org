@@ -1,0 +1,59 @@
+name 'csp_unit5_finalassessment_overview_exam_prep'
+css 'unplugged'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# CS Principles Chapter Assessment
+
+## This one is a bit different - What to Expect
+
+This assessment is *a little different* from others you've seen in the course so far.  This test was put together by a group that studies the differences between block-based code v. text-based code.
+
+They have a test that they give to students in a variety of introductory programming classes that use block-and-text-based programming environments similar to App Lab.  We have converted the questions to the pseudocode language you'll see on the AP exam.
+
+**Why?**
+
+We think these questions are good practice for some of the types of programming questions you'll see on the AP exam.  We cannot say at this point whether this test is good predictor or not.  But it's good to practice reading this style of generic question posed in the AP pseudocode.
+
+**What's different? - some question types**
+
+* All of the questions are given in the AP Pseudocode language instead of JavaScript
+* The questions are more "generic" programming questions, rather than questions that refer directly to material covered in lessons
+* Some of the questions have more than 4 answer choices
+
+
+Other than that, the way you go about taking the test should not change.
+
+## Use the AP Pseudocode Reference Sheet
+
+* Open this: [AP Exam Reference Sheet](https://drive.google.com/open?id=0B2QFqkDgv9LjT0JQOFNlZWpCaEU)
+
+* For the AP Exam, as well as for this short test, you may refer to the [AP Exam Reference Sheet](https://drive.google.com/open?id=0B2QFqkDgv9LjT0JQOFNlZWpCaEU) while answering questions.  The sheet contains brief descriptions of the code used on the exam.
+
+* Print this out or have it open in a separate window.  For the actual AP Exam you will be provided with a paper copy.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## NOTE: This one is different
+
+This test is different in that it was created by an external research group who studies how students learn and understand code when using block-based languages v. text-based or both at the same time.
+
+These questions have been used in other studies to check for basic understanding of core programming concepts like: variables, if-statements, loops and functions.
+
+We are using it here because we think many of the questions are similar to the kinds of things that will appear on AP exam, but it is just a hunch.  Because it has been used outside of Code.org's CSP course, students' results, in aggregate might give us some insight into the course as whole and how well we are preparing students for the exam.
+
+To be clear: While this test *looks* like questions that might appear on the actual AP exam, **we do not know** whether performance on this test is predictive of performance on the AP exam (since the AP exam has never been administered yet).  We seek to find out though.
+
+**Scoring**
+
+Note that since the first question is a survey question it guarantees that every student will have one of the 21 questions correct, and therefore artificially elevate scores by a small amount.  For example, the test itself has 20 questions so if a student got 10 of those 20 correct (50%), it will be reported as 11/21 (52%).
+
+If you would like to know more about this assessment and the studies it has been used in please email pd@code.org and we'd be happy to share.
+
+Thanks,
+
+CSP Team
+
+MARKDOWN

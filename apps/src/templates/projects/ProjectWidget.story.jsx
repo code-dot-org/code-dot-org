@@ -4,7 +4,7 @@ import {generateFakePersonalProjects} from './generateFakeProjects';
 
 export default storybook => {
   return storybook
-    .storiesOf('ProjectWidget', module)
+    .storiesOf('Projects/ProjectWidget', module)
     .withReduxStore()
     .addStoryTable([
       {

@@ -91,11 +91,12 @@
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "encrypted_examples": "KxZlpJ6bLYzc3aFyFKEg3FktHZLA9mqEvmuFIhbULhBXjuUYFitajdZJ1Upt\nw9KUPJdEuJUD3779bbp7DvQRag==\n",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-07 19:28:21 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-12-07 19:28:21 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 23:07:42 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

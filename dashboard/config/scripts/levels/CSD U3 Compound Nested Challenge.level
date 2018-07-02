@@ -68,7 +68,6 @@
       "comment_Drawing": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Challenge: Checking for Multiple Conditions\r\n_Check with your teacher before taking on this challenge._\r\n\r\n\r\nSo far we've looked at a lot of ways to check if a single condition is true, but often a program needs to check the state of many conditions simultaneously before making a decision. For this challenge, let's assume the following scenario:\r\n\r\n- The sprite should move up, down, left, and right if the corresponding arrow key is pressed.\r\n- The sprite should _not_ go all the way off the screen in any direction.\r\n\r\n# Do This Together\r\n\r\nBefore you tackle writing this program, you'll need to figure out how to check multiple conditions at once.\r\n\r\n* **Brainstorm** with your neighbors ways you might check for more than one condition.\r\n* **Share** back with the whole class so you can see other potential approaches.\r\n* **Explore** the toolbox for blocks that might help (pay extra attention to the Math and Control drawers).\r\n* **Program** your proposed solution.\r\n* **Test** your program to make sure it's actually checking all of the conditions you intended.\r\n",

@@ -16,7 +16,7 @@ nav: employee_engagement_nav
  <strong>Company lift</strong>: Low<br>
  <strong>Employee lift</strong>: High<br>
  <strong>Cadence</strong>: Multi-week commitment that can be started anytime of year.
- 
+
 </div>
 
 <div style="clear: both;"></div>
@@ -35,13 +35,13 @@ Your employees are the feet on the ground, reaching out to after school organiza
 
 ## What resources will Code.org offer?
 
-Code.org has developed computer science curriculum that allows even the youngest students to explore the limitless world of computing. Our courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer – which is an important consideration in places where access to technology or an internet-connected computer isn’t available. Each course consists of 20 lessons and can be adapted depending on the length of the after school club. 
+Code.org has developed computer science curriculum that allows even the youngest students to explore the limitless world of computing. Our courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer – which is an important consideration in places where access to technology or an internet-connected computer isn’t available. Each course consists of 20 lessons and can be adapted depending on the length of the after school club.
 
-Code.org offers a variety of [resources](/volunteer/after-school-1) to make sure that your employees have everything they need to go out into their communities and start an after school club. 
+Code.org offers a variety of [resources](/volunteer/after-school-1) to make sure that your employees have everything they need to go out into their communities and start an after school club.
 
 * Templates for flyers and messaging for community outreach
 * Fun and innovative computer science curriculum
-* Access to an experienced [computer science facilitator](#facilitator) to train volunteers
+* Access to an experienced computer science facilitator to train volunteers
 * Sample [messaging](#email) to engage your employees
 
 Encourage your employees to join the computer science education movement though this program!

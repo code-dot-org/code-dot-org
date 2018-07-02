@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## 鼓勵學生和志工加入「一小時玩程式」
 
-Code.org 可以讓你的員工通過[](<%= resolve_url('https://code.org/volunteer') %>)志願者身份和那些當地編程一小時課程的學生互動。他們可以通過分享技術工作上的經驗裡激勵學生學習計算機科學的意願。
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [報名加入](<%= resolve_url('https://code.org/volunteer') %>)志工的行列。
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - 請參閱[公​​司合作夥伴指南來獲取如果鼓勵員工，讓他們和當地課堂互動的信息。 ](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>)
 
 ## 企業支持一小時玩程式的更多途徑：
 
-- 請公司的CEO[發文給全體員工](<%= resolve_url('/promote/resources#sample-emails') %>)，強調計算機科學的重要性，並鼓勵員工去傳播這個信息。 
+- 請公司的CEO[發文給全體員工](<%= resolve_url('/promote/resources#sample-emails') %>)，強調計算機科學的重要性，並鼓勵員工去傳播這個信息。
 - 與同事一起嘗試使用[教程](<%= resolve_url('/learn') %>)開展快樂的編程一小時活動。
 - 為本地的班級學生舉辦一小時玩程式活動，或是在你的公司為聯盟夥伴辦理一小時玩程式活動，請參閱下方的活動指引。
 
@@ -25,7 +25,7 @@ Code.org 可以讓你的員工通過[](<%= resolve_url('https://code.org/volunte
 ## 1. 推廣你的編程一小時活動
 
 - 推廣你的[一小時玩程式](<%= resolve_url('/promote') %>)活動並鼓勵其他人舉辦。
-- 鼓勵您公司的軟件工程師參觀當地課堂，以便幫助引導他們開展編程一小時，並鼓勵學生們學習計算機科學。 通過[報名](<%= resolve_url('https://code.org/volunteer/engineer') %>)，他們可以與當地的課堂取得聯繫。
+- 鼓勵您公司的軟件工程師參觀當地課堂，以便幫助引導他們開展編程一小時，並鼓勵學生們學習計算機科學。 They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. 觀看視頻指導 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Code.org 可以讓你的員工通過[](<%= resolve_url('https://code.org/volunte
 
 **介紹給學生編程一小時活動的建議。**
 
-- 用一些男孩子們和女孩子們都關心的問題來解釋科技對我們生活的影響——拯救生命，幫助人類，與他人交流。 
+- 用一些男孩子們和女孩子們都關心的問題來解釋科技對我們生活的影響——拯救生命，幫助人類，與他人交流。
 - 如果您所在的是一家科技公司，可以演示您公司的有趣的， 創新的產品。
 - 如果您不是一家科技公司，可以討論您公司是如何使用技術來解決問題和完成目標的。
 - 邀請您公司的軟件工程師談談為什麼他們決定學習計算機科學以及他們目前從事的項目。
-- 讓女孩對電腦科學產生興趣的小技巧 [ 看這裡](<%= resolve_url('https://code.org/girls') %>)
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ## 6) 寫程式！
 
@@ -103,7 +103,7 @@ Code.org 可以讓你的員工通過[](<%= resolve_url('https://code.org/volunte
 
 ## 7) 慶祝
 
-- 為參與者和學生們[打印證書](<%= resolve_url('https://code.org/certificates') %>)。
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - [列印「我完成了一小時玩程式！」](<%= resolve_url('/promote/resources#stickers') %>)的貼紙。
 - 為你的員工[訂購客製化 T 恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
 - 在社群平台分享一小時玩程式的活動照片及影片，使用 #HourOfCode 和 @codeorg，這樣一來也可以突顯你的成功。

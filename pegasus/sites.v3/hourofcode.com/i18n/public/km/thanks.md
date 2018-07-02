@@ -44,7 +44,7 @@ Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promot
 
 ## 2. ស្វែងរកអ្នកស្ម័គ្រចិត្ដក្នុងតំបន់ដើម្បីជួយអ្នកជាមួយនឹងព្រឹត្តិការណ៍របស់អ្នក។
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. រៀបចំម៉ោងម៉ោងរបស់អ្នក
 

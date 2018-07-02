@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202225407) do
+ActiveRecord::Schema.define(version: 20180627224545) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -46,6 +46,22 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.index ["school_id"], name: "index_ap_school_codes_on_school_id", unique: true, using: :btree
   end
 
+  create_table "authentication_options", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",                           default: "", null: false
+    t.string   "hashed_email",                    default: "", null: false
+    t.string   "credential_type",                              null: false
+    t.string   "authentication_id"
+    t.text     "data",              limit: 65535
+    t.datetime "deleted_at"
+    t.integer  "user_id",                                      null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.index ["credential_type", "authentication_id", "deleted_at"], name: "index_auth_on_cred_type_and_auth_id", unique: true, using: :btree
+    t.index ["email", "deleted_at"], name: "index_authentication_options_on_email_and_deleted_at", using: :btree
+    t.index ["hashed_email", "deleted_at"], name: "index_authentication_options_on_hashed_email_and_deleted_at", using: :btree
+    t.index ["user_id", "deleted_at"], name: "index_authentication_options_on_user_id_and_deleted_at", using: :btree
+  end
+
   create_table "authored_hint_view_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",               null: false
     t.integer  "script_id"
@@ -72,6 +88,16 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
   end
 
+  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "level_type"
+    t.text     "category",    limit: 65535
+    t.text     "config",      limit: 65535
+    t.text     "helper_code", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "callouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "element_id",       limit: 1024,  null: false
     t.string   "localization_key", limit: 1024,  null: false
@@ -81,6 +107,35 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.text     "qtip_config",      limit: 65535
     t.string   "on"
     t.string   "callout_text"
+  end
+
+  create_table "census_inaccuracy_investigations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                            null: false
+    t.text     "notes",                limit: 65535, null: false
+    t.integer  "census_submission_id",               null: false
+    t.integer  "census_override_id"
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.index ["census_override_id"], name: "fk_rails_465d31c61e", using: :btree
+    t.index ["census_submission_id"], name: "fk_rails_18600827a9", using: :btree
+    t.index ["user_id"], name: "fk_rails_9c9f685588", using: :btree
+  end
+
+  create_table "census_overrides", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "school_id",   limit: 12, null: false
+    t.integer  "school_year", limit: 2,  null: false
+    t.string   "teaches_cs",  limit: 2,  null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["school_id"], name: "fk_rails_06131f8f87", using: :btree
+  end
+
+  create_table "census_state_course_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "state"
+    t.string   "course"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state", "course"], name: "index_census_state_course_codes_on_state_and_course", unique: true, using: :btree
   end
 
   create_table "census_submission_form_maps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -120,6 +175,9 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
     t.boolean  "share_with_regional_partners"
+    t.boolean  "topic_ethical_social",                                    comment: "Survey option for school courses including ethical and social issues"
+    t.boolean  "inaccuracy_reported"
+    t.text     "inaccuracy_comment",           limit: 65535
     t.index ["school_year", "id"], name: "index_census_submissions_on_school_year_and_id", using: :btree
   end
 
@@ -135,7 +193,7 @@ ActiveRecord::Schema.define(version: 20180202225407) do
   create_table "census_summaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "school_id",   limit: 12,    null: false
     t.integer  "school_year", limit: 2,     null: false
-    t.string   "teaches_cs",  limit: 1
+    t.string   "teaches_cs",  limit: 2
     t.text     "audit_data",  limit: 65535, null: false
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
@@ -284,6 +342,17 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.integer "district_id", null: false
     t.index ["district_id", "user_id"], name: "index_districts_users_on_district_id_and_user_id", using: :btree
     t.index ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
+  end
+
+  create_table "email_preferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",      null: false
+    t.boolean  "opt_in",     null: false
+    t.string   "ip_address", null: false
+    t.string   "source",     null: false
+    t.string   "form_kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_email_preferences_on_email", unique: true, using: :btree
   end
 
   create_table "experiments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -500,6 +569,7 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.datetime "decision_notification_email_sent_at"
     t.datetime "accepted_at"
     t.text     "properties",                          limit: 65535
+    t.datetime "deleted_at"
     t.index ["application_guid"], name: "index_pd_applications_on_application_guid", using: :btree
     t.index ["application_type"], name: "index_pd_applications_on_application_type", using: :btree
     t.index ["application_year"], name: "index_pd_applications_on_application_year", using: :btree
@@ -526,6 +596,7 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.integer "facilitator_id", null: false
     t.string  "course",         null: false
     t.index ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
+    t.index ["facilitator_id", "course"], name: "index_pd_course_facilitators_on_facilitator_id_and_course", unique: true, using: :btree
   end
 
   create_table "pd_district_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -613,6 +684,19 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id", using: :btree
   end
 
+  create_table "pd_post_course_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint  "form_id",                     null: false
+    t.bigint  "submission_id",               null: false
+    t.text    "answers",       limit: 65535
+    t.string  "year"
+    t.integer "user_id",                     null: false
+    t.string  "course",                      null: false, comment: "csd or csp"
+    t.index ["form_id"], name: "index_pd_post_course_surveys_on_form_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_post_course_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id", "form_id", "year", "course"], name: "index_pd_post_course_surveys_on_user_form_year_course", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_post_course_surveys_on_user_id", using: :btree
+  end
+
   create_table "pd_pre_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_enrollment_id",               null: false
     t.text     "form_data",        limit: 65535, null: false
@@ -683,6 +767,14 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
   end
 
+  create_table "pd_survey_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint   "form_id"
+    t.text     "questions",  limit: 65535, null: false, comment: "JSON Question data for this JotForm form."
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["form_id"], name: "index_pd_survey_questions_on_form_id", unique: true, using: :btree
+  end
+
   create_table "pd_teacher_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
@@ -703,8 +795,10 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.integer  "regional_partner_id"
+    t.integer  "user_id"
     t.index ["pd_application_id"], name: "index_pd_teachercon1819_registrations_on_pd_application_id", using: :btree
     t.index ["regional_partner_id"], name: "index_pd_teachercon1819_registrations_on_regional_partner_id", using: :btree
+    t.index ["user_id"], name: "index_pd_teachercon1819_registrations_on_user_id", using: :btree
   end
 
   create_table "pd_teachercon_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -713,6 +807,40 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.index ["pd_enrollment_id"], name: "index_pd_teachercon_surveys_on_pd_enrollment_id", unique: true, using: :btree
+  end
+
+  create_table "pd_workshop_daily_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint  "form_id",                      null: false
+    t.bigint  "submission_id",                null: false
+    t.integer "user_id",                      null: false
+    t.integer "pd_session_id"
+    t.integer "pd_workshop_id",               null: false
+    t.text    "answers",        limit: 65535
+    t.integer "day",                          null: false, comment: "Day of the workshop (1-based), or zero for the pre-workshop survey"
+    t.index ["form_id"], name: "index_pd_workshop_daily_surveys_on_form_id", using: :btree
+    t.index ["pd_session_id"], name: "index_pd_workshop_daily_surveys_on_pd_session_id", using: :btree
+    t.index ["pd_workshop_id"], name: "index_pd_workshop_daily_surveys_on_pd_workshop_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_workshop_daily_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id", "pd_workshop_id", "day", "form_id"], name: "index_pd_workshop_daily_surveys_on_user_workshop_day_form", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_workshop_daily_surveys_on_user_id", using: :btree
+  end
+
+  create_table "pd_workshop_facilitator_daily_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint  "form_id",                      null: false
+    t.bigint  "submission_id",                null: false
+    t.integer "user_id",                      null: false
+    t.integer "pd_session_id"
+    t.integer "pd_workshop_id",               null: false
+    t.integer "facilitator_id",               null: false
+    t.text    "answers",        limit: 65535
+    t.integer "day",                          null: false, comment: "Day of the workshop (1-based)"
+    t.index ["day"], name: "index_pd_workshop_facilitator_daily_surveys_on_day", using: :btree
+    t.index ["form_id", "user_id", "pd_session_id", "facilitator_id"], name: "index_pd_workshop_facilitator_daily_surveys_unique", unique: true, using: :btree
+    t.index ["form_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_form_id", using: :btree
+    t.index ["pd_session_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_pd_session_id", using: :btree
+    t.index ["pd_workshop_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_pd_workshop_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_user_id", using: :btree
   end
 
   create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -769,6 +897,7 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.integer  "regional_partner_id"
     t.boolean  "on_map",                                         comment: "Should this workshop appear on the 'Find a Workshop' map?"
     t.boolean  "funded",                                         comment: "Should this workshop's attendees be reimbursed?"
+    t.string   "funding_type"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id", using: :btree
   end
@@ -913,6 +1042,8 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.text     "notes",              limit: 65535
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.datetime "deleted_at"
+    t.text     "properties",         limit: 65535
     t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
@@ -1039,7 +1170,11 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.integer  "user_id"
     t.boolean  "login_required",                default: false, null: false
     t.text     "properties",      limit: 65535
+    t.string   "new_name"
+    t.string   "family_name"
+    t.index ["family_name"], name: "index_scripts_on_family_name", using: :btree
     t.index ["name"], name: "index_scripts_on_name", unique: true, using: :btree
+    t.index ["new_name"], name: "index_scripts_on_new_name", unique: true, using: :btree
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id", using: :btree
   end
 
@@ -1115,6 +1250,16 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.index ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
   end
 
+  create_table "shared_blockly_functions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string  "name",                                  null: false
+    t.string  "level_type"
+    t.integer "block_type",                default: 0, null: false
+    t.string  "return"
+    t.text    "description", limit: 65535
+    t.text    "arguments",   limit: 65535
+    t.text    "stack",       limit: 65535
+  end
+
   create_table "sign_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",       null: false
     t.datetime "sign_in_at",    null: false
@@ -1159,6 +1304,17 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.datetime "updated_at",               null: false
     t.index ["kind"], name: "index_survey_results_on_kind", using: :btree
     t.index ["user_id"], name: "index_survey_results_on_user_id", using: :btree
+  end
+
+  create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.text     "comment",    limit: 65535
+    t.integer  "student_id"
+    t.integer  "level_id"
+    t.integer  "teacher_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
+    t.index ["student_id", "level_id"], name: "index_feedback_on_student_and_level", using: :btree
   end
 
   create_table "teacher_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1347,6 +1503,7 @@ ActiveRecord::Schema.define(version: 20180202225407) do
     t.integer  "terms_of_service_version"
     t.boolean  "urm"
     t.string   "races"
+    t.integer  "primary_contact_info_id"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at", using: :btree
     t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree
@@ -1406,6 +1563,10 @@ ActiveRecord::Schema.define(version: 20180202225407) do
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
+  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
+  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
+  add_foreign_key "census_inaccuracy_investigations", "users"
+  add_foreign_key "census_overrides", "schools"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"
@@ -1415,6 +1576,7 @@ ActiveRecord::Schema.define(version: 20180202225407) do
   add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_regional_partner_cohorts", "pd_workshops", column: "summer_workshop_id"
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"
+  add_foreign_key "pd_teachercon1819_registrations", "users"
   add_foreign_key "pd_workshops", "regional_partners"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"

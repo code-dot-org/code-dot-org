@@ -11,7 +11,9 @@ class SingleSignOn
     :external_id,
     :return_sso_url,
     :admin,
-    :moderator
+    :moderator,
+    :add_groups,
+    :remove_groups
   ].freeze
   BOOLS = [:avatar_force_update, :admin, :moderator].freeze
 

@@ -8,14 +8,18 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import manageStudents, {
   setLoginType,
-  setSectionId,
   setStudents,
   convertStudentServerData,
+  toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import textResponses, {asyncLoadTextResponses} from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
-import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
-import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import StatsTable from '@cdo/apps/templates/teacherDashboard/StatsTable';
+import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelectionRedux';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -46,44 +50,59 @@ function syncOauthSectionMountPoint() {
   return document.getElementById('react-sync-oauth-section');
 }
 
-/**
- * Render the login type details and controls for changing login type
- * at the bottom of the manage students tab.
- * @param {number} sectionId
- */
-export function renderLoginTypeAndSharingControls(sectionId) {
-  registerReducers({teacherSections});
+export function renderTextResponsesTable(section, validScripts) {
+  const element = document.getElementById('text-responses-table-react');
+
+  registerReducers({textResponses, scriptSelection, sectionData});
   const store = getStore();
+  store.dispatch(setSection(section));
+  store.dispatch(loadValidScripts(section, validScripts));
 
-  store.dispatch(asyncLoadSectionData(sectionId));
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <LoginTypeParagraph
-        sectionId={sectionId}
-        onLoginTypeChanged={() => window.location.reload()}
-      />
-    </Provider>,
-    loginTypeControlsMountPoint()
-  );
-  ReactDOM.render(
-    <Provider store={store}>
-      <SectionsSharingButton
-        sectionId={sectionId}
-      />
-    </Provider>,
-    shareSettingMountPoint()
-  );
+  const scriptId = store.getState().scriptSelection.scriptId;
+  store.dispatch(asyncLoadTextResponses(section.id, scriptId, () => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <TextResponses sectionId={section.id}/>
+      </Provider>,
+      element
+    );
+  }));
 }
 
-export function renderSectionTable(sectionId, loginType) {
-  registerReducers({manageStudents});
+export function renderStatsTable(section) {
+  const dataUrl = `/dashboardapi/sections/${section.id}/students/completed_levels_count`;
+  const element = document.getElementById('stats-table-react');
+
+  $.ajax({
+    method: 'GET',
+    url: dataUrl,
+    dataType: 'json'
+  }).done(studentsCompletedLevelCount => {
+    ReactDOM.render(
+      <StatsTable
+        section={section}
+        studentsCompletedLevelCount={studentsCompletedLevelCount}
+      />,
+      element
+    );
+  });
+}
+
+export function renderSectionTable(section, studioUrlPrefix,) {
+  registerReducers({teacherSections, manageStudents, isRtl, sectionData});
   const store = getStore();
 
-  store.dispatch(setLoginType(loginType));
-  store.dispatch(setSectionId(sectionId));
+  store.dispatch(setLoginType(section.login_type));
+  store.dispatch(asyncLoadSectionData(section.id));
+  store.dispatch(setSection(section));
 
-  const dataUrl = `/v2/sections/${sectionId}/students`;
+  // Show share column by default for CSD and CSP courses.
+  const coursesToShowShareSetting = ['csd-2017', 'csd-2018', 'csp-2017', 'csp-2018'];
+  if (coursesToShowShareSetting.includes(section.course_name)) {
+    store.dispatch(toggleSharingColumn());
+  }
+
+  const dataUrl = `/dashboardapi/sections/${section.id}/students`;
   const element = document.getElementById('student-table-react');
 
   $.ajax({
@@ -92,25 +111,14 @@ export function renderSectionTable(sectionId, loginType) {
     dataType: 'json'
   }).done(studentData => {
     store.dispatch(
-      setStudents(convertStudentServerData(studentData, loginType, sectionId))
+      setStudents(convertStudentServerData(studentData, section.login_type, section.id))
     );
     ReactDOM.render(
       <Provider store={store}>
-        <ManageStudentsTable />
+        <ManageStudentsTable
+          studioUrlPrefix={studioUrlPrefix}
+        />
       </Provider>,
       element);
   });
-}
-
-export function unmountLoginTypeAndSharingControls() {
-  ReactDOM.unmountComponentAtNode(loginTypeControlsMountPoint());
-  ReactDOM.unmountComponentAtNode(shareSettingMountPoint());
-}
-
-function loginTypeControlsMountPoint() {
-  return document.getElementById('login-type-react');
-}
-
-function shareSettingMountPoint() {
-  return document.getElementById('share-setting-react');
 }

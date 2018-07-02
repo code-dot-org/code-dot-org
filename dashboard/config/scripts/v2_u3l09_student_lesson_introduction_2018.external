@@ -1,0 +1,22 @@
+name 'v2 U3L09 Student Lesson Introduction_2018'
+display_name 'Lesson Vocabulary & Resources'
+title 'Looping and Random Numbers'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 9 - Looping and Random Numbers
+
+## Vocabulary
+
+* **Loop**: a programming construct that repeats a group of commands.
+* **Iteration**: "loop" by another name - the repetition of a statement, process, or procedure.
+* **For Loop** - A particular kind of looping construct provided in many languages. Typically, a for loop defines a counting variable that is checked and incremented on each iteration in order to loop a specific number of times.
+
+## Lesson
+
+* Introduction to the `for` loop.
+* Practice using loops to draw figures.
+* Use loops in conjunction with Top-Down Design and random values to complete a digital scene.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

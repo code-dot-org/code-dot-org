@@ -2,16 +2,7 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&libraries=places"}
-%div#workshop-container
+%script{src: minifiable_asset_path('js/pd/workshop_dashboard/index.js'), data: @script_data}
 
-:javascript
-  window.dashboard.workshop = {
-    COURSES: #{Pd::Workshop::COURSES},
-    SUBJECTS: #{Pd::Workshop::SUBJECTS.to_json},
-    STATES: #{Pd::Workshop::STATES},
-    permission: "#{@permission}"
-  }
-%script{src: minifiable_asset_path('js/pd.js')}
-
-:javascript
-  window.ReactDOM.render(window.WorkshopDashboard, document.getElementById('workshop-container'));
+#workshop-container
+  -# populated by React

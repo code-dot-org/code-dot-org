@@ -36,11 +36,16 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 20:45:14 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:03:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:09 +0000\",\"changed\":[],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:44 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:20 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-20 20:45:14 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:03:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:09 +0000\",\"changed\":[],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:07:44 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:20 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-10 00:08:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-05-09 02:54:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:42:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 19:48:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:03:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -74,6 +79,16 @@
                 <title name="NUM">100</title>
               </block>
             </value>
+          </block>
+          <block type="jump_to">
+            <title name="VALUE">7</title>
+          </block>
+          <block type="jump_to_xy">
+            <title name="XPOS">0</title>
+            <title name="YPOS">0</title>
+          </block>
+          <block type="point_to">
+            <title name="DIRECTION">0</title>
           </block>
         </category>
         <category name="Math">
@@ -109,8 +124,8 @@
         </category>
         <category name="Loops">
           <block type="controls_repeat_ext" inline="true"/>
-          <block type="controls_for_counter" inline="true">
-            <mutation counter="counter"/>
+          <block type="controls_for" inline="true">
+            <title name="VAR">counter</title>
             <value name="FROM">
               <block type="math_number">
                 <title name="NUM">1</title>
@@ -118,12 +133,12 @@
             </value>
             <value name="TO">
               <block type="math_number">
-                <title name="NUM">100</title>
+                <title name="NUM">10</title>
               </block>
             </value>
             <value name="BY">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <title name="NUM">1</title>
               </block>
             </value>
           </block>
@@ -201,6 +216,12 @@
           </block>
           <block type="variables_get">
             <title name="VAR">size</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
           </block>
         </category>
       </xml>

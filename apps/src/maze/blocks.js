@@ -21,11 +21,13 @@
  * @fileoverview Demonstration of Blockly: Solving a maze.
  * @author fraser@google.com (Neil Fraser)
  */
-var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
+var mazeUtils = require('@code-dot-org/maze').utils;
+
 var blockUtils = require('../block_utils');
-var mazeUtils = require('./mazeUtils');
+var codegen = require('../lib/tools/jsinterpreter/codegen');
+
+var msg = require('./locale');
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {

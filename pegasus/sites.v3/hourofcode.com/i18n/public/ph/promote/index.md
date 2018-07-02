@@ -12,28 +12,28 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Get your community involved in the Hour of Code
+# Isangkot ang iyong kumonidad sa Hour of Code
 
-## 1. Ipagkalat ang balita
+## 1. Palaganapin ang salita
 
-Tell your friends about the **#HourOfCode**!
+Sabihan ang iyong mga kaibigan tungkol sa **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Sabihin sa inyong buong paaralan na makisali sa Hour of Code
+## 2. Hingin sa inyong buong paaralan na mag-alok ng Hour of Code
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
+[Ipadala itong email](<%= resolve_url('/promote/resources#sample-emails') %>) sa iyong punong-guro at hamunin ang bawat silid-aralan sa iyong paaralan upang mag-sign up.
 
-## 3. Tanungin ang iyong employer na makibahagi
+## 3. Hilingin sa iyong employer na makibahagi
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Ipadala itong email](<%= resolve_url('/promote/resources#sample-emails') %>) sa iyong manager o CEO ng kumpanya.
 
-## 4. Promote Hour of Code in your community
+## 4. Ilunsad ang Hour of Code sa iyong kumonidad
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Kumalap ng lokal na grupo](<%= resolve_url('/promote/resources#sample-emails') %>)— lalaki/babae scout club, simbahan, unibersidad, grupo ng mga beterano, labor union, o kahit ang ilang mga kaibigan. Hindi mo kailangang pumasok ng paaralan para matuto ng bagong kasanayan. Gamitin itong [posters, bandera, stickers, videos at higit pa](<%= resolve_url('/promote/resources') %>) para sa iyong sariling kaganapan.
 
-## 5. Hingin ang tulong ng isang lokal na opisyal para sumuporta sa Hour of Code
+## 5. Hingin sa isang lokal na opisyal na sumuporta sa Hour of Code
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Ipadala itong email](<%= resolve_url('/promote/resources#sample-emails') %>) sa iyong lokal na kinatawan, konsehal ng lungsod, o school board at imbitahin sila na bumisita sa iyong paaralan para sa Hour of Code. Makakatulong itong bumuo ng suporta para sa computet science sa inyong lugar ng higit sa isang oras.
 
 <%= view :signup_button %>

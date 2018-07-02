@@ -7,15 +7,14 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshop_organizer_survey_report_for_course/:course
     def index
-      survey_report = Hash.new
+      workshops = ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id).in_state(::Pd::Workshop::STATE_ENDED).exclude_summer
 
-      aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
-      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[params[:course]]
-
-      survey_report[:all_my_workshops_for_course], facilitator_scores = get_score_for_workshops(
-        ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id).in_state(::Pd::Workshop::STATE_ENDED), facilitator_breakdown: true
+      survey_report = generate_summary_report(
+        workshop: nil,
+        workshops: workshops,
+        course: params[:course],
+        facilitator_breakdown: true
       )
-      survey_report.merge!(facilitator_scores)
 
       respond_to do |format|
         format.json do

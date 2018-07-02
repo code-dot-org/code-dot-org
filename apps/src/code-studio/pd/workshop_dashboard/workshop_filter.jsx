@@ -3,6 +3,7 @@
  * Route: /workshops/filter
  */
 import React, {PropTypes} from "react";
+import {connect} from 'react-redux';
 import $ from "jquery";
 import _ from "lodash";
 import Select from "react-select";
@@ -11,7 +12,10 @@ import {SelectStyleProps} from '../constants';
 import ServerSortWorkshopTable from "./components/server_sort_workshop_table";
 import DatePicker from "./components/date_picker";
 import {DATE_FORMAT} from "./workshopConstants";
-import Permission from "../permission";
+import {
+  PermissionPropType,
+  WorkshopAdmin
+} from "./permission";
 import moment from "moment";
 import {
   Grid,
@@ -26,6 +30,11 @@ import {
   MenuItem,
   Clearfix
 } from "react-bootstrap";
+import {
+  Courses,
+  Subjects,
+  States
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const limitOptions = [
   {value: 25, text: 'first 25'},
@@ -35,8 +44,9 @@ const limitOptions = [
 
 const QUERY_API_URL = "/api/v1/pd/workshops/filter";
 
-export default class WorkshopFilter extends React.Component {
+export class WorkshopFilter extends React.Component {
   static propTypes = {
+    permission: PermissionPropType.isRequired,
     location: PropTypes.shape({
       pathname: PropTypes.string,
       query: PropTypes.shape({
@@ -62,12 +72,8 @@ export default class WorkshopFilter extends React.Component {
     limit: limitOptions[0]
   };
 
-  componentWillMount() {
-    this.permission = new Permission();
-  }
-
   componentDidMount() {
-    if (this.permission.isWorkshopAdmin) {
+    if (this.props.permission.has(WorkshopAdmin)) {
       this.loadOrganizers();
     }
   }
@@ -269,7 +275,7 @@ export default class WorkshopFilter extends React.Component {
                 value={filters.state}
                 onChange={this.handleStateChange}
                 placeholder={null}
-                options={window.dashboard.workshop.STATES.map(v => ({value: v, label: v}))}
+                options={States.map(v => ({value: v, label: v}))}
               />
             </FormGroup>
           </Col>
@@ -307,14 +313,14 @@ export default class WorkshopFilter extends React.Component {
                 value={filters.course}
                 onChange={this.handleCourseChange}
                 placeholder={null}
-                options={window.dashboard.workshop.COURSES.map(v => ({value: v, label: v}))}
+                options={Courses.map(v => ({value: v, label: v}))}
                 {...SelectStyleProps}
               />
             </FormGroup>
           </Col>
           <Clearfix visibleLgBlock />
           {
-            filters.course && window.dashboard.workshop.SUBJECTS[filters.course] &&
+            filters.course && Subjects[filters.course] &&
             <Col md={5} sm={6}>
               <FormGroup>
                 <ControlLabel>Subject</ControlLabel>
@@ -322,7 +328,7 @@ export default class WorkshopFilter extends React.Component {
                   value={filters.subject}
                   onChange={this.handleSubjectChange}
                   placeholder={null}
-                  options={window.dashboard.workshop.SUBJECTS[filters.course].map(v => ({value: v, label: v}))}
+                  options={Subjects[filters.course].map(v => ({value: v, label: v}))}
                   {...SelectStyleProps}
                 />
               </FormGroup>
@@ -330,7 +336,7 @@ export default class WorkshopFilter extends React.Component {
           }
           <Clearfix visibleSmBlock />
           {
-            this.permission.isWorkshopAdmin &&
+            this.props.permission.has(WorkshopAdmin) &&
             <Col md={6}>
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
@@ -347,7 +353,7 @@ export default class WorkshopFilter extends React.Component {
             </Col>
           }
           {
-            this.permission.isWorkshopAdmin &&
+            this.props.permission.has(WorkshopAdmin) &&
             <Col md={4}>
               <FormGroup>
                 <ControlLabel>Teacher Email</ControlLabel>
@@ -379,7 +385,7 @@ export default class WorkshopFilter extends React.Component {
             queryParams={filters}
             canDelete
             showStatus
-            showOrganizer={this.permission.isWorkshopAdmin}
+            showOrganizer={this.props.permission.has(WorkshopAdmin)}
             generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
           />
         </Row>
@@ -387,3 +393,7 @@ export default class WorkshopFilter extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.permission
+}))(WorkshopFilter);

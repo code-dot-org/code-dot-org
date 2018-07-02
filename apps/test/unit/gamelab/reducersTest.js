@@ -51,6 +51,36 @@ describe('gamelabReducer', function () {
     });
   });
 
+  describe('action: mobileControlsConfig', function () {
+    const { setMobileControlsConfig } = actions;
+    const { defaultMobileControlsConfigState } = gamelabReducers;
+
+    it('returns original object when given the default state', function () {
+      expect(initialState.mobileControlsConfig)
+          .to.equal(defaultMobileControlsConfigState);
+      store.dispatch(setMobileControlsConfig(defaultMobileControlsConfigState));
+      const newState = store.getState();
+      expect(newState).to.equal(initialState);
+      expect(newState.mobileControlsConfig)
+          .to.equal(defaultMobileControlsConfigState);
+    });
+
+    it('returns a new object when the state has changed', function () {
+      const newConfig = {
+        spaceButtonVisible: false,
+        dpadVisible: true,
+        dpadFourWay: false,
+        mobileOnly: false,
+      };
+      expect(initialState.mobileControlsConfig)
+          .to.equal(defaultMobileControlsConfigState);
+      store.dispatch(setMobileControlsConfig(newConfig));
+      const newState = store.getState();
+      expect(newState.mobileControlsConfig).to.equal(newConfig);
+      expect(newState).to.not.equal(initialState);
+    });
+  });
+
   describe('action: setPageConstants', function () {
     var setPageConstants = pageConstants.setPageConstants;
 

@@ -2,23 +2,23 @@
 %table
   %thead
     %tr
-      %th Name
+      %th Thumbnail
+      %th Title
       %th Key
-      %th Youtube Code
-      %th
-      %th
+      %th YouTube code
+      %th Download link
       %th
   %tbody
     - @videos.each do |video|
       %tr
+        %td
+          %img{src: video.thumbnail_path}
         %td= data_t('video.name', video.key)
         %td= video.key
         %td= video.youtube_code
-        %td= link_to t('crud.show'), video
+        %td= link_to('Download', video.download)
         - if can? :update, video
           %td= link_to t('crud.edit'), edit_video_path(video)
-        - if can? :destroy, video
-          %td= link_to t('crud.destroy'), video, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
 - if can? :create, Video
   = link_to t('crud.new_model', model: Video.model_name.human), new_video_path

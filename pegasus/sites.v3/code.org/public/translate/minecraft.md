@@ -37,11 +37,11 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 1. When you begin you'll see the English track on the left and you can enter your translations on the right. Feel free to edit the timing if necessary. When complete, click the Publish button in the top right.
 1. Complete all 5 video translations then email translations@code.org so that we can upload your translations to YouTube. Please include that you completed the Minecraft videos and your language.
 1. The links for the videos are below:
-	* [Introduction](https://www.amara.org/en/videos/5fkU0gFODp70/info/minecraft-hour-of-code-introduction/)
-	* [Loops](https://www.amara.org/en/videos/OoZrErE5kUl1/info/minecraft-hour-of-code-loops/)
-	* [Events](https://www.amara.org/en/videos/hxYdN6C1btWM/info/minecraft-hour-of-code-events/)
-	* [Spawning](https://www.amara.org/en/videos/C39R4IDzVqgL/info/minecraft-hour-of-code-spawn/)
-	* [Congratulations](https://www.amara.org/en/videos/QAwclz2DTh3J/info/minecraft-hour-of-code-congratulations/)
+	* [Introduction](https://amara.org/en/videos/5fkU0gFODp70/info/minecraft-hour-of-code-introduction/)
+	* [Loops](https://amara.org/en/videos/OoZrErE5kUl1/info/minecraft-hour-of-code-loops/)
+	* [Events](https://amara.org/en/videos/hxYdN6C1btWM/info/minecraft-hour-of-code-events/)
+	* [Spawning](https://amara.org/en/videos/C39R4IDzVqgL/info/minecraft-hour-of-code-spawn/)
+	* [Congratulations](https://amara.org/en/videos/QAwclz2DTh3J/info/minecraft-hour-of-code-congratulations/)
 
 ---
 

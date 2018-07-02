@@ -1,0 +1,42 @@
+name 'v2 U2L4 Student Lesson Summary_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+# Unit 2: Lesson 4 - Encoding Color Images
+
+## Background
+
+Humans can perceive millions of different colors. If we wish to encode color images we will need a system to represent this huge variety of color. Along the way we will need to develop a new number system to enable humans to more easily read and write large amounts of binary information.
+
+## Vocabulary
+
+* **Hexadecimal** - A base-16 number system that uses sixteen distinct symbols 0-9 and A-F to represent numbers from 0 to 15.
+* **Pixel** - short for "picture element", the fundamental unit of a digital image, typically a tiny square or dot that contains a single point of color of a larger image.
+* **RGB** - the RGB color model uses varying intensities of (R)ed, (G)reen, and (B)lue light are added together in to reproduce a broad array of colors. 
+
+## Lesson
+
+* Using the hexadecimal number system
+* Creating color images with the Pixelation Tool
+* Design your personal favicon
+
+## Resources
+
+* Personal Favicon Project - Activity Guide ([PDF](https://docs.google.com/document/d/1bUVXHZUafmxDT5pOGlWSFkQSc_0Ll_lzMtfSh8JiI20/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bUVXHZUafmxDT5pOGlWSFkQSc_0Ll_lzMtfSh8JiI20/export?format=doc))
+* Encoding Color Images - Activity Guide ([PDF](https://docs.google.com/document/d/1-u6PaswugFEkBf2NVa8aD_IlD4wSeYLhvD7GEkNtArA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1-u6PaswugFEkBf2NVa8aD_IlD4wSeYLhvD7GEkNtArA/export?format=doc))
+* Rubric - Personal Favicon Project - Rubric ([PDF](https://docs.google.com/document/d/1Oug5bmr_Ml4cK690BhtC5_Ow6l17QofGDG61NJ7k3X4/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Oug5bmr_Ml4cK690BhtC5_Ow6l17QofGDG61NJ7k3X4/export?format=doc))
+* Hexadecimal Numbers (optional) - Activity Guide ([PDF](https://docs.google.com/document/d/10BkpM4DSvlAJbo6DeJLa3G0CoulCPL08LcRdkdmSIRM/export?format=pdf) | [DOCX](https://docs.google.com/document/d/10BkpM4DSvlAJbo6DeJLa3G0CoulCPL08LcRdkdmSIRM/export?format=doc))
+* Worksheet - Video Guide for "A Little Bit about Pixels" (optional) - Worksheet ([PDF](https://docs.google.com/document/d/1C72wLDIk7_AC8nVMKLQgvAqLUSt9UybyWGQPLtIJRL4/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1C72wLDIk7_AC8nVMKLQgvAqLUSt9UybyWGQPLtIJRL4/export?format=doc))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[key]
+
+* <a href="https://docs.google.com/document/d/1oaj7UHqQMAaTxbA8HqVfxVBOyGBGPRTUbKU__Pov6QE/edit?usp=sharing" target="_blank">KEY: Video Guide</a> 
+* <a href="https://docs.google.com/document/d/1V81zg7hH7Y_XxvB3WaALHEAvZhKDy6_8QLaCVh76nb4/edit?usp=sharing" target="_blank">KEY: Activity Guide - Encoding Color Images</a>
+* <a href="https://drive.google.com/file/d/0B2UNlnU_5Vg4VXQ5dElZdm8ySFE/view?usp=sharing" target="_blank">KEY: Activity Guide - Hexadecimal Numbers(optional)</a> **Thank you Sangeeta B. for creating this key and sharing it!**
+
+[/key]
+MARKDOWN

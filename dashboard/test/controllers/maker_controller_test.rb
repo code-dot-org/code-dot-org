@@ -4,9 +4,40 @@ class MakerControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
+    @student = create :student
     @teacher = create :teacher
     @admin = create :admin
     @school = create :school
+  end
+
+  test_redirect_to_sign_in_for :home
+
+  test "home loads for student" do
+    # Fake CSD6 script for progress info
+    csd6_script = create :script, name: Script::CSD6_NAME
+    create :script_level, script: csd6_script
+    sign_in @student
+
+    assert_queries 12 do
+      get :home
+    end
+
+    assert_response :success
+    assert_select '#maker-home'
+  end
+
+  test "home loads for teacher" do
+    # Fake CSD6 script for progress info
+    csd6_script = create :script, name: Script::CSD6_NAME
+    create :script_level, script: csd6_script
+    sign_in @teacher
+
+    assert_queries 13 do
+      get :home
+    end
+
+    assert_response :success
+    assert_select '#maker-home'
   end
 
   test "apply: fails if unit_6_intention not provided" do

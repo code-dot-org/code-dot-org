@@ -131,6 +131,9 @@ class ApplicationController < ActionController::Base
     :user_type,
     :hashed_email,
     :terms_of_service_version,
+    :email_preference_opt_in,
+    :data_transfer_agreement_accepted,
+    :data_transfer_agreement_required,
     school_info_attributes: SCHOOL_INFO_ATTRIBUTES
   ].freeze
 

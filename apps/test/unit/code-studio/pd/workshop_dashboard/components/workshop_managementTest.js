@@ -1,11 +1,24 @@
-import WorkshopManagement from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
+import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '@cdo/apps/code-studio/pd/workshop_dashboard/components/confirmation_dialog';
 import {Button} from 'react-bootstrap';
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import Permission from '@cdo/apps/code-studio/pd/permission';
+import Permission, {
+  Organizer,
+  ProgramManager,
+  Facilitator
+}
+from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+
+const defaultProps = {
+  permission: new Permission(),
+  workshopId: 123,
+  viewUrl: "viewUrl",
+  date: new Date().toISOString()
+};
 
 describe("WorkshopManagement", () => {
   const fakeRouter = {
@@ -23,7 +36,6 @@ describe("WorkshopManagement", () => {
 
   beforeEach(() => {
     mockRouter = sinon.mock(fakeRouter);
-    new Permission();
   });
 
   afterEach(() => {
@@ -46,6 +58,48 @@ describe("WorkshopManagement", () => {
     viewWorkshopButton.simulate('click', mockClickEvent);
   };
 
+  describe("with showSurveyUrl", () => {
+    const getSurveyUrlForProps = props => shallow(
+      <WorkshopManagement
+        {...defaultProps}
+        showSurveyUrl={true}
+        {...props}
+      />, {context}
+    ).instance().surveyUrl;
+
+    it("uses daily results for local summer in 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.local_summer});
+      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+    });
+
+    it("uses daily results for teachercon in 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.teachercon});
+      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+    });
+
+    it("uses local summer results for local summer in 2017", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2017-07-01", subject: WorkshopTypes.local_summer});
+      expect(surveyUrl).to.eql("/local_summer_workshop_survey_results/123");
+    });
+
+    it("uses organizer results for organizers", () => {
+      const organizerPermission = new Permission([Organizer]);
+      const surveyUrl = getSurveyUrlForProps({permission: organizerPermission});
+      expect(surveyUrl).to.eql("/organizer_survey_results/123");
+    });
+
+    it("uses organizer results for program managers", () => {
+      const programManagerPermission = new Permission([ProgramManager]);
+      const surveyUrl = getSurveyUrlForProps({permission: programManagerPermission});
+      expect(surveyUrl).to.eql("/organizer_survey_results/123");
+    });
+
+    it("uses survey_results by default", () => {
+      const surveyUrl = getSurveyUrlForProps();
+      expect(surveyUrl).to.eql("/survey_results/123");
+    });
+  });
+
   describe("For not-started workshops", () => {
     let deleteStub;
 
@@ -56,10 +110,9 @@ describe("WorkshopManagement", () => {
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId = {123}
-          viewUrl = "viewUrl"
+          {...defaultProps}
           editUrl = "editUrl"
-          onDelete={deleteStub}
+          onDelete = {deleteStub}
         />, {context}
       );
     });
@@ -127,8 +180,7 @@ describe("WorkshopManagement", () => {
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId = {123}
-          viewUrl = "viewUrl"
+          {...defaultProps}
         />,
         {context}
       );
@@ -142,14 +194,13 @@ describe("WorkshopManagement", () => {
 
   describe("For completed workshops to a workshop organizer", () => {
     beforeEach(() => {
-      (new Permission()).setPermission("workshop_organizer");
       mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
       mockRouter.expects("createHref").withExactArgs("/organizer_survey_results/123").returns("organizerResultsHref");
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId = {123}
-          viewUrl = "viewUrl"
+          {...defaultProps}
+          permission={new Permission([Organizer])}
           showSurveyUrl={true}
         />,
         {context}
@@ -173,17 +224,47 @@ describe("WorkshopManagement", () => {
     });
   });
 
+  describe("For completed workshops to a program manager organizer", () => {
+    beforeEach(() => {
+      mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+      mockRouter.expects("createHref").withExactArgs("/organizer_survey_results/123").returns("organizerResultsHref");
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          permission={new Permission([ProgramManager])}
+          showSurveyUrl={true}
+        />,
+        {context}
+      );
+    });
+
+    it("Has 2 buttons", () => {
+      expect(findButtons()).to.have.length(2);
+    });
+
+    it("Has a view workshop button", () => {
+      verifyViewWorkshopButton();
+    });
+
+    it("Has a View Survey Results button", () => {
+      const surveyButton = findButtonWithText("View Survey Results");
+      expect(surveyButton.props().href).to.eql("organizerResultsHref");
+
+      mockRouter.expects("push").withExactArgs("/organizer_survey_results/123");
+      surveyButton.simulate('click', mockClickEvent);
+    });
+  });
 
   describe("For completed workshops to a facilitator", () => {
     beforeEach(() => {
-      new Permission().setPermission("facilitator");
       mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
       mockRouter.expects("createHref").withExactArgs("/survey_results/123").returns("facilitatorResultsHref");
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId={123}
-          viewUrl="viewUrl"
+          {...defaultProps}
+          permission={new Permission(Facilitator)}
           showSurveyUrl={true}
         />,
         {context}
@@ -204,6 +285,40 @@ describe("WorkshopManagement", () => {
 
       mockRouter.expects("push").withExactArgs("/survey_results/123");
       surveyButton.simulate('click', mockClickEvent);
+    });
+  });
+
+  describe("For a local summer workshop in 2017 or earlier", () => {
+    it("Renders the correct survey results URL", () => {
+      mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+      mockRouter.expects("createHref").withExactArgs("/local_summer_workshop_survey_results/123").returns("surveyResultsHref");
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          showSurveyUrl={true}
+          subject="5-day Summer"
+          date="2017-06-04T09:00:00.000Z"
+        />,
+        {context}
+      );
+    });
+  });
+
+  describe("For a local summer workshop in 2018 or later", () => {
+    it("Renders the correct survey results URL", () => {
+      mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+      mockRouter.expects("createHref").withExactArgs("/local_summer_workshop_daily_survey_results/123").returns("surveyResultsHref");
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          showSurveyUrl={true}
+          subject="5-day Summer"
+          date="2018-06-04T09:00:00.000Z"
+        />,
+        {context}
+      );
     });
   });
 });

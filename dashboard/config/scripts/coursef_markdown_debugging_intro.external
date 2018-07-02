@@ -1,0 +1,22 @@
+name 'courseF_markdown_debugging_intro'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# In this lesson...
+
+### What do you think of when you think about bugs? 
+
+### When most people think about bugs, they think about creepy crawly things. In computer science, bugs aren't alive, but they can still be tricky.
+
+### The puzzles in this lesson have already been solved for you! But not so fast- they don't seem to be working yet. Are bugs behind all this? 
+
+---
+
+## Blocks to Know
+
+![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+MARKDOWN

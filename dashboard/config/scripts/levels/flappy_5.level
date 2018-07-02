@@ -15,6 +15,7 @@
     "success_condition": "function successCondition() {\n\t        var insideObstacle = false;\n\t        Flappy.obstacles.forEach(function (obstacle) {\n\t          if (!obstacle.hitAvatar && obstacle.containsAvatar()) {\n\t            insideObstacle = true;\n\t          }\n\t        });\n\t        return insideObstacle && Flappy.playerScore > 0;\n\t      }",
     "failure_condition": "function failureCondition() {\n\t        var insideObstacle = false;\n\t        Flappy.obstacles.forEach(function (obstacle) {\n\t          if (!obstacle.hitAvatar && obstacle.containsAvatar()) {\n\t            insideObstacle = true;\n\t          }\n\t        });\n\t        return insideObstacle && Flappy.playerScore === 0;\n\t      }",
     "instructions": "Let's add a scoreboard, and count points when Flappy makes it past obstacles. Add to the \"when pass an obstacle\" block, and then score a point by flying Flappy through the first set of pipes.",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

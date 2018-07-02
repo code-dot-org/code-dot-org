@@ -21,6 +21,7 @@
 #  regional_partner_id :integer
 #  on_map              :boolean
 #  funded              :boolean
+#  funding_type        :string(255)
 #
 # Indexes
 #
@@ -29,149 +30,9 @@
 #
 
 class Pd::Workshop < ActiveRecord::Base
+  include Pd::WorkshopConstants
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
-
-  COURSES = [
-    COURSE_CSF = 'CS Fundamentals'.freeze,
-    COURSE_CSP = 'CS Principles'.freeze,
-    COURSE_ECS = 'Exploring Computer Science'.freeze,
-    COURSE_CS_IN_A = 'CS in Algebra'.freeze,
-    COURSE_CS_IN_S = 'CS in Science'.freeze,
-    COURSE_CSD = 'CS Discoveries'.freeze,
-    COURSE_COUNSELOR = 'Counselor'.freeze,
-    COURSE_ADMIN = 'Admin'.freeze
-  ].freeze
-
-  COURSE_NAMES_MAP = {
-    COURSE_CSF => 'CS Fundamentals',
-    COURSE_CSP => 'CS Principles',
-    COURSE_ECS => 'Exploring Computer Science',
-    COURSE_CS_IN_A => 'CS in Algebra',
-    COURSE_CS_IN_S => 'CS in Science',
-    COURSE_CSD => 'CS Discoveries',
-    COURSE_COUNSELOR => 'Counselor',
-    COURSE_ADMIN => 'Administrator'
-  }.freeze
-
-  COURSE_URLS_MAP = {
-    COURSE_CSF => CDO.code_org_url('/educate/curriculum/elementary-school'),
-    COURSE_CSP => CDO.code_org_url('/educate/csp'),
-    COURSE_CSD => CDO.code_org_url('/educate/csd'),
-    COURSE_CS_IN_S => CDO.code_org_url('/curriculum/science'),
-    COURSE_CS_IN_A => CDO.code_org_url('/educate/algebra'),
-    COURSE_ECS => 'http://www.exploringcs.org/'
-  }.freeze
-
-  STATES = [
-    STATE_NOT_STARTED = 'Not Started'.freeze,
-    STATE_IN_PROGRESS = 'In Progress'.freeze,
-    STATE_ENDED = 'Ended'.freeze
-  ].freeze
-
-  SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
-  SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
-  SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze
-  SUBJECTS = {
-    COURSE_ECS => [
-      SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
-      SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML'.freeze,
-      SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
-      SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
-      SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
-      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'.freeze
-    ],
-    COURSE_CS_IN_A => [
-      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
-      SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'.freeze
-    ],
-    COURSE_CS_IN_S => [
-      SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study'.freeze,
-      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1'.freeze,
-      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
-    ],
-    COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-      SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information'.freeze,
-      SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming'.freeze,
-      SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps'.freeze,
-      SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'.freeze,
-      SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
-      SUBJECT_CSP_FIT = SUBJECT_FIT
-    ],
-    COURSE_CSD => [
-      SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-      SUBJECT_CSD_UNITS_2_3 = 'Units 2 and 3: Web Development and Animations'.freeze,
-      SUBJECT_CSD_UNIT_3_4 = 'Units 3 and 4: Building Games and User Centered Design'.freeze,
-      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: App Prototyping and Data & Society'.freeze,
-      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
-      SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
-      SUBJECT_CSD_FIT = SUBJECT_FIT
-    ]
-  }.freeze
-
-  # Section types by course
-  SECTION_TYPE_MAP = {
-    COURSE_CSF => 'csf_workshop',
-    COURSE_CSP => 'csp_workshop',
-    COURSE_ECS => 'ecs_workshop',
-    COURSE_CS_IN_A => 'csina_workshop',
-    COURSE_CS_IN_S => 'csins_workshop',
-    COURSE_CSD => 'csd_workshop',
-    COURSE_COUNSELOR => 'counselor_workshop',
-    COURSE_ADMIN => 'admin_workshop'
-  }.freeze
-  SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
-
-  # Time constrains for payment, per subject.
-  # Each subject has the following constraints:
-  # min_days: the minimum # of days a teacher must attend in order to be counted at all.
-  # max_days: the maximum # of days the workshop can be recognized for.
-  # max_hours: the maximum # of hours the workshop can be recognized for.
-  TIME_CONSTRAINTS = {
-    COURSE_ECS => {
-      SUBJECT_ECS_PHASE_2 => {min_days: 3, max_days: 5, max_hours: 30},
-      SUBJECT_ECS_UNIT_3 => {min_days: 1, max_days: 1, max_hours: 6},
-      SUBJECT_ECS_UNIT_4 => {min_days: 1, max_days: 1, max_hours: 6},
-      SUBJECT_ECS_UNIT_5 => {min_days: 1, max_days: 1, max_hours: 6},
-      SUBJECT_ECS_UNIT_6 => {min_days: 1, max_days: 1, max_hours: 6},
-      SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
-    },
-    COURSE_CS_IN_A => {
-      SUBJECT_CS_IN_A_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
-      SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7}
-    },
-    COURSE_CS_IN_S => {
-      SUBJECT_CS_IN_S_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
-      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
-      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7}
-    },
-    COURSE_CSP => {
-      SUBJECT_CSP_SUMMER_WORKSHOP => {max_hours: 33.5},
-      SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
-      SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
-      SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
-      SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
-      SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5}
-    },
-    COURSE_CSD => {
-      SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
-    }
-  }.freeze
-
-  WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
-    COURSE_CSP => 'CSP Support',
-    COURSE_ECS => 'ECS Support',
-    COURSE_CS_IN_A => 'CS in Algebra Support',
-    COURSE_CS_IN_S => 'CS in Science Support'
-  }.freeze
-
-  # Pre-survey data, arranged by course, consisting of:
-  #  - course_name : the name of the Course object associated with that workshop.
-  # Only courses with a pre-survey will have an entry here
-  PRE_SURVEY_BY_COURSE = {
-    COURSE_CSD => {course_name: 'csd'},
-    COURSE_CSP => {course_name: 'csp'}
-  }.freeze
 
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -179,6 +40,12 @@ class Pd::Workshop < ActiveRecord::Base
   validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
+  validates_inclusion_of :on_map, in: [true, false]
+  validates_inclusion_of :funded, in: [true, false]
+
+  validates :funding_type,
+    inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
+    absence: {unless: :funded_csf?}
 
   belongs_to :organizer, class_name: 'User'
   has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
@@ -191,6 +58,11 @@ class Pd::Workshop < ActiveRecord::Base
 
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
+
+  before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
+  def assign_regional_partner
+    self.regional_partner = organizer.try {|o| o.regional_partners.first}
+  end
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
@@ -217,13 +89,29 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.enrolled_in_by(teacher)
-    joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
+    base_query = joins(:enrollments)
+    user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
+    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email})
+
+    user_id_where_clause.or(email_where_clause).distinct
   end
 
-  def self.facilitated_or_organized_by(user)
+  def self.exclude_summer
+    where.not(subject: [SUBJECT_SUMMER_WORKSHOP, SUBJECT_TEACHER_CON])
+  end
+
+  # scopes to workshops managed by the user, which means the user is any of:
+  # - the organizer
+  # - a facilitator
+  # - a program manager for the assigned regional partner
+  def self.managed_by(user)
     left_outer_joins(:facilitators).
-      where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id).
-      distinct
+      where(
+        'pd_workshops_facilitators.user_id = ? OR organizer_id = ? OR regional_partner_id IN (?)',
+        user.id,
+        user.id,
+        user.regional_partner_program_managers.select(:regional_partner_id)
+      ).distinct
   end
 
   def self.attended_by(teacher)
@@ -254,6 +142,11 @@ class Pd::Workshop < ActiveRecord::Base
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_after(date)
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
+  end
+
+  scope :in_year, ->(year = Date.now.year) do
+    scheduled_start_on_or_after(Date.new(year)).
+    scheduled_start_on_or_before(Date.new(year + 1))
   end
 
   # Filters to workshops that are scheduled on or after today and have not yet ended
@@ -321,8 +214,35 @@ class Pd::Workshop < ActiveRecord::Base
     in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(Time.zone.now - 2.days)
   end
 
+  # Find the workshop that is closest in time to today
+  # @return [Pd::Workshop, nil]
+  def self.nearest
+    joins(:sessions).
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      order("day_diff ASC").
+      first
+  end
+
+  # Find the workshop with the closest session to today attended by the given teacher
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.with_nearest_attendance_by(teacher)
+    joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      order("day_diff").
+      first
+  end
+
+  # Find the workshop with the closest session to today attended by the given teacher,
+  # or enrolled in (but not attended by) that same teacher
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.nearest_attended_or_enrolled_in_by(teacher)
+    current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
+  end
+
   def course_name
-    COURSE_NAMES_MAP[course]
+    COURSE_NAME_OVERRIDES[course] || course
   end
 
   def course_target
@@ -377,7 +297,6 @@ class Pd::Workshop < ActiveRecord::Base
   def end!
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
-    sessions.each(&:remove_code)
     save!
   end
 
@@ -398,7 +317,8 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_TEACHER_CON,
       SUBJECT_CSP_FIT,
       SUBJECT_CSD_TEACHER_CON,
-      SUBJECT_CSD_FIT
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT
     ].include? subject
   end
 
@@ -600,17 +520,23 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def teachercon?
-    [
-      SUBJECT_CSP_TEACHER_CON,
-      SUBJECT_CSD_TEACHER_CON,
-    ].include?(subject)
+    subject == SUBJECT_TEACHER_CON
   end
 
   def fit_weekend?
     [
       SUBJECT_CSP_FIT,
-      SUBJECT_CSD_FIT
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT
     ].include?(subject)
+  end
+
+  def funded_csf?
+    course == COURSE_CSF && funded
+  end
+
+  def funding_summary
+    (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
   end
 
   # Get all enrollments for this workshop with no associated attendances

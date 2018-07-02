@@ -1,0 +1,13 @@
+name 'CSD-U5-SFLP Representing Images_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+Learn how the on-off patterns you learned about in the last lesson can be used to represent images. Along the way you'll explore how some of the properties of representation systems you've already seen apply to images as well.
+
+## Vocabulary
+
+* **pixel** - short for "picture element" it is the fundamental unit of a digital image, typically a tiny square or dot which contains a single point of color of a larger image.
+
+
+MARKDOWN

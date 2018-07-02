@@ -3,11 +3,12 @@
  */
 
 import color from '@cdo/apps/util/color';
+import {PropTypes} from 'react';
 
 /**
  * Mapping of application statuses to their background and text colors.
  */
-exports.StatusColors = {
+export const StatusColors = {
   'unreviewed': {
     backgroundColor: color.charcoal,
     color: color.white
@@ -41,7 +42,7 @@ exports.StatusColors = {
 /**
  * Valid statuses for Applications.
  */
-exports.ApplicationStatuses = {
+export const ApplicationStatuses = {
   'teacher': [
     'Unreviewed',
     'Pending',
@@ -64,25 +65,30 @@ exports.ApplicationStatuses = {
 /**
  * Statuses that represent "finalized" applications
  */
-exports.ApplicationFinalStatuses = [
+export const ApplicationFinalStatuses = [
   'accepted',
   'declined',
   'waitlisted',
+  'withdrawn'
 ];
 
 /**
  * Constants for Regional Partner dropdown
  */
-const allPartnersLabel = "All Regional Partners' Applications";
-const allPartnersFilter = "all";
-const unmatchedLabel = "No Partner/Unmatched";
-const unmatchedFilter = "none";
-exports.AllPartnersLabel = allPartnersLabel;
-exports.AllPartnersFilter = allPartnersFilter;
-exports.UnmatchedLabel = unmatchedLabel;
-exports.UnmatchedFilter = unmatchedFilter;
+export const ALL_PARTNERS_LABEL = "All Regional Partners' Applications";
+export const ALL_PARTNERS_VALUE = "all";
+export const UNMATCHED_PARTNER_LABEL = "No Partner/Unmatched";
+export const UNMATCHED_PARTNER_VALUE = "none";
 
-exports.RegionalPartnerDropdownOptions = [
-  {value: unmatchedFilter, label: unmatchedLabel},
-  {value: allPartnersFilter, label: allPartnersLabel}
-];
+export const ALL_PARTNERS_OPTION = {label: ALL_PARTNERS_LABEL, value: ALL_PARTNERS_VALUE};
+export const UNMATCHED_PARTNER_OPTION = {label: UNMATCHED_PARTNER_LABEL, value: UNMATCHED_PARTNER_VALUE};
+
+export const RegionalPartnerValuePropType = PropTypes.oneOfType([
+  PropTypes.number, // regional partner id
+  PropTypes.oneOf([ALL_PARTNERS_VALUE, UNMATCHED_PARTNER_VALUE]),
+]);
+
+export const RegionalPartnerPropType = PropTypes.shape({
+  value: RegionalPartnerValuePropType.isRequired,
+  label: PropTypes.string.isRequired
+});

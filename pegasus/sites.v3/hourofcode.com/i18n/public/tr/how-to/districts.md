@@ -23,8 +23,7 @@ nav: how_to_nav
 
 Kodlama Saati teknolojinin nasıl çalıştığı ve yazılım uygulamalarının nasıl yapıldığını öğrenmeye giden yolculukta sadece bir ilk adımdır. Bu yolculuğa devam etmek için:
 
-- Öğrencileri,  çevrimiçi öğrenmeye </ 0> devam etmeye teşvik edin.</li> 
-    
-    - Deneyimli bir bilgisayar bilimci ile 1 günlük yüz yüze atölyeye [katılın](<%= resolve_url('https://code.org/professional-development-workshops') %>). (Sadece ABD eğitmenleri için)</ul> 
-    
-    <%= view :signup_button %>
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

@@ -159,15 +159,15 @@ class S3PackagingTest < Minitest::Test
     client.delete_object(bucket: S3Packaging::BUCKET_NAME, key: @packager.send(:s3_key))
 
     # upload a package
-    assert @packager.upload_package_to_s3('/build')
+    assert @packager.upload_package_to_s3(@packager.create_package('/build'))
 
     # upload the same package again, it works
-    assert @packager.upload_package_to_s3('/build')
+    assert @packager.upload_package_to_s3(@packager.create_package('/build'))
 
     # try uploading a different package under the same name, it fails
     threw = false
     begin
-      refute @packager.upload_package_to_s3('/src')
+      refute @packager.upload_package_to_s3(@packager.create_package('/src'))
     rescue
       threw = true
     end
@@ -183,5 +183,21 @@ class S3PackagingTest < Minitest::Test
     @packager.instance_variable_set(:@client, Aws::S3::Client.new(credentials: Aws::Credentials.new(nil, nil)))
     downloaded = @packager.send(:download_package)
     assert @packager.send(:packages_equivalent, package, downloaded)
+  end
+
+  def test_create_package_with_expected_commit_hash_passes
+    RakeUtils.expects(:git_folder_hash).returns(ORIGINAL_HASH)
+    @packager.create_package('/build', expected_commit_hash: ORIGINAL_HASH)
+  end
+
+  def test_create_package_with_unexpected_commit_hash_fails
+    RakeUtils.expects(:git_folder_hash).returns('modified-fake-hash')
+    e = assert_raises do
+      @packager.create_package('/build', expected_commit_hash: ORIGINAL_HASH)
+    end
+    assert_equal(
+      'test-package contents changed unexpectedly. Expected commit hash fake-hash, got modified-fake-hash',
+      e.message
+    )
   end
 end

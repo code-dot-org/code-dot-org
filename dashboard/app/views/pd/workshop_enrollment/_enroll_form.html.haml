@@ -2,8 +2,7 @@
   Fields marked with a
   %span.form-required-field
     *
-  are required. Your email address will be shared
-  with the workshop organizer and facilitators.
+  are required.
 
 - if @enrollment.errors.any?
   #error_explanation
@@ -64,5 +63,7 @@
         - existing_school_info = (@enrollment.school_info && @enrollment.school_info.country) ? @enrollment.school_info : nil
         = render partial: 'shared/school_info', locals: {form_name: "school_info", existing_school_info: existing_school_info}
     %div{style: "clear: both"}
+  %p
+    Code.org works closely with local Regional Partners and Code.org facilitators to deliver the Professional Learning Program. By enrolling in this workshop, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with your Regional Partner, school district and facilitators.  We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners - all information will be de-identified and aggregated. Our Regional Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.
   %div.control-group
     = form.submit submit_text, class: 'btn', disabled: true

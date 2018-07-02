@@ -193,6 +193,9 @@ export default {
       case 'value':
         element.value = value;
         break;
+      case 'text':
+        element.value = value;
+        break;
       default:
         return false;
     }

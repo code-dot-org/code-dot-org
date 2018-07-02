@@ -1,0 +1,33 @@
+name 'cspu5_assess2_setAlarm_exam_prep'
+wrong 'day == “Saturday”'
+wrong 'day == “Sunday”'
+right '(day == “Saturday”) || (day == “Sunday”)'
+wrong '(day == “Saturday”) && (day == “Sunday”)'
+wrong 'day != “Monday”'
+
+markdown <<MARKDOWN
+Consider the JavaScript code segment below. Which statement should be used in place of &lt;missing code&gt; such that the alarm is set to 9:00 am on weekends, and 6:30 am on weekdays.
+
+      var day = prompt("What day is it tomorrow?");
+      if ( <missing code> ){
+      	setAlarm = “9:00am”;
+      } 
+      	else {
+      	setAlarm = “6:30am”;
+      }
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8**
+
+Inside the IF statement, the alarm is set to 9:00am. The alarms should only be set to 9:00am if it is a weekend so therefore, the IF statement should check if it is the weekend or not. Since there are 2 weekend days and 5 weekdays, it would be easier to check if it was a Saturday or a Sunday. 
+
+Inside IF statements:
+
+* Two equal signs in a row "==" are used to see if the values are equal and
+* Two vertical lines "||" checks if one _or_ the other statement is true
+* Alternatively, the notation "&&" means "and" which checks if both statements are true
+* Therefore, to check if the day EQUALS "Saturday" OR if the day EQUALS "Sunday", the code is written as
+
+(day == “Saturday”) || (day == “Sunday”) which will be true if the day is a weekend or, if it is a weekday, this statement will be false.
+MARKDOWN

@@ -1,0 +1,30 @@
+name 'v2 U2L15 Student Lesson Introduction_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 2: Lesson 15 - Practice PT - Tell a Data Story
+
+## Background
+
+This practice PT develops several of the skills you need for the AP Explore Performance Task.  In particular: the creation of a computational artifact, and written responses to prompts about what the artifact is showing.
+
+We collect data to learn about the world and test our hypotheses about the patterns and relationships that might otherwise be invisible. Computational tools now make it possible to quickly collect and analyze vast amounts of data, but those processes still depend on knowledgeable and thoughtful people who understand the data being used and can clearly present the conclusions draw from it. For this Practice PT you will be doing just that with the data you and your classmates have collected.
+
+## Lesson
+
+* Discover and present an interesting "story" in the data your class collected.
+* Create a visualization that presents your story.
+* Complete the written responses to explain and interpret your visualization.
+
+## Resources
+
+* Practice PT - Tell a Data Story - Rubric ([PDF](https://docs.google.com/document/d/1Eo5hJYYLa0u-81gpuRXSmCxwhwdzwJk4Z_v6fpZpXuY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Eo5hJYYLa0u-81gpuRXSmCxwhwdzwJk4Z_v6fpZpXuY/export?format=doc))
+
+<a class='btn btn-large btn-primary next-stage submitButton'>Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

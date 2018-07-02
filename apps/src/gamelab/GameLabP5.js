@@ -38,6 +38,19 @@ var GameLabP5 = function () {
       this.p5.frameRate(this.prevFrameRate || defaultFrameRate);
     }
   };
+
+  this.setLoop = (shouldLoop) => {
+    if (!this.p5) {
+      return;
+    }
+    if (shouldLoop) {
+      // Calling p5.loop() invokes p5.draw(), but we might still be waiting for
+      // animations to load.
+      this.p5._loop = true;
+    } else {
+      this.p5.noLoop();
+    }
+  };
 };
 
 module.exports = GameLabP5;
@@ -112,6 +125,41 @@ GameLabP5.prototype.init = function (options) {
     return false;
   };
 
+  // Modify p5 to ignore out-of-bounds positions before setting touchIsDown
+  window.p5.prototype._ontouchstart = function (e) {
+    if (!this._curElement) {
+      return;
+    }
+    var validTouch;
+    for (var i = 0; i < e.touches.length; i++) {
+      validTouch = getTouchInfo(this._curElement.elt, e, i);
+      if (validTouch) {
+        break;
+      }
+    }
+    if (!validTouch) {
+      // No in-bounds (valid) touches, return and ignore:
+      return;
+    }
+    var context = this._isGlobal ? window : this;
+    var executeDefault;
+    this._updateNextTouchCoords(e);
+    this._updateNextMouseCoords(e);
+    this._setProperty('touchIsDown', true);
+    if (typeof context.touchStarted === 'function') {
+      executeDefault = context.touchStarted(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    } else if (typeof context.mousePressed === 'function') {
+      executeDefault = context.mousePressed(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+      //this._setMouseButton(e);
+    }
+  };
+
   // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
   // positions before reporting touch coordinates
   //
@@ -171,6 +219,36 @@ GameLabP5.prototype.init = function (options) {
       };
     }
   }
+
+  // Modify p5 to ignore out-of-bounds positions before setting mouseIsPressed
+  // and isMousePressed
+  window.p5.prototype._onmousedown = function (e) {
+    if (!this._curElement) {
+      return;
+    }
+    if (!getMousePos(this._curElement.elt, e)) {
+      // Not in-bounds, return and ignore:
+      return;
+    }
+    var context = this._isGlobal ? window : this;
+    var executeDefault;
+    this._setProperty('isMousePressed', true);
+    this._setProperty('mouseIsPressed', true);
+    this._setMouseButton(e);
+    this._updateNextMouseCoords(e);
+    this._updateNextTouchCoords(e);
+    if (typeof context.mousePressed === 'function') {
+      executeDefault = context.mousePressed(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    } else if (typeof context.touchStarted === 'function') {
+      executeDefault = context.touchStarted(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    }
+  };
 
   // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
   // positions before reporting mouse coordinates
@@ -241,7 +319,7 @@ GameLabP5.prototype.init = function (options) {
   };
 
   window.p5.prototype.mousePressedOver = function (sprite) {
-    return this.mouseIsPressed && this.mouseIsOver(sprite);
+    return (this.mouseIsPressed || this.touchIsDown) && this.mouseIsOver(sprite);
   };
 
   var styleEmpty = 'rgba(0,0,0,0)';
@@ -776,6 +854,7 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
     { instance: GameLabWorld },
     {
       instance: this.p5.Sprite,
+      ensureIdenticalMarshalInstances: true,
       methodOpts: {
         nativeCallsBackInterpreter: true
       }
@@ -898,23 +977,38 @@ GameLabP5.prototype.afterSetupComplete = function () {
  * animation, loading it onto the p5 object for use by the setAnimation method
  * later.
  * @param {AnimationList} animationList
+ *
+ * @return {Promise} promise that resolves when all animations are loaded
  */
 GameLabP5.prototype.preloadAnimations = function (animationList) {
   // Preload project animations:
   this.p5.projectAnimations = {};
-  animationList.orderedKeys.forEach(key => {
+  return Promise.all(animationList.orderedKeys.map(key => {
     const props = animationList.propsByKey[key];
     const frameCount = allAnimationsSingleFrameSelector(getStore().getState()) ? 1 : props.frameCount;
-    const image = this.p5.loadImage(props.dataURI, () => {
-      const spriteSheet = this.p5.loadSpriteSheet(
-          image,
-          props.frameSize.x,
-          props.frameSize.y,
-          frameCount
-      );
-      this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
-      this.p5.projectAnimations[props.name].looping = props.looping;
-      this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
+    return new Promise(resolve => {
+      const image = this.p5.loadImage(props.dataURI, () => {
+        const spriteSheet = this.p5.loadSpriteSheet(
+            image,
+            props.frameSize.x,
+            props.frameSize.y,
+            frameCount
+        );
+        this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
+        this.p5.projectAnimations[props.name].looping = props.looping;
+        this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
+        resolve();
+      });
     });
-  });
+  }));
+};
+
+/**
+ * Reset just the world object without reloading the rest of p5
+ */
+GameLabP5.prototype.resetWorld = function () {
+  if (!this.p5) {
+    return;
+  }
+  this.gameLabWorld = new GameLabWorld(this.p5);
 };

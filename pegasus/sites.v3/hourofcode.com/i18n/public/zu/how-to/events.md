@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Mema abokusasaza/abezindaba. isb. iziteshi zezindaba zendawo, amaphephandaba, ababhala ngemfundo/ubuchwepheshe. Bheka i [khithi yabezindaba](<%= resolve_url('/promote/press-kit') %>) ukuze uthole usizo.
 
 ## 2. During your event
@@ -39,7 +39,7 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 ** Umcimbi:** Ukuqala kweViki leMfundiso yeKhompyutha Sayensi isikole sonke
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Isikhathi:** ngesikhathi selanga lesikole. Umcimbi wasekuseni uyathandeka. Cishe ihora elilodwa.
 

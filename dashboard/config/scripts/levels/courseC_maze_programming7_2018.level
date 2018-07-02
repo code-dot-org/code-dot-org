@@ -1,0 +1,177 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2018-04-11T16:43:47.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,2,1,1,4,0,0],[0,0,0,4,1,1,0,0],[0,0,0,0,4,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,3,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "start_direction": "1",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "instructions": "**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others.",
+    "ideal": "13",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use the \\\"Step\\\" button to go through block by block and look for errors.\",\"hint_id\":\"courseC_maze_programming7_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c38b1ee74ef68dd1a5ce2efb5d1c1f46/courseC_maze_programming7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper.\",\"hint_id\":\"courseC_maze_programming7_b\",\"hint_type\":\"general\",\"hint_path\":\"[[2,1],[4,1],[4,2],[5,2],[5,5],[4,5]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/257e59216628d26981bd80dfe2c40d2e/courseC_maze_programming7.mp3\"}]",
+    "markdown_instructions": "*\"It's time to get angry!\"*\r\n\r\n**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others.",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming7_1\",\r\n  \"callout_text\": \"This is your first challenge puzzle! These are meant to be hard and may take several tries.\",\r\n  \"element_id\": \"#prompt\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"courseC_maze_programming7_2\",\r\n  \"callout_text\": \"These blocks are made of stone and can't be thrown away.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 50\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "tts_instructions_override": "Challenge: This code has a lot of bugs. You'll need to remove some blocks and add others.",
+    "tts_markdown_instructions_override": "It's time to get angry!\r\nChallenge: This code has a lot of bugs. You'll need to remove some blocks and add others.",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 5887,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-06 03:41:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-28 22:32:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-02 20:37:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-17 23:08:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward" deletable="false" id="callMe">
+              <next>
+                <block type="maze_moveForward" deletable="false">
+                  <next>
+                    <block type="maze_turn" deletable="false">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <next>
+                                    <block type="maze_moveForward" deletable="false">
+                                      <next>
+                                        <block type="maze_turn" deletable="false">
+                                          <title name="DIR">turnRight</title>
+                                          <next>
+                                            <block type="maze_moveForward" deletable="false">
+                                              <next>
+                                                <block type="maze_moveForward">
+                                                  <next>
+                                                    <block type="maze_moveForward">
+                                                      <next>
+                                                        <block type="maze_moveForward"/>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveForward">
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnRight</title>
+                                      <next>
+                                        <block type="maze_moveForward">
+                                          <next>
+                                            <block type="maze_moveForward">
+                                              <next>
+                                                <block type="maze_moveForward">
+                                                  <next>
+                                                    <block type="maze_turn">
+                                                      <title name="DIR">turnRight</title>
+                                                      <next>
+                                                        <block type="maze_moveForward"/>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

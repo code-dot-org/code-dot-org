@@ -5,43 +5,43 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### ذیل میں کمپیوٹر سائنس ایجوکیشن ویک کی او-پڈ معاونت کا ایک سیمپل دیا گیا ہے جو کہ اسٹیٹ، لوکل لیجسلیٹرز، بزنس لیڈرز وغیرہ کے استعمال میں آ سکتا ہے۔
+### ذیل میں کمپیوٹر سائنس ایجوکیشن ویک کی او-پڈ معاونت کا ایک سیمپل دیا گیا ہے جو کہ اسٹیٹ، لوکل لیجسلیٹرز، بزنس لیڈرز وغیرہ کے استعمال میں آ سکتا ہے۔.
 
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
+Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
 
-**Title: Computing…Where the Jobs Are**
+**عنوان: کمپیوٹنگ... کہاں ملازمت ہیں**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**[NAME] اور ناظرین کے ساتھ [کنسرڈر CO-آورٹرنگ، سپرنٹنڈنٹ یا بزنس لیڈر]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+کمپیوٹرز ہر جگہ ہیں. وہ ہماری جیب میں ہیں. وہ ہماری دیواروں پر ہیں. وہ ہماری گاڑیوں میں ہیں. یہ ہمارے بنیادی ڈھانچے کا ایک اہم حصہ ہے، ٹریفک لائٹس سے ہمارے مالیاتی بازاروں کی اندرونی کاموں میں بجلی کی گرڈ سے. اور ان تمام کمپیوٹرز میں ایک چیز عام ہے. وہ سافٹ ویئر پر انحصار کرتے ہیں کہ وہ کیا کریں.
 
-But who exactly is going to write this software?
+لیکن یہ سافٹ ویئر کس طرح لکھ رہا ہے?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+اس بات پر غور کیا جارہا ہے کہ ہماری دنیا کو ٹیکنالوجی کی طرف سے تبدیل کیا جاسکتا ہے، آپ کو آج کل K-12 تعلیم میں کمپیوٹر سائنس کا مطالعہ کرنے کی طلب کی توقع ہوسکتی ہے. تم غلط ہو. حقیقت میں، کم طلباء کمپیوٹر سائنس کا مطالعہ کر رہے ہیں، اور ایک اسکول پہلے ہی ایک کم از کم اس اسکول میں پڑھ رہے ہیں.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+ایک وقت جب ہنر مند پروگرامرز کے لئے طلب کبھی زیادہ نہیں ہوا، ہم کم کمپیوٹر سائنسدانوں کو باہر نکال رہے ہیں. یہاں تک کہ اعلی بےروزگاری کے اس وقت میں، ہزاروں کی ملازمتیں، یہاں بہت سے لوگ یہاں ** [INSERT STATE / CITY] </ strong> میں، صحیح مہارت سیٹ کے ساتھ کافی افراد کے فقدان کے لئے unfilled جا رہے ہیں.</p> 
 
-Why is this? And how can we address it?
+یہ کیوں ہے؟ اور ہم اسے کس طرح ایڈریس کرسکتے ہیں?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+مسئلہ ہمارے وسط اور ہائی سکولوں میں شروع ہوتا ہے. ہمارے دس اسکولوں میں سے نیں کمپیوٹر پروگرامنگ کلاس پیش نہیں کرتے ہیں. گزشتہ سال ** [SCHOOL DISTRICT] </ strong> میں، صرف ** [NUMBER] </ strong> طالب علموں نے کالج سطح کے اعلی درجے کی پلیٹ فارم (اے پی) کمپیوٹر سائنس امتحان لیا، صرف <مضبوط> [٪] </ مضبوط> تمام طالب علموں نے جو ہمارے ریاست میں اے پی پی لیا. ہم اپنے طالب علموں کی تیاری یا حوصلہ افزائی کرنے کے لئے کافی نہیں کر رہے ہیں تاکہ ان اعلی اداکاری، اہم کیریئرز کی پیروی کریں.</p> 
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+اس ملک میں تقریبا تمام بڑے کمپیوٹنگ بدعات کا انعقاد کیا گیا تھا، لیکن ہم اس قیادت کو کھونے کے خطرے میں ہیں اگر ہم ابھی کچھ نہیں کرتے.
 
-We need to make some changes.
+ہمیں کچھ تبدیلیاں کرنے کی ضرورت ہے.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[اس کے اختیارات کے لئے اختیاری اختیارات]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+ایک مثبت تبدیلی سخت کمپیوٹر سائنس کے کورس کو ہائی سکول ریاضی یا سائنس گریجویشن کی ضروریات کو پورا کرنے کے لئے کی اجازت دی جائے گی. ** [INSERT STATE] </ strong> میں، کمپیوٹر سائنس کورسز انتخابی ہیں. تعلیمی مطالبات کو دیکھتے ہوئے، طالب علموں کو الیکٹرانک کمپیوٹر سائنس کورسز لینے کے قابل نہیں ہوسکتی ہے. اور اس تبدیلی کو ایک بڑا اثر پڑے گا. ریاستوں میں جہاں کمپیوٹر سائنس کورس گریجویشن کی ضروریات کی طرف اشارہ کرتے ہیں، کورسوں میں پچاس فیصد بڑی ہیں، ان کے مقابلے میں غیر معمولی اقلیتوں کی طرف سے شرکت کی بہت زیادہ شرحوں کے ساتھ، کمپیوٹر سائنس کے انتخاب کے طور پر.</p> 
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+ہمیں ایک نوجوان عمر کے طالب علموں کے ساتھ بھی کام کرنا چاہئے کہ وہ اپنی دلچسپی کو کمپیوٹر سائنس اور کوڈنگ میں چراغ ڈالیں. ہمارے بچوں کو صرف یہ نہیں جاننا چاہئے کہ کس طرح ایپس استعمال کرتے ہیں اور ویڈیو گیمز کھیلتے ہیں - انہیں پتہ ہونا چاہئے کہ انہیں کس طرح بنانا ہے. بچوں کو دوسری گریڈ کے طور پر جلد کوڈنگ کی بنیادی معلومات سیکھ سکتے ہیں.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+ہمیں زیادہ کمپیوٹر سائنس اساتذہ کو بھرنے اور ان کے میدان میں پیشہ ورانہ ترقی کی حوصلہ افزائی کرنے کی ضرورت ہے. آج بہت سے آن لائن وسائل موجود ہیں جو اساتذہ کے لئے تازہ ترین ٹیکنالوجی کے ساتھ اساتذہ تک رسائی اور تاریخ تک رسائی میں مدد کرسکتے ہیں.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+لیبر کے اعداد و شمار کے بیورو کے مطابق، 2020 تک، STEM شعبوں میں 9.2 ملین ملازمتیں ہوں گے. ان ملازمتوں میں سے نصف - 4.6 ملین - کمپیوٹنگ یا انفارمیشن ٹیکنالوجی میں ہوں گے. اور کمپیوٹر سائنس 21 ویں صدی کے لئے تیزی سے بنیاد پرست علم ہے. کون سے ملازمتوں کو پورا کرنے کے لئے ہمارے بچوں کو موقع فراہم نہیں کیا جائے گا، یہ کون سا کام پورا کرے گا?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+اس ہفتے، <٪ = campaign_date ('full')٪>، کمپیوٹر سائنس تعلیم ہفتہ ہے. ** [STATE] </ strong> بھر میں اسکولوں میں، ہمارے طالب علموں کو قومی گھنٹہ کوڈ میں حصہ لیا جائے گا، کمپیوٹر سائنس کے موضوع کو مسترد کرتے ہوئے امید ہے کہ ان کی بھوکیں آگے بڑھیں اور مزید جانیں. میں ان میں شمولیت اختیار کروں گا، اور میں آپ کو بھی شامل ہونے کے لئے دعوت دیتا ہوں. ہر کسی کو کس طرح کوڈ سیکھنا چاہئے. مزید جاننے کے لئے https://hourofcode.com/<٪=country٪> پر جائیں اور شروع کریں. اور ** [STATE] </ strong> میں زیادہ سے زیادہ اسکولوں کو کمپیوٹر سائنس لانے کیلئے ہماری کوششوں کی حمایت کرتے ہیں.</p> 
 
 <%= view :signup_button %>

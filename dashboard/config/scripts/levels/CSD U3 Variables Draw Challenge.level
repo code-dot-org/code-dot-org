@@ -22,7 +22,6 @@
       "noFill": null,
       "stroke": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Challenge: Draw an Image\r\n\r\n_Check with your teacher before tackling this challenge level._\r\n\r\nUsing variables, draw an image where many of the items rely on a common variable for size or placement. For example, draw a face with variables controlling the size and/or placement of both eyes, ears, and nostrils. Once you have your drawing completed, try changing the values of your variables to make sure that the whole image changes together.\r\n",

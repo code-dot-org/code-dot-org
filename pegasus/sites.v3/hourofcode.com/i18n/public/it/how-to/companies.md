@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Motiva studenti e volontari per l'Ora del Codice
 
-Code.org offre (solo per gli USA) ai dipendenti delle aziende e organizzazioni l'opportunità di [mettersi in contatto](<%= resolve_url('https://code.org/volunteer') %>) con classi locali svolgendo l'Ora del Codice per condividere la loro esperienza in ambito tecnologico ed ispirare gli studenti a studiare informatica.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Iscriviti ](<%= resolve_url('https://code.org/volunteer') %>)per diventare volontario (solo per gli USA). **Molte informazioni utili anche nel sito italiano <a href="https://www.programmailfuturo.it/come/ora-del-codice/introduzione" target="_blank">Programma il Futuro</a>**.
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - Per maggiori informazioni su come mettere in comunicazione i tuoi dipendenti con le classi, usa la nostra [guida per i partner aziendali](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>)
 
 ## Altri modi in cui le aziende possono supportare l'Ora del Codice
 
-- Chiedendo al tuo Amministratore Delegato di [inviare una email a tutta l'azienda](<%= resolve_url('/promote/resources#sample-emails') %>) sottolineando l'importanza dell'informatica ed incoraggiando i dipendenti a spargere la voce. 
+- Chiedendo al tuo Amministratore Delegato di [inviare una email a tutta l'azienda](<%= resolve_url('/promote/resources#sample-emails') %>) sottolineando l'importanza dell'informatica ed incoraggiando i dipendenti a spargere la voce.
 - Organizzando un'Happy Hour dedicata all'Ora del Codice con colleghi per provare le [attività disponibili](https://programmailfuturo.it/come/ora-del-codice/introduzione).
 - Ospitando un evento dell'Ora del Codice per una classe locale di studenti o partner non-profit per poter fare un'ora di codice negli uffici della Vostra azienda. Guarda la guida sottostante per avere informazioni su come organizzare un evento.
 
@@ -25,7 +25,7 @@ Code.org offre (solo per gli USA) ai dipendenti delle aziende e organizzazioni l
 ## 1. Promuovi la tua Ora del Codice
 
 - Promuovi il tuo evento dell'[Ora del Codice](<%= resolve_url('/promote') %>) ed incoraggia altri ad organizzarlo.
-- Incoraggia gli esperti informatici della tua azienda a far visita ad una scuola della tua città per aiutare a svolgere un'Ora del Codice e stimolare gli studenti a studiare informatica. Possono [iscriversi qui](<%= resolve_url('https://code.org/volunteer/engineer') %>) per essere messi in comunicazione con una classe (solo per gli USA).
+- Incoraggia gli esperti informatici della tua azienda a far visita ad una scuola della tua città per aiutare a svolgere un'Ora del Codice e stimolare gli studenti a studiare informatica. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Guarda questo video introduttivo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -65,11 +65,11 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 **Idee per introdurre la tua Ora del Codice:**
 
-- Spiega in che modo la tecnologia può incidere sulle nostre vite, con esempi che possano interessare sia ai ragazzi che alle ragazze - parla ad esempio di come la tecnologia salva vite umane, aiuta le persone, le mette in contatto. 
+- Spiega in che modo la tecnologia può incidere sulle nostre vite, con esempi che possano interessare sia ai ragazzi che alle ragazze - parla ad esempio di come la tecnologia salva vite umane, aiuta le persone, le mette in contatto.
 - Se fai parte di una azienda tecnologica, mostra esempi divertenti e innovativi di prodotti su cui la tua azienda sta lavorando.
 - Se, invece, la tua non è una azienda tecnologica, prova a raccontare come la tua azienda utilizza la tecnologia per risolvere dei problemi e raggiungere i suoi obiettivi.
 - Invita esperti della tua azienda a parlare del perché hanno deciso di studiare informatica e dei progetti su cui stanno lavorando.
-- [Qui](<%= resolve_url('https://code.org/girls') %>) puoi trovare dei suggerimenti per far interessare le ragazze all'informatica.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ## 6. Scrivi del codice!
 
@@ -105,7 +105,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 ## 7) Festeggia
 
-- [Stampa gli attestati](<%= resolve_url('https://code.org/certificates') %>) originali in inglese per i tuoi studenti oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - Stampa gli adesivi ["Ho completato un'Ora del Codice!"](<%= resolve_url('/promote/resources#stickers') %>)
 - [Ordina T-shirt personalizzate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per i tuoi dipendenti (per gli USA).
 - Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!

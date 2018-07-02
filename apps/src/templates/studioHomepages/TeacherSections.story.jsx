@@ -9,7 +9,7 @@ import teacherSections, {
 import TeacherSections from './TeacherSections';
 
 export default storybook => storybook
-  .storiesOf('TeacherSections', module)
+  .storiesOf('Homepages/Teachers/TeacherSections', module)
   .addStoryTable(storyTable);
 
 const sections = [
@@ -101,5 +101,5 @@ function withFakeServer({courses = [], sections = []} = {}) {
   ];
   server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
   server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
-  server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
+  server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse([]));
 }

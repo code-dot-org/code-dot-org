@@ -1,0 +1,68 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:09.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": {
+        "params": [
+          "\"message\""
+        ],
+        "paletteParams": [
+          "\"message\""
+        ]
+      },
+      "declareNoAssign_x": null,
+      "assign_x": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "start_blocks": "var score;\r\nscore = 0;\r\nconsole.log(\"The value of score is:\");\r\nconsole.log(score);",
+    "markdown_instructions": "# Variables Toolbox\r\nLet's get started with the most basic example of using and controlling the computer's memory with variables. The toolbox has a couple of new commands for working with variables.\r\n\r\nWe've given you some starter code that does three things:\r\n<table>\r\n<tr>\r\n<td>\r\n<ol>\r\n<li>**Creates** a variable called `score`</li>\r\n<li> **Assigns** the value *0* to `score`</li>\r\n<li>**Displays** the value of the `score` to the console (see hint below about quotes) </li>\r\n</ol> \r\n</td>\r\n<td>\r\n<img src=\"https://images.code.org/056a735a96a603e23768d66f0de32961-image-1445462590619.png\" style=\"width: 350px\">\r\n</td>\r\n</tr>\r\n</table>\r\n\r\n\r\n# Do This:\r\nYou're going to add another variable, assign it a value, and then display it to the console.\r\nUse the starting code as a model for what you need to create now.\r\n<img src=\"https://images.code.org/72744382133081947777e67a5988d4ea-image-1445462803999.gif\" style=\"float: right; width: 350px\">\r\n* **Create a new variable** by dragging out the `var` block.\r\n* **Change the name of the variable** from the default `x` to `lives` (see animation at right).\r\n* **Set the value of `lives` to be 3**.\r\n* **Add** `console.log` **messages** to show the value of `lives`.\r\n\r\nThe output in the debug console should look like this:\r\n \r\n  <img src=\"https://images.code.org/6405a3ed95ca3125ea1b2c9ffbdffa94-image-1445349849482.png\" style=\"border: solid 1px gray\">\r\n<details>\r\n  <summary>  Debugging Tip: Displaying values of variables [click to expand]</summary>\r\n   **NOTE: To print the value of a variable you *should not* use quotes.**\r\n   Notice the difference between these two statements: <br>\r\n   `console.log(\"score\")`<br>\r\n   `console.log(score)`<br>\r\n   It's subtle but important:\r\n   <br>\r\n   <li>When `console.log` sees quotation marks it thinks you want to print out the literal characters in the quotes.\r\n   <li>When `console.log` sees something **without quotation marks** it assumes you're trying to print a variable, and it goes to retrieve its value and displays that. </li>\r\n \r\n</details>",
+    "never_autoplay_video": "true",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "instructions": "Add another variable called \"lives\" and set the value to 3. Print the value of the variable to the console. (Click to see full instructions)",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "video_key": "csp_applab_variables_1",
+    "encrypted_examples": "V2c8ARZV5yEDk0wj1lBPB5J70Ay70xQ6TrCgcHZydJYasLC1VtRgoEIB8And\nVAOI\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 6749,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

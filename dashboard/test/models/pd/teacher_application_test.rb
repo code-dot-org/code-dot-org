@@ -370,6 +370,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
   test 'updating program_registration_json updates the program registration' do
     application = create :pd_teacher_application
     application.stubs(:accepted_program).returns(stub(teachercon?: true))
+    application.stubs(:school_district)
     mock_pegasus_program_registration_query application.id
     fake_registration = {key: 'value'}
     valid_registration_json = fake_registration.to_json

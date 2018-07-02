@@ -1,23 +1,28 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {
+  Row,
+  Col,
   Button,
   SplitButton,
   MenuItem,
   FormControl,
   InputGroup
 } from 'react-bootstrap';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
-import RegionalPartnerDropdown from './regional_partner_dropdown';
+import { RegionalPartnerDropdown } from './regional_partner_dropdown';
+import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
+import ConfirmationDialog from '../workshop_dashboard/components/confirmation_dialog';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
   ApplicationFinalStatuses,
-  UnmatchedFilter,
-  UnmatchedLabel
+  UNMATCHED_PARTNER_VALUE,
+  UNMATCHED_PARTNER_LABEL
 } from './constants';
 
 const styles = {
@@ -27,8 +32,16 @@ const styles = {
   statusSelect: {
     marginRight: '5px'
   },
+  editMenuContainer: {
+    display: 'inline-block' // fit contents
+  },
   editMenu: {
-    display: 'flex',
+    display: 'flex'
+  },
+  // React-Bootstrap components don't play well inside a flex box,
+  // so this is required to get the contained split button to stay together.
+  flexSplitButtonContainer: {
+    flex: '0 0 auto'
   },
   detailViewHeader: {
     marginLeft: 'auto'
@@ -44,6 +57,10 @@ const styles = {
     maxWidth: 200,
     marginRight: 5,
     marginLeft: 5,
+  },
+  lockedStatus: {
+    fontFamily: '"Gotham 7r"',
+    marginTop: 10
   }
 };
 
@@ -55,7 +72,7 @@ export class DetailViewContents extends React.Component {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       course: PropTypes.oneOf(['csf', 'csd', 'csp']),
-      course_name: PropTypes.string,
+      course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
       locked: PropTypes.bool,
       regional_partner_id: PropTypes.number,
@@ -72,13 +89,22 @@ export class DetailViewContents extends React.Component {
       pd_workshop_id: PropTypes.number,
       pd_workshop_name: PropTypes.string,
       pd_workshop_url: PropTypes.string,
+      fit_workshop_id: PropTypes.number,
       fit_workshop_name: PropTypes.string,
       fit_workshop_url: PropTypes.string,
-      application_guid: PropTypes.string
+      application_guid: PropTypes.string,
+      registered_teachercon: PropTypes.bool,
+      registered_fit_weekend: PropTypes.bool,
+      attending_teachercon: PropTypes.bool
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
+    regionalPartnerGroup: PropTypes.number,
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string
+    }))
   };
 
   static contextTypes = {
@@ -98,9 +124,10 @@ export class DetailViewContents extends React.Component {
       locked: this.props.applicationData.locked,
       notes: this.props.applicationData.notes,
       response_scores: this.props.applicationData.response_scores || {},
-      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
-      regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter,
-      pd_workshop_id: this.props.applicationData.pd_workshop_id
+      regional_partner_name: this.props.applicationData.regional_partner_name || UNMATCHED_PARTNER_LABEL,
+      regional_partner_value: this.props.applicationData.regional_partner_id || UNMATCHED_PARTNER_VALUE,
+      pd_workshop_id: this.props.applicationData.pd_workshop_id,
+      fit_workshop_id: this.props.applicationData.fit_workshop_id
     };
   }
 
@@ -143,9 +170,15 @@ export class DetailViewContents extends React.Component {
     });
   };
 
-  handleSelectedWorkshopChange = (selection) => {
+  handleSummerWorkshopChange = (selection) => {
     this.setState({
       pd_workshop_id: selection ? selection.value : null
+    });
+  };
+
+  handleFitWorkshopChange = (selection) => {
+    this.setState({
+      fit_workshop_id: selection ? selection.value : null
     });
   };
 
@@ -156,9 +189,9 @@ export class DetailViewContents extends React.Component {
   };
 
   handleRegionalPartnerChange = (selected) => {
-    const regional_partner_filter = selected ? selected.value : UnmatchedFilter;
-    const regional_partner_name = selected ? selected.label : UnmatchedLabel;
-    this.setState({ regional_partner_name, regional_partner_filter});
+    const regional_partner_value = selected ? selected.value : UNMATCHED_PARTNER_VALUE;
+    const regional_partner_name = selected ? selected.label : UNMATCHED_PARTNER_LABEL;
+    this.setState({ regional_partner_name, regional_partner_value});
   };
 
   handleSaveClick = () => {
@@ -166,11 +199,12 @@ export class DetailViewContents extends React.Component {
       'status',
       'locked',
       'notes',
-      'regional_partner_filter',
+      'regional_partner_value',
+      'pd_workshop_id'
     ];
 
-    if (this.props.applicationData.application_type === 'Teacher') {
-      stateValues.push('pd_workshop_id');
+    if (this.props.applicationData.application_type === 'Facilitator') {
+      stateValues.push('fit_workshop_id');
     }
 
     const data = {
@@ -196,6 +230,69 @@ export class DetailViewContents extends React.Component {
     });
   };
 
+  handleDeleteApplicationClick = () => {
+    this.setState({showDeleteApplicationConfirmation: true});
+  };
+
+  handleDeleteApplicationCancel = () => {
+    this.setState({showDeleteApplicationConfirmation: false});
+  };
+
+  handleDeleteApplicationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/api/v1/pd/applications/${this.props.applicationId}`
+    }).done(() => {
+      this.setState({deleted: true, showDeleteApplicationConfirmation: false});
+    }).fail(() => {
+      this.setState({deleted: false, showDeleteApplicationConfirmation: false});
+    });
+  };
+
+  handleDeleteTeacherconRegistrationClick = () => {
+    this.setState({showDeleteTeacherconRegistrationConfirmation: true});
+  };
+
+  handleDeleteTeacherconRegistrationCancel = () => {
+    this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+  };
+
+  handleDeleteTeacherconRegistrationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/pd/teachercon_registration/${this.props.applicationData.application_guid}`
+    }).done(() => {
+      this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+      if (this.props.onUpdate) {
+        this.props.onUpdate({ ...this.props.applicationData, registered_teachercon: false });
+      }
+    }).fail(() => {
+      this.setState({showDeleteTeacherconRegistrationConfirmation: false});
+    });
+  };
+
+  handleDeleteFitWeekendRegistrationClick = () => {
+    this.setState({showDeleteFitWeekendRegistrationConfirmation: true});
+  };
+
+  handleDeleteFitWeekendRegistrationCancel = () => {
+    this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
+  };
+
+  handleDeleteFitWeekendRegistrationConfirmed = () => {
+    $.ajax({
+      method: "DELETE",
+      url: `/pd/fit_weekend_registration/${this.props.applicationData.application_guid}`
+    }).done(() => {
+      this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
+      if (this.props.onUpdate) {
+        this.props.onUpdate({ ...this.props.applicationData, registered_fit_weekend: false });
+      }
+    }).fail(() => {
+      this.setState({showDeleteFitWeekendRegistrationConfirmation: false});
+    });
+  };
+
   renderLockButton = () => {
     const statusIsLockable = ApplicationFinalStatuses.includes(this.state.status);
     return (
@@ -210,12 +307,14 @@ export class DetailViewContents extends React.Component {
   };
 
   renderRegionalPartnerAnswer = () => {
+
     if (this.state.editing && this.props.isWorkshopAdmin) {
       return (
         <RegionalPartnerDropdown
           onChange={this.handleRegionalPartnerChange}
-          regionalPartnerFilter={this.state.regional_partner_filter}
-          additionalOptions={[{label: UnmatchedLabel, value: UnmatchedFilter}]}
+          regionalPartnerFilter={{value: this.state.regional_partner_value, label: this.state.regional_partner_name}}
+          regionalPartners={this.props.regionalPartners}
+          additionalOptions={[{label: UNMATCHED_PARTNER_LABEL, value: UNMATCHED_PARTNER_VALUE}]}
         />
       );
     }
@@ -243,18 +342,74 @@ export class DetailViewContents extends React.Component {
       )];
     } else if (this.props.isWorkshopAdmin) {
       return (
-        <SplitButton
-          id="admin-edit"
-          pullRight
-          title="Edit"
-          onClick={this.handleEditClick}
-        >
-          <MenuItem
-            onSelect={this.handleAdminEditClick}
+        <div style={styles.flexSplitButtonContainer}>
+          <SplitButton
+            id="admin-edit"
+            pullRight
+            title="Edit"
+            onClick={this.handleEditClick}
           >
-            (Admin) Edit Form Data
-          </MenuItem>
-        </SplitButton>
+            <MenuItem
+              onSelect={this.handleAdminEditClick}
+            >
+              (Admin) Edit Form Data
+            </MenuItem>
+            <MenuItem
+              style={styles.delete}
+              onSelect={this.handleDeleteApplicationClick}
+            >
+              Delete Application
+            </MenuItem>
+            <ConfirmationDialog
+              show={this.state.showDeleteApplicationConfirmation}
+              onOk={this.handleDeleteApplicationConfirmed}
+              onCancel={this.handleDeleteApplicationCancel}
+              headerText="Delete Application"
+              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+              okText="Delete"
+            />
+            {
+              this.props.applicationData.registered_teachercon &&
+              <MenuItem
+                style={styles.delete}
+                onSelect={this.handleDeleteTeacherconRegistrationClick}
+              >
+                Delete Teachercon Registration
+              </MenuItem>
+            }
+            {
+              this.props.applicationData.registered_teachercon &&
+              <ConfirmationDialog
+                show={this.state.showDeleteTeacherconRegistrationConfirmation}
+                onOk={this.handleDeleteTeacherconRegistrationConfirmed}
+                onCancel={this.handleDeleteTeacherconRegistrationCancel}
+                headerText="Delete Teachercon Registration"
+                bodyText="Are you sure you want to delete this Teachercon registration? You will not be able to undo this."
+                okText="Delete"
+              />
+            }
+            {
+              this.props.applicationData.registered_fit_weekend &&
+              <MenuItem
+                style={styles.delete}
+                onSelect={this.handleDeleteFitWeekendRegistrationClick}
+              >
+                Delete FiT Weekend Registration
+              </MenuItem>
+            }
+            {
+              this.props.applicationData.registered_fit_weekend &&
+              <ConfirmationDialog
+                show={this.state.showDeleteFitWeekendRegistrationConfirmation}
+                onOk={this.handleDeleteFitWeekendRegistrationConfirmed}
+                onCancel={this.handleDeleteFitWeekendRegistrationCancel}
+                headerText="Delete FiT Weekend Registration"
+                bodyText="Are you sure you want to delete this FiT Weekend registration? You will not be able to undo this."
+                okText="Delete"
+              />
+            }
+          </SplitButton>
+        </div>
       );
     } else {
       return (
@@ -298,15 +453,35 @@ export class DetailViewContents extends React.Component {
     } else {
       // Render just the select; otherwise, rendering a single element in an
       // InputGroup makes it look funky
-      return selectControl;
+      return (
+        <div style={styles.statusSelectGroup}>
+          {selectControl}
+        </div>
+      );
     }
   };
 
-  renderEditMenu = () => {
+  showLocked = () => (
+    this.props.isWorkshopAdmin
+    || this.props.viewType === 'facilitator'
+    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
+  );
+
+  renderEditMenu = (textAlign='left') => {
     return (
-      <div style={styles.editMenu}>
-        {this.renderStatusSelect()}
-        {this.renderEditButtons()}
+      <div style={styles.editMenuContainer}>
+        <div style={styles.editMenu}>
+          {this.renderStatusSelect()}
+          {this.renderEditButtons()}
+        </div>
+        {
+          this.showLocked() &&
+          <div style={{...styles.lockedStatus, textAlign}}>
+            <FontAwesome icon={this.state.locked ? 'lock' : 'unlock'}/>&nbsp;
+            Application is&nbsp;
+            {this.state.locked ? 'Locked' : 'Unlocked'}
+          </div>
+        }
       </div>
     );
   };
@@ -341,10 +516,44 @@ export class DetailViewContents extends React.Component {
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
-          {this.renderEditMenu()}
+          {this.renderEditMenu('right')}
         </div>
       </div>
     );
+  };
+
+  renderRegistrationLinks = () => {
+    const registrationLinks = [];
+
+    const buildRegistrationLink = (urlKey) => (
+      <a href={`/pd/${urlKey}/${this.props.applicationData.application_guid}`}>
+        {`${window.location.host}/pd/${urlKey}/${this.props.applicationData.application_guid}`}
+      </a>
+    );
+
+    if (this.props.isWorkshopAdmin && this.props.applicationData.status === 'accepted' && this.props.applicationData.locked) {
+      if (this.props.applicationData.attending_teachercon) {
+        registrationLinks.push((
+          <DetailViewResponse
+            question="TeacherCon Registration Link"
+            layout="lineItem"
+            answer={buildRegistrationLink('teachercon_registration')}
+          />
+        ));
+      }
+
+      if (this.props.applicationData.fit_workshop_id) {
+        registrationLinks.push((
+          <DetailViewResponse
+            question="FiT Weekend Registration Link"
+            layout="lineItem"
+            answer={buildRegistrationLink('fit_weekend_registration')}
+          />
+        ));
+      }
+    }
+
+    return registrationLinks;
   };
 
   renderRegionalPartnerPanel = () => {
@@ -389,62 +598,38 @@ export class DetailViewContents extends React.Component {
         answer={this.props.applicationData.district_name}
         layout="lineItem"
       />
-      {this.props.applicationData.pd_workshop_name &&
-        this.renderAssignedSummerWorkshop()
-      }
+
+      <DetailViewWorkshopAssignmentResponse
+        question="Summer Workshop"
+        courseName={this.props.applicationData.course_name}
+        subjectType="summer"
+        assignedWorkshop={{
+          id: this.state.pd_workshop_id,
+          name: this.props.applicationData.pd_workshop_name,
+          url: this.props.applicationData.pd_workshop_url
+        }}
+        editing={!!this.state.editing}
+        onChange={this.handleSummerWorkshopChange}
+      />
+
       {this.props.applicationData.application_type === 'Facilitator' &&
-        this.renderAssignedFitWorkshop()
+        <DetailViewWorkshopAssignmentResponse
+          question="FIT Workshop"
+          courseName={this.props.applicationData.course_name}
+          subjectType="fit"
+          assignedWorkshop={{
+            id: this.state.fit_workshop_id,
+            name: this.props.applicationData.fit_workshop_name,
+            url: this.props.applicationData.fit_workshop_url
+          }}
+          editing={!!(this.state.editing && this.props.isWorkshopAdmin)}
+          onChange={this.handleFitWorkshopChange}
+        />
       }
+      {this.props.isWorkshopAdmin && this.renderRegistrationLinks()}
       {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
     </div>
   );
-
-  renderAssignedSummerWorkshop() {
-    let answer;
-    if (this.props.applicationData.pd_workshop_url) {
-      answer = (
-        <span>
-          {this.props.applicationData.pd_workshop_name} (
-          <a href={this.props.applicationData.pd_workshop_url} target="_blank">
-            see workshop
-          </a>)
-        </span>
-      );
-    } else {
-      answer = "Unassigned";
-    }
-    return (
-      <DetailViewResponse
-        question="Summer Workshop"
-        answer={answer}
-        layout="lineItem"
-      />
-    );
-  }
-
-  renderAssignedFitWorkshop() {
-    let answer;
-    if (this.props.applicationData.fit_workshop_url) {
-      answer = (
-        <span>
-          {this.props.applicationData.fit_workshop_name} (
-          <a href={this.props.applicationData.fit_workshop_url} target="_blank">
-            see workshop
-          </a>)
-        </span>
-      );
-    } else {
-      answer = "Unassigned";
-    }
-
-    return (
-      <DetailViewResponse
-        question="FIT Workshop"
-        answer={answer}
-        layout="lineItem"
-      />
-    );
-  }
 
   renderQuestions = () => {
     return (
@@ -454,9 +639,6 @@ export class DetailViewContents extends React.Component {
         editing={this.state.editing}
         scores={this.state.response_scores}
         handleScoreChange={this.handleScoreChange}
-        courseName={this.props.applicationData.course_name}
-        assignedWorkshopId={this.state.pd_workshop_id}
-        handleSelectedWorkshopChange={this.handleSelectedWorkshopChange}
         applicationGuid={this.props.applicationData.application_guid}
       />
     );
@@ -468,8 +650,8 @@ export class DetailViewContents extends React.Component {
         <h4>
           Notes
         </h4>
-        <div className="row">
-          <div className="col-md-8">
+        <Row>
+          <Col md={8}>
             <FormControl
               id="Notes"
               disabled={!this.state.editing}
@@ -478,14 +660,20 @@ export class DetailViewContents extends React.Component {
               onChange={this.handleNotesChange}
               style={styles.notes}
             />
-          </div>
-        </div>
+          </Col>
+        </Row>
         <br />
       </div>
     );
   };
 
   render() {
+    if (this.state.hasOwnProperty('deleted')) {
+      const message = this.state.deleted ? "This application has been deleted." : "This application could not be deleted.";
+      return (
+        <h4>{message}</h4>
+      );
+    }
     return (
       <div id="detail-view">
         {this.renderHeader()}
@@ -500,6 +688,8 @@ export class DetailViewContents extends React.Component {
 }
 
 export default connect(state => ({
+  regionalPartnerGroup: state.regionalPartnerGroup,
+  regionalPartners: state.regionalPartners,
   canLock: state.permissions.lockApplication,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(DetailViewContents);

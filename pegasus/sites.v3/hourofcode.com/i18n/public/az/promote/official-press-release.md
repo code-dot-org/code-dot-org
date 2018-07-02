@@ -26,15 +26,15 @@ Contact: [**CONTACT INFORMATION**]
 </p>
 
 <p>
-  [<strong>INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:</strong>]<br /> “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+  [<strong>INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:</strong>]<br /> “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. Hər sinifdən 700-dən çox şagird ən azı bir saat Kodunu etdi. Cəmiyyətdən bir çox valideyn və könüllü günə kömək etdi və uşaqları kompüter elmini bu şagirdlərin həyatında nə qədər əhəmiyyətli olduğunu nümayiş etdirdi. "
 </p>
 
 <p>
-  [<strong>SAMPLE STOCK TEXT FOR CONTEXT:</strong>]<br /> Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+  [<strong>SAMPLE STOCK TEXT FOR CONTEXT:</strong>]<br /> Computers are everywhere, but fewer schools teach computer science than 10 years ago. Rənglərin qızları və tələbələri ciddi şəkildə təqdim edilmir. Yaxşı xəbər, biz bunu yaxşılaşdırırıq. Kodun saatı, bütün tələbələrə yüksək keyfiyyətli kompüter biliklərinə giriş imkanı təmin etmək məqsədilə qapısıdır.
 </p>
 
 <p>
-  Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! və "Disney" səhifələrində idi. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+  Dünyada 100 milyondan çox tələbə artıq bir saat Kodunu sınadılar. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! və "Disney" səhifələrində idi. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. 100-dən çox tərəfdaş bu hərəkata dəstək olmaq üçün bir araya gəldi.
 </p>
 
 <p>

@@ -924,7 +924,6 @@ NetSim.prototype.setRouterDataRate_ = function (dataRateBitsPerSecond) {
 
 /**
  * Load audio assets for this app
- * TODO (bbuchanan): Ought to pull this into an audio management module
  * @private
  */
 NetSim.prototype.loadAudio_ = function () {

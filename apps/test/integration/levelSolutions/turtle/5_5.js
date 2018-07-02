@@ -1,5 +1,4 @@
-var constants = require('@cdo/apps/constants.js');
-var TestResults = constants.TestResults;
+import {TestResults} from '@cdo/apps/constants';
 
 module.exports = {
   app: "turtle",

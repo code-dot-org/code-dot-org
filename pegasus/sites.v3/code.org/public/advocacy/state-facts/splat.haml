@@ -167,11 +167,11 @@ theme: pdf
           only
           = format_integer_with_commas(state_info[:ap_native_american_i])
           - if state_info[:ap_native_american_i] == 1
-            exam was taken by Native American or Alaska Native students
+            exam was taken by American Indian or Alaska Native students
           - else
-            exams were taken by Native American or Alaska Native students
+            exams were taken by American Indian or Alaska Native students
         - else
-          no exams were taken by Native American or Alaska Native students;
+          no exams were taken by American Indian or Alaska Native students;
         - if state_info[:ap_native_american_i] != 0
           = precede "(" do
             = state_info[:ap_csa_native_american_i]
@@ -241,6 +241,19 @@ theme: pdf
           - else
             teachers
           prepared to teach computer science in 2016.
+
+      - if state_info[:principals_core_i] != 0
+        %li
+          According to a representative survey from Google/Gallup, school administrators in
+          = state_info[:state_code_s]
+          support expanding computer science education opportunities:
+          = succeed "%" do
+            = state_info[:principals_core_i]
+          of principals surveyed think CS is just as or more important than required core classes.
+          - if state_info[:principals_barrier_s] == "Yes"
+            And their biggest barrier to offering computer science is the lack of funds for hiring and training teachers.
+          - elsif state_info[:principals_barrier_s] == "Other"
+            And one of their biggest barriers to offering computer science is the lack of funds for hiring and training teachers.
 
   .chart-text-group
     %img.chart{src: "/images/charts/learn_teach.png"}
@@ -350,12 +363,6 @@ theme: pdf
   .quote-center
     %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”
     %p — Steve Jobs
-
-  %div
-    %h2.together What can the federal government do to support computer science in grades K-12?
-    Access to computer science courses is a bipartisan issue that can be addressed without adding to the Federal budget. Tell your representatives in Washington, D.C. that you support funding to expand access to this foundational 21st-century subject in your community that will America remain secure and globally competitive. Over 100,000 Americans, CEOs of the largest companies in every major industry, 29 governors, and major K-12 education leaders have all joined forces to call on Congress to support this idea. You can see their open letter (and add your name in support) at
-    = succeed "." do
-      %a{href: "www.change.org/computerscience"} www.change.org/computerscience
 
   %div
     %p

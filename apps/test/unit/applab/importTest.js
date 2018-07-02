@@ -358,6 +358,8 @@ describe("The applab/import module", () => {
       });
 
       it('will import the specified screens', () => {
+        var [,, success] = assetsApi.copyAssets.lastCall.args;
+        success();
         expect(designMode.getAllScreenIds()).to.deep.equal(['screen1', 'screen2']);
         expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
         expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be.null;

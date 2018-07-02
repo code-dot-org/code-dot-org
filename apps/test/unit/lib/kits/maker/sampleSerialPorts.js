@@ -25,6 +25,27 @@ export const CIRCUIT_PLAYGROUND_PORTS = [
     productId: "0x8011"
   }
 ];
+export const CIRCUIT_PLAYGROUND_EXPRESS_PORTS = [
+  {
+    comName: "COM5",
+    manufacturer: "Adafruit",
+    serialNumber: undefined,
+    pnpId: "usb-Adafruit_Circuit_Playground_Express-if00",
+    locationId: "",
+    vendorId: "239a",
+    productId: "8018"
+  },
+  // Reported by Brad's laptop, Ubuntu 18.04
+  {
+    comName: "/dev/ttyACM0",
+    manufacturer: "Adafruit",
+    serialNumber: undefined,
+    pnpId: "usb-Adafruit_Circuit_Playground_Express-if00",
+    locationId: "",
+    vendorId: "239a",
+    productId: "8018"
+  }
+];
 
 export const FLORA_PORTS = [
   {

@@ -45,9 +45,9 @@ content-type: text/ng-template
         %th.studentprogress
           %div{style: 'position: absolute'}
             %a{href: "", "ng-click" => "order = 'highest_level'"}= I18n.t('dashboard_students_progress')
-            %a.zoom-control{href: "", "ng-click" => "page.zoom = true", 'ng-hide' => 'page.zoom'}
+            %a.zoom-control{href: "", "ng-click" => "progressDetailRequest()", 'ng-hide' => 'page.zoom'}
               %i.fa.fa-search-plus
-            %a.zoom-control{href: "", "ng-click" => "page.zoom = false", 'ng-show' => 'page.zoom'}
+            %a.zoom-control{href: "", "ng-click" => "progressSummaryRequest()", 'ng-show' => 'page.zoom'}
               %i.fa.fa-search-minus
           &nbsp;
       %tr.progressheader

@@ -1,0 +1,16 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "moveUp",
+    "blockText": "{THIS} move up",
+    "args": [
+
+    ],
+    "methodCall": true
+  }
+}

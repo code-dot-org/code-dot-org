@@ -10,7 +10,7 @@ const levels = fakeLevels(5).map((level, index) => ({
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressLevelSet', module)
+    .storiesOf('Progress/ProgressLevelSet', module)
     .addStoryTable([
       {
         name:'single puzzle step',

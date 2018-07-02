@@ -230,7 +230,8 @@ Feature: Checking the footer appearance
 
   @eyes_mobile @dashboard_db_access @as_student
   Scenario: Mobile Applab share small footer
-    Given I rotate to landscape
+    Given I am on "http://studio.code.org/home"
+    And I rotate to landscape
     And I start a new Applab project
     And I navigate to the shared version of my project
     And I rotate to portrait

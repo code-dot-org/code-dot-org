@@ -5,8 +5,8 @@ module Pd::Payment
   class PaymentCalculatorCSFTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-        on_map: true, funded: true, num_sessions: 1
+      @workshop = create :pd_ended_workshop, :funded, course: Pd::Workshop::COURSE_CSF,
+        on_map: true, num_sessions: 1
       session = @workshop.sessions.first
 
       # >= 10 passing levels: qualified

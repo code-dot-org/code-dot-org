@@ -51,7 +51,7 @@ let redrawApplicationFunction = function (event) {
 
     $.ajax({
       method: "GET",
-      url: `/api/v1/regional-partners/${schoolDistrictData['school-district']}/${selectedCourse}.json`
+      url: `/api/v1/regional_partners/${schoolDistrictData['school-district']}/${selectedCourse}.json`
     }).done(data => {
       const regionalPartnerGroup = data ? data['regional_partner']['group'] : undefined;
       const regionalPartnerName = data ? data['regional_partner']['name'] : undefined;

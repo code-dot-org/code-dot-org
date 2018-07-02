@@ -5,11 +5,16 @@ import React, {PropTypes} from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import applicationDashboardReducers, {
-  setRegionalPartnerName,
   setRegionalPartners,
+  setRegionalPartnerFilter,
+  setRegionalPartnerGroup,
   setWorkshopAdminPermission,
   setLockApplicationPermission,
 } from './reducers';
+import {
+  ALL_PARTNERS_OPTION,
+  UNMATCHED_PARTNER_OPTION
+} from './constants';
 import Header from '../components/header';
 import {
   Router,
@@ -24,6 +29,7 @@ import DetailView from './detail_view';
 import DetailViewRedirect from './detail_view_redirect';
 import CohortView from './cohort_view';
 import AdminEditView from './admin_edit_view';
+import AdminCohortView from './admin_cohort_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
@@ -49,22 +55,40 @@ const paths = {
 
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
-      name: PropTypes.string
-    })),
+      name: PropTypes.string,
+      group: PropTypes.number
+    })).isRequired,
     isWorkshopAdmin: PropTypes.bool,
     canLockApplications: PropTypes.bool,
   };
 
-  componentWillMount() {
-    if (this.props.regionalPartnerName) {
-      store.dispatch(setRegionalPartnerName(this.props.regionalPartnerName));
+  getInitialRegionalPartnerFilter() {
+    let regionalPartnerFilter = JSON.parse(sessionStorage.getItem("regionalPartnerFilter"));
+
+    if (!regionalPartnerFilter) {
+      if (this.props.isWorkshopAdmin) {
+        regionalPartnerFilter = UNMATCHED_PARTNER_OPTION;
+      } else if (this.props.regionalPartners.length === 1) {
+        regionalPartnerFilter = {label: this.props.regionalPartners[0].name, value: this.props.regionalPartners[0].id};
+      } else {
+        regionalPartnerFilter = ALL_PARTNERS_OPTION;
+      }
     }
 
-    if (this.props.regionalPartners) {
-      store.dispatch(setRegionalPartners(this.props.regionalPartners));
+    return regionalPartnerFilter;
+  }
+
+
+  componentWillMount() {
+    store.dispatch(setRegionalPartners(this.props.regionalPartners));
+    store.dispatch(setRegionalPartnerFilter(this.getInitialRegionalPartnerFilter()));
+
+    // Use the group from the first partner. Usually there will only be a single partner anyway, or admin.
+    // We shouldn't see mixed group multi-partners
+    if (this.props.regionalPartners.length > 0) {
+      store.dispatch(setRegionalPartnerGroup(this.props.regionalPartners[0].group));
     }
 
     if (this.props.isWorkshopAdmin) {
@@ -112,6 +136,7 @@ export default class ApplicationDashboard extends React.Component {
                       component={QuickView}
                       applicationType={paths[path].name}
                       viewType={paths[path].type}
+                      role={path}
                     />
                   ),
                   (
@@ -122,10 +147,22 @@ export default class ApplicationDashboard extends React.Component {
                       component={CohortView}
                       applicationType={cohort_path_name}
                       viewType={paths[path].type}
+                      role={path}
                     />
                   )
                 ];
               }))
+            }
+            {this.props.isWorkshopAdmin &&
+              ['TeacherCon', 'FiT'].map((cohortType, i) => (
+                <Route
+                  path={`${cohortType.toLowerCase()}_cohort`}
+                  breadcrumbs={`${cohortType} Cohort`}
+                  component={AdminCohortView}
+                  cohortType={cohortType}
+                  key={i}
+                />
+              ))
             }
             <Route
               path=":applicationId"
@@ -133,11 +170,11 @@ export default class ApplicationDashboard extends React.Component {
               component={DetailViewRedirect}
             />
             {this.props.isWorkshopAdmin &&
-            <Route
-              path=":applicationId/edit"
-              breadcrumbs="Application,Edit"
-              component={AdminEditView}
-            />
+              <Route
+                path=":applicationId/edit"
+                breadcrumbs="Application,Edit"
+                component={AdminEditView}
+              />
             }
           </Route>
         </Router>

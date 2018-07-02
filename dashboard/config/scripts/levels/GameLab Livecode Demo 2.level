@@ -35,7 +35,6 @@
       "randomNumber_min_max": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Move With Keys\r\n\r\nNow that we've got a sprite on the screen, let's make it respond to keyboard input.\r\n\r\n1. Read through the blocks at lines 14 and 21 - what is going on?\r\n2. Add two more conditionals to respond to the up and left keys\r\n3. Experiment with some of the additional provided blocks, such as `sprite.scale` and `sprite.rotation`\r\n",

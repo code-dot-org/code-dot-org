@@ -1,0 +1,16 @@
+name 'CSPFinal_Question_3_exam_prep'
+layout 'wrap'
+wrong '<code>Computer A</code>'
+wrong '<code>Computer B</code>'
+right '<code>Computer D</code>'
+wrong '<code>Computer F</code>'
+markdown <<MARKDOWN
+The figure represents a network of physically linked computers labeled `A` through `F`.  A line between two computers indicates that the computers can communicate directly with each other.  Any information sent between two computers that are not directly connected must go through at least one other computer.  The weight or cost of sending information from one computer to another is indicated by the number above the line.  
+
+For example, information can be sent directly between computers `A`, and `B` and will cost 5. Information sent between computers `A` and `D` must go through either computer `C` (with total cost 5), or through computer `B` (with total cost 8)  
+![](https://images.code.org/e4cea982e5881df71e417c2f6d6dc45a-image-1463323561451.png)
+
+**Question**: 
+
+Computer `A` sends a packet intended to reach computer `F`.  Along its path it arrives at Computer `C`.  Which computer should Computer `C` forward the packet to in order to use the most cost effective path?
+MARKDOWN

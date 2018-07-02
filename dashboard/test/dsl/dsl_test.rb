@@ -18,9 +18,15 @@ class DslTest < ActiveSupport::TestCase
     teacher_resources: [],
     stage_extras_available: false,
     has_verified_resources: false,
+    has_lesson_plan: false,
+    curriculum_path: nil,
     project_widget_visible: false,
     project_widget_types: [],
     script_announcements: nil,
+    new_name: nil,
+    family_name: nil,
+    version_year: nil,
+    is_stable: nil,
   }
 
   test 'test Script DSL' do
@@ -399,6 +405,19 @@ DSL
     assert_equal true, output[:has_verified_resources]
   end
 
+  test 'can set has_lesson_plan' do
+    input_dsl = <<DSL
+has_lesson_plan 'true'
+
+stage 'Stage1'
+level 'Level 1'
+stage 'Stage2'
+level 'Level 2'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:has_lesson_plan]
+  end
+
   test 'can set teacher_resources' do
     input_dsl = <<DSL
 teacher_resources [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']]
@@ -565,5 +584,58 @@ DSL
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
+  end
+
+  test 'Script DSL with new_name, family_name, version_year and is_stable' do
+    input_dsl = <<DSL
+new_name 'new name'
+family_name 'family name'
+version_year '3035'
+is_stable true
+stage 'Stage1'
+level 'Level 1'
+level 'Level 2'
+DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        new_name: "new name",
+        family_name: "family name",
+        version_year: "3035",
+        is_stable: true,
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 2"}]},
+            ]
+          }
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'serialize new_name, family_name, version_year and is_stable' do
+    puts 'test_serialize_new_name_and_family_name'
+    script = create :script,
+      {
+        new_name: 'new name',
+        family_name: 'family name',
+        version_year: '2001',
+        is_stable: true
+      }
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<-SCRIPT
+hidden false
+new_name 'new name'
+family_name 'family name'
+version_year '2001'
+is_stable true
+
+SCRIPT
+    assert_equal expected, script_text
   end
 end

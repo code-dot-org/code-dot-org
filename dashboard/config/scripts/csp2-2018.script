@@ -1,0 +1,59 @@
+hidden false
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp-18/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit2/standards/"], ["professionalLearning", "https://studio.code.org/s/csp2-support"]]
+has_verified_resources true
+has_lesson_plan true
+family_name 'csp2'
+version_year '2018'
+is_stable true
+
+stage 'Bytes and File Sizes', flex_category: 'csp2_1_2018'
+named_level 'CSP U2L01 SFLP'
+assessment 'U1L12 Reflection Free Response_2018', progression: 'Check Your Understanding'
+assessment 'CSP_U2_Shakespeare_Question_2018', progression: 'Check Your Understanding'
+assessment 'csp-pulse-check-survey-2-levelgroup-U2Ch1_2018', progression: 'Quick Check-In'
+
+stage 'Text Compression', flex_category: 'csp2_1_2018'
+named_level 'CSP U2L02 SFLP'
+named_level 'Text Compression_2018', progression: 'Text Compression'
+named_level 'Widget: Text Compression_2018', progression: 'Widget: Text Compression'
+assessment 'U1L13 - Assess Text Compression reverse process_2018', progression: 'Check Your Understanding'
+assessment 'U1L13 Assess Text Compression amount_2018', progression: 'Check Your Understanding'
+assessment 'U1L13 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U1L13 Assessment 2_2018', progression: 'Check Your Understanding'
+
+stage 'Encoding B&W Images', flex_category: 'csp2_1_2018'
+named_level 'CSP U2L03 SFLP'
+level 'Pixelation - Lesson 14 - Make the Letter A_2018', progression: 'Pixelation Widget: Black and White Pixelation'
+level 'Pixelation - Lesson 14 - Fix bit offset_2018', progression: 'Pixelation Widget: Black and White Pixelation'
+named_level 'Widget: Black and White Pixelation_2018', progression: 'Pixelation Widget: Black and White Pixelation'
+assessment 'U1L14 Assessment 1_2018', progression: 'Check Your Understanding'
+assessment 'U1L14 - Assessment 2_2018', progression: 'Check Your Understanding'
+
+stage 'Encoding Color Images', flex_category: 'csp2_1_2018'
+named_level 'CSP U2L04 SFLP'
+named_level 'Images, Pixels, and RGB_2018', progression: 'Images, Pixels, and RGB'
+level 'Pixelation - Lesson 15 - Complete 3-bit color_2018', progression: 'Pixelation'
+level 'Pixelation - Lesson 15 - Color Shades_2018', progression: 'Pixelation'
+level 'Pixelation - Lesson 15 - Color Shades 4x4_2018', progression: 'Pixelation'
+level 'Pixelation Flappy_2018', progression: 'Pixelation'
+level 'Pixelation Bee_2018', progression: 'Pixelation'
+named_level 'Favicon Instructions_2018', progression: 'Favicon Instructions'
+named_level 'Widget: Color Pixelation_2018', progression: 'Widget: Color Pixelation'
+assessment 'U2L5 Color Pixel MC Question_2018', progression: 'Check Your Understanding'
+assessment 'U2L5 FR brighten darken image_2018', progression: 'Check Your Understanding'
+
+stage 'Lossy vs Lossless Compression', flex_category: 'csp2_1_2018'
+named_level 'CSP U2L05 SFLP'
+assessment 'U2L05 Lossy Lossless MC 1_2018', progression: 'Check Your Understanding'
+assessment 'U2L05 Lossy Lossless MC 2_2018', progression: 'Check Your Understanding'
+assessment 'U2L05 Lossy vs. Lossless FR 1_2018', progression: 'Check Your Understanding'
+
+stage 'Rapid Research - Format Showdown', flex_category: 'csp2_1_2018'
+named_level 'CSP U2L06 SFLP'
+
+stage 'Unit 2 Assessment', lockable: true, flex_category: 'cspAssessment'
+assessment 'CSP Unit 2 Ch1 Cumulative Assessment MC_2018'

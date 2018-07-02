@@ -3,11 +3,14 @@ require 'test_helper'
 class LevelTest < ActiveSupport::TestCase
   include ActionDispatch::TestProcess
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
     @custom_turtle_data = {user_id: 1}
     @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
     @custom_maze_data = @maze_data.merge(user_id: 1)
+    @gamelab_data = {game_id: 48, name: 'some gamelab level', level_num: 'custom', type: 'Gamelab'}
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
@@ -98,6 +101,20 @@ class LevelTest < ActiveSupport::TestCase
     custom_levels = Level.custom_levels
     assert custom_levels.include?(@custom_level)
     assert_not custom_levels.include?(@level)
+  end
+
+  test "summarize returns object with expected fields" do
+    summary = @level.summarize
+    assert_equal(summary[:level_id], @level.id)
+    assert_equal(summary[:type], 'Maze')
+    assert_equal(summary[:name], '__bob4')
+    assert_nil(summary[:display_name])
+  end
+
+  test "get_question_text returns question text for free response level" do
+    free_response_level = create :level, name: 'A question', markdown_instructions: 'Answer this question.',
+      type: 'FreeResponse'
+    assert_equal free_response_level.get_question_text, 'Answer this question.'
   end
 
   test "create turtle level of correct subclass" do
@@ -360,7 +377,7 @@ EOS
   end
 
   test 'applab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Applab.create(name: 'applab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
@@ -390,7 +407,7 @@ EOS
   end
 
   test 'gamelab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Gamelab.create(name: 'gamelab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
@@ -420,7 +437,7 @@ EOS
   end
 
   test 'weblab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Weblab.create(name: 'weblab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
@@ -644,5 +661,143 @@ EOS
     # new actual entry
     assert_equal 65533, level.audit_log.length
     assert_equal 9351, JSON.parse(level.audit_log).length
+  end
+
+  test "can validate XML field with valid XML" do
+    level = Level.new(@turtle_data.merge({name: 'xml validation level'}))
+
+    level.start_blocks = '<xml>blah blah</xml>'
+
+    assert level.valid?
+  end
+
+  test "can save non-XML in a non-XML field" do
+    Level.find_by_name(@gamelab_data[:name]).try(:destroy)
+    level = Level.new(@gamelab_data)
+
+    level.start_blocks = 'var i = 1;'
+
+    assert level.valid?
+  end
+
+  test "cannot save non-XML in an XML field" do
+    level = Level.new(@turtle_data.merge({name: 'xml validation level'}))
+
+    level.start_blocks = 'var i = 1'
+
+    assert_raises(Nokogiri::XML::SyntaxError) do
+      level.valid?
+    end
+  end
+
+  test 'does not use droplet for weblab levels' do
+    level = Weblab.new(
+      name: 'test studioEC level',
+      type: 'Blockly',
+      game_id: Game.by_name('weblab'),
+    )
+
+    refute level.uses_droplet?
+  end
+
+  test 'can clone' do
+    old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_name('new level')
+    assert_equal 'new level', new_level.name
+    assert_equal '<xml>foo</xml>', new_level.start_blocks
+  end
+
+  test 'can clone with suffix' do
+    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_suffix(' copy')
+    assert_equal 'level copy', new_level.name
+    assert_equal '<xml>foo</xml>', new_level.start_blocks
+    assert_equal old_level.id, new_level.parent_level_id
+    assert_equal ' copy', new_level.name_suffix
+  end
+
+  test 'clone with suffix replaces old suffix' do
+    level_1 = create :level, name: 'my_level_1'
+
+    # level_1 has no name suffix, so the new suffix is appended.
+    level_2 = level_1.clone_with_suffix('_2')
+    assert_equal 'my_level_1_2', level_2.name
+    assert_equal level_1.id, level_2.parent_level_id
+    assert_equal '_2', level_2.name_suffix
+
+    # level_2 has a name suffix, which the new suffix replaces.
+    level_3 = level_2.clone_with_suffix('_3')
+    assert_equal 'my_level_1_3', level_3.name
+    assert_equal level_2.id, level_3.parent_level_id
+    assert_equal '_3', level_3.name_suffix
+  end
+
+  test 'clone with suffix properly escapes suffixes' do
+    level_1 = create :level, name: 'your_level_1'
+
+    tricky_suffix = '[(.\\'
+
+    level_2 = level_1.clone_with_suffix(tricky_suffix)
+    assert_equal "your_level_1#{tricky_suffix}", level_2.name
+
+    level_3 = level_2.clone_with_suffix('_3')
+    assert_equal 'your_level_1_3', level_3.name
+  end
+
+  test 'clone with same suffix copies and shares project template level' do
+    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>'
+    level_1 = create :level, name: 'level 1'
+    level_1.project_template_level_name = template_level.name
+    level_2 = create :level, name: 'level 2'
+    level_2.project_template_level_name = template_level.name
+
+    level_1_copy = level_1.clone_with_suffix(' copy')
+    level_2_copy = level_2.clone_with_suffix(' copy')
+
+    template_level_copy = Level.find_by_name('template level copy')
+    assert_equal template_level.id, template_level_copy.parent_level_id
+    assert_equal ' copy', template_level_copy.name_suffix
+    assert_equal '<xml>template</xml>', template_level_copy.start_blocks
+
+    assert_equal template_level_copy, level_1_copy.project_template_level
+    assert_equal 'level 1 copy', level_1_copy.name
+    assert_equal level_1.id, level_1_copy.parent_level_id
+    assert_equal ' copy', level_1_copy.name_suffix
+
+    assert_equal template_level_copy, level_2_copy.project_template_level
+    assert_equal 'level 2 copy', level_2_copy.name
+    assert_equal level_2.id, level_2_copy.parent_level_id
+    assert_equal ' copy', level_2_copy.name_suffix
+  end
+
+  test 'clone with suffix copies contained levels' do
+    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
+    contained_level_2 = create :level, name: 'contained level 2'
+
+    # level 1 has 1 contained level
+
+    level_1 = create :level, name: 'level 1'
+    level_1.contained_level_names = [contained_level_1.name]
+    level_1_copy = level_1.clone_with_suffix(' copy')
+
+    refute_nil level_1_copy.contained_levels
+    assert_equal 1, level_1_copy.contained_levels.size
+    contained_level_1_copy = Level.find_by_name('contained level 1 copy')
+    assert_equal 'FreeResponse', contained_level_1_copy.type
+    assert_equal contained_level_1_copy, level_1_copy.contained_levels.first
+
+    # level 2 has 2 contained levels, one of which has already been copied
+
+    level_2 = create :level, name: 'level 2'
+    level_2.contained_level_names = [
+      contained_level_1.name,
+      contained_level_2.name
+    ]
+    level_2_copy = level_2.clone_with_suffix(' copy')
+    contained_level_2_copy = Level.find_by_name('contained level 2 copy')
+    refute_nil level_2_copy.contained_levels
+    assert_equal 2, level_2_copy.contained_levels.size
+    assert_equal contained_level_1_copy, level_2_copy.contained_levels.first
+    assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
 end

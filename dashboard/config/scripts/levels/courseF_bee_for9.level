@@ -41,6 +41,7 @@
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "top_level_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 19,
     "contained_level_names": null
   },
   "published": true,

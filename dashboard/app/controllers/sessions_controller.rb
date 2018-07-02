@@ -34,14 +34,14 @@ class SessionsController < Devise::SessionsController
   end
 
   def clever_modal_dismissed
-    clear_clever_session_variables
+    clear_takeover_session_variables
     render status: 200, nothing: true
   end
 
   # POST /resource/sign_in
   def create
     super do |user|
-      check_and_apply_clever_takeover(user)
+      check_and_apply_oauth_takeover(user)
     end
   end
 

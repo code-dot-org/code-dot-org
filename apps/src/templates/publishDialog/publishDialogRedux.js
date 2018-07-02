@@ -1,5 +1,5 @@
 import { channels as channelsApi } from '../../clientApi';
-import { PublishableProjectTypesOver13 } from '../../util/sharedConstants';
+import { AllPublishableProjectTypes } from '../../util/sharedConstants';
 
 // Action types
 
@@ -79,11 +79,11 @@ export function hidePublishDialog() {
  *   or rejects with an error message otherwise.
  */
 export function publishProject(projectId, projectType) {
+  // Don't enforce restrictions here on which project types young students can
+  // publish. Instead, restrict when to show the publish button in the UI, and
+  // enforce age restrictions on the "publish" REST endpoint.
   return dispatch => {
-    // Don't enforce restrictions here on which project types young students can
-    // publish. Instead, restrict when to show the publish button in the UI, and
-    // enforce age restrictions on the "publish" REST endpoint.
-    if (!PublishableProjectTypesOver13.includes(projectType)) {
+    if (!AllPublishableProjectTypes.includes(projectType)) {
       return Promise.reject(`Cannot publish project of type ${projectType}.`);
     }
     dispatch({type: PUBLISH_REQUEST});

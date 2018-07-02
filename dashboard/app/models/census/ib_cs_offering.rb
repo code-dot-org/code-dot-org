@@ -57,13 +57,17 @@ class Census::IbCsOffering < ApplicationRecord
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
 
+  def self.construct_object_key(school_year)
+    "ib_cs_offerings/#{school_year}-#{school_year + 1}.csv"
+  end
+
   def self.seed_from_s3
     # IB CS Offering data files in S3 are named
     # "ib_cs_offerings/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
     # The first school year where we have data is 2017-2018
     current_year = Date.today.year
     (2017..current_year).each do |school_year|
-      object_key = "ib_cs_offerings/#{school_year}-#{school_year + 1}.csv"
+      object_key = construct_object_key(school_year)
       begin
         AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
           seed_from_csv(school_year, filename)

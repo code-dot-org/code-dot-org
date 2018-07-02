@@ -1,0 +1,17 @@
+name 'courseF_markdown_events_end'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **You just learned "events"!**
+
+### **An event is an action that causes something to happen.**
+
+### Events help us write programs that can respond to different actions. They are very important in computer science because programs can change when new users interact with them.
+
+---
+
+## **Vocab to Know**
+
+### **Event** - An action that causes something to happen
+
+MARKDOWN

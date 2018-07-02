@@ -89,7 +89,6 @@ export function boardConnected() {
  * @param {function} opts.callback
  */
 export function onBoardEvent(opts) {
-  // TODO (bbuchanan): Validate arguments?
   let {component, event, callback} = opts;
   if (BOARD_EVENT_ALIASES[event]) {
     event = BOARD_EVENT_ALIASES[event];

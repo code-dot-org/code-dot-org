@@ -39,6 +39,7 @@
     "markdown_instructions": "To mix things up, instead of ending the game when Flappy hits an obstacle, try setting the score back to 0.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Connect the `set score 0` block to the `when hit an obstacle` event to pass this level.\",\"hint_id\":\"courseC_flappy_events9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c1e312536f653fa2cf029937f9464436/courseC_flappy_events9.mp3\"}]",
     "project_template_level_name": "courseC_flappy_events_template",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

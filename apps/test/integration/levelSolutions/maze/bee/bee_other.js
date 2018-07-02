@@ -1,7 +1,5 @@
-var constants = require('@cdo/apps/constants.js');
-var TerminationValue = constants.BeeTerminationValue;
+import {TestResults, BeeTerminationValue as TerminationValue} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils');
-var TestResults = constants.TestResults;
 
 // Honey goal of 1.  No specific hive goals
 var levelDef = {
@@ -43,7 +41,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       // customValidator: function () {
-      //   return Maze.subtype.nectars_.length === 2 && Maze.subtype.honey_ === 2;
+      //   return Maze.controller.subtype.nectars_.length === 2 && Maze.controller.subtype.honey_ === 2;
       // },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',

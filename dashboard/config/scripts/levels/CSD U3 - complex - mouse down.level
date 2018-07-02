@@ -69,7 +69,6 @@
       "comment_Drawing": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Mouse Clicks\r\n\r\nKeypresses are great, but sometimes you want users to interact through mouse clicks. There's a new block called `mouseDown` which, similar to `keyDown`, checks whether the left or right mouse buttons is being pressed. If you are using a computer with a mouse or trackpad that has only one button, you'll want to always use `mouseDown(\"left\")`. \r\n\r\n# Do This\r\nHere's a program that drops a balloon down the screen - you're going to program the mouse button to raise the balloon back up while it's clicked.\r\n\r\n* Add an if else statment that checks for `mouseDown`.\r\n* Inside the conditional, move the balloon up one pixel if the mouse is down. Otherwise, move the balloon down.\r\n\r\n_Hint: You'll need to move the code that drops the balloon for this to work - you only want it to run if `mouseDown` is `false`_\r\n\r\n_Challenge: Can you make the balloon drift randomly to the left and right as it rises and falls?_",

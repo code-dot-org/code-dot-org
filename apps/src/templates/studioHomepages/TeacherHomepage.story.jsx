@@ -28,7 +28,7 @@ const serverCourses = [
 
 export default storybook => {
   return storybook
-    .storiesOf('TeacherHomepage', module)
+    .storiesOf('Homepages/Teachers/TeacherHomepage', module)
     .addStoryTable([
       {
         name: 'Teacher Homepage - no courses, no sections',
@@ -147,5 +147,5 @@ function withFakeServer({courses = [], sections = []} = {}) {
   ];
   server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
   server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
-  server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
+  server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse([]));
 }

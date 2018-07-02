@@ -9,7 +9,7 @@ nav: promote_nav
 
 # Markedsfør Kodetimen
 
-## Skal du holde en Kodetime? <a href="<%= resolve_url('/how-to') %> Les hvordan det gjøres her</a>
+## Skal du holde en Kodetime? [Les hvordan det gjøres her](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -35,9 +35,9 @@ nav: promote_nav
 
 [Last ned høyoppløselige versjoner](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**"Kodetimen" er varemerkebeskyttet. Vi ønsker ikke å forhindre bruken, men vi vil passe på at den passer innenfor et par rammer:**
 
-1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller refererer til Kodetimen som en grasrotbevegelse. **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
+1. En hver referanse til «Kodetimen» burde bli brukt på en slik måte at det ikke tyder på at det er ditt eget merkenavn, men heller reffererer til Kodetimen som en grasrotbevegelse. **Godt eksempel: "Delta i Kodetimen™ på ACMECorp.com". Dårlig eksempel: «Prøv Kodetimen fra ACME Corp».**
 2. Bruk et hevet "TM" på de mest fremtredende stedene du nevner "Kodetimen", både på nettsiden og i beskrivelser av apper.
 3. Inkluder språk på siden (eller som bunntekst), inkluder lenker til CSEdWeek og Code.org sidene, som sier følgende:
     
@@ -66,7 +66,7 @@ Computers are everywhere, changing every industry on the planet. But fewer than 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
@@ -78,7 +78,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Can we help you host and Hour of Code?
 
-Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
@@ -156,7 +156,7 @@ That’s why our entire school is joining in on the largest learning event in hi
 
 I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+Vennligst kontakt meg på [telefon eller epost]. Jeg ser frem til å høre fra deg.
 
 Sincerely,
 

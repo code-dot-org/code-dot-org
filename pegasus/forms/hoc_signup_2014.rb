@@ -1,6 +1,4 @@
 require 'honeybadger'
-require_relative './form'
-require_relative '../../deployment'
 require_relative '../helpers/hourofcode_helpers'
 
 class HocSignup2014 < Form

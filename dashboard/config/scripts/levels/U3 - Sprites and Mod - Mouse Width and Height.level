@@ -46,7 +46,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "instructions": "Do this",
-    "show_d_pad": "false",
     "markdown_instructions": "# Random Around Point",
     "show_debug_watch": "true",
     "contained_level_names": null

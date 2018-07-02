@@ -15,7 +15,7 @@ module Poste
   end
 
   def self.decrypt(encrypted)
-    decrypter = OpenSSL::Cipher::Cipher.new 'AES-128-CBC'
+    decrypter = OpenSSL::Cipher.new 'AES-128-CBC'
     decrypter.decrypt
     decrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
     plain = decrypter.update Base64.urlsafe_decode64(encrypted)
@@ -33,7 +33,7 @@ module Poste
   end
 
   def self.encrypt(plain)
-    encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
+    encrypter = OpenSSL::Cipher.new('AES-128-CBC')
     encrypter.encrypt
     encrypter.pkcs5_keyivgen(CDO.poste_secret, '8 octets')
     encrypted = encrypter.update(plain.to_s)
@@ -269,6 +269,7 @@ module Poste2
       hadi_partovi@code.org
       survey@code.org
       facilitators@code.org
+      tanya_parker@code.org
     ]
 
     def initialize(settings = nil)

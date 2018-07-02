@@ -12,6 +12,7 @@ class Pd::FitWeekend1819RegistrationController < ApplicationController
 
   def new
     if Pd::FitWeekend1819Registration.exists?(pd_application_id: @application.id)
+      @registration = Pd::FitWeekend1819Registration.find_by(pd_application_id: @application.id)
       render :submitted
       return
     end
@@ -31,5 +32,9 @@ class Pd::FitWeekend1819RegistrationController < ApplicationController
         phone: @application.sanitize_form_data_hash[:phone]
       }.to_json
     }
+  end
+
+  def destroy
+    @application.fit_weekend_registration.try(:destroy)
   end
 end

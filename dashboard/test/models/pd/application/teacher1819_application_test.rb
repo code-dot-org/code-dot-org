@@ -27,6 +27,15 @@ module Pd::Application
       assert_equal guid, teacher_application.application_guid
     end
 
+    test 'principal_approval_url' do
+      teacher_application = build :pd_teacher1819_application
+      assert_nil teacher_application.principal_approval_url
+
+      # save to generate guid and therefore principal approval url
+      teacher_application.save!
+      assert teacher_application.principal_approval_url
+    end
+
     test 'principal_greeting' do
       hash_with_principal_title = build :pd_teacher1819_application_hash
       hash_without_principal_title = build :pd_teacher1819_application_hash, principal_title: nil
@@ -492,11 +501,8 @@ module Pd::Application
     end
 
     test 'find_default_workshop find an appropriate partner workshop for G1 and G2 partners' do
-      program_manager = create :workshop_organizer
       partner = create :regional_partner
-      create :regional_partner_program_manager,
-        program_manager: program_manager,
-        regional_partner: partner
+      program_manager = create :program_manager, regional_partner: partner
 
       # where "appropriate workshop" is the earliest teachercon or local summer
       # workshop matching the application course.
@@ -654,7 +660,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..3).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i, location_address: %w(tba TBA tba)[i - 1]}
 
       application = create :pd_teacher1819_application, form_data_hash: (
         build(:pd_teacher1819_application_hash, :with_multiple_workshops,
@@ -727,6 +733,31 @@ module Pd::Application
       assert_nil application.get_first_selected_workshop
     end
 
+    test 'get_first_selected_workshop picks correct workshop even when multiple are on the same day' do
+      workshop_1 = create :pd_workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_2 = create :pd_workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_1.update_column(:location_address, 'Location 1')
+      workshop_2.update_column(:location_address, 'Location 2')
+
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: [workshop_1.id, workshop_2.id],
+          able_to_attend_multiple: ["#{workshop_2.friendly_date_range} in Location 2 hosted by Code.org"]
+        )
+      )
+
+      assert_equal workshop_2, application.get_first_selected_workshop
+
+      application_2 = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: [workshop_1.id, workshop_2.id],
+          able_to_attend_multiple: ["#{workshop_2.friendly_date_range} in Location 1 hosted by Code.org"]
+        )
+      )
+
+      assert_equal workshop_1, application_2.get_first_selected_workshop
+    end
+
     test 'assign_default_workshop! saves the default workshop' do
       application = create :pd_teacher1819_application
       workshop = create :pd_workshop
@@ -743,6 +774,98 @@ module Pd::Application
 
       application.assign_default_workshop!
       assert_equal workshop.id, application.reload.pd_workshop_id
+    end
+
+    test 'can_see_locked_status?' do
+      teacher = create :teacher
+      g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
+      g3_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 3)
+      workshop_admin = create :workshop_admin
+
+      refute Teacher1819Application.can_see_locked_status?(teacher)
+      refute Teacher1819Application.can_see_locked_status?(g1_program_manager)
+
+      assert Teacher1819Application.can_see_locked_status?(g3_program_manager)
+      assert Teacher1819Application.can_see_locked_status?(workshop_admin)
+    end
+
+    test 'locked status appears in csv only when the supplied user can_see_locked_status' do
+      application = create :pd_teacher1819_application
+      mock_user = mock
+
+      Teacher1819Application.stubs(:can_see_locked_status?).returns(false)
+      header_without_locked = Teacher1819Application.csv_header('csf', mock_user)
+      refute header_without_locked.include? 'Locked'
+      row_without_locked = application.to_csv_row(mock_user)
+      assert_equal CSV.parse(header_without_locked).length, CSV.parse(row_without_locked).length,
+        "Expected header and row to have the same number of columns, excluding Locked"
+
+      Teacher1819Application.stubs(:can_see_locked_status?).returns(true)
+      header_with_locked = Teacher1819Application.csv_header('csf', mock_user)
+      assert header_with_locked.include? 'Locked'
+      row_with_locked = application.to_csv_row(mock_user)
+      assert_equal CSV.parse(header_with_locked).length, CSV.parse(row_with_locked).length,
+        "Expected header and row to have the same number of columns, including Locked"
+    end
+
+    test 'to_cohort_csv' do
+      application = build :pd_teacher1819_application
+      optional_columns = {registered_workshop: false, accepted_teachercon: true}
+
+      assert (header = Teacher1819Application.cohort_csv_header(optional_columns))
+      assert (row = application.to_cohort_csv_row(optional_columns))
+      assert_equal CSV.parse(header).length, CSV.parse(row).length,
+        "Expected header and row to have the same number of columns"
+    end
+
+    test 'school cache' do
+      school = create :school
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash
+
+      # Original query: School, SchoolDistrict
+      assert_queries 2 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+      end
+
+      # Cached
+      assert_queries 0 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+      end
+    end
+
+    test 'cache prefetch' do
+      school = create :school
+      workshop = create :pd_workshop
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash, pd_workshop_id: workshop.id
+
+      # Workshop, Session, Enrollment, School, SchoolDistrict
+      assert_queries 5 do
+        Teacher1819Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+        assert_equal workshop, application.workshop
+      end
+    end
+
+    test 'memoized filtered_labels' do
+      Teacher1819Application::FILTERED_LABELS.clear
+
+      filtered_labels_csd = Teacher1819Application.filtered_labels('csd')
+      assert filtered_labels_csd.include? :csd_which_grades
+      refute filtered_labels_csd.include? :csp_which_grades
+      assert_equal ['csd'], Teacher1819Application::FILTERED_LABELS.keys
+
+      filtered_labels_csd = Teacher1819Application.filtered_labels('csp')
+      refute filtered_labels_csd.include? :csd_which_grades
+      assert filtered_labels_csd.include? :csp_which_grades
+      assert_equal ['csd', 'csp'], Teacher1819Application::FILTERED_LABELS.keys
     end
   end
 end

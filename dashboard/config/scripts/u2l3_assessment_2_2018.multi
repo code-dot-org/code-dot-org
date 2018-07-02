@@ -1,0 +1,13 @@
+name 'U2L3 Assessment 2_2018'
+title 'IP Addresses and Bits'
+question 'How many unique IP addresses could be made in a fixed-length IP address system using 6 bits?'
+wrong '6 users'
+wrong '12 users'
+wrong '32 users'
+right '64 users'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- 64 users
+MARKDOWN

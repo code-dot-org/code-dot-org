@@ -1,6 +1,4 @@
 source 'https://supermarket.chef.io'
 
 metadata
-
-cookbook 'apt'
-cookbook 'sudo-user', path: '../sudo-user'
+instance_eval File.read('../local_cookbooks.rb'), __FILE__

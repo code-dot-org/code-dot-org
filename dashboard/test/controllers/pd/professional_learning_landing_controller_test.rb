@@ -28,7 +28,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_response :success
     response = assigns(:landing_page_data)
 
-    assert_equal CDO.code_org_url("/pd-workshop-survey/#{@ended_enrollment.code}", 'https:'), response[:last_workshop_survey_url]
+    assert_equal CDO.code_org_url("/pd-workshop-survey/#{@ended_enrollment.code}", CDO.default_scheme), response[:last_workshop_survey_url]
     assert_equal Pd::Workshop::COURSE_CSF, response[:last_workshop_survey_course]
   end
 
@@ -42,15 +42,22 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_redirected_to CDO.code_org_url('educate/professional-learning', CDO.default_scheme)
   end
 
+  test 'teachers with a plc enrollment (and no workshop enrollment) are not redirected' do
+    no_workshop_teacher = create :teacher
+    sign_in(no_workshop_teacher)
+    create :plc_user_course_enrollment, user: no_workshop_teacher, plc_course: (create :plc_course, name: 'Course with no workshop')
+
+    get :index
+    assert_response :success
+    assert_empty Pd::Enrollment.for_user(no_workshop_teacher)
+  end
+
   test 'courses are sorted as expected' do
     sign_in(@teacher)
 
-    [
-      create(:plc_course, name: 'Bills Fandom 101'),
-      create(:plc_course, name: 'ECS Support'),
-      create(:plc_course, name: 'CSP Support')
-    ].each do |course|
-      create :plc_user_course_enrollment, user: @teacher, plc_course: course
+    ['Bills Fandom 101', 'ECS Support', 'CSP Support'].each do |name|
+      plc_course = Course.find_by(name: name).try(:plc_course) || create(:plc_course, name: name)
+      Plc::UserCourseEnrollment.create(user: @teacher, plc_course: plc_course)
     end
 
     get :index

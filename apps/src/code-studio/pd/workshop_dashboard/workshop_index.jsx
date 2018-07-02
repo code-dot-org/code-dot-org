@@ -3,9 +3,18 @@
  * Route: /workshops
  */
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
-import Permission from '../permission';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  Organizer,
+  CsfFacilitator,
+  Facilitator,
+  Partner,
+  ProgramManager
+} from './permission';
 import $ from 'jquery';
 
 const FILTER_API_URL = "/api/v1/pd/workshops/filter";
@@ -29,14 +38,14 @@ const filterParams = {
   }
 };
 
-export default class WorkshopIndex extends React.Component {
+export class WorkshopIndex extends React.Component {
+  static propTypes = {
+    permission: PermissionPropType.isRequired
+  };
+
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
-
-  componentWillMount() {
-    this.permission = new Permission();
-  }
 
   handleNewWorkshopClick = () => {
     this.context.router.push('/workshops/new');
@@ -64,22 +73,25 @@ export default class WorkshopIndex extends React.Component {
   }
 
   render() {
-    const showOrganizer = this.permission.isWorkshopAdmin;
+    const showOrganizer = this.props.permission.has(WorkshopAdmin);
+    const canDelete = this.props.permission.hasAny(WorkshopAdmin, Organizer, ProgramManager);
+    const canCreate = this.props.permission.hasAny(WorkshopAdmin, Organizer, ProgramManager, CsfFacilitator);
+    const canSeeAttendanceReports = this.props.permission.hasAny(WorkshopAdmin, Organizer, ProgramManager);
 
     return (
       <div>
         <h1>Your Workshops</h1>
         <ButtonToolbar>
-          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) &&
+          {canCreate &&
             (
               <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
                 New Workshop
               </Button>
             )
           }
-          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
-          {this.permission.isPartner && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
-          {this.permission.isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
+          {canSeeAttendanceReports && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
+          {this.props.permission.has(Partner) && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
+          {this.props.permission.hasAny(Facilitator, CsfFacilitator) && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
           <Button
             href={this.context.router.createHref("/workshops/filter")}
             onClick={this.handleFilterClick}
@@ -91,7 +103,7 @@ export default class WorkshopIndex extends React.Component {
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           queryParams={filterParams.inProgress}
-          canDelete
+          canDelete={canDelete}
           tableId="inProgressWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('In Progress')}
@@ -100,7 +112,7 @@ export default class WorkshopIndex extends React.Component {
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           queryParams={filterParams.notStarted}
-          canDelete
+          canDelete={canDelete}
           tableId="notStartedWorkshopsTable"
           showSignupUrl
           showOrganizer={showOrganizer}
@@ -118,3 +130,7 @@ export default class WorkshopIndex extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.permission
+}))(WorkshopIndex);

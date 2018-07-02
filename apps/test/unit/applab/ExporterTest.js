@@ -1,5 +1,7 @@
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
+import fakeFetch from 'fake-fetch';
+
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import { setAppOptions } from '@cdo/apps/code-studio/initApp/loadApp';
@@ -40,6 +42,10 @@ a.third-rule {
 }
 `;
 
+const JQUERY_JS_CONTENT = 'jquery content';
+const PNG_ASSET_CONTENT = 'asset content';
+const FONTAWESOME_CONTENT = 'fontawesome content';
+
 describe('The Exporter,', function () {
   var server;
   let stashedCookieKey;
@@ -68,6 +74,26 @@ describe('The Exporter,', function () {
       /\/blockly\/css\/applab\.css\?__cb__=\d+/,
       APPLAB_CSS_CONTENT
     );
+    server.respondWith(
+      'https://code.jquery.com/jquery-1.12.1.min.js',
+      JQUERY_JS_CONTENT
+    );
+    server.respondWith(
+      /\/_karma_webpack_\/.*\.png/,
+      PNG_ASSET_CONTENT
+    );
+    server.respondWith(
+      /\/fonts\/fontawesome-webfont\.woff2\?__cb__=\d+/,
+      FONTAWESOME_CONTENT
+    );
+    server.respondWith(
+      '/api/v1/sound-library/default.mp3',
+      'default.mp3 content'
+    );
+    server.respondWith(
+      'https://studio.code.org/fakeRequest',
+      '{}'
+    );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
 
@@ -83,6 +109,10 @@ describe('The Exporter,', function () {
     server.respondWith('/blockly/media/foo.png', 'blockly foo.png content');
     server.respondWith('/blockly/media/bar.jpg', 'blockly bar.jpg content');
     server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
+
+    // Needed to simulate fetch() response to '/projects/applab/fake_id/export_create_channel'
+    fakeFetch.install();
+    fakeFetch.respondWith(JSON.stringify({channel_id: 'new_fake_id'}));
 
     setAppOptions({
       "levelGameName":"Applab",
@@ -191,6 +221,7 @@ describe('The Exporter,', function () {
 
   afterEach(function () {
     server.restore();
+    fakeFetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
   });
@@ -201,6 +232,7 @@ describe('The Exporter,', function () {
     });
 
     it("should reject the promise with an error", function (done) {
+      server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");',
@@ -211,7 +243,28 @@ describe('The Exporter,', function () {
           </div>
         </div>`
       );
-      server.respond();
+      zipPromise.then(function () {
+        assert.fail('Expected zipPromise not to resolve');
+        done();
+      }, function (error) {
+        assert.equal(error.message, 'failed to fetch assets');
+        done();
+      });
+    });
+
+    it("should reject the promise with an error in expoMode", function (done) {
+      server.respondImmediately = true;
+      let zipPromise = Exporter.exportAppToZip(
+        'my-app',
+        'console.log("hello");',
+        `<div>
+          <div class="screen" tabindex="1" id="screen1">
+            <input id="nameInput"/>
+            <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+          </div>
+        </div>`,
+        true
+      );
       zipPromise.then(function () {
         assert.fail('Expected zipPromise not to resolve');
         done();
@@ -228,13 +281,15 @@ describe('The Exporter,', function () {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
-        'console.log("hello");\nplaySound("zoo.mp3");',
+        'console.log("hello");\nplaySound("zoo.mp3");\nplaySound("sound://default.mp3");',
         `<div>
           <div class="screen" tabindex="1" id="screen1">
             <input id="nameInput"/>
-            <img src="/v3/assets/some-channel-id/foo.png"/>
+            <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <button id="1Button" style="background-color: blue;">1</button>
+            <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
           </div>
         </div>`
       );
@@ -276,8 +331,10 @@ describe('The Exporter,', function () {
           'my-app/applab/assets/blockly/media/bar.jpg',
           'my-app/applab/assets/blockly/media/foo.png',
           'my-app/applab/assets/blockly/media/third.jpg',
+          'my-app/applab/fontawesome-webfont.woff2',
           'my-app/assets/',
           'my-app/assets/bar.png',
+          'my-app/assets/default.mp3',
           'my-app/assets/foo.png',
           'my-app/assets/zoo.mp3',
           'my-app/code.js',
@@ -308,16 +365,26 @@ describe('The Exporter,', function () {
 
         it("should have a #divApplab element", () => {
           assert.isNotNull(el.querySelector("#divApplab"), "no #divApplab element");
+          const innerTextLines = el.querySelector("#divApplab").innerText.trim().split('\n');
           assert.equal(
-            el.querySelector("#divApplab").innerText.trim(),
+            innerTextLines[0].trim(),
             'Click Me!',
-            "#divApplab inner text"
+            "#divApplab inner text first line"
+          );
+          assert.equal(
+            innerTextLines[1].trim(),
+            '1',
+            "#divApplab inner text second line"
           );
         });
 
         it("should have removed all style attributes from the elements", () => {
           assert.isNull(
             el.querySelector("#clickMeButton").getAttribute('style'),
+            'style attributes should be removed'
+          );
+          assert.isNull(
+            el.querySelector("#\\31 Button").getAttribute('style'),
             'style attributes should be removed'
           );
         });
@@ -337,6 +404,10 @@ describe('The Exporter,', function () {
           zipFiles['my-app/style.css'],
           '#divApplab.appModern #clickMeButton {\n' +
           '  background-color: red;\n' +
+          '}\n' +
+          '\n' +
+          '#divApplab.appModern #\\31 Button {\n' +
+          '  background-color: blue;\n' +
           '}'
         );
       });
@@ -349,24 +420,220 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/README.txt');
       });
 
-      it("should contain the assets files used by the project", function () {
+      it("should contain the asset files used by the project", function () {
         assert.property(zipFiles, 'my-app/assets/foo.png');
         assert.property(zipFiles, 'my-app/assets/bar.png');
         assert.property(zipFiles, 'my-app/assets/zoo.mp3');
       });
 
+      it("should contain the sound library files referenced by the project", function () {
+        assert.property(zipFiles, 'my-app/assets/default.mp3');
+      });
+
       it("should rewrite urls in html to point to the correct asset files", function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/index.html'];
-        assert.equal(el.querySelector("img").getAttribute('src'), 'assets/foo.png');
+        assert.equal(el.querySelector("#firstImage").getAttribute('src'), 'assets/foo.png');
+        assert.equal(el.querySelector("#secondImage").getAttribute('src'), 'assets/foo.png');
       });
 
       it("should rewrite urls in the code to point to the correct asset files", function () {
-        assert.equal(zipFiles['my-app/code.js'], 'console.log("hello");\nplaySound("assets/zoo.mp3");');
+        assert.equal(zipFiles['my-app/code.js'], 'console.log("hello");\nplaySound("assets/zoo.mp3");\nplaySound("assets/default.mp3");');
       });
 
     });
 
+  });
+
+  describe("when exporting in expoMode,", function () {
+    var zipFiles = {};
+    beforeEach(function (done) {
+      server.respondImmediately = true;
+      let zipPromise = Exporter.exportAppToZip(
+        'my-app',
+        'console.log("hello");\nplaySound("zoo.mp3");\nplaySound("sound://default.mp3");',
+        `<div>
+          <div class="screen" tabindex="1" id="screen1">
+            <input id="nameInput"/>
+            <img id="firstImage" src="/v3/assets/some-channel-id/foo.png"/>
+            <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
+            <button id="clickMeButton" style="background-color: red;">Click Me!</button>
+            <button id="1Button" style="background-color: blue;">1</button>
+            <img id="secondImage" src="/v3/assets/some-channel-id/foo.png"/>
+          </div>
+        </div>`,
+        true
+      );
+
+      zipPromise.then(function (zip) {
+        var relativePaths = [];
+        zip.forEach(function (relativePath, file) {
+          relativePaths.push(relativePath);
+        });
+        var zipAsyncPromises = relativePaths.map(function (path) {
+          var zipObject = zip.file(path);
+          if (zipObject) {
+            return zipObject.async("string");
+          }
+        });
+        Promise.all(zipAsyncPromises)
+          .then(function (fileContents) {
+            relativePaths.forEach(function (path, index) {
+              zipFiles[path] = fileContents[index];
+            });
+            done();
+          }, done);
+      }, done);
+    });
+
+    describe("will produce a zip file, which", function () {
+      it("should contain a bunch of files", () => {
+        const files = Object.keys(zipFiles);
+        files.sort();
+        assert.deepEqual(files, [
+          'my-app/',
+          'my-app/App.js',
+          'my-app/CustomAsset.js',
+          'my-app/DataWarning.js',
+          'my-app/app.json',
+          'my-app/appassets/',
+          'my-app/appassets/icon.png',
+          'my-app/appassets/splash.png',
+          'my-app/appassets/warning.png',
+          'my-app/assets/',
+          'my-app/assets/README.txt',
+          'my-app/assets/applab-api.j',
+          'my-app/assets/applab/',
+          'my-app/assets/applab/applab.css',
+          'my-app/assets/applab/assets/',
+          'my-app/assets/applab/assets/blockly/',
+          'my-app/assets/applab/assets/blockly/media/',
+          'my-app/assets/applab/assets/blockly/media/bar.jpg',
+          'my-app/assets/applab/assets/blockly/media/foo.png',
+          'my-app/assets/applab/assets/blockly/media/third.jpg',
+          'my-app/assets/applab/fontawesome-webfont.woff2',
+          'my-app/assets/bar.png',
+          'my-app/assets/code.j',
+          'my-app/assets/default.mp3',
+          'my-app/assets/foo.png',
+          'my-app/assets/index.html',
+          'my-app/assets/jquery-1.12.1.min.j',
+          'my-app/assets/style.css',
+          'my-app/assets/zoo.mp3',
+          'my-app/package.json',
+          'my-app/packagedFiles.js',
+        ]);
+      });
+
+      it("should contain an applab-api.j file", function () {
+        assert.property(zipFiles, 'my-app/assets/applab-api.j');
+        assert.equal(
+          zipFiles['my-app/assets/applab-api.j'],
+          `${getAppOptionsFile(true, "new_fake_id")}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
+        );
+      });
+
+      it("should contain a jquery-1.12.1.min.j file", function () {
+        assert.property(zipFiles, 'my-app/assets/jquery-1.12.1.min.j');
+        assert.equal(zipFiles['my-app/assets/jquery-1.12.1.min.j'], JQUERY_JS_CONTENT);
+      });
+
+      it("should contain an applab.css file", function () {
+        assert.property(zipFiles, 'my-app/assets/applab/applab.css');
+        assert.equal(zipFiles['my-app/assets/applab/applab.css'], NEW_APPLAB_CSS_CONTENT);
+      });
+
+      describe('the index.html file', () => {
+        let el;
+        beforeEach(() => {
+          el = document.createElement('html');
+          el.innerHTML = zipFiles['my-app/assets/index.html'];
+        });
+
+        it("should have a #divApplab element", () => {
+          assert.isNotNull(el.querySelector("#divApplab"), "no #divApplab element");
+          const innerTextLines = el.querySelector("#divApplab").innerText.trim().split('\n');
+          assert.equal(
+            innerTextLines[0].trim(),
+            'Click Me!',
+            "#divApplab inner text first line"
+          );
+          assert.equal(
+            innerTextLines[1].trim(),
+            '1',
+            "#divApplab inner text second line"
+          );
+        });
+
+        it("should have removed all style attributes from the elements", () => {
+          assert.isNull(
+            el.querySelector("#clickMeButton").getAttribute('style'),
+            'style attributes should be removed'
+          );
+          assert.isNull(
+            el.querySelector("#\\31 Button").getAttribute('style'),
+            'style attributes should be removed'
+          );
+        });
+
+        it("should have added type attributes to all input elements", () => {
+          assert.equal(
+            el.querySelector("input[type='text']").id,
+            'nameInput'
+          );
+        });
+
+      });
+
+      it("should contain a style.css file", function () {
+        assert.property(zipFiles, 'my-app/assets/style.css');
+        assert.include(
+          zipFiles['my-app/assets/style.css'],
+          '#divApplab.appModern #clickMeButton {\n' +
+          '  background-color: red;\n' +
+          '}\n' +
+          '\n' +
+          '#divApplab.appModern #\\31 Button {\n' +
+          '  background-color: blue;\n' +
+          '}'
+        );
+      });
+
+      it("should contain a code.j file", function () {
+        assert.property(zipFiles, 'my-app/assets/code.j');
+      });
+
+      it("should contain a README.txt file", function () {
+        assert.property(zipFiles, 'my-app/assets/README.txt');
+      });
+
+      it("should contain the asset files used by the project", function () {
+        assert.property(zipFiles, 'my-app/assets/foo.png');
+        assert.property(zipFiles, 'my-app/assets/bar.png');
+        assert.property(zipFiles, 'my-app/assets/zoo.mp3');
+      });
+
+      it("should contain the sound library files referenced by the project", function () {
+        assert.property(zipFiles, 'my-app/assets/default.mp3');
+      });
+
+      it("should rewrite urls in html to point to the correct asset files", function () {
+        var el = document.createElement('html');
+        el.innerHTML = zipFiles['my-app/assets/index.html'];
+        assert.equal(el.querySelector("#firstImage").getAttribute('src'), 'foo.png');
+        assert.equal(el.querySelector("#secondImage").getAttribute('src'), 'foo.png');
+      });
+
+      it("should rewrite urls in the code to point to the correct asset files", function () {
+        assert.equal(zipFiles['my-app/assets/code.j'], 'console.log("hello");\nplaySound("zoo.mp3");\nplaySound("default.mp3");');
+      });
+
+      it("should contain the react native files needed by the project", function () {
+        assert.property(zipFiles, 'my-app/App.js');
+        assert.property(zipFiles, 'my-app/CustomAsset.js');
+        assert.property(zipFiles, 'my-app/app.json');
+      });
+    });
   });
 
   describe("globally exposed functions", () => {
@@ -375,7 +642,7 @@ describe('The Exporter,', function () {
     });
   });
 
-  function runExportedApp(code, html, done) {
+  function runExportedApp(code, html, done, globalPromiseName) {
     server.respondImmediately = true;
     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
 
@@ -387,7 +654,7 @@ describe('The Exporter,', function () {
         if (zipObject) {
           return zipObject.async("string");
         }
-      })).then(fileContents => {
+      })).then(async fileContents => {
         const zipFiles = {};
         relativePaths.forEach((path, index) => {
           zipFiles[path] = fileContents[index];
@@ -400,8 +667,12 @@ describe('The Exporter,', function () {
         window.$ = require('jquery');
 
         new Function(getAppOptionsFile())();
+        setAppOptions(Object.assign(window.APP_OPTIONS, { isExported: true }));
         require('../../../build/package/js/applab-api.js');
         new Function(zipFiles['my-app/code.js'])();
+        if (globalPromiseName) {
+          await window[globalPromiseName];
+        }
         done();
       }).catch(e => {
         done(e);
@@ -441,6 +712,22 @@ describe('The Exporter,', function () {
       );
     });
 
+    it("should allow you to use startWebRequest without the XHR proxy", (done) => {
+      runExportedApp(
+        `var webRequestPromise = new Promise(function (resolve, reject) {
+          startWebRequest("https://studio.code.org/fakeRequest", function (status, type, content) {
+            if (status === 200) {
+              resolve(status);
+            } else {
+              reject(new Error('network error'));
+            }
+          });
+        });`,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        done,
+        'webRequestPromise'
+      );
+    });
   });
 
 });

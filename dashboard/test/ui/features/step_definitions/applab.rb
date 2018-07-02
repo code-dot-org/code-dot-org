@@ -9,15 +9,6 @@ When /^I add code for a canvas and a button$/ do
   add_code_to_editor(code)
 end
 
-def add_code_to_editor(code)
-  script =
-    "var aceEditor = __TestInterface.getDroplet().aceEditor;\n" \
-    "aceEditor.textInput.focus();\n" \
-    "aceEditor.onTextInput(\"#{code}\");\n"
-
-  @browser.execute_script(script)
-end
-
 And /^Applab HTML has a button$/ do
   code = @browser.execute_script "return Applab.levelHtml"
   expect(/button/.match(code).nil?).to be(false)

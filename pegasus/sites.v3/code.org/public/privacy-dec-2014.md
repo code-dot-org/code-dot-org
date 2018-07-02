@@ -7,7 +7,7 @@ theme: responsive
 Effective Date: December 5, 2014 
 
 ## About Code.org
-Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
+Code.org® is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
 
 Please read this Privacy Policy (“**Privacy Notice**”) carefully before accessing or using the Website.
 

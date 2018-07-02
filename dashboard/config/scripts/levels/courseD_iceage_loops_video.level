@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-04-12T19:56:37.000Z",
+  "level_num": "custom",
+  "user_id": 772,
+  "properties": {
+    "video_key": "CSF_scrat_loops_K1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 12174
+  },
+  "published": true,
+  "notes": "\r\n",
+  "audit_log": "[{\"changed_at\":\"2018-04-05 23:30:05 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-12 21:27:57 +0000\",\"changed\":[\"notes\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

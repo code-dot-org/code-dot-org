@@ -1,0 +1,17 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "jumpTo",
+    "blockText": "{SPRITE} jump to {LOCATION}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

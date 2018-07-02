@@ -5,43 +5,43 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### கம்ப்யூட்டர் சயின்ஸ் எடிட்டிங் வீக் மற்றும் மாநிலங்கள், உள்ளூர் சட்டமன்ற உறுப்பினர்கள், வணிகத் தலைவர்கள் ஆகியோரால் பயன்படுத்தக்கூடிய அதன் இலக்குகளை ஆதரிக்கும் மாதிரியாக ஒரு மாதிரி உள்ளது.
 
   
 
 
-Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
+Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
 
-**Title: Computing…Where the Jobs Are**
+**தலைப்பு: கணினி ... வேலைகள் எங்கே**
 
-**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
+**[NAME] மற்றும் [கல்விதாரர், சந்தாதாரர் அல்லது வணிகத் தலைவர்களுடன் கருத்துத் தெரிவித்தல்]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+கணினிகள் எல்லா இடங்களிலும் உள்ளன. அவர்கள் எங்கள் பைகளில் இருக்கிறார்கள். அவர்கள் எங்கள் சுவர்களில் இருக்கிறார்கள். அவர்கள் எங்கள் கார்களில் இருக்கிறார்கள். அவர்கள் நமது உள்கட்டமைப்பின் ஒரு முக்கியமான பகுதியாக இருக்கிறார்கள், மின் உற்பத்தி நிலையங்களில் இருந்து போக்குவரத்து விளக்குகள் வரை நமது நிதிச் சந்தையின் உள் செயற்பாடுகளுக்கு. மற்றும் இந்த கணினிகள் அனைத்தும் பொதுவான ஒன்று உள்ளது. அவர்கள் என்ன செய்ய வேண்டும் என்று சொல்வதற்கு மென்பொருளை சார்ந்து இருக்கிறார்கள்.
 
-But who exactly is going to write this software?
+ஆனால் இந்த மென்பொருளை சரியாக எழுதுவது யார்?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+எமது உலகம் தொழில்நுட்பத்தை எவ்வாறு மாற்றியமைப்பதைக் கருத்தில் கொண்டு, K-12 கல்வியில் கம்ப்யூட்டர் சயின்ஸ் படிக்கும் மாணவர்களின் எண்ணிக்கையானது அனைத்து நேரத்திலும் உயர்ந்ததாக இருக்கும் என நீங்கள் எதிர்பார்க்கலாம். நீங்கள் தவறாக இருக்கலாம். உண்மையில், குறைந்த மாணவர்கள் கணினி அறிவியல் படிக்கும், மற்றும் குறைவான பள்ளிகள் ஒரு தசாப்தம் முன்பு, அதை கற்பிப்பதில்.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
+ஒரு காலத்தில் திறமையான நிரலாளர்களுக்கான தேவை அதிகமானதாக இல்லை, நாங்கள் குறைவான கணினி அறிவியலாளர்களை வெளியேற்றுவோம். இந்த வேலையில் அதிகமான வேலையின்மை, ஆயிரக்கணக்கான வேலைகள், பல வலுவான இடங்களில், வலுவான நபர்கள் இல்லாததால், சரியான திறமைசாலிகளால் நிரப்பப்படவில்லை.
 
-Why is this? And how can we address it?
+இது ஏன்? நாம் எப்படி அதைக் கூற முடியும்?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+பிரச்சனை நம் நடுத்தர மற்றும் உயர்நிலை பள்ளிகளில் தொடங்குகிறது. எங்கள் பள்ளிகளில் பத்து பத்தாயிரம் கணினி நிரலாக்க வகுப்புகள் வழங்கவில்லை. கடந்த ஆண்டு, ** [NUMBER] </ strong> மாணவர்கள், கல்லூரி-நிலை மேம்பட்ட வேலை வாய்ப்பு (AP) கணினி அறிவியல் தேர்வு மட்டும் ** [%] </ strong> எங்கள் மாநிலத்தில் AP ஐ எடுத்த அனைத்து மாணவர்களுக்கும் வலுவானதாக இருந்தது. இந்த உயர்-ஊதியம், முக்கிய தொழில் வாழ்க்கையைத் தொடர எங்கள் மாணவர்கள் தயாராவதற்கு அல்லது ஊக்கப்படுத்துவதற்கு போதுமானதாக இல்லை.</p> 
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+கிட்டத்தட்ட எல்லா முக்கிய கணிப்பீடுகளும் இந்த நாட்டில் இங்கே கண்டுபிடிக்கப்பட்டுள்ளன, ஆனால் இப்போது நாம் ஏதாவது செய்யாவிட்டால் அந்தத் தலைமையை இழக்க நேரிடும்.
 
-We need to make some changes.
+சில மாற்றங்களை செய்ய வேண்டும்.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[இது பொருந்தும் எங்கே நிலைகள் விருப்பம்]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+கடுமையான கணினி அறிவியல் படிப்புகள் ஒரு உயர்நிலை பள்ளி கணித அல்லது அறிவியல் பட்டம் தேவை பூர்த்தி செய்ய ஒரு நேர்மறையான மாற்றம் இருக்க வேண்டும். **[INSERT STATE]** இல், கணினி அறிவியல் படிப்புகள் தேர்ந்தெடுக்கப்பட்டவை. கல்வி கோரிக்கைகளைத் தந்தால், மாணவர்கள் கணினி கணினி விஞ்ஞான படிப்புகளை எடுக்க முடியாது. இந்த மாற்றத்தை ஒரு பெரிய தாக்கத்தை ஏற்படுத்தலாம். கணினி விஞ்ஞான படிப்புகள் பட்டப்படிப்பு தேவைகள் மீது எண்ணும் மாநிலங்களில், கணினி அறிவியல் ஒரு தேர்ந்தெடுப்பு என்று மாநிலங்களில் விட underserved சிறுபான்மையினர் பங்கு அதிக விகிதத்தில் ஐம்பது சதவீதம் அதிகமாக உள்ளது.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+We should also work with students at a young age to spark their interest in computer science and coding. எங்களுடைய குழந்தைகள் பயன்பாடுகளைப் பயன்படுத்துவதையும் வீடியோ கேம் விளையாடுவதையும் எப்படித் தெரிந்து கொள்ளக்கூடாது - அவற்றை எவ்வாறு உருவாக்க வேண்டும் என்பதை அவர்கள் தெரிந்து கொள்ள வேண்டும். இரண்டாம் வகுப்பு ஆரம்பத்தில் குறியீட்டு அடிப்படைகளை குழந்தைகள் கற்றுக் கொள்ளலாம்.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+நாம் இன்னும் கணினி அறிவியல் ஆசிரியர்களை சேர்த்துக்கொள்ள வேண்டும் மற்றும் அவர்களின் துறையில் தொழில்முறை வளர்ச்சி ஊக்குவிக்க வேண்டும். இன்று ஆசிரியர்கள் அணுகுவதற்கு உதவக்கூடிய மற்றும் அவர்களின் மாணவர்களுக்கான சமீபத்திய தொழில்நுட்பத்துடன் புதுப்பித்துக் கொள்ள உதவும் பல ஆன்லைன் ஆதாரங்கள் உள்ளன.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+2020 க்குள் தொழிலாளர் புள்ளியியல் அலுவலகம் கூறுகிறது, STEM புலங்களில் 9.2 மில்லியன் வேலைகள் இருக்கும். அந்த வேலைகளில் பாதி-4.6 மில்லியன்-கம்ப்யூட்டிங் அல்லது தகவல் தொழில்நுட்பத்தில் இருக்கும். 21 ஆம் நூற்றாண்டிற்கான கணினி அறிவியலும், திறன்களைப் பெறும் வாய்ப்பை எங்கள் குழந்தைகள் வழங்காவிட்டால், யார் இந்த வேலைகளை நிரப்புவார்கள்?
 
-This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+இந்த வாரம், <%= campaign_date('full') %>, கணினி அறிவியல் கல்வி வாரம். ** [STATE] </ strong> முழுவதிலும் உள்ள பள்ளிகளில் எங்கள் மாணவர்கள், தேசிய அறிவியல் அரங்கில் பங்கு பெறுவார்கள், கணினி விஞ்ஞானத்தின் பொருளைக் குறைப்பார்கள், மேலும் தங்கள் விருப்பங்களை அதிகரித்து, மேலும் அறிந்து கொள்வதற்கு வட்டிக்குத் தூண்டுவார்கள். நான் அவர்களுடன் இணைந்திருப்பேன், மேலும் உங்களை நீங்களும் சேர அழைக்கிறேன். எல்லோரும் எவ்வாறு குறியீட்டைக் கற்றுக் கொள்ள வேண்டும். மேலும் அறிய மற்றும் தொடங்குவதற்கு https://hourofcode.com/<%= @country%> வருக. மேலும் ** [STATE] </ strong> இல் மேலும் பள்ளிகளுக்கு கணினி அறிவை வளர்ப்பதற்கான எங்கள் முயற்சிகளை ஆதரிக்கவும்.</p> 
 
 <%= view :signup_button %>

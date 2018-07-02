@@ -20,9 +20,15 @@ class ScriptDSL < BaseDSL
     @stage_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
+    @has_lesson_plan = false
+    @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
     @script_announcements = nil
+    @new_name = nil
+    @family_name = nil
+    @version_year = nil
+    @is_stable = nil
   end
 
   integer :id
@@ -37,9 +43,15 @@ class ScriptDSL < BaseDSL
   boolean :stage_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
+  boolean :has_lesson_plan
+  boolean :is_stable
 
   string :wrapup_video
   string :script_announcements
+  string :new_name
+  string :family_name
+  string :version_year
+  string :curriculum_path
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -82,9 +94,15 @@ class ScriptDSL < BaseDSL
       teacher_resources: @teacher_resources,
       stage_extras_available: @stage_extras_available,
       has_verified_resources: @has_verified_resources,
+      has_lesson_plan: @has_lesson_plan,
+      curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
       script_announcements: @script_announcements,
+      new_name: @new_name,
+      family_name: @family_name,
+      version_year: @version_year,
+      is_stable: @is_stable,
     }
   end
 
@@ -200,8 +218,8 @@ class ScriptDSL < BaseDSL
     {'name' => {@name => {'stages' => i18n_strings}}}
   end
 
-  def self.parse_file(filename)
-    super(filename, File.basename(filename, '.script'))
+  def self.parse_file(filename, name = nil)
+    super(filename, name || File.basename(filename, '.script'))
   end
 
   def self.serialize(script, filename)
@@ -233,9 +251,15 @@ class ScriptDSL < BaseDSL
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
     s << 'stage_extras_available true' if script.stage_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
+    s << 'has_lesson_plan true' if script.has_lesson_plan
+    s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
     s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "new_name '#{script.new_name}'" if script.new_name
+    s << "family_name '#{script.family_name}'" if script.family_name
+    s << "version_year '#{script.version_year}'" if script.version_year
+    s << 'is_stable true' if script.is_stable
 
     s << '' unless s.empty?
     s << serialize_stages(script)

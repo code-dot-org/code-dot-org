@@ -68,7 +68,6 @@
       "comment_Drawing": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Possible Solution #2 - Compound Conditionals\r\n\r\nAnother way that you might have phrased the challenge problem is:\r\n\r\n\tIf the up arrow was pressed AND the sprite hasn't gone off the top of the screen, move up.\r\n\r\nThis structure of asking both questions at the same time is accomplished using a **compound conditional**. Compound conditionals use the boolean operators `AND` and `OR` to ask multiple questions at once. `AND` only returns true if _both_ of the questions it's asking are true, while `OR` will return true if _either_ of its questions are true. In JavaScript (and many other languages) `AND` is represented by two ampersands (`&&`) while `OR` is represented by two pipes (`||`) - their blocks look like this: \r\n\r\n![](https://images.code.org/c7ab68cb4091472f05d7c862a52730c6-image-1466785066210.48.02.png)\r\n\r\nWe could pseudocode this solution as \r\n\r\n\tIf the up arrow was pressed AND sprite.y > 0\t// Both Questions\r\n    \tmove up\t\t\t\t\t\t\t\t\t // Only runs if both questions were true\r\n\r\n\r\n# Do This\r\n\r\nHere's the same code from the challenge again, but this time the up arrow uses a compound conditional. \r\n\r\n* Use the same compound conditional pattern on the other three arrow keys.\r\n",

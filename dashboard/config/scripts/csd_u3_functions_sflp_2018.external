@@ -1,0 +1,17 @@
+name 'CSD U3 Functions SFLP_2018'
+display_name 'Lesson Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# Overview
+
+This lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.
+## Vocabulary
+
+* **Function** - A piece of code that you can easily call over and over again.
+
+## Introduced Code
+
+* [Define a function](//docs.code.org/gamelab/functionParams_none/)
+* [Call a function](//docs.code.org/gamelab/callMyFunction/)
+
+MARKDOWN

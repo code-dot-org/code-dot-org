@@ -1,0 +1,9 @@
+name 'CSP Unit2 Ch1 MC megabyte_exam_prep'
+title 'How big is it?'
+description ''
+question 'Select the answer that lists the units of bytes in ascending order (from smallest to largest)'
+
+wrong 'gigabyte, megabyte, terabyte'
+wrong 'megabyte, terabyte, kilobyte'
+wrong 'gigabyte, terabyte, megabyte'
+right 'kilobyte, gigabyte, terabyte'

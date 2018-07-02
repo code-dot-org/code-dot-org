@@ -1,0 +1,11 @@
+name 'CSD U6 LED create intro_2018'
+title 'Make an App Using the LED'
+display_name 'LED Games'
+description 'description here'
+markdown <<MARKDOWN
+# LED Apps
+
+In the last level, you made an app to control the LED with different buttons on the screen.   In the next two levels, you'll see some other examples of apps, then have a chance to make one of your own.
+
+As you look at the examples, think of what code might be useful for the app that you and your partner want to create.
+MARKDOWN

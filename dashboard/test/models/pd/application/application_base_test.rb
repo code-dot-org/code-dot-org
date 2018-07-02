@@ -203,5 +203,42 @@ module Pd::Application
 
       assert_equal expected_full_answers, application.full_answers
     end
+
+    test 'date_accepted formats the accepted date as iso8601' do
+      application = ApplicationBase.new
+      assert_nil application.date_accepted
+
+      # March 9, 2018 10:15am
+      application.accepted_at = DateTime.new(2018, 3, 9, 10, 15)
+      assert_equal '2018-03-09', application.date_accepted
+    end
+
+    test 'memoized full_answers' do
+      application = ApplicationBase.new
+      application.stubs(additional_text_fields:
+        [
+          [:string_question_with_extra]
+        ]
+      )
+      form_data = {
+        regular_string_question: 'regular string answer',
+        string_question_with_extra: 'Other:',
+        string_question_with_extra_other: 'my other string answer',
+      }
+      application.stubs(sanitize_form_data_hash: form_data)
+      ApplicationBase.stubs(filtered_labels: form_data)
+
+      expected_full_answers = {
+        regular_string_question: 'regular string answer',
+        string_question_with_extra: 'Other: my other string answer',
+      }
+
+      assert_nil application.instance_variable_get(:@full_answers)
+      assert_equal expected_full_answers, application.full_answers
+      assert_equal expected_full_answers, application.instance_variable_get(:@full_answers)
+
+      application.form_data = nil
+      assert_nil application.instance_variable_get(:@full_answers)
+    end
   end
 end

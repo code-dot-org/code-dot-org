@@ -5,7 +5,9 @@
     "name": "ChromeLatestWin7",
     "browserName": "chrome",
     "version": "latest",
-    "platform": "Windows 7"
+    "platform": "Windows 7",
+    "extendedDebugging": false,
+    "screenResolution": "1280x1024"
   },
   {
     "name": "Chrome44Win7",
@@ -40,7 +42,7 @@
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "platformVersion": "9.2",
+    "platformVersion": "9.3",
     "browserName": "safari",
     "deviceName": "iPhone Simulator",
     "appiumVersion": "1.6.5",
@@ -51,7 +53,7 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "platformVersion": "9.2",
+    "platformVersion": "9.3",
     "browserName": "safari",
     "deviceName": "iPad Simulator",
     "appiumVersion": "1.6.5",

@@ -59,7 +59,7 @@ social:
 </h2>
 
 <p>
-  <a href="https://code.org/volunteer/local">搜索我們的志願者分佈圖</a> 志願者可以到訪您的教室或者通過遠程視頻聊天來激發您的學生了解學習計算機科學廣泛應用的可能性。
+  <a href="%= codeorg_url('/volunteer/local') %">Search our volunteer map</a> for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 </p>
 
 <h2>

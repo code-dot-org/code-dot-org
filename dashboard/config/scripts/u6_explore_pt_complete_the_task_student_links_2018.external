@@ -1,0 +1,54 @@
+name 'U6 Explore PT - Complete the Task - Student Links_2018'
+css 'unplugged'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Explore PT - Complete the Task
+
+## Background
+
+It's finally time for you to take on the Explore Performance Task! For the next several days, you should work individually on your project without teacher support. At the end of the 8th day (or hour) of this task, you will submit your computational artifact and written responses to the AP Digital Portfolio.
+
+Best of luck!
+
+## Lesson
+
+* Review Guidelines for completing the task and your plan
+* Complete the Explore Performance Task.
+* Submit your computational artifact and written responses to the AP Digital Portfolio
+
+## Resources
+
+**AP CSP Performance Task Directions for Students - quick links** 
+
+* Page 2 - [Policy on Plagiarism](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=4)
+* Page 3 - [Preparing for the Through-Course Performance Tasks](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=5)
+* Page 7 - [Preparing for the Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=9)
+* Page 8 - [Guidelines for Completing the Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=10)
+
+**College Board Documents**
+
+* [Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=6) - Task Description
+* [Scoring Guidelines - Explore Performance Task](https://apcentral.collegeboard.org/pdf/2018-explore-performance-tasks-sg.pdf)
+
+**Digital Portfolio**
+
+* [AP Digital Portfolio Website](https://digitalportfolio.collegeboard.org/)
+* [Student Guide - AP Digital Portfolio](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf)
+
+**Review and Planning Documents**
+
+* [Explore PT Survival Guide](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=pdf) - Student Guide (copy as [MS Word](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/copy))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+For the Teacher: [AP Digital Portfolio: Teacher User Guide for AP Computer Science Principles](https://apcentral.collegeboard.org/pdf/computer-science-principles-digital-portfolio-teacher-guide.pdf)
+
+Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
+
+Almost all of the links here are for **student reference, to use while completing the task.**
+
+The only new document here is the "Guidelines for completing the task" which are mostly reminders about the requirements and how students are allowed to interact with each other and the teacher.
+MARKDOWN

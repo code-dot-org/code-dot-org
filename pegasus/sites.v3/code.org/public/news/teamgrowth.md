@@ -9,7 +9,7 @@ theme: responsive
 
 **Code.org merges with Computing in the Core and Technically Learning, and grows executive team.**
 
-SEATTLE, July 31, 2013 - Code.org, a non-profit dedicated to growing K-12 computer science education in America, announced today partnerships with the Association for Computing Machinery(ACM), mergers with advocacy coalition Computing in the Core and nonprofit Technically Learning, and a new hire, former PopCap Games senior executive, James Gwertzman.
+SEATTLE, July 31, 2013 - Code.org, a nonprofit dedicated to growing K-12 computer science education in America, announced today partnerships with the Association for Computing Machinery(ACM), mergers with advocacy coalition Computing in the Core and nonprofit Technically Learning, and a new hire, former PopCap Games senior executive, James Gwertzman.
 
 “Our goal is to ensure that every K-12 student in the US has the opportunity to study computer science,” said Hadi Partovi, CEO and founder of Code.org. “ACM is a known leader of the computer science community and has made a major contribution by partnering with Code.org, lending key staffing support, and supporting our merger with Computing in the Core. We’re excited to be working together to change education policies and grow cultural awareness in support of widespread computer science education.”
 
@@ -25,4 +25,4 @@ Lastly, Code.org has expanded its executive team by hiring James Gwertzman, a lo
 
 ---
 
-Code.org is a public 501c3 non-profit. Founded by twins Ali and Hadi Partovi, Code.org’s vision is that every student in every school should have the opportunity to learn to code. [http://code.org](http://code.org)
+Code.org is a public 501c3 nonprofit. Founded by twins Ali and Hadi Partovi, Code.org’s vision is that every student in every school should have the opportunity to learn to code. [http://code.org](http://code.org)

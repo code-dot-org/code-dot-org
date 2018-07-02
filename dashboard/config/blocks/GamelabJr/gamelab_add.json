@@ -1,0 +1,19 @@
+{
+  "category": "Groups",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "add",
+    "blockText": "add {SPRITE} to group {THIS}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ],
+    "methodCall": true
+  }
+}

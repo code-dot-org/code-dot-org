@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:36:18.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "\r\nChoose the visualization that you thought was the best or worst (pick one) from the ones you saw in class and do the following:\r\n\r\n1. Describe the visualization so the reader knows which one you are talking about (example: \"Collection A #2 -- Average divorce rates in America\")\r\n\r\n2. Say whether this was the best or worst visualization for you and *and why*.  Justify your opinion by citing principles of visualizations that you have learned about.  Use the visualization 101 guide as a resource. \r\n\r\nTry to keep your response to around 100 words (about 3-5 sentences).\r\n",
+    "submittable": "true",
+    "title": "Justify it - Best or Worst Viz",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 5619,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

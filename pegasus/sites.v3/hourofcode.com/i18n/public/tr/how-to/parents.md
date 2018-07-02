@@ -36,13 +36,13 @@ En iyi Kod-Saati deneyimi internet bağlantısı olan bir bilgisayarda gerçekle
     
     - [ Dünya geneli Kod-Saati videosu](https://www.youtube.com/watch?v=KsOIlDT145A)
     - [Başkan Obama, tüm öğrencileri bilgisayar bilimi öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-    - Daha fazla ilham verici [kaynaklar](<%= resolve_url('https://code.org/inspire') %>) ve [videolar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) bulun.</ul> 
+    - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).</ul> 
     
     Eğer bilgisayar biliminde yeniyseniz sorun değil. işte size kodlama saati aktivitelerini tanıtmak için birkaç fikir:
     
     - Teknolojinin hayatımıza etkisini hem kız hemde erkekleri ilgilendirecek şekilde açıklayın.( hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin.).
     - Günlük hayatımızda kod kullanılan şeyleri listeleyin.
-    - Kızların bilgisayar bilimi ile ilgilenmesine ilişkin ipuçları için [buraya](<%= resolve_url('https://code.org/girls') %>) bakın.
+    - See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
     
     Daha fazla fikir ister misiniz? Deneyimli eğitimcilerin en iyi uygulamaları için  şablon ders planımıza </ 0> bakın.</p> 
     
@@ -62,7 +62,7 @@ En iyi Kod-Saati deneyimi internet bağlantısı olan bir bilgisayarda gerçekle
     
     ## 6) Kutlama
     
-    çocuğunuz (ve kendiniz) için [sertifika bastırın.](<%= resolve_url('https://code.org/certificates') %>).
+    [Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
     
     Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
     
@@ -74,7 +74,7 @@ En iyi Kod-Saati deneyimi internet bağlantısı olan bir bilgisayarda gerçekle
     
     Kodlama Zamanı, teknolojinin nasıl çalıştığı hakkında daha fazla bilgi edinme ve uygulama yazılımı oluşturmayı öğrenme yolculuğunda sadece ilk basamaktır. Bu yolculuğa devam etmek için:
     
-    - Çocuğunuzu[ çevrimiçi](<%= resolve_url('https://code.org/learn/beyond') %>) öğrenmeye devam etmesi için teşvik edin.
+    - Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
     - Çocuğunuzun okul bölgesindeki bilgisayar bilimi eğitimini  teşvik edin </ 0>.</li> </ul> 
         
         <%= view :signup_button %>

@@ -3,8 +3,12 @@ require 'cdo/aws/s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
+require 'cdo/image_moderation'
+require 'nokogiri'
 
 class FilesApi < Sinatra::Base
+  set :mustermann_opts, check_anchors: false
+
   def max_file_size
     5_000_000 # 5 MB
   end
@@ -173,6 +177,9 @@ class FilesApi < Sinatra::Base
     get_file('files', encrypted_channel_id, 'index.html', true)
   end
 
+  #
+  # @return [IO] requested file body as an IO stream
+  #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
@@ -213,7 +220,54 @@ class FilesApi < Sinatra::Base
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
     end
 
+    if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
+      return StringIO.new sanitize_for_under_13 result[:body].string
+    end
+
     result[:body]
+  end
+
+  # We should sanitize all sources created by under-13 users unless it is the
+  # user themselves requesting to view the source
+  def should_sanitize_for_under_13?(encrypted_channel_id)
+    return false if owns_channel?(encrypted_channel_id)
+
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_id = user_id_for_storage_id(owner_storage_id)
+    under_13?(owner_id)
+  end
+
+  # Perform sanitization for sources created by under-13 users.
+  # Currently, all this does is remove any "comment" blocks, but it could easily
+  # be expanded to provide more privacy options
+  def sanitize_for_under_13(body_string)
+    begin
+      parsed_json = JSON.parse(body_string)
+    rescue JSON::ParserError
+      return body_string
+    end
+
+    return body_string unless parsed_json.key?('source')
+    blockly_xml = Nokogiri::XML(parsed_json['source'])
+    return body_string unless blockly_xml.errors.empty?
+
+    # first, remove all comment blocks by replacing them with the next block in
+    # the hierarchy
+    blockly_xml.xpath("//block[@type='comment']").each do |comment_block|
+      next_block = (comment_block > "next") > "block"
+      comment_block.replace(next_block)
+    end
+
+    # then, remove all empty "next" blocks
+    blockly_xml.xpath("//next").each do |next_block|
+      next_block.remove if next_block.children.empty?
+    end
+
+    # finally, write the modified xml back out to json
+    new_source = blockly_xml.serialize({save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION}).strip
+    parsed_json['source'] = new_source
+
+    parsed_json.to_json
   end
 
   # A list of some file types that are safe to view in the browser without
@@ -259,9 +313,23 @@ class FilesApi < Sinatra::Base
 
     quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, params['version'])
 
-    {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
+    # Replacing a non-current version of main.json could lead to perceived data loss.
+    # Log to firehose so that we can better troubleshoot issues in this case.
+    version_to_replace = params['version']
+    timestamp = params['firstSaveTimestamp']
+    tab_id = params['tabId']
+    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
+
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
+
+    {
+      filename: filename,
+      category: category,
+      size: body.length,
+      versionId: response.version_id,
+      timestamp: Time.now # for logging purposes
+    }.to_json
   end
 
   #
@@ -445,18 +513,17 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/(animations|sources)/<channel-id>/<filename>/restore?version=<version-id>
+  # PUT /v3/sources/<channel-id>/<filename>/restore?version=<version-id>
   #
-  # Copies the given version of the file to make it the current revision.
-  # NOTE: Not yet implemented for assets.
+  # Copies the given version of the source to make it the current revision.
   #
-  put %r{/v3/(animations|sources)/([^/]+)/([^/]+)/restore$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/sources/([^/]+)/([^/]+)/restore$} do |encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+    SourceBucket.new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
   end
 
   #
@@ -555,6 +622,7 @@ class FilesApi < Sinatra::Base
         manifest.to_json,
         params['files-version']
       )
+      new_entry_hash['filesVersionId'] = response.version_id
     end
 
     # delete a file if requested (same as src file in a rename operation)
@@ -563,7 +631,6 @@ class FilesApi < Sinatra::Base
     end
 
     # return the new entry info
-    new_entry_hash['filesVersionId'] = response.version_id
     new_entry_hash.to_json
   end
 
@@ -728,9 +795,8 @@ class FilesApi < Sinatra::Base
   #
 
   METADATA_PATH = '.metadata'.freeze
-  METADATA_FILENAMES = %w(
-    thumbnail.png
-  ).freeze
+  THUMBNAIL_FILENAME = 'thumbnail.png'
+  METADATA_FILENAMES = [THUMBNAIL_FILENAME].freeze
 
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
@@ -762,14 +828,41 @@ class FilesApi < Sinatra::Base
     get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
   end
 
+  MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
+    applab
+    gamelab
+  )
+
   #
   # GET /v3/files-public/<channel-id>/.metadata/<filename>?version=<version-id>
   #
   # Read a metadata file, caching the result for 1 hour.
   #
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
-    file = get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
+    s3_prefix = "#{METADATA_PATH}/#{filename}"
+    file = get_file('files', encrypted_channel_id, s3_prefix)
+
+    if THUMBNAIL_FILENAME == filename
+      storage_apps = StorageApps.new(storage_id('user'))
+      project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
+      if MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include? project_type
+        file_mime_type = mime_type(File.extname(filename.downcase))
+        rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
+        if %i(adult racy).include? rating
+          # Incrementing abuse score by 15 to differentiate from manually reported projects
+          new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
+          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
+          response.headers['x-cdo-content-rating'] = rating.to_s
+          cache_for 1.hour
+          not_found
+        end
+      end
+    end
+
     cache_for 1.hour
+    # Because we _might_ have already read from this IO object during image
+    # moderation, rewind to the start of the file before responding with it.
+    file.seek(0, IO::SEEK_SET)
     file
   end
 

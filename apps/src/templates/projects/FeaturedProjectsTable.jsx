@@ -6,7 +6,7 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
-  PROJECT_TYPE_MAP,
+  FEATURED_PROJECT_TYPE_MAP,
   featuredProjectDataPropType,
   featuredProjectTableTypes
 } from './projectConstants';
@@ -68,13 +68,18 @@ export const styles = {
 };
 
 // Cell formatters.
-const thumbnailFormatter = function (thumbnailUrl) {
+const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
+  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
-  return (<ImageWithStatus
-    src={thumbnailUrl}
-    width={THUMBNAIL_SIZE}
-    wrapperStyle={styles.thumbnailWrapper}
-          />);
+  return (
+    <a style={tableLayoutStyles.link} href={projectUrl} target="_blank">
+      <ImageWithStatus
+        src={thumbnailUrl}
+        width={THUMBNAIL_SIZE}
+        wrapperStyle={styles.thumbnailWrapper}
+      />
+    </a>
+  );
 };
 
 const nameFormatter = (projectName, {rowData}) => {
@@ -149,7 +154,7 @@ const dateFormatter = (time) => {
 };
 
 const typeFormatter = (type) => {
-  return PROJECT_TYPE_MAP[type];
+  return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
 class FeaturedProjectsTable extends React.Component {

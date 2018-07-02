@@ -11,7 +11,12 @@ export default () => {
       if (dashboard.project.isFrozen()) {
         $('.project_admin').html($('<span>&#x2744; Frozen! To use as an example, copy this id: <input type="text" disabled value="' +
           dashboard.project.getCurrentId() +
-          '"/></span>'));
+          '"/><div><button id="unfreeze" class="btn btn-default btn-sm">Unfreeze</button><div></span>'));
+          $('#unfreeze').click(function () {
+            dashboard.project.unfreeze(function () {
+              window.location.reload();
+            });
+          });
       } else {
         $('.project_admin').html($('<button id="freeze" class="btn btn-default btn-sm">Freeze for use as an exemplar &#x2744;</button>'));
         $('#freeze').click(function () {
@@ -61,7 +66,10 @@ export default () => {
     });
   }
 
-  if ($('.admin-abuse').length && dashboard.project.isProjectLevel()) {
+  if (
+    $('.admin-abuse').length &&
+    (dashboard.project.isProjectLevel() || !dashboard.project.shouldHideShareAndRemix())
+  ) {
     var abuseScore = dashboard.project.getAbuseScore();
     if (abuseScore) {
       $('.admin-abuse').show();
@@ -73,4 +81,18 @@ export default () => {
       $('.admin-report-abuse').show();
     }
   }
+
+  $('#disable-auto-moderation').click(function () {
+    alert("You clicked the disable automated image moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
+    $('#disable-auto-moderation').hide();
+    $('#moderation-explanation').hide();
+    $('#enable-auto-moderation').show();
+  });
+
+  $('#enable-auto-moderation').click(function () {
+    alert("You clicked the enable automated image moderation button. It doesn't do anything yet because our moderation filter is turned off, but it will be functional soon. Thanks for your patience with this work-in-progress button!");
+    $('#disable-auto-moderation').show();
+    $('#moderation-explanation').show();
+    $('#enable-auto-moderation').hide();
+  });
 };

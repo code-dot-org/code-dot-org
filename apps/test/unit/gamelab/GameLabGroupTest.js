@@ -37,6 +37,16 @@ describe('GameLabGroup', function () {
       expect(sprite1.setSpeedAndDirection.calledWith(speed, direction)).to.be.true;
       expect(sprite2.setSpeedAndDirection.calledWith(speed, direction)).to.be.true;
     });
+
+    it('removes every element', function () {
+      let group = createGroup();
+      for (let i = 0; i < 2; i++) {
+        group.add(createSprite(0, 0));
+      }
+      group.destroyEach();
+
+      expect(group).to.be.empty;
+    });
   });
 
   describe('collision methods', function () {

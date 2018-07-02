@@ -134,7 +134,8 @@
       "callMyFunction_n": null,
       "return": null,
       "comment": null,
-      "stopSound": null
+      "stopSound": null,
+      "accessListItem": null
     },
     "edit_code": true,
     "embed": "true",
@@ -170,9 +171,22 @@
     "debugger_disabled": "false",
     "instructions": "Use the \"My Favorite Things\" app. How might this app be making use of an array? (Click to see full instructions)",
     "markdown_instructions": "# My Favorite Things\r\n\r\nCheck out this simple app for creating a collection of your favorite things. **We're going to be working towards building this app** over the next several exercises. As you might expect, this application **uses an array** to store and organize information.\r\n\r\n# Do This:\r\n\r\n* Use the \"My Favorite Things\" app and try to **predict how arrays are used to create the functionality you observe.** \r\n* Some features to notice:\r\n\t* The app keeps track of a **list of your favorite things**.\r\n    * You may use buttons to **move forward and backward through your list**.\r\n    * The **current entry and total number of entries** are indicated at the top.\r\n    * You may **add a new entry** at the current location in your list.",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-20 16:17:45 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

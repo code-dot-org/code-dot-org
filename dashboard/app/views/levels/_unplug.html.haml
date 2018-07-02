@@ -12,9 +12,9 @@
 = stylesheet_link_tag '/blockly/video-js/video-js', media: 'all'
 
 .unplugged
-  %h1 #{try_t("data.unplugged.#{unplugged}.title")}
+  %h1= try_t("data.unplugged.#{unplugged}.title")
 
-  %p #{try_t("data.unplugged.#{unplugged}.desc")}
+  %p= try_t("data.unplugged.#{unplugged}.desc")
 
   .video-section
     %a.btn.btn-primary.next-stage
@@ -83,4 +83,12 @@
   :javascript
     var videoOptions = #{video.summarize(false).to_json};
     var videoHeight = #{page_width} / (16 / 9);
+
+    // Temporarily use youtube-nocookie.com for two videos.
+    if (appOptions.scriptName == "express" &&
+        (appOptions.stagePosition == 1 || appOptions.stagePosition == 3) &&
+        appOptions.levelPosition == 1) {
+      videoOptions.src = videoOptions.src.replace("youtube.com", "youtube-nocookie.com");
+    }
+
     window.dashboard.videos.createVideoWithFallback($('.video-container'), videoOptions, #{page_width}, videoHeight);

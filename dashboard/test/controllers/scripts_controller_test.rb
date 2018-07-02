@@ -273,4 +273,70 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
   end
+
+  test 'can create with has_lesson_plan param' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    File.stubs(:write)
+
+    post :create, params: {
+      script: {name: 'test-script-create'},
+      script_text: '',
+      visible_to_teachers: true,
+      has_lesson_plan: true,
+    }
+
+    script = Script.find_by_name('test-script-create')
+    assert_equal 'test-script-create', script.name
+    assert script.has_lesson_plan?
+
+    File.unstub(:write)
+  end
+
+  test 'can update with has_lesson_plan param' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    refute script.has_lesson_plan?
+
+    File.stubs(:write)
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      has_lesson_plan: true,
+    }
+
+    # Reload script, expect change
+    script = Script.find_by_id(script.id)
+    assert script.has_lesson_plan?
+  end
+
+  test 'should redirect to latest stable version in script family' do
+    dogs1 = create :script, name: 'dogs1', family_name: 'dogs', version_year: '1901'
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {id: 'dogs'}
+    end
+
+    dogs1.update!(is_stable: true)
+    get :show, params: {id: 'dogs'}
+    assert_redirected_to "/s/dogs1"
+
+    create :script, name: 'dogs2', family_name: 'dogs', version_year: '1902', is_stable: true
+    get :show, params: {id: 'dogs'}
+    assert_redirected_to "/s/dogs2"
+
+    create :script, name: 'dogs3', family_name: 'dogs', version_year: '1899', is_stable: true
+    get :show, params: {id: 'dogs'}
+    assert_redirected_to "/s/dogs2"
+
+    # do not redirect within script family if the requested script exists
+    create :script, name: 'dogs'
+    get :show, params: {id: 'dogs'}
+    assert_response :success
+  end
 end
