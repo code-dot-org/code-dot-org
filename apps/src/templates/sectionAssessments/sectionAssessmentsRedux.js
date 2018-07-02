@@ -410,6 +410,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
       numMultipleChoice: studentsAssessment.multi_count,
       isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: studentsAssessment.timestamp,
+      url: studentsAssessment.url,
     };
   }).filter(studentOverviewData => studentOverviewData);
 
