@@ -22,7 +22,7 @@ export default class InternationalOptIn extends FormController {
    * @override
    */
   onSuccessfulSubmit(data) {
-    window.location = `/pd/international_opt_in/${data.id}/thanks`;
+    window.location = `/pd/international_workshop/${data.id}/thanks`;
   }
 
   /**
