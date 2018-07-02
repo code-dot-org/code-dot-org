@@ -7,7 +7,7 @@ class AuthenticationOptionsController < ApplicationController
     redirect_to omniauth_authorize_path(current_user, params[:provider])
   end
 
-  # DELETE /users/auth/disconnect/:id
+  # DELETE /users/auth/:id/disconnect
   def disconnect
     return head(:bad_request) unless current_user&.migrated?
     AuthenticationOption.delete(params[:id])

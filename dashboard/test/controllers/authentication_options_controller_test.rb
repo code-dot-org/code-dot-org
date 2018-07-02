@@ -76,7 +76,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'disconnect: returns bad_request if user is not signed in' do
-    delete '/users/auth/disconnect/1'
+    delete '/users/auth/1/disconnect'
     assert_response :bad_request
   end
 
@@ -84,7 +84,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     user = create :user, :unmigrated_facebook_sso
     sign_in user
 
-    delete '/users/auth/disconnect/1'
+    delete '/users/auth/1/disconnect'
     assert_response :bad_request
   end
 
@@ -94,7 +94,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     sign_in user
 
     assert_destroys(AuthenticationOption) do
-      delete "/users/auth/disconnect/#{auth_option.id}"
+      delete "/users/auth/#{auth_option.id}/disconnect"
       assert_response :success
       assert_raises ActiveRecord::RecordNotFound do
         AuthenticationOption.find(auth_option.id)
@@ -107,7 +107,7 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     sign_in user
 
     assert_does_not_destroy(AuthenticationOption) do
-      delete "/users/auth/disconnect/1"
+      delete "/users/auth/1/disconnect"
       assert_response :success
     end
   end
