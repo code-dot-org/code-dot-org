@@ -1,7 +1,5 @@
-whenEvents = []
-
 function whenTrue(condition, handler) {
-  whenEvents.push({
+  whenTrue.push({
     condition: condition,
     handler: handler
   });
