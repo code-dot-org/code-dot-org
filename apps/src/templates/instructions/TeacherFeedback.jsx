@@ -72,6 +72,8 @@ class TeacherFeedback extends Component {
       contentType: 'application/json;charset=UTF-8',
     }).done(data => {
       this.setState({latestFeedback: [data]});
+    }).fail((jqXhr, status) => {
+      console.log(status + "  " + jqXhr.responseJSON);
     });
   };
 
