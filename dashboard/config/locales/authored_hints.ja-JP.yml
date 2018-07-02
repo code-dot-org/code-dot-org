@@ -121,11 +121,11 @@ ja:
         2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside
           of your loop.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: 角度わかりますか？360/12=30
         2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your
           turn block inside of a loop.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: 角度わかりますか？360/12=30
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from
           the top of one square to the place where you will start the next. \n\nIf
@@ -187,7 +187,7 @@ ja:
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: 繰り返しの中には４つのブロックが必要です。
       2-3 Bee Loops 3_authored_hint:
         2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       2-3 Bee Loops 3B_authored_hint:
@@ -196,7 +196,7 @@ ja:
       2-3 Bee Loops 4_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
           code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
@@ -211,7 +211,7 @@ ja:
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: 最初にミツバシの向きを変えよう。
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       2-3 Maze 1_authored_hint:
@@ -225,7 +225,7 @@ ja:
           program inside of it.  \n\nConnect it all back to the `when run` block and
           you're good to go!"
       2-3 Maze 6_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: このパズルの解き方は二通りあるよ。
       2-3 Maze Loops 17_authored_hint:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
           first and see what things repeat over and over before you put the loops
@@ -1961,8 +1961,7 @@ ja:
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: This is the third and final hint. It doesn't have anything special.
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_b: If you call the functions correctly, this is the path
-          you will travel...
+        Function_intro_Ryan_b: 関数を正しく呼び出すと、あなたはこの道を行くことになります...
         Function_intro_Ryan_a: 関数はプログラム内で繰り返し呼び出すことができます!  関数を 2 回呼び出して、このパズルをクリアしましょう。
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and
@@ -2058,19 +2057,16 @@ ja:
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: ループの中にコードをいくつも入れられるのは知っていましたか?  「繰り返す」の中に「木の板を置く」 **と**
           「前進」を入れて、このパズルをクリアしましょう。
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
-          you go.
+        MC_HOC_2017_05_Cole_b: Agentに川を渡らせて、あなたが通れる橋をかけさせます。
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: ループの中にコードをいくつも入れられるのは知っていましたか?  「繰り返す」の中に「木の板を置く」 **と**「前進」を入れて、このパズルをクリアしましょう。
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: このループを何回実行しますか?  何回実行する ”べき” ですか?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
-          water! '
+        MC_HOC_2017_06_Cole_b: Agentが水を上を渡りきる橋をかけられるよう手助けしてください！
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: "「繰り返す」ループの中に 2 つ以上の命令を入れてみましょう!"
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
-          to the Minecart.
+        MC_HOC_2017_07_Cole_c: Agentにさせることは、トロッコまでの道を通れるようにすることです。
         MC_HOC_2017_07_Cole_a: このパズルをクリアするために、「通り道を作る」関数のしくみを学んで、ツールボックスにある緑色の小さな「通り道を作る」ブロックを使って、その関数を必要なだけ呼び出します。
         MC_HOC_2017_07_Cole_b: この関数ブロックをツールボックスにある他のブロックと組み合わせて、パズルをクリアしてみましょう。
       MC_HOC_2017_08_RY_authored_hint:
@@ -2082,8 +2078,7 @@ ja:
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: 関数を使って、このパズルをもっと簡単にクリアしてみましょう!
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
-          line!
+        MC_HOC_2017_10_Cole_b: どこへ行ったらいいかわからない？点線を見つけられるかみてみて！
         MC_HOC_2017_10_Cole_a: 関数を使って、このパズルをもっと簡単にクリアしてみましょう!
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Agent に橋を作らせて、アレックス (スティーブ) がマップのはじを歩き回れるようにしましょう。
@@ -2092,8 +2087,7 @@ ja:
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: "「実行」を押しましょう! \nコードは間違いがあっても実行できます。何度もコードを実行/リセットして、間違っているところを見つけましょう。"
         MC_HOC_2017_08_RY_b: このパズルをクリアするやり方はいくつもあります。  いろいろトライしてみましょう!
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
-          the lava.
+        MC_HOC_2017_08_RY_c: 溶岩を超える下の点線の道を試してみてください。
       MC_HOC_2017_FP10x10_authored_hint: {}
       MC_HOC_2017_FP10x10_RE_authored_hint: {}
       MC_HOC_2017_FP20x20_authored_hint:
@@ -4008,8 +4002,8 @@ ja:
         courseA_artist_loops7_b: Write the code for one wave first, then repeat that
           to draw the other two.
         courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
+          Remember you can put more than one block in a <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
           </block></xml> loop.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
@@ -4264,10 +4258,10 @@ ja:
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
-        courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
+        courseA_collector_loops_challenge2kp_a: 繰り返しを使ってこのパズルをクリアしてください。
       courseA_collector_loops_challenge2kp_2018_authored_hint:
         courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
-        courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
+        courseA_collector_loops_challenge2kp_a: 繰り返しを使ってこのパズルをクリアしてください。
       courseA_collector_preLoops1_authored_hint: {}
       courseA_collector_preLoops2_authored_hint: {}
       courseA_collector_preLoops3_authored_hint: {}
@@ -4318,11 +4312,16 @@ ja:
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: If you get stuck, try solving the puzzle in 2
           parts, one part before the corner and one part after the corner.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop,
-          **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: You will need one `repeat` loop after another.
+        courseA_harvester_loops5a_a: |-
+          You will need one `repeat` <xml> <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop after another.
         courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other
           will repeat `move East`.
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
@@ -4337,7 +4336,10 @@ ja:
         courseA_harvester_loops6_b: This is the path you should take to pick all the
           corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
@@ -5119,7 +5121,10 @@ ja:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
         courseB_artist_loops3_b: The artist will want to move South to draw this line.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: The artist will want to move South to draw this line.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: The jump block lets you move forward without drawing
@@ -5139,8 +5144,10 @@ ja:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
-          inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: If you are having trouble figuring this puzzle out,
           try writing the moves down on a piece of paper and looking for a pattern.
@@ -5263,8 +5270,10 @@ ja:
           things go wrong.
         courseB_collector_loops4_b: To change how far Laurel goes, change the number
           of times that the loop runs.
-        courseB_collector_loops4_c: Laurel needs to walk down and collect the treasure
-          after she finishes the `repeat` loop!
+        courseB_collector_loops4_c: |-
+          Laurel needs to walk down and collect the treasure after she finishes the `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml>loop!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Try using more than one loop to get the job done.
         courseB_collector_loops5_b: Can't figure out what's wrong? Try running the
@@ -5287,8 +5296,10 @@ ja:
           Use the "Step" button to run through your program one block at a time.
         courseB_collector_loops6_b: You can change the number of times the repeat
           loop runs by clicking on the "3" and choosing a different number.
-        courseB_collector_loops6_c: You will want to use 3 `repeat` loops to solve
-          this puzzle.
+        courseB_collector_loops6_c: |-
+          You will want to use 3 `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loops to solve this puzzle.
         courseB_collector_loops6_d: If you're confused, try breaking this puzzle into
           3 pieces.
       courseB_collector_loops7_authored_hint:
@@ -5638,8 +5649,10 @@ ja:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: To repeat code, drag out a `repeat` loop, then put
-          the block you want inside of it.
+        courseB_iceage_loops3_b: |-
+          To repeat code, drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml>loop, then put the block you want inside of it.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get
           to the acorn. Do you see a pattern?
@@ -5764,7 +5777,7 @@ ja:
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: If you're stuck, try adding one block at a time until
           you solve the puzzle.
-        courseB_maze_seq8_b: There are two ways to solve this puzzle!
+        courseB_maze_seq8_b: このパズルの解き方は二通りあるよ。
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
@@ -6319,7 +6332,10 @@ ja:
         courseB_starWars_prog9_a: Don't be afraid to make a mistake! Run the code
           to see what happens, even if you haven't solved the puzzle yet.
         courseB_starWars_prog9_b: There are many ways to solve this puzzle.
-        courseB_starWars_prog9_c: Could a `repeat` loop help out here?
+        courseB_starWars_prog9_c: |-
+          Could a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block></xml>loop help out here?
       courseC_PlayLab_embed_events9_authored_hint: {}
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -6756,12 +6772,17 @@ ja:
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           The first block you will need is:
-
-          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+          <xml>  <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
         courseC_artist_loopsPrePre1a_b: |-
           To move forward 50 pixels, use this block:
 
-          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+          <xml><block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          </block></xml>
       courseC_artist_prog1_authored_hint: {}
       courseC_artist_prog1_2018_authored_hint: {}
       courseC_artist_prog2_authored_hint:
@@ -7608,14 +7629,14 @@ ja:
         courseC_maze_programming5_c: The solution will have two `move forward` blocks,
           a turn, and two more `move forward` blocks.
       courseC_maze_programming6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
           starts facing a wall.
         courseC_maze_programming6_d: Feel stuck?  Look at this path!
       courseC_maze_programming6_2018_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
@@ -10225,7 +10246,7 @@ ja:
       courseD_maze_ramp5d_authored_hint: {}
       courseD_maze_ramp5d_2018_authored_hint: {}
       courseD_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to
           turn before you move.
         courseC_maze_programming6_c: Remember you can write one piece of the code
@@ -10532,14 +10553,14 @@ ja:
       courseD_scrat_ramp6_2018_authored_hint:
         courseC_maze_programming6a_a: Use a `repeat` loop to get Scrat moving!
       courseD_scrat_ramp7_authored_hint:
-        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_a: このパズルの解き方は二通りあるよ。
         courseD_scrat_programming6_b: Remember to turn first before moving, since
           Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
       courseD_scrat_ramp7_2018_authored_hint:
-        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_a: このパズルの解き方は二通りあるよ。
         courseD_scrat_programming6_b: Remember to turn first before moving, since
           Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -11673,14 +11694,14 @@ ja:
         courseC_maze_programming5_c: You will need to turn left at the corner to get
           to the pig.
       courseE_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
         courseC_maze_programming6_b: Remember to turn first before moving, since the
           bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
       courseE_maze_ramp6_2018_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: このパズルの解き方は二通りあるよ。
         courseC_maze_programming6_b: Remember to turn first before moving, since the
           bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -14706,14 +14727,14 @@ ja:
         courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title
           name="TIMES">3</title></block></xml> loop for shorter code!
       courseF_maze_ramp6_authored_hint:
-        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_a: このパズルの解き方は二通りあるよ。
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before
           moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
       courseF_maze_ramp6_2018_authored_hint:
-        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_a: このパズルの解き方は二通りあるよ。
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before
           moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks
@@ -15313,7 +15334,7 @@ ja:
           and turn the opposite way. Move forward one more time to reach the pig.
       grade2_CaringForNewPet_3D_authored_hint: {}
       grade2_CaringForNewPet_4_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: このパズルの解き方は二通りあるよ。
       grade2_CaringForNewPet_5_authored_hint:
         grade2_CaringForNewPet_5_a: If you can't quite see what you need to do, try
           saying the steps that your bird will take out loud one-by-one and see if
@@ -15545,18 +15566,18 @@ ja:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
           the other.
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: 最初にミツバシの向きを変えよう。
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
           code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: 繰り返しの中には４つのブロックが必要です。
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       grade3_RunningFarm_1_authored_hint:
@@ -16404,18 +16425,18 @@ ja:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
           the other.
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: 最初にミツバシの向きを変えよう。
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
           code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: 繰り返しの中には４つのブロックが必要です。
       level 'grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       playLabDebugVideo1_authored_hint:

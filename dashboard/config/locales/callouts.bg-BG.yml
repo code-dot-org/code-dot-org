@@ -429,7 +429,6 @@ bg:
         CSD_U3_rect_c2: Тук е бутона "Старт".
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Тук е кодът
-        CSD_U3_rect_c2: Тук е бутона "Старт".
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Тук е кодът
         CSD_U3_rect_c2: Плъзни този блок в областта за програмиране.

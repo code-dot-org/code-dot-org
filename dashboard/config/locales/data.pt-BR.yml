@@ -206,9 +206,9 @@ pt-BR:
         turtle_2_8: Esse desafio é um pouco complicado. Use a função "desenhe um boneco
           de neve" e o novo bloco "pule para a frente" (na categoria Ações). Desenhe
           3 bonecos de neve com cores diferentes, separados por 100 pixels.
-        turtle_2_9: Use um laço "conte com" para desenhar uma família de bonecos de
-          neve, com alturas de 110, 100, 90, 80 e 70. Os bonecos de neve devem ser
-          separados por 60 pixels.
+        turtle_2_9: Use um laço "contar com" para desenhar uma família de bonecos
+          de neve, com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem
+          estar separados por 60 pixels.
         turtle_2_10: Aqui, temos alguns códigos para que você experimente em diferentes
           espirais. O que acontece se você alterar a quantidade de voltas? Ou definir
           uma cor aleatória no laço? Desenhe o que você quiser.
@@ -812,7 +812,7 @@ pt-BR:
         CSF_loops_AB: Laços
         csd_gamelab_booleans: Expressões Booleanas
         csd_gamelab_conditional_statements: Instruções Condicionais
-        csd_gamelab_if_else: If/Else Statements
+        csd_gamelab_if_else: Instrução Se/Senão
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

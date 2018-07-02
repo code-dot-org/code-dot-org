@@ -780,7 +780,7 @@ ky:
       title: Gallery
       body: View a gallery of app and artist images created by our users
     gamelab:
-      title: Game Lab (beta)
+      title: Оюн лабы
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Ages 13+
@@ -828,7 +828,7 @@ ky:
       body_short: If you don't have computers, try these unplugged lessons in your
         classroom.
     unplugged_conditionals:
-      title: Conditionals
+      title: Шартуулар
       body: Learn about algorithms and conditional statements in this “unplugged”
         activity using a deck of cards.
     widgets:

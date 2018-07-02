@@ -26,13 +26,13 @@ ky:
             'Artist: Loops':
               name: 'Сүрөтчү: циклдар'
             'Artist: Sequence':
-              name: 'Сүрөтчү: Ирет'
+              name: 'Сүрөтчү: ирет'
             'Artist: Shapes':
-              name: 'Сүрөтчү: Формалар'
+              name: 'Сүрөтчү: формалар'
             'Bee: Loops':
               name: 'Аары: циклдар'
             'Bee: Sequence':
-              name: 'Аары: Ирет'
+              name: 'Аары: ирет'
             Building a Foundation:
               name: Building a Foundation
             Getting Loopy:
@@ -44,11 +44,11 @@ ky:
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             'Maze: Debugging':
-              name: 'Лабиринт: Дебаггиң'
+              name: 'Лабиринт: дебаггиң'
             'Maze: Loops':
-              name: 'Лабиринт: Циклдар'
+              name: 'Лабиринт: циклдар'
             'Maze: Sequence':
-              name: 'Лабиринт: Ирет'
+              name: 'Лабиринт: ирет'
             Move it, Move it:
               name: Move it, Move it
             'Real-life Algorithms: Plant a Seed':
@@ -56,7 +56,7 @@ ky:
             Spelling Bee:
               name: Spelling Bee
             'Studio: Create a Story':
-              name: 'Play Lab: Окуя түзүү'
+              name: 'Play Lab: окуя түзүү'
             The Big Event:
               name: The Big Event
         course2:
@@ -66,13 +66,13 @@ ky:
           description_audience: Ages 6+ (reading required)
           stages:
             'Artist: Debugging':
-              name: 'Сүрөтчү: Дебаггиң'
+              name: 'Сүрөтчү: дебаггиң'
             'Artist: Loops':
               name: 'Сүрөтчү: циклдар'
             'Artist: Nested Loops':
               name: 'Сүрөтчү: салынган циклдар'
             'Artist: Sequence':
-              name: 'Сүрөтчү: Ирет'
+              name: 'Сүрөтчү: ирет'
             'Bee: Conditionals':
               name: 'Bee: Conditionals'
             'Bee: Debugging':
@@ -82,23 +82,23 @@ ky:
             Binary Bracelets:
               name: Binary Bracelets
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Flappy:
               name: Flappy
             Getting Loopy:
               name: Getting Loopy
             Graph Paper Programming:
-              name: Graph Paper Programming
+              name: Графикалык кагазды програмдоо
             'Maze: Loops':
-              name: 'Лабиринт: Циклдар'
+              name: 'Лабиринт: циклдар'
             'Maze: Sequence':
-              name: 'Лабиринт: Ирет'
+              name: 'Лабиринт: ирет'
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
             Relay programming:
               name: Relay programming
             'Studio: Create a Story':
-              name: 'Play Lab: Окуя түзүү'
+              name: 'Play Lab: окуя түзүү'
             The Big Event:
               name: The Big Event
             Your Digital Footprint:
@@ -128,7 +128,7 @@ ky:
             Bounce:
               name: Bounce
             Computational Thinking:
-              name: Computational Thinking
+              name: Эсептөөчү ой жүгүртүү
             Crowdsourcing:
               name: Crowdsourcing
             Dice Race:
@@ -150,7 +150,7 @@ ky:
             'Studio: Create a Game':
               name: 'Play Lab: Create a Game'
             'Studio: Create a Story':
-              name: 'Play Lab: Окуя түзүү'
+              name: 'Play Lab: окуя түзүү'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -160,8 +160,8 @@ ky:
               name: Play Lab
         artist:
           title: Сүрөтчү
-          description: Сүрөтчү менен сонун сүрөттөрдү тарткыла жана дизайн жараткыла!
-          description_short: Сүрөтчү менен сонун сүрөттөрдү тарткыла жана дизайн жараткыла!
+          description: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
+          description_short: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
           stages:
             Artist:
               name: Сүрөтчү
@@ -191,13 +191,13 @@ ky:
             Artist Binary:
               name: Сүрөтчү бинардык система
             'Artist: For Loops':
-              name: 'Сүрөтчү: For циклдары'
+              name: 'Сүрөтчү: for циклдары'
             'Artist: Functions':
               name: 'Сүрөтчү: функциялар'
             'Artist: Functions with Parameters':
               name: 'Сүрөтчү: параметри бар функциялар'
             'Artist: Variables':
-              name: 'Сүрөтчү: Өзгөрмөлөр'
+              name: 'Сүрөтчү: өзгөрмөлөр'
             'Bee: For Loops':
               name: 'Bee: For Loops'
             'Bee: Functions with Parameters':
@@ -243,7 +243,7 @@ ky:
             'Artist: Nested Loops':
               name: 'Сүрөтчү: салынган циклдар'
             'Artist: Sequence':
-              name: 'Сүрөтчү: Ирет'
+              name: 'Сүрөтчү: ирет'
             'Bee: Conditionals':
               name: 'Bee: Conditionals'
             'Bee: Debugging':
@@ -253,7 +253,7 @@ ky:
             'Farmer: While Loops':
               name: 'Farmer: While Loops'
             'Maze: Sequence':
-              name: 'Лабиринт: Ирет'
+              name: 'Лабиринт: ирет'
         usability:
           title: Usability Testing
           description: A selection of Course 4 levels for usability testing.
@@ -283,7 +283,7 @@ ky:
             'Eval: Boolean Operators':
               name: Boolean Operators
             'Eval: Conditionals':
-              name: Conditionals
+              name: Шартуулар
             'Eval: Defining Functions':
               name: Composite Functions
             'Eval: Functions':
@@ -369,7 +369,7 @@ ky:
             Writing computer programs:
               name: Writing computer programs
         netsim:
-          title: Internet Simulator
+          title: Интернет симулятор
           description: Learn about how the Internet works.
           description_short: Learn about how the Internet works.
           description_audience: ''
@@ -417,23 +417,23 @@ ky:
           description_audience: Ages 10-18
           stages:
             Abstraction:
-              name: Abstraction
+              name: Абстракция
             Algorithms:
-              name: Algorithms
+              name: Алгоритмдер
             Computational Thinking:
-              name: Computational Thinking
+              name: Эсептөөчү ой жүгүртүү
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Functions:
-              name: Functions
+              name: Функциялар
             Graph Paper Programming:
-              name: Graph Paper Programming
+              name: Графикалык кагазды програмдоо
             Introduction to Computer Science:
-              name: Introduction to Computer Science
+              name: Компүтер илимине киришүү
             Relay Programming:
-              name: Relay Programming
+              name: Релени програмдоо
             Song Writing:
-              name: Song Writing
+              name: Ыр жазуу
             The Artist:
               name: Сүрөтчү
             The Artist 2:
@@ -445,17 +445,17 @@ ky:
             The Artist 5:
               name: 5-Сүрөтчү
             The Farmer:
-              name: The Farmer
+              name: Фермер
             The Farmer 2:
-              name: The Farmer 2
+              name: 2-фермер
             The Farmer 3:
-              name: The Farmer 3
+              name: 3-фермер
             The Internet:
-              name: The Internet
+              name: Интернет
             The Maze:
-              name: The Maze
+              name: Лабиринт
             Wrap-up:
-              name: Wrap-up
+              name: Жыйынтыктоо
         edit-code:
           title: Edit Code
           description: Edit Code
@@ -471,11 +471,11 @@ ky:
             The Artist:
               name: Сүрөтчү
             The Maze:
-              name: The Maze
+              name: Лабиринт
         events:
-          title: Events
-          description: Events
-          description_short: Events
+          title: Иш-чаралар
+          description: Иш-чаралар
+          description_short: Иш-чаралар
           description_audience: ''
           stages:
             Bounce:
@@ -1180,7 +1180,7 @@ ky:
             Broadcast Lesson:
               name: Broadcast Lesson
             Internet Simulator:
-              name: Internet Simulator
+              name: Интернет симулятор
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
@@ -1246,7 +1246,7 @@ ky:
             Welcome!:
               name: Welcome!
             Wrap-up:
-              name: Wrap-up
+              name: Жыйынтыктоо
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1386,7 +1386,7 @@ ky:
             Welcome!:
               name: Welcome!
             Wrap-up:
-              name: Wrap-up
+              name: Жыйынтыктоо
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1415,7 +1415,7 @@ ky:
             Welcome!:
               name: Welcome!
             Wrap-up:
-              name: Wrap-up
+              name: Жыйынтыктоо
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
@@ -1458,7 +1458,7 @@ ky:
             Getting Loopy:
               name: Getting Loopy
             Graph Paper Programming:
-              name: Graph Paper Programming
+              name: Графикалык кагазды програмдоо
             Happy Maps:
               name: Happy Maps
             Move it, Move it:
@@ -2143,7 +2143,7 @@ ky:
             Sending Numbers:
               name: Sending Numbers
             The Internet:
-              name: The Internet
+              name: Интернет
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -2481,7 +2481,7 @@ ky:
             Variables and Animation:
               name: Variables and Animation
             Functions:
-              name: Functions
+              name: Функциялар
             Platform Jumper:
               name: Platform Jumper
             Defender:
@@ -2680,7 +2680,7 @@ ky:
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: Оюн лабы
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2963,7 +2963,7 @@ ky:
             Debugging:
               name: Debugging
             Events:
-              name: Events
+              name: Иш-чаралар
             Events Unplugged:
               name: Events Unplugged
             Fuzz Fiesta:
@@ -3033,7 +3033,7 @@ ky:
             Debugging:
               name: Debugging
             Events:
-              name: Events
+              name: Иш-чаралар
             Events Unplugged:
               name: Events Unplugged
             'Jigsaw: Learn to drag and drop':
@@ -3067,11 +3067,11 @@ ky:
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: 'Сүрөтчү: For циклдары'
+              name: 'Сүрөтчү: for циклдары'
             'Artist: Functions with Parameters':
               name: 'Сүрөтчү: параметри бар функциялар'
             'Artist: Variables':
-              name: 'Сүрөтчү: Өзгөрмөлөр'
+              name: 'Сүрөтчү: өзгөрмөлөр'
             'Bee: For Loops':
               name: 'Bee: For Loops'
             'Bee: Functions with Parameters':
@@ -3127,7 +3127,7 @@ ky:
             Welcome!:
               name: Welcome!
             Wrap-up:
-              name: Wrap-up
+              name: Жыйынтыктоо
         ecs-unit2:
           title: ECS Unit 2
           description: 'Unit 2: Problem Solving'
@@ -3335,7 +3335,7 @@ ky:
               description_student: The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
               description_teacher: Students program their sprites to interact in new ways.  After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact.  They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).
             Functions:
-              name: Functions
+              name: Функциялар
               description_student: This lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.
               description_teacher: Students learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. An unplugged warmup explores how directions at different levels of detail can be useful depending on context. Students learn that higher level or more abstract steps make it easier to understand and reason about steps. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function. At the end of the lesson students use these skills to organize and add functionality to the final version of their side scroller game.
             The Game Design Process:
@@ -3383,7 +3383,7 @@ ky:
               description_student: By combining the Draw Loop and the Counter Pattern, the class writes programs that move sprites across the screen, as well as animate other sprite properties.
               description_teacher: By combining the Draw Loop and the Counter Pattern, students write programs that move sprites across the screen, as well as animate other sprite properties.
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
               description_student: The class starts by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, the class adds conditional if statements to write code that responds to those boolean comparisons.
               description_teacher: Students start by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, students add conditional _if_ statements to write code that responds to those boolean comparisons.
             Keyboard Input:
@@ -3486,13 +3486,13 @@ ky:
             Binary:
               name: Binary
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Events:
-              name: Events
+              name: Иш-чаралар
             For Loops:
               name: For Loops
             Functions:
-              name: Functions
+              name: Функциялар
             Functions with Parameters:
               name: Functions with Parameters
             Loops:
@@ -3739,7 +3739,7 @@ ky:
             Binary Images:
               name: Binary Images
             Binary Artist Puzzles:
-              name: 'Сүрөтчү: бинардык тапшырмалар'
+              name: Бинардык Сүрөтчү тапшырмалары
             RGB Color:
               name: RGB Color
             Processing with Bits:
@@ -4163,7 +4163,7 @@ ky:
             Introduction:
               name: Introduction
             Nested Loops Project in Artist:
-              name: Сүрөтчүдөгү салынган циклдар
+              name: Сүрөтчүдөгү салынган циклдар долбоору
             Debugging in Collector:
               name: Debugging in Collector
         coursee-draft:
@@ -4209,7 +4209,7 @@ ky:
             Introduction:
               name: Introduction
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
         coursef-draft:
@@ -4231,7 +4231,7 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: Сүрөтчүдөгү For циклдары
+              name: Сүрөтчүдөгү for циклдары
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Functions with Parameters: Songwriting with Parameters'
             Functions with Parameters in Artist:
@@ -4772,7 +4772,7 @@ ky:
             Introduction:
               name: Introduction
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             'Real Life Algorithms: Dice Race':
               name: 'Real Life Algorithms: Dice Race'
         csd6-2017:
@@ -4988,7 +4988,7 @@ ky:
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Taking Input:
               name: Taking Input
             Complex Conditionals:
@@ -5008,7 +5008,7 @@ ky:
             Collisions:
               name: Collisions
             Functions:
-              name: Functions
+              name: Функциялар
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -5130,7 +5130,7 @@ ky:
             Collisions:
               name: Collisions
             Functions:
-              name: Functions
+              name: Функциялар
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -5258,7 +5258,7 @@ ky:
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -5274,7 +5274,7 @@ ky:
             Collisions:
               name: Collisions
             Functions:
-              name: Functions
+              name: Функциялар
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -5404,7 +5404,7 @@ ky:
             B8 BB8:
               name: B8 BB8
             C9 Artist Loops:
-              name: C9 Сүрөтчүциклдары
+              name: C9 Сүрөтчү циклдары
             C8 to BB8:
               name: C8 --> BB8
             D7 to Laurel:
@@ -5433,7 +5433,7 @@ ky:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -5474,7 +5474,7 @@ ky:
             Loops in Artist:
               name: Loops in Artist
               description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
             'Events: The Big Event':
               name: 'Events: The Big Event'
               description_student: ''
@@ -5488,7 +5488,7 @@ ky:
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -5523,7 +5523,7 @@ ky:
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        coursec:
+        coursec-2017:
           stages:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
@@ -5562,12 +5562,12 @@ ky:
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
-        coursed:
+        coursed-2017:
           stages:
             Introduction:
               name: Introduction to Online Puzzles
               description_student: This lesson will give you practice in the skills you will need for this course.
-              description_teacher: 'Бул тапшырмаларда окуучулар Code.org онлайн иштактасы менен таанышып (же класстын деңгээлине жараша көз жүгүртүү болушу мүмкүн) башташат. Иштактанын негизги функционалын - "Аткар", "Кайта", "Кадам" сыяктуу баскычтарынын түшүндүргөн видеолор көрсөтүлөт. Ошондой эле бул виделордо Blockly блокторун сүйрөө, жок кылуу жана туташтыруу талкууланат. Андан кийин окуучулар лабиринтте иреттештирүү жана дебаггиң жөндөмдөрүн машыктырышат. Ал жерден окучуулар жаңы Жыйноочу, Сүрөтчү жана Комбайн тапшырмаларына өтүп, циклдин эң баштапкы негиздери менен таанышышат.'
+              description_teacher: 'In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org''s online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
               name: 'Programming: Graph Paper Programming'
               description_student: In this lesson, you will program your friend to draw pictures!
@@ -5626,13 +5626,13 @@ ky:
               description_student: 'Learn how computers store pictures using simple ideas like on and off. '
               description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: Сүрөтчүдөгү бинардык
-              description_student: "Сүрөтчүңөрдү башкаргыла. Пикселдерди күйгүзүү жана өчүрүү буйруктарын гана колдонуп\nбинардык сүрөт тарткыла."
-              description_teacher: Бинардык система компүтерлер дүйнөсүндө өтө маанилүү. Бүгүнкү компүтерлердин көпчүлүгү маалыматтын бардык түрүн бинардык системада сакташат. Бул сабак кадимки жашоодон бир нерсени алып, аны күйгүзүү жана өчүрүүлөрдүн сериясына айлантып койсо болорун көрсөтөт. Окуучулар Сүрөтчүдө 0дү жана 1ди (же ак жана караны) күйгүзүү жана өчүрүүгө айлантып, бинардык сүрөт тартышат.
+              name: Binary in Artist
+              description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
+              description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
               name: Тоңгондогу салынган циклдар
-              description_student: Дагы салынган циклдар! Бул жолу салынган циклдар менен УКМУШТУУ сүрөттөрдү жаратасыңар.
-              description_teacher: Окуучулар Сүрөтчүнүн бүгүнкү тапшырмаларын колдонуп татаал дизайн жаратышат. Салынган циклдарды жаңы максатта колдонуу менен, студенттер циклдардын колдонулушун жалпысынан көбүрөөк түшүнүшөт. Бул тапшырмалар окуучуларга дэңгээлдин аягында өз дизайнын жаратуусу үчүн көптөгөн чыгармачылык мүмкүнчүлүктөрдү сунуштайт.
+              description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
@@ -5642,7 +5642,7 @@ ky:
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
-        coursee:
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5665,7 +5665,7 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: Сүрөтчүдөгү For циклдары
+              name: Сүрөтчүдөгү for циклдары
             Songwriting with Parameters:
               name: Songwriting with Parameters
             Conditionals and Functions in Bee:
@@ -5677,15 +5677,15 @@ ky:
             Explore Project Ideas:
               name: Explore Project Ideas
               description_student: Here are several games and drawings. Play with each of them to get ideas for projects of your own!
-              description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \n\nIn the explore stage, students will be able to view pre-built examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
+              description_teacher: "Кийинки төрт сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүү үчүн өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.\n\nИзилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораторисынын алдын ала курулган долбоорлорунун үлгүлөрү менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтө алышат."
             The Design Process:
               name: The Design Process
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн колдонуп жеке долбоорун програмдап чыгышат. Долбоордун бул бөлүгүндө, окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Бул долбоордун төрт баскычынын тең жетектемелерин биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Build Your Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын бири менен өз долбоорлорун иштеп чыгуу мүмкүнчүлүгү берилет. Бул долбоордун эң узун баскычы болот деп ойлойбуз. Бул долбоордун бардык баскычтарынын жетектемелерин биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
               name: Revise Your Project
             Presentation Your Project:
@@ -5715,8 +5715,8 @@ ky:
               description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
               name: Сүрөтчүдөгү функциялар
-              description_student: Функциялар менен татаал сүрөт тартууну жеңил кыл!
-              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышышат. Сүрөтчүдө функциялар менен сонун сүрөттөр тартылат жана өзгөртүлөт. Татаалыраак үлгүлөрдү биринин ичинен экинчисин чакырып, салынган функциялар пайдаланганды үйрөнүшөт.
+              description_student: Функциялар менен татаал чийме чийүүнү жеңил кыл!
+              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
             Functions in Bee:
               name: Functions in Bee
               description_student: Don't write too much code to gather all of the nectar and honey. Use functions instead!
@@ -5736,7 +5736,7 @@ ky:
             Present Your Project:
               name: Present Your Project
               description_student: Get ready to show off! It's time to present your finished project to your peers.
-              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдашат. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү мүмкүнчүлүгүнө ээ болушат. Бул долбоордун төрт баскычынын тең жетектемелерин биринчи баскычтан табасыңар [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
               name: 'Beyond Programming: The Internet'
               description_student: Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.
@@ -5772,7 +5772,7 @@ ky:
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5797,7 +5797,7 @@ ky:
             Variables in Artist:
               name: Сүрөтчүдөгү өзгөрмөлөр
               description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
-              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып эмне үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат.
+              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат.
             Variables in Play Lab:
               name: Variables in Play Lab
               description_student: Soon you will learn about making characters interact in a game using variables!
@@ -5811,7 +5811,7 @@ ky:
               description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then walked through using for loops to more effectively solve complicated problems.
             For Loops in Artist:
-              name: Сүрөтчүдөгү For циклдары
+              name: Сүрөтчүдөгү for циклдары
               description_student: Кийинки мыкты чыгармаңарды жаратканга даяр болгула. Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз.
               description_teacher: Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
             Songwriting with Parameters:
@@ -5829,29 +5829,29 @@ ky:
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
               description_student: You've had a little practice using functions with parameters. This lesson will continue your practice with Bee!
-              description_teacher: This lesson features the bee environment, and continues along the concept of functions with parameters from the previous Artist stage. Students will practice writing and using functions to follow complex paths and collect patterns of nectar and honey.
+              description_teacher: Бул сабак аары чөйрөсүн көрсөтөт жана мурунку Сүрөтчү баскычындагы параметри бар функциялар концептин уланатат. Окуучулар татаал жолду өтүп, аары жана бал үлгүлөрүн чогултуу үчүн функцияларды жазганды жана колдонгонду өздөштүрүшөт.
             Explore Project Ideas:
               name: Explore Project Ideas
               description_student: Time to get some inspiration! These puzzles will show you a handful of pre-built games and illustrations to help develop your plan for your BIG project.
-              description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \n\nIn the explore stage, students will be able to view examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is most likely the longest stage of the project). Students will then revise their projects, after testing and extra thought. Finally, students will be able to present their finished work to their peers."
+              description_teacher: "Кийинки беш сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүүгө татыктуу коддун өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.\n\nИзилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораториясынын үлгү долбоорлору менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Долбоорлорун тесттен өткөзүп, дагы ойлонуштуруп көрүп, кайра бир иштеп чыгышат. Аягында окуучулар ишин теңтуштарынын алдында көрсөтө алышат."
             The Design Process:
               name: The Design Process
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Долбоордун бул бөлүгүндө окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
               name: Build Your Project
               description_student: Finally you can start building your project!
-              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын бири менен өз долбоорлорунун дизайнын иштеп чыгуу мүмкүнчүлүгү берилет. Бул долбоордун эң узун баскычы болот. Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
               name: Revise Your Project
               description_student: Rome wasn't built in a day and your project shouldn't be, either. Take time to edit and revise your project to make it the best it can be.
-              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Долбоор даяр болгондо, окуучулар теңтуштарынын пикирин угуп, долбоорун өзгөртүп чыгуу мүмкүнчүлүк алышат. Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан табасыңар [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
               name: Presentation Your Project
             Present Your Project:
               name: Present Your Project
               description_student: Time to show your work! Here you will be presenting your awesome project to your peers.
-              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              description_teacher: Беш сабактан турган курста, оокуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү мүмкүнчүлүгүнө ээ болушат. Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
               description_student: Avoid the lava! Here you will learn about conditionals in the world of Minecraft.
@@ -6105,7 +6105,7 @@ ky:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
@@ -6120,9 +6120,9 @@ ky:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
+              name: Loops in Artist
             Nested Loops Project in Artist:
-              name: Сүрөтчүдөгү салынган циклдар
+              name: Сүрөтчүдөгү салынган циклдар долбоору
             Internet:
               name: Internet
             Digital Citizenship:
@@ -6158,7 +6158,7 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: Сүрөтчүдөгү For циклдары
+              name: Сүрөтчүдөгү for циклдары
             Songwriting with Parameters:
               name: Songwriting with Parameters
             Functions in Bee:
@@ -6212,7 +6212,7 @@ ky:
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
@@ -6235,7 +6235,7 @@ ky:
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
+              name: Loops in Artist
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -6418,7 +6418,7 @@ ky:
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -6470,7 +6470,7 @@ ky:
             Nested Loops in Artist:
               name: Сүрөтчүдөгү салынган циклдар
             Nested Loops Project in Artist:
-              name: Сүрөтчүдөгү салынган циклдар
+              name: Сүрөтчүдөгү салынган циклдар долбоору
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Collector:
@@ -6566,7 +6566,7 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: Сүрөтчүдөгү For циклдары
+              name: Сүрөтчүдөгү for циклдары
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Functions in Bee:
@@ -6636,7 +6636,7 @@ ky:
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -6710,7 +6710,7 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: Сүрөтчүдөгү For циклдары
+              name: Сүрөтчүдөгү for циклдары
             Songwriting with Parameters:
               name: Songwriting with Parameters
             Functions in Bee:
@@ -7122,7 +7122,7 @@ ky:
             Introduction:
               name: Introduction
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Private and Personal Information:
               name: Private and Personal Information
             'Functions: Songwriting':
@@ -7200,7 +7200,7 @@ ky:
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
-              name: Сүрөтчүдөгү For циклдары
+              name: Сүрөтчүдөгү for циклдары
             Songwriting with Parameters:
               name: Songwriting with Parameters
             Functions in Bee:
@@ -7302,7 +7302,7 @@ ky:
             Booleans Unplugged:
               name: Booleans Unplugged
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -7318,7 +7318,7 @@ ky:
             Collisions:
               name: Collisions
             Functions:
-              name: Functions
+              name: Функциялар
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -7401,7 +7401,7 @@ ky:
                 
                 Finally we reveal Conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
             Conditionals:
-              name: Conditionals
+              name: Шартуулар
               description_student: The class starts by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, the class adds conditional if statements to write code that responds to those boolean comparisons.
               description_teacher: Students start by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, students add conditional _if_ statements to write code that responds to those boolean comparisons.
             Keyboard Input:
@@ -7433,7 +7433,7 @@ ky:
               description_student: The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
               description_teacher: Students program their sprites to interact in new ways.  After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact.  They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).
             Functions:
-              name: Functions
+              name: Функциялар
               description_student: This lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.
               description_teacher: Students learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. An unplugged warmup explores how directions at different levels of detail can be useful depending on context. Students learn that higher level or more abstract steps make it easier to understand and reason about steps. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function. At the end of the lesson students use these skills to organize and add functionality to the final version of their side scroller game.
             The Game Design Process:
@@ -7560,7 +7560,7 @@ ky:
             Loops in Artist:
               name: Океан көрүнүшү циклдар менен
               description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат.
             'Events: The Big Event':
               name: The Big Event
               description_student: ''
@@ -7587,7 +7587,7 @@ ky:
           description_audience: 'Ages: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Graph Paper Programming
+              name: Графикалык кагазды програмдоо
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7687,7 +7687,7 @@ ky:
               description_student: ''
               description_teacher: ''
             For Loops in Artist:
-              name: Сүрөтчү менен For циклдары
+              name: Сүрөтчү менен for циклдары
               description_student: ''
               description_teacher: ''
             'Functions: Songwriting with Parameters':
@@ -7793,11 +7793,11 @@ ky:
             Artist Binary:
               name: Сүрөтчү менен бинардык сүрөттөр
             Internet:
-              name: The Internet
+              name: Интернет
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Relay Programming
+              name: Релени програмдоо
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Course B
@@ -7875,7 +7875,7 @@ ky:
           description_audience: ''
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Graph Paper Programming
+              name: Графикалык кагазды програмдоо
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -7953,9 +7953,9 @@ ky:
             Conditionals & Loops in Harvester:
               name: Harvesting with Conditionals
             Graph Paper Programming:
-              name: Graph Paper Programming
+              name: Графикалык кагазды програмдоо
             Relay Programming:
-              name: Relay Programming
+              name: Релени програмдоо
             Introduction to Online Puzzles:
               name: Introduction to Online Puzzles
         jr-test:
@@ -8301,8 +8301,8 @@ ky:
               description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
               name: Сүрөтчү менен функциялар
-              description_student: Функциялар менен татаал сүрөт тартууну жеңил кыл!
-              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышышат. Сүрөтчүдө функциялар менен сонун сүрөттөр тартылат жана өзгөртүлөт. Татаалыраак үлгүлөрдү биринин ичинен экинчисин чакырып, салынган функциялар пайдаланганды үйрөнүшөт.
+              description_student: Функциялар менен татаал чийме чийүүнү жеңил кыл!
+              description_teacher: Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
             Functions in Bee:
               name: Functions with Bee
               description_student: Don't write too much code to gather all of the nectar and honey. Use functions instead!
@@ -8322,21 +8322,21 @@ ky:
             Explore Project Ideas:
               name: Explore Project Ideas
               description_student: Here are several games and drawings. Play with each of them to get ideas for projects of your own!
-              description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \n\nIn the explore stage, students will be able to view pre-built examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
+              description_teacher: "Кийинки төрт сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүү үчүн өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.\n\nИзилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораторисынын алдын ала курулган долбоорлорунун үлгүлөрү менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтө алышат."
             The Design Process:
               name: The Design Process
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн колдонуп жеке долбоорун програмдап чыгышат. Долбоордун бул бөлүгүндө, окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Бул долбоордун төрт баскычынын тең жетектемелерин биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Build Your Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын бири менен өз долбоорлорун иштеп чыгуу мүмкүнчүлүгү берилет. Бул долбоордун эң узун баскычы болот деп ойлойбуз. Бул долбоордун бардык баскычтарынын жетектемелерин биринчи баскычтан табасыңар, [here](https://curriculum.code.org/csf/coursee/12/).
             Present Your Project:
               name: Present Your Project
               description_student: Get ready to show off! It's time to present your finished project to your peers.
-              description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
+              description_teacher: Төр сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдашат. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү мүмкүнчүлүгүнө ээ болушат. Бул долбоордун төрт баскычынын тең жетектемелерин биринчи баскычтан табасыңар [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: The Internet
+              name: Интернет
               description_student: Ever wondered how information travels across the internet? It's not magic! This lesson will teach you the basics of how the internet works.
               description_teacher: Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.
             Crowdsourcing:
@@ -8427,7 +8427,7 @@ ky:
             Variables in Artist:
               name: Сүрөтчүдөгү өзгөрмөлөр
               description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
-              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып эмне үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат.
+              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат.
             Variables in Play Lab:
               name: Variables in Play Lab
               description_student: Soon you will learn about making characters interact in a game using variables!
@@ -8441,7 +8441,7 @@ ky:
               description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then walked through using for loops to more effectively solve complicated problems.
             For Loops in Artist:
-              name: Сүрөтчү менен For циклдары
+              name: Сүрөтчү менен for циклдары
               description_student: Кийинки мыкты чыгармаңарды жаратканга даяр болгула. Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз.
               description_teacher: Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
             Songwriting with Parameters:
@@ -8459,27 +8459,27 @@ ky:
             Functions with Parameters in Bee:
               name: Functions with Parameters in Bee
               description_student: You've had a little practice using functions with parameters. This lesson will continue your practice with Bee!
-              description_teacher: This lesson features the bee environment, and continues along the concept of functions with parameters from the previous Artist stage. Students will practice writing and using functions to follow complex paths and collect patterns of nectar and honey.
+              description_teacher: Бул сабак аары чөйрөсүн көрсөтөт жана мурунку Сүрөтчү баскычындагы параметри бар функциялар концептин уланатат. Окуучулар татаал жолду өтүп, аары жана бал үлгүлөрүн чогултуу үчүн функцияларды жазганды жана колдонгонду өздөштүрүшөт.
             Explore Project Ideas:
               name: Explore Project Ideas
               description_student: Time to get some inspiration! These puzzles will show you a handful of pre-built games and illustrations to help develop your plan for your BIG project.
-              description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \n\nIn the explore stage, students will be able to view examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is most likely the longest stage of the project). Students will then revise their projects, after testing and extra thought. Finally, students will be able to present their finished work to their peers."
+              description_teacher: "Кийинки беш сабак окуучуларга код жазуу жөндөмүн мыкты долбоорлордо колдонуу мүмкүнчүлүгүн берет. Бул долбоор код жазуу тажрыйбасына ээ болуп, теңтуштары жана жакындары менен бөлүшүүгө татыктуу коддун өздүк нускасын жаратууга жардам берет. Көп сабак же көп апта бою тажрыйба алууга ниеттенген окуучулар идеяларды талкуулап, дизайндоо процессин өздөштүрүп, жыйынтыктуу долбоор түзүп жана аны тартуулаганды үйрөнүшөт.\n\nИзилдөө баскычында, окучууларды шыктандыруу максатында Сүрөтчү жана Оюн лабораториясынын үлгү долбоорлору менен тааныштырабыз. Андан кийин окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Кийинки кадамда, Сүрөтчү же Оюн лабораториясынын биринде өз долбоорлорун түзүү (бул долбоордун эң узун баскычы болушу күтүлөт) мүмкүнчүлүгү берилет. Долбоорлорун тесттен өткөзүп, дагы ойлонуштуруп көрүп, кайра бир иштеп чыгышат. Аягында окуучулар ишин теңтуштарынын алдында көрсөтө алышат."
             The Design Process:
               name: The Design Process
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
-              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Долбоордун бул бөлүгүндө окуучулар дизайндоо процесин үйрөнүп, аны өз долбоорлорунда колдонууга аракет кылышат. Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
               name: Build Your Project
               description_student: Finally you can start building your project!
-              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Азыр окуучуларга Сүрөтчү же Оюн лабораториясынын бири менен өз долбоорлорунун дизайнын иштеп чыгуу мүмкүнчүлүгү берилет. Бул долбоордун эң узун баскычы болот. Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
               name: Revise Your Project
               description_student: Rome wasn't built in a day and your project shouldn't be, either. Take time to edit and revise your project to make it the best it can be.
-              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now that the projects are built, students are given the opportunity to get feedback from peers and revise their projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              description_teacher: Беш сабактан турган курста, окуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Долбоор даяр болгондо, окуучулар теңтуштарынын пикирин угуп, долбоорун өзгөртүп чыгуу мүмкүнчүлүк алышат. Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан табасыңар [here](https://curriculum.code.org/csf/coursef/15/).
             Present Your Project:
               name: Present Your Project
               description_student: Time to show your work! Here you will be presenting your awesome project to your peers.
-              description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
+              description_teacher: Беш сабактан турган курста, оокуучулар Оюн лабораториясы же Сүрөтчү чөйрөсүн өздөрүнүн програмдоо чөйрөсү катары колдонуп жеке долбоорун програмдап чыгышат. Аягында окуучулар бүткөргөн ишин теңтуштарынын алдында көрсөтүшөт же атайын шилтеме берип, жакындары менен бөлүшү мүмкүнчүлүгүнө ээ болушат. Бул долбоордун беш баскычынын тең жетектемелерин долбоордун башынан табасыңар, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals with Cards:
               name: Conditionals with Cards
             Conditionals:
@@ -8543,7 +8543,7 @@ ky:
               description_student: ''
               description_teacher: ''
             The Internet:
-              name: The Internet
+              name: Интернет
               description_student: ''
               description_teacher: ''
             The Need for Addressing:

@@ -413,7 +413,7 @@ it:
       non è stato confermato:'
     email_confirm_wrong_email: "(Indirizzo di posta elettronica sbagliato?)"
     email_resend_confirm: Reinvia le istruzioni di conferma
-    new_email_hint: "(make sure you can receive emails to this email address)"
+    new_email_hint: "(assicurarti di poter ricevere messaggi a questo indirizzo email)"
     new_password_hint: "(lascialo vuoto se non vuoi cambiarlo)"
     current_password_hint: "(inserisci la tua password corrente per confermare i cambiamenti)"
     delete: Elimina il tuo account
@@ -1175,13 +1175,15 @@ it:
     practice: Pratiche d'insegnante
     peer_review: Valutazioni dei parigrado
     ramp_up: Ramp-Up
-    end_of_course_project: End of Course Project
+    end_of_course_project: Progetto di Fine Corso
     optional_stages: Optional Stages
     main_course: Corso principale
-    extra_course_content: Contenuti extra corso
-    csf_e_1: Approfondimenti al Corso E (facoltativo)
+    extra_course_content: Contenuti supplementari
+    csf_e_1: Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi
+      precedenti)
     csf_e_2: Contenuti del Corso E
-    csf_f_1: Approfondimenti al Corso F (facoltativo)
+    csf_f_1: Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi
+      precedenti)
     csf_f_2: Contenuti del Corso F
     csd1_1: 'Capitolo 1: il Problem Solving'
     csd1_2: 'Capitolo 2: Computers e Problem Solvig'

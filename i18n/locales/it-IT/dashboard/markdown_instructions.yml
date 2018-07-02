@@ -665,7 +665,7 @@ it:
         **How:** In Code Mode add a new `onEvent()` to your program for your "Right!" button. Add a `setScreen()` block inside of it that switches screens to `"thatScreen"`.
         
         **Stuck? Click here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
-      AppLab Intro 7 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\n\\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \n</div>\n\n**Obiettivo:** Rendere verde (*green*) lo schermo.\n\n**Come:** Sposta nell'area di lavoro il blocco `setProperty()`. Usa il menù a discesa\nper assegnare a `\"background-color\"` il colore `\"green\"`. Poi clicca su \"Esegui\"\n\n**Sei bloccato?\nClicca qui** ![expandable](https://images.code.org/817990cbff035c9960b84a4b228ecaba-image-1508521071643.gif)"
+      AppLab Intro 7 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\n<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \n</div>\n\n**Obiettivo:** Rendere verde (*green*) lo schermo.\n\n**Come:** Sposta nell'area di lavoro il blocco `setProperty()`. Usa il menù a discesa\nper assegnare a `\"background-color\"` il colore `\"green\"`. Poi clicca su \"Esegui\".\n\n**Sei bloccato?\nClicca qui** ![expandable](https://images.code.org/817990cbff035c9960b84a4b228ecaba-image-1508521071643.gif)"
       AppLab Intro 7 - Change Text 2_markdown_instruction: |-
         <div style="float:right">
         <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
@@ -9873,7 +9873,7 @@ it:
         
         _Hint: You can look at [Stage 12 Bubble 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8) to see a working scoreboard.  Scroll down in the code until you see the comment "draw score"_
       CSD U3 rect_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger) )\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
-      CSD U3 rect_2018_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger) )\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
+      CSD U3 rect_2018_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens.\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
       CSD U3 sequence_markdown_instruction: |-
         <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
         # Order Matters
@@ -20772,7 +20772,7 @@ it:
         ## instructions
         
         Drag out the subgoal label block you want.
-      Testing Quantum Farmer_markdown_instruction: "Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>\n<br>\n<b>Suggerimento</b>: usa le opzioni nel menu a discesa del blocco `mentre`."
+      Testing Quantum Farmer_markdown_instruction: "Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>\n<br>\n<b>Suggerimento</b>: usa le opzioni nel menù a discesa del blocco `mentre`."
       Text Compression 1_markdown_instruction: |-
         Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.
         
@@ -27176,21 +27176,21 @@ it:
         Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
          <xml><block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_markdown_instruction: Repeat loops work for Artist, too!
-      courseA_harvester_forVideo_markdown_instruction: Can you pick all the corn using only **one** move block?
+      courseA_harvester_forVideo_markdown_instruction: Potresti raccogliere tutto il grano utilizzando solo **un** blocco di movimento?
       courseA_harvester_loops1_markdown_instruction: Help the harvester pick all the corn!
       courseA_harvester_loops10_markdown_instruction: Help the harvester pick all five ears of corn!
-      courseA_harvester_loops11_markdown_instruction: 'Try one more on your own! '
+      courseA_harvester_loops11_markdown_instruction: 'Provane un altro da solo! '
       courseA_harvester_loops2_markdown_instruction: The harvester needs to pick all the corn! Do you see a pattern?
-      courseA_harvester_loops3_markdown_instruction: Can you pick all the corn using only **one** move block?
+      courseA_harvester_loops3_markdown_instruction: Potresti raccogliere tutto il grano utilizzando solo **un** blocco di movimento?
       courseA_harvester_loops4_markdown_instruction: |-
         *"I need help to find what's wrong!"*
         
         Can you help the harvester find the bug in her code?
-      courseA_harvester_loops5_markdown_instruction: Try it yourself! Can you pick the corn at the end too?
+      courseA_harvester_loops5_markdown_instruction: Provalo! Potresti raccogliere anche il grano alla fine?
       courseA_harvester_loops5a_markdown_instruction: Look at all this corn? Can you pick it all by yourself?
       courseA_harvester_loops5b_markdown_instruction: Can you change your code to make the harvester pick all the corn?
       courseA_harvester_loops6_markdown_instruction: You will need **one** <xml><block type="maze_moveWest"></block></xml> block and **one** <xml><block type="maze_moveNorth"></block></xml> block to finish this puzzle!
-      courseA_harvester_loops7_markdown_instruction: 'Try it on your own! '
+      courseA_harvester_loops7_markdown_instruction: 'Provalo! '
       courseA_harvester_loops8_markdown_instruction: |-
         This is the same puzzle, but now you have to repeat **three** times instead of two! Use this block:
         
@@ -27200,7 +27200,7 @@ it:
       courseA_harvester_loops9_markdown_instruction: Can you figure out how to pick *all* this corn?
       courseA_harvester_seq1_markdown_instruction: Help the harvester pick the piece of corn!
       courseA_harvester_seq10_markdown_instruction: The harvester needs to pick all the corn! Do you see a pattern?
-      courseA_harvester_seq11_markdown_instruction: Try it by yourself! Pick all the corn.
+      courseA_harvester_seq11_markdown_instruction: Prova tu stesso! Raccogli tutto il grano.
       courseA_harvester_seq12_markdown_instruction: "*Thank you for helping me!* \n\nPick all the corn."
       courseA_harvester_seq13_markdown_instruction: Help the harvester pick corn!
       courseA_harvester_seq2_markdown_instruction: 'Use <xml><block type="maze_moveWest"/></xml> **three** times to get the harvester to the corn! '
@@ -27217,7 +27217,7 @@ it:
       courseA_maze_ramp3a_2018_markdown_instruction: "Grab a <xml><block type=\"maze_moveNorth\"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\". \n\n---\n"
       courseA_maze_ramp3b_2018_markdown_instruction: "There's an extra block at the end of this code!  \n\nDrag it back to the toolbox to throw it away."
       courseA_maze_ramp4_2018_markdown_instruction: "*\"Fammi fare il percorso per arrivare a quello sciocco maiale.\"*\n\nEvita la dinamite (TNT) o ci lascio le penne!"
-      courseA_maze_ramp4a_2018_markdown_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
+      courseA_maze_ramp4a_2018_markdown_instruction: Riesci a capire quale blocco hai bisogno di aggiungere alla fine di questo codice per finirlo?
       courseA_maze_ramp5_2018_markdown_instruction: |-
         *"Segui questo percorso per farmi arrivare fino al maialino!"*
         
@@ -27264,7 +27264,7 @@ it:
         Prova questo da solo dall'inizio.\r
         \r
         ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
-      courseA_maze_seq5_2018_markdown_instruction: Give this one a try.
+      courseA_maze_seq5_2018_markdown_instruction: Fai un tentativo.
       courseA_maze_seq5a_2018_markdown_instruction: |-
         *"Here piggy, piggy!"*
         
@@ -27323,6 +27323,7 @@ it:
       courseA_playLab_events4_2018_markdown_instruction: Ora fai muovere il cane a destra quando si preme la freccia a destra.
       courseA_playLab_events5_markdown_instruction: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2018_markdown_instruction: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
+      courseA_playLab_events7_2018_markdown_instruction: "*Freeplay:* Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?"
       courseA_playlab_events_challenge1_markdown_instruction: |-
         Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?
         
@@ -27368,7 +27369,7 @@ it:
         There's an extra block at the end of this code!
         
         Drag it back to the toolbox to throw it away.
-      courseB_Scrat_ramp4a_2018_markdown_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
+      courseB_Scrat_ramp4a_2018_markdown_instruction: Riesci a capire quale blocco hai bisogno di aggiungere alla fine di questo codice per finirlo?
       courseB_Scrat_ramp5a_2018_markdown_instruction: Try this one all by yourself!
       courseB_artist_loops10_markdown_instruction: |-
         Usa tutto quello che hai imparato per disegnare ciò che pensi che l'artista vedrà quando arriverà a casa.
@@ -27458,11 +27459,11 @@ it:
       courseB_playlab_events4_markdown_instruction: "È il momento del cavaliere!\n\nAggiungi un evento per fare in modo che il cavaliere vada verso il drago quando clicchi sulla freccia sinistra."
       courseB_playlab_events4_2018_markdown_instruction: "È il momento del cavaliere!\n\nAggiungi un evento per fare in modo che il cavaliere vada verso il drago quando clicchi sulla freccia sinistra."
       courseB_playlab_events6_markdown_instruction: |-
-        Aiuta il tuo cavaliere a raggiungere tutte le bandiere!
+        Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
         
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
       courseB_playlab_events6_2018_markdown_instruction: |-
-        Aiuta il tuo cavaliere a raggiungere tutte le bandiere!
+        Aiuta il tuo cavaliere a raggiungere tutte le bandierine!
         
         Per far questo, devi aggiungere gli eventi che permettono di muovere il cavaliere in su, in giù, a sinistra e a destra.
       courseB_playlab_events7_markdown_instruction: "Rendi questo gioco divertente facendo svanire il cavaliere quando si scontra con il drago mentre cerca di raggiungere le bandierine!\n\nRiproduci anche un suono quando lo colpisce, così sembra più reale.\n\nTocca tutte le bandierine, quindi vai contro il drago per completare l'esercizio."
@@ -27980,15 +27981,15 @@ it:
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
       courseD_artist_binary1_markdown_instruction: |-
-        We've provided you with a grid of "pixels" that you can walk through and make designs by turning on only certain squares.
+        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
         
-        Use the blocks below to have the artist draw "01010101" in binary in the first row.
+        Usa i blocchi qui sotto per far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
       courseD_artist_binary1_2018_markdown_instruction: |-
-        We've provided you with a grid of "pixels" that you can walk through and make designs by turning on only certain squares.
+        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
         
-        Use the blocks below to have the artist draw "01010101" in binary in the first row.
-      courseD_artist_binary2_markdown_instruction: "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \n___\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n___\n**Run this code to see how the artist uses binary to draw this pattern.**"
-      courseD_artist_binary2_2018_markdown_instruction: "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \n___\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n___\n**Run this code to see how the artist uses binary to draw this pattern.**"
+        Usa i blocchi qui sotto per far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+      courseD_artist_binary2_markdown_instruction: "La funzione `draw binary` (*disegna in binario*) prende in ingresso una sequenza binaria, cioè fatta di caratteri \"1\" e \"0\" e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.\n___\nL'artista quindi colora di bianco i quadrati quando incontra un \"1\" mentre non li colora quando incontra uno \"0\".\n___\n**Clicca su \"Esegui\" per vedere come l'artista usa le sequenze binarie per disegnare questa figura.**"
+      courseD_artist_binary2_2018_markdown_instruction: "La funzione `draw binary` (*disegna in binario*) prende in ingresso una sequenza binaria, cioè fatta di caratteri \"1\" e \"0\" e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.\n___\nL'artista quindi colora di bianco i quadrati quando incontra un \"1\" mentre non li colora quando incontra uno \"0\".\n___\n**Clicca su \"Esegui\" per vedere come l'artista usa le sequenze binarie per disegnare questa figura.**"
       courseD_artist_binary_challenge1_markdown_instruction: You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.
       courseD_artist_binary_challenge1_2018_markdown_instruction: You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.
       courseD_artist_binary_challenge2_markdown_instruction: |-
@@ -28030,25 +28031,25 @@ it:
       courseD_artist_nestedLoops1a_markdown_instruction: "Ora disegna il triangolo 6 volte.\n\nDopo ogni triangolo, devi girarti di 60 gradi prima di disegnare il successivo."
       courseD_artist_nestedLoops1a_2018_markdown_instruction: "Ora disegna il triangolo 6 volte.\n\nDopo ogni triangolo, devi girarti di 60 gradi prima di disegnare il successivo."
       courseD_artist_nestedLoops2_markdown_instruction: |-
-        This time, complete the puzzle with the fewest number of blocks possible.
+        Questa volta, completa l'esercizio con il minor numero di blocchi possibile.
         
-        After each triangle, you'll need to turn 60 degrees before drawing the next.
-        See how much easier this is with **nested loops**?
+        Dopo ogni triangolo, devi girare di 60 gradi prima di disegnare il successivo.
+        Hai visto come è più facile con i **cicli annidati**?
       courseD_artist_nestedLoops2_2018_markdown_instruction: |-
-        This time, complete the puzzle with the fewest number of blocks possible.
+        Questa volta, completa l'esercizio con il minor numero di blocchi possibile.
         
-        After each triangle, you'll need to turn 60 degrees before drawing the next.
-        See how much easier this is with **nested loops**?
+        Dopo ogni triangolo, devi girare di 60 gradi prima di disegnare il successivo.
+        Hai visto come è più facile con i **cicli annidati**?
       courseD_artist_nestedLoops4_markdown_instruction: "Great!  Do the same thing with these circles. \n\n- Each circle is made by moving 1 pixel before turning 1 degree, 360 times.\n- Each circle begins just 50 pixels from where the last one ended"
       courseD_artist_nestedLoops4_2018_markdown_instruction: "Great!  Do the same thing with these circles. \n\n- Each circle is made by moving 1 pixel before turning 1 degree, 360 times.\n- Each circle begins just 50 pixels from where the last one ended"
       courseD_artist_nestedLoops5_markdown_instruction: |-
-        What happens if you also turn 90 degrees between circles?
+        Cosa succede se giri anche di 90 gradi tra i cerchi?
         
-        (To get this image, you still need to jump 50 pixels between circles)
+        (Per ottenere questa immagine, devi saltare di 50 pixels tra i cerchi)
       courseD_artist_nestedLoops5_2018_markdown_instruction: |-
-        What happens if you also turn 90 degrees between circles?
+        Cosa succede se giri anche di 90 gradi tra i cerchi?
         
-        (To get this image, you still need to jump 50 pixels between circles)
+        (Per ottenere questa immagine, devi saltare di 50 pixels tra i cerchi)
       courseD_artist_nestedLoops7_markdown_instruction: |-
         Use what you've learned to make this drawing.
         
@@ -28302,10 +28303,10 @@ it:
         *"This is going to **BEE** great!"*
         
         Help the bee collect all of the nectar.
-      courseD_bee_nestedLoops2_markdown_instruction: This time, help the bee collect all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_2018_markdown_instruction: This time, help the bee collect all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_predict1_markdown_instruction: This time, help the bee collect all of the nectar using as few blocks as possible.
-      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: This time, help the bee collect all of the nectar using as few blocks as possible.
+      courseD_bee_nestedLoops2_markdown_instruction: Questa volta, aiuta l'ape a raccogliere tutto il nettare usando il minor numero di blocchi possibile.
+      courseD_bee_nestedLoops2_2018_markdown_instruction: Questa volta, aiuta l'ape a raccogliere tutto il nettare usando il minor numero di blocchi possibile.
+      courseD_bee_nestedLoops2_predict1_markdown_instruction: Questa volta, aiuta l'ape a raccogliere tutto il nettare usando il minor numero di blocchi possibile.
+      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: Questa volta, aiuta l'ape a raccogliere tutto il nettare usando il minor numero di blocchi possibile.
       courseD_bee_nestedLoops3_markdown_instruction: "*\"Can you BEE-lieve all of these flowers?\"*\n\nCollect all of the nectar from each flower. "
       courseD_bee_nestedLoops5_markdown_instruction: 'Raccogli tutto il nettare da ogni fiore e produci il miele in ogni favo. Usa un ciclo annidato.'
       courseD_bee_nestedLoops6_markdown_instruction: Make all of the nectar.
@@ -28317,10 +28318,10 @@ it:
       courseD_bee_nestedLoops7_2018_markdown_instruction: "**Challenge:** Figure out how to get all of the nectar using only the blocks available."
       courseD_bee_nestedLoops8_markdown_instruction: 'Raccogli tutto il nettare da ogni fiore e produci il miele in ogni favo. Usa un ciclo annidato.'
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Raccogli tutto il nettare da ogni fiore e produci il miele in ogni favo. Usa un ciclo annidato.'
-      courseD_bee_nestedLoops9_markdown_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_2018_markdown_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_predict2_markdown_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Make all of the honey.
+      courseD_bee_nestedLoops9_markdown_instruction: Produci tutto il miele.
+      courseD_bee_nestedLoops9_2018_markdown_instruction: Produci tutto il miele.
+      courseD_bee_nestedLoops9_predict2_markdown_instruction: Produci tutto il miele.
+      courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Produci tutto il miele.
       courseD_bee_nested_loops_challenge1_markdown_instruction: Let's hunt for treasure - using loops! Help the collector reach at least two piles of treasure using only the blocks in your toolbox.
       courseD_bee_nested_loops_challenge2_markdown_instruction: Let's hunt for treasure - using loops! Help the collector reach at least two piles of treasure using only the blocks in your toolbox.
       courseD_bounce_events1_markdown_instruction: Get to the flag! Attach a block to the "when left arrow" block and press "Run" to move the player to the flag.
@@ -28643,8 +28644,8 @@ it:
         Get the zombie to the sunflower using only the blocks available.
       courseD_maze_ramp1_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_maze_ramp1_2018_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
-      courseD_maze_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
-      courseD_maze_ramp2_2018_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
+      courseD_maze_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi e, per completare il programma, attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
+      courseD_maze_ramp2_2018_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi e, per completare il programma, attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseD_maze_ramp3_markdown_instruction: "*\"Questo maialino mi fa arricciare le penne.\"*\n\nC'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via sganciandolo dagli altri grigi e trascinandolo nella cassetta degli attrezzi."
       courseD_maze_ramp3_2018_markdown_instruction: "*\"Questo maialino mi fa arricciare le penne.\"*\n\nC'è un blocco di troppo che fa andare a sbattere l'uccellino.\nButtalo via sganciandolo dagli altri grigi e trascinandolo nella cassetta degli attrezzi."
       courseD_maze_ramp4_markdown_instruction: "*\"Fammi fare il percorso per arrivare a quello sciocco maiale.\"*\n\nEvita la dinamite (TNT) o ci lascio le penne!"
@@ -28657,12 +28658,12 @@ it:
         *"Segui questo percorso per farmi arrivare fino al maialino!"*
         
         Evita la dinamite (TNT).
-      courseD_maze_ramp5a_markdown_instruction: Pay attention to the sequence and see if you can figure out how to get to that pig!
-      courseD_maze_ramp5a_2018_markdown_instruction: Pay attention to the sequence and see if you can figure out how to get to that pig!
-      courseD_maze_ramp5b_markdown_instruction: "**Challenge:** Navigate this maze to help the bird find the pig!"
-      courseD_maze_ramp5b_2018_markdown_instruction: "**Challenge:** Navigate this maze to help the bird find the pig!"
-      courseD_maze_ramp5c_markdown_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5c_2018_markdown_instruction: Help the bird get to the pig.
+      courseD_maze_ramp5a_markdown_instruction: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
+      courseD_maze_ramp5a_2018_markdown_instruction: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
+      courseD_maze_ramp5b_markdown_instruction: "**Sfida: ** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b_2018_markdown_instruction: "**Sfida: ** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5c_markdown_instruction: Aiuta l'uccellino a raggiungere il maialino.
+      courseD_maze_ramp5c_2018_markdown_instruction: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5d_markdown_instruction: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp5d_2018_markdown_instruction: Fai arrivare l'uccellino fino al maialino.
       courseD_maze_ramp6_markdown_instruction: |-
@@ -28725,35 +28726,35 @@ it:
         * Encode an image of anything you like using `binary`. Type 0s and 1s below to create an image.
         * You might want to do some planning and sketching with graph paper first.
         * Get creative! What kind of drawing can you create?
-      courseD_playLab_cond1_markdown_instruction: "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \n\n---\nHelp Pegleg gather the flags to solve this puzzle."
-      courseD_playLab_cond1_2018_markdown_instruction: "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \n\n---\nHelp Pegleg gather the flags to solve this puzzle."
-      courseD_playLab_cond2_markdown_instruction: "Time to add points!  \n\nEdit the code to give Pegleg (actor 1) a point when he makes it to the dragon (actor 2). "
-      courseD_playLab_cond2_2018_markdown_instruction: "Time to add points!  \n\nEdit the code to give Pegleg (actor 1) a point when he makes it to the dragon (actor 2). "
-      courseD_playLab_cond3_markdown_instruction: 'Use a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  '
-      courseD_playLab_cond3_2018_markdown_instruction: 'Use a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  '
-      courseD_playLab_cond3a_markdown_instruction: "It's time to use what we've learned about conditionals to make this game amazing. \n\nAdd code so that when Pegleg gets to the dragon, he gets two points *if* the dragon is happy. Otherwise, he should get only one point added to his score."
-      courseD_playLab_cond3a_2018_markdown_instruction: "It's time to use what we've learned about conditionals to make this game amazing. \n\nAdd code so that when Pegleg gets to the dragon, he gets two points *if* the dragon is happy. Otherwise, he should get only one point added to his score."
+      courseD_playLab_cond1_markdown_instruction: "Per iniziare il gioco, il pirata (personaggio 1) deve essere in grado di muoversi in tutte le direzioni. Collega i blocchi agli eventi corretti per permettere di muovere il pirata.\n\n---\nAiuta il pirata a raggiungere tutte le bandierine per risolvere questo esercizio."
+      courseD_playLab_cond1_2018_markdown_instruction: "Per iniziare il gioco, il pirata (personaggio 1) deve essere in grado di muoversi in tutte le direzioni. Collega i blocchi agli eventi corretti per permettere di muovere il pirata.\n\n---\nAiuta il pirata a raggiungere tutte le bandierine per risolvere questo esercizio."
+      courseD_playLab_cond2_markdown_instruction: "E adesso aggiungiamo il punteggio!\n\nModifica il programma in modo da assegnare un punto al pirata (personaggio 1) ogni volta che riesce a raggiungere il drago (personaggio 2)."
+      courseD_playLab_cond2_2018_markdown_instruction: "E adesso aggiungiamo il punteggio!\n\nModifica il programma in modo da assegnare un punto al pirata (personaggio 1) ogni volta che riesce a raggiungere il drago (personaggio 2)."
+      courseD_playLab_cond3_markdown_instruction: 'Usa un ciclo `ripeti per sempre` per fare in modo che ogni secondo il drago (attore 2) cambi umore in modo casuale.'
+      courseD_playLab_cond3_2018_markdown_instruction: 'Usa un ciclo `ripeti per sempre` per fare in modo che ogni secondo il drago (attore 2) cambi umore in modo casuale.'
+      courseD_playLab_cond3a_markdown_instruction: "È ora di sfruttare ciò che abbiamo imparato sulle istruzioni condizionali per rendere questo gioco fantastico.\n\nAggiungi del codice per fare in modo che quando il pirata raggiunge il drago, guadagni due punti solo *se* il drago è felice. In caso contrario, egli si vedrà incrementare il punteggio solo di un punto."
+      courseD_playLab_cond3a_2018_markdown_instruction: "È ora di sfruttare ciò che abbiamo imparato sulle istruzioni condizionali per rendere questo gioco fantastico.\n\nAggiungi del codice per fare in modo che quando il pirata raggiunge il drago, guadagni due punti solo *se* il drago è felice. In caso contrario, egli si vedrà incrementare il punteggio solo di un punto."
       courseD_playLab_cond3b_markdown_instruction: Use a `repeat forever` loop to make the dragon (actor 2) move up and down forever! Add a `wait for 1 second` block in between the `move up` and `move down` blocks for the dragon.
       courseD_playLab_cond4_markdown_instruction: |-
-        This is about to get interesting!
+        Il gioco si fa interessante!
         
-        Add some code so that the ninja (actor 3) starts chasing Pegleg as soon as the game begins.  End the game as a loss if the ninja catches him.
+        Aggiungi del codice affinché, appena il gioco comincia, il ninja (personaggio 3) si metta a inseguire il pirata. Se il ninja lo prende, il gioco termina con una sconfitta.
       courseD_playLab_cond4_2018_markdown_instruction: |-
-        This is about to get interesting!
+        Il gioco si fa interessante!
         
-        Add some code so that the ninja (actor 3) starts chasing Pegleg as soon as the game begins.  End the game as a loss if the ninja catches him.
+        Aggiungi del codice affinché, appena il gioco comincia, il ninja (personaggio 3) si metta a inseguire il pirata. Se il ninja lo prende, il gioco termina con una sconfitta.
       courseD_playLab_cond5_markdown_instruction: |-
-        Now we need a way to win.
+        Ora dobbiamo definire un modo per vincere.
         
-        Add a `repeat forever` loop that continuously checks **if** the score is greater than 5, then ends the game as a **win** when it is.
+        Aggiungi un ciclo `ripeti per sempre` che controlli in continuazione il punteggio: se è maggiore di 5, allora termina il gioco con una vittoria.
       courseD_playLab_cond5_2018_markdown_instruction: |-
-        Now we need a way to win.
+        Ora dobbiamo definire un modo per vincere.
         
-        Add a `repeat forever` loop that continuously checks **if** the score is greater than 5, then ends the game as a **win** when it is.
-      courseD_playLab_cond6_markdown_instruction: "Wow, this game is hard to win!\n\nLet's customize this game to make it more fun.  This challenge has two parts:\n___\n\n1)  Slow down the ninja (actor 3) before you set him to chase the pirate (actor 1).  \n\n2)  Use a `repeat forever` loop to check to see if the pirate is in the \"safe zone\" beneath the line of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  "
-      courseD_playLab_cond6_2018_markdown_instruction: "Wow, this game is hard to win!\n\nLet's customize this game to make it more fun.  This challenge has two parts:\n___\n\n1)  Slow down the ninja (actor 3) before you set him to chase the pirate (actor 1).  \n\n2)  Use a `repeat forever` loop to check to see if the pirate is in the \"safe zone\" beneath the line of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  "
-      courseD_playLab_cond6a_markdown_instruction: "We don't want the pirate to stay in the \"safe zone\" too long!  \n\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line."
-      courseD_playLab_cond6a_2018_markdown_instruction: "We don't want the pirate to stay in the \"safe zone\" too long!  \n\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line."
+        Aggiungi un ciclo `ripeti per sempre` che controlli in continuazione il punteggio: se è maggiore di 5, allora termina il gioco con una vittoria.
+      courseD_playLab_cond6_markdown_instruction: "Wow, è proprio difficile vincere a questo gioco!\n\nProviamo a personalizzarlo in modo da renderlo più divertente. Questa sfida è composta da due parti:\n___\n\n1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.\n2) Usa un ciclo `ripeti per sempre` per controllare se il pirata è nella \"zona di sicurezza\" al di sotto dei polpi (più in basso di 225 pixel). \nSe lo è, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata."
+      courseD_playLab_cond6_2018_markdown_instruction: "Wow, è proprio difficile vincere a questo gioco!\n\nProviamo a personalizzarlo in modo da renderlo più divertente. Questa sfida è composta da due parti:\n___\n\n1) Rallenta il ninja (personaggio 3) prima di fargli inseguire il pirata.\n2) Usa un ciclo `ripeti per sempre` per controllare se il pirata è nella \"zona di sicurezza\" al di sotto dei polpi (più in basso di 225 pixel). \nSe lo è, imposta il ninja per farlo **fuggire** dal pirata. Altrimenti, imposta il ninja affinché **insegua** il pirata."
+      courseD_playLab_cond6a_markdown_instruction: "Non vogliamo che il pirata stia troppo a lungo nella \"zona di sicurezza\"!\n\nAggiungi del codice all'istruzione condizionale `se` in modo che, se il pirata (personaggio 1) è nella \"zona di sicurezza\", il programma aspetti un secondo, poi tolga un punto ogni secondo che il pirata trascorre al di sotto della linea dei polpi."
+      courseD_playLab_cond6a_2018_markdown_instruction: "Non vogliamo che il pirata stia troppo a lungo nella \"zona di sicurezza\"!\n\nAggiungi del codice all'istruzione condizionale `se` in modo che, se il pirata (personaggio 1) è nella \"zona di sicurezza\", il programma aspetti un secondo, poi tolga un punto ogni secondo che il pirata trascorre al di sotto della linea dei polpi."
       courseD_playLab_cond6cloneForTest_markdown_instruction: Can we make this work?
       courseD_playLab_condFP_2018_markdown_instruction: |-
         Now, build your own game to show off to your friends!
@@ -28767,8 +28768,8 @@ it:
         - Invent your own game!
       courseD_scrat_ramp1_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_scrat_ramp1_2018_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
-      courseD_scrat_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
-      courseD_scrat_ramp2_2018_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
+      courseD_scrat_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi e, per completare il programma, attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
+      courseD_scrat_ramp2_2018_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi e, per completare il programma, attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseD_scrat_ramp3_markdown_instruction: "There is one extra block that is going to cause Scrat to crash.  \nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox."
       courseD_scrat_ramp3_2018_markdown_instruction: "There is one extra block that is going to cause Scrat to crash.  \nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox."
       courseD_scrat_ramp4_markdown_instruction: Avoid the cracked ice to keep Scrat safe!
@@ -29111,8 +29112,8 @@ it:
         
         Use nested loops to get the bird to the pig.
       courseE_maze_ramp1_2018_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
-      courseE_maze_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
-      courseE_maze_ramp2_2018_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi, quindi attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`per completare il programma.
+      courseE_maze_ramp2_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi e, per completare il programma, attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
+      courseE_maze_ramp2_2018_markdown_instruction: Trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi e, per completare il programma, attacca tutti i blocchi al blocco arancione `quando si clicca su "Esegui"`.
       courseE_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       courseE_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       courseE_maze_ramp4_markdown_instruction: "*\"Fammi fare il percorso per arrivare a quello sciocco maiale.\"*\n\nEvita la dinamite (TNT) o ci lascio le penne!"

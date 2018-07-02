@@ -563,6 +563,48 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(false, section_with_script.hidden)
   end
 
+  test "update: course_id is cleared if not provided and script has no default course" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: @course.id)
+
+    refute_nil section.course_id
+
+    post :update, params: {
+      id: section.id
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.course_id
+  end
+
+  test "update: sets course to script's default course if course_id is not provided" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, course_id: nil)
+
+    post :update, params: {
+      id: section.id,
+      script_id: @csp_script.id
+    }
+    section.reload
+    assert_response :success
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_script.course.id, section.course_id
+  end
+
+  test "update: script_id is cleared if not provided" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: @csp_script.id)
+
+    refute_nil section.script_id
+
+    post :update, params: {
+      id: section.id
+    }
+    section.reload
+    assert_response :success
+    assert_nil section.script_id
+  end
+
   test "update: course_id is not updated if invalid" do
     Course.stubs(:valid_course_id?).returns(false)
 

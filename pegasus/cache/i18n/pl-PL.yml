@@ -1,4 +1,5 @@
-"pl-PL":
+---
+pl-PL:
   hour_of_code: Godzina kodowania (Hour of Code)
   hello: Witaj świecie
   'yes': Tak
@@ -727,8 +728,8 @@
   volunteer_engineer_submission_field_email_preference: Czy wyrażasz zgodę na otrzymywanie
     od nas wiadomości e-mail z najnowszymi informacjami o naszych kursach, lokalnymi
     ofertami oraz innymi nowościami informatycznymi?
-  volunteer_engineer_submission_field_email_preference_privacy: "(Aby poznać szczegóły,
-    sprawdź naszą Politykę prywatności)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Zobacz naszą politykę
+    prywatności)"
   volunteer_engineer_submission_field_email_preference_yes: Tak
   volunteer_engineer_submission_field_email_preference_no: Nie
   volunteer_engineer_submission_final_paragraph: Będziesz wymieniona/y na mapie, by
