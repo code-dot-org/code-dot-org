@@ -1,4 +1,4 @@
-- @page_title = 'International opt-in'
+- @page_title = I18n.t('pd.international_opt_in.title')
 
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
@@ -6,9 +6,12 @@
 
 #application-header
   %h3
-    International opt-in
+    = I18n.t('pd.international_opt_in.title')
 
 %p
-  This page is for international opt-in.
+  = I18n.t('pd.international_opt_in.intro')
+
+%p
+  = I18n.t('pd.international_opt_in.instructions')
 
 %div#application-container

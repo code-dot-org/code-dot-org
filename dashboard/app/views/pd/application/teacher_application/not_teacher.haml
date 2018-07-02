@@ -2,6 +2,7 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 %p
-  != I18n.t('not_teacher.body', create_teacher: '/users/sign_up?user%5Buser_type%5D=teacher', user_settings: '/users/edit')
+  != I18n.t('pd.not_teacher.body', create_teacher: '/users/sign_up?user%5Buser_type%5D=teacher', user_settings: '/users/edit')
 
-  != I18n.t('not_teacher.more', pl_overview: 'https://code.org/educate/professional-learning')
+%p
+  != I18n.t('pd.not_teacher.more', pl_overview: CDO.code_org_url('/educate/professional-learning'))

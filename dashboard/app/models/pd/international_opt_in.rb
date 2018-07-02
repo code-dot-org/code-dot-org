@@ -28,6 +28,7 @@ class Pd::InternationalOptIn < ApplicationRecord
       :first_name,
       :last_name,
       :gender,
+      :school_name,
       :school_city,
       :school_country,
       :ages,
