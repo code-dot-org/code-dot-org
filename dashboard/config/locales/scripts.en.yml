@@ -2050,7 +2050,7 @@ en:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: The Design Recipe'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
           description_audience: ''
