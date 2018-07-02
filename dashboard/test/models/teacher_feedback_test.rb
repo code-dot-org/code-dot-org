@@ -68,10 +68,12 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     first_feedback = create :teacher_feedback, teacher: teacher
     second_feedback = create :teacher_feedback, teacher: teacher
     teacher.destroy
-    assert_not TeacherFeedback.exists?(first_feedback.id)
-    assert_not TeacherFeedback.exists?(second_feedback.id)
 
     #Assert that feedback was soft-deleted
+    assert first_feedback.reload.deleted?
+    assert second_feedback.reload.deleted?
+
+    #Assert that feedback can be un-deleted
     teacher.undestroy
     assert TeacherFeedback.exists?(first_feedback.id)
     assert TeacherFeedback.exists?(second_feedback.id)
