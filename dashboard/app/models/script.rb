@@ -578,7 +578,10 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4 coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include? name
+    (
+      Script::CATEGORIES[:csf_international] +
+      Script::CATEGORIES[:csf]
+    ).include? name
   end
 
   def k5_draft_course?
@@ -590,7 +593,7 @@ class Script < ActiveRecord::Base
   end
 
   def csf_international?
-    %w(course1 course2 course3 course4).include? name
+    ScriptConstants.script_in_category?(:csf_international, name)
   end
 
   def cs_in_a?
