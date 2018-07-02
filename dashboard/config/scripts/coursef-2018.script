@@ -8,6 +8,7 @@ project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 family_name 'coursef'
 version_year '2018'
+is_stable true
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_MRF_2018'
@@ -244,17 +245,18 @@ level 'Virtual Pet Freeplay'
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'courseF_video_csMatters_2018'
 named_level 'InspirationalArtwork_2018'
+named_level 'courseF_project_1'
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project_2018'
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project_2018'
-named_level 'Course F: Play Lab Project_2018'
+named_level 'CourseF_Project_SpriteLab'
 
 stage 'Revise Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project - Revise_2018'
-named_level 'Course F: Play Lab Project - Revise_2018'
+named_level 'CourseF_Project_Revise_SpriteLab'
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation_2018'

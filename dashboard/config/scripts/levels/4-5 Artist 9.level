@@ -34,6 +34,7 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"When a triangle is an equilateral, all sides and all angles are the same.  \\n\",\r\n  \"hint_id\": \"4-5_Artist_9_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need to draw three triangles of the same size. Don't forget to jump to your new position after each one.\",\r\n  \"hint_id\": \"4-5_Artist_9_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "discard_background": "false",
+    "hint_prompt_attempts_threshold": 21,
     "contained_level_names": null
   },
   "published": true,

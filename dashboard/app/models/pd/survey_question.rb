@@ -29,6 +29,11 @@ module Pd
       end
     end
 
+    def sync_from_jotform
+      self.class.sync_from_jotform form_id
+      reload
+    end
+
     def form_questions
       @form_questions ||= JotForm::FormQuestions.deserialize(form_id, JSON.parse(questions))
     end

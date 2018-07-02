@@ -226,7 +226,14 @@ function extractCSSFromHTML(el) {
           }
         }
         if (styleDiff.length > 0) {
-          css.push(selectorPrefix + '#' + child.id + ' {');
+          let childId = child.id;
+          const firstIdChar = childId.charAt(0);
+          if (!isNaN(parseInt(firstIdChar, 10))) {
+            // First character of id is a number. Must transform this to create
+            // legal CSS:
+            childId = `\\3${firstIdChar} ${childId.substring(1)}`;
+          }
+          css.push(selectorPrefix + '#' + childId + ' {');
           css = css.concat(styleDiff);
           css.push('}');
           css.push('');
@@ -656,8 +663,8 @@ function generateAppAssets(params) {
 function rewriteAssetUrls(appAssets, data) {
   return appAssets.reduce(function (data, assetToDownload) {
     const searchUrl = assetToDownload.searchUrl || assetToDownload.filename;
-    data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`), `"${assetToDownload.rootRelativePath}"`);
-    return data.replace(new RegExp(`["|']${searchUrl}["|']`), `"${assetToDownload.rootRelativePath}"`);
+    data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`, 'g'), `"${assetToDownload.rootRelativePath}"`);
+    return data.replace(new RegExp(`["|']${searchUrl}["|']`, 'g'), `"${assetToDownload.rootRelativePath}"`);
   }, data);
 }
 

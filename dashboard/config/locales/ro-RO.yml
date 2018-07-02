@@ -412,6 +412,7 @@ ro:
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
     email_confirm_wrong_email: "(Adresă de e-mail greşită?)"
     email_resend_confirm: Retrimite instrucțiunile de confirmare
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(lasă necompletat dacă nu dorești să schimbi)"
     current_password_hint: "(avem nevoie de parola ta curentă pentru a confirma modificările)"
     delete: Șterge-ți contul

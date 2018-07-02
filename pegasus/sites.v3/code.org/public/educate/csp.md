@@ -68,9 +68,9 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 [col-33]
 
-[<center><img src="/images/csp/csp-crop-cover.png" width="90%">](/files/CSP_CurriculumGuide_2017_forWeb.pdf)</center>
+[<center><img src="/images/csp/csp-crop-cover.png" width="90%">](https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">The <a href="/files/CSP_CurriculumGuide_2017_forWeb.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
+<div style="margin-left: 15px; margin-top: 5px;">The <a href="https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#", target=_"blank">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
 
 [/col-33]
 

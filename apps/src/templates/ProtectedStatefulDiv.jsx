@@ -11,38 +11,38 @@ import Radium from 'radium';
  * Useful when React is wrapping external libraries or parts of our UI that are
  * not yet driven by React.
  */
-var ProtectedStatefulDiv = React.createClass({
-  propTypes: {
+class ProtectedStatefulDiv extends React.Component {
+  static propTypes = {
     contentFunction: PropTypes.func,
     children: PropTypes.node,
-  },
+  };
 
-  shouldComponentUpdate: function () {
+  shouldComponentUpdate() {
     return false;
-  },
+  }
 
-  componentDidMount: function () {
+  componentDidMount() {
     if (typeof this.props.contentFunction === 'function') {
       this.refs.root.innerHTML = this.props.contentFunction();
     }
-  },
+  }
 
   getRoot() {
     return this.refs.root;
-  },
+  }
 
-  componentWillUnmount: function () {
+  componentWillUnmount() {
     // when using the storybook styleguide, we don't really need to protect
     // anything, and actually we want to unmount/remount stuff all the time
     // when the page is hot-reloaded
     if (!IN_STORYBOOK) {
       throw new Error("Unmounting a ProtectedStatefulDiv is not allowed.");
     }
-  },
+  }
 
-  render: function () {
+  render() {
     return <div {..._.omit(this.props, ['contentFunction'])} ref="root"/>;
   }
-});
+}
 
 export default Radium(ProtectedStatefulDiv);

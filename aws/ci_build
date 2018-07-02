@@ -29,8 +29,8 @@ require 'cdo/github'
 require 'cdo/git_utils'
 require 'cdo/honeybadger'
 require 'cdo/infra_production_topic'
-require 'cdo/infra_test_topic'
 require 'cdo/rake_utils'
+require 'cdo/test_server_status'
 require 'cdo/only_one'
 require 'cdo/metrics_helper'
 require 'dynamic_config/dcdo'
@@ -219,9 +219,7 @@ def mark_dtt_green
   ChatClient.log msg
   ChatClient.message 'deploy-status', msg
 
-  DevelopersTopic.set_dtt 'yes'
-  InfraTestTopic.set_green_commit test_branch_sha
-  Metrics.write_metric('dtt_green', test_branch_sha, Metrics::AUTOMATIC)
+  TestServerStatus.mark_green test_branch_sha, Metrics::AUTOMATIC
 end
 
 # Log details of a build to metrics database.

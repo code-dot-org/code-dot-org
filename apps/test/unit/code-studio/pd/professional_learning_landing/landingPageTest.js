@@ -1,7 +1,9 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
-import {expect} from 'chai';
+import {shallow, mount} from 'enzyme';
+import i18n from "@cdo/locale";
+import {expect} from '../../../../util/configuredChai';
+import LandingPage, {LastWorkshopSurveyBanner} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
+import Button from '@cdo/apps/templates/Button';
 
 describe("Tests for Professional Learning Landing Page", () => {
   const generateLandingPage = (landingPageProps = []) => {
@@ -47,5 +49,35 @@ describe("Tests for Professional Learning Landing Page", () => {
       expect(landingPage.childAt(2).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(3).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
+  });
+});
+
+describe('LastWorkshopSurveyBanner', () => {
+  let wrapper;
+
+  const TEST_SURVEY_URL = 'https//example.com';
+
+  beforeEach(() => {
+    wrapper = mount(
+      <LastWorkshopSurveyBanner
+        subHeading="Test subheading"
+        description="Test description"
+        surveyUrl={TEST_SURVEY_URL}
+      />
+    );
+  });
+
+  afterEach(() => {
+    wrapper.unmount();
+  });
+
+  it('makes a button that opens the survey URL in a new tab', () => {
+    expect(wrapper).to.containMatchingElement(
+      <Button
+        href={TEST_SURVEY_URL}
+        target="_blank"
+        text={i18n.plLandingStartSurvey()}
+      />
+    );
   });
 });

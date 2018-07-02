@@ -61,11 +61,8 @@
     "name_suffix": "_2018",
     "map_reference": "/docs/csd-1718/drawing_shapes_map/index.html",
     "video_key": "csd_gamelab_draw_1",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_type_hints": "false"
+    "show_type_hints": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

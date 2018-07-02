@@ -47,7 +47,7 @@ ky:
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: Жок кыл
-  okay: Okay
+  okay: Окай
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -407,6 +407,7 @@ ky:
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: "(Wrong email address?)"
     email_resend_confirm: Resend confirmation instructions
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
     delete: Delete your account
@@ -779,7 +780,7 @@ ky:
       title: Gallery
       body: View a gallery of app and artist images created by our users
     gamelab:
-      title: Game Lab (beta)
+      title: Оюн лабы
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Ages 13+
@@ -799,7 +800,7 @@ ky:
       title: Star Wars
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө.
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
@@ -827,7 +828,7 @@ ky:
       body_short: If you don't have computers, try these unplugged lessons in your
         classroom.
     unplugged_conditionals:
-      title: Conditionals
+      title: Шартуулар
       body: Learn about algorithms and conditional statements in this “unplugged”
         activity using a deck of cards.
     widgets:
@@ -877,16 +878,16 @@ ky:
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: Thank you
+    wrong_title: Рахмат
     wrong_body: Thank you for submitting an answer.
-    correct_title: Thank you
+    correct_title: Рахмат
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: Thank you
+    wrong_title: Рахмат
     wrong_body: Thank you for submitting answers.
-    correct_title: Thank you
+    correct_title: Рахмат
     correct_body: Thank you for submitting answers.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
@@ -895,9 +896,9 @@ ky:
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: Thank you
+    wrong_title: Рахмат
     wrong_body: Thank you for submitting answers.
-    correct_title: Thank you
+    correct_title: Рахмат
     correct_body: Thank you for submitting answers.
     unsubmit-title: Unsubmit your assessment
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and

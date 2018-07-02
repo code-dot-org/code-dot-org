@@ -1,7 +1,13 @@
 class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
-  load_and_authorize_resource :section
+
+  before_action :load_from_cache
+  load_and_authorize_resource :section, only: [:section_responses, :section_surveys]
   load_and_authorize_resource :script
+
+  def load_from_cache
+    @script = Script.get_from_cache(params[:script_id])
+  end
 
   # For each assessment in a script, return an object of script_level IDs to question data.
   # Question data includes the question text, all possible answers, and the correct answers.
@@ -33,15 +39,17 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       questions = []
 
       # For each level in the multi group (ignore pages structure information)
-      level_group.levels.each do |level|
+      level_group.levels.each_with_index do |level, index|
         # A single level corresponds to a single question
-        questions.push(level.question_summary)
+        summary = level.question_summary
+        summary[:question_index] = index
+        questions.push(summary)
       end
 
       assessments[level_group.id] = {
         id: level_group.id,
         questions: questions,
-        name: level_group.name,
+        name: script_level.stage.localized_title,
       }
     end
 
@@ -110,23 +118,29 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
 
           level_result = {}
 
+          case level
+          when TextMatch, FreeResponse
+            level_result[:type] = "FreeResponse"
+          when Multi
+            level_result[:type] = "Multi"
+          end
+
           if level_response
             case level
             when TextMatch, FreeResponse
               student_result = level_response["result"]
               level_result[:student_result] = student_result
-              level_result[:status] = "free_response"
+              level_result[:status] = ""
             when Multi
-              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
-              student_result = level_response["result"].split(",").sort.join(",")
+              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes_array
+              student_result = level_response["result"].split(",").map(&:to_i).sort
+              level_result[:student_result] = student_result
 
-              # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-              level_result[:student_result] = student_result.split(',').map {|k| Multi.value_to_letter(k.to_i)}.join(', ')
-
-              if student_result == "-1"
-                level_result[:student_result] = ""
+              if student_result == [-1]
+                level_result[:student_result] = []
                 level_result[:status] = "unsubmitted"
-              elsif student_result == answer_indexes
+              # Deep comparison of arrays of indexes
+              elsif student_result - answer_indexes == []
                 multi_count_correct += 1
                 level_result[:status] = "correct"
               else

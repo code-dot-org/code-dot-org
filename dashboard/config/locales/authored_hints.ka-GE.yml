@@ -6339,8 +6339,10 @@ ka:
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად,
           ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop,
-          **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ
@@ -6359,7 +6361,10 @@ ka:
         courseA_harvester_loops6_b: This is the path you should take to pick all the
           corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
@@ -6394,7 +6399,7 @@ ka:
           Use this block to pick corn once the harvester gets to it.
 
           <xml>
-          <block type="maze_nectar"/>
+          <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml>
@@ -6469,6 +6474,25 @@ ka:
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
           </next>
           </block>
           </next>
@@ -6666,8 +6690,7 @@ ka:
         courseA_maze_seq_challenge2_a: სცადეთ ჰარების თითით დათვლა. საწყისი ჰარი არ
           ჩათვალოთ!
       courseA_playLab_events2_authored_hint:
-        courseA_playLab_events2_a: "Here is the block you should connect to the `when
-          run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
+        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
         courseA_playLab_events2_b: |-
           ეს ამ თავსატეხის ამოსახსნელად საჭირო კოდია:
 
@@ -7050,6 +7073,25 @@ ka:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -7101,7 +7143,10 @@ ka:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
         courseB_artist_loops3_b: ამ ხაზის დასახატად მხატვარი სამხრეთით უნდა გადაადგილდეს.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: ამ ხაზის დასახატად მხატვარი სამხრეთით უნდა გადაადგილდეს.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: ახტომის ბლოკი საშუალებას გაძლევთ ხაზის დახატვის გარეშე
@@ -7119,8 +7164,10 @@ ka:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
-          inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: სცადეთ სვლების ქაღალდზე ჩაწერა, შემდეგ კი მსგავსების
           პოვნა.
