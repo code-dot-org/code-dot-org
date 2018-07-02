@@ -6287,6 +6287,8 @@
       U3 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
+      U3 - Simulation - Template_2018_instruction: Use a while loop to "flip 10 coins"
+        and write them to the screen. (Click to see full instructions)
       U3 - Sprites - Intro Sprites_instruction: Do This
       U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
       U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
@@ -7314,6 +7316,7 @@
       U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart
         to show the change in popularity of both “
       U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Line Chart Template_2018_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
@@ -7543,6 +7546,8 @@
         of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - part 1 - template_instruction: 'Use console.log to display
         the records returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_2018_instruction: 'Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
@@ -7754,6 +7759,8 @@
         when the left and right arrows are pressed. When Kiki is clicked, she\nshould
         throw hearts towards her friends. "
       Vigenere_instruction: Test
+      Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click
+        on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run"
         and then click on her?
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
