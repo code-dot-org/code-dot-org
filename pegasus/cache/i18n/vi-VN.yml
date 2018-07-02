@@ -100,28 +100,7 @@ vi-VN:
   congratulations_volunteer: 'Xin chúc mừng: Bây giờ bạn đã cố gắng Hour of code,
     <a href="https://code.org/volunteer"> đăng ký tình nguyện trong một lớp học</a>
     và giúp học sinh tìm hiểu Hour of Code!'
-  congratulations_on_completing_course1: Xin chúc mừng, bạn đã hoàn thành khóa học
-    1
-  congratulations_on_completing_course2: Xin chúc mừng, bạn đã hoàn thành khóa học
-    2
-  congratulations_on_completing_course3: Xin chúc mừng, bạn đã hoàn thành khóa học
-    3
-  congratulations_on_completing_course4: Xin chúc mừng, bạn đã hoàn thành khóa học
-    4
-  congratulations_on_completing_coursea: Xin chúc mừng, bạn đã hoàn thành khoá học
-    A
-  congratulations_on_completing_courseb: Xin chúc mừng, bạn đã hoàn thành khoá học
-    B
-  congratulations_on_completing_coursec: Xin chúc mừng, bạn đã hoàn thành khoá học
-    C
-  congratulations_on_completing_coursed: Xin chúc mừng, bạn đã hoàn thành khoá học
-    D
-  congratulations_on_completing_coursee: Xin chúc mừng, bạn đã hoàn thành khoá học
-    E
-  congratulations_on_completing_coursef: Xin chúc mừng, bạn đã hoàn thành khoá học
-    F
-  congratulations_on_completing_accelerated: Xin chúc mừng, bạn đã hoàn thành khóa
-    học tăng tốc
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Thực hiện các hướng dẫn tiếp theo
   congrats_next_tutorials_desc: Hảy thữ những bài hướng dẫn ngắn hơn (dài khoảng 1
     tiếng), hoặc là thử <a href="%{current_path}/next"> đối tác hướng dẫn</a>.
@@ -315,28 +294,8 @@ vi-VN:
     @Microsoft for supporting @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: |-
     Cứ 10 người thì có 9 người đồng ý "các trường học nên dạy khoa học máy tính".
     http://youtu.be/nKIu9yen5nc. Truy cập vào trang web: https://code.org/.
@@ -1452,6 +1411,18 @@ vi-VN:
   coursed_gradelevel: Lớp 8 +
   coursee_gradelevel: Grade 9+
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Lớp 8 +
+  coursee-2017_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Lớp 8 +
+  coursee-2018_gradelevel: Ages 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
@@ -1591,6 +1562,30 @@ vi-VN:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn
