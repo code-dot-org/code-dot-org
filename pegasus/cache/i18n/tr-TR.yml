@@ -96,18 +96,7 @@ tr-TR:
   congratulations_volunteer: 'Tebrikler: Kodlama Saati''ni denediniz, <a href="https://code.org/volunteer">bir
     sınıfta gönüllü olmak</a> ve öğrencilerin Kod Saatini öğrenmesine yardımcı olmak
     için kaydolun!'
-  congratulations_on_completing_course1: Kurs 1'i tamamladığınız için tebrikler
-  congratulations_on_completing_course2: Kurs 2'yi tamamladığınız için tebrikler
-  congratulations_on_completing_course3: Kurs 3'ü tamamladığınız için tebrikler
-  congratulations_on_completing_course4: Kurs 4'ü tamamladığınız için tebrikler
-  congratulations_on_completing_coursea: Ders A'yı tamamladığınız için tebrikler
-  congratulations_on_completing_courseb: Ders B'yi tamamladığınız için tebrikler
-  congratulations_on_completing_coursec: Ders C'yi tamamladığınız için tebrikler
-  congratulations_on_completing_coursed: Ders D'yi tamamladığınız için tebrikler
-  congratulations_on_completing_coursee: Ders E'yi tamamladığınız için tebrikler
-  congratulations_on_completing_coursef: Ders F'yi tamamladığınız için tebrikler
-  congratulations_on_completing_accelerated: Hızlandırılmış kursu tamamladığınız için
-    tebrikler
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Bir üst seviyeye geç
   congrats_next_tutorials_desc: 1 saatlik kısa eğitim setlerini veya bir <a href="%{current_path}/next">ortaklık
     eğitimini</a> dene.
@@ -295,28 +284,8 @@ tr-TR:
   just_did_accelerated: Hızlandırılmış Kursu yeni bitirdim-işte! @codeorg
   just_did_hoc_donor: "#KodSaati'ni henüz tamamladım - Hadi bir göz at! Destek için
     teşekkürler %{donor_twitter} @codeorg"
-  just_did_course1_donor: Kurs 1'i henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_course2_donor: Kurs 2'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_course3_donor: Kurs 3'ü henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_course4_donor: Kurs 4'ü henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursea_donor: Kurs A'yı henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_courseb_donor: Kurs B'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursec_donor: Kurs C'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursed_donor: Kurs D'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursee_donor: Kurs E'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursef_donor: Kurs F'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_accelerated_donor: Hızlandırılmış Kursu henüz tamamladım - Hadi bir göz
-    at! Destek için teşekkürler %{donor_twitter} @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: |-
     10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.
     http://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/.
@@ -1416,6 +1385,18 @@ tr-TR:
   coursed_gradelevel: 8+ sınıfları
   coursee_gradelevel: 9. ve üzeri Sınıflar
   coursef_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2017_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2017_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2017_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2017_gradelevel: 8+ sınıfları
+  coursee-2017_gradelevel: 8-12 yaş grubu
+  coursef-2017_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2018_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2018_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2018_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2018_gradelevel: 8+ sınıfları
+  coursee-2018_gradelevel: 8-12 yaş grubu
+  coursef-2018_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
@@ -1561,6 +1542,30 @@ tr-TR:
     oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
   coursef_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin ve kendi
     oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursea-2017_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  courseb-2017_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  coursec-2017_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursed-2017_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursee-2017_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursef-2017_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursea-2018_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  courseb-2018_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  coursec-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursed-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursee-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursef-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
     kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler
     Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten
