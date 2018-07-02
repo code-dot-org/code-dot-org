@@ -42,7 +42,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     )
 
     if auth_option.save
-      return head(:no_content)
+      flash.notice = I18n.t('user.account_successfully_updated')
+      redirect_to edit_user_registration_path
     else
       render status: :unprocessable_entity,
              json: auth_option.errors.as_json(full_messages: true),
