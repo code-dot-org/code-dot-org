@@ -7123,23 +7123,21 @@ es-MX:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: Cuando los estudiantes se encuentran con una barrera
+              description_teacher: "Cuando los estudiantes se encuentran con una barrera
                 al responder a una pregunta o trabajando en un proyecto, es tan fácil
                 sentirse frustrado y abandonar.  Esta lección introducirá a los estudiantes
                 a la idea de que la frustración puede ser una parte importante del
                 aprendizaje. Aquí, la frustración se presenta como un paso en el proceso
                 creativo, en lugar de una señal de fracaso. \r \r esta lección puede
                 realizarse en una o dos clases.  Si tienes más tiempo, no dudes en
-                dibujar  el edificio y repasar la lección de Marble Run.
+                dibujar  el edificio y repasar la lección de Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
               description_student: ''
-              description_teacher: 'En esta lección, los estudiantes relacionan el
+              description_teacher: "En esta lección, los estudiantes relacionan el
                 concepto de algoritmos a actividades cotidianas, plantando una semilla.
                 El objetivo aquí es empezar a construir habilidades para traducir
-                situaciones del mundo real en escenarios en linea y viceversa.\r
-
-'
+                situaciones del mundo real en escenarios en linea y viceversa.\r\n"
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''

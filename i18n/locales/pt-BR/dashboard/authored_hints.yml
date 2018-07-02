@@ -3845,7 +3845,7 @@ pt-BR:
       conditionals_forvideo_harvester_authored_hint: { }
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
-          Voce pode usar laços como esse para criar as paredes e o teto. Tente repetir blocos diferentes.
+          Você pode usar laços como esse para criar as paredes e o teto. Tente repetir blocos diferentes.
           
           
           
@@ -4025,7 +4025,7 @@ pt-BR:
         courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Finalmente, faça Wendel o Mago aparecer quando você clica em Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Você pode fazer um pássaro cantar.\n<xml>   <block type=\"studio_whenSpriteClicked\">     <title name=\"SPRITE\">2</title>     <next>           <block type=\"studio_saySprite\">             <title name=\"SPRITE\">2</title>             <title name=\"TEXT\">Tweet</title>           </block>     </next>   </block></xml>"
         courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           You can make an angry monster growl.
@@ -5240,59 +5240,35 @@ pt-BR:
       courseA_collector_loops_challenge1_authored_hint:
         courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something seems wrong.
         courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
-        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave when you start, but you only need to get treasure 5 times moving South. Do you know why?
+        courseA_collector_loops_challenge1_c: Existem 6 gemas no lado direito da caverna no início, mas você precisa pegar o tesouro 5 vezes movendo-se para o Sul. Você sabe por quê?
         courseA_collector_loops_challenge1_d: |-
-          The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
-          <xml><block type="maze_moveEast">
-          <next>
-          <block type="collector_collect_simplified">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="collector_collect"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+          O programa inicial não coleta as ultimas 2 gemas. Tente adicionar esse code ao final:
+          <xml><block type="maze_moveEast"> <next> <block type="collector_collect_simplified"> <next> <block type="maze_moveSouth"> <next> <block type="collector_collect"/> </next> </block> </next> </block> </next> </block></xml>
       courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something seems wrong.
         courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
-        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave when you start, but you only need to get treasure 5 times moving South. Do you know why?
+        courseA_collector_loops_challenge1_c: Existem 6 gemas no lado direito da caverna no início, mas você precisa pegar o tesouro 5 vezes movendo-se para o Sul. Você sabe por quê?
         courseA_collector_loops_challenge1_d: |-
-          The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
-          <xml><block type="maze_moveEast">
-          <next>
-          <block type="collector_collect_simplified">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="collector_collect"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+          O programa inicial não coleta as ultimas 2 gemas. Tente adicionar esse code ao final:
+          <xml><block type="maze_moveEast"> <next> <block type="collector_collect_simplified"> <next> <block type="maze_moveSouth"> <next> <block type="collector_collect"/> </next> </block> </next> </block> </next> </block></xml>
       courseA_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: You only need to use 1 block to solve this.
-        courseA_collector_loops_challenge2_a: You can move back over the path a second time before moving south.
+        courseA_collector_loops_challenge2_b: Você precisa usar apenas 1 bloco para resolver isso.
+        courseA_collector_loops_challenge2_a: Você pode se mover pelo caminho uma segunda vez antes de se mover para o sul.
       courseA_collector_loops_challenge2kp_authored_hint:
-        courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
-        courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
+        courseA_collector_loops_challenge2kp_b: Tente esse caminho para chegar a solução.
+        courseA_collector_loops_challenge2kp_a: Você consegue usar laços para resolver esse problema?
       courseA_collector_loops_challenge2kp_2018_authored_hint:
-        courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
-        courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
+        courseA_collector_loops_challenge2kp_b: Tente esse caminho para chegar a solução.
+        courseA_collector_loops_challenge2kp_a: Você consegue usar laços para resolver esse problema?
       courseA_collector_preLoops1_authored_hint: { }
       courseA_collector_preLoops2_authored_hint: { }
       courseA_collector_preLoops3_authored_hint: { }
       courseA_collector_preLoops4_authored_hint:
-        courseA_collector_preLoops4_a: "To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) block to the bottom of the program and click \"Run\"!\n\n"
+        courseA_collector_preLoops4_a: "Para pegar o tesouro, encaixe dois blocos ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) ao final do programa e clique em \"Executar\"!\n\n"
       courseA_collector_preLoops5_authored_hint:
-        courseA_collector_preLoops5_a: You'll need to go two different directions to get even one gem!
+        courseA_collector_preLoops5_a: Você vai precisar ir em duas direções diferentes para pegar uma única gema!
       courseA_collector_preLoops6_authored_hint:
-        courseA_collector_preLoops6_a: You will need to use two ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) blocks to solve this puzzle.
+        courseA_collector_preLoops6_a: Você vai precisar usar dois blocos ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) para resolver esse problema.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
           Após você ter se movido para um quadrado com tesouro, use esse bloco para pegá-lo.
@@ -5300,18 +5276,16 @@ pt-BR:
       courseA_forVideoTest_artist_authored_hint: { }
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
-          Use a `repeat` block like this to help you!
-          <xml><block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="2-10">3</title>
-          </block></xml>
+          Use um bloco 'repetir' como esse para te ajudar!
+          <xml><block type="controls_repeat_simplified_dropdown"> <title name="TIMES" config="2-10">3</title> </block></xml>
       courseA_harvester_loops1_authored_hint:
         courseA_harvester_loops1_a: |-
-          Once you move to some corn, use this block to pick it!
+          Quando você se mover até algum milho, use esse bloco para pegá-lo!
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
+        courseA_harvester_loops2_a: "Seu código terá **quatro** blocos 'mover para oeste'\n<xml><block type=\"maze_moveWest\"/></xml> e **quatro** blocos  <xml> 'pegar milho' <block type=\"harvester_corn\"/>. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
@@ -5320,7 +5294,7 @@ pt-BR:
           </block></xml>
         courseA_harvester_loops3_b: "To repeat code, drag out a `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> )loop, then put the block you want inside of it. "
       courseA_harvester_loops4_authored_hint:
-        courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
+        courseA_harvester_loops4_a: Não fique com medo de apertar 'Executar' para ver o que acontece!
         courseA_harvester_loops4_b: Quantos pedaços de milho existem ali? Quantas vezes o seu código repete?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner.
@@ -5328,21 +5302,21 @@ pt-BR:
           Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title>
           </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
-        courseA_harvester_loops5_c: Use this path to pick all the corn!
+        courseA_harvester_loops5_c: Use esse caminho para pegar todo o milho!
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: |-
           You will need one `repeat` <xml> <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title>
           </block></xml> loop after another.
         courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move East` <xml><block type="maze_moveEast" limit="1"/></xml>
-        courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
+        courseA_harvester_loops5a_c: Use esse caminho para se mover em uma direção, depois para a outra.
       courseA_harvester_loops5b_authored_hint:
-        courseA_harvester_loops5b_a: Press `Run` and see what happens!
-        courseA_harvester_loops5b_b: Are your loops repeating the right number of times?
-        courseA_harvester_loops5b_c: Move one way, then the other with this path.
+        courseA_harvester_loops5b_a: Pressione 'Executar' e veja o que acontece!
+        courseA_harvester_loops5b_b: Seus laços estão repetindo o numero certo de vezes?
+        courseA_harvester_loops5b_c: Mova-se em uma direção, depois na outra direção com esse caminho.
       courseA_harvester_loops6_authored_hint:
         courseA_harvester_loops6_a: If you get stuck, try writing the steps on paper and looking for repeating patterns.
-        courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
+        courseA_harvester_loops6_b: Esse ~e o caminho que você deveria pegar para colher todo o milho.
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: |-
           You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
@@ -5351,7 +5325,7 @@ pt-BR:
         courseA_harvester_loops7_b: Use dois laços de repetição para seguir este caminho.
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
-        courseA_harvester_loops9_a: Break this puzzle up into three different parts. One part to the first corner, one part to the second corner, and one part to the end.
+        courseA_harvester_loops9_a: Divida esse problema em três partes diferentes. Uma parte para o primeiro canto, uma parte para o segundo canto e uma parta para o fim.
         courseA_harvester_loops9_b: Don't be afraid to run your code after every part to see what happens!
         courseA_harvester_loops9_c: Follow this path to pick all the corn.
       courseA_harvester_seq1_authored_hint:
@@ -5407,23 +5381,11 @@ pt-BR:
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: Run the code a few times to see what happens. Where does the harvester stop?
         courseA_harvester_seq9_b: Don't forget to pick all the corn! You will need **3** pick corn blocks.
-        courseA_harvester_seq9_c: You should take this path to pick all the corn.
+        courseA_harvester_seq9_c: Você deve usar esse caminho para colher todo o milho.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
-          
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
+          Seu código deve se parecer com esse:
+          <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3_2018_authored_hint:
@@ -5614,7 +5576,7 @@ pt-BR:
       courseA_maze_seq_challenge2_2018_authored_hint:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember not to count the space where you start!
       courseA_playLab_events2_authored_hint:
-        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_a: Look for a block that makes the dog say something.
         courseA_playLab_events2_b: |-
           This is the code you need to complete this puzzle:
           
@@ -5777,7 +5739,7 @@ pt-BR:
         courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1a_authored_hint:
-        courseA_playlab_events_challenge1_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Você pode fazer um pássaro cantar.\n<xml>   <block type=\"studio_whenSpriteClicked\">     <title name=\"SPRITE\">2</title>     <next>           <block type=\"studio_saySprite\">             <title name=\"SPRITE\">2</title>             <title name=\"TEXT\">Tweet</title>           </block>     </next>   </block></xml>"
         courseA_playlab_events_challenge1_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge1_c: |-
           You can make an angry monster growl.
@@ -5804,7 +5766,7 @@ pt-BR:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Você pode fazer um pássaro cantar.\n<xml>   <block type=\"studio_whenSpriteClicked\">     <title name=\"SPRITE\">2</title>     <next>           <block type=\"studio_saySprite\">             <title name=\"SPRITE\">2</title>             <title name=\"TEXT\">Tweet</title>           </block>     </next>   </block></xml>"
         courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           You can make an angry monster growl.
@@ -5831,7 +5793,7 @@ pt-BR:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_2018_authored_hint:
-        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Você pode fazer um pássaro cantar.\n<xml>   <block type=\"studio_whenSpriteClicked\">     <title name=\"SPRITE\">2</title>     <next>           <block type=\"studio_saySprite\">             <title name=\"SPRITE\">2</title>             <title name=\"TEXT\">Tweet</title>           </block>     </next>   </block></xml>"
         courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           You can make an angry monster growl.
@@ -5866,23 +5828,11 @@ pt-BR:
       courseA_toMakeLoopsVideo_Collector_authored_hint: { }
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+        '2': Não tenha medo de errar! Tente algo, e se não funcionar, tente algo diferente!
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
-          
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
+          Seu código deve se parecer com esse:
+          <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
@@ -7432,7 +7382,7 @@ pt-BR:
       courseC_artist_prog5_2018_authored_hint:
         courseC_artist_prog5_a: Slow the slider down all the way until you can run your code line-by-line to see where things go wrong.
         courseC_artist_prog5_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-        courseC_artist_prog5_c: You can use the drop down menu on the `turn` blocks to see which angle you need!
+        courseC_artist_prog5_c: You can use the drop down menus in the blocks to change what they do!
         courseC_artist_prog5_d: Each turn should be 90 degrees to the right.
       courseC_artist_prog6_authored_hint:
         courseC_artist_prog6_a: The artist is already facing the correct way to draw his first line.
@@ -7827,6 +7777,7 @@ pt-BR:
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging5_2018_authored_hint:
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong."
+        courseC_maze_debugging5_c: You can change the direction of the turn block by clicking on the dropdown.
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
@@ -10348,7 +10299,7 @@ pt-BR:
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: Would a `while` loop help here?
-        courseE_bee_concept2_d: You can even check empty spaces to see if honey is > 0.
+        courseE_bee_concept2_d: 'With this `while` loop you  can check empty spaces to see if the amount of honey is > 0. This does the same as the `while there is honey` loop. '
         courseE_bee_concept2_b: You can use `while` loops to move to the end of each path, and to collect all of the honey from each space.
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept3_authored_hint:
@@ -10573,7 +10524,9 @@ pt-BR:
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: What sequence is repeated often in this program? Can you drag these blocks into the function?
         courseE_farmer_functions3c_b: Don't forget to call your function in the main program wherever you removed blocks.
-      courseE_farmer_functions3c1_2018_authored_hint: { }
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path` function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around the corners?
       courseE_farmer_functions3c_2018_authored_hint: { }
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop and into the `go get pumpkins` function.
@@ -10607,7 +10560,9 @@ pt-BR:
         courseE_farmer_functions6c_b: Would an `if/else` block help to check if there is lettuce in a space?
         courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
       courseE_farmer_functions7_authored_hint: { }
-      courseE_farmer_functions7a1_2018_authored_hint: { }
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions` section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You don't need a function here, but you can make one if it is helpful to you!
         courseE_farmer_functions7b_b: Use an `if/else` statement to check for crops, then turn based on which crop you find.
@@ -10618,7 +10573,9 @@ pt-BR:
         courseE_farmer_functions7b_c: A `repeat until pumpkin` loop can help you get all the way through the maze.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: { }
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time, you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Try running the code given to see what it does. What do you need after this?
         courseE_farmer_functions8b_b: Drag all of the starter blocks into a function so that you can use them more than once.
@@ -10629,7 +10586,10 @@ pt-BR:
         courseE_farmer_functions8b_c: How many times do you need to call the function?
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: { }
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements to move along the path?
         courseE_farmer_functions9b_b: Use `repeat until pumpkin` to move through all of the paths.
@@ -11127,7 +11087,7 @@ pt-BR:
         courseF_artist_for1_a: |-
           Can you draw something like this:
           
-          ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+          ![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
@@ -14320,7 +14280,7 @@ pt-BR:
           Have a friend try your app when it is finished!
       coursea_maze_ramp1_2018_authored_hint:
         courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure both of the blocks have been fully clicked together, then click "Run" again.
-        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+        courseC_maze_programming1_b: Não tenha medo de errar! Tente algo, e se não funcionar, tente algo diferente!
       coursef_maze_ramp3_authored_hint:
         courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
         courseF_maze_ramp3_b: Use the step button to go through the program line-by-line. Where does something go wrong?
