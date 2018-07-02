@@ -1,10 +1,5 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
-module OPS
-  API = 'api'.freeze unless defined? API
-  DASHBOARDAPI = 'dashboardapi'.freeze unless defined? DASHBOARDAPI
-end
-
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
@@ -354,44 +349,6 @@ Dashboard::Application.routes.draw do
 
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
-
-  concern :ops_routes do
-    # /ops/district/:id
-    resources :districts do
-      member do
-        get 'teachers'
-      end
-    end
-    resources :cohorts do
-      member do
-        get 'teachers'
-        delete 'teachers/:teacher_id', action: 'destroy_teacher'
-      end
-    end
-    resources :workshops do
-      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
-        resources :workshop_attendance, path: '/attendance', shallow: true do
-        end
-      end
-      member do
-        get 'teachers'
-      end
-    end
-
-    get 'attendance/download/:workshop_id', action: 'attendance', controller: 'workshop_attendance'
-    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
-    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
-    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
-    post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
-  end
-
-  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
-    concerns :ops_routes
-  end
-
-  namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
-    concerns :ops_routes
-  end
 
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
   get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
