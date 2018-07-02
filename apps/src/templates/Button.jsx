@@ -80,6 +80,10 @@ const styles = {
         color: color.cyan,
         borderColor: color.cyan,
         backgroundColor: color.lightest_cyan
+      },
+      ':disabled': {
+        backgroundColor: color.lighter_gray,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
     [ButtonColor.white]: {
