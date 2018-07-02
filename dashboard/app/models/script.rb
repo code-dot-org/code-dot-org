@@ -514,7 +514,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft'
+    name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
   end
 
   def k1?
@@ -585,7 +585,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_draft_course?
-    %w(coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include? name
+    ScriptConstants.script_in_category?(:csf2_draft, name)
   end
 
   def csf?
@@ -601,16 +601,23 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_pdf?
-    return false if %w(coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include?(name)
+    return false if ScriptConstants.script_in_category?(:csf, name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include?(name)
+    return false if ScriptConstants.script_in_category?(:csf, name)
 
-    k5_course? || %w(csp1-2017 csp2-2017 csp3-2017 cspunit1 cspunit2 cspunit3).include?(name)
+    k5_course? || [
+      Script::CSP17_UNIT1_NAME,
+      Script::CSP17_UNIT2_NAME,
+      Script::CSP17_UNIT3_NAME,
+      Script::CSP_UNIT1_NAME,
+      Script::CSP_UNIT2_NAME,
+      Script::CSP_UNIT3_NAME,
+    ].include?(name)
   end
 
   def freeplay_links
