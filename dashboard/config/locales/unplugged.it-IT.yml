@@ -316,10 +316,10 @@ it:
           rete.
       courseD_unplugged_digitalCitizenship:
         title: Attività Tradizionale
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
         title: 'Cittadinanza Digitale: Dati Personali'
-        desc: Today you will learn the difference between private and personal information!
+        desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
@@ -489,7 +489,7 @@ it:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        title: I miei amici robotici
         desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
       BuildingAFoundation_2018:
         title: ''
@@ -557,7 +557,7 @@ it:
           nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
         title: Attività Tradizionale
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in

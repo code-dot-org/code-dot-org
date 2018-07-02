@@ -670,6 +670,7 @@ id:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: {}
+      Fish Tank 2-validated_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
       Frozen Project Toolbox (Old)_callout:
@@ -1183,9 +1184,7 @@ id:
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Angka ini berarti bahwa tidak ada lagi blok yang
           tersedia di dalam kotak peralatan.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: Angka ini berarti bahwa tidak ada lagi blok yang
-          tersedia di dalam kotak peralatan.
+      courseB_artist_loops5_2018_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak
           alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam
@@ -1416,6 +1415,9 @@ id:
       courseD_collector_until_challenge1_callout: {}
       courseD_farmer_until_challenge2_callout: {}
       courseD_farmer_until_challenge2_2018_callout: {}
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:

@@ -2,20 +2,20 @@ de:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: Details
+      draw eyebrow: zeichne Augenbrauen
+      draw pupil: zeichne Pupillen
       draw a circle: Zeichne einen Kreis
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
+      draw a car: zeichne ein Auto
+      draw_rect: zeichne_rechteck
+      draw square: zeichne Quadrat
       jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
+      jump to middle: springe in die Mitte
+      draw a button: zeichne einen Knopf
+      draw cord: zeichne Schnur
       draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
+      draw left leg: zeichne linkes Bein
+      draw right leg: zeichne rechtes Bein
       draw body and arms: draw body and arms
       draw a head: draw a head
       draw sitting stick figure: draw sitting stick figure
@@ -49,9 +49,9 @@ de:
       draw circle: draw circle
       draw goal: draw goal
       graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
-      draw a small triangle: draw a small triangle
+      draw waves: zeichne Wellen
+      draw a wave: zeichne eine Welle
+      draw a small triangle: zeichne ein kleines Dreieck
       draw a medium triangle: draw a medium triangle
       draw a large triangle: draw a large triangle
       draw a big triangle: draw a big triangle
@@ -65,10 +65,10 @@ de:
       make all honey: make all honey
       draw a star: zeichne einen Stern
       game has been won: game has been won
-      draw: draw
-      draw bit: draw bit
-      draw a polygon: draw a polygon
-      draw a shape: draw a shape
+      draw: zeichne
+      draw bit: zeichne ein bisschen
+      draw a polygon: zeichne ein Vieleck
+      draw a shape: zeichne eine Form
       get 2 and make 2: get 2 and make 2
       draw a pinwheel: draw a pinwheel
       drawTree: drawTree
@@ -223,6 +223,7 @@ de:
       booster: booster
       draw line of triangles: draw line of triangles
       draw a window: draw a window
+      stop_everything: stop_everything
       draw a plane of squares: draw a plane of squares
       draw hexagon: draw hexagon
       draw line of hexagons: draw line of hexagons

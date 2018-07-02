@@ -714,16 +714,6 @@ describe('entry tests', () => {
     }
   },
 
-  config.strip_code = {
-    options: {
-      start_comment: 'start-test-block',
-      end_comment: 'end-test-block'
-    },
-    all: {
-      src: ['build/js/*.js']
-    }
-  };
-
   config.notify = {
     'js-build': {options: {message: 'JS build completed.'}},
     sass: {options: {message: 'SASS build completed.'}},
@@ -771,7 +761,6 @@ describe('entry tests', () => {
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
-    'newer:strip_code',
     'ejs'
   ]);
 

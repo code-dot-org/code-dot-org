@@ -377,23 +377,23 @@ pt-BR:
             Automatic DNS node:
               name: Nó DNS Automático
             Broadcasting messages:
-              name: Broadcasting messages
+              name: Transmitindo mensagens
             Internet Simulator Freeplay:
-              name: Internet Simulator Freeplay
+              name: Simulador de Internet Gratuito
             Manual DNS:
               name: DNS Manual
             Overview and Setup Instructions:
               name: Visão Geral e Instruções de Configuração
             Packets and Reliability:
-              name: Packets and Reliability
+              name: Pacotes e Confiabilidade
             Peer to Peer - Sending Ascii:
-              name: Peer to Peer - Sending Ascii
+              name: Ponto a Ponto - Enviado Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
-              name: Peer to Peer - Sending Bits on a Shared Wire
+              name: Ponto a Ponto - Enviando Bits em um cabo compartilhado
             Peer to Peer - Sending Numbers:
-              name: Peer to Peer - Sending Numbers
+              name: Ponto a Ponto - Enviando Números
             Routers and addresses:
-              name: Routers and addresses
+              name: Rotas e endereços
         pixelation:
           title: Pixelização
           description: Crie imagens com bits e bytes.
@@ -401,15 +401,15 @@ pt-BR:
           description_audience: ''
           stages:
             Black & White Pixelation Freeplay:
-              name: Black & White Pixelation Freeplay
+              name: Pixelização em preto e branco gratuita
             Black & White Pixelation Tutorial:
-              name: Black & White Pixelation Tutorial
+              name: Tutorial de pixelização em preto e branco
             Color Pixelation Examples:
-              name: Color Pixelation Examples
+              name: Exemplos de pixelização colorida
             Color Pixelation Freeplay:
-              name: Color Pixelation Freeplay
+              name: Pixelização colorida gratuita
             Color Pixelation Tutorial:
-              name: Color Pixelation Tutorial
+              name: Tutorial de Pixelização colorida
         20-hour:
           title: Introdução acelerada para o curso de CC
           description: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
@@ -542,9 +542,9 @@ pt-BR:
             Binary Numbers:
               name: Números binários
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Bytes e Tamanhos de Arquivos
             Encode a Complex Thing:
-              name: Encode an Experience
+              name: Codificar uma experiência
             Encoding B&W Images:
               name: Codificações de imagem em preto e branco
             Encoding Color Images:
@@ -1080,7 +1080,7 @@ pt-BR:
             CSinA:
               name: CSinA
             Farmer:
-              name: Farmer
+              name: Fazendeiro
             Flappy:
               name: Flappy bird
             Free Response:
@@ -2167,7 +2167,7 @@ pt-BR:
           description_audience: ''
           stages:
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Bytes e Tamanhos de Arquivos
             Check Your Assumptions:
               name: Check Your Assumptions
             Cleaning Data:
@@ -2455,9 +2455,9 @@ pt-BR:
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Collision Detection:
-              name: Collision Detection
+              name: Detecção de Colisão
             Collisions:
-              name: Collisions
+              name: Colisões
             Complex Conditionals:
               name: Complex Conditionals
             Complex Sprite Movement:
@@ -2961,7 +2961,7 @@ pt-BR:
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: Debugging
+              name: Analisando
             Events:
               name: Eventos
             Events Unplugged:
@@ -2975,7 +2975,7 @@ pt-BR:
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
-              name: Loops Unplugged
+              name: Repetições off-line
             Persistence & Frustration:
               name: Persistence & Frustration
             Programming:
@@ -3031,7 +3031,7 @@ pt-BR:
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: Debugging
+              name: Analisando
             Events:
               name: Eventos
             Events Unplugged:
@@ -3043,7 +3043,7 @@ pt-BR:
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
-              name: Loops Unplugged
+              name: Repetições off-line
             More Computer Science:
               name: More Computer Science
             Persistence & Frustration:
@@ -3057,7 +3057,7 @@ pt-BR:
             Unspotted Bugs:
               name: Erros Não Reportados
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuração: Bugs não encontrados'
             'Events Unplugged: The Big Event':
               name: 'Events Unplugged: The Big Event'
         grade5:
@@ -3323,7 +3323,7 @@ pt-BR:
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
               description_teacher: After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
             Collision Detection:
-              name: Collision Detection
+              name: Detecção de Colisão
               description_student: The class learns about collision detection on the computer.  Pairs explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  The class then uses the isTouching() block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
               description_teacher: Students learn about collision detection on the computer.  Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  They then use the `isTouching()` block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
             Complex Sprite Movement:
@@ -3331,7 +3331,7 @@ pt-BR:
               description_student: 'The class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement, such as simulating gravity, making a sprite jump, and allowing a sprite to float left or right. In the final levels the class combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects coins. '
               description_teacher: Students learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. In particular students will learn how to simulate gravity, make a sprite jump, and allow a sprite to float left or right. In the final levels of the Code Studio progression students combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects a coin. Students are encouraged to make their own additions to the game in the final level.
             Collisions:
-              name: Collisions
+              name: Colisões
               description_student: The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
               description_teacher: Students program their sprites to interact in new ways.  After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact.  They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).
             Functions:
@@ -4001,21 +4001,21 @@ pt-BR:
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_short: Uma introdução à ciência da computação para novos leitores.
           description: "Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \\r\nRecommended for grade K."
           stages:
             'Debugging: Bugs in Codeville':
-              name: 'Debugging: Bugs in Codeville'
+              name: 'Depuração: Bugs em Codeville'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistência e frustração: Stevie e as bolinhas de gude'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programação: Mapas felizes'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
             Being Safe Online:
               name: Being Safe Online
             'Loops: Happy Loops':
@@ -4033,17 +4033,17 @@ pt-BR:
             Going Places Safely:
               name: Navegando com segurança
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuração: Bugs não encontrados'
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_short: Uma introdução à ciência da computação para novos leitores.
           description: Course B is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for 1st grade.
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuração: Bugs não encontrados'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistência e frustração: Stevie e as bolinhas de gude'
             Sequence & Algorithms:
               name: Sequence & Algorithms
             Learn to Drag and Drop:
@@ -4053,7 +4053,7 @@ pt-BR:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
@@ -4079,7 +4079,7 @@ pt-BR:
           description: In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 2nd grade.
           stages:
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: aviões de papel'
             Programming in Collector:
@@ -5002,11 +5002,11 @@ pt-BR:
             Velocity:
               name: Velocidade
             Collision Detection:
-              name: Collision Detection
+              name: Detecção de Colisão
             Complex Sprite Movement:
               name: Complex Sprite Movement
             Collisions:
-              name: Collisions
+              name: Colisões
             Functions:
               name: Funções
             The Game Design Process:
@@ -5124,11 +5124,11 @@ pt-BR:
             Velocity:
               name: Velocidade
             Collision Detection:
-              name: Collision Detection
+              name: Detecção de Colisão
             Complex Sprite Movement:
               name: Complex Sprite Movement
             Collisions:
-              name: Collisions
+              name: Colisões
             Functions:
               name: Funções
             The Game Design Process:
@@ -5268,11 +5268,11 @@ pt-BR:
             Velocity:
               name: Velocidade
             Collision Detection:
-              name: Collision Detection
+              name: Detecção de Colisão
             Complex Sprite Movement:
               name: Complex Sprite Movement
             Collisions:
-              name: Collisions
+              name: Colisões
             Functions:
               name: Funções
             The Game Design Process:
@@ -5436,11 +5436,11 @@ pt-BR:
         coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuração: Bugs não encontrados'
               description_student: ''
               description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 'Persistência: Stevie e o grande projeto'
               description_student: ''
               description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
@@ -5448,19 +5448,19 @@ pt-BR:
               description_student: ''
               description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
             Learn to Drag and Drop:
-              name: Sequencing with Drag and Drop
+              name: Sequenciando com arrastar e soltar
               description_student: ''
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Programação: Mapas felizes'
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
               description_student: ''
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
-              name: 'Digital Citizenship: Going Places Safely'
+              name: 'Cidadania digital: indo a lugares com segurança'
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
@@ -5485,25 +5485,25 @@ pt-BR:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
           title: Curso A
           assignment_family_title: Curso A
-          description_audience: 'Ages: 4-7'
+          description_audience: 'Idade: de 4 a 7 anos'
           description_short: An introduction to computer science for pre-readers.
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuração: Bugs não encontrados'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 'Persistência: Stevie e o grande projeto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
             Learn to Drag and Drop:
-              name: Sequencing with Drag and Drop
+              name: Sequenciando com arrastar e soltar
             Your Digital Footprint:
               name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
@@ -5522,13 +5522,13 @@ pt-BR:
           assignment_family_title: Curso B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         coursec-2017:
           stages:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
             Debugging in Maze:
               name: Debugging in Maze
             'Real-life Algorithms: Paper Planes':
@@ -6211,23 +6211,23 @@ pt-BR:
           assignment_family_title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuração: Bugs não encontrados'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 'Persistência: Stevie e o grande projeto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
             Learn to Drag and Drop:
-              name: Sequencing with Drag and Drop
+              name: Sequenciando com arrastar e soltar
             'Online Safety: Your Digital Footprint':
               name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
             'Programming: Star Wars':
               name: 'Programming: Star Wars'
             'Loops: My Loopy Robotic Friends':
@@ -6246,7 +6246,7 @@ pt-BR:
           assignment_family_title: Pre-reader Express
           description_audience: 'Ages: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -7312,11 +7312,11 @@ pt-BR:
             Velocity:
               name: Velocidade
             Collision Detection:
-              name: Collision Detection
+              name: Detecção de Colisão
             Complex Sprite Movement:
               name: Complex Sprite Movement
             Collisions:
-              name: Collisions
+              name: Colisões
             Functions:
               name: Funções
             The Game Design Process:
@@ -7421,7 +7421,7 @@ pt-BR:
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
               description_teacher: After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
             Collision Detection:
-              name: Collision Detection
+              name: Detecção de Colisão
               description_student: The class learns about collision detection on the computer.  Pairs explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  The class then uses the isTouching() block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
               description_teacher: Students learn about collision detection on the computer.  Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  They then use the `isTouching()` block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
             Complex Sprite Movement:
@@ -7429,7 +7429,7 @@ pt-BR:
               description_student: 'The class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement, such as simulating gravity, making a sprite jump, and allowing a sprite to float left or right. In the final levels the class combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects coins. '
               description_teacher: Students learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. In particular students will learn how to simulate gravity, make a sprite jump, and allow a sprite to float left or right. In the final levels of the Code Studio progression students combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects a coin. Students are encouraged to make their own additions to the game in the final level.
             Collisions:
-              name: Collisions
+              name: Colisões
               description_student: The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
               description_teacher: Students program their sprites to interact in new ways.  After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact.  They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).
             Functions:
@@ -7515,11 +7515,11 @@ pt-BR:
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
         coursea-2018:
-          title: Course A (2018)
+          title: Curso A (2018)
           assignment_family_title: Curso A
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           description_short: An introduction to computer science for pre-readers.
-          description_audience: 'Ages: 4-7'
+          description_audience: 'Idade: de 4 a 7 anos'
           stages:
             'Debugging: Unspotted Bugs':
               name: Erros Não Reportados
@@ -7582,7 +7582,7 @@ pt-BR:
         express-2018:
           title: Express Course (2018)
           assignment_family_title: Express Course
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
           stages:
@@ -7801,16 +7801,16 @@ pt-BR:
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: Curso B
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-          description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: 'Depuração: Bugs não encontrados'
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistência e frustração: Stevie e as bolinhas de gude'
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Plant a Seed':
@@ -7830,7 +7830,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
               description_student: ''
               description_teacher: ''
             Programming with Rey and BB-8:
@@ -7846,7 +7846,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Drawing Castles with Loops
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -7870,9 +7870,9 @@ pt-BR:
         coursed-2018:
           title: Course D (2018)
           assignment_family_title: Curso D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_short: Learn about conditional statements and create your own art, story or game.
+          description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programação em Papel Quadriculado
@@ -8233,7 +8233,7 @@ pt-BR:
           title: Course E (2018)
           assignment_family_title: Curso E
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-          description_short: Quickly cover concepts in Course C & D and then go further with functions.
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
           description_audience: 'Ages: 8-12'
           stages:
             'Programming: My Robotic Friends':
@@ -8769,7 +8769,7 @@ pt-BR:
           description_audience: ''
           stages:
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: Bytes e Tamanhos de Arquivos
               description_student: ''
               description_teacher: ''
             Text Compression:
@@ -9437,7 +9437,7 @@ pt-BR:
         pre-express-2018:
           title: Pre-reader Express (2018)
           assignment_family_title: Pre-reader Express
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
           stages:
@@ -9466,7 +9466,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming in Maze
+              name: Programação no labirinto
               description_student: ''
               description_teacher: ''
             'Programming: Star Wars':
@@ -9482,7 +9482,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Drawing Castles with Loops
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
