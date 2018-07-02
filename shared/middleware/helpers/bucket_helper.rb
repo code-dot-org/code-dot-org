@@ -222,7 +222,7 @@ class BucketHelper
         #     client may have already replaced it.
         # Guard against this scenario by requiring that the target version be
         # both present and latest, without worrying about S3 inconsistency.
-        return true unless !target_version_metadata || !target_version_metadata.is_latest
+        return true if target_version_metadata&.is_latest
         'reject-comparing-older-main-json'
       end
 
