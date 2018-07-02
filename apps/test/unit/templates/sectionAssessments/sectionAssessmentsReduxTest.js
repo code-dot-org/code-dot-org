@@ -653,6 +653,27 @@ describe('sectionAssessmentsRedux', () => {
         const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
         assert.deepEqual(totalSubmissions, 1);
       });
+
+      it('returns 0 for 0 survey submissions', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [],
+                }
+              }
+            }
+          }
+        };
+
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
+        assert.deepEqual(totalSubmissions, 0);
+      });
     });
 
     describe('getExportableSurveyData', () => {
