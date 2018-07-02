@@ -72,14 +72,12 @@ class CompletionButton extends Component {
   }
 }
 
-export default connect(function propsFromStore(state) {
-  return {
-    isProjectLevel: state.pageConstants.isProjectLevel,
-    isSubmittable: state.pageConstants.isSubmittable,
-    isSubmitted: state.pageConstants.isSubmitted,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
-  };
-})(CompletionButton);
+export default connect(state => ({
+  isProjectLevel: state.pageConstants.isProjectLevel,
+  isSubmittable: state.pageConstants.isSubmittable,
+  isSubmitted: state.pageConstants.isSubmitted,
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+}))(CompletionButton);
 
 export {styles};
 
