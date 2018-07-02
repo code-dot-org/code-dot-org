@@ -18,6 +18,8 @@ import sectionAssessments, {
   indexesToAnswerString,
   countSubmissionsForCurrentAssessment,
   isCurrentAssessmentSurvey,
+  getExportableSurveyData,
+  getExportableAssessmentData,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -650,6 +652,178 @@ describe('sectionAssessmentsRedux', () => {
 
         const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
         assert.deepEqual(totalSubmissions, 1);
+      });
+    });
+
+    describe('getExportableSurveyData', () => {
+      it('returns an array of objects', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [
+                    {
+                      type: 'multi',
+                      question_index: 0,
+                      question: 'question1',
+                      answer_texts: ['agree', 'disagree'],
+                      results: [{answer_index: 0}]
+                    },
+                    {
+                      type: 'multi',
+                      question_index: 1,
+                      question: 'question2',
+                      answer_texts: ['agree', 'disagree'],
+                      results: [{answer_index: 1}]
+                    },
+                  ],
+                }
+              }
+            }
+          }
+        };
+
+        const csvData = getExportableSurveyData(stateWithSurvey);
+        assert.deepEqual(csvData, [
+          {
+            "answer": "agree",
+            "numberAnswered": 1,
+            "questionNumber": 1,
+            "questionText": "question1",
+            "stage": "name",
+          },
+          {
+            "answer": "disagree",
+            "numberAnswered": 0,
+            "questionNumber": 1,
+            "questionText": "question1",
+            "stage": "name",
+          },
+          {
+            "answer": "agree",
+            "numberAnswered": 0,
+            "questionNumber": 2,
+            "questionText": "question2",
+            "stage": "name",
+          },
+          {
+            "answer": "disagree",
+            "numberAnswered": 1,
+            "questionNumber": 2,
+            "questionText": "question2",
+            "stage": "name",
+          }
+        ]);
+      });
+    });
+
+    describe('getExportableAssessmentData', () => {
+      it('returns an array of objects', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  id: 123,
+                  name: 'name',
+                  questions: []
+                }
+              }
+            },
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {student_result: [0], status: 'correct', type: 'Multi'},
+                        {student_result: [1], status: 'correct', type: 'Multi'},
+                        {student_result: [], status: 'unsubmitted', type: 'Multi'},
+                      ],
+                      stage: "stage 1",
+                      timestamp: '1',
+                    }
+                  },
+                },
+                2: {
+                  student_name: 'Rebecca',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {student_result: [0], status: 'correct', type: 'Multi'},
+                        {student_result: [1], status: 'correct', type: 'Multi'},
+                        {student_result: [1], status: 'incorrect', type: 'Multi'},
+                      ],
+                      stage: "stage 1",
+                      timestamp: '1',
+                    }
+                  },
+                }
+              }
+            }
+          }
+        };
+
+        const csvData = getExportableAssessmentData(stateWithAssessment);
+        assert.deepEqual(csvData, [
+          {
+            correct: "correct",
+            question: 1,
+            response: "A",
+            stage: "stage 1",
+            studentName: "Saira",
+            timestamp: '1',
+          },
+          {
+            correct: "correct",
+            question: 2,
+            response: "B",
+            stage: "stage 1",
+            studentName: "Saira",
+            timestamp: '1',
+          },
+          {
+            correct: "unsubmitted",
+            question: 3,
+            response: "",
+            stage: "stage 1",
+            studentName: "Saira",
+            timestamp: '1',
+          },
+          {
+            correct: "correct",
+            question: 1,
+            response: "A",
+            stage: "stage 1",
+            studentName: "Rebecca",
+            timestamp: '1',
+          },
+          {
+            correct: "correct",
+            question: 2,
+            response: "B",
+            stage: "stage 1",
+            studentName: "Rebecca",
+            timestamp: '1',
+          },
+          {
+            correct: "incorrect",
+            question: 3,
+            response: "B",
+            stage: "stage 1",
+            studentName: "Rebecca",
+            timestamp: '1',
+          }
+        ]);
       });
     });
 
