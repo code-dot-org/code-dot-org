@@ -10,7 +10,8 @@ class AuthenticationOptionsController < ApplicationController
   # DELETE /users/auth/:id/disconnect
   def disconnect
     return head(:bad_request) unless current_user&.migrated?
-    AuthenticationOption.delete(params[:id])
+    auth_option = current_user.authentication_options.find(params[:id])
+    auth_option.destroy if auth_option.present?
 
     return head(:no_content)
   end

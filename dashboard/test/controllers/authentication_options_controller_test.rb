@@ -102,13 +102,24 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test 'disconnect: does not raise an error if the AuthenticationOption does not exist' do
+  test 'disconnect: returns not_found if the AuthenticationOption does not exist' do
     user = create :user, :multi_auth_migrated
     sign_in user
 
     assert_does_not_destroy(AuthenticationOption) do
       delete "/users/auth/1/disconnect"
-      assert_response :success
+      assert_response :not_found
+    end
+  end
+
+  test 'disconnect: returns not_found if the AuthenticationOption does not belong to the current user' do
+    user = create :user, :multi_auth_migrated
+    auth_option = create :authentication_option
+    sign_in user
+
+    assert_does_not_destroy(AuthenticationOption) do
+      delete "/users/auth/#{auth_option.id}/disconnect"
+      assert_response :not_found
     end
   end
 end
