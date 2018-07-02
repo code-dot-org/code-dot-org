@@ -96,18 +96,7 @@ lt-LT:
   congratulations_volunteer: Sveikiname! Dabar jūs išbandėte „Programavimo valandą”,
     <a href="https://code.org/volunteer">savanoriškai užsiregistruokite klasėje</a>
     ir padėkite mokiniams išmokti programuoti naudojant „Programavimo valandą”!
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Pabandyk šias instrukcijas toliau
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
@@ -297,28 +286,8 @@ lt-LT:
     @Microsoft for supporting @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Kodėl ne visos mokyklos moko informatikos? Mes galime tai pakeisti.
     http://youtu.be/nKIu9yen5nc. Užsukite į svetainę http://code.org/ kad sužinotumėte
     daugiau.
@@ -1410,6 +1379,18 @@ lt-LT:
   coursed_gradelevel: Grade 8+
   coursee_gradelevel: Amžius 8-12
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Ages 7-11
+  coursee-2017_gradelevel: Amžius 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Ages 7-11
+  coursee-2018_gradelevel: Amžius 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Amžius 10-18
   codeorg_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   codeintl_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
@@ -1550,6 +1531,30 @@ lt-LT:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Išmokite informatikos pagrindus tiesiog žaisdami. Išmokti
     padės Bilas Geitsas, Markas Cukerbergas ir žaidimų personažai iš Angry Birds ir
     Plants vs. Zombies! Išmokite kartojimo ciklus, sąlygos sakinius ir paprastus algoritmus.

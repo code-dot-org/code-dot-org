@@ -93,17 +93,7 @@ et-EE:
   congratulations_on_completing_hoc: Palju õnne, oled lõpetanud KoodiTunni
   congratulations_volunteer: Palju õnne! Nüüd, kus oled proovinud KoodiTundi, <a href="https://code.org/volunteer">liitu,
     et osaleda vabatahtlikuna klassiruumis</a> ja aidata õpilasi KoodiTunni õppimisel!
-  congratulations_on_completing_course1: Õnnitleme Kursus 1 läbimise puhul
-  congratulations_on_completing_course2: Õnnitleme Kursus 2 läbimise puhul
-  congratulations_on_completing_course3: Õnnitleme Kursus 3 läbimise puhul
-  congratulations_on_completing_course4: Õnnitleme Kursus 4 läbimise puhul
-  congratulations_on_completing_coursea: Õnnitleme Kursus A läbimise puhul
-  congratulations_on_completing_courseb: Õnnitleme Kursus B läbimise puhul
-  congratulations_on_completing_coursec: Õnnitleme Kursus C läbimise puhul
-  congratulations_on_completing_coursed: Õnnitleme Kursus D läbimise puhul
-  congratulations_on_completing_coursee: Õnnitleme Kursus E läbimise puhul
-  congratulations_on_completing_coursef: Õnnitleme Kursus F läbimise puhul
-  congratulations_on_completing_accelerated: Õnnitleme kiirkursuse läbimise puhul
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Proovi järgnevaid õpetusi
   congrats_next_tutorials_desc: Proovi neid lühemaid 1 tunni õpetusi, või proovi <a
     href="%{current_path}/next">partneri õppetükki</a>.
@@ -292,28 +282,8 @@ et-EE:
     @Microsoft for supporting @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Miks rohkemates koolides ei õpetata arvutiteadust? Me saame seda
     muuta. http://youtu.be/2DxWIxec6yo. Et saada rohkem infot, külasta http://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -1398,6 +1368,18 @@ et-EE:
   coursed_gradelevel: 8.+ klassid
   coursee_gradelevel: Vanusele 8-12
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: 8.+ klassid
+  coursee-2017_gradelevel: Vanusele 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: 8.+ klassid
+  coursee-2018_gradelevel: Vanusele 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Vanustele 10-18
   codeorg_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   codeintl_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
@@ -1536,6 +1518,30 @@ et-EE:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Õpi arvutiteaduse algpõhimõtteid "sikuta ja lase lahti"
     programmeerimise abil. See mängusarnane iseõppimise videos esinevad Bill Gates,
     Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Õpi kordusi, tingimuslauseid
