@@ -6,8 +6,8 @@ import React, {PropTypes} from 'react';
  * semi-transparent backdrop. Can be closed by clicking the x, clicking the
  * backdrop, or pressing esc.
  */
-var BaseDialog = React.createClass({
-  propTypes: {
+export default class BaseDialog extends React.Component {
+  static propTypes = {
     isOpen: PropTypes.bool,
     handleClose: PropTypes.func,
     uncloseable: PropTypes.bool,
@@ -22,35 +22,35 @@ var BaseDialog = React.createClass({
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
     style: PropTypes.object,
-  },
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.focusDialog();
-  },
+  }
 
-  componentDidUpdate: function () {
+  componentDidUpdate() {
     this.focusDialog();
-  },
+  }
 
-  handleKeyDown: function (event) {
+  handleKeyDown = (event) => {
     if (event.key === 'Escape') {
       this.closeDialog();
     }
     this.props.handleKeyDown && this.props.handleKeyDown(event);
-  },
+  };
 
-  closeDialog: function () {
+  closeDialog = () => {
     if (!this.props.uncloseable && this.props.handleClose) {
       this.props.handleClose();
     }
-  },
+  };
 
   /** @returns {Array.<Element>} */
   getTabbableElements() {
     return [].slice.call(this.refs.dialog.querySelectorAll('a,button,input'));
-  },
+  }
 
-  focusDialog: function () {
+  focusDialog() {
     // Don't steal focus if the active element is already a descendant of the
     // dialog - prevents focus loss on updates of open BaseDialog components.
     const descendantIsActive = document.activeElement && this.refs.dialog &&
@@ -58,9 +58,9 @@ var BaseDialog = React.createClass({
     if (this.props.isOpen && !descendantIsActive) {
       this.refs.dialog.focus();
     }
-  },
+  }
 
-  render: function () {
+  render() {
     if (!this.props.isOpen && !this.props.hideBackdrop) {
       return <div></div>;
     }
@@ -147,5 +147,4 @@ var BaseDialog = React.createClass({
       </div>
     );
   }
-});
-module.exports = BaseDialog;
+}
