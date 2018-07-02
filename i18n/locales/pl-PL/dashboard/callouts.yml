@@ -598,6 +598,7 @@ pl:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: { }
+      Fish Tank 2-validated_callout: { }
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
       Frozen Project Toolbox (Old)_callout:
@@ -984,8 +985,7 @@ pl:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Ta liczba znaczy, że w przyborniku nie ma więcej bloków tego typu.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: Ta liczba znaczy, że w przyborniku nie ma więcej bloków tego typu.
+      courseB_artist_loops5_2018_callout: { }
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać.
       courseB_collector_loops1_2018_callout:
@@ -1155,6 +1155,8 @@ pl:
       courseD_collector_until_challenge1_callout: { }
       courseD_farmer_until_challenge2_callout: { }
       courseD_farmer_until_challenge2_2018_callout: { }
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:

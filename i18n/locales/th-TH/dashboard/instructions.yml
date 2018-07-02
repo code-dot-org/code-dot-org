@@ -53,8 +53,8 @@ th:
       2-3 Artist Functions 1_instruction: "\"ฉัน ผีดิบ.. ศิลปิน ฉันรักการวาดภาพ!  \"\n\nช่วยเจ้าผีดิบวาดกรอบแว่นตา สี่เหลี่ยม\n\nส่วนต่อระหว่างกรอบแว่นตานั้นสั้นกว่าความกว้างของกรอบแว่นสี่เหลี่ยมซึ่งเท่ากับ 100 พิกเซลอยู่ 25 พิกเซล"
       2-3 Artist Functions 10_instruction: 'เล่นตามใจชอบ: นี่คือฟังก์ชั่นสองฟังก์ชั่น ที่อันหนึ่งจะวาดเกียร์ขนาดใหญ่และอีกอันหนึ่งที่จะวาดเกียร์ขนาดเล็ก ใช้ทั้งสองฟังก์ชั่นพื่อวาดภายในของเครื่องยนต์!'
       2-3 Artist Functions 11 a_instruction: "เเราได้เปลี่ยนชื่อ `วาดรูปสี่เหลี่ยมจัตุรัส`เป็น ` วาดรูปหกเหลี่ยม ` แต่ก็ยังคงวาดสี่เหลี่ยมอยู่นั่น! คุณสามารถปรับเปลี่ยนฟังก์ชัน` วาดรูปหกเหลี่ยม` เพื่อวาดหกเหลี่ยมที่มีด้านยาว 50 พิกเซลได้หรือไม่ \n\nวาดภาพโดยใช้ฟังก์ชั่นใหม่!"
-      2-3 Artist Functions 11.5 a_instruction: "ต่อไปนี้คือฟังก์ชัน `วาดรูปหกเหลี่ยม` เดิม\n\nเกิดอะไรขึ้นถ้าคุณลูปโปรแกรมหลัก 6 รอบ, หัน 60 องศาในแต่ละครั้งที่คุณลูป?"
-      2-3 Artist Functions 11.5_instruction: "ต่อไปนี้คือฟังก์ชัน `วาดรูปหกเหลี่ยม` เดิม\n\nเกิดอะไรขึ้นถ้าคุณลูปโปรแกรมหลัก 6 รอบ, หัน 60 องศาในแต่ละครั้งที่คุณลูป?"
+      2-3 Artist Functions 11.5 a_instruction: "ที่เห็นอยู่นี่คือคือฟังก์ชัน `วาดรูปหกเหลี่ยม` เดิม\n\nเกิดอะไรขึ้นถ้าคุณลูปโปรแกรมหลัก 6 รอบ, หัน 60 องศาในแต่ละครั้งที่คุณลูป?"
+      2-3 Artist Functions 11.5_instruction: "ที่เห็นอยู่นี่คือคือฟังก์ชัน `วาดรูปหกเหลี่ยม` เดิม\n\nเกิดอะไรขึ้นถ้าคุณลูปโปรแกรมหลัก 6 รอบ, หัน 60 องศาในแต่ละครั้งที่คุณลูป?"
       2-3 Artist Functions 11_instruction: "เราได้เปลี่ยนชื่อ `วาดรูปสี่เหลี่ยมจัตุรัส`เป็น ` วาดรูปหกเหลี่ยม ` แต่ก็ยังคงวาดสี่เหลี่ยมอยู่นั่น! คุณสามารถปรับเปลี่ยนฟังก์ชัน` วาดรูปหกเหลี่ยม` เพื่อวาดหกเหลี่ยมที่มีด้านยาว 50 พิกเซลได้หรือไม่ \n\nวาดภาพโดยใช้ฟังก์ชั่นใหม่!"
       2-3 Artist Functions 12 Mike_instruction: "ฟังก์ชั่นนี่ยอดจริงๆสำหรับการวาดภาพสิ่งที่ซับซ้อนหลายครั้ง \n\nคุณสามารถใช้ฟังก์ชัน ` วาดดอกไม้ ` เพื่อเติมส่วนที่เหลือของกระถางปลูกต้นไม้ได้ไหม (บอกใบ้: ต้นไม้อยู่ห่างกัน 100 พิกเซล)"
       2-3 Artist Functions 12 a_instruction: "ฟังก์ชั่นนี่ยอดจริงๆสำหรับการวาดภาพสิ่งที่ซับซ้อนหลายครั้ง \n\nคุณสามารถใช้ฟังก์ชัน ` วาดดอกไม้ ` เพื่อเติมส่วนที่เหลือของกระถางปลูกได้ไหม (บอกใบ้: ต้นไม้อยู่ห่างกัน 100 พิกเซล)"
@@ -107,7 +107,7 @@ th:
       2-3 Artist Nested Loops 6_instruction: |-
         ไดโนเสาร์นี้มีหนามแหลม 8 หนามอยู่ตามหางของมัน
         หนามแต่ละอันมีความยาว 30 พิกเซล ลูปสามเหลี่ยม 8 ครั้ง แต่ให้แน่ใจว่าคุณจะต้องกระโดดข้ามไปข้างหน้า หลังจากวาดหนามเสร็จแต่ละอัน!
-      2-3 Artist Nested Loops 7_instruction: "ลูปสามเหลี่ยมนี้10 ครั้งเพื่อวาดดวงอาทิตย์\n\nคุณจะต้องวาดและหันไปหลังจากวาดสามเหลี่ยมแต่ละรูปเสร็จ\n\nคุณสามารถหาได้ว่าต้องหันไปกี่องศา โดยการหารจำนวนองศาในวงกลมด้วยจำนวนสามเหลี่ยมที่คุณต้องวาด"
+      2-3 Artist Nested Loops 7_instruction: "ลูปสามเหลี่ยมนี้ 10 ครั้งเพื่อวาดดวงอาทิตย์\n\nคุณจะต้องวาดและหันไปหลังจากวาดสามเหลี่ยมแต่ละรูปเสร็จแล้ว\n\nคุณสามารถหาได้ว่าต้องหันไปกี่องศา โดยการหารจำนวนองศาในวงกลมด้วยจำนวนสามเหลี่ยมที่คุณต้องวาด"
       2-3 Artist Nested Loops 8_instruction: "ตอนนี้ขอเพิ่มหญ้าบางส่วนให้กับภาพของเรา \n\nแต่ละกอของหญ้าห่างกัน ๕๐ พิกเซล"
       2-3 Artist Nested Loops 9_instruction: "เราจะจบภาพนี้โดยการเพิ่มดอกไม้เข้าไป\n\nลูปรูปเพชร 12 ครั้งเพื่อวาดเป็นดอกไม้."
       2-3 Artist Nested Loops Free Play_instruction: วาดตามใจคุณ ให้วาดบางสิ่งที่สุดยอด โดยการใช้ลูปซ้อนกัน
@@ -279,7 +279,7 @@ th:
       4-5 Artist 11_instruction: วาดเส้นสีเขียวให้เสร็จ เส้นเหล่านี้ยาวเส้นละ 300 พิกเซล และ อยูห่างกัน 15 พิกเซล
       4-5 Artist 2_instruction: ลูปโค้ดนี้โดยการใช้บล็อก `ทำซ้ำ` เพื่อวาดสี่เหลี่ยมจตุรัสให้เสร็จสมบูรณ์
       4-5 Artist 3.5_instruction: พยายามหาว่าจะเกิดอะไรขึ้นถ้าคุณเรียกใช้งานโค้ดส่วนนี้ (หรือเพียงแค่กด "เริ่ม " และลองดูการใช้งานว่าเป็นอย่างไร) ถัดไปให้ทำซ้ำโค้ดด้วยจำนวนครั้งให้เพียงพอเพื่อวาดภาพให้เสร็จสิ้น!
-      4-5 Artist 3_instruction: กระถางดอกไม้สี่เหลี่ยมนี้มีความยาวรอบทั้งสิ้น 600 ด้านยาวมีความยาว 200 ให้วาดสี่เหลี่ยมผืนผ้าโดยใช้บล็อกสองสามบล็อคถ้าเป็นไปได้
+      4-5 Artist 3_instruction: กระถางดอกไม้สี่เหลี่ยมนี้มีความยาวโดยรอบทั้งสิ้น 600 ซึ่งด้านยาวมีความยาว 200 ให้วาดสี่เหลี่ยมผืนผ้าโดยใช้บล็อกสองสามบล็อกถ้าเป็นไปได้
       4-5 Artist 4_instruction: มีกี่องศาในวงกลม?  ลูปบล็อกเพื่อสร้างวงกลมสีต่างๆ
       4-5 Artist 5_instruction: อะไรคือสิ่งที่เราสามารถใช้แทนที่ "??? " เพื่อให้แน่ใจว่าผีดิบสามารถวาดภาพเสร็จโดยใช้ลูปที่ให้ไว้?
       4-5 Artist 6_instruction: สามเหลี่ยมด้านเท่านี้ มีมุม 60, 60 และ 60 องศา แต่ละด้านยาว 200 พิกเซล วาดภาพต่อให้เสร็จสมบูรณ์
@@ -392,11 +392,11 @@ th:
       4-5 Maze 3_instruction: ต้อง.... ไปหา.... ดอกทานตะวัน
       4-5 Maze 4 (copy 1)_instruction: ลองใช้บล็อก "ทำซ้ำ " เพื่อใช้บล็อกให้น้อยลง....
       4-5 Maze 4_instruction: Use the "repeat" block to solve the puzzle quickly...
-      4-5 Maze 5 (copy 1)_instruction: คุณสามารถแก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้หรือไม่
-      4-5 Maze 5_instruction: คุณสามารถแก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้หรือไม่
-      4-5 Maze 6 (copy 1)_instruction: คุณสามารถแก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้หรือไม่
+      4-5 Maze 5 (copy 1)_instruction: ให้แก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้
+      4-5 Maze 5_instruction: ให้แก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้
+      4-5 Maze 6 (copy 1)_instruction: ให้แก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้
       4-5 Maze 6_instruction: พาฉันไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนน้อยที่สุดเท่าที่จะเป็นไปได้
-      4-5 Maze 7_instruction: พาเจ้าผีดิบไปที่ดอกทานตะวันให้รวดเร็วหน่อย! คุณสามารถแก้ปริศนาด้วยบล็อกให้น้อยกว่า 11 บล็อกได้หรือไม่?
+      4-5 Maze 7_instruction: พาเจ้าผีดิบไปที่ดอกทานตะวันให้รวดเร็วหน่อย! คุณสามารถแก้ปริศนาด้วยการใช้บล็อกให้น้อยกว่า 11 บล็อกได้หรือไม่?
       4-5 Maze 8_instruction: "พาเจ้าผีดิบไปที่ดอกทานตะวันโดยใช้บล็อกเพียงสองสามบล็อกถ้าคุณสามารถทำได้\n(อยู่ห่างๆเจ้าจอมเขมือบไว้!)"
       4-5 Maze 9_instruction: "ตอนนี้เรามีบล็อกใหม่ที่เรียกว่า `ทำซ้ำจนกว่า`  \nบล็อกนี้จะช่วยให้เราให้ดำเนินการตามคำสั่งที่อยู่ในลูปจนกระทั่งเจ้าผีดิบไปถึงดอกทานตะวัน.  \n\nใช้บล็อกใหม่ `ทำซ้ำจนกว่า`   เพื่อแก้ปริศนานี้ด้วยคำสั่งไม่กี่คำสั่งถ้าเป็นไปได้"
       4-5 Maze Assessment 1_instruction: 'การประเมินผล: ไปให้ถึงดอกทานตะวัน โดยใช้บล็อกเพียงสองสามบล็อก ถ้าเป็นไปได้'
@@ -421,7 +421,7 @@ th:
       4-5 Nested Loops 10_instruction: Draw the last row of stars on this flag by looping the provided blocks. The stars are 50 pixels apart, but remember that the stars themselves are 30 pixels wide.
       4-5 Nested Loops 11_instruction: Can you draw these 10 squares of this sidewalk using a nested loop? Each square is 30 pixels.
       4-5 Nested Loops 12_instruction: Can you draw these 36 triangles using a nested loop?
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete a 360 degree rotation."
+      4-5 Nested Loops 2_instruction: 'ตอนนี้ฝังลูปนี้ภายในลูปอื่นเพื่อที่จะวาดสามเหลี่ยม 10 รูป ซึ่งเรียกว่าการทำลูปซ้อนลูป คำบอกใบ้: รูปสามเหลี่ยมทั้ง 10 รูปทำให้การหมุน 360 องศาเสร็จสมบูรณ์ลง  '
       4-5 Nested Loops 3_instruction: |-
         Create a sun by nesting the starter code in another loop.
         
@@ -459,7 +459,7 @@ th:
       Artist - Nested Loops 10_instruction: Draw the last row of stars on this flag by looping the provided blocks. The stars are 50 pixels apart, but remember that the stars themselves are 30 pixels wide.
       Artist - Nested Loops 11_instruction: Can you draw these 10 squares of this sidewalk using a nested loop? Each square is 30 pixels.
       Artist - Nested Loops 12_instruction: Can you draw these 36 triangles using a nested loop?
-      Artist - Nested Loops 2_instruction: 'Now nest this loop inside another loop to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete a 360 degree rotation.  '
+      Artist - Nested Loops 2_instruction: 'ตอนนี้ฝังลูปนี้ภายในลูปอื่นเพื่อที่จะวาดสามเหลี่ยม 10 รูป ซึ่งเรียกว่าการทำลูปซ้อนลูป คำบอกใบ้: รูปสามเหลี่ยมทั้ง 10 รูปทำให้การหมุน 360 องศาเสร็จสมบูรณ์ลง  '
       Artist - Nested Loops 3_instruction: 'Create a sun by nesting the starter code in another loop. This is called a nested loop.  '
       Artist - Nested Loops 5_instruction: Loop the given code to create a windmill.
       Artist - Nested Loops 6_instruction: Can you draw a hexagon by looping the triangle code?
@@ -1211,27 +1211,27 @@ th:
       Course 2 Bee Loops 4_instruction: What happens if you loop this sequence 3 times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
       Course 4 2_instruction: The bee only wants nectar right now. Remember, not all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: "Help me draw a box. (Each line is 200 pixels\nlong)"
+      Course 4 Artist 1_instruction: 'ช่วยฉันวาดกล่องที (แต่ละด้านมีความยาว 200 พิกเซล) '
       Course 4 Artist 10_instruction: |-
-        It's Free Play time! Here is the code for
-        an interesting shape.  What happens when you repeat it?  Have fun and draw
-        anything you would like.
-      Course 4 Artist 11_instruction: Now for a challenge!  Feel free to use trial and error. You are not expected to get the image perfect the first time.   Want to see more hints?  Click here!
-      Course 4 Artist 12_instruction: |-
-        Want a second peek at the inspiration design or the hints?  Click here!
+        Click here to see the full instructions again!
         
-        Otherwise, make a design all your own!
-      Course 4 Artist 13_instruction: Still playing?  Here is a blank canvas where you can design anything you want!
-      Course 4 Artist 2_instruction: Can you use a loop to draw the greyed out square?  (Each side is 300px long)
+        Here is the code for an interesting shape.  What happens when you repeat it multiple times, turning between each iteration?   Notice that the turns in this shape add up to 420 degrees, which means that when your artist is done drawing, it will be facing a different direction than when you started.  That new direction is exactly 60 degrees to the right of where you began.
+      Course 4 Artist 11_instruction: ด่านนี้เพื่อการท้าทาย! ใช้การลองผิดลองถูกตามสบายเลย เราไม่ได้คาดหวังว่าคุณจะได้ภาพที่สมบูรณ์แบบในการวาดครั้งแรก ต้องการดูคำบอกใบ้เพิ่มเติมหรือไม่? คลิกได้ที่นี่!
+      Course 4 Artist 12_instruction: |-
+        ต้องการแอบดูการออกแบบที่สร้างแรงบันดาลใจสักนิดนึงหรือให้เราบอกคำใบ้ให้สักหน่อยนึงไหม? คลิกได้ที่นี่! 
+        
+        ไม่อย่างนั้น ก็ให้ออกแบบทั้งหมด ด้วยตัวของคุณเอง!
+      Course 4 Artist 13_instruction: ยังเล่นอยู่หรือเปล่า? นี่คือผืนผ้าใบเปล่าที่คุณสามารถใช้ออกแบบอะไรก็ได้ที่คุณต้องการ!
+      Course 4 Artist 2_instruction: คุณสามารถใช้ลูปเพื่อวาดสี่เหลี่ยมจตุรัสสีเทาที่อยู้ด้านนอก ได้ไหม? (แต่ละด้านมีความยาว 300 พิกเซล)
       Course 4 Artist 20_instruction: Still playing?  Here is a blank canvas where you can create whatever you want!
-      Course 4 Artist 3_instruction: Try to figure out what happens if you run this code (or press "Run" to test it). Then, repeat it enough times to complete the drawing.
-      Course 4 Artist 4_instruction: How many degrees are in a circle?  Fill in the repeat block with that number to create a circle of colors.
-      Course 4 Artist 5_instruction: 'Draw the other half of this design so it''s symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You may have to run the code several times to figure out all of the blocks that need to be added.'
-      Course 4 Artist 6_instruction: Complete the code to draw these three, equilateral triangles.
-      Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete\na 360 degree rotation."
-      Course 4 Artist 8_instruction: Draw this sun by looping this whole block of code multiple times.
-      Course 4 Artist 8a_instruction: Remember this shape?  Now we're going to let you build it without giving you any blocks to start!
-      Course 4 Artist 9_instruction: "Loop this design 10 times and make sure to turn between each shape that's drawn. \n"
+      Course 4 Artist 3_instruction: ให้ดูว่าจะเกิดอะไรขึ้นเมื่่อคุณเรียกใช้งานโค้ดนี้ (หรือกด " เริ่ม " เพื่อทดสอบดู) แล้วทำซ้ำให้เพียงพอเพื่อวาดรูปให่เสร็จสมบูรณ์
+      Course 4 Artist 4_instruction: วงกลมมีกี่องศา? ให้ใส่ในบล็อกทำซ้ำด้วยเลขจำนวนนั้นเพื่อสร้างวงกลมสี
+      Course 4 Artist 5_instruction: 'ให้วาดอีกครึ่งหนึ่งของรูปแบบนี้ เพื่อให้เป็นสมมาตร โดยเป็นสามเหลี่ยมด้านเท่าและมีความยาวด้าน 50 พิกเซล คำบอกใบ้: คุณอาจต้องเรียกใช้โค้ดนี้หลายครั้งเพื่อหาจำนวนบล็อกที่จำเป็นต้องเพิ่มเข้าไป'
+      Course 4 Artist 6_instruction: เขียนโค้ดเพื่อวาดสามเหลี่ยมด้านเท่าเหล่านี้ให้เสร็จสมบูรณ์
+      Course 4 Artist 7_instruction: 'ตอนนี้ฝังลูปนี้ภายในลูปอื่นเพื่อที่จะวาดสามเหลี่ยม 10 รูป ซึ่งเรียกว่าการทำลูปซ้อนลูป คำบอกใบ้: รูปสามเหลี่ยมทั้ง 10 รูปทำให้การหมุน 360 องศาเสร็จสมบูรณ์ลง  '
+      Course 4 Artist 8_instruction: วาดดวงอาทิตย์ดวงนี้โดยการลูปรอบบล็อกของโค้ดทั้งหมดนี้หลาย ๆ ครั้ง
+      Course 4 Artist 8a_instruction: "จำรูปร่างนี้ได้ใช่ไหม?  ตอนนี้เรากำลังจะให้คุณสร้างมันโดยไม่ให้บล็อกใดๆ กับคุณเพื่อที่จะใช้เริ่มต้น!\n\n"
+      Course 4 Artist 9_instruction: "ลูปรอบแบบนี้ 10 ครั้งและให้แน่ใจว่าคุณได้หันไปในระหว่างรูปแบบที่วาดเสร็จแต่ละครั้ง\n"
       Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  The artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n\nRun this code to see how the artist uses binary to draw this pattern."
       Course 4 Artist Binary 1a_instruction: "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  The artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n\nRun this code to see how the artist uses binary to draw this pattern."
       Course 4 Artist Binary 2_instruction: Which of these binary strings could you loop 8 times to draw this image?
@@ -1310,9 +1310,9 @@ th:
       Course 4 Artist Functions challenge_instruction: Click here to see the hints again.
       Course 4 Artist Functions inspire_instruction: Click here to see the inspiration picture again.
       Course 4 Artist Inspire_instruction: |-
-        Want a second peek at the inspiration design or the hints?  Click here!
+        ต้องการแอบดูการออกแบบที่สร้างแรงบันดาลใจสักนิดนึงหรือให้เราบอกคำใบ้ให้สักหน่อยนึงไหม? คลิกได้ที่นี่! 
         
-        Otherwise, make a design all your own!
+        ไม่อย่างนั้น ก็ให้ออกแบบทั้งหมด ด้วยตัวของคุณเอง!
       Course 4 Artist Params 1_instruction: Let's edit a function that draws a square with 50 pixel sides
       Course 4 Artist Params 10_instruction: "You can call functions from inside\nother functions! Using your \"shape\" function as a base, create 3 house shapes\neach 20 pixels larger than the last starting at 50 pixels in length. Using\na counter loop might be helpful."
       Course 4 Artist Params 11_instruction: How about a function called "pinwheel" that takes three parameters - "sides," "length" and "repeat." You can calculate how much to turn after each shape using the same math you used to figure out the turns for a shape of "sides". Can you recreate this picture? Here's a tip each shape is 100 pixel's in length.
@@ -1327,7 +1327,7 @@ th:
       Course 4 Artist Params 8_instruction: "Can you figure out how to draw this\nshape? Here's a hint create a new function with 6 sides called a hexagon."
       Course 4 Artist Params 9_instruction: Do you remember when we used the counter loop but removed a loop within? Let's have some fun and use the "draw a shape" function with "sides" and "length" parameters. Can you re create these shapes? The square counter should be 5/100/5, the triangle counter should be 10/100/10 and the hexagon is 2/100/2.
       Course 4 Artist Var 9_instruction: 'Here''s the algorithm to draw a triangle, modify it so it uses the "sides" variable instead. Replace the number 3 with the "sides" variable. Hint: remember to use the "set sides to" block.'
-      Course 4 Artist Vars 1_instruction: "Let's draw an equilateral triangle. \n\nIt has to be exactly 100 pixels long on each side."
+      Course 4 Artist Vars 1_instruction: "มาลองวาดรูปสามเหลี่ยมด้านเท่ากัน\n\nโดยจะต้องมีความยาวแต่ละด้านที่ 100 พิกเซล"
       Course 4 Artist Vars 10_instruction: Here's an algorithm that draws a triangle out of smaller triangles. Can you modify it so that it uses the "sides" variable to draw each triangle? Look through the code, and every time you see the number 3, replace it with your "sides" variable. Remember to use the "set sides" block.
       Course 4 Artist Vars 11_instruction: Here’s more complicated code using the same concepts from the last puzzle - what should you set the "sides" variable to in order to draw this picture made of squares?
       Course 4 Artist Vars 12_instruction: Let's set the "sides" variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets! Notice that there is another variable called "length". We can now use that wherever we have a "move forward." Set the "length" variable to 75 for this shape.
@@ -1350,9 +1350,9 @@ th:
         See how you could change just one value to draw a triangle,  square, pentagon, or octagon?
       Course 4 Artist Vars 8_instruction: "Free Play: Experiment with the number\nof sides this shape has. Can you change the algorithm so that the overall\nsize of the shape stays the same, no matter how many sides it has? Hint: You\nmight have to use your math blocks (360 divided by \"sides\" in two places\nthis time)"
       Course 4 Artist Vars 9_instruction: Modify this algorithm so it uses the "sides" variable instead of a fixed number to draw a triangle. Don't forget to use the "set sides to" block.
-      Course 4 Bee 1_instruction: "The bee can't tell what's under the cloud! First,\ncheck if it is a flower or a honeycomb. Then only gather nectar from it if\nit is a flower."
-      Course 4 Bee 2_instruction: Use the "if/else" block to check each object to see if it's a flower or a honeycomb . If it's a flower, collect one nectar...otherwise, make one honey!
-      Course 4 Bee 3_instruction: The unknown object is either a flower or a honeycomb. This time, use the if/else block to collect one nectar if it is a flower, else make one honey (because then it would be a honeycomb).
+      Course 4 Bee 1_instruction: "ผึ้งไม่สามารถบอกได้ว่ามีอะไรอยู่ภายใต้เมฆ! \nใช้บล็อก `ถ้า (if)` เพื่อตรวจสอบดูว่าที่อยู่ภายใต้เมฆนั้น\nเป็นดอกไม้หรือรังผึ้ง\n ถ้าเป็นดอกไม้ ก็รวบรวมน้ำหวานจากเกสรหนึ่งครั้ง"
+      Course 4 Bee 2_instruction: ใช้บล็อก "ถ้า/อย่างอื่น (if/else) " เพื่อตรวจสอบดูว่าเป็นดอกไม้หรือรังผึ้ง ถ้าเป็นดอกไม้, รวบรวมน้ำหวานจากเกสรหนึ่งครั้ง ... ไม่เช่นนั้นให้ทำน้ำผึ้งหนึ่งครั้ง!
+      Course 4 Bee 3_instruction: วัตถุที่ไม่สามารถทราบได้นี้อาจจะเป็นดอกไม้หรือรังผึ้งก็ได้ ตอนนี้ให้ใช้ บล็อก ถ้า/อย่างอื่น (if/else block) ในการเก็บรวบรวมน้ำหวานจากเกสรหนึ่งครั้งถ้ามันเป็นดอกไม้หรือให้ทำน้ำผึ้งหนึ่งครั้ง (เพราะว่ามันควรที่จะเป็นรังผึ้ง)
       Course 4 Bee 4_instruction: This purple flower may have either 3, 2, or 1 nectar. Here an if/else block is combined with another if/else block to create an "if/else-if/else" statement. Complete the solution to collect the unknown amount of nectar.
       Course 4 Bee 5_instruction: This purple flower may have either 3, 2, or 1 nectar. Add an if-else block to create an if, else-if, else block. Complete the solution to collect the unknown amount of nectar.
       Course 4 Bee 6_instruction: This purple flower may have either 3, 2, or 1 nectar. Create an if, else-if, else block to collect the unknown amount of nectar.
@@ -1369,7 +1369,7 @@ th:
       Course 4 Bee For Loops 8_instruction: Can you use the loop variable to control movement and nectar collection?
       Course 4 Bee For Loops 9_instruction: The last number in your for loop is called the "increment,"  and each time the loop is run the counter variable changes by the increment. Try collecting these flowers using an increment of 2.
       Course 4 Bee Loops 5 NEW_instruction: Here are three flowers. Can you find the pattern of instructions that you need to repeat 3 times to collect the nectar with the fewest number of blocks?
-      Course 4 Bee Loops 5a NEW_instruction: Now, use loops to help the bee collect all the nectar on its way to the honeycomb with as few blocks as possible.  When you get there, don't forget to make honey!
+      Course 4 Bee Loops 5a NEW_instruction: ตอนนี้ให้ใช้ลูปเพื่อช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมดตามทางที่ไปยังรังผึ้ง โดยใช้บล็อกจำนวนน้อยที่สุดเท่าที่จะเป็นไปได้  เมื่อไปถึงเรียบร้อย อย่าลืมทำน้ำผึ้งนะ!
       Course 4 Bee Params 1_instruction: Write a sequence to collect all of the nectar using `get 3 nectar` which turns, moves to collect the nectar, and then returns to the original location.
       Course 4 Bee Params 2_instruction: Modify the "get 3 nectar" function so it makes me turn right instead of left to the flowers.
       Course 4 Bee Params 3 (copy 1)_instruction: Now there are flowers on both sides! Maybe you can use a parameter so that the same function works for flowers on either side. I've added a parameter called "direction" to the function. If the "direction" parameter equals 0 I should turn left, if it's 1 I should turn right.
@@ -1409,9 +1409,9 @@ th:
       Course 4 Maze 1_instruction: พาเจ้านกขี้โมโหไปจัดการกับเจ้าหมู!
       Course 4 Maze 2_instruction: อยู่ห่างๆระเบิดไว้!
       Course 4 Maze 3_instruction: 'โปรแกรมให้พาเจ้านกขี้โมโหไปจัดการกับเจ้าหมูนั่น '
-      Course 4 Maze 4_instruction: Try the "repeat" block to use fewer blocks when solving this puzzle...
-      Course 4 Maze 5_instruction: คุณสามารถแก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้หรือไม่
-      Course 4 Maze 6_instruction: คุณสามารถแก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้หรือไม่
+      Course 4 Maze 4_instruction: ลองใช้บล็อก "ทำซ้ำ" เพื่อลดจำนวนบล็อกที่ต้องใช้ในการแก้ปริศนานี้.....
+      Course 4 Maze 5_instruction: ให้แก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้
+      Course 4 Maze 6_instruction: ให้แก้ปริศนานี้โดยใช้จำนวนบล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้
       Course 4 Play Lab For Loops 2_instruction: This time, let's try counting the odd numbers from 1 to 100.
       Course 4 Play Lab Params 1_instruction: Here's a function called `jump` that causes your main character to jump up 100 pixels. Run the program and use the jump function to collect all of the flags by moving the dog with the arrow keys.
       Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou to use. Program your game to call the \"level_up\" function if \"player_points\"\n> 10. Play the game, and make it past level 4 to move to the next puzzle."
@@ -1718,7 +1718,7 @@ th:
       K-1 Artist Loops 9_instruction: What is the easiest way to draw these stairs?
       K-1 Artist Loops Free Play_instruction: เล่นตามใจชอบ วาดบางอย่างที่สนุกสนาน!
       K-1 Artist1 1_instruction: ให้วาดเท้าคนด้วยเส้นหนึ่งเส้น
-      K-1 Artist1 10_instruction: ให้วาด และกระโดดเพื่อสร้างทางที่เป็นเส้นประ ซึ่งโยงไปยังขุมสมบัติ
+      K-1 Artist1 10_instruction: ให้วาด และกระโดดเพื่อสร้างทางที่เป็นเส้นประ ซึ่งโยงไปยังขุมทรัพย์
       K-1 Artist1 2_instruction: ให้วาดหนวดแมวด้วยเส้นสองเส้น
       K-1 Artist1 3_instruction: ให้วาดเส้นสองเส้นไปทางทิศตะวันออกและเส้นสองเส้นไปทางทิศเหนือเพื่อวาดบ้านให้เสร็จ
       K-1 Artist1 4_instruction: ให้ลากเส้นขึ้น ลากเส้นข้ามไป และลากเส้นลงเมาพื่อวาดรูปปราสาทให้เสร็จ
@@ -1806,21 +1806,21 @@ th:
       K-1 Maze Sequence Assessment 1_instruction: |-
         มาดูกันว่าคุณเรียนรู้อะไรไปบ้าง ขยับฉันไปทางนี้ที แล้วก็ขยับฉันไปทางนั้นที เพื่อพาฉันไปจัดการเจ้าหมูนั่น!
       K-1 Maze Sequence Assessment 2_instruction: ขยับฉันไปทางหนึ่ง แล้วก็ไปอีกทางหนึ่ง เพื่อที่จะพาฉันไปจัดการเจ้าหมูนั่น.
-      K-1 Maze debug Assessment 1_instruction: การประเมินผล -- ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+      K-1 Maze debug Assessment 1_instruction: การประเมินผล -- ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
       K-1 artist 1 level 10_instruction: ให้วาดเส้นประ โดยใช้ทั้ง บล็อกกระโดดและบล็อกลากเส้น
       K-1 artist 1 level 9_instruction: ให้วาดตามนี้ ใช้เส้นสามเส้น
-      K-1 maze debug 1_instruction: เปลี่ยนโค้ด เพื่อพาฉันไปจัดการเจ้าหมูตัวนั้น!
-      K-1 maze debug 10_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+      K-1 maze debug 1_instruction: "เปลี่ยนโค้ด เพื่อพาฉันไปจัดการเจ้าหมูตัวนั้น!   N = North คือ ทิศเหนือ  S  = South  คือ ทิศใต้\nE  = East คือ ทิศตะวันออก  W = West คือ ทิศตะวันตก"
+      K-1 maze debug 10_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
       K-1 maze debug 11_instruction: |-
         นี่เป็นการทดสอบ! ตรวจแก้จุดบกพร่องระดับนี้โดยการจัดเรียงและเปลี่ยนบล็อก เพื่อที่จะได้พาฉันไปหาเจ้าหมูนั่น.
-      K-1 maze debug 2_instruction: คิดดูให้ดีว่าอะไรคือสิ่งที่ขาดหายไป และเพิ่มบล็อกเพื่อที่จะพาฉันไปจัดการกับเจ้าหมูนั่น!
+      K-1 maze debug 2_instruction: "คิดดูให้ดีว่าอะไรคือสิ่งที่ขาดหายไป และเพิ่มบล็อกเพื่อที่จะพาฉันไปจัดการกับเจ้าหมูนั่น! \nN = North คือ ทิศเหนือ S = South คือ ทิศใต้ E = East คือ ทิศตะวันออก W = West คือ ทิศตะวันตก\n"
       K-1 maze debug 3_instruction: มีบางสิ่งที่ยังไม่ค่อยจะถูกต้องนัก ต้องลบบล็อกออกไปเพื่อที่จะได้พาฉันไปจัดการกับเจ้าหมูนั่นได้!
       K-1 maze debug 4_instruction: ลองเรียกใช้งานผ่านบล็อกเหล่านี้ดู และทำการแก้ไขเสียใหม่! ฉันคิดว่าฉันอาจจะไปในทิศทางที่ไม่ถูกต้อง
-      K-1 maze debug 5_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
-      K-1 maze debug 6_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
-      K-1 maze debug 7_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
-      K-1 maze debug 8_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
-      K-1 maze debug 9_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+      K-1 maze debug 5_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+      K-1 maze debug 6_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+      K-1 maze debug 7_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+      K-1 maze debug 8_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+      K-1 maze debug 9_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
       K2.0 sequence 1_instruction: A bug! Fix the code to get me to the pig.
       K2.0 sequence 10_instruction: 'Challenge: Move me around the TNT to get to the pig.'
       K2.0 sequence 12_instruction: 'Let''s get that pig! '
@@ -1829,7 +1829,7 @@ th:
       K2.0 sequence 4_instruction: Time for a shorter puzzle!  Move one way, then another to get me to the pig.
       K2.0 sequence 4a_instruction: Try this puzzle again from the start!
       K2.0 sequence 5_instruction: ขยับฉันไปทางนี้ แล้วก็ขยับฉันไปทางนั้น เพื่อไปจัดการเจ้าหมูนั่น!
-      K2.0 sequence 6_instruction: คิดดูให้ดีว่าอะไรคือสิ่งที่ขาดหายไป และเพิ่มบล็อกเพื่อที่จะพาฉันไปจัดการกับเจ้าหมูนั่น!
+      K2.0 sequence 6_instruction: "คิดดูให้ดีว่าอะไรคือสิ่งที่ขาดหายไป และเพิ่มบล็อกเพื่อที่จะพาฉันไปจัดการกับเจ้าหมูนั่น! \nN = North คือ ทิศเหนือ S = South คือ ทิศใต้ E = East คือ ทิศตะวันออก W = West คือ ทิศตะวันตก\n"
       K2.0 sequence 7_instruction: Solve this level and get me to the pig!
       K2.0 sequence 8_instruction: Debug this level by adding blocks to get me to the pig!
       K2.0 sequence 9_instruction: 'เพื่อการท้าทาย: พาฉันอ้อมไปรอบ ๆ ระเบิด เพื่อไปจัดการเจ้าหมูนั่นให้ได้! '
@@ -2465,6 +2465,7 @@ th:
       U3 - Simulation - 6_instruction: Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)
       U3 - Simulation - App_instruction: Change your code to run the full simulation with 10,000 coins. What was your longest streak of heads? (Click to see full instructions)
       U3 - Simulation - Template_instruction: Use a while loop to "flip 10 coins" and write them to the screen. (Click to see full instructions)
+      U3 - Simulation - Template_2018_instruction: Use a while loop to "flip 10 coins" and write them to the screen. (Click to see full instructions)
       U3 - Sprites - Intro Sprites_instruction: Do This
       U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
       U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
@@ -2793,6 +2794,7 @@ th:
       U4 - Charts - Line Chart 2_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart 2_2018_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Line Chart Template_2018_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Remixing Apps with Data_2018_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Scatter Chart_instruction: Create a scatter plot of the “rottenTomatoes” table, using the new table and column names. (Click to see full instructions)
@@ -2873,6 +2875,7 @@ th:
       U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - part 1 - template_instruction: 'Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_2018_instruction: 'Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: Use readRecords to copy the data in your database into your "contacts" global variable and call showCurrentContact. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 1_2018_instruction: Use readRecords to copy the data in your database into your "contacts" global variable and call showCurrentContact. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: Create a function called refreshLocalData. (Click to see full instructions)
@@ -2952,6 +2955,7 @@ th:
       Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
       Valentine_playlab_01_instruction: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere_instruction: Test
+      Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
@@ -2987,11 +2991,11 @@ th:
       allthethings_template_backed1_instruction: 'Backed by a template #1. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script). '
       allthethings_template_backed2_instruction: 'Backed by a template #2. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).'
       allthethings_ttscsp_instruction: Debug the program by fixing the logical error within the program. (Click to see full instructions)
-      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
+      artistDebugVideo1_instruction: ใช้ลูป `ทำซ้ำ` เพื่อสร้างเกลียวคลื่น
       artistFunctionsVideo1_instruction: Follow the instructions to make your own function.
-      artistLoopsK1_instruction: นี้เป็นปริศนาชนิดใหม่ที่เรียกว่า "ศิลปิน " เล่นตามระดับและวาดสิ่งที่สนุกสนาน
-      artistLoopsK2_instruction: Now, use a `repeat` loop to draw this line five times!
-      artistLoopsK2gradek_artist_loops3_instruction: Now, use a `repeat` loop to draw this line five times!
+      artistLoopsK1_instruction: นี้เป็นปริศนาเรื่องใหม่ที่ชื่อว่า "ศิลปิน " เล่นผ่านด่านต่างๆ และวาดสิ่งที่สนุกสนาน
+      artistLoopsK2_instruction: ตอนนี้ใช้ลูป `ทำซ้ำ` เพื่อวาดเสนนี้ 5 ครั้ง
+      artistLoopsK2gradek_artist_loops3_instruction: ตอนนี้ใช้ลูป `ทำซ้ำ` เพื่อวาดเสนนี้ 5 ครั้ง
       artistLoopsK3_instruction: Draw a line eight steps long. This will become the land for our kingdom!
       artistLoopsK4_instruction: Now we need a castle with a draw bridge.  Fix the code so that the bridge lays straight instead of falling down.
       artistLoopsK5_instruction: Now we need to fix the top of the castle. Can you loop the code three times?
@@ -3139,7 +3143,7 @@ th:
       course3_playlab_stage17_2_instruction: คุณสามารถเขียนโปรแกรมเพื่อให้เจ้าเพนกวิน-แวดเดิลย้ายไปมารอบๆ โดยใช้คีย์ ขึ้น/ลง/ซ้าย/ขวา เพื่อชนเป้าหมายทั้งหมดได้หรือไม่?
       course3_playlab_stage17_3_instruction: บล็อก "ทำซ้ำไปตลอดกาล " ช่วยให้คุณสามารถเรียกใช้โค้ดอย่างต่อเนื่อง คุณสามารถต่อบล็อกเพื่อพาเจ้าไดโนเสาร์ตัวนี้ขึ้นๆลงๆซ้ำไปซ้ำมา?
       course3_playlab_stage17_4_instruction: คุณสามารถให้เจ้านกเพนกวินแวดเดิลพูด "โอ๊ย! " และเล่นเสียง "ที่โดนชน" ถ้าเขาวิ่งเข้าไปชนไดโนเสาร์ ซึ่งทำให้เกิดขึ้นได้ด้วยการย้ายเขาด้วยลูกศร ได้หรือไม่?
-      course3_playlab_stage17_5_instruction: คุณสามารถเพิ่มบล็อกที่จะทำคะแนนให้ เมื่อเจ้านกเพนกวินวิ่งชนปลาหมึกยักษ์ ย้ายเจ้านกเพนกวินด้วยลูกศรไปมาจนกว่าคุณจะทำคะแนนได้ ได้หรือไม่?
+      course3_playlab_stage17_5_instruction: คุณสามารถเพิ่มบล็อกเพื่อทำคะแนนเมื่อเจ้านกเพนกวินแวดเดิลวิ่งชนปลาหมึกยักษ์ ย้ายเจ้าแวดเดิลด้วยลูกศรไปมาจนกว่าคุณจะทำคะแนนได้ ได้หรือไม่?
       course3_playlab_stage17_6_instruction: คุณสามารถเพิ่มบล็อกเพื่อเปลี่ยนพื้นหลังและความเร็วของเจ้านกเพนกวิน แวดเดิลและย้ายเขาด้วยลูกศรจนกว่าคุณจะได้คะแนน ได้หรือไม่?
       course3_playlab_stage17_7_instruction: สร้างเรื่องราวของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเรื่องราวของคุณบนมือถือของพวกเขา
       course4_artist_binary_challenge1_instruction: You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.
@@ -3156,29 +3160,29 @@ th:
       course4_harvester_nested_loops_challenge1_instruction: '"I need some help on the farm! Help me harvest this corn using only the blocks in your toolbox."'
       course4_playlab_variables_challenge1_instruction: Use these blocks to make the actors share a knock-knock joke. Change the setup and punchline to tell your own joke!
       course4_playlab_variables_challenge3_instruction: Can you figure out how this "Fortune Teller" app works? Click `MORE` to see your challenges.
-      courseA_artist_loops1_instruction: นี้เป็นปริศนาชนิดใหม่ที่เรียกว่า "ศิลปิน " เล่นตามระดับและวาดสิ่งที่สนุกสนาน
-      courseA_artist_loops10_instruction: ช่วยฉันวางก้อนหิน เพื่อให้ฉันไม่ตกน้ำ!
-      courseA_artist_loops10_2018_instruction: ช่วยฉันวางก้อนหิน เพื่อให้ฉันไม่ตกน้ำ!
-      courseA_artist_loops11_instruction: Help me build steps to watch the ship sail away.
-      courseA_artist_loops11_2018_instruction: Help me build steps to watch the ship sail away.
-      courseA_artist_loops12_instruction: The artist saw something funny in the distance.  Draw what you think he saw.
-      courseA_artist_loops12_2018_instruction: The artist saw something funny in the distance.  Draw what you think he saw.
-      courseA_artist_loops1_2018_instruction: นี้เป็นปริศนาชนิดใหม่ที่เรียกว่า "ศิลปิน " เล่นตามระดับและวาดสิ่งที่สนุกสนาน
+      courseA_artist_loops1_instruction: นี้เป็นปริศนาเรื่องใหม่ที่ชื่อว่า "ศิลปิน " เล่นผ่านด่านต่างๆ และวาดสิ่งที่สนุกสนาน
+      courseA_artist_loops10_instruction: ช่วยฉันวางก้อนหิน เพื่อไม่ให้ฉันต้องตกน้ำ!
+      courseA_artist_loops10_2018_instruction: ช่วยฉันวางก้อนหิน เพื่อไม่ให้ฉันต้องตกน้ำ!
+      courseA_artist_loops11_instruction: ช่วยฉันสร้างขั้นบันได เพื่อที่จะใช้ดูเรือแล่นออกไป
+      courseA_artist_loops11_2018_instruction: ช่วยฉันสร้างขั้นบันได เพื่อที่จะใช้ดูเรือแล่นออกไป
+      courseA_artist_loops12_instruction: ศิลปินเห็นบางสิ่งบางอย่างที่ตลกในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
+      courseA_artist_loops12_2018_instruction: ศิลปินเห็นบางสิ่งบางอย่างที่ตลกในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
+      courseA_artist_loops1_2018_instruction: นี้เป็นปริศนาเรื่องใหม่ที่ชื่อว่า "ศิลปิน " เล่นผ่านด่านต่างๆ และวาดสิ่งที่สนุกสนาน
       courseA_artist_loops2_instruction: ช่วยให้ศิลปินวาดเส้นไปข้างหน้าสองครั้ง
       courseA_artist_loops2_2018_instruction: ช่วยให้ศิลปินวาดเส้นไปข้างหน้าสองครั้ง
       courseA_artist_loops3_instruction: วาดเส้นออกไปข้างหน้า 5 ครั้ง
       courseA_artist_loops3_2018_instruction: วาดเส้นออกไปข้างหน้า 5 ครั้ง
-      courseA_artist_loops4_instruction: Now, use a `repeat` loop to draw this line five times!
-      courseA_artist_loops4_2018_instruction: Now, use a `repeat` loop to draw this line five times!
-      courseA_artist_loops5_instruction: Draw a line seven steps long. This will become our horizon.
-      courseA_artist_loops5_2018_instruction: Draw a line seven steps long. This will become our horizon.
-      courseA_artist_loops6_instruction: Let's put a nice hill in the back.
-      courseA_artist_loops6_2018_instruction: Let's put a nice hill in the back.
-      courseA_artist_loops7_instruction: Use the `repeat` loop to add waves to the water.
-      courseA_artist_loops7_2018_instruction: Use the `repeat` loop to add waves to the water.
-      courseA_artist_loops7_forVideo_instruction: Use the `repeat` loop to add waves to the water.
-      courseA_artist_loops8_instruction: We need a ladder up to the boat.
-      courseA_artist_loops8_2018_instruction: We need a ladder up to the boat.
+      courseA_artist_loops4_instruction: ตอนนี้ใช้ลูป `ทำซ้ำ` เพื่อวาดเสนนี้ 5 ครั้ง
+      courseA_artist_loops4_2018_instruction: ตอนนี้ใช้ลูป `ทำซ้ำ` เพื่อวาดเสนนี้ 5 ครั้ง
+      courseA_artist_loops5_instruction: วาดเส้นยาวเจ็ดก้าว เส้นนี้จะกลายเป็นขอบฟ้าของเรา
+      courseA_artist_loops5_2018_instruction: วาดเส้นยาวเจ็ดก้าว เส้นนี้จะกลายเป็นขอบฟ้าของเรา
+      courseA_artist_loops6_instruction: มาวางเนินดินเล็กๆไว้ด้านหลังภาพกันเถอะ
+      courseA_artist_loops6_2018_instruction: มาวางเนินดินเล็กๆไว้ด้านหลังภาพกันเถอะ
+      courseA_artist_loops7_instruction: ใช้ลูป `ทำซ้ำ` เพื่อสร้างเกลียวคลื่น
+      courseA_artist_loops7_2018_instruction: ใช้ลูป `ทำซ้ำ` เพื่อสร้างเกลียวคลื่น
+      courseA_artist_loops7_forVideo_instruction: ใช้ลูป `ทำซ้ำ` เพื่อสร้างเกลียวคลื่น
+      courseA_artist_loops8_instruction: เราต้องมีบันไดเพื่อใช้ปีนขึ้นเรือ
+      courseA_artist_loops8_2018_instruction: เราต้องมีบันไดเพื่อใช้ปีนขึ้นเรือ
       courseA_artist_loops9_instruction: 'การท้าทาย: แก้ไขบันได'
       courseA_artist_loops9_2018_instruction: 'การท้าทาย: แก้ไขบันได'
       courseA_artist_loops_challenge1_instruction: Can you draw a house? Make it look just the way you like it!
@@ -3206,8 +3210,8 @@ th:
       courseA_collector_loops10_2018_instruction: ช่วยลอเรลเก็บสมบัติทั้งหมดตามทาง
       courseA_collector_loops11_instruction: ช่วยลอเรลเก็บสมบัติทั้งหมดในถ้ำนี้
       courseA_collector_loops11_2018_instruction: ช่วยลอเรลเก็บสมบัติทั้งหมดในถ้ำนี้
-      courseA_collector_loops12_instruction: '*"Eureka!  Get as much treasure as you can!"*'
-      courseA_collector_loops12_2018_instruction: '*"Eureka!  Get as much treasure as you can!"*'
+      courseA_collector_loops12_instruction: '*" โอ้ ว้าว! โกยสมบัติให้ได้มากที่สุดที่คุณจะทำได้!"*'
+      courseA_collector_loops12_2018_instruction: '*" โอ้ ว้าว! โกยสมบัติให้ได้มากที่สุดที่คุณจะทำได้!"*'
       courseA_collector_loops1_2018_instruction: พาลอเรลไปรอบๆและเก็บสมบัติให้มากเท่าที่คุณสามารถทำได้!
       courseA_collector_loops2_instruction: เก็บสมบัติทั้ง 3 กองเพื่อผ่านด่านระดับนี้ไป
       courseA_collector_loops2_2018_instruction: เก็บสมบัติทั้ง 3 กองเพื่อผ่านด่านระดับนี้ไป
@@ -3221,8 +3225,8 @@ th:
       courseA_collector_loops7_2018_instruction: อะไรคือสิ่งที่คุณควรเพิ่มไปกับโค้ดนี้ เพื่อจะได้เก็บรวบรวมสมบัติทั้งหมด?
       courseA_collector_loops8_instruction: Write code to get all of this treasure.
       courseA_collector_loops8_2018_instruction: Write code to get all of this treasure.
-      courseA_collector_loops9_instruction: "**Challenge:** The treasure goes all the way up these stairs!  Write the code to help Laurel get it all."
-      courseA_collector_loops9_2018_instruction: "**Challenge:** The treasure goes all the way up these stairs!  Write the code to help Laurel get it all."
+      courseA_collector_loops9_instruction: "**การท้าทาย:** สมบัติวางอยู่ทั่วขึ้นบันไดเหล่านี้! เขียนโค้ดเพื่อช่วยลอเรลเก็ยสมบัติให้หมด"
+      courseA_collector_loops9_2018_instruction: "**การท้าทาย:** สมบัติวางอยู่ทั่วขึ้นบันไดเหล่านี้! เขียนโค้ดเพื่อช่วยลอเรลเก็ยสมบัติให้หมด"
       courseA_collector_loops_challenge1_instruction: '*"Can you help me spot some bugs?"*'
       courseA_collector_loops_challenge1_2018_instruction: '*"Can you help me spot some bugs?"*'
       courseA_collector_loops_challenge2_instruction: 'Get all of the treasure! '
@@ -3235,7 +3239,7 @@ th:
       courseA_collector_preLoops5_instruction: Get 1 of these 2 gems to solve this puzzle.
       courseA_collector_preLoops6_instruction: Get both pieces of treasure to solve this puzzle.
       courseA_collector_preLoops7_instruction: เก็บสมบัติทั้ง 3 กองเพื่อผ่านด่านระดับนี้ไป
-      courseA_forVideoTest_artist_instruction: Use the `repeat` loop to add waves to the water.
+      courseA_forVideoTest_artist_instruction: ใช้ลูป `ทำซ้ำ` เพื่อสร้างเกลียวคลื่น
       courseA_harvester_forVideo_instruction: Can you pick all the corn using only **one** move block?
       courseA_harvester_loops1_instruction: Help the harvester pick all the corn!
       courseA_harvester_loops10_instruction: Help the harvester pick all five ears of corn!
@@ -3332,10 +3336,10 @@ th:
       courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseB_Scrat_ramp5a_2018_instruction: Get the bird to the pig!
-      courseB_artist_loops1_instruction: นี้เป็นปริศนาชนิดใหม่ที่เรียกว่า "ศิลปิน " เล่นตามระดับและวาดสิ่งที่สนุกสนาน
+      courseB_artist_loops1_instruction: นี้เป็นปริศนาเรื่องใหม่ที่ชื่อว่า "ศิลปิน " เล่นผ่านด่านต่างๆ และวาดสิ่งที่สนุกสนาน
       courseB_artist_loops10_instruction: Use what you have learned to draw a picture of what you think the artist saw when he got home.
       courseB_artist_loops10_2018_instruction: Use what you have learned to draw a picture of what you think the artist saw when he got home.
-      courseB_artist_loops1_2018_instruction: นี้เป็นปริศนาชนิดใหม่ที่เรียกว่า "ศิลปิน " เล่นตามระดับและวาดสิ่งที่สนุกสนาน
+      courseB_artist_loops1_2018_instruction: นี้เป็นปริศนาเรื่องใหม่ที่ชื่อว่า "ศิลปิน " เล่นผ่านด่านต่างๆ และวาดสิ่งที่สนุกสนาน
       courseB_artist_loops2_instruction: The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?
       courseB_artist_loops2_2018_instruction: The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?
       courseB_artist_loops3_instruction: Help the artist draw a line 7 times to make a garden wall.
@@ -3361,7 +3365,7 @@ th:
       courseB_collector_loops10_2018_instruction: ช่วยลอเรลเก็บสมบัติทั้งหมดในถ้ำนี้
       courseB_collector_loops11_instruction: Eureka!  Get as much treasure as you can!
       courseB_collector_loops11_2018_instruction: Eureka!  Get as much treasure as you can!
-      courseB_collector_loops1_2018_instruction: This is Laurel the Adventurer!  Can you move her around and get treasure?
+      courseB_collector_loops1_2018_instruction: Get at least one piece of treasure without mistakes to pass!
       courseB_collector_loops2_instruction: Get all four piles to pass this level.
       courseB_collector_loops2_2018_instruction: Get all four piles to pass this level.
       courseB_collector_loops3_instruction: How can Laurel get all five piles of treasure using only one `E -->` block?
@@ -3438,9 +3442,9 @@ th:
       courseB_playlab_events3_instruction: Use an event to make Daisy the Dragon switch to a random mood when you click on her.
       courseB_playlab_events3_2018_instruction: Use an event to make Daisy the Dragon switch to a random mood when you click on her.
       courseB_playlab_events4_instruction: Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.
-      courseB_playlab_events4_2018_instruction: Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.
+      courseB_playlab_events4_2018_instruction: Get the dragon to finish this level!
       courseB_playlab_events5_instruction: Now add an event so that the knight runs away from the dragon when you press the right arrow.
-      courseB_playlab_events5_2018_instruction: Now add an event so that the knight runs away from the dragon when you press the right arrow.
+      courseB_playlab_events5_2018_instruction: Add an event so that the knight runs away from the dragon when you press the right arrow.
       courseB_playlab_events6_instruction: |-
         Help your knight get all of the flags!
         
@@ -3450,10 +3454,10 @@ th:
         
         To do this, you'll need to add events to help the knight move up, down, left, and right.
       courseB_playlab_events7_instruction: Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.
-      courseB_playlab_events7_2018_instruction: Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.
+      courseB_playlab_events7_2018_instruction: "1) Set the knight to vanish when he runs into the dragon.    \n2) Play a sound when they collide to make it feel more real.  "
       courseB_playlab_events8_instruction: Use your imagination. What can you do to make this game more fun?
       courseB_playlab_eventsFP_instruction: Use your imagination. What can you do to make this game more fun?
-      courseB_playlab_eventsFP_2018_instruction: Use your imagination. What can you do to make this game more fun?
+      courseB_playlab_eventsFP_2018_instruction: "**Free play:** Use your imagination. What can you do to make this game more fun?"
       courseB_playlab_eventsToolbox_instruction: Finish by playing a sound and making the knight vanish when he runs into the dragon!
       courseB_playlab_events_challenge1_instruction: 'Make the animals move down when you press ▼. '
       courseB_playlab_events_challenge1_2018_instruction: 'Make the animals move down when you press ▼. '
@@ -3481,8 +3485,8 @@ th:
       courseB_starWars_prog6_2018_instruction: Get all the scrap metal
       courseB_starWars_prog7_instruction: Go get it!
       courseB_starWars_prog7_2018_instruction: Go get it!
-      courseB_starWars_prog8_instruction: "** ความท้าทาย: ** ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง"
-      courseB_starWars_prog8_2018_instruction: "** ความท้าทาย: ** ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง"
+      courseB_starWars_prog8_instruction: "** การท้าทาย: ** ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง"
+      courseB_starWars_prog8_2018_instruction: "** การท้าทาย: ** ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง"
       courseB_starWars_prog9_instruction: ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง
       courseB_starWars_prog9_2018_instruction: ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง
       courseC_PlayLab_events1_instruction: ทำให้ Jorge เจ้าสุนัข (นักแสดงที่ 1) พูดว่า "สวัสดี"
@@ -3652,7 +3656,7 @@ th:
       courseC_harvester_loops_challenge2_2018_instruction: Collect all of the lettuce. Avoid the trees and fields!
       courseC_harvester_loops_forVid_instruction: เก็บรวบรวม ข้าวโพดและผักสลัดทั้งหมด แล้วคว้าฟักทองทั้งหมด
       courseC_maze_debugging1_instruction: แก้ไขโค้ดเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค
-      courseC_maze_debugging10_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+      courseC_maze_debugging10_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
       courseC_maze_debugging1_2018_instruction: แก้ไขโค้ดเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค
       courseC_maze_debugging2_instruction: ใช้ทักษะการดีบั๊กของคุณเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค
       courseC_maze_debugging2_2018_instruction: ใช้ทักษะการดีบั๊กของคุณเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค
@@ -4732,7 +4736,7 @@ th:
       grade1_adventurer_loops3_instruction: Can you fix Laurel's path to get all of this gold?
       grade1_adventurer_loops4_instruction: 'Add to the code from the last puzzle to get all of the gold. '
       grade1_adventurer_loops5_instruction: What should you add to this code to get all of the gold?
-      grade1_adventurer_loops6_instruction: Write the code to get all of this gold.
+      grade1_adventurer_loops6_instruction: เขียนโค้ดเพื่อเก็บรวบรวมทองทั้งหมดนี้
       grade1_adventurer_loops7_challenge_instruction: "**Challenge: ** The gold goes all the way down these stairs!  Write the code to help me get it all."
       grade1_adventurer_loops8_challenge_instruction: 'Challenge: Try this staircase now! It has an extra spike at the end you''ll have to climb.'
       grade1_adventurer_loops9_instruction: Help me get the gold from this deep valley.
@@ -4756,7 +4760,7 @@ th:
       grade1_maze_sequence3_instruction: Add 2 blocks to get the bird to the pig.
       grade1_maze_sequence4_instruction: Now try this puzzle from the start!
       grade1_maze_sequence5_instruction: ขยับฉันไปทางนี้ แล้วก็ขยับฉันไปทางนั้น เพื่อไปจัดการเจ้าหมูนั่น!
-      grade1_maze_sequence6_instruction: คิดดูให้ดีว่าอะไรคือสิ่งที่ขาดหายไป และเพิ่มบล็อกเพื่อที่จะพาฉันไปจัดการกับเจ้าหมูนั่น!
+      grade1_maze_sequence6_instruction: "คิดดูให้ดีว่าอะไรคือสิ่งที่ขาดหายไป และเพิ่มบล็อกเพื่อที่จะพาฉันไปจัดการกับเจ้าหมูนั่น! \nN = North คือ ทิศเหนือ S = South คือ ทิศใต้ E = East คือ ทิศตะวันออก W = West คือ ทิศตะวันตก\n"
       grade1_maze_sequence7_instruction: Your turn!  What do you need to do to get the bird to the pig?
       grade1_maze_sequence8_instruction: Debug this level by adding blocks to get me to the pig!
       grade1_maze_sequence9_instruction: 'พาฉันอ้อมไปรอบ ๆ ระเบิด เพื่อไปจัดการเจ้าหมูนั่นให้ได้! '
@@ -5037,7 +5041,7 @@ th:
       grade4_arist_nested_loop_polygons1_instruction: "Loop this design 10 times. \n\nHow much do you have to turn each time you loop?"
       grade4_arist_nested_loop_polygons2_instruction: "Loop this shape 6 times. \n\nHow much do you have to turn each time you loop? "
       grade4_arist_nested_loop_squares1_instruction: Can you draw these 10 squares of this sidewalk using a nested loop? Each square is 30 pixels.
-      grade4_arist_nested_loop_triangles2_instruction: "Now nest this loop inside another loop to\ndraw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete a 360 degree rotation."
+      grade4_arist_nested_loop_triangles2_instruction: 'ตอนนี้ฝังลูปนี้ภายในลูปอื่นเพื่อที่จะวาดสามเหลี่ยม 10 รูป ซึ่งเรียกว่าการทำลูปซ้อนลูป คำบอกใบ้: รูปสามเหลี่ยมทั้ง 10 รูปทำให้การหมุน 360 องศาเสร็จสมบูรณ์ลง  '
       grade4_arist_nested_loop_triangles3_instruction: Can you draw a hexagon by looping the triangle code?
       grade4_arist_nested_loop_triangles4_instruction: Draw the teeth in the alligator's mouth!
       grade4_arist_nested_loop_triangles5_instruction: |-
@@ -5063,10 +5067,10 @@ th:
       grade4_artist_functions_windows1_instruction: If you can draw one window, you can draw three! Try using your choice of a nested loop or a function here. Don't forget the jump block!
       grade4_artist_functions_windows2_instruction: "Try solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!\n\n- The top windows are 50 pixels away from each other.  \n- The bottom windows are 100 pixels below the top set."
       grade4_artist_nestedLoops_challenge_instruction: |-
-        It's Free Play time! Here is the code for
-        an interesting shape.  What happens when you repeat it?  Have fun and draw
-        anything you would like.
-      grade4_artist_nestedLoops_challenge2_instruction: Now for a challenge!  Feel free to use trial and error. You are not expected to get the image perfect the first time.   Want to see more hints?  Click here!
+        Click here to see the full instructions again!
+        
+        Here is the code for an interesting shape.  What happens when you repeat it multiple times, turning between each iteration?   Notice that the turns in this shape add up to 420 degrees, which means that when your artist is done drawing, it will be facing a different direction than when you started.  That new direction is exactly 60 degrees to the right of where you began.
+      grade4_artist_nestedLoops_challenge2_instruction: ด่านนี้เพื่อการท้าทาย! ใช้การลองผิดลองถูกตามสบายเลย เราไม่ได้คาดหวังว่าคุณจะได้ภาพที่สมบูรณ์แบบในการวาดครั้งแรก ต้องการดูคำบอกใบ้เพิ่มเติมหรือไม่? คลิกได้ที่นี่!
       grade4_artist_nested_loop_circles1_instruction: 'Assessment: Use a nested loop to complete the design.'
       grade4_artist_nested_loop_flags1_instruction: Loop the given code to create a windmill.
       grade4_artist_nested_loop_polygons1_instruction: "Loop this design 10 times. \n\nHow much do you have to turn each time you loop?"
@@ -5263,9 +5267,9 @@ th:
         
         For even more effect, try playing with color!  Use random colors inside loops to see how it changes your design.
       grade5_artist_variables_freeplay15_instruction: |-
-        Want a second peek at the inspiration design or the hints?  Click here!
+        ต้องการแอบดูการออกแบบที่สร้างแรงบันดาลใจสักนิดนึงหรือให้เราบอกคำใบ้สักหน่อยนึงไหม? คลิกได้ที่นี่! 
         
-        Otherwise, make a design all your own!
+        ไม่อย่างนั้น ก็ให้ออกแบบทั้งหมด ด้วยตัวของคุณเอง!
       grade5_artist_variables_freeplay16_instruction: Still playing?  Here is a blank canvas where you can create whatever you want!
       grade5_artist_variables_hexagons1_instruction: "Let's try it again! \n\nCan you set the `length` variable to 60 to make this cool design with hexagons?"
       grade5_artist_variables_letterT11_instruction: Here’s more complicated code using the same concepts from the last puzzle - what should you set the "sides" variable to in order to draw this picture made of squares?
@@ -5340,8 +5344,8 @@ th:
       gradek_adventurer_loops4_instruction: Use what you learned to get all of the coins.
       gradek_adventurer_loops4a_instruction: Add to this code to collect all of the coins.
       gradek_adventurer_loops5_instruction: What should you add to this code to get all of the gold?
-      gradek_adventurer_loops6_instruction: Write the code to get all of this gold.
-      gradek_adventurer_loops7_instruction: Write the code to get all of this gold.
+      gradek_adventurer_loops6_instruction: เขียนโค้ดเพื่อเก็บรวบรวมทองทั้งหมดนี้
+      gradek_adventurer_loops7_instruction: เขียนโค้ดเพื่อเก็บรวบรวมทองทั้งหมดนี้
       gradek_adventurer_loops7_challenge_instruction: "**Challenge:** The gold goes all the way up these stairs!  Write the code to help me get it all."
       gradek_adventurer_loops8_instruction: Help me get all of the gold from this deep valley.
       gradek_adventurer_loops9_instruction: Help me get all of the gold from this cave.
@@ -5349,16 +5353,16 @@ th:
       gradek_adventurer_loopsPre_instruction: This is Laurel the Adventurer.  Mover her around and get as much gold as you can!
       gradek_artist_loops1_instruction: ช่วยให้ศิลปินวาดเส้นไปข้างหน้าสองครั้ง
       gradek_artist_loops2_instruction: Our artist is trying to draw a line five times, but can't get it right.  Can you help?
-      gradek_artist_loops3_instruction: Now, use a `repeat` loop to draw this line five times!
-      gradek_artist_loops4_instruction: Draw a line seven steps long. This will become our horizon.
-      gradek_artist_loops5_instruction: Let's put a nice hill in the back.
-      gradek_artist_loops6_instruction: Use the `repeat` loop to add waves to the water.
-      gradek_artist_loops7_instruction: We need a ladder up to the boat.
+      gradek_artist_loops3_instruction: ตอนนี้ใช้ลูป `ทำซ้ำ` เพื่อวาดเสนนี้ 5 ครั้ง
+      gradek_artist_loops4_instruction: วาดเส้นยาวเจ็ดก้าว เส้นนี้จะกลายเป็นขอบฟ้าของเรา
+      gradek_artist_loops5_instruction: มาวางเนินดินเล็กๆไว้ด้านหลังภาพกันเถอะ
+      gradek_artist_loops6_instruction: ใช้ลูป `ทำซ้ำ` เพื่อสร้างเกลียวคลื่น
+      gradek_artist_loops7_instruction: เราต้องมีบันไดเพื่อใช้ปีนขึ้นเรือ
       gradek_artist_loops8_instruction: 'Challenge: The stairs down to the dock are broken.  Help me fix them.'
       gradek_artist_loops9_instruction: Time to head back to land. Help me put down stones so I don't fall in!
-      gradek_artist_loopsA_instruction: Help me build steps to watch the ship sail away.
-      gradek_artist_loopsFP_instruction: The artist saw something funny in the distance.  Draw what you think he saw.
-      gradek_artist_loopsPre_instruction: นี้เป็นปริศนาชนิดใหม่ที่เรียกว่า "ศิลปิน " เล่นตามระดับและวาดสิ่งที่สนุกสนาน
+      gradek_artist_loopsA_instruction: ช่วยฉันสร้างขั้นบันได เพื่อที่จะใช้ดูเรือแล่นออกไป
+      gradek_artist_loopsFP_instruction: ศิลปินเห็นบางสิ่งบางอย่างที่ตลกในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
+      gradek_artist_loopsPre_instruction: นี้เป็นปริศนาเรื่องใหม่ที่ชื่อว่า "ศิลปิน " เล่นผ่านด่านต่างๆ และวาดสิ่งที่สนุกสนาน
       gradek_playlab_events1_instruction: Make your robot say "Hello!" when the button is clicked.
       gradek_playlab_events1a_instruction: Add a block so that when you click the "up" button, Olive the Cat walks up.
       gradek_playlab_events1c_instruction: Jorge the Dog wants to say "Hi there."  Can you help him?
@@ -5410,7 +5414,7 @@ th:
       iceage_warn_ice_age_2018_instruction: Change the scene to an icy background and set Sid’s (actor 1) speed to fast.
       jessie-test_instruction: Lots of instructions
       k-1 maze 1_instruction: คุณช่วยให้ฉันขยับไปทางทิศตะวันตกไปหาเจ้าหมูได้หรือไม่?
-      k1stickerfreeplay_instruction: The artist saw something funny in the distance.  Draw what you think he saw.
+      k1stickerfreeplay_instruction: ศิลปินเห็นบางสิ่งบางอย่างที่ตลกในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
       kikiTesta_instruction: |-
         Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.
         

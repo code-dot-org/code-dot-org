@@ -282,7 +282,7 @@ zh-TW:
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: Defining Variables and Substitution
+              name: 定義變數和替換
             'Calc: Evaluation Blocks':
               name: Evaluation Blocks and Arithmetic Expressions
             'Eval: Boolean Operators':
@@ -292,7 +292,7 @@ zh-TW:
             'Eval: Defining Functions':
               name: 複合函式
             'Eval: Functions':
-              name: Solving Word Problems with the Design Recipe
+              name: 用設計方法解決單字問題 (Word Problem)
             'Eval: Strings and Images':
               name: 字串和圖像
             'Eval: Writing Contracts':
@@ -388,7 +388,7 @@ zh-TW:
             Manual DNS:
               name: 手動設定 DNS
             Overview and Setup Instructions:
-              name: Overview and Setup Instructions
+              name: 概述與設定說明
             Packets and Reliability:
               name: Packets and Reliability
             Peer to Peer - Sending Ascii:
@@ -769,13 +769,13 @@ zh-TW:
             Loops and Simulations:
               name: Loops and Simulations
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: 多螢幕應用程式
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: 處理陣列
             The Need For Programming Languages:
               name: The Need For Programming Languages
             Understanding Program Flow and Logic:
@@ -995,17 +995,17 @@ zh-TW:
           description_short: 網際網路
           stages:
             Algorithms Detour - Hard Problems TSP:
-              name: Hard Problems - The Traveling Salesperson Problem
+              name: 挑戰 - 旅行銷售員問題
             Algorithms Detour - How Routers Learn:
               name: 路由器的學習
             Algorithms Detour - Minimum Spanning Tree:
-              name: Algorithms Detour - Minimum Spanning Tree
+              name: 演算法 - 最小生成數
             Algorithms Detour - Shortest Path:
-              name: Algorithms Detour - Shortest Path
+              name: 演算法 - 最短路徑
             Alice and Bob and Asymmetric Keys:
-              name: Asymmetric Keys - Cups and Beans
+              name: 非對稱秘鑰 - 杯子和豆子
             Cracking the Code:
-              name: Cracking the Code
+              name: 解析程式碼
             DNS in the Real World:
               name: 現實生活中的 DNS
             Encryption Algorithms:
@@ -1013,9 +1013,9 @@ zh-TW:
             HTTP and Abstraction:
               name: HTTP and Abstraction on the Internet
             Invent an Addressing Protocol:
-              name: Invent an Addressing Protocol
+              name: 發明一個定址協定
             One Way Functions - Ice Cream Vans:
-              name: One-Way Functions - The WiFi Hotspot Problem
+              name: 單向函數 - Wifi熱點問題
             Packets and Making a Reliable Internet:
               name: Packets and Making a Reliable Internet
             Practice PT - Cybersecurity Innovations:
@@ -1023,7 +1023,7 @@ zh-TW:
             Practice PT - The Internet and Society:
               name: Practice PT - The Internet and Society
             Public Key Crypto:
-              name: Public Key Cryptography
+              name: 公開金鑰加密
             Routers and Redundancy:
               name: Routers and Redundancy
             Tell Me a Secret - Encrypting Text:
@@ -1124,7 +1124,7 @@ zh-TW:
             PlayLab:
               name: PlayLab
             Public Key Cryptography:
-              name: Public Key Cryptography
+              name: 公開金鑰加密
             Rich long assessment:
               name: Rich long assessment
             Sample PLC Assessment:
@@ -1156,7 +1156,7 @@ zh-TW:
           description_audience: ''
           stages:
             Best Practices for Teaching Computer Science:
-              name: Best Practices for Teaching Computer Science
+              name: 資訊工程的最佳實踐
             Booleans:
               name: 布林值
             Course Overview:
@@ -1188,15 +1188,15 @@ zh-TW:
             App Lab:
               name: App Lab
             Broadcast Lesson:
-              name: Broadcast Lesson
+              name: 廣播課程
             Internet Simulator:
               name: 網路模擬器
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
-              name: Text Compression Lesson
+              name: 文本壓縮課程
             Text Compression Widget:
-              name: Text Compression Widget
+              name: 文本壓縮工具
             Welcome!:
               name: 歡迎！
         K5-OnlinePD:
@@ -1208,11 +1208,11 @@ zh-TW:
           description_audience: ''
           stages:
             Best Practices for Teaching Computer Science:
-              name: Best Practices for Teaching Computer Science
+              name: 資訊工程的最佳實踐
             Computer Science Fundamentals:
-              name: Computer Science Fundamentals
+              name: 資訊工程基礎
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Looking Ahead:
               name: Looking Ahead
             'Mastering the Basics: Conditionals':
@@ -1291,11 +1291,11 @@ zh-TW:
             Advanced StarLogo Nova:
               name: Advanced StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: 混合第1、2階段
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: 查看模組
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
@@ -1321,11 +1321,11 @@ zh-TW:
             Advanced StarLogo Nova:
               name: Advanced StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: 混合第1、2階段
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: 查看模組
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
@@ -1343,7 +1343,7 @@ zh-TW:
             Creating Equitable Learning Environments:
               name: Creating Equitable Learning Environments
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
@@ -1357,11 +1357,11 @@ zh-TW:
             Advanced StarLogo Nova:
               name: Advanced StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: 混合第1、2階段
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: 查看模組
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
@@ -1424,7 +1424,7 @@ zh-TW:
           description_short: 'Blended Summer Study: 8 hour online'
           stages:
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Lesson Chunk 1- Sending Binary Messages:
               name: 課程主題 1 - 發送二進制訊息
             Lesson Chunk 2- Encoding and Sending Numbers:
@@ -1542,7 +1542,7 @@ zh-TW:
             Close & Next Steps:
               name: 關閉 & 下一步
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Intro to Unit 2:
               name: 單元 2 簡介
             Lesson Overviews:
@@ -1560,7 +1560,7 @@ zh-TW:
             Close & Next Steps:
               name: 關閉 & 下一步
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Intro to Unit 3:
               name: 單元 3 簡介
             Teaching Strategies:
@@ -1578,7 +1578,7 @@ zh-TW:
             Close & Next Steps:
               name: 關閉 & 下一步
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Intro to Unit 4:
               name: 單元 4 簡介
             Teaching Strategies:
@@ -1596,7 +1596,7 @@ zh-TW:
             Complete the Challenge:
               name: 完成這個挑戰
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Introduction to the Unit 5 Challenge:
               name: 單元 5 挑戰簡介
             Share out and Submit:
@@ -1614,7 +1614,7 @@ zh-TW:
             Alternative Ideas for Unit 6:
               name: Alternative Ideas for Unit 6
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Share out and Submit:
               name: Share out and Submit
             Unit 6 Challenge:
@@ -1714,7 +1714,7 @@ zh-TW:
             Close and Next Steps:
               name: 關閉 & 下一步
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Teaching Support - Lessons 1-3:
               name: 教學支援：1 - 3 課
             Teaching Support - Lessons 13-16:
@@ -1736,7 +1736,7 @@ zh-TW:
             Complete the Challenge:
               name: 完成這個挑戰
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Share out and Submit:
               name: Share out and Submit
             Unit 2 Overview:
@@ -1802,7 +1802,7 @@ zh-TW:
             Complete the Challenge:
               name: 完成這個挑戰
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Practice Performance Task:
               name: Practice Performance Task
             Share out and Submit:
@@ -1832,7 +1832,7 @@ zh-TW:
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: 處理陣列
             While Loops:
               name: 當…迴圈
         CSP-Unit3-Support:
@@ -1980,7 +1980,7 @@ zh-TW:
             Complete the Challenge:
               name: 完成這個挑戰
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Practice Performance Tasks:
               name: Practice Performance Tasks
             Share out and Submit:
@@ -2027,7 +2027,7 @@ zh-TW:
             Explore PT Breakdown:
               name: Explore PT Breakdown
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Share out and Submit:
               name: Share out and Submit
             Unit 5 Overview:
@@ -2145,7 +2145,7 @@ zh-TW:
           description_audience: ''
           stages:
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Planning For the Future:
               name: 未來的規劃
             Sharing Student Work:
@@ -2329,7 +2329,7 @@ zh-TW:
             Alice and Bob and Asymmetric Keys:
               name: Alice and Bob and Asymmetric Keys
             Cracking the Code:
-              name: Cracking the Code
+              name: 解析程式碼
             Encryption with Keys and Passwords:
               name: Encryption with Keys and Passwords
             Identifying People with Data:
@@ -2403,11 +2403,11 @@ zh-TW:
             Loops and Simulations:
               name: Loops and Simulations
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: 多螢幕應用程式
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
-              name: Processing Arrays
+              name: 處理陣列
             Understanding Program Flow and Logic:
               name: Understanding Program Flow and Logic
             User Input and Strings:
@@ -2683,9 +2683,9 @@ zh-TW:
             Algorithms Detour - How Routers Learn:
               name: Algorithms Detour - How Routers Learn
             Algorithms Detour - Minimum Spanning Tree:
-              name: Algorithms Detour - Minimum Spanning Tree
+              name: 演算法 - 最小生成數
             Algorithms Detour - Shortest Path:
-              name: Algorithms Detour - Shortest Path
+              name: 演算法 - 最短路徑
             Unit 1 - Encoding Numbers in the Real World:
               name: 單元 1 - 現實生活中的數字編碼
             Unit 1 - Sending Bits in the Real World:
@@ -3215,7 +3215,7 @@ zh-TW:
             Close & Next Steps:
               name: 關閉 & 下一步
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Intro to Unit 2:
               name: 單元 2 簡介
             Lesson Overviews:
@@ -3233,7 +3233,7 @@ zh-TW:
             Close & Next Steps:
               name: 關閉 & 下一步
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Intro to Unit 3:
               name: 單元 3 簡介
             Teaching Strategies:
@@ -3251,7 +3251,7 @@ zh-TW:
             Close & Next Steps:
               name: 關閉 & 下一步
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Intro to Unit 4:
               name: 單元 4 簡介
             Teaching Strategies:
@@ -3269,7 +3269,7 @@ zh-TW:
             Complete the Challenge:
               name: 完成這個挑戰
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Introduction to the Unit 5 Challenge:
               name: 單元 5 挑戰簡介
             Share out and Submit:
@@ -3291,7 +3291,7 @@ zh-TW:
             Alternative Ideas for Unit 6:
               name: Alternative Ideas for Unit 6
             Getting Started:
-              name: Getting Started
+              name: 開始步驟
             Share out and Submit:
               name: Share out and Submit
             Unit 6 Challenge:
@@ -5188,11 +5188,11 @@ zh-TW:
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: 查看模組
             Advanced StarLogo Nova:
               name: Advanced StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: 混合第1、2階段
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Wrap-Up:
@@ -5208,11 +5208,11 @@ zh-TW:
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
-              name: Reviewing the Modules
+              name: 查看模組
             Advanced StarLogo Nova:
               name: Advanced StarLogo Nova
             Remixing Phases 1 and 2:
-              name: Remixing Phases 1 and 2
+              name: 混合第1、2階段
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Wrap-Up:
@@ -6988,19 +6988,21 @@ zh-TW:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
-                \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+              description_teacher: "When students run into a barrier while answering
+                a question or working on a project, it’s so easy for them to get frustrated
+                and give up.  This lesson will introduce students to the idea that
+                frustration can be an important part of learning. Here, frustration
+                is presented as a step in the creative process, rather than a sign
+                of failure.\r\n\r\nThis lession can be done over one or two class
+                sessions.  If you have more time, feel free to draw out the building
+                and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
               name: 生活中的演算法 - 植物種植
               description_student: ''
-              description_teacher: 'In this lesson, students will relate the concept
+              description_teacher: "In this lesson, students will relate the concept
                 of algorithms back to everyday, real-life activities by planting an
                 actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r
-
-'
+                real-world situations to online scenarios and vice versa.\r\n"
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''
@@ -12303,7 +12305,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: 多螢幕應用程式
               description_student: ''
               description_teacher: ''
             'Building an App: Multi-Screen App':
@@ -12367,7 +12369,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Processing Arrays:
-              name: Processing Arrays
+              name: 處理陣列
               description_student: ''
               description_teacher: ''
             Functions with Return Values:

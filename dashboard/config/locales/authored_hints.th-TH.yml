@@ -69,7 +69,7 @@ th:
         2-3_Artist_Debugging_9_b: คุณไม่จำเป็นต้องเพิ่มบล็อกเข้าไปอีกบล็อกหนึ่งเพื่อเพิ่มองศาการหัน
           เพียงแค่บวกอีก 60 องศาเข้าไปกับจำนวนองศาในบล็อก `หันซ้าย` ที่มีอยู่เดิม!
       2-3 Artist Functions 1 a_authored_hint:
-        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
+        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน 100 พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
           175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
         2-3_Artist_Functions_1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
       2-3 Artist Functions 1_authored_hint:
@@ -184,7 +184,7 @@ th:
           ต้องการความช่วยเหลือเกี่ยวกับมุมไหม?
 
           **360/12 = 30**.
-        2-3_Artist_Nested_Loops_3_b: อย่าลืมใส่รหัสสีเทาทั้งหมดและบล็อกที่ใช้สำหรับหันของคุณไว้ภายในลูป.
+        2-3_Artist_Nested_Loops_3_b: อย่าลืมวางโค้ดสีเทาทั้งหมดและบล็อกที่ใช้สำหรับหันของคุณไว้ภายในลูป
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: |-
           ต้องการความช่วยเหลือเกี่ยวกับมุมไหม?
@@ -326,17 +326,16 @@ th:
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "ด้านยาวมีความยาว 240 พิกเซล ซึ่งหมายความว่า 2 ด้านสั้นรวมกันยาว:\n\n
           800 - 240 - 240 = 320\n\n320/2 คืออะไร? "
-        4-5_Artist_8_b: "This image can be done 2 ways!  \n- Draw two rectangles that
-          are **120** long and **160** tall, with an overlapping side\n\n- Draw one
-          rectangle that is **240** long and **160** tall, then add a line in the
-          middle."
+        4-5_Artist_8_b: "ภาพนี้สามารถทำได้  2  วิธี!  \n-วาดสี่เหลี่ยมผืนผ้าสองรูปที่มีด้านกว้าง
+          ** 120 ** และสูง ** 160 ** โดยมีด้านที่ทับซ้อนกันอยู่หนึ่งด้าน หรือ\n\n-วาดสี่เหลี่ยมผืนห้าที่มีด้านยาว
+          ** 240 **และสูง ** 160 ** แล้ววาดเพิ่มเส้นตรงกลาง"
       4-5 Artist 9_authored_hint:
         4-5_Artist_9_a: 'เมื่อรูปสามเหลี่ยมเป็นสามเหลี่ยมด้านเท่า ทุกด้านและทุกมุมจะเหมือนกัน
 
 '
         4-5_Artist_9_b: คุณจะต้องวาดสามเหลี่ยมสามรูปที่มีขนาดเดียวกัน อย่าลืมกระโดดข้ามไปยังตำแหน่งใหม่ของคุณหลังจากวาดแต่ละรูปแล้ว
       4-5 Artist Assessment 1_authored_hint:
-        4-5_Artist_Assessment_1_a: คุณจะต้องวาดเพียงรูปสามเหลี่ยมภายนอกเ พื่อให้ปริศนานี้เสร็จสมบูรณ์
+        4-5_Artist_Assessment_1_a: เพื่อให้ปริศนานี้เสร็จสมบูรณ์ คุณจะต้องวาดเพียงรูปสามเหลี่ยมภายนอกเท่านั้น
       4-5 Artist Patterns 11_authored_hint:
         4-5_Artist_Patterns_11_a: If there are 360 degrees in a circle and each loop
           turns 3 degrees, how many times would you need to loop draw half of a full
@@ -389,9 +388,8 @@ th:
           ลองแกะรอยเส้นทางด้วยนิ้วของคุณว่า
           มันเป็นเส้นทางที่สั้นที่สุดที่คุณสามารถค้นหาได้หรือไม่?
       4-5 Maze 7_authored_hint:
-        4-5_Maze_7_a: "**Want to get your code as small as it can be?** \n\nLook for
-          patterns in your blocks. Do you see something that repeats?  Try putting
-          a loop around it instead!"
+        4-5_Maze_7_a: "** ต้องการให้โค้ดของคุณมีขนาดเล็กที่สุดเท่าที่จะทำได้ ใช่ไหม?
+          ** \n\nค้นหารูปแบบในบล็อกของคุณ คุณเห็นสิ่งที่ซ้ำๆ กันไหม?  ลองวางลูปไว้รอบมันแทน!"
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 Nested Loops 2_authored_hint: {}
@@ -438,18 +436,17 @@ th:
         2-3_Maze_1_a: การใช้บล็อก ' เดินไปข้างหน้า ' นั้นให้ลากบล็อกจากพื้นที่ของกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก
           ' เมื่อเรียกใช้งาน '
       Course 4 Artist 11_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right
-          by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right
-          by **120 degrees**. '
+        Course_4_Artist_11_a: 'รูปครึ่ง-หกเหลี่ยมมี ** ความยาว 30 ** และหันขวาไป **
+          60 องศา ***  '
+        Course_4_Artist_11_b: 'รูป 2/3 สามเหลี่ยม มี ** ความยาว 80 ** และหันขวาไป
+          ** 120 องศา ** '
       Course 4 Artist 12_authored_hint:
-        Course_4_Artist_12_a: 'Each repeated shape is the combination of **half of
-          a hexagon**, followed by **2/3 of a triangle**. '
-        Course_4_Artist_12_b: 'The unit shape is almost the same as in the last puzzle,
-          except the half-hexagon is a bit bigger. '
-        Course_4_Artist_12_c: "1) The first three lines are 60 pixels long and you
-          need to turn 60 degrees.  \n 2) The next two lines are 80 pixels long and
-          you need to turn 120 degrees "
+        Course_4_Artist_12_a: 'เป็นการวาดรูปร่างที่ประกอบกันขึ้นมาจากการวาดซ้ำๆกัน
+          ของ ** ครึ่่งรูปของหกเหลี่ยม ** ตามด้วย ** 2/3 ของรูปสามเหลี่ยม ** '
+        Course_4_Artist_12_b: 'รูปร่างที่วาดมีสัดส่วนเกือบจะเหมือนกับที่ทำในปริศนาสุดท้าย
+          ยกเว้นรูปครึ่ง-หกเหลี่ยมมีขนาดใหญ่ขึ้นมานิดหนึ่ง '
+        Course_4_Artist_12_c: "1) สามเส้นแรกมีขนาด  60 พิกเซลและคุณต้องการหัน 60 องศา
+          \n 2) ถัดไปอีกสองเส้นมีขนาด 80 พิกเซลและคุณต้องการที่จะหัน 120 องศา "
         Course_4_Artist_12_d: |-
           **Solution:**
 
@@ -511,14 +508,16 @@ th:
       Course 4 Artist 7_authored_hint: {}
       Course 4 Artist 8a_authored_hint:
         Course_4_Artist_8a: |-
-          Need help figuring out how far to turn?
+          ต้องการความช่วยเหลือว่า จะต้องหันไปกี่องศาไหม?
 
-          There are 3 triangles within the 360 degree rotation.
+          มีรูปสามเหลี่ยม 3 รูป อยู่ภายในองศาการหมุน 360 องศา
 
-          How many times does 3 go into 360?
+          360 หาร 3 ได้เท่าไร?
       Course 4 Artist 9_authored_hint:
-        Course_4_Artist_9_a: "Need to know how much to turn? \n\nWhat is 360 divided
-          by 10?"
+        Course_4_Artist_9_a: |-
+          อยากทราบไหมว่าจะต้องหันไปเท่าไร
+
+           360 หารด้วย 10 ได้เท่าไร?
       Course 4 Artist Binary Free Play 2b_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One
           counts up from 1 to 8, the other counts down from 8 to 1.
@@ -4812,10 +4811,10 @@ th:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
         courseB_maze_seq_challenge1_b: Try moving west to start.
       course3_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30**
-          and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80**
-          and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: 'รูปครึ่ง-หกเหลี่ยมมี ** ความยาว 30 **
+          และหันขวาไป ** 60 องศา ***  '
+        courseE_artist_concept_challenge1_b: 'รูป 2/3 สามเหลี่ยม มี ** ความยาว 80
+          ** และหันขวาไป ** 120 องศา ** '
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: If you call the function one more time,
           you can create the same design in the final corner. You can also `jump to`
@@ -5855,34 +5854,34 @@ th:
           block, try putting it inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
           name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nloop."
       courseA_artist_loops6_authored_hint:
-        courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing
-          with the blocks a bit to see what each one draws.
+        courseA_artist_loops6_a: คิดไม่ออกวิธีที่จะวาดเนินเขา?  ลองเล่นกับบล็อกดูสักนิด
+          เพื่อดูว่าแต่ละบล็อกวาดอย่างไร
         courseA_artist_loops6_b: You will need two blocks in two different directions
           to solve this puzzle.
       courseA_artist_loops6_2018_authored_hint:
-        courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing
-          with the blocks a bit to see what each one draws.
+        courseA_artist_loops6_a: คิดไม่ออกวิธีที่จะวาดเนินเขา?  ลองเล่นกับบล็อกดูสักนิด
+          เพื่อดูว่าแต่ละบล็อกวาดอย่างไร
         courseA_artist_loops6_b: You will need 2 blocks in 2 directions to solve this
           puzzle.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
         courseA_artist_loops7_b: เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม
         courseA_artist_loops7_c: |-
-          โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกในลูป<xml><block type=""controls_repeat"">
+          โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml><block type=""controls_repeat"">
           <title name=""TIMES"">???</title>
           </block></xml>
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
         courseA_artist_loops7_b: เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม
         courseA_artist_loops7_c: |-
-          โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกในลูป<xml><block type=""controls_repeat"">
+          โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml><block type=""controls_repeat"">
           <title name=""TIMES"">???</title>
           </block></xml>
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
         courseA_artist_loops7_b: เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม
         courseA_artist_loops7_c: |-
-          โปรดจำไว้ว่าคุณสามารถใส่บล็อคได้มากกว่าหนึ่งบล็อกในลูป<xml><block type=""controls_repeat"">
+          โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml><block type=""controls_repeat"">
           <title name=""TIMES"">???</title>
           </block></xml>
       courseA_artist_loops8_authored_hint:
@@ -6014,15 +6013,13 @@ th:
           collect the treasure after she finishes the <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> loop!
       courseA_collector_loops5_authored_hint:
-        courseA_collector_loops5_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษแผ่นหนึ่งเพื่อที่จะคิดออกว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบที่มีอยู่
+        courseA_collector_loops5_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด
         courseA_collector_loops5_b: ลองแยกปัญหาออกเป็น 2 ส่วนเคลื่อนไหวด้านข้างแล้วเคลื่อนไหวด้านล่าง
-        courseA_collector_loops5_c: คุณจะต้องเริ่มต้นด้วย<xml><block type=""controls_repeat_simplified_dropdown""><title
-          name=""TIMES"" config=""3-10"">???</title></block></xml>ลูปที่พาลอเรลไปทางทิศตะวันตกและเก็บรวบรวมสมบัติ
+        courseA_collector_loops5_c: คุณจะต้องเริ่มต้นด้วยลูปที่พาลอเรลไปทางทิศตะวันตกและเก็บรวบรวมสมบัติไปตลอดทาง
       courseA_collector_loops5_2018_authored_hint:
-        courseA_collector_loops5_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษแผ่นหนึ่งเพื่อที่จะคิดออกว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบที่มีอยู่
+        courseA_collector_loops5_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด
         courseA_collector_loops5_b: ลองแยกปัญหาออกเป็น 2 ส่วนเคลื่อนไหวด้านข้างแล้วเคลื่อนไหวด้านล่าง
-        courseA_collector_loops5_c: คุณจะต้องเริ่มต้นด้วย<xml><block type=""controls_repeat_simplified_dropdown""><title
-          name=""TIMES"" config=""3-10"">???</title></block></xml>ลูปที่พาลอเรลไปทางทิศตะวันตกและเก็บรวบรวมสมบัติ
+        courseA_collector_loops5_c: คุณจะต้องเริ่มต้นด้วยลูปที่พาลอเรลไปทางทิศตะวันตกและเก็บรวบรวมสมบัติไปตลอดทาง
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
         courseA_collector_loops6_b: The shortest solution has two repeat loops, one
@@ -6040,14 +6037,14 @@ th:
         courseA_collector_loops8_a: หากคุณมีปัญหาในการแก้ปริศนานี้ให้ ลองเขียนสิ่งที่คุณคิดลงบนกระดาษและมองหารูปแบบดู
         courseA_collector_loops8_b: Try breaking this puzzle into 3 separate problems,
           and writing loops for each.
-        courseA_collector_loops8_c: จำไว้ว่าคุณสามารถเขียนรหัสทีละหนึ่งชิ้นแล้วกด
-          " เริ่ม" เพื่อดูว่าคุณจะทำอะไรต่อไป
+        courseA_collector_loops8_c: จำไว้ว่าคุณสามารถเขียนโค้ดทีละหนึ่งชิ้นแล้วกด
+          " เริ่ม" เพื่อดูว่าคุณควรจะทำอะไรต่อไป
       courseA_collector_loops8_2018_authored_hint:
         courseA_collector_loops8_a: หากคุณมีปัญหาในการแก้ปริศนานี้ให้ ลองเขียนสิ่งที่คุณคิดลงบนกระดาษและมองหารูปแบบดู
         courseA_collector_loops8_b: Try breaking this puzzle into 3 separate problems,
           and writing loops for each.
-        courseA_collector_loops8_c: จำไว้ว่าคุณสามารถเขียนรหัสทีละหนึ่งชิ้นแล้วกด
-          " เริ่ม" เพื่อดูว่าคุณจะทำอะไรต่อไป
+        courseA_collector_loops8_c: จำไว้ว่าคุณสามารถเขียนโค้ดทีละหนึ่งชิ้นแล้วกด
+          " เริ่ม" เพื่อดูว่าคุณควรจะทำอะไรต่อไป
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: Does the code feel really long?  Try putting two
           of your `repeat` loops inside of another loop to make it much shorter!
@@ -8073,25 +8070,11 @@ th:
       courseB_starWars_prog4_authored_hint:
         courseB_starWars_prog4_a: Remember you can write one piece of the code at
           a time, then run it to figure out where you need to go from there.
-        courseB_starWars_prog4_b: |-
-          ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
-
-          Try using the `repeat` block for shorter code.
-          <xml>  <block type="controls_repeat_simplified">
-          <title name="TIMES">3</title>
-          </block>
-          </xml>
+        courseB_starWars_prog4_b: ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
       courseB_starWars_prog4_2018_authored_hint:
         courseB_starWars_prog4_a: Build one piece of code at a time. Run it to figure
           out where to go from there.
-        courseB_starWars_prog4_b: |-
-          ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
-
-          Try using the `repeat` block for shorter code.
-          <xml>  <block type="controls_repeat_simplified">
-          <title name="TIMES">3</title>
-          </block>
-          </xml>
+        courseB_starWars_prog4_b: ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_a: รูปแบบดูเหมือนปริศนาที่แล้วไหม
         courseB_starWars_prog5_b: Unlike some puzzle types, BB-8 doesn't need to know
@@ -8115,25 +8098,11 @@ th:
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog6_authored_hint:
         courseB_starWars_prog6_a: Try using the `repeat` block for shorter code.
-        courseB_starWars_prog6_b: |-
-          ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
-
-          Try using the `repeat` block for shorter code.
-          <xml>  <block type="controls_repeat_simplified">
-          <title name="TIMES">3</title>
-          </block>
-          </xml>
+        courseB_starWars_prog6_b: ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
       courseB_starWars_prog6_2018_authored_hint:
         courseB_starWars_prog6_a: This pattern is just a stair step with two moves
           per direction!
-        courseB_starWars_prog6_b: |-
-          ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
-
-          Try using the `repeat` block for shorter code.
-          <xml>  <block type="controls_repeat_simplified">
-          <title name="TIMES">3</title>
-          </block>
-          </xml>
+        courseB_starWars_prog6_b: ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
       courseB_starWars_prog7_authored_hint:
         courseB_starWars_prog7_a: รูปแบบดูเหมือนปริศนาที่แล้วไหม
         courseB_starWars_prog7_b: Unlike some puzzle types, BB-8 doesn't need to know
@@ -9172,6 +9141,8 @@ th:
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace
           already.  Don't delete them all! \n\nUse the \"Step\" button to go through
           and figure out where the code goes wrong."
+        courseC_maze_debugging5_c: You can change the direction of the turn block
+          by clicking on the dropdown.
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it
           the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
@@ -11902,8 +11873,8 @@ th:
         courseC_maze_programming6_a: มีวิธีแก้ปริศนานี้สองวิธี
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to
           turn before you move.
-        courseC_maze_programming6_c: จำไว้ว่าคุณสามารถเขียนรหัสทีละหนึ่งชิ้นแล้วกด
-          " เริ่ม" เพื่อดูว่าคุณจะทำอะไรต่อไป
+        courseC_maze_programming6_c: จำไว้ว่าคุณสามารถเขียนโค้ดทีละหนึ่งชิ้นแล้วกด
+          " เริ่ม" เพื่อดูว่าคุณควรจะทำอะไรต่อไป
       courseD_maze_ramp6a_authored_hint:
         courseC_maze_programming6a_a: Use a `repeat` loop to get this bird moving!
       courseD_maze_ramp7_authored_hint:
@@ -12247,19 +12218,19 @@ th:
           back to the left side of the figure to draw another line of squares going
           right. Which do you prefer?
       courseE_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30**
-          and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80**
-          and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: 'รูปครึ่ง-หกเหลี่ยมมี ** ความยาว 30 **
+          และหันขวาไป ** 60 องศา ***  '
+        courseE_artist_concept_challenge1_b: 'รูป 2/3 สามเหลี่ยม มี ** ความยาว 80
+          ** และหันขวาไป ** 120 องศา ** '
         courseE_artist_concept_challenge1_c: |-
           This is the design you want to repeat to make the full shape:
 
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge1_2018_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30**
-          and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80**
-          and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: 'รูปครึ่ง-หกเหลี่ยมมี ** ความยาว 30 **
+          และหันขวาไป ** 60 องศา ***  '
+        courseE_artist_concept_challenge1_b: 'รูป 2/3 สามเหลี่ยม มี ** ความยาว 80
+          ** และหันขวาไป ** 120 องศา ** '
         courseE_artist_concept_challenge1_c: |-
           This is the design you want to repeat to make the full shape:
 
@@ -12282,7 +12253,7 @@ th:
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: {}
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
+        courseE_artist_functions1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน 100 พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
           175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
         courseE_artist_functions1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
@@ -12306,7 +12277,7 @@ th:
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions1_2018_authored_hint:
-        courseE_artist_functions1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
+        courseE_artist_functions1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน 100 พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
           175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
         courseE_artist_functions1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
@@ -13018,7 +12989,11 @@ th:
           Can you drag these blocks into the function?
         courseE_farmer_functions3c_b: Don't forget to call your function in the main
           program wherever you removed blocks.
-      courseE_farmer_functions3c1_2018_authored_hint: {}
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path`
+          function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around
+          the corners?
       courseE_farmer_functions3c_2018_authored_hint: {}
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop
@@ -13071,7 +13046,11 @@ th:
           is lettuce in a space?
         courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
       courseE_farmer_functions7_authored_hint: {}
-      courseE_farmer_functions7a1_2018_authored_hint: {}
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions`
+          section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when
+          you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You don't need a function here, but you can
           make one if it is helpful to you!
@@ -13089,7 +13068,11 @@ th:
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: {}
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same
+          function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time,
+          you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Try running the code given to see what it does.
           What do you need after this?
@@ -13105,7 +13088,14 @@ th:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: {}
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made
+          in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle
+          to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move
+          forward` to get to the last crop of lettuce before you can call your function
+          again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements
           to move along the path?
@@ -18010,7 +18000,7 @@ th:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
+        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน 100 พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
           175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
         2-3_Artist_Functions_1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
       grade4_artist_functions2_authored_hint:
@@ -18099,10 +18089,10 @@ th:
           loops.  Just jump the artist 100 pixels forward for each top window, and
           150 pixels down to get the bottom windows.
       grade4_artist_nestedLoops_challenge2_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right
-          by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right
-          by **120 degrees**. '
+        Course_4_Artist_11_a: 'รูปครึ่ง-หกเหลี่ยมมี ** ความยาว 30 ** และหันขวาไป **
+          60 องศา ***  '
+        Course_4_Artist_11_b: 'รูป 2/3 สามเหลี่ยม มี ** ความยาว 80 ** และหันขวาไป
+          ** 120 องศา ** '
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           This design will loop 10 times over 360 degrees.
@@ -18484,7 +18474,7 @@ th:
         gradek_adventurer_loops3_a: หากต้องการเปลี่ยนระยะทางที่นักผจญภัยต้องเดิน ก็ให้เปลี่ยนจำนวนครั้งที่ต้องลูป
         gradek_adventurer_loops3_b: อย่าลืมว่านักผจญภัยต้องเดินลงไปข้างล่างและเก็บสมบัติหลังจากที่เธอเสร็จสิ้นการลูปแล้ว
       gradek_adventurer_loops4_authored_hint:
-        gradek_adventurer_loops4_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษแผ่นหนึ่งเพื่อที่จะคิดออกว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบที่มีอยู่
+        gradek_adventurer_loops4_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด
       gradek_adventurer_loops4a_authored_hint:
         gradek_adventurer_loops4a_a: Can't figure out what's wrong? Try running the
           code to see what happens.
@@ -18494,7 +18484,7 @@ th:
         gradek_adventurer_loops6_a: If you are having trouble figuring this puzzle
           out, try writing the moves down on a piece of paper and look for a pattern.
       gradek_adventurer_loops7_challenge_authored_hint:
-        gradek_adventurer_loops7_challenge_a: รู้สึกว่าโค้ดยาวจริงๆ ใช่หรือไม่? ลองวางลูปสองลูปซ้อนกันจะทำให้โค้ดสั้นลงมาก!
+        gradek_adventurer_loops7_challenge_a: รู้สึกว่าโค้ดยาวจริงๆ ใช่หรือไม่? ลองใช้ลูปสองลูปซ้อนกันจะทำให้โค้ดสั้นลงมาก!
       gradek_adventurer_loops8_authored_hint:
         gradek_adventurer_loops8_a: If you can't figure out where to put the loops,
           try writing the code out step-by-step and look for a pattern.
@@ -18512,8 +18502,8 @@ th:
       gradek_artist_loops4_authored_hint:
         artistLoopsK3_a: ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับการทำซ้ำบล็อกเพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!
       gradek_artist_loops5_authored_hint:
-        gradek_artist_loops5_a: Can't figure out how to make the hill?  Try playing
-          with the blocks a bit to see what each one draws.
+        gradek_artist_loops5_a: คิดไม่ออกวิธีที่จะวาดเนินเขา?  ลองเล่นกับบล็อกดูสักนิด
+          เพื่อดูว่าแต่ละบล็อกวาดอย่างไร
       gradek_artist_loops6_authored_hint:
         gradek_artist_loops6_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
       gradek_artist_loops7_authored_hint:
@@ -18525,8 +18515,8 @@ th:
           มันบอกอะไรแก่คุณ?
 
       gradek_artist_loops8_authored_hint:
-        gradek_artist_loops8_a: 'You don''t have to delete everything!  Some of the
-          code is good. Use it to build the rest of the stairs. '
+        gradek_artist_loops8_a: 'คุณไม่จำเป็นต้องลบทุกอย่าง!  บางส่วนของโค้ดใช้งานได้ดี
+          คุณควรใช้มันเพื่อสร้างส่วนที่เหลือของบันได '
       gradek_artist_loops9_authored_hint:
         artistLoopsKA_a: Use the jump block to move forward without drawing a line.
       gradek_artist_loopsA_authored_hint:

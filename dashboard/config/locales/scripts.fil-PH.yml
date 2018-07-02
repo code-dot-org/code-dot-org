@@ -7482,21 +7482,25 @@ fil:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: |-
-                Kapag ang mga estudyante ay nakakatagpo ng mga balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang proyekto, napakadali lang silang mainis at titigil. Ang araling ito ay magpapakilala sa mga estudyante sa ideya na ang pagkainip ay maaaring maging isang importanteng bahagi ng pag-aaral. Dito, ang pagkainis ay pinapakita bilang isang hakbang sa malikhaing proseso, sa halip na isang palatandaan ng pagkabigo.\r
-                \r
-                Ang araling ito ay maaaring gawin sa higit sa isa o dalawang sesyon ng klase. Kung may marami pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto ng gawain na Marble Run.
+              description_teacher: "Kapag ang mga estudyante ay nakakatagpo ng mga
+                balikid habang nagsasagot ng mga katanungan o nagtatrabaho sa isang
+                proyekto, napakadali lang silang mainis at titigil. Ang araling ito
+                ay magpapakilala sa mga estudyante sa ideya na ang pagkainip ay maaaring
+                maging isang importanteng bahagi ng pag-aaral. Dito, ang pagkainis
+                ay pinapakita bilang isang hakbang sa malikhaing proseso, sa halip
+                na isang palatandaan ng pagkabigo.\r\n\r\nAng araling ito ay maaaring
+                gawin sa higit sa isa o dalawang sesyon ng klase. Kung may marami
+                pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto
+                ng gawain na Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
               description_student: ''
-              description_teacher: 'Sa araling ito, ang mga estudyante ay mag-uugnay
+              description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay
                 sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay
                 na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto.
                 Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin
                 ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon
-                at ang kabaliktaran nito.\r
-
-'
+                at ang kabaliktaran nito.\r\n"
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''
@@ -11124,7 +11128,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Castles with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -13986,7 +13990,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Castles with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':

@@ -2150,14 +2150,9 @@ zh-CN:
             Sharing Student Work:
               name: 共享学生作品
         csp1-2017:
-          title: CSP Unit 1 - The Internet
-          description: This unit explores the technical challenges and questions that
-            arise from the need to represent digital information in computers and
-            transfer it between people and computational devices. The unit then explores
-            the structure and design of the internet and the implications of those
-            design decisions.
-          description_short: Explore the challenges about representing information
-            as bits and how to get those bits from one place to another.
+          title: 计算机科学原理单元 1 ：互联网
+          description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
+          description_short: 探讨将信息表示为比特以及传输比特的挑战。
           description_audience: ''
           stages:
             Binary Numbers:
@@ -2262,7 +2257,8 @@ zh-CN:
               name: 课后问卷
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
-          description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\r\n\r\n这个课程最后更新于2017年10月30日。请于forum.code.org/c/csp/updates阅读更多的教案更新。"
+          description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\r\n\r\n这个课程最后更新于2017年10月30日。访问
+            forum.code.org/c/csp/updates 获取更多的教案更新。"
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           description_audience: ''
           stages:
@@ -2308,12 +2304,7 @@ zh-CN:
               name: 课后问卷
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions
-            related to public policy, law, ethics and societal impact. The goals of
-            this unit are to develop a well-rounded and balanced view about data in
-            the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.\r\n\r\nThis unit was
-            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: "我们生活的世界有丰富的数据，引入了许多关于公共政策、法律、道德和社会影响的复杂问题。本单元的目标是开发一个全面而平衡的方法看待数据，包括正面和负面的影响，以及理解加密工作的基础原理和原因。\r\n\r\n本单元最后更新于2017年11月。访问forum.code.org/c/csp/updates获取更多的教案更新。"
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -3367,12 +3358,7 @@ zh-CN:
               name: 气泡测试阶段
         csd3-2017:
           title: CSD单元 3 - 动画和游戏
-          description: " In Unit 3, you’ll build on your coding experience as you
-            program animations, interactive art, and games in Game Lab. The unit starts
-            off with simple shapes and builds up to more sophisticated sprite-based
-            games, using the same programming concepts and the design process computer
-            scientists use daily. In the final project, you’ll develop a personalized,
-            interactive program."
+          description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
           description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
           description_audience: ''
           stages:
@@ -3663,22 +3649,16 @@ zh-CN:
             'Anonymous student survey: Taking the AP exam':
               name: '匿名学生调查: 参加 AP 考试'
         csd1-2017:
-          title: CSD Unit 1 - Problem Solving
+          title: 计算机科学发现单元 1 - 解决问题
           description_short: "  了解人类如何使用计算机来解决问题。"
-          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
-            to the field of computer science, as framed within the broader pursuit
-            of solving problems. You’ll practice using a problem solving process to
-            address a series of puzzles, challenges, and real world scenarios. Next,
-            you’ll learn how computers input, output, store, and process information
-            to help humans solve problems.  The unit concludes with a project in which
-            you design an application that helps solve a problem of your choosing.\r\n"
+          description: " \r\n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
               name: 解决问题入门
               description_student: '该班分组设计铝箔船，让它能承载尽量多的便士。 在课程结束时, 小组会反思他们在活动中的经验,
                 并与他们在余下的过程中所做的解决问题的类型建立联系。 '
-              description_teacher: '在这节课中, 学生们小组合作设计铝箔船，让它能承载尽量多的便士。小组在他们的船上有两轮的工作，目标是设法保留比第1轮更多的便士。活动的结构预示着问题解决过程中的不同步骤，在下一课中将向学生更详细地介绍。在课程结束时,
+              description_teacher: '在这节课中, 学生们小组合作设计铝箔船，让它能承载尽量多的硬币。小组在他们的船上有两轮工作，目标是设法保留比第1轮更多的硬币。活动的结构预示着问题解决过程中的不同步骤，在下一课中将向学生更详细地介绍。在课程结束时,
                 学生们会反思他们在活动中的经验, 并与他们将在课程剩下的时间里解决问题的类型联系起来。 '
             The Problem Solving Process:
               name: 解决问题的过程
@@ -3692,9 +3672,9 @@ zh-CN:
               description_student: '在本课中, 班级将解决问题的过程应用于三个不同的问题上: 单词搜索、生日聚会的座位安排和旅行计划。这些问题会越来越复杂,
                 并且定义不清, 以强调解决问题的过程在解决这些类型的问题时特别有用。'
               description_teacher: "在本课中, 学生将解决问题的过程应用到三个不同的问题，以便更好地理解每个步骤的价值。他们将解决单词搜索，生日聚会的座位安排,
-                和计划旅行的问题。这些问题会越来越复杂, 并且定义不清，以强调解决问题流程在解决问题时特别有用。这一课结束时，学生们将反思他们在解决问题流程中的经验。他们将为每一个步骤做出解释,
+                和计划旅行的问题。这些问题会越来越复杂, 并且定义不清，从而强调解决问题流程在解决问题时特别有用。这一课结束时，学生们将反思他们在解决问题流程中的经验。他们将为每一个步骤做出解释,
                 并将集思广益地提出问题或战略, 可以帮助他们更好地定义开放式的问题, 因为这往往是最关键的一步。 \n\n此课程可能需要两个课时或更长时间才能完成。前两个问题可能适用于一个单一课时,
-                但第三个问题将需要移到第二天。"
+                但第三个问题需要在第二天进行。"
             What is a Computer?:
               name: 什么是电脑？
               description_student: 在本课中，该班对计算机进行了初步定义。经过集思广益之后对计算机的可能定义，班级分组工作在海报上将图片分类为
@@ -5793,20 +5773,15 @@ zh-CN:
               description_student: ''
               description_teacher: 这一个会引导学生完成调试的步骤。学生会学习到这个咒语：“发生什么了？应该发生什么？这告诉了你什么？”
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 坚持：史蒂夫和大项目
               description_student: ''
-              description_teacher: |-
-                当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\r
-                \r
-                这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。
+              description_teacher: "当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\r\n\r\n这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。"
             'Real-life Algorithms: Plant a Seed':
               name: 真实算法： 播种一颗种子
               description_student: ''
-              description_teacher: '在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r
-
-'
+              description_teacher: "在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r\n"
             Learn to Drag and Drop:
-              name: Sequencing with Drag and Drop
+              name: 拖拽和序列
               description_student: ''
               description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             'Programming: Happy Maps':
@@ -5818,7 +5793,7 @@ zh-CN:
               description_student: ''
               description_teacher: 在这一系列的在线难题中，学生们会建立对算法的理解，调试程序，和一般的计算机素养。来自愤怒的小鸟游戏的角色，会让学生们开发序列算法来让小鸟在不碰到墙或TNT炸药的情况下抓住猪。调试难题也会混合在在一些关卡中，来增加解决问题和批判性性思维的练习。
             Going Places Safely:
-              name: 'Digital Citizenship: Going Places Safely'
+              name: 数字公民：去安全的地方
               description_student: ''
               description_teacher: 通过与[r 常识媒体] 合作，本课程帮助学生学习到许多网站会要求 提供私人信息，并讨论如何负责任的处理这类请求。学生们也会发现，它们可以去网上令人兴奋的地方，但也需要遵循一定的规则来保证安全。
             'Loops: Happy Loops':
@@ -5851,13 +5826,13 @@ zh-CN:
             'Debugging: Unspotted Bugs':
               name: '调试: 没有错误'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 坚持：史蒂夫和大项目
             'Real-life Algorithms: Plant a Seed':
               name: 真实算法： 播种一颗种子
             Learn to Drag and Drop:
-              name: Sequencing with Drag and Drop
+              name: 拖拽和序列
             Your Digital Footprint:
-              name: 'Digital Citizenship: My Digital Footprint'
+              name: 数字公民：我的数字足迹
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
             Programming in Maze:
@@ -5873,7 +5848,7 @@ zh-CN:
             Events in Play Lab:
               name: 游戏实验室中的事件
             More Programming in Maze:
-              name: More Programming in Maze
+              name: 迷宫里的更多编程
             Programming with Rey and BB-8:
               name: 与雷伊，BB-8一起编程
           title: 课程 B
@@ -5884,7 +5859,7 @@ zh-CN:
         coursec-2017:
           stages:
             Building a Foundation:
-              name: 'Persistence: Building a Foundation'
+              name: 坚持：打基础
             Programming in Maze:
               name: 迷宫编程
             Debugging in Maze:
@@ -5908,9 +5883,9 @@ zh-CN:
             Events in Play Lab:
               name: 游戏实验室中的事件
             Screen Out the Mean:
-              name: 'Digital Citizenship: Screen Out the Mean'
+              name: 数字公民：选出平均值
             Binary Bracelets:
-              name: 'Beyond Programming: Binary Bracelets'
+              name: 超越编程：二进制手镯
             Loops in Artist:
               name: 艺术家里的循环
             Loops with Rey and BB-8:
@@ -5924,185 +5899,83 @@ zh-CN:
           stages:
             Introduction:
               name: 在线拼图简介
-              description_student: This lesson will give you practice in the skills
-                you will need for this course.
-              description_teacher: 'In this set of puzzles, students will begin with
-                an introduction (or review depending on the experience of your class)
-                of Code.org''s online workspace. There will be videos pointing out
-                the basic functionality of the workspace including the `Run`, `Reset`,
-                and `Step` buttons. Also discussed in these videos: dragging Blockly
-                blocks, deleting Blockly blocks, and connecting Blockly blocks. Next,
-                students will practice their _sequencing_ and _debugging_ skills in
-                maze. From there, students will see new types of puzzles like Collector,
-                Artist, and Harvester when they learn the very basics of _loops_.'
+              description_student: 这堂课会让你练习在这个课程中所需要的技巧。
+              description_teacher: 在这组关卡中，学生们先从code.org的在线工作区的简介开始（或根据班级的经验来复习）。有视频来介绍工作区的基本功能，如`运行`，`重置`，和`步进`按钮。视频中也会探讨：拖拽模块，删除模块，和连接模块。接下来，学生们会在关卡中练习他们的_序列_和_调试_能力。在那里，学生们学习_循环_的非常基础的知识时，他们会看见新的关卡类型，比如：收集器，艺术家和收割者。
             'Algorithms: Graph Paper Programming':
-              name: 'Programming: Graph Paper Programming'
-              description_student: In this lesson, you will program your friend to
-                draw pictures!
-              description_teacher: By "programming" one another to draw pictures,
-                students will begin to understand what coding is really about. The
-                class will begin by having students instruct each other to color squares
-                on graph paper in an effort to reproduce an existing picture. If there’s
-                time, the lesson can conclude with images that the students create
-                themselves.
+              name: 编程：图纸编程
+              description_student: 在这一课中，你会给你的朋友编程来画画！
+              description_teacher: '"编程"就像是画画，学生开始去了解什么是代码的真正含义。班里的学生在相互的指引下，能根据已有的一张图，在图表上涂上颜色进行模仿。如果有更多的时间，可允许学生创作他们自己的作品。'
             Events in Bounce:
               name: 反弹事件
-              description_student: Ever wish you could play video games in school?
-                In this lesson, you will get to make your own!
-              description_teacher: In this online activity, students will learn what
-                events are, and how computers use them in programs like video games.
-                Students will work through puzzles making the program react to events
-                (like arrow buttons being pressed.) At the end of the puzzle, students
-                will have the opportunity to customize their game with different speeds
-                and sounds.
+              description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
+              description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
             Nested Loops:
               name: 循环嵌套
-              description_student: Loops inside loops inside loops. What does this
-                mean? This lesson will teach you what happens when you place a loop
-                inside another loop.
-              description_teacher: In this online activity, students will have the
-                opportunity to push their understanding of loops to a whole new level.
-                Playing with the Bee and Plants vs Zombies, students will learn how
-                to program a loop to be inside of another loop. They will also be
-                encouraged to figure out how little changes in either loop will affect
-                their program when they click `Run`.
+              description_student: 在循环里的循环里循环。这是什么意思？这节课会教你什么时候将一个循环放到另一个循环里。
+              description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
             Nested Loops in Artist:
               name: 艺术家中的嵌套循环
-              description_student: Here you will be using nested loops to make cool
-                drawings to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops,
-                they can create so many beautiful things.  This lesson will take students
-                through a series of exercises to help them create their own portfolio-ready
-                images.
+              description_student: 在这里，你要使用嵌套循环来制作一些很酷的图画，来给你的家人和朋友看看。
+              description_teacher: 现在学生么嗯知道如何分层循环了，他们能创建一些如此美丽的东西了。这堂课会让学生通过一系列的联系来帮助他们创建自己的图像。
             'Algorithms: Relay Programming':
-              name: 'Debugging: Relay Programming'
-              description_student: Remember at the beginning of the course when you
-                made drawings with code? In this lesson, you will be working with
-                a team to do something very similar!
-              description_teacher: This activity will begin with a short review of
-                "Graph Paper Programming," then will quickly move to a race against
-                the clock, as students break into teams and work together to write
-                a program one instruction at a time.
+              name: 调试：接力编程
+              description_student: 记住，在课程开始时，你什么时候用代码画过画？在这堂课中，你会和团队一起合作，做出一些非常相似的东西！
+              description_teacher: 这次活动会从对"图纸编程"的简短回顾开始，然后会很快进入钟表竞赛。学生们会被分队，并一起编一个一次只能执行一条指令的程序。
             Debugging in Bee:
               name: 蜜蜂式调试
             While Loops in Farmer:
               name: 当在农民循环中
-              description_student: 'Loops are so useful in coding. This lesson will
-                teach you about a new kind of loop: while loops!'
-              description_teacher: "By the time students reach this lesson, they should
-                already have plenty of practice using `repeat` loops, so now it's
-                time to mix things up. \n\n_While loops_ are loops that continue to
-                repeat commands while a condition is met. While loops are used when
-                the programmer doesn't know the exact number of times commands need
-                to be repeated, but does know what condition needs to be true in order
-                for the loop to continue repeating. For example, students will be
-                working to fill holes and dig dirt in Farmer. They will not know the
-                size of the holes or the height of the mountains of dirt, but the
-                students will know they need to keep filling the holes and digging
-                the dirt as long as the ground is not flat."
+              description_student: 循环在代码中非常有用。这一课会教你一种新的循环：当循环！
+              description_teacher: |-
+                当学生们学到这一课以后，他们应该已经大量的练习了使用`重复`循环了，所以现在可以组合它们了。
+
+                _当循环_是一种当条件满足时重复执行命令的循环。当循环在程序员不知道要重复的具体次数，但是知道某个条件会真时，就应该执行程序。例如，学生们会在农场中找到洞和土堆。它们不知道洞的深度，也不知道土堆的高度，但学生们知道如果地面不是平的，他们就应该不停的填洞或挖土。
             Conditionals with Cards:
-              name: 'If/Else: Conditionals with Cards'
-              description_student: It's time to play a game where you earn points
-                only under certain conditions!
-              description_teacher: "This lesson demonstrates how conditionals can
-                be used to tailor a program to specific information. We don’t always
-                have all of the information we need when writing a program. Sometimes
-                you will want to do something different in one situation than in another,
-                even if you don't know what situation will be true when your code
-                runs. That is where conditionals come in. Conditionals allow a computer
-                to make a decision, based on the information that is true any time
-                your code is run.\n\n"
+              name: 如果/否则：用卡片的条件语句
+              description_student: 是时候玩游戏了，在满足某种条件下才能得分。
+              description_teacher: "这堂课演示了如何用条件来为特定的信息定制一个程序。当我们写程序时，不会每次都有所有的信息。有时，你需要在某种情况下做出一些不同的事情，甚至当代码运行时，你不知道什么情况是真。这时，就需要用条件了。条件允许计算机基于代码运行时的条件来做出决定。\n\n"
             Conditionals in Bee:
               name: 蜜蜂里的条件
-              description_student: 'Now that you understand conditionals, it''s time
-                to program Bee to use them when collecting honey and nectar. '
-              description_teacher: Up until this point students have been writing
-                code that executes exactly the same way each time it is run - reliable,
-                but not very flexible. In this lesson, your class will begin to code
-                with conditionals, allowing them to write code that functions differently
-                depending on the specific conditions the program encounters.
+              description_student: '现在，你理解条件了。是时候来给蜜蜂编程，让他们何时收集花蜜并酿蜂蜜了。 '
+              description_teacher: 到这时，学什么一直在写代码，来让代码在每次执行时都是完全一样的过程 - 虽然很可靠，但是不够灵活。这堂课中，班级会学习用条件来变成，这允许他们写出根据的程序，能根据遇到的不同的情况有不同的功能。
             Conditionals & Loops in Maze:
               name: 迷宫里的条件和循环
-              description_student: You can do some amazing things when you use conditionals
-                and loops together!
-              description_teacher: 'In this lesson, students will be pairing together
-                two key concepts: loops and conditionals. This set of puzzles bridges
-                the gaps in understanding that occur when working on puzzles that
-                use multiple kinds of blocks. By bringing two ideas together, students
-                will create more complex code that shows both impressive creativity
-                and critical thinking!'
+              description_student: 当你把条件和循环一起使用时，你能做出一些令人惊奇的事情！
+              description_teacher: 这堂课程，学生们会同时学习两个关键概念：循环和条件。这个关卡会在使用多种类型的模块后，帮助理解这些概念。通过将这两个概念放到一起，学生们能够床操更复杂的代码来展示创造力和批判性思维。
             Conditionals & Loops in Farmer:
               name: 收割者里的条件和循环
-              description_student: It's not always clear when to use each conditional.  This
-                lesson will help you get practice deciding what to do.
-              description_teacher: Students will practice `while` loops, `until` loops,
-                and `if / else` statements. All of these blocks use conditionals.
-                By practicing all three, students will learn to write complex and
-                flexible code.
+              description_student: 当使用条件时，不是每次都会很清楚。这一课会帮助你练习决定应该做什么。
+              description_teacher: 学生们会练习`当`循环，`直到`循环和`如果/否则`语句。所有这些模块都用了条件语句。通过练习这三种语句，学生们能学会写复杂而灵活的代码。
             Digital Citizenship:
-              name: 'Digital Citizenship: Practicing Digital Citizenship'
-              description_student: Some information is not safe to share online. This
-                lesson will help you learn the difference between safe and private
-                information.
-              description_teacher: |-
-                In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
-
-                Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.
+              name: 数字公民：实践数字公民
+              description_student: 有些信息不能安全的共享在网络上。这一课会帮助你学习在安全和隐私信息间的不同。
+              description_teacher: 在常识教育的合作中，这一课会帮助学生批判性的思考有些网站请求或者强制要求的用户信息。学生们能够学到隐私信息和个人信息间的不同，区分在线上分享的信息什么是安全的，什么不是。
             Build a Play Lab Game:
               name: 建立一个剧本实验室游戏
-              description_student: This lesson will guide you through making your
-                very own video game.
-              description_teacher: In this online activity, students will have the
-                opportunity to learn how to use events in Play Lab and to apply all
-                of the coding skills they've learned to create an animated game. It's
-                time to get creative and make a game in Play Lab!
+              description_student: 这堂课会引导你制作自己的电脑游戏。
+              description_teacher: 在这个在线活动中，学生们有机会在剧本实验室中学习如何使用事件，并用已经学会的编程技巧来创建一个动画游戏。是时候在剧本实验室中表达创意，创造一个游戏了！
             'Unplugged: Binary':
-              name: 'Beyond Programming: Binary Images'
-              description_student: 'Learn how computers store pictures using simple
-                ideas like on and off. '
-              description_teacher: Though many people think of binary as strictly
-                zeros and ones, students will be introduced to the idea that information
-                can be represented in a variety of binary options. This lesson takes
-                that concept one step further as it illustrates how a computer can
-                store even more complex information (such as images and colors) in
-                binary, as well.
+              name: 超越编程：二进制图片
+              description_student: '学习计算机是如何用简单的开和关来存储图片的。 '
+              description_teacher: 虽然很多人认为作为二进制就是严格的 0 和 1，学生会学习信息表达成各种二进制的概念。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息
+                (如图像和颜色)。
             Artist Binary:
-              name: Binary in Artist
-              description_student: Direct your own artist to create a binary image
-                using only commands to turn pixels on and off.
-              description_teacher: Binary is extremely important in the world of computers.
-                The majority of computers today store all sorts of information in
-                binary form. This lesson helps demonstrate how it is possible to take
-                something from real life and translate it into a series of ons and
-                offs. Students will build binary images in Artist by translating 0s
-                and 1s to offs and ons (or blacks and whites).
+              name: 二进制和艺术家
+              description_student: 指挥你的小艺术家来只用开关像素的命令来创造一幅二进制的图片。
+              description_teacher: 二进制在计算机世界非常的重要。今天的绝大多数计算机将所有信息都存为二进制的形式。这堂课帮助展示如何将真实生活中的事物转换为一系列的开和关。学生们会通过将0和1转换为关和开（或者黑和白）来创建二进制图像。
             Nested Loops Project in Artist:
               name: 冰雪奇缘里的嵌套循环
-              description_student: More nested loops! This time, you get to make some
-                AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist
-                in today's set of puzzles. By continuing to practice nested loops
-                with new goals, students will see more uses of loops in general. This
-                set of puzzles also offers a lot more potential for creativity with
-                an opportunity for students to create their own design at the end
-                of the stage.
+              description_student: 更多的嵌套循环！这次，你能用嵌套循环画出更令人惊奇的图画！
+              description_teacher: 学生们会在今天的关卡中用小艺术家做出错综复杂的设计。通过继续在新的目标下练习嵌套循环，学生们能够明白循环的更多用法。这一组关卡会提供很多潜在的创意，给学生们机会在最后阶段能够创建出自己的设计。
             Debugging in Collector:
               name: 在收集器中调试
-              description_student: Have you ever run into problems while coding? In
-                this lesson, you will learn about the secrets of debugging. Debugging
-                is the process of finding and fixing problems in your code.
-              description_teacher: In this online activity, students will practice
-                debugging in the "collector" environment. Students will get to practice
-                reading and editing code to fix puzzles with simple algorithms, loops
-                and nested loops.
+              description_student: 你曾经在编码时遇到困难吗？这堂课中，你会学习调试的秘密。调试是找到并修复你的代码问题的过程。
+              description_teacher: 在这堂在线活动中，学生们会在这个“收集器”环境中练习调试。学生们能练习阅读并编辑代码来修复关卡中的简单算法、循环和嵌套循环。
           title: 课程 D
           assignment_family_title: 课程 D
-          description_audience: 'Ages: 7-11'
+          description_audience: 年龄：7-11
           description_short: 快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。
-          description: Learn new coding concepts including algorithms, nested loops,
-            while loops, conditionals, and events. Get an introduction to digital
-            citizenship before   creating your very own game or story that you can
-            share.
+          description: 学习新的代码概念，包括算法、嵌套循环、当循环、条件和事件。在创建你的能够共享的游戏和故事前，了解数字公民的介绍。
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
@@ -6151,17 +6024,17 @@ zh-CN:
             Revise Your Project:
               name: 修改您的项目
             Presentation Your Project:
-              name: Presentation Your Project
+              name: 演示你的项目
             'Algorithms: Dice Race':
               name: '算法: 骰子竞赛'
               description_student: 在这堂课中，学习如何从计算机的角度来描述一个游戏。
               description_teacher: 在这堂课中，学生们将会将算法的概念通过骰子游戏来带到真实生活的活动中。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。
             Conditionals:
-              name: Conditionals in Farmer
+              name: 农夫和条件
               description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
               description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
             Private and Personal Information:
-              name: 'Digital Citizenship: Private and Personal Information'
+              name: 数字公民：隐私和个人信息
               description_student: 互联网非常有趣也令人激动，但是保证安全也非常重要。这堂课教会你在能安全共享的信息和隐私信息间的不同。
               description_teacher: |-
                 由常识教育开发，这堂课关于什么信息能够安全的在线共享，但什么不能共享。
@@ -6185,13 +6058,8 @@ zh-CN:
               description_teacher: 在在线函数的第二轮练习中，学生们会通过复杂的路径，收集大量的花蜜，酿出大量的蜂蜜。
             Functions in Farmer:
               name: 农夫中的函数
-              description_student: Functions will save you lots of work as you help
-                the farmer with her harvest!
-              description_teacher: Students have practiced creating impressive designs
-                in Artist and navigating mazes in Bee, but today they will use functions
-                to harvest crops in Farmer. This lesson will push students to use
-                functions in the new ways by combining them with `while` loops and
-                `if / else` statements.
+              description_student: 当你帮助农夫收获时，函数会节约你的大量工作。
+              description_teacher: 学生们已经练习了在小艺术家中创建令人难忘的设计，也在蜜蜂中通过了各种迷宫，但今天，我们要用函数在农场中收获作物。这堂课会鼓励学生用新的方法来使用函数，即将其与`当`循环和`如果/否则`语句混合起来。
             Determine the Concept:
               name: 确定概念
               description_student: |-
@@ -6207,11 +6075,11 @@ zh-CN:
               description_student: 准备好展示！是时候把你完成的项目向伙伴们展示了。
               description_teacher: 通过这四堂课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。最终，学生们将能向伙伴们展示他们的最终作品，或者给他们的亲友共享一个链接。这四个阶段可以在第一个阶段的项目过程[这里](https://curriculum.code.org/csf/coursee/12/)找到。
             Internet:
-              name: 'Beyond Programming: The Internet'
+              name: 超越编程：互联网
               description_student: 有没有好奇过信息是如何在互联网上传递的？没什么神奇的！这堂课会教你互联网的基本工作。
               description_teacher: 虽然很多人天天都在使用互联网，但没有多少人知道它是如何工作的。在这堂课中，学生们会假装为互联网，会学会连接，URL，IP地址和域名解析服务。
             Crowdsourcing:
-              name: 'Beyond Programming: Crowdsourcing'
+              name: 超越编程：众包
               description_student: 这堂课会教你众包的概念，这是通过团队来完成一个项目的过程。
               description_teacher: 在计算机科学中，我们面对一些很大的，令人气馁的问题。这些挑战像是找到最大的质数，或给DNS测序，这些基本上不可能由人来完成。增加一些来自其它人的力量会让这些任务可以被管理。这堂课会给你的学生展示团队合作如何在计算机科学的工业中有帮助的。
             'Programming: My Robotic Friends':
@@ -6252,11 +6120,11 @@ zh-CN:
               description_student: 这节课会给你一个大致的介绍，让你知道你会在这门课程中学到的一些令人惊奇的东西。
               description_teacher: '在这节课中，学生们会被介绍到序列、循环和嵌套循环，从而准备这门课程后面部分的复杂概念。这节"提升"课程等于你的班级中专家和新手之间的水平。 '
             The Power of Words:
-              name: 'Digital Citizenship: The Power of Words'
+              name: 数字公民：文字的力量
               description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
               description_teacher: "学生们会考虑到，当他们沉浸在喜欢的网站上时，可能会由别的孩子的消息，让他们感到生气、受伤害、悲伤，或者害怕。他们会找到办法来处理网络霸凌，如何回应令人不安的在线语言。\n\n学生们讨论所有他们用来沟通的技术，并且探索面对面和在线沟通的相似和不同点。学生们然后会头脑风暴来回应网络霸凌。 "
             Ice Age Play Lab:
-              name: Events in Ice Age
+              name: 冰河时代与事件
               description_student: 想想你喜欢的电子游戏。有没有好奇过它是怎么做出来的？在这些关卡中，你会开发一个自己的冰川时代电子游戏！
               description_teacher: 这节课中，学生们会被指导通过一个冰河世纪故事中角色的故事。学生们会用事件、循环来让角色在屏幕上移动，然后会有机会在向导关卡后创造自己的游戏或故事。
             Envelope Variables:
@@ -6289,11 +6157,8 @@ zh-CN:
               description_teacher: 函数是计算机科学世界中最宏伟的结构之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的，并且他们应该怎样在代码有些不同的时候，利用这些结构。
             Conditionals and Functions in Bee:
               name: 蜜蜂里的条件和函数
-              description_student: The bee needs your help again! Here you will be
-                using functions to get nectar and make honey!
-              description_teacher: 'This lesson teaches students how to create simple
-                functions using our sophisticated “modal” function editor, preparing
-                the way for them to incorporate parameters in future lessons. '
+              description_student: 蜜蜂又需要你的帮助了！这里你要用函数来采花蜜并酿蜂蜜！
+              description_teacher: '这堂课教会学生如何用我们复杂的"模式"函数编辑器来创建简单的函数，在未来的课中为他们准备好参数。 '
             Functions with Parameters in Artist:
               name: 在艺术家里有参数的函数
               description_student: 把你的编程的手指头放好。在这些关卡中，你会用有参数的函数和小艺术家一起画一些令人静态的图画。
@@ -6320,7 +6185,7 @@ zh-CN:
               description_student: 罗马不是一天建成的，你的项目也不是。花时间来编辑并修订你的项目来让它成为最好的项目。
               description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。现在，项目已经构建好了，学生们有机会来从同伴那里获得反馈并修改项目。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
             Presentation Your Project:
-              name: Presentation Your Project
+              name: 演示你的项目
             Present Your Project:
               name: 介绍您的项目
               description_student: 是时间展示你的工作了！这里，你会给你的同伴展示你的令人惊奇的项目。
@@ -6581,15 +6446,15 @@ zh-CN:
         express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
-              name: 'Programming Unplugged: My Robotic Friends'
+              name: 离线编程：我的机器人朋友
             Introduction:
               name: 介绍
             'Algorithms: Graph Paper Programming':
-              name: 'Programming: Graph Paper Programming'
+              name: 编程：图纸编程
             'Algorithms: Relay Programming':
-              name: 'Debugging: Relay Programming'
+              name: 调试：接力编程
             Debugging in Collector:
-              name: Introduction to Debugging
+              name: 调试简介
             'Loops: My Loopy Robotic Friends':
               name: '循环: 我糊涂的机器人朋友'
             Loops in Artist:
@@ -6653,11 +6518,11 @@ zh-CN:
             Nested Loops Project in Frozen:
               name: 冰雪奇缘里的嵌套循环
             'How it Works: The Internet':
-              name: 'Beyond Programming: The Internet'
+              name: 超越编程：互联网
             'Common Sense Education: Digital Citizenship':
-              name: 'Digital Citizenship: Practicing Digital Citizenship'
+              name: 数字公民：实践数字公民
             'Common Sense Education: Screen Out the Mean':
-              name: 'Digital Citizenship: Screen Out the Mean'
+              name: 数字公民：选出平均值
             Events in Star Wars:
               name: 星球大战里的事件
             Events with Flappy:
@@ -6690,13 +6555,13 @@ zh-CN:
             'Debugging: Unspotted Bugs':
               name: '调试: 没有错误'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 坚持：史蒂夫和大项目
             'Real-life Algorithms: Plant a Seed':
               name: 真实算法： 播种一颗种子
             Learn to Drag and Drop:
-              name: Sequencing with Drag and Drop
+              name: 拖拽和序列
             'Online Safety: Your Digital Footprint':
-              name: 'Digital Citizenship: My Digital Footprint'
+              name: 数字公民：我的数字足迹
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
             Programming in Maze:
@@ -7806,12 +7671,7 @@ zh-CN:
           title: CSD单元 3 - 动画和游戏
           description_audience: ''
           description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
-          description: " In Unit 3, you’ll build on your coding experience as you
-            program animations, interactive art, and games in Game Lab. The unit starts
-            off with simple shapes and builds up to more sophisticated sprite-based
-            games, using the same programming concepts and the design process computer
-            scientists use daily. In the final project, you’ll develop a personalized,
-            interactive program."
+          description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
         textbook:
           stages:
             Test Map Level:
@@ -7832,12 +7692,7 @@ zh-CN:
           description: ''
         csd3-2018:
           title: CSD单元 3 - 动画和游戏
-          description: " In Unit 3, you’ll build on your coding experience as you
-            program animations, interactive art, and games in Game Lab. The unit starts
-            off with simple shapes and builds up to more sophisticated sprite-based
-            games, using the same programming concepts and the design process computer
-            scientists use daily. In the final project, you’ll develop a personalized,
-            interactive program."
+          description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
           description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
           description_audience: ''
           stages:
@@ -9067,14 +8922,9 @@ zh-CN:
             Conditionals in Farmer:
               name: 农夫和条件
         csp1-2018:
-          title: CSP Unit 1 - The Internet
-          description: This unit explores the technical challenges and questions that
-            arise from the need to represent digital information in computers and
-            transfer it between people and computational devices. The unit then explores
-            the structure and design of the internet and the implications of those
-            design decisions.
-          description_short: Explore the challenges about representing information
-            as bits and how to get those bits from one place to another.
+          title: 计算机科学原理单元 1 ：互联网
+          description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
+          description_short: 探讨将信息表示为比特以及传输比特的挑战。
           description_audience: ''
           stages:
             CS Principles Pre-survey:
@@ -9148,14 +8998,8 @@ zh-CN:
             Sending Text:
               name: 发送文本
         csd1-2018:
-          title: CSD Unit 1 - Problem Solving
-          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
-            to the field of computer science, as framed within the broader pursuit
-            of solving problems. You’ll practice using a problem solving process to
-            address a series of puzzles, challenges, and real world scenarios. Next,
-            you’ll learn how computers input, output, store, and process information
-            to help humans solve problems.  The unit concludes with a project in which
-            you design an application that helps solve a problem of your choosing.\r\n"
+          title: 计算机科学发现单元 1 - 解决问题
+          description: " \r\n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\r\n"
           description_short: "  了解人类如何使用计算机来解决问题。"
           description_audience: ''
           stages:
@@ -9182,14 +9026,14 @@ zh-CN:
                 并且定义不清, 以强调解决问题的过程在解决这些类型的问题时特别有用。'
               description_teacher: "在本课中, 学生将解决问题的过程应用到三个不同的问题，以便更好地理解每个步骤的价值。他们将解决单词搜索，生日聚会的座位安排,
                 和计划旅行的问题。这些问题会越来越复杂, 并且定义不清，以强调解决问题流程在解决问题时特别有用。这一课结束时，学生们将反思他们在解决问题流程中的经验。他们将为每一个步骤做出解释,
-                并将集思广益地提出问题或战略, 可以帮助他们更好地定义开放式的问题, 因为这往往是最关键的一步。 \n\n此课程可能需要两个课时或更长时间才能完成。前两个问题可能适用于一个单一课时,
+                并将集思广益地提出问题或战略, 可以帮助他们更好地定义开放式的问题, 因为这往往是最关键的一步。 \r\n\r\n此课程可能需要两个课时或更长时间才能完成。前两个问题可能适用于一个单一课时,
                 但第三个问题将需要移到第二天。"
             What is a Computer?:
               name: 什么是电脑？
               description_student: 在本课中，该班对计算机进行了初步定义。经过集思广益之后对计算机的可能定义，班级分组工作在海报上将图片分类为
                 “是计算机” 或 “不是计算机” ，并解释他们选择一些最难归类的动机。然后老师介绍计算机的定义，允许小组根据新的定义修改他们的海报。
-              description_teacher: '在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机”
-                或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。  '
+              description_teacher: "在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机”
+                或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。\r\n"
             Input and Output:
               name: 输入和输出
               description_student: 在课堂上，学生考虑了一些计算设备来确定他们使用的输入和输出的类型。小组分配到一个计算设备, 并根据教师提供的输入和输出定义,
@@ -9202,8 +9046,8 @@ zh-CN:
               name: 正在处理中
               description_student: 这一课深入探讨了作为计算机定义一部分引入的处理概念。 结对一起工作, 把一副牌按顺序排列, 一个形式的处理信息。
                 最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
-              description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个约束很少, 用于引入一个高级的处理定义。接下来的会引入更多的约束,
-                迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法,
+              description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个活动的约束很少,
+                用于引入一个高级的处理定义。接下来的会引入更多的约束, 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法,
                 以及产生解决问题的算法的价值。
             Storage:
               name: 存储
@@ -9225,7 +9069,7 @@ zh-CN:
                 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成,
                 虽然也可以单独完成。
             Apps and Storage:
-              name: Apps and Storage
+              name: 应用程序和存储
               description_student: '本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序,
                 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 '
               description_teacher: 'This lesson reviews the input, output, storage,
@@ -9540,7 +9384,7 @@ zh-CN:
               name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
-          description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\r\n\r\n这个课程最后更新于2017年10月30日。请于forum.code.org/c/csp/updates阅读更多的教案更新。"
+          description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           description_audience: ''
           stages:
@@ -9596,8 +9440,8 @@ zh-CN:
               name: 创建带参数的函数
         csp-explore-2018:
           title: 探索 - AP表演任务准备
-          description: "这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
-            第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r\n\r\n此单元最后更新2017年11月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
+          description: '这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
+            第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。'
           description_short: 课程和资源会帮助学生们准备和完成AP探索的表演任务。
           description_audience: ''
           stages:
@@ -9615,8 +9459,8 @@ zh-CN:
               description_teacher: ''
         csp-create-2018:
           title: 创建 - AP表演任务准备
-          description: "这些课程是为了帮助你理解、准备和执行 AP 创建表演任务。 每个 \"课程\" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
-            第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r\n\r\n此单元最后更新2017年12月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。"
+          description: '这些课程是为了帮助你理解、准备和创建 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
+            第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。'
           description_short: 课程和资源会帮助学生们准备和完成创建AP表演任务。
           description_audience: ''
           stages:

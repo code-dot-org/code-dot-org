@@ -7794,7 +7794,7 @@ tr:
           title: Course B (2018)
           assignment_family_title: Kurs B
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
-          description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Yaş: 5-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -7862,9 +7862,9 @@ tr:
         coursed-2018:
           title: Yeni Kurs D Senaryosu
           assignment_family_title: Kurs D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_short: Learn about conditional statements and create your own art, story or game.
+          description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Grafikli Kağıdıyla Programlama
@@ -8225,7 +8225,7 @@ tr:
           title: Course E (2018)
           assignment_family_title: Kurs E
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
-          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
           description_audience: '8-12 yaş grubu'
           stages:
             'Programming: My Robotic Friends':
