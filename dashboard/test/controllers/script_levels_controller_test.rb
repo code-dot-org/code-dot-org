@@ -1212,9 +1212,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     authorized_teacher = create(:teacher)
-    cohort = create(:cohort)
-    cohort.teachers << authorized_teacher
-    cohort.save!
+    authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert authorized_teacher.authorized_teacher?
     sign_in authorized_teacher
 
