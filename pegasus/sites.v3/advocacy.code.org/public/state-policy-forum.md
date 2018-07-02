@@ -1,6 +1,12 @@
-![Forum Banner](https://staging-advocacy.code.org/images/forum-banner.png)
+![Forum Banner](/images/fit-970/forum-banner.png)
 
 # 2018 Code.org/CSTA State Policy Forum
+
+[solid-block-header]
+
+Join us for the 2018 Code.org/CSTA State Policy Forum
+
+[/solid-block-header]
 
 Hosted by Code.org and the Computer Science Teachers Association (CSTA), this forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. Come participate in lively discussions on current issues, hands-on workshops, flash talks, and networking opportunities.
 

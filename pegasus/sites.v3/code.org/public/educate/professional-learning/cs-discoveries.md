@@ -67,14 +67,12 @@ Maine<br>
 Maryland<br>
 Massachusetts<br>
 Montana<br>
-New York (southeastern regions)<br>
-
+North Carolina<br>
 
 [/col-33]
 
 [col-33]
 
-North Carolina<br>
 Pennsylvania (central regions)<br>
 Wisconsin<br>
 
