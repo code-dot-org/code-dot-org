@@ -8,6 +8,7 @@ import AddPasswordForm, {
   PASSWORD_TOO_SHORT,
   PASSWORDS_MUST_MATCH
 } from '@cdo/apps/lib/ui/accounts/AddPasswordForm';
+import * as utils from '@cdo/apps/utils';
 
 describe('AddPasswordForm', () => {
   let wrapper, handleSubmit;
@@ -19,6 +20,11 @@ describe('AddPasswordForm', () => {
         handleSubmit={handleSubmit}
       />
     );
+    sinon.stub(utils, 'reload');
+  });
+
+  afterEach(() => {
+    utils.reload.restore();
   });
 
   it('enables form submission if passwords have minimum length and match', () => {
