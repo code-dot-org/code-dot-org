@@ -404,6 +404,7 @@ en:
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
+    account_successfully_updated: "Account successfully updated."
   user_level:
     completed: 'Completed'
     tried: 'Tried'

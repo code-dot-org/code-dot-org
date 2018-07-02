@@ -445,7 +445,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       user.reload
-      assert_response :success
+      assert_redirected_to 'http://test.host/users/edit'
       assert_auth_option(user, auth)
     end
   end
@@ -463,7 +463,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       user.reload
-      assert_response :success
+      assert_redirected_to 'http://test.host/users/edit'
       assert_auth_option(user, auth)
     end
   end
@@ -481,7 +481,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       user.reload
-      assert_response :success
+      assert_redirected_to 'http://test.host/users/edit'
       assert_auth_option(user, auth)
     end
   end
@@ -499,7 +499,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       user.reload
-      assert_response :success
+      assert_redirected_to 'http://test.host/users/edit'
       assert_auth_option(user, auth)
     end
   end
@@ -517,7 +517,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       user.reload
-      assert_response :success
+      assert_redirected_to 'http://test.host/users/edit'
       assert_auth_option(user, auth)
     end
   end
