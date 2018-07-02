@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::InternationalOptinsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestCase
   SAMPLE_FORM_DATA = {
     first_name: 'First',
     first_name_preferred: 'Preferred',
@@ -26,9 +26,9 @@ class Api::V1::Pd::InternationalOptinsControllerTest < ::ActionController::TestC
     @teacher = create :teacher
   end
 
-  test 'create creates a new international optin' do
+  test 'create creates a new international opt-in' do
     sign_in @teacher
-    assert_creates Pd::InternationalOptin do
+    assert_creates Pd::InternationalOptIn do
       put :create, params: {
         form_data: SAMPLE_FORM_DATA,
         user: @teacher
@@ -39,13 +39,13 @@ class Api::V1::Pd::InternationalOptinsControllerTest < ::ActionController::TestC
     assert_response :created
   end
 
-  test 'create returns appropriate errors if international optin data is missing' do
+  test 'create returns appropriate errors if international opt-in data is missing' do
     sign_in @teacher
 
     new_form = SAMPLE_FORM_DATA.dup
     new_form.delete :last_name
 
-    assert_does_not_create Pd::InternationalOptin do
+    assert_does_not_create Pd::InternationalOptIn do
       put :create, params: {
         form_data: new_form,
         user: @teacher
