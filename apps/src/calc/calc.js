@@ -1203,11 +1203,9 @@ function onReportComplete(response) {
   displayFeedback();
 }
 
-/* start-test-block */
 // export private function(s) to expose to unit testing
-Calc.__testonly__ = {
+Calc.__testonly__ = IN_UNIT_TEST ? {
   displayGoal: displayGoal,
   displayComplexUserExpressions: displayComplexUserExpressions,
   appState: appState
-};
-/* end-test-block */
+} : {};

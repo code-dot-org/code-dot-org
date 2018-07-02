@@ -5588,19 +5588,6 @@ grunt-notify@0.4.5:
   version "0.0.2"
   resolved "git://github.com/sedge/grunt-npm.git#4211910fd865cb6d0baf23dadcd098727cc5bd0e"
 
-grunt-open@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/grunt-open/-/grunt-open-0.2.3.tgz#145ac45026a57fcfaa433ffd7398ae46d2bd3957"
-  dependencies:
-    open "~0.0.4"
-
-grunt-parallel@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/grunt-parallel/-/grunt-parallel-0.5.1.tgz#5f7a3376f6185424128c4b2a2cf2e2d07c37f5d9"
-  dependencies:
-    lpad "~0.1.0"
-    q "~0.8.12"
-
 grunt-postcss@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/grunt-postcss/-/grunt-postcss-0.3.0.tgz#0f1783728e35e577d2467fb26a46d69ad1be95f2"
@@ -5624,10 +5611,6 @@ grunt-shell@^1.1.2:
     chalk "^1.0.0"
     npm-run-path "^1.0.0"
     object-assign "^4.0.0"
-
-grunt-strip-code@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/grunt-strip-code/-/grunt-strip-code-0.1.2.tgz#c1e39a2c6bdad8721a01e76877f2e5a3495e7e2f"
 
 grunt-targethtml@0.2.6:
   version "0.2.6"
@@ -7397,10 +7380,6 @@ lpad@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lpad/-/lpad-1.0.0.tgz#a231dd2c129a4eebc7335b324c147ede3abfb6da"
 
-lpad@~0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/lpad/-/lpad-0.1.0.tgz#e4c60c29139321c5970de493b496ae0d774cd2a7"
-
 lru-cache@2, lru-cache@^2.6.5:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
@@ -8229,10 +8208,6 @@ once@~1.3.0, once@~1.3.3:
 onetime@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/onetime/-/onetime-1.1.0.tgz#a1f7838f8314c516f05ecefcbc4ccfe04b4ed789"
-
-open@~0.0.4:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
 
 opener@~1.4.0:
   version "1.4.2"
@@ -9131,10 +9106,6 @@ q@0.9.2:
 q@^1.1.2:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
-
-q@~0.8.12:
-  version "0.8.12"
-  resolved "https://registry.yarnpkg.com/q/-/q-0.8.12.tgz#9162a91e11819c4bcda7da15cf5fefaad0778823"
 
 qjobs@^1.1.4:
   version "1.1.5"
