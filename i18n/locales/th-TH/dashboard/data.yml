@@ -184,8 +184,8 @@ th:
         studio_c2_5: คุณสามารถเขียนโปรแกรมที่จะทำให้ปลาหมึกพูดว่า "สวัสดี " เมื่อถูกคลิก?
         studio_c2_6: คุณสามารถเขียนโปรแกรมเพื่อให้เจ้าเพนกวิน-แวดเดิลย้ายไปมารอบๆ โดยใช้คีย์ ขึ้น/ลง/ซ้าย/ขวา เพื่อชนเป้าหมายทั้งหมดได้หรือไม่?
         studio_c2_7: บล็อก "ทำซ้ำไปตลอดกาล " ช่วยให้คุณสามารถเรียกใช้โค้ดอย่างต่อเนื่อง คุณสามารถต่อบล็อกเพื่อพาเจ้าไดโนเสาร์ตัวนี้ขึ้นๆลงๆซ้ำไปซ้ำมา?
-        studio_c2_8: คุณสามารถให้เจ้านกเพนกวินแวดเดิลพูด "โอ๊ย! " และเล่นเสียง "ที่โดนชน" ถ้าเขาวิ่งเข้าไปชนไดโนเสาร์ ซึ่งทำให้เกิดขึ้นได้ด้วยการย้ายเขาด้วยลูกศร ได้หรือไม่?
-        studio_c2_9: คุณสามารถเพิ่มบล็อกที่จะทำคะแนนให้ เมื่อเจ้านกเพนกวินวิ่งชนปลาหมึกยักษ์ ย้ายเจ้านกเพนกวินด้วยลูกศรไปมาจนกว่าคุณจะทำคะแนนได้ ได้หรือไม่?
+        studio_c2_8: คุณสามารถให้เจ้านกเพนกวินแวดเดิลพูด " โอ๊ย! " และเล่นเสียง " ชน " เมื่อเจ้าแวดเดิลวิ่งเข้าไปชนไดโนเสาร์ โดยย้ายเจ้าแวดเดิลด้วยลูกศร ได้หรือไม่?
+        studio_c2_9: คุณสามารถเพิ่มบล็อกเพื่อทำคะแนนเมื่อเจ้านกเพนกวินแวดเดิลวิ่งชนปลาหมึกยักษ์ ย้ายเจ้าแวดเดิลด้วยลูกศรไปมาจนกว่าคุณจะทำคะแนนได้ ได้หรือไม่?
         studio_c2_10: Can you add blocks to change the background and the speed of Waddles, and then move him with the arrows until you score?
         studio_c2_11: สร้างเรื่องราวของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเรื่องราวของคุณบนมือถือของพวกเขา
         studio_c3_story_1: คุณสามารถทำให้สุนัขตัวนี้พูดว่า  " สวัสดีโลก "?
@@ -198,7 +198,7 @@ th:
         studio_c3_game_2: คุณสามารถเขียนโปรแกรมเพื่อพาเจ้านกเพนกวินแวดเดิลไปรอบๆโดยใช้ปุ่ม ขึ้น/ลง/ซ้าย/ขวา เพื่อชนเป้าหมายทั้งหมดได้หรือไม่?
         studio_c3_game_3: บล็อก "ทำซ้ำไปตลอดกาล " ช่วยให้คุณสามารถเรียกใช้โค้ดอย่างต่อเนื่อง คุณสามารถต่อบล็อกเพื่อพาเจ้าไดโนเสาร์ตัวนี้ขึ้นๆลงๆซ้ำไปซ้ำมา?
         studio_c3_game_4: คุณสามารถให้เจ้านกเพนกวินแวดเดิลพูด "โอ๊ย! " และเล่นเสียง "ที่โดนชน" ถ้าเขาวิ่งเข้าไปชนไดโนเสาร์ ซึ่งทำให้เกิดขึ้นได้ด้วยการย้ายเขาด้วยลูกศร ได้หรือไม่?
-        studio_c3_game_5: คุณสามารถเพิ่มบล็อกที่จะทำคะแนนให้ เมื่อเจ้านกเพนกวินวิ่งชนปลาหมึกยักษ์ ย้ายเจ้านกเพนกวินด้วยลูกศรไปมาจนกว่าคุณจะทำคะแนนได้ ได้หรือไม่?
+        studio_c3_game_5: คุณสามารถเพิ่มบล็อกเพื่อทำคะแนนเมื่อเจ้านกเพนกวินแวดเดิลวิ่งชนปลาหมึกยักษ์ ย้ายเจ้าแวดเดิลด้วยลูกศรไปมาจนกว่าคุณจะทำคะแนนได้ ได้หรือไม่?
         studio_c3_game_6: คุณสามารถเพิ่มบล็อกเพื่อเปลี่ยนพื้นหลังและความเร็วของเจ้านกเพนกวิน แวดเดิล และต่อมาให้ย้ายเขาด้วยลูกศรจนกว่าคุณจะได้คะแนน ได้หรือไม่
         studio_c3_game_7: สร้างเกมของคุณเอง เมื่อเสร็จแล้วให้คลิกเสร็จ เพื่อให้เพื่อนลองเล่นเกมบนมือถือของพวกเขา
         studio_playlab_1: Waddles wants to say "hello" - can you help him?
@@ -351,11 +351,11 @@ th:
         C4_unplugged_forloops: การวนรอบ
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
-        CSF_a_b_artist_loops: Loops in Artist
+        CSF_a_b_artist_loops: ลูปกับศิลปิน
         CSF_artist_angles: เรื่องของมุม กับศิลปิน
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
+        CSF_collector_k1_blocks: 'พื้นฐานด้านวิทยาการคอมพิวเตอร์: นักสะสม'
         CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
+        CSF_collector_text_blocks: 'พื้นฐานด้านวิทยาการคอมพิวเตอร์: นักสะสม'
         CSF_create_functions: Create Functions
         CSF_debugging_k1_blocks: การดีบั๊ก
         CSF_debugging_text_blocks: การดีบั๊ก
@@ -367,7 +367,7 @@ th:
         CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_zuck_loops_short: ลูปทำซ้ำ (Repeat Loop)
         frozen_intro: Hour of Code Intro
         frozen_loops: ลูปเบื้องต้น
         frozen_functions: ฟังก์ชั่นเบื้องต้น
@@ -591,7 +591,7 @@ th:
         edit_add_parameter: Click edit to add a parameter in your function
         add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
         fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
+        repeat: ใส่บล็อกไว้ข้างในลูปเพื่อทำซ้ำคำสั่งต่าง ๆ
         if_bee_nectar: Use the "if" block to decide if the bee should get nectar
         if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
         repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
