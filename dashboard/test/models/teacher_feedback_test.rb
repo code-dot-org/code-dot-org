@@ -70,6 +70,11 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     teacher.destroy
     assert_not TeacherFeedback.exists?(first_feedback.id)
     assert_not TeacherFeedback.exists?(second_feedback.id)
+
+    #Assert that feedback was soft-deleted
+    teacher.undestroy
+    assert TeacherFeedback.exists?(first_feedback.id)
+    assert TeacherFeedback.exists?(second_feedback.id)
   end
 
   test 'does not destroy when student is destroyed' do
