@@ -1,10 +1,10 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import Radium from 'radium';
 import styles from './ToggleButtonStyles';
 
-const ToggleButton = React.createClass({
-  propTypes: {
+class ToggleButton extends Component {
+  static propTypes = {
     id: PropTypes.string,
     className: PropTypes.string,
     active: PropTypes.bool.isRequired,
@@ -15,7 +15,7 @@ const ToggleButton = React.createClass({
     style: PropTypes.object,
     onClick: PropTypes.func,
     children: PropTypes.node,
-  },
+  };
 
   render() {
     return (
@@ -29,7 +29,7 @@ const ToggleButton = React.createClass({
         {this.props.children}
       </button>
     );
-  },
+  }
 
   getStyle() {
     return Object.assign({},
@@ -50,5 +50,6 @@ const ToggleButton = React.createClass({
       this.props.style
     );
   }
-});
+}
+
 export default Radium(ToggleButton);
