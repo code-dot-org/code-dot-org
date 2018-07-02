@@ -486,7 +486,8 @@ class Script < ActiveRecord::Base
   def k5_course?
     (
       Script::CATEGORIES[:csf_international] +
-      Script::CATEGORIES[:csf]
+      Script::CATEGORIES[:csf] +
+      Script::CATEGORIES[:csf_2018]
     ).include? name
   end
 
@@ -601,14 +602,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_pdf?
-    return false if ScriptConstants.script_in_category?(:csf, name)
+    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if ScriptConstants.script_in_category?(:csf, name)
+    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
 
     k5_course? || [
       Script::CSP17_UNIT1_NAME,
