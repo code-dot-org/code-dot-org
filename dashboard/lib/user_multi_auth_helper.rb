@@ -8,7 +8,7 @@ module UserMultiAuthHelper
     return true if migrated?
 
     unless sponsored?
-      self.primary_authentication_option =
+      self.primary_contact_info =
         if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
           new_data = nil
           if oauth_token || oauth_token_expiration || oauth_refresh_token
@@ -56,11 +56,11 @@ module UserMultiAuthHelper
     self.email = email
     self.hashed_email = hashed_email.present? ? hashed_email : nil
 
-    credential_type = primary_authentication_option&.credential_type
+    credential_type = primary_contact_info&.credential_type
     if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? credential_type
       self.provider = credential_type
-      self.uid = primary_authentication_option.authentication_id
-      data = primary_authentication_option.data_hash
+      self.uid = primary_contact_info.authentication_id
+      data = primary_contact_info.data_hash
       self.oauth_token = data[:oauth_token]
       self.oauth_token_expiration = data[:oauth_token_expiration]
       self.oauth_refresh_token = data[:oauth_refresh_token]
