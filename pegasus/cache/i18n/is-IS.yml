@@ -98,17 +98,7 @@ is-IS:
   congratulations_volunteer: 'Til hamingju: Nú þegar þú hefur prófað Klukkustund kóðunar,
     getur þú <a href="https://code.org/volunteer">boðið fram liðveislu í skólastofu</a>
     og hjálpað nemendum að læra Klukkustund kóðunar!'
-  congratulations_on_completing_course1: Til hamingju með að ljúka námskeiði 1
-  congratulations_on_completing_course2: Til hamingju með að ljúka námskeiði 2
-  congratulations_on_completing_course3: Til hamingju með að ljúka námskeiði 3
-  congratulations_on_completing_course4: Til hamingju með að ljúka námskeiði 4
-  congratulations_on_completing_coursea: Til hamingju með að ljúka námskeiði A
-  congratulations_on_completing_courseb: Til hamingju með að ljúka námskeiði B
-  congratulations_on_completing_coursec: Til hamingju með að ljúka námskeiði C
-  congratulations_on_completing_coursed: Til hamingju með að ljúka námskeiði D
-  congratulations_on_completing_coursee: Til hamingju með að ljúka námskeiði E
-  congratulations_on_completing_coursef: Til hamingju með að ljúka námskeiði F
-  congratulations_on_completing_accelerated: Til hamingju með að ljúka hraðnámskeiðinu
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Prófaðu þetta kennsluefni næst
   congrats_next_tutorials_desc: Prófaðu þessar styttri 1 klst. kennslustundir eða
     <a href="%{current_path}/next">kennsluefni hjá samstarfsaðila</a>.
@@ -287,28 +277,8 @@ is-IS:
   just_did_accelerated: Ég var að ljúka Hraðnámskeiðinu - kíktu á það! @codeorg
   just_did_hoc_donor: 'Ég var að ljúka #HourOfCode - spáðu í það! (Takk %{donor_twitter}
     fyrir að styðja @codeorg)'
-  just_did_course1_donor: Ég var að ljúka Námskeiði 1 - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_course2_donor: Ég var að ljúka Námskeiði 2 - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_course3_donor: Ég var að ljúka Námskeiði 3 - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_course4_donor: Ég var að ljúka Námskeiði 4 - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_coursea_donor: Ég var að ljúka Námskeiði A - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_courseb_donor: Ég var að ljúka Námskeiði B - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_coursec_donor: Ég var að ljúka Námskeiði C - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_coursed_donor: Ég var að ljúka Námskeiði D - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_coursee_donor: Ég var að ljúka Námskeiði E - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_coursef_donor: Ég var að ljúka Námskeiði F - spáðu í það! Takk %{donor_twitter}
-    fyrir að styðja @codeorg
-  just_did_accelerated_donor: Ég var að ljúka Hraðnámskeiðinu - spáðu í það! Takk
-    %{donor_twitter} fyrir að styðja @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 9 af hverjum 10 eru sammála því að skólar eigi að kenna tölvunarfræði.
     http://youtu.be/nKIu9yen5nc. Heimsæktu https://code.org/.
   twitter_cs_foundational: Tölvunarfræði er grunnfag sem allir nemendur ættu að læra.
@@ -1417,6 +1387,18 @@ is-IS:
   coursed_gradelevel: 14 ára og eldri
   coursee_gradelevel: Bekkur 9+
   coursef_gradelevel: Bekkur 10+
+  coursea-2017_gradelevel: Bekkur 5+
+  courseb-2017_gradelevel: Bekkur 6+
+  coursec-2017_gradelevel: Bekkur 7+
+  coursed-2017_gradelevel: 14 ára og eldri
+  coursee-2017_gradelevel: 8 - 12 ára
+  coursef-2017_gradelevel: Bekkur 10+
+  coursea-2018_gradelevel: Bekkur 5+
+  courseb-2018_gradelevel: Bekkur 6+
+  coursec-2018_gradelevel: Bekkur 7+
+  coursed-2018_gradelevel: 14 ára og eldri
+  coursee-2018_gradelevel: 8 - 12 ára
+  coursef-2018_gradelevel: Bekkur 10+
   accelerated_gradelevel: Fyrir 10-18 ára
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
@@ -1557,6 +1539,30 @@ is-IS:
     til eigin myndir, sögur og leiki.
   coursef_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og búðu
     til eigin myndir, sögur og leiki.
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursed-2017_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursee-2017_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursef-2017_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursed-2018_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursee-2018_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursef-2018_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta
     er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem
     koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies.

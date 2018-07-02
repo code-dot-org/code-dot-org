@@ -97,18 +97,7 @@ es-ES:
   congratulations_volunteer: Felicitaciones, ahora que has probado la Hora de Code,
     <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a>
     y ayuda a estudiantes a aprender una Hora de Code.
-  congratulations_on_completing_course1: Felicidades por completar Curso 1
-  congratulations_on_completing_course2: Felicidades por completar Curso 2
-  congratulations_on_completing_course3: Felicidades por completar Curso 3
-  congratulations_on_completing_course4: Felicidades por completar Curso 4
-  congratulations_on_completing_coursea: Felicidades por completar el curso A
-  congratulations_on_completing_courseb: Felicidades por completar el curso B
-  congratulations_on_completing_coursec: Felicidades por completar el curso C
-  congratulations_on_completing_coursed: Felicidades por completar el curso D
-  congratulations_on_completing_coursee: Felicidades por completar el curso E
-  congratulations_on_completing_coursef: Felicidades por completar el curso F
-  congratulations_on_completing_accelerated: Felicitaciones por completar el curso
-    acelerado
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Prueba estos tutoriales a continuación
   congrats_next_tutorials_desc: Prueba estos tutoriales de duración inferior a una
     hora, o prueba un <a href="%{current_path}/next">tutorial para colaboradores</a>.
@@ -295,28 +284,8 @@ es-ES:
   just_did_accelerated: Acabo de terminar el Curso Acelerado - echa un vistazo! @codeorg
   just_did_hoc_donor: 'Acabo de hacer el #HourOfCode - ¡Dale un vistazo! (Gracias
     %{donor_twitter} por apoyar a @codeorg)'
-  just_did_course1_donor: Acabo de terminar el Curso 1 - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_course2_donor: Acabo de terminar el Curso 2 - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_course3_donor: Acabo de terminar el Curso 3 - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_course4_donor: Acabo de terminar el Curso 4 - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursea_donor: Acabo de terminar el Curso A - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_courseb_donor: Acabo de terminar el Curso B - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursec_donor: Acabo de terminar el Curso C - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursed_donor: Acabo de terminar el Curso D - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursee_donor: Acabo de terminar el Curso E - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursef_donor: Acabo de terminar el Curso F - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_accelerated_donor: Acabo de terminar el Curso Acelerado- ¡Dale un vistazo!
-    Gracias %{donor_twitter} por apoyar a @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: "¿Por qué no hay más escuelas que enseñen Ciencias de la Computación?
     Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visita http://code.org/ para
     obtener más información."
@@ -1459,6 +1428,18 @@ es-ES:
   coursed_gradelevel: Grado 8 +
   coursee_gradelevel: Edad 8-12
   coursef_gradelevel: 9-13 años
+  coursea-2017_gradelevel: Edades de 4 a 7 años
+  courseb-2017_gradelevel: Edades de 5 a 8 años
+  coursec-2017_gradelevel: Edades de 6 a 10 años
+  coursed-2017_gradelevel: Grado 8 +
+  coursee-2017_gradelevel: Edad 8-12
+  coursef-2017_gradelevel: 9-13 años
+  coursea-2018_gradelevel: Edades de 4 a 7 años
+  courseb-2018_gradelevel: Edades de 5 a 8 años
+  coursec-2018_gradelevel: Edades de 6 a 10 años
+  coursed-2018_gradelevel: Grado 8 +
+  coursee-2018_gradelevel: Edad 8-12
+  coursef-2018_gradelevel: 9-13 años
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
@@ -1608,6 +1589,30 @@ es-ES:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
     un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg,

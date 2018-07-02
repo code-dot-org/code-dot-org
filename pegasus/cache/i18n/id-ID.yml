@@ -98,17 +98,7 @@ id-ID:
   congratulations_volunteer: 'Selamat: bahwa sekarang Anda telah mencoba Hour of Code,
     <a href="https://code.org/volunteer">silahkan daftar untuk menjadi relawan di
     kelas</a> dan membantu siswa belajar Hour of Code!'
-  congratulations_on_completing_course1: Selamat atas penyelesaian Kursus 1
-  congratulations_on_completing_course2: Selamat atas penyelesaian Kursus 2
-  congratulations_on_completing_course3: Selamat atas penyelesaian Kursus 3
-  congratulations_on_completing_course4: Selamat atas penyelesaian Kursus 4
-  congratulations_on_completing_coursea: Selamat menyelesaikan Kursus A
-  congratulations_on_completing_courseb: Selamat menyelesaikan Kursus B
-  congratulations_on_completing_coursec: Selamat menyelesaikan Kursus C
-  congratulations_on_completing_coursed: Selamat menyelesaikan Kursus D
-  congratulations_on_completing_coursee: Selamat menyelesaikan Kursus E
-  congratulations_on_completing_coursef: Selamat menyelesaikan Kursus F
-  congratulations_on_completing_accelerated: Selamat atas menyelesaikan Kursus Akselerasi
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Lulus ke tingkat berikutnya
   congrats_next_tutorials_desc: Cobalah yang lebih pendek, tutorial 1 jam ini atau
     mencoba <a href="%{current_path}/next"> mitra tutorial</a>.
@@ -296,28 +286,8 @@ id-ID:
     @codeorg
   just_did_hoc_donor: 'Saya hanya melakukan #HourOfCode - coba periksa! (Terima kasih
     %{donor_twitter} untuk mendukung @codeorg)'
-  just_did_course1_donor: Saya hanya menyelesaikan 1 Kursus - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_course2_donor: Saya hanya menyelesaikan 2 Kursus - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_course3_donor: Saya hanya menyelesaikan 3 Kursus - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_course4_donor: Saya hanya menyelesaikan 4 Kursus - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_coursea_donor: Saya hanya menyelesaikan Kursus A - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_courseb_donor: Saya hanya menyelesaikan Kursus B - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_coursec_donor: Saya hanya menyelesaikan Kursus C - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_coursed_donor: Saya hanya menyelesaikan Kursus D - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_coursee_donor: Saya hanya menyelesaikan Kursus E - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_coursef_donor: Saya hanya menyelesaikan Kursus F - coba periksa! Terima
-    kasih %{donor_twitter} untuk mendukung @codeorg
-  just_did_accelerated_donor: Saya hanya menyelesaikan Kursus Akselerasi - coba periksa!
-    Terima kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 9 dari 10 orang menyetujuinya, sekolah harus mengajarkan ilmu
     komputer. http://youtu.be/nKIu9yen5nc. Kunjungi https://code.org/.
   twitter_cs_foundational: Ilmu komputer adalah dasar bagi siswa untuk belajar. https://youtu.be/QvyTEx1wyOY.
@@ -1446,6 +1416,18 @@ id-ID:
   coursed_gradelevel: Kelas 8+
   coursee_gradelevel: Usia 8-12
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Kelas 8+
+  coursee-2017_gradelevel: Usia 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Kelas 8+
+  coursee-2018_gradelevel: Usia 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Usia 10 + (setelah Kursus 3)
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
@@ -1589,6 +1571,30 @@ id-ID:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman
     tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah
     video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari
