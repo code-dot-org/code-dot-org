@@ -224,6 +224,7 @@ it:
       booster: booster
       draw line of triangles: disegna una fila di triangoli
       draw a window: disegna una finestra
+      stop_everything: stop_everything
       draw a plane of squares: disegna un piano di quadrati
       draw hexagon: disegna un esagono
       draw line of hexagons: disegna una fila di esagoni

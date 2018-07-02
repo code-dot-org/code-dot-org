@@ -7794,7 +7794,7 @@ es-MX:
           title: Course B (2018)
           assignment_family_title: Curso B
           description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
-          description_short: Una introducción a las ciencias de la computación para pre lectores. (Similar al curso A pero con más variedad para estudiantes mas avanzados)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Edades de 5 a 8 años'
           stages:
             'Debugging: Unspotted Bugs':
@@ -7838,7 +7838,7 @@ es-MX:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Drawing Castles with Loops
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -7862,9 +7862,9 @@ es-MX:
         coursed-2018:
           title: Course D (2018)
           assignment_family_title: Curso D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_short: Learn about conditional statements and create your own art, story or game.
+          description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programación de hoja cuadriculada
@@ -8225,7 +8225,7 @@ es-MX:
           title: Course E (2018)
           assignment_family_title: Curso E
           description: Empieza a programar con algoritmos, ciclos, condicionales, y eventos y luego te moverás en funciones. En la segunda parte de este curso, diseñarás y crearás un proyecto final que puedes compartir con tus amigos y familiares.
-          description_short: Cubrir rápidamente los conceptos en el curso de C y D y luego ir más allá con funciones.
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
           description_audience: 'Edades de 8 a 12 años'
           stages:
             'Programming: My Robotic Friends':
@@ -9474,7 +9474,7 @@ es-MX:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Drawing Castles with Loops
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':

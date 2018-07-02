@@ -598,6 +598,7 @@ nn:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: { }
+      Fish Tank 2-validated_callout: { }
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
       Frozen Project Toolbox (Old)_callout:
@@ -984,8 +985,7 @@ nn:
         courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan vil du bruke den?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Dette talet betyr at det ikkje er fleire blokker att i verktøykassa.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: Dette talet betyr at det ikkje er fleire blokker att i verktøykassa.
+      courseB_artist_loops5_2018_callout: { }
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
       courseB_collector_loops1_2018_callout:
@@ -1155,6 +1155,8 @@ nn:
       courseD_collector_until_challenge1_callout: { }
       courseD_farmer_until_challenge2_callout: { }
       courseD_farmer_until_challenge2_2018_callout: { }
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:

@@ -510,12 +510,12 @@ th:
     direction: 'Start Direction (in degrees)'
   video:
     tab: 'วิดีโอ'
-    notes: 'ไม่มีวิดีโอหรือ? อ่านบันทึกย่อแทนก็ได้นะ'
+    notes: 'ไม่สามารถชมวิดีโอได้ใช่ไหม? แสดงเป็นข้อความแทนได้ไหม'
     notes_coming_soon: 'เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้'
     autoplay_option: 'วิดีโอเริ่มเล่นอัตโนมัติ'
     download: 'ดาวน์โหลดวิดีโอ'
-    show_notes: 'แสดงเป็นข้อความ'
-    show_video: 'Show Video'
+    show_notes: 'แสดงข้อความ'
+    show_video: 'แสดงวิดีโอ'
   compatibility:
     upgrade:
       unsupported_message: "เบราเซอร์ของคุณไม่ได้รับการสนับสนุนให้ใช้งาน กรุณาอัพเกรดเบราเซอร์เป็น <a href='%{supported_browsers_url}', target='_blank'> ซึ่งเป็นหนึ่งในเบาร์เซอร์ที่เราแนะนำ</a> คุณอาจจะลองดูหน้าเพจได้ แต่การทำงานบางอย่างจะไม่สมบูรณ์"

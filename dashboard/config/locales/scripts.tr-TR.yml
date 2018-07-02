@@ -7092,20 +7092,23 @@ tr:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: |-
-                Öğrenciler bir soruyu cevaplarken veya bir projede çalışırken bir engelle karşılaştıkları zaman, kolayca hayal kırıklığına uğrarlar ve vazgeçerler. Bu ders, öğrencilere, hayal kırıklığının, öğrenmenin önemli bir parçası olduğu düşüncesini anlatır. Burada, hayal kırıklığı, başarısızlığın bir işareti olmaktan ziyade yaratım sürecinin bir adımı olarak anlatılır.\r
-                \r
-                Bu dersler bir veya iki sınıf oturumunda yapılabilir.  Eğer daha fazla zamanınız varsa, Mermer Koşusu etkinliginin evresini gözden geçirmekten ve binanın taslağını çizmekten çekinmeyin.
+              description_teacher: "Öğrenciler bir soruyu cevaplarken veya bir projede
+                çalışırken bir engelle karşılaştıkları zaman, kolayca hayal kırıklığına
+                uğrarlar ve vazgeçerler. Bu ders, öğrencilere, hayal kırıklığının,
+                öğrenmenin önemli bir parçası olduğu düşüncesini anlatır. Burada,
+                hayal kırıklığı, başarısızlığın bir işareti olmaktan ziyade yaratım
+                sürecinin bir adımı olarak anlatılır.\r\n\r\nBu dersler bir veya iki
+                sınıf oturumunda yapılabilir.  Eğer daha fazla zamanınız varsa, Mermer
+                Koşusu etkinliginin evresini gözden geçirmekten ve binanın taslağını
+                çizmekten çekinmeyin."
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
               description_student: ''
-              description_teacher: 'Bu derste öğrenciler, gerçek bir tohum ekerek
+              description_teacher: "Bu derste öğrenciler, gerçek bir tohum ekerek
                 algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler.
                 Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye
                 başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki
-                durumlara çevirmektir.\r
-
-'
+                durumlara çevirmektir.\r\n"
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''
