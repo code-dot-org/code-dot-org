@@ -21,15 +21,15 @@ Elementary School
 
 </div>
 
-Our Computer Science Fundamentals courses have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
+Our Computer Science Fundamentals courses have between 14 & 28 lessons (varies by age) that may be implemented by unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
 
 If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
 
-Our curriculum aligns to the [2017 Computer Science Teachers Association (CSTA) standards](https://www.csteachers.org/page/standards), as well as relevant national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. [View the full standards alignment document](https://curriculum.code.org/csf/standards/) for CS Fundamentals Courses A-F.
+Our curriculum was created with the [2017 Computer Science Teachers Association (CSTA) standards](https://www.csteachers.org/page/standards) in mind, as well as relevant national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. [View the full standards reinforcement document](https://curriculum.code.org/csf/standards/) for CS Fundamentals Courses A-F.
 
 Our elementary school curriculum can also help students succeed in other subjects as well; a recent [research study by Outlier Research & Evaluation](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) found that 3rd–5th-grade Code.org classrooms with resourceful teachers see higher scores on English, math, and science standardized tests.
 
-Our courses are available at [no cost](/commitment) for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
+Our courses are available at [no cost](/commitment) for anyone to teach. For more information about our goals and the approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
 
 <div style="clear:both"></div>
 
@@ -109,7 +109,7 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursef'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursef'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students review the use of loops, events, functions, and conditionals before learning about variables and for loops. They will investigate helpful problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
 
 [/col-50]
 
@@ -126,7 +126,7 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat concepts for students. This is also our recommended option for students studying computer science on their own, outside of a classroom.
+CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat concepts for students unnecessarily. This is also our recommended option for students studying computer science on their own, outside of a classroom.
 
 [/col-50]
 
