@@ -6,6 +6,10 @@ module RegistrationsControllerTests
   # Tests over PATCH /users/email
   #
   class SetEmailTest < ActionDispatch::IntegrationTest
+    #
+    # Tests for unmigrated users
+    #
+
     test "set email without user param returns 400 BAD REQUEST" do
       student = create :student
       sign_in student
@@ -221,9 +225,26 @@ module RegistrationsControllerTests
       refute EmailPreference.find_by_email(new_email)
     end
 
-    private
+    test "cannot set an email that is already taken" do
+      taken_email = 'taken@example.org'
+      password = 'password'
+      create :student, email: taken_email
+      teacher = create :teacher, password: password
 
-    def can_edit_password_with_password(user, current_password)
+      sign_in teacher
+      patch '/users/email', params: {
+        user: {
+          email: taken_email,
+          current_password: password
+        }
+      }
+
+      assert_response :unprocessable_entity
+      assert_includes assigns(:user).errors.full_messages, 'Email has already been taken'
+      assert_includes response.body, 'Email has already been taken'
+    end
+
+    private def can_edit_password_with_password(user, current_password)
       new_password = 'newpassword'
 
       sign_in user
@@ -239,7 +260,7 @@ module RegistrationsControllerTests
       user.valid_password? new_password
     end
 
-    def can_edit_email_without_password(user)
+    private def can_edit_email_without_password(user)
       new_email = 'new@example.com'
 
       sign_in user
@@ -249,7 +270,7 @@ module RegistrationsControllerTests
       user.email == new_email || user.hashed_email == User.hash_email(new_email)
     end
 
-    def can_edit_email_with_password(user, current_password)
+    private def can_edit_email_with_password(user, current_password)
       new_email = 'new@example.com'
 
       sign_in user
@@ -261,7 +282,7 @@ module RegistrationsControllerTests
       user.email == new_email || user.hashed_email == User.hash_email(new_email)
     end
 
-    def can_edit_hashed_email_without_password(user)
+    private def can_edit_hashed_email_without_password(user)
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
       sign_in user
@@ -271,7 +292,7 @@ module RegistrationsControllerTests
       user.hashed_email == new_hashed_email
     end
 
-    def can_edit_hashed_email_with_password(user, current_password)
+    private def can_edit_hashed_email_with_password(user, current_password)
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
       sign_in user
@@ -281,6 +302,175 @@ module RegistrationsControllerTests
 
       user = user.reload
       user.hashed_email == new_hashed_email
+    end
+
+    #
+    # Tests for migrated users
+    #
+
+    test "multi-auth: returns bad_request if user param is nil" do
+      student = create(:student, :with_migrated_email_authentication_option)
+      sign_in student
+
+      patch '/users/email', params: {}
+      assert_response :bad_request
+    end
+
+    test "multi-auth: returns 422 for migrated user with password if user cannot edit password" do
+      teacher = create(:teacher, :with_migrated_email_authentication_option)
+      sign_in teacher
+
+      User.any_instance.stubs(:can_edit_password?).returns(false)
+
+      patch '/users/email', params: {user: {password: 'newpassword'}}
+      assert_response :unprocessable_entity
+    end
+
+    test "multi-auth: returns 422 for migrated user with email if user cannot edit email" do
+      teacher = create(:teacher, :with_migrated_email_authentication_option)
+      sign_in teacher
+
+      User.any_instance.stubs(:can_edit_email?).returns(false)
+
+      patch '/users/email', params: {user: {email: 'new@email.com'}}
+      assert_response :unprocessable_entity
+    end
+
+    test "multi-auth: returns 422 for migrated user with hashed email if user cannot edit email" do
+      teacher = create(:teacher, :with_migrated_email_authentication_option)
+      sign_in teacher
+
+      User.any_instance.stubs(:can_edit_email?).returns(false)
+
+      patch '/users/email', params: {user: {hashed_email: 'some-hash'}}
+      assert_response :unprocessable_entity
+    end
+
+    test "multi-auth: returns 422 for migrated user if password is incorrect" do
+      teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+      sign_in teacher
+
+      patch '/users/email', params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
+      assert_response :unprocessable_entity
+    end
+
+    test "multi-auth: updates email for migrated teacher if password is correct" do
+      teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+      sign_in teacher
+
+      patch '/users/email', params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
+      teacher.reload
+      assert_response :success
+      assert_equal 'new@email.com', teacher.email
+    end
+
+    test "multi-auth: updates email for migrated student if password is correct" do
+      student = create(:student, :with_migrated_email_authentication_option, password: 'mypassword')
+      sign_in student
+
+      patch '/users/email', params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
+      student.reload
+      assert_response :success
+      assert_equal User.hash_email('new@email.com'), student.hashed_email
+    end
+
+    test "multi-auth: updates email for migrated teacher without password if password is not required" do
+      teacher = create(:teacher, :with_migrated_email_authentication_option, encrypted_password: '')
+      sign_in teacher
+
+      patch '/users/email', params: {user: {email: 'new@email.com'}}
+      teacher.reload
+      assert_response :success
+      assert_equal 'new@email.com', teacher.email
+    end
+
+    test "multi-auth: updates email for migrated student without password if password is not required" do
+      student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
+      sign_in student
+
+      hashed_new_email = User.hash_email('new@email.com')
+      patch '/users/email', params: {user: {hashed_email: hashed_new_email}}
+      student.reload
+      assert_response :success
+      assert_equal hashed_new_email, student.hashed_email
+    end
+
+    test "multi-auth: updates email for migrated student with plaintext email param if provided" do
+      student = create(:student, :with_migrated_email_authentication_option, encrypted_password: '')
+      sign_in student
+
+      hashed_other_email = User.hash_email('second@email.com')
+      patch '/users/email', params: {user: {email: 'first@email.com', hashed_email: hashed_other_email}}
+      student.reload
+      assert_response :success
+      assert_equal User.hash_email('first@email.com'), student.hashed_email
+    end
+
+    test "multi-auth: returns 422 for non-migrated user with password if user cannot edit password" do
+      teacher = create(:teacher, :with_email_authentication_option)
+      sign_in teacher
+
+      User.any_instance.stubs(:can_edit_password?).returns(false)
+
+      patch '/users/email', params: {user: {password: 'newpassword'}}
+      assert_response :unprocessable_entity
+    end
+
+    test "multi-auth: returns 422 for non-migrated user with email if user cannot edit email" do
+      teacher = create(:teacher, :with_email_authentication_option)
+      sign_in teacher
+
+      User.any_instance.stubs(:can_edit_email?).returns(false)
+
+      patch '/users/email', params: {user: {email: 'new@email.com'}}
+      assert_response :unprocessable_entity
+    end
+
+    test "multi-auth: returns 422 for non-migrated user with hashed email if user cannot edit email" do
+      teacher = create(:teacher, :with_email_authentication_option)
+      sign_in teacher
+
+      User.any_instance.stubs(:can_edit_email?).returns(false)
+
+      patch '/users/email', params: {user: {hashed_email: 'some-hash'}}
+      assert_response :unprocessable_entity
+    end
+
+    test "multi-auth: returns 422 for non-migrated user if password is incorrect" do
+      teacher = create(:teacher, :with_email_authentication_option, password: 'mypassword')
+      sign_in teacher
+
+      patch '/users/email', params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
+      assert_response :unprocessable_entity
+    end
+
+    test "multi-auth: updates email for non-migrated user if password is correct" do
+      teacher = create :teacher, :with_email_authentication_option, password: 'mypassword'
+      sign_in teacher
+
+      patch '/users/email', params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
+      teacher.reload
+      assert_response :success
+      assert_equal 'new@email.com', teacher.email
+    end
+
+    test "multi-auth: cannot set an email that is already taken" do
+      taken_email = 'taken@example.org'
+      password = 'password'
+      create :student, :with_migrated_email_authentication_option, email: taken_email
+      teacher = create :teacher, :with_migrated_email_authentication_option, password: password
+
+      sign_in teacher
+      patch '/users/email', params: {
+        user: {
+          email: taken_email,
+          current_password: password
+        }
+      }
+
+      assert_response :unprocessable_entity
+      assert_includes assigns(:user).errors.full_messages, 'Email has already been taken'
+      assert_includes response.body, 'Email has already been taken'
     end
   end
 end
