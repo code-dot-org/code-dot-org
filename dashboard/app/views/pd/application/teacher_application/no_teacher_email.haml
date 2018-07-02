@@ -2,7 +2,4 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 %p
-  Your account doesn’t have an email address. Please
-  = link_to edit_user_registration_path do
-    visit your account settings
-  to add your email address before completing this form.
+  != I18n.t('no_teacher_email.body', user_registration: edit_user_registration_path)

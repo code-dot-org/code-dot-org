@@ -116,7 +116,7 @@ class DeleteAccountsHelper
     Pd::FacilitatorProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
     Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
-    Pd::InternationalOptin.where(user_id: user_id).each(&:clear_form_data)
+    Pd::InternationalOptIn.where(user_id: user_id).each(&:clear_form_data)
 
     pd_enrollment_id = Pd::Enrollment.where(user_id: user_id).pluck(:id).first
     if pd_enrollment_id

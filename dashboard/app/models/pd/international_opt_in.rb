@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: pd_international_optins
+# Table name: pd_international_opt_ins
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer          not null
@@ -10,14 +10,14 @@
 #
 # Indexes
 #
-#  index_pd_international_optins_on_user_id  (user_id)
+#  index_pd_international_opt_ins_on_user_id  (user_id)
 #
 
-require 'international_optin_people'
+require 'international_opt_in_people'
 
-class Pd::InternationalOptin < ApplicationRecord
+class Pd::InternationalOptIn < ApplicationRecord
   include Pd::Form
-  include InternationalOptinPeople
+  include InternationalOptInPeople
 
   belongs_to :user
 
@@ -54,8 +54,8 @@ class Pd::InternationalOptin < ApplicationRecord
 
     entries = Hash[entry_keys.map {|k, v| [k, v.map {|s| I18n.t("pd.form_entries.#{k.to_s.underscore}.#{s.underscore}")}]}]
 
-    entries[:workshopOrganizer] = INTERNATIONAL_OPTIN_PARTNERS
-    entries[:workshopFacilitator] = INTERNATIONAL_OPTIN_FACILITATORS
+    entries[:workshopOrganizer] = INTERNATIONAL_OPT_IN_PARTNERS
+    entries[:workshopFacilitator] = INTERNATIONAL_OPT_IN_FACILITATORS
 
     super.merge(entries)
   end

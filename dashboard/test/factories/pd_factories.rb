@@ -543,7 +543,7 @@ FactoryGirl.define do
     form_data nil
   end
 
-  factory :pd_international_optin, class: 'Pd::InternationalOptin' do
+  factory :pd_international_opt_in, class: 'Pd::InternationalOptIn' do
     user nil
     form_data nil
   end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Pd::InternationalOptinTest < ActiveSupport::TestCase
+class Pd::InternationalOptInTest < ActiveSupport::TestCase
   FORM_DATA = {
     firstName: 'First',
     firstNamePreferred: 'Preferred',
@@ -21,17 +21,17 @@ class Pd::InternationalOptinTest < ActiveSupport::TestCase
     optIn: 'Yes'
   }
 
-  test 'Test international optin validation' do
+  test 'Test international opt-in validation' do
     teacher = create :teacher
 
-    refute build(:pd_international_optin, form_data: {}.to_json, user_id: teacher.id).valid?
+    refute build(:pd_international_opt_in, form_data: {}.to_json, user_id: teacher.id).valid?
 
     refute build(
-      :pd_international_optin, form_data: FORM_DATA.merge({ages: nil}).to_json, user_id: teacher.id
+      :pd_international_opt_in, form_data: FORM_DATA.merge({ages: nil}).to_json, user_id: teacher.id
     ).valid?
 
-    assert build(:pd_international_optin, form_data: FORM_DATA.to_json, user_id: teacher.id).valid?
+    assert build(:pd_international_opt_in, form_data: FORM_DATA.to_json, user_id: teacher.id).valid?
 
-    refute build(:pd_international_optin, form_data: FORM_DATA.to_json).valid?
+    refute build(:pd_international_opt_in, form_data: FORM_DATA.to_json).valid?
   end
 end

@@ -447,7 +447,7 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
-      post :international_optins, to: 'international_optins#create'
+      post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
 
@@ -545,8 +545,8 @@ Dashboard::Application.routes.draw do
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
 
-    get 'international_optin/new', to: 'international_optin#new'
-    get 'international_optin/:contact_id/thanks', to: 'international_optin#thanks'
+    get 'international_opt_in/new', to: 'international_opt_in#new'
+    get 'international_opt_in/:contact_id/thanks', to: 'international_opt_in#thanks'
 
     # React-router will handle sub-routes on the client.
     get 'application_dashboard/*path', to: 'application_dashboard#index'

@@ -12,7 +12,7 @@ import {
 } from 'react-bootstrap';
 import i18n from '@cdo/locale';
 
-export default class InternationalOptin extends FormController {
+export default class InternationalOptIn extends FormController {
   static propTypes = {
     accountEmail: PropTypes.string.isRequired,
     labels: PropTypes.object.isRequired
@@ -22,7 +22,7 @@ export default class InternationalOptin extends FormController {
    * @override
    */
   onSuccessfulSubmit(data) {
-    window.location = `/pd/international_optin/${data.id}/thanks`;
+    window.location = `/pd/international_opt_in/${data.id}/thanks`;
   }
 
   /**
@@ -39,7 +39,7 @@ export default class InternationalOptin extends FormController {
    */
   getPageComponents() {
     return [
-      InternationalOptinComponent
+      InternationalOptInComponent
     ];
   }
 
@@ -56,7 +56,7 @@ export default class InternationalOptin extends FormController {
 }
 
 
-class InternationalOptinComponent extends FormComponent {
+class InternationalOptInComponent extends FormComponent {
   static propTypes = {
     accountEmail: PropTypes.string.isRequired
   };
@@ -257,7 +257,7 @@ class InternationalOptinComponent extends FormComponent {
   }
 }
 
-InternationalOptinComponent.associatedFields = [
+InternationalOptInComponent.associatedFields = [
   'firstName', 'firstNamePreferred', 'lastName', 'email', 'emailAlternate', 'gender',
   'schoolName', 'schoolCity', 'schoolCountry', 'ages', 'subjects', 'resources',
   'robotics', 'workshopOrganizer', 'workshopFacilitator', 'workshopCourse',

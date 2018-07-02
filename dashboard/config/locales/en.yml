@@ -1111,3 +1111,12 @@ en:
     privacy_policy: 'privacy policy'
     logout: 'Logout'
     yes: 'Yes'
+  logged_out:
+    heading: 'Thanks for your interest in the Professional Learning Program!'
+    body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
+  not_teacher:
+    body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either <a href="%{create_teacher}">create a teacher account</a> or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
+    more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
+  no_teacher_email:
+    body: 'Your account doesn’t have an email address. Please <a href="%{user_registration}">visit your account settings</a> to add your email address before completing this form.'
+
