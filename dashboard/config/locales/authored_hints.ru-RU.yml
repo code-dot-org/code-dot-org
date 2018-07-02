@@ -9119,6 +9119,8 @@ ru:
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace
           already.  Don't delete them all! \n\nUse the \"Step\" button to go through
           and figure out where the code goes wrong."
+        courseC_maze_debugging5_c: You can change the direction of the turn block
+          by clicking on the dropdown.
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it
           the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
@@ -13101,7 +13103,11 @@ ru:
           Can you drag these blocks into the function?
         courseE_farmer_functions3c_b: Don't forget to call your function in the main
           program wherever you removed blocks.
-      courseE_farmer_functions3c1_2018_authored_hint: {}
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path`
+          function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around
+          the corners?
       courseE_farmer_functions3c_2018_authored_hint: {}
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop
@@ -13154,7 +13160,11 @@ ru:
           is lettuce in a space?
         courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
       courseE_farmer_functions7_authored_hint: {}
-      courseE_farmer_functions7a1_2018_authored_hint: {}
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions`
+          section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when
+          you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You don't need a function here, but you can
           make one if it is helpful to you!
@@ -13172,7 +13182,11 @@ ru:
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: {}
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same
+          function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time,
+          you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Try running the code given to see what it does.
           What do you need after this?
@@ -13188,7 +13202,14 @@ ru:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: {}
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made
+          in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle
+          to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move
+          forward` to get to the last crop of lettuce before you can call your function
+          again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements
           to move along the path?

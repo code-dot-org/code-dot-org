@@ -5199,7 +5199,7 @@ zh-CN:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "代码会有**四个**`向西移动`模块和**四个**`采摘玉米`模块。 "
+        courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`<xml><block type=\"maze_moveWest\"/></xml>模块和**四个**<xml>`采摘玉米`<block type=\"harvester_corn\"/></xml>模块。 "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           用像这样的`重复`模块来帮助你！
@@ -5213,12 +5213,12 @@ zh-CN:
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: 如果你被难住了，试着分两部分来解决这个问题，一部分在拐角前，另一部分在拐角后。
         courseA_harvester_loops5_b: |-
-          最终的代码会有**一个**`重复`循环，**一个**`向南移动`模块和**一个**`向东`移动的模块。
+          最终的代码会有**一个**`重复`<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">6</title></block></xml>循环，**一个**`向南移动`<xml><block type="maze_moveSouth" limit="1"/></xml>模块和**一个**`向东`<xml><block type="maze_moveEast" limit="1"/></xml>移动的模块。
         courseA_harvester_loops5_c: 通过这条路来采摘所有的玉米。
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: |-
           你需要一个`重复`循环连着另一个。
-        courseA_harvester_loops5a_b: 一个循环要重复`向南移动`，另一个要重复`向东移动`。
+        courseA_harvester_loops5a_b: 一个循环要重复`向南移动`<xml><block type="maze_moveSouth" limit="1"/></xml>，另一个要重复`向东移动`<xml><block type="maze_moveEast" limit="1"/></xml>。
         courseA_harvester_loops5a_c: 走这条路，先往一个方向走，再往另一个方向走。
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: 点击`运行`看看会发生什么！
@@ -5229,7 +5229,7 @@ zh-CN:
         courseA_harvester_loops6_b: 想要采摘所有玉米就得走这条路。
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: |-
-          你需要两个`重复`循环相连！
+          你需要两个`重复`<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-10">5</title></block></xml>循环相连！
         courseA_harvester_loops7_b: 用两个循环来沿着这条路走。
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -5259,7 +5259,7 @@ zh-CN:
           用这个模块来让收割者到达玉米时，采摘它。
           
           <xml>
-          <block type="maze_nectar"/>
+          <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: 别忘了用<xml><block type="harvester_corn"/></xml>来采摘玉米！
@@ -5331,7 +5331,7 @@ zh-CN:
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          你的代码应该会像这样：
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -5784,7 +5784,7 @@ zh-CN:
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          你的代码应该会像这样：
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -7680,6 +7680,7 @@ zh-CN:
         courseC_maze_debugging5_b: 试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？
       courseC_maze_debugging5_2018_authored_hint:
         courseC_maze_debugging5_a: "工作区中已经有很多有用的模块。请不要全部删除!  \n\n使用 \"步进\" 按钮来仔细查看并找出代码出错的地方。"
+        courseC_maze_debugging5_c: You can change the direction of the turn block by clicking on the dropdown.
         courseC_maze_debugging5_b: 试着大声说出斯奎特应该做什么。它是否和工作区的代码一样？哪里出错了？
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
@@ -10172,7 +10173,7 @@ zh-CN:
         courseE_bee_concept2_c: 蜜蜂在每条小路后应该往哪个方向转？
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: '`当`循环能帮上忙吗？'
-        courseE_bee_concept2_d: 你甚至可以检查空白的位置，看看是否蜂蜜大于0个。
+        courseE_bee_concept2_d: '你甚至可以检查空白的位置，看看是否蜂蜜大于0个。'
         courseE_bee_concept2_b: 您可以使用`当`循环移动到每条路径的末尾, 并收集每个位置中的所有蜂蜜。
         courseE_bee_concept2_c: 蜜蜂在每条小路后应该往哪个方向转？
       courseE_bee_concept3_authored_hint:
@@ -10398,7 +10399,9 @@ zh-CN:
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: 这个程序经常重复什么顺序？可以将这些模块拖到函数中吗？
         courseE_farmer_functions3c_b: 不要忘记在你删除模块的时候，在主程序中调用您的函数。
-      courseE_farmer_functions3c1_2018_authored_hint: { }
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path` function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around the corners?
       courseE_farmer_functions3c_2018_authored_hint: { }
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: 把所有的代码拽出`重复`循环并放入`去采南瓜`函数中。
@@ -10432,7 +10435,9 @@ zh-CN:
         courseE_farmer_functions6c_b: '`如果/否则`模块能否帮助查找格子里是否有莴苣？'
         courseE_farmer_functions6c_c: 别忘了继续查找玉米!
       courseE_farmer_functions7_authored_hint: { }
-      courseE_farmer_functions7a1_2018_authored_hint: { }
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions` section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: 你不需要一个函数，但如果有帮助，你可以做一个！
         courseE_farmer_functions7b_b: 使用`如果/否则`语句来查找农作物, 然后根据所找到的作物转向。
@@ -10443,7 +10448,9 @@ zh-CN:
         courseE_farmer_functions7b_c: 一个`重复直到南瓜`循环可以帮助你通过迷宫。
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: 创建一个把农夫带到玉米，采摘所有的玉米，然后转身回来的函数。
-      courseE_farmer_functions8a1_2018_authored_hint: { }
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time, you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: 尝试运行给定的代码以查看它的功能。这之后你需要什么？
         courseE_farmer_functions8b_b: 将所有起始块拖到一个函数中, 以便您可以多次使用它们。
@@ -10454,7 +10461,10 @@ zh-CN:
         courseE_farmer_functions8b_c: 您需要调用多少次函数？
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: 创建一个把农夫带到玉米，采摘所有的玉米，然后转身回来的函数。
-      courseE_farmer_functions9a1_2018_authored_hint: { }
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: 是否可以使用嵌套的`如果`和`如果/否则`语句来沿路径移动？
         courseE_farmer_functions9b_b: 使用`重复直到南瓜`来沿着所有的路径移动。

@@ -670,6 +670,7 @@ it:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: {}
+      Fish Tank 2-validated_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
           di varie forme!
@@ -1027,13 +1028,13 @@ it:
       course2_collector_prog_challenge1_callout: {}
       course2_collector_prog_challenge2_callout: {}
       course3_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: Fai continuare l'esecuzione
-          di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge1_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
         courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       course3_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Fai continuare l'esecuzione
-          di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       course3_bee_debugging_challenge1_callout:
@@ -1052,8 +1053,8 @@ it:
           gli attori in diverse parti dello spazio di gioco.
       course4_artist_concept_challenge2_callout: {}
       course4_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Fai continuare l'esecuzione
-          di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       course4_bee_for_challenge1_callout: {}
@@ -1191,9 +1192,7 @@ it:
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Questo numero significa che non c'è nessun blocco
           come questo rimasto nella sezione degli strumenti.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: Questo numero significa che non c'è nessun blocco
-          come questo rimasto nella sezione degli strumenti.
+      courseB_artist_loops5_2018_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
@@ -1351,9 +1350,9 @@ it:
       courseC_starWars_loops9_callout: {}
       courseC_starWars_loops9_2018_callout: {}
       courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
+          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+          dopo aver disegnato il primo quadrato?
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
@@ -1420,6 +1419,9 @@ it:
       courseD_collector_until_challenge1_callout: {}
       courseD_farmer_until_challenge2_callout: {}
       courseD_farmer_until_challenge2_2018_callout: {}
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:
@@ -1527,19 +1529,19 @@ it:
       courseE_artist_concept_challenge2_2018_callout: {}
       courseE_artist_embed_functions8_callout: {}
       courseE_artist_functions1_callout:
-        courseD_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
+          primo quadrato.
       courseE_artist_functions1_2018_callout:
-        courseD_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
+          primo quadrato.
       courseE_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
+          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+          dopo aver disegnato il primo quadrato?
       courseE_artist_functions2_2018_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: Quando verrà eseguito questo blocco verde, tutto
+          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+          dopo aver disegnato il primo quadrato?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
@@ -1550,28 +1552,28 @@ it:
       courseE_artist_functions8b_2018_callout: {}
       courseE_artist_functions8c_2018_callout: {}
       courseE_artist_functions_challenge_callout:
-        courseE_artist_functions_challenge_callout1: Fai continuare l'esecuzione di
-          questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
         courseE_artist_functions_challenge_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: Fai continuare l'esecuzione
-          di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge1_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
         courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge1_2018_callout:
-        courseE_artist_functions_challenge1_callout1: Fai continuare l'esecuzione
-          di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge1_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
         courseE_artist_functions_challenge1_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Fai continuare l'esecuzione
-          di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_functions_challenge2_2018_callout:
-        courseE_artist_functions_challenge2_callout1: Fai continuare l'esecuzione
-          di questo programma aggiungendo più codice alla fine.
+        courseE_artist_functions_challenge2_callout1: Prosegui questo programma aggiungendo
+          altri blocchi qui sotto.
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_functions_predict1_callout: {}
@@ -1609,8 +1611,9 @@ it:
         courseD_collector_ramp8_1: Usa questo blocco per raccogliere un diamante.
       courseE_collector_ramp9_callout: {}
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_2: The toolbox is organized a little differently
-          this time! Click on the different categories to see which blocks you have.
+        courseE_farmer_functions1_2: Qui la cassetta degli attrezzi è organizzata
+          in modo leggermente diverso. Clicca sulle varie categorie per vedere che
+          blocchi contengono.
       courseE_farmer_functions10a1_2018_callout: {}
       courseE_farmer_functions10b_callout: {}
       courseE_farmer_functions10b_2018_callout: {}
@@ -1620,8 +1623,9 @@ it:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
       courseE_farmer_functions1_2018_callout:
-        courseE_farmer_functions1_2: The toolbox is organized a little differently
-          this time! Click on the different categories to see which blocks you have.
+        courseE_farmer_functions1_2: Qui la cassetta degli attrezzi è organizzata
+          in modo leggermente diverso. Clicca sulle varie categorie per vedere che
+          blocchi contengono.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
@@ -2145,12 +2149,12 @@ it:
           sono stati organizzati in categorie. Clicca su queste parole per scoprire
           dove sono finiti!
       grade4_artist_functions1_callout:
-        grade4_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        grade4_artist_functions1_1: Cominciamo usando questo blocco per creare il
+          primo quadrato.
       grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        grade4_artist_funcions2_1: Quando verrà eseguito questo blocco verde, tutto
+          il codice contenuto nella funzione verrà eseguito. Cosa dovrà fare l'artista
+          dopo aver disegnato il primo quadrato?
       grade4_artist_functions_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: I blocchi della cassetta degli attrezzi ora
           sono stati organizzati in categorie. Clicca su queste parole per scoprire

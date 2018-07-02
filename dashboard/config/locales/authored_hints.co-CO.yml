@@ -6571,8 +6571,7 @@ co:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
           not to count the space where you start!
       courseA_playLab_events2_authored_hint:
-        courseA_playLab_events2_a: "Here is the block you should connect to the `when
-          run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
+        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
         courseA_playLab_events2_b: |-
           This is the code you need to complete this puzzle:
 

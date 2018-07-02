@@ -138,7 +138,7 @@ zh-TW:
     accept_terms: 你必須同意以建立一個帳戶
     error: 發生錯誤。
     email_preference_question: 我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？
-    email_preference_privacy: "（查看我們的隱私權政策）"
+    email_preference_privacy: "(請參閱我們的隱私政策)"
     email_preference_yes: 是
     email_preference_no: 否
     email_preference_required: You must specify an email preference.

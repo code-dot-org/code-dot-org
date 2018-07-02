@@ -1596,35 +1596,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal name, student.name
   end
 
-  #
-  # Temporary: Remove the primary_authentication_option aliases after migration.
-  #
-  test 'primary_authentication_option is aliased to primary_contact_info' do
-    user = create :teacher, :with_migrated_email_authentication_option
-    refute_nil user.primary_contact_info
-    assert_equal user.primary_authentication_option, user.primary_contact_info
-    new_info = AuthenticationOption.new \
-      user: user,
-      credential_type: AuthenticationOption::EMAIL,
-      email: 'new-email@example.org',
-      hashed_email: User.hash_email('new-email@exmaple.org')
-    user.primary_authentication_option = new_info
-    assert_equal new_info, user.primary_contact_info
-  end
-
-  test 'primary_authentication_option_id is aliased to primary_contact_info_id' do
-    user = create :teacher, :with_migrated_email_authentication_option
-    refute_nil user.primary_contact_info_id
-    assert_equal user.primary_authentication_option_id, user.primary_contact_info_id
-    new_info = AuthenticationOption.create \
-      user: user,
-      credential_type: AuthenticationOption::EMAIL,
-      email: 'new-email@example.org',
-      hashed_email: User.hash_email('new-email@exmaple.org')
-    user.primary_authentication_option_id = new_info.id
-    assert_equal new_info.id, user.primary_contact_info_id
-  end
-
   test 'update_primary_contact_info is false if email and hashed_email are nil' do
     user = create :user
     successful_save = user.update_primary_contact_info(user: {email: nil, hashed_email: nil})
@@ -1756,6 +1727,41 @@ class UserTest < ActiveSupport::TestCase
     assert successful_save
     assert_equal 1, student.authentication_options.count
     assert_equal User.hash_email('first@email.com'), student.primary_contact_info.hashed_email
+  end
+
+  test 'update_primary_contact_info fails safely if the new email is already taken for sponsored user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student_in_picture_section, :multi_auth_migrated),
+      user: {email: taken_email}
+  end
+
+  test 'update_primary_contact_info fails safely if the new email is already taken for email user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student, :with_migrated_email_authentication_option),
+      user: {email: taken_email}
+  end
+
+  test 'update_primary_contact_info fails safely if the new email is already taken for oauth user' do
+    taken_email = 'taken@example.org'
+    create :student, email: taken_email
+    update_primary_contact_info_fails_safely_for \
+      create(:student, :with_migrated_google_authentication_option),
+      user: {email: taken_email}
+  end
+
+  def update_primary_contact_info_fails_safely_for(user, *params)
+    original_primary_contact_info = user.primary_contact_info
+
+    refute_creates_or_destroys AuthenticationOption do
+      refute user.update_primary_contact_info(*params)
+    end
+
+    user.reload
+    assert_equal original_primary_contact_info, user.primary_contact_info
   end
 
   test 'track_proficiency adds proficiency if necessary and no hint used' do
@@ -2138,9 +2144,8 @@ class UserTest < ActiveSupport::TestCase
     refute @teacher.authorized_teacher?
 
     # you have to be in a cohort
-    c = create :cohort
-    c.teachers << (real_teacher = create(:teacher))
-    c.save!
+    real_teacher = create(:teacher)
+    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert real_teacher.teacher?
     assert real_teacher.authorized_teacher?
 

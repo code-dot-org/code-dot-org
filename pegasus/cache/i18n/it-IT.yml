@@ -97,28 +97,7 @@ it-IT:
   congratulations_volunteer: 'Complimenti: ora che hai provato l''Ora del Codice,
     <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a>
     e aiuta gli studenti a imparare un''Ora del Codice!'
-  congratulations_on_completing_course1: Complimenti per aver completato il Corso
-    1
-  congratulations_on_completing_course2: Complimenti per aver completato il Corso
-    2
-  congratulations_on_completing_course3: Complimenti per aver completato il Corso
-    3
-  congratulations_on_completing_course4: Complimenti per aver completato il Corso
-    4
-  congratulations_on_completing_coursea: Complimenti per aver completato il Corso
-    A
-  congratulations_on_completing_courseb: Complimenti per aver completato il Corso
-    B
-  congratulations_on_completing_coursec: Complimenti per aver completato il Corso
-    C
-  congratulations_on_completing_coursed: Complimenti per aver completato il Corso
-    D
-  congratulations_on_completing_coursee: Complimenti per aver completato il Corso
-    E
-  congratulations_on_completing_coursef: Complimenti per aver completato il Corso
-    F
-  congratulations_on_completing_accelerated: Complimenti per aver completato il Corso
-    Rapido
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Promosso ai corsi successivi!
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
@@ -313,28 +292,8 @@ it-IT:
     @programmafuturo
   just_did_hoc_donor: Ho appena finito l'Ora del Codice (#HourOfCode) - Provalo! Grazie
     %{donor_twitter} per aver supportato @codeorg
-  just_did_course1_donor: Ho appena finito il Corso 1 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course2_donor: Ho appena finito il Corso 2 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course3_donor: Ho appena finito il Corso 3 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course4_donor: Ho appena finito il Corso 4 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursea_donor: Ho appena finito il Corso A - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_courseb_donor: Ho appena finito il Corso B - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursec_donor: Ho appena finito il Corso C - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursed_donor: Ho appena finito il Corso D - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursee_donor: Ho appena finito il Corso E - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursef_donor: Ho appena finito il Corso F - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_accelerated_donor: Ho appena finito il Corso Rapido - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare
     informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/.
   twitter_cs_foundational: |-
@@ -1502,6 +1461,18 @@ it-IT:
   coursed_gradelevel: Da 7 a 11 anni
   coursee_gradelevel: Da 8 a 12 anni
   coursef_gradelevel: Da 9 a 13 anni
+  coursea-2017_gradelevel: Da 4 a 7 anni
+  courseb-2017_gradelevel: Da 5 a 8 anni
+  coursec-2017_gradelevel: Da 6 a 10 anni
+  coursed-2017_gradelevel: Da 7 a 11 anni
+  coursee-2017_gradelevel: Da 8 a 12 anni
+  coursef-2017_gradelevel: Da 9 a 13 anni
+  coursea-2018_gradelevel: Da 4 a 7 anni
+  courseb-2018_gradelevel: Da 5 a 8 anni
+  coursec-2018_gradelevel: Da 6 a 10 anni
+  coursed-2018_gradelevel: Da 7 a 11 anni
+  coursee-2018_gradelevel: Da 8 a 12 anni
+  coursef-2018_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, Tablet
   codeintl_platformtext: Browser moderni, smartphone, Tablet
@@ -1652,6 +1623,32 @@ it-IT:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: Un'introduzione all'informatica per bambini
+    che non leggono ancora.
+  courseb-2017_shortdescription_congrats: Introduzione all'informatica per alunni
+    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
+    bambini leggermente più grandi.)
+  coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e dai vita
+    a creazioni artistiche, storie animate o giochi interattivi.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: Un'introduzione all'informatica per bambini
+    che non leggono ancora.
+  courseb-2018_shortdescription_congrats: Introduzione all'informatica per alunni
+    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
+    bambini leggermente più grandi.)
+  coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e dai vita
+    a creazioni artistiche, storie animate o giochi interattivi.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".

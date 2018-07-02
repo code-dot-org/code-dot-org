@@ -70,17 +70,7 @@
   congratulations: "សូម​អប​អរសាទរ!"
   congratulations_on_completing_hoc: "សូមអបអរ​សាទរ​សំរាប់​ការ​បញ្ចប់​កម្មវិធី Hour of Code"
   congratulations_volunteer: 'សូមអបអរសាទរ: ឥលូវអ្នកបានសាកល្បងកម្មវិធី Hour of Code, <a href="https://code.org/volunteer">ចុះឈ្មោះដើម្បីធ្វើជាអ្នកស្មាក់ចិត្តនៅក្នុងថ្នាក់រៀន</a> ហើយជួយសិស្សទាំងអស់ដើម្បីរៀនពីកម្មវិធី Hour of Code!'
-  congratulations_on_completing_course1: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី១"
-  congratulations_on_completing_course2: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី២"
-  congratulations_on_completing_course3: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី៣"
-  congratulations_on_completing_course4: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀនទី៤"
-  congratulations_on_completing_coursea: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ក"
-  congratulations_on_completing_courseb: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ខ"
-  congratulations_on_completing_coursec: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន គ"
-  congratulations_on_completing_coursed: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ឃ"
-  congratulations_on_completing_coursee: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ង"
-  congratulations_on_completing_coursef: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់មេរៀន ច"
-  congratulations_on_completing_accelerated: "សូម​អបអរសាទរ​សំរាប់​ការ​បញ្ចប់វគ្គសិក្សាពន្លឿន"
+  congratulations_on_completing_course: "Congratulations on completing %{course}"
   congrats_next_tutorials_title: "បញ្ចប់វគ្គសិក្សាទៅកំរិតបន្ទាប់"
   congrats_next_tutorials_desc: "សាកល្បងវគ្គខ្លី ការបង្រៀនរយៈពេលមួយម៉ោងឬសាកល្បង <a href=\"%{current_path}/next\">មេរៀនរបស់ដៃគូ</a>។"
   get_a_certificate_of_achievement: "ទទួលបានវិញ្ញាបនបត្រនៃការសិក្សា"
@@ -213,17 +203,7 @@
   just_did_coursef: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ច - មើលទាំងអស់គ្នា! @codeorg"
   just_did_accelerated: "ខ្ញុំទើបតែបញ្ចប់មេរៀនពន្លឿន - មើលទាំងអស់គ្នា! @codeorg"
   just_did_hoc_donor: 'ខ្ញុំទើបតែរៀន #HourOfCode - មើលទាំងអស់គ្នា! (អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg)'
-  just_did_course1_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី១ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_course2_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី២ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_course3_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៣ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_course4_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនទី៤ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursea_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ក - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_courseb_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ខ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursec_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន គ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursed_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ឃ - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursee_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ង - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_coursef_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀន ច - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
-  just_did_accelerated_donor: "ខ្ញុំទើបតែបញ្ចប់មេរៀនពន្លឿន - មើលទាំងអស់គ្នា! អរគុណ %{donor_twitter} ចំពោះការគាំទ្រ @codeorg"
+  just_did_course_donor: "I just finished %{course} - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "៩ក្នងចំណោម១០នាក់ទទួលស្គាល់ថា សាលាគួរតែបង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័រ។ http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
   twitter_cs_foundational: "វិទ្យាសាស្រ្តកុំព្យូទ័រគឺជាមូលដ្ឋានគ្រិះសំរាប់សិស្សគ្រប់រូចក្នុងការសិក្សា។ https://youtu.be/QvyTEx1wyOY"
   learn_hoc: "រៀនកម្មវិធីHour of Code"
@@ -1113,6 +1093,18 @@
   coursed_gradelevel: "ថ្នាក់ទី៨ ឡើងទៅ"
   coursee_gradelevel: "Ages 8-12"
   coursef_gradelevel: "Ages 9-13"
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: ថ្នាក់ទី៨ ឡើងទៅ
+  coursee-2017_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: ថ្នាក់ទី៨ ឡើងទៅ
+  coursee-2018_gradelevel: Ages 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1221,6 +1213,18 @@
   coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
   coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
   coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
+  coursea-2017_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

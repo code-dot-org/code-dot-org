@@ -512,52 +512,51 @@ tr:
         çizimi tamamlayana kadar tekrar edin.Her defasında rengi farklı olacaktır.
       4-5 Artist 11_instruction: Yeşil çizgileri tamamlayın. Çizgiler 300 piksel uzunluğunda
         ve aralarındaki mesafe 15 pikseldir.
-      4-5 Artist 2_instruction: Kareyi tamamlamak için 'tekrarla' döngü kullanabilir
-        misiniz.
+      4-5 Artist 2_instruction: Kareyi tamamlamak için döngü kullanabilir misiniz?
       4-5 Artist 3.5_instruction: Bu kodu çalıştırsan ne olacağını dene ("Çalıştır"
         düğmesi ile deneyebilirsin). Sonra bu kodu çizimi tamamlamak için gerektiği
         kadar tekrarla!
-      4-5 Artist 3_instruction: Bu çiçekliğin 600 çevresi var.  Uzun kenar 200 uzunlukta
-        olacak şekilde. Bir dikdörtgen çizin.
-      4-5 Artist 4_instruction: Bir çemberde kaç derecedir? Blokları tekrarlayarak
+      4-5 Artist 3_instruction: Bu dikdörtgen çiçekliğin çevresi 600 birim.  Uzun
+        kenar 200 birim. En az komutla bu dikdörtgeni çizin.
+      4-5 Artist 4_instruction: Bir çemberde kaç derece var? Blokları tekrarlayarak
         bir renk çemberi oluşturun.
       4-5 Artist 5_instruction: Zombinin çizimi tamamlaması için önceden hazırlanmış
         döngüde "???" yerine ne kullanabiliriz?
       4-5 Artist 6_instruction: Eşkenar üçgenin açıları 60, 60, 60 derecedir. Her
         kenarı 200 pikseldir. Çizimi tamamlayın.
       4-5 Artist 7_instruction: Bu dik üçgenin açıları, 30, 60 ve 90 derecedir. Eğimli
-        tarafının uzunluğu çift 100 piksel yüksekliğindedir. Çizimi tamamlayın.
+        tarafının(hipotenüsün) uzunluğu 200 piksel yüksekliğindedir. Çizimi tamamlayın.
       4-5 Artist 8_instruction: "Bir futbol sahasındaki orta saha çizgisi kenarları
         ile dikeydir.   \r\nDikdörtgenin çevresi toplamda 800 pikseldir ve uzun kenarı
         240 pikseldir. Orta saha çizgisi kaç pikseldir?   \r\n\r\nSınırları ve orta
         saha çizgisini çizin."
       4-5 Artist 9_instruction: Tasarımın simetrik olması için diğer yarsını çizin.
-        Üçgenler eşkenar ve 50 piksel uzunluğunda.
+        Üçgenler eşkenar ve kenar uzunlukları 50 piksel uzunluğunda.
       4-5 Artist Assessment 1_instruction: 'Değerlendirme: Döngü kullanarak bir eşkenar
-        üçgen çizin. Her taraf 300 pixel olsun.'
-      4-5 Artist For Loops 1_instruction: 1'den 10'a kadar sayıları geniş kutulara
-        koyun ve kodu çalıştırın.
-      4-5 Artist For Loops 11_instruction: '"for" bloğunu tamamlayın böylece 0,20,40,60,80...200
-        şeklinde saysın.'
+        üçgen çizin. Her kenar 300 piksel olsun.'
+      4-5 Artist For Loops 1_instruction: Kutucuktan 1'den 10'a kadar genişliği seçin
+        ve kodu çalıştırın.
+      4-5 Artist For Loops 11_instruction: Şununla Say (for) döngüsünü tamamlayın
+        böylece 0,20,40,60,80... 200 şeklinde saysın.
       4-5 Artist For Loops 12_instruction: 'Eğer ters düşerse ne olur ve numaraları?
         "200, 180, 160, 140, ...0 120 sayar o kadar." engellemek için tam '
-      4-5 Artist For Loops 13_instruction: 'Bu dizayn "for" döngüsü olmadan çok fazla
-        blok alıyor! "For" bloğu ile satırları azaltın. İpucu: son satır uzunluğu
-        250 pixel.'
+      4-5 Artist For Loops 13_instruction: 'Bu tasarım şununla say (for) döngüsü olmadan
+        çok fazla blok alıyor! Şununla Say (for) döngüsü ile satırları azaltın. İpucu:
+        son satır uzunluğu 250 piksel.'
       4-5 Artist For Loops 14_instruction: 'Birisi kodu başlattı ama daha sonra fark
-        etti ki bunun daha kolay bir yolu olmalı! Üçgen sarmal tamamlamak için "For"
-        bloğunu kullanın. (İpucu: son satı ruzunluğu 300 pixeldir.)'
-      4-5 Artist For Loops 15_instruction: 'Birisi koda başladı ama daha sonra anladı
-        ki bunun daha kolay bir yolu olmalı! Altıgen sarmal yapmak için "for" bloğunu
-        kullanın.(İpucu: son satır uzunluğu 200 pixeldir.)'
+        etti ki bunun daha kolay bir yolu olmalı! Üçgen sarmalı tamamlamak için Şununla
+        Say (for) bloğunu kullanın. (İpucu: son satır uzunluğu 300 pikseldir.)'
+      4-5 Artist For Loops 15_instruction: 'Birisi kodu başlattı ama daha sonra fark
+        etti ki bunun daha kolay bir yolu olmalı! Altıgen sarmalı tamamlamak için
+        Şununla Say (for) bloğunu kullanın. (İpucu: son satır uzunluğu 200 pikseldir.)'
       4-5 Artist For Loops 2_instruction: Bu bir "tekrarla" bloğu. 1,2,3... 10 yazmak
         yerine, "tekrarla" bloğu içine 10 yazarak döngüyü aynı işlemi yapmasını sağlayabilirsin.
         Döngü içine 10 yazınız.
-      4-5 Artist For Loops 3_instruction: 1'den 50'ye kadar nasıl sayabiliriz? "For"
-        bloğunu düzenleyin.
-      4-5 Artist For Loops 4_instruction: '"İçin" bloğunu 1''den 10''a kadar sayacak
-        şekilde düzenle.'
-      4-5 Artist For Loops 6_instruction: 50, 60, 70, 80 ve 90 pixel kenar uzunluklarına
+      4-5 Artist For Loops 3_instruction: 1'den 50'ye kadar nasıl sayabiliriz? Şununla
+        say (for) döngüsünü düzenleyin.
+      4-5 Artist For Loops 4_instruction: Şununla Say (for) döngüsünü 1'den 10'a kadar
+        sayacak şekilde düzenle.
+      4-5 Artist For Loops 6_instruction: 50, 60, 70, 80 ve 90 piksel kenar uzunluklarına
         sahip kareleri çiz. "Kare çiz" fonksiyonunu beş kere kullanman gerekecek.
       4-5 Artist For Loops 7_instruction: 'Aynı kareleri tekrar çizin. Ancak boyutları
         değiştirmek için "count with" butonunu kullanın. "Sayaç" bloğunu "kare çiz"
@@ -590,7 +589,7 @@ tr:
         bir veya birden fazla döngü kullanarak istediğiniz şekilde kullanın. Örneği
         görüntülemek için Çalıştır'a basın.
       4-5 Artist Functions 15 Assessment_instruction: 'Değerlendirme: kareler oluşturmak
-        için "Bir kare çiz" işlevini kullanın. 50, 100 ve 150 piksel karelerdir.'
+        için "Bir kare çiz" fonksiyonunu kullanın. Kareler 50, 100 ve 150 pikseldir.'
       4-5 Artist Functions 2a_instruction: Şimdi bu, blokları "küçük bir üçgen çiz"
         fonksiyonunun içine koyun ve bu fonksiyonu çağırın.
       4-5 Artist Functions 2b_instruction: Şimdi ise verilen blokları kullanarak "küçük
@@ -6150,6 +6149,8 @@ tr:
       U3 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
+      U3 - Simulation - Template_2018_instruction: Use a while loop to "flip 10 coins"
+        and write them to the screen. (Click to see full instructions)
       U3 - Sprites - Intro Sprites_instruction: Do This
       U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
       U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
@@ -7176,6 +7177,7 @@ tr:
       U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart
         to show the change in popularity of both “
       U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Line Chart Template_2018_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
@@ -7405,6 +7407,8 @@ tr:
         of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - part 1 - template_instruction: 'Use console.log to display
         the records returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_2018_instruction: 'Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
@@ -7619,6 +7623,8 @@ tr:
         basıldığında sol ve sağa hareket etmesi için programlayın. Kiki''ye tıklandığında,
         arkadaşlarına kalpler fırlatmalı. '
       Vigenere_instruction: Test
+      Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click
+        on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run"
         and then click on her?
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches

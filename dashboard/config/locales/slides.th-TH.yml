@@ -543,7 +543,7 @@ th:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: นี่คือบล็อกที่คุณใช้วาดเส้น ใช้บล็อกให้ถูกต้องเพื่อย้ายศิลปินไปในที่ที่เขาต้องการไปเพื่อวาดเส้นสีเทา
+        text: นี่คือบล็อกที่คุณใช้วาดเส้น ใช้บล็อกให้ถูกต้องเพื่อย้ายศิลปินไปในที่ที่เขาต้องการไปเพื่อวาดทับเส้นสีเทา
       2:
         image: notes/C1_artist_intro_2.png
         text: นี่คือบล็อกที่คุณใช้กระโดด เมื่อใช้บล็อกเหล่านี้ ศิลปินของคุณย้ายที่แต่ไม่ได้วาดอะไร
@@ -698,7 +698,7 @@ th:
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: การดีบั๊กคือการค้นหาและแก้ไขปัญหา มีหลายวิธีในการตรวจแก้จุดบกพร่องของปัญหา
+        text: การดีบั๊ก(Debugging) คือการค้นหาและแก้ไขปัญหา มีหลายวิธีในการตรวจแก้จุดบกพร่องของปัญหา
           หนึ่งในวิธีที่ง่ายที่สุดคือการทำทีละขั้นตอนจนกว่าคุณจะพบว่ามีสิ่งใดที่ไม่ถูกต้อง
           ตอนนี้ฉันพยายามที่จะทำท่ากลับตัว โดยการหมุนกลับตัวบนท่อนบีมแต่ฉันก็พลาดตกอยู่เรื่อย
       2:
@@ -1256,9 +1256,9 @@ th:
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: หนึ่งในสิ่งที่สุดยอดในการเขียนโปรแกรมคอมพิวเตอร์ก็คือ เมื่อคุณได้สอนคอมพิวเตอร์ให้รู้จักวิธีการดำเนินการใดๆ
+          แล้ว คุณสามารถเรียกฟังก์ชันนั้นมาใช้งานอีกครั้งหนึ่ง คุณให้ชื่อมันและจากนั้นคุณก็สามารถเรียกชื่อมันมาใช้งานได้
+          จริงๆ แล้วมันก็เหมือนกับเป็นการขยายภาษานั่นเอง
       2:
         image: notes/C3_artist_functions_2.png
         text: ในโปรแกรมที่เราสร้างขึ้นมานั้น เราได้เรียนรู้วิธีการวาดสี่เหลี่ยมจัตุรัสโดยการเคลื่อนไหวและการหันไปสี่ครั้ง
@@ -1622,9 +1622,9 @@ th:
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: เรื่องนี้เกี่ยวกับบล็อกเงื่อนไข คือว่าถ้าคุณอยู่ที่ดอกไม้หรือรังผึ้งแล้วให้ทำอะไร
-          ประโยชน์เก็คือมื่อเราไม่ทราบว่ามีน้ำผึ้งหรือน้ำหวานมากเท่าใดที่จะทำการเก็บ
-          ซึ่งแสดงให้เห็นเป็นครื่องหมายคำถามนี้
+        text: เรื่องนี้เกี่ยวกับบล็อกเงื่อนไข (conditional block) คือว่าถ้าคุณมาอยู่ที่ดอกไม้หรือที่รังผึ้งแล้ว
+          จะให้คุณทำอะไร มีประโยชน์ในกรณีที่เราไม่ทราบว่ามีน้ำผึ้งหรือน้ำหวานมากเท่าใดให้จัดการ
+          โดยจะแสดงให้เราเห็นด้วยการใช้ครื่องหมายคำถาม
       2:
         image: notes/C4_bee_conditional_2.png
         text: สำหรับตัวอย่างนี้เ ถือว่าเป็นดอก ดังนั้นให้เราเก็บน้ำหวานจากเกสรทั้งหมด
@@ -1632,23 +1632,20 @@ th:
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: We have a new block that's called the if/else block. It's a conditional
-          statement just like the if block you've used in the puzzles before. But
-          now there's a new part at the bottom that says else. The if/else block lets
-          the bee make a decision between two sets of actions. If the bee is at a
-          flower, the bee will do the set of actions you put in the first part where
-          it says do. If the bee is not at a flower, the bee will do the set of actions
-          you put in the slot where it says else.
+        text: เรามีบล็อกใหม่ที่เรียกว่าบล็อก ถ้า/อย่างอื่น (if/else block) ซึ่งเป็นคำสั่งแบบมีเงื่อนไขเช่นเดียวกับบล็อกถ้า
+          (if block) ที่คุณเคยใช้ในปริศนาก่อนหน้านี้ แต่ตอนนี้มีส่วนใหม่ที่ต่อด้านล่างที่บอกว่าอย่างอื่น
+          (else) ให้ทำอะไรด้วย บล็อก ถ้า/อย่างอื่น นี้ช่วยให้ผึ้งทำการตัดสินใจระหว่างภารกิจสองอย่าง
+          คือถ้าผึ้งอยู่ที่ดอกไม้ผึ้งจะทำภารกิจที่คุณใส่ไว้ในส่วนแรกที่เราให้ผึ้งทำ
+          ถ้าผึ้งไม่ได้อยู่ที่ดอกไม้ผึ้งจะทำภารกิจที่คุณใส่ในช่องที่บอกว่าเป็นอย่างอื่น
+          (else) แทน
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: คำสั่งถ้า (if statement) นี้เป็นวิธีการที่คอมพิวเตอร์ใช้ในการตัดสินใจ
+          มนุษย์เราตั้งเงื่อนไขให้คอมพิวเตอร์ โดยบอกว่าถ้าคอมพิวเตอร์เจอสถานการณ์อย่างนี้ก็ให้ทำแบบนี้
+          อย่างอื่น (else) ก็ให้ทำอย่างนั้นแทน ด้านบนของบล็อก ถ้า/อย่างอื่น (if/else
+          block) บอกว่าถ้าอยู่ที่ดอกไม้ แต่ด้านบนของบล็อกของเราอาจจะทำอย่างอื่นได้เช่นกัน
+          เช่นถ้าน้ำหวานจากเกสรสามารถเก็บได้เท่ากับ 2 ครั้ง หรือถ้ามีเส้นทางอยู่ข้างหน้าบล็อกของเราก็ให้เราทำอย่างเดียวกัน
+          ดังนั้นถ้าคำสั่งที่อยู่ด้านบนเป็นจริงมันจะทำภารกิจชุดแรก แต่ถ้าคำสั่งที่อยู่ด้านบนเป็นเท็จมันจะทำภารกิจชุดที่สองแทน
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
