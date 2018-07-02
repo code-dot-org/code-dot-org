@@ -12,14 +12,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  # GET /users/auth/:provider/connect
-  def connect
-    return head(:bad_request) unless current_user&.migrated? && AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(params[:provider])
-
-    session[:connect_provider] = 2.minutes.from_now
-    redirect_to omniauth_authorize_path(current_user, params[:provider])
-  end
-
   # Call GET /users/auth/:provider/connect and the callback will trigger this code path
   def connect_provider
     return head(:bad_request) unless can_connect_provider?

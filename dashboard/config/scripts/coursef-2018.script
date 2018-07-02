@@ -245,6 +245,7 @@ level 'Virtual Pet Freeplay'
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'courseF_video_csMatters_2018'
 named_level 'InspirationalArtwork_2018'
+named_level 'courseF_project_1'
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project_2018'
