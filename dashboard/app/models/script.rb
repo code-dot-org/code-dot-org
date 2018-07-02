@@ -475,6 +475,47 @@ class Script < ActiveRecord::Base
     ScriptConstants.script_in_category?(:minecraft, name)
   end
 
+  def k5_draft_course?
+    ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
+  def csf_international?
+    ScriptConstants.script_in_category?(:csf_international, name)
+  end
+
+  def k5_course?
+    (
+      Script::CATEGORIES[:csf_international] +
+      Script::CATEGORIES[:csf]
+    ).include? name
+  end
+
+  def csf?
+    k5_course? || twenty_hour?
+  end
+
+  def cs_in_a?
+    name.match(Regexp.union('algebra', 'Algebra'))
+  end
+
+  def k1?
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
+      Script::COURSE1_NAME
+    ].include?(name)
+  end
+
+  def beta?
+    Script.beta? name
+  end
+
+  def self.beta?(name)
+    name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
   def get_script_level_by_id(script_level_id)
     script_levels.find {|sl| sl.id == script_level_id.to_i}
   end
@@ -507,24 +548,6 @@ class Script < ActiveRecord::Base
     end
 
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
-  end
-
-  def beta?
-    Script.beta? name
-  end
-
-  def self.beta?(name)
-    name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
-  end
-
-  def k1?
-    [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::COURSE1_NAME
-    ].include?(name)
   end
 
   private def csf_tts_level?
@@ -575,29 +598,6 @@ class Script < ActiveRecord::Base
     if has_banner?
       "banner_#{name}.jpg"
     end
-  end
-
-  def k5_course?
-    (
-      Script::CATEGORIES[:csf_international] +
-      Script::CATEGORIES[:csf]
-    ).include? name
-  end
-
-  def k5_draft_course?
-    ScriptConstants.script_in_category?(:csf2_draft, name)
-  end
-
-  def csf?
-    k5_course? || twenty_hour?
-  end
-
-  def csf_international?
-    ScriptConstants.script_in_category?(:csf_international, name)
-  end
-
-  def cs_in_a?
-    name.match(Regexp.union('algebra', 'Algebra'))
   end
 
   def has_lesson_pdf?
