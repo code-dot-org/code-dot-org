@@ -39,7 +39,7 @@ Scenario: Version warning announcement on course and unit overview pages
 @as_student
 @no_mobile
 Scenario: Versions warning announcement on script overview page
-  When I am on "http://studio.code.org/s/coursea"
+  When I am on "http://studio.code.org/s/coursea-2017"
   And I wait until element "#script-title" is visible
   And element "#version-selector" is visible
   Then element ".announcement-notification:contains(right version)" does not exist
@@ -47,7 +47,7 @@ Scenario: Versions warning announcement on script overview page
   When I am on "http://studio.code.org/s/coursea-2018/next"
   And I wait until current URL contains "/s/coursea-2018/stage/1/puzzle/1"
 
-  When I am on "http://studio.code.org/s/coursea"
+  When I am on "http://studio.code.org/s/coursea-2017"
   And I wait until element "#script-title" is visible
   And element "#version-selector" is visible
   Then element ".announcement-notification:contains(right version)" is visible
@@ -66,7 +66,7 @@ Scenario: Versions warning announcement on script overview page
 @as_student
 @no_mobile
 Scenario: Switch versions using dropdown on script overview page
-  When I am on "http://studio.code.org/s/coursea"
+  When I am on "http://studio.code.org/s/coursea-2017"
   And I wait until element "#script-title" is visible
   And element "#version-selector" is visible
   And I select the "2018" option in dropdown "version-selector" to load a new page
@@ -75,7 +75,7 @@ Scenario: Switch versions using dropdown on script overview page
   When I wait until element "#script-title" is visible
   And element "#version-selector" is visible
   And I select the "2017" option in dropdown "version-selector" to load a new page
-  Then I wait until I am on "http://studio.code.org/s/coursea"
+  Then I wait until I am on "http://studio.code.org/s/coursea-2017"
 
 @as_student
 @no_mobile

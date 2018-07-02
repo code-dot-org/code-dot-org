@@ -34,6 +34,7 @@
     "disable_sharing": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"One of the turns is 15 degrees too small.\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n   {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If the program runs too fast to see what's happening, try slowing it down with the slider.\",\r\n  \"hint_id\": \"2-3_Artist_Debugging_3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

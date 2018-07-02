@@ -71,12 +71,8 @@ class SingleStudentAssessmentsMCTable extends Component {
   };
 
   questionCellFormatter = (question, {rowData, rowIndex}) => {
-    // TODO(caleybrock): Since we're only filtering for multiple choice
-    // questions, this questionNumber may be incorrect. Look into getting
-    // question number from the server.
-    const questionNumber = rowIndex + 1;
     return (
-      <div>{`${questionNumber}. ${question}`}</div>
+      <div>{`${rowData.questionNumber}. ${question}`}</div>
     );
   };
 
@@ -107,7 +103,6 @@ class SingleStudentAssessmentsMCTable extends Component {
         header: {
           label: i18n.question(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
         },
         cell: {
           format: this.questionCellFormatter,

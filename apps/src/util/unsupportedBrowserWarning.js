@@ -13,7 +13,7 @@ export var checkForUnsupportedBrowsersOnLoad = function () {
       if (isMobileDevice()) {
         if (appOptions.app === 'applab') {
           textDivId = '#applab-unsupported-tablet';
-        } else if (appOptions.app === 'gamelab') {
+        } else if (appOptions.app === 'gamelab' && !appOptions.valueTypeTabShapeMap) {
           textDivId = '#gamelab-unsupported-tablet';
         }
         dismissable = true;

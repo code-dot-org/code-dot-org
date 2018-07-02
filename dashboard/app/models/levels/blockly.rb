@@ -75,6 +75,7 @@ class Blockly < Level
     disable_if_else_editing
     show_type_hints
     thumbnail_url
+    include_shared_functions
   )
 
   before_save :update_ideal_level_source
@@ -160,6 +161,12 @@ class Blockly < Level
     0
   end
 
+  CATEGORY_CUSTOM_NAMES = {
+    Behavior: 'Behaviors',
+    Location: 'Locations',
+    PROCEDURE: 'Functions',
+    VARIABLE: 'Variables',
+  }
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
@@ -171,6 +178,13 @@ class Blockly < Level
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
+        xml.child << category_node
+        block.remove
+      elsif block.attr('type') == 'custom_category'
+        custom_type = block.xpath('title').text
+        category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
+        category_node = Nokogiri::XML("<category name='#{category_name}'>").child
+        category_node['custom'] = custom_type
         xml.child << category_node
         block.remove
       else
@@ -187,11 +201,21 @@ class Blockly < Level
     return xml_string if xml.nil?
     xml.xpath('/xml/category').map(&:remove).each do |category|
       category_name = category.xpath('@name')
-      category_xml = <<-XML.strip_heredoc.chomp
-        <block type="category">
-          <title name="CATEGORY">#{category_name}</title>
-        </block>
-      XML
+      custom_category = category.xpath('@custom')
+      category_xml =
+        if custom_category.present?
+          <<-XML.strip_heredoc.chomp
+            <block type="custom_category">
+              <title name="CUSTOM">#{custom_category}</title>
+            </block>
+          XML
+        else
+          <<-XML.strip_heredoc.chomp
+            <block type="category">
+              <title name="CATEGORY">#{category_name}</title>
+            </block>
+          XML
+        end
       block = Nokogiri::XML(category_xml, &:noblanks).child
       xml << block
       xml << category.children
@@ -268,6 +292,7 @@ class Blockly < Level
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
+        level_prop['sharedFunctions'] = shared_functions if include_shared_functions
       end
 
       if is_a? Applab
@@ -436,5 +461,11 @@ class Blockly < Level
     Rails.cache.fetch("blocks/#{type}", force: !Script.should_cache?) do
       Block.where(level_type: type).map(&:block_options)
     end
+  end
+
+  def shared_functions
+    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
+      SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
+    end.join
   end
 end

@@ -37,6 +37,7 @@
     "images": "[\r\n  {\"filename\": \"https://images.code.org/3947bcb7fca8d3d9a817904f2d5985b9-image-1478642066737.png\", \"position\": [0,0]}\r\n]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

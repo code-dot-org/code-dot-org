@@ -578,7 +578,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
+    %w(course1 course2 course3 course4 coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include? name
   end
 
   def k5_draft_course?
@@ -598,14 +598,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_pdf?
-    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+    return false if %w(coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include?(name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+    return false if %w(coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include?(name)
 
     k5_course? || %w(csp1-2017 csp2-2017 csp3-2017 cspunit1 cspunit2 cspunit3).include?(name)
   end
@@ -1178,7 +1178,7 @@ class Script < ActiveRecord::Base
       has_verified_resources: !!script_data[:has_verified_resources],
       has_lesson_plan: !!script_data[:has_lesson_plan],
       curriculum_path: script_data[:curriculum_path],
-      script_announcements: script_data[:script_announcements],
+      script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
     }.compact

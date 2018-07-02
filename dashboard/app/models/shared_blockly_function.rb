@@ -32,6 +32,14 @@ class SharedBlocklyFunction < ApplicationRecord
   EXTENSION = 'xml'
 
   def file_content
+    to_xml_doc.to_xml
+  end
+
+  def to_xml_fragment
+    to_xml_doc.root.to_xml
+  end
+
+  def to_xml_doc
     Nokogiri::XML::Builder.new do |xml|
       xml.block(
         type: DEFINITION_BLOCK_TYPES[block_type.to_sym],
@@ -50,7 +58,7 @@ class SharedBlocklyFunction < ApplicationRecord
           xml << stack
         end
       end
-    end.to_xml
+    end.doc
   end
 
   def self.arguments_from_xml(args_xml)

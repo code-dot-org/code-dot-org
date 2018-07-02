@@ -117,20 +117,14 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     @expected_questions = {
       'Pre Workshop' => {
         general: {
-          'sampleMatrix' => {
-            text: 'How do you feel about these statements?',
-            answer_type: ANSWER_NONE
-          },
           'sampleMatrix_0' => {
-            text: 'I am excited for CS Principles',
+            text: 'How do you feel about these statements? I am excited for CS Principles',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix',
             max_value: 5
           },
           'sampleMatrix_1' => {
-            text: 'I am prepared for CS Principles',
+            text: 'How do you feel about these statements? I am prepared for CS Principles',
             answer_type: ANSWER_SELECT_VALUE,
-            parent: 'sampleMatrix',
             max_value: 5
           },
           'sampleScale' => {
@@ -389,7 +383,6 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       {
         'Pre Workshop' => {
           general: {
-            'sampleMatrix' => {},
             'sampleMatrix_0' => {
               1 => 2,
               4 => 1

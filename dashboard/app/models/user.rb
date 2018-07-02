@@ -2,53 +2,53 @@
 #
 # Table name: users
 #
-#  id                               :integer          not null, primary key
-#  studio_person_id                 :integer
-#  email                            :string(255)      default(""), not null
-#  parent_email                     :string(255)
-#  encrypted_password               :string(255)      default("")
-#  reset_password_token             :string(255)
-#  reset_password_sent_at           :datetime
-#  remember_created_at              :datetime
-#  sign_in_count                    :integer          default(0)
-#  current_sign_in_at               :datetime
-#  last_sign_in_at                  :datetime
-#  current_sign_in_ip               :string(255)
-#  last_sign_in_ip                  :string(255)
-#  created_at                       :datetime
-#  updated_at                       :datetime
-#  username                         :string(255)
-#  provider                         :string(255)
-#  uid                              :string(255)
-#  admin                            :boolean
-#  gender                           :string(1)
-#  name                             :string(255)
-#  locale                           :string(10)       default("en-US"), not null
-#  birthday                         :date
-#  user_type                        :string(16)
-#  school                           :string(255)
-#  full_address                     :string(1024)
-#  school_info_id                   :integer
-#  total_lines                      :integer          default(0), not null
-#  secret_picture_id                :integer
-#  active                           :boolean          default(TRUE), not null
-#  hashed_email                     :string(255)
-#  deleted_at                       :datetime
-#  purged_at                        :datetime
-#  secret_words                     :string(255)
-#  properties                       :text(65535)
-#  invitation_token                 :string(255)
-#  invitation_created_at            :datetime
-#  invitation_sent_at               :datetime
-#  invitation_accepted_at           :datetime
-#  invitation_limit                 :integer
-#  invited_by_id                    :integer
-#  invited_by_type                  :string(255)
-#  invitations_count                :integer          default(0)
-#  terms_of_service_version         :integer
-#  urm                              :boolean
-#  races                            :string(255)
-#  primary_authentication_option_id :integer
+#  id                       :integer          not null, primary key
+#  studio_person_id         :integer
+#  email                    :string(255)      default(""), not null
+#  parent_email             :string(255)
+#  encrypted_password       :string(255)      default("")
+#  reset_password_token     :string(255)
+#  reset_password_sent_at   :datetime
+#  remember_created_at      :datetime
+#  sign_in_count            :integer          default(0)
+#  current_sign_in_at       :datetime
+#  last_sign_in_at          :datetime
+#  current_sign_in_ip       :string(255)
+#  last_sign_in_ip          :string(255)
+#  created_at               :datetime
+#  updated_at               :datetime
+#  username                 :string(255)
+#  provider                 :string(255)
+#  uid                      :string(255)
+#  admin                    :boolean
+#  gender                   :string(1)
+#  name                     :string(255)
+#  locale                   :string(10)       default("en-US"), not null
+#  birthday                 :date
+#  user_type                :string(16)
+#  school                   :string(255)
+#  full_address             :string(1024)
+#  school_info_id           :integer
+#  total_lines              :integer          default(0), not null
+#  secret_picture_id        :integer
+#  active                   :boolean          default(TRUE), not null
+#  hashed_email             :string(255)
+#  deleted_at               :datetime
+#  purged_at                :datetime
+#  secret_words             :string(255)
+#  properties               :text(65535)
+#  invitation_token         :string(255)
+#  invitation_created_at    :datetime
+#  invitation_sent_at       :datetime
+#  invitation_accepted_at   :datetime
+#  invitation_limit         :integer
+#  invited_by_id            :integer
+#  invited_by_type          :string(255)
+#  invitations_count        :integer          default(0)
+#  terms_of_service_version :integer
+#  urm                      :boolean
+#  races                    :string(255)
+#  primary_contact_info_id  :integer
 #
 # Indexes
 #
@@ -72,7 +72,6 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/chat_client'
 require 'cdo/shared_cache'
 require 'school_info_interstitial_helper'
 
@@ -80,6 +79,8 @@ class User < ActiveRecord::Base
   include SerializedProperties
   include SchoolInfoDeduplicator
   include LocaleHelper
+  include UserMultiAuthHelper
+  include UserPermissionGrantee
   include Rails.application.routes.url_helpers
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
@@ -148,7 +149,9 @@ class User < ActiveRecord::Base
 
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
+  PROVIDER_MIGRATED = 'migrated'.freeze
 
+  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_PROVIDERS = %w(
     clever
     facebook
@@ -179,7 +182,6 @@ class User < ActiveRecord::Base
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
-  has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
 
   # Teachers can be in multiple cohorts
@@ -216,7 +218,20 @@ class User < ActiveRecord::Base
   has_many :districts, through: :districts_users
 
   has_many :authentication_options, dependent: :destroy
-  belongs_to :primary_authentication_option, class_name: 'AuthenticationOption'
+  belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
+  # This custom validator makes email collision checks on the AuthenticationOption
+  # model also show up as validation errors for the email field on the User
+  # model.
+  # There's probably some performance cost in additional queries here - once
+  # we are fully migrated to multi-auth, we may want to remove this code and
+  # check that we handle validation errors from AuthenticationOption everywhere.
+  validate if: :migrated? do |user|
+    user.authentication_options.each do |ao|
+      unless ao.valid?
+        ao.errors.each {|k, v| user.errors.add k, v}
+      end
+    end
+  end
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
@@ -284,33 +299,13 @@ class User < ActiveRecord::Base
   end
 
   def email
-    return read_attribute(:email) unless provider == 'migrated'
-    primary_authentication_option.try(:email)
+    return read_attribute(:email) unless migrated?
+    primary_contact_info.try(:email) || ''
   end
 
   def hashed_email
-    return read_attribute(:hashed_email) unless provider == 'migrated'
-    primary_authentication_option.try(:hashed_email)
-  end
-
-  def facilitator?
-    permission? UserPermission::FACILITATOR
-  end
-
-  def workshop_organizer?
-    permission? UserPermission::WORKSHOP_ORGANIZER
-  end
-
-  def program_manager?
-    permission? UserPermission::PROGRAM_MANAGER
-  end
-
-  def workshop_admin?
-    permission? UserPermission::WORKSHOP_ADMIN
-  end
-
-  def project_validator?
-    permission? UserPermission::PROJECT_VALIDATOR
+    return read_attribute(:hashed_email) unless migrated?
+    primary_contact_info.try(:hashed_email) || ''
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -320,62 +315,6 @@ class User < ActiveRecord::Base
 
   def delete_course_as_facilitator(course)
     courses_as_facilitator.find_by(course: course).try(:destroy)
-  end
-
-  # admin can be nil, which should be treated as false
-  def admin_changed?
-    # no change: false
-    # false <-> nil: false
-    # false|nil <-> true: true
-    !!changes['admin'].try {|from, to| !!from != !!to}
-  end
-
-  def log_admin_save
-    ChatClient.message 'infra-security',
-      "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
-      "environment: #{rack_env}, "\
-      "user ID: #{id}, "\
-      "email: #{email}, "\
-      "permission: ADMIN",
-      color: 'yellow'
-  end
-
-  # don't log changes to admin permission in development, test, and ad_hoc environments
-  def self.should_log?
-    return [:staging, :levelbuilder, :production].include? rack_env
-  end
-
-  def delete_permission(permission)
-    @permissions = nil
-    permission = permissions.find_by(permission: permission)
-    permissions.delete permission if permission
-  end
-
-  def permission=(permission)
-    @permissions = nil
-    permissions << permissions.find_or_create_by(user_id: id, permission: permission)
-  end
-
-  # @param permission [UserPermission] the permission to query.
-  # @return [Boolean] whether the User has permission granted.
-  # TODO(asher): Determine whether request level caching is sufficient, or
-  #   whether a memcache or otherwise should be employed.
-  def permission?(permission)
-    return false unless teacher?
-    if @permissions.nil?
-      # The user's permissions have not yet been cached, so do the DB query,
-      # caching the results.
-      @permissions = UserPermission.where(user_id: id).pluck(:permission)
-    end
-    # Return the cached results.
-    return @permissions.include? permission
-  end
-
-  # Revokes all escalated permissions associated with the user, including admin status and any
-  # granted UserPermission's.
-  def revoke_all_permissions
-    update_column(:admin, nil)
-    UserPermission.where(user_id: id).each(&:destroy)
   end
 
   def district_contact?
@@ -429,19 +368,8 @@ class User < ActiveRecord::Base
     user
   end
 
-  def self.find_or_create_district_contact(params, invited_by_user)
-    find_or_create_teacher(params, invited_by_user, UserPermission::DISTRICT_CONTACT)
-  end
-
   def self.find_or_create_facilitator(params, invited_by_user)
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
-  end
-
-  # a district contact can see the teachers from their district that are part of a cohort
-  def district_teachers(cohort = nil)
-    return nil unless district_contact?
-    teachers = district.users
-    (cohort ? teachers.joins(:cohorts).where(cohorts: {id: cohort}) : teachers).to_a
   end
 
   GENDER_OPTIONS = [
@@ -501,7 +429,7 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.provider == User::PROVIDER_SPONSORED}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -559,8 +487,6 @@ class User < ActiveRecord::Base
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
-  before_save :log_admin_save, if: -> {admin_changed? && User.should_log?}
-
   before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
@@ -569,8 +495,8 @@ class User < ActiveRecord::Base
   end
 
   def normalize_email
-    return unless email.present?
-    self.email = email.strip.downcase
+    return unless read_attribute(:email).present?
+    self.email = read_attribute(:email).strip.downcase
   end
 
   def self.hash_email(email)
@@ -578,8 +504,8 @@ class User < ActiveRecord::Base
   end
 
   def hash_email
-    return unless email.present?
-    self.hashed_email = User.hash_email(email)
+    return unless read_attribute(:email).present?
+    self.hashed_email = User.hash_email(read_attribute(:email))
   end
 
   # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
@@ -637,11 +563,34 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Given a cleartext email finds the first user that has a matching email or hash.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
+    find_by_hashed_email User.hash_email email
+  end
 
-    hashed_email = User.hash_email(email)
-    User.find_by(hashed_email: hashed_email)
+  # Given an email hash, finds the first user that has a matching email hash.
+  # @param [String] hashed_email
+  # @return [User|nil]
+  def self.find_by_hashed_email(hashed_email)
+    return nil if hashed_email.blank?
+    migrated_user = AuthenticationOption.find_by(hashed_email: hashed_email)&.user
+    migrated_user || User.find_by(hashed_email: hashed_email)
+  end
+
+  # Locate an SSO user by SSO provider and associated user id.
+  # @param [String] type A credential type / provider type.  In the future this
+  #   should always be one of the valid credential types from AuthenticationOption
+  # @param [String] id A user id associated with the particular provider.
+  # @returns [User|nil]
+  def self.find_by_credential(type:, id:)
+    authentication_option = AuthenticationOption.find_by(
+      credential_type: type,
+      authentication_id: id
+    )
+    authentication_option&.user || User.find_by(provider: type, uid: id)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -716,44 +665,9 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    omniauth_user = find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
-      user.provider = auth.provider
-      user.uid = auth.uid
-      user.name = name_from_omniauth auth.info.name
-      user.user_type = params['user_type'] || auth.info.user_type
-      # Store emails, except when using Clever
-      user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
-
-      if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
-        user.email = user.email + '.oauthemailalreadytaken'
-      end
-
-      if auth.provider == :the_school_project
-        user.username = auth.extra.raw_info.nickname
-        user.user_type = auth.extra.raw_info.role
-        user.locale = auth.extra.raw_info.locale
-        user.school = auth.extra.raw_info.school.name
-      end
-
-      # treat clever admin types as teachers
-      if CLEVER_ADMIN_USER_TYPES.include? user.user_type
-        user.user_type = User::TYPE_TEACHER
-      end
-
-      # clever provides us these fields
-      if user.user_type == TYPE_TEACHER
-        user.age = 21
-      else
-        # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
-        # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
-        # handle any necessary conversion, setting birthday from auth.info.dob. The later
-        # shenanigans ensure that we store the user's age rather than birthday.
-        user.birthday = auth.info.dob
-        user_age = user.age
-        user.birthday = nil
-        user.age = user_age
-      end
-      user.gender = normalize_gender auth.info.gender
+    omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
+    omniauth_user ||= create do |user|
+      initialize_new_oauth_user(user, auth, params)
     end
 
     if auth.credentials
@@ -770,8 +684,54 @@ class User < ActiveRecord::Base
     omniauth_user
   end
 
+  def self.initialize_new_oauth_user(user, auth, params)
+    user.provider = auth.provider
+    user.uid = auth.uid
+    user.name = name_from_omniauth auth.info.name
+    user.user_type = params['user_type'] || auth.info.user_type
+    user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
+
+    # Store emails, except when using Clever
+    user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
+
+    if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
+      user.email = user.email + '.oauthemailalreadytaken'
+    end
+
+    if auth.provider == :the_school_project
+      user.username = auth.extra.raw_info.nickname
+      user.user_type = auth.extra.raw_info.role
+      user.locale = auth.extra.raw_info.locale
+      user.school = auth.extra.raw_info.school.name
+    end
+
+    # treat clever admin types as teachers
+    if CLEVER_ADMIN_USER_TYPES.include? user.user_type
+      user.user_type = User::TYPE_TEACHER
+    end
+
+    # clever provides us these fields
+    if user.user_type == TYPE_TEACHER
+      user.age = 21
+    else
+      # As the omniauth spec (https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema) does not
+      # describe auth.info.dob, it may arrive in a variety of formats. Consequently, we let Rails
+      # handle any necessary conversion, setting birthday from auth.info.dob. The later
+      # shenanigans ensure that we store the user's age rather than birthday.
+      user.birthday = auth.info.dob
+      user_age = user.age
+      user.birthday = nil
+      user.age = user_age
+    end
+    user.gender = normalize_gender auth.info.gender
+  end
+
   def oauth?
-    OAUTH_PROVIDERS.include? provider
+    if migrated?
+      authentication_options.any?(&:oauth?)
+    else
+      OAUTH_PROVIDERS.include? provider
+    end
   end
 
   def self.new_with_session(params, session)
@@ -803,7 +763,7 @@ class User < ActiveRecord::Base
   def email_required?
     return true if teacher?
     return false if provider == User::PROVIDER_MANUAL
-    return false if provider == User::PROVIDER_SPONSORED
+    return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
     true
@@ -830,6 +790,43 @@ class User < ActiveRecord::Base
     end
   end
 
+  def update_primary_contact_info(user: {email: nil, hashed_email: nil})
+    new_email = user[:email]
+    new_hashed_email = new_email.present? ? User.hash_email(new_email) : user[:hashed_email]
+
+    return false if new_email.nil? && new_hashed_email.nil?
+    return false if teacher? && new_email.nil?
+
+    # If an auth option already exists with this email, it becomes the primary.
+    # Otherwise make a new one.
+    existing_auth_option = authentication_options.find_by hashed_email: new_hashed_email
+    new_primary = existing_auth_option || AuthenticationOption.new(
+      user: self,
+      credential_type: AuthenticationOption::EMAIL,
+      email: new_email,
+      hashed_email: new_hashed_email
+    )
+
+    # Even though it's implied, pushing the new option into the
+    # authentication_options association now allows our validations to run
+    # when we save the user and produce useful error messages when, for example,
+    # the email is already taken.
+    self.primary_contact_info = new_primary
+    authentication_options << new_primary
+    success = save
+
+    if success
+      # Remove any email authentication options that the user isn't using, since
+      # we don't surface them in the UI.
+      authentication_options.
+        where(credential_type: AuthenticationOption::EMAIL).
+        where.not(hashed_email: new_hashed_email).
+        destroy_all
+    end
+
+    success
+  end
+
   # True if the account is teacher-managed and has any sections that use word logins.
   # Will not be true if the user has a password or is only in picture sections
   def secret_word_account?
@@ -853,6 +850,8 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     if login.present?
       return nil if login.utf8mb4?
+      # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
+      # indexing problems bit us on the users table don't affect the multi-auth table
       from("users IGNORE INDEX(index_users_on_deleted_at)").where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
@@ -861,7 +860,7 @@ class User < ActiveRecord::Base
       ).first
     elsif hashed_email = conditions.delete(:hashed_email)
       return nil if hashed_email.utf8mb4?
-      where(hashed_email: hashed_email).first
+      return find_by_hashed_email(hashed_email)
     else
       nil
     end
@@ -1018,10 +1017,6 @@ class User < ActiveRecord::Base
       first
   end
 
-  def hidden_script_access?
-    admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
-  end
-
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
@@ -1087,12 +1082,9 @@ class User < ActiveRecord::Base
 
   def authorized_teacher?
     # You are an authorized teacher if you are an admin, have the AUTHORIZED_TEACHER or the
-    # LEVELBUILDER permission, or are a teacher in a cohort.
+    # LEVELBUILDER permission.
     return true if admin?
     if permission?(UserPermission::AUTHORIZED_TEACHER) || permission?(UserPermission::LEVELBUILDER)
-      return true
-    end
-    if teacher? && cohorts.present?
       return true
     end
     false
@@ -1698,18 +1690,40 @@ class User < ActiveRecord::Base
     AsyncProgressHandler.progress_queue
   end
 
+  def migrated?
+    provider == PROVIDER_MIGRATED
+  end
+
+  def sponsored?
+    if migrated?
+      authentication_options.empty? && encrypted_password.blank?
+    else
+      provider == PROVIDER_SPONSORED
+    end
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
-    encrypted_password.present? || oauth?
+    if migrated?
+      # Only word/picture account users do not have authentication options
+      # and therefore cannot edit their email addresses
+      !sponsored?
+    else
+      encrypted_password.present? || oauth?
+    end
   end
 
   # We restrict certain users from editing their password; in particular, those
   # users that don't have a password because they authenticate via oauth, secret
   # picture, or some other unusual method
   def can_edit_password?
-    encrypted_password.present?
+    if migrated?
+      !sponsored?
+    else
+      encrypted_password.present?
+    end
   end
 
   # Whether the current user has permission to change their own account type
@@ -1764,9 +1778,9 @@ class User < ActiveRecord::Base
 
   def stage_extras_enabled?(script)
     return false unless script.stage_extras_available?
+    return true if teacher?
 
-    sections_to_check = teacher? ? sections : sections_as_student
-    sections_to_check.any? do |section|
+    sections_as_student.any? do |section|
       section.script_id == script.id && section.stage_extras
     end
   end

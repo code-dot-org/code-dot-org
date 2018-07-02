@@ -10,9 +10,6 @@ export const COLUMNS = {
 };
 
 const freeResponsesDataPropType = PropTypes.shape({
-  id:  PropTypes.number,
-  studentId: PropTypes.string,
-  name: PropTypes.string,
   response: PropTypes.string,
 });
 
@@ -61,7 +58,6 @@ class FreeResponsesSurveyTable extends Component {
         header: {
           label: i18n.response(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
         },
         cell: {
           format: this.studentResponseColumnFormatter,
@@ -90,7 +86,7 @@ class FreeResponsesSurveyTable extends Component {
         style={tableLayoutStyles.table}
       >
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
+        <Table.Body rows={sortedRows} rowKey="index" />
       </Table.Provider>
     );
   }

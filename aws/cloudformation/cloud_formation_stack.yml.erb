@@ -407,10 +407,8 @@ Resources:
         app.downcase.to_sym,
         subdomain('origin'),
         app == 'Dashboard' ?
-          # TODO: Set prod_stack_name: false after production cutover to CloudFormation-managed CloudFront distribution,
-          # to update CloudFront aliases to the production CNAME entries.
-          [studio_subdomain(prod_stack_name: true)] :
-          [subdomain(prod_stack_name: true)] + (CDO.partners + ['advocacy']).map{|x| subdomain(nil, x, prod_stack_name: true)},
+          [studio_subdomain] :
+          [subdomain] + (CDO.partners + ['advocacy']).map{|x| subdomain(nil, x)},
         {
           AcmCertificateArn: certificate_arn,
           MinimumProtocolVersion: 'TLSv1',

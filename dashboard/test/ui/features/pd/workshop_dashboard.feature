@@ -12,7 +12,7 @@ Scenario: New workshop: CSF intro
   And I press keys "Seattle, WA" for element "input#location_address"
   And I press keys "25" for element "input#capacity"
   And I select the "CS Fundamentals" option in dropdown "course"
-  And I select the "Intro Workshop" option in dropdown "subject"
+  And I select the "Intro" option in dropdown "subject"
 
   And I wait until element "label:contains('Workshop Type Options')" is visible
   And I press the first "input[name='on_map'][value='no']" element
@@ -28,6 +28,7 @@ Scenario: New workshop: CSF intro
 
   And I press "button:contains('Publish')" using jQuery
   And I wait until element ".panel-title:contains('Your workshop sign-up link:')" is visible
+  And I see jquery selector button.btn-orange:contains('Start Workshop')
 
   And I see no difference for "created workshop details: CSF"
   And I close my eyes
@@ -60,6 +61,7 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
 
   And I press "button:contains('Publish')" using jQuery
   And I wait until element ".panel-title:contains('Your workshop sign-up link:')" is visible
+  And I see jquery selector button.btn-orange:contains('Start Workshop')
 
   And I see no difference for "created workshop details: CSD"
   And I close my eyes
@@ -88,6 +90,7 @@ Scenario: New workshop: CSP local summer with 1 facilitator
 
   And I press "button:contains('Publish')" using jQuery
   And I wait until element ".panel-title:contains('Your workshop sign-up link:')" is visible
+  And I see jquery selector button.btn-orange:contains('Start Workshop')
 
   And I see no difference for "created workshop details: CSP"
   And I close my eyes
