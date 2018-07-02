@@ -25,7 +25,11 @@ Scenario: With stable flag, 'Feedback' tab is not visible for students and displ
   #As teacher, stable tag, see temporary text
   Then I sign in as "Teacher_Lillian"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=commentBoxTab"
+  And I wait to see ".show-handle"
+  Then I click selector ".show-handle .fa-chevron-left" once I see it
+  Then I click selector ".section-student .name a"
   And I click selector ".uitest-feedback" once I see it
+  And I wait until element "textarea" is visible
   And I wait until ".editor-column" contains text "Coming soon"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=commentBoxTab"
 
@@ -38,18 +42,30 @@ Scenario: With dev flag, as student, 'Feedback' tab is not visible if no feedbac
   And element ".uitest-feedback" is not visible
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=devCommentBoxTab"
 
-#TODO - epeach - With dev flag, tests for student when feedback available
-
-Scenario: With dev flag, as teacher,tab is invisible when not reviewing student work and visible when viewing student work
+Scenario: With dev flag, as teacher, tab is invisible when not reviewing student work and visible when viewing student work, feedback can be submitted and displayed
   #As teacher, not reviewing work, don't see feedback tab
   Then I sign in as "Teacher_Lillian"
   Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=devCommentBoxTab"
   And element ".uitest-feedback" is not visible
 
-  #As teacher, reviewing work, don't see temporary text
+  #As teacher, reviewing work, submit feedback
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".section-student .name a"
-  And I wait until element "textarea" is visible
-  And I wait until ".editor-column" does not contain text "Coming soon"
+  And I press the first "#ui-test-feedback-input" element
+  And I press keys "Nice!" for element "#ui-test-feedback-input"
+  And I press "ui-test-submit-feedback"
+  And I wait until ".editor-column" contains text "Nice!"
+
+  #As teacher, refresh page and latest feedback is visible
+  And I reload the page
+  And I wait for the page to fully load
+  And I wait until ".editor-column" contains text "Nice!"
+
+  #As student, latest feedback from teacher is displayed
+  Then I sign out
+  And I sign in as "Lillian"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=devCommentBoxTab"
+  And I press the first ".uitest-feedback" element
+  And I wait until ".editor-column" contains text "Nice!"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=devCommentBoxTab"
