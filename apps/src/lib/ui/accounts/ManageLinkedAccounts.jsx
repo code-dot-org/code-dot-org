@@ -27,34 +27,38 @@ export default class ManageLinkedAccounts extends React.Component {
     disconnect: PropTypes.func.isRequired,
   };
 
-  getProviderConnection = (provider) => {
-    return this.props.authenticationOptions.find((option) => {
+  getAuthenticationOption = (provider) => {
+    return this.props.authenticationOptions.find(option => {
       return option.credential_type === provider;
     });
   };
 
   getEmailForProvider = (provider) => {
-    const match = this.getProviderConnection(provider);
-    if (match) {
+    const authOption = this.getAuthenticationOption(provider);
+    if (authOption) {
       if (this.props.userType === 'student') {
         return ENCRYPTED;
       }
-      return match.email;
+      return authOption.email;
     }
   };
 
-  toggleProviderConnection = (provider) => {
-    const connection = this.getProviderConnection(provider);
-    if (connection) {
-      this.disconnect(connection.id);
+  toggleProvider = (provider) => {
+    const authOption = this.getAuthenticationOption(provider);
+    if (authOption) {
+      this.disconnect(authOption.id);
     } else {
       this.props.connect(provider);
     }
   };
 
   disconnect = (authOptionId) => {
-    // TODO: handle errors
-    this.props.disconnect(authOptionId).then();
+    this.props.disconnect(authOptionId).then(_, this.onFailure);
+  };
+
+  onFailure = (error) => {
+    // TODO: (madelynkasula) display error to user
+    console.log(error.message);
   };
 
   render() {
@@ -75,25 +79,25 @@ export default class ManageLinkedAccounts extends React.Component {
               type={OAUTH_PROVIDERS.GOOGLE}
               displayName={i18n.manageLinkedAccounts_google_oauth2()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.GOOGLE)}
-              onClick={() => this.toggleProviderConnection(OAUTH_PROVIDERS.GOOGLE)}
+              onClick={() => this.toggleProvider(OAUTH_PROVIDERS.GOOGLE)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.MICROSOFT}
               displayName={i18n.manageLinkedAccounts_microsoft()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.MICROSOFT)}
-              onClick={() => this.toggleProviderConnection(OAUTH_PROVIDERS.MICROSOFT)}
+              onClick={() => this.toggleProvider(OAUTH_PROVIDERS.MICROSOFT)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.CLEVER}
               displayName={i18n.manageLinkedAccounts_clever()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.CLEVER)}
-              onClick={() => this.toggleProviderConnection(OAUTH_PROVIDERS.CLEVER)}
+              onClick={() => this.toggleProvider(OAUTH_PROVIDERS.CLEVER)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.FACEBOOK}
               displayName={i18n.manageLinkedAccounts_facebook()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.FACEBOOK)}
-              onClick={() => this.toggleProviderConnection(OAUTH_PROVIDERS.FACEBOOK)}
+              onClick={() => this.toggleProvider(OAUTH_PROVIDERS.FACEBOOK)}
             />
           </tbody>
         </table>
