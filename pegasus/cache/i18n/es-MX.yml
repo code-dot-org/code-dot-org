@@ -98,18 +98,7 @@ es-MX:
   congratulations_volunteer: 'Felicitaciones: ¡ahora que has probado la Hora del Código,
     <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a>
     y ayuda a estudiantes a aprender una Hora de Código!'
-  congratulations_on_completing_course1: Felicidades, has completado el Curso 1
-  congratulations_on_completing_course2: Felicidades, has completado el Curso 2
-  congratulations_on_completing_course3: Felicidades, has completado el Curso 2
-  congratulations_on_completing_course4: Felicidades, has completado el Curso 4
-  congratulations_on_completing_coursea: Felicidades por completar el curso A
-  congratulations_on_completing_courseb: Felicidades por completar el curso B
-  congratulations_on_completing_coursec: Felicidades por completar el curso C
-  congratulations_on_completing_coursed: Felicidades por completar el curso D
-  congratulations_on_completing_coursee: Felicidades por completar el curso E
-  congratulations_on_completing_coursef: Felicidades por completar el curso F
-  congratulations_on_completing_accelerated: Felicidades, has completado el Curso
-    Acelerado
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Prueba estos tutoriales a continuación
   congrats_next_tutorials_desc: Prueba estos tutoriales más cortos de una hora o prueba
     un <a href="%{current_path}/next">tutorial para colaboradores</a>.
@@ -297,28 +286,8 @@ es-MX:
   just_did_accelerated: He terminado el Curso Acelerado - ¡mira! @codeorg
   just_did_hoc_donor: 'Acabo de hacer la #HoraDelCódigo - ¡Dale un vistazo! (Gracias
     %{donor_twitter} por apoyar a @codeorg)'
-  just_did_course1_donor: Acabo de terminar el Curso 1 - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_course2_donor: Acabo de terminar el Curso 2 - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_course3_donor: Acabo de terminar el Curso 3 - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_course4_donor: Acabo de terminar el Curso 4 - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursea_donor: Acabo de terminar el Curso A - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_courseb_donor: Acabo de terminar el Curso B - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursec_donor: Acabo de terminar el Curso C - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursed_donor: Acabo de terminar el Curso D - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursee_donor: Acabo de terminar el Curso E - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_coursef_donor: Acabo de terminar el Curso F - ¡Dale un vistazo! Gracias
-    %{donor_twitter} por apoyar a @codeorg
-  just_did_accelerated_donor: Acabo de terminar el Curso Acelerado- ¡Dale un vistazo!
-    Gracias %{donor_twitter} por apoyar a @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: "¿Por qué no hay más escuelas que enseñen ciencias de la computación?
     Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visite http://code.org/ para
     obtener más información."
@@ -1463,6 +1432,18 @@ es-MX:
   coursed_gradelevel: Califación 8+
   coursee_gradelevel: Edad 8-12
   coursef_gradelevel: 9-13 años
+  coursea-2017_gradelevel: Edades de 4 a 7 años
+  courseb-2017_gradelevel: Edades de 5 a 8 años
+  coursec-2017_gradelevel: Edades de 6 a 10 años
+  coursed-2017_gradelevel: Califación 8+
+  coursee-2017_gradelevel: Edad 8-12
+  coursef-2017_gradelevel: 9-13 años
+  coursea-2018_gradelevel: Edades de 4 a 7 años
+  courseb-2018_gradelevel: Edades de 5 a 8 años
+  coursec-2018_gradelevel: Edades de 6 a 10 años
+  coursed-2018_gradelevel: Califación 8+
+  coursee-2018_gradelevel: Edad 8-12
+  coursef-2018_gradelevel: 9-13 años
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
@@ -1617,6 +1598,32 @@ es-MX:
     de C y D y luego ir más allá con funciones.
   coursef_shortdescription_congrats: Aprende todos los conceptos de Fundamentos de
     ciencias de la computación y crea tu propio arte, historia o juego.
+  coursea-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
+    para pre lectores.
+  courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
+    para pre lectores. (Similar al curso A pero con más variedad para estudiantes
+    mas avanzados)
+  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
+    de la computación y crea tu propio arte, historias y juegos.
+  coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso
+    C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
+  coursee-2017_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
+    de C y D y luego ir más allá con funciones.
+  coursef-2017_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
+    de ciencias de la computación y crea tu propio arte, historia o juego.
+  coursea-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
+    para pre lectores.
+  courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
+    para pre lectores. (Similar al curso A pero con más variedad para estudiantes
+    mas avanzados)
+  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
+    de la computación y crea tu propio arte, historias y juegos.
+  coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso
+    C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
+  coursee-2018_shortdescription_congrats: Cubrir rápidamente los conceptos en el curso
+    de C y D y luego ir más allá con funciones.
+  coursef-2018_shortdescription_congrats: Aprende todos los conceptos de Fundamentos
+    de ciencias de la computación y crea tu propio arte, historia o juego.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
     programación de arrastrar y soltar. Este tutorial autodirigido que se parece a
     un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg,

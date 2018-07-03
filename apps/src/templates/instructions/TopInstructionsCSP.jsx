@@ -274,10 +274,13 @@ class TopInstructions extends Component {
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
 
-    const displayFeedbackStable = experiments.isEnabled(experiments.COMMENT_BOX_TAB) && this.props.viewAs === ViewType.Teacher;
+    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
+
+    const displayFeedbackStable = experiments.isEnabled(experiments.COMMENT_BOX_TAB) &&
+      teacherViewingStudentWork;
 
     const displayFeedbackDevTeacher = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
-      this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
+      teacherViewingStudentWork;
 
     const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
       this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;

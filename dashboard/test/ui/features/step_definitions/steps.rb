@@ -82,6 +82,18 @@ When /^I go to the newly opened tab$/ do
   wait_until {@browser.title rescue nil}
 end
 
+When /^I open a new tab$/ do
+  @browser.execute_script('window.open();')
+end
+
+When /^I close the current tab$/ do
+  @browser.close
+end
+
+When /^I switch to tab index (\d+)$/ do |tab_index|
+  @browser.switch_to.window(@browser.window_handles[tab_index.to_i])
+end
+
 When /^I switch to the first iframe$/ do
   $default_window = @browser.window_handle
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')

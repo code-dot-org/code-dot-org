@@ -83,17 +83,7 @@ ja-JP:
   congratulations_on_completing_hoc: おめでとうございます。Hour of Codeのセッションをひとつ修了しました。
   congratulations_volunteer: 'おめでとうございます: あなたは Hour of Code を体験しました、 <a href="https://code.org/volunteer">クラスルームのボランティアに参加</a>
     して、生徒が Hour of Code を学習するのを手助けしましょう！'
-  congratulations_on_completing_course1: おめでとうございます。コース 1 を修了しました
-  congratulations_on_completing_course2: おめでとうございます。コース 2 を修了しました
-  congratulations_on_completing_course3: おめでとうございます。コース 3 を修了しました
-  congratulations_on_completing_course4: おめでとうございます。コース 4 を修了しました
-  congratulations_on_completing_coursea: コースA終了おめでとう。
-  congratulations_on_completing_courseb: コースB終了おめでとう。
-  congratulations_on_completing_coursec: コースC終了おめでとう。
-  congratulations_on_completing_coursed: コースD終了おめでとう。
-  congratulations_on_completing_coursee: コースE終了おめでとう。
-  congratulations_on_completing_coursef: コースF終了おめでとう。
-  congratulations_on_completing_accelerated: おめでとうございます。上級コースを修了しました
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: 次のレベルへ進む
   congrats_next_tutorials_desc: 短めの1時間チュートリアル、または <a href="%{current_path}/next">パートナーのチュートリアル</a>
     を試してください。
@@ -239,28 +229,8 @@ ja-JP:
   just_did_accelerated: 上級コース完了 - やったー！@codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 10 人のうち 9 人が、学校でコンピュータ ・ サイエンスを教えるべきだと考えています。http://youtu.be/nKIu9yen5nc
     。Https://code.org/ をご覧ください。
   twitter_cs_foundational: コンピューターサイエンスは、学生が学ぶすべての基本です。https://youtu.be/QvyTEx1wyOY。
@@ -1213,6 +1183,18 @@ ja-JP:
   coursed_gradelevel: 中学2年生以上向け
   coursee_gradelevel: 9年生以上
   coursef_gradelevel: 10年生以上
+  coursea-2017_gradelevel: 5年生以上
+  courseb-2017_gradelevel: 6年生以上
+  coursec-2017_gradelevel: 7年生以上
+  coursed-2017_gradelevel: 中学2年生以上向け
+  coursee-2017_gradelevel: 8才-12才
+  coursef-2017_gradelevel: 10年生以上
+  coursea-2018_gradelevel: 5年生以上
+  courseb-2018_gradelevel: 6年生以上
+  coursec-2018_gradelevel: 7年生以上
+  coursed-2018_gradelevel: 中学2年生以上向け
+  coursee-2018_gradelevel: 8才-12才
+  coursef-2018_gradelevel: 10年生以上
   accelerated_gradelevel: 10-18 才
   codeorg_platformtext: 最新ブラウザ、スマート フォン、タブレット
   codeintl_platformtext: 最新ブラウザ、スマート フォン、タブレット
@@ -1328,6 +1310,30 @@ ja-JP:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています
   codeintl_longdescription: ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています
   thinkersmithspanish_longdescription: '"ロボット語"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。'
