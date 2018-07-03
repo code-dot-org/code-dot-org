@@ -55,7 +55,7 @@ export const studentOverviewDataPropType = PropTypes.shape({
   numMultipleChoice: PropTypes.number.isRequired,
   submissionTimeStamp: PropTypes.string.isRequired,
   isSubmitted: PropTypes.bool.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
 });
 
 /**
