@@ -338,7 +338,7 @@ class Course < ApplicationRecord
 
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
-  def has_other_version_progress?(user)
+  def has_older_version_progress?(user)
     return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
