@@ -9269,7 +9269,7 @@ pt-BR:
         Help the harvester pick all five ears
         of corn!
       courseA_harvester_loops11_instruction: 'Try one more on your own! '
-      courseA_harvester_loops2_instruction: Make sure to pick all the corn!
+      courseA_harvester_loops2_instruction: Certifique-se de pegar todo o milho!
       courseA_harvester_loops3_instruction: |-
         Can you pick all the corn using only
         **one** move block?
@@ -9297,7 +9297,7 @@ pt-BR:
       courseA_harvester_seq1_instruction: |-
         Play with these blocks to help the harvester
         pick the piece of corn.
-      courseA_harvester_seq10_instruction: Make sure to pick all the corn!
+      courseA_harvester_seq10_instruction: Certifique-se de pegar todo o milho!
       courseA_harvester_seq11_instruction: Tente você mesmo! Pegue todo o milho.
       courseA_harvester_seq12_instruction: Pegue todo o milho.
       courseA_harvester_seq13_instruction: |-
@@ -9378,12 +9378,10 @@ pt-BR:
       courseA_maze_seq6_2018_instruction: |-
         Move one way, then another to get the
         bird to the pig!
-      courseA_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
-      courseA_maze_seq7_2018_instruction: |-
-        Figure out what is missing and then add
-        blocks to get the bird to the pig!
+      courseA_maze_seq7_instruction: Descubra o que está faltando e então adicione
+        blocos para levar o pássaro até o porco!
+      courseA_maze_seq7_2018_instruction: Descubra o que está faltando e então adicione
+        blocos para levar o pássaro até o porco!
       courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
       courseA_maze_seq8_2018_instruction: |-
         Solve this level and get the bird to the
@@ -9657,7 +9655,7 @@ pt-BR:
         acorn?
       courseB_iceage_loops6_instruction: Can you add a loop to get to the acorn?
       courseB_iceage_loops7_instruction: 'Scrat really wants that acorn! '
-      courseB_iceage_loops8_instruction: 'Can you fix this code? '
+      courseB_iceage_loops8_instruction: 'Você consegue corrigir este código? '
       courseB_iceage_loops9_instruction: |-
         The acorn is so far away! Can you use loops
         to help Scrat get there?
@@ -9687,9 +9685,8 @@ pt-BR:
       courseB_maze_seq6_2018_instruction: |-
         Move one way, then another to get Scrat
         to the acorn!
-      courseB_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
+      courseB_maze_seq7_instruction: Descubra o que está faltando e então adicione
+        blocos para levar o pássaro até o porco!
       courseB_maze_seq7_2018_instruction: |-
         Figure out what is missing and then add
         blocks to get Scrat to the acorn!
@@ -11377,7 +11374,7 @@ pt-BR:
         way to the acorn!
       courseD_iceage_loops6_instruction: Can you add a loop to get to the acorn?
       courseD_iceage_loops7_instruction: 'Scrat really wants that acorn! '
-      courseD_iceage_loops8_instruction: 'Can you fix this code? '
+      courseD_iceage_loops8_instruction: 'Você consegue corrigir este código? '
       courseD_iceage_loops9_instruction: |-
         The acorn is so far away! Can you use loops
         to help Scrat get there?
