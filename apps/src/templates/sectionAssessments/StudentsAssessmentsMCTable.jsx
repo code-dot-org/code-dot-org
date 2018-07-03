@@ -55,6 +55,7 @@ export const studentOverviewDataPropType = PropTypes.shape({
   numMultipleChoice: PropTypes.number,
   submissionTimeStamp: PropTypes.string.isRequired,
   isSubmitted: PropTypes.bool.isRequired,
+  url: PropTypes.string,
 });
 
 /**
@@ -96,6 +97,12 @@ class StudentsAssessmentsMCTable extends Component {
     });
   };
 
+  nameCellFormatter = (name, {rowData}) => {
+    return (
+      <a href={rowData.url}>{name}</a>
+    );
+  };
+
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
     const isSubmitted = rowData.isSubmitted;
 
@@ -127,6 +134,7 @@ class StudentsAssessmentsMCTable extends Component {
           },
         },
         cell: {
+          format: this.nameCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
