@@ -7,6 +7,14 @@ import {
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 
+const styles = {
+  text: {
+    font: 10,
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+};
+
 export const freeResponseSummaryPropType = PropTypes.shape({
   questionText:  PropTypes.string,
   responses: PropTypes.arrayOf(freeResponsesDataPropType),
@@ -27,7 +35,10 @@ class FreeResponsesAssessmentsContainer extends Component {
         }
         {freeResponseQuestions.map((question, index) => (
           <div key={index}>
-            <h3>{`${question.questionNumber}. ${question.questionText}`}</h3>
+          <div style={styles.text}>
+            {`${question.questionNumber}. ${question.questionText}`.slice(0, 280)}
+            {/* <a href={code.org}>{i18n.seeFullResponse()}</a> */}
+          </div>
             <FreeResponsesAssessmentsTable
               freeResponses={question.responses}
             />
