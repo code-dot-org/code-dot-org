@@ -128,6 +128,7 @@ class RegistrationsController < Devise::RegistrationsController
           if current_user.valid_password?(params[:user][:current_password])
             current_user.update_primary_contact_info(user: set_email_params)
           else
+            current_user.errors.add :current_password
             false
           end
         else
