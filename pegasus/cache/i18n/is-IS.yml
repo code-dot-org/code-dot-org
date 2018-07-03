@@ -47,7 +47,7 @@ is-IS:
   csedweek_og_title: Klukkustund kóðunar er nú
   csedweek_og_description: 4.-10. desember 2017. Tölvunarfræði er grunnfag sem allir
     nemendur ættu að læra.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: Klukkustund kóðunar er nú. Tölvunarfræði er grunnfag
     sem allir nemendur eiga að læra.
@@ -496,7 +496,7 @@ is-IS:
     með starfsmönnum úr tæknigeiranum
   playlab_choose_theme: Veldu þema fyrir Leikjasmiðjuna
   playlab_classic_title: Klassískt
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: The Amazing World of Gumball
   playlab_iceage_title: Ice Age - kemur brátt
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Gerð Vetrarbrautar með Kóða
@@ -534,22 +534,23 @@ is-IS:
   minecraft_download_adventurer: Hlaða niður ónettengdu útgáfunni af Minecraft Könnuði.
   minecraft_subtitle: Klukkustund kóðunar með Minecraft
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
+    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
+    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Skipuleggðu Klukkustund kóðunar í Minecraft
   minecraft_teach_resources: Tilföng kennara og kennsluáætlun.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
   minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -557,13 +558,13 @@ is-IS:
     education. Join us at the Microsoft Store to engage in a free series of three,
     1-hour workshops where you will experience coding in a fun and stress-free environment,
     become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
   minecraft_future: Help all youth become future ready
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
@@ -1236,9 +1237,9 @@ is-IS:
   cspunit4_name: 'Kafli 4: Gögn'
   cspunit5_name: 'Kafli 5: Kanna og búa til fagnám'
   cspunit6_name: 'Framhald: Gagnagrunnar í öppum'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Kafli 5: Upplýsingar og samfélagið'
   csd6_name: 'Kafli 6: Tölvun'
@@ -1312,7 +1313,7 @@ is-IS:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: Grunnatriði TF - alþjóðlegt
   csf2_draft_category_name: 'Í þróun: Námskeið A-F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 TF Grundvöllur"
   csp17_category_name: Grunnhugtök tölvunarfræði
@@ -1529,8 +1530,9 @@ is-IS:
     sveigjanlegri lausnum á flóknari verkefni. Í lok þessa námskeiðs búa nemendur
     til gagnvirkar sögur og leiki sem þeir geta svo deilt með öðrum. Mælt með fyrir
     4. - 8. bekk.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
   coursec_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og búðu
     til eigin myndir, sögur og leiki.
   coursed_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og búðu
@@ -2057,13 +2059,13 @@ is-IS:
     í <a href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum sem
     við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að eitthvað
     virki ekki.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: blaka
   infinity_shortcode: inf
-  playlab_shortcode: spila
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Forsíða
   header_my_dashboard: Stjórnborðið mitt
