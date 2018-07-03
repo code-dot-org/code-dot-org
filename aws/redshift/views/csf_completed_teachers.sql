@@ -19,7 +19,21 @@ from
     join analysis.school_years sy on com.completed_at between sy.started_at and sy.ended_at
     join dashboard_production.followers f on f.student_user_id = com.user_id and f.created_at between sy.started_at and sy.ended_at
     join dashboard_production.sections se on se.id = f.section_id
-      and (se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) or se.script_id is null)
+      and 
+      (
+        -- One of new scripts, of any version (2017 or 2018 currently)
+        (se.script_id IN 
+            (select versioned_script_id from analysis.script_names where script_name_long in 
+              ('Course A','Course B','Course C','Course D','Course E','Course F','Express','Pre-Express')
+            )
+        )
+        or
+        -- One of old scripts
+        (se.script_id in (1,17,18,19,23))
+        or
+        -- No script assigned
+        (se.script_id is null)
+      )
 )
 where completed_at_order = 5
 with no schema binding; 
