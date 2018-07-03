@@ -18,7 +18,8 @@ class Pd::InternationalOptInTest < ActiveSupport::TestCase
     workshopOrganizer: 'Workshop Organizer',
     workshopFacilitator: 'Workshop Facilitator',
     workshopCourse: 'Workshop Course',
-    optIn: 'Yes'
+    emailOptIn: 'Yes',
+    legalOptIn: true
   }
 
   test 'Test international opt-in validation' do

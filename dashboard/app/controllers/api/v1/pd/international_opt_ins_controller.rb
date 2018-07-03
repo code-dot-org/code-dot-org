@@ -10,7 +10,7 @@ class Api::V1::Pd::InternationalOptInsController < Api::V1::Pd::FormsController
   def on_successful_create
     EmailPreference.upsert!(
       email: @contact_form.email,
-      opt_in: @contact_form.opt_in?,
+      opt_in: @contact_form.email_opt_in?,
       ip_address: request.ip,
       source: EmailPreference::FORM_PD_INTERNATIONAL_OPT_IN,
       form_kind: "0"
