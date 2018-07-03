@@ -22,7 +22,9 @@ class FreeResponsesAssessmentsContainer extends Component {
 
     return (
       <div>
-        <h2>{i18n.studentFreeResponseAnswers()}</h2>
+        {freeResponseQuestions.length > 0 &&
+          <h2>{i18n.studentFreeResponseAnswers()}</h2>
+        }
         {freeResponseQuestions.map((question, index) => (
           <div key={index}>
             <h3>{`${question.questionNumber}. ${question.questionText}`}</h3>
