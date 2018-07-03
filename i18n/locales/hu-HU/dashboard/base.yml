@@ -356,6 +356,7 @@ hu:
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
     email_confirm_wrong_email: '(Helytelen e-mail cím?)'
     email_resend_confirm: 'Megerősítés újraküldése'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(hagyd üresen, ha nem akarod megváltoztatni)"
     current_password_hint: '(szükségünk van a jelenlegi jelszavadra a módosítások végrehajtásához)'
     delete: 'Fiók törlése'

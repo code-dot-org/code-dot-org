@@ -414,6 +414,7 @@ ru:
       подтвержден:'
     email_confirm_wrong_email: "(Неверный адрес электронной почты?)"
     email_resend_confirm: Повторно выслать инструкции по подтверждению
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(оставьте поле пустым, если не хотите ничего менять)"
     current_password_hint: "(нам нужен Ваш текущий пароль для подтверждения изменений)"
     delete: Удалить свою учетную запись

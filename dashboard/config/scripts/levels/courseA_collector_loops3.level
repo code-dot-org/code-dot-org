@@ -38,6 +38,7 @@
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
     "markdown_instructions": "How can Laurel get all five piles of treasure using only one <xml><block type=\"maze_moveEast\"/></xml> block?",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

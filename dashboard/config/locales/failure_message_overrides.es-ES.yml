@@ -78,7 +78,7 @@ es:
         para etiquetar 5 Golems, intente cambiar la 1: 40 por etiqueta.'
       MC HOC 2016 Village Test_failure_message_override: Necesita hacer la persecución
         del Golem de hierro y atacar a los zombies para ganar.
-      Valentine_playlab_01_failure_message_override: Almost!  Try again.
+      Valentine_playlab_01_failure_message_override: "¡Casi! Inténtalo de nuevo."
       WhileAdventure_failure_message_override: "¡Felicitaciones! Usted recogió X monedas!"
       courseE_playLab_scaffold3_failure_message_override: |-
         Debe agregar dos o más

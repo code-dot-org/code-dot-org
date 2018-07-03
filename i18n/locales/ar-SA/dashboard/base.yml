@@ -361,6 +361,7 @@ ar:
     email_confirm_needed_required: 'لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:'
     email_confirm_wrong_email: '(عنوان بريد إلكتروني خاطئ؟)'
     email_resend_confirm: 'إعادة إرسال رسالة تعليمات عملية التأكيد'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(اتركه فارغاً إذا كنت لا ترغب في تغييره)"
     current_password_hint: '(أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)'
     delete: 'إحذف الحساب الخاص بك'

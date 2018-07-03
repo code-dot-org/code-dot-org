@@ -1,8 +1,12 @@
+-- THINGS TO CHECK:
+-- Are the lists of script ids still up-to-date (especially th HOC list?)
+
 -- No check on whether students actually made progress
--- Quick change: only include last year of activity
-drop table if exists analysis.school_activity_stats;
-CREATE table analysis.school_activity_stats AS
-  WITH pledged as (
+
+DROP TABLE IF EXISTS analysis.school_activity_stats;
+CREATE TABLE analysis.school_activity_stats AS
+  
+WITH pledged as (
   -- By school_id, has a school pledged to expand computer science?
     select distinct si.school_id
     from dashboard_production_pii.census_submissions cs
@@ -11,15 +15,16 @@ CREATE table analysis.school_activity_stats AS
       join dashboard_production.school_infos si 
       on si.id = cssi.school_info_id
     where pledged = 1
-  ),
-  hoc_event as (
-  -- by school ID, did a school host an hour of code?
-    select distinct json_extract_path_text(data, 'nces_school_s') school_id
-    from pegasus_pii.forms
-    where kind = 'HocSignup2017'
-    and json_extract_path_text(data, 'nces_school_s') not in ('','-1')
   )
-  -- Schools in geographies where a regional partner is mapped to a zip code
+  --,
+
+-- hoc_event as (
+--   -- by school ID, did a school host an hour of code in 2017?
+--     select distinct json_extract_path_text(data, 'nces_school_s') school_id
+--     from pegasus_pii.forms
+--     where kind = 'HocSignup2017'
+--     and json_extract_path_text(data, 'nces_school_s') not in ('','-1')
+--   )
   SELECT ss.school_id,
          rpm.regional_partner_id::varchar,
          case when rp.name = 'mindSpark Learning' then 'mindSpark Learning and Colorado Education Initiative' else rp.name end as regional_partner,
@@ -37,20 +42,26 @@ CREATE table analysis.school_activity_stats AS
          ss.students,
          sc.latitude,
          sc.longitude,
-         COUNT(DISTINCT u.id) teachers,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN se.user_id ELSE NULL END) teachers_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN se.user_id ELSE NULL END) teachers_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN se.user_id ELSE NULL END) teachers_csp_l365,
-         COUNT(DISTINCT CASE WHEN rpd.user_id IS NOT NULL AND rpd.course = 'CS Principles' THEN u.id ELSE NULL END) teachers_csp_pd,
-         COUNT(DISTINCT CASE WHEN rpd.user_id IS NOT NULL AND rpd.course = 'CS Discoveries' THEN u.id ELSE NULL END) teachers_csd_pd,
-         COUNT(DISTINCT f.student_user_id) students,
+         -- teacher counts
+         COUNT(DISTINCT u.studio_person_id) teachers,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN u.studio_person_id ELSE NULL END) teachers_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN u.studio_person_id ELSE NULL END) teachers_csf_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (223, 187, 181, 169, 221, 189) THEN u.studio_person_id ELSE NULL END) teachers_csd_l365,          
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN u.studio_person_id ELSE NULL END) teachers_csp_l365,
+         -- pd'd teacher counts
+         COUNT(DISTINCT CASE WHEN ttf.user_id IS NOT NULL THEN ttpd.studio_person_id ELSE NULL END) teachers_csf_pd,        
+         COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Discoveries' THEN ttpd.studio_person_id ELSE NULL END) teachers_csd_pd,
+         COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Principles' THEN ttpd.studio_person_id ELSE NULL END) teachers_csp_pd,
+         --student counts
+         COUNT(DISTINCT f.student_user_id) students_code,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN f.student_user_id ELSE NULL END) students_l365,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp_l365,
-         COUNT(DISTINCT CASE WHEN tt.user_id IS NOT NULL THEN u.id ELSE NULL END) teachers_csf_pd,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (223, 187, 181, 169, 221, 189) THEN f.student_user_id ELSE NULL END) students_csd_l365,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp_l365,      
          COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
-         MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
-         MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event
+         -- pledge and HOC
+         MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged --,
+         -- MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event
   FROM analysis.school_stats ss
     LEFT JOIN dashboard_production.schools sc on sc.id = ss.school_id
     LEFT JOIN dashboard_production.school_infos si 
@@ -65,141 +76,20 @@ CREATE table analysis.school_activity_stats AS
       ON f.section_id = se.id
     LEFT JOIN dashboard_production_pii.users u_students
       ON u_students.id = f.student_user_id AND u_students.current_sign_in_at IS NOT NULL
-    JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
-      ON rpm.zip_code = ss.zip
+    LEFT JOIN dashboard_production_pii.pd_regional_partner_mappings rpm -- only major  change from the previous version (besides adding CSD)
+      ON rpm.state = ss.state OR rpm.zip_code = ss.zip
     LEFT JOIN dashboard_production_pii.regional_partners rp 
       ON rp.id = rpm.regional_partner_id
-    LEFT JOIN analysis_pii.regional_partner_stats rpd 
-      ON rpd.user_id = u.id
-    LEFT JOIN analysis.csf_teachers_trained tt
-      ON tt.user_id = u.id
+    LEFT JOIN analysis.csp_csd_teachers_trained ttpd -- replaces join on 'regional partner stats' (both serve purpose of getting the number of CSD and CSP teachers trained)
+      ON ttpd.studio_person_id = u.studio_person_id 
+    LEFT JOIN analysis.csf_teachers_trained ttf -- additional table to get csf data 
+      ON ttf.user_id = u.id
     LEFT JOIN pledged
       ON pledged.school_id = ss.school_id
-    LEFT JOIN hoc_event
-      ON hoc_event.school_id = ss.school_id
+--     LEFT JOIN hoc_event
+--       ON hoc_event.school_id = ss.school_id
   GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
-  
-union all
-
-  -- Schools in geographies where a regional partner is mapped to a state
-  SELECT ss.school_id,
-         rpm.regional_partner_id::varchar,
-         case when rp.name = 'mindSpark Learning' then 'mindSpark Learning and Colorado Education Initiative' else rp.name end as regional_partner,
-         ss.school_name,
-         ss.city,
-         ss.state,
-         ss.zip,
-         ss.school_type,
-         ss.school_district_name,
-         ss.stage_el AS elementary,
-         ss.stage_mi AS middle,
-         ss.stage_hi AS high,
-         ss.frl_eligible_percent,
-         ss.urm_percent,
-         ss.students,
-         sc.latitude,
-         sc.longitude,
-         COUNT(DISTINCT u.id) teachers,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN se.user_id ELSE NULL END) teachers_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN se.user_id ELSE NULL END) teachers_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN se.user_id ELSE NULL END) teachers_csp_l365,
-         COUNT(DISTINCT CASE WHEN rpd.user_id IS NOT NULL AND rpd.course = 'CS Principles' THEN u.id ELSE NULL END) teachers_csp_pd,
-         COUNT(DISTINCT CASE WHEN rpd.user_id IS NOT NULL AND rpd.course = 'CS Discoveries' THEN u.id ELSE NULL END) teachers_csd_pd,
-         COUNT(DISTINCT f.student_user_id) students,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN f.student_user_id ELSE NULL END) students_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp_l365,
-         COUNT(DISTINCT CASE WHEN tt.user_id IS NOT NULL THEN u.id ELSE NULL END) teachers_csf_pd,
-         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
-         MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
-         MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event    
-  FROM analysis.school_stats ss
-    LEFT JOIN dashboard_production.schools sc on sc.id = ss.school_id
-    LEFT JOIN dashboard_production.school_infos si 
-      ON ss.school_id = si.school_id
-    LEFT JOIN dashboard_production_pii.users u
-      ON si.id = u.school_info_id AND u.user_type = 'teacher'
-    LEFT JOIN dashboard_production.sections se 
-      ON se.user_id = u.id
-    LEFT JOIN dashboard_production.scripts scr 
-      ON scr.id = se.script_id
-    LEFT JOIN dashboard_production.followers f 
-      ON f.section_id = se.id
-    LEFT JOIN dashboard_production_pii.users u_students
-      ON u_students.id = f.student_user_id AND u_students.current_sign_in_at IS NOT NULL
-    JOIN dashboard_production_pii.pd_regional_partner_mappings rpm 
-      ON rpm.state = ss.state
-    LEFT JOIN dashboard_production_pii.regional_partners rp 
-      ON rp.id = rpm.regional_partner_id
-    LEFT JOIN analysis_pii.regional_partner_stats rpd 
-      ON rpd.user_id = u.id
-    LEFT JOIN analysis.csf_teachers_trained tt
-      ON tt.user_id = u.id
-    LEFT JOIN pledged
-      ON pledged.school_id = ss.school_id
-    LEFT JOIN hoc_event
-      ON hoc_event.school_id = ss.school_id
-  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
-  
-union all
-
-  -- Schools in geographies not mapped to a regional partner
-  SELECT ss.school_id,
-         NULL as regional_partner_id,
-         NULL as regional_partner_name,
-         ss.school_name,
-         ss.city,
-         ss.state,
-         ss.zip,
-         ss.school_type,
-         ss.school_district_name,
-         ss.stage_el AS elementary,
-         ss.stage_mi AS middle,
-         ss.stage_hi AS high,
-         ss.frl_eligible_percent,
-         ss.urm_percent,
-         ss.students,
-         sc.latitude,
-         sc.longitude,
-         COUNT(DISTINCT u.id) teachers,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN se.user_id ELSE NULL END) teachers_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN se.user_id ELSE NULL END) teachers_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN se.user_id ELSE NULL END) teachers_csp_l365,
-         COUNT(DISTINCT CASE WHEN rpd.user_id IS NOT NULL AND rpd.course = 'CS Principles' THEN u.id ELSE NULL END) teachers_csp_pd,
-         COUNT(DISTINCT CASE WHEN rpd.user_id IS NOT NULL AND rpd.course = 'CS Discoveries' THEN u.id ELSE NULL END) teachers_csd_pd,
-         COUNT(DISTINCT f.student_user_id) students,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) THEN f.student_user_id ELSE NULL END) students_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf_l365,
-         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp_l365,
-         COUNT(DISTINCT CASE WHEN tt.user_id IS NOT NULL THEN u.id ELSE NULL END) teachers_csf_pd,
-         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
-         MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
-         MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event
-  FROM analysis.school_stats ss
-    LEFT JOIN dashboard_production.schools sc on sc.id = ss.school_id
-    LEFT JOIN dashboard_production.school_infos si 
-      ON ss.school_id = si.school_id
-    LEFT JOIN dashboard_production_pii.users u
-      ON si.id = u.school_info_id AND u.user_type = 'teacher'
-    LEFT JOIN dashboard_production.sections se 
-      ON se.user_id = u.id
-    LEFT JOIN dashboard_production.scripts scr 
-      ON scr.id = se.script_id
-    LEFT JOIN dashboard_production.followers f 
-      ON f.section_id = se.id
-    LEFT JOIN dashboard_production_pii.users u_students
-      ON u_students.id = f.student_user_id AND u_students.current_sign_in_at IS NOT NULL
-    LEFT JOIN analysis_pii.regional_partner_stats rpd 
-      ON rpd.user_id = u.id
-    LEFT JOIN analysis.csf_teachers_trained tt
-      ON tt.user_id = u.id
-    LEFT JOIN pledged
-      ON pledged.school_id = ss.school_id
-    LEFT JOIN hoc_event
-      ON hoc_event.school_id = ss.school_id
-  WHERE ss.state not in (select state from dashboard_production_pii.pd_regional_partner_mappings where state is not null)
-  AND ss.zip not in (select zip_code from dashboard_production_pii.pd_regional_partner_mappings where zip_code is not null)
-  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17;
-
+ ;
+ 
 GRANT ALL PRIVILEGES ON analysis.school_activity_stats TO GROUP admin;
 GRANT SELECT ON analysis.school_activity_stats TO GROUP reader, GROUP reader_pii;

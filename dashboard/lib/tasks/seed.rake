@@ -30,7 +30,7 @@ namespace :seed do
     'course2',
     'course3',
     'course4',
-    'coursea',
+    'coursea-2017',
     'coursea-2018',
     'csp1-2017',
     'csp2-2017',
@@ -93,7 +93,15 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls, :blocks].freeze
+  SCRIPTS_DEPENDENCIES = [
+    :environment,
+    :games,
+    :custom_levels,
+    :dsls,
+    :blocks,
+    :shared_blockly_functions,
+  ].freeze
+
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -156,6 +164,10 @@ namespace :seed do
 
   task blocks: :environment do
     Block.load_records
+  end
+
+  task shared_blockly_functions: :environment do
+    SharedBlocklyFunction.load_records
   end
 
   # Generate the database entry from the custom levels json file

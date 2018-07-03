@@ -36,6 +36,7 @@
     "markdown_instructions": "Goodness!  Look at all of these sprouts. Some of them will turn into corn, and others into lettuce.  \r\n\r\nTravel to the ends of the path to pick lettuce while there is lettuce, and pick corn while there is corn. \r\n\r\n",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 15,
     "contained_level_names": null
   },
   "published": true,

@@ -3,6 +3,7 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative '../../lib/cdo/github'
 require_relative '../../lib/cdo/infra_test_topic'
+require_relative '../../lib/cdo/metrics_helper'
 require_relative 'fixtures/mock_pegasus'
 
 BUILD_STARTED_PATH = deploy_dir('build-started').freeze
@@ -176,33 +177,13 @@ class DevRoutesTest < Minitest::Test
 
       it 'succeeds on test environment' do
         in_rack_env(:test) do
-          GitHub.expects(:sha).returns('abcdef')
-          InfraTestTopic.expects(:set_green_commit).returns(true)
+          fake_sha = 'abcdef'
+          GitHub.expects(:sha).returns(fake_sha)
+          DevelopersTopic.expects(:set_dtt).with('yes')
+          InfraTestTopic.expects(:set_green_commit).with(fake_sha)
+          Metrics.expects(:write_metric).with('dtt_green', fake_sha, Metrics::MANUAL)
           pegasus = make_test_pegasus
           pegasus.post '/api/dev/set-last-dtt-green', DEFAULT_PARAMS
-          assert_equal 200, pegasus.last_response.status
-        end
-      end
-
-      it 'does not update developers topic if not requested' do
-        in_rack_env(:test) do
-          GitHub.expects(:sha).returns('abcdef')
-          DevelopersTopic.expects(:set_dtt).never
-          InfraTestTopic.expects(:set_green_commit).returns(true)
-          pegasus = make_test_pegasus
-          pegasus.post '/api/dev/set-last-dtt-green', DEFAULT_PARAMS
-          assert_equal 200, pegasus.last_response.status
-        end
-      end
-
-      it 'updates developers topic if requested' do
-        in_rack_env(:test) do
-          GitHub.expects(:sha).returns('abcdef')
-          DevelopersTopic.expects(:set_dtt).returns(true)
-          InfraTestTopic.expects(:set_green_commit).returns(true)
-          pegasus = make_test_pegasus
-          pegasus.post '/api/dev/set-last-dtt-green',
-            DEFAULT_PARAMS.merge(text: 'yes')
           assert_equal 200, pegasus.last_response.status
         end
       end

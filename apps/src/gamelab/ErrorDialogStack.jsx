@@ -71,7 +71,6 @@ class ErrorDialogStack extends React.Component {
         isOpen
         uncloseable={error.error_type==='anim_load'}
         hideCloseButton={error.error_type==='anim_load'}
-        useDeprecatedGlobalStyles={error.error_type!=='anim_load'}
         handleClose={this.props.dismissError}
       >
         <h1>{error.message}</h1>

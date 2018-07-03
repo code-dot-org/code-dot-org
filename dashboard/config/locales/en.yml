@@ -113,6 +113,7 @@ en:
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
     use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider}. Please try again."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
@@ -383,6 +384,7 @@ en:
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: '(Wrong email address?)'
     email_resend_confirm: 'Resend confirmation instructions'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: '(we need your current password to confirm your changes)'
     delete: 'Delete Account'
@@ -403,6 +405,7 @@ en:
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
+    account_successfully_updated: "Account successfully updated."
   user_level:
     completed: 'Completed'
     tried: 'Tried'

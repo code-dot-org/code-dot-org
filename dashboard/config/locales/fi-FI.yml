@@ -411,6 +411,7 @@ fi:
     email_confirm_needed_required: 'Sinun sähköpostiosoitettasi %{email} ei ole vahvistettu:'
     email_confirm_wrong_email: "(Väärä sähköpostiosoite?)"
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(jätä tyhjäksi jos et halua vaihtaa)"
     current_password_hint: "(anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)"
     delete: Poista tilisi

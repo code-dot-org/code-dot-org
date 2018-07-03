@@ -49,6 +49,7 @@ const ScriptEditor = React.createClass({
     stageLevelData: PropTypes.string,
     hasVerifiedResources: PropTypes.bool,
     hasLessonPlan: PropTypes.bool,
+    curriculumPath: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
   },
 
@@ -207,6 +208,14 @@ const ScriptEditor = React.createClass({
             Check if this course has lesson plans (on Curriculum Builder or in
             PDF form) that we should provide links to.
           </p>
+        </label>
+        <label>
+          Curriculum Path
+          <input
+            name="curriculum_path"
+            defaultValue={this.props.curriculumPath}
+            style={styles.input}
+          />
         </label>
         <label>
           Professional Learning Course. When filled out, the course unit associated with
