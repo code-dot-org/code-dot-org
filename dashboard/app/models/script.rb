@@ -637,12 +637,14 @@ class Script < ActiveRecord::Base
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this script.
   def has_other_version_progress?(user)
-    return nil unless user && family_name
+    return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Script.
       # select only scripts in the same script family.
       where(family_name: family_name).
+      # select only older versions.
+      where("properties -> '$.version_year' < ?", version_year).
       # exclude the current script.
       where.not(id: id).
       # select only scripts which the user has progress in.
