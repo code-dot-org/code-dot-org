@@ -668,6 +668,7 @@ designMode.serializeToLevelHtml = function () {
   // Make a copy so that we don't affect designModeViz contents as we
   // remove prefixes from the element ids.
   var designModeVizClone = designModeViz.clone();
+  $(designModeVizClone).removeClass('withCrosshair');
   designModeVizClone.children().each(function () {
     elementUtils.removeIdPrefix(this);
   });

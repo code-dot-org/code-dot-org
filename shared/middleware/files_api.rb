@@ -220,6 +220,8 @@ class FilesApi < Sinatra::Base
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
     end
 
+    response.headers['S3-Version-Id'] = result[:version_id]
+
     if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
       return StringIO.new sanitize_for_under_13 result[:body].string
     end
@@ -316,10 +318,16 @@ class FilesApi < Sinatra::Base
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.
-    version_to_replace = params['version']
+
+    # TODO(dave): stop checking for 'version' once all clients have started using
+    # 'replace' and 'currentVersion'.
+    current_version = params['version'] || params['currentVersion']
+    should_replace = params['replace'] == 'true'
+    version_to_replace = params['version'] || (should_replace && params['currentVersion'])
+
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
-    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
+    conflict unless buckets.check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, current_user_id)
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
 
