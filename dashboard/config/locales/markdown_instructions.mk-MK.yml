@@ -34721,7 +34721,7 @@ mk:
       courseC_collector_prog8_markdown_instruction: |-
         *"Keep up the good work! Help
         me collect all of the treasure."*
-      courseC_collector_prog9_markdown_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_markdown_instruction: '*"Let''s get all of the treasure!"*'
       courseC_collector_progA_markdown_instruction: |-
         Help Laurel collect all of the
         treasure.
@@ -36022,7 +36022,7 @@ mk:
       courseE_farmer_ramp11b_2018_markdown_instruction: |-
         Let's try that again, but
         with more piles!
-      courseE_farmer_ramp12_markdown_instruction: "Pick all of the lettuce.\r\n"
+      courseE_farmer_ramp12_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12_forswap_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12_forswap_2018_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12a_markdown_instruction: "Help the farmer walk the path\nto
