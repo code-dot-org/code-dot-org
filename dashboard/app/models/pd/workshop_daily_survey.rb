@@ -81,5 +81,24 @@ module Pd
         day: processed_answers['day'] || get_day_for_form_id(form_id)
       }
     end
+
+    def self.response_exists?(user_id:, pd_workshop_id:, day:, form_id:)
+      exists?(
+        user_id: user_id,
+        pd_workshop_id: pd_workshop_id,
+        day: day,
+        form_id: form_id
+      )
+    end
+
+    def self.create_placeholder!(user_id:, pd_workshop_id:, day:, form_id:, submission_id:)
+      find_or_create_by!(
+        user_id: user_id,
+        pd_workshop_id: pd_workshop_id,
+        day: day,
+        form_id: form_id,
+        submission_id: submission_id
+      )
+    end
   end
 end
