@@ -231,7 +231,7 @@ sk:
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: Písanie pesničiek s parametrami
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
@@ -398,7 +398,7 @@ sk:
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       courseF_unplugged_songwritingParameters:
-        title: Songwriting With Parameters
+        title: Písanie pesničiek s parametrami
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
@@ -446,7 +446,7 @@ sk:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        title: Moji robotickí priatelia
         desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
       BuildingAFoundation_2018:
         title: ''
@@ -549,7 +549,7 @@ sk:
           of their name. Students learn that data can be represented and stored in
           more than one way.
       MoveItMoveIt_2018:
-        title: Move It, Move It
+        title: Posuň to, Posuň to
         desc: ''
       courseB_unplugged_CnC_2018:
         title: It's Great to Create and Play Fair

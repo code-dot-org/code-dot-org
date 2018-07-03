@@ -157,14 +157,44 @@ This section will be updated as emails are sent for this event.
 <summary>**CS Discoveries**</summary>
  <p>
  <br>
-More information coming soon!
-</details>
+**Check out the CS Discoveries Curriculum Guide (20 min)**<br>
+The <a href="https://docs.google.com/document/d/1hzG2yKUrvXKGq_ee0E1fAyxbzRL_8-bbldgyLG7m_X4/edit#", target=_"blank">2018-19 Curriculum Guide for CS Discoveries</a> is an important resource that contains information about the classroom and student practices that flow throughout the course, overviews of each unit, descriptions of the tools used throughout the course, implementation considerations, and more! To prepare for TeacherCon, we recommend that you review the following sections:
+
+* **Code.org Values and Philosophy (pages 2-3):** Our values permeate and drive the creation of every lesson we write. When we design learning experiences, we draw from a variety of teaching and learning strategies all with the goal of constructing an equitable and engaging learning environment.
+* **Instructional Strategies (pages 4-9):** We believe the instructional strategies listed in this section support a positive classroom culture and ultimately student learning.
+* **Problem Solving Process (page 12):** Our Problem Solving Process is a tool for structured problem solving that we have woven throughout the entire course to promote student growth and development.
+* **Curriculum Overview and Goals (page 13-14):** Learn more about what’s going on in the curriculum and what we hope students will learn throughout the year.
+
+**Get a sneak preview of your week at TeacherCon! (2 min)**<br>
+We're so excited to meet you in a few short weeks. [Visit our schedule](https://code.org/files/2018-TCSchedule-CSD.pdf) for CS Discoveries teachers to get a sense of how we'll spend our time together.
+
+**Sign up to receive conference updates directly to your phone (2 min - _Optional_)**<br>
+We will be using Remind to send general event updates while we’re in Phoenix. Remind is a messaging tool that helps us keep in touch with you via text message or the free Remind app without requiring you to give us any of your personal information. 
+
+<a href="http://remind.com/join/codeorgphx", target=_"blank">Click here</a> to receive reminders about TeacherCon Phoenix. Please note that this is not the only way we will communicate important conference updates and that this step is completely optional.
+<br></details>
 
 <details>
 <summary>**CS Principles**</summary>
  <p>
  <br>
-More information coming soon!
+**Check out the CS Principles Curriculum Guide (15 min)**<br>
+The <a href="https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#", target=_"blank">2018-19 Curriculum Guide for CS Principles</a> is an important resource that contains information about the classroom and student practices that flow throughout the course, overviews of each unit, descriptions of the tools used throughout the course, implementation considerations, and more! To prepare for your workshop, we recommend that you review the following sections:
+
+* **Code.org Values and Philosophy (pages 2-3):** Our values permeate and drive the creation of every lesson we write. When we design learning experiences, we draw from a variety of teaching and learning strategies all with the goal of constructing an equitable and engaging learning environment.
+* **Instructional Strategies (pages 4-9):** We believe the instructional strategies listed in this section support a positive classroom culture and ultimately student learning.
+* **Curriculum Overview and Goals (page 11):** Learn more about what’s going on in the curriculum and what we hope your students will learn throughout the year.
+
+**Dive into AP CS Principles! (45 min)** <br>
+Watch this required <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course/course-overview-modules-teachers", target=_"blank">series of videos</a> from the College Board for useful context about how AP CS Principles, came to be, the goals of the course, and how it was constructed. Note: if you don’t plan to teach this as an AP course, that’s ok! We still recommend watching most of the videos, and skipping sections 3 (Assessment) and 5 (AP Course Audit).
+
+**Get a sneak preview of your week (2 min)**<br>
+We’re so excited to meet you in a few short weeks. [Visit our schedule](https://code.org/files/2018-TCSchedule-CSP.pdf) for CS Principles teachers to get a sense of how we’ll spend our time together. 
+
+**Sign up to receive conference updates directly to your phone (2 min - _Optional_)**<br>
+We will be using Remind to send general event updates while we’re in Phoenix. Remind is a messaging tool that helps us keep in touch with you via text message or the free Remind app without requiring you to give us any of your personal information. 
+
+<a href="http://remind.com/join/codeorgphx", target=_"blank">Click here</a> to receive reminders about TeacherCon Phoenix. Please note that this is not the only way we will communicate important conference updates and that this step is completely optional.
 </details>
 
 ## **Contact Us**

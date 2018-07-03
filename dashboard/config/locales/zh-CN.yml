@@ -362,7 +362,7 @@ zh-CN:
     email_confirm_needed_required: 你的电子邮件地址%{email} 尚未被确认：
     email_confirm_wrong_email: "（错误的电子邮件地址？）"
     email_resend_confirm: 重新发送确认指令
-    new_email_hint: "(make sure you can receive emails to this email address)"
+    new_email_hint: "(确保此地址可以接收电子邮件)"
     new_password_hint: "（如果你不想改变它，就留空白）"
     current_password_hint: "（我们需要您的当前密码以确认您的更改）"
     delete: 删除帐号

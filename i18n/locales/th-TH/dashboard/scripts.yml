@@ -70,13 +70,13 @@ th:
             'Artist: Loops':
               name: 'ศิลปิน: Loops'
             'Artist: Nested Loops':
-              name: 'ศิลปิน: Nested Loops'
+              name: 'ศิลปิน: ลูปซ้อนลูป'
             'Artist: Sequence':
               name: 'ศิลปิน: การจัดลำดับก่อนหลัง'
             'Bee: Conditionals':
-              name: 'ผึ้ง: Conditionals'
+              name: 'ผึ้ง: เงื่อนไข'
             'Bee: Debugging':
-              name: 'ผึ้ง: Debugging'
+              name: 'ผึ้ง: การดีบั๊ก'
             'Bee: Loops':
               name: 'ผึ้ง: ลูป'
             Binary Bracelets:
@@ -114,17 +114,17 @@ th:
             'Artist: Functions':
               name: 'ศิลปิน: Functions'
             'Artist: Nested Loops':
-              name: 'ศิลปิน: Nested Loops'
+              name: 'ศิลปิน: ลูปซ้อนลูป'
             'Artist: Patterns':
               name: 'ศิลปิน: Patterns'
             'Bee: Conditionals':
-              name: 'ผึ้ง: Conditionals'
+              name: 'ผึ้ง: เงื่อนไข'
             'Bee: Debugging':
-              name: 'ผึ้ง: Debugging'
+              name: 'ผึ้ง: การดีบั๊ก'
             'Bee: Functions':
-              name: 'ผึ้ง: Functions'
+              name: 'ผึ้ง: ฟังก์ชั่น'
             'Bee: Nested Loops':
-              name: 'ผึ้ง: Nested Loops'
+              name: 'ผึ้ง: ลูปซ้อนลูป'
             Bounce:
               name: กระเด้ง
             Computational Thinking:
@@ -201,11 +201,11 @@ th:
             'Bee: For Loops':
               name: 'ผึ้ง: For Loops'
             'Bee: Functions with Parameters':
-              name: 'ผึ้ง: Functions with Parameters'
+              name: 'ผึ้ง: ฟังก์ชั่นที่มากับพารามิเตอร์'
             Extreme Challenge - Comprehensive:
               name: Extreme Challenge - Comprehensive
             Maze and Bee:
-              name: เขาวงกต and ผึ้ง
+              name: เขาวงกตและผึ้ง
             'Play Lab: For Loops':
               name: 'Play Lab: For Loops'
             'Play Lab: Functions with Parameters':
@@ -241,15 +241,15 @@ th:
             'Artist: Loops':
               name: 'ศิลปิน: Loops'
             'Artist: Nested Loops':
-              name: 'ศิลปิน: Nested Loops'
+              name: 'ศิลปิน: ลูปซ้อนลูป'
             'Artist: Sequence':
               name: 'ศิลปิน: การจัดลำดับก่อนหลัง'
             'Bee: Conditionals':
-              name: 'ผึ้ง: Conditionals'
+              name: 'ผึ้ง: เงื่อนไข'
             'Bee: Debugging':
-              name: 'ผึ้ง: Debugging'
+              name: 'ผึ้ง: การดีบั๊ก'
             'Bee: Nested Loops':
-              name: 'ผึ้ง: Nested Loops'
+              name: 'ผึ้ง: ลูปซ้อนลูป'
             'Farmer: While Loops':
               name: 'Farmer: While Loops'
             'Maze: Sequence':
@@ -2949,7 +2949,7 @@ th:
           description: ''
           stages:
             'Bee: Conditionals':
-              name: 'ผึ้ง: Conditionals'
+              name: 'ผึ้ง: เงื่อนไข'
             Kindergarten Stage 1:
               name: Kindergarten Stage 1
         gradeKinder:
@@ -3073,9 +3073,9 @@ th:
             'Artist: Variables':
               name: 'ศิลปิน: Variables'
             'Bee: For Loops':
-              name: 'ผึ้ง: For Loops'
+              name: 'ผึ้ง: ลูป(For Loops)'
             'Bee: Functions with Parameters':
-              name: 'ผึ้ง: Functions with Parameters'
+              name: 'ผึ้ง: ฟังก์ชั่นที่มากับพารามิเตอร์'
             Digital Citizenship:
               name: Digital Citizenship
             Explore project ideas:
@@ -3233,7 +3233,7 @@ th:
             " Bee: Conditionals":
               name: " Bee: Conditionals"
             'Artist: Nested Loops':
-              name: 'ศิลปิน: Nested Loops'
+              name: 'ศิลปิน: ลูปซ้อนลูป'
             Bee Debugging:
               name: ผึ้ง Debugging
             Bounce:
@@ -4023,7 +4023,7 @@ th:
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -4059,7 +4059,7 @@ th:
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -5433,7 +5433,7 @@ th:
           description_audience: ''
           description_short: ''
           description: ''
-        coursea:
+        coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
@@ -5472,7 +5472,7 @@ th:
               description_student: ''
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
@@ -5488,7 +5488,7 @@ th:
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        courseb:
+        courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
@@ -5509,7 +5509,7 @@ th:
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -5517,13 +5517,13 @@ th:
             More Programming in Maze:
               name: More Programming in Maze
             Programming with Rey and BB-8:
-              name: Programming with Rey and BB-8
+              name: การเขียนโปรแกรมกับเรย์และบีบี-8
           title: คอร์ส B
           assignment_family_title: คอร์ส B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        coursec:
+        coursec-2017:
           stages:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
@@ -5554,7 +5554,7 @@ th:
             Binary Bracelets:
               name: 'Beyond Programming: Binary Bracelets'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
           title: คอร์ส C
@@ -5562,7 +5562,7 @@ th:
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
-        coursed:
+        coursed-2017:
           stages:
             Introduction:
               name: Introduction to Online Puzzles
@@ -5626,7 +5626,7 @@ th:
               description_student: 'Learn how computers store pictures using simple ideas like on and off. '
               description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: ศิลปิน Binary
+              name: Binary in Artist
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
@@ -5642,7 +5642,7 @@ th:
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
-        coursee:
+        coursee-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5758,7 +5758,7 @@ th:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
@@ -5772,7 +5772,7 @@ th:
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-        coursef:
+        coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
@@ -5820,7 +5820,7 @@ th:
               description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice, and how they can use those structures even when chunks of code are slightly different.
             Conditionals and Functions in Bee:
               name: Conditionals and Functions in Bee
-              description_student: เก็บนำหวานจากเกสรเพื่อทำน้ำผึ้ง!
+              description_student: The bee needs your help again! Here you will be using functions to get nectar and make honey!
               description_teacher: 'This lesson teaches students how to create simple functions using our sophisticated “modal” function editor, preparing the way for them to incorporate parameters in future lessons. '
             Functions with Parameters in Artist:
               name: Functions with Parameters in Artist
@@ -5871,7 +5871,7 @@ th:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
@@ -6105,7 +6105,7 @@ th:
           stages:
             TTS:
               name: TTS
-        express:
+        express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
@@ -6116,11 +6116,11 @@ th:
             'Algorithms: Relay Programming':
               name: 'Debugging: Relay Programming'
             Debugging in Collector:
-              name: การดีบั๊กเบื้องต้น
+              name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops Project in Artist:
               name: โครงการลูปซ้อนลูป ในเกมศิลปิน
             Internet:
@@ -6212,7 +6212,7 @@ th:
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-        pre-express:
+        pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
@@ -6235,7 +6235,7 @@ th:
             Loops in Collector:
               name: Loops in Collector
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Events in Play Lab:
@@ -6406,7 +6406,7 @@ th:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops:
               name: Nested Loops
             Nested Loops with Frozen:
@@ -6496,7 +6496,7 @@ th:
             Building a Foundation:
               name: สร้างพื้นฐาน
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops in Bee:
               name: ลูปซ้อนลูป ในเรื่องผึ้ง
             Loops in Ice Age:
@@ -6528,7 +6528,7 @@ th:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops Project in Frozen:
               name: Nested Loops Project in Frozen
             'How it Works: The Internet':
@@ -6602,7 +6602,7 @@ th:
         new-stages-sept-2017:
           stages:
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Sequences with Scrat:
               name: การจัดลำดับก่อนหลังกับ Scrat
             Testing Template:
@@ -6626,7 +6626,7 @@ th:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
@@ -6684,7 +6684,7 @@ th:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
@@ -7112,7 +7112,7 @@ th:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops:
               name: Nested Loops
             Nested Loops with Frozen:
@@ -7174,7 +7174,7 @@ th:
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
-              name: Loops in Artist
+              name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
@@ -7802,7 +7802,7 @@ th:
           title: Course B (2018)
           assignment_family_title: คอร์ส B
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-          description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -7834,7 +7834,7 @@ th:
               description_student: ''
               description_teacher: ''
             Programming with Rey and BB-8:
-              name: Programming with Rey and BB-8
+              name: การเขียนโปรแกรมกับเรย์และบีบี-8
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
@@ -7846,7 +7846,7 @@ th:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Drawing Castles with Loops
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -7870,9 +7870,9 @@ th:
         coursed-2018:
           title: Course D (2018)
           assignment_family_title: คอร์ส D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_short: Learn about conditional statements and create your own art, story or game.
+          description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: การเขียนกระดาษกราฟ
@@ -8233,7 +8233,7 @@ th:
           title: Course E (2018)
           assignment_family_title: คอร์ส E
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-          description_short: Quickly cover concepts in Course C & D and then go further with functions.
+          description_short: Review concepts in Courses C & D, then go further by learning functions.
           description_audience: 'Ages: 8-12'
           stages:
             'Programming: My Robotic Friends':
@@ -9482,7 +9482,7 @@ th:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Drawing Castles with Loops
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -9508,7 +9508,7 @@ th:
             Copyright and Creativity:
               name: Copyright and Creativity
             Programming with Rey and BB-8:
-              name: Programming with Rey and BB-8
+              name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Loops in Ice Age:
               name: Loops in Ice Age
             'Persistence & Frustration: Stevie and the Big Project':

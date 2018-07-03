@@ -3539,8 +3539,10 @@ is:
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Ef þú festist er ráð að reyna að skipta þrautinni
           í það sem gerist á undan horninu og það sem gerist eftir hornið.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop,
-          **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: Þú þarft að nota tvær `endurtaka` lykkjur í röð.
@@ -3558,7 +3560,10 @@ is:
         courseA_harvester_loops6_b: This is the path you should take to pick all the
           corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
@@ -4343,7 +4348,10 @@ is:
         courseB_artist_loops3_b: Listamaðurinn þarf að fara í Suður til að teikna
           þessa línu.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: Listamaðurinn þarf að fara í Suður til að teikna
           þessa línu.
       courseB_artist_loops4_authored_hint:
@@ -4364,8 +4372,10 @@ is:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
-          inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Prófaðu að skrifa hreyfingarnar á blað og leita svo
           að endurtekningum.
@@ -6605,6 +6615,8 @@ is:
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace
           already.  Don't delete them all! \n\nUse the \"Step\" button to go through
           and figure out where the code goes wrong."
+        courseC_maze_debugging5_c: You can change the direction of the turn block
+          by clicking on the dropdown.
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it
           the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
@@ -10602,7 +10614,11 @@ is:
           Getur þú dregið þá kubba inn í fallið?
         courseE_farmer_functions3c_b: Ekki gleyma að kalla á fallið á þeim stöðum
           í aðalforritinu sem kubbar voru fjarlægðir úr.
-      courseE_farmer_functions3c1_2018_authored_hint: {}
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path`
+          function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around
+          the corners?
       courseE_farmer_functions3c_2018_authored_hint: {}
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop
@@ -10653,7 +10669,11 @@ is:
           hvort það sé kál í reit?
         courseE_farmer_functions6c_c: Ekki gleyma að halda áfram að athuga með maís!
       courseE_farmer_functions7_authored_hint: {}
-      courseE_farmer_functions7a1_2018_authored_hint: {}
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions`
+          section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when
+          you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: Þú þarft ekki fall hér, en þú getur búið eitt
           til ef það er gagnlegt!
@@ -10671,7 +10691,11 @@ is:
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: {}
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same
+          function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time,
+          you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Prófaðu að keyra gefna kóðann til að sjá hvað
           hann gerir. Hvað þarftu eftir þetta?
@@ -10687,7 +10711,14 @@ is:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: {}
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made
+          in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle
+          to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move
+          forward` to get to the last crop of lettuce before you can call your function
+          again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Getur þú notað faldaðar `ef` og `ef/annars`
           yrðingar til komast eftir slóðinni?

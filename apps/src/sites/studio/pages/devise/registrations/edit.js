@@ -2,6 +2,7 @@ import $ from 'jquery';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
+import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -25,10 +26,16 @@ $(document).ready(() => {
     userType,
   );
 
-  new AddPasswordController(
-    $('#add-password-form'),
-    document.getElementById('add-password-fields'),
-  );
+  const addPasswordMountPoint = document.getElementById('add-password-fields');
+  if (addPasswordMountPoint) {
+    new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
+  }
+
+
+  const manageLinkedAccountsMountPoint = document.getElementById('manage-linked-accounts');
+  if (manageLinkedAccountsMountPoint) {
+    new ManageLinkedAccountsController(manageLinkedAccountsMountPoint);
+  }
 
   initializeCreatePersonalAccountControls();
 });

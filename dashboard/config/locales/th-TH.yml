@@ -627,8 +627,8 @@ th:
       href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
       team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
       advisors</a> for their support in creating Code Studio.
-    help_from_html: เราระลึกถึงเหล่าวิศวกรจาก Google Microsoft Facebook และ Twitter
-      รวมถึงคนอื่น ๆ ที่ช่วยกันสร้างบทเรียนนี้ขึ้นมา
+    help_from_html: เราขอขอบคุณเหล่าวิศวกรจาก กูเกิล ไมโครซอฟท์ เฟสบุคส์ และ ทวิตเตอร์
+      รวมถึงคนอื่น ๆ ที่ช่วยกันสร้างสรรค์บทเรียนนี้ขึ้นมา
     help_from_html_old: เหล่าวิศวกรจาก Google Microsoft Facebook และ Twitter ได้ช่วยกันสร้างบทเรียนนี้ขึ้น
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
       All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
@@ -666,12 +666,12 @@ th:
     direction: Start Direction (in degrees)
   video:
     tab: วิดีโอ
-    notes: ไม่มีวิดีโอหรือ? อ่านบันทึกย่อแทนก็ได้นะ
+    notes: ไม่สามารถชมวิดีโอได้ใช่ไหม? แสดงเป็นข้อความแทนได้ไหม
     notes_coming_soon: เร็ว ๆ นี้จะมีบันทึกย่อสำหรับวิดีโอนี้
     autoplay_option: วิดีโอเริ่มเล่นอัตโนมัติ
     download: ดาวน์โหลดวิดีโอ
-    show_notes: แสดงเป็นข้อความ
-    show_video: Show Video
+    show_notes: แสดงข้อความ
+    show_video: แสดงวิดีโอ
   compatibility:
     upgrade:
       unsupported_message: เบราเซอร์ของคุณไม่ได้รับการสนับสนุนให้ใช้งาน กรุณาอัพเกรดเบราเซอร์เป็น
