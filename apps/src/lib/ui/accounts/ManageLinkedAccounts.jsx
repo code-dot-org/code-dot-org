@@ -74,20 +74,19 @@ export default class ManageLinkedAccounts extends React.Component {
               type={OAUTH_PROVIDERS.MICROSOFT}
               displayName={i18n.manageLinkedAccounts_microsoft()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.MICROSOFT)}
-              onClick={() => {}}
+              onClick={() => this.toggleProviderConnection(OAUTH_PROVIDERS.MICROSOFT)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.CLEVER}
               displayName={i18n.manageLinkedAccounts_clever()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.CLEVER)}
-              onClick={() => {}}
+              onClick={() => this.toggleProviderConnection(OAUTH_PROVIDERS.CLEVER)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.FACEBOOK}
               displayName={i18n.manageLinkedAccounts_facebook()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.FACEBOOK)}
-              onClick={() => {}}
-              cannotDisconnect
+              onClick={() => this.toggleProviderConnection(OAUTH_PROVIDERS.FACEBOOK)}
             />
           </tbody>
         </table>
