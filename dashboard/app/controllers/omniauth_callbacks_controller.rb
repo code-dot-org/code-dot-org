@@ -43,12 +43,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if auth_option.save
       flash.notice = I18n.t('user.account_successfully_updated')
-      redirect_to edit_user_registration_path
     else
-      render status: :unprocessable_entity,
-             json: auth_option.errors.as_json(full_messages: true),
-             content_type: 'application/json'
+      flash.alert = get_connect_provider_errors(auth_option)
     end
+
+    redirect_to edit_user_registration_path
   end
 
   def login
@@ -208,5 +207,19 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     connect_flag_expiration = session.delete :connect_provider
     connect_flag_expiration&.future?
+  end
+
+  def get_connect_provider_errors(auth_option)
+    errors = auth_option.errors.full_messages
+    Honeybadger.notify(
+      error_message: "Error connecting to provider",
+      context: {
+        authentication_option: auth_option,
+        errors: errors
+      }
+    )
+
+    return errors.first unless errors.empty?
+    I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.#{auth_option.credential_type}"))
   end
 end

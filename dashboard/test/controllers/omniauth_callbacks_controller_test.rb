@@ -522,7 +522,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'connect_provider: returns unprocessable_entity if AuthenticationOption cannot save' do
+  test 'connect_provider: redirects to account edit page with an error if AuthenticationOption cannot save' do
     AuthenticationOption.any_instance.expects(:save).returns(false)
 
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
@@ -536,7 +536,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         get :google_oauth2
       end
 
-      assert_response :unprocessable_entity
+      assert_redirected_to 'http://test.host/users/edit'
+      expected_error = I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.google_oauth2"))
+      assert_equal expected_error, flash.alert
     end
   end
 
