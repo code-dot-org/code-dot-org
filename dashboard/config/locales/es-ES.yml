@@ -316,7 +316,7 @@ es:
       free_play:
         playlab: Hacer una aplicación para el laboratorio de juegos
         artist: Dibuja Algo
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Hacer una aplicación para el Laboratorio de Aplicaciones
         gamelab: Hacer un proyecto de laboratorio de Juegos
         weblab: Hacer un proyecto de laboratorio de Juegos (beta)
@@ -361,7 +361,7 @@ es:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de distrito
       label: Hola %{username}
-      stats: Mi progreso
+      stats: Code Studio
       settings: Mi cuenta
       logout: Cerrar sesión
       signin: Iniciar Sesión
@@ -1277,7 +1277,7 @@ es:
     download_in_Turkish: 'Descargar en Turco:'
     download_in_Ukrainian: 'Descargar en ucraniano:'
     download_in_Vietnamese: 'Descargar en vietnamita:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

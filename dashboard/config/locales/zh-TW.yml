@@ -30,7 +30,7 @@ zh-TW:
         edit_header: 編輯帳戶資料
         error:
           future: 不能選擇將來的時間
-  hello: 世界您好
+  hello: Hello world
   welcome_back: 歡迎回來，%{name}
   your_professional_learning_plan: 你的專業學習計畫
   see_your_learning_plan: 觀看你的學習計劃
@@ -272,7 +272,7 @@ zh-TW:
       free_play:
         playlab: 製作一個 Play Lab App
         artist: 畫些什麼
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: 製作一個 App Lab app
         gamelab: 製作遊戲實驗室專案
         weblab: 製作網路實驗室 (測試版) 專案
@@ -317,7 +317,7 @@ zh-TW:
       classroom: 教師主頁
       district_dashboard: 分區控制台
       label: 嗨，%{username}
-      stats: 我的進度
+      stats: Code Studio
       settings: 帳戶設定
       logout: 登出
       signin: 登入
@@ -397,7 +397,7 @@ zh-TW:
     completed: 已完成
     tried: 已體驗
   home:
-    title: 程式工作室
+    title: Code Studio
     description: Code.org 建立的所有線上課程，通通放在 Code Studio 中。
     lines_of_code: 學生們已寫了 %{lines_count} 行程式碼
     lines_of_code_linebreak: "%{students_count} 百萬學生參與，共寫了 <br/>%{lines_count} 行程式碼"
@@ -541,7 +541,7 @@ zh-TW:
       卡通頻道著作權所有，並保留一切權利。
     code_from_html: Code.org 使用 p5.play 遊戲資源庫，根據 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a> 之許可。
-    powered_by_aws: 由亞馬遜網路服務系統提供服務
+    powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of
       Code&reg; 都是 Code.org.的商標。"
     copyright: 版權所有
@@ -640,7 +640,7 @@ zh-TW:
       title: 藝廊
       body: 觀看由用戶建立的應用程式及藝術畫作
     gamelab:
-      title: Game Lab（測試版）
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: 年齡 13+
@@ -662,10 +662,10 @@ zh-TW:
       title: 迪士尼無限 Play Lab
       body: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
     minecraft:
-      title: 當個創世神
+      title: Minecraft
       body: 從代碼的角度來探索 Minecraft 世界。
     minecraft2016:
-      title: 當個創世神
+      title: Minecraft
       body: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
     hero:
       title: Minecraft

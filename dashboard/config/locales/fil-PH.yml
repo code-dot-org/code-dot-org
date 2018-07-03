@@ -175,7 +175,7 @@ fil:
     accept_terms: Kailangan mong sumang-ayon para gumawa ng account
     error: May problemang naganap.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Oo
     email_preference_no: Hindi
@@ -203,7 +203,7 @@ fil:
     school_organization_zip: Zip Code ng Paaralan/Organisasyon
   signin_form:
     title: May account ka na? Sign in
-    login: Email o username
+    login: Email
     login_username: Email o Username
     password: Password
     remember: Remember me
@@ -321,7 +321,7 @@ fil:
       free_play:
         playlab: Lumikha ng App
         artist: Gumuhit ng isang bagay
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Lumikha ng App
         gamelab: Gumawa ng Game Lab na proyekto
         weblab: Gumawa ng Web Lab (beta) na proyekto
@@ -366,7 +366,7 @@ fil:
       classroom: Home Page ng Teacher
       district_dashboard: Dashboard ng Distrito
       label: Mabuhay %{username}
-      stats: My progress
+      stats: Code Studio
       settings: Account Ko
       logout: Mag-sign out
       signin: Sign in
@@ -688,12 +688,22 @@ fil:
       mga materyales na ito.
     help_from_html_old: Ang mga inhinyero mula sa Google, Microsoft, Facebook, at
       Twitter ay tumulong sa paglikha ng mga materyales na ito.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. All Rights Reserved.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
+      and &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; %{current_year} Cartoon Network.
     code_from_html: Ang Code.org ay gumagamit ng p5.play, na lisensiyado sa ilalim
       ng <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
@@ -821,7 +831,7 @@ fil:
       body: Tingnan ang isang galeriya ng mga app at larawan ng mga artista na nilikha
         na aming mga user
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Ang Game Lab ay isang programming environment kung saan makakagawa ka
         ng simpleng mga animation at laro gamit ang objects at mga karakter na maaring
         makipag-ugnayan sa bawat isa.
@@ -1197,7 +1207,7 @@ fil:
   flex_category:
     required: Buod
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Pabilisin
     end_of_course_project: End of Course Project
@@ -1309,7 +1319,7 @@ fil:
     download_in_Turkish: 'I-download sa Turkish:'
     download_in_Ukrainian: 'I-download sa Ukrainian:'
     download_in_Vietnamese: 'I-download sa Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

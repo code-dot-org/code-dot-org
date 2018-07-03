@@ -25,7 +25,8 @@ lt:
         name_example: Tavo vardas<br/>(jį matys tavo mokytoja(-s))
         email: El. pašto adresas
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: Naudotojo vardas
         password: Slaptažodis
         password_confirmation: Slaptažodžio patvirtinimas
@@ -68,7 +69,7 @@ lt:
   courses: Kursai
   courses_page:
     title_student: Mokytis su „Code Studio“
-    title_teacher: Teach with Code Studio
+    title_teacher: Teach Computer Science
   unplugged_activity: Veikla be kompiuterių
   of: iš
   more: DAUGIAU
@@ -113,10 +114,10 @@ lt:
     hoc_already_signed_up_heading: Naudotis neprisijungus
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your
+      classroom and share the link with them.<br/><br/>If you enjoyed the Hour of
+      Code and want to go further, you can set up a password and create a Code Studio
+      account below to enroll your students in any of our <a href="%{educate_url}">longer
       courses</a>.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
@@ -148,11 +149,12 @@ lt:
     agree_us_website: I agree to using a website based in the United States.
     my_data_to_us: Data from my use of this site may be sent to and stored or processed
       in the United States.
-    student_terms: Aš sutinku su Code.org<a href='http://code.org/tos'>sąlygomis</a>.
-      Jeigu man yra mažiau nei 13 metų, aš patvirtinu, kad turiu savo tėvų ar globejų
-      leidimą naudotis Code.org paslaugomis.<br/>Naudotojams, jaunesniems nei 13 metų,
-      el. pašto adresai nėra išsaugomi taip, kad galėtume su jais susisiekti.
-    teacher_terms: Sutinku su Code.org<a href='http://code.org/tos'>taisyklėmis</a>.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
+    teacher_terms: I agree to be bound by the Code.org terms of service. For more
+      information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: Mums reikia papildomos informacijos, kad galėtum prisiregistruoti.
     user_type_button: Update Account Type
     user_type_label: Paskyros tipas
@@ -162,7 +164,7 @@ lt:
     accept_terms: Turite sutikti, norint sukurti paskyrą
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Taip
     email_preference_no: Ne
@@ -296,9 +298,10 @@ lt:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Aš jau užbaigiau savo „Programavimo valandą“
@@ -306,7 +309,7 @@ lt:
       free_play:
         playlab: Sukurk programėlę
         artist: Nupiešk ką nors
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Sukurk programėlę
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -351,7 +354,7 @@ lt:
       classroom: Mokytojo namų puslapis
       district_dashboard: Prietaisų skydelis
       label: Sveiki, %{username}
-      stats: Mano pažanga
+      stats: Code Studio
       settings: Mano paskyra
       logout: Atsijungti
       signin: Prisijungti
@@ -420,8 +423,7 @@ lt:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -441,7 +443,7 @@ lt:
     completed: Baigta
     tried: Išbandyta
   home:
-    title: Programavimo kursai
+    title: Code Studio
     description: "„Code Studio“ yra internetinių kursų puslapis, sukurtas Code.org"
     lines_of_code: MOKINIAI PARAŠĖ %{lines_count} KODO EILUČIŲ
     lines_of_code_linebreak: "%{students_count} MILIJONŲ MOKINIŲ <br/>JAU PARAŠĖ %{lines_count}
@@ -609,8 +611,8 @@ lt:
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: You cannot move these students because they are
+      already in the new section.
     third_party_login: You cannot move students to a section that is synced with a
       third party tool.
   share:
@@ -743,7 +745,7 @@ lt:
       unused: Nepanaudoti lygiai
   upsell:
     applab:
-      title: Programėlių laboratorija
+      title: App Lab
       body: App Lab yra programavimo aplinka, su kuria galima sukurti paprastas programėles.
         Kurti galima su blokeliais arba su JavaScript, o po to ja pasidalinti su draugais.
       body_short: Sukurk programėlę naudodamas blokelius arba Javascript ir pasidalink
@@ -859,7 +861,7 @@ lt:
     support: Pagalba
     support_url: "//support.code.org"
     help_resources: Pagalba ir ištekliai
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -957,8 +959,8 @@ lt:
     tos: Naudojimo taisyklės
     privacy: Privatumo politika
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Sutikti
     print: Spausdinti
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1145,8 +1147,8 @@ lt:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'

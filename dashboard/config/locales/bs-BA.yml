@@ -25,7 +25,8 @@ bs:
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: Email
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: Korisničko ime
         password: Šifra
         password_confirmation: Potvrda šifre
@@ -68,7 +69,7 @@ bs:
   courses: Kursevi
   courses_page:
     title_student: Naučite o Code Studiu
-    title_teacher: Teach with Code Studio
+    title_teacher: Teach Computer Science
   unplugged_activity: Izvanmrežna aktivnost
   of: od
   more: VIŠE
@@ -112,10 +113,10 @@ bs:
     hoc_already_signed_up_heading: Započnite bez prijavljivanja
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your
+      classroom and share the link with them.<br/><br/>If you enjoyed the Hour of
+      Code and want to go further, you can set up a password and create a Code Studio
+      account below to enroll your students in any of our <a href="%{educate_url}">longer
       courses</a>.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
@@ -147,13 +148,12 @@ bs:
     agree_us_website: I agree to using a website based in the United States.
     my_data_to_us: Data from my use of this site may be sent to and stored or processed
       in the United States.
-    student_terms: Slažem se da ću poštovati <a href='http://code.org/tos'>uvjete
-      korištenja</a> Code.org. Ako imam manje od 13 godina, potvrđujem slanjem ovog
-      obrasca da moj roditelj ili zakonski staratelj daje dozvolu za korištenje usluga
-      Code.org. <br/>Korisnicima ispod 13 godina starosti e-mail adrese nisu pohranjene
-      u obliku koji nam omogućuje da ih kontaktiramo.
-    teacher_terms: Pristajem poštivati <a href='http://code.org/tos'>uvjete korištenja</a>
-      Code.org.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
+    teacher_terms: I agree to be bound by the Code.org terms of service. For more
+      information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: Trebamo dodatne informacije kako bismo nastavili vašu
       prijavu.
     user_type_button: Update Account Type
@@ -164,7 +164,7 @@ bs:
     accept_terms: Morate pristati da bi napravili račun
     error: Došlo je do greške.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Da
     email_preference_no: Ne
@@ -192,7 +192,7 @@ bs:
     school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Već imate račun? Prijavite se
-    login: E-mail ili korisničko ime
+    login: Email
     login_username: Email or Username
     password: Šifra
     remember: Zapamti me
@@ -214,8 +214,8 @@ bs:
   password:
     reset_form:
       title: Zaboravio/la si šifru?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Enter your email address associated with your account below and
+        we'll send you password reset instructions.
       email: E-mail adresa
       submit: Potvrdi
     reset_errors:
@@ -294,9 +294,10 @@ bs:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Završih svoj Sat Kodiranja
@@ -304,7 +305,7 @@ bs:
       free_play:
         playlab: Napravi Aplikaciju
         artist: Nacrtaj Nešto
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Napravi Aplikaciju
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -357,8 +358,8 @@ bs:
       already_registered: Jeste li već registrirani?
       pair_programming: Programiranje u Paru
       team: Tim
-      driver: Driver
-      navigator: Navigator
+      driver: Logged in
+      navigator: Partner
     popup:
       progress_for_user: Napredak za %{name}
       progress: Tvoj napredak
@@ -382,9 +383,9 @@ bs:
     students:
       dashboard: Idi na upravljačku ploču učitelja
     user_not_found: Učitelj nije pronađen.
-    student_teacher_disassociated: "%{teacher_name} je uklonjen kao učitelj za %{student_name}"
+    student_teacher_disassociated: You have left section %{section_code} with %{teacher_name}.
     panel:
-      answer_viewer: Preglednik Odgovora
+      answer_viewer: Teacher Panel
       student: Učenik
       viewing_solution: Pregled Rješenja
       try_it_yourself: Pokušaj sam/a
@@ -485,7 +486,7 @@ bs:
     heading_hoc2014: "<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>"
     heading_elementary: "<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>"
     heading_apps: "<h2>Zabava za</h2><h1>sve</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High
       School</h1>"
     heading_legacy: "<h2>Naš opšti kurs za</h2><h1>sve uzraste</h1>"
     your_gallery: Galerija
@@ -637,12 +638,22 @@ bs:
       napraviti ovaj tutorijal.
     help_from_html_old: Inženjeri iz Google-a, Microsoft-a, Facebook-a i Twitter-a
       su pomogli napraviti ove materijale za učenje.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Sva prava pridržana.
-    art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
-      Ltd. (sva prava pridržana). < br / > Plants vs Zombies &#8482; &amp; © %{current_year}
-      Electronic Arts Inc. (sva prava pridržana)
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
+      and &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a>.
     powered_by_aws: Potpomognuto sa Amazon Web Services
@@ -661,7 +672,7 @@ bs:
     report_abuse: Prijava zloupotrebe
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
-    how_it_works: How it works
+    how_it_works: How it Works (View Code)
     try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Trebaš li pomoć?
@@ -742,7 +753,7 @@ bs:
       audience: Ages 13+
       cta: Nauči kako
     hoc:
-      title: Sat Kodiranja
+      title: Classic Maze
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
       title: Flappy kôd
@@ -762,7 +773,7 @@ bs:
       body: Pogledaj galeriju aplikacija i umjetničkih slika koje su napravili naši
         korisnici
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Ages 13+
@@ -803,7 +814,7 @@ bs:
         text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: Ages 4+
       body: Mi smo za tebe sastavili listu van mrežni aktivnosti da ih koristiš u
         svom razredu. Sad možeš podučavati osnove računarstva, bilo da imaš računare
         u razredu ili ne! Pokušaj koristiti ove lekcije kao samostalne kurseve ili
@@ -871,7 +882,7 @@ bs:
     wrong_title: Hvala ti
     wrong_body: Thank you for submitting answers.
     correct_title: Hvala ti
-    correct_body: Thank you for submitting an answer
+    correct_body: Thank you for submitting answers.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -949,8 +960,8 @@ bs:
     tos: Uvjeti
     privacy: Pravila Privatnosti
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Prihvati
     print: Isprintaj
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1113,7 +1124,7 @@ bs:
   flex_category:
     required: Pregled
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1134,8 +1145,8 @@ bs:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Poglavlje 2: Rješavanje problema podataka'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1223,7 +1234,7 @@ bs:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
