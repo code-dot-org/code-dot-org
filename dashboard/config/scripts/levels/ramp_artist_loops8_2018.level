@@ -40,10 +40,10 @@
     "top_level_procedure_autopopulate": "false",
     "permitted_errors": "0",
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "slider_speed": "0.5",
     "show_type_hints": "false",
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Slow intro to loops.  Start with line...profit.",
