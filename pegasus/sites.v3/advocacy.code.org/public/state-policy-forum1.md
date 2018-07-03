@@ -29,9 +29,25 @@ The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 
 
 <a href="https://goo.gl/forms/EFcuR6C9Tf6m26AM2" target="_blank"><button type="button">Apply today!</button></a>
 
+## Pictures from Previous Forums
+
+<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
+<img alt="Networking activity" src="/images/fit-300/networking.jpg">
+<br>Networking by learning about networking!
+</div>
+<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
+<img alt="2016 State Policy Forum" src="/images/fit-300/2016-state-policy-forum.jpg">
+<br>2016 State Policy Forum attendees
+</div>
+<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
+<img alt="CS Leaders" src="/images/fit-300/cs-leads.jpg">
+<br>State CS leaders meeting each other for the first time.
+</div>
+<div style="clear: both;"></div>
+
 ## Agenda
 <details>
-  <summary>**What is the schedule?**</summary>
+  <summary>**What is the schedule for the pre-forum?**</summary>
   <p>
   <br>
 ### Pre-Forum Workshop (Code.org Advocacy Coalition members)
@@ -44,6 +60,14 @@ The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the op
 * Networking 
 * Team Planning Time
 
+</p>
+</details>
+
+
+<details>
+  <summary>**What is the schedule for the main forum?**</summary>
+  <p>
+  <br>
 ### Main Forum (All Participants) 
  
 The main forum begins at 3:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 4:00 pm on Friday, September 28. Sessions include: 
@@ -54,26 +78,6 @@ The main forum begins at 3:00 pm on Thursday, September 27 following the pre-for
 * Birds of a Feather Discussions
 * Team Planning Time
 
-</p>
-</details>
-
-<details>
-<summary>**Pictures from previous forums**</summary>
-  <p>
-  <br>
-<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
-<img alt="Networking activity" src="/images/fit-300/networking.jpg">
-<br>Networking by learning about networking!
-</div>
-<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
-<img alt="2016 State Policy Forum" src="/images/fit-300/2016-state-policy-forum.jpg">
-<br>2016 State Policy Forum Attendees
-</div>
-<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
-<img alt="CS Leaders" src="/images/fit-300/cs-leads.jpg">
-<br>State CS Leaders meeting each other for the first time.
-</div>
-<div style="clear: both;"></div>
 </p>
 </details>
 
@@ -120,7 +124,9 @@ The main forum begins at 3:00 pm on Thursday, September 27 following the pre-for
 <summary>**How do I get to the hotel?**</summary>
   <p>
   <br>
-Come back here for info on public transportation and/or hotel shuttle. 
+The hotel is located 26 miles or about 35 min from the Denver International Airport (DEN).  Uber and Lyft both provide service in the Denver area including to/from the Denver International Airport via their mobile apps. Please call the hotel at (303) 316-2700 to inquire about town car or shuttle transportation services and fees.
+
+For more information on hotel directions or transportation, please visit the hotel's [website](http://www.jwmarriottdenver.com/Denver-Luxury-Hotel/Directions-87.html). 
 </p> 
 </details>
 
