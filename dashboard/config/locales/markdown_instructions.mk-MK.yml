@@ -125,10 +125,7 @@ mk:
       2-3 Artist Loops New 14_markdown_instruction: "Play around with the code for\nthe
         diamond and see what other patterns you can make. \r\n\r\nTry changing\nhow
         many degrees you turn and how many times you loop."
-      2-3 Artist Loops New 15_markdown_instruction: |+
-        Now, draw anything you like!
-        <br/><br/>
-
+      2-3 Artist Loops New 15_markdown_instruction: "Now, draw anything you like!\r\n<br/><br/>\r\n\r\n"
       2-3 Artist Loops New 2_markdown_instruction: "Here is the same puzzle that\nwe
         just solved, but this time, we can only use one `move forward` block and\none
         `turn` block this time.\r\n\r\nCan you use a `repeat` to solve this puzzle?"
@@ -8532,12 +8529,7 @@ mk:
         This\r\n\r\nUse the correct blocks to make the spaceship take off as in\nthe
         picture.\r\n\r\n*Hint: Look at [this level](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/6)\nfor
         clues.*"
-      CSD U3 abstraction space template_markdown_instruction: |-
-        ![](https://images.code.org/b449da443093a6b7fb872c0b65d4ea39-image-1472234725048.png)
-
-        ![](https://images.code.org/87f39110a8cec7a6ca1978989f1d8eaf-image-1472235414354.png)
-
-        ![](https://images.code.org/69cb2daab7d1eec824b8bd2d2b117116-image-1472235429548.png)
+      CSD U3 abstraction space template_markdown_instruction: "![](https://images.code.org/b449da443093a6b7fb872c0b65d4ea39-image-1472234725048.png)\r\n\r\n![](https://images.code.org/87f39110a8cec7a6ca1978989f1d8eaf-image-1472235414354.png)\r\n\r\n![](https://images.code.org/69cb2daab7d1eec824b8bd2d2b117116-image-1472235429548.png)"
       CSD U3 abstraction steer_markdown_instruction: "# Steering your car\r\n\r\nNow\nyou
         have enough information to control your car with the keyboard using conditionals.
         \ Every\ntime the left arrow key is pressed, the car will turn to the left.
@@ -12671,11 +12663,7 @@ mk:
         Joe's Pet Store</a>\r\n* Website 2: <a href=\"http://www.petsmart.com/\">\nPetSmart</a>\r\n\r\nWrite
         your answer in the box below. When you are done\nwait for directions from
         your teacher before moving on."
-      CSDU2 Color Blindness_markdown_instruction: |+
-        # Color Blindness Filter
-
-
-
+      CSDU2 Color Blindness_markdown_instruction: "# Color Blindness Filter\r\n\r\n\r\n\r\n"
       CSDU2 IP Add Images_markdown_instruction: "# Adding Your Images\r\n\r\nWith\nimages
         and attribution information in hand, it's time to spruce up your new\npage.\r\n\r\n#
         Do This\r\n\r\nUpload your images to Web Lab and, using `<img>`\ntags, add
@@ -18456,11 +18444,7 @@ mk:
         link to Cornell University Center for Teaching Excellence provides\na brief
         description of group learning along with a handful of specific techniques\nfor
         designing and implementing group work activities:  "
-      Color Blindness Filter_markdown_instruction: |+
-        # Color Blindness Filter
-
-
-
+      Color Blindness Filter_markdown_instruction: "# Color Blindness Filter\r\n\r\n\r\n\r\n"
       Color Contrast Checker_markdown_instruction: "# Color Contrast\r\n\r\nPeople\nneed
         to be able to see and read the content on your web page for it to be\nuseful.
         Some people might have bad eye sight, others are color blind. How\ndo you
@@ -20210,14 +20194,8 @@ mk:
       K2.0 sequence 1_markdown_instruction: "A bug! Fix the code to get me to the\npig.\r\n\r\n![](https://images.code.org/2843193ce2d869ad2f06f0f5b114c9d0-image-1467924400663.gif)"
       K2.0 sequence 10_markdown_instruction: "**Challenge:** Move me around the TNT\nto
         get to the pig.\r\n\r\n![](https://images.code.org/4873075cd34a942f5006d59b05422bd0-image-1467932801138.gif)"
-      K2.0 sequence 12_markdown_instruction: |
-        Let's get that pig!
-
-        ![](https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif)
-      K2.0 sequence 2_markdown_instruction: |-
-        Fix the code to get me to the pig!
-
-        ![](https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif)
+      K2.0 sequence 12_markdown_instruction: "Let's get that pig!\r\n\r\n![](https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif)\r\n"
+      K2.0 sequence 2_markdown_instruction: "Fix the code to get me to the pig!\r\n\r\n![](https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif)"
       K2.0 sequence 3_markdown_instruction: "Something is not quite right. REMOVE\na
         block to get me to the pig!\r\n\r\n![](https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif)"
       K2.0 sequence 4_markdown_instruction: "Time for a shorter puzzle!  Move one\nway,
@@ -20226,10 +20204,7 @@ mk:
         the pig!\r\n\r\n![](https://images.code.org/0b324bc0f684f7a22171acd8b38c8d9f-image-1467931807767.gif)"
       K2.0 sequence 6_markdown_instruction: "Figure out what is missing and then\nadd
         blocks to get me to the pig!\r\n\r\n![](https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif)"
-      K2.0 sequence 7_markdown_instruction: |-
-        Solve this level and get me to the pig!
-
-        ![](https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif)
+      K2.0 sequence 7_markdown_instruction: "Solve this level and get me to the pig!\r\n\r\n![](https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif)"
       K2.0 sequence 8_markdown_instruction: "**Challenge:** Debug this level by adding\nblocks
         to get me to the pig!\r\n\r\n![](https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif)"
       K2.0 sequence 9_markdown_instruction: "**Challenge:** Go around the TNT to\nget
@@ -34399,10 +34374,7 @@ mk:
         way, then another to get the bird to the pig.\r\n\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)"
       courseA_maze_seq11_2018_markdown_instruction: "Time for a shorter puzzle!  Move\none
         way, then another to get the bird to the pig.\r\n\r\n![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)"
-      courseA_maze_seq12_markdown_instruction: |-
-        Get that pig!
-
-        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+      courseA_maze_seq12_markdown_instruction: "Get that pig!\r\n\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
       courseA_maze_seq12_2018_markdown_instruction: "Get that pig!\r\n\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
       courseA_maze_seq1_2018_markdown_instruction: |-
         *"Play with these blocks and
@@ -34411,20 +34383,14 @@ mk:
         pig.\"*\r\n\r\n\r\n![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)"
       courseA_maze_seq2_2018_markdown_instruction: "*\"A bug! Fix the code to get\nme
         to the pig.\"*\r\n\r\n\r\n![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)"
-      courseA_maze_seq3_markdown_instruction: |-
-        *"Fix the code to get me to the pig!"*
-
-        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+      courseA_maze_seq3_markdown_instruction: "*\"Fix the code to get me to the pig!\"*\r\n\r\n![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)"
       courseA_maze_seq3_2018_markdown_instruction: "*\"Fix the code to get me to\nthe
         pig!\"*\r\n\r\n![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)"
       courseA_maze_seq4_markdown_instruction: "*\"Something is not quite right.\"*\n\r\n\r\nREMOVE
         a block to get the bird to the pig!\r\n\r\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
       courseA_maze_seq4_2018_markdown_instruction: "*\"Something is not quite right.\"*\n\r\n\r\nREMOVE
         a block to get the bird to the pig!\r\n\r\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
-      courseA_maze_seq5_markdown_instruction: |-
-        Try this one yourself from the beginning.
-
-        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq5_markdown_instruction: "Try this one yourself from the beginning.\r\n\r\n![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)"
       courseA_maze_seq5_2018_markdown_instruction: "Try this one yourself from the\nbeginning.\r\n\r\n![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)"
       courseA_maze_seq6_markdown_instruction: "Move one way, then another to get\nthe
         bird to the pig!\r\n\r\n![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)"
@@ -34755,7 +34721,7 @@ mk:
       courseC_collector_prog8_markdown_instruction: |-
         *"Keep up the good work! Help
         me collect all of the treasure."*
-      courseC_collector_prog9_markdown_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_markdown_instruction: '*"Let''s get all of the treasure!"*'
       courseC_collector_progA_markdown_instruction: |-
         Help Laurel collect all of the
         treasure.
@@ -36056,7 +36022,7 @@ mk:
       courseE_farmer_ramp11b_2018_markdown_instruction: |-
         Let's try that again, but
         with more piles!
-      courseE_farmer_ramp12_markdown_instruction: "Pick all of the lettuce.\r\n"
+      courseE_farmer_ramp12_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12_forswap_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12_forswap_2018_markdown_instruction: Pick all of the lettuce.
       courseE_farmer_ramp12a_markdown_instruction: "Help the farmer walk the path\nto
@@ -39786,10 +39752,7 @@ mk:
         Variables aren't always numbers.
         What if you wanted to store a word or text? Experiment with the new `ask`
         block.
-      gradeK_sequence_4_markdown_instruction: |-
-        Try this one yourself from the beginning.
-
-        ![](https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif)
+      gradeK_sequence_4_markdown_instruction: "Try this one yourself from the beginning.\r\n\r\n![](https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif)"
       gradek_artist_loops1_markdown_instruction: "Help the artist draw this line\ntwo
         times forward.\r\n\r\n![](https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif)"
       gradek_artist_loops2_markdown_instruction: "Our artist is trying to draw a\nline

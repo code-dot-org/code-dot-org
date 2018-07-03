@@ -6672,7 +6672,7 @@ hy:
         Before you tackle writing this program, you'll need to figure out how to check multiple conditions at once.
 
         * **Brainstorm** with your neighbors ways you might check for more than one condition.
-        * **Share** back with the whole class so you can see other potential approaches.
+        * **Share** back with other classmates so you can see other potential approaches.
         * **Explore** the toolbox for blocks that might help (pay extra attention to the Math and Control drawers).
         * **Program** your proposed solution.
         * **Test** your program to make sure it's actually checking all of the conditions you intended.
@@ -7299,7 +7299,7 @@ hy:
 
         * Place two rectangles exactly in the corners of the screen, just like the picture.
       CSD U3 Drawing Squares to Corners_2018_markdown_instruction: |-
-        <img src="https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12 AM.png" style="float:right;width:150px">
+        <img src="https://images.code.org/716209ce879925f89bf661f337946509-image-1529019186051.32.48 PM.png" style="float:right;width:150px">
 
         # Place Squares in Corners
 
@@ -7919,7 +7919,7 @@ hy:
         * Add some randomization to your movement.
         * Add a second sprite and control it with a different set of keys ("w", "a", "s", and "d" are common choices).
         * Add some shapes to your background to make the scene more interesting.
-      CSD U3 Keyboard Input Challenge_2018_markdown_instruction: |-
+      CSD U3 Keyboard Input Challenge_2018_markdown_instruction: |
         # Challenge
         _Check with your teacher before trying this challenge._
 
@@ -8208,7 +8208,7 @@ hy:
 
         # Fish Animation
 
-        Using the counter pattern, make all three of the fish move in the image to the left. The blue fish should move the fastest, followed by the orange fish, with the green fish being the slowest.
+        Using the counter pattern, make all three of the fish move as in the image to the right. The blue fish should move the fastest, and the green fish should move the slowest.
       CSD U3 Movement Gears_markdown_instruction: |-
         <img src="https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif" style="width:200px; float:right; margin-left: 20px;">
 
@@ -10859,7 +10859,7 @@ hy:
         _Check with your teacher before starting any of the challenges._
 
         Using only the `rect` and `ellipse` commands, can you draw a new shape, such as this triangle made out of circles?
-      CSD U3 challenge new shape_2018_markdown_instruction: |-
+      CSD U3 challenge new shape_2018_markdown_instruction: |
         <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png" style="float: right; max-width: 200px; border: 1px solid grey">
 
         # Challenge: Shape of Shapes
@@ -12213,7 +12213,7 @@ hy:
         _Check with your teacher before starting any of the challenges._
 
         In the previous lesson you and your partner created several interesting images. See if you can recreate one of them using code.
-      CSD U3 picture_2018_markdown_instruction: |-
+      CSD U3 picture_2018_markdown_instruction: |
         # Challenge: Draw an Image
 
         _Check with your teacher before starting any of the challenges._
@@ -12756,9 +12756,9 @@ hy:
         line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger)
         ) and discuss with your partner where you think the shape will be drawn on
         the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
-        PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger)
-        )\n* Change the numbers inside the block, then try running the program again.\n*
-        Try to place the rectangle near the bottom right of the screen."
+        PM.png\" width=100> to run the program and see what happens.\n* Change the
+        numbers inside the block, then try running the program again.\n* Try to place
+        the rectangle near the bottom right of the screen."
       CSD U3 sequence_markdown_instruction: |-
         <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
         # Order Matters
@@ -13684,7 +13684,7 @@ hy:
         * Use the toggle switch to change the motorcycle's movement to go up and down.
         * Use a dropdown with color names to change the motorcycle's color
         * Make the buzzer or LED turn on when the motorcycle reaches the top or bottom of the screen.
-      CSD U6 challenge motorcycle_2018_markdown_instruction: |-
+      CSD U6 challenge motorcycle_2018_markdown_instruction: |
         # Challenge
 
         Use this program to experiment some more with getting and setting properties. Some ideas you might try include:
@@ -28351,48 +28351,56 @@ hy:
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
       Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s
-        a sprite called `alien1`! What do you think will happen when you click on
-        her?"
+        a sprite called `alien1`! \n\nWhat do you think will happen when you click
+        on it?  "
       Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite
         called `alien1`! What do you think will happen when you click on her?"
       Dance Party 2 Validated_markdown_instruction: The alien was proud of her dancing
         skills on Mars, but now she can only move side-to-side. Can you change the
         behavior inside the `begins` block to make her start spinning around?
-      Dance Party 2_markdown_instruction: The alien was proud of her dancing skills
-        on Mars, but now she can only move up and down. Can you change the behavior
-        inside the `begins` block to make her start spinning around?
+      Dance Party 2_markdown_instruction: "The alien was proud of its dancing skills
+        on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior
+        inside the <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n
+        \     <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n
+        \         <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n
+        \   </block></xml> block to make it start spinning around?  "
       Dance Party 3 - Validated_markdown_instruction: "Create a new sprite called
         `alien2`.  \n\nMake it do a different dance move when it's clicked.  "
-      Dance Party 3_markdown_instruction: Create a new sprite called `alien2`, and
-        make it do a different dance move when it's clicked.
+      Dance Party 3_markdown_instruction: "Create a new sprite called `alien2`.  \n\nMake
+        it do a different dance move when it's clicked.  "
       Dance Party 4 Validated_markdown_instruction: "Create a third sprite called
         `alien3`.  \n\nCan you set all of your aliens to stand in a straight line?
         It's an alien dance crew!"
-      Dance Party 4_markdown_instruction: Create a third sprite called `alien3`, and
-        make sure they're standing in a line. It's an alien dance crew!
+      Dance Party 4_markdown_instruction: "Create a third sprite called `alien3`.
+        \ \n\nCan you set all of your aliens to stand in a straight line? It's an
+        alien dance crew!"
       Dance Party 5 - Validated_markdown_instruction: "We can change all kinds of
         things in this program when you click on the sprites.  Let’s change their
         color!  \n\n**Add code to change the color of each alien when it gets clicked.**\n\n---\n"
-      Dance Party 5_markdown_instruction: We can change all kinds of things in this
-        program when you click on the sprites.  Let’s change their color!  **Add code
-        to change the color of each alien when it gets clicked.**
+      Dance Party 5_markdown_instruction: "We can change all kinds of things in this
+        program when you click on the sprites.  Let’s change their color!  \n\n**Add
+        code to change the color of each alien when it gets clicked.**\n\n---\n"
       Dance Party 6 - Validated_markdown_instruction: "These aliens are running wild!
         \ \n\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n
         \     <value name=\"SPRITE\"/>\n    </block></xml> block to make each alien
         stop moving when it is clicked.  \n    \n---\n"
-      Dance Party 6_markdown_instruction: These aliens are running wild! Use the `stops
-        everything` block to make each alien stop moving when it is clicked.
+      Dance Party 6_markdown_instruction: "These aliens are running wild!  \n\nUse
+        the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value
+        name=\"SPRITE\"/>\n    </block></xml> block to make each alien stop moving
+        when it is clicked.  \n    \n---\n"
       Dance Party 7 - Validated_markdown_instruction: "Finally, add a new bell sprite
         called `myBell`.  \n\nWhen you click on it, make all the aliens start doing
         the same dance move!  \n\n---\n"
-      Dance Party 7_markdown_instruction: Finally, add a new bell sprite called `myBell`.
-        When you click on it, make all the aliens start doing the same dance move.
+      Dance Party 7_markdown_instruction: "Finally, add a new bell sprite called `myBell`.
+        \ \n\nWhen you click on it, make all the aliens start doing the same dance
+        move!  \n\n---\n"
       Dance Party Freeplay_markdown_instruction: |-
         Now create your own alien disco! Looking for inspiration? Try these ideas:
         * Create two bell sprites, and make the aliens do a different dance move for each
-        * Make the aliens do a new dance move when they touch
+        * Make the aliens do a new dance move whenever they touch each other
       Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite
-        called `alien1`! What do you think will happen when you click on her?"
+        called `alien1`!   \n\nWhat do you think will happen when you click on it?
+        \ "
       Data Visualizations 101_markdown_instruction: |
         ## Data Visualization 101: How to design charts and graphs
 
@@ -29011,28 +29019,30 @@ hy:
         you think will happen when you run this code?"
       Fish Tank 1_markdown_instruction: "**Make a prediction**: What do you think
         will happen when you run this code?"
-      Fish Tank 2-validated_markdown_instruction: We're going to make a fish tank.
-        Change Dusty the tumbleweed to a fish.
+      Fish Tank 2-validated_markdown_instruction: "Let's make a fish tank!  \n\nChange
+        Dusty (the tumbleweed) to a fish."
       Fish Tank 2_markdown_instruction: We're going to make a fish tank. Change the
         Dusty the tumbleweed to a fish.
-      Fish Tank 3-validated_markdown_instruction: All this spinning is going to make
-        our fish dizzy! Change the fish's behavior to make it swim around the tank.
+      Fish Tank 3-validated_markdown_instruction: "The fish is getting dizzy! \n\nChange
+        the fish's behavior so that it swims around the tank."
       Fish Tank 3_markdown_instruction: All this spinning is going to make our fish
         dizzy! Change the fish's behavior to make it swim around the tank.
-      Fish Tank 4-validated_markdown_instruction: Our fish tank needs some water!
-        Use the `set background color` block to make the background blue.
+      Fish Tank 4-validated_markdown_instruction: "Our fish tank needs some water!
+        \n\nUse <xml><block type=\"gamelab_setBackground\" inline=\"true\">\n    <value
+        name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n
+        \     </block>\n    </value>\n  </block></xml> to make the background blue."
       Fish Tank 4_markdown_instruction: Our fish tank needs some water! Use the `set
         background color` block to make the background blue.
       Fish Tank 5-validated_markdown_instruction: Our fish is getting a little lonely.
-        Create a new sprite inside the fish tank.
+        Add another sprite to the fish tank.
       Fish Tank 5_markdown_instruction: Our fish is getting a little lonely. Create
         a new sprite inside the fish tank.
-      Fish Tank 6-validated_markdown_instruction: What do you want your fish’s friend
-        to do? Add a behavior and watch them go!
+      Fish Tank 6-validated_markdown_instruction: "What do you want your fish’s new
+        friend to do?   \n\nAdd a behavior and watch them go!"
       Fish Tank 6_markdown_instruction: What do you want your fish’s friend to do?
         Add a behavior and watch them go!
-      Fish Tank 7-validated_markdown_instruction: There are a lot of new blocks in
-        the toolbox. Play with them to make your fish tank special.
+      Fish Tank 7-validated_markdown_instruction: "We've added a lot of new blocks
+        to the toolbox.   \n\nPlay with them to make your fish tank special!"
       Fish Tank 7_markdown_instruction: There are a lot of new blocks in the toolbox.
         Play with them to make your fish tank special.
       Fish Tank Predict_markdown_instruction: "**Make a prediction**: What do you
@@ -33101,7 +33111,7 @@ hy:
 
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response Reflection_2018_markdown_instruction: |
-        <strong>Complete the Sending Numbers Rubric (on the second page of the <a href= "https://docs.google.com/document/d/1cSlWYnxOciDQut0OAUcsddmM56bveHely71LUb_CHkM/edit" target="_blank">Sending Number activity guide</a>) and then respond to the following prompt.</strong>
+        <strong>Complete the Sending Numbers Rubric (on the second page of the Sending Numbers activity guide</a>) and then respond to the following prompt.</strong>
 
         What problems arose in your efforts to create a working protocol? How did you think about the problem(s) in order to solve it?
       U1L8 Free Response2_markdown_instruction: How did collaboration play a role
@@ -47197,29 +47207,32 @@ hy:
       Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet
         giraffe. What do you think will happen if you press run and then click on
         her?
-      Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe.
-        What do you think will happen if you press run and then click on her?
-      Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner.
-        Create an **event** so that when Geraldine touches the puddle, her color changes
-        to brown.
-      Virtual Pet 3_markdown_instruction: |-
-        We can’t have a dirty giraffe wandering around!  Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
-
-        To reset the color, set it to white using this block:
-
-        ![](https://images.code.org/e98c7949116888b4229d4794f6cd2a82-image-1526512133821.06.05 PM.png)
-      Virtual Pet 4_markdown_instruction: We don't want to wait for the giraffe to
-        clean itself every time. Add a behavior to your soap to make it draggable,
-        then drag it over to clean the giraffe!
-      Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions
-        to each event so that when the giraffe collides with each sprite, it gets
-        a little smaller (shrinks by 5).
-      Virtual Pet 6_markdown_instruction: A balanced diet is important! We have to
-        feed the giraffe to get its strength back. Add an apple that returns the giraffe
-        back to regular size when they touch.
-      Virtual Pet Freeplay_markdown_instruction: 'Freeplay: Can you add more special
-        items for your virtual pet? Can you give her some friends? What more can you
-        make your giraffe do? '
+      Virtual Pet 1_markdown_instruction: "This is Geraldine, your new pet giraffe.
+        \ \n\nWhat do you think will happen if you press \"▶ Run\" and then click
+        on her? \n\n---"
+      Virtual Pet 2_markdown_instruction: "There's a mud puddle over in the corner.
+        \ \n\nCreate an **event** so that when Geraldine touches the puddle, her color
+        changes to brown.  \n\n---"
+      Virtual Pet 3_markdown_instruction: "We can’t have a dirty giraffe wandering
+        around!  \n\n1)  Add a new soap sprite to the screen.  \n2)  Can you make
+        it so that when the giraffe and the soap touch, the giraffe goes back to its
+        normal color?\n\n---\n\nTo reset the color, use this block:\n<xml><block type=\"gamelab_removeTint\"
+        inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n
+        \         <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n
+        \   </block></xml>\n"
+      Virtual Pet 4_markdown_instruction: "We don't want to wait for the giraffe to
+        clean itself every time.  \n\nAdd a behavior to your soap to make it draggable,
+        then drag it over to clean the giraffe!\n"
+      Virtual Pet 5_markdown_instruction: "All of this play takes energy!  \n\nAdd
+        actions to each event so the giraffe gets a little smaller (shrinks by 5)
+        each time it collides with another sprite.  \n"
+      Virtual Pet 6_markdown_instruction: "A balanced diet is important! We have to
+        feed the giraffe to get its strength back.  \n\nAdd an apple to the scene
+        and have it return the giraffe back to regular size when the two sprites touch.
+        \ \n"
+      Virtual Pet Freeplay_markdown_instruction: "Freeplay: What more can you make
+        your giraffe do? \n\n- Can you add more special items for your virtual pet?
+        \ \n- Can you give her some friends?  "
       Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine,
         your new pet giraffe. What do you think will happen if you press run and then
         click on her?"
@@ -47723,10 +47736,11 @@ hy:
 
         Collect one pile of treasure to pass this level.
       comment_intro_maze_2018_markdown_instruction: "*\"I'm confused. Help me remember
-        how to solve this maze.\"* \n\nUse the new `comment` block to leave yourself
-        quick reminders. They can help you remember what you were doing and why!\n\nComments
-        are only used for **you**. Your Play Area won't look different because of
-        a comment."
+        how to solve this maze.\"*  \n\n---\n\nTo pass this puzzle, solve the maze
+        and use the new <xml><block type=\"comment\">\n    <title name=\"TEXT\"> </title>\n
+        \ </block></xml> block to leave yourself quick reminders. They can help you
+        remember what you were doing and why!   \n  \n\nComments are only used for
+        **you**, they don't affect the play area."
       conditionals_forvideo_harvester_markdown_instruction: Collect all of the corn
         and lettuce, then pick the pumpkin.
       course1_artist_loops_challenge2_markdown_instruction: Let's play a game! Draw
@@ -48187,8 +48201,7 @@ hy:
         corn.
       courseA_harvester_seq12_markdown_instruction: "*Thank you for helping me!* \n\nPick
         all the corn."
-      courseA_harvester_seq13_markdown_instruction: Help the harvester pick **one**
-        corn!
+      courseA_harvester_seq13_markdown_instruction: Help the harvester pick corn!
       courseA_harvester_seq2_markdown_instruction: 'Use <xml><block type="maze_moveWest"/></xml>
         **three** times to get the harvester to the corn! '
       courseA_harvester_seq3_markdown_instruction: Use <xml><block type="maze_moveNorth"/></xml>
@@ -48204,18 +48217,18 @@ hy:
       courseA_harvester_seq8_markdown_instruction: Now the harvester needs to pick
         corn two times!
       courseA_harvester_seq9_markdown_instruction: Add two blocks to finish this puzzle!
-      courseA_maze_ramp2_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml>
-        blocks to <xml><block type="when_run"/></xml> to finish your code, then click
-        ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp2_2018_markdown_instruction: "Attach both <xml><block type=\"maze_moveEast\"/></xml>
+        blocks to <xml><block type=\"when_run\"/></xml> to finish your code, then
+        click \"▶ Run\".  \n\n\n---\n"
       courseA_maze_ramp2a_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml>
         blocks to <xml><block type="when_run"/></xml> to finish your code, then click
         ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseA_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere
         is one extra block that is going to cause the bird to crash.  \nThrow it away
         by removing it from the other blocks and dragging it back to the toolbox."
-      courseA_maze_ramp3a_2018_markdown_instruction: Grab a <xml><block type="maze_moveNorth"/></xml>
+      courseA_maze_ramp3a_2018_markdown_instruction: "Grab a <xml><block type=\"maze_moveNorth\"/></xml>
         from the toolbox and add it to the bottom of the other blocks to finish this
-        code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+        code, then click \"▶ Run\". \n\n---\n"
       courseA_maze_ramp3b_2018_markdown_instruction: "There's an extra block at the
         end of this code!  \n\nDrag it back to the toolbox to throw it away."
       courseA_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me
@@ -48378,15 +48391,15 @@ hy:
         In this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!
 
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
-      courseB_Scrat_ramp1_2018_markdown_instruction: To get Scrat to the acorn, snap
-        the <xml><block type="maze_moveEast"/></xml> block to the bottom of the <xml><block
-        type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
-      courseB_Scrat_ramp2_2018_markdown_instruction: Snap both <xml><block type="maze_moveEast"/></xml>
-        blocks to the bottom of the <xml><block type="when_run"/></xml> block to finish
-        your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
-      courseB_Scrat_ramp3a_2018_markdown_instruction: Grab a <xml><block type="maze_moveNorth"/></xml>
+      courseB_Scrat_ramp1_2018_markdown_instruction: "To get Scrat to the acorn, snap
+        the <xml><block type=\"maze_moveEast\"/></xml> block to the bottom of the
+        <xml><block type=\"when_run\"/></xml> block, then press \"▶ Run\"!  \n\n---\n"
+      courseB_Scrat_ramp2_2018_markdown_instruction: "Snap both <xml><block type=\"maze_moveEast\"/></xml>
+        blocks to the bottom of the <xml><block type=\"when_run\"/></xml> block to
+        finish your code, then click \"▶ Run\".  \n\n---\n"
+      courseB_Scrat_ramp3a_2018_markdown_instruction: "Grab a <xml><block type=\"maze_moveNorth\"/></xml>
         from the toolbox and add it to the bottom of the other blocks to finish this
-        code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+        code, then click \"▶ Run\".  \n\n---\n\n"
       courseB_Scrat_ramp3b_2018_markdown_instruction: |-
         There's an extra block at the end of this code!
 
@@ -48435,10 +48448,10 @@ hy:
         **Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.
 
         Drag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.
-      courseB_collector_loops1_2018_markdown_instruction: |-
-        **Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.
-
-        Drag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.
+      courseB_collector_loops1_2018_markdown_instruction: "**Free Play:** Move Laurel
+        around and get as much treasure as you can. Get at least one item with no
+        mistakes to pass this level.  \n\n---\n\nDrag blocks into the workspace and
+        try to figure out how to get treasure.  "
       courseB_collector_loops2_markdown_instruction: |-
         Move Laurel to the treasure, then use the<xml><block type="collector_collect"/></xml>block to pick it up.
 
@@ -48515,8 +48528,10 @@ hy:
         mood when you click on her.
       courseB_playlab_events4_markdown_instruction: "Knight time!  \n\nAdd an event
         so that the knight moves toward the dragon when the left arrow is clicked."
-      courseB_playlab_events4_2018_markdown_instruction: "Knight time!  \n\nAdd an
-        event so that the knight moves toward the dragon when the left arrow is clicked."
+      courseB_playlab_events4_2018_markdown_instruction: |-
+        Knight time!  Get the dragon to finish this level.
+
+        Add an event so that the knight moves toward the dragon when the left arrow is clicked.
       courseB_playlab_events5_2018_markdown_instruction: "Now add an event so that
         the knight runs away from the dragon when you press the right arrow.  \n\nMove
         the knight to the right to pass this level."
@@ -48532,10 +48547,10 @@ hy:
         the knight to vanish when he runs into the dragon on his way to get the flags!
         \n\nPlay a sound when they collide to make it feel more real.\n\nVisit all
         of the goals, then run into the dragon to pass the level."
-      courseB_playlab_events7_2018_markdown_instruction: "Make this game fun by setting
-        the knight to vanish when he runs into the dragon on his way to get the flags!
-        \n\nPlay a sound when they collide to make it feel more real.\n\nVisit all
-        of the goals, then run into the dragon to pass the level."
+      courseB_playlab_events7_2018_markdown_instruction: "Make this game fun by adding
+        more things!\n\n1) Set the knight to vanish when he runs into the dragon.
+        \  \n2) Play a sound when they collide to make it feel more real.   \n\n---\n\nVisit
+        all of the goals, then run into the dragon to pass the level."
       courseB_playlab_events_challenge1_markdown_instruction: "It's time for the Great
         Animal Race! Make the animals move down when you press `▼`. \n\nWho will run
         the fastest?"
@@ -49706,7 +49721,7 @@ hy:
       courseD_bee_conditionals7_predict2_2018_markdown_instruction: "Sometimes a cloud
         covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block
         to collect nectar at flowers and make honey at honeycomb. Remember: there
-        will only ever **bee** *one* honeycomb or *one* flower behind each cloud."
+        will only ever be *one* honeycomb or *one* flower behind each cloud."
       courseD_bee_conditionals8_markdown_instruction: |-
         **Challenge:** There will be either a flower or a honeycomb under each of those clouds!
 
@@ -49869,9 +49884,9 @@ hy:
       courseD_bounce_events1s_markdown_instruction: "Get the ball to the hoop!   \nAttach
         a block to the `when left arrow` event and press \"Run\" to move the player
         to the net."
-      courseD_bounce_events1s_2018_markdown_instruction: "Get the ball to the hoop!
-        \  \nAttach a block to the `when left arrow` event and press \"Run\" to move
-        the player to the net."
+      courseD_bounce_events1s_2018_markdown_instruction: "Get to the hoop!     \n\nAttach
+        a block to the `when left arrow` event and press \"Run\" to move the player
+        to the net.  \n\n---"
       courseD_bounce_events2s_markdown_instruction: Now, attach a block to the `when
         right event` so that the hand can get to both baskets.
       courseD_bounce_events2s_2018_markdown_instruction: Now, attach a block to the
@@ -51843,7 +51858,7 @@ hy:
 
         In this puzzle, each patch needs the variable to be one less than the patch before. Subtract one from the variable each time through the loop if you want to use the same function to solve this level.
       courseF_bee_variables_4_2018_markdown_instruction: |-
-        *"Un-BEE-lievable!"
+        "Un-BEE-lievable!"
 
         Edit the code to make it work for this puzzle.
       courseF_maze_ramp1_markdown_instruction: For this puzzle, connect all of the
@@ -52054,9 +52069,9 @@ hy:
       course_playlab_variables3_markdown_instruction: "Now, decode Pirate Pegleg's
         speech by changing the value of the variables in just two places!   \n- \"arrrg\"
         should be \"a\" \n- \"ye\" should be \"e\"\n\n"
-      coursea_maze_ramp1_2018_markdown_instruction: To get the bird to the pig, snap
-        the <xml><block type="maze_moveEast"/></xml> block to the bottom of the <xml><block
-        type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
+      coursea_maze_ramp1_2018_markdown_instruction: "To get the bird to the pig, snap
+        the <xml><block type=\"maze_moveEast\"/></xml> block to the bottom of the
+        <xml><block type=\"when_run\"/></xml> block, then press \"▶ Run\"!  \n\n\n---\n"
       coursef_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere
         is one extra block that is going to cause the bird to crash.  \nThrow it away
         by dragging it back to the toolbox."
