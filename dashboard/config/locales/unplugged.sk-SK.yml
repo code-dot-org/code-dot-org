@@ -187,9 +187,8 @@ sk:
           string and beads.
       SongwritingParameters:
         title: Písanie pesničiek s parametrami
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        desc: Students use the concept of the chorus in a song to learn about defining
+          and calling functions.
       DiceRace:
         title: 'Algoritmy z reálneho života: Závod kociek'
         desc: This lesson calls out ways we use algorithms in our daily lives. As
@@ -246,13 +245,21 @@ sk:
           as images and colors) in binary, as well.
       VideoGamesCoordinatePlanes:
         title: Videohry a súradnicové roviny
-        desc: Video Games and Coordinate Planes lesson description
+        desc: Discover how the video games you love to play are actually driven by
+          algebra! Explore how algebraic expressions and the coordinate plane can
+          help us understand how video games work, and then start planning for the
+          video game that you will create.
       Contracts:
         title: Zmluvy, doména a rozsah
-        desc: Contracts unplugged lesson description
+        desc: Contracts give us a way to understand and discuss functions. In this
+          lesson we'll look at how Contracts can help us make sense of a new programming
+          language or function.
       DesignRecipe:
         title: Vytvor recept
-        desc: Design Recipe lesson description
+        desc: In the last stage students wrote some very simple functions - but more
+          sophisticated functions demand a more thoughtful approach. The Design Recipe
+          is a structured approach to writing functions that includes writing test
+          cases to ensure that the function works as expected.
       Booleans:
         title: Pravdivostné hodnoty a logika
         desc: Pravdivostné hodnoty sú štvrtým a posledným typom údajov, z ktorými
@@ -267,7 +274,11 @@ sk:
           podmieňovacie príkazy...
       CollisionDetection:
         title: Kolízna detekcia a Pytagorova veta
-        desc: Collision Detection lesson description
+        desc: Determining when objects on the screen touch is an important aspect
+          of most games. In this lesson we'll look at how the Pythagorean Theorem
+          and the Distance Formula can be used to measure the distance between two
+          points on the plane, and then decide whether those two points (or game characters)
+          are touching.
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -276,7 +287,7 @@ sk:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Aktivity bez počítača
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivity bez počítača
@@ -285,7 +296,7 @@ sk:
         title: Aktivity bez počítača
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: Aktivity bez počítača
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Aktivity bez počítača
@@ -447,43 +458,43 @@ sk:
           hit save and plush"
       courseB_unplugged_MRF_2018:
         title: Moji robotickí priatelia
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 'Algoritmus z reálneho života: Zasaď semienko'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
