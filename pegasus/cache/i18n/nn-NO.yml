@@ -93,18 +93,7 @@ nn-NO:
   congratulations_volunteer: 'Gratulera: no har du prøvd ut Kodetimen,<a href="https://code.org/volunteer">
     meld deg på for å hjelpa til i eit klasserom</a> og hjelp fleire elevar med å
     gjennomføra Kodetimen!'
-  congratulations_on_completing_course1: Gratulerer med å ha fullført Kurs 1
-  congratulations_on_completing_course2: Gratulerer med å ha fullført Kurs 2
-  congratulations_on_completing_course3: Gratulerer med å ha fullført Kurs 3
-  congratulations_on_completing_course4: Gratulerer med å ha fullført Kurs 4
-  congratulations_on_completing_coursea: Gratulerer med å ha fullført Kurs A
-  congratulations_on_completing_courseb: Gratulerer med å ha fullført Kurs B
-  congratulations_on_completing_coursec: Gratulerer med å ha fullført Kurs C
-  congratulations_on_completing_coursed: Gratulerer med å ha fullført Kurs D
-  congratulations_on_completing_coursee: Gratulerer med å ha fullført Kurs E
-  congratulations_on_completing_coursef: Gratulerer med å ha fullført Kurs F
-  congratulations_on_completing_accelerated: Gratulerer med å fullføre det Akselererte
-    Kurset
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Prøv desse kursa
   congrats_next_tutorials_desc: Prøv desse korte, 1-timars-kursa eller prøv eit kurs
     frå våre <a href="%{current_path}/next">samarbeidspartnarar</a>.
@@ -284,28 +273,8 @@ nn-NO:
     @codeorg
   just_did_hoc_donor: 'Eg vart nett ferdig med #Kodetimen - sjekk det ut! (Takk %{donor_twitter}
     for at de støttar @codeorg) #HourOfCode'
-  just_did_course1_donor: Eg vart nett ferdig med Kurs 1 - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_course2_donor: Eg vart nett ferdig med Kurs 2 - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_course3_donor: Eg vart nett ferdig med Kurs 3 - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_course4_donor: Eg vart nett ferdig med Kurs 4 - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_coursea_donor: Eg vart nett ferdig med Kurs A - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_courseb_donor: Eg vart nett ferdig med Kurs B - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_coursec_donor: Eg vart nett ferdig med Kurs C - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_coursed_donor: Eg vart nett ferdig med Kurs D - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_coursee_donor: Eg vart nett ferdig med Kurs E - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_coursef_donor: Eg vart nett ferdig med Kurs F - sjekk det ut! Takk %{donor_twitter}
-    for at de støttar @codeorg
-  just_did_accelerated_donor: Eg vart nett ferdig med Introduksjonskurset - sjekk
-    det ut! Takk %{donor_twitter} for at de støttar @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 9 av 10 er enige i at skular bør undervise koding. http://youtu.be/nKIu9yen5nc.
     Besøk https://code.org/.
   twitter_cs_foundational: Å lære programmering er fundamentalt for alle elevar. https://youtu.be/QvyTEx1wyOY.
@@ -1403,6 +1372,18 @@ nn-NO:
   coursed_gradelevel: 8.+ klasse
   coursee_gradelevel: 9.+ klasse
   coursef_gradelevel: 10.+ klasse
+  coursea-2017_gradelevel: 5.+ klasse
+  courseb-2017_gradelevel: 6.+ klasse
+  coursec-2017_gradelevel: 7.+ klasse
+  coursed-2017_gradelevel: 8.+ klasse
+  coursee-2017_gradelevel: Alder 8–12 år
+  coursef-2017_gradelevel: 10.+ klasse
+  coursea-2018_gradelevel: 5.+ klasse
+  courseb-2018_gradelevel: 6.+ klasse
+  coursec-2018_gradelevel: 7.+ klasse
+  coursed-2018_gradelevel: 8.+ klasse
+  coursee-2018_gradelevel: Alder 8–12 år
+  coursef-2018_gradelevel: 10.+ klasse
   accelerated_gradelevel: Frå 10+ år (etter Kurs 3)
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
@@ -1540,6 +1521,30 @@ nn-NO:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Lær dei grunnlegjande konsepta for datavitksap med dra-og-slepp-programmering.
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark
     Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande

@@ -7624,11 +7624,19 @@ zh-CN:
         点击<img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20\nPM.png\"
         width=100>来运行程序，并看看会发生什么。( [显示在哪里](#triggercallout=run_trigger)\n)\r\n* 改变模块中的数字，然后试着再运行一下程序。\r\n*
         试着将矩形放在屏幕的右下角。"
-      CSD U3 rect_2018_markdown_instruction: "# 探索游戏实验室\r\n\r\n欢迎来到游戏实验室，你能在这里创建交互动画和游戏！\r\n\r\n你已经练习了一些基础，如将形状添加到网格中。在游戏实验室里，你需要做出和左边显示区域一样的东西。\r\n\r\n#
-        这样做\r\n\r\n*\n看看工作区里，这些说明下的这行代码( [显示在哪里](#triggercallout=block_trigger) )，然后和伙伴讨论一下你觉得这个形状会画在网格的什么位置。\n\r\n*
-        点击<img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20\nPM.png\"
-        width=100>来运行程序，并看看会发生什么。( [显示在哪里](#triggercallout=run_trigger)\n)\r\n* 改变模块中的数字，然后试着再运行一下程序。\r\n*
-        试着将矩形放在屏幕的右下角。"
+      CSD U3 rect_2018_markdown_instruction: |-
+        # 探索游戏实验室
+
+        欢迎来到游戏实验室，你能在这里创建交互动画和游戏！
+
+        你已经练习了一些基础，如将形状添加到网格中。在游戏实验室里，你需要做出和左边显示区域一样的东西。
+
+        # 这样做
+
+        * 看看工作区里，这些说明下的这行代码( [显示在哪里](#triggercallout=block_trigger) )，然后和伙伴讨论一下你觉得这个形状会画在网格的什么位置。
+        * 点击<img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100>来运行程序，并看看会发生什么。
+        * 改变模块中的数字，然后试着再运行一下程序。
+        * 试着将矩形放在屏幕的右下角。
       CSD U3 sequence_markdown_instruction: "<img src=\"https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05\nPM.png\"
         style=\"float:right\">\r\n# 顺序很重要\r\n\r\n在游戏实验室里，放置代码的顺序很重要。新的形状会绘制在之前形状之上，覆盖这些已经画好的形状。你可以看看，如果在代码中用一种以上的颜色时，有什么不同。\r\n\r\n#
         这样做\r\n\r\n* 看看画两个举行的代码，第一个是红色，另一个是蓝色。\r\n* 将红色的矩形改为绿色。\r\n* 改变代码的顺序，让绿色矩形在最上面。"
@@ -19330,21 +19338,43 @@ zh-CN:
       Dance Party 2 Validated_markdown_instruction: The alien was proud of her dancing
         skills on Mars, but now she can only move side-to-side. Can you change the
         behavior inside the `begins` block to make her start spinning around?
-      Dance Party 2_markdown_instruction: 这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。你能在‘开始’模块中改变行为让她可以旋转吗？
-      Dance Party 3 - Validated_markdown_instruction: 创造一个叫`外星人2`的图形，让她在被点击时完成一个新的舞步。
-      Dance Party 3_markdown_instruction: 创造一个叫`外星人2`的图形，让她在被点击时完成一个新的舞步。
-      Dance Party 4 Validated_markdown_instruction: 创造一个叫`外星人3`的图形，让精灵们站成一排。现在你有一个外星人舞蹈团了！
-      Dance Party 4_markdown_instruction: 创造一个叫`外星人3`的图形，让精灵们站成一排。现在你有一个外星人舞蹈团了！
-      Dance Party 5 - Validated_markdown_instruction: 我们可以通过改写程序对你的的图形们做任意的改变。现在我们来换个颜色吧！**在这里添加程序，使每个外星人在被单击时改变自己的颜色**
-      Dance Party 5_markdown_instruction: 我们可以通过改写程序对你的的图形们做任意的改变。现在我们来换个颜色吧！**在这里添加程序，使每个外星人在被单击时改变自己的颜色**
-      Dance Party 6 - Validated_markdown_instruction: 这些外星人太调皮了！在`停止所有`模块中写入程序，让每个外星人在被单击时静止下来。
-      Dance Party 6_markdown_instruction: 这些外星人太调皮了！在`停止所有`模块中写入程序，让每个外星人在被单击时静止下来。
-      Dance Party 7 - Validated_markdown_instruction: 最后一步，创建一个新的钟形图形，命名为`我的钟`。当点击这个钟时，所有的外星人会跳同一支舞。
-      Dance Party 7_markdown_instruction: 最后一步，创建一个新的钟形图形，命名为`我的钟`。当点击这个钟时，所有的外星人会跳同一支舞。
+      Dance Party 2_markdown_instruction: "这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。 \n\n你能在<xml><block
+        type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n<value name=\"SPRITE\">\n<block
+        type=\"sprite_variables_get\">\n<title name=\"VAR\">alien1</title>\n</block>\n</value>\n</block></xml>中改变行为，让它可以旋转吗？
+        \ "
+      Dance Party 3 - Validated_markdown_instruction: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。
+        \ "
+      Dance Party 3_markdown_instruction: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。  "
+      Dance Party 4 Validated_markdown_instruction: "创造一个叫`外星人3`的精灵。 \n\n你能让所有外星人排成一条直线吗？现在你有一个外星人舞蹈团了！"
+      Dance Party 4_markdown_instruction: "创造一个叫`外星人3`的精灵。 \n\n你能让所有外星人排成一条直线吗？现在你有一个外星人舞蹈团了！"
+      Dance Party 5 - Validated_markdown_instruction: |
+        可以在点击精灵时，做出任何的改变。现在来换个颜色吧！
+
+        **在这里添加代码，使每个外星人在被单击时改变自己的颜色**
+      Dance Party 5_markdown_instruction: |
+        可以在点击精灵时，做出任何的改变。现在来换个颜色吧！
+
+        **在这里添加代码，使每个外星人在被单击时改变自己的颜色**
+      Dance Party 6 - Validated_markdown_instruction: |
+        这些外星人太调皮了！
+
+        用<xml><block type="gamelab_removeAllBehaviors" inline="true"><value name="SPRITE"/></block></xml>模块来在每个外星人被单击时停下来。
+      Dance Party 6_markdown_instruction: |
+        这些外星人太调皮了！
+
+        用<xml><block type="gamelab_removeAllBehaviors" inline="true"><value name="SPRITE"/></block></xml>模块来在每个外星人被单击时停下来。
+      Dance Party 7 - Validated_markdown_instruction: |
+        最后一步，创建一个新的钟形图形，命名为`我的钟`。
+
+        当点击这个钟时，所有的外星人会跳同一支舞！
+      Dance Party 7_markdown_instruction: |
+        最后一步，创建一个新的钟形图形，命名为`我的钟`。
+
+        当点击这个钟时，所有的外星人会跳同一支舞！
       Dance Party Freeplay_markdown_instruction: |-
-        现在你可以开始你的外星人跳迪斯科啦！想找点灵感？试试这些：
-        * 绘制两个钟，让外星人在不同钟的控制下完成不同的舞步；
-        * 当外星人相互接触时，让他们开始不同的舞蹈。
+        现在可以创建自己的外星人迪斯科啦！想找点灵感？试试这些：
+        * 创建两个时钟，让外星人在不同时钟的控制下完成不同的舞步
+        * 当外星人相互接触时，让他们开始不同的舞蹈
       Dance Party Predict_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Data Visualizations 101_markdown_instruction: |
         ## Data Visualization 101: How to design charts and graphs
@@ -20022,7 +20052,10 @@ zh-CN:
         * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**
       Fish Tank 1-validated_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank 1_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
-      Fish Tank 2-validated_markdown_instruction: 现在我们要做一个鱼缸。把这个灰蒙蒙的风滚草变成一条鱼。
+      Fish Tank 2-validated_markdown_instruction: |-
+        我们来做个鱼缸！
+
+        把灰蒙蒙的风滚草变成一条鱼。
       Fish Tank 2_markdown_instruction: 我们要做一个鱼缸。将达斯提草变成一条鱼。
       Fish Tank 3-validated_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
       Fish Tank 3_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
@@ -26534,6 +26567,21 @@ zh-CN:
         Do This\r\n\r\n* When we want to flip a coin with a computer we will instead
         **generate a random number between 0 and 1**\r\n* Write a program that **uses
         a while loop** that **flips 10 coins** and writes their values to the screen\r\n\r\n![](https://images.code.org/970622047b06af13ea7bdd50ee86bcbf-image-1446739178483.gif)"
+      U3 - Simulation - Template_2018_markdown_instruction: |-
+        # Simulating Coin Flips
+
+        Over the next several exercises we are going to be building a program that simulates flipping 10,000 coins, or even more if you like. Along the way we're going to be keeping track of the patterns that develop and hopefully learning something about the patterns that develop.
+
+        This is a great problem to simulate on a computer. If you wanted to flip 10 coins you'd probably just do it by hand. Flipping 10,000 coins would take significantly longer (about 3 hours if you flip one per second) and so **we'd much rather use a program to do the work for us.** Not only is it a lot faster to write the program, but once you're done you can run your program over and over, repeating the experiment. As we'll see, **simulations like this make it much easier to quickly notice patterns, test hypotheses, and develop new ideas to investigate**.
+
+        **Starting Small:** Our simulations are going to start small. We'll actually only be flipping 10 coins to begin with, and then developing programs that keep track of patterns in this smaller set of data. That way we'll be able to visually confirm that our programs are working as intended. **Once we've verified that our programs work at a smaller scale we'll gradually increaese the number of flips our program is working on until we're at the full 10,000.**
+
+        # Do This
+
+        * When we want to flip a coin with a computer we will instead **generate a random number between 0 and 1**
+        * Write a program that **uses a while loop** that **flips 10 coins** and writes their values to the screen
+
+        ![](https://images.code.org/970622047b06af13ea7bdd50ee86bcbf-image-1446739178483.gif)
       U3 - Sprites - Intro Sprites_markdown_instruction: "# Sprites\r\n\r\nYou are
         going to start creating animations with **sprites**. A sprite is like a character
         in your animations. Your program will control how your sprite moves and appears
@@ -31804,25 +31852,25 @@ zh-CN:
         ＃记录是对象
 
         **什么是记录？**
-        在数据库术语中，存储在表中的每个项目称为**记录**。这就是为什么该模块被称为`createRecord`(创建记录）。在应用实验室中，**记录是一个对象**，而数据表本质上是存储在云中的JavaScript对象的集合。
+        在数据库术语中，存储在表中的每项条目称为一条**记录**。这就是为什么该模块被称为`createRecord`(创建记录）。在应用实验室中，**一条记录是一个对象**，而数据表本质上是存储在云中的JavaScript对象的集合。
 
-        **`createRecord`的第二个参数**是您要存储在数据库中的对象。
+        **`createRecord`的第二个参数**是存储在数据库中的对象。
 
-        *正如你所看到的，你可以使用这样的符号来指定对象：`{name：“Alice”}`（名字：爱丽丝）
-        *但是你可以**提供一个对象变量**并且整个对象将被存储。
+        * 正如所看到的，可以使用这样的符号来指定对象：`{name：“Alice”}`（名字：爱丽丝）
+        * 但是可以**提供一个对象变量**并且将整个对象存储起来。
         * 应用实验室 **为对象的每个属性创建一个列。**
 
-        ＃ 做这个：
+        ＃ 这样做：
 
-        **原型代码已提供**，用于创建代表歌曲的简单JavaScript对象。
+        **初始代码已提供**，用于创建代表歌曲的简单JavaScript对象。
 
-        *拖出`createRecord`模块。
+        * 拖出`createRecord`模块。
         * **将表格名称**（第一个参数）设置为描述性内容，如“mySongs”。
         * **将第二个参数**设置为要存储的对象的名称，在本例中为“song”(歌曲)。
         * **运行程序。**
-        *在数据浏览器中**验证是否创建了一个新表，并且将`song`对象添加为记录**。
+        * 在数据浏览器中**验证是否创建了一个新表，并且将`song`对象添加为记录**。
 
-        ！[]（https://images.code.org/d587a1bc977f54d132acafa63764d813-image-1449241390939.gif）
+        ![](https://images.code.org/d587a1bc977f54d132acafa63764d813-image-1449241390939.gif)
       U4 - CreateRecord - 4_markdown_instruction: "# Messing Around with Data\r\n\r\n**The
         third parameter** of `createRecord` is a callback function.  **What does it
         do?**\r\n\r\n![](https://images.code.org/9a89cca8257b7dc807a1637efe121442-image-1449245629915.png)\r\n\r\n*
@@ -32752,6 +32800,22 @@ zh-CN:
         app.\r\n* **Add a `console.log` command** inside the callback function of
         `readRecords` to **display the `records`**\r\n* Run the program and **confirm
         that the same information you saw in the Data Viewer is displayed in the console**.\r\n\r\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)"
+      U4 - Read Record - part 1 - template_2018_markdown_instruction: "# Reading Records\nYou
+        have learned how `createRecord` can be used to create permanent copies of
+        your data in a remote database. \n\n**In order to use this data you'll need
+        a way to read it out of your database and back into your app**.\n\n<img src=\"https://images.code.org/ac5fb29d4935df7b5825f4cabd6b89e8-image-1449502640243.35.37
+        AM.png\" style=\"width: 350px; float: right\">\n\nCheck out the new command
+        `readRecords`. This command **requests from the database *all* the records
+        stored in one table.**. \n\nThe database responds by the sending an **array
+        of objects** back to your program -- one object for every record in the table.
+        \ As with createRecord, the data sent back by the database will come through
+        **callback function of the `readRecords`, with array of objects in the `records`
+        parameter**.\n\n# Do This\n\n**NOTE**: the database with at table called 'myTable'
+        already contains some data.\n\n* **Open the Data Viewer** to look at the data
+        in 'myTable'\n* **Add a `readRecords` command** to your app.\n* **Add a `console.log`
+        command** inside the callback function of `readRecords` to **display the `records`**\n*
+        Run the program and **confirm that the same information you saw in the Data
+        Viewer is displayed in the console**.\n\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)"
       U4 - ReadRecords - Contacts App 1_markdown_instruction: "# Contacts App: Loading
         Your Contacts From the Database\n\nThe way you left your Contacts App in the
         last lesson, **your app had stored data in a remote database but could not
@@ -35808,6 +35872,10 @@ zh-CN:
         \ \r\n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\r\n\r\n\r\nHow
         hard would it be to crack a message encrypted with this cipher? Does the length
         of the key make a difference?\r\n"
+      Virtual Pet 1 Predict_markdown_instruction: |
+        **Make a prediction:** This is Geraldine, your new pet giraffe.
+
+        What do you think will happen if you press "▶ Run" and then click on her?
       Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet
         giraffe. What do you think will happen if you press run and then click on
         her?
@@ -36356,7 +36424,7 @@ zh-CN:
       courseA_harvester_seq10_markdown_instruction: 收割者需要采摘所有的玉米！找到规律了吗？
       courseA_harvester_seq11_markdown_instruction: 自己试试吧！采摘所有玉米。
       courseA_harvester_seq12_markdown_instruction: "*谢谢你帮助我！*\n\r\n\r\n采摘所有的玉米。"
-      courseA_harvester_seq13_markdown_instruction: 帮助农夫采摘**一个**玉米！
+      courseA_harvester_seq13_markdown_instruction: 帮助农夫采摘玉米！
       courseA_harvester_seq2_markdown_instruction: '用<xml><block type="maze_moveWest"/></xml>模块
         3 次来让收割者到达玉米的位置！ '
       courseA_harvester_seq3_markdown_instruction: 用<xml><block type="maze_moveNorth"/></xml>模块
@@ -36367,15 +36435,17 @@ zh-CN:
       courseA_harvester_seq7_markdown_instruction: 你得在两个方向上移动才能找到那朵花! 帮助收割者选择正确的方向。
       courseA_harvester_seq8_markdown_instruction: 现在收割者需要采摘玉米两次！
       courseA_harvester_seq9_markdown_instruction: 添加两个模块来完成这个关卡！
-      courseA_maze_ramp2_2018_markdown_instruction: |-
-        将<xml><block type="maze_moveEast"/></xml>
-        模块附加到<xml><block type="when_run"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。
+      courseA_maze_ramp2_2018_markdown_instruction: |
+        将两个<xml><block type="maze_moveEast"/></xml>
+        模块附加到<xml><block type="when_run"/></xml>上来完成代码，然后点击"▶运行"。
       courseA_maze_ramp2a_2018_markdown_instruction: |-
         将<xml><block type="maze_moveEast"/></xml>
         模块附加到<xml><block type="when_run"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。
       courseA_maze_ramp3_2018_markdown_instruction: "*\"这只猪把我的羽毛弄皱了。\"*\r\n\r\n这里有一个额外的模块会让小鸟坠落。\r\n将它从其它模块上移除，并拖回工具箱来扔掉。"
-      courseA_maze_ramp3a_2018_markdown_instruction: 从工具箱里取出一个 <xml><block type="maze_moveNorth"/></xml>
-        并将它加到其它模块的最底下来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。
+      courseA_maze_ramp3a_2018_markdown_instruction: '从工具箱里取出一个 <xml><block type="maze_moveNorth"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击"▶
+        运行"。
+
+'
       courseA_maze_ramp3b_2018_markdown_instruction: "There's an extra block at the
         end of this code!  \n\nDrag it back to the toolbox to throw it away."
       courseA_maze_ramp4_2018_markdown_instruction: "*\"沿着这条路带我去找那只笨猪。\"*\r\n\r\n躲开
@@ -36436,14 +36506,15 @@ zh-CN:
       courseA_playlab_events_challenge2_2018_markdown_instruction: "当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？\r\n\r\n在这个关卡中,
         请务必点击提示。这些提示会给你尝试一些有趣的事情!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseA_playlab_events_challengeClone_markdown_instruction: "我的朋友藏在哪里？在这个游戏中，点击我，就会显示我的朋友奥丽芙猫！点击奥丽芙会让罗宾出现！你能也写代码来显示我的其他朋友吗？\r\n\r\n\r\n在这一关中，确保点击了提示！提示会帮你一步步完成这个项目！\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
-      courseB_Scrat_ramp1_2018_markdown_instruction: 让斯奎特到达橡子，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
-        type="when_run"/></xml>模块的下面，然后按下 ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)
-        ！
-      courseB_Scrat_ramp2_2018_markdown_instruction: |-
-        将<xml><block type="maze_moveEast"/></xml>
-        模块附加到<xml><block type="when_run"/></xml>上来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。
-      courseB_Scrat_ramp3a_2018_markdown_instruction: 从工具箱里取出一个 <xml><block type="maze_moveNorth"/></xml>
-        并将它加到其它模块的最底下来完成代码，然后点击 ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)。
+      courseB_Scrat_ramp1_2018_markdown_instruction: '让斯奎特到达橡子，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
+        type="when_run"/></xml>模块的下面，然后点击"▶ 运行"！
+
+'
+      courseB_Scrat_ramp2_2018_markdown_instruction: |
+        将两个<xml><block type="maze_moveEast"/></xml>
+        模块附加到<xml><block type="when_run"/></xml>上来完成代码，然后点击"▶ 运行"。
+      courseB_Scrat_ramp3a_2018_markdown_instruction: "从工具箱里取出一个 <xml><block type=\"maze_moveNorth\"/></xml>，并将它加到其它模块的最底下来完成代码，然后点击\"▶
+        运行\"。\n\n"
       courseB_Scrat_ramp3b_2018_markdown_instruction: |-
         There's an extra block at the end of this code!
 
@@ -36514,6 +36585,9 @@ zh-CN:
       courseB_playlab_events3_2018_markdown_instruction: 当你点击黛西龙时，用事件让她切换到随机的![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)表情。
       courseB_playlab_events4_markdown_instruction: "骑士时间!  \r\n\r\n添加一个事件，当点击左箭头时，让骑士移向龙。"
       courseB_playlab_events4_2018_markdown_instruction: "骑士时间!  \r\n\r\n添加一个事件，当点击左箭头时，让骑士移向龙。"
+      courseB_playlab_events5_2018_markdown_instruction: "Now add an event so that
+        the knight runs away from the dragon when you press the right arrow.  \n\nMove
+        the knight to the right to pass this level."
       courseB_playlab_events6_markdown_instruction: "帮助你的骑士得到所有的旗帜！\r\n\r\n要做到这个，你需要添加事件来帮助骑士上下左右移动。"
       courseB_playlab_events6_2018_markdown_instruction: "帮助你的骑士得到所有的旗帜！\r\n\r\n要做到这个，你需要添加事件来帮助骑士上下左右移动。"
       courseB_playlab_events7_markdown_instruction: "当骑士在获得旗帜的路上碰到龙时，让他消失。这样会让游戏更有趣！\n\r\n\r\n当它们碰撞时，播放一个声音，让它感觉起来像真的一样。\r\n\r\n浏览所有的目标，然后撞上龙来通过这关。"
@@ -37844,7 +37918,10 @@ zh-CN:
       courseF_bee_fwp_challenge2_markdown_instruction: "*\"**莴苣** 看看你是否能通过最后的测试！吧你学到的都用上！\"*\r\n\r\n在函数里用一个`计数循环`来收集这样的所有蔬菜。\n用`length`（长度）参数来让`计数循环`为不同的最大值计数。通过在函数外使用第二个`计数循环`来让你的程序尽可能的短。\r\n\r\n祝你好运！"
       courseF_bee_fwp_challenge2_2018_markdown_instruction: "*\"**莴苣** 看看你是否能通过最后的测试！吧你学到的都用上！\"*\r\n\r\n在函数里用一个`计数循环`来收集这样的所有蔬菜。\n用`length`（长度）参数来让`计数循环`为不同的最大值计数。通过在函数外使用第二个`计数循环`来让你的程序尽可能的短。\r\n\r\n祝你好运！"
       courseF_bee_variables_3_2018_markdown_instruction: "*\"这个花园太棒了！\"*\r\n\r\n这一关中，每次补丁需要变量比上一次少1。如果想在这关用同样的函数，要在每次循环时让变量减少1。"
-      courseF_bee_variables_4_2018_markdown_instruction: "*\"不可思议!\"\r\n\r\n编辑代码，让它在本关中也能工作。"
+      courseF_bee_variables_4_2018_markdown_instruction: |-
+        *"不可思议!"
+
+        编辑代码，让它在本关中也能工作。
       courseF_maze_ramp1_markdown_instruction: 在这一关，在<block type="when_run"/></xml>下连接工作区里的所有模块，并点击"运行"来看它运行！
       courseF_maze_ramp13_markdown_instruction: "现在另一个愤怒的小鸟关卡全放到一起了！\r\n\r\n用嵌套循环让小鸟到达猪那里。"
       courseF_maze_ramp15_markdown_instruction: "*\"我该生气了！\"* \r\n\r\n\r\n**挑战：**用你学到的知识来帮小鸟抓到猪！"
@@ -37919,9 +37996,10 @@ zh-CN:
         \r\n- \"ye\"应该是\"e\"\r\n\r\n"
       course_playlab_variables3_markdown_instruction: "现在，通过在两个地方改变变量的值来解码海盗的话！  \r\n-\n\"arrrg\"应该是\"a\"
         \r\n- \"ye\"应该是\"e\"\r\n\r\n"
-      coursea_maze_ramp1_2018_markdown_instruction: 让小鸟到达猪那里，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
-        type="when_run"/></xml>模块的下面，然后按下 ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)
-        ！
+      coursea_maze_ramp1_2018_markdown_instruction: '让小鸟到达猪那里，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
+        type="when_run"/></xml>模块的下面，然后点击"▶ 运行"！
+
+'
       coursef_maze_ramp3_markdown_instruction: "*\"这只猪把我的羽毛弄皱了。\"*\r\n\r\n这里有一个额外的模块会让小鸟坠落。\r\n将其拖回工具箱来扔掉它。"
       coursef_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\r\n\r\nThere
         is one extra block that is going to cause the bird to crash.  \r\nThrow it
@@ -39847,25 +39925,25 @@ zh-CN:
       cspu5_assess4_shortAnswerShopping_exam_prep_markdown_instruction: "**简答题：**
         希西利娅想写一个应用来帮助管理管理一次到杂货铺的出行。这个应用要维护一个购物的清单（一个词语列表），即所有要买的东西。描述一下，希西利娅会在应用里用上另一个列表。还有什么信息需要被跟踪？描述一下这个列表在应用里会被如何使用和更新。\r\n"
       debrief-monday_markdown_instruction: |-
-        # 第一天: 今日结束后的总结
+        # 第1天: 今日结束后的总结
 
-        *教育者今天有哪些收获(例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
-        *有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
+        * 领导者今天有哪些收获 (例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
+        * 有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
       debrief-thursday_markdown_instruction: |-
-        # 第四天: 今日结束后的总结
+        # 第4天: 今日结束后的总结
 
-        *教育者今天有哪些收获(例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
-        *有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
+        * 领导者今天有哪些收获 (例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
+        * 有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
       debrief-tuesday_markdown_instruction: |-
-        # 第二天: 今日结束后的总结
+        # 第2天: 今日结束后的总结
 
-        *教育者今天有哪些收获(例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
-        *有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
+        * 领导者今天有哪些收获 (例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
+        * 有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
       debrief-wednesday_markdown_instruction: |-
-        # 第三天: 今日结束后的总结
+        # 第3天: 今日结束后的总结
 
-        *教育者今天有哪些收获(例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
-        *有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
+        * 领导者今天有哪些收获 (例如，老师的感悟和需求，作为引导员一起工作，维持了群体间的健康关系，等)？
+        * 有没有对教学方法的改进计划？如果有，要对哪里进行改动，为什么要这样改？
       discussion-thursday_markdown_instruction: |
         # Day 4: Discussion-Based
 
@@ -39874,15 +39952,15 @@ zh-CN:
         * What are facilitators doing?
         * What are teachers doing?
       engagement-monday_markdown_instruction: |
-        # 第一天: 参与者
+        # 第1天: 参与
 
-        分析一个参与者所面临的挑战
+        分析今天参与者所面临的挑战。
 
-        *这挑战是什么？
-        *引导员是怎样应对它的？
-        *换位思考，如果作为引导员，你会如何应对它？
+        * 挑战是什么？
+        * 引导员是怎样应对它的？
+        * 在你引导的课程中如何应对挑战？
       engagement-thursday_markdown_instruction: |
-        # 第四天: 参与者
+        # 第4天: 参与
 
         分析一个参与者所面临的挑战
 
@@ -39890,15 +39968,15 @@ zh-CN:
         *引导员是怎样应对它的？
         *换位思考，如果作为引导员，你会如何应对它？
       engagement-tuesday_markdown_instruction: |
-        # 第二天: 参与者
+        # 第2天: 参与
 
-        分析一个参与者所面临的挑战
+        分析今天参与者所面临的挑战。
 
-        *这挑战是什么？
-        *引导员是怎样应对它的？
-        *换位思考，如果作为引导员，你会如何应对它？
+        * 挑战是什么？
+        * 引导员是怎样应对它的？
+        * 在你引导的课程中如何应对挑战？
       engagement-wednesday_markdown_instruction: |
-        # 第三天: 参与者
+        # 第3天: 参与
 
         分析一个参与者所面临的挑战
 
@@ -39919,33 +39997,33 @@ zh-CN:
         * What are teachers doing?
         * What strategies did you see facilitators use to keep teachers engaged?
       feel-monday_markdown_instruction: |
-        # 第一天: 感受
+        # 第1天: 感受
 
         尝试用几个词或句描述参与者今天的总体感受(例如，困惑，忙碌，焦虑，等)
 
-        *哪些事情促使大家有了这样的情绪？
-        *从你的视角来看，今天，引导员做了哪些事来给与参与者经验？
+        * 哪些事情促使大家有了这样的情绪？
+        * 从你的视角来看，今天，引导员做了什么来处理它们或支持参与者的体验？
       feel-thursday_markdown_instruction: |
-        # 第四天: 感受
+        # 第4天: 感受
 
         尝试用几个词或句描述参与者今天的总体感受(例如，困惑，忙碌，焦虑，等)
 
-        *哪些事情促使大家有了这样的情绪？
-        *从你的视角来看，今天，引导员做了哪些事来给与参与者经验？
+        * 哪些事情促使大家有了这样的情绪？
+        * 从你的视角来看，今天，引导员做了什么来处理它们或支持参与者的体验？
       feel-tuesday_markdown_instruction: |
-        # 第二天: 感受
+        # 第2天: 感受
 
         尝试用几个词或句描述参与者今天的总体感受(例如，困惑，忙碌，焦虑，等)
 
-        *哪些事情促使大家有了这样的情绪？
-        *从你的视角来看，今天，引导员做了哪些事来给与参与者经验？
+        * 哪些事情促使大家有了这样的情绪？
+        * 从你的视角来看，今天，引导员做了什么来处理它们或支持参与者的体验？
       feel-wednesday_markdown_instruction: |
-        # 第三天: 感受
+        # 第3天: 感受
 
         尝试用几个词或句描述参与者今天的总体感受(例如，困惑，忙碌，焦虑，等)
 
-        *哪些事情促使大家有了这样的情绪？
-        *从你的视角来看，今天，引导员做了哪些事来给与参与者经验？
+        * 哪些事情促使大家有了这样的情绪？
+        * 从你的视角来看，今天，引导员做了什么来处理它们或支持参与者的体验？
       frozen circle function in circle_markdown_instruction: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
       frozen circle function with parameter_markdown_instruction: 这里有一个“创建圆圈”的模块，可以画不同大小的圆圈。你可以用它来创建一个5像素的小圆圈和10像素的大圆圈吗?
       frozen circle function_markdown_instruction: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。

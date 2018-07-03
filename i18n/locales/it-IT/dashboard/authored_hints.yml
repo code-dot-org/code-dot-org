@@ -65,15 +65,15 @@ it:
         2-3_Artist_Functions_12_a: Prova ad eseguire il programma per capire che blocchi devi aggiungere.
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Il programma deve:<br>
-          - usare la funzione<br>
-          - andare avanti di 100 + 75 pixel<br>
+          Il programma deve:
+          - usare la funzione
+          - andare avanti di 100 + 75 pixel
           - usare la funzione
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Il programma deve:<br>
-          - usare la funzione<br>
-          - andare avanti di 100 + 75 pixel<br>
+          Il programma deve:
+          - usare la funzione
+          - andare avanti di 100 + 75 pixel
           - usare la funzione
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "Adesso di quanto bisogna andare avanti prima di usare la funzione per la seconda volta?"
@@ -139,7 +139,7 @@ it:
       2-3 Bee Functions 9_authored_hint:
         2-3_Bee_Functions_8_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         2-3_Bee_Functions_8_b: |-
-          Ricordati di inserire il codice all'interno del blocco verde della funzione.<br>
+          Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
@@ -1246,7 +1246,7 @@ it:
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: If you call the function one more time, you can create the same design in the final corner. You can also `jump to` other positions or change the whole thing around however you want!
       course3_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nIl blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: *indipendentemente* dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course3_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
         courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?
@@ -1259,10 +1259,10 @@ it:
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
-        courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
+        courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
       course3_bee_functions_challenge2_authored_hint:
         courseE_bee_functions_challenge1_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
-        courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
+        courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
       course3_bee_functions_challenge3_authored_hint:
         courseF_bee_functions_challenge1_a: You can use the functions in the tool box to help you. You can call a function inside of another function's definition!
       course3_bee_functions_challenge4_authored_hint:
@@ -1511,7 +1511,7 @@ it:
           <title name="VALUE">???</title>
           </block></xml>
       course4_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nIl blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: *indipendentemente* dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course4_artist_fwp_challenge1_authored_hint: { }
       course4_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Each vertical line has a length of `10`. Each horizontal line should have a length of `length`.
@@ -4890,6 +4890,7 @@ it:
         courseC_maze_debugging5_b: Prova a dire ad alta voce cosa dovrebbe fare Scrat.  Corrisponde al codice presente nell'area di lavoro?  Che differenza c'è?
       courseC_maze_debugging5_2018_authored_hint:
         courseC_maze_debugging5_a: "Ci sono un sacco di blocchi utili nell'area di lavoro! Non cancellarli tutti!\n\nUsa il pulsante \"Fai un passo\" per indagare e capire dove il codice è sbagliato."
+        courseC_maze_debugging5_c: You can change the direction of the turn block by clicking on the dropdown.
         courseC_maze_debugging5_b: Prova a dire ad alta voce cosa dovrebbe fare Scrat.  Corrisponde al codice presente nell'area di lavoro?  Che differenza c'è?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
@@ -5334,20 +5335,20 @@ it:
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Il programma deve:<br>
-          - usare la funzione<br>
-          - andare avanti di 100 + 75 pixel<br>
+          Il programma deve:
+          - usare la funzione
+          - andare avanti di 100 + 75 pixel
           - usare la funzione
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
-          To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
+          Per risolvere questo esercizio, basta aggiungere un ciclo che ripeta 8 volte il codice che trovi già pronto.
           
-          If you can't remember what the starter code was, click "start over" in the upper right corner of the workspace.
+          Se, dopo alcune prove non ricordi il codice di partenza, fai clic su "Ripristina" in alto a destra nell'area di lavoro.
       courseD_artist_functions4_authored_hint:
-        courseD_artist_functions4_a: Try using a function!
+        courseD_artist_functions4_a: Prova ad usare una funzione!
       courseD_artist_functions5_authored_hint:
-        courseD_artist_functions5_a: Don't give up!  Remember what you have been learning.
-        courseD_artist_functions5_b: Functions make it easy to call saved code at any time, not just from inside a loop!
+        courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
+        courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una certa sequenza di istruzioni in un qualsiasi punto del programma principale, non solo all'interno di un ciclo!
       courseD_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: Focus only on making one window for now.  We'll create a function for it in the next puzzle.
         grade4_artist_functions_windows0_b: Try using nested loops, where the inner loop makes the square and the outer loop rotates the square four times.
@@ -5356,23 +5357,23 @@ it:
         courseD_artist_functions7_b: You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels forward for each top window, and 150 pixels down to get the bottom windows.
       courseD_artist_functions8_authored_hint:
         courseD_artist_functions8_a: |-
-          Start by making a function for a square, then try making a function for a line of squares.
+          Inizia creando una funzione che disegna un quadrato, poi prova a farne un'altra che disegni una fila di quadrati.
           
-          How would you use the `draw a line of squares` function to make this image?
+          Come userai la funzione `disegna una fila di quadrati` per creare questa immagine?
         courseD_artist_functions8_b: After your first line of squares, you need to move the artist down and back before you start your second line of squares.
         courseD_artist_functions8_c: You should move the artist back a different number of pixels for even lines than for odd ones.
       courseD_artist_functions9_authored_hint:
         courseD_artist_functions9_a: To get around the need to have multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
         courseD_artist_functions9_b: This drawing is made by creating a line of triangles and turning either 60 or 120 degrees after each time you draw the triangle line.
       courseD_artist_nestedLoops1_authored_hint:
-        courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
-        courseD_artist_nestedLoops1_b: You can draw this triangle with a `repeat` loop with two blocks inside. Which blocks do you need?
+        courseD_artist_nestedLoops1_a: Il modo più facile di disegnarlo, è usare il blocco `vai avanti` e il blocco `gira a destra`.
+        courseD_artist_nestedLoops1_b: Puoi disegnare questo triangolo con un ciclo `ripeti ... volte` con due blocchi all'interno. Di quali blocchi hai bisogno?
         courseD_artist_nestedLoops1_c: Try writing the steps on paper and looking for patterns that can be simplified with loops.
       courseD_artist_nestedLoops10_authored_hint: { }
       courseD_artist_nestedLoops10_2018_authored_hint: { }
       courseD_artist_nestedLoops1_2018_authored_hint:
-        courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
-        courseD_artist_nestedLoops1_b: You can draw this triangle with a `repeat` loop with two blocks inside. Which blocks do you need?
+        courseD_artist_nestedLoops1_a: Il modo più facile di disegnarlo, è usare il blocco `vai avanti` e il blocco `gira a destra`.
+        courseD_artist_nestedLoops1_b: Puoi disegnare questo triangolo con un ciclo `ripeti ... volte` con due blocchi all'interno. Di quali blocchi hai bisogno?
         courseD_artist_nestedLoops1_c: Try writing the steps on paper and looking for patterns that can be simplified with loops.
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: |-
@@ -7052,50 +7053,50 @@ it:
       courseD_scrat_predict1_authored_hint: { }
       courseD_scrat_predict1_2018_authored_hint: { }
       courseD_scrat_ramp1_authored_hint:
-        courseC_maze_programming1_a: If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click "Run" again.
+        courseC_maze_programming1_a: Se Scrat non riesce a prendere la ghianda, controlla che tutti e tre i blocchi siano collegati insieme, quindi clicca nuovamente su "Esegui".
         courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp1_2018_authored_hint:
-        courseC_maze_programming1_a: If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click "Run" again.
+        courseC_maze_programming1_a: Se Scrat non riesce a prendere la ghianda, controlla che tutti e tre i blocchi siano collegati insieme, quindi clicca nuovamente su "Esegui".
         courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp2_authored_hint:
         courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco `quando si clicca su "Esegui"`.
-        courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
+        courseC_maze_programming2_b: Controlla che tutti e tre i blocchi `vai avanti` siano agganciati al blocco `quando si clicca su "Esegui"`.
       courseD_scrat_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco `quando si clicca su "Esegui"`.
-        courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
+        courseC_maze_programming2_b: Controlla che tutti e tre i blocchi `vai avanti` siano agganciati al blocco `quando si clicca su "Esegui"`.
       courseD_scrat_ramp3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPer eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.\n\nTrascina nella cassetta degli attrezzi il blocco che vuoi cancellare.\n\nInfine, rimetti al loro posto gli altri blocchi."
-        courseC_maze_programming3_b: Remember that turns to the right and left are from Scrat's perspective.
+        courseC_maze_programming3_b: Ricorda che le curve a destra e a sinistra devi immaginarle dal punto di vista di Scrat.
       courseD_scrat_ramp3_2018_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPer eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.\n\nTrascina nella cassetta degli attrezzi il blocco che vuoi cancellare.\n\nInfine, rimetti al loro posto gli altri blocchi."
-        courseC_maze_programming3_b: Remember that turns to the right and left are from Scrat's perspective.
+        courseC_maze_programming3_b: Ricorda che le curve a destra e a sinistra devi immaginarle dal punto di vista di Scrat.
       courseD_scrat_ramp4_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.
+        courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di vista di Scrat. Se Scrat è rivolto verso destra, girare a destra significa dirigersi verso il basso.
         courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere la ghianda, vai ancora una volta avanti.
         courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp4_2018_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.
+        courseC_maze_programming4_a: Puoi girare a destra o a sinistra dal punto di vista di Scrat. Se Scrat è rivolto verso destra, girare a destra significa dirigersi verso il basso.
         courseC_maze_programming4_b: Per seguire il percorso, vai avanti e gira da una parte, poi spostati di nuovo e gira nella direzione opposta. Per raggiungere la ghianda, vai ancora una volta avanti.
         courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: How far do you need to move to get to the corner?
-        courseC_maze_programming5_c: You will need to turn left at the corner to get to the acorn.
+        courseC_maze_programming5_b: Di quante caselle devi andare avanti per raggiungere l'angolo?
+        courseC_maze_programming5_c: Una volta raggiunto l'angolo, dovrai girare a sinistra per arrivare alla ghianda.
       courseD_scrat_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: How far do you need to move to get to the corner?
-        courseC_maze_programming5_c: You will need to turn left at the corner to get to the acorn.
+        courseC_maze_programming5_b: Di quante caselle devi andare avanti per raggiungere l'angolo?
+        courseC_maze_programming5_c: Una volta raggiunto l'angolo, dovrai girare a sinistra per arrivare alla ghianda.
       courseD_scrat_ramp6_authored_hint:
-        courseC_maze_programming6a_a: Use a `repeat` loop to get Scrat moving!
+        courseC_maze_programming6a_a: Usa un ciclo `ripeti ... volte` per far muovere Scrat!
       courseD_scrat_ramp6_2018_authored_hint:
-        courseC_maze_programming6a_a: Use a `repeat` loop to get Scrat moving!
+        courseC_maze_programming6a_a: Usa un ciclo `ripeti ... volte` per far muovere Scrat!
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: Ci sono due modi per risolvere questo esercizio!
-        courseD_scrat_programming6_b: Remember to turn first before moving, since Scrat is facing the wrong direction.
+        courseD_scrat_programming6_b: Ricorda di girare prima di muoverti, visto che Scrat è rivolto nella direzione sbagliata.
         courseD_scrat_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Ci sono due modi per risolvere questo esercizio!
-        courseD_scrat_programming6_b: Remember to turn first before moving, since Scrat is facing the wrong direction.
+        courseD_scrat_programming6_b: Ricorda di girare prima di muoverti, visto che Scrat è rivolto nella direzione sbagliata.
         courseD_scrat_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseD_scrat_ramp8_authored_hint:
         courseD_maze_ramp7_b: Non dimenticare di usare il pulsante "Fai un passo" che esegue un blocco per volta permettendoti di notare più facilmente gli errori.
@@ -7153,34 +7154,34 @@ it:
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Le lenti quadrate hanno i lati da 100 pixel, questo significa che dovrai muoverti in avanti di 175 pixel prima di disegnare la seconda lente.
         courseE_artist_functions1_b: Tieni conto che puoi sempre riscrivere su delle linee già tracciate.
-        courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to draw the square frames of the glasses.
+        courseE_artist_functions1_c: Per ottenere un programma più breve, prova ad usare un ciclo `ripeti ... volte` per disegnare le lenti quadrate.
       courseE_artist_functions10_authored_hint:
-        courseD_artist_functions10_b: This drawing is a lot like the last one, but the `draw line` function is now drawing a different shape.
-        courseD_artist_functions10_a: To avoid using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
+        courseD_artist_functions10_b: Questo esercizio in realtà è molto simile al precedente, ma ora la funzione `disegna una fila ...` è basata su una forma differente.
+        courseD_artist_functions10_a: Per evitare di usare più di un blocco `vai avanti`, crea la funzione `disegna un esagono` e richiamala tutte le volte che serve.
         courseD_artist_functions10_c: |-
-          Do you see where this drawing could use a function called `line of hexagons`?
+          Riesci a vedere dove puoi usare una funzione chiamata `disegna una fila di esagoni`?
           
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions10_2018_authored_hint:
-        courseD_artist_functions10_b: This drawing is a lot like the last one, but the `draw line` function is now drawing a different shape.
-        courseD_artist_functions10_a: To avoid using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
+        courseD_artist_functions10_b: Questo esercizio in realtà è molto simile al precedente, ma ora la funzione `disegna una fila ...` è basata su una forma differente.
+        courseD_artist_functions10_a: Per evitare di usare più di un blocco `vai avanti`, crea la funzione `disegna un esagono` e richiamala tutte le volte che serve.
         courseD_artist_functions10_c: |-
-          Do you see where this drawing could use a function called `line of hexagons`?
+          Riesci a vedere dove puoi usare una funzione chiamata `disegna una fila di esagoni`?
           
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions1_2018_authored_hint:
         courseE_artist_functions1_a: Le lenti quadrate hanno i lati da 100 pixel, questo significa che dovrai muoverti in avanti di 175 pixel prima di disegnare la seconda lente.
         courseE_artist_functions1_b: Tieni conto che puoi sempre riscrivere su delle linee già tracciate.
-        courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to draw the square frames of the glasses.
+        courseE_artist_functions1_c: Per ottenere un programma più breve, prova ad usare un ciclo `ripeti ... volte` per disegnare le lenti quadrate.
       courseE_artist_functions2_authored_hint:
-        courseD_artist_functions2_b: The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.
+        courseD_artist_functions2_b: La funzione che hai scritto non deve contenere l'intero programma, ma solo la parte che disegna un quadrato con lati di 100 pixel.
         courseD_artist_functions2_c: |-
-          Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
+          Per "chiamare" la funzione `draw a square` (*disegna un quadrato*), posiziona il blocco verde  sotto al blocco `quando si clicca su "Esegui"`. In caso contrario, il codice contenuto nella funzione non verrà mai eseguito.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
-          Il programma deve:<br>
-          - usare la funzione<br>
-          - andare avanti di 100 + 75 pixel<br>
+          Il programma deve:
+          - usare la funzione
+          - andare avanti di 100 + 75 pixel
           - usare la funzione
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_b: The function should not contain your whole program, just the part that draws a square with 100 pixel sides.
@@ -7188,77 +7189,77 @@ it:
           Make sure that you use the green `draw a square` block to "call" your function. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
-          Il programma deve:<br>
-          - usare la funzione<br>
-          - andare avanti di 100 + 75 pixel<br>
+          Il programma deve:
+          - usare la funzione
+          - andare avanti di 100 + 75 pixel
           - usare la funzione
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
-          To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
+          Per risolvere questo esercizio, basta aggiungere un ciclo che ripeta 8 volte il codice che trovi già pronto.
           
-          If you can't remember what the starter code was, click "start over" in the upper right corner of the workspace.
-        courseD_artist_functions3_b: Your loop should have all 3 starter code blocks inside of it.
+          Se, dopo alcune prove non ricordi il codice di partenza, fai clic su "Ripristina" in alto a destra nell'area di lavoro.
+        courseD_artist_functions3_b: Il ciclo dovrà contenere tutti e 3 i blocchi di partenza.
       courseE_artist_functions3_2018_authored_hint: { }
       courseE_artist_functions4_authored_hint:
-        courseD_artist_functions4_a: Try using a function!
-        courseD_artist_functions4_b: Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.
-        courseD_artist_functions4_c: Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!
+        courseD_artist_functions4_a: Prova ad usare una funzione!
+        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `draw a star` (*disegna una stella*) nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
+        courseD_artist_functions4_c: Usa il blocco verde `draw a star` (*disegna una stella*) per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
       courseE_artist_functions4_2018_authored_hint:
-        courseD_artist_functions4_a: Try using a function!
-        courseD_artist_functions4_b: Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.
-        courseD_artist_functions4_c: Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!
+        courseD_artist_functions4_a: Prova ad usare una funzione!
+        courseD_artist_functions4_b: Per creare la nuova funzione, trascina il blocco aperto `draw a star` (*disegna una stella*) nell'area di lavoro. Dovrà contenere lo stesso codice del precedente esercizio, visto che vuoi disegnare lo stesso tipo di stella.
+        courseD_artist_functions4_c: Usa il blocco verde `draw a star` (*disegna una stella*) per richiamare la funzione nel tuo programma principale. Non dimenticare di saltare avanti tra una stella e l'altra!
       courseE_artist_functions5_authored_hint:
-        courseD_artist_functions5_a: Don't give up!  Remember what you have been learning.
-        courseD_artist_functions5_b: Functions make it easy to call saved code at any time, not just from inside a loop!
-        courseD_artist_functions5_c: Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!
+        courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
+        courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una certa sequenza di istruzioni in un qualsiasi punto del programma principale, non solo all'interno di un ciclo!
+        courseD_artist_functions5_c: Trascina il codice che disegna la stella nel blocco che definisce la funzione `draw a star` (*disegna una stella*), quindi usa questa funzione per disegnare le tre stelle!
       courseE_artist_functions5_2018_authored_hint:
-        courseD_artist_functions5_a: Don't give up!  Remember what you have been learning.
-        courseD_artist_functions5_b: Functions make it easy to call saved code at any time, not just from inside a loop!
+        courseD_artist_functions5_a: Non ti arrendere! Ricorda ciò che hai imparato.
+        courseD_artist_functions5_b: Le funzioni servono proprio per richiamare una certa sequenza di istruzioni in un qualsiasi punto del programma principale, non solo all'interno di un ciclo!
         courseD_artist_functions5_c: Start by creating your `draw a star` function, then use this function to draw the three stars!
       courseE_artist_functions6_authored_hint:
-        grade4_artist_functions_windows0_a: Focus only on making one window for now.  We'll create a function in the next puzzle.
-        grade4_artist_functions_windows0_b: Try using nested loops. The inner loop will make the square and the outer loop will rotate the square four times.
+        grade4_artist_functions_windows0_a: Per ora concentrati solamente su come realizzare una finestra. Creeremo poi una funzione nel prossimo esercizio.
+        grade4_artist_functions_windows0_b: 'Prova ad usare due cicli annidati: quello interno disegnerà il quadrato, mentre quello esterno lo farà ruotare quattro volte.'
         grade4_artist_functions_windows0_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_artist_functions6_2018_authored_hint:
-        grade4_artist_functions_windows0_a: Focus only on making one window for now.  We'll create a function in the next puzzle.
-        grade4_artist_functions_windows0_b: Try using nested loops. The inner loop will make the square and the outer loop will rotate the square four times.
+        grade4_artist_functions_windows0_a: Per ora concentrati solamente su come realizzare una finestra. Creeremo poi una funzione nel prossimo esercizio.
+        grade4_artist_functions_windows0_b: 'Prova ad usare due cicli annidati: quello interno disegnerà il quadrato, mentre quello esterno lo farà ruotare quattro volte.'
         grade4_artist_functions_windows0_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_artist_functions7_authored_hint:
-        courseD_artist_functions7_a: Try creating your function first then add windows one at a time.
-        courseD_artist_functions7_b: You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels between each top window, then down 150 pixels to get to the bottom windows.
+        courseD_artist_functions7_a: Prova a creare prima la funzione e poi aggiungi le finestre una alla volta.
+        courseD_artist_functions7_b: Non è il caso di aggiungere altri blocchi di ripetizione. Basta che l'artista salti di 100 pixel tra ogni finestra del piano superiore, poi scenda giù di 150 pixel per disegnare le finestre del piano terra.
       courseE_artist_functions7_2018_authored_hint:
-        courseD_artist_functions7_a: Try creating your function first then add windows one at a time.
+        courseD_artist_functions7_a: Prova a creare prima la funzione e poi aggiungi le finestre una alla volta.
         courseD_artist_functions7_b: To get from the top windows to the bottom windows, simply turn the artist right, jump 150 pixels, then turn the artist right again!  Now the artist will be facing the correct direction to finish the rest of the house!
       courseE_artist_functions8_authored_hint:
-        courseD_artist_functions8_f: You only need one `move forward` block, but you will need quite a few `jump forward` and/or `jump backward` blocks!
+        courseD_artist_functions8_f: Ti basterà un unico blocco `vai avanti`, ma serviranno parecchi blocchi `salta in avanti` e `salta indietro`!
         courseD_artist_functions8_a: |-
-          Start by making a function for a square, then try making a function for a line of squares.
+          Inizia creando una funzione che disegna un quadrato, poi prova a farne un'altra che disegni una fila di quadrati.
           
-          How would you use the `draw a line of squares` function to make this image?
+          Come userai la funzione `disegna una fila di quadrati` per creare questa immagine?
         courseD_artist_functions8_d: |-
-          To make a line of squares,
-          - repeat 3 times
-          - draw a square with a side length of **50 pixels**
-          - jump forward **100 pixels**
+          Per fare una fila di quadrati,
+          - ripeti 3 volte
+          - disegna un quadrato con lati di **50 pixel**
+          - salta in avanti di **100 pixel**
         courseD_artist_functions8_b: |-
-          Think of each row in this picture as a line of 3 squares. How many lines of squares are there and where do you start drawing each of them?
+          Immagina ogni riga di questo disegno, come una fila di 3 quadrati. Quante file di quadrati ci sono? e dove inizi a disegnare ognuna di esse?
           
           ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
-        courseD_artist_functions8_c: At the end of each line of squares, the artist will need to jump down and backward before he draws the next line of squares.
+        courseD_artist_functions8_c: Alla fine di ogni linea di quadrati, l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare le successiva fila di quadrati.
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2018_authored_hint:
-        courseD_artist_functions8_f: You only need one `move forward` block, but you will need quite a few `jump forward` and/or `jump backward` blocks!
+        courseD_artist_functions8_f: Ti basterà un unico blocco `vai avanti`, ma serviranno parecchi blocchi `salta in avanti` e `salta indietro`!
         courseD_artist_functions8_a: |-
-          Start by making a function for a square, then try making a function for a line of squares.
+          Inizia creando una funzione che disegna un quadrato, poi prova a farne un'altra che disegni una fila di quadrati.
           
-          How would you use the `draw a line of squares` function to make this image?
+          Come userai la funzione `disegna una fila di quadrati` per creare questa immagine?
         courseD_artist_functions8_d: |-
-          To make a line of squares,
-          - repeat 3 times
-          - draw a square with a side length of **50 pixels**
-          - jump forward **100 pixels**
+          Per fare una fila di quadrati,
+          - ripeti 3 volte
+          - disegna un quadrato con lati di **50 pixel**
+          - salta in avanti di **100 pixel**
         courseD_artist_functions8_b: |-
-          Think of each row in this picture as a line of 3 squares. How many lines of squares are there and where do you start drawing each of them?
+          Immagina ogni riga di questo disegno, come una fila di 3 quadrati. Quante file di quadrati ci sono? e dove inizi a disegnare ognuna di esse?
           
           ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
         courseD_artist_functions8_c: At the end of each set of staggered squares, the artist will need to jump down and backward before he draws the next set of staggered squares.
@@ -7266,7 +7267,7 @@ it:
       courseE_artist_functions8a_2018_authored_hint: { }
       courseE_artist_functions8b_2018_authored_hint:
         courseD_artist_functions8_f: You only need one `move forward` block if you're doing this correctly!
-        courseD_artist_functions8_a: Start by making a function for a square, then try making a function for a line of squares.
+        courseD_artist_functions8_a: Inizia creando una funzione che disegna un quadrato, poi prova a farne un'altra che disegni una fila di quadrati.
         courseD_artist_functions8_d: |-
           To make a line of squares,
           - repeat 3 times
@@ -7278,63 +7279,63 @@ it:
         courseD_artist_functions8_c: At the end of each line of squares, the artist only needs to turn 180 degrees before drawing the next line of squares.  Put the whole thing in a repeat loop to set you up for the next exercise!
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_e: |-
-          Can you spot all four places that the `line of triangles` can be used in this drawing?
+          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`.
           
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
         courseD_artist_functions9_a: |-
-          This puzzle can be broken into three parts:
-          - make the `draw a triangle` function
-          - make the `draw a line of triangles` function
-          - use your `draw a line of triangles` function four times to complete the drawing
-        courseD_artist_functions9_b: This drawing is made by drawing a line of triangles 4 times and turning either 60 or 120 degrees before you draw the next triangle line.
+          Questo esercizio può essere suddiviso in tre parti:
+          - definisci la funzione `disegna un triangolo`,
+          - definisci la funzione `disegna una fila di triangoli`,
+          - usa quattro volte la funzione `disegna una fila di triangoli` per completare il disegno.
+        courseD_artist_functions9_b: Per fare questo disegno si deve disegnare per quattro volte una fila di triangoli, girando alternativamente di 60 e 120 gradi tra una fila e l'altra.
         courseD_artist_functions9_c: |-
-          To draw a line of triangles:
-          - repeat 4 times
-          - draw a triangle
-          - jump forward 50 pixels
+          Per disegnare una fila di triangoli:
+          - ripeti 4 volte,
+          - disegna un triangolo,
+          - salta in avanti di 50 pixel.
         courseD_artist_functions9_d: |-
-          To draw the diamond:
-          - repeat 2 times
-          - draw a line of triangles
-          - turn 60 degrees
-          - draw a line of triangles
-          - turn 120 degrees
+          Per disegnare il rombo:
+          - ripeti 2 volte,
+          - disegna una fila di triangoli,
+          - gira di 60 gradi,
+          - disegna una fila di triangoli,
+          - gira di 120 gradi.
       courseE_artist_functions9_2018_authored_hint:
         courseD_artist_functions9_e: |-
-          Can you spot all four places that the `line of triangles` can be used in this drawing?
+          Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`.
           
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
         courseD_artist_functions9_a: |-
-          This puzzle can be broken into three parts:
-          - make the `draw a triangle` function
-          - make the `draw a line of triangles` function
-          - use your `draw a line of triangles` function four times to complete the drawing
-        courseD_artist_functions9_b: This drawing is made by drawing a line of triangles 4 times and turning either 60 or 120 degrees before you draw the next triangle line.
+          Questo esercizio può essere suddiviso in tre parti:
+          - definisci la funzione `disegna un triangolo`,
+          - definisci la funzione `disegna una fila di triangoli`,
+          - usa quattro volte la funzione `disegna una fila di triangoli` per completare il disegno.
+        courseD_artist_functions9_b: Per fare questo disegno si deve disegnare per quattro volte una fila di triangoli, girando alternativamente di 60 e 120 gradi tra una fila e l'altra.
         courseD_artist_functions9_c: |-
-          To draw a line of triangles:
-          - repeat 4 times
-          - draw a triangle
-          - jump forward 50 pixels
+          Per disegnare una fila di triangoli:
+          - ripeti 4 volte,
+          - disegna un triangolo,
+          - salta in avanti di 50 pixel.
         courseD_artist_functions9_d: |-
-          To draw the diamond:
-          - repeat 2 times
-          - draw a line of triangles
-          - turn 60 degrees
-          - draw a line of triangles
-          - turn 120 degrees
+          Per disegnare il rombo:
+          - ripeti 2 volte,
+          - disegna una fila di triangoli,
+          - gira di 60 gradi,
+          - disegna una fila di triangoli,
+          - gira di 120 gradi.
       courseE_artist_functionsProj_2018_authored_hint: { }
       courseE_artist_functions_challenge_authored_hint:
         courseE_artist_functions_challenge_a: If you call the function one more time, you can create the same design in the final corner. You can also `jump to` other positions or change the whole thing around however you want!
       courseE_artist_functions_challenge1_authored_hint:
-        courseE_artist_functions_challenge1_a: If you call the function one more time, you can create the same design in the final corner.
-        courseE_artist_functions_challenge1_b: You can also `jump to` other positions or change the whole design however you want!
+        courseE_artist_functions_challenge1_a: Se richiami la funzione ancora una volta, puoi completare il disegno nell'angolo mancante.
+        courseE_artist_functions_challenge1_b: Puoi anche saltare in un'altra posizione o cambiare l'intero disegno a tuo piacimento!
       courseE_artist_functions_challenge1_2018_authored_hint:
-        courseE_artist_functions_challenge1_a: If you call the function one more time, you can create the same design in the final corner.
-        courseE_artist_functions_challenge1_b: You can also `jump to` other positions or change the whole design however you want!
+        courseE_artist_functions_challenge1_a: Se richiami la funzione ancora una volta, puoi completare il disegno nell'angolo mancante.
+        courseE_artist_functions_challenge1_b: Puoi anche saltare in un'altra posizione o cambiare l'intero disegno a tuo piacimento!
       courseE_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nIl blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: *indipendentemente* dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_challenge2_2018_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nIl blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: *indipendentemente* dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_predict1_authored_hint: { }
       courseE_artist_functions_predict1_2018_authored_hint: { }
       courseE_artist_functions_predict2_authored_hint: { }
@@ -7351,55 +7352,55 @@ it:
       courseE_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Per disegnare un lato, usa il blocco `vai avanti di 100 pixel` e cambia il 100 in 200.
         courseD_artist_ramp11b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          Per disegnare 4 lati, inserisci il blocco `vai avanti di 100 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
           
-          Don't forget to turn afterward!
+          Non dimenticarti di girare!
       courseE_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: Puoi disegnare prima il quadrato e poi il triangolo, oppure farlo al contrario!
       courseE_artist_ramp8_authored_hint:
         courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di 100 pixel` e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          Per disegnare 4 lati, inserisci il blocco `vai avanti di 100 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
           
-          Don't forget to turn afterward!
-        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
+          Non dimenticarti di girare!
+        courseE_artist_ramp8_c: 'Il ciclo deve contenere due blocchi: `vai avanti` e `gira a destra di 90 gradi`.'
       courseE_artist_ramp8_2_authored_hint:
         courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di 100 pixel` e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          Per disegnare 4 lati, inserisci il blocco `vai avanti di 100 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
           
-          Don't forget to turn afterward!
-        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
+          Non dimenticarti di girare!
+        courseE_artist_ramp8_c: 'Il ciclo deve contenere due blocchi: `vai avanti` e `gira a destra di 90 gradi`.'
       courseE_artist_ramp8_2018_authored_hint:
         courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di 100 pixel` e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          Per disegnare 4 lati, inserisci il blocco `vai avanti di 100 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
           
-          Don't forget to turn afterward!
-        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
+          Non dimenticarti di girare!
+        courseE_artist_ramp8_c: 'Il ciclo deve contenere due blocchi: `vai avanti` e `gira a destra di 90 gradi`.'
       courseE_artist_ramp8_2_2018_authored_hint:
         courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di 100 pixel` e cambia il 100 in 200.
         courseE_artist_ramp8_b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          Per disegnare 4 lati, inserisci il blocco `vai avanti di 100 pixel` all'interno di un ciclo di ripetizione e assicurarsi che il ciclo sia impostato per ripetersi 4 volte.
           
-          Don't forget to turn afterward!
-        courseE_artist_ramp8_c: 'Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`.'
+          Non dimenticarti di girare!
+        courseE_artist_ramp8_c: 'Il ciclo deve contenere due blocchi: `vai avanti` e `gira a destra di 90 gradi`.'
       courseE_artist_ramp9_authored_hint:
-        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
         courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
-        courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
+        courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_artist_ramp9_2_authored_hint:
-        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
         courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
-        courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
+        courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_artist_ramp9_2018_authored_hint:
-        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
         courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
-        courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
+        courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_artist_ramp9_2_2018_authored_hint:
-        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
+        courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
         courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
-        courseD_artist_ramp12_c: To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?
+        courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_b: Are there any patterns that *repeat* here?
         courseE_bee_concept1_a: If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.
@@ -7413,7 +7414,7 @@ it:
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: Would a `while` loop help here?
-        courseE_bee_concept2_d: You can even check empty spaces to see if honey is > 0.
+        courseE_bee_concept2_d: 'With this `while` loop you  can check empty spaces to see if the amount of honey is > 0. This does the same as the `while there is honey` loop. '
         courseE_bee_concept2_b: You can use `while` loops to move to the end of each path, and to collect all of the honey from each space.
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept3_authored_hint:
@@ -7447,104 +7448,104 @@ it:
           ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
         courseE_bee_concept5_b: You can check every square for a flower using the `if` block, even if you already know there's not one there.
       courseE_bee_functions1_authored_hint:
-        courseE_bee_functions1_a: Remember that left and right turns are from the point of view of the bee.
-        courseE_bee_functions1_b: Use a `repeat` loop when collecting nectar to make your code shorter.
-        courseE_bee_functions1_c: Remember that left and right turns are from the perspective of the bee.
+        courseE_bee_functions1_a: Ricorda che le svolte a destra e a sinistra devi immaginarle dal punto di vista dell'ape.
+        courseE_bee_functions1_b: Per rendere il programma più breve, usa un ciclo `ripeti ... volte` quando raccogli il nettare.
+        courseE_bee_functions1_c: Ricorda che le svolte a destra e a sinistra devi considerarle dalla prospettiva dell'ape.
       courseE_bee_functions10_authored_hint:
-        courseE_bee_functions10_a: You will need a `while` loop to collect all of the honey, since it varies between honeycombs.
-        courseE_bee_functions10_b: Include the turns and movement in your function, so you can call it when the bee is on the main path.
-        courseE_bee_functions10_c: Remember to call your function in the main program!
+        courseE_bee_functions10_a: Avrai bisogno di un ciclo `mentre` per raccogliere tutto il miele, visto che la quantità è diversa da favo a favo.
+        courseE_bee_functions10_b: Per poter richiamare la funzione dal precorso principale, includi in essa le istruzioni di movimento.
+        courseE_bee_functions10_c: Ricordati di richiamare la funzione dal programma principale!
       courseE_bee_functions10_2018_authored_hint:
-        courseE_bee_functions10_a: You will need a `while` loop to collect all of the honey, since it varies between honeycombs.
-        courseE_bee_functions10_b: Include the turns and movement in your function, so you can call it when the bee is on the main path.
-        courseE_bee_functions10_c: Remember to call your function in the main program!
+        courseE_bee_functions10_a: Avrai bisogno di un ciclo `mentre` per raccogliere tutto il miele, visto che la quantità è diversa da favo a favo.
+        courseE_bee_functions10_b: Per poter richiamare la funzione dal precorso principale, includi in essa le istruzioni di movimento.
+        courseE_bee_functions10_c: Ricordati di richiamare la funzione dal programma principale!
       courseE_bee_functions1_2018_authored_hint:
-        courseE_bee_functions1_a: Remember that left and right turns are from the point of view of the bee.
-        courseE_bee_functions1_b: Use a `repeat` loop when collecting nectar to make your code shorter.
-        courseE_bee_functions1_c: Remember that left and right turns are from the perspective of the bee.
+        courseE_bee_functions1_a: Ricorda che le svolte a destra e a sinistra devi immaginarle dal punto di vista dell'ape.
+        courseE_bee_functions1_b: Per rendere il programma più breve, usa un ciclo `ripeti ... volte` quando raccogli il nettare.
+        courseE_bee_functions1_c: Ricorda che le svolte a destra e a sinistra devi considerarle dalla prospettiva dell'ape.
       courseE_bee_functions2_authored_hint:
-        courseE_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
-        courseE_bee_functions2_b: This <xml><block type="procedures_callnoreturn"><mutation name="get 2 nectar"/></block></xml> block calls the function given to you.
-        courseE_bee_functions2_c: You will want to move forward and get 2 nectar twice to solve this puzzle.
+        courseE_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
+        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="get 2 nectar"/></block></xml> richiama la funzione già preparata.
+        courseE_bee_functions2_c: Per risolvere questo esercizio, devi - per due volte - andare avanti e prendere 2 dosi di nettare.
       courseE_bee_functions2_2018_authored_hint:
-        courseE_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
-        courseE_bee_functions2_b: This <xml><block type="procedures_callnoreturn"><mutation name="get 2 nectar"/></block></xml> block calls the function given to you.
-        courseE_bee_functions2_c: You will want to move forward and get 2 nectar twice to solve this puzzle.
+        courseE_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
+        courseE_bee_functions2_b: Questo blocco <xml><block type="procedures_callnoreturn"><mutation name="get 2 nectar"/></block></xml> richiama la funzione già preparata.
+        courseE_bee_functions2_c: Per risolvere questo esercizio, devi - per due volte - andare avanti e prendere 2 dosi di nettare.
       courseE_bee_functions3_authored_hint:
-        courseE_bee_functions3_a: 'Your function for this puzzle only needs to collect nectar, it shouldn''t have any `move forward` or `turn` blocks in it. '
-        courseE_bee_functions3_b: Call your `get 5` function under the `when run` block.
-        courseE_bee_functions3_c: Your main program will control all of the movement, the function is just for what happens when the bee reaches a flower.
-        courseE_bee_functions3_d: Try using this path through.
+        courseE_bee_functions3_a: 'In questo esercizio, la funzione deve solo raccogliere il nettare, non deve contenere alcun blocco `vai avanti` o `gira`.'
+        courseE_bee_functions3_b: Richiama la funzione `get 5` (*prendi 5 dosi di nettare*) subito sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_bee_functions3_c: Il tuo programma principale dovrà controllare tutti i movimenti, mentre la funzione serve solo per gestire le azioni dell'ape ogni volta che raggiunge un fiore.
+        courseE_bee_functions3_d: Prova a seguire questo percorso.
       courseE_bee_functions3_2018_authored_hint:
-        courseE_bee_functions3_a: 'Your function for this puzzle only needs to collect nectar, it shouldn''t have any `move forward` or `turn` blocks in it. '
-        courseE_bee_functions3_b: Call your `get 5` function under the `when run` block.
-        courseE_bee_functions3_c: Your main program will control all of the movement, the function is just for what happens when the bee reaches a flower.
-        courseE_bee_functions3_d: Try using this path through.
+        courseE_bee_functions3_a: 'In questo esercizio, la funzione deve solo raccogliere il nettare, non deve contenere alcun blocco `vai avanti` o `gira`.'
+        courseE_bee_functions3_b: Richiama la funzione `get 5` (*prendi 5 dosi di nettare*) subito sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_bee_functions3_c: Il tuo programma principale dovrà controllare tutti i movimenti, mentre la funzione serve solo per gestire le azioni dell'ape ogni volta che raggiunge un fiore.
+        courseE_bee_functions3_d: Prova a seguire questo percorso.
       courseE_bee_functions4_authored_hint:
-        courseE_bee_functions4_a: Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.
-        courseE_bee_functions4_b: Use the green `move and get nectar` block to call this function.
-        courseE_bee_functions4_c: You don't need to change the function, just use it in your program.
+        courseE_bee_functions4_a: Il codice presente nella funzione fa girare l'ape, la fa andare avanti a prendere il nettare e la fa tornare sul percorso principale. Non hai quindi bisogno di aggiungere questa parte di movimenti nel programma principale.
+        courseE_bee_functions4_b: Usa il blocco verde `move and get nectar` per richiamare questa funzione.
+        courseE_bee_functions4_c: Non devi modificare nulla nella definizione della funzione, la puoi direttamente usare nel tuo programma principale.
       courseE_bee_functions4_2018_authored_hint:
-        courseE_bee_functions4_a: Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.
-        courseE_bee_functions4_b: Use the green `move and get nectar` block to call this function.
-        courseE_bee_functions4_c: You don't need to change the function, just use it in your program.
+        courseE_bee_functions4_a: Il codice presente nella funzione fa girare l'ape, la fa andare avanti a prendere il nettare e la fa tornare sul percorso principale. Non hai quindi bisogno di aggiungere questa parte di movimenti nel programma principale.
+        courseE_bee_functions4_b: Usa il blocco verde `move and get nectar` per richiamare questa funzione.
+        courseE_bee_functions4_c: Non devi modificare nulla nella definizione della funzione, la puoi direttamente usare nel tuo programma principale.
       courseE_bee_functions5_authored_hint:
-        courseE_bee_functions5_a: Edit the function so that it solves the puzzle without having to change the main program.
-        courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
-        courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
+        courseE_bee_functions5_a: Inserisci i blocchi nella definizione della funzione in modo da risolvere l'esercizio senza dover modificare nulla nel programma principale.
+        courseE_bee_functions5_c: 'Il blocco `vai avanti` può anche essere trasformato in `vai indietro`. Usa questo accorgimento invece di girarti per tornare indietro: risparmierai un blocco!'
+        courseE_bee_functions5_b: "La tua funzione dovrebbe fare così:\n- gira,\n- vai avanti,\n- raccogli tutto il nettare,\n- vai indietro,\n- gira per far tornare l'ape nella posizione da cui era partita."
       courseE_bee_functions5_2018_authored_hint:
-        courseE_bee_functions5_a: Edit the function so that it solves the puzzle without having to change the main program.
-        courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
-        courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
+        courseE_bee_functions5_a: Inserisci i blocchi nella definizione della funzione in modo da risolvere l'esercizio senza dover modificare nulla nel programma principale.
+        courseE_bee_functions5_c: 'Il blocco `vai avanti` può anche essere trasformato in `vai indietro`. Usa questo accorgimento invece di girarti per tornare indietro: risparmierai un blocco!'
+        courseE_bee_functions5_b: "La tua funzione dovrebbe fare così:\n- gira,\n- vai avanti,\n- raccogli tutto il nettare,\n- vai indietro,\n- gira per far tornare l'ape nella posizione da cui era partita."
       courseE_bee_functions6_authored_hint:
         courseE_bee_functions6_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
-        courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
+        courseE_bee_functions6_b: In questo caso potrebbe essere utile spostarsi all'interno della funzione, ma i blocchi di movimento non devono essere tutti lì.
       courseE_bee_functions6_2018_authored_hint:
         courseE_bee_functions6_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
-        courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
+        courseE_bee_functions6_b: In questo caso potrebbe essere utile spostarsi all'interno della funzione, ma i blocchi di movimento non devono essere tutti lì.
       courseE_bee_functions6test_authored_hint:
         courseE_bee_functions6_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
-        courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
+        courseE_bee_functions6_b: In questo caso potrebbe essere utile spostarsi all'interno della funzione, ma i blocchi di movimento non devono essere tutti lì.
       courseE_bee_functions7_authored_hint:
         courseE_bee_functions7_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseE_bee_functions7_b: |-
-          Ricordati di inserire il codice all'interno del blocco verde della funzione.<br>
+          Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
-        courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
+        courseE_bee_functions7_c: Questa funzione dovrebbe orientare l'ape nella direzione del percorso da prendere, farle raccogliere il nettare, farle fare il miele e poi farla girare e riportarla al punto di partenza.
       courseE_bee_functions7_2018_authored_hint:
         courseE_bee_functions7_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseE_bee_functions7_b: |-
-          Ricordati di inserire il codice all'interno del blocco verde della funzione.<br>
+          Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
-        courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
+        courseE_bee_functions7_c: Questa funzione dovrebbe orientare l'ape nella direzione del percorso da prendere, farle raccogliere il nettare, farle fare il miele e poi farla girare e riportarla al punto di partenza.
       courseE_bee_functions8_authored_hint:
-        courseE_bee_functions8_a: Your function will only need to collect nectar. Try using a while loop instead of a repeat loop.
-        courseE_bee_functions8_b: Use `while nectar > 0` to make sure you get all of the nectar.
-        courseE_bee_functions8_c: Your main program will need a stair step movement pattern. Remember, the main program is the code under the `when run` block.
+        courseE_bee_functions8_a: La funzione dovrà solo raccogliere il nettare. Prova a usare un ciclo `mentre` invece di uno `ripeti ... volte`.
+        courseE_bee_functions8_b: Usa il ciclo`mentre nettare > 0` per assicurarti di raccogliere tutto il nettare.
+        courseE_bee_functions8_c: Il programma principale dovrà seguire uno schema a scalinata. Ricorda, il programma principale è costituito dal codice sotto al blocco `quando si clicca su "Esegui"`.
       courseE_bee_functions8_2018_authored_hint:
-        courseE_bee_functions8_a: Your function will only need to collect nectar. Try using a while loop instead of a repeat loop.
-        courseE_bee_functions8_b: Use `while nectar > 0` to make sure you get all of the nectar.
-        courseE_bee_functions8_c: Your main program will need a stair step movement pattern. Remember, the main program is the code under the `when run` block.
+        courseE_bee_functions8_a: La funzione dovrà solo raccogliere il nettare. Prova a usare un ciclo `mentre` invece di uno `ripeti ... volte`.
+        courseE_bee_functions8_b: Usa il ciclo`mentre nettare > 0` per assicurarti di raccogliere tutto il nettare.
+        courseE_bee_functions8_c: Il programma principale dovrà seguire uno schema a scalinata. Ricorda, il programma principale è costituito dal codice sotto al blocco `quando si clicca su "Esegui"`.
       courseE_bee_functions9_authored_hint:
-        courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
-        courseE_bee_functions9_b: Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.
+        courseE_bee_functions9_a: Qui puoi usare la stessa funzione dell'esercizio precedente, ovvero una funzione che faccia raccogliere all'ape tutto il nettare dal fiore su cui è posata.
+        courseE_bee_functions9_b: Anche se sai quanto nettare c'è in alcuni fiori, ti conviene far finta di non saperlo, infatti un'unica funzione con un ciclo `mentre` va bene per tutti i fiori.
       courseE_bee_functions9_2018_authored_hint:
-        courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
-        courseE_bee_functions9_b: Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.
+        courseE_bee_functions9_a: Qui puoi usare la stessa funzione dell'esercizio precedente, ovvero una funzione che faccia raccogliere all'ape tutto il nettare dal fiore su cui è posata.
+        courseE_bee_functions9_b: Anche se sai quanto nettare c'è in alcuni fiori, ti conviene far finta di non saperlo, infatti un'unica funzione con un ciclo `mentre` va bene per tutti i fiori.
       courseE_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
-        courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
+        courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
       courseE_bee_functions_challenge1_2018_authored_hint:
         courseE_bee_functions_challenge1_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
-        courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
+        courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
       courseE_bee_functions_challenge2_authored_hint:
         courseE_bee_functions_challenge1_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
-        courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
+        courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
       courseE_bee_functions_challenge2_2018_authored_hint:
         courseE_bee_functions_challenge1_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
-        courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
+        courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.
         courseE_bee_ramp14_b: There can be more than one flower or honeycomb at each space, so make sure to use `while` loops to get them all!
@@ -7594,7 +7595,7 @@ it:
         4-5_Artist_Patterns_3_a: Devi semplicemente scegliere uno dei gruppi di blocchi già preparati nella cassetta degli attrezzi ed inserirlo nel punto giusto del codice.
         4-5_Artist_Patterns_3_b: Se temi di esserti perso, puoi sempre cliccare "Ripristina" per riportarti alla situazione iniziale!
       courseE_farmer_functions1_authored_hint:
-        courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
+        courseE_farmer_functions1_a: Qui la cassetta degli attrezzi è organizzata in modo leggermente diverso. Clicca sulle varie categorie per vedere che blocchi contengono.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
       courseE_farmer_functions10_authored_hint: { }
       courseE_farmer_functions10a1_2018_authored_hint: { }
@@ -7610,7 +7611,7 @@ it:
       courseE_farmer_functions11_predict_2018_authored_hint: { }
       courseE_farmer_functions13_2018_authored_hint: { }
       courseE_farmer_functions1_2018_authored_hint:
-        courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
+        courseE_farmer_functions1_a: Qui la cassetta degli attrezzi è organizzata in modo leggermente diverso. Clicca sulle varie categorie per vedere che blocchi contengono.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_a: Think through the `if/else` statements step by step. What should you do if you are standing at a corn plant?
@@ -7640,7 +7641,9 @@ it:
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: What sequence is repeated often in this program? Can you drag these blocks into the function?
         courseE_farmer_functions3c_b: Don't forget to call your function in the main program wherever you removed blocks.
-      courseE_farmer_functions3c1_2018_authored_hint: { }
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path` function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around the corners?
       courseE_farmer_functions3c_2018_authored_hint: { }
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop and into the `go get pumpkins` function.
@@ -7674,7 +7677,9 @@ it:
         courseE_farmer_functions6c_b: Would an `if/else` block help to check if there is lettuce in a space?
         courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
       courseE_farmer_functions7_authored_hint: { }
-      courseE_farmer_functions7a1_2018_authored_hint: { }
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions` section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You don't need a function here, but you can make one if it is helpful to you!
         courseE_farmer_functions7b_b: Use an `if/else` statement to check for crops, then turn based on which crop you find.
@@ -7685,7 +7690,9 @@ it:
         courseE_farmer_functions7b_c: A `repeat until pumpkin` loop can help you get all the way through the maze.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: { }
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time, you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Try running the code given to see what it does. What do you need after this?
         courseE_farmer_functions8b_b: Drag all of the starter blocks into a function so that you can use them more than once.
@@ -7696,7 +7703,10 @@ it:
         courseE_farmer_functions8b_c: How many times do you need to call the function?
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: { }
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements to move along the path?
         courseE_farmer_functions9b_b: Use `repeat until pumpkin` to move through all of the paths.
@@ -7717,23 +7727,23 @@ it:
         courseE_farmer_ramp11_b: How can you use a `repeat` loop to pick lettuce instead of dragging out 5 `pick lettuce` blocks?
         courseE_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a `move forward` block, and you'll have it!)
       courseE_farmer_ramp11a_authored_hint:
-        courseE_farmer_ramp12_a: 'Instead of using a `repeat` loop to tell the farmer how many times to shovel dirt, now you can use a `while there is a pile` block.  '
-        courseE_farmer_ramp12_b: You only need to move forward once to get to the dirt.
+        courseE_farmer_ramp12_a: 'Anziché usare un ciclo `ripeti ... volte` per dire alla contadina quante palate deve rimuovere, ora è possibile usare il blocco `mentre c''è un mucchio`.'
+        courseE_farmer_ramp12_b: Devi solo andare avanti una volta per raggiungere il mucchio.
       courseE_farmer_ramp11a_2018_authored_hint:
-        courseE_farmer_ramp12_a: 'Instead of using a `repeat` loop to tell the farmer how many times to shovel dirt, now you can use a `while there is a pile` block.  '
-        courseE_farmer_ramp12_b: You only need to move forward once to get to the dirt.
+        courseE_farmer_ramp12_a: 'Anziché usare un ciclo `ripeti ... volte` per dire alla contadina quante palate deve rimuovere, ora è possibile usare il blocco `mentre c''è un mucchio`.'
+        courseE_farmer_ramp12_b: Devi solo andare avanti una volta per raggiungere il mucchio.
       courseE_farmer_ramp11b_authored_hint:
-        courseE_farmer_ramp11b_a: You can nest your `while` loop inside of a `repeat` loop to make your code shorter.
+        courseE_farmer_ramp11b_a: Per rendere il programma più corto, puoi annidare il ciclo `mentre` all'interno di un ciclo `ripeti ... volte`.
       courseE_farmer_ramp11b_2018_authored_hint:
-        courseE_farmer_ramp11b_a: You can nest your `while` loop inside of a `repeat` loop to make your code shorter.
+        courseE_farmer_ramp11b_a: Per rendere il programma più corto, puoi annidare il ciclo `mentre` all'interno di un ciclo `ripeti ... volte`.
       courseE_farmer_ramp12_authored_hint:
-        courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
+        courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare un ciclo `ripeti ... volte` per dire alla contadina quante volte andare avanti e prendere la lattuga.
       courseE_farmer_ramp12_2018_authored_hint:
-        courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
+        courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare un ciclo `ripeti ... volte` per dire alla contadina quante volte andare avanti e prendere la lattuga.
       courseE_farmer_ramp12_forswap_authored_hint:
-        courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
+        courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare un ciclo `ripeti ... volte` per dire alla contadina quante volte andare avanti e prendere la lattuga.
       courseE_farmer_ramp12_forswap_2018_authored_hint:
-        courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
+        courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare un ciclo `ripeti ... volte` per dire alla contadina quante volte andare avanti e prendere la lattuga.
       courseE_farmer_ramp12a_authored_hint:
         courseE_farmer_ramp12b: You will need to check your `if` statement 21 times to solve this puzzle.
         courseE_farmer_ramp12c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
@@ -7745,25 +7755,25 @@ it:
       courseE_farmer_ramp12b_authored_hint: { }
       courseE_farmer_ramp12b_2018_authored_hint: { }
       courseE_farmer_ramp12c_authored_hint:
-        courseE_farmer_ramp12b_b: You will still need to use an `until` loop first, then use a `while` loop once you get to the lettuce.
+        courseE_farmer_ramp12b_b: Sarà necessario usare prima un ciclo `ripeti fino a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
       courseE_farmer_ramp12c_2018_authored_hint:
-        courseE_farmer_ramp12b_b: You will still need to use an `until` loop first, then use a `while` loop once you get to the lettuce.
+        courseE_farmer_ramp12b_b: Sarà necessario usare prima un ciclo `ripeti fino a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
       courseE_farmer_ramp12d_authored_hint:
-        courseE_farmer_ramp12d_b: You will still need to put your `until` and `while` loops inside of a `repeat` loop to solve this puzzle!
+        courseE_farmer_ramp12d_b: Per risolvere questo esercizio, dovrai anche mettere i cicli `fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
       courseE_farmer_ramp12d_2018_authored_hint:
-        courseE_farmer_ramp12d_b: You will still need to put your `until` and `while` loops inside of a `repeat` loop to solve this puzzle!
+        courseE_farmer_ramp12d_b: Per risolvere questo esercizio, dovrai anche mettere i cicli `fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
       courseE_farmer_ramp12e_authored_hint:
-        courseE_farmer_ramp12e_b: The solution to this puzzle will look a lot like the solution to the last puzzle, but turning in the other direction.
+        courseE_farmer_ramp12e_b: La soluzione di questo esercizio è molto simile a quella del precedente, ma girando nella direzione opposta.
       courseE_farmer_ramp12e_2018_authored_hint:
-        courseE_farmer_ramp12e_b: The solution to this puzzle will look a lot like the solution to the last puzzle, but turning in the other direction.
+        courseE_farmer_ramp12e_b: La soluzione di questo esercizio è molto simile a quella del precedente, ma girando nella direzione opposta.
       courseE_farmer_ramp12f_authored_hint:
-        courseE_farmer_ramp12f_b: Use an `if/else` block to help the farmer decide if she needs to turn right or left.
+        courseE_farmer_ramp12f_b: Usa un blocco `se/altrimenti` per aiutare la contadina a decidere se deve girare a destra o a sinistra.
       courseE_farmer_ramp12f_2018_authored_hint:
-        courseE_farmer_ramp12f_b: Use an `if/else` block to help the farmer decide if she needs to turn right or left.
+        courseE_farmer_ramp12f_b: Usa un blocco `se/altrimenti` per aiutare la contadina a decidere se deve girare a destra o a sinistra.
       courseE_farmer_ramp12g_authored_hint:
-        courseE_farmer_ramp12G_b: Use an `if/else` block to help the farmer decide if she needs to turn right or left.
+        courseE_farmer_ramp12G_b: Usa un blocco `se/altrimenti` per aiutare la contadina a decidere se deve girare a destra o a sinistra.
       courseE_farmer_ramp12g_2018_authored_hint:
-        courseE_farmer_ramp12G_b: Use an `if/else` block to help the farmer decide if she needs to turn right or left.
+        courseE_farmer_ramp12G_b: Usa un blocco `se/altrimenti` per aiutare la contadina a decidere se deve girare a destra o a sinistra.
       courseE_farmer_ramp13_authored_hint:
         courseE_farmer_ramp13_a: There can be more than one of either crop in a space, so make sure to use `while` loops to pick them all!
         courseE_farmer_ramp13_b: Use a `repeat` loop so that you don't have to write a separate if statement for each square.
@@ -7797,10 +7807,10 @@ it:
         courseC_maze_programming1_b: You don't need any extra blocks from the toolbox for this puzzle!
       courseE_maze_ramp2_authored_hint:
         courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco `quando si clicca su "Esegui"`.
-        courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
+        courseC_maze_programming2_b: Controlla che tutti e tre i blocchi `vai avanti` siano agganciati al blocco `quando si clicca su "Esegui"`.
       courseE_maze_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: Per usare un blocco `vai avanti`, trascinalo dalla cassetta degli attrezzi nell'area di lavoro e collegalo al blocco `quando si clicca su "Esegui"`.
-        courseC_maze_programming2_b: Make sure all three `move forward` blocks are attached to the `when run` block.
+        courseC_maze_programming2_b: Controlla che tutti e tre i blocchi `vai avanti` siano agganciati al blocco `quando si clicca su "Esegui"`.
       courseE_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPer eliminare un blocco dal bel mezzo del programma, trascina da una parte tutti i blocchi sotto di lui.\n\nTrascina nella cassetta degli attrezzi il blocco che vuoi cancellare.\n\nInfine, rimetti al loro posto gli altri blocchi."
         courseC_maze_programming3_b: Ricorda che le curve a destra e a sinistra devi immaginarle dal punto di vista dell'uccellino.
@@ -7817,11 +7827,11 @@ it:
         courseC_maze_programming4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseE_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: How far do you need to move to get to the corner?
+        courseC_maze_programming5_b: Di quante caselle devi andare avanti per raggiungere l'angolo?
         courseC_maze_programming5_c: You will need to turn left at the corner to get to the pig.
       courseE_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
-        courseC_maze_programming5_b: How far do you need to move to get to the corner?
+        courseC_maze_programming5_b: Di quante caselle devi andare avanti per raggiungere l'angolo?
         courseC_maze_programming5_c: You will need to turn left at the corner to get to the pig.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Ci sono due modi per risolvere questo esercizio!
@@ -8194,7 +8204,7 @@ it:
         courseF_artist_for1_a: |-
           Can you draw something like this:
           
-          ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+          ![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
@@ -8630,11 +8640,11 @@ it:
           Don't forget to turn afterward!
         courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
-        courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
+        courseF_artist_ramp9_a: In cosa è simile a un quadrato? e in cosa differisce?
         courseF_artist_ramp9_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_ramp9_2018_authored_hint:
-        courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
+        courseF_artist_ramp9_a: In cosa è simile a un quadrato? e in cosa differisce?
         courseF_artist_ramp9_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_variables10_authored_hint:
@@ -9237,10 +9247,10 @@ it:
           <b>Soluzione:</b><br>
           ![Solution Blocks](https://programmailfuturo.it/images/codeorg/4-20-3.png)
       courseF_bee_functions2_authored_hint:
-        courseF_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
+        courseF_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
         courseF_bee_functions2_b: Click on the blue edit button on the `get only nectar` function to see what it does.
       courseF_bee_functions2_2018_authored_hint:
-        courseF_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
+        courseF_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
         courseF_bee_functions2_b: Click on the blue edit button on the `get only nectar` function to see what it does.
       courseF_bee_functions3_authored_hint:
         courseF_bee_functions3_a: 'Your function for this puzzle only needs to make honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
@@ -9265,7 +9275,7 @@ it:
         courseF_bee_functions4_a: Your function should travel down the side paths and return the bee back to the main road.  You don't need to add that part to your main program.
         courseF_bee_functions4_b: Try building the program and using the function blocks as you expect the function to behave, then create the function.
       courseF_bee_functions5_authored_hint:
-        courseE_bee_functions5_a: Edit the function so that it solves the puzzle without having to change the main program.
+        courseE_bee_functions5_a: Inserisci i blocchi nella definizione della funzione in modo da risolvere l'esercizio senza dover modificare nulla nel programma principale.
         courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
       courseF_bee_functions5a_authored_hint:
         courseF_bee_functions5a_a: "Your function should check if there's a path to the right, and if there is, travel down the side paths and return the bee back to the main road.  \n\nYou don't need to add that part to your main program."
@@ -11106,9 +11116,9 @@ it:
         2-3_Artist_Functions_1_b: Tieni conto che puoi sempre riscrivere su delle linee già tracciate.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Il programma deve:<br>
-          - usare la funzione<br>
-          - andare avanti di 100 + 75 pixel<br>
+          Il programma deve:
+          - usare la funzione
+          - andare avanti di 100 + 75 pixel
           - usare la funzione
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
@@ -11118,9 +11128,9 @@ it:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       grade4_artist_functionsChallenge0_authored_hint:
         grade4_artist_functionsChallenge0_a: |-
-          Start by making a function for a square, then try making a function for a line of squares.
+          Inizia creando una funzione che disegna un quadrato, poi prova a farne un'altra che disegni una fila di quadrati.
           
-          How would you use the `draw a line of squares` function to make this image?
+          Come userai la funzione `disegna una fila di quadrati` per creare questa immagine?
         grade4_artist_functionsChallenge0_b: After your first line of squares, you need to move the artist down and back before you start your second line of squares.
         grade4_artist_functionsChallenge0_c: You should move the artist back a different number of pixels for even lines than for odd ones.
       grade4_artist_functions_challenge_authored_hint:
@@ -11139,14 +11149,14 @@ it:
           <b>Soluzione:</b> Se vuoi, <a href="https://studio.code.org/c/159884109" target="_blank">clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
       grade4_artist_functions_stars0_authored_hint:
         grade4_artist_functions_stars0_a: |-
-          To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
+          Per risolvere questo esercizio, basta aggiungere un ciclo che ripeta 8 volte il codice che trovi già pronto.
           
-          If you can't remember what the starter code was, click "start over" in the upper right corner of the workspace.
+          Se, dopo alcune prove non ricordi il codice di partenza, fai clic su "Ripristina" in alto a destra nell'area di lavoro.
       grade4_artist_functions_stars1_authored_hint:
-        grade4_artist_functions_stars1_a: Try using a function!
+        grade4_artist_functions_stars1_a: Prova ad usare una funzione!
       grade4_artist_functions_stars2_authored_hint:
-        grade4_artist_functions_stars2_a: Don't give up!  Remember what you have been learning.
-        grade4_artist_functions_stars2_b: Functions make it easy to call saved code at any time, not just from inside a loop!
+        grade4_artist_functions_stars2_a: Non ti arrendere! Ricorda ciò che hai imparato.
+        grade4_artist_functions_stars2_b: Le funzioni servono proprio per richiamare una certa sequenza di istruzioni in un qualsiasi punto del programma principale, non solo all'interno di un ciclo!
       grade4_artist_functions_stars3_authored_hint:
         hint1: Don't give up!
       grade4_artist_functions_windows0_authored_hint:
@@ -11188,30 +11198,30 @@ it:
       grade4_bee_conditionals_quantum5_authored_hint:
         remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare il blocco condizionale `se/altrimenti`."
       grade4_bee_functions1_authored_hint:
-        grade4_bee_functions1_a: There is more than one right answer to this puzzle.
+        grade4_bee_functions1_a: Esiste più di una risposta giusta per questo esercizio.
       grade4_bee_functions10_authored_hint:
-        grade4_bee_functions10_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
+        grade4_bee_functions10_a: Qui puoi usare la stessa funzione dell'esercizio precedente, ovvero una funzione che faccia raccogliere all'ape tutto il nettare dal fiore su cui è posata.
       grade4_bee_functions2_authored_hint:
-        grade4_bee_functions2_a: The function has been written for you, but you will need to call it at each flower.
+        grade4_bee_functions2_a: La funzione è già stata scritta per te, ma è necessario che tu la richiami quando l'artista è su ogni fiore.
       grade4_bee_functions3_authored_hint:
-        grade4_bee_functions3_a: 'Your function for this puzzle only needs to collect nectar, it shouldn''t have any `move forward` or `turn` blocks in it. '
+        grade4_bee_functions3_a: 'In questo esercizio, la funzione deve solo raccogliere il nettare, non deve contenere alcun blocco `vai avanti` o `gira`.'
       grade4_bee_functions4_authored_hint:
         grade4_bee_functions4_a: Your function will travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.
       grade4_bee_functions6_authored_hint:
-        grade4_bee_functions6_a: Edit the function so that it solves the puzzle without having to change the main program.
+        grade4_bee_functions6_a: Inserisci i blocchi nella definizione della funzione in modo da risolvere l'esercizio senza dover modificare nulla nel programma principale.
         grade4_bee_functions6_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
         2-3_Bee_Functions_8_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         2-3_Bee_Functions_8_b: |-
-          Ricordati di inserire il codice all'interno del blocco verde della funzione.<br>
+          Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
-        2-3_Bee_Functions_8_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
+        2-3_Bee_Functions_8_c: Questa funzione dovrebbe orientare l'ape nella direzione del percorso da prendere, farle raccogliere il nettare, farle fare il miele e poi farla girare e riportarla al punto di partenza.
       grade4_bee_functions9_authored_hint:
         grade4_bee_functions9_a: Your function will only need to collect nectar... but this time, you will need to use a `while` loop instead of a `repeat` loop.
-        grade4_bee_functions9_b: Use `while nectar > 0` to make sure you get all of the nectar.
+        grade4_bee_functions9_b: Usa il ciclo`mentre nettare > 0` per assicurarti di raccogliere tutto il nettare.
       grade4_bee_nestedLoops1_authored_hint:
         grade4_bee_nestedLoops1_a: If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.
       grade4_bee_nestedLoops2_authored_hint:
