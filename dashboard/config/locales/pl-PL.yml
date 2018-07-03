@@ -196,7 +196,7 @@ pl:
     school_organization_zip: Kod pocztowy szkoły/organizacji
   signin_form:
     title: Masz już konto? Zaloguj się
-    login: E-mail lub nazwa użytkownika
+    login: Email
     login_username: Adres e-mail lub nazwa użytkownika
     password: Hasło
     remember: Zapamiętaj mnie
@@ -817,7 +817,7 @@ pl:
       audience: Wiek 13+
       cta: Zobacz instrukcję
     frozen:
-      title: Frosen
+      title: Frozen
     starwars:
       title: Gwiezdne Wojny
     infinity:

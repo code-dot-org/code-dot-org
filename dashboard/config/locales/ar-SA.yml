@@ -23,7 +23,8 @@ ar:
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: البريد الإلكتروني
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: اسم المستخدم
         password: كلمة المرور
         password_confirmation: تأكيد كلمة المرور
@@ -66,7 +67,7 @@ ar:
   courses: الدروس
   courses_page:
     title_student: تعلّم على كود استوديو
-    title_teacher: Teach with Code Studio
+    title_teacher: Teach Computer Science
   unplugged_activity: نشاط غير موصول
   of: من
   more: أكثر
@@ -163,7 +164,7 @@ ar:
     error: An error occurred.
     email_preference_question: هل يمكننا إرسال بريد إلكتروني إليك حول تحديثات دوراتنا
       أو الفرص المحلية أو أخبار علوم الكمبيوتر الأخرى؟
-    email_preference_privacy: "(انظر سياسة الخصوصية الخاصة بنا)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: نعم
     email_preference_no: لا
     email_preference_required: You must specify an email preference.
@@ -292,9 +293,10 @@ ar:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: 'لقد انهيت ساعة من البرمجة '
@@ -302,7 +304,7 @@ ar:
       free_play:
         playlab: اصنع تطبيقا
         artist: ارسم شيئا
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: اصنع تطبيقا
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -416,8 +418,7 @@ ar:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -763,7 +764,7 @@ ar:
       title: معرض
       body: عرض معرض صور "تطبيقات" و "الفنانين" التي تم إنشاؤها من قبل مستخدمينا
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: للأعمار 13 +
@@ -851,7 +852,7 @@ ar:
     support: للحصول على المساعدة
     support_url: support.code.org
     help_resources: المساعدة والموارد
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -1128,8 +1129,8 @@ ar:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1217,7 +1218,7 @@ ar:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: نظام تشغيل ماك
   plc:
     preview_assignments:
@@ -1240,7 +1241,7 @@ ar:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:

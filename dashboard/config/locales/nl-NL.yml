@@ -150,14 +150,12 @@ nl:
       Staten gevestigd is.
     my_data_to_us: Gegevens over mijn gebruik van deze site mogen worden verzonden
       naar en opgeslagen of verwerkt worden in de Verenigde Staten.
-    student_terms: Ik zal me houden aan de Code.org <a href='http://code.org/tos'>
-      gebruikersvoorwaarden</a>. Als ik jonger dan 13 jaar ben, bevestig ik dit door
-      het indienen van dit formulier waarvoor ik door mijn ouders of wettelijke voogd
-      toestemming heb gekregen om gebruik te maken van de diensten van Code.org  <br/>Voor
-      gebruikers onder de 13 jaar, worden e-mailadressen niet opgeslagen in een vorm
-      die het mogelijk maakt om contact met hen op te nemen.
-    teacher_terms: Ik zal me houden aan de Code.org <a href='http://code.org/tos'>
-      gebruikersvoorwaarden</a>.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
+    teacher_terms: I agree to be bound by the Code.org terms of service. For more
+      information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: We hebben aanvullende informatie nodig om door te kunnen
       gaan met uw registratie.
     user_type_button: Update Account Type
@@ -196,7 +194,7 @@ nl:
     school_organization_zip: Postcode van de school of organisatie
   signin_form:
     title: Heb je al een account? Log in
-    login: Email of gebruikersnaam
+    login: Email
     login_username: E-mail of gebruikersnaam
     password: Wachtwoord
     remember: Onthoud me
@@ -302,9 +300,10 @@ nl:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Ik heb mijn Uur Code afgemaakt
@@ -312,7 +311,7 @@ nl:
       free_play:
         playlab: Maak een App
         artist: Teken iets
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Maak een App
         gamelab: Maak een Game Lab project
         weblab: Maak een Web Lab (beta) project
@@ -357,7 +356,7 @@ nl:
       classroom: Startpagina voor de leerkracht
       district_dashboard: District Ovezicht
       label: Hallo %{username}
-      stats: Mijn voortgang
+      stats: Code Studio
       settings: Mijn account
       logout: Uitloggen
       signin: Aanmelden
@@ -785,7 +784,7 @@ nl:
       title: Galerij
       body: Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Leeftijd 13+
@@ -973,8 +972,8 @@ nl:
     tos: Gebruiksvoorwaarden
     privacy: Privacybeleid
     privacy_notice: Privacyverklaring
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accepteren
     print: Afdrukken
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1251,7 +1250,7 @@ nl:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -1274,7 +1273,7 @@ nl:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:

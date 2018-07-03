@@ -316,7 +316,7 @@ pt-BR:
       free_play:
         playlab: Criar um aplicativo do Play Lab
         artist: Desenhar algo
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Criar um aplicativo do Play Lab
         gamelab: Crie um projeto de Jogo de Laboratório
         weblab: Faça um projeto Laboratório Web (beta)
@@ -361,7 +361,7 @@ pt-BR:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
       label: Oi, %{username}
-      stats: Meu progresso
+      stats: Code Studio
       settings: Minha conta
       logout: Sair
       signin: Entrar
