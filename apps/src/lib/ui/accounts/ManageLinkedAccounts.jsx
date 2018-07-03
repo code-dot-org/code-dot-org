@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {navigateToHref} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
 import BootstrapButton from './BootstrapButton';
@@ -19,10 +18,13 @@ export default class ManageLinkedAccounts extends React.Component {
   static propTypes = {
     userType: PropTypes.string.isRequired,
     authenticationOptions: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired,
       credential_type: PropTypes.string.isRequired,
       email: PropTypes.string,
       hashed_email: PropTypes.string,
-    })),
+    })).isRequired,
+    connect: PropTypes.func.isRequired,
+    disconnect: PropTypes.func.isRequired,
   };
 
   getProviderConnection = (provider) => {
@@ -33,7 +35,6 @@ export default class ManageLinkedAccounts extends React.Component {
 
   getEmailForProvider = (provider) => {
     const match = this.getProviderConnection(provider);
-
     if (match) {
       if (this.props.userType === 'student') {
         return ENCRYPTED;
@@ -43,11 +44,17 @@ export default class ManageLinkedAccounts extends React.Component {
   };
 
   toggleProviderConnection = (provider) => {
-    if (this.getProviderConnection(provider)) {
-      // TODO: (madelynkasula) disconnect from provider
+    const connection = this.getProviderConnection(provider);
+    if (connection) {
+      this.disconnect(connection.id);
     } else {
-      navigateToHref(`/users/auth/${provider}/connect`);
+      this.props.connect(provider);
     }
+  };
+
+  disconnect = (authOptionId) => {
+    // TODO: handle errors
+    this.props.disconnect(authOptionId).then();
   };
 
   render() {

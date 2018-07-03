@@ -1,15 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
+import {navigateToHref} from '@cdo/apps/utils';
 import ManageLinkedAccounts from './ManageLinkedAccounts';
 
 export default class ManageLinkedAccountsController {
   constructor(mountPoint, userType, authenticationOptions) {
+    this.mountPoint = mountPoint;
+    this.userType = userType;
+    this.authenticationOptions = authenticationOptions;
+    this.renderManageLinkedAccounts();
+  }
+
+  renderManageLinkedAccounts = () => {
     ReactDOM.render(
       <ManageLinkedAccounts
-        userType={userType}
-        authenticationOptions={authenticationOptions}
+        userType={this.userType}
+        authenticationOptions={this.authenticationOptions}
+        connect={this.connect}
+        disconnect={this.disconnect}
       />,
-      mountPoint
+      this.mountPoint
     );
-  }
+  };
+
+  connect = (provider) => {
+    navigateToHref(`/users/auth/${provider}/connect`);
+  };
+
+  disconnect = (authOptionId) => {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: `/users/auth/${authOptionId}/disconnect`,
+        method: 'DELETE'
+      }).done(result => {
+        this.authenticationOptions = this.authenticationOptions.filter(option => option.id !== authOptionId);
+        this.renderManageLinkedAccounts();
+        resolve();
+      }).fail((jqXhr, status) => {
+        // TODO: handle errors
+        reject();
+      });
+    });
+  };
 }
