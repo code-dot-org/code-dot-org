@@ -1,4 +1,5 @@
 @no_mobile
+@no_ie
 Feature: Feedback Tab Visibility
 
 Background:
