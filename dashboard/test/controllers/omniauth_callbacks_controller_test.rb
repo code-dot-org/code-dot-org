@@ -414,6 +414,85 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal migrated_student.id, signed_in_user_id
   end
 
+  test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, email: email)
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+    user.reload
+    assert_equal 'google_oauth2', user.provider
+    assert_equal user.uid, uid
+  end
+
+  test 'login: google_oauth2 silently takes over unmigrated teacher with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:teacher, email: email)
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_TEACHER, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+    user.reload
+    assert_equal 'google_oauth2', user.provider
+    assert_equal user.uid, uid
+  end
+
+  test 'login: google_oauth2 silently adds authentication_option to migrated student with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, :with_migrated_email_authentication_option, email: email)
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+    user.reload
+    assert_equal 'migrated', user.provider
+    found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
+    assert found_google
+  end
+
+  test 'login: google_oauth2 silently adds authentication_option to migrated teacher with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:teacher, :with_migrated_email_authentication_option, email: email)
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_TEACHER, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+    user.reload
+    assert_equal 'migrated', user.provider
+    found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
+    assert found_google
+  end
+
+  test 'login: clever does not silently add authentication_option to migrated student with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, :with_migrated_email_authentication_option, email: email)
+    auth = generate_auth_user_hash(provider: 'clever', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_creates(User) do
+      get :clever
+    end
+    user.reload
+    assert_equal 'migrated', user.provider
+    found_clever = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::CLEVER}
+    assert !found_clever
+    assert_equal 'clever', User.last.provider # NOTE: this will fail when we create migrated users by default
+  end
+
   test 'connect_provider: returns bad_request if user not migrated' do
     user = create :user, :unmigrated_facebook_sso
     Timecop.freeze do
