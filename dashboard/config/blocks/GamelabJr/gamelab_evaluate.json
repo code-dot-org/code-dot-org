@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "evaluate",
+    "blockText": "evaluate {CODE}",
+    "args": [
+      {
+        "name": "CODE",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}

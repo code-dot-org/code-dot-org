@@ -53,11 +53,8 @@
     "markdown_instructions": "Finally, add a new bell sprite called `myBell`.  \r\n\r\nWhen you click on it, make all the aliens start doing the same dance move!  \r\n\r\n---\r\n",
     "project_template_level_name": "Dance Party 6",
     "show_type_hints": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked."
+    "instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

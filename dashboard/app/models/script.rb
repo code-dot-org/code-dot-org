@@ -135,6 +135,7 @@ class Script < ActiveRecord::Base
     stage_extras_available
     has_verified_resources
     has_lesson_plan
+    curriculum_path
     script_announcements
     version_year
     is_stable
@@ -474,6 +475,48 @@ class Script < ActiveRecord::Base
     ScriptConstants.script_in_category?(:minecraft, name)
   end
 
+  def k5_draft_course?
+    ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
+  def csf_international?
+    ScriptConstants.script_in_category?(:csf_international, name)
+  end
+
+  def k5_course?
+    (
+      Script::CATEGORIES[:csf_international] +
+      Script::CATEGORIES[:csf] +
+      Script::CATEGORIES[:csf_2018]
+    ).include? name
+  end
+
+  def csf?
+    k5_course? || twenty_hour?
+  end
+
+  def cs_in_a?
+    name.match(Regexp.union('algebra', 'Algebra'))
+  end
+
+  def k1?
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
+      Script::COURSE1_NAME
+    ].include?(name)
+  end
+
+  def beta?
+    Script.beta? name
+  end
+
+  def self.beta?(name)
+    name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
   def get_script_level_by_id(script_level_id)
     script_levels.find {|sl| sl.id == script_level_id.to_i}
   end
@@ -506,24 +549,6 @@ class Script < ActiveRecord::Base
     end
 
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
-  end
-
-  def beta?
-    Script.beta? name
-  end
-
-  def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft'
-  end
-
-  def k1?
-    [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::COURSE1_NAME
-    ].include?(name)
   end
 
   private def csf_tts_level?
@@ -576,37 +601,31 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def k5_course?
-    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
-  end
-
-  def k5_draft_course?
-    %w(coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include? name
-  end
-
-  def csf?
-    k5_course? || twenty_hour?
-  end
-
-  def csf_international?
-    %w(course1 course2 course3 course4).include? name
-  end
-
-  def cs_in_a?
-    name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
   def has_lesson_pdf?
-    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
 
-    k5_course? || %w(csp1-2017 csp2-2017 csp3-2017 cspunit1 cspunit2 cspunit3).include?(name)
+    k5_course? || [
+      Script::CSP17_UNIT1_NAME,
+      Script::CSP17_UNIT2_NAME,
+      Script::CSP17_UNIT3_NAME,
+      Script::CSP_UNIT1_NAME,
+      Script::CSP_UNIT2_NAME,
+      Script::CSP_UNIT3_NAME,
+    ].include?(name)
+  end
+
+  def self.has_congrats_page?(name)
+    name == Script::ACCELERATED_NAME ||
+      ScriptConstants.script_in_category?(:csf_international, name) ||
+      ScriptConstants.script_in_category?(:csf, name) ||
+      ScriptConstants.script_in_category?(:csf_2018, name)
   end
 
   def freeplay_links
@@ -1064,6 +1083,7 @@ class Script < ActiveRecord::Base
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
+      curriculum_path: curriculum_path,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: has_other_course_progress,
@@ -1175,7 +1195,8 @@ class Script < ActiveRecord::Base
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
       has_lesson_plan: !!script_data[:has_lesson_plan],
-      script_announcements: script_data[:script_announcements],
+      curriculum_path: script_data[:curriculum_path],
+      script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
     }.compact

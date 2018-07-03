@@ -21,6 +21,9 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse
     unless Rails.env.development?
+      subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
+        'Featured Project: Abuse Reported' :
+        'Abuse Reported'
       response = HTTParty.post(
         'https://codeorg.zendesk.com/api/v2/tickets.json',
         headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
@@ -30,7 +33,7 @@ class ReportAbuseController < ApplicationController
               name: (params[:name] == '' ? params[:email] : params[:name]),
               email: params[:email]
             },
-            subject: 'Abuse Reported',
+            subject: subject,
             comment: {
               body: [
                 "URL: #{params[:abuse_url]}",

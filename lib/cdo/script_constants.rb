@@ -26,14 +26,14 @@ module ScriptConstants
       CSD_2018 = 'csd-2018'.freeze,
     ],
     csf: [
-      COURSEA_NAME = 'coursea'.freeze,
-      COURSEB_NAME = 'courseb'.freeze,
-      COURSEC_NAME = 'coursec'.freeze,
-      COURSED_NAME = 'coursed'.freeze,
-      COURSEE_NAME = 'coursee'.freeze,
-      COURSEF_NAME = 'coursef'.freeze,
-      EXPRESS_NAME = 'express'.freeze,
-      PRE_READER_EXPRESS_NAME = 'pre-express'.freeze,
+      COURSEA_NAME = 'coursea-2017'.freeze,
+      COURSEB_NAME = 'courseb-2017'.freeze,
+      COURSEC_NAME = 'coursec-2017'.freeze,
+      COURSED_NAME = 'coursed-2017'.freeze,
+      COURSEE_NAME = 'coursee-2017'.freeze,
+      COURSEF_NAME = 'coursef-2017'.freeze,
+      EXPRESS_NAME = 'express-2017'.freeze,
+      PRE_READER_EXPRESS_NAME = 'pre-express-2017'.freeze,
     ],
     csf_2018: [
       COURSEA_2018_NAME = 'coursea-2018'.freeze,
@@ -76,7 +76,6 @@ module ScriptConstants
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
-      TWENTY_HOUR_NAME = '20-hour'.freeze,
     ],
     math: [
       ALGEBRA_NAME = 'algebra'.freeze,
@@ -146,7 +145,9 @@ module ScriptConstants
       CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'.freeze,
       CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'.freeze,
     ],
-    twenty_hour: [TWENTY_HOUR_NAME],
+    twenty_hour: [
+      TWENTY_HOUR_NAME = '20-hour'.freeze,
+    ],
     flappy: [FLAPPY_NAME],
     minecraft: [
       MINECRAFT_NAME,

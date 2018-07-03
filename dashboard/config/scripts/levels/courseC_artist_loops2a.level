@@ -38,6 +38,7 @@
     "tts_markdown_instructions_override": "Now, use a loop to spin your bird around 12 times with a 30 degree turn.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Inside your loop, you will want to jump to 200 over 200 down, then draw the bird sticker, then turn 30 degrees.\",\"hint_id\":\"courseC_artist_loops2a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/34a57fe7001413d74147b02689183400/courseC_artist_loops2a.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Click on the number at the top of the `repeat` loop to change how many times it repeats.\",\"hint_id\":\"courseC_artist_loops2a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/574234625b47bfd6017ec271cf4b29c1/courseC_artist_loops2a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

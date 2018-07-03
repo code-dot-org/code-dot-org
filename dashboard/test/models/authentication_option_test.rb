@@ -6,8 +6,8 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     new_teacher_email = 'awesometeacher@xyz.foo'
     teacher = create(:teacher, email: original_teacher_email)
     email_auth = create(:email_authentication_option, user: teacher, email: new_teacher_email)
-    teacher.update(primary_authentication_option: email_auth, provider: 'migrated')
-    assert_equal teacher.primary_authentication_option_id, email_auth.id
+    teacher.update(primary_contact_info: email_auth, provider: 'migrated')
+    assert_equal teacher.primary_contact_info_id, email_auth.id
     assert_equal new_teacher_email, teacher.email
     assert_equal AuthenticationOption.hash_email(new_teacher_email), teacher.hashed_email
   end
@@ -53,5 +53,50 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     user.restore(recursive: true)
     refute user.deleted?
     refute user.authentication_options.first.deleted?
+  end
+
+  test 'oauth? false when credential_type is email' do
+    option = create :authentication_option, credential_type: AuthenticationOption::EMAIL
+    refute option.oauth?
+  end
+
+  test 'oauth? true when credential_type is Clever' do
+    option = create :authentication_option, credential_type: AuthenticationOption::CLEVER
+    assert option.oauth?
+  end
+
+  test 'oauth? true when credential_type is Facebook' do
+    option = create :authentication_option, credential_type: AuthenticationOption::FACEBOOK
+    assert option.oauth?
+  end
+
+  test 'oauth? true when credential_type is Google' do
+    option = create :authentication_option, credential_type: AuthenticationOption::GOOGLE
+    assert option.oauth?
+  end
+
+  test 'oauth? true when credential_type is Powerschool' do
+    option = create :authentication_option, credential_type: AuthenticationOption::POWERSCHOOL
+    assert option.oauth?
+  end
+
+  test 'oauth? true when credential_type is Quikcamps' do
+    option = create :authentication_option, credential_type: AuthenticationOption::QWIKLABS
+    assert option.oauth?
+  end
+
+  test 'oauth? true when credential_type is The School Project' do
+    option = create :authentication_option, credential_type: AuthenticationOption::THE_SCHOOL_PROJECT
+    assert option.oauth?
+  end
+
+  test 'oauth? true when credential_type is Twitter' do
+    option = create :authentication_option, credential_type: AuthenticationOption::TWITTER
+    assert option.oauth?
+  end
+
+  test 'oauth? true when credential_type is Windows Live' do
+    option = create :authentication_option, credential_type: AuthenticationOption::WINDOWS_LIVE
+    assert option.oauth?
   end
 end

@@ -51,6 +51,7 @@
     "disable_procedure_autopopulate": "false",
     "background": "soccer",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"What do you think Kiki will say when you hit `Run`?\",\"hint_id\":\"courseF_playlab_variables2b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/22e175a7f728afe513869b4774286212/courseF_playlab_variables2b.mp3\"}]",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

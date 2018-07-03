@@ -40,6 +40,7 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Have fun with this level! See what little changes can do to your code.\",\"hint_id\":\"courseF_artist_variables10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dcb605170b83c6934a747615ab73bf81/courseF_artist_variables10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can try multiple things, and run your code multiple times.\",\"hint_id\":\"courseF_artist_variables10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/957107e07d988f2ada2a9af311b752b8/courseF_artist_variables10.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

@@ -30,8 +30,12 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdow
 // On the front end we are treating it as an experiment group that contains
 // PROGRESS_TAB.
 experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
-experiments.TEACHER_EXP_2018_LIST = [experiments.PROGRESS_TAB,
-  experiments.COMMENT_BOX_TAB, experiments.TEXT_RESPONSES_TAB];
+experiments.TEACHER_EXP_2018_LIST = [
+  experiments.PROGRESS_TAB,
+  experiments.COMMENT_BOX_TAB,
+  experiments.TEXT_RESPONSES_TAB,
+  experiments.ASSESSMENTS_TAB
+];
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
