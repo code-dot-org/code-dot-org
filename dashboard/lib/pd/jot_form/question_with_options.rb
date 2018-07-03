@@ -24,7 +24,10 @@ module Pd
 
       # @override
       def type_specific_summary
-        {options: options}
+        {
+          options: allow_other ? options << other_text : options,
+          allowOther: allow_other
+        }
       end
     end
   end
