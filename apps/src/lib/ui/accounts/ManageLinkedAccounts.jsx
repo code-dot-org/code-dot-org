@@ -12,7 +12,7 @@ const OAUTH_PROVIDERS = {
   CLEVER: 'clever',
   MICROSOFT: 'windowslive',
 };
-const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
+export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 
 export default class ManageLinkedAccounts extends React.Component {
   static propTypes = {
@@ -46,14 +46,10 @@ export default class ManageLinkedAccounts extends React.Component {
   toggleProvider = (provider) => {
     const authOption = this.getAuthenticationOption(provider);
     if (authOption) {
-      this.disconnect(authOption.id);
+      this.props.disconnect(authOption.id).then(_, this.onFailure);
     } else {
       this.props.connect(provider);
     }
-  };
-
-  disconnect = (authOptionId) => {
-    this.props.disconnect(authOptionId).then(_, this.onFailure);
   };
 
   onFailure = (error) => {
