@@ -1755,12 +1755,12 @@ de:
           fünf Felder nach vorne zur leckeren Sonnenblume gehen.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Bisher hast du eine Animation oder eine Geschichte geschaffen, die jedes
           Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein interaktives
           Spiel erstellen, das man tatsächlich spielen kann.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Es gibt einige neue Bausteine, die du ausprobieren kannst. Da ist der
           "Wenn Pfeil"-Baustein und der "Figur bewegen"-Baustein. Diese Bausteine
           kannst du zusammensetzen, um die Figuren mit den Pfeiltasten zu bewegen.

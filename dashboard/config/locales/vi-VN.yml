@@ -173,7 +173,7 @@ vi:
     email_preference_question: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
       về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
       máy tính khác không?
-    email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Đồng ý
     email_preference_no: Không
     email_preference_required: You must specify an email preference.
@@ -315,7 +315,7 @@ vi:
       free_play:
         playlab: Tạo một ứng dụng
         artist: Vẽ một cái gì đó
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Tạo một ứng dụng
         gamelab: Tạo một dự án trò chơi
         weblab: Tạo một dự án Web thử nghiệm (beta)
@@ -635,8 +635,8 @@ vi:
     student_not_found: Không thể tìm thấy một hoặc vài sinh viên.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: You cannot move these students because they are
+      already in the new section.
     third_party_login: You cannot move students to a section that is synced with a
       third party tool.
   share:
@@ -1173,7 +1173,7 @@ vi:
   flex_category:
     required: Tổng quan
     content: Nội dung
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1194,8 +1194,8 @@ vi:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1306,7 +1306,7 @@ vi:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:

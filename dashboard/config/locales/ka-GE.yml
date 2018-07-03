@@ -167,7 +167,7 @@ ka:
     accept_terms: ანგარიშის შესაქმნელად უნდა დაეთანხმოთ
     error: მოხდა შეცდომა.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: დიახ
     email_preference_no: არა
@@ -310,7 +310,7 @@ ka:
       free_play:
         playlab: აპლიკაციის შექმნა თამაშების ლაბორატორიაში
         artist: დახატეთ რამე
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში
         gamelab: შექმენით "კომპიუტერული თამაშების ლაბორატორიის" პროექტი
         weblab: შექმენით "ვებ ლაბორატორიის (ბეტა)" პროექტი
@@ -770,7 +770,7 @@ ka:
       unused: გამოუყენებელი დონეები
   upsell:
     applab:
-      title: აპლიკაციების ლაბორატორია
+      title: App Lab
       body: აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების
         შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით
         შემდეგ კი გაუზიარეთ იგი სხვებს.
@@ -1264,7 +1264,7 @@ ka:
     download_in_Turkish: 'გადმოიწერე თურქულად:'
     download_in_Ukrainian: 'გადმოიწერე უკრაინულად:'
     download_in_Vietnamese: 'გადმოიწერე ვიეტნამურად:'
-    windows: უინდოუსი
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

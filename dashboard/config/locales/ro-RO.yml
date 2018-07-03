@@ -171,7 +171,7 @@ ro:
     email_preference_question: Sunteți de acord să vă trimitem prin e-mail actualizări
       cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul
       informaticii?
-    email_preference_privacy: "(Vedeți politica noastră de confidențialitate)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Da
     email_preference_no: Nu
     email_preference_required: You must specify an email preference.
@@ -304,9 +304,10 @@ ro:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Am terminat Ora mea de Programare
@@ -314,7 +315,7 @@ ro:
       free_play:
         playlab: Creează o aplicație "Play Lab"
         artist: Desenează ceva
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Creează o aplicație
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -429,8 +430,7 @@ ro:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -883,7 +883,7 @@ ro:
     support: Obţine ajutor
     support_url: "//support.code.org"
     help_resources: Ajutor şi resurse
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -1177,8 +1177,8 @@ ro:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'

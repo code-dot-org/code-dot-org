@@ -504,7 +504,7 @@ es-ES:
   playlab_iceage_title: La Era de Hielo - Próximamente
   playlab_iceage_title_live: La Era de Hielo
   starwars_subtitle: Construyendo una Galaxia con Código - Eventos
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Arrastra y suelta los bloques y utiliza JavaScript.
   starwars_javascript_specs: Sólo en inglés | Navegadores Actuales | Mayores de 11
     años
@@ -1070,7 +1070,7 @@ es-ES:
   dashboard_correctness_incorrect: Incorrecto
   dashboard_submission_submitted: Enviado
   dashboard_submission_in_progress: En proceso
-  dashboard_status: Estado
+  dashboard_status: Status
   dashboard_multi_correct: "# opción múltiple correcta"
   dashboard_multi_count: "# opción múltiple"
   dashboard_multi_correct_percent: "% opción múltiple correcta"
@@ -1277,9 +1277,9 @@ es-ES:
   cspunit4_name: 'Tema 4: Datos'
   cspunit5_name: 'Unidad 5: Explorar y Crear PT'
   cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unidad 5: Información y Sociedad'
   csd6_name: 'Unidad 6: Computación Física'
@@ -1353,7 +1353,7 @@ es-ES:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'En desarrollo: Cursos A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 Principios de CS"
   csp17_category_name: "'16-'17 Principios de CS"
@@ -1583,12 +1583,17 @@ es-ES:
     flexibles a problemas más complejos. Al final de este curso, los estudiantes crearan
     historias interactivas y juegos que podrán compartir con cualquiera. Recomendado
     para los grados 4-8."
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -2137,13 +2142,13 @@ es-ES:
     su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros
     navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una
     funcionalidad rota.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: aletear
   infinity_shortcode: inf
-  playlab_shortcode: jugar
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Inicio
   header_my_dashboard: Mi Panel de Control

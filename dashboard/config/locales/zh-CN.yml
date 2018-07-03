@@ -83,7 +83,7 @@ zh-CN:
     notyet_signedup: 还未注册吗？
     google_oauth2: 谷歌帐户
     twitter: 推特
-    facebook: 脸谱
+    facebook: Facebook
     windowslive: 微软账户
     clever: Clever 账号
     powerschool: Powerschool 帐户
@@ -265,7 +265,7 @@ zh-CN:
       free_play:
         playlab: 创建一个游戏实验室应用
         artist: 画一些东西
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: 创建一个游戏实验室应用
         gamelab: 创建一个游戏实验室项目
         weblab: 开始一个网站实验室（测试版）项目

@@ -361,7 +361,7 @@ ga-IE:
     &ldquo;Computer science empowers
     students to create the world of tomorrow.&rdquo;
     Satya, Príomhoifigeach Mhicrosoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
     Chris Bosh
@@ -517,7 +517,7 @@ ga-IE:
   playlab_iceage_title: Ice Age - Ag teacht go luath
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Réaltra a Thógáil le Cód
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Úsáid blocanna tarraingt-is-scaoileadh agus JavaScript.
   starwars_javascript_specs: Béarla amháin | Brabhsálaithe nua-aimseartha | Aois 11+
   starwars_blocks_title: Blocanna
@@ -1286,9 +1286,9 @@ ga-IE:
   cspunit4_name: 'Aonad 4: Sonraí'
   cspunit5_name: 'Aonad 5: Taiscéaladh agus Cruthú (Tasc Feidhmíochta)'
   cspunit6_name: 'Tar Éis AP: Bunachair Sonraí in Aipeanna'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Aonad 5: Sonraí agus Sochaí'
   csd6_name: 'Aonad 6: Ríomhaireacht Fisiceach'
@@ -1494,7 +1494,7 @@ ga-IE:
   monstercoding_platformtext: Brabhsálaithe nua-aimseartha, iOS, Android
   allcancode_platformtext: Brabhsálaithe nua-aimseartha, iOS
   csfirst_platformtext: Brabhsálaithe nua-aimseartha
-  boxisland_platformtext: Andoid, iOS
+  boxisland_platformtext: Android, iOS
   codesters_platformtext: Brabhsálaithe nua-aimseartha
   texasinstruments_platformtext: Áireamháin TI
   teacherled_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -1590,13 +1590,15 @@ ga-IE:
     an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir
     a chomhroinnt le héinne. Dírithe ar aois 9-13.
   coursea_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
-  courseb_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
   coursec_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus cruthaigh
     ealaín, scéalta, agus cluichí.
   coursed_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
     ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
     tuilleadh.
-  coursee_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
   coursef_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
     agus cruthaigh ealaín, scéal, nó cluiche.
   coursea-2017_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
@@ -2162,13 +2164,13 @@ ga-IE:
     <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe
     tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans
     go mbeidh roinnt gnéithe ar an leathanach briste.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: gread
   infinity_shortcode: inf
-  playlab_shortcode: play
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Baile
   header_my_dashboard: Mo Phainéal

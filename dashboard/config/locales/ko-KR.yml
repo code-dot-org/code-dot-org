@@ -21,7 +21,8 @@ ko:
         name_example: '보여질 이름<br/>(예: 멋진 코더 또는 제인)'
         email: 이메일
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: username
         password: password
         password_confirmation: 비밀번호 재확인
@@ -63,7 +64,7 @@ ko:
   courses: courses
   courses_page:
     title_student: Code Studio 배우기
-    title_teacher: Teach with Code Studio
+    title_teacher: Teach Computer Science
   unplugged_activity: 언플러그드 활동
   of: 중
   more: 전체단계
@@ -149,7 +150,7 @@ ko:
     error: An error occurred.
     email_preference_question: 당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도
       되겠습니까?
-    email_preference_privacy: "(개인 정보 보호 정책을 참조하십시오.)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: 예
     email_preference_no: 아니요
     email_preference_required: You must specify an email preference.
@@ -279,9 +280,10 @@ ko:
       user:
         user_type_change_email_mismatch: 제공하신 이메일 주소가 계정에 저장된 주소와 맞지 않습니다.
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Hour of Code 완료
@@ -401,8 +403,7 @@ ko:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -717,7 +718,7 @@ ko:
       title: 갤러리
       body: 다른 사람이 만든 앱과 이미지 갤러리 보기
     gamelab:
-      title: 게임 연구실 (베타)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: 13세 이상

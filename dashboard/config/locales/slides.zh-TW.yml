@@ -72,34 +72,34 @@ zh-TW:
         text: 每一個土堆和坑洞的大小都不相同，所以你必須告訴農夫要使用的鏟數來完成工作。
     flappy_intro:
       1:
-        image: 標記/flappy01.jpg
+        image: notes/flappy01.jpg
         text: 嗨，我是 Katie！有一個讓人興奮的事情，關於計算機科學，是電腦程式可以做到互動。
       2:
-        image: 標記/flappy02.jpg
+        image: notes/flappy02.jpg
         text: 當有人在電腦或手機上點擊、觸控、輸入，在電腦或手機上的時候，就會產生一個事件（event），當一個「事件」發生時，就會由一些程式碼來決定接下來該做甚麼。
       3:
-        image: 標記/flappy03.jpg
+        image: notes/flappy03.jpg
         text: '舉個例子，您可能有一個事件處理常式（EVENT-HANDLER），像是「當滑鼠被點擊時，播放一個音效」 '
       4:
-        image: 標記/flappy04.jpg
+        image: notes/flappy04.jpg
         text: 你聽過 FlappyBird （笨鳥先飛）這個遊戲嗎？通過使用事件處理常式，我們將學習編製我們自己的 FlappyBird，就叫它像素鳥遊戲吧！
       5:
-        image: 標記/flappy05.jpg
+        image: notes/flappy05.jpg
         text: 你用拖曳積木所建立的程式（每個積木代表了一個個電腦指令），在其背後，這些積木都代表了一個真正的程式碼。
       6:
-        image: 標記/flappy06.jpg
+        image: notes/flappy06.jpg
         text: '如果你看到工作區上有一些綠色的積木，那是我們為你準備的，稱為事件處理常式（event handlers）。 '
       7:
-        image: 標記/flappy07.jpg
+        image: notes/flappy07.jpg
         text: 如果你想讓鳥在你點擊滑鼠時「拍打翅膀」，你可以添加「拍打翅膀」積木到事件處理常式的下面，那樣一來當你在遊戲中點擊滑鼠時，這隻鳥就會拍打翅膀了。
       8:
-        image: 標記/flappy08.jpg
+        image: notes/flappy08.jpg
         text: 在這個活動的每個關卡，我們會介紹新類型的事件（綠色）積木，你可以決定在下方添加適當的積木以作為這些事件的回應。
       9:
-        image: 標記/flappy09.jpg
+        image: notes/flappy09.jpg
         text: 當你看到一個像這樣的向下箭頭時，就表示你可以變更一些設置，像是當像素鳥撞到地面時要發出什麼聲音。
       10:
-        image: 標記/flappy10.jpg
+        image: notes/flappy10.jpg
         text: 在最後的關卡，你將能夠創建自己的遊戲並將它分享給你的朋友。祝玩得愉快！
     loop_times:
       1:
@@ -1000,10 +1000,10 @@ zh-TW:
         text: 這可以節省時間，而且讓它變得簡單。若要使用它，只要將向前移動的積木放到重複積木裡，點擊運行，然後殭屍就會移動五次走到美味的向日葵那。
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: 目前為止你已經製作了一個動畫或故事，在你運行它時，它會執行相同的操作。現在你可以設計一個互動式的、可以玩的遊戲了。
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: 這裡有些新的積木可以試試。例如「當按方向鍵時」積木以及「移動角色」積木，你可以將這些積木放在一起，利用方向鍵來移動角色。另外還有一些積木會在角色互撞或是被點擊時作用。試試它們，玩得愉快！
     C3_songwriting_with_parameters:
       1:

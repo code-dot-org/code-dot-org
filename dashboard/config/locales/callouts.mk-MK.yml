@@ -23,10 +23,10 @@ mk:
         screenSelectorCallout3: Pick the screen you made
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the name of your screen here.
+        changePlace1ID: Change the id of your screen here.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's title
+        appLabIntro2_designMenu: Use these menus to change your app's "text"
         appLabIntro2_textColor: Scroll down to change the "text color"
       AppLab Intro 2 - Edit startScreen2_callout:
         applabIntro2storyText: Click the story text on this screen
@@ -35,7 +35,7 @@ mk:
         appLabIntro2_textColor: Try out some of the different properties you can change
           below
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag another button into your app
+        designToolboxCallOut: Drag a button onto your screen.
         changeButtonID: Choose a clear "id" for your button. For example "callFriendButton"
           or "goOutsideButton"
         screenSelectorCallout3: Go to your "startScreen"
@@ -46,7 +46,8 @@ mk:
           the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Click here when you're done!
+        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not,
+          hit 'Reset', change your code, and hit 'Run' again.
       AppLab Intro 7 - thisOrThatAddButton_callout:
         AppLabHoCFinal11: You're now in Design Mode.
       AppLab_test02_callout: []
@@ -714,7 +715,7 @@ mk:
       MC_HOC_2017_08_Will_callout:
         MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but the player can''t!  '
+        MC_HOC_2017_08_RY_1: 'The Agent can hover over lava, but Steve and Alex can''t!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function

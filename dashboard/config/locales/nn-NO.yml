@@ -253,8 +253,8 @@ nn:
       picture: Bildepassord
       word: Hemmelege ord
       email: E-post
-      google_classroom: Google Klasserom
-      clever: Lur
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Invitasjon er sendt
     added_teacher: "%{name} er lagt til som læraren din"
@@ -308,7 +308,7 @@ nn:
       free_play:
         playlab: Lag ein app i Spel-lab
         artist: Teikn noko
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Lag ein app i Spel-lab
         gamelab: Lag eit prosjekt i Spel-lab
         weblab: Lag eit Nett-lab-prosjekt (beta)
@@ -443,7 +443,7 @@ nn:
     completed: Fullført
     tried: Forsøkt
   home:
-    title: Kodestudio
+    title: Code Studio
     description: Code Studio er kvar Code.org sine online kurs finnast
     lines_of_code: "%{lines_count} LINJER MED KODE SKRIVNE AV ELEVAR"
     lines_of_code_linebreak: "%{lines_count} LINJER MED KODE<br/>SKRIVNE AV %{students_count}
@@ -1228,7 +1228,7 @@ nn:
     download_in_Turkish: 'Last ned på tyrkisk:'
     download_in_Ukrainian: 'Last ned på ukrainsk:'
     download_in_Vietnamese: 'Last ned på vietnamesisk:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
