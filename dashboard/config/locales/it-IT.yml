@@ -29,7 +29,7 @@ it:
         personal_email: E-mail personale<a href="%{url}">(clicca qui se non hai un
           indirizzo e-mail)</a>
         username: Nome utente
-        password: password
+        password: Password
         password_confirmation: Conferma della password
         current_password: Password attuale
         locale: Lingua
@@ -40,7 +40,7 @@ it:
           future: non può essere in futuro
   hello: Ciao a tutti
   welcome_back: Bentornato, %{name}
-  your_professional_learning_plan: Il tuo piano di apprendimento professionale
+  your_professional_learning_plan: Your Professional Learning Plan
   see_your_learning_plan: Guarda il tuo piano di apprendimento
   submit: Invia
   unsubmit: Annulla l'invio delle risposte
@@ -314,7 +314,7 @@ it:
       free_play:
         playlab: Costruisci un Gioco nel Laboratorio
         artist: Disegna qualcosa
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Costruisci una App in Sviluppo App
         gamelab: Crea un progetto in Sviluppo Giochi
         weblab: Crea un progetto in Sviluppo Web (versione provvisoria)
@@ -359,7 +359,7 @@ it:
       classroom: Cruscotto di Controllo dell'insegnante
       district_dashboard: Dashboard
       label: Ciao %{username}
-      stats: I miei progressi
+      stats: Code Studio
       settings: Il mio account
       logout: Esci
       signin: Accedi
@@ -689,7 +689,7 @@ it:
     powered_by_aws: Eseguito su Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
       of Code&reg; sono marchi registrati di Code.org."
-    copyright: Diritto d'autore
+    copyright: Copyright
     more: Di più
     feedback: Facci sapere che ne pensi
     translate: Aiutaci a tradurre nella tua lingua
@@ -896,11 +896,11 @@ it:
       osservazioni e vengono fatti miglioramenti.
     prerelease_hoc2014: Questo corso è in <span class='betatext'>versione provvisoria</span>.
       È soggetto a revisione man mano che arrivano osservazioni in modo da migliorarlo.
-    report_bug: Segnala un errore
+    report_bug: Report Bug
     support: Ottieni aiuto
     support_url: "//programmailfuturo.it/aiuto"
     help_resources: Aiuto e Risorse
-    help_support: Aiuto e supporto
+    help_support: Help and support
     documentation: Documentazione
     tutorials: Corsi
   multi:

@@ -170,7 +170,7 @@ bg:
     accept_terms: Вие трябва да потвърдите, за да си създадете профил
     error: Възникна грешка.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(Вижте нашата политика за поверителност)"
     email_preference_yes: Да
     email_preference_no: Не
@@ -311,7 +311,7 @@ bg:
       free_play:
         playlab: Направи Play Lab приложение
         artist: Начертай нещо
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Направи Play Lab приложение
         gamelab: Направи Game Lab проект
         weblab: Make a Web Lab (beta) project
@@ -878,7 +878,7 @@ bg:
     support: Получаване на помощ
     support_url: "//support.code.org"
     help_resources: Помощ и ресурси
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -1170,8 +1170,8 @@ bg:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'

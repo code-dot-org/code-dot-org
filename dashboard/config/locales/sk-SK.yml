@@ -316,7 +316,7 @@ sk:
       free_play:
         playlab: Vytvoriť aplikáciu
         artist: Nakresliť niečo
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Vytvoriť aplikáciu
         gamelab: Vytvorte projekt v Hernom laboratóriu
         weblab: Vytvorte prjekt vo Webovom laboratóriu (beta verzia)
@@ -481,7 +481,7 @@ sk:
     student_finished: Dokončil si všetky cvičenia, vyber si ďaľšiu triedu %{online_link}
       alebo v %{local_school_link}
     local_school: miestna škola
-    online: Online
+    online: online
     see_details: Pozri detaily
     view_course: Prezrieť kurz
     prize_info: 'Ceny za účasti (iba pre učiteľov verejných škôl v U.S.): Nad $1,000

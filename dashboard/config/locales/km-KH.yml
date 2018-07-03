@@ -112,10 +112,10 @@ km:
     hoc_already_signed_up_heading: ចាប់ផ្តើមដោយមិនចាំបាច់មានគណនេយ្យ។
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your
+      classroom and share the link with them.<br/><br/>If you enjoyed the Hour of
+      Code and want to go further, you can set up a password and create a Code Studio
+      account below to enroll your students in any of our <a href="%{educate_url}">longer
       courses</a>.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
@@ -147,13 +147,12 @@ km:
     agree_us_website: I agree to using a website based in the United States.
     my_data_to_us: Data from my use of this site may be sent to and stored or processed
       in the United States.
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/>For users under 13, email addresses are not stored in a form that
-      allows us to contact them.
-    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
+    teacher_terms: I agree to be bound by the Code.org terms of service. For more
+      information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។
     user_type_button: Update Account Type
     user_type_label: ប្រភេទនៃគណនេយ្យ
@@ -163,7 +162,7 @@ km:
     accept_terms: អ្នកត្រូវតែយល់ព្រមជាមុនដើម្បីបង្កើតគណនេយ្យមួយ
     error: មានកំហុសមួយ
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: យល់ព្រម
     email_preference_no: ទេ
@@ -304,7 +303,7 @@ km:
       free_play:
         playlab: បង្កើតកម្មវិធី Play Lab
         artist: គូសអ្វីមួយ
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: បង្កើតកម្មវិធី App Lab​មួយ
         gamelab: បង្កើតគម្រោង Game​ Lab​ មួយ
         weblab: បង្កើតគម្រោង Web Lab មួយ (សាកល្បង)
@@ -357,8 +356,8 @@ km:
       already_registered: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
       pair_programming: Pair Programming
       team: ក្រុម
-      driver: Driver
-      navigator: Navigator
+      driver: Logged in
+      navigator: Partner
     popup:
       progress_for_user: ដំណើរការរបស់%{name}
       progress: ដំណើរការ​របស់​អ្នក
@@ -481,11 +480,11 @@ km:
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High
       School</h1>"
-    heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
+    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
     announcement_title: Announcements
@@ -606,8 +605,8 @@ km:
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: You cannot move these students because they are
+      already in the new section.
     third_party_login: You cannot move students to a section that is synced with a
       third party tool.
   share:
@@ -629,16 +628,26 @@ km:
       href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
       team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
       advisors</a> for their support in creating Code Studio.
-    help_from_html: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create this tutorial.
+    help_from_html: We especially want to recognize the engineers from Google, Microsoft,
+      Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
       create these materials.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. All Rights Reserved.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
+      and &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
@@ -657,7 +666,7 @@ km:
     report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
-    how_it_works: How it works
+    how_it_works: How it Works (View Code)
     try_hour_of_code: សាកល្បងរៀនជាមួយHour of Code!
   reference_area:
     title: ត្រូវការ​ជំនួយ?
@@ -740,7 +749,7 @@ km:
       audience: Ages 13+
       cta: Learn how
     hoc:
-      title: ពេលវេលា​នៃ​កូដ
+      title: Classic Maze
       body: សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។
     flappy:
       title: Flappy កូដ
@@ -760,7 +769,7 @@ km:
       title: Gallery
       body: View a gallery of app and artist images created by our users
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Ages 13+
@@ -800,7 +809,7 @@ km:
         text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: Ages 4+
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -834,8 +843,8 @@ km:
     caption_by_name_age: by %{name}, age %{age}
     caption_time_ago: "%{time_ago} ago"
     header: Gallery
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Stories and games
+    header_artist: Code art
     report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
@@ -847,7 +856,7 @@ km:
     support: Get Help
     support_url: "//support.code.org"
     help_resources: Help and Resources
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -868,7 +877,7 @@ km:
     wrong_title: អរគុណ
     wrong_body: Thank you for submitting answers.
     correct_title: អរគុណ
-    correct_body: Thank you for submitting an answer
+    correct_body: Thank you for submitting answers.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -947,8 +956,8 @@ km:
     tos: លក្ខខណ្ឌ
     privacy: សិទ្ធបុគ្គល
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accept
     print: បោះពុម្ព
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1010,7 +1019,7 @@ km:
     share_link_import_error_body: មានបញ្ហាក្នុងការទាញយកតំណដែលបានចែកចាយ។ សូមព្យាយាមម្តងទៀត។
     exit: Return to Course
     my_projects: My Projects
-    project_gallery: Project Gallery
+    project_gallery: Projects
     publish: Publish
     unpublish: Unpublish
     share: ចែក​រំលែក
@@ -1030,9 +1039,9 @@ km:
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+      below to start a new project!<br/>You can come back and work on your projects
+      at any time.
+    need_help: Try these courses to help you get started with your new project
     thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
@@ -1048,7 +1057,7 @@ km:
       to view your project.
     view_all: View My Projects
     remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    click_to_remix: Click "Remix" to spin-off your own version!
     edit_project: Edit Project
     sharing_disabled: Sorry, this project is not available for sharing. If this is
       your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
@@ -1075,7 +1084,7 @@ km:
         abusive_url: URL of the content being reported
         abuse_type:
           question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
+          harassment: Threats, cyberbullying, harassment
           offensive: Offensive content
           infringement: Copyright Infringement
           other: ផ្សេងៗ
@@ -1083,7 +1092,7 @@ km:
           are reporting.
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+          and the %{link_start_tos}Terms of Service%{link_end}.
   peer_review:
     accepted:
       name: Accepted
@@ -1111,7 +1120,7 @@ km:
   flex_category:
     required: Overview
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1132,8 +1141,8 @@ km:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1221,7 +1230,7 @@ km:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -1244,7 +1253,7 @@ km:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:

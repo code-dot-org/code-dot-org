@@ -170,7 +170,7 @@ id:
     accept_terms: Anda menyetujui untuk membuat akun
     error: Sebuah kesalahan terjadi.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ya
     email_preference_no: Tidak
@@ -314,7 +314,7 @@ id:
       free_play:
         playlab: Buat sebuah aplikasi Lab Bermain
         artist: Gambarlah Sesuatu
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Buat sebuah aplikasi Lab Aplikasi
         gamelab: Buat sebuah proyek Lab Permainan
         weblab: Membuat proyek Lab Web (beta)
@@ -1177,7 +1177,7 @@ id:
   flex_category:
     required: Tinjauan
     content: Konten
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1287,7 +1287,7 @@ id:
     download_in_Turkish: 'Unduh dalam bahasa Turki:'
     download_in_Ukrainian: 'Unduh dalam bahasa Ukraina:'
     download_in_Vietnamese: 'Unduh dalam bahasa Vietnam:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

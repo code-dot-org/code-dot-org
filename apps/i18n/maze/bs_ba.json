@@ -8,7 +8,7 @@
   "collectorCollectTooltip": "Pokupite predmet",
   "collectorCollectedEverything": "Čestitamo! Pokupili se {count, plural,one {predmet}other {svi#predmeti}}!",
   "collectorCollectedNothing": "Nastavite kodirati! Trebate pokupiti što je više moguće predmeta.",
-  "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorCollectedSome": "Great work! You collected {count, plural, one {1 item} other {# items}}!",
   "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
   "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!",

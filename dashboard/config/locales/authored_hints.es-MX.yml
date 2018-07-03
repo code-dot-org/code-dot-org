@@ -4242,9 +4242,9 @@ es-MX:
           para algunas ideas!
 
 '
-        courseA_artist_loops_challenge1_b: "! [] (https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
-        courseA_artist_loops_challenge1_c: "! [] (https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
-        courseA_artist_loops_challenge1_d: "! [] (https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
       course1_artist_loops_challenge2_authored_hint:
         harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
       course1_artist_loops_challenge3_authored_hint:
@@ -7537,9 +7537,10 @@ es-MX:
           <title name="VALUE">down</title>
           </block>
           </xml>
-        courseB_playlab_events6_b: Utiliza el desplegable flechas verde bloquea el
-          evento 'cuando ___ flecha presiona' para elegir diferentes direcciones.
-          ! [] (https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_b: |-
+          Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.
+
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: "¡Llega a todas las banderas para pasar!"
       courseB_playlab_events6_2018_authored_hint:
         courseB_playlab_events6_a: |-
@@ -7552,9 +7553,10 @@ es-MX:
           <title name="VALUE">down</title>
           </block>
           </xml>
-        courseB_playlab_events6_b: Utiliza el desplegable flechas verde bloquea el
-          evento 'cuando ___ flecha presiona' para elegir diferentes direcciones.
-          ! [] (https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
+        courseB_playlab_events6_b: |-
+          Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.
+
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: "¡Llega a todas las banderas para pasar!"
       courseB_playlab_events7_authored_hint:
         courseB_playlab_events7_a: |-
