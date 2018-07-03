@@ -116,4 +116,8 @@ class Census::CensusSubmission < ApplicationRecord
       where(inaccuracy_reported: true).
       where('census_inaccuracy_investigations.id is null')
   end
+
+  def submitter_email_address=(value)
+    super(value&.strip&.downcase)
+  end
 end
