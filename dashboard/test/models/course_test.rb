@@ -290,30 +290,30 @@ class CourseTest < ActiveSupport::TestCase
     end
 
     test 'student with no progress does not have other version progress' do
-      refute @csp_2017.has_other_version_progress?(@student)
-      refute @csp_2018.has_other_version_progress?(@student)
+      refute @csp_2017.has_older_version_progress?(@student)
+      refute @csp_2018.has_older_version_progress?(@student)
     end
 
     test 'student with progress in other course version has other version progress' do
       create :user_script, user: @student, script: @csp1_2017
 
-      refute @csp_2017.has_other_version_progress?(@student)
-      assert @csp_2018.has_other_version_progress?(@student)
+      refute @csp_2017.has_older_version_progress?(@student)
+      assert @csp_2018.has_older_version_progress?(@student)
     end
 
     test 'student with progress in both course versions has other version progress' do
       create :user_script, user: @student, script: @csp1_2017
       create :user_script, user: @student, script: @csp2_2018
 
-      assert @csp_2017.has_other_version_progress?(@student)
-      assert @csp_2018.has_other_version_progress?(@student)
+      assert @csp_2017.has_older_version_progress?(@student)
+      assert @csp_2018.has_older_version_progress?(@student)
     end
 
     test 'student with progress in other course family does not have other version progress' do
       create :user_script, user: @student, script: @csd1
 
-      refute @csp_2017.has_other_version_progress?(@student)
-      refute @csp_2018.has_other_version_progress?(@student)
+      refute @csp_2017.has_older_version_progress?(@student)
+      refute @csp_2018.has_older_version_progress?(@student)
     end
   end
 
