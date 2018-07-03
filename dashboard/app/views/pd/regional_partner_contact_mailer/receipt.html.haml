@@ -5,7 +5,14 @@
 %p
   Thank you for your interest in Code.org's
   = "#{@interest}" + '. '
-  We will notify you about opportunities in your area when they become available. Below is a confirmation of the information you submitted to us.
+  - unless @form[:role] == "Teacher" || @regional_partner
+    - if @form[:gradeLevels] == "Elementary School"
+      We don't currently have a Regional Partner in your region, but we will pass along your information to the CS Fundamentals facilitator(s) in your region. They will notify you about opportunities in your area when they become available.
+    - else
+      We don't currently have a Regional Partner in your region. We are continuing to expand into more regions every year and will forward your message to a Regional Partner in your community if and when they become available.
+  - else
+    We will notify you about opportunities in your area when they become available.
+  Below is a confirmation of the information you submitted to us.
 
 = render partial: 'form_body'
 

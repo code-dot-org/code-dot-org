@@ -14,11 +14,15 @@
   available for no cost to all schools.
 - else
   %p
-    Thank you! If you are a teacher, please visit our
-    = link_to 'Professional Learning page', CDO.code_org_url('/educate/professional-learning-2018')
-    to learn about the opportunities that exist in your region.
-  %p
-    If you are a school or district administrator, we don't currently have a local contact for you. We are continuing to expand into more regions every year and will forward your message to a Regional Partner in your community if and when they become available.
+  Thank you for your interest in Code.org's
+  = "#{@interest}" + '. '
+  - unless @form[:role] == "Teacher" || @regional_partner
+    - if @form[:gradeLevels] == "Elementary School"
+      We don't currently have a Regional Partner in your region, but we will pass along your information to the CS Fundamentals facilitator(s) in your region. They will notify you about opportunities in your area when they become available.
+    - else
+      We don't currently have a Regional Partner in your region. We are continuing to expand into more regions every year and will forward your message to a Regional Partner in your community if and when they become available.
+  - else
+    We will notify you about opportunities in your area when they become available.
 
   In the meantime, take a look
   = link_to 'here for the K-12 Code.org curriculum options', courses_path
