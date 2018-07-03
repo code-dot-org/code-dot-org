@@ -493,6 +493,75 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'clever', User.last.provider # NOTE: this will fail when we create migrated users by default
   end
 
+  test 'connect_provider: can connect multiple auth options with the same email to the same user' do
+    email = 'test@xyz.foo'
+    user = create :user, :multi_auth_migrated, uid: 'some-uid'
+    AuthenticationOption.new(
+      {
+        user: user,
+        email: email,
+        hashed_email: User.hash_email(email),
+        credential_type: 'google_oauth2',
+        authentication_id: 'some-uid',
+        data: {
+          oauth_token: 'fake_token',
+          oauth_token_expiration: '999999',
+          oauth_refresh_token: 'fake_refresh_token'
+        }
+      }
+    ).save!
+
+    auth = generate_auth_user_hash(provider: 'facebook', uid: user.uid, refresh_token: '65432', email: email)
+    @request.env['omniauth.auth'] = auth
+
+    Timecop.freeze do
+      setup_should_connect_provider(user, 2.days.from_now)
+      assert_creates(AuthenticationOption) do
+        get :facebook
+      end
+
+      user.reload
+      assert_response :success
+      assert_equal 2, user.authentication_options.length
+    end
+  end
+
+  test 'connect_provider: cannot connect multiple auth options with the same email to a different user' do
+    email = 'test@xyz.foo'
+    user_a = create :user, :multi_auth_migrated
+    AuthenticationOption.new(
+      {
+        user: user_a,
+        email: email,
+        hashed_email: User.hash_email(email),
+        credential_type: 'google_oauth2',
+        authentication_id: 'some-uid',
+        data: {
+          oauth_token: 'fake_token',
+          oauth_token_expiration: '999999',
+          oauth_refresh_token: 'fake_refresh_token'
+        }
+      }
+    ).save!
+
+    user_b = create :user, :multi_auth_migrated
+    auth = generate_auth_user_hash(provider: 'facebook', uid: 'some-other-uid', refresh_token: '65432', email: email)
+    @request.env['omniauth.auth'] = auth
+
+    Timecop.freeze do
+      setup_should_connect_provider(user_b, 2.days.from_now)
+      assert_does_not_create(AuthenticationOption) do
+        get :facebook
+      end
+
+      assert_response 422
+    end
+    user_a.reload
+    user_b.reload
+    assert_equal 1, user_a.authentication_options.length
+    assert_equal 0, user_b.authentication_options.length
+  end
+
   test 'connect_provider: returns bad_request if user not migrated' do
     user = create :user, :unmigrated_facebook_sso
     Timecop.freeze do
