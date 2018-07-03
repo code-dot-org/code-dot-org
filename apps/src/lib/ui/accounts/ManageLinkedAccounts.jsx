@@ -176,6 +176,7 @@ const styles = {
     paddingLeft: GUTTER,
     paddingRight: GUTTER,
     fontWeight: 'normal',
+    width: tableLayoutStyles.table.width / 3,
   },
   cell: {
     ...tableLayoutStyles.cell,
