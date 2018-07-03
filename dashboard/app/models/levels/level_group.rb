@@ -284,12 +284,14 @@ ruby
       # We will have results, even empty ones, for each student that submitted
       # an answer.
       student_count = levelgroup_results.empty? ? 0 : levelgroup_results.first[:results].length
-      next unless student_count >= SURVEY_REQUIRED_SUBMISSION_COUNT
+
+      # Don't report any results if not enough students have submitted the survey.
+      reportable_results = student_count < SURVEY_REQUIRED_SUBMISSION_COUNT ? [] : levelgroup_results
 
       # All the results for one LevelGroup for a group of students.
       surveys_by_level_group[level_group.id] = {
         stage_name: script_level.stage.localized_title,
-        levelgroup_results: levelgroup_results
+        levelgroup_results: reportable_results
       }
     end
 

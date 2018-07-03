@@ -431,6 +431,7 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
       numMultipleChoice: studentsAssessment.multi_count,
       isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: studentsAssessment.submitted ? studentsAssessment.timestamp : i18n.inProgress(),
+      url: studentsAssessment.url,
     };
   });
 
@@ -508,7 +509,7 @@ export const countSubmissionsForCurrentAssessment = (state) => {
   if (isSurvey) {
     const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
     const currentSurvey = surveysStructure[currentAssessmentId];
-    if (!currentSurvey) {
+    if (!currentSurvey || currentSurvey.levelgroup_results.length === 0) {
       return 0;
     }
     return currentSurvey.levelgroup_results[0].results.length;
