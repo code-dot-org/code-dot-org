@@ -18,7 +18,8 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestC
     workshop_organizer: 'Workshop Organizer',
     workshop_facilitator: 'Workshop Facilitator',
     workshop_course: 'Workshop Course',
-    opt_in: 'Yes'
+    email_opt_in: 'Yes',
+    legal_opt_in: true
   }
 
   self.use_transactional_test_case = true

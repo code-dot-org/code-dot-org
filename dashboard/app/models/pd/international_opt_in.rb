@@ -37,7 +37,8 @@ class Pd::InternationalOptIn < ApplicationRecord
       :workshop_organizer,
       :workshop_facilitator,
       :workshop_course,
-      :opt_in
+      :email_opt_in,
+      :legal_opt_in
     ]
   end
 
@@ -50,7 +51,8 @@ class Pd::InternationalOptIn < ApplicationRecord
       resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other),
       robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder other),
       workshopCourse: %w(csf_af csf_express),
-      optIn: %w(opt_in_yes opt_in_no)
+      emailOptIn: %w(opt_in_yes opt_in_no),
+      legalOptIn: %w(opt_in_yes opt_in_no)
     }
 
     entries = Hash[entry_keys.map {|k, v| [k, v.map {|s| I18n.t("pd.form_entries.#{k.to_s.underscore}.#{s.underscore}")}]}]
@@ -79,13 +81,14 @@ class Pd::InternationalOptIn < ApplicationRecord
       workshopOrganizer
       workshopFacilitator
       workshopCourse
-      optIn
+      emailOptIn
+      legalOptIn
     )
     Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]
   end
 
-  def opt_in?
-    sanitize_form_data_hash[:opt_in].downcase == "yes"
+  def email_opt_in?
+    sanitize_form_data_hash[:email_opt_in].downcase == "yes"
   end
 
   def email

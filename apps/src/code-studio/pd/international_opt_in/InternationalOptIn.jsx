@@ -245,11 +245,18 @@ class InternationalOptInComponent extends FormComponent {
         }
         {
           this.buildButtonsFromOptions({
-            name: 'optIn',
-            label: labels.optIn,
+            name: 'emailOptIn',
+            label: labels.emailOptIn,
             type: 'radio',
             required: true,
             placeholder: i18n.selectAnOption()
+          })
+        }
+        {
+          this.buildSingleCheckbox({
+            name: 'legalOptIn',
+            label: labels.legalOptIn,
+            required: true
           })
         }
       </FormGroup>
@@ -261,5 +268,5 @@ InternationalOptInComponent.associatedFields = [
   'firstName', 'firstNamePreferred', 'lastName', 'email', 'emailAlternate', 'gender',
   'schoolName', 'schoolCity', 'schoolCountry', 'ages', 'subjects', 'resources',
   'robotics', 'workshopOrganizer', 'workshopFacilitator', 'workshopCourse',
-  'optIn'
+  'emailOptIn', 'legalOptIn'
 ];
