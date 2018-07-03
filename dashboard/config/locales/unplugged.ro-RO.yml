@@ -299,7 +299,7 @@ ro:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Activitate fără Calculator
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Activitate fără Calculator
@@ -308,7 +308,7 @@ ro:
         title: Activitate fără Calculator
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: Activitate fără Calculator
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Activitate fără Calculator
@@ -476,7 +476,7 @@ ro:
           hit save and plush"
       courseB_unplugged_MRF_2018:
         title: Amicii mei roboți
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
         title: "[șir gol]"
         desc: "[șir gol]"
