@@ -189,7 +189,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           oauth_token_expiration: auth_hash.credentials&.expires_at,
           oauth_refresh_token: auth_hash.credentials&.refresh_token
         }
-      ).save
+      ).save!
     else
       @user.provider = oauth_user.provider
       @user.uid = oauth_user.uid
