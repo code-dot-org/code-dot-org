@@ -70,7 +70,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    regional_partner = current_user.regional_partners
+    regional_partner = current_user
     teachercon = get_teachercon regional_partner
 
     unless teachercon
