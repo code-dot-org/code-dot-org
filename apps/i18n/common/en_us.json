@@ -1099,7 +1099,7 @@
   "student": "Student",
   "students": "Students",
   "studentFreeResponseAnswers": "Student free response answers",
-  "studentOverviewTableHeader": "Student overview (multiple choice questions only)",
+  "studentOverviewTableHeader": "Submission status",
   "studentsSuccessfullyMovedNotice": "Students successfully moved",
   "studentsSuccessfullyMovedDetails": "{numStudents} student(s) were successfully moved from this section to section \"{section}.\"",
   "studentsSuccessfullyCopiedNotice": "Students successfully copied",
