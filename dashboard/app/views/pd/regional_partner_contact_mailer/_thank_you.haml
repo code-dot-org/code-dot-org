@@ -1,0 +1,25 @@
+%p
+  Thank you for your interest in Code.org's
+  = "#{@interest}" + '. '
+
+- if @regional_partner
+  We're looking forward to helping you bring computer science to your school or district.
+
+  Your local Code.org Regional Partner is
+  = "#{@regional_partner.name}."
+  If you are a teacher interested in our professional learning program, please visit our
+  = link_to 'Professional Learning page', CDO.code_org_url('/educate/professional-learning-2018')
+  to learn about the opportunities that exist in your region. If you are an administrator, a representative from
+  = @regional_partner.name
+  will reach out to contact you about options for your school or district.
+- else
+  If you are a teacher, please visit our
+  = link_to 'Professional Learning page', CDO.code_org_url('/educate/professional-learning-2018')
+  to learn about the opportunities that exist in your region.
+
+  If you are a school or district administrator interested in our elementary program, we will pass along this form to the CS Fundamentals facilitators in your region. They will be in touch with you soon! If you are interested in our middle or high school programs, we don't currently have a local contact for you. We are continuing to expand into more regions every year and will forward your message to a Regional Partner in your community if and when they become available.
+
+In the meantime, take a look
+= link_to 'here for the K-12 Code.org curriculum options', courses_path
+available for no cost to all schools, or check out our list of
+= link_to 'third-party computer science resources.', CDO.code_org_url('/educate/curriculum/3rd-party')
