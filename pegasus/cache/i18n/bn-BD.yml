@@ -98,18 +98,7 @@ bn-BD:
   congratulations_volunteer: 'অভিনন্দন: আপনি এক ঘন্টার কোড চেষ্টা করেছেন, https://code.org/volunteer
     এখান থেকে শ্রেণীকক্ষে স্বেচ্ছাসেবক হবার জন্য নিবন্ধন করুন এবং ছাত্র এক ঘন্টার
     কোড শিখতে সহায়তা করুন!'
-  congratulations_on_completing_course1: কোর্স ১ সম্পন্ন করার জন্য অভিনন্দন
-  congratulations_on_completing_course2: কোর্স ২ সম্পন্ন করার জন্য অভিনন্দন
-  congratulations_on_completing_course3: কোর্স ৩ সম্পন্ন করার জন্য অভিনন্দন
-  congratulations_on_completing_course4: কোর্স ৪ সম্পন্ন করার জন্য অভিনন্দন
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: অ্যাক্সিলারেটেড কোর্স সম্পন্ন করার জন্য
-    অভিনন্দন
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: পরবর্তী পাঠ সহায়িকা (টিউটোরিয়াল) গুলী চেষ্টা করুন
   congrats_next_tutorials_desc: এই ছোট, ১ ঘন্টা টিউটোরিয়াল চেষ্টা করুন বা <a href="%{current_path}/next">
     সঙ্গী টিউটোরিয়াল</a> চেষ্টা করুন।
@@ -295,28 +284,8 @@ bn-BD:
   just_did_accelerated: " দেখ আমি কেবল অ্যাক্সিলারেটেড  কোর্স শেষ করছে! @codeorg"
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 10 জনের মধ্যে 9 মানুষ একমত যে বিদ্যালয় কম্পিউটার বিজ্ঞান শিক্ষা
     দেওয়া উচিত। http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -1413,6 +1382,18 @@ bn-BD:
   coursed_gradelevel: গ্রেড ৮ +
   coursee_gradelevel: বয়স 8-12
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: গ্রেড ৮ +
+  coursee-2017_gradelevel: বয়স 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: গ্রেড ৮ +
+  coursee-2018_gradelevel: বয়স 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: বয়স ১০-১৮
   codeorg_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
   codeintl_platformtext: আধুনিক ব্রাউজার, smartphones, ট্যাবলেট
@@ -1550,6 +1531,30 @@ bn-BD:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: ড্রাগ ও ড্রপ প্রোগ্রামিং দিয়ে কম্পিউটার বিজ্ঞানের মৌলিক
     ধারনা শিখুন। এটি একটি খেলার মত, স্বচালিত ভিডিও টিউটোরিয়াল যার পাঠগুলি বিল গেটস,
     মার্ক যকারবার্গ, এংরি বার্ড, প্লান্ট বনাম জম্বি দ্বারা অভিনিত। পুনরায়-চক্র(লুপ),

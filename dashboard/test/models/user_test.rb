@@ -1596,35 +1596,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal name, student.name
   end
 
-  #
-  # Temporary: Remove the primary_authentication_option aliases after migration.
-  #
-  test 'primary_authentication_option is aliased to primary_contact_info' do
-    user = create :teacher, :with_migrated_email_authentication_option
-    refute_nil user.primary_contact_info
-    assert_equal user.primary_authentication_option, user.primary_contact_info
-    new_info = AuthenticationOption.new \
-      user: user,
-      credential_type: AuthenticationOption::EMAIL,
-      email: 'new-email@example.org',
-      hashed_email: User.hash_email('new-email@exmaple.org')
-    user.primary_authentication_option = new_info
-    assert_equal new_info, user.primary_contact_info
-  end
-
-  test 'primary_authentication_option_id is aliased to primary_contact_info_id' do
-    user = create :teacher, :with_migrated_email_authentication_option
-    refute_nil user.primary_contact_info_id
-    assert_equal user.primary_authentication_option_id, user.primary_contact_info_id
-    new_info = AuthenticationOption.create \
-      user: user,
-      credential_type: AuthenticationOption::EMAIL,
-      email: 'new-email@example.org',
-      hashed_email: User.hash_email('new-email@exmaple.org')
-    user.primary_authentication_option_id = new_info.id
-    assert_equal new_info.id, user.primary_contact_info_id
-  end
-
   test 'update_primary_contact_info is false if email and hashed_email are nil' do
     user = create :user
     successful_save = user.update_primary_contact_info(user: {email: nil, hashed_email: nil})

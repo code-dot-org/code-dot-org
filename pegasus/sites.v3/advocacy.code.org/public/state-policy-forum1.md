@@ -5,33 +5,22 @@ video_player: true
 ---
 <a id="top"></a>
 
-<p align="center"><img src="/images/forum-banner1.png"></p> 
+<p align="center"><img src="/images/fit-970/forum-banner1.png"></p> 
 
-[solid-block-header]
 
-Join us for the 2018 Code.org/CSTA State Policy Forum
+## Join us September 27-28 2018
 
-[/solid-block-header]
+The annual State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year's forum is co-hosted by [Code.org](https://code.org/promote) and the Computer Science Teachers Association ([CSTA](https://www.csteachers.org/)). 
 
-### September 27-28 2018 in Denver, Colorado
+The forum is composed of two experiences, a pre-forum for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) immediately followed by a main forum for all participants. Join us for lively discussions on policy and implementation, hands-on workshops, flash talks, and unique networking opportunities. The forum takes place at the [JW Marriott Denver Cherry Creek](http://www.jwmarriottdenver.com/").
 
-The annual State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year's forum is co-hosted by Code.org and the Computer Science Teachers Association (CSTA).  
-
-Join us for lively discussions on current issues, hands-on workshops, flash talks, and unique networking opportunities.
-
-<hr/>
-
-## Forum Information
-
-The forum is composed of two experiences, a pre-forum for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) immediately followed by a main forum for all participants.
-
-The **pre-forum** begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. 
+The **pre-forum** begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon. 
  
 The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 4:00 pm on Friday, September 28. 
 
 ## Application Details
 
-* Attendance at the pre-forum is limited to members of the [Code.org Advocacy Coalition](https://advocacy.code.org) and those interested in [joining](https://bit.ly/joinadvocacycoalition) the advocacy coalition. 
+* The pre-forum is for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) and those interested in [joining](https://bit.ly/joinadvocacycoalition) the advocacy coalition. 
 * All may apply to attend the main forum and applications will be approved on a rolling basis. Space is limited, so apply soon.
 * Conference fees and meals during the forum are provided at no-cost for participants by Code.org, but **travel, lodging, and expenses will be the responsibility of the attendee**. 
 * A limited number of scholarships are available based on need and can be requested in the application form.
@@ -72,14 +61,19 @@ The main forum begins at 3:00 pm on Thursday, September 27 following the pre-for
 <summary>**Pictures from previous forums**</summary>
   <p>
   <br>
-![Networking activity](https://staging-advocacy.code.org/images/networking.jpg)
-Networking by learning about networking!
-
-![2016 State Policy Forum](https://staging-advocacy.code.org/images/2016-state-policy-forum.jpg)
-2016 State Policy Forum Attendees
-
-![CS Leaders](https://staging-advocacy.code.org/images/cs-leads.jpg)
-State CS Leaders meeting each other for the first time.
+<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
+<img alt="Networking activity" src="/images/fit-300/networking.jpg">
+<br>Networking by learning about networking!
+</div>
+<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
+<img alt="2016 State Policy Forum" src="/images/fit-300/2016-state-policy-forum.jpg">
+<br>2016 State Policy Forum Attendees
+</div>
+<div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
+<img alt="CS Leaders" src="/images/fit-300/cs-leads.jpg">
+<br>State CS Leaders meeting each other for the first time.
+</div>
+<div style="clear: both;"></div>
 </p>
 </details>
 
@@ -90,7 +84,6 @@ State CS Leaders meeting each other for the first time.
 <summary>**Where is the forum located?**</summary>
   <p>
   <br>
-All conference sessions will take place at:
 
 <a href="http://www.jwmarriottdenver.com/", target=_"blank">JW Marriott Denver Cherry Creek</a>
 <br> 150 Clayton Lane
@@ -114,7 +107,7 @@ All conference sessions will take place at:
   <br>
   There are two options for reserving accommodations.
   <ul>
-    <li>Code.org and the Sheraton Dallas Hotel are pleased to offer a discounted rate of USD $225 (including taxes and fees) per night for rooms at the JW Marriott Cherry Creek. If you would like to take advantage of the discounted rate, Code.org will make the reservation on your behalf, and you can pay the hotel by credit card at the end of your stay.</li>
+    <li>Code.org and the JW Marriott Denver Cherry Creek are pleased to offer a discounted rate of $199 per night (not including taxes and fees). If you would like to take advantage of the discounted rate, Code.org will make the reservation on your behalf, and you can pay the hotel by credit card at the end of your stay.</li>
     <li> If you prefer to find accommodations at a different hotel, you will be responsible for making your own arrangements.</li> 
   </ul>
   <p>
@@ -158,9 +151,7 @@ We encourage business casual attire during the forum. All our conference session
 <summary>**What devices will I need to bring?**</summary>
   <p>
   <br>
-**Don't forget to bring your own laptop/tablet, as we will be accessing online resources.**
-
-Please note that Code.org will not have extra devices on hand for participants to borrow.
+Please bring your own laptop/tablet, as we will be accessing online resource. We will not have extra devices on hand for participants to borrow.
 
 </p>
 </details>

@@ -233,12 +233,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  #
-  # TEMPORARY: Remove these aliases
-  #
-  alias_attribute :primary_authentication_option, :primary_contact_info
-  alias_attribute :primary_authentication_option_id, :primary_contact_info_id
-
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?

@@ -99,17 +99,7 @@ pt-BR:
   congratulations_volunteer: 'Parabéns: agora que você já fez a Hora de Código, <a
     href="https://code.org/volunteer"> cadastre-se para ser voluntário em uma sala
     de aula</a> e ajudar estudantes a aprender uma Hora de Código!'
-  congratulations_on_completing_course1: Parabéns por ter concluído o Curso 1
-  congratulations_on_completing_course2: Parabéns por ter concluído o Curso 2
-  congratulations_on_completing_course3: Parabéns por ter concluído o Curso 3
-  congratulations_on_completing_course4: Parabéns por ter concluído o Curso 4
-  congratulations_on_completing_coursea: Parabéns por ter concluído o curso A
-  congratulations_on_completing_courseb: Parabéns por ter concluído o Curso B
-  congratulations_on_completing_coursec: Parabéns por ter concluído o Curso C
-  congratulations_on_completing_coursed: Parabéns por ter concluído o Curso D
-  congratulations_on_completing_coursee: Parabéns por ter concluído o Curso E
-  congratulations_on_completing_coursef: Parabéns por ter concluído o Curso F
-  congratulations_on_completing_accelerated: Parabéns por ter concluído o Curso Acelerado
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Passe para o próximo nível
   congrats_next_tutorials_desc: Experimente esses tutoriais menores, de 1 hora, ou
     experimente um <a href="%{current_path}/next">tutorial dos parceiros</a>.
@@ -305,28 +295,8 @@ pt-BR:
   just_did_accelerated: Eu acabei de concluir o Curso Acelerado - confira! @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Nove em cada 10 pessoas concordam que as escolas devem ensinar
     ciência da computação. http://youtu.be/nKIu9yen5nc. Acesse https://code.org/.
   twitter_cs_foundational: Aprender Ciência da computação é fundamental para todos
@@ -371,11 +341,11 @@ pt-BR:
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
   homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_female: de nossos estudantes são do sexo feminino
+  homepage_stats_teachers: professores usam Code.org
   homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
   homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
+  homepage_stats_title: Estamos fazendo a diferença
   homepage_hero_text_malala: "&ldquo;Eu desafio as meninas do mundo todo a fazer a
     Hora do Código&rdquo;  \nMalala, ganhadora do Prêmio Nobel da Paz"
   homepage_hero_text_susan: |-
@@ -1076,13 +1046,13 @@ pt-BR:
   dashboard_courseb: 'Curso B: '
   dashboard_coursec: 'Curso C: '
   dashboard_coursed: 'Curso D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursee: 'Curso E: '
+  dashboard_coursef: 'Curso F: '
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
   dashboard_unplugged: Se não tiver computadores, <a href='%{unplugged_url}'>use essas
     aulas off-line</a> na sua sala de aula.
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Ferramentas: '
   dashboard_curriculum: Currículo
   dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
   dashboard_overview: Visão geral
@@ -1295,13 +1265,13 @@ pt-BR:
   coursee_name: Curso E
   coursef-draft_name: Curso F
   coursef_name: Curso F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
+  coursea-2017_name: Curso A (2017)
+  courseb-2017_name: Curso B (2017)
+  coursec-2017_name: Curso C (2017)
+  coursed-2017_name: Curso D (2017)
+  coursee-2017_name: Curso E (2017)
+  coursef-2017_name: Curso F (2017)
+  coursea-2018_name: Curso A (2018)
   courseb-2018_name: Course B (2018)
   coursec-2018_name: Course C (2018)
   coursed-2018_name: Course D (2018)
@@ -1473,6 +1443,18 @@ pt-BR:
   coursed_gradelevel: Alunos a partir do 8º ano
   coursee_gradelevel: De 8 a 12 anos
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Alunos a partir do 8º ano
+  coursee-2017_gradelevel: De 8 a 12 anos
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Alunos a partir do 8º ano
+  coursee-2018_gradelevel: De 8 a 12 anos
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: 10-18 anos de idade
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores modernos, smartphones, tablets
@@ -1617,6 +1599,30 @@ pt-BR:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
