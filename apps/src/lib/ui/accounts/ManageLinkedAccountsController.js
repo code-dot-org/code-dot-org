@@ -37,9 +37,14 @@ export default class ManageLinkedAccountsController {
         this.authenticationOptions = this.authenticationOptions.filter(option => option.id !== authOptionId);
         this.renderManageLinkedAccounts();
         resolve();
-      }).fail((jqXhr, status) => {
-        // TODO: handle errors
-        reject();
+      }).fail((jqXhr, _) => {
+        let error;
+        if (jqXhr.responseText) {
+          error = new Error(jqXhr.responseText);
+        } else {
+          error = new Error('Unexpected failure: ' + jqXhr.status);
+        }
+        reject(error);
       });
     });
   };
