@@ -169,7 +169,7 @@ mk:
         Play around with the code for the diamond
         and see what other patterns you can make. Try changing how many degrees you
         turn and how many times you loop.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
+      2-3 Artist Loops New 15_instruction: Now, draw anything you like!
       2-3 Artist Loops New 2_instruction: "Here is the same puzzle that we just solved,\nbut
         this time, we can only use one `move forward` block and one `turn` block\nthis
         time.\r\n\r\nCan you use a `repeat` to solve this puzzle?"
@@ -345,13 +345,11 @@ mk:
       2-3 Bee Loops 2_instruction: |-
         Collect all the nectar and make all of the honey
         using the fewest blocks possible.
-      2-3 Bee Loops 2A_instruction: |
-        Can you do the same task more easily with a
-        loop?
+      2-3 Bee Loops 2A_instruction: This time, use a loop to gather all of the nectar.
       2-3 Bee Loops 3_instruction: |-
         Collect nectar from each flower and make honey
         at each honeycomb using the fewest blocks possible.
-      2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
+      2-3 Bee Loops 3A_instruction: Use a `repeat` loop to collect all of the nectar.
       2-3 Bee Loops 3B_instruction: |-
         Now use the `repeat` block to collect all of
         the nectar and make all of the honey.
@@ -437,7 +435,7 @@ mk:
       2-3 Maze Loops 1_instruction: |-
         Can you get me to the pig using 5 of the same
         kind of blocks?
-      2-3 Maze Loops 17_instruction: Get me to the sunflower!
+      2-3 Maze Loops 17_instruction: Use what you learned to get me to the sunflower!
       2-3 Maze Loops 18_instruction: "Get me to the sunflower using the fewest blocks\npossible!
         \ \r\n\r\nTry using one `repeat` loop inside of another to cut down\non the
         amount of code you need."
@@ -920,7 +918,7 @@ mk:
       4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
       4-5 Maze 3_instruction: Must... get... to sunflower.
       4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
+      4-5 Maze 4_instruction: Use the "repeat" block to solve the puzzle quickly...
       4-5 Maze 5 (copy 1)_instruction: |-
         Can you solve this puzzle using the fewest
         number of blocks possible?
@@ -1429,9 +1427,7 @@ mk:
       CSD U3 Variables Initialize_instruction: |-
         Predict: What will get displayed
         in the console?
-      CSD U3 Variables Intro_instruction: |
-        Create your own variable, give it a value,
-        and display that value in the console.
+      CSD U3 Variables Intro_instruction: 'Create your own variable '
       CSD U3 Variables Random_instruction: |-
         Predict: What will get displayed in the
         console?
@@ -3339,15 +3335,9 @@ mk:
         get the bottom right-hand corner.
       Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 2a_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2b_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2c_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
+      Course 4 EC 2a_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2b_instruction: No rules. No clues. Just the challenge!
+      Course 4 EC 2c_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
         image like this. Note: The code becomes more simple if you incorporate\nparameters. "
@@ -4072,7 +4062,7 @@ mk:
         Draw a short line up and a long one
         to the right!
       K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
-      K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
+      K-1 Artist Loops 2_instruction: Now, draw the same line using a loop.
       K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
       K-1 Artist Loops 4_instruction: |-
         Could a loop help us draw the top of this
@@ -4081,9 +4071,9 @@ mk:
       K-1 Artist Loops 6_instruction: |-
         This one needs two loops: one to go up the
         stairs and one to go down.
-      K-1 Artist Loops 7_instruction: Can you finish this pattern with two loops?
+      K-1 Artist Loops 7_instruction: Loops can help you finish this pattern.
       K-1 Artist Loops 8_instruction: This staircase has longer steps.
-      K-1 Artist Loops 9_instruction: 'Assessment: Use a loop to draw the stairs'
+      K-1 Artist Loops 9_instruction: What is the easiest way to draw these stairs?
       K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
       K-1 Artist1 1_instruction: Draw the foot of the man with one line
       K-1 Artist1 10_instruction: |-
@@ -4146,13 +4136,9 @@ mk:
       K-1 Bee Assessment 1_instruction: Get nectar to make honey!
       K-1 Bee Assessment 2_instruction: Get nectar to make honey!
       K-1 Bee Loops 1_instruction: Get the nectar to make honey!
-      K-1 Bee Loops 10_instruction: Use loops to get the nectar, honey, and to move!
-      K-1 Bee Loops 11_instruction: |
-        Assessment: Use loops and get the nectar and
-        honey!
-      K-1 Bee Loops 12_instruction: |
-        Assessment: Use loops to get the nectar, honey,
-        and to move!
+      K-1 Bee Loops 10_instruction: Get all of the nectar and make all of the honey.
+      K-1 Bee Loops 11_instruction: Get all of the nectar and honey!
+      K-1 Bee Loops 12_instruction: Get all of the nectar and all of the honey.
       K-1 Bee Loops 2_instruction: |-
         Use a `repeat` loop to move and then get the
         nectar and make honey!
@@ -4162,13 +4148,13 @@ mk:
       K-1 Bee Loops 4_instruction: |-
         Use `repeat` loops to get the nectar, make honey,
         and to move!
-      K-1 Bee Loops 5_instruction: Use loops to get the nectar and honey!
+      K-1 Bee Loops 5_instruction: Use `repeat` loops to get the nectar and honey!
       K-1 Bee Loops 6_instruction: |-
         Use a `repeat` loop to get the nectar, get honey,
         and to move!
-      K-1 Bee Loops 7_instruction: Use loops to get the nectar and honey!
-      K-1 Bee Loops 8_instruction: Use loops to get the nectar and honey!
-      K-1 Bee Loops 9_instruction: Use loops to get the nectar, honey, and to move!
+      K-1 Bee Loops 7_instruction: Get the nectar and make honey!
+      K-1 Bee Loops 8_instruction: Get the nectar and make honey!
+      K-1 Bee Loops 9_instruction: Get the all the nectar and make all of the honey.
       K-1 Bee Loops Assessment 1_instruction: |-
         Get nectar to make honey and use loops
         to move!
@@ -4203,13 +4189,13 @@ mk:
       K-1 Maze Loops 12_instruction: |-
         Get me to the pig! The `repeat` loop will make
         this easier.
-      K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
-      K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 2_instruction: Use the `repeat` block to get me to the pig!
+      K-1 Maze Loops 3_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 4_instruction: Get me to the pig!
-      K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
+      K-1 Maze Loops 5_instruction: Get me to the pig! Be sure to use `repeat` loops.
+      K-1 Maze Loops 6_instruction: Get me to the pig! Be sure to use `repeat` loops.
+      K-1 Maze Loops 7_instruction: Get me to the pig! Be sure to use `repeat` loops.
+      K-1 Maze Loops 8_instruction: Use `repeat` loops to get me to the pig.
       K-1 Maze Loops 9_instruction: Get me to the pig!
       K-1 Maze Loops Assessment 1_instruction: |-
         Look at all we've learned! Use a
@@ -4261,12 +4247,12 @@ mk:
       K-1 maze debug 9_instruction: |-
         Debug this level by rearranging and changing
         blocks to get me to the pig!
-      K2.0 sequence 1_instruction: Change the code to get me to the pig!
+      K2.0 sequence 1_instruction: A bug! Fix the code to get me to the pig.
       K2.0 sequence 10_instruction: |-
         Challenge: Move me around the TNT to get to
         the pig.
       K2.0 sequence 12_instruction: 'Let''s get that pig! '
-      K2.0 sequence 2_instruction: Change the code to get me to the pig!
+      K2.0 sequence 2_instruction: Fix the code to get me to the pig!
       K2.0 sequence 3_instruction: |-
         Something is not quite right. REMOVE a block
         to get me to the pig!
@@ -4278,9 +4264,7 @@ mk:
       K2.0 sequence 6_instruction: |-
         Figure out what is missing and then add blocks
         to get me to the pig!
-      K2.0 sequence 7_instruction: |
-        Debug this level by changing a block to get me
-        to the pig!
+      K2.0 sequence 7_instruction: Solve this level and get me to the pig!
       K2.0 sequence 8_instruction: |-
         Debug this level by adding blocks to get me to
         the pig!
@@ -4404,7 +4388,7 @@ mk:
         Get the Agent to the pressure plate, then
         get the player to the orange square.
       MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_03_Cole_instruction: 'Code the Agent to open the gate. '
       MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
       MC_HOC_2017_04_instruction: |-
         Change the loop from the last puzzle to help the
@@ -4416,7 +4400,7 @@ mk:
       MC_HOC_2017_05_instruction: |-
         Use a function to help the Agent get to the pressure
         plate.
-      MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
+      MC_HOC_2017_05_Cole_instruction: Get the player to the shovel.
       MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
       MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
       MC_HOC_2017_06_Cole_instruction: |-
@@ -4578,7 +4562,7 @@ mk:
         function from the last puzzle to draw this pattern.
       NEW Course 4 Artist Functions 13_instruction: "Can you draw a star shape using\nthe
         `draw a line of squares` function?  "
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
+      NEW Course 4 Artist Functions 14_instruction: 'Free-play time! '
       NEW Course 4 Artist Functions 2_instruction: |-
         Can you draw 3 squares 20 pixels
         apart from one another? Each square is 100 pixels in size.
@@ -7276,9 +7260,7 @@ mk:
         Add a large red button to your screen using
         Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Инструкции
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: Template
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
       U4L02 - Objects - eventParameter_instruction: |-
@@ -7680,9 +7662,7 @@ mk:
       course2_bee_conditionals_challenge2_instruction: |-
         Collect all of the nectar
         or make all the honey.
-      course2_collector_loops_challenge2_instruction: |-
-        Let's hunt for treasure -
-        using loops! Help the collector by debugging this code. Get all of the treasure!
+      course2_collector_loops_challenge2_instruction: Get all of the treasure!
       course2_collector_prog_challenge1_instruction: |-
         Look carefully! Can you collect
         all *10* pieces of treasure?
@@ -8017,9 +7997,7 @@ mk:
       courseA_collector_loops1_2018_instruction: |-
         Move Laurel around and get as much
         treasure as you can!
-      courseA_collector_loops2_instruction: |-
-        Collect all three piles to pass this
-        level.
+      courseA_collector_loops2_instruction: Get all three piles to pass this level.
       courseA_collector_loops2_2018_instruction: |-
         Get all three piles to pass this
         level.
@@ -8047,7 +8025,7 @@ mk:
       courseA_collector_loops7_2018_instruction: |-
         What should you add to this code
         to get all of the treasure?
-      courseA_collector_loops8_instruction: Write the code to get all of this gold.
+      courseA_collector_loops8_instruction: Write code to get all of this treasure.
       courseA_collector_loops8_2018_instruction: Write code to get all of this treasure.
       courseA_collector_loops9_instruction: |-
         **Challenge:** The treasure goes all
@@ -8061,8 +8039,7 @@ mk:
       courseA_collector_loops_challenge1_2018_instruction: |-
         *"Can you help me spot
         some bugs?"*
-      courseA_collector_loops_challenge2_instruction: "This time you can only use\none
-        of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2_instruction: 'Get all of the treasure! '
       courseA_collector_loops_challenge2kp_instruction: |-
         Collect at least **3** pieces
         of treasure to pass this level.
@@ -8111,9 +8088,7 @@ mk:
       courseA_harvester_seq8_instruction: |-
         Now the harvester needs to pick corn two
         times!
-      courseA_maze_seq1_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
+      courseA_maze_seq1_instruction: Get the bird to the bad pig!
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
         the pig! "
       courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
@@ -8129,7 +8104,7 @@ mk:
       courseA_maze_seq13_instruction: Get the pig any way you can!
       courseA_maze_seq13_2018_instruction: Get the pig any way you can!
       courseA_maze_seq1_2018_instruction: Get the bird to the bad pig!
-      courseA_maze_seq2_instruction: A bug! Fix the code to get me to the pig.
+      courseA_maze_seq2_instruction: Fix the code to get the bird to the pig.
       courseA_maze_seq2_2018_instruction: Fix the code to get the bird to the pig.
       courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
       courseA_maze_seq3_2018_instruction: Fix the code to get the bird to the pig!
@@ -8280,9 +8255,7 @@ mk:
       courseB_collector_loops11_instruction: |-
         Eureka!  Get as much treasure as you
         can!
-      courseB_collector_loops2_instruction: |-
-        Collect all four piles to pass this
-        level.
+      courseB_collector_loops2_instruction: Get all four piles to pass this level.
       courseB_collector_loops3_instruction: |-
         How can Laurel get all five piles of
         treasure using only one `E -->` block?
@@ -8297,7 +8270,7 @@ mk:
       courseB_collector_loops6_instruction: |-
         Figure out the code to help Laurel get
         all of the treasure!
-      courseB_collector_loops7_instruction: Write the code to get all of this gold.
+      courseB_collector_loops7_instruction: Write the code to get all of this treasure.
       courseB_collector_loops8_instruction: |-
         **Challenge: ** The treasure goes all
         the way down these stairs!  Write the code to help Laurel get it all.
@@ -8395,19 +8368,15 @@ mk:
         Let's make the animals
         disappear when you click on them! You can also add sounds and score points
         to create a fun game of Animal Tag!
-      courseB_starWars_prog1_instruction: Help BB-8 get the scrap metal!
+      courseB_starWars_prog1_instruction: '"Go get the scrap metal, BB-8!"'
       courseB_starWars_prog10_instruction: Help BB-8 gather the glowing scrap metal
       courseB_starWars_prog11_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog2_instruction: |-
-        Help BB-8 gather **all** of the glowing
-        scrap metal
-      courseB_starWars_prog3_instruction: |-
-        Help BB-8 gather **all** of the glowing
-        scrap metal
-      courseB_starWars_prog4_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog5_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog6_instruction: Help BB-8 gather the glowing scrap metal
-      courseB_starWars_prog7_instruction: Help BB-8 gather the glowing scrap metal
+      courseB_starWars_prog2_instruction: Get all the metal.
+      courseB_starWars_prog3_instruction: Get all the scrap metal
+      courseB_starWars_prog4_instruction: Get all the scrap metal
+      courseB_starWars_prog5_instruction: Get the scrap metal
+      courseB_starWars_prog6_instruction: Get all the scrap metal
+      courseB_starWars_prog7_instruction: Go get it!
       courseB_starWars_prog8_instruction: |-
         **Challenge:** Help BB-8 gather the glowing
         scrap metal
@@ -8583,7 +8552,7 @@ mk:
       courseC_collector_prog8_instruction: |-
         *"Keep up the good work! Help me collect
         all of the treasure."*
-      courseC_collector_prog9_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_instruction: '*"Let''s get all of the treasure!"*'
       courseC_collector_progA_instruction: Help Laurel collect all of the treasure.
       courseC_collector_progB_instruction: |-
         Collect as many coins as you can to finish
@@ -8682,7 +8651,7 @@ mk:
       courseC_maze_debugging2_2018_instruction: |-
         Use your debugging skills to get
         Scrat to the acorn.
-      courseC_maze_debugging3_instruction: Remove blocks to get Skrat to the acorn!
+      courseC_maze_debugging3_instruction: Remove blocks to get Scrat to the acorn!
       courseC_maze_debugging3_2018_instruction: |-
         Remove blocks to get Scrat to the
         acorn!
@@ -8725,9 +8694,7 @@ mk:
       courseC_maze_debugging_challenge2_instruction: |-
         Help Scrat reach the acorn
         with only four `turn` commands.
-      courseC_maze_loops1_instruction: |-
-        Can you get the bird to the pig using 5 of
-        the same kind of blocks?
+      courseC_maze_loops1_instruction: Can you get the bird to the pig?
       courseC_maze_loops10_instruction: You are doing great! Keep it up!
       courseC_maze_loops11_instruction: |-
         You are almost there! This time, choose
@@ -8912,8 +8879,7 @@ mk:
       courseD_artist_nestedLoops10_instruction: |-
         Take the squares from before, but
         this time only make 7 of them, and lay them out in a row.
-      courseD_artist_nestedLoops1a_instruction: "Now loop the triangle 6 times. \r\nAfter\neach
-        triangle, you'll need to turn 60 degrees before drawing the next."
+      courseD_artist_nestedLoops1a_instruction: 'Now loop the triangle 6 times. '
       courseD_artist_nestedLoops2_instruction: |-
         This time, complete the puzzle with
         the fewest number of blocks possible.
@@ -9463,7 +9429,7 @@ mk:
       courseD_maze_ramp6a_instruction: |-
         "Keep calm and help me find the bad pig.
         Otherwise I might get angry!"
-      courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
+      courseD_maze_ramp7_instruction: Get the bird to the pig!
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
@@ -9498,9 +9464,7 @@ mk:
       courseD_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
-      courseD_playLab_cond1_instruction: |-
-        Get Pegleg to the dragon to solve this
-        puzzle.
+      courseD_playLab_cond1_instruction: Get Pegleg to the flags to solve this puzzle.
       courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes\nit
         to the dragon. "
       courseD_playLab_cond3_instruction: "Make the dragon change between random emotions\nevery
@@ -9573,9 +9537,7 @@ mk:
         to the acorn!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept1_2018_instruction: 'Recreate this image. '
-      courseE_artist_concept4_instruction: |-
-        Recreate this drawing using 13 blocks
-        or fewer.
+      courseE_artist_concept4_instruction: Recreate this drawing.
       courseE_artist_concept4_2018_instruction: Recreate this drawing.
       courseE_artist_concept_challenge1_instruction: "Help the artist draw this unique\nshape. "
       courseE_artist_concept_challenge1_2018_instruction: "Help the artist draw this\nunique
@@ -9691,10 +9653,7 @@ mk:
       courseE_bee_concept1_2018_instruction: |-
         Collect all of the nectar from each
         flower.
-      courseE_bee_concept2_instruction: |-
-        Help the bee make all of the honey. You
-        can only make honey at a honeycomb, but you can check any space to see if
-        there is a honeycomb.
+      courseE_bee_concept2_instruction: 'Help the bee make all of the honey. '
       courseE_bee_concept2_2018_instruction: 'Help the bee make all of the honey.
 
 '
@@ -9941,14 +9900,11 @@ mk:
       courseE_farmer_ramp11_instruction: |-
         This puzzle also uses nested loops.  Can
         you figure out how?
-      courseE_farmer_ramp11a_instruction: "Pick lettuce only while there is still\nlettuce
-        to pick. "
+      courseE_farmer_ramp11a_instruction: While there is a pile, remove dirt.
       courseE_farmer_ramp11a_2018_instruction: While there is a pile, remove dirt.
       courseE_farmer_ramp11b_instruction: While there is a pile, remove dirt.
       courseE_farmer_ramp11b_2018_instruction: While there is a pile, remove dirt.
-      courseE_farmer_ramp12_instruction: |-
-        Now use nested loops (`repeat` and `while`)
-        to solve this puzzle.
+      courseE_farmer_ramp12_instruction: Now use nested loops to solve this puzzle.
       courseE_farmer_ramp12_forswap_instruction: |-
         Now use nested loops to solve this
         puzzle.
@@ -10969,9 +10925,7 @@ mk:
       grade1_maze_sequence1_instruction: A bug! Fix the code to get me to the pig.
       grade1_maze_sequence10_instruction: Move me around the TNT to get to the pig.
       grade1_maze_sequence2_instruction: Fix the code to get me to the pig!
-      grade1_maze_sequence3_instruction: |
-        Can you add 2 blocks to get the bird to
-        the pig.
+      grade1_maze_sequence3_instruction: Add 2 blocks to get the bird to the pig.
       grade1_maze_sequence4_instruction: Now try this puzzle from the start!
       grade1_maze_sequence5_instruction: |-
         Move one way, then another to get me to
@@ -10993,7 +10947,7 @@ mk:
         to the pig.
       grade1_maze_sequenceB_instruction: Fix the bugs to get the bird to the pig.
       grade1_maze_sequenceC_instruction: It's all you!  Get the bird to the pig.
-      grade1_maze_sequenceD_instruction: 'It''s a pig party!  Get those pigs! '
+      grade1_maze_sequenceD_instruction: Now head any which way to get that pig!
       grade1_playlab_events1_instruction: |-
         This game is called "Play Lab".  See
         if you can figure out what each block does.
@@ -11153,15 +11107,14 @@ mk:
       grade2_collector_5_instruction: |-
         These blocks are in the wrong order. Can you
         fix them?
-      grade2_collector_6_instruction: "\"Help me collect each gold coin!\"\r\n\r\nThese\nblocks
-        are in the wrong order."
+      grade2_collector_6_instruction: Reorder the blocks to collect all of the treasure.
       grade2_collector_7_instruction: |-
         Challenge puzzle! Use blocks from the toolbox
         to collect all of the treasure.
       grade2_collector_8_instruction: |-
         "Keep up the good work! Help me collect all
         of the coins."
-      grade2_collector_9_instruction: Let's get the coins!
+      grade2_collector_9_instruction: '*"Let''s get all of the coins!"*'
       grade2_collector_9a_instruction: "**Challenge:** Grab all of the coins."
       grade2_collector_A_instruction: Help Laurel collect all of the treasure.
       grade2_collector_pre1_instruction: "\"Hi, I'm Laurel. Today I'm searching\nfor
@@ -11220,9 +11173,7 @@ mk:
       grade2_puppy_loops4_instruction: |-
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
-      grade2_puppy_loops5_instruction: |
-        Can you figure out the fastest way to get
-        me to the pig?
+      grade2_puppy_loops5_instruction: '"Get me to the pig as quickly as possible!"'
       grade2_puppy_loops6_instruction: "\"This pig is ruffling my feathers!\"\r\n\r\nLoops\neven
         work with more than one block inside!  Can you loop this sequence?"
       grade2_puppy_loops7_instruction: "\"Get me to the pig!\"\r\n\r\nUse what you\nlearned
@@ -11831,8 +11782,7 @@ mk:
         Create a function that collects all of
         the nectar from each flower.
       grade4_bee_nestedLoops0_instruction: Use a loop to collect all of the nectar.
-      grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower.\nUse
-        a nested loop. "
+      grade4_bee_nestedLoops1_instruction: Collect all of the nectar from each flower.
       grade4_bee_nestedLoops2_instruction: |-
         **Challenge:** Figure out how to get
         all of the nectar using only the blocks available.
@@ -12248,8 +12198,7 @@ mk:
       grade5_bee_for_loops3_instruction: |-
         Try this puzzle using the `for` loop with
         `counter` variable and see how much shorter your code becomes.
-      grade5_bee_for_loops4_instruction: "Replace the ??? in the \"for loop\" with\nthe
-        largest amount of nectar the bee has to collect. "
+      grade5_bee_for_loops4_instruction: Help the bee collect all of the nectar.
       grade5_bee_for_loops6_instruction: |-
         You can also use a "for loop" to count
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
@@ -12371,9 +12320,7 @@ mk:
         Variables aren't always numbers. What if
         you wanted to store a word or text? Experiment with the new `ask` block.
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
-      gradek_adventurer_loops1_instruction: |
-        This is Laurel the Adventurer!  Can
-        you move her around and get gold?
+      gradek_adventurer_loops1_instruction: Three piles of gold!  Collect all three.
       gradek_adventurer_loops10_instruction: |-
         Help me get all of the gold from this
         cave.
@@ -12583,7 +12530,7 @@ mk:
       kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can\nonly
         use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she\ncan
         using just 4 blocks?"
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      kikiTesting_instruction: See all angles of Stevie and Jorge
       level 'grade3_Loops_10_instruction: "Such a busy bee!\r\n\r\nHelp bee collect\nall
         of the nectar and make all of the honey with the fewest blocks possible."
       level 'grade3_Loops_11_instruction: "The shape of this path is different than\nthe
@@ -12728,7 +12675,7 @@ mk:
       sample4_instruction: "Our adventurer has found a stash of coins in this cave.\r\n\r\nCan\nyou
         help her grab as many as she can using just 7 blocks?"
       sample5_instruction: Help bee make all of the honey.
-      sample6_instruction: 'Challenge: Help bee make all of the honey.'
+      sample6_instruction: 'Challenge: Help bee get all of the nectar.'
       sample7assessment_instruction: |-
         Can you help bee make all of the honey in just
         one try?
@@ -12770,7 +12717,7 @@ mk:
         Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!
-      skratDebugVideo1_instruction: Get Skrat to the Acorn.
+      skratDebugVideo1_instruction: Get Scrat to the Acorn.
       subgoal U3 L4 introducing subgoal labels_instruction: |-
         Introduce orient turtle
         and move turtle
@@ -12780,11 +12727,11 @@ mk:
       subgoalU3L2_TurtleSquare_right_instruction: |-
         Draw a square to the front and
         to the right of the starting location. (Click to show full instructions)
-      template test_instruction: what up
+      template test_instruction: what's up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,
         but can't get it right.  Can you help?
-      test_sarah_instruction: hi
+      test_sarah_instruction: hi hi
       u3-old-drawing-view_instruction: DO This
       valentine_artist_03_instruction: Now try something on your own!
       weird_playLab_instruction: |-
