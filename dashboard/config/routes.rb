@@ -446,8 +446,10 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
+    post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
