@@ -1822,12 +1822,12 @@ fr:
           tournesol.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Jusqu'ici, tu as fait une animation ou une histoire qui se rejoue à
           l'identique à chaque fois que tu l'exécutes. À présent, tu vas faire un
           jeu interactif auquel tu pourras véritablement jouer.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Voici quelques nouveaux blocs à essayer. Il y a le bloc « Quand flèche
           » et le bloc « Déplacer acteur ». Tu peux mettre ces blocs ensemble pour
           que les acteurs se déplacent avec les touches fléchées du clavier. Et il
