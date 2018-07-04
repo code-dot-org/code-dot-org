@@ -105,7 +105,6 @@ Scenario: Project Version Checkpoints
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
 
 @no_mobile
-@no_ie
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -146,7 +145,6 @@ Scenario: Project page refreshes when other client adds a newer version
   Then ace editor code is equal to "// comment Y// comment X"
 
 @no_mobile
-@no_ie
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
@@ -176,7 +174,7 @@ Scenario: Project page refreshes when other client replaces current version
   And ace editor code is equal to "// Alpha"
   And I add code "// Bravo" to ace editor
   And ace editor code is equal to "// Alpha// Bravo"
-  And I click selector "#runButton"
+  And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
   And I reload the project page
   # Make sure the change stuck
