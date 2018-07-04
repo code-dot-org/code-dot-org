@@ -76,6 +76,7 @@ module ScriptConstants
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
+      TWENTY_HOUR_NAME = '20-hour'.freeze,
     ],
     math: [
       ALGEBRA_NAME = 'algebra'.freeze,
@@ -145,9 +146,7 @@ module ScriptConstants
       CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'.freeze,
       CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'.freeze,
     ],
-    twenty_hour: [
-      TWENTY_HOUR_NAME = '20-hour'.freeze,
-    ],
+    twenty_hour: [TWENTY_HOUR_NAME],
     flappy: [FLAPPY_NAME],
     minecraft: [
       MINECRAFT_NAME,
