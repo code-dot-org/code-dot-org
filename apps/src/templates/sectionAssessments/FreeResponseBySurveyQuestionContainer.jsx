@@ -6,6 +6,16 @@ import {
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 
+const QUESTION_CHARACTER_LIMIT = 260;
+
+const styles = {
+  text: {
+    font: 10,
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+};
+
 const freeResponseQuestionsPropType = PropTypes.shape({
   questionNumber: PropTypes.number,
   questionText: PropTypes.string,
@@ -24,7 +34,11 @@ class FreeResponseBySurveyQuestionContainer extends Component {
         <h2>{i18n.studentFreeResponseAnswers()}</h2>
         {freeResponsesByQuestion.map((question, index) => (
           <div key={index}>
-            <h3>{`${question.questionNumber}. ${question.questionText}`}</h3>
+            <div style={styles.text}>
+              <span>{`${question.questionNumber}. ${question.questionText}`.slice(0, QUESTION_CHARACTER_LIMIT)}</span>
+              {((question.questionText.length >= QUESTION_CHARACTER_LIMIT))
+                ? <a href="#"><span>{i18n.seeFullQuestion()}</span></a> : null}
+            </div>
             <FreeResponsesSurveyTable
               freeResponses={question.answers}
             />
