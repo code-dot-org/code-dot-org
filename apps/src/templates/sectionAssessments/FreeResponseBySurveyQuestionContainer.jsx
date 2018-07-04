@@ -54,7 +54,3 @@ export const UnconnectedFreeResponseBySurveyQuestionContainer = FreeResponseBySu
 export default connect(state => ({
   freeResponsesByQuestion: getSurveyFreeResponseQuestions(state),
 }))(FreeResponseBySurveyQuestionContainer);
-
-
-
-
