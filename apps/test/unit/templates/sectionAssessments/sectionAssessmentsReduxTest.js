@@ -653,6 +653,27 @@ describe('sectionAssessmentsRedux', () => {
         const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
         assert.deepEqual(totalSubmissions, 1);
       });
+
+      it('returns 0 for 0 survey submissions', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [],
+                }
+              }
+            }
+          }
+        };
+
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
+        assert.deepEqual(totalSubmissions, 0);
+      });
     });
 
     describe('getExportableSurveyData', () => {
@@ -829,13 +850,28 @@ describe('sectionAssessmentsRedux', () => {
 
     describe('getStudentsMCSummaryForCurrentAssessment', () => {
       it('returns an empty object when no assessments in redux', () => {
-        const result = getStudentsMCSummaryForCurrentAssessment(rootState);
+        const result = getStudentsMCSummaryForCurrentAssessment({
+          ...rootState,
+          sectionData: {
+            section: {
+              students: [],
+            }
+          }
+        });
         assert.deepEqual(result, []);
       });
 
       it('returns an array of objects of studentOverviewDataPropType', () => {
         const stateWithAssessment = {
           ...rootState,
+          sectionData: {
+            section: {
+              students: [{
+                name: "Issac",
+                id: 99,
+              }],
+            }
+          },
           sectionAssessments: {
             ...rootState.sectionAssessments,
             assessmentId: 123,
@@ -849,6 +885,7 @@ describe('sectionAssessmentsRedux', () => {
                       multi_count: 10,
                       submitted: true,
                       timestamp: "2018-06-12 04:53:36 UTC",
+                      url: "code.org",
                     }
                   }
                 }
@@ -865,8 +902,15 @@ describe('sectionAssessmentsRedux', () => {
               numMultipleChoice: 10,
               numMultipleChoiceCorrect: 4,
               isSubmitted: true,
-              submissionTimeStamp: "2018-06-12 04:53:36 UTC"
-            }
+              submissionTimeStamp: "2018-06-12 04:53:36 UTC",
+              url: "code.org",
+            },
+            {
+              id: 99,
+              name: "Issac",
+              isSubmitted: false,
+              submissionTimeStamp: "Not started"
+            },
           ]
         );
       });
