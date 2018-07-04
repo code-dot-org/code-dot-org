@@ -66,8 +66,6 @@ module Pd
           [
             generate_sub_question_key(i),
             {
-              text: "#{text} #{sub_question}",
-              answer_type: ANSWER_SELECT_VALUE,
               parent: name,
               max_value: options.length,
               text: "#{text} #{sub_question}",
