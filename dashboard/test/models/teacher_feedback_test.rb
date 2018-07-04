@@ -62,4 +62,30 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal(feedbacks[0], TeacherFeedback.where(student: students[0]).latest)
     assert_equal(feedbacks[1], TeacherFeedback.where(student: students[1]).latest)
   end
+
+  test 'destroys when teacher is destroyed' do
+    teacher = create :teacher
+    first_feedback = create :teacher_feedback, teacher: teacher
+    second_feedback = create :teacher_feedback, teacher: teacher
+    teacher.destroy
+
+    #Assert that feedback was soft-deleted
+    assert first_feedback.reload.deleted?
+    assert second_feedback.reload.deleted?
+
+    #Assert that feedback can be un-deleted
+    teacher.undestroy
+    assert TeacherFeedback.exists?(first_feedback.id)
+    assert TeacherFeedback.exists?(second_feedback.id)
+  end
+
+  test 'does not destroy when student is destroyed' do
+    teacher = create :teacher
+    student = create :student
+    first_feedback = create :teacher_feedback, teacher: teacher, student: student
+    second_feedback = create :teacher_feedback, teacher: teacher, student: student
+    student.destroy
+    assert TeacherFeedback.exists?(first_feedback.id)
+    assert TeacherFeedback.exists?(second_feedback.id)
+  end
 end

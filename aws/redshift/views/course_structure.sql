@@ -3,9 +3,12 @@ create view analysis.course_structure as
 select 
   cn.course_name_short,
   cn.course_name_long,
+  sn.script_name_short,
+  sn.script_name_long,
   c.id course_id, 
   c.name course_name, 
-  sl.script_id, 
+  sl.script_id,
+  sn.versioned_script_name, 
   sc.name script_name, 
   st.id stage_id, 
   st.name stage_name, 
@@ -21,6 +24,7 @@ from dashboard_production.levels_script_levels lsl
   left join dashboard_production.course_scripts cs on cs.script_id = sc.id
   left join dashboard_production.courses c on c.id = cs.course_id
   left join analysis.course_names cn on cn.versioned_course_id = c.id
+  left join analysis.script_names sn on sn.versioned_script_id = sc.id
 order by script_id, stage_number, level_number
 with no schema binding;
 
