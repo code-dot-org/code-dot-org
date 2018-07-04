@@ -225,4 +225,11 @@ module ScriptConstants
       category_priority: ScriptConstants.category_priority(first_category),
     }
   end
+
+  def self.has_congrats_page?(script)
+    script == ACCELERATED_NAME ||
+      ScriptConstants.script_in_category?(:csf_international, script) ||
+      ScriptConstants.script_in_category?(:csf, script) ||
+      ScriptConstants.script_in_category?(:csf_2018, script)
+  end
 end

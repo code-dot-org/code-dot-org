@@ -621,13 +621,6 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
-  def self.has_congrats_page?(name)
-    name == Script::ACCELERATED_NAME ||
-      ScriptConstants.script_in_category?(:csf_international, name) ||
-      ScriptConstants.script_in_category?(:csf, name) ||
-      ScriptConstants.script_in_category?(:csf_2018, name)
-  end
-
   def freeplay_links
     if cs_in_a?
       ['calc', 'eval']
