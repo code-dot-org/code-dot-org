@@ -57,4 +57,3 @@ export const UnconnectedFreeResponsesAssessmentsContainer = FreeResponsesAssessm
 export default connect(state => ({
   freeResponseQuestions: getAssessmentsFreeResponseResults(state),
 }))(FreeResponsesAssessmentsContainer);
-
