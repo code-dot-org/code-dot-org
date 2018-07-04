@@ -7,6 +7,8 @@ import {
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 
+const QUESTION_CHARACTER_LIMIT = 260;
+
 const styles = {
   text: {
     font: 10,
@@ -36,8 +38,8 @@ class FreeResponsesAssessmentsContainer extends Component {
         {freeResponseQuestions.map((question, index) => (
           <div key={index}>
           <div style={styles.text}>
-            <span>{`${question.questionNumber}. ${question.questionText}`.slice(0, 260)}</span>
-            {((question.questionText.length >= 260)) ? <a href="#"><span>{i18n.seeFullQuestion()}</span></a> : null}
+            <span>{`${question.questionNumber}. ${question.questionText}`.slice(0, QUESTION_CHARACTER_LIMIT)}</span>
+            {((question.questionText.length >= QUESTION_CHARACTER_LIMIT)) ? <a href="#"><span>{i18n.seeFullQuestion()}</span></a> : null}
           </div>
             <FreeResponsesAssessmentsTable
               freeResponses={question.responses}
