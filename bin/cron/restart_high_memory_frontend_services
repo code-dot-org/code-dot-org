@@ -60,9 +60,9 @@ def main
 
   delay_per_group = 10.minutes
   group_size = 1
-  # restart_command = 'sudo service dashboard upgrade && sudo service pegasus upgrade'
-  # Temporarily use a dummy command.
-  restart_command = 'ls -l'
+  restart_command = 'sudo service dashboard upgrade && sudo service pegasus upgrade'
+
+  # TODO: (suresh) Add system call to copy the ssh config files needed for SSHKit to work?
 
   SSHKit::Backend::Netssh.configure {|ssh| ssh.ssh_options = {paranoid: false}}
   SSHKit::Coordinator.new(frontend_servers_to_restart).each(in: :sequence, wait: delay_per_group, limit: group_size) do
