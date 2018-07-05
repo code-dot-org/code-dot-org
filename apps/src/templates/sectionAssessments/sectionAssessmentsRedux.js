@@ -284,8 +284,14 @@ export const getAssessmentsFreeResponseResults = (state) => {
 
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
 
+  let currentStudentsIds = Object.keys(studentResponses);
+  // Filter by current selected student.
+  if (state.sectionAssessments.studentId !== ALL_STUDENT_FILTER) {
+    currentStudentsIds = [state.sectionAssessments.studentId];
+  }
+
   // For each student, look up their responses to the currently selected assessment.
-  Object.keys(studentResponses).forEach(studentId => {
+  currentStudentsIds.forEach(studentId => {
     studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
