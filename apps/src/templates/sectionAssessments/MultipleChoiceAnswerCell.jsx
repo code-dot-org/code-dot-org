@@ -9,6 +9,7 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
+    height: '100%',
   },
   icon: {
     color: color.level_perfect,
@@ -31,8 +32,8 @@ class MultipleChoiceAnswerCell extends Component {
   render() {
     const {percentValue, isCorrectAnswer, displayAnswer, opacity} = this.props;
 
-    const rgbaValue = (isCorrectAnswer) ? { backgroundColor: `rgba(14, 190, 14, ${opacity})` } :
-    { backgroundColor: `rgba(255, 99, 71, ${opacity})`};
+    const rgbaValue = (isCorrectAnswer) ? {backgroundColor: `rgba(14, 190, 14, ${opacity})`} :
+    {backgroundColor: `rgba(255, 99, 71, ${opacity})`};
 
     if (displayAnswer) {
       return (
