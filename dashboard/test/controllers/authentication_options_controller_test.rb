@@ -74,4 +74,52 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
       assert_redirected_to '/users/auth/powerschool'
     end
   end
+
+  test 'disconnect: returns bad_request if user is not signed in' do
+    delete '/users/auth/1/disconnect'
+    assert_response :bad_request
+  end
+
+  test 'disconnect: returns bad_request if user is not migrated' do
+    user = create :user, :unmigrated_facebook_sso
+    sign_in user
+
+    delete '/users/auth/1/disconnect'
+    assert_response :bad_request
+  end
+
+  test 'disconnect: deletes the AuthenticationOption if it exists' do
+    user = create :user, :multi_auth_migrated
+    auth_option = create :authentication_option, user: user
+    sign_in user
+
+    assert_destroys(AuthenticationOption) do
+      delete "/users/auth/#{auth_option.id}/disconnect"
+      assert_response :success
+      assert_raises ActiveRecord::RecordNotFound do
+        AuthenticationOption.find(auth_option.id)
+      end
+    end
+  end
+
+  test 'disconnect: returns not_found if the AuthenticationOption does not exist' do
+    user = create :user, :multi_auth_migrated
+    sign_in user
+
+    assert_does_not_destroy(AuthenticationOption) do
+      delete "/users/auth/1/disconnect"
+      assert_response :not_found
+    end
+  end
+
+  test 'disconnect: returns not_found if the AuthenticationOption does not belong to the current user' do
+    user = create :user, :multi_auth_migrated
+    auth_option = create :authentication_option
+    sign_in user
+
+    assert_does_not_destroy(AuthenticationOption) do
+      delete "/users/auth/#{auth_option.id}/disconnect"
+      assert_response :not_found
+    end
+  end
 end
