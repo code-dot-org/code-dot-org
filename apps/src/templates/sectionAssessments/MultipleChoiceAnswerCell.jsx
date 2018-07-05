@@ -6,7 +6,6 @@ const styles = {
   main: {
     border: 'none',
     display: 'flex',
-    justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
     height: '100%',
@@ -18,6 +17,7 @@ const styles = {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
     marginRight: 10,
+    marginLeft: 10,
   },
 };
 
