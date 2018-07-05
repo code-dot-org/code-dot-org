@@ -183,6 +183,7 @@ class StudentsAssessmentsMCTable extends Component {
               ...{width: TABLE_COLUMN_WIDTHS.timeStamp},
             }
           },
+          transforms: [sortable],
         },
         cell: {
           format: this.submissionTimestampColumnFormatter,
