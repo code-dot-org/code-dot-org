@@ -1,7 +1,7 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import i18n from '@cdo/locale';
 
-const ALL_STUDENT_FILTER = 0;
+export const ALL_STUDENT_FILTER = 0;
 
  /**
  * Initial state of sectionAssessmentsRedux
