@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { dropdownStyles } from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import { ALL_STUDENT_FILTER } from './sectionAssessmentsRedux';
+import i18n from '@cdo/locale';
 
 export default class StudentSelector extends Component {
   static propTypes = {
@@ -23,7 +24,7 @@ export default class StudentSelector extends Component {
             key={ALL_STUDENT_FILTER}
             value={ALL_STUDENT_FILTER}
           >
-            {"All students"}
+            {i18n.allStudents()}
           </option>
           {Object.values(studentList).map((student, index) => (
             <option
