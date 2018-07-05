@@ -45,14 +45,6 @@ export default class Results extends React.Component {
             key={i}
           />
         );
-      } else {
-        // DO NOT CHECK IN. Debugging item right now
-        return (
-          <p key={i}>
-            {question['text']}
-            {question['answer_type']}
-          </p>
-        );
       }
     }));
   }
