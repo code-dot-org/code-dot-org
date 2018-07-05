@@ -59,10 +59,10 @@
     "level_verification_timeout": "0",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.\",\"hint_id\":\"MC_HOC_2017_05_Cole_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f3174c849fe3f0604ba3d2ceba2ae3cb/MC_HOC_2017_05_Cole.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Get the Agent across the river, building a bridge as you go.\",\"hint_id\":\"MC_HOC_2017_05_Cole_b\",\"hint_type\":\"general\",\"hint_path\":\"[[3,6], [3,2]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fc07289eb6743edf85cc3cc20f0e84d8/MC_HOC_2017_05_Cole.mp3\"}]",
     "songs": "[\"vignette7-funky-chirps-short\", \"vignette8-free-play\", \"vignette1\", \"vignette2-quiet\", \"vignette3\", \"vignette4-intro\", \"vignette5-shortpiano\"]",
-    "contained_level_names": null,
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
