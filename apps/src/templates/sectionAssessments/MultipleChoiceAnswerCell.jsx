@@ -25,10 +25,15 @@ class MultipleChoiceAnswerCell extends Component {
     percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
     displayAnswer: PropTypes.string,
+    opacity: PropTypes.number,
   };
 
   render() {
-    const {percentValue, isCorrectAnswer, displayAnswer} = this.props;
+    const {percentValue, isCorrectAnswer, displayAnswer, opacity} = this.props;
+
+    const rgbaValue = (isCorrectAnswer) ? { backgroundColor: `rgba(14, 190, 14, ${opacity})` } :
+    { backgroundColor: `rgba(255, 99, 71, ${opacity})`};
+
     if (displayAnswer) {
       return (
         <div style={styles.main}>
@@ -45,7 +50,7 @@ class MultipleChoiceAnswerCell extends Component {
     }
 
     return (
-      <div style={styles.main}>
+      <div style={{...styles.main, ...{...rgbaValue}}}>
         <div style={styles.text}>
           {(percentValue >= 0) &&
             <span>{`${percentValue}%`}</span>

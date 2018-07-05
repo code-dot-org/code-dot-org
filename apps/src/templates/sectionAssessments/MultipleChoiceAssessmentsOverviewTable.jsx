@@ -22,6 +22,8 @@ const styles = {
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
+    padding: 0,
+    height: 40,
   },
   questionCell: {
     overflow: 'hidden',
