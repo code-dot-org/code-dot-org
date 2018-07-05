@@ -220,7 +220,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getStudentMCResponsesForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getStudentMCResponsesForCurrentAssessment(rootState);
-        assert.deepEqual(result, []);
+        assert.deepEqual(result, {});
       });
 
       it('returns an array of objects of studentAnswerDataPropType', () => {
@@ -228,6 +228,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           sectionAssessments: {
             ...rootState.sectionAssessments,
+            studentId: 1,
             assessmentId: 123,
             assessmentResponsesByScript: {
               3: {
@@ -255,7 +256,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{id: 1, name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]}]);
+        assert.deepEqual(result, {id: 1, name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]});
       });
     });
 
