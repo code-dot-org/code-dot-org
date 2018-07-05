@@ -48,6 +48,12 @@ class AuthenticationOption < ApplicationRecord
     OAUTH_CREDENTIAL_TYPES,
   ].flatten
 
+  SILENT_TAKEOVER_CREDENTIAL_TYPES = [
+    FACEBOOK,
+    GOOGLE,
+    WINDOWS_LIVE
+  ]
+
   def oauth?
     OAUTH_CREDENTIAL_TYPES.include? credential_type
   end
