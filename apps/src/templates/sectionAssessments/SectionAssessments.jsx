@@ -136,8 +136,8 @@ class SectionAssessments extends Component {
                 {totalStudentSubmissions > 0 &&
                   <div>
                     <MCAssessmentsOverviewContainer />
-                    <FreeResponsesAssessmentsContainer />
                     <MultipleChoiceByStudentContainer />
+                    <FreeResponsesAssessmentsContainer />
                   </div>
                 }
               </div>
