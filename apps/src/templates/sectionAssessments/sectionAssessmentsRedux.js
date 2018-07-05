@@ -640,7 +640,9 @@ export const getExportableAssessmentData = (state) => {
   return responses;
 };
 
-// TODO(write comment)
+/**
+ *  @returns {boolean} true if current studentId has submitted responses for current script.
+ */
 export const currentStudentHasResponses = (state) => {
   return !!getAssessmentResponsesForCurrentScript(state).hasOwnProperty(state.sectionAssessments.studentId);
 };
