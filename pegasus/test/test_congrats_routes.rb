@@ -45,7 +45,7 @@ class CongratsRoutesTest < Minitest::Test
         @pegasus.get "/congrats/#{course}"
         assert_equal 302, @pegasus.last_response.status
         @pegasus.follow_redirect!
-        assert_equals @pegasus.last_request.url, '/congrats'
+        assert_equal @pegasus.last_request.url, '/congrats'
       end
     end
   end
