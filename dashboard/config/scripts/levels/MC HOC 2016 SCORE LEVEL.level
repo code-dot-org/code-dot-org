@@ -44,10 +44,20 @@
     "failure_message_override": "If you're having trouble tagging 5 Golems, try changing the score to 2 per tag.",
     "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return verificationAPI.getEntityCount(\"ironGolem\") === 0;\r\n}",
     "instructions_important": "true",
+    "markdown_instructions": "Some games let you keep score. Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\r\n    <title name=\"SCORE\">1</title>\r\n  </block></xml> block to give yourself a point when you tag them.  \r\n  \r\n  Reach five points to win!",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "agent_start_direction": "0",
+    "is_agent_level": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "This level will introduce a scoring system.",
+  "audit_log": "[{\"changed_at\":\"2018-07-03 21:56:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 21:57:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 21:58:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
