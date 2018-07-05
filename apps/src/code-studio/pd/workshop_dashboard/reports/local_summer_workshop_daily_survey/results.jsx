@@ -27,7 +27,7 @@ export default class Results extends React.Component {
         return null;
       }
 
-      if (question['answer_type'] === 'scale'|| question['answer_type'] === 'singleSelect') {
+      if (['scale', 'singleSelect'].includes(question['answer_type'])) {
         return (
           <SingleChoiceResponses
             question={question['text']}
