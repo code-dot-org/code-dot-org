@@ -68,7 +68,7 @@ class TeacherFeedback extends Component {
       latestFeedback: [],
       submitting: false,
       errorState: ErrorType.NoError,
-      token: ""
+      token: null
     };
   }
 
@@ -78,10 +78,11 @@ class TeacherFeedback extends Component {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8',
     }).done((data, textStatus, request) => {
-      this.setState({latestFeedback: [data]});
-      this.setState({token: request.getResponseHeader('csrf-token')});
+      this.setState({
+        latestFeedback: [data],
+        token: request.getResponseHeader('csrf-token')
+      });
     }).fail((jqXhr, status) => {
-      console.log(status + "  " + jqXhr.responseJSON);
       this.setState({errorState: ErrorType.Load});
     });
   };
@@ -107,13 +108,16 @@ class TeacherFeedback extends Component {
       data: JSON.stringify({teacher_feedback: payload}),
       headers: {"X-CSRF-Token": this.state.token}
     }).done(data => {
-      this.setState({latestFeedback: [data]});
-      this.setState({submitting: false});
-      this.setState({errorState: ErrorType.NoError});
+      this.setState({
+        latestFeedback: [data],
+        submitting: false,
+        errorState: ErrorType.NoError
+      });
     }).fail((jqXhr, status) => {
-      console.log(status + "  " + jqXhr.responseJSON);
-      this.setState({errorState: ErrorType.Save});
-      this.setState({submitting: false});
+      this.setState({
+        errorState: ErrorType.Save,
+        submitting: false
+      });
     });
   };
 
