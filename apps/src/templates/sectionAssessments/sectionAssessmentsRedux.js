@@ -1,4 +1,5 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
+import i18n from '@cdo/locale';
 
  /**
  * Initial state of sectionAssessmentsRedux
@@ -386,20 +387,40 @@ export const isCurrentAssessmentSurvey = (state) => {
  * the assessment.
  */
 export const getStudentsMCSummaryForCurrentAssessment = (state) => {
-  const summaryOfStudentsMCData = getAssessmentResponsesForCurrentScript(state);
-  if (!summaryOfStudentsMCData) {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
     return [];
   }
 
-  const studentsSummaryArray = Object.keys(summaryOfStudentsMCData).map(studentId => {
+  // Get a set of all students from sectionDataRedux.
+  let allStudentsByIds = {};
+  state.sectionData.section.students.forEach(student => {
+    allStudentsByIds[student.id] = {
+      student_name: student.name,
+      responses_by_assessment: {},
+    };
+  });
+
+  // Combine the list of all students with the list of student responses.
+  allStudentsByIds = {
+    ...allStudentsByIds,
+    ...studentResponses,
+  };
+
+  const studentsSummaryArray = Object.keys(allStudentsByIds).map(studentId => {
     studentId = (parseInt(studentId, 10));
-    const studentsObject = summaryOfStudentsMCData[studentId];
+    const studentsObject = allStudentsByIds[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentsAssessment = studentsObject.responses_by_assessment[currentAssessmentId];
 
-    // If the student has not submitted this assessment, don't display results.
+    // If the student has not submitted this assessment, display empty results.
     if (!studentsAssessment) {
-      return;
+      return {
+        id: studentId,
+        name: studentsObject.student_name,
+        isSubmitted: false,
+        submissionTimeStamp: i18n.notStarted(),
+      };
     }
     // Transform that data into what we need for this particular table, in this case
     // it is the structure studentOverviewDataPropType
@@ -409,9 +430,10 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
       isSubmitted: studentsAssessment.submitted,
-      submissionTimeStamp: studentsAssessment.timestamp,
+      submissionTimeStamp: studentsAssessment.submitted ? studentsAssessment.timestamp : i18n.inProgress(),
+      url: studentsAssessment.url,
     };
-  }).filter(studentOverviewData => studentOverviewData);
+  });
 
   return studentsSummaryArray;
 };

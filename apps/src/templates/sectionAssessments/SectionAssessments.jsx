@@ -106,22 +106,24 @@ class SectionAssessments extends Component {
             {!isCurrentAssessmentSurvey &&
               <div>
                 {totalStudentSubmissions > 0 &&
-                  <div>
-                    <CSVLink
-                      filename="assessments.csv"
-                      data={exportableData}
-                      headers={CSV_ASSESSMENT_HEADERS}
-                    >
-                      <div>{i18n.downloadAssessmentCSV()}</div>
-                    </CSVLink>
-                    <MCAssessmentsOverviewContainer />
-                    <StudentsMCSummaryContainer />
-                    <MultipleChoiceByStudentContainer />
-                    <FreeResponsesAssessmentsContainer />
-                  </div>
+                  <CSVLink
+                    filename="assessments.csv"
+                    data={exportableData}
+                    headers={CSV_ASSESSMENT_HEADERS}
+                  >
+                    <div>{i18n.downloadAssessmentCSV()}</div>
+                  </CSVLink>
                 }
                 {totalStudentSubmissions <= 0 &&
                   <h3>{i18n.emptyAssessmentSubmissions()}</h3>
+                }
+                <StudentsMCSummaryContainer />
+                {totalStudentSubmissions > 0 &&
+                  <div>
+                    <MCAssessmentsOverviewContainer />
+                    <FreeResponsesAssessmentsContainer />
+                    <MultipleChoiceByStudentContainer />
+                  </div>
                 }
               </div>
             }
