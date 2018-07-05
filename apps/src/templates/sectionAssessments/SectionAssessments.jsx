@@ -47,8 +47,24 @@ const styles = {
     marginBottom: 0
   },
   tableContent: {
-    marginTop: 10
+    marginTop: 10,
+    clear: 'both'
   },
+  selectors: {
+    clear: 'both'
+  },
+  scriptSelection: {
+    float: 'left',
+    marginRight: 20,
+    marginBottom: 20,
+  },
+  assessmentSelection: {
+    float: 'left',
+    marginBottom: 10,
+  },
+  download: {
+    marginTop: 10,
+  }
 };
 
 class SectionAssessments extends Component {
@@ -85,17 +101,19 @@ class SectionAssessments extends Component {
 
     return (
       <div>
-        <div>
-          <div style={{...h3Style, ...styles.header}}>
-            {i18n.selectACourse()}
+        <div style={styles.selectors}>
+          <div style={styles.scriptSelection}>
+            <div style={{...h3Style, ...styles.header}}>
+              {i18n.selectACourse()}
+            </div>
+            <ScriptSelector
+              validScripts={validScripts}
+              scriptId={scriptId}
+              onChange={this.onChangeScript}
+            />
           </div>
-          <ScriptSelector
-            validScripts={validScripts}
-            scriptId={scriptId}
-            onChange={this.onChangeScript}
-          />
           {!isLoading &&
-            <div>
+            <div style={styles.assessmentSelection}>
               <div style={{...h3Style, ...styles.header}}>
                 {i18n.selectAssessment()}
               </div>
@@ -121,13 +139,15 @@ class SectionAssessments extends Component {
                   onChange={this.props.setStudentId}
                 />
                 {totalStudentSubmissions > 0 &&
-                  <CSVLink
-                    filename="assessments.csv"
-                    data={exportableData}
-                    headers={CSV_ASSESSMENT_HEADERS}
-                  >
-                    <div>{i18n.downloadAssessmentCSV()}</div>
-                  </CSVLink>
+                  <div style={styles.download}>
+                    <CSVLink
+                      filename="assessments.csv"
+                      data={exportableData}
+                      headers={CSV_ASSESSMENT_HEADERS}
+                    >
+                      <div>{i18n.downloadAssessmentCSV()}</div>
+                    </CSVLink>
+                  </div>
                 }
                 {totalStudentSubmissions <= 0 &&
                   <h3>{i18n.emptyAssessmentSubmissions()}</h3>
