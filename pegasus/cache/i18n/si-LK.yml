@@ -101,18 +101,7 @@ si-LK:
   congratulations_volunteer: 'සුභපැතුම්: Hour of Code වැඩසටහන සාර්ථකව නිම කල ඔබ, තවත්
     සිසුන්ට ඒ සඳහා උපකාර කිරීමට <a href="https://code.org/volunteer">ස්වේචාවෙන් ඉදිරිපත්
     වන්න</a>!'
-  congratulations_on_completing_course1: සුභ පැතුම්! පළමු පාඨමාලාව සම්පූර්ණයි.
-  congratulations_on_completing_course2: සුභ පැතුම්! දෙවන පාඨමාලාව සම්පූර්ණයි.
-  congratulations_on_completing_course3: සුභ පැතුම්! තෙවන පාඨමාලාව සම්පූර්ණයි
-  congratulations_on_completing_course4: සුභ පැතුම්! සිව්වන පාඨමාලාව සම්පූර්ණයි
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: අධිවේගී පාඨමාලාව සම්පූර්ණ කළ ඔබට සුභ
-    පැතුම්
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: මීළඟ අදියරට යන්න
   congrats_next_tutorials_desc: මෙම කෙටි නිබන්දන හෝ අපගේ <a href="%{current_path}/next">හවුල්කරුවන්ගේ
     නිබන්දනයක්</a> උත්සාහ කරන්න.
@@ -295,28 +284,8 @@ si-LK:
     @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: |-
     පුද්ගලයින් 10 දෙනෙකු ගෙන් 9 දෙනෙකු පාසල් තුළ පරිගණක විද්‍යාව ඉගැන්විය යුතු බවට එකඟ වේ.
     http://youtu.be/nKIu9yen5nc. https://code.org/ වෙත පිවිසෙන්නග.
@@ -1442,6 +1411,18 @@ si-LK:
   coursed_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee_gradelevel: වයස 8-12
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2017_gradelevel: වයස 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2018_gradelevel: වයස 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: වයස අවුරුදු 10-18
   codeorg_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
   codeintl_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
@@ -1590,6 +1571,30 @@ si-LK:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: මුලිකව පරිගණක විද්‍යාවේ සංකල්ප drag and drop ක්‍රමලේඛනය
     මගින් ඉගෙන ගන්න. මෙය ක්‍රීඩාවකට සමාන වූ, Angry Birds and Plants vs. Zombies ක්‍රීඩා
     ඇසුරින් Bill Gates, Mark Zuckerberg විසින් මෙහෙයවන නිබන්ධනයකි. repeat-loops, conditionals
