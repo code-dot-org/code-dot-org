@@ -96,17 +96,7 @@ ka-GE:
   congratulations_volunteer: გილოცავთ:ახლა, როცა თქვენ უკვე სცადეთ კოდის ერთი საათი,
     <a href="https://code.org/volunteer">დარეგისტრირდით მოხლისედ თქვენს კლასში</a>
     და დაეხმარეთ მოსწავლეებს კოდის ერთი საათის სწავლაში!
-  congratulations_on_completing_course1: გილოცავთ 1–ლი კურსის დასრულებას
-  congratulations_on_completing_course2: გილოცავთ მე–2 კურსის დასრულებას
-  congratulations_on_completing_course3: გილოცავთ მე–3 კურსის დასრულებას
-  congratulations_on_completing_course4: გილოცავთ მე–4 კურსის დასრულებას
-  congratulations_on_completing_coursea: გილოცავთ A კურსის დასრულებას
-  congratulations_on_completing_courseb: გილოცავთ B კურსის დასრულებას
-  congratulations_on_completing_coursec: გილოცავთ C კურსის დასრულებას
-  congratulations_on_completing_coursed: გილოცავთ D კურსის დასრულებას
-  congratulations_on_completing_coursee: გილოცავთ E კურსის დასრულებას
-  congratulations_on_completing_coursef: გილოცავთ F კურსის დასრულებას
-  congratulations_on_completing_accelerated: გილოცავთ ინტენსიური კურსის დასრულებას
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: შემდეგ სცადეთ ეს ტუტორიალები
   congrats_next_tutorials_desc: სცადეთ ეს უფრო მოკლე, ერთსაათიანი ტუტორიალები ან <a
     href="%{current_path}/next">ჩვენი პარტნიორების ტუტორიალები</a>.
@@ -284,28 +274,8 @@ ka-GE:
   just_did_accelerated: ახლახან დავასრულე ინტენსიური კურსი - ნახე! @codeorg
   just_did_hoc_donor: 'მე ახლახანს დავასრულე #HourOfCode - ნახეთ! (მადლობა %{donor_twitter}-ს
     @codeorgის მხარდაჭერისთვის)'
-  just_did_course1_donor: მე ახლახანს დავასრულე 1 კურსი - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorgის მხარდაჭერისთვის
-  just_did_course2_donor: მე ახლახანს დავასრულე 2 კურსი - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorgის მხარდაჭერისთვის
-  just_did_course3_donor: მე ახლახანს დავასრულე 3 კურსი - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorgის მხარდაჭერისთვის
-  just_did_course4_donor: მე ახლახანს დავასრულე 4 კურსი - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorgის მხარდაჭერისთვის
-  just_did_coursea_donor: მე ახლახანს დავასრულე კურსი A - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorgის მხარდაჭერისთვის
-  just_did_courseb_donor: მე ახლახანს დავასრულე კურსი B - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorgის მხარდაჭერისთვის
-  just_did_coursec_donor: მე ახლახანს დავასრულე კურსი C - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorg-ის მხარდაჭერისთვის
-  just_did_coursed_donor: მე ახლახანს დავასრულე კურსი D - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorg-ის მხარდაჭერისთვის
-  just_did_coursee_donor: მე ახლახანს დავასრულე კურსი E - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorg-ის მხარდაჭერისთვის
-  just_did_coursef_donor: მე ახლახანს დავასრულე კურსი F - ნახეთ! მადლობა %{donor_twitter}-ს
-    @codeorg-ის მხარდაჭერისთვის
-  just_did_accelerated_donor: მე ახლახანს დავასრულე აჩქარებული კურსი - ნახეთ! %{donor_twitter}-ს
-    @codeorg-ის მხარდაჭერისთვის
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: '10–დან 9 ადამიანი გვეთანმება: კომპიუტერული მეცნიერება უნდა ისწავლებოდეს
     სკოლებში. http://youtu.be/nKIu9yen5nc. ეწვიეთ: https://code.org/.'
   twitter_cs_foundational: კომპიუტერული მეცნიერებები ყოველმა მოსწავლემ უნდა ისწავლოს.
@@ -1412,6 +1382,18 @@ ka-GE:
   coursed_gradelevel: კლასები 8+
   coursee_gradelevel: კლასები 9+
   coursef_gradelevel: კლასები 10+
+  coursea-2017_gradelevel: კლასები 5+
+  courseb-2017_gradelevel: კლასები 6+
+  coursec-2017_gradelevel: კლასები 7+
+  coursed-2017_gradelevel: კლასები 8+
+  coursee-2017_gradelevel: ასაკი 8-12
+  coursef-2017_gradelevel: კლასები 10+
+  coursea-2018_gradelevel: კლასები 5+
+  courseb-2018_gradelevel: კლასები 6+
+  coursec-2018_gradelevel: კლასები 7+
+  coursed-2018_gradelevel: კლასები 8+
+  coursee-2018_gradelevel: ასაკი 8-12
+  coursef-2018_gradelevel: კლასები 10+
   accelerated_gradelevel: 'ასაკი: 10-18'
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
@@ -1561,6 +1543,30 @@ ka-GE:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
+    ვინც ჯერ კითხვა არ იცის.
+  courseb-2017_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
+    მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
+    ვინც ჯერ კითხვა არ იცის.
+  courseb-2018_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
+    მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი,
     Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები,
