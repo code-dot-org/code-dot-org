@@ -33,6 +33,10 @@ const styles = {
   button: {
     margin: 10,
     fontWeight: 'bold'
+  },
+  errorIcon: {
+    color: 'red',
+    margin: 10
   }
 };
 
@@ -57,6 +61,7 @@ class TeacherFeedback extends Component {
       studentId: studentId,
       latestFeedback: [],
       submitting: false,
+      errorState: false,
       token: ""
     };
   }
@@ -69,6 +74,8 @@ class TeacherFeedback extends Component {
     }).done((data, textStatus, request) => {
       this.setState({latestFeedback: [data]});
       this.setState({token: request.getResponseHeader('csrf-token')});
+    }).fail((jqXhr, status) => {
+      console.log(status + "  " + jqXhr.responseJSON);
     });
   };
 
@@ -95,8 +102,11 @@ class TeacherFeedback extends Component {
     }).done(data => {
       this.setState({latestFeedback: [data]});
       this.setState({submitting: false});
+      this.setState({errorState: false});
     }).fail((jqXhr, status) => {
       console.log(status + "  " + jqXhr.responseJSON);
+      this.setState({errorState: true});
+      this.setState({submitting: false});
     });
   };
 
@@ -130,14 +140,21 @@ class TeacherFeedback extends Component {
               type="text"
               placeholder={i18n.feedbackPlaceholder()}
             />
-            <Button
-              id="ui-test-submit-feedback"
-              text={i18n.saveAndShare()}
-              onClick={this.onSubmitFeedback}
-              color={Button.ButtonColor.blue}
-              style={styles.button}
-              disabled={buttonDisabled}
-            />
+            <div style={styles.button}>
+              <Button
+                id="ui-test-submit-feedback"
+                text={i18n.saveAndShare()}
+                onClick={this.onSubmitFeedback}
+                color={Button.ButtonColor.blue}
+                disabled={buttonDisabled}
+              />
+              {this.state.errorState &&
+                <span>
+                  <i className="fa fa-warning" style={styles.errorIcon}></i>
+                  {i18n.feedbackSaveError()}
+                </span>
+              }
+            </div>
           </div>
         }
       </div>
