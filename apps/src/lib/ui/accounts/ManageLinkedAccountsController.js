@@ -5,10 +5,13 @@ import {navigateToHref} from '@cdo/apps/utils';
 import ManageLinkedAccounts from './ManageLinkedAccounts';
 
 export default class ManageLinkedAccountsController {
-  constructor(mountPoint, userType, authenticationOptions) {
+  constructor(mountPoint, userType, authenticationOptions, userHasPassword, isGoogleClassroomStudent, isCleverStudent) {
     this.mountPoint = mountPoint;
     this.userType = userType;
     this.authenticationOptions = authenticationOptions;
+    this.userHasPassword = userHasPassword;
+    this.isGoogleClassroomStudent = isGoogleClassroomStudent;
+    this.isCleverStudent = isCleverStudent;
     this.renderManageLinkedAccounts();
   }
 
@@ -19,6 +22,9 @@ export default class ManageLinkedAccountsController {
         authenticationOptions={this.authenticationOptions}
         connect={this.connect}
         disconnect={this.disconnect}
+        userHasPassword={this.userHasPassword}
+        isGoogleClassroomStudent={this.isGoogleClassroomStudent}
+        isCleverStudent={this.isCleverStudent}
       />,
       this.mountPoint
     );
