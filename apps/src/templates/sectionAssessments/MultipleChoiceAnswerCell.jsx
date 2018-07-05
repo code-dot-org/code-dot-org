@@ -12,11 +12,13 @@ const styles = {
   },
   icon: {
     color: color.level_perfect,
+    paddingRight: 5,
+    fontSize: 20,
   },
-  text: {
+  value: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
-    marginRight: 10,
+    marginRight: 15,
     marginLeft: 10,
   },
 };
@@ -32,13 +34,13 @@ class MultipleChoiceAnswerCell extends Component {
   render() {
     const {percentValue, isCorrectAnswer, displayAnswer, opacity} = this.props;
 
-    const rgbaValue = (isCorrectAnswer) ? {backgroundColor: `rgba(14, 190, 14, ${opacity})`} :
+    const rgbaValue = (isCorrectAnswer) ? {backgroundColor: `rgba(159, 212, 159, ${opacity})`} :
     {backgroundColor: `rgba(255, 99, 71, ${opacity})`};
 
     if (displayAnswer) {
       return (
         <div style={styles.main}>
-          <div style={styles.text}>
+          <div style={styles.value}>
             {displayAnswer}
           </div>
           <div style={styles.icon}>
@@ -52,7 +54,7 @@ class MultipleChoiceAnswerCell extends Component {
 
     return (
       <div style={{...styles.main, ...{...rgbaValue}}}>
-        <div style={styles.text}>
+        <div style={styles.value}>
           {(percentValue >= 0) &&
             <span>{`${percentValue}%`}</span>
           }
