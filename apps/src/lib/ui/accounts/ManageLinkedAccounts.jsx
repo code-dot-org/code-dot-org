@@ -62,19 +62,25 @@ export default class ManageLinkedAccounts extends React.Component {
 
   cannotDisconnectGoogle = () => {
     // Cannot disconnect from Google if student is in a Google Classroom section
-    return (this.getAuthenticationOption(OAUTH_PROVIDERS.GOOGLE) && this.props.isGoogleClassroomStudent) ||
-      this.cannotDisconnect(OAUTH_PROVIDERS.GOOGLE);
+    return this.getAuthenticationOption(OAUTH_PROVIDERS.GOOGLE) && this.props.isGoogleClassroomStudent;
   };
 
   cannotDisconnectClever = () => {
     // Cannot disconnect from Clever if student is in a Clever section
-    return (this.getAuthenticationOption(OAUTH_PROVIDERS.CLEVER) && this.props.isCleverStudent) ||
-      this.cannotDisconnect(OAUTH_PROVIDERS.CLEVER);
+    return this.getAuthenticationOption(OAUTH_PROVIDERS.CLEVER) && this.props.isCleverStudent;
   };
 
   cannotDisconnect = (provider) => {
     const {authenticationOptions, userHasPassword} = this.props;
     const otherAuthOptions = _.reject(authenticationOptions, option => option.credential_type === provider);
+
+    if (provider === OAUTH_PROVIDERS.GOOGLE && this.cannotDisconnectGoogle()) {
+      return true;
+    }
+
+    if (provider === OAUTH_PROVIDERS.CLEVER && this.cannotDisconnectClever()) {
+      return true;
+    }
 
     // If it's the user's last authentication option
     if (otherAuthOptions.length === 0) {
@@ -110,7 +116,7 @@ export default class ManageLinkedAccounts extends React.Component {
               displayName={i18n.manageLinkedAccounts_google_oauth2()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.GOOGLE)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.GOOGLE)}
-              cannotDisconnect={this.cannotDisconnectGoogle()}
+              cannotDisconnect={this.cannotDisconnect(OAUTH_PROVIDERS.GOOGLE)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.MICROSOFT}
@@ -124,7 +130,7 @@ export default class ManageLinkedAccounts extends React.Component {
               displayName={i18n.manageLinkedAccounts_clever()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.CLEVER)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.CLEVER)}
-              cannotDisconnect={this.cannotDisconnectClever()}
+              cannotDisconnect={this.cannotDisconnect(OAUTH_PROVIDERS.CLEVER)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.FACEBOOK}
