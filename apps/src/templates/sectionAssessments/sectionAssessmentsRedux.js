@@ -1,6 +1,8 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import i18n from '@cdo/locale';
 
+const ALL_STUDENT_FILTER = 0;
+
  /**
  * Initial state of sectionAssessmentsRedux
  * The redux state matches the structure of our API calls and our views don't
@@ -15,6 +17,7 @@ import i18n from '@cdo/locale';
  * isLoading - boolean - indicates that requests for assessments and surveys have been
  * sent to the server but the client has not yet received a response
  * assessmentId - int - the level_group id of the assessment currently in view
+ * studentId - int - the studentId of the current student being filtered for.
  */
 const initialState = {
   assessmentResponsesByScript: {},
@@ -22,6 +25,7 @@ const initialState = {
   surveysByScript: {},
   isLoading: false,
   assessmentId: 0,
+  studentId: ALL_STUDENT_FILTER,
 };
 
 // Question types for assessments.
@@ -50,6 +54,7 @@ const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
+const SET_STUDENT_ID = 'sectionAssessments/SET_STUDENT_ID';
 
 // Action creators
 export const setAssessmentResponses = (scriptId, assessments) =>
@@ -59,6 +64,7 @@ export const setAssessmentQuestions = (scriptId, assessments) =>
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
+export const setStudentId = (studentId) => ({ type: SET_STUDENT_ID, studentId: studentId });
 export const setSurveys = (scriptId, surveys) => ({ type: SET_SURVEYS, scriptId, surveys });
 
 export const asyncLoadAssessments = (sectionId, scriptId) => {
@@ -100,6 +106,13 @@ export default function sectionAssessments(state=initialState, action) {
     return {
       ...state,
       assessmentId: action.assessmentId,
+      studentId: ALL_STUDENT_FILTER,
+    };
+  }
+  if (action.type === SET_STUDENT_ID) {
+    return {
+      ...state,
+      studentId: action.studentId,
     };
   }
   if (action.type === SET_ASSESSMENT_RESPONSES) {
