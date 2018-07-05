@@ -40,6 +40,12 @@ const styles = {
   }
 };
 
+const ErrorType = {
+  NoError: 'NoError',
+  Load: 'Load',
+  Save: 'Save'
+};
+
 class TeacherFeedback extends Component {
   static propTypes = {
     //temp prop for which version to display (stable, released 2018-teacher-experience, or internal, developer version)
@@ -61,7 +67,7 @@ class TeacherFeedback extends Component {
       studentId: studentId,
       latestFeedback: [],
       submitting: false,
-      errorState: false,
+      errorState: ErrorType.NoError,
       token: ""
     };
   }
@@ -76,6 +82,7 @@ class TeacherFeedback extends Component {
       this.setState({token: request.getResponseHeader('csrf-token')});
     }).fail((jqXhr, status) => {
       console.log(status + "  " + jqXhr.responseJSON);
+      this.setState({errorState: ErrorType.Load});
     });
   };
 
@@ -102,10 +109,10 @@ class TeacherFeedback extends Component {
     }).done(data => {
       this.setState({latestFeedback: [data]});
       this.setState({submitting: false});
-      this.setState({errorState: false});
+      this.setState({errorState: ErrorType.NoError});
     }).fail((jqXhr, status) => {
       console.log(status + "  " + jqXhr.responseJSON);
-      this.setState({errorState: true});
+      this.setState({errorState: ErrorType.Save});
       this.setState({submitting: false});
     });
   };
@@ -115,7 +122,7 @@ class TeacherFeedback extends Component {
       return null;
     }
 
-    const buttonDisabled = this.state.comment.length <= 0 || this.state.submitting;
+    const buttonDisabled = this.state.comment.length <= 0 || this.state.submitting || this.state.errorState === ErrorType.Load;
 
     // Placeholder for upcoming feedback input
     return (
@@ -133,6 +140,12 @@ class TeacherFeedback extends Component {
                 feedbacks={this.state.latestFeedback}
               />
             }
+            {this.state.errorState === ErrorType.Load &&
+              <span>
+                <i className="fa fa-warning" style={styles.errorIcon}></i>
+                {i18n.feedbackLoadError()}
+              </span>
+            }
             <textarea
               id="ui-test-feedback-input"
               style={styles.textInput}
@@ -148,7 +161,7 @@ class TeacherFeedback extends Component {
                 color={Button.ButtonColor.blue}
                 disabled={buttonDisabled}
               />
-              {this.state.errorState &&
+              {this.state.errorState === ErrorType.Save &&
                 <span>
                   <i className="fa fa-warning" style={styles.errorIcon}></i>
                   {i18n.feedbackSaveError()}
