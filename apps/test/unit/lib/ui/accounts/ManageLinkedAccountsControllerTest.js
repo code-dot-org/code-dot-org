@@ -44,6 +44,7 @@ describe('ManageLinkedAccountsController', () => {
       let arg = navigateToHrefStub.getCall(0).args[0];
       expect(navigateToHrefStub).to.have.been.calledOnce;
       expect(arg).to.equal('/users/auth/google_oauth2/connect');
+      utils.navigateToHref.restore();
     });
   });
 
