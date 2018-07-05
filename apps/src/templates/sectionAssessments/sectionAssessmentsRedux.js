@@ -420,7 +420,13 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
     ...studentResponses,
   };
 
-  const studentsSummaryArray = Object.keys(allStudentsByIds).map(studentId => {
+  let currentStudentsIds = Object.keys(allStudentsByIds);
+  // Filter by current selected student.
+  if (state.sectionAssessments.studentId !== ALL_STUDENT_FILTER) {
+    currentStudentsIds = [state.sectionAssessments.studentId];
+  }
+
+  const studentsSummaryArray = currentStudentsIds.map(studentId => {
     studentId = (parseInt(studentId, 10));
     const studentsObject = allStudentsByIds[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
