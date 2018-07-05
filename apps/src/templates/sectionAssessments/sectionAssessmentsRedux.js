@@ -232,7 +232,13 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
     return [];
   }
 
-  const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
+  let currentStudentsIds = Object.keys(studentResponses);
+  // Filter by current selected student.
+  if (state.sectionAssessments.studentId !== ALL_STUDENT_FILTER) {
+    currentStudentsIds = [state.sectionAssessments.studentId];
+  }
+
+  const studentResponsesArray = currentStudentsIds.map(studentId => {
     studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
