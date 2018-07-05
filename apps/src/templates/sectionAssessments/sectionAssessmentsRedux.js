@@ -229,42 +229,36 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
 export const getStudentMCResponsesForCurrentAssessment = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
-    return [];
+    return {};
+  }
+  const studentId = state.sectionAssessments.studentId;
+  const studentObject = studentResponses[studentId];
+  if (!studentObject) {
+    return {};
   }
 
-  let currentStudentsIds = Object.keys(studentResponses);
-  // Filter by current selected student.
-  if (state.sectionAssessments.studentId !== ALL_STUDENT_FILTER) {
-    currentStudentsIds = [state.sectionAssessments.studentId];
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+
+  // If the student has not submitted this assessment, don't display results.
+  if (!studentAssessment) {
+    return {};
   }
 
-  const studentResponsesArray = currentStudentsIds.map(studentId => {
-    studentId = (parseInt(studentId, 10));
-    const studentObject = studentResponses[studentId];
-    const currentAssessmentId = state.sectionAssessments.assessmentId;
-    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+  // Transform that data into what we need for this particular table, in this case
+  // is the structure studentAnswerDataPropType
+  return {
+    id: studentId,
+    name: studentObject.student_name,
+    studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
+      .map(answer => {
+        return {
+          responses: indexesToAnswerString(answer.student_result),
+          isCorrect: answer.status === MultiAnswerStatus.CORRECT,
+        };
+      })
+  };
 
-    // If the student has not submitted this assessment, don't display results.
-    if (!studentAssessment) {
-      return;
-    }
-
-    // Transform that data into what we need for this particular table, in this case
-    // is the structure studentAnswerDataPropType
-    return {
-      id: studentId,
-      name: studentObject.student_name,
-      studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
-        .map(answer => {
-          return {
-            responses: indexesToAnswerString(answer.student_result),
-            isCorrect: answer.status === MultiAnswerStatus.CORRECT,
-          };
-        })
-    };
-  }).filter(studentData => studentData);
-
-  return studentResponsesArray;
 };
 
 /**

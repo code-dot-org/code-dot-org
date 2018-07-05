@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 class MultipleChoiceByStudentContainer extends Component {
   static propTypes = {
     multipleChoiceStructure: PropTypes.arrayOf(multipleChoiceQuestionPropType),
-    studentAnswerData: PropTypes.arrayOf(studentWithResponsesPropType),
+    studentAnswerData: studentWithResponsesPropType,
     studentId: PropTypes.number,
   };
 
@@ -22,15 +22,11 @@ class MultipleChoiceByStudentContainer extends Component {
       <div>
         {studentId !== ALL_STUDENT_FILTER &&
           <div>
-            {studentAnswerData.map((studentResponse, index) => (
-              <div key={index}>
-                <h2>{i18n.multipleChoiceStudentOverview({studentName: studentResponse.name})}</h2>
-                <SingleStudentAssessmentsMCTable
-                  questionAnswerData={multipleChoiceStructure}
-                  studentAnswerData={studentResponse}
-                />
-              </div>
-            ))}
+              <h2>{i18n.multipleChoiceStudentOverview({studentName: studentAnswerData.name})}</h2>
+              <SingleStudentAssessmentsMCTable
+                questionAnswerData={multipleChoiceStructure}
+                studentAnswerData={studentAnswerData}
+              />
           </div>
         }
       </div>
