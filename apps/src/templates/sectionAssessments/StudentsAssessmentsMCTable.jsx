@@ -98,9 +98,13 @@ class StudentsAssessmentsMCTable extends Component {
   };
 
   nameCellFormatter = (name, {rowData}) => {
-    return (
-      <a href={rowData.url}>{name}</a>
-    );
+    if (rowData.url) {
+      return (
+        <a href={rowData.url} style={styles.studentNameColumn}>{name}</a>
+      );
+    } else {
+      return name;
+    }
   };
 
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
@@ -183,6 +187,7 @@ class StudentsAssessmentsMCTable extends Component {
               ...{width: TABLE_COLUMN_WIDTHS.timeStamp},
             }
           },
+          transforms: [sortable],
         },
         cell: {
           format: this.submissionTimestampColumnFormatter,
