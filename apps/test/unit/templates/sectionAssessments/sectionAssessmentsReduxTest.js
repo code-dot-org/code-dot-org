@@ -312,6 +312,68 @@ describe('sectionAssessmentsRedux', () => {
           responses: [{id: 1, name: "Saira", response: "Hello world"}]
         }]);
       });
+
+      it('returns free response questions for selected student', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            studentId: 1,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  questions: [
+                    {
+                      type: 'FreeResponse',
+                      question_text: 'Can you say hello?',
+                      question_index: 0,
+                    }
+                  ]
+                }
+              }
+            },
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: 'Hello world',
+                          status: '',
+                          type: 'FreeResponse',
+                        }
+                      ]
+                    }
+                  }
+                },
+                2: {
+                  student_name: 'Sarah',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: 'Hi',
+                          status: '',
+                          type: 'FreeResponse',
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+        const result = getAssessmentsFreeResponseResults(stateWithAssessment);
+        assert.deepEqual(result, [{
+          questionText: "Can you say hello?",
+          questionNumber: 1,
+          responses: [{id: 1, name: "Saira", response: "Hello world"}]
+        }]);
+      });
     });
 
     describe('getSurveyFreeResponseQuestions', () => {
