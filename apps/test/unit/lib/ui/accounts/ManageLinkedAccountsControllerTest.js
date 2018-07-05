@@ -9,6 +9,9 @@ const mockAuthenticationOptions = [
   {id: 1, credential_type: 'google_oauth2'},
   {id: 2, credential_type: 'facebook'},
 ];
+const userHasPassword = true;
+const isGoogleClassroomStudent = false;
+const isCleverStudent = false;
 
 describe('ManageLinkedAccountsController', () => {
   let controller, mockMountPoint, userType;
@@ -19,7 +22,14 @@ describe('ManageLinkedAccountsController', () => {
     userType = 'teacher';
     const authenticationOptions = [];
 
-    controller = new ManageLinkedAccountsController(mockMountPoint, userType, authenticationOptions);
+    controller = new ManageLinkedAccountsController(
+      mockMountPoint,
+      userType,
+      authenticationOptions,
+      userHasPassword,
+      isGoogleClassroomStudent,
+      isCleverStudent,
+    );
 
     sinon.spy(ReactDOM, 'render');
   });
@@ -58,7 +68,14 @@ describe('ManageLinkedAccountsController', () => {
 
     describe('onSuccess', () => {
       beforeEach(() => {
-        controller = new ManageLinkedAccountsController(mockMountPoint, userType, mockAuthenticationOptions);
+        controller = new ManageLinkedAccountsController(
+          mockMountPoint,
+          userType,
+          mockAuthenticationOptions,
+          userHasPassword,
+          isGoogleClassroomStudent,
+          isCleverStudent,
+        );
 
         server.respondWith(
           'DELETE',
