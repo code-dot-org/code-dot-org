@@ -521,7 +521,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       user.reload
-      assert_response :success
+      assert_redirected_to 'http://test.host/users/edit'
       assert_equal 2, user.authentication_options.length
     end
   end
@@ -554,7 +554,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         get :facebook
       end
 
-      assert_response 422
+      assert_redirected_to 'http://test.host/users/edit'
+      assert_equal 'Email has already been taken', flash.alert
     end
     user_a.reload
     user_b.reload
