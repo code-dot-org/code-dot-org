@@ -61,16 +61,12 @@ module Pd
 
     # POST /pd/workshop_survey/submit
     def submit_general
-      key_params = params.require(:key)
-      return render_404 unless key_params[:environment] == Rails.env
-      submission_id = params[:submission_id]
-
       WorkshopDailySurvey.create_placeholder!(
         user_id: key_params[:userId],
         pd_workshop_id: key_params[:workshopId],
         day: key_params[:day],
         form_id: key_params[:formId],
-        submission_id: submission_id
+        submission_id: params[:submission_id]
       )
 
       redirect_general(key_params)
@@ -135,17 +131,13 @@ module Pd
 
     # POST /pd/workshop_survey/facilitators/submit
     def submit_facilitator
-      key_params = params.require(:key)
-      return render_404 unless key_params[:environment] == Rails.env
-      submission_id = params[:submission_id]
-
       WorkshopFacilitatorDailySurvey.create_placeholder!(
         user_id: key_params[:userId],
         day: key_params[:day],
         pd_session_id: key_params[:sessionId],
         facilitator_id: key_params[:facilitatorId],
         form_id: key_params[:formId],
-        submission_id: submission_id
+        submission_id: params[:submission_id]
       )
 
       redirect_facilitator(key_params)
@@ -228,6 +220,12 @@ module Pd
         redirect_to action: :new_facilitator, session_id: session.id, facilitator_index: next_facilitator_index
       else
         redirect_to action: :thanks
+      end
+    end
+
+    def key_params
+      @key_params ||= params.require(:key).tap do |key_params|
+        raise ActiveRecord::RecordNotFound unless key_params[:environment] == Rails.env
       end
     end
   end
