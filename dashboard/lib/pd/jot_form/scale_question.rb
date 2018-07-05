@@ -39,7 +39,16 @@ module Pd
 
       # @override
       def type_specific_summary
-        {max_value: values.last}
+        {
+          min_value: values.first,
+          max_value: values.last,
+          options: options
+        }
+      end
+
+      # @override
+      def answer_type
+        ANSWER_SCALE
       end
     end
   end
