@@ -496,7 +496,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
     email = 'test@xyz.foo'
     user = create :user, :multi_auth_migrated, uid: 'some-uid'
-    AuthenticationOption.new(
+    AuthenticationOption.create!(
       {
         user: user,
         email: email,
@@ -509,7 +509,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           oauth_refresh_token: 'fake_refresh_token'
         }
       }
-    ).save!
+    )
 
     auth = generate_auth_user_hash(provider: 'facebook', uid: user.uid, refresh_token: '65432', email: email)
     @request.env['omniauth.auth'] = auth
@@ -529,7 +529,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'connect_provider: cannot connect multiple auth options with the same email to a different user' do
     email = 'test@xyz.foo'
     user_a = create :user, :multi_auth_migrated
-    AuthenticationOption.new(
+    AuthenticationOption.create!(
       {
         user: user_a,
         email: email,
@@ -542,7 +542,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           oauth_refresh_token: 'fake_refresh_token'
         }
       }
-    ).save!
+    )
 
     user_b = create :user, :multi_auth_migrated
     auth = generate_auth_user_hash(provider: 'facebook', uid: 'some-other-uid', refresh_token: '65432', email: email)

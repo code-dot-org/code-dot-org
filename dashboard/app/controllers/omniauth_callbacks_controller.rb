@@ -1,4 +1,5 @@
 require 'cdo/shared_cache'
+require 'honeybadger'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
@@ -178,7 +179,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # Copy oauth details to primary account
     @user = User.find_by_email_or_hashed_email(oauth_user.email)
     if @user.migrated?
-      AuthenticationOption.new(
+      success = AuthenticationOption.create(
         user: @user,
         email: oauth_user.email,
         hashed_email: oauth_user.hashed_email,
@@ -189,7 +190,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           oauth_token_expiration: auth_hash.credentials&.expires_at,
           oauth_refresh_token: auth_hash.credentials&.refresh_token
         }
-      ).save!
+      )
+      unless success
+        # This should never happen if other logic is working correctly, so notify
+        Honeybadger.notify(
+          error_class: 'Failed to create AuthenticationOption during silent takeover',
+          error_message: "Could not create AuthenticationOption during silent takeover for user with email #{oauth_user.email}"
+        )
+      end
     else
       @user.provider = oauth_user.provider
       @user.uid = oauth_user.uid
@@ -206,8 +214,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def allows_silent_takeover(oauth_user, auth_hash)
-    allow_takeover = oauth_user.provider.present?
-    allow_takeover &= %w(facebook google_oauth2 windowslive).include?(auth_hash.provider.to_s)
+    allow_takeover = auth_hash.provider.present?
+    allow_takeover &= AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
     allow_takeover && lookup_user
   end
