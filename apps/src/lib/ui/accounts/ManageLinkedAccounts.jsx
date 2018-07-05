@@ -25,6 +25,9 @@ export default class ManageLinkedAccounts extends React.Component {
     })).isRequired,
     connect: PropTypes.func.isRequired,
     disconnect: PropTypes.func.isRequired,
+    userHasPassword: PropTypes.bool.isRequired,
+    isGoogleClassroomStudent: PropTypes.bool.isRequired,
+    isCleverStudent: PropTypes.bool.isRequired,
   };
 
   getAuthenticationOption = (provider) => {
@@ -57,6 +60,37 @@ export default class ManageLinkedAccounts extends React.Component {
     console.log(error.message);
   };
 
+  cannotDisconnectGoogle = () => {
+    // Cannot disconnect from Google if student is in a Google Classroom section
+    return (this.getAuthenticationOption(OAUTH_PROVIDERS.GOOGLE) && this.props.isGoogleClassroomStudent) ||
+      this.cannotDisconnect(OAUTH_PROVIDERS.GOOGLE);
+  };
+
+  cannotDisconnectClever = () => {
+    // Cannot disconnect from Clever if student is in a Clever section
+    return (this.getAuthenticationOption(OAUTH_PROVIDERS.CLEVER) && this.props.isCleverStudent) ||
+      this.cannotDisconnect(OAUTH_PROVIDERS.CLEVER);
+  };
+
+  cannotDisconnect = (provider) => {
+    const {authenticationOptions, userHasPassword} = this.props;
+    const otherAuthOptions = _.reject(authenticationOptions, option => option.credential_type === provider);
+
+    // If it's the user's last authentication option
+    if (otherAuthOptions.length === 0) {
+      return true;
+    }
+
+    // If the user's only other authentication option is an email address,
+    // a password is required to disconnect
+    const otherOptionIsEmail = otherAuthOptions.length === 1 && otherAuthOptions[0].credential_type === 'email';
+    if (otherOptionIsEmail && !userHasPassword) {
+      return true;
+    }
+
+    return false;
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -76,24 +110,28 @@ export default class ManageLinkedAccounts extends React.Component {
               displayName={i18n.manageLinkedAccounts_google_oauth2()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.GOOGLE)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.GOOGLE)}
+              cannotDisconnect={this.cannotDisconnectGoogle()}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.MICROSOFT}
               displayName={i18n.manageLinkedAccounts_microsoft()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.MICROSOFT)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.MICROSOFT)}
+              cannotDisconnect={this.cannotDisconnect(OAUTH_PROVIDERS.MICROSOFT)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.CLEVER}
               displayName={i18n.manageLinkedAccounts_clever()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.CLEVER)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.CLEVER)}
+              cannotDisconnect={this.cannotDisconnectClever()}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.FACEBOOK}
               displayName={i18n.manageLinkedAccounts_facebook()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.FACEBOOK)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.FACEBOOK)}
+              cannotDisconnect={this.cannotDisconnect(OAUTH_PROVIDERS.FACEBOOK)}
             />
           </tbody>
         </table>
