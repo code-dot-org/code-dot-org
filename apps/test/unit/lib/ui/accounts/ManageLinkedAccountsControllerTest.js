@@ -56,6 +56,8 @@ describe('ManageLinkedAccountsController', () => {
       server = sinon.fakeServer.create();
     });
 
+    afterEach(() => server.restore());
+
     describe('onSuccess', () => {
       beforeEach(() => {
         controller = new ManageLinkedAccountsController(mockMountPoint, userType, mockAuthenticationOptions);
