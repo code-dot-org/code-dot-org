@@ -987,5 +987,51 @@ describe('sectionAssessmentsRedux', () => {
         );
       });
     });
+
+    it('returns summary data for specific student', () => {
+      const stateWithAssessment = {
+        ...rootState,
+        sectionData: {
+          section: {
+            students: [{
+              name: "Issac",
+              id: 99,
+            }],
+          }
+        },
+        sectionAssessments: {
+          ...rootState.sectionAssessments,
+          assessmentId: 123,
+          studentId: 99,
+          assessmentResponsesByScript: {
+            3: {
+              2: {
+                student_name: 'Ilulia',
+                responses_by_assessment: {
+                  123: {
+                    multi_correct: 4,
+                    multi_count: 10,
+                    submitted: true,
+                    timestamp: "2018-06-12 04:53:36 UTC",
+                    url: "code.org",
+                  }
+                }
+              }
+            }
+          }
+        }
+      };
+      const result = getStudentsMCSummaryForCurrentAssessment(stateWithAssessment);
+      assert.deepEqual(result,
+        [
+          {
+            id: 99,
+            name: "Issac",
+            isSubmitted: false,
+            submissionTimeStamp: "Not started"
+          },
+        ]
+      );
+    });
   });
 });
