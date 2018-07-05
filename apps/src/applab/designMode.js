@@ -534,6 +534,7 @@ designMode.onDuplicate = function (element, event) {
 
 function duplicateScreen(element) {
   const sourceScreen = $(element);
+  const sourceScreenId = elementUtils.getId(element);
   const newScreen = designMode.createScreen();
   designMode.changeScreen(newScreen);
 
@@ -552,6 +553,14 @@ function duplicateScreen(element) {
   if (madeUndraggable) {
     makeDraggable(sourceScreen.children());
   }
+  const styles = {
+    textAlign: 'center',
+  };
+  const alert = (
+      <div style={styles}>
+        Duplicated <b>{sourceScreenId}</b> to <b>{newScreen}</b>
+      </div>);
+  studioApp().displayPlayspaceNotification(alert);
 
   return newScreen;
 }
@@ -668,6 +677,7 @@ designMode.serializeToLevelHtml = function () {
   // Make a copy so that we don't affect designModeViz contents as we
   // remove prefixes from the element ids.
   var designModeVizClone = designModeViz.clone();
+  $(designModeVizClone).removeClass('withCrosshair');
   designModeVizClone.children().each(function () {
     elementUtils.removeIdPrefix(this);
   });
