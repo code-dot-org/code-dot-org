@@ -20,6 +20,7 @@ import sectionAssessments, {
   isCurrentAssessmentSurvey,
   getExportableSurveyData,
   getExportableAssessmentData,
+  setStudentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -86,6 +87,14 @@ describe('sectionAssessmentsRedux', () => {
       const action = setAssessmentId(456);
       const nextState = sectionAssessments(initialState, action);
       assert.deepEqual(nextState.assessmentId, 456);
+    });
+  });
+
+  describe('setStudentId', () => {
+    it('sets the id of the current student in view', () => {
+      const action = setStudentId(777);
+      const nextState = sectionAssessments(initialState, action);
+      assert.deepEqual(nextState.studentId, 777);
     });
   });
 
