@@ -56,7 +56,8 @@ class TeacherFeedback extends Component {
       comment: "",
       studentId: studentId,
       latestFeedback: [],
-      submitting: false
+      submitting: false,
+      token: ""
     };
   }
 
@@ -65,8 +66,9 @@ class TeacherFeedback extends Component {
       url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${this.state.studentId}&level_id=${this.props.serverLevelId}&teacher_id=${this.props.teacher}`,
       method: 'GET',
       contentType: 'application/json;charset=UTF-8',
-    }).done(data => {
+    }).done((data, textStatus, request) => {
       this.setState({latestFeedback: [data]});
+      this.setState({token: request.getResponseHeader('csrf-token')});
     });
   };
 
@@ -88,7 +90,8 @@ class TeacherFeedback extends Component {
       method: 'POST',
       contentType: 'application/json;charset=UTF-8',
       dataType: 'json',
-      data: JSON.stringify({teacher_feedback: payload})
+      data: JSON.stringify({teacher_feedback: payload}),
+      headers: {"X-CSRF-Token": this.state.token}
     }).done(data => {
       this.setState({latestFeedback: [data]});
       this.setState({submitting: false});
