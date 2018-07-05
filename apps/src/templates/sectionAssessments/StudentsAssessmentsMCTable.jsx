@@ -51,17 +51,18 @@ export const COLUMNS = {
 export const studentOverviewDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  numMultipleChoiceCorrect: PropTypes.number.isRequired,
-  numMultipleChoice: PropTypes.number.isRequired,
+  numMultipleChoiceCorrect: PropTypes.number,
+  numMultipleChoice: PropTypes.number,
   submissionTimeStamp: PropTypes.string.isRequired,
   isSubmitted: PropTypes.bool.isRequired,
+  url: PropTypes.string,
 });
 
 /**
  * A table that shows the summary data for each student in a section.
  * Each row is a single student, the number of questions the student
  * answered correctly, the total number of multiple choice questions,
- * the precent of correct answers, and status of each student's
+ * the percent of correct answers, and status of each student's
  * assessment or a time-stamp for when a student submits an
  * assessment.
  */
@@ -96,23 +97,31 @@ class StudentsAssessmentsMCTable extends Component {
     });
   };
 
+  nameCellFormatter = (name, {rowData}) => {
+    if (rowData.url) {
+      return (
+        <a href={rowData.url} style={styles.studentNameColumn}>{name}</a>
+      );
+    } else {
+      return name;
+    }
+  };
+
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
     const isSubmitted = rowData.isSubmitted;
 
-    if (isSubmitted) {
-      return (
-        <div style={styles.main}>
-          <div style={styles.text}>
-            {submissionTimeStamp}
-          </div>
+    return (
+      <div style={styles.main}>
+        <div style={styles.text}>
+          {submissionTimeStamp}
+        </div>
+        {isSubmitted &&
           <div style={styles.icon}>
             <FontAwesome id="checkmark" icon="check-circle"/>
           </div>
-        </div>
-      );
-    } else {
-      return i18n.inProgress();
-    }
+        }
+      </div>
+    );
   };
 
   getColumns = (sortable) => {
@@ -129,6 +138,7 @@ class StudentsAssessmentsMCTable extends Component {
           },
         },
         cell: {
+          format: this.nameCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,

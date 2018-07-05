@@ -338,14 +338,16 @@ class Course < ApplicationRecord
 
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
-  def has_other_version_progress?(user)
-    return nil unless user && family_name
+  def has_older_version_progress?(user)
+    return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Course.
       joins(:default_course_scripts).
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
+      # select only older versions
+      where("properties -> '$.version_year' < ?", version_year).
       # exclude the current course.
       where.not(id: id).
       # select only courses with scripts which the user has progress in.
