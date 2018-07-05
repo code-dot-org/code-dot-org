@@ -89,6 +89,15 @@ class AuthenticationOption < ApplicationRecord
     end
   end
 
+  def summarize
+    {
+      id: id,
+      credential_type: credential_type,
+      email: email,
+      hashed_email: hashed_email
+    }
+  end
+
   private def email_must_be_unique
     # skip the db lookup if possible
     return unless email_changed? && email.present? && errors.blank?
