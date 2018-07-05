@@ -158,6 +158,10 @@ class ScriptLevelsController < ApplicationController
   def stage_extras
     authorize! :read, ScriptLevel
 
+    if current_user&.teacher? && !current_user&.sections&.all?(&:stage_extras)
+      flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
+    end
+
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
       @level = @script_level.level
