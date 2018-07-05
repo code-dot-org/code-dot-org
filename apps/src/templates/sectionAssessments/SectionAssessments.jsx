@@ -7,7 +7,9 @@ import {
   isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
   getExportableData,
+  setStudentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import { getStudentList } from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
@@ -19,6 +21,7 @@ import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContain
 import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
 import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
+import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 
@@ -64,6 +67,9 @@ class SectionAssessments extends Component {
     isCurrentAssessmentSurvey: PropTypes.bool,
     totalStudentSubmissions: PropTypes.number,
     exportableData: PropTypes.array,
+    studentId: PropTypes.number,
+    setStudentId: PropTypes.func,
+    studentList: PropTypes.array,
   };
 
   onChangeScript = scriptId => {
@@ -74,7 +80,8 @@ class SectionAssessments extends Component {
 
   render() {
     const {validScripts, scriptId, assessmentList, assessmentId,
-      isLoading, isCurrentAssessmentSurvey, totalStudentSubmissions, exportableData} = this.props;
+      isLoading, isCurrentAssessmentSurvey, totalStudentSubmissions,
+      exportableData, studentId, studentList} = this.props;
 
     return (
       <div>
@@ -105,6 +112,14 @@ class SectionAssessments extends Component {
             {/* Assessments */}
             {!isCurrentAssessmentSurvey &&
               <div>
+                <div style={{...h3Style, ...styles.header}}>
+                  {i18n.selectStudent()}
+                </div>
+                <StudentSelector
+                  studentList={studentList}
+                  studentId={studentId}
+                  onChange={this.props.setStudentId}
+                />
                 {totalStudentSubmissions > 0 &&
                   <CSVLink
                     filename="assessments.csv"
@@ -170,6 +185,8 @@ export default connect(state => ({
   isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   exportableData: getExportableData(state),
+  studentId: state.sectionAssessments.studentId,
+  studentList: getStudentList(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
@@ -179,5 +196,8 @@ export default connect(state => ({
   },
   setAssessmentId(assessmentId) {
     dispatch(setAssessmentId(assessmentId));
+  },
+  setStudentId(studentId) {
+    dispatch(setStudentId(studentId));
   },
 }))(SectionAssessments);
