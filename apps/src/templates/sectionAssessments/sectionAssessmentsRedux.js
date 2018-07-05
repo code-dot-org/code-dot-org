@@ -636,6 +636,11 @@ export const getExportableAssessmentData = (state) => {
   return responses;
 };
 
+// TODO(write comment)
+export const currentStudentHasResponses = (state) => {
+  return !!getAssessmentResponsesForCurrentScript(state).hasOwnProperty(state.sectionAssessments.studentId);
+};
+
 // Helpers
 
 /**

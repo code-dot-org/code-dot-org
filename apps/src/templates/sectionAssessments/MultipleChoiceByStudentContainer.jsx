@@ -5,6 +5,7 @@ import {
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
   ALL_STUDENT_FILTER,
+  currentStudentHasResponses,
 } from './sectionAssessmentsRedux';
 import i18n from "@cdo/locale";
 import { connect } from 'react-redux';
@@ -14,13 +15,14 @@ class MultipleChoiceByStudentContainer extends Component {
     multipleChoiceStructure: PropTypes.arrayOf(multipleChoiceQuestionPropType),
     studentAnswerData: studentWithResponsesPropType,
     studentId: PropTypes.number,
+    currentStudentHasResponses: PropTypes.bool,
   };
 
   render() {
-    const {multipleChoiceStructure, studentAnswerData, studentId} = this.props;
+    const {multipleChoiceStructure, studentAnswerData, studentId, currentStudentHasResponses} = this.props;
     return (
       <div>
-        {studentId !== ALL_STUDENT_FILTER &&
+        {(studentId !== ALL_STUDENT_FILTER && currentStudentHasResponses) &&
           <div>
               <h2>{i18n.multipleChoiceStudentOverview({studentName: studentAnswerData.name})}</h2>
               <SingleStudentAssessmentsMCTable
@@ -40,4 +42,5 @@ export default connect(state => ({
   multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(state),
   studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
   studentId: state.sectionAssessments.studentId,
+  currentStudentHasResponses: currentStudentHasResponses(state),
 }))(MultipleChoiceByStudentContainer);
