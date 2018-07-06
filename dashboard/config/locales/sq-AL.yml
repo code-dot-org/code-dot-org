@@ -17,12 +17,12 @@ sq:
     errors:
       messages:
         blank: E domosdoshme
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: kërkohen
+        invalid_plural: janë pa vlerë
     attributes:
       user:
         name: Shfaq Emrin
-        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
+        name_example: Shfaq Emrin<br/>(Psh. Cool Coder or Jane S.)
         email: Email
         parent_email: Parent/guardian email
         personal_email: Personal email address
@@ -68,7 +68,7 @@ sq:
   courses: Kurset
   courses_page:
     title_student: Mëso në Code Studio
-    title_teacher: Teach with Code Studio
+    title_teacher: Meso Shkencat Kompjuterike
   unplugged_activity: Aktiviteti Unplugged
   of: i
   more: MË SHUMË

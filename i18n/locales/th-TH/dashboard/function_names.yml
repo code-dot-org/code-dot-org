@@ -156,7 +156,7 @@ th:
       draw spiral circle: draw spiral circle
       draw roof: draw roof
       draw rectangle: draw rectangle
-      move: เคลื่อนไปข้าง
+      move: เคลื่อนไปทาง
       function 1: function 1
       function 2: function 2
       turn corner: turn corner
@@ -223,6 +223,7 @@ th:
       booster: booster
       draw line of triangles: draw line of triangles
       draw a window: draw a window
+      stop_everything: stop_everything
       draw a plane of squares: draw a plane of squares
       draw hexagon: วาดรูปหกเหลี่ยม
       draw line of hexagons: draw line of hexagons

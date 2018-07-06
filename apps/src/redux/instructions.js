@@ -33,7 +33,6 @@ const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
  */
 const instructionsInitialState = {
   noInstructionsWhenCollapsed: false,
-  hasInlineImages: false,
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
@@ -64,7 +63,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     }
     const {
       noInstructionsWhenCollapsed,
-      hasInlineImages,
       shortInstructions,
       shortInstructions2,
       longInstructions,
@@ -82,7 +80,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     }
     return Object.assign({}, state, {
       noInstructionsWhenCollapsed,
-      hasInlineImages,
       shortInstructions,
       shortInstructions2,
       longInstructions,
@@ -148,11 +145,10 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos,
+    hasContainedLevels, overlayVisible, teacherMarkdown, levelVideos,
     mapReference, referenceLinks}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
-  hasInlineImages,
   shortInstructions,
   shortInstructions2,
   longInstructions,
@@ -343,7 +339,6 @@ export const determineInstructionsConstants = config => {
 
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
-    hasInlineImages: !!config.skin.instructions2ImageSubstitutions,
     overlayVisible: !!shouldShowOverlay,
     shortInstructions,
     shortInstructions2,

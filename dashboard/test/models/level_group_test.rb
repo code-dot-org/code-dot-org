@@ -406,4 +406,45 @@ level 'level7_copy'"
     assert_equal expected_results[level1.id][:levelgroup_results],
       actual_survey_results[level1.id][:levelgroup_results]
   end
+
+  test 'get_summarized_survey_results returns no results when less than 5 responses' do
+    # Create script with an anonymous assessment.
+    script = create :script
+    create :text_match, name: 'level_free_response', type: 'TextMatch'
+    create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['anonymous'] = 'true'
+    level1.properties['pages'] = [
+      {
+        levels: %w(
+          level_free_response
+          level_multi_unsubmitted
+          level_multi_unattempted
+        )
+      }
+    ]
+    level1.save!
+    script_level = create :script_level, script: script, levels: [level1], assessment: true
+
+    # Create a section
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+
+    actual_survey_results = LevelGroup.get_summarized_survey_results(script, section)
+
+    expected_results = {
+      level1.id => {
+        stage_name: script_level.stage.localized_title,
+        levelgroup_results: []
+      }
+    }
+
+    assert_equal expected_results.keys, actual_survey_results.keys
+    assert_equal expected_results[level1.id][:stage_name],
+      actual_survey_results[level1.id][:stage_name]
+    assert_equal [], actual_survey_results[level1.id][:levelgroup_results]
+  end
 end

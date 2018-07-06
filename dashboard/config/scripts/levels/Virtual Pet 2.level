@@ -54,10 +54,7 @@
     "show_type_hints": "true",
     "instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
     "include_shared_functions": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

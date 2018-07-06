@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
+import * as utils from '../../../utils';
 import color from '@cdo/apps/util/color';
 import {Field} from '../SystemDialog/SystemDialog';
 import BootstrapButton from './BootstrapButton';
@@ -116,6 +117,7 @@ export default class AddPasswordForm extends React.Component {
         message: SUCCESS_STATE
       }
     });
+    utils.reload();
   };
 
   onFailure = (error) => {

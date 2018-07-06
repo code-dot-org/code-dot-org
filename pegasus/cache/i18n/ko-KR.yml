@@ -88,17 +88,7 @@ ko-KR:
   congratulations_on_completing_hoc: 축하합니다! One Hour of Code 를 완료하셨습니다.
   congratulations_volunteer: '축하합니다: 여러분은 이제 Hour of Code를 모두 해보았습니다. 학급 <a href="https://code.org/volunteer">자원봉사자로
     등록하고</a> Hour of Code를 진행하는 다른 학생들을 도와주세요.'
-  congratulations_on_completing_course1: 과정1 완료를 축하합니다.
-  congratulations_on_completing_course2: 과정2 완료를 축하합니다.
-  congratulations_on_completing_course3: 과정3 완료를 축하합니다.
-  congratulations_on_completing_course4: 과정4 완료를 축하합니다.
-  congratulations_on_completing_coursea: 과정A 완료를 축하합니다.
-  congratulations_on_completing_courseb: 과정B 완료를 축하합니다.
-  congratulations_on_completing_coursec: 과정C 완료를 축하합니다.
-  congratulations_on_completing_coursed: 과정D 완료를 축하합니다.
-  congratulations_on_completing_coursee: 과정E 완료를 축하합니다.
-  congratulations_on_completing_coursef: 과정F 완료를 축하합니다.
-  congratulations_on_completing_accelerated: 속진 과정 완료를 축하합니다.
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: 이제 다음 튜토리얼들을 해보세요.
   congrats_next_tutorials_desc: 이러한 짧은 1시간짜리 튜토리얼을 해 보거나 <a href="%{current_path}/next">파트너
     튜토리얼</a>을 보세요.
@@ -259,28 +249,8 @@ ko-KR:
   just_did_accelerated: 속진 과정을 완료했습니다. - @codeorg 를 살펴보세요!
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 10명 중 9명의 사람들이, 모든 학교들에서 컴퓨터과학(정보과학)을 가르쳐야한다는데 동의하고 있습니다. http://youtu.be/nKIu9yen5nc.
     https://code.org/ 를 방문해 보세요.
   twitter_cs_foundational: 컴퓨터공학은 모근 학습의 기초가 된다. https://youtu.be/QvyTEx1wyOY.
@@ -1277,6 +1247,18 @@ ko-KR:
   coursed_gradelevel: 8 학년 이상
   coursee_gradelevel: 나이 8세-12세
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: 8 학년 이상
+  coursee-2017_gradelevel: 나이 8세-12세
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: 8 학년 이상
+  coursee-2018_gradelevel: 나이 8세-12세
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: 나이 10세-13세
   codeorg_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeintl_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
@@ -1391,6 +1373,30 @@ ko-KR:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: 드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도,
     빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택
     실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다.

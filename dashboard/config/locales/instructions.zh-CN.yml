@@ -996,15 +996,27 @@ zh-CN:
         Write a program that displays
         a randomly chosen color from the array. (Click to see full instructions)
       CSDU6 arrays variable_instruction: 编写一个程序, 在数组中显示随机选择的颜色。(点击查看完整说明)
-      CSP Data Unit - Counting Multiple Things_instruction: "If you can count one
-        thing you can count multiple things\r\n\r\nFind out how many people like something
-        other than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo
-        the math\r\n\r\nblank/ blank toal\r\n\r\nCan also use this to find percents
-        from this\r\n\r\nx% are dog lovers"
+      CSP Data Unit - Counting Multiple Things_instruction: |-
+        If you can count one thing you can count multiple things
+
+        Find out how many people like something other than dogs and cats
+
+        Count dogs
+        Count cats
+        Count total
+        Do the math
+
+        blank/ blank toal
+
+        Can also use this to find percents from this
+
+        x% are dog lovers
       CSP Data Unit -Counting Records - Easy Way_instruction: "ReadRecords with specific
-        criteria \r\nfind the length of an array\r\n"
-      CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords
-        for all records\r\n2. Way to loop through and count\r\n"
+        criteria \nfind the length of an array\n"
+      CSP Data Unit -Counting Records - Hard Way_instruction: |2
+
+        1. ReadRecords for all records
+        2. Way to loop through and count
       CSP U4 - JSON Object Intro - Bad Way_instruction: |-
         Trigger both the keyboard
         and mouse event and examine the event objects displayed in the console. Why
@@ -2385,21 +2397,20 @@ zh-CN:
         function called cube - this function should take in a Number and return that
         number to the power of 3. Make sure to write two example cases! When you're
         done, use your new function to calculate cube(7).
-      Calc Design Recipe 2_instruction: "Your school is holding a bake sale, and you
-        need to track the cost of making each cookie, the money paid, and the total
-        profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.\r\n\r\nWrite
-        the function cost, which takes in the number of cookies you intend to sell,
-        and returns the cost of making those cookies.\r\n\r\nTest your function by
-        calculating the cost of 42 cookies"
-      Calc Design Recipe 3_instruction: "Write the function sales which takes in the
-        number of cookies sold, and produces the amount of money customers spent to
-        buy those cookies (each cookie is sold at $1.50).\r\n\r\nTest your function
-        by calculating the sales for 135 cookies"
-      Calc Design Recipe 4_instruction: "Using the two functions we just wrote, write
-        the function profit, which takes in the number of cookies you sold, and gives
-        you back the total profit you make from selling your cookies, accounting for
-        the cost of baking them.\r\n\r\nTest your function by calculating the total
-        profit for 15 cookies."
+      Calc Design Recipe 2_instruction: |-
+        Your school is holding a bake sale, and you need to track the cost of making each cookie, the money paid, and the total profit. Cookies cost $0.25 each to make, and sell for $1.50/cookie.
+
+        Write the function cost, which takes in the number of cookies you intend to sell, and returns the cost of making those cookies.
+
+        Test your function by calculating the cost of 42 cookies
+      Calc Design Recipe 3_instruction: |-
+        Write the function sales which takes in the number of cookies sold, and produces the amount of money customers spent to buy those cookies (each cookie is sold at $1.50).
+
+        Test your function by calculating the sales for 135 cookies
+      Calc Design Recipe 4_instruction: |-
+        Using the two functions we just wrote, write the function profit, which takes in the number of cookies you sold, and gives you back the total profit you make from selling your cookies, accounting for the cost of baking them.
+
+        Test your function by calculating the total profit for 15 cookies.
       Calc Free Play_instruction: |-
         Free Play: Write functions and algorithms of your
         own design!
@@ -2407,7 +2418,7 @@ zh-CN:
         for the function \"rocket-height\" that states it has a range of Number, domain
         of Number, and should return the height of the rocket traveling at 15 m/s
         after a given number of seconds. Let's write an example case now for the height
-        of the rocket at 3 seconds.\r\n\r\n\r\n\r\n  \r\n\r\n"
+        of the rocket at 3 seconds.\n\n\n\n  \n\n"
       Calc Rocket 1_instruction: |-
         In the last puzzle you wrote a contract for the
         function rocket-height that states it has a range of Number, domain of Number,
@@ -2759,12 +2770,14 @@ zh-CN:
       Course 4 Play Labs For Loops 4a_instruction: "现在，让我们将一些第7关中的变量和“计数器”变量混合起来制造一些神奇的变化。\r\n\r\n在这一关中，小狗通过“increment”（增加）来从0到1000计数。在代码最开始处，将“increment”设置为10，看看会发生什么。"
       Course 4 Play Labs For Loops 5_instruction: 在上一关中，我们按照每个数的平方计数了。试试将“counter
         ^ 2”（计数器的2次方）改为“counter ^ 3”（计数器的3次方）来按照每个数的立方来计数。（1，8，27，64，125，216，343...）
-      Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your
-        time keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"
-        variable will begin with a value of 1.\r\n\r\nCan you make it so that each
-        time you click Dog, the increment increases by 2?  Click the forward arrow
-        to run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before
-        each one."
+      Course 4 Play Labs For Loops 5a_instruction: |-
+        In this puzzle, Dog will be your time keeper.
+
+        Dog will count from 0 to 30 by "increment".  The "increment" variable will begin with a value of 1.
+
+        Can you make it so that each time you click Dog, the increment increases by 2?  Click the forward arrow to run the for loop.
+
+        Run the loop a couple of times, clicking Dog before each one.
       Course 4 Play Labs For Loops 6_instruction: 你也许知道质数是指的一个数只能被它自己自己和1整除。用“is_prime”（是否质数）函数来只说出1到100的质数。
       Course 4 Play Labs For Loops 6a_instruction: "小狗一直按照计数循环中的增量来按时计数。但这次，我们要将巫师混合进来。你能改变代码，在巫师被点击的时候，让“increment”（增量）每次增加2吗？\r\n\r\n小心！巫师移动得很快！"
       Course 4 Play Labs For Loops 7_instruction: 你用用计数循环帮我说出序列1，4，7，10，13，16，19，22，25吗？
@@ -2804,10 +2817,12 @@ zh-CN:
       Course 4 SCVP 1_instruction: 创建一个函数，能够让小艺术家往前或者往后跳x像素，而且也能让他往上或者往下跳y个像素。（使用正数和负数）
       Course 4 Variables Assessment_instruction: 你能用一个“边数”变量来画出这幅图吗？每条边应该是50像素长。
       Course1BeePuzzle12_instruction: 获得3个花蜜，然后酿两个蜂蜜。
-      Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then another
-        to get me to the pig"
-      Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then another
-        to get me to the pig."
+      Course1MazeAssessment1_instruction: |-
+        This is a test!
+        Move one way, then another to get me to the pig
+      Course1MazeAssessment2_instruction: |-
+        This is a test!
+        Move one way, then another to get me to the pig.
       CourseF_PlayLab_vars1_instruction: '玩这个游戏不需要写任何代码, 只要点击 "运行"! '
       CourseF_PlayLab_vars10_instruction: "自由发挥时间! 下面是我们在这个阶段所玩过的所有变量, 以及一些你可能需要的额外变量。\r\n\r\n注意到我们的工具箱中现在有这么多的模块,
         它们需要整理! 在这里, 我们把每一块放到一个合适的类别中。花些时间去探索所有可用的东西。完成浏览后, 使用重复，变量和事件来制作游戏或故事。 \r\n\r\n提示:
@@ -2836,8 +2851,7 @@ zh-CN:
       D_Frozen_nested8_instruction: 在一个圆圈内旋转该形状大约5或6次。
       D_Frozen_nested9_instruction: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
         会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
-      Dance Party 1-validated_instruction: 'What do you think will happen when you
-        click on the alien?  '
+      Dance Party 1-validated_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block
         to make the alien start spinning around.
       Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`,
@@ -2861,8 +2875,7 @@ zh-CN:
       Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes
         all the aliens start doing the same dance move when it's clicked.
       Dance Party Freeplay_instruction: Now create your own alien disco!
-      Dance Party Predict_instruction: 'What do you think will happen when you click
-        on the alien?  '
+      Dance Party Predict_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -2933,19 +2946,12 @@ zh-CN:
         Here's a similar function red shape with an additional
         variable for size. Complete the conditionals so the correct solid red image
         of a given size is drawn for "circle", "triangle", and "star".
-      Eval Cond 6_instruction: "Write a function called food-critic, which takes in
-        the name of a food and produces a String that says how you feel about that
-        food. For example, (food-critic “pizza”) might evaluate to “delicious”, but
-        (food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two
-        foods to review, but you can you write more if you like!  Don’t forget to
-        add an “else” clause!\r\nOne example - and part of the definition -  has already
-        been done for you!"
-      Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which
-        takes in the name of a shape and produces a solid green shape. Your function
-        should work with at least “circle”, “star” and “rectangle”, but you can add
-        other shapes if you like. You can choose the size of each shape. Don’t forget
-        to add an “else” clause!\r\nOne example - and part of the definition -  has
-        already been done for you!\r\n"
+      Eval Cond 6_instruction: |-
+        Write a function called food-critic, which takes in the name of a food and produces a String that says how you feel about that food. For example, (food-critic “pizza”) might evaluate to “delicious”, but (food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two foods to review, but you can you write more if you like!  Don’t forget to add an “else” clause!
+        One example - and part of the definition -  has already been done for you!
+      Eval Cond 7_instruction: |
+        Free Play: Write a function called green-shape, which takes in the name of a shape and produces a solid green shape. Your function should work with at least “circle”, “star” and “rectangle”, but you can add other shapes if you like. You can choose the size of each shape. Don’t forget to add an “else” clause!
+        One example - and part of the definition -  has already been done for you!
       Eval Cond 8_instruction: 'Free Play: Suppose you want to own a car at 21, or
         have your own business by 30. Write a function called life-goals, which takes
         in an age and produces a string that describes your life goals by then. Don’t
@@ -3224,12 +3230,20 @@ zh-CN:
         Simulator, a Domain Name System (DNS) is provided for you and knows the IP
         addresses of all connected computers. Send a message in the form GET [hostname]
         to the DNS service at address <yourRouterNumber>.15 to get a student's address.
-      'Internet Simulator: Packets_instruction': "Develop a Protocol for Reliably
-        Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain only 8 characters\r\n-
-        Packets may drop with small probability\r\n- Packets may not arrive in order"
-      'Internet Simulator: Packets_2018_instruction': "Develop a Protocol for Reliably
-        Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain only 8 characters\r\n-
-        Packets may drop with small probability\r\n- Packets may not arrive in order"
+      'Internet Simulator: Packets_instruction': |-
+        Develop a Protocol for Reliably Sending a Message.
+
+        Constraints:
+        - Packets may contain only 8 characters
+        - Packets may drop with small probability
+        - Packets may not arrive in order
+      'Internet Simulator: Packets_2018_instruction': |-
+        Develop a Protocol for Reliably Sending a Message.
+
+        Constraints:
+        - Packets may contain only 8 characters
+        - Packets may drop with small probability
+        - Packets may not arrive in order
       'Internet Simulator: Routers_instruction': |-
         Send messages with your classmates
         (Click to see full instructions)
@@ -3670,11 +3684,10 @@ zh-CN:
         gets dropped. In this version of the Internet Simulator, there is a 10% chance
         of a packet being dropped, multiple packets may take different paths to the
         destination, and the default max packet size is set to 6 additional characters.
-      NetSim Standalone Routers Addresses_instruction: "For this activity, connect
-        to a router with the others in your group. Important note: The router will
-        only properly route messages where the first 4 bits are the To: address and
-        the second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support
-        hierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone Routers Addresses_instruction: |-
+        For this activity, connect to a router with the others in your group. Important note: The router will only properly route messages where the first 4 bits are the To: address and the second 4 bits are the From: address.
+
+        [TODO: NetSim needs to support hierarchical addresses. For now, level is set up for 4 bit to and from addresses]
       NetSim Standalone SendAB_instruction: |-
         You and your partner share a single
         wire that can only be in state A or state B. You can set the wire to either
@@ -3737,10 +3750,10 @@ zh-CN:
       New Infinity Project_instruction: 创建并分享你想的任何东西！
       New Minecraft Hero Project_instruction: "**自由游戏时间：** 是时候自行探索了！"
       New Sports Project_instruction: 创建你自己的游戏！这里一切由你做主：你可以改变所有的规则，混合搭配运动，发挥您的创造力！当你完成后，点击“完成”来让你的朋友在他们的手机上尝试你的游戏。
-      Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple
-        videogame, and then figuring out how it works. You can use the arrow keys
-        to move the ninja left, right and jump - try to catch the unicorn and avoid
-        the dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
+      Ninjacat Demo B (copy 1)_instruction: "\nLet’s begin by exploring a simple videogame,
+        and then figuring out how it works. You can use the arrow keys to move the
+        ninja left, right and jump - try to catch the unicorn and avoid the dragon!\n\n\n\n
+        \ \n\n"
       Ninjacat Demo B_instruction: |-
         Let’s begin by exploring a simple videogame,
         and then figuring out how it works. You can use the arrow keys to move the
@@ -3817,10 +3830,10 @@ zh-CN:
         button and you should see at least one version. Each time you go back to a
         Big Game level you'll get a new record in your version history that you can
         revert back to.
-      PDAlg Big Game Remix_instruction: "Here's your Big Game as you last left it.
-        Try clicking the Remix button to spin off a new remix of your project.\r\n\r\nAny
-        changes you make after you click Remix will be saved on your new remix and
-        not on your main Big Game."
+      PDAlg Big Game Remix_instruction: |-
+        Here's your Big Game as you last left it. Try clicking the Remix button to spin off a new remix of your project.
+
+        Any changes you make after you click Remix will be saved on your new remix and not on your main Big Game.
       PDAlg Design Recipe Delete_instruction: |-
         Click the delete button to get rid
         of this function, then try creating and deleting a few of your own.
@@ -4066,15 +4079,16 @@ zh-CN:
         那么每次转多少度，迭代20次以后能得到360度呢？
       Ryan Test Locked Blocks_instruction: 这里有个函数叫做“巡逻”。编辑它来让猫向上移动400像素，再向下移动400像素。
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.
-        \r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"
-        function only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor
-        example: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level
-        4 to move to the next puzzle. "
+        \n\nUse an \"if\" statement to program your game to call the \"level_up\"
+        function only when \"player_score\" becomes greater than a certain number.\n\nFor
+        example: \"player_score\" > 6\n\nPlay the game, and make it past level 4 to
+        move to the next puzzle. "
       RyanTest3_instruction: 这个级别已打开了形状转换功能! 刷新来查看不同的变量。
       SG Add Subgoals practice_instruction: 尽量用简练的代码在乌龟的右前方绘制一个3x3 的网格。乌龟应该处在原来的位置,
         保持原来的朝向。(点击查看完整说明)
-      SG U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click
-        to see full instructions)"
+      SG U3L03 - draw rect function_instruction: |-
+        Write a function called drawRectangle().
+        (Click to see full instructions)
       SG U3L03 - draw step_instruction: |-
         Write the drawStep function. (Click to see
         full instructions)
@@ -4259,7 +4273,7 @@ zh-CN:
       Text Compression 1_instruction: "Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
-        into the text in place of the pattern.\r\n\r\n"
+        into the text in place of the pattern.\n\n"
       The Vigenere Cipher Widget_instruction: 说明
       The Vigenere Cipher Widget_2018_instruction: 说明
       The Vigenere Cipher_instruction: 说明
@@ -4294,10 +4308,13 @@ zh-CN:
       U2L04 - NetSim Routers with Addresses_instruction: |-
         Send messages with your
         classmates (Click to see full instructions)
-      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol for
-        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain only
-        6 characters\r\n- Packets may drop with small probability\r\n- Packets may
-        not arrive in order"
+      U2L05 - NetSim - Packets and Building TCP_instruction: |-
+        Develop a Protocol for Reliably Sending a Message.
+
+        Constraints:
+        - Packets may contain only 6 characters
+        - Packets may drop with small probability
+        - Packets may not arrive in order
       U2L10 NetSim Automatic DNS_instruction: |-
         In this version of the Internet Simulator,
         a Domain Name System (DNS) is provided for you and knows the IP addresses
@@ -4316,15 +4333,14 @@ zh-CN:
         Use the Internet Simulator to test out your
         group's binary communication protocol for battleship. How short can you make
         the message and response?
-      U2L4 NetSim Routers Addresses_instruction: "For this activity, connect to a
-        router with the others in your group. Important note: The router will only
-        properly route messages where the first 4 bits are the To: address and the
-        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support
-        hierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      U2L4 NetSim Routers Addresses_instruction: |-
+        For this activity, connect to a router with the others in your group. Important note: The router will only properly route messages where the first 4 bits are the To: address and the second 4 bits are the From: address.
+
+        [TODO: NetSim needs to support hierarchical addresses. For now, level is set up for 4 bit to and from addresses]
       U2L5 NetSim Classroom Internet_instruction: "For this activity, connect to a
         router with the others in your group. The Internet Simulator now provides
         a place for you to put the To and From addresses, so you don't have to type
-        out the bits manually.\r\n\r\n"
+        out the bits manually.\n\n"
       U2L7 NetSim Need for Packets_instruction: |-
         Transfer your favicon to a partner
         across a network in which the larger a packet grows, the more likely it is
@@ -4884,6 +4900,8 @@ zh-CN:
       U3 - Simulation - Template_instruction: |-
         Use a while loop to "flip 10 coins"
         and write them to the screen. (Click to see full instructions)
+      U3 - Simulation - Template_2018_instruction: Use a while loop to "flip 10 coins"
+        and write them to the screen. (Click to see full instructions)
       U3 - Sprites - Intro Sprites_instruction: Do This
       U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
       U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
@@ -5024,10 +5042,12 @@ zh-CN:
         Run a program with two buttons that have the
         same id to see the warning message in the console. Change the ids to make
         the program run without getting a warning message.
-      U3L03 - draw rect function_instruction: "Write a function called drawRectangle().\r\n(Click
-        to see full instructions)"
-      U3L03 - draw rect function_2018_instruction: "Write a function called drawRectangle().\r\n(Click
-        to see full instructions)"
+      U3L03 - draw rect function_instruction: |-
+        Write a function called drawRectangle().
+        (Click to see full instructions)
+      U3L03 - draw rect function_2018_instruction: |-
+        Write a function called drawRectangle().
+        (Click to see full instructions)
       U3L03 - draw step_instruction: |-
         Write the drawStep function. (Click to see
         full instructions)
@@ -5340,13 +5360,10 @@ zh-CN:
       U3L13 - Debug Id Problem_instruction: |-
         Improve the button by choosing a descriptive
         and meaningful ID. (Click to see full instructions)
-      U3L13 - Debug Id plus logic problem_instruction: "The last problem was an example
-        of syntax error.  App Lab did not understand which object it should be listening
-        to for a \"click\" event so it showed an error message in the console to let
-        you know.  Another kind of error is a logical error - the program is valid,
-        but it's not doing what you want it to do.\r\n\r\nThis program has 2 errors.
-        A (tricky) syntax error and logical error.  Find them, fix them, and make
-        the program work as expected."
+      U3L13 - Debug Id plus logic problem_instruction: |-
+        The last problem was an example of syntax error.  App Lab did not understand which object it should be listening to for a "click" event so it showed an error message in the console to let you know.  Another kind of error is a logical error - the program is valid, but it's not doing what you want it to do.
+
+        This program has 2 errors. A (tricky) syntax error and logical error.  Find them, fix them, and make the program work as expected.
       U3L13 - Debugging 1_instruction: |-
         Debug the program by verifying your IDs are
         being referenced properly. (Click to see full instructions)
@@ -5641,10 +5658,10 @@ zh-CN:
         'chaser-game'
       U3L19 - do concatenate string with var_instruction: "We've given you a piece
         of code from the previous screen.  Try changing the value assigned to foo
-        to see the string change. \r\nDo this: \r\n1. Try changing the value assigned
-        to foo to see the string change. \r\n2. By only modifying the lines of code
+        to see the string change. \nDo this: \n1. Try changing the value assigned
+        to foo to see the string change. \n2. By only modifying the lines of code
         that were given to you, try to get the output to say: “The value of foo is:
-        9.  And isn’t that fine.” \r\n"
+        9.  And isn’t that fine.” \n"
       U3L19 - fix the var name syntax error v2_instruction: |-
         Fix the error and get
         it to print the value of both variables (Click to see full instructions)
@@ -5670,9 +5687,9 @@ zh-CN:
         the statement write(\"foo is: \" + foo) with console.log(\"foo is: \" + foo).
         \ Run the program and you should see the output show up in the console area
         below the workspace.  Then try adding a few more console.log statements.  Display
-        some text.  Make another variable and display that.  \r\nThe app screen will
+        some text.  Make another variable and display that.  \nThe app screen will
         be blank -- that's the point.  With console.log you can test output behind
-        the scenes in a way the user cannot see.  \r\n\r\n\r\nGIF: U3L19-useconsolelog.gif"
+        the scenes in a way the user cannot see.  \n\n\nGIF: U3L19-useconsolelog.gif"
       U3L19 - up down count practice app_instruction: |-
         Set up the down button to
         decrease the value of count by 1 each time it is clicked. (Click to see full
@@ -5827,7 +5844,7 @@ zh-CN:
         and "nder" to the console.
       U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder() to
         get the strings \"begin\" and \"nder\" from a sentence no matter where in
-        the sentence they exist.\r\nPrint the strings and their index to the console. "
+        the sentence they exist.\nPrint the strings and their index to the console. "
       U3L25 String Parsing 6_instruction: |-
         Write a function that takes a name (first
         last) and reorders it (last, first).
@@ -5907,6 +5924,7 @@ zh-CN:
       U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart
         to show the change in popularity of both “
       U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Line Chart Template_2018_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |-
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
@@ -6136,6 +6154,8 @@ zh-CN:
         of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - part 1 - template_instruction: 'Use console.log to display
         the records returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_2018_instruction: 'Use console.log to display
+        the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: |-
         Use readRecords to copy the
         data in your database into your "contacts" global variable and call showCurrentContact.
@@ -6239,10 +6259,10 @@ zh-CN:
         Name\", run the app and click the button. Run it multiple times with different
         names! Watch the console and use the ‘View Data” button to see how the table
         is updated. As you play around make sure you can explain the purpose of each
-        of the circled parts of the diagram.\r\n\r\n"
+        of the circled parts of the diagram.\n\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous
         one we started. Add a text label to collect the users name and use that as
-        the data input for the record.\r\n\r\nRun the app and click the button multiple
+        the data input for the record.\n\nRun the app and click the button multiple
         times and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |-
         We want to improve the user experience.
@@ -6263,13 +6283,15 @@ zh-CN:
       U4L15 Read Data 1_instruction: |-
         Run the level and see what happens. Then edit
         the code to make it print a different column of information.
-      U4L15 Read Data 2_instruction: "Student should create a sentence which puts
-        together all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old
-        and like <<Food>>"
+      U4L15 Read Data 2_instruction: |-
+        Student should create a sentence which puts together all the pieces from a record.
+
+        <<Name>> is <<Age>> years old and like <<Food>>
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object
-        in the array\r\n\r\n"
-      U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records
-        to display your sentence."
+        in the array\n\n"
+      U4L15 Read Data 4_instruction: |2-
+
+        Use a random record from the list of records to display your sentence.
       U5 if-else-if movie example_instruction: |-
         Add an else-if statement in order
         to tell the user if their guess is high or low instead of just wrong. (Click
@@ -6334,6 +6356,7 @@ zh-CN:
       Valentine_playlab_01_instruction: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时,
         她应该把心投向她的朋友们。 '
       Vigenere_instruction: Test
+      Virtual Pet 1 Predict_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run"
         and then click on her?
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
@@ -6376,15 +6399,15 @@ zh-CN:
         the right. As you type entries into the dictionary, the symbol for the entry
         is inserted into the text in place of the pattern.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests
-      aE1_instruction: "You chose to make a square napkin! \r\n\r\nTo finish, draw
-        a square with 20 pixel sides. "
+      aE1_instruction: "You chose to make a square napkin! \n\nTo finish, draw a square
+        with 20 pixel sides. "
       aE2_instruction: |-
         If you place your square loop inside another loop, we call
         that a nested loop. What do you need to add as an outer loop to make sure
         all 14 napkins line up next to each other?
-      aE3_instruction: "We've got to have a tablecloth!  \r\n\r\nTake your row of
-        14 napkins and sew 14 of those together with another **outer loop** to make
-        a cover for our table."
+      aE3_instruction: "We've got to have a tablecloth!  \n\nTake your row of 14 napkins
+        and sew 14 of those together with another **outer loop** to make a cover for
+        our table."
       aE3alternate_instruction: Alternate
       aE3alternateB_instruction: 交替
       aE4_instruction: 交替
@@ -6735,7 +6758,7 @@ zh-CN:
       courseA_harvester_seq10_instruction: 确保采摘了所有的玉米！
       courseA_harvester_seq11_instruction: 自己试试吧！采摘所有玉米。
       courseA_harvester_seq12_instruction: 捡起所有玉米。
-      courseA_harvester_seq13_instruction: 摆弄这些模块来帮助收割者收获**一个**玉米。
+      courseA_harvester_seq13_instruction: 摆弄这些模块来帮助收割者收获玉米。
       courseA_harvester_seq2_instruction: 用三个`向西移动`模块和一个`采摘玉米`模块来通过这关。
       courseA_harvester_seq3_instruction: 用三个`向西移动`模块和一个`采摘玉米`模块。
       courseA_harvester_seq4_instruction: 添加一个模块来帮助收割者采摘玉米。
@@ -6747,7 +6770,7 @@ zh-CN:
       courseA_maze_ramp2_2018_instruction: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseA_maze_ramp2a_2018_instruction: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseA_maze_ramp3_2018_instruction: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
-      courseA_maze_ramp3a_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
+      courseA_maze_ramp3a_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
       courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the
         other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: 躲开TNT炸药，否则羽毛会被炸飞！
@@ -6814,9 +6837,9 @@ zh-CN:
       courseA_toMakeLoopsVideo_Collector_instruction: 循环能让里面的代码不断的重复执行!
       courseA_video_events_instruction: 需要更好的游戏实验室/事件组合
       courseA_video_events_2018_instruction: Need a better playlab/events combo
-      courseB_Scrat_ramp1_2018_instruction: 在这一关中，将所有模块拼到一起，并点击"运行"！
+      courseB_Scrat_ramp1_2018_instruction: 在这一关中，将所有模块拼到一起，并点击"▶运行"！
       courseB_Scrat_ramp2_2018_instruction: 将所有模块接到一起来完成你的代码，然后点击"运行"。
-      courseB_Scrat_ramp3a_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
+      courseB_Scrat_ramp3a_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
       courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox
         to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
@@ -7367,8 +7390,8 @@ zh-CN:
       courseD_bee_conditionals2_test_instruction: '在采集花蜜前，检查每朵云下面是不是有花。  '
       courseD_bee_conditionals3_instruction: "帮助蜜蜂采集所有的花蜜。\n\r\n\r\n只能从花中采到花蜜，但可以查看任何地方看那里是不是有朵花。"
       courseD_bee_conditionals3_2018_instruction: "Help the bee collect all of the
-        nectar. \r\n\r\nYou can only collect nectar from flowers, but you can check
-        any space to see if there is a flower."
+        nectar. \n\nYou can only collect nectar from flowers, but you can check any
+        space to see if there is a flower."
       courseD_bee_conditionals4_instruction: 使用尽可能少的模块来收集所有的花蜜。
       courseD_bee_conditionals4_2018_instruction: |-
         Get all of the nectar using as
@@ -8239,10 +8262,10 @@ zh-CN:
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech by
-        changing the value of the variables in just two places! \r\n"
+        changing the value of the variables in just two places! \n"
       course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech by
-        changing the value of the variables in just two places! \r\n"
-      coursea_maze_ramp1_2018_instruction: 在这一关中，将所有模块拼到一起，并点击"运行"！
+        changing the value of the variables in just two places! \n"
+      coursea_maze_ramp1_2018_instruction: 在这一关中，将所有模块拼到一起，并点击"▶运行"！
       coursef_explore_CYOA_Witch_instruction: 你可以在游戏实验室做任何你想做的事! 下面是一个在游戏实验室中选择自己的冒险故事的例子。
       coursef_explore_playlab2_instruction: 你可以在剧本实验室做任何你想做的事! 下面是一个在剧本实验室中故事的例子。
       coursef_explore_playlab_cat_game_instruction: 你可以在剧本实验室做任何你想做的事! 下面是一个在剧本实验室里游戏的例子。
@@ -8444,9 +8467,10 @@ zh-CN:
       grade2_CaringForNewPet_11_instruction: |-
         "Keep calm and help me find the bad
         pig."
-      grade2_CaringForNewPet_2_instruction: "\"This pig is ruffling my feathers.\"\r\n\r\nThere
-        is one extra block that is going to cause the bird to crash. Throw it away
-        by dragging it back to the toolbox."
+      grade2_CaringForNewPet_2_instruction: |-
+        "This pig is ruffling my feathers."
+
+        There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.
       grade2_CaringForNewPet_2courseC_maze_programming3_instruction: 有一个额外的块将导致小鸟坠落。将其拖回工具箱中扔掉它。
       grade2_CaringForNewPet_3_instruction: |-
         "Trace the path and lead me to the
@@ -8468,20 +8492,26 @@ zh-CN:
         Drag blocks onto the screen to have the artist
         draw over the grey lines in the picture. (Each line is 100 pixels long)
       grade2_MakeDogTag_10_instruction: 现在，随便画你喜欢的东西吧！
-      grade2_MakeDogTag_2_instruction: "This spaceship needs a window!\r\n\r\nEach
-        side of the inner square is 100 pixels and all of the angles are 90 degrees."
+      grade2_MakeDogTag_2_instruction: |-
+        This spaceship needs a window!
+
+        Each side of the inner square is 100 pixels and all of the angles are 90 degrees.
       grade2_MakeDogTag_3_instruction: 帮我为小猫盖好房子
       grade2_MakeDogTag_4_instruction: 这个房子需要一个屋顶！提示：所有三面都具有相同的长度。
-      grade2_MakeDogTag_5_instruction: "\"Now a tag for Belle!\"\r\n\r\nDraw this
-        diamond with 200 pixel sides."
+      grade2_MakeDogTag_5_instruction: |-
+        "Now a tag for Belle!"
+
+        Draw this diamond with 200 pixel sides.
       grade2_MakeDogTag_6_instruction: 自己玩吧！想画什么就画什么。
-      grade2_MakeDogTag_7_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each
-        side is 150 pixels)"
+      grade2_MakeDogTag_7_instruction: |-
+        One more tag.  This is a triangle for Pi.
+        (Each side is 150 pixels)
       grade2_MakeDogTag_8_instruction: 现在，让我们把这一堆V用循环连在一起。
       grade2_MakeDogTag_9_instruction: 重构刚刚那一关的代码，但是这次，加一个左转30度到循环里。现在，重复24次，而不是8次。
-      grade2_MakeDogTag_BFP_instruction: "\"Hi, I'm an artist. You can write code
-        to make me draw almost anything.\"\r\n\r\nPlay with the blocks in the toolbox
-        to see what they do!"
+      grade2_MakeDogTag_BFP_instruction: |-
+        "Hi, I'm an artist. You can write code to make me draw almost anything."
+
+        Play with the blocks in the toolbox to see what they do!
       grade2_MakeDogTag_FP_instruction: |-
         Freeplay: What shape will you make the tag
         for your pet?
@@ -8554,10 +8584,14 @@ zh-CN:
         Solve this puzzle by creating a loop!
       grade2_puppy_loops4_instruction: 在这道题里，两个“重复”循环能够让你用最少数量的模块来到达猪那里！
       grade2_puppy_loops5_instruction: 帮到到达那只猪。
-      grade2_puppy_loops6_instruction: "\"This pig is ruffling my feathers!\"\r\n\r\nLoops
-        even work with more than one block inside!  Can you loop this sequence?"
-      grade2_puppy_loops7_instruction: "\"Get me to the pig!\"\r\n\r\nUse what you
-        learned in other puzzles!"
+      grade2_puppy_loops6_instruction: |-
+        "This pig is ruffling my feathers!"
+
+        Loops even work with more than one block inside!  Can you loop this sequence?
+      grade2_puppy_loops7_instruction: |-
+        "Get me to the pig!"
+
+        Use what you learned in other puzzles!
       grade3_AboutMyRobot_1_instruction: |-
         Make your robot say "Hello!" when the
         button is clicked.
@@ -8671,8 +8705,8 @@ zh-CN:
         Now try checking all of these flowers
         with "if" blocks to see if there is any nectar available.
       grade3_bee_conditionals_new1a_instruction: "Help the bee collect all of the
-        nectar. \r\n\r\nYou can only collect nectar from flowers, but you can check
-        any space to see if there is a flower."
+        nectar. \n\nYou can only collect nectar from flowers, but you can check any
+        space to see if there is a flower."
       grade3_bee_conditionals_new1b_instruction: |-
         帮助蜜蜂采集所有的花蜜。
         你只能从花中采到花蜜，但你可以查看任何地方以确定哪里有花。
@@ -8706,9 +8740,9 @@ zh-CN:
       grade3_bee_conditionals_quantum4_instruction: |-
         Use the `if/else` block to collect
         nectar at flowers and make honey at honeycomb.
-      grade3_bee_conditionals_quantum5_instruction: "Use the `if/else` block to collect
-        nectar if there is a flower.\r\nOtherwise, make honey (because there is a
-        honeycomb)."
+      grade3_bee_conditionals_quantum5_instruction: |-
+        Use the `if/else` block to collect nectar if there is a flower.
+        Otherwise, make honey (because there is a honeycomb).
       grade3_maze_Loop1_instruction: '评估：只用5个模块帮我到达向日葵！ '
       grade3_maze_loops1_instruction: Get the zombie to the sunflower.
       grade3_maze_loops2_instruction: "用最少的模块帮我到达向日葵！\r\n\r\n试着在一个“重复”循环里添加另一个，这样来减少所需要模块的数量。
@@ -8769,7 +8803,7 @@ zh-CN:
         this entire pile using a `while` loop.
       grade3_robotFarmer_ConditionalsIntro_1_instruction: "*\"Hi, I'm a farmer. I
         need your help to flatten the field on my farm so it's ready for planting!\"*
-        \ \r\n\r\nMove to the pile of dirt and use the `remove` block to remove it."
+        \ \n\nMove to the pile of dirt and use the `remove` block to remove it."
       grade3_robotFarmer_ConditionalsIntro_10_instruction: |-
         I'm working late, so
         it's dark out, and I can't tell how large the piles are. Now I don't have
@@ -8786,14 +8820,15 @@ zh-CN:
       grade3_robotFarmer_ConditionalsIntro_3_instruction: |-
         *"Move to the pile of
         dirt and tell me how many shovelfuls to remove using as few blocks as possible."*
-      grade3_robotFarmer_ConditionalsIntro_4_instruction: "*\"I don't know how much
-        dirt is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile using
-        a `while` loop."
+      grade3_robotFarmer_ConditionalsIntro_4_instruction: |-
+        *"I don't know how much dirt is in this pile!"*
+
+        Help the farmer remove this entire pile using a `while` loop.
       grade3_robotFarmer_ConditionalsIntro_5_instruction: "Help me remove all of\nthis
         dirt. "
       grade3_robotFarmer_ConditionalsIntro_6_instruction: 移走所有的土堆，尽可能使用尽量少的块。在”当“块的下拉菜单中有新的选项，它能告诉我现在是否站在一个土堆或一个洞上。
       grade3_robotFarmer_ConditionalsIntro_7_instruction: "Look at all of those holes!
-        \ Each one needs a different amount of dirt.   \r\n\r\nYou can use the `while`
+        \ Each one needs a different amount of dirt.   \n\nYou can use the `while`
         loop to easily fill them all!"
       grade3_robotFarmer_ConditionalsIntro_8_instruction: |-
         Fill in the hole at the
@@ -8879,9 +8914,9 @@ zh-CN:
         you can draw three! Try using your choice of a nested loop or a function here.
         Don't forget the jump block!
       grade4_artist_functions_windows2_instruction: "Try solving this puzzle by creating
-        `draw a window` and calling it five times. Watch out for the door!\r\n\r\n-
-        The top windows are 50 pixels away from each other.  \r\n- The bottom windows
-        are 100 pixels below the top set."
+        `draw a window` and calling it five times. Watch out for the door!\n\n- The
+        top windows are 50 pixels away from each other.  \n- The bottom windows are
+        100 pixels below the top set."
       grade4_artist_nestedLoops_challenge_instruction: "点击这里再看一遍提示！\r\n\r\n这里是这个有趣的图形的代码。当你重复多次，在每次转动之间会发生什么？这样会让图形转动最多420度。这也表示当小艺术家画完后，就和刚开始时面朝不一样的方向了。新的方向正好是向右转了60度。"
       grade4_artist_nestedLoops_challenge2_instruction: 挑战来了！多试验，多试错，不要指望第一次就能完全正确。想看看更多的提示？点击这里！
       grade4_artist_nested_loop_circles1_instruction: 评估：用嵌套循环来完成这幅画。
@@ -8891,7 +8926,7 @@ zh-CN:
       grade4_artist_nested_loop_polygons1_instruction: "循环这个图形10次。\r\n\r\n你的循环里每次需要转多少度呢？"
       grade4_artist_nested_loop_polygons2_instruction: "Hi, I'm the Artist! Let's
         create some drawings together! For starters, try repeating this shape 6 times.
-        \r\n\r\nHow much do you have to turn each time you loop? "
+        \n\nHow much do you have to turn each time you loop? "
       grade4_artist_nested_loop_squares1_instruction: |-
         Can you draw these 10 squares
         of this sidewalk using a nested loop? Each square is 30 pixels.
@@ -8900,9 +8935,10 @@ zh-CN:
         these triangles.  The first one is done for you.  Hint:  3 triangles in a
         360 degree rotation.
       grade4_artist_nested_loop_triangles2_instruction: "Let's make a quick adjustment
-        to get completely different image!  \r\nHint: ? × 10 = 360"
-      grade4_artist_nested_loop_triangles3_instruction: "Can you draw a hexagon by
-        looping the triangle code?\r\nHint: 6 × ? = 360"
+        to get completely different image!  \nHint: ? × 10 = 360"
+      grade4_artist_nested_loop_triangles3_instruction: |-
+        Can you draw a hexagon by looping the triangle code?
+        Hint: 6 × ? = 360
       grade4_artist_nested_loop_triangles4_instruction: |-
         Hi! I'm the Artist. Let's
         try some different types of drawings together. Can you help me draw the bottom
@@ -8999,14 +9035,17 @@ zh-CN:
         few blocks as possible.
       grade4_bee_nestedLoops3_instruction: 创建一个嵌套循环来收集所有花蜜。
       grade4_bee_nestedLoops4_instruction: '从所有的花里收集花蜜，然后在蜂窝那里酿花蜜。 '
-      grade4_bee_nestedLoops_assess_instruction: "**Assessment:** Collect all of the
-        nectar and make all of the honey using loops.\r\n\r\nHint: There are several
-        possible solutions!"
+      grade4_bee_nestedLoops_assess_instruction: |-
+        **Assessment:** Collect all of the nectar and make all of the honey using loops.
+
+        Hint: There are several possible solutions!
       grade4_designProcess_vid_instruction: |-
         Prepare to build a project within some
         given parameters.
-      grade4_farmer_functions1_instruction: "*\"Have we met before? I'm the farmer!\"*\r\n\r\nHelp
-        the farmer get to the pumpkins and pick them."
+      grade4_farmer_functions1_instruction: |-
+        *"Have we met before? I'm the farmer!"*
+
+        Help the farmer get to the pumpkins and pick them.
       grade4_farmer_functions2_instruction: |-
         Take the code you just wrote it and
         use it to define a new function. Call the function twice to complete the puzzle.
@@ -9072,13 +9111,14 @@ zh-CN:
       grade4_scaffolded_project1_instruction: |-
         It is amazing how much you have learned!
         Let's put them together to make a game, step by step.
-      grade4_scaffolded_project2_instruction: "Now let's get things moving! Use event
-        handlers and actions to make your hero move.\r\n\r\nWe've added these blocks
-        to your tool box to help you.\r\n"
+      grade4_scaffolded_project2_instruction: |
+        Now let's get things moving! Use event handlers and actions to make your hero move.
+
+        We've added these blocks to your tool box to help you.
       grade4_scaffolded_project3_instruction: "Now that your game has a hero, it's
-        time to start adding other actors and assigning them behaviors. \r\n\r\nAdd
-        two or more additional actors to your game and make them move. Do you want
-        to have an actor patrol back and forth? Try using a these new blocks to bring
+        time to start adding other actors and assigning them behaviors. \n\nAdd two
+        or more additional actors to your game and make them move. Do you want to
+        have an actor patrol back and forth? Try using a these new blocks to bring
         these other components of your game to life!"
       grade4_scaffolded_project4_instruction: |-
         Just getting the actors moving is
@@ -9110,9 +9150,10 @@ zh-CN:
       grade5_artist_binary8_instruction: 完成这幅画。
       grade5_artist_binary9_instruction: "这是更高分辨率的画布 - 16像素乘以16像素！\r\n\r\n看看你用二进制位能创造出什么？"
       grade5_artist_for_loops1_instruction: 用一个计数循环来画这个边长50的三角形。如果你从1数到3，每次增加1，这就像一个“重复”循环模块。
-      grade5_artist_for_loops10_instruction: "Can you figure out how to use all of
-        the things you've learned to create this image?\r\n\r\nNeed a hint? Click
-        here."
+      grade5_artist_for_loops10_instruction: |-
+        Can you figure out how to use all of the things you've learned to create this image?
+
+        Need a hint? Click here.
       grade5_artist_for_loops1a_instruction: |-
         Try using a `for loop`to create this
         triangular design. Don't worry that the numbers are different than the last
@@ -9134,9 +9175,9 @@ zh-CN:
       grade5_artist_for_loops7a_instruction: |-
         Take the angle down to 72 degrees to
         get a spiraled pentagon.
-      grade5_artist_for_loops7b_instruction: "Use the counter inside the `set alpha`
-        block to get this faded center.\r\n(This hexagon pattern was made using a
-        60 degree turn.)"
+      grade5_artist_for_loops7b_instruction: |-
+        Use the counter inside the `set alpha` block to get this faded center.
+        (This hexagon pattern was made using a 60 degree turn.)
       grade5_artist_for_loops8_instruction: '还记得在前一阶段中，我们用变量来控制形状中边的数量吗？现在，我们要用“计数器”变量来做同样的事情了。这个图形从一个三角形开始，并且每次加一条边直到画出一个十边形。每条边应该是100像素长。 '
       grade5_artist_for_loops9_instruction: "让我们总结一下吧！用你的“计数循环”和“计数器”的知识，来创造出每个形状都比上一个多两条边的画。确保每条边的长度都是这个多边形边的数量的10倍。\r\n\r\n这里有非常少的一些代码。"
       grade5_artist_for_loopsfreeplay11_instruction: "自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。\r\n\r\n需要提示？点击这里。"
@@ -9197,13 +9238,15 @@ zh-CN:
         of each triangle are 25 pixels larger than the last.  The first triangle has
         25 pixel sides. Replace the '???' with the correct values to draw the picture.
       grade5_artist_parameters_triangles2a_instruction: 你注意到这些函数模块有什么不同吗？点击“运行”来看看会发生什么。
-      grade5_artist_parameters_triangles3_instruction: "The code for this triangle
-        function is broken.\r\n\r\nCan you edit the function to fix it, and then make
-        triangles of length 150, 75, 25?"
+      grade5_artist_parameters_triangles3_instruction: |-
+        The code for this triangle function is broken.
+
+        Can you edit the function to fix it, and then make triangles of length 150, 75, 25?
       grade5_artist_parameters_triangles4_instruction: 这个三角形的代码被破坏了。你能修好这个函数，让它能画边长25，50，75像素的三角形吗？
-      grade5_artist_parameters_trianglesy_instruction: "The code for this triangle
-        function is broken.\r\n\r\nCan you edit the function to fix it, and then make
-        triangles of length 150, 75, 25?"
+      grade5_artist_parameters_trianglesy_instruction: |-
+        The code for this triangle function is broken.
+
+        Can you edit the function to fix it, and then make triangles of length 150, 75, 25?
       grade5_artist_variables_freeplay10_instruction: 自由发挥：尝试改变这个图形的边数。你能改变算法，不管边数是多少，都让这个图形的大小基本不变吗？提示：如果你用长度除以边数，这样当边数变多的时候，每条边长会变短。
       grade5_artist_variables_freeplay14_instruction: "自由发挥！现在你的算法嵌套到了又一个循环中。试着改变这两个变量的值来画出很酷的图形。\r\n\r\n如果想看到更好的效果，试试使用颜色模块！在循环里面使用随机颜色，看看效果如何。"
       grade5_artist_variables_freeplay15_instruction: "想再看一次启发人的设计或者提示吗？点击这里！\r\n\r\n除此之外，你也可以设计自己的图形！"
@@ -9259,36 +9302,36 @@ zh-CN:
         binary. The binary language will be represented with '0' and '1' only.
       grade5_playlab_freeplay_instruction: '自由游戏时间！可以使用工具箱里的所有模块，玩的开心！ '
       grade5_playlab_parameters_points1_instruction: "Here's the same game but most
-        of the code is hidden. We've added a new function called `score_points.`\r\n\r\nAdd
-        a new parameter called `points` to the `player_score` function. \r\n\r\nThe
-        `score_points` function should be able to both add and remove points from
-        `player_score` depending on which actor is hit.\r\nChanging the score by 1
-        will add a point, while changing the score by -1 will subtract a point.\r\n\r\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will move
-        on to the next puzzle. "
+        of the code is hidden. We've added a new function called `score_points.`\n\nAdd
+        a new parameter called `points` to the `player_score` function. \n\nThe `score_points`
+        function should be able to both add and remove points from `player_score`
+        depending on which actor is hit.\nChanging the score by 1 will add a point,
+        while changing the score by -1 will subtract a point.\n\nWhen you're done,
+        click \"Run\" to play.  When Dog scores 6 points, you will move on to the
+        next puzzle. "
       grade5_playlab_variables1_instruction: 这次你不需要写任何代码，点击“运行”来玩游戏吧！在这个游戏里，你会扮演小狗，要比小猫收集到更多的旗帜。用下方向键来控制小狗。当你玩完以后，点击“完成”。
       grade5_playlab_variables10_instruction: 编辑“巡逻”函数来添加一个“演员”参数，由此调用它时，能让屏幕上每个演员都动起来。记住，演员对应到数字1和2，3上。
       grade5_playlab_variables11_instruction: 添加另一个叫做“速度”的参数到“巡逻”函数里。试着在“设置速度”模块中使用新的“速度”参数，来帮助企鹅在别的小动物之前得到所有旗帜。
       grade5_playlab_variables12_instruction: "来点好玩的！看看这里的代码，是否你能明白每个模块都做了什么。\r\n\r\n看完以后，用方向键来让小狗收集到所有旗帜。\r\n注意：你不必改动代码。"
       grade5_playlab_variables13_instruction: 在小狗碰到任何一个演员时，用“当演员碰到”模块来把小狗送回左上角。
       grade5_playlab_variables14_instruction: '自由游戏时间！可以使用工具箱里的所有模块，玩的开心！ '
-      grade5_playlab_variables1ask_instruction: "This time, when you press 'run',
-        you will see a 'prompt' asking you for a number. This number will be stored
-        in a variable used to set the dog's speed.\r\n\r\n\r\nPay attention to how
-        this program is written!"
+      grade5_playlab_variables1ask_instruction: |-
+        This time, when you press 'run', you will see a 'prompt' asking you for a number. This number will be stored in a variable used to set the dog's speed.
+
+
+        Pay attention to how this program is written!
       grade5_playlab_variables2_instruction: 上次关卡的比赛不太公平！改变“dog_speed”（小狗速度）变量来让你能比小猫收集到更多的旗帜。最先收集到10个旗帜的就算赢！
       grade5_playlab_variables3_instruction: 用左右方向键来移动，上方向键跳跃。看看你能否收集到所有的旗帜。
       grade5_playlab_variables4_instruction: 现在，我们用一个叫做“高度”的变量来控制小狗能跳多高。修改“高度”变量，让小狗能跳足够高，得到所有旗帜。
-      grade5_playlab_variables5_instruction: "You've seen now how a variable can be
-        used to set the height of an actor's jump. How else could  you use a variable?\r\n\r\nLet's
-        build a game! First we'll need a score. Try setting the 'points' variable
-        to give yourself 10 free points!"
+      grade5_playlab_variables5_instruction: |-
+        You've seen now how a variable can be used to set the height of an actor's jump. How else could  you use a variable?
+
+        Let's build a game! First we'll need a score. Try setting the 'points' variable to give yourself 10 free points!
       grade5_playlab_variables6_instruction: "用右方向键来发射馅饼。\r\n\r\n在游戏中，怎么才能得分呢？每次小狗用馅饼击中小猫时，往“points”（分数）变量上加1。用“当演员2碰到任何东西”来触发分数的更新。通过使用\"points
         = points + 1\"来增加分数。将分数增加到10分（每次只加1分！）来通过这一关。"
-      grade5_playlab_variables6ask_instruction: "This time, you need 100 points to
-        win!  Don't worry though, you can choose how many points you earn each time
-        you score a hit!\r\nTry adding the `ask` block and changing the number 1 out
-        for the variable `value`."
+      grade5_playlab_variables6ask_instruction: |-
+        This time, you need 100 points to win!  Don't worry though, you can choose how many points you earn each time you score a hit!
+        Try adding the `ask` block and changing the number 1 out for the variable `value`.
       grade5_playlab_variables7_instruction: 很好，让确保这个游戏不是太简单。任何时候，小狗（演员1）被小猫（演员2）扔出的三明治击中时，就丢失1分。让我们从10分开始，这样就不会太难了。让你的分数从10减到0来通过这一关。
       grade5_playlab_variables71_instruction: "这是一个早先的游戏，但是大部分代码都隐藏了。这里有个新函数叫做“score_points”（得分）。\r\n\r\n编辑这个函数，使得“points”（分数）参数能加到“player_score”（玩家分数）变量上。\n\r\n\r\n“player_score”（玩家分数）变量会在每次小狗的馅饼碰到小猫时增加，在小猫的三明治碰到小狗时减少。\r\n\r\n注意：当你完成后，点击“运行”来玩玩。当小狗得到6分时，就可以进入下一关。 "
       grade5_playlab_variables81_instruction: "我们已为你添加了上一关的函数。\r\n\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数)
@@ -9468,9 +9511,10 @@ zh-CN:
       k1stickerfreeplay_instruction: |-
         The artist saw something funny in the distance.  Draw
         what you think he saw.
-      kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can
-        only use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she
-        can using just 4 blocks?"
+      kikiTesta_instruction: |-
+        Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.
+
+        Can you help her grab as many as she can using just 4 blocks?
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       level 'grade3_Loops_10_instruction: "忙碌的蜜蜂！\r\n\r\n帮助蜜蜂用尽可能少的模块来收集花蜜并酿蜂蜜。"
       level 'grade3_Loops_11_instruction: "这条路的形状和其它的不一样。\r\n\r\n你能用尽量少的模块来收集所有花蜜吗？"
@@ -9504,8 +9548,8 @@ zh-CN:
         bee to grab nectar from each one so he can make plenty of honey back at his
         hive!
       love_spring_3_instruction: "Figure out how to change this code so that Robin
-        chooses a number between 1 and 20.  \r\n\r\nWhen you're ready, press \"Run\"
-        and play until you guess Robin's number!"
+        chooses a number between 1 and 20.  \n\nWhen you're ready, press \"Run\" and
+        play until you guess Robin's number!"
       marina_gameLab_play_instruction: 克隆这一关，并制作自己的模块！
       mike3bit_instruction: |-
         We start you with the 4x2 image Maddie was creating,
@@ -9520,7 +9564,7 @@ zh-CN:
         classmates! You can copy and paste the value of a pixel to use it repeatedly.
       mike3bitmario_instruction: "A careless binary coder typed in ONE extra 0 or
         1 somewhere within this image's data. The extra bit that is causing Mario
-        to glitch out! \r\n\r\nDelete the extra bit to restore Mario back to normal!"
+        to glitch out! \n\nDelete the extra bit to restore Mario back to normal!"
       pet game 1_instruction: 用"制作一个新精灵"模块来制作自己的宠物！
       pet game 2_instruction: 你的宠物需要练习！用"增加行为"模块来让它们移动。
       pet game 3_instruction: 宠物喜爱玩具！用另一个"制作精灵"模块来给你的宠物一个玩具，然后用"向前移动"行为来让宠物跑向它们的新玩具。
@@ -9533,7 +9577,10 @@ zh-CN:
       playEventsK1_instruction: |-
         This game is called "Play Lab".  See if you can
         figure out what each block does.
-      playEventsK2_instruction: "Jorge wants to say \"Hi there.\"\r\n\r\nCan you help?"
+      playEventsK2_instruction: |-
+        Jorge wants to say "Hi there."
+
+        Can you help?
       playEventsK3_instruction: |-
         Jorge wants to be scratched behind the ears!  Can
         you make it so that when you click Jorge he is happy?
@@ -9569,13 +9616,14 @@ zh-CN:
       ramp_artist_loops8_clone_instruction: 寻找规律，使用循环使此代码更短。
       ramp_artist_loops9_instruction: 通过绘制正方形来解决这个关卡。
       ramp_artist_loops9_2018_instruction: 通过绘制正方形来解决这个关卡。
-      sample1_instruction: "Our adventurer wants to collect coins.  But she can only
-        use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she can
-        using just 4 blocks?"
+      sample1_instruction: |-
+        Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.
+
+        Can you help her grab as many as she can using just 4 blocks?
       sample10_instruction: Now you can use loops to draw whatever you like!
       sample10a_instruction: "You have helped the adventurer and her bee!  As a reward,
-        please stay and play around in my magical village. \r\n\r\nYou should have
-        everything you need to create a game of your own."
+        please stay and play around in my magical village. \n\nYou should have everything
+        you need to create a game of your own."
       sample2_instruction: |-
         Use what you've learned to help bee gather all of this
         honey using only the blocks that you have here.
@@ -9588,8 +9636,10 @@ zh-CN:
       sample3assessment_instruction: |-
         Can you figure out how to gather all of this
         nectar in just one try?
-      sample4_instruction: "Our adventurer has found a stash of coins in this cave.\r\n\r\nCan
-        you help her grab as many as she can using just 7 blocks?"
+      sample4_instruction: |-
+        Our adventurer has found a stash of coins in this cave.
+
+        Can you help her grab as many as she can using just 7 blocks?
       sample5_instruction: Help bee make all of the honey.
       sample6_instruction: 'Challenge: Help bee make all of the honey.'
       sample7assessment_instruction: |-

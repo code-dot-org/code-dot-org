@@ -70,17 +70,7 @@
   congratulations: "恭喜你！"
   congratulations_on_completing_hoc: "恭喜你完成了一小時玩程式活動"
   congratulations_volunteer: '恭喜：你已經體驗過一小時的程式設計課程了，現在你可以<a href="https://code.org/volunteer">報名成為志工</a>來幫助學生學習一小時玩程式課程。'
-  congratulations_on_completing_course1: "恭喜您完成課程 1"
-  congratulations_on_completing_course2: "恭喜您完成課程 2"
-  congratulations_on_completing_course3: "恭喜您完成課程 3"
-  congratulations_on_completing_course4: "恭喜您完成課程 4"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
-  congratulations_on_completing_accelerated: "恭喜您完成速成課程"
+  congratulations_on_completing_course: "Congratulations on completing %{course}"
   congrats_next_tutorials_title: "畢業到下一級別"
   congrats_next_tutorials_desc: "試試這些簡短的、不到 1 小時的教程，或是試試<a href=\"%{current_path}/next\">合作夥伴的教程</a>。"
   get_a_certificate_of_achievement: "獲取成就證書"
@@ -213,17 +203,7 @@
   just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "我剛完成了快速入門課程 - 有空你也來看看吧！@codeorg"
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course_donor: "I just finished %{course} - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "每 10 人就有 9 人同意學校應該教計算機科學。http://youtu.be/nKIu9yen5nc，造訪 https://code.org/。"
   twitter_cs_foundational: "計算機科學是適合每一個學生學習的基礎觀念。https://youtu.be/QvyTEx1wyOY"
   learn_hoc: "學習一小時的程式設計"
@@ -538,7 +518,7 @@
   volunteer_engineer_submission_field_email_desc: "你的電子信箱絕不會公開，但如果你的老師有任何通知時，我們會轉發到這個信箱。"
   volunteer_engineer_submission_field_email_placeholder: "電子信箱"
   volunteer_engineer_submission_field_email_preference: "我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？"
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(請參閱我們的隱私政策)"
   volunteer_engineer_submission_field_email_preference_yes: '是'
   volunteer_engineer_submission_field_email_preference_no: '否'
   volunteer_engineer_submission_final_paragraph: "你會被標示在地圖上，這樣當地的老師就能在辦理一小時玩程式活動時有機會與你或其他志工聯絡。我們絕對不會洩漏你的電子信箱和聯絡地址，但其他資訊（包括你的大略位置）會公開讓當地老師看到。"
@@ -1101,6 +1081,18 @@
   coursed_gradelevel: "年級 8+"
   coursee_gradelevel: "年齡 8-12"
   coursef_gradelevel: "Ages 9-13"
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: 年級 8+
+  coursee-2017_gradelevel: 年齡 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: 年級 8+
+  coursee-2018_gradelevel: 年齡 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: "年齡 10-18"
   codeorg_platformtext: "現代瀏覽器、手機、平板"
   codeintl_platformtext: "瀏覽器, 智慧手機, 平板"
@@ -1209,6 +1201,18 @@
   coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
   coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
   coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
+  coursea-2017_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
   codeorg_longdescription: "使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有 34 種語言可用。"
   codeintl_longdescription: "學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、 條件和基本演算法。在 34 種語言中可用。"
   thinkersmithspanish_longdescription: "生物 el 美國勞軍聯合組織德聯合國\"Vocabulario 機器人\"predefinido，洛杉磯隊 descubrirán 科摩 guiarse de modo tal de llevar 卡波雷 específicas 罪 ser estas discutidas previamente。埃斯特角城 segmento enseña 洛杉磯隊 la conexión 恩特雷 símbolos y acciones 歷史科摩拉 valiosa habilidad de depuración。"
