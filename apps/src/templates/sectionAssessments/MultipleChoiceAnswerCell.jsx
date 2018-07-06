@@ -6,19 +6,21 @@ const styles = {
   main: {
     border: 'none',
     display: 'flex',
+    justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
     height: '100%',
   },
+  overviewMain: {
+    padding: 10,
+  },
   icon: {
     color: color.level_perfect,
-    paddingRight: 5,
   },
   value: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
-    marginRight: 15,
-    marginLeft: 10,
+    marginRight: 10,
   },
 };
 
@@ -57,7 +59,7 @@ class MultipleChoiceAnswerCell extends Component {
     }
 
     return (
-      <div style={{...styles.main, ...backgroundCSS}}>
+      <div style={{...styles.main, ...backgroundCSS, ...styles.overviewMain}}>
         <div style={styles.value}>
           {(percentValue >= 0) &&
             <span>{`${percentValue}%`}</span>
