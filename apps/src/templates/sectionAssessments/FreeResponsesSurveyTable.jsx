@@ -4,6 +4,13 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import color from "@cdo/apps/util/color";
+
+const styles = {
+  noResponse: {
+    color: color.lighter_gray,
+  }
+};
 
 export const COLUMNS = {
   RESPONSE: 0,
@@ -44,11 +51,16 @@ class FreeResponsesSurveyTable extends Component {
   };
 
   studentResponseColumnFormatter = (response, {rowIndex}) => {
-    const numStudentResponses = this.props.freeResponses.length;
-
-    if (numStudentResponses >= 5) {
-      return response;
-    }
+    return (
+      <div>
+        {response &&
+          <div>{response}</div>
+        }
+        {!response &&
+          <div style={styles.noResponse}>{i18n.emptyFreeResponse()}</div>
+        }
+      </div>
+    );
   };
 
   getColumns = (sortable) => {
