@@ -38,9 +38,10 @@ class FreeResponsesAssessmentsContainer extends Component {
         {freeResponseQuestions.map((question, index) => (
           <div key={index}>
             <div style={styles.text}>
-              <span>{`${question.questionNumber}. ${question.questionText}`.slice(0, QUESTION_CHARACTER_LIMIT)}</span>
-              {((question.questionText.length >= QUESTION_CHARACTER_LIMIT))
-                ? <a href="#"><span>{i18n.seeFullQuestion()}</span></a> : null}
+              {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
+              {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
+                <a href="#"><span>{i18n.seeFullQuestion()}</span></a>
+              }
             </div>
             <FreeResponsesAssessmentsTable
               freeResponses={question.responses}
