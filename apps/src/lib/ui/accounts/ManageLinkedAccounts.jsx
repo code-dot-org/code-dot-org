@@ -21,6 +21,9 @@ const authOptionPropType = PropTypes.shape({
   credentialType: PropTypes.string.isRequired,
   email: PropTypes.string,
   hashedEmail: PropTypes.string,
+  error: PropTypes.string,
+  isConnecting: PropTypes.bool,
+  isDisconnecting: PropTypes.bool,
 });
 
 class ManageLinkedAccounts extends React.Component {
@@ -63,15 +66,10 @@ class ManageLinkedAccounts extends React.Component {
   toggleProvider = (provider) => {
     const authOption = this.getAuthenticationOption(provider);
     if (authOption) {
-      this.props.disconnect(authOption.id).then(_, this.onFailure);
+      this.props.disconnect(authOption.id);
     } else {
       this.connect(provider);
     }
-  };
-
-  onFailure = (error) => {
-    // TODO: (madelynkasula) display error to user
-    console.log(error.message);
   };
 
   cannotDisconnectGoogle = () => {

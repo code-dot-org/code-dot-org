@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 /** Initial state for manageLinkedAccounts redux store.
  * authenticationOptions - array of authentication options for current user
  * userType - current user's type (student or teacher)
@@ -14,8 +16,12 @@ const initialState = {
 };
 
 const INITIALIZE_STATE = 'manageLinkedAccounts/INITIALIZE_STATE';
+const REMOVE_AUTH_OPTION = 'manageLinkedAccounts/REMOVE_AUTH_OPTION';
+const SET_AUTH_OPTION_ERROR = 'manageLinkedAccounts/SET_AUTH_OPTION_ERROR';
 
 export const initializeState = state => ({type: INITIALIZE_STATE, state});
+export const removeAuthOption = id => ({type: REMOVE_AUTH_OPTION, id});
+export const setAuthOptionError = (id, error) => ({type: SET_AUTH_OPTION_ERROR, id, error});
 
 export default function manageLinkedAccounts(state=initialState, action) {
   if (action.type === INITIALIZE_STATE) {
@@ -30,8 +36,40 @@ export default function manageLinkedAccounts(state=initialState, action) {
     };
   }
 
+  if (action.type === REMOVE_AUTH_OPTION) {
+    findAuthOption(state, action.id);
+    return {
+      ...state,
+      authenticationOptions: _.omit(state.authenticationOptions, action.id)
+    };
+  }
+
+  if (action.type === SET_AUTH_OPTION_ERROR) {
+    findAuthOption(state, action.id);
+    return {
+      ...state,
+      authenticationOptions: {
+        ...state.authenticationOptions,
+        [action.id]: {
+          ...state.authenticationOptions[action.id],
+          error: action.error
+        }
+      }
+    };
+  }
+
   return state;
 }
+
+// Returns authentication option by id
+// Throws an error if authentication option is not found
+const findAuthOption = (state, id) => {
+  const authOption = state.authenticationOptions[id];
+  if (!authOption) {
+    throw new Error(`Authentication option with id ${id} does not exist`);
+  }
+  return authOption;
+};
 
 export const convertServerAuthOptions = (authOptions) => {
   let optionLookup = {};
@@ -50,12 +88,12 @@ export const convertServerAuthOptions = (authOptions) => {
 };
 
 export const disconnect = (id) => {
-  return (dispatch, getState) => {
+  return (dispatch, _) => {
     disconnectOnServer(id, error => {
       if (error) {
-        // set error on authOption with that id
+        dispatch(setAuthOptionError(id, error));
       } else {
-        // remove authOption with that id
+        dispatch(removeAuthOption(id));
       }
     });
   };
