@@ -122,6 +122,7 @@ pd_facilitators as
          case when s.user_id is not null then 1 else 0 end as started,
          case when c.user_id is not null then 1 else 0 end as completed,
          -- sections and students   
+         sa.students_total,         
          sa.sections_of_course,
          sa.students_in_course,
          -- stage number and stage name reached by the majority of students, and number of students who reached the stage in each STARTED course
@@ -129,8 +130,8 @@ pd_facilitators as
           tmp.stage_number_most_progress, 
           tmp.students_stage_most_progress,
           -- student gender
-          sa.students_female as students_female_in_course,
-          sa.students_gender as students_gender_in_course
+          sa.students_female as students_female_total,
+          sa.students_gender as students_gender_total
   FROM csf_teachers_trained_temp d 
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
