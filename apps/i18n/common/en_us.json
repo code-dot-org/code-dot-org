@@ -480,6 +480,7 @@
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyBlocksErrorMsg": "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.",
   "emptyExampleBlockErrorMsg": "You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
+  "emptyFreeResponse": "No response given for this question",
   "emptyFunctionBlocksErrorMsg": "The function block needs to have other blocks inside it to work.",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "emptySurveyOverviewTable": "Because this survey is anonymous, we can only show aggregated results once there are at least 5 submissions.",
