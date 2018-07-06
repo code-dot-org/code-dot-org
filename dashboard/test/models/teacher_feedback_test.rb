@@ -4,6 +4,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
   test 'feedback per teacher - no feedback' do
     create :teacher
     #no feedback
+
     retrieved = TeacherFeedback.latest_per_teacher
     assert_equal([], retrieved)
   end

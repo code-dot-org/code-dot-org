@@ -11,7 +11,6 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       level_id: params.require(:level_id),
       teacher_id: params.require(:teacher_id)
     ).latest
-
     if @feedback.nil?
       head :no_content
     else
