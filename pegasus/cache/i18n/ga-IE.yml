@@ -96,18 +96,7 @@ ga-IE:
   congratulations_on_completing_hoc: Comhghairdeas! Chríochnaigh tú Uair Amháin Chódála
   congratulations_volunteer: Comhghairdeas! Agus An Uair Chódála déanta agat, <a href="https://code.org/volunteer">cláraigh
     mar shaorálaí i seomra ranga</a> agus cabhraigh le daltaí Uair Chódála a fhoghlaim!
-  congratulations_on_completing_course1: Comhghairdeas as Cúrsa 1 a chríochnú
-  congratulations_on_completing_course2: Comhghairdeas as Cúrsa 2 a chríochnú
-  congratulations_on_completing_course3: Comhghairdeas as Cúrsa 3 a chríochnú
-  congratulations_on_completing_course4: Comhghairdeas as Cúrsa 4 a chríochnú
-  congratulations_on_completing_coursea: Comhghairdeas as Cúrsa A a chríochnú
-  congratulations_on_completing_courseb: Comhghairdeas as Cúrsa B a chríochnú
-  congratulations_on_completing_coursec: Comhghairdeas as Cúrsa C a chríochnú
-  congratulations_on_completing_coursed: Comhghairdeas as Cúrsa D a chríochnú
-  congratulations_on_completing_coursee: Comhghairdeas as Cúrsa E a chríochnú
-  congratulations_on_completing_coursef: Comhghairdeas as Cúrsa F a chríochnú
-  congratulations_on_completing_accelerated: Comhghairdeas as an gCúrsa Luathaithe
-    a chríochnú
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Téigh ar aghaidh go dtí an chéad leibhéal eile
   congrats_next_tutorials_desc: Bain triail as na gearrchúrsaí teagaisc uair an chloig
     seo, nó <a href="%{current_path}/next">cúrsa beirte</a>.
@@ -296,28 +285,8 @@ ga-IE:
     as! @codeorg
   just_did_hoc_donor: 'Tá mé go díreach tar éis an #HourOfCode a dhéanamh! (Tá mé
     buíoch de %{donor_twitter} as tacaíocht a thabhairt do @codeorg)'
-  just_did_course1_donor: Tá mé go díreach tar éis Cúrsa 1 a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_course2_donor: Tá mé go díreach tar éis Cúrsa 2 a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_course3_donor: Tá mé go díreach tar éis Cúrsa 3 a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_course4_donor: Tá mé go díreach tar éis Cúrsa 4 a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursea_donor: Tá mé go díreach tar éis Cúrsa A a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_courseb_donor: Tá mé go díreach tar éis Cúrsa B a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursec_donor: Tá mé go díreach tar éis Cúrsa C a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursed_donor: Tá mé go díreach tar éis Cúrsa D a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursee_donor: Tá mé go díreach tar éis Cúrsa E a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursef_donor: Tá mé go díreach tar éis Cúrsa F a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_accelerated_donor: Tá mé go díreach tar éis an Cúrsa Luathaithe a chríochnú!
-    Tá mé buíoch de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht
     a mhúineadh. http://youtu.be/nKIu9yen5nc. Féach https://code.org/.
   twitter_cs_foundational: Ba chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim.
@@ -1468,6 +1437,18 @@ ga-IE:
   coursed_gradelevel: Aois 13+
   coursee_gradelevel: Aois 14+
   coursef_gradelevel: Aois 9-13
+  coursea-2017_gradelevel: Aois 4-7
+  courseb-2017_gradelevel: Aois 5-8
+  coursec-2017_gradelevel: Aois 6-10
+  coursed-2017_gradelevel: Aois 13+
+  coursee-2017_gradelevel: Aois 8-12
+  coursef-2017_gradelevel: Aois 9-13
+  coursea-2018_gradelevel: Aois 4-7
+  courseb-2018_gradelevel: Aois 5-8
+  coursec-2018_gradelevel: Aois 6-10
+  coursed-2018_gradelevel: Aois 13+
+  coursee-2018_gradelevel: Aois 8-12
+  coursef-2018_gradelevel: Aois 9-13
   accelerated_gradelevel: Aois 10-18
   codeorg_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeintl_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -1618,6 +1599,30 @@ ga-IE:
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
     agus cruthaigh ealaín, scéal, nó cluiche.
+  coursea-2017_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
+    ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
+    tuilleadh.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús
+    na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+  coursea-2018_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
+    ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
+    tuilleadh.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús
+    na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
   codeorg_longdescription: Foghlaim buntús na ríomheolaíochta trí ríomhchlárú "tarraingt
     is scaoileadh". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina
     bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants

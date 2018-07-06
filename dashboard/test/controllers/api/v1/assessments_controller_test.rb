@@ -481,12 +481,24 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
     end
 
-    # We can retrieve this with the survey API, but it will be empty.
+    # We can retrieve this with the survey API, but there will be no levelgroup_results.
     get :section_surveys, params: {
       section_id: @section.id,
       script_id: script.id
     }
+
+    expected_response = {
+      level1.id.to_s => {
+        "stage_name" => "translation missing: en-US.data.script.name.#{script.name}.title",
+        "levelgroup_results" => []
+      }
+    }
+
     assert_response :success
-    assert_equal '{}', @response.body
+    actual_response = JSON.parse(@response.body)
+    assert_equal expected_response.keys, actual_response.keys
+    assert_equal expected_response[level1.id.to_s]['stage_name'], actual_response[level1.id.to_s]['stage_name']
+    assert_equal expected_response[level1.id.to_s]['levelgroup_results'],
+      actual_response[level1.id.to_s]['levelgroup_results']
   end
 end

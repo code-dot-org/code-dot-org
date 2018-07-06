@@ -25,12 +25,9 @@ module Pd
       ANSWER_TYPES = [
         ANSWER_TEXT = 'text'.freeze,
 
-        # We can convert the text response to a numeric value for certain single select controls
-        # (radio, dropdown, scale, part of a matrix).
-        ANSWER_SELECT_VALUE = 'selectValue'.freeze,
-        ANSWER_SELECT_TEXT = 'selectText'.freeze,
+        ANSWER_SCALE = 'scale'.freeze,
 
-        # Multi-select is always text
+        ANSWER_SINGLE_SELECT = 'singleSelect'.freeze,
         ANSWER_MULTI_SELECT = 'multiSelect'.freeze,
 
         # No answer, just question metadata, e.g. matrix heading
