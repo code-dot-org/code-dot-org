@@ -9,16 +9,24 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
+    height: '100%',
+  },
+  overviewMain: {
+    padding: 10,
   },
   icon: {
     color: color.level_perfect,
   },
-  text: {
+  value: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
     marginRight: 10,
   },
 };
+
+function  calculateOpacity(answered) {
+ return (answered + 10)/100;
+}
 
 class MultipleChoiceAnswerCell extends Component {
   static propTypes = {
@@ -29,10 +37,16 @@ class MultipleChoiceAnswerCell extends Component {
 
   render() {
     const {percentValue, isCorrectAnswer, displayAnswer} = this.props;
+
+    const opacity = calculateOpacity(percentValue);
+
+    const backgroundCSS = (isCorrectAnswer) ? {backgroundColor: `rgba(159, 212, 159, ${opacity})`} :
+      {backgroundColor: `rgba(255, 99, 71, ${opacity})`};
+
     if (displayAnswer) {
       return (
         <div style={styles.main}>
-          <div style={styles.text}>
+          <div style={styles.value}>
             {displayAnswer}
           </div>
           <div style={styles.icon}>
@@ -45,8 +59,8 @@ class MultipleChoiceAnswerCell extends Component {
     }
 
     return (
-      <div style={styles.main}>
-        <div style={styles.text}>
+      <div style={{...styles.main, ...backgroundCSS, ...styles.overviewMain}}>
+        <div style={styles.value}>
           {(percentValue >= 0) &&
             <span>{`${percentValue}%`}</span>
           }
