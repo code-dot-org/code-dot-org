@@ -60,3 +60,7 @@ export default function sectionData(state=initialState, action) {
 export const getTotalStudentCount = (state) => {
   return state.sectionData.section.students.length;
 };
+
+export const getStudentList = (state) => {
+  return state.sectionData.section.students;
+};
