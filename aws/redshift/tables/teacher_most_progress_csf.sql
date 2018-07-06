@@ -4,7 +4,7 @@ CREATE table analysis.teacher_most_progress_csf AS
 with csf_script_ids as
 (select 
   sc.id as script_id,
-  coalesce(sn.script_name_short, sc.name) script_nam
+  coalesce(sn.script_name_short, sc.name) script_name
   FROM 
   dashboard_production.scripts sc
   left join analysis.script_names sn on sn.versioned_script_id = sc.id
