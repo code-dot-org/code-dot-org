@@ -14,7 +14,7 @@
 
 
 drop table if exists analysis.regional_partner_stats_csf;
-create table analysis.regional_partner_stats_csf AS
+create table analysis_pii.regional_partner_stats_csf AS
 
 with 
 csf_teachers_trained_temp as 
@@ -101,7 +101,7 @@ pd_facilitators as
          d.school_year as school_year_trained,
          s.school_year as school_year_taught,
          s.script_name,
-         rp.name as regional_partner_name,
+         CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,
          rp.id as regional_partner_id,
          ss_user.school_name school_name,
          ss_user.school_id school_id,
