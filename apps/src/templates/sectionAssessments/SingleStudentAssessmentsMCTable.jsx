@@ -89,7 +89,7 @@ class SingleStudentAssessmentsMCTable extends Component {
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={studentAnswer.responses}
+        displayAnswer={studentAnswer.responses || '-'}
         isCorrectAnswer={studentAnswer.isCorrect}
       />
     );
