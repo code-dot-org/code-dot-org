@@ -21,12 +21,18 @@ const styles = {
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
+    padding: 0,
+    height: 40,
   },
   questionCell: {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-  }
+  },
+  notAnsweredCell: {
+    padding: 0,
+    height: 40,
+  },
 };
 
 const NOT_ANSWERED = 'notAnswered';
@@ -118,7 +124,12 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       },
       cell: {
         format: answerColumnsFormatter,
-        props: {style: tableLayoutStyles.cell},
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...styles.notAnsweredCell,
+          }
+        },
       }
     }
   );
