@@ -13,7 +13,6 @@ const styles = {
   icon: {
     color: color.level_perfect,
     paddingRight: 5,
-    fontSize: 20,
   },
   value: {
     color: color.charcoal,
@@ -24,7 +23,7 @@ const styles = {
 };
 
 function  calculateOpacity(answered) {
- return ((answered + 10) * (9 / 10))/100;
+ return (answered + 10)/100;
 }
 
 class MultipleChoiceAnswerCell extends Component {
@@ -58,7 +57,7 @@ class MultipleChoiceAnswerCell extends Component {
     }
 
     return (
-      <div style={{...styles.main, ...{...backgroundCSS}}}>
+      <div style={{...styles.main, ...backgroundCSS}}>
         <div style={styles.value}>
           {(percentValue >= 0) &&
             <span>{`${percentValue}%`}</span>
