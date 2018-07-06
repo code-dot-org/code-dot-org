@@ -1,5 +1,3 @@
-import {navigateToHref} from '@cdo/apps/utils';
-
 /** Initial state for manageLinkedAccounts redux store.
  * authenticationOptions - array of authentication options for current user
  * userType - current user's type (student or teacher)
@@ -51,11 +49,7 @@ export const convertServerAuthOptions = (authOptions) => {
   return optionLookup;
 };
 
-export const connectProvider = (provider) => {
-  navigateToHref(`/users/auth/${provider}/connect`);
-};
-
-export const disconnectProvider = (id) => {
+export const disconnect = (id) => {
   return (dispatch, getState) => {
     disconnectOnServer(id, error => {
       if (error) {

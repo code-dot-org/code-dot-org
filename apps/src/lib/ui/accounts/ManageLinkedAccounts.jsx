@@ -2,11 +2,12 @@ import React, {PropTypes} from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
+import {navigateToHref} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
 import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
-import {connectProvider, disconnectProvider} from './manageLinkedAccountsRedux';
+import {disconnect} from './manageLinkedAccountsRedux';
 
 const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
@@ -30,7 +31,11 @@ class ManageLinkedAccounts extends React.Component {
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
-    disconnectProvider: PropTypes.func.isRequired,
+    disconnect: PropTypes.func.isRequired,
+  };
+
+  connect = (provider) => {
+    navigateToHref(`/users/auth/${provider}/connect`);
   };
 
   getAuthenticationOption = (provider) => {
@@ -58,9 +63,9 @@ class ManageLinkedAccounts extends React.Component {
   toggleProvider = (provider) => {
     const authOption = this.getAuthenticationOption(provider);
     if (authOption) {
-      this.props.disconnectProvider(authOption.id).then(_, this.onFailure);
+      this.props.disconnect(authOption.id).then(_, this.onFailure);
     } else {
-      connectProvider(provider);
+      this.connect(provider);
     }
   };
 
@@ -164,8 +169,8 @@ export default connect(state => ({
   isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
   isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
 }), dispatch => ({
-  disconnectProvider(id) {
-    dispatch(disconnectProvider(id));
+  disconnect(id) {
+    dispatch(disconnect(id));
   }
 }))(ManageLinkedAccounts);
 

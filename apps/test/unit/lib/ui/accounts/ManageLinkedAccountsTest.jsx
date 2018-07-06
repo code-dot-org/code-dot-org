@@ -2,12 +2,12 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import ManageLinkedAccounts, {ENCRYPTED} from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
+import {UnconnectedManageLinkedAccounts as ManageLinkedAccounts, ENCRYPTED} from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
+import * as utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {
   userType: 'student',
-  authenticationOptions: [],
-  connect: () => {},
+  authenticationOptions: {},
   disconnect: () => {},
   userHasPassword: true,
   isGoogleClassroomStudent: false,
@@ -39,13 +39,13 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('does not render student email for authentication options', () => {
-    const authOptions = [
-      {
+    const authOptions = {
+      1: {
         id: 1,
-        credential_type: 'google_oauth2',
+        credentialType: 'google_oauth2',
         email: 'student@email.com'
       }
-    ];
+    };
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
@@ -58,13 +58,13 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('renders teacher email for authentication options', () => {
-    const authOptions = [
-      {
+    const authOptions = {
+      id: {
         id: 1,
-        credential_type: 'google_oauth2',
+        credentialType: 'google_oauth2',
         email: 'teacher@email.com'
       }
-    ];
+    };
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
@@ -76,23 +76,24 @@ describe('ManageLinkedAccounts', () => {
     expect(googleEmailCell).to.have.text('teacher@email.com');
   });
 
-  it('calls connect if authentication option is not connected', () => {
-    const connect = sinon.stub();
+  it('navigates to provider endpoint if authentication option is not connected', () => {
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
-        connect={connect}
       />
     );
+    const navigateToHrefStub = sinon.stub(utils, 'navigateToHref');
     wrapper.find('BootstrapButton').at(0).simulate('click');
-    expect(connect).to.have.been.calledOnce;
+    let arg = navigateToHrefStub.getCall(0).args[0];
+    expect(navigateToHrefStub).to.have.been.calledOnce;
+    expect(arg).to.equal('/users/auth/google_oauth2/connect');
   });
 
   it('calls disconnect if authentication option is connected', () => {
-    const authOptions = [
-      {id: 1, credential_type: 'google_oauth2', email: 'student@email.com'},
-      {id: 2, credential_type: 'facebook', email: 'student@email.com'}
-    ];
+    const authOptions = {
+      1: {id: 1, credentialType: 'google_oauth2', email: 'student@email.com'},
+      2: {id: 2, credentialType: 'facebook', email: 'student@email.com'}
+    };
     const disconnect = sinon.stub().resolves();
     const wrapper = mount(
       <ManageLinkedAccounts
@@ -106,7 +107,7 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('disables disconnecting from google if user is in a google classroom section', () => {
-    const authOptions = [{id: 1, credential_type: 'google_oauth2'}];
+    const authOptions = {1: {id: 1, credentialType: 'google_oauth2'}};
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
@@ -119,7 +120,7 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('disables disconnecting from clever if user is in a clever section', () => {
-    const authOptions = [{id: 1, credential_type: 'clever'}];
+    const authOptions = {1: {id: 1, credentialType: 'clever'}};
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
@@ -132,7 +133,7 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('disables disconnecting from the user\'s last authentication option', () => {
-    const authOptions = [{id: 1, credential_type: 'facebook'}];
+    const authOptions = {1: {id: 1, credentialType: 'facebook'}};
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
@@ -144,7 +145,7 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('disables disconnecting from the user\'s last oauth authentication option if user doesn\'t have a password', () => {
-    const authOptions = [{id: 1, credential_type: 'google_oauth2'}];
+    const authOptions = {1: {id: 1, credentialType: 'google_oauth2'}};
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
