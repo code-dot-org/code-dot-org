@@ -38,11 +38,6 @@ const styles = {
 
 const NOT_ANSWERED = 'notAnswered';
 
-function  calculateOpacity(answered) {
-  let result =  ((answered + 10) * (9 / 10))/100;
-  return result;
-}
-
 const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex, property}) => {
   let percentValue = 0;
   const answerResults = rowData.answers[columnIndex - 1] || {};
@@ -56,7 +51,6 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        opacity={calculateOpacity(percentValue)}
         percentValue={percentValue}
         isCorrectAnswer={!!answerResults.isCorrect}
       />
