@@ -62,9 +62,9 @@
     "map_reference": "/docs/csd-1718/sprites/index.html",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null,
     "include_shared_functions": "false",
-    "validation_code": "if(World.frameCount > 50){\r\n  var status = 3;\r\n  console.log(\"Things have happened\");\r\n    if(World.allSprites.length > 0){\r\n      status = 0;\r\n    }\r\n  levelSuccess(status);\r\n}"
+    "validation_code": "if(World.frameCount > 50){\r\n  var status = 3;\r\n  console.log(\"Things have happened\");\r\n    if(World.allSprites.length > 0){\r\n      status = 0;\r\n    }\r\n  levelSuccess(status);\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
