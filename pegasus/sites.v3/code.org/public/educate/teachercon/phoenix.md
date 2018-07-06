@@ -114,7 +114,7 @@ We encourage **business casual** attire during TeacherCon. All our conference se
 
 _At this time, our CS Discoveries and Principles courses are not optimized for tablets, so **we do not recommend bringing a tablet as your primary device** to this event._
 
-Please note that Code.org will not have extra devices on hand for participants to borow.
+Please note that Code.org will not have extra devices on hand for participants to borrow.
 
 </p>
 </details>
@@ -149,7 +149,11 @@ We expect you to attend for the full conference. Make plans to be with us from R
 ## **Previous Email Updates**
 This section will be updated as emails are sent for this event.
 
-<a href="http://go.pardot.com/webmail/153401/409103220/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 1: Book your travel to Code.org's TeacherCon!</a>
+<a href="http://go.pardot.com/webmail/153401/409103220/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 1 - Book your travel to Code.org's TeacherCon!</a>
+
+<a href="http://go.pardot.com/webmail/153401/424757619/532ffc3eb36dd204cd978e5d0b5b8547187369e86e085555049f6891eb2c6536", target=_"blank">Email 2 - Prepare for TeacherCon: Complete your pre-work! (CS Discoveries)</a>
+
+<a href="http://go.pardot.com/webmail/153401/424757617/3024a7fb5c519b94fef5a06b687d4da3ceeae76d69d8469a025f22ea053d024e", target=_"blank">Email 2 - Prepare for TeacherCon: Complete your pre-work! (CS Principles)</a>
 
 <a id="prework"></a>
 ## **Prework**

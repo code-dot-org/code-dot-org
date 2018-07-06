@@ -539,7 +539,7 @@ class SourcesTest < FilesApiTestBase
     delete_all_animation_versions(animation_filename_1)
     delete_all_animation_versions(animation_filename_2)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename_1}")
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename_2}")
   end
@@ -583,7 +583,7 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions(MAIN_JSON)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
   end
 
   def test_remix_not_main
@@ -610,7 +610,7 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions('test.json')
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/test.json")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/test.json")
   end
 
   def test_remix_no_animations
@@ -642,7 +642,7 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions(MAIN_JSON)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
   end
 
   def test_remove_under_13_comments
@@ -818,7 +818,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def delete_all_source_versions(filename)
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/1/#{filename}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/1/#{filename}")
   end
 
   def delete_all_animation_versions(filename)

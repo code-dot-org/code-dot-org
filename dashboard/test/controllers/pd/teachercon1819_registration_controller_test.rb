@@ -143,16 +143,6 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     assert_template('please_sign_in')
   end
 
-  # Regional Partner Program Manager not in Group 3 or 4 should be redirected
-  test 'Program manager not in group 3 or 4 should be redirected to only_group_3_or_4' do
-    sign_out(@teacher)
-    regional_partner_program_manager = create :regional_partner_program_manager
-    sign_in(regional_partner_program_manager.program_manager)
-
-    get :partner, params: {city: 'Phoenix'}
-    assert_template('only_group_3_or_4')
-  end
-
   # Not specifying teachercon should redirect to invalid page
   test 'Invalid city in city param should redirect' do
     sign_out(@teacher)
