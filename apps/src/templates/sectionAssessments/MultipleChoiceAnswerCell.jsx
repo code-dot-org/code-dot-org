@@ -33,14 +33,15 @@ class MultipleChoiceAnswerCell extends Component {
     percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
     displayAnswer: PropTypes.string,
+    isSurvey: PropTypes.bool,
   };
 
   render() {
-    const {percentValue, isCorrectAnswer, displayAnswer} = this.props;
+    const {percentValue, isCorrectAnswer, displayAnswer, isSurvey} = this.props;
 
     const opacity = calculateOpacity(percentValue);
 
-    const backgroundCSS = (isCorrectAnswer) ? {backgroundColor: `rgba(159, 212, 159, ${opacity})`} :
+    const backgroundCSS = (isCorrectAnswer || isSurvey) ? {backgroundColor: `rgba(159, 212, 159, ${opacity})`} :
       {backgroundColor: `rgba(255, 99, 71, ${opacity})`};
 
     if (displayAnswer) {
