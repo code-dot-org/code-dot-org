@@ -25,6 +25,13 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal @teacher.id, teacher_feedback.teacher_id
   end
 
+  test 'retrieves no content when no feedback is available' do
+    sign_in @teacher
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id}
+
+    assert_response 204
+  end
+
   test 'can be retrieved by teacher' do
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
     get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id}
