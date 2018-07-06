@@ -94,7 +94,7 @@ describe('ManageLinkedAccounts', () => {
       1: {id: 1, credentialType: 'google_oauth2', email: 'student@email.com'},
       2: {id: 2, credentialType: 'facebook', email: 'student@email.com'}
     };
-    const disconnect = sinon.stub().resolves();
+    const disconnect = sinon.stub();
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
