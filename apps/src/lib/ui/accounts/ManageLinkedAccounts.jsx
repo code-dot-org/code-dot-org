@@ -36,6 +36,10 @@ export default class ManageLinkedAccounts extends React.Component {
     });
   };
 
+  hasAuthOption = (provider) => {
+    return this.getAuthenticationOption(provider) !== undefined;
+  };
+
   getEmailForProvider = (provider) => {
     const authOption = this.getAuthenticationOption(provider);
     if (authOption) {
@@ -62,17 +66,26 @@ export default class ManageLinkedAccounts extends React.Component {
 
   cannotDisconnectGoogle = () => {
     // Cannot disconnect from Google if student is in a Google Classroom section
-    return this.getAuthenticationOption(OAUTH_PROVIDERS.GOOGLE) && this.props.isGoogleClassroomStudent;
+    const {isGoogleClassroomStudent} = this.props;
+    const cannotDisconnect = this.hasAuthOption(OAUTH_PROVIDERS.GOOGLE) ? isGoogleClassroomStudent : false;
+    return cannotDisconnect;
   };
 
   cannotDisconnectClever = () => {
     // Cannot disconnect from Clever if student is in a Clever section
-    return this.getAuthenticationOption(OAUTH_PROVIDERS.CLEVER) && this.props.isCleverStudent;
+    const {isCleverStudent} = this.props;
+    const cannotDisconnect = this.hasAuthOption(OAUTH_PROVIDERS.CLEVER) ? isCleverStudent : false;
+    return cannotDisconnect;
   };
 
   cannotDisconnect = (provider) => {
     const {authenticationOptions, userHasPassword} = this.props;
     const otherAuthOptions = _.reject(authenticationOptions, option => option.credential_type === provider);
+
+    // If not connected to this provider, return early
+    if (!this.hasAuthOption(provider)) {
+      return false;
+    }
 
     if (provider === OAUTH_PROVIDERS.GOOGLE && this.cannotDisconnectGoogle()) {
       return true;
