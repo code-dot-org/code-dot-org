@@ -12,11 +12,11 @@ const styles = {
   },
   icon: {
     color: color.level_perfect,
+    marginRight: 10,
   },
   text: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
-    marginRight: 10,
   },
 };
 
@@ -46,17 +46,17 @@ class MultipleChoiceAnswerCell extends Component {
 
     return (
       <div style={styles.main}>
+        <div style={styles.icon}>
+          {isCorrectAnswer &&
+            <FontAwesome icon="check-circle" style={styles.icon}/>
+          }
+        </div>
         <div style={styles.text}>
           {(percentValue >= 0) &&
             <span>{`${percentValue}%`}</span>
           }
           {(percentValue < 0 ) &&
             <span>{'-'}</span>
-          }
-        </div>
-        <div style={styles.icon}>
-          {isCorrectAnswer &&
-            <FontAwesome icon="check-circle" style={styles.icon}/>
           }
         </div>
       </div>
