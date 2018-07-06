@@ -5,6 +5,8 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
 import BootstrapButton from './BootstrapButton';
+import {connect} from 'react-redux';
+import {connectProvider, disconnectProvider} from './manageLinkedAccountsRedux';
 
 const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
@@ -13,27 +15,30 @@ const OAUTH_PROVIDERS = {
   MICROSOFT: 'windowslive',
 };
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
+const authOptionPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  credentialType: PropTypes.string.isRequired,
+  email: PropTypes.string,
+  hashedEmail: PropTypes.string,
+});
 
-export default class ManageLinkedAccounts extends React.Component {
+class ManageLinkedAccounts extends React.Component {
   static propTypes = {
+    // Provided by redux
+    authenticationOptions: PropTypes.objectOf(authOptionPropType),
     userType: PropTypes.string.isRequired,
-    authenticationOptions: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      credential_type: PropTypes.string.isRequired,
-      email: PropTypes.string,
-      hashed_email: PropTypes.string,
-    })).isRequired,
-    connect: PropTypes.func.isRequired,
-    disconnect: PropTypes.func.isRequired,
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
+    disconnectProvider: PropTypes.func.isRequired,
   };
 
   getAuthenticationOption = (provider) => {
-    return this.props.authenticationOptions.find(option => {
-      return option.credential_type === provider;
+    const {authenticationOptions} = this.props;
+    const id = Object.keys(authenticationOptions).find(id => {
+      return authenticationOptions[id].credentialType === provider;
     });
+    return authenticationOptions[id];
   };
 
   hasAuthOption = (provider) => {
@@ -53,9 +58,9 @@ export default class ManageLinkedAccounts extends React.Component {
   toggleProvider = (provider) => {
     const authOption = this.getAuthenticationOption(provider);
     if (authOption) {
-      this.props.disconnect(authOption.id).then(_, this.onFailure);
+      this.props.disconnectProvider(authOption.id).then(_, this.onFailure);
     } else {
-      this.props.connect(provider);
+      connectProvider(provider);
     }
   };
 
@@ -78,8 +83,8 @@ export default class ManageLinkedAccounts extends React.Component {
 
   cannotDisconnect = (provider) => {
     const {authenticationOptions, userHasPassword} = this.props;
-    const otherAuthOptions = _.reject(authenticationOptions, option => option.credential_type === provider);
-    const otherOptionIsEmail = otherAuthOptions.length === 1 && otherAuthOptions[0].credential_type === 'email';
+    const otherAuthOptions = _.reject(authenticationOptions, option => option.credentialType === provider);
+    const otherOptionIsEmail = otherAuthOptions.length === 1 && otherAuthOptions[0].credentialType === 'email';
 
     if (!this.hasAuthOption(provider)) {
       // If not connected to this provider, return early
@@ -149,6 +154,20 @@ export default class ManageLinkedAccounts extends React.Component {
     );
   }
 }
+
+export const UnconnectedManageLinkedAccounts = ManageLinkedAccounts;
+
+export default connect(state => ({
+  authenticationOptions: state.manageLinkedAccounts.authenticationOptions,
+  userType: state.manageLinkedAccounts.userType,
+  userHasPassword: state.manageLinkedAccounts.userHasPassword,
+  isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
+  isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
+}), dispatch => ({
+  disconnectProvider(id) {
+    dispatch(disconnectProvider(id));
+  }
+}))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
   static propTypes = {
