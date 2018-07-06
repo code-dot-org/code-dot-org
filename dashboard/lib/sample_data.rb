@@ -145,7 +145,7 @@ class SampleData
         if prng.rand(100) < 90
           (level_count.to_f * (prng.rand(0.6) + 0.2)).to_i
         else
-          # To simulate real-world data, some studens have no progress
+          # To simulate real-world data, some students have no progress
           0
         end
 
