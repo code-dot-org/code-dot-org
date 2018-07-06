@@ -27,6 +27,14 @@ class FreeResponsesAssessmentsContainer extends Component {
     freeResponseQuestions: PropTypes.arrayOf(freeResponseSummaryPropType),
   };
 
+  state = {
+    isExpanded: false,
+  };
+
+  expandText = () => {
+    this.setState({isExpanded: true});
+  };
+
   render() {
     const {freeResponseQuestions} = this.props;
 
@@ -37,12 +45,19 @@ class FreeResponsesAssessmentsContainer extends Component {
         }
         {freeResponseQuestions.map((question, index) => (
           <div key={index}>
-            <div style={styles.text}>
-              {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
-              {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
-                <a href="#"><span>{i18n.seeFullQuestion()}</span></a>
-              }
-            </div>
+            {!this.state.isExpanded &&
+              <div style={styles.text}>
+                {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
+                {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
+                  <a onClick={this.expandText}><span>{i18n.seeFullQuestion()}</span></a>
+                }
+              </div>
+            }
+            {this.state.isExpanded &&
+              <div style={styles.text}>
+                {`${question.questionNumber}. ${question.questionText}`}
+              </div>
+            }
             <FreeResponsesAssessmentsTable
               freeResponses={question.responses}
             />
