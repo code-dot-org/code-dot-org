@@ -13,8 +13,6 @@
 #  index_pd_international_opt_ins_on_user_id  (user_id)
 #
 
-require 'international_opt_in_people'
-
 class Pd::InternationalOptIn < ApplicationRecord
   include Pd::Form
   include InternationalOptInPeople

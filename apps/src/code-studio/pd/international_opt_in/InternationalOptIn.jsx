@@ -71,19 +71,15 @@ class InternationalOptInComponent extends FormComponent {
     const labels = this.props.labels;
     const date = (this.props.data && this.props.data.date) ?
       moment(this.props.data.date, DATE_FORMAT) : moment();
-    // todo: add validation
 
-    let textFieldMapSubjects = {};
     const lastSubjectsKey = this.props.options.subjects.slice(-1)[0];
-    textFieldMapSubjects[lastSubjectsKey] = "other";
+    const textFieldMapSubjects = {[lastSubjectsKey]: "other"};
 
-    let textFieldMapResources = {};
     const lastResourcesKey = this.props.options.resources.slice(-1)[0];
-    textFieldMapResources[lastResourcesKey] = "other";
+    const textFieldMapResources = {[lastResourcesKey]: "other"};
 
-    let textFieldMapRobotics = {};
     const lastRoboticsKey = this.props.options.robotics.slice(-1)[0];
-    textFieldMapRobotics[lastRoboticsKey] = "other";
+    const textFieldMapRobotics = {[lastRoboticsKey]: "other"};
 
     return (
       <FormGroup>
