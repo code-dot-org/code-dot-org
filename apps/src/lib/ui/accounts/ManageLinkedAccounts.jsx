@@ -25,12 +25,19 @@ export default class ManageLinkedAccounts extends React.Component {
     })).isRequired,
     connect: PropTypes.func.isRequired,
     disconnect: PropTypes.func.isRequired,
+    userHasPassword: PropTypes.bool.isRequired,
+    isGoogleClassroomStudent: PropTypes.bool.isRequired,
+    isCleverStudent: PropTypes.bool.isRequired,
   };
 
   getAuthenticationOption = (provider) => {
     return this.props.authenticationOptions.find(option => {
       return option.credential_type === provider;
     });
+  };
+
+  hasAuthOption = (provider) => {
+    return this.getAuthenticationOption(provider) !== undefined;
   };
 
   getEmailForProvider = (provider) => {
@@ -57,6 +64,43 @@ export default class ManageLinkedAccounts extends React.Component {
     console.log(error.message);
   };
 
+  cannotDisconnectGoogle = () => {
+    const {isGoogleClassroomStudent} = this.props;
+    const cannotDisconnect = this.hasAuthOption(OAUTH_PROVIDERS.GOOGLE) ? isGoogleClassroomStudent : false;
+    return cannotDisconnect;
+  };
+
+  cannotDisconnectClever = () => {
+    const {isCleverStudent} = this.props;
+    const cannotDisconnect = this.hasAuthOption(OAUTH_PROVIDERS.CLEVER) ? isCleverStudent : false;
+    return cannotDisconnect;
+  };
+
+  cannotDisconnect = (provider) => {
+    const {authenticationOptions, userHasPassword} = this.props;
+    const otherAuthOptions = _.reject(authenticationOptions, option => option.credential_type === provider);
+    const otherOptionIsEmail = otherAuthOptions.length === 1 && otherAuthOptions[0].credential_type === 'email';
+
+    if (!this.hasAuthOption(provider)) {
+      // If not connected to this provider, return early
+      return false;
+    } else if (provider === OAUTH_PROVIDERS.GOOGLE && this.cannotDisconnectGoogle()) {
+      // Cannot disconnect from Google if student is in a Google Classroom section
+      return true;
+    } else if (provider === OAUTH_PROVIDERS.CLEVER && this.cannotDisconnectClever()) {
+      // Cannot disconnect from Clever if student is in a Clever section
+      return true;
+    } else if (otherAuthOptions.length === 0) {
+      // If it's the user's last authentication option
+      return true;
+    } else if (otherOptionIsEmail && !userHasPassword) {
+      // If the user's only other authentication option is an email address, a password is required to disconnect
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -76,24 +120,28 @@ export default class ManageLinkedAccounts extends React.Component {
               displayName={i18n.manageLinkedAccounts_google_oauth2()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.GOOGLE)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.GOOGLE)}
+              cannotDisconnect={this.cannotDisconnect(OAUTH_PROVIDERS.GOOGLE)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.MICROSOFT}
               displayName={i18n.manageLinkedAccounts_microsoft()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.MICROSOFT)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.MICROSOFT)}
+              cannotDisconnect={this.cannotDisconnect(OAUTH_PROVIDERS.MICROSOFT)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.CLEVER}
               displayName={i18n.manageLinkedAccounts_clever()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.CLEVER)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.CLEVER)}
+              cannotDisconnect={this.cannotDisconnect(OAUTH_PROVIDERS.CLEVER)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.FACEBOOK}
               displayName={i18n.manageLinkedAccounts_facebook()}
               email={this.getEmailForProvider(OAUTH_PROVIDERS.FACEBOOK)}
               onClick={() => this.toggleProvider(OAUTH_PROVIDERS.FACEBOOK)}
+              cannotDisconnect={this.cannotDisconnect(OAUTH_PROVIDERS.FACEBOOK)}
             />
           </tbody>
         </table>
