@@ -52,6 +52,7 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
     <MultipleChoiceAnswerCell
       id={rowData.id}
       percentValue={percentValue}
+      isSurvey={true}
     />
   );
 };
