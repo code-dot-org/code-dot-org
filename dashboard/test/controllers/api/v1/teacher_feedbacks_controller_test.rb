@@ -29,7 +29,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
     get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id}
 
-    assert_response 204
+    assert_response :no_content
   end
 
   test 'can be retrieved by teacher' do
