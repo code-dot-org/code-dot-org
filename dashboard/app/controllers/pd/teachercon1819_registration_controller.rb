@@ -70,12 +70,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    regional_partner = current_user.regional_partners.find_by(group: [3..4])
-    unless regional_partner
-      render :only_group_3_or_4
-      return
-    end
-
+    regional_partner = current_user.regional_partners.first
     teachercon = get_teachercon regional_partner
 
     unless teachercon

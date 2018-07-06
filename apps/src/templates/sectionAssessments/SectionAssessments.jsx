@@ -7,7 +7,9 @@ import {
   isCurrentAssessmentSurvey,
   countSubmissionsForCurrentAssessment,
   getExportableData,
+  setStudentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import { getStudentList } from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
@@ -19,6 +21,7 @@ import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContain
 import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
 import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
+import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 
@@ -44,8 +47,24 @@ const styles = {
     marginBottom: 0
   },
   tableContent: {
-    marginTop: 10
+    marginTop: 10,
+    clear: 'both'
   },
+  selectors: {
+    clear: 'both'
+  },
+  scriptSelection: {
+    float: 'left',
+    marginRight: 20,
+    marginBottom: 20,
+  },
+  assessmentSelection: {
+    float: 'left',
+    marginBottom: 10,
+  },
+  download: {
+    marginTop: 10,
+  }
 };
 
 class SectionAssessments extends Component {
@@ -64,6 +83,9 @@ class SectionAssessments extends Component {
     isCurrentAssessmentSurvey: PropTypes.bool,
     totalStudentSubmissions: PropTypes.number,
     exportableData: PropTypes.array,
+    studentId: PropTypes.number,
+    setStudentId: PropTypes.func,
+    studentList: PropTypes.array,
   };
 
   onChangeScript = scriptId => {
@@ -74,21 +96,24 @@ class SectionAssessments extends Component {
 
   render() {
     const {validScripts, scriptId, assessmentList, assessmentId,
-      isLoading, isCurrentAssessmentSurvey, totalStudentSubmissions, exportableData} = this.props;
+      isLoading, isCurrentAssessmentSurvey, totalStudentSubmissions,
+      exportableData, studentId, studentList} = this.props;
 
     return (
       <div>
-        <div>
-          <div style={{...h3Style, ...styles.header}}>
-            {i18n.selectACourse()}
+        <div style={styles.selectors}>
+          <div style={styles.scriptSelection}>
+            <div style={{...h3Style, ...styles.header}}>
+              {i18n.selectACourse()}
+            </div>
+            <ScriptSelector
+              validScripts={validScripts}
+              scriptId={scriptId}
+              onChange={this.onChangeScript}
+            />
           </div>
-          <ScriptSelector
-            validScripts={validScripts}
-            scriptId={scriptId}
-            onChange={this.onChangeScript}
-          />
           {!isLoading &&
-            <div>
+            <div style={styles.assessmentSelection}>
               <div style={{...h3Style, ...styles.header}}>
                 {i18n.selectAssessment()}
               </div>
@@ -105,8 +130,16 @@ class SectionAssessments extends Component {
             {/* Assessments */}
             {!isCurrentAssessmentSurvey &&
               <div>
+                <div style={{...h3Style, ...styles.header}}>
+                  {i18n.selectStudent()}
+                </div>
+                <StudentSelector
+                  studentList={studentList}
+                  studentId={studentId}
+                  onChange={this.props.setStudentId}
+                />
                 {totalStudentSubmissions > 0 &&
-                  <div>
+                  <div style={styles.download}>
                     <CSVLink
                       filename="assessments.csv"
                       data={exportableData}
@@ -114,14 +147,18 @@ class SectionAssessments extends Component {
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
-                    <MCAssessmentsOverviewContainer />
-                    <StudentsMCSummaryContainer />
-                    <MultipleChoiceByStudentContainer />
-                    <FreeResponsesAssessmentsContainer />
                   </div>
                 }
                 {totalStudentSubmissions <= 0 &&
                   <h3>{i18n.emptyAssessmentSubmissions()}</h3>
+                }
+                <StudentsMCSummaryContainer />
+                {totalStudentSubmissions > 0 &&
+                  <div>
+                    <MCAssessmentsOverviewContainer />
+                    <MultipleChoiceByStudentContainer />
+                    <FreeResponsesAssessmentsContainer />
+                  </div>
                 }
               </div>
             }
@@ -168,6 +205,8 @@ export default connect(state => ({
   isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   exportableData: getExportableData(state),
+  studentId: state.sectionAssessments.studentId,
+  studentList: getStudentList(state),
 }), dispatch => ({
   setScriptId(scriptId) {
     dispatch(setScriptId(scriptId));
@@ -177,5 +216,8 @@ export default connect(state => ({
   },
   setAssessmentId(assessmentId) {
     dispatch(setAssessmentId(assessmentId));
+  },
+  setStudentId(studentId) {
+    dispatch(setStudentId(studentId));
   },
 }))(SectionAssessments);
