@@ -183,6 +183,7 @@ module Pd::WorkshopSurveyResultsHelper
     surveys = get_surveys_for_workshops(workshop)
 
     workshop_summary = {}
+    facilitator_map = Hash[*workshop.facilitators.pluck(:id, :name).flatten]
 
     # Each session has a general response section.
     # Some also have a facilitator response section
@@ -211,7 +212,7 @@ module Pd::WorkshopSurveyResultsHelper
               if current_user&.facilitator?
                 facilitator_responses.slice! current_user.id
               end
-              session_summary[:facilitator][q_key] = facilitator_responses
+              session_summary[:facilitator][q_key] = facilitator_responses.transform_keys {|k| facilitator_map[k]}
             else
               # Otherwise, we just want a list of all responses
               sum = surveys_for_session[response_section].map {|survey| survey[q_key]}.reduce([], :append).compact
@@ -239,7 +240,7 @@ module Pd::WorkshopSurveyResultsHelper
               facilitator_response_sums.each do |facilitator_id, response_sums|
                 facilitator_response_averages[facilitator_id] = (response_sums[:sum] / response_sums[:responses].to_f).round(2)
               end
-              session_summary[:facilitator][q_key] = facilitator_response_averages
+              session_summary[:facilitator][q_key] = facilitator_response_averages.transform_keys {|k| facilitator_map[k]}
             else
               # For non facilitator specific responses, just return a frequency map with
               # nulls removed
