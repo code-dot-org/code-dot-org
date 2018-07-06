@@ -85,13 +85,12 @@ class SingleStudentAssessmentsMCTable extends Component {
     );
   };
 
-  studentAnswerColumnFormatter = (studentResponses, {rowData, rowIndex}) => {
-    const answerData = this.props.studentAnswerData.studentResponses[rowIndex];
+  studentAnswerColumnFormatter = (studentAnswer, {rowData, rowIndex}) => {
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={answerData.responses}
-        isCorrectAnswer={answerData.isCorrect}
+        displayAnswer={studentAnswer.responses}
+        isCorrectAnswer={studentAnswer.isCorrect}
       />
     );
   };
@@ -166,11 +165,18 @@ class SingleStudentAssessmentsMCTable extends Component {
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
+    const rowData = this.props.questionAnswerData.map((question, index) => {
+      return {
+        ...question,
+        studentAnswer: this.props.studentAnswerData.studentResponses[index],
+      };
+    });
+
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.questionAnswerData);
+    })(rowData);
 
     return (
       <Table.Provider

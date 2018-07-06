@@ -10,10 +10,53 @@ const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
   FACEBOOK: 'facebook',
   CLEVER: 'clever',
-  MICROSOFT: 'microsoft',
+  MICROSOFT: 'windowslive',
 };
+export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 
 export default class ManageLinkedAccounts extends React.Component {
+  static propTypes = {
+    userType: PropTypes.string.isRequired,
+    authenticationOptions: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      credential_type: PropTypes.string.isRequired,
+      email: PropTypes.string,
+      hashed_email: PropTypes.string,
+    })).isRequired,
+    connect: PropTypes.func.isRequired,
+    disconnect: PropTypes.func.isRequired,
+  };
+
+  getAuthenticationOption = (provider) => {
+    return this.props.authenticationOptions.find(option => {
+      return option.credential_type === provider;
+    });
+  };
+
+  getEmailForProvider = (provider) => {
+    const authOption = this.getAuthenticationOption(provider);
+    if (authOption) {
+      if (this.props.userType === 'student') {
+        return ENCRYPTED;
+      }
+      return authOption.email;
+    }
+  };
+
+  toggleProvider = (provider) => {
+    const authOption = this.getAuthenticationOption(provider);
+    if (authOption) {
+      this.props.disconnect(authOption.id).then(_, this.onFailure);
+    } else {
+      this.props.connect(provider);
+    }
+  };
+
+  onFailure = (error) => {
+    // TODO: (madelynkasula) display error to user
+    console.log(error.message);
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -31,27 +74,26 @@ export default class ManageLinkedAccounts extends React.Component {
             <OauthConnection
               type={OAUTH_PROVIDERS.GOOGLE}
               displayName={i18n.manageLinkedAccounts_google_oauth2()}
-              email={'brad@code.org'}
-              onClick={() => {}}
+              email={this.getEmailForProvider(OAUTH_PROVIDERS.GOOGLE)}
+              onClick={() => this.toggleProvider(OAUTH_PROVIDERS.GOOGLE)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.MICROSOFT}
               displayName={i18n.manageLinkedAccounts_microsoft()}
-              email={'*** encrypted ***'}
-              onClick={() => {}}
+              email={this.getEmailForProvider(OAUTH_PROVIDERS.MICROSOFT)}
+              onClick={() => this.toggleProvider(OAUTH_PROVIDERS.MICROSOFT)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.CLEVER}
               displayName={i18n.manageLinkedAccounts_clever()}
-              email={undefined}
-              onClick={() => {}}
+              email={this.getEmailForProvider(OAUTH_PROVIDERS.CLEVER)}
+              onClick={() => this.toggleProvider(OAUTH_PROVIDERS.CLEVER)}
             />
             <OauthConnection
               type={OAUTH_PROVIDERS.FACEBOOK}
               displayName={i18n.manageLinkedAccounts_facebook()}
-              email={'brad@code.org'}
-              onClick={() => {}}
-              cannotDisconnect
+              email={this.getEmailForProvider(OAUTH_PROVIDERS.FACEBOOK)}
+              onClick={() => this.toggleProvider(OAUTH_PROVIDERS.FACEBOOK)}
             />
           </tbody>
         </table>
@@ -134,6 +176,7 @@ const styles = {
     paddingLeft: GUTTER,
     paddingRight: GUTTER,
     fontWeight: 'normal',
+    width: tableLayoutStyles.table.width / 3,
   },
   cell: {
     ...tableLayoutStyles.cell,
