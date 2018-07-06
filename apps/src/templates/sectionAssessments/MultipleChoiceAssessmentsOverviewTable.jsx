@@ -27,7 +27,7 @@ const styles = {
   },
   notAnsweredCell: {
     padding: 0,
-    height: 35,
+    height: 40,
   },
   questionCell: {
     overflow: 'hidden',
