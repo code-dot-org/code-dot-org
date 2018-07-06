@@ -8,7 +8,7 @@
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
-    "timeout_after_when_run": "true",
+    "timeout_after_when_run": "false",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "soft_buttons": [
       "leftButton",
@@ -41,79 +41,73 @@
     "include_shared_functions": "false",
     "free_play": "false",
     "first_sprite_index": "22",
-    "edge_collisions": "false",
-    "projectile_collisions": "false",
+    "edge_collisions": "true",
+    "projectile_collisions": "true",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "disable_sharing": "false",
     "remove_items_when_actor_collides": "false",
-    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/0363d47990231ff37dc124b62996bf7d=levelbuilder/38469.png",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/3bfcf8d692b0fd20a4ed2f8694a5044b=levelbuilder/38478.png",
+    "timeout_failure_tick": "200",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-05 22:08:54 +0000\",\"changed\":[\"notes\",\"maze_data\",\"success_condition\",\"failure_condition\",\"timeout_after_when_run\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:09:45 +0000\",\"changed\":[\"maze_data\",\"contained_level_names\",\"first_sprite_index\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:13:01 +0000\",\"changed\":[\"contained_level_names\",\"is_k1\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:13:19 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-05 22:08:54 +0000\",\"changed\":[\"notes\",\"maze_data\",\"success_condition\",\"failure_condition\",\"timeout_after_when_run\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:09:45 +0000\",\"changed\":[\"maze_data\",\"contained_level_names\",\"first_sprite_index\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:13:01 +0000\",\"changed\":[\"contained_level_names\",\"is_k1\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:13:19 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:18:28 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:18:51 +0000\",\"changed\":[\"edge_collisions\",\"projectile_collisions\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:20:44 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:20:57 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:21:12 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:21:25 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:21:28 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:23:47 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:24:49 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:25:11 +0000\",\"changed\":[\"timeout_after_when_run\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 22:27:26 +0000\",\"changed\":[\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:42:24 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
-    <solution_blocks>
+    <start_blocks>
       <xml>
-        <block type="controls_repeat_simplified_dropdown">
-          <title name="TIMES" config="3-10">3</title>
-          <statement name="DO">
-            <block type="studio_setSprite">
-              <title name="VALUE">"visible"</title>
-              <title name="SPRITE">0</title>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"rainbow"</title>
               <next>
-                <block type="studio_setBackground">
-                  <title name="VALUE">"cave"</title>
+                <block type="studio_wait">
+                  <title name="VALUE">5000</title>
                   <next>
-                    <block type="studio_move">
-                      <title name="SPRITE">0</title>
-                      <title name="DIR">1</title>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">3</title>
+                      <statement name="DO">
+                        <block type="studio_playSound">
+                          <title name="SOUND">rubber</title>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          <next>
+            <block type="studio_throw">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">"star"</title>
+              <title name="DIR">1</title>
+              <next>
+                <block type="studio_throw">
+                  <title name="SPRITE">1</title>
+                  <title name="VALUE">"star"</title>
+                  <title name="DIR">4</title>
+                  <next>
+                    <block type="studio_throw">
+                      <title name="SPRITE">1</title>
+                      <title name="VALUE">"star"</title>
+                      <title name="DIR">8</title>
                       <next>
-                        <block type="studio_saySpriteChoices">
-                          <title name="SPRITE">0</title>
-                          <title name="VALUE">Hi there.</title>
+                        <block type="studio_throw">
+                          <title name="SPRITE">1</title>
+                          <title name="VALUE">"star"</title>
+                          <title name="DIR">2</title>
                           <next>
-                            <block type="studio_saySprite">
-                              <title name="SPRITE">0</title>
-                              <title name="TEXT">type here</title>
-                              <next>
-                                <block type="studio_setSpriteEmotion">
-                                  <title name="SPRITE">0</title>
-                                  <title name="VALUE">0</title>
-                                  <next>
-                                    <block type="studio_throw">
-                                      <title name="SPRITE">0</title>
-                                      <title name="VALUE">"airplane"</title>
-                                      <title name="DIR">1</title>
-                                      <next>
-                                        <block type="studio_vanish">
-                                          <title name="SPRITE">1</title>
-                                          <next>
-                                            <block type="studio_playSound">
-                                              <title name="SOUND">slap</title>
-                                              <next>
-                                                <block type="studio_changeScore">
-                                                  <next>
-                                                    <block type="studio_wait">
-                                                      <title name="VALUE">1000</title>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
+                            <block type="studio_changeScore"/>
                           </next>
                         </block>
                       </next>
@@ -122,7 +116,122 @@
                 </block>
               </next>
             </block>
-          </statement>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">2</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">2</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"rainbow"</title>
+              <next>
+                <block type="studio_wait">
+                  <title name="VALUE">5000</title>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">3</title>
+                      <statement name="DO">
+                        <block type="studio_playSound">
+                          <title name="SOUND">rubber</title>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          <next>
+            <block type="studio_throw">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">"star"</title>
+              <title name="DIR">1</title>
+              <next>
+                <block type="studio_throw">
+                  <title name="SPRITE">1</title>
+                  <title name="VALUE">"star"</title>
+                  <title name="DIR">4</title>
+                  <next>
+                    <block type="studio_throw">
+                      <title name="SPRITE">1</title>
+                      <title name="VALUE">"star"</title>
+                      <title name="DIR">8</title>
+                      <next>
+                        <block type="studio_throw">
+                          <title name="SPRITE">1</title>
+                          <title name="VALUE">"star"</title>
+                          <title name="DIR">2</title>
+                          <next>
+                            <block type="studio_changeScore"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">2</title>
+          <next>
+            <block type="studio_vanish">
+              <title name="SPRITE">2</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">1</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">4</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">8</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+            </block>
+          </next>
         </block>
       </xml>
     </solution_blocks>
