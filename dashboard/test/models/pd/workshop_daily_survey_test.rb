@@ -17,7 +17,21 @@ module Pd
       placeholder = WorkshopDailySurvey.create_placeholder!(submission_id: FAKE_SUBMISSION_ID, **placeholder_params)
       assert placeholder.placeholder?
 
+      puts "--> #{placeholder.inspect}"
+
       assert WorkshopDailySurvey.response_exists?(**placeholder_params)
+    end
+
+    test 'duplicate?' do
+      submission = WorkshopDailySurvey.new submission_id: FAKE_SUBMISSION_ID, **placeholder_params
+      refute submission.duplicate?
+
+      submission.save!
+
+      # Same user, workshop, day, & form. New submission id
+      new_submission = WorkshopDailySurvey.new submission_id: FAKE_SUBMISSION_ID + 1, **placeholder_params
+      assert new_submission.duplicate?
+      refute new_submission.valid?
     end
 
     private
