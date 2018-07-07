@@ -1319,12 +1319,11 @@ ActiveRecord::Schema.define(version: 20180704013020) do
     t.text     "comment",    limit: 65535
     t.integer  "student_id"
     t.integer  "level_id"
-    t.integer  "teacher_id"
+    t.integer  "section_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.datetime "deleted_at"
-    t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
-    t.index ["student_id", "level_id"], name: "index_feedback_on_student_and_level", using: :btree
+    t.index ["student_id", "level_id", "section_id"], name: "index_feedback_on_student_and_level_and_section_id", using: :btree
   end
 
   create_table "teacher_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

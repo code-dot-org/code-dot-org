@@ -71,17 +71,6 @@ module Pd
       end
     end
 
-    # @override
-    def self.get_key_attributes(form_id, processed_answers)
-      # Inspect the same fields as the uniqueness validation: user, workshop, day
-      # Some responses don't have a day. In that case derive it from the form id
-      {
-        user_id: processed_answers['userId'],
-        pd_workshop_id: processed_answers['workshopId'],
-        day: processed_answers['day'] || get_day_for_form_id(form_id)
-      }
-    end
-
     def self.response_exists?(user_id:, pd_workshop_id:, day:, form_id:)
       exists?(
         user_id: user_id,
@@ -99,6 +88,13 @@ module Pd
         form_id: form_id,
         submission_id: submission_id
       )
+    end
+
+    # @override
+    def duplicate?
+      # See if this user already has a submission for this workshop, day, & form.
+      # Note: this duplicate record would fail the uniqueness validation
+      self.class.where(attributes.slice(:user_id, :pd_workshop_id, :day, :form_id)).exists?
     end
   end
 end
