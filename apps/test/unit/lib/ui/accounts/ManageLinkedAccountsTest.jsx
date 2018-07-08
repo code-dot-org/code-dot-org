@@ -38,18 +38,17 @@ describe('ManageLinkedAccounts', () => {
     expect(googleEmailCell).to.have.text('Not Connected');
   });
 
-  it('does not render student email for authentication options', () => {
+  it('renders "encrypted" for authentication options with no recorded email', () => {
     const authOptions = {
       1: {
         id: 1,
         credentialType: 'google_oauth2',
-        email: 'student@email.com'
+        email: ''
       }
     };
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
-        userType="student"
         authenticationOptions={authOptions}
       />
     );

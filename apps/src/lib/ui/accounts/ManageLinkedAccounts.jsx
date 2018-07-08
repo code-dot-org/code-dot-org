@@ -119,6 +119,7 @@ class ManageLinkedAccounts extends React.Component {
 
   formatEmail = (authOption) => {
     // Always display 'encrypted' if email is not recorded for connected authentication option
+    // (i.e., students or clever accounts)
     if (authOption.id) {
       return authOption.email || ENCRYPTED;
     }
