@@ -76,8 +76,6 @@ export const convertServerAuthOptions = (authOptions) => {
       credentialType: option.credential_type,
       email: option.email,
       error: '',
-      isConnecting: false,
-      isDisconnecting: false,
     };
   });
   return optionLookup;
