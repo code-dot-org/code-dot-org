@@ -27,6 +27,10 @@ const EMPTY_AUTH_OPTION = {
   email: '',
   error: '',
 };
+const DISCONNECT_DISABLED_STATUS = {
+  ROSTER_SECTION: 'rosterSection',
+  NO_LOGIN_OPTIONS: 'noLoginOptions',
+};
 
 class ManageLinkedAccounts extends React.Component {
   static propTypes = {
@@ -70,20 +74,23 @@ class ManageLinkedAccounts extends React.Component {
       return this.props.userHasPassword;
     }
 
+    // All other options must be OAuth, so user has login option
     return true;
   };
 
-  canDisconnect = (authOption) => {
+  disconnectDisabledStatus = (authOption) => {
     // Cannot disconnect from Google or Clever if student is in a Google Classroom or Clever section
     if (this.cannotDisconnectGoogle(authOption) || this.cannotDisconnectClever(authOption)) {
-      return false;
+      return DISCONNECT_DISABLED_STATUS.ROSTER_SECTION;
     }
 
     // Make sure user has another way to log in if authOption is disconnected
     const otherAuthOptions = Object.values(this.props.authenticationOptions).filter(option => {
       return option.id !== authOption.id;
     });
-    return this.userHasLoginOption(otherAuthOptions);
+    if (!this.userHasLoginOption(otherAuthOptions)) {
+      return DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS;
+    }
   };
 
   getDisplayName = (provider) => {
@@ -148,7 +155,7 @@ class ManageLinkedAccounts extends React.Component {
                   displayName={this.getDisplayName(option.credentialType)}
                   email={this.formatEmail(option)}
                   onClick={() => this.toggleProvider(option.id, option.credentialType)}
-                  cannotDisconnect={option.id ? !this.canDisconnect(option) : null}
+                  disconnectDisabledStatus={option.id ? this.disconnectDisabledStatus(option) : null}
                 />
               );
             })}
@@ -177,11 +184,21 @@ class OauthConnection extends React.Component {
     displayName: PropTypes.string.isRequired,
     email: PropTypes.string,
     onClick: PropTypes.func.isRequired,
-    cannotDisconnect: PropTypes.bool
+    disconnectDisabledStatus: PropTypes.string,
+  };
+
+  getDisconnectDisabledTooltip = () => {
+    const {disconnectDisabledStatus} = this.props;
+    if (disconnectDisabledStatus === DISCONNECT_DISABLED_STATUS.ROSTER_SECTION) {
+      return i18n.manageLinkedAccounts_rosteredSectionTooltip();
+    }
+    if (disconnectDisabledStatus === DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS) {
+      return i18n.manageLinkedAccounts_noLoginTooltip();
+    }
   };
 
   render() {
-    const {displayName, email, onClick, cannotDisconnect} = this.props;
+    const {displayName, email, onClick, disconnectDisabledStatus} = this.props;
     const emailStyles = !!email ? styles.cell : {...styles.cell, ...styles.emptyEmailCell};
     const buttonText = !!email ?
       i18n.manageLinkedAccounts_disconnect() :
@@ -206,9 +223,9 @@ class OauthConnection extends React.Component {
               style={styles.button}
               text={buttonText}
               onClick={onClick}
-              disabled={cannotDisconnect}
+              disabled={!!disconnectDisabledStatus}
             />
-            {cannotDisconnect &&
+            {disconnectDisabledStatus &&
               <ReactTooltip
                 id={tooltipId}
                 offset={styles.tooltipOffset}
@@ -216,7 +233,7 @@ class OauthConnection extends React.Component {
                 effect="solid"
               >
                 <div style={styles.tooltip}>
-                  {i18n.manageLinkedAccounts_cannotDisconnectTooltip()}
+                  {this.getDisconnectDisabledTooltip()}
                 </div>
               </ReactTooltip>
             }
