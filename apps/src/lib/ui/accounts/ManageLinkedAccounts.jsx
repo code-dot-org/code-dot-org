@@ -21,15 +21,11 @@ const authOptionPropType = PropTypes.shape({
   credentialType: PropTypes.string.isRequired,
   email: PropTypes.string,
   error: PropTypes.string,
-  isConnecting: PropTypes.bool,
-  isDisconnecting: PropTypes.bool,
 });
 const EMPTY_AUTH_OPTION = {
   credentialType: '',
   email: '',
   error: '',
-  isConnecting: false,
-  isDisconnecting: false,
 };
 
 class ManageLinkedAccounts extends React.Component {
