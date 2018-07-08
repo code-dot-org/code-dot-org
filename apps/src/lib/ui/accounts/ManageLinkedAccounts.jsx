@@ -188,12 +188,13 @@ class OauthConnection extends React.Component {
   };
 
   getDisconnectDisabledTooltip = () => {
-    const {disconnectDisabledStatus} = this.props;
-    if (disconnectDisabledStatus === DISCONNECT_DISABLED_STATUS.ROSTER_SECTION) {
-      return i18n.manageLinkedAccounts_rosteredSectionTooltip();
-    }
-    if (disconnectDisabledStatus === DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS) {
-      return i18n.manageLinkedAccounts_noLoginTooltip();
+    switch (this.props.disconnectDisabledStatus) {
+      case DISCONNECT_DISABLED_STATUS.ROSTER_SECTION:
+        return i18n.manageLinkedAccounts_rosteredSectionTooltip();
+      case DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS:
+        return i18n.manageLinkedAccounts_noLoginTooltip();
+      default:
+        return null;
     }
   };
 
