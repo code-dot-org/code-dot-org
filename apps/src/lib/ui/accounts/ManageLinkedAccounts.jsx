@@ -47,18 +47,6 @@ class ManageLinkedAccounts extends React.Component {
     navigateToHref(`/users/auth/${provider}/connect`);
   };
 
-  getAuthenticationOption = (provider) => {
-    const {authenticationOptions} = this.props;
-    const id = Object.keys(authenticationOptions).find(id => {
-      return authenticationOptions[id].credentialType === provider;
-    });
-    return authenticationOptions[id];
-  };
-
-  hasAuthOption = (provider) => {
-    return this.getAuthenticationOption(provider) !== undefined;
-  };
-
   toggleProvider = (id, provider) => {
     if (id) {
       this.props.disconnect(id);
@@ -67,41 +55,40 @@ class ManageLinkedAccounts extends React.Component {
     }
   };
 
-  cannotDisconnectGoogle = () => {
-    const {isGoogleClassroomStudent} = this.props;
-    const cannotDisconnect = this.hasAuthOption(OAUTH_PROVIDERS.GOOGLE) ? isGoogleClassroomStudent : false;
-    return cannotDisconnect;
+  cannotDisconnectGoogle = (authOption) => {
+    return authOption.credentialType === OAUTH_PROVIDERS.GOOGLE && this.props.isGoogleClassroomStudent;
   };
 
-  cannotDisconnectClever = () => {
-    const {isCleverStudent} = this.props;
-    const cannotDisconnect = this.hasAuthOption(OAUTH_PROVIDERS.CLEVER) ? isCleverStudent : false;
-    return cannotDisconnect;
+  cannotDisconnectClever = (authOption) => {
+    return authOption.credentialType === OAUTH_PROVIDERS.CLEVER && this.props.isCleverStudent;
   };
 
-  cannotDisconnect = (provider) => {
-    const {authenticationOptions, userHasPassword} = this.props;
-    const otherAuthOptions = _.reject(authenticationOptions, option => option.credentialType === provider);
-    const otherOptionIsEmail = otherAuthOptions.length === 1 && otherAuthOptions[0].credentialType === 'email';
-
-    if (!this.hasAuthOption(provider)) {
-      // If not connected to this provider, return early
-      return false;
-    } else if (provider === OAUTH_PROVIDERS.GOOGLE && this.cannotDisconnectGoogle()) {
-      // Cannot disconnect from Google if student is in a Google Classroom section
-      return true;
-    } else if (provider === OAUTH_PROVIDERS.CLEVER && this.cannotDisconnectClever()) {
-      // Cannot disconnect from Clever if student is in a Clever section
-      return true;
-    } else if (otherAuthOptions.length === 0) {
-      // If it's the user's last authentication option
-      return true;
-    } else if (otherOptionIsEmail && !userHasPassword) {
-      // If the user's only other authentication option is an email address, a password is required to disconnect
-      return true;
-    } else {
+  userHasLoginOption = (authOptions) => {
+    // It's the user's last authentication option
+    if (authOptions.length === 0) {
       return false;
     }
+
+    // If the user's only authentication option is an email address, a password is required for login
+    const otherOptionIsEmail = authOptions.length === 1 && authOptions[0].credentialType === 'email';
+    if (otherOptionIsEmail) {
+      return this.props.userHasPassword;
+    }
+
+    return true;
+  };
+
+  canDisconnect = (authOption) => {
+    // Cannot disconnect from Google or Clever if student is in a Google Classroom or Clever section
+    if (this.cannotDisconnectGoogle(authOption) || this.cannotDisconnectClever(authOption)) {
+      return false;
+    }
+
+    // Make sure user has another way to log in if authOption is disconnected
+    const otherAuthOptions = Object.values(this.props.authenticationOptions).filter(option => {
+      return option.id !== authOption.id;
+    });
+    return this.userHasLoginOption(otherAuthOptions);
   };
 
   getDisplayName = (provider) => {
@@ -166,6 +153,7 @@ class ManageLinkedAccounts extends React.Component {
                   displayName={this.getDisplayName(option.credentialType)}
                   email={this.formatEmail(option)}
                   onClick={() => this.toggleProvider(option.id, option.credentialType)}
+                  cannotDisconnect={option.id ? !this.canDisconnect(option) : null}
                 />
               );
             })}
