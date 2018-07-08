@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import _ from 'lodash';
 
 /** Initial state for manageLinkedAccounts redux store.
@@ -26,7 +27,7 @@ export default function manageLinkedAccounts(state=initialState, action) {
     const {authenticationOptions, userHasPassword, isGoogleClassroomStudent, isCleverStudent} = action.state;
     return {
       ...state,
-      authenticationOptions: convertServerAuthOptions(authenticationOptions),
+      authenticationOptions,
       userHasPassword,
       isGoogleClassroomStudent,
       isCleverStudent,
