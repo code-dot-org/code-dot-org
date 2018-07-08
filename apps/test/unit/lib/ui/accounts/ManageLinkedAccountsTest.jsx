@@ -75,6 +75,24 @@ describe('ManageLinkedAccounts', () => {
     expect(googleEmailCell).to.have.text('teacher@email.com');
   });
 
+  it('renders authentication option error', () => {
+    const authOptions = {
+      id: {
+        id: 1,
+        credentialType: 'google_oauth2',
+        error: 'Oh no!'
+      }
+    };
+    const wrapper = mount(
+      <ManageLinkedAccounts
+        {...DEFAULT_PROPS}
+        authenticationOptions={authOptions}
+      />
+    );
+    const googleEmailCell = wrapper.find('OauthConnection').at(0).find('td').at(2);
+    expect(googleEmailCell).to.include.text('Oh no!');
+  });
+
   it('navigates to provider endpoint if authentication option is not connected', () => {
     const wrapper = mount(
       <ManageLinkedAccounts
