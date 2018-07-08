@@ -7,7 +7,7 @@ import _ from 'lodash';
  * isGoogleClassroomStudent - whether or not the user belongs to a google classroom section
  * isCleverStudent - whether or not the user belongs to a clever section
  */
-const initialState = {
+export const initialState = {
   authenticationOptions: {},
   userHasPassword: false,
   isGoogleClassroomStudent: false,
