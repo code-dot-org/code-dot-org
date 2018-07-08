@@ -78,7 +78,6 @@ export const convertServerAuthOptions = (authOptions) => {
       id: option.id,
       credentialType: option.credential_type,
       email: option.email,
-      hashedEmail: option.hashed_email,
       error: '',
       isConnecting: false,
       isDisconnecting: false,
