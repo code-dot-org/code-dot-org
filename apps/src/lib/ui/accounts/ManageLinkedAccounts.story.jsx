@@ -7,6 +7,9 @@ const DEFAULT_PROPS = {
   authenticationOptions: [],
   connect: action('connect'),
   disconnect: action('disconnect'),
+  userHasPassword: true,
+  isGoogleClassroomStudent: false,
+  isCleverStudent: false,
 };
 
 const mockAuthenticationOptions = [

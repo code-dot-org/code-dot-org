@@ -70,4 +70,10 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
     submission = build(:census_submission, :with_long_other_description)
     assert_not submission.valid?, submission.errors.full_messages
   end
+
+  test "census submission submitter email address is lowercased" do
+    submission = build(:census_submission, submitter_email_address: 'MiXeD.CaSe@example.net')
+
+    assert_equal 'mixed.case@example.net', submission.submitter_email_address
+  end
 end

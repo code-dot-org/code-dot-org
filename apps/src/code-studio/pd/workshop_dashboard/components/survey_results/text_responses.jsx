@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Well} from 'react-bootstrap';
 import _ from 'lodash';
+import he from 'he';
 
 export default class TextResponses extends React.Component {
   static propTypes = {
@@ -64,7 +65,7 @@ export default class TextResponses extends React.Component {
   }
 
   renderBullet(text, key) {
-    const trimmedText = _.trim(text);
+    const trimmedText = _.trim(he.decode(text));
     if (trimmedText) {
       return (
         <li key={key}>
