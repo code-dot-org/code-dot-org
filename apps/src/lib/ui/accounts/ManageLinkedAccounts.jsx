@@ -36,7 +36,6 @@ class ManageLinkedAccounts extends React.Component {
   static propTypes = {
     // Provided by redux
     authenticationOptions: PropTypes.objectOf(authOptionPropType),
-    userType: PropTypes.string.isRequired,
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
@@ -168,7 +167,6 @@ export const UnconnectedManageLinkedAccounts = ManageLinkedAccounts;
 
 export default connect(state => ({
   authenticationOptions: state.manageLinkedAccounts.authenticationOptions,
-  userType: state.manageLinkedAccounts.userType,
   userHasPassword: state.manageLinkedAccounts.userHasPassword,
   isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
   isCleverStudent: state.manageLinkedAccounts.isCleverStudent,

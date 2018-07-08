@@ -42,7 +42,6 @@ $(document).ready(() => {
   if (manageLinkedAccountsMountPoint) {
     new ManageLinkedAccountsController(
       manageLinkedAccountsMountPoint,
-      userType,
       authenticationOptions,
       isPasswordRequired,
       isGoogleClassroomStudent,

@@ -2,14 +2,12 @@ import _ from 'lodash';
 
 /** Initial state for manageLinkedAccounts redux store.
  * authenticationOptions - array of authentication options for current user
- * userType - current user's type (student or teacher)
  * userHasPassword - whether or not the user has a code.org password
  * isGoogleClassroomStudent - whether or not the user belongs to a google classroom section
  * isCleverStudent - whether or not the user belongs to a clever section
  */
 const initialState = {
   authenticationOptions: {},
-  userType: '',
   userHasPassword: false,
   isGoogleClassroomStudent: false,
   isCleverStudent: false,
@@ -25,11 +23,10 @@ export const setAuthOptionError = (id, error) => ({type: SET_AUTH_OPTION_ERROR, 
 
 export default function manageLinkedAccounts(state=initialState, action) {
   if (action.type === INITIALIZE_STATE) {
-    const {authenticationOptions, userType, userHasPassword, isGoogleClassroomStudent, isCleverStudent} = action.state;
+    const {authenticationOptions, userHasPassword, isGoogleClassroomStudent, isCleverStudent} = action.state;
     return {
       ...state,
       authenticationOptions: convertServerAuthOptions(authenticationOptions),
-      userType,
       userHasPassword,
       isGoogleClassroomStudent,
       isCleverStudent,
