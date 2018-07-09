@@ -389,7 +389,7 @@ en:
     current_password_hint: '(we need your current password to confirm your changes)'
     delete: 'Delete Account'
     delete_text: "Deleting your account will erase all information and progress connected to this account."
-    delete_text_not_allowed: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
+    delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
@@ -1129,4 +1129,3 @@ en:
     privacy_policy: 'privacy policy'
     logout: 'Logout'
     yes: 'Yes'
-
