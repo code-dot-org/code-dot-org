@@ -17,8 +17,6 @@ module Pd
       placeholder = WorkshopDailySurvey.create_placeholder!(submission_id: FAKE_SUBMISSION_ID, **placeholder_params)
       assert placeholder.placeholder?
 
-      puts "--> #{placeholder.inspect}"
-
       assert WorkshopDailySurvey.response_exists?(**placeholder_params)
     end
 
