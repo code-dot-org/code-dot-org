@@ -8,7 +8,14 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
-const {userAge, userType, isPasswordRequired, authenticationOptions} = scriptData;
+const {
+  userAge,
+  userType,
+  isPasswordRequired,
+  authenticationOptions,
+  isGoogleClassroomStudent,
+  isCleverStudent,
+} = scriptData;
 
 $(document).ready(() => {
   new ChangeEmailController({
@@ -35,8 +42,10 @@ $(document).ready(() => {
   if (manageLinkedAccountsMountPoint) {
     new ManageLinkedAccountsController(
       manageLinkedAccountsMountPoint,
-      userType,
       authenticationOptions,
+      isPasswordRequired,
+      isGoogleClassroomStudent,
+      isCleverStudent,
     );
   }
 
