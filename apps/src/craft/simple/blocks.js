@@ -176,36 +176,6 @@ exports.install = function (blockly, blockInstallOptions) {
     return 'shear(\'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.craft_whileBlockAhead = {
-    helpUrl: '',
-    init: function () {
-      var dropdownOptions = keysToDropdownOptions(craftBlockOptions.ifBlockOptions || allDropdownBlocks);
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
-      dropdown.setValue(dropdownOptions[0][1]);
-
-      this.setHSV(322, 0.90, 0.95);
-      this.appendDummyInput()
-          .appendTitle(i18n.blockWhileXAheadWhile())
-          .appendTitle(dropdown, 'TYPE')
-          .appendTitle(i18n.blockWhileXAheadAhead());
-      this.appendStatementInput('DO')
-          .appendTitle(i18n.blockWhileXAheadDo());
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-    }
-  };
-
-  blockly.Generator.get('JavaScript').craft_whileBlockAhead = function () {
-    var innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    var blockType = this.getTitleValue('TYPE');
-    return 'whileBlockAhead(\'block_id_' + this.id + '\',\n"' +
-            blockType + '", ' +
-        '  function() { '+
-            innerCode +
-        '  }' +
-        ');\n';
-  };
-
   blockly.Blocks.craft_ifBlockAhead = {
     helpUrl: '',
     init: function () {

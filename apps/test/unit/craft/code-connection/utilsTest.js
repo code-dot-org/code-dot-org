@@ -21,11 +21,6 @@ describe('convertBlocksXml', () => {
         <block type="craft_destroyBlock">
         </block>
       </xml>`,
-      `<xml>
-        <block type="craft_whileBlockAhead">
-          <title name="TYPE">dirt</title>
-        </block>
-      </xml>`,
     ];
 
     const expected = [
@@ -42,30 +37,6 @@ describe('convertBlocksXml', () => {
       `<xml>
         <block type="craft_destroy">
           <title name="DIR">forward</title>
-        </block>
-      </xml>`,
-      `<xml>
-        <block type="controls_whileUntil" inline="false">
-          <title name="MODE">WHILE</title>
-          <value name="BOOL">
-            <block type="logic_compare" inline="true">
-              <title name="OP">EQ</title>
-              <value name="A">
-                <block type="craft_inspect">
-                  <title name="DIR">forward</title>
-                </block>
-              </value>
-              <value name="B">
-                <block type="craft_getnameof" inline="false">
-                  <value name="ITEM">
-                    <block type="craft_block">
-                      <title name="BLOCK">dirt</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </value>
         </block>
       </xml>`,
     ];
@@ -93,7 +64,7 @@ describe('convertBlocksXml', () => {
     blocks.forEach((block, i) => {
       const xml = `
         <xml>
-          <block type="craft_whileBlockAhead">
+          <block type="craft_ifBlockAhead">
             <title name="TYPE">${block}</title>
           </block>
         </xml>
