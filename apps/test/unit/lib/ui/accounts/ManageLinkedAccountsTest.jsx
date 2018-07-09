@@ -144,7 +144,11 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('disables disconnecting from the user\'s last oauth authentication option if user doesn\'t have a password', () => {
-    const authOptions = {1: {id: 1, credentialType: 'google_oauth2'}};
+    const authOptions = {
+      1: {id: 1, credentialType: 'google_oauth2'},
+      2: {id: 2, credentialType: 'email'},
+      3: {id: 3, credentialType: 'email'},
+    };
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
