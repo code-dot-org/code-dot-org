@@ -1,6 +1,14 @@
 require 'test_helper'
 
 class TeacherFeedbackTest < ActiveSupport::TestCase
+  test 'feedback per teacher - no feedback' do
+    create :teacher
+    #no feedback
+
+    retrieved = TeacherFeedback.latest_per_teacher
+    assert_equal([], retrieved)
+  end
+
   test 'feedback per teacher - single teacher' do
     teacher = create :teacher
     create :teacher_feedback, teacher: teacher
@@ -31,6 +39,14 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
 
     assert_equal([feedbacks[0]], TeacherFeedback.where(student: students[0]).latest_per_teacher)
     assert_equal([feedbacks[1]], TeacherFeedback.where(student: students[1]).latest_per_teacher)
+  end
+
+  test 'latest feedback - no feedback' do
+    create :teacher
+    #no feedback
+
+    retrieved = TeacherFeedback.latest
+    assert_nil(retrieved)
   end
 
   test 'latest feedback - one comment' do
