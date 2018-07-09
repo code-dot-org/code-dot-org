@@ -1752,8 +1752,10 @@ class User < ActiveRecord::Base
   # Whether the current user has permission to delete their own account from
   # the account edit page.
   def can_delete_own_account?
-    # All accounts except teacher-managed accounts may delete their own account.
-    !teacher_managed_account?
+    # Teacher-managed student accounts may not delete their own account.
+    return false if teacher_managed_account?
+    # Students in sections may not delete their own account.
+    sections_as_student.empty?
   end
 
   # Users who might otherwise have orphaned accounts should have the option
