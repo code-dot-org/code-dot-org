@@ -9,6 +9,16 @@ import {
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 
+const QUESTION_CHARACTER_LIMIT = 260;
+
+const styles = {
+  text: {
+    font: 10,
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+};
+
 export const freeResponseSummaryPropType = PropTypes.shape({
   questionText:  PropTypes.string,
   responses: PropTypes.arrayOf(freeResponsesDataPropType),
@@ -19,6 +29,14 @@ class FreeResponsesAssessmentsContainer extends Component {
     freeResponseQuestions: PropTypes.arrayOf(freeResponseSummaryPropType),
     studentId: PropTypes.number,
     currentStudentHasResponses: PropTypes.bool,
+  };
+
+  state = {
+    isExpanded: false,
+  };
+
+  expandText = () => {
+    this.setState({isExpanded: true});
   };
 
   render() {
@@ -32,7 +50,19 @@ class FreeResponsesAssessmentsContainer extends Component {
             }
             {freeResponseQuestions.map((question, index) => (
               <div key={index}>
-                <h3>{`${question.questionNumber}. ${question.questionText}`}</h3>
+                {!this.state.isExpanded &&
+                  <div style={styles.text}>
+                    {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
+                    {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
+                      <a onClick={this.expandText}><span>{i18n.seeFullQuestion()}</span></a>
+                    }
+                  </div>
+                }
+                {this.state.isExpanded &&
+                  <div style={styles.text}>
+                    {`${question.questionNumber}. ${question.questionText}`}
+                  </div>
+                }
                 <FreeResponsesAssessmentsTable
                   freeResponses={question.responses}
                 />
@@ -52,4 +82,3 @@ export default connect(state => ({
   studentId: state.sectionAssessments.studentId,
   currentStudentHasResponses: currentStudentHasResponses(state),
 }))(FreeResponsesAssessmentsContainer);
-
