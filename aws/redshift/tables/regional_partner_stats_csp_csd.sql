@@ -13,9 +13,9 @@
 -- this table will be generated daily from code hosted on github, so need to talk to Ben about how to update that process
 
 ;
-drop table if exists analysis.regional_partner_stats_csp_csd;
+drop table if exists analysis_pii.regional_partner_stats_csp_csd;
 
-create table analysis.regional_partner_stats_csp_csd 
+create table analysis_pii.regional_partner_stats_csp_csd 
 AS
 with completed as
 (
@@ -61,7 +61,7 @@ pd_enrollments_with_year as
          d.course,
          d.school_year as school_year_trained,
          s.school_year as school_year_taught,
-         rp.name as regional_partner_name,
+         CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,
          rp.id as regional_partner_id,
          coalesce(d.school_id, ss_user.school_id) school_id,
          coalesce(ss_summer_pd.school_name, ss_user.school_name) school_name,
@@ -128,5 +128,5 @@ pd_enrollments_with_year as
          AND sa.school_year = s.school_year
 ;
 
-GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csp_csd TO GROUP admin;
-GRANT SELECT ON analysis.regional_partner_stats_csp_csd TO GROUP reader_pii;
+GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csp_csd TO GROUP admin;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd TO GROUP reader_pii;

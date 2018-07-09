@@ -86,6 +86,11 @@ module ApplicationHelper
       flash.notice = nil
     end
 
+    if flash[:info].present?
+      ret += content_tag(:div, flash[:info], {class: 'alert alert-info'})
+      flash[:info] = nil
+    end
+
     if alert.present?
       ret += content_tag(:div, flash.alert, {class: 'alert alert-danger'})
       flash.alert = nil
