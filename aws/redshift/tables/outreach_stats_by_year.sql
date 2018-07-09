@@ -9,8 +9,15 @@ CREATE table analysis.outreach_stats_by_year AS
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
          COUNT(DISTINCT CASE WHEN u_students.urm = 1 THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.urm IN (0,1) THEN f.student_user_id ELSE NULL END),0) pct_urm,
          COUNT(DISTINCT CASE WHEN up.basic_proficiency_at IS NOT NULL THEN f.student_user_id ELSE NULL END) students_proficient,
-         COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
-         COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
+         COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Fundamentals')) or
+                                   (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Fundamentals')) 
+                                   THEN f.student_user_id ELSE NULL END) students_csf, 
+         COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Discoveries')) or
+                                   (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Discoveries')) 
+                                   THEN f.student_user_id ELSE NULL END) students_csd,          
+         COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Principles')) or
+                                   (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Principles')) 
+                                   THEN f.student_user_id ELSE NULL END) students_csp,
          COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc
   FROM dashboard_production_pii.users u
     JOIN dashboard_production_pii.user_geos ug 
@@ -43,8 +50,15 @@ CREATE table analysis.outreach_stats_by_year AS
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
          COUNT(DISTINCT CASE WHEN u_students.urm = 1 THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.urm IN (0,1) THEN f.student_user_id ELSE NULL END),0) pct_urm,
          COUNT(DISTINCT CASE WHEN up.basic_proficiency_at IS NOT NULL THEN f.student_user_id ELSE NULL END) students_proficient,
-         COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
-         COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
+         COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Fundamentals')) or
+                                   (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Fundamentals')) 
+                                   THEN f.student_user_id ELSE NULL END) students_csf, 
+         COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Discoveries')) or
+                                   (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Discoveries')) 
+                                   THEN f.student_user_id ELSE NULL END) students_csd,          
+         COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Principles')) or
+                                   (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Principles')) 
+                                   THEN f.student_user_id ELSE NULL END) students_csp,
          COUNT(DISTINCT CASE WHEN sc.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc
   FROM dashboard_production_pii.users u
     JOIN dashboard_production_pii.user_geos ug 
