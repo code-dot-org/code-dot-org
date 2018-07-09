@@ -1,4 +1,5 @@
 require 'cdo/shared_cache'
+require 'honeybadger'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
@@ -79,8 +80,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # If email is already taken, persisted? will be false because of a validation failure
       check_and_apply_oauth_takeover(@user)
       sign_in_user
-    elsif allows_silent_takeover(@user)
-      silent_takeover(@user)
+    elsif allows_silent_takeover(@user, auth_hash)
+      silent_takeover(@user, auth_hash)
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
       # Note that @user.email is populated by User.from_omniauth even for students
       if looked_up_user.provider == 'clever'
@@ -174,14 +175,36 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       scopes.include?('classroom.rosters.readonly')
   end
 
-  def silent_takeover(oauth_user)
+  def silent_takeover(oauth_user, auth_hash)
     # Copy oauth details to primary account
     @user = User.find_by_email_or_hashed_email(oauth_user.email)
-    @user.provider = oauth_user.provider
-    @user.uid = oauth_user.uid
-    @user.oauth_refresh_token = oauth_user.oauth_refresh_token
-    @user.oauth_token = oauth_user.oauth_token
-    @user.oauth_token_expiration = oauth_user.oauth_token_expiration
+    if @user.migrated?
+      success = AuthenticationOption.create(
+        user: @user,
+        email: oauth_user.email,
+        hashed_email: oauth_user.hashed_email,
+        credential_type: auth_hash.provider.to_s,
+        authentication_id: auth_hash.uid,
+        data: {
+          oauth_token: auth_hash.credentials&.token,
+          oauth_token_expiration: auth_hash.credentials&.expires_at,
+          oauth_refresh_token: auth_hash.credentials&.refresh_token
+        }
+      )
+      unless success
+        # This should never happen if other logic is working correctly, so notify
+        Honeybadger.notify(
+          error_class: 'Failed to create AuthenticationOption during silent takeover',
+          error_message: "Could not create AuthenticationOption during silent takeover for user with email #{oauth_user.email}"
+        )
+      end
+    else
+      @user.provider = oauth_user.provider
+      @user.uid = oauth_user.uid
+      @user.oauth_refresh_token = oauth_user.oauth_refresh_token
+      @user.oauth_token = oauth_user.oauth_token
+      @user.oauth_token_expiration = oauth_user.oauth_token_expiration
+    end
     sign_in_user
   end
 
@@ -190,10 +213,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_and_redirect @user
   end
 
-  def allows_silent_takeover(oauth_user)
-    allow_takeover = oauth_user.provider.present?
-    allow_takeover &= %w(facebook google_oauth2 windowslive).include?(oauth_user.provider)
-    # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
+  def allows_silent_takeover(oauth_user, auth_hash)
+    allow_takeover = auth_hash.provider.present?
+    allow_takeover &= AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
     allow_takeover && lookup_user
   end
