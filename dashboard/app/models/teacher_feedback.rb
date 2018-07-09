@@ -30,6 +30,6 @@ class TeacherFeedback < ApplicationRecord
   end
 
   def self.latest
-    find(maximum(:id))
+    find_by(id: maximum(:id))
   end
 end
