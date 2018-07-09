@@ -956,7 +956,7 @@ describe('sectionAssessmentsRedux', () => {
                       multi_correct: 4,
                       multi_count: 10,
                       submitted: true,
-                      timestamp: "2018-06-12 04:53:36 UTC",
+                      timestamp: "2018-06-26T21:05:02.000Z",
                       url: "code.org",
                     }
                   }
@@ -974,7 +974,7 @@ describe('sectionAssessmentsRedux', () => {
               numMultipleChoice: 10,
               numMultipleChoiceCorrect: 4,
               isSubmitted: true,
-              submissionTimeStamp: "March 3, 5877521 at -8:-31:-23  GMT-5:17:32",
+              submissionTimeStamp: "June 26, 2018 at 5:05:02 PM EDT",
               url: "code.org",
             },
             {
