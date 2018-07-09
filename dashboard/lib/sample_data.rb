@@ -1,13 +1,17 @@
 include FactoryGirl::Syntax::Methods
 
 class SampleData
-  TEST_ACCOUNT_PASSWORD = "00secret".freeze
-  @@prng = nil
+  SAMPLE_TEACHER_EMAIL = 'testteacher@code.org'.freeze
+  SAMPLE_TEACHER_PASSWORD = '00secret'.freeze
+  SAMPLE_TEACHER_NAME = 'TestTeacher Codeberg'.freeze
+  SAMPLE_STUDENT_NAME_FORMAT = 'TestStudent%s Codeberg'.freeze
+  SAMPLE_STUDENT_NAME_REGEX = /TestStudent\d* Codeberg/
+
+  @@rng = nil
 
   # Returns a seeded random number generator for consistent test data
-  def self.prng
-    @@prng ||= Random.new(0)
-    @@prng
+  def self.rng
+    @@rng ||= Random.new(0)
   end
 
   # Creates sample data
@@ -15,77 +19,88 @@ class SampleData
     raise "Should not be run outside of development" unless CDO.rack_env?(:development)
 
     # Create a test teacher
-    teacher = create_teacher "testteacher@code.org", "TestTeacher Codeberg"
+    teacher = create_teacher SAMPLE_TEACHER_EMAIL, SAMPLE_TEACHER_PASSWORD,
+      SAMPLE_TEACHER_NAME
 
     # Create normal-sized and large sections for each of CSF, CSD and CSP
 
-    create_section({teacher: teacher, name: "CSF 1",
+    create_section(
+      teacher: teacher, name: 'CSF 1',
       login_type: Section::LOGIN_TYPE_PICTURE, grade: 2, age_min: 7,
-      age_max_inclusive: 9, script_name: "coursea-2018", num_students: 30,
-      use_imperfect_results: true}
-      )
+      age_max_inclusive: 9, script_name: 'coursea-2018', num_students: 30,
+      use_imperfect_results: true
+    )
 
-    create_section({teacher: teacher, name: "CSF 2 (Large)",
+    create_section(
+      teacher: teacher, name: 'CSF 2 (Large)',
       login_type: Section::LOGIN_TYPE_PICTURE, grade: 2, age_min: 7,
-      age_max_inclusive: 9, script_name: "coursea-2018", num_students: 150,
-      use_imperfect_results: true}
-      )
+      age_max_inclusive: 9, script_name: 'coursea-2018', num_students: 150,
+      use_imperfect_results: true
+    )
 
-    create_section({teacher: teacher, name: "CSD 1",
+    create_section(
+      teacher: teacher, name: 'CSD 1',
       login_type: Section::LOGIN_TYPE_EMAIL, grade: 7, age_min: 13,
-      age_max_inclusive: 14, script_name: "csd1-2018", num_students: 30,
-      use_imperfect_results: false}
-      )
+      age_max_inclusive: 14, script_name: 'csd1-2018', num_students: 30,
+      use_imperfect_results: false
+    )
 
-    create_section ({teacher: teacher, name: "CSD 2 (Large)",
+    create_section(
+      teacher: teacher, name: 'CSD 2 (Large)',
       login_type: Section::LOGIN_TYPE_EMAIL, grade: 7, age_min: 13,
-      age_max_inclusive: 14, script_name: "csd1-2018", num_students: 150,
-      use_imperfect_results: false}
-      )
+      age_max_inclusive: 14, script_name: 'csd1-2018', num_students: 150,
+      use_imperfect_results: false
+    )
 
-    create_section ({teacher: teacher, name: "CSP 1",
+    create_section(
+      teacher: teacher, name: 'CSP 1',
       login_type: Section::LOGIN_TYPE_EMAIL, grade: 10, age_min: 14,
-      age_max_inclusive: 16, script_name: "csp1-2018", num_students: 30,
-      use_imperfect_results: false}
-      )
+      age_max_inclusive: 16, script_name: 'csp1-2018', num_students: 30,
+      use_imperfect_results: false
+    )
 
-    create_section ({teacher: teacher, name: "CSP 2 (Large)",
+    create_section(
+      teacher: teacher, name: 'CSP 2 (Large)',
       login_type: Section::LOGIN_TYPE_EMAIL, grade: 10, age_min: 14,
-      age_max_inclusive: 16, script_name: "csp1-2018", num_students: 150,
-      use_imperfect_results: false}
-      )
+      age_max_inclusive: 16, script_name: 'csp1-2018', num_students: 150,
+      use_imperfect_results: false
+    )
   end
 
-  # will delete the teacher and all of the teacher's sections and students
-  # and recreate.
-  def self.create_teacher(email, name)
+  # Hard-delete the teacher and all of the teacher's sections and students
+  # and recreate. Sections and followers would be soft-deleted by
+  # dependency when we delete the teacher; but to not leave a trail of
+  # old test data behind, we explictly hard-delete.
+  def self.create_teacher(email, password, name)
     # Delete any existing test data
     user = User.find_by_email_or_hashed_email(email)
     unless user.nil?
       user.sections.each do |section|
-        # Delete all students in each section
-        section.followers.each do |follower|
-          student_user = User.find_by_id(follower.student_user_id)
-          raise "Not a test user" unless student_user.name.include? "Codeberg"
+        # Hard-delete all students in each section.
+        section.students.each do |student_user|
+          raise "Not a sample student" unless student_user.name =~ SAMPLE_STUDENT_NAME_REGEX
+          raise "Should not be run outside of development" unless CDO.rack_env?(:development)
           UserGeo.where(user_id: student_user.id).destroy_all
           student_user.really_destroy!
         end
-        # Delete each section
+        # Hard-delete each section.
         section.really_destroy!
       end
       UserGeo.where(user_id: user.id).destroy_all
       # Delete the existing test teacher
-      raise "Not a test user" unless user.name.include? "Codeberg"
+      raise "Not a sample teacher" unless user.name.eql? SAMPLE_TEACHER_NAME
+      raise "Not a sample teacher" unless user.email.eql? SAMPLE_TEACHER_EMAIL
+      raise "Should not be run outside of development" unless CDO.rack_env?(:development)
       user.really_destroy!
     end
     # Create the test teacher
-    create :teacher, {email: email, name: name,
-      password: TEST_ACCOUNT_PASSWORD, terms_of_service_version: 1}
+    create :teacher, email: email, name: name,
+      password: password, terms_of_service_version: 1
   end
 
   # Generate a random gender choice with reasonable distributions
   def self.random_gender
-    val = prng.rand(100)
+    val = rng.rand(100)
     gender = nil
     case val
     when 0..29
@@ -119,31 +134,34 @@ class SampleData
     level_count = script.script_levels.count
 
     # Create the section
-    section = create :section, {user: options[:teacher], name: options[:name],
-      login_type: options[:login_type], grade: options[:grade],
-      script: script}
+    section = create :section, script: script,
+      **options.slice(:teacher, :name, :login_type, :grade)
+
+    current_student = 0
 
     # Create students in section
-    (0..options[:num_students] - 1).each do
+    (1..options[:num_students]).each do
       # Choose random properties and create student
       age_min = options[:age_min]
       age_max_inclusive = options[:age_max_inclusive]
+      current_student += 1
 
-      age = prng.rand(age_max_inclusive + 1 - age_min) + age_min
+      name = format(SAMPLE_STUDENT_NAME_FORMAT, current_student)
+      age = rng.rand(age_min..age_max_inclusive)
       gender = random_gender
-      student_user = create :student, {age: age, gender: gender}
+      student_user = create :student, name: name, age: age, gender: gender
 
       # Add student to section
-      create :follower, {section: section, student_user: student_user}
+      create :follower, section: section, student_user: student_user
 
       # Create random student progress.
-      pct_skipped = prng.rand(15)
-      pct_imperfect = options[:use_imperfect_results] ? prng.rand(40) + 25 +
+      pct_skipped = rng.rand(15)
+      pct_imperfect = options[:use_imperfect_results] ? rng.rand(25..65) +
         pct_skipped : 0
 
       max_level =
-        if prng.rand(100) < 90
-          (level_count.to_f * (prng.rand(0.6) + 0.2)).to_i
+        if rng.rand(100) < 90
+          (level_count.to_f * rng.rand(0.2..0.8)).to_i
         else
           # To simulate real-world data, some students have no progress
           0
@@ -157,7 +175,7 @@ class SampleData
 
         # Roll the dice to decide if progress is completed, perfect, or
         # skipped for this level
-        rand_val = prng.rand(100)
+        rand_val = rng.rand(100)
         best_result =
           if rand_val < pct_skipped
             nil
