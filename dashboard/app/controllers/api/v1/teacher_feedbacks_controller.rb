@@ -14,7 +14,11 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     # Setting custom header here allows us to access the csrf-token and manually use for create
     headers['csrf-token'] = form_authenticity_token
 
-    render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+    if @feedback.nil?
+      head :no_content
+    else
+      render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+    end
   end
 
   # Use student_id and level_id to lookup the most recent feedback from each teacher who has provided feedback to that

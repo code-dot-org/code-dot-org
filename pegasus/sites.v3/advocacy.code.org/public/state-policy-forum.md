@@ -8,7 +8,7 @@ video_player: true
 <p align="center"><img src="/images/fit-970/forum-banner1.png"></p> 
 
 
-## Join us September 27-28 2018
+## Join Us September 27-28, 2018
 
 The annual State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year's forum is co-hosted by [Code.org](https://code.org/promote) and the Computer Science Teachers Association ([CSTA](https://www.csteachers.org/)). 
 
@@ -29,7 +29,7 @@ The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 
 
 <a href="https://goo.gl/forms/EFcuR6C9Tf6m26AM2" target="_blank"><button type="button">Apply today!</button></a>
 
-## Pictures from Previous Forums
+## Pictures From Previous Forums
 
 <div class="col-33" style="padding-right: 20px; padding-bottom: 20px;">
 <img alt="Networking activity" src="/images/fit-300/networking.jpg">
@@ -73,7 +73,7 @@ The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the op
 The main forum begins at 3:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 4:00 pm on Friday, September 28. Sessions include: 
  
 * The State of K-12 CS
-* Flash Talks: Data and Accountability, Reaching Rural areas, Certification, Managing Grant Programs, State and Local Boards, Legislative Successes/Failures
+* Flash Talks: Data and Accountability, Reaching Rural Areas, Certification, Managing Grant Programs, State and Local Boards, Legislative Successes/Failures
 * Workshops: Standards, State Plan, Legislation, Microcredentials, Advocacy
 * Birds of a Feather Discussions
 * Team Planning Time
@@ -157,7 +157,7 @@ We encourage business casual attire during the forum. All our conference session
 <summary>**What devices will I need to bring?**</summary>
   <p>
   <br>
-Please bring your own laptop/tablet, as we will be accessing online resource. We will not have extra devices on hand for participants to borrow.
+Please bring your own laptop/tablet, as we will be accessing online resources. We will not have extra devices on hand for participants to borrow.
 
 </p>
 </details>
@@ -165,8 +165,8 @@ Please bring your own laptop/tablet, as we will be accessing online resource. We
 
 ## Forum Resources
 
-* [2018 Code.org/CSTA State Policy Forum one-pager](https://advocacy.code.org/2018-state-policy-forum-one-pager.pdf)
-* [State Policy Tracker](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/edit?usp=sharing)
+* [2018 Code.org/CSTA State Policy Forum one-pager](https://advocacy.code.org/one-pager.pdf)
+* [State Policy Tracker](http://bit.ly/9policies)
 
 
 

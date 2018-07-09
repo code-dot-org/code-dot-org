@@ -79,7 +79,7 @@ class TeacherFeedback extends Component {
       contentType: 'application/json;charset=UTF-8',
     }).done((data, textStatus, request) => {
       this.setState({
-        latestFeedback: [data],
+        latestFeedback: request.status === 204 ? [] : [data],
         token: request.getResponseHeader('csrf-token')
       });
     }).fail((jqXhr, status) => {

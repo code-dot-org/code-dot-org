@@ -1764,6 +1764,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal original_primary_contact_info, user.primary_contact_info
   end
 
+  test 'google_classroom_student? is true if user belongs to a google classroom section as a student' do
+    section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
+    user = create(:follower, section: section).student_user
+    assert user.google_classroom_student?
+  end
+
+  test 'google_classroom_student? is false if user does not belong to any google classroom sections as a student' do
+    user = create(:user)
+    refute user.google_classroom_student?
+  end
+
+  test 'clever_student? is true if user belongs to a clever section as a student' do
+    section = create(:section, login_type: Section::LOGIN_TYPE_CLEVER)
+    user = create(:follower, section: section).student_user
+    assert user.clever_student?
+  end
+
+  test 'clever_student? is false if user does not belong to any clever sections as a student' do
+    user = create(:user)
+    refute user.clever_student?
+  end
+
   test 'track_proficiency adds proficiency if necessary and no hint used' do
     level_concept_difficulty = create :level_concept_difficulty
     # Defaults with repeat_loops_{d1,d2,d3,d4,d5}_count = {0,2,0,3,0}.
