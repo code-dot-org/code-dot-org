@@ -1,0 +1,119 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2018-07-05T23:59:15.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "farmer",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":1,\"value\":0,\"range\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "start_direction": "1",
+    "step_mode": "1",
+    "shape_shift": "false",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-06 00:00:45 +0000\",\"changed\":[\"notes\",\"maze_data\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:01:49 +0000\",\"changed\":[\"maze_data\",\"contained_level_names\",\"start_direction\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:06:14 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:10:16 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:12 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:25 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:11:55 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:13:29 +0000\",\"changed\":[\"step_mode\",\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-06 00:18:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_dig"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_dig"/>
+        <block type="maze_untilBlockedOrNotClear">
+          <title name="DIR">pilePresent</title>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_dig"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>
