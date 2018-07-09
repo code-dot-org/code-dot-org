@@ -432,6 +432,13 @@ module LevelsHelper
     fb_options
   end
 
+  # simple helper to set the given key and value on the given hash unless the
+  # value is nil, used to set localized versions of level options without
+  # calling the localization methods twice
+  def set_unless_nil(hash, key, value)
+    hash[key] = value unless value.nil?
+  end
+
   # Options hash for Blockly
   def blockly_options
     l = @level
@@ -444,11 +451,18 @@ module LevelsHelper
     # Locale-depdendent option
     # For historical reasons, `localized_instructions` and
     # `localized_authored_hints` should happen independent of `should_localize?`
-    level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
-    level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
+    set_unless_nil(level_options, 'instructions', l.localized_instructions)
+    set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
     if l.should_localize?
-      level_options['markdownInstructions'] = l.localized_markdown_instructions unless l.localized_markdown_instructions.nil?
-      level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
+      # Don't ever show non-English markdown instructions for Course 1 - 4 or
+      # the 20-hour course. We're prioritizing translation of Course A - F.
+      if @script && (@script.csf_international? || @script.twenty_hour?)
+        level_options.delete('markdownInstructions')
+      else
+        set_unless_nil(level_options, 'markdownInstructions', l.localized_markdown_instructions)
+      end
+      set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
+      set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
     end
 
     # Script-dependent option
@@ -461,56 +475,6 @@ module LevelsHelper
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
-
-    # Unused Blocks option
-    ## TODO (elijah) replace this with more-permanent level configuration
-    ## options once the experimental period is over.
-
-    ## allow unused blocks for all levels except Jigsaw
-    app_options[:showUnusedBlocks] = @game ? @game.name != 'Jigsaw' : true
-
-    ## Allow gatekeeper to disable otherwise-enabled unused blocks in a
-    ## cascading way; more specific options take priority over
-    ## less-specific options.
-    if script && script_level && app_options[:showUnusedBlocks] != false
-
-      # puzzle-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {
-          script_name: script.name,
-          stage: script_level.stage.absolute_position,
-          puzzle: script_level.position
-        },
-        default: nil
-      )
-
-      # stage-specific
-      if enabled.nil?
-        enabled = Gatekeeper.allows(
-          'showUnusedBlocks',
-          where: {
-            script_name: script.name,
-            stage: script_level.stage.absolute_position,
-          },
-          default: nil
-        )
-      end
-
-      # script-specific
-      if enabled.nil?
-        enabled = Gatekeeper.allows(
-          'showUnusedBlocks',
-          where: {script_name: script.name},
-          default: nil
-        )
-      end
-
-      # global
-      enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
-
-      app_options[:showUnusedBlocks] = enabled
-    end
 
     # Edit blocks-dependent options
     if level_view_options(@level.id)[:edit_blocks]
@@ -765,9 +729,11 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
     payload = {
       uid: user_or_session_id,
-      is_dashboard_user: !!current_user
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
     }
     options = {}
     # Provides additional debugging information to the browser when

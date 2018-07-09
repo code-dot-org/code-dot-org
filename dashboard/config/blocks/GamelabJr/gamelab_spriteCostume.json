@@ -1,0 +1,20 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "spriteCostume",
+    "inline": false,
+    "blockText": "{COSTUME}",
+    "returnType": "None",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

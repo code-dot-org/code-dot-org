@@ -2,11 +2,13 @@ hidden false
 hideable_stages true
 stage_extras_available true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 family_name 'coursee'
 version_year '2018'
+is_stable true
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
 level 'courseB_unplugged_MRF_2018'
@@ -119,7 +121,7 @@ level 'courseE_farmer_ramp12c_2018'
 level 'courseE_farmer_ramp12d_2018'
 level 'courseE_farmer_ramp12e_2018'
 level 'courseE_video_BeeifElse_2018'
-level 'courseE_farmer_ramp12f_2018'
+level 'courseE_farmer_ramp12f_2018', challenge: true
 level 'courseE_farmer_ramp12g_2018'
 level 'courseF_markdown_conditionals_end'
 
@@ -216,10 +218,12 @@ bonus 'courseE_artist_concept_challenge1_2018'
 bonus 'courseE_artist_concept_challenge2_2018'
 
 stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_e_2'
+level 'CourseEF_video_IntroSpriteLab'
 level 'Fish Tank 1-validated'
 level 'Fish Tank 2-validated'
 level 'Fish Tank 3-validated'
 level 'Fish Tank 4-validated'
+level 'CourseEF_video_MakeSprite'
 level 'Fish Tank 5-validated'
 level 'Fish Tank 6-validated'
 level 'Fish Tank 7-validated'
@@ -247,15 +251,15 @@ stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'courseF_video_csMatters_2018'
 named_level 'Geometric Sun_2018'
 named_level 'Robot Doodle_2018'
-named_level 'Alien Defender_2018'
-named_level 'Find the Wizard_2018'
+named_level 'CourseE_hoops'
+named_level 'courseE_Dogger_2'
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project_2018'
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course E: Play Lab Project_2018'
 named_level 'Course E: Artist Project_2018'
+named_level 'CourseE_Project_SpriteLab'
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation_2018'

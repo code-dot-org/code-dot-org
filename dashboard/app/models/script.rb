@@ -135,6 +135,7 @@ class Script < ActiveRecord::Base
     stage_extras_available
     has_verified_resources
     has_lesson_plan
+    curriculum_path
     script_announcements
     version_year
     is_stable
@@ -535,7 +536,11 @@ class Script < ActiveRecord::Base
       Script::CSD2_NAME,
       Script::CSD3_NAME,
       Script::CSD4_NAME,
-      Script::CSD6_NAME
+      Script::CSD6_NAME,
+      Script::CSD2_2018_NAME,
+      Script::CSD3_2018_NAME,
+      Script::CSD4_2018_NAME,
+      Script::CSD6_2018_NAME,
     ].include?(name)
   end
 
@@ -543,7 +548,10 @@ class Script < ActiveRecord::Base
     [
       Script::CSP17_UNIT3_NAME,
       Script::CSP17_UNIT5_NAME,
-      Script::CSP17_POSTAP_NAME
+      Script::CSP17_POSTAP_NAME,
+      Script::CSP3_2018_NAME,
+      Script::CSP5_2018_NAME,
+      Script::CSP_POSTAP_2018_NAME,
     ].include?(name)
   end
 
@@ -570,7 +578,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
+    %w(course1 course2 course3 course4 coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include? name
   end
 
   def k5_draft_course?
@@ -590,14 +598,14 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_pdf?
-    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+    return false if %w(coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include?(name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+    return false if %w(coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include?(name)
 
     k5_course? || %w(csp1-2017 csp2-2017 csp3-2017 cspunit1 cspunit2 cspunit3).include?(name)
   end
@@ -628,13 +636,15 @@ class Script < ActiveRecord::Base
 
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this script.
-  def has_other_version_progress?(user)
-    return nil unless user
+  def has_older_version_progress?(user)
+    return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Script.
       # select only scripts in the same script family.
       where(family_name: family_name).
+      # select only older versions.
+      where("properties -> '$.version_year' < ?", version_year).
       # exclude the current script.
       where.not(id: id).
       # select only scripts which the user has progress in.
@@ -1032,8 +1042,8 @@ class Script < ActiveRecord::Base
       }
     end
 
-    has_other_course_progress = course.try(:has_other_version_progress?, user)
-    has_other_script_progress = has_other_version_progress?(user)
+    has_older_course_progress = course.try(:has_older_version_progress?, user)
+    has_older_script_progress = has_older_version_progress?(user)
     summary = {
       id: id,
       name: name,
@@ -1057,10 +1067,11 @@ class Script < ActiveRecord::Base
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
+      curriculum_path: curriculum_path,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
-      show_course_unit_version_warning: has_other_course_progress,
-      show_script_version_warning: !has_other_course_progress && has_other_script_progress,
+      show_course_unit_version_warning: has_older_course_progress,
+      show_script_version_warning: !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
     }
 
@@ -1168,7 +1179,8 @@ class Script < ActiveRecord::Base
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
       has_lesson_plan: !!script_data[:has_lesson_plan],
-      script_announcements: script_data[:script_announcements],
+      curriculum_path: script_data[:curriculum_path],
+      script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
     }.compact
@@ -1226,5 +1238,13 @@ class Script < ActiveRecord::Base
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
 
     info
+  end
+
+  # Get all script levels that are level groups, and return a list of those that are
+  # not anonymous assessments.
+  def get_assessment_script_levels
+    script_levels.select do |sl|
+      sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
+    end
   end
 end

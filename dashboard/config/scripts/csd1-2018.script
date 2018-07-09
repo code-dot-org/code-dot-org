@@ -29,11 +29,8 @@ named_level 'CSD U1L05 TFMD_2018'
 stage 'Processing', flex_category: 'csd1_2'
 named_level 'CSD U1L06 TFMD_2018'
 
-stage 'Storage', flex_category: 'csd1_2'
+stage 'Apps and Storage', flex_category: 'csd1_2'
 named_level 'CSD U1L07 TFMD_2018'
-
-stage 'Apps and Problem Solving', flex_category: 'csd1_2'
-named_level 'CSD U1L08 TFMD_2018'
 
 stage 'Project - Propose an App', flex_category: 'csd1_2'
 named_level 'CSD U1L09 TFMD_2018'

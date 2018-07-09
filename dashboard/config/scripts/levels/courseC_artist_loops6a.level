@@ -38,6 +38,7 @@
     "tts_markdown_instructions_override": "Add a third sticker anywhere in the loop that you want! What does it look like now?\r\nChange the pattern on your brush for more variety!",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To make a design like the one above, jump forward less than 75 pixels between each sticker.\",\"hint_id\":\"courseC_artist_loops6a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7ce4dca7eb436925e4e3a3650f52d9bc/courseC_artist_loops6a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

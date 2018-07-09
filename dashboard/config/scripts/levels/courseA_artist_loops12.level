@@ -37,6 +37,7 @@
     "tts_markdown_instructions_override": "The artist saw something funny in the distance.  Draw what you think he saw.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

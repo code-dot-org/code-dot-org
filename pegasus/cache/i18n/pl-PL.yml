@@ -1,4 +1,5 @@
-"pl-PL":
+---
+pl-PL:
   hour_of_code: Godzina kodowania (Hour of Code)
   hello: Witaj świecie
   'yes': Tak
@@ -98,18 +99,7 @@
   congratulations_volunteer: |-
     Gratulacje: Spróbowałeś Godzinę Kodowania,
     <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
-  congratulations_on_completing_course1: Gratulacje z okazji ukończenia Kursu 1
-  congratulations_on_completing_course2: Gratulacje z okazji ukończenia Kursu 2
-  congratulations_on_completing_course3: Gratulacje z okazji ukończenia Kursu 3
-  congratulations_on_completing_course4: Gratulacje z okazji ukończenia Kursu 4
-  congratulations_on_completing_coursea: Gratulacje z okazji ukończenia Kursu A
-  congratulations_on_completing_courseb: Gratulacje z okazji ukończenia Kursu B
-  congratulations_on_completing_coursec: Gratulacje z okazji ukończenia Kursu C
-  congratulations_on_completing_coursed: Gratulacje z okazji ukończenia Kursu D
-  congratulations_on_completing_coursee: Gratulacje z okazji ukończenia Kursu E
-  congratulations_on_completing_coursef: Gratulacje z okazji ukończenia Kursu F
-  congratulations_on_completing_accelerated: Gratulacje z okazji ukończenia Przyśpieszonego
-    Kursu
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Przejdź na następny poziom
   congrats_next_tutorials_desc: Wypróbuj te krótkie, jednogodzinne samouczki lub wypróbuj
     <a href="%{current_path}/next">samouczki partnerów</a>.
@@ -294,28 +284,8 @@
   just_did_accelerated: Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg
   just_did_hoc_donor: 'Właśnie ukończyłem #HourOfCode - sprawdź to! (Dzięki %{donor_twitter}
     za wspieranie @codeorg)'
-  just_did_course1_donor: Właśnie ukończyłem Kurs 1 - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_course2_donor: Właśnie ukończyłem Kurs 2 - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_course3_donor: Właśnie ukończyłem Kurs 3 - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_course4_donor: Właśnie ukończyłem Kurs 4 - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_coursea_donor: Właśnie ukończyłem Kurs A - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_courseb_donor: Właśnie ukończyłem Kurs B - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_coursec_donor: Właśnie ukończyłem Kurs C - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_coursed_donor: Właśnie ukończyłem Kurs D - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_coursee_donor: Właśnie ukończyłem Kurs E - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_coursef_donor: Właśnie ukończyłem Kurs F - sprawdź to! Dzięki %{donor_twitter}
-    za wspieranie @codeorg
-  just_did_accelerated_donor: Właśnie ukończyłem Kurs Przyspieszony - sprawdź to!
-    Dzięki %{donor_twitter} za wspieranie @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 9 na 10 osób zgadza się, że szkoły powinny uczyć informatyki.
     http://youtu.be/nKIu9yen5nc. Odwiedź https://code.org/.
   twitter_cs_foundational: Informatyka jest podstawą w nauce każdego ucznia. https://youtu.be/QvyTEx1wyOY.
@@ -727,8 +697,8 @@
   volunteer_engineer_submission_field_email_preference: Czy wyrażasz zgodę na otrzymywanie
     od nas wiadomości e-mail z najnowszymi informacjami o naszych kursach, lokalnymi
     ofertami oraz innymi nowościami informatycznymi?
-  volunteer_engineer_submission_field_email_preference_privacy: "(Aby poznać szczegóły,
-    sprawdź naszą Politykę prywatności)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Zobacz naszą politykę
+    prywatności)"
   volunteer_engineer_submission_field_email_preference_yes: Tak
   volunteer_engineer_submission_field_email_preference_no: Nie
   volunteer_engineer_submission_final_paragraph: Będziesz wymieniona/y na mapie, by
@@ -1260,9 +1230,25 @@
   coursee_name: Kurs E
   coursef-draft_name: Kurs F
   coursef_name: Kurs F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: Przyspieszony Kurs
   express_name: Express Course
   pre-express_name: Ekspresowy kurs dla dzieci, które nie umieją czytać
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(stary) Unit 1: Informacje cyfrowe"
   cspunit2_name: "(stary) Unit 2: Internet"
   cspunit3_name: "(stary) Unit 3: Programowanie"
@@ -1341,6 +1327,8 @@
   math_category_name: Matematyka
   hoc_category_name: Godzina Kodowania
   csf_category_name: Podstawy Informatyki
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: Mędzynarodowe Podstawy Informatyki
   csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
   csd_category_name: 'Under Development: CS Discoveries'
@@ -1419,6 +1407,18 @@
   coursed_gradelevel: Klasa 8+
   coursee_gradelevel: Klasy 1+ szkół średnich
   coursef_gradelevel: Klasy 2+ szkół średnich
+  coursea-2017_gradelevel: Klasa 5+
+  courseb-2017_gradelevel: Klasy 6+
+  coursec-2017_gradelevel: Klasy 7+
+  coursed-2017_gradelevel: Klasa 8+
+  coursee-2017_gradelevel: W wieku 8-12
+  coursef-2017_gradelevel: Klasy 2+ szkół średnich
+  coursea-2018_gradelevel: Klasa 5+
+  courseb-2018_gradelevel: Klasy 6+
+  coursec-2018_gradelevel: Klasy 7+
+  coursed-2018_gradelevel: Klasa 8+
+  coursee-2018_gradelevel: W wieku 8-12
+  coursef-2018_gradelevel: Klasy 2+ szkół średnich
   accelerated_gradelevel: W wieku 10-18
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
@@ -1570,6 +1570,30 @@
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą
     przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo
     Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies

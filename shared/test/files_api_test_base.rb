@@ -101,6 +101,10 @@ class FilesApiTestBase < Minitest::Test
     last_response.not_found?
   end
 
+  def conflict?
+    last_response.status == 409
+  end
+
   def unsupported_media_type?
     last_response.status == 415
   end

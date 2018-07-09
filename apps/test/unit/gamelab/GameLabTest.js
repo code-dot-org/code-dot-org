@@ -49,6 +49,7 @@ describe("GameLab", () => {
         showRateLimitAlert: sinon.spy(),
         setPageConstants: sinon.spy(),
         init: sinon.spy(),
+        isUsingBlockly: () => false,
       };
     });
 

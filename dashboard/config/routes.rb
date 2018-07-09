@@ -1,10 +1,5 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
-module OPS
-  API = 'api'.freeze unless defined? API
-  DASHBOARDAPI = 'dashboardapi'.freeze unless defined? DASHBOARDAPI
-end
-
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
@@ -65,14 +60,14 @@ Dashboard::Application.routes.draw do
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
   # User-facing section routes
-  resources :sections, only: [:show, :update] do
+  resources :sections, only: [:show] do
     member do
       post 'log_in'
     end
   end
   # Section API routes (JSON only)
   concern :section_api_routes do
-    resources :sections, only: [:index, :show, :create, :destroy] do
+    resources :sections, only: [:index, :show, :create, :update, :destroy] do
       resources :students, only: [:index, :update], controller: 'sections_students' do
         collection do
           post 'bulk_add'
@@ -100,6 +95,7 @@ Dashboard::Application.routes.draw do
     resources :assessments, only: [:index] do
       collection do
         get 'section_responses'
+        get 'section_surveys'
       end
     end
   end
@@ -142,6 +138,10 @@ Dashboard::Application.routes.draw do
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
+    get '/users/auth/:provider/connect', to: 'authentication_options#connect'
+    delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
+    get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
+    get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -186,6 +186,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
+        get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
       get '/angular', to: 'projects#angular'
@@ -350,44 +351,6 @@ Dashboard::Application.routes.draw do
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
 
-  concern :ops_routes do
-    # /ops/district/:id
-    resources :districts do
-      member do
-        get 'teachers'
-      end
-    end
-    resources :cohorts do
-      member do
-        get 'teachers'
-        delete 'teachers/:teacher_id', action: 'destroy_teacher'
-      end
-    end
-    resources :workshops do
-      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
-        resources :workshop_attendance, path: '/attendance', shallow: true do
-        end
-      end
-      member do
-        get 'teachers'
-      end
-    end
-
-    get 'attendance/download/:workshop_id', action: 'attendance', controller: 'workshop_attendance'
-    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
-    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
-    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
-    post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
-  end
-
-  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
-    concerns :ops_routes
-  end
-
-  namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
-    concerns :ops_routes
-  end
-
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
   get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
 
@@ -445,6 +408,7 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+      post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
 
@@ -542,6 +506,9 @@ Dashboard::Application.routes.draw do
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
 
+    get 'international_workshop', to: 'international_opt_in#new'
+    get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
+
     # React-router will handle sub-routes on the client.
     get 'application_dashboard/*path', to: 'application_dashboard#index'
     get 'application_dashboard', to: 'application_dashboard#index'
@@ -617,6 +584,13 @@ Dashboard::Application.routes.draw do
       # Routes used by the peer reviews admin pages
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+      resources :teacher_feedbacks, only: [:create] do
+        collection do
+          get 'get_feedback_from_teacher'
+          get 'get_feedbacks'
+        end
+      end
     end
   end
 

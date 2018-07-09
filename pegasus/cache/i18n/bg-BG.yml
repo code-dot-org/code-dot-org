@@ -1,4 +1,5 @@
-"bg-BG":
+---
+bg-BG:
   hour_of_code: Час на Кодирането
   hello: Здравей, свят
   'yes': Да
@@ -98,17 +99,7 @@
   congratulations_volunteer: 'Поздравления: сега, когато сте опитали Hour of Code,
     <a href="https://code.org/volunteer"> регистрирайте се като доброволци в класната
     стая</a> и помогнете на учениците да учат с Hour of Code!'
-  congratulations_on_completing_course1: Поздрави за завършване на курс 1
-  congratulations_on_completing_course2: Поздрави за завършване на курс 2
-  congratulations_on_completing_course3: Поздрави за завършване на курс 3
-  congratulations_on_completing_course4: Поздрави за завършване на курс 4
-  congratulations_on_completing_coursea: Поздрави за завършване на курс А
-  congratulations_on_completing_courseb: Поздрави за завършване на курс В
-  congratulations_on_completing_coursec: Поздрави за завършване на курс С
-  congratulations_on_completing_coursed: Поздрави за завършване на курс D
-  congratulations_on_completing_coursee: Поздрави за завършване на курс E
-  congratulations_on_completing_coursef: Поздрави за завършване на курс F
-  congratulations_on_completing_accelerated: Поздрави за завършване на ускореня курс
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Опитайте тези уроци
   congrats_next_tutorials_desc: Опитайте тези кратки, едночасови уроци или пробвайте
     <a href="%{current_path}/next"> партньорските предложения</a>.
@@ -291,28 +282,8 @@
   just_did_accelerated: Току-що завърших ускореният курс - Проверете го! @codeorg
   just_did_hoc_donor: 'Току-що завърших #HourOfCode - Проверете го! (Благодаря на
     %{donor_twitter} за подкрепата на @codeorg)'
-  just_did_course1_donor: Току-що завърши курс 1 - Проверете го! Благодаря %{donor_twitter}
-    за подкрепата @codeorg
-  just_did_course2_donor: Току-що завърших курс 2 - Проверете го! Благодаря %{donor_twitter}
-    за подкрепата @codeorg
-  just_did_course3_donor: Току-що завърших курс 3 - Проверете го! Благодаря %{donor_twitter}
-    за подкрепата @codeorg
-  just_did_course4_donor: Току-що завърших курс 4 - Проверете го! Благодаря %{donor_twitter}
-    за подкрепата @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 9 от 10 човека са съгласни, че в училищата трябва да се учат компютърни
     науки. http://youtu.be/nKIu9yen5nc. Посетете https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -726,8 +697,8 @@
   volunteer_engineer_submission_field_email_placeholder: Имейл адрес
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Вижте нашата политика
+    за поверителност)"
   volunteer_engineer_submission_field_email_preference_yes: Да
   volunteer_engineer_submission_field_email_preference_no: Не
   volunteer_engineer_submission_final_paragraph: Вие ще бъдете отбелязан на картата
@@ -1247,9 +1218,25 @@
   coursee_name: Course E
   coursef-draft_name: Course F
   coursef_name: Course F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: Ускорен курс
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Express Course (2017)
+  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(стар) Урок 1: Цифрова информация"
   cspunit2_name: "(стар) Раздел 2: Интернет"
   cspunit3_name: "(стар) Раздел 3: програмиране"
@@ -1328,6 +1315,8 @@
   math_category_name: Математика
   hoc_category_name: Час на Кодирането
   csf_category_name: CS основи
+  csf_2017_category_name: CS Fundamentals (2017)
+  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
@@ -1405,6 +1394,18 @@
   coursed_gradelevel: Клас 8 +
   coursee_gradelevel: Възраст 8-12
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Клас 8 +
+  coursee-2017_gradelevel: Възраст 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Клас 8 +
+  coursee-2018_gradelevel: Възраст 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Възраст 10 + (след курс 3)
   codeorg_platformtext: Съвременни браузъри, смартфони, таблети
   codeintl_platformtext: Съвременни браузъри, смартфони, таблети
@@ -1548,6 +1549,30 @@
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Научете основните понятия на компютърните науки с drag
     and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от
     Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторенията-цикли,

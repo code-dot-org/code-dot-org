@@ -1,4 +1,5 @@
-"fr-FR":
+---
+fr-FR:
   hour_of_code: Heure de Code
   hello: Bonjour tout le monde
   'yes': Oui
@@ -40,8 +41,8 @@
   og_title_soon: L'Heure de Code arrive
   og_title_here: L'Heure du Code est ici!
   og_description: Chaque élève de chaque école mérite une opportunité d'étudier l'informatique.
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
+  og_description_celeb: Essayez les nouveaux tutoriels, gagnez une conversation avec
+    une célébrité pour vous ou pour votre classe!
   csedweek_og_title: L'heure du code arrive
   csedweek_og_description: L’heure de Code est un mouvement mondial qui touche des
     dizaines de millions d’étudiants de tous âges dans plus de 180 pays et plus de
@@ -101,18 +102,7 @@
     Heure de Code, <a href="https://code.org/volunteer">inscrivez-vous pour faire
     du bénévolat dans une salle de classe</a> et aidez les élèves à apprendre une
     Heure de Code !'
-  congratulations_on_completing_course1: Félicitations, tu as fini le cours N°1 !
-  congratulations_on_completing_course2: Félicitations, tu as fini le cours N°2 !
-  congratulations_on_completing_course3: Félicitations, tu as fini le cours N°3 !
-  congratulations_on_completing_course4: Félicitation, tu as fini le cours n°4 !
-  congratulations_on_completing_coursea: Félicitations, tu as fini le cours A
-  congratulations_on_completing_courseb: Félicitations, tu as fini le cours B
-  congratulations_on_completing_coursec: Félicitations, tu as fini le cours C
-  congratulations_on_completing_coursed: Félicitations, tu as fini le cours D
-  congratulations_on_completing_coursee: Félicitations, tu as fini le cours E
-  congratulations_on_completing_coursef: Félicitations, tu as fini le cours F
-  congratulations_on_completing_accelerated: Félicitations, tu as fini le cours accéléré
-    !
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Essaie ensuite ces tutoriels
   congrats_next_tutorials_desc: Essaie ces plus courts tutoriels d’une heure seulement
     ou essaie un <a href="%{current_path}/next">tutoriel partenaire</a>.
@@ -313,28 +303,8 @@
   just_did_accelerated: Je viens de finir le Cours accéléré — jettes-y un œil ! @codeorg
   just_did_hoc_donor: Je viens de finir l'#HourOfCode - venez-voir ! Merci %{donor_twitter}
     de soutenir @codeorg
-  just_did_course1_donor: Je viens de finir le cours 1 - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_course2_donor: Je viens de finir le cours 2 - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_course3_donor: Je viens de finir le cours 3 - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_course4_donor: Je viens de finir le cours 4 - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_coursea_donor: Je viens de finir le cours A - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_courseb_donor: Je viens de finir le cours B - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_coursec_donor: Je viens de finir le cours C - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_coursed_donor: Je viens de finir le cours D - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_coursee_donor: Je viens de finir le cours E - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_coursef_donor: Je viens de finir le cours F - venez-voir ! Merci %{donor_twitter}
-    de soutenir @codeorg
-  just_did_accelerated_donor: Je viens de finir le cours accéléré - venez-voir ! Merci
-    %{donor_twitter} de soutenir @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique
     ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/
     pour en savoir plus.
@@ -601,12 +571,13 @@
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_join_online_training: Prêt à organiser votre propre Heure du Code avec
+    Minecraft, mais pas sûr où commencer? Jetez un coup d'oeil à nos <a href='%{minecraft_webinar_url}',
+    target='_blank'>webinar sur demande</a>. Vous y apprendrez les meilleurs pratiques,
+    accéderez à du materiel pour les organisateurs, and pourrez parcourir le nouveau
+    tutoriel, Le Voyage du Héros, fourni par l'équipe Minecraft. Démarrez par réfléchir
+    sur ce que vous aurez besoin d'apporter à l'Heure du Code pour les jeunes durant
+    la semaine de l'éducation de l'informatique (4 au 10 Décembre) et après.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -760,8 +731,8 @@
   volunteer_engineer_submission_field_email_preference: Pouvons-nous vous envoyer
     des e-mails d’information sur nos formations, des opportunités près de chez vous
     ou d’autres brèves dans le domaine informatique?
-  volunteer_engineer_submission_field_email_preference_privacy: "(Pour plus d’informations,
-    consultez notre politique de confidentialité)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Voir notre politique
+    de protection des données)"
   volunteer_engineer_submission_field_email_preference_yes: Oui
   volunteer_engineer_submission_field_email_preference_no: Non
   volunteer_engineer_submission_final_paragraph: Vous figurerez sur une carte pour
@@ -1309,9 +1280,25 @@
   coursee_name: Cours E
   coursef-draft_name: Cours F
   coursef_name: Cours F
+  coursea-2017_name: Course A (2017)
+  courseb-2017_name: Course B (2017)
+  coursec-2017_name: Course C (2017)
+  coursed-2017_name: Course D (2017)
+  coursee-2017_name: Course E (2017)
+  coursef-2017_name: Course F (2017)
+  coursea-2018_name: Course A (2018)
+  courseb-2018_name: Course B (2018)
+  coursec-2018_name: Course C (2018)
+  coursed-2018_name: Course D (2018)
+  coursee-2018_name: Course E (2018)
+  coursef-2018_name: Course F (2018)
   accelerated_name: Cours accéléré
   express_name: Cours Express
   pre-express_name: Pre-reader Express Course
+  express-2017_name: Cour rapide (2017)
+  pre-express-2017_name: Cour rapide avant lecture (2017)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Cour rapide avant lecture (2018)
   cspunit1_name: Principes de l'informatique, unité 1
   cspunit2_name: Principes de l'informatique, unité 2
   cspunit3_name: Principes de l'informatique, unité 3
@@ -1355,14 +1342,14 @@
   csp1_name: 'Unité 1: Internet'
   csp2_name: 'Unité 2: L’Information numérique'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'Partie 3: Introduction a la programmation (version A)'
+  csp3-research-mxghyt_name: 'Partie 3: Introduction a la programmation (sous objectifs)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Bases de données dans les applications'
-  csp-post-survey_name: Student Post-Course Survey
+  csp-post-survey_name: Sondage après cour pour élève
   cspassessment_name: Test complet - 50 questions
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
@@ -1390,13 +1377,15 @@
   math_category_name: Calculs
   hoc_category_name: Heure de Code
   csf_category_name: Fondamentaux d'informatique
-  csf_international_category_name: CS Fundamentals International
+  csf_2017_category_name: Fondamental d'informatique (2017)
+  csf_2018_category_name: Fondamental d'informatique (2018)
+  csf_international_category_name: Fondamental d'informatique international
   csf2_draft_category_name: 'En cours d’élaboration : Cours A - F'
   csd_category_name: 'Under Development: CS Discoveries'
-  csd_2018_category_name: CS Discoveries ('18-'19)
+  csd_2018_category_name: Découvertes de l'informatique (2018-2019)
   csp_category_name: Principes de l'informatique
   csp17_category_name: Principes de CS 16-17
-  csp_2018_category_name: CS Principles ('18-'19)
+  csp_2018_category_name: Principes de l'informatique (2018-2019)
   cspexams_category_name: Test d'entrainement aux principes du CS
   research_studies_category_name: Research Studies
   applab_name: Labo des applis
@@ -1467,6 +1456,18 @@
   coursed_gradelevel: 4ème ou plus
   coursee_gradelevel: 3ème ou plus
   coursef_gradelevel: Seconde ou plus
+  coursea-2017_gradelevel: CM2 ou plus
+  courseb-2017_gradelevel: 6ème ou plus
+  coursec-2017_gradelevel: 5ème ou plus
+  coursed-2017_gradelevel: 4ème ou plus
+  coursee-2017_gradelevel: De 8 à 12 ans
+  coursef-2017_gradelevel: Seconde ou plus
+  coursea-2018_gradelevel: CM2 ou plus
+  courseb-2018_gradelevel: 6ème ou plus
+  coursec-2018_gradelevel: 5ème ou plus
+  coursed-2018_gradelevel: 4ème ou plus
+  coursee-2018_gradelevel: De 8 à 12 ans
+  coursef-2018_gradelevel: Seconde ou plus
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -1618,6 +1619,30 @@
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: Une introduction à l’informatique pour les
+    jeunes lecteurs.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: Une introduction à l’informatique pour les
+    jeunes lecteurs.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec la
     programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique
     auto-dirigé mettant en vedette des conférences vidéo de Bill Gates, Mark Zuckerberg,
@@ -2222,8 +2247,8 @@
   header_tutorials: Tutoriels
   header_documentation: Documentation
   csp_name: Principes de CS 16-17
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
+  csd_name: Découvertes de l'informatique
+  csd_2018_name: Découvertes de l'informatique
   full_course_category_name: Cours complets
   user_header_label: Bonjour %{username}
   user_header_settings: Mon compte
@@ -2232,8 +2257,8 @@
   view_all_sections: Afficher toutes les sections
   view_section: Afficher la section
   view_named_section: Afficher %{section_name}
-  privacy_doc_explanation: Click here for our privacy document that can be shared
-    or printed for your students.
+  privacy_doc_explanation: Cliquez ici pour accéder au document sur notre gestion
+    des données qui peut être partager ou imprimer pour vos élèves.
   signing_in: Connexion en cours
   sign_in_overview: 'Vos élèves peuvent se connecter avec leurs comptes Code.org en
     suivant les étapes suivantes:'
@@ -2245,18 +2270,18 @@
   sign_in_overview_cards: Les élèves peuvent trouver toutes ces informations y compris
     leur secret %{secret} sur les cartes de connexion ci-dessous.
   reset_student_password: Réinitialiser les mots de passe de l’élève
-  reset_student_password_instructions: You can reset the secret <word/picture> for
-    any of your students by going to the “Manage Students” tab for the section, clicking
-    the “Show secret” button under the “Password” column, and clicking the “Reset
-    secret” button.
+  reset_student_password_instructions: Vous pouvez réinitialiser <word/picture> secret
+    pour n'importe quel élève en allant dans l'onglet "Gestion des élèves" pour votre
+    section. Cliquez sur le bouton "Afficher le secret" sous la colonne "Mot de passe"
+    et ensuite cliquez sur le bouton "Réinitialiser le secret".
   login_cards: Cartes de connexion
   print_login_cards: Imprimer les cartes de connexion
-  joining_section: Joining your section (one-time only)
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
+  joining_section: Rejoignez votre section (une fois seulement)
+  joining_section_overview: Si un élève n'a pas encore rejoint votre section, s'il
+    vous plait demandez lui/elle de suivre les instructions suivantes. Notez qu'il/elle
+    n'as besoin de le faire qu'une seule fois. En rejoignant votre section, les élèves
+    seront capable de voir les cours qui leurs sont assignés et vous pourrez suivre
+    leur progrès sur le travail qu'ils ont finit quand ils sont connectés.
   joining_section_instruct_website: 'Create a Code.org account if they haven’t already
     done so. They can do this at https://studio.code.org/users/sign_up. Note that
     they can either sign up with an email address and password, or sign up through

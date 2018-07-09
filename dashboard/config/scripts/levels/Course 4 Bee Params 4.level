@@ -33,6 +33,7 @@
     "fast_get_nectar_animation": "true",
     "callout_json": "[]",
     "instructions_important": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

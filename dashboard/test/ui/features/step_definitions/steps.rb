@@ -82,6 +82,18 @@ When /^I go to the newly opened tab$/ do
   wait_until {@browser.title rescue nil}
 end
 
+When /^I open a new tab$/ do
+  @browser.execute_script('window.open();')
+end
+
+When /^I close the current tab$/ do
+  @browser.close
+end
+
+When /^I switch to tab index (\d+)$/ do |tab_index|
+  @browser.switch_to.window(@browser.window_handles[tab_index.to_i])
+end
+
 When /^I switch to the first iframe$/ do
   $default_window = @browser.window_handle
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
@@ -1397,15 +1409,6 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
     return document.querySelectorAll('.uitest-owned-sections tbody tr').length;
   SCRIPT
   expect(row_count.to_i).to eq(expected_row_count.to_i)
-end
-
-Then /^the section table row at index (\d+) has (name|grade) "([^"]+)"$/ do |row_index, field_type, expected_text|
-  td_index = (field_type == 'name') ? 1 : 2
-  field_cell = @browser.execute_script(
-    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(#{td_index})');"
-  )
-  actual_text = field_cell.first.text
-  expect(actual_text).to eq(expected_text)
 end
 
 Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|

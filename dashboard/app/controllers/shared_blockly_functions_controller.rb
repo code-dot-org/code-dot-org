@@ -4,6 +4,7 @@ class SharedBlocklyFunctionsController < ApplicationController
   load_and_authorize_resource
 
   def new
+    @shared_blockly_function.block_type = 'behavior'
     render 'edit'
   end
 
@@ -34,6 +35,13 @@ class SharedBlocklyFunctionsController < ApplicationController
   end
 
   def update_params
-    params.require(:shared_blockly_function).permit(:name, :description, :arguments, :stack)
+    params.require(:shared_blockly_function).permit(
+      :name,
+      :description,
+      :arguments,
+      :stack,
+      :block_type,
+      :level_type,
+    )
   end
 end

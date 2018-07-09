@@ -100,6 +100,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     local_summer_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
 
+    teachercon_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
+    teachercon_enrollment = create :pd_enrollment, workshop: teachercon_workshop
+
     code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
     assert_equal code_org_url["/pd-workshop-survey/#{normal_enrollment.code}"], normal_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
@@ -107,6 +110,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/post/#{teachercon_enrollment.code}"], teachercon_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do
@@ -308,31 +312,31 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'enrolling in class, and then later having the user field updated enrolls in online learning' do
     teacher = create :teacher
-    create :plc_course, name: 'CSP Support'
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    create :plc_course, name: 'ECS Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ECS
     enrollment = create :pd_enrollment, user: nil, workshop: workshop
 
     assert_creates Plc::UserCourseEnrollment do
       enrollment.update(user: teacher)
     end
-    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
+    assert_equal 'ECS Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
   end
 
   test 'enrolling in class while not logged in still associates the user' do
     teacher = create :teacher
-    create :plc_course, name: 'CSP Support'
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    create :plc_course, name: 'ECS Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ECS
 
     assert_creates Plc::UserCourseEnrollment do
       create :pd_enrollment, user: nil, workshop: workshop, email: teacher.email
     end
 
-    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
+    assert_equal 'ECS Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
   end
 
   test 'enrolling in class without an account creates enrollment when the user is created' do
-    create :plc_course, name: 'CSP Support'
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    create :plc_course, name: 'ECS Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ECS
     user_email = "#{SecureRandom.hex}@code.org"
     create :pd_enrollment, user: nil, email: user_email, workshop: workshop
 
@@ -340,7 +344,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
       create(:teacher, email: user_email)
     end
 
-    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
+    assert_equal 'ECS Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
   end
 
   test 'attendance scopes' do
@@ -465,5 +469,38 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_nil enrollment.last_name
     assert_equal '', enrollment.email
     assert enrollment.reload.valid?, enrollment.errors.messages
+  end
+
+  test 'Enrolling user in CSD course makes them an authorized teacher' do
+    teacher = create :teacher
+    assert_empty teacher.permissions
+
+    workshop = create :pd_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    create :pd_enrollment, workshop: workshop, user: teacher
+
+    assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
+  end
+
+  test 'Enrolling user in CSF course does not make them authorized teacher' do
+    teacher = create :teacher
+    assert_empty teacher.permissions
+
+    workshop = create :pd_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    create :pd_enrollment, workshop: workshop, user: teacher
+
+    refute teacher.permission? UserPermission::AUTHORIZED_TEACHER
+  end
+
+  test 'Updating existing enrollment sets permission' do
+    workshop = create :pd_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD, num_sessions: 1
+    enrollment = create :pd_enrollment, workshop: workshop, user: nil
+
+    teacher = create :teacher
+
+    refute teacher.permission? UserPermission::AUTHORIZED_TEACHER
+
+    enrollment.update(user: teacher)
+
+    assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
   end
 end

@@ -1298,7 +1298,6 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get section level progress with specific script" do
     script = Script.find_by_name('algebra')
-
     get :section_level_progress, params: {
       section_id: @section.id,
       script_id: script.id

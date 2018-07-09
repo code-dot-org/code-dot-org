@@ -141,7 +141,7 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: 'node_modules/@code-dot-org/craft/src/assets',
+          cwd: 'node_modules/@code-dot-org/craft/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/craft',
         },
@@ -513,6 +513,8 @@ describe('entry tests', () => {
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
 
+    'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',
+
     'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
 
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
@@ -634,7 +636,8 @@ describe('entry tests', () => {
       host: '0.0.0.0',
       watchOptions: {
         aggregateTimeout: 1000,
-        poll: 1000
+        poll: 1000,
+        ignored: /^node_modules\/[^@].*/
       },
     }
   };
@@ -713,16 +716,6 @@ describe('entry tests', () => {
     }
   },
 
-  config.strip_code = {
-    options: {
-      start_comment: 'start-test-block',
-      end_comment: 'end-test-block'
-    },
-    all: {
-      src: ['build/js/*.js']
-    }
-  };
-
   config.notify = {
     'js-build': {options: {message: 'JS build completed.'}},
     sass: {options: {message: 'SASS build completed.'}},
@@ -770,7 +763,6 @@ describe('entry tests', () => {
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
-    'newer:strip_code',
     'ejs'
   ]);
 
