@@ -1744,9 +1744,12 @@ class User < ActiveRecord::Base
     # Don't allow editing user type unless we can also edit email, because
     # changing from a student (encrypted email) to a teacher (plaintext email)
     # requires entering an email address.
+    # Don't allow editing user type for students in sections, as teacher/school owns
+    # student's data
+    return can_edit_email? && sections_as_student.empty? if student?
     # Don't allow editing user type for teachers with sections, as our validations
     # require sections to be owned by teachers.
-    can_edit_email? && (student? || sections.empty?)
+    can_edit_email? && sections.empty?
   end
 
   # Whether the current user has permission to delete their own account from

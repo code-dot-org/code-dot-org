@@ -1504,6 +1504,12 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_change_own_user_type?
   end
 
+  test 'cannot change own user type as a student in a section' do
+    section = create :section
+    student = create(:follower, section: section).student_user
+    refute student.can_change_own_user_type?
+  end
+
   test 'cannot change own user type as a teacher with sections' do
     section = create :section
     teacher = section.teacher
