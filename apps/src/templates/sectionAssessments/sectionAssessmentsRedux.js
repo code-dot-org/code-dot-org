@@ -1,4 +1,5 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
+import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import i18n from '@cdo/locale';
 
 export const ALL_STUDENT_FILTER = 0;
@@ -46,8 +47,6 @@ const MultiAnswerStatus = {
 };
 
 const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-
-const EMPTY_FREE_RESPONSE_MESSAGE = i18n.emptyFreeResponse();
 
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
@@ -102,6 +101,12 @@ export default function sectionAssessments(state=initialState, action) {
      */
     return {
       ...initialState
+    };
+  }
+  if (action.type === SET_SCRIPT) {
+    return {
+      ...state,
+      studentId: ALL_STUDENT_FILTER,
     };
   }
   if (action.type === SET_ASSESSMENT_ID) {
@@ -308,7 +313,7 @@ export const getAssessmentsFreeResponseResults = (state) => {
       questionsAndResults[index].responses.push({
         id: studentId,
         name: studentObject.student_name,
-        response: response.student_result || EMPTY_FREE_RESPONSE_MESSAGE,
+        response: response.student_result,
       });
     });
   });
@@ -334,7 +339,7 @@ export const getSurveyFreeResponseQuestions = (state) => {
       questionText: question.question,
       questionNumber: question.question_index + 1,
       answers: question.results.map((response, index) => {
-        return {index: index, response: response.result || EMPTY_FREE_RESPONSE_MESSAGE};
+        return {index: index, response: response.result};
       }),
     };
   });

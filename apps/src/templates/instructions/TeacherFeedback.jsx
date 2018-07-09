@@ -70,8 +70,11 @@ class TeacherFeedback extends Component {
       url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${this.state.studentId}&level_id=${this.props.serverLevelId}&teacher_id=${this.props.teacher}`,
       method: 'GET',
       contentType: 'application/json;charset=UTF-8',
-    }).done(data => {
-      this.setState({latestFeedback: [data]});
+    }).done((data, textStatus, jqXHR) => {
+      //Save latest feedback from teacher unless none available
+      if (jqXHR.status !== 204) {
+        this.setState({latestFeedback: [data]});
+      }
     }).fail((jqXhr, status) => {
       console.log(status + "  " + jqXhr.responseJSON);
     });
