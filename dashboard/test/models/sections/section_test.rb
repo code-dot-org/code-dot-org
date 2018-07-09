@@ -403,6 +403,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -432,6 +433,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -464,6 +466,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -491,6 +494,37 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
+    }
+    assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with students' do
+    section = create :section, script: nil, course: nil
+    student1 = create(:follower, section: section).student_user
+    student2 = create(:follower, section: section).student_user
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      teacherName: section.teacher.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: '',
+      linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
+      numberOfStudents: 2,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      sharing_disabled: false,
+      login_type: "email",
+      course_id: nil,
+      script: {id: nil, name: nil},
+      studentCount: 2,
+      grade: nil,
+      providerManaged: false,
+      hidden: false,
+      students: [student2, student1].map(&:summarize),
     }
     assert_equal expected, section.summarize
   end
