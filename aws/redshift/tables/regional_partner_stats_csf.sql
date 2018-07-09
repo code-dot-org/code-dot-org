@@ -13,7 +13,7 @@
 -- this table will be generated daily from code hosted on github, so need to talk to Ben about how to update that process
 
 
-drop table if exists analysis.regional_partner_stats_csf;
+drop table if exists analysis_pii.regional_partner_stats_csf;
 create table analysis_pii.regional_partner_stats_csf AS
 
 with 
