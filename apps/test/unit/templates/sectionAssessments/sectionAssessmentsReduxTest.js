@@ -974,7 +974,7 @@ describe('sectionAssessmentsRedux', () => {
               numMultipleChoice: 10,
               numMultipleChoiceCorrect: 4,
               isSubmitted: true,
-              submissionTimeStamp: "2018-06-12 04:53:36 UTC",
+              submissionTimeStamp: "March 3, 5877521 at -8:-31:-23  GMT-5:17:32",
               url: "code.org",
             },
             {
