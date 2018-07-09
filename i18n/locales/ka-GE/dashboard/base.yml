@@ -85,6 +85,7 @@ ka:
     facebook: 'Facebook'
     windowslive: 'Microsoft  ანგარიში'
     clever: 'Clever-ის ანგარიში'
+    powerschool: 'Powerschool Account'
     forgot_password: 'დაგავიწყდათ თქვენი პაროლი?'
     need_confirmation: "არ მოგსვლიათ დადასტურების ინსტრუქციები?"
     need_unlock: "არ მოგსვლიათ განბლოკვის ინსტრუქციები?"
@@ -359,6 +360,7 @@ ka:
     email_confirm_needed_required: 'თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:'
     email_confirm_wrong_email: '(ელ. ფოსტის მისამართი არასწორია?)'
     email_resend_confirm: 'დადასტურების ინსტრუქციების თავიდან გაგზავნა'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(დატოვეთ ცარიელი, თუ შეცვლა არ გინდათ)"
     current_password_hint: '(ცვლილებების შესანახად შეიყვანეთ თქვენი მიმდინარე პაროლი)'
     delete: 'ანგარიშის წაშლა'

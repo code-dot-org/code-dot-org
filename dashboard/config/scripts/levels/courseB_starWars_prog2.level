@@ -44,6 +44,7 @@
     "tts_markdown_instructions_override": "Now, help BB-8 gather all of the glowing scrap metal! \r\n\r\nWatch out for walls and crates!  ",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Split this problem into two parts. Get one one pile of scrap metal, then figure out how to get to the other one.\",\"hint_id\":\"courseB_starWars_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ac6c8b9b54285d2226779c71fb8c4796/courseB_starWars_prog2.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

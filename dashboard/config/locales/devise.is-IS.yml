@@ -1,4 +1,5 @@
-"is":
+---
+is:
   devise:
     confirmations:
       confirmed: Tókst að staðfesta netfang þitt.

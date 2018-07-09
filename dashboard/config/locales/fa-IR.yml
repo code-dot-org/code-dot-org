@@ -1,4 +1,5 @@
-"fa":
+---
+fa:
   errors:
     messages:
       not_saved: 'لطفا خطاهای زیر را درست کنید:'
@@ -94,6 +95,7 @@
     facebook: فیس‌بوک
     windowslive: حساب مایکروسافت
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: کلمه عبور خود را فراموش کرده اید؟
     need_confirmation: دستورالعمل فعال‌سازی حساب کاربری را دریافت نکرده‌اید؟
     need_unlock: دستورالعمل فعال‌سازی را دریافت نکرده‌اید؟
@@ -399,6 +401,7 @@
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
     email_confirm_wrong_email: "(آدرس ایمیل اشتباه است؟)"
     email_resend_confirm: ارسال مجدد دستورالعمل‌های تأیید
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(اگر نمی خواهید تغییر بدهید خالی بگذارید)"
     current_password_hint: "(کلمه عبور برای ذخیره تغییرات لازم است)"
     delete: حسابت راحذف کن

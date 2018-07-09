@@ -1,3 +1,4 @@
+---
 'no':
   errors:
     messages:
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Microsoft-konto
     clever: Smartkonto
+    powerschool: Powerschool Account
     forgot_password: Har du glemt passordet ditt?
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
@@ -407,6 +409,7 @@
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
     email_confirm_wrong_email: "(Feil e-postadresse?)"
     email_resend_confirm: Send bekreftelse på nytt
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
     current_password_hint: "(vi trenger ditt gjeldende passord for å bekrefte dine
       endringer)"

@@ -2,15 +2,15 @@ hi:
   errors:
     messages:
       not_saved: 'कृपया निम्न गलतिया सुधारें:'
-      too_young: 'This content has age restrictions in place and is not available for younger students.'
+      too_young: 'यह सामग्री आयु प्रतिबंधित है और युवा छात्रों के लिए उपलब्ध नहीं है'
       teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
       pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
     errors:
       messages:
         blank: "की आवश्यकता है"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "की आवश्यकता है"
+        invalid_plural: "अमान्य हैं"
     attributes:
       user:
         name: 'प्रदर्शन नाम'
@@ -36,7 +36,7 @@ hi:
   unsubmit: Unsubmit
   previous_page: पिछला पृष्ठ
   next_page: अगले पृष्ठ
-  next_resource: Next resource
+  next_resource: अगले संसाधन
   done_with_module: Done with this Learning Module
   cancel: "रद्द करें"
   okay: "ठीक है"
@@ -58,8 +58,8 @@ hi:
   trophies: "ट्राफियां"
   courses: 'पाठ्यक्रम'
   courses_page:
-    title_student: "Learn Computer Science"
-    title_teacher: "Teach Computer Science"
+    title_student: "कंप्यूटर विज्ञान सीखो"
+    title_teacher: "कंप्यूटर विज्ञान सिखाओ"
   unplugged_activity: 'Unplugged Activity'
   of: "की"
   more: "अधिक"
@@ -85,6 +85,7 @@ hi:
     facebook: 'फेसबुक'
     windowslive: 'Microsoft खाता'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'अपना पासवर्ड भूल गए?'
     need_confirmation: "पुष्टिकरण निर्देश प्राप्त नहीं हुआ?"
     need_unlock: "खोलने के अनुदेश नही मिले?"
@@ -135,19 +136,19 @@ hi:
     email_preference_required: "You must specify an email preference."
   school_info:
     title: 'School Information (optional)'
-    school_country: 'School Country'
+    school_country: 'स्कूल देश'
     select_school_type: 'School Type'
     charter: 'Charter'
     private: 'Private'
-    public: 'Public'
+    public: 'सार्वजनिक'
     homeschool: 'Homeschool'
     after_school: 'After School'
     other: 'Other'
-    state: 'State'
-    district: 'District'
+    state: 'राज्य'
+    district: 'जिला'
     other_district_not_listed: 'Other district not listed above'
     district_name: 'District Name'
-    school: 'School'
+    school: 'स्कूल'
     other_school_not_listed: 'Other school not listed above'
     school_name: 'School Name'
     school_zip: 'School Zip Code'
@@ -193,9 +194,9 @@ hi:
     body: |
       Code.org पर कंप्यूटर विज्ञान tutorials के लिए (मुझे अपने "शिक्षक" के रूप में) के साथ साइन अप करने के लिए नीचे दिए गए लिंक पर क्लिक करें:%{link} ट्यूटोरियल रहे हैं मज़ा, नेत्रहीन आकर्षक, और एक सरल, निर्देशित, खेल की तरह अनुभव का उपयोग कर कंप्यूटर विज्ञान की मूलभूत अवधारणाओं सिखाने। बिल गेट्स, मार्क Zuckerberg, गुस्से में पक्षियों और लाश बनाम संयंत्रों से कोड करने के लिए जानें! :-) %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Code.org के लिए लॉगिन जानकारी'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: 'Code.org में आपका स्वागत है!'
   section:
     your_section:
       one: 'Your section:'
@@ -353,6 +354,7 @@ hi:
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: '(गलत ईमेल पता?)'
     email_resend_confirm: 'Resend confirmation instructions'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: '(we need your current password to confirm your changes)'
     delete: 'Delete Account'

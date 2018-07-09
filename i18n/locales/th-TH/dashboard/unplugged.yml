@@ -80,7 +80,7 @@ th:
         title: สร้างพื้นฐาน
         desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
       RelayProgramming:
         title: โปรแกรมการถ่ายทอดข้อมูล
@@ -209,7 +209,7 @@ th:
         title: 'Real-life Algorithms: Paper Planes'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
       courseC_unplugged_gettingLoopy:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
       courseC_unplugged_binaryBracelets:
         title: Binary Bracelets
@@ -263,8 +263,8 @@ th:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: เพื่อนหุ่นยนต์
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
         title:
         desc:
@@ -338,7 +338,7 @@ th:
         title: 'Real-life Algorithms: Paper Planes'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically making paper airplanes. This lesson also focuses on the bigger picture of computer science and how algorithms play an essential part.
       GettingLoopy_2018:
-        title: Getting Loopy
+        title: มาวนลูปกัน
         desc: This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
       BinaryBracelets_2018:
         title: Binary Bracelets

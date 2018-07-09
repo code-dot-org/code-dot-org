@@ -1,4 +1,5 @@
-"sl":
+---
+sl:
   errors:
     messages:
       not_saved: 'Prosim popravite sledeče napake:'
@@ -92,6 +93,7 @@
     facebook: Facebook
     windowslive: Microsoft račun
     clever: Pameten račun
+    powerschool: Powerschool Account
     forgot_password: Si pozabil/a svoje geslo?
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
@@ -399,6 +401,7 @@
     email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'
     email_confirm_wrong_email: "(Napačen email naslov?)"
     email_resend_confirm: Ponovno pošlji potrditvena navodila
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(pusti prazno, če tega nočeš spremeniti)"
     current_password_hint: "(potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)"
     delete: Izbriši svoj račun

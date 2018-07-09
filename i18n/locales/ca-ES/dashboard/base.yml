@@ -85,6 +85,7 @@ ca:
     facebook: 'Facebook'
     windowslive: 'Compte de Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Has oblidat la constrasenya?'
     need_confirmation: "No has rebut les instruccions de confirmació?"
     need_unlock: "No has rebut les instruccions de desbloqueig?"
@@ -359,6 +360,7 @@ ca:
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no ha estat confirmada:'
     email_confirm_wrong_email: '(Adreça d''e-mail equivocada?)'
     email_resend_confirm: 'Torna a enviar les instruccions de confirmació'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(deixa-ho en blanc si no vols canviar-lo)"
     current_password_hint: '(necessitem la teva contrasenya actual per a confirmar els canvis)'
     delete: 'Suprimir el vostre compte'

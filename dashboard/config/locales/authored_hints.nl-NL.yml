@@ -1,4 +1,5 @@
-"nl":
+---
+nl:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
@@ -379,15 +380,16 @@
           draaien om het hele pad af te gaan.
       4-5 Maze 10_authored_hint:
         4-5_Maze_10_a: |-
-          If you can't see how to use loops to solve the puzzle right away, try solving it the long way first, then looking for a pattern.
+          Als je niet gelijk ziet hoe je met lussen de puzzel kunt oplossen, probeer dan eerst de puzzel blok voor blok op te lossen en kijk daarna of je een patroon ziet.
 
-          What should you put a `repeat` around to make the code shorter?
+          Wat moet je een 'herhaal totdat' blok omheen zetten om de code korter te maken?
       4-5 Maze 4_authored_hint:
-        4-5_Maze_4_a: If you are having a hard time figuring out where to put the
-          repeat, try coding everything out and looking for a pattern.
+        4-5_Maze_4_a: Als je het lastig vindt om te bepalen waar je de lus moet plaatsen,
+          probeer dan eerst alles blok voor blok te programmeren en ga daarna op zoek
+          naar een patroon.
       4-5 Maze 5_authored_hint:
-        4-5_Maze_5_a: Try using a `repeat` loop anytime you need to `move forward`
-          more than two steps.
+        4-5_Maze_5_a: Gebruik een 'herhaal keer' blok als je meer dan twee 'beweeg
+          vooruit' blokken moet gebruiken.
         4-5_Maze_5_b: Je kan meer dan één `herhaal` lus gebruiken in een puzzel.
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: |-
@@ -429,10 +431,10 @@
           iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus
           te plaatsen.
-        specifics: "The `for loop` runs from three to seventeen for each of the six
-          \"petals\" before moving on to create the next, drawing shapes with only
-          an odd number of sides.\n        \nThe `set alpha` block uses division to
-          fade the color as the counter gets higher."
+        specifics: |-
+          Het 'herhaal counter' blok loopt van drie tot zeventien voor elk "bloemblaadjes" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.
+
+          De 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt.
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien
           na het tekenen van ieder "bloemblad".
         solution: |-
@@ -445,10 +447,10 @@
           het blokken gebied naar de werkplaats en plak je het direct onder het blok
           "als gestart".
       Course 4 Artist 11_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right
-          by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right
-          by **120 degrees**. '
+        Course_4_Artist_11_a: De halve zeshoek heeft een ** lengte van 30 ** en draait
+          rechts met ** 60 graden **.
+        Course_4_Artist_11_b: De driehoek heeft een ** lengte van 80 ** en draait
+          naar rechts met ** 120 graden **.
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Elke herhaalde vorm is de combinatie van een **halve
           zeshoek**, gevolgd door **2/3 van een driehoek**. '
@@ -3855,10 +3857,10 @@
           iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus
           te plaatsen.
-        specifics: "The `for loop` runs from three to seventeen for each of the six
-          \"petals\" before moving on to create the next, drawing shapes with only
-          an odd number of sides.\n        \nThe `set alpha` block uses division to
-          fade the color as the counter gets higher."
+        specifics: |-
+          Het 'herhaal counter' blok loopt van drie tot zeventien voor elk "bloemblaadjes" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.
+
+          De 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt.
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien
           na het tekenen van ieder "bloemblad".
         solution: |-
@@ -4058,10 +4060,10 @@
           iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus
           te plaatsen.
-        specifics: "The `for loop` runs from three to seventeen for each of the six
-          \"petals\" before moving on to create the next, drawing shapes with only
-          an odd number of sides.\n        \nThe `set alpha` block uses division to
-          fade the color as the counter gets higher."
+        specifics: |-
+          Het 'herhaal counter' blok loopt van drie tot zeventien voor elk "bloemblaadjes" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.
+
+          De 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt.
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien
           na het tekenen van ieder "bloemblad".
         solution: |-
@@ -4891,10 +4893,10 @@
           deze keer.
         courseB_maze_seq_challenge1_b: Probeer om te beginnen naar het westen te bewegen.
       course3_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30**
-          and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80**
-          and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
+          van 30 ** en draait rechts met ** 60 graden **.
+        courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
+          ** en draait naar rechts met ** 120 graden **.
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: If you call the function one more time,
           you can create the same design in the final corner. You can also `jump to`
@@ -5961,8 +5963,8 @@
         courseA_artist_loops7_b: Write the code for one wave first, then repeat that
           to draw the other two.
         courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
+          Remember you can put more than one block in a <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
           </block></xml> loop.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
@@ -6274,11 +6276,16 @@
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: If you get stuck, try solving the puzzle in 2
           parts, one part before the corner and one part after the corner.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop,
-          **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: You will need one `repeat` loop after another.
+        courseA_harvester_loops5a_a: |-
+          You will need one `repeat` <xml> <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop after another.
         courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other
           will repeat `move East`.
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
@@ -6293,7 +6300,10 @@
         courseA_harvester_loops6_b: This is the path you should take to pick all the
           corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
@@ -6328,7 +6338,7 @@
           Use this block to pick corn once the harvester gets to it.
 
           <xml>
-          <block type="maze_nectar"/>
+          <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml>
@@ -6403,6 +6413,25 @@
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
           </next>
           </block>
           </next>
@@ -6985,6 +7014,25 @@
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -7037,7 +7085,10 @@
         courseB_artist_loops3_b: De artiest zal naar het zuiden willen gaan om zijn
           zijn te kunnen tekenen.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: De artiest zal naar het zuiden willen gaan om zijn
           zijn te kunnen tekenen.
       courseB_artist_loops4_authored_hint:
@@ -7058,8 +7109,10 @@
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
-          inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: If you are having trouble figuring this puzzle out,
           try writing the moves down on a piece of paper and looking for a pattern.
@@ -7184,8 +7237,10 @@
           things go wrong.
         courseB_collector_loops4_b: To change how far Laurel goes, change the number
           of times that the loop runs.
-        courseB_collector_loops4_c: Laurel needs to walk down and collect the treasure
-          after she finishes the `repeat` loop!
+        courseB_collector_loops4_c: |-
+          Laurel needs to walk down and collect the treasure after she finishes the `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml>loop!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Try using more than one loop to get the job done.
         courseB_collector_loops5_b: Probeer de code enkele keren uit te voeren om
@@ -7208,8 +7263,10 @@
           Use the "Step" button to run through your program one block at a time.
         courseB_collector_loops6_b: You can change the number of times the repeat
           loop runs by clicking on the "3" and choosing a different number.
-        courseB_collector_loops6_c: You will want to use 3 `repeat` loops to solve
-          this puzzle.
+        courseB_collector_loops6_c: |-
+          You will want to use 3 `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loops to solve this puzzle.
         courseB_collector_loops6_d: If you're confused, try breaking this puzzle into
           3 pieces.
       courseB_collector_loops7_authored_hint:
@@ -7565,8 +7622,10 @@
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: To repeat code, drag out a `repeat` loop, then put
-          the block you want inside of it.
+        courseB_iceage_loops3_b: |-
+          To repeat code, drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml>loop, then put the block you want inside of it.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get
           to the acorn. Do you see a pattern?
@@ -8253,7 +8312,10 @@
         courseB_starWars_prog9_a: Don't be afraid to make a mistake! Run the code
           to see what happens, even if you haven't solved the puzzle yet.
         courseB_starWars_prog9_b: There are many ways to solve this puzzle.
-        courseB_starWars_prog9_c: Could a `repeat` loop help out here?
+        courseB_starWars_prog9_c: |-
+          Could a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block></xml>loop help out here?
       courseC_PlayLab_embed_events9_authored_hint: {}
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -8690,12 +8752,17 @@
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           The first block you will need is:
-
-          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+          <xml>  <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
         courseC_artist_loopsPrePre1a_b: |-
           To move forward 50 pixels, use this block:
 
-          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+          <xml><block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          </block></xml>
       courseC_artist_prog1_authored_hint: {}
       courseC_artist_prog1_2018_authored_hint: {}
       courseC_artist_prog2_authored_hint:
@@ -9330,6 +9397,8 @@
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace
           already.  Don't delete them all! \n\nUse the \"Step\" button to go through
           and figure out where the code goes wrong."
+        courseC_maze_debugging5_c: You can change the direction of the turn block
+          by clicking on the dropdown.
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it
           the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
@@ -12535,19 +12604,19 @@
           back to the left side of the figure to draw another line of squares going
           right. Which do you prefer?
       courseE_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30**
-          and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80**
-          and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
+          van 30 ** en draait rechts met ** 60 graden **.
+        courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
+          ** en draait naar rechts met ** 120 graden **.
         courseE_artist_concept_challenge1_c: |-
           This is the design you want to repeat to make the full shape:
 
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge1_2018_authored_hint:
-        courseE_artist_concept_challenge1_a: 'The half-hexagon has a **length of 30**
-          and turns right by **60 degrees**.  '
-        courseE_artist_concept_challenge1_b: 'The 2/3 triangle has a **length of 80**
-          and turns right by **120 degrees**. '
+        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
+          van 30 ** en draait rechts met ** 60 graden **.
+        courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
+          ** en draait naar rechts met ** 120 graden **.
         courseE_artist_concept_challenge1_c: |-
           This is the design you want to repeat to make the full shape:
 
@@ -13318,7 +13387,11 @@
           Can you drag these blocks into the function?
         courseE_farmer_functions3c_b: Don't forget to call your function in the main
           program wherever you removed blocks.
-      courseE_farmer_functions3c1_2018_authored_hint: {}
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path`
+          function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around
+          the corners?
       courseE_farmer_functions3c_2018_authored_hint: {}
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop
@@ -13371,7 +13444,11 @@
           is lettuce in a space?
         courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
       courseE_farmer_functions7_authored_hint: {}
-      courseE_farmer_functions7a1_2018_authored_hint: {}
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions`
+          section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when
+          you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You don't need a function here, but you can
           make one if it is helpful to you!
@@ -13389,7 +13466,11 @@
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: {}
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same
+          function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time,
+          you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Try running the code given to see what it does.
           What do you need after this?
@@ -13405,7 +13486,14 @@
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: {}
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made
+          in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle
+          to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move
+          forward` to get to the last crop of lettuce before you can call your function
+          again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements
           to move along the path?
@@ -18472,10 +18560,10 @@
           loops.  Just jump the artist 100 pixels forward for each top window, and
           150 pixels down to get the bottom windows.
       grade4_artist_nestedLoops_challenge2_authored_hint:
-        Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right
-          by **60 degrees**.  '
-        Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right
-          by **120 degrees**. '
+        Course_4_Artist_11_a: De halve zeshoek heeft een ** lengte van 30 ** en draait
+          rechts met ** 60 graden **.
+        Course_4_Artist_11_b: De driehoek heeft een ** lengte van 80 ** en draait
+          naar rechts met ** 120 graden **.
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Dit design maakt 10 keer een volledige loop in 360 graden.
@@ -18693,10 +18781,10 @@
           iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus
           te plaatsen.
-        specifics: "The `for loop` runs from three to seventeen for each of the six
-          \"petals\" before moving on to create the next, drawing shapes with only
-          an odd number of sides.\n        \nThe `set alpha` block uses division to
-          fade the color as the counter gets higher."
+        specifics: |-
+          Het 'herhaal counter' blok loopt van drie tot zeventien voor elk "bloemblaadjes" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.
+
+          De 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt.
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien
           na het tekenen van ieder "bloemblad".
         solution: |-

@@ -1,4 +1,5 @@
-"mt":
+---
+mt:
   errors:
     messages:
       not_saved: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
@@ -96,6 +97,7 @@
     facebook: Facebook
     windowslive: Account tal-Microsoft
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Insejt il-Password?
     need_confirmation: Ma rcevejtx istruzzjonijiet tal-konferma?
     need_unlock: Ma rcevejtx istruxzzjonijiet biex tanlokkja?
@@ -407,6 +409,7 @@
       ikkonfermat:'
     email_confirm_wrong_email: "(Indirizz elettroniku ħażin?)"
     email_resend_confirm: Erga ibghat l'istruzzjonijiet tal-konferma
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(ħalli vojt jekk ma tixtieqx tibdel)"
     current_password_hint: "(neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet
       tiegħek)"

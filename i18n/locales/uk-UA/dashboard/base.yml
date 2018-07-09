@@ -85,6 +85,7 @@ uk:
     facebook: 'Facebook'
     windowslive: 'обліковий запис Microsoft'
     clever: 'Clever Account'
+    powerschool: 'Powerschool Account'
     forgot_password: 'Забули свій пароль?'
     need_confirmation: "Не отримали вказівок підтвердження?"
     need_unlock: "Не отримали вказівок розблокування?"
@@ -359,6 +360,7 @@ uk:
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
     email_confirm_wrong_email: '(Неправильна електронна адреса?)'
     email_resend_confirm: 'Надіслати повідомлення з підтвердженням повторно'
+    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(залишіть порожнім, якщо ви не хочете змінювати)"
     current_password_hint: '(нам потрібний ваш поточний пароль, щоб підтвердити зміни)'
     delete: 'Видалення облікового запису'

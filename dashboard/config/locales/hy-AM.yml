@@ -1,4 +1,5 @@
-"hy":
+---
+hy:
   errors:
     messages:
       not_saved: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Microsoft Հաշվի
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Մոռացել եք Ձեր գաղտնաբառը?
     need_confirmation: Չէի ստանալ հաստատում հրահանգներ.
     need_unlock: Չէի ստանում են բացելու հրահանգներ.
@@ -404,6 +406,7 @@
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: "(Wrong email address?)"
     email_resend_confirm: Շարժական հրահանգներ
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(leave blank if you dont want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
     delete: Ջնջել Ձեր հաշիվը

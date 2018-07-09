@@ -1,4 +1,5 @@
-"lt":
+---
+lt:
   data:
     block_categories:
       Actions: Komandos
@@ -28,9 +29,10 @@
       Numbers: Numbers
       Input: Input
       Default: Default
+      World: World
       Sprites: Sprites
       Behaviors: Behaviors
-      World: World
+      Advanced: Advanced
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite
@@ -45,5 +47,6 @@
       Foo: Foo
       Name: Vardas
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Komanda

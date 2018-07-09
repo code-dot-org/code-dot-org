@@ -15,7 +15,7 @@ class TestFlakiness
   TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
 
   # Each feature should be retried until the chance of flaky failure is less than this amount.
-  MAX_FAILURE_RATE = 0.005 # 0.5%
+  MAX_FAILURE_RATE = 0.001 # 0.1%
 
   # Queries the SauceLabs API for jobs
   # @param options [Hash] Optional, options overrides.

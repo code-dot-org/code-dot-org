@@ -48,6 +48,7 @@ class Ability
       Pd::Application::ApplicationBase,
       Pd::Application::Facilitator1819Application,
       Pd::Application::Teacher1819Application,
+      Pd::InternationalOptIn,
       :maker_discount
     ]
 
@@ -70,6 +71,7 @@ class Ability
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
+      can :get_feedbacks, TeacherFeedback, student_id: user.id
 
       if user.teacher?
         can :manage, Section, user_id: user.id
@@ -77,6 +79,7 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u)
         end
+        can [:create, :get_feedback_from_teacher], TeacherFeedback, student_sections: {user_id: user.id}
         can :manage, Follower
         can :read, Workshop
         can :manage, UserLevel do |user_level|
@@ -90,6 +93,7 @@ class Ability
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
         can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
+        can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
       end
 

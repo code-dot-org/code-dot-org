@@ -1,4 +1,5 @@
-"ru":
+---
+ru:
   data:
     callouts:
       2-3 Artist 1 new_callout: {}
@@ -428,7 +429,6 @@
         CSD_U3_rect_c2: Здесь находится кнопка «Запустить».
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Вот код
-        CSD_U3_rect_c2: Здесь находится кнопка «Запустить».
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Вот код
         CSD_U3_rect_c2: Перетащите этот блок в область кода.
@@ -666,6 +666,7 @@
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: {}
+      Fish Tank 2-validated_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Используй данный раскрывающийся список для создания разных
           снежинок!
@@ -1116,6 +1117,7 @@
           them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1165,6 +1167,7 @@
           start your program.
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
@@ -1176,9 +1179,7 @@
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: This number means that there are no more of this
           block left in the toolbox.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: This number means that there are no more of this
-          block left in the toolbox.
+      courseB_artist_loops5_2018_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Вы видите несколько новых блоков на панели инструментов?
           Не волнуйтесь, мы покажем как их использовать позже.
@@ -1398,6 +1399,9 @@
       courseD_collector_until_challenge1_callout: {}
       courseD_farmer_until_challenge2_callout: {}
       courseD_farmer_until_challenge2_2018_callout: {}
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:

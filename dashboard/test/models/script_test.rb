@@ -518,11 +518,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_course_unit_version_warning' do
-    csp_2017 = create(:course, name: 'csp-2017')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018')
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
@@ -530,59 +530,61 @@ class ScriptTest < ActiveSupport::TestCase
 
     user = create(:student)
     refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-
-    create(:user_script, user: user, script: csp1_2018)
-    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
     refute csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
 
     create(:user_script, user: user, script: csp1_2017)
-    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+
+    create(:user_script, user: user, script: csp1_2018)
+    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
     assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
   end
 
   test 'summarize includes show_script_version_warning' do
-    a17 = create(:script, name: 'coursea-2017', family_name: 'coursea')
-    a18 = create(:script, name: 'coursea-2018', family_name: 'coursea')
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
     user = create(:student)
 
-    refute a17.summarize[:show_script_version_warning]
+    refute foo17.summarize[:show_script_version_warning]
 
-    refute a17.summarize(true, user)[:show_script_version_warning]
+    refute foo17.summarize(true, user)[:show_script_version_warning]
+    refute foo18.summarize(true, user)[:show_script_version_warning]
 
-    create(:user_script, user: user, script: a18)
-    assert a17.summarize(true, user)[:show_script_version_warning]
-    refute a18.summarize(true, user)[:show_script_version_warning]
+    create(:user_script, user: user, script: foo17)
+    refute foo17.summarize(true, user)[:show_script_version_warning]
+    assert foo18.summarize(true, user)[:show_script_version_warning]
 
-    create(:user_script, user: user, script: a17)
-    assert a17.summarize(true, user)[:show_script_version_warning]
-    assert a18.summarize(true, user)[:show_script_version_warning]
+    create(:user_script, user: user, script: foo18)
+    refute foo17.summarize(true, user)[:show_script_version_warning]
+    assert foo18.summarize(true, user)[:show_script_version_warning]
   end
 
   test 'summarize only shows one version warning' do
-    csp_2017 = create(:course, name: 'csp-2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', version_year: '2017')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
     user = create(:student)
-    create(:user_script, user: user, script: csp1_2018)
-    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-    refute csp1_2017.summarize(true, user)[:show_script_version_warning]
+    create(:user_script, user: user, script: csp1_2017)
+    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2018.summarize(true, user)[:show_script_version_warning]
   end
 
   test 'summarize includes versions' do
-    a17 = create(:script, name: 'coursea-2017', family_name: 'coursea', version_year: '2017')
-    create(:script, name: 'coursea-2018', family_name: 'coursea', version_year: '2018')
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
+    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
 
-    versions = a17.summarize[:versions]
+    versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
-    assert_equal 'coursea-2018', versions[0][:name]
+    assert_equal 'foo-2018', versions[0][:name]
     assert_equal '2018', versions[0][:version_year]
     assert_equal '2018', versions[0][:version_title]
-    assert_equal 'coursea-2017', versions[1][:name]
+    assert_equal 'foo-2017', versions[1][:name]
     assert_equal '2017', versions[1][:version_year]
     assert_equal '2017', versions[1][:version_title]
   end
@@ -996,6 +998,70 @@ class ScriptTest < ActiveSupport::TestCase
     refute script.project_widget_visible
   end
 
+  test 'can unset the script_announcements attribute' do
+    l = create :level
+    old_dsl = <<-SCRIPT
+      script_announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+    assert script.script_announcements
+
+    script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+
+    refute script.script_announcements
+  end
+
+  test 'can set custom curriculum path' do
+    l = create :level
+    dsl = <<-SCRIPT
+      has_lesson_plan true
+      curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
+      stage 'Stage1'
+      level '#{l.name}'
+      stage 'Stage2'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'curriculumTestScript',
+        properties: Script.build_property_hash(script_data),
+      },
+      script_data[:stages],
+    )
+    assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.stages.first.lesson_plan_html_url
+    with_locale(:'it-IT') do
+      assert_equal CDO.curriculum_url('it-IT', 'foo/2'), script.stages.last.lesson_plan_html_url
+    end
+
+    script.curriculum_path = '//example.com/foo/{LESSON}'
+    assert_equal '//example.com/foo/1', script.stages.first.lesson_plan_html_url
+    assert_equal '//example.com/foo/2', script.stages.last.lesson_plan_html_url
+
+    script.curriculum_path = nil
+    assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.stages.first.lesson_plan_html_url
+  end
+
   test 'clone script with suffix' do
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
@@ -1148,6 +1214,21 @@ endvariants
 
     scripts = Script.valid_scripts(user)
     assert_equal [script], scripts
+  end
+
+  test "get_assessment_script_levels returns an empty list if no level groups" do
+    script = create(:script, name: 'test-no-levels')
+    level_group_script_level = script.get_assessment_script_levels
+    assert_equal level_group_script_level, []
+  end
+
+  test "get_assessment_script_levels returns a list of script levels" do
+    script = create(:script, name: 'test-level-group')
+    level_group = create(:level_group, name: 'assessment 1')
+    script_level = create(:script_level, levels: [level_group], assessment: true, script: script)
+
+    assessment_script_levels = script.get_assessment_script_levels
+    assert_equal assessment_script_levels[0], script_level
   end
 
   private

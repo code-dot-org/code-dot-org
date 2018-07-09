@@ -1,4 +1,5 @@
-"pt":
+---
+pt:
   errors:
     messages:
       not_saved: 'Por favor, corrige os seguintes erros:'
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Outlook
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Esqueceste-te da palavra-passe?
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
@@ -410,6 +412,7 @@
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
     email_confirm_wrong_email: "(Endereço de e-mail errado?)"
     email_resend_confirm: Reenviar instruções de confirmação
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(deixa em branco se não pretenderes alterá-la)"
     current_password_hint: "(precisamos da tua palavra-passe para confirmarmos as
       tuas alterações)"

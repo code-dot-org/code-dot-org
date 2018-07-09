@@ -4,15 +4,19 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import color from "@cdo/apps/util/color";
+
+const styles = {
+  noResponse: {
+    color: color.lighter_gray,
+  }
+};
 
 export const COLUMNS = {
   RESPONSE: 0,
 };
 
 const freeResponsesDataPropType = PropTypes.shape({
-  id:  PropTypes.number,
-  studentId: PropTypes.string,
-  name: PropTypes.string,
   response: PropTypes.string,
 });
 
@@ -47,11 +51,16 @@ class FreeResponsesSurveyTable extends Component {
   };
 
   studentResponseColumnFormatter = (response, {rowIndex}) => {
-    const numStudentResponses = this.props.freeResponses.length;
-
-    if (numStudentResponses >= 5) {
-      return response;
-    }
+    return (
+      <div>
+        {response &&
+          <div>{response}</div>
+        }
+        {!response &&
+          <div style={styles.noResponse}>{i18n.emptyFreeResponse()}</div>
+        }
+      </div>
+    );
   };
 
   getColumns = (sortable) => {
@@ -61,7 +70,6 @@ class FreeResponsesSurveyTable extends Component {
         header: {
           label: i18n.response(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
         },
         cell: {
           format: this.studentResponseColumnFormatter,
@@ -90,7 +98,7 @@ class FreeResponsesSurveyTable extends Component {
         style={tableLayoutStyles.table}
       >
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
+        <Table.Body rows={sortedRows} rowKey="index" />
       </Table.Provider>
     );
   }

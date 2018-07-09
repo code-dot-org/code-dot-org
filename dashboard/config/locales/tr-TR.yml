@@ -1,4 +1,5 @@
-"tr":
+---
+tr:
   errors:
     messages:
       not_saved: 'Lütfen aşağıdaki hataları düzeltiniz:'
@@ -97,6 +98,7 @@
     facebook: Facebook
     windowslive: Microsoft Hesabı
     clever: Akıllı Hesap
+    powerschool: Powerschool Account
     forgot_password: Şifrenizi mi unuttunuz?
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
@@ -406,6 +408,7 @@
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
     email_confirm_wrong_email: "(Yanlış e-posta adresi?)"
     email_resend_confirm: Onay yönergelerini yeniden gönder
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(Eğer değiştirmek istemiyorsanız boş bırakın)"
     current_password_hint: "(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)"
     delete: Hesabını Sil

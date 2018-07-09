@@ -1,4 +1,5 @@
-"sr":
+---
+sr:
   errors:
     messages:
       not_saved: 'Молим вас исправите следеће грешке:'
@@ -93,6 +94,7 @@
     facebook: Facebook
     windowslive: Мајкрософт налог
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: Заборавили сте лозинку?
     need_confirmation: Нисте примили инструкције за потврду?
     need_unlock: Нисте примили инструкције за откључавање?
@@ -401,6 +403,7 @@
     email_confirm_needed_required: 'Ваша електронска пошта %{email} није потврђена:'
     email_confirm_wrong_email: "(Погрешна електронска пошта?)"
     email_resend_confirm: Поново пошаљи упутства о потврди
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(остави празно ако не желиш промијенити)"
     current_password_hint: "(потребна нам је твоја тренутна лозинка како би потврдили
       твоје промјене)"

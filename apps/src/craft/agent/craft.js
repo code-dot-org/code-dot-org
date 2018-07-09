@@ -8,10 +8,12 @@ import { tryGetLocalStorage, trySetLocalStorage } from '../../utils';
 import { singleton as studioApp } from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import GameController from '@code-dot-org/craft/src/js/game/GameController';
-import FacingDirection from '@code-dot-org/craft/src/js/game/LevelMVC/FacingDirection';
-import EventType from '@code-dot-org/craft/src/js/game/Event/EventType';
-import { convertActionPlaneEntitiesToConfig } from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
+import {
+  GameController,
+  FacingDirection,
+  EventType,
+  utils as CraftUtils,
+} from '@code-dot-org/craft';
 import dom from '../../dom';
 import MusicController from '../../MusicController';
 import { Provider } from 'react-redux';
@@ -470,7 +472,7 @@ export default class Craft {
   }
 
   static initializeAppLevel(levelConfig) {
-    convertActionPlaneEntitiesToConfig(levelConfig);
+    CraftUtils.convertActionPlaneEntitiesToConfig(levelConfig);
 
     const fluffPlane = [];
     // TODO(bjordan): remove configuration requirement in visualization
@@ -691,22 +693,7 @@ export default class Craft {
       destroyBlock: function (blockID) {
         appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'PlayerAgent');
       },
-      whilePathAhead: function (blockID, callback) {
-        // if resurrected, move blockID be last parameter to fix "Show Code"
-        appCodeOrgAPI.whilePathAhead(studioApp().highlight.bind(studioApp(), blockID),
-            '',
-            'PlayerAgent',
-            callback);
-      },
-      whileBlockAhead: function (blockID, blockType, callback) {
-        // if resurrected, move blockID be last parameter to fix "Show Code"
-        appCodeOrgAPI.whilePathAhead(studioApp().highlight.bind(studioApp(), blockID),
-            blockType,
-            'PlayerAgent',
-            callback);
-      },
       ifLavaAhead: function (callback, blockID) {
-        // if resurrected, move blockID be last parameter to fix "Show Code"
         appCodeOrgAPI.ifBlockAhead(studioApp().highlight.bind(studioApp(), blockID),
             "lava",
             'PlayerAgent',

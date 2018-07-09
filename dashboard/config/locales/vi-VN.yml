@@ -1,4 +1,5 @@
-"vi":
+---
+vi:
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
@@ -95,6 +96,7 @@
     facebook: Facebook
     windowslive: Tài khoản Microsoft
     clever: Tài khoản Clever
+    powerschool: Powerschool Account
     forgot_password: Quên mật khẩu?
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
@@ -411,6 +413,7 @@
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
     email_confirm_wrong_email: "(Địa chỉ email sai?)"
     email_resend_confirm: Gửi lại hướng dẫn xác nhận
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(để trống nếu bạn không muốn thay đổi nó)"
     current_password_hint: "(chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)"
     delete: Xóa tài khoản của bạn

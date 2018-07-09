@@ -15,7 +15,7 @@ nn:
           version_title: "'17-'18"
           description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_short: 2018-2019-versjonen av kurset Informatikkoppdagelser.
         allthethingscourse:
           title: alt kursinnhald
           description_short: Dette er ei kursrekke som har med alle våre kurs
@@ -26,8 +26,8 @@ nn:
           title: Informatikkoppdagelser ('18-'19)
           version_title: "'18-'19"
           description_short: 2018-2019-versjonen av kurset Informatikkoppdagelser.
-          description_student: ''
-          description_teacher: ''
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
         csp-2018:
           assignment_family_title: Informatikkprinsipper
           title: Informatikkprinsipper ('18-'19)

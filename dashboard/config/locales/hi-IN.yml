@@ -1,4 +1,5 @@
-"hi":
+---
+hi:
   errors:
     messages:
       not_saved: 'कृपया निम्न गलतिया सुधारें:'
@@ -15,8 +16,8 @@
     errors:
       messages:
         blank: की आवश्यकता है
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: की आवश्यकता है
+        invalid_plural: अमान्य हैं
     attributes:
       user:
         name: प्रदर्शन नाम
@@ -42,7 +43,7 @@
   unsubmit: Unsubmit
   previous_page: पिछला पृष्ठ
   next_page: अगले पृष्ठ
-  next_resource: Next resource
+  next_resource: अगले संसाधन
   done_with_module: Done with this Learning Module
   cancel: रद्द करें
   okay: ठीक है
@@ -64,8 +65,8 @@
   trophies: ट्राफियां
   courses: पाठ्यक्रम
   courses_page:
-    title_student: Learn on Code Studio
-    title_teacher: Teach with Code Studio
+    title_student: कंप्यूटर विज्ञान सीखो
+    title_teacher: कंप्यूटर विज्ञान सिखाओ
   unplugged_activity: Unplugged Activity
   of: की
   more: अधिक
@@ -93,6 +94,7 @@
     facebook: फेसबुक
     windowslive: Microsoft खाता
     clever: Clever Account
+    powerschool: Powerschool Account
     forgot_password: अपना पासवर्ड भूल गए?
     need_confirmation: पुष्टिकरण निर्देश प्राप्त नहीं हुआ?
     need_unlock: खोलने के अनुदेश नही मिले?
@@ -169,19 +171,19 @@
     email_preference_required: You must specify an email preference.
   school_info:
     title: School Information (optional)
-    school_country: School Country
+    school_country: स्कूल देश
     select_school_type: School Type
     charter: Charter
     private: Private
-    public: Public
+    public: सार्वजनिक
     homeschool: Homeschool
     after_school: After School
     other: Other
-    state: State
-    district: District
+    state: राज्य
+    district: जिला
     other_district_not_listed: Other district not listed above
     district_name: District Name
-    school: School
+    school: स्कूल
     other_school_not_listed: Other school not listed above
     school_name: School Name
     school_zip: School Zip Code
@@ -235,9 +237,9 @@
 
 '
   parent_mailer:
-    student_associated_subject: Login information for Code.org
+    student_associated_subject: Code.org के लिए लॉगिन जानकारी
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Code.org में आपका स्वागत है!
   section:
     your_section:
       one: 'Your section:'
@@ -404,6 +406,7 @@
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: "(गलत ईमेल पता?)"
     email_resend_confirm: Resend confirmation instructions
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
     delete: Delete your account

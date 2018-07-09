@@ -74,7 +74,6 @@ module Pd
     ]
 
     WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
-      COURSE_CSP => 'CSP Support',
       COURSE_ECS => 'ECS Support',
       COURSE_CS_IN_A => 'CS in Algebra Support',
       COURSE_CS_IN_S => 'CS in Science Support'

@@ -1,4 +1,5 @@
-"tr":
+---
+tr:
   devise:
     confirmations:
       confirmed: E-posta adresin başarıyla onaylandı.

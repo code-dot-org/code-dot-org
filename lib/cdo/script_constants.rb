@@ -26,14 +26,14 @@ module ScriptConstants
       CSD_2018 = 'csd-2018'.freeze,
     ],
     csf: [
-      COURSEA_NAME = 'coursea'.freeze,
-      COURSEB_NAME = 'courseb'.freeze,
-      COURSEC_NAME = 'coursec'.freeze,
-      COURSED_NAME = 'coursed'.freeze,
-      COURSEE_NAME = 'coursee'.freeze,
-      COURSEF_NAME = 'coursef'.freeze,
-      EXPRESS_NAME = 'express'.freeze,
-      PRE_READER_EXPRESS_NAME = 'pre-express'.freeze,
+      COURSEA_NAME = 'coursea-2017'.freeze,
+      COURSEB_NAME = 'courseb-2017'.freeze,
+      COURSEC_NAME = 'coursec-2017'.freeze,
+      COURSED_NAME = 'coursed-2017'.freeze,
+      COURSEE_NAME = 'coursee-2017'.freeze,
+      COURSEF_NAME = 'coursef-2017'.freeze,
+      EXPRESS_NAME = 'express-2017'.freeze,
+      PRE_READER_EXPRESS_NAME = 'pre-express-2017'.freeze,
     ],
     csf_2018: [
       COURSEA_2018_NAME = 'coursea-2018'.freeze,
@@ -157,12 +157,6 @@ module ScriptConstants
       TTS_NAME = 'allthettsthings'.freeze
     ],
   }.freeze
-
-  # If the course name (e.g. "foo-2018") has a version suffix, then the first
-  # capture group is the assignment family name ("foo") and the second capture
-  # group is the version year ("2018"). Does not match course name without
-  # version suffix.
-  VERSIONED_COURSE_NAME_REGEX = /^(.*)-(\d{4})$/
 
   DEFAULT_VERSION_YEAR = '2017'
 

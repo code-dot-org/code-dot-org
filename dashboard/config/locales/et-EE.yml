@@ -1,4 +1,5 @@
-"et":
+---
+et:
   errors:
     messages:
       not_saved: 'Palun parandage järgmised vead:'
@@ -94,6 +95,7 @@
     facebook: Facebook
     windowslive: Microsofti konto
     clever: Tark konto
+    powerschool: Powerschool Account
     forgot_password: Unustasid oma salasõna?
     need_confirmation: Ei saanud kinnituse juhiseid?
     need_unlock: Ei saanud lahtilukustamise juhiseid?
@@ -402,6 +404,7 @@
     email_confirm_needed_required: 'Teie e-posti aadress %{email} ei ole kinnitatud:'
     email_confirm_wrong_email: "(Vale e-posti aadress?)"
     email_resend_confirm: Saada kinnituse juhendid uuesti
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(Jäta tühjaks, kui ei soovi seda muuta)"
     current_password_hint: "(sisesta oma parool muudatuste kinnitamiseks)"
     delete: Kustuta oma konto

@@ -1,10 +1,11 @@
-"ky":
+---
+ky:
   data:
     block_categories:
       Actions: Иш-аракеттер
       Loops: Циклдер
-      Functions: Functions
-      Color: Color
+      Functions: Функциялар
+      Color: Түс
       Brushes: Brushes
       Math: Математика
       Logic: Логика
@@ -13,8 +14,8 @@
       String: String
       Image: Image
       Boolean: Boolean
-      Conditionals: Conditionals
-      Events: Events
+      Conditionals: Шартуулар
+      Events: Иш-чаралар
       Games/Score: Games/Score
       Comments: Comments
       Category: Category
@@ -28,9 +29,10 @@
       Numbers: Numbers
       Input: Input
       Default: Default
+      World: World
       Sprites: Sprites
       Behaviors: Behaviors
-      World: World
+      Advanced: Advanced
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite
@@ -45,5 +47,6 @@
       Foo: Foo
       Name: Аты
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Функция

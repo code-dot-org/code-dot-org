@@ -1,12 +1,21 @@
 import $ from 'jquery';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
+import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
+import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
-const {userAge, userType} = scriptData;
+const {
+  userAge,
+  userType,
+  isPasswordRequired,
+  authenticationOptions,
+  isGoogleClassroomStudent,
+  isCleverStudent,
+} = scriptData;
 
 $(document).ready(() => {
   new ChangeEmailController({
@@ -15,6 +24,7 @@ $(document).ready(() => {
     displayedUserEmail: $('#displayed-user-email'),
     userAge,
     userType,
+    isPasswordRequired,
     emailChangedCallback: onEmailChanged,
   });
 
@@ -22,6 +32,23 @@ $(document).ready(() => {
     $('#change-user-type-modal-form'),
     userType,
   );
+
+  const addPasswordMountPoint = document.getElementById('add-password-fields');
+  if (addPasswordMountPoint) {
+    new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
+  }
+
+  const manageLinkedAccountsMountPoint = document.getElementById('manage-linked-accounts');
+  if (manageLinkedAccountsMountPoint) {
+    new ManageLinkedAccountsController(
+      manageLinkedAccountsMountPoint,
+      userType,
+      authenticationOptions,
+      isPasswordRequired,
+      isGoogleClassroomStudent,
+      isCleverStudent,
+    );
+  }
 
   initializeCreatePersonalAccountControls();
 });

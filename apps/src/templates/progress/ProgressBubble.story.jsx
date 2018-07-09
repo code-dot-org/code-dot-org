@@ -64,6 +64,40 @@ export default storybook => {
             disabled={false}
           />
         )
+      }, {
+        name:'pairing icon bubble - perfect',
+        description: 'should show the paring icon, completed perfectly',
+        story: () => (
+          <ProgressBubble
+            level={{
+              levelNumber: 3,
+              status: LevelStatus.perfect,
+              url: "/foo/bar",
+              icon: "fa-document",
+              paired: true
+            }}
+            hideToolTips={true}
+            disabled={false}
+            pairingIconEnabled={true}
+          />
+        )
+      }, {
+        name:'pairing icon bubble - attempted',
+        description: 'should show the paring icon, attempted',
+        story: () => (
+          <ProgressBubble
+            level={{
+              levelNumber: 3,
+              status: LevelStatus.attempted,
+              url: "/foo/bar",
+              icon: "fa-document",
+              paired: true
+            }}
+            hideToolTips={true}
+            disabled={false}
+            pairingIconEnabled={true}
+          />
+        )
       }])
     );
 };

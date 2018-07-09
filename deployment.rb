@@ -11,6 +11,7 @@ require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
 require 'cdo/aws/cdo_google_credentials'
+require 'cdo/git_utils'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -22,6 +23,22 @@ def load_languages(path)
     CSV.foreach(path, headers: true, encoding: 'utf-8') do |row|
       results << row['code_s!']
     end
+  end
+end
+
+# Since channel ids are derived from user id and other sequential integer ids
+# use a new S3 sources directory for each Test Build to prevent a UI test
+# from inadvertently using a channel id from a previous Test Build.
+# CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
+# https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
+# Detect Circle environment just to be safe.
+def sources_s3_dir(environment)
+  if environment == :production
+    'sources'
+  elsif environment == :test && !ENV['CIRCLECI']
+    "sources_#{environment}/#{GitUtils.git_revision_short}"
+  else
+    "sources_#{environment}"
   end
 end
 
@@ -71,7 +88,7 @@ def load_configuration
     'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
-    'partners'                    => %w(br italia ro sg tr uk za),
+    'partners'                    => %w(),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -107,7 +124,7 @@ def load_configuration
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
-    'sources_s3_directory'        => rack_env == :production ? 'sources' : "sources_#{rack_env}",
+    'sources_s3_directory'        => sources_s3_dir(rack_env),
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
@@ -241,6 +258,14 @@ class CDOImpl < OpenStruct
 
   def advocacy_url(path = '', scheme = '')
     site_url('advocacy.code.org', path, scheme)
+  end
+
+  CURRICULUM_LANGUAGES = Set['/es-mx', '/it-it', '/th-th']
+
+  def curriculum_url(locale, path = '')
+    locale = '/' + locale.downcase.to_s
+    locale = nil unless CURRICULUM_LANGUAGES.include? locale
+    "https://curriculum.code.org#{locale}/#{path}"
   end
 
   def default_scheme

@@ -110,10 +110,9 @@ describe('functional_cond_number', function () {
     block.removeConditionalRow(1);
     validatePairs(block, [0, 2]);
 
-    Blockly.BlockSpaceEditor.copy_(block);
-    Blockly.mainBlockSpace.paste({
-      dom: Blockly.Xml.textToDom(Blockly.clipboard_).firstChild,
-    });
+    var xml = document.createElement('xml');
+    xml.appendChild(Blockly.Xml.blockToDom(block));
+    Blockly.mainBlockSpace.paste(xml);
 
     assert(Blockly.mainBlockSpace.getAllBlocks().length === 2);
     var pasted = Blockly.mainBlockSpace.getAllBlocks()[1];
