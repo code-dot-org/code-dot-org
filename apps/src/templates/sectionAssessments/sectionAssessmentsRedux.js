@@ -1,4 +1,5 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
+import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import i18n from '@cdo/locale';
 
 export const ALL_STUDENT_FILTER = 0;
@@ -100,6 +101,12 @@ export default function sectionAssessments(state=initialState, action) {
      */
     return {
       ...initialState
+    };
+  }
+  if (action.type === SET_SCRIPT) {
+    return {
+      ...state,
+      studentId: ALL_STUDENT_FILTER,
     };
   }
   if (action.type === SET_ASSESSMENT_ID) {
