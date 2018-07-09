@@ -48,7 +48,7 @@ exports.strip = function (code) {
     // Strip out serial numbers.
     .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
     // Remove timeouts.
-    .replace(INFINITE_LOOP_TRAP, '')
+    .replace(new RegExp(utils.escapeRegExp(INFINITE_LOOP_TRAP), 'g'), '')
     // Strip out loop highlight
     .replace(LOOP_HIGHLIGHT_RE, '')
     // Strip out class namespaces.

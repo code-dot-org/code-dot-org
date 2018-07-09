@@ -68,9 +68,10 @@ class ManageLinkedAccounts extends React.Component {
       return false;
     }
 
-    // If the user's only authentication option is an email address, a password is required for login
-    const otherOptionIsEmail = authOptions.length === 1 && authOptions[0].credentialType === 'email';
-    if (otherOptionIsEmail) {
+    // If the user's only authentication options are email addresses, a password is required for login
+    const credentialTypes = authOptions.map(option => option.credentialType);
+    const uniqueCredentialTypes = _.uniq(credentialTypes);
+    if (uniqueCredentialTypes.length === 1 && uniqueCredentialTypes[0] === 'email') {
       return this.props.userHasPassword;
     }
 
@@ -156,6 +157,7 @@ class ManageLinkedAccounts extends React.Component {
                   email={this.formatEmail(option)}
                   onClick={() => this.toggleProvider(option.id, option.credentialType)}
                   disconnectDisabledStatus={option.id ? this.disconnectDisabledStatus(option) : null}
+                  error={option.error}
                 />
               );
             })}
@@ -185,6 +187,7 @@ class OauthConnection extends React.Component {
     email: PropTypes.string,
     onClick: PropTypes.func.isRequired,
     disconnectDisabledStatus: PropTypes.string,
+    error: PropTypes.string,
   };
 
   getDisconnectDisabledTooltip = () => {
@@ -199,7 +202,7 @@ class OauthConnection extends React.Component {
   };
 
   render() {
-    const {displayName, email, onClick, disconnectDisabledStatus} = this.props;
+    const {displayName, email, onClick, disconnectDisabledStatus, error} = this.props;
     const emailStyles = !!email ? styles.cell : {...styles.cell, ...styles.emptyEmailCell};
     const buttonText = !!email ?
       i18n.manageLinkedAccounts_disconnect() :
@@ -214,7 +217,7 @@ class OauthConnection extends React.Component {
         <td style={emailStyles}>
           {email || i18n.manageLinkedAccounts_notConnected()}
         </td>
-        <td style={styles.cell}>
+        <td style={{...styles.cell, ...styles.actionContainer}}>
           <span
             data-for={tooltipId}
             data-tip
@@ -239,6 +242,7 @@ class OauthConnection extends React.Component {
               </ReactTooltip>
             }
           </span>
+          <span style={styles.error}>{error}</span>
         </td>
       </tr>
     );
@@ -274,6 +278,10 @@ const styles = {
     color: color.light_gray,
     fontStyle: 'italic',
   },
+  actionContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
   button: {
     width: BUTTON_WIDTH,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -285,5 +293,10 @@ const styles = {
   },
   tooltip: {
     width: BUTTON_WIDTH * 2
+  },
+  error: {
+    paddingLeft: GUTTER / 2,
+    color: color.red,
+    fontStyle: 'italic',
   },
 };

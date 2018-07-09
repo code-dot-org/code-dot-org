@@ -165,7 +165,7 @@ Please bring your own laptop/tablet, as we will be accessing online resources. W
 
 ## Forum Resources
 
-* [2018 Code.org/CSTA State Policy Forum one-pager](https://advocacy.code.org/2018-state-policy-forum-one-pager.pdf)
+* [2018 Code.org/CSTA State Policy Forum one-pager](https://advocacy.code.org/one-pager.pdf)
 * [State Policy Tracker](http://bit.ly/9policies)
 
 

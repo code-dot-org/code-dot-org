@@ -36,14 +36,16 @@ class MultipleChoiceAnswerCell extends Component {
     isSurvey: PropTypes.bool,
   };
 
-  render() {
-    const {percentValue, isCorrectAnswer, displayAnswer, isSurvey} = this.props;
-
+  getBackgroundColor = (percentValue) => {
+    const {isCorrectAnswer, isSurvey} = this.props;
     const opacity = calculateOpacity(percentValue);
+    return (isCorrectAnswer || isSurvey) ? `rgba(159, 212, 159, ${opacity})` : `rgba(255, 99, 71, ${opacity})`;
+  };
 
-    const backgroundCSS = (isCorrectAnswer || isSurvey) ? {backgroundColor: `rgba(159, 212, 159, ${opacity})`} :
-      {backgroundColor: `rgba(255, 99, 71, ${opacity})`};
+  render() {
+    const {percentValue, isCorrectAnswer, displayAnswer} = this.props;
 
+    // Display a cell with letters for answers.
     if (displayAnswer) {
       return (
         <div style={styles.main}>
@@ -59,6 +61,8 @@ class MultipleChoiceAnswerCell extends Component {
       );
     }
 
+    // Display a cell showing the percent answered.
+    const backgroundCSS = {backgroundColor: this.getBackgroundColor(percentValue)};
     return (
       <div style={{...styles.main, ...backgroundCSS, ...styles.overviewMain}}>
         <div style={styles.value}>

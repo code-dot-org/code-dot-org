@@ -23,6 +23,7 @@ import sectionAssessments, {
   setStudentId,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});
@@ -39,6 +40,21 @@ describe('sectionAssessmentsRedux', () => {
       const action = setSection(newSection);
       const nextState = sectionAssessments(currentState, action);
       assert.deepEqual(nextState, initialState);
+    });
+  });
+
+  describe('setScript', () => {
+    it('resets student filter to all students', () => {
+      const currentState = {
+        studentId: 489,
+        assessmentResponsesByScript: {
+          1: [{question: "a question", puzzle: 2}],
+        }
+      };
+      const action = setScriptId(2);
+      const nextState = sectionAssessments(currentState, action);
+      assert.deepEqual(nextState.studentId, 0);
+      assert.deepEqual(nextState.assessmentResponsesByScript, currentState.assessmentResponsesByScript);
     });
   });
 
