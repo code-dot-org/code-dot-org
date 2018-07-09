@@ -48,6 +48,12 @@ class AuthenticationOption < ApplicationRecord
     OAUTH_CREDENTIAL_TYPES,
   ].flatten
 
+  SILENT_TAKEOVER_CREDENTIAL_TYPES = [
+    FACEBOOK,
+    GOOGLE,
+    WINDOWS_LIVE
+  ]
+
   def oauth?
     OAUTH_CREDENTIAL_TYPES.include? credential_type
   end
@@ -81,6 +87,15 @@ class AuthenticationOption < ApplicationRecord
     else
       {}
     end
+  end
+
+  def summarize
+    {
+      id: id,
+      credential_type: credential_type,
+      email: email,
+      hashed_email: hashed_email
+    }
   end
 
   private def email_must_be_unique

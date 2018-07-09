@@ -27488,7 +27488,7 @@ pt-BR:
       courseB_iceage_loops5_markdown_instruction: Can you add one more loop to get to the acorn?
       courseB_iceage_loops6_markdown_instruction: Can you add a loop to get to the acorn?
       courseB_iceage_loops7_markdown_instruction: 'Scrat really wants that acorn! '
-      courseB_iceage_loops8_markdown_instruction: 'Can you fix this code? '
+      courseB_iceage_loops8_markdown_instruction: 'Você consegue corrigir este código? '
       courseB_iceage_loops9_markdown_instruction: The acorn is so far away! Can you use loops to help Scrat get there?
       courseB_maze_seq3_markdown_instruction: '*"Fix the code to get me to the pig!"*'
       courseB_maze_seq3_2018_markdown_instruction: '*"Fix the code to get me to the acorn!"*'
@@ -28668,7 +28668,7 @@ pt-BR:
       courseD_iceage_loops4_markdown_instruction: Add one more block to get Scrat all the way to the acorn!
       courseD_iceage_loops6_markdown_instruction: Can you add a loop to get to the acorn?
       courseD_iceage_loops7_markdown_instruction: 'Scrat really wants that acorn! '
-      courseD_iceage_loops8_markdown_instruction: 'Can you fix this code? '
+      courseD_iceage_loops8_markdown_instruction: 'Você consegue corrigir este código? '
       courseD_iceage_loops9_markdown_instruction: The acorn is so far away! Can you use loops to help Scrat get there?
       courseD_maze_loops_challenge1_markdown_instruction: Let's hunt for treasure - using loops! Help the collector reach at least two piles of treasure using only the blocks in your toolbox.
       courseD_maze_nestedLoops3_markdown_instruction: |-
