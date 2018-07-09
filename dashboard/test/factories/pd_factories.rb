@@ -543,6 +543,11 @@ FactoryGirl.define do
     form_data nil
   end
 
+  factory :pd_international_opt_in, class: 'Pd::InternationalOptIn' do
+    user nil
+    form_data nil
+  end
+
   factory :pd_regional_partner_cohort, class: 'Pd::RegionalPartnerCohort' do
     course Pd::Workshop::COURSE_CSP
   end

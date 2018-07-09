@@ -1596,35 +1596,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal name, student.name
   end
 
-  #
-  # Temporary: Remove the primary_authentication_option aliases after migration.
-  #
-  test 'primary_authentication_option is aliased to primary_contact_info' do
-    user = create :teacher, :with_migrated_email_authentication_option
-    refute_nil user.primary_contact_info
-    assert_equal user.primary_authentication_option, user.primary_contact_info
-    new_info = AuthenticationOption.new \
-      user: user,
-      credential_type: AuthenticationOption::EMAIL,
-      email: 'new-email@example.org',
-      hashed_email: User.hash_email('new-email@exmaple.org')
-    user.primary_authentication_option = new_info
-    assert_equal new_info, user.primary_contact_info
-  end
-
-  test 'primary_authentication_option_id is aliased to primary_contact_info_id' do
-    user = create :teacher, :with_migrated_email_authentication_option
-    refute_nil user.primary_contact_info_id
-    assert_equal user.primary_authentication_option_id, user.primary_contact_info_id
-    new_info = AuthenticationOption.create \
-      user: user,
-      credential_type: AuthenticationOption::EMAIL,
-      email: 'new-email@example.org',
-      hashed_email: User.hash_email('new-email@exmaple.org')
-    user.primary_authentication_option_id = new_info.id
-    assert_equal new_info.id, user.primary_contact_info_id
-  end
-
   test 'update_primary_contact_info is false if email and hashed_email are nil' do
     user = create :user
     successful_save = user.update_primary_contact_info(user: {email: nil, hashed_email: nil})
@@ -1791,6 +1762,28 @@ class UserTest < ActiveSupport::TestCase
 
     user.reload
     assert_equal original_primary_contact_info, user.primary_contact_info
+  end
+
+  test 'google_classroom_student? is true if user belongs to a google classroom section as a student' do
+    section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
+    user = create(:follower, section: section).student_user
+    assert user.google_classroom_student?
+  end
+
+  test 'google_classroom_student? is false if user does not belong to any google classroom sections as a student' do
+    user = create(:user)
+    refute user.google_classroom_student?
+  end
+
+  test 'clever_student? is true if user belongs to a clever section as a student' do
+    section = create(:section, login_type: Section::LOGIN_TYPE_CLEVER)
+    user = create(:follower, section: section).student_user
+    assert user.clever_student?
+  end
+
+  test 'clever_student? is false if user does not belong to any clever sections as a student' do
+    user = create(:user)
+    refute user.clever_student?
   end
 
   test 'track_proficiency adds proficiency if necessary and no hint used' do

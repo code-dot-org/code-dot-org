@@ -2471,6 +2471,7 @@ hi:
       U3 - Simulation - 6_instruction: Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)
       U3 - Simulation - App_instruction: Change your code to run the full simulation with 10,000 coins. What was your longest streak of heads? (Click to see full instructions)
       U3 - Simulation - Template_instruction: Use a while loop to "flip 10 coins" and write them to the screen. (Click to see full instructions)
+      U3 - Simulation - Template_2018_instruction: Use a while loop to "flip 10 coins" and write them to the screen. (Click to see full instructions)
       U3 - Sprites - Intro Sprites_instruction: Do This
       U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
       U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
@@ -2799,6 +2800,7 @@ hi:
       U4 - Charts - Line Chart 2_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart 2_2018_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Line Chart Template_2018_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Remixing Apps with Data_2018_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Scatter Chart_instruction: Create a scatter plot of the “rottenTomatoes” table, using the new table and column names. (Click to see full instructions)
@@ -2879,6 +2881,7 @@ hi:
       U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - part 1 - template_instruction: 'Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_2018_instruction: 'Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: Use readRecords to copy the data in your database into your "contacts" global variable and call showCurrentContact. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 1_2018_instruction: Use readRecords to copy the data in your database into your "contacts" global variable and call showCurrentContact. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: Create a function called refreshLocalData. (Click to see full instructions)
@@ -2958,6 +2961,7 @@ hi:
       Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
       Valentine_playlab_01_instruction: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere_instruction: Test
+      Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
@@ -3367,7 +3371,7 @@ hi:
       courseB_collector_loops10_2018_instruction: Help Laurel get all of the treasure from this cave.
       courseB_collector_loops11_instruction: Eureka!  Get as much treasure as you can!
       courseB_collector_loops11_2018_instruction: Eureka!  Get as much treasure as you can!
-      courseB_collector_loops1_2018_instruction: This is Laurel the Adventurer!  Can you move her around and get treasure?
+      courseB_collector_loops1_2018_instruction: Get at least one piece of treasure without mistakes to pass!
       courseB_collector_loops2_instruction: Get all four piles to pass this level.
       courseB_collector_loops2_2018_instruction: Get all four piles to pass this level.
       courseB_collector_loops3_instruction: How can Laurel get all five piles of treasure using only one `E -->` block?
@@ -3444,9 +3448,9 @@ hi:
       courseB_playlab_events3_instruction: Use an event to make Daisy the Dragon switch to a random mood when you click on her.
       courseB_playlab_events3_2018_instruction: Use an event to make Daisy the Dragon switch to a random mood when you click on her.
       courseB_playlab_events4_instruction: Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.
-      courseB_playlab_events4_2018_instruction: Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.
+      courseB_playlab_events4_2018_instruction: Get the dragon to finish this level!
       courseB_playlab_events5_instruction: Now add an event so that the knight runs away from the dragon when you press the right arrow.
-      courseB_playlab_events5_2018_instruction: Now add an event so that the knight runs away from the dragon when you press the right arrow.
+      courseB_playlab_events5_2018_instruction: Add an event so that the knight runs away from the dragon when you press the right arrow.
       courseB_playlab_events6_instruction: |-
         Help your knight get all of the flags!
         
@@ -3456,10 +3460,10 @@ hi:
         
         To do this, you'll need to add events to help the knight move up, down, left, and right.
       courseB_playlab_events7_instruction: Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.
-      courseB_playlab_events7_2018_instruction: Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.
+      courseB_playlab_events7_2018_instruction: "1) Set the knight to vanish when he runs into the dragon.    \n2) Play a sound when they collide to make it feel more real.  "
       courseB_playlab_events8_instruction: Use your imagination. What can you do to make this game more fun?
       courseB_playlab_eventsFP_instruction: Use your imagination. What can you do to make this game more fun?
-      courseB_playlab_eventsFP_2018_instruction: Use your imagination. What can you do to make this game more fun?
+      courseB_playlab_eventsFP_2018_instruction: "**Free play:** Use your imagination. What can you do to make this game more fun?"
       courseB_playlab_eventsToolbox_instruction: Finish by playing a sound and making the knight vanish when he runs into the dragon!
       courseB_playlab_events_challenge1_instruction: 'Make the animals move down when you press ▼. '
       courseB_playlab_events_challenge1_2018_instruction: 'Make the animals move down when you press ▼. '

@@ -36605,6 +36605,21 @@ hy:
         * Write a program that **uses a while loop** that **flips 10 coins** and writes their values to the screen
 
         ![](https://images.code.org/970622047b06af13ea7bdd50ee86bcbf-image-1446739178483.gif)
+      U3 - Simulation - Template_2018_markdown_instruction: |-
+        # Simulating Coin Flips
+
+        Over the next several exercises we are going to be building a program that simulates flipping 10,000 coins, or even more if you like. Along the way we're going to be keeping track of the patterns that develop and hopefully learning something about the patterns that develop.
+
+        This is a great problem to simulate on a computer. If you wanted to flip 10 coins you'd probably just do it by hand. Flipping 10,000 coins would take significantly longer (about 3 hours if you flip one per second) and so **we'd much rather use a program to do the work for us.** Not only is it a lot faster to write the program, but once you're done you can run your program over and over, repeating the experiment. As we'll see, **simulations like this make it much easier to quickly notice patterns, test hypotheses, and develop new ideas to investigate**.
+
+        **Starting Small:** Our simulations are going to start small. We'll actually only be flipping 10 coins to begin with, and then developing programs that keep track of patterns in this smaller set of data. That way we'll be able to visually confirm that our programs are working as intended. **Once we've verified that our programs work at a smaller scale we'll gradually increaese the number of flips our program is working on until we're at the full 10,000.**
+
+        # Do This
+
+        * When we want to flip a coin with a computer we will instead **generate a random number between 0 and 1**
+        * Write a program that **uses a while loop** that **flips 10 coins** and writes their values to the screen
+
+        ![](https://images.code.org/970622047b06af13ea7bdd50ee86bcbf-image-1446739178483.gif)
       U3 - Sprites - Intro Sprites_markdown_instruction: |-
         # Sprites
 
@@ -43329,6 +43344,22 @@ hy:
         command** inside the callback function of `readRecords` to **display the `records`**\n*
         Run the program and **confirm that the same information you saw in the Data
         Viewer is displayed in the console**.\n\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)"
+      U4 - Read Record - part 1 - template_2018_markdown_instruction: "# Reading Records\nYou
+        have learned how `createRecord` can be used to create permanent copies of
+        your data in a remote database. \n\n**In order to use this data you'll need
+        a way to read it out of your database and back into your app**.\n\n<img src=\"https://images.code.org/ac5fb29d4935df7b5825f4cabd6b89e8-image-1449502640243.35.37
+        AM.png\" style=\"width: 350px; float: right\">\n\nCheck out the new command
+        `readRecords`. This command **requests from the database *all* the records
+        stored in one table.**. \n\nThe database responds by the sending an **array
+        of objects** back to your program -- one object for every record in the table.
+        \ As with createRecord, the data sent back by the database will come through
+        **callback function of the `readRecords`, with array of objects in the `records`
+        parameter**.\n\n# Do This\n\n**NOTE**: the database with at table called 'myTable'
+        already contains some data.\n\n* **Open the Data Viewer** to look at the data
+        in 'myTable'\n* **Add a `readRecords` command** to your app.\n* **Add a `console.log`
+        command** inside the callback function of `readRecords` to **display the `records`**\n*
+        Run the program and **confirm that the same information you saw in the Data
+        Viewer is displayed in the console**.\n\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)"
       U4 - ReadRecords - Contacts App 1_markdown_instruction: "# Contacts App: Loading
         Your Contacts From the Database\n\nThe way you left your Contacts App in the
         last lesson, **your app had stored data in a remote database but could not
@@ -47159,6 +47190,10 @@ hy:
         times, and then Play\n\nYou should see the original text emerge.  \n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\n\nHow
         hard would it be to crack a message encrypted with this cipher? Does the length
         of the key make a difference?\n"
+      Virtual Pet 1 Predict_markdown_instruction: |
+        **Make a prediction:** This is Geraldine, your new pet giraffe.
+
+        What do you think will happen if you press "▶ Run" and then click on her?
       Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet
         giraffe. What do you think will happen if you press run and then click on
         her?
@@ -48482,6 +48517,9 @@ hy:
         so that the knight moves toward the dragon when the left arrow is clicked."
       courseB_playlab_events4_2018_markdown_instruction: "Knight time!  \n\nAdd an
         event so that the knight moves toward the dragon when the left arrow is clicked."
+      courseB_playlab_events5_2018_markdown_instruction: "Now add an event so that
+        the knight runs away from the dragon when you press the right arrow.  \n\nMove
+        the knight to the right to pass this level."
       courseB_playlab_events6_markdown_instruction: |-
         Help your knight get all of the flags!
 

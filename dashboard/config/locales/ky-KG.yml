@@ -47,7 +47,7 @@ ky:
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: Жок кыл
-  okay: Okay
+  okay: Окай
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
@@ -878,16 +878,16 @@ ky:
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: Thank you
+    wrong_title: Рахмат
     wrong_body: Thank you for submitting an answer.
-    correct_title: Thank you
+    correct_title: Рахмат
     correct_body: Thank you for submitting an answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: Thank you
+    wrong_title: Рахмат
     wrong_body: Thank you for submitting answers.
-    correct_title: Thank you
+    correct_title: Рахмат
     correct_body: Thank you for submitting answers.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
@@ -896,9 +896,9 @@ ky:
       been cleared so that your responses stay anonymous. Note that your teacher will
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
-    wrong_title: Thank you
+    wrong_title: Рахмат
     wrong_body: Thank you for submitting answers.
-    correct_title: Thank you
+    correct_title: Рахмат
     correct_body: Thank you for submitting answers.
     unsubmit-title: Unsubmit your assessment
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and

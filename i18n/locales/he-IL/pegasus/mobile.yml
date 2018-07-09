@@ -70,17 +70,7 @@
   congratulations: "ברכות!"
   congratulations_on_completing_hoc: "ברכות על השלמת שעה אחת של קוד"
   congratulations_volunteer: 'ברכות: עכשיו לאחר שניסית את שעה של קוד, <a href="https://code.org/volunteer"> הרשם בכדי להתנדב בכיתה </a>, ותעזור לסטודנטים ללמוד שעה של קוד!'
-  congratulations_on_completing_course1: "ברכות על סיום קורס 1"
-  congratulations_on_completing_course2: "ברכות על סיום קורס 2"
-  congratulations_on_completing_course3: "ברכות על סיום קורס 3"
-  congratulations_on_completing_course4: "ברכות על סיום קורס 4"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
-  congratulations_on_completing_accelerated: "ברכות על סיום הקורס המואץ"
+  congratulations_on_completing_course: "Congratulations on completing %{course}"
   congrats_next_tutorials_title: "הוסמכת לשלב הבא"
   congrats_next_tutorials_desc: "נסה את ההדרכות הקצרות יותר באורך כשעה, או נסה <a href=\"%{current_path}/next\"> שותף הדרכה</a>."
   get_a_certificate_of_achievement: "קבל תעודה על ההישג"
@@ -213,17 +203,7 @@
   just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course_donor: "I just finished %{course} - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "למד שעה של קוד"
@@ -1103,6 +1083,18 @@
   coursed_gradelevel: "כיתות ח' ומעלה"
   coursee_gradelevel: "גילאי 8-12"
   coursef_gradelevel: "Ages 9-13"
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: כיתות ח' ומעלה
+  coursee-2017_gradelevel: גילאי 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: כיתות ח' ומעלה
+  coursee-2018_gradelevel: גילאי 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: "גילאי 10-18"
   codeorg_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
   codeintl_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
@@ -1211,6 +1203,18 @@
   coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
   coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
   coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
+  coursea-2017_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
   codeorg_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
   codeintl_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
   thinkersmithspanish_longdescription: "באמצעות שימוש ב\"מילון רובוטי\" המוגדר מראש, התלמידים ילמדו להנחות אחד את השני בהשלמת משימות ללא דיון מקדים. השיעור הזה מלמד את הילדים את הקשר בין סמלים לפעולות, וגם את היכולת החשובה מאוד של לדבג."
