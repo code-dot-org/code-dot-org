@@ -1,5 +1,8 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
+import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import i18n from '@cdo/locale';
+
+export const ALL_STUDENT_FILTER = 0;
 
  /**
  * Initial state of sectionAssessmentsRedux
@@ -15,6 +18,7 @@ import i18n from '@cdo/locale';
  * isLoading - boolean - indicates that requests for assessments and surveys have been
  * sent to the server but the client has not yet received a response
  * assessmentId - int - the level_group id of the assessment currently in view
+ * studentId - int - the studentId of the current student being filtered for.
  */
 const initialState = {
   assessmentResponsesByScript: {},
@@ -22,6 +26,7 @@ const initialState = {
   surveysByScript: {},
   isLoading: false,
   assessmentId: 0,
+  studentId: ALL_STUDENT_FILTER,
 };
 
 // Question types for assessments.
@@ -50,6 +55,7 @@ const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
+const SET_STUDENT_ID = 'sectionAssessments/SET_STUDENT_ID';
 
 // Action creators
 export const setAssessmentResponses = (scriptId, assessments) =>
@@ -59,6 +65,7 @@ export const setAssessmentQuestions = (scriptId, assessments) =>
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
+export const setStudentId = (studentId) => ({ type: SET_STUDENT_ID, studentId: studentId });
 export const setSurveys = (scriptId, surveys) => ({ type: SET_SURVEYS, scriptId, surveys });
 
 export const asyncLoadAssessments = (sectionId, scriptId) => {
@@ -96,10 +103,23 @@ export default function sectionAssessments(state=initialState, action) {
       ...initialState
     };
   }
+  if (action.type === SET_SCRIPT) {
+    return {
+      ...state,
+      studentId: ALL_STUDENT_FILTER,
+    };
+  }
   if (action.type === SET_ASSESSMENT_ID) {
     return {
       ...state,
       assessmentId: action.assessmentId,
+      studentId: ALL_STUDENT_FILTER,
+    };
+  }
+  if (action.type === SET_STUDENT_ID) {
+    return {
+      ...state,
+      studentId: action.studentId,
     };
   }
   if (action.type === SET_ASSESSMENT_RESPONSES) {
@@ -216,36 +236,36 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
 export const getStudentMCResponsesForCurrentAssessment = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
-    return [];
+    return {};
+  }
+  const studentId = state.sectionAssessments.studentId;
+  const studentObject = studentResponses[studentId];
+  if (!studentObject) {
+    return {};
   }
 
-  const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
-    studentId = (parseInt(studentId, 10));
-    const studentObject = studentResponses[studentId];
-    const currentAssessmentId = state.sectionAssessments.assessmentId;
-    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
 
-    // If the student has not submitted this assessment, don't display results.
-    if (!studentAssessment) {
-      return;
-    }
+  // If the student has not submitted this assessment, don't display results.
+  if (!studentAssessment) {
+    return {};
+  }
 
-    // Transform that data into what we need for this particular table, in this case
-    // is the structure studentAnswerDataPropType
-    return {
-      id: studentId,
-      name: studentObject.student_name,
-      studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
-        .map(answer => {
-          return {
-            responses: indexesToAnswerString(answer.student_result),
-            isCorrect: answer.status === MultiAnswerStatus.CORRECT,
-          };
-        })
-    };
-  }).filter(studentData => studentData);
+  // Transform that data into what we need for this particular table, in this case
+  // is the structure studentAnswerDataPropType
+  return {
+    id: studentId,
+    name: studentObject.student_name,
+    studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
+      .map(answer => {
+        return {
+          responses: indexesToAnswerString(answer.student_result),
+          isCorrect: answer.status === MultiAnswerStatus.CORRECT,
+        };
+      })
+  };
 
-  return studentResponsesArray;
 };
 
 /**
@@ -271,8 +291,18 @@ export const getAssessmentsFreeResponseResults = (state) => {
 
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
 
+  let currentStudentsIds = Object.keys(studentResponses);
+  // Filter by current selected student.
+  if (state.sectionAssessments.studentId !== ALL_STUDENT_FILTER) {
+    if (!currentStudentHasResponses(state)) {
+      return [];
+    } else {
+      currentStudentsIds = [state.sectionAssessments.studentId];
+    }
+  }
+
   // For each student, look up their responses to the currently selected assessment.
-  Object.keys(studentResponses).forEach(studentId => {
+  currentStudentsIds.forEach(studentId => {
     studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
@@ -407,7 +437,13 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
     ...studentResponses,
   };
 
-  const studentsSummaryArray = Object.keys(allStudentsByIds).map(studentId => {
+  let currentStudentsIds = Object.keys(allStudentsByIds);
+  // Filter by current selected student.
+  if (state.sectionAssessments.studentId !== ALL_STUDENT_FILTER) {
+    currentStudentsIds = [state.sectionAssessments.studentId];
+  }
+
+  const studentsSummaryArray = currentStudentsIds.map(studentId => {
     studentId = (parseInt(studentId, 10));
     const studentsObject = allStudentsByIds[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
@@ -609,6 +645,13 @@ export const getExportableAssessmentData = (state) => {
   });
 
   return responses;
+};
+
+/**
+ *  @returns {boolean} true if current studentId has submitted responses for current script.
+ */
+export const currentStudentHasResponses = (state) => {
+  return !!getAssessmentResponsesForCurrentScript(state).hasOwnProperty(state.sectionAssessments.studentId);
 };
 
 // Helpers

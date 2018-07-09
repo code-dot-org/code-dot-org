@@ -1,20 +1,23 @@
 import React from 'react';
 import {action} from '@storybook/addon-actions';
-import ManageLinkedAccounts from './ManageLinkedAccounts';
+import {UnconnectedManageLinkedAccounts as ManageLinkedAccounts} from './ManageLinkedAccounts';
 
 const DEFAULT_PROPS = {
   userType: 'student',
-  authenticationOptions: [],
+  authenticationOptions: {},
   connect: action('connect'),
   disconnect: action('disconnect'),
+  userHasPassword: true,
+  isGoogleClassroomStudent: false,
+  isCleverStudent: false,
 };
 
-const mockAuthenticationOptions = [
-  {id: 1, credential_type: 'google_oauth2', email: 'google@email.com'},
-  {id: 2, credential_type: 'facebook', email: 'facebook@email.com'},
-  {id: 3, credential_type: 'clever', email: 'clever@email.com'},
-  {id: 4, credential_type: 'windowslive', email: 'windowslive@email.com'},
-];
+const mockAuthenticationOptions = {
+  1: {id: 1, credentialType: 'google_oauth2', email: 'google@email.com'},
+  2: {id: 2, credentialType: 'facebook', email: 'facebook@email.com'},
+  3: {id: 3, credentialType: 'clever', email: 'clever@email.com'},
+  4: {id: 4, credentialType: 'windowslive', email: 'windowslive@email.com'},
+};
 
 export default storybook => storybook
   .storiesOf('ManageLinkedAccounts', module)
@@ -46,5 +49,38 @@ export default storybook => storybook
           authenticationOptions={mockAuthenticationOptions}
         />
       )
+    },
+    {
+      name: 'table with an error upon disconnecting',
+      story: () => {
+        const mockOptions = {
+          ...mockAuthenticationOptions,
+          2: {id: 2, credentialType: 'facebook', email: 'facebook@email.com', error: 'Oh no!'},
+        };
+
+        return (
+          <ManageLinkedAccounts
+            {...DEFAULT_PROPS}
+            authenticationOptions={mockOptions}
+          />
+        );
+      }
+    },
+    {
+      name: 'table with a disabled disconnect status',
+      story: () => {
+        const mockOptions = {
+          ...mockAuthenticationOptions,
+          1: {id: 1, credentialType: 'google_oauth2', email: 'google@email.com'},
+        };
+
+        return (
+          <ManageLinkedAccounts
+            {...DEFAULT_PROPS}
+            isGoogleClassroomStudent={true}
+            authenticationOptions={mockOptions}
+          />
+        );
+      }
     },
   ]);

@@ -45,10 +45,10 @@ export default class SingleChoiceResponses extends React.Component {
                     }
                   </td>
                   <td style={{paddingLeft: '20px'}}>
-                    {possibleAnswer}
+                    {count}
                   </td>
                   <td style={{paddingLeft: '20px'}}>
-                    {count}
+                    {possibleAnswer}
                   </td>
                 </tr>
               );
