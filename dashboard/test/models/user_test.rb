@@ -1532,6 +1532,12 @@ class UserTest < ActiveSupport::TestCase
     refute user.can_delete_own_account?
   end
 
+  test 'cannot delete own account if student in section' do
+    section = create :section
+    student = create(:follower, section: section).student_user
+    refute student.can_delete_own_account?
+  end
+
   test 'teacher_managed_account? is false for teacher' do
     refute @teacher.teacher_managed_account?
   end
