@@ -150,6 +150,7 @@ class ManageLinkedAccounts extends React.Component {
                   email={this.formatEmail(option)}
                   onClick={() => this.toggleProvider(option.id, option.credentialType)}
                   cannotDisconnect={option.id ? !this.canDisconnect(option) : null}
+                  error={option.error}
                 />
               );
             })}
@@ -178,11 +179,12 @@ class OauthConnection extends React.Component {
     displayName: PropTypes.string.isRequired,
     email: PropTypes.string,
     onClick: PropTypes.func.isRequired,
-    cannotDisconnect: PropTypes.bool
+    cannotDisconnect: PropTypes.bool,
+    error: PropTypes.string,
   };
 
   render() {
-    const {displayName, email, onClick, cannotDisconnect} = this.props;
+    const {displayName, email, onClick, cannotDisconnect, error} = this.props;
     const emailStyles = !!email ? styles.cell : {...styles.cell, ...styles.emptyEmailCell};
     const buttonText = !!email ?
       i18n.manageLinkedAccounts_disconnect() :
@@ -197,7 +199,7 @@ class OauthConnection extends React.Component {
         <td style={emailStyles}>
           {email || i18n.manageLinkedAccounts_notConnected()}
         </td>
-        <td style={styles.cell}>
+        <td style={{...styles.cell, ...styles.actionContainer}}>
           <span
             data-for={tooltipId}
             data-tip
@@ -222,6 +224,7 @@ class OauthConnection extends React.Component {
               </ReactTooltip>
             }
           </span>
+          <span style={styles.error}>{error}</span>
         </td>
       </tr>
     );
@@ -257,6 +260,10 @@ const styles = {
     color: color.light_gray,
     fontStyle: 'italic',
   },
+  actionContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
   button: {
     width: BUTTON_WIDTH,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -268,5 +275,10 @@ const styles = {
   },
   tooltip: {
     width: BUTTON_WIDTH * 2
+  },
+  error: {
+    paddingLeft: GUTTER / 2,
+    color: color.red,
+    fontStyle: 'italic',
   },
 };
