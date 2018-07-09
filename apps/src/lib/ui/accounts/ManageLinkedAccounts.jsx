@@ -64,9 +64,10 @@ class ManageLinkedAccounts extends React.Component {
       return false;
     }
 
-    // If the user's only authentication option is an email address, a password is required for login
-    const otherOptionIsEmail = authOptions.length === 1 && authOptions[0].credentialType === 'email';
-    if (otherOptionIsEmail) {
+    // If the user's only authentication options are email addresses, a password is required for login
+    const credentialTypes = authOptions.map(option => option.credentialType);
+    const uniqueCredentialTypes = _.uniq(credentialTypes);
+    if (uniqueCredentialTypes.length === 1 && uniqueCredentialTypes[0] === 'email') {
       return this.props.userHasPassword;
     }
 
