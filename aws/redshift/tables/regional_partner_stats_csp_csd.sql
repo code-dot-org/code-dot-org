@@ -128,5 +128,5 @@ pd_enrollments_with_year as
          AND sa.school_year = s.school_year
 ;
 
-GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csp_csd TO GROUP admin;
-GRANT SELECT ON analysis.regional_partner_stats_csp_csd TO GROUP reader_pii;
+GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csp_csd TO GROUP admin;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd TO GROUP reader_pii;
