@@ -94,16 +94,15 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('navigates to provider endpoint if authentication option is not connected', () => {
+    sinon.stub(utils, 'navigateToHref');
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
       />
     );
-    const navigateToHrefStub = sinon.stub(utils, 'navigateToHref');
     wrapper.find('BootstrapButton').at(0).simulate('click');
-    let arg = navigateToHrefStub.getCall(0).args[0];
-    expect(navigateToHrefStub).to.have.been.calledOnce;
-    expect(arg).to.equal('/users/auth/google_oauth2/connect');
+    expect(utils.navigateToHref).to.have.been.calledOnce
+      .and.calledWith('/users/auth/google_oauth2/connect');
     utils.navigateToHref.restore();
   });
 
@@ -163,7 +162,11 @@ describe('ManageLinkedAccounts', () => {
   });
 
   it('disables disconnecting from the user\'s last oauth authentication option if user doesn\'t have a password', () => {
-    const authOptions = {1: {id: 1, credentialType: 'google_oauth2'}};
+    const authOptions = {
+      1: {id: 1, credentialType: 'google_oauth2'},
+      2: {id: 2, credentialType: 'email'},
+      3: {id: 3, credentialType: 'email'},
+    };
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
