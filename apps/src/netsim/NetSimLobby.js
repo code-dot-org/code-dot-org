@@ -508,12 +508,12 @@ NetSimLobby.prototype.onWireTableChange_ = function () {
 NetSimLobby.prototype.getUserSections_ = function (callback) {
   var memberSectionsRequest = $.ajax({
     dataType: 'json',
-    url: '/api/v1/sections/membership'
+    url: '/dashboardapi/sections/membership'
   });
 
   var ownedSectionsRequest = $.ajax({
     dataType: 'json',
-    url: '/v2/sections'
+    url: '/dashboardapi/sections'
   });
 
   $.when(memberSectionsRequest, ownedSectionsRequest).done(function (result1, result2) {
