@@ -173,5 +173,5 @@ pd_facilitators as
          AND sa.script_name = s.script_name
 ;
 
-GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csf TO GROUP admin;
-GRANT SELECT ON analysis.regional_partner_stats_csf TO GROUP reader_pii;
+GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csf TO GROUP admin;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csf TO GROUP reader_pii;

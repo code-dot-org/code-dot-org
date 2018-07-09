@@ -21,8 +21,8 @@ FROM (SELECT DISTINCT studio_person_id,
 GROUP BY 1,
          2,
          3)
-SELECT *
-FROM (SELECT regional_partner_id,
+-- CSP/D SELECT
+(SELECT regional_partner_id,
              regional_partner_name,
              school_year_trained,
              first_name,
@@ -44,9 +44,10 @@ FROM (SELECT regional_partner_id,
              q3::INTEGER,
              q4::INTEGER
       FROM analysis_pii.regional_partner_stats_csp_csd
-      WHERE school_year_taught = school_year_trained OR school_year_taught is null
-      )
-UNION
+      WHERE school_year_taught = school_year_trained OR school_year_taught is null)
+      
+UNION ALL
+-- CSF SELECT
 (SELECT regional_partner_id,
        regional_partner_name,
        rps.school_year_trained,
