@@ -95,18 +95,7 @@ sr-SP:
   congratulations_on_completing_hoc: Честитамо на завршавању 1 Часа Програмирања
   congratulations_volunteer: 'Честитамо: Сад кад сте испробали Hour of Code,<a href="https://code.org/volunteer">пријавите
     се да будете волонтер у разреду</a> и помогнете ученицима да науче Hour of Code!'
-  congratulations_on_completing_course1: Честитамо на успешном завршетку Курса 1
-  congratulations_on_completing_course2: Честитамо на успешном завршетку Курса 2
-  congratulations_on_completing_course3: Честитамо на успешном завршетку Курса 3
-  congratulations_on_completing_course4: Честитамо на успешном завршетку Курса 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: Честитамо на успешном завршетку Убрзаног
-    курса
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Пређи на следећи ниво
   congrats_next_tutorials_desc: Пробај ове кратке једночасовне туторијале или пробај
     <a href="%{current_path}/next">partnerski tutorijali</a>.
@@ -297,28 +286,8 @@ sr-SP:
     @Microsoft for supporting @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Зашто тако мало школа предаје рачунарске науке? Ми то можемо поправити.
     http://youtu.be/nKIu9yen5nc. Посетите http://code.org/ да научите више.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -1428,6 +1397,18 @@ sr-SP:
   coursed_gradelevel: Grade 8+
   coursee_gradelevel: Grade 9+
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Ages 7-11
+  coursee-2017_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Ages 7-11
+  coursee-2018_gradelevel: Ages 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Узраст од 10 до 18 година
   codeorg_platformtext: Модерни претраживачи, паметни телефони, таблети
   codeintl_platformtext: Модерни претраживачи, паметни телефони, таблети
@@ -1561,6 +1542,30 @@ sr-SP:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Научи основе информатичких наука програмирања превуци и
     отпусти. Налик игрици самосталним режирањем примера видео лекцијама од Бил Гејтса,
     Марк Цукерберга, Љуте птице и Плантажама против Зомбија. Научи понављање петље,

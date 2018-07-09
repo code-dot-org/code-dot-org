@@ -97,17 +97,7 @@ ca-ES:
   congratulations_volunteer: 'Felicitacions: ara que has provat l''Hora del Codi,
     <a href="https://code.org/volunteer"> registra''t com a voluntari en una aula</a>
     i ajuda els alumnes a aprendre una Hora del Codi!'
-  congratulations_on_completing_course1: Enhorabona per completar el curs 1
-  congratulations_on_completing_course2: Enhorabona per completar el curs 2
-  congratulations_on_completing_course3: Enhorabona per completar el curs 3
-  congratulations_on_completing_course4: Enhorabona per completar el curs 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: Enhorabona per completar el curs accelerat
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Prova els següents tutorials
   congrats_next_tutorials_desc: Proveu aquestes classes més curtes, de 1 hora, o proveu
     una <a href="%{current_path}/next"> classe de soci</a>.
@@ -300,28 +290,8 @@ ca-ES:
     @Microsoft for supporting @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Per què no hi ha més escoles que ensenyin informàtica? Nosaltres
     ho podem arreglar. http://youtu.be/nKIu9yen5nc. Visita http://code.org/ per obtenir
     més informació.
@@ -1442,6 +1412,18 @@ ca-ES:
   coursed_gradelevel: Qualificacions 8+
   coursee_gradelevel: Edats 8-12
   coursef_gradelevel: Grade 10+
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Qualificacions 8+
+  coursee-2017_gradelevel: Edats 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Qualificacions 8+
+  coursee-2018_gradelevel: Edats 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Edat 10 + (després del curs 3)
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
@@ -1585,6 +1567,30 @@ ca-ES:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant
     la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies
     protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies.

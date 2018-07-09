@@ -3,6 +3,7 @@ import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsO
 import {
   getMultipleChoiceSectionSummary,
   countSubmissionsForCurrentAssessment,
+  ALL_STUDENT_FILTER,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import { multipleChoiceDataPropType } from './assessmentDataShapes';
@@ -14,13 +15,14 @@ class MCAssessmentsOverviewContainer extends Component {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
     totalStudentCount: PropTypes.number,
     totalStudentSubmissions: PropTypes.number,
+    studentId: PropTypes.number,
   };
 
   render() {
-    const {questionAnswerData, totalStudentCount, totalStudentSubmissions} = this.props;
+    const {questionAnswerData, totalStudentCount, totalStudentSubmissions, studentId} = this.props;
     return (
       <div>
-        {questionAnswerData.length > 0 &&
+        {(questionAnswerData.length > 0 && studentId === ALL_STUDENT_FILTER) &&
           <div>
             <h2>
               {i18n.multipleChoiceQuestionsOverview({
@@ -44,4 +46,5 @@ export default connect(state => ({
   questionAnswerData: getMultipleChoiceSectionSummary(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   totalStudentCount: getTotalStudentCount(state),
+  studentId: state.sectionAssessments.studentId,
 }))(MCAssessmentsOverviewContainer);

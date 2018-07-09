@@ -219,6 +219,8 @@ class User < ActiveRecord::Base
 
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
+
+  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -232,12 +234,6 @@ class User < ActiveRecord::Base
       end
     end
   end
-
-  #
-  # TEMPORARY: Remove these aliases
-  #
-  alias_attribute :primary_authentication_option, :primary_contact_info
-  alias_attribute :primary_authentication_option_id, :primary_contact_info_id
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
@@ -846,6 +842,16 @@ class User < ActiveRecord::Base
     return false unless teacher_managed_account?
     any_sections = !sections_as_student.empty?
     any_sections && sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
+  end
+
+  # True if user is a student in a section that has Google Classroom login type
+  def google_classroom_student?
+    sections_as_student.find_by_login_type(Section::LOGIN_TYPE_GOOGLE_CLASSROOM).present?
+  end
+
+  # True if user is a student in a section that has Clever login type
+  def clever_student?
+    sections_as_student.find_by_login_type(Section::LOGIN_TYPE_CLEVER).present?
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions

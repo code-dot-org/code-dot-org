@@ -2,17 +2,17 @@ es:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: detalles
+      draw eyebrow: dibujar la ceja
+      draw pupil: dibujar la pupila
       draw a circle: dibujar un círculo
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
-      jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
+      draw a car: dibuja un carro
+      draw_rect: dibuja_rectangulo
+      draw square: dibuja cuadro
+      jump to controller top left: salta sobre el controlador izquierdo
+      jump to middle: salta al medio
+      draw a button: dibuja un boton
+      draw cord: dibuja cuerda
       draw R pad: draw R pad
       draw left leg: draw left leg
       draw right leg: draw right leg
@@ -223,6 +223,7 @@ es:
       booster: booster
       draw line of triangles: draw line of triangles
       draw a window: draw a window
+      stop_everything: stop_everything
       draw a plane of squares: draw a plane of squares
       draw hexagon: draw hexagon
       draw line of hexagons: draw line of hexagons

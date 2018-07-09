@@ -364,50 +364,52 @@ sk:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use
-          code to join Anna and Elsa as they explore the magic and beauty of ice.
+        text: Ahoj, volám sa Lyndsey. Som modelkou, herečkou a píšem si svoje vlastné
+          aplikácie. Poďme použiť kód pre pridanie sa k Anne a Else počas ich objavovania
+          krás a čarov ľadu.
       2:
         image: notes/frozen1_2.jpg
         text: Korčuľovaním po ľade stvoríš snehové vločky i vzory a vytvoríš tak zimnú
           krajinu zázrakov, ktorú potom môžeš zdieľať so svojimi priateľmi.
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: Počas nasledujúcej hodiny sa naučíte základy používania kódu. Tradičné
+          programovanie je obvykle v textovej forme, ale my použijeme Blockly, ktorý
+          používa obrázkove bloky, ktoré môžete presúvať pre vytvorenie programu.
+          Takto sa učia základy dokonca aj vysokoškoláci. Avšak pod kapotou stále
+          vytvárate kód.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: Program je sada inštrukcií, ktorá hovorí počítaču, čo má robiť. Poďme
+          vytvoriť kód, alebo program, ktorý pomôže Else vytvoriť jednoduchú čiaru.
+          Toto potom použijeme neskôr pre vytvorenie zložitejších vzorov.
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: Vaša obrazovka je rozdelená do troch hlavných častí. Naľavo je ľadová
+          plocha, kde bude bežať Váš program. Pokyny pre každý level sú napísané hneď
+          pod plochou.
       6:
         image: notes/frozen1_6.jpg
         text: Táto prostredná oblasť sa nazýva panel nástrojov, a každý z týchto blokov
           predstavuje určitú akciu, ktorú môže Elsa a Anna vykonať.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: Biele miesto na pravej strane sa volá pracovná plocha a v nej budeme
+          skladať náš program. Pre pohyb po ľadovej ploche použijete blok "Posunúť
+          dopredu".
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: Teraz hovorí blok "Posunúť dopredu" "posunúť dopredu o 100 pixelov".
+          Čo sa stane, keď stlačíme "Spustiť"? Elsa sa pohne dopredu o určitú hodnotu,
+          konkrétne o 100 pixelov! Pixely sú vlastne veľmi malé štvorčeky na obrazovke
+          Vášho počítača.
       9:
         image: notes/frozen1_9.jpg
-        text: The other block we have in this puzzle says "turn right by 90 degrees."
-          And when we use this "Turn Right" block, that makes Elsa turn a certain
-          amount. You can play around with how far you want Elsa to turn. The angle
-          is measured from the path ahead of Elsa. So, this is a 90 degree turn. And
-          this is a 120 degree turn.
+        text: Ďaľší blok, ktorý máme v tomto cvičení je "zaboč doprava o 90 stupňov".
+          A keď použijeme tento blok "Zaboč doprava", Elsa sa otočí o určitú hodnotu.
+          Môžete sa pohrať s viacerými hodnotami a otočiť Elsu rôznymi smermi. Uhol
+          otočenia sa meria od cesty kolmo pred Elsou. Takže toto je otočka o 90 stupňov.
+          A toto je otočka o 120 stupňov.
       10:
         image: notes/frozen1_10.jpg
         text: Zapamätaj si, že môžeš meniť počet pixelov a stupňov klikaním na šípky
@@ -422,20 +424,20 @@ sk:
           dokážu opakovať veci stovky, alebo dokonca miliardy krát.
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: V programovaní voláme toto slučkou. Slučka znamená, že Váš kód sa zopakuje
+          znova a znova. V ďaľšom cvičení máte za úlohu pomôcť Anne vytvoriť štvorec
+          pomocou bloku "Zopakovať".
       3:
         image: notes/frozen2_3.jpg
         text: Akýkoľvek blok kódu, ktorý vložíš do bloku "Opakuj", sa bude opakovať
           v sekvencii toľkokrát, koľko budeš chcieť.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: Pre nakreslenie štvorca môžete 4krát použiť bloky "Posunúť dopredu"
+          a "Otočiť doprava". Avšak jednoduchšie je počítaču povedať "Posunúť dopredu"
+          a "Otočiť sa o 90 stupňov" raz a potom mu povedať, nech to celé zopakuje
+          4 krát. Pre toto musíte bloky "Posunúť dopredu" a "Otočiť doprava" umiestniť
+          dovnútra bloku "Zopakovať".
       5:
         image: notes/frozen2_5.jpg
         text: Pamätaj si, že môžeš akokoľvek meniť čísla v bloku "Opakovať", a že
@@ -447,34 +449,34 @@ sk:
           na škole.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: Jeden z najdôležitejších konceptov v informatike je definovanie nových
+          príkazov. Väčšina programovacích jazykov má len okolo 100 slov alebo príkazov.
+          A práve vo vytváraní vlastných nových slov z týchto stavebných blokov je
+          čaro a krása programovania.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Keď už naučíte počítač, ako vykonať akciu použitím tejto postupnosti
+          príkazov, môžete si vymyslieť vlastný názov pre túto akciu, aby ste to nabudúce
+          mohli jednoducho zopakovať. Definovanie vlastných príkazov a pomenovanie
+          ich sa volá funkcia.
       4:
         image: notes/frozen3_4.jpg
-        text: Hi, I’m Jess. When programming with blocks, you would use functions
-          if there are a set of actions you would like to use lots of times. For example,
-          you've written code to create a square.
+        text: Ahoj, som Jess. Pri programovaní s blokmi asi budete používať funkcie,
+          ak máte sadu činností, ktoré chcete použíť viackrát. Napríklad, napísali
+          ste kód na nakreslenie štvorca.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Funkciu môžete definovať ako funkciu s názvom "Vytvoriť štvorec." '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple
-          squares.
+        text: Teraz máte nový blok, ktorý môžete použiť viackrát pre vytvorenie viacerých
+          štvorcov.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Veľa jednoduchých tvarov sa môže použiť na nakreslenie zložitých vzorov.
+          V ďaľšom cvičení bude kód, ktorý ste práve napísali na nakreslenie kruhu
+          dostupný ako nová funkcia, takže budete môcť vytvoriť kruhy rôznych veľkostí.
+          Viete ju použiť a pomôcť nakresliť Else zložité a nádherné vzory v snehu?
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png

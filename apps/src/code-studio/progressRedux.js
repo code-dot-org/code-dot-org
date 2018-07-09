@@ -570,12 +570,10 @@ export const progressionsFromLevels = levels => {
   return progressions;
 };
 
-/* start-test-block */
 // export private function(s) to expose to unit testing
-export const __testonly__ = {
+export const __testonly__ = IN_UNIT_TEST ? {
   bestResultLevelId,
   peerReviewLesson,
   peerReviewLevels,
   PEER_REVIEW_ID
-};
-/* end-test-block */
+} : {};

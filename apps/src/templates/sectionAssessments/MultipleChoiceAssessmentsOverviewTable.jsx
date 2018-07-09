@@ -22,6 +22,12 @@ const styles = {
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
+    padding: 0,
+    height: 40,
+  },
+  notAnsweredCell: {
+    padding: 0,
+    height: 40,
   },
   questionCell: {
     overflow: 'hidden',
@@ -107,7 +113,12 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       },
       cell: {
         format: answerColumnsFormatter,
-        props: {style: tableLayoutStyles.cell},
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...styles.notAnsweredCell,
+          }
+        },
       }
     }
   );

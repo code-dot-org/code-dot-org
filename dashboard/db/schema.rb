@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180627224545) do
+ActiveRecord::Schema.define(version: 20180703165502) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -88,10 +88,10 @@ ActiveRecord::Schema.define(version: 20180627224545) do
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
   end
 
-  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "name"
     t.string   "level_type"
-    t.text     "category",    limit: 65535
+    t.string   "category"
     t.text     "config",      limit: 65535
     t.text     "helper_code", limit: 65535
     t.datetime "created_at",                null: false
@@ -670,6 +670,14 @@ ActiveRecord::Schema.define(version: 20180627224545) do
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.index ["pd_application_id"], name: "index_pd_fit_weekend1819_registrations_on_pd_application_id", using: :btree
+  end
+
+  create_table "pd_international_opt_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                  null: false
+    t.text     "form_data",  limit: 65535, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_pd_international_opt_ins_on_user_id", using: :btree
   end
 
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1313,6 +1321,7 @@ ActiveRecord::Schema.define(version: 20180627224545) do
     t.integer  "teacher_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.datetime "deleted_at"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
     t.index ["student_id", "level_id"], name: "index_feedback_on_student_and_level", using: :btree
   end
