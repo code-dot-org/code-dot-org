@@ -626,70 +626,10 @@ function main() {
     $scope.script_list = sectionsService.validScripts();
     $scope.tab = 'responses';
 
-    if (experiments.isEnabled(experiments.TEXT_RESPONSES_TAB)) {
-      $scope.react_text_responses = true;
-      $scope.$on('text-responses-table-rendered', () => {
-        $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
-      });
-      return;
-    }
-
-    $scope.responses = sectionsService.responses({id: $routeParams.id});
-    // error handling
-    $scope.genericError = function (result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
-    $scope.section.$promise.catch($scope.genericError);
-    $scope.sections.$promise.catch($scope.genericError);
-    $scope.responses.$promise.catch($scope.genericError);
-
-    // fill in the course dropdown with the section's default course
-    $scope.section.$promise.then(
-      function (section) {
-        // TODO:(bjvanminnen) - also handle case where we have a course, but not
-        // a script assigned, likely by figuring out the first script in that course
-        if (section.script) {
-          $scope.script_id = section.script.id;
-        }
-      }
-    );
-
-    // the ng-select in the nav compares by reference not by value, so we can't just set
-    // selectedSection to section, we have to find it in sections.
-    $scope.sections.$promise.then(
-      function ( sections ) {
-        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
-      }
-    );
-
-    $scope.responsesLoaded = false;
-    $scope.stages = [];
-
-    // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function () {
-      $scope.responsesLoaded = true;
-      $scope.findStages();
+    $scope.react_text_responses = true;
+    $scope.$on('text-responses-table-rendered', () => {
+      $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
     });
-
-    $scope.changeScript = function (scriptId) {
-      $scope.responsesLoaded = false;
-      $scope.stages = [];
-
-      $scope.responses = sectionsService.responses({id: $routeParams.id, script_id: scriptId});
-
-      $scope.responses.$promise.then(function () {
-        $scope.responsesLoaded = true;
-        $scope.findStages();
-      });
-    };
-
-    $scope.findStages = function () {
-      $scope.stages = $.map($scope.responses, function (row) {
-        return row.stage;
-      }).filter(function (item, i, array) { // uniquify
-        return array.indexOf(item) == i;
-      });
-    };
   }]);
 
 
