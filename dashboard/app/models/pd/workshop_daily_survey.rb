@@ -94,7 +94,7 @@ module Pd
     def duplicate?
       # See if this user already has a submission for this workshop, day, & form.
       # Note: this duplicate record would fail the uniqueness validation
-      self.class.where(attributes.slice(:user_id, :pd_workshop_id, :day, :form_id)).exists?
+      self.class.exists?(attributes.slice(:user_id, :pd_workshop_id, :day, :form_id))
     end
   end
 end

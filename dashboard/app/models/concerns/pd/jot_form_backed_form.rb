@@ -89,7 +89,7 @@ module Pd
       # Sync all new results from a given set of JotForm form ids, in batches
       def _sync_from_jotform(form_ids)
         # Errors per form, per submission. Format: {form_id: {submission_id: error}}
-        errors_per_form = Hash.new {|h,k| h[k] = Hash.new}
+        errors_per_form = Hash.new {|h, k| h[k] = Hash.new}
         imported = 0
         batches = 0
 
@@ -126,13 +126,13 @@ module Pd
               questions.update!(last_submission_id: submission_id) unless errors_per_form.key?(form_id)
             end
 
-            if batch_error_count > 0 && batch_error_count == result_set['count']
+            if batch_error_count > 0 && batch_error_count == result_set[:count]
               # The whole batch failed. Don't bother processing more batches.
               # This might be a bigger issue.
               # Abort this form, but still continue trying to import any remaining forms
               errors_per_form[form_id][:all] = 'Entire batch failed. Aborting'
               status = :aborted
-            elsif result_set['count'] == JOT_FORM_LIMIT
+            elsif result_set[:count] == JOT_FORM_LIMIT
               offset += JOT_FORM_LIMIT
             else
               status = :complete
@@ -237,7 +237,7 @@ module Pd
 
         if errors.any?
           # Format error messages nicely and raise
-          msg = "Errors filling #{self.name} placeholders: \n"
+          msg = "Errors filling #{name} placeholders: \n"
           errors.each do |submission_id, error|
             msg << "  Submission #{submission_id}: #{error}"
           end
