@@ -504,29 +504,11 @@ class SectionTest < ActiveSupport::TestCase
     student1 = create(:follower, section: section).student_user
     student2 = create(:follower, section: section).student_user
 
-    expected = {
-      id: section.id,
-      name: section.name,
-      teacherName: section.teacher.name,
-      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
-      assignedTitle: '',
-      linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
-      numberOfStudents: 2,
-      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      code: section.code,
-      stage_extras: false,
-      pairing_allowed: true,
-      sharing_disabled: false,
-      login_type: "email",
-      course_id: nil,
-      script: {id: nil, name: nil},
-      studentCount: 2,
-      grade: nil,
-      providerManaged: false,
-      hidden: false,
-      students: [student2, student1].map(&:summarize),
-    }
-    assert_equal expected, section.summarize
+    summarized_section = section.summarize
+    assert_equal 2, summarized_section[:numberOfStudents]
+    assert_equal 2, summarized_section[:studentCount]
+    assert_includes summarized_section[:students], student1.summarize
+    assert_includes summarized_section[:students], student2.summarize
   end
 
   test 'valid_grade? accepts K-12 and Other' do
