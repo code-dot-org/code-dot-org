@@ -276,8 +276,11 @@ export default {
       const name = Blockly.JavaScript.variableDB_.getName(
             this.getTitleValue('VAR'),
             Blockly.Procedures.NAME_TYPE);
-      // TODO: add support for passing extra params into this block
       const extraArgs = [];
+      for (let x = 0; x < this.currentParameterNames_.length; x++) {
+        extraArgs[x] = Blockly.JavaScript.valueToCode(this, 'ARG' + x,
+          Blockly.JavaScript.ORDER_COMMA) || 'null';
+      }
       return [
         `new Behavior(${name}, [${extraArgs.join(', ')}])`,
         Blockly.JavaScript.ORDER_ATOMIC
