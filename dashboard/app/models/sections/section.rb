@@ -253,7 +253,8 @@ class Section < ActiveRecord::Base
       studentCount: students.size,
       grade: grade,
       providerManaged: provider_managed?,
-      hidden: hidden
+      hidden: hidden,
+      students: students.map(&:summarize),
     }
   end
 
