@@ -64,6 +64,12 @@ const styles = {
   },
   download: {
     marginTop: 10,
+  },
+  loading: {
+    clear: 'both',
+  },
+  empty: {
+    clear: 'both',
   }
 };
 
@@ -112,7 +118,7 @@ class SectionAssessments extends Component {
               onChange={this.onChangeScript}
             />
           </div>
-          {!isLoading &&
+          {(!isLoading && assessmentList.length > 0) &&
             <div style={styles.assessmentSelection}>
               <div style={{...h3Style, ...styles.header}}>
                 {i18n.selectAssessment()}
@@ -125,7 +131,7 @@ class SectionAssessments extends Component {
             </div>
           }
         </div>
-        {!isLoading &&
+        {(!isLoading && assessmentList.length > 0) &&
           <div style={styles.tableContent}>
             {/* Assessments */}
             {!isCurrentAssessmentSurvey &&
@@ -186,7 +192,16 @@ class SectionAssessments extends Component {
           </div>
         }
         {isLoading &&
-          <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>
+          <div style={styles.loading}>
+            <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>
+          </div>
+        }
+        {(!isLoading && assessmentList.length === 0) &&
+          <div style={styles.empty}>
+            <h3>
+              {i18n.noAssessments()}
+            </h3>
+          </div>
         }
       </div>
     );

@@ -530,23 +530,6 @@ class DashboardSection
     student_id
   end
 
-  def add_students(students)
-    student_ids = students.map {|i| add_student(i)}.compact
-    DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
-    return student_ids
-  end
-
-  # @param student_id [Integer] The user ID of the student to unenroll.
-  # @return [Boolean] Whether the student's enrollment was removed.
-  def remove_student(student_id)
-    # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
-
-    rows_deleted = Dashboard.db[:followers].
-      where(section_id: @row[:id], student_user_id: student_id, deleted_at: nil).
-      update(deleted_at: DateTime.now)
-    rows_deleted > 0
-  end
-
   def member?(user_id)
     return teacher?(user_id) || student?(user_id)
   end

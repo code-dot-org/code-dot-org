@@ -1,0 +1,13 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "bounce",
+    "blockText": "{SPRITE} bounces",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ]
+  }
+}

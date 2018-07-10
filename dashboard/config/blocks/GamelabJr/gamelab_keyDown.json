@@ -1,0 +1,16 @@
+{
+  "category": "",
+  "config": {
+    "func": "keyDown",
+    "name": "keyDown",
+    "blockText": "key is down {KEY}",
+    "returnType": "Boolean",
+    "args": [
+      {
+        "name": "KEY",
+        "field": true,
+        "type": "String"
+      }
+    ]
+  }
+}
