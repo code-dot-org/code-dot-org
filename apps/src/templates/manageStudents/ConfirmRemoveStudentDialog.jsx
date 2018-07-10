@@ -4,6 +4,7 @@ import {Header, ConfirmCancelFooter} from '../../lib/ui/SystemDialog/SystemDialo
 import BaseDialog from '../BaseDialog';
 import Button from "../Button";
 import color from "../../util/color";
+import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '../../lib/util/urlHelpers';
 
 export default class ConfirmRemoveStudentDialog extends React.Component {
   static propTypes = {
@@ -34,7 +35,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
           <Button
             text={i18n.removeStudentSendHomeInstructions()}
             target="_blank"
-            href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account"
+            href={ADD_A_PERSONAL_LOGIN_HELP_URL}
             color={Button.ButtonColor.blue}
             size={Button.ButtonSize.large}
             style={styles.sendHomeInstructionsButton}
