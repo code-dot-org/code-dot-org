@@ -382,22 +382,23 @@ pt-BR:
           é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`)
           para resolver o desafio."
       4-5 Bee Conditionals 6_authored_hint:
-        4-5 Bee Conditionals 6_a: You can solve this puzzle using only the blocks
-          on the workspace.  What order should they go in?
-        4-5 Bee Conditionals 6_b: Make sure that you are checking to see if the flower
-          has more than **0** nectar at least **3** times to solve this puzzle.
+        4-5 Bee Conditionals 6_a: Você pode resolver esse problema usando apenas os
+          blocos na área de trabalho. Em qual ordem eles devem ficar?
+        4-5 Bee Conditionals 6_b: Certifique-se de que você está verificando para
+          ver se a flor tem mais de * * 0 * * néctares pelo menos * * 3 * * vezes
+          para resolver este enigma.
       4-5 Bee Debugging 1_authored_hint:
-        4-5_Bee_Debugging_1_a: If you are having trouble figuring out what's not right,
-          try running it to see where things go wrong.
+        4-5_Bee_Debugging_1_a: Se você está tendo problemas para descobrir o que não
+          está certo, tente executá-lo para ver onde as coisas dão errado.
       4-5 Bee Nested Loops Rows_authored_hint:
-        4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle
-          where the bee needs to move forward, then turn left several times to complete
-          the path.
+        4-5_Bee_Nested_Loops_Rows_a: Tente tratar esse quebra-cabeça como um longo
+          retângulo onde a abelha precisa avançar e, em seguida, virar à esquerda
+          várias vezes para completar o caminho.
       4-5 Maze 10_authored_hint:
-        4-5_Maze_10_a: |-
-          If you can't see how to use loops to solve the puzzle right away, try solving it the long way first, then looking for a pattern.
-
-          What should you put a `repeat` around to make the code shorter?
+        4-5_Maze_10_a: "Se não consegue ver como usar repetições para resolver o quebra-cabeça
+          de uma vez, tente resolvê-lo do jeito longo primeiro e, em seguida, procure
+          um padrão. \n\nO que você deveria colocar dentro de um 'Repetir' para tornar
+          o código mais curto?"
       4-5 Maze 4_authored_hint:
         4-5_Maze_4_a: Se você está achando difícil descobrir onde colocar o laço de
           repetição, tente tudo codificar tudo e procurar por um padrão de codificação.
@@ -406,34 +407,33 @@ pt-BR:
           para frente' mais de duas vezes.
         4-5_Maze_5_b: Você pode usar mais de um laço 'Repetir' em um enigma.
       4-5 Maze 6_authored_hint:
-        4-5_Maze_6_a: "Try tracing out a path with your finger.  \nIs it the shortest
-          path you can find?"
+        4-5_Maze_6_a: |-
+          Tente traçar um caminho com o seu dedo.
+          Esse é o caminho mais curto que você consegue achar?
       4-5 Maze 7_authored_hint:
-        4-5_Maze_7_a: "**Want to get your code as small as it can be?** \n\nLook for
-          patterns in your blocks. Do you see something that repeats?  Try putting
-          a loop around it instead!"
+        4-5_Maze_7_a: "** Quer fazer o seu código o mais curto possivel? ** procure
+          padrões em seus blocos. Você vê algo que se repete? Tente colocar uma repetição
+          em torno dele!"
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 Nested Loops 2_authored_hint: {}
       4-5 Nested Loops 6_authored_hint:
         4-5_Nested_Loops_6_a: |-
-          Don't forget to make a turn after your inner loop.
+          Não esqueça de fazer uma virada depois da sua repetição interna.
 
-          You'll be looping 6 triangles over 360 degrees.
+          você vai estar repetindo 6 triangulos sobre 360 graus.
 
           **360 / 6 = ?**
       4-5 Nested Loops 7_authored_hint:
         4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
+          Este desenho vai se repetir 10 vezes para cobrir os 360 graus.
 
           **360 / 10 = ?**
       4-5 Nested Loops 8_authored_hint:
-        4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
-
-          **360 / 6 = ?**
+        4-5_Nested_Loops_8_a: Você vai estar repetindo essa forma 6 vezes para cobrir
+          os 360 graus
       4-5 While Loops 8_authored_hint:
-        4-5_While_Loops_8_a: Each item will need its own `while` loop.
+        4-5_While_Loops_8_a: Cada item vai precisar da sua própria repetição 'Enquanto'.
       AB_debug_Laurel1_authored_hint: {}
       AppLab Intro 3 - Change Screen Color_authored_hint: {}
       AppLab Intro 4 - Change Screen Color_authored_hint: {}
@@ -441,15 +441,15 @@ pt-BR:
       AppLab Intro 6 - Change Screen Color_authored_hint: {}
       AppLab Intro 7 - Change Screen Color_authored_hint: {}
       Artist Inspiration_authored_hint:
-        brush_width: We set the brush width to 1, then the color to blue before we
-          did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
-        specifics: "The `for loop` runs from three to seventeen for each of the six
-          \"petals\" before moving on to create the next, drawing shapes with only
-          an odd number of sides.\n        \nThe `set alpha` block uses division to
-          fade the color as the counter gets higher."
-        after: When you're done with each "petal", be sure to `move forward` 20 pixels
-          before you make a 60 degree rotation.
+        brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
+          antes de fazer qualquer outra coisa.
+        double_loop: Tente colocar uma 'repetição para' dentro de uma repetição 'repetir'.
+        specifics: |-
+          A `repetição para` é executada entre 3 e 17 para cada uma das seis "pétalas" antes de passar para criar a próxima, desenhando formas com apenas um número ímpar de lados.
+
+          O bloco `escolher alfa` usa divisão para enfraquecer a cor quando o contador aumenta.
+        after: Quando você acabar com cada "pétala", certifique-se de 'Avançar' 20
+          pixels antes de você fazer uma rotação de 60 graus.
         solution: |-
           **Solução**
 
@@ -3692,15 +3692,15 @@ pt-BR:
         pointer_harvester_test: What kind of block can I use to check something and
           make a decision?
       Inspirational Artwork_authored_hint:
-        brush_width: We set the brush width to 1, then the color to blue before we
-          did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
-        specifics: "The `for loop` runs from three to seventeen for each of the six
-          \"petals\" before moving on to create the next, drawing shapes with only
-          an odd number of sides.\n        \nThe `set alpha` block uses division to
-          fade the color as the counter gets higher."
-        after: When you're done with each "petal", be sure to `move forward` 20 pixels
-          before you make a 60 degree rotation.
+        brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
+          antes de fazer qualquer outra coisa.
+        double_loop: Tente colocar uma 'repetição para' dentro de uma repetição 'repetir'.
+        specifics: |-
+          A `repetição para` é executada entre 3 e 17 para cada uma das seis "pétalas" antes de passar para criar a próxima, desenhando formas com apenas um número ímpar de lados.
+
+          O bloco `escolher alfa` usa divisão para enfraquecer a cor quando o contador aumenta.
+        after: Quando você acabar com cada "pétala", certifique-se de 'Avançar' 20
+          pixels antes de você fazer uma rotação de 60 graus.
         solution: |-
           **Solução**
 
@@ -3894,15 +3894,15 @@ pt-BR:
         NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times
           to figure out how the function works with different parameters.
       NEW Course 4 Artist Params inspire_authored_hint:
-        brush_width: We set the brush width to 1, then the color to blue before we
-          did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
-        specifics: "The `for loop` runs from three to seventeen for each of the six
-          \"petals\" before moving on to create the next, drawing shapes with only
-          an odd number of sides.\n        \nThe `set alpha` block uses division to
-          fade the color as the counter gets higher."
-        after: When you're done with each "petal", be sure to `move forward` 20 pixels
-          before you make a 60 degree rotation.
+        brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
+          antes de fazer qualquer outra coisa.
+        double_loop: Tente colocar uma 'repetição para' dentro de uma repetição 'repetir'.
+        specifics: |-
+          A `repetição para` é executada entre 3 e 17 para cada uma das seis "pétalas" antes de passar para criar a próxima, desenhando formas com apenas um número ímpar de lados.
+
+          O bloco `escolher alfa` usa divisão para enfraquecer a cor quando o contador aumenta.
+        after: Quando você acabar com cada "pétala", certifique-se de 'Avançar' 20
+          pixels antes de você fazer uma rotação de 60 graus.
         solution: |-
           **Solução**
 
@@ -6199,11 +6199,11 @@ pt-BR:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
           Your code should look like this:
@@ -11927,17 +11927,17 @@ pt-BR:
         courseC_maze_programming2_b: Make sure all 3 blocks are clicked together and
           attached to the `when run` block.
       courseD_maze_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
       courseD_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
       courseD_maze_ramp4_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from the bird's point
           of view. If you are facing right, turning right will make you point downwards.
@@ -12254,19 +12254,19 @@ pt-BR:
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are
           attached to the `when run` block.
       courseD_scrat_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
         courseC_maze_programming3_b: Remember that turns to the right and left are
           from Scrat's perspective.
       courseD_scrat_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
         courseC_maze_programming3_b: Remember that turns to the right and left are
           from Scrat's perspective.
       courseD_scrat_ramp4_authored_hint:
@@ -13427,19 +13427,19 @@ pt-BR:
         courseC_maze_programming2_b: Make sure all three `move forward` blocks are
           attached to the `when run` block.
       courseE_maze_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
         courseC_maze_programming3_b: Remember that turns to the right and left are
           from the bird's perspective.
       courseE_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
         courseC_maze_programming3_b: Remember that turns to the right and left are
           from the bird's perspective.
       courseE_maze_ramp4_authored_hint:
@@ -17650,37 +17650,38 @@ pt-BR:
         courseC_maze_programming1_b: Não tenha medo de errar! Tente algo, e se não
           funcionar, tente algo diferente!
       coursef_maze_ramp3_authored_hint:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
         courseF_maze_ramp3_b: Use the step button to go through the program line-by-line.
           Where does something go wrong?
       coursef_maze_ramp3_2018_authored_hint:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseF_maze_ramp3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
         courseF_maze_ramp3_b: Use the step button to go through the program line-by-line.
           Where does something go wrong?
       drawings!_authored_hint:
-        triangle_geometry_hint: 'Remember: an equilateral triangle has three sides,
-          with a 60 degree turn between each!'
-        repeat_pointer: You have to draw a side and turn 3 times...what block can
-          you use to run the same instructions many times?
-        repeat_bottom_out: Use a `repeat 3 times` block!
+        triangle_geometry_hint: 'Lembre-se: um triângulo equilátero tem 3 lados com
+          60 graus de de angulo entre eles!'
+        repeat_pointer: You tem que desenhar um lado e virar 3 vezes... qual bloco
+          você pode usar para executar as mesmas instruções varias vezes?
+        repeat_bottom_out: Use um bloco `repetir 3 vezes`!
       grade1_adventurer_loops10_authored_hint:
-        grade1_adventurer_loops10_a: You'll need three `repeat` loops to solve this
-          puzzle.
+        grade1_adventurer_loops10_a: Você vai precisar de 3 repetições `repetir` para
+          resolver esse enigma.
       grade1_adventurer_loops2_authored_hint:
         grade1_adventurer_loops2_a: Try using a `repeat` block to collect your gold.
       grade1_adventurer_loops3_authored_hint:
-        grade1_adventurer_loops3_a: Is something not right? Try using the step button
-          to figure out where things go wrong.
+        grade1_adventurer_loops3_a: Alguma coisa não está certa? Tente usar o botão
+          de passo para entender onde as coisas deram errado.
       grade1_adventurer_loops4_authored_hint:
-        grade1_adventurer_loops4_a: Try using more than one loop to get the job done.
+        grade1_adventurer_loops4_a: Tente usar mais de uma repetição para finalizar
+          o trabalho.
       grade1_adventurer_loops5_authored_hint:
         grade1_adventurer_loops5_a: Can't figure out where things start going wrong?
           Use the "Step" button to run through your program one block at a time.
@@ -17688,17 +17689,18 @@ pt-BR:
         grade1_adventurer_loops6_a: If you are having a hard time with the puzzle,
           try drawing it on paper to help you figure it out.
       grade1_adventurer_loops7_challenge_authored_hint:
-        grade1_adventurer_loops7_challenge_a: 'If you can''t figure out where to put
-          the repeat loops, program it out step-by-step and look for a pattern. '
-        grade1_adventurer_loops7_challenge_b: Does the code feel a little long?  You
-          can make it much shorter by moving two of your `repeat` loops inside of
-          another loop.
+        grade1_adventurer_loops7_challenge_a: 'Se você não consegue descobrir onde
+          colocar os laços de repetições, tente escrever seu código passo a passo
+          e procurar por um padrão. '
+        grade1_adventurer_loops7_challenge_b: O seu código parece um pouco longo?
+          você pode torna-lo menor movendo duas das suas repetições `repeat` para
+          dentro de outra repetição.
       grade1_adventurer_loops8_challenge_authored_hint:
         grade1_adventurer_loops8_challenge_a: Can you find a pattern in the steps?  Where
           can you use a repeat?
       grade1_adventurer_loops9_authored_hint:
-        grade1_adventurer_loops9_a: 'Does this seem too hard?  Break it up into 4
-          little problems to make it feel easier.  '
+        grade1_adventurer_loops9_a: 'Isso parece muito difícil? quebre o problema
+          em 4 problemas menores para fazer ficar mais facil.  '
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: If you want the loop to repeat more than 4 times,
           you can change the number at the top of the block.
@@ -17711,20 +17713,16 @@ pt-BR:
       grade1_artist_loops5_authored_hint: {}
       grade1_artist_loops6_authored_hint:
         grade1_artist_loops6_a: This challenge uses FOUR loops, one right after another!
-        grade1_artist_loops6_b: |-
-          Notice that every loop makes a stair pattern that travels in a different direction.
-
-          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        grade1_artist_loops6_b: Observe que cada repetição faz um padrão de escada
+          que viaja em uma direção diferente. ! [a] (https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         grade1_artist_loops6_c: "The loops should do this:\n- Loop 1\n  - Right\n
           \ - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n-
           Loop 4\n  - Left\n  - Down"
       grade1_artist_loops7_authored_hint: {}
       grade1_artist_loops7a_authored_hint:
         artistLoopsK9_a: This challenge uses FOUR loops, one right after another!
-        artistLoopsK9_b: |-
-          Notice that every loop makes a stair pattern that travels in a different direction.
-
-          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        artistLoopsK9_b: Observe que cada repetição faz um padrão de escada que viaja
+          em uma direção diferente. ! [a] (https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         artistLoopsK9_c: "The loops should do this:\n- Loop 1\n  - Right\n  - Down\n
           \ \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n- Loop
           4\n  - Left\n  - Down"
@@ -17753,8 +17751,8 @@ pt-BR:
         K2.0_sequence_6_a: There is 1 block that you need to add to move the bird
           to the pig.
       grade1_maze_sequence7_authored_hint:
-        grade1_maze_sequence7a: If you're stuck, try adding one block at a time until
-          you solve the puzzle.
+        grade1_maze_sequence7a: Se você está preso, tente addicionar um bloco de cada
+          vez, até você solucionar o enigma.
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: Stuck? Try tracing the bird's path with your finger.
         grade1_maze_sequence8_b: The extra blocks need to be added before the last
@@ -17781,11 +17779,11 @@ pt-BR:
           into the workspace and connect it to the `when run` block.
       grade2_CaringForNewPet_11_authored_hint: {}
       grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
-          delete a block from the middle of your code, drag all of the blocks underneath
-          it away to the right and let them sit in the workspace for a while.  \n\nClick
-          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
-          put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
+          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
+          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
+          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
       grade2_CaringForNewPet_3_authored_hint:
         hint1: You can turn right or left from the bird's point of view. If you are
           facing right, turning right will make you point downwards.
@@ -17869,8 +17867,8 @@ pt-BR:
         2-3_Artist_Debugging_7_a: O que acontece se você tiver o artista mover-se
           ou saltar para trás depois que ele desenha a primeira linha?
       grade2_collector_2_authored_hint:
-        hint1: You can use four `move forward` blocks or use the `repeat 4 times`
-          block to make your program shorter.
+        hint1: Você pode usar quatro blocos `avançar` ou usar o bloco `repetir 4 vezes`
+          para fazer o seu programa mais curto.
       grade2_collector_A_authored_hint: {}
       grade2_collector_A_2018_authored_hint: {}
       grade2_maze_debuggingFP_authored_hint: {}
@@ -17934,9 +17932,9 @@ pt-BR:
           é executado.    Você vai querer usar um bloco condicional (`se` ou  `se/senão`)
           para resolver o desafio."
       grade3_Conditionals_10 BAD_authored_hint:
-        4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle
-          where the bee needs to move forward, then turn left several times to complete
-          the path.
+        4-5_Bee_Nested_Loops_Rows_a: Tente tratar esse quebra-cabeça como um longo
+          retângulo onde a abelha precisa avançar e, em seguida, virar à esquerda
+          várias vezes para completar o caminho.
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: Está tendo dificuldade em descobrir como abaixar
           os blocos?  Tente tratar a flor vermelha exatamente como uma flor roxa!
@@ -18182,20 +18180,18 @@ pt-BR:
           `while path ahead`, `while there is a hole` code six times.
       grade4_arist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
+          Este desenho vai se repetir 10 vezes para cobrir os 360 graus.
 
           **360 / 10 = ?**
       grade4_arist_nested_loop_polygons2_authored_hint:
-        4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
-
-          **360 / 6 = ?**
+        4-5_Nested_Loops_8_a: Você vai estar repetindo essa forma 6 vezes para cobrir
+          os 360 graus
       grade4_arist_nested_loop_triangles2_authored_hint: {}
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
-          Don't forget to make a turn after your inner loop.
+          Não esqueça de fazer uma virada depois da sua repetição interna.
 
-          You'll be looping 6 triangles over 360 degrees.
+          você vai estar repetindo 6 triangulos sobre 360 graus.
 
           **360 / 6 = ?**
       grade4_arist_nested_loop_triangles6_authored_hint:
@@ -18294,14 +18290,12 @@ pt-BR:
           by **120 degrees**. '
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
+          Este desenho vai se repetir 10 vezes para cobrir os 360 graus.
 
           **360 / 10 = ?**
       grade4_artist_nested_loop_polygons2_authored_hint:
-        4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
-
-          **360 / 6 = ?**
+        4-5_Nested_Loops_8_a: Você vai estar repetindo essa forma 6 vezes para cobrir
+          os 360 graus
       grade4_artist_nested_loop_triangles2_authored_hint: {}
       grade4_artist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
@@ -18499,15 +18493,15 @@ pt-BR:
 
           ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
       grade5_artist_functionparameters10_authored_hint:
-        brush_width: We set the brush width to 1, then the color to blue before we
-          did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
-        specifics: "The `for loop` runs from three to seventeen for each of the six
-          \"petals\" before moving on to create the next, drawing shapes with only
-          an odd number of sides.\n        \nThe `set alpha` block uses division to
-          fade the color as the counter gets higher."
-        after: When you're done with each "petal", be sure to `move forward` 20 pixels
-          before you make a 60 degree rotation.
+        brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul
+          antes de fazer qualquer outra coisa.
+        double_loop: Tente colocar uma 'repetição para' dentro de uma repetição 'repetir'.
+        specifics: |-
+          A `repetição para` é executada entre 3 e 17 para cada uma das seis "pétalas" antes de passar para criar a próxima, desenhando formas com apenas um número ímpar de lados.
+
+          O bloco `escolher alfa` usa divisão para enfraquecer a cor quando o contador aumenta.
+        after: Quando você acabar com cada "pétala", certifique-se de 'Avançar' 20
+          pixels antes de você fazer uma rotação de 60 graus.
         solution: |-
           **Solution**
 
@@ -18583,19 +18577,19 @@ pt-BR:
         Course_4_Artist_Vars_6_a: To draw a regular polygon, turn **360/sides** each
           time.
       grade5_artist_variables_triangles1_authored_hint:
-        grade5_artist_variables_triangles1_a: To make an internal angle of 60 degrees
-          in this triangle, remember to turn the artist 120 degrees.
-        grade5_artist_variables_triangles1_b: Use the `repeat` loop to make your code
-          shorter.
-        grade5_artist_variables_triangles1_c: Inside your loop, you will want to move
-          forward 50 pixels, then turn left 120 degrees.
+        grade5_artist_variables_triangles1_a: Para fazer um ângulo interno de 60 graus
+          nesse triângulo, se lembre de virar o artista 120 graus.
+        grade5_artist_variables_triangles1_b: Use a repetição `repetir` para encurtar
+          o seu código.
+        grade5_artist_variables_triangles1_c: Dentro da sua repetição, você vai querer
+          avançar 50 pixels, então virar a esquerda 120 graus.
       grade5_artist_variables_triangles1_2018_authored_hint:
-        grade5_artist_variables_triangles1_a: To make an internal angle of 60 degrees
-          in this triangle, remember to turn the artist 120 degrees.
-        grade5_artist_variables_triangles1_b: Use the `repeat` loop to make your code
-          shorter.
-        grade5_artist_variables_triangles1_c: Inside your loop, you will want to move
-          forward 50 pixels, then turn left 120 degrees.
+        grade5_artist_variables_triangles1_a: Para fazer um ângulo interno de 60 graus
+          nesse triângulo, se lembre de virar o artista 120 graus.
+        grade5_artist_variables_triangles1_b: Use a repetição `repetir` para encurtar
+          o seu código.
+        grade5_artist_variables_triangles1_c: Dentro da sua repetição, você vai querer
+          avançar 50 pixels, então virar a esquerda 120 graus.
       grade5_bee_for_loops10_authored_hint:
         grade5_bee_for_loops10_a: "How much less is 12 than 15?  \nHow much less is
           9 than 12?\n\nDo you see a pattern?"
@@ -18672,10 +18666,10 @@ pt-BR:
       gradeK_sequence_4_authored_hint:
         gradeK_sequence_4_a: Try writing down the steps on paper to find a solution!
       gradek_adventurer_loops3_authored_hint:
-        gradek_adventurer_loops3_a: To change how far the adventurer goes, change
-          the number of times that the loop runs.
-        gradek_adventurer_loops3_b: Don't forget that the adventurer needs to walk
-          down and collect gold after she finishes the `repeat` loop!
+        gradek_adventurer_loops3_a: Para mudar quão longe a aventureira vai, mude
+          o número de vezes que a repetição executa.
+        gradek_adventurer_loops3_b: Não esqueça que a aventureira precisa de descer
+          e coletar ouro depois que ela termina a repetição `repetir`!
       gradek_adventurer_loops4_authored_hint:
         gradek_adventurer_loops4_a: If you can't figure out the answer right away,
           try using a piece of paper to figure out what arrows you will need and look
@@ -18690,9 +18684,9 @@ pt-BR:
         gradek_adventurer_loops6_a: If you are having trouble figuring this puzzle
           out, try writing the moves down on a piece of paper and look for a pattern.
       gradek_adventurer_loops7_challenge_authored_hint:
-        gradek_adventurer_loops7_challenge_a: Does the code feel really long?  Try
-          putting two of your `repeat` loops inside of another loop to make it much
-          shorter!
+        gradek_adventurer_loops7_challenge_a: O código parece realmente longo? tente
+          colocar duas das suas repetições `repetir` dentro de outra repetição para
+          assim encurta-lo bastante!
       gradek_adventurer_loops8_authored_hint:
         gradek_adventurer_loops8_a: If you can't figure out where to put the loops,
           try writing the code out step-by-step and look for a pattern.
@@ -18814,13 +18808,15 @@ pt-BR:
           get bigger each time one hits?  End the game as a win if Diego gets hit
           5 times.
       iceage_hello1_authored_hint:
-        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag
-          the `say` block out from the toolbar and connect it to the `when run` event
-          block that is already in the workspace. Next, type "Hello!" inside.
+        iceage_hello1_a: Você precisa apenas de adicionar um bloco para resolver este
+          enigma. Arraste o bloco `dizer` da barra de ferramentas e conecte-o ao bloco
+          de evento `quando executar` que já está na área de trabalho. Depois, digite
+          "Olá!" dentro dele.
       iceage_hello1_2018_authored_hint:
-        iceage_hello1_a: You only need to add one block to solve this puzzle.  Drag
-          the `say` block out from the toolbar and connect it to the `when run` event
-          block that is already in the workspace. Next, type "Hello!" inside.
+        iceage_hello1_a: Você precisa apenas de adicionar um bloco para resolver este
+          enigma. Arraste o bloco `dizer` da barra de ferramentas e conecte-o ao bloco
+          de evento `quando executar` que já está na área de trabalho. Depois, digite
+          "Olá!" dentro dele.
       iceage_hello2_authored_hint:
         iceage_hello2_a: 'To solve this puzzle, you will need to have Sid say something
           using the `actor 1 say` block.  You will also need to have Manny say something

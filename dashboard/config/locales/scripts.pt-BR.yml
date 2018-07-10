@@ -2274,7 +2274,7 @@ pt-BR:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information
@@ -2332,7 +2332,7 @@ pt-BR:
             Practice PT - Encode an Experience:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp3-2017:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -2383,7 +2383,7 @@ pt-BR:
             Please complete the CSP Mid-course survey!:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions
@@ -2431,7 +2431,7 @@ pt-BR:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
             Student Post-Course Survey:
               name: Student Post-Course Survey
         csp5-2017:
@@ -2550,7 +2550,7 @@ pt-BR:
             Boolean Expressions and "if" Statements:
               name: Boolean Expressions and "if" Statements
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
           description: This unit covers the preparation and completion of the Create
@@ -5522,7 +5522,7 @@ pt-BR:
             Final Project:
               name: Final Project
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -7094,21 +7094,21 @@ pt-BR:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistência: Stevie e o grande projeto'
               description_student: ''
-              description_teacher: "When students run into a barrier while answering
-                a question or working on a project, it’s so easy for them to get frustrated
-                and give up.  This lesson will introduce students to the idea that
-                frustration can be an important part of learning. Here, frustration
-                is presented as a step in the creative process, rather than a sign
-                of failure.\r\n\r\nThis lession can be done over one or two class
-                sessions.  If you have more time, feel free to draw out the building
-                and revising phase of the Marble Run activity."
+              description_teacher: "Quando os alunos se deparam com uma barreira ao
+                responder uma pergunta ou trabalhar em um projeto, é muito fácil ficar
+                frustrado e desistir. Essa lição apresentará aos alunos a ideia de
+                que a frustração pode ser uma parte importante do aprendizado. Aqui,
+                frustração está presente como um passo no processo criativo, ao invés
+                de um sinal de fracasso.\r\n\r\nEssa lição pode ser feita em uma ou
+                duas aulas. Se você tiver mais tempo, sinta-se livre para desenhar
+                as fases de construção e revisão da atividade do Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
               description_student: ''
-              description_teacher: "In this lesson, students will relate the concept
-                of algorithms back to everyday, real-life activities by planting an
-                actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r\n"
+              description_teacher: "Nesta lição, os alunos relacionarão o conceito
+                de algoritmos às atividades cotidianas da vida real, plantando uma
+                semente real. O objetivo aqui é começar a construir as habilidades
+                para traduzir situações do mundo real para cenários on-line e vice-versa.\r\n"
             Learn to Drag and Drop:
               name: Sequenciando com arrastar e soltar
               description_student: ''
@@ -9142,7 +9142,7 @@ pt-BR:
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -9165,7 +9165,7 @@ pt-BR:
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -10063,21 +10063,21 @@ pt-BR:
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie e o Grande Projeto
               description_student: ''
-              description_teacher: "When students run into a barrier while answering
-                a question or working on a project, it’s so easy for them to get frustrated
-                and give up.  This lesson will introduce students to the idea that
-                frustration can be an important part of learning. Here, frustration
-                is presented as a step in the creative process, rather than a sign
-                of failure.\r\n\r\nThis lession can be done over one or two class
-                sessions.  If you have more time, feel free to draw out the building
-                and revising phase of the Marble Run activity."
+              description_teacher: "Quando os alunos se deparam com uma barreira ao
+                responder uma pergunta ou trabalhar em um projeto, é muito fácil ficar
+                frustrado e desistir. Essa lição apresentará aos alunos a ideia de
+                que a frustração pode ser uma parte importante do aprendizado. Aqui,
+                frustração está presente como um passo no processo criativo, ao invés
+                de um sinal de fracasso.\r\n\r\nEssa lição pode ser feita em uma ou
+                duas aulas. Se você tiver mais tempo, sinta-se livre para desenhar
+                as fases de construção e revisão da atividade do Marble Run."
             'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da vida real: plante uma semente'
+              name: Plante uma semente
               description_student: ''
-              description_teacher: "In this lesson, students will relate the concept
-                of algorithms back to everyday, real-life activities by planting an
-                actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r\n"
+              description_teacher: "Nesta lição, os alunos relacionarão o conceito
+                de algoritmos às atividades cotidianas da vida real, plantando uma
+                semente real. O objetivo aqui é começar a construir as habilidades
+                para traduzir situações do mundo real para cenários on-line e vice-versa.\r\n"
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
               description_student: ''
