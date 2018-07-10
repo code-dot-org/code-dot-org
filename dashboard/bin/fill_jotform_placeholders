@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+require_relative '../config/environment'
+
+# This should be run frequently (~ every minute) to fill JotForm placeholders with their answers.
+# Another less frequent (~ daily) cronjob, sync_jotforms, runs to sync any responses we missed
+# and update the questions.
+
+JOT_FORM_CLASSES = [
+  Pd::WorkshopDailySurvey,
+  Pd::WorkshopFacilitatorDailySurvey,
+  # Pd::PostCourseSurvey -- don't sync this one until we support the datetime control
+].freeze
+
+def main
+  JOT_FORM_CLASSES.each(&:fill_placeholders)
+end
+
+main if only_one_running?(__FILE__)
