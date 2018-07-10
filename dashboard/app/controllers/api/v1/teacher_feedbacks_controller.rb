@@ -1,7 +1,6 @@
 class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   authorize_resource
   load_resource only: :create
-  skip_before_action :verify_authenticity_token
 
   # Use student_id, level_id, and teacher_id to lookup the feedback for a student on a particular level and provide the
   # most recent feedback left by that teacher
@@ -11,6 +10,10 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       level_id: params.require(:level_id),
       teacher_id: params.require(:teacher_id)
     ).latest
+
+    # Setting custom header here allows us to access the csrf-token and manually use for create
+    headers['csrf-token'] = form_authenticity_token
+
     if @feedback.nil?
       head :no_content
     else
