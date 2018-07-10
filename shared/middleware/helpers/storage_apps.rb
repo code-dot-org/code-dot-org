@@ -26,7 +26,7 @@ class StorageApps
       project_type: type,
       published_at: published_at,
       remix_parent_id: remix_parent_id,
-      skip_content_moderation: false,
+      content_moderation_disabled: false,
     }
     row[:id] = @table.insert(row)
 
@@ -139,13 +139,13 @@ class StorageApps
     row[:abuse_score]
   end
 
-  def get_skip_content_moderation_value(channel_id)
+  def content_moderation_disabled?(channel_id)
     _owner, id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    row[:skip_content_moderation]
+    row[:content_moderation_disabled]
   end
 
   # Determine if the current user can view the project
@@ -216,23 +216,23 @@ class StorageApps
 
   #
   # Disables or enables automated content moderation for this project by
-  # altering the value for skip_content_moderation.
+  # altering the value for content_moderation_disabled.
   # @param [String] channel_id - an encrypted channel id
-  # @param [Boolean] should_skip, whether the content moderation should be
+  # @param [Boolean] disable, whether the content moderation should be
   # skipped or not for this project.
   # @raise [NotFound] if the channel does not exist or already has the desired
-  # value for skip_content_moderation
+  # value for content_moderation_disabled.
   #
-  def change_content_moderation(channel_id, should_skip)
+  def change_content_moderation(channel_id, disable)
     _owner, id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    update_content_moderation = @table.where(id: id).exclude(state: 'deleted').update({skip_content_moderation: should_skip})
-    raise NotFound, "channel `#{channel_id}` not found" if update_content_moderation == should_skip
+    update_content_moderation = @table.where(id: id).exclude(state: 'deleted').update({content_moderation_disabled: disable})
+    raise NotFound, "channel `#{channel_id}` not found" if update_content_moderation == disable
 
-    should_skip
+    disable
   end
 
   def to_a
