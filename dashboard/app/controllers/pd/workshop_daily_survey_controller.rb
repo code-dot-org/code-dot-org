@@ -3,6 +3,9 @@ module Pd
     include WorkshopConstants
     include JotForm::EmbedHelper
 
+    # The POST submit route will be redirected to from JotForm, after form submission
+    skip_before_action :verify_authenticity_token, only: %w(submit_general submit_facilitator)
+
     LAST_DAY = 5
 
     # Require login
@@ -70,6 +73,13 @@ module Pd
       )
 
       redirect_general(key_params)
+    end
+
+    # GET /pd/workshop_survey/submit
+    # Temporary transition route before we switch the JotForm forms to POST.
+    # Since it doesn't include a submission_id, don't create a placeholder, just redirect
+    def submit_general_temp
+      redirect_general key_params
     end
 
     # Facilitator-specific questions
@@ -141,6 +151,13 @@ module Pd
       )
 
       redirect_facilitator(key_params)
+    end
+
+    # GET /pd/workshop_survey/facilitators/submit
+    # Temporary transition route before we switch the JotForm forms to POST.
+    # Since it doesn't include a submission_id, don't create a placeholder, just redirect
+    def submit_facilitator_temp
+      redirect_facilitator key_params
     end
 
     # Post workshop survey. This one will be emailed and displayed in the my PL page,
