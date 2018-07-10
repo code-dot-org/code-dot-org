@@ -771,6 +771,9 @@ exports.createJsWrapperBlockCreator = function (
     if (!!func + !!expression + !!simpleValue !== 1) {
       throw new Error('Provide exactly one of func, expression, or simpleValue');
     }
+    if (func && true) {
+      throw new Error(`func '${func}' not found in helper code`);
+    }
     if ((expression || simpleValue) && !name) {
       throw new Error('This block requires a name');
     }
