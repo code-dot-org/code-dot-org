@@ -9092,6 +9092,25 @@ en-GB:
         * **Run the code** to draw your first sprite on the screen.
 
         _Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._
+      CSD U3 Sprites intro sprites_2018 - Validation Test_markdown_instruction: |-
+        # Sprites
+
+        **Creating Sprites:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.
+
+        **Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.
+
+        <img src="https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png" style="width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px">
+
+        # Do This
+
+        This program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.
+
+        * Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.
+        \t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.
+        * Add `drawSprites()` under the comment `Drawing`.
+        * **Run the code** to draw your first sprite on the screen.
+
+        _Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._
       CSD U3 Sprites intro sprites_2018_markdown_instruction: |-
         # Sprites
 
@@ -30201,16 +30220,20 @@ en-GB:
         30% discount"
       MC Agent Freeplay_markdown_instruction: "**Freeplay:** Now it's up to you! Use
         the Agent's code to help you explore this world."
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "Some games let you keep score.
+        Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself
+        a point when you tag them.  \n  \n  Reach five points to win!"
       MC_2017_Ryan_02_markdown_instruction: "Code like this can be made even shorter
         using loops!  \n\nNow get the Agent to the pressure plate using a `repeat`
         loop to help him move forward."
       MC_HOC_2017 Agent Test_markdown_instruction: "Click \"Run\" to move the player
-        using the **arrow keys**.  \n\nTo pass this level, you will need to get to
-        the door and open it (using the **space bar**) so you can get to the orange
+        using the **arrow keys**.  \r\n\r\nTo pass this level, you will need to get
+        to the door and open it (using the **space bar**) so you can get to the orange
         square inside."
       MC_HOC_2017_01_markdown_instruction: "Click \"Run\" to move the player using
-        the **arrow keys**.  \n\nTo pass this level, you will need to get to the door
-        and open it (using the **space bar**) so you can get to the orange square
+        the **arrow keys**.  \r\n\r\nTo pass this level, you will need to get to the
+        door and open it (using the **space bar**) so you can get to the orange square
         inside."
       MC_HOC_2017_01_Cole_markdown_instruction: |-
         You need to collect all the tools
@@ -30243,7 +30266,7 @@ en-GB:
         Steve."
       MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} continues on
         the adventure and needs the **compass** [compass] to prepare for the trip.
-        \ \n   \nCode the Agent to open the gate. "
+        \ \r\n   \r\nCode the Agent to open the gate. "
       MC_HOC_2017_03_Kiki_markdown_instruction: "The player's adventure will begin
         behind the locked door, in the Secret Grove!  \r\n\r\n\r\nHelp The Agent to
         open the door by writing code to get him to the pressure plate."
@@ -30257,44 +30280,46 @@ en-GB:
       MC_HOC_2017_04POINT5_RYAN_markdown_instruction: "You made it across! \r\n\r\nNow,
         get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]\r\n"
       MC_HOC_2017_04_Cole_markdown_instruction: "The Agent can move across water!
-        \ \n \nUse a `repeat` loop to solve this puzzle and help {currentPlayerName}
+        \ \r\n \r\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName}
         get to the **bucket** [bucket_empty] behind the door. "
       MC_HOC_2017_04_Kiki_markdown_instruction: "The entry to the Secret Grove led
         to this beautiful Oasis!  To pass this level, the player needs to get to the
-        orange square in the cabana.  \n\nUse a `repeat` loop to help the Agent get
-        all the way up to the pressure plate, which opens the cabana door."
+        orange square in the cabana.  \r\n\r\nUse a `repeat` loop to help the Agent
+        get all the way up to the pressure plate, which opens the cabana door."
       MC_HOC_2017_05_markdown_instruction: "Loops are not always helpful. \n\n\nThese
         cacti are not growing in an obvious pattern, so a loop would not clear them
         correctly.  Instead, we've given you a function called `destroy and move`
         that will do the hard work for you each time the Agent gets to an obstacle."
-      MC_HOC_2017_05_Cole_markdown_instruction: "Oh no, the bridge is out! \n\nCode
+      MC_HOC_2017_05_Cole_markdown_instruction: "Oh no, the bridge is out! \r\n\r\nCode
         the Agent to rebuild the bridge using the `place` block so that {currentPlayerName}
         can get to the **shovel** [diamond_shovel]."
       MC_HOC_2017_05_Josh_markdown_instruction: "Oh no, the bridge is out! \n\n\nHelp
         the Agent rebuild the bridge so that the player can get to the **shovel**."
       MC_HOC_2017_05_Kiki_markdown_instruction: "It's time for the player to leave
-        the Secret Grove and continue the adventure, but the bridge is out! \n\nHelp
+        the Secret Grove and continue the adventure, but the bridge is out! \r\n\r\nHelp
         the Agent rebuild the bridge, then move to the wooden plank so that the player
         can get to the orange square."
       MC_HOC_2017_06_Cole_markdown_instruction: "Another river, but this one is much
-        wider! \n \nFix this code to help the Agent build a bridge so that {currentPlayerName}
+        wider! \r\n \r\nFix this code to help the Agent build a bridge so that {currentPlayerName}
         can get to the **pickaxe** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh_markdown_instruction: "Another river, but this one is much
-        wider!  \n\nFix this code to help the Agent build a bridge across this river."
+        wider!  \r\n\r\nFix this code to help the Agent build a bridge across this
+        river."
       MC_HOC_2017_06_Kiki_markdown_instruction: "Another river, but this one is much
-        wider!  \n\nFix this code to help the Agent build a bridge across the water."
+        wider!  \r\n\r\nFix this code to help the Agent build a bridge across the
+        water."
       MC_HOC_2017_07_Cole_markdown_instruction: "There's ice in the way!  \r\n \r\nThe
         `clear path` function can help you destroy the ice and get {currentPlayerName}
         to the minecart [minecart_normal]! "
       MC_HOC_2017_07_Kiki_markdown_instruction: "Loops are not the only way to repeat
-        code!  \n\nHere, we've given you a function called `clear cacti` that will
-        do the hard work of clearing three cacti every time you use it.  Use two `clear
-        cacti` blocks to clear the path to the orange square. "
+        code!  \r\n\r\nHere, we've given you a function called `clear cacti` that
+        will do the hard work of clearing three cacti every time you use it.  Use
+        two `clear cacti` blocks to clear the path to the orange square. "
       MC_HOC_2017_07a_Kiki_markdown_instruction: |-
         Now, edit this loop to help the
         Agent clear a path to the orange square.
       MC_HOC_2017_08_Cole_markdown_instruction: "Now, instead of destroying before
-        you move, you will need to place a block.  \n\nChange the provided function
+        you move, you will need to place a block.  \r\n\r\nChange the provided function
         to work for the desert."
       MC_HOC_2017_08_Kiki_markdown_instruction: "Now, instead of destroying cacti,
         you will need to place stone over lava, then destroy sandstone.  \r\n\r\nChange
@@ -30309,7 +30334,7 @@ en-GB:
         Use functions to help the Agent
         destroy the giant blocks of dirt that are blocking the player's path to the
         pressure plate.
-      MC_HOC_2017_09_Kiki_markdown_instruction: "This starting code cannot be removed.\n\nAdd
+      MC_HOC_2017_09_Kiki_markdown_instruction: "This starting code cannot be removed.\r\n\r\nAdd
         commands to the `create trail` function so that the program in the workspace
         will get the Agent to the pressure plate. "
       MC_HOC_2017_09_RS_CLONE_markdown_instruction: |-
@@ -30359,8 +30384,8 @@ en-GB:
         **Freeplay:** Now it's up to you!
         Use the Agent's code to help you explore this world.
       MC_HOC_2017_Ryan_03_markdown_instruction: "Did you know that you can put more
-        than one piece of code into a loop?  \n\nUse a `repeat` loop to help the Agent
-        build a bridge over the river by placing blocks in the water."
+        than one piece of code into a loop?  \r\n\r\nUse a `repeat` loop to help the
+        Agent build a bridge over the river by placing blocks in the water."
       MC_HOC_2017_Ryan_05_markdown_instruction: "Sometimes you need to knock down
         things that get in the way of your player.  \r\nUse the `destroy` block to
         clear all of the cacti between the Agent and the pressure plate."
@@ -47674,6 +47699,12 @@ en-GB:
         her?
       Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe.
         What do you think will happen if you press run and then click on her?
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "There's a mud puddle
+        over in the corner.  \n\nCreate an **event** so that when Geraldine touches
+        the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 2 - Validated_markdown_instruction: "There's a mud puddle over in
+        the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle,
+        her color changes to brown.  \n\n---"
       Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner.
         Create an **event** so that when Geraldine touches the puddle, her color changes
         to brown.
@@ -47686,6 +47717,9 @@ en-GB:
       Virtual Pet 4_markdown_instruction: We don't want to wait for the giraffe to
         clean itself every time. Add a behavior to your soap to make it draggable,
         then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_markdown_instruction: "All of this play takes energy!
+        \ \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks
+        by 5) each time it collides with another sprite.  \n"
       Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions
         to each event so that when the giraffe collides with each sprite, it gets
         a little smaller (shrinks by 5).
