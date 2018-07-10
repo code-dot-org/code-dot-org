@@ -14,22 +14,20 @@ module Pd
     included do
       before_validation :map_answers_to_attributes, if: :answers_changed?
       validates_presence_of :form_id, :submission_id
+
+      scope :placeholders, -> {where(answers: nil)}
     end
 
     CACHE_TTL = 5.minutes.freeze
+
+    # Max limit is 1000. See https://api.jotform.com/docs/#form-id-submissions
+    JOT_FORM_LIMIT = 1000
 
     def placeholder?
       answers.nil?
     end
 
     class_methods do
-      def get_last_known_submission_id(form_id)
-        [
-          where(form_id: form_id).maximum(:submission_id),
-          last_known_submission_id_override(form_id)
-        ].compact.max
-      end
-
       # Add jotform_last_submission_id_overrides to locals.yml to manually set minimum submission ids for sync.
       # The format is a hash, form_id => last_known_submission_id
       # This is useful to ignore older test submissions before we go live.
@@ -63,7 +61,7 @@ module Pd
 
       # Download new responses from JotForm for all relevant form ids
       def sync_all_from_jotform
-        all_form_ids.compact.map {|form_id| sync_from_jotform(form_id)}.sum
+        sync_from_jotform
       end
 
       def get_questions(form_id, force_sync: false)
@@ -82,67 +80,128 @@ module Pd
       end
 
       # Download new responses from JotForm
+      # @param [form_id] (optional) specify a form id. Otherwise use all forms
       def sync_from_jotform(form_id = nil)
-        return sync_all_from_jotform unless form_id
+        form_ids = form_id ? [form_id] : all_form_ids
+        _sync_from_jotform form_ids
+      end
 
-        get_questions(form_id)
+      # Sync all new results from a given set of JotForm form ids, in batches
+      def _sync_from_jotform(form_ids)
+        # Errors per form, per submission. Format: {form_id: {submission_id: error}}
+        errors_per_form = Hash.new {|h, k| h[k] = Hash.new}
+        imported = 0
+        batches = 0
 
-        JotForm::Translation.new(form_id).get_submissions(
-          last_known_submission_id: get_last_known_submission_id(form_id),
-          min_date: get_min_date(form_id)
-        ).map do |submission|
-          answers = submission[:answers]
+        form_ids.each do |form_id|
+          questions = get_questions(form_id, force_sync: true)
+          last_known_submission_id = [questions.last_submission_id, last_known_submission_id_override(form_id)].compact.max
 
-          # When we pass the last_known_submission_id filter, there should be no duplicates,
-          # But just in case handle them gracefully as an upsert.
-          find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-            # Try first to parse the answers with existing question data. On first failure, force sync questions
-            # and retry. Second failure will propagate and fail the entire sync operation.
-            Retryable.retryable(sleep: 0, exception_cb: proc {model.force_sync_questions}) do
-              model.answers = answers.to_json
+          offset = 0
+          status = :importing
+          while status == :importing
+            batches += 1
+            batch_error_count = 0
 
-              # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
-              # Include hidden questions for full validation and so skip_submission? can inspect them.
-              if skip_submission?(form_id, model.form_data_hash(show_hidden_questions: true))
-                CDO.log.info "Skipping #{submission[:submission_id]}"
-                next
+            response = JotForm::Translation.new(form_id).get_submissions(
+              last_known_submission_id: last_known_submission_id,
+              min_date: get_min_date(form_id),
+              limit: JOT_FORM_LIMIT,
+              offset: offset
+            )
+
+            result_set = response[:result_set]
+            response[:submissions].each do |submission|
+              submission_id = submission[:submission_id]
+              begin
+                success = process_submission(submission)
+                imported += 1 if success
+              rescue => e
+                # Store message and first line of backtrace for context
+                errors_per_form[form_id][submission_id] = "#{e.message}, #{e.backtrace.first}"
+                batch_error_count += 1
               end
-              model.save!
-              CDO.log.info "Saved submission #{submission[:submission_id]} for form #{form_id}"
+
+              # As long as we have encountered no errors for this form, increase the last submission id
+              questions.update!(last_submission_id: submission_id) unless errors_per_form.key?(form_id)
+            end
+
+            if batch_error_count > 0 && batch_error_count == result_set[:count]
+              # The whole batch failed. Don't bother processing more batches.
+              # This might be a bigger issue.
+              # Abort this form, but still continue trying to import any remaining forms
+              errors_per_form[form_id][:all] = 'Entire batch failed. Aborting'
+              status = :aborted
+            elsif result_set[:count] == JOT_FORM_LIMIT
+              offset += JOT_FORM_LIMIT
+            else
+              status = :complete
             end
           end
-        rescue => e
-          raise e, "Error processing submission #{submission[:submission_id]} for form #{form_id}: #{e.message}", e.backtrace
-        end.compact
+        end
+
+        if errors_per_form.any?
+          # Format error messages nicely and raise
+          msg = "Error syncing JotForm submissions for forms #{form_ids}. Errors:\n"
+          errors_per_form.each do |form_id, form_errors|
+            msg << "  Form #{form_id}\n"
+            form_errors.each do |submission_id, error|
+              msg << "    Submission #{submission_id}: #{error}\n"
+            end
+          end
+          raise msg
+        end
+
+        CDO.log.info("#{imported} JotForm submissions imported in #{batches} batches.")
+        imported
+      end
+
+      def process_submission(submission)
+        # There should be no duplicates, but just in case handle them gracefully as an upsert.
+        find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
+          model.answers = submission[:answers].to_json
+          form_id = submission[:form_id]
+          submission_id = submission[:submission_id]
+
+          # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
+          # Include hidden questions for full validation and so skip_submission? can inspect them.
+          if skip_submission?(model.form_data_hash(show_hidden_questions: true))
+            CDO.log.info "Skipping #{submission_id}"
+            return nil
+          end
+
+          if model.duplicate?
+            CDO.log.warn "Skipping duplicate submission #{submission_id}"
+            return nil
+          end
+
+          model.save!
+          CDO.log.info "Saved submission #{submission_id} for form #{form_id}"
+        end
       end
 
       # Override in included class to provide custom filtering rules.
       # By default skip other environments. This assumes that environment is a property in the processed answers.
-      # TODO(Andrew): Filter in the API query if possible, once we hear back from JotForm API support.
-      # See https://www.jotform.com/answers/1483561-API-Filter-form-id-submissions-endpoint-with-question-and-answer#4
-      # @param form_id [Integer]
       # @param processed_answers [Hash]
       # @return [Boolean] true if this submission should be skipped
-      def skip_submission?(form_id, processed_answers)
+      def skip_submission?(processed_answers)
         environment = processed_answers['environment']
 
-        # Skip other environments, and anything without an environment value.
-        # Only keep this environment.
-        return true if environment != Rails.env
-
-        # Is it a duplicate? These will be prevented in the future, but for now log and skip
-        # TODO(Andrew): prevent duplicates and remove this code.
-        key_attributes = get_key_attributes(form_id, processed_answers)
-        if exists?(key_attributes)
-          CDO.log.warn "Submission already exists for #{key_attributes}, skipping"
-          return true
+        # Environment is expected if any values are provided.
+        if environment.blank?
+          supplied_answers = processed_answers.select {|_, v| v.present?}
+          raise "Missing environment. Other answers are present: #{supplied_answers}" if supplied_answers.any?
         end
+
+        # Only keep this environment. Skip others.
+        return true if environment != Rails.env
 
         false
       end
 
-      def get_key_attributes(form_id, processed_answers)
-        attribute_mapping.transform_values {|k| processed_answers[k]}
+      # override in derived class to detect duplicate submissions based on a subset of attributes
+      def duplicate?
+        false
       end
 
       # Get a form id from the configuration
@@ -161,6 +220,31 @@ module Pd
         # Fail for no form_id value, even if the name key is present
         raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms[name].present?
         forms[name].to_i
+      end
+
+      # Download answers from JotForm for any placeholders in the current scope
+      def fill_placeholders
+        # Collect errors by submission id
+        errors = {}
+        count = 0
+        placeholders.find_each do |placeholder|
+          placeholder.sync_from_jotform
+          count += 1
+        rescue => e
+          # Store message and first line of backtrace for context
+          errors[placeholder.submission_id] = "#{e.message}, #{e.backtrace.first}"
+        end
+
+        if errors.any?
+          # Format error messages nicely and raise
+          msg = "Errors filling #{name} placeholders: \n"
+          errors.each do |submission_id, error|
+            msg << "  Submission #{submission_id}: #{error}"
+          end
+          raise msg
+        end
+
+        CDO.log.info "#{count} placeholders filled."
       end
     end
 
