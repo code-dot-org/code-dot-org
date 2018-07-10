@@ -73,7 +73,8 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     const state = getState().sectionAssessments;
 
     // Don't load data if it's already stored in redux.
-    if (state.assessmentResponsesByScript[scriptId]) {
+    // Don't attempt to load data if there is not script or section selected.
+    if (state.assessmentResponsesByScript[scriptId] || !scriptId || !sectionId) {
       return;
     }
 
@@ -92,6 +93,7 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
       dispatch(setSurveys(scriptId, arrayOfValues[2]));
       dispatch(finishLoadingAssessments());
     }).catch((error) => {
+      // If any return an error, the UI will show that there are no assessments.
       dispatch(finishLoadingAssessments());
     });
   };
