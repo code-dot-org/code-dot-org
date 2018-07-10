@@ -12,6 +12,7 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import i18n from '@cdo/locale';
 import experiments from '../../util/experiments';
+import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '../../lib/util/urlHelpers';
 
 const styles = {
   xIcon: {
@@ -163,7 +164,7 @@ class ManageStudentActionsCell extends Component {
             <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
             <div>
               {i18n.removeStudentConfirm1() + ' '}
-              <a target="_blank" href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
+              <a target="_blank" href={ADD_A_PERSONAL_LOGIN_HELP_URL}>
                 {i18n.removeStudentConfirm2()}
               </a>
               {' ' + i18n.removeStudentConfirm3()}
