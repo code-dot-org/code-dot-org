@@ -61,8 +61,8 @@ end
 
 # Temporary step used by tests that have diffs between when they execute in the test environment vs a CircleCI
 # build, so that we can enable Applitools / Github integration.
-# TODO: (suresh) Remove this step and revert tests to call "I see now difference for" when the test has been modified
-# to work identically in CircleCI environments.
+# TODO: (suresh) Remove this step and revert tests to call "I see now difference for" when the tests have been modified
+# to work identically in both our test server and in CircleCI environments.
 And(/^I see no difference in test environment for "([^"]*)"$/) do |identifier|
   next if CDO.disable_all_eyes_running || ENV[IS_CIRCLE]
 
