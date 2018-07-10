@@ -77,7 +77,7 @@ zh-CN:
   congratulations_on_completing_hoc: 恭喜你完成编程一小时。
   congratulations_volunteer: 恭喜你： 现在你已经尝试了编程一小时，<a href="https://code.org/volunteer">
     在教室里报名做志愿者</a>，帮助学生了解编程一小时！
-  congratulations_on_completing_course: Congratulations on completing %{course}
+  congratulations_on_completing_course: 恭喜，完成了%{course}。
   congrats_next_tutorials_title: 接下来尝试下一级的课程
   congrats_next_tutorials_desc: 尝试这些简短的1 小时教程，或尝试 <a href="%{current_path}/next">
     合作伙伴教程</a>。
