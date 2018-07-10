@@ -205,17 +205,17 @@ sk:
         text: "Ahoj, volám sa Makinde! Poďme sa naučiť niečo o bloku \"zatiaľ čo.\" "
       2:
         image: 'notes/stage9_6.jpg'
-        text: "The \"while block\" will do whatever you put inside it AS LONG AS the statement on the top is TRUE."
+        text: "Blok \"pokiaľ\" bude robiť čokoľvek doňho dáte POKIAĽ bude výraz na jeho vrchu PRAVDIVÝ."
       3:
         image: 'notes/stage9_7.jpg'
-        text: "For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her."
+        text: "Napríklad, ak farmár stojí na kope, bude stále pokračovať v odstraňovaní lopatou POKIAĽ bude mať pod sebou kopu."
     loop_for:
       1:
         image: 'notes/stage11_1.jpg'
         text: "Ahoj, volám sa Trina, a pracujem pre spoločnosť Pixar. Pracovala som na množstve filmov, vrátane Šreka."
       2:
         image: 'notes/stage11_2.jpg'
-        text: "This is our new \"counter\" loop. It will perform actions over and over again and you can make the actions change slightly each time."
+        text: "Toto je naša nová slučka \"počítadlo\". Bude robiť akcie dookola, pričom ich môžete jemne upraviť pri každom opakovaní."
       3:
         image: 'notes/stage11_3.jpg'
         text: "In this example, our \"counter\" loop says \"count with counter from 50 to 90 by 10\" and inside it, we have our \"draw a square\" block. Drag the \"counter\" block from the \"Variables\" section into the \"length\" spot."
@@ -459,17 +459,17 @@ sk:
         text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
       3:
         image: 'notes/C1_happy_maps_unplugged_3.png'
-        text: "To get it there you circle the direction that it has to go."
+        text: "Pre dostanie sa tam, kam chcete, zakrúžkujte smer, ktorým má isť."
       4:
         image: 'notes/C1_happy_maps_unplugged_4.png'
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: "Vytvorte si vlastný algoritmus pospájaním šipiek vedľa mapy, ktorú sa snažíte vyriešiť. To druhé je to isté, ale pôjde sa nadol."
       5:
         image: 'notes/C1_happy_maps_unplugged_5.png'
-        text: "It's like programming with paper. And that's it!"
+        text: "Je to ako programovanie s papierom. To je všetko!"
     C1_maze_debugging:
       1:
         image: 'notes/C1_maze_debugging_1.png'
-        text: "Debugging is finding and fixing problems. There are lots of ways to debug problems. One of the easiest is to move step by step until where you find where something goes wrong. Here I'm trying to do a back handspring on the beam but I keep falling off."
+        text: "Ladenie je hľadanie a opravovanie problémov. Je veľa spôsobov, ako ladiť problémy. Jedným z najľahších je ísť krok po kroku až kým nenarazíte na niečo problematické. Tu sa snažím spraviť premet vzad na stožiari, no vždy padnem."
       2:
         image: 'notes/C1_maze_debugging_2.png'
         text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
@@ -940,14 +940,14 @@ sk:
         text: "Unlike the Postal Service, the first thing that happens is that the internet breaks the message into smaller parts so it can be sent more easily. These small parts are called packets. Each packet of the message is delivered to the destination one at a time. These packets are all put together in the right order so that the receiver can read the message correctly. Of course, there are many more things to learn about how the internet works but this is a great start. You're on your way to becoming a savvy internet user! Be sure to tell your family and friends what you've learned!"
       5:
         image: 'notes/C3_internet_5.png'
-        text: "My name is Amanda Camp and I'm a software engineer at Google. I work on a team that works on a backend server that stores profiles and contacts. In my job, we think a lot about how contacts can be sent to other devices, such as your phone. Most people have a lot of contacts, you might have say, 1000 contacts and we don't want to send all of those contacts at once to your phone because it's too large of a message. Similar to the way the internet breaks large messages down into packets, we use a concept called paging where we might only send your phone 100 contacts at a time and let your phone respond to us and ask for the next 100."
+        text: "Som Amanda Camp a pracujem ako softvérový inžinier v Googli. Pracujem v tíme, ktorý pracuje na serveroch uchovávajúcich profily a kontakty. Pri mojej práci často rozmýšľame, ako sa dajú kontakty posielať na iné zariadenia ako napríklad Váš telefón. Väčšina ľudí má veľa kontaktov, povedzme že tisíc, a my nechceme poslať všetky tieto kontakty na Váš telefón naraz, lebo by to bolo priveľa na správu. Tak, ako internet delí veľké správy na pakety, my používame koncept nazvaný stránkovanie, v ktorom môžeme poslať na Váš telefón len 100 kontaktov naraz, nechať telefón nech ich spracuje a čakať, kým si vypýta ďaľších 100 kontaktov."
       6:
         image: 'notes/C3_internet_6.png'
         text: "The most exciting thing about software is the fact that it can impact the entire world. I first learned to program when I was about nineteen. I think I was already a sophomore or a junior in college. The first program I remember writing is something that converted Celsius to Fahrenheit. I like programming because I like helping people. I can write programs at Google that help people all over the world and that's really mind-boggling and exciting."
     C3_maze_conditionals:
       1:
         image: 'notes/C3_maze_conditionals_1.png'
-        text: "People make decisions everyday. For example, before you go outside, you have an if statement that says if it's raining, then I need to get my jacket. Computers are amazing once you decide those kinds of statements that they can reliably execute those things and unbelievable speed. A computer program really is a little bit of math and some if statements where the decision gets made."
+        text: "Ľudia robia rozhodnutia každý deň. Napríklad, predtým než idete von, máte podmieňovací výraz - ak vonku prší, musíte si zobrať svoju vetrovku. Počítače sú úžasné, lebo keď sa rozhodnete, ktoré príkazy majú a vedia spracovávať, tak ich spracuvávajú neskutočne rýchlo a zodpovedne. Počítačový program je vlastne trošku matematiky a niekoľko podmieňovacích výrazov, pri ktorých sa robia rozhodnutia."
       2:
         image: 'notes/C3_maze_conditionals_2.png'
         text: "The if block helps the zombie make a decision. It checks something. For example, let's use the block that says if there's a path to the left, and put a turn left command inside it. We're telling the zombie to check its surroundings, see if there's a path on the left and if so, make that turn."
@@ -960,7 +960,7 @@ sk:
     C3_maze_level_4:
       1:
         image: 'notes/C3_maze_level_4_1.png'
-        text: "In this example, your goal is to get zombie to the sunflower. We could use five move forward blocks or we could tell the computer to move forward and repeat five times using the one repeat block."
+        text: "V tomto príklade je Vašim cieľom dostať zombíka k slnečnici. Mohli by sme použiť 5 blokov posunu vpred, alebo by sme mohli počítaču povedať, nech sa raz posunie dopredu a toto ho dať zopakovať 5 krát použitím jedného opakovacieho bloku."
       2:
         image: 'notes/C3_maze_level_4_2.png'
         text: "This saves time and makes it way easier. To use it, just put the move forward block inside the repeat block. Hit run and the zombie will move forward five times to the yummy sunflower."
@@ -1347,13 +1347,13 @@ sk:
         text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
       5:
         image: 'notes/starwars_intro_5.JPG'
-        text: "This middle area is the toolbox and each of these blocks is a command that BB-8 can understand."
+        text: "Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je príkaz, ktorému BB-8 rozumie."
       6:
         image: 'notes/starwars_intro_6.JPG'
         text: "Biela oblasť vpravo sa nazýva pracovný priestor, na tomto mieste budeme vytvárať náš program."
       7:
         image: 'notes/starwars_intro_7.JPG'
-        text: "If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid."
+        text: "Ak potiahnem do nášho pracovného priestoru blok pohybVľavo(); a potom kliknem Spustiť, čo sa stane? BB=8 sa pohne doľava o jedno pole v mriežke."
       8:
         image: 'notes/starwars_intro_8.JPG'
         text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
@@ -1397,7 +1397,7 @@ sk:
         text: "Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby počúval, alebo čakal na to kým sa niečo udeje, potom vykonajú nejakú akciu."
       4:
         image: 'notes/starwars_events_4.JPG'
-        text: "Some examples of events are listening for a mouse click, an arrow button or a tap on the screen."
+        text: "Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie klávesy so šípkou alebo ťuknutie na obrazovku."
       5:
         image: 'notes/starwars_events_5.JPG'
         text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
@@ -1444,7 +1444,7 @@ sk:
         text: "Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space."
       5:
         image: 'notes/starwars_blocks_intro_5.JPG'
-        text: "This middle area is the toolbox and each of these blocks is a command that BB-8 can understand."
+        text: "Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je príkaz, ktorému BB-8 rozumie."
       6:
         image: 'notes/starwars_blocks_intro_6.JPG'
         text: "The white space on the right is called the work space and this is where we're going to build our program."
@@ -1472,7 +1472,7 @@ sk:
         text: "Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby počúval, alebo čakal na to kým sa niečo udeje, potom vykonajú nejakú akciu."
       4:
         image: 'notes/starwars_blocks_events_4.JPG'
-        text: "Some examples of events are listening for a mouse click, an arrow button or a tap on the screen."
+        text: "Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie klávesy so šípkou alebo ťuknutie na obrazovku."
       5:
         image: 'notes/starwars_blocks_events_5.JPG'
         text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
@@ -1795,7 +1795,7 @@ sk:
         image: 'notes/applab_intro_welcome_10.png'
         text: "If you're ever stuck, click on this picture and it will show you exactly how to complete the level. But see if you can do it on your own first."
       11:
-        image: 'notes/applab_intro_welcome_11.png'
+        image: 'notes/applab_intro_welcome_11.pngq'
         text: "Once you've completed the goal for this level click Finish to move on. That's all there is to it! Hit the orange \"continue\" button to go to the next level and start your adventure with an App Lab!"
     applab_intro_events:
       1:
@@ -1843,7 +1843,7 @@ sk:
         text: "To add images to your elements you can just use the setProperty block. Select the image property in the second drop-down"
       6:
         image: 'notes/applab_intro_sounds_6.png'
-        text: "Then select \"Choose\" from the third drop down."
+        text: "Potom vyberte \"Vybrať\" z tretieho rozbaľovacieho menu."
       7:
         image: 'notes/applab_intro_sounds_7.png'
         text: "From here you can upload an image from your computer or you can look through a huge library of icons in the icon library."
@@ -1859,7 +1859,7 @@ sk:
         text: "To build your own apps you're going to need to start designing screens and elements from scratch. App Lab makes this easy to do with Design Mode."
       2:
         image: 'notes/applab_intro_designmode_2.png'
-        text: "Use the switch on top of your app to go into Design Mode."
+        text: "Použite tlačidlo v hornej časti Vašej aplikácie pre vstup do Dizajnoavcieho módu."
       3:
         image: 'notes/applab_intro_designmode_3.png'
         text: "You can add new elements by dragging them onto the screen. You can move them around to different locations and change their size by dragging the bottom right corner."
