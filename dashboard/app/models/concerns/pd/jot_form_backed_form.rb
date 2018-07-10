@@ -14,6 +14,8 @@ module Pd
     included do
       before_validation :map_answers_to_attributes, if: :answers_changed?
       validates_presence_of :form_id, :submission_id
+
+      scope :placeholders, -> {where(answers: nil)}
     end
 
     CACHE_TTL = 5.minutes.freeze
@@ -24,8 +26,9 @@ module Pd
 
     class_methods do
       def get_last_known_submission_id(form_id)
+        # Ignore placeholders. Get the last known id with answers.
         [
-          where(form_id: form_id).maximum(:submission_id),
+          where(form_id: form_id).where.not(answers: nil).maximum(:submission_id),
           last_known_submission_id_override(form_id)
         ].compact.max
       end
