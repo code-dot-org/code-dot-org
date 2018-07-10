@@ -70,7 +70,7 @@
   congratulations: "Parabéns!"
   congratulations_on_completing_hoc: "Parabéns, você concluiu a Hora do Código"
   congratulations_volunteer: 'Parabéns: agora que você já fez a Hora de Código, <a href="https://code.org/volunteer"> cadastre-se para ser voluntário em uma sala de aula</a> e ajudar estudantes a aprender uma Hora de Código!'
-  congratulations_on_completing_course: "Congratulations on completing %{course}"
+  congratulations_on_completing_course: "Parabéns por ter concluído %{course}"
   congrats_next_tutorials_title: "Passe para o próximo nível"
   congrats_next_tutorials_desc: "Experimente esses tutoriais menores, de 1 hora, ou experimente um <a href=\"%{current_path}/next\">tutorial dos parceiros</a>."
   get_a_certificate_of_achievement: "Obter um certificado de conclusão"

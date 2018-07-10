@@ -31,14 +31,12 @@ zh-TW:
   twentyhours_text: 完成您的第一個小時的程式設計課程了嗎？在此後續課程中你可以瞭解更多資訊科學和程式設計的核心觀念。
   og_title: Code.org：每個人都可以學習
   og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_here: 一小時寫程式來囉！
   og_description: 每一個學校的每一個學生都應該要有學習計算機科學的機會。
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
+  og_description_celeb: 嘗試新的教程，幫你或你的班級贏得跟名人視訊聊天的機會
   csedweek_og_title: 計算機科學教育週
   csedweek_og_description: 2018 年 12 月的 3-9 日。計算機科學是每一個學生都要學習的基礎。
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
+  csedweek_og_description_soon: 一小時寫程式的活動在2018年12月3-9號進行。電腦科學是所有學生應學的基礎課程
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
   hoc2014_heading: 加入<a href="http://hourofcode.com">一小時的程式設計課程</a> <br/>，2014 年 12
@@ -443,9 +441,9 @@ zh-TW:
     free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
     Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_host_event: 舉辦一個麥塊一小時寫程式活動
+  minecraft_teach_resources: 教師資源與教案
+  minecraft_leader_guide: 下載檔案以幫助你計畫與引導一個活動
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
@@ -778,10 +776,10 @@ zh-TW:
   dashboard_course2: 課程 2：
   dashboard_course3: 課程 3：
   dashboard_course4: '課程 4： '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
+  dashboard_coursea: '課程 A: '
+  dashboard_courseb: '課程 B: '
+  dashboard_coursec: '課程 C: '
+  dashboard_coursed: '課程 D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
   dashboard_pre-express: 'Pre-reader Express Course: '
@@ -889,11 +887,11 @@ zh-TW:
   carousel_heading_webpages: 學習如何製作網頁
   carousel_heading_robots: 學習機器人編程
   carousel_heading_ide: 教師愛用的平台
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  carousel_heading_desktop: 在電腦上學寫程式
+  carousel_heading_mobtabelem: 用手機或平板操作
+  carousel_heading_prereader: 給學齡前兒童
+  carousel_heading_beyondblocks: 超越積木式的引導-學習程式語言
+  carousel_heading_nointernet: 網路不穩？安裝App在你的電腦上
   educator_notes: 教師備註
   teach_led_lesson_plans: 一小時教程式計畫
   learn_footer_all_tutorials: 參閲<a href="https://code.org/learn">一小時玩程式教程的完整列表</a>。若要檢視一小時玩程式的準則與提交指南，請<a
