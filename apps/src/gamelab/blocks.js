@@ -268,7 +268,38 @@ export default {
 
       setProcedureParameters(paramNames, paramIds, typeNames) {
         Blockly.Blocks.procedures_callnoreturn.setProcedureParameters.call(this,
-          paramNames.slice(1), paramIds.slice(1), typeNames.slice(1));
+          paramNames.slice(1), paramIds && paramIds.slice(1), typeNames && typeNames.slice(1));
+      },
+
+      mutationToDom() {
+        const container = document.createElement('mutation');
+        for (let x = 0; x < this.currentParameterNames_.length; x++) {
+          const parameter = document.createElement('arg');
+          parameter.setAttribute('name', this.currentParameterNames_[x]);
+          if (this.currentParameterTypes_[x]) {
+            parameter.setAttribute('type', this.currentParameterTypes_[x]);
+          }
+          container.appendChild(parameter);
+        }
+        return container;
+      },
+
+      domToMutation(xmlElement) {
+        this.currentParameterNames_ = [];
+        this.currentParameterTypes_ = [];
+        for (let childNode of xmlElement.childNodes) {
+          if (childNode.nodeName.toLowerCase() === 'arg') {
+            this.currentParameterNames_.push(childNode.getAttribute('name'));
+            this.currentParameterTypes_.push(childNode.getAttribute('type'));
+          }
+        }
+        // Use parameter names as dummy IDs during initialization. Add dummy
+        // "this_sprite" param.
+        this.setProcedureParameters(
+          [null].concat(this.currentParameterNames_),
+          [null].concat(this.currentParameterNames_),
+          [null].concat(this.currentParameterTypes_)
+        );
       },
     };
 
