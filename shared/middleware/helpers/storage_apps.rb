@@ -26,7 +26,7 @@ class StorageApps
       project_type: type,
       published_at: published_at,
       remix_parent_id: remix_parent_id,
-      content_moderation_disabled: false,
+      skip_content_moderation: false,
     }
     row[:id] = @table.insert(row)
 
@@ -145,7 +145,7 @@ class StorageApps
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    row[:content_moderation_disabled]
+    row[:skip_content_moderation]
   end
 
   # Determine if the current user can view the project
@@ -229,7 +229,7 @@ class StorageApps
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    update_content_moderation = @table.where(id: id).exclude(state: 'deleted').update({content_moderation_disabled: disable})
+    update_content_moderation = @table.where(id: id).exclude(state: 'deleted').update({skip_content_moderation: disable})
     raise NotFound, "channel `#{channel_id}` not found" if update_content_moderation == disable
 
     disable

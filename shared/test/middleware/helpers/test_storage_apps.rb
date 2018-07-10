@@ -127,7 +127,7 @@ class StorageAppsTest < Minitest::Test
     # Create a new typeless project
     # content_moderation_disabled should be false by default on project creation for projects of any type.
     new_project_channel_id = storage_apps.create({}, ip: 123)
-    assert_equal false, storage_apps.get_skip_content_moderation_value(new_project_channel_id)
+    assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
   end
 
   def test_change_content_moderation
@@ -137,14 +137,14 @@ class StorageAppsTest < Minitest::Test
     # Create a new typeless project
     # skip_content_moderation should be false by default on project creation for projects of any type.
     new_project_channel_id = storage_apps.create({}, ip: 123)
-    assert_equal false, storage_apps.get_skip_content_moderation_value(new_project_channel_id)
+    assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
 
     # Set skip_content_moderation to true.
     storage_apps.change_content_moderation(new_project_channel_id, true)
-    assert_equal true, storage_apps.get_skip_content_moderation_value(new_project_channel_id)
+    assert_equal true, storage_apps.content_moderation_disabled?(new_project_channel_id)
 
     # Set skip_content_moderation back to false.
     storage_apps.change_content_moderation(new_project_channel_id, false)
-    assert_equal false, storage_apps.get_skip_content_moderation_value(new_project_channel_id)
+    assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
   end
 end
