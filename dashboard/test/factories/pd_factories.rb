@@ -1001,4 +1001,14 @@ FactoryGirl.define do
     association :user
     day 5
   end
+
+  factory :pd_workshop_facilitator_daily_survey, class: 'Pd::WorkshopFacilitatorDailySurvey' do
+    form_id 12345
+    sequence(:submission_id)
+    association :pd_session
+    pd_workshop {pd_session.workshop}
+    association :user
+    association :facilitator
+    day 5
+  end
 end

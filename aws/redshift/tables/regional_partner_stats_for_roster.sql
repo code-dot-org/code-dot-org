@@ -1,6 +1,6 @@
-DROP TABLE if exists analysis.regional_partner_stats_for_roster;
+DROP TABLE if exists analysis_pii.regional_partner_stats_for_roster;
 
-CREATE TABLE analysis.regional_partner_stats_for_roster
+CREATE TABLE analysis_pii.regional_partner_stats_for_roster
 AS
 WITH csf_courses
 AS
@@ -12,7 +12,7 @@ FROM (SELECT DISTINCT studio_person_id,
              school_year_trained,
              school_year_taught,
              script_name
-      FROM analysis.regional_partner_stats_csf
+      FROM analysis_pii.regional_partner_stats_csf
       -- WARNING: this table does include teachers who were trained by facilitators prior to RP taking over, but it is not included in query
       WHERE school_year_trained = school_year_taught
       AND   trained_by_regional_partner = 1
@@ -21,8 +21,8 @@ FROM (SELECT DISTINCT studio_person_id,
 GROUP BY 1,
          2,
          3)
-SELECT *
-FROM (SELECT regional_partner_id,
+-- CSP/D SELECT
+(SELECT regional_partner_id,
              regional_partner_name,
              school_year_trained,
              first_name,
@@ -43,10 +43,11 @@ FROM (SELECT regional_partner_id,
              q2::INTEGER,
              q3::INTEGER,
              q4::INTEGER
-      FROM analysis.regional_partner_stats_csp_csd
-      WHERE school_year_taught = school_year_trained OR school_year_taught is null
-      )
-UNION
+      FROM analysis_pii.regional_partner_stats_csp_csd
+      WHERE school_year_taught = school_year_trained OR school_year_taught is null)
+      
+UNION ALL
+-- CSF SELECT
 (SELECT regional_partner_id,
        regional_partner_name,
        rps.school_year_trained,
@@ -65,7 +66,7 @@ UNION
        NULL::INTEGER AS q2,
        NULL::INTEGER AS q3,
        NULL::INTEGER AS q4
-FROM analysis.regional_partner_stats_csf rps
+FROM analysis_pii.regional_partner_stats_csf rps
 -- this table does NOT include teachers who were trained by facilitators prior to RP taking over
 
   LEFT JOIN csf_courses
@@ -81,9 +82,9 @@ GROUP BY 1,
          6);
 
 GRANT ALL PRIVILEGES
-  ON analysis.regional_partner_stats_for_roster
+  ON analysis_pii.regional_partner_stats_for_roster
   TO GROUP admin;
 
 GRANT SELECT
-  ON analysis.regional_partner_stats_for_roster
+  ON analysis_pii.regional_partner_stats_for_roster
   TO GROUP reader, GROUP reader_pii;

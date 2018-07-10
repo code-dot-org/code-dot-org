@@ -13,8 +13,8 @@
 -- this table will be generated daily from code hosted on github, so need to talk to Ben about how to update that process
 
 
-drop table if exists analysis.regional_partner_stats_csf;
-create table analysis.regional_partner_stats_csf AS
+drop table if exists analysis_pii.regional_partner_stats_csf;
+create table analysis_pii.regional_partner_stats_csf AS
 
 with 
 csf_teachers_trained_temp as 
@@ -101,7 +101,7 @@ pd_facilitators as
          d.school_year as school_year_trained,
          s.school_year as school_year_taught,
          s.script_name,
-         rp.name as regional_partner_name,
+         CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,
          rp.id as regional_partner_id,
          ss_user.school_name school_name,
          ss_user.school_id school_id,
@@ -122,6 +122,7 @@ pd_facilitators as
          case when s.user_id is not null then 1 else 0 end as started,
          case when c.user_id is not null then 1 else 0 end as completed,
          -- sections and students   
+         sa.students_total,         
          sa.sections_of_course,
          sa.students_in_course,
          -- stage number and stage name reached by the majority of students, and number of students who reached the stage in each STARTED course
@@ -129,8 +130,8 @@ pd_facilitators as
           tmp.stage_number_most_progress, 
           tmp.students_stage_most_progress,
           -- student gender
-          sa.students_female as students_female_in_course,
-          sa.students_gender as students_gender_in_course
+          sa.students_female as students_female_total,
+          sa.students_gender as students_gender_total
   FROM csf_teachers_trained_temp d 
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
@@ -172,8 +173,5 @@ pd_facilitators as
          AND sa.script_name = s.script_name
 ;
 
-GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csf TO GROUP admin;
-GRANT SELECT ON analysis.regional_partner_stats_csf TO GROUP reader_pii;
-
-
-
+GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csf TO GROUP admin;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csf TO GROUP reader_pii;
