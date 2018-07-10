@@ -225,12 +225,11 @@ class StorageApps
   #
   def set_content_moderation(channel_id, disable)
     _owner, id = storage_decrypt_channel_id(channel_id)
-
-    row = @table.where(id: id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
-
-    update_content_moderation = @table.where(id: id).exclude(state: 'deleted').update({skip_content_moderation: disable})
-    raise NotFound, "channel `#{channel_id}` not found" if update_content_moderation == disable
+    rows_changed = @table.
+      where(id: id).
+      exclude(state: 'deleted').
+      update({skip_content_moderation: disable})
+    raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
 
     disable
   end
