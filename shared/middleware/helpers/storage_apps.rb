@@ -223,7 +223,7 @@ class StorageApps
   # @raise [NotFound] if the channel does not exist or already has the desired
   # value for content_moderation_disabled.
   #
-  def change_content_moderation(channel_id, disable)
+  def set_content_moderation(channel_id, disable)
     _owner, id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
