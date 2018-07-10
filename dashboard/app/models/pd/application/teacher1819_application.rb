@@ -494,7 +494,7 @@ module Pd::Application
     def principal_greeting
       hash = sanitize_form_data_hash
       title = hash[:principal_title]
-      "#{title.present? ? title : hash[:principal_first_name]} #{hash[:principal_last_name]}"
+      "#{title.presence || hash[:principal_first_name]} #{hash[:principal_last_name]}"
     end
 
     def principal_approval_url
