@@ -934,6 +934,7 @@ describe('sectionAssessmentsRedux', () => {
       });
 
       it('returns an array of objects of studentOverviewDataPropType', () => {
+        const date = new Date();
         const stateWithAssessment = {
           ...rootState,
           sectionData: {
@@ -956,7 +957,7 @@ describe('sectionAssessmentsRedux', () => {
                       multi_correct: 4,
                       multi_count: 10,
                       submitted: true,
-                      timestamp: "2018-06-26T21:05:02.000Z",
+                      timestamp: date,
                       url: "code.org",
                     }
                   }
@@ -974,7 +975,7 @@ describe('sectionAssessmentsRedux', () => {
               numMultipleChoice: 10,
               numMultipleChoiceCorrect: 4,
               isSubmitted: true,
-              submissionTimeStamp: "June 26, 2018 at 5:05:02 PM EDT",
+              submissionTimeStamp: date.toLocaleString(),
               url: "code.org",
             },
             {
