@@ -55,18 +55,16 @@ The priority deadline for 2018 has passed, but we still have openings for our CS
 California (San Diego, East Bay regions)<br>
 Idaho<br>
 Illinois<br>
-Indiana<br>
 Iowa<br>
-Kansas<br>
+Maine<br>
+
 
 [/col-33]
 
 [col-33]
 
-Maine<br>
 Maryland<br>
 Massachusetts<br>
-Missouri<br>
 Montana<br>
 New Jersey<br>
 
