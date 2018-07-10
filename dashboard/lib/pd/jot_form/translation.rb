@@ -52,7 +52,7 @@ module Pd
         )
 
         {
-          result_set: response['resultSet'].slice('offset', 'limit', 'count'),
+          result_set: response['resultSet'].slice('offset', 'limit', 'count').symbolize_keys,
           submissions: response['content'].map {|s| parse_jotform_submission(s)}
         }
       end
