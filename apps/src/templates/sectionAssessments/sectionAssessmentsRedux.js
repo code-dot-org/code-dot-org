@@ -460,13 +460,15 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
     }
     // Transform that data into what we need for this particular table, in this case
     // it is the structure studentOverviewDataPropType
+    const submissionTimeStamp = studentsAssessment.submitted ?
+      new Date(studentsAssessment.timestamp).toLocaleString() : i18n.inProgress();
     return {
       id: studentId,
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
       isSubmitted: studentsAssessment.submitted,
-      submissionTimeStamp: studentsAssessment.submitted ? studentsAssessment.timestamp : i18n.inProgress(),
+      submissionTimeStamp: submissionTimeStamp,
       url: studentsAssessment.url,
     };
   });
