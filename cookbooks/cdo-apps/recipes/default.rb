@@ -30,7 +30,7 @@ apt_package %w(
   enscript
 )
 
-# Provides a Dashboard database fixture for Pegasus tests.
+# Provides Sqlite, an embedded SQL database engine.
 apt_package 'libsqlite3-dev'
 
 # Debian-family packages for building Ruby C extensions
