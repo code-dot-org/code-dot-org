@@ -1432,6 +1432,7 @@ pt-BR:
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
@@ -1567,8 +1568,9 @@ pt-BR:
         face (click here to see the image)
       CSD U5 black white images pixelation 4_2018_instruction: Add eyebrows to the
         smiley face (click here to see the image)
-      CSD U5 black white images pixelation 5_instruction: Draw anything you like
-      CSD U5 black white images pixelation 5_2018_instruction: Draw anything you like
+      CSD U5 black white images pixelation 5_instruction: Desenho algo que você gosta
+      CSD U5 black white images pixelation 5_2018_instruction: Desenho algo que você
+        gosta
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
@@ -4288,8 +4290,8 @@ pt-BR:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
-      Dance Party 1-validated_instruction: 'What do you think will happen when you
-        click on the alien?  '
+      Dance Party 1-validated_instruction: 'O que acha que vai acontecer quando você
+        clicar no alienígena?  '
       Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block
         to make the alien start spinning around.
       Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`,
@@ -4304,17 +4306,17 @@ pt-BR:
         alien when it gets clicked.
       Dance Party 5_instruction: Add code to change the color of each alien when it
         gets clicked.
-      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make
-        each alien stop moving when it is clicked.
-      Dance Party 6_instruction: Use the `stops everything` block to make each alien
-        stop moving when it is clicked.
+      Dance Party 6 - Validated_instruction: Use o bloco 'para tudo' para fazer cada
+        alienígena parar de se mover quando ele for clicado.
+      Dance Party 6_instruction: Use o bloco 'para tudo' para fazer cada alienígena
+        parar de se mover quando ele for clicado.
       Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell`
         that makes all the aliens start doing the same dance move when it's clicked.
       Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes
         all the aliens start doing the same dance move when it's clicked.
       Dance Party Freeplay_instruction: Now create your own alien disco!
-      Dance Party Predict_instruction: 'What do you think will happen when you click
-        on the alien?  '
+      Dance Party Predict_instruction: 'O que acha que vai acontecer quando você clicar
+        no alienígena?  '
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -6325,9 +6327,8 @@ pt-BR:
         </xml>
 
         We also support Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.
-      Test embedded K1 Blockly in instructions_instruction: |-
-        Use three `move west`
-        blocks and one `pick corn` block to solve this puzzle.
+      Test embedded K1 Blockly in instructions_instruction: Use três blocos 'mover
+        para oeste' e um bloco 'pegar o milho' para resolver este enigma.
       Test of comment block_instruction: Drag out the subgoal label block you want.
       Testing Quantum Farmer_instruction: "Uau, que demais! \r\n\r\nEu não sei de
         quantas\npás cheias de terra esse buraco precisa.  \r\nVocê pode escrever
@@ -8533,10 +8534,14 @@ pt-BR:
         when the left and right arrows are pressed. When Kiki is clicked, she\nshould
         throw hearts towards her friends. "
       Vigenere_instruction: Test
-      Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click
-        on the alien?  '
+      Virtual Pet 1 Predict_instruction: 'O que acha que vai acontecer quando você
+        clicar no alienígena?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run"
         and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when
+        Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine
+        touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
         the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make
@@ -8544,6 +8549,8 @@ pt-BR:
         normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable,
         then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when
+        the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe
         collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular
@@ -9240,12 +9247,10 @@ pt-BR:
         o tesouro.
       courseA_collector_loops5_2018_instruction: Use o que você aprendeu para pegar
         todo o tesouro.
-      courseA_collector_loops6_instruction: |-
-        Add blocks to this code to get all of
-        the treasure.
-      courseA_collector_loops6_2018_instruction: |-
-        Add blocks to this code to get
-        all of the treasure.
+      courseA_collector_loops6_instruction: Adicione blocos a este código para pegar
+        todo o tesouro.
+      courseA_collector_loops6_2018_instruction: Adicione blocos a este código para
+        pegar todo o tesouro.
       courseA_collector_loops7_instruction: O que você deve adicionar a este código
         para pegar todo o tesouro?
       courseA_collector_loops7_2018_instruction: O que você deve adicionar a este
@@ -9265,12 +9270,10 @@ pt-BR:
       courseA_collector_loops_challenge1_2018_instruction: '*"Você pode me ajudar
         a identificar alguns bugs?"*'
       courseA_collector_loops_challenge2_instruction: 'Pegar todos os tesouros! '
-      courseA_collector_loops_challenge2kp_instruction: |-
-        Collect at least **3** pieces
-        of treasure to pass this level.
-      courseA_collector_loops_challenge2kp_2018_instruction: |-
-        Collect at least **3**
-        pieces of treasure to pass this level.
+      courseA_collector_loops_challenge2kp_instruction: Colete pelo menos **3** peças
+        do tesouro para passar este nível.
+      courseA_collector_loops_challenge2kp_2018_instruction: Colete pelo menos **3**
+        peças do tesouro para passar este nível.
       courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \n\nPress
         \"Run\" to see her walk up to the treasure and grab it."
       courseA_collector_preLoops2_instruction: "Great!  Now you get to add code yourself!
@@ -9278,15 +9281,13 @@ pt-BR:
       courseA_collector_preLoops3_instruction: |-
         Snap two `E -->` blocks and one `get
         treasure` block to the bottom of the program, then click "Run".
-      courseA_collector_preLoops4_instruction: |-
-        Can you figure out how to solve this
-        puzzle?
+      courseA_collector_preLoops4_instruction: Você consegue descobrir como resolver
+        esse problema?
       courseA_collector_preLoops5_instruction: |-
         Get 1 of these 2 gems to solve this
         puzzle.
-      courseA_collector_preLoops6_instruction: |-
-        Get both pieces of treasure to solve
-        this puzzle.
+      courseA_collector_preLoops6_instruction: Pegue ambas as peças do tesouro para
+        resolver este enigma.
       courseA_collector_preLoops7_instruction: |-
         Get all three piles to pass this
         level.
@@ -9321,9 +9322,8 @@ pt-BR:
         You will need **one** `Move South` block
         and **one** `Move West` block.
       courseA_harvester_loops7_instruction: 'Tente você mesmo! '
-      courseA_harvester_loops8_instruction: |-
-        This is the same puzzle, but now you
-        have to repeat **three** times!
+      courseA_harvester_loops8_instruction: Este é o mesmo enigma, mas agora você
+        tem que repetir **três** vezes!
       courseA_harvester_loops9_instruction: Você consegue descobrir como pegar todo
         o milho?
       courseA_harvester_seq1_instruction: |-
@@ -9335,12 +9335,10 @@ pt-BR:
       courseA_harvester_seq13_instruction: |-
         Play with these blocks to help the harvester
         pick **one** corn.
-      courseA_harvester_seq2_instruction: |-
-        Use three `move west` blocks and one `pick
-        corn` block to solve this puzzle.
-      courseA_harvester_seq3_instruction: |-
-        Use three `Move North` blocks and one
-        `Pick Corn` block.
+      courseA_harvester_seq2_instruction: Use três blocos 'mover para oeste' e um
+        bloco 'pegar o milho' para resolver este enigma.
+      courseA_harvester_seq3_instruction: Use três blocos 'Mover Para o Norte' e um
+        bloco 'Pegar o Milho'.
       courseA_harvester_seq4_instruction: |-
         Add one block to help the harvester pick
         the corn.
@@ -9352,12 +9350,10 @@ pt-BR:
         times!
       courseA_harvester_seq9_instruction: Adicione dois blocos para terminar este
         enigma!
-      courseA_maze_ramp2_2018_instruction: |-
-        Snap all blocks together to finish your
-        code, then click "Run".
-      courseA_maze_ramp2a_2018_instruction: |-
-        Snap all blocks together to finish your
-        code, then click "Run".
+      courseA_maze_ramp2_2018_instruction: Encaixe todos os blocos juntos para finalizar
+        seu código, em seguida clique em "Executar".
+      courseA_maze_ramp2a_2018_instruction: Encaixe todos os blocos juntos para finalizar
+        seu código, em seguida clique em "Executar".
       courseA_maze_ramp3_2018_instruction: |-
         There is one extra block that is going
         to cause the bird to crash. Throw it away by dragging it back to the toolbox.
@@ -9401,9 +9397,8 @@ pt-BR:
         blocks.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
       courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq5a_2018_instruction: |-
-        What can you add to the end of this code
-        to get the bird to the pig?
+      courseA_maze_seq5a_2018_instruction: O que você pode adicionar ao final deste
+        código para levar o pássaro até o porco?
       courseA_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
@@ -9424,18 +9419,14 @@ pt-BR:
       courseA_maze_seq9_2018_instruction: |-
         Debug this level by adding blocks to get
         the bird to the pig!
-      courseA_maze_seq_challenge1_instruction: |-
-        Something is wrong here. Help fix
-        the code to get the bird to the pig!
-      courseA_maze_seq_challenge1_2018_instruction: |-
-        Something is wrong here. Help
-        fix the code to get the bird to the pig!
-      courseA_maze_seq_challenge2_instruction: |-
-        Trace the path to lead the bird to
-        the pig. Avoid TNT or feathers will fly!
-      courseA_maze_seq_challenge2_2018_instruction: |-
-        Trace the path to lead the bird
-        to the pig. Avoid TNT or feathers will fly!
+      courseA_maze_seq_challenge1_instruction: Alguma coisa está errada aqui. Ajude
+        a corrigir o código para levar o pássaro até o porco!
+      courseA_maze_seq_challenge1_2018_instruction: Alguma coisa está errada aqui.
+        Ajude a corrigir o código para levar o pássaro até o porco!
+      courseA_maze_seq_challenge2_instruction: Trace o caminho para levar o pássaro
+        até o porco. Evite a TNT, ou penas vão voar!
+      courseA_maze_seq_challenge2_2018_instruction: Trace o caminho para levar o pássaro
+        até o porco. Evite a TNT, ou penas vão voar!
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
@@ -9710,7 +9701,7 @@ pt-BR:
         Use **2** movement blocks to get the Scrat
         to the acorn.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
-      courseB_maze_seq5_2018_instruction: Now try this puzzle from the start!
+      courseB_maze_seq5_2018_instruction: Este enigma é um pouco complicado!
       courseB_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
@@ -9841,10 +9832,8 @@ pt-BR:
         Help BB-8 gather the glowing scrap
         metal
       courseB_starWars_prog1_2018_instruction: '"Go get the scrap metal, BB-8!"'
-      courseB_starWars_prog2_instruction: |-
-        Help BB-8 gather **all** of the glowing
-        scrap metal
-      courseB_starWars_prog2_2018_instruction: Get all the metal.
+      courseB_starWars_prog2_instruction: Pegue todo o metal.
+      courseB_starWars_prog2_2018_instruction: Pegue todo o metal.
       courseB_starWars_prog3_instruction: |-
         Help BB-8 gather **all** of the glowing
         scrap metal
@@ -10231,8 +10220,8 @@ pt-BR:
       courseC_harvester_loops2_2018_instruction: |-
         Can you combine two different loops
         to move toward the pumpkins, then collect them all?
-      courseC_harvester_loops3_instruction: Collect all of the pumpkins.
-      courseC_harvester_loops3_2018_instruction: Collect all of the pumpkins.
+      courseC_harvester_loops3_instruction: Colete todas as abóboras.
+      courseC_harvester_loops3_2018_instruction: Colete todas as abóboras.
       courseC_harvester_loops4_instruction: |-
         Collect all of the corn and all of the
         pumpkins.
@@ -11904,8 +11893,8 @@ pt-BR:
       courseE_farmer_concept1_2018_instruction: |-
         Can you write a program that fills
         these holes until the ground is even?
-      courseE_farmer_concept2_instruction: Collect all of the pumpkins.
-      courseE_farmer_concept2_2018_instruction: Collect all of the pumpkins.
+      courseE_farmer_concept2_instruction: Colete todas as abóboras.
+      courseE_farmer_concept2_2018_instruction: Colete todas as abóboras.
       courseE_farmer_concept3_instruction: |-
         Fill in the hole at the end of each of
         these paths.
@@ -12589,9 +12578,8 @@ pt-BR:
       courseF_bee_conditionals8_2018_instruction: |-
         Collect nectar if there is a flower.
         Otherwise, make honey (because there is a honeycomb).
-      courseF_bee_for1_instruction: |-
-        Collect the nectar from each flower using the
-        fewest blocks possible.
+      courseF_bee_for1_instruction: Colete o nectar de cada flor usando o menor número
+        de blocos possíveis.
       courseF_bee_for10_instruction: "**Challenge:** Take what you've learned about\n`for`
         loops and try to solve this problem. "
       courseF_bee_for10_2018_instruction: "**Challenge:** Take what you've learned\nabout
@@ -12602,9 +12590,8 @@ pt-BR:
       courseF_bee_for11_2018_instruction: |-
         What should your increment be to collect
         15, then 12, then 9, 6, 3 nectar?
-      courseF_bee_for1_2018_instruction: |-
-        Collect the nectar from each flower using
-        the fewest blocks possible.
+      courseF_bee_for1_2018_instruction: Colete o nectar de cada flor usando o menor
+        número de blocos possíveis.
       courseF_bee_for2_instruction: |-
         Write the code to help the bee collect all of
         the nectar.
@@ -12799,8 +12786,8 @@ pt-BR:
         puzzle
       courseF_bee_variables_6_2018_instruction: "**Challenge** Now give this puzzle
         a try!"
-      courseF_bee_variables_7_2018_instruction: This puzzle is a little different.  What
-        do you need to do to solve it?
+      courseF_bee_variables_7_2018_instruction: Este enigma é um pouco diferente.
+        O que você precisa para resolvê-lo?
       courseF_bee_variables_8_2018_instruction: How many nectar will the bee collect
         from this flower?
       courseF_farmer_ramp11_instruction: |-

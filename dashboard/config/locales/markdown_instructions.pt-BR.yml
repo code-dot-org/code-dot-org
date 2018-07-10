@@ -9084,6 +9084,25 @@ pt-BR:
         * **Run the code** to draw your first sprite on the screen.
 
         _Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._
+      CSD U3 Sprites intro sprites_2018 - Validation Test_markdown_instruction: |-
+        # Sprites
+
+        **Creating Sprites:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.
+
+        **Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.
+
+        <img src="https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png" style="width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px">
+
+        # Do This
+
+        This program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.
+
+        * Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.
+        \t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.
+        * Add `drawSprites()` under the comment `Drawing`.
+        * **Run the code** to draw your first sprite on the screen.
+
+        _Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._
       CSD U3 Sprites intro sprites_2018_markdown_instruction: |-
         # Sprites
 
@@ -30192,6 +30211,10 @@ pt-BR:
         30% discount"
       MC Agent Freeplay_markdown_instruction: "**Jogo Livre:** Agora é com você! Use
         o código do Agent para ajudá-lo a explorar este mundo."
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "Some games let you keep score.
+        Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself
+        a point when you tag them.  \n  \n  Reach five points to win!"
       MC_2017_Ryan_02_markdown_instruction: "Code like this can be made even shorter
         using loops!  \n\nNow get the Agent to the pressure plate using a `repeat`
         loop to help him move forward."
@@ -47659,6 +47682,12 @@ pt-BR:
         her?
       Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe.
         What do you think will happen if you press run and then click on her?
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "There's a mud puddle
+        over in the corner.  \n\nCreate an **event** so that when Geraldine touches
+        the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 2 - Validated_markdown_instruction: "There's a mud puddle over in
+        the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle,
+        her color changes to brown.  \n\n---"
       Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner.
         Create an **event** so that when Geraldine touches the puddle, her color changes
         to brown.
@@ -47671,6 +47700,9 @@ pt-BR:
       Virtual Pet 4_markdown_instruction: We don't want to wait for the giraffe to
         clean itself every time. Add a behavior to your soap to make it draggable,
         then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_markdown_instruction: "All of this play takes energy!
+        \ \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks
+        by 5) each time it collides with another sprite.  \n"
       Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions
         to each event so that when the giraffe collides with each sprite, it gets
         a little smaller (shrinks by 5).
@@ -49604,8 +49636,8 @@ pt-BR:
       courseC_harvester_loops2_2018_markdown_instruction: |-
         Can you combine two different
         loops to move toward the pumpkins, then collect them all?
-      courseC_harvester_loops3_markdown_instruction: Collect all of the pumpkins.
-      courseC_harvester_loops3_2018_markdown_instruction: Collect all of the pumpkins.
+      courseC_harvester_loops3_markdown_instruction: Colete todas as abóboras.
+      courseC_harvester_loops3_2018_markdown_instruction: Colete todas as abóboras.
       courseC_harvester_loops4_markdown_instruction: |-
         Now there is corn growing, too!
 
@@ -49774,10 +49806,10 @@ pt-BR:
       courseC_maze_programming9_2018_markdown_instruction: |-
         *"Now, help me sneak
         up on the pig any way you want to!"*
-      courseC_maze_programming_challenge1_markdown_instruction: "The bird needs your\nhelp!
-        The pig is hiding, and the goal is to find it. "
-      courseC_maze_programming_challenge1_2018_markdown_instruction: "The bird needs\nyour
-        help! The pig is hiding, and the goal is to find it. "
+      courseC_maze_programming_challenge1_markdown_instruction: 'O pássaro precisa
+        de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
+      courseC_maze_programming_challenge1_2018_markdown_instruction: 'O pássaro precisa
+        de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge2_markdown_instruction: |-
         Sometimes there
         is more than one way to solve the same problem. Sometimes it's faster to
@@ -50333,16 +50365,14 @@ pt-BR:
         underneath every cloud to see if it is hiding a flower before you get nectar.
         If there is a flower underneath the cloud, the bee will need to get nectar
         *once*.  \n\nRemember: Not all clouds hide the same thing!"
-      courseD_bee_conditionals3_markdown_instruction: |-
-        You can only collect nectar
-        from flowers, but you can check any space to see if there is a flower. If
-        there is a flower under any of these clouds, the bee will need to collect
-        nectar *once*.
-      courseD_bee_conditionals3_2018_markdown_instruction: |-
-        You can only collect
-        nectar from flowers, but you can check any space to see if there is a flower.
-        If there is a flower under any of these clouds, the bee will need to collect
-        nectar *once*.
+      courseD_bee_conditionals3_markdown_instruction: Você só pode coletar nectar
+        das flores, mas você pode verificar qualquer espaço para ver se há uma flor.
+        Se existe uma flor embaixo de alguma das nuvens, a abelha precisará coletar
+        o nectar *uma vez*.
+      courseD_bee_conditionals3_2018_markdown_instruction: Você só pode coletar nectar
+        das flores, mas você pode verificar qualquer espaço para ver se há uma flor.
+        Se existe uma flor embaixo de alguma das nuvens, a abelha precisará coletar
+        o nectar *uma vez*.
       courseD_bee_conditionals4_markdown_instruction: |-
         In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.
 
@@ -52987,58 +53017,44 @@ pt-BR:
         other feedback you have about the units of this course.
       csd-post-survey-2018-topics-want-FR_markdown_instruction: What other topics
         are you interested in learning about in the future?
-      csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U1Ch2_2018_markdown_instruction: Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U2Ch1_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U2Ch2_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U3Ch1_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U3Ch2_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U4Ch1_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U4Ch1_2018_markdown_instruction: Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U4Ch2_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U4Ch2_2018_markdown_instruction: Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U5Ch1_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U5Ch1_2018_markdown_instruction: Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U5Ch2_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U5Ch2_2018_markdown_instruction: Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U6Ch1_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U6Ch1_2018_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U6Ch2_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response U6Ch2_2018_markdown_instruction: |-
-        Anything
-        else you’d like your teacher to know?
-      csd-pulse-check-survey-1-free-response_markdown_instruction: |-
-        Anything else
-        you’d like your teacher to know?
+      csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U1Ch2_2018_markdown_instruction: Mais
+        alguma coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U2Ch1_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U2Ch2_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U3Ch1_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U3Ch2_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U4Ch1_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U4Ch1_2018_markdown_instruction: Mais
+        alguma coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U4Ch2_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U4Ch2_2018_markdown_instruction: Mais
+        alguma coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U5Ch1_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U5Ch1_2018_markdown_instruction: Mais
+        alguma coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U5Ch2_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U5Ch2_2018_markdown_instruction: Mais
+        alguma coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U6Ch1_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U6Ch1_2018_markdown_instruction: Mais
+        alguma coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U6Ch2_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response U6Ch2_2018_markdown_instruction: Mais
+        alguma coisa que você gostaria que o professor soubesse?
+      csd-pulse-check-survey-1-free-response_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
       csd-thursday-facilitation_markdown_instruction: |
         # Thursday Facilitation Reflection
 
@@ -54225,51 +54241,40 @@ pt-BR:
       csp-pre-survey-2017-q38_2018_markdown_instruction: |-
         If yes, what computer science
         course(s) had you taken before your current computer science class?
-      csp-pulse-check-survey-1-q6-FR-U1Ch2_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-1-q6-FR-U1Ch2_2018_markdown_instruction: |-
-        Anything else
-        you’d like your teacher to know?
-      csp-pulse-check-survey-2-q6-FR-U2Ch1_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-2-q6-FR-U2Ch1_2018_markdown_instruction: Anything else
-        you’d like your teacher to know?
-      csp-pulse-check-survey-3-q6-FR-U2Ch2_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-3-q6-FR-U2Ch2_2018_markdown_instruction: Anything else
-        you’d like your teacher to know?
-      csp-pulse-check-survey-4-q6-FR-U3Ch1_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-4-q6-FR-U3Ch1_2018_markdown_instruction: Anything else
-        you’d like your teacher to know?
-      csp-pulse-check-survey-5-q6-FR-U4Ch1_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-5-q6-FR-U4Ch1_2018_markdown_instruction: Anything else
-        you’d like your teacher to know?
-      csp-pulse-check-survey-6-q6-FR-U4Ch2_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-6-q6-FR-U5Ch1_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-6-q6-FR-U5Ch1_2018_markdown_instruction: Anything else
-        you’d like your teacher to know?
-      csp-pulse-check-survey-7-q6-FR-U5Ch1_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-7-q6-FR-U5Ch2_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
-      csp-pulse-check-survey-7-q6-FR-U5Ch2_2018_markdown_instruction: Anything else
-        you’d like your teacher to know?
-      csp-pulse-check-survey-8-q6-FR-U5Ch2_markdown_instruction: |-
-        Anything else you’d
-        like your teacher to know?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-1-q6-FR-U1Ch2_2018_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-2-q6-FR-U2Ch1_2018_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-3-q6-FR-U2Ch2_2018_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-4-q6-FR-U3Ch1_2018_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-5-q6-FR-U4Ch1_2018_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-6-q6-FR-U4Ch2_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-6-q6-FR-U5Ch1_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-6-q6-FR-U5Ch1_2018_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-7-q6-FR-U5Ch1_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-7-q6-FR-U5Ch2_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-7-q6-FR-U5Ch2_2018_markdown_instruction: Mais alguma
+        coisa que você gostaria que o professor soubesse?
+      csp-pulse-check-survey-8-q6-FR-U5Ch2_markdown_instruction: Mais alguma coisa
+        que você gostaria que o professor soubesse?
       csp-thursday-facilitation_markdown_instruction: |-
         # Thursday Facilitation Reflection
 
@@ -58179,12 +58184,10 @@ pt-BR:
       ramp_artist_loops8_clone_markdown_instruction: |-
         **Challenge:** Look for a pattern
         and make this code shorter using loops.
-      ramp_artist_loops9_markdown_instruction: |-
-        Solve this puzzle by drawing a square
-        with 200 pixel sides.
-      ramp_artist_loops9_2018_markdown_instruction: |-
-        Solve this puzzle by drawing
-        a square with 200 pixel sides.
+      ramp_artist_loops9_markdown_instruction: Resolva este enigma desenhando um quadrado
+        com lados de 200 pixels.
+      ramp_artist_loops9_2018_markdown_instruction: Resolva este enigma desenhando
+        um quadrado com lados de 200 pixels.
       recruiting-thursday_markdown_instruction: |
         # Day 4: Recruiting
 
