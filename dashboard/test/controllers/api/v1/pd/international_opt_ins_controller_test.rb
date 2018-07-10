@@ -56,4 +56,31 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestC
 
     assert_response :bad_request
   end
+
+  test 'students can not create a new international opt-in' do
+    student = create :student
+    sign_in student
+
+    assert_does_not_create Pd::InternationalOptIn do
+      put :create, params: {
+        form_data: SAMPLE_FORM_DATA,
+        user: student
+      }
+      assert_response :forbidden
+    end
+
+    assert_response :forbidden
+  end
+
+  test 'user required to create a new international opt-in' do
+    assert_does_not_create Pd::InternationalOptIn do
+      put :create, params: {
+        form_data: SAMPLE_FORM_DATA,
+        user: nil
+      }
+      assert_response :redirect
+    end
+
+    assert_response :redirect
+  end
 end
