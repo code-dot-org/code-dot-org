@@ -238,6 +238,7 @@ export default {
 
         this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        this.currentParameterNames_ = [];
       },
 
       openEditor(e) {
@@ -259,6 +260,15 @@ export default {
         if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
+      },
+
+      getCallName() {
+        return this.getTitleValue('VAR');
+      },
+
+      setProcedureParameters(paramNames, paramIds, typeNames) {
+        Blockly.Blocks.procedures_callnoreturn.setProcedureParameters.call(this,
+          paramNames.slice(1), paramIds.slice(1), typeNames.slice(1));
       },
     };
 
