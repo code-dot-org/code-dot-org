@@ -22,7 +22,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
         handleClose={onCancel}
       >
         <div style={styles.container}>
-          <Header text={i18n.removeStudentHeader()}/>
+          <Header text={i18n.removeStudentHeaderNew()}/>
           <p>
             <strong>{i18n.removeStudentBody1()}</strong>
             {' '}
