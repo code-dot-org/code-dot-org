@@ -2048,7 +2048,7 @@ fi:
             'Unplugged: The Design Recipe':
               name: 'Tietokoneeton tekeminen: suunnitteluresepti'
         AlgebraB:
-          title: Tietotekniikkaa algebraan
+          title: 'Tietotekniikkaa algebraan'
           description: Opi funktionaalista ohjelmointia algebran avulla
           description_short: Opi funktionaalista ohjelmointia algebran avulla
           description_audience: ''
@@ -9530,6 +9530,16 @@ fi:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''
