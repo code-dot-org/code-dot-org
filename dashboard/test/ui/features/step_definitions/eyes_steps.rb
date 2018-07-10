@@ -53,18 +53,11 @@ And(/^I close my eyes$/) do
   end
 end
 
-And(/^I see no difference for "([^"]*)"$/) do |identifier|
-  next if CDO.disable_all_eyes_running
-
-  @eyes.check_window(identifier, MATCH_TIMEOUT)
-end
-
-# Temporary step used by tests that have diffs between when they execute in the test environment vs a CircleCI
-# build, so that we can enable Applitools / Github integration.
-# TODO: (suresh) Remove this step and revert tests to call "I see now difference for" when the tests have been modified
-# to work identically in both our test server and in CircleCI environments.
-And(/^I see no difference in test environment for "([^"]*)"$/) do |identifier|
-  next if CDO.disable_all_eyes_running || ENV[IS_CIRCLE]
+And(/^I see no difference for "([^"]*)"( in test environment)?$/) do |identifier, is_test_environment|
+  # Temporarily disable Eyes checkpoint in CircleCI environments for tests that specify " in test environment" because
+  # they generate different checkpoint images in the dedicated test environment vs in CircleCI builds.
+  # TODO: (suresh) remove the optional environment argument when there are no more tests using this option.
+  next if CDO.disable_all_eyes_running || (is_test_environment && ENV[IS_CIRCLE] == 'true')
 
   @eyes.check_window(identifier, MATCH_TIMEOUT)
 end
