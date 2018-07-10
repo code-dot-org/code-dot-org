@@ -756,6 +756,7 @@
   "nextStage": "Congratulations! You completed {stageName}.",
   "nextStageTrophies": "Congratulations! You completed {stageName} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "no": "No",
+  "noAssessments": "It looks like there are no multi-question assessments or surveys in this course. Instead, you can measure the students’ progress using the 'Progress' tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans.",
   "noClassroomsFound": "No classrooms found.",
   "noIconsFound": "No icons found",
   "noMenuItemsAvailable": "No menu items available.",
