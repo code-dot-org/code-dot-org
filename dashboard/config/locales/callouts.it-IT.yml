@@ -188,6 +188,7 @@ it:
       CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro predict_2018_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: {}
       CSD U3 Sprites intro sprites_2018_callout: {}
       CSD U3 Sprites scene challenge_callout: {}
       CSD U3 Sprites scene challenge_2018_callout: {}
@@ -1059,8 +1060,8 @@ it:
           cambialo con qualunque cosa vuoi!
       course4_bee_for_challenge1_callout: {}
       course4_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col
-          mais, ma le altre verdure?
+        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
+          le pannocchie, ma con le altre verdure?
       course4_collector_nested_loops_challenge2_callout: {}
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: Questo numero ti dice quanti di questi blocchi puoi
@@ -1720,11 +1721,11 @@ it:
         courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere
           gli attori in diverse parti dello spazio di gioco.
       courseE_playLab_scaffold3_callout:
-        courseE_playLab_scaffold3_1: Porta l'attore su questa bandiera per andare
-          al livello successivo.
+        courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
+          per passare all'esercizio successivo.
       courseE_playLab_scaffold3_2018_callout:
-        courseE_playLab_scaffold3_1: Porta l'attore su questa bandiera per andare
-          al livello successivo.
+        courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
+          per passare all'esercizio successivo.
       courseF_IceAge_1_callout:
         playlab_drag_say_a: Trascina qui il blocco `attore 1 dice` and digita "Hello!"
       courseF_IceAge_10_callout: {}
@@ -1918,11 +1919,11 @@ it:
       courseF_bee_fwp4_2018_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col
-          mais, ma le altre verdure?
+        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
+          le pannocchie, ma con le altre verdure?
       courseF_bee_fwp_challenge2_2018_callout:
-        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col
-          mais, ma le altre verdure?
+        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
+          le pannocchie, ma con le altre verdure?
       courseF_bee_variables_1_2018_callout:
         courseF_bee_functions_1_2018_1: You can find your variables under here!
       courseF_bee_variables_2_2018_callout: {}

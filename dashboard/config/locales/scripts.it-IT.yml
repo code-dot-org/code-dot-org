@@ -1261,7 +1261,7 @@ it:
             Getting Started:
               name: Getting Started
             Looking Ahead:
-              name: Looking Ahead
+              name: Uno Sguardo Avanti
             'Mastering the Basics: Conditionals':
               name: 'Mastering the Basics: Conditionals'
             'Mastering the Basics: Events':
@@ -4993,7 +4993,7 @@ it:
             'Loops: Happy Loops':
               name: 'Cicli: Cicli Felici'
             Loops in Collector:
-              name: Cicli con il Collezionista
+              name: Cicli con la Collezionista
             Loops in Artist:
               name: Cicli con l'Artista
             'Events: The Big Event':
@@ -5034,7 +5034,7 @@ it:
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
-              name: Cicli con il Collezionista
+              name: Cicli con la Collezionista
             Loops in Artist:
               name: Cicli con l'Artista
             'Events: The Big Event':
@@ -5116,7 +5116,7 @@ it:
             Debugging in Bee:
               name: Debugging in Bee
             While Loops in Farmer:
-              name: Cicli Mentre con la Contadina
+              name: Cicli "Mentre" con la Contadina
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals with Bee:
@@ -5140,7 +5140,7 @@ it:
             Artist Binary:
               name: 'Artista: Binario'
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Cicli Annidati con l'Ape
             Nested Loops:
               name: Cicli Annidati
             Introduction:
@@ -5234,7 +5234,7 @@ it:
             Build Your Project:
               name: Realizza il Tuo Progetto
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
             Presentation Your Project:
               name: Presenta il Tuo Progetto
             Try programming with Khan Academy:
@@ -7180,11 +7180,11 @@ it:
                 studenti dovranno essere condotti a desiderare un modo più semplice
                 per risolvere problemi banali.
             Loops in Collector:
-              name: Cicli con il Collezionista
+              name: Cicli con la Collezionista
               description_student: ''
               description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
                 in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
-                cicli per raccogliere dei diamanti in modo più efficiente su Code.org.
+                cicli per raccogliere dei diamanti su Code.org in modo più efficiente.
             Loops in Artist:
               name: Cicli con l'Artista
               description_student: ''
@@ -7235,7 +7235,7 @@ it:
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
-              name: Cicli con il Collezionista
+              name: Cicli con la Collezionista
             Loops in Artist:
               name: Cicli con l'Artista
             'Events: The Big Event':
@@ -7368,7 +7368,7 @@ it:
             Debugging in Bee:
               name: Debugging in Bee
             While Loops in Farmer:
-              name: Cicli Mentre con la Contadina
+              name: Cicli "Mentre" con la Contadina
               description_student: 'I cicli sono molto utili nella programmazione.
                 Grazie a questa lezione imparerai un nuovo tipo di cicli: i cicli
                 "mentre"!'
@@ -7582,7 +7582,7 @@ it:
                 of the project. The lesson guide for all four stages of the process
                 can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
             Presentation Your Project:
               name: Presenta il Tuo Progetto
             'Algorithms: Dice Race':
@@ -7706,7 +7706,7 @@ it:
             'Programming: My Robotic Friends':
               name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
-              name: 'Labirinto: Sequenze'
+              name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
               name: Costruire le Fondamenta
             Debugging with Scrat:
@@ -7718,7 +7718,7 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
             Nested Loops:
@@ -7727,13 +7727,13 @@ it:
               name: Funzioni con la Contadina
           title: Corso E
           assignment_family_title: Corso E
-          description_audience: 'Ages: 8-12'
+          description_audience: Da 8 a 12 anni
           description_short: Quickly cover concepts in Course C & D and then go further
             with functions.
-          description: Start coding with algorithms, loops, conditionals, and events
-            and then you’ll move on functions. In the second part of this course,
-            design and create a capstone project you can share with your friends and
-            family.
+          description: Si inizia con algoritmi, cicli, istruzioni condizionali ed
+            eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
+            puoi progettare e creare un progetto finale che potrai condividere con
+            i tuoi amici e familiari.
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -7908,7 +7908,7 @@ it:
                 The lesson guide overviewing all five stages of the process can be
                 found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
               description_student: Rome wasn't built in a day and your project shouldn't
                 be, either. Take time to edit and revise your project to make it the
                 best it can be.
@@ -7945,7 +7945,7 @@ it:
             'Programming: My Robotic Friends':
               name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
-              name: 'Labirinto: Sequenze'
+              name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
               name: Costruire le Fondamenta
             Debugging with Scrat:
@@ -7957,12 +7957,12 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
           title: Corso F
           assignment_family_title: Corso F
-          description_audience: 'Ages: 9-13'
+          description_audience: Da 9 a 13 anni
           description_short: Learn all the concepts in Computer Science Fundamentals
             and create your own art, story or game.
           description: Learn to use different kinds of loops, events, functions, and
@@ -8290,7 +8290,7 @@ it:
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             While Loops in Farmer:
-              name: Cicli Mentre con la Contadina
+              name: Cicli "Mentre" con la Contadina
             Conditionals & Loops in Maze:
               name: Istruzioni Condizionali & Cicli nel Labirinto
             Conditionals in Minecraft:
@@ -8324,7 +8324,7 @@ it:
             Build Your Project:
               name: Realizza il Tuo Progetto
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
             Present Your Project:
               name: Presenta il Tuo Progetto
             Nested Loops Project in Frozen:
@@ -8356,7 +8356,7 @@ it:
             Conditionals & Loops in Harvester:
               name: Istruzioni Condizionali & Cicli con la Contadina
             Until Loops in Maze:
-              name: Until Loops in Maze
+              name: Cicli "Fino a Che" con il Labirinto
           title: Corso Rapido
           assignment_family_title: Corso Rapido
           description_audience: 'Ages: 9-18'
@@ -8385,7 +8385,7 @@ it:
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
-              name: Cicli con il Collezionista
+              name: Cicli con la Collezionista
             Loops in Artist:
               name: Cicli con l'Artista
             'Events: The Big Event':
@@ -8603,11 +8603,11 @@ it:
             Crowdsourcing:
               name: Crowdsourcing (Intelligenza Collettiva)
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Cicli Annidati con l'Ape
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Cicli Annidati con l'Ape e lo Zombie
             Sequence in Maze:
-              name: 'Labirinto: Sequenze'
+              name: Sequenze di Istruzioni con il Labirinto
           title: Course E & F Ramp
           description_audience: ''
           description_short: ''
@@ -8631,7 +8631,7 @@ it:
             Debugging in Collector:
               name: Debugging con la Collezionista
             While Loops in Farmer:
-              name: Cicli Mentre con la Contadina
+              name: Cicli "Mentre" con la Contadina
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals in Bee:
@@ -8653,10 +8653,10 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Cicli Annidati con l'Ape
             Loops in Ice Age:
-              name: Loops in Ice Age
-          title: New Course D Script
+              name: Cicli con l'Era Glaciale
+          title: Corso D
           description_audience: ''
           description_short: ''
           description: ''
@@ -8705,7 +8705,7 @@ it:
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             While Loops in Farmer:
-              name: Cicli Mentre con la Contadina
+              name: Cicli "Mentre" con la Contadina
             Conditional Loops in Maze:
               name: Conditional Loops in Maze
             Conditionals in Minecraft:
@@ -8739,7 +8739,7 @@ it:
             Build Your Project:
               name: Realizza il Tuo Progetto
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
             Present Your Project:
               name: Presenta il Tuo Progetto
             Building a Foundation:
@@ -8773,7 +8773,7 @@ it:
             'Programming: My Robotic Friends':
               name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
-              name: 'Labirinto: Sequenze'
+              name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
               name: Costruire le Fondamenta
             Debugging with Scrat:
@@ -8785,7 +8785,7 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
             'Algorithms: Dice Race':
@@ -8831,7 +8831,7 @@ it:
             'Programming: My Robotic Friends':
               name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
-              name: 'Labirinto: Sequenze'
+              name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
               name: Costruire le Fondamenta
             Debugging with Scrat:
@@ -8843,7 +8843,7 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
             'Algorithms: Tangrams':
@@ -8883,7 +8883,7 @@ it:
             Build Your Project:
               name: Realizza il Tuo Progetto
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
             Present Your Project:
               name: Presenta il Tuo Progetto
           title: New Script for F
@@ -9282,7 +9282,7 @@ it:
             'Programming: My Robotic Friends':
               name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
-              name: 'Labirinto: Sequenze'
+              name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
               name: Costruire le Fondamenta
             Debugging with Scrat:
@@ -9344,7 +9344,7 @@ it:
             'Programming: My Robotic Friends':
               name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
-              name: 'Labirinto: Sequenze'
+              name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
               name: Costruire le Fondamenta
             Debugging with Scrat:
@@ -9356,7 +9356,7 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
             'Algorithms: Tangrams':
@@ -9396,7 +9396,7 @@ it:
             Build Your Project:
               name: Realizza il Tuo Progetto
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
             Present Your Project:
               name: Presenta il Tuo Progetto
           title: Course F 2018
@@ -10123,7 +10123,7 @@ it:
                 Se avete più tempo, non esitate a prolungare la durata della fase
                 di costruzione e revisione dell'attività Corsa delle Biglie.
             'Real-life Algorithms: Plant a Seed':
-              name: Pianta un seme
+              name: Pianta un Seme
               description_student: ''
               description_teacher: In questa lezione, gli studenti metteranno in relazione
                 il concetto di algoritmo con le attività di ogni giorno, nella vita
@@ -10167,20 +10167,20 @@ it:
                 Gli studenti scoprono anche che possono raggiungere luoghi interessanti
                 online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
-              name: 'Cicli: Cicli Felici'
+              name: Cicli Felici
               description_student: ''
               description_teacher: I cicli sono uno strumento molto utile e potente
                 nella programmazione. Per capire quanto utili possono essere, gli
                 studenti dovranno essere condotti a desiderare un modo più semplice
                 per risolvere problemi banali.
             Loops in Collector:
-              name: Cicli con il Collezionista
+              name: Cicli con la Collezionista
               description_student: ''
               description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
                 in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
-                cicli per raccogliere dei diamanti in modo più efficiente su Code.org.
+                cicli per raccogliere dei diamanti su Code.org in modo più efficiente.
             Loops in Artist:
-              name: Cicli con l'Artista
+              name: Al mare con i Cicli
               description_student: ''
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
                 immagini ripetendo semplici sequenze di istruzioni. Nella precedente
@@ -10196,7 +10196,7 @@ it:
                 proprio programma risponda all'utente esattamente quando l'utente
                 ne ha bisogno. Gli eventi servono proprio a questo.
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: In Movimento con gli Eventi
               description_student: ''
               description_teacher: In questa attività online, gli studenti avranno
                 l'opportunità di imparare a utilizzare gli eventi del Laboratorio
@@ -10204,13 +10204,13 @@ it:
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 una storia nel Laboratorio!
             Programming in Bee:
-              name: Programmare in Ape
+              name: Programmare l'Ape
             Programming in Harvester:
               name: Programmazione con la Contadina
             Loops in Harvester:
               name: Cicli con la Contadina
             Sequencing in Maze:
-              name: Sequencing in Maze
+              name: Sequenze di istruzioni con Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie e il Grande Progetto
         express-2018:
@@ -10287,7 +10287,7 @@ it:
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
-              name: Cicli Mentre con la Contadina
+              name: Cicli "Mentre" con la Contadina
               description_student: ''
               description_teacher: ''
             Conditional Loops in Maze:
@@ -10319,11 +10319,11 @@ it:
               description_student: ''
               description_teacher: ''
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Cicli con Contatore con l'Ape
               description_student: ''
               description_teacher: ''
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Cicli con Contatore con l'Artista
               description_student: ''
               description_teacher: ''
             'Functions: Songwriting with Parameters':
@@ -10355,7 +10355,7 @@ it:
               description_student: ''
               description_teacher: ''
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
               description_student: ''
               description_teacher: ''
             Present Your Project:
@@ -10365,7 +10365,7 @@ it:
             Conditionals in Bee:
               name: Istruzioni Condizionali con l'Ape
             Until Loops in Maze:
-              name: Until Loops in Maze
+              name: Cicli "Fino a Che" con il Labirinto
             Programming in Maze:
               name: Programmazione nel Labirinto
             Debugging in Maze:
@@ -10379,11 +10379,11 @@ it:
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Diritti d'Autore e Creatività
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Uno Sguardo Avanti con Minecraft
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Cicli Annidati con l'Ape
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             Conditionals with Cards:
@@ -10393,7 +10393,7 @@ it:
             'Functions: Songwriting':
               name: Composizione di Canzoni - Parametri
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Funzioni con Minecraft
             Functions in Harvester:
               name: Funzioni con la Contadina
             Functions in Artist:
@@ -10409,19 +10409,19 @@ it:
             Envelope Variables:
               name: Variabili e Buste
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variabili con l'Artista
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Modifica delle Variabili con l'Ape
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Modifica delle Variabili con l'Artista
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Introduzione al Laboratorio dei Personaggi
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Discoteca Aliena
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Giraffa Domestica
             Binary Bracelets:
               name: Braccialetti Binari
             'Unplugged: Binary':
@@ -10435,13 +10435,12 @@ it:
             Relay Programming:
               name: Programmazione a Staffetta
         courseb-2018:
-          title: Corso B
+          title: Corso B (2018)
           assignment_family_title: Corso B
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
           description_short: Introduzione all'informatica per alunni che devono imparare
-            a leggere. (Simile al Corso A, ma con maggior varietà per bambini leggermente
-            più grandi.)
+            a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: Da 5 a 8 anni
           stages:
             'Debugging: Unspotted Bugs':
@@ -10465,7 +10464,7 @@ it:
               description_student: ''
               description_teacher: ''
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: 'Programmazione: I Miei Amici Robotici per i più piccoli'
               description_student: ''
               description_teacher: ''
             Programming in Maze:
@@ -10477,15 +10476,15 @@ it:
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I Miei Ciclici Amici Robotici per i più piccoli'
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Cicli con il Collezionista
+              name: Cicli con la Collezionista
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Cicli con l'Artistad
+              name: Disegnare Giardini con i Cicli
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -10497,21 +10496,25 @@ it:
               description_student: ''
               description_teacher: ''
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programmare con Scrat
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Cicli con Scrat
             Sequencing with Scrat:
-              name: Sequencing with Scrat
+              name: Sequenze di istruzioni con Scrat
             Move It, Move It:
               name: Muovilo, muovilo
             Copyright and Creativity:
               name: Copyright and Creativity
         coursed-2018:
-          title: New Course D Script
+          title: Corso D (2018)
           assignment_family_title: Corso D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Gli studenti sviluppano la comprensione dei cicli annidati,
+            dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre
+            alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza
+            digitale.
+          description_short: Impara le istruzioni condizionali e sviluppa le tue capacità
+            artistiche per cerare un disegno, una storia o un gioco.
+          description_audience: Da 7 a 11 anni
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programmazione su carta a quadretti
@@ -10546,7 +10549,7 @@ it:
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
-              name: Cicli Mentre con la Contadina
+              name: Cicli "Mentre" con la Contadina
               description_student: ''
               description_teacher: ''
             Conditionals with Cards:
@@ -10582,13 +10585,13 @@ it:
               description_student: ''
               description_teacher: ''
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Cicli con l'Era Glaciale
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             Until Loops in Maze:
-              name: Until Loops in Maze
+              name: Cicli "Fino a Che" con il Labirinto
             Conditionals in Maze:
-              name: Conditionals in Maze
+              name: Istruzioni Condizionali nel Labirinto
             Conditionals & Loops in Harvester:
               name: Istruzioni Condizionali & Cicli con la Contadina
             Graph Paper Programming:
@@ -10703,7 +10706,7 @@ it:
           description: 'This page contains copies of all the multiple choice assessment
             questions that appeared in Units 1-5 in the course.  '
         coursec-2018:
-          title: Corso C
+          title: Corso C (2018)
           assignment_family_title: Corso C
           description: Crea programmi con sequenze di istruzioni, cicli ed eventi.
             Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione
@@ -10727,7 +10730,7 @@ it:
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+              name: Aeroplani di Carta
               description_student: ''
               description_teacher: ''
             Programming in Collector:
@@ -10775,7 +10778,7 @@ it:
               description_student: ''
               description_teacher: ''
             Looking Ahead:
-              name: Looking Ahead
+              name: Uno Sguardo Avanti con Minecraft
         csd6-2018:
           title: CSD Unit 6 - Physical Computing
           description: Unit 6 explores the role of hardware platforms in computing
@@ -10886,18 +10889,18 @@ it:
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
         coursee-2018:
-          title: Corso E
+          title: Corso E (2018)
           assignment_family_title: Corso E
-          description: Start coding with algorithms, loops, conditionals, and events
-            and then you’ll move on functions. In the second part of this course,
-            design and create a capstone project you can share with your friends and
-            family.
+          description: Si inizia con algoritmi, cicli, istruzioni condizionali ed
+            eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
+            puoi progettare e creare un progetto finale che potrai condividere con
+            i tuoi amici e familiari.
           description_short: Quickly cover concepts in Course C & D and then go further
             with functions.
-          description_audience: 'Ages: 8-12'
+          description_audience: Da 8 a 12 anni
           stages:
             'Programming: My Robotic Friends':
-              name: I miei amici robotici
+              name: I Miei Amici Robotici
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -10953,7 +10956,7 @@ it:
                 in the beginning video. In the puzzles, students will practice their
                 sequencing and debugging skills in Maze and Artist.
             Conditionals:
-              name: Istruzioni condizionali
+              name: Istruzioni Condizionali con la Contadina
               description_student: You will get to tell the computer what to do under
                 certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops
@@ -10992,7 +10995,7 @@ it:
                 program. This lesson will help students intuitively understand why
                 combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
-              name: Functions in Artist
+              name: Funzioni con l'Artista
               description_student: Make complex drawings more easily with functions!
               description_teacher: Students will be introduced to using functions
                 on Code.org. Magnificent images will be created and modified with
@@ -11103,17 +11106,17 @@ it:
             Minecraft Hour of Code:
               name: L'Ora del Codice con Minecraft
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Funzioni con Minecraft
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Introduzione al Laboratorio dei Personaggi
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Discoteca Aliena
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Giraffa Domestica
             Copyright and Creativity:
               name: Copyright and Creativity
         coursef-2018:
-          title: Corso F
+          title: Corso F (2018)
           assignment_family_title: Corso F
           description: Learn to use different kinds of loops, events, functions, and
             conditionals. Investigate different problem-solving techniques and discuss
@@ -11122,10 +11125,10 @@ it:
             and family.
           description_short: Learn all the concepts in Computer Science Fundamentals
             and create your own art, story or game.
-          description_audience: 'Ages: 9-13'
+          description_audience: Da 9 a 13 anni
           stages:
             'Programming: My Robotic Friends':
-              name: I miei amici robotici
+              name: I Miei Amici Robotici
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
@@ -11246,7 +11249,7 @@ it:
                 have extra structures built right in. These new structures will allow
                 students to create code that is more powerful and dynamic. '
             For Loops in Bee:
-              name: For Loops in Bee
+              name: Cicli con Contatore con l'Ape
               description_student: Buzz buzz. In these puzzles you will be guiding
                 a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops
@@ -11255,7 +11258,7 @@ it:
                 walked through using for loops to more effectively solve complicated
                 problems.
             For Loops in Artist:
-              name: For Loops in Artist
+              name: Cicli con Contatore con l'Artista
               description_student: Get ready to make your next masterpiece. Here you
                 will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for
@@ -11337,7 +11340,7 @@ it:
                 The lesson guide overviewing all five stages of the process can be
                 found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
-              name: Revise Your Project
+              name: Riesamina il Tuo Progetto
               description_student: Rome wasn't built in a day and your project shouldn't
                 be, either. Take time to edit and revise your project to make it the
                 best it can be.
@@ -11362,23 +11365,23 @@ it:
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals:
-              name: Istruzioni condizionali
+              name: Istruzioni Condizionali con la Contadina
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variabili con l'Artista
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Modifica delle Variabili con l'Ape
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Modifica delle Variabili con l'Artista
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Introduzione al Laboratorio dei Personaggi
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Discoteca Aliena
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Giraffa Domestica
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Funzioni con Minecraft
             Conditionals in Farmer:
-              name: Conditionals in Farmer
+              name: Istruzioni Condizionali con la Contadina
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
@@ -13060,7 +13063,7 @@ it:
               description_student: ''
               description_teacher: ''
             'Programming: My Robotic Friends':
-              name: 'Programmazione: I Miei Amici Robotici'
+              name: 'Programmazione: I Miei Amici Robotici per i più piccoli'
               description_student: ''
               description_teacher: ''
             Programming in Maze:
@@ -13072,15 +13075,15 @@ it:
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I Miei Ciclici Amici Robotici'
+              name: 'Cicli: I Miei Ciclici Amici Robotici per i più piccoli'
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Cicli con il Collezionista
+              name: Cicli con la Collezionista
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Cicli con l'Artistad
+              name: Disegnare Giardini con i Cicli
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -13098,17 +13101,17 @@ it:
             Move It, Move It:
               name: Muovilo, muovilo
             Sequencing with Scrat:
-              name: Sequencing with Scrat
+              name: Sequenze di istruzioni con Scrat
             Your Digital Footprint:
               name: La tua Impronta Digitale
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programmazione con l'Era Glaciale
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Diritti d'Autore e Creatività
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Cicli con l'Era Glaciale
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistence & Frustration: Stevie and the Big Project'
         spritelab-validated:
@@ -13128,6 +13131,16 @@ it:
             Labyrinth:
               name: Labirinto
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

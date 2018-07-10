@@ -210,8 +210,8 @@ it:
       row of nectar: riga di nettare
       rowOfNectar: rigaDiNettare
       move and check: vai avanti e controlla
-      win game: win game
-      lose game: lose game
+      win game: vittoria
+      lose game: sconfitta
       keep playing: continua a giocare
       Ask a question: Fai una domanda
       draw pinwheel: disegna una girandola
@@ -223,7 +223,7 @@ it:
       booster: booster
       draw line of triangles: disegna una fila di triangoli
       draw a window: disegna una finestra
-      stop_everything: stop_everything
+      stop_everything: ferma_tutto
       draw a plane of squares: disegna un piano di quadrati
       draw hexagon: disegna un esagono
       draw line of hexagons: disegna una fila di esagoni
@@ -250,7 +250,7 @@ it:
       corn rectangle: rettangolo di pannocchie
       lettuce stairs: scale di lattuga
       pick veggie: pick veggie
-      corn and pumpkin: pannocchie e zucche
+      corn and pumpkin: pannocchie e zucca
       go get pumpkins: vai a prendere le zucche
       go get lettuce: vai a prendere la lattuga
       garden square: giardino quadrato
