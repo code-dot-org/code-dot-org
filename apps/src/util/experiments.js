@@ -21,18 +21,13 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
-experiments.TEXT_RESPONSES_TAB = 'textResponsesRedesign';
-experiments.ASSESSMENTS_TAB = 'assessmentsTab';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdownNewSearch';
 
 // This is a per user experiment and is defined in experiments.rb
-// On the front end we are treating it as an experiment group that contains
-// PROGRESS_TAB.
+// On the front end we are treating it as an experiment group.
 experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
 experiments.TEACHER_EXP_2018_LIST = [
   experiments.COMMENT_BOX_TAB,
-  experiments.TEXT_RESPONSES_TAB,
-  experiments.ASSESSMENTS_TAB
 ];
 
 /**
