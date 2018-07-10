@@ -235,3 +235,6 @@ level 'AllTheThings_StandaloneVideo'
 stage 'Curriculum Reference'
 level 'allthethings_curriculum_reference'
 level 'allthethings_map'
+
+stage 'Sprite Lab'
+level 'allthethings_fish_tank'
