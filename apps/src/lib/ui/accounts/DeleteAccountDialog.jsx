@@ -28,6 +28,9 @@ const styles = {
   dangerText: {
     color: color.red,
   },
+  italicText: {
+    fontStyle: 'italic',
+  },
   input: {
     width: 490
   },
@@ -120,7 +123,7 @@ export default class DeleteAccountDialog extends React.Component {
           >
             <span
               id="uitest-delete-error"
-              style={styles.dangerText}
+              style={{...styles.dangerText, ...styles.italicText}}
             >
               {deleteError}
             </span>
