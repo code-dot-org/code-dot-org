@@ -72,13 +72,14 @@ class SampleData
   # dependency when we delete the teacher; but to not leave a trail of
   # old test data behind, we explictly hard-delete.
   def self.create_teacher(email, password, name)
+    raise "Should not be run outside of development" unless CDO.rack_env?(:development)
     # Delete any existing test data
     user = User.find_by_email_or_hashed_email(email)
     unless user.nil?
       user.sections.each do |section|
         # Hard-delete all students in each section.
         section.students.each do |student_user|
-          raise "Not a sample student" unless student_user.name =~ SAMPLE_STUDENT_NAME_REGEX
+          raise "Not a sample student - #{student_user.name}" unless student_user.name =~ SAMPLE_STUDENT_NAME_REGEX
           raise "Should not be run outside of development" unless CDO.rack_env?(:development)
           UserGeo.where(user_id: student_user.id).destroy_all
           student_user.really_destroy!
@@ -88,8 +89,9 @@ class SampleData
       end
       UserGeo.where(user_id: user.id).destroy_all
       # Delete the existing test teacher
-      raise "Not a sample teacher" unless user.name.eql? SAMPLE_TEACHER_NAME
-      raise "Not a sample teacher" unless user.email.eql? SAMPLE_TEACHER_EMAIL
+      unless (user.name.eql? SAMPLE_TEACHER_NAME) && (user.email.eql? SAMPLE_TEACHER_EMAIL)
+        raise "Not a sample teacher - #{user.name}"
+      end
       raise "Should not be run outside of development" unless CDO.rack_env?(:development)
       user.really_destroy!
     end
