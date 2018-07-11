@@ -59,6 +59,21 @@ export default storybook => {
             possibleAnswers={['Abhorrent', 'Not good', 'Ambivalent', 'Good', 'Delicious']}
           />
         )
+      },
+      {
+        name: 'Scale ratings',
+        story: () => (
+          <SingleChoiceResponses
+            question={'How do you feel about deep dish?'}
+            answers={{
+              1: 1,
+              4: 5,
+              5: 10
+            }}
+            answerType="scale"
+            possibleAnswers={['1 - I hate it', '2', '3', '4', '5 - I love it']}
+          />
+        )
       }
     ]);
 };
