@@ -4,6 +4,7 @@
  * background. When we're a button on top of an image, we may want something different.
  */
 
+import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
@@ -176,7 +177,7 @@ class Button extends React.Component {
         tabIndex={tabIndex}
         id={id}
       >
-        <div>
+        <div style={_.pick(style, ['textAlign'])}>
           {icon &&
             <FontAwesome
               icon={icon}
