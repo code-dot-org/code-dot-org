@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -18,7 +18,7 @@ const styles = {
     fontSize: 22,
     color: color.red,
   },
-  hint: {
+  warning: {
     marginTop: 10,
     marginBottom: 10,
   },
@@ -36,6 +36,10 @@ const DEFAULT_STATE = {
 };
 
 export default class DeleteAccount extends React.Component {
+  static propTypes = {
+    isPasswordRequired: PropTypes.bool.isRequired,
+  };
+
   state = DEFAULT_STATE;
 
   toggleDialog = () => {
@@ -61,7 +65,8 @@ export default class DeleteAccount extends React.Component {
 
   isValid = () => {
     const {password, deleteVerification} = this.state;
-    return password.length > 0 && deleteVerification === DELETE_VERIFICATION_STRING;
+    const isPasswordValid = this.props.isPasswordRequired ? (password.length > 0) : true;
+    return isPasswordValid && deleteVerification === DELETE_VERIFICATION_STRING;
   };
 
   deleteUser = () => {
@@ -102,8 +107,8 @@ export default class DeleteAccount extends React.Component {
         <h2 style={styles.header}>
           {i18n.deleteAccount()}
         </h2>
-        <div style={styles.hint}>
-          {i18n.deleteAccount_hint()}
+        <div style={styles.warning}>
+          {i18n.deleteAccount_warning()}
         </div>
         <div style={styles.buttonContainer}>
           {/* This button intentionally uses BootstrapButton to match other account page buttons */}
@@ -115,6 +120,7 @@ export default class DeleteAccount extends React.Component {
         </div>
         <DeleteAccountDialog
           isOpen={this.state.isDialogOpen}
+          isPasswordRequired={this.props.isPasswordRequired}
           password={this.state.password}
           passwordError={this.state.passwordError}
           deleteVerification={this.state.deleteVerification}

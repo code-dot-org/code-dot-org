@@ -329,7 +329,7 @@
   "defaultProjectName": "My Project",
   "delete": "Delete",
   "deleteAccount": "Delete Account",
-  "deleteAccount_hint": "Deleting your account will permanently erase all personal information, coursework, and projects connected to this account.",
+  "deleteAccount_warning": "Deleting your account will permanently erase all personal information, coursework, and projects connected to this account.",
   "deleteAccountDialog_header": "Are you sure you want to delete your account?",
   "deleteAccountDialog_body1": "WARNING: ",
   "deleteAccountDialog_body2": "Deleting your account will ",

@@ -36,6 +36,7 @@ const styles = {
 export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
+    isPasswordRequired: PropTypes.bool.isRequired,
     password: PropTypes.string.isRequired,
     passwordError: PropTypes.string,
     deleteVerification: PropTypes.string.isRequired,
@@ -50,6 +51,7 @@ export default class DeleteAccountDialog extends React.Component {
   render() {
     const {
       isOpen,
+      isPasswordRequired,
       password,
       passwordError,
       deleteVerification,
@@ -82,17 +84,19 @@ export default class DeleteAccountDialog extends React.Component {
               {i18n.deleteAccountDialog_body4()}
             </div>
           </div>
-          <Field
-            label={i18n.deleteAccountDialog_currentPassword()}
-            error={passwordError}
-          >
-            <input
-              type="password"
-              style={styles.input}
-              value={password}
-              onChange={onPasswordChange}
-            />
-          </Field>
+          {isPasswordRequired &&
+            <Field
+              label={i18n.deleteAccountDialog_currentPassword()}
+              error={passwordError}
+            >
+              <input
+                type="password"
+                style={styles.input}
+                value={password}
+                onChange={onPasswordChange}
+              />
+            </Field>
+          }
           <Field
             label={i18n.deleteAccountDialog_verification({verificationString: i18n.deleteAccountDialog_verificationString()})}
           >
