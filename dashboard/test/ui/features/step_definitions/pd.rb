@@ -425,6 +425,8 @@ And(/^I am viewing a workshop with fake survey results$/) do
       }.to_json
     )
   end
+
+  steps ["And I am on http://studio.code.org/pd/workshop_dashboard/local_summer_workshop_daily_survey_results/#{workshop.id}"]
 end
 
 def create_enrollment(workshop, name=nil)
