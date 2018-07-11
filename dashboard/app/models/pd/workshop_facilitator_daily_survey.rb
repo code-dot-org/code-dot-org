@@ -35,6 +35,11 @@ module Pd
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :pd_session_id, :facilitator_id, :form_id],
       message: 'already has a submission for this workshop, session, facilitator, and form'
 
+    before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}
+    def set_workshop_from_session
+      self.pd_workshop_id = pd_session&.pd_workshop_id
+    end
+
     # @override
     def self.attribute_mapping
       {
@@ -49,6 +54,7 @@ module Pd
     validates_presence_of(
       :user_id,
       :pd_workshop_id,
+      :pd_session_id,
       :facilitator_id,
       :day
     )
@@ -63,6 +69,35 @@ module Pd
 
     def self.all_form_ids
       [form_id]
+    end
+
+    def self.response_exists?(user_id:, pd_session_id:, facilitator_id:, form_id:)
+      exists?(
+        user_id: user_id,
+        pd_session_id: pd_session_id,
+        facilitator_id: facilitator_id,
+        form_id: form_id
+      )
+    end
+
+    def self.create_placeholder!(user_id:, day:, pd_session_id:, facilitator_id:, form_id:, submission_id:)
+      find_or_create_by!(
+        user_id: user_id,
+        day: day,
+        pd_session_id: pd_session_id,
+        facilitator_id: facilitator_id,
+        form_id: form_id,
+        submission_id: submission_id,
+      )
+    end
+
+    # @override
+    def duplicate?
+      # See if this user already has a submission for this workshop, session, facilitator, & form.
+      # Note: this duplicate record would fail the uniqueness validation
+      new_record? && self.class.exists?(
+        slice(:user_id, :pd_workshop_id, :pd_session_id, :facilitator_id, :form_id)
+      )
     end
   end
 end

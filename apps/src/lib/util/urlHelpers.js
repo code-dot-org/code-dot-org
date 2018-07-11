@@ -35,3 +35,5 @@ export const metaTagDescription = _.memoize((relativeUrl) => {
     })
     .catch(error => relativeUrl);
 });
+
+export const ADD_A_PERSONAL_LOGIN_HELP_URL = 'https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account';
