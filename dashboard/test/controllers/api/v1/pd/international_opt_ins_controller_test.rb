@@ -36,8 +36,6 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestC
       }
       assert_response :created
     end
-
-    assert_response :created
   end
 
   test 'create returns appropriate errors if international opt-in data is missing' do
@@ -53,8 +51,6 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestC
       }
       assert_response :bad_request
     end
-
-    assert_response :bad_request
   end
 
   test 'students can not create a new international opt-in' do
@@ -68,8 +64,6 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestC
       }
       assert_response :forbidden
     end
-
-    assert_response :forbidden
   end
 
   test 'user required to create a new international opt-in' do
@@ -80,7 +74,5 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestC
       }
       assert_response :redirect
     end
-
-    assert_response :redirect
   end
 end
