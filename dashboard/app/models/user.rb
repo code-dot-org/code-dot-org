@@ -595,6 +595,18 @@ class User < ActiveRecord::Base
     authentication_option&.user || User.find_by(provider: type, uid: id)
   end
 
+  def add_credential(type:, id:, email:, hashed_email:, data:)
+    return false unless migrated?
+    AuthenticationOption.create(
+      user: self,
+      email: email,
+      hashed_email: hashed_email,
+      credential_type: type,
+      authentication_id: id,
+      data: data
+    )
+  end
+
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]

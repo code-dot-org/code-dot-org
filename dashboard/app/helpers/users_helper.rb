@@ -11,7 +11,7 @@ module UsersHelper
     if session['clever_link_flag'].present? && session['clever_takeover_id'].present?
       uid = session['clever_takeover_id']
       # TODO: validate that we're not destroying an active account?
-      existing_account = User.where(uid: uid, provider: session['clever_link_flag']).first
+      existing_account = User.find_by_credential(type: session['clever_link_flag'], id: uid)
 
       # Move over sections that students follow
       if user.student? && existing_account
@@ -21,10 +21,22 @@ module UsersHelper
       end
 
       existing_account.destroy! if existing_account
-      user.provider = session['clever_link_flag']
-      user.uid = uid
-      user.oauth_token = session['clever_takeover_token']
-      user.save
+      if user.migrated?
+        user.add_credential(
+          type: session['clever_link_flag'],
+          id: uid,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          data: {
+            oauth_token: session['clever_takeover_token']
+          }
+        )
+      else
+        user.provider = session['clever_link_flag']
+        user.uid = uid
+        user.oauth_token = session['clever_takeover_token']
+        user.save
+      end
       clear_takeover_session_variables
     end
   end
