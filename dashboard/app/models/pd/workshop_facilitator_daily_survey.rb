@@ -54,6 +54,7 @@ module Pd
     validates_presence_of(
       :user_id,
       :pd_workshop_id,
+      :pd_session_id,
       :facilitator_id,
       :day
     )
@@ -94,8 +95,8 @@ module Pd
     def duplicate?
       # See if this user already has a submission for this workshop, session, facilitator, & form.
       # Note: this duplicate record would fail the uniqueness validation
-      self.class.exists?(
-        attributes.slice(:user_id, :pd_workshop_id, :pd_session_id, :facilitator_id, :form_id)
+      new_record? && self.class.exists?(
+        slice(:user_id, :pd_workshop_id, :pd_session_id, :facilitator_id, :form_id)
       )
     end
   end
