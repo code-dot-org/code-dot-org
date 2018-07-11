@@ -37,24 +37,28 @@ export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     password: PropTypes.string.isRequired,
+    passwordError: PropTypes.string,
     deleteVerification: PropTypes.string.isRequired,
     onPasswordChange: PropTypes.func.isRequired,
     onDeleteVerificationChange: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
     disableConfirm: PropTypes.bool.isRequired,
     deleteUser: PropTypes.func.isRequired,
+    deleteError: PropTypes.string,
   };
 
   render() {
     const {
       isOpen,
       password,
+      passwordError,
       deleteVerification,
       onPasswordChange,
       onDeleteVerificationChange,
       onCancel,
       disableConfirm,
-      deleteUser
+      deleteUser,
+      deleteError,
     } = this.props;
 
     return (
@@ -79,7 +83,8 @@ export default class DeleteAccountDialog extends React.Component {
             </div>
           </div>
           <Field
-            label={i18n.deleteAccountDialog_confirmPassword()}
+            label={i18n.deleteAccountDialog_currentPassword()}
+            error={passwordError}
           >
             <input
               type="password"
@@ -89,7 +94,7 @@ export default class DeleteAccountDialog extends React.Component {
             />
           </Field>
           <Field
-            label={i18n.deleteAccountDialog_deleteAccountVerification()}
+            label={i18n.deleteAccountDialog_verification({verificationString: i18n.deleteAccountDialog_verificationString()})}
           >
             <input
               type="text"
@@ -108,7 +113,9 @@ export default class DeleteAccountDialog extends React.Component {
             onCancel={onCancel}
             disableConfirm={disableConfirm}
             tabIndex="1"
-          />
+          >
+            <span style={styles.dangerText}>{deleteError}</span>
+          </ConfirmCancelFooter>
         </div>
       </BaseDialog>
     );

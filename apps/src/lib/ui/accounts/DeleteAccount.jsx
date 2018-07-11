@@ -6,7 +6,7 @@ import {navigateToHref} from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
 import DeleteAccountDialog from './DeleteAccountDialog';
 
-const DELETE_VERIFICATION_STRING = 'DELETE MY ACCOUNT';
+const DELETE_VERIFICATION_STRING = i18n.deleteAccountDialog_verificationString();
 const styles = {
   container: {
     paddingTop: 20,
@@ -32,7 +32,9 @@ export default class DeleteAccount extends React.Component {
   state = {
     isDialogOpen: false,
     password: '',
+    passwordError: '',
     deleteVerification: '',
+    deleteError: '',
   };
 
   toggleDialog = () => {
@@ -72,9 +74,23 @@ export default class DeleteAccount extends React.Component {
       data: payload
     }).done(result => {
       navigateToHref('/');
-    }).fail((jqXhr, error) => {
-      console.log(jqXhr, error);
+    }).fail((jqXhr, _) => {
+      this.onFailure(jqXhr);
     });
+  };
+
+  onFailure = (xhr) => {
+    const responseJSON = xhr.responseJSON;
+    if (responseJSON && responseJSON.error) {
+      const passwordErrors = responseJSON.error.current_password;
+      this.setState({
+        passwordError: passwordErrors[0]
+      });
+    } else {
+      this.setState({
+        deleteError: `Unexpected error: ${xhr.status}`
+      });
+    }
   };
 
   render() {
@@ -98,12 +114,14 @@ export default class DeleteAccount extends React.Component {
         <DeleteAccountDialog
           isOpen={this.state.isDialogOpen}
           password={this.state.password}
+          passwordError={this.state.passwordError}
           deleteVerification={this.state.deleteVerification}
           onPasswordChange={this.onPasswordChange}
           onDeleteVerificationChange={this.onDeleteVerificationChange}
           onCancel={this.toggleDialog}
           disableConfirm={!this.isValid()}
           deleteUser={this.deleteUser}
+          deleteError={this.state.deleteError}
         />
       </div>
     );
