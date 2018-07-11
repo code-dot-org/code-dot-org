@@ -25,6 +25,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
     disabled: PropTypes.bool,
     studentName: PropTypes.string.isRequired,
     hasEverSignedIn: PropTypes.bool,
+    dependsOnThisSectionForLogin: PropTypes.bool,
     onConfirm: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
   };
@@ -37,7 +38,8 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
   }
 
   render() {
-    const {disabled, hasEverSignedIn, onConfirm, onCancel} = this.props;
+    const {disabled, hasEverSignedIn, dependsOnThisSectionForLogin, onConfirm,
+      onCancel} = this.props;
     return (
       <BaseDialog
         {...(_.pick(this.props, propsFromBaseDialog))}
@@ -56,21 +58,25 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
                 {' '}
                 {i18n.removeStudentBody2()}
               </p>
-              <p>
-                {i18n.removeStudentBody3()}
-              </p>
-              <Button
-                text={i18n.removeStudentSendHomeInstructions()}
-                target="_blank"
-                href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-                color={Button.ButtonColor.blue}
-                size={Button.ButtonSize.large}
-                style={styles.sendHomeInstructionsButton}
-                tabIndex="1"
-              />
-              <p>
-                {i18n.removeStudentBody4()}
-              </p>
+              {dependsOnThisSectionForLogin &&
+                <div>
+                  <p>
+                    {i18n.removeStudentBody3()}
+                  </p>
+                  <Button
+                    text={i18n.removeStudentSendHomeInstructions()}
+                    target="_blank"
+                    href={ADD_A_PERSONAL_LOGIN_HELP_URL}
+                    color={Button.ButtonColor.blue}
+                    size={Button.ButtonSize.large}
+                    style={styles.sendHomeInstructionsButton}
+                    tabIndex="1"
+                  />
+                  <p>
+                    {i18n.removeStudentBody4()}
+                  </p>
+                </div>
+              }
             </div>
           }
           <ConfirmCancelFooter
