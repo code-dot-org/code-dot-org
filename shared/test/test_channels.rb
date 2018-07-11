@@ -309,10 +309,13 @@ class ChannelsTest < Minitest::Test
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
-    get "/v3/channels/#{channel_id}/disable_content_moderation"
+    post "/v3/channels/#{channel_id}/disable-content-moderation"
     assert last_response.ok?
+    assert_equal true, JSON.parse(last_response.body)['skip_content_moderation']
 
-    # assert_equal false, JSON.parse(last_response.body)['skip_content_moderation']
+    post "/v3/channels/#{channel_id}/enable-content-moderation"
+    assert last_response.ok?
+    assert_equal false, JSON.parse(last_response.body)['skip_content_moderation']
   end
 
   def test_sharing_disabled
