@@ -200,6 +200,33 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # POST /v3/channels/<channel-id>/disable_content_moderation
+  #
+  # Disables automatic content moderation.
+  #
+  post %r{/v3/channels/([^/]+)/disable_content_moderation} do |channel_id|
+    # not_authorized unless has_permission?('project_validator')
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(storage_id('user')).set_content_moderation(channel_id, true)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {skip_content_moderation: value}.to_json
+  end
+
+  #
+  # POST /v3/channels/<channel-id>/enable_content_moderation
+  #
+  # Enables automatic content moderation.
+  #
+  post %r{/v3/channels/([^/]+)/enable_content_moderation} do |channel_id|
+    not_authorized unless has_permission?('project_validator')
+    StorageApps.new(storage_id('user')).set_content_moderation(channel_id, false)
+  end
+
+  #
   # GET /v3/channels/<channel-id>/privacy-profanity
   #
   # Get an indication of privacy/profanity violation.
