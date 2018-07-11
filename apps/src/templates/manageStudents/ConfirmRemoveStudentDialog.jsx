@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import {Header, ConfirmCancelFooter} from '../../lib/ui/SystemDialog/SystemDialog';
@@ -6,9 +7,20 @@ import Button from "../Button";
 import color from "../../util/color";
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '../../lib/util/urlHelpers';
 
+// A stub set of otherwise-required props for use in stories and unit tests.
+export const MINIMUM_TEST_PROPS = {
+  isOpen: true,
+  onConfirm: () => {},
+  onCancel: () => {},
+};
+
+// This set of props will be 'inherited' from BaseDialog and automatically
+// passed through to it.
+const propsFromBaseDialog = ['isOpen', 'hideBackdrop'];
+
 export default class ConfirmRemoveStudentDialog extends React.Component {
   static propTypes = {
-    isOpen: BaseDialog.propTypes.isOpen,
+    ..._.pick(BaseDialog.propTypes, propsFromBaseDialog),
     disabled: PropTypes.bool,
     hasEverSignedIn: PropTypes.bool,
     onConfirm: PropTypes.func.isRequired,
@@ -22,11 +34,11 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
   }
 
   render() {
-    const {isOpen, disabled, hasEverSignedIn, onConfirm, onCancel} = this.props;
+    const {disabled, hasEverSignedIn, onConfirm, onCancel} = this.props;
     return (
       <BaseDialog
+        {...(_.pick(this.props, propsFromBaseDialog))}
         useUpdatedStyles
-        isOpen={isOpen}
         handleClose={onCancel}
       >
         <div style={styles.container}>
@@ -60,8 +72,8 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
             confirmColor={Button.ButtonColor.red}
             onConfirm={onConfirm}
             onCancel={onCancel}
-            disableConfirm={disabled}
-            disableCancel={disabled}
+            disableConfirm={!!disabled}
+            disableCancel={!!disabled}
             tabIndex="1"
           />
         </div>
