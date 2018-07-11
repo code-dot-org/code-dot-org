@@ -27,6 +27,8 @@ export default class SingleChoiceResponses extends React.Component {
                 // but a numeric value in some range. The hash contains a map of the
                 // numeric values to counts, not texts to counts.
                 answerIndex = i + 1;
+              } else if (this.props.answerType === 'scale') {
+                answerIndex = possibleAnswer.split(' ')[0];
               } else {
                 answerIndex = possibleAnswer;
               }

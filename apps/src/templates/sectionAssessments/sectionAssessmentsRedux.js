@@ -69,11 +69,11 @@ export const setStudentId = (studentId) => ({ type: SET_STUDENT_ID, studentId: s
 export const setSurveys = (scriptId, surveys) => ({ type: SET_SURVEYS, scriptId, surveys });
 
 export const asyncLoadAssessments = (sectionId, scriptId) => {
-  return async (dispatch, getState) => {
+  return (dispatch, getState) => {
     const state = getState().sectionAssessments;
 
-    // Don't load data if it's already stored in redux.
-    if (state.assessmentResponsesByScript[scriptId]) {
+    // Don't load data if it's already stored or if there is no script or no section selected.
+    if (state.assessmentResponsesByScript[scriptId] || !scriptId || !sectionId) {
       return;
     }
 
@@ -82,13 +82,19 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     const loadResponses = loadAssessmentResponsesFromServer(sectionId, scriptId);
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
-    const [responses, questions, surveys] = await Promise.all([loadResponses, loadQuestions, loadSurveys]);
-
-    dispatch(setAssessmentResponses(scriptId, responses));
-    dispatch(setAssessmentQuestions(scriptId, questions));
-    dispatch(setSurveys(scriptId, surveys));
-
-    dispatch(finishLoadingAssessments());
+    Promise.all([
+      loadResponses,
+      loadQuestions,
+      loadSurveys
+    ]).then((arrayOfValues) => {
+      dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
+      dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
+      dispatch(setSurveys(scriptId, arrayOfValues[2]));
+      dispatch(finishLoadingAssessments());
+    }).catch((error) => {
+      // If any return an error, the UI will show that there are no assessments.
+      dispatch(finishLoadingAssessments());
+    });
   };
 };
 
@@ -154,13 +160,13 @@ export default function sectionAssessments(state=initialState, action) {
   if (action.type === START_LOADING_ASSESSMENTS) {
     return {
       ...state,
-      isLoading: true
+      isLoading: true,
     };
   }
   if (action.type === FINISH_LOADING_ASSESSMENTS) {
     return {
       ...state,
-      isLoading: false
+      isLoading: false,
     };
   }
 
@@ -460,13 +466,15 @@ export const getStudentsMCSummaryForCurrentAssessment = (state) => {
     }
     // Transform that data into what we need for this particular table, in this case
     // it is the structure studentOverviewDataPropType
+    const submissionTimeStamp = studentsAssessment.submitted ?
+      new Date(studentsAssessment.timestamp).toLocaleString() : i18n.inProgress();
     return {
       id: studentId,
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
       isSubmitted: studentsAssessment.submitted,
-      submissionTimeStamp: studentsAssessment.submitted ? studentsAssessment.timestamp : i18n.inProgress(),
+      submissionTimeStamp: submissionTimeStamp,
       url: studentsAssessment.url,
     };
   });

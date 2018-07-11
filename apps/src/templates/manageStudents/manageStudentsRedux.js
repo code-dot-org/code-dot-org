@@ -620,6 +620,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       loginType: loginType,
       sectionId: sectionId,
       sharingDisabled: student.sharing_disabled,
+      hasEverSignedIn: student.has_ever_signed_in,
       isEditing: false,
       isSaving: false,
       rowType: RowType.STUDENT,

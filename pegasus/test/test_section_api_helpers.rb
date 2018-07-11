@@ -534,28 +534,6 @@ class SectionApiHelperTest < SequelTestCase
       end
     end
 
-    describe 'remove_student' do
-      it 'soft-deletes follower' do
-        Dashboard.db.transaction(rollback: :always) do
-          pegasus_section = DashboardSection.fetch_if_teacher(
-            FakeDashboard::SECTION_NORMAL[:id],
-            FakeDashboard::TEACHER[:id]
-          )
-          removed = pegasus_section.remove_student(FakeDashboard::STUDENT[:id])
-          assert removed
-        end
-      end
-
-      it 'noops for soft-deleted followers' do
-        pegasus_section = DashboardSection.fetch_if_teacher(
-          FakeDashboard::SECTION_DELETED_FOLLOWER[:id],
-          FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
-        )
-        removed = pegasus_section.remove_student(FakeDashboard::STUDENT_DELETED_FOLLOWER[:id])
-        refute removed
-      end
-    end
-
     describe 'add_student' do
       it 'creates a follower for new student' do
         Dashboard.db.transaction(rollback: :always) do

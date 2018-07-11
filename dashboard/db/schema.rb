@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180703165502) do
+ActiveRecord::Schema.define(version: 20180704013020) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -777,9 +777,10 @@ ActiveRecord::Schema.define(version: 20180703165502) do
 
   create_table "pd_survey_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.bigint   "form_id"
-    t.text     "questions",  limit: 65535, null: false, comment: "JSON Question data for this JotForm form."
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "questions",          limit: 65535, null: false, comment: "JSON Question data for this JotForm form."
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.bigint   "last_submission_id",                            comment: "Last successfully processed submission id. Sync will only pull submissions with ids greater than this value."
     t.index ["form_id"], name: "index_pd_survey_questions_on_form_id", unique: true, using: :btree
   end
 

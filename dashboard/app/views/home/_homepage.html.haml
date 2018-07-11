@@ -32,7 +32,7 @@
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false
-    - if current_user.teacher_managed_account?
+    - if current_user.student?
       - homepage_data[:canLeave] = false
     - else
       - homepage_data[:canLeave] = true
