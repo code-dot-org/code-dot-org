@@ -4,6 +4,7 @@
  * background. When we're a button on top of an image, we may want something different.
  */
 
+import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
@@ -80,6 +81,10 @@ const styles = {
         color: color.cyan,
         borderColor: color.cyan,
         backgroundColor: color.lightest_cyan
+      },
+      ':disabled': {
+        backgroundColor: color.lighter_gray,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
     [ButtonColor.white]: {
@@ -134,6 +139,8 @@ class Button extends React.Component {
     onClick: PropTypes.func,
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    isPending: PropTypes.bool,
+    pendingText: PropTypes.string,
   };
 
   onKeyDown = (event) => {
@@ -147,7 +154,7 @@ class Button extends React.Component {
 
   render() {
     const { className, href, text, icon, iconClassName, iconStyle, target,
-      style, onClick, disabled, id, tabIndex } = this.props;
+      style, onClick, disabled, id, tabIndex, isPending, pendingText } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -170,7 +177,7 @@ class Button extends React.Component {
         tabIndex={tabIndex}
         id={id}
       >
-        <div>
+        <div style={_.pick(style, ['textAlign'])}>
           {icon &&
             <FontAwesome
               icon={icon}
@@ -178,7 +185,15 @@ class Button extends React.Component {
               style={{...styles.icon, ...iconStyle}}
             />
           }
-          {text}
+          {isPending && pendingText &&
+            <span>
+              {pendingText}&nbsp;
+              <FontAwesome icon="spinner" className="fa-spin"/>
+            </span>
+          }
+          {!isPending &&
+            text
+          }
         </div>
       </Tag>
     );

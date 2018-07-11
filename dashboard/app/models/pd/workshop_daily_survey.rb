@@ -39,7 +39,14 @@ module Pd
       }
     end
 
-    before_validation :set_day_from_form_id, if: -> {day.nil?}
+    # @override
+    def map_answers_to_attributes
+      super
+
+      # Make sure we have a day, in case the form doesn't provide it
+      set_day_from_form_id if day.nil?
+    end
+
     def set_day_from_form_id
       self.day = self.class.get_day_for_form_id(form_id)
     end
@@ -71,15 +78,30 @@ module Pd
       end
     end
 
+    def self.response_exists?(user_id:, pd_workshop_id:, day:, form_id:)
+      exists?(
+        user_id: user_id,
+        pd_workshop_id: pd_workshop_id,
+        day: day,
+        form_id: form_id
+      )
+    end
+
+    def self.create_placeholder!(user_id:, pd_workshop_id:, day:, form_id:, submission_id:)
+      find_or_create_by!(
+        user_id: user_id,
+        pd_workshop_id: pd_workshop_id,
+        day: day,
+        form_id: form_id,
+        submission_id: submission_id
+      )
+    end
+
     # @override
-    def self.get_key_attributes(form_id, processed_answers)
-      # Inspect the same fields as the uniqueness validation: user, workshop, day
-      # Some responses don't have a day. In that case derive it from the form id
-      {
-        user_id: processed_answers['userId'],
-        pd_workshop_id: processed_answers['workshopId'],
-        day: processed_answers['day'] || get_day_for_form_id(form_id)
-      }
+    def duplicate?
+      # See if this user already has a submission for this workshop, day, & form.
+      # Note: this duplicate record would fail the uniqueness validation
+      new_record? && self.class.exists?(slice(:user_id, :pd_workshop_id, :day, :form_id))
     end
   end
 end

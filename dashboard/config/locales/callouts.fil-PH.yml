@@ -435,7 +435,6 @@ fil:
         CSD_U3_rect_c2: Narito ang "Run" na button.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Narito ang code
-        CSD_U3_rect_c2: Narito ang "Run" na button.
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Narito ang code
         CSD_U3_rect_c2: Kaladkarin ang blokeng ito sa pang-code na lugar.
@@ -677,6 +676,7 @@ fil:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: {}
+      Fish Tank 2-validated_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
           mga snowflakes!
@@ -1136,6 +1136,7 @@ fil:
         stone_block_2: Ang mga bloke na kulay aboy ay yari sa bato at hindi maaaring
           itapon.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi
           ito kung ilan sa mga blokeng ito ang natira para magamit mo.
@@ -1187,6 +1188,7 @@ fil:
           ang "Run" para simulan ang iyong programa.
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
@@ -1198,9 +1200,7 @@ fil:
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Ang numerong ito ay nangangahulugan na wala nang
           blokeng ito ang natira sa loob ng iyong toolbox.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: Ang numerong ito ay nangangahulugan na wala nang
-          blokeng ito ang natira sa loob ng iyong toolbox.
+      courseB_artist_loops5_2018_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Nakakakita ka na ba ng iilang mga bagong bloke
           sa loob ng toolbox? Huwag mag-alala, aming ipapakita sa iyo kung paano gamitin
@@ -1433,6 +1433,9 @@ fil:
       courseD_collector_until_challenge1_callout: {}
       courseD_farmer_until_challenge2_callout: {}
       courseD_farmer_until_challenge2_2018_callout: {}
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:

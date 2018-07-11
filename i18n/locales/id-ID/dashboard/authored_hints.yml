@@ -5072,8 +5072,8 @@ id:
         courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
         courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.
         courseA_artist_loops7_c: |-
-          Remember you can put more than one block in a <xml><block type="controls_repeat">
-          <title name="TIMES">???</title>
+          Remember you can put more than one block in a <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">???</title>
           </block></xml> loop.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
@@ -5284,24 +5284,28 @@ id:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks and **four** `pick corn` blocks. '
+        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
+        courseA_harvester_loops3_b: "Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya."
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Jika Anda terjebak, cobalah memecahkan teka - teki dalam 2 bagian, satu bagian di depan sudut dan satu bagian setelah di tikungan.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: Anda akan membutuhkan satu ` ulangi ` lingkaran demi satu.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+        courseA_harvester_loops5a_a: |-
+          Anda akan membutuhkan satu ` ulangi ` lingkaran demi satu.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -5311,7 +5315,10 @@ id:
         courseA_harvester_loops6_a: Jika Anda terjebak, cobalah menulis langkah di atas kertas dan mencari pola berulang.
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -5341,7 +5348,7 @@ id:
           Use this block to pick corn once the harvester gets to it.
           
           <xml>
-          <block type="maze_nectar"/>
+          <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml> to pick the corn!
@@ -5404,6 +5411,25 @@ id:
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
           </next>
           </block>
           </next>
@@ -5847,6 +5873,25 @@ id:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -5894,7 +5939,8 @@ id:
         courseB_artist_loops3_a: Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
         courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
+        courseB_artist_loops3_a: |-
+          Ingatlah untuk menggunakan loop `repeat` untuk kode yang lebih baik!
         courseB_artist_loops3_b: Artis itu ingin pindah ke Selatan untuk menggambar garis ini.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: Lonjakan blok memungkinkan Anda bergerak maju tanpa menggambar sebuah garis.
@@ -5907,7 +5953,8 @@ id:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
+        courseB_artist_loops5_a: |-
+          Seret loop `repeat`, lalu letakkan blok lain di dalamnya. Berapa kali anda perlu mengulanginya?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Cobalah menulis bergerak di atas sebuah kertas dan mencari sebuah pola.
       courseB_artist_loops6_2018_authored_hint:
@@ -5986,7 +6033,8 @@ id:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Coba gunakan tombol langkah untuk mencari tahu di mana yang salah.
         courseB_collector_loops4_b: Untuk mengubah seberapa jauh Laurel pergi, ubah berapa kali putarannya berjalan.
-        courseB_collector_loops4_c: Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan ` ulangi ` lingkaran!
+        courseB_collector_loops4_c: |-
+          Laurel perlu berjalan dan mengumpulkan harta setelah ia selesai dengan ` ulangi ` lingkaran!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Gunakan lebih dari satu loop untuk menyelesaikan pekerjaan.
         courseB_collector_loops5_b: Coba jalankan kode beberapa kali untuk melihat apa yang terjadi.
@@ -6001,7 +6049,8 @@ id:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Tidak tahu di mana hal-hal yang salah? Gunakan tombol "step" untuk menjalankan program anda satu blok setiap kalinya.
         courseB_collector_loops6_b: Anda dapat mengubah jumlah kali pengulangan lingkaran berjalan dengan mengklik pada "3" dan memilih sebuah nomor yang berbeda.
-        courseB_collector_loops6_c: Anda akan ingin menggunakan 3 ` ulangi ` lopp untuk memecahkan ini teka-teki.
+        courseB_collector_loops6_c: |-
+          Anda akan ingin menggunakan 3 ` ulangi ` lopp untuk memecahkan ini teka-teki.
         courseB_collector_loops6_d: Jika Anda bingung, cobalah memecahkan teka - teki ini menjadi 3 bagian.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: Jika anda mengalami kesulitan dengan teka-teki ini, cobalah menggambar di atas kertas untuk membantu anda mengetahuinya.
@@ -6316,7 +6365,8 @@ id:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
+        courseB_iceage_loops3_b: |-
+          Untuk mengulang kode, seret sebuah loop `repeat`, kemudian letakkan blok yang anda inginkan di dalamnya.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
@@ -6899,7 +6949,8 @@ id:
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Jangan takut untuk membuat kesalahan! Jalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
         courseB_starWars_prog9_b: Terdapat banyak cara untuk memecahkan teka-teki ini.
-        courseB_starWars_prog9_c: Bisakah sebuah loop ` ulangi` membantu di sini?
+        courseB_starWars_prog9_c: |-
+          Bisakah sebuah loop ` ulangi` membantu di sini?
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -7264,12 +7315,17 @@ id:
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           The first block you will need is:
-          
-          ![](https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png)
+          <xml>  <block type="jump_to_xy" id="callMe">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
         courseC_artist_loopsPrePre1a_b: |-
           To move forward 50 pixels, use this block:
           
-          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+          <xml><block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          </block></xml>
       courseC_artist_prog1_authored_hint: { }
       courseC_artist_prog1_2018_authored_hint: { }
       courseC_artist_prog2_authored_hint:
@@ -7713,6 +7769,7 @@ id:
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging5_2018_authored_hint:
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong."
+        courseC_maze_debugging5_c: You can change the direction of the turn block by clicking on the dropdown.
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
@@ -10159,7 +10216,7 @@ id:
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: Would a `while` loop help here?
-        courseE_bee_concept2_d: You can even check empty spaces to see if honey is > 0.
+        courseE_bee_concept2_d: 'With this `while` loop you  can check empty spaces to see if the amount of honey is > 0. This does the same as the `while there is honey` loop. '
         courseE_bee_concept2_b: You can use `while` loops to move to the end of each path, and to collect all of the honey from each space.
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept3_authored_hint:
@@ -10382,7 +10439,9 @@ id:
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: What sequence is repeated often in this program? Can you drag these blocks into the function?
         courseE_farmer_functions3c_b: Don't forget to call your function in the main program wherever you removed blocks.
-      courseE_farmer_functions3c1_2018_authored_hint: { }
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path` function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around the corners?
       courseE_farmer_functions3c_2018_authored_hint: { }
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop and into the `go get pumpkins` function.
@@ -10416,7 +10475,9 @@ id:
         courseE_farmer_functions6c_b: Would an `if/else` block help to check if there is lettuce in a space?
         courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
       courseE_farmer_functions7_authored_hint: { }
-      courseE_farmer_functions7a1_2018_authored_hint: { }
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions` section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You don't need a function here, but you can make one if it is helpful to you!
         courseE_farmer_functions7b_b: Use an `if/else` statement to check for crops, then turn based on which crop you find.
@@ -10427,7 +10488,9 @@ id:
         courseE_farmer_functions7b_c: A `repeat until pumpkin` loop can help you get all the way through the maze.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: { }
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time, you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Try running the code given to see what it does. What do you need after this?
         courseE_farmer_functions8b_b: Drag all of the starter blocks into a function so that you can use them more than once.
@@ -10438,7 +10501,10 @@ id:
         courseE_farmer_functions8b_c: How many times do you need to call the function?
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: { }
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements to move along the path?
         courseE_farmer_functions9b_b: Use `repeat until pumpkin` to move through all of the paths.
@@ -10936,7 +11002,7 @@ id:
         courseF_artist_for1_a: |-
           Can you draw something like this:
           
-          ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+          ![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.

@@ -37,6 +37,7 @@
     "tts_instructions_override": "Challenge: The treasure goes all the way up these stairs!  Write the code to help Laurel get it all.",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

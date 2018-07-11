@@ -513,8 +513,8 @@ en:
         description here: description here
         title: title
       Begin planning your project_2018:
+        Begin planning your project: Begin planning your project
         description here: description here
-        title: title
       Big Data in the CSP Framework: {}
       'Big Picture: If-statements':
         description here: description here
@@ -2229,8 +2229,7 @@ en:
         description here: description here
         title: title
       Prepare for your presentation_2018:
-        description here: description here
-        title: title
+        Prepare for yur presentation: Prepare for yur presentation
       Processing Arrays: {}
       'Project Breakdown: Building a Canvas Painter': {}
       'Project Breakdown: Clicker Game': {}
@@ -9847,6 +9846,7 @@ en:
         Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
         The artist draws a square.: The artist draws a square.
         The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a square.: The artist will draw a square.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
       courseC_multi_harvester_loops11_predict1:
         '12': '12'

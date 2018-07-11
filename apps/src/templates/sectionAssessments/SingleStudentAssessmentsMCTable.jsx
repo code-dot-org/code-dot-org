@@ -71,12 +71,8 @@ class SingleStudentAssessmentsMCTable extends Component {
   };
 
   questionCellFormatter = (question, {rowData, rowIndex}) => {
-    // TODO(caleybrock): Since we're only filtering for multiple choice
-    // questions, this questionNumber may be incorrect. Look into getting
-    // question number from the server.
-    const questionNumber = rowIndex + 1;
     return (
-      <div>{`${questionNumber}. ${question}`}</div>
+      <div>{`${rowData.questionNumber}. ${question}`}</div>
     );
   };
 
@@ -89,13 +85,12 @@ class SingleStudentAssessmentsMCTable extends Component {
     );
   };
 
-  studentAnswerColumnFormatter = (studentResponses, {rowData, rowIndex}) => {
-    const answerData = this.props.studentAnswerData.studentResponses[rowIndex];
+  studentAnswerColumnFormatter = (studentAnswer, {rowData, rowIndex}) => {
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={answerData.responses}
-        isCorrectAnswer={answerData.isCorrect}
+        displayAnswer={studentAnswer.responses || '-'}
+        isCorrectAnswer={studentAnswer.isCorrect}
       />
     );
   };
@@ -107,7 +102,6 @@ class SingleStudentAssessmentsMCTable extends Component {
         header: {
           label: i18n.question(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
         },
         cell: {
           format: this.questionCellFormatter,
@@ -171,11 +165,18 @@ class SingleStudentAssessmentsMCTable extends Component {
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
+    const rowData = this.props.questionAnswerData.map((question, index) => {
+      return {
+        ...question,
+        studentAnswer: this.props.studentAnswerData.studentResponses[index],
+      };
+    });
+
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.questionAnswerData);
+    })(rowData);
 
     return (
       <Table.Provider

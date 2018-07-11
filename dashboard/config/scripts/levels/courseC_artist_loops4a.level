@@ -39,6 +39,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to jump forward:\\n\\n<xml>\\n<block type=\\\"jump_by_constant\\\">\\n    <title name=\\\"DIR\\\">jumpForward</title>\\n    <title name=\\\"VALUE\\\">100</title>\\n  </block>\\n</xml>\\n\\nDon't forget to change how far!\",\"hint_id\":\"courseC_artist_loops4a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/676f99f63eb8b7e29c7abc89cec89a09/courseC_artist_loops4a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

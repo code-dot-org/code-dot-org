@@ -1,0 +1,5 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%p
+  != I18n.t('pd.no_teacher_email.body', user_registration: edit_user_registration_path)

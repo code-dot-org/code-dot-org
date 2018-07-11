@@ -1,0 +1,15 @@
+{
+  "category": "Location",
+  "config": {
+    "simpleValue": true,
+    "name": "location_variable_get",
+    "blockText": "location of {VAR}",
+    "args": [
+      {
+        "name": "VAR",
+        "customInput": "locationVariableDropdown"
+      }
+    ],
+    "returnType": "Location"
+  }
+}

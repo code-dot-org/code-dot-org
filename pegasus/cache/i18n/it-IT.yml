@@ -97,28 +97,7 @@ it-IT:
   congratulations_volunteer: 'Complimenti: ora che hai provato l''Ora del Codice,
     <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a>
     e aiuta gli studenti a imparare un''Ora del Codice!'
-  congratulations_on_completing_course1: Complimenti per aver completato il Corso
-    1
-  congratulations_on_completing_course2: Complimenti per aver completato il Corso
-    2
-  congratulations_on_completing_course3: Complimenti per aver completato il Corso
-    3
-  congratulations_on_completing_course4: Complimenti per aver completato il Corso
-    4
-  congratulations_on_completing_coursea: Complimenti per aver completato il Corso
-    A
-  congratulations_on_completing_courseb: Complimenti per aver completato il Corso
-    B
-  congratulations_on_completing_coursec: Complimenti per aver completato il Corso
-    C
-  congratulations_on_completing_coursed: Complimenti per aver completato il Corso
-    D
-  congratulations_on_completing_coursee: Complimenti per aver completato il Corso
-    E
-  congratulations_on_completing_coursef: Complimenti per aver completato il Corso
-    F
-  congratulations_on_completing_accelerated: Complimenti per aver completato il Corso
-    Rapido
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Promosso ai corsi successivi!
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
@@ -313,28 +292,8 @@ it-IT:
     @programmafuturo
   just_did_hoc_donor: Ho appena finito l'Ora del Codice (#HourOfCode) - Provalo! Grazie
     %{donor_twitter} per aver supportato @codeorg
-  just_did_course1_donor: Ho appena finito il Corso 1 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course2_donor: Ho appena finito il Corso 2 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course3_donor: Ho appena finito il Corso 3 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course4_donor: Ho appena finito il Corso 4 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursea_donor: Ho appena finito il Corso A - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_courseb_donor: Ho appena finito il Corso B - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursec_donor: Ho appena finito il Corso C - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursed_donor: Ho appena finito il Corso D - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursee_donor: Ho appena finito il Corso E - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursef_donor: Ho appena finito il Corso F - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_accelerated_donor: Ho appena finito il Corso Rapido - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare
     informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/.
   twitter_cs_foundational: |-
@@ -934,7 +893,7 @@ it-IT:
     utilizzando il nostro corso <i>CS Principles</i>, ci sono domande di valutazione
     disponibili per aiutare gli studenti a prepararsi per l'esame finale. Per utilizzare
     queste domande, assegna alla classe uno dei corsi disponibili nella sezione <i>CS
-    Principles and Practice Test</i> e poi scegli il corso dal menu a tendina qui
+    Principles and Practice Test</i> e poi scegli il corso dal menù a discesa qui
     sopra per vedere le risposte degli studenti.
   dashboard_assessments_summaries: Sintesi dei risultati
   dashboard_assessments_answers: Risultati in dettaglio
@@ -985,7 +944,7 @@ it-IT:
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
   dashboard_sections_table_pairing_allowed: Programmazione in Coppia
-  dashboard_sections_table_stage_extras: Fase extra
+  dashboard_sections_table_stage_extras: Esercizi Supplementari
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Codice-Classe
   dashboard_sections_name: Nome della classe
@@ -1005,7 +964,7 @@ it-IT:
   dashboard_sections_close: Chiudi
   dashboard_sections_move_students_desc: |-
     Seleziona gli studenti da spostare in una nuova classe. Spostare gli studenti non eliminerà i loro progressi.<br><br>
-    Se alla classe in cui vengono inseriti è assegnato un corso <b>diverso</b> da quello della classe da cui provengono, per vedere i loro progressi nella scheda "Avanzamento" dovrai selezionare dal menù a tendina il corso che avevano nella classe da cui provengono.<br><br>
+    Se alla classe in cui vengono inseriti è assegnato un corso <b>diverso</b> da quello della classe da cui provengono, per vedere i loro progressi nella scheda "Avanzamento" dovrai selezionare dal menù a discesa il corso che avevano nella classe da cui provengono.<br><br>
     Inoltre, se la classe in cui vengono inseriti ha un diverso <i>tipo di accesso</i> rispetto alla classe da cui provengono, gli studenti riceveranno delle nuove password.
   dashboard_sections_one_per_teacher: Gli studenti possono trovarsi in una sola delle
     classi di uno stesso insegnante. I tuoi studenti verranno quindi assegnati alla
@@ -1036,7 +995,7 @@ it-IT:
   dashboard_error_none_selected: Non hai selezionato alcuno studente. Per favore,
     scegli almeno uno studente.
   dashboard_error_other_section: Se stai spostando degli studenti tra le tue classi,
-    selezionane una dal primo menù a tendina. Scegli "<b>Altro insegnante</b>" in
+    selezionane una dal primo menù a discesa. Scegli "<b>Altro insegnante</b>" in
     tale menù a tendina <b>solo</b> se devi spostare degli studenti nella classe di
     un <b>altro<b> insegnante.
   dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno
@@ -1325,13 +1284,13 @@ it-IT:
   coursee_name: Corso E
   coursef-draft_name: Corso F
   coursef_name: Corso F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
+  coursea-2017_name: Corso A (2017)
+  courseb-2017_name: Corso B (2017)
+  coursec-2017_name: Corso C (2017)
+  coursed-2017_name: Corso D (2017)
+  coursee-2017_name: Corso E (2017)
+  coursef-2017_name: Corso F (2017)
+  coursea-2018_name: Corso A (2018)
   courseb-2018_name: Course B (2018)
   coursec-2018_name: Course C (2018)
   coursed-2018_name: Course D (2018)
@@ -1340,10 +1299,10 @@ it-IT:
   accelerated_name: Corso rapido
   express_name: Corso Rapido
   pre-express_name: Corso Rapido pre-scolare
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2017_name: Corso Rapido (2017)
+  pre-express-2017_name: Corso Rapido pre-scolare (2017)
   express-2018_name: Corso Rapido
-  pre-express-2018_name: Pre-reader Express Course (2018)
+  pre-express-2018_name: Corso Rapido pre-scolare (2018)
   cspunit1_name: Princìpi dell'Informatica - Unità 1
   cspunit2_name: Princìpi dell'Informatica - Unità 2
   cspunit3_name: Princìpi dell'Informatica - Unità 3
@@ -1423,15 +1382,15 @@ it-IT:
   math_category_name: Matematica
   hoc_category_name: L'Ora del Codice
   csf_category_name: Corsi base
-  csf_2017_category_name: CS Fundamentals (2017)
-  csf_2018_category_name: CS Fundamentals (2018)
+  csf_2017_category_name: Fondamenti di Informatica (2017)
+  csf_2018_category_name: Fondamenti di Informatica (2018)
   csf_international_category_name: Fondamenti di Informatica (in Italiano)
   csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
   csd_category_name: 'Under Development: CS Discoveries'
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: Princìpi dell'Informatica (versione 2015-16)
   csp17_category_name: "'16-'17 principi d'informatica"
-  csp_2018_category_name: CS Principles ('18-'19)
+  csp_2018_category_name: Principi di informatica ('18-'19)
   cspexams_category_name: Prova pratica di principi d'informatica
   research_studies_category_name: Research Studies
   applab_name: Sviluppo App
@@ -1502,6 +1461,18 @@ it-IT:
   coursed_gradelevel: Da 7 a 11 anni
   coursee_gradelevel: Da 8 a 12 anni
   coursef_gradelevel: Da 9 a 13 anni
+  coursea-2017_gradelevel: Da 4 a 7 anni
+  courseb-2017_gradelevel: Da 5 a 8 anni
+  coursec-2017_gradelevel: Da 6 a 10 anni
+  coursed-2017_gradelevel: Da 7 a 11 anni
+  coursee-2017_gradelevel: Da 8 a 12 anni
+  coursef-2017_gradelevel: Da 9 a 13 anni
+  coursea-2018_gradelevel: Da 4 a 7 anni
+  courseb-2018_gradelevel: Da 5 a 8 anni
+  coursec-2018_gradelevel: Da 6 a 10 anni
+  coursed-2018_gradelevel: Da 7 a 11 anni
+  coursee-2018_gradelevel: Da 8 a 12 anni
+  coursef-2018_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, Tablet
   codeintl_platformtext: Browser moderni, smartphone, Tablet
@@ -1652,6 +1623,32 @@ it-IT:
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: Un'introduzione all'informatica per bambini
+    che non leggono ancora.
+  courseb-2017_shortdescription_congrats: Introduzione all'informatica per alunni
+    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
+    bambini leggermente più grandi.)
+  coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e dai vita
+    a creazioni artistiche, storie animate o giochi interattivi.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: Un'introduzione all'informatica per bambini
+    che non leggono ancora.
+  courseb-2018_shortdescription_congrats: Introduzione all'informatica per alunni
+    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
+    bambini leggermente più grandi.)
+  coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e dai vita
+    a creazioni artistiche, storie animate o giochi interattivi.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".

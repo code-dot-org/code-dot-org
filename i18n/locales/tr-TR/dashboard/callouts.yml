@@ -410,7 +410,6 @@ tr:
         CSD_U3_rect_c2: '"Çalıştır" düğmesi burada.'
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: İşte kod
-        CSD_U3_rect_c2: '"Çalıştır" düğmesi burada.'
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: İşte kod
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
@@ -599,6 +598,7 @@ tr:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: { }
+      Fish Tank 2-validated_callout: { }
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
       Frozen Project Toolbox (Old)_callout:
@@ -936,6 +936,7 @@ tr:
         courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin."
         stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
       courseA_maze_ramp3a_2018_callout: { }
+      courseA_maze_ramp3b_2018_callout: { }
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler.
       courseA_maze_ramp4a_2018_callout: { }
@@ -975,6 +976,7 @@ tr:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat.
       courseB_Scrat_ramp2_2018_callout: { }
       courseB_Scrat_ramp3a_2018_callout: { }
+      courseB_Scrat_ramp3b_2018_callout: { }
       courseB_Scrat_ramp4a_2018_callout: { }
       courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:
@@ -983,8 +985,7 @@ tr:
         courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var. Onu nasıl kullanacaksın?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Bu sayı araç kutusunda blok kalmadığını belirtir.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: Bu sayı araç kutusunda blok kalmadığını belirtir.
+      courseB_artist_loops5_2018_callout: { }
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseB_collector_loops1_2018_callout:
@@ -1154,6 +1155,8 @@ tr:
       courseD_collector_until_challenge1_callout: { }
       courseD_farmer_until_challenge2_callout: { }
       courseD_farmer_until_challenge2_2018_callout: { }
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:

@@ -4,30 +4,33 @@ import { studentWithResponsesPropType, multipleChoiceQuestionPropType } from './
 import {
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
+  ALL_STUDENT_FILTER,
+  currentStudentHasResponses,
 } from './sectionAssessmentsRedux';
+import i18n from "@cdo/locale";
 import { connect } from 'react-redux';
 
 class MultipleChoiceByStudentContainer extends Component {
   static propTypes = {
     multipleChoiceStructure: PropTypes.arrayOf(multipleChoiceQuestionPropType),
-    studentAnswerData: PropTypes.arrayOf(studentWithResponsesPropType),
+    studentAnswerData: studentWithResponsesPropType,
+    studentId: PropTypes.number,
+    currentStudentHasResponses: PropTypes.bool,
   };
 
   render() {
-    const {multipleChoiceStructure, studentAnswerData} = this.props;
+    const {multipleChoiceStructure, studentAnswerData, studentId, currentStudentHasResponses} = this.props;
     return (
       <div>
-        <h2>Multiple choice answers by student section</h2>
-        {studentAnswerData.map((studentResponse, index) => (
-          <div key={index}>
-            {/* TODO(caleybrock): update to use heading from spec */}
-            <h3>{`Here is how ${studentResponse.name} responded`}</h3>
-            <SingleStudentAssessmentsMCTable
-              questionAnswerData={multipleChoiceStructure}
-              studentAnswerData={studentResponse}
-            />
+        {(studentId !== ALL_STUDENT_FILTER && currentStudentHasResponses) &&
+          <div>
+              <h2>{i18n.multipleChoiceStudentOverview({studentName: studentAnswerData.name})}</h2>
+              <SingleStudentAssessmentsMCTable
+                questionAnswerData={multipleChoiceStructure}
+                studentAnswerData={studentAnswerData}
+              />
           </div>
-        ))}
+        }
       </div>
     );
   }
@@ -38,4 +41,6 @@ export const UnconnectedMultipleChoiceByStudentContainer = MultipleChoiceByStude
 export default connect(state => ({
   multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(state),
   studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
+  studentId: state.sectionAssessments.studentId,
+  currentStudentHasResponses: currentStudentHasResponses(state),
 }))(MultipleChoiceByStudentContainer);

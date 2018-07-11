@@ -3,7 +3,12 @@
   "config": {
     "func": "spritesWhere",
     "blockText": "sprites where {PROPERTY} is {VALUE}",
-    "returnType": "Sprite",
+    "returnType": "None",
+    "color": [
+      5,
+      ".7",
+      ".7"
+    ],
     "args": [
       {
         "name": "PROPERTY",
@@ -11,10 +16,6 @@
           [
             "size",
             "\"scale\""
-          ],
-          [
-            "rotation",
-            "\"rotation\""
           ],
           [
             "x position",
@@ -31,6 +32,10 @@
           [
             "movement direction",
             "\"direction\""
+          ],
+          [
+            "rotation or direction",
+            "\"rotation\""
           ],
           [
             "tint",

@@ -45,25 +45,24 @@ export const COLUMNS = {
   NAME: 0,
   NUM_MULTIPLE_CHOICE_CORRECT: 1,
   NUM_MULTIPLE_CHOICE: 2,
-  PERCENT_CORRECT: 3,
-  SUBMISSION_TIMESTAMP: 4,
+  SUBMISSION_TIMESTAMP: 3,
 };
 
-const studentOverviewDataPropType = PropTypes.shape({
+export const studentOverviewDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  numMultipleChoiceCorrect: PropTypes.number.isRequired,
-  numMultipleChoice: PropTypes.number.isRequired,
-  percentCorrect: PropTypes.string.isRequired,
-  submissionTimeStamp: PropTypes.string,
-  submissionStatus: PropTypes.string,
+  numMultipleChoiceCorrect: PropTypes.number,
+  numMultipleChoice: PropTypes.number,
+  submissionTimeStamp: PropTypes.string.isRequired,
+  isSubmitted: PropTypes.bool.isRequired,
+  url: PropTypes.string,
 });
 
 /**
  * A table that shows the summary data for each student in a section.
  * Each row is a single student, the number of questions the student
  * answered correctly, the total number of multiple choice questions,
- * the precent of correct answers, and status of each student's
+ * the percent of correct answers, and status of each student's
  * assessment or a time-stamp for when a student submits an
  * assessment.
  */
@@ -98,23 +97,31 @@ class StudentsAssessmentsMCTable extends Component {
     });
   };
 
-  submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
-    const submissionStatus = rowData.submissionStatus;
-
-    if (submissionStatus === 'Completed') {
+  nameCellFormatter = (name, {rowData}) => {
+    if (rowData.url) {
       return (
-        <div style={styles.main}>
-          <div style={styles.text}>
-            {submissionTimeStamp}
-          </div>
+        <a href={rowData.url} style={styles.studentNameColumn}>{name}</a>
+      );
+    } else {
+      return name;
+    }
+  };
+
+  submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
+    const isSubmitted = rowData.isSubmitted;
+
+    return (
+      <div style={styles.main}>
+        <div style={styles.text}>
+          {submissionTimeStamp}
+        </div>
+        {isSubmitted &&
           <div style={styles.icon}>
             <FontAwesome id="checkmark" icon="check-circle"/>
           </div>
-        </div>
-      );
-    } else {
-      return submissionStatus;
-    }
+        }
+      </div>
+    );
   };
 
   getColumns = (sortable) => {
@@ -129,9 +136,9 @@ class StudentsAssessmentsMCTable extends Component {
               ...{width: TABLE_COLUMN_WIDTHS.name},
             }
           },
-          transforms: [sortable],
         },
         cell: {
+          format: this.nameCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -171,21 +178,6 @@ class StudentsAssessmentsMCTable extends Component {
         }
       },
       {
-        property: 'percentCorrect',
-        header: {
-          label: i18n.percentCorrect(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.percentCorrect},
-            }
-          },
-        },
-        cell: {
-          props: {style: tableLayoutStyles.cell},
-        }
-      },
-      {
         property: 'submissionTimeStamp',
         header: {
           label: i18n.submissionTimestamp(),
@@ -195,6 +187,7 @@ class StudentsAssessmentsMCTable extends Component {
               ...{width: TABLE_COLUMN_WIDTHS.timeStamp},
             }
           },
+          transforms: [sortable],
         },
         cell: {
           format: this.submissionTimestampColumnFormatter,

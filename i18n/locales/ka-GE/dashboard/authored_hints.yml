@@ -5481,24 +5481,28 @@ ka:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks and **four** `pick corn` blocks. '
+        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი.
+        courseA_harvester_loops3_b: "კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი."
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად, ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ ერთი `გამეორების` ციკლის გამოყენება.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+        courseA_harvester_loops5a_a: |-
+          პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ ერთი `გამეორების` ციკლის გამოყენება.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -5508,7 +5512,10 @@ ka:
         courseA_harvester_loops6_a: თუ გაიჭედებით, სცადეთ ნაბიჯების ფურცელზე ჩანიშვნა და განმეორებადი კოდის მოძებნა.
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -5538,7 +5545,7 @@ ka:
           Use this block to pick corn once the harvester gets to it.
           
           <xml>
-          <block type="maze_nectar"/>
+          <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml> to pick the corn!
@@ -5601,6 +5608,25 @@ ka:
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
           </next>
           </block>
           </next>
@@ -5756,7 +5782,7 @@ ka:
       courseA_maze_seq_challenge2_2018_authored_hint:
         courseA_maze_seq_challenge2_a: სცადეთ ჰარების თითით დათვლა. საწყისი ჰარი არ ჩათვალოთ!
       courseA_playLab_events2_authored_hint:
-        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_a: Look for a block that makes the dog say something.
         courseA_playLab_events2_b: |-
           ეს ამ თავსატეხის ამოსახსნელად საჭირო კოდია:
           
@@ -6044,6 +6070,25 @@ ka:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -6091,7 +6136,10 @@ ka:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
         courseB_artist_loops3_b: ამ ხაზის დასახატად მხატვარი სამხრეთით უნდა გადაადგილდეს.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: ამ ხაზის დასახატად მხატვარი სამხრეთით უნდა გადაადგილდეს.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: ახტომის ბლოკი საშუალებას გაძლევთ ხაზის დახატვის გარეშე გადაადგილდეთ წინ.
@@ -6104,7 +6152,10 @@ ka:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: სცადეთ სვლების ქაღალდზე ჩაწერა, შემდეგ კი მსგავსების პოვნა.
       courseB_artist_loops6_2018_authored_hint:
@@ -6183,7 +6234,8 @@ ka:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Try using the step button to figure out where things go wrong.
         courseB_collector_loops4_b: To change how far Laurel goes, change the number of times that the loop runs.
-        courseB_collector_loops4_c: გამეორების ციკლის შემდეგ, ლორენი ფეხით უნდა დაუყვეს გზას ქვევით, იმისათვის რომ საგანძური აიღოს!
+        courseB_collector_loops4_c: |-
+          გამეორების ციკლის შემდეგ, ლორენი ფეხით უნდა დაუყვეს გზას ქვევით, იმისათვის რომ საგანძური აიღოს!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Use more than one loop to get the job done.
         courseB_collector_loops5_b: სცადეთ რამდენჯერმე გაუშვათ კოდი და რომ ნახოთ, რა მოხდება.
@@ -6198,7 +6250,8 @@ ka:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Can't figure out where things start going wrong? Use the "Step" button to run through your program one block at a time.
         courseB_collector_loops6_b: '"3"-ზე დაკლიკებითა და განსხვავებული რიცხვის არჩევით შეგიძლიათ, შეცვალოთ ციკლის გამეორების რაოდენობა.'
-        courseB_collector_loops6_c: ამ თავსატეხის ამოსახსნელად თქვენ 3 `გამეორების` ბლოკის გამოყენება დაგჭირდებათ.
+        courseB_collector_loops6_c: |-
+          ამ თავსატეხის ამოსახსნელად თქვენ 3 `გამეორების` ბლოკის გამოყენება დაგჭირდებათ.
         courseB_collector_loops6_d: თუ დაიბენით, სცადეთ დაშალოთ თავსატეხი 3 ნაწილად.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.
@@ -6510,7 +6563,8 @@ ka:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი.
+        courseB_iceage_loops3_b: |-
+          კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
@@ -7087,7 +7141,8 @@ ka:
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
         courseB_starWars_prog9_b: ამ თავსატეხის ამოხსნის ბევრი გზა არსებობს.
-        courseB_starWars_prog9_c: გამოგვადეგებოდა თუ არა აქ`გამეორების` ციკლი?
+        courseB_starWars_prog9_c: |-
+          გამოგვადეგებოდა თუ არა აქ`გამეორების` ციკლი?
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -7897,6 +7952,7 @@ ka:
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging5_2018_authored_hint:
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong."
+        courseC_maze_debugging5_c: You can change the direction of the turn block by clicking on the dropdown.
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
@@ -10399,7 +10455,7 @@ ka:
         courseE_bee_concept2_c: რომელ მხარეს უნდა მობრუნდეს ფუტკარი თითოეული გზის შემდეგ?
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: გამოგადგებათ`სანამ` ციკლი აქ?
-        courseE_bee_concept2_d: თქვენ შეგიძლიათ შეამოწმოთ ცარიელი ადგილებიც კი, რათა ნახოთ არის თუ არა თაფლი > 0-ზე.
+        courseE_bee_concept2_d: 'თქვენ შეგიძლიათ შეამოწმოთ ცარიელი ადგილებიც კი, რათა ნახოთ არის თუ არა თაფლი > 0-ზე.'
         courseE_bee_concept2_b: შეგიძლიათ გამოიყენოთ `სანამ` ციკლები, თითოეული გზის ბოლომდე გასავლელად და თითოეული ადგილიდან მთელი თაფლის შესაგროვებლად.
         courseE_bee_concept2_c: რომელ მხარეს უნდა მობრუნდეს ფუტკარი თითოეული გზის შემდეგ?
       courseE_bee_concept3_authored_hint:
@@ -10626,7 +10682,9 @@ ka:
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: რომელი მიმდევრობა მეორდება ხშირად ამ პროგრამაში? შეგიძლიათ გადმოათრიოთ ეს ბლოკები ფუნქციაში?
         courseE_farmer_functions3c_b: არ დაგავიწყდეთ თქვენი ფუნქციის გამოძახება მთავარ პროგრამაში, როდესაც ამოიღებთ ბლოკებს.
-      courseE_farmer_functions3c1_2018_authored_hint: { }
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path` function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around the corners?
       courseE_farmer_functions3c_2018_authored_hint: { }
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop and into the `go get pumpkins` function.
@@ -10660,7 +10718,9 @@ ka:
         courseE_farmer_functions6c_b: გამოგადგებათ თუ არა `თუ/სხვაგვარად` ბლოკი იმის შესამოწმებლად, არის თუ არა სალათის ფურცლები ადგილზე?
         courseE_farmer_functions6c_c: არ დაივიწყოთ სიმინდის შემოწმების გაგრძელება!
       courseE_farmer_functions7_authored_hint: { }
-      courseE_farmer_functions7a1_2018_authored_hint: { }
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions` section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: აქ ფუნქცია არ გჭირდებათ, მაგრამ შეგიძლიათ გამოიყენოთ, თუ დაგეხმარებათ!
         courseE_farmer_functions7b_b: გამოიყენეთ `თუ/მაშინ` დებულება, რომ შეამოწმოთ მოსავალი, შემდეგ მობრუნდით იქიდან გამომდინარე, თუ რომელ მოსავალს იპოვით.
@@ -10671,7 +10731,9 @@ ka:
         courseE_farmer_functions7b_c: '`გამეორება გოგრამდე` ციკლი დაგეხმარებათ მთლიანი ლაბირინთის გასავლელად.'
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: { }
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time, you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: სცადეთ მოცემული კოდის გაშვება, რომ ნახოთ, თუ რას აკეთებს ის. რა გჭირდებათ ამის შემდეგ?
         courseE_farmer_functions8b_b: ჩააგდეთ ყველა დასაწყები ბლოკი ფუნქციაში, რომ მათი გამოყენება ერთზე მეტჯერ შეძლოთ.
@@ -10682,7 +10744,10 @@ ka:
         courseE_farmer_functions8b_c: რამდენჯერ გჭირდებათ ფუნქციის გამოძახება?
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: { }
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: შეგიძლიათ გამოიყენოთ ჩასმული `თუ` და `თუ/სხვაგვარად` დებულებები გზაზე გადასაადგილებლად?
         courseE_farmer_functions9b_b: გამოიყენეთ `გამეორება გოგრამდე`, რომ გაიაროთ მთელი გზა.
@@ -11178,7 +11243,7 @@ ka:
         courseF_artist_for1_a: |-
           Can you draw something like this:
           
-          ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+          ![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.

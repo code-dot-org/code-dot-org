@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180607153724) do
+ActiveRecord::Schema.define(version: 20180704013020) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -47,15 +47,15 @@ ActiveRecord::Schema.define(version: 20180607153724) do
   end
 
   create_table "authentication_options", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "email",             default: "", null: false
-    t.string   "hashed_email",      default: "", null: false
-    t.string   "credential_type",                null: false
+    t.string   "email",                           default: "", null: false
+    t.string   "hashed_email",                    default: "", null: false
+    t.string   "credential_type",                              null: false
     t.string   "authentication_id"
-    t.string   "data"
+    t.text     "data",              limit: 65535
     t.datetime "deleted_at"
-    t.integer  "user_id",                        null: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.integer  "user_id",                                      null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["credential_type", "authentication_id", "deleted_at"], name: "index_auth_on_cred_type_and_auth_id", unique: true, using: :btree
     t.index ["email", "deleted_at"], name: "index_authentication_options_on_email_and_deleted_at", using: :btree
     t.index ["hashed_email", "deleted_at"], name: "index_authentication_options_on_hashed_email_and_deleted_at", using: :btree
@@ -88,10 +88,10 @@ ActiveRecord::Schema.define(version: 20180607153724) do
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
   end
 
-  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "name"
     t.string   "level_type"
-    t.text     "category",    limit: 65535
+    t.string   "category"
     t.text     "config",      limit: 65535
     t.text     "helper_code", limit: 65535
     t.datetime "created_at",                null: false
@@ -672,6 +672,14 @@ ActiveRecord::Schema.define(version: 20180607153724) do
     t.index ["pd_application_id"], name: "index_pd_fit_weekend1819_registrations_on_pd_application_id", using: :btree
   end
 
+  create_table "pd_international_opt_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                  null: false
+    t.text     "form_data",  limit: 65535, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_pd_international_opt_ins_on_user_id", using: :btree
+  end
+
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "regional_partner_id",               null: false
     t.date     "start_date",                        null: false
@@ -769,9 +777,10 @@ ActiveRecord::Schema.define(version: 20180607153724) do
 
   create_table "pd_survey_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.bigint   "form_id"
-    t.text     "questions",  limit: 65535, null: false, comment: "JSON Question data for this JotForm form."
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "questions",          limit: 65535, null: false, comment: "JSON Question data for this JotForm form."
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.bigint   "last_submission_id",                            comment: "Last successfully processed submission id. Sync will only pull submissions with ids greater than this value."
     t.index ["form_id"], name: "index_pd_survey_questions_on_form_id", unique: true, using: :btree
   end
 
@@ -1306,6 +1315,18 @@ ActiveRecord::Schema.define(version: 20180607153724) do
     t.index ["user_id"], name: "index_survey_results_on_user_id", using: :btree
   end
 
+  create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.text     "comment",    limit: 65535
+    t.integer  "student_id"
+    t.integer  "level_id"
+    t.integer  "teacher_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.datetime "deleted_at"
+    t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
+    t.index ["student_id", "level_id"], name: "index_feedback_on_student_and_level", using: :btree
+  end
+
   create_table "teacher_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "studio_person_id"
     t.datetime "created_at",                     null: false
@@ -1448,13 +1469,13 @@ ActiveRecord::Schema.define(version: 20180607153724) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "studio_person_id"
-    t.string   "email",                                          default: "",      null: false
+    t.string   "email",                                  default: "",      null: false
     t.string   "parent_email"
-    t.string   "encrypted_password",                             default: ""
+    t.string   "encrypted_password",                     default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                                  default: 0
+    t.integer  "sign_in_count",                          default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -1465,22 +1486,22 @@ ActiveRecord::Schema.define(version: 20180607153724) do
     t.string   "provider"
     t.string   "uid"
     t.boolean  "admin"
-    t.string   "gender",                           limit: 1
+    t.string   "gender",                   limit: 1
     t.string   "name"
-    t.string   "locale",                           limit: 10,    default: "en-US", null: false
+    t.string   "locale",                   limit: 10,    default: "en-US", null: false
     t.date     "birthday"
-    t.string   "user_type",                        limit: 16
+    t.string   "user_type",                limit: 16
     t.string   "school"
-    t.string   "full_address",                     limit: 1024
+    t.string   "full_address",             limit: 1024
     t.integer  "school_info_id"
-    t.integer  "total_lines",                                    default: 0,       null: false
+    t.integer  "total_lines",                            default: 0,       null: false
     t.integer  "secret_picture_id"
-    t.boolean  "active",                                         default: true,    null: false
+    t.boolean  "active",                                 default: true,    null: false
     t.string   "hashed_email"
     t.datetime "deleted_at"
     t.datetime "purged_at"
     t.string   "secret_words"
-    t.text     "properties",                       limit: 65535
+    t.text     "properties",               limit: 65535
     t.string   "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
@@ -1488,11 +1509,11 @@ ActiveRecord::Schema.define(version: 20180607153724) do
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
-    t.integer  "invitations_count",                              default: 0
+    t.integer  "invitations_count",                      default: 0
     t.integer  "terms_of_service_version"
     t.boolean  "urm"
     t.string   "races"
-    t.integer  "primary_authentication_option_id"
+    t.integer  "primary_contact_info_id"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at", using: :btree
     t.index ["deleted_at"], name: "index_users_on_deleted_at", using: :btree
