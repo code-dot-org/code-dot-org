@@ -32,7 +32,8 @@ class ManageStudentActionsCell extends Component {
     disableSaving: PropTypes.bool,
     rowType: PropTypes.oneOf(Object.values(RowType)),
     loginType: PropTypes.string,
-    hasEverSignedIn: PropTypes.string,
+    studentName: PropTypes.string.isRequired,
+    hasEverSignedIn: PropTypes.bool,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -151,6 +152,7 @@ class ManageStudentActionsCell extends Component {
           <ConfirmRemoveStudentDialog
             isOpen={this.state.deleting}
             disabled={this.state.requestInProgress}
+            studentName={this.props.studentName}
             hasEverSignedIn={this.props.hasEverSignedIn}
             onConfirm={this.onConfirmDelete}
             onCancel={this.onCancelDelete}
