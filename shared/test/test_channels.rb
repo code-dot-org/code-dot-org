@@ -305,6 +305,16 @@ class ChannelsTest < Minitest::Test
     # but don't currently have a way to simulate admin from tests
   end
 
+  def test_disable_and_enable_content_moderation
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    get "/v3/channels/#{channel_id}/disable_content_moderation"
+    assert last_response.ok?
+
+    # assert_equal false, JSON.parse(last_response.body)['skip_content_moderation']
+  end
+
   def test_sharing_disabled
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last

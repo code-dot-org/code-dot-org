@@ -130,7 +130,7 @@ class StorageAppsTest < Minitest::Test
     assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
   end
 
-  def test_change_content_moderation
+  def test_set_content_moderation
     signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
     storage_apps = StorageApps.new(signedin_storage_id)
 
