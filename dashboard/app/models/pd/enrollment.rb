@@ -173,7 +173,7 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def should_send_exit_survey?
-    !workshop.fit_weekend?
+    !workshop.fit_weekend? && workshop.subject != SUBJECT_CSF_201
   end
 
   def send_exit_survey
