@@ -2,24 +2,16 @@ import React from 'react';
 import {mount} from 'enzyme';
 import i18n from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
-import ConfirmRemoveStudentDialog from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
+import ConfirmRemoveStudentDialog, {MINIMUM_TEST_PROPS} from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
 import Button from '@cdo/apps/templates/Button';
 import {Header, ConfirmCancelFooter} from '@cdo/apps/lib/ui/SystemDialog/SystemDialog';
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 
 describe('ConfirmRemoveStudentDialog', () => {
-  const DEFAULT_PROPS = {
-    isOpen: true,
-    disabled: false,
-    hasEverSignedIn: true,
-    onConfirm: () => {},
-    onCancel: () => {},
-  };
-
   it('renders nothing if not open', () => {
     const wrapper = mount(
       <ConfirmRemoveStudentDialog
-        {...DEFAULT_PROPS}
+        {...MINIMUM_TEST_PROPS}
         isOpen={false}
       />
     );
@@ -29,7 +21,7 @@ describe('ConfirmRemoveStudentDialog', () => {
   it('renders minimal content if student has never signed in', () => {
     const wrapper = mount(
       <ConfirmRemoveStudentDialog
-        {...DEFAULT_PROPS}
+        {...MINIMUM_TEST_PROPS}
         hasEverSignedIn={false}
       />
     );
@@ -39,8 +31,8 @@ describe('ConfirmRemoveStudentDialog', () => {
         <ConfirmCancelFooter
           confirmText={i18n.removeStudent()}
           confirmColor={Button.ButtonColor.red}
-          onConfirm={DEFAULT_PROPS.onConfirm}
-          onCancel={DEFAULT_PROPS.onCancel}
+          onConfirm={MINIMUM_TEST_PROPS.onConfirm}
+          onCancel={MINIMUM_TEST_PROPS.onCancel}
           disableConfirm={false}
           disableCancel={false}
           tabIndex="1"
@@ -52,7 +44,7 @@ describe('ConfirmRemoveStudentDialog', () => {
   it('renders full text if student has ever signed in', () => {
     const wrapper = mount(
       <ConfirmRemoveStudentDialog
-        {...DEFAULT_PROPS}
+        {...MINIMUM_TEST_PROPS}
         hasEverSignedIn={true}
       />
     );
@@ -83,8 +75,8 @@ describe('ConfirmRemoveStudentDialog', () => {
         <ConfirmCancelFooter
           confirmText={i18n.removeStudent()}
           confirmColor={Button.ButtonColor.red}
-          onConfirm={DEFAULT_PROPS.onConfirm}
-          onCancel={DEFAULT_PROPS.onCancel}
+          onConfirm={MINIMUM_TEST_PROPS.onConfirm}
+          onCancel={MINIMUM_TEST_PROPS.onCancel}
           disableConfirm={false}
           disableCancel={false}
           tabIndex="1"
