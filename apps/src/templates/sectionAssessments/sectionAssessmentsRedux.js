@@ -72,8 +72,7 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionAssessments;
 
-    // Don't load data if it's already stored in redux.
-    // Don't attempt to load data if there is not script or section selected.
+    // Don't load data if it's already stored or if there is no script or no section selected.
     if (state.assessmentResponsesByScript[scriptId] || !scriptId || !sectionId) {
       return;
     }
