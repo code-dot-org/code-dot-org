@@ -35,9 +35,9 @@ end
 def sources_s3_dir(environment)
   if environment == :production
     'sources'
-  # Check that we're executing in a Rack environment and not a standalone script, because cron jobs execute as root
+  # Check that we're executing in a Rails server and not a script, because cron jobs execute as root
   # which are not in the project directory and can't shell out to get the current git revision.
-  elsif environment == :test && !ENV['CIRCLECI'] && ENV['RACK_ENV']
+  elsif environment == :test && !ENV['CIRCLECI'] && defined?(Rails::Server)
     "sources_#{environment}/#{GitUtils.git_revision_short}"
   else
     "sources_#{environment}"
