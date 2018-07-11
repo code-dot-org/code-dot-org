@@ -1,6 +1,3 @@
-@no_ie
-@no_safari
-@no_mobile
 Feature: Sprite Lab
 
 Background:
