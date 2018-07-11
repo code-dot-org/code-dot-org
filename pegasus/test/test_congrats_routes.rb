@@ -42,6 +42,8 @@ class CongratsRoutesTest < Minitest::Test
 
     it 'redirects to a generic congrats page for other courses' do
       ScriptConstants::CATEGORIES[:hoc].each do |course|
+        next if course.nil?
+
         @pegasus.get "/congrats/#{CGI.escape(course)}"
         assert_equal 302, @pegasus.last_response.status
         @pegasus.follow_redirect!
