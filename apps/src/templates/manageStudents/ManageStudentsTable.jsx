@@ -253,6 +253,7 @@ class ManageStudentsTable extends Component {
         disableSaving={disableSaving}
         rowType={rowData.rowType}
         loginType={rowData.loginType}
+        studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
       />
     );

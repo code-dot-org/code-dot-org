@@ -1,5 +1,33 @@
 drop table if exists analysis.outreach_stats_by_year;
 CREATE table analysis.outreach_stats_by_year AS
+with csf_script_ids as
+  (select  
+    sc.id as script_id,
+    coalesce(sn.script_name_short, sc.name) script_name
+    FROM 
+    dashboard_production.scripts sc
+    left join analysis.script_names sn on sn.versioned_script_id = sc.id
+  where 
+    sc.name in 
+    (
+      '20-hour',
+      'course1',
+      'course2',
+      'course3',
+      'course4'
+    )
+    or sn.script_name_long in 
+    (
+      'Course A',
+      'Course B',
+      'Course C',
+      'Course D',
+      'Course E',
+      'Course F',
+      'Express',
+      'Pre-Express'
+    )
+   )
   SELECT 'State' region_type,
          ug.state region,
          ug.state state,
@@ -9,8 +37,7 @@ CREATE table analysis.outreach_stats_by_year AS
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
          COUNT(DISTINCT CASE WHEN u_students.urm = 1 THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.urm IN (0,1) THEN f.student_user_id ELSE NULL END),0) pct_urm,
          COUNT(DISTINCT CASE WHEN up.basic_proficiency_at IS NOT NULL THEN f.student_user_id ELSE NULL END) students_proficient,
-         COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Fundamentals')) or
-                                   (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Fundamentals')) 
+         COUNT(DISTINCT CASE WHEN se.script_id IN (select script_id from csf_script_ids)
                                    THEN f.student_user_id ELSE NULL END) students_csf, 
          COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Discoveries')) or
                                    (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Discoveries')) 
@@ -50,8 +77,7 @@ CREATE table analysis.outreach_stats_by_year AS
          COUNT(DISTINCT CASE WHEN u_students.gender = 'f' THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.gender IN ('m','f') THEN f.student_user_id ELSE NULL END),0) pct_female,
          COUNT(DISTINCT CASE WHEN u_students.urm = 1 THEN f.student_user_id ELSE NULL END)::FLOAT/ NULLIF(COUNT(DISTINCT CASE WHEN u_students.urm IN (0,1) THEN f.student_user_id ELSE NULL END),0) pct_urm,
          COUNT(DISTINCT CASE WHEN up.basic_proficiency_at IS NOT NULL THEN f.student_user_id ELSE NULL END) students_proficient,
-         COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Fundamentals')) or
-                                   (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Fundamentals')) 
+         COUNT(DISTINCT CASE WHEN se.script_id IN (select script_id from csf_script_ids)
                                    THEN f.student_user_id ELSE NULL END) students_csf, 
          COUNT(DISTINCT CASE WHEN (se.script_id IN (select distinct script_id from analysis.course_structure where course_name_long = 'CS Discoveries')) or
                                    (se.course_id in (select distinct course_id from analysis.course_structure where course_name_long = 'CS Discoveries')) 

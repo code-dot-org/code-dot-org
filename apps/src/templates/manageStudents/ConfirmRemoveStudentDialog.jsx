@@ -10,6 +10,7 @@ import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '../../lib/util/urlHelpers';
 // A stub set of otherwise-required props for use in stories and unit tests.
 export const MINIMUM_TEST_PROPS = {
   isOpen: true,
+  studentName: 'Clark Kent',
   onConfirm: () => {},
   onCancel: () => {},
 };
@@ -22,15 +23,17 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
   static propTypes = {
     ..._.pick(BaseDialog.propTypes, propsFromBaseDialog),
     disabled: PropTypes.bool,
+    studentName: PropTypes.string.isRequired,
     hasEverSignedIn: PropTypes.bool,
     onConfirm: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
   };
 
   headerText() {
-    return this.props.hasEverSignedIn ?
-      i18n.removeStudentHeaderNew() :
-      i18n.removeStudentHeader();
+    const {studentName, hasEverSignedIn} = this.props;
+    return hasEverSignedIn ?
+      i18n.removeStudentAndRecordsHeader({studentName}) :
+      i18n.removeUnusedStudentHeader({studentName});
   }
 
   render() {
