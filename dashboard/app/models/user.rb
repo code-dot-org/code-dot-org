@@ -1698,6 +1698,10 @@ class User < ActiveRecord::Base
     }
   end
 
+  def has_ever_signed_in?
+    current_sign_in_at.present?
+  end
+
   def self.progress_queue
     AsyncProgressHandler.progress_queue
   end

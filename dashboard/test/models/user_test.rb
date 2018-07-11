@@ -2835,6 +2835,18 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
+  test 'has_ever_signed_in? is false with no current_sign_in_at' do
+    student = create :student
+    assert_nil student.current_sign_in_at
+    refute student.has_ever_signed_in?
+  end
+
+  test 'has_ever_signed_in? is true with current_sign_in_at' do
+    student = create :student, current_sign_in_at: DateTime.now.utc
+    refute_nil student.current_sign_in_at
+    assert student.has_ever_signed_in?
+  end
+
   test 'under 13 students have sharing off by default' do
     student = create :user, age: 10
     assert student.reload.sharing_disabled
