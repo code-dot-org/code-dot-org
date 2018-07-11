@@ -41,7 +41,7 @@ And(/^I see no difference for "([^"]*)"( in test environment)?$/) do |identifier
   # Temporarily disable Eyes checkpoint in CircleCI environments for tests that specify " in test environment" because
   # they generate different checkpoint images in the dedicated test environment vs in CircleCI builds.
   # TODO: (suresh) remove the optional environment argument when there are no more tests using this option.
-  next if CDO.disable_all_eyes_running || (is_test_environment && ENV[IS_CIRCLE] == 'true')
+  next if CDO.disable_all_eyes_running || (is_test_environment && ENV['IS_CIRCLE'] == 'true')
 
   @eyes.check_window(identifier, MATCH_TIMEOUT)
 end
