@@ -16,6 +16,7 @@ module Pd
       validates_presence_of :form_id, :submission_id
 
       scope :placeholders, -> {where(answers: nil)}
+      scope :with_answers, -> {where.not(answers: nil)}
     end
 
     CACHE_TTL = 5.minutes.freeze
@@ -170,6 +171,8 @@ module Pd
             return nil
           end
 
+          # Make sure we have all attributes then see if this is a duplicate
+          model.map_answers_to_attributes
           if model.duplicate?
             CDO.log.warn "Skipping duplicate submission #{submission_id}"
             return nil
@@ -279,7 +282,7 @@ module Pd
 
     # Answers json parsed in hash form
     def answers_hash
-      JSON.parse answers
+      answers ? JSON.parse(answers) : {}
     end
 
     # Form data JSON
@@ -305,7 +308,7 @@ module Pd
     end
 
     def answers=(value)
-      write_attribute :answers, value.strip_utf8mb4
+      write_attribute :answers, value&.strip_utf8mb4
       clear_memoized_values
     end
 
