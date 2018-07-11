@@ -177,8 +177,6 @@
       %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
 
-%hr.danger.account-page-section-break
-%h2.danger= t('user.delete')
 - if current_user.can_delete_own_account?
   -# Mount point for React DeleteAccount component.
   -# If the ACCOUNT_DELETION_NEW_FLOW experiment is enabled, DeleteAccount will replace the Rails

@@ -6,7 +6,6 @@ import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 
-const DELETE_VERIFICATION_STRING = 'DELETE MY ACCOUNT';
 const GUTTER = 20;
 const styles = {
   container: {
@@ -37,33 +36,26 @@ const styles = {
 export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
+    password: PropTypes.string.isRequired,
+    deleteVerification: PropTypes.string.isRequired,
+    onPasswordChange: PropTypes.func.isRequired,
+    onDeleteVerificationChange: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
-  };
-
-  state = {
-    password: '',
-    deleteVerification: '',
-  };
-
-  onPasswordChange = (event) => {
-    this.setState({
-      password: event.target.value
-    });
-  };
-
-  onDeleteVerificationChange = (event) => {
-    this.setState({
-      deleteVerification: event.target.value
-    });
-  };
-
-  isValid = () => {
-    const {password, deleteVerification} = this.state;
-    return password.length > 0 && deleteVerification === DELETE_VERIFICATION_STRING;
+    disableConfirm: PropTypes.bool.isRequired,
+    deleteUser: PropTypes.func.isRequired,
   };
 
   render() {
-    const {isOpen, onCancel} = this.props;
+    const {
+      isOpen,
+      password,
+      deleteVerification,
+      onPasswordChange,
+      onDeleteVerificationChange,
+      onCancel,
+      disableConfirm,
+      deleteUser
+    } = this.props;
 
     return (
       <BaseDialog
@@ -92,8 +84,8 @@ export default class DeleteAccountDialog extends React.Component {
             <input
               type="password"
               style={styles.input}
-              value={this.state.password}
-              onChange={this.onPasswordChange}
+              value={password}
+              onChange={onPasswordChange}
             />
           </Field>
           <Field
@@ -102,8 +94,8 @@ export default class DeleteAccountDialog extends React.Component {
             <input
               type="text"
               style={styles.input}
-              value={this.state.deleteVerification}
-              onChange={this.onDeleteVerificationChange}
+              value={deleteVerification}
+              onChange={onDeleteVerificationChange}
             />
           </Field>
           <div>
@@ -112,9 +104,9 @@ export default class DeleteAccountDialog extends React.Component {
           <ConfirmCancelFooter
             confirmText={i18n.deleteAccountDialog_button()}
             confirmColor={Button.ButtonColor.red}
-            onConfirm={() => {}}
+            onConfirm={deleteUser}
             onCancel={onCancel}
-            disableConfirm={!this.isValid()}
+            disableConfirm={disableConfirm}
             tabIndex="1"
           />
         </div>
