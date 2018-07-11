@@ -51,6 +51,26 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def destroy
+    # TODO: (madelynkasula) Remove the new_destroy_flow check when the
+    # ACCOUNT_DELETION_NEW_FLOW experiment is removed.
+    if params[:new_destroy_flow]
+      password_required = current_user.encrypted_password.present?
+      invalid_password = !current_user.valid_password?(params[:password_confirmation])
+      if password_required && invalid_password
+        render json: {
+          error: I18n.t('password.invalid_password_entered')
+        }, status: :bad_request
+        return
+      end
+      current_user.destroy
+      Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
+      return head :no_content
+    else
+      super
+    end
+  end
+
   def sign_up_params
     super.tap do |params|
       if params[:user_type] == "teacher"
