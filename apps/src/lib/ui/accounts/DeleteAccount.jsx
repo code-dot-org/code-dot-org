@@ -27,19 +27,21 @@ const styles = {
     justifyContent: 'flex-end',
   },
 };
+const DEFAULT_STATE = {
+  isDialogOpen: false,
+  password: '',
+  passwordError: '',
+  deleteVerification: '',
+  deleteError: '',
+};
 
 export default class DeleteAccount extends React.Component {
-  state = {
-    isDialogOpen: false,
-    password: '',
-    passwordError: '',
-    deleteVerification: '',
-    deleteError: '',
-  };
+  state = DEFAULT_STATE;
 
   toggleDialog = () => {
     this.setState(state => {
       return {
+        ...DEFAULT_STATE,
         isDialogOpen: !state.isDialogOpen
       };
     });
