@@ -7,6 +7,8 @@ import Button from '@cdo/apps/templates/Button';
 import {Header, ConfirmCancelFooter} from '@cdo/apps/lib/ui/SystemDialog/SystemDialog';
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 
+const studentName = MINIMUM_TEST_PROPS.studentName;
+
 describe('ConfirmRemoveStudentDialog', () => {
   it('renders nothing if not open', () => {
     const wrapper = mount(
@@ -27,7 +29,7 @@ describe('ConfirmRemoveStudentDialog', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <Header text={i18n.removeStudentHeader()}/>
+        <Header text={i18n.removeUnusedStudentHeader({studentName})}/>
         <ConfirmCancelFooter
           confirmText={i18n.removeStudent()}
           confirmColor={Button.ButtonColor.red}
@@ -50,7 +52,7 @@ describe('ConfirmRemoveStudentDialog', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <Header text={i18n.removeStudentHeaderNew()}/>
+        <Header text={i18n.removeStudentAndRecordsHeader({studentName})}/>
         <div>
           <p>
             <strong>{i18n.removeStudentBody1()}</strong>
