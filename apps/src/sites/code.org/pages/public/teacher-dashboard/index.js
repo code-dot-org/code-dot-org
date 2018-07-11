@@ -206,7 +206,7 @@ function main() {
   // Section service. see sites.v3/code.org/routes/v2_section_routes.rb
   services.factory('sectionsService', ['$resource',
     function ($resource) {
-      return $resource('/v2/sections/:id', {}, {
+      return $resource('/dashboardapi/sections/:id', {}, {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
       //  'save':   {method:'POST'},

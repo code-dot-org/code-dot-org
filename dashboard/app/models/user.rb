@@ -1741,19 +1741,25 @@ class User < ActiveRecord::Base
   # Whether the current user has permission to change their own account type
   # from the account edit page.
   def can_change_own_user_type?
-    # Don't allow editing user type unless we can also edit email, because
-    # changing from a student (encrypted email) to a teacher (plaintext email)
-    # requires entering an email address.
-    # Don't allow editing user type for teachers with sections, as our validations
-    # require sections to be owned by teachers.
-    can_edit_email? && (student? || sections.empty?)
+    if student? # upgrading to teacher
+      # Requires ability to edit email because upgrade requires adding a cleartext email address.
+      # Students in sections cannot edit user type because teacher/school owns the student's data.
+      can_edit_email? && sections_as_student.empty?
+    else # downgrading to student
+      # Teachers with sections cannot downgrade because our validations require sections
+      # to be owned by teachers.
+      sections.empty?
+    end
   end
 
   # Whether the current user has permission to delete their own account from
   # the account edit page.
   def can_delete_own_account?
-    # All accounts except teacher-managed accounts may delete their own account.
-    !teacher_managed_account?
+    return true unless student?
+    # Teacher-managed student accounts may not delete their own account.
+    return false if teacher_managed_account?
+    # Students in sections may not delete their own account.
+    sections_as_student.empty?
   end
 
   # Users who might otherwise have orphaned accounts should have the option
