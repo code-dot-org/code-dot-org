@@ -199,6 +199,7 @@ en:
     pair_programming: 'I have a partner at my computer'
     student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
+    invalid_password_entered: 'The password you entered is invalid.'
     reset_form:
       title: 'Forgot your password?'
       instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
