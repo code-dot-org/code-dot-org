@@ -177,9 +177,9 @@
       %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
 
+%hr.danger.account-page-section-break
+%h2.danger= t('user.delete')
 - if current_user.can_delete_own_account?
-  %hr.danger.account-page-section-break
-  %h2.danger= t('user.delete')
   %p
     = t('user.delete_text')
     - if current_user.teacher?
@@ -187,6 +187,8 @@
     .farSide
       - data_hash = { confirm: t('user.delete_confirm') }
       = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
+- else
+  %p= t('user.delete_text_teacher_managed_note')
 
 -# Hidden form used to asynchronously submit an email change to Rails with the
 -# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.
