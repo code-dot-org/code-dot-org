@@ -58,8 +58,9 @@ class RegistrationsController < Devise::RegistrationsController
       password_required = current_user.encrypted_password.present?
       invalid_password = !current_user.valid_password?(params[:password_confirmation])
       if password_required && invalid_password
+        current_user.errors.add :current_password
         render json: {
-          error: I18n.t('password.invalid_password_entered')
+          error: current_user.errors.as_json(full_messages: true)
         }, status: :bad_request
         return
       end
