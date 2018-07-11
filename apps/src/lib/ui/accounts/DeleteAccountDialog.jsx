@@ -19,7 +19,7 @@ const styles = {
   },
   icon: {
     color: color.red,
-    fontSize: 100,
+    fontSize: 115,
   },
   text: {
     fontSize: 16,
@@ -40,6 +40,7 @@ export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     isPasswordRequired: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
     password: PropTypes.string.isRequired,
     passwordError: PropTypes.string,
     deleteVerification: PropTypes.string.isRequired,
@@ -55,6 +56,7 @@ export default class DeleteAccountDialog extends React.Component {
     const {
       isOpen,
       isPasswordRequired,
+      isTeacher,
       password,
       passwordError,
       deleteVerification,
@@ -85,6 +87,13 @@ export default class DeleteAccountDialog extends React.Component {
               {i18n.deleteAccountDialog_body2()}
               <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body3()}</strong>
               {i18n.deleteAccountDialog_body4()}
+              {isTeacher &&
+                <span>
+                  {i18n.deleteAccountDialog_body5()}
+                  <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body6()}</strong>
+                  {i18n.deleteAccountDialog_body7()}
+                </span>
+              }
             </div>
           </div>
           {isPasswordRequired &&

@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
 import DeleteAccountDialog from './DeleteAccountDialog';
@@ -38,6 +39,7 @@ const DEFAULT_STATE = {
 export default class DeleteAccount extends React.Component {
   static propTypes = {
     isPasswordRequired: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
   };
 
   state = DEFAULT_STATE;
@@ -107,7 +109,26 @@ export default class DeleteAccount extends React.Component {
           {i18n.deleteAccount()}
         </h2>
         <div style={styles.warning}>
-          {i18n.deleteAccount_warning()}
+          {!this.props.isTeacher && i18n.deleteAccount_studentWarning()}
+          {this.props.isTeacher &&
+            <div>
+              <p>
+                {i18n.deleteAccount_teacherWarning1()}
+                <strong>{i18n.deleteAccount_teacherWarning2()}</strong>
+                {i18n.deleteAccount_teacherWarning3()}
+              </p>
+              <p>
+                {i18n.deleteAccount_teacherWarning4()}
+                <a
+                  href={ADD_A_PERSONAL_LOGIN_HELP_URL}
+                  target="_blank"
+                >
+                  {i18n.deleteAccount_teacherWarning5()}
+                </a>
+                {i18n.deleteAccount_teacherWarning6()}
+              </p>
+            </div>
+          }
         </div>
         <div style={styles.buttonContainer}>
           {/* This button intentionally uses BootstrapButton to match other account page buttons */}
@@ -120,6 +141,7 @@ export default class DeleteAccount extends React.Component {
         <DeleteAccountDialog
           isOpen={this.state.isDialogOpen}
           isPasswordRequired={this.props.isPasswordRequired}
+          isTeacher={this.props.isTeacher}
           password={this.state.password}
           passwordError={this.state.passwordError}
           deleteVerification={this.state.deleteVerification}

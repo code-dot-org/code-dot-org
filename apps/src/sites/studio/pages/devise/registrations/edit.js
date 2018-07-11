@@ -58,7 +58,10 @@ $(document).ready(() => {
     // Replace deleteAccountMountPoint Rails contents with DeleteAccount component.
     if (deleteAccountMountPoint) {
       ReactDOM.render(
-        <DeleteAccount isPasswordRequired={isPasswordRequired}/>,
+        <DeleteAccount
+          isPasswordRequired={isPasswordRequired}
+          isTeacher={userType === 'teacher'}
+        />,
         deleteAccountMountPoint
       );
     }
