@@ -56,10 +56,12 @@ $(document).ready(() => {
   if (experiments.isEnabled(experiments.ACCOUNT_DELETION_NEW_FLOW)) {
     const deleteAccountMountPoint = document.getElementById('delete-account');
     // Replace deleteAccountMountPoint Rails contents with DeleteAccount component.
-    ReactDOM.render(
-      <DeleteAccount isPasswordRequired={isPasswordRequired}/>,
-      deleteAccountMountPoint
-    );
+    if (deleteAccountMountPoint) {
+      ReactDOM.render(
+        <DeleteAccount isPasswordRequired={isPasswordRequired}/>,
+        deleteAccountMountPoint
+      );
+    }
   }
 
   initializeCreatePersonalAccountControls();
