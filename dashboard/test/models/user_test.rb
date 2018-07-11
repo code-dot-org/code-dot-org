@@ -2829,7 +2829,8 @@ class UserTest < ActiveSupport::TestCase
         secret_picture_path: @student.secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
-        sharing_disabled: false
+        sharing_disabled: false,
+        has_ever_signed_in: @student.has_ever_signed_in?
       },
       @student.summarize
     )
