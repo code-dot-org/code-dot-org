@@ -34,4 +34,5 @@ const style = {
   paddingLeft: 0,
   paddingRight: 0,
   marginBottom: 10,
+  marginTop: 10,
 };
