@@ -61,7 +61,7 @@ export default storybook => {
         story: () => (
           <div>
             {Object.values(Button.ButtonSize).map((size) => (
-              <div>
+              <div key={`${size}-row`}>
                 {Object.values(Button.ButtonColor).map((color) => (
                   <Button
                     icon="file-text"
