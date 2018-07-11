@@ -88,16 +88,15 @@ export default class DeleteAccount extends React.Component {
 
   onFailure = (xhr) => {
     const responseJSON = xhr.responseJSON;
+    let newState;
     if (responseJSON && responseJSON.error) {
       const passwordErrors = responseJSON.error.current_password;
-      this.setState({
-        passwordError: passwordErrors[0]
-      });
+      newState = {passwordError: passwordErrors[0]};
     } else {
-      this.setState({
-        deleteError: `Unexpected error: ${xhr.status}`
-      });
+      newState = {deleteError: `Unexpected error: ${xhr.status}`};
     }
+
+    this.setState(newState);
   };
 
   render() {
