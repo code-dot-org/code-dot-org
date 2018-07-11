@@ -52,8 +52,8 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def destroy
-    # TODO: (madelynkasula) Remove this flag when the new account
-    # deletion UI is available for all users.
+    # TODO: (madelynkasula) Remove the new_destroy_flow check when the
+    # ACCOUNT_DELETION_NEW_FLOW experiment is removed.
     if params[:new_destroy_flow]
       password_required = current_user.encrypted_password.present?
       invalid_password = !current_user.valid_password?(params[:password_confirmation])
