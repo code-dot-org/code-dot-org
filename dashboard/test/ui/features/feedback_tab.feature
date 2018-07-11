@@ -1,5 +1,4 @@
 @no_mobile
-@no_ie
 Feature: Feedback Tab Visibility
 
 Background:
@@ -43,6 +42,9 @@ Scenario: With dev flag, as student, 'Feedback' tab is not visible if no feedbac
   And element ".uitest-feedback" is not visible
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=devCommentBoxTab"
 
+@no_ie
+# Disabling IE due to bug where text changes in the feedback text input are not registered,
+# so submit button remains disabled
 Scenario: With dev flag, as teacher, tab is invisible when not reviewing student work and visible when viewing student work, feedback can be submitted and displayed
   #As teacher, not reviewing work, don't see feedback tab
   Then I sign in as "Teacher_Lillian"

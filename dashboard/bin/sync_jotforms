@@ -2,6 +2,10 @@
 require_relative '../../lib/cdo/only_one'
 require_relative '../config/environment'
 
+# This should be run periodically (~ daily) to sync any JotForm responses that we missed and update the answers
+# Typically we will get a postback from JotForm on submit, and create a placeholder.
+# These placeholders are filled in with the more frequent (~ every minute) fill_jotform_placeholders cronjob
+
 JOT_FORM_CLASSES = [
   Pd::WorkshopDailySurvey,
   Pd::WorkshopFacilitatorDailySurvey,

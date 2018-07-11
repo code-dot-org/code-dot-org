@@ -163,7 +163,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     updated_at = Time.now
 
-    create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
+    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
 
     # Call the controller method.
     get :section_responses, params: {
@@ -186,7 +186,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "multi_correct" => 1,
             "multi_count" => 4,
             "submitted" => true,
-            "timestamp" => updated_at.utc.to_s,
+            "timestamp" => user_level[:updated_at],
             "level_results" => [
               {"student_result" => "This is a free response", "status" => "", "type" => "FreeResponse"},
               {"type" => "Multi", "student_result" => [0], "status" => "correct",},
