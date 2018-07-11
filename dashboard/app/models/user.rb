@@ -1695,6 +1695,7 @@ class User < ActiveRecord::Base
       location: "/v2/users/#{id}",
       age: age,
       sharing_disabled: sharing_disabled?,
+      has_ever_signed_in: has_ever_signed_in?,
     }
   end
 
