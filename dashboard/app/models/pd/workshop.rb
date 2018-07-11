@@ -535,6 +535,14 @@ class Pd::Workshop < ActiveRecord::Base
     course == COURSE_CSF && funded
   end
 
+  def future_or_current_teachercon_or_fit?
+    [
+      Pd::Workshop::SUBJECT_TEACHER_CON,
+      Pd::Workshop::SUBJECT_FIT
+    ].include?(subject) &&
+      state != Pd::Workshop::STATE_ENDED
+  end
+
   def funding_summary
     (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
   end
