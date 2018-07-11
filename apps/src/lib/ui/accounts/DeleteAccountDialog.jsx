@@ -6,6 +6,7 @@ import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 
+const DELETE_VERIFICATION_STRING = 'DELETE MY ACCOUNT';
 const GUTTER = 20;
 const styles = {
   container: {
@@ -15,7 +16,6 @@ const styles = {
   bodyContainer: {
     display: 'flex',
     alignItems: 'center',
-    paddingTop: GUTTER,
     paddingBottom: GUTTER,
   },
   icon: {
@@ -38,6 +38,28 @@ export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onCancel: PropTypes.func.isRequired,
+  };
+
+  state = {
+    password: '',
+    deleteVerification: '',
+  };
+
+  onPasswordChange = (event) => {
+    this.setState({
+      password: event.target.value
+    });
+  };
+
+  onDeleteVerificationChange = (event) => {
+    this.setState({
+      deleteVerification: event.target.value
+    });
+  };
+
+  isValid = () => {
+    const {password, deleteVerification} = this.state;
+    return password.length > 0 && deleteVerification === DELETE_VERIFICATION_STRING;
   };
 
   render() {
@@ -70,6 +92,8 @@ export default class DeleteAccountDialog extends React.Component {
             <input
               type="password"
               style={styles.input}
+              value={this.state.password}
+              onChange={this.onPasswordChange}
             />
           </Field>
           <Field
@@ -78,6 +102,8 @@ export default class DeleteAccountDialog extends React.Component {
             <input
               type="text"
               style={styles.input}
+              value={this.state.deleteVerification}
+              onChange={this.onDeleteVerificationChange}
             />
           </Field>
           <div>
@@ -88,7 +114,7 @@ export default class DeleteAccountDialog extends React.Component {
             confirmColor={Button.ButtonColor.red}
             onConfirm={() => {}}
             onCancel={onCancel}
-            disableConfirm={false}
+            disableConfirm={!this.isValid()}
             tabIndex="1"
           />
         </div>
