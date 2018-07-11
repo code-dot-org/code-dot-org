@@ -42,7 +42,10 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
         handleClose={onCancel}
       >
         <div style={styles.container}>
-          <Header text={this.headerText()}/>
+          <Header
+            text={this.headerText()}
+            hideBorder={!hasEverSignedIn}
+          />
           {hasEverSignedIn &&
             <div>
               <p>
