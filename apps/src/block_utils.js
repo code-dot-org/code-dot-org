@@ -747,7 +747,8 @@ exports.createJsWrapperBlockCreator = function (
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
    * @param {boolean} opts.inline Render inputs inline, defaults to false
-   * @param {boolean} opts.simpleValue Just return the
+   * @param {boolean} opts.simpleValue Just return the field value of the block.
+   * @param {?string} helperCode The block's helper code, to verify the func.
    *
    * @returns {string} the name of the generated block
    */
@@ -767,11 +768,11 @@ exports.createJsWrapperBlockCreator = function (
     eventLoopBlock,
     inline,
     simpleValue,
-  }) => {
+  }, helperCode) => {
     if (!!func + !!expression + !!simpleValue !== 1) {
       throw new Error('Provide exactly one of func, expression, or simpleValue');
     }
-    if (func && true) {
+    if (func && helperCode && !new RegExp(`function ${func}\\W`).test(helperCode)) {
       throw new Error(`func '${func}' not found in helper code`);
     }
     if ((expression || simpleValue) && !name) {
