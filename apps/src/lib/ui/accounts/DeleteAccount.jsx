@@ -6,7 +6,7 @@ import {navigateToHref} from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
 import DeleteAccountDialog from './DeleteAccountDialog';
 
-const DELETE_VERIFICATION_STRING = i18n.deleteAccountDialog_verificationString();
+export const DELETE_VERIFICATION_STRING = i18n.deleteAccountDialog_verificationString();
 const styles = {
   container: {
     paddingTop: 20,

@@ -118,7 +118,12 @@ export default class DeleteAccountDialog extends React.Component {
             disableConfirm={disableConfirm}
             tabIndex="1"
           >
-            <span style={styles.dangerText}>{deleteError}</span>
+            <span
+              id="uitest-delete-error"
+              style={styles.dangerText}
+            >
+              {deleteError}
+            </span>
           </ConfirmCancelFooter>
         </div>
       </BaseDialog>
