@@ -25,13 +25,16 @@ const styles = {
 
 class ManageStudentActionsCell extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired, // the student's user id
     sectionId: PropTypes.number,
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
     rowType: PropTypes.oneOf(Object.values(RowType)),
     loginType: PropTypes.string,
+    studentName: PropTypes.string.isRequired,
+    hasEverSignedIn: PropTypes.bool,
+    dependsOnThisSectionForLogin: PropTypes.bool,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -150,6 +153,9 @@ class ManageStudentActionsCell extends Component {
           <ConfirmRemoveStudentDialog
             isOpen={this.state.deleting}
             disabled={this.state.requestInProgress}
+            studentName={this.props.studentName}
+            hasEverSignedIn={this.props.hasEverSignedIn}
+            dependsOnThisSectionForLogin={this.props.dependsOnThisSectionForLogin}
             onConfirm={this.onConfirmDelete}
             onCancel={this.onCancelDelete}
           />

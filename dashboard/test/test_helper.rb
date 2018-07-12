@@ -413,10 +413,8 @@ class ActionController::TestCase
       user_display_name =
         if user.is_a?(Proc)
           'supplied user'
-        elsif user.present?
-          user
         else
-          'not logged-in user'
+          user.presence || 'not logged-in user'
         end
 
       name = "#{user_display_name} calling #{method} #{action} should receive #{response}"

@@ -1,16 +1,14 @@
+
 function bounce(sprite){
-  if(sprite.isTouching(bottomEdge)){
-    console.log("bottom!");
+  if(sprite.isTouching(leftEdge)){
+    console.log("touched left");
   }
   else if(sprite.isTouching(rightEdge)){
-    console.log("Right!");
+    console.log("touched right");
   }
   else if(sprite.isTouching(topEdge)){
-    console.log("Top!");
+    console.log("touched top");
   }
-  else{
-     console.log("Left");
-  } 
-  console.log(sprite.touching);
+  edges.displace(sprite);
   sprite.direction += sprite.direction * 1.45;
 }
