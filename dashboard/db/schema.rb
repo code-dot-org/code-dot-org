@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180704013020) do
+ActiveRecord::Schema.define(version: 20180712220543) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1455,14 +1455,15 @@ ActiveRecord::Schema.define(version: 20180704013020) do
   end
 
   create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",          null: false
-    t.integer  "script_id",        null: false
+    t.integer  "user_id",                        null: false
+    t.integer  "script_id",                      null: false
     t.datetime "started_at"
     t.datetime "completed_at"
     t.datetime "assigned_at"
     t.datetime "last_progress_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "properties",       limit: 65535
     t.index ["script_id"], name: "index_user_scripts_on_script_id", using: :btree
     t.index ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true, using: :btree
   end
