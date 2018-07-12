@@ -12,6 +12,17 @@
 
 ActiveRecord::Schema.define(version: 20180712175948) do
 
+  create_table "access_report_other_curriculum_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "curriculum_provider_name",            null: false
+    t.string   "school_id",                limit: 12, null: false
+    t.string   "course",                              null: false
+    t.integer  "school_year",              limit: 2,  null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["curriculum_provider_name", "school_id", "course", "school_year"], name: "index_access_report_other_curriculum_offerings_unique", unique: true, using: :btree
+    t.index ["school_id"], name: "fk_rails_a4c25f7f68", using: :btree
+  end
+
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "level_id"
@@ -119,17 +130,6 @@ ActiveRecord::Schema.define(version: 20180712175948) do
     t.index ["census_override_id"], name: "fk_rails_465d31c61e", using: :btree
     t.index ["census_submission_id"], name: "fk_rails_18600827a9", using: :btree
     t.index ["user_id"], name: "fk_rails_9c9f685588", using: :btree
-  end
-
-  create_table "census_other_curriculum_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "curriculum_provider_name",            null: false
-    t.string   "school_id",                limit: 12, null: false
-    t.string   "course",                              null: false
-    t.integer  "school_year",              limit: 2,  null: false
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.index ["curriculum_provider_name", "school_id", "course", "school_year"], name: "index_census_other_curriculum_offerings_unique", unique: true, using: :btree
-    t.index ["school_id"], name: "fk_rails_18ce461cce", using: :btree
   end
 
   create_table "census_overrides", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1580,6 +1580,7 @@ ActiveRecord::Schema.define(version: 20180712175948) do
     t.index ["program_type"], name: "index_workshops_on_program_type", using: :btree
   end
 
+  add_foreign_key "access_report_other_curriculum_offerings", "schools"
   add_foreign_key "ap_school_codes", "schools"
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"
@@ -1587,7 +1588,6 @@ ActiveRecord::Schema.define(version: 20180712175948) do
   add_foreign_key "census_inaccuracy_investigations", "census_overrides"
   add_foreign_key "census_inaccuracy_investigations", "census_submissions"
   add_foreign_key "census_inaccuracy_investigations", "users"
-  add_foreign_key "census_other_curriculum_offerings", "schools"
   add_foreign_key "census_overrides", "schools"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
