@@ -536,8 +536,7 @@ th-TH:
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
   minecraft_agent_button: เริ่มต้น
-  minecraft_designer_description: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม
-    Minecraft ในแบบฉบับของคุณเอง
+  minecraft_designer_description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
   minecraft_designer_button: เริ่มต้น
   minecraft_adventurer_description: ใช้โค้ดเพื่อนำอเล็กซ์หรือสตีฟไปผจญภัย
   minecraft_adventurer_button: เริ่มต้น
@@ -2074,5 +2073,5 @@ th-TH:
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
   applab-intro_name: App Lab Intro
