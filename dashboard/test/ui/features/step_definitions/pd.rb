@@ -232,83 +232,85 @@ And(/^I am viewing a workshop with fake survey results$/) do
       (FactoryGirl.create :facilitator, email: "test_facilitator#{SecureRandom.hex}@code.org", name: 'F1'),
       (FactoryGirl.create :facilitator, email: "test_facilitator#{SecureRandom.hex}@code.org", name: 'F2')
     ]
+  create_fake_survey_questions workshop
+  create_fake_daily_survey_results workshop
 
-  begin
-    Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_0'],
-      questions: [
-        {
-          id: 1,
-          name: 'matrix',
-          type: 'matrix',
-          text: 'How much do you agree / disagree with these statements on teaching CS?',
-          options: [
-            'Strongly Disagree',
-            'Disagree',
-            'Slightly Disagree',
-            'Neutral',
-            'Slightly Agree',
-            'Agree',
-            'Strongly Agree'
-          ],
-          sub_questions: [
-            'I like computer science',
-            'People should learn computer science',
-            'I feel like I can teach computer science'
-          ],
-          order: 1
-        },
-        {
-          id: 2,
-          name: 'scale',
-          type: 'scale',
-          text: 'How pumped are you to teach CS?',
-          options: ['Not at all pumped', 'Super pumped'],
-          values: (1..5).to_a,
-          order: 2
-        },
-        {
-          id: 3,
-          name: 'radio',
-          type: 'radio',
-          text: 'How much CS experience do you have?',
-          order: 3,
-          options: [
-            'None',
-            'Some basic messing around',
-            'Formal education',
-            'I am l33t h4xx0r'
-          ]
-        },
-        {
-          id: 4,
-          name: 'textarea',
-          type: 'textarea',
-          text: 'What inspired you to teach computer science?',
-          order: 4
-        },
-        {
-          id: 5,
-          name: 'userId',
-          text: 'userId',
-          type: 'textarea',
-          order: 5,
-          hidden: true
-        },
-        {
-          id: 6,
-          name: 'workshopId',
-          text: 'workshopId',
-          type: 'textarea',
-          order: 6,
-          hidden: true
-        }
-      ].to_json
-    )
-  rescue => e
-    puts "Unable to create SurveyQuestions. If you are running this locally, please make
-    sure that you have overridden jotform_forms in your locals.yml"
-    raise e
-  end
+  steps %Q{
+    And I am on "http://studio.code.org/pd/workshop_dashboard/local_summer_workshop_daily_survey_results/#{workshop.id}"
+  }
+end
+
+def create_fake_survey_questions(workshop)
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_0'],
+    questions: [
+      {
+        id: 1,
+        name: 'matrix',
+        type: 'matrix',
+        text: 'How much do you agree / disagree with these statements on teaching CS?',
+        options: [
+          'Strongly Disagree',
+          'Disagree',
+          'Slightly Disagree',
+          'Neutral',
+          'Slightly Agree',
+          'Agree',
+          'Strongly Agree'
+        ],
+        sub_questions: [
+          'I like computer science',
+          'People should learn computer science',
+          'I feel like I can teach computer science'
+        ],
+        order: 1
+      },
+      {
+        id: 2,
+        name: 'scale',
+        type: 'scale',
+        text: 'How pumped are you to teach CS?',
+        options: ['Not at all pumped', 'Super pumped'],
+        values: (1..5).to_a,
+        order: 2
+      },
+      {
+        id: 3,
+        name: 'radio',
+        type: 'radio',
+        text: 'How much CS experience do you have?',
+        order: 3,
+        options: [
+          'None',
+          'Some basic messing around',
+          'Formal education',
+          'I am l33t h4xx0r'
+        ]
+      },
+      {
+        id: 4,
+        name: 'textarea',
+        type: 'textarea',
+        text: 'What inspired you to teach computer science?',
+        order: 4
+      },
+      {
+        id: 5,
+        name: 'userId',
+        text: 'userId',
+        type: 'textarea',
+        order: 5,
+        hidden: true
+      },
+      {
+        id: 6,
+        name: 'workshopId',
+        text: 'workshopId',
+        type: 'textarea',
+        order: 6,
+        hidden: true
+      }
+    ].to_json
+  )
 
   Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_1'],
     questions: [
@@ -397,7 +399,13 @@ And(/^I am viewing a workshop with fake survey results$/) do
       }
     ].to_json
   )
+rescue => e
+  puts "Unable to create SurveyQuestions. If you are running this locally, please make
+    sure that you have overridden jotform_forms in your locals.yml"
+  raise e
+end
 
+def create_fake_daily_survey_results(workshop)
   10.times do |x|
     user = workshop.enrollments[x].user
 
@@ -446,10 +454,6 @@ And(/^I am viewing a workshop with fake survey results$/) do
       }.to_json
     )
   end
-
-  steps %Q{
-    And I am on "http://studio.code.org/pd/workshop_dashboard/local_summer_workshop_daily_survey_results/#{workshop.id}"
-  }
 end
 
 def create_enrollment(workshop, name=nil)
