@@ -631,12 +631,11 @@ module.exports = class Maze {
   /**
    * Animates a single action
    * @param {string} action The action to animate
-   * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
    * @param {integer} timePerStep How much time we have allocated before the next step
    */
-  animateAction_(action, spotlightBlocks, timePerStep) {
+  animateAction_(action, timePerStep) {
     if (action.blockId) {
-      studioApp().highlight(String(action.blockId), spotlightBlocks);
+      studioApp().highlight(String(action.blockId));
     }
 
     switch (action.command) {
@@ -742,7 +741,7 @@ module.exports = class Maze {
       return;
     }
 
-    this.animateAction_(actions[index], singleStep, timePerAction);
+    this.animateAction_(actions[index], timePerAction);
 
     var command = actions[index] && actions[index].command;
     var timeModifier = (this.controller.skin.actionSpeedScale && this.controller.skin.actionSpeedScale[command]) || 1;
