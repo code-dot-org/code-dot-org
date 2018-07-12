@@ -12,7 +12,7 @@ var instructions = require('../../redux/instructions');
  * Owns maxHeightAvailable for instructions, updating as appropriate on window
  * resize events
  */
-var InstructionsWithWorkspace = React.createClass({
+export var UnwrappedInstructionsWithWorkspace = React.createClass({
   propTypes: {
     // props provided via connect
     instructionsHeight: PropTypes.number.isRequired,
@@ -63,7 +63,7 @@ var InstructionsWithWorkspace = React.createClass({
     const INSTRUCTIONS_RESERVE = 150;
 
     const instructionsHeight = this.props.instructionsHeight;
-    const codeWorkspaceHeight = this.refs.codeWorkspaceContainer
+    const codeWorkspaceHeight = this.codeWorkspaceContainer
       .getWrappedInstance().getRenderedHeight();
     if (codeWorkspaceHeight === 0) {
       // We haven't initialized the codeWorkspace yet. No need to change the
@@ -95,7 +95,7 @@ var InstructionsWithWorkspace = React.createClass({
       <span>
         <TopInstructions/>
         <CodeWorkspaceContainer
-          ref="codeWorkspaceContainer"
+          ref={el => this.codeWorkspaceContainer = el}
           topMargin={this.props.instructionsHeight}
         >
           {this.props.children}
@@ -105,7 +105,7 @@ var InstructionsWithWorkspace = React.createClass({
   }
 });
 
-module.exports = connect(function propsFromStore(state) {
+export default connect(function propsFromStore(state) {
   return {
     instructionsHeight: state.instructions.renderedHeight
   };
@@ -115,4 +115,4 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(instructions.setInstructionsMaxHeightAvailable(maxHeight));
     }
   };
-})(InstructionsWithWorkspace);
+})(UnwrappedInstructionsWithWorkspace);
