@@ -35,5 +35,19 @@ export default storybook => storybook
           hasEverSignedIn={true}
         />
       )
+    }, {
+      name:'For a student who depends on this section to sign in',
+      description: `
+        If the student is in a word / picture section and doesn’t have a
+        personal login and isn’t in another teacher’s section, display
+        help for creating a personal login.
+        `,
+      story: () => (
+        <ConfirmRemoveStudentDialog
+          {...STORY_PROPS}
+          hasEverSignedIn={true}
+          dependsOnThisSectionForLogin={true}
+        />
+      )
     }
   ]);

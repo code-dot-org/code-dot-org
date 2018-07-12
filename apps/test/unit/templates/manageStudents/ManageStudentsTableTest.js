@@ -74,7 +74,8 @@ describe('ManageStudentsTable', () => {
       name: 'Clark Kent',
       username: 'clark_kent',
       sectionId: 101,
-      hasEverSignedIn: false,
+      hasEverSignedIn: true,
+      dependsOnThisSectionForLogin: true,
       loginType: 'picture',
       rowType: RowType.STUDENT,
     };
@@ -126,6 +127,7 @@ describe('ManageStudentsTable', () => {
           loginType={fakeStudent.loginType}
           studentName={fakeStudent.name}
           hasEverSignedIn={fakeStudent.hasEverSignedIn}
+          dependsOnThisSectionForLogin={fakeStudent.dependsOnThisSectionForLogin}
         />
       );
     });

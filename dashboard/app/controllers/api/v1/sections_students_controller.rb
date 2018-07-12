@@ -6,7 +6,15 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
 
   # GET /sections/<section_id>/students
   def index
-    render json: @section.students.map(&:summarize)
+    summaries = @section.students.map do |student|
+      # Student depends on this section for login if student can still create
+      # a personal login and only belongs to the one section.
+      student.summarize.merge(depends_on_this_section_for_login:
+        student.can_create_personal_login? &&
+          student.sections_as_student.size == 1
+      )
+    end
+    render json: summaries
   end
 
   # GET /sections/<section_id>/students/completed_levels_count

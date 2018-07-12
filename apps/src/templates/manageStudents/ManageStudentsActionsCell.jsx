@@ -34,6 +34,7 @@ class ManageStudentActionsCell extends Component {
     loginType: PropTypes.string,
     studentName: PropTypes.string.isRequired,
     hasEverSignedIn: PropTypes.bool,
+    dependsOnThisSectionForLogin: PropTypes.bool,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -154,6 +155,7 @@ class ManageStudentActionsCell extends Component {
             disabled={this.state.requestInProgress}
             studentName={this.props.studentName}
             hasEverSignedIn={this.props.hasEverSignedIn}
+            dependsOnThisSectionForLogin={this.props.dependsOnThisSectionForLogin}
             onConfirm={this.onConfirmDelete}
             onCancel={this.onCancelDelete}
           />
