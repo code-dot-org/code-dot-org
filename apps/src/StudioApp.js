@@ -2424,7 +2424,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
     hasVerticalScrollbars: config.hasVerticalScrollbars,
-    hasHorizontalScrollbars: config.hasHorizontalScrollbars,
+    hasHorizontalScrollbars: config.hasHorizontalScrollbars ||
+        experiments.isEnabled('horizontalScroll'),
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
     showUnusedBlocks: utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
