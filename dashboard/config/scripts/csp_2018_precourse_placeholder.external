@@ -1,0 +1,7 @@
+name 'CSP 2018 Precourse Placeholder'
+css 'unplugged'
+markdown <<MARKDOWN
+# Pre-survey coming soon!
+
+The CS Principles 2018 Pre Survey is still under development. It should be available here by August 1st.
+MARKDOWN

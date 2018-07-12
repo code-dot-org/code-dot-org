@@ -106,84 +106,89 @@ ja:
         2-3_Artist Loops_New_12_b: アーティストが100ピクセル前に進んだ後、鋭角に曲がるためには、120度右に向く必要があります。
         2-3_Artist Loops_New_12_c: アーティストがゆるやかに曲がるときは、60度だけ右に向く必要があります。
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already
-          facing the right direction to start the next one.  \n\nBecause of this,
-          we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n-
-          move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen
-          do it all again!"
+        2-3_Artist_Loops_New_13_a: |-
+          各ダイヤモンドの最後で次を始められるようアーティストは既に右側を向いています。
+
+          このため、再度始めるときに余分な「左にまがる」ブロックを追加する必要はありません。
+        2-3_Artist_Loops_New_13_b: |-
+          各ダイヤモンドを作るには、アーティストは次のことをする必要があります。
+          - うごく
+          - 右にまがる120度
+          - うごく
+          - 右にまがる60度
+
+          そしてそれ全部をもう一度やります！
       2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right
-          before he starts drawing.
-        2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would
-          the code be to draw half of a square?
+        2-3_Artist_Loops_New_9_a: 書き始める前にアーティストは右に45度曲がる必要があります。
+        2-3_Artist_Loops_New_9_b: このVは実際単なる正方形の半分です。正方形の半分を描くコードは何でしょう？
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside
-          of your loop.
+        2-3_Artist_Nested_Loops_1_a: ループの内側に灰色のブロックをすべて入れることを覚えておいてください。
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: 角度わかりますか？360/12=30
-        2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your
-          turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_b: ループの内側に灰色のコードとまがるブロックをすべて入れることを覚えておいてください。
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: 角度わかりますか？360/12=30
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from
-          the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        2-3_Artist_Nested_Loops_5_a: |-
+          「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
+
+          正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat
-          is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: |-
+          各ループでどれだけ曲がればよいでしょう？
+
+          360/10って何ですか？
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+          正しい角度を知る手助けが必要ですか？
 
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
-          \ \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
-          if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
-          \ - Make two honey"
+        2-3_Bee_Conditionals_14_a: ブロックの減らし方が難しいですか？赤い花を紫の花とまったく同じものとして扱ってみてください！
+        2-3_Bee_Conditionals_14_b: 赤い花が紫色だったら、追加の「くりかえし」ループを使ってコードを減らす方法が分かったでしょうか？
+        2-3_Bee_Conditionals_14_c: |-
+          2つの別のかたまりに分けてみましょう。
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1) 花のミツをとるを3回
+           - 前にすすむを5回
+           - 花のミツかどうか確認して、もしそうなら花のミツをとる
+           - 左にまがる
+
+          2) ハチミツをつくる
+           - 前にすすむを1回
+           - ハチミツを2つつくる
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: '注意: 紫の花だけ0か1個の花のミツがあって、プログラムを実行するたびにそれが変わります。'
       2-3 Bee Conditionals 3_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: 前にすすむときに毎回ループを使い、他のループで花のミツをとり、そしてほかのループでハチミツをつくるとコードがもっとも短くなります。
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: '注意: プログラムを実行するときに紫の花のミツが0と1の間で変化します！'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: 間違いのブロックを見つけて直すと、「くりかえし」ループを使ってよりシンプルにすることができるパターンが分かりますか？
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: 間違いのブロックを見つけて直すと、「くりかえし」ループを使ってよりシンプルにすることができるパターンが分かりますか？
       2-3 Bee Debugging 4_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that
-          doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: ハチが意味のない何かをするところがありますか？そのブロックを変更すると何が起こりますか？
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving,
-          using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: ループを関数と一緒に使う必要はありません。すすんで、関数を使って、そしてすすんで、もう一度関数を使ってみてください。
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving,
-          using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: ループを関数と一緒に使う必要はありません。すすんで、関数を使って、そしてすすんで、もう一度関数を使ってみてください。
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          緑の関数ブロックの中にコードを書くことを覚えておいてください。
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
@@ -191,14 +196,12 @@ ja:
       2-3 Bee Loops 3_authored_hint:
         2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: 前後する別の2つの「くりかえし」ループが必要になります。
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要です。
       2-3 Bee Loops 4A_authored_hint:
         2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_b: プログラムの最後の部分は、ループ外のプログラムの最後にコードを書くことで終わりにできます。
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
@@ -361,6 +364,7 @@ ja:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Each item will need its own `while` loop.
+      AB_debug_Laurel1_authored_hint: {}
       AppLab Intro 3 - Change Screen Color_authored_hint: {}
       AppLab Intro 4 - Change Screen Color_authored_hint: {}
       AppLab Intro 5 - Change Screen Color_authored_hint: {}
@@ -2969,15 +2973,17 @@ ja:
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge3_authored_hint:
@@ -8126,19 +8132,19 @@ ja:
         courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of
           the loop so that the artist turns after each triangle.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get
-          from the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        courseD_artist_nestedLoops3_a: |-
+          「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
+
+          正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
           this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
           square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops3_2018_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get
-          from the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        courseD_artist_nestedLoops3_a: |-
+          「前にジャンプ」ブロックを使って、1つの四角形の上部から次に描き始めるところまで移動させてみてください。
+
+          正方形の高さが20ピクセルでそれぞれが20ピクセル離れているとすると、どれだけジャンプすればよいでしょう？
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
           this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
@@ -11140,40 +11146,51 @@ ja:
           move forward\n- collect all of the nectar\n- move backward\n- turn back
           to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6_2018_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          緑の関数ブロックの中にコードを書くことを覚えておいてください。
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
           the path, collect the nectar, make the honey, then turn the bee around and
           bring him back.
       courseE_bee_functions7_2018_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          緑の関数ブロックの中にコードを書くことを覚えておいてください。
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
@@ -11207,27 +11224,31 @@ ja:
         courseE_bee_functions9_b: Even though you know how much nectar some of the
           flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge1_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_ramp14_authored_hint:
@@ -13596,9 +13617,12 @@ ja:
         courseF_bee_functions6_c: Since you are turning within your function, you
           only need one `while` loop to get you through this maze.
       courseF_bee_functions6_2018_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
         courseF_bee_functions6_b: Your function should check if there is a flower
           or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you
@@ -13614,25 +13638,28 @@ ja:
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger.
           Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseF_bee_functions8a_b: 'Remember to build code inside of the function
           editor.
 
 '
       courseF_bee_functions8a_2018_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseF_bee_functions8a_b: 'Remember to build code inside of the function
           editor.
 
 '
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseF_bee_functions7_b: |
           Remember to build code inside of the green function block.
 
@@ -13648,9 +13675,10 @@ ja:
         courseF_bee_functions7_c: Which way should you turn if there is a honeycomb?
           What about a flower? What if there is nothing?
       courseF_bee_functionsPre7_2018_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
 
@@ -13891,9 +13919,10 @@ ja:
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         courseF_bee_functions8a_b: 'Remember to build code inside of the function
           editor.
 
@@ -15491,31 +15520,23 @@ ja:
           where the bee needs to move forward, then turn left several times to complete
           the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: ブロックの減らし方が難しいですか？赤い花を紫の花とまったく同じものとして扱ってみてください！
+        2-3_Bee_Conditionals_14_b: 赤い花が紫色だったら、追加の「くりかえし」ループを使ってコードを減らす方法が分かったでしょうか？
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
           if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
           \ - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: '注意: 紫の花だけ0か1個の花のミツがあって、プログラムを実行するたびにそれが変わります。'
       grade3_Conditionals_2_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: 前にすすむときに毎回ループを使い、他のループで花のミツをとり、そしてほかのループでハチミツをつくるとコードがもっとも短くなります。
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: '注意: プログラムを実行するときに紫の花のミツが0と1の間で変化します！'
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: '注意: プログラムを実行するときに紫の花のミツが0と1の間で変化します！'
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: 間違いのブロックを見つけて直すと、「くりかえし」ループを使ってよりシンプルにすることができるパターンが分かりますか？
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Start by looking at just the first loop.
@@ -15571,10 +15592,9 @@ ja:
           the stair step pattern, try tracing it with your finger and saying the commands
           out loud. \n\nDon't forget to point out the direction of the turns!"
       grade3_Debugging_TeacherIDo_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that
-          doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: ハチが意味のない何かをするところがありますか？そのブロックを変更すると何が起こりますか？
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要です。
       grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
           away, start by coding out each move and look for a pattern.
@@ -15584,16 +15604,14 @@ ja:
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: 前後する別の2つの「くりかえし」ループが必要になります。
       grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: 最初にミツバシの向きを変えよう。
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_b: プログラムの最後の部分は、ループ外のプログラムの最後にコードを書くことで終わりにできます。
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
@@ -15899,15 +15917,19 @@ ja:
           forward\n- collect all of the nectar\n- turn around\n- move back to the
           main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: |-
+          パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
+
+          ブロックをいくつか追加したら試してみてください。更に追加して再度試してみると、やがて成功するでしょう！
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          緑の関数ブロックの中にコードを書くことを覚えておいてください。
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down
@@ -15957,12 +15979,11 @@ ja:
         2-3_Artist_6_b: 私はすでに右に向いているので、前に進むことから始めるのが簡単です。そして三角形を作るには左に向きます。
         2-3_Artist_6_c: 三角形のどちら側も、その四角形の辺の長さと同じ、100ピクセルです！
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: 前後する別の2つの「くりかえし」ループが必要になります。
       grade4_review_bee2_authored_hint:
         2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要です。
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One
           counts up from 1 to 8, the other counts down from 8 to 1.
@@ -16433,7 +16454,7 @@ ja:
           have them happen immediately after the program starts.
       k1stickerfreeplay_authored_hint: {}
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要です。
       level 'grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
           away, start by coding out each move and look for a pattern.
@@ -16443,16 +16464,14 @@ ja:
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: 前後する別の2つの「くりかえし」ループが必要になります。
       level 'grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: 最初にミツバシの向きを変えよう。
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: 最初にミツバシの向きを変えよう。
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_b: プログラムの最後の部分は、ループ外のプログラムの最後にコードを書くことで終わりにできます。
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.

@@ -5734,7 +5734,7 @@ sk:
             Conditionals:
               name: Podmienky
             'Real Life Algorithms: Dice Race':
-              name: 'Algoritmy z reálneho života: Závod kociek'
+              name: 'Algoritmy z reálneho života: Hod kockou'
         csd6-2017:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
@@ -10410,7 +10410,7 @@ sk:
             Move It, Move It:
               name: Posuň to, Posuň to
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Je super tvoriť a hrať férovo
         coursed-2018:
           title: New Course D Script
           assignment_family_title: Kurz D
@@ -11015,7 +11015,7 @@ sk:
             Pet Giraffe with Sprite Lab:
               name: Pet Giraffe with Sprite Lab
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digitálne zdieľanie
         coursef-2018:
           title: Kurz F
           assignment_family_title: Kurz F
@@ -13035,6 +13035,16 @@ sk:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

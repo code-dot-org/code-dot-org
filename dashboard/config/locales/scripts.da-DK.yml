@@ -13051,3 +13051,13 @@ da:
           description_audience: ''
           description_short: ''
           description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
+          description_audience: ''
+          description_short: ''
+          description: ''

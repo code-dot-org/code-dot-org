@@ -970,7 +970,7 @@ pt-BR:
             Mystery Model:
               name: Mystery Model
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
         Testing:
           title: Testando
           description: Testando
@@ -997,7 +997,7 @@ pt-BR:
             Cracking the Code:
               name: Cracking the Code
             DNS in the Real World:
-              name: DNS in the Real World
+              name: DNS no mundo Real
             Encryption Algorithms:
               name: Keys and Passwords
             HTTP and Abstraction:
@@ -1509,7 +1509,7 @@ pt-BR:
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
@@ -1579,7 +1579,7 @@ pt-BR:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Introduction to the Unit 5 Challenge:
@@ -1625,7 +1625,7 @@ pt-BR:
             Creating Summary Tables:
               name: Creating Summary Tables
             Data, Security, and Privacy:
-              name: Data, Security, and Privacy
+              name: Dados, Segurança e Privacidade
             Designing Data Collection:
               name: Designing Data Collection
             Designing for Your User:
@@ -1639,7 +1639,7 @@ pt-BR:
             How is Data Collected?:
               name: How is Data Collected?
             Import, Export, and Visualize Data:
-              name: Import, Export, and Visualize Data
+              name: Importar, Exportar e Visualizar Dados
             Interpreting Data Visualizations:
               name: Interpreting Data Visualizations
             Making Data Visualizations:
@@ -1717,7 +1717,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Share out and Submit:
@@ -1780,7 +1780,7 @@ pt-BR:
             Chunk 5 Overview:
               name: Chunk 5 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Practice Performance Task:
@@ -1869,7 +1869,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Share out and Submit:
               name: Share out and Submit
         ScienceP3OLPT3:
@@ -1946,7 +1946,7 @@ pt-BR:
             Chapter 2 Overview:
               name: Chapter 2 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Practice Performance Tasks:
@@ -1986,7 +1986,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Create PT Breakdown:
               name: Create PT Breakdown
             Explore PT Breakdown:
@@ -2048,7 +2048,7 @@ pt-BR:
             'Unplugged: The Design Recipe':
               name: 'Offline: a receita de design'
         AlgebraB:
-          title: Ciência da computação em álgebra
+          title: 'Ciência da computação em álgebra'
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           description_audience: ''
@@ -2479,7 +2479,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Functions:
               name: Funções
             Platform Jumper:
@@ -3189,7 +3189,7 @@ pt-BR:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Introduction to the Unit 5 Challenge:
@@ -3317,7 +3317,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Velocity:
               name: Velocidade
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
@@ -4341,7 +4341,7 @@ pt-BR:
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -5108,7 +5108,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Sprites and Properties:
               name: Sprites and Properties
             Sprites and Images:
@@ -5438,7 +5438,7 @@ pt-BR:
             'Debugging: Unspotted Bugs':
               name: 'Depuração: Bugs não encontrados'
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+              description_teacher: 'Essa aula irá guiar os estudantes em uma série de etapas sobre depuração. Os estudantes irão aprender o mantra: "O que aconteceu? O que esperavamos que acontecesse? O que isso significa?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistência: Stevie e o grande projeto'
               description_student: ''
@@ -7524,7 +7524,7 @@ pt-BR:
             'Debugging: Unspotted Bugs':
               name: Erros Não Reportados
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+              description_teacher: 'Essa aula irá guiar os estudantes em uma série de etapas sobre depuração. Os estudantes irão aprender o mantra: "O que aconteceu? O que esperavamos que acontecesse? O que isso significa?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie e o Grande Projeto
               description_student: ''
@@ -7542,7 +7542,7 @@ pt-BR:
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
               description_student: ''
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
@@ -7731,7 +7731,7 @@ pt-BR:
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
             Debugging in Maze:
               name: Debugging with Angry Birds
             Programming in Collector:
@@ -8070,7 +8070,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
@@ -9530,6 +9530,16 @@ pt-BR:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''
