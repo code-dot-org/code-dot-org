@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import _ from 'lodash';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -131,8 +130,7 @@ export default class DeleteAccount extends React.Component {
 
   allCheckboxesChecked = () => {
     const {checkboxes} = this.state;
-    const uncheckedBoxes = _.filter(Object.keys(checkboxes), id => !checkboxes[id].checked);
-    return uncheckedBoxes.length === 0;
+    return Object.keys(checkboxes).every(id => checkboxes[id].checked);
   };
 
   isValid = () => {
