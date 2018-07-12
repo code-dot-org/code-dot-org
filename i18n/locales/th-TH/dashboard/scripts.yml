@@ -2048,7 +2048,7 @@ th:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: The Design Recipe'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
           description_audience: ''
@@ -2895,7 +2895,7 @@ th:
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: ศิลปิน Functions
+              name: ฟังก์ชั่น ศิลปิน
             Sample Stage:
               name: Sample Stage
             The same thing with named levels:
@@ -3981,8 +3981,8 @@ th:
         minecraft:
           title: นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft
           description_audience: ''
-          description_short: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง
-          description: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง
+          description_short: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
+          description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           stages:
             Minecraft Hour of Code Designer:
               name: นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft
@@ -6981,7 +6981,7 @@ th:
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
               name: ชั่วโมงแห่งการโค้ดด้วย Minecraft
-          title: 'Minecraft: Hero''s Journey'
+          title: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
           description_audience: ''
           description_short: Minecraft is back with a brand new activity for Hour of Code!
           description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
@@ -9530,6 +9530,16 @@ th:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''
