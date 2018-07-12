@@ -374,11 +374,11 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/sources/<channel-id>/<filename>?version=<version-id>
+  # PUT /v3/(sources|assets)/<channel-id>/<filename>?version=<version-id>
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
-  put %r{/v3/(sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(sources|assets)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
