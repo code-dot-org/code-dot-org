@@ -2042,7 +2042,7 @@ es:
             'Unplugged: The Design Recipe':
               name: 'Sin conexión: La receta de diseño'
         AlgebraB:
-          title: Ciencias de la computación en álgebra
+          title: 'Ciencias de la computación en álgebra'
           description: Aprender programación funcional a través del álgebra
           description_short: Aprender programación funcional a través del álgebra
           description_audience: ''
@@ -9522,6 +9522,16 @@ es:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

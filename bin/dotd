@@ -4,6 +4,7 @@
 # processes. As much of this process is automated, the script is now a menu driven script rather
 # than a linear workflow driven script.
 
+require_relative '../deployment'
 require 'cgi'
 require 'highline'
 require 'io/console'

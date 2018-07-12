@@ -492,11 +492,11 @@ zh-CN:
       AppLab Intro 6 - quizApp_markdown_instruction: "** 目标: ** 在这个测验App中建立三问题 。你随时可以通过复制屏幕来提出更多的问题。然后发送给朋友!
         \r\n\r\n**如何做到：**先运行应用程序, 然后尝试单击所有按钮以查看它的工作原理。然后, 从设计模式中, 您可以更改问题和按钮的默认文本。在代码模式下,
         创建当用户单击不同的按钮时响应文本。自定义颜色或添加图像!"
-      AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**目标：**在屏幕上添加第二个按钮，说\"对\"！\r\r\n**
+      AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**目标：**在屏幕上添加第二个按钮，说\"右边\"！\r\r\n**
         如何: ** 在设计模式中拖进新按钮。定位并调整其大小。然后设置其 `\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）\r\n\r\n**
         让我看看: ** "
       AppLab Intro 6 - thisOrThatAddButton_markdown_instruction: "<img src=\"https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00\nPM.png\"
-        style=\"float:right;height:200px\">\r\n\r\n** 目标: ** 在屏幕上添加第二个按钮，说：\"对“！\r\n\r\n**如何做到：**在设计模式中拖进新按钮。定位并调整其大小。然后设置其`\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）\r\n\r
+        style=\"float:right;height:200px\">\r\n\r\n** 目标: ** 在屏幕上添加第二个按钮，说：\"右边“！\r\n\r\n**如何做到：**在设计模式中拖进新按钮。定位并调整其大小。然后设置其`\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）\r\n\r
         \n**难住了？点击这里: ** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)"
       AppLab Intro 6 - thisOrThatAddScreen_markdown_instruction: "<img src=\"https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59\nPM.png\"
         style=\"float:right;height:200px\">\r\n\r\n**目标: ** 创建一个叫做`\"rightScreen\"`（右屏幕）的新屏幕。在屏幕上添加一个简短的文本标签.
@@ -535,7 +535,7 @@ zh-CN:
         添加一个`setProperty()`（设置属性）到`onEvent()`（当事件发生时）之外，来设置按钮的`\"image\"`（图片）属性设置。从第三个下拉框中选择一张图片。\r\n*
         再添加一个`setProperty()`（设置属性）来改动按钮的`\"text\"`（文本）。\r\n\r\n**难住了？点击这里: ** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
       AppLab Intro 7 - thisOrThatAddButton_markdown_instruction: "<img src=\"https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00\nPM.png\"
-        style=\"float:right;height:200px\">\r\n\r\n** 目标: ** 在屏幕上添加第二个按钮，说：\"对“！将其`\"id\"`标识设置为`\"rightButton\"`（\"对\"按钮）\r\n\r\n**如何做到：**\n在设计模式中拖进新按钮。定位并调整其大小。然后设置其`\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）。\r\n\r
+        style=\"float:right;height:200px\">\r\n\r\n** 目标: ** 在屏幕上添加第二个按钮，说：\"右边“！将其`\"id\"`标识设置为`\"rightButton\"`（\"右边\"按钮）\r\n\r\n**如何做到：**\n在设计模式中拖进新按钮。定位并调整其大小。然后设置其`\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）。\r\n\r
         \n**难住了？点这里: ** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)"
       AppLab Intro 7 - thisOrThatAddScreen_markdown_instruction: "<img src=\"https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59\nPM.png\"
         style=\"float:right;height:200px\">\r\n\r\n**目标: ** 创建一个叫做`\"rightScreen\"`（右屏幕）的新屏幕。在屏幕上添加一个文本标签，说“你对了！”
@@ -5412,6 +5412,25 @@ zh-CN:
       CSD U3 Sprites intro debug_2018_markdown_instruction: "<img src=\"https://images.code.org/63207a624d751aacb376db18cdf09eec-image-1491255841823.png\"\nstyle=\"width:
         150px; float: right; margin-left: 20px; border: 1px solid #f2f2f2;\">\r\n#\n调试\r\n\r\n程序应该已经创建了两个新精灵，一个在屏幕左边，另一个在右边。但是它只画出了一个。**你不需要增加任何代码**，仅通过重新排列代码来让两个精灵都像右边的图片一样显示出来。"
       CSD U3 Sprites intro sprites_markdown_instruction: |-
+        # Sprites
+
+        **Creating Sprites:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.
+
+        **Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.
+
+        <img src="https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png" style="width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px">
+
+        # Do This
+
+        This program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.
+
+        * Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.
+        \t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.
+        * Add `drawSprites()` under the comment `Drawing`.
+        * **Run the code** to draw your first sprite on the screen.
+
+        _Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._
+      CSD U3 Sprites intro sprites_2018 - Validation Test_markdown_instruction: |-
         # Sprites
 
         **Creating Sprites:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.
@@ -22480,6 +22499,10 @@ zh-CN:
         toppings)\n- Create a function that allows you to add a coupon code for a
         30% discount"
       MC Agent Freeplay_markdown_instruction: "**自由游戏时间：** 现在得靠您自己了！使用代理人的代码帮助您探索这个世界。"
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "Some games let you keep score.
+        Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself
+        a point when you tag them.  \n  \n  Reach five points to win!"
       MC_2017_Ryan_02_markdown_instruction: "使用循环可以让这样的代码变得更短！\r\n\r\n使用`重复`循环来帮助代理前进，让他到达压力板。"
       MC_HOC_2017 Agent Test_markdown_instruction: "点击“运行”并使用**方向键**移动玩家。 \r\n\r\n为了通关，您需要抵达门边上并打开它（使用**空格键**），这样您就可以抵达内部的橙色方形区域。"
       MC_HOC_2017_01_markdown_instruction: "点击“运行”并使用**方向键**移动玩家。 \r\n\r\n为了通关，您需要抵达门边上并打开它（使用**空格键**），这样您就可以抵达内部的橙色方形区域。"
@@ -37951,6 +37974,12 @@ zh-CN:
         her?
       Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe.
         What do you think will happen if you press run and then click on her?
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "There's a mud puddle
+        over in the corner.  \n\nCreate an **event** so that when Geraldine touches
+        the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 2 - Validated_markdown_instruction: "There's a mud puddle over in
+        the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle,
+        her color changes to brown.  \n\n---"
       Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner.
         Create an **event** so that when Geraldine touches the puddle, her color changes
         to brown.
@@ -37963,6 +37992,9 @@ zh-CN:
       Virtual Pet 4_markdown_instruction: We don't want to wait for the giraffe to
         clean itself every time. Add a behavior to your soap to make it draggable,
         then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_markdown_instruction: "All of this play takes energy!
+        \ \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks
+        by 5) each time it collides with another sprite.  \n"
       Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions
         to each event so that when the giraffe collides with each sprite, it gets
         a little smaller (shrinks by 5).
@@ -39192,7 +39224,10 @@ zh-CN:
       courseD_bee_conditionals7_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\r\n\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：如果有花，蜜蜂只需要采*一次*花蜜。如果有蜂窝，蜜蜂也只需要酿*一次*蜂蜜。"
       courseD_bee_conditionals7_2018_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\r\n\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：如果有花，蜜蜂只需要采*一次*花蜜。如果有蜂窝，蜜蜂也只需要酿*一次*蜂蜜。"
       courseD_bee_conditionals7_predict2_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\r\n\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。"
-      courseD_bee_conditionals7_predict2_2018_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\r\n\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。"
+      courseD_bee_conditionals7_predict2_2018_markdown_instruction: |-
+        有时，云覆盖了一朵花，有时覆盖了一个蜂窝！
+
+        用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。
       courseD_bee_conditionals8_markdown_instruction: "**挑战：** 这些云下面要么有一朵花，要么有一个蜂窝！\r\n\r\n如果是花，就采一次花蜜。\r\n否则，就酿一次蜂蜜（因为是蜂窝）。"
       courseD_bee_conditionals8_2018_markdown_instruction: "**挑战：** 这些云下面要么有一朵花，要么有一个蜂窝！\r\n\r\n如果是花，就采一次花蜜。\r\n否则，就酿一次蜂蜜（因为是蜂窝）。"
       courseD_bee_conditionals9_markdown_instruction: 采集所有的花蜜或酿造所有的蜂蜜。你只能从花那里采花蜜，从蜂窝那里酿蜂蜜。检查所有空间看看有花还是蜂窝。每朵云后面要么有一朵花，要么有一个蜂窝。
@@ -40176,8 +40211,7 @@ zh-CN:
         \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If
         no, why? What would have improved your experience?\n"
       csd-post-survey-2017-FR_markdown_instruction: 有什么别的你想说的，关于在课程中的体验吗？
-      csd-post-survey-2017-FR_2018_markdown_instruction: Please provide any other
-        feedback you have about your experience in the course.
+      csd-post-survey-2017-FR_2018_markdown_instruction: 请提供你对本课程的反馈。
       csd-post-survey-2018-topics-liked-FR_markdown_instruction: 请提供你对本课程的反馈。
       csd-post-survey-2018-topics-want-FR_markdown_instruction: 有哪些主题是你有兴趣并打算在将来学习的？
       csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: 有什么你想让老师知道别的事情吗？

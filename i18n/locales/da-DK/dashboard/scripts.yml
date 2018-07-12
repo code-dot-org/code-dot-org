@@ -2048,7 +2048,7 @@ da:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Design opskrift'
         AlgebraB:
-          title: Datalogi i Algebra
+          title: 'Datalogi i Algebra'
           description: Lære funktionel programmering gennem Algebra
           description_short: Lære funktionel programmering gennem Algebra
           description_audience: ''
@@ -9530,6 +9530,16 @@ da:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

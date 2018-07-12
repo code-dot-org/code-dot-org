@@ -688,12 +688,12 @@ zh-CN:
         ** 目标: ** 在这个测验App中建立三问题 。你随时可以通过复制屏幕来提出更多的问题。然后发送给朋友! \r
         \r
         **如何做到：**先运行应用程序, 然后尝试单击所有按钮以查看它的工作原理。然后, 从设计模式中, 您可以更改问题和按钮的默认文本。在代码模式下, 创建当用户单击不同的按钮时响应文本。自定义颜色或添加图像!
-      AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**目标：**在屏幕上添加第二个按钮，说\"对\"！\\r\\r\n** 如何: ** 在设计模式中拖进新按钮。定位并调整其大小。然后设置其 `\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）\\r\n\\r\n** 让我看看: ** "
+      AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**目标：**在屏幕上添加第二个按钮，说\"右边\"！\\r\\r\n** 如何: ** 在设计模式中拖进新按钮。定位并调整其大小。然后设置其 `\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）\\r\n\\r\n** 让我看看: ** "
       AppLab Intro 6 - thisOrThatAddButton_markdown_instruction: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png" style="float:right;height:200px">\r
         \r
-        ** 目标: ** 在屏幕上添加第二个按钮，说："对“！\r
+        ** 目标: ** 在屏幕上添加第二个按钮，说："右边“！\r
         \r
         **如何做到：**在设计模式中拖进新按钮。定位并调整其大小。然后设置其`"text"`（文本）、`"background-color"`（背景颜色）和`"font-size"`（字体大小）\r
         \r 
@@ -770,7 +770,7 @@ zh-CN:
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png" style="float:right;height:200px">\r
         \r
-        ** 目标: ** 在屏幕上添加第二个按钮，说："对“！将其`"id"`标识设置为`"rightButton"`（"对"按钮）\r
+        ** 目标: ** 在屏幕上添加第二个按钮，说："右边“！将其`"id"`标识设置为`"rightButton"`（"右边"按钮）\r
         \r
         **如何做到：**
         在设计模式中拖进新按钮。定位并调整其大小。然后设置其`"text"`（文本）、`"background-color"`（背景颜色）和`"font-size"`（字体大小）。\r
@@ -7233,6 +7233,7 @@ zh-CN:
         \r
         程序应该已经创建了两个新精灵，一个在屏幕左边，另一个在右边。但是它只画出了一个。**你不需要增加任何代码**，仅通过重新排列代码来让两个精灵都像右边的图片一样显示出来。
       CSD U3 Sprites intro sprites_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
+      CSD U3 Sprites intro sprites_2018 - Validation Test_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
       CSD U3 Sprites intro sprites_2018_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
       CSD U3 Sprites make template_markdown_instruction: |-
         # Make Your Own Sprite
@@ -20641,6 +20642,7 @@ zh-CN:
       Luigi's Pizza 3_markdown_instruction: That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the _else_ clause so that we charge them a premium for toppings that we don't normally offer? Let's charge $10,000 for a topping we don't carry.
       Luigi's Pizza 4_markdown_instruction: "Free Play: What can you do to make Luigi's cost function even more useful? Try one (or more) of the following:  \n\n- Create a new function to display an image of the chosen pizza\n- Create a function that allows for ordering multiple pizzas (the same, or with different toppings)\n- Create a function that allows you to add a coupon code for a 30% discount"
       MC Agent Freeplay_markdown_instruction: "**自由游戏时间：** 现在得靠您自己了！使用代理人的代码帮助您探索这个世界。"
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "Some games let you keep score. Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n    <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself a point when you tag them.  \n  \n  Reach five points to win!"
       MC_2017_Ryan_02_markdown_instruction: "使用循环可以让这样的代码变得更短！\\r\n\\r\n使用`重复`循环来帮助代理前进，让他到达压力板。"
       MC_HOC_2017 Agent Test_markdown_instruction: "点击“运行”并使用**方向键**移动玩家。 \\r\n\\r\n为了通关，您需要抵达门边上并打开它（使用**空格键**），这样您就可以抵达内部的橙色方形区域。"
       MC_HOC_2017_01_markdown_instruction: "点击“运行”并使用**方向键**移动玩家。 \\r\n\\r\n为了通关，您需要抵达门边上并打开它（使用**空格键**），这样您就可以抵达内部的橙色方形区域。"
@@ -27597,9 +27599,12 @@ zh-CN:
         What do you think will happen if you press "▶ Run" and then click on her?
       Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 1_markdown_instruction: "This is Geraldine, your new pet giraffe.  \n\nWhat do you think will happen if you press \"▶ Run\" and then click on her? \n\n---"
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 2 - Validated_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
       Virtual Pet 2_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
       Virtual Pet 3_markdown_instruction: "We can’t have a dirty giraffe wandering around!  \n\n1)  Add a new soap sprite to the screen.  \n2)  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\n\n---\n\nTo reset the color, use this block:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
       Virtual Pet 4_markdown_instruction: "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!\n"
+      Virtual Pet 5 - Validated_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
       Virtual Pet 5_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
       Virtual Pet 6_markdown_instruction: "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  \n"
       Virtual Pet Freeplay_markdown_instruction: "Freeplay: What more can you make your giraffe do? \n\n- Can you add more special items for your virtual pet?  \n- Can you give her some friends?  "
@@ -29428,7 +29433,7 @@ zh-CN:
       courseD_bee_conditionals7_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\\r\n\\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：如果有花，蜜蜂只需要采*一次*花蜜。如果有蜂窝，蜜蜂也只需要酿*一次*蜂蜜。"
       courseD_bee_conditionals7_2018_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\\r\n\\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：如果有花，蜜蜂只需要采*一次*花蜜。如果有蜂窝，蜜蜂也只需要酿*一次*蜂蜜。"
       courseD_bee_conditionals7_predict2_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\\r\n\\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。"
-      courseD_bee_conditionals7_predict2_2018_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\\r\n\\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。"
+      courseD_bee_conditionals7_predict2_2018_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\n\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。"
       courseD_bee_conditionals8_markdown_instruction: |-
         **挑战：** 这些云下面要么有一朵花，要么有一个蜂窝！\r
         \r
@@ -30975,7 +30980,7 @@ zh-CN:
       csd-novice-tuesday-1_markdown_instruction: "# Tuesday Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
       csd-novice-wednesday-1_markdown_instruction: "# Wednesday Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
       csd-post-survey-2017-FR_markdown_instruction: 有什么别的你想说的，关于在课程中的体验吗？
-      csd-post-survey-2017-FR_2018_markdown_instruction: Please provide any other feedback you have about your experience in the course.
+      csd-post-survey-2017-FR_2018_markdown_instruction: 请提供你对本课程的反馈。
       csd-post-survey-2018-topics-liked-FR_markdown_instruction: 请提供你对本课程的反馈。
       csd-post-survey-2018-topics-want-FR_markdown_instruction: 有哪些主题是你有兴趣并打算在将来学习的？
       csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: 有什么你想让老师知道别的事情吗？

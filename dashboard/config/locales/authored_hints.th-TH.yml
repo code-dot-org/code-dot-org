@@ -27,11 +27,10 @@ th:
         2-3_Artist_6_c: ด้านแต่ละด้านของรูปสามเหลี่ยมมีความยาวเท่ากันกับด้านแต่ละด้านของสี่เหลี่ยมจตุรัส....
           100 พิกเซล!
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: The easiest way to solve this puzzle is to draw the first
-          square and end with the artist pointing down before starting your second
-          square.
+        2-3_Artist_7_a: วิธีที่ง่ายที่สุดในการแก้ปริศนานี้คือการวาดสี่เหลี่ยมจตุรัสรุปแรกและจบลงด้วยศิลปินชี้ลงด้านล่าง
+          ก่อนที่จะเริ่มต้นวาดสี่เหลี่ยมจตุรัสรูปที่สองของคุณ
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: ถ้าคุณตัด 200 ลงครึ่งหนึ่ง, จำนวนพิกเซลที่เป็นความกว้างของสี่เหลี่ยมจตุรัสแต่ละรูปจะต้องเท่ากับ?
+        2-3_Artist_8_a: ถ้าคุณตัด 200 ลงครึ่งหนึ่ง จำนวนพิกเซลที่เป็นความกว้างของสี่เหลี่ยมจตุรัสแต่ละรูปจะเป็นเท่าใด?
       2-3 Artist 9 NEW_authored_hint:
         2-3_Artist_9_a: รูปเพชรเม็ดนี้ จริงๆแล้วก็แค่เป็นเพียงสี่เหลี่ยมจตุรัสนั่นเอง
       2-3 Artist 9 REPLACEMENT_authored_hint:
@@ -163,15 +162,15 @@ th:
         2-3_Artist Loops_New_12_c: ศิลปินจะต้องหันขวาเพียง 60 องศาเพื่อสร้างมุมกว้าง
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: |-
-          ในตอนท้ายของการวาดเพชรแต่ละเม็ด ศิลปินหันหน้าไปในทิศทางที่เหมาะสมแล้วที่จะเริ่มต้นวาดเม็ดต่อไป
+          ในตอนท้ายของการวาดเพชรแต่ละเม็ด ศิลปินหันหน้าไปในทิศทางที่เหมาะสมแล้วที่จะเริ่มต้นวาดเพชรเม็ดต่อไป
 
-          ด้วยเหตุนี้เราไม่จำเป็นต้องเพิ่มบล็อก`หันซ้าย`เข้าไป ก่อนที่เราจะเริ่มต้นใหม่อีกครั้ง
+          ด้วยเหตุนี้เราไม่จำเป็นต้องเพิ่มบล็อก`หันซ้าย`เข้าไป ก่อนที่เราจะเริ่มต้นวาดเพชรเม็ดใหม่อีกครั้ง
         2-3_Artist_Loops_New_13_b: |-
-          เพื่อสร้างเพชรแต่ละเม็ด ศิลปินต้องการ:
-              -ไปข้าหน้า
-              -หันทางขวา 120 องศา
-              -ไปข้าหน้า
-              -หันทางขวา 60 องศา
+          เพื่อสร้างเพชรแต่ละเม็ด ศิลปินต้อง:
+              -ไปข้างหน้า
+              -หันขวาไป 120 องศา
+              -ไปข้างหน้า
+              -หันขวาไป 60 องศา
 
           แล้วทำมันใหม่อีกครั้ง
       2-3 Artist Loops New 9_authored_hint:
@@ -273,8 +272,7 @@ th:
         2-3_Bee_Loops_7_b: 'ถ้าคุณไม่สามารถวาดภาพลูปไว้ในหัวได้ตั้งแต่แรก ลองเขียนโค้ดออกมาแบบเต็มรูปก่อน
           แล้วมองหารูปแบบ  '
       2-3 Maze 1_authored_hint:
-        2-3_Maze_1_a: การใช้บล็อก ' เดินไปข้างหน้า ' นั้นให้ลากบล็อกจากพื้นที่ของกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก
-          ' เมื่อเรียกใช้งาน '
+        2-3_Maze_1_a: การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากพื้นที่บริเวณกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`
       2-3 Maze 16_authored_hint:
         2-3_Maze_16_a: ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก
           ก่อนที่คุณจะรวมมันเอาเข้าไปไว้ในลูป
@@ -412,6 +410,7 @@ th:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: แต่ละรายการจะต้องมีลูป ` ในขณะที่` ของมันเอง.
+      AB_debug_Laurel1_authored_hint: {}
       AppLab Intro 3 - Change Screen Color_authored_hint: {}
       AppLab Intro 4 - Change Screen Color_authored_hint: {}
       AppLab Intro 5 - Change Screen Color_authored_hint: {}
@@ -433,8 +432,7 @@ th:
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
-        2-3_Maze_1_a: การใช้บล็อก ' เดินไปข้างหน้า ' นั้นให้ลากบล็อกจากพื้นที่ของกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก
-          ' เมื่อเรียกใช้งาน '
+        2-3_Maze_1_a: การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากพื้นที่บริเวณกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'รูปครึ่ง-หกเหลี่ยมมี ** ความยาว 30 ** และหันขวาไป **
           60 องศา ***  '
@@ -3770,10 +3768,9 @@ th:
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: This is the third and final hint. It doesn't have anything special.
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_b: If you call the functions correctly, this is the path
-          you will travel...
-        Function_intro_Ryan_a: You can call a function many times inside of your program!  Try
-          calling it twice to solve this puzzle.
+        Function_intro_Ryan_b: ถ้าคุณเรียกใช้งานฟังก์ชั่นอย่างถูกต้อง นี่คือเส้นทางที่คุณจะเดินทางไป
+        Function_intro_Ryan_a: คุณสามารถเรียกฟังก์ชั่นได้หลายครั้งในโปรแกรมของคุณ
+          ลองเรียกใช้งานดูสักสองครั้งเพื่อพิชิตปริศนาด่านนี้ให้สาเร็จ
       Harvesting_authored_hint:
         pointer_harvester_test: What kind of block can I use to check something and
           make a decision?
@@ -3843,26 +3840,22 @@ th:
         MC_HOC_2017_01_Cole_a: Use your arrow keys to direct the player into the house.
           End up on the orange square to win.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_a: Drag one `move forward` block from the toolbox to
-          the workspace, and snap it into place beneath the `when run` block.
-        MC_HOC_2017_01_RETRY_b: Don't forget to click "Run" to run the code for the
-          Agent.
-        MC_HOC_2017_01_RETRY_c: Once the Agent has run all of its code, you can move
-          the player with the arrow keys!
+        MC_HOC_2017_01_RETRY_a: ลากบล็อก ` ไปข้างหน้า`หนึ่งบล็อกจากกล่องเครื่องมือไปยังพื้นที่ทำงานแล้ว
+          ต่อเข้ากับข้างใต้ของบล็อก`เมื่อเรียกใช้งาน` ให้เรียบร้อย
+        MC_HOC_2017_01_RETRY_b: อย่าลืมคลิกปุ่ม " เริ่ม " เพื่อเรียกใช้งานคำสั่งต่างๆ
+          ให้เอเจนท์ทำ
+        MC_HOC_2017_01_RETRY_c: เมื่อเอเจนท์ทำตามคำสั่งทั้งหมดแล้ว ก็ถึงเวลาที่คุณจะพาผู้เล่นเคลื่อนไหวไปที่ใดๆ
+          โดยการใช้แป้นลูกศรได้!
       MC_HOC_2017_02_Cole_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: พาเอเจนท์เดินไปข้างหน้าสองช่องเพื่อให้ไปยืนบนแป้นกด  ซึ่งจะไปเปิดประตูให้กับผู้เล่นของคุณ
         MC_HOC_2017_02_Cole_b: |-
-          Press "Run"!
+          กดปุ่ม  " เริ่ม "
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
-          to move the player to the map!
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined
-          on the map!
+          คุณสามารถเรียกใช้งานโค้ดของคุณแม้ว่าโค้ดนั้นจะยังทำงานไม่ถูกต้องก็ตาม  เริ่มหรือตั้งค่าโค้ดของคุณใหม่ซ้ำแล้วซ้ำเล่า จนกว่าคุณจะคิดออกว่าอะไรที่ทำให้โค้ดของคุณทำงานไม่ถูกต้อง
+        MC_HOC_2017_02_Cole_c: เมื่อเอเจนท์เปิดประตูได้สำเร็จ คุณสามารถใช้แป้นลูกศรเพื่อพาผู้เล่นของคุณไปยังแผนที่ได้!
+        MC_HOC_2017_02_Cole_d: ตรวจสอบให้แน่ใจว่าเอเจนท์ใช้เส้นทางที่กำหนดไว้ให้บนแผนที่!
       MC_HOC_2017_02_Will_authored_hint:
-        MC_HOC_2017_02_Cole_a: Move the Agent forward two spaces to stand on the pressure
-          plate.  That will open the door for your player.
+        MC_HOC_2017_02_Cole_a: พาเอเจนท์เดินไปข้างหน้าสองช่องเพื่อให้ไปยืนบนแป้นกด  ซึ่งจะไปเปิดประตูให้กับผู้เล่นของคุณ
         MC_HOC_2017_02_Cole_b: |-
           Press "Run Agent"!
 
@@ -3870,73 +3863,64 @@ th:
         MC_HOC_2017_02_Cole_c: Once the Agent has opened the door, use the arrow keys
           to move the player to the orange square.
       MC_HOC_2017_03_Cole_authored_hint:
-        MC_HOC_2017_03_Cole_a: Once you get the Agent to the pressure plate, you can
-          use your arrow keys to walk the player to the compass!
-        MC_HOC_2017_03_Cole_b: Does the code feel a little long?  Try using a `repeat`
-          loop and see if you can figure out how to make it shorter!
+        MC_HOC_2017_03_Cole_a: เมื่อคุณพาเอเจนท์ให้ไปอยู่ที่แป้นกดแล้ว คุณสามารถใช้แป้นลูกศรของคุณเพื่อพาผู้เล่นให้เดินไปที่เข็มทิศได้!
+        MC_HOC_2017_03_Cole_b: มีความรู้สึกไหมว่า โค้ดนั้นมีความยาวไม่น้อยทีเดียว?  ลองใช้ลูป`ทำซ้ำ`เข้ามาช่วยและดูว่าคุณสามารถคิดหาวิธีที่จะทำให้โค้ดสั้นลงได้ไหม!
       MC_HOC_2017_04POINT5_Cole_authored_hint:
         MC_HOC_2017_04POINT5_Cole_a: |-
           Crossing these two pressure plates will open the path for the player.
 
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_04POINT5_RYAN_authored_hint:
-        MC_HOC_2017_04POINT5_RYAN_b: 'Use the `turn right` block to change the agent''s
-          direction '
-        MC_HOC_2017_04POINT5_RYAN_a: The Agent only needs to get to the first pressure
-          plate to let Alex or Steve through to the axe.
+        MC_HOC_2017_04POINT5_RYAN_b: 'ใช้บล็อก ` หันขวา ` เพื่อเปลี่ยนทิศทางของเอเจนท์ '
+        MC_HOC_2017_04POINT5_RYAN_a: เอเจนท์จำเป็นต้องไปถึงแค่เพียงแป้นกดอันแรกเท่านั้น
+          เพื่อให้อเล็กซ์ หรือ สตีฟผ่านเข้าไปเอาขวานมาได้
       MC_HOC_2017_04_Cole_authored_hint:
-        MC_HOC_2017_04_Cole_a: The Agent needs to `move forward` 7 times.  How can
-          you use a `repeat` loop to make that happen?
+        MC_HOC_2017_04_Cole_a: เอเจนท์ต้องเดิน ` ไปข้างหน้า` 7 ก้าว (ครั้ง) คุณจะใช้ลูป
+          `ทำซ้ำ` มาช่วยให้มันเป็นจริงได้อย่างไร?
         MC_HOC_2017_04_Cole_c: |-
-          Press "Run"!
+          กดปุ่ม  " เริ่ม "
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_04_Cole_b: Once the Agent gets to the pressure plate, he will
-          open the door for the player.
+          คุณสามารถเรียกใช้งานโค้ดของคุณแม้ว่าโค้ดนั้นจะยังทำงานไม่ถูกต้องก็ตาม  เริ่มหรือตั้งค่าโค้ดของคุณใหม่ซ้ำแล้วซ้ำเล่า จนกว่าคุณจะคิดออกว่าอะไรที่ทำให้โค้ดของคุณทำงานไม่ถูกต้อง
+        MC_HOC_2017_04_Cole_b: เมื่อเอเจนท์มาอยู่บนแป้นกดเรียบร้อยแล้ว เอเจนท์ก็สามารถเปิดประตูให้กับผู้เล่นของคุณ
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
-          code inside of a loop?  Try placing a plank **and** moving forward inside
-          of a `repeat` to complete this puzzle.
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as
-          you go.
+        MC_HOC_2017_05_Cole_a: คุณรู้หรือไม่ว่า คุณสามารถวางโค้ดได้มากกว่า 1 คำสั่งไว้ภายในลูป?
+          ลองวางบล็อก ไปข้างหน้า**และ** วางไม้กระดาน.. ไว้ภายใน` ทำซ้ำ` เพื่อพิชิตปริศนาด่านนี้กัน
+        MC_HOC_2017_05_Cole_b: พาเอเจนท์ข้ามแม่น้าไป ในขณะเดียวกันก็สร้างสะพานพร้อมกันไปด้วย
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Did you know that you can put more than one piece of
           code inside of a loop?  Try placing a plank **and** moving forward inside
           of a `repeat` to complete this puzzle.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: How many times does this loop run?  How many times
-          *should* it run?
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the
-          water! '
+        MC_HOC_2017_06_Cole_a: จะต้องใช้ลูปสักกี่ครั้ง? หรือ*ควร*ที่จะใช้สักกี่ครั้ง
+          ถึงจะทำงานได้?
+        MC_HOC_2017_06_Cole_b: 'ช่วยเอเจนท์สร้างสะพานข้ามแม่น้าให้ไปถึงอีกฝั่งหนึ่งให้ได้ '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Try putting more than one instruction inside of a `repeat`
           loop!
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path
-          to the Minecart.
-        MC_HOC_2017_07_Cole_a: To solve this puzzle, figure out what the `clear path`
-          function does and call it as many times as you need using the small green
-          `clear path` block from the toolbox.
-        MC_HOC_2017_07_Cole_b: Try mixing the function blocks with other blocks from
-          the toolbox to help you solve this puzzle.
+        MC_HOC_2017_07_Cole_c: สิ่งที่คุณต้องทำ ก็คือให้เอเจนท์เคลียร์เส้นทางไปยังรถเหมืองให้ได้
+        MC_HOC_2017_07_Cole_a: หากต้องการพิชิตด่านนี้ให้ได้ ต้องคิดให้ออกว่าจะเรียกใช้ฟังก์ชั่น
+          ` เคลียร์เส้นทาง` ให้เรียกใช้งานซ้า ๆ กันให้เท่ากับจำนวนที่คุณต้องการเรียกใช้บล็อก
+          ` เคลียร์เส้นทาง` สีเขียวจากกล่องเครื่องมือ
+        MC_HOC_2017_07_Cole_b: ลองเรียกใช้งานบล็อกฟังก์ชั่นผสมกับบล็อกอื่น ๆ ในกล่องเครื่องมือเพื่อพิชิตด่านนี้ให้ได้
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Press "Run Agent"!
 
           You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_b: มีวิธีการมากมายที่จะเอาชนะในด่านนี้ได้ สองดูสักสองสามวิธีสิ
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: |-
           Press "Run Agent"!
 
           You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
+        MC_HOC_2017_08_RY_b: มีวิธีการมากมายที่จะเอาชนะในด่านนี้ได้ สองดูสักสองสามวิธีสิ
       MC_HOC_2017_10_Cole_authored_hint:
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_a: ใช้ฟังก์ชั่น เพื่อเอาชนะด่านนี้ได้ง่ายขึ้น
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted
-          line!
-        MC_HOC_2017_10_Cole_a: Use functions to make solving this puzzle easier!
+        MC_HOC_2017_10_Cole_b: ไม่รู้ว่าจะไปทางไหนดี? ลองมองหาส่วนที่มีเส้นทางวาดเป็นจุดๆ
+          ให้อยู่แล้วสิ!
+        MC_HOC_2017_10_Cole_a: ใช้ฟังก์ชั่น เพื่อเอาชนะด่านนี้ได้ง่ายขึ้น
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: Try having the Agent build some bridges so that Alex
           or Steve can walk around beyond the edges of the map.
@@ -3947,12 +3931,11 @@ th:
           ![](https://images.code.org/9760c20b83d191570858617f8522ddad-image-1507751553614.50.25.png)
       MC_HOC_2017_Ali_authored_hint:
         MC_HOC_2017_08_RY_a: |-
-          Press "Run"!
+          กดปุ่ม  " เริ่ม "
 
-          You can run your code even if it's not right.  Run and reset your code over and over again until you figure out what's going wrong.
-        MC_HOC_2017_08_RY_b: There are LOTS of ways to solve this puzzle.  Try a few!
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through
-          the lava.
+          คุณสามารถเรียกใช้งานโค้ดของคุณแม้ว่าโค้ดนั้นจะยังทำงานไม่ถูกต้องก็ตาม  เริ่มหรือตั้งค่าโค้ดของคุณใหม่ซ้ำแล้วซ้ำเล่า จนกว่าคุณจะคิดออกว่าอะไรที่ทำให้โค้ดของคุณทำงานไม่ถูกต้อง
+        MC_HOC_2017_08_RY_b: มีวิธีการมากมายที่จะเอาชนะในด่านนี้ได้ สองดูสักสองสามวิธีสิ
+        MC_HOC_2017_08_RY_c: ลองเขียนโค้ดไล่ไปตามเส้นประ เพื่อสร้างทางแบบง่าย ๆ ให้ข้ามผ่านลาวา
       MC_HOC_2017_FP10x10_authored_hint: {}
       MC_HOC_2017_FP10x10_RE_authored_hint: {}
       MC_HOC_2017_FP20x20_authored_hint:
@@ -4615,8 +4598,7 @@ th:
           solve this puzzle.
         courseB_maze_seq_challenge2_b: Rearrange the blocks and take the middle path.
       course1_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
-          not to count the space where you start!
+        courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!
       course1_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
         courseB_maze_seq_challenge1_b: Try moving west to start.
@@ -4805,8 +4787,7 @@ th:
         courseC_maze_programming_challenge2_b: The shortest solution use only 5 blocks,
           but it uses the `repeat` block!
       course2_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
-          not to count the space where you start!
+        courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างโดยใช้นิ้วของคุณ จำไว้ว่าไม่ต้องนับรวมเอาที่ที่คุณเริ่มต้นเข้าไปด้วย!
       course2_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
         courseB_maze_seq_challenge1_b: Try moving west to start.
@@ -6511,11 +6492,9 @@ th:
       courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: There are two solutions to this puzzle.
       courseA_maze_seq_challenge2_authored_hint:
-        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
-          not to count the space where you start!
+        courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างโดยใช้นิ้วของคุณ จำไว้ว่าไม่ต้องนับรวมเอาที่ที่คุณเริ่มต้นเข้าไปด้วย!
       courseA_maze_seq_challenge2_2018_authored_hint:
-        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
-          not to count the space where you start!
+        courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างโดยใช้นิ้วของคุณ จำไว้ว่าไม่ต้องนับรวมเอาที่ที่คุณเริ่มต้นเข้าไปด้วย!
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when
           run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"

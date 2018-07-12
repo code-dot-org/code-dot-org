@@ -2048,7 +2048,7 @@ bg:
             'Unplugged: The Design Recipe':
               name: 'Ънплъгд: Напиши рецепта'
         AlgebraB:
-          title: Компютърни науки в алгебрата
+          title: 'Компютърни науки в алгебрата'
           description: Научете функционално програмиране чрез алгебра
           description_short: Научете функционално програмиране чрез алгебра
           description_audience: ''
@@ -9530,6 +9530,16 @@ bg:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

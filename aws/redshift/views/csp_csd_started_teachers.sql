@@ -17,12 +17,7 @@ from
   from analysis.csp_csd_started st
     join analysis.school_years sy on st.started_at between sy.started_at and sy.ended_at
     join dashboard_production.followers f on f.student_user_id = st.user_id and f.created_at between sy.started_at and sy.ended_at
-    join dashboard_production.sections se on se.id = f.section_id 
-      and (
-        (se.course_id in (select course_id from analysis.course_structure where course_name_long in ('CS Principles','CS Discoveries')))
-        or (se.script_id in (select script_id from analysis.course_structure where course_name_long in ('CS Principles','CS Discoveries'))) 
-        or (se.course_id is null and se.script_id is null)
-      )
+    join dashboard_production.sections se on se.id = f.section_id
 )
 group by 1,2,3
 having max(started_at_order) >= 5
