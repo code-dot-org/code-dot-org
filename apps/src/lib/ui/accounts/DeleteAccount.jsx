@@ -74,7 +74,7 @@ const getLabelForCheckbox = (id) => {
   }
 };
 
-const buildCheckboxMap = () => {
+export const buildCheckboxMap = () => {
   let checkboxMap = {};
   for (var i = 1; i <= 5; i++) {
     checkboxMap[i] = {

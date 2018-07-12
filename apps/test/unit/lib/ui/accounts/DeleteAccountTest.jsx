@@ -2,11 +2,15 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import DeleteAccount, {DELETE_VERIFICATION_STRING} from '@cdo/apps/lib/ui/accounts/DeleteAccount';
+import DeleteAccount, {
+  DELETE_VERIFICATION_STRING,
+  buildCheckboxMap,
+} from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import * as utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,
+  isTeacher: false,
 };
 
 describe('DeleteAccount', () => {
@@ -42,25 +46,70 @@ describe('DeleteAccount', () => {
       expect(confirmButton).to.have.attr('disabled');
     });
 
-    it('is enabled if password is not required and verification string is correct', () => {
-      const wrapper = mount(<DeleteAccount isPasswordRequired={false}/>);
-      wrapper.setState({
-        isDialogOpen: true,
-        deleteVerification: DELETE_VERIFICATION_STRING,
+    describe('for students', () => {
+      it('is enabled if password is not required and verification string is correct', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isPasswordRequired={false}/>);
+        wrapper.setState({
+          isDialogOpen: true,
+          deleteVerification: DELETE_VERIFICATION_STRING,
+        });
+        const confirmButton = wrapper.find('Button').at(0);
+        expect(confirmButton).to.not.have.attr('disabled');
       });
-      const confirmButton = wrapper.find('Button').at(0);
-      expect(confirmButton).to.not.have.attr('disabled');
+
+      it('is enabled if password is provided and verification string is correct', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS}/>);
+        wrapper.setState({
+          isDialogOpen: true,
+          password: 'password',
+          deleteVerification: DELETE_VERIFICATION_STRING,
+        });
+        const confirmButton = wrapper.find('Button').at(0);
+        expect(confirmButton).to.not.have.attr('disabled');
+      });
     });
 
-    it('is enabled if password is provided and verification string is correct', () => {
-      const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS}/>);
-      wrapper.setState({
-        isDialogOpen: true,
-        password: 'password',
-        deleteVerification: DELETE_VERIFICATION_STRING,
+    describe('for teachers', () => {
+      it('is disabled if not all checkboxes are checked', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true}/>);
+        let checkboxes = buildCheckboxMap();
+        checkboxes[1].checked = true;
+        wrapper.setState({
+          isDialogOpen: true,
+          password: 'password',
+          deleteVerification: DELETE_VERIFICATION_STRING,
+          checkboxes
+        });
+        const confirmButton = wrapper.find('Button').at(0);
+        expect(confirmButton).to.have.attr('disabled');
       });
-      const confirmButton = wrapper.find('Button').at(0);
-      expect(confirmButton).to.not.have.attr('disabled');
+
+      it('is enabled if checkboxes are checked, verification string is correct, and password not required', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isPasswordRequired={false} isTeacher={true}/>);
+        let checkboxes = buildCheckboxMap();
+        Object.keys(checkboxes).map(id => checkboxes[id].checked = true);
+        wrapper.setState({
+          isDialogOpen: true,
+          deleteVerification: DELETE_VERIFICATION_STRING,
+          checkboxes
+        });
+        const confirmButton = wrapper.find('Button').at(0);
+        expect(confirmButton).to.not.have.attr('disabled');
+      });
+
+      it('is enabled if checkboxes are checked, verification string is correct, and password provided and required', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true}/>);
+        let checkboxes = buildCheckboxMap();
+        Object.keys(checkboxes).map(id => checkboxes[id].checked = true);
+        wrapper.setState({
+          isDialogOpen: true,
+          password: 'password',
+          deleteVerification: DELETE_VERIFICATION_STRING,
+          checkboxes
+        });
+        const confirmButton = wrapper.find('Button').at(0);
+        expect(confirmButton).to.not.have.attr('disabled');
+      });
     });
   });
 
