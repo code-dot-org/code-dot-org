@@ -60,12 +60,6 @@ end
 # @param [String] permission - Name of the permission we're interested in
 # @returns [Boolean] true if the current user has the specified dashboard permission
 def has_permission?(permission)
-  puts
-  puts
-  print "has_permission was called"
-  puts
-  puts
-  print current_user
   return false unless current_user
 
   if @user_permissions.nil?
