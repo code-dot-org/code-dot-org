@@ -15,6 +15,7 @@ const styles = {
   bodyContainer: {
     display: 'flex',
     alignItems: 'center',
+    paddingTop: GUTTER / 2,
     paddingBottom: GUTTER,
   },
   icon: {
@@ -30,10 +31,12 @@ const styles = {
   italicText: {
     fontStyle: 'italic',
   },
+  section: {
+    paddingBottom: GUTTER,
+  },
   checkboxContainer: {
     display: 'flex',
     paddingTop: GUTTER / 2,
-    paddingBottom: GUTTER / 2,
   },
   label: {
     paddingLeft: GUTTER / 2,
@@ -108,7 +111,7 @@ export default class DeleteAccountDialog extends React.Component {
             </div>
           </div>
           {isTeacher &&
-            <div>
+            <div style={styles.section}>
               <strong>{i18n.deleteAccountDialog_checkboxTitle()}</strong>
               {Object.keys(checkboxes).map(id => {
                 return (
@@ -148,7 +151,7 @@ export default class DeleteAccountDialog extends React.Component {
               onChange={onDeleteVerificationChange}
             />
           </Field>
-          <div>
+          <div style={styles.section}>
             {i18n.deleteAccountDialog_emailUs()}
           </div>
           <ConfirmCancelFooter
