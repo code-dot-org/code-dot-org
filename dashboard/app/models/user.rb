@@ -1981,6 +1981,13 @@ class User < ActiveRecord::Base
     restore(recursive: true, recovery_window: 5.minutes)
   end
 
+  def depended_upon_for_login?
+    return false unless teacher?
+    students.any? do |student|
+      student.can_create_personal_login? && student.sections_as_student.size == 1
+    end
+  end
+
   private
 
   def hidden_stage_ids(sections)
