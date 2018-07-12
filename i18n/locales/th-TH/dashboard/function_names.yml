@@ -35,14 +35,14 @@ th:
       draw 3 hexagons: วาดรูปหกเหลี่ยม 3 รูป
       draw 4 hexagons: วาดรูปหกเหลี่ยม 4 รูป
       draw 5 hexagons: วาดรูปหกเหลี่ยม 5 รูป
-      get 2 nectar: เก็บ 2 เกสร
+      get 2 nectar: เก็บน้ำหวาน 2 ครั้ง
       collect purple nectar: collect purple nectar
       get 5: เก็บ 5
       move and get nectar: บินไปและเก็บน้ำหวาน
-      move and get 4: move and get 4
-      get 7 nectar make 7 honey: เก็บนำหวาน 7 ครั้งทำน้ำผึ้ง 7 ครั้ง
-      get 7 make 7: get 7 make 7
-      get 7: get 7
+      move and get 4: บินไปและเก็บน้ำหวาน 4 ครั้ง
+      get 7 nectar make 7 honey: เก็บน้ำหวาน 7 ครั้งทำน้ำผึ้ง 7 ครั้ง
+      get 7 make 7: เก็บ 7 ทำ 7
+      get 7: เก็บ 7
       move and get 3: บินไปและเก็บ 3
       draw a tree: วาดรูปต้นไม้
       draw triangle: draw triangle
@@ -69,7 +69,7 @@ th:
       draw bit: draw bit
       draw a polygon: draw a polygon
       draw a shape: draw a shape
-      get 2 and make 2: get 2 and make 2
+      get 2 and make 2: เก็บ 2 และทำ 2
       draw a pinwheel: draw a pinwheel
       drawTree: drawTree
       drawHouse: drawHouse
@@ -139,7 +139,7 @@ th:
       check guess: check guess
       Jump: Jump
       test: ทดสอบ
-      build bridge: build bridge
+      build bridge: สร้างสะพาน
       run right: run right
       spin right: spin right
       grow forever: grow forever
@@ -157,23 +157,23 @@ th:
       draw roof: draw roof
       draw rectangle: draw rectangle
       move: เคลื่อนไปทาง
-      function 1: function 1
-      function 2: function 2
+      function 1: ฟังก์ชั่น 1
+      function 2: ฟังก์ชั่น 2
       turn corner: turn corner
       destroy and move: destroy and move
-      clear path: clear path
+      clear path: เคลียร์เส้นทาง
       clear cacti: clear cacti
       place and move: place and move
       cover lava: cover lava
-      build short bridge: build short bridge
-      build long bridge: build long bridge
+      build short bridge: สร้างสะพานสั้น
+      build long bridge: สร้างสะพานยาว
       create trail: create trail
       move and fill: move and fill
       fix right corner: fix right corner
       fix left corner: fix left corner
       make segment: make segment
-      fix long path: fix long path
-      fix short path: fix short path
+      fix long path: ซ่อมทางระยะยาว
+      fix short path: ซ่อมทางระยะสั้น
       place 3 tracks: place 3 tracks
       clear right corner: clear right corner
       clear left corner: clear left corner

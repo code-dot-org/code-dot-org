@@ -857,6 +857,7 @@ ja:
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
@@ -7030,10 +7031,8 @@ ja:
       U4 Model Design 1_2018_instruction: Add a large red button to your screen using
         Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: 'やり方:'
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
-      U4L02 - Objects - Template1_2018_instruction: Template
+      U4L02 - Objects - Template1_instruction: テンプレート
+      U4L02 - Objects - Template1_2018_instruction: テンプレート
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
       U4L02 - Objects - eventParameter_instruction: |-
@@ -7142,6 +7141,10 @@ ja:
         on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run"
         and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when
+        Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine
+        touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
         the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make
@@ -7149,6 +7152,8 @@ ja:
         normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable,
         then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when
+        the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe
         collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular
@@ -7696,8 +7701,8 @@ ja:
         Nectar` block.
       courseA_bee_seq2_instruction: Help the bee get the nectar!
       courseA_bee_seq3_instruction: Find the bug and fix it!
-      courseA_bee_seq4_instruction: Try it yourself!
-      courseA_bee_seq5_instruction: Try it yourself!
+      courseA_bee_seq4_instruction: 自分でやってみよう！
+      courseA_bee_seq5_instruction: 自分でやってみよう！
       courseA_bee_seq6_instruction: Now the bee needs to get nectar from two flowers!
       courseA_bee_seq7_instruction: Add two blocks to finish this puzzle!
       courseA_bee_seq8_instruction: Make sure to get nectar from every flower!
@@ -7770,8 +7775,7 @@ ja:
       courseA_collector_loops_challenge1_2018_instruction: |-
         *"Can you help me spot
         some bugs?"*
-      courseA_collector_loops_challenge2_instruction: "This time you can only use\none
-        of each arrow block. Get all of the treasure! "
+      courseA_collector_loops_challenge2_instruction: '宝を全部ゲットしよう！ '
       courseA_collector_loops_challenge2kp_instruction: |-
         Collect at least **3** pieces
         of treasure to pass this level.
@@ -7855,8 +7859,8 @@ ja:
         Add one block to help the harvester pick
         the corn.
       courseA_harvester_seq5_instruction: Find the bug and fix it!
-      courseA_harvester_seq6_instruction: Try it yourself!
-      courseA_harvester_seq7_instruction: Try it yourself!
+      courseA_harvester_seq6_instruction: 自分でやってみよう！
+      courseA_harvester_seq7_instruction: 自分でやってみよう！
       courseA_harvester_seq8_instruction: |-
         Now the harvester needs to pick corn two
         times!
@@ -9149,8 +9153,8 @@ ja:
       courseD_artist_binary_challenge3_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
-      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
-      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
+      courseD_artist_embed_frozen_instruction: 雪の結晶のデザインを見るには実行を押しましょう！
+      courseD_artist_embed_frozen2_instruction: 雪の結晶のデザインを見るには実行を押しましょう。
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.

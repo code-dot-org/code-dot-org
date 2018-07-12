@@ -353,16 +353,16 @@ it:
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Cicli con l'Artista
         CSF_artist_angles: Angoli con l'Artista
-        CSF_collector_k1_blocks: 'Fondamenti di Informatica: Il collezionista'
+        CSF_collector_k1_blocks: 'Fondamenti di Informatica: La Collezionista'
         CSF_collector_repeat_loops: 'Collezionista: Cicli di Ripetizione'
-        CSF_collector_text_blocks: 'Fondamenti di Informatica: Il collezionista'
+        CSF_collector_text_blocks: 'Fondamenti di Informatica: La Collezionista'
         CSF_create_functions: Creazione di funzioni
         CSF_debugging_k1_blocks: Correzione Errori (Debugging)
         CSF_debugging_text_blocks: Correzione Errori (Debugging)
-        CSF_EF_cs_matters: L'informatica conta
+        CSF_EF_cs_matters: L'informatica è importante
         CSF_maze_intro_k1_blocks: Introduzione a Code Studio
         CSF_maze_intro_text_blocks: Introduzione a Code Studio
-        CSF_my_robotic_friends: I miei amici robotici
+        CSF_my_robotic_friends: I Miei Amici Robotici
         CSF_Power_of_Words: Cittadinanza Digitale - Il Potere delle Parole
         CSF_Super_Digital_Citizen: Cittadinanza Digitale - Super Cittadino Digitale
         CSF_stevie_big_project: Stevie e il Grande Progetto
@@ -524,8 +524,8 @@ it:
         CSF_bb8_loops_C-F: Loops with BB-8
         CSF_harvester_skinOverview_K-1: La Contadina
         CSF_harvester_loops_K1: Cicli con la Contadina
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_scrat_loops_K1: Cicli con l'Era Glaciale
+        CSF_scrat_loops_CF: Cicli con l'Era Glaciale
         CSF_if_allskins: Il Blocco Se
         CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
         CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
@@ -533,6 +533,10 @@ it:
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
         csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

@@ -2048,7 +2048,7 @@ ka:
             'Unplugged: The Design Recipe':
               name: 'გაკვეთილი კომპიუტერის გარეშე: დიზაინის რეცეპტი'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით
           description_short: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით
           description_audience: ''
@@ -9530,6 +9530,16 @@ ka:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

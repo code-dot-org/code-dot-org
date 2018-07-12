@@ -2048,7 +2048,7 @@ ru:
             'Unplugged: The Design Recipe':
               name: 'Урок без компьютера: Создание рецепта'
         AlgebraB:
-          title: Информатика в алгебре
+          title: 'Информатика в алгебре'
           description: Изучайте функциональное программирование, используя алгебру
           description_short: Изучайте функциональное программирование, используя алгебру
           description_audience: ''
@@ -9530,6 +9530,16 @@ ru:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''
