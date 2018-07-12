@@ -39,8 +39,6 @@ module.exports = class Maze {
     this.stepSpeed = 100;
     this.animating_ = false;
 
-    this.cachedBlockStates = [];
-
     this.resultsHandler = undefined;
     this.response = undefined;
     this.result = undefined;
@@ -248,8 +246,6 @@ module.exports = class Maze {
   resetButtonClick_ = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.removeAttribute('disabled');
-
-    this.reenableCachedBlockStates_();
   };
 
   /**
@@ -493,24 +489,6 @@ module.exports = class Maze {
     if (studioApp().isUsingBlockly()) {
       // Disable toolbox while running
       Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-
-      if (stepMode) {
-        if (this.cachedBlockStates.length !== 0) {
-          throw new Error('Unexpected cachedBlockStates');
-        }
-        // Disable all blocks, caching their state first
-        Blockly.mainBlockSpace.getAllBlocks().forEach((block) => {
-          this.cachedBlockStates.push({
-            block: block,
-            movable: block.isMovable(),
-            deletable: block.isDeletable(),
-            editable: block.isEditable()
-          });
-          block.setMovable(false);
-          block.setDeletable(false);
-          block.setEditable(false);
-        });
-      }
     }
 
     this.controller.animationsController.stopIdling();
@@ -532,18 +510,6 @@ module.exports = class Maze {
     var actions = this.executionInfo.getActions(singleStep);
 
     this.scheduleSingleAnimation_(0, actions, singleStep, timePerAction);
-  }
-
-  reenableCachedBlockStates_() {
-    if (this.cachedBlockStates) {
-      // restore moveable/deletable/editable state from before we started stepping
-      this.cachedBlockStates.forEach(function (cached) {
-        cached.block.setMovable(cached.movable);
-        cached.block.setDeletable(cached.deletable);
-        cached.block.setEditable(cached.editable);
-      });
-      this.cachedBlockStates = [];
-    }
   }
 
   /**
@@ -777,7 +743,6 @@ module.exports = class Maze {
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now
         if (!singleStep || this.result === ResultType.SUCCESS) {
-          this.reenableCachedBlockStates_();
           studioApp().clearHighlighting();
         }
         this.displayFeedback_();
