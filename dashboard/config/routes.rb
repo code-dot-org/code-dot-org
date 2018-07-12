@@ -7,6 +7,8 @@ Dashboard::Application.routes.draw do
 
   resources :user_levels, only: [:update, :destroy]
 
+  resources :user_scripts, only: :update
+
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
