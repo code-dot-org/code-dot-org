@@ -428,6 +428,7 @@ describe('entry tests', () => {
     return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }));
   var codeStudioEntries = {
+    'blockly':                      './src/sites/studio/pages/blockly.js',
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
@@ -639,19 +640,6 @@ describe('entry tests', () => {
         poll: 1000,
         ignored: /^node_modules\/[^@].*/
       },
-    }
-  };
-
-  var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
-  config.concat = {
-    vendor: {
-      src: [
-        'lib/blockly/preamble_' + ext + '.js',
-        'lib/blockly/blockly_' + ext + '.js',
-        'lib/blockly/blocks_' + ext + '.js',
-        'lib/blockly/javascript_' + ext + '.js',
-      ],
-      dest: 'build/package/js/blockly.js'
     }
   };
 
