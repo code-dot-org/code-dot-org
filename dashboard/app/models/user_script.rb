@@ -11,6 +11,7 @@
 #  last_progress_at :datetime
 #  created_at       :datetime
 #  updated_at       :datetime
+#  properties       :text(65535)
 #
 # Indexes
 #
