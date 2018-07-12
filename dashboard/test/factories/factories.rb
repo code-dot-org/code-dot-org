@@ -220,7 +220,14 @@ FactoryGirl.define do
       factory :student_in_picture_section do
         encrypted_password nil
         provider 'sponsored'
+        in_picture_section
+      end
 
+      factory :old_student do
+        birthday Time.zone.today - 30.years
+      end
+
+      trait :in_picture_section do
         after(:create) do |user|
           picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
           create(:follower, student_user: user, section: picture_section)
@@ -228,8 +235,12 @@ FactoryGirl.define do
         end
       end
 
-      factory :old_student do
-        birthday Time.zone.today - 30.years
+      trait :in_email_section do
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+          create :follower, student_user: user, section: section
+          user.reload
+        end
       end
     end
 
