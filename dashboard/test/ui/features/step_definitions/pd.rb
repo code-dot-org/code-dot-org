@@ -226,7 +226,7 @@ And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
   workshop = FactoryGirl.create :pd_ended_workshop, :local_summer_workshop,
-    organizer: (User.find_by_email 'test_organizer1@code.org' || (FactoryGirl.create :workshop_organizer, email: 'test_organizer1@code.org')),
+    organizer: FactoryGirl.create(:workshop_organizer, email: "test_organizer#{SecureRandom.hex}@code.org"),
     num_sessions: 5, enrolled_and_attending_users: 10,
     facilitators: [
       (FactoryGirl.create :facilitator, email: "test_facilitator#{SecureRandom.hex}@code.org", name: 'F1'),
