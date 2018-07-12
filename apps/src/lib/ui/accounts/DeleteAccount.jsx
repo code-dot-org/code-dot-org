@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import _ from 'lodash';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -128,10 +129,20 @@ export default class DeleteAccount extends React.Component {
     });
   };
 
+  allCheckboxesChecked = () => {
+    const {checkboxes} = this.state;
+    const uncheckedBoxes = _.filter(Object.keys(checkboxes), id => !checkboxes[id].checked);
+    return uncheckedBoxes.length === 0;
+  };
+
   isValid = () => {
+    const {isPasswordRequired, isTeacher} = this.props;
     const {password, deleteVerification} = this.state;
-    const isPasswordValid = this.props.isPasswordRequired ? (password.length > 0) : true;
-    return isPasswordValid && deleteVerification === DELETE_VERIFICATION_STRING;
+    const isPasswordValid = isPasswordRequired ? (password.length > 0) : true;
+    const areCheckboxesValid = isTeacher ? this.allCheckboxesChecked() : true;
+    const isDeleteVerificationValid = deleteVerification === DELETE_VERIFICATION_STRING;
+
+    return isPasswordValid && areCheckboxesValid && isDeleteVerificationValid;
   };
 
   deleteUser = () => {
