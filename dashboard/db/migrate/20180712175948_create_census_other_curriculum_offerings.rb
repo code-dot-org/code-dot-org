@@ -1,6 +1,6 @@
 class CreateCensusOtherCurriculumOfferings < ActiveRecord::Migration[5.0]
   def change
-    create_table :census_other_curriculum_offerings do |t|
+    create_table :access_report_other_curriculum_offerings do |t|
       t.string :curriculum_provider_name, null: false
       t.string :school_id, limit: 12, null: false
       t.string :course, null: false
@@ -10,10 +10,10 @@ class CreateCensusOtherCurriculumOfferings < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_foreign_key :census_other_curriculum_offerings, :schools
-    add_index :census_other_curriculum_offerings,
+    add_foreign_key :access_report_other_curriculum_offerings, :schools
+    add_index :access_report_other_curriculum_offerings,
       [:curriculum_provider_name, :school_id, :course, :school_year],
       unique: true,
-      name: 'index_census_other_curriculum_offerings_unique'
+      name: 'index_access_report_other_curriculum_offerings_unique'
   end
 end

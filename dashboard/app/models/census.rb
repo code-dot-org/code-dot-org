@@ -1,5 +1,5 @@
 module Census
   def self.table_name_prefix
-    'census_'
+    'access_report_'
   end
 end
