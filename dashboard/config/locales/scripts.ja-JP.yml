@@ -140,7 +140,7 @@ ja:
             'Farmer: While Loops':
               name: '農夫: While Loops'
             Functional Suncatchers:
-              name: Functional Suncatchers
+              name: 関数サンキャッチャー
             Internet:
               name: インターネット
             Maze:
@@ -2221,7 +2221,7 @@ ja:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: コース終了後アンケート
         csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information
@@ -2279,7 +2279,7 @@ ja:
             Practice PT - Encode an Experience:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
-              name: Post-Course Survey
+              name: コース終了後アンケート
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming
           description: "This unit introduces the foundational concepts of computer
@@ -2332,7 +2332,7 @@ ja:
             Please complete the CSP Mid-course survey!:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
-              name: Post-Course Survey
+              name: コース終了後アンケート
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions
@@ -2380,7 +2380,7 @@ ja:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: コース終了後アンケート
             Student Post-Course Survey:
               name: Student Post-Course Survey
         csp5-2017:
@@ -2499,7 +2499,7 @@ ja:
             Boolean Expressions and "if" Statements:
               name: Boolean Expressions and "if" Statements
             Post-Course Survey:
-              name: Post-Course Survey
+              name: コース終了後アンケート
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
           description: This unit covers the preparation and completion of the Create
@@ -5475,7 +5475,7 @@ ja:
             Final Project:
               name: Final Project
             Post-Course Survey:
-              name: Post-Course Survey
+              name: コース終了後アンケート
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -9084,7 +9084,7 @@ ja:
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
-              name: Post-Course Survey
+              name: コース終了後アンケート
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -9107,7 +9107,7 @@ ja:
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
             Post-Course Survey:
-              name: Post-Course Survey
+              name: コース終了後アンケート
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
@@ -13010,6 +13010,16 @@ ja:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

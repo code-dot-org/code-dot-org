@@ -1317,6 +1317,7 @@ ga:
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
@@ -8062,8 +8063,8 @@ ga:
       Valentine_artist2_01_instruction: |-
         Program the artist to draw some grass for
         the Love Bug.
-      Valentine_artist_01_instruction: 'Cabhraigh leis an ealaíontóir a chroí láma
-        a chríochnú. '
+      Valentine_artist_01_instruction: Cabhraigh leis an ealaíontóir a chroí láma
+        a chríochnú.
       Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
         when the left and right arrows are pressed. When Kiki is clicked, she\nshould
         throw hearts towards her friends. "
@@ -8072,6 +8073,10 @@ ga:
         on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run"
         and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when
+        Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine
+        touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
         the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make
@@ -8079,6 +8084,8 @@ ga:
         normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable,
         then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when
+        the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe
         collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular

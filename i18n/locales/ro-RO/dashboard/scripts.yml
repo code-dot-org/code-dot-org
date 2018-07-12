@@ -2048,7 +2048,7 @@ ro:
             'Unplugged: The Design Recipe':
               name: 'Fără calculator: Rețeta pentru design'
         AlgebraB:
-          title: Informatică în Algebră
+          title: 'Informatică în Algebră'
           description: Învață Programare Funcțională prin Algebră
           description_short: Învață Programare Funcțională prin Algebră
           description_audience: '[șir gol]'
@@ -9530,6 +9530,16 @@ ro:
             Labyrinth:
               name: Labyrinth
           title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'

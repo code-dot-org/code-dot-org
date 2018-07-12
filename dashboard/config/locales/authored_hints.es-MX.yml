@@ -410,6 +410,7 @@ es-MX:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Cada elemento necesitará su propio "while" loop.
+      AB_debug_Laurel1_authored_hint: {}
       AppLab Intro 3 - Change Screen Color_authored_hint: {}
       AppLab Intro 4 - Change Screen Color_authored_hint: {}
       AppLab Intro 5 - Change Screen Color_authored_hint: {}
@@ -5937,8 +5938,8 @@ es-MX:
         courseA_harvester_loops5b_c: Muevete de una forma, luego de la otra con este
           camino.
       courseA_harvester_loops6_authored_hint:
-        courseA_harvester_loops6_a: Si te quedas atascado, intentar escribir los pasos
-          en el papel y en busca de patrones que se repiten.
+        courseA_harvester_loops6_a: Si te quedas atascado, intenta escribir los pasos
+          en un papel y busca los patrones que se repiten.
         courseA_harvester_loops6_b: Este es el camino que debes tomar para recoger
           el maíz.
       courseA_harvester_loops7_authored_hint:
@@ -8489,8 +8490,8 @@ es-MX:
           conectados a la <xml><block type="when_run"/></xml> bloque.
         courseC_collector_prog3_b: Intente usar el botón "Paso" para ejecutar su código
           una línea a la vez. ¿Ves dónde falla el código?
-        courseC_collector_prog3_c: Si tiene problemas para descifrar este puzzle,
-          intente escribir los movimientos hacia abajo en un papel.
+        courseC_collector_prog3_c: Si tienes problemas para descifrar este puzzle,
+          intenta escribir los movimientos en un papel.
       courseC_collector_prog4_authored_hint:
         courseC_collector_prog4_a: Si te quedas atascado, intenta escribir los pasos
           en una hoja de papel.
@@ -8624,11 +8625,11 @@ es-MX:
         courseC_flappy_events8_a: Intente concectar un segundo bloque "establecer
           escena" bajo el evento "cuando pase obstáculo" para pasar este nivel.
       courseC_flappy_events9_authored_hint:
-        courseC_flappy_events9_a: Conectar el 'sistema puntuación 0' bloque al evento
-          'cuando choca con un obstáculo' para pasar este nivel.
+        courseC_flappy_events9_a: Conecte el bloque "establecer puntaje 0" al evento
+          "al chocar con un obstáculo" para pasar este nivel.
       courseC_flappy_events9_2018_authored_hint:
-        courseC_flappy_events9_a: Conectar el 'sistema puntuación 0' bloque al evento
-          'cuando choca con un obstáculo' para pasar este nivel.
+        courseC_flappy_events9_a: Conecte el bloque "establecer puntaje 0" al evento
+          "al chocar con un obstáculo" para pasar este nivel.
       courseC_flappy_events_template_authored_hint: {}
       courseC_flappy_events_template_2018_authored_hint: {}
       courseC_harvester_loops1_authored_hint:
@@ -8646,63 +8647,69 @@ es-MX:
         courseC_harvester_loops1_b: Puede utilizar un ciclo con el <xml><block type="harvester_pumpkin"/></xml>
           bloque para recoger más de una calabaza de una plaza.
       courseC_harvester_loops2_authored_hint:
-        courseC_harvester_loops2_a: Si te quedas atascado, intentar escribir los pasos
-          en el papel y en busca de patrones que se repiten.
+        courseC_harvester_loops2_a: Si te quedas atascado, intenta escribir los pasos
+          en un papel y busca los patrones que se repiten.
         courseC_harvester_loops2_b: Necesitará un ciclo de repetición después de otro.
-        courseC_harvester_loops2_c: Un ciclo repetirá el comando 'avanzar', y el otro
-          repetirá el comando 'recoger calabaza'.
+        courseC_harvester_loops2_c: Un loop repetirá el comando "avanzar", y el otro
+          repetirá el comando "recoger calabaza".
       courseC_harvester_loops2_2018_authored_hint:
-        courseC_harvester_loops2_a: Si te quedas atascado, intentar escribir los pasos
-          en el papel y en busca de patrones que se repiten.
+        courseC_harvester_loops2_a: Si te quedas atascado, intenta escribir los pasos
+          en un papel y busca los patrones que se repiten.
         courseC_harvester_loops2_b: Necesitará un ciclo de repetición después de otro.
-        courseC_harvester_loops2_c: Un ciclo repetirá el comando 'avanzar', y el otro
-          repetirá el comando 'recoger calabaza'.
+        courseC_harvester_loops2_c: Un loop repetirá el comando "avanzar", y el otro
+          repetirá el comando "recoger calabaza".
       courseC_harvester_loops3_authored_hint:
         courseC_harvester_loops3_a: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún
           no has resuelto el rompecabezas."
-        courseC_harvester_loops3_b: Para las primeras calabazas, puedes usar código
-          muy similar al último acertijo. ¿A donde necesitas voltear después?
+        courseC_harvester_loops3_b: Para las primeras calabazas, puedes usar un código
+          similar al del último puzzle. ¿Por cual camino necesitas girar después?
         courseC_harvester_loops3_c: Si quieres simplificar tu código, ¡puedes poner
           un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
       courseC_harvester_loops3_2018_authored_hint:
         courseC_harvester_loops3_a: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún
           no has resuelto el rompecabezas."
-        courseC_harvester_loops3_b: Para las primeras calabazas, puedes usar código
-          muy similar al último acertijo. ¿A donde necesitas voltear después?
+        courseC_harvester_loops3_b: Para las primeras calabazas, puedes usar un código
+          similar al del último puzzle. ¿Por cual camino necesitas girar después?
         courseC_harvester_loops3_c: Si quieres simplificar tu código, ¡puedes poner
           un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
       courseC_harvester_loops4_authored_hint:
-        courseC_harvester_loops4_a: Usa el nuevo bloque "recoger mazorca".
-        courseC_harvester_loops4_b: Puedes usar múltiples ciclos en tu código, algunos
-          para recoger mazorcas y otros para recoger calabazas.
+        courseC_harvester_loops4_a: Usa el nuevo bloque "recoger maiz" para recolectar
+          el maiz.
+        courseC_harvester_loops4_b: Puedes usar múltiples loops de repetición en tu
+          código, algunos para recoger maiz y otros para recoger calabazas.
         courseC_harvester_loops4_c: Si quieres simplificar tu código, ¡puedes poner
           un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
       courseC_harvester_loops4_2018_authored_hint:
-        courseC_harvester_loops4_a: Usa el nuevo bloque "recoger mazorca".
-        courseC_harvester_loops4_b: Puedes usar múltiples ciclos en tu código, algunos
-          para recoger mazorcas y otros para recoger calabazas.
+        courseC_harvester_loops4_a: Usa el nuevo bloque "recoger maiz" para recolectar
+          el maiz.
+        courseC_harvester_loops4_b: Puedes usar múltiples loops de repetición en tu
+          código, algunos para recoger maiz y otros para recoger calabazas.
         courseC_harvester_loops4_c: Si quieres simplificar tu código, ¡puedes poner
           un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
       courseC_harvester_loops5_authored_hint:
-        courseC_harvester_loops5_a: Si te quedas atascado, intentar dibujar los pasos
-          en el papel y busca patrones que se repiten.
-        courseC_harvester_loops5_b: "¿Este escalón de la escalera parece familiar?
-          Los movimientos deben ser similares, recuerda recoger cultivos en el camino."
+        courseC_harvester_loops5_a: Si quedas atascado, intenta dibujar el programa
+          completo y después busca los patrones que se repiten.
+        courseC_harvester_loops5_b: "¿Te parece familiar este peldaño de escalera
+          al de otros puzzles? Los movimientos deberían ser similares, solamente recuerda
+          recoger la cosecha a lo largo del camino."
       courseC_harvester_loops5_2018_authored_hint:
-        courseC_harvester_loops5_a: Si te quedas atascado, intentar dibujar los pasos
-          en el papel y busca patrones que se repiten.
-        courseC_harvester_loops5_b: "¿Este escalón de la escalera parece familiar?
-          Los movimientos deben ser similares, recuerda recoger cultivos en el camino."
+        courseC_harvester_loops5_a: Si quedas atascado, intenta dibujar el programa
+          completo y después busca los patrones que se repiten.
+        courseC_harvester_loops5_b: "¿Te parece familiar este peldaño de escalera
+          al de otros puzzles? Los movimientos deberían ser similares, solamente recuerda
+          recoger la cosecha a lo largo del camino."
       courseC_harvester_loops6_authored_hint:
         courseC_harvester_loops6_a: Recuerda que puedes poner más de un bloque dentro
           de un ciclo de repetición.
-        courseC_harvester_loops6_b: No olvides girar al final de la hilera de maíz.
+        courseC_harvester_loops6_b: No te olvides de girar al final de la fila de
+          maiz.
       courseC_harvester_loops6_2018_authored_hint:
         courseC_harvester_loops6_a: Recuerda que puedes poner más de un bloque dentro
           de un ciclo de repetición.
-        courseC_harvester_loops6_b: No olvides girar al final de la hilera de maíz.
+        courseC_harvester_loops6_b: No te olvides de girar al final de la fila de
+          maiz.
       courseC_harvester_loops7_authored_hint:
         courseC_harvester_loops7_a: Puedes resolver este acertijo de dos maneras,
           obteniendo el maíz o las calabazas primero.
@@ -8901,15 +8908,15 @@ es-MX:
         courseC_maze_debugging3_b: "¿No puede descubrir qué pasa? Intenta ejecutar
           el código un par de veces para ver qué pasa."
       courseC_maze_debugging4_authored_hint:
-        courseC_maze_debugging4_a: Usa el boton "paso" para ir a través de las instrucciones
-          una a la ves. ¿Te ayuda a encontrar donde ocurrió el error?
-        courseC_maze_debugging4_b: Una de las vueltas esta haciendo que Scrat vaya
-          en la dirección equivocada. ¿Sabes cual?
+        courseC_maze_debugging4_a: Usa el botón "Paso" para ejecutar las instrucciones
+          una a la vez. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?
+        courseC_maze_debugging4_b: Uno de los giros está haciendo que Scrat vaya en
+          la dirección equivocada. ¿Puedes averiguar cuál?
       courseC_maze_debugging4_2018_authored_hint:
-        courseC_maze_debugging4_a: Usa el boton "paso" para ir a través de las instrucciones
-          una a la ves. ¿Te ayuda a encontrar donde ocurrió el error?
-        courseC_maze_debugging4_b: Una de las vueltas esta haciendo que Scrat vaya
-          en la dirección equivocada. ¿Sabes cual?
+        courseC_maze_debugging4_a: Usa el botón "Paso" para ejecutar las instrucciones
+          una a la vez. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?
+        courseC_maze_debugging4_b: Uno de los giros está haciendo que Scrat vaya en
+          la dirección equivocada. ¿Puedes averiguar cuál?
       courseC_maze_debugging5_authored_hint:
         courseC_maze_debugging5_a: |-
           Hay muchos bloques utiles en el area de trabajo. ¡No los borres!
@@ -9155,13 +9162,13 @@ es-MX:
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: No se olvide de utilizar el botón "Step" para
           ir bloque por bloque buscando errores.
-        courseC_maze_programming7_b: Si tiene problemas para descifrar este puzzle,
-          intente escribir los movimientos hacia abajo en un papel.
+        courseC_maze_programming7_b: Si tienes problemas para descifrar este puzzle,
+          intenta escribir los movimientos en un papel.
       courseC_maze_programming7_2018_authored_hint:
         courseC_maze_programming7_a: No se olvide de utilizar el botón "Step" para
           ir bloque por bloque buscando errores.
-        courseC_maze_programming7_b: Si tiene problemas para descifrar este puzzle,
-          intente escribir los movimientos hacia abajo en un papel.
+        courseC_maze_programming7_b: Si tienes problemas para descifrar este puzzle,
+          intenta escribir los movimientos en un papel.
       courseC_maze_programming8_authored_hint:
         courseC_maze_programming8_a: Recuerde que puede usar el botón "Paso" para
           revisar su código línea por línea si se queda atascado.
@@ -9198,7 +9205,7 @@ es-MX:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_playLab_embedded_authored_hint: {}
       courseC_puppy_loops10_authored_hint:
-        courseC_puppy_loops9_1: Necesito mover dos o tres veces entre cada turno.
+        courseC_puppy_loops9_1: Necesito mover dos o tres veces entre cada giro.
       courseC_puppy_loops11_authored_hint: {}
       courseC_puppy_loops8_authored_hint:
         2-3_Maze_Loops_17_a: Trate de pensar sobre este problema en pequeñas partes.
@@ -9261,14 +9268,14 @@ es-MX:
         courseC_starWars_loops2_a: Para repetir código, arrastra un ciclo ´repetir´,
           luego coloca dentro el bloque que quieres repetir.
       courseC_starWars_loops4_authored_hint:
-        courseC_starWars_loops4_c: Hacer clic en la pequeña flecha junto a "izquierda"
-          en el bloque de de vuelta te permite cambiarlo a "derecha".
+        courseC_starWars_loops4_c: Haciendo clic en la flecha pequeña al lado "izquierdo"
+          en el bloque girar permitirá cambiarlo a la "derecha".
         courseC_starWars_loops4_a: Usa dos bloques de "repetir".
         courseC_starWars_loops4_b: 'Cada ciclo de repetición tendrá solo un comando
           dentro de él: `avanzar`.'
       courseC_starWars_loops4_2018_authored_hint:
-        courseC_starWars_loops4_c: Hacer clic en la pequeña flecha junto a "izquierda"
-          en el bloque de de vuelta te permite cambiarlo a "derecha".
+        courseC_starWars_loops4_c: Haciendo clic en la flecha pequeña al lado "izquierdo"
+          en el bloque girar permitirá cambiarlo a la "derecha".
         courseC_starWars_loops4_a: Usa dos bloques de "repetir".
         courseC_starWars_loops4_b: 'Cada ciclo de repetición tendrá solo un comando
           dentro de él: `avanzar`.'
@@ -9281,31 +9288,29 @@ es-MX:
         courseC_starWars_loops5_a: La mejor solución utilizar un giro, luego un único
           `avanzar ', otro giro y luego un ciclo.
       courseC_starWars_loops6_authored_hint:
-        courseC_starWars_loops6_a: Trate de escribir todos los movimientos en un pedazo
-          de papel y mirando un patrón.
+        courseC_starWars_loops6_a: Intente escribir todos los movimientos en un papel
+          y busque un patrón.
         courseC_starWars_loops6_b: "Si desea utilizar menos código, puede poner un
           ciclo de repetición dentro de otro.    \nEsto se llama un ** ciclo anidado
           **."
       courseC_starWars_loops6_2018_authored_hint:
-        courseC_starWars_loops6_a: Trate de escribir todos los movimientos en un pedazo
-          de papel y mirando un patrón.
+        courseC_starWars_loops6_a: Intente escribir todos los movimientos en un papel
+          y busque un patrón.
         courseC_starWars_loops6_b: "Si deseas utilizar menos código, puedes poner
           un ciclo de repetición dentro de otro.    \nEsto se llama un ** ciclo anidado
           **."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: "¡Este patrón parece más difícil de lo que es!
           Comience con un simple paso de escalera. ¿Eso cubre toda la chatarra?"
-        courseC_starWars_loops7_b: Si usted está teniendo problemas con este rompecabezas,
-          trate de escribir todos los movimientos en un pedazo de papel y mirando
-          a un patrón.
+        courseC_starWars_loops7_b: Si tienes problemas con este puzzle, intenta escribir
+          todos los movimientos en un papel y busca un patrón.
         courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecute
           el código para ver qué sucede, incluso si aún no ha resuelto el acertijo."
       courseC_starWars_loops7_2018_authored_hint:
         courseC_starWars_loops7_a: "¡Este patrón parece más difícil de lo que es!
           Comience con un simple paso de escalera. ¿Eso cubre toda la chatarra?"
-        courseC_starWars_loops7_b: Si usted está teniendo problemas con este rompecabezas,
-          trate de escribir todos los movimientos en un pedazo de papel y mirando
-          a un patrón.
+        courseC_starWars_loops7_b: Si tienes problemas con este puzzle, intenta escribir
+          todos los movimientos en un papel y busca un patrón.
         courseC_starWars_loops7_c: "¡No tengas miedo de cometer un error! Ejecute
           el código para ver qué sucede, incluso si aún no ha resuelto el acertijo."
       courseC_starWars_loops8_authored_hint:
@@ -9386,8 +9391,8 @@ es-MX:
         courseD_artist_project1_b: Recuerda que 'mover adelante' dibuja una línea,
           mientras que 'salta adelante' no.
       courseD_artist_2_2018_authored_hint:
-        courseD_artist_project1_b: Recuerda que 'mover' dibuja una línea, mientras
-          que 'salta' no.
+        courseD_artist_project1_b: Recuerda que "mover" dibuja una linea, mientras
+          que "saltar" no.
         courseD_artist_project1_a: "¡Puedes utilizar el menú desplegable en los bloques
           de 'giro' para ver qué ángulo necesitas!"
       courseD_artist_3_2018_authored_hint: {}

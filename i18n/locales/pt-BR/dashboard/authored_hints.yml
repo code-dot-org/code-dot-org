@@ -269,10 +269,10 @@ pt-BR:
           
           What should you put a `repeat` around to make the code shorter?
       4-5 Maze 4_authored_hint:
-        4-5_Maze_4_a: If you are having a hard time figuring out where to put the repeat, try coding everything out and looking for a pattern.
+        4-5_Maze_4_a: Se você está achando difícil descobrir onde colocar o laço de repetição, tente tudo codificar tudo e procurar por um padrão de codificação.
       4-5 Maze 5_authored_hint:
-        4-5_Maze_5_a: Try using a `repeat` loop anytime you need to `move forward` more than two steps.
-        4-5_Maze_5_b: You can use more than one `repeat` loop in a puzzle.
+        4-5_Maze_5_a: Tente usar um laço 'repetir', sempre que você precisar 'mover para frente' mais de duas vezes.
+        4-5_Maze_5_b: Você pode usar mais de um laço 'Repetir' em um enigma.
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: "Try tracing out a path with your finger.  \nIs it the shortest path you can find?"
       4-5 Maze 7_authored_hint:
@@ -299,6 +299,7 @@ pt-BR:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Each item will need its own `while` loop.
+      AB_debug_Laurel1_authored_hint: { }
       AppLab Intro 3 - Change Screen Color_authored_hint: { }
       AppLab Intro 4 - Change Screen Color_authored_hint: { }
       AppLab Intro 5 - Change Screen Color_authored_hint: { }
@@ -5348,39 +5349,39 @@ pt-BR:
       courseA_harvester_seq12_authored_hint: { }
       courseA_harvester_seq13_authored_hint:
         courseA_bee_seq1_a: |-
-          Use this block to pick corn once the harvester gets to it.
+          Use esse bloco para colher o milho quando a colheitadeira chegar até ele.
           
           <xml>
           <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
-        courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml> to pick the corn!
+        courseA_harvester_seq2_a: Não se esqueça de usar <xml><block type="harvester_corn"/></xml> para colher o milho!
         courseA_harvester_seq2_b: Try writing down the steps on paper to find a solution!
       courseA_harvester_seq3_authored_hint:
         courseA_harvester_seq3_a: |-
-          Did you remember to use this block?
+          Você se lembrou de usar esse bloco?
           <xml><block type="harvester_corn"/></xml>
-        courseA_harvester_seq3_b: Say the steps out loud and see if it helps you figure out the answer.
+        courseA_harvester_seq3_b: Diga os passos em voz alta e veja se te ajuda a descobrir a resposta.
       courseA_harvester_seq4_authored_hint:
-        courseA_harvester_seq4_a: How many spaces are between the Harvester and the corn? How many blocks are already in your workspace?
+        courseA_harvester_seq4_a: Quantos espaços existem entre a Colheitadeira e o milho? Quantos blocos já estão na sua área de trabalho?
         courseA_harvester_seq4_b: |-
-          You will need five `Move East` blocks and one `Pick Corn` block:
+          Você vai precisar de cinco blocos 'Mover Leste' e um bloco 'Colher Milho':
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq5_authored_hint:
-        courseA_harvester_seq5_a: Which block moves the harvester the wrong way?
+        courseA_harvester_seq5_a: Quais blocos movem a colheitadeira para o caminho errado?
         courseA_harvester_seq5_b: Você precisa remover um bloco.
         courseA_harvester_seq5_c: |-
-          Throw this block in the trash!
+          Jogue esse bloco no lixo!
           <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq6_authored_hint:
-        courseA_harvester_seq6_a: If you're stuck, try saying the steps out loud. It could help you figure out the right path.
+        courseA_harvester_seq6_a: Se você está preso, tente falar os passos em voz alta. Isso pode te ajudar a descobrir o caminho certo.
       courseA_harvester_seq7_authored_hint:
-        courseA_harvester_seq7_a: Try solving the puzzle in 2 parts, one part before the corner and one part after the corner.
-        courseA_harvester_seq7_b: Having trouble? This is the path the harvester should take.
+        courseA_harvester_seq7_a: Tente resolver esse desafio em 2 partes, uma parte antes do canto e outra depois do canto.
+        courseA_harvester_seq7_b: Está tendo problemas? Esse é o caminho que a colheitadeira deve tomar.
       courseA_harvester_seq8_authored_hint: { }
       courseA_harvester_seq9_authored_hint:
-        courseA_harvester_seq9_a: Run the code a few times to see what happens. Where does the harvester stop?
-        courseA_harvester_seq9_b: Don't forget to pick all the corn! You will need **3** pick corn blocks.
+        courseA_harvester_seq9_a: Rode o código algumas vezes e veja o que acontece. Onde a colheitadeira parou?
+        courseA_harvester_seq9_b: Não se esqueça de colher todo o milho! Você vai precisar de **3** blocos de colher milho.
         courseA_harvester_seq9_c: Você deve usar esse caminho para colher todo o milho.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
@@ -5510,19 +5511,19 @@ pt-BR:
           The bird will need to move West 3 times to get to the pig. Use this block:
           <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq2_authored_hint:
-        courseA_maze_seq2_a: This program is missing 1 block. Can you figure out which one?
-        courseA_maze_seq2_b: Try running the code first to see where the bird ends up. Where do you need to go from there?
+        courseA_maze_seq2_a: Está faltando 1 bloco nesse programa. Você consegue descobrir qual?
+        courseA_maze_seq2_b: Tente executar o código primeiro para ver onde o pássaro vai parar. Onde você precisa ir a partir dai?
       courseA_maze_seq2_2018_authored_hint:
-        courseA_maze_seq2_a: This program is missing 1 block. Can you figure out which one?
-        courseA_maze_seq2_b: Try running the code first to see where the bird ends up. Where do you need to go from there?
+        courseA_maze_seq2_a: Está faltando 1 bloco nesse programa. Você consegue descobrir qual?
+        courseA_maze_seq2_b: Tente executar o código primeiro para ver onde o pássaro vai parar. Onde você precisa ir a partir dai?
       courseA_maze_seq2_predict1_authored_hint: { }
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: 1 dos blocos está movendo o pássaro na direção errada. Você consegue descobrir qual e substituir pelo bloco correto?
-        courseA_maze_seq3_b: Try using the step button to find where the program goes wrong. Is it the 1st step? The 2nd?
+        courseA_maze_seq3_b: Tente usar o botão de passos para descobrir onde que o programa está errado. É o passo 1? É o 2?
         courseA_maze_seq3_c: This <xml><block type="maze_moveNorth"/></xml> block doesn't seem to be moving the bird in the right direction. Can you replace it with a different block?
       courseA_maze_seq3_2018_authored_hint:
         courseA_maze_seq3_a: 1 dos blocos está movendo o pássaro na direção errada. Você consegue descobrir qual e substituir pelo bloco correto?
-        courseA_maze_seq3_b: Try using the step button to find where the program goes wrong. Is it the 1st step? The 2nd?
+        courseA_maze_seq3_b: Tente usar o botão de passos para descobrir onde que o programa está errado. É o passo 1? É o 2?
         courseA_maze_seq3_c: This <xml><block type="maze_moveNorth"/></xml> block doesn't seem to be moving the bird in the right direction. Can you replace it with a different block?
       courseA_maze_seq4_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.
@@ -5542,7 +5543,7 @@ pt-BR:
           
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
+        '1': Diga os passos em voz alta e veja se te ajuda a descobrir a resposta.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Your final code should have 3 movement blocks.
         courseA_maze_seq6_b: If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner.

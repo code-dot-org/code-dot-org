@@ -167,7 +167,7 @@ zh-CN:
               name: 小艺术家
         hourofcode:
           title: 经典迷宫
-          description: 和来自愤怒小鸟，植物大战僵尸，冰河世界中的角色一起来学习计算机科学的基础知识！
+          description: 和来自愤怒小鸟，植物大战僵尸，冰川时代中的角色一起来学习计算机科学的基础知识！
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           stages:
             Maze:
@@ -1281,7 +1281,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Review StarLogo Nova:
               name: 复习StarLogo Nova
             Reviewing the Modules:
@@ -1311,7 +1311,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Review StarLogo Nova:
               name: 复习StarLogo Nova
             Reviewing the Modules:
@@ -1345,7 +1345,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Review StarLogo Nova:
               name: 复习StarLogo Nova
             Reviewing the Modules:
@@ -1749,13 +1749,13 @@ zh-CN:
             Halloween 2015:
               name: 2015 万圣节
         iceage:
-          title: 冰河世界游戏实验室
+          title: 冰川时代实验室
           description: 用冰河世纪游戏实验室创造故事或游戏！
           description_short: 用冰河世纪游戏实验室创造故事或游戏！
           description_audience: ''
           stages:
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -2042,7 +2042,7 @@ zh-CN:
             'Unplugged: The Design Recipe':
               name: '离线：食谱设计'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: 通过代数学习函数编程
           description_short: 通过代数学习函数编程
           description_audience: ''
@@ -4249,7 +4249,7 @@ zh-CN:
             Introduction:
               name: 介绍
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Conditionals and Functions in Bee:
               name: 蜜蜂里的条件和函数
             'Algorithms: Tangrams':
@@ -4301,7 +4301,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Thinking Ahead to Implementation:
               name: 实现之前的思考
             Wrap-Up:
@@ -4321,7 +4321,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Thinking Ahead to Implementation:
               name: 实现之前的思考
             Wrap-Up:
@@ -5286,7 +5286,7 @@ zh-CN:
             Introduction:
               name: 介绍
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Functions in Farmer:
               name: 农夫中的函数
             Conditionals and Functions in Bee:
@@ -5414,7 +5414,7 @@ zh-CN:
             D13 no If/While:
               name: D13 没有如果/当
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Bounce:
               name: 弹跳
             NewBounce:
@@ -5643,7 +5643,7 @@ zh-CN:
             The Power of Words:
               name: 语言的力量
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Envelope Variables:
               name: 封装变量
             Variables in Artist:
@@ -6686,7 +6686,7 @@ zh-CN:
             The Power of Words:
               name: 语言的力量
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Conditionals in Minecraft:
               name: '《我的世界》中的条件'
             Envelope Variables:
@@ -7176,7 +7176,7 @@ zh-CN:
             The Power of Words:
               name: 语言的力量
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Conditionals in Minecraft:
               name: '《我的世界》中的条件'
             Envelope Variables:
@@ -7836,7 +7836,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: 艺术家里的循环
+              name: 用循环来画花园
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -8403,7 +8403,7 @@ zh-CN:
               description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
               description_teacher: "学生们会考虑到，当他们沉浸在喜欢的网站上时，可能会由别的孩子的消息，让他们感到生气、受伤害、悲伤，或者害怕。他们会找到办法来处理网络霸凌，如何回应令人不安的在线语言。\n\n学生们讨论所有他们用来沟通的技术，并且探索面对面和在线沟通的相似和不同点。学生们然后会头脑风暴来回应网络霸凌。 "
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
               description_student: 想想你喜欢的电子游戏。有没有好奇过它是怎么做出来的？在这些关卡中，你会开发一个自己的冰川时代电子游戏！
               description_teacher: 这节课中，学生们会被指导通过一个冰河世纪故事中角色的故事。学生们会用事件、循环来让角色在屏幕上移动，然后会有机会在向导关卡后创造自己的游戏或故事。
             Conditionals in Minecraft:
@@ -9472,7 +9472,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: 艺术家里的循环
+              name: 用循环来画花园
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -9520,6 +9520,16 @@ zh-CN:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''
