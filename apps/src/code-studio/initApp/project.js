@@ -252,8 +252,7 @@ var projects = module.exports = {
   },
 
   disableAutoContentModeration() {
-    channels.update(`${this.getCurrentId()}/disable-content-moderation`,  function (err, result)
-    {
+    channels.update(`${this.getCurrentId()}/disable-content-moderation`,  function (err, result) {
       if (err) {
         throw err;
       }
@@ -261,6 +260,11 @@ var projects = module.exports = {
   },
 
   enableAutoContentModeration() {
+    channels.update(`${this.getCurrentId()}/enable-content-moderation`,  function (err, result) {
+      if (err) {
+        throw err;
+      }
+    });
   },
   /**
    * Sets abuse score to zero, saves the project, and reloads the page

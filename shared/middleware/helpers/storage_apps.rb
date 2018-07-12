@@ -139,15 +139,6 @@ class StorageApps
     row[:abuse_score]
   end
 
-  def content_moderation_disabled?(channel_id)
-    _owner, id = storage_decrypt_channel_id(channel_id)
-
-    row = @table.where(id: id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
-
-    row[:skip_content_moderation]
-  end
-
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
     owner_storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
@@ -212,6 +203,15 @@ class StorageApps
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
+  end
+
+  def content_moderation_disabled?(channel_id)
+    _owner, id = storage_decrypt_channel_id(channel_id)
+
+    row = @table.where(id: id).exclude(state: 'deleted').first
+    raise NotFound, "channel `#{channel_id}` not found" unless row
+
+    row[:skip_content_moderation]
   end
 
   #

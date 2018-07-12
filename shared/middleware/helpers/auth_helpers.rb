@@ -65,11 +65,6 @@ def has_permission?(permission)
   if @user_permissions.nil?
     @user_permissions = DASHBOARD_DB[:user_permissions].where(user_id: current_user_id).pluck(:permission)
   end
-  puts
-  puts
-  print @user_permissions
-  puts
-  puts
   @user_permissions.include? permission
 end
 
