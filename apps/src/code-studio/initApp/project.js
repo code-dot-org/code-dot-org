@@ -252,11 +252,15 @@ var projects = module.exports = {
   },
 
   disableAutoContentModeration() {
-    console.log("This is where I will write code to disable content moderation");
+    channels.update(`${this.getCurrentId()}/disable-content-moderation`,  function (err, result)
+    {
+      if (err) {
+        throw err;
+      }
+    });
   },
 
   enableAutoContentModeration() {
-    console.log("This is where I will write code to enable content moderation");
   },
   /**
    * Sets abuse score to zero, saves the project, and reloads the page

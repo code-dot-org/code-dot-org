@@ -10,7 +10,7 @@ task :prepare_dbs do
   end
 end
 
-task test: [:prepare_dbs] do
+task :test do
   ENV['RACK_ENV'] = 'test' if rack_env?(:development)
   ENV['HONEYBADGER_LOGGING_LEVEL'] = 'error'
   Rake::TestTask.new.tap do |t|

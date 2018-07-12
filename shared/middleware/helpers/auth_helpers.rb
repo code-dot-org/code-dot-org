@@ -60,16 +60,27 @@ end
 # @param [String] permission - Name of the permission we're interested in
 # @returns [Boolean] true if the current user has the specified dashboard permission
 def has_permission?(permission)
+  puts
+  puts
+  print "has_permission was called"
+  puts
+  puts
+  print current_user
   return false unless current_user
 
   if @user_permissions.nil?
     @user_permissions = DASHBOARD_DB[:user_permissions].where(user_id: current_user_id).pluck(:permission)
   end
+  puts
+  puts
+  print @user_permissions
+  puts
+  puts
   @user_permissions.include? permission
 end
 
 # @param [Integer] section_id
-# @returns [Boolean] true iff the current user is the owner of the given section.
+# @returns [Boolean] true if the current user is the owner of the given section.
 #          Note: NOT always true for admins.
 def owns_section?(section_id)
   return false unless section_id && current_user_id
@@ -77,7 +88,7 @@ def owns_section?(section_id)
 end
 
 # @param [Integer] student_id
-# @returns [Boolean] true iff the current user, or given user, is the teacher for the student of the given id
+# @returns [Boolean] true if the current user, or given user, is the teacher for the student of the given id
 def teaches_student?(student_id, user_id = current_user_id)
   return false unless student_id && user_id
   DASHBOARD_DB[:sections].
