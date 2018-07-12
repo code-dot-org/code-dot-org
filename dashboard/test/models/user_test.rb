@@ -3386,4 +3386,31 @@ class UserTest < ActiveSupport::TestCase
         id: user.uid
       )
   end
+
+  test 'not depended_upon_for_login? for student' do
+    student = create :student
+    refute student.depended_upon_for_login?
+  end
+
+  test 'not depended_upon_for_login? for teacher with students with personal logins' do
+    student = create :student, :in_email_section
+    teacher = student.sections_as_student.first.teacher
+    refute teacher.depended_upon_for_login?
+  end
+
+  test 'not depended_upon_for_login? for teacher with students in other sections' do
+    student = create :student, :in_picture_section
+    teacher = student.sections_as_student.first.teacher
+    student.sections_as_student << create(:section)
+
+    student.reload
+    assert_equal 2, student.sections_as_student.size
+    refute teacher.depended_upon_for_login?
+  end
+
+  test 'depended_upon_for_login? if teacher has a teacher-managed student with no other sections' do
+    student = create :student, :in_picture_section
+    teacher = student.sections_as_student.first.teacher
+    assert teacher.depended_upon_for_login?
+  end
 end
