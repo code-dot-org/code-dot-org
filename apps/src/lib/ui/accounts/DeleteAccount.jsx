@@ -234,7 +234,7 @@ export default class DeleteAccount extends React.Component {
         <PersonalLoginDialog
           isOpen={this.state.isPersonalLoginDialogOpen}
           onCancel={this.togglePersonalLoginDialog}
-          goToDeleteAccountDialog={this.goToDeleteAccountDialog}
+          onConfirm={this.goToDeleteAccountDialog}
         />
         <DeleteAccountDialog
           isOpen={this.state.isDeleteAccountDialogOpen}
