@@ -447,10 +447,6 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
-    # Temporary transition routes. TODO(Andrew): delete after switching JotForm forms over to POST
-    get 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general_temp'
-    get 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator_temp'
-
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'

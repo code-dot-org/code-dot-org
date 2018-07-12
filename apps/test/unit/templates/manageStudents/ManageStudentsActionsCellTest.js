@@ -7,6 +7,7 @@ const DEFAULT_PROPS = {
   id: 2,
   sectionId: 10,
   isEditing: false,
+  studentName: 'Clark Kent',
   startEditingStudent: ()=>{},
   cancelEditingStudent: ()=>{},
   removeStudent: ()=>{},

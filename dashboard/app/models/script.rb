@@ -218,7 +218,7 @@ class Script < ActiveRecord::Base
     if user_experiments_enabled
       scripts = scripts.map do |script|
         alternate_script = script.alternate_script(user)
-        alternate_script.present? ? alternate_script : script
+        alternate_script.presence || script
       end
     end
 
