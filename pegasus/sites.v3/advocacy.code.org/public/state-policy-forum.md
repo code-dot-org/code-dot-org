@@ -5,7 +5,7 @@ video_player: true
 ---
 <a id="top"></a>
 
-<p align="center"><img src="/images/fit-970/forum-banner1.png"></p> 
+<p align="center"><img src="/images/fit-970/forum-banner.png"></p> 
 
 
 ## Join Us September 27-28, 2018
