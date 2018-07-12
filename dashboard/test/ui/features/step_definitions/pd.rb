@@ -233,150 +233,164 @@ And(/^I am viewing a workshop with fake survey results$/) do
       (FactoryGirl.create :facilitator, email: "test_facilitator#{SecureRandom.hex}@code.org", name: 'F2')
     ]
 
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_0'], questions: [
-    {
-      id: 1,
-      name: 'matrix',
-      type: 'matrix',
-      name: 'How much do you agree / disagree with these statements on teaching CS?',
-      options: [
-        'Strongly Disagree',
-        'Disagree',
-        'Slightly Disagree',
-        'Neutral',
-        'Slightly Agree',
-        'Agree',
-        'Strongly Agree'
-      ],
-      sub_questions: [
-        'I like computer science',
-        'People should learn computer science',
-        'I feel like I can teach computer science'
-      ],
-      order: 1
-    },
-    {
-      id: 2,
-      name: 'scale',
-      type: 'scale',
-      text: 'How pumped are you to teach CS?',
-      options: ['Not at all pumped', 'Super pumped'],
-      values: (1..5).to_a,
-      order: 2
-    },
-    {
-      id: 3,
-      name: 'radio',
-      type: 'radio',
-      text: 'How much CS experience do you have?',
-      order: 3,
-      options: [
-        'None',
-        'Some basic messing around',
-        'Formal education',
-        'I am l33t h4xx0r'
-      ]
-    },
-    {
-      id: 4,
-      name: 'textarea',
-      type: 'textarea',
-      text: 'What inspired you to teach computer science?',
-      order: 4
-    },
-    {
-      id: 5,
-      name: 'userId',
-      text: 'userId',
-      type: 'textarea',
-      order: 5,
-      hidden: true
-    },
-    {
-      id: 6,
-      name: 'workshopId',
-      text: 'workshopId',
-      type: 'textarea',
-      order: 6,
-      hidden: true
-    }
-  ].to_json)
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_0'],
+    questions: [
+      {
+        id: 1,
+        name: 'matrix',
+        type: 'matrix',
+        text: 'How much do you agree / disagree with these statements on teaching CS?',
+        options: [
+          'Strongly Disagree',
+          'Disagree',
+          'Slightly Disagree',
+          'Neutral',
+          'Slightly Agree',
+          'Agree',
+          'Strongly Agree'
+        ],
+        sub_questions: [
+          'I like computer science',
+          'People should learn computer science',
+          'I feel like I can teach computer science'
+        ],
+        order: 1
+      },
+      {
+        id: 2,
+        name: 'scale',
+        type: 'scale',
+        text: 'How pumped are you to teach CS?',
+        options: ['Not at all pumped', 'Super pumped'],
+        values: (1..5).to_a,
+        order: 2
+      },
+      {
+        id: 3,
+        name: 'radio',
+        type: 'radio',
+        text: 'How much CS experience do you have?',
+        order: 3,
+        options: [
+          'None',
+          'Some basic messing around',
+          'Formal education',
+          'I am l33t h4xx0r'
+        ]
+      },
+      {
+        id: 4,
+        name: 'textarea',
+        type: 'textarea',
+        text: 'What inspired you to teach computer science?',
+        order: 4
+      },
+      {
+        id: 5,
+        name: 'userId',
+        text: 'userId',
+        type: 'textarea',
+        order: 5,
+        hidden: true
+      },
+      {
+        id: 6,
+        name: 'workshopId',
+        text: 'workshopId',
+        type: 'textarea',
+        order: 6,
+        hidden: true
+      }
+    ].to_json
+  )
 
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_1'], questions: [
-    {
-      id: 1,
-      name: 'textarea',
-      type: 'textarea',
-      text: 'How was your day?',
-      order: 1
-    },
-    {
-      id: 2,
-      name: 'userId',
-      text: 'userId',
-      type: 'textarea',
-      order: 2,
-      hidden: true
-    },
-    {
-      id: 3,
-      name: 'workshopId',
-      text: 'workshopId',
-      type: 'textarea',
-      order: 3,
-      hidden: true
-    },
-    {
-      id: 4,
-      name: 'sessionId',
-      text: 'sessionId',
-      type: 'textarea',
-      order: 4,
-      hidden: true
-    }
-  ].to_json)
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_1'],
+    questions: [
+      {
+        id: 1,
+        name: 'textarea',
+        type: 'textarea',
+        text: 'How was your day?',
+        order: 1
+      },
+      {
+        id: 2,
+        name: 'userId',
+        text: 'userId',
+        type: 'textarea',
+        order: 2,
+        hidden: true
+      },
+      {
+        id: 3,
+        name: 'workshopId',
+        text: 'workshopId',
+        type: 'textarea',
+        order: 3,
+        hidden: true
+      },
+      {
+        id: 4,
+        name: 'sessionId',
+        text: 'sessionId',
+        type: 'textarea',
+        order: 4,
+        hidden: true
+      }
+    ].to_json
+  )
 
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['facilitator'], questions: [
-    {
-      id: 1,
-      name: 'textarea',
-      type: 'textarea',
-      text: 'How was your facilitator?',
-      order: 1
-    },
-    {
-      id: 2,
-      name: 'userId',
-      text: 'userId',
-      type: 'textarea',
-      order: 2,
-      hidden: true
-    },
-    {
-      id: 3,
-      name: 'workshopId',
-      text: 'workshopId',
-      type: 'textarea',
-      order: 3,
-      hidden: true
-    },
-    {
-      id: 4,
-      name: 'sessionId',
-      text: 'sessionId',
-      type: 'textarea',
-      order: 4,
-      hidden: true
-    },
-    {
-      id: 5,
-      name: 'facilitatorId',
-      text: 'facilitatorId',
-      type: 'textarea',
-      order: 5,
-      hidden: true
-    }
-  ].to_json)
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['facilitator'],
+    questions: [
+      {
+        id: 1,
+        name: 'textarea',
+        type: 'textarea',
+        text: 'How was your facilitator?',
+        order: 1
+      },
+      {
+        id: 2,
+        name: 'userId',
+        text: 'userId',
+        type: 'textarea',
+        order: 2,
+        hidden: true
+      },
+      {
+        id: 3,
+        name: 'workshopId',
+        text: 'workshopId',
+        type: 'textarea',
+        order: 3,
+        hidden: true
+      },
+      {
+        id: 4,
+        name: 'sessionId',
+        text: 'sessionId',
+        type: 'textarea',
+        order: 4,
+        hidden: true
+      },
+      {
+        id: 5,
+        name: 'facilitatorId',
+        text: 'facilitatorId',
+        type: 'textarea',
+        order: 5,
+        hidden: true
+      },
+      {
+        id: 6,
+        name: 'day',
+        text: 'day',
+        type: 'textarea',
+        order: 6,
+        hidden: true
+      }
+    ].to_json
+  )
 
   10.times do |x|
     user = workshop.enrollments[x].user
@@ -421,12 +435,15 @@ And(/^I am viewing a workshop with fake survey results$/) do
         '2': user.id,
         '3': workshop.id,
         '4': workshop.sessions.first.id,
-        '5': workshop.facilitators[x % 2].id
+        '5': workshop.facilitators[x % 2].id,
+        '6': 1
       }.to_json
     )
   end
 
-  steps ["And I am on http://studio.code.org/pd/workshop_dashboard/local_summer_workshop_daily_survey_results/#{workshop.id}"]
+  steps %Q{
+    And I am on "http://studio.code.org/pd/workshop_dashboard/local_summer_workshop_daily_survey_results/#{workshop.id}"
+  }
 end
 
 def create_enrollment(workshop, name=nil)
