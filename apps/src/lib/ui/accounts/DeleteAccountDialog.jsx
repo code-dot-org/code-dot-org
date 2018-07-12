@@ -19,10 +19,9 @@ const styles = {
   },
   icon: {
     color: color.red,
-    fontSize: 115,
+    fontSize: 100,
   },
   text: {
-    fontSize: 16,
     paddingLeft: GUTTER,
   },
   dangerText: {
@@ -30,6 +29,14 @@ const styles = {
   },
   italicText: {
     fontStyle: 'italic',
+  },
+  checkboxContainer: {
+    display: 'flex',
+    paddingTop: GUTTER / 2,
+    paddingBottom: GUTTER / 2,
+  },
+  label: {
+    paddingLeft: GUTTER / 2,
   },
   input: {
     width: 490
@@ -41,9 +48,11 @@ export default class DeleteAccountDialog extends React.Component {
     isOpen: PropTypes.bool.isRequired,
     isPasswordRequired: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
+    checkboxes: PropTypes.object.isRequired,
     password: PropTypes.string.isRequired,
     passwordError: PropTypes.string,
     deleteVerification: PropTypes.string.isRequired,
+    onCheckboxChange: PropTypes.func.isRequired,
     onPasswordChange: PropTypes.func.isRequired,
     onDeleteVerificationChange: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
@@ -57,9 +66,11 @@ export default class DeleteAccountDialog extends React.Component {
       isOpen,
       isPasswordRequired,
       isTeacher,
+      checkboxes,
       password,
       passwordError,
       deleteVerification,
+      onCheckboxChange,
       onPasswordChange,
       onDeleteVerificationChange,
       onCancel,
@@ -96,6 +107,24 @@ export default class DeleteAccountDialog extends React.Component {
               }
             </div>
           </div>
+          {isTeacher &&
+            <div>
+              <strong>{i18n.deleteAccountDialog_checkboxTitle()}</strong>
+              {Object.keys(checkboxes).map(id => {
+                return (
+                  <div key={id} style={styles.checkboxContainer}>
+                    <input
+                      type="checkbox"
+                      id={id}
+                      checked={checkboxes[id].checked}
+                      onChange={() => onCheckboxChange(id)}
+                    />
+                    <label htmlFor={id} style={styles.label}>{checkboxes[id].label}</label>
+                  </div>
+                );
+              })}
+            </div>
+          }
           {isPasswordRequired &&
             <Field
               label={i18n.deleteAccountDialog_currentPassword()}
@@ -123,7 +152,7 @@ export default class DeleteAccountDialog extends React.Component {
             {i18n.deleteAccountDialog_emailUs()}
           </div>
           <ConfirmCancelFooter
-            confirmText={i18n.deleteAccountDialog_button()}
+            confirmText={isTeacher ? i18n.deleteAccountDialog_teacherButton() : i18n.deleteAccountDialog_studentButton()}
             confirmColor={Button.ButtonColor.red}
             onConfirm={deleteUser}
             onCancel={onCancel}
