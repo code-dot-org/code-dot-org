@@ -26,11 +26,11 @@ export default class PersonalLoginDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onCancel: PropTypes.func.isRequired,
-    goToDeleteAccountDialog: PropTypes.func.isRequired,
+    onConfirm: PropTypes.func.isRequired,
   };
 
   render() {
-    const {isOpen, onCancel, goToDeleteAccountDialog} = this.props;
+    const {isOpen, onCancel, onConfirm} = this.props;
 
     return (
       <BaseDialog
@@ -64,7 +64,7 @@ export default class PersonalLoginDialog extends React.Component {
           </p>
           <ConfirmCancelFooter
             confirmText={i18n.personalLoginDialog_button()}
-            onConfirm={goToDeleteAccountDialog}
+            onConfirm={onConfirm}
             onCancel={onCancel}
             tabIndex="1"
           />
