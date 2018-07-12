@@ -10,6 +10,9 @@ family_name 'csp1'
 version_year '2018'
 is_stable true
 
+stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
+assessment 'CSP 2018 Precourse Placeholder'
+
 stage 'Personal Innovations', flex_category: 'csp1_1'
 named_level 'CSP U1L01 SFLP'
 named_level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything'

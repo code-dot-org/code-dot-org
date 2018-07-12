@@ -1,0 +1,35 @@
+<Calc>
+  <config><![CDATA[{
+  "game_id": 34,
+  "created_at": "2018-07-12T01:29:47.000Z",
+  "level_num": "custom",
+  "user_id": 568,
+  "properties": {
+    "skin": "calc",
+    "use_contract_editor": true,
+    "contained_level_names": null
+  },
+  "published": true
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Number">
+          <block type="functional_plus"/>
+          <block type="functional_minus"/>
+          <block type="functional_times"/>
+          <block type="functional_dividedby"/>
+          <block type="functional_math_number"/>
+          <block type="functional_math_number_dropdown">
+            <title name="NUM" config="0,1,2,3,4,5,6,7,8,9,10">???</title>
+          </block>
+          <block type="functional_sqrt"/>
+          <block type="functional_squared"/>
+          <block type="functional_pow"/>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Calc>

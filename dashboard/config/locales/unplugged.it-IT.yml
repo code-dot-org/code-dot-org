@@ -216,7 +216,7 @@ it:
           su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
         title: Crowdsourcing (Intelligenza Collettiva)
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*),
           una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
@@ -415,7 +415,7 @@ it:
           su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing (Intelligenza Collettiva)
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*),
           una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
@@ -489,7 +489,7 @@ it:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: I miei amici robotici
+        title: I Miei Amici Robotici
         desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
       BuildingAFoundation_2018:
         title: ''

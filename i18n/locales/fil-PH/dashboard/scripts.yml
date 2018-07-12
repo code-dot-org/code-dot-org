@@ -2048,7 +2048,7 @@ fil:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Ang Resipe ng Pagdisenyo'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: Alamin ang Functional na Pag-Programa sa pamamagitan ng Algebra
           description_short: Alamin ang Functional na Pag-Programa sa pamamagitan ng Algebra
           description_audience: ''
@@ -9530,6 +9530,16 @@ fil:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

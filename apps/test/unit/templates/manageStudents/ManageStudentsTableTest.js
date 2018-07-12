@@ -1,9 +1,27 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import {expect} from '../../../util/configuredChai';
-import {shallow} from 'enzyme';
-import {UnconnectedManageStudentsTable as ManageStudentsTable, sortRows} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
-import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {shallow, mount} from 'enzyme';
+import ManageStudentsTable, {
+  UnconnectedManageStudentsTable,
+  sortRows
+} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import manageStudents, {
+  RowType,
+  setLoginType,
+  setStudents
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import teacherSections, {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('ManageStudentsTable', () => {
   it('sortRows orders table in the following order: add, newStudent, student', () => {
@@ -24,7 +42,7 @@ describe('ManageStudentsTable', () => {
 
   it('does not render MoveStudents if loginType is google_classroom', () => {
     const wrapper = shallow(
-      <ManageStudentsTable
+      <UnconnectedManageStudentsTable
         loginType={SectionLoginType.google_classroom}
         studentData={[]}
         editingData={{}}
@@ -38,7 +56,7 @@ describe('ManageStudentsTable', () => {
 
   it('does not render MoveStudents if loginType is clever', () => {
     const wrapper = shallow(
-      <ManageStudentsTable
+      <UnconnectedManageStudentsTable
         loginType={SectionLoginType.clever}
         studentData={[]}
         editingData={{}}
@@ -48,5 +66,70 @@ describe('ManageStudentsTable', () => {
     );
 
     expect(wrapper.find('MoveStudents').exists()).to.be.false;
+  });
+
+  describe('full render tests', () => {
+    const fakeStudent = {
+      id: 1,
+      name: 'Clark Kent',
+      username: 'clark_kent',
+      sectionId: 101,
+      hasEverSignedIn: true,
+      dependsOnThisSectionForLogin: true,
+      loginType: 'picture',
+      rowType: RowType.STUDENT,
+    };
+    const fakeStudents = {
+      [fakeStudent.id]: fakeStudent
+    };
+    const fakeSection = {
+      id: 101,
+      location: "/v2/sections/101",
+      name: "My Section",
+      login_type: "picture",
+      grade: "2",
+      code: "PMTKVH",
+      stage_extras: false,
+      pairing_allowed: true,
+      sharing_disabled: false,
+      script: null,
+      course_id: 29,
+      studentCount: 10,
+      students: Object.values(fakeStudents),
+      hidden: false,
+    };
+
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({teacherSections, manageStudents, isRtl, sectionData});
+      const store = getStore();
+      store.dispatch(setLoginType(fakeSection.login_type));
+      store.dispatch(setSections([fakeSection]));
+      store.dispatch(setSection(fakeSection));
+      store.dispatch(setStudents(fakeStudents));
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
+
+    it('renders an action cell for each student', () => {
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable/>
+        </Provider>
+      );
+      expect(wrapper).to.containMatchingElement(
+        <ManageStudentsActionsCell
+          id={fakeStudent.id}
+          sectionId={fakeStudent.sectionId}
+          rowType={RowType.STUDENT}
+          loginType={fakeStudent.loginType}
+          studentName={fakeStudent.name}
+          hasEverSignedIn={fakeStudent.hasEverSignedIn}
+          dependsOnThisSectionForLogin={fakeStudent.dependsOnThisSectionForLogin}
+        />
+      );
+    });
   });
 });

@@ -555,6 +555,7 @@ zh-CN:
       CSD U3 Simple Drawing - Background_instruction: Put all of your code into a draw() loop and then add set the background to blue with the background() block.
       CSD U3 Simple Drawing - Personal Animation_instruction: 做这个
       CSD U3 Sprites intro sprites_instruction: 做这个
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: 'Predict: What two numbers will be displayed in the console?'
       CSD U3 Variable Arithmetic_instruction: Change the value "size" initialized to make a larger square.
@@ -1559,7 +1560,7 @@ zh-CN:
       Dance Party 6_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
       Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
       Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
-      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Freeplay_instruction: 现在来一段你自创的外星迪斯科吧！
       Dance Party Predict_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       ECSPD Binary Odometer_instruction: This is another resource you could use with your students.
       Eval Booleans 1_instruction: Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click "Run" to see how this expression evaluates.
@@ -1633,10 +1634,10 @@ zh-CN:
       Find the Wizard_2018_instruction: 创建任何想象的东西。这是一个猜数游戏的例子 ！
       Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
       Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims around the tank.
-      Fish Tank 4-validated_instruction: Use the `set background color` block to make the background blue.
+      Fish Tank 4-validated_instruction: 加入`"background-color"`（背景颜色）模块将背景改为蓝色。
       Fish Tank 5-validated_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
       Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
-      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make your fish tank special!
+      Fish Tank 7-validated_instruction: 使用一些新的模块让鱼缸变得与众不同！
       Food Fight!_instruction: "我们已为你添加了上一关的函数。\\r\n\\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数) 大于某个值时，调用level_up(升级) 函数。\\r\n\\r\n例如：“play_score” > 6\\r\n\\r\n玩游戏，并且达到第3级来到达下一关。 "
       Food Fight_instruction: You can make whatever you want in play lab! This is an example of a game you can make in play lab.
       FoodFight_instruction: 这是一个游戏的例子。你可以在剧本实验室创造它。
@@ -2964,14 +2965,17 @@ zh-CN:
       Underground Mining Coal_2018_instruction: 你可以在地底下找到最宝贵的资源，但下面很暗。请至少放上 2 根火把，并开采至少 2 块煤炭。
       Unicorn Tag_instruction: Take a look at this project.  Do you see how it was made?
       Valentine_artist2_01_instruction: 编辑程序让艺术家为可爱的小虫画一些草。
-      Valentine_artist_01_instruction: '帮助艺术家完成大羊驼的心。 '
+      Valentine_artist_01_instruction: 帮助艺术家完成大羊驼的心。 
       Valentine_playlab_01_instruction: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时, 她应该把心投向她的朋友们。 '
       Vigenere_instruction: Test
       Virtual Pet 1 Predict_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
@@ -3283,7 +3287,7 @@ zh-CN:
       courseA_maze_ramp2a_2018_instruction: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseA_maze_ramp3_2018_instruction: 有一个额外的块将导致鸟坠落。将其拖回工具箱中扔掉它。
       courseA_maze_ramp3a_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
-      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3b_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"运行"。
       courseA_maze_ramp4_2018_instruction: 躲开TNT炸药，否则羽毛会被炸飞！
       courseA_maze_ramp4a_2018_instruction: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseA_maze_ramp5_2018_instruction: 躲开TNT炸药！
@@ -3333,7 +3337,7 @@ zh-CN:
       courseA_playLab_events6_instruction: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
       courseA_playLab_events6_2018_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: 添加任何你想要的到此游戏中。你能否让恐龙在乔治碰上它时消失？
-      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want to this game."
+      courseA_playLab_events7_2018_instruction: "*自由发挥*：把觉得好玩的东西添加到游戏里。"
       courseA_playlab_events_challenge1_instruction: 你能写代码, 以显示我的其他朋友吗？提示能够一步一步的帮助你完成这个项目。
       courseA_playlab_events_challenge1_2018_instruction: 你能写代码, 以显示我的其他朋友吗？提示能够一步一步的帮助你完成这个项目。
       courseA_playlab_events_challenge2_instruction: 当你点击它们时，让每个人做点什么。
@@ -3345,7 +3349,7 @@ zh-CN:
       courseB_Scrat_ramp1_2018_instruction: 在这一关中，将所有模块拼到一起，并点击"▶运行"！
       courseB_Scrat_ramp2_2018_instruction: 将所有模块接到一起来完成你的代码，然后点击"运行"。
       courseB_Scrat_ramp3a_2018_instruction: 在其它模块下面添加一个`向北`模块来完成代码，然后点击"▶运行"。
-      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox to throw it away.\n\n"
+      courseB_Scrat_ramp3b_2018_instruction: "将多余的块拖回工具箱即可将其删除。\n\n"
       courseB_Scrat_ramp4a_2018_instruction: 你能想出要在这些模块下面增加什么模块来完成这段代码吗？
       courseB_Scrat_ramp5a_2018_instruction: 帮小鸟到达那只猪！
       courseB_artist_loops1_instruction: 这是一种叫"小艺术家" 的新类型关卡。试试各关卡并画些有趣的东西。
@@ -3454,9 +3458,9 @@ zh-CN:
       courseB_playlab_events3_instruction: 使用事件在你点击她的时候，让黛西龙切换到随机的心情。
       courseB_playlab_events3_2018_instruction: 使用事件在你点击她的时候，让黛西龙切换到随机的心情。
       courseB_playlab_events4_instruction: 骑士时间到了！添加一个事件, 当左箭头被点击的时候让骑士移向龙。
-      courseB_playlab_events4_2018_instruction: 骑士时间到了！添加一个事件, 当左箭头被点击的时候让骑士移向龙。
+      courseB_playlab_events4_2018_instruction: 让龙完成这一关！
       courseB_playlab_events5_instruction: 现在添加一个事件，当你按下右箭头时，让骑士跑离龙。
-      courseB_playlab_events5_2018_instruction: 现在添加一个事件，当你按下右箭头时，让骑士跑离龙。
+      courseB_playlab_events5_2018_instruction: 添加一个事件，当你按下右箭头时，让骑士跑离龙。
       courseB_playlab_events6_instruction: |-
         帮助骑士得到所有的旗子!\r
         \r
