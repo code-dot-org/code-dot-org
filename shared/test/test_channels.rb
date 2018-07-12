@@ -315,7 +315,7 @@ class ChannelsTest < Minitest::Test
     post "/v3/channels/#{channel_id}/disable-content-moderation"
     assert last_response.unauthorized?
 
-    ChannelsApi.stubs(:project_validator?).returns(true)
+    ChannelsApi.any_instance.stubs(:project_validator?).returns(true)
 
     post "/v3/channels/#{channel_id}/disable-content-moderation"
     assert last_response.ok?
@@ -325,7 +325,7 @@ class ChannelsTest < Minitest::Test
     assert last_response.ok?
     assert_equal false, JSON.parse(last_response.body)['skip_content_moderation']
 
-    ChannelsApi.unstub(:project_validator?)
+    ChannelsApi.any_instance.unstub(:project_validator?)
   end
 
   def test_sharing_disabled
