@@ -8,6 +8,7 @@ import BootstrapButton from './BootstrapButton';
 import DeleteAccountDialog from './DeleteAccountDialog';
 
 export const DELETE_VERIFICATION_STRING = i18n.deleteAccountDialog_verificationString();
+
 const styles = {
   container: {
     paddingTop: 20,
@@ -28,12 +29,68 @@ const styles = {
     justifyContent: 'flex-end',
   },
 };
+
+const getLabelForCheckbox = (id) => {
+  switch (id) {
+    case 1:
+      return (
+        <span>
+          <strong>{i18n.deleteAccountDialog_checkbox1_1()}</strong>
+          {i18n.deleteAccountDialog_checkbox1_2()}
+        </span>
+      );
+    case 2:
+      return (
+        <span>
+          {i18n.deleteAccountDialog_checkbox2_1()}
+          <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
+            {i18n.deleteAccountDialog_checkbox2_2()}
+          </a>
+          {i18n.deleteAccountDialog_checkbox2_3()}
+        </span>
+      );
+    case 3:
+      return (
+        <span>
+          {i18n.deleteAccountDialog_checkboxPreface()}
+          <strong>{i18n.deleteAccountDialog_checkbox3()}</strong>
+        </span>
+      );
+    case 4:
+      return (
+        <span>
+          {i18n.deleteAccountDialog_checkboxPreface()}
+          <strong>{i18n.deleteAccountDialog_checkbox4()}</strong>
+        </span>
+      );
+    case 5:
+      return (
+        <span>
+          {i18n.deleteAccountDialog_checkboxPreface()}
+          <strong>{i18n.deleteAccountDialog_checkbox5()}</strong>
+        </span>
+      );
+  }
+};
+
+const buildCheckboxMap = () => {
+  let checkboxMap = {};
+  for (var i = 1; i <= 5; i++) {
+    checkboxMap[i] = {
+      checked: false,
+      label: getLabelForCheckbox(i)
+    };
+  }
+  return checkboxMap;
+};
+
 const DEFAULT_STATE = {
   isDialogOpen: false,
   password: '',
   passwordError: '',
   deleteVerification: '',
   deleteError: '',
+  checkboxes: buildCheckboxMap(),
 };
 
 export default class DeleteAccount extends React.Component {
@@ -51,6 +108,12 @@ export default class DeleteAccount extends React.Component {
         isDialogOpen: !state.isDialogOpen
       };
     });
+  };
+
+  onCheckboxChange = (id) => {
+    const checkboxes = {...this.state.checkboxes};
+    checkboxes[id].checked = !checkboxes[id].checked;
+    this.setState({checkboxes});
   };
 
   onPasswordChange = (event) => {
@@ -142,9 +205,11 @@ export default class DeleteAccount extends React.Component {
           isOpen={this.state.isDialogOpen}
           isPasswordRequired={this.props.isPasswordRequired}
           isTeacher={this.props.isTeacher}
+          checkboxes={this.state.checkboxes}
           password={this.state.password}
           passwordError={this.state.passwordError}
           deleteVerification={this.state.deleteVerification}
+          onCheckboxChange={this.onCheckboxChange}
           onPasswordChange={this.onPasswordChange}
           onDeleteVerificationChange={this.onDeleteVerificationChange}
           onCancel={this.toggleDialog}
