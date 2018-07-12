@@ -97,7 +97,7 @@ it-IT:
   congratulations_volunteer: 'Complimenti: ora che hai provato l''Ora del Codice,
     <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a>
     e aiuta gli studenti a imparare un''Ora del Codice!'
-  congratulations_on_completing_course: Congratulations on completing %{course}
+  congratulations_on_completing_course: Congratulazioni per aver completato il %{course}
   congrats_next_tutorials_title: Promosso ai corsi successivi!
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
@@ -292,8 +292,8 @@ it-IT:
     @programmafuturo
   just_did_hoc_donor: Ho appena finito l'Ora del Codice (#HourOfCode) - Provalo! Grazie
     %{donor_twitter} per aver supportato @codeorg
-  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
+  just_did_course_donor: Ho appena finito il %{course} - Provalo! Grazie %{donor_twitter}
+    per aver supportato @codeorg
   twitter_teach_cs: 9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare
     informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/.
   twitter_cs_foundational: |-
@@ -1231,7 +1231,7 @@ it-IT:
   tynker_name: Costruisci un gioco come vuoi tu
   scratch_name: Scopri la tua creatività con la programmazione
   lightbot_name: Lightbot
-  thinkersmith_name: I miei amici robotici
+  thinkersmith_name: I Miei Amici Robotici
   condcards_name: Istruzioni condizionali con le Carte da Gioco
   lightbotintl_name: Lightbot
   codehs_name: Imparare a programmare con il cane Karel
@@ -1291,11 +1291,11 @@ it-IT:
   coursee-2017_name: Corso E (2017)
   coursef-2017_name: Corso F (2017)
   coursea-2018_name: Corso A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
+  courseb-2018_name: Corso B (2018)
+  coursec-2018_name: Corso C (2018)
+  coursed-2018_name: Corso D (2018)
+  coursee-2018_name: Corso E (2018)
+  coursef-2018_name: Corso F (2018)
   accelerated_name: Corso rapido
   express_name: Corso Rapido
   pre-express_name: Corso Rapido pre-scolare
