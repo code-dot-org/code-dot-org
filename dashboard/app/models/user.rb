@@ -1333,13 +1333,11 @@ class User < ActiveRecord::Base
 
   def in_progress_and_completed_scripts
     user_scripts.compact.reject do |user_script|
-      begin
-        user_script.script.nil?
-      rescue
-        # Getting user_script.script can raise if the script does not exist
-        # In that case we should also reject this user_script.
-        true
-      end
+      user_script.script.nil?
+    rescue
+      # Getting user_script.script can raise if the script does not exist
+      # In that case we should also reject this user_script.
+      true
     end
   end
 
