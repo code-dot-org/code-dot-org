@@ -712,9 +712,9 @@ zh-CN:
       NEW Course 4 Artist Params 10_callout:
         create_function: 点击这里来打开函数的选项，然后点击“创建函数”的按钮。
       NEW Course 4 Artist Params 2_callout:
-        create_function: ''
-        name_function: ''
-        write_draw_triangle_function: ''
+        create_function: 
+        name_function: 
+        write_draw_triangle_function: 
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: 点击编辑，在你的函数中添加参数
         add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
@@ -1414,21 +1414,21 @@ zh-CN:
       courseF_IceAge_10_callout: {}
       courseF_IceAge_11_callout: {}
       courseF_IceAge_2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       courseF_IceAge_3_callout: {}
       courseF_IceAge_4_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       courseF_IceAge_5_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       courseF_IceAge_6_callout: {}
       courseF_IceAge_7_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_IceAge_8_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: 在此处添加块
       courseF_IceAge_template_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_artist_embed_variables9_callout: {}
       courseF_artist_for1_callout:
         courseF_artist_for1_1: 工具箱是"分类"模式，这会给代码留出更多的空间。`计数循环`在这里。
@@ -1874,38 +1874,38 @@ zh-CN:
       iceage_free_play_2018_callout: {}
       iceage_free_playcourseF_IceAge_11_callout: {}
       iceage_hello1_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello1_2018_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_hello2_2018_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_move_events_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_events_2018_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_to_actor_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_actor_2018_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_flag_callout: {}
       iceage_move_to_flag_2018_callout: {}
       iceage_repeat_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_repeat_2018_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_sound_and_points_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_sound_and_points_2018_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_throw_hearts_callout: {}
       iceage_throw_hearts_2018_callout: {}
       iceage_warn_embed_ice_age_callout: {}
       iceage_warn_ice_age_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       iceage_warn_ice_age_2018_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: {}

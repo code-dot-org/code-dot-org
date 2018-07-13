@@ -768,9 +768,9 @@
         create_function: Klikk her for å åpne"Funksjoner" menyen og klikk deretter
           "Opprette en funksjon" knappen.
       NEW Course 4 Artist Params 2_callout:
-        create_function: ''
-        name_function: ''
-        write_draw_triangle_function: ''
+        create_function: 
+        name_function: 
+        write_draw_triangle_function: 
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Klikk Rediger for å legge til en parameter i funksjonen
           din
@@ -1674,21 +1674,21 @@
       courseF_IceAge_10_callout: {}
       courseF_IceAge_11_callout: {}
       courseF_IceAge_2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       courseF_IceAge_3_callout: {}
       courseF_IceAge_4_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       courseF_IceAge_5_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       courseF_IceAge_6_callout: {}
       courseF_IceAge_7_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_IceAge_8_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Add blocks here
       courseF_IceAge_template_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_artist_embed_variables9_callout: {}
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room
@@ -1954,8 +1954,8 @@
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Slik angir du verdien for variabelen.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press
+          "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
@@ -2235,38 +2235,38 @@
       iceage_free_play_2018_callout: {}
       iceage_free_playcourseF_IceAge_11_callout: {}
       iceage_hello1_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello1_2018_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_hello2_2018_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_move_events_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_events_2018_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_to_actor_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_actor_2018_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_flag_callout: {}
       iceage_move_to_flag_2018_callout: {}
       iceage_repeat_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_repeat_2018_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_sound_and_points_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_sound_and_points_2018_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_throw_hearts_callout: {}
       iceage_throw_hearts_2018_callout: {}
       iceage_warn_embed_ice_age_callout: {}
       iceage_warn_ice_age_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       iceage_warn_ice_age_2018_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: {}
