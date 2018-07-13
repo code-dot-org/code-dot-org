@@ -1427,43 +1427,42 @@ StudioApp.prototype.displayFeedback = function (options) {
   const store = getStore();
   store.dispatch(mergeProgress({[this.config.serverLevelId]: options.feedbackType}));
 
-  if (experiments.isEnabled('bubbleDialog')) {
-    const {response, preventDialog, feedbackType, feedbackImage} = options;
+  const {response, preventDialog, feedbackType, feedbackImage} = options;
 
-    const newFinishDialogApps = {
-      turtle: true,
-      karel: true,
-      maze: true,
-      studio: true,
-      flappy: true,
-      bounce: true,
+  const newFinishDialogApps = {
+    turtle: true,
+    karel: true,
+    maze: true,
+    studio: true,
+    flappy: true,
+    bounce: true,
+  };
+  const hasNewFinishDialog = newFinishDialogApps[this.config.app];
+
+  if (hasNewFinishDialog && !this.hasContainedLevels) {
+    const generatedCodeProperties =
+      this.feedback_.getGeneratedCodeProperties(this.config.appStrings);
+    const studentCode = {
+      message: generatedCodeProperties.shortMessage,
+      code: generatedCodeProperties.code,
     };
-    const hasNewFinishDialog = newFinishDialogApps[this.config.app];
-
-    if (hasNewFinishDialog && !this.hasContainedLevels) {
-      const generatedCodeProperties =
-        this.feedback_.getGeneratedCodeProperties(this.config.appStrings);
-      const studentCode = {
-        message: generatedCodeProperties.shortMessage,
-        code: generatedCodeProperties.code,
-      };
-      const canShare = !this.disableSocialShare && !options.disableSocialShare;
-      store.dispatch(setFeedbackData({
-        isChallenge: this.config.isChallengeLevel,
-        isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
-        blocksUsed: this.feedback_.getNumCountableBlocks(),
-        displayFunometer: response && response.puzzle_ratings_enabled,
-        studentCode,
-        feedbackImage: canShare && feedbackImage,
-      }));
-      store.dispatch(setAchievements(getAchievements(store.getState())));
-      if (this.shouldDisplayFeedbackDialog_(preventDialog, feedbackType)) {
-        store.dispatch(showFeedback());
-        this.onFeedback(options);
-        return;
-      }
+    const canShare = !this.disableSocialShare && !options.disableSocialShare;
+    store.dispatch(setFeedbackData({
+      isChallenge: this.config.isChallengeLevel,
+      isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
+      blocksUsed: this.feedback_.getNumCountableBlocks(),
+      displayFunometer: response && response.puzzle_ratings_enabled,
+      studentCode,
+      feedbackImage: canShare && feedbackImage,
+    }));
+    store.dispatch(setAchievements(getAchievements(store.getState())));
+    if (this.shouldDisplayFeedbackDialog_(preventDialog, feedbackType)) {
+      store.dispatch(showFeedback());
+      this.onFeedback(options);
+      return;
     }
   }
+
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;

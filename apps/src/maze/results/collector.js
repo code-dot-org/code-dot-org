@@ -4,7 +4,6 @@ import ResultsHandler from './resultsHandler';
 import { TestResults } from '../../constants.js';
 const getStore = require('../../redux').getStore;
 
-import experiments from '@cdo/apps/util/experiments';
 import mazeMsg from '../locale';
 
 import {
@@ -154,14 +153,7 @@ export default class CollectorHandler extends ResultsHandler {
           count: this.getLastTotalCollected(),
         });
       case true:
-        // Remove this case when we turn the bubble dialog on for everyone
-        if (!experiments.isEnabled('bubbleDialog')) {
-          return mazeMsg.collectorCollectedEverything({
-            count: this.getPotentialMaxCollected(),
-          });
-        } else {
-          return super.getMessage(terminationValue);
-        }
+        return super.getMessage(terminationValue);
       default:
         return super.getMessage(terminationValue);
     }
