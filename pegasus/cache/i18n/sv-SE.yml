@@ -41,9 +41,9 @@ sv-SE:
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: Timmen av kod är här
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description: December 3-9, 2018. Computer science is foundational for
+    every student to learn.
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -170,10 +170,10 @@ sv-SE:
   third_party_appinv_btn_site: Visit App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+    fun and accessible for beginners. For schools and teachers CodeHS provides curriculum,
+    teacher tools and PD. For individual learners, you can get the help you need along
+    the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -183,7 +183,7 @@ sv-SE:
   third_party_organization: Organisation
   third_party_curriculum: Läroplan
   third_party_pricing: Prissättning
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: "$2.99/nedladdning"
   third_party_cost_free_399: Gratis att prova, $399/klassrum
@@ -251,41 +251,30 @@ sv-SE:
   continue_learning_header: Fortsätt ditt lärande efter Timmen med Kod
   continue_learning_body: Det finns många alternativ. Du kan lära dig online eller
     på en lokal skola, eller ett sommarläger.
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: Try Code.org's courses
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
   learn_back_to_minecraft: Keep learning with Minecraft
-  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
+  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
-  just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course3: I just finished Course 3 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course4: I just finished Course 4 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! Thanks
-    @Microsoft for supporting @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
+  just_did_course1: I just finished Course 1 - check it out! @codeorg
+  just_did_course2: I just finished Course 2 - check it out! @codeorg
+  just_did_course3: I just finished Course 3 - check it out! @codeorg
+  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  twitter_teach_cs: Varför undervisar  inte fler skolor i datavetenskap? Vi kan ordna
-    detta. http://youtu.be/nKIu9yen5nc. Besök http://code.org/ för mer information.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science.
+    http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
     https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Lär dig med en Timme av Kod
@@ -446,7 +435,7 @@ sv-SE:
   homepage_slot_text_link_buy: Engagera dig
   homepage_slot_text_link_donate: Gör en donation
   homepage_slot_text_link_shop: T-shirts, kepsar, m.m.
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Bring CS to your school
   homepage_header_codestudio: Kod Studio elev arbeten
   homepage_header_donors: Code.org tackar alla sina anhängare
   homepage_donors_seall: Se alla
@@ -502,7 +491,7 @@ sv-SE:
   playlab_iceage_title: Ice Age - Kommer snart
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Bygg en galax med kod
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Använd dra-och-släpp block och JavaScript.
   starwars_javascript_specs: Endast på engelska | Moderna webbläsare | Åldrar 11+
   starwars_blocks_title: Block
@@ -535,22 +524,23 @@ sv-SE:
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: Minecraft Hour of Code
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
+    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
+    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Teacher resources and lesson plan.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
   minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -558,21 +548,21 @@ sv-SE:
     education. Join us at the Microsoft Store to engage in a free series of three,
     1-hour workshops where you will experience coding in a fun and stress-free environment,
     become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
   minecraft_future: Help all youth become future ready
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Hour of Code Sports Tutorials
-  sports_og_description: Choose between making a basketball game or mix and match
-    across sports.
+  sports_page_title: Hour of Code Sports
+  sports_og_title: Push yourself. Anybody can learn.
+  sports_og_description: Champions and gold medalists encourage you to try the Hour
+    of Code. Code your own sports game.
   sports_title: Sport
   sports_watch_video: Titta på videon
   sports_video_title: Push yourself. Anybody can learn.
@@ -701,8 +691,8 @@ sv-SE:
   volunteer_engineer_submission_field_email_preference: Får vi skicka e-post till
     dig med nyheter om våra kurser, lokala erbjudanden eller andra nyheter i ämnet
     datavetenskap?
-  volunteer_engineer_submission_field_email_preference_privacy: "(Se vår sekretesspolicy
-    för mer information)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Ja
   volunteer_engineer_submission_field_email_preference_no: Nej
   volunteer_engineer_submission_final_paragraph: Du kommer att listas på kartan för
@@ -840,14 +830,14 @@ sv-SE:
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
+    These are done outside of Code.org.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_summaries: Assessment summaries
+  dashboard_assessments_answers: All assessment answers
   dashboard_surveys_answers: Undersökningar
   dashboard_percent: Procent
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -883,7 +873,11 @@ sv-SE:
     %{script_name}
   dashboard_progress_pair_programming: parprogrammering
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages
+    and do not require students to type text responses to questions, so you will not
+    see any text responses here. For older students in middle and high school courses,
+    you can see their submissions to open-ended text response questions by choosing
+    the assigned course from the drop down above.
   dashboard_sections_new_section: Ny sektion
   dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Skapa nya grupper och lägg till elever
@@ -925,15 +919,12 @@ sv-SE:
     only.
   dashboard_sections_move_students: Flytta studenter
   dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not be able to
+    save progress in this course from December 3 - 11 due to the amount of traffic
+    our site will receive for the Hour of Code.  Everything else in this tutorial
+    will continue to work as expected.  You may still assign the course and give all
+    students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print
+    these in advance</a>.)  We will save and report student progress for every other
     week of the year.
   dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
@@ -1226,15 +1217,15 @@ sv-SE:
   pre-express-2017_name: Pre-reader Express Course (2017)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csd1_name: 'Unit 1: Computers and Logic'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -1289,7 +1280,7 @@ sv-SE:
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Snabbkurs
-  algebra_name: CS in Algebra
+  algebra_name: CS in Algebra Full Course
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
@@ -1308,10 +1299,10 @@ sv-SE:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: CS Principles ('17-'18)
   csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
@@ -1377,12 +1368,12 @@ sv-SE:
   course2_gradelevel: Åldrar 6 + (läsförmåga krävs)
   course3_gradelevel: Åldrar 8 + (efter kurs 2)
   course4_gradelevel: Åldrar 10 + (efter kurs 3)
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
-  coursed_gradelevel: Grade 8+
+  coursea_gradelevel: Ages 4-7
+  courseb_gradelevel: Ages 5-8
+  coursec_gradelevel: Ages 6-10
+  coursed_gradelevel: Ages 7-11
   coursee_gradelevel: Åldrarna 8-12
-  coursef_gradelevel: Grade 10+
+  coursef_gradelevel: Ages 9-13
   coursea-2017_gradelevel: Ages 4-7
   courseb-2017_gradelevel: Ages 5-8
   coursec-2017_gradelevel: Ages 6-10
@@ -1525,12 +1516,17 @@ sv-SE:
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -1710,7 +1706,7 @@ sv-SE:
     i form av ett visuellt programmeringsspråk som används av Kodtimmen. De blir introducerade
     till sekventiella kommandon, iterationer och villkor utan att ens märka det.
   csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
+    water, and customize the scenery to add your own flair. Use code to tell the story
     you want to tell!
   boxisland_longdescription: Ta en tur på Lådön och hjälp Hiro samla alla klockor
     utspridda i vildmarken! I den här övningen kommer du lära dig grunderna i algoritmer,
@@ -2052,13 +2048,13 @@ sv-SE:
     till <a href='%{supported_browsers_url}', target='_blank'> någon av webbläsarna
     som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar
     fullt ut.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: flaxa
   infinity_shortcode: inf
-  playlab_shortcode: spela
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Hem
   header_my_dashboard: My Dashboard
@@ -2105,7 +2101,7 @@ sv-SE:
   user_header_settings: Mitt konto
   user_header_logout: Logga ut
   user_header_signin: Logga in
-  view_all_sections: View All Sections
+  view_all_sections: View all sections
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2113,10 +2109,8 @@ sv-SE:
   signing_in: Signing In
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  sign_in_instruct_website: Go to %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.

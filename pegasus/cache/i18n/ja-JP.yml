@@ -37,7 +37,7 @@ ja-JP:
     or your class!
   csedweek_og_title: Hour of Code がやってくる
   csedweek_og_description: Hour of Codeは、すでに180 以上の国々と45 以上の言語で、数千万人の生徒を対象に行われた、世界的な運動です。
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -227,8 +227,8 @@ ja-JP:
   just_did_coursee: コースE完了 - やったー！@codeorg
   just_did_coursef: コースF完了 - やったー！@codeorg
   just_did_accelerated: 上級コース完了 - やったー！@codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
   twitter_teach_cs: 10 人のうち 9 人が、学校でコンピュータ ・ サイエンスを教えるべきだと考えています。http://youtu.be/nKIu9yen5nc
@@ -371,7 +371,7 @@ ja-JP:
   homepage_slot_text_link_buy: 参加しよう
   homepage_slot_text_link_donate: 寄付します
   homepage_slot_text_link_shop: T シャツ、帽子、その他
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Bring CS to your school
   homepage_header_codestudio: Code Studio の生徒作品
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: すべてを見る
@@ -452,22 +452,23 @@ ja-JP:
   minecraft_download_adventurer: Minecraftアドベンチャーのオフライン版をダウンロード。
   minecraft_subtitle: Minecraft Hour of Code プログラミング入門
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
+    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
+    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Teacher resources and lesson plan.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
   minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -475,13 +476,13 @@ ja-JP:
     education. Join us at the Microsoft Store to engage in a free series of three,
     1-hour workshops where you will experience coding in a fun and stress-free environment,
     become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
   minecraft_future: Help all youth become future ready
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
@@ -1034,9 +1035,9 @@ ja-JP:
   cspunit4_name: "(old) Unit 4: データ"
   cspunit5_name: "(old) Unit 5: PT を探索し作成"
   cspunit6_name: 'Post-AP: データベース'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'ユニット 5: データと社会'
   csd6_name: 'ユニット 6: フィジカル ・ コンピューティング'
@@ -1104,13 +1105,13 @@ ja-JP:
   hoc-encryption_name: 単純な暗号化
   text-compression_name: Text Compression
   math_category_name: 計算(けいさん)
-  hoc_category_name: Hour of Code（コーディングを学ぶ時間）
+  hoc_category_name: Hour of Code
   csf_category_name: コンピューター・サイエンスの基礎
   csf_2017_category_name: CS Fundamentals (2017)
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: '開発中: コース A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 コンピューター・サイエンス原理"
   csp17_category_name: コンピューター・サイエンス入門
@@ -1304,12 +1305,17 @@ ja-JP:
   course2_shortdescription_congrats: 基本的な読書スキルを持つ生徒のため、このコースはコース 1になります。生徒はプログラムを作って問題を解決したり、インタラクティブなゲームや物語を開発して共有します。小学2年～5年生が対象です。
   course3_shortdescription_congrats: 次のレベルの準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。
   course4_shortdescription_congrats: 次に行く準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -1608,13 +1614,13 @@ ja-JP:
   compatibility_hide_this_warning: 警告を消す
   compatibility_unsupported_browser: お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}',
     target='_blank'> サポートされているブラウザーのいずれか</a> にアップグレードしてください。ページを表示してみてもよいですが、うまく動かないかもしれません。
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: パタパタ
   infinity_shortcode: inf
-  playlab_shortcode: 再生する
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: ホーム
   header_my_dashboard: マイ ダッシュボード
@@ -1669,10 +1675,8 @@ ja-JP:
   signing_in: Signing In
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  sign_in_instruct_website: Go to %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.

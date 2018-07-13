@@ -381,7 +381,7 @@ pl-PL:
   homepage_slot_text_studio: Wszystkie nasze poradniki
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Sklep
-  homepage_slot_text_flappy: Kod Flappiego
+  homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Godzina Kodowania dla każdego ucznia.
   homepage_action_text_num_served: "# spróbowało"
   homepage_action_text_join_us: Dołącz do nas
@@ -500,7 +500,7 @@ pl-PL:
   playlab_iceage_title: Epoka lodowcowa - już wkrótce
   playlab_iceage_title_live: Epoka lodowcowa
   starwars_subtitle: Tworzenie Galaktyki za pomocą kodu
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Użyj bloków do przeciągania i upuszczania oraz
     JavaScript.
   starwars_javascript_specs: Tylko w języku angielskim | Nowoczesne przeglądarki |
@@ -1255,9 +1255,9 @@ pl-PL:
   cspunit4_name: "(stary) Unit 4: Dane"
   cspunit5_name: "(stary) Unit 5: Wypróbuj i Utwórz PT"
   cspunit6_name: 'Post-AP: Baz Danych w Aplikacjach'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Jednostka 5: Dane i Społeczeństwo'
   csd6_name: 'Jednostka 6: Programowanie Urządzeń'
@@ -1331,7 +1331,7 @@ pl-PL:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: Mędzynarodowe Podstawy Informatyki
   csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: Podstawy Informatyki '15-'16
   csp17_category_name: Podstawy Informatyki '16-'17
@@ -1564,12 +1564,17 @@ pl-PL:
     elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie
     tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane
     dla klas 4-8.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -2116,13 +2121,13 @@ pl-PL:
     uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej
     z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może
     nie działać właściwie.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: pofruń
   infinity_shortcode: inf
-  playlab_shortcode: zagraj
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Strona główna
   header_my_dashboard: Pulpit
