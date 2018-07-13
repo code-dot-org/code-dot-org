@@ -8,11 +8,9 @@ MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rg
 
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
-    begin
-      yield
-    rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
-      false
-    end
+    yield
+  rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+    false
   end
 end
 
@@ -272,13 +270,11 @@ When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ 
   end
 
   page_load(load) do
-    begin
-      @element.click
-    rescue
-      # Single retry to compensate for element changing between find and click
-      @element = @browser.find_element(:css, selector)
-      @element.click
-    end
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
   end
 end
 
@@ -287,13 +283,11 @@ When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector,
     @element = @browser.find_element(:css, selector)
   end
   page_load(load) do
-    begin
-      @element.click
-    rescue
-      # Single retry to compensate for element changing between find and click
-      @element = @browser.find_element(:css, selector)
-      @element.click
-    end
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
   end
 end
 
@@ -430,14 +424,12 @@ When /^I click selector "([^"]*)" once I see it$/ do |selector|
 end
 
 When /^I click selector "([^"]*)" if I see it$/ do |selector|
-  begin
-    wait_until(5) do
-      @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
-    end
-    @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
-  rescue Selenium::WebDriver::Error::TimeOutError
-    # Element never appeared, ignore it
+  wait_until(5) do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
+  @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
+rescue Selenium::WebDriver::Error::TimeOutError
+  # Element never appeared, ignore it
 end
 
 When /^I focus selector "([^"]*)"$/ do |jquery_selector|
@@ -787,14 +779,12 @@ end
 
 def wait_for_jquery
   wait_until do
-    begin
-      @browser.execute_script("return (typeof jQuery !== 'undefined');")
-    rescue Selenium::WebDriver::Error::ScriptTimeOutError
-      puts "execute_script timed out after 30 seconds, likely because this is \
+    @browser.execute_script("return (typeof jQuery !== 'undefined');")
+  rescue Selenium::WebDriver::Error::ScriptTimeOutError
+    puts "execute_script timed out after 30 seconds, likely because this is \
 Safari and the browser was still on about:blank when wait_for_jquery \
 was called. Ignoring this error and continuing to wait..."
-      false
-    end
+    false
   end
 end
 

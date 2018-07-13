@@ -296,11 +296,6 @@ Style/MultilineTernaryOperator:
 Style/MutableConstant:
   Enabled: false
 
-# Offense count: 36
-# Cop supports --auto-correct.
-Style/RedundantBegin:
-  Enabled: false
-
 # Offense count: 52
 # Cop supports --auto-correct.
 Style/RedundantParentheses:

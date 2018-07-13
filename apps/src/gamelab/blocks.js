@@ -365,8 +365,8 @@ export default {
     );
 
     const blocksByCategory = {};
-    customBlocks.forEach(({name, category, config}) => {
-      const blockName = createJsWrapperBlock(config);
+    customBlocks.forEach(({name, category, config, helperCode}) => {
+      const blockName = createJsWrapperBlock(config, helperCode);
       if (!blocksByCategory[category]) {
         blocksByCategory[category] = [];
       }
