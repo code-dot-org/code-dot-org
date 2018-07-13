@@ -192,7 +192,7 @@ export default class DeleteAccount extends React.Component {
         <DeleteAccountDialog
           isOpen={isDeleteAccountDialogOpen}
           isPasswordRequired={isPasswordRequired}
-          isTeacher={isTeacher && hasStudents}
+          warnAboutDeletingStudents={isTeacher && hasStudents}
           checkboxes={checkboxes}
           password={password}
           passwordError={passwordError}
