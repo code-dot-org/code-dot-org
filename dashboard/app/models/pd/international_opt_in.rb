@@ -31,7 +31,6 @@ class Pd::InternationalOptIn < ApplicationRecord
       :school_country,
       :ages,
       :subjects,
-      :resources,
       :workshop_organizer,
       :workshop_facilitator,
       :workshop_course,
