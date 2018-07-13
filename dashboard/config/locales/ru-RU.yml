@@ -318,7 +318,7 @@ ru:
       free_play:
         playlab: Создать приложение
         artist: Нарисуйте что-нибудь
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Создать приложение
         gamelab: Создать проект Игровой Лаборатории
         weblab: Создать проект Web-Лаборатории (beta)
@@ -1173,8 +1173,8 @@ ru:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'

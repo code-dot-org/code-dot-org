@@ -165,7 +165,7 @@ et:
     accept_terms: Pead konto loomiseks nõustuma
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Jah
     email_preference_no: Ei
@@ -298,9 +298,10 @@ et:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Olen lõpetanud oma KoodiTunni
@@ -308,7 +309,7 @@ et:
       free_play:
         playlab: Loo Play Lab rakendus
         artist: Joonista midagi
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Loo App Lab rakendus
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -444,7 +445,7 @@ et:
     completed: Tehtud
     tried: Proovisin
   home:
-    title: Kood stuudio
+    title: Code Studio
     description: Code Stuudio on koduks online kursustele, mis on loodud Code.org
       poolt.
     lines_of_code: "%{lines_count} RIDA KOODI ON ÕPILASTE POOLT KIRJUTATUD"
@@ -775,7 +776,7 @@ et:
       title: Galerii
       body: Vaata meie kasutajate poolt tehtud galeriid, kus on äpid ja pildid tegelaskujudest
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Vanus 13+
@@ -1144,8 +1145,8 @@ et:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'

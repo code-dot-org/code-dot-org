@@ -68,8 +68,8 @@ my:
   trophies: Trophies
   courses: Courses
   courses_page:
-    title_student: Learn on Code Studio
-    title_teacher: Teach with Code Studio
+    title_student: Learn Computer Science
+    title_teacher: Teach Computer Science
   unplugged_activity: Unplugged Activity
   of: of
   more: MORE
@@ -150,13 +150,10 @@ my:
     agree_us_website: I agree to using a website based in the United States.
     my_data_to_us: Data from my use of this site may be sent to and stored or processed
       in the United States.
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/><br/>Email addresses are not stored in a form that allows us to
-      contact students. Students will never recieve emails from Code.org except for
-      password recovery. See our <a href='http://code.org/privacy'>privacy policy</a>
-      for more information.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
     teacher_terms: I agree to be bound by the Code.org terms of service. For more
       information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: We need some additional information to continue signing
@@ -169,7 +166,7 @@ my:
     accept_terms: You must agree to create an account
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: 'Yes'
     email_preference_no: 'No'
@@ -414,8 +411,9 @@ my:
     new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
+    delete: Delete Account
+    delete_text: Deleting your account will erase all information and progress connected
+      to this account.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
@@ -971,8 +969,8 @@ my:
     tos: Terms of Service
     privacy: Privacy Policy
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accept
     print: ပုံနှိပ်သည်
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1157,8 +1155,8 @@ my:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
