@@ -20,4 +20,14 @@ class UserScriptsControllerTest < ActionController::TestCase
     refute_nil user_script
     assert_equal "true", user_script.version_warning_dismissed
   end
+
+  test "raises for nonexistent script" do
+    user = create :user
+    sign_in user
+    assert_raises ActiveRecord::RecordNotFound do
+      patch :update, params: {script_id: 99, version_warning_dismissed: true}
+    end
+    user_script = UserScript.find_by(user: user, script: 99)
+    assert_nil user_script
+  end
 end
