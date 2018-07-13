@@ -24,71 +24,63 @@ class EmailPreferenceHelperTest < SequelTestCase
   end
 
   def test_upsert_email_preference_with_invalid_email_does_not_create_email_preference
-    begin
-      EmailPreferenceHelper.upsert!(
-        email: 'amidala@naboo',
-        opt_in: true,
-        ip_address: '1.1.1.1',
-        source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
-        form_kind: nil
-      )
-    rescue StandardError => error
-      assert_equal 'Email does not appear to be a valid e-mail address', error.message
-      assert_nil Dashboard.db[:email_preferences].where(email: 'amidala@naboo').first
-    else
-      fail "Expected an email validation error."
-    end
+    EmailPreferenceHelper.upsert!(
+      email: 'amidala@naboo',
+      opt_in: true,
+      ip_address: '1.1.1.1',
+      source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
+      form_kind: nil
+    )
+  rescue StandardError => error
+    assert_equal 'Email does not appear to be a valid e-mail address', error.message
+    assert_nil Dashboard.db[:email_preferences].where(email: 'amidala@naboo').first
+  else
+    fail "Expected an email validation error."
   end
 
   def test_upsert_email_preference_without_opt_in_does_not_create_email_preference
-    begin
-      EmailPreferenceHelper.upsert!(
-        email: 'test_without_opt_in@example.net',
-        opt_in: nil,
-        ip_address: '1.1.1.1',
-        source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
-        form_kind: nil
-      )
-    rescue StandardError => error
-      assert_equal 'Opt In is required', error.message
-      assert_nil Dashboard.db[:email_preferences].where(email: 'test_without_opt_in@example.net').first
-    else
-      fail "Expected an Opt In validation error."
-    end
+    EmailPreferenceHelper.upsert!(
+      email: 'test_without_opt_in@example.net',
+      opt_in: nil,
+      ip_address: '1.1.1.1',
+      source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
+      form_kind: nil
+    )
+  rescue StandardError => error
+    assert_equal 'Opt In is required', error.message
+    assert_nil Dashboard.db[:email_preferences].where(email: 'test_without_opt_in@example.net').first
+  else
+    fail "Expected an Opt In validation error."
   end
 
   def test_upsert_email_preference_with_invalid_source_does_not_create_email_preference
-    begin
-      EmailPreferenceHelper.upsert!(
-        email: 'test_invalid_source@example.net',
-        opt_in: true,
-        ip_address: '1.1.1.1',
-        source: 'Where have all the cowboys gone?',
-        form_kind: nil
-      )
-    rescue StandardError => error
-      assert_equal 'Source is not included in the list', error.message
-      assert_nil Dashboard.db[:email_preferences].where(email: 'test_invalid_source@example.net').first
-    else
-      fail 'Expected a source validation error.'
-    end
+    EmailPreferenceHelper.upsert!(
+      email: 'test_invalid_source@example.net',
+      opt_in: true,
+      ip_address: '1.1.1.1',
+      source: 'Where have all the cowboys gone?',
+      form_kind: nil
+    )
+  rescue StandardError => error
+    assert_equal 'Source is not included in the list', error.message
+    assert_nil Dashboard.db[:email_preferences].where(email: 'test_invalid_source@example.net').first
+  else
+    fail 'Expected a source validation error.'
   end
 
   def test_upsert_email_preference_without_ip_address_does_not_create_email_preference
-    begin
-      EmailPreferenceHelper.upsert!(
-        email: 'test_without_ip_address@example.net',
-        opt_in: true,
-        ip_address: nil,
-        source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
-        form_kind: nil
-      )
-    rescue StandardError => error
-      assert_equal 'IP Address is required', error.message
-      assert_nil Dashboard.db[:email_preferences].where(email: 'test_without_ip_address@example.net').first
-    else
-      fail 'Expected an IP Address error.'
-    end
+    EmailPreferenceHelper.upsert!(
+      email: 'test_without_ip_address@example.net',
+      opt_in: true,
+      ip_address: nil,
+      source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
+      form_kind: nil
+    )
+  rescue StandardError => error
+    assert_equal 'IP Address is required', error.message
+    assert_nil Dashboard.db[:email_preferences].where(email: 'test_without_ip_address@example.net').first
+  else
+    fail 'Expected an IP Address error.'
   end
 
   def test_upsert_existing_email_preference_changes_existing_email_preference

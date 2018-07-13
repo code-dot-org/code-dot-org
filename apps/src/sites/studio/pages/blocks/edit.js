@@ -14,7 +14,7 @@ import animationListModule, {
 import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
-let nameField;
+let nameField, helperEditor;
 
 $(document).ready(() => {
   registerReducers({animationList: animationListModule});
@@ -28,8 +28,8 @@ $(document).ready(() => {
   });
 
   let submitButton = document.querySelector('#block_submit');
-  initializeCodeMirrorForJson('block_config', { onChange });
-  initializeCodeMirror('block_helper_code', 'javascript', null, null, (_, errors) => {
+  const fixupJson = initializeCodeMirrorForJson('block_config', { onChange });
+  helperEditor = initializeCodeMirror('block_helper_code', 'javascript', fixupJson, null, (_, errors) => {
     if (errors.length) {
       submitButton.setAttribute('disabled', 'disabled');
     } else {
@@ -51,6 +51,7 @@ function onChange(editor) {
       name: nameField.value,
       category: 'Custom',
       config: parsedConfig,
+      helperCode: helperEditor && helperEditor.getValue(),
     }],
     {},
     true,

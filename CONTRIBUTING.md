@@ -4,7 +4,7 @@ We'd love to have you join our group of contributors! Please e-mail your areas o
 
 This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
 
-[code-of-conduct]: http://todogroup.org/opencodeofconduct/#Code.org/abuse@code.org
+[code-of-conduct]: https://www.contributor-covenant.org/
 
 You can start setting up with these next steps:
 
