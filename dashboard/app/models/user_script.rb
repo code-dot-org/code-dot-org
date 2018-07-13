@@ -25,6 +25,8 @@ class UserScript < ActiveRecord::Base
   belongs_to :user
   belongs_to :script
 
+  validates :script, presence: true
+
   serialized_attrs %w(
     version_warning_dismissed
   )
