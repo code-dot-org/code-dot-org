@@ -13,6 +13,7 @@ const defaultProps = {
   viewAs: ViewType.Teacher,
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
+  scriptId: 99,
   scriptName: 'course1',
   scriptTitle: 'Course One',
   scriptDescription: 'The first course',
