@@ -35,3 +35,45 @@ def channel_policy_violation?(channel_id)
   return false unless result && result[:body]
   profanity_privacy_violation?(filename, result[:body])
 end
+
+#
+# This method is designed to be an easy way for support staff or a dev to
+# figure out why sharing was automatically blocked for a particular project.
+# It's designed for use from dashboard-console, which is why it has no usages
+# within our repo.
+#
+# @example
+#   explain_share_failure 'kkbjvA8CUoWEAJ0inKpzTQ'
+#
+# @param [String] channel_id - the encrypted channel ID, as found in the
+#   project's share URL.
+# @param [String] locale - optionally specify a custom locale string
+#   (two-character code) to check profanity in a different language.
+# @returns [ShareFailure|false] if the project is blocked, this method should
+#   return a ShareFailure struct that reveals exactly which content caused the
+#   block and why.  If not, this method returns false.
+#
+def explain_share_failure(channel_id, locale = 'en')
+  bucket = SourceBucket.new
+  filename = 'main.json'
+  result = bucket.get(channel_id, filename)
+  return false unless result && result[:body]
+  body = result[:body]
+  body_string = body.string
+
+  begin
+    parsed_json = JSON.parse(body_string)
+  rescue JSON::ParserError
+    return false
+  end
+
+  blockly_source = parsed_json['source']
+  return false unless blockly_source
+
+  begin
+    ShareFiltering.find_share_failure(blockly_source, locale)
+  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
+    # If WebPurify or Geocoder are unavailable, default to viewable
+    return false
+  end
+end
