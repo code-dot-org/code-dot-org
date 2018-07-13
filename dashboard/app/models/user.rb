@@ -1982,9 +1982,11 @@ class User < ActiveRecord::Base
   end
 
   def depended_upon_for_login?
-    return false unless teacher?
+    # Teacher is depended upon for login if student does not have a personal login
+    # and student has no other teachers.
     students.any? do |student|
-      student.can_create_personal_login? && student.sections_as_student.size == 1
+      student.can_create_personal_login? &&
+        student.sections_as_student.map(&:teacher).uniq.one?
     end
   end
 
