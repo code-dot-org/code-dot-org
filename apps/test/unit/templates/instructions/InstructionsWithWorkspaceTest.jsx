@@ -33,7 +33,11 @@ describe('InstructionsWithWorkspace', () => {
   });
 
   describe('onResize', () => {
+    let setInstructionsMaxHeightAvailable;
+
     beforeEach(() => {
+      setInstructionsMaxHeightAvailable = sinon.spy();
+
       sinon.stub($.fn, 'width').returns(1024);
       sinon.stub($.fn, 'height').returns(768);
     });
@@ -43,14 +47,26 @@ describe('InstructionsWithWorkspace', () => {
       $.fn.height.restore();
     });
 
-    it('does nothing if window size has not changed', () => {
-      const setInstructionsMaxHeightAvailable = sinon.spy();
+    function setupComponent({instructionsHeight = 400, codeWorkspaceHeight = 100} = {}) {
       const wrapper = shallow(
         <InstructionsWithWorkspace
-          instructionsHeight={400}
+          instructionsHeight={instructionsHeight}
           setInstructionsMaxHeightAvailable={setInstructionsMaxHeightAvailable}
         />
       );
+
+      // Fake ref to inner object, since we're shallow rendering.
+      wrapper.instance().codeWorkspaceContainer = {
+        getWrappedInstance: () => ({
+          getRenderedHeight: () => codeWorkspaceHeight
+        })
+      };
+
+      return wrapper;
+    }
+
+    it('does nothing if window size has not changed', () => {
+      const wrapper = setupComponent();
 
       wrapper.setState({
         windowWidth: 640,
@@ -66,24 +82,42 @@ describe('InstructionsWithWorkspace', () => {
     });
 
     it('handles resize', () => {
-      const setInstructionsMaxHeightAvailable = sinon.spy();
-      const wrapper = shallow(
-        <InstructionsWithWorkspace
-          instructionsHeight={400}
-          setInstructionsMaxHeightAvailable={setInstructionsMaxHeightAvailable}
-        />
-      );
-
-      // Fake ref to inner object, since we're shallow rendering.
-      wrapper.instance().codeWorkspaceContainer = {
-        getWrappedInstance: () => ({
-          getRenderedHeight: () => 100
-        })
-      };
-
+      const wrapper = setupComponent();
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).to.have.been.calledOnce
         .and.calledWith(230);
+    });
+
+    it('breakpoint in behavior at total height of 420 (meets all reserves)', () => {
+      let wrapper;
+
+      wrapper = setupComponent({instructionsHeight: 18, codeWorkspaceHeight: 400});
+      wrapper.instance().onResize();
+      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(139);
+
+      setInstructionsMaxHeightAvailable.reset();
+
+      wrapper = setupComponent({instructionsHeight: 19, codeWorkspaceHeight: 400});
+      wrapper.instance().onResize();
+      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(140);
+
+      setInstructionsMaxHeightAvailable.reset();
+
+      wrapper = setupComponent({instructionsHeight: 20, codeWorkspaceHeight: 400});
+      wrapper.instance().onResize();
+      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(150);
+
+      setInstructionsMaxHeightAvailable.reset();
+
+      wrapper = setupComponent({instructionsHeight: 21, codeWorkspaceHeight: 400});
+      wrapper.instance().onResize();
+      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(151);
+    });
+
+    it('skips callback if codeWorkspaceContainer is not initialized', () => {
+      const wrapper = setupComponent({codeWorkspaceHeight: 0});
+      wrapper.instance().onResize();
+      expect(setInstructionsMaxHeightAvailable).not.to.have.been.called;
     });
   });
 });
