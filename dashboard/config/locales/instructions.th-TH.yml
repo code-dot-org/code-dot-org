@@ -5,8 +5,8 @@ th:
       2-3 Artist 1 new_instruction: สวัสดีจ้ะ ฉันเป็นศิลปิน คุณสามารถเขียนโปรแกรมเพื่อสั่งให้ฉันวาดอะไรก็ได้
         ใช้บล๊อคคำสั่งไม่กี่ชิ้นก็สามารถสั่งให้ฉันวาดตามเส้นสีเทาในภาพได้ (เส้นมีความยาว
         100 พิกเซล)
-      2-3 Artist 11_instruction: "ทำขอบให้กับเครื่องหมายหยุด โดยการทำให้เป็นรูปแปดเหลี่ยมมีด้านยาว
-        100 พิกเซล คุณควรจะหันไปกี่องศา (คำใบ้: อะไรคือ 360 หารด้วย 8?)\n\n"
+      2-3 Artist 11_instruction: "ทำขอบให้กับเครื่องหมายหยุด โดยการทำให้เป็นรูปแปดเหลี่ยมมีด้านยาวด้านละ
+        100 พิกเซล คุณควรจะหันไปกี่องศา (คำบอกใบ้: อะไรคือ 360 หารด้วย 8?)\n\n"
       2-3 Artist 12_instruction: "สร้างวงกลมเพื่อวาดลูกตาให้เสร็จ! \nถ้าศิลปินหมุน
         1 องศาในแต่ละลูป คุณจะต้องทำซ้ำโค้ดให้วาดวงกลมทั้งหมดกี่ครั้ง? 180? 360? 500?"
       2-3 Artist 2 new_instruction: 'บ้านหลังนี้มีผนังเสร็จที่เสร็จไปแล้วครึ่งหนึ่ง
@@ -30,7 +30,7 @@ th:
       2-3 Artist 7_instruction: "วาดหน้าต่างชุดสุดท้ายของโรงเรียน เพื่อที่ว่าทุกคนในชั้นจะสามารถมองออกมาข้างนอกได้\nหน้าต่างรูปสี่เหลี่ยมจัตุรัสแต่ละบานมีความกว้างด้านละ
         25 พิกเซล "
       2-3 Artist 8_instruction: สร้างห้องให้สัตว์แต่ละตัวด้วยการแบ่งรูปสี่เหลี่ยมผืนผ้าออกเป็นสี่เหลี่ยมจตุรัสที่มีขนาดเท่ากัน
-        2 อัน โดยสี่เหลี่ยมผืนผ้านี้มีความกว้าง 200 พิกเซลและมีความสูง 100 พิกเซล
+        2 รูป โดยสี่เหลี่ยมผืนผ้านี้มีความกว้าง 200 พิกเซลและมีความสูง 100 พิกเซล
         โจทย์นี้มีวิธีแก้ได้หลายแบบ ดังนั้นลองคิดดูให้สนุกนะ!
       2-3 Artist 9 NEW_instruction: วาดรูปว่าวนี้ให้เสร็จสมบูรณ์
       2-3 Artist 9 REPLACEMENT_instruction: วาดบันไดเหล่านี้ให้เสร็จสมบูรณ์
@@ -305,7 +305,7 @@ th:
         การประเมินผล: ตอนนี้ถึงเวลาแล้ว ที่จะแสดงให้เห็นว่าคุณได้เรียนรู้อะไรบ้าง
         แก้ที่ผิด เพื่อเก็บน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งให้หมด
       2-3 Bee Functions 1_instruction: ฟังก์ชันเป็นบล็อกของโค้ดที่ทำภารกิจบางอย่าง
-        ใช้ฟังก์ชัน "เก็บ 2 เกสร" เพื่อรวบรวมหวานจากเกสรดอกไม้แต่ละดอก
+        ใช้ฟังก์ชัน "เก็บน้ำหวาน 2 ครั้ง" เพื่อรวบรวมหวานจากเกสรดอกไม้แต่ละดอก
       2-3 Bee Functions 10_instruction: |-
         ดอกไม้สีม่วงเปลี่ยนไปมาระหว่างมีน้ำหวานจากเกสรให้ 1 ครั้งหรือ 0 ครั้งทุกครั้งที่คุณเรียกใช้ปริศนา
 
@@ -316,9 +316,9 @@ th:
         ใช้ฟังก์ชัน `เก็บ 5` เพื่อเก็บน้ำหวานจากเกสร 5 ครั้ง
       2-3 Bee Functions 3_instruction: รวบรวมน้ำหวานจากเกสรดอกไม้แต่ละดอก
       2-3 Bee Functions 4_instruction: |-
-        ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางของผึ้ง, เก็บรวบรวมหวานและจากนั้นพาผึ้งกลับไปที่เริ่มต้น
+        ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางการบินของผึ้ง เก็บรวบรวมน้ำหวานและจากนั้นพาผึ้งบินกลับไปที่จุดเริ่มต้น
 
-        ใช้ฟังก์ชั่นในการเก็บรวบรวมน้ำหวานทั้งหมด
+        ให้ใช้ฟังก์ชั่นนี้ในการเก็บรวบรวมน้ำหวานทั้งหมด
       2-3 Bee Functions 5_instruction: ขณะนี้มีหวานมากขึ้นที่ดอกไม้ แก้ไขฟังก์ชันที่ให้มาเพื่อที่จะเก็บรวบรวมน้ำหวานจากเกสร
         4 ครั้งและใช้ฟังก์ชั่นนี้ในการเก็บรวบรวมน้ำหวานจากเกสรดอกไม้ทั้งหมด.
       2-3 Bee Functions 6_instruction: ตอนนี้ใช้ฟังก์ชั่นเดียวกัน ในการเก็บรวบรวมน้ำหวานจากเกสรดอกไม้สามดอก
@@ -326,12 +326,12 @@ th:
         The flowers are now further away. Edit the
         given function and use it to collect all of the nectar from the flowers.
       2-3 Bee Functions 8_instruction: สร้างฟังก์ชั่นของคุณเองที่เก็บนำหวานจากเกสร
-        7 ครั้งแล้วบินไปข้างหน้าและทำน้ำผึ้ง 7 ครั้ง ใช้ฟังก์ชั่นในการเก็บรวบรวมน้ำหวานในแต่ละดอกไม้และทำผึ้งที่รังผึ้งแต่ละรัง
+        7 ครั้งแล้วบินไปข้างหน้าและทำน้ำผึ้ง 7 ครั้ง ใช้ฟังก์ชั่นในการเก็บรวบรวมน้ำหวานในแต่ละดอกไม้และทำผึ้งในแต่ละรัง
       2-3 Bee Functions 9_instruction: สร้างฟังก์ชั่นของคุณเองที่ลงไปตามเส้นทาง เก็บน้ำหวาน
         ทำน้ำผึ้งและจากนั้นพาผึ้งกลับขึ้นไปตามเส้นทางเดิม
       2-3 Bee Functions Assessment 1_instruction: 'การประเมิน: ใช้ฟังก์ชันที่กำหนดเพื่อเก็บรวบรวมน้ำหวานจากเกสรดอกไม้แต่ละดอก'
-      2-3 Bee Functions Assessment 2_instruction: 'การประเมิน: สร้างฟังก์ชั่นที่จะหันไป,
-        บินไปข้างหน้าและทำน้ำผึ้ง 3 ครั้ง, แล้ว พาผึ้งกลับไปที่มันเริ่มต้นและหันกลับ.'
+      2-3 Bee Functions Assessment 2_instruction: 'การประเมิน: สร้างฟังก์ชั่นที่จะหันไป
+        บินไปข้างหน้าและทำน้ำผึ้ง 3 ครั้ง แล้ว พาผึ้งกลับไปที่เริ่มต้นและหันกลับ'
       2-3 Bee Loops 1_instruction: |-
         ดอกไม้แต่ละดอกมีน้ำหวานจากเกสรเพียงหนึ่งเดียว ให้เก็บน้ำหวานจากเกสร
         ดอกไม้แต่ละดอก
@@ -377,9 +377,8 @@ th:
         an if statement in a loop. Add a while loop to this code to perform the same
         task.
       2-3 Bee Loops Assessment 1_instruction: 'การประเมินผล: ใช้ลูป `ในขณะที่` เก็บน้ำหวานจากเกสรทั้งหมด'
-      2-3 Maze 1_instruction: |-
-        Can you help me to catch the naughty pig? Stack a
-        couple of "move forward" blocks together and press "Run".
+      2-3 Maze 1_instruction: 'คุณช่วยฉันจับเจ้าหมูเกเรตัวนี้หน่อยได้ไหม? ต่อบล็อก`ไปข้างหน้า`
+        สองสามแผ่นเข้าด้วยกันแล้วกด ` เริ่ม ` เพื่อช่วยพาฉันไปจัดการเจ้าหมูนั่น '
       2-3 Maze 10_instruction: พาฉันใปหาเจ้าชั่วร้ายตัวเขียวนั่น! (ระวังระเบิดหน่อยนะ)
       2-3 Maze 11_instruction: |-
         Get me to the flower I'm hungry! How many times
@@ -395,8 +394,9 @@ th:
         block!
       2-3 Maze 12 - One Move Block_instruction: พาฉันไปจัดการเจ้าหมูนั่น! แต่คราวนี้คุณสามารถใช้บล็อก
         "เดินไปข้างหน้า" ได้เพียงครั้งเดียวเท่านั้น คุณเห็นบล็อกอื่นๆที่สามารถช่วยคุณได้ไหม?
-      2-3 Maze 12_instruction: "คุณสามารถไปหาเจ้าหมูนั่น โดยสร้างลูปที่ใช้บล็อก 'เดินไปข้างหน้า'
-        \nให้อยู่ภายในบล็อก 'ทำซ้ำ' ได้ไหม?"
+      2-3 Maze 12_instruction: |-
+        คุณสามารถไปให้ถึงเจ้าหมูนั่น โดยสร้างลูปที่ใช้บล็อก `ไปข้างหน้า`
+        ให้อยู่ภายในบล็อก `ทำซ้ำ`จะได้ไหม?
       2-3 Maze 13 (old)_instruction: |-
         Get me to the pig, now with the Repeat until
         block!
@@ -552,7 +552,7 @@ th:
         พิกเซล และ อยูห่างกัน 15 พิกเซล
       4-5 Artist 2_instruction: ลูปโค้ดนี้โดยการใช้บล็อก `ทำซ้ำ` เพื่อวาดสี่เหลี่ยมจตุรัสให้เสร็จสมบูรณ์
       4-5 Artist 3.5_instruction: พยายามหาว่าจะเกิดอะไรขึ้นถ้าคุณเรียกใช้งานโค้ดส่วนนี้
-        (หรือเพียงแค่กด "เริ่ม " และลองดูการใช้งานว่าเป็นอย่างไร) ถัดไปให้ทำซ้ำโค้ดด้วยจำนวนครั้งให้เพียงพอเพื่อวาดภาพให้เสร็จสิ้น!
+        (หรือเพียงแค่กด " เริ่ม " และลองใช้งานดูว่าเป็นอย่างไร) ถัดไปให้ทำซ้ำโค้ดด้วยจำนวนครั้งให้เพียงพอเพื่อวาดภาพให้เสร็จสิ้น!
       4-5 Artist 3_instruction: กระถางดอกไม้สี่เหลี่ยมนี้มีความยาวโดยรอบทั้งสิ้น 600
         ซึ่งด้านยาวมีความยาว 200 ให้วาดสี่เหลี่ยมผืนผ้าโดยใช้บล็อกสองสามบล็อกถ้าเป็นไปได้
       4-5 Artist 4_instruction: มีกี่องศาในวงกลม?  ลูปบล็อกเพื่อสร้างวงกลมสีต่างๆ
@@ -1009,9 +1009,8 @@ th:
         or 0 nectar, but you don't know which one! Be careful not to collect nectar
         from a purple flower if it doesn't have any. Check if the nectar is equal
         to 1 by using the if block.
-      Bergeron Robot Maze1_instruction: |-
-        Can you help me to catch the naughty pig? Stack a
-        couple of "move forward" blocks together and press "Run".
+      Bergeron Robot Maze1_instruction: 'คุณช่วยฉันจับเจ้าหมูเกเรตัวนี้หน่อยได้ไหม?
+        ต่อบล็อก`ไปข้างหน้า` สองสามแผ่นเข้าด้วยกันแล้วกด ` เริ่ม ` เพื่อช่วยพาฉันไปจัดการเจ้าหมูนั่น '
       Big Game Animation 1 (copy 1)_instruction: |-
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1284,6 +1283,7 @@ th:
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
@@ -3167,8 +3167,7 @@ th:
       Course 2 Bee Loops 13_instruction: |-
         Assessment: Use the repeat block to collect
         all of the nectar.
-      Course 2 Bee Loops 2_instruction: คุณสามารถทำภารกิจเดียวกันนี้ได้ง่ายขึ้นด้วยการใช้ลูป
-        ได้หรือไม่?
+      Course 2 Bee Loops 2_instruction: คุณสามารถทำภารกิจเดียวกันนี้ได้ง่ายขึ้นด้วยการใช้ลูปได้ไหม?
       Course 2 Bee Loops 3_instruction: |-
         Now use the new repeat block to collect
         all of the nectar and make all of the honey.
@@ -4351,9 +4350,7 @@ th:
         This is an example of a game you can make in play
         lab.
       Frequency Analysis_instruction: Test
-      Function intro Ryan_instruction: |-
-        Use the `build bridge` function twice to
-        make a path to the Redstone Torch.
+      Function intro Ryan_instruction: ใช้ฟังก์ชัน` สร้างสะพาน ` สองครั้งเพื่อทำเส้นทางไปยังคบเพลิงศิลาแดง
       GLJ Drag and fall_instruction: |-
         This Corgi has been a good boy! Drag this carrot
         to him as a special treat.
@@ -4770,7 +4767,7 @@ th:
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC Agent Freeplay_instruction: "**Freeplay:**  Time to explore on your own!"
+      MC Agent Freeplay_instruction: "**เล่นตามใจชอบ**  ถึงเวลาให้คุณเริ่มเขียนโค้ดสร้างโลกไมน์คราฟท์ในแบบฉบับของตัวคุณเองได้เลย"
       MC HOC 2016 Level 10_instruction: |-
         ถึงเวลาที่จะสร้าง Minecraft ในแบบฉบับของคุณเองแล้ว!
         มาลงมือสร้างสัตว์และนักแสดงต่างๆแล้วกำหนดให้พวกเขาทำสิ่งต่างๆตามที่คุณต้องการกันเลย. ขอให้สนุกนะทุกคน!
@@ -4807,9 +4804,7 @@ th:
       MC HOC 2016 Village Test_instruction: |-
         โอ้ว ไม่! ตอนนี้พวกซอมบี้ขังคุณเอาไว้ข้างใน!
         คุณจะต้องเขียนโค้ดให้เจ้ายักษ์เหล็กโกเล็มไล่ติดตามและโจมตีพวกซอมบี้ทั้งหมด
-      MC_2017_Ryan_02_instruction: |-
-        Help the player get out by using loops to get
-        the Agent to the pressure plate.
+      MC_2017_Ryan_02_instruction: พาเอเจนท์ไปที่แป้นกด
       MC_HOC_2017 Agent Test_instruction: |-
         Click "Run" to move the player to the
         orange square inside of the house.
@@ -4823,43 +4818,32 @@ th:
       MC_HOC_2017_01_Kiki_instruction: |-
         Click "Run" to move the player to the orange
         square inside of the house.
-      MC_HOC_2017_01_RETRY_instruction: "Write code to get the Agent to the pressure\nplate,
-        then press \"Run\" and use the arrow keys to move the player out of\nthe house
-        to collect the chest. "
-      MC_HOC_2017_02_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_02_Cole_instruction: "Move the Agent to the pressure plate so that\n{currentPlayerName}
-        can get to the map. "
-      MC_HOC_2017_02_Kiki_instruction: |-
-        Get the Agent to the pressure plate, then
-        get the player to the orange square.
-      MC_HOC_2017_02_Will_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_01_RETRY_instruction: 'เขียนโค้ดเพื่อพาเอเจนท์ไปที่แป้นกด แล้วให้ไปกดปุ่ม
+        " เริ่ม " ทางซ้ายของหน้าจอ ต่อจากนั้นให้ใช้แป้นลูกศรเพื่อพาผู้เล่นออกจากบ้านเพื่อไปเก็บหีบสมบัติขึ้นมา '
+      MC_HOC_2017_02_instruction: พาเอเจนท์ไปที่แป้นกด
+      MC_HOC_2017_02_Cole_instruction: 'พาเอเจนท์ไปที่แป้นกดเพื่อให้ {currentPlayerName}
+        สามารถเข้าไปเอาแผนที่มาให้ได้ '
+      MC_HOC_2017_02_Kiki_instruction: พาเอเจนท์ไปยังแป้นกด แล้วพาผู้เล่นไปยังจตุรัสสีส้ม
+      MC_HOC_2017_02_Will_instruction: พาเอเจนท์ไปที่แป้นกด
       MC_HOC_2017_03_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_03_Kiki_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_03_Kiki_instruction: พาเอเจนท์ไปที่แป้นกด
       MC_HOC_2017_04_instruction: |-
         Change the loop from the last puzzle to help the
         Agent make a path over the wider part of this river.
-      MC_HOC_2017_04POINT5_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04POINT5_RYAN_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Cole_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_04_Kiki_instruction: Get the Agent to the pressure plate.
+      MC_HOC_2017_04POINT5_Cole_instruction: พาเอเจนท์ไปที่แป้นกด
+      MC_HOC_2017_04POINT5_RYAN_instruction: พาเอเจนท์ไปที่แป้นกด
+      MC_HOC_2017_04_Cole_instruction: พาเอเจนท์ไปที่แป้นกด
+      MC_HOC_2017_04_Kiki_instruction: พาเอเจนท์ไปที่แป้นกด
       MC_HOC_2017_05_instruction: |-
         Use a function to help the Agent get to the pressure
         plate.
       MC_HOC_2017_05_Cole_instruction: Get the player to the orange square.
       MC_HOC_2017_05_Josh_instruction: Get the player to the shovel.
-      MC_HOC_2017_05_Kiki_instruction: Get the player to the orange square.
-      MC_HOC_2017_06_Cole_instruction: |-
-        Fix this code to get the Agent to build a
-        bridge across this river.
-      MC_HOC_2017_06_Josh_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_06_Kiki_instruction: |-
-        Fix this code to help the Agent build a bridge
-        across this river.
-      MC_HOC_2017_07_Cole_instruction: |-
-        Destroy the ice and get {currentPlayerName}
-        to the Minecart.
+      MC_HOC_2017_05_Kiki_instruction: พาผู้เล่นไปยังตารางสีส้ม
+      MC_HOC_2017_06_Cole_instruction: แก้โค้ดต่อไปนี้เพื่อให้เอเจนท์สร้างสะพานข้ามแม่น้ำนี้
+      MC_HOC_2017_06_Josh_instruction: แก้โค้ดให้ถูกต้องเพื่อช่วยเอเจนท์สร้างสะพานข้ามแม่น้ำนี้
+      MC_HOC_2017_06_Kiki_instruction: แก้โค้ดให้ถูกต้องเพื่อช่วยเอเจนท์สร้างสะพานข้ามแม่น้ำนี้
+      MC_HOC_2017_07_Cole_instruction: ทาลายน้าแข็ง เพื่อให้ {currentPlayerName} ไปถึงรถเหมือง
       MC_HOC_2017_07_Kiki_instruction: |-
         Use a function to clear the path to the orange
         square.
@@ -4868,12 +4852,8 @@ th:
         Change the provided function to work for
         this biome.
       MC_HOC_2017_08_Kiki_instruction: Change the function to work for this puzzle.
-      MC_HOC_2017_08_RY_instruction: |-
-        Use the functions to find a way across the
-        lava.
-      MC_HOC_2017_08_Will_instruction: |-
-        Use the functions to find a way across the
-        lava.
+      MC_HOC_2017_08_RY_instruction: ใช้ฟังก์ชั่นเพื่อหาทางข้ามลาวาไปให้ได้
+      MC_HOC_2017_08_Will_instruction: ใช้ฟังก์ชั่นเพื่อหาทางข้ามลาวาไปให้ได้
       MC_HOC_2017_09_Cole_instruction: |-
         Program the Agent to clear the player's
         path.
@@ -4889,30 +4869,28 @@ th:
       MC_HOC_2017_10_Kiki_instruction: |-
         Create a function to help you finish this
         minecart.
-      MC_HOC_2017_10_RETRY_instruction: |-
-        Use the functions to finish this minecart
-        track.
+      MC_HOC_2017_10_RETRY_instruction: ใช้ฟังก์ชั่นเพื่อทำรางสำหรับเส้นทางรถเหมืองให้เสร็จ
       MC_HOC_2017_10_RYAN_instruction: |-
         Create a function to help you finish this
         minecart.
       MC_HOC_2017_10_RYAN2_instruction: |-
         Create a function to help you finish this
         minecart.
-      MC_HOC_2017_13_Cole_instruction: "**Freeplay:**  Time to explore on your own!"
-      MC_HOC_2017_4.5v2_instruction: Get the Agent to the pressure plate.
-      MC_HOC_2017_Ali_instruction: Use the functions to find a way across the lava.
+      MC_HOC_2017_13_Cole_instruction: "**เล่นตามใจชอบ**  ถึงเวลาให้คุณเริ่มเขียนโค้ดสร้างโลกไมน์คราฟท์ในแบบฉบับของตัวคุณเองได้เลย"
+      MC_HOC_2017_4.5v2_instruction: พาเอเจนท์ไปที่แป้นกด
+      MC_HOC_2017_Ali_instruction: ใช้ฟังก์ชั่นเพื่อหาทางข้ามลาวาไปให้ได้
       MC_HOC_2017_FP10x10_instruction: "**Freeplay:** Can you challenge yourself\nto
         collect all of the diamonds in this level? "
       MC_HOC_2017_FP10x10_RE_instruction: "**Freeplay:** Can you challenge yourself\nto
         collect all of the diamonds in this level? "
-      MC_HOC_2017_FP20x20_instruction: "**Freeplay:**  Time to explore on your own!"
+      MC_HOC_2017_FP20x20_instruction: "**เล่นตามใจชอบ**  ถึงเวลาให้คุณเริ่มเขียนโค้ดสร้างโลกไมน์คราฟท์ในแบบฉบับของตัวคุณเองได้เลย"
       MC_HOC_2017_Ryan_03_instruction: |-
         Now use loops to help The Agent build a bridge
         over the river by placing blocks in the water.
       MC_HOC_2017_Ryan_05_instruction: |-
         Destroy these cacti so that the player can
         get to the goal.
-      MC_HOC_Kiki_02_instruction: Get The Agent to the pressure plate.
+      MC_HOC_Kiki_02_instruction: พาเอเจนท์ไปที่แป้นกด
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
         empty stubs. Each puzzle progression will be focused on defining and handful
@@ -5295,9 +5273,7 @@ th:
       New Gumball Project_instruction: Create anything you like and share it!
       New Ice Age Project_instruction: Create anything you like and share it!
       New Infinity Project_instruction: Create anything you like and share it!
-      New Minecraft Hero Project_instruction: |-
-        **Freeplay:**  Time to explore on
-        your own!
+      New Minecraft Hero Project_instruction: "**เล่นตามใจชอบ**  ถึงเวลาให้คุณเริ่มเขียนโค้ดสร้างโลกไมน์คราฟท์ในแบบฉบับของตัวคุณเองได้เลย"
       New Sports Project_instruction: |-
         Create your own game! You're in charge here:
         you can change all the rules, mix and match sports, get creative! When you're
@@ -8091,6 +8067,10 @@ th:
         on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run"
         and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when
+        Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine
+        touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches
         the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make
@@ -8098,6 +8078,8 @@ th:
         normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable,
         then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when
+        the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe
         collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular
@@ -12245,8 +12227,9 @@ th:
         ครูของฉันบอกว่าอะไรก็ตามที่ฉันเริ่มต้นทำไว้ ควรทำให้สำเร็จลุล่วงไป!
 
         ช่วยฉันวาดกังหันลมอันนี้ของฉันให้เสร็จที คุณบอกได้ไหมว่ามีอะไรไม่ถูกต้อง?
-      grade2_PuppyLoops_2_instruction: "คุณสามารถไปหาเจ้าหมูนั่น โดยสร้างลูปที่ใช้บล็อก
-        'เดินไปข้างหน้า' \nให้อยู่ภายในบล็อก 'ทำซ้ำ' ได้ไหม?"
+      grade2_PuppyLoops_2_instruction: |-
+        คุณสามารถไปให้ถึงเจ้าหมูนั่น โดยสร้างลูปที่ใช้บล็อก `ไปข้างหน้า`
+        ให้อยู่ภายในบล็อก`ทำซ้ำ` จะได้ไหม?
       grade2_PuppyLoops_3_instruction: |-
         Get me to the pig! Solve this puzzle by creating
         a loop!
@@ -12337,8 +12320,9 @@ th:
       grade2_playlab_project_6_instruction: |-
         Create your own story. When you're
         done, click "Finish" to share with friends.
-      grade2_puppy_loops2_instruction: "คุณสามารถไปหาเจ้าหมูนั่น โดยสร้างลูปที่ใช้บล็อก
-        'เดินไปข้างหน้า' \nให้อยู่ภายในบล็อก 'ทำซ้ำ' ได้ไหม?"
+      grade2_puppy_loops2_instruction: |-
+        คุณสามารถไปให้ถึงเจ้าหมูนั่น โดยสร้างลูปที่ใช้บล็อก `ไปข้างหน้า`
+        ให้อยู่ภายในบล็อก `ทำซ้ำ`จะได้ไหม?
       grade2_puppy_loops3_instruction: |-
         "Get me to the pig!"
 
@@ -12596,8 +12580,9 @@ th:
       grade3_maze_loops5_instruction: พาฉันไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนน้อยที่สุดเท่าที่จะเป็นไปได้
       grade3_maze_nestedLoops1_instruction: คุณสามารถพาฉันไปหาเจ้าหมูนั่น โดยใช้บล็อกแบบเดียวกัน
         5 บล็อกได้ไหม?
-      grade3_maze_nestedLoops2_instruction: "คุณสามารถไปหาเจ้าหมูนั่น โดยสร้างลูปที่ใช้บล็อก
-        'เดินไปข้างหน้า' \nให้อยู่ภายในบล็อก 'ทำซ้ำ' ได้ไหม?"
+      grade3_maze_nestedLoops2_instruction: |-
+        คุณสามารถไปให้ถึงเจ้าหมูนั่น โดยสร้างลูปที่ใช้บล็อก `ไปข้างหน้า`
+        ให้อยู่ภายในบล็อก `ทำซ้ำ`จะได้ไหม?
       grade3_maze_nestedLoops3_instruction: พาฉันไปจัดการเจ้าหมูนั่น! คราวนี้คุณสามารถใช้บล็อกเดินไปข้างหน้าได้เพียงครั้งเดียวเท่านั้น
       grade3_maze_nestedLoops4_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้
         โดยใช้บล็อกจำนวนน้อยที่สุด!
@@ -12916,7 +12901,7 @@ th:
         to turn, move forward and make all of the honey, then return the bee to where
         it started and turn back.
       grade4_bee_functions2_instruction: ฟังก์ชันเป็นบล็อกของโค้ดที่ทำภารกิจบางอย่าง
-        ใช้ฟังก์ชัน "เก็บ 2 เกสร" เพื่อรวบรวมหวานจากเกสรดอกไม้แต่ละดอก
+        ใช้ฟังก์ชัน "เก็บน้ำหวาน 2 ครั้ง" เพื่อรวบรวมหวานจากเกสรดอกไม้แต่ละดอก
       grade4_bee_functions3_instruction: |-
         Build the `get 5` function to use in this
         puzzle.
@@ -13056,8 +13041,8 @@ th:
         ด้านทั้งสามด้านของสามเหลี่ยมมีความยาวเท่ากัน'
       grade4_review_artist3_instruction: |-
         บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป
-        วาดเส้นประโดยใช้บล็อก "กระโดดไปข้างหน้า" และ "ไปข้างหน้า"
-        แต่ละเส้นมีความยาว 50 พิกเซล
+        วาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า...` และบล็อก `เดินไปข้างหน้า`
+        โดยแต่ละเส้นมีความยาว 50 พิกเซล
       grade4_review_bee1_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
       grade4_review_bee2_instruction: เก็บน้ำหวานจากเกสรแต่ละดอก และทำน้ำผึ้งที่รวงผึ้งแต่ละรวง
         ใช้บล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้

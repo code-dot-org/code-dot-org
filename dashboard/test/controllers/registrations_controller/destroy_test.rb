@@ -23,6 +23,16 @@ module RegistrationsControllerTests
     # Tests for new destroy flow
     #
 
+    test "returns bad request if user cannot delete own account" do
+      user = create :user
+      user.stubs(:can_delete_own_account?).returns(false)
+      sign_in user
+      assert_does_not_destroy(User) do
+        delete '/users', params: {new_destroy_flow: true}
+      end
+      assert_response :bad_request
+    end
+
     test "returns bad request if password is required and not provided" do
       user = create :user, password: 'password'
       sign_in user

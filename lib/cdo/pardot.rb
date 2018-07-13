@@ -74,16 +74,14 @@ class Pardot
     failed_prospect_ids = []
 
     prospect_ids.each do |prospect_id|
-      begin
-        url = "#{PARDOT_PROSPECT_DELETION_URL}/#{prospect_id}"
-        post_request_with_auth url
-      rescue RuntimeError => e
-        if e.message =~ /Pardot request failed with HTTP/
-          failed_prospect_ids << prospect_id
-          next
-        else
-          raise e
-        end
+      url = "#{PARDOT_PROSPECT_DELETION_URL}/#{prospect_id}"
+      post_request_with_auth url
+    rescue RuntimeError => e
+      if e.message =~ /Pardot request failed with HTTP/
+        failed_prospect_ids << prospect_id
+        next
+      else
+        raise e
       end
     end
 

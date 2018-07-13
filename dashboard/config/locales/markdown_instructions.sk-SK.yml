@@ -16,10 +16,9 @@ sk:
       2-3 Artist 2 new_markdown_instruction: |-
         This house has a half-finished wall.
         Each side is 100, but the half-finished wall is only 50. Complete the wall.
-      2-3 Artist 3.4_markdown_instruction: |-
-        The jump block moves the artist without
-        drawing. Draw the dashed line using both the `jump forward` and `move forward`
-        blocks. Each line is 50 pixels long.
+      2-3 Artist 3.4_markdown_instruction: Blok so skokom posunie umelca bez toho,
+        aby bolo treba nieco nakreslit. Nakreslite prerušovanú čiaru použitím blokov
+        "poskočiť dopredu" a "posunúť dopredu". Každá čiara má mať dĺžku 50 pixelov.
       2-3 Artist 3new_markdown_instruction: "The red hat is 100 pixels tall. Finish
         drawing a black hat that is 70 pixels shorter. \n\n*(Note: The width of each
         hat is 50 pixels.)*"
@@ -42,35 +41,42 @@ sk:
         the last tooth. It is 25 pixels wide and 25 pixels tall.
       2-3 Artist Debugging 1_markdown_instruction: "This hat should only be 50 pixels
         wide. \nCan you fix it?\n\n<br/>\n"
-      2-3 Artist Debugging 10_markdown_instruction: "The direction pad on my game
-        controller is too narrow. \n\nCan you make it wider by 10 pixels?\n\nTry running
-        the code first to see what's wrong."
+      2-3 Artist Debugging 10_markdown_instruction: |-
+        Plocha na ovládanie smeru na mojom hernom ovládači je príliš úzka.
+
+        Môžete ju rozšíriť o 10 pixelov?
+
+        Skúste najprv spustiť kód, aby ste videli, čo je pokazené.
       2-3 Artist Debugging 11_markdown_instruction: |-
-        My snowflake is falling apart!
+        Moja snehová vločka sa rozpadá!
 
-        Can you figure out what's going wrong?
-      2-3 Artist Debugging 2_markdown_instruction: "This code for the cat's whiskers
-        is wrong. \n\nFix this code to draw whiskers that are all the same length."
-      2-3 Artist Debugging 3_markdown_instruction: "My boat has a hole! \n\nWhat do
-        you need to fix to make the ends meet?"
-      2-3 Artist Debugging 5_markdown_instruction: "The code that we have for the
-        leg and foot is wrong. \n\nCan you fix it?"
+        Viete zistiť, čo je pokazené?
+      2-3 Artist Debugging 2_markdown_instruction: |-
+        Tento kód pre mačacie fúzy je zlý.
+
+        Opravte tento kód, aby sa všetky fúzy nakreslili v rovnakej dĺžke.
+      2-3 Artist Debugging 3_markdown_instruction: "Moja loď je deravá! \n\nČo potrebujete
+        pre jej opravu?"
+      2-3 Artist Debugging 5_markdown_instruction: |-
+        Kód, ktorý máme na nohu a chodidlo je zlý.
+
+        Viete ho opraviť?
       2-3 Artist Debugging 6_markdown_instruction: |-
-        Looks like I'm sitting on a chair that’s missing a leg!
+        Vyzerá, že sedím na stoličke, ktorej chýba noha!
 
-        Edit the code to draw the last leg.
+        Upravte kód tak, aby sa dokreslila aj posledná noha.
       2-3 Artist Debugging 7_markdown_instruction: |-
-        Looks like the C in code is drawn backwards!
+        Vyzerá, že C v kóde je nakreslené naopak!
 
-        Can you make it look like a C again?
+        Viete to opraviť, aby to znova vyzeralo ako C?
       2-3 Artist Debugging 8_markdown_instruction: |-
-        My teacher says that I should finish what I start!
+        Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
 
-        Help me finish my pinwheel. Can you figure out what's wrong?
+        Pomôže mi dokončiť môj veterník. Viete zistiť, čo je zlé?
       2-3 Artist Debugging 9_markdown_instruction: |-
-        Something is off!
+        Niečo nie je v poriadku!
 
-        The code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?
+        Kód pre túto stonku je zlý. Viete zistiť, ak odostať umelca pre nasledovanie stonky správnym spôsobom?
       2-3 Artist Debugging Assessment 1_markdown_instruction: "**Assessment:** \nWhy
         does this square end up being 75 pixels too small on each side?  \n\nWhere
         does the code go wrong?"
@@ -93,9 +99,9 @@ sk:
       2-3 Artist Functions 11.5 a_markdown_instruction: "Here's that same `draw a
         hexagon` function. \n\nWhat happens if you loop the main program **6** times,
         turning **60** degrees each time you loop?"
-      2-3 Artist Functions 11.5_markdown_instruction: "Here's that same `draw a hexagon`
-        function. \n\nWhat happens if you loop the main program 6 times, turning 60
-        degrees each time you loop?"
+      2-3 Artist Functions 11.5_markdown_instruction: "Tu je rovnaká funkcia \"nakresli
+        šesťuholník\". \n\nČo sa stane, ak zopakujete hlavný program 6 krát, pričom
+        po každom zopakovaní sa otočíte o 60 stupňov?"
       2-3 Artist Functions 11_markdown_instruction: "We've renamed the `draw a square`
         function to `draw a hexagon`, but it's still giving us squares!  \n\nCan you
         modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides?
@@ -117,10 +123,10 @@ sk:
         called `draw a square`. This time, use the small green `draw a square` block
         to call this new function and create the glasses. \n\nThe squares in this
         drawing are 75 pixels apart."
-      2-3 Artist Functions 2_markdown_instruction: "Functions let you define new blocks!
-        \n\nWe've moved the blocks needed for drawing a square into a function called
-        `draw a square`. This time, use the `draw a square` function to create the
-        glasses. \n\nThe squares are 75 pixels apart."
+      2-3 Artist Functions 2_markdown_instruction: "Funkcie Vám umožnia definovať
+        nové bloky! \n\nPresunuli sme bloky potrebné na nakreslenie štvorca do funkcie
+        \"nakresli štvorec\". Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie
+        okuliarí.\n\nŠtvorce sú od seba vzdialené 75 pixelov."
       2-3 Artist Functions 3 a_markdown_instruction: "Edit the \"draw a square\" function
         to draw glasses with frames that are 115px on each side. \n\nThe squares are
         now 45 pixels apart."
@@ -146,9 +152,8 @@ sk:
         Let's draw this robot's head! Can you make a square with sides that are 100 pixels?
 
         <br/>
-      2-3 Artist Loops New 10_markdown_instruction: |-
-        Now let's connect a bunch of
-        V's together in a loop.
+      2-3 Artist Loops New 10_markdown_instruction: A teraz pripojme niekoľko Véčiek
+        spolu do slučky.
       2-3 Artist Loops New 11_markdown_instruction: "Time to make something snazzy!
         \n\nRebuild the code from the last puzzle, but this time, add a left turn
         of 30 degrees inside the loop. Now, repeat it 24 times instead of 8."
@@ -279,27 +284,25 @@ sk:
       2-3 Bee Loops 13_markdown_instruction: |-
         **Assessment:** Collect all of the
         nectar using the fewest blocks possible.
-      2-3 Bee Loops 3A_markdown_instruction: |-
-        Use a `repeat` loop to collect all
-        of the nectar.
-      2-3 Bee Loops 3B_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
+      2-3 Bee Loops 3A_markdown_instruction: Použite slučku "opakovať" pre pozbieranie
+        všetkého nektáru.
+      2-3 Bee Loops 3B_markdown_instruction: A teraz použite blok "opakovať" pre pozbieranie
+        všetkého nektáru a vyrobenie všetkého medu.
       2-3 Bee Loops 4_markdown_instruction: |-
         Such a busy bee!
 
         Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
-      2-3 Bee Loops 4A_markdown_instruction: "How many times can loops help you in
-        this puzzle?  \n\nLoops are your friend! Use a few of them to complete this
-        puzzle with the fewest blocks possible."
+      2-3 Bee Loops 4A_markdown_instruction: "Koľkokrát Vám môžu slučky pomôcť v tejto
+        úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie
+        tejto úlohy s čo najmenším počtom blokov."
       2-3 Bee Loops 5_markdown_instruction: "The shape of this path is different from
         the others. \n\nCan you collect all of the nectar using as few blocks as possible?"
       2-3 Bee Loops 7_markdown_instruction: "What a beautiful field of flowers!   \n\nHelp
         the bee visit each one.\n\nCan you find a way to do it with fewer than 7 blocks?"
-      2-3 Bee Loops 8_markdown_instruction: "These purple flowers have different amount
-        of nectar each time you run the puzzle. \n\nUse the `while nectar` loop to
-        collect all of the nectar. \n\nThis loop will run as long as the condition
-        is true, in this case `nectar > 0`."
+      2-3 Bee Loops 8_markdown_instruction: "Tieto fialové kvetinky majú pri každom
+        spustení tejto úlohy iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je
+        nektár\" pre pozbieranie všetkého nektáru. \n\nTáto slučka bude bežať tak
+        dlho, pokiaľ bude splnená podmienka, v tomto prípade \"nektár > 0\"."
       2-3 Bee Loops Assessment 1_markdown_instruction: |-
         **Assessment:** Use a `while`
         loop to collect all of the nectar from these flowers.
@@ -362,13 +365,12 @@ sk:
       4-5 Artist Assessment 1_markdown_instruction: |-
         **Assessment:** Use a loop to
         draw the equilateral triangle. Each side is 300 pixels.
-      4-5 Artist Free Draw 1_markdown_instruction: |-
-        Free Draw!  Draw whatever you
-        are inspired to create.
+      4-5 Artist Free Draw 1_markdown_instruction: Voľná ruka v kreslení! Nakreslite
+        čo len chcete.
       4-5 Artist Patterns 1_markdown_instruction: |-
-        Draw this square using a loop.
+        Nakreslite tento štvorec použitím slučky.
 
-        Each side is 20 pixels long.
+        Každá strana je 20 pixelov dlhá.
       4-5 Artist Patterns 10_markdown_instruction: "This code draws two rows of hexagons
         - loop the whole thing 4 times to draw the whole honeycomb. \n\nYou'll need
         to jump back 120 pixels in your outermost loop to make sure the artist doesn't
@@ -411,9 +413,8 @@ sk:
       4-5 Artist Patterns 9_markdown_instruction: "Now repeat this code 3 times and
         draw the whole row. \n\nEach hexagon is 80 pixels wide from the furthest points
         left to right."
-      4-5 Artist Patterns Free Play_markdown_instruction: |-
-        Free play - try your hand
-        at making a pattern of your own!
+      4-5 Artist Patterns Free Play_markdown_instruction: Voľná hra - vyskúšajte svoju
+        ruku nakreslením vlastného vzoru!
       4-5 Bee Conditionals 1_markdown_instruction: "This cloud is blocking my view!
         \n\nCheck to see if there's a flower under the cloud, and only get nectar
         if there's a flower.   \nBe careful, it can change!"
@@ -445,8 +446,10 @@ sk:
         cloud is either hiding a flower with one nectar or a honeycomb that needs
         one honey.  \n\nComplete the `get nectar or make honey` function, then call
         it to collect the nectar or honey. \n"
-      4-5 Bee Debugging 1_markdown_instruction: "These blocks are really bugging me.
-        \n\nCan you fix them?"
+      4-5 Bee Debugging 1_markdown_instruction: |-
+        Tieto bloky ma naozaj trápia.
+
+        Vieš ich opraviť?
       4-5 Bee Debugging 6_markdown_instruction: "The purple flower has a different
         amount of nectar each time you run the puzzle. \n\nFix the blocks to get all
         of the nectar from the flower each time."
@@ -457,9 +460,8 @@ sk:
         each flower. \n\nUse a nested loop. "
       4-5 Bee Nested Loops 4_markdown_instruction: "Collect all of the nectar from
         each flower and make honey at the honeycomb. \n\nUse a nested loop. "
-      4-5 Bee Nested Loops Assessment 1_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar and make all of the honey using loops.
+      4-5 Bee Nested Loops Assessment 1_markdown_instruction: "**Hodnotenie:** Pozbierajte
+        všetok nektár a spravte všetok med pomocou slučiek."
       4-5 Maze 7_markdown_instruction: "Get the zombie to the sunflower quickly!  \n\nCan
         you solve the puzzle in fewer than 11 blocks?"
       4-5 Maze 9_markdown_instruction: "Now we have a new block called `repeat until`.
@@ -478,8 +480,10 @@ sk:
       4-5 Maze Conditionals 2_markdown_instruction: |-
         Use the `repeat until` block
         to get the zombie to the sunflower.
-      4-5 Maze Conditionals 3_markdown_instruction: "Use the `if` block to help me
-        decide when to turn. \n"
+      4-5 Maze Conditionals 3_markdown_instruction: 'Použite blok "if" pre pomoc s
+        rozhodnutím sa, kedy mám zabočiť.
+
+'
       4-5 Maze Conditionals 4_markdown_instruction: |-
         Ok, solve this one just like
         the last puzzle, but you need to remember how you used the `if` and `repeat
@@ -9067,6 +9071,25 @@ sk:
 
         This program should create two new sprites, one on the left of the screen and one on the right, but it's only drawing one. **You don't need to add any code**, just rearrange the code already present to make sure that both sprites show up like the picture on the right.
       CSD U3 Sprites intro sprites_markdown_instruction: |-
+        # Sprites
+
+        **Creating Sprites:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.
+
+        **Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.
+
+        <img src="https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png" style="width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px">
+
+        # Do This
+
+        This program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.
+
+        * Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.
+        \t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.
+        * Add `drawSprites()` under the comment `Drawing`.
+        * **Run the code** to draw your first sprite on the screen.
+
+        _Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._
+      CSD U3 Sprites intro sprites_2018 - Validation Test_markdown_instruction: |-
         # Sprites
 
         **Creating Sprites:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.
@@ -30195,6 +30218,10 @@ sk:
         30% discount"
       MC Agent Freeplay_markdown_instruction: "**Voľná hra:** Teraz je to na vás.
         Pomocou kódu agenta preskúmajte tento svet."
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "Some games let you keep score.
+        Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself
+        a point when you tag them.  \n  \n  Reach five points to win!"
       MC_2017_Ryan_02_markdown_instruction: "Code like this can be made even shorter
         using loops!  \n\nNow get the Agent to the pressure plate using a `repeat`
         loop to help him move forward."
@@ -47650,6 +47677,12 @@ sk:
         her?
       Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe.
         What do you think will happen if you press run and then click on her?
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "There's a mud puddle
+        over in the corner.  \n\nCreate an **event** so that when Geraldine touches
+        the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 2 - Validated_markdown_instruction: "There's a mud puddle over in
+        the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle,
+        her color changes to brown.  \n\n---"
       Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner.
         Create an **event** so that when Geraldine touches the puddle, her color changes
         to brown.
@@ -47662,6 +47695,9 @@ sk:
       Virtual Pet 4_markdown_instruction: We don't want to wait for the giraffe to
         clean itself every time. Add a behavior to your soap to make it draggable,
         then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_markdown_instruction: "All of this play takes energy!
+        \ \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks
+        by 5) each time it collides with another sprite.  \n"
       Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions
         to each event so that when the giraffe collides with each sprite, it gets
         a little smaller (shrinks by 5).
@@ -52508,12 +52544,10 @@ sk:
         You can use this `for loop` to collect all of the nectar. Un-bee-lievable!
 
         There are a few actions that you will want to `repeat 'counter' times`.
-      courseF_bee_for_challenge2_markdown_instruction: |-
-        Solve this puzzle with the
-        fewest number of blocks possible.
-      courseF_bee_for_challenge2_2018_markdown_instruction: |-
-        Solve this puzzle with
-        the fewest number of blocks possible.
+      courseF_bee_for_challenge2_markdown_instruction: Vyriešte túto úlohu použitím
+        čo najmenšieho možného počtu blokov.
+      courseF_bee_for_challenge2_2018_markdown_instruction: Vyriešte túto úlohu použitím
+        čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge3_markdown_instruction: |-
         **For-Loops Super Challenge:**
         Solve this puzzle with the fewest number of blocks possible.
@@ -56435,9 +56469,8 @@ sk:
         pixels and each of the short sides are 75 pixels.)"
       grade2_MakeDogTag_7_markdown_instruction: "One more tag.  This is a triangle
         for Pi.  \n(Each side is 150 pixels)"
-      grade2_MakeDogTag_8_markdown_instruction: |-
-        Now let's connect a bunch of V's
-        together in a loop.
+      grade2_MakeDogTag_8_markdown_instruction: A teraz pripojme niekoľko Véčiek spolu
+        do slučky.
       grade2_MakeDogTag_9_markdown_instruction: "Time to make something snazzy! \n\nRebuild
         the code from the last puzzle, but this time, add a left turn of 30 degrees
         inside the loop. Now, repeat it 24 times instead of 8."
@@ -56453,9 +56486,9 @@ sk:
         Here are some ideas you could try if you get stuck:
         ![](https://images.code.org/e36330061c21807fac24d804e301e572-image-1475814869558.26.01.png)
       grade2_PuppyLoops_10_markdown_instruction: |-
-        My teacher says that I should finish what I start!
+        Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
 
-        Help me finish my pinwheel. Can you figure out what's wrong?
+        Pomôže mi dokončiť môj veterník. Viete zistiť, čo je zlé?
       grade2_PuppyLoops_2_markdown_instruction: |-
         Suddenly, a magical block appears!  With the `repeat` block, you can loop code over and over.
 
@@ -56466,12 +56499,14 @@ sk:
       grade2_PuppyLoops_4_markdown_instruction: |-
         In this puzzle, two `repeat` loops
         will help you get to the pig with the fewest number of blocks!
-      grade2_PuppyLoops_8_markdown_instruction: "This code for the cat's whiskers
-        is wrong. \n\nFix this code to draw whiskers that are all the same length."
-      grade2_PuppyLoops_9_markdown_instruction: |-
-        Looks like the C in code is drawn backwards!
+      grade2_PuppyLoops_8_markdown_instruction: |-
+        Tento kód pre mačacie fúzy je zlý.
 
-        Can you make it look like a C again?
+        Opravte tento kód, aby sa všetky fúzy nakreslili v rovnakej dĺžke.
+      grade2_PuppyLoops_9_markdown_instruction: |-
+        Vyzerá, že C v kóde je nakreslené naopak!
+
+        Viete to opraviť, aby to znova vyzeralo ako C?
       grade2_collector_10_markdown_instruction: "You're almost done!  \n\nCollect
         as many pieces of treasure as you can to finish the stage!"
       grade2_collector_10_2018_markdown_instruction: "You're almost done!  \n\nCollect
@@ -56680,21 +56715,19 @@ sk:
         Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
       grade3_Loops_11_markdown_instruction: "The shape of this path is different from
         the others. \n\nCan you collect all of the nectar using as few blocks as possible?"
-      grade3_Loops_3_markdown_instruction: |-
-        Use a `repeat` loop to collect all of
-        the nectar.
-      grade3_Loops_4_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
+      grade3_Loops_3_markdown_instruction: Použite slučku "opakovať" pre pozbieranie
+        všetkého nektáru.
+      grade3_Loops_4_markdown_instruction: A teraz použite blok "opakovať" pre pozbieranie
+        všetkého nektáru a vyrobenie všetkého medu.
       grade3_Loops_5_markdown_instruction: |-
         What a beautiful field of flowers!
 
         Help the bee visit each one.
 
         Can you find a way to do it with fewer than 7 blocks?
-      grade3_Loops_6_markdown_instruction: "How many times can loops help you in this
-        puzzle?  \n\nLoops are your friend! Use a few of them to complete this puzzle
-        with the fewest blocks possible."
+      grade3_Loops_6_markdown_instruction: "Koľkokrát Vám môžu slučky pomôcť v tejto
+        úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie
+        tejto úlohy s čo najmenším počtom blokov."
       grade3_Loops_7_markdown_instruction: |-
         Those flowers look tasty!
 
@@ -56835,10 +56868,10 @@ sk:
       grade4_artist_functions1_markdown_instruction: "*\"Me zombie artist. Me love
         drawing!\"*\n\nHelp the zombie draw glasses using squares with sides of 100
         pixels.  \nThe bridge between the glasses is 75 pixels long.\n\n"
-      grade4_artist_functions2_markdown_instruction: "Functions let you define new
-        blocks! \n\nWe've moved the blocks needed for drawing a square into a function
-        called `draw a square`. This time, use the `draw a square` function to create
-        the glasses. \n\nThe squares are 75 pixels apart."
+      grade4_artist_functions2_markdown_instruction: "Funkcie Vám umožnia definovať
+        nové bloky! \n\nPresunuli sme bloky potrebné na nakreslenie štvorca do funkcie
+        \"nakresli štvorec\". Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie
+        okuliarí.\n\nŠtvorce sú od seba vzdialené 75 pixelov."
       grade4_artist_functions2a_markdown_instruction: |-
         Create this image using only the blocks provided.
 
@@ -57118,13 +57151,12 @@ sk:
       grade4_review_artist2_markdown_instruction: "This house needs a roof! Draw the
         triangle.  \n\nHint: all three sides are the same length.\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
         width=\"300\"/>"
-      grade4_review_artist3_markdown_instruction: |-
-        The jump block moves the artist
-        without drawing. Draw the dashed line using both the `jump forward` and `move
-        forward` blocks. Each line is 50 pixels long.
-      grade4_review_bee1_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
+      grade4_review_artist3_markdown_instruction: Blok so skokom posunie umelca bez
+        toho, aby bolo treba nieco nakreslit. Nakreslite prerušovanú čiaru použitím
+        blokov "poskočiť dopredu" a "posunúť dopredu". Každá čiara má mať dĺžku 50
+        pixelov.
+      grade4_review_bee1_markdown_instruction: A teraz použite blok "opakovať" pre
+        pozbieranie všetkého nektáru a vyrobenie všetkého medu.
       grade4_review_bee3_markdown_instruction: |-
         Such a busy bee!
 
@@ -57877,18 +57909,16 @@ sk:
       level 'grade3_Loops_11_markdown_instruction: "The shape of this path is different
         from the others. \n\nCan you collect all of the nectar using as few blocks
         as possible?"
-      level 'grade3_Loops_3_markdown_instruction: |-
-        Use a `repeat` loop to collect
-        all of the nectar.
-      level 'grade3_Loops_4_markdown_instruction: |-
-        Now use the `repeat` block to
-        collect all of the nectar and make all of the honey.
+      level 'grade3_Loops_3_markdown_instruction: Použite slučku "opakovať" pre pozbieranie
+        všetkého nektáru.
+      level 'grade3_Loops_4_markdown_instruction: A teraz použite blok "opakovať"
+        pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
       level 'grade3_Loops_5_markdown_instruction: "What a beautiful field of flowers!
         \  \n\nHelp the bee visit each one.\n\nCan you find a way to do it with fewer
         than 7 blocks?"
-      level 'grade3_Loops_6_markdown_instruction: "How many times can loops help you
-        in this puzzle?  \n\nLoops are your friend! Use a few of them to complete
-        this puzzle with the fewest blocks possible."
+      level 'grade3_Loops_6_markdown_instruction: "Koľkokrát Vám môžu slučky pomôcť
+        v tejto úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie
+        tejto úlohy s čo najmenším počtom blokov."
       level 'grade3_Loops_7_markdown_instruction: |-
         Those flowers look tasty!
 

@@ -426,6 +426,7 @@ it:
           Quanto fa 360 diviso 6?
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Usa il blocco `mentre` per entrambi.
+      AB_debug_Laurel1_authored_hint: {}
       AppLab Intro 3 - Change Screen Color_authored_hint: {}
       AppLab Intro 4 - Change Screen Color_authored_hint: {}
       AppLab Intro 5 - Change Screen Color_authored_hint: {}
@@ -451,10 +452,9 @@ it:
           su "Esegui"`.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: Nel primo ciclo, per disegnare il mezzo esagono, l'artista
-          percorre tratti di <b>30 pixel</b> invece di 40 e gira a destra di <b>60
-          gradi</b>.
+          percorre tratti di **30 pixel** e gira a destra di **60 gradi**.
         Course_4_Artist_11_b: Nel secondo ciclo, per disegnare i due lati del triangolo,
-          l'artista percorre tratti di <b>80 pixel</b> e gira a destra di <b>120 gradi</b>.
+          l'artista percorre tratti di **80 pixel** e gira a destra di **120 gradi**.
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Ogni figura che viene ripetuta è formata dalla combinazione
           di **mezzo esagono** con **due terzi di un triangolo**. '
@@ -884,13 +884,13 @@ it:
           (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità
           del gatto</i>).
       D_Frozen_nested3_authored_hint:
-        courseD_artist_project3_a: Use the drop down menu on the `turn` blocks to
-          choose the angle you need!
-        courseD_artist_project3_b: "Try nested loops!\n\nUse the code that you created
-          to draw a line of shapes and nest it inside of another loop.  At the bottom,
-          before the outside loop ends, add a block that will turn Elsa around.  \n\n-
-          Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees
-          if you are repeating the outer loop 6 times"
+        courseD_artist_project3_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
+          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
+          girare Elsa. \n\n- Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
+          Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       D_Frozen_nested4_authored_hint:
         courseD_artist_project4_a: |
           Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
@@ -901,31 +901,31 @@ it:
           Here's a set of hexagons with squares:
 
           <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
-        courseD_artist_project4_b: To try this, draw your first snowflake, turn, then
-          draw a second snowflake.
+        courseD_artist_project4_b: Per realizzare questa immagine, disegna il primo
+          fiocco di neve, gira, quindi disegna il secondo fiocco.
       D_Frozen_nested5_authored_hint:
         courseD_artist_project4_a: |
-          Lines of 2 hexagons and 4 triangles:
+          Righe di 2 esagoni e 4 triangoli:
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       D_Frozen_nested6_authored_hint:
         courseD_artist_project1a_a: |
-          This stair step uses a 76 degree turn and repeats 4 times.
+          Questa scalinata usa un angolo di 76 gradi e contiene 4 ripetizioni.
 
           <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
-        courseD_artist_project1a_b: These patterns are a lot like the stair steps
-          from other puzzles, but using a different angle.
+        courseD_artist_project1a_b: Questi schemi sono molto simili alle scalinate
+          di alcuni esercizi precedenti, ma utilizzano un angolo diverso.
       D_Frozen_nested7_authored_hint:
         courseD_artist_project2a_a: |
           This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
 
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       D_Frozen_nested8_authored_hint:
-        courseD_artist_project3a_a: You can choose different amounts to rotate your
-          shape! What about 18 times with a 20 degree turn in between?
+        courseD_artist_project3a_a: Puoi scegliere diversi modi di ruotare la tua
+          forma! Cosa ne dici di 18 volte con angoli di 20 gradi tra una riga e l'altra?
       D_Frozen_nested9_authored_hint:
         courseD_artist_project4a_a: |
-          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+          Ecco due fiocchi di neve di dimensioni diverse, disegnati uno dopo l'altro (con un angolo di 30 gradi tra uno e l'altro)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       Farmer for Authored Hint testing_authored_hint:
@@ -989,7 +989,7 @@ it:
           e quindi scoprire le mosse da fare.
       K2.0 sequence 7_authored_hint:
         K2.0_sequence_7_a: Se sei bloccato, prova a disegnare il labirinto sulla carta
-          per capire come dovrebe muoversi l'uccellino.
+          per capire come dovrebbe muoversi l'uccellino.
       K2.0 sequence 8_authored_hint:
         K2.0_sequence_8_a: Bloccato? Prova a tracciare con le dita il percorso che
           deve seguire l'uccellino.
@@ -1720,8 +1720,8 @@ it:
           solve this puzzle.
         courseB_maze_seq_challenge2_b: Riorganizza i blocchi e prendi la via di mezzo.
       course1_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
-          not to count the space where you start!
+        courseA_maze_seq_challenge2_a: Prova a contare le caselle con un dito. Ma
+          ricorda di non tenere conto della casella di partenza!
       course1_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
         courseB_maze_seq_challenge1_b: Prova an andare a ovest per iniziare.
@@ -1911,18 +1911,18 @@ it:
         courseC_maze_programming_challenge2_b: The shortest solution use only 5 blocks,
           but it uses the `repeat` block!
       course2_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
-          not to count the space where you start!
+        courseA_maze_seq_challenge2_a: Prova a contare le caselle con un dito. Ma
+          ricorda di non tenere conto della casella di partenza!
       course2_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
         courseB_maze_seq_challenge1_b: Prova an andare a ovest per iniziare.
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: Nel primo ciclo, per disegnare il mezzo
-          esagono, l'artista percorre tratti di <b>30 pixel</b> invece di 40 e gira
-          a destra di <b>60 gradi</b>.
+          esagono, l'artista percorre tratti di **30 pixel** e gira a destra di **60
+          gradi**.
         courseE_artist_concept_challenge1_b: Nel secondo ciclo, per disegnare i due
-          lati del triangolo, l'artista percorre tratti di <b>80 pixel</b> e gira
-          a destra di <b>120 gradi</b>.
+          lati del triangolo, l'artista percorre tratti di **80 pixel** e gira a destra
+          di **120 gradi**.
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: If you call the function one more time,
           you can create the same design in the final corner. You can also `jump to`
@@ -2173,22 +2173,22 @@ it:
       course3_maze_until_challenge1_authored_hint: {}
       course3_playLab_challenge1_authored_hint:
         courseE_playLab_challenge1_a: |-
-          Here are some things you could do when the player wins the game:
+          Ecco alcune possibili cose da fare quando il giocatore vince la partita:
 
-          * Make the dinosaur vanish.
-          * Stop the squirrels.
-          * Make the squirrels and knight happy.
-          * Set a new background.
-          * Make the knight thank the player for helping.
-          * Make all of the actors vanish and show a "You Win!" message.
+          * Fai svanire il dinosauro.
+          * Ferma gli scoiattoli.
+          * Attribuisci un umore felice a scoiattoli e cavaliere.
+          * Imposta un nuovo sfondo.
+          * Fai in modo che il cavaliere ringrazi il giocatore per l'aiuto.
+          * Fai svanire tutti i personaggi e visualizza il messaggio "Hai vinto!".
         courseE_playLab_challenge1_b: |-
-          Here are some things you could do when the player loses the game:
+          Ecco alcune possibili cose da fare quando il giocatore perde la partita:
 
-          * Make the knight vanish.
-          * Make the squirrels sad.
-          * Make the dinosaur say something.
-          * Set a new background.
-          * Make all of the actors vanish and show a "Game Over" message.
+          * Fai svanire il cavaliere.
+          * Attribuisci un umore triste agli scoiattoli.
+          * Fai dire qualcosa al dinosauro.
+          * Imposta un nuovo sfondo.
+          * Fai svanire tutti i personaggi e visualizza il messaggio "Fine del gioco!".
       course3_playlab_challenge2_authored_hint:
         courseE_playlab_challenge2_a: |-
           The actor knows what to say based on its mood. Try playing with the things the witch might say.
@@ -2244,10 +2244,10 @@ it:
 
           There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
       course4_artist_concept_challenge2_authored_hint:
-        courseE_artist_concept_challenge2_a: Once you define a function, you can call
-          it over and over again - whenever and wherever you want!
+        courseE_artist_concept_challenge2_a: Dopo aver definito una funzione, la puoi
+          richiamare più e più volte, ovunque tu voglia!
         courseE_artist_concept_challenge2_b: |-
-          You can jump to different positions on the canvas using this command:
+          Grazie a questo blocco, puoi saltare direttamente in specifici punti della tela:
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
@@ -3147,15 +3147,15 @@ it:
       courseA_collector_loops3_predict1_authored_hint: {}
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi
-          Laurel, cambia il numero di volte che il ciclo viene eseguito.
+          Laura, cambia il numero di volte che il ciclo viene eseguito.
         courseA_collector_loops4_b: |-
-          Non dimenticare che Laurel deve ancora scendere per raccogliere l'ultimo diamante, dopo aver terminato il ciclo
+          Non dimenticare che Laura deve ancora scendere per raccogliere l'ultimo diamante, dopo aver terminato il ciclo
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_collector_loops4_2018_authored_hint:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi
-          Laurel, cambia il numero di volte che il ciclo viene eseguito.
+          Laura, cambia il numero di volte che il ciclo viene eseguito.
         courseA_collector_loops4_b: |-
-          Non dimenticare che Laurel deve ancora scendere per raccogliere l'ultimo diamante, dopo aver terminato il ciclo
+          Non dimenticare che Laura deve ancora scendere per raccogliere l'ultimo diamante, dopo aver terminato il ciclo
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, provare
@@ -3166,7 +3166,7 @@ it:
         courseA_collector_loops5_c: |-
           Potresti iniziare con un ciclo
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
-          che muove Laurel verso Ovest (`O <--`) e raccoglie i diamanti.
+          che muove Laura verso Ovest (`O <--`) e raccoglie i diamanti.
       courseA_collector_loops5_2018_authored_hint:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, provare
           ad utilizzare un foglio di carta per capire di quali frecce hai bisogno
@@ -3176,7 +3176,7 @@ it:
         courseA_collector_loops5_c: |-
           Potresti iniziare con un ciclo
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
-          che muove Laurel verso Ovest (`O <--`) e raccoglie i diamanti.
+          che muove Laura verso Ovest (`O <--`) e raccoglie i diamanti.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Non riesci a capire cosa non va? Provare a eseguire
           il codice un paio di volte per vedere cosa succede.
@@ -3193,10 +3193,10 @@ it:
           uno dopo l'altro.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, prova
-          ad eseguire il codice per vedere dove va a finire Laurel.
+          ad eseguire il codice per vedere dove va a finire Laura.
       courseA_collector_loops7_2018_authored_hint:
         courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, prova
-          ad eseguire il codice per vedere dove va a finire Laurel.
+          ad eseguire il codice per vedere dove va a finire Laura.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo
           esercizio, prova a scrivere le mosse su un foglio di carta e cerca di trovare
@@ -3411,8 +3411,8 @@ it:
         courseA_harvester_seq3_a: |-
           Did you remember to use this block?
           <xml><block type="harvester_corn"/></xml>
-        courseA_harvester_seq3_b: Say the steps out loud and see if it helps you figure
-          out the answer.
+        courseA_harvester_seq3_b: Prova a pronunciare i passi ad alta voce e osserva
+          se questa tecnica ti aiuta a trovare la risposta giusta.
       courseA_harvester_seq4_authored_hint:
         courseA_harvester_seq4_a: How many spaces are between the Harvester and the
           corn? How many blocks are already in your workspace?
@@ -3442,7 +3442,7 @@ it:
         courseA_harvester_seq9_c: You should take this path to pick all the corn.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -3469,7 +3469,7 @@ it:
           Infine, rimetti al loro posto gli altri blocchi.
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -3488,7 +3488,7 @@ it:
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -3514,7 +3514,7 @@ it:
           il maiale, vai ancora una volta avanti.
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -3542,7 +3542,7 @@ it:
           di aver ancora risolto l'esercizio.
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -3650,11 +3650,12 @@ it:
       courseA_maze_seq5_2018_authored_hint:
         '1': Per trovare la soluzione, prova a scrivere i passi sulla carta!
         '2': |-
-          You will need to use this block:
+          Dovrai usare questo blocco:
 
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
+        '1': Prova a pronunciare i passi ad alta voce e osserva se questa tecnica
+          ti aiuta a trovare la risposta giusta.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Il tuo programma finale dovrebbe avere 3 blocchi di movimento.
         courseA_maze_seq6_b: Se ti blocchi, prova a risolvere l'esercizio in due parti,
@@ -3677,10 +3678,10 @@ it:
           e quindi scoprire le mosse da fare.
       courseA_maze_seq8_authored_hint:
         courseA_maze_seq8_a: Se sei bloccato, prova a disegnare il labirinto sulla
-          carta per capire come dovrebe muoversi l'uccellino.
+          carta per capire come dovrebbe muoversi l'uccellino.
       courseA_maze_seq8_2018_authored_hint:
         courseA_maze_seq8_a: Se sei bloccato, prova a disegnare il labirinto sulla
-          carta per capire come dovrebe muoversi l'uccellino.
+          carta per capire come dovrebbe muoversi l'uccellino.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Bloccato? Prova a tracciare con le dita il percorso che
           deve seguire l'uccellino.
@@ -3694,16 +3695,15 @@ it:
           fai partire il programma per vedere cosa non funziona.
         courseA_maze_seq9_c: Dovrai muoverti in 3 direzioni per risolvere questo esercizio.
       courseA_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge1_a: Some paths will lead to TNT, if you move too
-          far.
+        courseA_maze_seq_challenge1_a: Ci sono due modi per risolvere questo esercizio.
       courseA_maze_seq_challenge1_2018_authored_hint:
-        courseA_maze_seq_challenge1_a: There are two solutions to this puzzle.
+        courseA_maze_seq_challenge1_a: Ci sono due modi per risolvere questo esercizio.
       courseA_maze_seq_challenge2_authored_hint:
-        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
-          not to count the space where you start!
+        courseA_maze_seq_challenge2_a: Prova a contare le caselle con un dito. Ma
+          ricorda di non tenere conto della casella di partenza!
       courseA_maze_seq_challenge2_2018_authored_hint:
-        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
-          not to count the space where you start!
+        courseA_maze_seq_challenge2_a: Prova a contare le caselle con un dito. Ma
+          ricorda di non tenere conto della casella di partenza!
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: Cerca un blocco che faccia dire qualcosa al cane.
         courseA_playLab_events2_b: "Questo è il codice che ti serve per completare
@@ -3794,7 +3794,7 @@ it:
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events6_authored_hint:
         courseA_playLab_events6_a: |-
-          Ecco il blocco evento che dovresti usare per far fare qualcosa quando Jorge viene cliccato:
+          Ecco il blocco evento che dovresti usare per far fare qualcosa quando il cane viene cliccato:
           <xml><block type="studio_whenSpriteClicked">
           <title name="SPRITE">1</title>
           </block></xml>
@@ -3810,7 +3810,7 @@ it:
           </block></xml>
       courseA_playLab_events6_2018_authored_hint:
         courseA_playLab_events6_a: |-
-          Ecco il blocco evento che dovresti usare per far fare qualcosa quando Jorge viene cliccato:
+          Ecco il blocco evento che dovresti usare per far fare qualcosa quando il cane viene cliccato:
           <xml><block type="studio_whenSpriteClicked">
           <title name="SPRITE">1</title>
           </block></xml>
@@ -4028,11 +4028,11 @@ it:
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have
           been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
-          try something else!
+        '2': Non aver paura di sbagliare! Prova in qualche modo e se non funziona
+          prova in un'altra maniera!
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -4048,7 +4048,7 @@ it:
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -4086,7 +4086,7 @@ it:
           </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -4105,7 +4105,7 @@ it:
           </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          Il tuo programma dovrebbe risultare così:
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -4282,15 +4282,15 @@ it:
         courseB_collector_loops4_a: Prova ad usare il pulsante "Fai un passo" per
           capire dove c'è qualcosa di sbagliato.
         courseB_collector_loops4_b: Per modificare di quante caselle deve spostarsi
-          Laurel, cambia il numero di volte che il ciclo viene eseguito.
-        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laurel deve muoversi
+          Laura, cambia il numero di volte che il ciclo viene eseguito.
+        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laura deve muoversi
           verso il basso e finire di raccogliere i diamanti!
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Prova ad usare il pulsante "Fai un passo" per
           capire dove c'è qualcosa di sbagliato.
         courseB_collector_loops4_b: Per modificare di quante caselle deve spostarsi
-          Laurel, cambia il numero di volte che il ciclo viene eseguito.
-        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laurel deve muoversi
+          Laura, cambia il numero di volte che il ciclo viene eseguito.
+        courseB_collector_loops4_c: Alla fine del ciclo `ripeti` Laura deve muoversi
           verso il basso e finire di raccogliere i diamanti!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Devi usare più di un ciclo per risolvere bene
@@ -5971,11 +5971,11 @@ it:
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Use 60 degree angles to make the roof.
       courseC_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: 'The rectangle is 200 pixels wide and 100
-          pixels tall. '
+        courseC_artist_prog_challenge1_a: Questo disegno può essere fatto come un
+          rettangolo con una linea a metà oppure come due quadrati!
       courseC_artist_prog_challenge1_2018_authored_hint:
-        courseC_artist_prog_challenge1_a: You can draw this as a rectangle with a
-          line in the middle or two different squares!
+        courseC_artist_prog_challenge1_a: Questo disegno può essere fatto come un
+          rettangolo con una linea a metà oppure come due quadrati!
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block
           to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n
@@ -5988,15 +5988,15 @@ it:
           \                 </block>\n                </next>\n              </block>\n
           \             </statement></block></xml>"
       courseC_artist_prog_challenge2a_authored_hint:
-        courseC_artist_prog_challenge2_a: After you draw the first line, try turning
-          left before you draw your second line.
-        courseC_artist_prog_challenge2_b: After you draw the second line, try turning
-          right before you draw your third line.
+        courseC_artist_prog_challenge2_a: Dopo aver disegnato la prima linea, gira
+          a sinistra prima di disegnare la seconda linea.
+        courseC_artist_prog_challenge2_b: Dopo aver disegnato la seconda linea, gira
+          a destra prima di disegnare la terza linea.
       courseC_artist_prog_challenge2a_2018_authored_hint:
-        courseC_artist_prog_challenge2_a: After you draw the first line, turn left
-          before you draw your second line.
-        courseC_artist_prog_challenge2_b: After you draw the second line, turn right
-          before you draw your third line.
+        courseC_artist_prog_challenge2_a: Dopo aver disegnato la prima linea, gira
+          a sinistra prima di disegnare la seconda linea.
+        courseC_artist_prog_challenge2_b: Dopo aver disegnato la seconda linea, gira
+          a destra prima di disegnare la terza linea.
       courseC_collector_loops_challenge2_authored_hint:
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect`
           blocks!
@@ -6928,23 +6928,23 @@ it:
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_Frozen_nested1_authored_hint:
-        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to
-          choose the angle you need!
-        courseD_artist_project1_b: Remember that `move forward` draws a line, while
-          `jump forward` does not.
+        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
+        courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una
+          linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_Frozen_nested2_authored_hint:
-        courseD_artist_project2_a: Remember that `move forward` draws a line, while
-          `jump forward` does not.
+        courseD_artist_project2_a: Ricordati che il blocco `vai avanti` disegna una
+          linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
         courseD_artist_project2_b: After you draw and move the first time, you can
           repeat the code by adding a loop around the outside.
       courseD_Frozen_nested3_authored_hint:
-        courseD_artist_project3_a: Use the drop down menu on the `turn` blocks to
-          choose the angle you need!
-        courseD_artist_project3_b: "Try nested loops!\n\nUse the code that you created
-          to draw a line of shapes and nest it inside of another loop.  At the bottom,
-          before the outside loop ends, add a block that will turn Elsa around.  \n\n-
-          Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees
-          if you are repeating the outer loop 6 times"
+        courseD_artist_project3_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
+          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
+          girare Elsa. \n\n- Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
+          Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_Frozen_nested4_authored_hint:
         courseD_artist_project4_a: |
           Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
@@ -6955,43 +6955,43 @@ it:
           Here's a set of hexagons with squares:
 
           <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
-        courseD_artist_project4_b: To try this, draw your first snowflake, turn, then
-          draw a second snowflake.
+        courseD_artist_project4_b: Per realizzare questa immagine, disegna il primo
+          fiocco di neve, gira, quindi disegna il secondo fiocco.
       courseD_Frozen_nested5_authored_hint:
         courseD_artist_project4_a: |
-          Lines of 2 hexagons and 4 triangles:
+          Righe di 2 esagoni e 4 triangoli:
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_Frozen_nested6_authored_hint:
         courseD_artist_project1a_a: |
-          This stair step uses a 76 degree turn and repeats 4 times.
+          Questa scalinata usa un angolo di 76 gradi e contiene 4 ripetizioni.
 
           <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
-        courseD_artist_project1a_b: These patterns are a lot like the stair steps
-          from other puzzles, but using a different angle.
+        courseD_artist_project1a_b: Questi schemi sono molto simili alle scalinate
+          di alcuni esercizi precedenti, ma utilizzano un angolo diverso.
       courseD_Frozen_nested7_authored_hint:
         courseD_artist_project2a_a: |
           This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
 
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_Frozen_nested8_authored_hint:
-        courseD_artist_project3a_a: You can choose different amounts to rotate your
-          shape! What about 18 times with a 20 degree turn in between?
+        courseD_artist_project3a_a: Puoi scegliere diversi modi di ruotare la tua
+          forma! Cosa ne dici di 18 volte con angoli di 20 gradi tra una riga e l'altra?
       courseD_Frozen_nested9_authored_hint:
         courseD_artist_project4a_a: |
-          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+          Ecco due fiocchi di neve di dimensioni diverse, disegnati uno dopo l'altro (con un angolo di 30 gradi tra uno e l'altro)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_1_2018_authored_hint:
-        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to
-          choose the angle you need!
-        courseD_artist_project1_b: Remember that `move forward` draws a line, while
-          `jump forward` does not.
+        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
+        courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una
+          linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_artist_2_2018_authored_hint:
         courseD_artist_project1_b: Remember that `move` draws a line, while `jump`
           does not.
-        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to
-          choose the angle you need!
+        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
       courseD_artist_3_2018_authored_hint: {}
       courseD_artist_4_2018_authored_hint: {}
       courseD_artist_5_2018_authored_hint:
@@ -7004,11 +7004,11 @@ it:
 
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_8_2018_authored_hint:
-        courseD_artist_project3a_a: You can choose different amounts to rotate your
-          shape! What about 18 times with a 20 degree turn in between?
+        courseD_artist_project3a_a: Puoi scegliere diversi modi di ruotare la tua
+          forma! Cosa ne dici di 18 volte con angoli di 20 gradi tra una riga e l'altra?
       courseD_artist_9_2018_authored_hint:
         courseD_artist_project4a_a: |
-          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+          Ecco due fiocchi di neve di dimensioni diverse, disegnati uno dopo l'altro (con un angolo di 30 gradi tra uno e l'altro)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_Template_2018_authored_hint: {}
@@ -7188,8 +7188,9 @@ it:
           blocco `vai avanti` e il blocco `gira a destra`.
         courseD_artist_nestedLoops1_b: Puoi disegnare questo triangolo con un ciclo
           `ripeti ... volte` con due blocchi all'interno. Di quali blocchi hai bisogno?
-        courseD_artist_nestedLoops1_c: Try writing the steps on paper and looking
-          for patterns that can be simplified with loops.
+        courseD_artist_nestedLoops1_c: Prova a scrivere i passaggi su un foglio di
+          carta e cerca degli schemi che si ripetono e possano essere semplificati
+          con dei cicli.
       courseD_artist_nestedLoops10_authored_hint: {}
       courseD_artist_nestedLoops10_2018_authored_hint: {}
       courseD_artist_nestedLoops1_2018_authored_hint:
@@ -7197,97 +7198,109 @@ it:
           blocco `vai avanti` e il blocco `gira a destra`.
         courseD_artist_nestedLoops1_b: Puoi disegnare questo triangolo con un ciclo
           `ripeti ... volte` con due blocchi all'interno. Di quali blocchi hai bisogno?
-        courseD_artist_nestedLoops1_c: Try writing the steps on paper and looking
-          for patterns that can be simplified with loops.
+        courseD_artist_nestedLoops1_c: Prova a scrivere i passaggi su un foglio di
+          carta e cerca degli schemi che si ripetono e possano essere semplificati
+          con dei cicli.
       courseD_artist_nestedLoops1a_authored_hint:
-        courseD_artist_nestedLoops1a_a: 'You will need to draw a total of 6 triangles,
-          each rotated 60 degrees.  '
-        courseD_artist_nestedLoops1a_b: If you create your triangle with a loop, the
-          artist should be facing the same way as they started. This will make the
-          60 degree turns a lot easier.
-        courseD_artist_nestedLoops1a_c: If you want colors, use the `set color` block
-          in your code. You don't have to match the colors in the template image.
+        courseD_artist_nestedLoops1a_a: "Dovrai disegnare 6 triangoli in tutto. Dopo
+          aver terminato ciascun triangolo, ruota di 60 gradi e vai avanti per iniziare
+          il triangolo successivo. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)"
+        courseD_artist_nestedLoops1a_b: Se crei un triangolo con un ciclo, alla fine
+          l'artista dovrebbe essere rivolto nella stessa direzione di quando è partito.
+          Questo renderà tutto più semplice.
+        courseD_artist_nestedLoops1a_c: Se vuoi aggiungere un po' di colore, puoi
+          inserire nel programma il blocco `imposta il colore`. Ma sappi che non devi
+          per forza usare gli stessi colori dell'immagine di esempio.
       courseD_artist_nestedLoops1a_2018_authored_hint:
-        courseD_artist_nestedLoops1a_a: |-
-          You will need to draw a total of 6 triangles. After finishing each triangle, rotate 60 degrees and move to start the next triangle.
-
-          ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
-        courseD_artist_nestedLoops1a_b: If you create your triangle with a loop, the
-          artist should be facing the same way as they started. This will make the
-          60 degree turns a lot easier.
-        courseD_artist_nestedLoops1a_c: If you want colors, use the `set color` block
-          in your code. You don't have to match the colors in the template image.
+        courseD_artist_nestedLoops1a_a: "Dovrai disegnare 6 triangoli in tutto. Dopo
+          aver terminato ciascun triangolo, ruota di 60 gradi e vai avanti per iniziare
+          il triangolo successivo. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)"
+        courseD_artist_nestedLoops1a_b: Se crei un triangolo con un ciclo, alla fine
+          l'artista dovrebbe essere rivolto nella stessa direzione di quando è partito.
+          Questo renderà tutto più semplice.
+        courseD_artist_nestedLoops1a_c: Se vuoi aggiungere un po' di colore, puoi
+          inserire nel programma il blocco `imposta il colore`. Ma sappi che non devi
+          per forza usare gli stessi colori dell'immagine di esempio.
       courseD_artist_nestedLoops2_authored_hint:
-        courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle
-          code with another `repeat` loop.
-        courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of
-          the loop so that the artist turns after each triangle.
+        courseD_artist_nestedLoops2_a: 'Servono due cicli annidati: il ciclo che realizza
+          il triangolo deve essere a sua volta racchiuso in un altro ciclo `ripeti
+          ... volte`.'
+        courseD_artist_nestedLoops2_b: Ricordati di inserire il blocco `gira` dentro
+          al ciclo, per fare in modo che l'artista giri dopo ogni triangolo.
       courseD_artist_nestedLoops2_2018_authored_hint:
-        courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle
-          code with another `repeat` loop.
-        courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of
-          the loop so that the artist turns after each triangle.
+        courseD_artist_nestedLoops2_a: 'Servono due cicli annidati: il ciclo che realizza
+          il triangolo deve essere a sua volta racchiuso in un altro ciclo `ripeti
+          ... volte`.'
+        courseD_artist_nestedLoops2_b: Ricordati di inserire il blocco `gira` dentro
+          al ciclo, per fare in modo che l'artista giri dopo ogni triangolo.
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: Prova ad usare il blocco `salta in avanti`
           per passare dalla cima di un quadrato alla posizione in cui devi iniziare
           il successivo.
-        courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
-          this puzzle quickly. '
-        courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
-          square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
+        courseD_artist_nestedLoops3_b: 'Non dimenticare di usare un ciclo annidato
+          per risolvere l''esercizio velocemente. '
+        courseD_artist_nestedLoops3_c: Inizia usando un ciclo `ripeti ... volte` per
+          fare un quadrato. Dopo di che, ripeti 8 volte questo quadrato, saltando
+          di 40 pixel tra uno e l'altro.
       courseD_artist_nestedLoops3_2018_authored_hint:
         courseD_artist_nestedLoops3_a: Prova ad usare il blocco `salta in avanti`
           per passare dalla cima di un quadrato alla posizione in cui devi iniziare
           il successivo.
-        courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
-          this puzzle quickly. '
-        courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
-          square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
+        courseD_artist_nestedLoops3_b: 'Non dimenticare di usare un ciclo annidato
+          per risolvere l''esercizio velocemente. '
+        courseD_artist_nestedLoops3_c: Inizia usando un ciclo `ripeti ... volte` per
+          fare un quadrato. Dopo di che, ripeti 8 volte questo quadrato, saltando
+          di 40 pixel tra uno e l'altro.
       courseD_artist_nestedLoops4_authored_hint:
         courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move
           **before** you turn, or else your circles will be off by the tiniest little
           amount!
         courseD_artist_nestedLoops4_a: |-
-          To make a circle:
-          - Repeat 360 times
-          - Move forward 1 pixel
-          - Turn left 1 degree
-        courseD_artist_nestedLoops4_b: Don't forget to jump forward by 50 pixels between
-          circles.
-        courseD_artist_nestedLoops4_c: Use a nested loop to draw your circles 4 times.
+          Per fare un cerchio:
+
+          - ripeti 360 volte
+          - vai avanti di 1 pixel
+          - gira a sinistra di 1 grado
+        courseD_artist_nestedLoops4_b: Non dimenticarti di saltare in avanti di 50
+          pixel tra un cerchio e l'altro.
+        courseD_artist_nestedLoops4_c: Usa un ciclo annidato per disegnare i cerchi
+          4 volte.
       courseD_artist_nestedLoops4_2018_authored_hint:
         courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move
           **before** you turn, or else your circles will be off by the tiniest little
           amount!
         courseD_artist_nestedLoops4_a: |-
-          To make a circle:
-          - Repeat 360 times
-          - Move forward 1 pixel
-          - Turn left 1 degree
-        courseD_artist_nestedLoops4_b: Don't forget to jump forward by 50 pixels between
-          circles.
-        courseD_artist_nestedLoops4_c: Use a nested loop to draw your circles 4 times.
+          Per fare un cerchio:
+
+          - ripeti 360 volte
+          - vai avanti di 1 pixel
+          - gira a sinistra di 1 grado
+        courseD_artist_nestedLoops4_b: Non dimenticarti di saltare in avanti di 50
+          pixel tra un cerchio e l'altro.
+        courseD_artist_nestedLoops4_c: Usa un ciclo annidato per disegnare i cerchi
+          4 volte.
       courseD_artist_nestedLoops5_authored_hint:
         courseD_artist_nestedLoops5_a: |-
-          To do this easily:
+          Per farlo in modo semplice:
 
-          - repeat 4 times
-          - make a circle
-          - jump forward 50 pixels
-          - turn right 90 degrees
-        courseD_artist_nestedLoops5_b: To make a circle set a repeat loop to repeat
-          360 times. Inside the loop, move forward 1 pixel and turn by 1 degree.
+          - ripeti 4 volte
+          - fai un cerchio
+          - salta in avanti di 50 pixel
+          - gira a destra di 90 gradi
+        courseD_artist_nestedLoops5_b: Per fare un cerchio, devi impostare un ciclo
+          `ripeti 360 volte`, all'interno del quale vai avanti di 1 pixel e gira di
+          1 grado.
       courseD_artist_nestedLoops5_2018_authored_hint:
         courseD_artist_nestedLoops5_a: |-
-          To do this easily:
+          Per farlo in modo semplice:
 
-          - repeat 4 times
-          - make a circle
-          - jump forward 50 pixels
-          - turn right 90 degrees
-        courseD_artist_nestedLoops5_b: To make a circle you'll need to set a repeat
-          loop to repeat 360 times. Inside the loop, move forward 1 pixel and turn
-          by 1 degree.
+          - ripeti 4 volte
+          - fai un cerchio
+          - salta in avanti di 50 pixel
+          - gira a destra di 90 gradi
+        courseD_artist_nestedLoops5_b: Per fare un cerchio, devi impostare un ciclo
+          `ripeti 360 volte`, all'interno del quale vai avanti di 1 pixel e gira di
+          1 grado.
       courseD_artist_nestedLoops6_authored_hint:
         courseD_artist_nestedLoops6_a: You'll need to repeat your outer loop 6 times
           now, instead of only 4.
@@ -7295,36 +7308,34 @@ it:
           six pieces instead of only four, you will only need to turn 60 degrees between
           circles. '
       courseD_artist_nestedLoops7_authored_hint:
-        courseD_artist_nestedLoops7_a: |-
-          Use a nested loop, where the inner loop is the code for a square.
-
-          - repeat 6 times
-          - make square
-          - jump forward by 50 pixels
-          - turn 60 degrees
+        courseD_artist_nestedLoops7_a: Qui dovrai usare dei cicli annidati. Innanzitutto,
+          serve un ciclo per disegnare un quadrato. Cosa dovrà fare il ciclo esterno
+          se quello interno disegna un quadrato?
         courseD_artist_nestedLoops7_b: |-
-          Use a nested loop, where the inner loop is the code for a square.
+          Usa un ciclo annidato, nel quale il ciclo interno realizza un quadrato.
 
-          - repeat 6 times
-          - make square
-          - jump forward by **50 pixels**
-          - turn **60 degrees**
+          - Ripeti 6 volte
+          - fai un quadrato
+          - salta in avanti di **50 pixel**
+          - gira di **60 gradi**
       courseD_artist_nestedLoops7_2018_authored_hint:
-        courseD_artist_nestedLoops7_a: You'll need to use nested loops here. First,
-          use a loop to draw a square. What will the outer loop do if the inner loop
-          draws a square?
+        courseD_artist_nestedLoops7_a: Qui dovrai usare dei cicli annidati. Innanzitutto,
+          serve un ciclo per disegnare un quadrato. Cosa dovrà fare il ciclo esterno
+          se quello interno disegna un quadrato?
         courseD_artist_nestedLoops7_b: |-
-          Use a nested loop, where the inner loop is the code for a square.
+          Usa un ciclo annidato, nel quale il ciclo interno realizza un quadrato.
 
-          - repeat 6 times
-          - make square
-          - jump forward by **50 pixels**
-          - turn **60 degrees**
+          - Ripeti 6 volte
+          - fai un quadrato
+          - salta in avanti di **50 pixel**
+          - gira di **60 gradi**
       courseD_artist_nestedLoops8_authored_hint:
-        courseD_artist_nestedLoops8_a: If you're stuck, start by looking at the last
-          puzzle, then change the things that are different.
-        courseD_artist_nestedLoops8_b: If you're stuck, start by looking at the last
-          puzzle, then change the things that are different.
+        courseD_artist_nestedLoops8_a: Per ottenere otto esagoni nel tuo disegno,
+          dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare
+          un giro completo servono 360 gradi e se devi distribuire 8 esagoni in un
+          giro completo, devi dividere i 360 gradi in 8 parti, quindi 360:8=45.
+        courseD_artist_nestedLoops8_b: Se sei bloccato, prendi spunto dall'ultimo
+          esercizio e cerca di capire cosa c'è di diverso.
         courseD_artist_nestedLoops8_c: |-
           Use a nested loop:
 
@@ -7333,11 +7344,12 @@ it:
           - jump forward 50 pixels
           - turn right 45 degrees
       courseD_artist_nestedLoops8_2018_authored_hint:
-        courseD_artist_nestedLoops8_a: To have 8 hexagons in your drawing, you'll
-          need to turn **45 degrees** between each of them. Why? Because 360 degrees
-          (a full turn around) divided by 8 (the number of hexagons) is 45 degrees.
-        courseD_artist_nestedLoops8_b: If you're stuck, start by looking at the last
-          puzzle, then change the things that are different.
+        courseD_artist_nestedLoops8_a: Per ottenere otto esagoni nel tuo disegno,
+          dovrai girare di **45 gradi** tra uno e l'altro. Perché? Perché per fare
+          un giro completo servono 360 gradi e se devi distribuire 8 esagoni in un
+          giro completo, devi dividere i 360 gradi in 8 parti, quindi 360:8=45.
+        courseD_artist_nestedLoops8_b: Se sei bloccato, prendi spunto dall'ultimo
+          esercizio e cerca di capire cosa c'è di diverso.
         courseD_artist_nestedLoops8_c: |-
           Use a nested loop:
 
@@ -7346,63 +7358,63 @@ it:
           - jump forward 50 pixels
           - turn right 45 degrees
       courseD_artist_nestedLoops9_authored_hint:
-        courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before,
-          but this time, make it with squares.
-        courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end
-          of the first set, but this time use triangles.
+        courseD_artist_nestedLoops9_a: Inizia utilizzando un ciclo annidato come quello
+          usato in precedenza, ma questa volta fai disegnare dei quadrati.
+        courseD_artist_nestedLoops9_b: Aggiungi un secondo gruppo di cicli annidati
+          dopo il primo gruppo, ma questa volta disegna dei triangoli.
         courseD_artist_nestedLoops9_c: |-
-          Use two nested loops:
-          - Repeat 8 times
-          - draw a square
-          - jump forward 50 pixels
-          - turn right by 45 degrees
-          - Repeat 8 times
-          - draw a triangle
-          - jump forward 50 pixels
-          - turn right by 45 degrees
+          Utilizza due cicli annidati:
+          - ripeti 8 volte
+          - disegna un quadrato
+          - salta in avanti di 50 pixel
+          - gira a destra di 45 gradi
+          - ripeti 8 volte
+          - disegna un triangolo
+          - salta in avanti di 50 pixel
+          - gira a destra di 45 gradi
       courseD_artist_nestedLoops9_2018_authored_hint:
-        courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before,
-          but this time, make it with squares.
-        courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end
-          of the first set, but this time use triangles.
+        courseD_artist_nestedLoops9_a: Inizia utilizzando un ciclo annidato come quello
+          usato in precedenza, ma questa volta fai disegnare dei quadrati.
+        courseD_artist_nestedLoops9_b: Aggiungi un secondo gruppo di cicli annidati
+          dopo il primo gruppo, ma questa volta disegna dei triangoli.
         courseD_artist_nestedLoops9_c: |-
-          Use two nested loops:
-          - Repeat 8 times
-          - draw a square
-          - jump forward 50 pixels
-          - turn right by 45 degrees
-          - Repeat 8 times
-          - draw a triangle
-          - jump forward 50 pixels
-          - turn right by 45 degrees
+          Utilizza due cicli annidati:
+          - ripeti 8 volte
+          - disegna un quadrato
+          - salta in avanti di 50 pixel
+          - gira a destra di 45 gradi
+          - ripeti 8 volte
+          - disegna un triangolo
+          - salta in avanti di 50 pixel
+          - gira a destra di 45 gradi
       courseD_artist_nestedLoops9_predict1_authored_hint: {}
       courseD_artist_nestedLoops9_predict1_2018_authored_hint: {}
       courseD_artist_nestedLoopsFP_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
 
-          This image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.
-        courseD_artist_nestedLoopsFP_b: |
+          Questa immagine è stata realizzata con un ciclo annidato che ripete un esagono (con lati di 50 pixel) 15 volte usando un angolo di 48 gradi.
+        courseD_artist_nestedLoopsFP_b: |-
           <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
 
-          This image was made using similar code to other levels in this series, but with circles (repeat 360 times: move forward 1, turn 1 degree).
+          Questa immagine è stata realizzata usando un programma simile a quello di un precedente esercizio (ripeti 360 volte: vai avanti 1, gira di un 1 grado).
         courseD_artist_nestedLoopsFP_c: |-
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
 
-          This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
+          Questa immagine è stata realizzata con un ciclo annidato che ripete un pentagono (con lati di 50 pixel) per 15 volte, usando un angolo di 48 gradi.
       courseD_artist_nestedLoopsFP_2018_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
 
-          This image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.
+          Questa immagine è stata realizzata con un ciclo annidato che ripete un esagono (con lati di 50 pixel) 15 volte usando un angolo di 48 gradi.
         courseD_artist_nestedLoopsFP_b: |-
           <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
 
-          This image was made using similar code to other levels you've done before, but with circles (repeat 360 times: move forward 1, turn 1 degree).
+          Questa immagine è stata realizzata usando un programma simile a quello di un precedente esercizio (ripeti 360 volte: vai avanti 1, gira di un 1 grado).
         courseD_artist_nestedLoopsFP_c: |-
           <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
 
-          This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
+          Questa immagine è stata realizzata con un ciclo annidato che ripete un pentagono (con lati di 50 pixel) per 15 volte, usando un angolo di 48 gradi.
       courseD_artist_nestedLoopsPre1_authored_hint: {}
       courseD_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_a: Start by making a nested loop to
@@ -7439,39 +7451,39 @@ it:
         courseD_artist_nestedLoops_challenge2_b: To draw a square, the artist needs
           to turn 90 degrees 4 times.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: You can use the drop down menu on the `turn` blocks
-          to see which angle you need!
-        courseD_artist_project1_b: Remember that `move forward` draws a line, while
-          `jump forward` does not.
+        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
+        courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una
+          linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_artist_project1_2018_authored_hint:
-        courseD_artist_project1_a: Use the drop down menu on the `turn` blocks to
-          choose the angle you need!
-        courseD_artist_project1_b: Remember that `move forward` draws a line, while
-          `jump forward` does not.
+        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
+        courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una
+          linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_artist_project1a_authored_hint:
         courseD_artist_project1a_a: |
-          This stair step uses a 76 degree turn and repeats 4 times.
+          Questa scalinata usa un angolo di 76 gradi e contiene 4 ripetizioni.
 
           <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
-        courseD_artist_project1a_b: These patterns are a lot like the stair steps
-          from other puzzles, just with a different angle.
+        courseD_artist_project1a_b: Questi schemi sono molto simili alle scalinate
+          di alcuni esercizi precedenti, ma utilizzano un angolo diverso.
       courseD_artist_project1a_2018_authored_hint:
         courseD_artist_project1a_a: |
-          This stair step uses a 76 degree turn and repeats 4 times.
+          Questa scalinata usa un angolo di 76 gradi e contiene 4 ripetizioni.
 
           <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
-        courseD_artist_project1a_b: These patterns are a lot like the stair steps
-          from other puzzles, but using a different angle.
+        courseD_artist_project1a_b: Questi schemi sono molto simili alle scalinate
+          di alcuni esercizi precedenti, ma utilizzano un angolo diverso.
       courseD_artist_project2_authored_hint:
-        courseD_artist_project2_a: Remember that `move forward` draws a line, while
-          `jump forward` does not.
+        courseD_artist_project2_a: Ricordati che il blocco `vai avanti` disegna una
+          linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
         courseD_artist_project2_b: If you draw an image, then jump forward, you can
           draw more than one by putting a loop around the entire block of code.
       courseD_artist_project2Template_authored_hint: {}
       courseD_artist_project2Template_2018_authored_hint: {}
       courseD_artist_project2_2018_authored_hint:
-        courseD_artist_project2_a: Remember that `move forward` draws a line, while
-          `jump forward` does not.
+        courseD_artist_project2_a: Ricordati che il blocco `vai avanti` disegna una
+          linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
         courseD_artist_project2_b: After you draw and move the first time, you can
           repeat the code by adding a loop around the outside.
       courseD_artist_project2a_authored_hint:
@@ -7485,27 +7497,27 @@ it:
 
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
-        courseD_artist_project3_a: "Try nested loops!\n\nUse the code that you created
-          to draw a line of shapes and nest it inside of another loop.  At the bottom,
-          before the outside loop ends, add a block that will turn Elsa around.  \n\n-
-          Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees
-          if you are repeating the outer loop 6 times"
-        courseD_artist_project3_b: You can use the drop down menu on the `turn` blocks
-          to see which angle you need!
+        courseD_artist_project3_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
+          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
+          girare Elsa. \n\n- Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
+          Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_artist_project3_2018_authored_hint:
-        courseD_artist_project3_a: Use the drop down menu on the `turn` blocks to
-          choose the angle you need!
-        courseD_artist_project3_b: "Try nested loops!\n\nUse the code that you created
-          to draw a line of shapes and nest it inside of another loop.  At the bottom,
-          before the outside loop ends, add a block that will turn Elsa around.  \n\n-
-          Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees
-          if you are repeating the outer loop 6 times"
+        courseD_artist_project3_a: Usa il menù a discesa del blocco `gira a ...` per
+          scegliere l'angolo che ti serve!
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
+          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
+          girare Elsa. \n\n- Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
+          Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_artist_project3a_authored_hint:
-        courseD_artist_project3a_a: You can also choose different ways to rotate your
-          shape! What about 18 times, with a 20 degree turn in between?
+        courseD_artist_project3a_a: Puoi scegliere diversi modi di ruotare la tua
+          forma! Cosa ne dici di 18 volte con angoli di 20 gradi tra una riga e l'altra?
       courseD_artist_project3a_2018_authored_hint:
-        courseD_artist_project3a_a: You can choose different amounts to rotate your
-          shape! What about 18 times with a 20 degree turn in between?
+        courseD_artist_project3a_a: Puoi scegliere diversi modi di ruotare la tua
+          forma! Cosa ne dici di 18 volte con angoli di 20 gradi tra una riga e l'altra?
       courseD_artist_project4_authored_hint:
         courseD_artist_project4_a: |
           Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
@@ -7516,9 +7528,8 @@ it:
           Here's a set of hexagons with squares:
 
           <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
-        courseD_artist_project4_b: 'You will need to make the second line of shapes
-          in the same way as the first: make one, then repeat it with a jump in between,
-          then repeat that image with rotation.'
+        courseD_artist_project4_b: Per realizzare questa immagine, disegna il primo
+          fiocco di neve, gira, quindi disegna il secondo fiocco.
       courseD_artist_project4_2018_authored_hint:
         courseD_artist_project4_a: |
           Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
@@ -7529,26 +7540,26 @@ it:
           Here's a set of hexagons with squares:
 
           <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
-        courseD_artist_project4_b: To try this, draw your first snowflake, turn, then
-          draw a second snowflake.
+        courseD_artist_project4_b: Per realizzare questa immagine, disegna il primo
+          fiocco di neve, gira, quindi disegna il secondo fiocco.
       courseD_artist_project4a_authored_hint:
         courseD_artist_project4a_a: |
-          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+          Ecco due fiocchi di neve di dimensioni diverse, disegnati uno dopo l'altro (con un angolo di 30 gradi tra uno e l'altro)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_project4a_2018_authored_hint:
         courseD_artist_project4a_a: |
-          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+          Ecco due fiocchi di neve di dimensioni diverse, disegnati uno dopo l'altro (con un angolo di 30 gradi tra uno e l'altro)
 
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_project5_authored_hint:
         courseD_artist_project4_a: |
-          Lines of 2 hexagons and 4 triangles:
+          Righe di 2 esagoni e 4 triangoli:
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_project5_2018_authored_hint:
         courseD_artist_project4_a: |
-          Lines of 2 hexagons and 4 triangles:
+          Righe di 2 esagoni e 4 triangoli:
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: {}
@@ -7824,56 +7835,59 @@ it:
           </block></xml>
       courseD_bee_debugging1_authored_hint:
         courseD_bee_debugging1_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
-        courseD_bee_debugging1_b: Do you see any patterns that could be made more
-          simple using a `repeat` loop?
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_bee_debugging1_b: Riesci a vedere degli schemi che si ripetono e che
+          si possano semplificare con un ciclo `ripeti ... volte`?
       courseD_bee_debugging2_authored_hint:
         courseD_bee_debugging2_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_bee_debugging2_b: Do you see a pattern?  Try using nested loops to
           solve this puzzle.
       courseD_bee_debugging3_authored_hint:
         courseD_bee_debugging3_a: Is there any place where the bee does something
           that doesn't make sense? What happens when you change those blocks?
-        courseD_bee_debugging3_b: Try simplifying the code using nested loops.
+        courseD_bee_debugging3_b: Cerca di semplificare il programma usando dei cicli
+          annidati.
       courseD_bee_debugging4_authored_hint:
-        courseD_bee_debugging4_a: "Try using the debugging process a couple of times
-          in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed,
-          what goes wrong?"
-        courseD_bee_debugging4_b: "If you're having a hard time figuring out how to
-          make the stair step pattern, try tracing it with your finger and saying
-          the commands out loud. \n\nDon't forget to point out the direction of the
-          turns!"
+        courseD_bee_debugging4_a: |-
+          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
+
+          Cos'è che causa il primo problema?
+
+          Una volta risolto questo problema, cos'altro c'è di sbagliato?
+        courseD_bee_debugging4_b: "Se hai difficoltà a capire come realizzare lo schema
+          a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni ad
+          alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
       courseD_bee_debugging5_authored_hint:
         courseD_bee_debugging5_a: |-
-          Start by looking at just the first loop.
+          Inizia guardando solo il primo ciclo.
 
-          What does it do?
+          Che cosa fa?
 
-          What is it supposed to do?
+          Che cosa dovrebbe fare?
 
-          What does that tell you?
-        courseD_bee_debugging5_b: Once you have the first loop the way you want it,
-          what is left over in your code?
+          Che cosa ti suggerisce questo?
+        courseD_bee_debugging5_b: Una volta verificato il funzionamento del primo
+          ciclo, cosa rimane da controllare?
         courseD_bee_debugging5_c: |-
           Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
 
           If not, what is still going wrong?
       courseD_bee_debugging6_authored_hint:
         courseD_bee_debugging6_a: |-
-          Try running through the code using the "Step" button.  Is everything good at the first step?
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
-          How about the second?
+          E al secondo?
 
-          Where do things go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_bee_debugging6_b: It looks like all of the right steps are here, you
           just need more of them.  How can you repeat the `get nectar` and `make honey`
           actions multiple times?
@@ -7884,14 +7898,16 @@ it:
         courseD_bee_debugging7_b: If something needs to happen several times, try
           adding a `repeat` loop.
       courseD_bee_debugging8_authored_hint:
-        courseD_bee_debugging8_a: Do you see a pattern that you can simplify with
-          a loop?
-        courseD_bee_debugging8_b: Try using a nested loop to make this code shorter.
+        courseD_bee_debugging8_a: Vedi uno schema che si ripete e che puoi semplificare
+          con un ciclo?
+        courseD_bee_debugging8_b: Prova ad usare un ciclo annidato per rendere più
+          breve questo programma.
       courseD_bee_debugging9_authored_hint:
         courseD_bee_debugging9_a: There are several ways to solve this problem...but
           they all involve turns!
-        courseD_bee_debugging9_b: Figure out how you would solve the puzzle, then
-          move step-by-step to try to make the code match what is in your head.
+        courseD_bee_debugging9_b: Cerca di capire come dovresti risolvere questo esercizio,
+          quindi vai avanti un passo per volta, facendo corrispondere le istruzioni
+          a ciò che hai in mente.
         courseD_bee_debugging9_c: Envision a giant stair step over the two flowers.
           Can you build this with what's in the workspace and toolbox?
       courseD_bee_debugging9_predict1_authored_hint: {}
@@ -7963,49 +7979,51 @@ it:
           * Make 3 honey
           * Move backward
       courseD_bee_nestedLoops1_authored_hint:
-        courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see
-          what happens line by line.
+        courseD_bee_nestedLoops1_a: Non funziona? Prova ad usare il pulsante "Fai
+          un passo" per vedere cosa succede eseguendo un blocco alla volta.
         courseD_bee_nestedLoops1_b: Try writing code for one side of the square first.
           Can you loop this to get all of the nectar?
-        courseD_bee_nestedLoops1_c: Remember to use the `get nectar` block once you
-          are on a square with a flower.
+        courseD_bee_nestedLoops1_c: Ricordati di usare il blocco `prendi il nettare`
+          ogni volta che capiti su una casella che contiene un fiore.
       courseD_bee_nestedLoops1_2018_authored_hint:
-        courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see
-          what happens line by line.
+        courseD_bee_nestedLoops1_a: Non funziona? Prova ad usare il pulsante "Fai
+          un passo" per vedere cosa succede eseguendo un blocco alla volta.
         courseD_bee_nestedLoops1_b: Try writing code for one side of the square first.
           Can you loop this to get all of the nectar?
-        courseD_bee_nestedLoops1_c: Remember to use the `get nectar` block once you
-          are on a square with a flower.
+        courseD_bee_nestedLoops1_c: Ricordati di usare il blocco `prendi il nettare`
+          ogni volta che capiti su una casella che contiene un fiore.
       courseD_bee_nestedLoops1a_authored_hint:
-        courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see
-          what happens line by line.
-        courseD_bee_nestedLoops1_c: Remember to use the `get nectar` block once you
-          are on a square with a flower.
+        courseD_bee_nestedLoops1_a: Non funziona? Prova ad usare il pulsante "Fai
+          un passo" per vedere cosa succede eseguendo un blocco alla volta.
+        courseD_bee_nestedLoops1_c: Ricordati di usare il blocco `prendi il nettare`
+          ogni volta che capiti su una casella che contiene un fiore.
       courseD_bee_nestedLoops1a_2018_authored_hint:
-        courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see
-          what happens line by line.
-        courseD_bee_nestedLoops1_c: Remember to use the `get nectar` block once you
-          are on a square with a flower.
+        courseD_bee_nestedLoops1_a: Non funziona? Prova ad usare il pulsante "Fai
+          un passo" per vedere cosa succede eseguendo un blocco alla volta.
+        courseD_bee_nestedLoops1_c: Ricordati di usare il blocco `prendi il nettare`
+          ogni volta che capiti su una casella che contiene un fiore.
       courseD_bee_nestedLoops2_authored_hint:
-        courseD_bee_nestedLoops2_a: To solve this puzzle, you will need to nest one
-          `repeat` loop inside of another.
-        courseD_bee_nestedLoops2_b: Can't figure out where to put the loops? Try writing
-          the code step-by-step and look for a pattern.
-        courseD_bee_nestedLoops2_c: Remember you can put more than one block inside
-          of a loop.
+        courseD_bee_nestedLoops2_a: Per risolvere questo esercizio, devi annidare
+          un ciclo `ripeti ... volte` all'interno di un altro.
+        courseD_bee_nestedLoops2_b: Non riesci a capire dove posizionare i cicli?
+          Prova a scrivere il codice un passo per volta e cerca di individuare uno
+          schema.
+        courseD_bee_nestedLoops2_c: Ricorda che puoi mettere più di un blocco all'interno
+          di un ciclo.
       courseD_bee_nestedLoops2_2018_authored_hint:
-        courseD_bee_nestedLoops2_a: To solve this puzzle, you will need to nest one
-          `repeat` loop inside of another.
-        courseD_bee_nestedLoops2_b: Can't figure out where to put the loops? Try writing
-          the code on paper step-by-step and look for a pattern.
-        courseD_bee_nestedLoops2_c: Remember you can put more than one block inside
-          of a loop.
+        courseD_bee_nestedLoops2_a: Per risolvere questo esercizio, devi annidare
+          un ciclo `ripeti ... volte` all'interno di un altro.
+        courseD_bee_nestedLoops2_b: Non riesci a capire dove posizionare i cicli?
+          Prova a scrivere il codice un passo per volta e cerca di individuare uno
+          schema.
+        courseD_bee_nestedLoops2_c: Ricorda che puoi mettere più di un blocco all'interno
+          di un ciclo.
       courseD_bee_nestedLoops2_predict1_authored_hint: {}
       courseD_bee_nestedLoops2_predict1_2018_authored_hint: {}
       courseD_bee_nestedLoops3_authored_hint:
-        grade4_bee_nestedLoops1_a: If you don't understand how to use nested loops
-          here, try writing out the instructions step by step on a piece of paper.  Circle
-          the patterns that you see.
+        grade4_bee_nestedLoops1_a: Se non riesci subito a capire come usare i cicli
+          annidati, prova a scrivere le singole istruzioni su un foglio di carta.
+          Poi cerchia gli schemi ricorrenti.
       courseD_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops4_a: Try building your code line by line and see if
           you can spot the places where a repeat will make the code shorter!
@@ -8022,10 +8040,11 @@ it:
         courseD_maze_nestedLoops6_c: It will take two sets of nested `repeat` loops
           to solve this puzzle.
       courseD_bee_nestedLoops7_authored_hint:
-        courseD_bee_nestedLoops7_a: You will need to repeat `get nectar` inside of
-          another `repeat` that also has the `move forward` block inside of it.
-        courseD_bee_nestedLoops7_b: You will need to use all three of the available
-          `repeat` blocks to solve this puzzle.
+        courseD_bee_nestedLoops7_a: Devi ripetere il blocco `prendi il nettare` all'interno
+          di un altro blocco`ripeti... volte` che ha al suo interno anche il blocco
+          `vai avanti`.
+        courseD_bee_nestedLoops7_b: Devi usare tutti e tre i blocchi `ripeti... volte`
+          disponibili per risolvere l'esercizio.
         courseD_bee_nestedLoops7_c: |
           Nest your blocks three deep, like this:
 
@@ -8036,10 +8055,11 @@ it:
           - move forward
           - turn right
       courseD_bee_nestedLoops7_2018_authored_hint:
-        courseD_bee_nestedLoops7_a: You will need to repeat `get nectar` inside of
-          another `repeat` that also has the `move forward` block inside of it.
-        courseD_bee_nestedLoops7_b: You will need to use all three of the available
-          `repeat` blocks to solve this puzzle.
+        courseD_bee_nestedLoops7_a: Devi ripetere il blocco `prendi il nettare` all'interno
+          di un altro blocco`ripeti... volte` che ha al suo interno anche il blocco
+          `vai avanti`.
+        courseD_bee_nestedLoops7_b: Devi usare tutti e tre i blocchi `ripeti... volte`
+          disponibili per risolvere l'esercizio.
         courseD_bee_nestedLoops7_c: |
           Nest your blocks three deep, like this:
 
@@ -8179,83 +8199,87 @@ it:
       courseD_bounce_events_template_2018_authored_hint: {}
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
-        courseD_collector_debugging1_b: Do you see any patterns that could be made
-          more simple using a `repeat` loop?
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_collector_debugging1_b: Riesci a vedere degli schemi che si ripetono
+          e che si possano semplificare con un ciclo `ripeti ... volte`?
         courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick
           up treasure once you have moved to it.  '
       courseD_collector_debugging10_predict1_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but
           they all involve turns!
-        courseD_collector_debugging9_b: Figure out how you would solve the puzzle,
-          then move step-by-step to try to make the code match what is in your head.
+        courseD_collector_debugging9_b: Cerca di capire come dovresti risolvere questo
+          esercizio, quindi vai avanti un passo per volta, facendo corrispondere le
+          istruzioni a ciò che hai in mente.
       courseD_collector_debugging10_predict1_2018_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but
           they all involve turns!
-        courseD_collector_debugging9_b: Figure out how you would solve the puzzle,
-          then move step-by-step to try to make the code match what is in your head.
+        courseD_collector_debugging9_b: Cerca di capire come dovresti risolvere questo
+          esercizio, quindi vai avanti un passo per volta, facendo corrispondere le
+          istruzioni a ciò che hai in mente.
       courseD_collector_debugging1_2018_authored_hint:
         courseD_collector_debugging1_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
-        courseD_collector_debugging1_b: Do you see any patterns that could be made
-          more simple using a `repeat` loop?
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_collector_debugging1_b: Riesci a vedere degli schemi che si ripetono
+          e che si possano semplificare con un ciclo `ripeti ... volte`?
         courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick
           up treasure once you have moved to it.  '
       courseD_collector_debugging1a_authored_hint:
         courseD_collector_debugging1_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick
           up treasure once you have moved to it.  '
       courseD_collector_debugging1a_2018_authored_hint:
         courseD_collector_debugging1_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging1_c: 'Remember to use the `collect` block to pick
           up treasure once you have moved to it.  '
       courseD_collector_debugging2_authored_hint:
         courseD_collector_debugging2_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
-        courseD_collector_debugging2_b: Do you see any patterns that could be made
-          more simple using a `repeat` loop?
-        courseD_collector_debugging2_c: Try writing code for one side of this U shape.
-          Can you repeat this to collect treasure on the other two sides?
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_collector_debugging2_b: Riesci a vedere degli schemi che si ripetono
+          e che si possano semplificare con un ciclo `ripeti ... volte`?
+        courseD_collector_debugging2_c: Prova a raccogliere i diamanti su un lato
+          di questo schema. Puoi ripeterlo per raccogliere i dimanti su gli altri
+          due lati?
       courseD_collector_debugging2_2018_authored_hint:
         courseD_collector_debugging2_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
-        courseD_collector_debugging2_b: Do you see any patterns that could be made
-          more simple using a `repeat` loop?
-        courseD_collector_debugging2_c: Try collecting treasure for one side of this
-          pattern. Can you repeat this to collect treasure on the other two sides?
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_collector_debugging2_b: Riesci a vedere degli schemi che si ripetono
+          e che si possano semplificare con un ciclo `ripeti ... volte`?
+        courseD_collector_debugging2_c: Prova a raccogliere i diamanti su un lato
+          di questo schema. Puoi ripeterlo per raccogliere i dimanti su gli altri
+          due lati?
       courseD_collector_debugging2a_authored_hint:
         courseD_collector_debugging2a_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging2a_c: |-
           What happens?
 
@@ -8264,11 +8288,11 @@ it:
           What does that tell you?
       courseD_collector_debugging2a_2018_authored_hint:
         courseD_collector_debugging2a_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging2a_c: |-
           What happens?
 
@@ -8276,77 +8300,87 @@ it:
 
           What does that tell you?
       courseD_collector_debugging3_authored_hint:
-        courseD_collector_debugging3_a: Is there any place where Laurel does something
-          that doesn't make sense? What happens when you change those blocks?
-        courseD_collector_debugging3_b: Try simplifying the code using nested loops.
+        courseD_collector_debugging3_a: In quale punto del programma Laurel fa qualcosa
+          di sbagliato? Cosa succede quando correggi questi blocchi?
+        courseD_collector_debugging3_b: Cerca di semplificare il programma usando
+          dei cicli annidati.
       courseD_collector_debugging3_2018_authored_hint:
-        courseD_collector_debugging3_a: Is there any place where Laurel does something
-          that doesn't make sense? What happens when you change those blocks?
-        courseD_collector_debugging3_b: Try simplifying the code using nested loops.
+        courseD_collector_debugging3_a: In quale punto del programma Laurel fa qualcosa
+          di sbagliato? Cosa succede quando correggi questi blocchi?
+        courseD_collector_debugging3_b: Cerca di semplificare il programma usando
+          dei cicli annidati.
       courseD_collector_debugging3a_authored_hint:
-        courseD_collector_debugging3_a: Is there any place where Laurel does something
-          that doesn't make sense? What happens when you change those blocks?
+        courseD_collector_debugging3_a: In quale punto del programma Laurel fa qualcosa
+          di sbagliato? Cosa succede quando correggi questi blocchi?
       courseD_collector_debugging3a_2018_authored_hint:
-        courseD_collector_debugging3_a: Is there any place where Laurel does something
-          that doesn't make sense? What happens when you change those blocks?
+        courseD_collector_debugging3_a: In quale punto del programma Laurel fa qualcosa
+          di sbagliato? Cosa succede quando correggi questi blocchi?
       courseD_collector_debugging4_authored_hint:
-        courseD_collector_debugging4_a: "Try using the debugging process a couple
-          of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem
-          is fixed, what goes wrong?"
-        courseD_collector_debugging4_b: "If you're having a hard time figuring out
-          how to make the stair step pattern, try tracing it with your finger and
-          saying the commands out loud. \n\nDon't forget to point out the direction
-          of the turns!"
-        courseD_collector_debugging4_c: This loop is only missing one block. Can you
-          figure out which one?
+        courseD_collector_debugging4_a: |-
+          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
+
+          Cos'è che causa il primo problema?
+
+          Una volta risolto questo problema, cos'altro c'è di sbagliato?
+        courseD_collector_debugging4_b: "Se hai difficoltà a capire come realizzare
+          lo schema a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni
+          ad alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
+        courseD_collector_debugging4_c: In questo ciclo manca solo un blocco. Riesci
+          a capire quale?
       courseD_collector_debugging4_2018_authored_hint:
-        courseD_collector_debugging4_a: "Try using the debugging process a couple
-          of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem
-          is fixed, what goes wrong?"
-        courseD_collector_debugging4_b: "If you're having a hard time figuring out
-          how to make the stair step pattern, try tracing it with your finger and
-          saying the commands out loud. \n\nDon't forget to point out the direction
-          of the turns!"
-        courseD_collector_debugging4_c: This loop is only missing one block. Can you
-          figure out which one?
+        courseD_collector_debugging4_a: |-
+          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
+
+          Cos'è che causa il primo problema?
+
+          Una volta risolto questo problema, cos'altro c'è di sbagliato?
+        courseD_collector_debugging4_b: "Se hai difficoltà a capire come realizzare
+          lo schema a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni
+          ad alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
+        courseD_collector_debugging4_c: In questo ciclo manca solo un blocco. Riesci
+          a capire quale?
       courseD_collector_debugging4a_authored_hint:
-        courseD_collector_debugging4_a: "Try using the debugging process a couple
-          of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem
-          is fixed, what goes wrong?"
-        courseD_collector_debugging4_b: "If you're having a hard time figuring out
-          how to make the stair step pattern, try tracing it with your finger and
-          saying the commands out loud. \n\nDon't forget to point out the direction
-          of the turns!"
+        courseD_collector_debugging4_a: |-
+          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
+
+          Cos'è che causa il primo problema?
+
+          Una volta risolto questo problema, cos'altro c'è di sbagliato?
+        courseD_collector_debugging4_b: "Se hai difficoltà a capire come realizzare
+          lo schema a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni
+          ad alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
       courseD_collector_debugging4a_2018_authored_hint:
-        courseD_collector_debugging4_a: "Try using the debugging process a couple
-          of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem
-          is fixed, what goes wrong?"
-        courseD_collector_debugging4_b: "If you're having a hard time figuring out
-          how to make the stair step pattern, try tracing it with your finger and
-          saying the commands out loud. \n\nDon't forget to point out the direction
-          of the turns!"
+        courseD_collector_debugging4_a: |-
+          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
+
+          Cos'è che causa il primo problema?
+
+          Una volta risolto questo problema, cos'altro c'è di sbagliato?
+        courseD_collector_debugging4_b: "Se hai difficoltà a capire come realizzare
+          lo schema a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni
+          ad alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
       courseD_collector_debugging5_authored_hint:
         courseD_collector_debugging5_a: |-
-          Start by looking at just the first loop.
+          Inizia guardando solo il primo ciclo.
 
-          What does it do?
+          Che cosa fa?
 
-          What is it supposed to do?
+          Che cosa dovrebbe fare?
 
-          What does that tell you?
-        courseD_collector_debugging5_b: Once you have the first loop the way you want
-          it, what is left over in your code?
+          Che cosa ti suggerisce questo?
+        courseD_collector_debugging5_b: Una volta verificato il funzionamento del
+          primo ciclo, cosa rimane da controllare?
       courseD_collector_debugging5_2018_authored_hint:
         courseD_collector_debugging5_a: |-
-          Start by looking at just the first loop.
+          Inizia guardando solo il primo ciclo.
 
-          What does it do?
+          Che cosa fa?
 
-          What is it supposed to do?
+          Che cosa dovrebbe fare?
 
-          What does that tell you?
-        courseD_collector_debugging5_b: Once you have the first loop the way you want
-          it, what is left over in your code?
+          Che cosa ti suggerisce questo?
+        courseD_collector_debugging5_b: Una volta verificato il funzionamento del
+          primo ciclo, cosa rimane da controllare?
       courseD_collector_debugging5a_authored_hint:
         courseD_collector_debugging5a_a: |-
           What does it do?
@@ -8367,75 +8401,77 @@ it:
           collected, what is left over in your code?
       courseD_collector_debugging6_authored_hint:
         courseD_collector_debugging6_a: |-
-          Try running through the code using the "Step" button.  Is everything good at the first step?
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
-          How about the second?
+          E al secondo?
 
-          Where do things go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging6_b: It looks like all of the right steps are here,
           you just need more of them.  How can you repeat the `collect` action multiple
           times?
       courseD_collector_debugging6_2018_authored_hint:
         courseD_collector_debugging6_a: |-
-          Try running through the code using the "Step" button.  Is everything good at the first step?
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
-          How about the second?
+          E al secondo?
 
-          Where do things go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging6_b: It looks like all of the right steps are here,
           you just need more of them.  How can you repeat the `collect` action multiple
           times?
       courseD_collector_debugging6a_authored_hint:
         courseD_collector_debugging6_a: |-
-          Try running through the code using the "Step" button.  Is everything good at the first step?
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
-          How about the second?
+          E al secondo?
 
-          Where do things go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging6_b: It looks like all of the blocks you need are
           in the workspace. Try clicking "start over" if things get too confusing.
       courseD_collector_debugging6a_2018_authored_hint:
         courseD_collector_debugging6_a: |-
-          Try running through the code using the "Step" button.  Is everything good at the first step?
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
-          How about the second?
+          E al secondo?
 
-          Where do things go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging6_b: It looks like all of the blocks you need are
           in the workspace. Try clicking "start over" if things get too confusing.
       courseD_collector_debugging7_authored_hint:
         courseD_collector_debugging7_a: |-
-          Try running through the code using the "Step" button.  Is everything good at the first step?
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
-          How about the second?
+          E al secondo?
 
-          Where do things go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_collector_debugging7_b: If something needs to happen several times,
           try adding a `repeat` loop.
         courseD_collector_debugging7_c: If you're having trouble, try writing the
           steps on a piece of paper and then putting the blocks into that order.
       courseD_collector_debugging8_authored_hint:
-        courseD_collector_debugging8_a: Do you see a pattern that you can simplify
-          with a loop?
-        courseD_collector_debugging8_b: Try using a nested loop to make this code
-          shorter.
+        courseD_collector_debugging8_a: Vedi uno schema che si ripete e che puoi semplificare
+          con un ciclo?
+        courseD_collector_debugging8_b: Prova ad usare un ciclo annidato per rendere
+          più breve questo programma.
       courseD_collector_debugging8_2018_authored_hint:
-        courseD_collector_debugging8_a: Do you see a pattern that you can simplify
-          with a loop?
-        courseD_collector_debugging8_b: Try using a nested loop to make this code
-          shorter.
+        courseD_collector_debugging8_a: Vedi uno schema che si ripete e che puoi semplificare
+          con un ciclo?
+        courseD_collector_debugging8_b: Prova ad usare un ciclo annidato per rendere
+          più breve questo programma.
       courseD_collector_debugging8a_authored_hint: {}
       courseD_collector_debugging8a_2018_authored_hint: {}
       courseD_collector_debugging9_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but
           they all involve turns!
-        courseD_collector_debugging9_b: Figure out how you would solve the puzzle,
-          then move step-by-step to try to make the code match what is in your head.
+        courseD_collector_debugging9_b: Cerca di capire come dovresti risolvere questo
+          esercizio, quindi vai avanti un passo per volta, facendo corrispondere le
+          istruzioni a ciò che hai in mente.
       courseD_collector_debugging9_2018_authored_hint:
         courseD_collector_debugging9_a: There are several ways to solve this problem...but
           they all involve turns!
-        courseD_collector_debugging9_b: Figure out how you would solve the puzzle,
-          then move step-by-step to try to make the code match what is in your head.
+        courseD_collector_debugging9_b: Cerca di capire come dovresti risolvere questo
+          esercizio, quindi vai avanti un passo per volta, facendo corrispondere le
+          istruzioni a ciò che hai in mente.
       courseD_collector_debugging9a_authored_hint: {}
       courseD_collector_debugging9a_2018_authored_hint: {}
       courseD_collector_debugging_challenge2_authored_hint:
@@ -8721,7 +8757,7 @@ it:
         courseD_collector_ramp8_b: Se vuoi semplificare il tuo programma, puoi mettere
           un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
       courseD_collector_ramp9_authored_hint:
-        courseD_collector_ramp9_a: Inizia a far muovere Laurel verso il primo gruppo
+        courseD_collector_ramp9_a: Inizia a far muovere Laura verso il primo gruppo
           di diamanti, quindi raccoglili. Puoi ripetere questa sequenza per prendere
           il secondo gruppo?
         courseD_collector_ramp9_b: Se vuoi semplificare il tuo programma, puoi mettere
@@ -8729,55 +8765,59 @@ it:
       courseD_collector_until_challenge1_authored_hint: {}
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
-        courseD_debugging_1_b: Do you see any patterns that could be made more simple
-          using a `repeat` loop?
+          Dov'è che qualcosa comincia a non funzionare?
+        courseD_debugging_1_b: Riesci a vedere degli schemi che si ripetono e che
+          si possano semplificare con un ciclo `ripeti ... volte`?
       courseD_debugging_2_authored_hint:
         courseD_debugging_2_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_debugging_2_b: Do you see a pattern?  Try using nested loops to solve
           this puzzle.
       courseD_debugging_3_authored_hint:
         courseD_debugging_3_a: Is there any place where the bee does something that
           doesn't make sense? What happens when you change those blocks?
-        courseD_debugging_3_b: Try simplifying the code using nested loops.
+        courseD_debugging_3_b: Cerca di semplificare il programma usando dei cicli
+          annidati.
       courseD_debugging_4_authored_hint:
-        courseD_debugging_4_a: "Try using the debugging process a couple of times
-          in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed,
-          what goes wrong?"
-        courseD_debugging_4_b: "If you're having a hard time figuring out how to make
-          the stair step pattern, try tracing it with your finger and saying the commands
-          out loud. \n\nDon't forget to point out the direction of the turns!"
+        courseD_debugging_4_a: |-
+          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
+
+          Cos'è che causa il primo problema?
+
+          Una volta risolto questo problema, cos'altro c'è di sbagliato?
+        courseD_debugging_4_b: "Se hai difficoltà a capire come realizzare lo schema
+          a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni ad
+          alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
       courseD_debugging_5_authored_hint:
         courseD_debugging_5_a: |-
-          Start by looking at just the first loop.
+          Inizia guardando solo il primo ciclo.
 
-          What does it do?
+          Che cosa fa?
 
-          What is it supposed to do?
+          Che cosa dovrebbe fare?
 
-          What does that tell you?
-        courseD_debugging_5_b: Once you have the first loop the way you want it, what
-          is left over in your code?
+          Che cosa ti suggerisce questo?
+        courseD_debugging_5_b: Una volta verificato il funzionamento del primo ciclo,
+          cosa rimane da controllare?
         courseD_debugging_5_c: |-
           Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
 
           If not, what is still going wrong?
       courseD_debugging_6_authored_hint:
         courseD_debugging_6_a: |-
-          Try running through the code using the "Step" button.  Is everything good at the first step?
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
-          How about the second?
+          E al secondo?
 
-          Where do things go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         courseD_debugging_6_b: It looks like all of the right steps are here, you
           just need more of them.  How can you repeat the `get nectar` and `make honey`
           actions multiple times?
@@ -8785,12 +8825,12 @@ it:
       courseD_farmer_condLoops1_authored_hint:
         courseD_farmer_condLoops1_a: Saranno necessari 5 controlli, usa un ciclo `ripeti
           ... volte`.
-        courseD_farmer_condLoops1_b: Se non usi un blocco 'se c'è una pannocchia'
+        courseD_farmer_condLoops1_b: Se non usi un blocco 'se sei su una pannocchia'
           rischi di tentare di raccogliere qualcosa che non c'è!
       courseD_farmer_condLoops1_2018_authored_hint:
         courseD_farmer_condLoops1_a: Saranno necessari 5 controlli, usa un ciclo `ripeti
           ... volte`.
-        courseD_farmer_condLoops1_b: Se non usi un blocco 'se c'è una pannocchia'
+        courseD_farmer_condLoops1_b: Se non usi un blocco 'se sei su una pannocchia'
           rischi di tentare di raccogliere qualcosa che non c'è!
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: Il modo migliore per risolvere questo esercizio,
@@ -8800,10 +8840,10 @@ it:
         courseD_farmer_condLoops2_c: |-
           L'insieme di istruzioni condizionali dovrebbe funzionare così:
 
-          - se c'è una pannocchia
+          - se sei su una pannocchia
            - prendi la pannocchia
           - altrimenti
-           - se c'è la lattuga
+           - se sei su una lattuga
             \t- prendi la lattuga
 
           Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
@@ -8815,10 +8855,10 @@ it:
         courseD_farmer_condLoops2_c: |-
           L'insieme di istruzioni condizionali dovrebbe funzionare così:
 
-          - se c'è una pannocchia
+          - se sei su una pannocchia
            - prendi la pannocchia
           - altrimenti
-           - se c'è la lattuga
+           - se sei su una lattuga
             \t- prendi la lattuga
 
           Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
@@ -8838,9 +8878,9 @@ it:
           `se/altrimenti` e una semplice istruzione `se`.
       courseD_farmer_condLoops4_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
-          Nessuno sa quanti cespi di lattuga crescono da ogni pianta.
+          Nessuno sa quante lattughe crescono da ogni pianta.
 
-          Usa il ciclo `mentre c'è la lattuga` per continuare a raccogliere mentre ci sono ancora cespi disponibili.
+          Usa il ciclo `mentre sei su una lattuga` per continuare a raccogliere mentre ci sono ancora lattughe disponibili.
         grade3_RunningFarm_4courseD_farmer_condLoops4_b: Il ciclo `mentre` gestirà
           correttamente anche le caselle vuote! Visto che non c'è lattuga, non verrà
           raccolta ed il codice passerà oltre.
@@ -8849,9 +8889,9 @@ it:
           ... volte`.
       courseD_farmer_condLoops4_2018_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
-          Nessuno sa quanti cespi di lattuga crescono da ogni pianta.
+          Nessuno sa quante lattughe crescono da ogni pianta.
 
-          Usa il ciclo `mentre c'è la lattuga` per continuare a raccogliere mentre ci sono ancora cespi disponibili.
+          Usa il ciclo `mentre sei su una lattuga` per continuare a raccogliere mentre ci sono ancora lattughe disponibili.
         grade3_RunningFarm_4courseD_farmer_condLoops4_b: Il ciclo `mentre` gestirà
           correttamente anche le caselle vuote! Visto che non c'è lattuga, non verrà
           raccolta ed il codice passerà oltre.
@@ -8860,23 +8900,27 @@ it:
           ... volte`.
       courseD_farmer_condLoops4a_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
-          Nessuno sa quanti cespi di lattuga crescono da ogni pianta.
+          Nessuno sa quante lattughe crescono da ogni pianta.
 
-          Usa il ciclo `mentre c'è la lattuga` per continuare a raccogliere mentre ci sono ancora cespi disponibili.
+          Usa il ciclo `mentre sei su una lattuga` per continuare a raccogliere mentre ci sono ancora lattughe disponibili.
       courseD_farmer_condLoops5_authored_hint:
-        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che ci sono
-          delle zucche`. Riesci a intuire come usarlo in questo esercizio?'
+        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che sei
+          su una zucca`, che ripete tutti i blocchi che contiene per tutto il tempo
+          in cui NON sei su una zucca e si interrompe quando finalmente arrivi ad
+          una zucca. Riesci a intuire come usarlo in questo esercizio?'
         courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
           una lattuga in ogni casella. Usa un ciclo `mentre` per raccoglie tutto!
       courseD_farmer_condLoops5_2018_authored_hint:
-        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che ci sono
-          delle zucche`. Riesci a intuire come usarlo in questo esercizio?'
+        courseD_farmer_condLoops5_a: 'C''è un nuovo ciclo: `ripeti fino a che sei
+          su una zucca`, che ripete tutti i blocchi che contiene per tutto il tempo
+          in cui NON sei su una zucca e si interrompe quando finalmente arrivi ad
+          una zucca. Riesci a intuire come usarlo in questo esercizio?'
         courseD_farmer_condLoops5_b: Ci può essere più di una pannocchia o più di
           una lattuga in ogni casella. Usa un ciclo `mentre` per raccoglie tutto!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Usa un ciclo `mentre c'è una pannocchia` per
-          essere sicuro di raccogliere tutto il mais lungo la strada. Questo blocco
-          non farà fare nulla se non c'è alcuna pannocchia da prendere.
+        courseD_farmer_condLoops6_a: Usa un ciclo `mentre sei su una pannocchia` per
+          essere sicuro di raccogliere tutte le pannocchie lungo la strada. Questo
+          blocco non farà fare nulla se non c'è alcuna pannocchia da prendere.
         courseD_farmer_condLoops6_b: Controlla `se c'è strada in avanti` prima di
           fare il prossimo passo!
       courseD_farmer_condLoops6_2018_authored_hint:
@@ -9185,49 +9229,55 @@ it:
         courseD_bee_nested_loops_challenge1_c: The shortest program that reaches all
           the treasure uses only one `collect` block and two turns.
       courseD_maze_nestedLoops3_authored_hint:
-        courseD_maze_nestedLoops3_a: To solve this puzzle, you will need to "nest"
-          one `repeat` loop inside of another `repeat` loop.
-        courseD_maze_nestedLoops3_b: Can't figure out where to put the loops? Try
-          writing the code step-by-step and look for a pattern.
-        courseD_maze_nestedLoops3_c: Try writing code for one straight section of
-          path and a turn. Can you repeat this to get to the sunflower?
+        courseD_maze_nestedLoops3_a: Per risolvere questo esercizio, devi annidare
+          un ciclo `ripeti... volte` all'interno di un altro ciclo `ripeti... volte`.
+        courseD_maze_nestedLoops3_b: Non riesci a capire dove posizionare i cicli?
+          Prova a scrivere il codice un passo per volta e cerca di individuare uno
+          schema.
+        courseD_maze_nestedLoops3_c: Prova a scrivere il codice per un pezzo dritto
+          di percorso ed una curva. Puoi ripeterlo per arrivare al girasole?
       courseD_maze_nestedLoops3_2018_authored_hint:
-        courseD_maze_nestedLoops3_a: To solve this puzzle, you will need to "nest"
-          one `repeat` loop inside of another `repeat` loop.
-        courseD_maze_nestedLoops3_b: Can't figure out where to put the loops? Try
-          writing the code step-by-step and look for a pattern.
-        courseD_maze_nestedLoops3_c: Try writing code for one straight piece of path
-          and a turn. Can you repeat this to get to the sunflower?
+        courseD_maze_nestedLoops3_a: Per risolvere questo esercizio, devi annidare
+          un ciclo `ripeti... volte` all'interno di un altro ciclo `ripeti... volte`.
+        courseD_maze_nestedLoops3_b: Non riesci a capire dove posizionare i cicli?
+          Prova a scrivere il codice un passo per volta e cerca di individuare uno
+          schema.
+        courseD_maze_nestedLoops3_c: Prova a scrivere il codice per un pezzo dritto
+          di percorso ed una curva. Puoi ripeterlo per arrivare al girasole?
       courseD_maze_nestedLoops4_authored_hint:
         courseD_maze_nestedLoops4_a: |-
-          Try using this path through the maze.
-
-          ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
-        courseD_maze_nestedLoops4_b: If the loop pattern is hard to see, try coding
-          it all out first and see what things repeat over and over before you put
-          the loops in.
-        courseD_maze_nestedLoops4_c: Try using one `repeat` loop inside of another
-          to cut down on the amount of code you need.
-      courseD_maze_nestedLoops4_2018_authored_hint:
-        courseD_maze_nestedLoops4_a: |-
-          Try using this path through the maze.
+          Prova ad usare questo percorso attaverso il labirinto.
 
           ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
-        courseD_maze_nestedLoops4_b: If the loop pattern is hard to see, try coding
-          it all out first and see what code repeats over and over before you put
-          the loops in.
-        courseD_maze_nestedLoops4_c: Try using one `repeat` loop inside of another
-          to cut down on the amount of code you need.
+        courseD_maze_nestedLoops4_b: Se fai fatica a capire lo schema che si ripete,
+          prova prima a risolvere l'esercizio usando tutti i singoli blocchi, poi
+          cerca di vedere quali sono le parti che si ripetono per inserirle nel blocco
+          `ripeti... volte`.
+        courseD_maze_nestedLoops4_c: Prova ad usare un ciclo `ripeti... volte`all'interno
+          di un altro per ridurre la quantità di codice che ti serve.
+      courseD_maze_nestedLoops4_2018_authored_hint:
+        courseD_maze_nestedLoops4_a: |-
+          Prova ad usare questo percorso attaverso il labirinto.
+
+          ![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)
+        courseD_maze_nestedLoops4_b: Se fai fatica a capire lo schema che si ripete,
+          prova prima a risolvere l'esercizio usando tutti i singoli blocchi, poi
+          cerca di vedere quali sono le parti che si ripetono per inserirle nel blocco
+          `ripeti... volte`.
+        courseD_maze_nestedLoops4_c: Prova ad usare un ciclo `ripeti... volte`all'interno
+          di un altro per ridurre la quantità di codice che ti serve.
       courseD_maze_nestedLoops5_authored_hint:
-        courseD_maze_nestedLoops5_a: Look for a stair-step pattern in this maze to
-          find where a nested loop can be used.
-        courseD_maze_nestedLoops5_b: Can't figure out where to put the loops? Try
-          writing the code step-by-step and look for a pattern.
+        courseD_maze_nestedLoops5_a: Cerca di individuare uno schema a scalinata in
+          questo labirinto per capire dove puoi usare un ciclo annidato.
+        courseD_maze_nestedLoops5_b: Non riesci a capire dove posizionare i cicli?
+          Prova a scrivere il codice un passo per volta e cerca di individuare uno
+          schema.
       courseD_maze_nestedLoops5_2018_authored_hint:
-        courseD_maze_nestedLoops5_a: Look for a stair-step pattern in this maze to
-          find where a nested loop can be used.
-        courseD_maze_nestedLoops5_b: Can't figure out where to put the loops? Try
-          writing the code step-by-step and look for a pattern.
+        courseD_maze_nestedLoops5_a: Cerca di individuare uno schema a scalinata in
+          questo labirinto per capire dove puoi usare un ciclo annidato.
+        courseD_maze_nestedLoops5_b: Non riesci a capire dove posizionare i cicli?
+          Prova a scrivere il codice un passo per volta e cerca di individuare uno
+          schema.
       courseD_maze_nestedLoops6_authored_hint:
         courseD_maze_nestedLoops6_a: If you are stuck, try writing out the code out
           on paper without loops first and look for patterns.
@@ -9735,72 +9785,72 @@ it:
           ed eseguire il codice per vedere cosa accade, anche se non pensi di aver
           ancora risolto l'esercizio.
       courseE_artist_concept1_authored_hint:
-        courseE_artist_concept1_a: The hexagons have 50 pixel sides and 60 degree
-          turns to the right.
-        courseE_artist_concept1_b: Try using a function here so you don't have to
-          write the code for a hexagon over and over again.
-        courseE_artist_concept1_c: Use the `set width` block before each function
-          call to change the pen width.
+        courseE_artist_concept1_a: Gli esagoni hanno lati di 50 pixel e si disegnano
+          con angoli di 60 gradi verso destra.
+        courseE_artist_concept1_b: Prova ad usare una funzione, così non devi riscrivere
+          più volte il codice per disegnare un esagono.
+        courseE_artist_concept1_c: Per cambiare lo spessore della penna, usa il blocco
+          `imposta la larghezza` prima di disegnare ogni esagono.
       courseE_artist_concept1_2018_authored_hint:
-        courseE_artist_concept1_a: The hexagons have 50 pixel sides and 60 degree
-          turns to the right.
-        courseE_artist_concept1_b: Try using a function here so you don't have to
-          write the code for a hexagon over and over again.
-        courseE_artist_concept1_c: Use the `set width` block before each function
-          call to change the pen width.
+        courseE_artist_concept1_a: Gli esagoni hanno lati di 50 pixel e si disegnano
+          con angoli di 60 gradi verso destra.
+        courseE_artist_concept1_b: Prova ad usare una funzione, così non devi riscrivere
+          più volte il codice per disegnare un esagono.
+        courseE_artist_concept1_c: Per cambiare lo spessore della penna, usa il blocco
+          `imposta la larghezza` prima di disegnare ogni esagono.
       courseE_artist_concept4_authored_hint:
-        courseE_artist_concept4_a: There are several ways to solve this puzzle. Can
-          you make a plan?
-        courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What
-          comes next?
-        courseE_artist_concept4_c: After drawing a line of squares, you can either
-          turn around and draw another line of squares going left, or you can jump
-          back to the left side of the figure to draw another line of squares going
-          right. Which do you prefer?
+        courseE_artist_concept4_a: Ci sono diversi modi per risolvere questo esercizio.
+          Provi a fare un piano?
+        courseE_artist_concept4_b: Provare prima a disegnare un quadrato. Poi realizza
+          una linea di quadrati. Infine cosa manca?
+        courseE_artist_concept4_c: Dopo aver disegnato una linea di quadrati, potresti
+          girarti e disegnarne un'altra verso sinistra oppure fare un bel salto indietro
+          fino al lato sinistro e disegnare un'altra riga di quadrati verso destra.
+          Che metodo preferisci?
       courseE_artist_concept4_2018_authored_hint:
-        courseE_artist_concept4_a: There are several ways to solve this puzzle. Can
-          you make a plan?
-        courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What
-          comes next?
-        courseE_artist_concept4_c: After drawing a line of squares, you can either
-          turn around and draw another line of squares going left, or you can jump
-          back to the left side of the figure to draw another line of squares going
-          right. Which do you prefer?
+        courseE_artist_concept4_a: Ci sono diversi modi per risolvere questo esercizio.
+          Provi a fare un piano?
+        courseE_artist_concept4_b: Provare prima a disegnare un quadrato. Poi realizza
+          una linea di quadrati. Infine cosa manca?
+        courseE_artist_concept4_c: Dopo aver disegnato una linea di quadrati, potresti
+          girarti e disegnarne un'altra verso sinistra oppure fare un bel salto indietro
+          fino al lato sinistro e disegnare un'altra riga di quadrati verso destra.
+          Che metodo preferisci?
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: Nel primo ciclo, per disegnare il mezzo
-          esagono, l'artista percorre tratti di <b>30 pixel</b> invece di 40 e gira
-          a destra di <b>60 gradi</b>.
+          esagono, l'artista percorre tratti di **30 pixel** e gira a destra di **60
+          gradi**.
         courseE_artist_concept_challenge1_b: Nel secondo ciclo, per disegnare i due
-          lati del triangolo, l'artista percorre tratti di <b>80 pixel</b> e gira
-          a destra di <b>120 gradi</b>.
+          lati del triangolo, l'artista percorre tratti di **80 pixel** e gira a destra
+          di **120 gradi**.
         courseE_artist_concept_challenge1_c: |-
-          This is the design you want to repeat to make the full shape:
+          Questo è lo schema che devi ripetere per realizzare la figura completa:
 
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge1_2018_authored_hint:
         courseE_artist_concept_challenge1_a: Nel primo ciclo, per disegnare il mezzo
-          esagono, l'artista percorre tratti di <b>30 pixel</b> invece di 40 e gira
-          a destra di <b>60 gradi</b>.
+          esagono, l'artista percorre tratti di **30 pixel** e gira a destra di **60
+          gradi**.
         courseE_artist_concept_challenge1_b: Nel secondo ciclo, per disegnare i due
-          lati del triangolo, l'artista percorre tratti di <b>80 pixel</b> e gira
-          a destra di <b>120 gradi</b>.
+          lati del triangolo, l'artista percorre tratti di **80 pixel** e gira a destra
+          di **120 gradi**.
         courseE_artist_concept_challenge1_c: |-
-          This is the design you want to repeat to make the full shape:
+          Questo è lo schema che devi ripetere per realizzare la figura completa:
 
           ![](https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png)
       courseE_artist_concept_challenge2_authored_hint:
-        courseE_artist_concept_challenge2_a: Once you define a function, you can call
-          it over and over again - whenever and wherever you want!
+        courseE_artist_concept_challenge2_a: Dopo aver definito una funzione, la puoi
+          richiamare più e più volte, ovunque tu voglia!
         courseE_artist_concept_challenge2_b: |-
-          You can jump to different positions on the canvas using this command:
+          Grazie a questo blocco, puoi saltare direttamente in specifici punti della tela:
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
       courseE_artist_concept_challenge2_2018_authored_hint:
-        courseE_artist_concept_challenge2_a: Once you define a function, you can call
-          it over and over again - whenever and wherever you want!
+        courseE_artist_concept_challenge2_a: Dopo aver definito una funzione, la puoi
+          richiamare più e più volte, ovunque tu voglia!
         courseE_artist_concept_challenge2_b: |-
-          You can jump to different positions on the canvas using this command:
+          Grazie a questo blocco, puoi saltare direttamente in specifici punti della tela:
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
@@ -10161,73 +10211,79 @@ it:
         courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti
           di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_bee_concept1_authored_hint:
-        courseE_bee_concept1_b: Are there any patterns that *repeat* here?
-        courseE_bee_concept1_a: If you don't understand how to use nested loops here,
-          try writing out the instructions step by step on a piece of paper.  Circle
-          the patterns that you see.
+        courseE_bee_concept1_b: Vedi qualche schema che si *ripete*?
+        courseE_bee_concept1_a: Se non riesci subito a capire come usare i cicli annidati,
+          prova a scrivere le singole istruzioni su un foglio di carta. Poi cerchia
+          gli schemi ricorrenti.
       courseE_bee_concept1_2018_authored_hint:
-        courseE_bee_concept1_b: Are there any patterns that *repeat* here?
-        courseE_bee_concept1_a: If you don't understand how to use nested loops here,
-          try writing out the instructions step by step on a piece of paper.  Circle
-          the patterns that you see.
+        courseE_bee_concept1_b: Vedi qualche schema che si *ripete*?
+        courseE_bee_concept1_a: Se non riesci subito a capire come usare i cicli annidati,
+          prova a scrivere le singole istruzioni su un foglio di carta. Poi cerchia
+          gli schemi ricorrenti.
       courseE_bee_concept2_authored_hint:
-        courseE_bee_concept2_a: Would a `while` loop help here?
-        courseE_bee_concept2_d: You can even check empty spaces to see if honey is
-          > 0.
-        courseE_bee_concept2_b: You can use `while` loops to move to the end of each
-          path, and to collect all of the honey from each space.
-        courseE_bee_concept2_c: Which way should the bee turn after each path?
+        courseE_bee_concept2_a: Qui potrebbe essere utile un ciclo `mentre`?
+        courseE_bee_concept2_d: Puoi anche controllare le caselle vuote per verificare
+          se la dose di miele è > 0.
+        courseE_bee_concept2_b: Puoi usare dei cicli `mentre` per muoverti fino alla
+          fine di ogni tratto del percorso e produrre tutto il miele in ogni favo.
+        courseE_bee_concept2_c: Da che parte deve girare l'ape alla fine di ogni tratto
+          del percorso?
       courseE_bee_concept2_2018_authored_hint:
-        courseE_bee_concept2_a: Would a `while` loop help here?
+        courseE_bee_concept2_a: Qui potrebbe essere utile un ciclo `mentre`?
         courseE_bee_concept2_d: You can even check empty spaces to see if honey is
           > 0.
-        courseE_bee_concept2_b: You can use `while` loops to move to the end of each
-          path, and to collect all of the honey from each space.
-        courseE_bee_concept2_c: Which way should the bee turn after each path?
+        courseE_bee_concept2_b: Puoi usare dei cicli `mentre` per muoverti fino alla
+          fine di ogni tratto del percorso e produrre tutto il miele in ogni favo.
+        courseE_bee_concept2_c: Da che parte deve girare l'ape alla fine di ogni tratto
+          del percorso?
       courseE_bee_concept3_authored_hint:
-        courseE_bee_concept3a_a: Try using nested `repeat` loops to solve this puzzle.
-        courseE_bee_concept3a_b: If you can't figure out where to put the loops, try
-          writing your code step-by-step and looking for patterns.
-        courseE_bee_concept3a_c: There are three groups of flowers, so your outer
-          `repeat` loop should repeat three times.
+        courseE_bee_concept3a_a: Prova a risolvere l'esercizio usando dei cicli annidati.
+        courseE_bee_concept3a_b: Se non riesci a capire dove mettere i cicli, prova
+          a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
+          la sequenza che si ripete.
+        courseE_bee_concept3a_c: Ci sono tre gruppi di fiori, quindi il ciclo `ripeti
+          ... volte` più esterno deve essere ripetuto tre volte.
       courseE_bee_concept3_2018_authored_hint:
-        courseE_bee_concept3a_a: Try using nested `repeat` loops to solve this puzzle.
-        courseE_bee_concept3a_b: If you can't figure out where to put the loops, try
-          writing your code step-by-step and looking for patterns.
-        courseE_bee_concept3a_c: There are three groups of flowers, so your outer
-          `repeat` loop should repeat three times.
+        courseE_bee_concept3a_a: Prova a risolvere l'esercizio usando dei cicli annidati.
+        courseE_bee_concept3a_b: Se non riesci a capire dove mettere i cicli, prova
+          a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
+          la sequenza che si ripete.
+        courseE_bee_concept3a_c: Ci sono tre gruppi di fiori, quindi il ciclo `ripeti
+          ... volte` più esterno deve essere ripetuto tre volte.
       courseE_bee_concept4_authored_hint:
-        courseE_bee_concept4_a: An `if/else` statement could really help you out here.
-        courseE_bee_concept4_b: The stair step pattern can help you get through all
-          of the flowers and honeycombs.
-        courseE_bee_concept4_c: If you are at a flower, how many times do you have
-          to get nectar? Is this the same number for all flowers?
+        courseE_bee_concept4_a: Un'istruzione condizionale `se/altrimenti` potrebbe
+          davvero risolvere il dilemma.
+        courseE_bee_concept4_b: Uno schema a scalinata può aiutarti a passare in rassegna
+          tutti i fiori e i favi.
+        courseE_bee_concept4_c: Quando se sei su un fiore, quante dosi di nettare
+          devi raccogliere? È lo stesso numero per tutti i fiori?
       courseE_bee_concept4_2018_authored_hint:
-        courseE_bee_concept4_a: An `if/else` statement could really help you out here.
-        courseE_bee_concept4_b: The stair step pattern can help you get through all
-          of the flowers and honeycombs.
-        courseE_bee_concept4_c: If you are at a flower, how many times do you have
-          to get nectar? Is this the same number for all flowers?
+        courseE_bee_concept4_a: Un'istruzione condizionale `se/altrimenti` potrebbe
+          davvero risolvere il dilemma.
+        courseE_bee_concept4_b: Uno schema a scalinata può aiutarti a passare in rassegna
+          tutti i fiori e i favi.
+        courseE_bee_concept4_c: Quando se sei su un fiore, quante dosi di nettare
+          devi raccogliere? È lo stesso numero per tutti i fiori?
       courseE_bee_concept5_authored_hint:
-        courseE_bee_concept5_a: 'The flowers follow a rectangular path.  You can trace
-          that rectangle using `while path ahead` even with a different number of
-          squares per side. '
+        courseE_bee_concept5_a: I fiori sono disposti lungo un percorso rettangolare.
+          Puoi seguire quel percorso usando un ciclo `mentre c'è strada in avanti`
+          anche se ci sono un diverso numero di caselle per ogni lato.
         courseE_bee_concept5_c: |-
-          Here's a picture of a rectangular path the bee could take.
-
-          ![](https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8 Hint Drawing.png)
-        courseE_bee_concept5_b: You can check every square for a flower using the
-          `if` block, even if you already know there's not one there.
-      courseE_bee_concept5_2018_authored_hint:
-        courseE_bee_concept5_a: The flowers follow a rectangular path.  You can trace
-          that rectangle using `while path ahead` even with a different number of
-          squares per side.
-        courseE_bee_concept5_c: |-
-          Here's a picture of a rectangular path the bee could take.
+          Ecco evidenziato nell'immagine il percorso rettangolare che l'ape potrebbe seguire.
 
           ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
-        courseE_bee_concept5_b: You can check every square for a flower using the
-          `if` block, even if you already know there's not one there.
+        courseE_bee_concept5_b: Puoi controllare in ogni casella se c'è un fiore usando
+          il blocco 'se'; puoi farlo senza problemi anche nelle caselle vuote.
+      courseE_bee_concept5_2018_authored_hint:
+        courseE_bee_concept5_a: I fiori sono disposti lungo un percorso rettangolare.
+          Puoi seguire quel percorso usando un ciclo `mentre c'è strada in avanti`
+          anche se ci sono un diverso numero di caselle per ogni lato.
+        courseE_bee_concept5_c: |-
+          Ecco evidenziato nell'immagine il percorso rettangolare che l'ape potrebbe seguire.
+
+          ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_b: Puoi controllare in ogni casella se c'è un fiore usando
+          il blocco 'se'; puoi farlo senza problemi anche nelle caselle vuote.
       courseE_bee_functions1_authored_hint:
         courseE_bee_functions1_a: Ricorda che le svolte a destra e a sinistra devi
           immaginarle dal punto di vista dell'ape.
@@ -10475,45 +10531,49 @@ it:
         courseD_artist_ramp10_b: Don't forget to collect one piece of treasure, then
           turn after each set of steps!
       courseE_farmer_concept1_authored_hint:
-        courseE_farmer_concept1_a: A `while there is a hole` block will help you fill
-          any hole until it's flat.
-        courseE_farmer_concept1_b: You can use a stair step pattern to get to the
-          holes.
+        courseE_farmer_concept1_a: Il blocco `mentre c'è una buca` ti aiuterà a far
+          riempire ogni buca fino quando il terreno sarà livellato.
+        courseE_farmer_concept1_b: Puoi usare uno schema a scalinata per raggiungere
+          le buche.
       courseE_farmer_concept1_2018_authored_hint:
-        courseE_farmer_concept1_a: A `while there is a hole` block will help you fill
-          any hole until it's flat.
-        courseE_farmer_concept1_b: You can use a stair step pattern to get to the
-          holes.
+        courseE_farmer_concept1_a: Il blocco `mentre c'è una buca` ti aiuterà a far
+          riempire ogni buca fino quando il terreno sarà livellato.
+        courseE_farmer_concept1_b: Puoi usare uno schema a scalinata per raggiungere
+          le buche.
       courseE_farmer_concept2_authored_hint:
-        courseE_farmer_concept2_a: The paths are all the same length, but they are
-          a different number of squares apart.  A loop isn't ideal here. Try a function.
-        courseE_farmer_concept2_b: A function which turns, goes down the path, gathers
-          pumpkins, and returns to the main horizontal path could be helpful here.
-        courseE_farmer_concept2_c: Your main program can call this function with the
-          green `do something` block.
+        courseE_farmer_concept2_a: I percorsi laterali con le zucche sono tutti della
+          stessa lunghezza, ma non sono alla stessa distanza uno dall'altro. Con un
+          ciclo non riesci a risolvere l'esercizio. Prova con una funzione.
+        courseE_farmer_concept2_b: Qui potrebbe essere d'aiuto una funzione che giri
+          a destra, vada avanti lungo il percorso laterale, raccolga tutte le zucche
+          e ritorni sul percorso principale.
+        courseE_farmer_concept2_c: Nel programma principale puoi richiamare la funzione
+          con il blocchetto verde che riporta il suo nome.
       courseE_farmer_concept2_2018_authored_hint:
-        courseE_farmer_concept2_a: The paths are all the same length, but they are
-          a different number of squares apart.  A loop isn't ideal here. Try a function.
-        courseE_farmer_concept2_b: A function which turns, goes down the path, gathers
-          pumpkins, and returns to the main horizontal path could be helpful here.
-        courseE_farmer_concept2_c: Your main program can call this function with the
-          green `do something` block.
+        courseE_farmer_concept2_a: I percorsi laterali con le zucche sono tutti della
+          stessa lunghezza, ma non sono alla stessa distanza uno dall'altro. Con un
+          ciclo non riesci a risolvere l'esercizio. Prova con una funzione.
+        courseE_farmer_concept2_b: Qui potrebbe essere d'aiuto una funzione che giri
+          a destra, vada avanti lungo il percorso laterale, raccolga tutte le zucche
+          e ritorni sul percorso principale.
+        courseE_farmer_concept2_c: Nel programma principale puoi richiamare la funzione
+          con il blocchetto verde che riporta il suo nome.
       courseE_farmer_concept3_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_a: Il blocco `mentre c'è strada in
           avanti` ti permette di andare avanti, anche se non sai quante caselle devi
           percorrere.
-        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached
-          the end of a path?
-        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your
-          code multiple times for each straight path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: Cosa occorre fare una volta raggiunta
+          la fine di ogni tratto di percorso?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Usa un ciclo `ripeti ... volte`
+          in modo da eseguire il codice per ogni tratto rettilineo del percorso.
       courseE_farmer_concept3_2018_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_a: Il blocco `mentre c'è strada in
           avanti` ti permette di andare avanti, anche se non sai quante caselle devi
           percorrere.
-        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached
-          the end of a path?
-        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your
-          code multiple times for each straight path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: Cosa occorre fare una volta raggiunta
+          la fine di ogni tratto di percorso?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Usa un ciclo `ripeti ... volte`
+          in modo da eseguire il codice per ogni tratto rettilineo del percorso.
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Devi semplicemente scegliere uno dei gruppi di blocchi
           già preparati nella cassetta degli attrezzi ed inserirlo nel punto giusto
@@ -10524,23 +10584,20 @@ it:
         courseE_farmer_functions1_a: Qui la cassetta degli attrezzi è organizzata
           in modo leggermente diverso. Clicca sulle varie categorie per vedere che
           blocchi contengono.
-        courseE_farmer_functions1_b: You only need to pick one pumpkin, but could
-          you use a loop to get to it?
+        courseE_farmer_functions1_b: Devi solo raccogliere una zucca, ma potresti
+          usare un ciclo per raggiungerla?
       courseE_farmer_functions10_authored_hint: {}
       courseE_farmer_functions10a1_2018_authored_hint: {}
       courseE_farmer_functions10b_authored_hint:
-        courseE_farmer_functions10b_a: You will need to use an `if/then` statement
-          to solve this puzzle.
-        courseE_farmer_functions10b_b: Which way do you need to turn after the first
-          pumpkin?
-        courseE_farmer_functions10b_c: Look back at the last puzzle if you need help
-          making the function.
+        courseE_farmer_functions10b_a: Prima di tutto devi creare la funzione da zero.
+        courseE_farmer_functions10b_b: Da che parte devi girare dopo la prima zucca?
+        courseE_farmer_functions10b_c: Se non ti ricordi bene, dai un'occhiata all'esercizio
+          precedente per mettere i giusti blocchi nella funzione.
       courseE_farmer_functions10b_2018_authored_hint:
-        courseE_farmer_functions10b_a: You will have to re-create your function first.
-        courseE_farmer_functions10b_b: Which way do you need to turn after the first
-          pumpkin?
-        courseE_farmer_functions10b_c: Look back at the last puzzle if you need help
-          making the function.
+        courseE_farmer_functions10b_a: Prima di tutto devi creare la funzione da zero.
+        courseE_farmer_functions10b_b: Da che parte devi girare dopo la prima zucca?
+        courseE_farmer_functions10b_c: Se non ti ricordi bene, dai un'occhiata all'esercizio
+          precedente per mettere i giusti blocchi nella funzione.
       courseE_farmer_functions11_predict_authored_hint: {}
       courseE_farmer_functions11_predict_2018_authored_hint: {}
       courseE_farmer_functions13_2018_authored_hint: {}
@@ -10548,38 +10605,42 @@ it:
         courseE_farmer_functions1_a: Qui la cassetta degli attrezzi è organizzata
           in modo leggermente diverso. Clicca sulle varie categorie per vedere che
           blocchi contengono.
-        courseE_farmer_functions1_b: You only need to pick one pumpkin, but could
-          you use a loop to get to it?
+        courseE_farmer_functions1_b: Devi solo raccogliere una zucca, ma potresti
+          usare un ciclo per raggiungerla?
       courseE_farmer_functions1a_authored_hint:
-        courseE_farmer_functions1a_a: Nested `if` and `if/else` statements will really
-          help you out here.
-        courseE_farmer_functions1a_b: If you are not at corn, what crops should you
-          check for next?
+        courseE_farmer_functions1a_a: Analizza passo dopo passo il funzionamento dell'istruzione
+          condizionale `se`. Cosa deve pensare la contadina quando si trova di fronte
+          ad una pannocchia?
+        courseE_farmer_functions1a_b: Usa un blocco `ripeti fino a che` per arrivare
+          fino alla zucca!
       courseE_farmer_functions1a_2018_authored_hint:
         courseE_farmer_functions1a_a: Think through the `if/else` statements step
           by step. What should you do if you are standing at a corn plant?
-        courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
+        courseE_farmer_functions1a_b: Usa un blocco `ripeti fino a che` per arrivare
+          fino alla zucca!
       courseE_farmer_functions2a_authored_hint: {}
       courseE_farmer_functions2aALT_authored_hint: {}
       courseE_farmer_functions2b_authored_hint:
-        courseE_farmer_functions2b_a: You can use a `repeat until pumpkin` to get
-          to the ends of the two paths.
-        courseE_farmer_functions2b_b: There is no corn on the connecting path, so
-          you can just move along it and turn.
-        courseE_farmer_functions2b_c: You will need two separate `repeat until` blocks
-          to get all of the crops.
+        courseE_farmer_functions2b_a: Puoi usare un blocco `ripeti fino a che sei
+          su una zucca` per raggiungere la fine dei due tratti di percorso che si
+          concludono con una zucca.
+        courseE_farmer_functions2b_b: Non ci sono pannocchie nel percorso intermedio,
+          lì la contadina deve solo andare avanti e girare.
+        courseE_farmer_functions2b_c: Hai bisogno di due differenti blocchi `ripeti
+          fino a che`per raccogliere tutti gli ortaggi.
       courseE_farmer_functions2b_2018_authored_hint:
         courseE_farmer_functions2b_a: You can use a `repeat until pumpkin` to get
           to the ends of the two paths.
-        courseE_farmer_functions2b_b: There is no corn on the connecting path, so
-          you can just move along it and turn.
-        courseE_farmer_functions2b_c: You will need two separate `repeat until` blocks
-          to get all of the crops.
+        courseE_farmer_functions2b_b: Non ci sono pannocchie nel percorso intermedio,
+          lì la contadina deve solo andare avanti e girare.
+        courseE_farmer_functions2b_c: Hai bisogno di due differenti blocchi `ripeti
+          fino a che`per raccogliere tutti gli ortaggi.
       courseE_farmer_functions2ba_authored_hint:
-        courseE_farmer_functions2ba_a: Use the green `corn and pumpkin` block to call
-          this function.
-        courseE_farmer_functions2ba_b: Drag all of the blocks in the toolbox together
-          under `when run` to see how this function works.
+        courseE_farmer_functions2ba_a: Usa il blocco verde `corn and pumpkin`(*pannocchie
+          e zucca*) per richiamare questa funzione.
+        courseE_farmer_functions2ba_b: Per vedere come funziona questa funzione, aggancia
+          al blocco arancione `quando si clicca su "Esegui"` tutti i blocchi che trovi
+          sparpagliati nell'area di lavoro.
       courseE_farmer_functions2ba_2018_authored_hint:
         courseE_farmer_functions2ba_a: Use the green `corn and pumpkin` block to call
           this function.
@@ -10590,10 +10651,10 @@ it:
         courseE_farmer_functions1a_a: Nested `if` and `if/else` statements will really
           help you out here.
       courseE_farmer_functions3c_authored_hint:
-        courseE_farmer_functions3c_a: What sequence is repeated often in this program?
-          Can you drag these blocks into the function?
-        courseE_farmer_functions3c_b: Don't forget to call your function in the main
-          program wherever you removed blocks.
+        courseE_farmer_functions3c_a: Quale sequenza si ripete spesso in questo programma?
+          Riesci a trascinare questi blocchi nella funzione?
+        courseE_farmer_functions3c_b: Non dimenticare di richiamare la funzione nel
+          programma principale ovunque hai tolto i blocchi.
       courseE_farmer_functions3c1_2018_authored_hint:
         coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path`
           function three times to solve this puzzle.
@@ -10609,47 +10670,49 @@ it:
         courseE_farmer_functions4b_a: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
-        courseE_farmer_functions4b_b: Remember to turn after each path.
-        courseE_farmer_functions4b_c: The green `corn and pumpkin` blocks are in the
-          Functions tab of the toolbox.
+        courseE_farmer_functions4b_b: Ricordati di girare dopo ogni tratta del percorso.
+        courseE_farmer_functions4b_c: Il blocco verde `corn and pumpkin` (*pannocchie
+          e zucca*) si trova nella scheda funzioni della casella degli attrezzi.
       courseE_farmer_functions4b_2018_authored_hint:
         courseE_farmer_functions4b_a: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
-        courseE_farmer_functions4b_b: Remember to turn after each path.
-        courseE_farmer_functions4b_c: The green `corn and pumpkin` blocks are in the
-          Functions tab of the toolbox.
+        courseE_farmer_functions4b_b: Ricordati di girare dopo ogni tratta del percorso.
+        courseE_farmer_functions4b_c: Il blocco verde `corn and pumpkin` (*pannocchie
+          e zucca*) si trova nella scheda funzioni della casella degli attrezzi.
       courseE_farmer_functions5_authored_hint: {}
       courseE_farmer_functions5a_authored_hint: {}
       courseE_farmer_functions5b_authored_hint:
         courseE_farmer_functions5b_a: You will need to use a `while corn` loop, a
           `while lettuce` and a `while pumpkin` to make sure you get everything.
       courseE_farmer_functions5c_authored_hint:
-        courseE_farmer_functions5c_a: Are there any other patterns you can loop in
-          this puzzle?
+        courseE_farmer_functions5c_a: In questo esercizio, ci sono altri schemi ripetuti
+          che puoi ricondurre ad un ciclo?
         courseE_farmer_functions5c_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
       courseE_farmer_functions5c_2018_authored_hint:
-        courseE_farmer_functions5c_a: Are there any other patterns you can loop in
-          this puzzle?
+        courseE_farmer_functions5c_a: In questo esercizio, ci sono altri schemi ripetuti
+          che puoi ricondurre ad un ciclo?
         courseE_farmer_functions5c_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi
           di aver ancora risolto l'esercizio.
       courseE_farmer_functions6_authored_hint: {}
       courseE_farmer_functions6b_authored_hint: {}
       courseE_farmer_functions6c_authored_hint:
-        courseE_farmer_functions6c_a: Edit your function to check for the lettuce
-          as well.
-        courseE_farmer_functions6c_b: Would an `if/else` block help to check if there
-          is lettuce in a space?
-        courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
+        courseE_farmer_functions6c_a: Modifica la tua funzione per controllare anche
+          la possibile presenza di una lattuga.
+        courseE_farmer_functions6c_b: Un blocco `se/altrimenti` aiuterebbe a controllare
+          se ti trovi su una casella in cui c'è una lattuga?
+        courseE_farmer_functions6c_c: Non dimenticarti di mantenere il controllo per
+          le pannocchie!
       courseE_farmer_functions6c_2018_authored_hint:
-        courseE_farmer_functions6c_a: Edit your function to check for the lettuce
-          as well.
-        courseE_farmer_functions6c_b: Would an `if/else` block help to check if there
-          is lettuce in a space?
-        courseE_farmer_functions6c_c: Don't forget to keep checking for corn!
+        courseE_farmer_functions6c_a: Modifica la tua funzione per controllare anche
+          la possibile presenza di una lattuga.
+        courseE_farmer_functions6c_b: Un blocco `se/altrimenti` aiuterebbe a controllare
+          se ti trovi su una casella in cui c'è una lattuga?
+        courseE_farmer_functions6c_c: Non dimenticarti di mantenere il controllo per
+          le pannocchie!
       courseE_farmer_functions7_authored_hint: {}
       courseE_farmer_functions7a1_2018_authored_hint:
         courseE_farmer_functions7a1_2018_a: Create your function under the `functions`
@@ -10657,19 +10720,21 @@ it:
         courseE_farmer_functions7a1_2018_b: Don't forget to use your function when
           you're done making it!
       courseE_farmer_functions7b_authored_hint:
-        courseE_farmer_functions7b_a: You don't need a function here, but you can
-          make one if it is helpful to you!
-        courseE_farmer_functions7b_b: Use an `if/else` statement to check for crops,
-          then turn based on which crop you find.
-        courseE_farmer_functions7b_c: A `repeat until pumpkin` loop can help you get
-          all the way through the maze.
+        courseE_farmer_functions7b_a: In questo caso non sono necessarie delle funzioni,
+          ma se vuoi puoi usarne una!
+        courseE_farmer_functions7b_b: Usa un'istruzione condizionale `se/altrimenti`
+          per controllare la presenza delle colture e gira in base a quale coltura
+          hai trovato.
+        courseE_farmer_functions7b_c: Un ciclo `ripeti fino a che sei su una zucca`
+          può aiutarti a percorrere tutto questo labirinto.
       courseE_farmer_functions7b_2018_authored_hint:
-        courseE_farmer_functions7b_a: You don't need a function here, but you can
-          make one if it is helpful to you!
-        courseE_farmer_functions7b_b: Use an `if/else` statement to check for crops,
-          then turn based on which crop you find.
-        courseE_farmer_functions7b_c: A `repeat until pumpkin` loop can help you get
-          all the way through the maze.
+        courseE_farmer_functions7b_a: In questo caso non sono necessarie delle funzioni,
+          ma se vuoi puoi usarne una!
+        courseE_farmer_functions7b_b: Usa un'istruzione condizionale `se/altrimenti`
+          per controllare la presenza delle colture e gira in base a quale coltura
+          hai trovato.
+        courseE_farmer_functions7b_c: Un ciclo `ripeti fino a che sei su una zucca`
+          può aiutarti a percorrere tutto questo labirinto.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
@@ -10679,17 +10744,19 @@ it:
         courseE_farmer_functions8a1_2018b: After the function runs the first time,
           you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
-        courseE_farmer_functions8b_a: Try running the code given to see what it does.
-          What do you need after this?
-        courseE_farmer_functions8b_b: Drag all of the starter blocks into a function
-          so that you can use them more than once.
-        courseE_farmer_functions8b_c: How many times do you need to call the function?
+        courseE_farmer_functions8b_a: Prova ad eseguire il codice che trovi già pronto
+          per scoprire cosa fa. Come puoi procedere?
+        courseE_farmer_functions8b_b: Trascina nel blocco di definizione di una funzione
+          tutti i blocchi trovati all'inizio, in modo da poterli usare più di una
+          volta.
+        courseE_farmer_functions8b_c: Quante volte è necessario richiamare la funzione?
       courseE_farmer_functions8b_2018_authored_hint:
-        courseE_farmer_functions8b_a: Try running the code given to see what it does.
-          What do you need after this?
-        courseE_farmer_functions8b_b: Drag all of the starter blocks into a function
-          so that you can use them more than once.
-        courseE_farmer_functions8b_c: How many times do you need to call the function?
+        courseE_farmer_functions8b_a: Prova ad eseguire il codice che trovi già pronto
+          per scoprire cosa fa. Come puoi procedere?
+        courseE_farmer_functions8b_b: Trascina nel blocco di definizione di una funzione
+          tutti i blocchi trovati all'inizio, in modo da poterli usare più di una
+          volta.
+        courseE_farmer_functions8b_c: Quante volte è necessario richiamare la funzione?
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
@@ -10702,19 +10769,19 @@ it:
           forward` to get to the last crop of lettuce before you can call your function
           again.
       courseE_farmer_functions9b_authored_hint:
-        courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements
-          to move along the path?
-        courseE_farmer_functions9b_b: Use `repeat until pumpkin` to move through all
-          of the paths.
-        courseE_farmer_functions9b_c: You will want to move through the paths as if
-          they are squares getting larger after each loop.
+        courseE_farmer_functions9b_a: Per muoverti lungo il percorso, potresti usare
+          istruzioni condizionali annidate `se` o `se/altrimenti`?
+        courseE_farmer_functions9b_b: Usa il ciclo `ripeti fino a che sei su una zucca`
+          per spostarti lungo il percorso.
+        courseE_farmer_functions9b_c: Immagina di seguire un percorso quadrato piccolo
+          e poi uno grande...
       courseE_farmer_functions9b_2018_authored_hint:
-        courseE_farmer_functions9b_a: Can you use nested `if` and `if/else` statements
-          to move along the path?
-        courseE_farmer_functions9b_b: Use `repeat until pumpkin` to move through all
-          of the paths.
-        courseE_farmer_functions9b_c: You will want to move through the paths as if
-          they are squares getting larger after each loop.
+        courseE_farmer_functions9b_a: Per muoverti lungo il percorso, potresti usare
+          istruzioni condizionali annidate `se` o `se/altrimenti`?
+        courseE_farmer_functions9b_b: Usa il ciclo `ripeti fino a che sei su una zucca`
+          per spostarti lungo il percorso.
+        courseE_farmer_functions9b_c: Immagina di seguire un percorso quadrato piccolo
+          e poi uno grande...
       courseE_farmer_functions9b_clone_authored_hint: {}
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Feel free to go back to the last puzzle if you need
@@ -10753,19 +10820,19 @@ it:
       courseE_farmer_ramp12_authored_hint:
         courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare
           un ciclo `ripeti ... volte` per dire alla contadina quante volte andare
-          avanti e prendere la lattuga.
+          avanti e prendere le lattughe.
       courseE_farmer_ramp12_2018_authored_hint:
         courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare
           un ciclo `ripeti ... volte` per dire alla contadina quante volte andare
-          avanti e prendere la lattuga.
+          avanti e prendere le lattughe.
       courseE_farmer_ramp12_forswap_authored_hint:
         courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare
           un ciclo `ripeti ... volte` per dire alla contadina quante volte andare
-          avanti e prendere la lattuga.
+          avanti e prendere le lattughe.
       courseE_farmer_ramp12_forswap_2018_authored_hint:
         courseE_farmer_ramp12_b: All'esterno del ciclo `mentre`, dovrai anche usare
           un ciclo `ripeti ... volte` per dire alla contadina quante volte andare
-          avanti e prendere la lattuga.
+          avanti e prendere le lattughe.
       courseE_farmer_ramp12a_authored_hint:
         courseE_farmer_ramp12b: You will need to check your `if` statement 21 times
           to solve this puzzle.
@@ -10785,17 +10852,21 @@ it:
       courseE_farmer_ramp12b_authored_hint: {}
       courseE_farmer_ramp12b_2018_authored_hint: {}
       courseE_farmer_ramp12c_authored_hint:
-        courseE_farmer_ramp12b_b: Sarà necessario usare prima un ciclo `ripeti fino
-          a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
+        courseE_farmer_ramp12b_b: |-
+          Sarà necessario usare prima un ciclo `ripeti fino a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
+          Attento: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga.
       courseE_farmer_ramp12c_2018_authored_hint:
-        courseE_farmer_ramp12b_b: Sarà necessario usare prima un ciclo `ripeti fino
-          a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
+        courseE_farmer_ramp12b_b: |-
+          Sarà necessario usare prima un ciclo `ripeti fino a che` e poi un ciclo `mentre`, una volta che si arriva sulla lattuga.
+          Attento: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga.
       courseE_farmer_ramp12d_authored_hint:
-        courseE_farmer_ramp12d_b: Per risolvere questo esercizio, dovrai anche mettere
-          i cicli `fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
+        courseE_farmer_ramp12d_b: |-
+          Per risolvere questo esercizio, dovrai anche mettere i cicli `ripeti fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
+          Ricorda: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga.
       courseE_farmer_ramp12d_2018_authored_hint:
-        courseE_farmer_ramp12d_b: Per risolvere questo esercizio, dovrai anche mettere
-          i cicli `fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
+        courseE_farmer_ramp12d_b: |-
+          Per risolvere questo esercizio, dovrai anche mettere i cicli `ripeti fino a che` e `mentre` all'interno di un ciclo `ripeti ... volte`!
+          Ricorda: il ciclo `ripeti fino a che sei su una lattuga` ripete tutti i blocchi che contiene per tutto il tempo in cui NON sei su una lattuga e si interrompe quando finalmente arrivi ad una lattuga.
       courseE_farmer_ramp12e_authored_hint:
         courseE_farmer_ramp12e_b: La soluzione di questo esercizio è molto simile
           a quella del precedente, ma girando nella direzione opposta.
@@ -10988,13 +11059,13 @@ it:
           * Make the knight thank the player for helping.
           * Make all of the actors vanish and show a "You Win!" message.
         courseE_playLab_challenge1_b: |-
-          Here are some things you could do when the player loses the game:
+          Ecco alcune possibili cose da fare quando il giocatore perde la partita:
 
-          * Make the knight vanish.
-          * Make the squirrels sad.
-          * Make the dinosaur say something.
-          * Set a new background.
-          * Make all of the actors vanish and show a "Game Over" message.
+          * Fai svanire il cavaliere.
+          * Attribuisci un umore triste agli scoiattoli.
+          * Fai dire qualcosa al dinosauro.
+          * Imposta un nuovo sfondo.
+          * Fai svanire tutti i personaggi e visualizza il messaggio "Fine del gioco!".
       courseE_playLab_challenge1_2018_authored_hint:
         courseE_playLab_challenge1_a: |-
           Here are some things you could do when the player wins the game:
@@ -11006,56 +11077,62 @@ it:
           * Make the knight thank the player for helping.
           * Make all of the actors vanish and show a "You Win!" message.
         courseE_playLab_challenge1_b: |-
-          Here are some things you could do when the player loses the game:
+          Ecco alcune possibili cose da fare quando il giocatore perde la partita:
 
-          * Make the knight vanish.
-          * Make the squirrels sad.
-          * Make the dinosaur say something.
-          * Set a new background.
-          * Make all of the actors vanish and show a "Game Over" message.
+          * Fai svanire il cavaliere.
+          * Attribuisci un umore triste agli scoiattoli.
+          * Fai dire qualcosa al dinosauro.
+          * Imposta un nuovo sfondo.
+          * Fai svanire tutti i personaggi e visualizza il messaggio "Fine del gioco!".
       courseE_playLab_embed_scaffold5_authored_hint: {}
       courseE_playLab_scaffold1_authored_hint:
-        courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used
-          to add an actor to the stage.
-        courseE_playLab_scaffold1_b: Put the `set actor` block under `when run` to
-          make your actor appear at the beginning of the program.
-        courseE_playLab_scaffold1_c: Use `set ??? background` to choose a background
-          for your scene.
+        courseE_playLab_scaffold1_a: Puoi usare il blocco `imposta il personaggio
+          1 come ...` per aggiungere un personaggio nella scena.
+        courseE_playLab_scaffold1_b: Per fare in modo che il personaggio che hai scelto
+          compaia all'avvio del tuo programma, metti il blocco `imposta il personaggio
+          1 come ...` sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_playLab_scaffold1_c: Usa il blocco `imposta uno sfondo ...` per scegliere
+          lo sfondo della tua scena.
       courseE_playLab_scaffold1_2018_authored_hint:
-        courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used
-          to add an actor to the stage.
-        courseE_playLab_scaffold1_b: Put the `set actor` block under `when run` to
-          make your actor appear at the beginning of the program.
-        courseE_playLab_scaffold1_c: Use `set ??? background` to choose a background
-          for your scene.
+        courseE_playLab_scaffold1_a: Puoi usare il blocco `imposta il personaggio
+          1 come ...` per aggiungere un personaggio nella scena.
+        courseE_playLab_scaffold1_b: Per fare in modo che il personaggio che hai scelto
+          compaia all'avvio del tuo programma, metti il blocco `imposta il personaggio
+          1 come ...` sotto al blocco `quando si clicca su "Esegui"`.
+        courseE_playLab_scaffold1_c: Usa il blocco `imposta uno sfondo ...` per scegliere
+          lo sfondo della tua scena.
       courseE_playLab_scaffold2_authored_hint:
-        courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow`
-          event to change the direction the block controls.
-        courseE_playLab_scaffold1_b: You should have four `when arrow` event blocks,
-          with a direction to move underneath each.
-        courseE_playLab_scaffold1_c: When you are done, you should be able to move
-          your hero with the arrow keys!
+        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa
+          del blocco evento `quando si preme sulla freccia verso ...`.
+        courseE_playLab_scaffold1_b: Dovresti avere quattro diversi blocchi evento
+          `quando si preme sulla freccia verso ...`, ognuno con uno specifico blocco
+          di movimento agganciato sotto.
+        courseE_playLab_scaffold1_c: Quando hai finito, dovresti essere in grado di
+          spostare il tuo eroe con i tasti freccia!
       courseE_playLab_scaffold2_2018_authored_hint:
-        courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow`
-          event to change the direction the block controls.
-        courseE_playLab_scaffold1_b: You should have four `when arrow` event blocks,
-          with a direction to move underneath each.
-        courseE_playLab_scaffold1_c: When you are done, you should be able to move
-          your hero with the arrow keys!
+        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa
+          del blocco evento `quando si preme sulla freccia verso ...`.
+        courseE_playLab_scaffold1_b: Dovresti avere quattro diversi blocchi evento
+          `quando si preme sulla freccia verso ...`, ognuno con uno specifico blocco
+          di movimento agganciato sotto.
+        courseE_playLab_scaffold1_c: Quando hai finito, dovresti essere in grado di
+          spostare il tuo eroe con i tasti freccia!
       courseE_playLab_scaffold3_authored_hint: {}
       courseE_playLab_scaffold3_2018_authored_hint: {}
       courseE_playLab_scaffold4_authored_hint:
-        courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove
-          point` to subtract one.
+        courseE_playLab_scaffold4_a: Per modificare il punteggio, usa i blocchi `aggiungi
+          un punto` e `togli un punto`.
       courseE_playLab_scaffold4_2018_authored_hint:
-        courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove
-          point` to subtract one.
+        courseE_playLab_scaffold4_a: Per modificare il punteggio, usa i blocchi `aggiungi
+          un punto` e `togli un punto`.
       courseE_playLab_scaffold5_authored_hint:
-        courseE_playLab_scaffold5_a: To finish this level, you need to win or lose.
-          Use a `end game as win` or `end game as loss` block to finish.
+        courseE_playLab_scaffold5_a: 'Per completare l''esercizio, è necessario vincere
+          o perdere: imposta adeguatamente i blocchi `fine del gioco con una vittoria`
+          e `fine del gioco con una sconfitta`.'
       courseE_playLab_scaffold5_2018_authored_hint:
-        courseE_playLab_scaffold5_a: To finish this level, you need to win or lose.
-          Use a `end game as win` or `end game as loss` block to finish.
+        courseE_playLab_scaffold5_a: 'Per completare l''esercizio, è necessario vincere
+          o perdere: imposta adeguatamente i blocchi `fine del gioco con una vittoria`
+          e `fine del gioco con una sconfitta`.'
       courseE_playlab_challenge2_authored_hint:
         courseE_playlab_challenge2_a: |-
           The actor knows what to say based on its mood. Try playing with the things the witch might say.
@@ -14517,10 +14594,11 @@ it:
 
           Have a friend try your app when it is finished!
       coursea_maze_ramp1_2018_authored_hint:
-        courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure
-          both of the blocks have been fully clicked together, then click "Run" again.
-        courseC_maze_programming1_b: Don't be afraid to make a mistake! Try something,
-          and if it doesn't work, try something else!
+        courseC_maze_programming1_a: Se l'uccellino non riesce a prendere il maialino,
+          controlla che i due blocchi siano collegati insieme, quindi clicca nuovamente
+          su "Esegui".
+        courseC_maze_programming1_b: Non aver paura di sbagliare! Prova in qualche
+          modo e se non funziona prova in un'altra maniera!
       coursef_maze_ramp3_authored_hint:
         courseF_maze_ramp3_a: |-
           ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
@@ -14859,58 +14937,62 @@ it:
           il codice usando un <i>ciclo</i> `ripeti ... volte`?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
-          Start by looking at just the first loop.
+          Inizia guardando solo il primo ciclo.
 
-          What does it do?
+          Che cosa fa?
 
-          What is it supposed to do?
+          Che cosa dovrebbe fare?
 
-          What does that tell you?
-        grade3_Debugging_10_b: Once you have the first loop the way you want it, what
-          is left over in your code?
+          Che cosa ti suggerisce questo?
+        grade3_Debugging_10_b: Una volta verificato il funzionamento del primo ciclo,
+          cosa rimane da controllare?
         grade3_Debugging_10_c: |-
           Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
 
           If not, what is still going wrong?
       grade3_Debugging_11_authored_hint:
         grade3_Debugging_11_a: |-
-          Try running through the code using the "Step" button.  Is everything good at the first step?
+          Prova ad eseguire il codice un blocco per volta usando il pulsante "Fai un passo". È tutto giusto al primo passo?
 
-          How about the second?
+          E al secondo?
 
-          Where do things go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         grade3_Debugging_11_b: It looks like all of the right steps are here, you
           just need more of them.  How can you repeat the `get nectar` and `make honey`
           actions multiple times?
       grade3_Debugging_2_authored_hint:
         grade3_Debugging_2_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
-        grade3_Debugging_2_b: Do you see any patterns that could be made more simple
-          using a `repeat` loop?
+          Dov'è che qualcosa comincia a non funzionare?
+        grade3_Debugging_2_b: Riesci a vedere degli schemi che si ripetono e che si
+          possano semplificare con un ciclo `ripeti ... volte`?
       grade3_Debugging_3_authored_hint:
         grade3_Debugging_3_a: |-
-          Use the "Step" button to see if everything is right at the first step.
+          Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
 
-          How about the second?
+          E al secondo?
 
-          Where does it go wrong?
+          Dov'è che qualcosa comincia a non funzionare?
         grade3_Debugging_3_b: Do you see a pattern?  Try using nested loops to solve
           this puzzle.
       grade3_Debugging_4_authored_hint:
         grade3_Debugging_4_a: Is there any place where the bee does something that
           doesn't make sense? What happens when you change those blocks?
-        grade3_Debugging_4_b: Try simplifying the code using nested loops.
+        grade3_Debugging_4_b: Cerca di semplificare il programma usando dei cicli
+          annidati.
       grade3_Debugging_8_authored_hint:
-        grade3_Debugging_8_a: "Try using the debugging process a couple of times in
-          a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed,
-          what goes wrong?"
-        grade3_Debugging_8_b: "If you're having a hard time figuring out how to make
-          the stair step pattern, try tracing it with your finger and saying the commands
-          out loud. \n\nDon't forget to point out the direction of the turns!"
+        grade3_Debugging_8_a: |-
+          Prova ad usare il processo di correzione degli errori (debugging) un paio di volte di seguito.
+
+          Cos'è che causa il primo problema?
+
+          Una volta risolto questo problema, cos'altro c'è di sbagliato?
+        grade3_Debugging_8_b: "Se hai difficoltà a capire come realizzare lo schema
+          a scalinata, prova a tracciarlo con un dito e pronuncia le istruzioni ad
+          alta voce. \n\nNon dimenticare di indicare la direzione delle curve!"
       grade3_Debugging_TeacherIDo_authored_hint:
         2-3_Bee_Debugging_4_a: In quale punto del programma l'ape fa qualcosa di sbagliato?
           Correggi quel blocco.
@@ -14952,7 +15034,7 @@ it:
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: Saranno necessari 5 controlli, usa un ciclo `ripeti
           ... volte`.
-        grade3_RunningFarm_1_b: Se non usi un blocco 'se c'è una pannocchia' rischi
+        grade3_RunningFarm_1_b: Se non usi un blocco 'se sei su una pannocchia' rischi
           di tentare di raccogliere qualcosa che non c'è!
       grade3_RunningFarm_10_authored_hint:
         grade3_RunningFarm_10_a: This puzzle uses almost the exact same code as the
@@ -14974,9 +15056,9 @@ it:
           `se/altrimenti` e una semplice istruzione `se`.
       grade3_RunningFarm_4_authored_hint:
         grade3_RunningFarm_4_a: |-
-          Nessuno sa quanti cespi di lattuga crescono da ogni pianta.
+          Nessuno sa quante lattughe crescono da ogni pianta.
 
-          Usa il ciclo `mentre c'è la lattuga` per continuare a raccogliere mentre ci sono ancora cespi disponibili.
+          Usa il ciclo `mentre sei su una lattuga` per continuare a raccogliere mentre ci sono ancora lattughe disponibili.
       grade3_RunningFarm_5_authored_hint:
         grade3_RunningFarm_5_a: You will need to check for each type of crop that
           the farmer can pick.  Try using two `if/else` statements and one  `if` block.
@@ -15043,11 +15125,11 @@ it:
           prima a risolvere l'esercizio usando tutti i singoli blocchi, poi cerca
           di vedere quali sono le parti che si ripetono per inserirle nel blocco `ripeti
           ... volte`.
-        grade3_maze_loops2_c: Try using one `repeat` loop inside of another to cut
-          down on the amount of code you need.
+        grade3_maze_loops2_c: Prova ad usare un ciclo `ripeti... volte`all'interno
+          di un altro per ridurre la quantità di codice che ti serve.
       grade3_maze_loops2a_authored_hint:
-        grade3_maze_loops2a_a: To solve this puzzle, you will need to "nest" one `repeat`
-          loop inside of another `repeat` loop.
+        grade3_maze_loops2a_a: Per risolvere questo esercizio, devi annidare un ciclo
+          `ripeti... volte` all'interno di un altro ciclo `ripeti... volte`.
       grade3_maze_loops3_authored_hint:
         2-3_Maze_Loops_19_a: If you are stuck, try writing out the code out on paper
           without loops first and look for patterns.
@@ -15056,8 +15138,8 @@ it:
         2-3_Maze_Loops_19_c: It will take two sets of nested `repeat` loops to solve
           this puzzle.
       grade3_maze_loops4_authored_hint:
-        2-3_Maze_Loops_20_a: Look for a stair-step pattern in this maze to find where
-          a nested loop can be used.
+        2-3_Maze_Loops_20_a: Cerca di individuare uno schema a scalinata in questo
+          labirinto per capire dove puoi usare un ciclo annidato.
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: Se fai fatica ad individuare il percorso a gradini, prova
           a coprire con le dita i tratti bloccati dalle piante carnivore.
@@ -15185,10 +15267,9 @@ it:
           150 pixels down to get the bottom windows.
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: Nel primo ciclo, per disegnare il mezzo esagono, l'artista
-          percorre tratti di <b>30 pixel</b> invece di 40 e gira a destra di <b>60
-          gradi</b>.
+          percorre tratti di **30 pixel** e gira a destra di **60 gradi**.
         Course_4_Artist_11_b: Nel secondo ciclo, per disegnare i due lati del triangolo,
-          l'artista percorre tratti di <b>80 pixel</b> e gira a destra di <b>120 gradi</b>.
+          l'artista percorre tratti di **80 pixel** e gira a destra di **120 gradi**.
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           La figura deve essere ripetuta 10 volte nei 360 gradi di un giro.<br>
@@ -15215,11 +15296,12 @@ it:
         grade4_bee_conditionals_new2_a: 'The flowers follow a rectangular path.  You
           can trace that rectangle using `while path ahead` even with a different
           number of squares per side. '
-        grade4_bee_conditionals_new2_b: You can check every square for a flower using
-          the `if` block, even if you already know there's not one there.
+        grade4_bee_conditionals_new2_b: Puoi controllare in ogni casella se c'è un
+          fiore usando il blocco 'se'; puoi farlo senza problemi anche nelle caselle
+          vuote.
       grade4_bee_conditionals_new3b_authored_hint:
-        grade4_bee_conditionals_new3b_a: An `if/else` statement could really help
-          you out here.
+        grade4_bee_conditionals_new3b_a: Un'istruzione condizionale `se/altrimenti`
+          potrebbe davvero risolvere il dilemma.
       grade4_bee_conditionals_quantum4_authored_hint:
         remember_quantum: "**Attenzione:** Ogni volta che esegui il programma ciò
           che è nascosto può cambiare: per risolvere l'esercizio, devi quindi usare
@@ -15275,14 +15357,15 @@ it:
         grade4_bee_functions9_b: Usa il ciclo`mentre nettare > 0` per assicurarti
           di raccogliere tutto il nettare.
       grade4_bee_nestedLoops1_authored_hint:
-        grade4_bee_nestedLoops1_a: If you don't understand how to use nested loops
-          here, try writing out the instructions step by step on a piece of paper.  Circle
-          the patterns that you see.
+        grade4_bee_nestedLoops1_a: Se non riesci subito a capire come usare i cicli
+          annidati, prova a scrivere le singole istruzioni su un foglio di carta.
+          Poi cerchia gli schemi ricorrenti.
       grade4_bee_nestedLoops2_authored_hint:
-        grade4_bee_nestedLoops2_a: You will need to repeat `get nectar` inside of
-          another `repeat` that also has the `move forward` block inside of it.
-        grade4_bee_nestedLoops2_b: You will need to use all three of the available
-          `repeat` blocks to solve this puzzle.
+        grade4_bee_nestedLoops2_a: Devi ripetere il blocco `prendi il nettare` all'interno
+          di un altro blocco`ripeti... volte` che ha al suo interno anche il blocco
+          `vai avanti`.
+        grade4_bee_nestedLoops2_b: Devi usare tutti e tre i blocchi `ripeti... volte`
+          disponibili per risolvere l'esercizio.
         grade4_bee_nestedLoops2_c: |-
           Nest your blocks three deep, like this:
 
@@ -15293,8 +15376,8 @@ it:
           - get nectar
           - turn right
       grade4_bee_nestedLoops2a_authored_hint:
-        grade4_bee_nestedLoops2a_a: Try using nested `repeat` loops to solve this
-          puzzle.
+        grade4_bee_nestedLoops2a_a: Prova a risolvere l'esercizio usando dei cicli
+          annidati.
       grade4_bee_nestedLoops4_authored_hint:
         grade4_bee_nestedLoops4_a: Try building your code line by line and see if
           you can spot the places where a repeat will make the code shorter!
@@ -15589,7 +15672,7 @@ it:
           carta!
       gradek_adventurer_loops3_authored_hint:
         gradek_adventurer_loops3_a: Per modificare di quante caselle deve spostarsi
-          Laurel, cambia il numero di volte che il ciclo viene eseguito.
+          Laura, cambia il numero di volte che il ciclo viene eseguito.
         gradek_adventurer_loops3_b: Non dimenticare che l'Avventuriera deve scendere
           e raccogliere l'ultimo diamante dopo che ha completato il ciclo `ripeti`!
       gradek_adventurer_loops4_authored_hint:
@@ -15601,7 +15684,7 @@ it:
           code to see what happens.
       gradek_adventurer_loops5_authored_hint:
         gradek_adventurer_loops5_a: Se non riesci a capire che cosa accade dopo, prova
-          ad eseguire il codice per vedere dove va a finire Laurel.
+          ad eseguire il codice per vedere dove va a finire Laura.
       gradek_adventurer_loops6_authored_hint:
         gradek_adventurer_loops6_a: If you are having trouble figuring this puzzle
           out, try writing the moves down on a piece of paper and look for a pattern.
@@ -15694,9 +15777,11 @@ it:
 
           Now, make sure both of those actions are attached underneath the same event!
       harvester_Kahoot_authored_hint:
-        courseE_farmer_functions1a_a: Think through the `if/else` statements step
-          by step. What should you do if you are standing at a corn plant?
-        courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
+        courseE_farmer_functions1a_a: Analizza passo dopo passo il funzionamento dell'istruzione
+          condizionale `se`. Cosa deve pensare la contadina quando si trova di fronte
+          ad una pannocchia?
+        courseE_farmer_functions1a_b: Usa un blocco `ripeti fino a che` per arrivare
+          fino alla zucca!
       harvey_snowflake_artist1_authored_hint: {}
       harvey_snowflake_artist2_authored_hint: {}
       harvey_tictactoe_authored_hint:
