@@ -62,6 +62,20 @@ class AssetsTest < FilesApiTestBase
     @api.delete_object(sound_filename)
     assert successful?
 
+    # version for put asset is ignored
+    sound_body = 'stub-sound-contents'
+    sound_filename = 'meow.mp3'
+    response = @api.put_object_version(sound_filename, 'fake_version', sound_body, {'CONTENT_TYPE' => 'json'})
+    actual_sound_info = JSON.parse(response)
+    expected_sound_info = {'filename' => sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    assert_fileinfo_equal(expected_sound_info, actual_sound_info)
+
+    file_infos = @api.list_objects
+    assert_fileinfo_equal(actual_sound_info, file_infos[0])
+
+    @api.delete_object(sound_filename)
+    assert successful?
+
     # unsupported media type
     post_asset_file(@api, 'filename.exe', 'stub-contents', 'application/x-msdownload')
     assert unsupported_media_type?
