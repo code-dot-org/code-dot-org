@@ -73,12 +73,10 @@ def main
       SOLR.update(documents)
     rescue
       documents.each do |document|
-        begin
-          SOLR.update([document])
-        rescue => e
-          ChatClient.log "Unable to index form #{document[:id]}: #{e}"
-          raise
-        end
+        SOLR.update([document])
+      rescue => e
+        ChatClient.log "Unable to index form #{document[:id]}: #{e}"
+        raise
       end
     end
   end
