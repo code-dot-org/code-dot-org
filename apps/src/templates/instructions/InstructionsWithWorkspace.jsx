@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-var CodeWorkspaceContainer = require('../CodeWorkspaceContainer');
+import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
 import TopInstructions from './TopInstructions';
-var instructions = require('../../redux/instructions');
+import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
 
 /**
  * A component representing the right side of the screen in our app. In particular
@@ -12,28 +12,25 @@ var instructions = require('../../redux/instructions');
  * Owns maxHeightAvailable for instructions, updating as appropriate on window
  * resize events
  */
-export var UnwrappedInstructionsWithWorkspace = React.createClass({
-  propTypes: {
+export class UnwrappedInstructionsWithWorkspace extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
     // props provided via connect
     instructionsHeight: PropTypes.number.isRequired,
-
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
-    children: PropTypes.node,
-  },
+  };
 
-  getInitialState() {
-    // only used so that we can rerender when resized
-    return {
-      windowWidth: undefined,
-      windowHeight: undefined
-    };
-  },
+  // only used so that we can rerender when resized
+  state = {
+    windowWidth: undefined,
+    windowHeight: undefined
+  };
 
   /**
    * Called when the window resizes. Look to see if width/height changed, then
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
-  onResize() {
+  onResize = () => {
     const windowWidth = $(window).width();
     const windowHeight = $(window).height();
 
@@ -80,15 +77,15 @@ export var UnwrappedInstructionsWithWorkspace = React.createClass({
       maxInstructionsHeight = Math.round(totalHeight / 3);
     }
     this.props.setInstructionsMaxHeightAvailable(maxInstructionsHeight);
-  },
+  };
 
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
-  },
+  }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
-  },
+  }
 
   render() {
     return (
@@ -103,7 +100,7 @@ export var UnwrappedInstructionsWithWorkspace = React.createClass({
       </span>
     );
   }
-});
+}
 
 export default connect(function propsFromStore(state) {
   return {
@@ -112,7 +109,7 @@ export default connect(function propsFromStore(state) {
 }, function propsFromDispatch(dispatch) {
   return {
     setInstructionsMaxHeightAvailable(maxHeight) {
-      dispatch(instructions.setInstructionsMaxHeightAvailable(maxHeight));
+      dispatch(setInstructionsMaxHeightAvailable(maxHeight));
     }
   };
 })(UnwrappedInstructionsWithWorkspace);
