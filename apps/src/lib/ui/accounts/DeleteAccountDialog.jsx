@@ -6,8 +6,6 @@ import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 
-/* NOTE: If a teacher has no students, they are treated as a student and isTeacher will be false. */
-
 const GUTTER = 20;
 const styles = {
   container: {
@@ -52,7 +50,7 @@ export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     isPasswordRequired: PropTypes.bool.isRequired,
-    isTeacher: PropTypes.bool.isRequired,
+    warnAboutDeletingStudents: PropTypes.bool.isRequired,
     checkboxes: PropTypes.objectOf(PropTypes.shape({
       checked: PropTypes.bool.isRequired,
       label: PropTypes.object.isRequired,
@@ -73,7 +71,7 @@ export default class DeleteAccountDialog extends React.Component {
     const {
       isOpen,
       isPasswordRequired,
-      isTeacher,
+      warnAboutDeletingStudents,
       checkboxes,
       password,
       passwordError,
@@ -106,7 +104,7 @@ export default class DeleteAccountDialog extends React.Component {
               {i18n.deleteAccountDialog_body2()}
               <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body3()}</strong>
               {i18n.deleteAccountDialog_body4()}
-              {isTeacher &&
+              {warnAboutDeletingStudents &&
                 <span>
                   {i18n.deleteAccountDialog_body5()}
                   <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body6()}</strong>
@@ -115,7 +113,7 @@ export default class DeleteAccountDialog extends React.Component {
               }
             </div>
           </div>
-          {isTeacher &&
+          {warnAboutDeletingStudents &&
             <div style={styles.section}>
               <strong>{i18n.deleteAccountDialog_checkboxTitle()}</strong>
               {Object.keys(checkboxes).map(id => {
@@ -160,7 +158,7 @@ export default class DeleteAccountDialog extends React.Component {
             {i18n.deleteAccountDialog_emailUs()}
           </div>
           <ConfirmCancelFooter
-            confirmText={isTeacher ? i18n.deleteAccountDialog_teacherButton() : i18n.deleteAccountDialog_studentButton()}
+            confirmText={warnAboutDeletingStudents ? i18n.deleteAccountDialog_button_studentWarning() : i18n.deleteAccountDialog_button()}
             confirmColor={Button.ButtonColor.red}
             onConfirm={deleteUser}
             onCancel={onCancel}
