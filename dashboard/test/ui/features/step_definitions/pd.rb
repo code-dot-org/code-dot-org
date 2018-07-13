@@ -411,7 +411,7 @@ def create_fake_daily_survey_results(workshop)
 
     Pd::WorkshopDailySurvey.create!(
       form_id: CDO.jotform_forms['local']['day_0'],
-      submission_id: Pd::WorkshopDailySurvey.maximum(:submission_id) + 1,
+      submission_id: (Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1,
       pd_session: nil, #No session for the first survey
       answers: {
         '1': {
@@ -429,7 +429,7 @@ def create_fake_daily_survey_results(workshop)
 
     Pd::WorkshopDailySurvey.create!(
       form_id: CDO.jotform_forms['local']['day_1'],
-      submission_id: Pd::WorkshopDailySurvey.maximum(:submission_id) + 1,
+      submission_id: (Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1,
       user: workshop.enrollments[x].user,
       pd_session: workshop.sessions.first,
       pd_workshop: workshop,
@@ -443,7 +443,7 @@ def create_fake_daily_survey_results(workshop)
 
     Pd::WorkshopFacilitatorDailySurvey.create!(
       form_id: CDO.jotform_forms['local']['facilitator'],
-      submission_id: Pd::WorkshopDailySurvey.maximum(:submission_id) + 1,
+      submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:submission_id) || 0) + 1,
       answers: {
         '1': %w(Helpful Hillarious Inspiring Brilliant)[x % 4],
         '2': user.id,
