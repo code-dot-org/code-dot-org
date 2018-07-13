@@ -48,6 +48,7 @@ class ScriptOverviewHeader extends Component {
       courseViewPath: PropTypes.string.isRequired,
     }),
     announcements: PropTypes.arrayOf(announcementShape),
+    scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
     scriptDescription: PropTypes.string.isRequired,
@@ -74,6 +75,18 @@ class ScriptOverviewHeader extends Component {
     if (scriptName !== this.props.scriptName) {
       window.location.href = `/s/${scriptName}`;
     }
+  };
+
+  onDismissVersionWarning = () => {
+    // Fire and forget. If this fails, we'll have another chance to
+    // succeed the next time the warning is dismissed.
+    $.ajax({
+      method: 'PATCH',
+      url: `/user_scripts/${this.props.scriptId}`,
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({version_warning_dismissed: true}),
+    });
   };
 
   render() {
@@ -131,6 +144,7 @@ class ScriptOverviewHeader extends Component {
             details={versionWarningDetails}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
+            onDismiss={this.onDismissVersionWarning}
           />
         }
         <div id="lesson">
@@ -176,6 +190,7 @@ export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
   announcements: state.scriptAnnouncements || [],
+  scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,
