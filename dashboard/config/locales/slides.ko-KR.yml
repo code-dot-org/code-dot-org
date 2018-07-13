@@ -1330,11 +1330,11 @@ ko:
           실행시키면, 좀비가 5번 앞으로 이동해서 해바라기로 갈 것입니다.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: 지금까지 여러분들은 애니메이션이나 이야기들을 만들어보았습니다. 그리고 여러분들이 실행시켜보는 다른 모든 것들과 똑같은 것이었습니다.
           이제는 여러분들이 실제로 플레이할 수 있는 인터랙티브 게임을 만들 수 있습니다.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: '"방향키" 블럭과 "움직이기" 블럭이 있습니다. 이 블럭들을 이용해서 방향키로 캐릭터들을 이리 저리 이동시킬 수 있습니다.'
     C3_songwriting_with_parameters:
       1:

@@ -1689,12 +1689,12 @@ gl:
           avanzar cinco veces para chegar ao saboroso xirasol.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Até agora fixeches animacións ou historias que fan exactamente as mesmas
           cousas cada vez que as executas. Agora podes facer un xogo interativo e
           xogalo de verdade.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Existen algúns novos bloques para probar. Hai os bloques "cando a frecha
           estivese presionada" e "mova o personaxe". Podes xuntar eses bloques para
           mover os personaxes coas frechas do teclado. E hai algúns bloques que fan
