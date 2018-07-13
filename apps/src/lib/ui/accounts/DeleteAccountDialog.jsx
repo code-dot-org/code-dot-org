@@ -6,6 +6,8 @@ import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '@cdo/apps/templates/Button';
 
+/* NOTE: If a teacher has no students, they are treated as a student and isTeacher will be false. */
+
 const GUTTER = 20;
 const styles = {
   container: {
