@@ -9,9 +9,9 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-2.5.1.tgz#e10c653dfa4a8e6166529a3d1b47099e08f1ed47"
+"@code-dot-org/blockly@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.0.0.tgz#88c316a2943cff75d5b2341708c71013c54abf84"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -5407,13 +5407,6 @@ grunt-contrib-concat@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/grunt-contrib-concat/-/grunt-contrib-concat-0.3.0.tgz#48fa0d4336d29b653ad8225a6bd6f856b4483e32"
 
-grunt-contrib-concat@0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/grunt-contrib-concat/-/grunt-contrib-concat-0.5.1.tgz#953c6efdfdfd2c107ab9c85077f2d4b24d31cd49"
-  dependencies:
-    chalk "^0.5.1"
-    source-map "^0.3.0"
-
 grunt-contrib-copy@0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/grunt-contrib-copy/-/grunt-contrib-copy-0.4.1.tgz#f0753b40ae21bb706daefb0b299e03cdf5fa9d6e"
@@ -10693,12 +10686,6 @@ source-map@0.1.x, source-map@~0.1.7:
 source-map@0.4.x, source-map@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
-  dependencies:
-    amdefine ">=0.0.4"
-
-source-map@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.3.0.tgz#8586fb9a5a005e5b501e21cd18b6f21b457ad1f9"
   dependencies:
     amdefine ">=0.0.4"
 
