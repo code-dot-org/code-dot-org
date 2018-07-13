@@ -355,6 +355,16 @@ class Course < ApplicationRecord
       count > 0
   end
 
+  # returns whether a script in this course has version_warning_dismissed.
+  def has_dismissed_version_warning?(user)
+    script_ids = default_scripts.map(&:id)
+    !user.
+      user_scripts.
+      where(script_id: script_ids).
+      select(&:version_warning_dismissed).
+      empty?
+  end
+
   @@course_cache = nil
   COURSE_CACHE_KEY = 'course-cache'.freeze
 
