@@ -166,6 +166,6 @@ module.exports.initializeCodeMirrorForJson = function (
       initializeCodeMirror(textAreaId, 'application/json', showErrors(onChange));
     jsonEditor.on('blur', fixupJson);
     fixupJson();
-    return jsonEditor;
+    return fixupJson;
   }
 };
