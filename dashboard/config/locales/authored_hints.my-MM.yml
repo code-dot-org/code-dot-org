@@ -3835,10 +3835,7 @@ my:
           This is the first hint.
 
           It has *some* **basic** `markup`
-        second_hint: |-
-          This is the second hint. It has an image.
-
-          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
+        second_hint: This is the second hint. It has a hint video.
         last_hint: This is the third and final hint. It doesn't have anything special.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
@@ -4534,10 +4531,8 @@ my:
         courseA_collector_loops_challenge1_c: There are 6 gems on the right side of
           the cave, but you only need to move and collect 5 times. Do you know why?
       course1_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: 'You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
-          PM.png) block to solve this.
-
-'
+        courseA_collector_loops_challenge2_b: "You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png) block to solve this.\n\n"
         courseA_collector_loops_challenge2_a: |-
           You can move back over the path a second time before moving south.
 
@@ -5908,13 +5903,13 @@ my:
           you can change the number at the top of the block.
         courseA_artist_loops4_b: |-
           Since you can only use one <xml><block type="simple_move_right"/></xml>
-          block, try putting it inside of the <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> loop.
+          block, try putting it inside of the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times,
           you can change the number at the top of the block.
         courseA_artist_loops4_b: |-
           Since you can only use one <xml><block type="simple_move_right"/></xml>
-          block, try putting it inside of the <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> loop.
+          block, try putting it inside of the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: Try using what you've learned about <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> blocks to complete
@@ -6173,8 +6168,8 @@ my:
         courseA_collector_loops_challenge1_b: You don't need to use a loop if you
           are only doing something one time.
         courseA_collector_loops_challenge1_c: There are 6 gems on the right side of
-          the cave when you start, but you only need to move get treasure 5 times
-          moving South. Do you know why?
+          the cave when you start, but you only need to get treasure 5 times moving
+          South. Do you know why?
         courseA_collector_loops_challenge1_d: |-
           The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
           <xml><block type="maze_moveEast">
@@ -6228,11 +6223,9 @@ my:
       courseA_collector_preLoops2_authored_hint: {}
       courseA_collector_preLoops3_authored_hint: {}
       courseA_collector_preLoops4_authored_hint:
-        courseA_collector_preLoops4_a: 'To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+        courseA_collector_preLoops4_a: "To grab the treasure, snap two ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
           blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
-          block to the bottom of the program and click "Run"!
-
-'
+          block to the bottom of the program and click \"Run\"!\n\n"
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: You'll need to go two different directions
           to get even one gem!
@@ -6257,16 +6250,19 @@ my:
       courseA_harvester_loops10_authored_hint: {}
       courseA_harvester_loops11_authored_hint: {}
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks
-          and **four** `pick corn` blocks. '
+        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block
+          type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n
+          \ <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: To repeat code, drag out a `repeat` loop, then
-          put the block you want inside of it.
+        courseA_harvester_loops3_b: "To repeat code, drag out a `repeat` (<xml><block
+          type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\"
+          config=\"2-10\">4</title>\n  </block></xml> )loop, then put the block you
+          want inside of it. "
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times
@@ -6284,8 +6280,9 @@ my:
           You will need one `repeat` <xml> <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title>
           </block></xml> loop after another.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other
-          will repeat `move East`.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block
+          type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move
+          East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -6500,7 +6497,8 @@ my:
       courseA_maze_seq10_2018_authored_hint:
         courseA_maze_seq10_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
-        courseA_maze_seq10_b: You will need to go 3 directions to solve this puzzle.
+        courseA_maze_seq10_b: You will need to go 3 different directions to solve
+          this puzzle.
       courseA_maze_seq11_authored_hint: {}
       courseA_maze_seq11_2018_authored_hint: {}
       courseA_maze_seq12_authored_hint: {}
@@ -6627,7 +6625,7 @@ my:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
           not to count the space where you start!
       courseA_playLab_events2_authored_hint:
-        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_a: Look for a block that makes the dog say something.
         courseA_playLab_events2_b: |-
           This is the code you need to complete this puzzle:
 
@@ -6809,7 +6807,7 @@ my:
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show
-          when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          when you click Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -7173,9 +7171,9 @@ my:
           some of the same lines twice. '
       courseB_artist_loops_challenge2_authored_hint:
         courseB_artist_loops_challenge2_a: The code to draw an X is already given
-          to you. All you need to do is repeat the X and jump to the next spot.
+          to you. All you need to do is repeat the X and `jump` to the next spot.
         courseB_artist_loops_challenge2_b: You can use `jump` blocks to move to other
-          spaces.
+          spaces without drawing.
       courseB_artist_loops_challenge2_2018_authored_hint:
         courseB_artist_loops_challenge2_a: The code to draw an X is already given
           to you. All you need to do is repeat the X and `jump` to the next spot.
@@ -7580,10 +7578,8 @@ my:
           will either need to add two  <xml> <block type="collector_collect"/></xml>
           blocks inside your loop, or put the block inside of its own `repeat` block.
       courseB_collector_loops_challenge`_authored_hint:
-        courseA_collector_loops_challenge2_b: 'You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
-          PM.png) block to solve this.
-
-'
+        courseA_collector_loops_challenge2_b: "You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png) block to solve this.\n\n"
         courseA_collector_loops_challenge2_a: |-
           You can move back over the path a second time before moving south.
 
@@ -7662,10 +7658,10 @@ my:
       courseB_maze_seq11_2018_authored_hint: {}
       courseB_maze_seq1_2018_authored_hint:
         courseB_maze_seq1_a: Connect blocks to the <xml><block type="when_run"/></xml>
-          block to make the bird move!
+          block to make Scrat move!
         courseB_maze_seq1_b: Drag three of these <xml><block type="maze_moveSouth"/></xml>
           arrows out and connect them to the <xml><block type="when_run"/></xml> block
-          to get your bird to the pig.
+          to get Scrat to the acorn.
       courseB_maze_seq1_predict1_authored_hint: {}
       courseB_maze_seq1_predict1_2018_authored_hint: {}
       courseB_maze_seq2_authored_hint:
@@ -7676,7 +7672,7 @@ my:
       courseB_maze_seq2_2018_authored_hint:
         courseB_maze_seq2_a: This program is missing one block. Can you figure out
           which one?
-        courseB_maze_seq2_b: Try running the code you are given to see what the bird
+        courseB_maze_seq2_b: Try running the code you are given to see what Scrat
           needs to do next.
       courseB_maze_seq3_authored_hint:
         courseB_maze_seq3_a: One of the blocks is moving the bird in the wrong direction.
@@ -7686,7 +7682,7 @@ my:
         courseB_maze_seq3_c: The <xml><block type="maze_moveWest"/></xml> block doesn't
           seem to be moving the bird in the right direction.
       courseB_maze_seq3_2018_authored_hint:
-        courseB_maze_seq3_a: One of the blocks is moving the bird in the wrong direction.
+        courseB_maze_seq3_a: One of the blocks is moving Scrat in the wrong direction.
           Can you figure out which one and replace it with the correct block?
         courseB_maze_seq3_b: Try using the step button to find where the program goes
           wrong. Is it the first step? The second?
@@ -7699,7 +7695,7 @@ my:
           block to solve this puzzle.
       courseB_maze_seq4_2018_authored_hint:
         courseB_maze_seq4_a: Try adding one instruction at a time until you get to
-          the pig.
+          the acorn.
         courseB_maze_seq4_b: You will want to use the <xml><block type="maze_moveEast"/></xml>
           block to solve this puzzle.
       courseB_maze_seq5_authored_hint:
@@ -7709,7 +7705,7 @@ my:
       courseB_maze_seq5_2018_authored_hint:
         courseB_maze_seq5_a: If you get stuck, try drawing out the path on paper.
         courseB_maze_seq5_b: There are 2 ways to solve this puzzle!
-        courseB_maze_seq5_c: Not sure how to get to the pig?  Try this path.
+        courseB_maze_seq5_c: Not sure how to get to the acorn?  Try this path.
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_a: Your final code should have three movement blocks.
         courseB_maze_seq6_b: If you get stuck, try solving the puzzle in two parts,
@@ -7721,24 +7717,24 @@ my:
         courseB_maze_seq6_b: If you get stuck, try solving the puzzle in two parts,
           one sideways and one up-and-down.
         courseB_maze_seq5_c: There are two ways to solve this puzzle.
-        courseB_maze_seq5_d: Not sure how to get to the pig? Try this path!
+        courseB_maze_seq5_d: Not sure how to get to the acorn? Try this path!
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_a: Add 1 block to move the bird to the pig.
         courseB_maze_seq7_b: Try running the code that's given to you and see where
           you end up.
         courseB_maze_seq7_c: Can't get to the pig?  Try this path!
       courseB_maze_seq7_2018_authored_hint:
-        courseB_maze_seq7_a: Add 1 block to move the bird to the pig.
+        courseB_maze_seq7_a: Add 1 block to move Scrat to the acorn.
         courseB_maze_seq7_b: Try running the code that's given to you and see where
           you end up.
-        courseB_maze_seq7_c: Can't get to the pig?  Try this path!
+        courseB_maze_seq7_c: Can't get to the acorn?  Try this path!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
         courseB_maze_seq8_b: There are two ways to solve this puzzle!
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
-        courseB_maze_seq8_b: There are two ways to solve this puzzle!
+        courseB_maze_seq8_b: There is more than one way to solve this puzzle!
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: Try writing down all of the steps on a piece of paper
@@ -8039,8 +8035,8 @@ my:
           </block>
           </xml>
       courseB_playlab_events_challenge2_authored_hint:
-        courseB_playlab_events_challenge2_a: Each animal in the game should vanish
-          when tapped. It should also come back after a second or two!
+        courseB_playlab_events_challenge2_a: Each animal in the game should disappear
+          when clicked. It should also come back after a second or two!
         courseB_playlab_events_challenge2_b: |-
           Use other event blocks to make the other animals disappear!
 
@@ -8820,8 +8816,8 @@ my:
         courseC_artist_prog5_b: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
-        courseC_artist_prog5_c: You can use the drop down menu on the `turn` blocks
-          to see which angle you need!
+        courseC_artist_prog5_c: You can use the drop down menus in the blocks to change
+          what they do!
         courseC_artist_prog5_d: Each turn should be 90 degrees to the right.
       courseC_artist_prog6_authored_hint:
         courseC_artist_prog6_a: The artist is already facing the correct way to draw
@@ -8899,10 +8895,10 @@ my:
           \                 </block>\n                </next>\n              </block>\n
           \             </statement></block></xml>"
       courseC_artist_prog_challenge2a_authored_hint:
-        courseC_artist_prog_challenge2_a: After you draw the first line, try turning
-          left before you draw your second line.
-        courseC_artist_prog_challenge2_b: After you draw the second line, try turning
-          right before you draw your third line.
+        courseC_artist_prog_challenge2_a: After you draw the first line, turn left
+          before you draw your second line.
+        courseC_artist_prog_challenge2_b: After you draw the second line, turn right
+          before you draw your third line.
       courseC_artist_prog_challenge2a_2018_authored_hint:
         courseC_artist_prog_challenge2_a: After you draw the first line, turn left
           before you draw your second line.
@@ -9014,14 +9010,14 @@ my:
         courseC_collector_progA_a: Try using the "Step" button to go through your
           code line by line.
       courseC_collector_prog_challenge1_authored_hint:
-        courseC_collector_prog_challenge1_a: You can use the `collect` command more
-          often to collect the extra treasure.
+        courseC_collector_prog_challenge1_a: You can use the `collect` block many
+          times to collect the extra treasure.
       courseC_collector_prog_challenge1_2018_authored_hint:
         courseC_collector_prog_challenge1_a: You can use the `collect` block many
           times to collect the extra treasure.
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: You can use more than one `collect` block
-          to collect more than one time at each piece of treasure.
+          at each space.
         courseC_collector_prog_challenge1_b: Lost your way?  Try this path to solve
           the puzzle!
       courseC_collector_prog_challenge2_2018_authored_hint:
@@ -9222,7 +9218,7 @@ my:
       courseC_harvester_loops_challenge1a_authored_hint:
         courseC_harvester_loops_challenge1_a: This is too hard without loops!
         courseC_harvester_loops_challenge1_b: You can repeat `move forward` and `pick
-          corn` as many times as you need, then turn right at each corner.
+          corn` as many times as you need, then `turn right` at each corner.
         courseC_harvester_loops_challenge1_c: |-
           The best way to collect the corn in the middle uses a `repeat` block inside of another `repeat` block.
 
@@ -9434,9 +9430,9 @@ my:
       courseC_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: Left or right? It's up to you!
         courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle!
-          He needs to turn the same way each time!
+          He needs to turn the same way each time.
         courseC_maze_debugging_challenge1_c: If you are getting stuck, you can always
-          start over, or remove all the code and find your own way!
+          start over and find a new way!
       courseC_maze_debugging_challenge1_2018_authored_hint:
         courseC_maze_debugging_challenge1_a: Left or right? It's up to you!
         courseC_maze_debugging_challenge1_b: Scrat's path is the shape of a rectangle!
@@ -9447,7 +9443,7 @@ my:
         courseC_maze_debugging_challenge2_b: If you are getting stuck, try debugging
           the code.  Where does it go wrong?
         courseC_maze_debugging_challenge2_c: |-
-          There are two different paths you can follow just moving forward, and turning four times. If you find a way to use a loop, there may be even more!
+          There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_debugging_challenge2_2018_authored_hint:
@@ -9645,7 +9641,7 @@ my:
       courseC_maze_programming9_2018_authored_hint: {}
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: There are many ways to get to the pig.
-          Use your finger to find a path then program it!
+          Use your finger to find a path and then program it!
       courseC_maze_programming_challenge1_2018_authored_hint:
         courseC_maze_programming_challenge1_a: There are many ways to get to the pig.
           Use your finger to find a path and then program it!
@@ -9697,7 +9693,7 @@ my:
           stair steps? See if you can use what you learned from previous puzzles to
           get all of the turns.
         courseC_starWars_loops10_b: "If you want to use less code, you can put one
-          `repeat loop` inside of another!   \nThis is called a **nested loop**."
+          `repeat` loop inside of another!   \nThis is called a **nested loop**."
         courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code
           to see what happens, even if you haven't solved the puzzle yet.
       courseC_starWars_loops10_2018_authored_hint:
@@ -9749,7 +9745,7 @@ my:
         courseC_starWars_loops6_a: Try writing all of the moves down on a piece of
           paper and looking for a pattern.
         courseC_starWars_loops6_b: "If you want to use less code, you can put one
-          `repeat loop` inside of another!   \nThis is called a **nested loop**."
+          `repeat` loop inside of another!   \nThis is called a **nested loop**."
       courseC_starWars_loops6_2018_authored_hint:
         courseC_starWars_loops6_a: Try writing all of the moves down on a piece of
           paper and looking for a pattern.
@@ -10532,7 +10528,8 @@ my:
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
           and a `while there is a path ahead` loop on the inside. How many paths does
-          the bee need to buzz down if the bee needs to buzz every side with a flower?
+          the bee need to buzz down if the bee needs to buzz down every side with
+          a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
           to continue along the path, `while there is a path ahead`. To continue down
@@ -10549,18 +10546,16 @@ my:
           video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
-          and a `while there is a path ahead` loop on the inside. How many paths does
-          the bee need to buzz down if the bee needs to buzz down every side with
-          a flower?
+          and a `while path ahead` loop on the inside. How many paths does the bee
+          need to buzz down if the bee needs to buzz down every side with a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
-          to continue along the path, `while there is a path ahead`. To continue down
-          the path, the bee will need to `move forward`. While on the path, the bee
-          needs to check for a flower. `if there is a flower`, the bee should `get
-          nectar`.
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
+          to continue along the path, `while path ahead`. To continue down the path,
+          the bee will need to `move forward`. While on the path, the bee needs to
+          check for a flower. `if there is a flower`, the bee should `get nectar`.
+        courseD_bee_conditionals5_b: Inside the `while path ahead` block you will
+          need to move forward and check for a flower. How do you check if there is
+          a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
           puzzle.
       courseD_bee_conditionals6_authored_hint:
@@ -10568,7 +10563,7 @@ my:
           video!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: In this case, you do not need to check for nectar
+        courseD_bee_conditionals6_b: In this case, you do not need to check for flowers
           under the clouds.
         courseD_bee_conditionals6_c: Is there a loop you can use to make your code
           simpler?
@@ -10804,8 +10799,8 @@ my:
         courseD_bee_debugging_challenge1_a: Why does the first half of this program
           work? Think about why the bee needs to move backward. How much nectar does
           the bee collect each time it moves over a flower?
-        courseD_bee_debugging_challenge1_b: 'To solve this puzzle, have the bee follow
-          the same pattern to make honey that he does when collecting nectar. '
+        courseD_bee_debugging_challenge1_b: To solve this puzzle, have the bee follow
+          the same pattern to make honey that it does when collecting nectar.
         courseD_bee_debugging_challenge1_c: |-
           After the bee makes it to the bottom row, have it repeat these commands:
 
@@ -11315,8 +11310,8 @@ my:
       courseD_collector_debugging9a_authored_hint: {}
       courseD_collector_debugging9a_2018_authored_hint: {}
       courseD_collector_debugging_challenge2_authored_hint:
-        courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO
-          gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+        courseD_collector_debugging_challenge2_a: "Start by collecting just **two**
+          gems from each of the first **two** piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
           AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
           type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
@@ -11748,10 +11743,11 @@ my:
         courseD_farmer_condLoops5_b: There could be more than one corn or lettuce
           plant in each spot. Use a `while` loop to gather all of them!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer
-          down each piece of the spiral.
-        courseD_farmer_condLoops6_b: You only need to check for corn during most of
-          the harvest.  Just pick one pumpkin at the very end of your program.
+        courseD_farmer_condLoops6_a: Use a `while there is corn` loop to make sure
+          you get all of the corn along the way. This block won't do anything if there's
+          no corn to pick.
+        courseD_farmer_condLoops6_b: Make sure to check `if` there's a path ahead
+          before you take your next step!
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Use a `while path ahead` loop to move the farmer
           down each piece of the spiral.
@@ -11762,7 +11758,7 @@ my:
           Notice that the easiest path to get to all of the crops is still a spiral.
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        courseD_farmer_condLoops7_b: Try using `when path ahead` to keep the farmer
+        courseD_farmer_condLoops7_b: Try using `when path ahead` to keep the harvester
           moving the right number of steps.
       courseD_farmer_condLoops7_2018_authored_hint:
         courseD_farmer_condLoops7_a: |-
@@ -11789,7 +11785,7 @@ my:
           if you are at a pumpkin. What else do you need to do if you're at a pumpkin?
       courseD_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: The amount of each vegetable in each
-          space varies. Use `while` loops for these.
+          space can change. A `while` loop can help!
       courseD_farmer_condLoops_challenge2_2018_authored_hint:
         courseD_farmer_condLoops_challenge2_a: The amount of each vegetable in each
           space can change. A `while` loop can help!
@@ -12619,8 +12615,8 @@ my:
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
           draw the square frames of the glasses.
       courseE_artist_functions10_authored_hint:
-        courseD_artist_functions10_b: This drawing is a lot like the last one, except
-          the function draws a different kind of line.
+        courseD_artist_functions10_b: This drawing is a lot like the last one, but
+          the `draw line` function is now drawing a different shape.
         courseD_artist_functions10_a: To avoid using multiple `move forward` blocks,
           create a `draw hexagon` function and call that multiple times.
         courseD_artist_functions10_c: |-
@@ -12656,16 +12652,16 @@ my:
           - Move forward 100 + 75 pixels
           - Use function
       courseE_artist_functions2_2018_authored_hint:
-        courseD_artist_functions2_b: The function you write should not contain your
-          whole program, just the part that draws a square with 100 pixel sides.
+        courseD_artist_functions2_b: The function should not contain your whole program,
+          just the part that draws a square with 100 pixel sides.
         courseD_artist_functions2_c: |-
-          Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
+          Make sure that you use the green `draw a square` block to "call" your function. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Your program should:
-          - Use function
+          - Use your function
           - Move forward 100 + 75 pixels
-          - Use function
+          - Use your function again
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -12700,8 +12696,8 @@ my:
         courseD_artist_functions5_a: Don't give up!  Remember what you have been learning.
         courseD_artist_functions5_b: Functions make it easy to call saved code at
           any time, not just from inside a loop!
-        courseD_artist_functions5_c: Start by dragging the code for a star shape into
-          the `draw a star` function, then use this function to draw the three stars!
+        courseD_artist_functions5_c: Start by creating your `draw a star` function,
+          then use this function to draw the three stars!
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: Focus only on making one window for now.  We'll
           create a function in the next puzzle.
@@ -12727,9 +12723,10 @@ my:
       courseE_artist_functions7_2018_authored_hint:
         courseD_artist_functions7_a: Try creating your function first then add windows
           one at a time.
-        courseD_artist_functions7_b: You shouldn't need to add any extra repeat loops.  Just
-          jump the artist 100 pixels between each top window, then down 150 pixels
-          to get to the bottom windows.
+        courseD_artist_functions7_b: To get from the top windows to the bottom windows,
+          simply turn the artist right, jump 150 pixels, then turn the artist right
+          again!  Now the artist will be facing the correct direction to finish the
+          rest of the house!
       courseE_artist_functions8_authored_hint:
         courseD_artist_functions8_f: You only need one `move forward` block, but you
           will need quite a few `jump forward` and/or `jump backward` blocks!
@@ -12765,8 +12762,9 @@ my:
           Think of each row in this picture as a line of 3 squares. How many lines of squares are there and where do you start drawing each of them?
 
           ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
-        courseD_artist_functions8_c: At the end of each line of squares, the artist
-          will need to jump down and backward before he draws the next line of squares.
+        courseD_artist_functions8_c: At the end of each set of staggered squares,
+          the artist will need to jump down and backward before he draws the next
+          set of staggered squares.
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8a_2018_authored_hint: {}
       courseE_artist_functions8b_2018_authored_hint:
@@ -12972,8 +12970,9 @@ my:
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: Would a `while` loop help here?
-        courseE_bee_concept2_d: You can even check empty spaces to see if honey is
-          > 0.
+        courseE_bee_concept2_d: 'With this `while` loop you  can check empty spaces
+          to see if the amount of honey is > 0. This does the same as the `while there
+          is honey` loop. '
         courseE_bee_concept2_b: You can use `while` loops to move to the end of each
           path, and to collect all of the honey from each space.
         courseE_bee_concept2_c: Which way should the bee turn after each path?
@@ -13315,8 +13314,8 @@ my:
           by step. What should you do if you are standing at a corn plant?
         courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
       courseE_farmer_functions1a_2018_authored_hint:
-        courseE_farmer_functions1a_a: Think through the `if/else` statements step
-          by step. What should you do if you are standing at a corn plant?
+        courseE_farmer_functions1a_a: Make sure you read through the function definition.
+          Can you tell what it does?
         courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
       courseE_farmer_functions2a_authored_hint: {}
       courseE_farmer_functions2aALT_authored_hint: {}
@@ -13328,8 +13327,8 @@ my:
         courseE_farmer_functions2b_c: You will need two separate `repeat until` blocks
           to get all of the crops.
       courseE_farmer_functions2b_2018_authored_hint:
-        courseE_farmer_functions2b_a: You can use a `repeat until pumpkin` to get
-          to the ends of the two paths.
+        courseE_farmer_functions2b_a: You can `repeat until pumpkin` to get to the
+          ends of the two paths.
         courseE_farmer_functions2b_b: There is no corn on the connecting path, so
           you can just move along it and turn.
         courseE_farmer_functions2b_c: You will need two separate `repeat until` blocks
@@ -13337,11 +13336,11 @@ my:
       courseE_farmer_functions2ba_authored_hint:
         courseE_farmer_functions2ba_a: Use the green `corn and pumpkin` block to call
           this function.
-        courseE_farmer_functions2ba_b: Drag all of the blocks in the toolbox together
+        courseE_farmer_functions2ba_b: Drag all of the blocks in the workspace together
           under `when run` to see how this function works.
       courseE_farmer_functions2ba_2018_authored_hint:
-        courseE_farmer_functions2ba_a: Use the green `corn and pumpkin` block to call
-          this function.
+        courseE_farmer_functions2ba_a: Use the green `get all pumpkins` block to make
+          sure you get all of the pumpkins!
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: Try using a `while path ahead` loop to get you
           where you need to be.
@@ -14138,7 +14137,7 @@ my:
         courseF_artist_for1_a: |-
           Can you draw something like this:
 
-          ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+          ![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
@@ -14862,10 +14861,11 @@ my:
           Try one of these drawings.
           ![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
       courseF_artist_fwp_challenge1_authored_hint:
-        courseF_artist_fwp_challenge1_b: This is a series of octagons with sides that
+        courseF_artist_fwp_challenge1_b: This is a series of polygons with sides that
           are counter pixels long.
-        courseF_artist_fwp_challenge1_c: Each octagon is called from inside a for
-          loop that goes from 200 down to 2 by an increment of 2.
+        courseF_artist_fwp_challenge1_c: Each polygon is called from inside a for
+          loop that goes from 3 down to 6 by an increment of 1. What shapes is it
+          making?
       courseF_artist_fwp_challenge1_2018_authored_hint:
         courseF_artist_fwp_challenge1_b: This is a series of polygons with sides that
           are counter pixels long.
@@ -15470,11 +15470,11 @@ my:
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       courseF_artist_variables_challenge2_authored_hint:
-        courseF_artist_variables_challenge2_a: 'Variables are helpful because you
-          can add to them each time through a loop. '
-        courseF_artist_variables_challenge2_c: Using a variable for `sides` and one
-          for `length` makes the code cleaner because you can loop the same code multiple
-          times, instead of creating a new copy for each set of numbers.
+        courseF_artist_variables_challenge2_a: Variables are helpful because you can
+          add to them each time through a loop.
+        courseF_artist_variables_challenge2_c: Using one variable for `sides` and
+          one for `length` makes the code cleaner because you can loop the same code
+          multiple times, instead of creating a new copy for each set of numbers.
         courseF_artist_variables_challenge2_d: |-
           **Solution:**
 
@@ -15585,8 +15585,8 @@ my:
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
 
           Only check for nectar and honey at the end of your path.
-        courseF_bee_conditionals8_c: What happens if you use the `while path ahead`
-          block and get the first flower last?
+        courseF_bee_conditionals8_c: What happens if you skip the first flower, then
+          use the `while path ahead` block?
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: "**Remember:** This puzzle changes each time
           it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`)
@@ -16250,7 +16250,10 @@ my:
       courseF_bee_functions6_authored_hint:
         courseF_bee_functions6_a: "If the puzzle seems challenging, try building your
           function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+          more, then try again.  Soon, you'll get there!\n\n\n<xml>\n  <block type=\"procedures_defnoreturn\"
+          editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar
+          make honey</title>\n    <statement name=\"STACK\">\n\n    </statement>\n
+          \ </block>\n</xml>"
         courseF_bee_functions6_b: Your function should check if there is a flower
           or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you
@@ -16277,18 +16280,14 @@ my:
         courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
           your function a little at a time.  \n\nAdd some blocks, then try it out.
           Add more, then try again.  Soon, you'll get there!"
-        courseF_bee_functions8a_b: 'Remember to build code inside of the function
-          editor.
-
-'
+        courseF_bee_functions8a_b: "Remember to build code inside of the function
+          editor.\n\n"
       courseF_bee_functions8a_2018_authored_hint:
         courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
           your function a little at a time.  \n\nAdd some blocks, then try it out.
           Add more, then try again.  Soon, you'll get there!"
-        courseF_bee_functions8a_b: 'Remember to build code inside of the function
-          editor.
-
-'
+        courseF_bee_functions8a_b: "Remember to build code inside of the function
+          editor.\n\n"
       courseF_bee_functionsPre7_authored_hint:
         courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
           function a little at a time.  \n\nAdd some blocks, then try it out. Add
@@ -16554,10 +16553,8 @@ my:
         courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
           your function a little at a time.  \n\nAdd some blocks, then try it out.
           Add more, then try again.  Soon, you'll get there!"
-        courseF_bee_functions8a_b: 'Remember to build code inside of the function
-          editor.
-
-'
+        courseF_bee_functions8a_b: "Remember to build code inside of the function
+          editor.\n\n"
       courseF_bee_fwp1_authored_hint:
         courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar
           from a flower.
@@ -17032,9 +17029,9 @@ my:
           Start by making sure you understand how this function is *supposed* to work. As the farmer moves down each path, she will only try to collect corn. Instead, how can you make her check for each of the 3 vegetables and pick only the one she finds?
 
           Add conditional statements to the function to check for corn, pumpkins, and lettuce.
-        courseF_bee_fwp_challenge2_b: "Are you running out of `move forward` blocks?\nTry
-          using a *second* `for loop` in your main program. \n\n**Note:** Be careful
-          not to confuse `counter` with `counter2` in your code."
+        courseF_bee_fwp_challenge2_b: |-
+          Are you running out of `move forward` blocks?
+          Try using a *second* `for loop` in your main program.
         courseF_bee_fwp_challenge2_c: |-
           **Here is what your function should look like:**
 
@@ -17553,10 +17550,10 @@ my:
           </value>
           </block></xml>
       courseF_playlab_variables_challenge2_authored_hint:
-        courseF_playlab_variables_challenge2_a: 'Add and subtract points to the `score`
-          variable when sprites collide. '
-        courseF_playlab_variables_challenge2_b: You can change the parameter for how
-          far you move your sprite each time one of the arrow keys is pressed.
+        courseF_playlab_variables_challenge2_a: Add and subtract points to the `score`
+          variable when sprites collide.
+        courseF_playlab_variables_challenge2_b: You can change how far you move your
+          sprite each time one of the arrow keys is pressed.
         courseF_playlab_variables_challenge2_c: |-
           **Solution:**
 
