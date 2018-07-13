@@ -63,9 +63,11 @@ class AssetsTest < FilesApiTestBase
     assert_fileinfo_equal(expected_second_sound_info, actual_second_sound_info)
 
     # test duplicate filename
-    third_response = @api.put_object(first_sound_filename, sound_body, {'CONTENT_TYPE' => 'json'})
+    unique_sound_body = 'stub-sound-contents_unique'
+    third_response = @api.put_object(first_sound_filename, unique_sound_body, {'CONTENT_TYPE' => 'json'})
     actual_third_sound_info = JSON.parse(third_response)
-    assert_fileinfo_equal(expected_first_sound_info, actual_third_sound_info)
+    expected_third_sound_info = {'filename' => first_sound_filename, 'category' => 'audio', 'size' => unique_sound_body.length}
+    assert_fileinfo_equal(expected_third_sound_info, actual_third_sound_info)
 
     file_infos = @api.list_objects
     assert_equal(file_infos.length, 2)
