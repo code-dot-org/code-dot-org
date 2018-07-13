@@ -14,17 +14,17 @@ Scenario: Step Only - Failure
   Then element "#runButton" is hidden
     And element "#resetButton" is visible
     And element "#stepButton" is not disabled
-    And block "5" has class "blocklySpotlight"
-    And block "6" doesn't have class "blocklySpotlight"
+    And block "5" has class "blocklySelected"
+    And block "6" doesn't have class "blocklySelected"
 
   # After second press, second block is highlighted and step button goes away
   When I press "stepButton"
-    And I wait until block "6" has class "blocklySpotlight"
+    And I wait until block "6" has class "blocklySelected"
   Then element "#runButton" is hidden
     And element "#resetButton" is visible
     And element "#stepButton" is disabled
-    And block "5" doesn't have class "blocklySpotlight"
-    And block "6" has class "blocklySpotlight"
+    And block "5" doesn't have class "blocklySelected"
+    And block "6" has class "blocklySelected"
 
   When I press "resetButton"
   Then element "#runButton" is hidden
@@ -83,8 +83,8 @@ Scenario: Step and Run - Stepping
   When I drag block "1" to block "5"
     And I press "stepButton"
     And I wait until "#stepButton" is enabled
-  Then block "5" has class "blocklySpotlight"
-    And block "6" doesn't have class "blocklySpotlight"
+  Then block "5" has class "blocklySelected"
+    And block "6" doesn't have class "blocklySelected"
     And element "#runButton" is hidden
     And element "#resetButton" is visible
     And element "#stepButton" is visible
