@@ -185,13 +185,10 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 7745,
     "name_suffix": "_2018",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "include_shared_functions": "false"
+    "include_shared_functions": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
