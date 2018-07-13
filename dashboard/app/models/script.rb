@@ -1083,7 +1083,7 @@ class Script < ActiveRecord::Base
       curriculum_path: curriculum_path,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
-      show_course_unit_version_warning: has_older_course_progress,
+      show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
     }
