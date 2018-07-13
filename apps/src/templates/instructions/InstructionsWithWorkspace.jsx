@@ -31,21 +31,21 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
   onResize = () => {
+    const {
+      windowWidth: lastWindowWidth,
+      windowHeight: lastWindowHeight
+    } = this.state;
     const windowWidth = $(window).width();
     const windowHeight = $(window).height();
 
     // We fire window resize events when the grippy is dragged so that non-React
     // controlled components are able to rerender the editor. If width/height
     // didn't change, we don't need to do anything else here
-    if (windowWidth === this.state.windowWidth &&
-        windowHeight === this.state.windowHeight) {
+    if (windowWidth === lastWindowWidth && windowHeight === lastWindowHeight) {
       return;
     }
 
-    this.setState({
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height()
-    });
+    this.setState({windowWidth, windowHeight});
 
     // Determine what the maximum size of our instructions is based off of the
     // size of the code workspace.
@@ -59,7 +59,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const DEBUGGER_RESERVE = 120;
     const INSTRUCTIONS_RESERVE = 150;
 
-    const instructionsHeight = this.props.instructionsHeight;
+    const {instructionsHeight, setInstructionsMaxHeightAvailable} = this.props;
     const codeWorkspaceHeight = this.codeWorkspaceContainer
       .getWrappedInstance().getRenderedHeight();
     if (codeWorkspaceHeight === 0) {
@@ -76,7 +76,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       // we have to instructions, and the other 2/3 to the workspace
       maxInstructionsHeight = Math.round(totalHeight / 3);
     }
-    this.props.setInstructionsMaxHeightAvailable(maxInstructionsHeight);
+    setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   };
 
   componentDidMount() {
