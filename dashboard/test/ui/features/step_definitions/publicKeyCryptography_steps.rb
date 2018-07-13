@@ -73,11 +73,11 @@ When /^Alice decodes Bob's secret number$/ do
 end
 
 Then /^(Alice|Bob|Eve)'s ([\w\s]+) is (\d+)$/ do |character, field_name, value|
-  expect(@browser.find_element(:css, ".panel-#{character.downcase} .#{field_name.downcase.gsub(/\s+/, '-')}").text).to eq(value)
+  expect(@browser.find_element(:css, ".panel-#{character.downcase} .#{field_name.downcase.gsub(/\s+/, '-')}").text.to_i).to eq(value)
 end
 
 Then /^Alice knows Bob's secret number is (\d+)$/ do |value|
-  expect(@browser.find_element(:css, '.panel-alice .secret-number').text).to eq(value)
+  expect(@browser.find_element(:css, '.panel-alice .secret-number').text.to_i).to eq(value)
 end
 
 Then /^Eve is wrong about Bob's secret number$/ do
