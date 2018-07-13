@@ -271,12 +271,10 @@ class ActiveSupport::TestCase
   # exception with a message matching the regular expression.
   def assert_raises_matching(matcher)
     assert_raises do
-      begin
-        yield
-      rescue => err
-        assert_match matcher, err.to_s
-        raise err
-      end
+      yield
+    rescue => err
+      assert_match matcher, err.to_s
+      raise err
     end
   end
 

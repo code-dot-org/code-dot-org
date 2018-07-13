@@ -78,30 +78,8 @@ module Pd
       end
     end
 
-    def self.response_exists?(user_id:, pd_workshop_id:, day:, form_id:)
-      exists?(
-        user_id: user_id,
-        pd_workshop_id: pd_workshop_id,
-        day: day,
-        form_id: form_id
-      )
-    end
-
-    def self.create_placeholder!(user_id:, pd_workshop_id:, day:, form_id:, submission_id:)
-      find_or_create_by!(
-        user_id: user_id,
-        pd_workshop_id: pd_workshop_id,
-        day: day,
-        form_id: form_id,
-        submission_id: submission_id
-      )
-    end
-
-    # @override
-    def duplicate?
-      # See if this user already has a submission for this workshop, day, & form.
-      # Note: this duplicate record would fail the uniqueness validation
-      new_record? && self.class.exists?(slice(:user_id, :pd_workshop_id, :day, :form_id))
+    def self.unique_attributes
+      [:user_id, :pd_workshop_id, :day]
     end
   end
 end
