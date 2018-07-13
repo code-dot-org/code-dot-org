@@ -76,7 +76,6 @@ module ScriptConstants
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
-      TWENTY_HOUR_NAME = '20-hour'.freeze,
     ],
     math: [
       ALGEBRA_NAME = 'algebra'.freeze,
@@ -146,7 +145,9 @@ module ScriptConstants
       CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'.freeze,
       CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'.freeze,
     ],
-    twenty_hour: [TWENTY_HOUR_NAME],
+    twenty_hour: [
+      TWENTY_HOUR_NAME = '20-hour'.freeze,
+    ],
     flappy: [FLAPPY_NAME],
     minecraft: [
       MINECRAFT_NAME,
@@ -223,5 +224,12 @@ module ScriptConstants
       position: ScriptConstants.position_in_category(course_or_script[:name], first_category),
       category_priority: ScriptConstants.category_priority(first_category),
     }
+  end
+
+  def self.has_congrats_page?(script)
+    script == ACCELERATED_NAME ||
+      ScriptConstants.script_in_category?(:csf_international, script) ||
+      ScriptConstants.script_in_category?(:csf, script) ||
+      ScriptConstants.script_in_category?(:csf_2018, script)
   end
 end

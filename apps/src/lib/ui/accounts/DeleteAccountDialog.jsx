@@ -15,6 +15,7 @@ const styles = {
   bodyContainer: {
     display: 'flex',
     alignItems: 'center',
+    paddingTop: GUTTER / 2,
     paddingBottom: GUTTER,
   },
   icon: {
@@ -22,11 +23,23 @@ const styles = {
     fontSize: 100,
   },
   text: {
-    fontSize: 16,
     paddingLeft: GUTTER,
   },
   dangerText: {
     color: color.red,
+  },
+  italicText: {
+    fontStyle: 'italic',
+  },
+  section: {
+    paddingBottom: GUTTER,
+  },
+  checkboxContainer: {
+    display: 'flex',
+    paddingTop: GUTTER / 2,
+  },
+  label: {
+    paddingLeft: GUTTER / 2,
   },
   input: {
     width: 490
@@ -37,9 +50,15 @@ export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     isPasswordRequired: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
+    checkboxes: PropTypes.objectOf(PropTypes.shape({
+      checked: PropTypes.bool.isRequired,
+      label: PropTypes.object.isRequired,
+    })).isRequired,
     password: PropTypes.string.isRequired,
     passwordError: PropTypes.string,
     deleteVerification: PropTypes.string.isRequired,
+    onCheckboxChange: PropTypes.func.isRequired,
     onPasswordChange: PropTypes.func.isRequired,
     onDeleteVerificationChange: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
@@ -52,9 +71,12 @@ export default class DeleteAccountDialog extends React.Component {
     const {
       isOpen,
       isPasswordRequired,
+      isTeacher,
+      checkboxes,
       password,
       passwordError,
       deleteVerification,
+      onCheckboxChange,
       onPasswordChange,
       onDeleteVerificationChange,
       onCancel,
@@ -82,8 +104,33 @@ export default class DeleteAccountDialog extends React.Component {
               {i18n.deleteAccountDialog_body2()}
               <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body3()}</strong>
               {i18n.deleteAccountDialog_body4()}
+              {isTeacher &&
+                <span>
+                  {i18n.deleteAccountDialog_body5()}
+                  <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body6()}</strong>
+                  {i18n.deleteAccountDialog_body7()}
+                </span>
+              }
             </div>
           </div>
+          {isTeacher &&
+            <div style={styles.section}>
+              <strong>{i18n.deleteAccountDialog_checkboxTitle()}</strong>
+              {Object.keys(checkboxes).map(id => {
+                return (
+                  <div key={id} style={styles.checkboxContainer}>
+                    <input
+                      type="checkbox"
+                      id={id}
+                      checked={checkboxes[id].checked}
+                      onChange={() => onCheckboxChange(id)}
+                    />
+                    <label htmlFor={id} style={styles.label}>{checkboxes[id].label}</label>
+                  </div>
+                );
+              })}
+            </div>
+          }
           {isPasswordRequired &&
             <Field
               label={i18n.deleteAccountDialog_currentPassword()}
@@ -107,11 +154,11 @@ export default class DeleteAccountDialog extends React.Component {
               onChange={onDeleteVerificationChange}
             />
           </Field>
-          <div>
+          <div style={styles.section}>
             {i18n.deleteAccountDialog_emailUs()}
           </div>
           <ConfirmCancelFooter
-            confirmText={i18n.deleteAccountDialog_button()}
+            confirmText={isTeacher ? i18n.deleteAccountDialog_teacherButton() : i18n.deleteAccountDialog_studentButton()}
             confirmColor={Button.ButtonColor.red}
             onConfirm={deleteUser}
             onCancel={onCancel}
@@ -120,7 +167,7 @@ export default class DeleteAccountDialog extends React.Component {
           >
             <span
               id="uitest-delete-error"
-              style={styles.dangerText}
+              style={{...styles.dangerText, ...styles.italicText}}
             >
               {deleteError}
             </span>
