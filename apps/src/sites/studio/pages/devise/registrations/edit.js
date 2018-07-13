@@ -19,6 +19,7 @@ const {
   authenticationOptions,
   isGoogleClassroomStudent,
   isCleverStudent,
+  dependedUponForLogin,
 } = scriptData;
 
 $(document).ready(() => {
@@ -61,6 +62,7 @@ $(document).ready(() => {
         <DeleteAccount
           isPasswordRequired={isPasswordRequired}
           isTeacher={userType === 'teacher'}
+          dependedUponForLogin={dependedUponForLogin}
         />,
         deleteAccountMountPoint
       );
