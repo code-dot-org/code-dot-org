@@ -6,6 +6,8 @@ import AssetRow from './AssetRow';
 import AssetUploader from './AssetUploader';
 import assetListStore from '../assets/assetListStore';
 import AudioRecorder from './AudioRecorder';
+import experiments from '@cdo/apps/util/experiments';
+
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -159,10 +161,12 @@ export default class AssetManager extends React.Component {
 
     const buttons = (
       <div>
-        <AudioRecorder isVisible={this.state.recordingAudio}/>
+        {experiments.isEnabled('recordAudio') &&
+          <AudioRecorder isVisible={this.state.recordingAudio}/>
+        }
         <span style={styles.buttonRow}>
           {uploadButton}
-          {recordButton}
+          {experiments.isEnabled('recordAudio') && recordButton}
         </span>
       </div>
     );
