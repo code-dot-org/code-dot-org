@@ -36,10 +36,11 @@ Scenario: Version warning announcement on course and unit overview pages
   # make sure we are showing the warning specific to course units
   Then element ".announcement-notification:contains(going to the course page)" is visible
 
-  # Close the dialog
+  # Close the course unit version warning banner
   When I click selector ".announcement-notification:contains(newer version) .fa-times"
   Then I wait until element ".announcement-notification:contains(newer version)" is not visible
 
+  # The course unit version warning banner stays closed on refresh
   When I reload the page
   And I wait until element "#script-title" is visible
   And element "#version-selector" is visible
@@ -62,10 +63,11 @@ Scenario: Versions warning announcement on script overview page
   Then element ".announcement-notification:contains(newer version)" is visible
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
 
-  # Close the dialog
+  # Close the script version warning banner
   When I click selector ".announcement-notification:contains(newer version) .fa-times"
   Then I wait until element ".announcement-notification:contains(newer version)" is not visible
 
+  # The script version warning banner stays closed on refresh
   When I reload the page
   And I wait until element "#script-title" is visible
   And element "#version-selector" is visible
