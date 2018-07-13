@@ -9,9 +9,9 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.0.0-testing1":
-  version "3.0.0-testing1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.0.0-testing1.tgz#37b9d68b82012f7ab15930f3dca08405c360bd88"
+"@code-dot-org/blockly@3.0.0-testing2":
+  version "3.0.0-testing2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.0.0-testing2.tgz#f0edd8d5eeffb7ba50d82d2a6198a20cbe3fba5b"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
