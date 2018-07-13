@@ -117,6 +117,7 @@ class Notification extends Component {
     buttonText: PropTypes.string,
     buttonLink: PropTypes.string,
     dismissible: PropTypes.bool.isRequired,
+    onDismiss: PropTypes.func,
     newWindow: PropTypes.bool,
     analyticId: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
@@ -132,6 +133,13 @@ class Notification extends Component {
   toggleContent() {
     this.setState({open: !this.state.open});
   }
+
+  onDismiss = () => {
+    this.toggleContent();
+    if (this.props.onDismiss) {
+      this.props.onDismiss();
+    }
+  };
 
   onAnnouncementClick() {
     if (this.props.analyticId) {
@@ -193,7 +201,7 @@ class Notification extends Component {
             <div style={styles.dismiss}>
               <FontAwesome
                 icon="times"
-                onClick={this.toggleContent.bind(this)}
+                onClick={this.onDismiss}
               />
             </div>
           )}
