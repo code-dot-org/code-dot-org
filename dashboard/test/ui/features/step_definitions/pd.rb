@@ -8,7 +8,7 @@ Given(/^I am a workshop administrator with some applications of each type and st
   }
 end
 
-Given(/^I am a workshop administrator/) do
+Given(/^I am a workshop administrator$/) do
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
     And I create a teacher named "#{random_name}"
