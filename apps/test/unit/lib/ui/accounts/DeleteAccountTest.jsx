@@ -18,7 +18,7 @@ describe('DeleteAccount', () => {
     it('is disabled if password is required and not provided', () => {
       const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS}/>);
       wrapper.setState({
-        isDialogOpen: true,
+        isDeleteAccountDialogOpen: true,
         deleteVerification: DELETE_VERIFICATION_STRING,
       });
       const confirmButton = wrapper.find('Button').at(0);
@@ -28,7 +28,7 @@ describe('DeleteAccount', () => {
     it('is disabled if verification string is not provided', () => {
       const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS}/>);
       wrapper.setState({
-        isDialogOpen: true,
+        isDeleteAccountDialogOpen: true,
         password: 'password',
       });
       const confirmButton = wrapper.find('Button').at(0);
@@ -38,7 +38,7 @@ describe('DeleteAccount', () => {
     it('is disabled if verification string is incorrect', () => {
       const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS}/>);
       wrapper.setState({
-        isDialogOpen: true,
+        isDeleteAccountDialogOpen: true,
         password: 'password',
         deleteVerification: 'some other string',
       });
@@ -50,7 +50,7 @@ describe('DeleteAccount', () => {
       it('is enabled if password is not required and verification string is correct', () => {
         const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isPasswordRequired={false}/>);
         wrapper.setState({
-          isDialogOpen: true,
+          isDeleteAccountDialogOpen: true,
           deleteVerification: DELETE_VERIFICATION_STRING,
         });
         const confirmButton = wrapper.find('Button').at(0);
@@ -60,7 +60,7 @@ describe('DeleteAccount', () => {
       it('is enabled if password is provided and verification string is correct', () => {
         const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS}/>);
         wrapper.setState({
-          isDialogOpen: true,
+          isDeleteAccountDialogOpen: true,
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
         });
@@ -75,7 +75,7 @@ describe('DeleteAccount', () => {
         let checkboxes = buildCheckboxMap();
         checkboxes[1].checked = true;
         wrapper.setState({
-          isDialogOpen: true,
+          isDeleteAccountDialogOpen: true,
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes
@@ -89,7 +89,7 @@ describe('DeleteAccount', () => {
         let checkboxes = buildCheckboxMap();
         Object.keys(checkboxes).map(id => checkboxes[id].checked = true);
         wrapper.setState({
-          isDialogOpen: true,
+          isDeleteAccountDialogOpen: true,
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes
         });
@@ -102,7 +102,7 @@ describe('DeleteAccount', () => {
         let checkboxes = buildCheckboxMap();
         Object.keys(checkboxes).map(id => checkboxes[id].checked = true);
         wrapper.setState({
-          isDialogOpen: true,
+          isDeleteAccountDialogOpen: true,
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes
@@ -119,7 +119,7 @@ describe('DeleteAccount', () => {
     beforeEach(() => {
       wrapper = mount(<DeleteAccount {...DEFAULT_PROPS}/>);
       wrapper.setState({
-        isDialogOpen: true,
+        isDeleteAccountDialogOpen: true,
         password: 'password',
         deleteVerification: DELETE_VERIFICATION_STRING,
       });
