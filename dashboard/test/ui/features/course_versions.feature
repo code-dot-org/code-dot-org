@@ -53,6 +53,15 @@ Scenario: Versions warning announcement on script overview page
   Then element ".announcement-notification:contains(newer version)" is visible
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
 
+  # Close the dialog
+  When I click selector ".announcement-notification:contains(newer version) .fa-times"
+  Then I wait until element ".announcement-notification:contains(newer version)" is not visible
+
+  When I reload the page
+  And I wait until element "#script-title" is visible
+  And element "#version-selector" is visible
+  Then element ".announcement-notification:contains(newer version)" is not visible
+
   # Generate progress in course 2
   When I am on "http://studio.code.org/s/course2/stage/1/puzzle/1"
   And I click selector ".next-stage" once I see it
