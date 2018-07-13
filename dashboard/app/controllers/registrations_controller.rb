@@ -55,6 +55,7 @@ class RegistrationsController < Devise::RegistrationsController
     # TODO: (madelynkasula) Remove the new_destroy_flow check when the
     # ACCOUNT_DELETION_NEW_FLOW experiment is removed.
     if params[:new_destroy_flow]
+      return head :bad_request unless current_user.can_delete_own_account?
       password_required = current_user.encrypted_password.present?
       invalid_password = !current_user.valid_password?(params[:password_confirmation])
       if password_required && invalid_password
