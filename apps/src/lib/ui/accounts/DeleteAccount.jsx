@@ -9,6 +9,7 @@ import {
 } from './DeleteAccountHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
+import PersonalLoginDialog from './PersonalLoginDialog';
 import DeleteAccountDialog from './DeleteAccountDialog';
 
 export const DELETE_VERIFICATION_STRING = i18n.deleteAccountDialog_verificationString();
@@ -46,7 +47,8 @@ export const buildCheckboxMap = () => {
 };
 
 const DEFAULT_STATE = {
-  isDialogOpen: false,
+  isPersonalLoginDialogOpen: false,
+  isDeleteAccountDialogOpen: false,
   password: '',
   passwordError: '',
   deleteVerification: '',
@@ -62,12 +64,29 @@ export default class DeleteAccount extends React.Component {
 
   state = DEFAULT_STATE;
 
-  toggleDialog = () => {
+  togglePersonalLoginDialog = () => {
     this.setState(state => {
       return {
         ...DEFAULT_STATE,
-        isDialogOpen: !state.isDialogOpen
+        isPersonalLoginDialogOpen: !state.isPersonalLoginDialogOpen
       };
+    });
+  };
+
+  toggleDeleteAccountDialog = () => {
+    this.setState(state => {
+      return {
+        ...DEFAULT_STATE,
+        isDeleteAccountDialogOpen: !state.isDeleteAccountDialogOpen
+      };
+    });
+  };
+
+  // Closes PersonalLoginDialog and opens DeleteAccountDialog
+  goToDeleteAccountDialog = () => {
+    this.setState({
+      isPersonalLoginDialogOpen: false,
+      isDeleteAccountDialogOpen: true,
     });
   };
 
@@ -149,11 +168,16 @@ export default class DeleteAccount extends React.Component {
           <BootstrapButton
             type="danger"
             text={i18n.deleteAccount()}
-            onClick={this.toggleDialog}
+            onClick={this.props.isTeacher ? this.togglePersonalLoginDialog : this.toggleDeleteAccountDialog}
           />
         </div>
+        <PersonalLoginDialog
+          isOpen={this.state.isPersonalLoginDialogOpen}
+          onCancel={this.togglePersonalLoginDialog}
+          onConfirm={this.goToDeleteAccountDialog}
+        />
         <DeleteAccountDialog
-          isOpen={this.state.isDialogOpen}
+          isOpen={this.state.isDeleteAccountDialogOpen}
           isPasswordRequired={this.props.isPasswordRequired}
           isTeacher={this.props.isTeacher}
           checkboxes={this.state.checkboxes}
@@ -163,7 +187,7 @@ export default class DeleteAccount extends React.Component {
           onCheckboxChange={this.onCheckboxChange}
           onPasswordChange={this.onPasswordChange}
           onDeleteVerificationChange={this.onDeleteVerificationChange}
-          onCancel={this.toggleDialog}
+          onCancel={this.toggleDeleteAccountDialog}
           disableConfirm={!this.isValid()}
           deleteUser={this.deleteUser}
           deleteError={this.state.deleteError}
