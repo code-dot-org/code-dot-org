@@ -149,7 +149,6 @@ export default class AssetManager extends React.Component {
     const recordButton = (<div>
       <button
         onClick={this.onRecordClick}
-        className="share"
         id="record-asset"
         disabled={!this.props.uploadsEnabled}
       >

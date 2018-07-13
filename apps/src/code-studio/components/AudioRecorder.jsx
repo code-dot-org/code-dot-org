@@ -35,8 +35,7 @@ class AudioRecorder extends React.Component {
         <span>
           <button
             onClick={this.onStopClick}
-            className="share"
-            id="record-asset"
+            id="stop-record"
             style={styles.button}
           >
             <i className="fa fa-stop" />
@@ -44,8 +43,7 @@ class AudioRecorder extends React.Component {
           </button>
           <button
             onClick={()=>{}}
-            className="share"
-            id="record-asset"
+            id="cancel-record"
             style={styles.button}
           >
             Cancel
