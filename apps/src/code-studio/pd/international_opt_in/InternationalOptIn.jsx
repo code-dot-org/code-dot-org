@@ -199,7 +199,7 @@ class InternationalOptInComponent extends FormComponent {
           <Row>
             <Col md={6}>
               <ControlLabel>
-                Date
+                {i18n.workshopDate()}
                 <span style={{color: 'red'}}> *</span>
               </ControlLabel>
             </Col>
@@ -208,7 +208,6 @@ class InternationalOptInComponent extends FormComponent {
             <Col md={6}>
               <DatePicker
                 date={date}
-                minDate={moment()}
                 onChange={this.handleDateChange}
                 readOnly={false}
               />
