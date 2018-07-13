@@ -60,6 +60,7 @@ export default class DeleteAccount extends React.Component {
   static propTypes = {
     isPasswordRequired: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
+    dependedUponForLogin: PropTypes.bool,
   };
 
   state = DEFAULT_STATE;
@@ -154,6 +155,17 @@ export default class DeleteAccount extends React.Component {
   };
 
   render() {
+    const {isTeacher, dependedUponForLogin, isPasswordRequired} = this.props;
+    const {
+      isPersonalLoginDialogOpen,
+      isDeleteAccountDialogOpen,
+      checkboxes,
+      password,
+      passwordError,
+      deleteVerification,
+      deleteError,
+    } = this.state;
+
     return (
       <div style={styles.container}>
         <hr style={styles.hr} />
@@ -161,36 +173,36 @@ export default class DeleteAccount extends React.Component {
           {i18n.deleteAccount()}
         </h2>
         <div style={styles.warning}>
-          {this.props.isTeacher ? <TeacherWarning/> : <StudentWarning/>}
+          {isTeacher ? <TeacherWarning/> : <StudentWarning/>}
         </div>
         <div style={styles.buttonContainer}>
           {/* This button intentionally uses BootstrapButton to match other account page buttons */}
           <BootstrapButton
             type="danger"
             text={i18n.deleteAccount()}
-            onClick={this.props.isTeacher ? this.togglePersonalLoginDialog : this.toggleDeleteAccountDialog}
+            onClick={(isTeacher && dependedUponForLogin) ? this.togglePersonalLoginDialog : this.toggleDeleteAccountDialog}
           />
         </div>
         <PersonalLoginDialog
-          isOpen={this.state.isPersonalLoginDialogOpen}
+          isOpen={isPersonalLoginDialogOpen}
           onCancel={this.togglePersonalLoginDialog}
           onConfirm={this.goToDeleteAccountDialog}
         />
         <DeleteAccountDialog
-          isOpen={this.state.isDeleteAccountDialogOpen}
-          isPasswordRequired={this.props.isPasswordRequired}
-          isTeacher={this.props.isTeacher}
-          checkboxes={this.state.checkboxes}
-          password={this.state.password}
-          passwordError={this.state.passwordError}
-          deleteVerification={this.state.deleteVerification}
+          isOpen={isDeleteAccountDialogOpen}
+          isPasswordRequired={isPasswordRequired}
+          isTeacher={isTeacher}
+          checkboxes={checkboxes}
+          password={password}
+          passwordError={passwordError}
+          deleteVerification={deleteVerification}
           onCheckboxChange={this.onCheckboxChange}
           onPasswordChange={this.onPasswordChange}
           onDeleteVerificationChange={this.onDeleteVerificationChange}
           onCancel={this.toggleDeleteAccountDialog}
           disableConfirm={!this.isValid()}
           deleteUser={this.deleteUser}
-          deleteError={this.state.deleteError}
+          deleteError={deleteError}
         />
       </div>
     );

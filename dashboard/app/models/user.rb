@@ -1979,6 +1979,14 @@ class User < ActiveRecord::Base
     restore(recursive: true, recovery_window: 5.minutes)
   end
 
+  def depended_upon_for_login?
+    # Teacher is depended upon for login if student does not have a personal login
+    # and student has no other teachers.
+    students.any? do |student|
+      student.can_create_personal_login? && student.teachers.uniq.one?
+    end
+  end
+
   private
 
   def hidden_stage_ids(sections)
