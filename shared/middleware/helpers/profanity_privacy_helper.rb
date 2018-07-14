@@ -29,11 +29,9 @@ def profanity_privacy_violation?(filename, body)
 end
 
 def channel_policy_violation?(channel_id)
-  bucket = SourceBucket.new
-  filename = 'main.json'
-  result = bucket.get(channel_id, filename)
-  return false unless result && result[:body]
-  profanity_privacy_violation?(filename, result[:body])
+  body = channel_main_json_body channel_id
+  return false unless body
+  profanity_privacy_violation?(filename, body)
 end
 
 #
@@ -54,11 +52,8 @@ end
 #   block and why.  If not, this method returns false.
 #
 def explain_share_failure(channel_id, locale = 'en')
-  bucket = SourceBucket.new
-  filename = 'main.json'
-  result = bucket.get(channel_id, filename)
-  return false unless result && result[:body]
-  body = result[:body]
+  body = channel_main_json_body channel_id
+  return false unless body
   body_string = body.string
 
   begin
@@ -76,4 +71,12 @@ def explain_share_failure(channel_id, locale = 'en')
     # If WebPurify or Geocoder are unavailable, default to viewable
     return false
   end
+end
+
+# Effectively private
+def channel_main_json_body(channel_id)
+  bucket = SourceBucket.new
+  filename = BLOCKLY_SOURCE_FILENAME
+  result = bucket.get(channel_id, filename)
+  (result && result[:body]) || false
 end
