@@ -383,6 +383,7 @@ class Documents < Sinatra::Base
       dirs.map do |site|
         site_glob = site_sub = content_dir(site, 'public')
 
+        next if site == 'drupal.code.org'
         if site == 'hourofcode.com'
           # hourofcode.com has custom logic to include
           # optional `/i18n` folder in its file-search path.
