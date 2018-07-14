@@ -8,30 +8,14 @@ BLOCKLY_SOURCE_FILENAME = 'main.json'.freeze unless defined? BLOCKLY_SOURCE_FILE
 
 def profanity_privacy_violation?(filename, body)
   return false unless filename == BLOCKLY_SOURCE_FILENAME
-
-  body_string = body.string
-
-  begin
-    parsed_json = JSON.parse(body_string)
-  rescue JSON::ParserError
-    return false
-  end
-
-  blockly_source = parsed_json['source']
-  return false unless blockly_source
-
-  begin
-    return !ShareFiltering.find_share_failure(blockly_source, request.locale).nil?
-  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
-    # If WebPurify or Geocoder are unavailable, default to viewable
-    return false
-  end
+  share_failure = share_failure_from_body body, request.locale
+  !!share_failure
 end
 
 def channel_policy_violation?(channel_id)
   body = channel_main_json_body channel_id
   return false unless body
-  profanity_privacy_violation?(filename, body)
+  profanity_privacy_violation?(BLOCKLY_SOURCE_FILENAME, body)
 end
 
 #
@@ -53,6 +37,19 @@ end
 #
 def explain_share_failure(channel_id, locale = 'en')
   body = channel_main_json_body channel_id
+  share_failure_from_body body, locale
+end
+
+# Effectively private
+def channel_main_json_body(channel_id)
+  bucket = SourceBucket.new
+  filename = BLOCKLY_SOURCE_FILENAME
+  result = bucket.get(channel_id, filename)
+  (result && result[:body]) || false
+end
+
+# Effectively private
+def share_failure_from_body(body, locale)
   return false unless body
   body_string = body.string
 
@@ -71,12 +68,4 @@ def explain_share_failure(channel_id, locale = 'en')
     # If WebPurify or Geocoder are unavailable, default to viewable
     return false
   end
-end
-
-# Effectively private
-def channel_main_json_body(channel_id)
-  bucket = SourceBucket.new
-  filename = BLOCKLY_SOURCE_FILENAME
-  result = bucket.get(channel_id, filename)
-  (result && result[:body]) || false
 end
