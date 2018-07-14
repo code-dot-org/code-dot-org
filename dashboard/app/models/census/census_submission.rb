@@ -1,4 +1,5 @@
 # coding: utf-8
+
 # == Schema Information
 #
 # Table name: census_submissions

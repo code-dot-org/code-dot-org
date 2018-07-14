@@ -1,6 +1,7 @@
 # coding: utf-8
+
 require 'sort_alphabetical'
-# coding: utf-8
+
 COUNTRY_CODE_TO_COUNTRY_NAME = {
   "AD" => "Andorra",
   "AE" => "United Arab Emirates",

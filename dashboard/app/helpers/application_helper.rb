@@ -1,4 +1,5 @@
 # coding: utf-8
+
 require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
