@@ -1,24 +1,8 @@
+import _ from 'lodash';
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import SendToPhone from '../../code-studio/components/SendToPhone';
 import project from '../../code-studio/initApp/project';
-
-const styles = {
-  main: {
-    font: '12pt "Gotham 5r", sans-serif',
-  },
-  sendToPhone: {
-    label: {
-      font: '12pt "Gotham 5r", sans-serif',
-      lineHeight: 'normal',
-      cursor: 'default',
-    },
-    div: {
-      margin: 0,
-      lineHeight: 'normal',
-    },
-  }
-};
 
 /**
  * List of app types for which we should show a "View code" button here. Other
@@ -66,65 +50,96 @@ export default class WireframeButtons extends React.Component {
     return false; // so the # link doesn't go anywhere.
   };
 
-  getSendToPhoneButtonClass() {
-    return this.state.clickedSendToPhone ? 'WireframeButtons_active' : 'WireframeButtons_button';
-  }
-
   render() {
+    const {appType, channelId, isLegacyShare} = this.props;
+    const {clickedSendToPhone} = this.state;
+    const showViewCode = APP_TYPES_WITH_VIEW_CODE.includes(appType);
+    const appTypeAndLegacy = appType + (isLegacyShare ? '_legacy' : '');
+    const newProjectUrl = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     return (
-        <div style={styles.main}>
-          {this.renderViewCodeButton()}
-          {this.renderNewProjectButton()}
-          <span style={{display: 'inline-block'}}>
-            <a className={this.getSendToPhoneButtonClass()} onClick={this.handleClickSendToPhone}>
-              <i className="fa fa-mobile"/> {i18n.sendToPhone()}
-            </a>
-          </span>
-          <br />
-          {this.renderSendToPhone()}
-        </div>
+      <div style={styles.main}>
+        {showViewCode && <ViewCodeButton/>}
+        {newProjectUrl && <NewProjectButton url={newProjectUrl}/>}
+        <SendToPhoneButton
+          active={clickedSendToPhone}
+          onClick={this.handleClickSendToPhone}
+        />
+        <br />
+        {clickedSendToPhone &&
+          <SendToPhoneControls
+            appType={appType}
+            channelId={channelId}
+            isLegacyShare={isLegacyShare}
+          />
+        }
+      </div>
     );
   }
-
-  renderViewCodeButton() {
-    if (APP_TYPES_WITH_VIEW_CODE.includes(this.props.appType)) {
-      return (
-          <span style={{display: 'inline-block'}}>
-            <a className="WireframeButtons_button" href={project.getProjectUrl('/view')}>
-              <i className="fa fa-code"/> {i18n.viewCode()}
-            </a>
-          </span>
-      );
-    }
-  }
-
-  renderNewProjectButton() {
-    const { isLegacyShare } = this.props;
-    const appTypeAndLegacy = this.props.appType + (isLegacyShare ? '_legacy' : '');
-    const url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
-    if (url) {
-      return (
-          <span style={{display: 'inline-block'}}>
-            <a className="WireframeButtons_button" href={url}>
-              <i className="fa fa-pencil-square-o"/> {i18n.makeMyOwn()}
-            </a>
-          </span>
-      );
-    }
-  }
-
-  renderSendToPhone() {
-    if (this.state.clickedSendToPhone) {
-      return (
-          <div className="WireframeButtons_active">
-            <SendToPhone
-              styles={styles.sendToPhone}
-              channelId={this.props.channelId}
-              appType={this.props.appType}
-              isLegacyShare={this.props.isLegacyShare}
-            />
-          </div>
-      );
-    }
-  }
 }
+
+const ViewCodeButton = () => (
+  <span style={{display: 'inline-block'}}>
+    <a className="WireframeButtons_button" href={project.getProjectUrl('/view')}>
+      <i className="fa fa-code"/> {i18n.viewCode()}
+    </a>
+  </span>
+);
+
+const NewProjectButton = ({url}) => (
+  <span style={{display: 'inline-block'}}>
+    <a className="WireframeButtons_button" href={url}>
+      <i className="fa fa-pencil-square-o"/> {i18n.makeMyOwn()}
+    </a>
+  </span>
+);
+NewProjectButton.propTypes = {
+  url: PropTypes.string.isRequired,
+};
+
+const SendToPhoneButton = ({active, onClick}) => (
+  <span style={{display: 'inline-block'}}>
+    <a
+      className={active ? 'WireframeButtons_active' : 'WireframeButtons_button'}
+      onClick={onClick}
+    >
+      <i className="fa fa-mobile"/> {i18n.sendToPhone()}
+    </a>
+  </span>
+);
+SendToPhoneButton.propTypes = {
+  active: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+};
+
+const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
+  <div className="WireframeButtons_active">
+    <SendToPhone
+      styles={styles.sendToPhone}
+      channelId={channelId}
+      appType={appType}
+      isLegacyShare={isLegacyShare}
+    />
+  </div>
+);
+SendToPhoneControls.propTypes = _.pick(WireframeButtons.propTypes, [
+  'appType',
+  'channelId',
+  'isLegacyShare',
+]);
+
+const styles = {
+  main: {
+    font: '12pt "Gotham 5r", sans-serif',
+  },
+  sendToPhone: {
+    label: {
+      font: '12pt "Gotham 5r", sans-serif',
+      lineHeight: 'normal',
+      cursor: 'default',
+    },
+    div: {
+      margin: 0,
+      lineHeight: 'normal',
+    },
+  }
+};
