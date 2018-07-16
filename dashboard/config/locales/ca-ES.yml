@@ -3,8 +3,8 @@ ca:
   errors:
     messages:
       not_saved: 'Si us plau corregeixi els errors següents:'
-      too_young: Aquest contingut té restriccions d'edat en el lloc i no està disponible
-        per als estudiants més joves
+      too_young: This content has age restrictions in place and is not available for
+        younger students.
       teacher_must_accept_terms: Aquest contingut té restriccions d'edat en el lloc
         i no està disponible per als estudiants més joves. Demana el teu professor
         d'acceptar les condicions actualitzades del servei per poder accedir a aquest
@@ -26,7 +26,8 @@ ca:
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: Email
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: nom d'usuari
         password: contrasenya
         password_confirmation: Confirma la contrasenya
@@ -69,7 +70,7 @@ ca:
   courses: cursos
   courses_page:
     title_student: Aprendre sobre Code Studio
-    title_teacher: Teach with Code Studio
+    title_teacher: Teach Computer Science
   unplugged_activity: Activitat sense connexió
   of: de
   more: MÉS
@@ -117,10 +118,10 @@ ca:
     hoc_already_signed_up_heading: Get started without logging in
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your
+      classroom and share the link with them.<br/><br/>If you enjoyed the Hour of
+      Code and want to go further, you can set up a password and create a Code Studio
+      account below to enroll your students in any of our <a href="%{educate_url}">longer
       courses</a>.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
@@ -152,14 +153,12 @@ ca:
     agree_us_website: I agree to using a website based in the United States.
     my_data_to_us: Data from my use of this site may be sent to and stored or processed
       in the United States.
-    student_terms: Estic d'acord i accepto les <a href='http://code.org/tos'>condicions
-      del servei</a> de Code.org. Si sóc menor de 13 anys, confirmo mitjançant l'enviament
-      d'aquest formulari que tinc l'autorització dels meus pares o del tutor legal
-      per utilitzar els serveis de Code.org.<br/>Per als usuaris menors de 13 anys,
-      les adreces de correu electrònic s'emmagatzemen d'una forma que no ens permet
-      contactar amb ells.
-    teacher_terms: Estic d'acord i accepto les <a href='http://code.org/tos'>condicions
-      del servei</a> de Code.org.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
+    teacher_terms: I agree to be bound by the Code.org terms of service. For more
+      information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: Necessitem alguna informació addicional per continuar
       amb la vostra inscripció.
     user_type_button: Update Account Type
@@ -170,7 +169,7 @@ ca:
     accept_terms: You must agree to create an account
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Sí
     email_preference_no: 'No'
@@ -198,7 +197,7 @@ ca:
     school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Ja teniu un compte? Entreu
-    login: Correu o nom d'usuari
+    login: Email
     login_username: Email or Username
     password: Contrasenya
     remember: Recorda'm
@@ -220,8 +219,8 @@ ca:
   password:
     reset_form:
       title: Has oblidat la constrasenya?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Enter your email address associated with your account below and
+        we'll send you password reset instructions.
       email: Correu electrònic
       submit: Envia
     reset_errors:
@@ -305,9 +304,10 @@ ca:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: He acabat la meva Hora de Codi
@@ -315,7 +315,7 @@ ca:
       free_play:
         playlab: Fes un App
         artist: Dibuixa alguna cosa
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Fes un App
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -364,12 +364,12 @@ ca:
       settings: El meu compte
       logout: Tanca la sessió
       signin: Inicia la sessió
-      signup: Inscriure's
+      signup: Create an account
       already_registered: Ja estàs registrat?
       pair_programming: Programació per parelles
       team: Team
-      driver: Driver
-      navigator: Navigator
+      driver: Logged in
+      navigator: Partner
     popup:
       progress_for_user: Progrés de %{name}
       progress: El teu progrés
@@ -392,10 +392,10 @@ ca:
       remove: Esteu segur que voleu eliminar aquest mestre?
     students:
       dashboard: Ves al Tauler del Mestre
-    user_not_found: No es troba el mestre o l'alumne
+    user_not_found: The teacher could not be found.
     student_teacher_disassociated: Vostè ha tret %{teacher_name} com el seu mestre.
     panel:
-      answer_viewer: Visualitzador de respostes
+      answer_viewer: Teacher Panel
       student: estudiant
       viewing_solution: Mostra la solució
       try_it_yourself: Prova-ho tu
@@ -431,8 +431,7 @@ ca:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -500,7 +499,7 @@ ca:
     heading_elementary: "<h2>Cursos de 20 hores per a</h2><h1>Principiants (totes
       les edats)</h1>"
     heading_apps: "<h2>Diversió per a</h2><h1>Tothom</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High
       School</h1>"
     heading_legacy: "<h2>El nostre curs general per a</h2><h1>Totes les edats</h1>"
     your_gallery: Galeria
@@ -625,8 +624,8 @@ ca:
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: You cannot move these students because they are
+      already in the new section.
     third_party_login: You cannot move students to a section that is synced with a
       third party tool.
   share:
@@ -659,9 +658,14 @@ ca:
       Ltd. Tots els drets reservats. < br / > Plants vs Zombies &#8482; © %{current_year}
       Electronic Arts Inc Tots els drets reservats. < br / > El sorprenent món de
       Gumball és marca registrada i © 2015 Cartoon Network.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; %{current_year} Cartoon Network.
     code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a>.
     powered_by_aws: Desenvolupat per Amazon Web Services
@@ -763,7 +767,7 @@ ca:
       audience: Ages 13+
       cta: Learn how
     hoc:
-      title: Hora del codi
+      title: Classic Maze
       body: Provea els conceptes bàsics de la Informàtica. Milions li han donat una
         oportunitat.
     flappy:
@@ -784,7 +788,7 @@ ca:
       body: Mira tota una galeria d'imatges artístiques i aplicacions creades pels
         nostres usuaris
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Ages 13+
@@ -825,7 +829,7 @@ ca:
         text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: Ages 4+
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -872,7 +876,7 @@ ca:
     support: Obtenir ajuda
     support_url: support.code.org
     help_resources: Help and Resources
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -894,7 +898,7 @@ ca:
     wrong_title: Gràcies
     wrong_body: Thank you for submitting answers.
     correct_title: Gràcies
-    correct_body: Thank you for submitting an answer
+    correct_body: Thank you for submitting answers.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -973,8 +977,8 @@ ca:
     tos: Condicions d'ús
     privacy: Política de Privacitat
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accept
     print: Imprimeix
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1104,7 +1108,7 @@ ca:
         abusive_url: URL of the content being reported
         abuse_type:
           question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
+          harassment: Threats, cyberbullying, harassment
           offensive: Contingut ofensiu
           infringement: Infracció de copyright
           other: Altres
@@ -1112,7 +1116,7 @@ ca:
           are reporting.
         acknowledge: By submitting this information, you acknowledge it will be handled
           in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+          and the %{link_start_tos}Terms of Service%{link_end}.
   peer_review:
     accepted:
       name: Accepted
@@ -1140,7 +1144,7 @@ ca:
   flex_category:
     required: Vista general
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1161,8 +1165,8 @@ ca:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1250,7 +1254,7 @@ ca:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -1277,7 +1281,7 @@ ca:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:

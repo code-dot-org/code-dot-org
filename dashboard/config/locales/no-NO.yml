@@ -170,7 +170,7 @@
     error: En feil har oppstått.
     email_preference_question: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
       eller andre IT-relaterte nyheter?
-    email_preference_privacy: "(Se våre vilkår for personvern)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ja
     email_preference_no: Nei
     email_preference_required: You must specify an email preference.
@@ -314,7 +314,7 @@
       free_play:
         playlab: Lag en app
         artist: Tegn noe
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Lag en app
         gamelab: Opprett et Spill-lab prosjekt
         weblab: Opprett et Web-lab (beta) prosjekt

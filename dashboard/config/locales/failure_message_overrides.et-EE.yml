@@ -53,8 +53,7 @@ et:
         või paremale.
       MC HOC 2016 Level 5_failure_message_override: Proovi kasutada "igavesti täida"
         koos "liigu edasi" mängija poole.
-      MC HOC 2016 Level 6_failure_message_override: |-
-        Use the `spawn zombie` command
+      MC HOC 2016 Level 6_failure_message_override: Use the `spawn zombie` command
         under `when night` to spawn at least three zombies. Then, add `move a step
         toward player` to their `when spawned` event with a loop to help them chase
         you. If they’re too fast, add a `wait` command to slow them down.

@@ -363,7 +363,7 @@ pt-BR:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
       label: Oi, %{username}
-      stats: Meu progresso
+      stats: Code Studio
       settings: Minha conta
       logout: Sair
       signin: Entrar

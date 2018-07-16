@@ -22,7 +22,8 @@ cs:
         name_example: Zobrazované jméno <br/> (např. Cool kodér nebo Jana S.)
         email: E-mail
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: uživatelské jméno
         password: heslo
         password_confirmation: Potvrzení hesla
@@ -65,7 +66,7 @@ cs:
   courses: kurzy
   courses_page:
     title_student: Poznat Code studio
-    title_teacher: Teach with Code Studio
+    title_teacher: Teach Computer Science
   unplugged_activity: Aktivita bez počítače
   of: z
   more: VÍCE
@@ -161,7 +162,7 @@ cs:
     accept_terms: Musíte souhlasit pro vytvoření účtu
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ano
     email_preference_no: Ne
@@ -294,9 +295,10 @@ cs:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Dokončil jsem Hodinu Kódu
@@ -304,7 +306,7 @@ cs:
       free_play:
         playlab: Vytvořit aplikaci
         artist: Nakresli něco
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Vytvořit aplikaci
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -417,8 +419,7 @@ cs:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -775,7 +776,7 @@ cs:
       title: Galerie
       body: Zobrazit galerii app a uměleckých obrázků vytvořené našimi uživateli
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Věk 13 +
@@ -861,7 +862,7 @@ cs:
     support: Získat pomoc
     support_url: "//support.code.org"
     help_resources: Nápověda a zdroje informací
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -1140,8 +1141,8 @@ cs:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'

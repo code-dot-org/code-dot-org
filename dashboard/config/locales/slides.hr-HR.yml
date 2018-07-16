@@ -782,10 +782,10 @@ hr:
           of zebras live there.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
+        text: Sometimes on the Internet I talk to people I know, like my grandma who
+          lives in another state. Hi grandma! She's making me cookies that she'll
+          send me for my birthday. "Yummy, I wish the Internet had smellorama!" I
+          can talk to different people on the Internet, like my cousin but I only
           talk to people I know.
       5:
         image: notes/C1_going_places_safely_5.png
@@ -795,7 +795,7 @@ hr:
           to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street
+        text: 'The Internet is a super fun place. But just like when you cross a street
           in your neighborhood, you also have to be careful when you go online. Here
           are three rules to remember. Rule number 1: Always ask your parents first.
           Rule number 2: Only talk to people you know. Rule number 3: Stick to places
@@ -1069,7 +1069,7 @@ hr:
         text: Use your heart to grow and grow, and to give yourself a healthy glow,
           and to make a valentine, tell someone that you'll be mine! Use your heart
           when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
+          respect, to be fair and nice on the Internet. From your head down to your
           toes, pause, think about it. From your feet up to your nose, pause and think
           online!
       3:
@@ -1649,12 +1649,12 @@ hr:
           forward five times to the yummy sunflower.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Dosad si pravio animacije ili priče koje se odvijaju posve isto svaki
           put kad ih pokreneš. Sada možeš napraviti interaktivnu igru koju stvarno
           možeš igrati.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Ovdje je blok "kad strelica" i blok "kada lik". Možeš staviti te blokove
           zajedno da bi pomicao lik uokolo pomoću tipki sa strelicama.
     C3_songwriting_with_parameters:
@@ -2605,7 +2605,7 @@ hr:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
+        text: Hi, my name is Alice and I run the product and engineering teams here
           at Code.org and I worked on this tutorial that you're playing through right
           now.
       2:
@@ -2727,7 +2727,7 @@ hr:
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
+        text: Hi, my name is Alice and I run the product and engineering teams here
           at Code.org and I worked on this tutorial that you're playing through right
           now.
       2:

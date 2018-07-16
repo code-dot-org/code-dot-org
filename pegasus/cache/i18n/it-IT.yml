@@ -112,7 +112,7 @@ it-IT:
     mappa di volontari per contattare volontari in zona per visitare la tua classe,
     oppure cerca in qualsiasi citta' per trovare studenti di informatica o professionisti
     pronti ad ispirare i tuoi studenti da remoto, tramite video chat.
-  congrats_guest_speaker_cta: Trova testimonial (USA)
+  congrats_guest_speaker_cta: Find a guest speaker
   congrats_third_party_title: Usa le tue nuova capacità con queste app e siti web
   third_party_gradelevel_kto8: Da 5 a 13 anni
   third_party_gradelevel_kto2: Da 5 a 7 anni
@@ -532,7 +532,7 @@ it-IT:
   playlab_iceage_title: L'Era Glaciale - È in arrivo
   playlab_iceage_title_live: L'Era Glaciale
   starwars_subtitle: Costruisci una galassia con il codice
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Usa la programmazione a blocchi e il JavaScript.
   starwars_javascript_specs: Solo in inglese | Browser moderni | Da 11 anni in su
   starwars_blocks_title: Blocchi
@@ -567,23 +567,24 @@ it-IT:
     "Un avventura con Minecraft".
   minecraft_subtitle: L'Ora del Codice con Minecraft
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
+    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
+    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Risorse per l'insegnante e piano di lavoro della lezione.
   minecraft_leader_guide: Scarica le risorse per aiutarti a pianificare ed organizzare
     un evento.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
   minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -591,13 +592,13 @@ it-IT:
     education. Join us at the Microsoft Store to engage in a free series of three,
     1-hour workshops where you will experience coding in a fun and stress-free environment,
     become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
   minecraft_future: Aiuta tutti i giovani a prepararsi al futuro
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft è tornato per l'Ora del Codice e tu sei l'eroe! Programma
@@ -825,8 +826,8 @@ it-IT:
     come C++, Ruby o Python!
   dashboard_landing_inspire: Ispira i tuoi studenti con poster, video e molto altro.
   dashboard_landing_video_library: Scegli tra i video sui concetti base di informatica.
-  dashboard_landing_report_bug: Richiedere una funzionalità o segnalare un bug.
-  dashboard_landing_teacher_forum: Unisciti alla comunità di apprendimento professionale.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: L'ora del codice per tutte le età
   dashboard_hoc_courses_desc: Prova con i tuoi studenti una qualsiasi di questi corsi
     da un'ora!
@@ -1310,9 +1311,9 @@ it-IT:
   cspunit5_name: Princìpi dell'Informatica - Unità 5
   cspunit6_name: 'Dopo il corso Princìpi dell''Informatica: uso di database nelle
     App'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Dati e società'
   csd6_name: 'Unit 6: Informatica applicata'
@@ -1370,7 +1371,7 @@ it-IT:
   algebra_name: L'informatica in algebra
   AlgebraA_name: Informatica nell'algebra Corso A
   AlgebraB_name: Informatica nell'algebra Corso B
-  gumball_name: Palla di gomma
+  gumball_name: Gumball
   classicmaze_name: Labirinto Classico
   iceage_name: L'Era Glaciale
   minecraft_name: Minecraft
@@ -1386,7 +1387,7 @@ it-IT:
   csf_2018_category_name: Fondamenti di Informatica (2018)
   csf_international_category_name: Fondamenti di Informatica (in Italiano)
   csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: Princìpi dell'Informatica (versione 2015-16)
   csp17_category_name: "'16-'17 principi d'informatica"
@@ -1620,9 +1621,12 @@ it-IT:
     più grandi.)
   coursec_shortdescription_congrats: Impara le basi dell'informatica e dai vita a
     creazioni artistiche, storie animate o giochi interattivi.
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: Un'introduzione all'informatica per bambini
     che non leggono ancora.
   courseb-2017_shortdescription_congrats: Introduzione all'informatica per alunni
@@ -2188,13 +2192,13 @@ it-IT:
     aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'>
     uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina,
     ma aspettati qualche malfunzionamento.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: sbatti le ali
   infinity_shortcode: inf
-  playlab_shortcode: inizia
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: Controllo

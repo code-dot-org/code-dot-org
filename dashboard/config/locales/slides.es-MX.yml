@@ -1743,12 +1743,12 @@ es-MX:
           y el zombie avanzará cinco veces para el delicioso girasol.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Hasta ahora, has hecho una animación o una historia que hace exactamente
           lo mismo cada vez que ejecutas el programa. Ahora puedes hacer un juego
           interactivo con el que de verdad puedes jugar.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Están el bloque "cuando flecha" y el bloque "mover actor". Puedes poner
           estos bloques juntos para mover a los actores con las teclas de flecha.
     C3_songwriting_with_parameters:
