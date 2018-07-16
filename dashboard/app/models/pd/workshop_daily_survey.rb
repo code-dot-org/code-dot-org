@@ -10,6 +10,8 @@
 #  pd_workshop_id :integer          not null
 #  answers        :text(65535)
 #  day            :integer          not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 # Indexes
 #
