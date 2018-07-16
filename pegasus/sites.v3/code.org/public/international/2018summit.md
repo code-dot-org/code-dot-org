@@ -38,7 +38,7 @@ The International Summit will be most useful to organizations based outside of t
 
 ## **Registration Details**
 
-* The registration deadline is **13 July 2018**.
+* The registration deadline is **31 July 2018**.
 * Code.org will cover the cost of your registration fee when you register prior to 13 July 2018. Late registrations will be considered on a case-by-case basis.
 * Please note that we will not be able to accommodate you at the summit if you do not fill out the registration form. 
 
