@@ -1,8 +1,8 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "bounce",
-    "blockText": "{SPRITE} bounces",
+    "func": "bounceOffEdges",
+    "blockText": "{SPRITE} bounces off of edges",
     "args": [
       {
         "name": "SPRITE",

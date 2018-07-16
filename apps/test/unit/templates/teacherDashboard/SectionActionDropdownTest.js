@@ -132,23 +132,23 @@ describe('SectionActionDropdown', () => {
     expect(wrapper.find(<PrintCertificates sectionId={1} assignmentName="a"/>).length, 1);
   });
 
-  it('renders the hide option for a un-hidden section', () => {
+  it('renders the archive option for an unarchived section', () => {
     const wrapper = shallow(
       <SectionActionDropdown
         {...DEFAULT_PROPS}
         sectionData={sections[0]}
       />
     );
-    expect(wrapper).to.contain("Hide Section");
+    expect(wrapper).to.contain("Archive Section");
   });
 
-  it('renders the show option for a hidden section', () => {
+  it('renders the restore option for an archived section', () => {
     const wrapper = shallow(
       <SectionActionDropdown
         {...DEFAULT_PROPS}
         sectionData={sections[3]}
       />
     );
-    expect(wrapper).to.contain("Show Section");
+    expect(wrapper).to.contain("Restore Section");
   });
 });
