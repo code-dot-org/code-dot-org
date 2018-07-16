@@ -1,0 +1,1 @@
+../../node_modules/@code-dot-org/blockly/build-output/javascript_compressed.js
