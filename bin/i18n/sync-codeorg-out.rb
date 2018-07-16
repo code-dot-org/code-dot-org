@@ -5,12 +5,13 @@
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
+
 require 'fileutils'
+require 'json'
 require 'tempfile'
+require 'yaml'
 
 require_relative 'i18n_script_utils'
-
-require_relative '../i18n-codeorg/lib/merge-translation'
 
 CLEAR = "\r\033[K"
 
@@ -35,6 +36,24 @@ def rename_from_crowdin_name_to_locale
   end
 end
 
+# Recursively run through the data received from crowdin, sanitizing it for
+# consumption by our system.
+# Currently just restores carraige returns (since crowdin escapes them), but
+# could be expanded to do more.
+def sanitize(data)
+  if data.is_a? Hash
+    data.values.each {|datum| sanitize(datum)}
+  elsif data.is_a? Array
+    data.each {|datum| sanitize(datum)}
+  elsif data.is_a? String
+    data.gsub!(/\\r/, "\r")
+  elsif data.nil?
+    # pass
+  else
+    raise "can't process unknown type: #{data}"
+  end
+end
+
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations
@@ -49,42 +68,53 @@ def distribute_translations
     ### Dashboard
     Dir.glob("i18n/locales/#{locale}/dashboard/*.yml") do |loc_file|
       relname = File.basename(loc_file, '.yml')
-      source = "i18n/locales/source/dashboard/#{relname}.yml"
+      data = YAML.load_file(loc_file)
+      sanitize data
 
       # Special case the un-prefixed Yaml file.
       destination = (relname == "base") ?
         "dashboard/config/locales/#{locale}.yml" :
         "dashboard/config/locales/#{relname}.#{locale}.yml"
 
-      merge_translation 'yml', source, loc_file, destination
+      File.open(destination, 'w+') do |f|
+        f.write(data.to_yaml)
+      end
     end
 
     ### Apps
     js_locale = locale.tr('-', '_').downcase
     Dir.glob("i18n/locales/#{locale}/blockly-mooc/*.json") do |loc_file|
       relname = File.basename(loc_file, '.json')
-      source = "i18n/locales/source/blockly-mooc/#{relname}.json"
+      data = JSON.parse(File.read(loc_file))
+      sanitize data
       destination = "apps/i18n/#{relname}/#{js_locale}.json"
 
-      merge_translation 'json', source, loc_file, destination
+      File.open(destination, 'w+') do |f|
+        f.write(JSON.pretty_generate(data))
+      end
     end
 
     ### Blockly Core
     Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
       relname = File.basename(loc_file)
-      source = "i18n/locales/source/blockly-core/#{relname}"
+      data = JSON.parse(File.read(loc_file))
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
       FileUtils.mkdir_p(File.dirname(destination))
 
-      merge_translation 'json', source, loc_file, destination
+      File.open(destination, 'w+') do |f|
+        f.write(JSON.pretty_generate(data))
+      end
     end
 
     ### Pegasus
     loc_file = "i18n/locales/#{locale}/pegasus/mobile.yml"
-    source = "i18n/locales/source/pegasus/mobile.yml"
+    data = YAML.load_file(loc_file)
+    sanitize data
     destination = "pegasus/cache/i18n/#{locale}.yml"
 
-    merge_translation 'yml', source, loc_file, destination
+    File.open(destination, 'w+') do |f|
+      f.write(data.to_yaml)
+    end
   end
 
   puts "#{CLEAR}Distribution finished!"
