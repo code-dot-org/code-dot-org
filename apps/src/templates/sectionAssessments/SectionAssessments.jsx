@@ -16,7 +16,7 @@ import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import MCAssessmentsOverviewContainer from './MCAssessmentsOverviewContainer';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
-import StudentsMCSummaryContainer from './StudentsMCSummaryContainer';
+import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
 import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContainer';
 import FreeResponseSurveyContainer from './FreeResponseSurveyContainer';
 import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
@@ -158,7 +158,7 @@ class SectionAssessments extends Component {
                 {totalStudentSubmissions <= 0 &&
                   <h3>{i18n.emptyAssessmentSubmissions()}</h3>
                 }
-                <StudentsMCSummaryContainer />
+                <SubmissionStatusAssessmentsContainer />
                 {totalStudentSubmissions > 0 &&
                   <div>
                     <MCAssessmentsOverviewContainer />
