@@ -9549,3 +9549,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.
