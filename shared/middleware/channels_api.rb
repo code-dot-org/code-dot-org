@@ -318,6 +318,7 @@ class ChannelsApi < Sinatra::Base
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
   end
 
+  # This method is included here so that it can be stubbed in tests.
   def project_validator?
     has_permission?("project_validator")
   end
