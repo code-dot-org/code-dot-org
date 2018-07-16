@@ -323,7 +323,7 @@ class FilesApi < Sinatra::Base
     # 'replace' and 'currentVersion'.
     current_version = params['version'] || params['currentVersion']
     should_replace = params['replace'] == 'true'
-    version_to_replace = params['version'] || (should_replace && params['currentVersion'])
+    version_to_replace = params['version'] || (should_replace && params['currentVersion']) unless endpoint === 'assets'
 
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
@@ -374,11 +374,12 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/sources/<channel-id>/<filename>?version=<version-id>
+  # PUT /v3/(sources)/<channel-id>/<filename>?version=<version-id>
+  # PUT /v3/(assets)/<channel-id>/<filename>
   #
-  # Create or replace a file. Optionally overwrite a specific version.
+  # Create or replace a file. For sources endpoint, optionally overwrite a specific version.
   #
-  put %r{/v3/(sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/(sources|assets)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
