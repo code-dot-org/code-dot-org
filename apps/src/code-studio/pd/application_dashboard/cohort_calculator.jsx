@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'react-bootstrap';
-import {RegionalPartnerValuePropType} from './constants';
+import {RegionalPartnerValuePropType} from '../components/regional_partner_dropdown';
 import $ from 'jquery';
 
 const styles = {

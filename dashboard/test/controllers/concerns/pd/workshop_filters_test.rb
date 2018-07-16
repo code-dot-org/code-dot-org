@@ -152,6 +152,29 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.filter_workshops @workshop_query
   end
 
+  test 'filter_workshops with regional_partner_id' do
+    expects(:where).with(regional_partner_id: 1)
+    params regional_partner_id: 1
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with regional_partner_id set to none' do
+    expects(:where).with(regional_partner_id: nil)
+    params regional_partner_id: 'none'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with regional_partner_id unset' do
+    expects(:where).never
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with regional_partner_id set to all' do
+    expects(:where).never
+    params regional_partner_id: 'all'
+    @controller.filter_workshops @workshop_query
+  end
+
   # Normal sort fields
   %w(location_name on_map funded course subject).each do |sort_field|
     test "filter_workshops with order_by #{sort_field}" do

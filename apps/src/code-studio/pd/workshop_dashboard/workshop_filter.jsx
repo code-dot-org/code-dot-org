@@ -35,6 +35,7 @@ import {
   Subjects,
   States
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import RegionalPartnerDropdown, {RegionalPartnerPropType} from "../components/regional_partner_dropdown";
 
 const limitOptions = [
   {value: 25, text: 'first 25'},
@@ -47,6 +48,7 @@ const QUERY_API_URL = "/api/v1/pd/workshops/filter";
 export class WorkshopFilter extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
+    regionalPartnerFilter: RegionalPartnerPropType,
     location: PropTypes.shape({
       pathname: PropTypes.string,
       query: PropTypes.shape({
@@ -223,6 +225,7 @@ export class WorkshopFilter extends React.Component {
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,
       only_attended: urlParams.only_attended,
+      regional_partner_id: this.props.regionalPartnerFilter.value
     });
   }
 
@@ -256,11 +259,14 @@ export class WorkshopFilter extends React.Component {
   }
 
   render() {
+    console.log(this.props.regionalPartnerFilter);
     // limit is intentionally stored in state and not reflected in the URL
     const filters = {
       ...this.getFiltersFromUrlParams(),
       limit: this.state.limit.value
     };
+
+    console.log(filters);
 
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
@@ -379,6 +385,14 @@ export class WorkshopFilter extends React.Component {
             </Col>
           }
         </Row>
+        {
+          this.props.permission.has(WorkshopAdmin) &&
+          <Row>
+            <Col md={6}>
+              <RegionalPartnerDropdown/>
+            </Col>
+          </Row>
+        }
         <Row>
           <ServerSortWorkshopTable
             queryUrl={QUERY_API_URL}
@@ -395,5 +409,6 @@ export class WorkshopFilter extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission
+  permission: state.workshopDashboard.permission,
+  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter
 }))(WorkshopFilter);

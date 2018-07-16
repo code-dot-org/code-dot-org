@@ -12,14 +12,11 @@ import Select from "react-select";
 import "react-select/dist/react-select.css";
 import { SelectStyleProps } from '../constants';
 import CohortCalculator from './cohort_calculator';
-import RegionalPartnerDropdown from './regional_partner_dropdown';
+import RegionalPartnerDropdown, { RegionalPartnerPropType } from '../components/regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
-import {
-  ApplicationStatuses,
-  RegionalPartnerPropType
-} from './constants';
+import { ApplicationStatuses } from './constants';
 import {
   Button,
   FormGroup,
@@ -208,6 +205,6 @@ export class QuickView extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerFilter: state.regionalPartnerFilter,
-  showRegionalPartnerDropdown: state.regionalPartners.length > 1
+  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
+  showRegionalPartnerDropdown: state.regionalPartners.regionalPartners.length > 1
 }))(QuickView);

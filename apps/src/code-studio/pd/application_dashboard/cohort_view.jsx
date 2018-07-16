@@ -7,9 +7,8 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
 import CohortCalculator from './cohort_calculator';
-import RegionalPartnerDropdown from './regional_partner_dropdown';
+import RegionalPartnerDropdown, {RegionalPartnerPropType} from '../components/regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
-import {RegionalPartnerPropType} from './constants';
 
 const styles = {
   button: {
@@ -143,6 +142,6 @@ class CohortView extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerFilter: state.regionalPartnerFilter,
-  showRegionalPartnerDropdown: state.regionalPartners.length > 1
+  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
+  showRegionalPartnerDropdown: state.regionalPartners.regionalPartners.length > 1
 }))(CohortView);
