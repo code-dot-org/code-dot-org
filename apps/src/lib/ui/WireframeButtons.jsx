@@ -1,10 +1,9 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import SendToPhone from '../../code-studio/components/SendToPhone';
+import project from '../../code-studio/initApp/project';
 
-var project = require('@cdo/apps/code-studio/initApp/project');
-
-var styles = {
+const styles = {
   main: {
     font: '12pt "Gotham 5r", sans-serif',
   },
@@ -21,7 +20,6 @@ var styles = {
   }
 };
 
-
 /**
  * List of app types for which we should show a "View code" button here. Other
  * types will have a "How it works" button on the app itself, viewable on mobile
@@ -32,7 +30,6 @@ const APP_TYPES_WITH_VIEW_CODE = [
   'gamelab',
   'makerlab',
 ];
-
 
 /**
  * Url to which the "Make my own" button should go to, based on the type of the
@@ -49,34 +46,31 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
   playlab_legacy: '/s/playlab',
 };
 
-
 /**
  * Shows buttons for wireframe version, including "View code", "Make my own app", and "Send to phone".
  */
-let WireframeButtons = React.createClass({
-  propTypes: {
+export default class WireframeButtons extends React.Component {
+  static propTypes = {
     channelId: PropTypes.string,
     appType: PropTypes.string.isRequired,
     isLegacyShare: PropTypes.bool.isRequired,
-  },
+  };
 
-  getInitialState: function () {
+  state = {
     // "Send to phone" button is a toggle that shows and hides send to phone form.
-    return {
-      clickedSendToPhone: false
-    };
-  },
+    clickedSendToPhone: false
+  };
 
-  handleClickSendToPhone: function () {
+  handleClickSendToPhone = () => {
     this.setState({clickedSendToPhone: !this.state.clickedSendToPhone});
     return false; // so the # link doesn't go anywhere.
-  },
+  };
 
-  getSendToPhoneButtonClass: function () {
+  getSendToPhoneButtonClass() {
     return this.state.clickedSendToPhone ? 'WireframeButtons_active' : 'WireframeButtons_button';
-  },
+  }
 
-  render: function () {
+  render() {
     return (
         <div style={styles.main}>
           {this.renderViewCodeButton()}
@@ -90,9 +84,9 @@ let WireframeButtons = React.createClass({
           {this.renderSendToPhone()}
         </div>
     );
-  },
+  }
 
-  renderViewCodeButton: function () {
+  renderViewCodeButton() {
     if (APP_TYPES_WITH_VIEW_CODE.includes(this.props.appType)) {
       return (
           <span style={{display: 'inline-block'}}>
@@ -102,12 +96,12 @@ let WireframeButtons = React.createClass({
           </span>
       );
     }
-  },
+  }
 
-  renderNewProjectButton: function () {
+  renderNewProjectButton() {
     const { isLegacyShare } = this.props;
-    var appTypeAndLegacy = this.props.appType + (isLegacyShare ? '_legacy' : '');
-    var url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
+    const appTypeAndLegacy = this.props.appType + (isLegacyShare ? '_legacy' : '');
+    const url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     if (url) {
       return (
           <span style={{display: 'inline-block'}}>
@@ -117,9 +111,9 @@ let WireframeButtons = React.createClass({
           </span>
       );
     }
-  },
+  }
 
-  renderSendToPhone: function () {
+  renderSendToPhone() {
     if (this.state.clickedSendToPhone) {
       return (
           <div className="WireframeButtons_active">
@@ -133,5 +127,4 @@ let WireframeButtons = React.createClass({
       );
     }
   }
-});
-export default WireframeButtons;
+}
