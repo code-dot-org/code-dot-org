@@ -9,5 +9,6 @@ import * as skins from "@cdo/apps/applab/skins";
 
 export default function loadApplab(options) {
   options.skinsModule = skins;
+  options.blocksModule = {};
   appMain(Applab, levels, options);
 }
