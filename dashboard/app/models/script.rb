@@ -1055,7 +1055,7 @@ class Script < ActiveRecord::Base
 
     has_older_course_progress = course.try(:has_older_version_progress?, user)
     has_older_script_progress = has_older_version_progress?(user)
-    user_script = user && UserScript.find_by(user: user, script: self)
+    user_script = user_scripts.find_by(user: user)
 
     summary = {
       id: id,
