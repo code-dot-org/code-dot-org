@@ -43,7 +43,7 @@ Scenario: Version warning announcement on course and unit overview pages
   # The course unit version warning banner stays closed on refresh
   When I reload the page
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is visible
+  And element "#version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
 @as_student
