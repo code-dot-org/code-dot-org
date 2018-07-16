@@ -50,8 +50,8 @@ var styles = {
   }
 };
 
-var CodeWorkspaceContainer = React.createClass({
-  propTypes: {
+class CodeWorkspaceContainer extends React.Component {
+  static propTypes = {
     // redux provided
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -60,23 +60,23 @@ var CodeWorkspaceContainer = React.createClass({
     // not in redux
     topMargin: PropTypes.number.isRequired,
     children: PropTypes.node,
-  },
+  };
 
   /**
    * Called externally
    * @returns {number} The height of the rendered contents in pixels
    */
-  getRenderedHeight: function () {
+  getRenderedHeight() {
     return $(ReactDOM.findDOMNode(this)).height();
-  },
+  }
 
-  componentDidUpdate: function (prevProps) {
+  componentDidUpdate(prevProps) {
     if (this.props.topMargin !== prevProps.topMargin) {
       utils.fireResizeEvent();
     }
-  },
+  }
 
-  render: function () {
+  render() {
     var mainStyle = [styles.main, {
       top: this.props.topMargin
     },
@@ -94,7 +94,7 @@ var CodeWorkspaceContainer = React.createClass({
       </div>
     );
   }
-});
+}
 
 export const UnwrappedCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
 export default connect(state => ({
