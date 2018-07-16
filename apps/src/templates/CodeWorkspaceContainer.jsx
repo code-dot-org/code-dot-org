@@ -97,10 +97,11 @@ var CodeWorkspaceContainer = React.createClass({
   }
 });
 
+export const UnwrappedCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
 export default connect(state => ({
   hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
   isRtl: state.isRtl,
   noVisualization: state.pageConstants.noVisualization,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
 }), undefined, null, { withRef: true }
-)(Radium(CodeWorkspaceContainer));
+)(CodeWorkspaceContainer);
