@@ -21,4 +21,4 @@ Scenario: Complete Bee Conditions 4-5 Level 3
   And I press "runButton"
   And I wait to see ".congrats"
   And element ".congrats" is visible
-  And element ".congrats" has text "Congratulations! You completed Puzzle 3."
+  And element ".congrats" contains text "Puzzle completed!"

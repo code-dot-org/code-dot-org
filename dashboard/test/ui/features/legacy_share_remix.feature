@@ -14,6 +14,7 @@ Feature: Legacy Share Remix
     Then I press "runButton"
     Then I press "finishButton"
     And I wait to see ".congrats"
+    And I press the last button with text "Share"
     And I navigate to the share URL
     And I select the "How it Works (View Code)" small footer item
     And I wait to see ".project_remix"

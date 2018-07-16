@@ -11,7 +11,7 @@ Scenario: Complete Level 1
   And I hold key "LEFT"
   And I wait to see ".congrats"
   And element ".congrats" is visible
-  And element ".congrats" has text "Congratulations! You completed Puzzle 1."
+  And element ".congrats" contains text "Puzzle completed!"
 
 Scenario: Complete Level 3
   Given I am on "http://studio.code.org/s/events/stage/1/puzzle/3?noautoplay=true"
@@ -24,7 +24,7 @@ Scenario: Complete Level 3
   And I hold key "UP"
   And I wait to see ".congrats"
   And element ".congrats" is visible
-  And element ".congrats" has text "Congratulations! You completed Puzzle 3."
+  And element ".congrats" contains text "Puzzle completed!"
 
 @no_mobile
 Scenario: Incomplete Level 5
@@ -47,7 +47,7 @@ Scenario: Complete Level 5
   And I press "runButton"
   And I wait to see ".congrats"
   And element ".congrats" is visible
-  And element ".congrats" has text "Congratulations! You completed Puzzle 5."
+  And element ".congrats" contains text "Puzzle completed!"
 
 Scenario: Complete Bounce freeplay level
   Given I am on "http://studio.code.org/s/course3/stage/15/puzzle/10?noautoplay=true"

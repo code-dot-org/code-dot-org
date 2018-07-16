@@ -475,6 +475,7 @@ export class UnconnectedFinishDialog extends Component {
           <div style={styles.modalWrapper}>
             <div
               style={styles.modal}
+              className="congrats"
             >
               <div style={styles.confetti}>
                 <Confetti active={confetti} />
