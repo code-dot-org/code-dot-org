@@ -107,22 +107,26 @@ module Pd
           'singleSelect' => {
             text: 'single select label',
             answer_type: ANSWER_SINGLE_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: nil
           },
           'singleSelectWithOther' => {
             text: 'single select with other label',
             answer_type: ANSWER_SINGLE_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: 'Other'
           },
           'multiSelect' => {
             text: 'multi select label',
             answer_type: ANSWER_MULTI_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: nil
           },
           'multiSelectWithOther' => {
             text: 'multi select with other label',
             answer_type: ANSWER_MULTI_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: 'Other'
           },
           'scale' => {
             text: 'scale label',
