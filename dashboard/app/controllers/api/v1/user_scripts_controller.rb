@@ -1,4 +1,4 @@
-class UserScriptsController < ApplicationController
+class Api::V1::UserScriptsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user_script, only: :update
 
