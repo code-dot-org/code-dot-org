@@ -3,29 +3,29 @@ he:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: פרטים
+      draw eyebrow: צייר גבות
+      draw pupil: צייר תלמיד
       draw a circle: צייר מעגל
-      draw a car: draw a car
-      draw_rect: draw_rect
-      draw square: draw square
-      jump to controller top left: jump to controller top left
-      jump to middle: jump to middle
-      draw a button: draw a button
-      draw cord: draw cord
+      draw a car: צייר מכונית
+      draw_rect: צייר מרובע
+      draw square: צייר ריבוע
+      jump to controller top left: קפוץ עם הבקר לפינה שמאלית עליונה
+      jump to middle: קפוץ לאמצע
+      draw a button: צייר כפתור
+      draw cord: צייר מיתר
       draw R pad: draw R pad
-      draw left leg: draw left leg
-      draw right leg: draw right leg
-      draw body and arms: draw body and arms
-      draw a head: draw a head
+      draw left leg: צייר רגל שמאל
+      draw right leg: צייר רגל ימין
+      draw body and arms: צייר גוף וזרועות
+      draw a head: צייר ראש
       draw sitting stick figure: draw sitting stick figure
-      draw head: draw head
-      draw arms: draw arms
-      jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
+      draw head: צייר ראש
+      draw arms: צייר זרועות
+      jump to neck: קפוץ לצוואר
+      draw O: צייר O
+      draw D: צייר D
+      draw E: צייר E
       draw ear stems: draw ear stems
       big gear: big gear
       small gear: small gear
@@ -33,34 +33,34 @@ he:
       draw a flower: צייר פרח
       draw a square: צייר ריבוע
       draw a snowflake: צייר פתית שלג
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
-      get 2 nectar: get 2 nectar
-      collect purple nectar: collect purple nectar
-      get 5: get 5
-      move and get nectar: move and get nectar
-      move and get 4: move and get 4
-      get 7 nectar make 7 honey: get 7 nectar make 7 honey
-      get 7 make 7: get 7 make 7
-      get 7: get 7
-      move and get 3: move and get 3
+      draw 3 hexagons: צייר 3 משושים
+      draw 4 hexagons: צייר 4 משושים
+      draw 5 hexagons: צייר 5 משושים
+      get 2 nectar: הבא 2 צוף
+      collect purple nectar: אסוף צוף סגול
+      get 5: הבא 5
+      move and get nectar: זוז והבא צוף
+      move and get 4: זוז והבא 4
+      get 7 nectar make 7 honey: הבא 7 צוף ו7 דבש
+      get 7 make 7: הבא 7 וצור 7
+      get 7: הבא 7
+      move and get 3: זוז והבא 3
       draw a tree: צייר עץ
-      draw triangle: draw triangle
-      draw circle: draw circle
-      draw goal: draw goal
-      graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
-      draw a small triangle: draw a small triangle
-      draw a medium triangle: draw a medium triangle
-      draw a large triangle: draw a large triangle
-      draw a big triangle: draw a big triangle
+      draw triangle: צייר משולש
+      draw circle: צייר עיגול
+      draw goal: צייר מטרה
+      graph: גרף
+      draw waves: צייר גלים
+      draw a wave: צייר גל
+      draw a small triangle: צייר משולש קטן
+      draw a medium triangle: צייר משולש בינוני
+      draw a large triangle: צייר משולש רחב
+      draw a big triangle: צייר משולש גדול
       draw a triangle: צייר משולש
       draw a house: צייר בית
-      check purple flower: check purple flower
-      check flower make honey: check flower make honey
-      get nectar or make honey: get nectar or make honey
+      check purple flower: צייר פרח סגול
+      check flower make honey: בדוק פרח צור דבש
+      get nectar or make honey: הבא צוף או צור דבש
       make 3 honey: make 3 honey
       get 5 nectar: get 5 nectar
       make all honey: make all honey

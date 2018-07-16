@@ -450,9 +450,10 @@ sk:
         Tieto bloky ma naozaj trápia.
 
         Vieš ich opraviť?
-      4-5 Bee Debugging 6_markdown_instruction: "The purple flower has a different
-        amount of nectar each time you run the puzzle. \n\nFix the blocks to get all
-        of the nectar from the flower each time."
+      4-5 Bee Debugging 6_markdown_instruction: |-
+        Fialová kvetinka má pri každom spustení cvičenia iný počet nektáru.
+
+        Opravte bloky tak, aby ste vždy pozbierali všetok nektár.
       4-5 Bee Debugging Assessment 1_markdown_instruction: |-
         **Assessment:** Fix the
         code.

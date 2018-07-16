@@ -205,7 +205,7 @@ sk:
       4-5 Bee Conditionals 8_markdown_instruction: "Write the function for `check flower make honey`. \n\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make honey."
       4-5 Bee Conditionals Assessment 1_markdown_instruction: "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \n\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. \n"
       4-5 Bee Debugging 1_markdown_instruction: "Tieto bloky ma naozaj trápia.\n\nVieš ich opraviť?"
-      4-5 Bee Debugging 6_markdown_instruction: "The purple flower has a different amount of nectar each time you run the puzzle. \n\nFix the blocks to get all of the nectar from the flower each time."
+      4-5 Bee Debugging 6_markdown_instruction: "Fialová kvetinka má pri každom spustení cvičenia iný počet nektáru.\n\nOpravte bloky tak, aby ste vždy pozbierali všetok nektár."
       4-5 Bee Debugging Assessment 1_markdown_instruction: "**Assessment:** Fix the code."
       4-5 Bee Nested Loops 2_markdown_instruction: "Collect all of the nectar from each flower. \n\nUse a nested loop. "
       4-5 Bee Nested Loops 4_markdown_instruction: "Collect all of the nectar from each flower and make honey at the honeycomb. \n\nUse a nested loop. "
