@@ -41,9 +41,9 @@ sk-SK:
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: Vzdelávací týždeň počítačovej vedy
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description: December 3-9, 2018. Computer science is foundational for
+    every student to learn.
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -170,10 +170,10 @@ sk-SK:
   third_party_appinv_btn_site: Visit App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+    fun and accessible for beginners. For schools and teachers CodeHS provides curriculum,
+    teacher tools and PD. For individual learners, you can get the help you need along
+    the way from a network of tutors.
+  third_party_codehs_btn_try: Intro CS Learn More for Schools
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -258,7 +258,7 @@ sk-SK:
   learn_online: Skúste iné online kurzy
   learn_classes: Nájsť miestne triedy
   learn_back_to_minecraft: Neprestávajte sa učiť vďaka Minecraftu
-  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
+  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
   just_did_course1: Práve som dokončil/a Kurz 1 - Pozri @codeorg
   just_did_course2: Práve som dokončil/a Kurz 2 - Pozri @codeorg
@@ -267,16 +267,12 @@ sk-SK:
   just_did_coursea: Práve som dokončil/a Kurz A - Pozri @codeorg
   just_did_courseb: Práve som dokončil/a Kurz B - Pozri @codeorg
   just_did_coursec: Práve som dokončil/a Kurz C - Pozri @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! Thanks
-    @Microsoft for supporting @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
   twitter_teach_cs: 9 z 10 ľudí súhlasí, že by školy mali učiť informatiku. http://youtu.be/nKIu9yen5nc.
@@ -447,7 +443,7 @@ sk-SK:
   homepage_slot_text_link_buy: Zapojte sa
   homepage_slot_text_link_donate: Venuj dar
   homepage_slot_text_link_shop: Tričká, čiapky a ďalšie
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Bring CS to your school
   homepage_header_codestudio: Výtvory študentov Code Studia
   homepage_header_donors: Code.org ďakuje za podporu
   homepage_donors_seall: Zobraziť všetky
@@ -504,7 +500,7 @@ sk-SK:
   playlab_iceage_title: Doba ľadová - už čoskoro
   playlab_iceage_title_live: Doba ľadová
   starwars_subtitle: Budovánie Galaxie s kódom
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Bloky presúvajte myšou spolu s JavaScript-om.
   starwars_javascript_specs: Iba anglicky | Moderné prehliadače | Od 11 rokov
   starwars_blocks_title: Bloky
@@ -575,10 +571,10 @@ sk-SK:
     zvieratá a ostatné postavičky z Minecraftu vo Vašej vlastnej verzií Minecraftu.
   minecraft_og_agent: Minecraft je späť v Hodine Kódu a vy sa stávate hrdinom! Napíšte
     kód pre cestu Minecraft svetom.
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Hour of Code Sports Tutorials
-  sports_og_description: Choose between making a basketball game or mix and match
-    across sports.
+  sports_page_title: Hour of Code Sports
+  sports_og_title: Push yourself. Anybody can learn.
+  sports_og_description: Champions and gold medalists encourage you to try the Hour
+    of Code. Code your own sports game.
   sports_title: Code your own sports game
   sports_watch_video: Sledovať video
   sports_video_title: Push yourself. Anybody can learn.
@@ -845,14 +841,14 @@ sk-SK:
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
+    These are done outside of Code.org.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_summaries: Assessment summaries
+  dashboard_assessments_answers: All assessment answers
   dashboard_surveys_answers: Surveys
   dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -867,7 +863,7 @@ sk-SK:
   dashboard_navigation_section_speakers: Informatici ako <br/> hostia-rečníci
   dashboard_navigation_all_sections: Študentské účty a pokrok
   dashboard_navigation_view_progress: Pokrok
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Pridať Študentov
@@ -888,7 +884,11 @@ sk-SK:
     %{script_name}
   dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages
+    and do not require students to type text responses to questions, so you will not
+    see any text responses here. For older students in middle and high school courses,
+    you can see their submissions to open-ended text response questions by choosing
+    the assigned course from the drop down above.
   dashboard_sections_new_section: Nová sekcia
   dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Vytvorte nové oddiely a pridajte do nich
@@ -923,23 +923,20 @@ sk-SK:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
-  dashboard_sections_move_students: Move Students
+  dashboard_sections_move_students: Move students
   dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not be able to
+    save progress in this course from December 3 - 11 due to the amount of traffic
+    our site will receive for the Hour of Code.  Everything else in this tutorial
+    will continue to work as expected.  You may still assign the course and give all
+    students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print
+    these in advance</a>.)  We will save and report student progress for every other
     week of the year.
   dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
@@ -1022,7 +1019,7 @@ sk-SK:
   dashboard_teacher_worksheet: pracovný zošit učiteľa
   dashboard_curriculum_csina: 'Počítačová veda a algebra:'
   dashboard_curriculum_csins: 'Počítačová veda a veda:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: 'Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
@@ -1095,7 +1092,7 @@ sk-SK:
   learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
     for teaching one Hour of Code
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
+    prizes for every educator, while supplies last
   learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
     videos</a>
   hoc2014_try_new_tutorials: Vyskúšajte naše nové návody pre Hodinu Kódu
@@ -1109,7 +1106,8 @@ sk-SK:
   carousel_heading_international: Kurzy vo vašom jazyku
   carousel_heading_domestic: Kurzy dostupné v angličtine
   carousel_heading_beginners: Kurzy pre začiatočníkov
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: 'For beginners: Get started with blocks-based
+    coding'
   carousel_heading_javascript: Cvičenia na výuku JavaScriptu
   carousel_heading_beyond_javascript: Uč sa JavaScript
   carousel_heading_unplugged: Žiadne zariadenie alebo internet? Skúste informatiku
@@ -1117,7 +1115,7 @@ sk-SK:
   carousel_heading_devices: Aplikácie s kurzami pre telefóny a tablety
   carousel_heading_beyond_devices: Aplikácie pre telefóny a tablety
   carousel_heading_languages: Kurzy iných programovacích jazykov
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Learn other programming languages
   carousel_heading_apps_games: Vytvorte si vlastné aplikácie alebo hry
   carousel_heading_university: Univerzitné kurzy online
   carousel_heading_webpages: Naučte sa robiť webové stránky
@@ -1129,10 +1127,10 @@ sk-SK:
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Poznámky pedagógov
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+  teach_led_lesson_plans: Teacher Led Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/learn">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    for Hour of Code tutorials, <a href="https://hourofcode.com/activity-guidelines">click
     here.</a>
   how_to_teach_hoc: Ako učiť "Hodinu kódu"
   more_resources_educators: Ďalšie zdroje pre učiteľov
@@ -1237,15 +1235,15 @@ sk-SK:
   pre-express-2017_name: Pre-reader Express Course (2017)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csd1_name: 'Unit 1: Computers and Logic'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -1300,7 +1298,7 @@ sk-SK:
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Zrýchlený kurz
-  algebra_name: CS in Algebra
+  algebra_name: CS in Algebra Full Course
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
@@ -1319,10 +1317,10 @@ sk-SK:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: CS Principles ('17-'18)
   csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
@@ -1388,12 +1386,12 @@ sk-SK:
   course2_gradelevel: Vek 6-18
   course3_gradelevel: Vek 8-18
   course4_gradelevel: Ages 10-18
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: Ages 4-7
+  courseb_gradelevel: Ages 5-8
+  coursec_gradelevel: Ages 6-10
   coursed_gradelevel: Vek 8+
   coursee_gradelevel: Vek 8-12
-  coursef_gradelevel: Grade 10+
+  coursef_gradelevel: Ages 9-13
   coursea-2017_gradelevel: Ages 4-7
   courseb-2017_gradelevel: Ages 5-8
   coursec-2017_gradelevel: Ages 6-10
@@ -1536,12 +1534,17 @@ sk-SK:
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -1723,7 +1726,7 @@ sk-SK:
     by the Hour of Code. They get introduced to sequencing commands, iteration and
     conditions without even noticing it.
   csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
+    water, and customize the scenery to add your own flair. Use code to tell the story
     you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
     clocks scattered in the wilderness! In this tutorial you will learn the basics
@@ -2067,13 +2070,13 @@ sk-SK:
   compatibility_unsupported_browser: Váš prehliadač internetu nepodporujeme. Prosím
     aktualizujte si váš prehliadač internetu, <a href='%{supported_browsers_url}',
     target='_blank'>podporované prehliadače</a>. Skúste obnoviť stránku.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: mávni
   infinity_shortcode: inf
-  playlab_shortcode: hrať
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Domov
   header_my_dashboard: Môj hlavný panel
@@ -2128,10 +2131,8 @@ sk-SK:
   signing_in: Signing In
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  sign_in_instruct_website: Go to %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.
