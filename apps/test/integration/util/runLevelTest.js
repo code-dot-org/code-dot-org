@@ -113,7 +113,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
-  loadApp({
+  const options = {
     app,
     skinId: skinId,
     level: level,
@@ -172,7 +172,19 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
       // waitLong();
     },
     onAttempt: onAttempt
-  });
+  };
+
+  loadApp(options);
+
+  if (options.blocksModule.installCustomBlocks && level.sharedBlocks) {
+    options.blocksModule.installCustomBlocks(
+      Blockly,
+      null,
+      level.sharedBlocks,
+      options.level,
+      true,
+    );
+  }
 }
 
 function setAppSpecificGlobals(app) {
