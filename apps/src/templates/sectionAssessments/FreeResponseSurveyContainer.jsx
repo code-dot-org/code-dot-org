@@ -22,7 +22,7 @@ const freeResponseQuestionsPropType = PropTypes.shape({
   answers: PropTypes.array,
 });
 
-class FreeResponseBySurveyQuestionContainer extends Component {
+class FreeResponseSurveyContainer extends Component {
   static propTypes = {
     freeResponsesByQuestion: PropTypes.arrayOf(freeResponseQuestionsPropType),
   };
@@ -65,8 +65,8 @@ class FreeResponseBySurveyQuestionContainer extends Component {
   }
 }
 
-export const UnconnectedFreeResponseBySurveyQuestionContainer = FreeResponseBySurveyQuestionContainer;
+export const UnconnectedFreeResponseSurveyContainer = FreeResponseSurveyContainer;
 
 export default connect(state => ({
   freeResponsesByQuestion: getSurveyFreeResponseQuestions(state),
-}))(FreeResponseBySurveyQuestionContainer);
+}))(FreeResponseSurveyContainer);
