@@ -1,10 +1,12 @@
 require 'test_helper'
 
-class UserScriptsControllerTest < ActionController::TestCase
+class UserScriptsControllerTest < ActionDispatch::IntegrationTest
   test "student can dismiss version warning" do
     user_script = create :user_script
     sign_in user_script.user
-    patch :update, params: {script_id: user_script.script.id, version_warning_dismissed: true}
+    patch "/user_scripts/#{user_script.script.id}", params: {
+      version_warning_dismissed: true
+    }
     assert_response :success
     user_script.reload
     assert_equal "true", user_script.version_warning_dismissed
@@ -14,7 +16,9 @@ class UserScriptsControllerTest < ActionController::TestCase
     user = create :user
     script = create :script
     sign_in user
-    patch :update, params: {script_id: script.id, version_warning_dismissed: true}
+    patch "/user_scripts/#{script.id}", params: {
+      version_warning_dismissed: true
+    }
     assert_response :success
     user_script = UserScript.find_by(user: user, script: script)
     refute_nil user_script
@@ -24,10 +28,12 @@ class UserScriptsControllerTest < ActionController::TestCase
   test "raises for nonexistent script" do
     user = create :user
     sign_in user
-    assert_raises ActiveRecord::RecordNotFound do
-      patch :update, params: {script_id: 99, version_warning_dismissed: true}
-    end
-    user_script = UserScript.find_by(user: user, script: 99)
+    bogus_script_id = 99
+    patch "/user_scripts/#{bogus_script_id}", params: {
+      version_warning_dismissed: true
+    }
+    assert_response :missing
+    user_script = UserScript.find_by(user: user, script: bogus_script_id)
     assert_nil user_script
   end
 end
