@@ -55,7 +55,6 @@ var CodeWorkspaceContainer = React.createClass({
     // redux provided
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    pinWorkspaceToBottom: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
 
     // not in redux
@@ -102,6 +101,5 @@ export default connect(state => ({
   hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
   isRtl: state.isRtl,
   noVisualization: state.pageConstants.noVisualization,
-  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
 }), undefined, null, { withRef: true }
 )(CodeWorkspaceContainer);

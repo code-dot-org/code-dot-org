@@ -13,7 +13,6 @@ describe('CodeWorkspaceContainer', () => {
   const MINIMUM_PROPS = {
     hidden: false,
     isRtl: false,
-    pinWorkspaceToBottom: false,
     noVisualization: false,
     topMargin: 100,
   };
