@@ -26,6 +26,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     windowHeight: undefined
   };
 
+  setCodeWorkspaceContainerRef = (element) => {
+    this.codeWorkspaceContainer = element;
+  };
+
   /**
    * Called when the window resizes. Look to see if width/height changed, then
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
@@ -92,7 +96,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       <span>
         <TopInstructions/>
         <CodeWorkspaceContainer
-          ref={el => this.codeWorkspaceContainer = el}
+          ref={this.setCodeWorkspaceContainerRef}
           topMargin={this.props.instructionsHeight}
         >
           {this.props.children}
