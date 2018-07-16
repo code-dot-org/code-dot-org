@@ -1,9 +1,8 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
+import SendToPhone from '../../code-studio/components/SendToPhone';
 
 var project = require('@cdo/apps/code-studio/initApp/project');
-
-var SendToPhone = window.dashboard ? window.dashboard.SendToPhone : undefined;
 
 var styles = {
   main: {
