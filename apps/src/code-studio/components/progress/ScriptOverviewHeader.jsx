@@ -82,7 +82,7 @@ class ScriptOverviewHeader extends Component {
     // succeed the next time the warning is dismissed.
     $.ajax({
       method: 'PATCH',
-      url: `/user_scripts/${this.props.scriptId}`,
+      url: `/api/v1/user_scripts/${this.props.scriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({version_warning_dismissed: true}),

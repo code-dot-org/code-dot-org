@@ -7,7 +7,7 @@ Dashboard::Application.routes.draw do
 
   resources :user_levels, only: [:update, :destroy]
 
-  patch '/user_scripts/:script_id', to: 'user_scripts#update'
+  patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
   get '/download/:product', to: 'hoc_download#index'
 
