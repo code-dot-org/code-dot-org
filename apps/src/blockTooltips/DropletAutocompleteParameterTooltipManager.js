@@ -239,8 +239,9 @@ const ACE_AUTOCOMPLETE_WIDTH = 280;
 DropletAutocompleteParameterTooltipManager.prototype.getDesiredTooltipPosition_ = function () {
   const aceRect = $('.ace_editor')[0].getBoundingClientRect();
   const cursorRect = this.cursorTooltip_[0].getBoundingClientRect();
-  const showOnLeft = cursorRect.top - aceRect.top < SAFE_VERTICAL_DISTANCE_FOR_TOOLTIP ||
-      aceRect.bottom - cursorRect.bottom < SAFE_VERTICAL_DISTANCE_FOR_TOOLTIP;
+  const showOnLeft = this.showParamDropdowns &&
+      (cursorRect.top - aceRect.top < SAFE_VERTICAL_DISTANCE_FOR_TOOLTIP ||
+      aceRect.bottom - cursorRect.bottom < SAFE_VERTICAL_DISTANCE_FOR_TOOLTIP);
   let offsetX = 0;
   let { position } = this.tooltipConfig;
   if (showOnLeft) {
