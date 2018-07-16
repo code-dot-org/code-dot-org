@@ -10,25 +10,25 @@ import { connect } from 'react-redux';
  * into this component, though we're moving towards getting rid of this dialog
  * anyways.
  */
-const InstructionsDialogWrapper = React.createClass({
-  propTypes: {
+export class UnwrappedInstructionsDialogWrapper extends React.Component {
+  static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     autoClose: PropTypes.bool,
     showInstructionsDialog: PropTypes.func.isRequired
-  },
+  };
 
   componentWillReceiveProps(nextProps) {
     if (!this.props.isOpen && nextProps.isOpen) {
       this.props.showInstructionsDialog(nextProps.autoClose);
     }
-  },
+  }
 
   render() {
     return null;
   }
-});
+}
 
 export default connect(state => ({
   isOpen: state.instructionsDialog.open,
   autoClose: state.instructionsDialog.autoClose,
-}))(InstructionsDialogWrapper);
+}))(UnwrappedInstructionsDialogWrapper);
