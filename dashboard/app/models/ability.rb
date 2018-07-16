@@ -61,7 +61,6 @@ class Ability
       can :destroy, GalleryActivity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
-      can :update, UserScript, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id

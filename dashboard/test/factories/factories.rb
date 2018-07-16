@@ -779,7 +779,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script}
+    script
   end
 
   factory :cohorts_district do

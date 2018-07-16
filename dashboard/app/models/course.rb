@@ -359,11 +359,11 @@ class Course < ApplicationRecord
   def has_dismissed_version_warning?(user)
     return nil unless user
     script_ids = default_scripts.map(&:id)
-    !user.
+    user.
       user_scripts.
       where(script_id: script_ids).
       select(&:version_warning_dismissed).
-      empty?
+      any?
   end
 
   @@course_cache = nil
