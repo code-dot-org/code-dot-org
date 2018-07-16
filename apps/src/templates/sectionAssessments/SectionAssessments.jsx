@@ -18,7 +18,7 @@ import MultipleChoiceAssessmentsOverviewContainer from './MultipleChoiceAssessme
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
 import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContainer';
-import FreeResponseSurveyContainer from './FreeResponseSurveyContainer';
+import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
 import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
@@ -181,7 +181,7 @@ class SectionAssessments extends Component {
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
                     <MultipleChoiceSurveyOverviewContainer />
-                    <FreeResponseSurveyContainer />
+                    <FreeResponsesSurveyContainer />
                   </div>
                 }
                 {totalStudentSubmissions <=0 &&
