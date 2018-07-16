@@ -533,6 +533,17 @@ ActiveRecord::Schema.define(version: 20180712220543) do
     t.float    "value",       limit: 24, null: false
   end
 
+  create_table "other_curriculum_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "curriculum_provider_name",            null: false
+    t.string   "school_id",                limit: 12, null: false
+    t.string   "course",                              null: false
+    t.integer  "school_year",              limit: 2,  null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["curriculum_provider_name", "school_id", "course", "school_year"], name: "index_other_curriculum_offerings_unique", unique: true, using: :btree
+    t.index ["school_id"], name: "fk_rails_5682e60354", using: :btree
+  end
+
   create_table "paired_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "driver_user_level_id"
     t.integer  "navigator_user_level_id"
@@ -1584,6 +1595,7 @@ ActiveRecord::Schema.define(version: 20180712220543) do
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "ib_school_codes", "schools"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "other_curriculum_offerings", "schools"
   add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_regional_partner_cohorts", "pd_workshops", column: "summer_workshop_id"
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"

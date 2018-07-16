@@ -1,3 +1,3 @@
-var edgesDisplace = function(sprite) {
+function edgesDisplace(sprite) {
   edges.displace(sprite);
 }
