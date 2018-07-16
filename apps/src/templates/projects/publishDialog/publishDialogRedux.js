@@ -1,5 +1,5 @@
-import { channels as channelsApi } from '../../clientApi';
-import { AllPublishableProjectTypes } from '../../util/sharedConstants';
+import { channels as channelsApi } from '../../../clientApi';
+import { AllPublishableProjectTypes } from '../../../util/sharedConstants';
 
 // Action types
 
