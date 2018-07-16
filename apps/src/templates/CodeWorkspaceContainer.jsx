@@ -96,7 +96,8 @@ var CodeWorkspaceContainer = React.createClass({
     );
   }
 });
-module.exports = connect(state => ({
+
+export default connect(state => ({
   hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
   isRtl: state.isRtl,
   noVisualization: state.pageConstants.noVisualization,
