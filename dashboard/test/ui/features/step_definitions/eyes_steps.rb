@@ -37,7 +37,7 @@ And(/^I close my eyes$/) do
   end
 end
 
-And(/^I see no difference for "([^"]*)"?$/) do |identifier|
+And(/^I see no difference for "([^"]*)"$/) do |identifier|
   next if CDO.disable_all_eyes_running
 
   @eyes.check_window(identifier, MATCH_TIMEOUT)
