@@ -1333,13 +1333,11 @@ class User < ActiveRecord::Base
 
   def in_progress_and_completed_scripts
     user_scripts.compact.reject do |user_script|
-      begin
-        user_script.script.nil?
-      rescue
-        # Getting user_script.script can raise if the script does not exist
-        # In that case we should also reject this user_script.
-        true
-      end
+      user_script.script.nil?
+    rescue
+      # Getting user_script.script can raise if the script does not exist
+      # In that case we should also reject this user_script.
+      true
     end
   end
 
@@ -1979,6 +1977,14 @@ class User < ActiveRecord::Base
 
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
     restore(recursive: true, recovery_window: 5.minutes)
+  end
+
+  def depended_upon_for_login?
+    # Teacher is depended upon for login if student does not have a personal login
+    # and student has no other teachers.
+    students.any? do |student|
+      student.can_create_personal_login? && student.teachers.uniq.one?
+    end
   end
 
   private
