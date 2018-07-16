@@ -40,17 +40,44 @@ end
 # consumption by our system.
 # Currently just restores carraige returns (since crowdin escapes them), but
 # could be expanded to do more.
-def sanitize(data)
+def sanitize!(data)
   if data.is_a? Hash
-    data.values.each {|datum| sanitize(datum)}
+    data.values.each {|datum| sanitize!(datum)}
   elsif data.is_a? Array
-    data.each {|datum| sanitize(datum)}
+    data.each {|datum| sanitize!(datum)}
   elsif data.is_a? String
     data.gsub!(/\\r/, "\r")
   elsif data.nil?
     # pass
   else
     raise "can't process unknown type: #{data}"
+  end
+end
+
+def sanitize_and_write(loc_path, dest_path)
+  loc_data = case File.extname(loc_path)
+             when '.yaml', '.yml'
+               YAML.load_file(loc_path)
+             when '.json'
+               JSON.parse(File.read(loc_path))
+             else
+               raise "do not know how to parse localization file from #{loc_path}"
+             end
+
+  sanitize! loc_data
+
+  dest_data = case File.extname(dest_path)
+              when '.yaml', '.yml'
+                loc_data.to_yaml
+              when '.json'
+                JSON.pretty_generate(loc_data)
+              else
+                raise "do not know how to serialize localization data to #{dest_path}"
+              end
+
+  FileUtils.mkdir_p(File.dirname(dest_path))
+  File.open(dest_path, 'w+') do |f|
+    f.write(dest_data)
   end
 end
 
@@ -68,53 +95,34 @@ def distribute_translations
     ### Dashboard
     Dir.glob("i18n/locales/#{locale}/dashboard/*.yml") do |loc_file|
       relname = File.basename(loc_file, '.yml')
-      data = YAML.load_file(loc_file)
-      sanitize data
 
       # Special case the un-prefixed Yaml file.
       destination = (relname == "base") ?
         "dashboard/config/locales/#{locale}.yml" :
         "dashboard/config/locales/#{relname}.#{locale}.yml"
 
-      File.open(destination, 'w+') do |f|
-        f.write(data.to_yaml)
-      end
+      sanitize_and_write(loc_file, destination)
     end
 
     ### Apps
     js_locale = locale.tr('-', '_').downcase
     Dir.glob("i18n/locales/#{locale}/blockly-mooc/*.json") do |loc_file|
       relname = File.basename(loc_file, '.json')
-      data = JSON.parse(File.read(loc_file))
-      sanitize data
       destination = "apps/i18n/#{relname}/#{js_locale}.json"
-
-      File.open(destination, 'w+') do |f|
-        f.write(JSON.pretty_generate(data))
-      end
+      sanitize_and_write(loc_file, destination)
     end
 
     ### Blockly Core
     Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
       relname = File.basename(loc_file)
-      data = JSON.parse(File.read(loc_file))
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
-      FileUtils.mkdir_p(File.dirname(destination))
-
-      File.open(destination, 'w+') do |f|
-        f.write(JSON.pretty_generate(data))
-      end
+      sanitize_and_write(loc_file, destination)
     end
 
     ### Pegasus
     loc_file = "i18n/locales/#{locale}/pegasus/mobile.yml"
-    data = YAML.load_file(loc_file)
-    sanitize data
     destination = "pegasus/cache/i18n/#{locale}.yml"
-
-    File.open(destination, 'w+') do |f|
-      f.write(data.to_yaml)
-    end
+    sanitize_and_write(loc_file, destination)
   end
 
   puts "#{CLEAR}Distribution finished!"
