@@ -5,7 +5,7 @@ import {expect} from 'chai';
 import {
   UNMATCHED_PARTNER_LABEL,
   ALL_PARTNERS_LABEL
-} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
+} from '@cdo/apps/code-studio/pd/components/regional_partner_dropdown';
 
 describe("ApplicationDashboard", () => {
   const getReduxStateFor = ({regionalPartners, isWorkshopAdmin}) => {
@@ -29,7 +29,7 @@ describe("ApplicationDashboard", () => {
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
         isWorkshopAdmin: true
       });
-      expect(state.regionalPartnerFilter.label).to.eql(UNMATCHED_PARTNER_LABEL);
+      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(UNMATCHED_PARTNER_LABEL);
     });
 
     it("displays 'all' for non-admins with multiple partners", () => {
@@ -37,7 +37,7 @@ describe("ApplicationDashboard", () => {
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}, {id: 2, name: 'WNY Stem Hub', group: 1}],
         isWorkshopAdmin: false
       });
-      expect(state.regionalPartnerFilter.label).to.eql(ALL_PARTNERS_LABEL);
+      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(ALL_PARTNERS_LABEL);
     });
 
     it("displays partner name for non-admins with one partner", () => {
@@ -45,7 +45,7 @@ describe("ApplicationDashboard", () => {
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
         isWorkshopAdmin: false
       });
-      expect(state.regionalPartnerFilter.label).to.eql('A+ College Ready');
+      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql('A+ College Ready');
     });
   });
 });

@@ -273,6 +273,6 @@ export class QuickViewTable extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerGroup: state.regionalPartnerGroup,
-  isWorkshopAdmin: state.permissions.workshopAdmin
+  regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,
+  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin
 }))(QuickViewTable);

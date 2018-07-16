@@ -5,7 +5,7 @@
  */
 import React, {PropTypes} from 'react';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, combineReducers} from 'redux';
 import {
   Router,
   Route,
@@ -28,12 +28,20 @@ import workshopDashboardReducers, {
   setPermission,
   setFacilitatorCourses
 } from './reducers';
+import regionalPartnerReducers, {
+  setRegionalPartners,
+  setRegionalPartnerFilter,
+  getInitialRegionalPartnerFilter
+} from '../components/regional_partners_reducers';
+import {WorkshopAdmin} from './permission';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
-const store = createStore(workshopDashboardReducers);
+const store = createStore(combineReducers(
+  {workshopDashboard: workshopDashboardReducers, regionalPartners: regionalPartnerReducers}
+));
 
 const WorkshopDashboardHeader = (props) => (
   <Header
@@ -45,7 +53,12 @@ const WorkshopDashboardHeader = (props) => (
 export default class WorkshopDashboard extends React.Component {
   static propTypes = {
     permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
-    facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired
+    facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
+    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      group: PropTypes.number
+    }))
   };
 
   constructor(props) {
@@ -58,6 +71,9 @@ export default class WorkshopDashboard extends React.Component {
     if (props.facilitatorCourses) {
       store.dispatch(setFacilitatorCourses(props.facilitatorCourses));
     }
+
+    store.dispatch(setRegionalPartners(this.props.regionalPartners));
+    store.dispatch(setRegionalPartnerFilter(getInitialRegionalPartnerFilter(props.permissionList.includes(WorkshopAdmin), this.props.regionalPartners)));
   }
 
   render() {
