@@ -10437,8 +10437,7 @@ zh-CN:
 
           ![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)
         courseD_artist_functions8_c: 在每行正方形的末尾，在绘制下一行之前艺术家得向下及向后跳跃。
-        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)\n
-          \nContext | Request Context"
+        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2018_authored_hint:
         courseD_artist_functions8_f: 你只需要一个 ' 前进 ' 块, 但你将需要相当多的 ' 跳跃前进 ' 和/或 ' 跳转向后
           ' 块!
@@ -14985,7 +14984,8 @@ zh-CN:
           请注意, 获取所有农作物的最简单途径仍然是螺旋形。
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        grade3_RunningFarm_7_b: 尝试使用`当前面有路时`使农民移动正确的步数。
+        grade3_RunningFarm_7_b: Try using `when path ahead` to keep the farmer moving
+          the right number of steps.
         grade3_RunningFarm_7_c: 'Use nested `if` statements and `while there is` loops
           to check each space for corn and lettuce, then pick only a single pumpkin
           at the end. '

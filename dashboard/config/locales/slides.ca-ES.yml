@@ -638,9 +638,9 @@ ca:
       1:
         image: notes/C1_building_foundation_1.jpg
         text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+          But if you persist, it's just going to get nothing but better and more exciting
+          for you. Persistence is the name of the game. Stay with it, you'll love
+          it.
       2:
         image: notes/C1_building_foundation_2.jpg
         text: This lesson is called building a foundation. In this lesson, we'll work
@@ -797,7 +797,7 @@ ca:
           computer? Sure honey!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
+        text: I love my mom's computer because I can go on the Internet. The Internet
           is kind of like your neighborhood. You can visit cool places, you can talk
           to family and friends and you can learn lots of new things.
       3:
@@ -809,10 +809,10 @@ ca:
           of zebras live there.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
+        text: Sometimes on the Internet I talk to people I know, like my grandma who
+          lives in another state. Hi grandma! She's making me cookies that she'll
+          send me for my birthday. "Yummy, I wish the Internet had smellorama!" I
+          can talk to different people on the Internet, like my cousin but I only
           talk to people I know.
       5:
         image: notes/C1_going_places_safely_5.png
@@ -822,7 +822,7 @@ ca:
           to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street
+        text: 'The Internet is a super fun place. But just like when you cross a street
           in your neighborhood, you also have to be careful when you go online. Here
           are three rules to remember. Rule number 1: Always ask your parents first.
           Rule number 2: Only talk to people you know. Rule number 3: Stick to places
@@ -1098,7 +1098,7 @@ ca:
         text: Use your heart to grow and grow, and to give yourself a healthy glow,
           and to make a valentine, tell someone that you'll be mine! Use your heart
           when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
+          respect, to be fair and nice on the Internet. From your head down to your
           toes, pause, think about it. From your feet up to your nose, pause and think
           online!
       3:
@@ -1680,14 +1680,16 @@ ca:
           forward five times to the yummy sunflower.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Fins ara heu estat fent una animació o una història que fa exactament
           la mateixa cosa cada vegada que s'executa. Ara podeu fer un joc interactiu
           que de fet podeu jugar.
       2:
-        image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        image: notes/C3_playlab_create_game_2.png
+        text: There are some new blocks to try out. There's the "when arrow" block
+          and the "move actor" block. You can put these blocks together to move the
+          actors around with the arrow keys. And there are some blocks that do stuff
+          when actors collide or are clicked. Check them out and have fun!
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
@@ -2491,12 +2493,12 @@ ca:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
+        text: 'Hi, I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
+          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
           spherical droid. Everything he does and every movement that he makes is
           controlled by computer software. Computer science impacts every industry,
           from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+          worked together to make a film like The Force Awakens.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
@@ -2600,7 +2602,7 @@ ca:
         text: Congratulations, you did it! You programmed BB-8. Now I think we're
           ready for something harder. Let's go for it. Now that you've learned the
           basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+          starring R2-D2 and C-3PO.
       3:
         image: notes/starwars_events_3.JPG
         text: 'To make a game, we need to learn about something that game programmers
@@ -2640,7 +2642,7 @@ ca:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
+        text: Hi, my name is Alice and I run the product and engineering teams here
           at Code.org and I worked on this tutorial that you're playing through right
           now.
       2:
@@ -2736,7 +2738,7 @@ ca:
         text: Congratulations, you did it! You programmed BB-8. Now I think we're
           ready for something harder. Let's go for it. Now that you've learned the
           basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+          starring R2-D2 and C-3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: 'To make a game, we need to learn about something that game programmers
@@ -2765,7 +2767,7 @@ ca:
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
+        text: Hi, my name is Alice and I run the product and engineering teams here
           at Code.org and I worked on this tutorial that you're playing through right
           now.
       2:

@@ -42,7 +42,7 @@ he-IL:
     or your class!
   csedweek_og_title: שבוע החינוך למדעי המחשב
   csedweek_og_description: 4-10 בדצמבר, 2017. מדעי המחשב הם הבסיס שעל כל תלמידה ללמוד.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -168,9 +168,9 @@ he-IL:
   third_party_appinv_btn_site: Visit App Inventor 2
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
+    fun and accessible for beginners. For schools and teachers CodeHS provides curriculum,
+    teacher tools and PD. For individual learners, you can get the help you need along
+    the way from a network of tutors.
   third_party_codehs_btn_try: מבוא למדעי המחשב מידע נוסף עבור בתי ספר
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
@@ -253,36 +253,25 @@ he-IL:
   learn_online: נסה קורסים אחרים באינטרנט
   learn_classes: מצא כיתות מקומיות
   learn_back_to_minecraft: Keep learning with Minecraft
-  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
+  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: בדיוק עכשיו עשיתי את ה-HourOfCode# - לכו לבדוק! codeorg@
-  just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course3: I just finished Course 3 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course4: I just finished Course 4 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! Thanks
-    @Microsoft for supporting @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
+  just_did_course1: I just finished Course 1 - check it out! @codeorg
+  just_did_course2: I just finished Course 2 - check it out! @codeorg
+  just_did_course3: I just finished Course 3 - check it out! @codeorg
+  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  twitter_teach_cs: מדוע אין יות ר בתי ספר המלמדים מדעי המחשב? אנחנו יכולים לתקן זאת.
-    http://youtu.be/nKIu9yen5nc . בקרו ב -  http://code.org/ למידע נוסף.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science.
+    http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
     https://youtu.be/QvyTEx1wyOY.
   learn_hoc: למד שעה של קוד
@@ -434,7 +423,7 @@ he-IL:
   homepage_slot_text_link_buy: השתתף
   homepage_slot_text_link_donate: תרום
   homepage_slot_text_link_shop: T-shirts, hats, & more
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Bring CS to your school
   homepage_header_codestudio: יצירותיהם של תלמידי קוד סטודיו
   homepage_header_donors: code.org מודה לתומכיו
   homepage_donors_seall: ראה הכל
@@ -487,17 +476,17 @@ he-IL:
     featuring professionals in technology fields
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: קלאסי
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: The Amazing World of Gumball
   playlab_iceage_title: Ice Age - Coming soon
   playlab_iceage_title_live: עידן הקרח
   starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
   starwars_javascript_specs: אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה
   starwars_blocks_title: בלוקים
   starwars_blocks_description: השתמש בבלוקים ב"גרור ושחרר".
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+    Ages 6-106
   starwars_platform_text: דפדפנים מודרנים, סמארטפונים, טאבלטים
   mc_name: 'שעת הקוד: גרסת מיינקראפט'
   mc_longdescription: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם של
@@ -506,7 +495,7 @@ he-IL:
     של מיינקראפט.
   mc_gradelevel: גילאי 4-104
   mc_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft Designer
   minecraft_adventurer: Minecraft Adventurer
@@ -515,8 +504,8 @@ he-IL:
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
   minecraft_agent_button: התחל
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer_description: Program animals and other Minecraft creatures in
+    your own version of Minecraft.
   minecraft_designer_button: התחל
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
   minecraft_adventurer_button: התחל
@@ -524,22 +513,23 @@ he-IL:
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: 'שעת הקוד: גרסת מיינקראפט'
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
+    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
+    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Teacher resources and lesson plan.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
   minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -547,21 +537,21 @@ he-IL:
     education. Join us at the Microsoft Store to engage in a free series of three,
     1-hour workshops where you will experience coding in a fun and stress-free environment,
     become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
   minecraft_future: Help all youth become future ready
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Hour of Code Sports Tutorials
-  sports_og_description: Choose between making a basketball game or mix and match
-    across sports.
+  sports_page_title: Hour of Code Sports
+  sports_og_title: Push yourself. Anybody can learn.
+  sports_og_description: Champions and gold medalists encourage you to try the Hour
+    of Code. Code your own sports game.
   sports_title: Code your own sports game
   sports_watch_video: צפה בסרטון
   sports_video_title: Push yourself. Anybody can learn.
@@ -623,31 +613,30 @@ he-IL:
   download_offline: Download the offline version.
   are_you_teacher: האם אתה מורה?
   review_lesson_plan: Review the lesson plan and other teacher resources.
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
-    of Code.
+  volunteer_engineer_submission_title: Inspire students and volunteer
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want
-    volunteers passionate about computer science education to help with their Hour
-    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them."
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need
+    volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat).'
+  volunteer_engineer_submission_intro_recruit: 'Teachers would love to have somebody
+    <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about computer
+    science education</span> who can help in the classroom, or for somebody who can
+    <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students
+    by talking about the breadth of possibilities with computer science (which could
+    be done through a video chat).'
   volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
     program here</a>.
   volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+    if you are a computer science student or software professional. You must be at
+    least 18 years old to sign up as a volunteer. Note that all the fields you fill
+    out in this section will be publicly available to anyone looking at the <a href="/volunteer/local">volunteer
+    map</a>. Fields marked with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Are you a teacher looking for volunteers?
+    Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: עדכן את המידע שלך
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
@@ -659,25 +648,24 @@ he-IL:
   volunteer_engineer_submission_field_location: מיקום
   volunteer_engineer_submission_field_location_desc: Your location will be used to
     allow teachers to search for nearby volunteers and will be shown as a pin on the
-    map. If you are concerned about privacy, please use your work/school address or
-    your city only.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
+    map. Please enter just your city or zip code to protect your privacy.
+  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country
+  volunteer_engineer_submission_field_location_flexibility: I can volunteer by...
+    (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
+    year-round
+  volunteer_engineer_submission_field_time_commitment: Time commitment
   volunteer_engineer_submission_field_linkedin: פרופיל לינקדאין
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: פרופיל פייסבוק
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: תיאור
   volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
+    experience or technical background and how you would like to participate as a
+    volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
+    and/or participation. If you speak language(s) other than English, be sure to
+    include it here.
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
   volunteer_engineer_submission_field_email: כתובת דואר אלקטרוני
@@ -820,14 +808,14 @@ he-IL:
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
+    These are done outside of Code.org.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_summaries: Assessment summaries
+  dashboard_assessments_answers: All assessment answers
   dashboard_surveys_answers: Surveys
   dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
@@ -842,13 +830,13 @@ he-IL:
   dashboard_navigation_section_speakers: מדעי המחשב <br/> מציגים אורחים
   dashboard_navigation_all_sections: חשבונות תלמידים וההתקדמות שלהם
   dashboard_navigation_view_progress: התקדמות
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: הוסף תלמידים
   dashboard_navigation_manage_students: נהל תלמידים
   dashboard_navigation_lesson_plans_resources: מערכי שיעור ומשאבים
-  dashboard_navigation_view_stats: ראה סטטיסטיקה
+  dashboard_navigation_view_stats: Stats
   dashboard_navigation_section: 'חלק: %{section_name}'
   dashboard_navigation_student: 'תלמיד: %{student_name}'
   dashboard_progress_not_started: לא החל
@@ -863,7 +851,11 @@ he-IL:
     %{script_name}
   dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages
+    and do not require students to type text responses to questions, so you will not
+    see any text responses here. For older students in middle and high school courses,
+    you can see their submissions to open-ended text response questions by choosing
+    the assigned course from the drop down above.
   dashboard_sections_new_section: חלק חדש
   dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: צור חלקים חדשים והוסף תלמידים אליהם. חלקים
@@ -897,23 +889,20 @@ he-IL:
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Other Teacher
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
-  dashboard_sections_move_students: Move Students
+  dashboard_sections_move_students: Move students
   dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not be able to
+    save progress in this course from December 3 - 11 due to the amount of traffic
+    our site will receive for the Hour of Code.  Everything else in this tutorial
+    will continue to work as expected.  You may still assign the course and give all
+    students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print
+    these in advance</a>.)  We will save and report student progress for every other
     week of the year.
   dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
@@ -938,11 +927,14 @@ he-IL:
     sign in page with your students:'
   dashboard_students_print_info: הדפס כרטיסים עם מידע ההתחברות של התלמידים שלך.
   dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: תמונה סודית
+  dashboard_students_secret_picture: This section uses <b>picture</b> as its secret
+    type.  It means that each of your students has a secret picture used in place
+    of a password to sign in.  Students should use the sign in web address given above
+    to sign in.
   dashboard_students_reset_picture: תוכל לאפס תמונה סודית של התלמיד בכל עת על-ידי
     בחירת <b>הצג את סוד</b> ולאחר מכן <b>אפס את הסוד</b>. תמונה סודית חדשה תופק עבור
     אותו תלמיד בה יוכל להשתמש בעת הכניסה.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Secret Words
   dashboard_students_secret_word: המילה הסודית
   dashboard_students_reset_word: 'תוכל לאפס המילים הסודיות של התלמיד בכל עת על-ידי
     בחירת <b>הצג את הסוד</b> ולאחר מכן <b>אפס את הסוד</b>. זוג חדש של מילים סודיות
@@ -1062,7 +1054,7 @@ he-IL:
   learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
     for teaching one Hour of Code
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
+    prizes for every educator, while supplies last
   learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
     videos</a>
   hoc2014_try_new_tutorials: נסה את ההדרכות החדשות של "שעת הקוד"
@@ -1076,14 +1068,15 @@ he-IL:
   carousel_heading_international: הדרכות בשפה שלך
   carousel_heading_domestic: הדרכות בשפה האנגלית
   carousel_heading_beginners: הדרכות למתחילים
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: 'For beginners: Get started with blocks-based
+    coding'
   carousel_heading_javascript: הדרכות שמלמדות JavaScript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Learn JavaScript
   carousel_heading_unplugged: ללא התקן או אינטרנט? נסה "מדעי המחשב בלי חיבור לחשמל"
   carousel_heading_devices: אפליקציות לימוד לטלפונים וטבלטים
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Apps for phones and tablets
   carousel_heading_languages: הדרכות בשפות תכנות אחרות
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Learn other programming languages
   carousel_heading_apps_games: צרו משחקים ואפליקציות משלכם
   carousel_heading_university: קורסים אוניברסיטאים באינטרנט
   carousel_heading_webpages: למד ליצור דפי אינטרנט
@@ -1095,10 +1088,10 @@ he-IL:
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: הערות מורה
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+  teach_led_lesson_plans: Teacher Led Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/learn">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    for Hour of Code tutorials, <a href="https://hourofcode.com/activity-guidelines">click
     here.</a>
   how_to_teach_hoc: כיצד ללמד "שעה של קוד"
   more_resources_educators: משאבים נוספים עבור מורים ומחנכים
@@ -1200,15 +1193,15 @@ he-IL:
   pre-express-2017_name: Pre-reader Express Course (2017)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csd1_name: 'Unit 1: Computers and Logic'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -1263,7 +1256,7 @@ he-IL:
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: קורס מואץ
-  algebra_name: CS in Algebra
+  algebra_name: CS in Algebra Full Course
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
@@ -1282,10 +1275,10 @@ he-IL:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: CS Principles ('17-'18)
   csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
@@ -1351,12 +1344,12 @@ he-IL:
   course2_gradelevel: גילאי 6-18
   course3_gradelevel: גילאי 8-18
   course4_gradelevel: גילאי 10-18
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: Ages 4-7
+  courseb_gradelevel: Ages 5-8
+  coursec_gradelevel: Ages 6-10
   coursed_gradelevel: כיתות ח' ומעלה
   coursee_gradelevel: גילאי 8-12
-  coursef_gradelevel: Grade 10+
+  coursef_gradelevel: Ages 9-13
   coursea-2017_gradelevel: Ages 4-7
   courseb-2017_gradelevel: Ages 5-8
   coursec-2017_gradelevel: Ages 6-10
@@ -1495,12 +1488,17 @@ he-IL:
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -1659,7 +1657,7 @@ he-IL:
     by the Hour of Code. They get introduced to sequencing commands, iteration and
     conditions without even noticing it.
   csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
+    water, and customize the scenery to add your own flair. Use code to tell the story
     you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
     clocks scattered in the wilderness! In this tutorial you will learn the basics
@@ -1993,13 +1991,13 @@ he-IL:
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
     supported browsers</a>. You can try viewing the page, but expect functionality
     to be broken.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: נופף
   infinity_shortcode: inf
-  playlab_shortcode: הפעל
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard
@@ -2046,7 +2044,7 @@ he-IL:
   user_header_settings: החשבון שלי
   user_header_logout: התנתק
   user_header_signin: התחבר
-  view_all_sections: View All Sections
+  view_all_sections: View all sections
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2054,10 +2052,8 @@ he-IL:
   signing_in: Signing In
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  sign_in_instruct_website: Go to %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.

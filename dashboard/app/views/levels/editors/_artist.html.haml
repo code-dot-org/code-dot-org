@@ -11,9 +11,6 @@
   %p If a level has a background image, don't display that image as feedback or include it in the image saved to the private gallery
   = boolean_check_box f, :discard_background
 .field
-  = f.label :shapeways_url, 'Shapeways URL'
-  = f.text_field :shapeways_url, placeholder: 'Shapeways project URL for share button'
-.field
   = f.label :start_direction, 'Start Direction (in degrees)'
   = f.number_field :start_direction, :in => 0...360, :value => @level.start_direction
 .field

@@ -22,9 +22,9 @@ zh-TW:
         "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png,
           250"
         "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>N</strong>"
-        "<strong>P</strong>": "<strong>N</strong>"
-        "<strong>Q</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
         Matching: 配對
         Use the key to match each code to its letter: 將字母與對應的代碼配對
       2-3 Graph Paper Match 1:
@@ -113,10 +113,10 @@ zh-TW:
         Match the puzzles to the blocks: 哪個程式積木可以解決關卡，把它們配對起來。
         Maze Match One: 迷宮：配對題
       4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>2)</h4>"
+        "<h4>1)</h4>": "<h4>1)</h4>"
         "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>2)</h4>"
-        "<h4>4)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
         "<h4>Add Player 1 roll to total score</h4>": "<h4>將玩家1 擲出的點數加到總分</h4>"
         "<h4>Compare player scores to see who wins</h4>": "<h4>比較所有玩家的總分看看誰獲勝</h4>"
         "<h4>Player 1 rolls die</h4>": "<h4>玩家1 擲出骰子</h4>"

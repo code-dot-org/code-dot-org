@@ -1815,12 +1815,12 @@ it:
           si sposterà cinque volte in avanti fino ad arrivare al girasole saporito.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Finora hai realizzato un'animazione o una storia che fanno sempre le
           stesse cose ogni volta che le avvii. Ora è possibile realizzare un gioco
           interattivo con cui puoi giocare davvero.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Ci sono dei nuovi blocchi da provare. C'è il blocco "quando si preme
           la freccia ..." ('when ... arrow') e il blocco "sposta il personaggio ..."
           ('move actor ...'). Puoi usare insieme questi due blocchi per far muovere

@@ -629,9 +629,9 @@ sk:
       1:
         image: notes/C1_building_foundation_1.jpg
         text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+          But if you persist, it's just going to get nothing but better and more exciting
+          for you. Persistence is the name of the game. Stay with it, you'll love
+          it.
       2:
         image: notes/C1_building_foundation_2.jpg
         text: This lesson is called building a foundation. In this lesson, we'll work
@@ -788,7 +788,7 @@ sk:
           Iste zlatko!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
+        text: I love my mom's computer because I can go on the Internet. The Internet
           is kind of like your neighborhood. You can visit cool places, you can talk
           to family and friends and you can learn lots of new things.
       3:
@@ -800,10 +800,10 @@ sk:
           v Afrike. Žije tu mnoho zebier.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
+        text: Sometimes on the Internet I talk to people I know, like my grandma who
+          lives in another state. Hi grandma! She's making me cookies that she'll
+          send me for my birthday. "Yummy, I wish the Internet had smellorama!" I
+          can talk to different people on the Internet, like my cousin but I only
           talk to people I know.
       5:
         image: notes/C1_going_places_safely_5.png
@@ -813,7 +813,7 @@ sk:
           to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street
+        text: 'The Internet is a super fun place. But just like when you cross a street
           in your neighborhood, you also have to be careful when you go online. Here
           are three rules to remember. Rule number 1: Always ask your parents first.
           Rule number 2: Only talk to people you know. Rule number 3: Stick to places
@@ -1088,7 +1088,7 @@ sk:
         text: Use your heart to grow and grow, and to give yourself a healthy glow,
           and to make a valentine, tell someone that you'll be mine! Use your heart
           when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
+          respect, to be fair and nice on the Internet. From your head down to your
           toes, pause, think about it. From your feet up to your nose, pause and think
           online!
       3:
@@ -1671,14 +1671,16 @@ sk:
           forward five times to the yummy sunflower.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: So far you've been making an animation or a story that does the exact
           same thing every time you run it. Now you can make an interactive game that
           you can actually play.
       2:
-        image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        image: notes/C3_playlab_create_game_2.png
+        text: There are some new blocks to try out. There's the "when arrow" block
+          and the "move actor" block. You can put these blocks together to move the
+          actors around with the arrow keys. And there are some blocks that do stuff
+          when actors collide or are clicked. Check them out and have fun!
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
@@ -2482,12 +2484,12 @@ sk:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
+        text: 'Hi, I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
+          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
           spherical droid. Everything he does and every movement that he makes is
           controlled by computer software. Computer science impacts every industry,
           from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+          worked together to make a film like The Force Awakens.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
@@ -2591,7 +2593,7 @@ sk:
         text: Congratulations, you did it! You programmed BB-8. Now I think we're
           ready for something harder. Let's go for it. Now that you've learned the
           basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+          starring R2-D2 and C-3PO.
       3:
         image: notes/starwars_events_3.JPG
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
@@ -2630,7 +2632,7 @@ sk:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
+        text: Hi, my name is Alice and I run the product and engineering teams here
           at Code.org and I worked on this tutorial that you're playing through right
           now.
       2:
@@ -2726,7 +2728,7 @@ sk:
         text: Congratulations, you did it! You programmed BB-8. Now I think we're
           ready for something harder. Let's go for it. Now that you've learned the
           basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+          starring R2-D2 and C-3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
@@ -2754,7 +2756,7 @@ sk:
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
+        text: Hi, my name is Alice and I run the product and engineering teams here
           at Code.org and I worked on this tutorial that you're playing through right
           now.
       2:
@@ -3141,21 +3143,21 @@ sk:
         text: Ak zabudnete, čo máte robiť, inštrukcie pre každý level sú navrchu.
       7:
         image: notes/mc_2016_intro_7.jpg
-        text: To start off, we're going to program a chicken. Let's drag the "move
-          forward" command to the workspace. When I hit "Run" the chicken moves forward
-          one step. To go further, I'll drag another "move forward" block underneath
-          the first "move forward" block until the highlight appears. Then I'll drop
-          it and the two blocks snap together. If I hit "Run" again, the chicken walks
-          two steps.
+        text: Na začiatok ideme naprogramovať kuriatko. Presuňme príkaz "posunúť dopredu"
+          na pracovnú plochu. Keď stlačim "spustiť", kuriatko sa posunie o jeden krok
+          dopredu. Pre ďaľší posun presuniem ďaľší blok "posunúť dopredu" pod prvý
+          blok "posunúť dopredu" až kým sa nezobrazí farebné podsvietenie. Potom pustím
+          blok a oba bloky sa spoja dokopy. Ak znova stlačím "Spustiť", kuriatko spraví
+          dva kroky.
       8:
         image: notes/mc_2016_intro_8.jpg
         text: Ak niekedy chcete odstrániť block, tak ho iba odstráňte zo zásobníka
           a presuňte ho späť do panela nástrojov.
       9:
         image: notes/mc_2016_intro_9.jpg
-        text: After you've hit "Run" you can always hit the "Reset" button to reset
-          the game and start over. Now, it's your turn to make your very own version
-          of Minecraft. Have fun!
+        text: Potom, čo stlačíte "Spustiť", môžete vždy stlačiť tlačidlo "Resetovať"
+          pre reštartovanie hry a jej začatie odznova. A teraz ste na rade Vy, aby
+          ste si vytvorili Vašu vlastnú verziu Minecraftu. Veľa zábavy!
     mc_2016_loops:
       1:
         image: notes/mc_2016_loops_1.jpg
@@ -3165,56 +3167,56 @@ sk:
           na skrotenie vašej vlastnej mačky.
       2:
         image: notes/mc_2016_loops_2.jpg
-        text: As humans, we get really bored if we have to do the same thing over
-          and over and over again. But the cool thing about computers is that they
-          can do the same thing millions or even billions of times in a row without
-          getting bored. This repetition is called a loop and every creature in Minecraft
-          uses loops.
+        text: My ľudia sa začneme veľmi nudiť, ak musíme robiť dookola jednu a tú
+          istú vec. Počítače sú však úžasné aj preto, lebo dokážu robiť tú istú vec
+          dookola milióny až miliardy krát a nikdy sa nebudú nudiť. Toto opakovanie
+          sa volá "slučka" a každá postavička v Minecrafte používa slučky.
       3:
         image: notes/mc_2016_loops_3.jpg
-        text: Earlier, we got a chicken to move across the screen but then she stopped.
-          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
-          do" loop from our toolbox to keep our chickens moving around forever too.
-          The power of loops will save you tons of time and open up all kinds of neat
-          options as you build your own version of Minecraft.
+        text: Pred chvíľou sme posunuli kuriatko na obrazovke, potom však zastalo.
+          V Minecrafte, kuriatká pobehujú stále dookola. Poďme použiť slučku "rob
+          dookola" z nášho nástroja panelov, aby naše kuriatka tiež pobehovali dookola.
+          Vlastnosť slučiek nám ušetrí veľa času a otvorí nám veľa pekných možností
+          popri tom, ako budete skladať Vašu verziu Minecraftu.
     mc_2016_events:
       1:
         image: notes/mc_2016_events_1.jpg
-        text: On this next level, you can pick to be either Steve or Alex. Press the
-          arrow buttons on your keyboard to move up, down, left, and right. Now you
-          can move around a level wherever you want. To use a creature, just walk
-          towards it, turn to face it, and press the spacebar.
+        text: V tomto leveli si môžete vybrať, či budete hrať ako Steve alebo ako
+          Alex. Stlačte šípky na klávesnici pre pohyb hore, dole, vľavo a vpravo.
+          Odteraz sa môžete v tomto leveli pohybovať kam len chcete. Pre použitie
+          príšerky sa k nej priblížte, otočte sa k nej tvárou a stlačte medzerník.
       2:
         image: notes/mc_2016_events_2.jpg
-        text: If you're using a touch screen, swipe up, down, left, and right to move
-          around. Then tap the game to use the item in front of you.
+        text: Ak používate dotykovú obrazovku, prejdite po nej prstom hore, dole,
+          vľavo a vpravo pre pohyb. Potom ťuknite na obrazovku pre použitie predmetu,
+          ktorý je pred vami.
       3:
         image: notes/mc_2016_events_3.jpg
-        text: But what happens when you use it? In Minecraft, sheep drop wool when
-          you shear them, cows run away when you hit them, and creepers explode when
-          you get near them. These reactions happen thanks to something called events.
-          Events tell your program to listen or wait for when something happens. And
-          when it does, perform an action.
+        text: Ale čo sa stane, keď to použijete? V Minecrafte ovečky zanechávajú vlnu,
+          keď ich ostriháte, kravy utekajú preč keď do nich udriete a strašidlá vybuchujú,
+          keď sa k ním priblížite. Tieto reakcie sa dejú vďaka niečomu, čo sa volá
+          udalosti. Udalosti hovoria Vášmu programu, aby počúvali alebo čakali na
+          niečo, čo sa stane. A keď sa to stane, niečo spravia.
       4:
         image: notes/mc_2016_events_4.jpg
-        text: So far, you've used one event. Code you put in the "when spawned" slot
-          runs when your creature is created or when the game starts. Over the next
-          few levels you'll have new slots for events such as "when touched" that
-          runs when you touch the creature, or "when used" for when you use the creature.
-          Or, if you want your zombie to disappear when the sun comes up, put that
-          in the "when day" slot
+        text: Doteraz ste použili len jednu udalosť. Kód, ktorý ste vložili do poľa
+          "po vytvorení" sa spustí, keď sa vytvorí postavička alebo keď začne hra.
+          V ďaľších leveloch budete mať nové polia pre udalosti ako napríklad "po
+          dotknutí sa", ktorý sa spustí, keď sa dotknete postavičky, alebo "po použití",
+          keď postavičku použijete. Alebo ak chcete, aby zombík pri východe slnka,
+          vložte akciu do poľa "po východe slnka"
     mc_2016_spawn:
       1:
         image: notes/mc_2016_spawn_1.jpg
-        text: In games, spawn means the same thing as create. In this level, let's
-          make zombies spawn when the sun goes down. To do this, we'll use the "when
-          night" block.
+        text: V hrách, spraviť znamená to isté ako vytvoriť. V tomto leveli poďme
+          vytvárať zombíkov po západe slnka. Pre dosiahnutie použijeme blok "keď príde
+          noc".
       2:
         image: notes/mc_2016_spawn_2.jpg
-        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
-          block under the "when night" block. As soon as they're spawned, each zombie
-          will run the code that you put in their "when spawned" event slot. Have
-          fun spawning zombies!
+        text: Keďže chceme, aby sa zombíci vytvárali v noci, prídame blok "vytvoriť
+          zombíka" pod blok "keď príde noc". Akonáhle sa vytvoria, každý zombík spustí
+          kód, ktorý ste vložili do jeho políčka udalosti "po vytvorení". Veľa zábavy
+          pri robení zombíkov!
     mc_2016_congrats:
       1:
         image: notes/mc_2016_congrats_1.jpg
@@ -3223,9 +3225,9 @@ sk:
           a všetky stvorenia. Môžete si vybrať, čo sa stane.
       2:
         image: notes/mc_2016_congrats_2.jpg
-        text: When you're done making your game, choose share to get a link that you
-          can share with your friends or to play your game on your phone. Have fun!
-          I'm looking forward to playing your version of Minecraft.
+        text: Keď ste hotoví s tvorbou Vašej hry, vyberte si zdieľanie odkazu, ktorý
+          môžete zdieľať s Vašimi kamarátmi alebo hrať hru na Vašom mobilnom telefóne.
+          Veľa zábavy! Tešíme sa s Vami na veľa hodín zábavy s Vašou verziou Minecraftu.
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
@@ -3453,38 +3455,37 @@ sk:
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What
-          I want to show you is just over this mesa plateau. I think you''re going
-          to love it!'
+        text: 'Stacy: Stampy, Lizzy, Preston = vďaka, že ste išli so mnou. Chcem Vám
+          ukázať niečo, čo je za touto planinou. Myslím si, že sa Vám to bude páčiť!'
       2:
         image: notes/mc_2017_agent_intro_2.png
-        text: Wait a minute - there's a hole in the track! (screaming)
+        text: Moment - v trati je diera! (krik)
       3:
         image: notes/mc_2017_agent_intro_3.png
-        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a
-          hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather
-          blocks to fix it. Preston: Let''s make it a race. First one back to the
-          top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather
-          some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy:
-          I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine?
-          Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game
-          broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy:
-          Does anyone know how to write Minecraft code?'
+        text: 'Sú všetci v poriadku? Stampy: Ach, už viem kde je problém. Pozrite
+          sa! V trati bola diera. Stacy: Naozaj. Stampy? Lizzy: Možno by sme mali
+          pozbierať bloky a opraviť to. Preston: Poďme si zasúťažiť. Prvý, kto bude
+          hore, vyhráva. Stacy: OK, na značku, pripraviť sa, pozor, ŠTART! OK, idem
+          pozbierať trošku tejto hliny. Počkať. Chalani, ja to neviem vydolovať! Preston:
+          Ani ja. Lizzy: Ja tiež nie. Stacy: OK, toto je fakt zvláštne. Stampy, vieš
+          to vydolovať? Stampy: Ja to neviem vydolovať! Stacy: OK, všetci ostaňme
+          kľudní. Stampy: Čo sa hra pokazila? Stacy: Ak áno, ako to opravíme? Lizzy:
+          Ja neviem. Stampy: Vie niekto napísať kód pre Minecraft?'
       4:
         image: notes/mc_2017_agent_intro_4.png
-        text: "(poof) Preston: What is that? Stampy: I've never seen one of these
-          before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston:
-          Okay, what is going on? Someone needs to go back to the real world and fix
-          this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
+        text: "(puf) Preston: To bolo čo? Stampy: Ešte som nikdy nevidel takéto niečo.
+          Lizzy: To je ale zlaté! Stacy: Dá sa to... dá sa to... zdomácniť? Preston:
+          Čo sa to vlastne deje? Niekto musí ísť naspäť do skutočného sveta a opraviť
+          to. Všetci! Nie to! Stacy: Nie t... (Fňuk.) OK, pôjdem teda ja."
       5:
         image: notes/mc_2017_agent_intro_5.png
-        text: Oh, okay, hey, so I'm in the real world now. I'm going to go try to
-          find the Minecraft offices.
+        text: Ach, dobre, ahoj, som teda v skutočnom svete. Idem skúsiť nájst kancelárie
+          Minecraftu.
       6:
         image: notes/mc_2017_agent_intro_6.png
-        text: But, I'm going to need your help. Start doing the tutorial, start learning
-          how to code, and I'll catch up with you guys after a few levels, okay? Wish
-          me luck! I think it's this way. Ow! Cactus! I'm okay!
+        text: Potrebujem ale tvoju pomoc. Začni najprv úvodnou lekciou, nauč sa ako
+          kódovať a o pár levelov neskôr sa stretneme, dobre? Drž mi palce! Myslím
+          si, že toto je správna cesta. Au! Kaktus! Som v poriadku!
       7:
         image: notes/mc_2017_agent_intro_7.png
         text: To complete the Hour of Code challenge, you'll need to write code to
