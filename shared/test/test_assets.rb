@@ -48,6 +48,52 @@ class AssetsTest < FilesApiTestBase
     @api.delete_object(sound_filename)
     assert successful?
 
+    # test put asset
+    sound_body = 'stub-sound-contents'
+    first_sound_filename = 'meow.mp3'
+    first_response = @api.put_object(first_sound_filename, sound_body, {'CONTENT_TYPE' => 'json'})
+    actual_first_sound_info = JSON.parse(first_response)
+    expected_first_sound_info = {'filename' => first_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    assert_fileinfo_equal(expected_first_sound_info, actual_first_sound_info)
+
+    second_sound_filename = 'bark.mp3'
+    second_response = @api.put_object(second_sound_filename, sound_body, {'CONTENT_TYPE' => 'json'})
+    actual_second_sound_info = JSON.parse(second_response)
+    expected_second_sound_info = {'filename' => second_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    assert_fileinfo_equal(expected_second_sound_info, actual_second_sound_info)
+
+    # test duplicate filename
+    unique_sound_body = 'stub-sound-contents_unique'
+    third_response = @api.put_object(first_sound_filename, unique_sound_body, {'CONTENT_TYPE' => 'json'})
+    actual_third_sound_info = JSON.parse(third_response)
+    expected_third_sound_info = {'filename' => first_sound_filename, 'category' => 'audio', 'size' => unique_sound_body.length}
+    assert_fileinfo_equal(expected_third_sound_info, actual_third_sound_info)
+
+    file_infos = @api.list_objects
+    assert_equal(file_infos.length, 2)
+    assert_fileinfo_equal(actual_second_sound_info, file_infos[0])
+    assert_fileinfo_equal(actual_third_sound_info, file_infos[1])
+
+    @api.delete_object(first_sound_filename)
+    assert successful?
+
+    @api.delete_object(second_sound_filename)
+    assert successful?
+
+    # version for put asset is ignored
+    sound_body = 'stub-sound-contents'
+    sound_filename = 'meow.mp3'
+    response = @api.put_object_version(sound_filename, 'fake_version', sound_body, {'CONTENT_TYPE' => 'json'})
+    actual_sound_info = JSON.parse(response)
+    expected_sound_info = {'filename' => sound_filename, 'category' => 'audio', 'size' => sound_body.length}
+    assert_fileinfo_equal(expected_sound_info, actual_sound_info)
+
+    file_infos = @api.list_objects
+    assert_fileinfo_equal(actual_sound_info, file_infos[0])
+
+    @api.delete_object(sound_filename)
+    assert successful?
+
     # unsupported media type
     post_asset_file(@api, 'filename.exe', 'stub-contents', 'application/x-msdownload')
     assert unsupported_media_type?
