@@ -57,7 +57,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
-          logged_in: current_user,
+          logged_in: current_user.present?,
           sign_in_prompt_data: sign_in_prompt_data
         }.to_json
       }
