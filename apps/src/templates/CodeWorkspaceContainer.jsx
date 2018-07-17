@@ -5,13 +5,13 @@
 
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
-var ReactDOM = require('react-dom');
-var Radium = require('radium');
-var utils = require('../utils');
-var commonStyles = require('../commonStyles');
+import ReactDOM from 'react-dom';
+import Radium from 'radium';
 import { connect } from 'react-redux';
+import * as utils from '../utils';
+import commonStyles from '../commonStyles';
 
-var styles = {
+const styles = {
   main: {
     position: 'absolute',
     // left gets set externally :(
@@ -77,7 +77,7 @@ class CodeWorkspaceContainer extends React.Component {
   }
 
   render() {
-    var mainStyle = [styles.main, {
+    const mainStyle = [styles.main, {
       top: this.props.topMargin
     },
       this.props.noVisualization && styles.noVisualization,
