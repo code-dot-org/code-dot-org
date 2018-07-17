@@ -49,6 +49,7 @@ export default class ScriptSelector extends Component {
           value={scriptId}
           onChange={event => onChange(parseInt(event.target.value))}
           style={dropdownStyles.dropdown}
+          id="uitest-course-dropdown"
         >
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
