@@ -287,7 +287,7 @@ export default class EnrollForm extends React.Component {
               answers={SCHOOL_TYPES}
               groupName="school_type"
               label="My school is a"
-              onChange={this.handleChange}
+              onChange={this.handleSchoolInfoChange}
               selectedItems={this.state.school_type}
               //validationState={this.getValidationState(name)
               type="radio"
