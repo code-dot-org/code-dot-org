@@ -2,9 +2,45 @@
  * Form to create a workshop enrollment
  */
 import React, {PropTypes} from 'react';
-import {FormGroup, Button} from 'react-bootstrap';
+import {FormGroup, Button, Row, Col, ControlLabel, Checkbox} from 'react-bootstrap';
+import Select from "react-select";
 import FieldGroup from '../form_components/FieldGroup';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {STATES} from '../../../geographyConstants';
+
+const styles = {
+  indented: {
+    marginLeft: 20
+  },
+  outdented: {
+    marginLeft: -20
+  }
+};
+
+const ROLES = [
+  "Classroom Teacher",
+  "Librarian",
+  "Tech Teacher/Media Specialist",
+  "Parent",
+  "School Administrator",
+  "District Administrator",
+  "Other"
+];
+
+const GRADES_TEACHING = [
+  "Pre-K",
+  "Kindergarten",
+  "Grade 1",
+  "Grade 2",
+  "Grade 3",
+  "Grade 4",
+  "Grade 5",
+  "Grade 6-8",
+  "Grade 9-12",
+  "I'm not teaching this year (Please Explain):",
+  "Other (Please Explain):"
+];
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
@@ -17,6 +53,10 @@ export default class EnrollForm extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      schoolDropdownOption: undefined
+    };
+
     if (this.props.email) {
       this.state = {
         firstName: this.props.first_name,
@@ -28,6 +68,39 @@ export default class EnrollForm extends React.Component {
 
   handleChange = (change) => {
     this.setState(change);
+  };
+
+  handleSchoolStateChange = (selection) => {
+    this.setState({school_state: selection.value});
+  };
+
+  handleRoleChange = (selection) => {
+    this.setState({role: selection.value});
+  };
+
+  handleGradesTeachingChange = (e) => {
+    e.preventDefault();
+    let gradesTeaching = this.state.grades_teaching || [];
+    if (e.target.checked) {
+      gradesTeaching.push(e.target.value);
+    } else {
+      let indexToRemove = gradesTeaching.indexOf(e.target.value);
+      gradesTeaching.splice(indexToRemove, 1);
+    }
+    this.setState({grades_teaching: gradesTeaching});
+  };
+
+  handleSchoolChange = (selection) => {
+    // can i just do school_info: {selection.school} ?
+    this.setState({
+      school_info: {
+        school_state: selection.school.state,
+        school_zip: selection.school.zip,
+        school_id: selection.school.nces_id,
+        school_name: selection.school.name,
+        school_type: selection.school.school_type
+      }
+    });
   };
 
   onRegister = () => {
@@ -74,7 +147,7 @@ export default class EnrollForm extends React.Component {
           Fields marked with a<span className="form-required-field"> * </span>
           are required.
         </p>
-        <FormGroup>
+        <FormGroup style={styles.indented}>
           <FieldGroup
             id="firstName"
             label="First Name"
@@ -111,6 +184,99 @@ export default class EnrollForm extends React.Component {
             />
           }
         </FormGroup>
+        <FormGroup
+          id="school"
+          style={styles.indented}
+        >
+          <Row>
+            <Col md={6}>
+              <ControlLabel>
+                School
+                <span className="form-required-field"> *</span>
+              </ControlLabel>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <SchoolAutocompleteDropdown
+                value={this.state.value}
+                onChange={this.handleSchoolChange}
+              />
+            </Col>
+          </Row>
+        </FormGroup>
+        {/*
+          this.props.data.school && this.props.data.school === '-1' &&
+          <div style={styles.indented}>
+            {this.inputFor("schoolName")}
+            {this.inputFor("schoolAddress")}
+            {this.inputFor("schoolCity")}
+            {this.selectFor("schoolState", {placeholder: "Select a state"})}
+            {this.inputFor("schoolZipCode")}
+            {this.radioButtonsFor("schoolType")}
+          </div>*/
+          <FormGroup style={styles.indented}>
+            <FieldGroup
+              id="schoolName"
+              label="School Name"
+              type="text"
+              required={true}
+              onChange={this.handleChange}
+            />
+            <FieldGroup
+              id="schoolAddress"
+              label="School Address"
+              type="text"
+              required={true}
+              onChange={this.handleChange}
+            />
+            <FieldGroup
+              id="schoolCity"
+              label="School City"
+              type="text"
+              required={true}
+              onChange={this.handleChange}
+            />
+            <FormGroup style={styles.outdented}>
+              <ControlLabel>School State</ControlLabel>
+              <Select
+                onChange={this.handleStateChange}
+                placeholder={null}
+                options={STATES.map(v => ({value: v, label: v}))}
+              />
+            </FormGroup>
+            <FieldGroup
+              id="schoolZipCode"
+              label="School Zip Code"
+              type="text"
+              required={true}
+              onChange={this.handleChange}
+            />
+            {/* radio buttons for school type */}
+          </FormGroup>
+        }
+        {/* if it is a csf workshop */
+          <FormGroup>
+            <ControlLabel>What is your current role? (Select the role that best applies)<span className="form-required-field"> *</span></ControlLabel>
+            <Select
+              placeholder={null}
+              onChange={this.handleRoleChange}
+              options={ROLES.map(r => ({value: r, label: r}))}
+            />
+          {/* if they are a classroom teacher, librarian, or tech teacher.media specialist */}
+            <ControlLabel>What grades are you teaching this year? (Select all that apply)<span className="form-required-field"> *</span></ControlLabel>
+            <p>This workshop is intended for teachers for Grades K-5.</p>
+            {GRADES_TEACHING.map((grade, index) =>
+              <Checkbox
+                value={grade}
+                key={index}
+                onChange={this.handleGradesTeachingChange}
+              >
+                {grade}
+              </Checkbox>
+            )}
+          </FormGroup>
+        }
         <p>
           Code.org works closely with local Regional Partners and Code.org facilitators
           to deliver the Professional Learning Program. By enrolling in this workshop,
