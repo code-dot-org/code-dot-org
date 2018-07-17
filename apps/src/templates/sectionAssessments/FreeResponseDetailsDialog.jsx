@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import i18n from "@cdo/locale";
 import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
 
 const styles = {
@@ -35,13 +36,13 @@ export default class FreeResponseDetailsDialog extends Component {
         isOpen={this.state.isDialogOpen}
         style={styles.dialog}
       >
-        <h2>{"Question details"}</h2>
+        <h2>{i18n.questionText()}</h2>
         <div style={styles.instructions}>
           {this.props.questionText}
         </div>
         <DialogFooter>
           <Button
-            text={"Done"}
+            text={i18n.done()}
             onClick={this.handleYesClick}
             color={Button.ButtonColor.gray}
           />
