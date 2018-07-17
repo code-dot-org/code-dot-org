@@ -2,7 +2,8 @@
  * Form to create a workshop enrollment
  */
 import React, {PropTypes} from 'react';
-import {FormGroup, Button, Row, Col, ControlLabel, Checkbox} from 'react-bootstrap';
+import {FormGroup, Button, Row, Col, ControlLabel} from 'react-bootstrap';
+import {ButtonList} from '../form_components/ButtonList.jsx';
 import Select from "react-select";
 import FieldGroup from '../form_components/FieldGroup';
 import {isEmail} from '@cdo/apps/util/formatValidation';
@@ -40,9 +41,14 @@ const GRADES_TEACHING = [
   "Grade 4",
   "Grade 5",
   "Grade 6-8",
-  "Grade 9-12",
-  "I'm not teaching this year (Please Explain):",
-  "Other (Please Explain):"
+  "Grade 9-12"
+];
+
+const SCHOOL_TYPES = [
+  "Public school",
+  "Private school",
+  "Charter school",
+  "Other"
 ];
 
 export default class EnrollForm extends React.Component {
@@ -89,18 +95,6 @@ export default class EnrollForm extends React.Component {
     this.setState({role: selection.value});
   };
 
-  handleGradesTeachingChange = (e) => {
-    e.preventDefault();
-    let gradesTeaching = this.state.grades_teaching || [];
-    if (e.target.checked) {
-      gradesTeaching.push(e.target.value);
-    } else {
-      let indexToRemove = gradesTeaching.indexOf(e.target.value);
-      gradesTeaching.splice(indexToRemove, 1);
-    }
-    this.setState({grades_teaching: gradesTeaching});
-  };
-
   handleSchoolChange = (selection) => {
     this.setState({school_id: selection.value});
     // can i just do school_info: {selection.school} ?
@@ -119,6 +113,14 @@ export default class EnrollForm extends React.Component {
         school_info: {}
       });
     }
+  };
+
+  handleNotTeachingChange = (input) => {
+    this.setState({explain_not_teaching: input});
+  };
+
+  handleTeachingOtherChange = (input) => {
+    this.setState({explain_teaching_other: input});
   };
 
   onRegister = () => {
@@ -159,6 +161,22 @@ export default class EnrollForm extends React.Component {
   }
 
   render() {
+    let roleLabel = (
+      <div>
+        What grades are you teaching this year? (Select all that apply)<span className="form-required-field"> *</span>
+        <p>This workshop is intended for teachers for Grades K-5.</p>
+      </div>
+    );
+    let gradesTeaching = GRADES_TEACHING.concat([
+      {
+        answerText: "I'm not teaching this year (Please Explain):",
+        onInputChange: this.handleNotTeachingChange
+      },
+      {
+        answerText: "Other (Please Explain):",
+        onInputChange: this.handleTeachingOtherChange
+      }
+    ]);
     return (
       <form>
         <p>
@@ -264,7 +282,17 @@ export default class EnrollForm extends React.Component {
               required={true}
               onChange={this.handleSchoolInfoChange}
             />
-            {/* radio buttons for school type */}
+            <ButtonList
+              key="school_type"
+              answers={SCHOOL_TYPES}
+              groupName="school_type"
+              label="My school is a"
+              onChange={this.handleChange}
+              selectedItems={this.state.school_type}
+              //validationState={this.getValidationState(name)
+              type="radio"
+              required={true}
+            />
           </FormGroup>
         }
         {this.props.workshop_course === 'CS Fundamentals' &&
@@ -278,19 +306,16 @@ export default class EnrollForm extends React.Component {
               options={ROLES.map(r => ({value: r, label: r}))}
             />
           {this.state && TEACHING_ROLES.includes(this.state.role) &&
-            <FormGroup>
-              <ControlLabel>What grades are you teaching this year? (Select all that apply)<span className="form-required-field"> *</span></ControlLabel>
-              <p>This workshop is intended for teachers for Grades K-5.</p>
-              {GRADES_TEACHING.map((grade, index) =>
-                <Checkbox
-                  value={grade}
-                  key={index}
-                  onChange={this.handleGradesTeachingChange}
-                >
-                  {grade}
-                </Checkbox>
-              )}
-            </FormGroup>
+            <ButtonList
+              key="grades_teaching"
+              answers={gradesTeaching}
+              groupName="grades_teaching"
+              label={roleLabel}
+              onChange={this.handleChange}
+              selectedItems={this.state.grades_teaching}
+              //validationState={this.getValidationState(name)
+              type="check"
+            />
           }
           </FormGroup>
         }
