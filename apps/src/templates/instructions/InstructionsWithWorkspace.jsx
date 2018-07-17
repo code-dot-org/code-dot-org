@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
+var CodeWorkspaceContainer = require('../CodeWorkspaceContainer');
 import TopInstructions from './TopInstructions';
-import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
+var instructions = require('../../redux/instructions');
 
 /**
  * A component representing the right side of the screen in our app. In particular
@@ -12,40 +12,43 @@ import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
  * Owns maxHeightAvailable for instructions, updating as appropriate on window
  * resize events
  */
-export class UnwrappedInstructionsWithWorkspace extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
+var InstructionsWithWorkspace = React.createClass({
+  propTypes: {
     // props provided via connect
     instructionsHeight: PropTypes.number.isRequired,
-    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
-  };
 
-  // only used so that we can rerender when resized
-  state = {
-    windowWidth: undefined,
-    windowHeight: undefined
-  };
+    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
+    children: PropTypes.node,
+  },
+
+  getInitialState() {
+    // only used so that we can rerender when resized
+    return {
+      windowWidth: undefined,
+      windowHeight: undefined
+    };
+  },
 
   /**
    * Called when the window resizes. Look to see if width/height changed, then
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
-  onResize = () => {
-    const {
-      windowWidth: lastWindowWidth,
-      windowHeight: lastWindowHeight
-    } = this.state;
+  onResize() {
     const windowWidth = $(window).width();
     const windowHeight = $(window).height();
 
     // We fire window resize events when the grippy is dragged so that non-React
     // controlled components are able to rerender the editor. If width/height
     // didn't change, we don't need to do anything else here
-    if (windowWidth === lastWindowWidth && windowHeight === lastWindowHeight) {
+    if (windowWidth === this.state.windowWidth &&
+        windowHeight === this.state.windowHeight) {
       return;
     }
 
-    this.setState({windowWidth, windowHeight});
+    this.setState({
+      windowWidth: $(window).width(),
+      windowHeight: $(window).height()
+    });
 
     // Determine what the maximum size of our instructions is based off of the
     // size of the code workspace.
@@ -59,8 +62,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const DEBUGGER_RESERVE = 120;
     const INSTRUCTIONS_RESERVE = 150;
 
-    const {instructionsHeight, setInstructionsMaxHeightAvailable} = this.props;
-    const codeWorkspaceHeight = this.codeWorkspaceContainer
+    const instructionsHeight = this.props.instructionsHeight;
+    const codeWorkspaceHeight = this.refs.codeWorkspaceContainer
       .getWrappedInstance().getRenderedHeight();
     if (codeWorkspaceHeight === 0) {
       // We haven't initialized the codeWorkspace yet. No need to change the
@@ -76,23 +79,23 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       // we have to instructions, and the other 2/3 to the workspace
       maxInstructionsHeight = Math.round(totalHeight / 3);
     }
-    setInstructionsMaxHeightAvailable(maxInstructionsHeight);
-  };
+    this.props.setInstructionsMaxHeightAvailable(maxInstructionsHeight);
+  },
 
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
-  }
+  },
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
-  }
+  },
 
   render() {
     return (
       <span>
         <TopInstructions/>
         <CodeWorkspaceContainer
-          ref={el => this.codeWorkspaceContainer = el}
+          ref="codeWorkspaceContainer"
           topMargin={this.props.instructionsHeight}
         >
           {this.props.children}
@@ -100,16 +103,16 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       </span>
     );
   }
-}
+});
 
-export default connect(function propsFromStore(state) {
+module.exports = connect(function propsFromStore(state) {
   return {
     instructionsHeight: state.instructions.renderedHeight
   };
 }, function propsFromDispatch(dispatch) {
   return {
     setInstructionsMaxHeightAvailable(maxHeight) {
-      dispatch(setInstructionsMaxHeightAvailable(maxHeight));
+      dispatch(instructions.setInstructionsMaxHeightAvailable(maxHeight));
     }
   };
-})(UnwrappedInstructionsWithWorkspace);
+})(InstructionsWithWorkspace);

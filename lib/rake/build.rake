@@ -97,13 +97,8 @@ namespace :build do
       # Skip asset precompile in development where `config.assets.digest = false`.
       # Also skip on Circle CI where we will precompile assets later, right before UI tests.
       unless rack_env?(:development) || ENV['CIRCLECI']
-        # Skip cleaning assets in production, to be extra sure we don't break anything.
-        # Do clean assets in staging and test, to hopefully expose any bugs where we
-        # depend on outdated assets.
-        unless rack_env?(:production)
-          ChatClient.log 'Cleaning <b>dashboard</b> assets...'
-          RakeUtils.rake 'assets:clean'
-        end
+        ChatClient.log 'Cleaning <b>dashboard</b> assets...'
+        RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:precompile'
       end
