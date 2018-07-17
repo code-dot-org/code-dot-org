@@ -10,6 +10,7 @@ const APPEND_PROJECTS = 'projects/APPEND_PROJECTS';
 const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
+const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
 
 // Reducers
 
@@ -130,4 +131,8 @@ export function setProjectLists(projectLists) {
 
 export function setHasOlderProjects(hasOlderProjects, projectType) {
   return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
+}
+
+export function setPersonalProjectsList(personalProjectsList) {
+  return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
 }

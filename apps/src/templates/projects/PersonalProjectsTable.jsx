@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -303,5 +304,6 @@ class PersonalProjectsTable extends React.Component {
     );
   }
 }
-
-export default PersonalProjectsTable;
+export default connect(state => ({
+  projectLists: state.projects.projectLists,
+}))(PersonalProjectsTable);
