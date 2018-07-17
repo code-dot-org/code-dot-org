@@ -75,7 +75,14 @@ export default class EnrollForm extends React.Component {
   };
 
   handleSchoolStateChange = (selection) => {
-    this.setState({school_state: selection.value});
+    let school_info = this.state.school_info;
+    school_info.school_state = selection.value;
+    this.setState({school_info: school_info});
+  };
+
+  handleSchoolInfoChange = (selection) => {
+    let school_info = Object.assign(this.state.school_info, selection);
+    this.setState({school_info: school_info});
   };
 
   handleRoleChange = (selection) => {
@@ -97,7 +104,7 @@ export default class EnrollForm extends React.Component {
   handleSchoolChange = (selection) => {
     this.setState({school_id: selection.value});
     // can i just do school_info: {selection.school} ?
-    if (this.state.school_id !== "-1") {
+    if (selection.value !== "-1") {
       this.setState({
         school_info: {
           school_state: selection.school.state,
@@ -106,6 +113,10 @@ export default class EnrollForm extends React.Component {
           school_name: selection.school.name,
           school_type: selection.school.school_type
         }
+      });
+    } else {
+      this.setState({
+        school_info: {}
       });
     }
   };
@@ -156,7 +167,7 @@ export default class EnrollForm extends React.Component {
         </p>
         <FormGroup style={styles.indented}>
           <FieldGroup
-            id="firstName"
+            id="first_name"
             label="First Name"
             type="text"
             required={true}
@@ -164,7 +175,7 @@ export default class EnrollForm extends React.Component {
             defaultValue={this.props.first_name}
           />
           <FieldGroup
-            id="lastName"
+            id="last_name"
             label="Last Name"
             type="text"
             required={true}
@@ -183,7 +194,7 @@ export default class EnrollForm extends React.Component {
           {
             !this.props.logged_in &&
             <FieldGroup
-              id="confirmEmail"
+              id="confirm_email"
               label="Confirm Email Address"
               type="email"
               required={true}
@@ -209,7 +220,6 @@ export default class EnrollForm extends React.Component {
                 <SchoolAutocompleteDropdown
                   value={this.state.school_id}
                   onChange={this.handleSchoolChange}
-                  clearable={false}
                 />
               </Col>
             </Row>
@@ -218,40 +228,41 @@ export default class EnrollForm extends React.Component {
         {this.state && this.state.school_id && this.state.school_id === '-1' &&
           <FormGroup style={styles.indented}>
             <FieldGroup
-              id="schoolName"
+              id="school_name"
               label="School Name"
               type="text"
               required={true}
-              onChange={this.handleChange}
+              onChange={this.handleSchoolInfoChange}
             />
             <FieldGroup
-              id="schoolAddress"
+              id="school_address"
               label="School Address"
               type="text"
               required={true}
-              onChange={this.handleChange}
+              onChange={this.handleSchoolInfoChange}
             />
             <FieldGroup
-              id="schoolCity"
+              id="school_city"
               label="School City"
               type="text"
               required={true}
-              onChange={this.handleChange}
+              onChange={this.handleSchoolInfoChange}
             />
             <FormGroup style={styles.outdented}>
               <ControlLabel>School State</ControlLabel>
               <Select
-                onChange={this.handleStateChange}
-                placeholder={null}
+                value={this.state.school_info ? this.state.school_info.school_state : null}
+                onChange={this.handleSchoolStateChange}
                 options={STATES.map(v => ({value: v, label: v}))}
+                clearable={false}
               />
             </FormGroup>
             <FieldGroup
-              id="schoolZipCode"
+              id="school_zip"
               label="School Zip Code"
               type="text"
               required={true}
-              onChange={this.handleChange}
+              onChange={this.handleSchoolInfoChange}
             />
             {/* radio buttons for school type */}
           </FormGroup>
