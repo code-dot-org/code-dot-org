@@ -42,7 +42,7 @@ class CoursesController < ApplicationController
     unless course
       # PLC courses have different ways of getting to name. ideally this goes
       # away eventually
-      course_name = params[:course_name].tr('-', '_').titleize
+      course_name = params[:course_name].tr('-', '_').titleize.gsub /(\d+) (\d+)/, '\1-\2'
       course = Course.get_from_cache(course_name)
       # only support this alternative course name for plc courses
       raise ActiveRecord::RecordNotFound unless course.try(:plc_course)
