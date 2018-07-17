@@ -59,7 +59,13 @@ module GitUtils
   end
 
   def self.git_revision_short
-    `git rev-parse --short=8 HEAD`.strip
+    # Cron jobs execute as root and may not be in the current project directory, preventing git commands from working.
+    # Eventually other (or all) GitUtils methods may need to explicitly change to the project root, but currently
+    # only this call to a GitUtils method is executed when a cron job runs:
+    # https://github.com/code-dot-org/code-dot-org/blob/7863f6bdc4d275536754bbce8f88400c96de48db/deployment.rb#L41
+    Dir.chdir(deploy_dir) do
+      `git rev-parse --short=8 HEAD`.strip
+    end
   end
 
   def self.git_revision_branch(branch)
