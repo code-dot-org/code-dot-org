@@ -358,7 +358,7 @@ class Course < ApplicationRecord
   # returns whether a script in this course has version_warning_dismissed.
   def has_dismissed_version_warning?(user)
     return nil unless user
-    script_ids = default_scripts.map(&:id)
+    script_ids = default_scripts.pluck(:id)
     user.
       user_scripts.
       where(script_id: script_ids).
