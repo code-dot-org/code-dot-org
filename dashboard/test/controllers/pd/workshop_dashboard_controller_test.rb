@@ -62,6 +62,7 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
     get :index
     assert_response :success
     assert_equal %w(Organizer Partner), permission_list
+    assert_equal
   end
 
   test_user_gets_response_for :index, user: :teacher, response: :not_found

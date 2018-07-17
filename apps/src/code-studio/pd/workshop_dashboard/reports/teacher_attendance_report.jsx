@@ -214,5 +214,5 @@ export class TeacherAttendanceReport extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission
+  permission: state.workshopDashboard.permission
 }))(TeacherAttendanceReport);

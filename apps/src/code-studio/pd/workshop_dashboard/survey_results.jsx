@@ -36,5 +36,5 @@ export class SurveyResults extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission
+  permission: state.workshopDashboard.permission
 }))(SurveyResults);
