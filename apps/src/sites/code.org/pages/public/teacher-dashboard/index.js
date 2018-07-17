@@ -216,8 +216,6 @@ function main() {
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
-         assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
-         surveys: {method:'GET', url:'/dashboardapi/section_surveys/:id', isArray: true},
          validScripts: {method:'GET', url:'/dashboardapi/sections/valid_scripts', isArray: true},
       });
     }]).config(['$httpProvider', function ($httpProvider) {
@@ -672,11 +670,9 @@ function main() {
 
     $scope.assessmentsLoaded = false;
     $scope.assessmentStages = [];
-    $scope.assessments = sectionsService.assessments({id: $routeParams.id});
 
     $scope.surveysLoaded = false;
     $scope.surveyStages = [];
-    $scope.surveys = sectionsService.surveys({id: $routeParams.id});
 
     $scope.react_assessments = true;
     $scope.$on('section-assessments-rendered', () => {
