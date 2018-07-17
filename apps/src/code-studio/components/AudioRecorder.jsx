@@ -11,7 +11,7 @@ const styles = {
   }
 };
 
-class AudioRecorder extends React.Component {
+export default class AudioRecorder extends React.Component {
   static propTypes = {
     visible: PropTypes.bool
   };
@@ -53,5 +53,3 @@ class AudioRecorder extends React.Component {
     );
   }
 }
-
-export default AudioRecorder;
