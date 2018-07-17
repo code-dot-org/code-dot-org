@@ -47,7 +47,7 @@ DropletAutocompleteParameterTooltipManager.prototype.installTooltipsForEditor_ =
   var cursorMovementHandler = this.onCursorMovement_.bind(this, aceEditor);
   aceEditor.commands.on('afterExec', cursorMovementHandler);
   aceEditor.on('mousedown', function (e) {
-    this.getCursorTooltip_().tooltipster('hide');
+    this.hideTooltip_();
   }.bind(this));
 };
 
@@ -57,7 +57,7 @@ DropletAutocompleteParameterTooltipManager.prototype.installTooltipsForEditor_ =
  * @private
  */
 DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = function (editor, changeEvent) {
-  this.getCursorTooltip_().tooltipster('hide');
+  this.hideTooltip_();
 
   if (!editor.selection.isEmpty()) {
     return;
@@ -196,7 +196,7 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
     return;
   }
 
-  var cursorTooltip = this.getCursorTooltip_();
+  const cursorTooltip = this.createOrUpdateCursorTooltip_();
 
   cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, paramInfo.currentParameterIndex));
   cursorTooltip.tooltipster('show');
@@ -217,7 +217,7 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   if (chooseAsset) {
     var chooseAssetLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-choose-link > a')[0];
     dom.addClickTouchEvent(chooseAssetLink, function (event) {
-      cursorTooltip.tooltipster('hide');
+      this.hideTooltip_();
       chooseAsset(function (filename) {
         aceEditor.onTextInput('"' + filename + '"');
       });
@@ -226,10 +226,63 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   }
 };
 
-DropletAutocompleteParameterTooltipManager.prototype.getCursorTooltip_ = function () {
+DropletAutocompleteParameterTooltipManager.prototype.hideTooltip_ = function () {
+  if (this.cursorTooltip_) {
+    this.cursorTooltip_.tooltipster('hide');
+  }
+};
+
+const SAFE_VERTICAL_DISTANCE_FOR_TOOLTIP = 150;
+const LEFT_OFFSET_EXTRA_MARGIN = 100;
+const ACE_AUTOCOMPLETE_WIDTH = 280;
+
+DropletAutocompleteParameterTooltipManager.prototype.getDesiredTooltipPosition_ = function () {
+  const aceRect = $('.ace_editor')[0].getBoundingClientRect();
+  const cursorRect = this.cursorTooltip_[0].getBoundingClientRect();
+  const showOnLeft = this.showParamDropdowns &&
+      (cursorRect.top - aceRect.top < SAFE_VERTICAL_DISTANCE_FOR_TOOLTIP ||
+      aceRect.bottom - cursorRect.bottom < SAFE_VERTICAL_DISTANCE_FOR_TOOLTIP);
+  let offsetX = 0;
+  let { position } = this.tooltipConfig;
+  if (showOnLeft) {
+    position = 'left';
+    // Establish an offsetX to avoid having the tooltip overlap with the 280px wide ace dropdown,
+    // which will be right-aligned against the right edge of the window when the cursor is near
+    // the right edge.
+
+    // We use an additional LEFT_OFFSET_EXTRA_MARGIN because the cursor may move to the right
+    // between the time we measure it here and when the function name autocompletes (which causes
+    // the cursor to shift futher to the right).
+    offsetX = Math.max(0,
+        cursorRect.left - (window.innerWidth - LEFT_OFFSET_EXTRA_MARGIN - ACE_AUTOCOMPLETE_WIDTH));
+  }
+  return { position, offsetX };
+};
+
+DropletAutocompleteParameterTooltipManager.prototype.createOrUpdateCursorTooltip_ = function () {
   if (!this.cursorTooltip_) {
     this.cursorTooltip_ = $('.droplet-ace .ace_cursor');
-    this.cursorTooltip_.tooltipster(this.tooltipConfig);
+  }
+  const { position, offsetX } = this.getDesiredTooltipPosition_();
+  let curPosition, curOffsetX;
+  try {
+    curPosition = this.cursorTooltip_.tooltipster('option', 'position');
+    curOffsetX = this.cursorTooltip_.tooltipster('option', 'offsetX');
+  } catch (e) {
+    // Ignore errors if we haven't created a tooltip yet
+  }
+  if (position !== curPosition || offsetX !== curOffsetX) {
+    // This is either a new tooltip or one of the properties has changed, so we need to recreate it:
+    try {
+      this.cursorTooltip_.tooltipster('destroy');
+    } catch (e) {
+      // Ignore errors if we haven't created a tooltip yet
+    }
+    this.cursorTooltip_.tooltipster({
+      ...this.tooltipConfig,
+      position,
+      offsetX,
+    });
   }
   return this.cursorTooltip_;
 };
@@ -332,7 +385,7 @@ DropletAutocompleteParameterTooltipManager.insertMatch = function (self, data) {
     this.detach();
 
     // And hide our cursor tooltip as well:
-    self.getCursorTooltip_().tooltipster('hide');
+    self.hideTooltip_();
 
     // Note: stop dropdowns and tooltips until the callback is complete...
     self.blockDropdownsAndTooltips = true;
