@@ -182,10 +182,6 @@
       "comment": null
     },
     "show_debug_watch": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -220,7 +216,8 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"379943b7-2242-43ab-bb9b-837b912e7ac2\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"379943b7-2242-43ab-bb9b-837b912e7ac2\": {\r\n      \"name\": \"bunny1_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/_1cquzNGZuNwXuRyPSy3VM6yuEPcwDdv/category_animals/bunny1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 122,\r\n        \"y\": 209\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_1cquzNGZuNwXuRyPSy3VM6yuEPcwDdv\"\r\n    }\r\n  }\r\n}"
+    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"379943b7-2242-43ab-bb9b-837b912e7ac2\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"379943b7-2242-43ab-bb9b-837b912e7ac2\": {\r\n      \"name\": \"bunny1_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/_1cquzNGZuNwXuRyPSy3VM6yuEPcwDdv/category_animals/bunny1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 122,\r\n        \"y\": 209\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_1cquzNGZuNwXuRyPSy3VM6yuEPcwDdv\"\r\n    }\r\n  }\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
