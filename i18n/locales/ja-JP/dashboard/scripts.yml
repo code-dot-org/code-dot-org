@@ -14,7 +14,7 @@ ja:
         csp17_category_name: コンピューター・サイエンス入門
         full_course_category_name: すべてのコース
         hoc_category_name: Hour of Code
-        math_category_name: 数値
+        math_category_name: 計算(けいさん)
         research_studies_category_name: Research Studies
       name:
         course1:
@@ -425,7 +425,7 @@ ja:
             Conditionals:
               name: 条件
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
             Graph Paper Programming:
               name: プログラミングのグラフ用紙
             Introduction to Computer Science:
@@ -2481,7 +2481,7 @@ ja:
             Variables and Animation:
               name: Variables and Animation
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
             Platform Jumper:
               name: Platform Jumper
             Defender:
@@ -2971,7 +2971,7 @@ ja:
             'Jigsaw: Learn to drag and drop':
               name: 'ジグソーパズル：ドラッグ＆ドロップを学びましょう'
             Loops:
-              name: ループ
+              name: くりかえし
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3039,7 +3039,7 @@ ja:
             'Jigsaw: Learn to drag and drop':
               name: 'ジグソーパズル：ドラッグ＆ドロップを学びましょう'
             Loops:
-              name: ループ
+              name: くりかえし
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3335,7 +3335,7 @@ ja:
               description_student: The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
               description_teacher: Students program their sprites to interact in new ways.  After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact.  They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
               description_student: This lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.
               description_teacher: Students learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. An unplugged warmup explores how directions at different levels of detail can be useful depending on context. Students learn that higher level or more abstract steps make it easier to understand and reason about steps. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function. At the end of the lesson students use these skills to organize and add functionality to the final version of their side scroller game.
             The Game Design Process:
@@ -3492,11 +3492,11 @@ ja:
             For Loops:
               name: ループ用
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
             Functions with Parameters:
               name: パラメーター付き関数
             Loops:
-              name: ループ
+              name: くりかえし
             Nested Loops:
               name: 入れ子のループ
             Variables:
@@ -5008,7 +5008,7 @@ ja:
             Collisions:
               name: Collisions
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -5130,7 +5130,7 @@ ja:
             Collisions:
               name: Collisions
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -5274,7 +5274,7 @@ ja:
             Collisions:
               name: Collisions
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -7318,7 +7318,7 @@ ja:
             Collisions:
               name: Collisions
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -7433,7 +7433,7 @@ ja:
               description_student: The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
               description_teacher: Students program their sprites to interact in new ways.  After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact.  They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).
             Functions:
-              name: 機能
+              name: 関数(かんすう) 
               description_student: This lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.
               description_teacher: Students learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. An unplugged warmup explores how directions at different levels of detail can be useful depending on context. Students learn that higher level or more abstract steps make it easier to understand and reason about steps. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function. At the end of the lesson students use these skills to organize and add functionality to the final version of their side scroller game.
             The Game Design Process:

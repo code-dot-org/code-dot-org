@@ -168,7 +168,7 @@ is:
     accept_terms: Þú verður að samþykkja að stofna aðgang
     error: Villa kom upp.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Já
     email_preference_no: Nei
@@ -312,7 +312,7 @@ is:
       free_play:
         playlab: Búa til Leikjasmiðju-app
         artist: Teikna eitthvað
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Búa til forrit í App Lab
         gamelab: Búa til Leikjasmiðjuverkefni
         weblab: Búa til Vefsmiðju (beta) verkefni

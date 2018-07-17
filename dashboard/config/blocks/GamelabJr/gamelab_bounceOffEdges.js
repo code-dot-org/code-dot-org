@@ -1,5 +1,4 @@
 function bounceOffEdges(sprite){
-  sprite.maxSpeed = 3;
-  console.log(sprite.velocity);
-  sprite.bounceOff(edges);
+  sprite.maxSpeed = -1;
+ sprite.bounceOff(edges);
 }

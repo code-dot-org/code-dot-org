@@ -766,10 +766,10 @@ sk:
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmieňovacie výroky
         csd_gamelab_if_else: Výroky If/Else
-        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
-        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
-        CDEF_Video_SpritesInAction: Sprites in Action
-        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
+        CSF_SpriteLabIntro_CDEF: Toto je Laboratórium objektov
+        CSF_Spritelab_MakeSprite_CDEF: Ako spraviť objekt v Laboratóriu objektov
+        CDEF_Video_SpritesInAction: Objekty v akcií
+        CSF_SpriteLab_SpritesInAction_CDEF: Objekty v akcií
     callout:
       text:
         drag_blocks: Presuňte blok "Posunúť" a pripojte ho pod druhý blok

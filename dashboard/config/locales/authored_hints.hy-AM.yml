@@ -5921,7 +5921,7 @@ hy:
           you can change the number at the top of the block.
         courseA_artist_loops4_b: |-
           Since you can only use one <xml><block type="simple_move_right"/></xml>
-          block, try putting it inside of the <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> loop.
+          block, try putting it inside of the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: Try using what you've learned about <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> blocks to complete
@@ -6262,16 +6262,19 @@ hy:
       courseA_harvester_loops10_authored_hint: {}
       courseA_harvester_loops11_authored_hint: {}
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Your code will have **four** `move West` blocks
-          and **four** `pick corn` blocks. '
+        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block
+          type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n
+          \ <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: To repeat code, drag out a `repeat` loop, then
-          put the block you want inside of it.
+        courseA_harvester_loops3_b: "To repeat code, drag out a `repeat` (<xml><block
+          type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\"
+          config=\"2-10\">4</title>\n  </block></xml> )loop, then put the block you
+          want inside of it. "
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Don't be afraid to press `Run` to see what happens!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times
@@ -6289,8 +6292,9 @@ hy:
           You will need one `repeat` <xml> <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">6</title>
           </block></xml> loop after another.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other
-          will repeat `move East`.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block
+          type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move
+          East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -6633,7 +6637,7 @@ hy:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember
           not to count the space where you start!
       courseA_playLab_events2_authored_hint:
-        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_a: Look for a block that makes the dog say something.
         courseA_playLab_events2_b: |-
           This is the code you need to complete this puzzle:
 
@@ -8824,8 +8828,8 @@ hy:
         courseC_artist_prog5_b: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
-        courseC_artist_prog5_c: You can use the drop down menu on the `turn` blocks
-          to see which angle you need!
+        courseC_artist_prog5_c: You can use the drop down menus in the blocks to change
+          what they do!
         courseC_artist_prog5_d: Each turn should be 90 degrees to the right.
       courseC_artist_prog6_authored_hint:
         courseC_artist_prog6_a: The artist is already facing the correct way to draw
@@ -10554,18 +10558,16 @@ hy:
           video!
         courseD_bee_conditionals5_a: Think of every side of the rectangular path as
           a path by itself. Set up a nested loop with a `repeat` block on the outside
-          and a `while there is a path ahead` loop on the inside. How many paths does
-          the bee need to buzz down if the bee needs to buzz down every side with
-          a flower?
+          and a `while path ahead` loop on the inside. How many paths does the bee
+          need to buzz down if the bee needs to buzz down every side with a flower?
         courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
           so the code needs to `repeat 3 times`. In every repeat, the bee will need
-          to continue along the path, `while there is a path ahead`. To continue down
-          the path, the bee will need to `move forward`. While on the path, the bee
-          needs to check for a flower. `if there is a flower`, the bee should `get
-          nectar`.
-        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block
-          you will need to move forward and check for a flower. How do you check if
-          there is a flower? What do you do if there is a flower?
+          to continue along the path, `while path ahead`. To continue down the path,
+          the bee will need to `move forward`. While on the path, the bee needs to
+          check for a flower. `if there is a flower`, the bee should `get nectar`.
+        courseD_bee_conditionals5_b: Inside the `while path ahead` block you will
+          need to move forward and check for a flower. How do you check if there is
+          a flower? What do you do if there is a flower?
         courseD_bee_conditionals5_hintVid2: Watch this video for help solving this
           puzzle.
       courseD_bee_conditionals6_authored_hint:
@@ -12669,9 +12671,9 @@ hy:
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Your program should:
-          - Use function
+          - Use your function
           - Move forward 100 + 75 pixels
-          - Use function
+          - Use your function again
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -12980,8 +12982,9 @@ hy:
         courseE_bee_concept2_c: Which way should the bee turn after each path?
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: Would a `while` loop help here?
-        courseE_bee_concept2_d: You can even check empty spaces to see if honey is
-          > 0.
+        courseE_bee_concept2_d: 'With this `while` loop you  can check empty spaces
+          to see if the amount of honey is > 0. This does the same as the `while there
+          is honey` loop. '
         courseE_bee_concept2_b: You can use `while` loops to move to the end of each
           path, and to collect all of the honey from each space.
         courseE_bee_concept2_c: Which way should the bee turn after each path?
@@ -14146,7 +14149,7 @@ hy:
         courseF_artist_for1_a: |-
           Can you draw something like this:
 
-          ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+          ![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.

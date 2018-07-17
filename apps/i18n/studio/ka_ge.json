@@ -716,7 +716,7 @@
   "squirrel": "ციყვი",
   "startSetValue": "დაწყება (ფუნქციის)",
   "startSetVars": "თამაშის_ცვლადები (სათაური, სუბტიტრი, ფონი, სამიზნე, საფრთხე, მოთამაშე)",
-  "startSetFuncs": "თამაში_ფუნქციები(განახლება-სამიზნე, განახლება-საფრთხე, განახლება-მოთამაშე, დაჯახება?, ეკრანზე?)",
+  "startSetFuncs": "game_funcs (update-target, update-danger, update-player, collide?, on-screen?)",
   "stopEverySpriteName": "აჩერებს ყოველ {spriteName}-ს",
   "stopSprite": "შეჩერება",
   "stopSpriteN": "პერსონაჟის შეჩერება {spriteIndex}",

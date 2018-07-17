@@ -75,7 +75,7 @@ tr:
   of: "/"
   more: DAHA FAZLA
   less: DAHA AZ
-  beta: deneme
+  beta: beta
   try_hoc: 'Kod Saati''ni denemek için buraya tıklayın >> '
   try_k8intro: İlk ve Orta Okula yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin
     (15-25 saat)
@@ -173,7 +173,7 @@ tr:
     error: Bir hata oluştu.
     email_preference_question: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
       diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
-    email_preference_privacy: "(Gizlilik politikamıza bakın)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Evet
     email_preference_no: Hayır
     email_preference_required: You must specify an email preference.

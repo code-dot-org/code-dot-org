@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Radium from 'radium';
-import BaseDialog from '../BaseDialog';
-import DialogFooter from '../teacherDashboard/DialogFooter';
-import Button from '../Button';
+import BaseDialog from '../../BaseDialog';
+import DialogFooter from '../../teacherDashboard/DialogFooter';
+import Button from '../../Button';
 import i18n from '@cdo/locale';
 import { hidePublishDialog, publishProject } from './publishDialogRedux';
 

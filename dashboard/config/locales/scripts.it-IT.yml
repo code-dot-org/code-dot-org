@@ -580,13 +580,14 @@ it:
             Puzzles:
               name: Puzzle
         cspunit1:
-          title: CSP Unit 1
+          title: "(old) CS Principles Unit 1 - Digital Information"
           description: This unit explores the technical challenges and questions that
             arise from the need to represent digital information in computers and
             transfer it between people and computational devices. This unit is a pilot
             version and is no longer supported or updated. You can find the new units
             at code.org/educate/csp.
-          description_short: Make Black and White Images with the pixelation tool
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Binary Numbers:
               name: Binary Numbers
@@ -698,8 +699,8 @@ it:
               name: What is CSP?
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description: Lesson samples for csp
-          description_short: lesson samples for csp
+          description: Lesson samples for CSP
+          description_short: Lesson samples for CSP
           description_audience: ''
           stages:
             Lesson 14:
@@ -769,9 +770,14 @@ it:
             PDK5 Intro:
               name: PDK5 Intro
         cspunit3:
-          title: CSP Unit 3 - Programming
-          description: Programming in Javascript and AppLap
-          description_short: Programming
+          title: "(old) CS Principles Unit 3 - Programming"
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             APIs and Function Parameters:
@@ -991,7 +997,7 @@ it:
             What to Expect:
               name: What to Expect
         sciencePD2:
-          title: Computer Science in Science PD
+          title: 'CS in Science: Part 2'
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
@@ -1011,9 +1017,9 @@ it:
             Wrap-Up:
               name: Conclusione
         sciencePD3:
-          title: Computer Science in Science PD
-          description: Phase 3 Professional Development
-          description_short: Phase 3 Professional Development
+          title: 'CS in Science: Part 3'
+          description: Academic Year Support - Semester 1
+          description_short: Academic Year Support - Semester 1
           stages:
             Decode and Share:
               name: Decode and Share
@@ -1030,12 +1036,13 @@ it:
               name: Testing
           description_audience: ''
         cspunit2:
-          title: CSP Unit 2 - The Internet
+          title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet
             and how it functions by building off the concepts learned when sending
             bits in Unit 1. This unit is a pilot version and is no longer supported
             or updated. You can find the new units at code.org/educate/csp.
-          description_short: Internet
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Hard Problems - The Traveling Salesperson Problem
@@ -1317,7 +1324,7 @@ it:
             Necessary Background:
               name: Necessary Background
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
+          title: CS in Algebra Part 2
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
@@ -1568,8 +1575,10 @@ it:
               name: Vigenere
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description: CS in Algebra blended online school year study
-          description_short: CS in Algebra blended online school year study
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year
+            study'
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school
+            year study'
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1581,9 +1590,9 @@ it:
             Updates - Tweaks and Polish:
               name: Updates - Tweaks and Polish
         sciencePD3_pre1:
-          title: Computer Science in Science PD Phase 3 Before 1st In-Person
-          description: Phase 3 Blended Summer Study (Segment One)
-          description_short: Phase 3 Blended Summer Study Pre 1
+          title: CS in Science PD3 Before 1st In-Person
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          description_short: 'Phase 3: Academic Year Development Pre 1'
           description_audience: ''
           stages:
             Prep With Your Modules:
@@ -1605,9 +1614,9 @@ it:
               name: Frequency Analysis
           description_audience: ''
         ECSPD3-Unit2:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description: Academic Year Development
-          description_short: Academic Year Development
+          title: 'Exploring Computer Science: Unit 2'
+          description: Online Professional Development Course
+          description_short: Unit 2 Online PD
           description_audience: ''
           stages:
             Close & Next Steps:
@@ -1623,7 +1632,7 @@ it:
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 3'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1641,7 +1650,7 @@ it:
             Unit 3 Day-by-Day:
               name: Unit 3 Day-by-Day
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 4'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1759,7 +1768,7 @@ it:
             Why Make Apps?:
               name: Why Make Apps?
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
           description_short: Phase 3 Academic Year Development
           description_audience: ''
@@ -1778,8 +1787,8 @@ it:
               name: Conclusione
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description: CS in Algebra mid year lesson support
-          description_short: CS in Algebra mid year lesson support
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           description_audience: ''
           stages:
             Close and Next Steps:
@@ -1886,7 +1895,7 @@ it:
             Unit 3 Overview:
               name: Unit 3 Overview
         cspunit3temp:
-          title: CSP Unit 3 - Temp
+          title: "(old) CS Principles Unit 3 - Programming"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1994,10 +2003,11 @@ it:
             Wrap-Up:
               name: Conclusione
         cspunit5:
-          title: CSP Unit 5 - Performance Tasks
+          title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore
             and Create Performance Tasks.
-          description_short: Performance Tasks
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Create PT:
               name: Create PT
@@ -2009,16 +2019,17 @@ it:
               name: Explore PT Prep
           description_audience: ''
         cspunit4:
-          title: CSP Unit 4 - Data
-          description: Being able to digitally manipulate data, visualize it, identify
-            patterns, trends and possible meanings are important practical skills
-            that computer scientists do every day. The data rich world we live in
-            also introduces many complex questions related to public policy, law,
+          title: "(old) CS Principles Unit 4 - Data"
+          description: Being able to digitally manipulate data, visualize it, and
+            identify patterns, trends and possible meanings are important practical
+            skills that computer scientists do every day. The data-rich world we live
+            in also introduces many complex questions related to public policy, law,
             ethics and societal impact. Understanding where data comes from, having
             intuitions about what could be learned or extracted from it, and being
             able to use computational tools to manipulate data and communicate about
             it are the primary skills addressed in the unit.
-          description_short: Data
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Check Your Assumptions:
@@ -2207,7 +2218,7 @@ it:
         algebraPD1:
           title: Informatica nell'algebra Parte 1
           description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description_short: 'Phase 1: Online Introduction'
           description_audience: ''
           stages:
             Course Overview:
@@ -2565,10 +2576,11 @@ it:
             Post-Course Survey:
               name: Post-Course Survey
         csp6:
-          title: CS Principles Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create
             and Explore Performance Tasks.
-          description_short: Performance Tasks
+          description_short: Lessons guide students to prepare for and complete the
+            AP Performance Tasks.
           description_audience: ''
           stages:
             Create PT:
@@ -2648,7 +2660,7 @@ it:
             Using the Game Design Process:
               name: Using the Game Design Process
         2016_sciencePD_phase1:
-          title: Computer Science in Science PD 2016-2017
+          title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
           description_short: In Partnership with Project GUTS
           description_audience: ''
@@ -2866,10 +2878,14 @@ it:
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
-          title: CS Principles Culminating Assessment
-          description: 'This 55-question multiple choice assessment covers questions
-            across 7 big ideas of computer science: Creativity, Abstraction, Data,
-            Algorithms, Programming, The Internet, and Global Impact. '
+          title: "[Deprecated] CS Principles Culminating Assessment"
+          description: 'This assessment has been deprecated and is scheduled for removal
+            in Summer of 2017.  Students may complete the test and see their own results,
+            but a teacher will not be able to see results for students in a section.  Please
+            use the official CSP practice exam from the College Board.  [This 55-question
+            multiple choice assessment covers questions across 7 big ideas of computer
+            science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet,
+            and Global Impact.]'
           description_short: This assessment has been deprecated and is scheduled
             for removal in Summer of 2017.
           description_audience: ''
@@ -3273,7 +3289,7 @@ it:
             'Unplugged: Songwriting with Parameters':
               name: Composizione di Canzoni con Parametri
         ecs-unit1:
-          title: ECS Part 1
+          title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
           description_short: 'Unit 1: Human-Computer Interaction'
           description_audience: ''
@@ -4229,10 +4245,10 @@ it:
             Unit 5 Overview:
               name: Unit 5 Overview
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing
-            to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 1.
           description_audience: ''
           stages:
             Unit 1 Overview:
@@ -4283,7 +4299,7 @@ it:
               name: Crittografia semplice
         fesbinary:
           title: Binario
-          description_audience: ''
+          description_audience: Falmouth Middle School
           description_short: ''
           description: ''
           stages:
@@ -4574,11 +4590,11 @@ it:
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
         csp2-support:
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing
-            to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 2. '
           stages:
             Unit 2 Overview:
               name: Unit 2 Overview
@@ -5344,10 +5360,11 @@ it:
             Prep With Your Modules:
               name: Prep With Your Modules
         csp3-support:
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 3.
           stages:
             Unit 3 Overview:
               name: Unit 3 Overview
@@ -5382,10 +5399,11 @@ it:
             External Style Sheets:
               name: External Style Sheets
         csp4-support:
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 4.
           stages:
             Unit 3 Overview:
               name: Unit 3 Overview
@@ -5446,10 +5464,10 @@ it:
             Wrap-Up:
               name: Conclusione
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Funzioni: Composizione di Canzoni'
@@ -5486,9 +5504,9 @@ it:
         csp5-support:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 1
-          description: 'COMING SOON: In mid-February, this page will host the CSP
-            Unit 5 Professional Learning Course. '
+          description_short: Teacher Professional Learning Course for CSP Unit 5
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 5.
           stages:
             Unit 5 Overview:
               name: Unit 5 Overview
@@ -5566,7 +5584,7 @@ it:
             Simple Sprite Movement:
               name: Simple Sprite Movement
         csd6-draft:
-          title: Draft Unit 6
+          title: CSD Unit 6 Revisions Draft
           description_audience: ''
           description_short: ''
           description: ''
@@ -5662,7 +5680,7 @@ it:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
         csd5-draft:
-          title: ''
+          title: Draft of CSD5
           description_audience: ''
           description_short: ''
           description: ''
@@ -5778,7 +5796,7 @@ it:
             Analog Input:
               name: Analog Input
         coursee-ramp:
-          title: ''
+          title: coursee-ramp
           description_audience: ''
           description_short: ''
           description: ''
@@ -7020,9 +7038,11 @@ it:
           title: CSP Student Post-Course Survey
           description_audience: CSP Students
           description_short: CSP Student Post Course Survey
-          description: 'Welcome to the Code.org CS Principles Post-Course Survey.  This
-            survey takes about 10 minutes to complete.  Your responses are private
-            and anonymous.  '
+          description: Welcome to the Code.org CS Principles Post-Course Survey.  This
+            survey takes about 15 minutes to complete.  Your responses are private
+            and anonymous -- your teacher can see anonymous aggregate results for
+            the whole class.  The results are vital for your teacher and for Code.org
+            to sustain and improve the course.  Thanks for your time and consideration.
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -8062,7 +8082,7 @@ it:
               name: Thursday
             Wrap Up:
               name: Wrap Up
-          title: CS Principles TeacherCon Novice Facilitators
+          title: CS Principles TeacherCon Novice Facilitator Reflection
           description_audience: CSP Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as
@@ -8415,7 +8435,7 @@ it:
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -8467,10 +8487,14 @@ it:
               name: CSP Mid-course survey
             Please complete the CSP Mid-course survey:
               name: Please complete the CSP Mid-course survey
-          title: ''
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Programmazione
-          description: ''
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -8543,9 +8567,12 @@ it:
               name: 'Lesson 1: App Lab Intro'
           title: Introduzione a Sviluppo App
           description_audience: ''
-          description_short: ''
-          description: These lessons introduce you to App Lab through a series of
-            creative projects.
+          description_short: Create your own app in JavaScript using either block
+            based programming or text. If you've already done some programming with
+            blocks, take your skills to the next level.
+          description: Create your own app in JavaScript using either block based
+            programming or text. If you've already done some programming with blocks,
+            take your skills to the next level.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -9088,10 +9115,16 @@ it:
               name: Smart Clothing Design
             Intro to App Lab (13+):
               name: Introduzione a Sviluppo App (da 13 anni in su)
-          title: PwC Access Your Potential
+          title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
-          description: ''
+          description: At PwC, we believe that all students have the potential to
+            be tomorrow’s leaders and tech-driven workforce. Access Your Potential
+            is our commitment to help close the opportunity gap by equipping young
+            people, especially those from disadvantaged communities, with the financial,
+            technology and career-selection skills they need to change the trajectory
+            of their lives. As part of our commitment, we’re excited to launch our
+            Access Your Potential middle school technology and careers curriculum.
         allthesurveys:
           stages:
             CSP pre survey Test:
@@ -9148,7 +9181,8 @@ it:
               name: L'Ora del Codice con Minecraft
           title: 'Minecraft: Il viaggio dell''eroe'
           description_audience: ''
-          description_short: ''
+          description_short: Minecraft is back with a brand new activity for Hour
+            of Code!
           description: Minecraft è tornato per l'Ora del Codice con una nuovissima
             attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
@@ -9335,7 +9369,7 @@ it:
               name: Realizza un gioco con Star Wars
             Functions in Harvester:
               name: Funzioni con la Contadina
-          title: Course E 2018
+          title: Course E 2018 (Outdated!)
           description_audience: ''
           description_short: ''
           description: ''
@@ -9399,7 +9433,7 @@ it:
               name: Riesamina il Tuo Progetto
             Present Your Project:
               name: Presenta il Tuo Progetto
-          title: Course F 2018
+          title: Course F 2018 (Outdated)
           description_audience: ''
           description_short: ''
           description: ''
@@ -10504,7 +10538,7 @@ it:
             Move It, Move It:
               name: Muovilo, muovilo
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
         coursed-2018:
           title: Corso D (2018)
           assignment_family_title: Corso D
@@ -10541,7 +10575,7 @@ it:
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Nested Loops in Maze
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -10704,7 +10738,8 @@ it:
           description_audience: ''
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment
-            questions that appeared in Units 1-5 in the course.  '
+            questions that appeared in Units 1-5 in the course.  Students may want
+            to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
           title: Corso C (2018)
           assignment_family_title: Corso C
@@ -10895,8 +10930,8 @@ it:
             eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
             puoi progettare e creare un progetto finale che potrai condividere con
             i tuoi amici e familiari.
-          description_short: Quickly cover concepts in Course C & D and then go further
-            with functions.
+          description_short: Review concepts in Courses C & D, then go further by
+            learning functions.
           description_audience: Da 8 a 12 anni
           stages:
             'Programming: My Robotic Friends':
@@ -10904,7 +10939,7 @@ it:
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Coding with Comments
               description_student: ''
               description_teacher: ''
             Building a Foundation:
@@ -10928,7 +10963,7 @@ it:
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: Cicli Annidati
+              name: Nested Loops in Maze
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -11003,7 +11038,7 @@ it:
                 learn about nesting functions by calling one function from inside
                 another.
             Functions in Bee:
-              name: Functions in Bee
+              name: Functions with Bee
               description_student: Don't write too much code to gather all of the
                 nectar and honey. Use functions instead!
               description_teacher: In the second round of practice with online functions,
@@ -11114,7 +11149,7 @@ it:
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digital Sharing
         coursef-2018:
           title: Corso F (2018)
           assignment_family_title: Corso F
@@ -11132,7 +11167,7 @@ it:
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Coding with Comments
               description_student: ''
               description_teacher: ''
             Building a Foundation:
@@ -11156,7 +11191,7 @@ it:
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: Nested Loops in Maze
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -11486,7 +11521,7 @@ it:
                 the lesson groups reflect on their experiences with the activity and
                 make connections to the types of problem solving they will be doing
                 for the rest of the course. '
-              description_teacher: 'In this lesson, students work in groups to design
+              description_teacher: In this lesson, students work in groups to design
                 aluminum foil boats that will support as many pennies as possible.
                 Groups have two rounds to work on their boats, with the goal of trying
                 to hold more pennies than they did in round 1. The structure of the
@@ -11494,7 +11529,7 @@ it:
                 that students will be introduced to in more detail in the following
                 lesson. At the end of the lesson students reflect on their experiences
                 with the activity and make connections to the types of problem solving
-                they will be doing for the rest of the course. '
+                they will be doing for the rest of the course.
             The Problem Solving Process:
               name: The Problem Solving Process
               description_student: This lesson introduces the formal problem solving
@@ -11587,9 +11622,9 @@ it:
                 within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities
                 to explore the meaning of processing and its relationship to problem-solving.
-                The first has few constraints and is used to introduce a high-level
-                definition of processing. The next introduces more constraints that
-                forces students to develop an algorithm that will always successfully
+                The first activity has few constraints and is used to introduce a
+                high-level definition of processing. The next introduces more constraints
+                that force students to develop an algorithm that will always successfully
                 process the cards. Students iteratively develop, test, and share their
                 algorithms with classmates. A wrap-up discussion has students reflect
                 on the different types of problem-solving they used in these activities
@@ -12303,13 +12338,11 @@ it:
               name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
-          description: "This unit introduces the foundational concepts of computer
+          description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
             the programming environment to build apps, but the concepts learned in
-            these lessons span all programming languages and tools.\r\n\r\nThis unit
-            was last updated October 30th, 2017. Read more about curriculum updates
-            at forum.code.org/c/csp/updates."
+            these lessons span all programming languages and tools.
           description_short: Programmazione
           description_audience: ''
           stages:
@@ -12365,13 +12398,12 @@ it:
               name: Creating Functions with Parameters
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
-          description: "These lessons are here to help you understand, prepare for,
-            and do the AP Explore Performance Task.  Each \"lesson\" contains links
+          description: 'These lessons are here to help you understand, prepare for,
+            and do the AP Explore Performance Task.  Each "lesson" contains links
             to helpful documents that your teacher can help walk you through. NOTE:
             the second item in the first lesson is not related to the Explore PT directly,
             but covers general tech setup and tools you need to do various elements
-            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
-            November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            of both the Explore and Create tasks.'
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
           description_audience: ''
@@ -12390,13 +12422,12 @@ it:
               description_teacher: ''
         csp-create-2018:
           title: Create - AP Performance Task Prep
-          description: "These lessons are here to help you understand, prepare for,
-            and do the AP Create Performance Task.  Each \"lesson\" contains links
-            to helpful documents that your teacher can help walk you through. NOTE:
-            the first item in the first lesson is not related to the Create PT directly,
+          description: 'These lessons are here to help you understand, prepare for,
+            and do the AP Create Performance Task.  Each "lesson" contains links to
+            helpful documents that your teacher can help walk you through. NOTE: the
+            first item in the first lesson is not related to the Create PT directly,
             but covers general tech setup and tools you need to do various elements
-            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
-            December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            of both the Explore and Create tasks.'
           description_short: Lessons and resources to help students prepare for and
             complete the AP Create Performance Tasks.
           description_audience: ''
@@ -12415,12 +12446,11 @@ it:
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions
+          description: The data-rich world we live in introduces many complex questions
             related to public policy, law, ethics and societal impact. The goals of
             this unit are to develop a well-rounded and balanced view about data in
             the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.\r\n\r\nThis unit was
-            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -12666,9 +12696,11 @@ it:
             Virtual Pet - Interactions:
               name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
-          description_audience: ''
-          description_short: ''
-          description: ''
+          description_audience: Course E/F Students
+          description_short: This is a pilot course for Code.org's new Sprite Lab
+            tool for Courses E and F
+          description: This is a pilot course for Code.org's new Sprite Lab tool for
+            Courses E and F
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -13024,9 +13056,9 @@ it:
               name: Day 3
             Day 4:
               name: Day 4
-          title: CS Principles Novice Reflections 2018-2019
+          title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Novice reflection materials for CS Principles facilitators
+          description_short: 'Apprentice reflection materials for CS Principles facilitators
             in training '
           description: This is the set of apprentice reflections for Code.org CS Principles
             facilitators in training during their 5-day summer workshop. Here you
@@ -13034,7 +13066,7 @@ it:
             workshop. This questions will be the foundation of work we do at the Facilitator
             Training Weekend.
         pre-express-2018:
-          title: Pre-reader Express
+          title: Pre-reader Express (2018)
           assignment_family_title: Pre-reader Express
           description: Impara le basi dell'informatica e della sicurezza su Internet.
             Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.

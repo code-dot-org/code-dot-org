@@ -704,12 +704,14 @@ ActiveRecord::Schema.define(version: 20180712220543) do
   end
 
   create_table "pd_post_course_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.bigint  "form_id",                     null: false
-    t.bigint  "submission_id",               null: false
-    t.text    "answers",       limit: 65535
-    t.string  "year"
-    t.integer "user_id",                     null: false
-    t.string  "course",                      null: false, comment: "csd or csp"
+    t.bigint   "form_id",                     null: false
+    t.bigint   "submission_id",               null: false
+    t.text     "answers",       limit: 65535
+    t.string   "year"
+    t.integer  "user_id",                     null: false
+    t.string   "course",                      null: false, comment: "csd or csp"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["form_id"], name: "index_pd_post_course_surveys_on_form_id", using: :btree
     t.index ["submission_id"], name: "index_pd_post_course_surveys_on_submission_id", unique: true, using: :btree
     t.index ["user_id", "form_id", "year", "course"], name: "index_pd_post_course_surveys_on_user_form_year_course", unique: true, using: :btree
@@ -830,13 +832,15 @@ ActiveRecord::Schema.define(version: 20180712220543) do
   end
 
   create_table "pd_workshop_daily_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.bigint  "form_id",                      null: false
-    t.bigint  "submission_id",                null: false
-    t.integer "user_id",                      null: false
-    t.integer "pd_session_id"
-    t.integer "pd_workshop_id",               null: false
-    t.text    "answers",        limit: 65535
-    t.integer "day",                          null: false, comment: "Day of the workshop (1-based), or zero for the pre-workshop survey"
+    t.bigint   "form_id",                      null: false
+    t.bigint   "submission_id",                null: false
+    t.integer  "user_id",                      null: false
+    t.integer  "pd_session_id"
+    t.integer  "pd_workshop_id",               null: false
+    t.text     "answers",        limit: 65535
+    t.integer  "day",                          null: false, comment: "Day of the workshop (1-based), or zero for the pre-workshop survey"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.index ["form_id"], name: "index_pd_workshop_daily_surveys_on_form_id", using: :btree
     t.index ["pd_session_id"], name: "index_pd_workshop_daily_surveys_on_pd_session_id", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_workshop_daily_surveys_on_pd_workshop_id", using: :btree
@@ -846,14 +850,16 @@ ActiveRecord::Schema.define(version: 20180712220543) do
   end
 
   create_table "pd_workshop_facilitator_daily_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.bigint  "form_id",                      null: false
-    t.bigint  "submission_id",                null: false
-    t.integer "user_id",                      null: false
-    t.integer "pd_session_id"
-    t.integer "pd_workshop_id",               null: false
-    t.integer "facilitator_id",               null: false
-    t.text    "answers",        limit: 65535
-    t.integer "day",                          null: false, comment: "Day of the workshop (1-based)"
+    t.bigint   "form_id",                      null: false
+    t.bigint   "submission_id",                null: false
+    t.integer  "user_id",                      null: false
+    t.integer  "pd_session_id"
+    t.integer  "pd_workshop_id",               null: false
+    t.integer  "facilitator_id",               null: false
+    t.text     "answers",        limit: 65535
+    t.integer  "day",                          null: false, comment: "Day of the workshop (1-based)"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.index ["day"], name: "index_pd_workshop_facilitator_daily_surveys_on_day", using: :btree
     t.index ["form_id", "user_id", "pd_session_id", "facilitator_id"], name: "index_pd_workshop_facilitator_daily_surveys_unique", unique: true, using: :btree
     t.index ["form_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_form_id", using: :btree
