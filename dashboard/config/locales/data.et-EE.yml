@@ -30,11 +30,11 @@ et:
         Jigsaw: Pusle
         MazeStep: Labürindi sammu režiim
         Wordsearch: Sõnaotsing
-        Webapp: Rakenduste labor
+        Webapp: App Lab
         ArtistEC: Kunstnik
         TextMatch: Teksti vaste
         StudioEC: Play Lab
-        Applab: Rakenduste labor
+        Applab: App Lab
         NetSim: Interneti simulaator
         Custom: Kunstnik
         CustomStudio: Play Lab
@@ -525,7 +525,7 @@ et:
         Unplug9: Relee programmeerimine
         Unplug10: Internet
         Unplug11: Kokkuvõte
-        C1_happy_maps_unplugged: '"Happy Maps"'
+        C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Liiguta, liiguta
         C1_bigevent_unplugged: Suursündmus
         C1_getting_loopy: Muutub tsükliliseks

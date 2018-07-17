@@ -1653,12 +1653,12 @@ nn:
           vil gå fremover fem ganger til den smakfulle solsikken.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Hittil har du laga ein animasjon eller ei historie som gjer akkurat
           det samme kvar gong du køyrer den. Nå kan du lage eit interaktivt spel som
           du faktisk kan spele.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Her er "når pil"-blokka og "flytt skodespelar"-blokka. Du kan sette
           desse blokkene saman for å flytte figurane rundt med piltastane.
     C3_songwriting_with_parameters:

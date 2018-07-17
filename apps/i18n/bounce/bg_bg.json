@@ -11,7 +11,7 @@
   "basketballSetPaddleSpeedVerySlow": "задава много бавна скорост на ръката",
   "basketballWhenBallMissesPaddle": "когато топката пропусне ръката",
   "basketballWhenPaddleCollided": "когато топката се удари в ръката",
-  "bounceBall": "топката отскача",
+  "bounceBall": "bounce ball",
   "bounceBallTooltip": "Отблъсни топката от обекта.",
   "continue": "Напред",
   "dirE": "И",

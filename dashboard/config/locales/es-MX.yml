@@ -262,7 +262,7 @@ es-MX:
       word: Palabra secreta
       email: Correo electrónico
       google_classroom: Aula de Google
-      clever: Inteligente
+      clever: Clever
   follower:
     invite_sent: Invitación enviada
     added_teacher: "%{name} añadido como tu maestro"
@@ -317,7 +317,7 @@ es-MX:
       free_play:
         playlab: Hacer una aplicación
         artist: Dibujar algo
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Hacer una aplicación
         gamelab: Hacer un proyecto de Game Lab
         weblab: Hacer un proyecto de Web Lab (beta)
@@ -808,7 +808,7 @@ es-MX:
       body: Ver una galería de aplicaciones y de imágenes de artistas creadas por
         nuestros usuarios
     gamelab:
-      title: Laboratorio de juego
+      title: Game Lab
       body: Game Lab es un ambiente de programación en donde puedes hacer animaciones
         sencillas y juegos con objetos y personajes que interactúan entre ellos.
       audience: Mayores de 13 años
@@ -817,7 +817,7 @@ es-MX:
       title: Encripción simple
       body: Los estudiantes aprenderán técnicas para crear y modificar mensajes cifrados.
     weblab:
-      title: Laboratorio Web (beta)
+      title: Web Lab (beta)
       body: Web Lab es un entorno de programación donde se pueden hacer páginas web
         sencillas utilizando HTML y CSS. Diseña páginas web y comparte tu sitio en
         segundos.
@@ -1280,7 +1280,7 @@ es-MX:
     download_in_Turkish: 'Descargar en Turco:'
     download_in_Ukrainian: 'Descargar en ucraniano:'
     download_in_Vietnamese: 'Descargar en vietnamita:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

@@ -52,8 +52,8 @@ ja:
         loop_until: までブロックを繰り返します
         loop_while: の間にブロック
         loop_for: 数える ブロック
-        function: 機能
-        parameters: パラメーター付き機能
+        function: 関数(かんすう) 
+        parameters: パラメーター付き関数
     level:
       instructions:
         maze_2_2: 'ブタを捕まえるのを手伝ってくれない？「前に動く」ブロックをつみあげて、「実行」ボタンをおしてね'
@@ -109,7 +109,7 @@ ja:
         maze_karel_1_10: 遅くまで仕事をしていたので外は真っ暗、積み上がった山がどのくらい大きいのかわかりません。whileブロックにあったようなオプションはもうありません。畑にそって私を移動させ、山があれば移動させます
         maze_karel_1_11: '外はまだ暗いです。私を田んぼにそって移動してください。山があったら移動し、穴があったら埋めます。ヒント:"もし"ブロックでオプションのドロップ ダウン メニューを使います'
         turtle_2_1: 'こんにちは。私、zombieアーティスト。私、描くのが大好き ！特別な色で四角形を描くのを手伝ってください。重要: ブロックはみんな同じですが、カテゴリーに分かれています'
-        turtle_2_2: 新しいブロックを定義させてくれる機能を使いましょう！「機能」カテゴリにある、新しい「四角形を描く」ブロックを試して、小さな 50 x 50 の緑の四角形を描きましょう
+        turtle_2_2: 新しいブロックを定義させてくれる機能を使いましょう！「関数」カテゴリにある、新しい「四角形を描く」ブロックを試して、小さな 50 x 50 の緑の四角形を描きましょう
         turtle_2_3: 繰り返し」ブロック を使い、「ループ」カテゴリにある、サイズが100、それぞれ120度離れている四角形を３つ描きます。そして３つのランダムで違う色で描いてください
         turtle_2_4: 'もっと素敵にしてみましょう。コードを変更して、100 ピクセルの幅、それぞれの間が10 度離れている36個の四角形を描きます。ヒント：スライダを使うと早くできます'
         turtle_2_5: 50、60、70、80、90ピクセルの辺を持つ四角形を描きます。「四角形を描く」機能を５回使います。
@@ -333,7 +333,7 @@ ja:
         C3_functional_suncatchers: 関数サンキャッチャー
         C3_songwriting_with_parameters: パラメーターで作詞作曲
         C4_intro: はじめに
-        C4_loops_zombie: ループ
+        C4_loops_zombie: くりかえし
         C4_bee_conditional: つづりみつばち　条件文
         C4_variables_artist: 変数 - アーティスト
         C4_variables_playlab: 変数 - ゲームラブ
@@ -423,7 +423,7 @@ ja:
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: 関数
         csp_applab_functions_parameters: パラメーター付き関数
-        csp_applab_loops: ループ
+        csp_applab_loops: くりかえし
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -529,7 +529,7 @@ ja:
         CSF_if_allskins: The If Block
         CSF_ifelse_allskins: Using If/Else Blocks
         CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
-        CSF_loops_AB: ループ
+        CSF_loops_AB: くりかえし
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
         csd_gamelab_if_else: If/Else Statements

@@ -116,10 +116,10 @@ gl:
     hoc_already_signed_up_heading: Comezar sen iniciar sesión
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your
+      classroom and share the link with them.<br/><br/>If you enjoyed the Hour of
+      Code and want to go further, you can set up a password and create a Code Studio
+      account below to enroll your students in any of our <a href="%{educate_url}">longer
       courses</a>.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
@@ -170,7 +170,7 @@ gl:
     accept_terms: Debe estar de acordo para crear unha conta
     error: Ocorreu un erro.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Si
     email_preference_no: Non
@@ -313,7 +313,7 @@ gl:
       free_play:
         playlab: Crear unha aplicación
         artist: Debuxar algunha cousa
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Crea unha aplicación do Laboratorio de Aplicacións
         gamelab: Crea un proxecto de Laboratorio de Xogos
         weblab: Crea un proxecto (beta) de Laboratorio Web
@@ -358,7 +358,7 @@ gl:
       classroom: Páxina inicial do profesor
       district_dashboard: Panel do distrito
       label: Ola, %{username}
-      stats: Mi progreso
+      stats: Code Studio
       settings: A miña conta
       logout: Pechar sesión
       signin: Iniciar Sesión
@@ -366,8 +366,8 @@ gl:
       already_registered: Xa creaches unha conta?
       pair_programming: Programación por parellas
       team: Team
-      driver: Driver
-      navigator: Navigator
+      driver: Logged in
+      navigator: Partner
     popup:
       progress_for_user: progreso de %{name}'s
       progress: O teu progreso
@@ -393,7 +393,7 @@ gl:
     user_not_found: Non se pode atopar o profesor.
     student_teacher_disassociated: Eliminaches como profesor teu a %{teacher_name}.
     panel:
-      answer_viewer: Ver Resposta
+      answer_viewer: Teacher Panel
       student: Estudante
       viewing_solution: Visualizar solución
       try_it_yourself: Tente vostede mesmo
@@ -428,8 +428,7 @@ gl:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: Ao crear unha conta individual, acepto os <a href='%{terms_of_service_url}',
@@ -478,7 +477,7 @@ gl:
     student_finished: Vostede completou todos os titoriais, escolla outra clase en
       %{online_link} ou %{local_school_link}
     local_school: escola local
-    online: en línea
+    online: online
     see_details: Ver detalles
     view_course: Ver curso
     prize_info: 'Premios de participación (somente para profesores de escolas públicas
@@ -497,7 +496,7 @@ gl:
     heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas
       as idades)</h1>"
     heading_apps: "<h2>Diversión para</h2><h1>todos</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High
       School</h1>"
     heading_legacy: "<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galería
@@ -787,7 +786,7 @@ gl:
       body: Vexa unha galería de aplicacións e imaxes artísticas creadas polos nosos
         usuarios
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Ages 13+
@@ -828,7 +827,7 @@ gl:
         text by substituting patterns with symbols.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: Ages 4+
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -875,7 +874,7 @@ gl:
     support: Obter axuda
     support_url: "//support.code.org"
     help_resources: Help and Resources
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -896,7 +895,7 @@ gl:
     wrong_title: Graciñas
     wrong_body: Thank you for submitting answers.
     correct_title: Graciñas
-    correct_body: Thank you for submitting an answer
+    correct_body: Thank you for submitting answers.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -974,8 +973,8 @@ gl:
     tos: Termos de Servizo
     privacy: Política de Privacidade
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accept
     print: Imprimir
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1142,7 +1141,7 @@ gl:
   flex_category:
     required: Visión xeral
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1163,8 +1162,8 @@ gl:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1252,7 +1251,7 @@ gl:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -1279,7 +1278,7 @@ gl:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:

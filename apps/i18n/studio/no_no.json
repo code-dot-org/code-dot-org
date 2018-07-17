@@ -111,7 +111,7 @@
   "dropletBlock_setBackground_param0": "tema",
   "dropletBlock_setBackground_param0_description": "Navnet på bakgrunnstemaet ('tilfeldig', 'endor', 'hoth' eller 'starship').",
   "dropletBlock_setDroid_description": "Bytt til en annen droide.",
-  "dropletBlock_setDroid_param0": "bilete",
+  "dropletBlock_setDroid_param0": "image",
   "dropletBlock_setDroid_param0_description": "Navnet på droidebildet ('tilfeldig', 'R2-D2' eller 'C-3PO').",
   "dropletBlock_setDroidSpeed_description": "Setter farten til droiden.",
   "dropletBlock_setDroidSpeed_param0": "fart",

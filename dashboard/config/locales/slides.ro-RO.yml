@@ -1745,12 +1745,12 @@ ro:
           si zombie-ul va merge inainte de cinci ori pana la delicioasa floarea-soarelui.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Până acum aţi facut o animaţie sau o poveste care face exact acelaşi
           lucru de fiecare dată când o rulezi. Acum, puteţi face un joc interactiv,
           pe care îl puteți chiar juca.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Aveți blocul "atunci când săgeata" şi blocul "mutare actor". Puteţi
           pune aceste blocuri împreună pentru a deplasa actorii cu tastele săgeată.
     C3_songwriting_with_parameters:

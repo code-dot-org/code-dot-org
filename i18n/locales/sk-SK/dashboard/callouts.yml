@@ -1157,7 +1157,7 @@ sk:
       courseD_farmer_until_challenge2_callout: { }
       courseD_farmer_until_challenge2_2018_callout: { }
       courseD_farmer_while7_2018_callout:
-        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
+        courseD_farmer_while7_2018_PathAhead: Musíte použiť blok "biely chodník dopredu" pre vyriešenie tejto úlohy.
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:

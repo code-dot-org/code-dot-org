@@ -25,7 +25,8 @@ haw:
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: Email
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: Username
         password: Password
         password_confirmation: Password confirmation
@@ -62,13 +63,13 @@ haw:
     submit: Add hint
   appname: Code.org
   stage: Stage
-  stage_number: Stage %{number}
+  stage_number: Lesson %{number}
   puzzle: Puzzle
   trophies: Trophies
   courses: Courses
   courses_page:
-    title_student: Learn on Code Studio
-    title_teacher: Teach with Code Studio
+    title_student: Learn Computer Science
+    title_teacher: Teach Computer Science
   unplugged_activity: Unplugged Activity
   of: of
   more: MORE
@@ -149,13 +150,10 @@ haw:
     agree_us_website: I agree to using a website based in the United States.
     my_data_to_us: Data from my use of this site may be sent to and stored or processed
       in the United States.
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/><br/>Email addresses are not stored in a form that allows us to
-      contact students. Students will never recieve emails from Code.org except for
-      password recovery. See our <a href='http://code.org/privacy'>privacy policy</a>
-      for more information.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
     teacher_terms: I agree to be bound by the Code.org terms of service. For more
       information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: We need some additional information to continue signing
@@ -168,7 +166,7 @@ haw:
     accept_terms: You must agree to create an account
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: 'Yes'
     email_preference_no: 'No'
@@ -218,8 +216,8 @@ haw:
   password:
     reset_form:
       title: Forgot your password?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Enter your email address associated with your account below and
+        we'll send you password reset instructions.
       email: Email address
       submit: Submit
     reset_errors:
@@ -302,9 +300,10 @@ haw:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: I've finished my Hour of Code
@@ -320,7 +319,7 @@ haw:
       my_dashboard: My Dashboard
       courses: Courses
       course_catalog: Course Catalog
-      project_gallery: Project Gallery
+      project_gallery: Projects
       sections: Sections
       help_support: Help and support
       report_bug: Report bug
@@ -358,15 +357,15 @@ haw:
       district_dashboard: District Dashboard
       label: Hi %{username}
       stats: Code Studio
-      settings: My account
+      settings: Account settings
       logout: Sign out
       signin: Sign in
       signup: Create an account
       already_registered: Already registered?
       pair_programming: Pair Programming
       team: Team
-      driver: Driver
-      navigator: Navigator
+      driver: Logged in
+      navigator: Partner
     popup:
       progress_for_user: "%{name}'s progress"
       progress: Your progress
@@ -390,7 +389,7 @@ haw:
     students:
       dashboard: Go to Teacher Dashboard
     user_not_found: The teacher could not be found.
-    student_teacher_disassociated: You have removed %{teacher_name} as your teacher.
+    student_teacher_disassociated: You have left section %{section_code} with %{teacher_name}.
     panel:
       answer_viewer: Teacher Panel
       student: Student
@@ -412,8 +411,9 @@ haw:
     new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: "(we need your current password to confirm your changes)"
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
+    delete: Delete Account
+    delete_text: Deleting your account will erase all information and progress connected
+      to this account.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
@@ -426,8 +426,7 @@ haw:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -494,7 +493,7 @@ haw:
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
       (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
+    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High
       School</h1>"
     heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
@@ -619,8 +618,8 @@ haw:
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: You cannot move these students because they are
+      already in the new section.
     third_party_login: You cannot move students to a section that is synced with a
       third party tool.
   share:
@@ -670,7 +669,7 @@ haw:
     copyright: Copyright
     more: More
     feedback: Provide feedback
-    translate: Help us translate to your language
+    translate: Volunteer to translate our content
     support: Support
     support_url: http://support.code.org
     tos_short: Terms
@@ -680,12 +679,12 @@ haw:
     report_abuse: Report Abuse
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
-    how_it_works: How it works
+    how_it_works: How it Works (View Code)
     try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Need help?
     subtitle: See these videos and hints
-    teacher: See the solution
+    teacher: See a solution
     teacher_no_solution: Stop seeing solution
     auth_error: You are not authorized to see the solution.
     submit: Update Artist Location
@@ -783,7 +782,7 @@ haw:
       title: Gallery
       body: View a gallery of app and artist images created by our users
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Ages 13+
@@ -870,7 +869,7 @@ haw:
     support: Get Help
     support_url: "//support.code.org"
     help_resources: Help and Resources
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -970,8 +969,8 @@ haw:
     tos: Terms of Service
     privacy: Privacy Policy
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accept
     print: Print
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1035,7 +1034,7 @@ haw:
       try again.
     exit: Return to Course
     my_projects: My Projects
-    project_gallery: Project Gallery
+    project_gallery: Projects
     publish: Publish
     unpublish: Unpublish
     share: Share
@@ -1100,7 +1099,7 @@ haw:
         abusive_url: URL of the content being reported
         abuse_type:
           question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
+          harassment: Threats, cyberbullying, harassment
           offensive: Offensive content
           infringement: Copyright Infringement
           other: Other
@@ -1157,8 +1156,8 @@ haw:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1273,7 +1272,7 @@ haw:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:
