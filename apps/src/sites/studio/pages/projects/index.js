@@ -3,9 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
+import experiments from '@cdo/apps/util/experiments';
 import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
+import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
   selectGallery,
@@ -63,6 +65,15 @@ $(document).ready(() => {
       </Provider>,
       publicGallery);
   });
+
+  if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE)) {
+    ReactDOM.render(
+      <PersonalProjectsTable
+        projectList={[]}
+      />,
+      document.getElementById('my-projects')
+    );
+  }
 
   const publishConfirm = document.getElementById('publish-confirm');
 
