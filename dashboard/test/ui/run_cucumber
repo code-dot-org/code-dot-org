@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+require 'cucumber/formatter/io'
+module Cucumber
+  module Formatter
+    module SyncIO
+      def ensure_io(path_or_io)
+        super.tap {|io| io.sync = true}
+      end
+    end
+    Io.prepend SyncIO
+  end
+end
+
+require 'cucumber/cli/main'
+Cucumber::Cli::Main.new(ARGV.dup).execute!

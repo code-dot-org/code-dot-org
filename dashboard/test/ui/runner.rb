@@ -305,7 +305,7 @@ end
 
 def run_tests(env, feature, arguments, log_prefix)
   start_time = Time.now
-  cmd = "cucumber #{feature} #{arguments}"
+  cmd = "#{__dir__}/run_cucumber #{feature} #{arguments}"
   puts "#{log_prefix}#{cmd}"
   Open3.popen3(env, cmd) do |stdin, stdout, stderr, wait_thr|
     stdin.close
