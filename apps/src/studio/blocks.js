@@ -3085,7 +3085,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
   addIfAndIfElseVersions('ifActorHasEmotion', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
-        .appendTitle('if');
+        .appendTitle(commonMsg.ifCode());
 
     appendActorSelect(this, actorSelectDropdown);
 
@@ -3153,7 +3153,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
 
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
-        .appendTitle('if');
+        .appendTitle(commonMsg.ifCode());
 
     appendActorSelect(this, actorSelectDropdown);
 
@@ -3220,7 +3220,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
   addIfAndIfElseVersions('ifActorIsVisible', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
-        .appendTitle('if');
+        .appendTitle(commonMsg.ifCode());
 
     appendActorSelect(this, actorSelectDropdown);
 
@@ -3267,7 +3267,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
   addIfAndIfElseVersions('ifActorIsSprite', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
-        .appendTitle('if');
+        .appendTitle(commonMsg.ifCode());
 
     appendActorSelect(this, actorSelectDropdown);
 

@@ -119,4 +119,32 @@ class StorageAppsTest < Minitest::Test
     type_in_level = storage_apps.create({level: '/projects/weblab'}, ip: 123)
     assert_equal 'weblab', storage_apps.project_type_from_channel_id(type_in_level)
   end
+
+  def test_content_moderation_disabled?
+    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    storage_apps = StorageApps.new(signedin_storage_id)
+
+    # Create a new typeless project
+    # content_moderation_disabled should be false by default on project creation for projects of any type.
+    new_project_channel_id = storage_apps.create({}, ip: 123)
+    assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
+  end
+
+  def test_set_content_moderation
+    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    storage_apps = StorageApps.new(signedin_storage_id)
+
+    # Create a new typeless project
+    # skip_content_moderation should be false by default on project creation for projects of any type.
+    new_project_channel_id = storage_apps.create({}, ip: 123)
+    assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
+
+    # Set content_moderation_disabled to true.
+    storage_apps.set_content_moderation(new_project_channel_id, true)
+    assert_equal true, storage_apps.content_moderation_disabled?(new_project_channel_id)
+
+    # Set skip_content_moderation back to false.
+    storage_apps.set_content_moderation(new_project_channel_id, false)
+    assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
+  end
 end
