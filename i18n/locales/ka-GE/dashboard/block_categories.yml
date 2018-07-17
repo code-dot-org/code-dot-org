@@ -28,9 +28,10 @@ ka:
       Numbers: Numbers
       Input: შემომავალი ინფორმაცია
       Default: Default
+      World: World
       Sprites: სპრაიტები
       Behaviors: Behaviors
-      World: World
+      Advanced: Advanced
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite

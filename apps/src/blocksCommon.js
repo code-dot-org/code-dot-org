@@ -147,6 +147,7 @@ function installCategory(blockly) {
         ['Variables', 'VARIABLE'],
         ['Functions', 'PROCEDURE'],
         ['Behaviors', 'Behavior'],
+        ['Locations', 'Location'],
       ]);
       // Not localized as this is only used by level builders
       this.appendDummyInput()

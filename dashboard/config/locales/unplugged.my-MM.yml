@@ -192,7 +192,7 @@ my:
         desc: Students use the concept of the chorus in a song to learn about defining
           and calling functions.
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
+        title: 'Real Life Algorithms: Dice Race'
         desc: This lesson calls out ways we use algorithms in our daily lives. As
           part of that, students will identify and write down the algorithm for a
           dice race game.
@@ -457,44 +457,44 @@ my:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: My Robotic Friends
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 'Real-life Algorithms: Plant a Seed'
         desc: This lesson calls out ways we use algorithms in our daily lives, using

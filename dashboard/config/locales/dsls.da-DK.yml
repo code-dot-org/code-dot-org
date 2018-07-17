@@ -152,10 +152,10 @@ da:
         "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        "<h4>RAMP</h4>": "<h4>Rampe</h4>"
-        "<h4>STACK</h4>": "<h4>Stak</h4>"
-        "<h4>STAMP</h4>": "<h4>Stempel</h4>"
-        "<h4>STAR</h4>": "<h4>Stjerne</h4>"
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
         Match each program to the word it makes, using the provided group of skills.: Sammenlign
           hvert program med det ord som laves, ved hjælp af den angivne gruppe af
           færdigheder.
@@ -854,9 +854,9 @@ da:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
         Multiple Choice: Multiple Choice
-        SET: SÆT
-        SOUTH: SYD
-        SQUARE: KVADRAT
+        SET: SET
+        SOUTH: SOUTH
+        SQUARE: SQUARE
         Which word is spelled?: Hvilket ord er stavet?
       K-1 multi 4:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"

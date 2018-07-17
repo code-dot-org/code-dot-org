@@ -140,7 +140,7 @@ module.exports = class Maze {
         Blockly.HSV_SATURATION = 0.6;
 
         Blockly.SNAP_RADIUS *= this.scale.snapRadius;
-        Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
+        Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
       }
 
       const svg = document.getElementById('svgMaze');
@@ -618,7 +618,7 @@ module.exports = class Maze {
    */
   prepareForExecution_() {
     this.executionInfo = new ExecutionInfo({
-      ticks: 100
+      ticks: 1e4
     });
     this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;

@@ -1,0 +1,8 @@
+{
+  "category": "",
+  "config": {
+    "func": "locationNorth",
+    "blockText": "north",
+    "returnType": "Location"
+  }
+}

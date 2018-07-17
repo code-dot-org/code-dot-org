@@ -30,7 +30,7 @@ namespace :seed do
     'course2',
     'course3',
     'course4',
-    'coursea',
+    'coursea-2017',
     'coursea-2018',
     'csp1-2017',
     'csp2-2017',
@@ -213,6 +213,10 @@ namespace :seed do
 
   task state_cs_offerings: :environment do
     Census::StateCsOffering.seed
+  end
+
+  task sample_data: :environment do
+    SampleData.seed
   end
 
   MAX_LEVEL_SOURCES = 10_000

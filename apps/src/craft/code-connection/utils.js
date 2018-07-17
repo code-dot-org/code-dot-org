@@ -187,44 +187,6 @@ const blockConversions = Object.freeze({
     `);
   },
 
-  craft_whileBlockAhead: function (xml) {
-    const statement = getChildNodeByName(xml, 'statement');
-    const next = getChildNodeByName(xml, 'next');
-    const title = getChildNodeByName(xml, 'title');
-
-    let blockType = title.textContent;
-    if (blockTypes[blockType]) {
-      blockType = blockTypes[blockType];
-    }
-
-    return (`
-      <block type="controls_whileUntil" inline="false">
-        <title name="MODE">WHILE</title>
-        <value name="BOOL">
-          <block type="logic_compare" inline="true">
-            <title name="OP">EQ</title>
-            <value name="A">
-              <block type="craft_inspect">
-                <title name="DIR">forward</title>
-              </block>
-            </value>
-            <value name="B">
-              <block type="craft_getnameof" inline="false">
-                <value name="ITEM">
-                  <block type="craft_block">
-                    <title name="BLOCK">${blockType}</title>
-                  </block>
-                </value>
-              </block>
-            </value>
-          </block>
-        </value>
-        ${statement ? serialize(statement) : ''}
-        ${next ? serialize(next) : ''}
-      </block>
-    `);
-  },
-
   craft_ifBlockAhead: function (xml) {
     const statement = getChildNodeByName(xml, 'statement');
     const next = getChildNodeByName(xml, 'next');

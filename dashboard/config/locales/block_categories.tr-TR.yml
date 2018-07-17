@@ -6,46 +6,47 @@ tr:
       Loops: Döngüler
       Functions: Fonksiyonlar
       Color: Renk
-      Brushes: Brushes
+      Brushes: Fırçalar
       Math: Matematik
       Logic: Mantık
       Variables: Değişkenler
-      Number: Number
-      String: String
+      Number: Sayı
+      String: Dize
       Image: Image
       Boolean: Boolean
       Conditionals: Koşullar
       Events: Olaylar
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
+      Games/Score: Oyunlar/skor
+      Comments: Yorumlar
+      Category: Kategori
       Prebuilt: Prebuilt
       Text: yazı
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
+      Picker: Seçici
+      Comment: Yorum
+      'Variables ': Değişkenler
+      everythingelse: diğerherşey
+      numbers: sayılar
+      Numbers: Sayılar
       Input: Girdi
-      Default: Default
+      Default: Varsayılan
+      World: Dünya
       Sprites: Hareketli Nesneler
-      Behaviors: Behaviors
-      World: World
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Behaviors: Davranışlar
+      Advanced: Advanced
+      Sprite: Hareketli nesne
+      Brush: Fırça
+      Make Sprite: Hareketli Nesne Oluştur
+      Movement: Hareket
       Start: Başlayın
-      Groups: Groups
+      Groups: Gruplar
       Booleans: Boolean Değerleri
       Functional: Functional
-      Predefined: Predefined
+      Predefined: Önceden Tanımlanmış
       test: dene
       test2: test2
       Foo: Foo
       Name: İsim
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: YENİ BLOKLAR
+      'Functions ': Fonksiyonlar
+      Game/Score: Oyun/Skor
       Function: Fonksiyon

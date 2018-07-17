@@ -1,0 +1,20 @@
+{
+  "category": "World",
+  "config": {
+    "func": "hsbColor",
+    "blockText": "HSB color\n H{HUE}S{SATURATION}B{BRIGHTNESS}",
+    "inline": false,
+    "args": [
+      {
+        "name": "HUE"
+      },
+      {
+        "name": "SATURATION"
+      },
+      {
+        "name": "BRIGHTNESS"
+      }
+    ],
+    "returnType": "Colour"
+  }
+}

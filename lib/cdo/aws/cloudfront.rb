@@ -126,6 +126,9 @@ module AWS
     # Returns a CloudFront DistributionConfig in CloudFormation syntax.
     # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
     def self.distribution_config(app, origin, aliases, ssl_cert=nil)
+      # Add root-domain aliases to production environment stack.
+      aliases += CONFIG[app][:aliases] if rack_env?(:production)
+
       behaviors, cloudfront, config = get_app_config(app)
       {
         Aliases: aliases,

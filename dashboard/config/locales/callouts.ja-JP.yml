@@ -20,10 +20,10 @@ ja:
         screenSelectorCallout3: Pick the screen you made
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the name of your screen here.
+        changePlace1ID: Change the id of your screen here.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's title
+        appLabIntro2_designMenu: Use these menus to change your app's "text"
         appLabIntro2_textColor: Scroll down to change the "text color"
       AppLab Intro 2 - Edit startScreen2_callout:
         applabIntro2storyText: Click the story text on this screen
@@ -32,7 +32,7 @@ ja:
         appLabIntro2_textColor: Try out some of the different properties you can change
           below
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag another button into your app
+        designToolboxCallOut: Drag a button onto your screen.
         changeButtonID: Choose a clear "id" for your button. For example "callFriendButton"
           or "goOutsideButton"
         screenSelectorCallout3: Go to your "startScreen"
@@ -43,7 +43,8 @@ ja:
           the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Click here when you're done!
+        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not,
+          hit 'Reset', change your code, and hit 'Run' again.
       AppLab Intro 7 - thisOrThatAddButton_callout:
         AppLabHoCFinal11: You're now in Design Mode.
       AppLab_test02_callout: {}
@@ -183,6 +184,7 @@ ja:
       CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro predict_2018_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: {}
       CSD U3 Sprites intro sprites_2018_callout: {}
       CSD U3 Sprites scene challenge_callout: {}
       CSD U3 Sprites scene challenge_2018_callout: {}
@@ -425,7 +427,6 @@ ja:
         CSD_U3_rect_c2: Here is the "Run" button.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
@@ -510,8 +511,7 @@ ja:
           can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: {}
       Counting_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
@@ -648,6 +648,7 @@ ja:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: {}
+      Fish Tank 2-validated_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
       Frozen Project Toolbox (Old)_callout:
@@ -673,8 +674,8 @@ ja:
         InspirationalArtwork_1: Try using the new `comment` block under this label
           to leave yourself notes inside your program!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label
-          to leave yourself notes inside your program!
+        InspirationalArtwork_1: Try using the `comment` block under this label to
+          leave yourself notes inside your program!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -720,8 +721,7 @@ ja:
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
@@ -740,9 +740,9 @@ ja:
       NEW Course 4 Artist Params 10_callout:
         create_function: ここをクリックして「関数」ポップアップを開き、「関数の作成」ボタンをクリックします。
       NEW Course 4 Artist Params 2_callout:
-        create_function: ''
-        name_function: ''
-        write_draw_triangle_function: ''
+        create_function: 
+        name_function: 
+        write_draw_triangle_function: 
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: 編集をクリックして関数にパラメーターを追加します
         add_and_drag_parameter: ここにパラメーターの名前を書いて、追加をクリックし、関数定義内にドラッグしてください。
@@ -755,8 +755,7 @@ ja:
         actions_category: ツール ボックスが新しくなりました！「アクション」ブロックがここにあります。
       New App Lab Project_callout: {}
       New Artist Project_callout:
-        New Artist Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace to add them to your program
+        New Artist Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Artist Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
@@ -764,8 +763,7 @@ ja:
         snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
       New Maker Lab Project_callout: {}
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
@@ -838,8 +836,7 @@ ja:
       Robot_callout:
         4-5_Artist_Patterns_Free_Play_1: 全部のお気に入りブロックが、種類ごとに分けられました。これらの言葉をクリックすると、どうなったか確認できます。
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
@@ -872,8 +869,7 @@ ja:
           side
       Sam the Butterfly 5_callout: {}
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
@@ -1051,6 +1047,7 @@ ja:
           them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1100,6 +1097,7 @@ ja:
           start your program.
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
@@ -1111,9 +1109,7 @@ ja:
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: This number means that there are no more of this
           block left in the toolbox.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: This number means that there are no more of this
-          block left in the toolbox.
+      courseB_artist_loops5_2018_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
           worry, we will show you how to use them later in the stage.
@@ -1195,7 +1191,7 @@ ja:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
           that there are four pumpkins available to pick.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Grey blocks cannot be deleted!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_loops2_callout:
@@ -1333,6 +1329,9 @@ ja:
       courseD_collector_until_challenge1_callout: {}
       courseD_farmer_until_challenge2_callout: {}
       courseD_farmer_until_challenge2_2018_callout: {}
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:
@@ -1639,21 +1638,21 @@ ja:
       courseF_IceAge_10_callout: {}
       courseF_IceAge_11_callout: {}
       courseF_IceAge_2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       courseF_IceAge_3_callout: {}
       courseF_IceAge_4_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       courseF_IceAge_5_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       courseF_IceAge_6_callout: {}
       courseF_IceAge_7_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_IceAge_8_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Add blocks here
       courseF_IceAge_template_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_artist_embed_variables9_callout: {}
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room
@@ -1872,8 +1871,7 @@ ja:
         courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
@@ -1919,8 +1917,8 @@ ja:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press
+          "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
@@ -2073,12 +2071,10 @@ ja:
       grade4_frozen_square_loop3_callout:
         replace_questions: ドロップダウンを使って"???"を数字に変えてください
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
@@ -2182,38 +2178,38 @@ ja:
       iceage_free_play_2018_callout: {}
       iceage_free_playcourseF_IceAge_11_callout: {}
       iceage_hello1_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello1_2018_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_hello2_2018_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_move_events_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_events_2018_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_to_actor_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_actor_2018_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_flag_callout: {}
       iceage_move_to_flag_2018_callout: {}
       iceage_repeat_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_repeat_2018_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_sound_and_points_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_sound_and_points_2018_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_throw_hearts_callout: {}
       iceage_throw_hearts_2018_callout: {}
       iceage_warn_embed_ice_age_callout: {}
       iceage_warn_ice_age_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       iceage_warn_ice_age_2018_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: {}
@@ -2244,8 +2240,7 @@ ja:
           does not have "turn" or "move forward". Also, the goals are not flexible
           (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your
-          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout1: ここをクリックして、どんなブロックがあるか、見てみてください。ブロックをワークスペースにドラッグして、プログラムをつくりましょう。
         New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!

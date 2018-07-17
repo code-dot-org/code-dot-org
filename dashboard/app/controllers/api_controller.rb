@@ -1,4 +1,5 @@
 require 'google/apis/classroom_v1'
+require 'honeybadger'
 
 class ApiController < ApplicationController
   layout false
@@ -432,6 +433,12 @@ class ApiController < ApplicationController
   # is in :correct.
   # TODO(caleybrock): remove this and its tests once the assessments tab is in react
   def section_assessments
+    # Notify Honeybadger to determine if this endpoint is still used anywhere
+    Honeybadger.notify(
+      error_class: "DeprecatedEndpointWarning",
+      error_message: 'Deprecated endpoint GET /dashboardapi/section_assessments/:section_id called unexpectedly',
+    )
+
     section = load_section
     script = load_script(section)
 
@@ -533,6 +540,12 @@ class ApiController < ApplicationController
   # At least five students in the section must have submitted answers.  The answers for each contained
   # sublevel are shuffled randomly.
   def section_surveys
+    # Notify Honeybadger to determine if this endpoint is still used anywhere
+    Honeybadger.notify(
+      error_class: "DeprecatedEndpointWarning",
+      error_message: 'Deprecated endpoint GET /dashboardapi/section_surveys/:section_id called unexpectedly',
+    )
+
     section = load_section
     script = load_script(section)
 

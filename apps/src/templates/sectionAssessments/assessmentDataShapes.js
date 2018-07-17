@@ -12,6 +12,26 @@ export const freeResponsesDataPropType = PropTypes.shape({
   response: PropTypes.string,
 });
 
+// Shapes for multiple choice overview
+
+// Represents a single answer and the number of
+// students who choose that answer
+const answerDataPropType = PropTypes.shape({
+  multipleChoiceOption: PropTypes.string,
+  numAnswered: PropTypes.number,
+  isCorrect: PropTypes.bool,
+});
+
+// Represents a single question and a section summary of answers
+export const multipleChoiceDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  question: PropTypes.string.isRequired,
+  questionNumber: PropTypes.number,
+  answers: PropTypes.arrayOf(answerDataPropType),
+  totalAnswered: PropTypes.number.isRequired,
+  notAnswered: PropTypes.number.isRequired,
+});
+
 // Shapes for single student multiple choice tables
 
 /**
@@ -27,9 +47,9 @@ export const studentResponsePropType = PropTypes.shape({
 // Represents a single student and a set of the student's answers for
 // a single assessment's multiple choice questions
 export const studentWithResponsesPropType = PropTypes.shape({
-  id:  PropTypes.number.isRequired,
+  id:  PropTypes.number,
   name: PropTypes.string,
-  studentResponses: PropTypes.arrayOf(studentResponsePropType).isRequired,
+  studentResponses: PropTypes.arrayOf(studentResponsePropType),
 });
 
 // Represents a single multiple choice question structure

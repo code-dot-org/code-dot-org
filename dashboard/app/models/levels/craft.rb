@@ -610,7 +610,6 @@ class Craft < Blockly
     <<-XML.chomp
 #{level_specific_blocks}
 <category name="Loops">
-  <block type='craft_whileBlockAhead'></block>
   <block type='controls_repeat'>
     <title name='TIMES'>5</title>
   </block>

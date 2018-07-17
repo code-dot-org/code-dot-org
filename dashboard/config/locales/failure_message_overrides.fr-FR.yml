@@ -40,9 +40,8 @@ fr:
         personnages doivent atteindre leur drapeau avec le même nombre de déplacements!
       Course 4 Playlab For Loops 5b_failure_message_override: N'oubliez pas, les deux
         personnages doivent s'arrêter au même endroit.
-      Eval Strings Images .2_failure_message_override: |-
-        Make sure you append the
-        string "Universe" to make the code create "Hello, Universe"
+      Eval Strings Images .2_failure_message_override: Make sure you append the string
+        "Universe" to make the code create "Hello, Universe"
       Kiki_StarWars_Test_5_failure_message_override: Perdu!
       Kiki_StarWars_Test_5_Example_failure_message_override: Perdu!
       MC HOC 2016 Level 2-2_failure_message_override: Utilise les commandes "avancer"

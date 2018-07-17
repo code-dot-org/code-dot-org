@@ -458,7 +458,7 @@
   "saySprite": "казва",
   "saySpriteN": "актьор {spriteIndex} казва",
   "saySpriteTooltip": "Запълва балончето за реч със съответния текст на определен актьор.",
-  "saySpriteChoices_0": "Здрасти.",
+  "saySpriteChoices_0": "Hi there.",
   "saySpriteChoices_1": "Здравейте.",
   "saySpriteChoices_2": "Какво правиш?",
   "saySpriteChoices_3": "Добро утро.",

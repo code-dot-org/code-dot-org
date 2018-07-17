@@ -17,9 +17,7 @@ max_age: 60
 
 - course = File.basename(request.path_info)
 
-
-
-- if %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef accelerated).include? course
+- if ScriptConstants.has_congrats_page?(course)
   = view :csf_congrats, course: course
 - else
   - redirect "/congrats"

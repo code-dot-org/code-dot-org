@@ -1,0 +1,13 @@
+{
+  "category": "",
+  "config": {
+    "func": "spritesWhereLast",
+    "returnType": "Sprite",
+    "blockText": "last {VALUE}",
+    "args": [
+      {
+        "name": "VALUE"
+      }
+    ]
+  }
+}
