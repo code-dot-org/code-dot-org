@@ -57,6 +57,7 @@ export default class WorkshopEnrollment extends React.Component {
                   }
                   <EnrollForm
                     workshop_id={this.props.workshop.id}
+                    workshop_course={this.props.workshop.course}
                     logged_in={this.props.logged_in}
                     first_name={this.props.enrollment.first_name}
                     email={this.props.enrollment.email}
