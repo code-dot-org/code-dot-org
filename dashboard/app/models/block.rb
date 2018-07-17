@@ -14,6 +14,11 @@
 
 class Block < ApplicationRecord
   include MultiFileSeeded
+  after_save {@@all_types = nil}
+
+  def self.all_types
+    @@all_types ||= Block.distinct.pluck(:level_type)
+  end
 
   def block_options
     {
