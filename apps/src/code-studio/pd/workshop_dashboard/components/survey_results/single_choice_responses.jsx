@@ -14,7 +14,11 @@ export default class SingleChoiceResponses extends React.Component {
   render() {
     let totalAnswers = Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
 
-    let otherAnswers = _.difference(Object.keys(this.props.answers), this.props.possibleAnswers);
+    // The split is needed for scale questions. The top and bottom responses have text
+    // like "1 - not ready / 5 - very ready" and we need to extract the number
+    let possibleAnswers = this.props.answerType === 'scale' ? this.props.possibleAnswers.map((x) => x.split(' ')[0]) : this.props.possibleAnswers;
+    let otherAnswers = _.difference(Object.keys(this.props.answers), possibleAnswers);
+
     return (
       <Panel>
         {this.props.question}
@@ -83,7 +87,7 @@ export default class SingleChoiceResponses extends React.Component {
           </tbody>
         </table>
         {
-          otherAnswers.length > 0 && (
+          this.props.otherText && otherAnswers.length > 0 && (
             <div>
               <br/>
               {this.props.otherText}

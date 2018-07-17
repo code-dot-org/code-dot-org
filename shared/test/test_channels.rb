@@ -303,6 +303,39 @@ class ChannelsTest < Minitest::Test
 
     # Ideally we would also test that deleting abuse works when we're an admin
     # but don't currently have a way to simulate admin from tests
+    # TODO (Erin B) confirm if this is accurate and update tests if needed.
+    # You might not need to be an admin, you might need project validator
+    # permissions.
+  end
+
+  def test_disable_and_enable_content_moderation
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+    # Only project_validators should be able to set content_moderation.
+    post "/v3/channels/#{channel_id}/disable-content-moderation"
+    assert last_response.unauthorized?
+
+    ChannelsApi.any_instance.stubs(:project_validator?).returns(true)
+
+    post "/v3/channels/#{channel_id}/disable-content-moderation"
+    assert last_response.ok?
+    assert_equal true, JSON.parse(last_response.body)['skip_content_moderation']
+
+    # Call to disable again and confirm the result to ensure it's not just a toggle.
+    post "/v3/channels/#{channel_id}/disable-content-moderation"
+    assert last_response.ok?
+    assert_equal true, JSON.parse(last_response.body)['skip_content_moderation']
+
+    post "/v3/channels/#{channel_id}/enable-content-moderation"
+    assert last_response.ok?
+    assert_equal false, JSON.parse(last_response.body)['skip_content_moderation']
+
+    # Call to enable again and confirm the result to ensure it's not just a toggle.
+    post "/v3/channels/#{channel_id}/enable-content-moderation"
+    assert last_response.ok?
+    assert_equal false, JSON.parse(last_response.body)['skip_content_moderation']
+
+    ChannelsApi.any_instance.unstub(:project_validator?)
   end
 
   def test_sharing_disabled
