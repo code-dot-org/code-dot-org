@@ -40,9 +40,37 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-12 01:13:28 +0000\",\"changed\":[\"notes\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-12 17:20:30 +0000\",\"changed\":[\"skin\",\"contained_level_names\",\"instructions_important\",\"use_contract_editor\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-12 17:37:13 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-12 22:46:27 +0000\",\"changed\":[\"is_k1\",\"ani_gif_url\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-12 22:47:25 +0000\",\"changed\":[\"is_k1\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-12 01:13:28 +0000\",\"changed\":[\"notes\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-12 17:20:30 +0000\",\"changed\":[\"skin\",\"contained_level_names\",\"instructions_important\",\"use_contract_editor\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-12 17:37:13 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-12 22:46:27 +0000\",\"changed\":[\"is_k1\",\"ani_gif_url\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-12 22:47:25 +0000\",\"changed\":[\"is_k1\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-17 19:50:16 +0000\",\"changed\":[],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-17 19:57:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-17 20:01:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-17 20:03:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-17 20:06:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-17 20:09:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-17 20:16:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-07-17 20:16:35 +0000\",\"changed\":[],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="harvester_corn" disabled="true" can_disconnect_from_parent="false">
+              <next>
+                <block type="harvester_ifHasCrop" editable="false">
+                  <title name="LOC">Corn</title>
+                  <next>
+                    <block type="controls_repeat" editable="false" limit="6">
+                      <title name="TIMES">5</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
 </Karel>
