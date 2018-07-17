@@ -83,10 +83,20 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
   }
 }
 
+const initialPersonalProjectsList = [];
+
+function personalProjectsList(state = initialPersonalProjectsList, action) {
+  return {
+    ...state,
+    projects: action.personalProjectsList,
+  };
+}
+
 const reducer = combineReducers({
   selectedGallery,
   projectLists,
   hasOlderProjects,
+  personalProjectsList
 });
 export default reducer;
 

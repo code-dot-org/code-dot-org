@@ -17,6 +17,16 @@ module ProjectsList
   }.freeze
 
   class << self
+    def fetch_personal_projects(user_id)
+      personal_projects_list = []
+      storage_id = storage_id_for_user_id(user_id)
+      PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
+        channel_id = storage_encrypt_channel_id(storage_id, project[:id])
+        project_data = get_personal_project_row_data(project, channel_id)
+        personal_projects_list << project_data if project_data
+      end
+    end
+
     # Look up every project of every student in the section which is not hidden or deleted.
     # Return a set of metadata which can be used to display a list of projects in the UI.
     # @param section [Section]
@@ -167,6 +177,19 @@ module ProjectsList
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
+      }.with_indifferent_access
+    end
+
+    def get_personal_project_row_data(project, channel_id)
+      project_value = project[:value] ? JSON.parse(project[:value]) : {}
+      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
+      {
+        channel: channel_id,
+        name: project_value['name'],
+        thumbnailUrl: project_value['thumbnailUrl'],
+        type: project_type(project_value['level']),
+        updatedAt: project_value['updatedAt'],
+        publishedAt: project_value['publishedAt'],
       }.with_indifferent_access
     end
 
