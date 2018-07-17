@@ -18,15 +18,18 @@ const styles = {
   }
 };
 
-const ROLES = [
+const TEACHING_ROLES = [
   "Classroom Teacher",
   "Librarian",
-  "Tech Teacher/Media Specialist",
+  "Tech Teacher/Media Specialist"
+];
+
+const ROLES = TEACHING_ROLES.concat([
   "Parent",
   "School Administrator",
   "District Administrator",
   "Other"
-];
+]);
 
 const GRADES_TEACHING = [
   "Pre-K",
@@ -45,6 +48,7 @@ const GRADES_TEACHING = [
 export default class EnrollForm extends React.Component {
   static propTypes = {
     workshop_id: PropTypes.number.isRequired,
+    workshop_course: PropTypes.string,
     logged_in: PropTypes.bool,
     first_name: PropTypes.string,
     email: PropTypes.string
@@ -255,7 +259,7 @@ export default class EnrollForm extends React.Component {
             {/* radio buttons for school type */}
           </FormGroup>
         }
-        {/* if it is a csf workshop */
+        {this.props.workshop_course === 'CS Fundamentals' &&
           <FormGroup>
             <ControlLabel>What is your current role? (Select the role that best applies)<span className="form-required-field"> *</span></ControlLabel>
             <Select
@@ -263,18 +267,21 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleRoleChange}
               options={ROLES.map(r => ({value: r, label: r}))}
             />
-          {/* if they are a classroom teacher, librarian, or tech teacher.media specialist */}
-            <ControlLabel>What grades are you teaching this year? (Select all that apply)<span className="form-required-field"> *</span></ControlLabel>
-            <p>This workshop is intended for teachers for Grades K-5.</p>
-            {GRADES_TEACHING.map((grade, index) =>
-              <Checkbox
-                value={grade}
-                key={index}
-                onChange={this.handleGradesTeachingChange}
-              >
-                {grade}
-              </Checkbox>
-            )}
+          {TEACHING_ROLES.includes(this.state.role) &&
+            <FormGroup>
+              <ControlLabel>What grades are you teaching this year? (Select all that apply)<span className="form-required-field"> *</span></ControlLabel>
+              <p>This workshop is intended for teachers for Grades K-5.</p>
+              {GRADES_TEACHING.map((grade, index) =>
+                <Checkbox
+                  value={grade}
+                  key={index}
+                  onChange={this.handleGradesTeachingChange}
+                >
+                  {grade}
+                </Checkbox>
+              )}
+            </FormGroup>
+          }
           </FormGroup>
         }
         <p>
