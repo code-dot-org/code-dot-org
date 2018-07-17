@@ -1100,6 +1100,8 @@ en:
       workshop_course:
         csf_af: 'CS Fundamentals (Courses A-F)'
         csf_express: 'CS Fundamentals (Pre-Express or Express)'
+        csd: 'CS Discoveries'
+        csp: 'CS Principles'
       email_opt_in:
         opt_in_yes: 'Yes'
         opt_in_no: 'No'
