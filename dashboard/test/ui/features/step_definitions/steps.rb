@@ -1469,3 +1469,10 @@ Then /^I sign out using jquery$/ do
   @browser.execute_script(code)
   wait_short_until {@browser.execute_script('return window.signOutComplete;')}
 end
+
+Then /^I open the Manage Assets dialog$/ do
+  steps <<-STEPS
+    Then I click selector ".settings-cog"
+    And I click selector ".pop-up-menu-item"
+  STEPS
+end
