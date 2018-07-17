@@ -145,6 +145,7 @@ class VirtualizedSummaryView extends Component {
           styleTopRightGrid={progressStyles.topRight}
           width={styleConstants['content-width']}
           onScroll={onScroll}
+          id={"#uitest-summary-view"}
         />
       </div>
     );
