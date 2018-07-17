@@ -480,7 +480,7 @@ ko:
         infinity_playlab_events: 플레이 랩 - 이벤트
         infinity_playlab_repeat_forever: 플레이 랩 - 무한 반복
         csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
         csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
@@ -637,6 +637,10 @@ ko:
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
         csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

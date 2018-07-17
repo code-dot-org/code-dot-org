@@ -51,6 +51,7 @@ const styles = {
     [ButtonColor.orange]: {
       color: 'white',
       backgroundColor: color.orange,
+      fontWeight: 'bold',
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.63)',
       ':hover': {
         color: color.orange,
@@ -75,6 +76,7 @@ const styles = {
     [ButtonColor.blue]: {
       color: color.white,
       backgroundColor: color.cyan,
+      fontWeight: 'bold',
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
       ':hover': {
         boxShadow: 'none',
@@ -83,7 +85,8 @@ const styles = {
         backgroundColor: color.lightest_cyan
       },
       ':disabled': {
-        backgroundColor: color.lighter_gray,
+        color: color.lighter_cyan,
+        backgroundColor: color.lightest_cyan,
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
@@ -94,16 +97,25 @@ const styles = {
       ':hover': {
         boxShadow: 'none',
         backgroundColor: color.lightest_gray
+      },
+      ':disabled': {
+        backgroundColor: color.lightest_gray,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
     [ButtonColor.red]: {
       color: color.white,
       backgroundColor: color.red,
+      fontWeight: 'bold',
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
       ':hover': {
         boxShadow: 'none',
         color: color.red,
         borderColor: color.red,
+      },
+      ':disabled': {
+        backgroundColor: color.lightest_red,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
   },
@@ -169,7 +181,7 @@ class Button extends React.Component {
       <Tag
         className={className}
         style={[styles.main, styles.colors[color], styles.sizes[size], style]}
-        href={href}
+        href={disabled ? 'javascript:void(0);' : href}
         target={target}
         disabled={disabled}
         onClick={disabled ? null : onClick}

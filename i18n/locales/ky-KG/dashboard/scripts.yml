@@ -473,9 +473,9 @@ ky:
             The Maze:
               name: Лабиринт
         events:
-          title: Иш-чаралар
-          description: Иш-чаралар
-          description_short: Иш-чаралар
+          title: Окуялар
+          description: Окуялар
+          description_short: Окуялар
           description_audience: ''
           stages:
             Bounce:
@@ -2048,7 +2048,7 @@ ky:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: The Design Recipe'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
           description_audience: ''
@@ -2963,7 +2963,7 @@ ky:
             Debugging:
               name: Debugging
             Events:
-              name: Иш-чаралар
+              name: Окуялар
             Events Unplugged:
               name: Events Unplugged
             Fuzz Fiesta:
@@ -3033,7 +3033,7 @@ ky:
             Debugging:
               name: Debugging
             Events:
-              name: Иш-чаралар
+              name: Окуялар
             Events Unplugged:
               name: Events Unplugged
             'Jigsaw: Learn to drag and drop':
@@ -3488,7 +3488,7 @@ ky:
             Conditionals:
               name: Шартуулар
             Events:
-              name: Иш-чаралар
+              name: Окуялар
             For Loops:
               name: For Loops
             Functions:
@@ -9530,6 +9530,16 @@ ky:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

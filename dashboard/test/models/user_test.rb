@@ -2829,10 +2829,23 @@ class UserTest < ActiveSupport::TestCase
         secret_picture_path: @student.secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
-        sharing_disabled: false
+        sharing_disabled: false,
+        has_ever_signed_in: @student.has_ever_signed_in?
       },
       @student.summarize
     )
+  end
+
+  test 'has_ever_signed_in? is false with no current_sign_in_at' do
+    student = create :student
+    assert_nil student.current_sign_in_at
+    refute student.has_ever_signed_in?
+  end
+
+  test 'has_ever_signed_in? is true with current_sign_in_at' do
+    student = create :student, current_sign_in_at: DateTime.now.utc
+    refute_nil student.current_sign_in_at
+    assert student.has_ever_signed_in?
   end
 
   test 'under 13 students have sharing off by default' do
@@ -3372,5 +3385,35 @@ class UserTest < ActiveSupport::TestCase
         type: AuthenticationOption::CLEVER,
         id: user.uid
       )
+  end
+
+  test 'not depended_upon_for_login? for student' do
+    student = create :student
+    refute student.depended_upon_for_login?
+  end
+
+  test 'not depended_upon_for_login? for teacher with student with personal login' do
+    student = create :student, :in_email_section
+    teacher = student.sections_as_student.first.teacher
+    refute teacher.depended_upon_for_login?
+  end
+
+  test 'not depended_upon_for_login? for teacher with student that has other teachers' do
+    student = create :student, :in_picture_section
+    teacher = student.sections_as_student.first.teacher
+    student.sections_as_student << create(:section)
+
+    student.reload
+    assert_equal 2, student.sections_as_student.size
+    refute teacher.depended_upon_for_login?
+  end
+
+  test 'depended_upon_for_login? if teacher has a teacher-managed student with no other teachers' do
+    student = create :student_in_picture_section
+    teacher = student.sections_as_student.first.teacher
+    section = create :section, user: teacher
+    section.students << student
+
+    assert teacher.depended_upon_for_login?
   end
 end

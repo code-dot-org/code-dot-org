@@ -23,10 +23,10 @@ uk:
         screenSelectorCallout3: Pick the screen you made
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the name of your screen here.
+        changePlace1ID: Change the id of your screen here.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's title
+        appLabIntro2_designMenu: Use these menus to change your app's "text"
         appLabIntro2_textColor: Scroll down to change the "text color"
       AppLab Intro 2 - Edit startScreen2_callout:
         applabIntro2storyText: Click the story text on this screen
@@ -35,7 +35,7 @@ uk:
         appLabIntro2_textColor: Try out some of the different properties you can change
           below
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag another button into your app
+        designToolboxCallOut: Drag a button onto your screen.
         changeButtonID: Choose a clear "id" for your button. For example "callFriendButton"
           or "goOutsideButton"
         screenSelectorCallout3: Go to your "startScreen"
@@ -46,7 +46,8 @@ uk:
           the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Click here when you're done!
+        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not,
+          hit 'Reset', change your code, and hit 'Run' again.
       AppLab Intro 7 - thisOrThatAddButton_callout:
         AppLabHoCFinal11: You're now in Design Mode.
       AppLab_test02_callout: {}
@@ -186,6 +187,7 @@ uk:
       CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro predict_2018_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: {}
       CSD U3 Sprites intro sprites_2018_callout: {}
       CSD U3 Sprites scene challenge_callout: {}
       CSD U3 Sprites scene challenge_2018_callout: {}
@@ -694,8 +696,8 @@ uk:
         InspirationalArtwork_1: Try using the new `comment` block under this label
           to leave yourself notes inside your program!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Try using the new `comment` block under this label
-          to leave yourself notes inside your program!
+        InspirationalArtwork_1: Try using the `comment` block under this label to
+          leave yourself notes inside your program!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -767,9 +769,9 @@ uk:
         create_function: Клацни тут, щоб відкрити спливаюче вікно "Функції", а тоді
           клацни кнопку "Створити функцію".
       NEW Course 4 Artist Params 2_callout:
-        create_function: ''
-        name_function: ''
-        write_draw_triangle_function: ''
+        create_function: 
+        name_function: 
+        write_draw_triangle_function: 
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Клацни, щоб додати параметр у свою функцію
         add_and_drag_parameter: Запиши назву параметра, клацни "додати" та перетягни
@@ -1233,7 +1235,7 @@ uk:
         courseC_harvester_loops1_callout1: The number four on the pumpkin tells you
           that there are four pumpkins available to pick.
       courseC_maze_debugging5_callout:
-        courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
+        courseC_maze_debugging5_1: Grey blocks cannot be deleted!
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: These blocks are locked and cannot be deleted!
       courseC_maze_loops2_callout:
@@ -1680,21 +1682,21 @@ uk:
       courseF_IceAge_10_callout: {}
       courseF_IceAge_11_callout: {}
       courseF_IceAge_2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       courseF_IceAge_3_callout: {}
       courseF_IceAge_4_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       courseF_IceAge_5_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       courseF_IceAge_6_callout: {}
       courseF_IceAge_7_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_IceAge_8_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Add blocks here
       courseF_IceAge_template_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_artist_embed_variables9_callout: {}
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room
@@ -1960,8 +1962,8 @@ uk:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press
+          "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
@@ -2252,38 +2254,38 @@ uk:
       iceage_free_play_2018_callout: {}
       iceage_free_playcourseF_IceAge_11_callout: {}
       iceage_hello1_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello1_2018_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_hello2_2018_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_move_events_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_events_2018_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_to_actor_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_actor_2018_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_flag_callout: {}
       iceage_move_to_flag_2018_callout: {}
       iceage_repeat_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_repeat_2018_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_sound_and_points_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_sound_and_points_2018_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_throw_hearts_callout: {}
       iceage_throw_hearts_2018_callout: {}
       iceage_warn_embed_ice_age_callout: {}
       iceage_warn_ice_age_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       iceage_warn_ice_age_2018_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: {}

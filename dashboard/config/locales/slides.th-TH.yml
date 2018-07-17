@@ -616,9 +616,9 @@ th:
       1:
         image: notes/C1_building_foundation_1.jpg
         text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+          But if you persist, it's just going to get nothing but better and more exciting
+          for you. Persistence is the name of the game. Stay with it, you'll love
+          it.
       2:
         image: notes/C1_building_foundation_2.jpg
         text: This lesson is called building a foundation. In this lesson, we'll work
@@ -765,7 +765,7 @@ th:
           computer? Sure honey!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
+        text: I love my mom's computer because I can go on the Internet. The Internet
           is kind of like your neighborhood. You can visit cool places, you can talk
           to family and friends and you can learn lots of new things.
       3:
@@ -777,10 +777,10 @@ th:
           of zebras live there.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
+        text: Sometimes on the Internet I talk to people I know, like my grandma who
+          lives in another state. Hi grandma! She's making me cookies that she'll
+          send me for my birthday. "Yummy, I wish the Internet had smellorama!" I
+          can talk to different people on the Internet, like my cousin but I only
           talk to people I know.
       5:
         image: notes/C1_going_places_safely_5.png
@@ -790,7 +790,7 @@ th:
           to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street
+        text: 'The Internet is a super fun place. But just like when you cross a street
           in your neighborhood, you also have to be careful when you go online. Here
           are three rules to remember. Rule number 1: Always ask your parents first.
           Rule number 2: Only talk to people you know. Rule number 3: Stick to places
@@ -934,7 +934,7 @@ th:
       4:
         image: notes/C2_artist_intro_4.png
         text: บล็อกอื่นๆที่เรามีในปริศนานี้บอกให้ หันขวาไป 90 องศา. และเมื่อเราลากบล็อกนั้นออกมาใช้ก็จะทำให้ศิลปินของเราหันหน้าไปประมาณหนึ่ง
-          ดังนั้นคุณสามารถเล่นกับปริมาณการหันที่คุณต้องการให้ศิลปินหันหน้า่ไปได้ ส่วนอันนี้เป็นการหันไป
+          ดังนั้นคุณสามารถเล่นกับองศาการหันที่คุณต้องการให้ศิลปินหันหน้า่ไปได้ ส่วนอันนี้เป็นการหันไป
           90 องศา
       5:
         image: notes/C2_artist_intro_5.png
@@ -1048,7 +1048,7 @@ th:
         text: Use your heart to grow and grow, and to give yourself a healthy glow,
           and to make a valentine, tell someone that you'll be mine! Use your heart
           when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
+          respect, to be fair and nice on the Internet. From your head down to your
           toes, pause, think about it. From your feet up to your nose, pause and think
           online!
       3:
@@ -1117,8 +1117,8 @@ th:
       2:
         image: notes/C2_artist_loops_2.png
         text: ให้วนลูปบล็อกเหล่านี้สี่ครั้งเพื่อที่จะวาดสี่เหลี่ยมจตุรัสทั้งรูป เราเพียงแค่ลากบล็อกทำซ้ำออกมาใช้และใส่
-          บล็อกวาดเส้นไปข้างหน้า... และบล็อกหันขวาภายในบล็อกทำซ้ำ. เมื่อเรากดเริ่ม
-          ศิลปินจะทำขั้นตอนเหล่านั้นซ้ำสี่ครั้งเพื่อทำสี่เหลี่ยมจตุรัสให้เสร็จสมบูรณ์
+          บล็อกไปข้างหน้า... และบล็อกหันขวาไว้ภายในบล็อกทำซ้ำ เมื่อเรากดปุ่มเริ่ม
+          ศิลปินจะทำขั้นตอนเหล่านั้นซ้ำสี่ครั้งเพื่อสร้างสี่เหลี่ยมจตุรัสให้เสร็จสมบูรณ์
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
@@ -1128,8 +1128,8 @@ th:
       2:
         image: notes/C2_bee_loops_2.png
         text: นี่คือบล็อกทำซ้ำ สิ่งที่คุณใส่ภายในบล็อกทำซ้ำจะทำภารกิจเหล่านั้นซ้ำอีกตามจำนวนครั้งที่คุณบอกให้ทำ
-          ตัวอย่างเช่นในด่านนี้แทนที่จะลากบล็อกไปข้างหน้าและบล็อกเก็บหวานสามครั้ง
-          เราเพียงแค่ลากภารกิจเหล่านี้ออกมาครั้งเดียวและทำภารกิจเหล่านั้นซ้ำสามครั้ง
+          ตัวอย่างเช่นในด่านนี้แทนที่จะลากบล็อกไปข้างหน้าและลากบล็อกเก็บหวานมาทีละบล็อกเป็นจำนวนสามบล็อก
+          เราเพียงแค่ลากภารกิจเหล่านี้ออกมาครั้งเดียวและให้ทำภารกิจเหล่านั้นซ้ำสามครั้ง
           ซึ่งทำให้มันง่ายจริงๆ!
     C2_maze_intro:
       1:
@@ -1283,7 +1283,7 @@ th:
       4:
         image: notes/C3_artist_intro_4.png
         text: บล็อกอื่นๆที่เรามีในปริศนานี้บอกให้ หันขวาไป 90 องศา. และเมื่อเราลากบล็อกนั้นออกมาใช้ก็จะทำให้ศิลปินของเราหันหน้าไปประมาณหนึ่ง
-          ดังนั้นคุณสามารถเล่นกับปริมาณการหันที่คุณต้องการให้ศิลปินหันหน้า่ไปได้ ส่วนอันนี้เป็นการหันไป
+          ดังนั้นคุณสามารถเล่นกับองศาการหันที่คุณต้องการให้ศิลปินหันหน้า่ไปได้ ส่วนอันนี้เป็นการหันไป
           90 องศา
       5:
         image: notes/C3_artist_intro_5.png
@@ -1591,11 +1591,11 @@ th:
           กดเริ่มและผีดิบจะเดินไปข้างหน้าห้าก้าวเพื่อไปหาดอกทานตะวันที่แสนอร่อย.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: เท่าที่ผ่านมา คุณได้สร้างภาพเคลื่อนไหวหรือเรื่องราวที่ทำสิ่งเดียวกันทุกครั้งที่คุณเรียกใช้งาน
           ตอนนี้คุณสามารถสร้างเกมแบบโต้ตอบที่คุณสามารถเล่นจริงได้
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: มีบล็อกใหม่บางอย่างที่อยากจะให้ลอง มี บล็อก "เมื่อลูกศร " และบล็อก "ย้ายนักแสดง
           " คุณสามารถใช้บล็อกเหล่านี้ร่วมกันเพื่อให้คุณพานักแสดงไปรอบๆด้วยแป้นลูกศร
           และมีบล็อกบางอย่างที่ทำบางสิ่งเมื่อนักแสดงชนหรือคลิก ไปลองกันดูเลยและขอให้สนุก!
@@ -2393,12 +2393,12 @@ th:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
+        text: 'Hi, I''m Kathleen Kennedy and I''m the producer of Star Wars: The Force
+          Awakens. Today you''ll be working with one of our stars, BB-8. BB-8 is a
           spherical droid. Everything he does and every movement that he makes is
           controlled by computer software. Computer science impacts every industry,
           from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+          worked together to make a film like The Force Awakens.'
       2:
         image: notes/starwars_intro_2.JPG
         text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
@@ -2500,7 +2500,7 @@ th:
         text: Congratulations, you did it! You programmed BB-8. Now I think we're
           ready for something harder. Let's go for it. Now that you've learned the
           basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+          starring R2-D2 and C-3PO.
       3:
         image: notes/starwars_events_3.JPG
         text: 'To make a game, we need to learn about something that game programmers
@@ -2540,7 +2540,7 @@ th:
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
+        text: Hi, my name is Alice and I run the product and engineering teams here
           at Code.org and I worked on this tutorial that you're playing through right
           now.
       2:
@@ -2636,7 +2636,7 @@ th:
         text: Congratulations, you did it! You programmed BB-8. Now I think we're
           ready for something harder. Let's go for it. Now that you've learned the
           basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+          starring R2-D2 and C-3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: 'To make a game, we need to learn about something that game programmers
@@ -2665,7 +2665,7 @@ th:
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: Hi, my name is Alice and I run the project and engineering teams here
+        text: Hi, my name is Alice and I run the product and engineering teams here
           at Code.org and I worked on this tutorial that you're playing through right
           now.
       2:
@@ -3332,66 +3332,66 @@ th:
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What
-          I want to show you is just over this mesa plateau. I think you''re going
-          to love it!'
+        text: 'สเตซี่: สแต้มปี้, ลิซซี่, เพรสตัน-ขอบคุณนะที่มากับฉัน สิ่งที่ฉันต้องการที่จะแสดงให้พวกเธอได้เห็นอยู่เลยที่ราบสูงบนยอดเขานี้ไปไม่ไกลนัก
+          ฉันคิดว่าพวกเธอคงจะชอบมันมากแน่ๆเลย!'
       2:
         image: notes/mc_2017_agent_intro_2.png
-        text: Wait a minute - there's a hole in the track! (screaming)
+        text: ดูนั่นซิ – มีหลุมอยู่บนรางรถไฟ! (เสียงกรีดร้อง)
       3:
         image: notes/mc_2017_agent_intro_3.png
-        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a
-          hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather
-          blocks to fix it. Preston: Let''s make it a race. First one back to the
-          top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather
-          some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy:
-          I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine?
-          Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game
-          broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy:
-          Does anyone know how to write Minecraft code?'
+        text: 'ทุกคนปลอดภัยดีใช่ไหม? สแตมปี้: โอ้ ฉันเห็นแล้วว่าปัญหามันคืออะไร ดูนี่ซิ!
+          มีหลุมอยู่บริเวณรางรถไฟนี่ด้วย สเตซี่: จริงๆเหรอ สแต้มปี้? ลิซซี่: บางทีเราควรจะรวบรวมบล็อกเข้าด้วยกันเพื่อเอามาใช้แก้ไขปัญหานี้
+          เพรสตัน: มาแข่งขันกันเลย คนแรกที่กลับมาถึงยอดนี่ก่อนคือผู้ชนะ สเตซี่: ตกลง
+          ทุกคนเข้าประจำที่ ระวัง ไป! โอเค ฉันแค่เพียงจะรวบรวมเครื่องปั้นดินเผาบางส่วนนี้เหล่านี้เข้าด้วยกัน
+          รอฉันก่อน พวกเรา ฉันไม่สามารถขุดเอาพวกมันขึ้นมาได้! พรสตัน: ฉันก็เหมือนกัน
+          ลิซซี่: ฉันก็ทำไม่ได้เหมือนกัน สเตซี่: โอเค แปลกจริงๆ สแต้มปี้; พวกเธอขุดได้ไหม?
+          สแตมป์ปี้: ฉันขุดไม่ได้! สเตซี่: โอเค ทุกคนใจเย็นๆ สแต้มปี้: เกมเสียหรือเปล่า?
+          สเตซี่: ถ้ามันเสีย แล้วเราจะซ่อมมันได้อย่างไร? ลิซซี่: ไม่รู้ซิ สแต้มปี้:
+          มีใครรู้วิธีการเขียนโค้ดไมน์คราฟท์บ้างไหม?'
       4:
         image: notes/mc_2017_agent_intro_4.png
-        text: "(poof) Preston: What is that? Stampy: I've never seen one of these
-          before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston:
-          Okay, what is going on? Someone needs to go back to the real world and fix
-          this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
+        text: "โอ้ ว้าว! เพรสตัน: อะไรนี่ สแต้มปี้: ฉันไม่เคยเห็นอะไรอย่างนี้มาก่อนเลย
+          \nลิซซี่: มันน่ารักจังเลย \nสเตซี่: คือมัน... คือมันเชื่องไหม\nเพรสตัน:
+          โอเค เกิดอะไรขึ้น ต้องมีใครบางคนกลับไปโลกจริงๆ และจัดการแก้ไขมันให้ได้\nทุกคน:
+          แบบเดิมอีกแล้วเหรอ! \nสเตซี่: ไม่เอาน่---(ถอนหายใจ) โอเค ฉันไปเองก็ได้"
       5:
         image: notes/mc_2017_agent_intro_5.png
-        text: Oh, okay, hey, so I'm in the real world now. I'm going to go try to
-          find the Minecraft offices.
+        text: |-
+          โอh โอเค ตอนนี้ฉันอยู่ในโลกจริงๆ แล้ว
+          ฉันจะลองค้นหาออฟฟิศของไมน์คราฟท์ดู
       6:
         image: notes/mc_2017_agent_intro_6.png
-        text: But, I'm going to need your help. Start doing the tutorial, start learning
-          how to code, and I'll catch up with you guys after a few levels, okay? Wish
-          me luck! I think it's this way. Ow! Cactus! I'm okay!
+        text: |-
+          แต่ฉันต้องการความช่วยเหลือจากพวกเธอ
+          ขอให้พวกเธอเริ่มลงมือทำแบบฝึกหัด เริ่มเรียนรู้วิธีการเขียนโค้ด
+          แล้วฉันจะพยายามตามพวกนายไปให้ทัน หลังจากผ่านไปสองสามระดับแล้ว ตกลงมั้ย?
+          อวยพรให้ฉันโชคดีด้วยนะ ฉันว่าฉะนน่าจะไปทางนี้ โอ้ว!
+          ต้นตะบองเพชร! ฉันไม่เป็นไรหรอก!
       7:
         image: notes/mc_2017_agent_intro_7.png
-        text: To complete the Hour of Code challenge, you'll need to write code to
-          program the agent. You'll work together with The Agent to clear any obstacles
-          in your path, so you can pick up the items you'll need for your journey.
-          Only the Agent can place and break blocks, and only you can collect items.
-          Your screen is split into three main parts. On the left is Minecraft.
+        text: |-
+          เพื่อเอาชนะความท้าทายในชั่วโมงแห่งโค้ดนี้ คุณจะต้องเขียนโค้ดเพื่อควบคุมเอเจนท์หรือตัวแทนของคุณ คุณจะต้องทำงานร่วมกับเอเจนท์เพื่อขจัดอุปสรรคต่าง ๆ ที่อยู่ตามเส้นทางของคุณ เพื่อที่คุณจะสามารถเก็บของต่าง ๆที่จำเป็นสำหรับใช้ในการเดินทาง
+          เพราะเอเจนท์เท่านั้นที่สามารถวางหรือทำลายบล็อกต่าง ๆ ได้ และคุณเท่านั้นที่สามารถเก็บของต่างๆ ได้ หน้าจอของคุณจะถูกแบ่งออกเป็นสามส่วนหลัก ด้านซ้ายมือสุดก็คือเกมไมน์คราฟท์นั่นเอง
       8:
         image: notes/mc_2017_agent_intro_8.png
-        text: The middle area is the toolbox with commands that the Agent can understand.
+        text: ส่วนตรงกลางคือกล่องเครื่องมือ ที่ประกอบไปด้วยคำสั่งต่าง ๆ ที่เอเจนท์สามารถเข้าใจได้
       9:
         image: notes/mc_2017_agent_intro_9.png
-        text: And on the right, is the workspace. That's where you stack the commands
-          to build your program to control the Agent.
+        text: และด้านขวามือสุดก็คือ ส่วนพื้นที่ทำงาน ที่เอาไว้ใช้เรียงต่อบล็อกคำสั่งต่าง
+          ๆ เพื่อสร้างโปรแกรมที่ใช้ในการควบคุมเอเจนท์
       10:
         image: notes/mc_2017_agent_intro_10.png
-        text: The Agent can walk, turn, and activate pressure plates. It can also
-          destroy blocks and place blocks. When it places the block like these minecart
-          rails, it places it underneath itself.
+        text: |-
+          เอเจนท์สามารถเดิน เลี้ยว และเปิดการทำงานของแป้นกด นอกจากนี้มันยังสามารถทำลายบล็อกและวางบล็อกลงไป
+          เมื่อมันวางบล็อก อย่างเช่น บล็อกรางรถสำหรับรถบรรทุกสินแร่ในเหมือง มันจะวางบล็อกรางรถเอาไว้ใต้บล็อกที่ตัวมันเองยืนอยู่ในตอนนั้น
       11:
         image: notes/mc_2017_agent_intro_11.png
         text: และหากคุณลืมไปว่าต้องทำอะไร ก็จะมีคำแนะนำสำหรับแต่ละด่านอยู่ด้านบน
       12:
         image: notes/mc_2017_agent_intro_12.png
-        text: If you want to try again, you can hit the blue reset button to reset
-          everything to where it started. And if you need to delete a block of code,
-          drag it from your workspace to the toolbox. Remember to hit run to get the
-          Agent moving. Okay, go ahead and try out the first few levels. Good luck!
+        text: |-
+          ถ้าหากคุณอยากจะลองทำใหม่อีกครั้ง คุณสามารถคลิกที่ปุ่ม ตั้งค่าใหม่ สีน้ำเงินเพื่อตั้งค่าทุกอย่างใหม่อีกครั้งเหมือนตอนเริ่มต้น
+          และถ้าหากว่าคุณต้องการที่จะลบบล็อกของโค้ดใดๆ ให้ลากมันกลับมาจากส่วนพื้นที่ทำงานมาปล่อยไว้ที่ส่วนกล่องเครื่องมือ จำไว้เสมอว่าจะต้องคลิกที่ปุ่ม เริ่ม เพื่อให้เอเจนท์เริ่มทำตามคำสั่งเสมอ โอเค เราเริ่มลุยกันในด่านแรก ๆ เลยนะ ขอให้โชคดี!
     mc_2017_repeat:
       1:
         image: notes/mc_2017_repeat_1.png
@@ -3446,68 +3446,63 @@ th:
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
-        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour.
-          Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+        text: "เพรสตัน: ฉันไม่ได้อยากที่จะโม้หรอกนะ แต่ฉันเล่นปากัวร์ได้ไม่เลวเลยนะ
+          \nลิซซี่: นอนกันเถอะ กว่าสเตซี่จะกลับมาก็คงจะสว่างแล้ว"
       2:
         image: notes/mc_2017_functions_2.png
-        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I
-          know how to solve the problem I''m having in my game. I think I can use
-          a function. Let me just open this.'
+        text: 'สเตซี่: โอเค เพื่อนทุกๆคน ฉันกลับมาจากสำนักงานของไมน์คราฟท์ และฉันคิดว่า
+          ฉันรู้วิธีการแก้ปัญหาที่เกิดขึ้นกับเกมของฉันแล้ว ผมคิดว่า ฉันคิดว่าฉันสามารถใช้ฟังก์ชันเป็นแล้ว
+          มาลองให้ฉันเปิดใช้ดู'
       3:
         image: notes/mc_2017_functions_3.png
-        text: So a function is a specific set of instructions to accomplish a certain
-          task, kind of like a recipe. In the next few levels, you'll have access
-          to functions that you can use to solve the puzzles.
+        text: ฟังก์ชั่นคือชุดคาสั่งที่เฉพาะเจาะจง โดยมีวัตถุประสงค์เพื่อให้บรรลุผลสาเร็จกับงานบางอย่าง
+          มันก็คล้าย ๆ กับสูตรการทำอาหารนั่นแหละ ในอีกไม่กี่ระดับต่อจากนี้ คุณก็จะสามารถเข้าถึงฟังก์ชันที่คุณสามารถใช้เพื่อแก้ปริศนาเพื่อพิชิตด่านต่าง
+          ๆ ได้
       4:
         image: notes/mc_2017_functions_4.png
-        text: Look at the code in the function when it's in the workspace to see what
-          it does.
+        text: ลองดูโค้ดของฟังก์ชั่นที่วางอยู่บนพื้นที่ทำงาน ดูซิว่ามันทำอะไรได้บ้าง
       5:
         image: notes/mc_2017_functions_5.png
-        text: Then, find the block with that name in the toolbox and drag it from
-          the toolbox to the when run block.
+        text: จากนั้นให้หาบล็อกคำสั่งที่มีชื่อฟังก์ชั่นจากบริเวณกล่องเครื่องมือ แล้วลากมาวางต่อภายใต้บล็อกเมื่อเรียกใช้งาน
       6:
         image: notes/mc_2017_functions_6.png
-        text: Remember, you can use the same function every time you need to run the
-          same set of instructions to do something, like build a bridge. Good luck,
-          I know you can do it!
+        text: จาไว้ว่า คุณสามารถใช้ฟังก์ชั่นเดียวกันทุก ๆ ครั้งที่คุณต้องการเรียกใช้งานชุดคำสั่งเดียวกันเพื่อทำบางอย่างที่เหมือนกัน
+          เช่น การสร้างสะพาน ขอให้โชคดีนะ ฉันรู้ว่าคุณทำได้!
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
-        text: 'Preston: Congratulations!'
+        text: 'เพลสตั้น: ยินดีด้วยนะครับ!'
       2:
         image: notes/mc_2017_congratulations_2.png
-        text: 'Lizzy: Congratulations!'
+        text: 'ลิซซี่: ยินดีด้วยค่ะ!'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: Congratulations, you did it!'
+        text: 'แสตมปี้: ขอแสดงความยินดีด้วยนะ เธอทำสำเร็จแล้ว!'
       4:
         image: notes/mc_2017_congratulations_4.png
-        text: 'Stacy: Congratulations guys, you totally rocked that! And now that
-          you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve
-          learned about loops, functions, and what a software Agent does.'
+        text: 'สเตซี่: ยินดีกับคุณด้วยนะ คุณสามารถผ่านอุปสรรคมาได้จนสาเร็จ ตอนนี้คุณผ่านหลักสูตรชั่วโมงแห่งโค้ดอย่างเรียบร้อย
+          คุณสามารถเริ่มเขียนโค้ดเกมไมน์คราฟท์ได้แล้วเพราะคุณได้เรียนรู้เรื่องการใช้ลูป
+          ฟังก์ชั่น และสิ่งที่ซอฟท์แวร์เอเจนท์สามารถทำได้'
       5:
         image: notes/mc_2017_congratulations_5.png
-        text: Now, it's time for the free play level, where you are the developer.
-          Use any remaining time to write your own functions to explore, mine, and
-          build.
+        text: ตอนนี้ถึงเวลาเล่นอย่างอิสระ ในระดับที่คุณเป็นนักพัฒนาซอฟต์แวร์ด้วยตนเอง
+          ใช้เวลาที่เหลือในการเขียนฟังก์ชันของคุณเองเพื่อสารวจ ทำเหมืองและสร้างสิ่งต่าง
+          ๆ
       6:
         image: notes/mc_2017_congratulations_6.png
-        text: 'You can take the code that you write in this level into your Minecraft
-          world on Minecraft: Education Edition. Just click ''Finish'' and follow
-          the instructions for getting the link to use in your world. to continue
-          coding with the Agent. Have fun, and good job!'
+        text: 'คุณสามารถใช้โค้ดที่คุณเขียนในระดับนี้ นำไปใส่ลงในโลกไมน์คราฟท์ของคุณใน
+          ไมน์คราฟท์: รุ่นสำหรับภาคการศึกษา เพียงแค่คลิก ''เสร็จสิ้น'' และทำตามคำแนะนาในการรับลิงก์เพื่อนำไปใช้ในโลกของคุณ
+          เพื่อภารกิจต่อไปในการเขียนโค้ดให้กับเอเจนท์ ขอให้สนุกและได้ผลงานที่ดีเยิ่ยมนะครับ!'
       7:
         image: notes/mc_2017_congratulations_7.png
-        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show
-          you what it can do. Look, it''s doing it! I told it to build a staircase
-          out of these terra cotta blocks, now we can just use this to get out of
-          here. And you guys, it''s not just staircases. I can tell the Agent to do
-          anything I want, and it will do it for me.'
+        text: |-
+          สเตซี่: ฉันกลับมาแล้ว เพื่อนทุกคน นี่คือเอเจนท์! ฉันจะแสดงให้ดูว่าเอเจนท์ทำอะไรได้บ้าง
+          ดูสิ มันกาลังทำให้เราอยู่นี่ไง! ฉันบอกให้มันสร้างบันไดโดยทำจากบล็อกเครื่องปั้นดินเผาเหล่านี้ ตอนนี้เราสามารถใช้มันเพื่อหนีออกไปจากที่นี่ได้ และไม่ใช้แค่บันไดเท่านั้นนะเพื่อนๆ ฉันสามารถบอกเอเจนท์ให้ทำทุกอย่างที่ฉันต้องการ และมันก็จะทำให้ฉันได้
       8:
         image: notes/mc_2017_congratulations_8.png
-        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used
-          code!'
+        text: |-
+          สแตมป์ปี่: เธอทำมันได้อย่างไงน่ะ?
+          สเตซี่: มันเป็นเรื่องง่ายจริงๆ ฉันแค่ใช้โค้ดเท่านั้นแหละ
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png

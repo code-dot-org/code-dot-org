@@ -5,7 +5,7 @@ pt-BR:
       name:
         csp-2017:
           assignment_family_title: Princípios da ciência da computação
-          title: Computer Science Principles ('17-'18)
+          title: Princípios da Ciência da Computação ('17-'18)
           version_title: "'17-'18"
           description_student: In fall 2016, the College Board launched its newest
             AP® course, AP Computer Science Principles. The course introduces students
@@ -25,8 +25,8 @@ pt-BR:
             opportunities.
           description_short: Learn foundational computer science concepts.
         csd-2017:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries ('17-'18)
+          assignment_family_title: Descobertas da Ciência da Computação
+          title: Descobertas da Ciência da Computação ('17-'18)
           version_title: "'17-'18"
           description_student: Computer Science Discoveries (CS Discoveries) is an
             introductory computer science course that empowers students to create
@@ -46,15 +46,22 @@ pt-BR:
           description_teacher: Este é um curso para todasascoisas e tem uma descrição
             mais detalhada para os professores
         csd-2018:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries 2018
+          assignment_family_title: Descobertas da Ciência da Computação
+          title: Descobertas da Ciência da Computação (18-19)
           version_title: "'18-'19"
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: An introductory computer science course that empowers
+            students to create authentic artifacts.
+          description_student: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
         csp-2018:
           assignment_family_title: Princípios da ciência da computação
-          title: Computer Science Principles ('18-'19)
+          title: Princípios da Ciência da Computação ('18-'19)
           version_title: "'18-'19"
           description_short: Learn foundational computer science concepts.
           description_student: In fall 2016, the College Board launched its newest

@@ -104,6 +104,8 @@ sk:
       Musíte sa prihlásiť zadaním hesla nižšie.
     use_clever: Ľutujeme, Vaše Code.org konto nie je prepojené s Vašim %{provider}.
       Musíte sa prihlásiť cez Smart portál nižšie.
+    unable_to_connect_provider: Nedokázali sme prepojiť Váš účet na Code.org s %{provider}.
+      Skúste prosím znova.
   signup_form:
     student_count: "%{count} študentov sa už zaregistrovalo."
     teacher_count: "%{count} učitelov sa už zaregistrovalo."
@@ -316,7 +318,7 @@ sk:
       free_play:
         playlab: Vytvoriť aplikáciu
         artist: Nakresliť niečo
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Vytvoriť aplikáciu
         gamelab: Vytvorte projekt v Hernom laboratóriu
         weblab: Vytvorte prjekt vo Webovom laboratóriu (beta verzia)
@@ -449,6 +451,7 @@ sk:
     enter_parent_email: Zadajte emailovú adresu rodiča alebo zodpovedného zástupcu
       (pre obnovenie hesla)
     update: Aktualizujte konto
+    account_successfully_updated: Konto bolo úspešne zmenené.
   user_level:
     completed: Dokončené
     tried: Vyskúšaný
@@ -481,7 +484,7 @@ sk:
     student_finished: Dokončil si všetky cvičenia, vyber si ďaľšiu triedu %{online_link}
       alebo v %{local_school_link}
     local_school: miestna škola
-    online: Online
+    online: online
     see_details: Pozri detaily
     view_course: Prezrieť kurz
     prize_info: 'Ceny za účasti (iba pre učiteľov verejných škôl v U.S.): Nad $1,000
@@ -1262,6 +1265,10 @@ sk:
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  stage_extras_teacher_message: Pre niektoré z Vašich sekcií máte vypnuté Doplnky
+    k lekciám. Vaši študenti neuvidia túto stránku až kým ju nezapnete. Doplnky k
+    lekciám môžete zapnúť navštívením Vašej <a href='http://code.org/teacher-dashboard'>učiteľskej
+    domovej stránky</a>.
   locked_stage: Obsah tejto úrovne nie je viditeľný, pretože táto úroveň je momentálne
     zamknutá. Tvoj učiteľ odomkne túto úroveň, keď sa na nej bude pracovať, alebo
     keď bude kontrolovať tvoje odpovede.
@@ -1320,6 +1327,126 @@ sk:
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+    form_labels:
+      first_name: Meno
+      first_name_preferred: Uprednostňované Krstné Meno
+      last_name: Priezvisko
+      email: E-mail
+      email_alternate: Ďaľšia emailová adresa
+      gender: Rodová identita
+      school_name: Názov školy
+      school_city: Mesto
+      school_country: Krajina
+      ages: Ktoré ročníky vyučujute tento rok?
+      subjects: Ktoré predmety vyučujute tento rok?
+      resources: Ktoré z nasledovných zdrojov používate pri výučbe informatiky?
+      robotics: Ktoré z nasledovných robotických zdrojov používate pri výučbe?
+      workshop_organizer: Organizér workshopov
+      workshop_facilitator: Usporiadateľ workshopov
+      workshop_course: Kurz workshopov
+      email_opt_in: Súhlasím, že Code.org môžete zdieľať moje kontaktné informácie
+        a súhrnné údaje o mojich triedach s medzinárodným Code.org partnerom v mojej
+        krajine.
+      legal_opt_in: 'Odoslaním tohto formuláru súhlasíte so zdieľaním Vašich informácií
+        a spôsobu používania Code.org a Nástrojov pre vydelávanie profesionálov s
+        medzinárodným Code.org partnerom vo Vašej krajine, školským obvodom a organizátormi.
+        S týmto partnerom budeme zdieľať Vaše kontaktné údaje, ktoré kurzy/lekcie
+        absolvujete a súhrnné dáta o Vašej triede. Tie zahrňujú počet študentov vo
+        Vašich triedach, demografické rozdelenie Vašej triedy a názov Vašej školy
+        a školského obvodu. Nebudeme zdieľať žiadne informácie o jednotlivých študentoch:
+        všetky takéto informácie budú anonymizované a súhrnné. Naši medzinárodní partneri
+        a organizátori sú zmluvne zaviazaní zaobchádzať s týmito údajmi na rovnako
+        dôvernej úrovni ako na Code.org všeobecne.'
+    form_entries:
+      gender:
+        male: Muž
+        female: Žena
+        non_binary: Nebinárne
+        not_listed: Uprednosťnovaný termín nie je v zozname
+        none: Preferujem neodpovedať
+      school_country:
+        canada: Kanada
+        chile: Čile
+        israel: Izrael
+        malaysia: Malajzia
+        mexico: Mexiko
+        thailand: Thajsko
+      ages:
+        ages_under_6: "< 6 rokov"
+        ages_7_8: 7-8 rokov
+        ages_9_10: 9-10 rokov
+        ages_11_12: 11-12 rokov
+        ages_13_14: 13-14 rokov
+        ages_15_16: 15-16 rokov
+        ages_17_18: 17-18 rokov
+        ages_19_over: 19 a viac rokov
+      subjects:
+        cs: Počítačová veda
+        ict: IT
+        math: Matematika
+        science: Veda
+        history: História / Sociálne vedy
+        la: Jazykové umenia
+        efl: Angličtina ako cudzí jazyk
+        music: Hudba
+        art: Umenie
+        other: 'Iné:'
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        kodable: Kodable
+        lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Iné:'
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO pre výchovu
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Malinová Pi
+        wonder: Seminár Wonder
+        other: 'Iné:'
+      workshop_course:
+        csf_af: Základy informatiky (kurzy A-F)
+        csf_express: Základy informatiky (skrátená verzia)
+      email_opt_in:
+        opt_in_yes: Áno
+        opt_in_no: Nie
+    international_opt_in:
+      title: Účasť na workshope pre učiteľov z mimo USA
+      intro: Ďakujeme, že ste obetovali Váš čas a absolvovali tréning podľa osnov
+        na Code.org. Naša misia - priniesť možnosť naučiť sa informatiku všetkým deťom
+        po celom svete - by nebola možná bez Vašej podpory.
+      instructions: Vyplňte prosím formulár nižšie s potvrdením, že 1) ste sa zúčastnili
+        tréningového workshopu organizovaného jedným z našich medzinárodných Code.org
+        partnerov, a 2) súhlasíte so zdieľaním Vašich údajov s naším medzinárodným
+        Code.org partnerom vo Vašej krajine, aby sme Vám mohli pomôcť pri Vašej práci
+        - výučbe informatiky.
+      thanks: Ďakujeme Vám za odoslanie! Tešíme sa, že Vás budeme môcť podporovať
+        pri spoznávaní Code.org a našich nástrojov. Dajte nám prosím vedieť Vaše nápady,
+        otázky a postrehy emailom na support@code.org alebo príspevkom vo fóre pre
+        učiteľov!
+    logged_out:
+      heading: Ďakujeme Vám za prejavený záujem o Vzdelávací program pre profesionálov!
+      body: Ak chcete začať, musíte sa najprv prihlásiť do Vášho účtu na Code.org.
+        Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku, navštívte
+        <a href="%{url}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
+    not_teacher:
+      body: Ďakujeme Vám za záujem o Vzdelávací program pre profesionálov na Code.org!
+        Momentálne ste prihlásený ako študent. Vytvorte si prosím <a href="%{create_teacher}">konto
+        pre školiteľa</a> alebo prejdite do <a href="%{user_settings}">nastavení užívateľa</a>
+        pre zmenu typu Vášho konta na zo študentského na učiteľské.
+      more: Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku,
+        navštívte <a href="%{pl_overview}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
+    no_teacher_email:
+      body: Váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku
+        s nastaveniami Vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte
+        tento formulár.
   courses_category: Full Courses
   cookie_banner:
     message: Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s

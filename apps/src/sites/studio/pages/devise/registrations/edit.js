@@ -1,9 +1,13 @@
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
+import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import experiments from '@cdo/apps/util/experiments';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -15,6 +19,7 @@ const {
   authenticationOptions,
   isGoogleClassroomStudent,
   isCleverStudent,
+  dependedUponForLogin,
 } = scriptData;
 
 $(document).ready(() => {
@@ -47,6 +52,21 @@ $(document).ready(() => {
       isGoogleClassroomStudent,
       isCleverStudent,
     );
+  }
+
+  if (experiments.isEnabled(experiments.ACCOUNT_DELETION_NEW_FLOW)) {
+    const deleteAccountMountPoint = document.getElementById('delete-account');
+    // Replace deleteAccountMountPoint Rails contents with DeleteAccount component.
+    if (deleteAccountMountPoint) {
+      ReactDOM.render(
+        <DeleteAccount
+          isPasswordRequired={isPasswordRequired}
+          isTeacher={userType === 'teacher'}
+          dependedUponForLogin={dependedUponForLogin}
+        />,
+        deleteAccountMountPoint
+      );
+    }
   }
 
   initializeCreatePersonalAccountControls();

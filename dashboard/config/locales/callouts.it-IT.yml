@@ -25,10 +25,10 @@ it:
         screenSelectorCallout3: Pick the screen you made
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the name of your screen here.
+        changePlace1ID: Change the id of your screen here.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's title
+        appLabIntro2_designMenu: Use these menus to change your app's "text"
         appLabIntro2_textColor: Scroll down to change the "text color"
       AppLab Intro 2 - Edit startScreen2_callout:
         applabIntro2storyText: Click the story text on this screen
@@ -37,7 +37,7 @@ it:
         appLabIntro2_textColor: Try out some of the different properties you can change
           below
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag another button into your app
+        designToolboxCallOut: Drag a button onto your screen.
         changeButtonID: Choose a clear "id" for your button. For example "callFriendButton"
           or "goOutsideButton"
         screenSelectorCallout3: Go to your "startScreen"
@@ -48,7 +48,8 @@ it:
           the right
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
       AppLab Intro 7 - Change Screen Color_callout:
-        applab_hoc_finish: Click here when you're done!
+        applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not,
+          hit 'Reset', change your code, and hit 'Run' again.
       AppLab Intro 7 - thisOrThatAddButton_callout:
         AppLabHoCFinal11: Ora sei in Modalità Interfaccia.
       AppLab_test02_callout: {}
@@ -188,6 +189,7 @@ it:
       CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro predict_2018_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: {}
       CSD U3 Sprites intro sprites_2018_callout: {}
       CSD U3 Sprites scene challenge_callout: {}
       CSD U3 Sprites scene challenge_2018_callout: {}
@@ -787,9 +789,9 @@ it:
         create_function: Clicca qui per aprire il riquadro "Funzioni", quindi clicca
           sul pulsante "Crea una funzione".
       NEW Course 4 Artist Params 2_callout:
-        create_function: ''
-        name_function: ''
-        write_draw_triangle_function: ''
+        create_function: 
+        name_function: 
+        write_draw_triangle_function: 
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Clicca su "Modifica" per aggiungere un parametro alla
           tua funzione
@@ -1059,8 +1061,8 @@ it:
           cambialo con qualunque cosa vuoi!
       course4_bee_for_challenge1_callout: {}
       course4_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col
-          mais, ma le altre verdure?
+        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
+          le pannocchie, ma con le altre verdure?
       course4_collector_nested_loops_challenge2_callout: {}
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: Questo numero ti dice quanti di questi blocchi puoi
@@ -1720,31 +1722,31 @@ it:
         courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere
           gli attori in diverse parti dello spazio di gioco.
       courseE_playLab_scaffold3_callout:
-        courseE_playLab_scaffold3_1: Porta l'attore su questa bandiera per andare
-          al livello successivo.
+        courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
+          per passare all'esercizio successivo.
       courseE_playLab_scaffold3_2018_callout:
-        courseE_playLab_scaffold3_1: Porta l'attore su questa bandiera per andare
-          al livello successivo.
+        courseE_playLab_scaffold3_1: Fai arrivare il personaggio 1 fino a questa bandierina
+          per passare all'esercizio successivo.
       courseF_IceAge_1_callout:
         playlab_drag_say_a: Trascina qui il blocco `attore 1 dice` and digita "Hello!"
       courseF_IceAge_10_callout: {}
       courseF_IceAge_11_callout: {}
       courseF_IceAge_2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       courseF_IceAge_3_callout: {}
       courseF_IceAge_4_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       courseF_IceAge_5_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       courseF_IceAge_6_callout: {}
       courseF_IceAge_7_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_IceAge_8_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Aggiungi blocchi qui
       courseF_IceAge_template_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_artist_embed_variables9_callout: {}
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room
@@ -1918,11 +1920,11 @@ it:
       courseF_bee_fwp4_2018_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col
-          mais, ma le altre verdure?
+        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
+          le pannocchie, ma con le altre verdure?
       courseF_bee_fwp_challenge2_2018_callout:
-        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro col
-          mais, ma le altre verdure?
+        courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
+          le pannocchie, ma con le altre verdure?
       courseF_bee_variables_1_2018_callout:
         courseF_bee_functions_1_2018_1: You can find your variables under here!
       courseF_bee_variables_2_2018_callout: {}
@@ -2318,38 +2320,38 @@ it:
       iceage_free_play_2018_callout: {}
       iceage_free_playcourseF_IceAge_11_callout: {}
       iceage_hello1_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello1_2018_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_hello2_2018_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_move_events_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_events_2018_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_to_actor_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_actor_2018_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_flag_callout: {}
       iceage_move_to_flag_2018_callout: {}
       iceage_repeat_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_repeat_2018_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_sound_and_points_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_sound_and_points_2018_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_throw_hearts_callout: {}
       iceage_throw_hearts_2018_callout: {}
       iceage_warn_embed_ice_age_callout: {}
       iceage_warn_ice_age_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       iceage_warn_ice_age_2018_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: {}

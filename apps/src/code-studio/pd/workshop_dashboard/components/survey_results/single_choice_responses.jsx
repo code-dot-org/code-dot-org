@@ -8,11 +8,17 @@ export default class SingleChoiceResponses extends React.Component {
     answers: PropTypes.object.isRequired,
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
-    otherAnswers: PropTypes.array //Free response "other" answers
+    otherText: PropTypes.string
   };
 
   render() {
     let totalAnswers = Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
+
+    // The split is needed for scale questions. The top and bottom responses have text
+    // like "1 - not ready / 5 - very ready" and we need to extract the number
+    let possibleAnswers = this.props.answerType === 'scale' ? this.props.possibleAnswers.map((x) => x.split(' ')[0]) : this.props.possibleAnswers;
+    let otherAnswers = _.difference(Object.keys(this.props.answers), possibleAnswers);
+
     return (
       <Panel>
         {this.props.question}
@@ -56,15 +62,37 @@ export default class SingleChoiceResponses extends React.Component {
               );
             })
           }
+          {
+            this.props.otherText && (
+              <tr>
+                <td>
+                  {
+                    (otherAnswers.length / totalAnswers)
+                      .toLocaleString('en-US', {
+                        style: 'percent',
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                      })
+                  }
+                </td>
+                <td style={{paddingLeft: '20px'}}>
+                  {otherAnswers.length}
+                </td>
+                <td style={{paddingLeft: '20px'}}>
+                  {this.props.otherText}
+                </td>
+              </tr>
+            )
+          }
           </tbody>
         </table>
         {
-          this.props.otherAnswers && (
+          this.props.otherText && otherAnswers.length > 0 && (
             <div>
               <br/>
-              Other:
+              {this.props.otherText}
               <ul>
-                {_.compact(this.props.otherAnswers).map((answer, i) => (<li key={i}>{answer}</li>))}
+                {_.compact(otherAnswers).map((answer, i) => (<li key={i}>{answer}</li>))}
               </ul>
             </div>
           )

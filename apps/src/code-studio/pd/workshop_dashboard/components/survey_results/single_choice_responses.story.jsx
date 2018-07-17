@@ -35,10 +35,12 @@ export default storybook => {
               'Mushrooms': 2,
               'Olives': 2,
               'Sausage': 3,
-              'Other': 6
+              'Corn': 1,
+              'Anything but pineapples lol': 1,
+              'Kalamata Olives specifically': 1
             }}
-            possibleAnswers={['Peppers', 'Onions', 'Mushrooms', 'Sausage', 'Olives', 'Pineapples', 'Other']}
-            otherAnswers={['Anchovies', 'Kalamata Olives', 'Corn', 'Corn', '', '']}
+            possibleAnswers={['Peppers', 'Onions', 'Mushrooms', 'Sausage', 'Olives', 'Pineapples']}
+            otherText={'Other toppings'}
             answerType="selectText"
           />
         )

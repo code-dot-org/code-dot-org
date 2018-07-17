@@ -35,6 +35,7 @@ export default class Results extends React.Component {
             possibleAnswers={question['options']}
             key={i}
             answerType={question['answer_type']}
+            otherText={question['other_text']}
           />
         );
       } else if (question['answer_type'] === 'text') {

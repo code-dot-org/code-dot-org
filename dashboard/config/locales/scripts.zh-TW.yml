@@ -156,7 +156,7 @@ zh-TW:
             'Studio: Create a Story':
               name: Play Lab - 創作一個故事
         playlab:
-          title: 播放實驗室
+          title: Play Lab
           description: 在 Play Lab 上創作故事或是遊戲！
           description_short: 在 Play Lab 上創作故事或設計遊戲！
           stages:
@@ -277,8 +277,8 @@ zh-TW:
               name: 變數
         algebra:
           title: 代數裡的計算機科學
-          description: Learn Functional Programming through Algebra
-          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra.
+          description_short: Learn Functional Programming through Algebra.
           description_audience: ''
           stages:
             'Calc: Defining Variables':
@@ -541,8 +541,13 @@ zh-TW:
               name: 所有關卡
         cspunit1:
           title: "（舊）計算機科學原理 單元 1 - 數位資訊"
-          description: CSP Unit 1 Stages
-          description_short: Make Black and White Images with the pixelation tool
+          description: This unit explores the technical challenges and questions that
+            arise from the need to represent digital information in computers and
+            transfer it between people and computational devices. This unit is a pilot
+            version and is no longer supported or updated. You can find the new units
+            at code.org/educate/csp.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Binary Numbers:
               name: 二進位數
@@ -654,8 +659,8 @@ zh-TW:
               name: CSP 是什麼？
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description: Lesson samples for csp
-          description_short: lesson samples for csp
+          description: Lesson samples for CSP
+          description_short: Lesson samples for CSP
           description_audience: ''
           stages:
             Lesson 14:
@@ -726,8 +731,13 @@ zh-TW:
               name: PDK5 介紹
         cspunit3:
           title: "（舊）計算機科學原理 單元 3 - 程式設計"
-          description: Programming in Javascript and AppLap
-          description_short: Programming
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             APIs and Function Parameters:
@@ -947,9 +957,9 @@ zh-TW:
             What to Expect:
               name: 有什麼期待
         sciencePD2:
-          title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          title: 'CS in Science: Part 2'
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           stages:
             Creating Breeds in Starlogo Nova:
               name: Creating Breeds in Starlogo Nova
@@ -966,7 +976,7 @@ zh-TW:
             Wrap-Up:
               name: 總結
         sciencePD3:
-          title: Computer Science in Science PD
+          title: 'CS in Science: Part 3'
           description: 學年支援 - 學期 1
           description_short: 學年支援 - 學期 1
           stages:
@@ -986,13 +996,12 @@ zh-TW:
           description_audience: ''
         cspunit2:
           title: "（舊）計算機科學原理 單元 2 - 網際網路"
-          description: |
-            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
-            structure and design of the internet and the implications of those design decisions including
-            the reliability of network communication, the security of data, and personal privacy. Topics
-            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
-            concerns.
-          description_short: 網際網路
+          description: In this unit, students extend their understanding of the internet
+            and how it functions by building off the concepts learned when sending
+            bits in Unit 1. This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: 挑戰 - 旅行銷售員問題
@@ -1071,7 +1080,10 @@ zh-TW:
               name: 設計程序
         allthethings:
           title: 所有的東西！
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test
+            applab levels (By design, applab levels only work if signed in. Normally,
+            we make people sign in, but this is only enforceable for a whole script
+            and would be annoying to do for this script).
           description_short: All the level types for UI testing
           description_audience: ''
           stages:
@@ -1080,7 +1092,7 @@ zh-TW:
             Anonymous student survey 2:
               name: 匿名學生問卷調查 2
             AppLab:
-              name: App實驗室
+              name: AppLab
             Artist:
               name: 藝術家
             Bee:
@@ -1265,7 +1277,7 @@ zh-TW:
             Necessary Background:
               name: 前備知識
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
+          title: CS in Algebra Part 2
           description: 學年支援
           description_short: 學年支援
           description_audience: ''
@@ -1314,8 +1326,8 @@ zh-TW:
               name: 前備知識
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1444,7 +1456,8 @@ zh-TW:
           description: Use the Odometer widget to control odometers with various number
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
-          description_short: Odometer widget
+          description_short: Use the Odometer widget to control odometers with various
+            number bases.
           description_audience: ''
           stages:
             Odometer Widget:
@@ -1491,16 +1504,19 @@ zh-TW:
         vigenere:
           title: Vigenere Cipher Widget
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
-            messages using a Vigenere Cipher
-          description_short: Vigenere Cipher Widget
+            messages using a Vigenere Cipher.
+          description_short: Use the Vigenere Cipher Widget to explore encrypting
+            and decrypting messages using a Vigenere Cipher.
           description_audience: ''
           stages:
             Vigenere:
               name: Vigenere
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description: CS in Algebra blended online school year study
-          description_short: CS in Algebra blended online school year study
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year
+            study'
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school
+            year study'
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1512,9 +1528,9 @@ zh-TW:
             Updates - Tweaks and Polish:
               name: Updates - Tweaks and Polish
         sciencePD3_pre1:
-          title: Computer Science in Science PD Phase 3 Before 1st In-Person
-          description: Phase 3 Blended Summer Study (Segment One)
-          description_short: Phase 3 Blended Summer Study Pre 1
+          title: CS in Science PD3 Before 1st In-Person
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          description_short: 'Phase 3: Academic Year Development Pre 1'
           description_audience: ''
           stages:
             Prep With Your Modules:
@@ -1528,14 +1544,16 @@ zh-TW:
           description: Use the Frequency Analysis Widget to analyze letter frequencies
             in an input text compared to expected frequencies for standard English.
             Use that comparison to explore cracking Shift and Substitution Ciphers.
-          description_short: Frequency Analysis Widget
+          description_short: Use the Frequency Analysis Widget to analyze letter frequencies
+            in a text compared to expected frequencies. Crack Shift and Substitution
+            Ciphers.
           stages:
             Frequency Analysis:
               name: Frequency Analysis
           description_audience: ''
         ECSPD3-Unit2:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description: Academic Year Development
+          title: 'Exploring Computer Science: Unit 2'
+          description: Online Professional Development Course
           description_short: 單元 2 線上 PD
           description_audience: ''
           stages:
@@ -1552,7 +1570,7 @@ zh-TW:
             Unit 2 Challenge:
               name: 單元 2 挑戰
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 3'
           description: 學年發展
           description_short: 學年發展
           description_audience: ''
@@ -1570,7 +1588,7 @@ zh-TW:
             Unit 3 Day-by-Day:
               name: Unit 3 Day-by-Day
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 4'
           description: 學年發展
           description_short: 學年發展
           description_audience: ''
@@ -1688,7 +1706,7 @@ zh-TW:
             Why Make Apps?:
               name: 為什麼要製作 App？
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
           description_short: Phase 3 Academic Year Development
           description_audience: ''
@@ -1707,8 +1725,8 @@ zh-TW:
               name: 總結
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description: CS in Algebra mid year lesson support
-          description_short: CS in Algebra mid year lesson support
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           description_audience: ''
           stages:
             Close and Next Steps:
@@ -1816,7 +1834,8 @@ zh-TW:
             This course uses JavaScript as the programming language, and App Lab as
             the programming environment to build apps, but the concepts learned in
             these lessons span all programming languages and tools.
-          description_short: Programming
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Canvas and Arrays in Apps:
@@ -1914,7 +1933,8 @@ zh-TW:
           title: "（舊）計算機科學原理 單元 5 - 效能任務"
           description: This unit covers the preparation and completion of the Explore
             and Create Performance Tasks.
-          description_short: Performance Tasks
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Create PT:
               name: Create PT
@@ -1927,15 +1947,16 @@ zh-TW:
           description_audience: ''
         cspunit4:
           title: "（舊）計算機科學原理 單元 4 - 數據"
-          description: Being able to digitally manipulate data, visualize it, identify
-            patterns, trends and possible meanings are important practical skills
-            that computer scientists do every day. The data rich world we live in
-            also introduces many complex questions related to public policy, law,
+          description: Being able to digitally manipulate data, visualize it, and
+            identify patterns, trends and possible meanings are important practical
+            skills that computer scientists do every day. The data-rich world we live
+            in also introduces many complex questions related to public policy, law,
             ethics and societal impact. Understanding where data comes from, having
             intuitions about what could be learned or extracted from it, and being
             able to use computational tools to manipulate data and communicate about
             it are the primary skills addressed in the unit.
-          description_short: Data
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Check Your Assumptions:
@@ -2038,7 +2059,7 @@ zh-TW:
             use data in your apps. The following material provides an overview of
             how these tools work, a sampling of example projects that can be built
             using these tools, and a space in which to build and submit a final project.
-          description_short: Data Apps
+          description_short: Learn to collect and use data in App Lab apps.
           description_audience: ''
           stages:
             Creating Javascript Objects:
@@ -2121,9 +2142,9 @@ zh-TW:
             Middle_School_Hackathon:
               name: Middle_School_Hackathon
         algebraPD1:
-          title: Computer Science in Algebra PD
+          title: CS in Algebra Part 1
           description: 通過函數式程式設計教代數
-          description_short: 通過函數式程式設計教代數
+          description_short: 'Phase 1: Online Introduction'
           description_audience: ''
           stages:
             Course Overview:
@@ -2481,10 +2502,11 @@ zh-TW:
             Post-Course Survey:
               name: Post-Course Survey
         csp6:
-          title: CS Principles Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create
             and Explore Performance Tasks.
-          description_short: Performance Tasks
+          description_short: Lessons guide students to prepare for and complete the
+            AP Performance Tasks.
           description_audience: ''
           stages:
             Create PT:
@@ -2564,7 +2586,7 @@ zh-TW:
             Using the Game Design Process:
               name: 使用遊戲設計流程
         2016_sciencePD_phase1:
-          title: Computer Science in Science PD 2016-2017
+          title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
           description_short: In Partnership with Project GUTS
           description_audience: ''
@@ -2780,10 +2802,15 @@ zh-TW:
               name: Turtle Programming
         cspassessment:
           title: "[Deprecated] 計算機科學原理總結評量"
-          description: 'This 55-question multiple choice assessment covers questions
-            across 7 big ideas of computer science: Creativity, Abstraction, Data,
-            Algorithms, Programming, The Internet, and Global Impact. '
-          description_short: Culminating
+          description: 'This assessment has been deprecated and is scheduled for removal
+            in Summer of 2017.  Students may complete the test and see their own results,
+            but a teacher will not be able to see results for students in a section.  Please
+            use the official CSP practice exam from the College Board.  [This 55-question
+            multiple choice assessment covers questions across 7 big ideas of computer
+            science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet,
+            and Global Impact.]'
+          description_short: This assessment has been deprecated and is scheduled
+            for removal in Summer of 2017.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
@@ -2807,7 +2834,9 @@ zh-TW:
           description: 'This 25 question multiple choice assessment covers questions
             across 7 big ideas of computer science: Creativity, Abstraction, Data,
             Algorithms, Programming, The Internet, and Global Impact.'
-          description_short: Culminating
+          description_short: This multiple choice assessment covers questions across
+            7 big ideas of computer science. It is part 1 of a two-part 50 question
+            exam.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 1:
@@ -2818,7 +2847,9 @@ zh-TW:
             across 7 big ideas of computer science: Creativity, Abstraction, Data,
             Algorithms, Programming, The Internet, and Global Impact.  It is part
             2 of a two-part 50 question exam'
-          description_short: Culminating
+          description_short: This multiple choice assessment covers questions across
+            7 big ideas of computer science. It is part 2 of a two-part 50 question
+            exam.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 2:
@@ -3181,7 +3212,7 @@ zh-TW:
             'Unplugged: Songwriting with Parameters':
               name: 不插電活動 - 用參數寫歌
         ecs-unit1:
-          title: ECS Part 1
+          title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
           description_short: 'Unit 1: Human-Computer Interaction'
           description_audience: ''
@@ -4132,10 +4163,10 @@ zh-TW:
             Unit 5 Overview:
               name: 單元 5 概覽
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing
-            to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 1.
           description_audience: ''
           stages:
             Unit 1 Overview:
@@ -4186,7 +4217,7 @@ zh-TW:
               name: 簡單加密
         fesbinary:
           title: 二進制（Binary）
-          description_audience: ''
+          description_audience: Falmouth Middle School
           description_short: ''
           description: ''
           stages:
@@ -4476,11 +4507,11 @@ zh-TW:
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
         csp2-support:
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing
-            to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 2. '
           stages:
             Unit 2 Overview:
               name: 單元 2 概覽
@@ -4866,7 +4897,7 @@ zh-TW:
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: ''
+          description_short: An introduction to computer science for early readers.
           description: "Course A is for early readers. Students will create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
@@ -4906,7 +4937,7 @@ zh-TW:
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: ''
+          description_short: An introduction to computer science for early readers.
           description: Course B is for early readers. Students will create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
@@ -4948,7 +4979,8 @@ zh-TW:
         coursec-draft:
           title: 'CS Fundamentals: Course C'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. Recommended for
             2nd grade.
@@ -4992,7 +5024,8 @@ zh-TW:
         coursed-draft:
           title: 'CS Fundamentals: Course D'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. Recommended for
             3rd grade.
@@ -5018,7 +5051,7 @@ zh-TW:
             Conditionals & Loops in Maze:
               name: Conditionals & Loops in Maze
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
             Impacts of Computing:
               name: Impacts of Computing
             More Programming with CS4FN:
@@ -5046,7 +5079,8 @@ zh-TW:
         coursee-draft:
           title: 'CS Fundamentals: Course E'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. The course culminates
             in a multi-day project. Recommended for 4th grade.
@@ -5094,7 +5128,8 @@ zh-TW:
         coursef-draft:
           title: 'CS Fundamentals: Course F'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. The course culminates
             in a multi-day project. Recommended for 5th grade.
@@ -5230,7 +5265,7 @@ zh-TW:
             Prep With Your Modules:
               name: Prep With Your Modules
         csp3-support:
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
           description_short: 教師專業學習課程 - CSP 單元 3
           description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 3 作準備。
@@ -5268,7 +5303,7 @@ zh-TW:
             External Style Sheets:
               name: 外部樣式表
         csp4-support:
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
           description_short: 教師專業學習課程 - CSP 單元 4
           description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 4 作準備。
@@ -5335,7 +5370,7 @@ zh-TW:
           title: 新的函式關卡
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
@@ -5546,7 +5581,7 @@ zh-TW:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
         csd5-draft:
-          title: ''
+          title: Draft of CSD5
           description_audience: ''
           description_short: ''
           description: ''
@@ -5655,7 +5690,7 @@ zh-TW:
             Analog Input:
               name: 模擬輸入
         coursee-ramp:
-          title: ''
+          title: coursee-ramp
           description_audience: ''
           description_short: ''
           description: ''
@@ -6890,9 +6925,11 @@ zh-TW:
           title: CSP Student Post-Course Survey
           description_audience: CSP Students
           description_short: CSP Student Post Course Survey
-          description: 'Welcome to the Code.org CS Principles Post-Course Survey.  This
-            survey takes about 10 minutes to complete.  Your responses are private
-            and anonymous.  '
+          description: Welcome to the Code.org CS Principles Post-Course Survey.  This
+            survey takes about 15 minutes to complete.  Your responses are private
+            and anonymous -- your teacher can see anonymous aggregate results for
+            the whole class.  The results are vital for your teacher and for Code.org
+            to sustain and improve the course.  Thanks for your time and consideration.
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -7902,7 +7939,7 @@ zh-TW:
               name: Thursday
             Wrap Up:
               name: 總結
-          title: CS Principles TeacherCon Novice Facilitators
+          title: CS Principles TeacherCon Novice Facilitator Reflection
           description_audience: CSP Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as
@@ -8255,7 +8292,7 @@ zh-TW:
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -8307,10 +8344,15 @@ zh-TW:
               name: CSP Mid-course survey
             Please complete the CSP Mid-course survey:
               name: Please complete the CSP Mid-course survey
-          title: ''
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Learn the basics of programming in JavaScript through
+            a top-down design approach using classic turtle drawing.
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -8383,9 +8425,12 @@ zh-TW:
               name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
-          description_short: ''
-          description: These lessons introduce you to App Lab through a series of
-            creative projects.
+          description_short: Create your own app in JavaScript using either block
+            based programming or text. If you've already done some programming with
+            blocks, take your skills to the next level.
+          description: Create your own app in JavaScript using either block based
+            programming or text. If you've already done some programming with blocks,
+            take your skills to the next level.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -8928,10 +8973,16 @@ zh-TW:
               name: Smart Clothing Design
             Intro to App Lab (13+):
               name: Intro to App Lab (13+)
-          title: PwC Access Your Potential
+          title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
-          description: ''
+          description: At PwC, we believe that all students have the potential to
+            be tomorrow’s leaders and tech-driven workforce. Access Your Potential
+            is our commitment to help close the opportunity gap by equipping young
+            people, especially those from disadvantaged communities, with the financial,
+            technology and career-selection skills they need to change the trajectory
+            of their lives. As part of our commitment, we’re excited to launch our
+            Access Your Potential middle school technology and careers curriculum.
         allthesurveys:
           stages:
             CSP pre survey Test:
@@ -8988,8 +9039,10 @@ zh-TW:
               name: 一小時玩 Minecraft
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft is back with a brand new activity for Hour
+            of Code!
+          description: Minecraft is back for the Hour of Code with a brand new activity!
+            Journey through Minecraft with code.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -9174,7 +9227,7 @@ zh-TW:
               name: Build a Star Wars Game
             Functions in Harvester:
               name: Functions in Harvester
-          title: Course E 2018
+          title: Course E 2018 (Outdated!)
           description_audience: ''
           description_short: ''
           description: ''
@@ -9238,7 +9291,7 @@ zh-TW:
               name: Revise Your Project
             Present Your Project:
               name: 說明你的專案
-          title: Course F 2018
+          title: Course F 2018 (Outdated)
           description_audience: ''
           description_short: ''
           description: ''
@@ -9931,7 +9984,7 @@ zh-TW:
                 and also a overview of the process they took to get to that final
                 design.\r\n"
         coursea-2018:
-          title: 課程 A
+          title: Course A (2018)
           assignment_family_title: 課程 A
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
@@ -9939,7 +9992,7 @@ zh-TW:
           description_audience: 'Ages: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: Unspotted Bugs
               description_student: ''
               description_teacher: 'This lesson will guide students through the steps
                 of debugging.  Students will learn the mantra: "What happened?  What
@@ -9956,7 +10009,7 @@ zh-TW:
                 sessions.  If you have more time, feel free to draw out the building
                 and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
-              name: 生活中的演算法 - 植物種植
+              name: Plant a Seed
               description_student: ''
               description_teacher: "In this lesson, students will relate the concept
                 of algorithms back to everyday, real-life activities by planting an
@@ -10002,13 +10055,13 @@ zh-TW:
                 To understand how helpful loops can be, students will need to be driven
                 to want an easier way to solve mundane problems.
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: Building on the concept of repeating instructions
                 from "Happy Loops," this stage will have students using loops to collect
                 treasure more efficiently on Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Ocean Scene with Loops
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images
                 by looping simple sequences of instructions. In the previous plugged
@@ -10023,7 +10076,7 @@ zh-TW:
                 the user exactly when the user wants it to. That is what events are
                 for.
             Events in Play Lab:
-              name: Events in Play Lab
+              name: On the Move with Events
               description_student: ''
               description_teacher: In this online activity, students will have the
                 opportunity to learn how to use events in Play Lab and to apply all
@@ -10032,15 +10085,15 @@ zh-TW:
             Programming in Bee:
               name: Programming in Bee
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programming with Harvester
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Loops with Harvester
             Sequencing in Maze:
-              name: Sequencing in Maze
+              name: Sequencing with Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
         express-2018:
-          title: Express Course
+          title: Express Course (2018)
           assignment_family_title: Express Course
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
@@ -10069,7 +10122,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops:
@@ -10113,7 +10166,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: While Loops with the Farmer
               description_student: ''
               description_teacher: ''
             Conditional Loops in Maze:
@@ -10145,11 +10198,11 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: ''
               description_teacher: ''
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: ''
               description_teacher: ''
             'Functions: Songwriting with Parameters':
@@ -10189,17 +10242,17 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: If/Else with Bee
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
               name: 迷宮中的程式設計
             Debugging in Maze:
-              name: Debugging in Maze
+              name: Debugging with Angry Birds
             Programming in Collector:
-              name: Programming in Collector
+              name: Collecting Treasure with Laurel
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
             'Loops: Getting Loopy':
               name: 學習迴圈
             Loops with Rey and BB-8:
@@ -10207,7 +10260,7 @@ zh-TW:
             Copyright and Creativity:
               name: Copyright and Creativity
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Looking Ahead with Minecraft
             Nested Loops in Bee:
               name: 蜜蜂裡的巢狀迴圈（Nested Loops）
             Nested Loops in Frozen:
@@ -10215,7 +10268,7 @@ zh-TW:
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
             'Functions: Songwriting':
               name: 歌曲創作
             Functions in Minecraft:
@@ -10235,19 +10288,19 @@ zh-TW:
             Envelope Variables:
               name: 信封變數
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             For Loop Fun:
               name: 有趣的計數迴圈
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Binary Bracelets:
               name: 二進制手環
             'Unplugged: Binary':
@@ -10261,12 +10314,12 @@ zh-TW:
             Relay Programming:
               name: 接力編程
         courseb-2018:
-          title: 課程 B
+          title: Course B (2018)
           assignment_family_title: 課程 B
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
-            (Similar to Course A, but with more variety for older students.)
+            Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -10290,7 +10343,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: My Robotic Friends Jr.
               description_student: ''
               description_teacher: ''
             Programming in Maze:
@@ -10302,15 +10355,15 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends Jr.
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -10318,25 +10371,28 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: A Royal Battle with Events
               description_student: ''
               description_teacher: ''
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             Sequencing with Scrat:
               name: Sequencing with Scrat
             Move It, Move It:
               name: 移動它，移動它
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
         coursed-2018:
-          title: New Course D Script
+          title: Course D (2018)
           assignment_family_title: 課程 D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Students develop their understanding of nested loops, while
+            loops, conditionals, and events. Beyond coding, students learn about digital
+            citizenship.
+          description_short: Learn about conditional statements and create your own
+            art, story or game.
+          description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: 方格紙編程
@@ -10351,7 +10407,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Debugging with Laurel
               description_student: ''
               description_teacher: ''
             Events in Bounce:
@@ -10359,7 +10415,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
@@ -10379,7 +10435,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: If/Else with Bee
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Maze:
@@ -10395,7 +10451,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Build a Play Lab Game:
-              name: Build a Play Lab Game
+              name: Ninjas vs. Pirates Game
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
@@ -10409,13 +10465,13 @@ zh-TW:
             Loops in Ice Age:
               name: Loops in Ice Age
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Snowflakes with Anna and Elsa
             Until Loops in Maze:
               name: Until Loops in Maze
             Conditionals in Maze:
               name: Conditionals in Maze
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
             Graph Paper Programming:
               name: 方格紙編程
             Relay Programming:
@@ -10526,9 +10582,10 @@ zh-TW:
           description_audience: ''
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment
-            questions that appeared in Units 1-5 in the course.  '
+            questions that appeared in Units 1-5 in the course.  Students may want
+            to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
-          title: 課程 C
+          title: Course C (2018)
           assignment_family_title: 課程 C
           description: Create programs with sequencing, loops, and events. Translate
             your initials into binary, investigate different problem-solving techniques,
@@ -10547,19 +10604,19 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
-              name: Debugging in Maze
+              name: Debugging with Angry Birds
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: 生活中的演算法 - 紙飛機
+              name: Paper Planes
               description_student: ''
               description_teacher: ''
             Programming in Collector:
-              name: Programming in Collector
+              name: Collecting Treasure with Laurel
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
@@ -10571,11 +10628,11 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Harvesting Crops with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -10587,7 +10644,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Chase Game with Events
               description_student: ''
               description_teacher: ''
             Screen Out the Mean:
@@ -10599,7 +10656,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Looking Ahead:
-              name: Looking Ahead
+              name: Looking Ahead with Minecraft
         csd6-2018:
           title: CSD 單元 6 - 物理運算
           description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
@@ -10703,14 +10760,14 @@ zh-TW:
             'Project: Prototype an Innovation':
               name: 專案：原型創新
         coursee-2018:
-          title: 課程 E
+          title: Course E (2018)
           assignment_family_title: 課程 E
           description: Start coding with algorithms, loops, conditionals, and events
             and then you’ll move on functions. In the second part of this course,
             design and create a capstone project you can share with your friends and
             family.
-          description_short: Quickly cover concepts in Course C & D and then go further
-            with functions.
+          description_short: Review concepts in Courses C & D, then go further by
+            learning functions.
           description_audience: 'Ages: 8-12'
           stages:
             'Programming: My Robotic Friends':
@@ -10718,7 +10775,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Coding with Comments
               description_student: ''
               description_teacher: ''
             Building a Foundation:
@@ -10730,15 +10787,15 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops:
@@ -10770,7 +10827,7 @@ zh-TW:
                 in the beginning video. In the puzzles, students will practice their
                 sequencing and debugging skills in Maze and Artist.
             Conditionals:
-              name: 條件判斷（Conditionals）
+              name: Conditionals with the Farmer
               description_student: You will get to tell the computer what to do under
                 certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops
@@ -10809,7 +10866,7 @@ zh-TW:
                 program. This lesson will help students intuitively understand why
                 combining chunks of code into functions can be such a helpful practice.
             Functions in Artist:
-              name: Functions in Artist
+              name: Functions with Artist
               description_student: Make complex drawings more easily with functions!
               description_teacher: Students will be introduced to using functions
                 on Code.org. Magnificent images will be created and modified with
@@ -10817,14 +10874,14 @@ zh-TW:
                 learn about nesting functions by calling one function from inside
                 another.
             Functions in Bee:
-              name: Functions in Bee
+              name: Functions with Bee
               description_student: Don't write too much code to gather all of the
                 nectar and honey. Use functions instead!
               description_teacher: In the second round of practice with online functions,
                 students will navigate complex paths, collect plenty of nectar, and
                 make lots of honey.
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: ''
               description_teacher: ''
             Determine the Concept:
@@ -10922,15 +10979,15 @@ zh-TW:
             Functions in Minecraft:
               name: Functions in Minecraft
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digital Sharing
         coursef-2018:
-          title: 課程 F
+          title: Course F (2018)
           assignment_family_title: 課程 F
           description: Learn to use different kinds of loops, events, functions, and
             conditionals. Investigate different problem-solving techniques and discuss
@@ -10946,7 +11003,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
-              name: Sequence in Maze
+              name: Coding with Comments
               description_student: ''
               description_teacher: ''
             Building a Foundation:
@@ -10958,15 +11015,15 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
@@ -11063,7 +11120,7 @@ zh-TW:
                 have extra structures built right in. These new structures will allow
                 students to create code that is more powerful and dynamic. '
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: Buzz buzz. In these puzzles you will be guiding
                 a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops
@@ -11072,7 +11129,7 @@ zh-TW:
                 walked through using for loops to more effectively solve complicated
                 problems.
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: Get ready to make your next masterpiece. Here you
                 will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for
@@ -11179,23 +11236,23 @@ zh-TW:
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
             Conditionals:
-              name: 條件判斷（Conditionals）
+              name: Conditionals with the Farmer
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Conditionals in Farmer:
-              name: Conditionals in Farmer
+              name: Conditionals with the Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
@@ -11300,7 +11357,7 @@ zh-TW:
                 the lesson groups reflect on their experiences with the activity and
                 make connections to the types of problem solving they will be doing
                 for the rest of the course. '
-              description_teacher: 'In this lesson, students work in groups to design
+              description_teacher: In this lesson, students work in groups to design
                 aluminum foil boats that will support as many pennies as possible.
                 Groups have two rounds to work on their boats, with the goal of trying
                 to hold more pennies than they did in round 1. The structure of the
@@ -11308,7 +11365,7 @@ zh-TW:
                 that students will be introduced to in more detail in the following
                 lesson. At the end of the lesson students reflect on their experiences
                 with the activity and make connections to the types of problem solving
-                they will be doing for the rest of the course. '
+                they will be doing for the rest of the course.
             The Problem Solving Process:
               name: The Problem Solving Process
               description_student: This lesson introduces the formal problem solving
@@ -11401,9 +11458,9 @@ zh-TW:
                 within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities
                 to explore the meaning of processing and its relationship to problem-solving.
-                The first has few constraints and is used to introduce a high-level
-                definition of processing. The next introduces more constraints that
-                forces students to develop an algorithm that will always successfully
+                The first activity has few constraints and is used to introduce a
+                high-level definition of processing. The next introduces more constraints
+                that force students to develop an algorithm that will always successfully
                 process the cards. Students iteratively develop, test, and share their
                 algorithms with classmates. A wrap-up discussion has students reflect
                 on the different types of problem-solving they used in these activities
@@ -12117,13 +12174,11 @@ zh-TW:
               name: Unit 2 Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming
-          description: "This unit introduces the foundational concepts of computer
+          description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
             the programming environment to build apps, but the concepts learned in
-            these lessons span all programming languages and tools.\r\n\r\nThis unit
-            was last updated October 30th, 2017. Read more about curriculum updates
-            at forum.code.org/c/csp/updates."
+            these lessons span all programming languages and tools.
           description_short: Learn the basics of programming in JavaScript through
             a top-down design approach using classic turtle drawing.
           description_audience: ''
@@ -12180,13 +12235,12 @@ zh-TW:
               name: Creating Functions with Parameters
         csp-explore-2018:
           title: Explore - AP Performance Task Prep
-          description: "These lessons are here to help you understand, prepare for,
-            and do the AP Explore Performance Task.  Each \"lesson\" contains links
+          description: 'These lessons are here to help you understand, prepare for,
+            and do the AP Explore Performance Task.  Each "lesson" contains links
             to helpful documents that your teacher can help walk you through. NOTE:
             the second item in the first lesson is not related to the Explore PT directly,
             but covers general tech setup and tools you need to do various elements
-            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
-            November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            of both the Explore and Create tasks.'
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
           description_audience: ''
@@ -12205,13 +12259,12 @@ zh-TW:
               description_teacher: ''
         csp-create-2018:
           title: Create - AP Performance Task Prep
-          description: "These lessons are here to help you understand, prepare for,
-            and do the AP Create Performance Task.  Each \"lesson\" contains links
-            to helpful documents that your teacher can help walk you through. NOTE:
-            the first item in the first lesson is not related to the Create PT directly,
+          description: 'These lessons are here to help you understand, prepare for,
+            and do the AP Create Performance Task.  Each "lesson" contains links to
+            helpful documents that your teacher can help walk you through. NOTE: the
+            first item in the first lesson is not related to the Create PT directly,
             but covers general tech setup and tools you need to do various elements
-            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
-            December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            of both the Explore and Create tasks.'
           description_short: Lessons and resources to help students prepare for and
             complete the AP Create Performance Tasks.
           description_audience: ''
@@ -12230,12 +12283,11 @@ zh-TW:
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions
+          description: The data-rich world we live in introduces many complex questions
             related to public policy, law, ethics and societal impact. The goals of
             this unit are to develop a well-rounded and balanced view about data in
             the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.\r\n\r\nThis unit was
-            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -12840,9 +12892,9 @@ zh-TW:
               name: Day 3
             Day 4:
               name: Day 4
-          title: CS Principles Novice Reflections 2018-2019
+          title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Novice reflection materials for CS Principles facilitators
+          description_short: 'Apprentice reflection materials for CS Principles facilitators
             in training '
           description: This is the set of apprentice reflections for Code.org CS Principles
             facilitators in training during their 5-day summer workshop. Here you
@@ -12850,7 +12902,7 @@ zh-TW:
             workshop. This questions will be the foundation of work we do at the Facilitator
             Training Weekend.
         pre-express-2018:
-          title: Pre-reader Express
+          title: Pre-reader Express (2018)
           assignment_family_title: Pre-reader Express
           description: Learn the basics of computer science and internet safety. At
             the end of the course, create your very own game or story you can share.
@@ -12859,7 +12911,7 @@ zh-TW:
           description_audience: 'Ages: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
+              name: Unspotted Bugs
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
@@ -12879,7 +12931,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: My Robotic Friends Jr.
               description_student: ''
               description_teacher: ''
             Programming in Maze:
@@ -12891,15 +12943,15 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: My Loopy Robotic Friends Jr.
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -12907,7 +12959,7 @@ zh-TW:
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: A Royal Battle with Events
               description_student: ''
               description_teacher: ''
             Spelling Bee:
@@ -12947,6 +12999,16 @@ zh-TW:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

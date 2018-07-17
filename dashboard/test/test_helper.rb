@@ -271,12 +271,10 @@ class ActiveSupport::TestCase
   # exception with a message matching the regular expression.
   def assert_raises_matching(matcher)
     assert_raises do
-      begin
-        yield
-      rescue => err
-        assert_match matcher, err.to_s
-        raise err
-      end
+      yield
+    rescue => err
+      assert_match matcher, err.to_s
+      raise err
     end
   end
 
@@ -413,10 +411,8 @@ class ActionController::TestCase
       user_display_name =
         if user.is_a?(Proc)
           'supplied user'
-        elsif user.present?
-          user
         else
-          'not logged-in user'
+          user.presence || 'not logged-in user'
         end
 
       name = "#{user_display_name} calling #{method} #{action} should receive #{response}"

@@ -344,7 +344,7 @@ tr:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Oyunları ve Koordinat Düzlemleri'
         infinity:
-          title: Oyun Laboratuvarı
+          title: Disney Infinity Play Lab
           description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak
             için Play Lab'i kullanın.
           description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun
@@ -401,8 +401,8 @@ tr:
               name: Bilgisayar programları yazma
         netsim:
           title: İnternet Simülatörü
-          description: ''
-          description_short: ''
+          description: Learn about how the Internet works.
+          description_short: Learn about how the Internet works.
           description_audience: ''
           stages:
             Automatic DNS node:
@@ -573,9 +573,14 @@ tr:
             Puzzles:
               name: Bulmaca
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
-          description_short: Make Black and White Images with the pixelation tool
+          title: "(old) CS Principles Unit 1 - Digital Information"
+          description: This unit explores the technical challenges and questions that
+            arise from the need to represent digital information in computers and
+            transfer it between people and computational devices. This unit is a pilot
+            version and is no longer supported or updated. You can find the new units
+            at code.org/educate/csp.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Binary Numbers:
               name: İkili Sayılar
@@ -688,8 +693,8 @@ tr:
               name: CSP nedir?
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description: Lesson samples for csp
-          description_short: lesson samples for csp
+          description: Lesson samples for CSP
+          description_short: Lesson samples for CSP
           description_audience: ''
           stages:
             Lesson 14:
@@ -759,9 +764,14 @@ tr:
             PDK5 Intro:
               name: PDK5 giriş
         cspunit3:
-          title: CSP Unit 3 - Programming
-          description: Programming in Javascript and AppLap
-          description_short: Programming
+          title: "(old) CS Principles Unit 3 - Programming"
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             APIs and Function Parameters:
@@ -981,7 +991,7 @@ tr:
             What to Expect:
               name: Ne sunuyoruz
         sciencePD2:
-          title: Computer Science in Science PD
+          title: 'CS in Science: Part 2'
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           stages:
@@ -1000,9 +1010,9 @@ tr:
             Wrap-Up:
               name: Toparlama
         sciencePD3:
-          title: Computer Science in Science PD
-          description: Phase 3 Professional Development
-          description_short: Phase 3 Professional Development
+          title: 'CS in Science: Part 3'
+          description: Academic Year Support - Semester 1
+          description_short: Academic Year Support - Semester 1
           stages:
             Decode and Share:
               name: Şifresini çöz ve paylaş
@@ -1019,14 +1029,13 @@ tr:
               name: Testing
           description_audience: ''
         cspunit2:
-          title: CSP Unit 2 - The Internet
-          description: |
-            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
-            structure and design of the internet and the implications of those design decisions including
-            the reliability of network communication, the security of data, and personal privacy. Topics
-            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
-            concerns.
-          description_short: İnternet
+          title: "(old) CS Principles Unit 2 - The Internet"
+          description: In this unit, students extend their understanding of the internet
+            and how it functions by building off the concepts learned when sending
+            bits in Unit 1. This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Zor problemler - Gezgin Satıcı problemi
@@ -1299,7 +1308,7 @@ tr:
             Necessary Background:
               name: Gerekli altyapı
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
+          title: CS in Algebra Part 2
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
           description_audience: ''
@@ -1479,7 +1488,8 @@ tr:
           description: Use the Odometer widget to control odometers with various number
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
-          description_short: Odometer widget
+          description_short: Use the Odometer widget to control odometers with various
+            number bases.
           description_audience: ''
           stages:
             Odometer Widget:
@@ -1535,8 +1545,10 @@ tr:
               name: Şifre karesi
         algebraPD3a:
           title: Algebra PD'de Bilgisayar Bilimi
-          description: CS in Algebra blended online school year study
-          description_short: CS in Algebra blended online school year study
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year
+            study'
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school
+            year study'
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1548,9 +1560,9 @@ tr:
             Updates - Tweaks and Polish:
               name: Güncellemeler - Tweaks ve Polish
         sciencePD3_pre1:
-          title: Computer Science in Science PD Phase 3 Before 1st In-Person
-          description: Phase 3 Blended Summer Study (Segment One)
-          description_short: Phase 3 Blended Summer Study Pre 1
+          title: CS in Science PD3 Before 1st In-Person
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          description_short: 'Phase 3: Academic Year Development Pre 1'
           description_audience: ''
           stages:
             Prep With Your Modules:
@@ -1572,9 +1584,9 @@ tr:
               name: Frekans analizi
           description_audience: ''
         ECSPD3-Unit2:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description: Academic Year Development
-          description_short: Academic Year Development
+          title: 'Exploring Computer Science: Unit 2'
+          description: Online Professional Development Course
+          description_short: Unit 2 Online PD
           description_audience: ''
           stages:
             Close & Next Steps:
@@ -1590,7 +1602,7 @@ tr:
             Unit 2 Challenge:
               name: Bölüm 2 - Meydan Okuma
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 3'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1608,7 +1620,7 @@ tr:
             Unit 3 Day-by-Day:
               name: Gün Gün Ünite 3
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 4'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1726,7 +1738,7 @@ tr:
             Why Make Apps?:
               name: Neden uygulama yapılır?
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
           description_short: Phase 3 Academic Year Development
           description_audience: ''
@@ -1745,8 +1757,8 @@ tr:
               name: Toparlama
         algebraPD3b:
           title: Algebra PD'de Bilgisayar Bilimi
-          description: CS in Algebra mid year lesson support
-          description_short: CS in Algebra mid year lesson support
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           description_audience: ''
           stages:
             Close and Next Steps:
@@ -1849,7 +1861,7 @@ tr:
             Unit 3 Overview:
               name: Ünite 3 genel bakış
         cspunit3temp:
-          title: CSP Unit 3 - Temp
+          title: "(old) CS Principles Unit 3 - Programming"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1957,10 +1969,11 @@ tr:
             Wrap-Up:
               name: Toparlama
         cspunit5:
-          title: CSP Unit 5 - Performance Tasks
+          title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore
             and Create Performance Tasks.
-          description_short: Performance Tasks
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Create PT:
               name: Performans Görevi Oluştur
@@ -1972,16 +1985,17 @@ tr:
               name: Performans Görevi Hazırlığı Keşfet
           description_audience: ''
         cspunit4:
-          title: CSP Unit 4 - Data
-          description: Being able to digitally manipulate data, visualize it, identify
-            patterns, trends and possible meanings are important practical skills
-            that computer scientists do every day. The data rich world we live in
-            also introduces many complex questions related to public policy, law,
+          title: "(old) CS Principles Unit 4 - Data"
+          description: Being able to digitally manipulate data, visualize it, and
+            identify patterns, trends and possible meanings are important practical
+            skills that computer scientists do every day. The data-rich world we live
+            in also introduces many complex questions related to public policy, law,
             ethics and societal impact. Understanding where data comes from, having
             intuitions about what could be learned or extracted from it, and being
             able to use computational tools to manipulate data and communicate about
             it are the primary skills addressed in the unit.
-          description_short: Data
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Check Your Assumptions:
@@ -2169,7 +2183,7 @@ tr:
         algebraPD1:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description_short: 'Phase 1: Online Introduction'
           description_audience: ''
           stages:
             Course Overview:
@@ -2527,10 +2541,11 @@ tr:
             Post-Course Survey:
               name: Post-Course Survey
         csp6:
-          title: CS Principles Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create
             and Explore Performance Tasks.
-          description_short: Performance Tasks
+          description_short: Lessons guide students to prepare for and complete the
+            AP Performance Tasks.
           description_audience: ''
           stages:
             Create PT:
@@ -2610,7 +2625,7 @@ tr:
             Using the Game Design Process:
               name: Oyun tasarım süreci kullanarak
         2016_sciencePD_phase1:
-          title: Computer Science in Science PD 2016-2017
+          title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
           description_short: In Partnership with Project GUTS
           description_audience: ''
@@ -2828,11 +2843,16 @@ tr:
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
-          title: CS Principles Culminating Assessment
-          description: 'This 55-question multiple choice assessment covers questions
-            across 7 big ideas of computer science: Creativity, Abstraction, Data,
-            Algorithms, Programming, The Internet, and Global Impact. '
-          description_short: Culminating
+          title: "[Deprecated] CS Principles Culminating Assessment"
+          description: 'This assessment has been deprecated and is scheduled for removal
+            in Summer of 2017.  Students may complete the test and see their own results,
+            but a teacher will not be able to see results for students in a section.  Please
+            use the official CSP practice exam from the College Board.  [This 55-question
+            multiple choice assessment covers questions across 7 big ideas of computer
+            science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet,
+            and Global Impact.]'
+          description_short: This assessment has been deprecated and is scheduled
+            for removal in Summer of 2017.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
@@ -3233,7 +3253,7 @@ tr:
             'Unplugged: Songwriting with Parameters':
               name: 'Bağımsız: Parametrelerle şarkı yazarlığı'
         ecs-unit1:
-          title: ECS Part 1
+          title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
           description_short: 'Unit 1: Human-Computer Interaction'
           description_audience: ''
@@ -4199,10 +4219,10 @@ tr:
             Unit 5 Overview:
               name: Ünite 5 genel bakış
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing
-            to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 1.
           description_audience: ''
           stages:
             Unit 1 Overview:
@@ -4253,7 +4273,7 @@ tr:
               name: Basit şifreleme
         fesbinary:
           title: İkili
-          description_audience: ''
+          description_audience: Falmouth Middle School
           description_short: ''
           description: ''
           stages:
@@ -4554,11 +4574,11 @@ tr:
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
         csp2-support:
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing
-            to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 2. '
           stages:
             Unit 2 Overview:
               name: Ünite 2 genel bakış
@@ -5123,7 +5143,7 @@ tr:
             Conditionals & Loops in Maze:
               name: Labirentte Koşullar ve Döngüler
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
             Impacts of Computing:
               name: Bilgisayarın Etkileri
             More Programming with CS4FN:
@@ -5343,10 +5363,11 @@ tr:
             Prep With Your Modules:
               name: Modüllerinizle Hazırlanın
         csp3-support:
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 3.
           stages:
             Unit 3 Overview:
               name: Ünite 3 genel bakış
@@ -5381,10 +5402,11 @@ tr:
             External Style Sheets:
               name: Harici Stil Sayfaları
         csp4-support:
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 4.
           stages:
             Unit 3 Overview:
               name: Ünite 3 genel bakış
@@ -5445,10 +5467,10 @@ tr:
             Wrap-Up:
               name: Toparlama
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Fonksiyonlar: şarkı yazma'
@@ -5486,8 +5508,8 @@ tr:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
           description_short: CSP ünite 5 dersi için Öğretmen eğitimi
-          description: 'COMING SOON: In mid-February, this page will host the CSP
-            Unit 5 Professional Learning Course. '
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 5.
           stages:
             Unit 5 Overview:
               name: Ünite 5 genel bakış
@@ -5511,11 +5533,11 @@ tr:
               name: Öğrenci Öğrenmesini Ölçme
         csp6-support:
           stage: {}
-          title: Unit 6 Online Professional Learning Course
+          title: AP Preparation and Resources for Teachers
           description_audience: ''
           description_short: ''
-          description: 'COMING SOON: In mid-February, this page will host a set of
-            resources for teachers preparing for the AP exam'
+          description: 'COMING SOON: soon this page will host a set of resources for
+            teachers preparing for the AP exam'
           stages: {}
         csppostap-2017:
           title: CSP Post-AP - Databases and Using Data in Your Apps
@@ -5565,7 +5587,7 @@ tr:
             Simple Sprite Movement:
               name: Basit Hareketli Nesne Hareketi
         csd6-draft:
-          title: Draft Unit 6
+          title: CSD Unit 6 Revisions Draft
           description_audience: ''
           description_short: ''
           description: ''
@@ -8012,7 +8034,7 @@ tr:
               name: Perşembe
             Wrap Up:
               name: Özet
-          title: CS Principles TeacherCon Novice Facilitators
+          title: CS Principles TeacherCon Novice Facilitator Reflection
           description_audience: CSP Acemi Kolaylaştırıcılar
           description_short: Reflection questions for novice facilitators at TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as
@@ -8367,7 +8389,7 @@ tr:
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -8419,10 +8441,14 @@ tr:
               name: CSP Mid-course survey
             Please complete the CSP Mid-course survey:
               name: Please complete the CSP Mid-course survey
-          title: ''
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
           description_short: Programlama
-          description: ''
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -9044,7 +9070,7 @@ tr:
               name: Akıllı Giysi Tasarımı
             Intro to App Lab (13+):
               name: Uygulama Laboratuvarına Giriş (13+)
-          title: PwC Access Your Potential
+          title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
           description: PwC'de, tüm öğrencilerin yarının liderleri ve teknoloji odaklı
@@ -9111,7 +9137,8 @@ tr:
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
           description_short: Minecraft, Kod Saati için yeni bir etkinlikle geri döndü!
-          description: ''
+          description: Minecraft is back for the Hour of Code with a brand new activity!
+            Journey through Minecraft with code.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -9299,7 +9326,7 @@ tr:
               name: Star Wars oyunu oluştur
             Functions in Harvester:
               name: Functions in Harvester
-          title: Course E 2018
+          title: Course E 2018 (Outdated!)
           description_audience: ''
           description_short: ''
           description: ''
@@ -9363,7 +9390,7 @@ tr:
               name: Projenizi Gözden Geçirme
             Present Your Project:
               name: Projeni sun
-          title: Course F 2018
+          title: Course F 2018 (Outdated)
           description_audience: ''
           description_short: ''
           description: ''
@@ -10082,7 +10109,7 @@ tr:
                 ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
                 katacaklardır.\r\n"
         coursea-2018:
-          title: Kurs A
+          title: Course A (2018)
           assignment_family_title: Kurs A
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -10109,7 +10136,7 @@ tr:
                 Koşusu etkinliginin evresini gözden geçirmekten ve binanın taslağını
                 çizmekten çekinmeyin."
             'Real-life Algorithms: Plant a Seed':
-              name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+              name: Plant a Seed
               description_student: ''
               description_teacher: "Bu derste öğrenciler, gerçek bir tohum ekerek
                 algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler.
@@ -10188,11 +10215,11 @@ tr:
             Programming in Bee:
               name: Programming in Bee
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programming with Harvester
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Loops with Harvester
             Sequencing in Maze:
-              name: Sequencing in Maze
+              name: Sequencing with Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie ve büyük proje
         express-2018:
@@ -10372,7 +10399,7 @@ tr:
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
             'Functions: Songwriting':
               name: Şarkı Yazarlığı
             Functions in Minecraft:
@@ -10392,19 +10419,19 @@ tr:
             Envelope Variables:
               name: Zarf değişkenleri
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             For Loop Fun:
               name: Şununla Say Döngüsü Eğlencesi
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Binary Bracelets:
               name: İkilik Bileklikler
             'Unplugged: Binary':
@@ -10418,12 +10445,13 @@ tr:
             Relay Programming:
               name: Röle Programlama
         courseb-2018:
-          title: Kurs B
+          title: Course B (2018)
           assignment_family_title: Kurs B
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
             oluştur.
-          description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
+          description_short: An introduction to computer science for pre-readers.
+            Similar to Course A, but with added concept depth.
           description_audience: 'Yaş: 5-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -10479,21 +10507,24 @@ tr:
               description_student: ''
               description_teacher: ''
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             Sequencing with Scrat:
               name: Sequencing with Scrat
             Move It, Move It:
               name: Çabuk, Çabuk Taşı
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
         coursed-2018:
           title: Yeni Kurs D Senaryosu
           assignment_family_title: Kurs D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Students develop their understanding of nested loops, while
+            loops, conditionals, and events. Beyond coding, students learn about digital
+            citizenship.
+          description_short: Learn about conditional statements and create your own
+            art, story or game.
+          description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Grafikli Kağıdıyla Programlama
@@ -10572,7 +10603,7 @@ tr:
             Conditionals in Maze:
               name: Conditionals in Maze
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
             Graph Paper Programming:
               name: Grafikli Kağıdıyla Programlama
             Relay Programming:
@@ -10683,9 +10714,10 @@ tr:
           description_audience: ''
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment
-            questions that appeared in Units 1-5 in the course.  '
+            questions that appeared in Units 1-5 in the course.  Students may want
+            to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
-          title: Kurs C
+          title: Course C (2018)
           assignment_family_title: Kurs C
           description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin
             baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini
@@ -10708,7 +10740,7 @@ tr:
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
+              name: Paper Planes
               description_student: ''
               description_teacher: ''
             Programming in Collector:
@@ -10732,7 +10764,7 @@ tr:
               description_student: ''
               description_teacher: ''
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Harvesting Crops with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -10862,13 +10894,13 @@ tr:
             'Project: Prototype an Innovation':
               name: 'Proje: Bir yenilik prototiple'
         coursee-2018:
-          title: Kurs E
+          title: Course E (2018)
           assignment_family_title: Kurs E
           description: Algoritmalar, döngüler, koşullar ve olaylarla kodlamaya başlayın
             ve daha sonra fonksiyonlara geçin. Bu kursun ikinci kısmında, arkadaşlarınız
             ve ailenizle paylaşabileceğiniz bir bitirme projesi tasarlayın ve oluşturun.
-          description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
-            hikayelerinizi ve sanatınızı oluşturun.
+          description_short: Review concepts in Courses C & D, then go further by
+            learning functions.
           description_audience: 8-12 yaş grubu
           stages:
             'Programming: My Robotic Friends':
@@ -10927,7 +10959,7 @@ tr:
                 Bulmacalarda, öğrenciler, Labirent ve Sanatçı' da hata ayıklama ve
                 dizileri kullanma yeteneklerini geliştirirler.
             Conditionals:
-              name: Koşullar
+              name: Conditionals with the Farmer
               description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında
                 bilgisayara ne yapacağını söyleyeceksin.
               description_teacher: Bu ders öğrencilere `while` döngüleri ve` if /
@@ -10981,7 +11013,7 @@ tr:
                 kısmında, öğrenciler, karmaşık yollarda gezinecekler, bol miktarda
                 nektar toplayacaklar ve bir sürü bal yapacaklar.
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: ''
               description_teacher: ''
             Determine the Concept:
@@ -11078,15 +11110,15 @@ tr:
             Functions in Minecraft:
               name: Functions in Minecraft
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digital Sharing
         coursef-2018:
-          title: Kurs F
+          title: Course F (2018)
           assignment_family_title: Kurs F
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma
             hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve
@@ -11339,23 +11371,23 @@ tr:
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
             Conditionals:
-              name: Koşullar
+              name: Conditionals with the Farmer
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Conditionals in Farmer:
-              name: Çiftçi'de Koşullar
+              name: Conditionals with the Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
@@ -12387,12 +12419,11 @@ tr:
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions
+          description: The data-rich world we live in introduces many complex questions
             related to public policy, law, ethics and societal impact. The goals of
             this unit are to develop a well-rounded and balanced view about data in
             the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.\r\n\r\nThis unit was
-            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -12998,9 +13029,9 @@ tr:
               name: Day 3
             Day 4:
               name: Day 4
-          title: CS Principles Novice Reflections 2018-2019
+          title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Novice reflection materials for CS Principles facilitators
+          description_short: 'Apprentice reflection materials for CS Principles facilitators
             in training '
           description: This is the set of apprentice reflections for Code.org CS Principles
             facilitators in training during their 5-day summer workshop. Here you
@@ -13008,7 +13039,7 @@ tr:
             workshop. This questions will be the foundation of work we do at the Facilitator
             Training Weekend.
         pre-express-2018:
-          title: Pre-reader Express
+          title: Pre-reader Express (2018)
           assignment_family_title: Pre-reader Express
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -13106,6 +13137,16 @@ tr:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''
