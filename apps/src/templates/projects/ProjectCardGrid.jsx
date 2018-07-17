@@ -40,9 +40,6 @@ class ProjectCardGrid extends Component {
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,
-    // Project Validators need access to view more links for App Lab and Game Lab, hidden for everyone else.
-    // TODO: Erin B - remove when we have profanity filter and/or enough featured projects.
-    projectValidator: PropTypes.bool
   };
 
   componentWillReceiveProps(nextProps) {
@@ -115,7 +112,6 @@ class ProjectCardGrid extends Component {
               labKey="applab"
               labName={i18n.projectTypeApplab()}
               labViewMoreString={i18n.projectTypeApplabViewMore()}
-              hideViewMoreLink={!this.props.projectValidator}
               projectList={projectLists.applab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
@@ -127,7 +123,6 @@ class ProjectCardGrid extends Component {
               labKey="gamelab"
               labName={i18n.projectTypeGamelab()}
               labViewMoreString={i18n.projectTypeGamelabViewMore()}
-              hideViewMoreLink={!this.props.projectValidator}
               projectList={projectLists.gamelab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
@@ -204,7 +199,6 @@ class ProjectCardGrid extends Component {
                 labKey="applab"
                 labName={i18n.projectTypeAllProjectsApplab()}
                 labViewMoreString={i18n.projectsViewAll()}
-                hideViewMoreLink={!this.props.projectValidator}
                 projectList={projectLists.applab}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
@@ -217,7 +211,6 @@ class ProjectCardGrid extends Component {
                 labKey="gamelab"
                 labName={i18n.projectTypeAllProjectsGamelab()}
                 labViewMoreString={i18n.projectsViewAll()}
-                hideViewMoreLink={!this.props.projectValidator}
                 projectList={projectLists.gamelab}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
