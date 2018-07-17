@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import SingleStudentAssessmentsMCTable from './SingleStudentAssessmentsMCTable';
+import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
 import { studentWithResponsesPropType, multipleChoiceQuestionPropType } from './assessmentDataShapes';
 import {
   getMultipleChoiceStructureForCurrentAssessment,
@@ -25,7 +25,7 @@ class MultipleChoiceByStudentContainer extends Component {
         {(studentId !== ALL_STUDENT_FILTER && currentStudentHasResponses) &&
           <div>
               <h2>{i18n.multipleChoiceStudentOverview({studentName: studentAnswerData.name})}</h2>
-              <SingleStudentAssessmentsMCTable
+              <MultipleChoiceByStudentTable
                 questionAnswerData={multipleChoiceStructure}
                 studentAnswerData={studentAnswerData}
               />

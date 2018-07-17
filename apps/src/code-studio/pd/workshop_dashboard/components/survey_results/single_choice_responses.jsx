@@ -8,11 +8,13 @@ export default class SingleChoiceResponses extends React.Component {
     answers: PropTypes.object.isRequired,
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
-    otherAnswers: PropTypes.array //Free response "other" answers
+    otherText: PropTypes.string
   };
 
   render() {
     let totalAnswers = Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
+
+    let otherAnswers = _.difference(Object.keys(this.props.answers), this.props.possibleAnswers);
     return (
       <Panel>
         {this.props.question}
@@ -56,15 +58,37 @@ export default class SingleChoiceResponses extends React.Component {
               );
             })
           }
+          {
+            this.props.otherText && (
+              <tr>
+                <td>
+                  {
+                    (otherAnswers.length / totalAnswers)
+                      .toLocaleString('en-US', {
+                        style: 'percent',
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                      })
+                  }
+                </td>
+                <td style={{paddingLeft: '20px'}}>
+                  {otherAnswers.length}
+                </td>
+                <td style={{paddingLeft: '20px'}}>
+                  {this.props.otherText}
+                </td>
+              </tr>
+            )
+          }
           </tbody>
         </table>
         {
-          this.props.otherAnswers && (
+          otherAnswers.length > 0 && (
             <div>
               <br/>
-              Other:
+              {this.props.otherText}
               <ul>
-                {_.compact(this.props.otherAnswers).map((answer, i) => (<li key={i}>{answer}</li>))}
+                {_.compact(otherAnswers).map((answer, i) => (<li key={i}>{answer}</li>))}
               </ul>
             </div>
           )

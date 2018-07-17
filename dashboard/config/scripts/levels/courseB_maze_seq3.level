@@ -35,12 +35,11 @@
     "markdown_instructions": "*\"Fix the code to get me to the pig!\"*",
     "disable_procedure_autopopulate": "false",
     "hint_prompt_attempts_threshold": 3,
-    "contained_level_names": null,
     "instructions": "\"Fix the code to get me to the pig!\"",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "include_shared_functions": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

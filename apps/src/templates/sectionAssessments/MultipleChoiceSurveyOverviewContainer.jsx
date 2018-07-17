@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
-class MCSurveyOverviewContainer extends Component {
+class MultipleChoiceSurveyOverviewContainer extends Component {
   static propTypes= {
     multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceSurveyDataPropType),
     totalStudentCount: PropTypes.number,
@@ -35,10 +35,10 @@ class MCSurveyOverviewContainer extends Component {
   }
 }
 
-export const UnconnectedMCSurveyOverviewContainer = MCSurveyOverviewContainer;
+export const UnconnectedMultipleChoiceSurveyOverviewContainer = MultipleChoiceSurveyOverviewContainer;
 
 export default connect(state => ({
   multipleChoiceSurveyData: getMultipleChoiceSurveyResults(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   totalStudentCount: getTotalStudentCount(state),
-}))(MCSurveyOverviewContainer);
+}))(MultipleChoiceSurveyOverviewContainer);
