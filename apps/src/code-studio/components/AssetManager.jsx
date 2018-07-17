@@ -138,10 +138,6 @@ export default class AssetManager extends React.Component {
     });
   };
 
-  onRecordClick = () => {
-    this.setState({recordingAudio: true});
-  };
-
   render() {
     const uploadButton = (<div>
       <AssetUploader
@@ -159,7 +155,7 @@ export default class AssetManager extends React.Component {
 
     const recordButton = (<div>
       <button
-        onClick={this.onRecordClick}
+        onClick={()=>{}}
         id="record-asset"
         disabled={!this.props.uploadsEnabled}
       >
