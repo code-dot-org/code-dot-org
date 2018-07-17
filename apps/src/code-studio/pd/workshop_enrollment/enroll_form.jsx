@@ -170,10 +170,12 @@ export default class EnrollForm extends React.Component {
     let gradesTeaching = GRADES_TEACHING.concat([
       {
         answerText: "I'm not teaching this year (Please Explain):",
+        inputValue: this.state.explain_not_teaching,
         onInputChange: this.handleNotTeachingChange
       },
       {
         answerText: "Other (Please Explain):",
+        inputValue: this.state.explain_teaching_other,
         onInputChange: this.handleTeachingOtherChange
       }
     ]);
