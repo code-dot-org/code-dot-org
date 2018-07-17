@@ -624,7 +624,8 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
       if (inputConfig.type === Blockly.BlockValueType.STRING) {
-        code = `"${code}"`;
+        // Wraps the value in quotes, and escapes quotes/newlines
+        code = JSON.stringify(code);
       }
       return code;
     },
