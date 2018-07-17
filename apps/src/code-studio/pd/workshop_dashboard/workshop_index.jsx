@@ -132,5 +132,5 @@ export class WorkshopIndex extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission
+  permission: state.workshopDashboard.permission
 }))(WorkshopIndex);
