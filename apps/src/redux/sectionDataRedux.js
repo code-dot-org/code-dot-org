@@ -55,3 +55,12 @@ export default function sectionData(state=initialState, action) {
 
   return state;
 }
+
+// Selector functions
+export const getTotalStudentCount = (state) => {
+  return state.sectionData.section.students.length;
+};
+
+export const getStudentList = (state) => {
+  return state.sectionData.section.students;
+};

@@ -33,7 +33,7 @@ import InstructionsDialogWrapper from './templates/instructions/InstructionsDial
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
-import WireframeButtons from './templates/WireframeButtons';
+import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
 import getAchievements from './achievements';
@@ -2341,6 +2341,10 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     startBlocks = blockUtils.forceInsertTopBlock(startBlocks,
         config.forceInsertTopBlock);
   }
+  if (config.level.sharedFunctions) {
+    startBlocks = blockUtils.appendNewFunctions(startBlocks,
+        config.level.sharedFunctions);
+  }
   startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
   try {
     this.loadBlocks(startBlocks);
@@ -2420,7 +2424,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
     hasVerticalScrollbars: config.hasVerticalScrollbars,
-    hasHorizontalScrollbars: config.hasHorizontalScrollbars,
+    hasHorizontalScrollbars: config.hasHorizontalScrollbars ||
+        experiments.isEnabled('horizontalScroll'),
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
     showUnusedBlocks: utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),

@@ -33,4 +33,4 @@ Bring computer science to your students by having teachers sign up for our profe
 Are you interested in bringing computer science education to your country? Code.org partners with international organizations that help translate our content and spread the Hour of Code movement across the globe. Learn more about how we work with international groups and how you can get involved at the link below.
 
 <br>
-[<button>Learn more</button>](https://support.code.org/hc/en-us/articles/202518373-How-do-I-bring-computer-science-to-my-country-)
+[<button>Learn more</button>](/international)

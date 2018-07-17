@@ -54,6 +54,40 @@ const customInputTypes = {
       return block.getTitleValue(arg.name);
     },
   },
+  locationVariableDropdown: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      block.getVars = function () {
+        return {
+          [Blockly.BlockValueType.LOCATION]: [block.getTitleValue(inputConfig.name)],
+        };
+      };
+      block.renameVar = function (oldName, newName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))) {
+          block.setTitleValue(newName, inputConfig.name);
+        }
+      };
+      block.removeVar = function (oldName) {
+        if (Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))) {
+          block.dispose(true, true);
+        }
+      };
+
+      currentInputRow
+          .appendTitle(inputConfig.label)
+          .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
+          .appendTitle(new Blockly.FieldVariable(
+                Blockly.Msg.VARIABLES_SET_ITEM,
+                null,
+                null,
+                Blockly.BlockValueType.LOCATION,
+              ),
+              inputConfig.name)
+          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+    },
+    generateCode(block, arg) {
+      return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
+    }
+  },
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow
@@ -204,6 +238,7 @@ export default {
 
         this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        this.currentParameterNames_ = [];
       },
 
       openEditor(e) {
@@ -226,14 +261,57 @@ export default {
           this.setTitleValue(newName, 'VAR');
         }
       },
+
+      getCallName() {
+        return this.getTitleValue('VAR');
+      },
+
+      setProcedureParameters(paramNames, paramIds, typeNames) {
+        Blockly.Blocks.procedures_callnoreturn.setProcedureParameters.call(this,
+          paramNames.slice(1), paramIds && paramIds.slice(1), typeNames && typeNames.slice(1));
+      },
+
+      mutationToDom() {
+        const container = document.createElement('mutation');
+        for (let x = 0; x < this.currentParameterNames_.length; x++) {
+          const parameter = document.createElement('arg');
+          parameter.setAttribute('name', this.currentParameterNames_[x]);
+          if (this.currentParameterTypes_[x]) {
+            parameter.setAttribute('type', this.currentParameterTypes_[x]);
+          }
+          container.appendChild(parameter);
+        }
+        return container;
+      },
+
+      domToMutation(xmlElement) {
+        this.currentParameterNames_ = [];
+        this.currentParameterTypes_ = [];
+        for (let childNode of xmlElement.childNodes) {
+          if (childNode.nodeName.toLowerCase() === 'arg') {
+            this.currentParameterNames_.push(childNode.getAttribute('name'));
+            this.currentParameterTypes_.push(childNode.getAttribute('type'));
+          }
+        }
+        // Use parameter names as dummy IDs during initialization. Add dummy
+        // "this_sprite" param.
+        this.setProcedureParameters(
+          [null].concat(this.currentParameterNames_),
+          [null].concat(this.currentParameterNames_),
+          [null].concat(this.currentParameterTypes_)
+        );
+      },
     };
 
     generator.gamelab_behavior_get = function () {
       const name = Blockly.JavaScript.variableDB_.getName(
             this.getTitleValue('VAR'),
             Blockly.Procedures.NAME_TYPE);
-      // TODO: add support for passing extra params into this block
       const extraArgs = [];
+      for (let x = 0; x < this.currentParameterNames_.length; x++) {
+        extraArgs[x] = Blockly.JavaScript.valueToCode(this, 'ARG' + x,
+          Blockly.JavaScript.ORDER_COMMA) || 'null';
+      }
       return [
         `new Behavior(${name}, [${extraArgs.join(', ')}])`,
         Blockly.JavaScript.ORDER_ATOMIC
@@ -287,8 +365,8 @@ export default {
     );
 
     const blocksByCategory = {};
-    customBlocks.forEach(({name, category, config}) => {
-      const blockName = createJsWrapperBlock(config);
+    customBlocks.forEach(({name, category, config, helperCode}) => {
+      const blockName = createJsWrapperBlock(config, helperCode);
       if (!blocksByCategory[category]) {
         blocksByCategory[category] = [];
       }
@@ -297,6 +375,13 @@ export default {
         console.error(`Block config ${name} generated a block named ${blockName}`);
       }
     });
+    if (blockly.Blocks.gamelab_location_variable_set &&
+        blockly.Blocks.gamelab_location_variable_get) {
+      Blockly.Variables.registerGetter(Blockly.BlockValueType.LOCATION,
+        'gamelab_location_variable_get');
+      Blockly.Variables.registerSetter(Blockly.BlockValueType.LOCATION,
+        'gamelab_location_variable_set');
+    }
 
     if (!hideCustomBlocks) {
       level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);

@@ -504,7 +504,12 @@ export class WorkshopForm extends React.Component {
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
-      const options = Subjects[this.state.course].map((subject, i) => {
+      // TODO(tanya): Show 201 subject in workshop dashboard UI
+      // Temporarily hiding CSF 201 subject from the workshop dashboard
+      // until the pilot is over in winter 2018
+      const included_subjects = Subjects[this.state.course]
+        .filter(subject => subject !== "Deep Dive");
+      const options = included_subjects.map((subject, i) => {
         return (<option key={i} value={subject}>{subject}</option>);
       });
       const placeHolder = this.state.subject ? null : <option />;

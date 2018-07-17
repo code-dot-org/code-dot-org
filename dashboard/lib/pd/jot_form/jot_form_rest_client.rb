@@ -36,14 +36,17 @@ module Pd
       # @param min_date [Date] (optional)
       #   when specified, only new submissions on or after the known date will be returned.
       #   JotForm apparently doesn't support filtering answers to specific questions.
+      # @param limit [Integer] optional, default 100
+      # @param offset [Integer] optional, default 0
       # Note - get_submissions has a default limit of 20, although the documentation
       #   lists the default as 100, so we specify the limit of 100 here.
       #   The API returns the limit and the count.
       # See https://api.jotform.com/docs/#form-id-submissions
-      def get_submissions(form_id, last_known_submission_id: nil, min_date: nil)
+      def get_submissions(form_id, last_known_submission_id: nil, min_date: nil, limit: 100, offset: 0)
         params = {
           orderby: 'id asc',
-          limit: 100
+          limit: limit,
+          offset: offset
         }
 
         filter = {}

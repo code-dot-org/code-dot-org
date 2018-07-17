@@ -70,7 +70,7 @@ export const studentData = {
 export const multipleChoiceData = [
   {
     id: 1,
-    question: '1. What is a variable?',
+    question: 'What is a variable?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 40, isCorrectAnswer: true},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 20, isCorrectAnswer: false},
@@ -81,7 +81,7 @@ export const multipleChoiceData = [
   },
   {
     id: 2,
-    question: '2. What is a 4-bit number for the decimal number Ten(10)?',
+    question: 'What is a 4-bit number for the decimal number Ten(10)?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 30, isCorrectAnswer: false},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 10, isCorrectAnswer: true},
@@ -94,7 +94,7 @@ export const multipleChoiceData = [
   },
   {
     id: 3,
-    question: '3. What is the minimum number of bits you will need to encode the 26 letters of the alphabet plus a space?',
+    question: 'What is the minimum number of bits you will need to encode the 26 letters of the alphabet plus a space?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 50, isCorrectAnswer: false},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 15, isCorrectAnswer: false},
@@ -106,7 +106,7 @@ export const multipleChoiceData = [
   },
   {
     id: 4,
-    question: '4. What is the best explanation for why digital data is represented in computers in binary?',
+    question: 'What is the best explanation for why digital data is represented in computers in binary?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 15, isCorrectAnswer: false},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 18, isCorrectAnswer: false},
@@ -120,7 +120,7 @@ export const multipleChoiceData = [
   },
   {
     id: 5,
-    question: '5. What is a function?',
+    question: 'What is a function?',
     answers:  [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 15, isCorrectAnswer: false},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 18, isCorrectAnswer: false},
@@ -138,6 +138,7 @@ export const multipleChoiceDataForSingleStudent = multipleChoiceData.map((questi
   return {
     id: question.id,
     question: question.question,
+    questionNumber: index + 1,
     correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index],
   };
 });
