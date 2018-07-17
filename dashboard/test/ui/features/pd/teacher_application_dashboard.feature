@@ -1,5 +1,8 @@
 @dashboard_db_access
 @eyes
+# Temporarily skip this test in CircleCI because it generates different Eyes checkpoint images in test environment vs
+# CircleCI builds.
+@no_circle
 
 Feature: Teacher Application Dashboard view
 
