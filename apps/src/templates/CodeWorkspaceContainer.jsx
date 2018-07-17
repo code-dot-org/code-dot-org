@@ -77,19 +77,20 @@ class CodeWorkspaceContainer extends React.Component {
   }
 
   render() {
-    const mainStyle = [styles.main, {
-      top: this.props.topMargin
-    },
-      this.props.noVisualization && styles.noVisualization,
-      this.props.isRtl && styles.mainRtl,
-      this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl,
-      this.props.hidden && commonStyles.hidden
-    ];
+    const {hidden, isRtl, noVisualization, topMargin, children} = this.props;
+    const mainStyle = {
+      ...styles.main,
+      top: topMargin,
+      ...(noVisualization && styles.noVisualization),
+      ...(isRtl && styles.mainRtl),
+      ...(noVisualization && isRtl && styles.noVisualizationRtl),
+      ...(hidden && commonStyles.hidden),
+    };
 
     return (
       <div style={mainStyle} className="editor-column">
         <div id="codeWorkspace" style={styles.codeWorkspace}>
-          {this.props.children}
+          {children}
         </div>
       </div>
     );
