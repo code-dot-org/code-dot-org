@@ -32,8 +32,6 @@ require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
-require 'logger'
-
 ENV['BUILD'] = `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
