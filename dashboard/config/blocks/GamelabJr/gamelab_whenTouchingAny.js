@@ -1,7 +1,13 @@
 function whenTouchingAny(sprite, group, event) {
   var g = group();
+  function f(s) { 
+    collisionEvents.push(
+      {a: sprite, 
+       b: function() { return s; }, 
+       event: event});
+  }
   for (var i=0;i<g.length;i++) {
-      if (_DEBUG_) { console.log(g[i]); }
-	collisionEvents.push({a: sprite, b: g[i] , event: event});
+    var gg = g[i];
+	f(gg);
   }
 }

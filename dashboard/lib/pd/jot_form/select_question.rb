@@ -16,7 +16,7 @@ module Pd
       attr_accessor(
         :allow_other,
         :other_text,
-        :preserve_text
+        :preserve_text # kept for backward compatibility
       )
 
       def self.from_jotform_question(jotform_question)
@@ -33,20 +33,23 @@ module Pd
         super.merge(
           allow_other: allow_other,
           other_text: other_text,
-          preserve_text: preserve_text
         )
       end
 
-      def answer_type
-        if type == TYPE_CHECKBOX
-          ANSWER_MULTI_SELECT
-        elsif allow_other || preserve_text
-          ANSWER_SELECT_TEXT
-        else
-          # We can only assume a numeric value for single-select (dropdown/radio),
-          # without an "other" option, and not explicitly set to preserve text.
-          ANSWER_SELECT_VALUE
+      # @override
+      def ensure_valid_answer(answer)
+        if answer.is_a? Array
+          answer.each {|sub_answer| ensure_valid_answer(sub_answer)}
+        elsif !options.include? answer
+          raise "Unrecognized answer '#{answer}' for question #{id} (Options: #{options.join(',')})"
         end
+
+        answer
+      end
+
+      # @override
+      def answer_type
+        type == TYPE_CHECKBOX ? ANSWER_MULTI_SELECT : ANSWER_SINGLE_SELECT
       end
 
       def get_value(answer)
@@ -59,23 +62,18 @@ module Pd
           values_with_other = answer.map {|k, v| k == OTHER_ANSWER_KEY ? v.presence || other_text : v}
 
           # It might be a single item or an array
-          return answer_type == ANSWER_MULTI_SELECT ? values_with_other : values_with_other.first
+          return multi_select? ? values_with_other : values_with_other.first
         end
 
-        return answer unless answer_type == ANSWER_SELECT_VALUE
-
-        index = options.index(answer)
-        unless index
-          raise "Unrecognized answer '#{answer}' for question #{id} (Options: #{options.to_csv.strip})"
-        end
-
-        # Return a 1-based value
-        index + 1
+        ensure_valid_answer answer
       end
 
       # @override
       def type_specific_summary
-        answer_type == ANSWER_SELECT_VALUE ? {max_value: options.length} : {}
+        {
+          options: options,
+          other_text: other_text
+        }
       end
     end
   end

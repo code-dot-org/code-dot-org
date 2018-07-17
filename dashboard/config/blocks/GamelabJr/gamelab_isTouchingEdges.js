@@ -1,3 +1,3 @@
-var isTouchingEdges = function(sprite) {
+function isTouchingEdges(sprite) {
   return sprite.isTouching(edges);
-}
+};

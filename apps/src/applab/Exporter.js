@@ -176,7 +176,8 @@ export function getAppOptionsFile(expoMode, channelId) {
  * looking at the style attributes. We use the element library to determine
  * which styles are common among each element and split those out into more
  * generic selectors. This function also removes all the style attributes from
- * the elements.
+ * the elements. It gives each element where it removed styles an
+ * 'appModernDesign' class.
  */
 function extractCSSFromHTML(el) {
   var css = [];
@@ -196,6 +197,7 @@ function extractCSSFromHTML(el) {
     if (baseEl.tagName.toLowerCase() === 'input') {
       selector += '[type=' + (baseEl.getAttribute('type') || 'text') + ']';
     }
+    selector += '.appModernDesign';
     selector += ',\n' + selector + ':hover';
     css.push(selector + ' {');
     for (var k = 0; k < baseEl.style.length; k++) {
@@ -226,11 +228,21 @@ function extractCSSFromHTML(el) {
           }
         }
         if (styleDiff.length > 0) {
-          css.push(selectorPrefix + '#' + child.id + ' {');
+          let childId = child.id;
+          const firstIdChar = childId.charAt(0);
+          if (!isNaN(parseInt(firstIdChar, 10))) {
+            // First character of id is a number. Must transform this to create
+            // legal CSS:
+            childId = `\\3${firstIdChar} ${childId.substring(1)}`;
+          }
+          css.push(selectorPrefix + '#' + childId + ' {');
           css = css.concat(styleDiff);
           css.push('}');
           css.push('');
         }
+        const exitingClassName = child.className;
+        const exitingClassNamePrefix = exitingClassName ? `${exitingClassName} ` : '';
+        child.className = `${exitingClassNamePrefix}appModernDesign`;
       }
       traverse(child);
     }

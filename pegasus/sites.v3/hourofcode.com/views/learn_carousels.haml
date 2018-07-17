@@ -48,8 +48,9 @@
 - if request.locale == "en-US"
   %br
   %br
-  .footer-banner
-    = I18n.t(:learn_footer_all_tutorials)
+  - unless variation == "university"
+    .footer-banner
+      = I18n.t(:learn_footer_all_tutorials)
 
 :javascript
 

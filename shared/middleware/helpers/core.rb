@@ -45,6 +45,10 @@ def not_found
   halt(404, "Not found\n")
 end
 
+def conflict
+  halt(409, "Conflict\n")
+end
+
 def too_large(msg = "Payload too large\n")
   halt(413, msg)
 end

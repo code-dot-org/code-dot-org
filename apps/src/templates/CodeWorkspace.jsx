@@ -1,21 +1,21 @@
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
-var Radium = require('radium');
-var connect = require('react-redux').connect;
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+import Radium from 'radium';
+import {connect} from 'react-redux';
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-var msg = require('@cdo/locale');
-var commonStyles = require('../commonStyles');
-var color = require("../util/color");
-var utils = require('@cdo/apps/utils');
+import msg from '@cdo/locale';
+import commonStyles from '../commonStyles';
+import color from "../util/color";
+import * as utils from '@cdo/apps/utils';
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import SettingsCog from '../lib/ui/SettingsCog';
 import ShowCodeToggle from './ShowCodeToggle';
 import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
 
-var styles = {
+const styles = {
   headerIcon: {
     fontSize: 18
   },
@@ -30,8 +30,8 @@ var styles = {
   },
 };
 
-var CodeWorkspace = React.createClass({
-  propTypes: {
+class CodeWorkspace extends React.Component {
+  static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -44,9 +44,9 @@ var CodeWorkspace = React.createClass({
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
-  },
+  };
 
-  shouldComponentUpdate: function (nextProps) {
+  shouldComponentUpdate(nextProps) {
     // This component is current semi-protected. We don't want to completely
     // disallow rerendering, since that would prevent us from being able to
     // update styles. However, we do want to prevent property changes that would
@@ -63,9 +63,9 @@ var CodeWorkspace = React.createClass({
     }.bind(this));
 
     return true;
-  },
+  }
 
-  onDebuggerSlide(debuggerHeight) {
+  onDebuggerSlide = (debuggerHeight) => {
     const textbox = this.codeTextbox.getRoot();
     if (textbox.style.bottom) {
       $(textbox).animate(
@@ -84,7 +84,7 @@ var CodeWorkspace = React.createClass({
       textbox.style.bottom = debuggerHeight + 'px';
       utils.fireResizeEvent();
     }
-  },
+  };
 
   renderToolboxHeaders() {
     const {
@@ -137,23 +137,19 @@ var CodeWorkspace = React.createClass({
         {settingsCog}
       </PaneSection>
     ];
-  },
+  }
 
-  onToggleShowCode(usingBlocks) {
+  onToggleShowCode = (usingBlocks) => {
     this.blockCounterEl.style.display =
         (usingBlocks && studioApp.enableShowBlockCount) ? 'inline-block' : 'none';
-  },
+  };
 
   render() {
-    var props = this.props;
+    const props = this.props;
 
     // By default, continue to show header as focused. When runModeIndicators
     // is enabled, remove focus while running.
-    var hasFocus = true;
-    if (props.runModeIndicators && props.isRunning) {
-      hasFocus = false;
-    }
-
+    const hasFocus = !(props.runModeIndicators && props.isRunning);
     const isRtl = this.props.isRtl;
 
     return (
@@ -197,7 +193,7 @@ var CodeWorkspace = React.createClass({
               <div id="blockCounter" ref={el => this.blockCounterEl = el}>
                 <ProtectedStatefulDiv id="blockUsed" className="block-counter-default"/>
                 <span> / </span>
-                <span id="idealBlockNumber"></span>
+                <span id="idealBlockNumber"/>
                 <span>{" " + msg.blocks()}</span>
               </div>
             </PaneSection>
@@ -219,7 +215,7 @@ var CodeWorkspace = React.createClass({
       </span>
     );
   }
-});
+}
 
 module.exports = connect(state => ({
   editCode: state.pageConstants.isDroplet,
