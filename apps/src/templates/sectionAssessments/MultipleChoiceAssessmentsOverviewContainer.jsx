@@ -10,7 +10,7 @@ import { multipleChoiceDataPropType } from './assessmentDataShapes';
 import i18n from "@cdo/locale";
 import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
-class MCAssessmentsOverviewContainer extends Component {
+class MultipleChoiceAssessmentsOverviewContainer extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
     totalStudentCount: PropTypes.number,
@@ -40,11 +40,11 @@ class MCAssessmentsOverviewContainer extends Component {
   }
 }
 
-export const UnconnectedMCAssessmentsOverviewContainer = MCAssessmentsOverviewContainer;
+export const UnconnectedMultipleChoiceAssessmentsOverviewContainer = MultipleChoiceAssessmentsOverviewContainer;
 
 export default connect(state => ({
   questionAnswerData: getMultipleChoiceSectionSummary(state),
   totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
   totalStudentCount: getTotalStudentCount(state),
   studentId: state.sectionAssessments.studentId,
-}))(MCAssessmentsOverviewContainer);
+}))(MultipleChoiceAssessmentsOverviewContainer);

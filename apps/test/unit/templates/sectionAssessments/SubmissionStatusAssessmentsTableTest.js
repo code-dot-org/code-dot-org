@@ -1,13 +1,13 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {assert, expect} from '../../../util/configuredChai';
-import StudentsAssessmentsMCTable from '@cdo/apps/templates/sectionAssessments/StudentsAssessmentsMCTable';
+import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
 import {studentOverviewData} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 
-describe('StudentsAssessmentsMCTable', () => {
+describe('SubmissionStatusAssessmentsTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
-      <StudentsAssessmentsMCTable
+      <SubmissionStatusAssessmentsTable
         studentOverviewData={studentOverviewData}
       />
     );
@@ -17,7 +17,7 @@ describe('StudentsAssessmentsMCTable', () => {
 
   it('renders the correct number of rows and headers', () => {
     const wrapper = mount(
-      <StudentsAssessmentsMCTable
+      <SubmissionStatusAssessmentsTable
         studentOverviewData={studentOverviewData}
       />
     );
@@ -31,7 +31,7 @@ describe('StudentsAssessmentsMCTable', () => {
 
   it('renders with an icon if specified', () => {
     const wrapper = mount(
-      <StudentsAssessmentsMCTable
+      <SubmissionStatusAssessmentsTable
         studentOverviewData={studentOverviewData}
         icon="check-circle"
       />
@@ -43,7 +43,7 @@ describe('StudentsAssessmentsMCTable', () => {
 
   it('renders a checkmark when an assessment is submitted', () => {
     const wrapper = mount(
-      <StudentsAssessmentsMCTable
+      <SubmissionStatusAssessmentsTable
         studentOverviewData={studentOverviewData}
       />
     );
