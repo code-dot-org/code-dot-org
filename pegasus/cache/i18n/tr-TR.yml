@@ -1,4 +1,5 @@
-"tr-TR":
+---
+tr-TR:
   hour_of_code: Saat Kodu
   hello: Merhaba dünya
   'yes': Evet
@@ -95,18 +96,7 @@
   congratulations_volunteer: 'Tebrikler: Kodlama Saati''ni denediniz, <a href="https://code.org/volunteer">bir
     sınıfta gönüllü olmak</a> ve öğrencilerin Kod Saatini öğrenmesine yardımcı olmak
     için kaydolun!'
-  congratulations_on_completing_course1: Kurs 1'i tamamladığınız için tebrikler
-  congratulations_on_completing_course2: Kurs 2'yi tamamladığınız için tebrikler
-  congratulations_on_completing_course3: Kurs 3'ü tamamladığınız için tebrikler
-  congratulations_on_completing_course4: Kurs 4'ü tamamladığınız için tebrikler
-  congratulations_on_completing_coursea: Ders A'yı tamamladığınız için tebrikler
-  congratulations_on_completing_courseb: Ders B'yi tamamladığınız için tebrikler
-  congratulations_on_completing_coursec: Ders C'yi tamamladığınız için tebrikler
-  congratulations_on_completing_coursed: Ders D'yi tamamladığınız için tebrikler
-  congratulations_on_completing_coursee: Ders E'yi tamamladığınız için tebrikler
-  congratulations_on_completing_coursef: Ders F'yi tamamladığınız için tebrikler
-  congratulations_on_completing_accelerated: Hızlandırılmış kursu tamamladığınız için
-    tebrikler
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Bir üst seviyeye geç
   congrats_next_tutorials_desc: 1 saatlik kısa eğitim setlerini veya bir <a href="%{current_path}/next">ortaklık
     eğitimini</a> dene.
@@ -294,28 +284,8 @@
   just_did_accelerated: Hızlandırılmış Kursu yeni bitirdim-işte! @codeorg
   just_did_hoc_donor: "#KodSaati'ni henüz tamamladım - Hadi bir göz at! Destek için
     teşekkürler %{donor_twitter} @codeorg"
-  just_did_course1_donor: Kurs 1'i henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_course2_donor: Kurs 2'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_course3_donor: Kurs 3'ü henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_course4_donor: Kurs 4'ü henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursea_donor: Kurs A'yı henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_courseb_donor: Kurs B'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursec_donor: Kurs C'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursed_donor: Kurs D'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursee_donor: Kurs E'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_coursef_donor: Kurs F'yi henüz tamamladım - Hadi bir göz at! Destek için
-    teşekkürler %{donor_twitter} @codeorg
-  just_did_accelerated_donor: Hızlandırılmış Kursu henüz tamamladım - Hadi bir göz
-    at! Destek için teşekkürler %{donor_twitter} @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: |-
     10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.
     http://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/.
@@ -532,18 +502,18 @@
   careers_page_more: Teknoloji alanında profesyonellerin daha başka <a href='%{careers_url}'
     target='_blank'>videoları</a> için
   playlab_choose_theme: Oyun Laboratuvarınızın temasını seçin
-  playlab_classic_title: klasik
+  playlab_classic_title: Klasik
   playlab_gumball_title: Gumball
   playlab_iceage_title: 'Buz Devri - yakında '
   playlab_iceage_title_live: Buz Devri
   starwars_subtitle: Kod İle Bir Galaksi İnşa Etmek
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Sürükle-bırak blokları ve JavaScript kullan.
   starwars_javascript_specs: Sadece İngilizce | Modern Web Tarayıcıları | 11+ Yaş
   starwars_blocks_title: Bloklar
   starwars_blocks_description: Sürükle-bırak blokları kullan.
   starwars_blocks_specs: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar,
-    tabletler | 6-10 yaş
+    tabletler | 6-106 yaş
   starwars_platform_text: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_name: Minecraft Kod Saati
   mc_longdescription: Steve ya da Alex'i Minecraft dünyasında bir maceraya çıkarmak
@@ -552,7 +522,8 @@
     için kod blokları kullan.
   mc_gradelevel: 4-104 Yaş
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
-  mc_specs: Çoklu dil | Modern tarayıcılar ve tabletler | 6 ve üzeri yaş
+  mc_specs: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar, tabletler
+    | 6-106 yaş
   minecraft_agent: 'Minecraft: Kahramanın yolculuğu'
   minecraft_designer: Minecraft Tasarımcısı
   minecraft_adventurer: Minecraft Maceracısı
@@ -572,23 +543,24 @@
   minecraft_download_adventurer: Minecraft Maceracı'nın çevrimdışı versiyonunu indir.
   minecraft_subtitle: Minecraft Kod Saati
   minecraft_store_camps: Minecraft saat kodu kamplarının Microsoft Store ücretsiz
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
+    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
+    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Öğretmen kaynakları ve ders planı.
   minecraft_leader_guide: Bir etkinlik planlayıp gerçekleştirmenize yardımcı olan
     kaynakları indirin.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
   minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Herkes İçin bilgisayar bilimi: Microsoft Mağazasında
     Bir Saatlik Bir Kod Ötesi'
   minecraft_continue_learning_description: Bilgisayar bilimi tecrübesi gerekmiyor!
@@ -601,21 +573,21 @@
   minecraft_future: Tüm gençliğin geleceğe hazır olmasına yardım edin
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft, Kod Saati için geri döndü ve siz kahramansınız! Minecraft
     biyomaları boyunca yolculuk yapmak için kod yazınız.
-  sports_page_title: Kodlama Saati Etkinlikleri-Spor
+  sports_page_title: Kod Saati Sporları
   sports_og_title: Kendini zorla. Herkes öğrenebilir.
-  sports_og_description: Şampiyonlar ve altın madalyalı sporcular olarak kod saatini
-    denemenizi öneririz. Kendi spor oyunu kodla.
+  sports_og_description: Şampiyonlar ve altın madalyalı sporcular olarak Kod Saatini
+    denemenizi öneririz. Kendi spor oyununu kodla.
   sports_title: Kendi Spor Oyununu Kodla
   sports_watch_video: Videoyu izle
   sports_video_title: Kendini zorla. Herkes öğrenebilir.
   sports_select_theme: Kendi eğitim temanızı seçin
-  sports_basketball_title: Besketbol oynayın
+  sports_basketball_title: Basketbol oyunu kodla
   sports_all_sports_title: Kendi sporunu kodla
   sports_featured_athletes: Öne Çıkan Atletleri gör
   sports_athletes_title: Öne Çıkan Atletler
@@ -733,8 +705,8 @@
   volunteer_engineer_submission_field_email_preference: Size kurslarımızdaki yenilikler,
     yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir
     miyiz?
-  volunteer_engineer_submission_field_email_preference_privacy: "(Ayrıntılar için
-    gizlilik politikamıza bakın)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Evet
   volunteer_engineer_submission_field_email_preference_no: Hayır
   volunteer_engineer_submission_final_paragraph: Kod Saati ve diğer gönüllü fırsatlarında
@@ -1262,9 +1234,9 @@
   cspunit4_name: 'Ünite 4: veri'
   cspunit5_name: 'Ünite 5: Keşfetmek ve PT oluşturmak'
   cspunit6_name: 'Post-AP: Uygulamalardaki veritabanları'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Ünite 5: Veri ve toplum'
   csd6_name: 'Ünite 6: Fiziksel bilişim'
@@ -1339,7 +1311,7 @@
   csf_international_category_name: CS (Computer Science-Bilgisayar Bilimleri) Uluslararası
     Temelleri
   csf2_draft_category_name: 'Geliştiriliyor: Kurslar A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "' 15 - 16' Bilgisayar bilimleri ilkeleri"
   csp17_category_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
@@ -1348,7 +1320,7 @@
   research_studies_category_name: Research Studies
   applab_name: App Laboratuvarı
   gamelab_name: Oyun Laboratuvarı
-  basketball_name: Besketbol oynayın
+  basketball_name: Basketbol oyunu kodla
   sports_name: Spor
   applab_gradelevel: 13 + Yaş grubu
   applab_shortdescription_congrats: App Lab basit uygulamalar yapabileceğiniz bir
@@ -1414,6 +1386,18 @@
   coursed_gradelevel: 8+ sınıfları
   coursee_gradelevel: 9. ve üzeri Sınıflar
   coursef_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2017_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2017_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2017_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2017_gradelevel: 8+ sınıfları
+  coursee-2017_gradelevel: 8-12 yaş grubu
+  coursef-2017_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2018_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2018_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2018_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2018_gradelevel: 8+ sınıfları
+  coursee-2018_gradelevel: 8-12 yaş grubu
+  coursef-2018_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
@@ -1559,6 +1543,30 @@
     oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
   coursef_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin ve kendi
     oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursea-2017_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  courseb-2017_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  coursec-2017_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursed-2017_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursee-2017_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursef-2017_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursea-2018_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  courseb-2018_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar
+    bilimine giriş.
+  coursec-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursed-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursee-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursef-2018_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin
+    ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
     kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler
     Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten
@@ -2034,13 +2042,13 @@
   compatibility_unsupported_browser: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı
     <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan
     birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: kanat çırp
   infinity_shortcode: inf
-  playlab_shortcode: oynat
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Ana Sayfa
   header_my_dashboard: Panelim

@@ -5,6 +5,7 @@ import {freeResponsesDataPropType} from './assessmentDataShapes';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import color from "@cdo/apps/util/color";
 
 const PADDING = 15;
 
@@ -23,6 +24,9 @@ const styles = {
   responseColumnHeader: {
     padding: PADDING,
   },
+  noResponse: {
+    color: color.lighter_gray,
+  }
 };
 
 export const COLUMNS = {
@@ -60,6 +64,19 @@ class FreeResponsesAssessmentsTable extends Component {
     });
   };
 
+  responseCellFormatter = (response, {rowData, rowIndex}) => {
+    return (
+      <div>
+        {response &&
+          <div>{response}</div>
+        }
+        {!response &&
+          <div style={styles.noResponse}>{i18n.emptyFreeResponse()}</div>
+        }
+      </div>
+    );
+  };
+
   getColumns = (sortable, index) => {
     let dataColumns = [
       {
@@ -94,6 +111,7 @@ class FreeResponsesAssessmentsTable extends Component {
           },
         },
         cell: {
+          format: this.responseCellFormatter,
           props: {style:tableLayoutStyles.cell},
         }
       },

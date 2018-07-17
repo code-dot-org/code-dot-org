@@ -7,7 +7,11 @@ with unplugged_stages as
   from analysis.course_structure cs
     join dashboard_production.levels le on le.id = cs.level_id
   -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
-  where cs.script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
+  where (
+      cs.script_name_long in ('Course A','Course B','Course C','Course D','Course E','Course F','Express','Pre-Express')
+      or
+      cs.script_name in ('course1','course2','course3','course4','20-hour')
+    )
     and le.type = 'Unplugged'
 ),
 standalone_video_levels as
@@ -20,7 +24,11 @@ standalone_video_levels as
   from analysis.course_structure cs
     join dashboard_production.levels le on le.id = cs.level_id
   -- CSF scripts: Old courses 1-4 (17,18,19,23), new courses A-F (236-241), 20-hour course (1), express (258) and pre-express (259)
-  where script_id in (1,17,18,19,23,236,237,238,239,240,241,258,259)
+  where (
+      cs.script_name_short in ('Course A','Course B','Course C','Course D','Course E','Course F','Express','Pre-Express')
+      or
+      cs.script_name in ('course1','course2','course3','course4','20-hour')
+  )
   group by 1,2
 ),
 standalone_video_stages as
@@ -47,7 +55,7 @@ select distinct
   script_id,
   stage_number
 from analysis.course_structure 
-where script_name in ('coursee', 'coursef') and stage_number <= 9
+where script_name in ('coursee-2017', 'coursef-2017') and stage_number <= 9
 )
 select *
 from unplugged_stages

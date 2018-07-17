@@ -1,5 +1,5 @@
 import {assert} from '../../util/configuredChai';
-var testUtils = require('../../util/testUtils');
+import {assertOwnProperty} from "../../util/assertions";
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var _ = require('lodash');
 var utils = require('@cdo/apps/utils'); // Provides String.prototype.repeat
@@ -16,7 +16,6 @@ var Packet = require('@cdo/apps/netsim/Packet');
 
 
 var asciiToBinary = DataConverters.asciiToBinary;
-var assertOwnProperty = testUtils.assertOwnProperty;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 var DnsMode = NetSimConstants.DnsMode;

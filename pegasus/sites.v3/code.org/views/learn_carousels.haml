@@ -71,15 +71,12 @@
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
-
-- if %w(beyond elementary middle_high university).include? variation
-  %br
-  = I18n.t(:third_party_submission, submission_url: "https://docs.google.com/document/d/1rWq7Bvr72bDjnT7tGXNPcJxizpNLbuEBmal-5vgTXag/pub")
-- elsif request.locale == "en-US"
+- if request.locale == "en-US"
   %br
   %br
-  .footer-banner
-    = I18n.t(:learn_footer_all_tutorials)
+  - unless variation == "university"
+    .footer-banner
+      = I18n.t(:learn_footer_all_tutorials)
   %br
   %br
 

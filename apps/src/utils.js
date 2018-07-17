@@ -764,3 +764,7 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
     y: Math.round((clientY - rect.top) * element.offsetHeight / rect.height),
   };
 }
+
+export function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}

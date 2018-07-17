@@ -163,7 +163,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     updated_at = Time.now
 
-    create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
+    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
 
     # Call the controller method.
     get :section_responses, params: {
@@ -186,13 +186,13 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "multi_correct" => 1,
             "multi_count" => 4,
             "submitted" => true,
-            "timestamp" => updated_at.utc.to_s,
+            "timestamp" => user_level[:updated_at],
             "level_results" => [
               {"student_result" => "This is a free response", "status" => "", "type" => "FreeResponse"},
-              {"type" => "Multi", "student_result" => "A", "status" => "correct",},
-              {"type" => "Multi", "student_result" => "B", "status" => "incorrect",},
-              {"type" => "Multi", "student_result" => "", "status" => "unsubmitted",},
-              {"status" => "unsubmitted"}
+              {"type" => "Multi", "student_result" => [0], "status" => "correct",},
+              {"type" => "Multi", "student_result" => [1], "status" => "incorrect",},
+              {"type" => "Multi", "student_result" => [], "status" => "unsubmitted",},
+              {"type" => "Multi", "status" => "unsubmitted"}
             ]
           }
         }
@@ -378,7 +378,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {"result" => "This is a free response"},
               {"result" => "Free response from student 4"}
             ],
-            "answer_texts" => nil
+            "answer_texts" => nil,
+            "question_index" => 0,
           },
           {
             "type" => "multi",
@@ -390,7 +391,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {},
               {}
             ],
-            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"],
+            "question_index" => 1,
           },
           {
             "type" => "multi",
@@ -402,7 +404,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {},
               {"answer_index" => 1}
             ],
-            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"],
+            "question_index" => 2,
           },
           {
             "type" => "multi",
@@ -414,7 +417,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {},
               {}
             ],
-            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"],
+            "question_index" => 3,
           },
           {
             "type" => "multi",
@@ -426,7 +430,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {},
               {}
             ],
-            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"],
+            "question_index" => 4,
           }
         ]
       }
@@ -476,12 +481,24 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       create :user_level, user: student, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at
     end
 
-    # We can retrieve this with the survey API, but it will be empty.
+    # We can retrieve this with the survey API, but there will be no levelgroup_results.
     get :section_surveys, params: {
       section_id: @section.id,
       script_id: script.id
     }
+
+    expected_response = {
+      level1.id.to_s => {
+        "stage_name" => "translation missing: en-US.data.script.name.#{script.name}.title",
+        "levelgroup_results" => []
+      }
+    }
+
     assert_response :success
-    assert_equal '{}', @response.body
+    actual_response = JSON.parse(@response.body)
+    assert_equal expected_response.keys, actual_response.keys
+    assert_equal expected_response[level1.id.to_s]['stage_name'], actual_response[level1.id.to_s]['stage_name']
+    assert_equal expected_response[level1.id.to_s]['levelgroup_results'],
+      actual_response[level1.id.to_s]['levelgroup_results']
   end
 end

@@ -213,11 +213,9 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'debugging info for exceptions in load_custom_level' do
-    begin
-      LevelLoader.load_custom_level('xxxxx')
-    rescue Exception => e
-      assert_includes e.message, "in level"
-    end
+    LevelLoader.load_custom_level('xxxxx')
+  rescue Exception => e
+    assert_includes e.message, "in level"
   end
 
   test 'prioritize property over column data in merged update' do
