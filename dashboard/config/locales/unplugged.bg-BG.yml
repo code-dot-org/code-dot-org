@@ -202,7 +202,7 @@ bg:
         desc: Учениците изпращат съобщения, представящи различни методи за изпращане
           в Интернет, използвайки листове хартия.
       Crowdsourcing:
-        title: Съвместен код
+        title: Crowdsourcing
         desc: Учениците използват crowdsourcing техниката, за решаване на проблеми
           в компютърните науки. При нея, за да завършите задачата по-ефективно, трябва
           да работите заедно като клас, отколкото ако един ученик се опитва сам.
@@ -301,7 +301,7 @@ bg:
         title: Ънплъгд дейност
         desc: Днес ще научите какво означава да бъдеш дигитален гражданин.
       courseE_unplugged_privateInformation:
-        title: Ънплъгд дейност
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Днес ще научите разликата между частна и лична информация!
       courseF_unplugged_powerOfWords:
         title: Ънплъгд дейност
@@ -465,44 +465,44 @@ bg:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: Моите приятели роботи
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 'Реални алгоритми: Засадете семената'
         desc: Този урок ни показва, че ние използваме алгоритми и в ежедневието ни,

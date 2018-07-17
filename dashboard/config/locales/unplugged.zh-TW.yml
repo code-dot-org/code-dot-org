@@ -136,7 +136,7 @@ zh-TW:
         title: 信封變數
         desc: 在計算機科學中，變數提供了很大的自由度。這節課有助於解釋什麼是變數，以及我們如何用不同的方法來使用它們。在這節課實施前，需要先（或同時）清楚抽象概念。
       MadGlibs:
-        title: 瘋狂資料庫
+        title: Mad Glibs
         desc: 抽象概念（Abstraction）是一個資訊電腦科學家最需要了解的重要技巧之一。這個活動會讓你的學生分析故事間的差異性，進而讓他們把故事抽象化。這些被抽象化的故事就會變成有趣又瘋狂的新故事的範本。
       ForLoopFun:
         title: 有趣的計數迴圈
@@ -173,7 +173,7 @@ zh-TW:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: 不插電活動
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: 不插電活動
@@ -182,7 +182,7 @@ zh-TW:
         title: 不插電活動
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: 不插電活動
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: 不插電活動
@@ -298,44 +298,44 @@ zh-TW:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: 我的機器人朋友
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 生活中的演算法 - 植物種植
         desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。

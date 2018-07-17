@@ -1,4 +1,5 @@
-"ro-RO":
+---
+ro-RO:
   hour_of_code: Hour of Code
   hello: Salutare lume
   'yes': Da
@@ -45,7 +46,7 @@
   csedweek_og_title: Ora de Cod este aici
   csedweek_og_description: 4-10 decembrie, 2017. Informatica este elementară pentru
     fiecare student.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -97,18 +98,7 @@
   congratulations_volunteer: 'Felicitari: acum, ca ai incercat Ora de Programare,
     <a href="https://code.org/volunteer">înscrie-te pentru a face voluntariat intr-o
     clasa</a> si pentru a ajuta elevii sa invete o Ora de Programare!'
-  congratulations_on_completing_course1: Felicitări pentru finalizarea cursului 1
-  congratulations_on_completing_course2: Felicitări pentru finalizarea cursului 2
-  congratulations_on_completing_course3: Felicitări pentru finalizarea cursului 3
-  congratulations_on_completing_course4: Felicitări pentru finalizarea cursului 4
-  congratulations_on_completing_coursea: Felicitări pentru finalizarea Cursului A
-  congratulations_on_completing_courseb: Felicitări pentru finalizarea Cursului B
-  congratulations_on_completing_coursec: Felicitări pentru finalizarea Cursului C
-  congratulations_on_completing_coursed: Felicitări pentru finalizarea Cursului B
-  congratulations_on_completing_coursee: Felicitări pentru finalizarea Cursului E
-  congratulations_on_completing_coursef: Felicitări pentru finalizarea Cursului F
-  congratulations_on_completing_accelerated: Felicitări pentru finalizarea Cursului
-    Accelerat
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Mai departe incercati aceste tutoriale
   congrats_next_tutorials_desc: Încercați aceste tutoriale mai scurte, de 1 oră sau
     încercaţi un <a href="%{current_path}/next"> partener tutorial</a>.
@@ -298,28 +288,8 @@
   just_did_accelerated: Tocmai am terminat Cursul intensiv - vizualizați! @codeorg
   just_did_hoc_donor: 'Tocmai am parcurs #HourOfCode - vizualizați! (Mulțumesc %{donor_twitter}
     pentru sprijinul acordat @codeorg)'
-  just_did_course1_donor: Tocmai am finalizat Cursul 1 - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_course2_donor: Tocmai am finalizat Cursul 2 - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_course3_donor: Tocmai am finalizat Cursul 3 - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_course4_donor: Tocmai am finalizat Cursul 4 - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_coursea_donor: Tocmai am finalizat Cursul A - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_courseb_donor: Tocmai am finalizat Cursul B - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_coursec_donor: Tocmai am finalizat Cursul C - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_coursed_donor: Tocmai am finalizat Cursul D - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_coursee_donor: Tocmai am finalizat Cursul E - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_coursef_donor: Tocmai am finalizat Cursul F - vizualizați! Mulțumesc %{donor_twitter}
-    pentru sprijinul acordat @codeorg
-  just_did_accelerated_donor: Tocmai am finalizat Cursul intensiv - vizualizați! Mulțumesc
-    %{donor_twitter} pentru sprijinul acordat @codeorg
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
   twitter_teach_cs: 9 din 10 oameni sunt de acord, şcolile ar trebui să înveţe ştiinţa
     calculatoarelor. http://youtu.be/nKIu9yen5nc. Vizitati https://code.org/.
   twitter_cs_foundational: Informatica este fundamentală pentru fiecare student. https://youtu.be/QvyTEx1wyOY.
@@ -540,7 +510,7 @@
   playlab_iceage_title: Epoca de gheață - În curând
   playlab_iceage_title_live: Epoca de gheață
   starwars_subtitle: Programarea unei galaxii
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Utilizează blocuri drag-drop şi JavaScript.
   starwars_javascript_specs: Doar Engleza | Browsere moderne | Varsta 11 +
   starwars_blocks_title: Blocuri
@@ -747,8 +717,8 @@
   volunteer_engineer_submission_field_email_preference: Sunteți de acord să vă trimitem
     prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale
     sau alte știri din domeniul informaticii?
-  volunteer_engineer_submission_field_email_preference_privacy: "(Pentru detalii,
-    vedeți politica noastră de confidențialitate)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
+    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Da
   volunteer_engineer_submission_field_email_preference_no: Nu
   volunteer_engineer_submission_final_paragraph: Vei aparea pe o hartă pentru ca profesorii
@@ -1079,7 +1049,7 @@
   dashboard_implementation_guide: Ghid de implementare
   dashboard_glossary: Glosar
   dashboard_classroom_strategies: Strategii didactice pentru profesori
-  dashboard_debugging: 'Depanare:'
+  dashboard_debugging: 'Debugging:'
   dashboard_puzzle_solving: 'Rezolvare de puzzle:'
   dashboard_student_worksheet: Foaie de lucru a elevului
   dashboard_teacher_worksheet: Foaie de lucru a profesorului
@@ -1263,7 +1233,7 @@
   artist_name: Artist
   monstercoding_name: Misiunea programarii Insulei Misterioase
   allcancode_name: Fugi Marco!
-  csfirst_name: Prima oara CS
+  csfirst_name: CS First
   boxisland_name: Insula Cutiei
   codesters_name: Codesters
   texasinstruments_name: 10 minute de Programat
@@ -1309,9 +1279,9 @@
   cspunit4_name: "(vechi) Unitatea 4: date"
   cspunit5_name: "(vechi) Unitatea 5: Exploreaza şi creaza PT"
   cspunit6_name: 'Post-AP: Baze de date din aplicaţii'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unitatea 5: Datele și societatea'
   csd6_name: 'Unitatea 6: Calcul fizic'
@@ -1385,7 +1355,7 @@
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: Fundamentele internaționale ale Informaticii
   csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: Principii de CS 15-16
   csp17_category_name: Principii de CS 16-17
@@ -1460,6 +1430,18 @@
   coursed_gradelevel: Gradele 8+
   coursee_gradelevel: Clasele 9+
   coursef_gradelevel: Clasele 10+
+  coursea-2017_gradelevel: Clasele 5+
+  courseb-2017_gradelevel: Clasele 6+
+  coursec-2017_gradelevel: Clasele 7+
+  coursed-2017_gradelevel: Gradele 8+
+  coursee-2017_gradelevel: Vârste 8-12 ani
+  coursef-2017_gradelevel: Clasele 10+
+  coursea-2018_gradelevel: Clasele 5+
+  courseb-2018_gradelevel: Clasele 6+
+  coursec-2018_gradelevel: Clasele 7+
+  coursed-2018_gradelevel: Gradele 8+
+  coursee-2018_gradelevel: Vârste 8-12 ani
+  coursef-2018_gradelevel: Clasele 10+
   accelerated_gradelevel: Vârste 10 - 18 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
@@ -1597,12 +1579,41 @@
     soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui curs,
     elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu cineva.
     Recomandat pentru clasele 4-8.
-  coursea_shortdescription_congrats: "[șir gol]"
-  courseb_shortdescription_congrats: "[șir gol]"
-  coursec_shortdescription_congrats: "[șir gol]"
-  coursed_shortdescription_congrats: "[șir gol]"
-  coursee_shortdescription_congrats: "[șir gol]"
-  coursef_shortdescription_congrats: "[șir gol]"
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă
     simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
@@ -2139,13 +2150,13 @@
     upgrade browser-ului la <a href='%{supported_browsers_url}', target='_blank'>
     unul din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii,
     dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: zboară
   infinity_shortcode: inf
-  playlab_shortcode: joacă
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard

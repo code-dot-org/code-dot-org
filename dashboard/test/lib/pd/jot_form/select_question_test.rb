@@ -7,8 +7,8 @@ module Pd
       include Constants
 
       {
-        TYPE_DROPDOWN => ANSWER_SELECT_VALUE,
-        TYPE_RADIO => ANSWER_SELECT_VALUE,
+        TYPE_DROPDOWN => ANSWER_SINGLE_SELECT,
+        TYPE_RADIO => ANSWER_SINGLE_SELECT,
         TYPE_CHECKBOX => ANSWER_MULTI_SELECT
       }.each do |type, expected_answer_type|
         test "parse jotform question data for #{type}" do
@@ -39,29 +39,12 @@ module Pd
         end
       end
 
-      test 'questions with preserve_text or an other option do not calculate answer values' do
-        {
-          TYPE_DROPDOWN => ANSWER_SELECT_TEXT,
-          TYPE_RADIO => ANSWER_SELECT_TEXT,
-          TYPE_CHECKBOX => ANSWER_MULTI_SELECT
-        }.each do |type, expected_answer_type|
-          assert_equal(
-            expected_answer_type,
-            SelectQuestion.new(type: type, preserve_text: true).answer_type
-          )
-          assert_equal(
-            expected_answer_type,
-            SelectQuestion.new(type: type, allow_other: true).answer_type
-          )
-        end
-      end
-
-      test 'get_value for single selection returns the numeric value' do
+      test 'get_value for single selection returns the single value' do
         question = SelectQuestion.new(id: 1, type: TYPE_RADIO, options: %w(First Second Third))
 
-        assert_equal 1, question.get_value('First')
-        assert_equal 2, question.get_value('Second')
-        assert_equal 3, question.get_value('Third')
+        assert_equal 'First', question.get_value('First')
+        assert_equal 'Second', question.get_value('Second')
+        assert_equal 'Third', question.get_value('Third')
 
         e = assert_raises do
           question.get_value('Invalid')
@@ -73,13 +56,6 @@ module Pd
         question = SelectQuestion.new(id: 1, type: TYPE_CHECKBOX, options: %w(First Second Third))
 
         assert_equal %w(First), question.get_value(%w(First))
-        assert_equal %w(Second Third), question.get_value(%w(Second Third))
-      end
-
-      test 'get_value with preserve_text' do
-        question = SelectQuestion.new(id: 1, options: %w(First Second Third), preserve_text: true)
-
-        assert_equal 'First', question.get_value('First')
         assert_equal %w(Second Third), question.get_value(%w(Second Third))
       end
 
@@ -108,8 +84,7 @@ module Pd
           order: 1,
           options: %w(One Two Three),
           allow_other: true,
-          other_text: 'Other',
-          preserve_text: false
+          other_text: 'Other'
         }
 
         question = SelectQuestion.new(hash)
@@ -128,10 +103,34 @@ module Pd
         expected_summary = {
           'sampleSelect' => {
             text: 'a label',
-            answer_type: ANSWER_SELECT_VALUE,
-            max_value: 3
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(One Two Three),
+            other_text: nil
           }
         }
+        assert_equal expected_summary, question.summarize
+      end
+
+      test 'summarize_with_other' do
+        question = SelectQuestion.new(
+          id: 1,
+          type: TYPE_RADIO,
+          name: 'sampleSelectWithOther',
+          text: 'pick one',
+          options: %w(A B C),
+          other_text: 'Other',
+          allow_other: true
+        )
+
+        expected_summary = {
+          'sampleSelectWithOther' => {
+            text: 'pick one',
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(A B C),
+            other_text: 'Other'
+          }
+        }
+
         assert_equal expected_summary, question.summarize
       end
     end

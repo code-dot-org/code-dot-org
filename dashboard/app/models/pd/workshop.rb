@@ -327,12 +327,10 @@ class Pd::Workshop < ActiveRecord::Base
     errors = []
     scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
-        begin
-          email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
-          email.deliver_now
-        rescue => e
-          errors << "teacher enrollment #{enrollment.id} - #{e.message}"
-        end
+        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
+        email.deliver_now
+      rescue => e
+        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
       end
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
@@ -356,11 +354,9 @@ class Pd::Workshop < ActiveRecord::Base
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     should_have_ended.each do |workshop|
-      begin
-        Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
-      rescue => e
-        errors << "organizer should close workshop #{workshop.id} - #{e.message}"
-      end
+      Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
+    rescue => e
+      errors << "organizer should close workshop #{workshop.id} - #{e.message}"
     end
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
@@ -533,6 +529,14 @@ class Pd::Workshop < ActiveRecord::Base
 
   def funded_csf?
     course == COURSE_CSF && funded
+  end
+
+  def future_or_current_teachercon_or_fit?
+    [
+      Pd::Workshop::SUBJECT_TEACHER_CON,
+      Pd::Workshop::SUBJECT_FIT
+    ].include?(subject) &&
+      state != Pd::Workshop::STATE_ENDED
   end
 
   def funding_summary

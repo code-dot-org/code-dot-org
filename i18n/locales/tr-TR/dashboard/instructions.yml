@@ -279,26 +279,26 @@ tr:
       4-5 Artist 1_instruction: 'Kutumu çizmemi tamamlamak için yardım et.(Her doğru parçası 300 piksel uzunluğundadır) '
       4-5 Artist 10_instruction: Kodu denemek için "Çalıştır" düğmesine basın. Ardından çizimi tamamlayana kadar tekrar edin.Her defasında rengi farklı olacaktır.
       4-5 Artist 11_instruction: Yeşil çizgileri tamamlayın. Çizgiler 300 piksel uzunluğunda ve aralarındaki mesafe 15 pikseldir.
-      4-5 Artist 2_instruction: Kareyi tamamlamak için 'tekrarla' döngü kullanabilir misiniz.
+      4-5 Artist 2_instruction: Kareyi tamamlamak için döngü kullanabilir misiniz?
       4-5 Artist 3.5_instruction: Bu kodu çalıştırsan ne olacağını dene ("Çalıştır" düğmesi ile deneyebilirsin). Sonra bu kodu çizimi tamamlamak için gerektiği kadar tekrarla!
-      4-5 Artist 3_instruction: Bu çiçekliğin 600 çevresi var.  Uzun kenar 200 uzunlukta olacak şekilde. Bir dikdörtgen çizin.
-      4-5 Artist 4_instruction: Bir çemberde kaç derecedir? Blokları tekrarlayarak bir renk çemberi oluşturun.
+      4-5 Artist 3_instruction: Bu dikdörtgen çiçekliğin çevresi 600 birim.  Uzun kenar 200 birim. En az komutla bu dikdörtgeni çizin.
+      4-5 Artist 4_instruction: Bir çemberde kaç derece var? Blokları tekrarlayarak bir renk çemberi oluşturun.
       4-5 Artist 5_instruction: Zombinin çizimi tamamlaması için önceden hazırlanmış döngüde "???" yerine ne kullanabiliriz?
       4-5 Artist 6_instruction: Eşkenar üçgenin açıları 60, 60, 60 derecedir. Her kenarı 200 pikseldir. Çizimi tamamlayın.
-      4-5 Artist 7_instruction: Bu dik üçgenin açıları, 30, 60 ve 90 derecedir. Eğimli tarafının uzunluğu çift 100 piksel yüksekliğindedir. Çizimi tamamlayın.
+      4-5 Artist 7_instruction: Bu dik üçgenin açıları, 30, 60 ve 90 derecedir. Eğimli tarafının(hipotenüsün) uzunluğu 200 piksel yüksekliğindedir. Çizimi tamamlayın.
       4-5 Artist 8_instruction: "Bir futbol sahasındaki orta saha çizgisi kenarları ile dikeydir.   \\r\nDikdörtgenin çevresi toplamda 800 pikseldir ve uzun kenarı 240 pikseldir. Orta saha çizgisi kaç pikseldir?   \\r\n\\r\nSınırları ve orta saha çizgisini çizin."
-      4-5 Artist 9_instruction: Tasarımın simetrik olması için diğer yarsını çizin. Üçgenler eşkenar ve 50 piksel uzunluğunda.
-      4-5 Artist Assessment 1_instruction: 'Değerlendirme: Döngü kullanarak bir eşkenar üçgen çizin. Her taraf 300 pixel olsun.'
-      4-5 Artist For Loops 1_instruction: 1'den 10'a kadar sayıları geniş kutulara koyun ve kodu çalıştırın.
-      4-5 Artist For Loops 11_instruction: '"for" bloğunu tamamlayın böylece 0,20,40,60,80...200 şeklinde saysın.'
+      4-5 Artist 9_instruction: Tasarımın simetrik olması için diğer yarsını çizin. Üçgenler eşkenar ve kenar uzunlukları 50 piksel uzunluğunda.
+      4-5 Artist Assessment 1_instruction: 'Değerlendirme: Döngü kullanarak bir eşkenar üçgen çizin. Her kenar 300 piksel olsun.'
+      4-5 Artist For Loops 1_instruction: Kutucuktan 1'den 10'a kadar genişliği seçin ve kodu çalıştırın.
+      4-5 Artist For Loops 11_instruction: Şununla Say (for) döngüsünü tamamlayın böylece 0,20,40,60,80... 200 şeklinde saysın.
       4-5 Artist For Loops 12_instruction: 'Eğer ters düşerse ne olur ve numaraları? "200, 180, 160, 140, ...0 120 sayar o kadar." engellemek için tam '
-      4-5 Artist For Loops 13_instruction: 'Bu dizayn "for" döngüsü olmadan çok fazla blok alıyor! "For" bloğu ile satırları azaltın. İpucu: son satır uzunluğu 250 pixel.'
-      4-5 Artist For Loops 14_instruction: 'Birisi kodu başlattı ama daha sonra fark etti ki bunun daha kolay bir yolu olmalı! Üçgen sarmal tamamlamak için "For" bloğunu kullanın. (İpucu: son satı ruzunluğu 300 pixeldir.)'
-      4-5 Artist For Loops 15_instruction: 'Birisi koda başladı ama daha sonra anladı ki bunun daha kolay bir yolu olmalı! Altıgen sarmal yapmak için "for" bloğunu kullanın.(İpucu: son satır uzunluğu 200 pixeldir.)'
+      4-5 Artist For Loops 13_instruction: 'Bu tasarım şununla say (for) döngüsü olmadan çok fazla blok alıyor! Şununla Say (for) döngüsü ile satırları azaltın. İpucu: son satır uzunluğu 250 piksel.'
+      4-5 Artist For Loops 14_instruction: 'Birisi kodu başlattı ama daha sonra fark etti ki bunun daha kolay bir yolu olmalı! Üçgen sarmalı tamamlamak için Şununla Say (for) bloğunu kullanın. (İpucu: son satır uzunluğu 300 pikseldir.)'
+      4-5 Artist For Loops 15_instruction: 'Birisi kodu başlattı ama daha sonra fark etti ki bunun daha kolay bir yolu olmalı! Altıgen sarmalı tamamlamak için Şununla Say (for) bloğunu kullanın. (İpucu: son satır uzunluğu 200 pikseldir.)'
       4-5 Artist For Loops 2_instruction: Bu bir "tekrarla" bloğu. 1,2,3... 10 yazmak yerine, "tekrarla" bloğu içine 10 yazarak döngüyü aynı işlemi yapmasını sağlayabilirsin. Döngü içine 10 yazınız.
-      4-5 Artist For Loops 3_instruction: 1'den 50'ye kadar nasıl sayabiliriz? "For" bloğunu düzenleyin.
-      4-5 Artist For Loops 4_instruction: '"İçin" bloğunu 1''den 10''a kadar sayacak şekilde düzenle.'
-      4-5 Artist For Loops 6_instruction: 50, 60, 70, 80 ve 90 pixel kenar uzunluklarına sahip kareleri çiz. "Kare çiz" fonksiyonunu beş kere kullanman gerekecek.
+      4-5 Artist For Loops 3_instruction: 1'den 50'ye kadar nasıl sayabiliriz? Şununla say (for) döngüsünü düzenleyin.
+      4-5 Artist For Loops 4_instruction: Şununla Say (for) döngüsünü 1'den 10'a kadar sayacak şekilde düzenle.
+      4-5 Artist For Loops 6_instruction: 50, 60, 70, 80 ve 90 piksel kenar uzunluklarına sahip kareleri çiz. "Kare çiz" fonksiyonunu beş kere kullanman gerekecek.
       4-5 Artist For Loops 7_instruction: 'Aynı kareleri tekrar çizin. Ancak boyutları değiştirmek için "count with" butonunu kullanın. "Sayaç" bloğunu "kare çiz" fonksiyonunun içine yerleştirin. İpucu: Değişken kategorisindeler.'
       4-5 Artist For Loops 8_instruction: Programı, içine 10'dan 200'e 10'ar sayan "için" bloğunu yerleştirerek tamamlayabilir misin? "İçin" bloğunu Döngüler kategorisinde bulabilirsin.
       4-5 Artist For Loops 9_instruction: Bu çemberlerin boyutu 5, 10, 15, 20, 25, 30 ve 35. "for" bloğunu kullanarak daire çizin.
@@ -310,7 +310,7 @@ tr:
       4-5 Artist Functions 12_instruction: '"dalga çiz" fonksiyonunu tamamlayınız. Her dalga, bir üst dalga ve bir altı dalga içerir. İpucu: 5 tane mavi dalga çiziniz.'
       4-5 Artist Functions 13 Free play_instruction: Gezegen, yıldız, roket ve robot çizebileceğiniz bazı fonksiyonlar verilmiştir. Arkadaşlarınızla paylaşabileceğiz resimler yapmak için bu fonksiyonları istediğiniz şekilde kullanın.
       4-5 Artist Functions 14 Free play_instruction: Burada size birkaç tane fonksiyon verilmiştir. Arkadaşlarınızla paylaşabileceğiz resimler yapmak için bu fonksiyonları bir veya birden fazla döngü kullanarak istediğiniz şekilde kullanın. Örneği görüntülemek için Çalıştır'a basın.
-      4-5 Artist Functions 15 Assessment_instruction: 'Değerlendirme: kareler oluşturmak için "Bir kare çiz" işlevini kullanın. 50, 100 ve 150 piksel karelerdir.'
+      4-5 Artist Functions 15 Assessment_instruction: 'Değerlendirme: kareler oluşturmak için "Bir kare çiz" fonksiyonunu kullanın. Kareler 50, 100 ve 150 pikseldir.'
       4-5 Artist Functions 2a_instruction: Şimdi bu, blokları "küçük bir üçgen çiz" fonksiyonunun içine koyun ve bu fonksiyonu çağırın.
       4-5 Artist Functions 2b_instruction: Şimdi ise verilen blokları kullanarak "küçük bir üzgen çiz" fonksiyonunu oluşturun.
       4-5 Artist Functions 3_instruction: 'Şimdi, "orta boy bir üçgen çiz" ve "büyük bir üçgen çiz" fonksiyonlarını oluşturun. "küçük bir üçgen çiz" fonksiyonu sizin için oluşturulmuştur. Üçgenlerin kenar uzunlukları, 50(küçük), 100(orta) ve 150(büyük)''dir. '
@@ -540,6 +540,7 @@ tr:
       CSD U3 Simple Drawing - Background_instruction: Put all of your code into a draw() loop and then add set the background to blue with the background() block.
       CSD U3 Simple Drawing - Personal Animation_instruction: Bunu yap
       CSD U3 Sprites intro sprites_instruction: Bunu yap
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: 'Predict: What two numbers will be displayed in the console?'
       CSD U3 Variable Arithmetic_instruction: Change the value "size" initialized to make a larger square.
@@ -1512,6 +1513,20 @@ tr:
         - Merdiven basamağı deseninde iki farklı açı kullanırsan ne olur?\r
         - Baklava desenini daha uzun ya da daha kısa yaparsan ne olur?\r
         - iki kar tanesini üst üste çizersen nasıl gözükür?
+      Dance Party 1-validated_instruction: 'What do you think will happen when you click on the alien?  '
+      Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
+      Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 5 - Validated_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 5_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 6_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Predict_instruction: 'What do you think will happen when you click on the alien?  '
       ECSPD Binary Odometer_instruction: This is another resource you could use with your students.
       Eval Booleans 1_instruction: Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click "Run" to see how this expression evaluates.
       Eval Booleans 2_instruction: Can you set the values so that this expression evaluates as true?
@@ -1582,6 +1597,12 @@ tr:
       Finalize Your Chaser Game v.1_2018_instruction: Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.
       Find the Wizard_instruction: Ne istersen geliştir. Bu sayı tahmin oyununa bir örnektir!
       Find the Wizard_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
+      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims around the tank.
+      Fish Tank 4-validated_instruction: Use the `set background color` block to make the background blue.
+      Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make your fish tank special!
       Food Fight!_instruction: "Sizin için son bir fonksiyon ekledik.\nEğer bloğu kullan ve oyuncunun puanı belirli bir sayıyı geçince üst seviye \"level_up\" fonksiyonunu çağır.\nOyunu oyna ve 4 seviye geçmesini sağla. "
       Food Fight_instruction: You can make whatever you want in play lab! This is an example of a game you can make in play lab.
       FoodFight_instruction: Bu oyun laboratuarda yapabileceğiniz bir oyun bir örneğidir.
@@ -1610,6 +1631,7 @@ tr:
       Guess The Number_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
       Infinity_catch_instruction: Ok tuşlarını kullanarak Elsa nın Annaya yetişmesini sağlayabilir misin?
       Infinity_finale_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       Infinity_move_collide_instruction: Hiro Oyuncu 1. Onu sağa baymax a  doğru ilerlet ve dokunduğunda ses çıkart.
@@ -2414,6 +2436,7 @@ tr:
       U3 - Simulation - 6_instruction: Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)
       U3 - Simulation - App_instruction: Change your code to run the full simulation with 10,000 coins. What was your longest streak of heads? (Click to see full instructions)
       U3 - Simulation - Template_instruction: Use a while loop to "flip 10 coins" and write them to the screen. (Click to see full instructions)
+      U3 - Simulation - Template_2018_instruction: Use a while loop to "flip 10 coins" and write them to the screen. (Click to see full instructions)
       U3 - Sprites - Intro Sprites_instruction: Do This
       U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
       U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
@@ -2737,11 +2760,12 @@ tr:
       U4 - Charts - Import Data 1_2018_instruction: Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mytable” table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show the change in popularity of both “
-      U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart to show the change in popularity of both “
+      U4 - Charts - Line Chart 1_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 1_2018_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_2018_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Line Chart Template_2018_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Remixing Apps with Data_2018_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Scatter Chart_instruction: Create a scatter plot of the “rottenTomatoes” table, using the new table and column names. (Click to see full instructions)
@@ -2822,6 +2846,7 @@ tr:
       U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - part 1 - template_instruction: 'Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_2018_instruction: 'Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: Use readRecords to copy the data in your database into your "contacts" global variable and call showCurrentContact. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 1_2018_instruction: Use readRecords to copy the data in your database into your "contacts" global variable and call showCurrentContact. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: Create a function called refreshLocalData. (Click to see full instructions)
@@ -2853,6 +2878,7 @@ tr:
       U4 Model Design 1_2018_instruction: Add a large red button to your screen using Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Talimatlar
       U4L02 - Objects - Template1_instruction: Şablon
+      U4L02 - Objects - Template1_2018_instruction: Şablon
       U4L02 - Objects - createObject_instruction: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
       U4L02 - Objects - eventParameter_instruction: Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. As you play around make sure you can explain the purpose of each of the circled parts of the diagram.\n\n"
@@ -2897,9 +2923,20 @@ tr:
       Underground Mining Coal_2018_instruction: En değerli kaynakları yer altında bulabilirsiniz ama içerisi karanlık olabilir. En az 2 meşale yerleştirin ve 2 kömür çıkarın.
       Unicorn Tag_instruction: Take a look at this project.  Do you see how it was made?
       Valentine_artist2_01_instruction: Program the artist to draw some grass for the Love Bug.
-      Valentine_artist_01_instruction: 'Sanatçıya lama kalbini bitirmesinde yardımcı olun. '
+      Valentine_artist_01_instruction: Sanatçıya lama kalbini bitirmesinde yardımcı olun. 
       Valentine_playlab_01_instruction: 'Kiki''yi (Oyuncu 1) sol ve sağ ok tuşlarına basıldığında sol ve sağa hareket etmesi için programlayın. Kiki''ye tıklandığında, arkadaşlarına kalpler fırlatmalı. '
       Vigenere_instruction: Test
+      Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
+      Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
       WhileAdventure_instruction: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3191,7 +3228,7 @@ tr:
       courseA_harvester_seq10_instruction: Make sure to pick all the corn!
       courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: Pick all the corn.
-      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick **one** corn.
+      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick corn.
       courseA_harvester_seq2_instruction: Use three `move west` blocks and one `pick corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: Use three `Move North` blocks and one `Pick Corn` block.
       courseA_harvester_seq4_instruction: Add one block to help the harvester pick the corn.
@@ -3203,7 +3240,8 @@ tr:
       courseA_maze_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp2a_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp3_2018_instruction: There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.
-      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseA_maze_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseA_maze_ramp5_2018_instruction: Avoid the TNT.
@@ -3253,7 +3291,7 @@ tr:
       courseA_playLab_events6_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events6_2018_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
-      courseA_playLab_events7_2018_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want to this game."
       courseA_playlab_events_challenge1_instruction: Büyük hayvan yarışı Zamanı! ▼ bastığınızda aşağı ilerlesib. Kim en hızlı koşar?
       courseA_playlab_events_challenge1_2018_instruction: Büyük hayvan yarışı Zamanı! ▼ bastığınızda aşağı ilerlesib. Kim en hızlı koşar?
       courseA_playlab_events_challenge2_instruction: Bir parti verelim! Her arkadaş tıkladığında yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
@@ -3262,9 +3300,10 @@ tr:
       courseA_toMakeLoopsVideo_Collector_instruction: Döngüler içinde ne varsa tekrar tekrar yapmana izin verir!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
-      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
-      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
-      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and press "▶ Run"!
+      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "▶ Run".
+      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseB_Scrat_ramp5a_2018_instruction: '** Meydan okuma: ** kKuşu domuza ulaştır!'
       courseB_artist_loops1_instruction: This is a new type of puzzle called "Artist". Play with the level and draw something fun.
@@ -3373,9 +3412,9 @@ tr:
       courseB_playlab_events3_instruction: Use an event to make Daisy the Dragon switch to a random mood when you click on her.
       courseB_playlab_events3_2018_instruction: Use an event to make Daisy the Dragon switch to a random mood when you click on her.
       courseB_playlab_events4_instruction: Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.
-      courseB_playlab_events4_2018_instruction: Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.
+      courseB_playlab_events4_2018_instruction: Get the dragon to finish this level!
       courseB_playlab_events5_instruction: Now add an event so that the knight runs away from the dragon when you press the right arrow.
-      courseB_playlab_events5_2018_instruction: Now add an event so that the knight runs away from the dragon when you press the right arrow.
+      courseB_playlab_events5_2018_instruction: Add an event so that the knight runs away from the dragon when you press the right arrow.
       courseB_playlab_events6_instruction: |-
         Help your knight get all of the flags!
         
@@ -3385,10 +3424,10 @@ tr:
         
         To do this, you'll need to add events to help the knight move up, down, left, and right.
       courseB_playlab_events7_instruction: Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.
-      courseB_playlab_events7_2018_instruction: Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.
+      courseB_playlab_events7_2018_instruction: "1) Set the knight to vanish when he runs into the dragon.    \n2) Play a sound when they collide to make it feel more real.  "
       courseB_playlab_events8_instruction: Use your imagination. What can you do to make this game more fun?
       courseB_playlab_eventsFP_instruction: Use your imagination. What can you do to make this game more fun?
-      courseB_playlab_eventsFP_2018_instruction: Use your imagination. What can you do to make this game more fun?
+      courseB_playlab_eventsFP_2018_instruction: "**Free play:** Use your imagination. What can you do to make this game more fun?"
       courseB_playlab_eventsToolbox_instruction: Finish by playing a sound and making the knight vanish when he runs into the dragon!
       courseB_playlab_events_challenge1_instruction: 'Bu oyun eğlenceli hale getirmek için  şovalye dragona geldiğinde yok olmasını sağlayın!  Daha gerçekçi olmasını istiyorsan çarptığında ses çal.'
       courseB_playlab_events_challenge1_2018_instruction: 'Bu oyun eğlenceli hale getirmek için  şovalye dragona geldiğinde yok olmasını sağlayın!  Daha gerçekçi olmasını istiyorsan çarptığında ses çal.'
@@ -4618,7 +4657,7 @@ tr:
       course_playlab_variables1_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
       course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
-      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
+      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "▶ Run"!
       coursef_explore_CYOA_Witch_instruction: You can do whatever you want in play lab! Here's an example of choose your own adventure story in play lab.
       coursef_explore_playlab2_instruction: You can do whatever you want in play lab! Here's an example of story in play lab.
       coursef_explore_playlab_cat_game_instruction: You can do whatever you want in play lab! Here's an example of game you can make.

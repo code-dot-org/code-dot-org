@@ -1743,12 +1743,12 @@ es-MX:
           y el zombie avanzará cinco veces para el delicioso girasol.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Hasta ahora, has hecho una animación o una historia que hace exactamente
           lo mismo cada vez que ejecutas el programa. Ahora puedes hacer un juego
           interactivo con el que de verdad puedes jugar.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Están el bloque "cuando flecha" y el bloque "mover actor". Puedes poner
           estos bloques juntos para mover a los actores con las teclas de flecha.
     C3_songwriting_with_parameters:
@@ -3750,13 +3750,13 @@ es-MX:
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
-        text: 'Preston: Congratulations!'
+        text: 'Preston: ¡Felicidades!'
       2:
         image: notes/mc_2017_congratulations_2.png
-        text: 'Lizzy: Congratulations!'
+        text: 'Lizzy: ¡Felicidades!'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: Congratulations, you did it!'
+        text: 'Stampy: ¡Felicidades, lo has conseguido!'
       4:
         image: notes/mc_2017_congratulations_4.png
         text: 'Stacy: Congratulations guys, you totally rocked that! And now that
@@ -4053,9 +4053,10 @@ es-MX:
           The sky's the limit when it comes to textiles.
       2:
         image: notes/csd_concept_memory_cpu_input_output_2.png
-        text: My name is Danielle Applestone, and I'm CEO of Othermachine Company.
-          We build a desktop milling machine. A milling machine takes a rotating cutting
-          tool and moves it through material to create a 3D object.
+        text: Mi nombre es Danielle Applestone y soy CEO de Othermachine Company.
+          Construimos una fresadora de sobremesa. Una fresadora usa un instrumento
+          de corte giratorio moviéndolo a través de un material para crear un objeto
+          3D.
       3:
         image: notes/csd_concept_memory_cpu_input_output_3.png
         text: Under the hood, all computers do the same four basic things. They input

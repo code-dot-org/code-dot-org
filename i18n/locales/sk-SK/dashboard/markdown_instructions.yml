@@ -6,7 +6,7 @@ sk:
       2-3 Artist 11_markdown_instruction: 'Give the stop sign a border by making an octagon with 100 pixels sides. '
       2-3 Artist 12_markdown_instruction: "Create a circle to finish the eyeball! \n\nIf the artist turns 1 degree with each loop, how many times do you need to repeat the code to draw a circle? "
       2-3 Artist 2 new_markdown_instruction: This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall.
-      2-3 Artist 3.4_markdown_instruction: The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks. Each line is 50 pixels long.
+      2-3 Artist 3.4_markdown_instruction: Blok so skokom posunie umelca bez toho, aby bolo treba nieco nakreslit. Nakreslite prerušovanú čiaru použitím blokov "poskočiť dopredu" a "posunúť dopredu". Každá čiara má mať dĺžku 50 pixelov.
       2-3 Artist 3new_markdown_instruction: "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. \n\n*(Note: The width of each hat is 50 pixels.)*"
       2-3 Artist 4_markdown_instruction: Pomôž mi dokončiť tento dom pre mačku.
       2-3 Artist 6_markdown_instruction: "This house needs a roof! Draw the triangle.  \n\nHint: all three sides are the same length.\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>"
@@ -17,30 +17,30 @@ sk:
       2-3 Artist 9_markdown_instruction: Dokonči tohto šarkana
       2-3 Artist Assessment 1_markdown_instruction: "**Assessment:** Finish drawing the last tooth. It is 25 pixels wide and 25 pixels tall."
       2-3 Artist Debugging 1_markdown_instruction: "This hat should only be 50 pixels wide. \nCan you fix it?\n\n<br/>\n"
-      2-3 Artist Debugging 10_markdown_instruction: "The direction pad on my game controller is too narrow. \n\nCan you make it wider by 10 pixels?\n\nTry running the code first to see what's wrong."
+      2-3 Artist Debugging 10_markdown_instruction: "Plocha na ovládanie smeru na mojom hernom ovládači je príliš úzka.\n\nMôžete ju rozšíriť o 10 pixelov?\n\nSkúste najprv spustiť kód, aby ste videli, čo je pokazené."
       2-3 Artist Debugging 11_markdown_instruction: |-
-        My snowflake is falling apart!
+        Moja snehová vločka sa rozpadá!
         
-        Can you figure out what's going wrong?
-      2-3 Artist Debugging 2_markdown_instruction: "This code for the cat's whiskers is wrong. \n\nFix this code to draw whiskers that are all the same length."
-      2-3 Artist Debugging 3_markdown_instruction: "My boat has a hole! \n\nWhat do you need to fix to make the ends meet?"
-      2-3 Artist Debugging 5_markdown_instruction: "The code that we have for the leg and foot is wrong. \n\nCan you fix it?"
+        Viete zistiť, čo je pokazené?
+      2-3 Artist Debugging 2_markdown_instruction: "Tento kód pre mačacie fúzy je zlý.\n\nOpravte tento kód, aby sa všetky fúzy nakreslili v rovnakej dĺžke."
+      2-3 Artist Debugging 3_markdown_instruction: "Moja loď je deravá! \n\nČo potrebujete pre jej opravu?"
+      2-3 Artist Debugging 5_markdown_instruction: "Kód, ktorý máme na nohu a chodidlo je zlý.\n\nViete ho opraviť?"
       2-3 Artist Debugging 6_markdown_instruction: |-
-        Looks like I'm sitting on a chair that’s missing a leg!
+        Vyzerá, že sedím na stoličke, ktorej chýba noha!
         
-        Edit the code to draw the last leg.
+        Upravte kód tak, aby sa dokreslila aj posledná noha.
       2-3 Artist Debugging 7_markdown_instruction: |-
-        Looks like the C in code is drawn backwards!
+        Vyzerá, že C v kóde je nakreslené naopak!
         
-        Can you make it look like a C again?
+        Viete to opraviť, aby to znova vyzeralo ako C?
       2-3 Artist Debugging 8_markdown_instruction: |-
-        My teacher says that I should finish what I start!
+        Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
         
-        Help me finish my pinwheel. Can you figure out what's wrong?
+        Pomôže mi dokončiť môj veterník. Viete zistiť, čo je zlé?
       2-3 Artist Debugging 9_markdown_instruction: |-
-        Something is off!
+        Niečo nie je v poriadku!
         
-        The code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?
+        Kód pre túto stonku je zlý. Viete zistiť, ak odostať umelca pre nasledovanie stonky správnym spôsobom?
       2-3 Artist Debugging Assessment 1_markdown_instruction: "**Assessment:** \nWhy does this square end up being 75 pixels too small on each side?  \n\nWhere does the code go wrong?"
       2-3 Artist Free Play_markdown_instruction: Voľné hranie! Možete si nakresliť čokoľvek.
       2-3 Artist Functions 1 a_markdown_instruction: "\"Me zombie artist. Me love drawing!\" \n\nHelp the zombie draw square glasses.  \n\nThe bridge between the glasses is 25 pixels shorter than the width of the squares, which is 100 pixels.\n\n"
@@ -48,13 +48,13 @@ sk:
       2-3 Artist Functions 10_markdown_instruction: "**Freeplay:** Here are two functions, one to draw a big gear and one to draw a small gear.  \n\nUse them to draw the inside of a machine!"
       2-3 Artist Functions 11 a_markdown_instruction: "We've renamed the `draw a square` function to `draw a hexagon`, but it's still giving us squares!  \n\nCan you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \n\nDraw the image using the new function!"
       2-3 Artist Functions 11.5 a_markdown_instruction: "Here's that same `draw a hexagon` function. \n\nWhat happens if you loop the main program **6** times, turning **60** degrees each time you loop?"
-      2-3 Artist Functions 11.5_markdown_instruction: "Here's that same `draw a hexagon` function. \n\nWhat happens if you loop the main program 6 times, turning 60 degrees each time you loop?"
+      2-3 Artist Functions 11.5_markdown_instruction: "Tu je rovnaká funkcia \"nakresli šesťuholník\". \n\nČo sa stane, ak zopakujete hlavný program 6 krát, pričom po každom zopakovaní sa otočíte o 60 stupňov?"
       2-3 Artist Functions 11_markdown_instruction: "We've renamed the `draw a square` function to `draw a hexagon`, but it's still giving us squares!  \n\nCan you modify the `draw a hexagon` function to draw a hexagon with 50 pixel sides? \n\nDraw the image using the new function!"
       2-3 Artist Functions 12 Mike_markdown_instruction: "Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu \"draw a flower\" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov."
       2-3 Artist Functions 12 a_markdown_instruction: "Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu \"draw a flower\" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov."
       2-3 Artist Functions 12_markdown_instruction: "Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu \"draw a flower\" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov."
       2-3 Artist Functions 2 a_markdown_instruction: "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the small green `draw a square` block to call this new function and create the glasses. \n\nThe squares in this drawing are 75 pixels apart."
-      2-3 Artist Functions 2_markdown_instruction: "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\nThe squares are 75 pixels apart."
+      2-3 Artist Functions 2_markdown_instruction: "Funkcie Vám umožnia definovať nové bloky! \n\nPresunuli sme bloky potrebné na nakreslenie štvorca do funkcie \"nakresli štvorec\". Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie okuliarí.\n\nŠtvorce sú od seba vzdialené 75 pixelov."
       2-3 Artist Functions 3 a_markdown_instruction: "Edit the \"draw a square\" function to draw glasses with frames that are 115px on each side. \n\nThe squares are now 45 pixels apart."
       2-3 Artist Functions 3_markdown_instruction: "Edit the function to draw a square with a side length of 115 to draw the bigger glasses. \n\nThe squares are now 45 pixels apart."
       2-3 Artist Functions 4 a_markdown_instruction: Now, put the function inside of a loop and add an extra turn to draw these three squares.
@@ -66,7 +66,7 @@ sk:
         Let's draw this robot's head! Can you make a square with sides that are 100 pixels?
         
         <br/>
-      2-3 Artist Loops New 10_markdown_instruction: Now let's connect a bunch of V's together in a loop.
+      2-3 Artist Loops New 10_markdown_instruction: A teraz pripojme niekoľko Véčiek spolu do slučky.
       2-3 Artist Loops New 11_markdown_instruction: "Time to make something snazzy! \n\nRebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8."
       2-3 Artist Loops New 12_markdown_instruction: "Nakresli kosoštvorec so stranami dlhými 100 pixelov.\n"
       2-3 Artist Loops New 13_markdown_instruction: "We are going to start you with some code (in grey) to make one diamond. \n\nLoop the grey code to create a fun pattern!"
@@ -135,16 +135,16 @@ sk:
         
         Collect nectar from each of the flowers using the fewest blocks possible.
       2-3 Bee Loops 13_markdown_instruction: "**Assessment:** Collect all of the nectar using the fewest blocks possible."
-      2-3 Bee Loops 3A_markdown_instruction: Use a `repeat` loop to collect all of the nectar.
-      2-3 Bee Loops 3B_markdown_instruction: Now use the `repeat` block to collect all of the nectar and make all of the honey.
+      2-3 Bee Loops 3A_markdown_instruction: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
+      2-3 Bee Loops 3B_markdown_instruction: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
       2-3 Bee Loops 4_markdown_instruction: |-
         Such a busy bee!
         
         Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
-      2-3 Bee Loops 4A_markdown_instruction: "How many times can loops help you in this puzzle?  \n\nLoops are your friend! Use a few of them to complete this puzzle with the fewest blocks possible."
+      2-3 Bee Loops 4A_markdown_instruction: "Koľkokrát Vám môžu slučky pomôcť v tejto úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie tejto úlohy s čo najmenším počtom blokov."
       2-3 Bee Loops 5_markdown_instruction: "The shape of this path is different from the others. \n\nCan you collect all of the nectar using as few blocks as possible?"
       2-3 Bee Loops 7_markdown_instruction: "What a beautiful field of flowers!   \n\nHelp the bee visit each one.\n\nCan you find a way to do it with fewer than 7 blocks?"
-      2-3 Bee Loops 8_markdown_instruction: "These purple flowers have different amount of nectar each time you run the puzzle. \n\nUse the `while nectar` loop to collect all of the nectar. \n\nThis loop will run as long as the condition is true, in this case `nectar > 0`."
+      2-3 Bee Loops 8_markdown_instruction: "Tieto fialové kvetinky majú pri každom spustení tejto úlohy iné množstvo nektáru. \n\nPoužite slučku \"pokiaľ je nektár\" pre pozbieranie všetkého nektáru. \n\nTáto slučka bude bežať tak dlho, pokiaľ bude splnená podmienka, v tomto prípade \"nektár > 0\"."
       2-3 Bee Loops Assessment 1_markdown_instruction: "**Assessment:** Use a `while` loop to collect all of the nectar from these flowers."
       2-3 Maze 1_markdown_instruction: "Can you help me catch the naughty pig? \n\nStack a couple of `move forward` blocks below the `when run` block and press \"Run\". "
       2-3 Maze 12 - One Move Block_markdown_instruction: |-
@@ -173,11 +173,11 @@ sk:
       4-5 Artist 8_markdown_instruction: "The halfway line on a soccer field is *perpendicular* to the sidelines.   \nThis rectangle has a perimeter of 800 pixels total, and it is 240 pixels long. How tall is it?   \n\nDraw the bounds and the halfway line."
       4-5 Artist 9_markdown_instruction: "Draw the right half of this image so that the design is symmetrical. \nThe triangles are equilateral and have sides that are 50 pixels long."
       4-5 Artist Assessment 1_markdown_instruction: "**Assessment:** Use a loop to draw the equilateral triangle. Each side is 300 pixels."
-      4-5 Artist Free Draw 1_markdown_instruction: Free Draw!  Draw whatever you are inspired to create.
+      4-5 Artist Free Draw 1_markdown_instruction: Voľná ruka v kreslení! Nakreslite čo len chcete.
       4-5 Artist Patterns 1_markdown_instruction: |-
-        Draw this square using a loop.
+        Nakreslite tento štvorec použitím slučky.
         
-        Each side is 20 pixels long.
+        Každá strana je 20 pixelov dlhá.
       4-5 Artist Patterns 10_markdown_instruction: "This code draws two rows of hexagons - loop the whole thing 4 times to draw the whole honeycomb. \n\nYou'll need to jump back 120 pixels in your outermost loop to make sure the artist doesn't draw off the screen."
       4-5 Artist Patterns 11_markdown_instruction: How many times do you need to loop this to draw a half circle?
       4-5 Artist Patterns 12_markdown_instruction: "If you create another loop like this one, but turn left instead of right, what happens? \n\nCan you repeat all of that to draw this wave?"
@@ -191,7 +191,7 @@ sk:
       4-5 Artist Patterns 8_markdown_instruction: Use a loop to draw this hexagon with 40 pixel sides and 60 degree angles.
       4-5 Artist Patterns 9.5_markdown_instruction: "Let's loop this code to draw two rows of hexagons. \n\nNotice how our second row is shifted to the right."
       4-5 Artist Patterns 9_markdown_instruction: "Now repeat this code 3 times and draw the whole row. \n\nEach hexagon is 80 pixels wide from the furthest points left to right."
-      4-5 Artist Patterns Free Play_markdown_instruction: Free play - try your hand at making a pattern of your own!
+      4-5 Artist Patterns Free Play_markdown_instruction: Voľná hra - vyskúšajte svoju ruku nakreslením vlastného vzoru!
       4-5 Bee Conditionals 1_markdown_instruction: "This cloud is blocking my view! \n\nCheck to see if there's a flower under the cloud, and only get nectar if there's a flower.   \nBe careful, it can change!"
       4-5 Bee Conditionals 2_markdown_instruction: "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar.  \n\nRemember: Not all clouds hide the same thing!"
       4-5 Bee Conditionals 4_markdown_instruction: "Sometimes this cloud covers a flower, and sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar only if it is a flower.  \nElse, make honey (because it is a honeycomb)."
@@ -204,19 +204,19 @@ sk:
       4-5 Bee Conditionals 7_markdown_instruction: "These flowers can have 3, 2, or 1 nectar. \n\nComplete the `check purple flower` function and use it to collect all of the nectar at the flowers."
       4-5 Bee Conditionals 8_markdown_instruction: "Write the function for `check flower make honey`. \n\nYour function should check if the purple flower has 3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make honey."
       4-5 Bee Conditionals Assessment 1_markdown_instruction: "**Assessment:** This cloud is either hiding a flower with one nectar or a honeycomb that needs one honey.  \n\nComplete the `get nectar or make honey` function, then call it to collect the nectar or honey. \n"
-      4-5 Bee Debugging 1_markdown_instruction: "These blocks are really bugging me. \n\nCan you fix them?"
-      4-5 Bee Debugging 6_markdown_instruction: "The purple flower has a different amount of nectar each time you run the puzzle. \n\nFix the blocks to get all of the nectar from the flower each time."
+      4-5 Bee Debugging 1_markdown_instruction: "Tieto bloky ma naozaj trápia.\n\nVieš ich opraviť?"
+      4-5 Bee Debugging 6_markdown_instruction: "Fialová kvetinka má pri každom spustení cvičenia iný počet nektáru.\n\nOpravte bloky tak, aby ste vždy pozbierali všetok nektár."
       4-5 Bee Debugging Assessment 1_markdown_instruction: "**Assessment:** Fix the code."
       4-5 Bee Nested Loops 2_markdown_instruction: "Collect all of the nectar from each flower. \n\nUse a nested loop. "
       4-5 Bee Nested Loops 4_markdown_instruction: "Collect all of the nectar from each flower and make honey at the honeycomb. \n\nUse a nested loop. "
-      4-5 Bee Nested Loops Assessment 1_markdown_instruction: "**Assessment:** Collect all of the nectar and make all of the honey using loops."
+      4-5 Bee Nested Loops Assessment 1_markdown_instruction: "**Hodnotenie:** Pozbierajte všetok nektár a spravte všetok med pomocou slučiek."
       4-5 Maze 7_markdown_instruction: "Get the zombie to the sunflower quickly!  \n\nCan you solve the puzzle in fewer than 11 blocks?"
       4-5 Maze 9_markdown_instruction: "Now we have a new block called `repeat until`.  \nThis will let us keep looping commands until the zombie gets the sunflower.  \n\nUse the new `repeat until` block to solve this puzzle in as few commands as possible."
       4-5 Maze Assessment 1_markdown_instruction: "**Assessment:** Get to the sunflower using as few blocks as possible."
       4-5 Maze Conditionals 1_markdown_instruction: Use the `repeat until` block to get the zombie to the sunflower.
       4-5 Maze Conditionals 10_markdown_instruction: "Can you add just 3 blocks to help the zombie solve a more complex maze? \n\nIf you do it right, he can walk any curvy path no matter the length!"
       4-5 Maze Conditionals 2_markdown_instruction: Use the `repeat until` block to get the zombie to the sunflower.
-      4-5 Maze Conditionals 3_markdown_instruction: "Use the `if` block to help me decide when to turn. \n"
+      4-5 Maze Conditionals 3_markdown_instruction: "Použite blok \"if\" pre pomoc s rozhodnutím sa, kedy mám zabočiť.\n"
       4-5 Maze Conditionals 4_markdown_instruction: Ok, solve this one just like the last puzzle, but you need to remember how you used the `if` and `repeat until` blocks together.
       4-5 Maze Conditionals 5_markdown_instruction: "\"Me want sunflower!\"  \n\nUse an `if` statement to get the zombie to the sunflower with the fewest number of blocks."
       4-5 Maze Conditionals 6_markdown_instruction: |-
@@ -258,6 +258,7 @@ sk:
       Alien Defender_markdown_instruction: "**Project Idea**: Make a defender game in Play Lab!"
       Alien Defender_2018_markdown_instruction: "**Project Idea**: Make a defender game in Play Lab!"
       AllTheThings Applab - Turtle move with button_markdown_instruction: "# Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).\n # Your First Interactive App!\n<img src='https://images.code.org/3fad83213ae72073251c4d5abc1f048a-image-1444060521578.png' style='float: right; width: 250px'> A new group of commands has been added to the toolbox called **UI Controls** (User Interface Controls) which are commands that let you interact with, and respond to, the user of your app. To keep it simple, we'll start with just two commands: \n* `onEvent` which let's you run a function in response to some event occuring (such as a button click)\n* `button` which puts a button on the screen\n\n# Do This\nYou will replicate the small app, shown below, which makes the turtle move with a button click. You will do three things:\n* Add a `button`\n* Add an `onEvent` block\n* Add `moveForward` inside the the onEvent function block\n\nHere's what you should do - you can come back to watch this as many times as you need to get it right.\n<img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\" style=\"border: solid 1px black; width: 500px; margin: auto\">"
+      AllTheThings Applab DesignModeDefault_markdown_instruction: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\" style=\"float: right; width: 150px\">\n## You try it -- Text Password Checker\n\n**Key idea**: You can use `==` to compare strings as well as numbers.  \n\n* Let's use an if-statement in an event handler to compare text that a user inputs in a UI element.\n\n**The setup:**\n* Note the setup in Design Mode\n* There are two images: a red lock, and a green \"unlock\".\n* The green \"unlock\" is *hidden* at the start.\n\n## Do this:\n\n**Add an if-statement to the event handler to check the password and display the \"unlock\" only if the password is correct** \n\n* You can use `==` to compare the text you get from the *password_input* text box and a string you want to use as the password. The boolean expression you should use should look like this:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n* If the user entered the correct password then **show** the green \"unlock\" and **hide** the red lock.\n\\t* We've provide the code to hide and show the images. You just need to add the if-statement.\n* Otherwise do nothing.  They can try again.\n\n"
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_markdown_instruction': "<img align=\"right\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\" hspace=\"20\">\n            # Task 1: Make a 3x5 letter 'A'\n            Start by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. \n          \n            The image is intially setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.\n            "
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction': "# Pixelation: Task 3\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using *12-bits per pixel*. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n * Row 1 - fill with shades of red. \n * Row 2 - shades of green. \n * Row 3 - shades of blue. \n * Row 4 - shades of gray.\n"
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': "# Color Pixelation: Task 1\n**Directions:**\n\n* We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. \n* Finish off the image by figuring out which two colors are missing and encode them.\n"
@@ -4050,7 +4051,7 @@ sk:
         * Move the code that makes the gears rotate inside the `if`.
       CSD U3 - conditionals - first conditional 2-2018_markdown_instruction: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\" style=\"width:200px;float:right\">\n# Visible\n\nSometimes it's useful to hide the image for a while and then show it again. You can do this using the `visible` property. The visible property is a little different from other properties you have seen in the past: It is a Boolean value, either `true` (the sprite is visible) or `false` (the sprite is **not** visible). By default, visible is set to `true`.\n\n# Do This\nMake the balloon pop when it hits the edge of the game area!\n\n* Add a conditional that checks to see whether the balloon has hit the edge.\n\\t* Use a watcher on `balloon.scale` to help you out.\n* Create a pop sprite which uses the \"pop\" visual in the animation tab.\n* Use the `visible` property to keep the \"pop\" sprite hidden at the beginning.\n* Inside the `if` add two statements.\n\\t* One that sets the `visible` property to hide the balloon sprite.\n    * One that sets the `visible` property to show the pop sprite."
       CSD U3 - conditionals - first conditional 2_markdown_instruction: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\" style=\"width:200px;float:right\">\n# Visible\n\nNow that you have conditionals and images, sometimes it's useful to hide the image for a while and then show it again. You can do this using the `visible` property. The visible property is a little different from other properties you have seen in the past: It is a Boolean value, either `true` (the sprite is visible) or `false` (the sprite is **not** visible). By default, visible is set to `true`.\n\n# Do This\nMake the balloon pop when it hits the edge of the game area!\n\n* Add an `if` statement that checks to see if the balloon has hit the edge.\n\\t* Use a watcher on `balloon.scale` to help you out.\n* Create a pop sprite which uses the \"pop\" visual in the animation tab.\n* Set the pop's `visible` property to `false` to start.\n* Inside the `if` add two statements.\n\\t* One that sets the `visible` property to hide the balloon sprite.\n    * One that sets the `visible` property to show the pop sprite."
-      CSD U3 - conditionals - first conditional 2_2018_markdown_instruction: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\" style=\"width:200px;float:right\">\n# Visible\n\nSometimes it's useful to hide the image for a while and then show it again. You can do this using the `visible` property. The visible property is a little different from other properties you have seen in the past: It is a Boolean value, either `true` (the sprite is visible) or `false` (the sprite is **not** visible). By default, visible is set to `true`.\n\n# Do This\nMake the balloon pop when it hits the edge of the game area!\n\n* Add a conditional that checks to see whether the balloon has hit the edge.\n\\t* Use a watcher on `balloon.scale` to help you out.\n* Create a pop sprite which uses the \"pop\" visual in the animation tab.\n* Use the `visible` property to keep the \"pop\" sprite hidden at the beginning.\n* Inside the `if` add two statements.\n\\t* One that sets the `visible` property to hide the balloon sprite.\n    * One that sets the `visible` property to show the pop sprite."
+      CSD U3 - conditionals - first conditional 2_2018_markdown_instruction: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\" style=\"width:200px;float:right\">\n# Visible\n\nSometimes it's useful to hide the image for a while and then show it again. You can do this using the `visible` property. The visible property is a little different from other properties you have seen in the past: It is a Boolean value, either `true` (the sprite is visible) or `false` (the sprite is **not** visible). By default, visible is set to `true`.\n\n# Do This\nMake the balloon pop when it hits the edge of the game area!\n\n* Add a conditional that checks to see whether the balloon has hit the edge.\n\\t* Use a watcher on `balloon.scale` to help you out.\n* Create a pop sprite which uses the \"pop\" visual in the animation tab.\n* Use the `visible` property to keep the \"pop\" sprite hidden at the beginning.\n* Inside the `if` add two statements.\n\\t* One that sets the `visible` property to hide the balloon sprite.\n    * One that sets the `visible` property to show the pop sprite.\n"
       CSD U3 - conditionals - first conditional_markdown_instruction: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\n# If Statement\n\nThe Boolean expressions you used earlier allow us to ask questions, but in order to _respond to those questions_, we need to use an `if` statement.\n\n`if` statements usually go inside your draw loop because we want to check them each time the loop runs. \n\n# Do This\n\nThe race car program you wrote earlier is loaded here for you.\n\n* Add an `if` statement after you update the position of the race car.\n* Move the Boolean expression from the console.log statement to the condition of the if statement.\n* Inside the `if` statement add a statement to draw text on the screen to say \"Winner\".\n"
       CSD U3 - conditionals - first conditional_2018_markdown_instruction: "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\n# If Statement\n\nThe Boolean expressions you used earlier allow us to ask questions, but in order to _respond to those questions_, we need to use an `if` statement.\n\n`if` statements usually go inside your draw loop because we want to check them each time the loop runs. \n\n# Do This\n\nThe race car program you wrote earlier is loaded here for you.\n\n* Add an `if` statement after you update the position of the race car.\n* Move the Boolean expression from the console.log statement to the condition of the if statement.\n* Inside the `if` statement add a statement to draw text on the screen to say \"Winner\".\n"
       CSD U3 - conditionals - transition 2_markdown_instruction: |-
@@ -4661,7 +4662,7 @@ sk:
         Before you tackle writing this program, you'll need to figure out how to check multiple conditions at once.
         
         * **Brainstorm** with your neighbors ways you might check for more than one condition.
-        * **Share** back with the whole class so you can see other potential approaches.
+        * **Share** back with other classmates so you can see other potential approaches.
         * **Explore** the toolbox for blocks that might help (pay extra attention to the Math and Control drawers).
         * **Program** your proposed solution.
         * **Test** your program to make sure it's actually checking all of the conditions you intended.
@@ -5116,7 +5117,7 @@ sk:
         
         * Place two rectangles exactly in the corners of the screen, just like the picture.
       CSD U3 Drawing Squares to Corners_2018_markdown_instruction: |-
-        <img src="https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12 AM.png" style="float:right;width:150px">
+        <img src="https://images.code.org/716209ce879925f89bf661f337946509-image-1529019186051.32.48 PM.png" style="float:right;width:150px">
         
         # Place Squares in Corners
         
@@ -5725,7 +5726,7 @@ sk:
         * Add some randomization to your movement.
         * Add a second sprite and control it with a different set of keys ("w", "a", "s", and "d" are common choices).
         * Add some shapes to your background to make the scene more interesting.
-      CSD U3 Keyboard Input Challenge_2018_markdown_instruction: |-
+      CSD U3 Keyboard Input Challenge_2018_markdown_instruction: |
         # Challenge
         _Check with your teacher before trying this challenge._
         
@@ -5877,7 +5878,7 @@ sk:
         # Free Play
         
         Use what you've learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png) to send it to your Projects Gallery.
-      CSD U3 L3 Freeplay_2018_markdown_instruction: |+
+      CSD U3 L3 Freeplay_2018_markdown_instruction: |
         # Free Play
         
         Use what you've learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png) to send it to your Projects Gallery.
@@ -5925,6 +5926,10 @@ sk:
       CSD U3 Mouse Input Bee 1_2018_markdown_instruction: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\" style=\"float:right\">\n\n# Mouse X and Y\n\nOne of the simplest ways to take input is to just make a sprite follow the user's mouse position. **You can get the x and y location of the mouse using `World.mouseX` and `World.mouseY`.**  This follows the pattern you learned with sprite properties. `World` is the name of the object. `mouseX` and `mouseY` are the names of the properties.\n\n# Do This\n\nYou are going to make a bee sprite follow the mouse around the game area.\n\n* The bee image is already loaded in the animation tab for you.\n* Create a bee sprite that draws in the center of the window.\n* Inside the draw loop update the position of the sprite to the position of the mouse:\n\\t* Set the x position of the sprite to the value of `World.mouseX`.\n    * Set the y position of the sprite to the value of `World.mouseY`.\n* Run the program to test that it works.\n"
       CSD U3 Mouse Input Bee 2_markdown_instruction: "# Random Around Point\n\n<img src=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\" style=\"float:right\">\n\nNow that you can make the bee follow the mouse, lets make a bee fly around the mouse as shown in the picture on the right.  In order to do this, you will need to **add a random amount between -50 and 50 to the `mouseX` or `mouseY`.**\n\n# Do This\nYou already have a bee sprite that follows the mouse.\n\n* Update the x and y location to be randomly close to the mouse.\n\\t* Add a random number between -50 and 50 to the `World.mouseX` and `World.mouseY`.\n* If necessary, use the `World.frameRate` block to slow down the animation and find the best frame rate.\n\n_Challenge: **Add 3 more bees** that follow the mouse in the same way to make a swarm of bees._"
       CSD U3 Mouse Input Bee 2_2018_markdown_instruction: "# Random Around Point\n\n<img src=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\" style=\"float:right\">\n\nNow that you can make the bee follow the mouse, lets make a bee fly around the mouse as shown in the picture on the right.  In order to do this, you will need to **add a random amount between -50 and 50 to the `mouseX` or `mouseY`.**\n\n# Do This\nYou already have a bee sprite that follows the mouse.\n\n* Update the x and y location to be randomly close to the mouse.\n\\t* Add a random number between -50 and 50 to the `World.mouseX` and `World.mouseY`.\n* If necessary, use the `World.frameRate` block to slow down the animation and find the best frame rate.\n\n_Challenge: **Add 3 more bees** that follow the mouse in the same way to make a swarm of bees._"
+      CSD U3 Movement Fish challenge_2018_markdown_instruction: |-
+        # More fish!
+        
+        This time, try updating the the rotation of each fish as it moves to make it look even more like it is swimming.  You can also try adding extra features, such as bubbles that rise up through the water.
       CSD U3 Movement Fish_markdown_instruction: |-
         <img src="https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif" style="float: right; margin-left: 20px;">
         
@@ -5936,7 +5941,7 @@ sk:
         
         # Fish Animation
         
-        Using the counter pattern, make all three of the fish move in the image to the left. The blue fish should move the fastest, followed by the orange fish, with the green fish being the slowest.
+        Using the counter pattern, make all three of the fish move as in the image to the right. The blue fish should move the fastest, and the green fish should move the slowest.
       CSD U3 Movement Gears_markdown_instruction: |-
         <img src="https://images.code.org/eac110e64ccad62482c82d4ef66f237b-image-1465518920408.gif" style="width:200px; float:right; margin-left: 20px;">
         
@@ -6637,6 +6642,7 @@ sk:
         
         This program should create two new sprites, one on the left of the screen and one on the right, but it's only drawing one. **You don't need to add any code**, just rearrange the code already present to make sure that both sprites show up like the picture on the right.
       CSD U3 Sprites intro sprites_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
+      CSD U3 Sprites intro sprites_2018 - Validation Test_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
       CSD U3 Sprites intro sprites_2018_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
       CSD U3 Sprites make template_markdown_instruction: |-
         # Make Your Own Sprite
@@ -8104,7 +8110,7 @@ sk:
         
         Write a program that uses `rect`, `ellipse`, and `fill` to create the face on the right. The colors used are "lightblue", "red", and "lightgreen".
         Once you've finished, add your own personal touches to the image.
-      CSD U3 challenge face_2018_markdown_instruction: |+
+      CSD U3 challenge face_2018_markdown_instruction: |
         <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png" style="float: right; max-width: 200px; border: 1px solid grey">
         # Challenge: Face
         
@@ -8120,7 +8126,7 @@ sk:
         _Check with your teacher before starting any of the challenges._
         
         Using only the `rect` and `ellipse` commands, can you draw a new shape, such as this triangle made out of circles?
-      CSD U3 challenge new shape_2018_markdown_instruction: |-
+      CSD U3 challenge new shape_2018_markdown_instruction: |
         <img src="https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png" style="float: right; max-width: 200px; border: 1px solid grey">
         
         # Challenge: Shape of Shapes
@@ -9380,7 +9386,7 @@ sk:
         _Check with your teacher before starting any of the challenges._
         
         In the previous lesson you and your partner created several interesting images. See if you can recreate one of them using code.
-      CSD U3 picture_2018_markdown_instruction: |-
+      CSD U3 picture_2018_markdown_instruction: |
         # Challenge: Draw an Image
         
         _Check with your teacher before starting any of the challenges._
@@ -9879,7 +9885,7 @@ sk:
         
         _Hint: You can look at [Stage 12 Bubble 8](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/12/puzzle/8) to see a working scoreboard.  Scroll down in the code until you see the comment "draw score"_
       CSD U3 rect_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger) )\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
-      CSD U3 rect_2018_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens. ( [Show me where](#triggercallout=run_trigger) )\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
+      CSD U3 rect_2018_markdown_instruction: "# Explore Game Lab\n\nWelcome to Game Lab, where you can create interactive animations and games!   \n\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\n\n# Do This\n\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens.\n* Change the numbers inside the block, then try running the program again.\n* Try to place the rectangle near the bottom right of the screen."
       CSD U3 sequence_markdown_instruction: |-
         <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
         # Order Matters
@@ -10753,7 +10759,7 @@ sk:
         * Use the toggle switch to change the motorcycle's movement to go up and down.
         * Use a dropdown with color names to change the motorcycle's color
         * Make the buzzer or LED turn on when the motorcycle reaches the top or bottom of the screen.
-      CSD U6 challenge motorcycle_2018_markdown_instruction: |-
+      CSD U6 challenge motorcycle_2018_markdown_instruction: |
         # Challenge
         
         Use this program to experiment some more with getting and setting properties. Some ideas you might try include:
@@ -12743,6 +12749,10 @@ sk:
         * Use either a `console.log()` command or a watcher to report the value of `player_y`
         * Play the game with only one button, keeping an eye on the value of `player_y`
         * Decide what value of `player_y` should be considered the bottom of the screen
+      CSD sprite movement challenge_2018_markdown_instruction: |-
+        # Improve your animation
+        
+        Make your animation even better by changing more sprite properties, or by adding even more sprites!
       CSD-Arrays_markdown_instruction: "Today you’re going to learn how to use and create **functions**.\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\nMaking a newly named block that has all of the code you want to run inside of it. \n-xml of function definition- \n\nThe single green block itself that you use, or call, to run the function you created.\n-xml of function call-\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
       CSD-Arrays_2018_markdown_instruction: "Today you’re going to learn how to use and create **functions**.\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\nMaking a newly named block that has all of the code you want to run inside of it. \n-xml of function definition- \n\nThe single green block itself that you use, or call, to run the function you created.\n-xml of function call-\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
       'CSD: Boolean Expressions_markdown_instruction': "# Boolean Expressions Video"
@@ -15344,7 +15354,7 @@ sk:
         
         * Use the `buzzer.playSong` block to make a different song.
         * When you get comfortable with the structure, add more notes to the song.
-      CSDU6 buzzer 2d arrays_2018_markdown_instruction: |-
+      CSDU6 buzzer 2d arrays_2018_markdown_instruction: |
         # Challenge: 2D Arrays
         
         Arrays can hold all sorts of data, like numbers, strings, and even other arrays. When we put an array inside another, this becomes a 2D array. The `buzzer.playSong()` block can be used to play songs that sound more precise with 2D arrays.
@@ -19152,19 +19162,25 @@ sk:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
-      Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
+      Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! \n\nWhat do you think will happen when you click on it?  "
       Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
-      Dance Party 2_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move up and down. Can you change the behavior inside the `begins` block to make her start spinning around?
-      Dance Party 3_markdown_instruction: Create a new sprite called `alien2`, and make it do a different dance move when it's clicked.
-      Dance Party 4_markdown_instruction: Create a third sprite called `alien3`, and make sure they're standing in a line. It's an alien dance crew!
-      Dance Party 5_markdown_instruction: We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  **Add code to change the color of each alien when it gets clicked.**
-      Dance Party 6_markdown_instruction: These aliens are running wild! Use the `stops everything` block to make each alien stop moving when it is clicked.
-      Dance Party 7_markdown_instruction: Finally, add a new bell sprite called `myBell`. When you click on it, make all the aliens start doing the same dance move.
+      Dance Party 2 Validated_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move side-to-side. Can you change the behavior inside the `begins` block to make her start spinning around?
+      Dance Party 2_markdown_instruction: "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> block to make it start spinning around?  "
+      Dance Party 3 - Validated_markdown_instruction: "Create a new sprite called `alien2`.  \n\nMake it do a different dance move when it's clicked.  "
+      Dance Party 3_markdown_instruction: "Create a new sprite called `alien2`.  \n\nMake it do a different dance move when it's clicked.  "
+      Dance Party 4 Validated_markdown_instruction: "Create a third sprite called `alien3`.  \n\nCan you set all of your aliens to stand in a straight line? It's an alien dance crew!"
+      Dance Party 4_markdown_instruction: "Create a third sprite called `alien3`.  \n\nCan you set all of your aliens to stand in a straight line? It's an alien dance crew!"
+      Dance Party 5 - Validated_markdown_instruction: "We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  \n\n**Add code to change the color of each alien when it gets clicked.**\n\n---\n"
+      Dance Party 5_markdown_instruction: "We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  \n\n**Add code to change the color of each alien when it gets clicked.**\n\n---\n"
+      Dance Party 6 - Validated_markdown_instruction: "These aliens are running wild!  \n\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> block to make each alien stop moving when it is clicked.  \n    \n---\n"
+      Dance Party 6_markdown_instruction: "These aliens are running wild!  \n\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> block to make each alien stop moving when it is clicked.  \n    \n---\n"
+      Dance Party 7 - Validated_markdown_instruction: "Finally, add a new bell sprite called `myBell`.  \n\nWhen you click on it, make all the aliens start doing the same dance move!  \n\n---\n"
+      Dance Party 7_markdown_instruction: "Finally, add a new bell sprite called `myBell`.  \n\nWhen you click on it, make all the aliens start doing the same dance move!  \n\n---\n"
       Dance Party Freeplay_markdown_instruction: |-
         Now create your own alien disco! Looking for inspiration? Try these ideas:
         * Create two bell sprites, and make the aliens do a different dance move for each
-        * Make the aliens do a new dance move when they touch
-      Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
+        * Make the aliens do a new dance move whenever they touch each other
+      Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`!   \n\nWhat do you think will happen when you click on it?  "
       Data Visualizations 101_markdown_instruction: |+
         ## Data Visualization 101: How to design charts and graphs
         
@@ -19395,17 +19411,17 @@ sk:
         * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**
       Fish Tank 1-validated_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
       Fish Tank 1_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
-      Fish Tank 2-validated_markdown_instruction: We're going to make a fish tank. Change Dusty the tumbleweed to a fish.
+      Fish Tank 2-validated_markdown_instruction: "Let's make a fish tank!  \n\nChange Dusty (the tumbleweed) to a fish."
       Fish Tank 2_markdown_instruction: We're going to make a fish tank. Change the Dusty the tumbleweed to a fish.
-      Fish Tank 3-validated_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
+      Fish Tank 3-validated_markdown_instruction: "The fish is getting dizzy! \n\nChange the fish's behavior so that it swims around the tank."
       Fish Tank 3_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
-      Fish Tank 4-validated_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
+      Fish Tank 4-validated_markdown_instruction: "Our fish tank needs some water! \n\nUse <xml><block type=\"gamelab_setBackground\" inline=\"true\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> to make the background blue."
       Fish Tank 4_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
-      Fish Tank 5-validated_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
+      Fish Tank 5-validated_markdown_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
       Fish Tank 5_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
-      Fish Tank 6-validated_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
+      Fish Tank 6-validated_markdown_instruction: "What do you want your fish’s new friend to do?   \n\nAdd a behavior and watch them go!"
       Fish Tank 6_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
-      Fish Tank 7-validated_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
+      Fish Tank 7-validated_markdown_instruction: "We've added a lot of new blocks to the toolbox.   \n\nPlay with them to make your fish tank special!"
       Fish Tank 7_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
       Fish Tank Predict_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
       Fish Tank Template_markdown_instruction: Project Template
@@ -19485,6 +19501,7 @@ sk:
         * Use the dragger to resize your preview area to see how your website adapts.
         * Shrink the size of the instructions area to resize how tall the web page is
       Harvesting_markdown_instruction: Uh oh, I lost my map and can't remember what I planted! Every sprout could grow up to be **corn** ![picture of corn](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png) , **beans** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png) , or **pumpkins** ![picture of pumpkin](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png) . Can you write some code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_markdown_instruction: "Use the blocks to solve this maze!\n\n<xml><block type=\"simple_move_down\"/></xml><xml><block type=\"simple_move_up\"/></xml><xml><block type=\"simple_move_right\"/></xml><xml><block type=\"simple_move_left\"/></xml>   \n\n---"
       'How to: Setup your Class Data Tracker_markdown_instruction': "## Setting up your copy of the Class Data Tracker\n\nThe second chapter of unit 2 dives into data collection, analysis, and visualization. Starting in lesson 7 you will set up and use a class data tracker, which students will fill out each day until lesson 13, when they start cleaning the data they've been collecting.\n\nLesson 7 includes the following detailed guide that walks you through setting up your shared data tracker from the template provided in the curriculum. Feel free to check out this instructions and setup your tracker now! "
       'How to: Use Google Trends_markdown_instruction': "## How to Use Google Trends\n\nIn lesson 8, students will use Google Trends as a tool to visualize the relationship between historical google search data. If you're not familiar with Google Trends, check out the following How-to guide that details how to explore trends using the tool! "
       If and If-Else part 1_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
@@ -19687,6 +19704,7 @@ sk:
       Luigi's Pizza 3_markdown_instruction: That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the _else_ clause so that we charge them a premium for toppings that we don't normally offer? Let's charge $10,000 for a topping we don't carry.
       Luigi's Pizza 4_markdown_instruction: "Free Play: What can you do to make Luigi's cost function even more useful? Try one (or more) of the following:  \n\n- Create a new function to display an image of the chosen pizza\n- Create a function that allows for ordering multiple pizzas (the same, or with different toppings)\n- Create a function that allows you to add a coupon code for a 30% discount"
       MC Agent Freeplay_markdown_instruction: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte tento svet."
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "Some games let you keep score. Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n    <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself a point when you tag them.  \n  \n  Reach five points to win!"
       MC_2017_Ryan_02_markdown_instruction: "Code like this can be made even shorter using loops!  \n\nNow get the Agent to the pressure plate using a `repeat` loop to help him move forward."
       MC_HOC_2017 Agent Test_markdown_instruction: "Kliknite na oranžové tlačidlo Spustiť, aby ste mohli presúvať hráča pomocou **klávesov so šípkami**. \\r\n\\r\nAk chcete prejsť túto úroveň, musíte prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby ste sa dostali na oranžové políčko vo vnútri."
       MC_HOC_2017_01_markdown_instruction: "Kliknite na oranžové tlačidlo Spustiť, aby ste mohli presúvať hráča pomocou **klávesov so šípkami**. \\r\n\\r\nAk chcete prejsť túto úroveň, musíte prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby ste sa dostali na oranžové políčko vo vnútri."
@@ -22367,6 +22385,21 @@ sk:
         * **Change your program to flip 10,000 coins, predict what the longest streak will be, and run your program**.
         * Rerun it a few times. **Does the answer stay fairly consistent? Are you surprised by the result?**
       U3 - Simulation - Template_markdown_instruction: |-
+        # Simulating Coin Flips
+        
+        Over the next several exercises we are going to be building a program that simulates flipping 10,000 coins, or even more if you like. Along the way we're going to be keeping track of the patterns that develop and hopefully learning something about the patterns that develop.
+        
+        This is a great problem to simulate on a computer. If you wanted to flip 10 coins you'd probably just do it by hand. Flipping 10,000 coins would take significantly longer (about 3 hours if you flip one per second) and so **we'd much rather use a program to do the work for us.** Not only is it a lot faster to write the program, but once you're done you can run your program over and over, repeating the experiment. As we'll see, **simulations like this make it much easier to quickly notice patterns, test hypotheses, and develop new ideas to investigate**.
+        
+        **Starting Small:** Our simulations are going to start small. We'll actually only be flipping 10 coins to begin with, and then developing programs that keep track of patterns in this smaller set of data. That way we'll be able to visually confirm that our programs are working as intended. **Once we've verified that our programs work at a smaller scale we'll gradually increaese the number of flips our program is working on until we're at the full 10,000.**
+        
+        # Do This
+        
+        * When we want to flip a coin with a computer we will instead **generate a random number between 0 and 1**
+        * Write a program that **uses a while loop** that **flips 10 coins** and writes their values to the screen
+        
+        ![](https://images.code.org/970622047b06af13ea7bdd50ee86bcbf-image-1446739178483.gif)
+      U3 - Simulation - Template_2018_markdown_instruction: |-
         # Simulating Coin Flips
         
         Over the next several exercises we are going to be building a program that simulates flipping 10,000 coins, or even more if you like. Along the way we're going to be keeping track of the patterns that develop and hopefully learning something about the patterns that develop.
@@ -25366,6 +25399,7 @@ sk:
       U4 - Read Record - 5_markdown_instruction: "# Reading Records: Looping over the Array\n\nWe can loop over the `records` array just like any other array to **perform the an action for every object in the array**. Recall that the standard way of doing this is to use a `for` loop.  \n\nFor example, if you had an array called `records` and each object in the array had a property called `name` you could display every name in your array like this:\n\n![](https://images.code.org/baf9aa7c93c78ad5992e29ebc7baacb8-image-1449872724581.png)\n\n# Do This:\n**Starter code is provided** which reads records from the \"topMovies\" table.\n\n* Add a `for` loop to the callback function of the `readRecords` command.\n* Add code to your `for` loop that displays **only the title of every movie in the list**.\n\\t* HINT: to display the title of a movie inside the for loop use `records[i].title`.\n* Your output should look like this:\n\n![](https://images.code.org/5b13735c52308f57241e7c34707c82e6-image-1449783907117.44.02 PM.png) "
       U4 - Read Record - 5_2018_markdown_instruction: "# Reading Records: Looping over the Array\n\nWe can loop over the `records` array just like any other array to **perform the an action for every object in the array**. Recall that the standard way of doing this is to use a `for` loop.  \n\nFor example, if you had an array called `records` and each object in the array had a property called `name` you could display every name in your array like this:\n\n![](https://images.code.org/baf9aa7c93c78ad5992e29ebc7baacb8-image-1449872724581.png)\n\n# Do This:\n**Starter code is provided** which reads records from the \"topMovies\" table.\n\n* Add a `for` loop to the callback function of the `readRecords` command.\n* Add code to your `for` loop that displays **only the title of every movie in the list**.\n\\t* HINT: to display the title of a movie inside the for loop use `records[i].title`.\n* Your output should look like this:\n\n![](https://images.code.org/5b13735c52308f57241e7c34707c82e6-image-1449783907117.44.02 PM.png) "
       U4 - Read Record - part 1 - template_markdown_instruction: "# Reading Records\nYou have learned how `createRecord` can be used to create permanent copies of your data in a remote database. \n\n**In order to use this data you'll need a way to read it out of your database and back into your app**.\n\n<img src=\"https://images.code.org/ac5fb29d4935df7b5825f4cabd6b89e8-image-1449502640243.35.37 AM.png\" style=\"width: 350px; float: right\">\n\nCheck out the new command `readRecords`. This command **requests from the database *all* the records stored in one table.**. \n\nThe database responds by the sending an **array of objects** back to your program -- one object for every record in the table.  As with createRecord, the data sent back by the database will come through **callback function of the `readRecords`, with array of objects in the `records` parameter**.\n\n# Do This\n\n**NOTE**: the database with at table called 'myTable' already contains some data.\n\n* **Open the Data Viewer** to look at the data in 'myTable'\n* **Add a `readRecords` command** to your app.\n* **Add a `console.log` command** inside the callback function of `readRecords` to **display the `records`**\n* Run the program and **confirm that the same information you saw in the Data Viewer is displayed in the console**.\n\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)"
+      U4 - Read Record - part 1 - template_2018_markdown_instruction: "# Reading Records\nYou have learned how `createRecord` can be used to create permanent copies of your data in a remote database. \n\n**In order to use this data you'll need a way to read it out of your database and back into your app**.\n\n<img src=\"https://images.code.org/ac5fb29d4935df7b5825f4cabd6b89e8-image-1449502640243.35.37 AM.png\" style=\"width: 350px; float: right\">\n\nCheck out the new command `readRecords`. This command **requests from the database *all* the records stored in one table.**. \n\nThe database responds by the sending an **array of objects** back to your program -- one object for every record in the table.  As with createRecord, the data sent back by the database will come through **callback function of the `readRecords`, with array of objects in the `records` parameter**.\n\n# Do This\n\n**NOTE**: the database with at table called 'myTable' already contains some data.\n\n* **Open the Data Viewer** to look at the data in 'myTable'\n* **Add a `readRecords` command** to your app.\n* **Add a `console.log` command** inside the callback function of `readRecords` to **display the `records`**\n* Run the program and **confirm that the same information you saw in the Data Viewer is displayed in the console**.\n\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)"
       U4 - ReadRecords - Contacts App 1_markdown_instruction: "# Contacts App: Loading Your Contacts From the Database\n\nThe way you left your Contacts App in the last lesson, **your app had stored data in a remote database but could not read it back**. Now that you know how to use `readRecords`, you will be able to read that data into your app at the start of the program.\n\nRather than constructing and adding objects one-by-one to the `contacts` array, you can simply get the array of records from the database and use that as the global variable in our app.  Let's do it.\n\n# Do This:\n\n**Your code from the \"Contacts App\" is provided.**\n\n* Go to the Data Viewer for your app and confirm that your contacts data is stored there.\n* **Remove any code** from your program that:\n\\t* Constructed an object for a contact, (e.g. `contact1`, `contact2`, etc.\n    * Appended an object to the `contacts` array. \n    \n* Drag out a `readRecords` command and place it after the command `contacts = [];`\n\n* In the **callback function** of `readRecords`:\n  * Set `contacts = records`.\n  * Call `showCurrentContact`.\n\n<details>\n<summary><strong>What your code should look like</strong> (click to expand)</summary>\n<p>\nThe first few lines of your contacts app should now look like this.  \n</p>\n![](https://images.code.org/d0c426401a35ff99ab9eb86128bc7be5-image-1449949740702.48.41 PM.png)\n\n<p>Notice that this actually makes the program simpler: rather than constructing and adding objects one-by-one to the `contacts` array, we simply get the array of records from the database and <strong>assign it to `contacts`</strong>.  \n</p>\n<p>\nSince `contacts` is a global variable in our app, the rest of the code can use it.  \n</p>\n\n</details>"
       U4 - ReadRecords - Contacts App 1_2018_markdown_instruction: "# Contacts App: Loading Your Contacts From the Database\n\nThe way you left your Contacts App in the last lesson, **your app had stored data in a remote database but could not read it back**. Now that you know how to use `readRecords`, you will be able to read that data into your app at the start of the program.\n\nRather than constructing and adding objects one-by-one to the `contacts` array, you can simply get the array of records from the database and use that as the global variable in our app.  Let's do it.\n\n# Do This:\n\n**Your code from the \"Contacts App\" is provided.**\n\n* Go to the Data Viewer for your app and confirm that your contacts data is stored there.\n* **Remove any code** from your program that:\n\\t* Constructed an object for a contact, (e.g. `contact1`, `contact2`, etc.\n    * Appended an object to the `contacts` array. \n    \n* Drag out a `readRecords` command and place it after the command `contacts = [];`\n\n* In the **callback function** of `readRecords`:\n  * Set `contacts = records`.\n  * Call `showCurrentContact`.\n\n<details>\n<summary><strong>What your code should look like</strong> (click to expand)</summary>\n<p>\nThe first few lines of your contacts app should now look like this.  \n</p>\n![](https://images.code.org/d0c426401a35ff99ab9eb86128bc7be5-image-1449949740702.48.41 PM.png)\n\n<p>Notice that this actually makes the program simpler: rather than constructing and adding objects one-by-one to the `contacts` array, we simply get the array of records from the database and <strong>assign it to `contacts`</strong>.  \n</p>\n<p>\nSince `contacts` is a global variable in our app, the rest of the code can use it.  \n</p>\n\n</details>"
       U4 - ReadRecords - Contacts App 2_markdown_instruction: "# Refreshing Local Data\n\nYour app is still running off of an array called `contacts` that is stored in your app. You can think of this as a **local copy of your database**. In order to prevent it from getting out of sync with your actual database, you should **refresh the contents of this array every time you make changes to the database**.\n\nSince you will need to refresh your app many times in your program, **you will create a single function that refreshes the data in your app and displays the results**.\n\n# Do This:\n\n**Your code and database for the Contacts App is provided.**\n\n**Goal: Move the code that loads the data from the database into a function called `refreshLocalData`**.\n\n * Create a function called `refreshLocalData`. <img src=\"https://images.code.org/e0e29e916e63bc8c914ee1387729c86b-image-1450115424518.gif\" style=\"width: 350px; float: right\">\n\n * Move the call to `readRecords` from the top of you code into the function. (See animation).\n\n * Make a call to `refreshLocalData` at the beginning of your program.\n\\t* You need this now to trigger the initial loading of the data.\n    * <details><summary><strong>The top of your program should now look like this.</strong> (click to expand)</summary>![](https://images.code.org/89f5a3a70d66d2fe5b382b79a6aef347-image-1455908393952.PNG)</details>\n\n* Run the program and confirm that **it still copies the data from your database into the `contacts` array**.\n\n"
@@ -26015,6 +26049,7 @@ sk:
       U4-AP-Practice-Justify-the-Score_2018_markdown_instruction: "# AP Practice - Justify the Score\n\n**Written Prompt** -- Here is a portion of the AP Explore Performance Task written response prompt 2d:\n\n<div style=\"width: 80%; margin: auto; background-color: #EEEEEE; padding: 10px; font-family: serif; font-size: 12pt\">\n\n<b>Computing Innovation</b>\n<br>\n<br>\n2d.  Using specific details, describe\n<br><br>\n<li>at least one data storage concern, data privacy concern, or data security concern directly related to the computing innovation.</li>\n</div>\n<br>\n\n**Sample Student Response** -- here is a snippet of a sample student response addressing a data concern:\n\n<div style=\"width: 80%; margin: auto; background-color: #d9f3f5; padding: 10px; font-family: serif; font-size: 12pt; line-height: 17pt\">\n\n<em> The FaceSnap app has permission to use many devices on your smartphone, including the camera. A data privacy concern that arises from this is that the company could access the camera to see what you're doing without your knowledge.</em>\n\n</div>\n\n<br>\n\n**Zero points!!!** -- based on the scoring guidelines listed below the student would **NOT** get a point for Row 6 and would likely **NOT** be awarded a point for Row 7 either.\n\n**Why?** Here are the scoring guidelines for rows 6 and 7.\n\n![](https://images.code.org/96f6c02681616656f107dac058d15de6-image-1511206516901.35.08 AM.png)\n\n## Justify the score\n\nIn the space provided below explain:\n\n1. Why the student would not be awarded either row based on the scoring guidelines. \n2. Make a suggestion(s) for how to modify the response so the student would get the point."
       U4L01 Free Response_markdown_instruction: 'This is the free response question text.  '
       U4L02 - Objects - Template1_markdown_instruction: "# Template"
+      U4L02 - Objects - Template1_2018_markdown_instruction: "# Template"
       U4L02 - Objects - createObject_markdown_instruction: |-
         # Creating Your Own Objects
         
@@ -26517,19 +26552,21 @@ sk:
       Video. Introduction to Conditionals - Part 2.3_markdown_instruction: "### Points to pay attention to:\n\n* **START at 2:20**  \n    This is the second half of the video you watched earlier. \n\n* An If-else-if statement let's you check more than one condition at a time.\n* The **order of conditions matters**. Since conditions are checked sequentially from top to bottom, the code that gets executed will be the *first* statement to evaluate to true.\n\n"
       Video. Introduction to Conditionals - Part 2_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
       Vigenere_markdown_instruction: "# Encrypt and decrypt a message with the Vigenère cipher\n\nThis is an interactive version of the Vigenère cipher that animates the encryption and decryption as it’s happening, given a piece of text to encrypt or decrypt and the key.\n\n# Do this\n### Encrypt a message\nClick Step several times, and trace what’s happening. Pay attention to:\n\n- How the ciphertext is being produced\n- What happens when you get to the last character of the key\n- After you’ve stepped through a few characters click Play to watch the rest animate\n- Hit Restart and play the animation again. You can use the speed slider to speed it up or slow it down  \n\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\n\n### Decrypt a message\nEncrypt a message as above, then:  \n\n- Highlight and copy the ciphertext\n- Paste it into the plaintext area. Note: Don’t change the key\n- Change the Encrypt/Decrypt toggle to Decrypt\n- Hit Step a few times, and then Play\n\nYou should see the original text emerge.  \n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\n\nHow hard would it be to crack a message encrypted with this cipher? Does the length of the key make a difference?\n"
+      Virtual Pet 1 Predict_markdown_instruction: |
+        **Make a prediction:** This is Geraldine, your new pet giraffe.
+        
+        What do you think will happen if you press "▶ Run" and then click on her?
       Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
-      Virtual Pet 1_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
-      Virtual Pet 2_markdown_instruction: There's a mud puddle over in the corner. Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
-      Virtual Pet 3_markdown_instruction: |-
-        We can’t have a dirty giraffe wandering around!  Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
-        
-        To reset the color, set it to white using this block:
-        
-        ![](https://images.code.org/e98c7949116888b4229d4794f6cd2a82-image-1526512133821.06.05 PM.png)
-      Virtual Pet 4_markdown_instruction: We don't want to wait for the giraffe to clean itself every time. Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 5_markdown_instruction: All of this play takes energy!  Add actions to each event so that when the giraffe collides with each sprite, it gets a little smaller (shrinks by 5).
-      Virtual Pet 6_markdown_instruction: A balanced diet is important! We have to feed the giraffe to get its strength back. Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet Freeplay_markdown_instruction: 'Freeplay: Can you add more special items for your virtual pet? Can you give her some friends? What more can you make your giraffe do? '
+      Virtual Pet 1_markdown_instruction: "This is Geraldine, your new pet giraffe.  \n\nWhat do you think will happen if you press \"▶ Run\" and then click on her? \n\n---"
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 2 - Validated_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 2_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 3_markdown_instruction: "We can’t have a dirty giraffe wandering around!  \n\n1)  Add a new soap sprite to the screen.  \n2)  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\n\n---\n\nTo reset the color, use this block:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
+      Virtual Pet 4_markdown_instruction: "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!\n"
+      Virtual Pet 5 - Validated_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
+      Virtual Pet 5_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
+      Virtual Pet 6_markdown_instruction: "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  \n"
+      Virtual Pet Freeplay_markdown_instruction: "Freeplay: What more can you make your giraffe do? \n\n- Can you add more special items for your virtual pet?  \n- Can you give her some friends?  "
       Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?"
       Visual Accessibility_markdown_instruction: |-
         # Visual Accessibility: Color Contrast
@@ -26863,7 +26900,7 @@ sk:
         Move Laurel to the treasure, then use `collect` to pick it up.
         
         Collect one pile of treasure to pass this level.
-      comment_intro_maze_2018_markdown_instruction: "*\"I'm confused. Help me remember how to solve this maze.\"* \n\nUse the new `comment` block to leave yourself quick reminders. They can help you remember what you were doing and why!\n\nComments are only used for **you**. Your Play Area won't look different because of a comment."
+      comment_intro_maze_2018_markdown_instruction: "*\"I'm confused. Help me remember how to solve this maze.\"*  \n\n---\n\nTo pass this puzzle, solve the maze and use the new <xml><block type=\"comment\">\n    <title name=\"TEXT\"> </title>\n  </block></xml> block to leave yourself quick reminders. They can help you remember what you were doing and why!   \n  \n\nComments are only used for **you**, they don't affect the play area."
       conditionals_forvideo_harvester_markdown_instruction: Collect all of the corn and lettuce, then pick the pumpkin.
       course1_artist_loops_challenge2_markdown_instruction: Let's play a game! Draw as many X's as you can! Can you get 3 in a row?
       course1_artist_loops_challenge3_markdown_instruction: |-
@@ -27197,7 +27234,7 @@ sk:
       courseA_harvester_seq10_markdown_instruction: The harvester needs to pick all the corn! Do you see a pattern?
       courseA_harvester_seq11_markdown_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_markdown_instruction: "*Thank you for helping me!* \n\nPick all the corn."
-      courseA_harvester_seq13_markdown_instruction: Help the harvester pick **one** corn!
+      courseA_harvester_seq13_markdown_instruction: Help the harvester pick corn!
       courseA_harvester_seq2_markdown_instruction: 'Use <xml><block type="maze_moveWest"/></xml> **three** times to get the harvester to the corn! '
       courseA_harvester_seq3_markdown_instruction: Use <xml><block type="maze_moveNorth"/></xml> **three** times to get the harvester to the corn! Don't forget to pick the corn at the end.
       courseA_harvester_seq4_markdown_instruction: Add *one* block to help the harvester pick the corn.
@@ -27206,10 +27243,11 @@ sk:
       courseA_harvester_seq7_markdown_instruction: You have to move in two directions to get to the corn! Help the harvester pick the right direction.
       courseA_harvester_seq8_markdown_instruction: Now the harvester needs to pick corn two times!
       courseA_harvester_seq9_markdown_instruction: Add two blocks to finish this puzzle!
-      courseA_maze_ramp2_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml> blocks to <xml><block type="when_run"/></xml> to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp2_2018_markdown_instruction: "Attach both <xml><block type=\"maze_moveEast\"/></xml> blocks to <xml><block type=\"when_run\"/></xml> to finish your code, then click \"▶ Run\".  \n\n\n---\n"
       courseA_maze_ramp2a_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml> blocks to <xml><block type="when_run"/></xml> to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
       courseA_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by removing it from the other blocks and dragging it back to the toolbox."
-      courseA_maze_ramp3a_2018_markdown_instruction: Grab a <xml><block type="maze_moveNorth"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp3a_2018_markdown_instruction: "Grab a <xml><block type=\"maze_moveNorth\"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\". \n\n---\n"
+      courseA_maze_ramp3b_2018_markdown_instruction: "There's an extra block at the end of this code!  \n\nDrag it back to the toolbox to throw it away."
       courseA_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to the silly pig.\"* \n\nAvoid TNT or feathers will fly!"
       courseA_maze_ramp4a_2018_markdown_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseA_maze_ramp5_2018_markdown_instruction: |-
@@ -27313,6 +27351,7 @@ sk:
       courseA_playLab_events4_2018_markdown_instruction: Now, add another event block to get Jorge to move right when the right arrow button is clicked.
       courseA_playLab_events5_markdown_instruction: Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.
       courseA_playLab_events5_2018_markdown_instruction: Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.
+      courseA_playLab_events7_2018_markdown_instruction: "*Freeplay:* Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?"
       courseA_playlab_events_challenge1_markdown_instruction: |-
         Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?
         
@@ -27351,9 +27390,13 @@ sk:
         In this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!
         
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
-      courseB_Scrat_ramp1_2018_markdown_instruction: To get Scrat to the acorn, snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
-      courseB_Scrat_ramp2_2018_markdown_instruction: Snap both <xml><block type="maze_moveEast"/></xml> blocks to the bottom of the <xml><block type="when_run"/></xml> block to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
-      courseB_Scrat_ramp3a_2018_markdown_instruction: Grab a <xml><block type="maze_moveNorth"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseB_Scrat_ramp1_2018_markdown_instruction: "To get Scrat to the acorn, snap the <xml><block type=\"maze_moveEast\"/></xml> block to the bottom of the <xml><block type=\"when_run\"/></xml> block, then press \"▶ Run\"!  \n\n---\n"
+      courseB_Scrat_ramp2_2018_markdown_instruction: "Snap both <xml><block type=\"maze_moveEast\"/></xml> blocks to the bottom of the <xml><block type=\"when_run\"/></xml> block to finish your code, then click \"▶ Run\".  \n\n---\n"
+      courseB_Scrat_ramp3a_2018_markdown_instruction: "Grab a <xml><block type=\"maze_moveNorth\"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\".  \n\n---\n\n"
+      courseB_Scrat_ramp3b_2018_markdown_instruction: |-
+        There's an extra block at the end of this code!
+        
+        Drag it back to the toolbox to throw it away.
       courseB_Scrat_ramp4a_2018_markdown_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseB_Scrat_ramp5a_2018_markdown_instruction: Try this one all by yourself!
       courseB_artist_loops10_markdown_instruction: |-
@@ -27388,10 +27431,7 @@ sk:
         **Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.
         
         Drag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.
-      courseB_collector_loops1_2018_markdown_instruction: |-
-        **Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.
-        
-        Drag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.
+      courseB_collector_loops1_2018_markdown_instruction: "**Free Play:** Move Laurel around and get as much treasure as you can. Get at least one item with no mistakes to pass this level.  \n\n---\n\nDrag blocks into the workspace and try to figure out how to get treasure.  "
       courseB_collector_loops2_markdown_instruction: |-
         Move Laurel to the treasure, then use the<xml><block type="collector_collect"/></xml>block to pick it up.
         
@@ -27440,7 +27480,11 @@ sk:
       courseB_playlab_events3_markdown_instruction: Use an event to make Daisy the Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) mood when you click on her.
       courseB_playlab_events3_2018_markdown_instruction: Use an event to make Daisy the Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) mood when you click on her.
       courseB_playlab_events4_markdown_instruction: "Knight time!  \n\nAdd an event so that the knight moves toward the dragon when the left arrow is clicked."
-      courseB_playlab_events4_2018_markdown_instruction: "Knight time!  \n\nAdd an event so that the knight moves toward the dragon when the left arrow is clicked."
+      courseB_playlab_events4_2018_markdown_instruction: |-
+        Knight time!  Get the dragon to finish this level.
+        
+        Add an event so that the knight moves toward the dragon when the left arrow is clicked.
+      courseB_playlab_events5_2018_markdown_instruction: "Now add an event so that the knight runs away from the dragon when you press the right arrow.  \n\nMove the knight to the right to pass this level."
       courseB_playlab_events6_markdown_instruction: |-
         Help your knight get all of the flags!
         
@@ -27450,7 +27494,7 @@ sk:
         
         To do this, you'll need to add events to help the knight move up, down, left, and right.
       courseB_playlab_events7_markdown_instruction: "Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags! \n\nPlay a sound when they collide to make it feel more real.\n\nVisit all of the goals, then run into the dragon to pass the level."
-      courseB_playlab_events7_2018_markdown_instruction: "Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags! \n\nPlay a sound when they collide to make it feel more real.\n\nVisit all of the goals, then run into the dragon to pass the level."
+      courseB_playlab_events7_2018_markdown_instruction: "Make this game fun by adding more things!\n\n1) Set the knight to vanish when he runs into the dragon.   \n2) Play a sound when they collide to make it feel more real.   \n\n---\n\nVisit all of the goals, then run into the dragon to pass the level."
       courseB_playlab_events_challenge1_markdown_instruction: "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?"
       courseB_playlab_events_challenge1_2018_markdown_instruction: "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?"
       courseB_playlab_events_challenge2_markdown_instruction: |-
@@ -28212,7 +28256,7 @@ sk:
       courseD_bee_conditionals7_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: if there is a flower, the bee only needs to get nectar *once*. If there is a honeycomb, the bee only needs to make honey *once*."
       courseD_bee_conditionals7_2018_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: if there is a flower, the bee only needs to get nectar *once*. If there is a honeycomb, the bee only needs to make honey *once*."
       courseD_bee_conditionals7_predict2_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever **bee** *one* honeycomb or *one* flower behind each cloud."
-      courseD_bee_conditionals7_predict2_2018_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever **bee** *one* honeycomb or *one* flower behind each cloud."
+      courseD_bee_conditionals7_predict2_2018_markdown_instruction: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever be *one* honeycomb or *one* flower behind each cloud."
       courseD_bee_conditionals8_markdown_instruction: |-
         **Challenge:** There will be either a flower or a honeycomb under each of those clouds!
         
@@ -28323,7 +28367,7 @@ sk:
         
         See how many points you can score before your opponent scores twice!
       courseD_bounce_events1s_markdown_instruction: "Get the ball to the hoop!   \nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net."
-      courseD_bounce_events1s_2018_markdown_instruction: "Get the ball to the hoop!   \nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net."
+      courseD_bounce_events1s_2018_markdown_instruction: "Get to the hoop!     \n\nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net.  \n\n---"
       courseD_bounce_events2s_markdown_instruction: Now, attach a block to the `when right event` so that the hand can get to both baskets.
       courseD_bounce_events2s_2018_markdown_instruction: Now, attach a block to the `when right event` so that the hand can get to both baskets.
       courseD_bounce_events5s_markdown_instruction: We're going to send a basketball flying down towards the hand.  Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.
@@ -29496,8 +29540,8 @@ sk:
         You can use this `for loop` to collect all of the nectar. Un-bee-lievable!
         
         There are a few actions that you will want to `repeat 'counter' times`.
-      courseF_bee_for_challenge2_markdown_instruction: Solve this puzzle with the fewest number of blocks possible.
-      courseF_bee_for_challenge2_2018_markdown_instruction: Solve this puzzle with the fewest number of blocks possible.
+      courseF_bee_for_challenge2_markdown_instruction: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
+      courseF_bee_for_challenge2_2018_markdown_instruction: Vyriešte túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge3_markdown_instruction: "**For-Loops Super Challenge:** Solve this puzzle with the fewest number of blocks possible."
       courseF_bee_functions2_markdown_instruction: "To make things easier, it's time to learn about functions!\n\nFrom here on out, you will be using a new *function editor*.  This editor is a separate window that will appear when you go to edit a function.  You won't see all of the code from your function while you're coding in the workspace, but don't worry...it's still there!  \n___\n\nLet's practice with this function that gets nectar only if the bee is at a flower.  To see the code inside, click the blue \"edit\" button!\n\nUse the `get only nectar` function to collect the nectar from each flower."
       courseF_bee_functions2_2018_markdown_instruction: "To make things easier, it's time to learn about functions!\n\nFrom here on out, you will be using a new *function editor*.  This editor is a separate window that will appear when you go to edit a function.  You won't see all of the code from your function while you're coding in the workspace, but don't worry...it's still there!  \n___\n\nLet's practice with this function that gets nectar only if the bee is at a flower.  To see the code inside, click the blue \"edit\" button!\n\nUse the `get only nectar` function to collect the nectar from each flower."
@@ -29577,7 +29621,7 @@ sk:
         
         In this puzzle, each patch needs the variable to be one less than the patch before. Subtract one from the variable each time through the loop if you want to use the same function to solve this level.
       courseF_bee_variables_4_2018_markdown_instruction: |-
-        *"Un-BEE-lievable!"
+        "Un-BEE-lievable!"
         
         Edit the code to make it work for this puzzle.
       courseF_maze_ramp1_markdown_instruction: For this puzzle, connect all of the blocks from the workspace together below the <xml><block type="when_run"/></xml> block and click "Run" to watch it go!
@@ -29703,7 +29747,7 @@ sk:
       course_playlab_variables1_markdown_instruction: "This is Pirate Pegleg.  He's awfully hard to understand these days!  \n\nDecode his speech by changing these pieces of text in the code:\n- \"arrrg\" should be \"a\" \n- \"ye\" should be \"e\"\n\n"
       course_playlab_variables2_markdown_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places!   \n- \"arrrg\" should be \"a\" \n- \"ye\" should be \"e\"\n\n"
       course_playlab_variables3_markdown_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places!   \n- \"arrrg\" should be \"a\" \n- \"ye\" should be \"e\"\n\n"
-      coursea_maze_ramp1_2018_markdown_instruction: To get the bird to the pig, snap the <xml><block type="maze_moveEast"/></xml> block to the bottom of the <xml><block type="when_run"/></xml> block, then press ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
+      coursea_maze_ramp1_2018_markdown_instruction: "To get the bird to the pig, snap the <xml><block type=\"maze_moveEast\"/></xml> block to the bottom of the <xml><block type=\"when_run\"/></xml> block, then press \"▶ Run\"!  \n\n\n---\n"
       coursef_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       coursef_maze_ramp3_2018_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox."
       cp1dlp-q1_markdown_instruction: "<br><br>\n\n# Unit 1 - Question 1\n**NOTE:** Before you start this reflection, make sure you’ve reviewed the lessons in this unit and have a good sense of the connections between lessons. If you haven’t already reviewed the materials, do that now and come back to this reflection later.\n\nFor this reflection, you’re going to consider the prompt below and craft a written response that demonstrates your understanding of the lessons as well as how to address teacher concerns about the unit . We suggest you write your response in another text editor and copy it in here once you are ready to submit.\n\n> **Prompt:**How would you respond to a teacher who says, “I’m thinking about skipping Lesson 4? Some of my kids already know binary and I don’t want them to be bored”\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
@@ -30400,25 +30444,25 @@ sk:
         
         * What factors seemed to contribute to those feelings?
         * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
-      frozen circle function in circle_markdown_instruction: Now let's create 20 overlapping circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_markdown_instruction: Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_markdown_instruction: Use the new “Create a circle” block to create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_markdown_instruction: A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_markdown_instruction: 'Let''s repeat it 90 times! How many times does 90 go into 360? Hint: It''s a really small number.'
-      frozen cross rotate_markdown_instruction: Now try repeating it 10 times. How many degrees do you need to turn between each line?
-      frozen cross_markdown_instruction: Wrap a “Repeat” block around these commands to create a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_markdown_instruction: Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.
-      frozen diamond snowflake_markdown_instruction: Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one.
-      frozen diamond_markdown_instruction: Use a repeat around these blocks to create a parallelogram. It's just like a rectangle but has different angles. This one has 60 degree and 120 degree angles instead of all 90 degree angles.
-      frozen freeplay_markdown_instruction: You've officially become a master artist! Create a winter wonderland.
-      frozen perpendicular_markdown_instruction: Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the "Turn" block as well as the "Move" block.
-      frozen snowflake branch_markdown_instruction: Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_markdown_instruction: Now let's repeat it 8 times to make a beautiful snowflake!
-      frozen snowflower_markdown_instruction: Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?
-      frozen square iterative_markdown_instruction: It seems like we're halfway to making a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_markdown_instruction: Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_markdown_instruction: Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_markdown_instruction: Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?
+      frozen circle function in circle_markdown_instruction: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi každým z nich sa otočíme o 18 stupňov.
+      frozen circle function with parameter_markdown_instruction: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+      frozen circle function_markdown_instruction: Použite nový blok "Vytvoriť kruh" pre nakreslenie 10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
+      frozen circle_markdown_instruction: Kruh je zvláštny tvar. Dokážete zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
+      frozen cross rotate dense_markdown_instruction: 'Poďme to zopakovať 90-krát! Koľkokrát sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
+      frozen cross rotate_markdown_instruction: Teraz to skúste zopakovať 10-krát. O koľko stupňov sa musíte otočiť medzi jednotlivými čiarami?
+      frozen cross_markdown_instruction: Vytvoter znamienko plus pomocou bloku "opakuj". Všimli ste si, že Elza sa môže pohybovať dopredu i dozadu?
+      frozen diamond mini snowflake_markdown_instruction: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakovať" tak, že zopakujeme rovnobežník 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
+      frozen diamond snowflake_markdown_instruction: Teraz poďme vytvoriť novú vločku pomocou bloku Opakovať tak, že budeme opakovať rovnobežník 10-krát a otočíme se vpravo o 36 stupňov po každom z nich.
+      frozen diamond_markdown_instruction: Použite opakovanie okolo týchto blokov pre vytvorenie lichobežníka. Vyzerá ako obdĺžnik, ale má iné uhly. Tento má uhly 60 a 120 stupňov namiesto 90 stupňov v každom rohu.
+      frozen freeplay_markdown_instruction: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
+      frozen perpendicular_markdown_instruction: Teraz skúsme, či dokážeme vytvoriť dve čiary, ktoré sú na seba kolmé. Budete musieť použiť blok "Otočiť" spolu s blokom "Posunúť".
+      frozen snowflake branch_markdown_instruction: Skúste použiť blok "Vytvoriť rameno vločky" k vytvoreniu troch ramien, ktoré začnú vyzerať ako snehová vločka.
+      frozen snowflake full_markdown_instruction: A teraz to zopakujme 8 krát pre nakreslenie krásnej vločky!
+      frozen snowflower_markdown_instruction: Zložité snehové vzory je možné vytvoriť s pomocou veľmi jednoduchých tvarov. Dokážete vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
+      frozen square iterative_markdown_instruction: Vyzerá to, že sme na polceste k tomu vytvoriť štvorec. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
+      frozen square loop 3x_markdown_instruction: Poďme vytvoriť tri štvorce tak, že sa po každom štvorci otočíme. Uistite sa, že sa otočíte o 120 stupňov pred každým novým štvorcom.
+      frozen square loop_markdown_instruction: Ahoj, ja sa volám Anna z Arendelle! Vytvorme štvorec pomocou bloku "opakuj". Takéto riešenie používa menej blokov. Koľkokrát (???) musí blok "opakuj" vykonať vnútorné bloky, aby vznikol štvorec?
+      frozen square snowflake_markdown_instruction: Dokážete vytvoriť vločku pomocou bloku "Opakovať" tak, že nakreslíte 10-krát štvorec a použijete blok "Otočiť" na otočenie o 36 stupňov pred každým štvorcom?
       getting-buy-in-wednesday_markdown_instruction: |
         # Day 3: Getting Buy In
         
@@ -30513,7 +30557,7 @@ sk:
         Draw this diamond with 200 pixel sides.
       grade2_MakeDogTag_6_markdown_instruction: "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
       grade2_MakeDogTag_7_markdown_instruction: "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)"
-      grade2_MakeDogTag_8_markdown_instruction: Now let's connect a bunch of V's together in a loop.
+      grade2_MakeDogTag_8_markdown_instruction: A teraz pripojme niekoľko Véčiek spolu do slučky.
       grade2_MakeDogTag_9_markdown_instruction: "Time to make something snazzy! \n\nRebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8."
       grade2_MakeDogTag_BFP_markdown_instruction: |-
         *"Hi, I'm an artist. You can write code to make me draw almost anything."*
@@ -30527,20 +30571,20 @@ sk:
         Here are some ideas you could try if you get stuck:
         ![](https://images.code.org/e36330061c21807fac24d804e301e572-image-1475814869558.26.01.png)
       grade2_PuppyLoops_10_markdown_instruction: |-
-        My teacher says that I should finish what I start!
+        Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
         
-        Help me finish my pinwheel. Can you figure out what's wrong?
+        Pomôže mi dokončiť môj veterník. Viete zistiť, čo je zlé?
       grade2_PuppyLoops_2_markdown_instruction: |-
         Suddenly, a magical block appears!  With the `repeat` block, you can loop code over and over.
         
         Can you get to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?
       grade2_PuppyLoops_3_markdown_instruction: Get me to the pig! Solve this puzzle by creating a loop!
       grade2_PuppyLoops_4_markdown_instruction: In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!
-      grade2_PuppyLoops_8_markdown_instruction: "This code for the cat's whiskers is wrong. \n\nFix this code to draw whiskers that are all the same length."
+      grade2_PuppyLoops_8_markdown_instruction: "Tento kód pre mačacie fúzy je zlý.\n\nOpravte tento kód, aby sa všetky fúzy nakreslili v rovnakej dĺžke."
       grade2_PuppyLoops_9_markdown_instruction: |-
-        Looks like the C in code is drawn backwards!
+        Vyzerá, že C v kóde je nakreslené naopak!
         
-        Can you make it look like a C again?
+        Viete to opraviť, aby to znova vyzeralo ako C?
       grade2_collector_10_markdown_instruction: "You're almost done!  \n\nCollect as many pieces of treasure as you can to finish the stage!"
       grade2_collector_10_2018_markdown_instruction: "You're almost done!  \n\nCollect as many pieces of treasure as you can to finish the stage!"
       grade2_collector_2_markdown_instruction: Move Laurel to the gold, then use `collect` to pick it up.
@@ -30656,15 +30700,15 @@ sk:
         
         Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
       grade3_Loops_11_markdown_instruction: "The shape of this path is different from the others. \n\nCan you collect all of the nectar using as few blocks as possible?"
-      grade3_Loops_3_markdown_instruction: Use a `repeat` loop to collect all of the nectar.
-      grade3_Loops_4_markdown_instruction: Now use the `repeat` block to collect all of the nectar and make all of the honey.
+      grade3_Loops_3_markdown_instruction: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
+      grade3_Loops_4_markdown_instruction: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
       grade3_Loops_5_markdown_instruction: |-
         What a beautiful field of flowers!
         
         Help the bee visit each one.
         
         Can you find a way to do it with fewer than 7 blocks?
-      grade3_Loops_6_markdown_instruction: "How many times can loops help you in this puzzle?  \n\nLoops are your friend! Use a few of them to complete this puzzle with the fewest blocks possible."
+      grade3_Loops_6_markdown_instruction: "Koľkokrát Vám môžu slučky pomôcť v tejto úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie tejto úlohy s čo najmenším počtom blokov."
       grade3_Loops_7_markdown_instruction: |-
         Those flowers look tasty!
         
@@ -30755,7 +30799,7 @@ sk:
       grade4_arist_nested_loop_triangles6_markdown_instruction: Can you draw these 36 triangles using a nested loop?
       grade4_artist_freeplay_markdown_instruction: Create your own project! This creation will be saved to your Projects dashboard so that you can easily edit it any time!
       grade4_artist_functions1_markdown_instruction: "*\"Me zombie artist. Me love drawing!\"*\n\nHelp the zombie draw glasses using squares with sides of 100 pixels.  \nThe bridge between the glasses is 75 pixels long.\n\n"
-      grade4_artist_functions2_markdown_instruction: "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\nThe squares are 75 pixels apart."
+      grade4_artist_functions2_markdown_instruction: "Funkcie Vám umožnia definovať nové bloky! \n\nPresunuli sme bloky potrebné na nakreslenie štvorca do funkcie \"nakresli štvorec\". Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie okuliarí.\n\nŠtvorce sú od seba vzdialené 75 pixelov."
       grade4_artist_functions2a_markdown_instruction: |-
         Create this image using only the blocks provided.
         
@@ -30851,28 +30895,28 @@ sk:
         **Assessment:** Collect all of the nectar and make all of the honey using loops.
         
         **Hint:** *There are several possible solutions!*
-      grade4_frozen_freeplay_markdown_instruction: You've officially become a master artist! Create a winter wonderland.
-      grade4_frozen_functions0_markdown_instruction: A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?
+      grade4_frozen_freeplay_markdown_instruction: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
+      grade4_frozen_functions0_markdown_instruction: Kruh je zvláštny tvar. Dokážete zistiť, akým číslom treba nahradiť otázniky, aby sa nakreslil kruh?
       grade4_frozen_functions1_markdown_instruction: Use the new “dreate a circle” `function` to create 10 overlapping circles. Don't forget to `jump` forward between circles.
-      grade4_frozen_functions1a_markdown_instruction: Use the new “Create a circle” block to create 10 overlapping circles. Don't forget to jump forward between circles.
-      grade4_frozen_functions2_markdown_instruction: Now let's create 20 overlapping circles, turning 18 degrees between each circle.
-      grade4_frozen_functions3_markdown_instruction: Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?
-      grade4_frozen_functions4_markdown_instruction: Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?
+      grade4_frozen_functions1a_markdown_instruction: Použite nový blok "Vytvoriť kruh" pre nakreslenie 10 prekrývajúcich sa kruhov. Nezabudnite medzi kruhmi posunúť sa dopredu.
+      grade4_frozen_functions2_markdown_instruction: Teraz si vytvorme 20 prekrývajúcich sa kruhov, medzi každým z nich sa otočíme o 18 stupňov.
+      grade4_frozen_functions3_markdown_instruction: Tu je blok "Vytvoriť kruh", ktorý dokáže kresliť kruhy rôznych veľkostí. Dokážete ho použiť na vytvorenie malého kruhu s veľkosťou 5 a väčšieho kruhu s veľkosťou 10?
+      grade4_frozen_functions4_markdown_instruction: Zložité snehové vzory je možné vytvoriť s pomocou veľmi jednoduchých tvarov. Dokážete vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
       grade4_frozen_nested_loop_diamonds1_markdown_instruction: Let’s use a repeat block to create a rhombus. Like a square, all sides are equal length, but the angles are different. This one has 60 degree and 120 degree angles instead of all 90 degree angles.
-      grade4_frozen_nested_loop_diamonds2_markdown_instruction: Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.
-      grade4_frozen_nested_loop_diamonds3_markdown_instruction: Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one.
+      grade4_frozen_nested_loop_diamonds2_markdown_instruction: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakovať" tak, že zopakujeme rovnobežník 4-krát. Po každom rovnobežníku sa otočíme o 90 stupňov.
+      grade4_frozen_nested_loop_diamonds3_markdown_instruction: Teraz poďme vytvoriť novú vločku pomocou bloku Opakovať tak, že budeme opakovať rovnobežník 10-krát a otočíme se vpravo o 36 stupňov po každom z nich.
       grade4_frozen_nested_loop_rectangle1_markdown_instruction: Hi, I’m Anna of Arendelle! Let’s use a repeat block to create a rectangle. This one is  200 pixels long and 100 pixels tall. All of the corners are 90 degree angles.
-      grade4_frozen_square_markdown_instruction: Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?
-      grade4_frozen_square_loop1_markdown_instruction: Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?
-      grade4_frozen_square_loop2_markdown_instruction: Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.
-      grade4_frozen_square_loop3_markdown_instruction: Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?
+      grade4_frozen_square_markdown_instruction: Ahoj, ja sa volám Anna z Arendelle! Vytvorme štvorec pomocou bloku "opakuj". Takéto riešenie používa menej blokov. Koľkokrát (???) musí blok "opakuj" vykonať vnútorné bloky, aby vznikol štvorec?
+      grade4_frozen_square_loop1_markdown_instruction: Ahoj, ja sa volám Anna z Arendelle! Vytvorme štvorec pomocou bloku "opakuj". Takéto riešenie používa menej blokov. Koľkokrát (???) musí blok "opakuj" vykonať vnútorné bloky, aby vznikol štvorec?
+      grade4_frozen_square_loop2_markdown_instruction: Poďme vytvoriť tri štvorce tak, že sa po každom štvorci otočíme. Uistite sa, že sa otočíte o 120 stupňov pred každým novým štvorcom.
+      grade4_frozen_square_loop3_markdown_instruction: Dokážete vytvoriť vločku pomocou bloku "Opakovať" tak, že nakreslíte 10-krát štvorec a použijete blok "Otočiť" na otočenie o 36 stupňov pred každým štvorcom?
       grade4_playlab_freeplay_markdown_instruction: "It's free play time! Have fun with all the blocks in your tool box.  \n<br/>\n\n<h5>\n<details>\n<summary><b>Need some ideas?</b></summary>\n\\t<br/>\n\\t<h5>\n\\t\\t<ul>\n        \\t<li><strong>Tag</strong> - Have character 2 patrol and use your arrow keys to make character 1 chase until they collide. </li>\n            <li><strong>Whack-a-Sprite</strong> - Have a character constantly pop up at a random location. Award points for clicking the sprite before it disappears. </li>\n            <li><strong>Best Guess</strong> - Make both characters disappear, change location to a random spot, then reappear as a random character.  Click on the first one and get a point...but if you click on the second one you LOSE a point! </li>\n        </ul>\n\\t</h5>\n</details>\n</h5>\n"
       grade4_playlab_test_markdown_instruction: "<h5><b>\nIn our game, how should we score points? \n</b></h5> \n<br/>\n\n1. Add 1 to your `points` variable each time Dog hits Cat with a piece of pie.  <br/>    <br/> \n2. Use the `when actor 2 touches anything` event to trigger an update to your score. You can increment your variable by setting `points = points + 1.`  <br/>   <br/> \n3. Get your score up to 10 to pass the level.\n\n<br/><br/>\n<h4>\n**Note:** Use the right arrow to throw pie!\n</h4>"
       grade4_playlab_test2_markdown_instruction: "Here's a function called `jump` that causes your main character to jump up 100 pixels. \n\nRun the program and use the jump function to collect all of the flags by moving the dog with the arrow keys."
       grade4_review_artist1_markdown_instruction: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)\n\n<br>  \n"
       grade4_review_artist2_markdown_instruction: "This house needs a roof! Draw the triangle.  \n\nHint: all three sides are the same length.\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>"
-      grade4_review_artist3_markdown_instruction: The jump block moves the artist without drawing. Draw the dashed line using both the `jump forward` and `move forward` blocks. Each line is 50 pixels long.
-      grade4_review_bee1_markdown_instruction: Now use the `repeat` block to collect all of the nectar and make all of the honey.
+      grade4_review_artist3_markdown_instruction: Blok so skokom posunie umelca bez toho, aby bolo treba nieco nakreslit. Nakreslite prerušovanú čiaru použitím blokov "poskočiť dopredu" a "posunúť dopredu". Každá čiara má mať dĺžku 50 pixelov.
+      grade4_review_bee1_markdown_instruction: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
       grade4_review_bee3_markdown_instruction: |-
         Such a busy bee!
         
@@ -31273,10 +31317,10 @@ sk:
         
         Help Bee collect all of the nectar and make all of the honey with the fewest blocks possible.
       level 'grade3_Loops_11_markdown_instruction: "The shape of this path is different from the others. \n\nCan you collect all of the nectar using as few blocks as possible?"
-      level 'grade3_Loops_3_markdown_instruction: Use a `repeat` loop to collect all of the nectar.
-      level 'grade3_Loops_4_markdown_instruction: Now use the `repeat` block to collect all of the nectar and make all of the honey.
+      level 'grade3_Loops_3_markdown_instruction: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.
+      level 'grade3_Loops_4_markdown_instruction: A teraz použite blok "opakovať" pre pozbieranie všetkého nektáru a vyrobenie všetkého medu.
       level 'grade3_Loops_5_markdown_instruction: "What a beautiful field of flowers!   \n\nHelp the bee visit each one.\n\nCan you find a way to do it with fewer than 7 blocks?"
-      level 'grade3_Loops_6_markdown_instruction: "How many times can loops help you in this puzzle?  \n\nLoops are your friend! Use a few of them to complete this puzzle with the fewest blocks possible."
+      level 'grade3_Loops_6_markdown_instruction: "Koľkokrát Vám môžu slučky pomôcť v tejto úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie tejto úlohy s čo najmenším počtom blokov."
       level 'grade3_Loops_7_markdown_instruction: |-
         Those flowers look tasty!
         

@@ -2,7 +2,8 @@
   "category": "Behaviors",
   "config": {
     "func": "addBehaviorSimple",
-    "blockText": "{SPRITE} begins {BEHAVIOR}",
+    "blockText": "sprite {SPRITE} begins {BEHAVIOR}",
+    "inline": false,
     "args": [
       {
         "name": "SPRITE",

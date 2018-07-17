@@ -4,8 +4,8 @@ ky:
     block_categories:
       Actions: Иш-аракеттер
       Loops: Циклдер
-      Functions: Functions
-      Color: Color
+      Functions: Функциялар
+      Color: Түс
       Brushes: Brushes
       Math: Математика
       Logic: Логика
@@ -14,8 +14,8 @@ ky:
       String: String
       Image: Image
       Boolean: Boolean
-      Conditionals: Conditionals
-      Events: Events
+      Conditionals: Шартуулар
+      Events: Окуялар
       Games/Score: Games/Score
       Comments: Comments
       Category: Category
@@ -29,9 +29,10 @@ ky:
       Numbers: Numbers
       Input: Input
       Default: Default
+      World: World
       Sprites: Sprites
       Behaviors: Behaviors
-      World: World
+      Advanced: Advanced
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite

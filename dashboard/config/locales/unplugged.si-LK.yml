@@ -186,9 +186,8 @@ si:
           string and beads.
       SongwritingParameters:
         title: පරාමිතීන් සමඟ ගීත ලිවීම
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        desc: Students use the concept of the chorus in a song to learn about defining
+          and calling functions.
       DiceRace:
         title: 'තත්කාලීන ඇල්ගොරිතම: දාදු කැටය විහිදීම'
         desc: This lesson calls out ways we use algorithms in our daily lives. As
@@ -286,7 +285,7 @@ si:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: අපේනුගත ක්‍රියාකාරකම
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: අපේනුගත ක්‍රියාකාරකම
@@ -295,7 +294,7 @@ si:
         title: අපේනුගත ක්‍රියාකාරකම
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: අපේනුගත ක්‍රියාකාරකම
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: අපේනුගත ක්‍රියාකාරකම
@@ -455,44 +454,44 @@ si:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: මගේ රොබෝ මිතුරන්
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
         desc: This lesson calls out ways we use algorithms in our daily lives, using

@@ -48,8 +48,8 @@ export default storybook => {
     .storiesOf('SectionActionDropdown', module)
     .addStoryTable([
       {
-        name: 'Hidden Section',
-        description: 'Should have "Show Section" option',
+        name: 'Archived Section',
+        description: 'Should have "Restore Section" option',
         story: () => {
           const store = createStore(combineReducers({teacherSections}));
           store.dispatch(setSections([sectionDataHidden]));
@@ -64,7 +64,7 @@ export default storybook => {
       },
       {
         name: 'Shown Section',
-        description: 'Should have "Show Section" option',
+        description: 'Should have "Restore Section" option',
         story: () => {
           const store = createStore(combineReducers({teacherSections}));
           store.dispatch(setSections([sectionDataShown]));

@@ -113,7 +113,7 @@ zh-CN:
         Match the puzzles to the blocks: 将右边的程序模块拖放到正确的格子中
         Maze Match One: 迷宫比赛一
       4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1）</h4>"
+        "<h4>1)</h4>": "<h4>1)</h4>"
         "<h4>2)</h4>": "<h4>2)</h4>"
         "<h4>3)</h4>": "<h4>3)</h4>"
         "<h4>4)</h4>": "<h4>4)</h4>"
@@ -145,10 +145,10 @@ zh-CN:
         "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        "<h4>RAMP</h4>": "<h4>匝道</h4>"
-        "<h4>STACK</h4>": "<h4>堆栈</h4>"
-        "<h4>STAMP</h4>": "<h4>邮票</h4>"
-        "<h4>STAR</h4>": "<h4>星</h4>"
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
         Match each program to the word it makes, using the provided group of skills.: 按照左侧程序的顺序思考，并匹配出正确的单词。
         Matching: 匹配
       4-5 maze match 1:
@@ -793,9 +793,9 @@ zh-CN:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
         Multiple Choice: 选择题
-        SET: 设置
-        SOUTH: 南
-        SQUARE: 广场
+        SET: SET
+        SOUTH: SOUTH
+        SQUARE: SQUARE
         Which word is spelled?: 哪个单词被拼出来了？
       K-1 multi 4:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"

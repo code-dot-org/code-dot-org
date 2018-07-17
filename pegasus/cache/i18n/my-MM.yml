@@ -1,4 +1,5 @@
-"my-MM":
+---
+my-MM:
   hour_of_code: Hour of Code
   hello: မဂၤလာပါ ကမာၻၾကီး
   'yes': 'Yes'
@@ -21,8 +22,10 @@
   learn_now: စတင်သင်ကြားပါ
   petition_message: Every student in every school should have the opportunity to learn
     computer science
-  petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
+  petition_sign_message: 'If you agree, sign your name and join our mailing list along
+    with # others.'
+  petition_sign_message_support: 'If you support us, sign your name and join our mailing
+    list along with # others.'
   petition_join_others: 'Join # others'
   name: အမည္
   email: email လိပ္စာ
@@ -39,9 +42,9 @@
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: ကွန်ပျူတာသိပ္ပံ ပညာရေး ရက်သတ္တပတ်
-  csedweek_og_description: December 4-10, 2017. Computer science is foundational for
+  csedweek_og_description: December 3-9, 2018. Computer science is foundational for
     every student to learn.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -90,18 +93,7 @@
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Graduate to the next level
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
@@ -279,28 +271,8 @@
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science.
     http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -666,8 +638,10 @@
   volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
     program here</a>.
   volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
+    if you are a computer science student or software professional. You must be at
+    least 18 years old to sign up as a volunteer. Note that all the fields you fill
+    out in this section will be publicly available to anyone looking at the <a href="/volunteer/local">volunteer
+    map</a>. Fields marked with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_intro_links: Are you a teacher looking for volunteers?
     Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Update your information
@@ -681,10 +655,8 @@
   volunteer_engineer_submission_field_location: Location
   volunteer_engineer_submission_field_location_desc: Your location will be used to
     allow teachers to search for nearby volunteers and will be shown as a pin on the
-    map. If you are concerned about privacy, please use your work/school address or
-    your city only.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
+    map. Please enter just your city or zip code to protect your privacy.
+  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country
   volunteer_engineer_submission_field_location_flexibility: I can volunteer by...
     (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
@@ -980,7 +952,7 @@
   dashboard_students_reset_picture: You may reset a student's secret picture at any
     time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
     picture will be generated for that student to use when they sign in.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Secret Words
   dashboard_students_secret_word: This section uses <b>word</b> as its secret type.  It
     means that each of your students has a pair of secret words used in place of a
     password to sign in.  Students should use the sign in web address given above
@@ -1033,7 +1005,7 @@
   dashboard_teacher_worksheet: teacher worksheet
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
   dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: 'Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
@@ -1307,7 +1279,7 @@
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Accelerated Course
-  algebra_name: CS in Algebra
+  algebra_name: CS in Algebra Full Course
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
@@ -1326,10 +1298,10 @@
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: CS Discoveries
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: CS Principles
+  csp17_category_name: CS Principles ('17-'18)
   csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
@@ -1395,12 +1367,24 @@
   course2_gradelevel: Ages 6-18
   course3_gradelevel: Ages 8-18
   course4_gradelevel: Ages 10-18
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
-  coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
+  coursea_gradelevel: Ages 4-7
+  courseb_gradelevel: Ages 5-8
+  coursec_gradelevel: Ages 6-10
+  coursed_gradelevel: Ages 7-11
+  coursee_gradelevel: Ages 8-12
+  coursef_gradelevel: Ages 9-13
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Ages 7-11
+  coursee-2017_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Ages 7-11
+  coursee-2018_gradelevel: Ages 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
@@ -1530,12 +1514,41 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn

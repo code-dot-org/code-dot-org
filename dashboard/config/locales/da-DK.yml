@@ -25,7 +25,8 @@ da:
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-mail
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: brugernavn
         password: Adgangskode
         password_confirmation: Bekræft adgangskode
@@ -68,7 +69,7 @@ da:
   courses: kurser
   courses_page:
     title_student: Lære om Code Studio
-    title_teacher: Teach with Code Studio
+    title_teacher: Teach Computer Science
   unplugged_activity: Unplugged aktivitet
   of: af
   more: MERE
@@ -103,6 +104,8 @@ da:
       have to sign in by typing your password below.
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
       sign in through your Clever Portal instead.
+    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}.
+      Please try again.
   signup_form:
     student_count: "%{count} elever har allerede tilmeldt sig."
     teacher_count: "%{count} lærere har allerede tilmeldt sig."
@@ -112,10 +115,10 @@ da:
     hoc_already_signed_up_heading: Get started without logging in
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your
+      classroom and share the link with them.<br/><br/>If you enjoyed the Hour of
+      Code and want to go further, you can set up a password and create a Code Studio
+      account below to enroll your students in any of our <a href="%{educate_url}">longer
       courses</a>.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
@@ -147,13 +150,12 @@ da:
     agree_us_website: Jeg accepterer at bruge en hjemmeside baseret i USA.
     my_data_to_us: Data fra min brug af dette websted kan sendes til og gemmes eller
       behandles i USA.
-    student_terms: Jeg accepterer Code.org <a href='http://code.org/tos'>Servicevilkår</a>.
-      Hvis jeg er under 13 år, bekræfte jeg ved at indsende denne formular, at jeg
-      har mine forældre eller værges tilladelse til at benytte Code.org. <br/>For
-      brugere under 13, er e-mail-adresser ikke gemt i en form, der tillader os at
-      kontakte dem.
-    teacher_terms: Jeg accepterer <a href='http://code.org/tos'> Servicevilkårene</a>
-      for code.org.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
+    teacher_terms: I agree to be bound by the Code.org terms of service. For more
+      information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
     user_type_button: Update Account Type
@@ -165,7 +167,7 @@ da:
     error: Der opstod en fejl.
     email_preference_question: Kan vi e-maile dig om opdateringer til vores kurser,
       lokale muligheder eller andre nyheder om computervidenskab?
-    email_preference_privacy: "(Se vores privatlivspolitik)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ja
     email_preference_no: Nej
     email_preference_required: You must specify an email preference.
@@ -299,9 +301,10 @@ da:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Jeg har afsluttet min Hour of Code
@@ -309,7 +312,7 @@ da:
       free_play:
         playlab: Lav en App
         artist: Tegn noget
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Lav en App
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -358,12 +361,12 @@ da:
       settings: Min konto
       logout: Log ud
       signin: Log ind
-      signup: Tilmeld
+      signup: Create an account
       already_registered: Allerede registreret?
       pair_programming: Par programmering
       team: Team
-      driver: Driver
-      navigator: Navigator
+      driver: Logged in
+      navigator: Partner
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt
@@ -406,6 +409,7 @@ da:
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
     email_confirm_wrong_email: "(Forkert e-mail?)"
     email_resend_confirm: Gensend bekræftelsesmail
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
     current_password_hint: "(vi har brug for din nuværende adgangskode til at bekræfte
       dine ændringer)"
@@ -439,6 +443,7 @@ da:
     enter_parent_email: Enter your parent or guardian's email address (for password
       recovery)
     update: Update Account
+    account_successfully_updated: Account successfully updated.
   user_level:
     completed: Fuldført
     tried: Forsøgt
@@ -613,8 +618,8 @@ da:
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: You cannot move these students because they are
+      already in the new section.
     third_party_login: You cannot move students to a section that is synced with a
       third party tool.
   share:
@@ -774,7 +779,7 @@ da:
       title: Galleri
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Alder 13+
@@ -862,7 +867,7 @@ da:
     support: Få hjælp
     support_url: Support.Code.org
     help_resources: Help and Resources
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -883,7 +888,7 @@ da:
     wrong_title: Tak skal du have
     wrong_body: Thank you for submitting answers.
     correct_title: Tak skal du have
-    correct_body: Thank you for submitting an answer
+    correct_body: Thank you for submitting answers.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -961,8 +966,8 @@ da:
     tos: Termer
     privacy: Privatlivspolitik
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accept
     print: Udskriv
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1125,7 +1130,7 @@ da:
   flex_category:
     required: Oversigt
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1146,8 +1151,8 @@ da:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1235,7 +1240,7 @@ da:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -1250,6 +1255,10 @@ da:
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  stage_extras_teacher_message: You have Lesson Extras turned off for some of your
+    sections. Your students won’t see this page unless you turn them on. You can turn
+    Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher
+    Dashboard</a>.
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
@@ -1258,7 +1267,7 @@ da:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:
@@ -1308,6 +1317,127 @@ da:
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+    form_labels:
+      first_name: First Name
+      first_name_preferred: Preferred First Name
+      last_name: Last Name
+      email: E-mail
+      email_alternate: Alternate Email
+      gender: Gender Identity
+      school_name: Skolens navn
+      school_city: School City
+      school_country: Skolens land
+      ages: Which age(s) do you teach this year?
+      subjects: Which subject(s) do you teach this year?
+      resources: Which of the following CS education resources do you use?
+      robotics: Which of the following robotics resources do you use?
+      workshop_organizer: Workshop Organizer
+      workshop_facilitator: Workshop Facilitator
+      workshop_course: Workshop Course
+      email_opt_in: I agree that Code.org can share my contact information and aggregate
+        data about my classes with the Code.org International Partner in my country.
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
+        share information on how you use Code.org and the Professional Learning resources
+        with the Code.org International Partner in your country, school district,
+        and facilitators. We will share your contact information, which courses/units
+        you are using and aggregate data about your classes with these partners. This
+        includes the number of students in your classes, the demographic breakdown
+        of your classroom, and the name of your school and district. We will not share
+        any information about individual students with our partners: all student information
+        will be de-identified and aggregated. Our International Partners and facilitators
+        are contractually obliged to treat this information with the same level of
+        confidentiality as Code.org.'
+    form_entries:
+      gender:
+        male: Mand
+        female: Kvinde
+        non_binary: Non-binary
+        not_listed: Preferred term not listed
+        none: Foretrækker ikke at svare
+      school_country:
+        canada: Canada
+        chile: Chile
+        israel: Israel
+        malaysia: Malaysia
+        mexico: Mexico
+        thailand: Thailand
+      ages:
+        ages_under_6: "< 6 years old"
+        ages_7_8: 7-8 years old
+        ages_9_10: 9-10 years old
+        ages_11_12: 11-12 years old
+        ages_13_14: 13-14 years old
+        ages_15_16: 15-16 years old
+        ages_17_18: 17-18 years old
+        ages_19_over: 19+ years old
+      subjects:
+        cs: Datalogi
+        ict: ICT
+        math: Matematik
+        science: Videnskab
+        history: History / Social Studies
+        la: Language Arts
+        efl: English as a Foreign Language
+        music: Music
+        art: Art
+        other: 'Other:'
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        kodable: Kodable
+        lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Other:'
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Other:'
+      workshop_course:
+        csf_af: CS Fundamentals (Courses A-F)
+        csf_express: CS Fundamentals (Pre-Express or Express)
+      email_opt_in:
+        opt_in_yes: Ja
+        opt_in_no: Nej
+    international_opt_in:
+      title: Workshop Attendance for non-U.S. Teachers
+      intro: Thank you for taking time to receive training on Code.org’s curriculum.
+        Our mission to bring computer science education opportunities to all children
+        in all schools around the world would not be possible without you.
+      instructions: Please fill out the form below to indicate that 1) you attended
+        a training workshop run by one of Code.org’s international partners, and 2)
+        you agree to share your information with our international partner in your
+        country so that we can help to support your journey as a computer science
+        teacher.
+      thanks: Thank you for submitting! We look forward to supporting you as you get
+        to know Code.org’s curriculum and tools. Please keep sharing your questions
+        and feedback with us by writing to us at support@code.org or by posting on
+        the teacher forum!
+    logged_out:
+      heading: Thanks for your interest in the Professional Learning Program!
+      body: To get started, you first need to be logged into your Code.org account.
+        If you’d like more information about the program before you start your application,
+        please check out the <a href="%{url}">Professional Learning Program overview</a>.
+    not_teacher:
+      body: Thanks for your interest in Code.org’s Professional Learning Program!
+        You’re currently signed into a student account. Please either <a href="%{create_teacher}">create
+        a teacher account</a> or <a href="%{user_settings}">go to your user settings</a>
+        to upgrade your account from student to teacher.
+      more: If you’d like more information about the program before you start your
+        application, please check out the <a href="%{pl_overview}">Professional Learning
+        Program overview</a>.
+    no_teacher_email:
+      body: Your account doesn’t have an email address. Please <a href="%{user_registration}">visit
+        your account settings</a> to add your email address before completing this
+        form.
   courses_category: Full Courses
   cookie_banner:
     message: By continuing to browse our site or clicking "I agree," you agree to

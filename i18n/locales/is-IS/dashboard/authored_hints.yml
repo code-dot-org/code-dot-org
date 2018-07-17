@@ -310,6 +310,7 @@ is:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Hvert atriði mun þurfa sína eigin `meðan` lykkju.
+      AB_debug_Laurel1_authored_hint: { }
       AppLab Intro 3 - Change Screen Color_authored_hint: { }
       AppLab Intro 4 - Change Screen Color_authored_hint: { }
       AppLab Intro 5 - Change Screen Color_authored_hint: { }
@@ -2790,24 +2791,28 @@ is:
       courseA_harvester_loops10_authored_hint: { }
       courseA_harvester_loops11_authored_hint: { }
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: 'Kóðinn þinn ætti að hafa **fjóra** `fara í vestur` kubba og **fjóra** `tína maís` kubba. '
+        courseA_harvester_loops2_a: "Kóðinn þinn ætti að hafa **fjóra** `fara í vestur` kubba og **fjóra** `tína maís` kubba. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Svona `endurtaka` kubbur getur bjargað málunum!
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">4</title>
           </block></xml>
-        courseA_harvester_loops3_b: Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana.
+        courseA_harvester_loops3_b: "Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana."
       courseA_harvester_loops4_authored_hint:
         courseA_harvester_loops4_a: Ekki hika við að ýta á `Keyra` til að sjá hvað gerist!
         courseA_harvester_loops4_b: How many pieces of corn are there? How many times does your code repeat?
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: Ef þú festist er ráð að reyna að skipta þrautinni í það sem gerist á undan horninu og það sem gerist eftir hornið.
-        courseA_harvester_loops5_b: Your final code will have **one** `repeat` loop, **one** `move South` block, and **one** `move East` block.
+        courseA_harvester_loops5_b: |-
+          Your final code will have **one** `repeat`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml> loop, **one** `move South`   <xml><block type="maze_moveSouth" limit="1"/></xml> block, and **one** `move East`   <xml><block type="maze_moveEast" limit="1"/> </xml>block.
         courseA_harvester_loops5_c: Use this path to pick all the corn!
       courseA_harvester_loops5a_authored_hint:
-        courseA_harvester_loops5a_a: Þú þarft að nota tvær `endurtaka` lykkjur í röð.
-        courseA_harvester_loops5a_b: One loop will repeat `move South`, and the other will repeat `move East`.
+        courseA_harvester_loops5a_a: |-
+          Þú þarft að nota tvær `endurtaka` lykkjur í röð.
+        courseA_harvester_loops5a_b: One loop will repeat `move South`<xml><block type="maze_moveSouth" limit="1"/></xml>, and the other will repeat `move East` <xml><block type="maze_moveEast" limit="1"/></xml>
         courseA_harvester_loops5a_c: Use this path to move one way, and then the other.
       courseA_harvester_loops5b_authored_hint:
         courseA_harvester_loops5b_a: Press `Run` and see what happens!
@@ -2817,7 +2822,10 @@ is:
         courseA_harvester_loops6_a: Ef þú festist, er ráð að skrifa þrepin á pappír og leita að endurteknum mynstrum.
         courseA_harvester_loops6_b: This is the path you should take to pick all the corn.
       courseA_harvester_loops7_authored_hint:
-        courseA_harvester_loops7_a: You will need two `repeat` loops after each other!
+        courseA_harvester_loops7_a: |-
+          You will need two `repeat` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>loops after each other!
         courseA_harvester_loops7_b: Use two loops to follow this path.
       courseA_harvester_loops8_authored_hint: { }
       courseA_harvester_loops9_authored_hint:
@@ -2847,7 +2855,7 @@ is:
           Use this block to pick corn once the harvester gets to it.
           
           <xml>
-          <block type="maze_nectar"/>
+          <block type="harvester_corn"/>
           </xml>
       courseA_harvester_seq2_authored_hint:
         courseA_harvester_seq2_a: Don't forget to use <xml><block type="harvester_corn"/></xml> to pick the corn!
@@ -2910,6 +2918,25 @@ is:
           <block type="maze_moveEast">
           <next>
           <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseA_maze_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest"/>
           </next>
           </block>
           </next>
@@ -3065,7 +3092,7 @@ is:
       courseA_maze_seq_challenge2_2018_authored_hint:
         courseA_maze_seq_challenge2_a: Prófaðu að telja reitina með puttanum. Mundu að sleppa reitnum þar sem þú byrjar!
       courseA_playLab_events2_authored_hint:
-        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_a: Look for a block that makes the dog say something.
         courseA_playLab_events2_b: |-
           Þetta er kóðinn sem þú þarft til að ljúka þessari þraut:
           
@@ -3353,6 +3380,25 @@ is:
           </next>
           </block>
           </xml>
+      courseB_Scrat_ramp3b_2018_authored_hint:
+        '1': |
+          Your code should look like this:
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -3400,7 +3446,10 @@ is:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
         courseB_artist_loops3_b: Listamaðurinn þarf að fara í Suður til að teikna þessa línu.
       courseB_artist_loops3_2018_authored_hint:
-        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+        courseB_artist_loops3_a: |-
+          Remember to use a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop for better code!
         courseB_artist_loops3_b: Listamaðurinn þarf að fara í Suður til að teikna þessa línu.
       courseB_artist_loops4_authored_hint:
         courseB_artist_loops4_a: Með hoppa kubbnum getur þú farið áfram án þessa að teikna línu.
@@ -3413,7 +3462,10 @@ is:
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops5_2018_authored_hint:
-        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?
+        courseB_artist_loops5_a: |-
+          Drag out a `repeat` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?
       courseB_artist_loops6_authored_hint:
         courseB_artist_loops6_b: Prófaðu að skrifa hreyfingarnar á blað og leita svo að endurtekningum.
       courseB_artist_loops6_2018_authored_hint:
@@ -3492,7 +3544,8 @@ is:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Try using the step button to figure out where things go wrong.
         courseB_collector_loops4_b: Þú getur stjórnað því hve langt Laurel færist með því að breyta því hve oft lykkjan keyrir.
-        courseB_collector_loops4_c: Lára þarf að ganga niður og safna fjársjóðnum eftir að hún er búin með `endurtaka` lykkjuna!
+        courseB_collector_loops4_c: |-
+          Lára þarf að ganga niður og safna fjársjóðnum eftir að hún er búin með `endurtaka` lykkjuna!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Use more than one loop to get the job done.
         courseB_collector_loops5_b: Prófaðu að keyra kóðann nokkrum sinnum til að sjá hvað gerist.
@@ -3507,7 +3560,8 @@ is:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Can't figure out where things start going wrong? Use the "Step" button to run through your program one block at a time.
         courseB_collector_loops6_b: Þú getur breytt hversu oft endurtekningarlykkjan keyrir með því að smella á "3" og velja annan fjölda endurtekninga.
-        courseB_collector_loops6_c: Þú þarft að nota þrjár mismunandi `endurtaka` lykkjur til að leysa þessa þraut.
+        courseB_collector_loops6_c: |-
+          Þú þarft að nota þrjár mismunandi `endurtaka` lykkjur til að leysa þessa þraut.
         courseB_collector_loops6_d: Ef þú áttar þig ekki á þessu, er ráð að skipta þrautinni í þrjá hluta.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.
@@ -3820,7 +3874,8 @@ is:
           <xml><block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">5</title>
           </block></xml>
-        courseB_iceage_loops3_b: Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana.
+        courseB_iceage_loops3_b: |-
+          Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana.
       courseB_iceage_loops4_authored_hint:
         courseB_iceage_loops4_a: Try writing down the steps Scrat would take to get to the acorn. Do you see a pattern?
         courseB_iceage_loops4_b: Don't be afraid to run your code and see what happens!
@@ -4408,7 +4463,8 @@ is:
       courseB_starWars_prog9_2018_authored_hint:
         courseB_starWars_prog9_a: Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.
         courseB_starWars_prog9_b: Það eru margar leiðir til að leysa þessa þraut.
-        courseB_starWars_prog9_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
+        courseB_starWars_prog9_c: |-
+          Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
       courseC_PlayLab_embed_events9_authored_hint: { }
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
@@ -5238,6 +5294,7 @@ is:
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging5_2018_authored_hint:
         courseC_maze_debugging5_a: "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong."
+        courseC_maze_debugging5_c: You can change the direction of the turn block by clicking on the dropdown.
         courseC_maze_debugging5_b: Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
@@ -7749,7 +7806,7 @@ is:
         courseE_bee_concept2_c: Í hvaða átt ætti býflugan að snúa eftir hverja slóð?
       courseE_bee_concept2_2018_authored_hint:
         courseE_bee_concept2_a: Væri gagnlegt að nota `meðan` lykkju hér?
-        courseE_bee_concept2_d: Þú getur jafnvel athugað tóma reiti til að kanna hvort hunang sé > 0.
+        courseE_bee_concept2_d: 'Þú getur jafnvel athugað tóma reiti til að kanna hvort hunang sé > 0.'
         courseE_bee_concept2_b: Þú getur notað `meðan` lykkjur til að fara á enda hverrar slóðar og til að búa til allt hunang í hverjum reit.
         courseE_bee_concept2_c: Í hvaða átt ætti býflugan að snúa eftir hverja slóð?
       courseE_bee_concept3_authored_hint:
@@ -7976,7 +8033,9 @@ is:
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: Hvaða röð er oft endurtekin í þessu forriti? Getur þú dregið þá kubba inn í fallið?
         courseE_farmer_functions3c_b: Ekki gleyma að kalla á fallið á þeim stöðum í aðalforritinu sem kubbar voru fjarlægðir úr.
-      courseE_farmer_functions3c1_2018_authored_hint: { }
+      courseE_farmer_functions3c1_2018_authored_hint:
+        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path` function three times to solve this puzzle.
+        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around the corners?
       courseE_farmer_functions3c_2018_authored_hint: { }
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Drag all of the code out of your `repeat` loop and into the `go get pumpkins` function.
@@ -8010,7 +8069,9 @@ is:
         courseE_farmer_functions6c_b: Mundi `ef/annars` kubbur hjálpa við að athuga hvort það sé kál í reit?
         courseE_farmer_functions6c_c: Ekki gleyma að halda áfram að athuga með maís!
       courseE_farmer_functions7_authored_hint: { }
-      courseE_farmer_functions7a1_2018_authored_hint: { }
+      courseE_farmer_functions7a1_2018_authored_hint:
+        courseE_farmer_functions7a1_2018_a: Create your function under the `functions` section in the toolbox.
+        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: Þú þarft ekki fall hér, en þú getur búið eitt til ef það er gagnlegt!
         courseE_farmer_functions7b_b: Notaðu `ef/annars` yrðingu til að athuga með uppskeru og snúðu svo eftir því hvaða uppskera það var.
@@ -8021,7 +8082,9 @@ is:
         courseE_farmer_functions7b_c: Með `endurtaka þar til grasker` lykkju gætir þú komist í gegnum völundarhúsið.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8a1_2018_authored_hint: { }
+      courseE_farmer_functions8a1_2018_authored_hint:
+        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same function you made in the last puzzle.
+        courseE_farmer_functions8a1_2018b: After the function runs the first time, you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Prófaðu að keyra gefna kóðann til að sjá hvað hann gerir. Hvað þarftu eftir þetta?
         courseE_farmer_functions8b_b: Dragðu alla upphafskubbana inn í fall svo að þú getir notað þá oftar en einu sinni.
@@ -8032,7 +8095,10 @@ is:
         courseE_farmer_functions8b_c: Hve oft þarft þú að kalla á fallið?
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions9a1_2018_authored_hint: { }
+      courseE_farmer_functions9a1_2018_authored_hint:
+        courseE_farmer_functions9a1_2018a: You'll use the same function that you made in the last couple of puzzles.
+        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle to solve the first half of this puzzle.
+        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move forward` to get to the last crop of lettuce before you can call your function again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: Getur þú notað faldaðar `ef` og `ef/annars` yrðingar til komast eftir slóðinni?
         courseE_farmer_functions9b_b: Notaðu `endurtaka þar til grasker` til að fara um allar slóðirnar.
@@ -8530,7 +8596,7 @@ is:
         courseF_artist_for1_a: |-
           Can you draw something like this:
           
-          ![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
+          ![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.

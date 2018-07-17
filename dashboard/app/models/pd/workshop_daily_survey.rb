@@ -10,6 +10,8 @@
 #  pd_workshop_id :integer          not null
 #  answers        :text(65535)
 #  day            :integer          not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 # Indexes
 #
@@ -39,7 +41,14 @@ module Pd
       }
     end
 
-    before_validation :set_day_from_form_id, if: -> {day.nil?}
+    # @override
+    def map_answers_to_attributes
+      super
+
+      # Make sure we have a day, in case the form doesn't provide it
+      set_day_from_form_id if day.nil?
+    end
+
     def set_day_from_form_id
       self.day = self.class.get_day_for_form_id(form_id)
     end
@@ -71,15 +80,8 @@ module Pd
       end
     end
 
-    # @override
-    def self.get_key_attributes(form_id, processed_answers)
-      # Inspect the same fields as the uniqueness validation: user, workshop, day
-      # Some responses don't have a day. In that case derive it from the form id
-      {
-        user_id: processed_answers['userId'],
-        pd_workshop_id: processed_answers['workshopId'],
-        day: processed_answers['day'] || get_day_for_form_id(form_id)
-      }
+    def self.unique_attributes
+      [:user_id, :pd_workshop_id, :day]
     end
   end
 end

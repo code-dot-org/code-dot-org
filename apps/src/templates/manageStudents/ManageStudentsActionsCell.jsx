@@ -9,7 +9,10 @@ import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import i18n from '@cdo/locale';
+import experiments from '../../util/experiments';
+import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '../../lib/util/urlHelpers';
 
 const styles = {
   xIcon: {
@@ -22,13 +25,16 @@ const styles = {
 
 class ManageStudentActionsCell extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired, // the student's user id
     sectionId: PropTypes.number,
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
     rowType: PropTypes.oneOf(Object.values(RowType)),
     loginType: PropTypes.string,
+    studentName: PropTypes.string.isRequired,
+    hasEverSignedIn: PropTypes.bool,
+    dependsOnThisSectionForLogin: PropTypes.bool,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -93,6 +99,7 @@ class ManageStudentActionsCell extends Component {
   render() {
     const {rowType, isEditing, loginType} = this.props;
     const canDelete = [SectionLoginType.word, SectionLoginType.picture, SectionLoginType.email].includes(loginType);
+    const accountDeletionNewFlow = experiments.isEnabled(experiments.ACCOUNT_DELETION_NEW_FLOW);
     return (
       <div>
         {!isEditing &&
@@ -142,34 +149,47 @@ class ManageStudentActionsCell extends Component {
             />
           </div>
         }
-        <BaseDialog
-          useUpdatedStyles
-          uncloseable
-          isOpen={this.state.deleting}
-          style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
-        >
-          <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
-          <div>
-            {i18n.removeStudentConfirm1() + ' '}
-            <a target="_blank" href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
-              {i18n.removeStudentConfirm2()}
-            </a>
-            {' ' + i18n.removeStudentConfirm3()}
-          </div>
-          <DialogFooter>
-            <Button
-              text={i18n.dialogCancel()}
-              onClick={this.onCancelDelete}
-              color={Button.ButtonColor.gray}
-            />
-            <Button
-              text={i18n.removeStudent()}
-              onClick={this.onConfirmDelete}
-              color={Button.ButtonColor.red}
-              disabled={this.state.requestInProgress}
-            />
-          </DialogFooter>
-        </BaseDialog>
+        {accountDeletionNewFlow &&
+          <ConfirmRemoveStudentDialog
+            isOpen={this.state.deleting}
+            disabled={this.state.requestInProgress}
+            studentName={this.props.studentName}
+            hasEverSignedIn={this.props.hasEverSignedIn}
+            dependsOnThisSectionForLogin={this.props.dependsOnThisSectionForLogin}
+            onConfirm={this.onConfirmDelete}
+            onCancel={this.onCancelDelete}
+          />
+        }
+        {!accountDeletionNewFlow &&
+          <BaseDialog
+            useUpdatedStyles
+            uncloseable
+            isOpen={this.state.deleting}
+            style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
+          >
+            <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
+            <div>
+              {i18n.removeStudentConfirm1() + ' '}
+              <a target="_blank" href={ADD_A_PERSONAL_LOGIN_HELP_URL}>
+                {i18n.removeStudentConfirm2()}
+              </a>
+              {' ' + i18n.removeStudentConfirm3()}
+            </div>
+            <DialogFooter>
+              <Button
+                text={i18n.dialogCancel()}
+                onClick={this.onCancelDelete}
+                color={Button.ButtonColor.gray}
+              />
+              <Button
+                text={i18n.removeStudent()}
+                onClick={this.onConfirmDelete}
+                color={Button.ButtonColor.red}
+                disabled={this.state.requestInProgress}
+              />
+            </DialogFooter>
+          </BaseDialog>
+        }
       </div>
     );
   }

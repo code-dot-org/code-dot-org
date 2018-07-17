@@ -25,16 +25,16 @@ ka:
         Artist5: მხატვარი 5
         Unplug11: შედეგები
         MazeEC: ლაბირინთი
-        Bounce: ხტუნვა
+        Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: ფაზლი
         MazeStep: ლაბირინთი ნაბიჯ-ნაბიჯ
         Wordsearch: ძებნა სიტვის მიხედვით
-        Webapp: აპლიკაციების ლაბორატორია
+        Webapp: App Lab
         ArtistEC: მხატვარი
         TextMatch: ტექსტების შედარება
         StudioEC: თამაშების ლაბი
-        Applab: აპლიკაციების ლაბორატორია
+        Applab: App Lab
         NetSim: ინტერნეტ-სიმულატორი
         Custom: მხატვარი
         CustomStudio: თამაშების ლაბი
@@ -553,7 +553,7 @@ ka:
         C3_farmer_while: '"სანამ" ციკლები'
         C3_bee_nested_loops: ჩასმული ციკლები
         C3_bee_debugging: ფუტკრის ბაგების გამოსწორება
-        C3_bounce: ხტუნვა
+        C3_bounce: Bounce
         C3_playlab_create_game: თამაშების ლაბი - შექმენით თამაში
         C3_computational_thinking: გამოთვლითი აზროვნება
         C3_dice_race: კამათლების შეჯიბრი
@@ -766,6 +766,11 @@ ka:
         CSF_loops_AB: ციკლები
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

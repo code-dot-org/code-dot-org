@@ -122,8 +122,8 @@ it:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
-        title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
+        title: Crowdsourcing (Intelligenza Collettiva)
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       DigitalCitizenship:
         title: Cittadinanza Digitale
         desc: Gli studenti esplorano la differenza tra informazioni private e informazioni personali, per distinguere cosa si può condividere su Internet in modo sicuro e cosa no.
@@ -177,10 +177,10 @@ it:
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       courseD_unplugged_digitalCitizenship:
         title: Attività Tradizionale
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
         title: 'Cittadinanza Digitale: Dati Personali'
-        desc: Today you will learn the difference between private and personal information!
+        desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
@@ -227,7 +227,7 @@ it:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente da zeri e uni, nelle precedenti lezioni gli studenti hanno visto che le informazioni possono essere rappresentate in una varietà di opzioni binarie.  Questa lezione sviluppa ulteriormente questo concetto illustrando come un computer possa memorizzare informazioni ancora più complesse (ad esempio immagini e colori) in formato binario.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo contesto, gli studenti devono identificare e scrivere l'algoritmo per un gioco con i dadi.
       courseE_unplugged_songwritingParameters:
         title: Composizione di Canzoni - Parametri
@@ -236,8 +236,8 @@ it:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
-        title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
+        title: Crowdsourcing (Intelligenza Collettiva)
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       courseE_unplugged_songwriting:
         title: Composizione di Canzoni - Parametri
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
@@ -263,8 +263,8 @@ it:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: I Miei Amici Robotici
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
         title:
         desc:
@@ -321,7 +321,7 @@ it:
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
         title: Attività Tradizionale
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.

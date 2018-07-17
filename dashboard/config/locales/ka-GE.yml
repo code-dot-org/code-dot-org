@@ -104,6 +104,8 @@ ka:
       ქვემოთ პაროლის შეყვანით თქვენ შეძლებთ ანგარიშში შესვლა.
     use_clever: ბოდიშ გიხდით, მაგრამ თქვენი Code.org-ის ანგარიში არ არის დაკავშირებული
       თქვენს %{provider}-თან. გთხოვთ შეხვიდეთ Clever-ის პორტალიდან.
+    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}.
+      Please try again.
   signup_form:
     student_count: უკვე დარეგისტრირდა %{count} სტუდენტი.
     teacher_count: უკვე დარეგისტრირდა %{count} მასწავლებელი.
@@ -167,7 +169,7 @@ ka:
     accept_terms: ანგარიშის შესაქმნელად უნდა დაეთანხმოთ
     error: მოხდა შეცდომა.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: დიახ
     email_preference_no: არა
@@ -310,7 +312,7 @@ ka:
       free_play:
         playlab: აპლიკაციის შექმნა თამაშების ლაბორატორიაში
         artist: დახატეთ რამე
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში
         gamelab: შექმენით "კომპიუტერული თამაშების ლაბორატორიის" პროექტი
         weblab: შექმენით "ვებ ლაბორატორიის (ბეტა)" პროექტი
@@ -407,6 +409,7 @@ ka:
     email_confirm_needed_required: 'თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:'
     email_confirm_wrong_email: "(ელ. ფოსტის მისამართი არასწორია?)"
     email_resend_confirm: დადასტურების ინსტრუქციების თავიდან გაგზავნა
+    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(დატოვეთ ცარიელი, თუ შეცვლა არ გინდათ)"
     current_password_hint: "(ცვლილებების შესანახად შეიყვანეთ თქვენი მიმდინარე პაროლი)"
     delete: ანგარიშის წაშლა
@@ -443,6 +446,7 @@ ka:
     enter_parent_email: შეიყვანეთ თქვენი მშობლის ან მეურვის იმეილის მისამართი (პაროლის
       აღსადგენად)
     update: Update Account
+    account_successfully_updated: Account successfully updated.
   user_level:
     completed: დასრულებულია
     tried: უკვე ნაცადია
@@ -769,7 +773,7 @@ ka:
       unused: გამოუყენებელი დონეები
   upsell:
     applab:
-      title: აპლიკაციების ლაბორატორია
+      title: App Lab
       body: აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების
         შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით
         შემდეგ კი გაუზიარეთ იგი სხვებს.
@@ -1263,7 +1267,7 @@ ka:
     download_in_Turkish: 'გადმოიწერე თურქულად:'
     download_in_Ukrainian: 'გადმოიწერე უკრაინულად:'
     download_in_Vietnamese: 'გადმოიწერე ვიეტნამურად:'
-    windows: უინდოუსი
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -1278,6 +1282,10 @@ ka:
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  stage_extras_teacher_message: You have Lesson Extras turned off for some of your
+    sections. Your students won’t see this page unless you turn them on. You can turn
+    Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher
+    Dashboard</a>.
   locked_stage: ამ დონის მასალა არ ჩანს, რადგან ეს დონე ახლა დახურულია. თქვენი მასწავლებელი
     გააღებს ამ დონეს, როცა მასზე მუშაობის დრო მოვა ან როცა თქვენს პასუხებს შეამოწმებს.
   hidden_stage: თქვენი მასწავლებელი არ გელოდათ აქ. გთხოვთ, ჰკითხეთ მას, რომელ გაკვეთილზე
@@ -1335,6 +1343,127 @@ ka:
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+    form_labels:
+      first_name: First Name
+      first_name_preferred: Preferred First Name
+      last_name: Last Name
+      email: ელექტრონული ფოსტა
+      email_alternate: Alternate Email
+      gender: Gender Identity
+      school_name: სკოლის სახელი
+      school_city: სკოლის ქალაქი
+      school_country: სკოლის ქვეყანა
+      ages: Which age(s) do you teach this year?
+      subjects: Which subject(s) do you teach this year?
+      resources: Which of the following CS education resources do you use?
+      robotics: Which of the following robotics resources do you use?
+      workshop_organizer: Workshop Organizer
+      workshop_facilitator: Workshop Facilitator
+      workshop_course: Workshop Course
+      email_opt_in: I agree that Code.org can share my contact information and aggregate
+        data about my classes with the Code.org International Partner in my country.
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
+        share information on how you use Code.org and the Professional Learning resources
+        with the Code.org International Partner in your country, school district,
+        and facilitators. We will share your contact information, which courses/units
+        you are using and aggregate data about your classes with these partners. This
+        includes the number of students in your classes, the demographic breakdown
+        of your classroom, and the name of your school and district. We will not share
+        any information about individual students with our partners: all student information
+        will be de-identified and aggregated. Our International Partners and facilitators
+        are contractually obliged to treat this information with the same level of
+        confidentiality as Code.org.'
+    form_entries:
+      gender:
+        male: მამრობითი
+        female: მდედრობითი
+        non_binary: Non-binary
+        not_listed: Preferred term not listed
+        none: პასუხისგან თავის შეკავება
+      school_country:
+        canada: Canada
+        chile: Chile
+        israel: Israel
+        malaysia: Malaysia
+        mexico: Mexico
+        thailand: Thailand
+      ages:
+        ages_under_6: "< 6 years old"
+        ages_7_8: 7-8 years old
+        ages_9_10: 9-10 years old
+        ages_11_12: 11-12 years old
+        ages_13_14: 13-14 years old
+        ages_15_16: 15-16 years old
+        ages_17_18: 17-18 years old
+        ages_19_over: 19+ years old
+      subjects:
+        cs: ინფორმატიკა
+        ict: ICT
+        math: მათემატიკა
+        science: მეცნიერება
+        history: History / Social Studies
+        la: ენების ხელოვნება
+        efl: English as a Foreign Language
+        music: Music
+        art: Art
+        other: 'Other:'
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        kodable: Kodable
+        lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Other:'
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Other:'
+      workshop_course:
+        csf_af: CS Fundamentals (Courses A-F)
+        csf_express: CS Fundamentals (Pre-Express or Express)
+      email_opt_in:
+        opt_in_yes: დიახ
+        opt_in_no: არა
+    international_opt_in:
+      title: Workshop Attendance for non-U.S. Teachers
+      intro: Thank you for taking time to receive training on Code.org’s curriculum.
+        Our mission to bring computer science education opportunities to all children
+        in all schools around the world would not be possible without you.
+      instructions: Please fill out the form below to indicate that 1) you attended
+        a training workshop run by one of Code.org’s international partners, and 2)
+        you agree to share your information with our international partner in your
+        country so that we can help to support your journey as a computer science
+        teacher.
+      thanks: Thank you for submitting! We look forward to supporting you as you get
+        to know Code.org’s curriculum and tools. Please keep sharing your questions
+        and feedback with us by writing to us at support@code.org or by posting on
+        the teacher forum!
+    logged_out:
+      heading: Thanks for your interest in the Professional Learning Program!
+      body: To get started, you first need to be logged into your Code.org account.
+        If you’d like more information about the program before you start your application,
+        please check out the <a href="%{url}">Professional Learning Program overview</a>.
+    not_teacher:
+      body: Thanks for your interest in Code.org’s Professional Learning Program!
+        You’re currently signed into a student account. Please either <a href="%{create_teacher}">create
+        a teacher account</a> or <a href="%{user_settings}">go to your user settings</a>
+        to upgrade your account from student to teacher.
+      more: If you’d like more information about the program before you start your
+        application, please check out the <a href="%{pl_overview}">Professional Learning
+        Program overview</a>.
+    no_teacher_email:
+      body: Your account doesn’t have an email address. Please <a href="%{user_registration}">visit
+        your account settings</a> to add your email address before completing this
+        form.
   courses_category: ყველა კურსი
   cookie_banner:
     message: By continuing to browse our site or clicking "I agree," you agree to

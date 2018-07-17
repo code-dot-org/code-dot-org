@@ -30,9 +30,9 @@ th:
         title: การเขียนกระดาษกราฟ
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+          instructing each other to color squares on graph paper in an effort to reproduce
+          an existing picture.  If there's time, the lesson can conclude with images
+          that the students create themselves.
         pdfs:
         - unplug3
         video: Unplug3
@@ -184,12 +184,11 @@ th:
           code that you want to use over and over again) to create suncatchers using
           string and beads.
       SongwritingParameters:
-        title: Songwriting with Parameters
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        title: Songwriting
+        desc: Students use the concept of the chorus in a song to learn about defining
+          and calling functions.
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
+        title: 'Real Life Algorithms: Dice Race'
         desc: This lesson calls out ways we use algorithms in our daily lives. As
           part of that, students will identify and write down the algorithm for a
           dice race game.
@@ -244,22 +243,39 @@ th:
           as images and colors) in binary, as well.
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
+        desc: Discover how the video games you love to play are actually driven by
+          algebra! Explore how algebraic expressions and the coordinate plane can
+          help us understand how video games work, and then start planning for the
+          video game that you will create.
       Contracts:
-        title: Contracts
-        desc: Contracts unplugged lesson description
+        title: Contracts, Domain, and Range
+        desc: Contracts give us a way to understand and discuss functions. In this
+          lesson we'll look at how Contracts can help us make sense of a new programming
+          language or function.
       DesignRecipe:
         title: The Design Recipe
-        desc: Design Recipe lesson description
+        desc: In the last stage students wrote some very simple functions - but more
+          sophisticated functions demand a more thoughtful approach. The Design Recipe
+          is a structured approach to writing functions that includes writing test
+          cases to ensure that the function works as expected.
       Booleans:
-        title: Booleans
-        desc: Booleans lesson description
+        title: Booleans and Logic
+        desc: Booleans are the fourth and final data type that you will learn about
+          in this course. In this activity you will learn about what Booleans are,
+          and how they can help us write functions that think logically
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: The parameters we pass to functions cause the outputs to vary based
+          on a very rigid pattern. Suppose we want parameters with some values to
+          create outputs using one pattern but other values to use a different pattern.
+          This is where conditionals are needed...
       CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
+        title: Collision Detection and the Pythagorean Theorem
+        desc: Determining when objects on the screen touch is an important aspect
+          of most games. In this lesson we'll look at how the Pythagorean Theorem
+          and the Distance Formula can be used to measure the distance between two
+          points on the plane, and then decide whether those two points (or game characters)
+          are touching.
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -268,7 +284,7 @@ th:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: กิจกรรมถอดปลั๊ก
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: กิจกรรมถอดปลั๊ก
@@ -277,7 +293,7 @@ th:
         title: กิจกรรมถอดปลั๊ก
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: กิจกรรมถอดปลั๊ก
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: กิจกรรมถอดปลั๊ก
@@ -437,44 +453,44 @@ th:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: เพื่อนหุ่นยนต์
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
         desc: This lesson calls out ways we use algorithms in our daily lives, using

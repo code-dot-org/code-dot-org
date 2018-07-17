@@ -1626,12 +1626,12 @@ et:
           ja zombi liigub viis korda edasi armsa päevalille juurde.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Seni oled teinud animatsiooni või loo, mis teeb täpselt sama asja iga
           kord, kui see käivitada. Nüüd saad aga teha interaktiivse mängu, mida saab
           päriselt mängida.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Saad proovida uusi plokke. On näiteks plokk "kui nool" ja plokk "liiguta
           tegelaskuju". Saad panna need plokid kokku, et tegelasi nooleklahvidega
           liigutada. Siis on veel mõned plokid, mis teevad asju, kui tegelased kokku
