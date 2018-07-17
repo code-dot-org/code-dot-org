@@ -259,14 +259,11 @@ export class WorkshopFilter extends React.Component {
   }
 
   render() {
-    console.log(this.props.regionalPartnerFilter);
     // limit is intentionally stored in state and not reflected in the URL
     const filters = {
       ...this.getFiltersFromUrlParams(),
       limit: this.state.limit.value
     };
-
-    console.log(filters);
 
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
