@@ -183,13 +183,11 @@ class Level < ActiveRecord::Base
   def available_callouts(script_level)
     if custom?
       unless callout_json.blank?
-        translations = I18n.t("data.callouts").
-          try(:[], "#{name}_callout".to_sym)
-
         return JSON.parse(callout_json).map do |callout_definition|
-          callout_text = (should_localize? && translations.instance_of?(Hash)) ?
-              translations.try(:[], callout_definition['localization_key'].to_sym) :
-              callout_definition['callout_text']
+          i18n_key = "data.callouts.#{name}_callout.#{callout_definition['localization_key']}"
+          callout_text = should_localize? &&
+            I18n.t(i18n_key, default: nil) ||
+            callout_definition['callout_text']
 
           Callout.new(
             element_id: callout_definition['element_id'],
