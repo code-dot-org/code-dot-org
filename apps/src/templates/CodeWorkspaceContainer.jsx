@@ -11,45 +11,6 @@ import { connect } from 'react-redux';
 import * as utils from '../utils';
 import commonStyles from '../commonStyles';
 
-const styles = {
-  main: {
-    position: 'absolute',
-    // left gets set externally :(
-    // top is set in render
-    right: 0,
-    bottom: 0,
-    marginLeft: 15, // margin gives space for vertical resizer
-  },
-  mainRtl: {
-    right: undefined,
-    left: 0,
-    marginLeft: 0,
-    marginRight: 15
-  },
-  codeWorkspace: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    top: 0,
-    borderBottomStyle: 'none',
-    borderRightStyle: 'none',
-    borderLeftStyle: 'none',
-    borderTopWidth: 1,
-    borderTopStyle: 'solid',
-    borderTopColor: '#ddd',
-    overflow: 'hidden',
-  },
-  noVisualization: {
-    // Overrides left set in css
-    left: 0,
-    marginLeft: 0
-  },
-  noVisualizationRtl: {
-    right: 0
-  }
-};
-
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
     // redux provided
@@ -104,3 +65,42 @@ export default connect(state => ({
   noVisualization: state.pageConstants.noVisualization,
 }), undefined, null, { withRef: true }
 )(CodeWorkspaceContainer);
+
+const styles = {
+  main: {
+    position: 'absolute',
+    // left gets set externally :(
+    // top is set in render
+    right: 0,
+    bottom: 0,
+    marginLeft: 15, // margin gives space for vertical resizer
+  },
+  mainRtl: {
+    right: undefined,
+    left: 0,
+    marginLeft: 0,
+    marginRight: 15
+  },
+  codeWorkspace: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    top: 0,
+    borderBottomStyle: 'none',
+    borderRightStyle: 'none',
+    borderLeftStyle: 'none',
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: '#ddd',
+    overflow: 'hidden',
+  },
+  noVisualization: {
+    // Overrides left set in css
+    left: 0,
+    marginLeft: 0
+  },
+  noVisualizationRtl: {
+    right: 0
+  }
+};
