@@ -71,7 +71,7 @@ $(document).ready(() => {
       <PersonalProjectsTable
         projectList={[]}
       />,
-      document.getElementById('my-projects')
+    document.getElementById('react-my-projects')
     );
   }
 
