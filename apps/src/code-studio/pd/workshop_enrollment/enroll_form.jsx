@@ -58,11 +58,11 @@ export default class EnrollForm extends React.Component {
     super(props);
 
     this.state = {
-      schoolDropdownOption: undefined
+      school_id: null
     };
 
-    if (this.props.email) {
-      this.state = {
+    if (this.props.logged_in) {
+      this.setState = {
         firstName: this.props.first_name,
         email: this.props.email,
         confirmEmail: this.props.email
@@ -95,16 +95,19 @@ export default class EnrollForm extends React.Component {
   };
 
   handleSchoolChange = (selection) => {
+    this.setState({school_id: selection.value});
     // can i just do school_info: {selection.school} ?
-    this.setState({
-      school_info: {
-        school_state: selection.school.state,
-        school_zip: selection.school.zip,
-        school_id: selection.school.nces_id,
-        school_name: selection.school.name,
-        school_type: selection.school.school_type
-      }
-    });
+    if (this.state.school_id !== "-1") {
+      this.setState({
+        school_info: {
+          school_state: selection.school.state,
+          school_zip: selection.school.zip,
+          school_id: selection.school.nces_id,
+          school_name: selection.school.name,
+          school_type: selection.school.school_type
+        }
+      });
+    }
   };
 
   onRegister = () => {
@@ -188,37 +191,31 @@ export default class EnrollForm extends React.Component {
             />
           }
         </FormGroup>
-        <FormGroup
-          id="school"
-          style={styles.indented}
-        >
-          <Row>
-            <Col md={6}>
-              <ControlLabel>
-                School
-                <span className="form-required-field"> *</span>
-              </ControlLabel>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <SchoolAutocompleteDropdown
-                value={this.state.value}
-                onChange={this.handleSchoolChange}
-              />
-            </Col>
-          </Row>
-        </FormGroup>
-        {/*
-          this.props.data.school && this.props.data.school === '-1' &&
-          <div style={styles.indented}>
-            {this.inputFor("schoolName")}
-            {this.inputFor("schoolAddress")}
-            {this.inputFor("schoolCity")}
-            {this.selectFor("schoolState", {placeholder: "Select a state"})}
-            {this.inputFor("schoolZipCode")}
-            {this.radioButtonsFor("schoolType")}
-          </div>*/
+        {this.state && this.state.school_id !== '-1' &&
+          <FormGroup
+            id="school"
+            style={styles.indented}
+          >
+            <Row>
+              <Col md={6}>
+                <ControlLabel>
+                  School
+                  <span className="form-required-field"> *</span>
+                </ControlLabel>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <SchoolAutocompleteDropdown
+                  value={this.state.school_id}
+                  onChange={this.handleSchoolChange}
+                  clearable={false}
+                />
+              </Col>
+            </Row>
+          </FormGroup>
+        }
+        {this.state && this.state.school_id && this.state.school_id === '-1' &&
           <FormGroup style={styles.indented}>
             <FieldGroup
               id="schoolName"
@@ -263,11 +260,13 @@ export default class EnrollForm extends React.Component {
           <FormGroup>
             <ControlLabel>What is your current role? (Select the role that best applies)<span className="form-required-field"> *</span></ControlLabel>
             <Select
+              clearable={false}
               placeholder={null}
+              value={this.state.role}
               onChange={this.handleRoleChange}
               options={ROLES.map(r => ({value: r, label: r}))}
             />
-          {TEACHING_ROLES.includes(this.state.role) &&
+          {this.state && TEACHING_ROLES.includes(this.state.role) &&
             <FormGroup>
               <ControlLabel>What grades are you teaching this year? (Select all that apply)<span className="form-required-field"> *</span></ControlLabel>
               <p>This workshop is intended for teachers for Grades K-5.</p>
