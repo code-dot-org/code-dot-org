@@ -58,7 +58,7 @@ class CodeWorkspaceContainer extends React.Component {
   }
 }
 
-export const UnwrappedCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
+export const TestableCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
 export default connect(state => ({
   hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
   isRtl: state.isRtl,
