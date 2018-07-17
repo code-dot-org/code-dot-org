@@ -1,5 +1,6 @@
-"bg-BG":
-  hour_of_code: Час на Кодирането
+---
+bg-BG:
+  hour_of_code: Hour of Code
   hello: Здравей, свят
   'yes': Да
   'no': Не
@@ -46,7 +47,7 @@
   csedweek_og_title: Hour of Code идва
   csedweek_og_description: Hour of Code е глобално движение, достигащо до десетки
     милиони ученици от 180+ страни на над 45 езика.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -98,17 +99,7 @@
   congratulations_volunteer: 'Поздравления: сега, когато сте опитали Hour of Code,
     <a href="https://code.org/volunteer"> регистрирайте се като доброволци в класната
     стая</a> и помогнете на учениците да учат с Hour of Code!'
-  congratulations_on_completing_course1: Поздрави за завършване на курс 1
-  congratulations_on_completing_course2: Поздрави за завършване на курс 2
-  congratulations_on_completing_course3: Поздрави за завършване на курс 3
-  congratulations_on_completing_course4: Поздрави за завършване на курс 4
-  congratulations_on_completing_coursea: Поздрави за завършване на курс А
-  congratulations_on_completing_courseb: Поздрави за завършване на курс В
-  congratulations_on_completing_coursec: Поздрави за завършване на курс С
-  congratulations_on_completing_coursed: Поздрави за завършване на курс D
-  congratulations_on_completing_coursee: Поздрави за завършване на курс E
-  congratulations_on_completing_coursef: Поздрави за завършване на курс F
-  congratulations_on_completing_accelerated: Поздрави за завършване на ускореня курс
+  congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Опитайте тези уроци
   congrats_next_tutorials_desc: Опитайте тези кратки, едночасови уроци или пробвайте
     <a href="%{current_path}/next"> партньорските предложения</a>.
@@ -291,28 +282,8 @@
   just_did_accelerated: Току-що завърших ускореният курс - Проверете го! @codeorg
   just_did_hoc_donor: 'Току-що завърших #HourOfCode - Проверете го! (Благодаря на
     %{donor_twitter} за подкрепата на @codeorg)'
-  just_did_course1_donor: Току-що завърши курс 1 - Проверете го! Благодаря %{donor_twitter}
-    за подкрепата @codeorg
-  just_did_course2_donor: Току-що завърших курс 2 - Проверете го! Благодаря %{donor_twitter}
-    за подкрепата @codeorg
-  just_did_course3_donor: Току-що завърших курс 3 - Проверете го! Благодаря %{donor_twitter}
-    за подкрепата @codeorg
-  just_did_course4_donor: Току-що завърших курс 4 - Проверете го! Благодаря %{donor_twitter}
-    за подкрепата @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+  just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 9 от 10 човека са съгласни, че в училищата трябва да се учат компютърни
     науки. http://youtu.be/nKIu9yen5nc. Посетете https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -350,7 +321,7 @@
   studiobar_flappy_body: Направете и споделете своя собствена Flappy игра
   studiobar_teacher_title: За учители
   studiobar_teacher_body: Използвайте Студиото по кодиране в класната си стая
-  studiobar_frozen_title: Час на Кодирането
+  studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Създаване на зимна приказка с Анна и Елза
   studiobar_donate_title: Дарения
   studiobar_donate_body: Едно дете  получава вузможност да учи от всеки долар, който
@@ -444,7 +415,7 @@
   homepage_banner_emailprivacy_link: Прочети още
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Научете повече
-  homepage_slot_text_title_hoc: Час на Кодирането
+  homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Всеки може да се научи. Започнете днес
   homepage_slot_text_link_hoc: Опитайте Hour of Code
   homepage_slot_text_link_about_hoc: About the Hour of Code
@@ -471,7 +442,7 @@
   homepage_slot_text_link_buy: Включете се
   homepage_slot_text_link_donate: Направете дарение
   homepage_slot_text_link_shop: Тениски, шапки & повече
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Bring CS to your school
   homepage_header_codestudio: Проекти  на ученици в Студиото по програмиране
   homepage_header_donors: Code.org благодари на своите привърженици
   homepage_donors_seall: Вижте всички
@@ -530,7 +501,7 @@
   playlab_iceage_title: Ледена епоха - Очаквайте скоро
   playlab_iceage_title_live: Ледена епоха
   starwars_subtitle: Изграждане на галактика с код
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Използвайте блокове и JavaScript.
   starwars_javascript_specs: Английски само | Модерни браузъри | Възраст 11 +
   starwars_blocks_title: Блокове
@@ -564,22 +535,23 @@
   minecraft_download_adventurer: Изтегляне на офлайн версията на Minecraft авантюрист.
   minecraft_subtitle: Minecraft Hour of Code
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
+    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
+    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Teacher resources and lesson plan.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
   minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -587,13 +559,13 @@
     education. Join us at the Microsoft Store to engage in a free series of three,
     1-hour workshops where you will experience coding in a fun and stress-free environment,
     become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
   minecraft_future: Help all youth become future ready
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft се завръща за часът на кода, и ти си героят там! Пиши
@@ -1201,7 +1173,7 @@
   codehs_name: Научете се да програмирате с кучето Карел
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
-  codemonkey_name: Маймунски Код
+  codemonkey_name: CodeMonkey
   codeavengers_name: Изграждане игра с JavaScript
   processing_name: Рисуване с код
   robomind_name: Програмирайте виртуален робот
@@ -1272,9 +1244,9 @@
   cspunit4_name: "(стар) Раздел 4: данни"
   cspunit5_name: "(стар) Раздел 5: Изследване и създаване на PT"
   cspunit6_name: 'Пост AP: Бази данни в приложения'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -1342,13 +1314,13 @@
   hoc-encryption_name: Simple Encryption
   text-compression_name: Компресия на текста
   math_category_name: Математика
-  hoc_category_name: Час на Кодирането
+  hoc_category_name: Hour of Code
   csf_category_name: CS основи
   csf_2017_category_name: CS Fundamentals (2017)
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: '"15-" 16 CS принципи'
   csp17_category_name: '"15-" 16 CS принципи'
@@ -1417,12 +1389,24 @@
   course2_gradelevel: Възраст 6 + (необходими са умения за четене)
   course3_gradelevel: Възраст 8 + (след курс 2)
   course4_gradelevel: Възраст 10 + (след курс 3)
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: Ages 4-7
+  courseb_gradelevel: Ages 5-8
+  coursec_gradelevel: Ages 6-10
   coursed_gradelevel: Клас 8 +
   coursee_gradelevel: Възраст 8-12
-  coursef_gradelevel: Grade 10+
+  coursef_gradelevel: Ages 9-13
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Клас 8 +
+  coursee-2017_gradelevel: Възраст 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
+  coursed-2018_gradelevel: Клас 8 +
+  coursee-2018_gradelevel: Възраст 8-12
+  coursef-2018_gradelevel: Ages 9-13
   accelerated_gradelevel: Възраст 10 + (след курс 3)
   codeorg_platformtext: Съвременни браузъри, смартфони, таблети
   codeintl_platformtext: Съвременни браузъри, смартфони, таблети
@@ -1560,12 +1544,41 @@
     намират гъвкави решения за по-сложни проблеми. До края на този курс те ще създават
     интерактивни истории и игри, които да могат да споделят. Препоръчва се за класове
     от 4-8.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
+  coursea-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2017_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2017_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2017_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2017_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2017_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
+  coursea-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers.
+  courseb-2018_shortdescription_congrats: An introduction to computer science for
+    pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2018_shortdescription_congrats: Learn the basics of computer science and
+    create your own art, stories, and games.
+  coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then
+    go further with algorithms, nested loops, conditionals, and more.
+  coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and
+    then go further with functions.
+  coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science
+    Fundamentals and create your own art, story or game.
   codeorg_longdescription: Научете основните понятия на компютърните науки с drag
     and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от
     Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторенията-цикли,
@@ -2065,13 +2078,13 @@
     браузъра си до <a href='%{supported_browsers_url}', target='_blank'> един от нашите
     поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е възможно
     да не функционира както трябва.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: плесни с крила
   infinity_shortcode: inf
-  playlab_shortcode: играй
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Начало
   header_my_dashboard: Моето табло
@@ -2126,10 +2139,8 @@
   signing_in: Signing In
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  sign_in_instruct_website: Go to %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.

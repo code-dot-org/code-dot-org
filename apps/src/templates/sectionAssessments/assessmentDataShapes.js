@@ -47,9 +47,9 @@ export const studentResponsePropType = PropTypes.shape({
 // Represents a single student and a set of the student's answers for
 // a single assessment's multiple choice questions
 export const studentWithResponsesPropType = PropTypes.shape({
-  id:  PropTypes.number.isRequired,
+  id:  PropTypes.number,
   name: PropTypes.string,
-  studentResponses: PropTypes.arrayOf(studentResponsePropType).isRequired,
+  studentResponses: PropTypes.arrayOf(studentResponsePropType),
 });
 
 // Represents a single multiple choice question structure

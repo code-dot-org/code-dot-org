@@ -445,26 +445,24 @@ failures = 0
 skips = 0
 unprocessed = 0
 DB[:forms].where(kind: @census_form_kinds).each do |form|
-  begin
-    form_id = form[:id]
-    if form[:processed_data].nil?
-      puts "Skipping form #{form_id} since it has no processed_data yet." if @verbose
-      unprocessed += 1
-      next
-    end
-    previous_migrations = Census::CensusSubmissionFormMap.where(form_id: form_id)
-    if previous_migrations.empty?
-      process_form(form)
-      successes += 1
-    else
-      puts "Skipping form #{form_id} becasue it has already been migrated to census submission #{previous_migrations[0].census_submission_id}" if @verbose
-      skips += 1
-    end
-  rescue Exception => e
-    puts "Error processing form id #{form[:id]}: #{e.message}"
-    puts e.backtrace if @verbose
-    failures += 1
+  form_id = form[:id]
+  if form[:processed_data].nil?
+    puts "Skipping form #{form_id} since it has no processed_data yet." if @verbose
+    unprocessed += 1
+    next
   end
+  previous_migrations = Census::CensusSubmissionFormMap.where(form_id: form_id)
+  if previous_migrations.empty?
+    process_form(form)
+    successes += 1
+  else
+    puts "Skipping form #{form_id} becasue it has already been migrated to census submission #{previous_migrations[0].census_submission_id}" if @verbose
+    skips += 1
+  end
+rescue Exception => e
+  puts "Error processing form id #{form[:id]}: #{e.message}"
+  puts e.backtrace if @verbose
+  failures += 1
 end
 
 puts "Skipped #{skips} forms that were already migrated and #{unprocessed} that don't have processed_data."

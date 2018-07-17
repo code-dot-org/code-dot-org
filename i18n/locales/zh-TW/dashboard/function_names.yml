@@ -2,11 +2,11 @@ zh-TW:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
+      details: 詳細資訊
+      draw eyebrow: 畫睫毛
       draw pupil: draw pupil
       draw a circle: 畫個圓形
-      draw a car: draw a car
+      draw a car: 畫一輛車
       draw_rect: draw_rect
       draw square: draw square
       jump to controller top left: jump to controller top left
@@ -223,6 +223,7 @@ zh-TW:
       booster: booster
       draw line of triangles: draw line of triangles
       draw a window: draw a window
+      stop_everything: stop_everything
       draw a plane of squares: draw a plane of squares
       draw hexagon: draw hexagon
       draw line of hexagons: draw line of hexagons

@@ -30,11 +30,11 @@ et:
         Jigsaw: Pusle
         MazeStep: Labürindi sammu režiim
         Wordsearch: Sõnaotsing
-        Webapp: Rakenduste labor
+        Webapp: App Lab
         ArtistEC: Kunstnik
         TextMatch: Teksti vaste
         StudioEC: Play Lab
-        Applab: Rakenduste labor
+        Applab: App Lab
         NetSim: Interneti simulaator
         Custom: Kunstnik
         CustomStudio: Play Lab
@@ -525,7 +525,7 @@ et:
         Unplug9: Relee programmeerimine
         Unplug10: Internet
         Unplug11: Kokkuvõte
-        C1_happy_maps_unplugged: '"Happy Maps"'
+        C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Liiguta, liiguta
         C1_bigevent_unplugged: Suursündmus
         C1_getting_loopy: Muutub tsükliliseks
@@ -779,6 +779,11 @@ et:
         CSF_loops_AB: Tsüklid
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla

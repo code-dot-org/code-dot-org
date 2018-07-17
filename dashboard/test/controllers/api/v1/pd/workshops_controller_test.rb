@@ -89,6 +89,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_2.id, response[0]['id']
   end
 
+  test 'with the organizer view param, program managers can view workshops in their regional partner and workshops they organized' do
+    workshop_in_my_region = create :pd_workshop, regional_partner: @regional_partner, organizer: @workshop_organizer
+    sign_in @organizer
+
+    get :index, params: {organizer_view: 1}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 2, response.length
+    assert_equal [@workshop.id, workshop_in_my_region.id], [response[0]['id'], response[1]['id']]
+  end
+
   test 'exclude local summer workshops if exclude_summer present' do
     sign_in @organizer
 

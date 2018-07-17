@@ -263,8 +263,8 @@ vi:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Nỗ lực tạo lại một con bọ Brooke\\r theo quy trình sau:\\r\n1. bắt đầu với cấp độ không cần máy tính. làm quen với thông tin. nhấn sao lưu và đăng tin.\\r\n2. \"phá huỷ\" cấp độ\\r\n3. tạo một cấp độ \"đánh dấu\" với cùng một nội dung và cùng tên. Kiểm tra hộp thư mã hoá nó. nhấn sao lưu"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: Bạn bè robot của tôi
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
         title:
         desc:

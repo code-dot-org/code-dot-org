@@ -25,7 +25,7 @@ pt:
         Artist5: O Artista 5
         Unplug11: Sumário
         MazeEC: O Labirinto
-        Bounce: Pingue-pongue
+        Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Quebra-cabeças
         MazeStep: Modo Labirinto
@@ -596,7 +596,7 @@ pt:
         C3_farmer_while: Laços enquanto
         C3_bee_nested_loops: Laços aninhados
         C3_bee_debugging: Depuração da Abelha
-        C3_bounce: Pingue-pongue
+        C3_bounce: Bounce
         C3_playlab_create_game: Laboratório - Crie um jogo
         C3_computational_thinking: Pensamento computacional
         C3_dice_race: Jogo de dados
@@ -651,7 +651,7 @@ pt:
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
         csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
         csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
@@ -808,6 +808,11 @@ pt:
         CSF_loops_AB: Ciclos
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco

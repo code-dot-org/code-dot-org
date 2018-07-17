@@ -215,8 +215,8 @@ it:
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione
           su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
-        title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
+        title: Crowdsourcing (Intelligenza Collettiva)
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*),
           una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
@@ -316,10 +316,10 @@ it:
           rete.
       courseD_unplugged_digitalCitizenship:
         title: Attività Tradizionale
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
         title: 'Cittadinanza Digitale: Dati Personali'
-        desc: Today you will learn the difference between private and personal information!
+        desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
@@ -400,7 +400,7 @@ it:
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo
           contesto, gli studenti devono identificare e scrivere l'algoritmo per un
           gioco con i dadi.
@@ -414,8 +414,8 @@ it:
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione
           su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
-        title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
+        title: Crowdsourcing (Intelligenza Collettiva)
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*),
           una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
@@ -489,44 +489,44 @@ it:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: I Miei Amici Robotici
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
@@ -557,7 +557,7 @@ it:
           nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
         title: Attività Tradizionale
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in

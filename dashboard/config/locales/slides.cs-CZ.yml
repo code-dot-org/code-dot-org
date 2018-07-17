@@ -1599,12 +1599,12 @@ cs:
           slunečnici.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Zatím jsi udělal animaci nebo příběh, který dělá přesně to samé, pokaždé,
           když ji spustíš. Nyní můžeš vytvořit interaktivní hry, které můžeš skutečně
           hrát.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Jsou nějaké nové bloky k vyzkoušení. Jsou bloky "když šipka" a "posuň
           aktéra". Můžeš dát tyto bloky dohromady, aby aktéři se pohybovali kurzorovými
           klávesami. A existují nějaké bloky, které věci, když se aktéři srazí nebo

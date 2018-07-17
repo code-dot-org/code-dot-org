@@ -26,7 +26,7 @@ module Pd
         assert_equal 'sampleScale', question.name
         assert_equal 'This is a scale label', question.text
         assert_equal 1, question.order
-        assert_equal ANSWER_SELECT_VALUE, question.answer_type
+        assert_equal ANSWER_SCALE, question.answer_type
         assert_equal [1, 2, 3, 4, 5], question.values
         assert_equal ['Strongly Agree', 'Strongly Disagree'], question.options
       end
@@ -48,7 +48,7 @@ module Pd
           name: 'a name',
           text: 'label',
           order: 1,
-          options: %w(One Two Three),
+          options: %w(From To),
           values: [1, 2, 3]
         }
 
@@ -61,14 +61,17 @@ module Pd
           id: 1,
           name: 'sampleScale',
           text: 'a label',
-          values: (1..5).to_a
+          values: (1..5).to_a,
+          options: %w(From To)
         )
 
         expected_summary = {
           'sampleScale' => {
             text: 'a label',
-            answer_type: ANSWER_SELECT_VALUE,
-            max_value: 5
+            answer_type: ANSWER_SCALE,
+            min_value: 1,
+            max_value: 5,
+            options: ['1 - From', '2', '3', '4', '5 - To']
           }
         }
         assert_equal expected_summary, question.summarize

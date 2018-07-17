@@ -184,10 +184,18 @@ GameLab.prototype.init = function (config) {
   }
 
   this.skin = config.skin;
-  this.skin.smallStaticAvatar = null;
-  this.skin.staticAvatar = null;
-  this.skin.winAvatar = null;
-  this.skin.failureAvatar = null;
+  if (this.studioApp_.isUsingBlockly()) {
+    const MEDIA_URL = '/blockly/media/spritelab/';
+    this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.winAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
+  } else {
+    this.skin.smallStaticAvatar = null;
+    this.skin.staticAvatar = null;
+    this.skin.winAvatar = null;
+    this.skin.failureAvatar = null;
+  }
   this.level = config.level;
 
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
@@ -252,9 +260,10 @@ GameLab.prototype.init = function (config) {
     }.bind(this)
   };
 
-  // Provide a way for us to have top pane instructions disabled by default, but
-  // able to turn them on.
-  config.noInstructionsWhenCollapsed = true;
+  // Display CSF-style instructions when using Blockly. Otherwise provide a way
+  // for us to have top pane instructions disabled by default, but able to turn
+  // them on.
+  config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;

@@ -556,6 +556,7 @@ fil:
       CSD U3 Simple Drawing - Background_instruction: Put all of your code into a draw() loop and then add set the background to blue with the background() block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: 'Predict: What two numbers will be displayed in the console?'
       CSD U3 Variable Arithmetic_instruction: Change the value "size" initialized to make a larger square.
@@ -1552,6 +1553,20 @@ fil:
         - Ano ang mangyayari kapag gagamit ka nang dalawang iba't ibang anggulo sa iyong baitang ng hagdanan na pattern?\r
         - Ano ang mangyayari kapag gagawin mo ang dyamante na pattern na mas mataas o mas maikli?\r
         - Ano ang hitsura nito para maiguhit ang dalawang niyebe sa taas nang bawat isa?
+      Dance Party 1-validated_instruction: 'What do you think will happen when you click on the alien?  '
+      Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
+      Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 5 - Validated_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 5_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 6 - Validated_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 6_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Predict_instruction: 'What do you think will happen when you click on the alien?  '
       ECSPD Binary Odometer_instruction: This is another resource you could use with your students.
       Eval Booleans 1_instruction: Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click "Run" to see how this expression evaluates.
       Eval Booleans 2_instruction: Can you set the values so that this expression evaluates as true?
@@ -1622,6 +1637,12 @@ fil:
       Finalize Your Chaser Game v.1_2018_instruction: Introducing the setPosition command! Replace the moveTo in the button-click event handler to use setPosition to move the button itself to a random location when it's clicked.
       Find the Wizard_instruction: Bumuo ng anumang gusto mo. Ito ay isang halimbawa ng laro na paghula ng numero!
       Find the Wizard_2018_instruction: Bumuo ng anumang gusto mo. Ito ay isang halimbawa ng laro sa paghula ng numero!
+      Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims around the tank.
+      Fish Tank 4-validated_instruction: Use the `set background color` block to make the background blue.
+      Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make your fish tank special!
       Food Fight!_instruction: "Aming idinagdag ang isang huling function para sa iyo.\\r\n\\r\nGumamit ng \"if\" na pahayag para ma-program ang iyong laro na tatawag lang sa \"level_up\" na function kapag ang \"player_score\" ay naging mas malaki sa isang tiyak na numero.\\r\n\\r\nBilang halimbawa: \"player_score\" > 6\\r\n\\r\nLaruin ang laro, at abutin ang antas na 3 para makapunta sa sunod na palaisipan. "
       Food Fight_instruction: You can make whatever you want in play lab! This is an example of a game you can make in play lab.
       FoodFight_instruction: Ito ay isang halimbawa ng laro na maaari mong gawin sa play lab.
@@ -1650,6 +1671,7 @@ fil:
       Guess The Number_2018_instruction: Bumuo ng anumang gusto mo. Ito ay isang halimbawa ng laro sa paghula ng numero!
       Harvester Test_instruction: It's harvest time! But I forgot what crop I planted at which tile. Please help me harvest all my crops, no matter how they were originally planted!
       Harvesting_instruction: Uh oh, I lost my map and can't remember what I planted. Every sprout could grow up to be corn, beans, or pumpkins. Can you write some code to pick all the crops, no matter what they are?
+      HoCAB_labyrinth1_instruction: Use the arrow blocks to solve this maze!
       Infinity_catch_instruction: Maaari mo bang mapahabol si Elsa ("aktor 2") kay Anna gamit ang mga arrow keys?
       Infinity_finale_instruction: Ilikha ang anumang gusto mo at ibahagi ang mga ito!
       Infinity_move_collide_instruction: Si Hiro ay ang "aktor 1". Pagalawin siya malapit kay Baymax, at magpatugtog ng tunog kapay sila ay nagkahawak.
@@ -2457,6 +2479,7 @@ fil:
       U3 - Simulation - 6_instruction: Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)
       U3 - Simulation - App_instruction: Change your code to run the full simulation with 10,000 coins. What was your longest streak of heads? (Click to see full instructions)
       U3 - Simulation - Template_instruction: Use a while loop to "flip 10 coins" and write them to the screen. (Click to see full instructions)
+      U3 - Simulation - Template_2018_instruction: Use a while loop to "flip 10 coins" and write them to the screen. (Click to see full instructions)
       U3 - Sprites - Intro Sprites_instruction: Do This
       U3 - Sprites and Mod - Create  and Draw Sprite_instruction: Do This
       U3 - Sprites and Mod - Mouse Width and Height_instruction: Do this
@@ -2780,11 +2803,12 @@ fil:
       U4 - Charts - Import Data 1_2018_instruction: Download the CSV file we’ve provided, and then use the data viewer to import the data from the file into the “mytable” table. (Click to see full instructions)
       U4 - Charts - Import Data 2_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
       U4 - Charts - Import Data 2_2018_instruction: Call readRecords on “mytable” and print each record to the console. (Click to see full instructions)
-      U4 - Charts - Line Chart 1_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 1_2018_instruction: Create a line chart showing the change in popularity of “
-      U4 - Charts - Line Chart 2_instruction: Add a second line to your chart to show the change in popularity of both “
-      U4 - Charts - Line Chart 2_2018_instruction: Add a second line to your chart to show the change in popularity of both “
+      U4 - Charts - Line Chart 1_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 1_2018_instruction: 'Create a line chart showing the change in popularity of “#tbt” over time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
+      U4 - Charts - Line Chart 2_2018_instruction: 'Add a second line to your chart to show the change in popularity of both “#tbt” and “#nofilter” at the same time. (Click to see full instructions)'
       U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Line Chart Template_2018_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Remixing Apps with Data_2018_instruction: Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)
       U4 - Charts - Scatter Chart_instruction: Create a scatter plot of the “rottenTomatoes” table, using the new table and column names. (Click to see full instructions)
@@ -2865,6 +2889,7 @@ fil:
       U4 - Read Record - 5_instruction: 'Using a for loop, display the title of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - 5_2018_instruction: 'Using a for loop, display the title of each movie in your database. (Click to see full instructions)  '
       U4 - Read Record - part 1 - template_instruction: 'Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)  '
+      U4 - Read Record - part 1 - template_2018_instruction: 'Use console.log to display the records returned by a call to readRecords. (Click to see full instructions)  '
       U4 - ReadRecords - Contacts App 1_instruction: Use readRecords to copy the data in your database into your "contacts" global variable and call showCurrentContact. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 1_2018_instruction: Use readRecords to copy the data in your database into your "contacts" global variable and call showCurrentContact. (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: Create a function called refreshLocalData. (Click to see full instructions)
@@ -2896,6 +2921,7 @@ fil:
       U4 Model Design 1_2018_instruction: Add a large red button to your screen using Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: Alituntunin
       U4L02 - Objects - Template1_instruction: Template
+      U4L02 - Objects - Template1_2018_instruction: Template
       U4L02 - Objects - createObject_instruction: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
       U4L02 - Objects - eventParameter_instruction: Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. As you play around make sure you can explain the purpose of each of the circled parts of the diagram.\n\n"
@@ -2940,9 +2966,20 @@ fil:
       Underground Mining Coal_2018_instruction: Mahahanap mo ang dalawang napakahalagang mga kayamanan sa ilalim ng lupa, ngunit maaaring maging madilim ito. Maglagay ng hindi bababa sa 2 sulo at magmina ng hindi bababa sa 2 uling.
       Unicorn Tag_instruction: Take a look at this project.  Do you see how it was made?
       Valentine_artist2_01_instruction: I-program ang artist para gumuhit ng iilang mga damo para sa Love Bug.
-      Valentine_artist_01_instruction: 'Tulungan ang artist para tapusin ang kanyang puso ng liyama. '
+      Valentine_artist_01_instruction: Tulungan ang artist para tapusin ang kanyang puso ng liyama. 
       Valentine_playlab_01_instruction: 'I-program si Kiki (Aktor 1) para gumalaw pakaliwa at pakanan kapag ang kaliwa at kanang mga arrow ay napindot. Kapag si Kiki ay na-click. dapat siyang maghagis ng mga puso papunta sa kangyang mga kaibigan. '
       Vigenere_instruction: Test
+      Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
+      Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
       WhileAdventure_instruction: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3238,7 +3275,7 @@ fil:
       courseA_harvester_seq10_instruction: Make sure to pick all the corn!
       courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: Pick all the corn.
-      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick **one** corn.
+      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick corn.
       courseA_harvester_seq2_instruction: Use three `move west` blocks and one `pick corn` block to solve this puzzle.
       courseA_harvester_seq3_instruction: Use three `Move North` blocks and one `Pick Corn` block.
       courseA_harvester_seq4_instruction: Add one block to help the harvester pick the corn.
@@ -3250,7 +3287,8 @@ fil:
       courseA_maze_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp2a_2018_instruction: Snap all blocks together to finish your code, then click "Run".
       courseA_maze_ramp3_2018_instruction: Mayroong isang ekstrang bloke na magiging sanhi na mag-crash ang ibon. Itapon ito sa pamamagitan ng pagkaladkad nito pabalik sa toolbox.
-      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
       courseA_maze_ramp4_2018_instruction: Iwasan ang TNT para hindi lilipad ang mga balahibo!
       courseA_maze_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseA_maze_ramp5_2018_instruction: Iwasan ang mga TNT.
@@ -3300,7 +3338,7 @@ fil:
       courseA_playLab_events6_instruction: Gawin itong mas kawili-wili sa pamamagitan nang pagpalit ng background at pagpapatunog na random na tunog kapag si Jorge ay na-click.
       courseA_playLab_events6_2018_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: Magdagdag ng kahit anong gusto mo sa larong ito. Maaari mo bang mapawala ang dinosaur kapag si Jorge ay nakatagpo nito?
-      courseA_playLab_events7_2018_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want to this game."
       courseA_playlab_events_challenge1_instruction: Maaari ka bang magsulat ng code para makita ang natira kong mga kaibigan? Ang mga hint ay makakatulong sa iyo na gawin ang proyektong ito sa bawat hakbang.
       courseA_playlab_events_challenge1_2018_instruction: Maaari ka bang magsulat ng code para makita ang natira kong mga kaibigan? Ang mga hint ay makakatulong sa iyo na gawin ang proyektong ito sa bawat hakbang.
       courseA_playlab_events_challenge2_instruction: Bigyan ang lahat ng isang gawain kapag na-click mo sila.
@@ -3309,9 +3347,10 @@ fil:
       courseA_toMakeLoopsVideo_Collector_instruction: Ang loops ay nagbibigay-daan sa iyo na gawin ang anumang nasa loob nang paulit-ulit!
       courseA_video_events_instruction: Nangangailangan ng mas mahusay na playlab/pangyayari na combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
-      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
-      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
-      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and press "▶ Run"!
+      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "▶ Run".
+      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: Can you figure out which block you need to add to the bottom of the other blocks to finish this code?
       courseB_Scrat_ramp5a_2018_instruction: Dalhin ang ibon sa baboy!
       courseB_artist_loops1_instruction: Ito ay isang bagong tipo ng palaisipan na tinatawag na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
@@ -3432,10 +3471,10 @@ fil:
         \r
         Para magawa ito, kailangan mong magdagdag ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa, at pakanan.
       courseB_playlab_events7_instruction: Gawing masaya ang laro sa pamamagitan ng pagtakda sa kabalyero na maglaho kapag nakatagpo siya ng dragon sa daan niya para magkuha ng mga bandila! Magpatugtog ng tunog kapag sila ay nagkabangga para gawin itong mas maging totoo.
-      courseB_playlab_events7_2018_instruction: Gawing masaya ang laro sa pamamagitan ng pagtakda sa kabalyero na maglaho kapag nakatagpo siya ng dragon sa daan niya para magkuha ng mga bandila! Magpatugtog ng tunog kapag sila ay nagkabangga para gawin itong mas maging totoo.
+      courseB_playlab_events7_2018_instruction: "Gawing masaya ang laro sa pamamagitan ng pagtakda sa kabalyero na maglaho kapag nakatagpo siya ng dragon sa daan niya para magkuha ng mga bandila! Magpatugtog ng tunog kapag sila ay nagkabangga para gawin itong mas maging totoo."
       courseB_playlab_events8_instruction: Gamitin ang iyong imahenasyon. Ano ang maaari mong gawin para gawing mas masaya ang larong ito?
       courseB_playlab_eventsFP_instruction: Gamitin ang iyong imahenasyon. Ano ang maaari mong gawin para gawing mas masaya ang larong ito?
-      courseB_playlab_eventsFP_2018_instruction: Use your imagination. What can you do to make this game more fun?
+      courseB_playlab_eventsFP_2018_instruction: "**Free play:** Use your imagination. What can you do to make this game more fun?"
       courseB_playlab_eventsToolbox_instruction: Tapusin sa pamamagitan ng pagpapatunog ng tunog at pagpagawa sa kabalyero na maglaho kapag nakatagpo niya ang dragon!
       courseB_playlab_events_challenge1_instruction: 'Gawin ang mga hayop na gumalaw pababa kapag napindot mo ang ▼. '
       courseB_playlab_events_challenge1_2018_instruction: 'Gawin ang mga hayop na gumalaw pababa kapag napindot mo ang ▼. '
@@ -4665,7 +4704,7 @@ fil:
       course_playlab_variables1_instruction: This is Pirate Pegleg.  He's awfully hard to understand these days!
       course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
       course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech by changing the value of the variables in just two places! \n"
-      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "Run"!
+      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "▶ Run"!
       coursef_explore_CYOA_Witch_instruction: Maaari mong gawin ang anumang gusto mo sa play lab. Narito ang isang halimbawa ng pagpili ng iyong sariling paglalakbay na kuwento sa play lab.
       coursef_explore_playlab2_instruction: Maaari mong gawin ang anumang gusto mo sa play lab. Narito ang isang halimbawa ng kuwento sa play lab.
       coursef_explore_playlab_cat_game_instruction: Maaari mong gawin ang anumang gusto mo sa play lab. Narito ang isang halimbawa ng laro na maaari mong gawin.
