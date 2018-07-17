@@ -30,9 +30,7 @@ class Video < ActiveRecord::Base
 
   def self.check_i18n_names
     video_keys = Video.all.collect(&:key)
-    i18n_keys = I18n.t('data.video.name').keys.collect(&:to_s)
-
-    missing_keys = video_keys - i18n_keys
+    missing_keys = video_keys.reject {|key| I18n.t("data.video.name.#{key}", default: nil)}
     unless missing_keys.empty?
       raise "Missing strings for video.name.#{missing_keys} in config/locales/data.en.yml, please add"
     end
