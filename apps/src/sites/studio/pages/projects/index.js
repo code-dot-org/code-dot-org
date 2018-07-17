@@ -68,10 +68,12 @@ $(document).ready(() => {
 
   if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE)) {
     ReactDOM.render(
-      <PersonalProjectsTable
-        projectList={[]}
-      />,
-    document.getElementById('react-my-projects')
+      <Provider store={store}>
+        <PersonalProjectsTable
+          projectList={[]}
+        />
+      </Provider>,
+     document.getElementById('react-my-projects')
     );
   }
 
