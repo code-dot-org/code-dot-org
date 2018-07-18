@@ -304,6 +304,9 @@ class PersonalProjectsTable extends React.Component {
     );
   }
 }
+
+export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
+
 export default connect(state => ({
   projectLists: state.projects.projectLists,
 }))(PersonalProjectsTable);
