@@ -21,6 +21,7 @@ import sectionAssessments, {
   getExportableSurveyData,
   getExportableAssessmentData,
   setStudentId,
+  setQuestionIndex,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -111,6 +112,14 @@ describe('sectionAssessmentsRedux', () => {
       const action = setStudentId(777);
       const nextState = sectionAssessments(initialState, action);
       assert.deepEqual(nextState.studentId, 777);
+    });
+  });
+
+  describe('setQuestionIndex', () => {
+    it('sets the index of the current question in view', () => {
+      const action = setQuestionIndex(2);
+      const nextState = sectionAssessments(initialState, action);
+      assert.deepEqual(nextState.questionIndex, 2);
     });
   });
 
