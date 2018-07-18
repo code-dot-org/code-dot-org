@@ -55,6 +55,10 @@ const OTHER_SCHOOL_VALUE = "-1";
 
 const CSF = "CS Fundamentals";
 
+const REQUIRED = "Required";
+
+const ERROR = 'error';
+
 export default class EnrollForm extends React.Component {
   static propTypes = {
     workshop_id: PropTypes.number.isRequired,
@@ -68,14 +72,14 @@ export default class EnrollForm extends React.Component {
     super(props);
 
     this.state = {
-      school_id: null
+      school_id: null,
+      errors: {}
     };
 
     if (this.props.logged_in) {
       this.setState = {
         firstName: this.props.first_name,
-        email: this.props.email,
-        confirmEmail: this.props.email
+        email: this.props.email
       };
     }
   }
@@ -138,7 +142,7 @@ export default class EnrollForm extends React.Component {
       method: 'POST',
       url: `/api/v1/pd/workshops/${this.props.workshop_id}/enrollments`,
       contentType: 'application/json',
-      data: JSON.stringify(this.state), // take out confirmEmail
+      data: JSON.stringify(this.state), // only send necessary fields
       complete: () => {
         console.log('complete');
       }
@@ -150,6 +154,12 @@ export default class EnrollForm extends React.Component {
     let missingRequiredFields = this.getMissingRequiredFields();
 
     if (missingRequiredFields.length || Object.keys(errors).length) {
+      let requiredFieldsErrors = {};
+      missingRequiredFields.forEach((f) => {
+        requiredFieldsErrors[f] = REQUIRED;
+      });
+      errors = Object.assign(errors, requiredFieldsErrors);
+      this.setState({errors: errors});
       console.log(errors);
       console.log(missingRequiredFields);
       return false;
@@ -197,6 +207,7 @@ export default class EnrollForm extends React.Component {
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.first_name}
+            validationState={this.state.errors.hasOwnProperty("first_name") ? ERROR : null}
           />
           <FieldGroup
             id="last_name"
@@ -204,6 +215,7 @@ export default class EnrollForm extends React.Component {
             type="text"
             required={true}
             onChange={this.handleChange}
+            validationState={this.state.errors.hasOwnProperty("last_name") ? ERROR : null}
           />
           <FieldGroup
             id="email"
@@ -214,6 +226,7 @@ export default class EnrollForm extends React.Component {
             defaultValue={this.props.email}
             readOnly={this.readOnlyEmail()}
             title={this.readOnlyEmail() ? "Email can be changed in account settings" : ""}
+            validationState={this.state.errors.hasOwnProperty("email") ? ERROR : null}
           />
           {!this.props.logged_in &&
             <FieldGroup
@@ -222,6 +235,7 @@ export default class EnrollForm extends React.Component {
               type="text"
               required={true}
               onChange={this.handleChange}
+              validationState={this.state.errors.hasOwnProperty("confirm_email") ? ERROR : null}
             />
           }
         </FormGroup>
@@ -229,6 +243,7 @@ export default class EnrollForm extends React.Component {
           <FormGroup
             id="school_id"
             style={styles.indented}
+            validationState={this.state.errors.hasOwnProperty("school_id") ? ERROR : null}
           >
             <Row>
               <Col md={6}>
@@ -256,6 +271,7 @@ export default class EnrollForm extends React.Component {
               type="text"
               required={true}
               onChange={this.handleSchoolInfoChange}
+              validationState={this.state.errors.hasOwnProperty("school_name") ? ERROR : null}
             />
             <FieldGroup
               id="school_address"
@@ -263,6 +279,7 @@ export default class EnrollForm extends React.Component {
               type="text"
               required={true}
               onChange={this.handleSchoolInfoChange}
+              validationState={this.state.errors.hasOwnProperty("school_address") ? ERROR : null}
             />
             <FieldGroup
               id="school_city"
@@ -270,10 +287,12 @@ export default class EnrollForm extends React.Component {
               type="text"
               required={true}
               onChange={this.handleSchoolInfoChange}
+              validationState={this.state.errors.hasOwnProperty("school_city") ? ERROR : null}
             />
             <FormGroup
               id="school_state"
               style={styles.outdented}
+              validationState={this.state.errors.hasOwnProperty("school_state") ? ERROR : null}
             >
               <ControlLabel>School State<span className="form-required-field"> *</span></ControlLabel>
               <Select
@@ -289,6 +308,7 @@ export default class EnrollForm extends React.Component {
               type="text"
               required={true}
               onChange={this.handleSchoolInfoChange}
+              validationState={this.state.errors.hasOwnProperty("school_zip") ? ERROR : null}
             />
             <ButtonList
               key="school_type"
@@ -297,14 +317,16 @@ export default class EnrollForm extends React.Component {
               label="My school is a"
               onChange={this.handleSchoolInfoChange}
               selectedItems={this.state.school_type}
-              //validationState={this.getValidationState(name)
+              validationState={this.state.errors.hasOwnProperty("school_type") ? ERROR : null}
               type="radio"
               required={true}
             />
           </FormGroup>
         }
         {this.props.workshop_course === CSF &&
-          <FormGroup>
+          <FormGroup
+            validationState={this.state.errors.hasOwnProperty("role") ? ERROR : null}
+          >
             <ControlLabel>What is your current role? (Select the role that best applies)<span className="form-required-field"> *</span></ControlLabel>
             <Select
               id="role"
@@ -323,7 +345,7 @@ export default class EnrollForm extends React.Component {
                 label={roleLabel}
                 onChange={this.handleChange}
                 selectedItems={this.state.grades_teaching}
-                //validationState={this.getValidationState(name)
+                validationState={this.state.errors.hasOwnProperty("grades_teaching") ? ERROR : null}
                 type="check"
               />
             }
@@ -363,6 +385,10 @@ export default class EnrollForm extends React.Component {
     ];
 
     let requiredFields = ['first_name', 'last_name', 'email', 'school_id'];
+
+    if (!this.state.logged_in) {
+      requiredFields = requiredFields.push('confirm_email');
+    }
 
     if (this.state.school_id === OTHER_SCHOOL_VALUE) {
       requiredFields = requiredFields.concat(schoolInfoFields);
