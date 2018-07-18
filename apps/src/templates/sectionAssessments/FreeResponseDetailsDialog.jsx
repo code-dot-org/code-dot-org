@@ -18,23 +18,17 @@ const styles = {
 export default class FreeResponseDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
+    closeDialog: PropTypes.func.isRequired,
     questionText: PropTypes.string,
-  };
-
-  state = {
-    isDialogOpen: this.props.isDialogOpen,
-  };
-
-  handleYesClick = () => {
-    this.setState({isDialogOpen: false});
   };
 
   render() {
     return (
       <BaseDialog
         useUpdatedStyles
-        isOpen={this.state.isDialogOpen}
+        isOpen={this.props.isDialogOpen}
         style={styles.dialog}
+        handleClose={this.props.closeDialog}
       >
         <h2>{i18n.questionText()}</h2>
         <div style={styles.instructions}>
@@ -43,7 +37,7 @@ export default class FreeResponseDetailsDialog extends Component {
         <DialogFooter>
           <Button
             text={i18n.done()}
-            onClick={this.handleYesClick}
+            onClick={this.props.closeDialog}
             color={Button.ButtonColor.gray}
           />
         </DialogFooter>
