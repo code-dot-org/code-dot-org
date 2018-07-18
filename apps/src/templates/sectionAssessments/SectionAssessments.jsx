@@ -19,6 +19,7 @@ import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer
 import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
 import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContainer';
 import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
+import FreeResponseDetailsDialog from './FreeResponseDetailsDialog';
 import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
@@ -94,10 +95,23 @@ class SectionAssessments extends Component {
     studentList: PropTypes.array,
   };
 
+  state = {
+    isDetailDialogOpen: false,
+    detailQuestionText: '',
+  };
+
   onChangeScript = scriptId => {
     const {setScriptId, asyncLoadAssessments, sectionId} = this.props;
     asyncLoadAssessments(sectionId, scriptId);
     setScriptId(scriptId);
+  };
+
+  showFreeResponseDetailDialog = questionText => {
+    this.setState({isDetailDialogOpen: true, detailQuestionText: questionText});
+  };
+
+  hideFreeResponseDetailDialog = () => {
+    this.setState({isDetailDialogOpen: false, detailQuestionText: ''});
   };
 
   render() {
@@ -181,7 +195,9 @@ class SectionAssessments extends Component {
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
                     <MultipleChoiceSurveyOverviewContainer />
-                    <FreeResponsesSurveyContainer />
+                    <FreeResponsesSurveyContainer
+                      openDialog={this.showFreeResponseDetailDialog}
+                    />
                   </div>
                 }
                 {totalStudentSubmissions <=0 &&
@@ -189,6 +205,11 @@ class SectionAssessments extends Component {
                 }
               </div>
             }
+            <FreeResponseDetailsDialog
+              isDialogOpen={this.state.isDetailDialogOpen}
+              questionText={this.state.detailQuestionText}
+              closeDialog={this.hideFreeResponseDetailDialog}
+            />
           </div>
         }
         {isLoading &&

@@ -25,14 +25,15 @@ const freeResponseQuestionsPropType = PropTypes.shape({
 class FreeResponsesSurveyContainer extends Component {
   static propTypes = {
     freeResponsesByQuestion: PropTypes.arrayOf(freeResponseQuestionsPropType),
+    openDialog: PropTypes.func.isRequired,
   };
 
   state = {
     isExpanded: false,
   };
 
-  expandText = () => {
-    this.setState({isExpanded: true});
+  expandText = (text) => {
+    this.props.openDialog(text);
   };
 
   render() {
@@ -46,7 +47,7 @@ class FreeResponsesSurveyContainer extends Component {
               <div style={styles.text}>
                 {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
                 {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
-                   <a onClick={this.expandText}><span>{i18n.seeFullQuestion()}</span></a>
+                   <a onClick={() => {this.expandText(question.questionText);}}><span>{i18n.seeFullQuestion()}</span></a>
                 }
               </div>
             }
