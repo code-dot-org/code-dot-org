@@ -201,17 +201,25 @@ XML
     custom_i18n = {
       'data' => {
         'authored_hints' => {
-          "#{level_name}_authored_hint" => {
-            first: nil,
-            second: nil
-          }
+          "#{level_name}_authored_hint" => []
         }
       }
     }
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    assert_equal level.authored_hints, level.localized_authored_hints
+    assert_nil level.localized_authored_hints
+
+    custom_i18n = {
+      'data' => {
+        'authored_hints' => {
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_nil level.localized_authored_hints
   end
 
   test 'uses_droplet for StudioEC levels' do
