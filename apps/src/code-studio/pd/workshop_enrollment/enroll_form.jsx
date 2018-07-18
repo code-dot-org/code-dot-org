@@ -105,14 +105,14 @@ export default class EnrollForm extends React.Component {
 
   handleSchoolChange = (selection) => {
     this.setState({school_id: selection.value});
-    // can i just do school_info: {selection.school} ?
     if (selection.value !== OTHER_SCHOOL_VALUE) {
       this.setState({
         school_info: {
-          school_state: selection.school.state,
-          school_zip: selection.school.zip,
           school_id: selection.school.nces_id,
+          school_district_id: selection.school.school_district_id,
           school_name: selection.school.name,
+          state: selection.school.state,
+          zip: selection.school.zip,
           school_type: selection.school.school_type
         }
       });
@@ -138,11 +138,25 @@ export default class EnrollForm extends React.Component {
   };
 
   submit() {
+    let params = {
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      school_info: {
+        school_id: this.state.school_info.school_id,
+        school_district_id: this.state.school_info.school_district_id,
+        school_name: this.state.school_info.school_name,
+        state: this.state.school_info.state,
+        zip: this.state.school_info.zip,
+        school_type: this.state.school_info.school_type,
+        country: "US" // HACK JUST FOR NOW - need to enforce in UI
+      }
+    };
     this.submitRequest = $.ajax({
       method: 'POST',
       url: `/api/v1/pd/workshops/${this.props.workshop_id}/enrollments`,
       contentType: 'application/json',
-      data: JSON.stringify(this.state), // only send necessary fields
+      data: JSON.stringify(params),
       complete: () => {
         console.log('complete');
       }
@@ -276,24 +290,6 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleSchoolInfoChange}
               validationState={this.state.errors.hasOwnProperty("school_name") ? ERROR : null}
               errorMessage={this.state.errors.school_name}
-            />
-            <FieldGroup
-              id="school_address"
-              label="School Address"
-              type="text"
-              required={true}
-              onChange={this.handleSchoolInfoChange}
-              validationState={this.state.errors.hasOwnProperty("school_address") ? ERROR : null}
-              errorMessage={this.state.errors.school_address}
-            />
-            <FieldGroup
-              id="school_city"
-              label="School City"
-              type="text"
-              required={true}
-              onChange={this.handleSchoolInfoChange}
-              validationState={this.state.errors.hasOwnProperty("school_city") ? ERROR : null}
-              errorMessage={this.state.errors.school_city}
             />
             <FormGroup
               id="school_state"
