@@ -12,7 +12,7 @@ export default storybook => {
           <FreeResponseDetailsDialog
             isDialogOpen={true}
             closeDialog={() => {}}
-            questionText={"Hello world. I display markdown questions."}
+            questionText={"Hello world. I display *markdown* questions in a dialog."}
           />
         )
       }
