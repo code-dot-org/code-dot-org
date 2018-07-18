@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+import { createJsWrapperBlockCreator } from "../block_utils";
+
 /**
  * @fileoverview Demonstration of Blockly: Solving a maze.
  * @author fraser@google.com (Neil Fraser)
@@ -411,4 +413,22 @@ exports.install = function (blockly, blockInstallOptions) {
   delete blockly.Blocks.procedures_defreturn;
   delete blockly.Blocks.procedures_ifreturn;
 
+};
+
+exports.installCustomBlocks = function (blockly, blockInstallOptions, customBlocks) {
+  const createJsWrapperBlock = createJsWrapperBlockCreator(blockly, 'maze');
+
+  const blocksByCategory = {};
+  customBlocks.forEach(({name, category, config, helperCode}) => {
+    const blockName = createJsWrapperBlock(config, helperCode);
+    if (!blocksByCategory[category]) {
+      blocksByCategory[category] = [];
+    }
+    blocksByCategory[category].push(blockName);
+    if (name && blockName !== name) {
+      console.error(`Block config ${name} generated a block named ${blockName}`);
+    }
+  });
+
+  return blocksByCategory;
 };
