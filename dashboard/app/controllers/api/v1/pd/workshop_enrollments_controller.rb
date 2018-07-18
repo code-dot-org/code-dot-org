@@ -18,35 +18,41 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   # POST /api/v1/pd/workshops/1/enrollments
   def create
-    p "made it to create"
-    # if @workshop.nil?  -> 404
+    @workshop = Pd::Workshop.find_by_id params[:workshop_id]
+    if @workshop.nil?
+      p "404 bc workshop nil"
+    end
 
-    # enrollment_email = enrollment_params[:email]
-    # user = User.find_by_email_or_hashed_email enrollment_email
+    enrollment_email = params[:email]
+    user = User.find_by_email_or_hashed_email enrollment_email
 
-    # # See if a previous enrollment exists for this email
-    # previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
-    # if previous_enrollment
-    #   # @cancel_url = url_for action: :cancel, code: previous_enrollment.code
-    #   # render :duplicate
-    # elsif workshop_owned_by? user
-    #   # render :own
-    # elsif workshop_closed?
-    #   # render :closed
-    # elsif workshop_full?
-    #   # render :full
-    # else
-    @enrollment = ::Pd::Enrollment.new workshop: @workshop
+    # See if a previous enrollment exists for this email
+    previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
+    if previous_enrollment
+      # cancel_url = url_for action: :cancel, code: previous_enrollment.code
+      p "cancel bc duplicate"
+      # render :duplicate
+    elsif workshop_owned_by? user
+      p "this is your own workshop"
+      # render :own
+    elsif workshop_closed?
+      p "this workshop is closed"
+      # render :closed
+    elsif workshop_full?
+      p "this workshop is full"
+      # render :full
+    else
+      enrollment = ::Pd::Enrollment.new workshop: @workshop
+      enrollment.school_info_attributes = school_info_params
 
-    # @enrollment.school_info_attributes = school_info_params
-
-    if @enrollment.update enrollment_params
-      Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
-      Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
-      redirect_to action: :thanks, code: @enrollment.code, controller: 'pd/workshop_enrollment'
-      # else
-      # render :new
-      # end
+      if enrollment.update enrollment_params
+        p "updated, sending emails"
+        Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
+        Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
+        #redirect_to action: :thanks, code: enrollment.code, controller: 'pd/workshop_enrollment'
+        # else
+        # render :new
+      end
     end
   end
 
@@ -60,12 +66,35 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   private
 
   def enrollment_params
-    params.require(:pd_enrollment).permit(
+    params.require(:workshop_enrollment).permit(
       :first_name,
       :last_name,
-      :email,
-      :email_confirmation,
-      :school
+      :email
     )
+  end
+
+  def school_info_params
+    params.require(:school_info).permit(
+      :school_type,
+      :state,
+      :zip,
+      :school_district_id,
+      :school_id,
+      :school_name,
+      :country
+    )
+  end
+
+  def workshop_closed?
+    @workshop.state == ::Pd::Workshop::STATE_ENDED
+  end
+
+  def workshop_full?
+    @workshop.enrollments.count >= @workshop.capacity
+  end
+
+  def workshop_owned_by?(user)
+    return false unless user
+    @workshop.organizer_or_facilitator? user
   end
 end
