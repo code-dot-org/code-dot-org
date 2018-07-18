@@ -11,7 +11,7 @@ export default storybook => {
         description: 'Table of personal projects',
         story: () => (
           <PersonalProjectsTable
-            projectList={stubFakePersonalProjectData}
+            personalProjectsList={stubFakePersonalProjectData}
           />
         )
       },
@@ -20,7 +20,7 @@ export default storybook => {
         description: 'Table when there are 0 personal projects',
         story: () => (
           <PersonalProjectsTable
-            projectList={[]}
+            personalProjectsList={[]}
           />
         )
       },

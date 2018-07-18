@@ -148,7 +148,7 @@ const isPublishedFormatter = (isPublished) => {
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
+    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
   };
 
   state = {
@@ -282,6 +282,7 @@ class PersonalProjectsTable extends React.Component {
   };
 
   render() {
+    console.log("projects", this.props.personalProjectsList);
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
@@ -291,7 +292,7 @@ class PersonalProjectsTable extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.projectList);
+    })(this.props.personalProjectsList);
 
     return (
       <Table.Provider
@@ -308,5 +309,5 @@ class PersonalProjectsTable extends React.Component {
 export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
 
 export default connect(state => ({
-  projectLists: state.projects.projectLists,
+  personalProjectsList: state.projects.personalProjectsList.projects,
 }))(PersonalProjectsTable);
