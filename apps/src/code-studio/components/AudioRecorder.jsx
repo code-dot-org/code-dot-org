@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import color from "../../util/color";
 
 const styles = {
   buttonRow: {
@@ -8,6 +9,10 @@ const styles = {
   },
   button: {
     marginRight: 30
+  },
+  blueButton: {
+    background: color.default_blue,
+    color: color.white
   }
 };
 
@@ -36,7 +41,7 @@ export default class AudioRecorder extends React.Component {
           <button
             onClick={this.onStopClick}
             id="stop-record"
-            style={styles.button}
+            style={{...styles.blueButton, ...styles.button}}
           >
             <i className="fa fa-stop" />
             &nbsp;Stop

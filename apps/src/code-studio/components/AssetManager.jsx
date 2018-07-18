@@ -157,7 +157,7 @@ export default class AssetManager extends React.Component {
       <button
         onClick={()=>{}}
         id="record-asset"
-        disabled={!this.props.uploadsEnabled}
+        className="share"
       >
         <i className="fa fa-microphone" />
         &nbsp;Record Audio
