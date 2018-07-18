@@ -5,13 +5,68 @@
 
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
-var ReactDOM = require('react-dom');
-var Radium = require('radium');
-var utils = require('../utils');
-var commonStyles = require('../commonStyles');
+import ReactDOM from 'react-dom';
+import Radium from 'radium';
 import { connect } from 'react-redux';
+import * as utils from '../utils';
+import commonStyles from '../commonStyles';
 
-var styles = {
+class CodeWorkspaceContainer extends React.Component {
+  static propTypes = {
+    // redux provided
+    hidden: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    noVisualization: PropTypes.bool.isRequired,
+
+    // not in redux
+    topMargin: PropTypes.number.isRequired,
+    children: PropTypes.node,
+  };
+
+  /**
+   * Called externally
+   * @returns {number} The height of the rendered contents in pixels
+   */
+  getRenderedHeight() {
+    return $(ReactDOM.findDOMNode(this)).height();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.topMargin !== prevProps.topMargin) {
+      utils.fireResizeEvent();
+    }
+  }
+
+  render() {
+    const {hidden, isRtl, noVisualization, topMargin, children} = this.props;
+    const mainStyle = {
+      ...styles.main,
+      top: topMargin,
+      ...(noVisualization && styles.noVisualization),
+      ...(isRtl && styles.mainRtl),
+      ...(noVisualization && isRtl && styles.noVisualizationRtl),
+      ...(hidden && commonStyles.hidden),
+    };
+
+    return (
+      <div style={mainStyle} className="editor-column">
+        <div id="codeWorkspace" style={styles.codeWorkspace}>
+          {children}
+        </div>
+      </div>
+    );
+  }
+}
+
+export const TestableCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
+export default connect(state => ({
+  hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
+  isRtl: state.isRtl,
+  noVisualization: state.pageConstants.noVisualization,
+}), undefined, null, { withRef: true }
+)(CodeWorkspaceContainer);
+
+const styles = {
   main: {
     position: 'absolute',
     // left gets set externally :(
@@ -49,57 +104,3 @@ var styles = {
     right: 0
   }
 };
-
-var CodeWorkspaceContainer = React.createClass({
-  propTypes: {
-    // redux provided
-    hidden: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    pinWorkspaceToBottom: PropTypes.bool.isRequired,
-    noVisualization: PropTypes.bool.isRequired,
-
-    // not in redux
-    topMargin: PropTypes.number.isRequired,
-    children: PropTypes.node,
-  },
-
-  /**
-   * Called externally
-   * @returns {number} The height of the rendered contents in pixels
-   */
-  getRenderedHeight: function () {
-    return $(ReactDOM.findDOMNode(this)).height();
-  },
-
-  componentDidUpdate: function (prevProps) {
-    if (this.props.topMargin !== prevProps.topMargin) {
-      utils.fireResizeEvent();
-    }
-  },
-
-  render: function () {
-    var mainStyle = [styles.main, {
-      top: this.props.topMargin
-    },
-      this.props.noVisualization && styles.noVisualization,
-      this.props.isRtl && styles.mainRtl,
-      this.props.noVisualization && this.props.isRtl && styles.noVisualizationRtl,
-      this.props.hidden && commonStyles.hidden
-    ];
-
-    return (
-      <div style={mainStyle} className="editor-column">
-        <div id="codeWorkspace" style={styles.codeWorkspace}>
-          {this.props.children}
-        </div>
-      </div>
-    );
-  }
-});
-module.exports = connect(state => ({
-  hidden: state.pageConstants.hideSource && !state.pageConstants.visualizationInWorkspace,
-  isRtl: state.isRtl,
-  noVisualization: state.pageConstants.noVisualization,
-  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
-}), undefined, null, { withRef: true }
-)(Radium(CodeWorkspaceContainer));

@@ -47,7 +47,7 @@ ru-RU:
   csedweek_og_title: Час кода настал
   csedweek_og_description: 4-10 декабря 2017 года. Информатика - это основа для каждого
     учащегося.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -274,21 +274,15 @@ ru-RU:
   just_did_course2: Я только что закончил(а) курс 2 - посмотрите на @codeorg
   just_did_course3: Я только что закончил курс 3 - проверить это! @codeorg
   just_did_course4: Я только что закончил(а) курс 4 - посмотрите на @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: Я только что закончил(а) ускоренный курс - посмотрите на @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   just_did_course_donor: I just finished %{course} - check it out! Thanks %{donor_twitter}
     for supporting @codeorg
   twitter_teach_cs: 'Почему не во всех школах изучают информатику? Мы можем исправить
@@ -506,7 +500,7 @@ ru-RU:
   playlab_iceage_title: Ледниковый период — уже скоро
   playlab_iceage_title_live: Ледниковый период
   starwars_subtitle: Создайте галактику, используя код
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Используйте переносные блоки и JavaScript.
   starwars_javascript_specs: Только английский | Современные браузеры | Возраст 11+
   starwars_blocks_title: Блоков
@@ -1264,9 +1258,9 @@ ru-RU:
   cspunit4_name: 'Урок 4: Данные'
   cspunit5_name: CS принципы блок 5
   cspunit6_name: CS принципы блок 6
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Модуль 5: Данные и общество'
   csd6_name: 'Модуль 6: Физические вычислительния'
@@ -1340,7 +1334,7 @@ ru-RU:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'В разработке: Курсы A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "«15 - 16» Основы информатики"
   csp17_category_name: "«16 - 17» Основы информатики"
@@ -1567,12 +1561,17 @@ ru-RU:
     в темы программирования, реализованные в предыдущих курсах, чтобы найти более
     гибкие решения сложных задач. К концу этого курса студенты создадут интерактивные
     истории и игры, они смогут поделиться с кем-либо. Рекомендуется для 4-8 классов.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -2126,13 +2125,13 @@ ru-RU:
     свой браузер до <a href='%{supported_browsers_url}', target='_blank'>одного из
     поддерживаемых браузеров</a>. Вы можете попробовать просмотреть страницу, но будьте
     готовы к тому, что функциональность может быть нарушена.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: взмах крыльев
   infinity_shortcode: inf
-  playlab_shortcode: играть
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: На главную
   header_my_dashboard: My Dashboard
@@ -2179,7 +2178,7 @@ ru-RU:
   user_header_settings: Настройки аккаунта
   user_header_logout: Выйти
   user_header_signin: Вход
-  view_all_sections: View All Sections
+  view_all_sections: View all sections
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2187,10 +2186,8 @@ ru-RU:
   signing_in: Signing In
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  sign_in_instruct_website: Go to %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.

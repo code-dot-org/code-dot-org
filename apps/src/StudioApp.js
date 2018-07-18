@@ -33,7 +33,7 @@ import InstructionsDialogWrapper from './templates/instructions/InstructionsDial
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
-import WireframeButtons from './templates/WireframeButtons';
+import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
 import getAchievements from './achievements';
