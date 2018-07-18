@@ -344,13 +344,9 @@ class Blockly < Level
     options.freeze
   end
 
-  # @param resolve [Boolean] if true (default), localize property using I18n#t.
-  #   if false, just return computed property key directly.
-  def get_localized_property(property_name, resolve: true)
+  def get_localized_property(property_name)
     if should_localize? && try(property_name)
-      key = "data.#{property_name.pluralize}.#{name}_#{property_name.singularize}"
-      return key unless resolve
-      I18n.t(key, default: nil)
+      I18n.t("data.#{property_name.pluralize}.#{name}_#{property_name.singularize}", default: nil)
     end
   end
 
@@ -366,14 +362,14 @@ class Blockly < Level
     return unless authored_hints
 
     if should_localize?
-      authored_hints_key = get_localized_property("authored_hints", resolve: false)
+      translations = get_localized_property("authored_hints")
 
-      return unless authored_hints_key
+      return unless translations.instance_of? Hash
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
         next if hint['hint_markdown'].nil? || hint['hint_id'].nil?
 
-        translated_text = I18n.t(hint['hint_id'], scope: authored_hints_key, default: nil)
+        translated_text = translations.try(:[], hint['hint_id'].to_sym)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -403,7 +399,7 @@ class Blockly < Level
       end
     else
       val = [game.app, game.name].map do |name|
-        I18n.t("data.level.instructions.#{name}_#{level_num}", default: nil)
+        I18n.t("data.level.instructions").try(:[], "#{name}_#{level_num}".to_sym)
       end.compact.first
       return val unless val.nil?
     end
