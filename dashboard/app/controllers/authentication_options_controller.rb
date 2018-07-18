@@ -17,12 +17,22 @@ class AuthenticationOptionsController < ApplicationController
 
       # Replace primary_contact_info if we just destroyed it
       if current_user.primary_contact_info_id == auth_option.id
-        current_user.update primary_contact_info:
-          current_user.authentication_options.
-            find_by(hashed_email: auth_option.hashed_email)
+        replacement = current_user.authentication_options.find_by hashed_email: auth_option.hashed_email
+        replacement ||= email_option_from_deleted_option auth_option
+        current_user.update primary_contact_info: replacement
       end
     end
 
     head(:no_content)
+  end
+
+  private def email_option_from_deleted_option(deleted_option)
+    AuthenticationOption.new(
+      user: deleted_option.user,
+      email: deleted_option.email,
+      hashed_email: deleted_option.hashed_email,
+      credential_type: AuthenticationOption::EMAIL,
+      authentication_id: deleted_option.hashed_email
+    )
   end
 end
