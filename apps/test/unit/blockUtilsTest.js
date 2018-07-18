@@ -1,5 +1,5 @@
 import dedent from 'dedent';
-import {
+import utils, {
   appendBlocksByCategory,
   appendNewFunctions,
   cleanBlocks,
@@ -521,7 +521,7 @@ describe('block utils', () => {
   });
 
   describe('determineInputs', () => {
-    const NUMBER = 5;
+    const { NUMBER } = Blockly.BlockValueType;
 
     it('creates a single dummy input for no inputs', () => {
       const inputs = determineInputs('block text', []);
@@ -1050,6 +1050,142 @@ describe('block utils', () => {
         expect(code.trim()).to.equal(
           'processAnotherStringValue("some input with a \\"quote\\" in it");');
       });
+    });
+  });
+
+  describe('createJsWrapperBlockCreator', () => {
+    let createJsWrapperBlock;
+    let fakeBlockly, generators, fakeBlock;
+    const { ORDER_FUNCTION_CALL, ORDER_NONE } = Blockly.JavaScript;
+
+    before(() => {
+      sinon.stub(utils, 'interpolateInputs');
+      sinon.spy(utils, 'determineInputs');
+      sinon.stub(Blockly.JavaScript, 'valueToCode').returnsArg(1);
+    });
+    after(() => {
+      utils.interpolateInputs.restore();
+      utils.determineInputs.restore();
+      Blockly.JavaScript.valueToCode.restore();
+    });
+
+    beforeEach(() => {
+      utils.interpolateInputs.reset();
+      utils.determineInputs.reset();
+      Blockly.JavaScript.valueToCode.resetHistory();
+
+      generators = {};
+      fakeBlockly = {
+        Blocks: {},
+        Generator: {
+          get: () => generators,
+        },
+      };
+      fakeBlock = {
+        setHSV: sinon.stub(),
+        setOutput: sinon.stub(),
+        setInputsInline: sinon.stub(),
+        appendStatementInput: sinon.stub(),
+        setNextStatement: sinon.stub(),
+        setPreviousStatement: sinon.stub(),
+      };
+
+      createJsWrapperBlock = createJsWrapperBlockCreator(fakeBlockly, 'ramlab');
+    });
+
+    const fakeInstall = () => {
+      Object.keys(fakeBlockly.Blocks).map(key =>
+        Object.assign(fakeBlockly.Blocks[key], fakeBlock));
+      Object.values(fakeBlockly.Blocks).map(block => block.init());
+    };
+
+    it('creates a block for a zero-argument function', () => {
+      createJsWrapperBlock({
+        func: 'foo',
+        blockText: 'do something',
+      });
+      fakeInstall();
+      const code = generators['ramlab_foo']();
+
+      expect(utils.determineInputs).to.have.been.calledWith('do something', []);
+      expect(fakeBlockly.Blocks.ramlab_foo.setOutput).to.have.not.been.called;
+      expect(fakeBlock.appendStatementInput).to.have.not.been.called;
+      expect(fakeBlock.skipNextBlockGeneration).to.be.undefined;
+      expect(fakeBlock.setNextStatement).to.have.been.calledWith(true);
+      expect(fakeBlock.setPreviousStatement).to.have.been.calledWith(true);
+
+      expect(code).to.equal('foo();\n');
+    });
+
+    it('creates a block for a zero-argument function that returns', () => {
+      createJsWrapperBlock({
+        func: 'bar',
+        blockText: 'get something',
+        returnType: Blockly.BlockValueType.NUMBER,
+      });
+      fakeInstall();
+      const code = generators['ramlab_bar']();
+
+      expect(fakeBlock.setOutput).to.have.been.calledWith(
+        true, Blockly.BlockValueType.NUMBER);
+      expect(fakeBlock.setNextStatement).to.have.not.been.called;
+      expect(fakeBlock.setPreviousStatement).to.have.not.been.called;
+
+      expect(code).to.deep.equal(['bar()', ORDER_FUNCTION_CALL]);
+    });
+
+    it('creates a block for a one argument function', () => {
+      createJsWrapperBlock({
+        func: 'baz',
+        args: [{ name: 'ARG' }],
+        blockText: 'process {ARG}',
+      });
+      fakeInstall();
+      const code = generators['ramlab_baz']();
+
+      expect(utils.determineInputs).to.have.been.calledWith(
+        'process {ARG}', [{ name: 'ARG' }]);
+      expect(code).to.deep.equal('baz(ARG);\n');
+    });
+
+    it('creates a block for a one argument method', () => {
+      createJsWrapperBlock({
+        func: 'qux',
+        args: [{ name: 'THAT' }],
+        blockText: '{THIS} chases {THAT}',
+        methodCall: true,
+      });
+      fakeInstall();
+      const code = generators['ramlab_qux']();
+
+      expect(utils.determineInputs).to.have.been.calledWith(
+        '{THIS} chases {THAT}', [{ name: 'THAT' }, { name: 'THIS' }]);
+      expect(code).to.deep.equal('THIS.qux(THAT);\n');
+    });
+
+    it('creates a block for an expression with return type', () => {
+      createJsWrapperBlock({
+        expression: 'quux[0]',
+        name: 'quux',
+        blockText: 'swish and flick',
+        returnType: Blockly.BlockValueType.NUMBER,
+      });
+      fakeInstall();
+      const code = generators['ramlab_quux']();
+
+      expect(code).to.deep.equal(['quux[0]', ORDER_NONE]);
+    });
+
+    it('creates a block for an expression without return type', () => {
+      createJsWrapperBlock({
+        expression: 'const a',
+        name: 'corge',
+        blockText: 'swish and flick',
+      });
+      fakeInstall();
+      const code = generators['ramlab_corge']();
+
+      expect(code).to.deep.equal('const a;\n');
     });
   });
 });
