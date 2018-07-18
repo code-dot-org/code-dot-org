@@ -206,7 +206,9 @@ class SectionAssessments extends Component {
                 <SubmissionStatusAssessmentsContainer />
                 {totalStudentSubmissions > 0 &&
                   <div>
-                    <MultipleChoiceAssessmentsOverviewContainer />
+                    <MultipleChoiceAssessmentsOverviewContainer
+                      openDialog={this.showMulitpleChoiceDetailDialog}
+                    />
                     <MultipleChoiceByStudentContainer />
                     <FreeResponsesAssessmentsContainer
                       openDialog={this.showFreeResponseDetailDialog}
@@ -227,7 +229,9 @@ class SectionAssessments extends Component {
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
-                    <MultipleChoiceSurveyOverviewContainer />
+                    <MultipleChoiceSurveyOverviewContainer
+                      openDialog={this.showMulitpleChoiceDetailDialog}
+                    />
                     <FreeResponsesSurveyContainer
                       openDialog={this.showFreeResponseDetailDialog}
                     />

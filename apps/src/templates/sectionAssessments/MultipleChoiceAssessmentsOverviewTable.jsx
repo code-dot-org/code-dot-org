@@ -7,6 +7,7 @@ import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import styleConstants from "@cdo/apps/styleConstants";
 import { multipleChoiceDataPropType } from './assessmentDataShapes';
+import color from "@cdo/apps/util/color";
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -33,6 +34,9 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
+  },
+  link: {
+    color: color.teal,
   }
 };
 
@@ -57,12 +61,6 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   );
 };
 
-const questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
-  return (
-    <div>{`${rowData.questionNumber}. ${question}`}</div>
-  );
-};
-
 /**
  *  A single table that shows students' responses to each multiple choice question.
  * The table displays the percent of students that select an answer choice and
@@ -71,6 +69,7 @@ const questionFormatter = (question, {rowData, columnIndex, rowIndex, property})
 class MultipleChoiceAssessmentsOverviewTable extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
+    openDialog: PropTypes.func.isRequired,
   };
 
   state = {
@@ -97,6 +96,16 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
         selectedColumn
       })
     });
+  };
+
+  questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
+    return (
+      <div>
+        <a style={styles.link} onClick={()=>this.props.openDialog(question)}>
+          {`${rowData.questionNumber}. ${question}`}
+        </a>
+      </div>
+    );
   };
 
   getNotAnsweredColumn = () => (
@@ -155,7 +164,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
-        format: questionFormatter,
+        format: this.questionFormatter,
         props: {
           style: {
             ...tableLayoutStyles.cell,
