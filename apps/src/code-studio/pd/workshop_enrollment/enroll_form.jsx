@@ -2,7 +2,7 @@
  * Form to create a workshop enrollment
  */
 import React, {PropTypes} from 'react';
-import {FormGroup, Button, Row, Col, ControlLabel} from 'react-bootstrap';
+import {FormGroup, Button, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import Select from "react-select";
 import FieldGroup from '../form_components/FieldGroup';
@@ -160,7 +160,6 @@ export default class EnrollForm extends React.Component {
       });
       errors = Object.assign(errors, requiredFieldsErrors);
       this.setState({errors: errors});
-      console.log(errors);
       return false;
     }
     return true;
@@ -264,6 +263,7 @@ export default class EnrollForm extends React.Component {
                 />
               </Col>
             </Row>
+            <HelpBlock>{this.state.errors.school_id}</HelpBlock>
           </FormGroup>
         }
         {this.state.school_id && this.state.school_id === OTHER_SCHOOL_VALUE &&
@@ -307,6 +307,7 @@ export default class EnrollForm extends React.Component {
                 options={STATES.map(v => ({value: v, label: v}))}
                 clearable={false}
               />
+              <HelpBlock>{this.state.errors.school_state}</HelpBlock>
             </FormGroup>
             <FieldGroup
               id="school_zip"
@@ -315,7 +316,7 @@ export default class EnrollForm extends React.Component {
               required={true}
               onChange={this.handleSchoolInfoChange}
               validationState={this.state.errors.hasOwnProperty("school_zip") ? ERROR : null}
-              errorMessage={this.state.errors.confirm_emaischool_zipl}
+              errorMessage={this.state.errors.school_zip}
             />
             <ButtonList
               key="school_type"
@@ -344,6 +345,7 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleRoleChange}
               options={ROLES.map(r => ({value: r, label: r}))}
             />
+            <HelpBlock>{this.state.errors.role}</HelpBlock>
             {this.state && TEACHING_ROLES.includes(this.state.role) &&
               <ButtonList
                 id="grades_teaching"
