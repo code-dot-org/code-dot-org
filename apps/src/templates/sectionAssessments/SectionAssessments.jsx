@@ -177,7 +177,9 @@ class SectionAssessments extends Component {
                   <div>
                     <MultipleChoiceAssessmentsOverviewContainer />
                     <MultipleChoiceByStudentContainer />
-                    <FreeResponsesAssessmentsContainer />
+                    <FreeResponsesAssessmentsContainer
+                      openDialog={this.showFreeResponseDetailDialog}
+                    />
                   </div>
                 }
               </div>

@@ -29,14 +29,11 @@ class FreeResponsesAssessmentsContainer extends Component {
     freeResponseQuestions: PropTypes.arrayOf(freeResponseSummaryPropType),
     studentId: PropTypes.number,
     currentStudentHasResponses: PropTypes.bool,
+    openDialog: PropTypes.func.isRequired,
   };
 
-  state = {
-    isExpanded: false,
-  };
-
-  expandText = () => {
-    this.setState({isExpanded: true});
+  expandText = (text) => {
+    this.props.openDialog(text);
   };
 
   render() {
@@ -50,19 +47,14 @@ class FreeResponsesAssessmentsContainer extends Component {
             }
             {freeResponseQuestions.map((question, index) => (
               <div key={index}>
-                {!this.state.isExpanded &&
-                  <div style={styles.text}>
-                    {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
-                    {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
-                      <a onClick={this.expandText}><span>{i18n.seeFullQuestion()}</span></a>
-                    }
-                  </div>
-                }
-                {this.state.isExpanded &&
-                  <div style={styles.text}>
-                    {`${question.questionNumber}. ${question.questionText}`}
-                  </div>
-                }
+                <div style={styles.text}>
+                  {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
+                  {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
+                    <a onClick={() => {this.expandText(question.questionText);}}>
+                      <span>{i18n.seeFullQuestion()}</span>
+                    </a>
+                  }
+                </div>
                 <FreeResponsesAssessmentsTable
                   freeResponses={question.responses}
                 />
