@@ -268,9 +268,8 @@ az:
           (Məsləhət: funksiyaya bir giriş əlavə etmək üçün ulduzu klikləyin).'
         turtle_3_7: '"Ev çək"ə "uzunluq" adlanan bir giriş əlavə edin və fil üçün
           böyük bir ev tikin (tərəflərinin uzunluğu 150 piksel)'
-        turtle_3_8: Əvvəlki tapmacadakı blokların hamısı buradadır.  "Ev çək"i elə
-          dəyişdirin ki, yeni bir evi çəkib bitirəndən sonra mən aşağı sağ küncdə
-          olum. Bu dəyişdirilmiş funksiyadan üç ev çəkmək üçün istifadə edin.
+        turtle_3_8: Modify "draw a house" so I end up at the bottom right corner after
+          drawing a new house. Use this modified function to draw three houses.
         turtle_3_9: Siz kömək olmadan "ev çək" funksiyasını yenidən yarada bilərsiniz
           mi? Buna cəhd edin və sonra bir sıra evlər çəkin.
         turtle_3_10: Siz artıq çoxlu məlumat öyrənmisiniz! İndi bu biliklərdən istifadə
@@ -332,8 +331,8 @@ az:
         jigsaw_8: Arrange the blocks to form the image
         jigsaw_9: Arrange the blocks to form the image
         jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_11: Put these blocks in order by number
+        jigsaw_12: Put these blocks in order by number
         jigsaw_13: Fix the puzzle!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
@@ -348,15 +347,14 @@ az:
           have the cat say "hello" when the dog reaches him?
         studio_c2_5: Can you write a program to make the octopus say "hello" when
           it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_c2_6: Can you write a program to make Waddles move around using the
+          up / down / left /right keys to hit all of the targets?
         studio_c2_7: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
+        studio_c2_8: Can you have Waddles say "Ouch!" and play a "hit" sound if he
+          runs into the dinosaur, and then move him with the arrows to make that happen?
+        studio_c2_9: Can you add a block to score a point when Waddles runs into the
+          octopus, and then move him with the arrows until you score?
         studio_c2_10: Arxa fonu və pinqvinin sürətini dəyişmək üçün bloklar əlavə
           edib, sonra onu oxların köməyi ilə xal qazanana qədər hərəkər etdirə bilərsiniz?
         studio_c2_11: Create your own story. When you're done, click Finish to let
@@ -372,15 +370,15 @@ az:
           let friends try your story on their phones.
         studio_c3_game_1: Can you write a program to make the octopus say "hello"
           when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: Can you write a program to make Waddles move around using
+          the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
+        studio_c3_game_4: Can you have Waddles say "Ouch!" and play a "hit" sound
           if he runs into the dinosaur, and then move him with the arrows to make
           that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_5: Can you add a block to score a point when Waddles runs into
+          the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Arxa fonu və pinqvinin sürətini dəyişmək üçün bloklar əlavə
           edib, sonra onu oxların köməyi ilə xal qazanana qədər hərəkər etdirə bilərsiniz?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
@@ -407,15 +405,15 @@ az:
         studio_playlab_10: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
         studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
+          you help him say "hello" by dragging the "say" block out into the work area
           and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
+        studio_iceage_hello2: Manny (actor 1) found Sid (actor 2) and wants to invite
+          him on the adventure. Help them greet each other by using the the "actor
           say" block twice.
         studio_iceage_move_to_flag: Cırmaq öz palıd qozasını axtarır! "Get" bloku
           vasitəsi ilə ona son 200 pikseli keçməkdə kömək edin.
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          2). Help Diego move 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
           when they find each other.
         studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
@@ -433,8 +431,8 @@ az:
           event to make it so that you both play a sound and score a point when Sid
           and Granny collide? Press Run to play the game.
         studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
+          is coming! Change the background to an icy background and set Sid’s speed
+          to fast, then press Run and move him to Diego to warn him.
         studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
           that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
           hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
@@ -446,12 +444,12 @@ az:
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
         studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
+          are heading to school.  Help them greet each other by using the "actor say"
+          block twice.
         studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
           him go the last 200 pixels using the "move" block.
         studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          for the field day! Help Gumball move 200 pixels down to Darwin using the
           "move actor" block.  Next, connect a block to the "when actor touches" event
           to play a sound when they find each other.
         studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
@@ -632,7 +630,7 @@ az:
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
         csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
         csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,

@@ -71,7 +71,7 @@ zh-TW:
     mailer:
       invitation_instructions:
         subject: 邀請說明
-        hello: " %{email} 你好"
+        hello: Hello %{email}
         someone_invited_you: 有人邀請你到 %{url}，你可以透過下方連結接受邀請。
         accept: 接受邀請
         ignore: 如果你不想接收這個邀請，請忽略這封信件。<br />在你點擊上方的連結並設定好密碼之前，你的帳戶將不會建立。

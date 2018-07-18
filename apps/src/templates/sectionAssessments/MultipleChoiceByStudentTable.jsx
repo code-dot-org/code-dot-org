@@ -38,7 +38,7 @@ const styles = {
 // multiple choice assessment. Each row is a single question,
 // the students response to that question, and whether the student got
 // the correct answer.
-class SingleStudentAssessmentsMCTable extends Component {
+class MultipleChoiceByStudentTable extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceQuestionPropType),
     studentAnswerData: studentWithResponsesPropType
@@ -190,4 +190,4 @@ class SingleStudentAssessmentsMCTable extends Component {
   }
 }
 
-export default SingleStudentAssessmentsMCTable;
+export default MultipleChoiceByStudentTable;

@@ -44,7 +44,7 @@ fi-FI:
   csedweek_og_title: Koodaustunti on täällä
   csedweek_og_description: Koodaustunti on maailmanlaajuinen liike, joka tavoittaa
     kymmeniä miljoonia eri ikäisiä oppilaita yli 180:ssä maassa ja yli 45 eri kielellä.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
+  csedweek_og_description_soon: The Hour of Code is coming December 3-9, 2018. Computer
     science is foundational for every student to learn.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
@@ -171,9 +171,9 @@ fi-FI:
   third_party_appinv_btn_site: Vieraile App Inventor 2 -sivulla
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
+    fun and accessible for beginners. For schools and teachers CodeHS provides curriculum,
+    teacher tools and PD. For individual learners, you can get the help you need along
+    the way from a network of tutors.
   third_party_codehs_btn_try: Intro CS lisätietoja kouluille
   third_party_codecademy_desc: Uudelleenajattelemme koulutuksen alhaalta ylös. Netti
     on uudelleen opettanut melkein kaiken - kaupankäynnin, sosiaalisen verkostoitumisen,
@@ -436,7 +436,7 @@ fi-FI:
   homepage_slot_text_link_buy: Tule mukaan
   homepage_slot_text_link_donate: Tee lahjoitus
   homepage_slot_text_link_shop: T-paitoja, hattuja & muuta
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Bring CS to your school
   homepage_header_codestudio: Koodistudion oppilas luomukset
   homepage_header_donors: Code.org kiittää tukijoitaan
   homepage_donors_seall: Näytä kaikki
@@ -494,7 +494,7 @@ fi-FI:
   playlab_iceage_title: Ice Age - Tulossa pian
   playlab_iceage_title_live: Jääkausi
   starwars_subtitle: Kasaa koodista Galaksi
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Käytä raahattavia koodipalikoita ja JavaScriptiä.
   starwars_javascript_specs: Vain englanti | Modernit selaimet | Yli 11-vuotiaille
   starwars_blocks_title: lohkot
@@ -527,22 +527,23 @@ fi-FI:
   minecraft_download_adventurer: Lataa Minecraft seikkailijan offline-versio.
   minecraft_subtitle: Minecraft Koodaustunti
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign
+    up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia,
+    Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
     problem solving and loads of fun."
   minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Teacher resources and lesson plan.
   minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a>
     facilitator quick start guide and PowerPoint presentations for younger and older
     students now."
   minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go
+    facilitator materials, and get a walk-through of the new Hero’s Journey tutorial
+    from the Minecraft team. Get a head start on thinking through what you need to
+    bring Hour of Code to young people during Computer Science Education week (December
+    4-10) and beyond.
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
     at the Microsoft Store'
   minecraft_continue_learning_description: No computer science experience required!
@@ -550,21 +551,21 @@ fi-FI:
     education. Join us at the Microsoft Store to engage in a free series of three,
     1-hour workshops where you will experience coding in a fun and stress-free environment,
     become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Sign up today</a>.
   minecraft_future: Help all youth become future ready
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}',
+    target='_blank'>access the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.
   sports_page_title: Koodaustunti Urheilua
   sports_og_title: Tee se. Kuka tahansa voi oppia.
-  sports_og_description: Choose between making a basketball game or mix and match
-    across sports.
+  sports_og_description: Champions and gold medalists encourage you to try the Hour
+    of Code. Code your own sports game.
   sports_title: Code your own sports game
   sports_watch_video: Katso video
   sports_video_title: Tee se. Kuka tahansa voi oppia.
@@ -630,27 +631,27 @@ fi-FI:
     Koodaustunnille.
   volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää
     Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want
-    volunteers passionate about computer science education to help with their Hour
-    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them."
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need
+    volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
     Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat).'
+  volunteer_engineer_submission_intro_recruit: 'Teachers would love to have somebody
+    <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about computer
+    science education</span> who can help in the classroom, or for somebody who can
+    <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students
+    by talking about the breadth of possibilities with computer science (which could
+    be done through a video chat).'
   volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
     program here</a>.
   volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
+    if you are a computer science student or software professional. You must be at
+    least 18 years old to sign up as a volunteer. Note that all the fields you fill
+    out in this section will be publicly available to anyone looking at the <a href="/volunteer/local">volunteer
+    map</a>. Fields marked with a <span class="form-required-field">*</span> are required.
+  volunteer_engineer_submission_intro_links: Are you a teacher looking for volunteers?
+    Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.
   volunteer_engineer_submission_update_information: Päivitä tietosi
   volunteer_engineer_submission_header_shared: Tietoa jaetaan opettajille vapaaehtoisten
     kartasta
@@ -670,8 +671,7 @@ fi-FI:
     (Valitse kaikki sopivat vaihtoehdot)
   volunteer_engineer_submission_checkbox_after_hoc: Olen kiinnostunut vapaaehtoistyöstä
     Koodaustunnin jälkeen
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
+  volunteer_engineer_submission_field_time_commitment: Time commitment
   volunteer_engineer_submission_field_linkedin: LinkedIn-profiili
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook-profiili
@@ -680,7 +680,8 @@ fi-FI:
   volunteer_engineer_submission_field_description_desc: Kuvaa tietojenkäsittelytieteen
     osaamisesi ja mitä apua voisit tarjota vapaaehtoisena paikallisille opettajille.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
+    and/or participation. If you speak language(s) other than English, be sure to
+    include it here.
   volunteer_engineer_submission_header_private: Tiedot ovat luottamuksellisia ja niitä
     ei koskaan jaeta
   volunteer_engineer_submission_field_email: Sähköpostiosoite
@@ -702,9 +703,10 @@ fi-FI:
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
   volunteer_engineer_submission_submit: Jatka
-  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
-    will be using <a href="%{url}">this map</a> to search for and contact volunteers
-    like you.
+  volunteer_engineer_submission_thankyou: Thank you! Your volunteer information was
+    successfully submitted. Teachers will be using <a href="%{url}">this map</a> to
+    search for and contact volunteers like you. Please allow 48 hours for your information
+    to appear correctly on the map.
   volunteer_engineer_submission_commitment_uncertain: Epävarma
   volunteer_engineer_submission_commitment_one_hr_per_week: tunti viikossa
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 tuntia viikossa
@@ -827,14 +829,14 @@ fi-FI:
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
     assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
+    These are done outside of Code.org.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
+    we have assessment questions available as part of Code.org to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_summaries: Assessment summaries
+  dashboard_assessments_answers: All assessment answers
   dashboard_surveys_answers: Kysely
   dashboard_percent: Prosenttia
   dashboard_filter_by_stage: 'Suodata tason mukaan:'
@@ -870,7 +872,11 @@ fi-FI:
     %{script_name}
   dashboard_progress_pair_programming: pariohjelmointi
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Most of our classes are designed to work for younger ages
+    and do not require students to type text responses to questions, so you will not
+    see any text responses here. For older students in middle and high school courses,
+    you can see their submissions to open-ended text response questions by choosing
+    the assigned course from the drop down above.
   dashboard_sections_new_section: Uusi ryhmä
   dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Luo uusia ryhmiä ja lisää opiskelijoita
@@ -911,17 +917,14 @@ fi-FI:
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
-  dashboard_sections_move_students: Move Students
+  dashboard_sections_move_students: Move students
   dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not be able to
+    save progress in this course from December 3 - 11 due to the amount of traffic
+    our site will receive for the Hour of Code.  Everything else in this tutorial
+    will continue to work as expected.  You may still assign the course and give all
+    students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print
+    these in advance</a>.)  We will save and report student progress for every other
     week of the year.
   dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
@@ -947,7 +950,10 @@ fi-FI:
     sign in page with your students:'
   dashboard_students_print_info: Tulosta kortit oppilaidesi kirjautumistiedoista.
   dashboard_students_secret_picture_title: Salainen kuva
-  dashboard_students_secret_picture: Salainen kuva
+  dashboard_students_secret_picture: This section uses <b>picture</b> as its secret
+    type.  It means that each of your students has a secret picture used in place
+    of a password to sign in.  Students should use the sign in web address given above
+    to sign in.
   dashboard_students_reset_picture: Voit nollata oppilaan salaisen kuvan koska tahansa
     valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salainen
     kuva luodaan oppilaalle käytettäväksi sisäänkirjautuessa.
@@ -1002,7 +1008,7 @@ fi-FI:
   dashboard_teacher_worksheet: Opettajan tehtävälista
   dashboard_curriculum_csina: 'Tietotekniikkaa algebraan:'
   dashboard_curriculum_csins: 'Tietotekniikkaa luonnontieteissä:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: 'Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
@@ -1074,7 +1080,7 @@ fi-FI:
   learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
     for teaching one Hour of Code
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
+    prizes for every educator, while supplies last
   learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
     videos</a>
   hoc2014_try_new_tutorials: Kokeile uusia Koodaustunti-oppituntejamme
@@ -1088,14 +1094,15 @@ fi-FI:
   carousel_heading_international: Oppitunnit omalla kielelläsi
   carousel_heading_domestic: Oppitunnit englanniksi
   carousel_heading_beginners: Oppitunnit aloittelijoille
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: 'For beginners: Get started with blocks-based
+    coding'
   carousel_heading_javascript: JavaScriptiä opettavat oppitunnit
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Learn JavaScript
   carousel_heading_unplugged: Ei laitetta tai internetiä? Kokeile "tietokoneeton tekeminen"-oppituntejamme
   carousel_heading_devices: Opasohjelmat puhelimille ja tablettitietokoneille
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Apps for phones and tablets
   carousel_heading_languages: Oppaat muista ohjelmointikielistä
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Learn other programming languages
   carousel_heading_apps_games: Tee omia sovelluksia tai pelejä
   carousel_heading_university: Yliopistokurssit verkossa
   carousel_heading_webpages: Opi tekemään verkkosivuja
@@ -1107,10 +1114,10 @@ fi-FI:
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Opettajan muistiinpanot
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+  teach_led_lesson_plans: Teacher Led Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/learn">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    for Hour of Code tutorials, <a href="https://hourofcode.com/activity-guidelines">click
     here.</a>
   how_to_teach_hoc: Miten opettaa koodia tunnissa
   more_resources_educators: Lisämateriaalit opettajille ja kasvattajille
@@ -1163,7 +1170,7 @@ fi-FI:
   makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Koodaustunti
-  blockly_name: Blocky
+  blockly_name: Blockly
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kivi, sakset, paperi
@@ -1213,15 +1220,15 @@ fi-FI:
   pre-express-2017_name: Pre-reader Express Course (2017)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csd1_name: 'Unit 1: Computers and Logic'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
+  cspunit6_name: 'Post-AP: Databases in Apps'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -1276,7 +1283,7 @@ fi-FI:
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Nopeutettu kurssi
-  algebra_name: CS in Algebra
+  algebra_name: CS in Algebra Full Course
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
@@ -1295,10 +1302,10 @@ fi-FI:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
+  csp_category_name: "'15-'16 CS Principles"
+  csp17_category_name: CS Principles ('17-'18)
   csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
@@ -1364,12 +1371,12 @@ fi-FI:
   course2_gradelevel: 6+ -vuotiaille (lukutaitoisille)
   course3_gradelevel: 8+ -vuotiaille (kurssin 2 jälkeen)
   course4_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: Ages 4-7
+  courseb_gradelevel: Ages 5-8
+  coursec_gradelevel: Ages 6-10
   coursed_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee_gradelevel: 8-12-vuotiaille
-  coursef_gradelevel: Grade 10+
+  coursef_gradelevel: Ages 9-13
   coursea-2017_gradelevel: Ages 4-7
   courseb-2017_gradelevel: Ages 5-8
   coursec-2017_gradelevel: Ages 6-10
@@ -1514,12 +1521,17 @@ fi-FI:
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -1697,7 +1709,7 @@ fi-FI:
     by the Hour of Code. They get introduced to sequencing commands, iteration and
     conditions without even noticing it.
   csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
+    water, and customize the scenery to add your own flair. Use code to tell the story
     you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
     clocks scattered in the wilderness! In this tutorial you will learn the basics
@@ -2039,13 +2051,13 @@ fi-FI:
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
     supported browsers</a>. You can try viewing the page, but expect functionality
     to be broken.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: räpyttele
   infinity_shortcode: inf
-  playlab_shortcode: pelaa
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Etusivu
   header_my_dashboard: Kojelauta
@@ -2092,7 +2104,7 @@ fi-FI:
   user_header_settings: Tilini
   user_header_logout: Kirjaudu ulos
   user_header_signin: Kirjaudu sisään
-  view_all_sections: View All Sections
+  view_all_sections: View all sections
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
@@ -2100,10 +2112,8 @@ fi-FI:
   signing_in: Signing In
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following
     these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
+  sign_in_instruct_website: Go to %{code_org_url}.
+  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
   sign_in_instruct_name: Choose their display name.
   sign_in_instruct_secret: Choose their secret %{secret}.
   sign_in_instruct_button: Click the “Sign in” button.

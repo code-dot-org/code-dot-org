@@ -853,5 +853,203 @@ describe('block utils', () => {
         }).to.throw(Error);
       });
     });
+    describe('methodCall', () => {
+      it('generates code for a method call', () => {
+        createBlock({
+          func: 'bark',
+          methodCall: true,
+          blockText: '{THIS} barks',
+          args: [],
+        });
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .callsFake((block, name) => {
+            return {
+              THIS: 'myDog',
+            }[name];
+          });
+        const code = generator['test_bark']();
+
+        expect(code.trim()).to.equal('myDog.bark();');
+
+        valueToCodeStub.restore();
+      });
+      it('generates code for a object property', () => {
+        createBlock({
+          name: 'getToy',
+          expression: 'favoriteToy',
+          methodCall: true,
+          blockText: '{THIS}\'s favorite toy',
+          args: [],
+          returnType: 'String',
+        });
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .callsFake((block, name) => {
+            return {
+              THIS: 'myDog',
+            }[name];
+          });
+        const [code,] = generator['test_getToy']();
+
+        expect(code.trim()).to.equal('myDog.favoriteToy');
+
+        valueToCodeStub.restore();
+      });
+    });
+    describe('eventBlock', () => {
+      it('generates code for an event block', () => {
+        createBlock({
+          func: 'whenJump',
+          blockText: 'when jump',
+          args: [],
+          eventBlock: true,
+        });
+        const blockToCodeStub = sinon.stub(Blockly.JavaScript, 'blockToCode')
+          .callsFake(() => {
+            return 'someHandlerCode();\n';
+          });
+        const code = generator['test_whenJump']();
+
+        expect(code.trim()).to.equal(dedent`
+          whenJump(function () {
+            someHandlerCode();
+          });`
+        );
+
+        blockToCodeStub.restore();
+      });
+    });
+    describe('expression blocks', () => {
+      it('generates code for an expression block', () => {
+        createBlock({
+          name: 'useStrict',
+          expression: 'use strict;',
+          blockText: 'run this program in strict mode',
+          args: [],
+        });
+        const code = generator['test_useStrict']();
+
+        expect(code.trim()).to.equal('use strict;');
+      });
+      it('generates code for an expression block with a return value', () => {
+        createBlock({
+          name: 'window',
+          expression: 'window',
+          blockText: 'window object',
+          args: [],
+          returnType: 'Object',
+        });
+        const [code,] = generator['test_window']();
+
+        expect(code.trim()).to.equal('window');
+      });
+    });
+    describe('custom inputs', () => {
+      it('generates code for a statement input', () => {
+        createBlock({
+          func: 'runThisCallback',
+          blockText: 'run this callback {STATEMENT}',
+          args: [
+            { name: 'STATEMENT', statement: true },
+          ],
+        });
+        const stub = sinon.stub(Blockly.JavaScript, 'statementToCode')
+          .callsFake(() => `  console.log("I'm in a callback!");\n`);
+        const code = generator['test_runThisCallback']();
+
+        expect(code.trim()).to.equal(dedent`
+            runThisCallback(function () {
+              console.log("I'm in a callback!");
+            });
+          `);
+        stub.restore();
+      });
+      it('generates no code for an empty input', () => {
+        createBlock({
+          func: 'skyscraper',
+          blockText: 'woo {EMTPY} it\'s a skyscraper',
+          args: [
+            { name: 'EMTPY', customInput: 'dummy' },
+          ],
+        });
+        const code = generator['test_skyscraper']();
+
+        expect(code.trim()).to.equal('skyscraper();');
+      });
+      it('generates code for a dropdown input', () => {
+        createBlock({
+          func: 'selectOne',
+          blockText: 'select one of {DROPDOWN}',
+          args: [
+            {
+              name: 'DROPDOWN',
+              options: [['someOption', 7]],
+            },
+          ],
+        });
+        const fakeBlock = {
+          getTitleValue: () => 7,
+        };
+        const code = generator['test_selectOne'].bind(fakeBlock)();
+
+        expect(code.trim()).to.equal('selectOne(7);');
+      });
+      it('generates code for a field input', () => {
+        createBlock({
+          func: 'processValue',
+          blockText: 'do something with {INPUT}',
+          args: [
+            {
+              name: 'INPUT',
+              field: true,
+            },
+          ],
+        });
+        const fakeBlock = {
+          getTitleValue: () => 42,
+        };
+        const code = generator['test_processValue'].bind(fakeBlock)();
+
+        expect(code.trim()).to.equal('processValue(42);');
+      });
+      it('wraps field input value in quotes if it is a string type', () => {
+        createBlock({
+          func: 'processStringValue',
+          blockText: 'do something with string {INPUT}',
+          args: [
+            {
+              name: 'INPUT',
+              field: true,
+              type: 'String'
+            },
+          ],
+        });
+        const fakeBlock = {
+          getTitleValue: () => 'some input',
+        };
+        const code = generator['test_processStringValue'].bind(fakeBlock)();
+
+        expect(code.trim()).to.equal('processStringValue("some input");');
+      });
+      it('escapes quotes in string field inputs', () => {
+        createBlock({
+          func: 'processAnotherStringValue',
+          blockText: 'do something with another string {INPUT}',
+          args: [
+            {
+              name: 'INPUT',
+              field: true,
+              type: 'String'
+            },
+          ],
+        });
+        const fakeBlock = {
+          getTitleValue: () => 'some input with a "quote" in it',
+        };
+        const code = generator['test_processAnotherStringValue'].bind(fakeBlock)();
+
+        expect(code.trim()).to.equal(
+          'processAnotherStringValue("some input with a \\"quote\\" in it");');
+      });
+    });
   });
 });

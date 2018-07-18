@@ -148,7 +148,7 @@
   "whenUpTooltip": "ඉහලට ඊතලය එබු විට පහත ඇති ක්‍රියාමාර්ග ක්‍රියාත්මක කරන්න.",
   "whenWallCollided": "බිත්තියේ බෝලය වැඳුනු විට",
   "whenWallCollidedTooltip": "බෝලය බිත්තිය හා ඝට්ටනය වු විට පහත ක්‍රියාමාර්ග ක්‍රියාත්මක කරන්න.",
-  "whileMsg": "එතෙක්",
+  "whileMsg": "while",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "yes": "ඔව්"
 }

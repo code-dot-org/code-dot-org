@@ -66,7 +66,7 @@ export const studentOverviewDataPropType = PropTypes.shape({
  * assessment or a time-stamp for when a student submits an
  * assessment.
  */
-class StudentsAssessmentsMCTable extends Component {
+class SubmissionStatusAssessmentsTable extends Component {
   static propTypes = {
     studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
   };
@@ -222,4 +222,4 @@ class StudentsAssessmentsMCTable extends Component {
   }
 }
 
-export default StudentsAssessmentsMCTable;
+export default SubmissionStatusAssessmentsTable;
