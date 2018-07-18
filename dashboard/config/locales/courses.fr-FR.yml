@@ -1,4 +1,5 @@
-"fr":
+---
+fr:
   data:
     course:
       name:
@@ -35,8 +36,8 @@
             introductory computer science course that empowers students to create
             authentic artifacts and engage with computer science as a medium for creativity,
             communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers
-            students to create authentic artifacts.
+          description_short: La version 2018-2019 du cours Découvertes des sciences
+            informatiques.
         allthethingscourse:
           title: allthethingscourse
           description_short: This is a course for allthethings
@@ -50,8 +51,14 @@
           version_title: 2018-2019
           description_short: La version 2018-2019 du cours Découvertes des sciences
             informatiques.
-          description_student: ''
-          description_teacher: ''
+          description_student: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an
+            introductory computer science course that empowers students to create
+            authentic artifacts and engage with computer science as a medium for creativity,
+            communication, problem solving, and fun.
         csp-2018:
           assignment_family_title: Les principes des sciences informatiques
           title: Les principes des sciences informatiques (2018-2019)

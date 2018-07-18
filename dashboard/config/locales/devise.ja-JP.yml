@@ -1,4 +1,5 @@
-"ja":
+---
+ja:
   devise:
     confirmations:
       confirmed: あなたのメール アドレスを確認しました。

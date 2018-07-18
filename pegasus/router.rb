@@ -132,12 +132,7 @@ class Documents < Sinatra::Base
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
 
-    locale = request.locale
-    locale = 'it-IT' if request.site == 'italia.code.org'
-    locale = 'es-ES' if request.site == 'ar.code.org'
-    locale = 'ro-RO' if request.site == 'ro.code.org'
-    locale = 'pt-BR' if request.site == 'br.code.org'
-    I18n.locale = locale
+    I18n.locale = request.locale
 
     @config = settings.configs[request.site]
     @header = {}
@@ -347,24 +342,12 @@ class Documents < Sinatra::Base
       markdown_content.gsub(/```/, "```\n")
     end
 
-    def log_drupal_link(dir, uri, path)
-      if dir == 'drupal.code.org'
-        Honeybadger.notify(
-          error_class: "Link to v3.sites/drupal.code.org",
-          error_message: "#{uri} fell through to the base config directory",
-          environment_name: "drupal_#{rack_env}",
-          context: {path: path}
-        )
-      end
-    end
-
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
         if File.file?(path)
-          log_drupal_link(dir, uri, path)
           return path
         end
       end
@@ -377,7 +360,6 @@ class Documents < Sinatra::Base
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
           if File.file?(path)
-            log_drupal_link(dir, "#{uri}#{extname}", path)
             return path
           end
         end
@@ -401,6 +383,7 @@ class Documents < Sinatra::Base
       dirs.map do |site|
         site_glob = site_sub = content_dir(site, 'public')
 
+        next if site == 'drupal.code.org'
         if site == 'hourofcode.com'
           # hourofcode.com has custom logic to include
           # optional `/i18n` folder in its file-search path.

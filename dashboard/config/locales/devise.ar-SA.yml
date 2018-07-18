@@ -1,4 +1,5 @@
-"ar":
+---
+ar:
   devise:
     confirmations:
       confirmed: تم تأكيد عنوان البريد الإلكتروني الخاص بك بنجاح.

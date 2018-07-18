@@ -1,0 +1,10 @@
+[mysqld]
+innodb_flush_log_at_trx_commit  = 2
+sync_binlog                     = 0
+transaction-isolation           = READ-COMMITTED
+innodb_autoinc_lock_mode        = 2
+innodb_flush_method             = O_DIRECT
+max_connections                 = 500
+max_allowed_packet              = 256M
+innodb_log_file_size            = 512M
+sql_mode                        = NO_ENGINE_SUBSTITUTION

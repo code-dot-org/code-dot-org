@@ -8,7 +8,6 @@ theme: none
 <% end %>
 ---
 -unless request.post?
-  -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
   -# The correct param here is "script" but we want to support lingering usages of the
     legacy param course as well
@@ -26,7 +25,7 @@ theme: none
     %div{:style=>"float: left; margin: 0 40px 0 0;"}<
       %img{:src=>small_certificate_image_url}
     %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
-      Enter up to 30 names, <strong>one per line</strong>. A printable page with #{personalized} #{script_name} certificates will be generated.
+      Enter up to 30 names, <strong>one per line</strong>. A printable page with personalized #{script_name} certificates will be generated.
   %form{:method=>"post", :action=>'/custom-certificates'}
     -if script
       %input{:type=>"hidden", :name=>'script', :value=>script}

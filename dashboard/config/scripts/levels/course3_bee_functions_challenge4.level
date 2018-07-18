@@ -41,6 +41,7 @@
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "honey_goal": "15",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

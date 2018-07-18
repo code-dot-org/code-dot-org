@@ -1,4 +1,5 @@
-"te":
+---
+te:
   devise:
     confirmations:
       confirmed: Your email address was successfully confirmed.

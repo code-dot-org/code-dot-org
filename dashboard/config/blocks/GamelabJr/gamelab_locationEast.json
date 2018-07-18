@@ -1,0 +1,8 @@
+{
+  "category": "",
+  "config": {
+    "func": "locationEast",
+    "blockText": "east",
+    "returnType": "Location"
+  }
+}

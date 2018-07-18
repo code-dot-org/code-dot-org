@@ -50,6 +50,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_PlayLab_events_challenge1_1\",\r\n  \"callout_text\": \"This block lets you move actors to different parts of the game space.\",\r\n  \"element_id\": \"#new\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "markdown_instructions": "*The **squirrels** are terrified to see that a **dinosaur** has come to town! Can the brave **knight** keep them all from panicking?*\r\n\r\nRules:\r\n1. *Touching the squirrels scores you points.*\r\n2. *Touching the dinosaur takes many points away.*\r\n\r\nHere is a different kind of game that has already been started for you! Play it to see how it works. \r\n\r\n\r\nSomething should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \r\nClick the hints for ideas!",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

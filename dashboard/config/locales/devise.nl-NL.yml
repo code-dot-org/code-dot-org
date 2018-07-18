@@ -1,4 +1,5 @@
-"nl":
+---
+nl:
   devise:
     confirmations:
       confirmed: Je e-mailadres is succesvol bevestigd.

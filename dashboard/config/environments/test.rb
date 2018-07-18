@@ -95,4 +95,17 @@ Dashboard::Application.configure do
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time.
   config.skip_script_preload = false
+
+  # Overrides for Jotform Form Ids
+  CDO.jotform_forms = {
+    'local' => {
+      'day_0' => 1,
+      'day_1' => 2,
+      'day_2' => 3,
+      'day_3' => 4,
+      'day_4' => 5,
+      'day_5' => 6,
+      'facilitator' => 7
+    }
+  }
 end

@@ -263,14 +263,14 @@ class SourcesTest < FilesApiTestBase
     FirehoseClient.instance.expects(:put_record).with do |data|
       data_json_data = JSON.parse(data[:data_json])
       data[:study] == 'project-data-integrity' &&
-        data[:event] == 'replace-non-current-main-json' &&
+        data[:event] == 'reject-comparing-older-main-json' &&
         data[:project_id] == @channel &&
-        data_json_data['replacedVersionId'] == version1
+        data_json_data['currentVersionId'] == version1
     end
 
     file_data = 'version 3'
     @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
-    assert successful?
+    assert conflict?
 
     delete_all_source_versions(filename)
 
@@ -539,7 +539,7 @@ class SourcesTest < FilesApiTestBase
     delete_all_animation_versions(animation_filename_1)
     delete_all_animation_versions(animation_filename_2)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename_1}")
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename_2}")
   end
@@ -583,7 +583,7 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions(MAIN_JSON)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
   end
 
   def test_remix_not_main
@@ -610,7 +610,7 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions('test.json')
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/test.json")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/test.json")
   end
 
   def test_remix_no_animations
@@ -642,7 +642,7 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions(MAIN_JSON)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
   end
 
   def test_remove_under_13_comments
@@ -818,7 +818,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def delete_all_source_versions(filename)
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/1/#{filename}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/1/#{filename}")
   end
 
   def delete_all_animation_versions(filename)

@@ -1,4 +1,5 @@
-"ky":
+---
+ky:
   devise:
     confirmations:
       confirmed: Эмейл адресиңиз ийгиликтүү ырасталды.

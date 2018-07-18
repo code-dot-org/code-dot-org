@@ -38,7 +38,7 @@
   "drawUpperWave": "vẽ làn sóng nhấp nhô cao",
   "drawLowerWave": "vẽ làn sóng nhấp nhô thấp",
   "drawSticker": "vẽ hình dán",
-  "drawStickerWithSize": "draw sticker with size",
+  "drawStickerWithSize": "vẽ nhãn dán với kích thước",
   "heightParameter": "chiều cao",
   "hideTurtle": "ẩn nghệ sĩ",
   "jump": "nhảy",
@@ -74,7 +74,7 @@
   "penDown": "bỏ bút xuống",
   "penTooltip": "nâng lên hay hạ bút xuống, để bắt đầu và ngừng vẽ.",
   "penUp": "nâng bút lên",
-  "pointTo": "point to",
+  "pointTo": "điểm đến",
   "pixels": "điểm ảnh",
   "reinfFeedbackMsg": "Đây là bản vẽ của bạn! Tiếp tục làm việc trên nó hoặc tiếp tục câu đố tiếp theo.",
   "setAlpha": "thiết lập alpha",
@@ -94,6 +94,6 @@
   "turnTooltip": "rẽ nghệ sĩ về bên phải hay bên trái một góc nhất định.",
   "turtleVisibilityTooltip": "Làm ẩn hoặc hiện họa sĩ.",
   "widthTooltip": "thay đổi độ rộng của cây bút chì.",
-  "withSize": "with size",
+  "withSize": "với kích thước",
   "wrongColour": "Bức hình của bạn bị sai màu. Cho bài này, cần phải là"
 }

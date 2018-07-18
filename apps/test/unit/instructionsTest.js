@@ -133,7 +133,6 @@ describe('instructions reducer', () => {
 describe('determineInstructionsConstants', () => {
   describe('CSP mode', () => {
     const noInstructionsWhenCollapsed = true;
-    const hasInlineImages = false;
     const showInstructionsInTopPane = true;
     const hasContainedLevels = false;
     const overlayVisible = false;
@@ -148,7 +147,6 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         locale,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible,
@@ -168,7 +166,6 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible
@@ -187,7 +184,6 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible
@@ -204,7 +200,6 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible
@@ -221,7 +216,6 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible
@@ -233,7 +227,6 @@ describe('determineInstructionsConstants', () => {
 
   describe('CSF mode', () => {
     const noInstructionsWhenCollapsed = false;
-    const hasInlineImages = false;
     const showInstructionsInTopPane = true;
     const hasContainedLevels = false;
     const overlayVisible = false;
@@ -249,13 +242,11 @@ describe('determineInstructionsConstants', () => {
           skin: {},
           locale,
           noInstructionsWhenCollapsed,
-          hasInlineImages,
           showInstructionsInTopPane,
           hasContainedLevels
         });
         assert.deepEqual(result, {
           noInstructionsWhenCollapsed,
-          hasInlineImages,
           shortInstructions: 'non-markdown',
           shortInstructions2: undefined,
           longInstructions: 'markdown',
@@ -278,14 +269,12 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         locale: 'fr-fr',
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible
       });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         shortInstructions: 'non-markdown',
         shortInstructions2: undefined,
         longInstructions: undefined,
@@ -308,14 +297,12 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible
       });
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         shortInstructions: 'non-markdown',
         shortInstructions2: undefined,
         longInstructions: undefined,
@@ -339,7 +326,6 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible
@@ -355,7 +341,6 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         hasContainedLevels,
         overlayVisible
@@ -378,7 +363,6 @@ describe('determineInstructionsConstants', () => {
         },
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         overlayVisible
       });
@@ -395,14 +379,12 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         overlayVisible
       });
 
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed: false,
-        hasInlineImages: false,
         overlayVisible: false,
         shortInstructions: undefined,
         shortInstructions2: undefined,
@@ -423,14 +405,12 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         overlayVisible
       });
 
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed: false,
-        hasInlineImages: false,
         overlayVisible: false,
         shortInstructions: undefined,
         shortInstructions2: undefined,
@@ -451,14 +431,12 @@ describe('determineInstructionsConstants', () => {
         skin: {},
         ENGLISH_LOCALE,
         noInstructionsWhenCollapsed,
-        hasInlineImages,
         showInstructionsInTopPane,
         overlayVisible
       });
 
       assert.deepEqual(result, {
         noInstructionsWhenCollapsed: false,
-        hasInlineImages: false,
         overlayVisible: false,
         shortInstructions: undefined,
         shortInstructions2: undefined,

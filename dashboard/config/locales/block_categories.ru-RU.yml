@@ -1,4 +1,5 @@
-"ru":
+---
+ru:
   data:
     block_categories:
       Actions: Действия
@@ -28,9 +29,10 @@
       Numbers: Numbers
       Input: Ввод
       Default: Default
+      World: World
       Sprites: Sprites
       Behaviors: Behaviors
-      World: World
+      Advanced: Advanced
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite
@@ -45,5 +47,6 @@
       Foo: Foo
       Name: Имя
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
       Function: Функция

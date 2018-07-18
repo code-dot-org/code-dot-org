@@ -1,4 +1,5 @@
-"eu":
+---
+eu:
   devise:
     confirmations:
       confirmed: Zure eposta helbidea zuzen ziurtatu da.

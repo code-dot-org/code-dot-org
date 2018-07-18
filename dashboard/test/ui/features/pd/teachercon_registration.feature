@@ -24,7 +24,7 @@ Scenario: Teachercon Registration form submission
   And I press the first "input[name='liveFarAway']" element
   And I press keys "1501 4th Avenue" for element "#addressStreet"
   And I press keys "Seattle" for element "#addressCity"
-  And I press keys "WA" for element "#addressState"
+  And I select the "Washington" option in dropdown "addressState"
   And I press keys "98101" for element "#addressZip"
   And I press the first "input[name='howTraveling']" element
   And I press the first "input[name='needHotel']" element

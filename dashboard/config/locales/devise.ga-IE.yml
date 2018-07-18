@@ -1,4 +1,5 @@
-"ga":
+---
+ga:
   devise:
     confirmations:
       confirmed: Deimhníodh do sheoladh ríomhphoist.

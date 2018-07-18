@@ -36,6 +36,7 @@
     "shape_shift": "false",
     "min_collected": "3",
     "top_level_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 11,
     "contained_level_names": null
   },
   "published": true,

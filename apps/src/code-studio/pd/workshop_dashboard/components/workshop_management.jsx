@@ -4,6 +4,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from './confirmation_dialog';
 import {
   PermissionPropType,
@@ -38,12 +39,14 @@ export class WorkshopManagement extends React.Component {
     if (props.showSurveyUrl) {
       let surveyBaseUrl;
 
-      if (props.subject === '5-day Summer') {
-        if (new Date(this.props.date).getFullYear() >= 2018) {
-          surveyBaseUrl = "local_summer_workshop_daily_survey_results";
-        } else {
-          surveyBaseUrl = "local_summer_workshop_survey_results";
-        }
+      if (
+        [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(props.subject)
+        && new Date(this.props.date).getFullYear() >= 2018
+      ) {
+        // TODO(Andrew/Mehal): Now that this includes Teachercon it should be renamed
+        surveyBaseUrl = "local_summer_workshop_daily_survey_results";
+      } else if (props.subject === WorkshopTypes.local_summer) {
+        surveyBaseUrl = "local_summer_workshop_survey_results";
       } else {
         surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager) ? "organizer_survey_results" : "survey_results";
       }

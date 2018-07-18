@@ -13,6 +13,7 @@ describe('ChangeEmailForm', () => {
     values: {},
     validationErrors: {},
     userType: 'student',
+    isPasswordRequired: true,
     onChange: () => {},
     onSubmit: () => {}
   };
@@ -36,6 +37,56 @@ describe('ChangeEmailForm', () => {
         />
       );
       expect(wrapper.find(OPT_IN_SELECTOR)).not.to.exist;
+    });
+  });
+
+  describe('the password field', () => {
+    describe('when password is required', () => {
+      it('is rendered for teachers', () => {
+        const wrapper = mount(
+          <ChangeEmailForm
+            {...DEFAULT_PROPS}
+            userType="teacher"
+            isPasswordRequired={true}
+          />
+        );
+        expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
+      });
+
+      it('is rendered for students', () => {
+        const wrapper = mount(
+          <ChangeEmailForm
+            {...DEFAULT_PROPS}
+            userType="student"
+            isPasswordRequired={true}
+          />
+        );
+        expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
+      });
+    });
+
+    describe('when password is not required', () => {
+      it('is not rendered for teachers', () => {
+        const wrapper = mount(
+          <ChangeEmailForm
+            {...DEFAULT_PROPS}
+            userType="teacher"
+            isPasswordRequired={false}
+          />
+        );
+        expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
+      });
+
+      it('is not rendered for students', () => {
+        const wrapper = mount(
+          <ChangeEmailForm
+            {...DEFAULT_PROPS}
+            userType="student"
+            isPasswordRequired={false}
+          />
+        );
+        expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
+      });
     });
   });
 

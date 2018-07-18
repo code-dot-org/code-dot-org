@@ -32,6 +32,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "discard_background": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

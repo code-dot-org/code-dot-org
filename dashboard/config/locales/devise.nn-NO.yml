@@ -1,4 +1,5 @@
-"nn":
+---
+nn:
   devise:
     confirmations:
       confirmed: E-postadressa di har blitt stadfesta.

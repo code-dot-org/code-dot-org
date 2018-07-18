@@ -38,6 +38,7 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
+    "hint_prompt_attempts_threshold": 12,
     "contained_level_names": null
   },
   "published": true,

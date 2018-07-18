@@ -16,6 +16,7 @@ export default class ChangeEmailForm extends React.Component {
       emailOptIn: PropTypes.string,
     }).isRequired,
     userType: PropTypes.oneOf(['teacher', 'student']).isRequired,
+    isPasswordRequired: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
@@ -68,7 +69,7 @@ export default class ChangeEmailForm extends React.Component {
   }
 
   render() {
-    const {values, validationErrors, disabled, userType} = this.props;
+    const {values, validationErrors, disabled, userType, isPasswordRequired} = this.props;
     return (
       <div>
         <Field
@@ -89,23 +90,25 @@ export default class ChangeEmailForm extends React.Component {
             ref={el => this.newEmailInput = el}
           />
         </Field>
-        <Field
-          label={i18n.changeEmailModal_currentPassword_label()}
-          error={validationErrors.currentPassword}
-        >
-          <input
-            type="password"
-            value={values.currentPassword}
-            disabled={disabled}
-            tabIndex="1"
-            onKeyDown={this.onKeyDown}
-            onChange={this.onCurrentPasswordChange}
-            maxLength="255"
-            size="255"
-            style={styles.input}
-            ref={el => this.currentPasswordInput = el}
-          />
-        </Field>
+        {isPasswordRequired &&
+          <Field
+            label={i18n.changeEmailModal_currentPassword_label()}
+            error={validationErrors.currentPassword}
+          >
+            <input
+              type="password"
+              value={values.currentPassword}
+              disabled={disabled}
+              tabIndex="1"
+              onKeyDown={this.onKeyDown}
+              onChange={this.onCurrentPasswordChange}
+              maxLength="255"
+              size="255"
+              style={styles.input}
+              ref={el => this.currentPasswordInput = el}
+            />
+          </Field>
+        }
         {userType === 'teacher' &&
           <Field
             labelDetails={this.emailOptInLabelDetails()}

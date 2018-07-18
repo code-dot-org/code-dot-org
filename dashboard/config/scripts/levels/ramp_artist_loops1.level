@@ -38,6 +38,7 @@
     "instructions": "Move forward by 60 pixels to complete this puzzle.",
     "markdown_instructions": "What a lovely day!  \r\n\r\nHelp the Artist cover his flowers before the winter by moving forward by 60 pixels.",
     "ideal": "3",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

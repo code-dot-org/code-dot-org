@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+SCRIPT=$(dirname -- "$0")
+
+PLAYBOOKS=${SCRIPT}/../../aws/redshift/playbooks/*
+
+for p in $PLAYBOOKS
+do
+	${SCRIPT}/../../aws/redshift/run-playbook $p
+done

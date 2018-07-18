@@ -1,4 +1,5 @@
-"gl":
+---
+gl:
   devise:
     confirmations:
       confirmed: O teu enderezo de correo electrónico foi confirmado con éxito.

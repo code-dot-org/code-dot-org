@@ -156,17 +156,14 @@ function showHomepage() {
 function getTeacherAnnouncement(override) {
   // Start with default teacher announcement.
   let announcement = {
-    heading: i18n.announcementHeadingPrivacyGdpr(),
+    heading: i18n.announcementHeadingYouTubeNoCookie(),
     buttonText: i18n.learnMore(),
-    description: i18n.announcementDescriptionPrivacyGdpr(),
-    link: "https://code.org/privacy-may2018",
+    description: i18n.announcementDescriptionYouTubeNoCookie(),
+    link: "https://support.code.org/hc/en-us/articles/360006799751",
     image: "",
     type: "bullhorn",
-    id: "privacy_gdpr"
+    id: "youtube_nocookie"
   };
-
-  // But for now, no announcement (unless there's an override).
-  announcement = null;
 
   // Optional override of teacher announcement (typically via DCDO).
   // Note that teacher_announce_type is optional.
@@ -195,7 +192,7 @@ window.CleverTakeoverManager = function (options) {
   const self = this;
 
   const linkCleverDiv = $('<div>');
-  function showLinkCleverModal(cancel, submit) {
+  function showLinkCleverModal(cancel, submit, providerToLink) {
     $(document.body).append(linkCleverDiv);
 
     ReactDOM.render(
@@ -204,13 +201,14 @@ window.CleverTakeoverManager = function (options) {
         handleCancel={cancel}
         handleSubmit={submit}
         forceConnect={options.forceConnect === 'true'}
+        providerToLink={providerToLink}
       />,
       linkCleverDiv[0]
     );
   }
 
   if (self.options.cleverLinkFlag) {
-    showLinkCleverModal(onCancelModal, onConfirmLink);
+    showLinkCleverModal(onCancelModal, onConfirmLink, self.options.cleverLinkFlag);
   }
 
   function closeLinkCleverModal() {

@@ -28,18 +28,6 @@
             "\"y\""
           ],
           [
-            "x velocity",
-            "\"velocityX\""
-          ],
-          [
-            "y velocity",
-            "\"velocityY\""
-          ],
-          [
-            "costume",
-            "\"costume\""
-          ],
-          [
             "movement direction",
             "\"direction\""
           ],

@@ -170,6 +170,7 @@ is:
       CSD U3 Sprites intro predict_callout: { }
       CSD U3 Sprites intro predict_2018_callout: { }
       CSD U3 Sprites intro sprites_callout: { }
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: { }
       CSD U3 Sprites intro sprites_2018_callout: { }
       CSD U3 Sprites scene challenge_callout: { }
       CSD U3 Sprites scene challenge_2018_callout: { }
@@ -410,7 +411,6 @@ is:
         CSD_U3_rect_c2: Hér er "Keyra" hnappurinn.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Hér er kóðinn
-        CSD_U3_rect_c2: Hér er "Keyra" hnappurinn.
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Hér er kóðinn
         CSD_U3_rect_c2: Dragðu þennan kubb yfir á kóðasvæðið.
@@ -599,6 +599,7 @@ is:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: { }
+      Fish Tank 2-validated_callout: { }
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
       Frozen Project Toolbox (Old)_callout:
@@ -936,6 +937,7 @@ is:
         courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.
         stone_block_2: Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim.
       courseA_maze_ramp3a_2018_callout: { }
+      courseA_maze_ramp3b_2018_callout: { }
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota.
       courseA_maze_ramp4a_2018_callout: { }
@@ -975,6 +977,7 @@ is:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á "Keyra" til að ræsa forritið.
       courseB_Scrat_ramp2_2018_callout: { }
       courseB_Scrat_ramp3a_2018_callout: { }
+      courseB_Scrat_ramp3b_2018_callout: { }
       courseB_Scrat_ramp4a_2018_callout: { }
       courseB_Scrat_ramp5a_2018_callout: { }
       courseB_artist_loops3_callout:
@@ -983,8 +986,7 @@ is:
         courseB_artist_loops3_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig ætlar þú að nota hann?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Þessi tala þýðir að það eru ekki fleiri svona kubbar eftir í verkfærakassanum.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: Þessi tala þýðir að það eru ekki fleiri svona kubbar eftir í verkfærakassanum.
+      courseB_artist_loops5_2018_callout: { }
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
       courseB_collector_loops1_2018_callout:
@@ -1154,6 +1156,8 @@ is:
       courseD_collector_until_challenge1_callout: { }
       courseD_farmer_until_challenge2_callout: { }
       courseD_farmer_until_challenge2_2018_callout: { }
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:

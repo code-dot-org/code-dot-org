@@ -37,6 +37,7 @@
     "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Now, let’s draw more than one.”_\r\n\r\nNow take your shape and draw two or three in a row by jumping forward some number of pixels.  \r\n\r\n- If you jump forward by **less** than the width of your shape, they might overlap\r\n- If you jump forward by **more** than the width of your shape, you will get a gap\r\n\r\n<hr/>\r\n\r\nYour row might end up straight like with these:\r\n\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\r\n<br/>  <br/>\r\n\r\n\r\nOr, your shapes might move around like one of these: \r\n\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)",
     "project_template_level_name": "courseD_artist_projectTemplate",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

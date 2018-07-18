@@ -403,6 +403,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -432,6 +433,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -464,6 +466,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -491,8 +494,21 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with students' do
+    section = create :section, script: nil, course: nil
+    student1 = create(:follower, section: section).student_user
+    student2 = create(:follower, section: section).student_user
+
+    summarized_section = section.summarize
+    assert_equal 2, summarized_section[:numberOfStudents]
+    assert_equal 2, summarized_section[:studentCount]
+    assert_includes summarized_section[:students], student1.summarize
+    assert_includes summarized_section[:students], student2.summarize
   end
 
   test 'valid_grade? accepts K-12 and Other' do

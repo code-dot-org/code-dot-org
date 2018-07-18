@@ -17,6 +17,7 @@
     ],
     "instructions": "This time you need to add four blocks. Move the paddle to all four finish targets to complete this puzzle.",
     "maze": "[[0,0,8,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,8],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,8,0,0]]",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

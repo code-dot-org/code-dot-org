@@ -1,6 +1,7 @@
 import dedent from 'dedent';
 import {
   appendBlocksByCategory,
+  appendNewFunctions,
   cleanBlocks,
   determineInputs,
   interpolateInputs,
@@ -174,6 +175,183 @@ describe('block utils', () => {
         </xml>
       `);
     });
+  });
+
+  describe('appendNewFunctions', () => {
+    it('appends functions to starter code', () => {
+      const startCode = `
+        <xml>
+          <block type="when_run"/>
+        </xml>
+      `;
+
+      const functions = `
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting</title>
+          <statement name="STACK"/>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting2</title>
+          <statement name="STACK"/>
+        </block>
+      `;
+
+      const newCode = appendNewFunctions(startCode, functions);
+
+      expect(newCode).to.xml.equal(`
+        <xml>
+          <block type="when_run"/>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting</title>
+            <statement name="STACK"/>
+          </block>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting2</title>
+            <statement name="STACK"/>
+          </block>
+        </xml>
+      `);
+    });
+  });
+
+  it('Does not append existing functions to starter code', () => {
+      const startCode = `
+        <xml>
+          <block type="when_run"/>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting</title>
+            <statement name="STACK"/>
+          </block>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting2</title>
+            <statement name="STACK"/>
+          </block>
+        </xml>
+      `;
+
+      const functions = `
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting</title>
+          <statement name="STACK"/>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting2</title>
+          <statement name="STACK">
+            <block type="variables_set" inline="false">
+              <title name="VAR">someVar</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">200</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      `;
+
+      const newCode = appendNewFunctions(startCode, functions);
+
+      expect(newCode).to.xml.equal(startCode);
+  });
+
+  it('Appends new functions but not existing functions to starter code', () => {
+      const startCode = `
+        <xml>
+          <block type="when_run"/>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting2</title>
+            <statement name="STACK"/>
+          </block>
+        </xml>
+      `;
+
+      const functions = `
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting</title>
+          <statement name="STACK"/>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description/>
+          </mutation>
+          <title name="NAME">acting2</title>
+          <statement name="STACK">
+            <block type="variables_set" inline="false">
+              <title name="VAR">someVar</title>
+              <value name="VALUE">
+                <block type="math_number">
+                  <title name="NUM">200</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      `;
+
+      const newCode = appendNewFunctions(startCode, functions);
+
+      expect(newCode).to.xml.equal(`
+        <xml>
+          <block type="when_run"/>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting2</title>
+            <statement name="STACK"/>
+          </block>
+          <block type="behavior_definition" deletable="false" movable="false" editable="false">
+            <mutation>
+              <arg name="this sprite" type="Sprite"/>
+              <description/>
+            </mutation>
+            <title name="NAME">acting</title>
+            <statement name="STACK"/>
+          </block>
+        </xml>
+      `);
   });
 
   const TEST_SPRITES = [
@@ -486,18 +664,18 @@ describe('block utils', () => {
   });
 
   describe('custom generators', () => {
+    let createBlock, generator;
+    before(() => {
+      createBlock = createJsWrapperBlockCreator(
+        Blockly,
+        'test',
+        [],
+        Blockly.BlockValueType.SPRITE,
+        [],
+      );
+      generator = Blockly.Generator.get('JavaScript');
+    });
     describe('assignment', () => {
-      let createBlock, generator;
-      before(() => {
-        createBlock = createJsWrapperBlockCreator(
-          Blockly,
-          'test',
-          [],
-          Blockly.BlockValueType.SPRITE,
-          [],
-        );
-        generator = Blockly.Generator.get('JavaScript');
-      });
       it('generates code for a single assignment', () => {
         createBlock({
           func: 'foo',
@@ -540,6 +718,8 @@ describe('block utils', () => {
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('a = b = foo(a, b);\n');
       });
+    });
+    describe('deferred input', () => {
       it('generates code for a deferred input', () => {
         createBlock({
           func: 'yellAt',
@@ -575,6 +755,102 @@ describe('block utils', () => {
         `);
 
         valueToCodeStub.restore();
+      });
+    });
+    describe('simpleValue', () => {
+      it('generates code for a simple value with return value', () => {
+        createBlock({
+          simpleValue: true,
+          name: 'simpleValue',
+          blockText: '{VAL}',
+          args: [
+            { name: 'VAL' },
+          ],
+          returnType: 'String',
+        });
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .returns('"a string value"');
+
+        expect(generator['test_simpleValue']()[0]).to.equal('"a string value"');
+
+        valueToCodeStub.restore();
+      });
+      it('generates code for a simple value assignment', () => {
+        createBlock({
+          simpleValue: true,
+          name: 'simpleAssignment',
+          blockText: '{VAR} = {VAL}',
+          args: [
+            { name: 'VAL' },
+            { name: 'VAR', assignment: true }
+          ],
+        });
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .callsFake((block, name) => {
+            return {
+              VAR: 'myVariable',
+              VAL: '"some other value"',
+            }[name];
+          });
+        const code = generator['test_simpleAssignment']();
+
+        expect(code.trim()).to.equal('myVariable = "some other value";');
+
+        valueToCodeStub.restore();
+      });
+      it('generates code for a simple value double assignment', () => {
+        createBlock({
+          simpleValue: true,
+          name: 'simpleAssignment',
+          blockText: '{VAR1} = {VAR2} = {VAL}',
+          args: [
+            { name: 'VAL' },
+            { name: 'VAR1', assignment: true },
+            { name: 'VAR2', assignment: true },
+          ],
+        });
+        const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
+          .callsFake((block, name) => {
+            return {
+              VAR1: 'i',
+              VAR2: 'j',
+              VAL: '"yet another value"',
+            }[name];
+          });
+        const code = generator['test_simpleAssignment']();
+
+        expect(code.trim()).to.equal('i = j = "yet another value";');
+
+        valueToCodeStub.restore();
+      });
+      it('throws for a simpleValue block with too many args', () => {
+        expect(() => {
+          createBlock({
+            simpleValue: true,
+            name: 'simpleValue',
+            blockText: '{VAL1} {VAL2}',
+            args: [
+              { name: 'VAL1' },
+              { name: 'VAL2' },
+            ],
+            returnType: 'String',
+          });
+        }).to.throw(Error);
+      });
+      it('throws for a simple assignemnt block with too many args', () => {
+        expect(() => {
+          createBlock({
+            simpleValue: true,
+            name: 'simpleValue',
+            blockText: '{VAR} = {VAL1} {VAL2}',
+            args: [
+              { name: 'VAR', assignment: true },
+              { name: 'VAL1' },
+              { name: 'VAL2' },
+            ],
+            returnType: 'String',
+          });
+        }).to.throw(Error);
       });
     });
   });

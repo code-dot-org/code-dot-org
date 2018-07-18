@@ -38,6 +38,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "project_template_level_name": "courseF_artist_for_Template",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

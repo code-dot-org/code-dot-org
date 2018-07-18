@@ -1,8 +1,6 @@
 import React from 'react';
 import SummaryText from './SummaryText';
 
-
-
 export default storybook => {
   storybook
     .storiesOf('SectionAssessments/SummaryText', module)

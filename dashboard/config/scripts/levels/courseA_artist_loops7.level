@@ -41,6 +41,7 @@
     "disable_if_else_editing": "false",
     "tts_markdown_instructions_override": "Use the repeat loop to add waves to the water.",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

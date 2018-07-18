@@ -1,4 +1,5 @@
-"fi":
+---
+fi:
   devise:
     confirmations:
       confirmed: Sähköpostiosoitettasi ei voitu vahvistaa.

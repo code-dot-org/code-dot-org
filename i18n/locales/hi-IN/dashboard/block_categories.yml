@@ -28,9 +28,10 @@ hi:
       Numbers: Numbers
       Input: Input
       Default: Default
+      World: World
       Sprites: Sprites
       Behaviors: Behaviors
-      World: World
+      Advanced: Advanced
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite
@@ -45,5 +46,6 @@ hi:
       Foo: Foo
       Name: नाम
       NEW BLOCKS: NEW BLOCKS
+      'Functions ': 'Functions '
       Game/Score: Game/Score
-      Function: समारोह
+      Function: कार्य

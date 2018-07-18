@@ -1,4 +1,5 @@
-"hy":
+---
+hy:
   devise:
     confirmations:
       confirmed: 'Ձեր էլ. Փոստի հասցեն հաջողությամբ հաստատվել է:'

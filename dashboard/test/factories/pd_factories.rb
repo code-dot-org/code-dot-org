@@ -543,6 +543,11 @@ FactoryGirl.define do
     form_data nil
   end
 
+  factory :pd_international_opt_in, class: 'Pd::InternationalOptIn' do
+    user nil
+    form_data nil
+  end
+
   factory :pd_regional_partner_cohort, class: 'Pd::RegionalPartnerCohort' do
     course Pd::Workshop::COURSE_CSP
   end
@@ -987,5 +992,23 @@ FactoryGirl.define do
 
     association :pd_application, factory: :pd_facilitator1819_application
     form_data {build(:pd_fit_weekend1819_registration_hash, status).to_json}
+  end
+
+  factory :pd_workshop_daily_survey, class: 'Pd::WorkshopDailySurvey' do
+    form_id 12345
+    sequence(:submission_id)
+    association :pd_workshop
+    association :user
+    day 5
+  end
+
+  factory :pd_workshop_facilitator_daily_survey, class: 'Pd::WorkshopFacilitatorDailySurvey' do
+    form_id 12345
+    sequence(:submission_id)
+    association :pd_session
+    pd_workshop {pd_session.workshop}
+    association :user
+    association :facilitator
+    day 5
   end
 end

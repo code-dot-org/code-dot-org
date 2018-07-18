@@ -23,6 +23,10 @@ ________________
 <br/>
 ## Virtual Trainings
 
+June 2018
+
+- June 6 Local Summer Workshop Survey Webinar ([Recording](https://code.zoom.us/recording/share/N2iO1YPEycRHhGLdK6hPR20ekbqVC3_Q8E6YEhohAISwIumekTziMw), [Slides](https://docs.google.com/presentation/d/1iUtqVZH0bTVJeXnJ6EFMEFLFlwreV4YA-lnvXXvy7QQ/edit#slide=id.g3bbed00ae1_0_0))
+
 
 May 2018
 

@@ -1,3 +1,5 @@
 function addBehaviorSimple(sprite, behavior) {
-  addBehavior(sprite, behavior, behavior.name);
+  if (sprite && behavior) {
+    addBehavior(sprite, behavior, behavior.name);
+  }
 }
