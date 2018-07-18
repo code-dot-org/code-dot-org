@@ -1,6 +1,9 @@
 import React, {Component, PropTypes} from 'react';
 import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
-import {freeResponsesDataPropType} from './assessmentDataShapes';
+import {
+  freeResponsesDataPropType,
+  QUESTION_CHARACTER_LIMIT,
+} from './assessmentDataShapes';
 import {
   getAssessmentsFreeResponseResults,
   ALL_STUDENT_FILTER,
@@ -8,8 +11,6 @@ import {
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
-
-const QUESTION_CHARACTER_LIMIT = 110;
 
 const styles = {
   text: {
