@@ -1,5 +1,5 @@
 import React from 'react';
-import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
+import {UnconnectedMultipleChoiceDetailsDialog} from './MultipleChoiceDetailsDialog';
 
 export default storybook => {
   return storybook
@@ -9,7 +9,7 @@ export default storybook => {
         name: 'MultipleChoiceDetailsDialog',
         description: 'Detail view of a multiple choice question',
         story: () => (
-          <MultipleChoiceDetailsDialog
+          <UnconnectedMultipleChoiceDetailsDialog
             isDialogOpen={true}
             closeDialog={() => {}}
             questionText={"Hello world. I display *markdown* questions."}
