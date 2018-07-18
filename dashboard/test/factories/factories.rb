@@ -443,6 +443,14 @@ FactoryGirl.define do
         auth.authentication_id = auth.hashed_email
       end
     end
+
+    factory :facebook_authentication_option do
+      credential_type AuthenticationOption::FACEBOOK
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
   end
 
   factory :districts_users do

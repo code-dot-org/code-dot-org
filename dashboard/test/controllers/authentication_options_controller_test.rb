@@ -102,6 +102,31 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test 'disconnect: if the removed AuthenticationOption was primary and a replacement is available, replaces it' do
+    email = 'example@gmail.com'
+    teacher = create :teacher, :multi_auth_migrated
+    google_option = create :google_authentication_option, user: teacher, email: email
+    facebook_option = create :facebook_authentication_option, user: teacher, email: email
+    teacher.update(primary_contact_info: google_option)
+    teacher.reload
+
+    # Preconditions
+    assert_equal 2, teacher.authentication_options.size
+    assert_includes teacher.authentication_options, google_option
+    assert_includes teacher.authentication_options, facebook_option
+    assert_equal google_option, teacher.primary_contact_info
+
+    sign_in teacher
+    delete "/users/auth/#{teacher.primary_contact_info_id}/disconnect"
+    assert_response :success
+
+    teacher.reload
+    assert_equal 1, teacher.authentication_options.size
+    refute_includes teacher.authentication_options, google_option
+    assert_includes teacher.authentication_options, facebook_option
+    assert_equal facebook_option, teacher.primary_contact_info
+  end
+
   test 'disconnect: returns not_found if the AuthenticationOption does not exist' do
     user = create :user, :multi_auth_migrated
     sign_in user
