@@ -21,6 +21,7 @@ import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContain
 import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
 import FreeResponseDetailsDialog from './FreeResponseDetailsDialog';
 import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
+import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
 import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -96,8 +97,14 @@ class SectionAssessments extends Component {
   };
 
   state = {
-    isDetailDialogOpen: false,
-    detailQuestionText: '',
+    freeResponse: {
+      isDetailDialogOpen: false,
+      detailQuestionText: '',
+    },
+    multipleChoice: {
+      isDetailDialogOpen: false,
+      detailQuestionText: '',
+    },
   };
 
   onChangeScript = scriptId => {
@@ -107,11 +114,35 @@ class SectionAssessments extends Component {
   };
 
   showFreeResponseDetailDialog = questionText => {
-    this.setState({isDetailDialogOpen: true, detailQuestionText: questionText});
+    this.setState({
+      freeResponse: {
+        isDetailDialogOpen: true, detailQuestionText: questionText
+      }
+    });
   };
 
   hideFreeResponseDetailDialog = () => {
-    this.setState({isDetailDialogOpen: false, detailQuestionText: ''});
+    this.setState({
+      freeResponse: {
+        isDetailDialogOpen: false, detailQuestionText: ''
+      }
+    });
+  };
+
+  showMulitpleChoiceDetailDialog = questionText => {
+    this.setState({
+      multipleChoice: {
+        isDetailDialogOpen: true, detailQuestionText: questionText
+      }
+    });
+  };
+
+  hideMultipleDetailDialog = () => {
+    this.setState({
+      multipleChoice: {
+        isDetailDialogOpen: false, detailQuestionText: ''
+      }
+    });
   };
 
   render() {
@@ -208,9 +239,14 @@ class SectionAssessments extends Component {
               </div>
             }
             <FreeResponseDetailsDialog
-              isDialogOpen={this.state.isDetailDialogOpen}
-              questionText={this.state.detailQuestionText}
+              isDialogOpen={this.state.freeResponse.isDetailDialogOpen}
+              questionText={this.state.freeResponse.detailQuestionText}
               closeDialog={this.hideFreeResponseDetailDialog}
+            />
+            <MultipleChoiceDetailsDialog
+              isDialogOpen={this.state.multipleChoice.isDetailDialogOpen}
+              questionText={this.state.multipleChoice.detailQuestionText}
+              closeDialog={this.hideMultipleDetailDialog}
             />
           </div>
         }
