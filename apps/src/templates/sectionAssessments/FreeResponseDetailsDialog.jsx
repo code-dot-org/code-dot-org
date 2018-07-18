@@ -1,8 +1,11 @@
+/* eslint-disable react/no-danger */
 import React, {Component, PropTypes} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from "@cdo/locale";
 import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
+import processMarkdown from 'marked';
+import renderer from "@cdo/apps/util/StylelessRenderer";
 
 const styles = {
   dialog: {
@@ -23,6 +26,9 @@ export default class FreeResponseDetailsDialog extends Component {
   };
 
   render() {
+    // Questions are in markdown format and should not display as plain text in the dialog.
+    const renderedMarkdown = processMarkdown(this.props.questionText, { renderer });
+
     return (
       <BaseDialog
         useUpdatedStyles
@@ -31,9 +37,10 @@ export default class FreeResponseDetailsDialog extends Component {
         handleClose={this.props.closeDialog}
       >
         <h2>{i18n.questionText()}</h2>
-        <div style={styles.instructions}>
-          {this.props.questionText}
-        </div>
+        <div
+          style={styles.instructions}
+          dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
+        />
         <DialogFooter>
           <Button
             text={i18n.done()}
