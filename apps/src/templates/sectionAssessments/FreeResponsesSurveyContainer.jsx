@@ -6,7 +6,7 @@ import {
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 
-const QUESTION_CHARACTER_LIMIT = 260;
+const QUESTION_CHARACTER_LIMIT = 110;
 
 const styles = {
   text: {
@@ -25,14 +25,7 @@ const freeResponseQuestionsPropType = PropTypes.shape({
 class FreeResponsesSurveyContainer extends Component {
   static propTypes = {
     freeResponsesByQuestion: PropTypes.arrayOf(freeResponseQuestionsPropType),
-  };
-
-  state = {
-    isExpanded: false,
-  };
-
-  expandText = () => {
-    this.setState({isExpanded: true});
+    openDialog: PropTypes.func.isRequired,
   };
 
   render() {
@@ -42,19 +35,14 @@ class FreeResponsesSurveyContainer extends Component {
         <h2>{i18n.studentFreeResponseAnswers()}</h2>
         {freeResponsesByQuestion.map((question, index) => (
           <div key={index}>
-            {!this.state.isExpanded &&
-              <div style={styles.text}>
-                {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
-                {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
-                   <a onClick={this.expandText}><span>{i18n.seeFullQuestion()}</span></a>
-                }
-              </div>
-            }
-            {this.state.isExpanded &&
-              <div style={styles.text}>
-                {`${question.questionNumber}. ${question.questionText}`}
-              </div>
-            }
+            <div style={styles.text}>
+              {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
+              {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
+                <a onClick={() => {this.props.openDialog(question.questionText);}}>
+                  <span>{i18n.seeFullQuestion()}</span>
+                </a>
+              }
+            </div>
             <FreeResponsesSurveyTable
               freeResponses={question.answers}
             />
