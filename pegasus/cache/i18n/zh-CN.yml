@@ -423,7 +423,7 @@ zh-CN:
   playlab_iceage_title: 冰河世纪-即将推出
   playlab_iceage_title_live: 冰河世纪
   starwars_subtitle: 用代码来建立一个星系
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: 使用拖放块和 JavaScript。
   starwars_javascript_specs: 英语 | 现代浏览器 | 11岁以上
   starwars_blocks_title: 模块
@@ -999,9 +999,9 @@ zh-CN:
   cspunit4_name: "（旧版）第4单元︰ 数据"
   cspunit5_name: "（旧版）第5单元︰ 探索和创建 PT"
   cspunit6_name: Post-AP：应用程序中的数据库
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 单元 5︰ 数据和社会
   csd6_name: 单元 6︰ 物理计算
@@ -1075,7 +1075,7 @@ zh-CN:
   csf_2018_category_name: 计算机科学基础课程（2018）
   csf_international_category_name: 计算机基础国际版
   csf2_draft_category_name: 开发中：课程A - F
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: 计算机科学发现 (' 18-' 19)
   csp_category_name: 15-16 计算机原理
   csp17_category_name: 计算机原理('17-'18)
@@ -1556,13 +1556,13 @@ zh-CN:
   compatibility_hide_this_warning: 隐藏此警告
   compatibility_unsupported_browser: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
     target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: 拍翅膀
   infinity_shortcode: inf
-  playlab_shortcode: 玩
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: 首页
   header_my_dashboard: 我的控制面板

@@ -3355,18 +3355,18 @@ pt-BR:
       courseA_bee_seq7_instruction: Adicione dois blocos para terminar este enigma!
       courseA_bee_seq8_instruction: Certifique-se de pegar néctar de cada flor!
       courseA_bee_seq9_instruction: Certifique-se de pegar néctar de cada flor!
-      courseA_collector_loops1_instruction: Move Laurel around and get as much treasure as you can!
+      courseA_collector_loops1_instruction: Mova Laurel ao redor e pegue quanto tesouro puder!
       courseA_collector_loops10_instruction: Ajude Laurel a pegar todo o tesouro ao longo deste caminho.
       courseA_collector_loops10_2018_instruction: Ajude Laurel a pegar todo o tesouro ao longo deste caminho.
-      courseA_collector_loops11_instruction: Help Laurel get all of the treasure from this cave.
-      courseA_collector_loops11_2018_instruction: Help Laurel get all of the treasure from this cave.
-      courseA_collector_loops12_instruction: '*"Eureka!  Get as much treasure as you can!"*'
-      courseA_collector_loops12_2018_instruction: '*"Eureka!  Get as much treasure as you can!"*'
-      courseA_collector_loops1_2018_instruction: Move Laurel around and get as much treasure as you can!
-      courseA_collector_loops2_instruction: Get all three piles to pass this level.
-      courseA_collector_loops2_2018_instruction: Get all three piles to pass this level.
-      courseA_collector_loops4_instruction: Fix Laurel's path to get all of this treasure.
-      courseA_collector_loops4_2018_instruction: Fix Laurel's path to get all of this treasure.
+      courseA_collector_loops11_instruction: Ajude Laurel a pegar todos os tesouros dessa caverna.
+      courseA_collector_loops11_2018_instruction: Ajude Laurel a pegar todos os tesouros dessa caverna.
+      courseA_collector_loops12_instruction: '*Eureka! Pegue quanto tesouro você puder!*'
+      courseA_collector_loops12_2018_instruction: '*Eureka! Pegue quanto tesouro você puder!*'
+      courseA_collector_loops1_2018_instruction: Mova Laurel ao redor e pegue quanto tesouro puder!
+      courseA_collector_loops2_instruction: Pegue todas as três pilhas para passar esse nível.
+      courseA_collector_loops2_2018_instruction: Pegue todas as três pilhas para passar esse nível.
+      courseA_collector_loops4_instruction: Corrija o caminho de Laurel para pegar todos estes tesouros.
+      courseA_collector_loops4_2018_instruction: Corrija o caminho de Laurel para pegar todos estes tesouros.
       courseA_collector_loops5_instruction: Use o que você aprendeu para pegar todo o tesouro.
       courseA_collector_loops5_2018_instruction: Use o que você aprendeu para pegar todo o tesouro.
       courseA_collector_loops6_instruction: Adicione blocos a este código para pegar todo o tesouro.
@@ -3388,7 +3388,7 @@ pt-BR:
       courseA_collector_preLoops4_instruction: Você consegue descobrir como resolver esse problema?
       courseA_collector_preLoops5_instruction: Get 1 of these 2 gems to solve this puzzle.
       courseA_collector_preLoops6_instruction: Pegue ambas as peças do tesouro para resolver este enigma.
-      courseA_collector_preLoops7_instruction: Get all three piles to pass this level.
+      courseA_collector_preLoops7_instruction: Pegue todas as três pilhas para passar esse nível.
       courseA_forVideoTest_artist_instruction: Use the `repeat` loop to add waves to the water.
       courseA_harvester_forVideo_instruction: Can you pick all the corn using only **one** move block?
       courseA_harvester_loops1_instruction: Help the harvester pick all the corn!
@@ -3428,7 +3428,7 @@ pt-BR:
       courseA_maze_ramp5a_2018_instruction: Get the bird to the pig!
       courseA_maze_seq1_instruction: Leve o pássaro até o porco mau!
       courseA_maze_seq10_instruction: 'Challenge: Go around the TNT to get the bird to the pig! '
-      courseA_maze_seq10_2018_instruction: 'Challenge: Avoid the TNT to get the bird to the pig! '
+      courseA_maze_seq10_2018_instruction: 'Desafio: Evite a TNT para levar o pássaro até o porco! '
       courseA_maze_seq11_instruction: Move one way, then another to get the bird to the pig.
       courseA_maze_seq11_2018_instruction: Move one way, then another to get the bird to the pig.
       courseA_maze_seq12_instruction: 'Get that pig! '
@@ -3511,8 +3511,8 @@ pt-BR:
       courseB_artist_loops_challenge2_instruction: Draw as many X's as you can. Can you get 3 in a row?
       courseB_artist_loops_challenge2_2018_instruction: Draw as many X's as you can. Can you get 3 in a row?
       courseB_collector_loops1_instruction: This is Laurel the Adventurer!  Can you move her around and get treasure?
-      courseB_collector_loops10_instruction: Help Laurel get all of the treasure from this cave.
-      courseB_collector_loops10_2018_instruction: Help Laurel get all of the treasure from this cave.
+      courseB_collector_loops10_instruction: Ajude Laurel a pegar todos os tesouros dessa caverna.
+      courseB_collector_loops10_2018_instruction: Ajude Laurel a pegar todos os tesouros dessa caverna.
       courseB_collector_loops11_instruction: Eureka!  Get as much treasure as you can!
       courseB_collector_loops11_2018_instruction: Eureka!  Get as much treasure as you can!
       courseB_collector_loops1_2018_instruction: Get at least one piece of treasure without mistakes to pass!
@@ -3688,8 +3688,8 @@ pt-BR:
       courseC_artist_loops4a_instruction: Try jumping forward by 75 pixels.
       courseC_artist_loops4a_2018_instruction: Try jumping forward by 75 pixels.
       courseC_artist_loops5_instruction: "Great!  Now it's time to make a fence inside to keep the animals out.   \n\n"
-      courseC_artist_loops5a_instruction: Try new stickers!
-      courseC_artist_loops5a_2018_instruction: Try new stickers!
+      courseC_artist_loops5a_instruction: Experimente novos adesivos!
+      courseC_artist_loops5a_2018_instruction: Experimente novos adesivos!
       courseC_artist_loops5b_instruction: Try adding lines!
       courseC_artist_loops5b_2018_instruction: Try adding lines!
       courseC_artist_loops6_instruction: "What should the zombie put inside of the garden?  \n\n\n"
@@ -3734,8 +3734,8 @@ pt-BR:
       courseC_artist_prog_challenge2_instruction: "*Help me paint the yellow lines on this road!*"
       courseC_artist_prog_challenge2a_instruction: '*"Help me paint the yellow lines on this road!"*'
       courseC_artist_prog_challenge2a_2018_instruction: '*"Help me paint the yellow lines on this road!"*'
-      courseC_collector_loops_challenge2_instruction: Get at least **5** pieces of treasure!
-      courseC_collector_loops_challenge2_2018_instruction: Get at least **5** pieces of treasure!
+      courseC_collector_loops_challenge2_instruction: Pegue pelo menos **5** peças do tesouro!
+      courseC_collector_loops_challenge2_2018_instruction: Pegue pelo menos **5** peças do tesouro!
       courseC_collector_prog1_instruction: Play around with the blocks to see if you can help Laurel collect some treasure.
       courseC_collector_prog1_2018_instruction: Play around with the blocks to see if you can help Laurel collect some treasure.
       courseC_collector_prog2_instruction: Move Laurel to the treasure, then use `collect` to pick it up.
@@ -4005,8 +4005,8 @@ pt-BR:
       courseD_artist_nestedLoopsPre1_instruction: Create a triangle to kickstart this stage.
       courseD_artist_nestedLoops_challenge1_instruction: Can you figure out how to make a picture like this?
       courseD_artist_nestedLoops_challenge1_2018_instruction: Can you figure out how to make a picture like this?
-      courseD_artist_nestedLoops_challenge2_instruction: Fix the code to make this picture!
-      courseD_artist_nestedLoops_challenge2_2018_instruction: Fix the code to make this picture!
+      courseD_artist_nestedLoops_challenge2_instruction: Conserte o código para fazer esta pintura!
+      courseD_artist_nestedLoops_challenge2_2018_instruction: Conserte o código para fazer esta pintura!
       courseD_artist_project1_instruction: 'Draw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  '
       courseD_artist_project1_2018_instruction: 'Draw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  '
       courseD_artist_project1a_instruction: Draw a stair-step pattern that uses turns between 75 and 105 degrees.
@@ -4684,8 +4684,8 @@ pt-BR:
       courseF_bee_conditionals1_predict1_2018_instruction: Check to see if there's a flower under the cloud. If there's a flower, get nectar.
       courseF_bee_conditionals2_instruction: 'Check underneath each cloud to see if it is hiding a flower before you get nectar.  '
       courseF_bee_conditionals2_2018_instruction: 'Check underneath each cloud to see if it is hiding a flower before you get nectar.  '
-      courseF_bee_conditionals3_instruction: 'Help the bee collect all of the nectar. '
-      courseF_bee_conditionals3_2018_instruction: 'Help the bee collect all of the nectar. '
+      courseF_bee_conditionals3_instruction: 'Ajude a abelha a colegar todo o nectar. '
+      courseF_bee_conditionals3_2018_instruction: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals4_instruction: Get all of the nectar using as few blocks as possible.
       courseF_bee_conditionals4_2018_instruction: Get all of the nectar using as few blocks as possible.
       courseF_bee_conditionals5_instruction: Collect all of the nectar using as few blocks as possible
@@ -4776,10 +4776,10 @@ pt-BR:
       courseF_bee_variables_2_2018_instruction: Edit your solution in one place so that the bee can collect all of the honey and nectar.
       courseF_bee_variables_3_2018_instruction: Subtract one from the variable each time through the loop if you want to use the same function to solve this level.
       courseF_bee_variables_4_2018_instruction: Edit the code to work for this puzzle.
-      courseF_bee_variables_5_2018_instruction: Create your own code to solve this puzzle
+      courseF_bee_variables_5_2018_instruction: Crie seu próprio código para resolver este enigma
       courseF_bee_variables_6_2018_instruction: "**Challenge** Now give this puzzle a try!"
       courseF_bee_variables_7_2018_instruction: Este enigma é um pouco diferente. O que você precisa para resolvê-lo?
-      courseF_bee_variables_8_2018_instruction: How many nectar will the bee collect from this flower?
+      courseF_bee_variables_8_2018_instruction: Quantos néctares a abelha irá coletar desta flor?
       courseF_farmer_ramp11_instruction: This puzzle also uses nested loops.  Can you figure out how?
       courseF_farmer_ramp11_2018_instruction: This puzzle also uses nested loops.  Can you figure out how?
       courseF_maze_predict1_instruction: This code includes a new block. What do you think would happen if you press the "Run" block?
@@ -4824,8 +4824,8 @@ pt-BR:
       courseF_playlab_variables7c_instruction: Make the game do something by asking the user to guess a color.
       courseF_playlab_variables7c_2018_instruction: Make the game do something by asking the user to guess a color.
       courseF_playlab_variables8b_instruction: Use what you've learned to create an improv scene between the actors.
-      courseF_playlab_variables8c_instruction: Use the variables to make the game more personal.
-      courseF_playlab_variables8c_2018_instruction: Use the variables to make the game more personal.
+      courseF_playlab_variables8c_instruction: Use as variáveis para tornar o jogo mais pessoal.
+      courseF_playlab_variables8c_2018_instruction: Use as variáveis para tornar o jogo mais pessoal.
       courseF_playlab_variables_challenge1_instruction: 'Use these blocks to make the actors share a knock-knock joke. '
       courseF_playlab_variables_challenge1_2018_instruction: 'Use these blocks to make the actors share a knock-knock joke. '
       courseF_playlab_variables_challenge2_instruction: This game will use variables to keep track of points.  Tag Cat to get 2 points. Tag Penguin to get 3 points.  When Cat and Penguin touch, take points away. Get exactly 10 points to win!

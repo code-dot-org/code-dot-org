@@ -46,7 +46,7 @@ pt-BR:
   previous_page: Página anterior
   next_page: Próxima página
   next_resource: Próximo recurso
-  done_with_module: Done with this Learning Module
+  done_with_module: Concluído com este Módulo de Aprendizagem
   cancel: Cancelar
   okay: Ok
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
@@ -106,8 +106,8 @@ pt-BR:
       Você terá que entrar digitando sua senha abaixo.
     use_clever: Desculpe, sua conta do Code.org não está ligada à sua %{provider}.
       Por favor entre através do seu Portal inteligente.
-    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}.
-      Please try again.
+    unable_to_connect_provider: Não foi possível conecta sua conta do Code.org ao
+      seu %{provider}. Por favor tente novamente.
   signup_form:
     student_count: "%{count} alunos já se registraram."
     teacher_count: "%{count} professores já se registraram."
@@ -263,8 +263,8 @@ pt-BR:
       picture: Senha com Foto
       word: Palavras Secretas
       email: E-mail
-      google_classroom: Google Classroom
-      clever: Clever
+      google_classroom: Sala de aula do Google
+      clever: Inteligente
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como seu professor"
@@ -318,7 +318,7 @@ pt-BR:
       free_play:
         playlab: Criar um aplicativo do Play Lab
         artist: Desenhar algo
-        calculate: Calculate Something
+        calculate: Calcule algo
         applab: Criar um aplicativo do Play Lab
         gamelab: Crie um projeto de Jogo de Laboratório
         weblab: Faça um projeto Laboratório Web (beta)
@@ -363,7 +363,7 @@ pt-BR:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
       label: Oi, %{username}
-      stats: Meu progresso
+      stats: Code Studio
       settings: Minha conta
       logout: Sair
       signin: Entrar
@@ -452,7 +452,7 @@ pt-BR:
     enter_parent_email: Insira o E-Mail dos pais ou responsável legal (para recuperação
       de senha)
     update: Atualizar Conta
-    account_successfully_updated: Account successfully updated.
+    account_successfully_updated: Conta atualizada com sucesso.
   user_level:
     completed: Concluído
     tried: Provado
@@ -745,9 +745,9 @@ pt-BR:
       weblab_unsupported_browser: Infelizmente, estamos com problemas com o carregamento
         do Web Lab neste navegador. Você pode tentar usar um navegador diferente até
         que isso seja resolvido. Desculpe pela inconveniência.
-      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
-        Private Browsing mode. Please reload your project in normal mode. Sorry for
-        the inconvenience.
+      weblab_unsupported_locale_storage: Você pode ter problemas ao usar o Laboratório
+        Web no modo de Navegação Privativa. Por favor recarregue seu projeto no modo
+        normal. Desculpe pela inconveniência.
   slow_loading: Isso está demorando mais do que o normal...
   try_reloading: Tente recarregar a página
   next_stage: Concluído! Continuar para a próxima fase
@@ -816,17 +816,19 @@ pt-BR:
         usuários
     gamelab:
       title: Laboratório de Jogos
-      body: Game Lab is a programming environment where you can make simple animations
-        and games with objects and characters that interact with each other.
+      body: O Laboratório de Jogos é um ambiente de programação onde você pode criar
+        animações simples e jogos com objetos e personagens que interagem uns com
+        os outros.
       audience: A partir de 13 anos
       cta: Saiba como
     hoc-encryption:
       title: Criptografia simples
-      body: Students will learn techniques to create and crack encrypted messages.
+      body: Os alunos vão aprender técnicas para criar e quebrar mensagens encriptadas.
     weblab:
-      title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      title: Laboratório Web (beta)
+      body: O Laboratório Web é um ambiente de programação onde você pode criar páginas
+        web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site
+        em segundos.
       audience: A partir de 13 anos
       cta: Saiba como
     frozen:
@@ -850,11 +852,11 @@ pt-BR:
         through Minecraft with code.
     sports:
       title: Esportes
-      body: Make a basketball game or mix and match across sports.
+      body: Faça um jogo de basquete ou misture os esportes.
     text-compression:
       title: Compressão de texto
-      body: In this lesson, students will use the Text Compression Widget to compress
-        text by substituting patterns with symbols.
+      body: Nesta lição, os alunos irão usar a Ferramenta de Compressão de Texto para
+        comprimir texto substituindo padrões por símbolos.
     unplugged:
       title: Aulas off-line
       audience: A partir de 4 anos
@@ -1095,9 +1097,9 @@ pt-BR:
       abaixo para iniciar um novo projeto!<br/>Você pode voltar e trabalhar em seus
       projetos a qualquer momento.
     need_help: Conheça esses cursos que vão ajudar você a iniciar seu novo projeto
-    thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
-      to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
-      to refresh everywhere.
+    thumbnail_help: Não está vendo a miniatura correta para seu projeto? Rode o seu
+      app para criar uma miniatura nova. Observe que pode levar algumas horas para
+      que a miniatura seja atualizada em todos os lugares.
     really_delete: Excluir?
     delete_yes: Sim
     delete_no: Não
@@ -1112,9 +1114,9 @@ pt-BR:
     remix: Remix
     click_to_remix: Clique em "Remix" para fazer sua própria versão!
     edit_project: Editar projeto
-    sharing_disabled: Sorry, this project is not available for sharing. If this is
-      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
-      in</a> to your account to view the project.
+    sharing_disabled: Desculpe, este projeto não está disponível para compartilhamento.
+      Se este é o seu projeto ou o projeto de um de seus alunos, por favor <a href='https://studio.code.org/users/sign_in'>faça
+      login</a> na sua conta para visualizar o projeto.
     abuse:
       tos: Esse projeto foi denunciado por violar os <a href='http://code.org/tos'>Termos
         de Serviço</a> da Code.org e não pode ser compartilhado com outras pessoas.
@@ -1174,14 +1176,14 @@ pt-BR:
     content: Conteúdo
     practice: Práticas de ensino
     peer_review: Revisão em grupo
-    ramp_up: Ramp-Up
+    ramp_up: Treinamento
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
     main_course: Curso Principal
     extra_course_content: Conteúdo do curso extra
-    csf_e_1: Ramp Up to Course E (Optional)
+    csf_e_1: Treinamento até Curso E (Opcional)
     csf_e_2: Conteúdo do curso E
-    csf_f_1: Ramp Up to Course F (Optional)
+    csf_f_1: Treinamento até Curso F (Opcional)
     csf_f_2: Conteúdo do curso F
     csd1_1: 'Capítulo 1: O Processo de Solução de Problemas'
     csd1_2: 'Capítulo 2: Computadores e Solução de Problemas'
@@ -1195,7 +1197,7 @@ pt-BR:
     csd5_2: 'Capítulo 2: Resolvendo Problemas de Informações'
     csd6_1: 'Capítulo 1: Programando com Hardware'
     csd6_2: 'Capítulo 2: Construindo protótipos físicos'
-    csd_survey: Post-Course Survey
+    csd_survey: Pesquisa Pós-Curso
     csp1_1: 'Capítulo 1: Representando e Transmitindo Informação'
     csp1_2: 'Capítulo 2: Inventando a Internet'
     csp2_1: 'Capítulo 1: Codificando e Comprimindo Informações Complexas'
@@ -1203,16 +1205,16 @@ pt-BR:
     csp3_1: 'Capítulo 1: Programando Linguagens e Algoritmos'
     csp4_1: 'Capítulo 1: O mundo do "Big Data" e criptografia'
     csp5_1: 'Capítulo 1: Programação orientada a eventos'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
+    csp5_2: 'Capítulo 2: Programando com Estruturas de Dados'
     cspSurvey: Questionário
-    cspAssessment: Chapter Assessment
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
+    cspAssessment: Avaliação do Capítulo
+    csp_ap_1: 'Capítulo 1: Configuração do AP Tech'
+    csp_ap_2: 'Capítulo 2: Tarefa de Exploração de Performance AP'
+    csp_ap_3: 'Capítulo 3: Tarefa de Criação de Performance AP'
+    csp_postap_1: 'Capítulo 1: Manipulando e Visualizando Dados'
+    csp_postap_2: 'Capítulo 2: Aplicativos e Bancos de Dados'
     csp2_1_2018: 'Unidade 2: Informação Digital'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp3_1_2018: 'Unidade 3: Introdução à Programação'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Prompts de reflexão
   external_links:
@@ -1298,17 +1300,17 @@ pt-BR:
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  stage_extras_teacher_message: You have Lesson Extras turned off for some of your
-    sections. Your students won’t see this page unless you turn them on. You can turn
-    Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher
-    Dashboard</a>.
+  stage_extras_teacher_message: Você possui Aulas Extras desativadas para algumas
+    de suas seções. Seus alunos não irão ver esta página a menos que você ative as
+    Aulas Extras. Você pode ativar as Aulas Extras visitando o seu <a href='http://code.org/teacher-dashboard'>Painel
+    do Professor</a>.
   locked_stage: O conteúdo desta fase não pode ser visto, pois ela está bloqueada
     no momento. Seu professor pode desbloquear esta fase quando chegar a hora de trabalhar
     com ela ou quando for revisar suas respostas.
   hidden_stage: Seu professor não esperava você por aqui. Pergunte a ele em que aula
     você deveria estar.
-  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
-    which unit you should be on.
+  hidden_script: O seu professor não esperava você por aqui. Por favor pergunte ao
+    seu professor em qual unidade você deveria estar.
   return_unit_overview: Ir para visão geral da unidade
   return_course_overview: Ir para visão geral da unidade
   view_all_units: Visualizar todas unidades
@@ -1361,35 +1363,38 @@ pt-BR:
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
     form_labels:
-      first_name: First Name
-      first_name_preferred: Preferred First Name
-      last_name: Last Name
+      first_name: Primeiro nome
+      first_name_preferred: Primeiro Nome Preferido
+      last_name: Último Nome
       email: E-mail
-      email_alternate: Alternate Email
-      gender: Gender Identity
+      email_alternate: Email Alternativo
+      gender: Identidade de Gênero
       school_name: Nome da escola
       school_city: School City
       school_country: País da Escola
-      ages: Which age(s) do you teach this year?
-      subjects: Which subject(s) do you teach this year?
-      resources: Which of the following CS education resources do you use?
-      robotics: Which of the following robotics resources do you use?
-      workshop_organizer: Workshop Organizer
-      workshop_facilitator: Workshop Facilitator
-      workshop_course: Workshop Course
-      email_opt_in: I agree that Code.org can share my contact information and aggregate
-        data about my classes with the Code.org International Partner in my country.
-      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
-        share information on how you use Code.org and the Professional Learning resources
-        with the Code.org International Partner in your country, school district,
-        and facilitators. We will share your contact information, which courses/units
-        you are using and aggregate data about your classes with these partners. This
-        includes the number of students in your classes, the demographic breakdown
-        of your classroom, and the name of your school and district. We will not share
-        any information about individual students with our partners: all student information
-        will be de-identified and aggregated. Our International Partners and facilitators
-        are contractually obliged to treat this information with the same level of
-        confidentiality as Code.org.'
+      ages: Qual idade(s) você ensina este ano?
+      subjects: Qual(is) disciplina(s) você ensina este ano?
+      resources: Quais dos seguintes recursos de educação de Ciência da Computação
+        você utiliza?
+      robotics: Quais dos seguintes recursos de robótica você utiliza?
+      workshop_organizer: Organizador de Oficina
+      workshop_facilitator: Facilitador de Oficina
+      workshop_course: Curso de Oficina
+      email_opt_in: Eu concordo que o Code.org pode compartilhar minhas informações
+        de contato e dados agregados sobre minhas aulas com o Parceiro Internacional
+        do Code.org em meu país.
+      legal_opt_in: 'Ao enviar este formulário, você concorda em permitir que o Code.org
+        compartilhe informações sobre como você utiliza o Code.org e os recursos de
+        Aprendizagem Profissional com o Parceiro Internacional do Code.org em seu
+        país, distrito escolar, e facilitadores. Nós vamos compartilhar suas informações
+        de contato, quais cursos/unidades você está utilizando e dados agregados sobre
+        suas aulas com estes parceiros. Isto inclui o número de estudantes nas suas
+        turmas, a repartição demográfica de sua sala de aula, e o nome e distrito
+        de sua escola. Nós não vamos compartilhar nenhuma informação sobre alunos
+        individuais com nossos parceiros: todas as informações dos alunos terá sua
+        identidade removida e será agregada. Nossos Parceiros Internacionais e facilitadores
+        são contratualmente obrigados a tratar esta informação com o mesmo nível de
+        confidencialidade que o Code.org.'
     form_entries:
       gender:
         male: Masculino
@@ -1398,100 +1403,102 @@ pt-BR:
         not_listed: Termo preferido não listado
         none: Prefiro não responder
       school_country:
-        canada: Canada
+        canada: Canadá
         chile: Chile
         israel: Israel
-        malaysia: Malaysia
-        mexico: Mexico
-        thailand: Thailand
+        malaysia: Malásia
+        mexico: México
+        thailand: Tailândia
       ages:
-        ages_under_6: "< 6 years old"
-        ages_7_8: 7-8 years old
-        ages_9_10: 9-10 years old
-        ages_11_12: 11-12 years old
-        ages_13_14: 13-14 years old
-        ages_15_16: 15-16 years old
-        ages_17_18: 17-18 years old
-        ages_19_over: 19+ years old
+        ages_under_6: "< 6 anos de idade"
+        ages_7_8: 7-8 anos de idade
+        ages_9_10: 9-10 anos de idade
+        ages_11_12: 11-12 anos de idade
+        ages_13_14: 13-14 anos de idade
+        ages_15_16: 15-16 anos de idade
+        ages_17_18: 17-18 anos de idade
+        ages_19_over: 19+ anos de idade
       subjects:
         cs: Ciência da Computação
-        ict: ICT
+        ict: Tecnologia da Informação e Comunicação
         math: Matemática
         science: Ciência
-        history: History / Social Studies
+        history: História / Estudos Sociais
         la: Artes da linguagem
-        efl: English as a Foreign Language
-        music: Music
-        art: Art
-        other: 'Other:'
+        efl: Inglês como Língua Estrangeira
+        music: Música
+        art: Arte
+        other: 'Outro:'
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
-        csfirst: Google CS First
+        csfirst: Google Ciência da Computação Primeiro (Google CS First)
         khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
         scratch: Scratch
         tynker: Tynker
-        other: 'Other:'
+        other: 'Outro:'
       robotics:
-        grok: Grok Learning
+        grok: Grok Learning (Aprendizagem Grok)
         kodable: Kodable
-        lego: LEGO Education
+        lego: LEGO Educação
         microbit: Microbit
         ozobot: Ozobot
         sphero: Sphero
         raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: 'Other:'
+        wonder: Oficina de Maravilhas
+        other: 'Outro:'
       workshop_course:
-        csf_af: CS Fundamentals (Courses A-F)
-        csf_express: CS Fundamentals (Pre-Express or Express)
+        csf_af: Fundamentos de Ciência da Computação (Cursos A-F)
+        csf_express: Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)
       email_opt_in:
         opt_in_yes: Sim
         opt_in_no: Não
     international_opt_in:
-      title: Workshop Attendance for non-U.S. Teachers
-      intro: Thank you for taking time to receive training on Code.org’s curriculum.
-        Our mission to bring computer science education opportunities to all children
-        in all schools around the world would not be possible without you.
-      instructions: Please fill out the form below to indicate that 1) you attended
-        a training workshop run by one of Code.org’s international partners, and 2)
-        you agree to share your information with our international partner in your
-        country so that we can help to support your journey as a computer science
-        teacher.
-      thanks: Thank you for submitting! We look forward to supporting you as you get
-        to know Code.org’s curriculum and tools. Please keep sharing your questions
-        and feedback with us by writing to us at support@code.org or by posting on
-        the teacher forum!
+      title: Comparecimento ao Workshop para Professores de fora dos E.U.A.
+      intro: Obrigado por tomar tempo para receber formação sobre o currículo do Code.org.
+        Nossa missão para trazer oportunidades de educação em ciência da computação
+        para todas as crianças em todas as escolas de todo o mundo não seria possível
+        sem você.
+      instructions: Por favor preencha o formulário abaixo para indicar que 1) você
+        participou de um workshop dirigido por um dos parceiros internacionais do
+        Code.org, e 2) você concorda em compartilhar suas informações com o nosso
+        parceiro international em seu país para que nós possamos ajudar a apoiar a
+        sua jornada como um professor de ciência da computação.
+      thanks: Obrigado por se inscrever! Estamos ansiosos para apoiar você enquanto
+        você aprende sobre o currículo e ferramentas do Code.org. Por favor continue
+        compartilhando suas dúvidas e feedback conosco escrevendo para support@code.org
+        ou postando no fórum do professor!
     logged_out:
-      heading: Thanks for your interest in the Professional Learning Program!
-      body: To get started, you first need to be logged into your Code.org account.
-        If you’d like more information about the program before you start your application,
-        please check out the <a href="%{url}">Professional Learning Program overview</a>.
+      heading: Obrigado pelo seu interesse no Programa de Aprendizagem Profissional!
+      body: Para começar, primeiro você precisa estar logado em sua conta do Code.org.
+        Se você quiser mais informações sobre o programa antes de iniciar sua aplicação,
+        por favor verifique a <a href="%{url}">visão geral do Programa de Aprendizagem
+        Profissional</a>.
     not_teacher:
-      body: Thanks for your interest in Code.org’s Professional Learning Program!
-        You’re currently signed into a student account. Please either <a href="%{create_teacher}">create
-        a teacher account</a> or <a href="%{user_settings}">go to your user settings</a>
-        to upgrade your account from student to teacher.
-      more: If you’d like more information about the program before you start your
-        application, please check out the <a href="%{pl_overview}">Professional Learning
-        Program overview</a>.
+      body: Obrigado pelo seu interesse no Programa de Aprendizagem Profissional do
+        Code.org. Você está conectado em uma de estudante. Por favor <a href="%{create_teacher}">crie
+        uma conta de professor</a> ou <a href="%{user_settings}">vá para suas configurações
+        de usuário</a> para atualizar sua conta de estudante para professor.
+      more: Caso você queira mais informações sobre o programa antes de iniciar sua
+        aplicação, por favor verifique a <a href="%{pl_overview}">visão geral do Programa
+        de Aprendizagem Profissional</a>.
     no_teacher_email:
-      body: Your account doesn’t have an email address. Please <a href="%{user_registration}">visit
-        your account settings</a> to add your email address before completing this
-        form.
+      body: Sua conta não possui um endereço de email. Por favor <a href="%{user_registration}">visite
+        as configurações de sua conta</a> para adicionar um endereço de email antes
+        de completar este formulário.
   courses_category: Cursos Completos
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
+    message: Ao continuar a navegar em nosso site ou ao clicar em "Eu concordo", você
+      concorda com o armazenamento de cookies em seu computador ou dispositivo.
+    more_information: Consulte a Política de Privacidade do Code.org.
     accept: Aceito
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
+    heading: Você concorda em usar um site situado nos Estados Unidos?
+    message: Os dados gerados pelo seu uso deste site podem ser enviados e armazenados
+      ou processados nos Estados Unidos.
+    link_intro: Para obter detalhes, consulte nosso
     privacy_policy: política de privacidade
     logout: Sair
     true: Sim

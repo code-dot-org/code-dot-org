@@ -6,7 +6,8 @@ import initializeCodeMirror, {
 } from '@cdo/apps/code-studio/initializeCodeMirror';
 import jsonic from 'jsonic';
 import { parseElement } from '@cdo/apps/xml';
-import { installCustomBlocks } from '@cdo/apps/gamelab/blocks';
+import { installCustomBlocks as gamelabInstallCustomBlocks } from '@cdo/apps/gamelab/blocks';
+import { installCustomBlocks as mazeInstallCustomBlocks } from '@cdo/apps/maze/blocks';
 import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
 import animationListModule, {
   setInitialAnimationList
@@ -14,12 +15,18 @@ import animationListModule, {
 import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
-let nameField, helperEditor;
+const installers = {
+  GameLabJr: gamelabInstallCustomBlocks,
+  Maze: mazeInstallCustomBlocks,
+};
+
+let typeField, nameField, helperEditor;
 
 $(document).ready(() => {
   registerReducers({animationList: animationListModule});
   getStore().dispatch(setInitialAnimationList(defaultSprites));
 
+  typeField = document.getElementById('block_level_type');
   nameField = document.getElementById('block_name');
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
@@ -44,7 +51,7 @@ function onChange(editor) {
 
   const parsedConfig = jsonic(config);
 
-  const blocksInstalled = installCustomBlocks(
+  const blocksInstalled = installers[typeField.value](
     Blockly,
     {},
     [{

@@ -14,12 +14,12 @@ import {connect} from 'react-redux';
 import {h3Style} from "../../lib/ui/Headings";
 import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
-import MCAssessmentsOverviewContainer from './MCAssessmentsOverviewContainer';
+import MultipleChoiceAssessmentsOverviewContainer from './MultipleChoiceAssessmentsOverviewContainer';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
-import StudentsMCSummaryContainer from './StudentsMCSummaryContainer';
+import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
 import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContainer';
-import FreeResponseBySurveyQuestionContainer from './FreeResponseBySurveyQuestionContainer';
-import MCSurveyOverviewContainer from './MCSurveyOverviewContainer';
+import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
+import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
 import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -158,10 +158,10 @@ class SectionAssessments extends Component {
                 {totalStudentSubmissions <= 0 &&
                   <h3>{i18n.emptyAssessmentSubmissions()}</h3>
                 }
-                <StudentsMCSummaryContainer />
+                <SubmissionStatusAssessmentsContainer />
                 {totalStudentSubmissions > 0 &&
                   <div>
-                    <MCAssessmentsOverviewContainer />
+                    <MultipleChoiceAssessmentsOverviewContainer />
                     <MultipleChoiceByStudentContainer />
                     <FreeResponsesAssessmentsContainer />
                   </div>
@@ -180,8 +180,8 @@ class SectionAssessments extends Component {
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
-                    <MCSurveyOverviewContainer />
-                    <FreeResponseBySurveyQuestionContainer />
+                    <MultipleChoiceSurveyOverviewContainer />
+                    <FreeResponsesSurveyContainer />
                   </div>
                 }
                 {totalStudentSubmissions <=0 &&

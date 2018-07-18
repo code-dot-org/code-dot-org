@@ -25,7 +25,8 @@ sq:
         name_example: Shfaq Emrin<br/>(Psh. Cool Coder or Jane S.)
         email: Email
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: Emri i përdoruesit
         password: Fjalëkalimi
         password_confirmation: Konfirmimi i fjalëkalimit
@@ -166,7 +167,7 @@ sq:
     accept_terms: Ju duhet të jeni dakord për të krijuar një llogari
     error: An error occurred.
     email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
+      opportunities, or other computer science news?
     email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Po
     email_preference_no: Jo
@@ -194,7 +195,7 @@ sq:
     school_organization_zip: School/Organization Zip Code
   signin_form:
     title: Ke një llogari ekzistuese? Logohu
-    login: Email-i ose emri i përdoruesit
+    login: Email
     login_username: Email or Username
     password: Fjalëkalimi
     remember: Më mbaj mend
@@ -296,9 +297,10 @@ sq:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Unë e mbarova Orën e Kodimit
@@ -306,7 +308,7 @@ sq:
       free_play:
         playlab: Bëj një Aplikacion Play Lab
         artist: Vizato Diçka
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Bëj një Aplikacion App Lab
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -351,7 +353,7 @@ sq:
       classroom: Faqja Kryesore e Mësuesit
       district_dashboard: Pulti i Qarkut
       label: Përshëndetje %{username}
-      stats: Ecuria ime
+      stats: Code Studio
       settings: Llogaria ime
       logout: Dil
       signin: Futu
@@ -421,8 +423,7 @@ sq:
       even after the end of the school year, ask your parent/guardian to help you
       create your own personal login below.
     create_personal_login_under_13_username: Username (don't use your real name!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Parent/guardian email address
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -765,7 +766,7 @@ sq:
       title: Labirint Klasik
       body: Provo bazat e shkencave kompjuterike. Miliona veta e kanë provuar.
     flappy:
-      title: Kodi Flappy
+      title: Flappy Code
       body: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin
         tonë Flappy Code!
     20-hour:
@@ -783,7 +784,7 @@ sq:
       body: Shiko një galeri imazhesh artistësh dhe aplikacionesh, të krijuar nga
         përdoruesit tonë
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Moshat 13 +
@@ -872,7 +873,7 @@ sq:
     support: Merr Ndihmë
     support_url: "//support.code.org"
     help_resources: Ndihmë dhe Burime
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -1076,7 +1077,7 @@ sq:
       e projekteve. Të gjithë njerëzit me të cilët e ke shpërndarë, nuk do të munden
       më ta shohin atë.
     view_all: Shfaq projektet e mia
-    remix: Përziej
+    remix: Remix
     click_to_remix: Kliko "Remix" për të nxjerrë versionin tënd!
     edit_project: Ndërhy në Projekt
     sharing_disabled: Sorry, this project is not available for sharing. If this is
@@ -1165,8 +1166,8 @@ sq:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1256,7 +1257,7 @@ sq:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:

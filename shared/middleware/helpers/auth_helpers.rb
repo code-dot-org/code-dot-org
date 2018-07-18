@@ -69,7 +69,7 @@ def has_permission?(permission)
 end
 
 # @param [Integer] section_id
-# @returns [Boolean] true iff the current user is the owner of the given section.
+# @returns [Boolean] true if the current user is the owner of the given section.
 #          Note: NOT always true for admins.
 def owns_section?(section_id)
   return false unless section_id && current_user_id
@@ -77,7 +77,7 @@ def owns_section?(section_id)
 end
 
 # @param [Integer] student_id
-# @returns [Boolean] true iff the current user, or given user, is the teacher for the student of the given id
+# @returns [Boolean] true if the current user, or given user, is the teacher for the student of the given id
 def teaches_student?(student_id, user_id = current_user_id)
   return false unless student_id && user_id
   DASHBOARD_DB[:sections].

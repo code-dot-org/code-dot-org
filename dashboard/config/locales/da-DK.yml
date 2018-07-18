@@ -25,7 +25,8 @@ da:
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-mail
         parent_email: Parent/guardian email
-        personal_email: Personal email address
+        personal_email: Personal email address <a href="%{url}">(click here if you
+          don't have an email address)</a>
         username: brugernavn
         password: Adgangskode
         password_confirmation: Bekræft adgangskode
@@ -68,7 +69,7 @@ da:
   courses: kurser
   courses_page:
     title_student: Lære om Code Studio
-    title_teacher: Teach with Code Studio
+    title_teacher: Teach Computer Science
   unplugged_activity: Unplugged aktivitet
   of: af
   more: MERE
@@ -114,10 +115,10 @@ da:
     hoc_already_signed_up_heading: Get started without logging in
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your
+      classroom and share the link with them.<br/><br/>If you enjoyed the Hour of
+      Code and want to go further, you can set up a password and create a Code Studio
+      account below to enroll your students in any of our <a href="%{educate_url}">longer
       courses</a>.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
@@ -149,13 +150,12 @@ da:
     agree_us_website: Jeg accepterer at bruge en hjemmeside baseret i USA.
     my_data_to_us: Data fra min brug af dette websted kan sendes til og gemmes eller
       behandles i USA.
-    student_terms: Jeg accepterer Code.org <a href='http://code.org/tos'>Servicevilkår</a>.
-      Hvis jeg er under 13 år, bekræfte jeg ved at indsende denne formular, at jeg
-      har mine forældre eller værges tilladelse til at benytte Code.org. <br/>For
-      brugere under 13, er e-mail-adresser ikke gemt i en form, der tillader os at
-      kontakte dem.
-    teacher_terms: Jeg accepterer <a href='http://code.org/tos'> Servicevilkårene</a>
-      for code.org.
+    student_terms: Email addresses are not stored in a form that allows us to contact
+      students. Students will never recieve emails from Code.org except for password
+      recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more
+      information.
+    teacher_terms: I agree to be bound by the Code.org terms of service. For more
+      information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: Vi har brug for nogle ekstra oplysninger til at fortsætte
       med at logge dig.
     user_type_button: Update Account Type
@@ -167,7 +167,7 @@ da:
     error: Der opstod en fejl.
     email_preference_question: Kan vi e-maile dig om opdateringer til vores kurser,
       lokale muligheder eller andre nyheder om computervidenskab?
-    email_preference_privacy: "(Se vores privatlivspolitik)"
+    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ja
     email_preference_no: Nej
     email_preference_required: You must specify an email preference.
@@ -301,9 +301,10 @@ da:
         user_type_change_email_mismatch: The email address you provided doesn't match
           the email address for this account
         personal_login_created_email: You created a personal login successfully. You
-          can now log into Code.org with your email and password
+          can now sign into your account with your email and password
         personal_login_created_username: You created a personal login successfully.
-          You can now log into Code.org with your username and password
+          You can now sign into your account with your username (%{username}) and
+          password
   nav:
     header:
       finished_hoc: Jeg har afsluttet min Hour of Code
@@ -311,7 +312,7 @@ da:
       free_play:
         playlab: Lav en App
         artist: Tegn noget
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: Lav en App
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
@@ -360,12 +361,12 @@ da:
       settings: Min konto
       logout: Log ud
       signin: Log ind
-      signup: Tilmeld
+      signup: Create an account
       already_registered: Allerede registreret?
       pair_programming: Par programmering
       team: Team
-      driver: Driver
-      navigator: Navigator
+      driver: Logged in
+      navigator: Partner
     popup:
       progress_for_user: "%{name}s fremskridt"
       progress: Dine fremskridt
@@ -617,8 +618,8 @@ da:
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    already_enrolled_in_new_section: You cannot move these students because they are
+      already in the new section.
     third_party_login: You cannot move students to a section that is synced with a
       third party tool.
   share:
@@ -778,7 +779,7 @@ da:
       title: Galleri
       body: Se et galleri af app og kunstnerbilleder skabt af vores brugere
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Alder 13+
@@ -866,7 +867,7 @@ da:
     support: Få hjælp
     support_url: Support.Code.org
     help_resources: Help and Resources
-    help_support: Help and Support
+    help_support: Help and support
     documentation: Documentation
     tutorials: Tutorials
   multi:
@@ -887,7 +888,7 @@ da:
     wrong_title: Tak skal du have
     wrong_body: Thank you for submitting answers.
     correct_title: Tak skal du have
-    correct_body: Thank you for submitting an answer
+    correct_body: Thank you for submitting answers.
     hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
       for aggregate results.  Note that results are only visible if at least five
       students submitted the survey.
@@ -965,8 +966,8 @@ da:
     tos: Termer
     privacy: Privatlivspolitik
     privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
+      and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
     accept: Accept
     print: Udskriv
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -1129,7 +1130,7 @@ da:
   flex_category:
     required: Oversigt
     content: Content
-    practice: Teacher Practices
+    practice: Teaching Practices
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1150,8 +1151,8 @@ da:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csd_survey: Post-Course Survey
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
@@ -1239,7 +1240,7 @@ da:
     download_in_Turkish: 'Download in Turkish:'
     download_in_Ukrainian: 'Download in Ukrainian:'
     download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -1266,7 +1267,7 @@ da:
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Go to course overview
   view_all_units: View all units
   pd:
     survey:

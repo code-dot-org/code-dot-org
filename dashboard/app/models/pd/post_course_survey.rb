@@ -9,6 +9,8 @@
 #  year          :string(255)
 #  user_id       :integer          not null
 #  course        :string(255)      not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
 #
 # Indexes
 #

@@ -23,9 +23,9 @@ pl:
         "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png,
           250"
         "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>N</strong>"
-        "<strong>P</strong>": "<strong>N</strong>"
-        "<strong>Q</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
         Matching: Dopasowanie
         Use the key to match each code to its letter: Użyj klawisza, aby połączyć
           każdy kod z jego literą
@@ -117,9 +117,9 @@ pl:
         Maze Match One: 'Labirynt: Dopasowanie 1'
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>1)</h4>"
-        "<h4>3)</h4>": "<h4>1)</h4>"
-        "<h4>4)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
         "<h4>Add Player 1 roll to total score</h4>": "<h4>Dodaj wynik Gracza 1 do
           całkowitego wyniku</h4>"
         "<h4>Compare player scores to see who wins</h4>": "<h4>Porównaj wyniki graczy,
@@ -153,10 +153,10 @@ pl:
         "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        "<h4>RAMP</h4>": "<h4>RAMPa</h4>"
-        "<h4>STACK</h4>": "<h4>STOS</h4>"
-        "<h4>STAMP</h4>": "<h4>PIECZĘĆ</h4>"
-        "<h4>STAR</h4>": "<h4>GWIAZDA</h4>"
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
         Match each program to the word it makes, using the provided group of skills.: Połącz
           każdy program do słowa, które tworzy, stosując dostarczoną grupę umiejętności.
         Matching: Dopasowanie
@@ -860,8 +860,8 @@ pl:
           700"
         Multiple Choice: Test wielokrotnego wyboru
         SET: SET
-        SOUTH: POŁUDNIE
-        SQUARE: KWADRAT
+        SOUTH: SOUTH
+        SQUARE: SQUARE
         Which word is spelled?: Które ze słów zostanie utworzone?
       K-1 multi 4:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"

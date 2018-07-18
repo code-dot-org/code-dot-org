@@ -1685,12 +1685,12 @@ eu:
           eta zonbia aurrera mugituko da bost aldiz ekilore gozo-gozoraino.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Orain arte, animazio edo istorio bat egiten aritu zara, exekutatzean
           behin eta berriro gauza bera egiten duena. Orain , jolas interaktiboa egin
           dezakezu eta benetan jolastu ahal izango duzu.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Probatzeko bloke berriak daude. "gezia sakatzean" eta "mugitu aktorea"
           bloke berriak ditugu. Jarri al ditzakezu bloke hauek batera aktoreak mugitzeko
           gezien bitartez? Badaude ere bloke batzuk erantzun bat emateko aktorea klikatzen

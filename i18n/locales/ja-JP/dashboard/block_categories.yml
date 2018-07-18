@@ -2,11 +2,11 @@ ja:
   data:
     block_categories:
       Actions: うごき
-      Loops: ループ
-      Functions: 機能
+      Loops: くりかえし
+      Functions: 関数(かんすう) 
       Color: 色
       Brushes: ブラシ
-      Math: 数値
+      Math: 計算(けいさん)
       Logic: ロジック
       Variables: 変数
       Number: 数（かず）
@@ -22,10 +22,10 @@ ja:
       Text: テキスト（文字列）
       Picker: ピッカー
       Comment: コメント
-      'Variables ': '変数（へんすう） '
+      'Variables ': '変数(へんすう) '
       everythingelse: ほかのすべて
-      numbers: 数値
-      Numbers: 数字
+      numbers: 数（かず）
+      Numbers: 数（かず）
       Input: Input
       Default: デフォルト
       World: 世界

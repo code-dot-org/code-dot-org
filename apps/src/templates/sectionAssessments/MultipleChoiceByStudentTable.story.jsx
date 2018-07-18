@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleStudentAssessmentsMCTable from './SingleStudentAssessmentsMCTable';
+import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
 import {
   studentData,
   multipleChoiceDataForSingleStudent
@@ -7,13 +7,13 @@ import {
 
 export default storybook => {
   return storybook
-    .storiesOf('SectionAssessments/SingleStudentAssessmentsMCTable', module)
+    .storiesOf('SectionAssessments/MultipleChoiceByStudentTable', module)
     .addStoryTable([
       {
         name: 'Student Overview',
         description: 'Ability to see assessment overview for a single student',
         story: () => (
-          <SingleStudentAssessmentsMCTable
+          <MultipleChoiceByStudentTable
             questionAnswerData={multipleChoiceDataForSingleStudent}
             studentAnswerData={studentData}
           />

@@ -370,7 +370,7 @@ fr:
       classroom: Page d'accueil de l'enseignant
       district_dashboard: Tableau de bord du district
       label: Bonjour %{username}
-      stats: Ma progression
+      stats: Code Studio
       settings: Mon compte
       logout: Déconnexion
       signin: Authentification
@@ -821,7 +821,7 @@ fr:
       body: Regarde une galerie des applications et des images d'artistes créées par
         nos utilisateurs.
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab est un environnement de programmation où vous pouvez créer des
         animations simples et des jeux avec des objets et des personnages qui interagissent
         entre eux.
