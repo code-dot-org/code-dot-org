@@ -5,6 +5,7 @@ import {
   getAssessmentsFreeResponseResults,
   ALL_STUDENT_FILTER,
   currentStudentHasResponses,
+  setQuestionIndex,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
@@ -30,6 +31,12 @@ class FreeResponsesAssessmentsContainer extends Component {
     studentId: PropTypes.number,
     currentStudentHasResponses: PropTypes.bool,
     openDialog: PropTypes.func.isRequired,
+    setQuestionIndex: PropTypes.func.isRequired,
+  };
+
+  selectQuestion = (index) => {
+    this.props.setQuestionIndex(index);
+    this.props.openDialog();
   };
 
   render() {
@@ -46,7 +53,7 @@ class FreeResponsesAssessmentsContainer extends Component {
                 <div style={styles.text}>
                   {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
                   {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
-                    <a onClick={() => {this.props.openDialog(question.questionText);}}>
+                    <a onClick={() => {this.selectQuestion(question.questionNumber - 1);}}>
                       <span>{i18n.seeFullQuestion()}</span>
                     </a>
                   }
@@ -69,4 +76,8 @@ export default connect(state => ({
   freeResponseQuestions: getAssessmentsFreeResponseResults(state),
   studentId: state.sectionAssessments.studentId,
   currentStudentHasResponses: currentStudentHasResponses(state),
+}), dispatch => ({
+  setQuestionIndex(questionIndex) {
+    dispatch(setQuestionIndex(questionIndex));
+  },
 }))(FreeResponsesAssessmentsContainer);
