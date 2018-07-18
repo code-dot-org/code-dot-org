@@ -428,7 +428,6 @@ describe('entry tests', () => {
     return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }));
   var codeStudioEntries = {
-    'blockly':                      './src/sites/studio/pages/blockly.js',
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
@@ -643,6 +642,19 @@ describe('entry tests', () => {
     }
   };
 
+  var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
+  config.concat = {
+    vendor: {
+      src: [
+        'lib/blockly/preamble_' + ext + '.js',
+        'lib/blockly/blockly_' + ext + '.js',
+        'lib/blockly/blocks_' + ext + '.js',
+        'lib/blockly/javascript_' + ext + '.js',
+      ],
+      dest: 'build/package/js/blockly.js'
+    }
+  };
+
   config.uglify = {
     lib: {
       files: _.fromPairs([
@@ -678,7 +690,7 @@ describe('entry tests', () => {
     },
     vendor_js: {
       files: ['lib/**/*.js'],
-      tasks: ['newer:copy:lib', 'notify:vendor_js'],
+      tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: envConstants.AUTO_RELOAD
@@ -710,7 +722,7 @@ describe('entry tests', () => {
     content: {options: {message: 'Content build completed.'}},
     ejs: {options: {message: 'EJS build completed.'}},
     messages: {options: {message: 'i18n messages build completed.'}},
-    vendor_js: { options: {message: 'vendor JS copy done.'}}
+    vendor_js: { options: {message: 'Blockly concat & vendor JS copy done.'}}
   };
 
   grunt.initConfig(config);
@@ -794,6 +806,7 @@ describe('entry tests', () => {
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
+    'newer:concat',
     'newer:sass',
     'compile-firebase-rules'
   ]);
@@ -827,6 +840,7 @@ describe('entry tests', () => {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
+    'concat',
     'karma:unit'
   ]);
 
@@ -836,12 +850,14 @@ describe('entry tests', () => {
 
   grunt.registerTask('integrationTest', [
     'preconcat',
+    'concat',
     'karma:integration'
   ]);
 
   // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
   grunt.registerTask('scratchTest', [
     'preconcat',
+    'concat',
     'karma:scratch',
   ]);
 
