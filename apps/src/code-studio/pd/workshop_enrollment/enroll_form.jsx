@@ -6,7 +6,7 @@ import {FormGroup, Button, Row, Col, ControlLabel} from 'react-bootstrap';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import Select from "react-select";
 import FieldGroup from '../form_components/FieldGroup';
-import {isEmail} from '@cdo/apps/util/formatValidation';
+import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {STATES} from '../../../geographyConstants';
 
@@ -208,7 +208,7 @@ export default class EnrollForm extends React.Component {
           <FieldGroup
             id="email"
             label="Email Address"
-            type="email"
+            type="text"
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
@@ -219,7 +219,7 @@ export default class EnrollForm extends React.Component {
             <FieldGroup
               id="confirm_email"
               label="Confirm Email Address"
-              type="email"
+              type="text"
               required={true}
               onChange={this.handleChange}
             />
@@ -275,7 +275,7 @@ export default class EnrollForm extends React.Component {
               id="school_state"
               style={styles.outdented}
             >
-              <ControlLabel>School State</ControlLabel>
+              <ControlLabel>School State<span className="form-required-field"> *</span></ControlLabel>
               <Select
                 value={this.state.school_info ? this.state.school_info.school_state : null}
                 onChange={this.handleSchoolStateChange}
@@ -378,7 +378,7 @@ export default class EnrollForm extends React.Component {
 
     let missingRequiredFields = requiredFields.filter(f => {
       if (schoolInfoFields.includes(f)) {
-        return !this.state["school_info"][f];
+        return !this.state.school_info[f];
       } else {
         return !this.state[f];
       }
@@ -394,8 +394,14 @@ export default class EnrollForm extends React.Component {
       if (!isEmail(this.state.email)) {
         errors.email = "Must be a valid email address";
       }
-      if (!this.state.logged_in && this.state.confirmEmail && this.state.email !== this.state.confirmEmail) {
-        errors.confirmEmail = "Email addresses do not match";
+      if (!this.state.logged_in && this.state.email !== this.state.confirm_email) {
+        errors.confirm_email = "Email addresses do not match";
+      }
+    }
+
+    if (this.state.school_info && this.state.school_info.school_zip) {
+      if (!isZipCode(this.state.school_info.school_zip)) {
+        errors.school_zip = "Must be a valid zip code";
       }
     }
 
