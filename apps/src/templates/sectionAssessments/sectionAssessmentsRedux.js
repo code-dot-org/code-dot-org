@@ -235,8 +235,9 @@ export const getCurrentQuestion = (state) => {
     }
   } else {
     // Get question text for assessment.
-    const assessmentQuestions = getCurrentAssessmentQuestions(state).questions;
-    if (assessmentQuestions[state.sectionAssessments.questionIndex]) {
+    const assessment = getCurrentAssessmentQuestions(state) || {};
+    const assessmentQuestions = assessment.questions;
+    if (assessmentQuestions && assessmentQuestions[state.sectionAssessments.questionIndex]) {
       return assessmentQuestions[state.sectionAssessments.questionIndex].question_text;
     } else {
       return '';
