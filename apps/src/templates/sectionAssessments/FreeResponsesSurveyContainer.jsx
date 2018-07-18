@@ -6,7 +6,7 @@ import {
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 
-const QUESTION_CHARACTER_LIMIT = 260;
+const QUESTION_CHARACTER_LIMIT = 110;
 
 const styles = {
   text: {
