@@ -217,7 +217,7 @@ class OauthConnection extends React.Component {
         <td style={emailStyles}>
           {email || i18n.manageLinkedAccounts_notConnected()}
         </td>
-        <td style={{...styles.cell, ...styles.actionContainer}}>
+        <td style={styles.cell}>
           <span
             data-for={tooltipId}
             data-tip
@@ -277,10 +277,6 @@ const styles = {
   emptyEmailCell: {
     color: color.light_gray,
     fontStyle: 'italic',
-  },
-  actionContainer: {
-    display: 'flex',
-    alignItems: 'center',
   },
   button: {
     width: BUTTON_WIDTH,
