@@ -1,0 +1,16 @@
+{
+  "category": "",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenJoystick",
+    "blockText": "when joystick",
+    "args": [
+
+    ],
+    "eventBlock": true
+  }
+}

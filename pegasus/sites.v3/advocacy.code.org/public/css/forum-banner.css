@@ -1,0 +1,35 @@
+.announcement {
+  width: 100%;
+  color: white;
+  background-color: #7665a0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow:hidden;
+  padding: 16px;
+  border-radius: 5px
+}
+
+.announcement .left {
+  float: left;
+}
+
+.announcement .left p.title {
+  font-size: 16px;
+  margin-bottom: 3px;
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.announcement .left p.details {
+  margin-bottom: 0px;
+}
+
+.announcement .right {
+  float: right;
+}
+
+.announcement button {
+  margin-top: 0px;
+  width: 150px;
+  height: 50px;
+  font-family: 'Gotham 5r', sans-serif;
+}

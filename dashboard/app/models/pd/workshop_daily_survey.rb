@@ -10,6 +10,8 @@
 #  pd_workshop_id :integer          not null
 #  answers        :text(65535)
 #  day            :integer          not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 # Indexes
 #
@@ -39,9 +41,16 @@ module Pd
       }
     end
 
-    before_validation :set_day_from_form_id, if: -> {day.nil?}
+    # @override
+    def map_answers_to_attributes
+      super
+
+      # Make sure we have a day, in case the form doesn't provide it
+      set_day_from_form_id if day.nil?
+    end
+
     def set_day_from_form_id
-      self.day = VALID_DAYS.find {|d| self.class.get_form_id_for_day(d) == form_id}
+      self.day = self.class.get_day_for_form_id(form_id)
     end
 
     validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
@@ -61,10 +70,18 @@ module Pd
       get_form_id 'local', "day_#{day}"
     end
 
+    def self.get_day_for_form_id(form_id)
+      VALID_DAYS.find {|d|  get_form_id_for_day(d) == form_id}
+    end
+
     def self.all_form_ids
       VALID_DAYS.map do |day|
         get_form_id_for_day day
       end
+    end
+
+    def self.unique_attributes
+      [:user_id, :pd_workshop_id, :day]
     end
   end
 end

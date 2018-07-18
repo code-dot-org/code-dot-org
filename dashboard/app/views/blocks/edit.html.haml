@@ -3,6 +3,7 @@
   %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
   %script{src: minifiable_asset_path('js/blocks/edit.js')}
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+  = stylesheet_link_tag asset_path('css/common.css'), media: 'all'
 
 %h1= @block.new_record? ? "New Block" : "Editing block #{@block.name}"
 .block-editor-container
@@ -22,7 +23,7 @@
       = f.label 'Helper Code'
       = f.text_area :helper_code
       %div
-        = f.submit class: 'btn'
+        = f.submit class: 'btn', id: 'block_submit'
 
     - unless @block.new_record?
       = form_for(@block,

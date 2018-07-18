@@ -184,10 +184,18 @@ GameLab.prototype.init = function (config) {
   }
 
   this.skin = config.skin;
-  this.skin.smallStaticAvatar = null;
-  this.skin.staticAvatar = null;
-  this.skin.winAvatar = null;
-  this.skin.failureAvatar = null;
+  if (this.studioApp_.isUsingBlockly()) {
+    const MEDIA_URL = '/blockly/media/spritelab/';
+    this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.winAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
+  } else {
+    this.skin.smallStaticAvatar = null;
+    this.skin.staticAvatar = null;
+    this.skin.winAvatar = null;
+    this.skin.failureAvatar = null;
+  }
   this.level = config.level;
 
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
@@ -252,9 +260,10 @@ GameLab.prototype.init = function (config) {
     }.bind(this)
   };
 
-  // Provide a way for us to have top pane instructions disabled by default, but
-  // able to turn them on.
-  config.noInstructionsWhenCollapsed = true;
+  // Display CSF-style instructions when using Blockly. Otherwise provide a way
+  // for us to have top pane instructions disabled by default, but able to turn
+  // them on.
+  config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
@@ -290,11 +299,12 @@ GameLab.prototype.init = function (config) {
       this.studioApp_.displayAlert('#belowVisualization', {type: 'warning', sideMargin: 0},
         <div>
           <p>
-            <strong>Welcome to the Sprite Lab pre-release ALPHA!</strong>
+            <strong>Welcome to the Sprite Lab pre-release Beta!</strong>
           </p>
           <p>
-            This is a brand new Code.org project we are still working on. Blocks
-            will change and <em>your projects may stop working at any time</em>.
+            This is a new Code.org project we are still working on. You may
+            notice blocks change or stop working. If a block turns gray, try
+            deleting it and replacing it.
           </p>
         </div>, ''
       );

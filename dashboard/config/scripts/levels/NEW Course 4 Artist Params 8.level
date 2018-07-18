@@ -34,6 +34,7 @@
     "video_key": "C4_function_parameters",
     "never_autoplay_video": "false",
     "discard_background": "false",
+    "hint_prompt_attempts_threshold": 12,
     "contained_level_names": null
   },
   "published": true,

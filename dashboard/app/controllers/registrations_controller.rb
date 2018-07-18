@@ -1,7 +1,8 @@
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
-    :edit, :update, :destroy, :upgrade, :set_email, :set_user_type
+    :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
+    :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_age]
 
@@ -50,6 +51,28 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def destroy
+    # TODO: (madelynkasula) Remove the new_destroy_flow check when the
+    # ACCOUNT_DELETION_NEW_FLOW experiment is removed.
+    if params[:new_destroy_flow]
+      return head :bad_request unless current_user.can_delete_own_account?
+      password_required = current_user.encrypted_password.present?
+      invalid_password = !current_user.valid_password?(params[:password_confirmation])
+      if password_required && invalid_password
+        current_user.errors.add :current_password
+        render json: {
+          error: current_user.errors.as_json(full_messages: true)
+        }, status: :bad_request
+        return
+      end
+      current_user.destroy
+      Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
+      return head :no_content
+    else
+      super
+    end
+  end
+
   def sign_up_params
     super.tap do |params|
       if params[:user_type] == "teacher"
@@ -73,6 +96,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Set age for the current user if empty - skips CSRF verification because this can be called
   # from cached pages which will not populate the CSRF token
   def set_age
+    return head(:forbidden) unless current_user
     current_user.update(age: params[:user][:age]) unless current_user.age.present?
   end
 
@@ -120,13 +144,28 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user].nil?
 
     successfully_updated =
-      if forbidden_change?(current_user, params)
-        false
-      elsif needs_password?(current_user, params)
-        current_user.update_with_password(set_email_params)
+      if current_user.migrated?
+        if forbidden_change?(current_user, params)
+          false
+        elsif needs_password?(current_user, params)
+          if current_user.valid_password?(params[:user][:current_password])
+            current_user.update_primary_contact_info(user: set_email_params)
+          else
+            current_user.errors.add :current_password
+            false
+          end
+        else
+          current_user.update_primary_contact_info(user: set_email_params)
+        end
       else
-        params[:user].delete(:current_password)
-        current_user.update_without_password(set_email_params)
+        if forbidden_change?(current_user, params)
+          false
+        elsif needs_password?(current_user, params)
+          current_user.update_with_password(set_email_params)
+        else
+          params[:user].delete(:current_password)
+          current_user.update_without_password(set_email_params)
+        end
       end
 
     if successfully_updated
@@ -165,6 +204,26 @@ class RegistrationsController < Devise::RegistrationsController
              json: current_user.errors.as_json(full_messages: true),
              content_type: 'application/json'
     end
+  end
+
+  #
+  # GET /users/migrate_to_multi_auth
+  #
+  def migrate_to_multi_auth
+    was_migrated = current_user.migrated?
+    current_user.migrate_to_multi_auth
+    redirect_to after_update_path_for(current_user),
+      notice: "Multi-auth is #{was_migrated ? 'still' : 'now'} enabled on your account."
+  end
+
+  #
+  # GET /users/demigrate_from_multi_auth
+  #
+  def demigrate_from_multi_auth
+    was_migrated = current_user.migrated?
+    current_user.demigrate_from_multi_auth
+    redirect_to after_update_path_for(current_user),
+      notice: "Multi-auth is #{was_migrated ? 'now' : 'still'} disabled on your account."
   end
 
   private
@@ -209,6 +268,8 @@ class RegistrationsController < Devise::RegistrationsController
   # ie if password or email was changed
   # extend this as needed
   def needs_password?(user, params)
+    return false if user.migrated? && user.encrypted_password.blank? && params[:user][:password].blank?
+
     email_is_changing = params[:user][:email].present? &&
       user.email != params[:user][:email]
     hashed_email_is_changing = params[:user][:hashed_email].present? &&

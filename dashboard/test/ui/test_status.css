@@ -69,3 +69,20 @@ td.rerun-command {
 .PENDING, .pending {
   background-color: #dddddd;
 }
+
+#help-link {
+  cursor: pointer;
+  color: blue;
+  user-select: none;
+}
+
+#help-text {
+  position: absolute;
+  box-sizing: border-box;
+  top: 105px;
+  width: 1000px;
+  padding: 1em;
+  background-color: white;
+  border: double black medium;
+  display: none; // Until shown by JavaScript
+}

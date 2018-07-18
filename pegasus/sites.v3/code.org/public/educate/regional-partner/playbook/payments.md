@@ -59,6 +59,19 @@ Facilitators can host workshops that are not associated with their Regional Part
   - Facilitating a workshop for in-service elementary school teachers in districts that have funding to compensate the facilitator directly. In this case Code.org will strongly encourage actively coordinating and collaborating with the Regional Partner that covers that district.
   - Code.org will continue to pay for and provide swag and curriculum guides in both of these cases.
 
+**CS Fundamentals Facilitator Travel Reimbursement Process**
+
+Code.org will provide Partners with limited travel support for CS Fundamentals facilitators, up to, but not exceeding $250/facilitator per workshop, with the understanding that this should be around 30% of a Partner's workshops (ie. you should not be needing this travel support for every workshop you host).
+
+Travel support will be provided by the following reimbursement process:
+- Regional Partner should submit an invoice and receipts within 30 days of the workshop to invoices@code.org.
+- Invoice total can be up to $250.
+- Reimbursable expenses include items like mileage, rental car, hotel, meals, etc.
+- For mileage reimbursement, no receipts are needed, but Regional Partner should specify the number of miles traveled.
+- For meals under $25, no receipts are needed.
+- Payment will be provided independent of the regular workshop payment that is generated automatically from the workshop dashboard.
+
+
 ****This Code.org's general recommendation, and on a case-by-case basis, payment may differ.
 
 **Timeline for the CS Fundamentals Funding Model Transition**

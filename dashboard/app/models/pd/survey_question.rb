@@ -2,11 +2,12 @@
 #
 # Table name: pd_survey_questions
 #
-#  id         :integer          not null, primary key
-#  form_id    :integer
-#  questions  :text(65535)      not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                 :integer          not null, primary key
+#  form_id            :integer
+#  questions          :text(65535)      not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  last_submission_id :integer
 #
 # Indexes
 #
@@ -27,6 +28,11 @@ module Pd
           questions: serialized_questions
         )
       end
+    end
+
+    def sync_from_jotform
+      self.class.sync_from_jotform form_id
+      reload
     end
 
     def form_questions

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
-import PublishDialog from '@cdo/apps/templates/publishDialog/PublishDialog';
+import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
@@ -14,7 +14,7 @@ import projects, {
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer, {
   showPublishDialog,
-} from '@cdo/apps/templates/publishDialog/publishDialogRedux';
+} from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import { AlwaysPublishableProjectTypes, AllPublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 

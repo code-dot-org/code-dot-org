@@ -32,6 +32,7 @@
     "markdown_instructions": "Can you draw these 10 squares of this sidewalk using a nested loop? \r\n\r\nEach square is 30 pixels.",
     "examples_required": "false",
     "never_autoplay_video": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

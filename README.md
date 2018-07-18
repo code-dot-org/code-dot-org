@@ -62,7 +62,7 @@ Start here if you are looking for:
 ### Everything else
 
 * **aws**: Configuration and scripts that manage our deployments.
-* **bin**: Developer utilties.
+* **bin**: Developer utilities.
 * **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
 * **shared**: Source and assets used by many parts of our application.
 * **tools**: Git commit hooks.

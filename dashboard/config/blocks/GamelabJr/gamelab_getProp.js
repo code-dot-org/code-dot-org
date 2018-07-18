@@ -1,4 +1,7 @@
 function getProp(sprite, property) {
+  if (!sprite) {
+    return undefined;
+  }
   if (property=="scale") {
     return sprite.scale*100;
   } else if (property=="costume") {

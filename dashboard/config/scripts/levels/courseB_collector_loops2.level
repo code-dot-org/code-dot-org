@@ -36,6 +36,7 @@
     "shape_shift": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You'll have to move before you can collect any treasure.\",\"hint_id\":\"courseB_collector_loops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bbdb924d28f209f30776f991305333b2/courseB_collector_loops2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When you have reached a spot with treasure, use the <xml><block type=\\\"collector_collect\\\"/></xml> block to pick it up.\",\"hint_id\":\"courseB_collector_loops2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/07cc573778086235412f0eeb9000867c/courseB_collector_loops2.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

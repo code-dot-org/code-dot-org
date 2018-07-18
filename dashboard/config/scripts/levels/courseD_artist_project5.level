@@ -38,6 +38,7 @@
     "project_template_level_name": "courseD_artist_projectTemplate",
     "tts_markdown_instructions_override": "Be creative - draw whatever you'd like!",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

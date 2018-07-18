@@ -26,12 +26,12 @@ class BlocklyTest < ActiveSupport::TestCase
   <block type="simple_move_right"></block>
   <block type="simple_move_left"></block>
 
-  <block type="category">
-    <title name="CATEGORY">Functions</title>
+  <block type="custom_category">
+    <title name="CUSTOM">PROCEDURE</title>
   </block>
 
-  <block type="category">
-    <title name="CATEGORY">Variables</title>
+  <block type="custom_category">
+    <title name="CUSTOM">VARIABLE</title>
   </block>
 </xml>
 XML

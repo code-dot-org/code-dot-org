@@ -9,7 +9,8 @@
     "instructions": "Need a better playlab/events combo",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": 2
   },
   "published": true,
   "notes": "",

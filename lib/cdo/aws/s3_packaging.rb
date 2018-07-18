@@ -80,10 +80,18 @@ class S3Packaging
 
   # Creates a zipped package of the provided assets folder
   # @param sub_path [String] Path to built assets, relative to source_location
+  # @param expected_commit_hash [String] optional, when specified an error will be raised
+  #        whenever the current commit hash doesn't match the expected one.
+  #        Use this to detect file system changes during the build and fail package creation.
   # @return tempfile object of package
-  def create_package(sub_path)
+  def create_package(sub_path, expected_commit_hash: nil)
     # make sure commit hash is up to date
     regenerate_commit_hash
+
+    if expected_commit_hash && expected_commit_hash != commit_hash
+      raise "#{@package_name} contents changed unexpectedly. "\
+        "Expected commit hash #{expected_commit_hash}, got #{commit_hash}"
+    end
 
     package = Tempfile.new(@commit_hash)
     @logger.info "Creating #{package.path}"
@@ -163,11 +171,9 @@ class S3Packaging
       # https://github.com/aws/aws-sdk-ruby/issues/1149
       url = Aws::S3::Bucket.new(BUCKET_NAME).object(s3_key).public_url
       File.open(package, 'wb') do |file|
-        begin
-          IO.copy_stream open(url), file
-        rescue OpenURI::HTTPError
-          raise Aws::S3::Errors::NoSuchKey.new(nil, file)
-        end
+        IO.copy_stream open(url), file
+      rescue OpenURI::HTTPError
+        raise Aws::S3::Errors::NoSuchKey.new(nil, file)
       end
     end
     @logger.info "Downloaded"

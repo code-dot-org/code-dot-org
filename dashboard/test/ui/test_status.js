@@ -373,3 +373,15 @@ function toggleHideSucceeded() {
 }
 let hideSucceededButton = document.querySelector('#hide-succeeded-button');
 hideSucceededButton.onclick = toggleHideSucceeded;
+
+// Help text
+const helpLink = document.querySelector('#help-link');
+const helpText = document.querySelector('#help-text');
+function toggleHelpText() {
+  if (getComputedStyle(helpText).display === 'none') {
+    helpText.style.display = 'block';
+  } else {
+    helpText.style.display = 'none';
+  }
+}
+helpLink.onclick = toggleHelpText;

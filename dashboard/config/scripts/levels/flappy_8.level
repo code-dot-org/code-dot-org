@@ -13,6 +13,7 @@
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\n\t      }",
     "instructions": "You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.",
+    "hint_prompt_attempts_threshold": 10,
     "contained_level_names": null
   },
   "published": true,

@@ -25,17 +25,7 @@
   #landingpage
     #notification
     -# This div ends up being owned by ScriptOverviewHeader in react
-    #lesson
-      #heading
-        %h1
-          = data_t_suffix('script.name', @script.name, 'title')
-          - if @script.beta?
-            %span.betatext
-              = t('beta')
-
-        %p
-          = data_t_suffix('script.name', @script.name, 'description')
-
+    #lesson-heading-extras
       - if @script.banner_image
         %p
           - path = script_next_path(@script)

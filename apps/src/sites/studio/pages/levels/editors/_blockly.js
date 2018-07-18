@@ -20,6 +20,10 @@ if (window.Blockly && !data.uses_droplet) {
   };
   commonBlocks.install(window.Blockly, options);
   appBlocks.install(window.Blockly, options);
+  if (appBlocks.installCustomBlocks) {
+    appBlocks.installCustomBlocks(window.Blockly, options, data.shared_blocks,
+      null, true);
+  }
 }
 
 const fieldConfig = {

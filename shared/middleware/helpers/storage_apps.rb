@@ -155,7 +155,6 @@ class StorageApps
     else
       return false
     end
-
   # Default to sharing disabled if there is an error
   rescue ArgumentError, OpenSSL::Cipher::CipherError
     true
@@ -222,12 +221,10 @@ class StorageApps
   # Find the encrypted channel token for most recent project of the given type.
   def most_recent(key)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
-      begin
-        parsed = JSON.parse(i[:value])
-        !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
-      rescue
-        # Malformed channel, or missing level.
-      end
+      parsed = JSON.parse(i[:value])
+      !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
+    rescue
+      # Malformed channel, or missing level.
     end
 
     storage_encrypt_channel_id(row[:storage_id], row[:id]) if row

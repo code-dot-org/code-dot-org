@@ -38,6 +38,7 @@
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": 11,
     "contained_level_names": null
   },
   "published": true,

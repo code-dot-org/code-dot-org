@@ -37,6 +37,7 @@
     "free_play": "false",
     "default_flap": "NORMAL",
     "shareable": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

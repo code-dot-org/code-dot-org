@@ -39,6 +39,7 @@
     "instructions": "**Challenge:** Modify your function to make honey as well.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

@@ -51,6 +51,7 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to control what happens when the actors collide.\\n\\n<xml><block type=\\\"studio_whenSpriteCollided\\\">\\n    <title name=\\\"SPRITE1\\\">1</title>\\n    <title name=\\\"SPRITE2\\\">0</title>\\n  </block></xml>\",\"hint_id\":\"courseA_playLab_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a864984b0f11af888795783face216b2/courseA_playLab_events7.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

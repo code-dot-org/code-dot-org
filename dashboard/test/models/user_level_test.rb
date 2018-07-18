@@ -220,8 +220,7 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test "authorized_teacher cant become locked" do
     teacher = create :teacher
-    cohort = create :cohort
-    teacher.cohorts << cohort
+    teacher.permission = UserPermission::AUTHORIZED_TEACHER
 
     stage = create(:stage, lockable: true)
 

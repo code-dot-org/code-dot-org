@@ -14,6 +14,7 @@ const DEFAULT_PROPS = {
     emailOptIn: undefined,
   },
   userType: 'student',
+  isPasswordRequired: true,
   disabled: false,
   onChange: action('onChange'),
   onSubmit: action('onSubmit')
@@ -32,6 +33,20 @@ export default storybook => storybook
             currentPassword: 'imsorich',
           }}
           userType="student"
+        />
+      )
+    },
+    {
+      name: 'student view, with valid content and no password',
+      story: () => (
+        <ChangeEmailForm
+          {...DEFAULT_PROPS}
+          values={{
+            newEmail: 'batman@bat.cave',
+            currentPassword: 'imsorich',
+          }}
+          userType="student"
+          isPasswordRequired={false}
         />
       )
     },
@@ -81,6 +96,21 @@ export default storybook => storybook
       )
     },
     {
+      name: 'teacher view, with valid content and no password',
+      story: () => (
+        <ChangeEmailForm
+          {...DEFAULT_PROPS}
+          values={{
+            newEmail: 'batman@bat.cave',
+            currentPassword: 'imsorich',
+            emailOptIn: 'yes',
+          }}
+          userType="teacher"
+          isPasswordRequired={false}
+        />
+      )
+    },
+    {
       name: 'teacher view, with validation errors',
       story: () => (
         <ChangeEmailForm
@@ -115,4 +145,3 @@ export default storybook => storybook
       )
     }
   ]);
-

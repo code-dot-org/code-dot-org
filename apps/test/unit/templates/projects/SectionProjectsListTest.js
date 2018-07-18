@@ -247,7 +247,7 @@ describe('SectionProjectsList', () => {
   it('shows the correct list of students in the student filter dropdown', () => {
     const options = root.find('option');
     expect(options).to.have.length(4);
-    expect(options.nodes[0].innerText).to.equal('All');
+    expect(options.nodes[0].innerText).to.equal('All students');
     expect(options.nodes[1].innerText).to.equal('Alice');
     expect(options.nodes[2].innerText).to.equal('Bob');
     expect(options.nodes[3].innerText).to.equal('Charlie');
@@ -316,7 +316,7 @@ describe('SectionProjectsList', () => {
     // Charlie should no longer appear in the dropdown
     const options = root.find('option');
     expect(options).to.have.length(3);
-    expect(options.nodes[0].innerText).to.equal('All');
+    expect(options.nodes[0].innerText).to.equal('All students');
     expect(options.nodes[1].innerText).to.equal('Alice');
     expect(options.nodes[2].innerText).to.equal('Bob');
   });
