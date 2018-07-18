@@ -97,14 +97,8 @@ class SectionAssessments extends Component {
   };
 
   state = {
-    freeResponse: {
-      isDetailDialogOpen: false,
-      detailQuestionText: '',
-    },
-    multipleChoice: {
-      isDetailDialogOpen: false,
-      detailQuestionText: '',
-    },
+    freeResponseDetailDialogOpen: false,
+    multipleChoiceDetailDialogOpen: false,
   };
 
   onChangeScript = scriptId => {
@@ -113,35 +107,27 @@ class SectionAssessments extends Component {
     setScriptId(scriptId);
   };
 
-  showFreeResponseDetailDialog = questionText => {
+  showFreeResponseDetailDialog = () => {
     this.setState({
-      freeResponse: {
-        isDetailDialogOpen: true, detailQuestionText: questionText
-      }
+      freeResponseDetailDialogOpen: true
     });
   };
 
   hideFreeResponseDetailDialog = () => {
     this.setState({
-      freeResponse: {
-        isDetailDialogOpen: false, detailQuestionText: ''
-      }
+      freeResponseDetailDialogOpen: false
     });
   };
 
-  showMulitpleChoiceDetailDialog = questionText => {
+  showMulitpleChoiceDetailDialog = () => {
     this.setState({
-      multipleChoice: {
-        isDetailDialogOpen: true, detailQuestionText: questionText
-      }
+      multipleChoiceDetailDialogOpen: true
     });
   };
 
   hideMultipleDetailDialog = () => {
     this.setState({
-      multipleChoice: {
-        isDetailDialogOpen: false, detailQuestionText: ''
-      }
+      multipleChoiceDetailDialogOpen: false
     });
   };
 
@@ -243,13 +229,11 @@ class SectionAssessments extends Component {
               </div>
             }
             <FreeResponseDetailsDialog
-              isDialogOpen={this.state.freeResponse.isDetailDialogOpen}
-              questionText={this.state.freeResponse.detailQuestionText}
+              isDialogOpen={this.state.freeResponseDetailDialogOpen}
               closeDialog={this.hideFreeResponseDetailDialog}
             />
             <MultipleChoiceDetailsDialog
-              isDialogOpen={this.state.multipleChoice.isDetailDialogOpen}
-              questionText={this.state.multipleChoice.detailQuestionText}
+              isDialogOpen={this.state.multipleChoiceDetailDialogOpen}
               closeDialog={this.hideMultipleDetailDialog}
             />
           </div>

@@ -1,11 +1,13 @@
 /* eslint-disable react/no-danger */
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from "@cdo/locale";
 import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
 import processMarkdown from 'marked';
 import renderer from "@cdo/apps/util/StylelessRenderer";
+import {getCurrentQuestion} from "./sectionAssessmentsRedux";
 
 const styles = {
   dialog: {
@@ -18,7 +20,7 @@ const styles = {
   }
 };
 
-export default class MultipleChoiceDetailsDialog extends Component {
+class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
@@ -52,3 +54,9 @@ export default class MultipleChoiceDetailsDialog extends Component {
     );
   }
 }
+
+export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
+
+export default connect(state => ({
+  questionText: getCurrentQuestion(state),
+}))(MultipleChoiceDetailsDialog);
