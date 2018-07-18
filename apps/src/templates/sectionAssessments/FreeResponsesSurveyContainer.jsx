@@ -5,8 +5,7 @@ import {
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
-
-const QUESTION_CHARACTER_LIMIT = 110;
+import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
 
 const styles = {
   text: {
