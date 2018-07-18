@@ -11,7 +11,7 @@ if [ -n "$CIRCLECI" ]; then
   curl -s https://codecov.io/bash > /tmp/codecov.sh
   chmod +x /tmp/codecov.sh
 
-  $GRUNT_CMD preconcat
+  $GRUNT_CMD preconcat concat
 
   echo "###################################################################"
   echo "#                                                                 #"
