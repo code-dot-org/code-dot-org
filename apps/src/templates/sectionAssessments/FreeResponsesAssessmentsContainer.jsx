@@ -32,10 +32,6 @@ class FreeResponsesAssessmentsContainer extends Component {
     openDialog: PropTypes.func.isRequired,
   };
 
-  expandText = (text) => {
-    this.props.openDialog(text);
-  };
-
   render() {
     const {freeResponseQuestions, studentId, currentStudentHasResponses} = this.props;
     return (
@@ -50,7 +46,7 @@ class FreeResponsesAssessmentsContainer extends Component {
                 <div style={styles.text}>
                   {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
                   {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
-                    <a onClick={() => {this.expandText(question.questionText);}}>
+                    <a onClick={() => {this.props.openDialog(question.questionText);}}>
                       <span>{i18n.seeFullQuestion()}</span>
                     </a>
                   }
