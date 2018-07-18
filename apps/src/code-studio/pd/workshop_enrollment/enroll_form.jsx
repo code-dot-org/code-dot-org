@@ -51,6 +51,10 @@ const SCHOOL_TYPES = [
   "Other"
 ];
 
+const OTHER_SCHOOL_VALUE = "-1";
+
+const CSF = "CS Fundamentals";
+
 export default class EnrollForm extends React.Component {
   static propTypes = {
     workshop_id: PropTypes.number.isRequired,
@@ -98,7 +102,7 @@ export default class EnrollForm extends React.Component {
   handleSchoolChange = (selection) => {
     this.setState({school_id: selection.value});
     // can i just do school_info: {selection.school} ?
-    if (selection.value !== "-1") {
+    if (selection.value !== OTHER_SCHOOL_VALUE) {
       this.setState({
         school_info: {
           school_state: selection.school.state,
@@ -143,7 +147,7 @@ export default class EnrollForm extends React.Component {
 
   validateRequiredFields() {
     let errors = this.getErrors();
-    let missingRequiredFields = this.requiredFields.filter(f => !this.state[f]);
+    let missingRequiredFields = this.getMissingRequiredFields();
 
     if (missingRequiredFields.length || Object.keys(errors).length) {
       console.log(errors);
@@ -211,8 +215,7 @@ export default class EnrollForm extends React.Component {
             readOnly={this.readOnlyEmail()}
             title={this.readOnlyEmail() ? "Email can be changed in account settings" : ""}
           />
-          {
-            !this.props.logged_in &&
+          {!this.props.logged_in &&
             <FieldGroup
               id="confirm_email"
               label="Confirm Email Address"
@@ -222,9 +225,9 @@ export default class EnrollForm extends React.Component {
             />
           }
         </FormGroup>
-        {this.state && this.state.school_id !== '-1' &&
+        {this.state.school_id !== OTHER_SCHOOL_VALUE &&
           <FormGroup
-            id="school"
+            id="school_id"
             style={styles.indented}
           >
             <Row>
@@ -245,7 +248,7 @@ export default class EnrollForm extends React.Component {
             </Row>
           </FormGroup>
         }
-        {this.state && this.state.school_id && this.state.school_id === '-1' &&
+        {this.state.school_id && this.state.school_id === OTHER_SCHOOL_VALUE &&
           <FormGroup style={styles.indented}>
             <FieldGroup
               id="school_name"
@@ -268,7 +271,10 @@ export default class EnrollForm extends React.Component {
               required={true}
               onChange={this.handleSchoolInfoChange}
             />
-            <FormGroup style={styles.outdented}>
+            <FormGroup
+              id="school_state"
+              style={styles.outdented}
+            >
               <ControlLabel>School State</ControlLabel>
               <Select
                 value={this.state.school_info ? this.state.school_info.school_state : null}
@@ -297,28 +303,30 @@ export default class EnrollForm extends React.Component {
             />
           </FormGroup>
         }
-        {this.props.workshop_course === 'CS Fundamentals' &&
+        {this.props.workshop_course === CSF &&
           <FormGroup>
             <ControlLabel>What is your current role? (Select the role that best applies)<span className="form-required-field"> *</span></ControlLabel>
             <Select
+              id="role"
               clearable={false}
               placeholder={null}
               value={this.state.role}
               onChange={this.handleRoleChange}
               options={ROLES.map(r => ({value: r, label: r}))}
             />
-          {this.state && TEACHING_ROLES.includes(this.state.role) &&
-            <ButtonList
-              key="grades_teaching"
-              answers={gradesTeaching}
-              groupName="grades_teaching"
-              label={roleLabel}
-              onChange={this.handleChange}
-              selectedItems={this.state.grades_teaching}
-              //validationState={this.getValidationState(name)
-              type="check"
-            />
-          }
+            {this.state && TEACHING_ROLES.includes(this.state.role) &&
+              <ButtonList
+                id="grades_teaching"
+                key="grades_teaching"
+                answers={gradesTeaching}
+                groupName="grades_teaching"
+                label={roleLabel}
+                onChange={this.handleChange}
+                selectedItems={this.state.grades_teaching}
+                //validationState={this.getValidationState(name)
+                type="check"
+              />
+            }
           </FormGroup>
         }
         <p>
@@ -344,7 +352,40 @@ export default class EnrollForm extends React.Component {
     );
   }
 
-  requiredFields = ['firstName', 'lastName', 'email'];
+  getMissingRequiredFields() {
+    const schoolInfoFields = [
+      'school_name',
+      'school_address',
+      'school_city',
+      'school_state',
+      'school_zip',
+      'school_type'
+    ];
+
+    let requiredFields = ['first_name', 'last_name', 'email', 'school_id'];
+
+    if (this.state.school_id === OTHER_SCHOOL_VALUE) {
+      requiredFields = requiredFields.concat(schoolInfoFields);
+    }
+
+    if (this.props.workshop_course === CSF) {
+      requiredFields.push('role');
+    }
+
+    if (TEACHING_ROLES.includes(this.state.role)) {
+      requiredFields.push('grades_teaching');
+    }
+
+    let missingRequiredFields = requiredFields.filter(f => {
+      if (schoolInfoFields.includes(f)) {
+        return !this.state["school_info"][f];
+      } else {
+        return !this.state[f];
+      }
+    });
+
+    return missingRequiredFields;
+  }
 
   getErrors() {
     let errors = {};
