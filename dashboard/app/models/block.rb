@@ -10,6 +10,7 @@
 #  helper_code :text(65535)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  pool        :string(255)      default(""), not null
 #
 
 class Block < ApplicationRecord
