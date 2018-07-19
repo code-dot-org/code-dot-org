@@ -221,26 +221,34 @@ export const getCurrentAssessmentQuestions = (state) => {
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
 
-// Returns the question text of the currently selected question in the current assessment.
+// Returns an object with the question text and answers of the currently selected
+// question in the current assessment.
 export const getCurrentQuestion = (state) => {
+  const emptyQuestion = {question: '', answers: []};
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
     const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
     const currentSurvey = surveys[state.sectionAssessments.assessmentId];
     const questionData = currentSurvey.levelgroup_results;
     if (questionData[state.sectionAssessments.questionIndex]) {
-      return questionData[state.sectionAssessments.questionIndex].question;
+      return {
+        question: questionData[state.sectionAssessments.questionIndex].question,
+        answers: [],
+      };
     } else {
-      return '';
+      return emptyQuestion;
     }
   } else {
     // Get question text for assessment.
     const assessment = getCurrentAssessmentQuestions(state) || {};
     const assessmentQuestions = assessment.questions;
     if (assessmentQuestions && assessmentQuestions[state.sectionAssessments.questionIndex]) {
-      return assessmentQuestions[state.sectionAssessments.questionIndex].question_text;
+      return {
+        question: assessmentQuestions[state.sectionAssessments.questionIndex].question_text,
+        answers: []
+      };
     } else {
-      return '';
+      return emptyQuestion;
     }
   }
 };
