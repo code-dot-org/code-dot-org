@@ -5,6 +5,7 @@ import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import Firebase from 'firebase';
 import MockFirebase from '../../util/MockFirebase';
+import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
@@ -176,14 +177,12 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
 
   loadApp(options);
 
-  if (options.blocksModule.installCustomBlocks && level.sharedBlocks) {
-    options.blocksModule.installCustomBlocks(
-      Blockly,
-      null,
-      level.sharedBlocks,
-      options.level,
-      true,
-    );
+  if (level.sharedBlocks) {
+    installCustomBlocks({
+      blockly: Blockly,
+      blockDefinitions: level.sharedBlocks,
+      customInputTypes: options.blocksModule.customInputTypes,
+    });
   }
 }
 

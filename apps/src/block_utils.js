@@ -767,8 +767,9 @@ exports.createJsWrapperBlockCreator = function (
     inline,
     simpleValue,
   }, helperCode, pool) => {
-    if (!!pool) {
-      throw new Error('No block pool specified');
+    if (!pool || pool === 'GamelabJr') {
+      pool = 'gamelab'; // Fix for users who already have the old blocks saved in their solutions.
+      // TODO: when we nuke per-level custom blocks, `throw new Error('No block pool specified');`
     }
     if (!!func + !!expression + !!simpleValue !== 1) {
       throw new Error('Provide exactly one of func, expression, or simpleValue');
@@ -930,4 +931,41 @@ exports.createJsWrapperBlockCreator = function (
 
     return blockName;
   };
+};
+
+exports.installCustomBlocks = function ({blockly, blockDefinitions, customInputTypes}) {
+  const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
+    blockly,
+    [
+      // Strict Types
+      blockly.BlockValueType.SPRITE,
+      blockly.BlockValueType.BEHAVIOR,
+      blockly.BlockValueType.LOCATION,
+    ],
+    blockly.BlockValueType.SPRITE,
+    customInputTypes,
+  );
+
+  const blocksByCategory = {};
+  blockDefinitions.forEach(({name, pool, category, config, helperCode}) => {
+    const blockName = createJsWrapperBlock(config, helperCode, pool);
+    if (!blocksByCategory[category]) {
+      blocksByCategory[category] = [];
+    }
+    blocksByCategory[category].push(blockName);
+    if (name && blockName !== name) {
+      console.error(`Block config ${name} generated a block named ${blockName}`);
+    }
+  });
+
+  // TODO: extract Sprite-Lab-specific logic.
+  if (blockly.Blocks.gamelab_location_variable_set &&
+    blockly.Blocks.gamelab_location_variable_get) {
+    Blockly.Variables.registerGetter(Blockly.BlockValueType.LOCATION,
+      'gamelab_location_variable_get');
+    Blockly.Variables.registerSetter(Blockly.BlockValueType.LOCATION,
+      'gamelab_location_variable_set');
+  }
+
+  return blocksByCategory;
 };
