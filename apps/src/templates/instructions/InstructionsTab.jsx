@@ -8,13 +8,22 @@ const styles = {
     paddingRight: 10,
     paddingBottom: 6,
     fontWeight: "bold",
-    color: color.charcoal,
     cursor: "pointer",
+  },
+  text: {
+    color: color.charcoal
+  },
+  teacherText: {
+    color: color.lightest_cyan
   },
   highlighted: {
     borderBottom: "2px solid " + color.default_text,
     color: color.default_text,
-  }
+  },
+  teacherHighlighted: {
+    borderBottom: "2px solid " + color.lightest_cyan,
+    color: color.white,
+  },
 };
 
 export default class InstructionsTab extends Component {
@@ -24,13 +33,17 @@ export default class InstructionsTab extends Component {
     onClick: PropTypes.func.isRequired,
     style: PropTypes.object,
     text: PropTypes.string.isRequired,
+    teacherOnly: PropTypes.bool
   };
 
   render() {
     const combinedStyle = {
       ...styles.tab,
       ...this.props.style,
-      ...(this.props.selected ? styles.highlighted : styles.text)
+      ...(this.props.selected ?
+        (this.props.teacherOnly ? styles.teacherHighlighted : styles.highlighted) :
+        (this.props.teacherOnly ? styles.teacherText : styles.text)
+      )
     };
     return (
       <a
