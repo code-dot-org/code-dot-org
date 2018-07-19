@@ -26,7 +26,7 @@ $(document).ready(() => {
   registerReducers({animationList: animationListModule});
   getStore().dispatch(setInitialAnimationList(defaultSprites));
 
-  typeField = document.getElementById('block_level_type');
+  typeField = document.getElementById('block_pool');
   nameField = document.getElementById('block_name');
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,

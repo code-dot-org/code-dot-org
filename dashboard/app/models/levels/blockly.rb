@@ -461,12 +461,8 @@ class Blockly < Level
     level
   end
 
-  def shared_blocks(level_type = type)
-    if Block.all_types.include? level_type
-      Rails.cache.fetch("blocks/#{level_type}", force: !Script.should_cache?) do
-        Block.where(level_type: level_type).map(&:block_options)
-      end
-    end
+  def shared_blocks
+    Block.for(type)
   end
 
   def shared_functions

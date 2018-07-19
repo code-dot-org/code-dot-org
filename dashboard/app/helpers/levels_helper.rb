@@ -540,7 +540,7 @@ module LevelsHelper
     }
 
     if params[:blocks]
-      level_options[:sharedBlocks] = @level.shared_blocks(params[:blocks])
+      level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
     end
 
     unless params[:no_last_attempt]
