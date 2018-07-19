@@ -13,6 +13,7 @@ class MultipleChoiceSurveyOverviewContainer extends Component {
     multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceSurveyDataPropType),
     totalStudentCount: PropTypes.number,
     totalStudentSubmissions: PropTypes.number,
+    openDialog: PropTypes.func.isRequired,
   };
 
   render() {
@@ -28,6 +29,7 @@ class MultipleChoiceSurveyOverviewContainer extends Component {
         {multipleChoiceSurveyData.length > 0 &&
           <MultipleChoiceSurveyOverviewTable
             multipleChoiceSurveyData={multipleChoiceSurveyData}
+            openDialog={this.props.openDialog}
           />
         }
       </div>
