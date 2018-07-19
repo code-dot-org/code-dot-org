@@ -353,7 +353,6 @@ export default {
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
     const createJsWrapperBlock = createJsWrapperBlockCreator(
       blockly,
-      'gamelab',
       [
         // Strict Types
         blockly.BlockValueType.SPRITE,
@@ -365,8 +364,8 @@ export default {
     );
 
     const blocksByCategory = {};
-    customBlocks.forEach(({name, category, config, helperCode}) => {
-      const blockName = createJsWrapperBlock(config, helperCode);
+    customBlocks.forEach(({name, pool, category, config, helperCode}) => {
+      const blockName = createJsWrapperBlock(config, helperCode, pool);
       if (!blocksByCategory[category]) {
         blocksByCategory[category] = [];
       }

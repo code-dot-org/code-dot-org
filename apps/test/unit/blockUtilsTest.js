@@ -668,7 +668,6 @@ describe('block utils', () => {
     before(() => {
       createBlock = createJsWrapperBlockCreator(
         Blockly,
-        'test',
         [],
         Blockly.BlockValueType.SPRITE,
         [],
@@ -685,7 +684,7 @@ describe('block utils', () => {
             assignment: true,
             field: true,
           }],
-        });
+        }, '', 'test');
         const fakeBlock = {
           getTitleValue: sinon.stub().returns('someVar'),
         };
@@ -708,7 +707,7 @@ describe('block utils', () => {
               field: true,
             },
           ],
-        });
+        }, '', 'test');
         const fakeBlock = {
           getTitleValue: title => ({
             NAME1: 'a',
@@ -734,7 +733,7 @@ describe('block utils', () => {
               defer: true,
             },
           ],
-        });
+        }, '', 'test');
 
         const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
           .callsFake((block, name) => {
@@ -767,7 +766,7 @@ describe('block utils', () => {
             { name: 'VAL' },
           ],
           returnType: 'String',
-        });
+        }, '', 'test');
         const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
           .returns('"a string value"');
 
@@ -784,7 +783,7 @@ describe('block utils', () => {
             { name: 'VAL' },
             { name: 'VAR', assignment: true }
           ],
-        });
+        }, '', 'test');
         const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
           .callsFake((block, name) => {
             return {
@@ -808,7 +807,7 @@ describe('block utils', () => {
             { name: 'VAR1', assignment: true },
             { name: 'VAR2', assignment: true },
           ],
-        });
+        }, '', 'test');
         const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
           .callsFake((block, name) => {
             return {
@@ -834,10 +833,10 @@ describe('block utils', () => {
               { name: 'VAL2' },
             ],
             returnType: 'String',
-          });
+          }, '', 'test');
         }).to.throw(Error);
       });
-      it('throws for a simple assignemnt block with too many args', () => {
+      it('throws for a simple assignment block with too many args', () => {
         expect(() => {
           createBlock({
             simpleValue: true,
@@ -849,7 +848,7 @@ describe('block utils', () => {
               { name: 'VAL2' },
             ],
             returnType: 'String',
-          });
+          }, '', 'test');
         }).to.throw(Error);
       });
     });
@@ -860,7 +859,7 @@ describe('block utils', () => {
           methodCall: true,
           blockText: '{THIS} barks',
           args: [],
-        });
+        }, '', 'test');
         const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
           .callsFake((block, name) => {
             return {
@@ -881,7 +880,7 @@ describe('block utils', () => {
           blockText: '{THIS}\'s favorite toy',
           args: [],
           returnType: 'String',
-        });
+        }, '', 'test');
         const valueToCodeStub = sinon.stub(Blockly.JavaScript, 'valueToCode')
           .callsFake((block, name) => {
             return {
@@ -902,7 +901,7 @@ describe('block utils', () => {
           blockText: 'when jump',
           args: [],
           eventBlock: true,
-        });
+        }, '', 'test');
         const blockToCodeStub = sinon.stub(Blockly.JavaScript, 'blockToCode')
           .callsFake(() => {
             return 'someHandlerCode();\n';
@@ -925,7 +924,7 @@ describe('block utils', () => {
           expression: 'use strict;',
           blockText: 'run this program in strict mode',
           args: [],
-        });
+        }, '', 'test');
         const code = generator['test_useStrict']();
 
         expect(code.trim()).to.equal('use strict;');
@@ -937,7 +936,7 @@ describe('block utils', () => {
           blockText: 'window object',
           args: [],
           returnType: 'Object',
-        });
+        }, '', 'test');
         const [code,] = generator['test_window']();
 
         expect(code.trim()).to.equal('window');
@@ -951,7 +950,7 @@ describe('block utils', () => {
           args: [
             { name: 'STATEMENT', statement: true },
           ],
-        });
+        }, '', 'test');
         const stub = sinon.stub(Blockly.JavaScript, 'statementToCode')
           .callsFake(() => `  console.log("I'm in a callback!");\n`);
         const code = generator['test_runThisCallback']();
@@ -970,7 +969,7 @@ describe('block utils', () => {
           args: [
             { name: 'EMTPY', customInput: 'dummy' },
           ],
-        });
+        }, '', 'test');
         const code = generator['test_skyscraper']();
 
         expect(code.trim()).to.equal('skyscraper();');
@@ -985,7 +984,7 @@ describe('block utils', () => {
               options: [['someOption', 7]],
             },
           ],
-        });
+        }, '', 'test');
         const fakeBlock = {
           getTitleValue: () => 7,
         };
@@ -1003,7 +1002,7 @@ describe('block utils', () => {
               field: true,
             },
           ],
-        });
+        }, '', 'test');
         const fakeBlock = {
           getTitleValue: () => 42,
         };
@@ -1022,7 +1021,7 @@ describe('block utils', () => {
               type: 'String'
             },
           ],
-        });
+        }, '', 'test');
         const fakeBlock = {
           getTitleValue: () => 'some input',
         };
@@ -1041,7 +1040,7 @@ describe('block utils', () => {
               type: 'String'
             },
           ],
-        });
+        }, '', 'test');
         const fakeBlock = {
           getTitleValue: () => 'some input with a "quote" in it',
         };
