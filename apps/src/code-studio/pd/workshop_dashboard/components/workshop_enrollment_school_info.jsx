@@ -4,6 +4,8 @@ import ConfirmationDialog from './confirmation_dialog';
 import {enrollmentShape} from "../types";
 import {workshopEnrollmentStyles as styles} from "../workshop_enrollment_styles";
 
+const CSF = "CS Fundamentals";
+
 export default class WorkshopEnrollmentSchoolInfo extends React.Component {
   constructor(props) {
     super(props);
@@ -72,7 +74,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.email}</td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
-          <td>{enrollment.role ? enrollment.role : "No Response"}</td>
+          {this.props.workshopCourse === CSF && <td>{enrollment.role ? enrollment.role : "No Response"}</td>}
           {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
         </tr>
       );
@@ -107,7 +109,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
             <th style={styles.th}>Email</th>
             <th style={styles.th}>District</th>
             <th style={styles.th}>School</th>
-            <th style={styles.th}>Role</th>
+            {this.props.workshopCourse === CSF && <th style={styles.th}>Role</th>}
             {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
           </tr>
         </thead>
@@ -122,5 +124,6 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
 WorkshopEnrollmentSchoolInfo.propTypes = {
   enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
   accountRequiredForAttendance: PropTypes.bool.isRequired,
-  onDelete: PropTypes.func.isRequired
+  onDelete: PropTypes.func.isRequired,
+  workshopCourse: PropTypes.string.isRequired
 };
