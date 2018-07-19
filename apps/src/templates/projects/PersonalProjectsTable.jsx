@@ -200,7 +200,7 @@ class PersonalProjectsTable extends React.Component {
         }
       },
       {
-        property: 'projectName',
+        property: 'name',
         header: {
           label: i18n.projectName(),
           props: {style: {

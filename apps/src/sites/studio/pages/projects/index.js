@@ -79,9 +79,7 @@ $(document).ready(() => {
 
       ReactDOM.render(
         <Provider store={store}>
-          <PersonalProjectsTable
-            projectList={[]}
-          />
+          <PersonalProjectsTable/>
         </Provider>,
        document.getElementById('react-my-projects')
       );
