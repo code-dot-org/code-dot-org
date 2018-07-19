@@ -555,9 +555,14 @@ class ScriptTest < ActiveSupport::TestCase
     refute foo17.summarize(true, user)[:show_script_version_warning]
     assert foo18.summarize(true, user)[:show_script_version_warning]
 
-    create(:user_script, user: user, script: foo18)
+    user_script_18 = create(:user_script, user: user, script: foo18)
     refute foo17.summarize(true, user)[:show_script_version_warning]
     assert foo18.summarize(true, user)[:show_script_version_warning]
+
+    # version warning can be dismissed
+    user_script_18.version_warning_dismissed = true
+    user_script_18.save!
+    refute foo18.summarize(true, user)[:show_script_version_warning]
   end
 
   test 'summarize only shows one version warning' do

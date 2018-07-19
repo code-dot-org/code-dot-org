@@ -989,6 +989,7 @@
   "puzzleRatingQuestion": "Did you like this puzzle?",
   "puzzleTitle": "Puzzle {puzzle_number} of {stage_total}",
   "question": "Question",
+  "questionDetails": "Question details",
   "questionText": "Question text",
   "quickActions": "Quick actions",
   "rateButtonsLabel": "Rate:",
