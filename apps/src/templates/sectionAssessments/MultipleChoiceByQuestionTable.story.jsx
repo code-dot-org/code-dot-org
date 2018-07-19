@@ -11,9 +11,9 @@ export default storybook => {
         story: () => (
           <MultipleChoiceByQuestionTable
             studentAnswers={[
-              {name: 'Matt', answer: 'B'},
-              {name: 'Kim', answer: 'A'},
-              {name: 'Megan', answer: 'C'}
+              {name: 'Matt', id: 1, answer: 'B'},
+              {name: 'Kim', id: 2, answer: 'A'},
+              {name: 'Megan', id: 3, answer: 'C'}
             ]}
             correctAnswer={'A'}
           />

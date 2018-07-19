@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import color from "@cdo/apps/util/color";
+import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 
 const PADDING = 15;
 
@@ -33,9 +34,16 @@ export const COLUMNS = {
   ANSWER: 1,
 };
 
+const studentAnswerPropType = PropTypes.shape({
+  id:  PropTypes.number,
+  name: PropTypes.string,
+  answer: PropTypes.string,
+});
+
 class MultipleChoiceByQuestionTable extends Component {
   static propTypes= {
-    studentAnswers: PropTypes.array,
+    studentAnswers: PropTypes.arrayOf(studentAnswerPropType),
+    correctAnswer: PropTypes.string,
   };
 
   state = {
@@ -61,6 +69,16 @@ class MultipleChoiceByQuestionTable extends Component {
         selectedColumn
       })
     });
+  };
+
+  answerCellFormatter = (answer, {rowData, columnIndex, rowIndex, property}) => {
+    return (
+        <MultipleChoiceAnswerCell
+          id={rowData.id}
+          displayAnswer={answer}
+          isCorrectAnswer={this.props.correctAnswer === answer}
+        />
+    );
   };
 
   getColumns = (sortable, index) => {
@@ -97,7 +115,7 @@ class MultipleChoiceByQuestionTable extends Component {
           },
         },
         cell: {
-          format: this.responseCellFormatter,
+          format: this.answerCellFormatter,
           props: {style:tableLayoutStyles.cell},
         }
       },
