@@ -13,13 +13,15 @@ class AuthenticationOptionsController < ApplicationController
     auth_option = current_user.authentication_options.find(params[:id])
 
     if auth_option.present?
-      auth_option.destroy
+      transaction do
+        auth_option.destroy!
 
-      # Replace primary_contact_info if we just destroyed it
-      if current_user.primary_contact_info_id == auth_option.id
-        replacement = current_user.authentication_options.find_by hashed_email: auth_option.hashed_email
-        replacement ||= email_option_from_deleted_option auth_option
-        current_user.update primary_contact_info: replacement
+        # Replace primary_contact_info if we just destroyed it
+        if current_user.primary_contact_info_id == auth_option.id
+          replacement = current_user.authentication_options.find_by hashed_email: auth_option.hashed_email
+          replacement ||= email_option_from_deleted_option auth_option
+          current_user.update! primary_contact_info: replacement
+        end
       end
     end
 
