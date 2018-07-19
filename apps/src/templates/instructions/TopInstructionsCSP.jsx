@@ -281,11 +281,13 @@ class TopInstructions extends Component {
     const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
       this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
 
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS;
+
     const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
 
     return (
       <div style={mainStyle} className="editor-column">
-        <PaneHeader hasFocus={false}>
+        <PaneHeader hasFocus={false} teacherOnly={teacherOnly}>
           <div style={styles.paneHeaderOverride}>
             {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl &&
               <InlineAudio src={ttsUrl} style={audioStyle}/>
@@ -304,6 +306,7 @@ class TopInstructions extends Component {
                 onClick={this.handleInstructionTabClick}
                 selected={this.state.tabSelected === TabType.INSTRUCTIONS}
                 text={msg.instructions()}
+                teacherOnly={teacherOnly}
               />
               {displayHelpTab &&
                 <InstructionsTab
@@ -311,6 +314,7 @@ class TopInstructions extends Component {
                   onClick={this.handleHelpTabClick}
                   selected={this.state.tabSelected === TabType.RESOURCES}
                   text={msg.helpTips()}
+                  teacherOnly={teacherOnly}
                 />
               }
               {displayFeedback &&
@@ -319,6 +323,7 @@ class TopInstructions extends Component {
                   onClick={this.handleCommentTabClick}
                   selected={this.state.tabSelected === TabType.COMMENTS}
                   text={msg.feedback()}
+                  teacherOnly={teacherOnly}
                 />
               }
             </div>
