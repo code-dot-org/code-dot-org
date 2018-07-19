@@ -577,7 +577,10 @@ EOS
     custom_i18n = {
       'data' => {
         'callouts' => {
-          "#{level_name}_callout" => []
+          "#{level_name}_callout" => {
+            first: nil,
+            second: nil
+          }
         }
       }
     }

@@ -573,6 +573,17 @@ class User < ActiveRecord::Base
     find_by_hashed_email User.hash_email email
   end
 
+  # Given a cleartext email, finds the first user that has a matching email.
+  # This will not find users (students) who only have hashed_emails stored.
+  # For that, use #find_by_email_or_hashed_email.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
+  def self.find_by_email(email)
+    return nil if email.blank?
+    migrated_user = AuthenticationOption.find_by(email: email)&.user
+    migrated_user || User.find_by(email: email)
+  end
+
   # Given an email hash, finds the first user that has a matching email hash.
   # @param [String] hashed_email
   # @return [User|nil]
