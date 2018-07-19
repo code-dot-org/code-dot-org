@@ -113,6 +113,7 @@ class MultipleChoiceByQuestionTable extends Component {
               ...styles.responseHeaderCell,
             }
           },
+          transforms: [sortable],
         },
         cell: {
           format: this.answerCellFormatter,
