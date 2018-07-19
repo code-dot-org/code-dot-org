@@ -90,7 +90,8 @@ class TeacherFeedback extends Component {
     }).done((data, textStatus, request) => {
       this.setState({
         latestFeedback: request.status === 204 ? [] : [data],
-        token: request.getResponseHeader('csrf-token')
+        token: request.getResponseHeader('csrf-token'),
+        comment: request.status === 204 ? "" : data.comment
       });
     }).fail((jqXhr, status) => {
       this.setState({errorState: ErrorType.Load});
@@ -136,11 +137,13 @@ class TeacherFeedback extends Component {
       return null;
     }
 
-    const buttonDisabled = this.state.comment === this.state.latestFeedback || this.state.submitting || this.state.errorState === ErrorType.Load;
+    const latestFeedback = this.state.latestFeedback.length > 0 ? this.state.latestFeedback[0] : null;
+    const feedbackUnchanged = (latestFeedback && this.state.comment === latestFeedback.comment);
 
-    const placeholderText = this.state.latestFeedback.length > 0 ? this.state.latestFeedback[0].comment : i18n.feedbackPlaceholder();
-    // Placeholder for upcoming feedback input
-    const textValue = this.state.latestFeedback.length > 0 ? this.state.latestFeedback[0].comment: "";
+    const buttonDisabled = feedbackUnchanged || this.state.submitting || this.state.errorState === ErrorType.Load;
+    const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
+    const placeholderText = latestFeedback ? latestFeedback.comment : i18n.feedbackPlaceholder();
+
     return (
       <div style={styles.container}>
         <div style={styles.header}>{i18n.forTeachersOnly()}</div>
@@ -163,18 +166,18 @@ class TeacherFeedback extends Component {
               onChange={this.onCommentChange}
               type="text"
               placeholder={placeholderText}
-              value={textValue}
+              value={this.state.comment}
             />
             <div style={styles.footer}>
               {this.state.latestFeedback.length > 0 &&
                 <div style={styles.time}>
-                  {i18n.lastUpdated({time: moment(this.state.latestFeedback[0].created_at).fromNow()})}
+                  {i18n.lastUpdated({time: moment(latestFeedback.created_at).fromNow()})}
                 </div>
               }
               <div style={styles.button}>
                 <Button
                   id="ui-test-submit-feedback"
-                  text={i18n.saveAndShare()}
+                  text={buttonText}
                   onClick={this.onSubmitFeedback}
                   color={Button.ButtonColor.blue}
                   disabled={buttonDisabled}
