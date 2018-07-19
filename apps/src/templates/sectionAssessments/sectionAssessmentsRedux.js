@@ -230,10 +230,13 @@ export const getCurrentQuestion = (state) => {
     const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
     const currentSurvey = surveys[state.sectionAssessments.assessmentId];
     const questionData = currentSurvey.levelgroup_results;
-    if (questionData[state.sectionAssessments.questionIndex]) {
+    const question = questionData[state.sectionAssessments.questionIndex];
+    if (question) {
       return {
-        question: questionData[state.sectionAssessments.questionIndex].question,
-        answers: questionData[state.sectionAssessments.questionIndex].answer_texts,
+        question: question.question,
+        answers: question.answer_texts.map((answer, index) => {
+          return {text: answer, correct: false, letter: ANSWER_LETTERS[index]};
+        }),
       };
     } else {
       return emptyQuestion;
@@ -242,10 +245,13 @@ export const getCurrentQuestion = (state) => {
     // Get question text for assessment.
     const assessment = getCurrentAssessmentQuestions(state) || {};
     const assessmentQuestions = assessment.questions;
-    if (assessmentQuestions && assessmentQuestions[state.sectionAssessments.questionIndex]) {
+    const question = assessmentQuestions[state.sectionAssessments.questionIndex];
+    if (question) {
       return {
-        question: assessmentQuestions[state.sectionAssessments.questionIndex].question_text,
-        answers: assessmentQuestions[state.sectionAssessments.questionIndex].answers,
+        question: question.question_text,
+        answers: question.answers.map((answer, index) => {
+          return {...answer, letter: ANSWER_LETTERS[index]};
+        }),
       };
     } else {
       return emptyQuestion;
