@@ -223,7 +223,7 @@ export default class AssignmentSelector extends Component {
     return (
       <div>
         <span style={styles.family}>
-          <div style={styles.dropdownLabel}>Select course</div>
+          <div style={styles.dropdownLabel}>{i18n.assignmentSelectorCourse()}</div>
           <select
             id="uitest-assignment-family"
             value={selectedAssignmentFamily}
@@ -254,7 +254,7 @@ export default class AssignmentSelector extends Component {
         </span>
         {versions.length > 1 && (
           <span style={styles.version}>
-            <div style={styles.dropdownLabel}>Version</div>
+            <div style={styles.dropdownLabel}>{i18n.assignmentSelectorVersion()}</div>
             <select
               id="assignment-version-year"
               value={selectedVersion.year}
@@ -277,7 +277,7 @@ export default class AssignmentSelector extends Component {
         )}
         {secondaryOptions && (
           <div style={styles.secondary}>
-            <div style={styles.dropdownLabel}>Select current unit</div>
+            <div style={styles.dropdownLabel}>{i18n.assignmentSelectorUnit()}</div>
             <select
               id="uitest-secondary-assignment"
               value={selectedSecondaryId}
