@@ -5,13 +5,12 @@
  */
 
 import React, {PropTypes} from 'react';
-var Radium = require('radium');
+import Radium from 'radium';
+import commonStyles from '../commonStyles';
+import styleConstants from '../styleConstants';
+import color from "../util/color";
 
-var commonStyles = require('../commonStyles');
-var styleConstants = require('../styleConstants');
-var color = require("../util/color");
-
-var styles = {
+const styles = {
   paneSection: {
     textAlign: 'center',
     whiteSpace: 'nowrap',
@@ -83,42 +82,39 @@ var styles = {
 };
 
 /**
- * A purple pane header that can have be focused (purple), unfocused (light purple)
- * or read only (charcoal).
+ * A purple pane header that can have be focused (purple) or unfocused (light purple).
  */
-const PaneHeader = Radium(React.createClass({
-  propTypes: {
+class PaneHeader extends React.Component {
+  static propTypes = {
     hasFocus: PropTypes.bool.isRequired,
-    readOnly: PropTypes.bool,
     style: PropTypes.object
-  },
+  };
 
-  render: function () {
-    var {hasFocus, readOnly, style, ...props} = this.props;
+  render() {
+    let {hasFocus, style, ...props} = this.props;
 
     // TODO: AnimationTab should likely use components from PaneHeader, at
     // which point purpleHeader style should move in here.
     style = [
       style,
       commonStyles.purpleHeader,
-      !hasFocus && commonStyles.purpleHeaderUnfocused,
-      readOnly && commonStyles.purpleHeaderReadOnly,
+      !hasFocus && commonStyles.purpleHeaderUnfocused
     ];
 
     return (
       <div {...props} style={style}/>
     );
   }
-}));
+}
 
 /**
  * A section of our Pane Header. Essentially this is just a div with some
  * particular styles applied
  */
-export const PaneSection = Radium(React.createClass({
-  propTypes: {
+export const PaneSection = Radium(class extends React.Component {
+  static propTypes = {
     style: PropTypes.object,
-  },
+  };
 
   render() {
     return (
@@ -128,15 +124,15 @@ export const PaneSection = Radium(React.createClass({
         style={[styles.paneSection, this.props.style]}
       />
     );
-  },
-}));
+  }
+});
 
 /**
  * A button within or PaneHeader, whose styles change whether or not the pane
  * has focus
  */
 export const PaneButton = Radium(function (props) {
-  var divStyle = [
+  const divStyle = [
     styles.headerButton,
     (props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
     props.isMinecraft && styles.headerButtonMinecraft,
@@ -144,12 +140,12 @@ export const PaneButton = Radium(function (props) {
     !props.headerHasFocus && styles.headerButtonUnfocused,
     props.style,
   ];
-  var iconStyle = [
+  let iconStyle = [
     styles.headerButtonIcon,
     props.isRtl && styles.headerButtonIconRtl,
   ];
 
-  var label = props.isPressed ? props.pressedLabel : props.label;
+  const label = props.isPressed ? props.pressedLabel : props.label;
 
   if (!label) {
     iconStyle.push(styles.headerButtonNoLabel);
@@ -184,4 +180,4 @@ PaneButton.propTypes = {
   style: PropTypes.object,
 };
 
-export default PaneHeader;
+export default Radium(PaneHeader);
