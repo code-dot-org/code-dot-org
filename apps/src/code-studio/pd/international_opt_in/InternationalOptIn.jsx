@@ -11,6 +11,7 @@ import {
   FormGroup
 } from 'react-bootstrap';
 import i18n from '@cdo/locale';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class InternationalOptIn extends FormController {
   static propTypes = {
@@ -199,7 +200,7 @@ class InternationalOptInComponent extends FormComponent {
           <Row>
             <Col md={6}>
               <ControlLabel>
-                Date
+                {i18n.workshopDate()}
                 <span style={{color: 'red'}}> *</span>
               </ControlLabel>
             </Col>
@@ -208,7 +209,6 @@ class InternationalOptInComponent extends FormComponent {
             <Col md={6}>
               <DatePicker
                 date={date}
-                minDate={moment()}
                 onChange={this.handleDateChange}
                 readOnly={false}
               />
@@ -242,7 +242,14 @@ class InternationalOptInComponent extends FormComponent {
         {
           this.buildButtonsFromOptions({
             name: 'emailOptIn',
-            label: labels.emailOptIn,
+            label:
+              <span>
+                {labels.emailOptIn}
+                &nbsp;
+                <a href={pegasus('/privacy')}>
+                  {i18n.seePrivacyPolicy()}
+                </a>
+              </span>,
             type: 'radio',
             required: true,
             placeholder: i18n.selectAnOption()

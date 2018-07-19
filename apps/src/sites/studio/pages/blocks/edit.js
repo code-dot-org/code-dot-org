@@ -16,7 +16,7 @@ import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
 const installers = {
-  GameLabJr: gamelabInstallCustomBlocks,
+  GamelabJr: gamelabInstallCustomBlocks,
   Maze: mazeInstallCustomBlocks,
 };
 
