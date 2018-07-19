@@ -73,8 +73,8 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/i18n.git
-  revision: f366d62ad73bd0fee939ed9aa38ab88c9f94a8df
-  branch: cdo
+  revision: 4260c62cf628d60bd9fd45dd1315629c653cd8ab
+  branch: simple_numeric_keys
   specs:
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
@@ -714,7 +714,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
+    sqlite3 (1.3.11)
     sshkit (1.11.4)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -928,7 +928,7 @@ DEPENDENCIES
   spring-commands-testunit
   sprockets!
   sprockets-rails
-  sqlite3 (~> 1.3.13)
+  sqlite3
   sshkit
   stringex (~> 2.5.2)
   therubyracer (~> 0.12.2)
