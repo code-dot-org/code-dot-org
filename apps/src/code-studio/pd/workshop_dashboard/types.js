@@ -26,6 +26,7 @@ const enrollmentShape = PropTypes.shape({
   district_name: PropTypes.string,
   school: PropTypes.string.isRequired,
   role: PropTypes.string,
+  grades_teaching: PropTypes.string,
   user_id: PropTypes.number,
   attended: PropTypes.bool.isRequired,
   pre_workshop_survey: PropTypes.shape({

@@ -68,13 +68,15 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   private
 
   def enrollment_params
-    params.require(:workshop_enrollment).permit(
+    enrollment_params = params.require(:workshop_enrollment).permit(
       :first_name,
       :last_name,
       :email,
       :role,
       :grades_teaching
     )
+    enrollment_params[:grades_teaching] = params[:grades_teaching].join(", ")
+    enrollment_params
   end
 
   def school_info_params
