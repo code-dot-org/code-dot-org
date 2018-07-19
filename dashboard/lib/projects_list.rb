@@ -17,6 +17,10 @@ module ProjectsList
   }.freeze
 
   class << self
+    # Look up every project associated with the provided user_id, which is not hidden or deleted.
+    # Return a set of metadata which can be used to display a table of personal projects in the UI.
+    # @param user_id
+    # @return [Array<Hash>] An array with each entry representing a project.
     def fetch_personal_projects(user_id)
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)

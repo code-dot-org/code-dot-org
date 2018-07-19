@@ -555,7 +555,7 @@ def storage_id(_)
 end
 
 def storage_id_for_user_id(user_id)
-  Random.new(user_id).rand(1_000_000)
+  Random.new(user_id.to_i).rand(1_000_000)
 end
 
 # A fake slogger implementation that captures the records written to it.
