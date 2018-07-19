@@ -157,6 +157,8 @@ This section will be updated as emails are sent for this event.
 
 <a href="http://go.pardot.com/webmail/153401/430435811/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 3 - Prepare for TeacherCon: Complete your pre-survey!</a>
 
+<a href="http://go.pardot.com/webmail/153401/430763231/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Email 4 - We'll see you soon at TeacherCon!</a>
+
 <a id="prework"></a>
 ## **Prework**
 <details>
