@@ -61,7 +61,8 @@ export class WorkshopFilter extends React.Component {
         teacher_email: PropTypes.string,
         only_attended: PropTypes.string,
       })
-    })
+    }),
+    showRegionalPartnerDropdown: PropTypes.bool
   };
 
   static contextTypes = {
@@ -383,7 +384,7 @@ export class WorkshopFilter extends React.Component {
           }
         </Row>
         {
-          this.props.permission.has(WorkshopAdmin) &&
+          this.props.showRegionalPartnerDropdown &&
           <Row>
             <Col md={6}>
               <RegionalPartnerDropdown/>
@@ -407,5 +408,6 @@ export class WorkshopFilter extends React.Component {
 
 export default connect(state => ({
   permission: state.workshopDashboard.permission,
-  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter
+  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
+  showRegionalPartnerDropdown: state.regionalPartners.regionalPartners.length > 1
 }))(WorkshopFilter);
