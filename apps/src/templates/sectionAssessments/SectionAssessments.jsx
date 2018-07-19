@@ -21,6 +21,7 @@ import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContain
 import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
 import FreeResponseDetailsDialog from './FreeResponseDetailsDialog';
 import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
+import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
 import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -96,8 +97,8 @@ class SectionAssessments extends Component {
   };
 
   state = {
-    isDetailDialogOpen: false,
-    detailQuestionText: '',
+    freeResponseDetailDialogOpen: false,
+    multipleChoiceDetailDialogOpen: false,
   };
 
   onChangeScript = scriptId => {
@@ -106,12 +107,28 @@ class SectionAssessments extends Component {
     setScriptId(scriptId);
   };
 
-  showFreeResponseDetailDialog = questionText => {
-    this.setState({isDetailDialogOpen: true, detailQuestionText: questionText});
+  showFreeResponseDetailDialog = () => {
+    this.setState({
+      freeResponseDetailDialogOpen: true
+    });
   };
 
   hideFreeResponseDetailDialog = () => {
-    this.setState({isDetailDialogOpen: false, detailQuestionText: ''});
+    this.setState({
+      freeResponseDetailDialogOpen: false
+    });
+  };
+
+  showMulitpleChoiceDetailDialog = () => {
+    this.setState({
+      multipleChoiceDetailDialogOpen: true
+    });
+  };
+
+  hideMultipleChoiceDetailDialog = () => {
+    this.setState({
+      multipleChoiceDetailDialogOpen: false
+    });
   };
 
   render() {
@@ -175,7 +192,9 @@ class SectionAssessments extends Component {
                 <SubmissionStatusAssessmentsContainer />
                 {totalStudentSubmissions > 0 &&
                   <div>
-                    <MultipleChoiceAssessmentsOverviewContainer />
+                    <MultipleChoiceAssessmentsOverviewContainer
+                      openDialog={this.showMulitpleChoiceDetailDialog}
+                    />
                     <MultipleChoiceByStudentContainer />
                     <FreeResponsesAssessmentsContainer
                       openDialog={this.showFreeResponseDetailDialog}
@@ -196,7 +215,9 @@ class SectionAssessments extends Component {
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
-                    <MultipleChoiceSurveyOverviewContainer />
+                    <MultipleChoiceSurveyOverviewContainer
+                      openDialog={this.showMulitpleChoiceDetailDialog}
+                    />
                     <FreeResponsesSurveyContainer
                       openDialog={this.showFreeResponseDetailDialog}
                     />
@@ -208,9 +229,12 @@ class SectionAssessments extends Component {
               </div>
             }
             <FreeResponseDetailsDialog
-              isDialogOpen={this.state.isDetailDialogOpen}
-              questionText={this.state.detailQuestionText}
+              isDialogOpen={this.state.freeResponseDetailDialogOpen}
               closeDialog={this.hideFreeResponseDetailDialog}
+            />
+            <MultipleChoiceDetailsDialog
+              isDialogOpen={this.state.multipleChoiceDetailDialogOpen}
+              closeDialog={this.hideMultipleChoiceDetailDialog}
             />
           </div>
         }
