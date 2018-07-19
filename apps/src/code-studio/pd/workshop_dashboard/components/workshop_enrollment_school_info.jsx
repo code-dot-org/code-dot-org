@@ -75,6 +75,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
           {this.props.workshopCourse === CSF && <td>{enrollment.role ? enrollment.role : "No Response"}</td>}
+          {this.props.workshopCourse === CSF && <td>{enrollment.grades_teaching ? enrollment.grades_teaching : "No Response"}</td>}
           {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
         </tr>
       );
@@ -109,7 +110,8 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
             <th style={styles.th}>Email</th>
             <th style={styles.th}>District</th>
             <th style={styles.th}>School</th>
-            {this.props.workshopCourse === CSF && <th style={styles.th}>Role</th>}
+            {this.props.workshopCourse === CSF && <th style={styles.th}>Current Role</th>}
+            {this.props.workshopCourse === CSF && <th style={styles.th}>Grades Teaching This Year</th>}
             {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
           </tr>
         </thead>
