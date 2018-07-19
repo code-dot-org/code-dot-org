@@ -72,6 +72,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.email}</td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
+          <td>{enrollment.role ? enrollment.role : "No Response"}</td>
           {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
         </tr>
       );
@@ -106,6 +107,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
             <th style={styles.th}>Email</th>
             <th style={styles.th}>District</th>
             <th style={styles.th}>School</th>
+            <th style={styles.th}>Role</th>
             {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
           </tr>
         </thead>
