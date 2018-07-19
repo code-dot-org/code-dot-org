@@ -24,12 +24,12 @@ class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionText: PropTypes.string,
+    question: PropTypes.object,
   };
 
   render() {
     // Questions are in markdown format and should not display as plain text in the dialog.
-    const renderedMarkdown = processMarkdown(this.props.questionText, { renderer });
+    const renderedMarkdown = processMarkdown(this.props.question.question, { renderer });
 
     return (
       <BaseDialog
@@ -58,5 +58,5 @@ class MultipleChoiceDetailsDialog extends Component {
 export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
 
 export default connect(state => ({
-  questionText: getCurrentQuestion(state),
+  question: getCurrentQuestion(state),
 }))(MultipleChoiceDetailsDialog);

@@ -1082,8 +1082,8 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const questionText = getCurrentQuestion(stateWithSurvey);
-        assert.deepEqual(questionText, 'What is a variable?');
+        const question = getCurrentQuestion(stateWithSurvey);
+        assert.deepEqual(question.question, 'What is a variable?');
       });
 
       it('returns the question text for an assessment', () => {
@@ -1107,8 +1107,8 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const questionText = getCurrentQuestion(stateWithSurvey);
-        assert.deepEqual(questionText, 'What is a function?');
+        const question = getCurrentQuestion(stateWithSurvey);
+        assert.deepEqual(question.question, 'What is a function?');
       });
     });
   });
