@@ -229,8 +229,8 @@ export const getCurrentQuestion = (state) => {
   if (isSurvey) {
     const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
     const currentSurvey = surveys[state.sectionAssessments.assessmentId];
-    const questionData = currentSurvey.levelgroup_results;
-    const question = questionData[state.sectionAssessments.questionIndex];
+    const questionsData = currentSurvey.levelgroup_results;
+    const question = questionsData[state.sectionAssessments.questionIndex];
     if (question) {
       return {
         question: question.question,
