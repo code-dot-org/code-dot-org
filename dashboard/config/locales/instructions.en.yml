@@ -3535,6 +3535,7 @@ en:
       courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat to the acorn.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -4421,6 +4422,7 @@ en:
       courseE_farmer_concept3_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: Now let's go one level deeper! We've nested that whole block of code into another loop, but you need to get the artist back in place to draw the next line. Which of these code blocks can you place at the end of the outermost loop to draw the whole grid?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will become.  Use `if` statements to write the code to check and harvest each one.   '
       courseE_farmer_functions10a1_2018_instruction: Use everything that you've learned so far to solve this puzzle!
