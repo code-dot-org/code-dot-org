@@ -82,11 +82,7 @@ const styles = {
     float: 'left',
     paddingTop: 6,
     paddingLeft: 30,
-  },
-  highlighted: {
-    borderBottom: "2px solid " + color.default_text,
-    color: color.default_text,
-  },
+  }
 };
 
 const audioStyle = {
@@ -286,6 +282,7 @@ class TopInstructions extends Component {
       this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
 
     const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
+
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
@@ -305,14 +302,14 @@ class TopInstructions extends Component {
               <InstructionsTab
                 className="uitest-instructionsTab"
                 onClick={this.handleInstructionTabClick}
-                style={this.state.tabSelected === TabType.INSTRUCTIONS ? styles.highlighted : null}
+                selected={this.state.tabSelected === TabType.INSTRUCTIONS}
                 text={msg.instructions()}
               />
               {displayHelpTab &&
                 <InstructionsTab
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
-                  style={this.state.tabSelected === TabType.RESOURCES ? styles.highlighted : null}
+                  selected={this.state.tabSelected === TabType.RESOURCES}
                   text={msg.helpTips()}
                 />
               }
@@ -320,7 +317,7 @@ class TopInstructions extends Component {
                 <InstructionsTab
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
-                  style={this.state.tabSelected === TabType.COMMENTS ? styles.highlighted : null}
+                  selected={this.state.tabSelected === TabType.COMMENTS}
                   text={msg.feedback()}
                 />
               }
