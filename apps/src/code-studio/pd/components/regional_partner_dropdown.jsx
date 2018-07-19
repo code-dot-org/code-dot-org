@@ -35,16 +35,16 @@ export const RegionalPartnerPropType = PropTypes.shape({
   label: PropTypes.string.isRequired
 });
 
-
+export const RegionalPartnerShape = PropTypes.shape({
+  id: PropTypes.number,
+  name: PropTypes.string
+});
 
 export class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
     regionalPartnerFilter: RegionalPartnerPropType.isRequired,
-    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string
-    })),
+    regionalPartners: PropTypes.arrayOf(RegionalPartnerShape),
     additionalOptions: PropTypes.array,
     isWorkshopAdmin: PropTypes.bool
   };

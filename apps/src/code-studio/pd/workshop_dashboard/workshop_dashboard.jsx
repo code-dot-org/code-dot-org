@@ -34,14 +34,16 @@ import regionalPartnerReducers, {
   getInitialRegionalPartnerFilter
 } from '../components/regional_partners_reducers';
 import {WorkshopAdmin} from './permission';
+import {RegionalPartnerShape} from "../components/regional_partner_dropdown";
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
-const store = createStore(combineReducers(
-  {workshopDashboard: workshopDashboardReducers, regionalPartners: regionalPartnerReducers}
-));
+const store = createStore(combineReducers({
+  workshopDashboard: workshopDashboardReducers,
+  regionalPartners: regionalPartnerReducers
+}));
 
 const WorkshopDashboardHeader = (props) => (
   <Header
@@ -54,11 +56,7 @@ export default class WorkshopDashboard extends React.Component {
   static propTypes = {
     permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
     facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    regionalPartners: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      group: PropTypes.number
-    }))
+    regionalPartners: PropTypes.arrayOf(RegionalPartnerShape)
   };
 
   constructor(props) {

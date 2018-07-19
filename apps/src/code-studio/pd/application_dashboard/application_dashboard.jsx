@@ -35,9 +35,10 @@ const ROOT_PATH = '/pd/application_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
-const store = createStore(combineReducers(
-  {applicationDashboard: applicationDashboardReducers, regionalPartners: regionalPartnerReducers}
-));
+const store = createStore(combineReducers({
+  applicationDashboard: applicationDashboardReducers,
+  regionalPartners: regionalPartnerReducers
+}));
 
 const ApplicationDashboardHeader = (props) => (
   <Header
