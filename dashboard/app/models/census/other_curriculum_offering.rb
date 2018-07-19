@@ -29,11 +29,11 @@ class Census::OtherCurriculumOffering < ApplicationRecord
   TEALS_COURSE_CODES = [
     'Intro Full',
     'Intro S2',
+    'Other',
     'AP',
     'AP CSP',
     'Intro Both',
     'Intro S1',
-    'Other',
     'Post AP',
     'Python S2'
   ].freeze
