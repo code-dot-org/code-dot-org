@@ -38,6 +38,7 @@ $(document).ready(() => {
       submitButton.removeAttribute('disabled');
     }
   });
+  poolField.addEventListener('change', fixupJson);
 });
 
 let config;
