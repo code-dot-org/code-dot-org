@@ -3,6 +3,7 @@ class BlocksController < ApplicationController
   load_and_authorize_resource find_by: :name
 
   def new
+    @block.pool = params[:pool]
     render 'edit'
   end
 
