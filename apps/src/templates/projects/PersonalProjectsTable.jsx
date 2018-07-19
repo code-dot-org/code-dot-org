@@ -282,7 +282,6 @@ class PersonalProjectsTable extends React.Component {
   };
 
   render() {
-    console.log("projects", this.props.personalProjectsList);
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
     const columns = this.getColumns(sortable);
