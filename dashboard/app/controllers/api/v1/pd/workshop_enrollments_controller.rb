@@ -45,6 +45,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       enrollment = ::Pd::Enrollment.new workshop: @workshop
       enrollment.school_info_attributes = school_info_params
 
+      p "params: #{params}"
+      p "enrollment_params: #{enrollment_params}"
       if enrollment.update enrollment_params
         p "updated, sending emails"
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
@@ -69,7 +71,9 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     params.require(:workshop_enrollment).permit(
       :first_name,
       :last_name,
-      :email
+      :email,
+      :role,
+      :grades_teaching
     )
   end
 
