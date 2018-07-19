@@ -35,6 +35,6 @@ class BlocksController < ApplicationController
   end
 
   def update_params
-    params['block'].permit(:name, :level_type, :category, :config, :helper_code)
+    params['block'].permit(:name, :pool, :category, :config, :helper_code)
   end
 end
