@@ -8,6 +8,8 @@ import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
 import processMarkdown from 'marked';
 import renderer from "@cdo/apps/util/StylelessRenderer";
 import {getCurrentQuestion} from "./sectionAssessmentsRedux";
+import color from "@cdo/apps/util/color";
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   dialog: {
@@ -17,7 +19,10 @@ const styles = {
   },
   instructions: {
     marginTop: 20
-  }
+  },
+  icon: {
+    color: color.level_perfect,
+  },
 };
 
 class MultipleChoiceDetailsDialog extends Component {
@@ -28,8 +33,10 @@ class MultipleChoiceDetailsDialog extends Component {
   };
 
   render() {
+    const {question} = this.props;
+
     // Questions are in markdown format and should not display as plain text in the dialog.
-    const renderedMarkdown = processMarkdown(this.props.question.question, { renderer });
+    const renderedMarkdown = processMarkdown(question.question, { renderer });
 
     return (
       <BaseDialog
@@ -43,6 +50,21 @@ class MultipleChoiceDetailsDialog extends Component {
           style={styles.instructions}
           dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
         />
+        {(question.answers && question.answers.length > 0) &&
+          <div>
+            {question.answers.map((answer, index) => {
+              return (
+                <div key={index}>
+                  {answer.correct &&
+                    <FontAwesome icon="check-circle" style={styles.icon}/>
+                  }
+                  <b>{answer.letter + ' '}</b>
+                  <span>{answer.text}</span>
+                </div>
+              );
+            })}
+          </div>
+        }
         <DialogFooter>
           <Button
             text={i18n.done()}
