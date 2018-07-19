@@ -234,7 +234,7 @@ export const getCurrentQuestion = (state) => {
     if (question) {
       return {
         question: question.question,
-        answers: question.answer_texts.map((answer, index) => {
+        answers: question.type === SurveyQuestionType.MULTI && question.answer_texts.map((answer, index) => {
           return {text: answer, correct: false, letter: ANSWER_LETTERS[index]};
         }),
       };
@@ -245,11 +245,11 @@ export const getCurrentQuestion = (state) => {
     // Get question text for assessment.
     const assessment = getCurrentAssessmentQuestions(state) || {};
     const assessmentQuestions = assessment.questions;
-    const question = assessmentQuestions[state.sectionAssessments.questionIndex];
+    const question = assessmentQuestions ? assessmentQuestions[state.sectionAssessments.questionIndex] : null;
     if (question) {
       return {
         question: question.question_text,
-        answers: question.answers.map((answer, index) => {
+        answers: question.type === QuestionType.MULTI && question.answers.map((answer, index) => {
           return {...answer, letter: ANSWER_LETTERS[index]};
         }),
       };
