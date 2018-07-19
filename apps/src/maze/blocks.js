@@ -416,11 +416,11 @@ exports.install = function (blockly, blockInstallOptions) {
 };
 
 exports.installCustomBlocks = function (blockly, blockInstallOptions, customBlocks) {
-  const createJsWrapperBlock = createJsWrapperBlockCreator(blockly, 'maze');
+  const createJsWrapperBlock = createJsWrapperBlockCreator(blockly);
 
   const blocksByCategory = {};
-  customBlocks.forEach(({name, category, config, helperCode}) => {
-    const blockName = createJsWrapperBlock(config, helperCode);
+  customBlocks.forEach(({name, pool, category, config, helperCode}) => {
+    const blockName = createJsWrapperBlock(config, helperCode, pool);
     if (!blocksByCategory[category]) {
       blocksByCategory[category] = [];
     }

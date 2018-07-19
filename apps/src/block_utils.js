@@ -686,8 +686,6 @@ exports.interpolateInputs = interpolateInputs;
  * function call, method call, or other (hopefully simple) expression.
  *
  * @params {Blockly} blockly The Blockly object provided to install()
- * @params {string} blocksModuleName Module name that will be prefixed to all
- *   the block names
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  * @params {string} defaultObjectType Default type used for the 'THIS' input in
@@ -699,7 +697,6 @@ exports.interpolateInputs = interpolateInputs;
  */
 exports.createJsWrapperBlockCreator = function (
   blockly,
-  blocksModuleName,
   strictTypes,
   defaultObjectType,
   customInputTypes,
@@ -769,7 +766,10 @@ exports.createJsWrapperBlockCreator = function (
     eventLoopBlock,
     inline,
     simpleValue,
-  }, helperCode) => {
+  }, helperCode, pool) => {
+    if (!!pool) {
+      throw new Error('No block pool specified');
+    }
     if (!!func + !!expression + !!simpleValue !== 1) {
       throw new Error('Provide exactly one of func, expression, or simpleValue');
     }
@@ -803,7 +803,7 @@ exports.createJsWrapperBlockCreator = function (
           `choose one of [${Object.keys(customInputTypes).join(', ')}]`);
       }
     });
-    const blockName = `${blocksModuleName}_${name || func}`;
+    const blockName = `${pool}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
       // just tack one onto the end
