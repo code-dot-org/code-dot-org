@@ -41,7 +41,7 @@ class Census::OtherCurriculumOffering < ApplicationRecord
   def self.school_id(provider_code, row_hash)
     case provider_code
     when 'TEALS'
-      row_hash['NCES ID']
+      row_hash['School ID']
     else
       raise ArgumentError.new("#{provider_code} is not supported.")
     end
@@ -50,8 +50,7 @@ class Census::OtherCurriculumOffering < ApplicationRecord
   def self.get_courses(provider_code, row_hash)
     case provider_code
     when 'TEALS'
-      # TODO: (suresh) Currently Classes column contains a comma separated list of courses offered by the school.
-      TEALS_COURSE_CODES.select {|course| row_hash['Classes'].include?(course)}
+      TEALS_COURSE_CODES.select {|course| course == row_hash['Course']}
     else
       raise ArgumentError.new("#{provider_code} is not supported.")
     end
