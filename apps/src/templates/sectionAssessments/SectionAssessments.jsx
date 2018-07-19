@@ -125,7 +125,7 @@ class SectionAssessments extends Component {
     });
   };
 
-  hideMultipleDetailDialog = () => {
+  hideMultipleChoiceDetailDialog = () => {
     this.setState({
       multipleChoiceDetailDialogOpen: false
     });
@@ -234,7 +234,7 @@ class SectionAssessments extends Component {
             />
             <MultipleChoiceDetailsDialog
               isDialogOpen={this.state.multipleChoiceDetailDialogOpen}
-              closeDialog={this.hideMultipleDetailDialog}
+              closeDialog={this.hideMultipleChoiceDetailDialog}
             />
           </div>
         }
