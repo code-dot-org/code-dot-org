@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import FreeResponsesSurveyTable from './FreeResponsesSurveyTable';
 import {
   getSurveyFreeResponseQuestions,
+  setQuestionIndex,
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
@@ -25,6 +26,12 @@ class FreeResponsesSurveyContainer extends Component {
   static propTypes = {
     freeResponsesByQuestion: PropTypes.arrayOf(freeResponseQuestionsPropType),
     openDialog: PropTypes.func.isRequired,
+    setQuestionIndex: PropTypes.func.isRequired,
+  };
+
+  selectQuestion = (index) => {
+    this.props.setQuestionIndex(index);
+    this.props.openDialog();
   };
 
   render() {
@@ -37,7 +44,7 @@ class FreeResponsesSurveyContainer extends Component {
             <div style={styles.text}>
               {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
               {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
-                <a onClick={() => {this.props.openDialog(question.questionText);}}>
+                <a onClick={() => {this.selectQuestion(question.questionNumber - 1);}}>
                   <span>{i18n.seeFullQuestion()}</span>
                 </a>
               }
@@ -56,4 +63,8 @@ export const UnconnectedFreeResponsesSurveyContainer = FreeResponsesSurveyContai
 
 export default connect(state => ({
   freeResponsesByQuestion: getSurveyFreeResponseQuestions(state),
+}), dispatch => ({
+  setQuestionIndex(questionIndex) {
+    dispatch(setQuestionIndex(questionIndex));
+  },
 }))(FreeResponsesSurveyContainer);
