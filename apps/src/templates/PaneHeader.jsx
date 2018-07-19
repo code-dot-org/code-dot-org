@@ -95,14 +95,14 @@ class PaneHeader extends React.Component {
 
     // TODO: AnimationTab should likely use components from PaneHeader, at
     // which point purpleHeader style should move in here.
-    style = [
-      style,
-      commonStyles.purpleHeader,
-      !hasFocus && commonStyles.purpleHeaderUnfocused
-    ];
+    const composedStyle = {
+        ...style,
+        ...commonStyles.purpleHeader,
+        ...(!hasFocus && commonStyles.purpleHeaderUnfocused)
+    };
 
     return (
-      <div {...props} style={style}/>
+      <div {...props} style={composedStyle}/>
     );
   }
 }
@@ -121,7 +121,7 @@ export const PaneSection = Radium(class extends React.Component {
       <div
         {...this.props}
         ref={root => this.root = root}
-        style={[styles.paneSection, this.props.style]}
+        style={{...styles.paneSection, ...this.props.style}}
       />
     );
   }
@@ -132,23 +132,24 @@ export const PaneSection = Radium(class extends React.Component {
  * has focus
  */
 export const PaneButton = Radium(function (props) {
-  const divStyle = [
-    styles.headerButton,
-    (props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
-    props.isMinecraft && styles.headerButtonMinecraft,
-    props.isPressed && styles.headerButtonPressed,
-    !props.headerHasFocus && styles.headerButtonUnfocused,
-    props.style,
-  ];
-  let iconStyle = [
-    styles.headerButtonIcon,
-    props.isRtl && styles.headerButtonIconRtl,
-  ];
+  const divStyle = {
+    ...styles.headerButton,
+    ...(props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
+    ...props.isMinecraft && styles.headerButtonMinecraft,
+    ...props.isPressed && styles.headerButtonPressed,
+    ...!props.headerHasFocus && styles.headerButtonUnfocused,
+    ...props.style
+  };
+
+  let iconStyle = {
+    ...styles.headerButtonIcon,
+    ...props.isRtl && styles.headerButtonIconRtl,
+  };
 
   const label = props.isPressed ? props.pressedLabel : props.label;
 
   if (!label) {
-    iconStyle.push(styles.headerButtonNoLabel);
+    iconStyle = {...iconStyle, ...styles.headerButtonNoLabel};
   }
 
   return (
