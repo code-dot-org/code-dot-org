@@ -36,6 +36,16 @@ Scenario: Version warning announcement on course and unit overview pages
   # make sure we are showing the warning specific to course units
   Then element ".announcement-notification:contains(going to the course page)" is visible
 
+  # Close the course unit version warning banner
+  When I click selector ".announcement-notification:contains(newer version) .fa-times"
+  Then I wait until element ".announcement-notification:contains(newer version)" is not visible
+
+  # The course unit version warning banner stays closed on refresh
+  When I reload the page
+  And I wait until element "#script-title" is visible
+  And element "#version-selector" is not visible
+  Then element ".announcement-notification:contains(newer version)" is not visible
+
 @as_student
 @no_mobile
 Scenario: Versions warning announcement on script overview page
@@ -52,6 +62,16 @@ Scenario: Versions warning announcement on script overview page
   And element "#version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
+
+  # Close the script version warning banner
+  When I click selector ".announcement-notification:contains(newer version) .fa-times"
+  Then I wait until element ".announcement-notification:contains(newer version)" is not visible
+
+  # The script version warning banner stays closed on refresh
+  When I reload the page
+  And I wait until element "#script-title" is visible
+  And element "#version-selector" is visible
+  Then element ".announcement-notification:contains(newer version)" is not visible
 
   # Generate progress in course 2
   When I am on "http://studio.code.org/s/course2/stage/1/puzzle/1"
