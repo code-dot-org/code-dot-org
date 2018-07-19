@@ -22,6 +22,7 @@ import sectionAssessments, {
   getExportableAssessmentData,
   setStudentId,
   setQuestionIndex,
+  getCurrentQuestion,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -1058,6 +1059,57 @@ describe('sectionAssessmentsRedux', () => {
           },
         ]
       );
+    });
+
+    describe('getCurrentQuestion', () => {
+      it('returns the question text for a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 0,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [{
+                    question: 'What is a variable?'
+                  }],
+                }
+              }
+            }
+          }
+        };
+
+        const questionText = getCurrentQuestion(stateWithSurvey);
+        assert.deepEqual(questionText, 'What is a variable?');
+      });
+
+      it('returns the question text for an assessment', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 1,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  name: 'name',
+                  questions: [
+                    {question_text: 'What is a variable?'},
+                    {question_text: 'What is a function?'},
+                  ],
+                }
+              }
+            }
+          }
+        };
+
+        const questionText = getCurrentQuestion(stateWithSurvey);
+        assert.deepEqual(questionText, 'What is a function?');
+      });
     });
   });
 });
