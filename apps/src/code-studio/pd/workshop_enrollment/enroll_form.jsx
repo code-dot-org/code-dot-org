@@ -149,8 +149,10 @@ export default class EnrollForm extends React.Component {
         state: this.state.school_info.state,
         zip: this.state.school_info.zip,
         school_type: this.state.school_info.school_type,
-        country: "US" // HACK JUST FOR NOW - need to enforce in UI
-      }
+        country: "US" // we currently only support enrollment in pd for US schools
+      },
+      role: this.state.role,
+      grades_teaching: this.state.grades_teaching
     };
     this.submitRequest = $.ajax({
       method: 'POST',
