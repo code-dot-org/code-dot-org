@@ -20,9 +20,25 @@ const styles = {
   instructions: {
     marginTop: 20
   },
+  answers: {
+    float: 'left',
+    width: 550,
+  },
   icon: {
     color: color.level_perfect,
   },
+  iconSpace: {
+    width: 40,
+    float: 'left',
+  },
+  answerBlock: {
+    width: '100%',
+  },
+  answerLetter: {
+    width: 30,
+    float: 'left',
+    fontWeight: 'bold',
+  }
 };
 
 class MultipleChoiceDetailsDialog extends Component {
@@ -54,12 +70,19 @@ class MultipleChoiceDetailsDialog extends Component {
           <div>
             {question.answers.map((answer, index) => {
               return (
-                <div key={index}>
-                  {answer.correct &&
-                    <FontAwesome icon="check-circle" style={styles.icon}/>
-                  }
-                  <b>{answer.letter + ' '}</b>
-                  <span>{answer.text}</span>
+                <div key={index} style={styles.answerBlock}>
+                  <div style={styles.iconSpace}>
+                    {answer.correct &&
+                      <FontAwesome icon="check-circle" style={styles.icon}/>
+                    }
+                    {!answer.correct && (<span>&nbsp;</span>)}
+                  </div>
+                  <div style={styles.answerLetter}>{answer.letter}</div>
+                  <div
+                    style={styles.answers}
+                    dangerouslySetInnerHTML={{ __html: processMarkdown(answer.text, { renderer }) }}
+                  />
+                  <div style={{clear: 'both'}}></div>
                 </div>
               );
             })}
