@@ -16,11 +16,10 @@ class SecretWord < ActiveRecord::Base
   include Seeded
 
   def self.setup
+    secret_words = load_csv Dashboard::Application.config.secret_words_csv
     transaction do
       reset_db
-      load_csv(Dashboard::Application.config.secret_words_csv) do |attrs|
-        create!(attrs)
-      end
+      SecretWord.import! secret_words
     end
   end
 
