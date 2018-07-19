@@ -156,7 +156,7 @@ class TeacherFeedback extends Component {
           <div>
             {this.state.errorState === ErrorType.Load &&
               <span>
-                <i className="fa fa-warning" style={styles.errorIcon}></i>
+                <i className="fa fa-warning" style={styles.errorIcon}/>
                 {i18n.feedbackLoadError()}
               </span>
             }
@@ -164,7 +164,6 @@ class TeacherFeedback extends Component {
               id="ui-test-feedback-input"
               style={styles.textInput}
               onChange={this.onCommentChange}
-              type="text"
               placeholder={placeholderText}
               value={this.state.comment}
             />
@@ -184,7 +183,7 @@ class TeacherFeedback extends Component {
                 />
                 {this.state.errorState === ErrorType.Save &&
                   <span>
-                    <i className="fa fa-warning" style={styles.errorIcon}></i>
+                    <i className="fa fa-warning" style={styles.errorIcon}/>
                     {i18n.feedbackSaveError()}
                   </span>
                 }
