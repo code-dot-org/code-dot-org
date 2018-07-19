@@ -52,7 +52,7 @@ export class Summary extends React.Component {
     this.setState({loading: true});
 
     let url = '/api/v1/pd/applications';
-    if (this.props.isWorkshopAdmin) {
+    if (this.props.showRegionalPartnerDropdown) {
       url += `?${$.param({regional_partner_value: regionalPartnerFilter.value})}`;
     }
 
