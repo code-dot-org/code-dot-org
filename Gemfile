@@ -13,11 +13,9 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
 
-# Add CacheFile backend module.
-# Ref: https://github.com/svenfuchs/i18n/pull/423
-# Support numeric keys in Simple backend.
+# Fork to support numeric keys in the Simple backend.
 # Ref: https://github.com/svenfuchs/i18n/pull/422
-gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
+gem 'i18n', github: 'wjordan/i18n', branch: 'simple_numeric_keys'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
@@ -304,4 +302,3 @@ end
 
 gem 'activerecord-import'
 gem 'colorize'
-gem 'lmdb'
