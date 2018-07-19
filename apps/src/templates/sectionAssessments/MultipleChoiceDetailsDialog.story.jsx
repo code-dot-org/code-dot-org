@@ -12,11 +12,11 @@ export default storybook => {
           <UnconnectedMultipleChoiceDetailsDialog
             isDialogOpen={true}
             closeDialog={() => {}}
-            question={{
-              queston: "Hello world. I display *markdown* questions in a dialog.",
+            questionAndAnswers={{
+              question: "Hello world. I display *markdown* questions in a dialog.",
               answers: [
-                {text: 'Im an answer', letter: 'A', correct: true},
-                {text: 'Im another answer', letter: 'B', correct: false},
+                {text: "I'm an answer", letter: 'A', correct: true},
+                {text: "I'm another answer", letter: 'B', correct: false},
               ],
             }}
           />
