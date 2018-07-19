@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import MultipleChoiceAssessmentsOverviewTable from '@cdo/apps/templates/sectionAssessments/MultipleChoiceAssessmentsOverviewTable';
+import {UnconnectedMultipleChoiceAssessmentsOverviewTable} from '@cdo/apps/templates/sectionAssessments/MultipleChoiceAssessmentsOverviewTable';
 import commonMsg from '@cdo/locale';
 
 const multipleChoiceData = [
@@ -64,8 +64,10 @@ const multipleChoiceData = [
 describe('MultipleChoiceAssessmentsOverviewTable', () => {
   it('renders the correct number of cells', () => {
     const wrapper = mount(
-      <MultipleChoiceAssessmentsOverviewTable
+      <UnconnectedMultipleChoiceAssessmentsOverviewTable
         questionAnswerData={multipleChoiceData}
+        openDialog={() => {}}
+        setQuestionIndex={() => {}}
       />
     );
 
