@@ -233,7 +233,7 @@ export const getCurrentQuestion = (state) => {
     if (questionData[state.sectionAssessments.questionIndex]) {
       return {
         question: questionData[state.sectionAssessments.questionIndex].question,
-        answers: [],
+        answers: questionData[state.sectionAssessments.questionIndex].answer_texts,
       };
     } else {
       return emptyQuestion;
@@ -245,7 +245,7 @@ export const getCurrentQuestion = (state) => {
     if (assessmentQuestions && assessmentQuestions[state.sectionAssessments.questionIndex]) {
       return {
         question: assessmentQuestions[state.sectionAssessments.questionIndex].question_text,
-        answers: []
+        answers: assessmentQuestions[state.sectionAssessments.questionIndex].answers,
       };
     } else {
       return emptyQuestion;
