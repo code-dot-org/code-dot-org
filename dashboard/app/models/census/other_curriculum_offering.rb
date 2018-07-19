@@ -60,23 +60,25 @@ class Census::OtherCurriculumOffering < ApplicationRecord
     ActiveRecord::Base.transaction do
       CSV.foreach(filename, {headers: true}) do |row|
         row_hash = row.to_hash
-        # Remove leading zero because we imported NCES IDs into School.id without the leading zero.
-        school_id = school_id(provider_code, row_hash)&.sub!(/^0/, "")
+        input_school_id = school_id(provider_code, row_hash)
+        # Remove leading zero if it looks like an NCES ID (12 digits) because we imported NCES IDs into School.id
+        # without the leading zero.
+        lookup_school_id = input_school_id.length == 12 ? input_school_id.sub(/^0/, "") : input_school_id
         courses = get_courses(provider_code, row_hash)
-        school = School.find_by(id: school_id)
-        if school && school_id
+        school = School.find_by(id: lookup_school_id)
+        if school && lookup_school_id
           courses.each do |course|
             find_or_create_by!(
               curriculum_provider_name: provider_code,
               school: school,
               course: course,
-              school_year: school_year,
+              school_year: school_year
             )
           end
         else
           # We don't have mapping for every school code so skip over any that
           # can't be found in the database.
-          CDO.log.warn "Other Curriculum Offering seeding: skipping unknown school with NCES ID: #{school_id}"
+          CDO.log.warn "Other Curriculum Offering seeding: skipping unknown school with NCES ID: #{input_school_id}"
         end
       end
     end
