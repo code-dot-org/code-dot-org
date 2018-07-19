@@ -1,6 +1,9 @@
 import React, {Component, PropTypes} from 'react';
 import FreeResponsesAssessmentsTable from './FreeResponsesAssessmentsTable';
-import {freeResponsesDataPropType} from './assessmentDataShapes';
+import {
+  freeResponsesDataPropType,
+  QUESTION_CHARACTER_LIMIT,
+} from './assessmentDataShapes';
 import {
   getAssessmentsFreeResponseResults,
   ALL_STUDENT_FILTER,
@@ -8,8 +11,6 @@ import {
 } from './sectionAssessmentsRedux';
 import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
-
-const QUESTION_CHARACTER_LIMIT = 260;
 
 const styles = {
   text: {
@@ -29,14 +30,7 @@ class FreeResponsesAssessmentsContainer extends Component {
     freeResponseQuestions: PropTypes.arrayOf(freeResponseSummaryPropType),
     studentId: PropTypes.number,
     currentStudentHasResponses: PropTypes.bool,
-  };
-
-  state = {
-    isExpanded: false,
-  };
-
-  expandText = () => {
-    this.setState({isExpanded: true});
+    openDialog: PropTypes.func.isRequired,
   };
 
   render() {
@@ -50,19 +44,14 @@ class FreeResponsesAssessmentsContainer extends Component {
             }
             {freeResponseQuestions.map((question, index) => (
               <div key={index}>
-                {!this.state.isExpanded &&
-                  <div style={styles.text}>
-                    {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
-                    {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
-                      <a onClick={this.expandText}><span>{i18n.seeFullQuestion()}</span></a>
-                    }
-                  </div>
-                }
-                {this.state.isExpanded &&
-                  <div style={styles.text}>
-                    {`${question.questionNumber}. ${question.questionText}`}
-                  </div>
-                }
+                <div style={styles.text}>
+                  {`${question.questionNumber}. ${question.questionText.slice(0, QUESTION_CHARACTER_LIMIT)}`}
+                  {question.questionText.length >= QUESTION_CHARACTER_LIMIT &&
+                    <a onClick={() => {this.props.openDialog(question.questionText);}}>
+                      <span>{i18n.seeFullQuestion()}</span>
+                    </a>
+                  }
+                </div>
                 <FreeResponsesAssessmentsTable
                   freeResponses={question.responses}
                 />
