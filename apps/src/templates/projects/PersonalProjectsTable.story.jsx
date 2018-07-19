@@ -1,5 +1,5 @@
 import React from 'react';
-import { UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './PersonalProjectsTable';
+import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './PersonalProjectsTable';
 import {stubFakePersonalProjectData} from './generateFakeProjects';
 
 export default storybook => {
