@@ -45,14 +45,14 @@ class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    question: PropTypes.object,
+    questionAndAnswers: PropTypes.object,
   };
 
   render() {
-    const {question} = this.props;
+    const {questionAndAnswers} = this.props;
 
     // Questions are in markdown format and should not display as plain text in the dialog.
-    const renderedMarkdown = processMarkdown(question.question, { renderer });
+    const renderedMarkdown = processMarkdown(questionAndAnswers.question, { renderer });
 
     return (
       <BaseDialog
@@ -66,9 +66,9 @@ class MultipleChoiceDetailsDialog extends Component {
           style={styles.instructions}
           dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
         />
-        {(question.answers && question.answers.length > 0) &&
+        {(questionAndAnswers.answers && questionAndAnswers.answers.length > 0) &&
           <div>
-            {question.answers.map((answer, index) => {
+            {questionAndAnswers.answers.map((answer, index) => {
               return (
                 <div key={index} style={styles.answerBlock}>
                   <div style={styles.iconSpace}>
@@ -103,5 +103,5 @@ class MultipleChoiceDetailsDialog extends Component {
 export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
 
 export default connect(state => ({
-  question: getCurrentQuestion(state),
+  questionAndAnswers: getCurrentQuestion(state),
 }))(MultipleChoiceDetailsDialog);

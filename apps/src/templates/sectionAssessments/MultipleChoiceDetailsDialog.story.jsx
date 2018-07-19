@@ -14,7 +14,10 @@ export default storybook => {
             closeDialog={() => {}}
             question={{
               queston: "Hello world. I display *markdown* questions in a dialog.",
-              answers: [],
+              answers: [
+                {text: 'Im an answer', letter: 'A', correct: true},
+                {text: 'Im another answer', letter: 'B', correct: false},
+              ],
             }}
           />
         )
