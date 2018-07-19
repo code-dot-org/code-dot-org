@@ -60,6 +60,12 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         name: 'sampleFacilitatorText',
         text: 'How was the facilitator?',
         type: TYPE_TEXTBOX
+      ),
+      Pd::JotForm::ScaleQuestion.new(
+        id: 2,
+        name: 'sampleFacilitatorScale',
+        text: 'How confident do you feel about teaching CS?',
+        type: TYPE_SCALE
       )
     ]
 
