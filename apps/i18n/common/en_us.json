@@ -675,6 +675,7 @@
   "keyValueCaption": "Use key/value pairs to store a list of unique keys that map to values.",
   "keyValuePairLink": "Key/value pairs",
   "lastEdited": "Last Edited",
+  "lastUpdated": "Last updated {time}",
   "learnMore": "Learn more",
   "leaveSection": "Leave section",
   "less": "Less",
