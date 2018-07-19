@@ -20,7 +20,7 @@ const styles = {
   }
 };
 
-class FreeResponseDetailsDialog extends Component {
+class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
@@ -38,7 +38,7 @@ class FreeResponseDetailsDialog extends Component {
         style={styles.dialog}
         handleClose={this.props.closeDialog}
       >
-        <h2>{i18n.questionText()}</h2>
+        <h2>{i18n.questionDetails()}</h2>
         <div
           style={styles.instructions}
           dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
@@ -55,8 +55,8 @@ class FreeResponseDetailsDialog extends Component {
   }
 }
 
-export const UnconnectedFreeResponseDetailsDialog = FreeResponseDetailsDialog;
+export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
 
 export default connect(state => ({
   questionText: getCurrentQuestion(state),
-}))(FreeResponseDetailsDialog);
+}))(MultipleChoiceDetailsDialog);
