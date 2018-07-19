@@ -5,6 +5,8 @@
     = javascript_include_tag "js/en_us/common_locale"
     = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
 
+- collapse_box = "collapse_box_xml"
+= render partial: 'levels/editors/authored_hints', locals: {f: f}
 .field
   = f.label :edit_code, @level.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
@@ -104,14 +106,14 @@
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-  .row
+  .row.collapse{id: collapse_box}
     .span8
-      ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
+      ~ f.text_area :start_blocks, data: { toggle: "collapse", target: "##{collapse_box}" }, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
     #start-preview.span4
 
 .field
   - if @level.uses_droplet?
-    = f.label :required_blocks, 'Edit Required Blocks'
+    = f.label :required_blocks,'Edit Required Blocks'
   - else
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
   .row
