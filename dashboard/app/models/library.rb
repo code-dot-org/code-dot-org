@@ -15,7 +15,9 @@ class Library < ApplicationRecord
   include MultiFileSeeded
   CONFIG_DIRECTORY = 'libraries'
   SUBDIRECTORY_ATTRIBUTES = []
-  EXTENSION = 'js'
+  EXTENSION = 'interpreted.js'
+
+  after_save {@@all_library_names = nil}
 
   def file_content
     content
@@ -26,5 +28,14 @@ class Library < ApplicationRecord
       name: File.basename(path, ".#{EXTENSION}"),
       content: content,
     }
+  end
+
+  def self.content_from_cache(name)
+    @@all_library_names ||= Library.distinct.pluck(:name)
+    return nil unless @@all_library_names.include? name
+
+    Rails.cache.fetch("libraries/#{name}", force: !Script.should_cache?) do
+      Library.find_by(name: name).content
+    end
   end
 end
