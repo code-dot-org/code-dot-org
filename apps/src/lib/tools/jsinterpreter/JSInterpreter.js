@@ -775,9 +775,11 @@ export default class JSInterpreter {
     }
 
     if (this.studioApp.isUsingBlockly()) {
+      const context = 5;
+      const linesBefore = Math.floor(context / 2);
       console.group(this.executionError.message);
-      this.codeInfo.code.split(/\n/g).splice(lineNumber - 2, 5).map((line, n) => {
-        (n === 2 ? console.error : console.log)(line);
+      this.codeInfo.code.split(/\n/g).splice(lineNumber - linesBefore - 1, context).map((line, n) => {
+        (n === linesBefore ? console.error : console.log)(line);
       });
       console.groupEnd();
     }
