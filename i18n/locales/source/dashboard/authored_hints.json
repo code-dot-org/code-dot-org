@@ -1121,7 +1121,7 @@
         "course2_artist_nestedLoops_challenge1_authored_hint": {
           "courseD_artist_nestedLoops_challenge1_a": "Start by making a nested loop to create four octagons. Turn 45 degrees to make the octagon. Jump, then turn 90 degrees after each one.",
           "courseD_artist_nestedLoops_challenge1_b": "Add code to draw a triangle inside of your nested loop. Use 120 degree turns for your triangle.",
-          "courseD_artist_nestedLoops_challenge1_c": "Use a nested loop:\n - Repeat 8 times\n    - draw an octagon\n    - draw a triangle\n    - jump forward 50 pixels\n    - turn right by 90 degrees"
+          "courseD_artist_nestedLoops_challenge1_c": "Use a nested loop:\n  - Repeat 8 times\n    - draw an octagon\n    - draw a triangle\n    - jump forward 50 pixels\n    - turn right by 90 degrees"
         },
         "course2_artist_nestedLoops_challenge2_authored_hint": {
           "courseD_artist_nestedLoops_challenge2_a": "To draw a regular octagon, the artist needs to turn 45 degrees 8 times.",
@@ -3683,22 +3683,22 @@
         "courseD_artist_nestedLoops8_authored_hint": {
           "courseD_artist_nestedLoops8_a": "To have 8 hexagons in your drawing, you'll need to turn **45 degrees** between each of them. Why? Because 360 degrees (a full turn around) divided by 8 (the number of hexagons) is 45 degrees.",
           "courseD_artist_nestedLoops8_b": "If you're stuck, start by looking at the last puzzle, then change the things that are different.",
-          "courseD_artist_nestedLoops8_c": "Use a nested loop:\n\n - Repeat 8 times\n    - draw a hexagon\n    - jump forward 50 pixels\n    - turn right 45 degrees"
+          "courseD_artist_nestedLoops8_c": "Use a nested loop:\n\n  - Repeat 8 times\n    - draw a hexagon\n    - jump forward 50 pixels\n    - turn right 45 degrees"
         },
         "courseD_artist_nestedLoops8_2018_authored_hint": {
           "courseD_artist_nestedLoops8_a": "To have 8 hexagons in your drawing, you'll need to turn **45 degrees** between each of them. Why? Because 360 degrees (a full turn around) divided by 8 (the number of hexagons) is 45 degrees.",
           "courseD_artist_nestedLoops8_b": "If you're stuck, start by looking at the last puzzle, then change the things that are different.",
-          "courseD_artist_nestedLoops8_c": "Use a nested loop:\n\n - Repeat 8 times\n    - draw a hexagon\n    - jump forward 50 pixels\n    - turn right 45 degrees"
+          "courseD_artist_nestedLoops8_c": "Use a nested loop:\n\n  - Repeat 8 times\n    - draw a hexagon\n    - jump forward 50 pixels\n    - turn right 45 degrees"
         },
         "courseD_artist_nestedLoops9_authored_hint": {
           "courseD_artist_nestedLoops9_a": "Start by using a nested loop like you had before, but this time, make it with squares.",
           "courseD_artist_nestedLoops9_b": "Add a second set of nested loops to the end of the first set, but this time use triangles.",
-          "courseD_artist_nestedLoops9_c": "Use two nested loops:\n - Repeat 8 times\n    - draw a square\n    - jump forward 50 pixels\n    - turn right by 45 degrees\n - Repeat 8 times\n    - draw a triangle\n    - jump forward 50 pixels\n    - turn right by 45 degrees"
+          "courseD_artist_nestedLoops9_c": "Use two nested loops:\n  - Repeat 8 times\n    - draw a square\n    - jump forward 50 pixels\n    - turn right by 45 degrees\n  - Repeat 8 times\n    - draw a triangle\n    - jump forward 50 pixels\n    - turn right by 45 degrees"
         },
         "courseD_artist_nestedLoops9_2018_authored_hint": {
           "courseD_artist_nestedLoops9_a": "Start by using a nested loop like you had before, but this time, make it with squares.",
           "courseD_artist_nestedLoops9_b": "Add a second set of nested loops to the end of the first set, but this time use triangles.",
-          "courseD_artist_nestedLoops9_c": "Use two nested loops:\n - Repeat 8 times\n    - draw a square\n    - jump forward 50 pixels\n    - turn right by 45 degrees\n - Repeat 8 times\n    - draw a triangle\n    - jump forward 50 pixels\n    - turn right by 45 degrees"
+          "courseD_artist_nestedLoops9_c": "Use two nested loops:\n  - Repeat 8 times\n    - draw a square\n    - jump forward 50 pixels\n    - turn right by 45 degrees\n  - Repeat 8 times\n    - draw a triangle\n    - jump forward 50 pixels\n    - turn right by 45 degrees"
         },
         "courseD_artist_nestedLoops9_predict1_authored_hint": {
         },
@@ -4382,12 +4382,12 @@
         "courseD_farmer_condLoops2_authored_hint": {
           "courseD_farmer_condLoops2_a": "The best way to do this is to nest `if` statements by placing one inside of the other.  ",
           "courseD_farmer_condLoops2_b": "For this puzzle, you should have one `if/else` statement and one plain `if` statement.",
-          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n- if at corn\n - pick corn\n- else\n - if at lettuce\n  \t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n- if at corn\n  - pick corn\n- else\n  - if at lettuce\n  \t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
         },
         "courseD_farmer_condLoops2_2018_authored_hint": {
           "courseD_farmer_condLoops2_a": "The best way to do this is to nest `if` statements by placing one inside of the other.  ",
           "courseD_farmer_condLoops2_b": "For this puzzle, you should have one `if/else` statement and one plain `if` statement.",
-          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n- if at corn\n - pick corn\n- else\n - if at lettuce\n  \t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n- if at corn\n  - pick corn\n- else\n  - if at lettuce\n  \t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
         },
         "courseD_farmer_condLoops3_authored_hint": {
           "courseD_farmer_condLoops3_a": "To get all of the items, try nesting `if` statements three deep.\n\nThis means you should put one `if` statement inside of another, then put a third `if` statement inside the second one.",
@@ -4545,12 +4545,12 @@
         "courseD_farmer_while6_authored_hint": {
           "courseD_farmer_conditionals6_a": "Make sure you're using the `while` loop to figure out how many times to fill each hole.",
           "courseD_farmer_conditionals6_b": "Notice that the farmer needs to move forward and down several times in a stair-step pattern.",
-          "courseD_farmer_conditionals6_c": "The stair step pattern uses the following blocks\n - move forward\n - fill hole\n - turn right\n - move forward\n - fill hole\n - turn left\n\nHow many times do you need to use this stair step pattern?\n\nMake sure you are using the `while there is a hole` to fill the hole."
+          "courseD_farmer_conditionals6_c": "The stair step pattern uses the following blocks\n  - move forward\n  - fill hole\n  - turn right\n  - move forward\n  - fill hole\n  - turn left\n\nHow many times do you need to use this stair step pattern?\n\nMake sure you are using the `while there is a hole` to fill the hole."
         },
         "courseD_farmer_while6_2018_authored_hint": {
           "courseD_farmer_conditionals6_a": "Make sure you're using the `while` loop to figure out how many times to fill each hole.",
           "courseD_farmer_conditionals6_b": "Notice that the farmer needs to move forward and down several times in a stair-step pattern.",
-          "courseD_farmer_conditionals6_c": "The stair step pattern uses the following blocks\n - move forward\n - fill hole\n - turn right\n - move forward\n - fill hole\n - turn left\n\nHow many times do you need to use this stair step pattern?\n\nMake sure you are using the `while there is a hole` to fill the hole."
+          "courseD_farmer_conditionals6_c": "The stair step pattern uses the following blocks\n  - move forward\n  - fill hole\n  - turn right\n  - move forward\n  - fill hole\n  - turn left\n\nHow many times do you need to use this stair step pattern?\n\nMake sure you are using the `while there is a hole` to fill the hole."
         },
         "courseD_farmer_while7_authored_hint": {
           "courseD_farmer_conditionals8_a": "The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.",
@@ -5136,7 +5136,7 @@
         "courseE_artist_functions8_authored_hint": {
           "courseD_artist_functions8_f": "You only need one `move forward` block, but you will need quite a few `jump forward` and/or `jump backward` blocks!",
           "courseD_artist_functions8_a": "Start by making a function for a square, then try making a function for a line of squares.\n\nHow would you use the `draw a line of squares` function to make this image?",
-          "courseD_artist_functions8_d": "To make a line of squares,\n - repeat 3 times\n    - draw a square with a side length of **50 pixels**\n    - jump forward **100 pixels**",
+          "courseD_artist_functions8_d": "To make a line of squares,\n  - repeat 3 times\n    - draw a square with a side length of **50 pixels**\n    - jump forward **100 pixels**",
           "courseD_artist_functions8_b": "Think of each row in this picture as a line of 3 squares. How many lines of squares are there and where do you start drawing each of them?\n\n![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)",
           "courseD_artist_functions8_c": "At the end of each line of squares, the artist will need to jump down and backward before he draws the next line of squares.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
@@ -5144,7 +5144,7 @@
         "courseE_artist_functions8_2018_authored_hint": {
           "courseD_artist_functions8_f": "You only need one `move forward` block, but you will need quite a few `jump forward` and/or `jump backward` blocks!",
           "courseD_artist_functions8_a": "Start by making a function for a square, then try making a function for a line of squares.\n\nHow would you use the `draw a line of squares` function to make this image?",
-          "courseD_artist_functions8_d": "To make a line of squares,\n - repeat 3 times\n    - draw a square with a side length of **50 pixels**\n    - jump forward **100 pixels**",
+          "courseD_artist_functions8_d": "To make a line of squares,\n  - repeat 3 times\n    - draw a square with a side length of **50 pixels**\n    - jump forward **100 pixels**",
           "courseD_artist_functions8_b": "Think of each row in this picture as a line of 3 squares. How many lines of squares are there and where do you start drawing each of them?\n\n![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)",
           "courseD_artist_functions8_c": "At the end of each set of staggered squares, the artist will need to jump down and backward before he draws the next set of staggered squares.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
@@ -5154,7 +5154,7 @@
         "courseE_artist_functions8b_2018_authored_hint": {
           "courseD_artist_functions8_f": "You only need one `move forward` block if you're doing this correctly!",
           "courseD_artist_functions8_a": "Start by making a function for a square, then try making a function for a line of squares.",
-          "courseD_artist_functions8_d": "To make a line of squares,\n - repeat 3 times\n    - draw a square\n    - jump forward **100 pixels**"
+          "courseD_artist_functions8_d": "To make a line of squares,\n  - repeat 3 times\n    - draw a square\n    - jump forward **100 pixels**"
         },
         "courseE_artist_functions8c_2018_authored_hint": {
           "courseD_artist_functions8_f": "This is easier than it looks!  You shouldn't need any `move` or `jump` blocks here!",
@@ -5163,17 +5163,17 @@
         },
         "courseE_artist_functions9_authored_hint": {
           "courseD_artist_functions9_e": "Can you spot all four places that the `line of triangles` can be used in this drawing?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "This puzzle can be broken into three parts:\n - make the `draw a triangle` function\n - make the `draw a line of triangles` function\n - use your `draw a line of triangles` function four times to complete the drawing",
+          "courseD_artist_functions9_a": "This puzzle can be broken into three parts:\n  - make the `draw a triangle` function\n  - make the `draw a line of triangles` function\n  - use your `draw a line of triangles` function four times to complete the drawing",
           "courseD_artist_functions9_b": "This drawing is made by drawing a line of triangles 4 times and turning either 60 or 120 degrees before you draw the next triangle line.",
-          "courseD_artist_functions9_c": "To draw a line of triangles:\n - repeat 4 times\n    - draw a triangle\n    - jump forward 50 pixels",
-          "courseD_artist_functions9_d": "To draw the diamond:\n - repeat 2 times\n    - draw a line of triangles\n    - turn 60 degrees\n    - draw a line of triangles\n    - turn 120 degrees"
+          "courseD_artist_functions9_c": "To draw a line of triangles:\n  - repeat 4 times\n    - draw a triangle\n    - jump forward 50 pixels",
+          "courseD_artist_functions9_d": "To draw the diamond:\n  - repeat 2 times\n    - draw a line of triangles\n    - turn 60 degrees\n    - draw a line of triangles\n    - turn 120 degrees"
         },
         "courseE_artist_functions9_2018_authored_hint": {
           "courseD_artist_functions9_e": "Can you spot all four places that the `line of triangles` can be used in this drawing?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "This puzzle can be broken into three parts:\n - make the `draw a triangle` function\n - make the `draw a line of triangles` function\n - use your `draw a line of triangles` function four times to complete the drawing",
+          "courseD_artist_functions9_a": "This puzzle can be broken into three parts:\n  - make the `draw a triangle` function\n  - make the `draw a line of triangles` function\n  - use your `draw a line of triangles` function four times to complete the drawing",
           "courseD_artist_functions9_b": "This drawing is made by drawing a line of triangles 4 times and turning either 60 or 120 degrees before you draw the next triangle line.",
-          "courseD_artist_functions9_c": "To draw a line of triangles:\n - repeat 4 times\n    - draw a triangle\n    - jump forward 50 pixels",
-          "courseD_artist_functions9_d": "To draw the diamond:\n - repeat 2 times\n    - draw a line of triangles\n    - turn 60 degrees\n    - draw a line of triangles\n    - turn 120 degrees"
+          "courseD_artist_functions9_c": "To draw a line of triangles:\n  - repeat 4 times\n    - draw a triangle\n    - jump forward 50 pixels",
+          "courseD_artist_functions9_d": "To draw the diamond:\n  - repeat 2 times\n    - draw a line of triangles\n    - turn 60 degrees\n    - draw a line of triangles\n    - turn 120 degrees"
         },
         "courseE_artist_functionsProj_2018_authored_hint": {
         },
@@ -7503,7 +7503,7 @@
         "grade4_bee_nestedLoops2_authored_hint": {
           "grade4_bee_nestedLoops2_a": "You will need to repeat `get nectar` inside of another `repeat` that also has the `move forward` block inside of it.",
           "grade4_bee_nestedLoops2_b": "You will need to use all three of the available `repeat` blocks to solve this puzzle.",
-          "grade4_bee_nestedLoops2_c": "Nest your blocks three deep, like this:\n\n- repeat 3\n  - repeat 3\n    - move forward\n    - repeat 12\n      - get nectar\n - turn right"
+          "grade4_bee_nestedLoops2_c": "Nest your blocks three deep, like this:\n\n- repeat 3\n  - repeat 3\n    - move forward\n    - repeat 12\n      - get nectar\n  - turn right"
         },
         "grade4_bee_nestedLoops2a_authored_hint": {
           "grade4_bee_nestedLoops2a_a": "Try using nested `repeat` loops to solve this puzzle."
