@@ -86,10 +86,15 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
 const initialPersonalProjectsList = [];
 
 function personalProjectsList(state = initialPersonalProjectsList, action) {
-  return {
-    ...state,
-    projects: action.personalProjectsList,
-  };
+  switch (action.type) {
+    case SET_PERSONAL_PROJECTS_LIST:
+      return {
+        ...state,
+        projects: action.personalProjectsList,
+      };
+    default:
+      return state;
+  }
 }
 
 const reducer = combineReducers({
