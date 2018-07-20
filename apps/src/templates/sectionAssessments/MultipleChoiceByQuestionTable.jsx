@@ -15,12 +15,12 @@ const studentAnswerPropType = PropTypes.shape({
   id:  PropTypes.number,
   name: PropTypes.string,
   answer: PropTypes.string,
+  correct: PropTypes.bool,
 });
 
 class MultipleChoiceByQuestionTable extends Component {
   static propTypes= {
     studentAnswers: PropTypes.arrayOf(studentAnswerPropType),
-    correctAnswer: PropTypes.string,
   };
 
   state = {
@@ -53,7 +53,7 @@ class MultipleChoiceByQuestionTable extends Component {
         <MultipleChoiceAnswerCell
           id={rowData.id}
           displayAnswer={answer}
-          isCorrectAnswer={this.props.correctAnswer === answer}
+          isCorrectAnswer={rowData.correct}
         />
     );
   };
@@ -107,7 +107,7 @@ class MultipleChoiceByQuestionTable extends Component {
     return (
       <Table.Provider
         columns={columns}
-        style={tableLayoutStyles.table}
+        style={{...tableLayoutStyles.table, width: 660}}
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id" />

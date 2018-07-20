@@ -324,6 +324,38 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
 
 };
 
+// Get an array of objects indicating what each student answered for the current
+// question in view.
+export const getStudentAnswersForCurrentQuestion = (state) => {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses || isCurrentAssessmentSurvey(state)) {
+    return [];
+  }
+
+  const questionIndex = state.sectionAssessments.questionIndex;
+  let studentAnswers = [];
+
+  // For each student, look up their responses to the currently selected assessment.
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = (parseInt(studentId, 10));
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    let studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
+
+    const responsesArray = studentAssessment.level_results || [];
+    const question = responsesArray[questionIndex];
+    if (question) {
+      studentAnswers.push({
+        id: studentId,
+        name: studentObject.student_name,
+        answer: question.student_result ? indexesToAnswerString(question.student_result) : '-',
+        correct: question.status === 'correct',
+      });
+    }
+  });
+  return studentAnswers;
+};
+
 /**
  * Returns an array of objects, each representing a free response question
  * and all the students' responses to that question.
