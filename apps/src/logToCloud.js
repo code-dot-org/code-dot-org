@@ -74,5 +74,9 @@ module.exports = {
     }
 
     window.newrelic.setCustomAttribute(key, value);
-  }
+  },
+
+  loadFinished() {
+    window.newrelic.finished();
+  },
 };
