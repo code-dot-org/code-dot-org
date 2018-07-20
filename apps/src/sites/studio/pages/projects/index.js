@@ -68,7 +68,7 @@ $(document).ready(() => {
   });
 
   if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE)) {
-    const personalProjectsUrl = `/api/v1/projects/personal/${projectsData.userId}`;
+    const personalProjectsUrl = `/api/v1/projects/personal`;
 
     $.ajax({
       method: 'GET',
