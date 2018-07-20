@@ -87,18 +87,20 @@ const styles = {
 class PaneHeader extends React.Component {
   static propTypes = {
     hasFocus: PropTypes.bool.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
+    teacherOnly: PropTypes.bool
   };
 
   render() {
-    let {hasFocus, style, ...props} = this.props;
+    let {hasFocus, teacherOnly, style, ...props} = this.props;
 
     // TODO: AnimationTab should likely use components from PaneHeader, at
     // which point purpleHeader style should move in here.
     const composedStyle = {
         ...style,
         ...commonStyles.purpleHeader,
-        ...(!hasFocus && commonStyles.purpleHeaderUnfocused)
+        ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
+        ...(teacherOnly && commonStyles.teacherBlueHeader)
     };
 
     return (
