@@ -1,3 +1,4 @@
+require_relative '../../deployment'
 require 'json'
 require 'open-uri'
 
