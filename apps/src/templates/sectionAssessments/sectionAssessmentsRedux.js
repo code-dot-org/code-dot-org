@@ -342,12 +342,14 @@ export const getStudentAnswersForCurrentQuestion = (state) => {
 
     const responsesArray = studentAssessment.level_results || [];
     const question = responsesArray[questionIndex];
-    studentAnswers.push({
-      id: studentId,
-      name: studentObject.student_name,
-      answer: question ? indexesToAnswerString(question.student_result) : '',
-      correct: question && question.status === 'correct',
-    });
+    if (question) {
+      studentAnswers.push({
+        id: studentId,
+        name: studentObject.student_name,
+        answer: question.student_result ? indexesToAnswerString(question.student_result) : '-',
+        correct: question.status === 'correct',
+      });
+    }
   });
   return studentAnswers;
 };
