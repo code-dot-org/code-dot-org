@@ -29,7 +29,7 @@ module ProjectsList
         project_data = get_project_row_data(project, channel_id)
         personal_projects_list << project_data if project_data
       end
-      personal_projects_list
+      personal_projects.reject {|project| project[:hidden]}
     end
 
     # Look up every project of every student in the section which is not hidden or deleted.
@@ -51,6 +51,7 @@ module ProjectsList
             project_data = get_project_row_data(project, channel_id, student)
             projects_list_data << project_data if project_data
           end
+          projects_list_data.reject {|project| project[:hidden]}
         end
       end
     end
@@ -174,7 +175,6 @@ module ProjectsList
     # single project.
     def get_project_row_data(project, channel_id, student = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
       {
         channel: channel_id,
         name: project_value['name'],
