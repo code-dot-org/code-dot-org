@@ -77,6 +77,10 @@ module.exports = {
   },
 
   loadFinished() {
+    if (!window.newrelic) {
+      return;
+    }
+
     window.newrelic.finished();
   },
 };
