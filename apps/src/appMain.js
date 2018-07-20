@@ -125,6 +125,7 @@ export default function (app, levels, options) {
         next();
       }
     }
+    logToCloud.loadFinished();
   }
   // exported apps can and need to be setup synchronously
   // since the student code executes immediately at page load
