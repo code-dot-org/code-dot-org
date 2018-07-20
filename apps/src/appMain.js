@@ -1,5 +1,5 @@
 import {getStore, registerReducers} from './redux';
-import {wrapNumberValidatorsForLevelBuilder} from './utils';
+import {wrapNumberValidatorsForLevelBuilder, valueOr} from './utils';
 import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
 import {singleton as studioApp} from './StudioApp';
 import {generateAuthoredHints} from './authoredHintUtils';
@@ -7,6 +7,7 @@ import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
 import codegen from './lib/tools/jsinterpreter/codegen';
+import {installCustomBlocks, appendBlocksByCategory} from '@cdo/apps/block_utils';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
@@ -86,14 +87,16 @@ export default function (app, levels, options) {
         ...sharedBlocksConfig,
         ...levelCustomBlocksConfig,
       ];
-      if (options.blocksModule.installCustomBlocks && customBlocksConfig.length > 0) {
-        options.blocksModule.installCustomBlocks(
-          Blockly,
-          blockInstallOptions,
-          customBlocksConfig,
-          options.level,
-          level.hideCustomBlocks && !options.level.edit_blocks,
-        );
+      if (customBlocksConfig.length > 0) {
+        const blocksByCategory = installCustomBlocks({
+          blockly: Blockly,
+          blockDefinitions: customBlocksConfig,
+          customInputTypes: options.blocksModule.customInputTypes,
+        });
+
+        if (valueOr(level.hideCustomBlocks, true) && !options.level.edit_blocks) {
+          level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
+        }
       }
     }
 

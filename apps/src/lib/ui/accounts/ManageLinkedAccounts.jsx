@@ -152,7 +152,7 @@ class ManageLinkedAccounts extends React.Component {
             {this.formatAuthOptions().map(option => {
               return (
                 <OauthConnection
-                  key={option.id || _.uniqueId()}
+                  key={option.id || _.uniqueId('empty_')}
                   displayName={this.getDisplayName(option.credentialType)}
                   email={this.formatEmail(option)}
                   onClick={() => this.toggleProvider(option.id, option.credentialType)}
