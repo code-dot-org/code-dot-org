@@ -1074,7 +1074,9 @@ describe('sectionAssessmentsRedux', () => {
                 123: {
                   stage_name: 'name',
                   levelgroup_results: [{
-                    question: 'What is a variable?'
+                    question: 'What is a variable?',
+                    type: 'multi',
+                    answer_texts: ["a"],
                   }],
                 }
               }
@@ -1082,12 +1084,14 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const questionText = getCurrentQuestion(stateWithSurvey);
-        assert.deepEqual(questionText, 'What is a variable?');
+        const question = getCurrentQuestion(stateWithSurvey);
+        console.log(question);
+        assert.deepEqual(question.question, 'What is a variable?');
+        assert.deepEqual(question.answers, [{text: 'a', correct: false, letter: 'A'}]);
       });
 
       it('returns the question text for an assessment', () => {
-        const stateWithSurvey = {
+        const stateWithAssessment = {
           ...rootState,
           sectionAssessments: {
             ...rootState.sectionAssessments,
@@ -1098,8 +1102,8 @@ describe('sectionAssessmentsRedux', () => {
                 123: {
                   name: 'name',
                   questions: [
-                    {question_text: 'What is a variable?'},
-                    {question_text: 'What is a function?'},
+                    {question_text: 'What is a variable?', type: 'Multi', answers: [{text: "b", correct: false}]},
+                    {question_text: 'What is a function?', type: 'Multi', answers: [{text: "a", correct: true}]},
                   ],
                 }
               }
@@ -1107,8 +1111,9 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const questionText = getCurrentQuestion(stateWithSurvey);
-        assert.deepEqual(questionText, 'What is a function?');
+        const question = getCurrentQuestion(stateWithAssessment);
+        assert.deepEqual(question.question, 'What is a function?');
+        assert.deepEqual(question.answers, [{text: 'a', correct: true, letter: 'A'}]);
       });
     });
   });
