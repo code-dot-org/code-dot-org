@@ -539,6 +539,10 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
 
+    if params[:blocks]
+      level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+    end
+
     unless params[:no_last_attempt]
       level_options[:lastAttempt] = @last_attempt
       if @last_activity
