@@ -10,6 +10,7 @@ import sectionProgress, {
   finishLoadingProgress,
   getStudentPairing,
   getStudentLevelResult,
+  getCurrentProgress,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -240,6 +241,21 @@ describe('sectionProgressRedux', () => {
           5337: false
         }
       });
+    });
+  });
+
+  describe('getCurrentProgress', () => {
+    it('gets the progress for the current script', () => {
+      const stateWithProgress = {
+        scriptSelection: {scriptId: 123},
+        sectionProgress: {
+          studentLevelProgressByScript: {
+            123: 'fake progress 1',
+            456: 'fake progress 2',
+          }
+        }
+      };
+      expect(getCurrentProgress(stateWithProgress, 'fake progress 1'));
     });
   });
 
