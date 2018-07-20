@@ -229,8 +229,7 @@ export const getCurrentProgress = (state) => {
 
 /**
  * Retrieves the script data for the section in the selected script
- * @returns {scriptDataPropType} object containing metadata about the script structre
- * TODO(caleybrock) write a test for this function
+ * @returns {scriptDataPropType} object containing metadata about the script structure
  */
 export const getCurrentScriptData = (state) => {
   const script = state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId];
