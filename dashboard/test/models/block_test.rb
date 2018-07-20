@@ -10,13 +10,13 @@ class BlockTest < ActiveSupport::TestCase
     block = create :block
     json_before = block.block_options
     block.delete
-    base_path = "config/blocks/#{block.level_type}/#{block.name}"
+    base_path = "config/blocks/#{block.pool}/#{block.name}"
 
     Block.load_record "#{base_path}.json"
 
     seeded_block = Block.find_by(name: block.name)
     assert_equal json_before, seeded_block.block_options
-    assert_equal block.level_type, seeded_block.level_type
+    assert_equal block.pool, seeded_block.pool
     assert_equal block.helper_code, seeded_block.helper_code
 
     seeded_block.destroy
@@ -26,13 +26,13 @@ class BlockTest < ActiveSupport::TestCase
     block = create :block, helper_code: nil
     json_before = block.block_options
     block.delete
-    base_path = "config/blocks/#{block.level_type}/#{block.name}"
+    base_path = "config/blocks/#{block.pool}/#{block.name}"
 
     Block.load_record "#{base_path}.json"
 
     seeded_block = Block.find_by(name: block.name)
     assert_equal json_before, seeded_block.block_options
-    assert_equal block.level_type, seeded_block.level_type
+    assert_equal block.pool, seeded_block.pool
     assert_nil seeded_block.helper_code
 
     seeded_block.destroy
@@ -40,11 +40,11 @@ class BlockTest < ActiveSupport::TestCase
 
   test 'Block deletes files after being destroyed' do
     block = create :block
-    assert File.exist? "config/blocks/#{block.level_type}/#{block.name}.json"
-    assert File.exist? "config/blocks/#{block.level_type}/#{block.name}.js"
+    assert File.exist? "config/blocks/#{block.pool}/#{block.name}.json"
+    assert File.exist? "config/blocks/#{block.pool}/#{block.name}.js"
     block.destroy
-    refute File.exist? "config/blocks/#{block.level_type}/#{block.name}.json"
-    refute File.exist? "config/blocks/#{block.level_type}/#{block.name}.js"
+    refute File.exist? "config/blocks/#{block.pool}/#{block.name}.json"
+    refute File.exist? "config/blocks/#{block.pool}/#{block.name}.js"
     assert_empty Dir.glob("config/blocks/fakeLevelType/*")
   end
 
@@ -85,7 +85,7 @@ class BlockTest < ActiveSupport::TestCase
     assert_equal original_path, block.file_path_was
     assert_equal Rails.root.join("config/blocks/fakeLevelType/#{new_name}.json"), block.file_path
 
-    block.level_type = 'otherFakeLevelType'
+    block.pool = 'otherFakeLevelType'
     assert_equal original_path, block.file_path_was
     assert_equal Rails.root.join("config/blocks/otherFakeLevelType/#{new_name}.json"), block.file_path
   end

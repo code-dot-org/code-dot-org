@@ -10,6 +10,7 @@ import * as utils from '../../utils';
 import { queryParams } from '../../code-studio/utils';
 import i18n from '@cdo/locale';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   main: {
@@ -26,8 +27,16 @@ const styles = {
   title: {
     display: 'inline-block',
   },
+  versionWrapper: {
+    display: 'flex',
+    alignItems: 'baseline',
+  },
+  versionLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 15,
+    color: color.charcoal,
+  },
   versionDropdown: {
-    display: 'inline-block',
     marginBottom: 13,
   }
 };
@@ -109,18 +118,21 @@ export default class CourseOverview extends Component {
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {versions.length > 1 &&
-            <select
-              onChange={this.onChangeVersion}
-              value={name}
-              style={styles.versionDropdown}
-              id="version-selector"
-            >
-              {versions.map(version => (
-                <option key={version.name} value={version.name}>
-                  {version.version_title}
-                </option>
-              ))}
-            </select>
+            <span style={styles.versionWrapper}>
+              <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
+              <select
+                onChange={this.onChangeVersion}
+                value={name}
+                style={styles.versionDropdown}
+                id="version-selector"
+              >
+                {versions.map(version => (
+                  <option key={version.name} value={version.name}>
+                    {version.version_title}
+                  </option>
+                ))}
+              </select>
+            </span>
           }
         </div>
         <div style={styles.description}>
