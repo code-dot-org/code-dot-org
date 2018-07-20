@@ -8,6 +8,8 @@ import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
 import processMarkdown from 'marked';
 import renderer from "@cdo/apps/util/StylelessRenderer";
 import {getCurrentQuestion} from "./sectionAssessmentsRedux";
+import color from "@cdo/apps/util/color";
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   dialog: {
@@ -17,6 +19,25 @@ const styles = {
   },
   instructions: {
     marginTop: 20
+  },
+  answers: {
+    float: 'left',
+    width: 550,
+  },
+  icon: {
+    color: color.level_perfect,
+  },
+  iconSpace: {
+    width: 40,
+    float: 'left',
+  },
+  answerBlock: {
+    width: '100%',
+  },
+  answerLetter: {
+    width: 30,
+    float: 'left',
+    fontWeight: 'bold',
   }
 };
 
@@ -24,12 +45,14 @@ class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionText: PropTypes.string,
+    questionAndAnswers: PropTypes.object,
   };
 
   render() {
+    const {questionAndAnswers} = this.props;
+
     // Questions are in markdown format and should not display as plain text in the dialog.
-    const renderedMarkdown = processMarkdown(this.props.questionText, { renderer });
+    const renderedMarkdown = processMarkdown(questionAndAnswers.question, { renderer });
 
     return (
       <BaseDialog
@@ -43,6 +66,28 @@ class MultipleChoiceDetailsDialog extends Component {
           style={styles.instructions}
           dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
         />
+        {(questionAndAnswers.answers && questionAndAnswers.answers.length > 0) &&
+          <div>
+            {questionAndAnswers.answers.map((answer, index) => {
+              return (
+                <div key={index} style={styles.answerBlock}>
+                  <div style={styles.iconSpace}>
+                    {answer.correct &&
+                      <FontAwesome icon="check-circle" style={styles.icon}/>
+                    }
+                    {!answer.correct && (<span>&nbsp;</span>)}
+                  </div>
+                  <div style={styles.answerLetter}>{answer.letter}</div>
+                  <div
+                    style={styles.answers}
+                    dangerouslySetInnerHTML={{ __html: processMarkdown(answer.text, { renderer }) }}
+                  />
+                  <div style={{clear: 'both'}}></div>
+                </div>
+              );
+            })}
+          </div>
+        }
         <DialogFooter>
           <Button
             text={i18n.done()}
@@ -58,5 +103,5 @@ class MultipleChoiceDetailsDialog extends Component {
 export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
 
 export default connect(state => ({
-  questionText: getCurrentQuestion(state),
+  questionAndAnswers: getCurrentQuestion(state),
 }))(MultipleChoiceDetailsDialog);
