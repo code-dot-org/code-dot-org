@@ -324,6 +324,8 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
 
 };
 
+// Get an array of objects indicating what each student answered for the current
+// question in view.
 export const getStudentAnswersForCurrentQuestion = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses || isCurrentAssessmentSurvey(state)) {
