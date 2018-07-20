@@ -104,8 +104,8 @@ export default class EnrollForm extends React.Component {
   };
 
   handleSchoolChange = (selection) => {
-    this.setState({school_id: selection.value});
-    if (selection.value !== OTHER_SCHOOL_VALUE) {
+    this.setState({school_id: selection && selection.value});
+    if (selection && selection.value !== OTHER_SCHOOL_VALUE) {
       this.setState({
         school_info: {
           school_id: selection.school.nces_id,
@@ -152,7 +152,9 @@ export default class EnrollForm extends React.Component {
         country: "US" // we currently only support enrollment in pd for US schools
       },
       role: this.state.role,
-      grades_teaching: this.state.grades_teaching
+      grades_teaching: this.state.grades_teaching,
+      explain_teaching_other: this.state.explain_teaching_other,
+      explain_not_teaching: this.state.explain_not_teaching
     };
     this.submitRequest = $.ajax({
       method: 'POST',
