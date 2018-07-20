@@ -221,26 +221,40 @@ export const getCurrentAssessmentQuestions = (state) => {
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
 
-// Returns the question text of the currently selected question in the current assessment.
+// Returns an object with the question text and answers of the currently selected
+// question in the current assessment.
 export const getCurrentQuestion = (state) => {
+  const emptyQuestion = {question: '', answers: []};
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
     const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
     const currentSurvey = surveys[state.sectionAssessments.assessmentId];
-    const questionData = currentSurvey.levelgroup_results;
-    if (questionData[state.sectionAssessments.questionIndex]) {
-      return questionData[state.sectionAssessments.questionIndex].question;
+    const questionsData = currentSurvey.levelgroup_results;
+    const question = questionsData[state.sectionAssessments.questionIndex];
+    if (question) {
+      return {
+        question: question.question,
+        answers: question.type === SurveyQuestionType.MULTI && question.answer_texts.map((answer, index) => {
+          return {text: answer, correct: false, letter: ANSWER_LETTERS[index]};
+        }),
+      };
     } else {
-      return '';
+      return emptyQuestion;
     }
   } else {
     // Get question text for assessment.
     const assessment = getCurrentAssessmentQuestions(state) || {};
     const assessmentQuestions = assessment.questions;
-    if (assessmentQuestions && assessmentQuestions[state.sectionAssessments.questionIndex]) {
-      return assessmentQuestions[state.sectionAssessments.questionIndex].question_text;
+    const question = assessmentQuestions ? assessmentQuestions[state.sectionAssessments.questionIndex] : null;
+    if (question) {
+      return {
+        question: question.question_text,
+        answers: question.type === QuestionType.MULTI && question.answers.map((answer, index) => {
+          return {...answer, letter: ANSWER_LETTERS[index]};
+        }),
+      };
     } else {
-      return '';
+      return emptyQuestion;
     }
   }
 };
