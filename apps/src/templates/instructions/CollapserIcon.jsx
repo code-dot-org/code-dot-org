@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
-var Radium = require('radium');
-var color = require("../../util/color");
-var styleConstants = require('../../styleConstants');
+import Radium from 'radium';
+import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 
-var styles = {
+const styles = {
   showHideButton: {
     position: 'absolute',
     top: 0,
@@ -21,8 +21,8 @@ var styles = {
 /**
  * Simple icon that either points up or down, and supports onClick
  */
-var CollapserIcon = function (props) {
-  var iconClass = props.collapsed ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up';
+const CollapserIcon = function (props) {
+  const iconClass = props.collapsed ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up';
 
   return (
     <i
