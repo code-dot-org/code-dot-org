@@ -7,9 +7,13 @@ import i18n from "@cdo/locale";
 import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
 import processMarkdown from 'marked';
 import renderer from "@cdo/apps/util/StylelessRenderer";
-import {getCurrentQuestion} from "./sectionAssessmentsRedux";
+import {
+  getCurrentQuestion,
+  getStudentAnswersForCurrentQuestion,
+} from "./sectionAssessmentsRedux";
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
 
 const styles = {
   dialog: {
@@ -46,10 +50,11 @@ class MultipleChoiceDetailsDialog extends Component {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
     questionAndAnswers: PropTypes.object,
+    studentAnswers: PropTypes.array,
   };
 
   render() {
-    const {questionAndAnswers} = this.props;
+    const {questionAndAnswers, studentAnswers} = this.props;
 
     // Questions are in markdown format and should not display as plain text in the dialog.
     const renderedMarkdown = processMarkdown(questionAndAnswers.question, { renderer });
@@ -88,6 +93,11 @@ class MultipleChoiceDetailsDialog extends Component {
             })}
           </div>
         }
+        {(studentAnswers && studentAnswers.length > 0) &&
+          <MultipleChoiceByQuestionTable
+            studentAnswers={studentAnswers}
+          />
+        }
         <DialogFooter>
           <Button
             text={i18n.done()}
@@ -104,4 +114,5 @@ export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialo
 
 export default connect(state => ({
   questionAndAnswers: getCurrentQuestion(state),
+  studentAnswers: getStudentAnswersForCurrentQuestion(state),
 }))(MultipleChoiceDetailsDialog);
