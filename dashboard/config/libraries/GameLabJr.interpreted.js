@@ -1,6 +1,5 @@
 /* This file is only executed within JSInterpreter */
 
-/* eslint-disable no-unused-vars */
 /* global
  *
  * CENTER,
@@ -25,16 +24,16 @@
 */
 
 createEdgeSprites();
-let inputEvents = [];
-let touchEvents = [];
-let collisionEvents = [];
-let loops = [];
-let sprites = [];
-let score = 0;
-let game_over = false;
-let show_score = false;
-let title = '';
-let subTitle = '';
+var inputEvents = [];
+var touchEvents = [];
+var collisionEvents = [];
+var loops = [];
+var sprites = [];
+var score = 0;
+var game_over = false;
+var show_score = false;
+var title = '';
+var subTitle = '';
 
 function initialize(setupHandler) {
   setupHandler();
@@ -318,21 +317,23 @@ function draw() {
       });
     });
 
+    var i, eventType, event, param;
+
     // Run key events
-    for (let i = 0; i < inputEvents.length; i++) {
-      const eventType = inputEvents[i].type;
-      const event = inputEvents[i].event;
-      const param = inputEvents[i].param;
+    for (i = 0; i < inputEvents.length; i++) {
+      eventType = inputEvents[i].type;
+      event = inputEvents[i].event;
+      param = inputEvents[i].param;
       if (eventType(param)) {
         event();
       }
     }
 
     // Run touch events
-    for (let i = 0; i < touchEvents.length; i++) {
-      const eventType = touchEvents[i].type;
-      const event = touchEvents[i].event;
-      const param = touchEvents[i].sprite ?
+    for (i = 0; i < touchEvents.length; i++) {
+      eventType = touchEvents[i].type;
+      event = touchEvents[i].event;
+      param = touchEvents[i].sprite ?
         touchEvents[i].sprite() :
         touchEvents[i].param;
       if (param && eventType(param)) {
@@ -341,10 +342,10 @@ function draw() {
     }
 
     // Run collision events
-    for (let i = 0; i<collisionEvents.length; i++) {
-      const collisionEvent = collisionEvents[i];
-      const a = collisionEvent.a && collisionEvent.a();
-      const b = collisionEvent.b && collisionEvent.b();
+    for (i = 0; i<collisionEvents.length; i++) {
+      var collisionEvent = collisionEvents[i];
+      var a = collisionEvent.a && collisionEvent.a();
+      var b = collisionEvent.b && collisionEvent.b();
       if (!a || !b) {
         continue;
       }
@@ -362,7 +363,7 @@ function draw() {
     }
 
     // Run loops
-    for (let i = 0; i<loops.length; i++) {
+    for (i = 0; i<loops.length; i++) {
       var loop = loops[i];
       if (!loop.condition()) {
         loops.splice(i, 1);
