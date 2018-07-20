@@ -281,7 +281,7 @@ class TopInstructions extends Component {
     const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
       this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
 
-    const teacherOnly = this.state.tabSelected === TabType.COMMENTS;
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && (displayFeedbackDevTeacher || displayFeedbackStable);
 
     const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
 
