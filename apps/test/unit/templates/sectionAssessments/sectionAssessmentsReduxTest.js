@@ -23,6 +23,7 @@ import sectionAssessments, {
   setStudentId,
   setQuestionIndex,
   getCurrentQuestion,
+  getStudentAnswersForCurrentQuestion,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -1085,7 +1086,6 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const question = getCurrentQuestion(stateWithSurvey);
-        console.log(question);
         assert.deepEqual(question.question, 'What is a variable?');
         assert.deepEqual(question.answers, [{text: 'a', correct: false, letter: 'A'}]);
       });
@@ -1114,6 +1114,66 @@ describe('sectionAssessmentsRedux', () => {
         const question = getCurrentQuestion(stateWithAssessment);
         assert.deepEqual(question.question, 'What is a function?');
         assert.deepEqual(question.answers, [{text: 'a', correct: true, letter: 'A'}]);
+      });
+    });
+
+    describe('getStudentAnswersForCurrentQuestion', () => {
+      it('returns an empty array for a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 0,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                }
+              }
+            }
+          }
+        };
+
+        const answers = getStudentAnswersForCurrentQuestion(stateWithSurvey);
+        assert.deepEqual(answers, []);
+      });
+
+      it('returns an array of answers for an assessment', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 0,
+            assessmentId: 123,
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: [3],
+                          status: 'incorrect',
+                          type: 'Multi'
+                        },
+                        {
+                          student_result: 'Hi',
+                          status: '',
+                          type: 'FreeResponse',
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+          }
+        };
+
+        const answers = getStudentAnswersForCurrentQuestion(stateWithAssessment);
+        assert.deepEqual(answers, [{id: 1, name: 'Saira', answer: 'D', correct: false}]);
       });
     });
   });
