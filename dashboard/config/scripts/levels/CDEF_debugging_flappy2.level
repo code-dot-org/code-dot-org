@@ -35,8 +35,8 @@
     "obstacles": "false",
     "score": "false",
     "shareable": "false",
-    "contained_level_names": null,
-    "instructions": "Why doesn't this game work?"
+    "instructions": "Why doesn't this game work?",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
