@@ -31,7 +31,6 @@ class Api::V1::Projects::PersonalProjectsControllerTest < ActionDispatch::Integr
 
   test 'signed out users can not access personal projects' do
     get "/api/v1/projects/personal/"
-    assert_response :redirect
-    assert_includes flash[:alert], "You must be logged in to access your projects"
+    assert_response :forbidden
   end
 end
