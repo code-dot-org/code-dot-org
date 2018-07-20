@@ -16,6 +16,13 @@ const styles = {
       color: color.white
     }
   },
+  teacherOnlyColor: {
+    color: color.lightest_cyan,
+    ':hover': {
+      cursor: 'pointer',
+      color: color.default_text
+    }
+  },
 };
 
 /**
@@ -24,10 +31,15 @@ const styles = {
 const CollapserIcon = function (props) {
   const iconClass = props.collapsed ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up';
 
+  const combinedStyle = {
+    ...styles.showHideButton,
+    ...(props.teacherOnly && styles.teacherOnlyColor)
+  };
+
   return (
     <i
       id="ui-test-collapser"
-      style={styles.showHideButton}
+      style={combinedStyle}
       onClick={props.onClick}
       className={iconClass + " fa"}
     />
@@ -36,7 +48,8 @@ const CollapserIcon = function (props) {
 
 CollapserIcon.propTypes = {
   onClick: PropTypes.func.isRequired,
-  collapsed: PropTypes.bool.isRequired
+  collapsed: PropTypes.bool.isRequired,
+  teacherOnly: PropTypes.bool
 };
 
 module.exports = Radium(CollapserIcon);
