@@ -26,7 +26,6 @@ export const setSection = (section) => {
  * The section we get directly from angular right now. This gives us a
  * different shape than some other places we use sections. For now, I'm just
  * going to document the parts of section that we use here
- * TODO(caleybrock) Add loginType here and use it from ManageStudents
  */
 export const sectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
