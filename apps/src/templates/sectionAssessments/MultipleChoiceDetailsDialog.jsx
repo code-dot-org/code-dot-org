@@ -54,7 +54,7 @@ class MultipleChoiceDetailsDialog extends Component {
   };
 
   render() {
-    const {questionAndAnswers} = this.props;
+    const {questionAndAnswers, studentAnswers} = this.props;
 
     // Questions are in markdown format and should not display as plain text in the dialog.
     const renderedMarkdown = processMarkdown(questionAndAnswers.question, { renderer });
@@ -93,9 +93,11 @@ class MultipleChoiceDetailsDialog extends Component {
             })}
           </div>
         }
-        <MultipleChoiceByQuestionTable
-          studentAnswers={this.props.studentAnswers}
-        />
+        {(studentAnswers && studentAnswers.length > 0) &&
+          <MultipleChoiceByQuestionTable
+            studentAnswers={studentAnswers}
+          />
+        }
         <DialogFooter>
           <Button
             text={i18n.done()}
