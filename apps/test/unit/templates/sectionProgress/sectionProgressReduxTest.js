@@ -11,6 +11,7 @@ import sectionProgress, {
   getStudentPairing,
   getStudentLevelResult,
   getCurrentProgress,
+  getCurrentScriptData,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -255,7 +256,52 @@ describe('sectionProgressRedux', () => {
           }
         }
       };
-      expect(getCurrentProgress(stateWithProgress, 'fake progress 1'));
+      expect(getCurrentProgress(stateWithProgress)).to.deep.equal('fake progress 1');
+    });
+  });
+
+  describe('getCurrentScriptData', () => {
+    it('gets the script data for the section in the selected script', () => {
+      const stateWithScript = {
+        scriptSelection: {scriptId: 123},
+        sectionProgress: {
+          scriptDataByScript: {
+            123: {
+              stages: [
+                {
+                  levels: [{
+                    url: 'url',
+                    name: 'name',
+                    progression: 'progression',
+                    kind: 'assessment',
+                    icon: 'fa-computer',
+                    is_concept_level: false,
+                    title: 'hello world'
+                  }]
+                }
+              ]
+            }
+          },
+        },
+      };
+      expect((getCurrentScriptData(stateWithScript))).to.deep.equal({
+        stages: [
+          {
+            levels: [
+              {
+                icon: 'fa-computer',
+                isConceptLevel: false,
+                isUnplugged: false,
+                kind: 'assessment',
+                levelNumber: 'hello world',
+                name: 'name',
+                progression: 'progression',
+                url: 'url'
+              }
+            ]
+          }
+        ]
+      });
     });
   });
 
