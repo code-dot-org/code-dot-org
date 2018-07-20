@@ -27,7 +27,6 @@ module ProjectsList
       PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
         project_data = get_personal_project_row_data(project, channel_id)
-        project_data["publishedAt"] = project[:published_at] if project_data
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
@@ -195,6 +194,7 @@ module ProjectsList
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
+        publishedAt: project[:published_at]
       }.with_indifferent_access
     end
 
