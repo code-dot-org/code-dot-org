@@ -1,12 +1,10 @@
 require 'cdo/script_config'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
-require 'cdo/script_constants'
 
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
-  include ScriptConstants
 
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
@@ -69,7 +67,7 @@ class ScriptLevelsController < ApplicationController
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id], version_year: DEFAULT_VERSION_YEAR)
+    @script = Script.get_from_cache(params[:script_id])
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
@@ -370,7 +368,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     if @level.try(:peer_reviewable?)
-      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
+      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(data: nil, reviewer: nil)
     end
 
     @callback = milestone_script_level_url(

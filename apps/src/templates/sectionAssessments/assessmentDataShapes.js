@@ -58,3 +58,5 @@ export const multipleChoiceQuestionPropType = PropTypes.shape({
   question: PropTypes.string.isRequired,
   correctAnswer: PropTypes.string.isRequired,
 });
+
+export const QUESTION_CHARACTER_LIMIT = 110;
