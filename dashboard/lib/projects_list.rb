@@ -26,7 +26,7 @@ module ProjectsList
       storage_id = storage_id_for_user_id(user_id)
       PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_personal_project_row_data(project, channel_id)
+        project_data = get_project_row_data(project, channel_id)
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
@@ -48,7 +48,7 @@ module ProjectsList
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(student_storage_id, project[:id])
-            project_data = get_project_row_data(student, project, channel_id)
+            project_data = get_project_row_data(project, channel_id, student)
             projects_list_data << project_data if project_data
           end
         end
@@ -172,25 +172,13 @@ module ProjectsList
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_project_row_data(student, project, channel_id)
+    def get_project_row_data(project, channel_id, student = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
       {
         channel: channel_id,
         name: project_value['name'],
-        studentName: student.name,
-        thumbnailUrl: project_value['thumbnailUrl'],
-        type: project_type(project_value['level']),
-        updatedAt: project_value['updatedAt'],
-      }.with_indifferent_access
-    end
-
-    def get_personal_project_row_data(project, channel_id)
-      project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
-      {
-        channel: channel_id,
-        name: project_value['name'],
+        studentName: student&.name,
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
