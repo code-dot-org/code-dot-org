@@ -446,6 +446,7 @@ export class UnconnectedFinishDialog extends Component {
       </button>,
       showCode,
       <button
+        id="continue-button"
         key="continue"
         style={{...styles.button, ...styles.continueButton}}
         onClick={this.props.onContinue}
