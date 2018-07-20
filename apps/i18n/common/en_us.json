@@ -280,6 +280,7 @@
   "coursesHeadingStudent": "Learn Computer Science",
   "coursesHeadingSubText": "{linesCount} lines of code written by {studentsCount} million students.",
   "coursesHeadingTeacher": "Teach Computer Science",
+  "courseOverviewVersionLabel": "Version:",
   "coursesUiTipsTeacherCourses": "We've updated this page just for teachers. Find the next course for your classroom here.",
   "createAccount": "Create an account",
   "createAccountApplabDesc": "With an account, you can save your progress. You can work on your App Lab project later, play it on your phone, or share it with friends.",
