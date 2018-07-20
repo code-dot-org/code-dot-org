@@ -24,12 +24,12 @@ class FreeResponseDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionText: PropTypes.string,
+    questionAndAnswers: PropTypes.object,
   };
 
   render() {
     // Questions are in markdown format and should not display as plain text in the dialog.
-    const renderedMarkdown = processMarkdown(this.props.questionText, { renderer });
+    const renderedMarkdown = processMarkdown(this.props.questionAndAnswers.question, { renderer });
 
     return (
       <BaseDialog
@@ -58,5 +58,5 @@ class FreeResponseDetailsDialog extends Component {
 export const UnconnectedFreeResponseDetailsDialog = FreeResponseDetailsDialog;
 
 export default connect(state => ({
-  questionText: getCurrentQuestion(state),
+  questionAndAnswers: getCurrentQuestion(state),
 }))(FreeResponseDetailsDialog);
