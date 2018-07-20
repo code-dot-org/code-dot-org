@@ -616,7 +616,7 @@ FactoryGirl.define do
     end
     name {"gamelab_block#{index}"}
     category 'custom'
-    level_type 'fakeLevelType'
+    pool 'fakeLevelType'
     config do
       {
         func: "block#{index}",
