@@ -57,14 +57,9 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
-import GameLabJrLib from './GameLabJr.interpreted';
 import defaultSprites from './defaultSprites.json';
 import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import ValidationSetupCode from './ValidationSetup.interpreted.js';
-
-const LIBRARIES = {
-  'GameLabJr': GameLabJrLib,
-};
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -108,6 +103,7 @@ var GameLab = function () {
   this.Globals = {};
   this.btnState = {};
   this.dPadState = {};
+  this.libraries = {};
   this.currentCmdQueue = null;
   this.interpreterStarted = false;
   this.globalCodeRunsDuringPreload = false;
@@ -1107,7 +1103,7 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
   }
   if (this.level.helperLibraries) {
     code += this.level.helperLibraries
-      .map((lib) => LIBRARIES[lib])
+      .map((lib) => this.libraries[lib])
       .join("\n") + '\n';
   }
   if (this.level.sharedBlocks) {
@@ -1200,12 +1196,34 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  */
 GameLab.prototype.onP5Preload = function () {
   Promise.all([
+      this.level.helperLibraries && this.loadLibraries_(this.level.helperLibraries),
       this.preloadAnimations_(),
       this.runPreloadEventHandler_()
   ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
   });
   return false;
+};
+
+GameLab.prototype.loadLibraries_ = function (libraries) {
+  return Promise.all(libraries.map(this.loadLibrary_.bind(this)));
+};
+
+GameLab.prototype.loadLibrary_ = function (name) {
+  if (this.libraries[name]) {
+    return;
+  }
+
+  return new Promise((resolve, error) => {
+    $.ajax({
+      url: '/libraries/' + name,
+      success: response => {
+        this.libraries[name] = response;
+        resolve();
+      },
+      error,
+    });
+  });
 };
 
 /**
