@@ -2,6 +2,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include Api::CsvDownload
   load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: 'create'
 
+  OTHER = "Other"
+  NOT_TEACHING = "I'm not teaching this year"
+  EXPLAIN = "(Please Explain):"
+
   # GET /api/v1/pd/workshops/1/enrollments
   def index
     response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
@@ -45,8 +49,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       enrollment = ::Pd::Enrollment.new workshop: @workshop
       enrollment.school_info_attributes = school_info_params
 
-      p "params: #{params}"
-      p "enrollment_params: #{enrollment_params}"
       if enrollment.update enrollment_params
         p "updated, sending emails"
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
@@ -68,15 +70,23 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   private
 
   def enrollment_params
-    enrollment_params = params.require(:workshop_enrollment).permit(
-      :first_name,
-      :last_name,
-      :email,
-      :role,
-      :grades_teaching
-    )
-    enrollment_params[:grades_teaching] = params[:grades_teaching].join(", ")
-    enrollment_params
+    {
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      role: params[:role],
+      grades_teaching: params[:grades_teaching].map {|g| process_grade(g)}.join(", ")
+    }
+  end
+
+  def process_grade(g)
+    if g == "#{OTHER} #{EXPLAIN}"
+      !params[:explain_teaching_other].blank? ? "#{OTHER}: #{params[:explain_teaching_other]}" : OTHER
+    elsif g == "#{NOT_TEACHING} #{EXPLAIN}"
+      !params[:explain_not_teaching].blank? ? "#{NOT_TEACHING}: #{params[:explain_not_teaching]}" : NOT_TEACHING
+    else
+      g
+    end
   end
 
   def school_info_params
