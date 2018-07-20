@@ -57,7 +57,7 @@ Scenario: With dev flag, as teacher, tab is invisible when not reviewing student
   Then I click selector ".section-student .name a"
   And I press the first "#ui-test-feedback-input" element
   And I press keys "Nice!" for element "#ui-test-feedback-input"
-  And I press "ui-test-submit-feedback"
+  And I press "#ui-test-submit-feedback" using jQuery
   And I wait until ".editor-column" contains text "Nice!"
 
   #As teacher, refresh page and latest feedback is visible
