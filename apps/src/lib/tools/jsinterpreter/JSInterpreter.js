@@ -243,6 +243,7 @@ export default class JSInterpreter {
    */
   calculateCodeInfo(code) {
     this.codeInfo = {};
+    this.codeInfo.code = code;
     this.codeInfo.userCodeStartOffset = 0;
     this.codeInfo.userCodeLength = code.length;
     this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(code);
@@ -771,6 +772,14 @@ export default class JSInterpreter {
         this.studioApp.editor,
         lineNumber - 1,
         this.executionError.loc.column);
+    }
+
+    if (this.studioApp.isUsingBlockly()) {
+      console.group(this.executionError.message);
+      this.codeInfo.code.split(/\n/g).splice(lineNumber - 2, 5).map((line, n) => {
+        (n === 2 ? console.error : console.log)(line);
+      });
+      console.groupEnd();
     }
 
     // Select code that just executed:
