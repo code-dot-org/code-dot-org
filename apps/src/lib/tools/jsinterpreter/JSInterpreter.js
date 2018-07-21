@@ -774,16 +774,6 @@ export default class JSInterpreter {
         this.executionError.loc.column);
     }
 
-    if (this.studioApp.isUsingBlockly()) {
-      const context = 5;
-      const linesBefore = Math.floor(context / 2);
-      console.group(this.executionError.message);
-      this.codeInfo.code.split(/\n/g).splice(lineNumber - linesBefore - 1, context).map((line, n) => {
-        (n === linesBefore ? console.error : console.log)(line);
-      });
-      console.groupEnd();
-    }
-
     // Select code that just executed:
     this.selectCurrentCode("ace_error");
     // Grab line number if we don't have one already:
