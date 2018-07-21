@@ -121,5 +121,5 @@ export class SummaryTable extends React.Component {
 }
 
 export default connect(state => ({
-  showLocked: state.permissions.lockApplication,
+  showLocked: state.applicationDashboard.permissions.lockApplication,
 }))(SummaryTable);

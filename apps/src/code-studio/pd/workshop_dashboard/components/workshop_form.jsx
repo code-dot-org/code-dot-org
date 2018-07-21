@@ -926,6 +926,6 @@ export class WorkshopForm extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission,
-  facilitatorCourses: state.facilitatorCourses
+  permission: state.workshopDashboard.permission,
+  facilitatorCourses: state.workshopDashboard.facilitatorCourses
 }))(WorkshopForm);

@@ -1,31 +1,11 @@
 import React, {PropTypes, Component} from 'react';
 import { connect } from 'react-redux';
-import color from "../../util/color";
 import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
 import moment from "moment/moment";
 
 const styles = {
-  container: {
-    margin: 20,
-    borderWidth: 5,
-    borderStyle: 'solid',
-    borderColor: color.cyan,
-    backgroundColor: color.lightest_cyan,
-    borderRadius: 5
-  },
-  header: {
-    color: color.white,
-    backgroundColor: color.cyan,
-    padding: 5,
-    fontSize: 18,
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  footer: {
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
   content: {
     padding: 10
   },
@@ -145,8 +125,7 @@ class TeacherFeedback extends Component {
     const placeholderText = latestFeedback ? latestFeedback.comment : i18n.feedbackPlaceholder();
 
     return (
-      <div style={styles.container}>
-        <div style={styles.header}>{i18n.forTeachersOnly()}</div>
+      <div>
         {!this.props.withUnreleasedFeatures &&
           <div style={styles.content}>
             Coming soon: You’ll be able to use this tab to give feedback to your students about their work.
