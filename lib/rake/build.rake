@@ -61,15 +61,7 @@ namespace :build do
             # Staging is responsible for committing the authoritative schema cache dump.
             if rack_env?(:staging)
               RakeUtils.system 'git', 'add', schema_cache_file
-              # This should be a no-op, but on staging we sometimes get a cache dump that changes when round-tripped through Marshal.
-              2.times do
-                data = File.binread(schema_cache_file)
-                open(schema_cache_file, 'wb') do |f|
-                  f.write(Marshal.dump(Marshal.load(data)))
-                end
-                checksum = `md5sum #{schema_cache_file}`.split(' ').first
-                ChatClient.log "Can the schema cache #{checksum} dump be round-tripped through Marshal? #{(data == Marshal.dump(Marshal.load(data)))}"
-              end
+              RakeUtils.rake 'db:round_trip_schema_cache'
               ChatClient.log 'Committing updated schema_cache.dump file...', color: 'purple'
               RakeUtils.system 'git', 'commit', '-m', '"Update schema cache dump after schema changes."', schema_cache_file
               RakeUtils.git_push
