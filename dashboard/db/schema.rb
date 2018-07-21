@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180716214410) do
+ActiveRecord::Schema.define(version: 20180721004207) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -521,9 +521,10 @@ ActiveRecord::Schema.define(version: 20180716214410) do
   end
 
   create_table "libraries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string "name",                     null: false
-    t.text   "content", limit: 16777215
-    t.index ["name"], name: "index_libraries_on_name", using: :btree
+    t.string   "name",                     null: false
+    t.text     "contents",   limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "metrics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
