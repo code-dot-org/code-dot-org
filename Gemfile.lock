@@ -72,14 +72,6 @@ GIT
       tilt
 
 GIT
-  remote: https://github.com/wjordan/i18n.git
-  revision: f366d62ad73bd0fee939ed9aa38ab88c9f94a8df
-  branch: cdo
-  specs:
-    i18n (1.0.1)
-      concurrent-ruby (~> 1.0)
-
-GIT
   remote: https://github.com/wjordan/image_optim.git
   revision: 939996f7ad102227c73b42bfda0058f9c66698aa
   ref: cdo
@@ -179,42 +171,42 @@ GEM
       acme-client
       aws-sdk (> 2)
       thor
-    actioncable (5.0.7)
-      actionpack (= 5.0.7)
-      nio4r (>= 1.2, < 3.0)
+    actioncable (5.1.6)
+      actionpack (= 5.1.6)
+      nio4r (~> 2.0)
       websocket-driver (~> 0.6.1)
-    actionmailer (5.0.7)
-      actionpack (= 5.0.7)
-      actionview (= 5.0.7)
-      activejob (= 5.0.7)
+    actionmailer (5.1.6)
+      actionpack (= 5.1.6)
+      actionview (= 5.1.6)
+      activejob (= 5.1.6)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 2.0)
-    actionpack (5.0.7)
-      actionview (= 5.0.7)
-      activesupport (= 5.0.7)
+    actionpack (5.1.6)
+      actionview (= 5.1.6)
+      activesupport (= 5.1.6)
       rack (~> 2.0)
-      rack-test (~> 0.6.3)
+      rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (5.0.7)
-      activesupport (= 5.0.7)
+    actionview (5.1.6)
+      activesupport (= 5.1.6)
       builder (~> 3.1)
-      erubis (~> 2.7.0)
+      erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
     active_record_query_trace (1.5.3)
-    activejob (5.0.7)
-      activesupport (= 5.0.7)
+    activejob (5.1.6)
+      activesupport (= 5.1.6)
       globalid (>= 0.3.6)
-    activemodel (5.0.7)
-      activesupport (= 5.0.7)
-    activerecord (5.0.7)
-      activemodel (= 5.0.7)
-      activesupport (= 5.0.7)
-      arel (~> 7.0)
+    activemodel (5.1.6)
+      activesupport (= 5.1.6)
+    activerecord (5.1.6)
+      activemodel (= 5.1.6)
+      activesupport (= 5.1.6)
+      arel (~> 8.0)
     activerecord-import (0.22.0)
       activerecord (>= 3.2)
-    activesupport (5.0.7)
+    activesupport (5.1.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -230,7 +222,7 @@ GEM
     ansi (1.5.0)
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
-    arel (7.1.4)
+    arel (8.0.0)
     ast (2.3.0)
     attr_required (1.0.1)
     auto_strip_attributes (2.1.0)
@@ -282,8 +274,8 @@ GEM
       railties (>= 3.0, < 6.0)
     coderay (1.1.1)
     colorize (0.8.1)
-    composite_primary_keys (9.0.10)
-      activerecord (~> 5.0.0, >= 5.0.7)
+    composite_primary_keys (10.0.5)
+      activerecord (~> 5.1.0, >= 5.1.6)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     crack (0.4.3)
@@ -325,6 +317,7 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
+    erubi (1.7.1)
     erubis (2.7.0)
     eventmachine (1.2.5)
     execjs (2.7.0)
@@ -356,8 +349,8 @@ GEM
       httpclient
       json
     firebase_token_generator (2.0.0)
-    font-awesome-rails (4.6.3.1)
-      railties (>= 3.2, < 5.1)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     fspath (3.1.0)
     gemoji (2.1.0)
     gherkin (5.1.0)
@@ -413,12 +406,14 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.8.2.2)
     hurley (0.2)
+    i18n (1.0.1)
+      concurrent-ruby (~> 1.0)
     image_size (1.5.0)
     in_threads (1.4.0)
     io-like (0.3.0)
-    jbuilder (2.5.0)
-      activesupport (>= 3.0.0, < 5.1)
-      multi_json (~> 1.2)
+    jbuilder (2.7.0)
+      activesupport (>= 4.2.0)
+      multi_json (>= 1.2)
     jmespath (1.3.1)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
@@ -454,10 +449,11 @@ GEM
     logging (2.2.2)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
-    lograge (0.4.1)
-      actionpack (>= 4, < 5.1)
-      activesupport (>= 4, < 5.1)
-      railties (>= 4, < 5.1)
+    lograge (0.10.0)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -583,21 +579,21 @@ GEM
     rack-protection (2.0.1.rc1)
       rack
     rack-ssl-enforcer (0.2.9)
-    rack-test (0.6.3)
-      rack (>= 1.0)
+    rack-test (1.0.0)
+      rack (>= 1.0, < 3)
     rack_csrf (2.5.0)
       rack (>= 1.1.0)
-    rails (5.0.7)
-      actioncable (= 5.0.7)
-      actionmailer (= 5.0.7)
-      actionpack (= 5.0.7)
-      actionview (= 5.0.7)
-      activejob (= 5.0.7)
-      activemodel (= 5.0.7)
-      activerecord (= 5.0.7)
-      activesupport (= 5.0.7)
+    rails (5.1.6)
+      actioncable (= 5.1.6)
+      actionmailer (= 5.1.6)
+      actionpack (= 5.1.6)
+      actionview (= 5.1.6)
+      activejob (= 5.1.6)
+      activemodel (= 5.1.6)
+      activerecord (= 5.1.6)
+      activesupport (= 5.1.6)
       bundler (>= 1.3.0)
-      railties (= 5.0.7)
+      railties (= 5.1.6)
       sprockets-rails (>= 2.0.0)
     rails-controller-testing (0.1.1)
       actionpack (~> 5.x)
@@ -608,9 +604,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    railties (5.0.7)
-      actionpack (= 5.0.7)
-      activesupport (= 5.0.7)
+    railties (5.1.6)
+      actionpack (= 5.1.6)
+      activesupport (= 5.1.6)
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
@@ -632,6 +628,8 @@ GEM
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
       uber (< 0.2.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
     rerun (0.13.0)
       listen (~> 3.0)
     responders (2.4.0)
@@ -833,7 +831,7 @@ DEPENDENCIES
   fakeredis
   firebase
   firebase_token_generator
-  font-awesome-rails (~> 4.6.3)
+  font-awesome-rails (~> 4.7.0.2)
   full-name-splitter!
   gctools!
   gemoji
@@ -846,7 +844,7 @@ DEPENDENCIES
   highline (~> 1.6.21)
   honeybadger
   httparty
-  i18n!
+  i18n
   image_optim!
   image_optim_pack (~> 0.5.0)!
   image_optim_rails!
@@ -898,7 +896,7 @@ DEPENDENCIES
   rack-mini-profiler
   rack-ssl-enforcer
   rack_csrf
-  rails (~> 5.0.1)
+  rails (~> 5.1.0)
   rails-controller-testing
   rambling-trie
   recaptcha

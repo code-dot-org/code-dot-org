@@ -10,14 +10,14 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.1'
+gem 'rails', '~> 5.1.0'
 gem 'rails-controller-testing'
 
 # Add CacheFile backend module.
 # Ref: https://github.com/svenfuchs/i18n/pull/423
 # Support numeric keys in Simple backend.
 # Ref: https://github.com/svenfuchs/i18n/pull/422
-gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
+gem 'i18n'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
@@ -210,7 +210,7 @@ gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
 # We also serve a copy of one of these font files from the public directory
-gem 'font-awesome-rails', '~> 4.6.3' # NOTE: apps/src/applab/Exporter.js depends on the font file names from this version!
+gem 'font-awesome-rails', '~> 4.7.0.2' # NOTE: apps/src/applab/Exporter.js depends on the font file names from this version!
 gem 'sequel'
 gem 'user_agent_parser'
 
