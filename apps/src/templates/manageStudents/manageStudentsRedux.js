@@ -632,7 +632,6 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
 
 // Converts key/value id/student pairs to an array of student objects for the
 // component to display
-// TODO(caleybrock): memoize this - sections could be a few thousand students
 export const convertStudentDataToArray = (studentData) => {
   return Object.values(studentData).reverse();
 };
