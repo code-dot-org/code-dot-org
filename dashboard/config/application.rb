@@ -143,6 +143,8 @@ module Dashboard
 
     config.experiment_cache_time_seconds = 60
 
+    config.active_record.schema_format = :sql
+
     console do
       ARGV.push '-r', root.join('lib/console.rb')
     end
