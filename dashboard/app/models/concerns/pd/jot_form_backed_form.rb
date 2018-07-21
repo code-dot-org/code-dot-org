@@ -237,8 +237,20 @@ module Pd
         # Collect errors by submission id
         errors = {}
         count = 0
+        synced_question_form_ids = Set.new
         placeholders.find_each do |placeholder|
-          placeholder.sync_from_jotform
+          begin
+            placeholder.sync_from_jotform
+          rescue
+            # This form has already had its questions re-synced. Fail out.
+            raise if synced_question_form_ids.include? placeholder.form_id
+
+            # The first time a sync fails for a particular form id, try to re-sync the questions and try again.
+            synced_question_form_ids << form_id
+            placeholder.force_sync_questions
+            placeholder.sync_from_jotform
+          end
+
           count += 1
         rescue => e
           # Store message and first line of backtrace for context
