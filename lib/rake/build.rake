@@ -67,7 +67,8 @@ namespace :build do
                 open(schema_cache_file, 'wb') do |f|
                   f.write(Marshal.dump(Marshal.load(data)))
                 end
-                ChatClient.log 'Can the schema cache dump be round-tripped through Marshal?' + (data == Marshal.dump(Marshal.load(data)))
+                checksum = `md5sum #{schema_cache_file}`.split(' ').first
+                ChatClient.log "Can the schema cache #{checksum} dump be round-tripped through Marshal? #{(data == Marshal.dump(Marshal.load(data)))}"
               end
               ChatClient.log 'Committing updated schema_cache.dump file...', color: 'purple'
               RakeUtils.system 'git', 'commit', '-m', '"Update schema cache dump after schema changes."', schema_cache_file
