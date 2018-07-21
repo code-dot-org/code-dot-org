@@ -3,18 +3,17 @@
  */
 import React, {PropTypes} from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import applicationDashboardReducers, {
-  setRegionalPartners,
-  setRegionalPartnerFilter,
-  setRegionalPartnerGroup,
   setWorkshopAdminPermission,
   setLockApplicationPermission,
 } from './reducers';
-import {
-  ALL_PARTNERS_OPTION,
-  UNMATCHED_PARTNER_OPTION
-} from './constants';
+import regionalPartnerReducers, {
+  setRegionalPartners,
+  setRegionalPartnerFilter,
+  setRegionalPartnerGroup,
+  getInitialRegionalPartnerFilter
+} from '../components/regional_partners_reducers';
 import Header from '../components/header';
 import {
   Router,
@@ -36,7 +35,10 @@ const ROOT_PATH = '/pd/application_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
-const store = createStore(applicationDashboardReducers);
+const store = createStore(combineReducers({
+  applicationDashboard: applicationDashboardReducers,
+  regionalPartners: regionalPartnerReducers
+}));
 
 const ApplicationDashboardHeader = (props) => (
   <Header
@@ -64,26 +66,9 @@ export default class ApplicationDashboard extends React.Component {
     canLockApplications: PropTypes.bool,
   };
 
-  getInitialRegionalPartnerFilter() {
-    let regionalPartnerFilter = JSON.parse(sessionStorage.getItem("regionalPartnerFilter"));
-
-    if (!regionalPartnerFilter) {
-      if (this.props.isWorkshopAdmin) {
-        regionalPartnerFilter = UNMATCHED_PARTNER_OPTION;
-      } else if (this.props.regionalPartners.length === 1) {
-        regionalPartnerFilter = {label: this.props.regionalPartners[0].name, value: this.props.regionalPartners[0].id};
-      } else {
-        regionalPartnerFilter = ALL_PARTNERS_OPTION;
-      }
-    }
-
-    return regionalPartnerFilter;
-  }
-
-
   componentWillMount() {
     store.dispatch(setRegionalPartners(this.props.regionalPartners));
-    store.dispatch(setRegionalPartnerFilter(this.getInitialRegionalPartnerFilter()));
+    store.dispatch(setRegionalPartnerFilter(getInitialRegionalPartnerFilter(this.props.isWorkshopAdmin, this.props.regionalPartners)));
 
     // Use the group from the first partner. Usually there will only be a single partner anyway, or admin.
     // We shouldn't see mixed group multi-partners
