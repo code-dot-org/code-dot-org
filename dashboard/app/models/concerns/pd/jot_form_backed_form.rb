@@ -267,10 +267,10 @@ module Pd
       # @raise when missing an expected unique attribute
       # @return [Hash] pass through attrs merged with any static_attribute_values
       def validate_unique_attributes(attrs)
-        missing = unique_attributes_with_form_id - attrs.keys
-        raise "Missing required attributes #{missing} in #{attrs}" if missing.any?
-
-        attrs.merge(static_attribute_values)
+        attrs.merge(static_attribute_values).tap do |attrs_with_statics|
+          missing = unique_attributes_with_form_id - attrs_with_statics.keys
+          raise "Missing required attributes #{missing} in #{attrs_with_statics}" if missing.any?
+        end
       end
 
       def response_exists?(attrs)
