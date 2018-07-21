@@ -61,6 +61,7 @@ namespace :build do
             # Staging is responsible for committing the authoritative schema cache dump.
             if rack_env?(:staging)
               RakeUtils.system 'git', 'add', schema_cache_file
+              RakeUtils.rake 'db:round_trip_schema_cache'
               ChatClient.log 'Committing updated schema_cache.dump file...', color: 'purple'
               RakeUtils.system 'git', 'commit', '-m', '"Update schema cache dump after schema changes."', schema_cache_file
               RakeUtils.git_push
