@@ -644,6 +644,7 @@ def run_feature(browser, feature, options)
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
   run_environment['FAIL_FAST'] = options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
+  run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.
