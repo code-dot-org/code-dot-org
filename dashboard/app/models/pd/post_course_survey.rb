@@ -69,7 +69,10 @@ module Pd
     end
 
     def self.static_attribute_values
-      {year: CURRENT_YEAR}
+      {
+        year: CURRENT_YEAR,
+        form_id: form_id
+      }
     end
   end
 end
