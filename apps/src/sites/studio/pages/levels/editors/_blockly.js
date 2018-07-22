@@ -6,6 +6,7 @@ import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';
 import commonBlocks from '@cdo/apps/blocksCommon';
 import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/DropletPaletteSelector';
+import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.
@@ -20,9 +21,13 @@ if (window.Blockly && !data.uses_droplet) {
   };
   commonBlocks.install(window.Blockly, options);
   appBlocks.install(window.Blockly, options);
-  if (appBlocks.installCustomBlocks) {
-    appBlocks.installCustomBlocks(window.Blockly, options, data.shared_blocks,
-      null, true);
+  // TODO: eventually want to stop supporting per-level custom blocks.
+  if (data.shared_blocks.length) {
+    installCustomBlocks({
+      blockly: window.Blockly,
+      blockDefinitions: data.shared_blocks,
+      customInputTypes: options.blocksModule.customInputTypes,
+    });
   }
 }
 
