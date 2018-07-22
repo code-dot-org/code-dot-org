@@ -97,7 +97,7 @@
     \/
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple).
-  = f.select :helper_libraries, Library.distinct.pluck(:name), {}, {multiple: true}
+  = f.select :helper_libraries, (Library.distinct.pluck(:name) + @level.helper_libraries).uniq.sort, {}, {multiple: true}
 
 .field
   = f.label 'Validation code'
