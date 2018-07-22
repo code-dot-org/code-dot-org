@@ -6,7 +6,10 @@ module Pd
       facilitator_courses = Pd::CourseFacilitator.where(facilitator: current_user).pluck(:course)
 
       permission_list = []
-
+      regional_partners = current_user.permission?(UserPermission::WORKSHOP_ADMIN) ? RegionalPartner.all : current_user.regional_partners
+      serialized_partners = regional_partners.all.map do |regional_partner|
+        RegionalPartnerSerializer.new(regional_partner).attributes
+      end
       if current_user.permission? UserPermission::WORKSHOP_ADMIN
         permission_list << 'WorkshopAdmin'
       else
@@ -29,7 +32,8 @@ module Pd
       @script_data = {
         props: {
           permissionList: permission_list,
-          facilitatorCourses: facilitator_courses
+          facilitatorCourses: facilitator_courses,
+          regionalPartners: serialized_partners
         }.to_json
       }
 

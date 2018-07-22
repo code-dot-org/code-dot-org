@@ -373,7 +373,8 @@ class Blockly < Level
       localized_hints = JSON.parse(authored_hints).map do |hint|
         next if hint['hint_markdown'].nil? || hint['hint_id'].nil?
 
-        translated_text = I18n.t(hint['hint_id'], scope: authored_hints_key, default: nil)
+        translated_text = hint['hint_id'].empty? ? nil :
+          I18n.t(hint['hint_id'], scope: authored_hints_key, default: nil)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -462,9 +463,7 @@ class Blockly < Level
   end
 
   def shared_blocks
-    Rails.cache.fetch("blocks/#{type}", force: !Script.should_cache?) do
-      Block.where(level_type: type).map(&:block_options)
-    end
+    Block.for(type)
   end
 
   def shared_functions
