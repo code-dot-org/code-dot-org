@@ -26,6 +26,11 @@ commonStyles.purpleHeaderUnfocused = {
   color: color.dark_charcoal,
 };
 
+commonStyles.teacherBlueHeader = {
+  backgroundColor: color.cyan,
+  color: color.lightest_cyan
+};
+
 commonStyles.button = {
   paddingTop: 5,
   paddingBottom: 5,

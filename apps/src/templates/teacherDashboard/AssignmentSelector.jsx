@@ -5,8 +5,20 @@ import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
 import { assignmentId, assignmentFamilyFields } from './teacherSectionsRedux';
 
 const styles = {
+  family: {
+    display: 'inline-block',
+    marginTop: 4,
+    marginRight: 6,
+  },
+  version: {
+    display: 'inline-block',
+    marginTop: 4,
+  },
   secondary: {
-    marginTop: 10
+    marginTop: 6
+  },
+  dropdownLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
   }
 };
 
@@ -210,56 +222,62 @@ export default class AssignmentSelector extends Component {
 
     return (
       <div>
-        <select
-          id="uitest-assignment-family"
-          value={selectedAssignmentFamily}
-          onChange={this.onChangeAssignmentFamily}
-          style={dropdownStyle}
-          disabled={disabled}
-        >
+        <span style={styles.family}>
+          <div style={styles.dropdownLabel}>{i18n.assignmentSelectorCourse()}</div>
+          <select
+            id="uitest-assignment-family"
+            value={selectedAssignmentFamily}
+            onChange={this.onChangeAssignmentFamily}
+            style={dropdownStyle}
+            disabled={disabled}
+          >
           <option key="default"/>
-          {this.props.chooseLaterOption &&
+            {this.props.chooseLaterOption &&
             <option key="later" value={decideLater}>
               {i18n.decideLater()}
             </option>
-          }
-          {Object.keys(assignmentFamiliesByCategory).map((categoryName, index) => (
-            <optgroup key={index} label={categoryName}>
-              {assignmentFamiliesByCategory[categoryName].map(assignmentFamily => (
-                (assignmentFamily !== undefined) &&
+            }
+            {Object.keys(assignmentFamiliesByCategory).map((categoryName, index) => (
+              <optgroup key={index} label={categoryName}>
+                {assignmentFamiliesByCategory[categoryName].map(assignmentFamily => (
+                  (assignmentFamily !== undefined) &&
                   <option
                     key={assignmentFamily.assignment_family_name}
                     value={assignmentFamily.assignment_family_name}
                   >
                     {assignmentFamily.assignment_family_title}
                   </option>
-              ))}
-            </optgroup>
-          ))}
+                ))}
+              </optgroup>
+            ))}
         </select>
+        </span>
         {versions.length > 1 && (
-          <select
-            id="assignment-version-year"
-            value={selectedVersion.year}
-            onChange={this.onChangeVersion}
-            style={dropdownStyle}
-            disabled={disabled}
-          >
-            {
-              versions.map(version => (
-                <option
-                  key={version.year}
-                  value={version.year}
-                >
-                  {version.isRecommended ? `${version.title} (Recommended)` : version.title}
-                </option>
-              ))
-            }
-          </select>
+          <span style={styles.version}>
+            <div style={styles.dropdownLabel}>{i18n.assignmentSelectorVersion()}</div>
+            <select
+              id="assignment-version-year"
+              value={selectedVersion.year}
+              onChange={this.onChangeVersion}
+              style={dropdownStyle}
+              disabled={disabled}
+            >
+              {
+                versions.map(version => (
+                  <option
+                    key={version.year}
+                    value={version.year}
+                  >
+                    {version.isRecommended ? `${version.title} (Recommended)` : version.title}
+                  </option>
+                ))
+              }
+            </select>
+          </span>
         )}
         {secondaryOptions && (
           <div style={styles.secondary}>
-            <div>Select current unit:</div>
+            <div style={styles.dropdownLabel}>{i18n.assignmentSelectorUnit()}</div>
             <select
               id="uitest-secondary-assignment"
               value={selectedSecondaryId}
