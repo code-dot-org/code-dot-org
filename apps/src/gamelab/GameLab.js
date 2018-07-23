@@ -59,7 +59,6 @@ import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import defaultSprites from './defaultSprites.json';
 import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
-import ValidationSetupCode from './ValidationSetup.interpreted.js';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -1098,9 +1097,6 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
     getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   }
   let code = '';
-  if (this.level.validationCode) {
-    code += ValidationSetupCode + '\n';
-  }
   if (this.level.helperLibraries) {
     code += this.level.helperLibraries
       .map((lib) => this.libraries[lib])
@@ -1195,8 +1191,10 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  *         loading the game.
  */
 GameLab.prototype.onP5Preload = function () {
+  this.level.helperLibraries = this.level.helperLibraries || [];
+
   Promise.all([
-      this.level.helperLibraries && this.loadLibraries_(this.level.helperLibraries),
+      this.loadLibraries_(this.level.helperLibraries),
       this.preloadAnimations_(),
       this.runPreloadEventHandler_()
   ]).then(() => {
@@ -1205,7 +1203,14 @@ GameLab.prototype.onP5Preload = function () {
   return false;
 };
 
+GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
+  if (this.level.validationCode && !this.level.helperLibraries.some(name => name === 'ValidationSetupCode')) {
+    this.level.helperLibraries.push('ValidationSetupCode');
+  }
+};
+
 GameLab.prototype.loadLibraries_ = function (libraries) {
+  this.loadValidationCodeIfNeeded_();
   return Promise.all(libraries.map(this.loadLibrary_.bind(this)));
 };
 
