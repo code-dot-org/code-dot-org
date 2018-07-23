@@ -75,7 +75,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       last_name: params[:last_name],
       email: params[:email],
       role: params[:role],
-      grades_teaching: params[:grades_teaching].map {|g| process_grade(g)}.join(", ")
+      grades_teaching: params[:grades_teaching] ? params[:grades_teaching].map {|g| process_grade(g)}.join(", ") : nil
     }
   end
 
