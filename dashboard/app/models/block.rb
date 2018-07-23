@@ -10,6 +10,11 @@
 #  helper_code :text(65535)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  deleted_at  :datetime
+#
+# Indexes
+#
+#  index_blocks_on_deleted_at  (deleted_at)
 #
 
 class Block < ApplicationRecord
