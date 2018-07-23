@@ -331,6 +331,7 @@ class TopInstructions extends Component {
               <CollapserIcon
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
+                teacherOnly={teacherOnly}
               />}
           </div>
         </PaneHeader>
