@@ -49,7 +49,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-02 05:35:45 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:14:13 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:17:14 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:20:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:21:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:30:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-02 05:35:45 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:14:13 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-02 06:17:14 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:20:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:21:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-18 21:30:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:31:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:32:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-20 21:37:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -75,83 +75,83 @@
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_setProp">
-                      <title name="PROPERTY">"scale"</title>
+                    <block type="gamelab_edgesDisplace">
                       <value name="SPRITE">
                         <block type="sprite_variables_get">
                           <title name="VAR">player</title>
                         </block>
                       </value>
-                      <value name="VAL">
-                        <block type="variables_get">
-                          <title name="VAR">bearSize</title>
-                        </block>
-                      </value>
                       <next>
-                        <block type="controls_for">
-                          <title name="VAR">counter</title>
-                          <value name="FROM">
-                            <block type="math_number">
-                              <title name="NUM">2</title>
+                        <block type="gamelab_setProp">
+                          <title name="PROPERTY">"scale"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_variables_get">
+                              <title name="VAR">player</title>
                             </block>
                           </value>
-                          <value name="TO">
-                            <block type="math_number">
-                              <title name="NUM">10</title>
+                          <value name="VAL">
+                            <block type="variables_get">
+                              <title name="VAR">bearSize</title>
                             </block>
                           </value>
-                          <value name="BY">
-                            <block type="math_number">
-                              <title name="NUM">2</title>
-                            </block>
-                          </value>
-                          <statement name="DO">
-                            <block type="gamelab_createNewSprite">
-                              <title name="NAME">food</title>
-                              <title name="COSTUME">"cupcake"</title>
-                              <value name="LOCATION">
-                                <block type="gamelab_randomLocation"/>
-                              </value>
-                              <next>
-                                <block type="gamelab_setProp">
-                                  <title name="PROPERTY">"scale"</title>
-                                  <value name="SPRITE">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">food</title>
-                                    </block>
-                                  </value>
-                                  <value name="VAL">
-                                    <block type="math_arithmetic">
-                                      <title name="OP">MULTIPLY</title>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <title name="VAR">counter</title>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <title name="NUM">5</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
                           <next>
-                            <block type="gamelab_createNewSprite">
-                              <title name="NAME">pop</title>
-                              <title name="COSTUME">"apple"</title>
-                              <value name="LOCATION">
-                                <block type="gamelab_randomLocation"/>
+                            <block type="controls_for">
+                              <title name="VAR">counter</title>
+                              <value name="FROM">
+                                <block type="math_number">
+                                  <title name="NUM">2</title>
+                                </block>
                               </value>
-                              <next>
-                                <block type="gamelab_edgesDisplace">
-                                  <value name="SPRITE">
-                                    <block type="sprite_variables_get">
-                                      <title name="VAR">player</title>
+                              <value name="TO">
+                                <block type="math_number">
+                                  <title name="NUM">10</title>
+                                </block>
+                              </value>
+                              <value name="BY">
+                                <block type="math_number">
+                                  <title name="NUM">2</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="gamelab_createNewSprite">
+                                  <title name="NAME">food</title>
+                                  <title name="COSTUME">"cupcake"</title>
+                                  <value name="LOCATION">
+                                    <block type="gamelab_randomLocation"/>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_setProp">
+                                      <title name="PROPERTY">"scale"</title>
+                                      <value name="SPRITE">
+                                        <block type="sprite_variables_get">
+                                          <title name="VAR">food</title>
+                                        </block>
+                                      </value>
+                                      <value name="VAL">
+                                        <block type="math_arithmetic">
+                                          <title name="OP">MULTIPLY</title>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <title name="VAR">counter</title>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <title name="NUM">5</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
                                     </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="gamelab_createNewSprite">
+                                  <title name="NAME">pop</title>
+                                  <title name="COSTUME">"apple"</title>
+                                  <value name="LOCATION">
+                                    <block type="gamelab_randomLocation"/>
                                   </value>
                                 </block>
                               </next>
@@ -304,18 +304,18 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_whenTouchingAny">
-          <value name="SPRITE">
-            <block type="sprite_variables_get">
-              <title name="VAR">player</title>
-            </block>
-          </value>
-          <value name="GROUP">
-            <block type="gamelab_spritesWhere">
-              <title name="PROPERTY">"costume"</title>
-              <value name="VALUE">
-                <block type="gamelab_spriteCostume">
-                  <title name="COSTUME">"cupcake"</title>
+        <block type="gamelab_whenTrue">
+          <value name="CONDITION">
+            <block type="logic_compare">
+              <title name="OP">GT</title>
+              <value name="A">
+                <block type="variables_get">
+                  <title name="VAR">bearSize</title>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <title name="NUM">60</title>
                 </block>
               </value>
             </block>
@@ -324,87 +324,23 @@
             <block type="gamelab_setBackground">
               <value name="COLOR">
                 <block type="colour_picker">
-                  <title name="COLOUR">#ffffff</title>
+                  <title name="COLOUR">#33ff33</title>
                 </block>
               </value>
               <next>
-                <block type="variables_set">
-                  <title name="VAR">bearSize</title>
-                  <value name="VALUE">
-                    <block type="math_arithmetic">
-                      <title name="OP">ADD</title>
-                      <value name="A">
-                        <block type="variables_get">
-                          <title name="VAR">bearSize</title>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="math_number">
-                          <title name="NUM">5</title>
-                        </block>
-                      </value>
+                <block type="gamelab_showTitleScreen">
+                  <value name="TITLE">
+                    <block type="text">
+                      <title name="TEXT">Bear is full!</title>
                     </block>
                   </value>
-                  <next>
-                    <block type="gamelab_setProp">
-                      <title name="PROPERTY">"scale"</title>
-                      <value name="SPRITE">
-                        <block type="sprite_variables_get">
-                          <title name="VAR">player</title>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="variables_get">
-                          <title name="VAR">bearSize</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_jumpTo">
-                          <value name="SPRITE">
-                            <block type="gamelab_secondTouched"/>
-                          </value>
-                          <value name="LOCATION">
-                            <block type="gamelab_randomLocation"/>
-                          </value>
-                          <next>
-                            <block type="gamelab_jumpTo">
-                              <value name="SPRITE">
-                                <block type="sprite_variables_get">
-                                  <title name="VAR">pop</title>
-                                </block>
-                              </value>
-                              <value name="LOCATION">
-                                <block type="gamelab_randomLocation"/>
-                              </value>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
+                  <value name="SUBTITLE">
+                    <block type="text">
+                      <title name="TEXT"> </title>
                     </block>
-                  </next>
+                  </value>
                 </block>
               </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_setBackground">
-          <value name="COLOR">
-            <block type="colour_picker">
-              <title name="COLOUR">#33ff33</title>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_showTitleScreen">
-              <value name="TITLE">
-                <block type="text">
-                  <title name="TEXT">Bear is full!</title>
-                </block>
-              </value>
-              <value name="SUBTITLE">
-                <block type="text">
-                  <title name="TEXT"> </title>
-                </block>
-              </value>
             </block>
           </next>
         </block>
