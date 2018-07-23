@@ -488,7 +488,7 @@ FactoryGirl.define do
     association :workshop, factory: :pd_workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
-    sequence(:email) {|n| "participant#{n}@example.com.xx"}
+    email {"participant_#{(User.maximum(:id) || 0) + 1}@example.com.xx"}
     association :school_info
     code {SecureRandom.hex(10)}
 
@@ -996,7 +996,7 @@ FactoryGirl.define do
 
   factory :pd_workshop_daily_survey, class: 'Pd::WorkshopDailySurvey' do
     form_id 12345
-    sequence(:submission_id)
+    submission_id {(Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1}
     association :pd_workshop
     association :user
     day 5
@@ -1004,7 +1004,7 @@ FactoryGirl.define do
 
   factory :pd_workshop_facilitator_daily_survey, class: 'Pd::WorkshopFacilitatorDailySurvey' do
     form_id 12345
-    sequence(:submission_id)
+    submission_id {(Pd::WorkshopFacilitatorDailySurvey.maximum(:submission_id) || 0) + 1}
     association :pd_session
     pd_workshop {pd_session.workshop}
     association :user
