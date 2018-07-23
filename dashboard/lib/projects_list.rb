@@ -17,8 +17,8 @@ module ProjectsList
   }.freeze
 
   class << self
-    # Look up every project associated with the provided user_id, which is not hidden or deleted.
-    # Return a set of metadata which can be used to display a table of personal projects in the UI.
+    # Look up every project associated with the provided user_id.
+    # Return a set of metadata which can be used to display a table of personal projects, excluding those that are hidden in the UI.
     # @param user_id
     # @return [Array<Hash>] An array with each entry representing a project.
     def fetch_personal_projects(user_id)
@@ -29,7 +29,7 @@ module ProjectsList
         project_data = get_project_row_data(project, channel_id)
         personal_projects_list << project_data if project_data
       end
-      personal_projects.reject {|project| project[:hidden]}
+      personal_projects_list.reject {|project| project[:hidden]}
     end
 
     # Look up every project of every student in the section which is not hidden or deleted.
