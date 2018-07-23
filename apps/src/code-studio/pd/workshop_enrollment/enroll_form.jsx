@@ -381,6 +381,10 @@ export default class EnrollForm extends React.Component {
         >
           Register
         </Button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </form>
     );
   }
