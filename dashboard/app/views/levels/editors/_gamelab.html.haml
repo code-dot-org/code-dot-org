@@ -90,6 +90,16 @@
   = f.text_field :custom_setup_code
 
 .field
+  = f.label :helper_libraries
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple).
+  = f.select :helper_libraries, (Library.distinct.pluck(:name) + @level.helper_libraries).uniq.sort, {}, {multiple: true}
+
+.field
   = f.label 'Validation code'
   %p
     This is a snippet of javascript that is run after every draw loop. Call levelSuccess() in here to stop the level as a success. You can also pass a number into levelSuccess() to give the student a non-perfect test result (see <a href="https://github.com/code-dot-org/code-dot-org/blob/101fbfd2dcdd635d7359e991559ba782f9fd00be/apps/src/constants.js#L33-L106">TestResults</a> for the list of valid test results).

@@ -19,6 +19,11 @@ export default storybook => {
                 {text: "I'm another answer", letter: 'B', correct: false},
               ],
             }}
+            studentAnswers={[
+              {name: 'Matt', id: 1, answer: 'B', correct: false},
+              {name: 'Kim', id: 2, answer: 'A', correct: true},
+              {name: 'Megan', id: 3, answer: 'C', correct: false}
+            ]}
           />
         )
       }
