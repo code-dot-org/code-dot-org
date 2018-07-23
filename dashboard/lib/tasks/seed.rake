@@ -170,6 +170,10 @@ namespace :seed do
     SharedBlocklyFunction.load_records
   end
 
+  task libraries: :environment do
+    Library.load_records
+  end
+
   # Generate the database entry from the custom levels json file
   task custom_levels: :environment do
     LevelLoader.load_custom_levels
