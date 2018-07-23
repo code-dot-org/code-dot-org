@@ -1,8 +1,4 @@
 import { SVG_NS } from '../constants';
-import {
-  appendBlocksByCategory,
-  createJsWrapperBlockCreator
-} from '../block_utils';
 import { getStore } from '../redux';
 import { getLocation } from './locationPickerModule';
 import { GAME_HEIGHT } from './constants';
@@ -136,6 +132,7 @@ const customInputTypes = {
 };
 
 export default {
+  customInputTypes,
   install(blockly, blockInstallOptions) {
     // Legacy style block definitions :(
     const generator = blockly.Generator.get('JavaScript');
@@ -348,45 +345,5 @@ export default {
       },
       addDefaultVar: false,
     });
-  },
-
-  installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
-    const createJsWrapperBlock = createJsWrapperBlockCreator(
-      blockly,
-      'gamelab',
-      [
-        // Strict Types
-        blockly.BlockValueType.SPRITE,
-        blockly.BlockValueType.BEHAVIOR,
-        blockly.BlockValueType.LOCATION,
-      ],
-      blockly.BlockValueType.SPRITE,
-      customInputTypes,
-    );
-
-    const blocksByCategory = {};
-    customBlocks.forEach(({name, category, config, helperCode}) => {
-      const blockName = createJsWrapperBlock(config, helperCode);
-      if (!blocksByCategory[category]) {
-        blocksByCategory[category] = [];
-      }
-      blocksByCategory[category].push(blockName);
-      if (name && blockName !== name) {
-        console.error(`Block config ${name} generated a block named ${blockName}`);
-      }
-    });
-    if (blockly.Blocks.gamelab_location_variable_set &&
-        blockly.Blocks.gamelab_location_variable_get) {
-      Blockly.Variables.registerGetter(Blockly.BlockValueType.LOCATION,
-        'gamelab_location_variable_get');
-      Blockly.Variables.registerSetter(Blockly.BlockValueType.LOCATION,
-        'gamelab_location_variable_set');
-    }
-
-    if (!hideCustomBlocks) {
-      level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
-    }
-
-    return blocksByCategory;
   },
 };

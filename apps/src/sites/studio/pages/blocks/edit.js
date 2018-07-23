@@ -6,8 +6,8 @@ import initializeCodeMirror, {
 } from '@cdo/apps/code-studio/initializeCodeMirror';
 import jsonic from 'jsonic';
 import { parseElement } from '@cdo/apps/xml';
-import { installCustomBlocks as gamelabInstallCustomBlocks } from '@cdo/apps/gamelab/blocks';
-import { installCustomBlocks as mazeInstallCustomBlocks } from '@cdo/apps/maze/blocks';
+import { installCustomBlocks } from '@cdo/apps/block_utils';
+import { customInputTypes } from '@cdo/apps/gamelab/blocks';
 import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
 import animationListModule, {
   setInitialAnimationList
@@ -15,18 +15,13 @@ import animationListModule, {
 import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
-const installers = {
-  GamelabJr: gamelabInstallCustomBlocks,
-  Maze: mazeInstallCustomBlocks,
-};
-
-let typeField, nameField, helperEditor;
+let poolField, nameField, helperEditor;
 
 $(document).ready(() => {
   registerReducers({animationList: animationListModule});
   getStore().dispatch(setInitialAnimationList(defaultSprites));
 
-  typeField = document.getElementById('block_level_type');
+  poolField = document.getElementById('block_pool');
   nameField = document.getElementById('block_name');
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
@@ -43,6 +38,7 @@ $(document).ready(() => {
       submitButton.removeAttribute('disabled');
     }
   });
+  poolField.addEventListener('change', fixupJson);
 });
 
 let config;
@@ -51,18 +47,17 @@ function onChange(editor) {
 
   const parsedConfig = jsonic(config);
 
-  const blocksInstalled = installers[typeField.value](
-    Blockly,
-    {},
-    [{
+  const blocksInstalled = installCustomBlocks({
+    blockly: Blockly,
+    blockDefinitions: [{
       name: nameField.value,
+      pool: poolField.value,
       category: 'Custom',
       config: parsedConfig,
       helperCode: helperEditor && helperEditor.getValue(),
     }],
-    {},
-    true,
-  );
+    customInputTypes, // TODO: generalize for other app types.
+  });
   const blockName = Object.values(blocksInstalled)[0][0];
   nameField.value = blockName;
   const blocksDom = parseElement(`<block type="${blockName}" />`);
