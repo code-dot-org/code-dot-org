@@ -1358,6 +1358,11 @@ class User < ActiveRecord::Base
     section_courses.map(&:summarize_short)
   end
 
+  # Returns the set of courses the user has been assigned to or has progress in.
+  def courses_as_student
+    scripts.map(&:course).compact.uniq
+  end
+
   # Checks if there are any non-hidden scripts assigned to the user.
   # @return [Boolean]
   def any_visible_assigned_scripts?
@@ -1384,7 +1389,7 @@ class User < ActiveRecord::Base
     primary_script_id = primary_script.try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
     user_scripts = in_progress_and_completed_scripts.
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
@@ -1406,7 +1411,9 @@ class User < ActiveRecord::Base
       end
     end.compact
 
-    assigned_courses + user_script_data
+    user_course_data = courses_as_student.map(&:summarize_short)
+
+    user_course_data + user_script_data
   end
 
   # Figures out the unique set of courses assigned to sections that this user
