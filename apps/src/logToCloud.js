@@ -74,5 +74,13 @@ module.exports = {
     }
 
     window.newrelic.setCustomAttribute(key, value);
-  }
+  },
+
+  loadFinished() {
+    if (!window.newrelic) {
+      return;
+    }
+
+    window.newrelic.finished();
+  },
 };

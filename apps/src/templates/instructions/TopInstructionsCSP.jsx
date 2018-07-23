@@ -82,11 +82,7 @@ const styles = {
     float: 'left',
     paddingTop: 6,
     paddingLeft: 30,
-  },
-  highlighted: {
-    borderBottom: "2px solid " + color.default_text,
-    color: color.default_text,
-  },
+  }
 };
 
 const audioStyle = {
@@ -285,10 +281,13 @@ class TopInstructions extends Component {
     const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
       this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
 
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && (displayFeedbackDevTeacher || displayFeedbackStable);
+
     const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
+
     return (
       <div style={mainStyle} className="editor-column">
-        <PaneHeader hasFocus={false}>
+        <PaneHeader hasFocus={false} teacherOnly={teacherOnly}>
           <div style={styles.paneHeaderOverride}>
             {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl &&
               <InlineAudio src={ttsUrl} style={audioStyle}/>
@@ -305,23 +304,26 @@ class TopInstructions extends Component {
               <InstructionsTab
                 className="uitest-instructionsTab"
                 onClick={this.handleInstructionTabClick}
-                style={this.state.tabSelected === TabType.INSTRUCTIONS ? styles.highlighted : null}
+                selected={this.state.tabSelected === TabType.INSTRUCTIONS}
                 text={msg.instructions()}
+                teacherOnly={teacherOnly}
               />
               {displayHelpTab &&
                 <InstructionsTab
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
-                  style={this.state.tabSelected === TabType.RESOURCES ? styles.highlighted : null}
+                  selected={this.state.tabSelected === TabType.RESOURCES}
                   text={msg.helpTips()}
+                  teacherOnly={teacherOnly}
                 />
               }
               {displayFeedback &&
                 <InstructionsTab
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
-                  style={this.state.tabSelected === TabType.COMMENTS ? styles.highlighted : null}
+                  selected={this.state.tabSelected === TabType.COMMENTS}
                   text={msg.feedback()}
+                  teacherOnly={teacherOnly}
                 />
               }
             </div>
@@ -329,6 +331,7 @@ class TopInstructions extends Component {
               <CollapserIcon
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
+                teacherOnly={teacherOnly}
               />}
           </div>
         </PaneHeader>
