@@ -207,8 +207,8 @@ Dashboard::Application.routes.draw do
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :blocks, constraints: {id: /[^\/]+/}
-
   resources :shared_blockly_functions, path: '/functions'
+  resources :libraries
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
