@@ -1664,7 +1664,7 @@ class User < ActiveRecord::Base
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
+      user_script.update!(assigned_at: Time.now)
       return user_script
     end
   end
