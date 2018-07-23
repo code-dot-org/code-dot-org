@@ -17,8 +17,8 @@ module ProjectsList
   }.freeze
 
   class << self
-    # Look up every project associated with the provided user_id.
-    # Return a set of metadata which can be used to display a table of personal projects, excluding those that are hidden in the UI.
+    # Look up every project associated with the provided user_id, excluding those that are hidden.
+    # Return a set of metadata which can be used to display a table of personal projects in the UI.
     # @param user_id
     # @return [Array<Hash>] An array with each entry representing a project.
     def fetch_personal_projects(user_id)
@@ -29,11 +29,10 @@ module ProjectsList
         project_data = get_project_row_data(project, channel_id)
         personal_projects_list << project_data if project_data
       end
-      personal_projects_list.reject {|project| project[:hidden]}
     end
 
-    # Look up every project of every student in the section which is not hidden or deleted.
-    # Return a set of metadata which can be used to display a list of projects in the UI.
+    # Look up every project of every student in the section, excluding those that are hidden.
+    # Return a set of metadata which can be used to display a list of projects, excluding hidden or deleted in the UI.
     # @param section [Section]
     # @return [Array<Hash>] An array with each entry representing a project.
     def fetch_section_projects(section)
@@ -51,7 +50,6 @@ module ProjectsList
             project_data = get_project_row_data(project, channel_id, student)
             projects_list_data << project_data if project_data
           end
-          projects_list_data.reject {|project| project['hidden']}
         end
       end
     end
@@ -175,6 +173,7 @@ module ProjectsList
     # single project.
     def get_project_row_data(project, channel_id, student = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
+      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
       {
         channel: channel_id,
         name: project_value['name'],
@@ -183,7 +182,6 @@ module ProjectsList
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
         publishedAt: project[:published_at],
-        hidden: project_value['hidden']
       }.with_indifferent_access
     end
 

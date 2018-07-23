@@ -33,14 +33,8 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
   end
 
-  # We rely on the fetch method of different projects to filter out hidden projects.
-  test 'get_project_row_data still includes hidden projects' do
-    hidden_project_row = ProjectsList.send(:get_project_row_data, @hidden_project, @channel_id, @student)
-    assert_equal @channel_id, hidden_project_row['channel']
-    assert_equal 'Hidden App', hidden_project_row['name']
-    assert_equal @student.name, hidden_project_row['studentName']
-    assert_equal 'playlab', hidden_project_row['type']
-    assert_equal '2017-01-01T00:00:00.000-08:00', hidden_project_row['updatedAt']
+  test 'get_project_row_data ignores hidden projects' do
+    assert_nil ProjectsList.send(:get_project_row_data, @hidden_project, @channel_id, @student)
   end
 
   test 'get_project_row_data still correctly parses project data even if no student is passed' do
