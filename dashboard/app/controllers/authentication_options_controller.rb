@@ -13,7 +13,7 @@ class AuthenticationOptionsController < ApplicationController
     auth_option = current_user.authentication_options.find(params[:id])
 
     if auth_option.present?
-      transaction do
+      current_user.transaction do
         auth_option.destroy!
 
         # Replace primary_contact_info if we just destroyed it
