@@ -193,7 +193,7 @@ XML
       authored_hints: JSON.generate(
         [
           {"hint_markdown": "first english markdown", "hint_id": "first"},
-          {"hint_markdown": "second english markdown", "hint_id": "second"},
+          {"hint_markdown": "second english markdown", "hint_id": ""},
         ]
       )
     )

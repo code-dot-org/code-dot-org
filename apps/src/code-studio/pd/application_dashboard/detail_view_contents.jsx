@@ -13,16 +13,18 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
-import { RegionalPartnerDropdown } from './regional_partner_dropdown';
+import {
+  RegionalPartnerDropdown,
+  UNMATCHED_PARTNER_VALUE,
+  UNMATCHED_PARTNER_LABEL
+} from '../components/regional_partner_dropdown';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ConfirmationDialog from '../workshop_dashboard/components/confirmation_dialog';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,
-  ApplicationFinalStatuses,
-  UNMATCHED_PARTNER_VALUE,
-  UNMATCHED_PARTNER_LABEL
+  ApplicationFinalStatuses
 } from './constants';
 
 const styles = {
@@ -688,8 +690,8 @@ export class DetailViewContents extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerGroup: state.regionalPartnerGroup,
-  regionalPartners: state.regionalPartners,
-  canLock: state.permissions.lockApplication,
-  isWorkshopAdmin: state.permissions.workshopAdmin,
+  regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,
+  regionalPartners: state.regionalPartners.regionalPartners,
+  canLock: state.applicationDashboard.permissions.lockApplication,
+  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
 }))(DetailViewContents);
