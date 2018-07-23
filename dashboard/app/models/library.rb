@@ -2,13 +2,11 @@
 #
 # Table name: libraries
 #
-#  id      :integer          not null, primary key
-#  name    :string(255)      not null
-#  content :text(16777215)
-#
-# Indexes
-#
-#  index_libraries_on_name  (name)
+#  id         :integer          not null, primary key
+#  name       :string(255)      not null
+#  content    :text(65535)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 class Library < ApplicationRecord

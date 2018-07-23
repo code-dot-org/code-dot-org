@@ -21,7 +21,7 @@ describe("Quick View", () => {
     role: 'csf_facilitators'
   };
 
-  const regionalPartnerFilter = {value: "1", label: "A Great Organization"};
+  const regionalPartnerFilter = {value: 1, label: "A Great Organization"};
 
   describe("Initially", () => {
     let quickView;
