@@ -1,5 +1,5 @@
 import { TestResults } from '@cdo/apps/constants';
-import GameLabJr from '@cdo/apps/gamelab/GameLabJr.interpreted.js';
+import GameLabJr from '@cdo/interpreted/GameLabJr.interpreted.js';
 
 const levelDef = {
   customHelperLibrary: GameLabJr,
