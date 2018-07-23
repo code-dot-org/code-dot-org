@@ -9,6 +9,7 @@ import ScriptAnnouncements from './ScriptAnnouncements';
 import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -24,8 +25,16 @@ const styles = {
   title: {
     display: 'inline-block',
   },
+  versionWrapper: {
+    display: 'flex',
+    alignItems: 'baseline',
+  },
+  versionLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 15,
+    color: color.charcoal,
+  },
   versionDropdown: {
-    display: 'inline-block',
     marginBottom: 13,
   },
   description: {
@@ -158,18 +167,21 @@ class ScriptOverviewHeader extends Component {
                 }
               </h1>
               {versions.length > 1 &&
-                <select
-                  onChange={this.onChangeVersion}
-                  value={scriptName}
-                  style={styles.versionDropdown}
-                  id="version-selector"
-                >
-                  {versions.map(version => (
-                    <option key={version.name} value={version.name}>
-                      {version.version_year}
-                    </option>
-                  ))}
-                </select>
+                <span style={styles.versionWrapper}>
+                  <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
+                  <select
+                    onChange={this.onChangeVersion}
+                    value={scriptName}
+                    style={styles.versionDropdown}
+                    id="version-selector"
+                  >
+                    {versions.map(version => (
+                      <option key={version.name} value={version.name}>
+                        {version.version_year}
+                      </option>
+                    ))}
+                  </select>
+                </span>
               }
             </div>
             <p style={styles.description}>

@@ -1,0 +1,19 @@
+{
+  "category": "Location",
+  "config": {
+    "func": "distance",
+    "blockText": "distance from {LOCATION1} to {LOCATION2}",
+    "returnType": "Number",
+    "args": [
+      {
+        "name": "LOCATION1",
+        "type": "Location"
+      },
+      {
+        "name": "LOCATION2",
+        "type": "Location"
+      }
+    ],
+    "inline": false
+  }
+}
