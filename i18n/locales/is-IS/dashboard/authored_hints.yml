@@ -7986,6 +7986,10 @@ is:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Gættu þess að draga út alla stæðuna fyrir kóðann úr verkfærasvæðinu í hvert skipti sem þú prófar nýtt.
         4-5_Artist_Patterns_3_b: Ef kóðinn verður of flókinn getur þú alltaf smellt á "Byrja aftur" og prófað aftur!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: Hvað ættir þú að gera þegar enda slóðar er náð?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Notaðu `endurtaka` lykkju til að keyra kóðann endurtekið fyrir hverja beina slóð.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: Verkfærakassinn er með svolítið öðru skipulagi í þetta sinn! Smelltu á hina ýmsu flokka til að kanna hvaða kubba þú ert með.
         courseE_farmer_functions1_b: Þú þarft aðeins að tína eitt grasker, en gætir þú notað lykkju til að komast þangað?
