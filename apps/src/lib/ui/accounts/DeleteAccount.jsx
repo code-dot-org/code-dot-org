@@ -61,6 +61,7 @@ export default class DeleteAccount extends React.Component {
     isPasswordRequired: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     dependedUponForLogin: PropTypes.bool,
+    hasStudents: PropTypes.bool.isRequired,
   };
 
   state = DEFAULT_STATE;
@@ -155,7 +156,7 @@ export default class DeleteAccount extends React.Component {
   };
 
   render() {
-    const {isTeacher, dependedUponForLogin, isPasswordRequired} = this.props;
+    const {isTeacher, dependedUponForLogin, isPasswordRequired, hasStudents} = this.props;
     const {
       isPersonalLoginDialogOpen,
       isDeleteAccountDialogOpen,
@@ -191,7 +192,7 @@ export default class DeleteAccount extends React.Component {
         <DeleteAccountDialog
           isOpen={isDeleteAccountDialogOpen}
           isPasswordRequired={isPasswordRequired}
-          isTeacher={isTeacher}
+          warnAboutDeletingStudents={isTeacher && hasStudents}
           checkboxes={checkboxes}
           password={password}
           passwordError={passwordError}
