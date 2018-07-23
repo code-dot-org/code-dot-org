@@ -1,0 +1,68 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "spritesWhereGenerator",
+    "blockText": "sprites where {PROPERTY} {OP} {VALUE}",
+    "returnType": "Sprite",
+    "color": [
+      5,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "x position",
+            "\"x\""
+          ],
+          [
+            "y position",
+            "\"y\""
+          ],
+          [
+            "costume",
+            "\"costume\""
+          ],
+          [
+            "movement direction",
+            "\"direction\""
+          ],
+          [
+            "rotation or direction",
+            "\"rotation\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      },
+      {
+        "name": "OP",
+        "options": [
+          [
+            "=",
+            "\"=\""
+          ],
+          [
+            ">",
+            "\">\""
+          ],
+          [
+            "<",
+            "\"<\""
+          ]
+        ]
+      },
+      {
+        "name": "VALUE"
+      }
+    ]
+  }
+}
