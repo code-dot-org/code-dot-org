@@ -126,6 +126,8 @@ jobs:
           name: rake build
           command: |
             mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
+          environment:
+            RAKE_VERBOSE: true
 
       # as recommended: https://circleci.com/docs/2.0/yarn/
       - save_cache:
