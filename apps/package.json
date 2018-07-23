@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
+    "@cdo/interpreted": "file:../dashboard/config/libraries/",
     "@code-dot-org/artist": "0.2.1",
     "@code-dot-org/blockly": "2.5.1",
     "@code-dot-org/bramble": "0.1.26",

@@ -65,6 +65,8 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 // Number of ticks after which to capture a thumbnail image of the play space.
 const CAPTURE_TICK_COUNT = 250;
 
+const validationLibraryName = 'ValidationSetupCode.interpreted.js';
+
 var ButtonState = {
   UP: 0,
   DOWN: 1
@@ -1204,8 +1206,8 @@ GameLab.prototype.onP5Preload = function () {
 };
 
 GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
-  if (this.level.validationCode && !this.level.helperLibraries.some(name => name === 'ValidationSetupCode')) {
-    this.level.helperLibraries.push('ValidationSetupCode');
+  if (this.level.validationCode && !this.level.helperLibraries.some(name => name === validationLibraryName)) {
+    this.level.helperLibraries.unshift(validationLibraryName);
   }
 };
 

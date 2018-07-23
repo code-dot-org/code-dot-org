@@ -11,7 +11,7 @@ whenTouching
 */
 
 import _ from 'lodash';
-import GameLabJrLib from '@cdo/apps/gamelab/GameLabJr.interpreted';
+import GameLabJrLib from '@cdo/interpreted/GameLabJr.interpreted.js';
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
 import {expect} from '../../util/configuredChai';
 import {stub} from 'sinon';
