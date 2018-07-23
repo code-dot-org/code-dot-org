@@ -11,6 +11,7 @@ import * as utils from '@cdo/apps/utils';
 const DEFAULT_PROPS = {
   isPasswordRequired: true,
   isTeacher: false,
+  hasStudents: false,
 };
 
 describe('DeleteAccount', () => {
