@@ -51,7 +51,7 @@ module ProjectsList
             project_data = get_project_row_data(project, channel_id, student)
             projects_list_data << project_data if project_data
           end
-          projects_list_data.reject {|project| project[:hidden]}
+          projects_list_data.reject {|project| project['hidden']}
         end
       end
     end
@@ -182,7 +182,8 @@ module ProjectsList
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at]
+        publishedAt: project[:published_at],
+        hidden: project_value['hidden']
       }.with_indifferent_access
     end
 
