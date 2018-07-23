@@ -261,6 +261,15 @@ class Course < ApplicationRecord
     }
   end
 
+  def summarize_short
+    {
+      name: name,
+      title: I18n.t("data.course.name.#{name}.title", default: ''),
+      description: I18n.t("data.course.name.#{name}.description_short", default: ''),
+      link: Rails.application.routes.url_helpers.course_path(self),
+    }
+  end
+
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
   def summarize_versions

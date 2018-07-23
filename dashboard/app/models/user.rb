@@ -1355,14 +1355,7 @@ class User < ActiveRecord::Base
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
-    section_courses.map do |course|
-      {
-        name: course[:name],
-        title: data_t_suffix('course.name', course[:name], 'title'),
-        description: data_t_suffix('course.name', course[:name], 'description_short'),
-        link: course_path(course),
-      }
-    end
+    section_courses.map(&:summarize_short)
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
