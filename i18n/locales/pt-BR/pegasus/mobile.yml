@@ -761,7 +761,7 @@
   dashboard_curriculum_csins: 'Ciência da computação na ciência:'
   dashboard_curriculum_csp: 'AP® Princípios da ciência da computação:'
   dashboard_curriculum_ecs: 'Explorando a Ciência da Computação:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_csd: 'Descobertas da Ciência da Computação: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Nível"
   dashboard_grade_other: "Outros"
@@ -936,11 +936,11 @@
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
   coursea-2018_name: Curso A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
+  courseb-2018_name: Curso B (2018)
+  coursec-2018_name: Curso C (2018)
+  coursed-2018_name: Curso D (2018)
+  coursee-2018_name: Curso E (2018)
+  coursef-2018_name: Curso F (2018)
   accelerated_name: "Curso acelerado"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
@@ -1520,8 +1520,8 @@
   user_header_logout: "Sair"
   user_header_signin: "Entrar"
   view_all_sections: "Ver todas as turmas"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
+  view_section: "Ver Seção"
+  view_named_section: "Ver %{section_name}"
   privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
   signing_in: "Fazendo Login"
   sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
