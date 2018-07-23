@@ -3,8 +3,8 @@
 # Table name: blocks
 #
 #  id          :integer          not null, primary key
-#  name        :string(255)
-#  pool        :string(255)      default(""), not null
+#  name        :string(255)      not null
+#  pool        :string(255)      not null
 #  category    :string(255)
 #  config      :text(65535)
 #  helper_code :text(65535)
@@ -14,7 +14,8 @@
 #
 # Indexes
 #
-#  index_blocks_on_deleted_at  (deleted_at)
+#  index_blocks_on_deleted_at     (deleted_at)
+#  index_blocks_on_pool_and_name  (pool,name) UNIQUE
 #
 
 class Block < ApplicationRecord
