@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)      not null
-#  contents   :text(65535)
+#  content    :text(65535)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
