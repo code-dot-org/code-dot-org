@@ -93,7 +93,9 @@ const nameFormatter = (projectName, {rowData}) => {
 const actionsFormatter = (actions, {rowData}) => {
   return (
     <PersonalProjectsTableActionsCell
-      isPublished = {!!rowData.isPublished}
+      isPublished = {!!rowData.publishedAt}
+      projectId = {rowData.channel}
+      projectType = {rowData.type}
     />
   );
 };

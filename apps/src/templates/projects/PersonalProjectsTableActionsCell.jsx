@@ -1,9 +1,11 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import QuickActionsCell from "../tables/QuickActionsCell";
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
+import {showPublishDialog} from './publishDialog/publishDialogRedux';
 
 export const styles = {
   xIcon: {
@@ -11,9 +13,12 @@ export const styles = {
   },
 };
 
-export default class PersonalProjectsTableActionsCell extends Component {
+class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
-    isPublished: PropTypes.bool
+    isPublished: PropTypes.bool,
+    projectId: PropTypes.string,
+    projectType: PropTypes.string,
+    showPublishDialog: PropTypes.func,
   };
 
   state = {
@@ -22,6 +27,10 @@ export default class PersonalProjectsTableActionsCell extends Component {
     unpublishing: false,
     renaming: false,
     remixing: false
+  };
+
+  onPublish = () => {
+    this.props.showPublishDialog(this.props.projectId, this.props.projectType);
   };
 
   render() {
@@ -37,16 +46,16 @@ export default class PersonalProjectsTableActionsCell extends Component {
         >
           {i18n.remix()}
         </PopUpMenu.Item>
-        {!this.props.isPublished && (
+        {this.props.isPublished && (
           <PopUpMenu.Item
             onClick={() => console.log("Unpublish was clicked")}
           >
             {i18n.unpublish()}
           </PopUpMenu.Item>
         )}
-        {this.props.isPublished && (
+        {!this.props.isPublished && (
           <PopUpMenu.Item
-            onClick={() => console.log("Publish was clicked")}
+            onClick={this.onPublish}
           >
             {i18n.publish()}
           </PopUpMenu.Item>
@@ -63,3 +72,9 @@ export default class PersonalProjectsTableActionsCell extends Component {
     );
   }
 }
+
+export default connect(state => ({}), dispatch => ({
+  showPublishDialog(projectId, projectType) {
+    dispatch(showPublishDialog(projectId, projectType));
+  },
+}))(PersonalProjectsTableActionsCell);
