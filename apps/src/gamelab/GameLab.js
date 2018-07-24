@@ -1064,6 +1064,14 @@ GameLab.prototype.execute = function (keepTicking = true) {
   }
 
   if (this.studioApp_.isUsingBlockly() && keepTicking) {
+    const p5 = this.gameLabP5.p5;
+    const original = p5.createSprite;
+
+    p5.createSprite = function () {
+      console.log('called createSprite with', arguments);
+      return original.apply(p5, arguments);
+    };
+
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
