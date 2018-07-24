@@ -420,6 +420,9 @@ id:
       perubahan Anda)"
     delete: Hapuslah akun anda
     delete_text: Klik tombol di bawah ini akan menghapus akun Anda.
+    delete_text_teacher_managed_note: You do not have permission to delete this account
+      because it is managed by your teacher. Your teacher(s) will need to remove you
+      from their sections before you can delete your account.
     delete_text_teacher_note: 'Catatan : menghapus Akun Anda tidak akan menghapus
       akun murid-murid Anda.'
     delete_confirm: Apakah Anda yakin ingin menghapus akun Anda?
@@ -1384,8 +1387,8 @@ id:
       workshop_organizer: Workshop Organizer
       workshop_facilitator: Workshop Facilitator
       workshop_course: Workshop Course
-      email_opt_in: I agree that Code.org can share my contact information and aggregate
-        data about my classes with the Code.org International Partner in my country.
+      email_opt_in: Can we email you about Code.org’s international program, updates
+        to our courses, or other computer science news?
       legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
         share information on how you use Code.org and the Professional Learning resources
         with the Code.org International Partner in your country, school district,
@@ -1454,23 +1457,26 @@ id:
       workshop_course:
         csf_af: CS Fundamentals (Courses A-F)
         csf_express: CS Fundamentals (Pre-Express or Express)
+        csd: CS Discoveries
+        csp: CS Principles
       email_opt_in:
         opt_in_yes: Ya
         opt_in_no: Tidak
     international_opt_in:
-      title: Workshop Attendance for non-U.S. Teachers
+      title: Workshop Attendance
       intro: Thank you for taking time to receive training on Code.org’s curriculum.
         Our mission to bring computer science education opportunities to all children
         in all schools around the world would not be possible without you.
       instructions: Please fill out the form below to indicate that 1) you attended
         a training workshop run by one of Code.org’s international partners, and 2)
         you agree to share your information with our international partner in your
-        country so that we can help to support your journey as a computer science
+        country so that they can help to support your journey as a computer science
         teacher.
       thanks: Thank you for submitting! We look forward to supporting you as you get
         to know Code.org’s curriculum and tools. Please keep sharing your questions
-        and feedback with us by writing to us at support@code.org or by posting on
-        the teacher forum!
+        and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a>
+        or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher
+        forum</a>!
     logged_out:
       heading: Thanks for your interest in the Professional Learning Program!
       body: To get started, you first need to be logged into your Code.org account.
@@ -1478,9 +1484,9 @@ id:
         please check out the <a href="%{url}">Professional Learning Program overview</a>.
     not_teacher:
       body: Thanks for your interest in Code.org’s Professional Learning Program!
-        You’re currently signed into a student account. Please either <a href="%{create_teacher}">create
-        a teacher account</a> or <a href="%{user_settings}">go to your user settings</a>
-        to upgrade your account from student to teacher.
+        You’re currently signed into a student account. Please either create a teacher
+        account or <a href="%{user_settings}">go to your user settings</a> to upgrade
+        your account from student to teacher.
       more: If you’d like more information about the program before you start your
         application, please check out the <a href="%{pl_overview}">Professional Learning
         Program overview</a>.

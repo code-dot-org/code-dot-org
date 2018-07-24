@@ -30,7 +30,7 @@ mk:
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: The Artist
         TextMatch: Text Match
         StudioEC: Play Lab
@@ -191,16 +191,16 @@ mk:
           as last time. You want the square to be the same size as the counter, so
           use the "counter" block. Hint: It''s in the Variables category.'
         turtle_2_7: Here's a program to draw a spiral, but the blocks are disabled
-          so they won't run. Make a new program using a "count with" block (in the
-          Loops category) and "counter" block (in the Variables category) to draw
-          the same spiral.
+          so they won't run. Make a new program using a "for" block (in the Loops
+          category) and "counter" block (in the Variables category) to draw the same
+          spiral.
         turtle_2_7_5: There's a new "draw a snowman" function (in the Functions category).
           Draw two snowmen, of height 250 and 100.
         turtle_2_8: This one's a bit tricky. Use the "draw a snowman" function and
           the new "jump forward" block (in the Actions category). Draw 3 snowmen in
           different colors, 100 pixels apart.
-        turtle_2_9: Use a "count with" loop to draw a family of snowmen with heights
-          of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.
+        turtle_2_9: Use a "for" loop to draw a family of snowmen with heights of 110,
+          100, 90, 80, and 70. The snowmen should all be 60 pixels apart.
         turtle_2_10: Here's some code to try experimenting with different spirals.  What
           happens if you change the turn amount? Or set a random color in the loop?  Draw
           anything you like.
@@ -245,9 +245,8 @@ mk:
           the star to add an input to a function)'
         turtle_3_7: Add an input named "length" to "draw a house" and build a big
           house for the elephant (with edges 150 pixels long)
-        turtle_3_8: Here are all of the blocks from the previous puzzle.  Modify "draw
-          a house" so I end up at the bottom right corner after drawing a new house.
-          Use this modified function to draw three houses.
+        turtle_3_8: Modify "draw a house" so I end up at the bottom right corner after
+          drawing a new house. Use this modified function to draw three houses.
         turtle_3_9: Can you re-create the "draw a house" function without help? Try
           it, and then draw a row of houses.
         turtle_3_10: You've learned a lot! Now use it to draw whatever you want. Try
@@ -308,8 +307,8 @@ mk:
         jigsaw_8: Arrange the blocks to form the image
         jigsaw_9: Arrange the blocks to form the image
         jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_11: Put these blocks in order by number
+        jigsaw_12: Put these blocks in order by number
         jigsaw_13: Fix the puzzle!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
@@ -324,17 +323,16 @@ mk:
           have the cat say "hello" when the dog reaches him?
         studio_c2_5: Can you write a program to make the octopus say "hello" when
           it is clicked?
-        studio_c2_6: Can you write a program to make this penguin move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_c2_6: Can you write a program to make Waddles move around using the
+          up / down / left /right keys to hit all of the targets?
         studio_c2_7: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
+        studio_c2_8: Can you have Waddles say "Ouch!" and play a "hit" sound if he
+          runs into the dinosaur, and then move him with the arrows to make that happen?
+        studio_c2_9: Can you add a block to score a point when Waddles runs into the
+          octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
+          Waddles, and then move him with the arrows until you score?
         studio_c2_11: Create your own story. When you're done, click Finish to let
           friends try your story on their phones.
         studio_c3_story_1: Can you make this dog say "hello world"?
@@ -348,22 +346,22 @@ mk:
           let friends try your story on their phones.
         studio_c3_game_1: Can you write a program to make the octopus say "hello"
           when it is clicked?
-        studio_c3_game_2: Can you write a program to make this penguin move around
-          using the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: Can you write a program to make Waddles move around using
+          the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
+        studio_c3_game_4: Can you have Waddles say "Ouch!" and play a "hit" sound
           if he runs into the dinosaur, and then move him with the arrows to make
           that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_5: Can you add a block to score a point when Waddles runs into
+          the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+          of Waddles, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
-        studio_playlab_1: Penguin wants to say "hello" - can you help him?
-        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
-          say "hello" to each other. Can you help them by using the "say" block twice?
+        studio_playlab_1: Waddles wants to say "hello" - can you help him?
+        studio_playlab_2: Cave Boy (actor 1) and Jasmine (actor 2) would like to say
+          "hello" to each other. Can you help them by using the "say" block twice?
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
           2) and play a sound when he gets there?
@@ -382,15 +380,15 @@ mk:
         studio_playlab_10: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
         studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
+          you help him say "hello" by dragging the "say" block out into the work area
           and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
+        studio_iceage_hello2: Manny (actor 1) found Sid (actor 2) and wants to invite
+          him on the adventure. Help them greet each other by using the the "actor
           say" block twice.
         studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
           last 200 pixels using the "move" block.
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          2). Help Diego move 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
           when they find each other.
         studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
@@ -408,8 +406,8 @@ mk:
           event to make it so that you both play a sound and score a point when Sid
           and Granny collide? Press Run to play the game.
         studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
+          is coming! Change the background to an icy background and set Sid’s speed
+          to fast, then press Run and move him to Diego to warn him.
         studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
           that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
           hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
@@ -421,12 +419,12 @@ mk:
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
         studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
+          are heading to school.  Help them greet each other by using the "actor say"
+          block twice.
         studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
           him go the last 200 pixels using the "move" block.
         studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          for the field day! Help Gumball move 200 pixels down to Darwin using the
           "move actor" block.  Next, connect a block to the "when actor touches" event
           to play a sound when they find each other.
         studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
@@ -607,7 +605,7 @@ mk:
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
         csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
         csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,

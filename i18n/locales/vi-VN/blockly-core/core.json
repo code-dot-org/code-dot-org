@@ -280,7 +280,7 @@
     "MATH_TRIG_TAN": "tan",
     "MATH_TRIG_TOOLTIP_ACOS": "Trả về giá trị hàm arccos() của một số (theo đơn vị độ).",
     "MATH_TRIG_TOOLTIP_ASIN": "Trả về giá trị hàm arcsin() của một số (theo đơn vị độ).",
-    "MATH_TRIG_TOOLTIP_ATAN": "Trả về giá trị hàm arctang() của một số (theo đơn vị độ).",
+    "MATH_TRIG_TOOLTIP_ATAN": "Trả về giá trị hàm arctan() của một số (theo đơn vị độ).",
     "MATH_TRIG_TOOLTIP_COS": "Trả về giá trị hàm cos() của một góc (góc theo đơn vị độ).",
     "MATH_TRIG_TOOLTIP_SIN": "Trả về giá trị hàm sin() của một góc (góc theo đơn vị độ).",
     "MATH_TRIG_TOOLTIP_TAN": "Trả về giá trị hàm tang() của một góc (góc theo đơn vị độ).",

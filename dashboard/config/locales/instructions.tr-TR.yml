@@ -826,6 +826,10 @@ tr:
         \ toprak var.  Zemini düzleştirmek için kaç kürek dolusu toprak taşımalısın?"
       4-5 While Loops Assessment 1_instruction: Birçok çukur ve toprak var. Yardım
         ederek çukurları doldurmamı ve toprağı temizlememi sağla.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Proje fikri: Bir savunma oyunu yap!'
       Alien Defender_2018_instruction: 'Proje fikri: Bir savunma oyunu yap!'
@@ -1040,6 +1044,7 @@ tr:
         make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and
         piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Tüm talimatları için tıklayınız)"
       CSD Hackathon Week 1_instruction: "(Tüm talimatları için tıklayınız)"
@@ -6787,10 +6792,10 @@ tr:
         çözmek için birçok farklı yol vardır. En kısa çözüm 6 blok kullanır!
       course2_artist_prog_challenge2_instruction: "* Bana bu yoldaki sarı çizgileri
         boyamaya yardım et! *"
-      course2_bee_conditionals_challenge1_instruction: Collect all of the nectar or
-        make all the honey.
-      course2_bee_conditionals_challenge2_instruction: Collect all of the nectar or
-        make all the honey.
+      course2_bee_conditionals_challenge1_instruction: Tüm nektarı topla veya tüm
+        bal yap.
+      course2_bee_conditionals_challenge2_instruction: Tüm nektarı topla veya tüm
+        bal yap.
       course2_collector_loops_challenge2_instruction: Hadi döngüler kullanarak hazine
         - avı yapalım! Toplayıcıya hata ayıklayarak yardımcı ol. Tüm hazineyi al!
       course2_collector_prog_challenge1_instruction: Dikkatle bak! * 10 * parça hazine
@@ -7390,6 +7395,7 @@ tr:
       courseB_maze_seq2_instruction: Beni domuza götürmek için kodu değiştir
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the
         acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat
         to the acorn.
@@ -8288,10 +8294,8 @@ tr:
       courseD_bee_conditionals8_2018_instruction: |-
         Collect nectar if there is a flower.
         Otherwise, make honey (because there is a honeycomb).
-      courseD_bee_conditionals9_instruction: Collect all of the nectar or make all
-        the honey.
-      courseD_bee_conditionals9_2018_instruction: Collect all of the nectar or make
-        all the honey.
+      courseD_bee_conditionals9_instruction: Tüm nektarı topla veya tüm bal yap.
+      courseD_bee_conditionals9_2018_instruction: Tüm nektarı topla veya tüm bal yap.
       courseD_bee_conditionals_challenge1_instruction: Tüm nektarı topla veya tüm
         bal yap.
       courseD_bee_conditionals_challenge1_2018_instruction: Tüm nektarı topla veya
@@ -9042,6 +9046,8 @@ tr:
       courseE_farmer_concept4_instruction: Şimdi bir düzey daha derin gidelim! Biz
         bütün bu kod bloğunu bir döngü içine koyun fakat artist tekrar başa dönsün.
         Hangi kod bloklarını en dıştaki döngü sonunda yerleştirmeliyim?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each
+        of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will

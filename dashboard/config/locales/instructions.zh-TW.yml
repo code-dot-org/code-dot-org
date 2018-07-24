@@ -490,6 +490,10 @@ zh-TW:
       4-5 While Loops 7_instruction: 哇，現在這裡有三個土堆！你可以寫個程式，挖除它們直到地面變平整嗎？
       4-5 While Loops 8_instruction: " 有一個非常深的洞，還有一個非常大的土堆。需要幾鏟土才能把地面變平整呢？提示:：填土和挖土都用了「當…」迴圈。"
       4-5 While Loops Assessment 1_instruction: 這兒有許多坑洞和土堆。幫我把它們填滿或鏟除，讓地面變平整。
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 專案點子：在 Play Lab 裡設計一個獨一無二的遊戲！
       Alien Defender_2018_instruction: 專案點子：在 Play Lab 裡設計一個獨一無二的遊戲！
@@ -689,6 +693,7 @@ zh-TW:
       C3-Farmer While Loops 8_instruction: " 有一個非常深的洞，還有一個非常大的土堆。需要幾鏟土來把地面變平整？提示:：填土和挖土都用了「當…時」迴圈。"
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and
         piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "（點擊觀看完整說明）"
       CSD Hackathon Pt 2_instruction: "（點擊觀看完整說明）"
       CSD Hackathon Week 1_instruction: "（點擊觀看完整說明）"
@@ -6326,6 +6331,7 @@ zh-TW:
       courseB_maze_seq2_instruction: "*「有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。」*"
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the
         acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq4_2018_instruction: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -7842,6 +7848,8 @@ zh-TW:
       courseE_farmer_concept4_instruction: |-
         現在讓我們加深難度！
         我們已經將整個程式積木嵌套在另一個迴圈內，但你需要讓小藝術家回到初始位置來畫出下一行。要在最外層迴圈下添加哪個積木，才能畫完整個網格？
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each
+        of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will

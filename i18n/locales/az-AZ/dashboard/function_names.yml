@@ -2,13 +2,13 @@ az:
   data:
     function_names:
       x: x
-      details: details
-      draw eyebrow: draw eyebrow
-      draw pupil: draw pupil
+      details: detallar
+      draw eyebrow: bir qaş çək
+      draw pupil: bir göz bəbəyi çək
       draw a circle: çevrə çək
-      draw a car: draw a car
+      draw a car: bir avtomobil çək
       draw_rect: draw_rect
-      draw square: draw square
+      draw square: bir kvadrat çək
       jump to controller top left: jump to controller top left
       jump to middle: jump to middle
       draw a button: draw a button
@@ -20,11 +20,11 @@ az:
       draw a head: draw a head
       draw sitting stick figure: draw sitting stick figure
       draw head: draw head
-      draw arms: draw arms
+      draw arms: qolları çək
       jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
+      draw O: O çək
+      draw D: D çək
+      draw E: E çək
       draw ear stems: draw ear stems
       big gear: big gear
       small gear: small gear
@@ -48,9 +48,9 @@ az:
       draw triangle: draw triangle
       draw circle: draw circle
       draw goal: draw goal
-      graph: graph
-      draw waves: draw waves
-      draw a wave: draw a wave
+      graph: qrafika
+      draw waves: dalğalar çək
+      draw a wave: bir dalğa çək
       draw a small triangle: draw a small triangle
       draw a medium triangle: draw a medium triangle
       draw a large triangle: draw a large triangle
@@ -65,10 +65,10 @@ az:
       make all honey: make all honey
       draw a star: bir ulduz çək
       game has been won: game has been won
-      draw: draw
+      draw: çək
       draw bit: draw bit
       draw a polygon: draw a polygon
-      draw a shape: draw a shape
+      draw a shape: bir forma çək
       get 2 and make 2: get 2 and make 2
       draw a pinwheel: draw a pinwheel
       drawTree: drawTree
@@ -81,11 +81,11 @@ az:
       dropR: dropR
       grabL: grabL
       dropL: dropL
-      init: init
+      init: başlat
       grabR: grabR
       do something: bir şey etmək
       filter_pixel: filter_pixel
-      draw_image: draw_image
+      draw_image: şəkil_çək
       witch ending: witch ending
       story: story
       starting path: starting path
@@ -93,14 +93,14 @@ az:
       patrol: patrol
       fill in bg: fill in bg
       draw grid1: draw grid1
-      draw lines: draw lines
+      draw lines: xətt çək
       Draw a Square Line: Draw a Square Line
-      Draw a triangle: Draw a triangle
-      Draw a Cube: Draw a Cube
-      draw a cube: draw a cube
+      Draw a triangle: Bir üçbucaq çək
+      Draw a Cube: Bir Kub çək
+      draw a cube: bir kub çək
       draw an octagon 20: draw an octagon 20
-      Draw a square: Draw a square
-      cube: cube
+      Draw a square: Bir kvadrat çək
+      cube: kub
       do something2: do something2
       jump upper right: jump upper right
       draw a line of  squares: draw a line of  squares
@@ -116,7 +116,7 @@ az:
       Draw a Triangle with length: Draw a Triangle with length
       draw a triangle wioth length: draw a triangle wioth length
       draw a sqaure: draw a sqaure
-      triangle: triangle
+      triangle: üçbucaq
       draw a spiral shape: draw a spiral shape
       get 3 nectar: get 3 nectar
       get many nectar: get many nectar
@@ -137,7 +137,7 @@ az:
       patrol left right: patrol left right
       empty function: empty function
       check guess: check guess
-      Jump: Jump
+      Jump: Tullan
       test: yoxla
       build bridge: build bridge
       run right: run right

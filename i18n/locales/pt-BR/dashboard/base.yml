@@ -366,6 +366,7 @@ pt-BR:
     current_password_hint: '(precisamos de sua senha atual para confirmar suas alterações)'
     delete: 'Excluir sua conta'
     delete_text: "Clicando no botão abaixo, você vai excluir sua conta."
+    delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
     delete_text_teacher_note: "Lembre-se: a exclusão da sua conta não vai excluir as contas dos seus alunos."
     delete_confirm: 'Tem certeza de que deseja excluir sua conta?'
     deleted_user: 'usuário removido'
@@ -1085,6 +1086,8 @@ pt-BR:
       workshop_course:
         csf_af: 'Fundamentos de Ciência da Computação (Cursos A-F)'
         csf_express: 'Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)'
+        csd: 'CS Discoveries'
+        csp: 'Princípios da CC - 16-17'
       email_opt_in:
         opt_in_yes: 'Sim'
         opt_in_no: 'Não'
@@ -1113,4 +1116,3 @@ pt-BR:
     privacy_policy: 'política de privacidade'
     logout: 'Sair'
     yes: 'Sim'
-
