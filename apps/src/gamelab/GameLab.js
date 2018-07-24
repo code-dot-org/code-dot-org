@@ -62,6 +62,7 @@ import GameLabJrLib from './GameLabJr.interpreted';
 import defaultSprites from './defaultSprites.json';
 import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import ValidationSetupCode from './ValidationSetup.interpreted.js';
+import wrap from './debugger/replay';
 
 const LIBRARIES = {
   'GameLabJr': GameLabJrLib,
@@ -1064,13 +1065,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
   }
 
   if (this.studioApp_.isUsingBlockly() && keepTicking) {
-    const p5 = this.gameLabP5.p5;
-    const original = p5.createSprite;
-
-    p5.createSprite = function () {
-      console.log('called createSprite with', arguments);
-      return original.apply(p5, arguments);
-    };
+    wrap(this.gameLabP5.p5);
 
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
