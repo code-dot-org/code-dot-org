@@ -1664,7 +1664,7 @@ class User < ActiveRecord::Base
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
+      user_script.update!(assigned_at: Time.now)
       return user_script
     end
   end
@@ -1991,11 +1991,13 @@ class User < ActiveRecord::Base
   end
 
   def depended_upon_for_login?
-    # Teacher is depended upon for login if student does not have a personal login
-    # and student has no other teachers.
-    students.any? do |student|
-      student.can_create_personal_login? && student.teachers.uniq.one?
-    end
+    students.any?(&:depends_on_teacher_for_login?)
+  end
+
+  def depends_on_teacher_for_login?
+    # Student depends on teacher for login if they do not have a personal login
+    # and only have one teacher.
+    student? && can_create_personal_login? && teachers.uniq.one?
   end
 
   private
