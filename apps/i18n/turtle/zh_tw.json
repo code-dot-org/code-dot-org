@@ -56,7 +56,7 @@
   "jumpWestTooltip": "讓小藝術家往西移動，且不留下任何筆跡。",
   "lengthFeedback": "你幾乎做對了，除了移動的長度，再試試吧。",
   "lengthParameter": "長度",
-  "loopVariable": "計數器",
+  "loopVariable": "counter",
   "moveBackward": "移動-向後",
   "moveEastTooltip": "讓小藝術家往東移動。",
   "moveForward": "移動-向前",

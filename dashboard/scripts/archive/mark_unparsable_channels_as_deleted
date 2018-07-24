@@ -10,12 +10,10 @@ require_relative '../../config/environment'
 
 to_delete = []
 PEGASUS_DB[:storage_apps].where(state: 'active').paged_each do |row|
-  begin
-    JSON.parse row[:value]
-  rescue JSON::ParserError
-    to_delete << row[:id]
-    puts row[:id]
-  end
+  JSON.parse row[:value]
+rescue JSON::ParserError
+  to_delete << row[:id]
+  puts row[:id]
 end
 
 modified = PEGASUS_DB[:storage_apps].where(id: to_delete).update(state: 'deleted')

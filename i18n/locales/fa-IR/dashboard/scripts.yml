@@ -2048,7 +2048,7 @@ fa:
             'Unplugged: The Design Recipe':
               name: 'بدون دستگاه: دستور العمل طرح'
         AlgebraB:
-          title: علوم کامپیوتر در جبر
+          title: 'علوم کامپیوتر در جبر'
           description: یادگیری برنامه نویسی تابعی از طریق جبر
           description_short: یادگیری برنامه نویسی تابعی از طریق جبر
           description_audience: ''
@@ -9530,6 +9530,16 @@ fa:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

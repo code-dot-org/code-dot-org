@@ -533,6 +533,10 @@ zh-CN:
         csd_gamelab_booleans: 布尔表达式
         csd_gamelab_conditional_statements: 条件表达式
         csd_gamelab_if_else: 如果/否则 语句
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

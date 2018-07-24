@@ -7,6 +7,8 @@ Dashboard::Application.routes.draw do
 
   resources :user_levels, only: [:update, :destroy]
 
+  patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
+
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
@@ -205,8 +207,8 @@ Dashboard::Application.routes.draw do
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :blocks, constraints: {id: /[^\/]+/}
-
   resources :shared_blockly_functions, path: '/functions'
+  resources :libraries
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
@@ -447,10 +449,6 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
-    # Temporary transition routes. TODO(Andrew): delete after switching JotForm forms over to POST
-    get 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general_temp'
-    get 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator_temp'
-
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
@@ -522,9 +520,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
-  # Used in angular assessments tab
-  get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
-  get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes

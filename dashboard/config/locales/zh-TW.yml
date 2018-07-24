@@ -30,7 +30,7 @@ zh-TW:
         edit_header: 編輯帳戶資料
         error:
           future: 不能選擇將來的時間
-  hello: 世界您好
+  hello: Hello world
   welcome_back: 歡迎回來，%{name}
   your_professional_learning_plan: 你的專業學習計畫
   see_your_learning_plan: 觀看你的學習計劃
@@ -93,6 +93,8 @@ zh-TW:
     need_unlock: 沒有收到解鎖說明嗎？
     not_linked: 抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。
     use_clever: 對不起，您的 Code.org 帳號無法連結到您的 %{provider}。請登入您的 Clever Portal 來代替。
+    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}.
+      Please try again.
   signup_form:
     student_count: "%{count} 名學生已經註冊。"
     teacher_count: "%{count} 名教師已經註冊。"
@@ -272,7 +274,7 @@ zh-TW:
       free_play:
         playlab: 製作一個 Play Lab App
         artist: 畫些什麼
-        calculate: Calculate Something
+        calculate: Calculate something
         applab: 製作一個 App Lab app
         gamelab: 製作遊戲實驗室專案
         weblab: 製作網路實驗室 (測試版) 專案
@@ -317,7 +319,7 @@ zh-TW:
       classroom: 教師主頁
       district_dashboard: 分區控制台
       label: 嗨，%{username}
-      stats: 我的進度
+      stats: Code Studio
       settings: 帳戶設定
       logout: 登出
       signin: 登入
@@ -393,11 +395,12 @@ zh-TW:
     confirm_secret_words: 為了確認是你本人請輸入目前的通關密語
     enter_parent_email: 輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)
     update: Update Account
+    account_successfully_updated: Account successfully updated.
   user_level:
     completed: 已完成
     tried: 已體驗
   home:
-    title: 程式工作室
+    title: Code Studio
     description: Code.org 建立的所有線上課程，通通放在 Code Studio 中。
     lines_of_code: 學生們已寫了 %{lines_count} 行程式碼
     lines_of_code_linebreak: "%{students_count} 百萬學生參與，共寫了 <br/>%{lines_count} 行程式碼"
@@ -541,7 +544,7 @@ zh-TW:
       卡通頻道著作權所有，並保留一切權利。
     code_from_html: Code.org 使用 p5.play 遊戲資源庫，根據 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a> 之許可。
-    powered_by_aws: 由亞馬遜網路服務系統提供服務
+    powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of
       Code&reg; 都是 Code.org.的商標。"
     copyright: 版權所有
@@ -640,7 +643,7 @@ zh-TW:
       title: 藝廊
       body: 觀看由用戶建立的應用程式及藝術畫作
     gamelab:
-      title: Game Lab（測試版）
+      title: Game Lab
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: 年齡 13+
@@ -662,10 +665,10 @@ zh-TW:
       title: 迪士尼無限 Play Lab
       body: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
     minecraft:
-      title: 當個創世神
+      title: Minecraft
       body: 從代碼的角度來探索 Minecraft 世界。
     minecraft2016:
-      title: 當個創世神
+      title: Minecraft
       body: 在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。
     hero:
       title: Minecraft
@@ -1043,6 +1046,10 @@ zh-TW:
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
+  stage_extras_teacher_message: You have Lesson Extras turned off for some of your
+    sections. Your students won’t see this page unless you turn them on. You can turn
+    Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher
+    Dashboard</a>.
   locked_stage: 此階段內容無法觀看，因為這個階段目前已上鎖。當老師設定的時間到了或是審閱了你的答案後，這個階段就會解鎖。
   hidden_stage: 你的老師沒想到你會在這，問問你的老師你該上哪堂課。
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
@@ -1098,6 +1105,127 @@ zh-TW:
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+    form_labels:
+      first_name: First Name
+      first_name_preferred: Preferred First Name
+      last_name: Last Name
+      email: 電子信箱
+      email_alternate: Alternate Email
+      gender: Gender Identity
+      school_name: 學校名稱
+      school_city: 學校所在城市
+      school_country: 學校所屬國家
+      ages: Which age(s) do you teach this year?
+      subjects: Which subject(s) do you teach this year?
+      resources: Which of the following CS education resources do you use?
+      robotics: Which of the following robotics resources do you use?
+      workshop_organizer: Workshop Organizer
+      workshop_facilitator: Workshop Facilitator
+      workshop_course: Workshop Course
+      email_opt_in: I agree that Code.org can share my contact information and aggregate
+        data about my classes with the Code.org International Partner in my country.
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
+        share information on how you use Code.org and the Professional Learning resources
+        with the Code.org International Partner in your country, school district,
+        and facilitators. We will share your contact information, which courses/units
+        you are using and aggregate data about your classes with these partners. This
+        includes the number of students in your classes, the demographic breakdown
+        of your classroom, and the name of your school and district. We will not share
+        any information about individual students with our partners: all student information
+        will be de-identified and aggregated. Our International Partners and facilitators
+        are contractually obliged to treat this information with the same level of
+        confidentiality as Code.org.'
+    form_entries:
+      gender:
+        male: 男性
+        female: 女性
+        non_binary: Non-binary
+        not_listed: Preferred term not listed
+        none: 不想回答
+      school_country:
+        canada: Canada
+        chile: Chile
+        israel: Israel
+        malaysia: Malaysia
+        mexico: Mexico
+        thailand: Thailand
+      ages:
+        ages_under_6: "< 6 years old"
+        ages_7_8: 7-8 years old
+        ages_9_10: 9-10 years old
+        ages_11_12: 11-12 years old
+        ages_13_14: 13-14 years old
+        ages_15_16: 15-16 years old
+        ages_17_18: 17-18 years old
+        ages_19_over: 19+ years old
+      subjects:
+        cs: 計算機科學
+        ict: ICT
+        math: 運算
+        science: 科學
+        history: History / Social Studies
+        la: 語言藝術
+        efl: English as a Foreign Language
+        music: Music
+        art: Art
+        other: 'Other:'
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        kodable: Kodable
+        lightbot: Lightbot
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Other:'
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Other:'
+      workshop_course:
+        csf_af: CS Fundamentals (Courses A-F)
+        csf_express: CS Fundamentals (Pre-Express or Express)
+      email_opt_in:
+        opt_in_yes: 是
+        opt_in_no: 否
+    international_opt_in:
+      title: Workshop Attendance for non-U.S. Teachers
+      intro: Thank you for taking time to receive training on Code.org’s curriculum.
+        Our mission to bring computer science education opportunities to all children
+        in all schools around the world would not be possible without you.
+      instructions: Please fill out the form below to indicate that 1) you attended
+        a training workshop run by one of Code.org’s international partners, and 2)
+        you agree to share your information with our international partner in your
+        country so that we can help to support your journey as a computer science
+        teacher.
+      thanks: Thank you for submitting! We look forward to supporting you as you get
+        to know Code.org’s curriculum and tools. Please keep sharing your questions
+        and feedback with us by writing to us at support@code.org or by posting on
+        the teacher forum!
+    logged_out:
+      heading: Thanks for your interest in the Professional Learning Program!
+      body: To get started, you first need to be logged into your Code.org account.
+        If you’d like more information about the program before you start your application,
+        please check out the <a href="%{url}">Professional Learning Program overview</a>.
+    not_teacher:
+      body: Thanks for your interest in Code.org’s Professional Learning Program!
+        You’re currently signed into a student account. Please either <a href="%{create_teacher}">create
+        a teacher account</a> or <a href="%{user_settings}">go to your user settings</a>
+        to upgrade your account from student to teacher.
+      more: If you’d like more information about the program before you start your
+        application, please check out the <a href="%{pl_overview}">Professional Learning
+        Program overview</a>.
+    no_teacher_email:
+      body: Your account doesn’t have an email address. Please <a href="%{user_registration}">visit
+        your account settings</a> to add your email address before completing this
+        form.
   courses_category: Full Courses
   cookie_banner:
     message: By continuing to browse our site or clicking "I agree," you agree to

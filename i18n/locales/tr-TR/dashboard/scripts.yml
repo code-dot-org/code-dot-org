@@ -2042,7 +2042,7 @@ tr:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Tasarım Tarifi'
         AlgebraB:
-          title: Cebirde Bilgisayar Bilimi
+          title: 'Cebirde Bilgisayar Bilimi'
           description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
           description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
           description_audience: ''
@@ -9522,6 +9522,16 @@ tr:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

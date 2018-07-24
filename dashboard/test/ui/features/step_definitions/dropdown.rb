@@ -4,7 +4,7 @@ end
 
 And /^I press dropdown number (\d+)$/ do |n|
   elements = @browser.find_elements(:class, 'blocklyText')
-  elements[n.to_i].find_element(:xpath, '..').click
+  elements[n.to_i].find_element(:xpath, '../*[last()]').click
 end
 
 Then /^the dropdown is (.*)$/ do |visibility|

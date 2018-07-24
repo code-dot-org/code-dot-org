@@ -6,7 +6,7 @@ th:
       2-3 Artist 11_markdown_instruction: 'ทำขอบให้กับเครื่องหมายหยุด โดยการทำให้เป็นรูปแปดเหลี่ยมมีด้านยาว 100 พิกเซล คุณควรจะหันไปกี่องศา (คำใบ้: อะไรคือ 360 หารด้วย 8?) '
       2-3 Artist 12_markdown_instruction: "Create a circle to finish the eyeball! \n\nIf the artist turns 1 degree with each loop, how many times do you need to repeat the code to draw a circle? "
       2-3 Artist 2 new_markdown_instruction: บ้านหลังนี้มีผนังเสร็จที่เสร็จไปแล้วครึ่งหนึ่ง แต่ละด้านมีขนาด 100 พิกเซล แต่ผนังที่เสร็จไปแล้วครึ่งหนึ่งเพียง 50 พิกเซล ให้คุณทำผนังให้เสร็จสมบูรณ์
-      2-3 Artist 3.4_markdown_instruction: "บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป\nวาดเส้นประโดยใช้บล็อก \"กระโดดไปข้างหน้า\" และ \"ไปข้างหน้า\"\nแต่ละเส้นมีความยาว 50 พิกเซล"
+      2-3 Artist 3.4_markdown_instruction: "บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป\nวาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า...` และบล็อก `เดินไปข้างหน้า`\nโดยแต่ละเส้นมีความยาว 50 พิกเซล"
       2-3 Artist 3new_markdown_instruction: "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. \n\n*(Note: The width of each hat is 50 pixels.)*"
       2-3 Artist 4_markdown_instruction: ช่วยวาดบ้านให้แมวตัวนี้ให้หน่อย
       2-3 Artist 6_markdown_instruction: "This house needs a roof! Draw the triangle.  \n\nHint: all three sides are the same length.\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>"
@@ -74,7 +74,7 @@ th:
         Now, draw anything you like!
         <br/><br/>
       2-3 Artist Loops New 2_markdown_instruction: |-
-        "นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`เดินไปข้างหน้า` เพียงหนึ่งบล็อกและบล็อก` หันไป ` อีกเพียงหนึ่งบล็อกเท่านั้น
+        "นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`ไปข้างหน้า` เพียงหนึ่งบล็อกและบล็อก` หัน... ไป ` ได้อีกเพียงหนึ่งบล็อกเท่านั้น
         
         คุณสามารถใช้ ` ทำซ้ำ ` เพื่อแก้ปริศนานี้ได้ไหม?"
       2-3 Artist Loops New 9_markdown_instruction: วาดตัว V อย่างง่ายๆ (โดยที่ทั้งสองด้านยาว 50 พิกเซล) เพื่อทำลูกศรให้เสร็จ
@@ -129,7 +129,7 @@ th:
       2-3 Bee Functions 1_markdown_instruction: "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower."
       2-3 Bee Functions 10_markdown_instruction: "ดอกไม้สีม่วงเปลี่ยนไปมาระหว่าง การมีน้ำหวานจากเกสรให้ 1 ครั้งหรือ 0 ครั้ง ทุกครั้งที่คุณเรียกใช้ปริศนา\n\nสร้างฟังก์ชั่นที่จะเก็บรวบรวมจากดอกไม้สีม่วงที่มีน้ำหวานเท่านั้น"
       2-3 Bee Functions 2_markdown_instruction: "ฟังก์ชันเป็นบล็อกของโค้ดที่ทำภารกิจอย่างใดอย่างหนึ่ง\n\nใช้ฟังก์ชัน `เก็บ 5` เพื่อเก็บ นำหวานจากเกสรทีละ 5 ครั้ง"
-      2-3 Bee Functions 4_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางของผึ้ง, เก็บรวบรวมหวานและจากนั้นพาผึ้งกลับไปที่เริ่มต้น\n\nใช้ฟังก์ชั่นในการเก็บรวบรวมน้ำหวานทั้งหมด"
+      2-3 Bee Functions 4_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางการบินของผึ้ง เก็บรวบรวมน้ำหวานและจากนั้นพาผึ้งบินกลับไปที่จุดเริ่มต้น\n\nให้ใช้ฟังก์ชั่นนี้ในการเก็บรวบรวมน้ำหวานทั้งหมด"
       2-3 Bee Functions Assessment 1_markdown_instruction: "**การประเมิน:** ใช้ฟังก์ชันที่กำหนดเพื่อเก็บรวบรวมน้ำหวานจากเกสรดอกไม้แต่ละดอก"
       2-3 Bee Functions Assessment 2_markdown_instruction: "**การประเมิน:** สร้างฟังก์ชั่นที่จะหันหน้าไป, บินไปข้างหน้าและทำน้ำผึ้ง 3 ครั้ง, แล้ว พาผึ้งกลับไปที่มันเริ่มต้นและหันกลับ."
       2-3 Bee Loops 1_markdown_instruction: |-
@@ -164,7 +164,7 @@ th:
       4-5 Artist 10_markdown_instruction: Press "Run" to try the code. Then, repeat it enough times to complete the drawing. The colors will be different every time.
       4-5 Artist 11_markdown_instruction: "วาดเส้นสีเขียวให้เสร็จ เส้นเหล่านี้ยาวเส้นละ 300 พิกเซล และ อยูห่างกัน 15 พิกเซล"
       4-5 Artist 2_markdown_instruction: ลูปโค้ดนี้โดยการใช้บล็อก `ทำซ้ำ` เพื่อวาดสี่เหลี่ยมจตุรัสให้เสร็จสมบูรณ์
-      4-5 Artist 3.5_markdown_instruction: "พยายามหาว่าจะเกิดอะไรขึ้นถ้าคุณเรียกใช้งานโค้ดนี้ (หรือเพียงแค่กด \"เริ่ม \" และลองดูการใช้งานว่าเป็นอย่างไร) ถัดไปให้ทำซ้ำโค้ดด้วยจำนวนครั้งให้เพียงพอเพื่อวาดภาพให้เสร็จสิ้น!"
+      4-5 Artist 3.5_markdown_instruction: "พยายามหาว่าจะเกิดอะไรขึ้นถ้าคุณเรียกใช้งานโค้ดนี้ (หรือเพียงแค่กด \" เริ่ม \" และลองดูการใช้งานว่าเป็นอย่างไร) ถัดไปให้ทำซ้ำโค้ดด้วยจำนวนครั้งให้เพียงพอเพื่อวาดภาพให้เสร็จสิ้น!"
       4-5 Artist 3_markdown_instruction: "กระถางดอกไม้สี่เหลี่ยมนี้มีความยาวโดยรอบทั้งสิ้น 600 ซึ่งด้านยาวมีความยาว 200 \n\nให้วาดสี่เหลี่ยมผืนผ้าโดยใช้บล็อกสองสามบล็อกถ้าเป็นไปได้"
       4-5 Artist 4_markdown_instruction: "มีกี่องศาในวงกลม?  \nลูปบล็อกเพื่อสร้างวงกลมสีต่างๆ"
       4-5 Artist 5_markdown_instruction: อะไรคือสิ่งที่เราสามารถใช้แทนที่ "??? " เพื่อให้แน่ใจว่าผีดิบวาดภาพเสร็จโดยใช้ลูปที่ให้ไว้?
@@ -6642,6 +6642,7 @@ th:
         
         This program should create two new sprites, one on the left of the screen and one on the right, but it's only drawing one. **You don't need to add any code**, just rearrange the code already present to make sure that both sprites show up like the picture on the right.
       CSD U3 Sprites intro sprites_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
+      CSD U3 Sprites intro sprites_2018 - Validation Test_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
       CSD U3 Sprites intro sprites_2018_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
       CSD U3 Sprites make template_markdown_instruction: |-
         # Make Your Own Sprite
@@ -19699,15 +19700,19 @@ th:
       Luigi's Pizza 3_markdown_instruction: That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the _else_ clause so that we charge them a premium for toppings that we don't normally offer? Let's charge $10,000 for a topping we don't carry.
       Luigi's Pizza 4_markdown_instruction: "Free Play: What can you do to make Luigi's cost function even more useful? Try one (or more) of the following:  \n\n- Create a new function to display an image of the chosen pizza\n- Create a function that allows for ordering multiple pizzas (the same, or with different toppings)\n- Create a function that allows you to add a coupon code for a 30% discount"
       MC Agent Freeplay_markdown_instruction: "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world."
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "Some games let you keep score. Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n    <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself a point when you tag them.  \n  \n  Reach five points to win!"
       MC_2017_Ryan_02_markdown_instruction: "Code like this can be made even shorter using loops!  \n\nNow get the Agent to the pressure plate using a `repeat` loop to help him move forward."
       MC_HOC_2017 Agent Test_markdown_instruction: "Click \"Run\" to move the player using the **arrow keys**.  \n\nTo pass this level, you will need to get to the door and open it (using the **space bar**) so you can get to the orange square inside."
       MC_HOC_2017_01_markdown_instruction: "Click \"Run\" to move the player using the **arrow keys**.  \n\nTo pass this level, you will need to get to the door and open it (using the **space bar**) so you can get to the orange square inside."
       MC_HOC_2017_01_Cole_markdown_instruction: You need to collect all the tools on this journey. Move around using the **arrow keys**, and get to the chest on the path to win
       MC_HOC_2017_01_Kiki_markdown_instruction: 'To play this level, click the orange "Run" button beneath the play space, then move the player around using the **arrow keys**.  '
-      MC_HOC_2017_01_RETRY_markdown_instruction: |-
-        The door is locked, but the Agent is here to help!
+      MC_HOC_2017_01_RETRY_markdown_instruction: |2
+        ประตูถูกล็อคอยู่ แต่เรามีเอเจนท์ ที่เป็นฮีโร่คอยช่วยเหลือเราอยู่!
         
-        Snap a `move forward` block to the bottom of the `when run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up], then press "Run" and use the arrow keys to move out of the house to collect the **chest** [chest].
+        ให้ลากบล็อกคำสั่ง ` ไปข้างหน้า ` ไปวางต่อไว้ด้านล่างของบล็อกคำสั่ง
+        ` เมื่อเรียกใช้งาน ` ที่อยู่ภายในพื้นที่ทำงานเพื่อพาเอเจนท์ไปที่แป้นกด
+         [PressurePlate_Up] เพื่อปลดล็อคประตูให้เปิดออก, จากนั้นกดที่ปุ่ม “เริ่ม”
+        และใช้แป้นลูกศรเพื่อพาผู้เล่นให้เดินออกมาจากบ้าน เพื่อไปเก็บ**หีบสมบัติ**
       MC_HOC_2017_02_markdown_instruction: The player needs to get into that secret grove.  Help The Agent open the gate by writing code to get him to the pressure plate.
       MC_HOC_2017_02_Cole_markdown_instruction: "{currentPlayerName} is headed on an adventure! To help, get the **map** [map_empty] behind the locked door on the right. \n \nSnap the code into the workspace to move the Agent to the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get through. "
       MC_HOC_2017_02_Kiki_markdown_instruction: "The player is headed out on an adventure, but first they have to get the torch that is hidden on the other side of that locked door. \n\nProgram the Agent to move forward twice to follow the white path and get to the pressure plate so he can open the door for the player."
@@ -19726,7 +19731,7 @@ th:
         Loops are not always helpful.
         
         These cacti are not growing in an obvious pattern, so a loop would not clear them correctly.  Instead, we've given you a function called `destroy and move` that will do the hard work for you each time the Agent gets to an obstacle.
-      MC_HOC_2017_05_Cole_markdown_instruction: "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the `place` block so that {currentPlayerName} can get to the **shovel** [diamond_shovel]."
+      MC_HOC_2017_05_Cole_markdown_instruction: "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the <xml>  <block type=\"craft_placeBlock\">\n    <title name=\"TYPE\">       </title>\n  </block></xml> block so that {currentPlayerName} can get to the **shovel** [diamond_shovel]."
       MC_HOC_2017_05_Josh_markdown_instruction: |-
         Oh no, the bridge is out!
         
@@ -19735,7 +19740,7 @@ th:
       MC_HOC_2017_06_Cole_markdown_instruction: "Another river, but this one is much wider! \n \nFix this code to help the Agent build a bridge so that {currentPlayerName} can get to the **pickaxe** [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh_markdown_instruction: "Another river, but this one is much wider!  \n\nFix this code to help the Agent build a bridge across this river."
       MC_HOC_2017_06_Kiki_markdown_instruction: "Another river, but this one is much wider!  \n\nFix this code to help the Agent build a bridge across the water."
-      MC_HOC_2017_07_Cole_markdown_instruction: "There's ice in the way!  \n \nThe `clear path` function can help you destroy the ice and get {currentPlayerName} to the Minecart [minecart_normal]! "
+      MC_HOC_2017_07_Cole_markdown_instruction: "นั่นมันมีน้าแข็งขวางอยู่บนทางนี่!\n\nฟังก์ชั่น`เคลียร์เส้นทาง `สามารถช่วยคุณทำลายน้าแข็ง และช่วยให้ {currentPlayerName} สามารถไปถึง รถเหมือง [minecart_normal]! ได้ "
       MC_HOC_2017_07_Kiki_markdown_instruction: "Loops are not the only way to repeat code!  \n\nHere, we've given you a function called `clear cacti` that will do the hard work of clearing three cacti every time you use it.  Use two `clear cacti` blocks to clear the path to the orange square. "
       MC_HOC_2017_07a_Kiki_markdown_instruction: Now, edit this loop to help the Agent clear a path to the orange square.
       MC_HOC_2017_08_Cole_markdown_instruction: "Now, instead of destroying before you move, you will need to place a block.  \n\nChange the provided function to work for the desert."
@@ -26545,9 +26550,12 @@ th:
         What do you think will happen if you press "▶ Run" and then click on her?
       Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 1_markdown_instruction: "This is Geraldine, your new pet giraffe.  \n\nWhat do you think will happen if you press \"▶ Run\" and then click on her? \n\n---"
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
+      Virtual Pet 2 - Validated_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
       Virtual Pet 2_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
       Virtual Pet 3_markdown_instruction: "We can’t have a dirty giraffe wandering around!  \n\n1)  Add a new soap sprite to the screen.  \n2)  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\n\n---\n\nTo reset the color, use this block:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
       Virtual Pet 4_markdown_instruction: "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!\n"
+      Virtual Pet 5 - Validated_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
       Virtual Pet 5_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
       Virtual Pet 6_markdown_instruction: "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  \n"
       Virtual Pet Freeplay_markdown_instruction: "Freeplay: What more can you make your giraffe do? \n\n- Can you add more special items for your virtual pet?  \n- Can you give her some friends?  "
@@ -28935,8 +28943,8 @@ th:
       courseE_bee_functions2_2018_markdown_instruction: "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower."
       courseE_bee_functions3_markdown_instruction: Build the `get 5` function to use in this puzzle.
       courseE_bee_functions3_2018_markdown_instruction: Build the `get 5` function to use in this puzzle.
-      courseE_bee_functions4_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางของผึ้ง, เก็บรวบรวมหวานและจากนั้นพาผึ้งกลับไปที่จะเริ่มต้น\n\nใช้ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`ในการเก็บรวบรวมน้ำหวานทั้งหมด"
-      courseE_bee_functions4_2018_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางของผึ้ง, เก็บรวบรวมหวานและจากนั้นพาผึ้งกลับไปที่จะเริ่มต้น\n\nใช้ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`ในการเก็บรวบรวมน้ำหวานทั้งหมด"
+      courseE_bee_functions4_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางการบินของผึ้ง เก็บรวบรวมน้ำหวานและจากนั้นพาผึ้งบินกลับไปที่จุดเริ่มต้น\n\nให้ใช้ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`ในการเก็บรวบรวมน้ำหวานทั้งหมด"
+      courseE_bee_functions4_2018_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางการบินของผึ้ง เก็บรวบรวมน้ำหวานและจากนั้นพาผึ้งบินกลับไปที่จุดเริ่มต้น\n\nให้ใช้ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`ในการเก็บรวบรวมน้ำหวานทั้งหมด"
       courseE_bee_functions8_markdown_instruction: "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \n\nCreate a function that collects all of the nectar from each flower."
       courseE_bee_functions8_2018_markdown_instruction: "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \n\nCreate a function that collects all of the nectar from each flower."
       courseE_bee_functions9b_markdown_instruction: |-
@@ -30834,7 +30842,7 @@ th:
         ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       grade4_bee_functions2_markdown_instruction: "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower."
       grade4_bee_functions3_markdown_instruction: Build the `get 5` function to use in this puzzle.
-      grade4_bee_functions4_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางของผึ้ง, เก็บรวบรวมหวานและจากนั้นพาผึ้งกลับไปที่จะเริ่มต้น\n\nใช้ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`ในการเก็บรวบรวมน้ำหวานทั้งหมด"
+      grade4_bee_functions4_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางการบินของผึ้ง เก็บรวบรวมน้ำหวานและจากนั้นพาผึ้งบินกลับไปที่จุดเริ่มต้น\n\nให้ใช้ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`ในการเก็บรวบรวมน้ำหวานทั้งหมด"
       grade4_bee_functions9_markdown_instruction: "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \n\nCreate a function that collects all of the nectar from each flower."
       grade4_bee_nestedLoops1_markdown_instruction: "*\"Can you BEE-lieve all of these flowers?\"*\n\nCollect all of the nectar from each flower. "
       grade4_bee_nestedLoops2_markdown_instruction: "**Challenge:** Figure out how to get all of the nectar using only the blocks available."

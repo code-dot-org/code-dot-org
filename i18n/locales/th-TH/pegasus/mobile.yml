@@ -429,7 +429,7 @@
   minecraft_specs: "หลายภาษา | เบราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2 +"
   minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   minecraft_agent_button: "เริ่มต้น"
-  minecraft_designer_description: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง"
+  minecraft_designer_description: "เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง"
   minecraft_designer_button: "เริ่มต้น"
   minecraft_adventurer_description: "ใช้โค้ดเพื่อนำอเล็กซ์หรือสตีฟไปผจญภัย"
   minecraft_adventurer_button: "เริ่มต้น"
@@ -1006,7 +1006,7 @@
   cspunit3_gradelevel: "Grades 9-12"
   cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   20-hour_name: Accelerated Course
-  algebra_name: "CS in Algebra"
+  algebra_name: "CS in Algebra Full Course"
   AlgebraA_name: "CS in Algebra Course A"
   AlgebraB_name: "CS in Algebra Course B"
   gumball_name: "Gumball"
@@ -1545,5 +1545,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
   applab-intro_name: App Lab Intro

@@ -10,6 +10,8 @@ import sectionProgress, {
   finishLoadingProgress,
   getStudentPairing,
   getStudentLevelResult,
+  getCurrentProgress,
+  getCurrentScriptData,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -239,6 +241,66 @@ describe('sectionProgressRedux', () => {
           5336: true,
           5337: false
         }
+      });
+    });
+  });
+
+  describe('getCurrentProgress', () => {
+    it('gets the progress for the current script', () => {
+      const stateWithProgress = {
+        scriptSelection: {scriptId: 123},
+        sectionProgress: {
+          studentLevelProgressByScript: {
+            123: 'fake progress 1',
+            456: 'fake progress 2',
+          }
+        }
+      };
+      expect(getCurrentProgress(stateWithProgress)).to.deep.equal('fake progress 1');
+    });
+  });
+
+  describe('getCurrentScriptData', () => {
+    it('gets the script data for the section in the selected script', () => {
+      const stateWithScript = {
+        scriptSelection: {scriptId: 123},
+        sectionProgress: {
+          scriptDataByScript: {
+            123: {
+              stages: [
+                {
+                  levels: [{
+                    url: 'url',
+                    name: 'name',
+                    progression: 'progression',
+                    kind: 'assessment',
+                    icon: 'fa-computer',
+                    is_concept_level: false,
+                    title: 'hello world'
+                  }]
+                }
+              ]
+            }
+          },
+        },
+      };
+      expect((getCurrentScriptData(stateWithScript))).to.deep.equal({
+        stages: [
+          {
+            levels: [
+              {
+                icon: 'fa-computer',
+                isConceptLevel: false,
+                isUnplugged: false,
+                kind: 'assessment',
+                levelNumber: 'hello world',
+                name: 'name',
+                progression: 'progression',
+                url: 'url'
+              }
+            ]
+          }
+        ]
       });
     });
   });

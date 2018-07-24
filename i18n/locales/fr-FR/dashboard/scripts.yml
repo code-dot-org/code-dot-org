@@ -2042,7 +2042,7 @@ fr:
             'Unplugged: The Design Recipe':
               name: 'Débranché: La Recette de Conception'
         AlgebraB:
-          title: Informatique en algèbre
+          title: 'Informatique en algèbre'
           description: Apprendre la programmation fonctionnelle par l'algèbre
           description_short: Apprendre la programmation fonctionnelle par l'algèbre
           description_audience: ''
@@ -9522,6 +9522,16 @@ fr:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

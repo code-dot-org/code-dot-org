@@ -540,6 +540,7 @@ tr:
       CSD U3 Simple Drawing - Background_instruction: Put all of your code into a draw() loop and then add set the background to blue with the background() block.
       CSD U3 Simple Drawing - Personal Animation_instruction: Bunu yap
       CSD U3 Sprites intro sprites_instruction: Bunu yap
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: 'Predict: What two numbers will be displayed in the console?'
       CSD U3 Variable Arithmetic_instruction: Change the value "size" initialized to make a larger square.
@@ -2922,14 +2923,17 @@ tr:
       Underground Mining Coal_2018_instruction: En değerli kaynakları yer altında bulabilirsiniz ama içerisi karanlık olabilir. En az 2 meşale yerleştirin ve 2 kömür çıkarın.
       Unicorn Tag_instruction: Take a look at this project.  Do you see how it was made?
       Valentine_artist2_01_instruction: Program the artist to draw some grass for the Love Bug.
-      Valentine_artist_01_instruction: 'Sanatçıya lama kalbini bitirmesinde yardımcı olun. '
+      Valentine_artist_01_instruction: Sanatçıya lama kalbini bitirmesinde yardımcı olun. 
       Valentine_playlab_01_instruction: 'Kiki''yi (Oyuncu 1) sol ve sağ ok tuşlarına basıldığında sol ve sağa hareket etmesi için programlayın. Kiki''ye tıklandığında, arkadaşlarına kalpler fırlatmalı. '
       Vigenere_instruction: Test
       Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '

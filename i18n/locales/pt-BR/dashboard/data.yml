@@ -533,6 +533,10 @@ pt-BR:
         csd_gamelab_booleans: Expressões Booleanas
         csd_gamelab_conditional_statements: Instruções Condicionais
         csd_gamelab_if_else: Instrução Se/Senão
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

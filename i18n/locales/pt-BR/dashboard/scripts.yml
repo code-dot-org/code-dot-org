@@ -970,7 +970,7 @@ pt-BR:
             Mystery Model:
               name: Mystery Model
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
         Testing:
           title: Testando
           description: Testando
@@ -997,7 +997,7 @@ pt-BR:
             Cracking the Code:
               name: Cracking the Code
             DNS in the Real World:
-              name: DNS in the Real World
+              name: DNS no mundo Real
             Encryption Algorithms:
               name: Keys and Passwords
             HTTP and Abstraction:
@@ -1509,7 +1509,7 @@ pt-BR:
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
@@ -1579,7 +1579,7 @@ pt-BR:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Introduction to the Unit 5 Challenge:
@@ -1625,7 +1625,7 @@ pt-BR:
             Creating Summary Tables:
               name: Creating Summary Tables
             Data, Security, and Privacy:
-              name: Data, Security, and Privacy
+              name: Dados, Segurança e Privacidade
             Designing Data Collection:
               name: Designing Data Collection
             Designing for Your User:
@@ -1639,7 +1639,7 @@ pt-BR:
             How is Data Collected?:
               name: How is Data Collected?
             Import, Export, and Visualize Data:
-              name: Import, Export, and Visualize Data
+              name: Importar, Exportar e Visualizar Dados
             Interpreting Data Visualizations:
               name: Interpreting Data Visualizations
             Making Data Visualizations:
@@ -1717,7 +1717,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Share out and Submit:
@@ -1780,7 +1780,7 @@ pt-BR:
             Chunk 5 Overview:
               name: Chunk 5 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Practice Performance Task:
@@ -1869,7 +1869,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Share out and Submit:
               name: Share out and Submit
         ScienceP3OLPT3:
@@ -1946,7 +1946,7 @@ pt-BR:
             Chapter 2 Overview:
               name: Chapter 2 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Practice Performance Tasks:
@@ -1986,7 +1986,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Create PT Breakdown:
               name: Create PT Breakdown
             Explore PT Breakdown:
@@ -2048,7 +2048,7 @@ pt-BR:
             'Unplugged: The Design Recipe':
               name: 'Offline: a receita de design'
         AlgebraB:
-          title: Ciência da computação em álgebra
+          title: 'Ciência da computação em álgebra'
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           description_audience: ''
@@ -2159,7 +2159,7 @@ pt-BR:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2209,7 +2209,7 @@ pt-BR:
             Practice PT - Encode an Experience:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp3-2017:
           title: CSP Unidade 3 - Programação
           description: "Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação."
@@ -2255,7 +2255,7 @@ pt-BR:
             Please complete the CSP Mid-course survey!:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2297,7 +2297,7 @@ pt-BR:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
             Student Post-Course Survey:
               name: Student Post-Course Survey
         csp5-2017:
@@ -2411,7 +2411,7 @@ pt-BR:
             Boolean Expressions and "if" Statements:
               name: Boolean Expressions and "if" Statements
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -2479,7 +2479,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Functions:
               name: Funções
             Platform Jumper:
@@ -3189,7 +3189,7 @@ pt-BR:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Introduction to the Unit 5 Challenge:
@@ -3317,7 +3317,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Velocity:
               name: Velocidade
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
@@ -4341,7 +4341,7 @@ pt-BR:
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -4544,7 +4544,7 @@ pt-BR:
             Final Project:
               name: Final Project
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -5108,7 +5108,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Sprites and Properties:
               name: Sprites and Properties
             Sprites and Images:
@@ -5438,15 +5438,15 @@ pt-BR:
             'Debugging: Unspotted Bugs':
               name: 'Depuração: Bugs não encontrados'
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+              description_teacher: 'Essa aula irá guiar os estudantes em uma série de etapas sobre depuração. Os estudantes irão aprender o mantra: "O que aconteceu? O que esperavamos que acontecesse? O que isso significa?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistência: Stevie e o grande projeto'
               description_student: ''
-              description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
+              description_teacher: "Quando os alunos se deparam com uma barreira ao responder uma pergunta ou trabalhar em um projeto, é muito fácil ficar frustrado e desistir. Essa lição apresentará aos alunos a ideia de que a frustração pode ser uma parte importante do aprendizado. Aqui, frustração está presente como um passo no processo criativo, ao invés de um sinal de fracasso.\\r\n\\r\nEssa lição pode ser feita em uma ou duas aulas. Se você tiver mais tempo, sinta-se livre para desenhar as fases de construção e revisão da atividade do Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
               description_student: ''
-              description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
+              description_teacher: "Nesta lição, os alunos relacionarão o conceito de algoritmos às atividades cotidianas da vida real, plantando uma semente real. O objetivo aqui é começar a construir as habilidades para traduzir situações do mundo real para cenários on-line e vice-versa.\\r\n"
             Learn to Drag and Drop:
               name: Sequenciando com arrastar e soltar
               description_student: ''
@@ -7022,7 +7022,7 @@ pt-BR:
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
@@ -7038,7 +7038,7 @@ pt-BR:
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
@@ -7524,15 +7524,15 @@ pt-BR:
             'Debugging: Unspotted Bugs':
               name: Erros Não Reportados
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+              description_teacher: 'Essa aula irá guiar os estudantes em uma série de etapas sobre depuração. Os estudantes irão aprender o mantra: "O que aconteceu? O que esperavamos que acontecesse? O que isso significa?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie e o Grande Projeto
               description_student: ''
-              description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
+              description_teacher: "Quando os alunos se deparam com uma barreira ao responder uma pergunta ou trabalhar em um projeto, é muito fácil ficar frustrado e desistir. Essa lição apresentará aos alunos a ideia de que a frustração pode ser uma parte importante do aprendizado. Aqui, frustração está presente como um passo no processo criativo, ao invés de um sinal de fracasso.\\r\n\\r\nEssa lição pode ser feita em uma ou duas aulas. Se você tiver mais tempo, sinta-se livre para desenhar as fases de construção e revisão da atividade do Marble Run."
             'Real-life Algorithms: Plant a Seed':
-              name: Plant a Seed
+              name: Plante uma semente
               description_student: ''
-              description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
+              description_teacher: "Nesta lição, os alunos relacionarão o conceito de algoritmos às atividades cotidianas da vida real, plantando uma semente real. O objetivo aqui é começar a construir as habilidades para traduzir situações do mundo real para cenários on-line e vice-versa.\\r\n"
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
               description_student: ''
@@ -7542,7 +7542,7 @@ pt-BR:
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
               description_student: ''
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
@@ -7731,7 +7731,7 @@ pt-BR:
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
             Debugging in Maze:
               name: Debugging with Angry Birds
             Programming in Collector:
@@ -8070,7 +8070,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
@@ -9530,6 +9530,16 @@ pt-BR:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

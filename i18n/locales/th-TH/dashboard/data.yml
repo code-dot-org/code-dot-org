@@ -316,8 +316,8 @@ th:
         C2_digital_footprint_v2: Your Digital Footprint
         C3_maze_level_4: ลูปเขาวงกต
         C3_artist_intro: แนะนำศิลปิน
-        C3_artist_functions: ศิลปิน Functions
-        C3_bee_functions: ผึ้ง Functions
+        C3_artist_functions: ฟังก์ชั่น ศิลปิน
+        C3_bee_functions: ฟังก์ชั่น ผึ้ง
         C3_bee_conditionals: ผึ้ง Conditionals
         C3_maze_conditionals: เขาวงกต Conditionals
         C3_artist_nested_loops: Nested Loops
@@ -533,6 +533,10 @@ th:
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
         csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

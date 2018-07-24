@@ -169,7 +169,7 @@ zh-CN:
               name: 小艺术家
         hourofcode:
           title: 经典迷宫
-          description: 和来自愤怒小鸟，植物大战僵尸，冰河世界中的角色一起来学习计算机科学的基础知识！
+          description: 和来自愤怒小鸟，植物大战僵尸，冰川时代中的角色一起来学习计算机科学的基础知识！
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           stages:
             Maze:
@@ -274,8 +274,8 @@ zh-CN:
               name: 变量
         algebra:
           title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
-          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra.
+          description_short: Learn Functional Programming through Algebra.
           description_audience: ''
           stages:
             'Calc: Defining Variables':
@@ -374,8 +374,8 @@ zh-CN:
               name: 编写计算机程序
         netsim:
           title: 互联网模拟器
-          description: ''
-          description_short: ''
+          description: Learn about how the Internet works.
+          description_short: Learn about how the Internet works.
           description_audience: ''
           stages:
             Automatic DNS node:
@@ -539,9 +539,14 @@ zh-CN:
             Puzzles:
               name: 关卡
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
-          description_short: Make Black and White Images with the pixelation tool
+          title: "(old) CS Principles Unit 1 - Digital Information"
+          description: This unit explores the technical challenges and questions that
+            arise from the need to represent digital information in computers and
+            transfer it between people and computational devices. This unit is a pilot
+            version and is no longer supported or updated. You can find the new units
+            at code.org/educate/csp.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Binary Numbers:
               name: 二进制数
@@ -653,8 +658,8 @@ zh-CN:
               name: 什么是计算机职业资格认证
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description: Lesson samples for csp
-          description_short: lesson samples for csp
+          description: Lesson samples for CSP
+          description_short: Lesson samples for CSP
           description_audience: ''
           stages:
             Lesson 14:
@@ -724,9 +729,14 @@ zh-CN:
             PDK5 Intro:
               name: PDK5 介绍
         cspunit3:
-          title: CSP Unit 3 - Programming
-          description: Programming in Javascript and AppLap
-          description_short: Programming
+          title: "(old) CS Principles Unit 3 - Programming"
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             APIs and Function Parameters:
@@ -946,7 +956,7 @@ zh-CN:
             What to Expect:
               name: 期待着什么
         sciencePD2:
-          title: Computer Science in Science PD
+          title: 'CS in Science: Part 2'
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
           stages:
@@ -965,9 +975,9 @@ zh-CN:
             Wrap-Up:
               name: 总结
         sciencePD3:
-          title: Computer Science in Science PD
-          description: Phase 3 Professional Development
-          description_short: Phase 3 Professional Development
+          title: 'CS in Science: Part 3'
+          description: Academic Year Support - Semester 1
+          description_short: Academic Year Support - Semester 1
           stages:
             Decode and Share:
               name: 解码与分享
@@ -984,14 +994,13 @@ zh-CN:
               name: Testing
           description_audience: ''
         cspunit2:
-          title: CSP Unit 2 - The Internet
-          description: |
-            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
-            structure and design of the internet and the implications of those design decisions including
-            the reliability of network communication, the security of data, and personal privacy. Topics
-            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
-            concerns.
-          description_short: 互联网
+          title: "(old) CS Principles Unit 2 - The Internet"
+          description: In this unit, students extend their understanding of the internet
+            and how it functions by building off the concepts learned when sending
+            bits in Unit 1. This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: 困难的问题 - 销售员旅行问题
@@ -1070,7 +1079,10 @@ zh-CN:
               name: 设计食谱
         allthethings:
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test
+            applab levels (By design, applab levels only work if signed in. Normally,
+            we make people sign in, but this is only enforceable for a whole script
+            and would be annoying to do for this script).
           description_short: All the level types for UI testing
           description_audience: ''
           stages:
@@ -1264,7 +1276,7 @@ zh-CN:
             Necessary Background:
               name: 必要的背景
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
+          title: CS in Algebra Part 2
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
           description_audience: ''
@@ -1290,7 +1302,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Review StarLogo Nova:
               name: 复习StarLogo Nova
             Reviewing the Modules:
@@ -1320,7 +1332,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Review StarLogo Nova:
               name: 复习StarLogo Nova
             Reviewing the Modules:
@@ -1356,7 +1368,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Review StarLogo Nova:
               name: 复习StarLogo Nova
             Reviewing the Modules:
@@ -1444,7 +1456,8 @@ zh-CN:
           description: Use the Odometer widget to control odometers with various number
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
-          description_short: Odometer widget
+          description_short: Use the Odometer widget to control odometers with various
+            number bases.
           description_audience: ''
           stages:
             Odometer Widget:
@@ -1498,8 +1511,10 @@ zh-CN:
               name: 维吉尼亚
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description: CS in Algebra blended online school year study
-          description_short: CS in Algebra blended online school year study
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year
+            study'
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school
+            year study'
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1511,9 +1526,9 @@ zh-CN:
             Updates - Tweaks and Polish:
               name: 更新 - 微调和抛光
         sciencePD3_pre1:
-          title: Computer Science in Science PD Phase 3 Before 1st In-Person
-          description: Phase 3 Blended Summer Study (Segment One)
-          description_short: Phase 3 Blended Summer Study Pre 1
+          title: CS in Science PD3 Before 1st In-Person
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          description_short: 'Phase 3: Academic Year Development Pre 1'
           description_audience: ''
           stages:
             Prep With Your Modules:
@@ -1533,9 +1548,9 @@ zh-CN:
               name: 频率分析
           description_audience: ''
         ECSPD3-Unit2:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description: Academic Year Development
-          description_short: Academic Year Development
+          title: 'Exploring Computer Science: Unit 2'
+          description: Online Professional Development Course
+          description_short: Unit 2 Online PD
           description_audience: ''
           stages:
             Close & Next Steps:
@@ -1551,7 +1566,7 @@ zh-CN:
             Unit 2 Challenge:
               name: 第2单元挑战
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 3'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1569,7 +1584,7 @@ zh-CN:
             Unit 3 Day-by-Day:
               name: 第3单元 每日课程
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 4'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1687,7 +1702,7 @@ zh-CN:
             Why Make Apps?:
               name: 为什么要制作应用程序？
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
           description_short: Phase 3 Academic Year Development
           description_audience: ''
@@ -1706,8 +1721,8 @@ zh-CN:
               name: 总结
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description: CS in Algebra mid year lesson support
-          description_short: CS in Algebra mid year lesson support
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           description_audience: ''
           stages:
             Close and Next Steps:
@@ -1774,13 +1789,13 @@ zh-CN:
             Halloween 2015:
               name: 2015 万圣节
         iceage:
-          title: 冰河世界游戏实验室
+          title: 冰川时代实验室
           description: 用冰河世纪游戏实验室创造故事或游戏！
           description_short: 用冰河世纪游戏实验室创造故事或游戏！
           description_audience: ''
           stages:
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1809,7 +1824,7 @@ zh-CN:
             Unit 3 Overview:
               name: 第3单元概述
         cspunit3temp:
-          title: CSP Unit 3 - Temp
+          title: "(old) CS Principles Unit 3 - Programming"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
@@ -1910,10 +1925,11 @@ zh-CN:
             Wrap-Up:
               name: 总结
         cspunit5:
-          title: CSP Unit 5 - Performance Tasks
+          title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore
             and Create Performance Tasks.
-          description_short: Performance Tasks
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Create PT:
               name: 创建表演任务
@@ -1925,16 +1941,17 @@ zh-CN:
               name: 探索表演任务的准备工作
           description_audience: ''
         cspunit4:
-          title: CSP Unit 4 - Data
-          description: Being able to digitally manipulate data, visualize it, identify
-            patterns, trends and possible meanings are important practical skills
-            that computer scientists do every day. The data rich world we live in
-            also introduces many complex questions related to public policy, law,
+          title: "(old) CS Principles Unit 4 - Data"
+          description: Being able to digitally manipulate data, visualize it, and
+            identify patterns, trends and possible meanings are important practical
+            skills that computer scientists do every day. The data-rich world we live
+            in also introduces many complex questions related to public policy, law,
             ethics and societal impact. Understanding where data comes from, having
             intuitions about what could be learned or extracted from it, and being
             able to use computational tools to manipulate data and communicate about
             it are the primary skills addressed in the unit.
-          description_short: Data
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Check Your Assumptions:
@@ -2085,7 +2102,7 @@ zh-CN:
             'Unplugged: The Design Recipe':
               name: 离线：食谱设计
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: 通过代数学习函数编程
           description_short: 通过代数学习函数编程
           description_audience: ''
@@ -2122,7 +2139,7 @@ zh-CN:
         algebraPD1:
           title: 计算机科学中的代数 第一部分
           description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description_short: 'Phase 1: Online Introduction'
           description_audience: ''
           stages:
             Course Overview:
@@ -2465,10 +2482,11 @@ zh-CN:
             Post-Course Survey:
               name: 课后问卷
         csp6:
-          title: CS Principles Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create
             and Explore Performance Tasks.
-          description_short: Performance Tasks
+          description_short: Lessons guide students to prepare for and complete the
+            AP Performance Tasks.
           description_audience: ''
           stages:
             Create PT:
@@ -2548,7 +2566,7 @@ zh-CN:
             Using the Game Design Process:
               name: 使用游戏设计过程
         2016_sciencePD_phase1:
-          title: Computer Science in Science PD 2016-2017
+          title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
           description_short: In Partnership with Project GUTS
           description_audience: ''
@@ -2766,11 +2784,16 @@ zh-CN:
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
-          title: CS Principles Culminating Assessment
-          description: 'This 55-question multiple choice assessment covers questions
-            across 7 big ideas of computer science: Creativity, Abstraction, Data,
-            Algorithms, Programming, The Internet, and Global Impact. '
-          description_short: Culminating
+          title: "[Deprecated] CS Principles Culminating Assessment"
+          description: 'This assessment has been deprecated and is scheduled for removal
+            in Summer of 2017.  Students may complete the test and see their own results,
+            but a teacher will not be able to see results for students in a section.  Please
+            use the official CSP practice exam from the College Board.  [This 55-question
+            multiple choice assessment covers questions across 7 big ideas of computer
+            science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet,
+            and Global Impact.]'
+          description_short: This assessment has been deprecated and is scheduled
+            for removal in Summer of 2017.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
@@ -3166,7 +3189,7 @@ zh-CN:
             'Unplugged: Songwriting with Parameters':
               name: 离线：用参数写歌
         ecs-unit1:
-          title: ECS Part 1
+          title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
           description_short: 'Unit 1: Human-Computer Interaction'
           description_audience: ''
@@ -3811,10 +3834,10 @@ zh-CN:
             Unit 5 Overview:
               name: 第5单元概述
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing
-            to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 1.
           description_audience: ''
           stages:
             Unit 1 Overview:
@@ -3865,7 +3888,7 @@ zh-CN:
               name: 简单加密
         fesbinary:
           title: 二进制
-          description_audience: ''
+          description_audience: Falmouth Middle School
           description_short: ''
           description: ''
           stages:
@@ -4018,11 +4041,11 @@ zh-CN:
             CSD Post-Course Survey:
               name: 计算机科学发现课后问卷
         csp2-support:
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing
-            to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 2. '
           stages:
             Unit 2 Overview:
               name: 单元2概述
@@ -4501,7 +4524,7 @@ zh-CN:
             Introduction:
               name: 介绍
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Conditionals and Functions in Bee:
               name: 蜜蜂里的条件和函数
             'Algorithms: Tangrams':
@@ -4559,7 +4582,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Thinking Ahead to Implementation:
               name: 实现之前的思考
             Wrap-Up:
@@ -4579,7 +4602,7 @@ zh-CN:
             Advanced StarLogo Nova:
               name: 高级 StarLogo Nova
             Remixing Phases 1 and 2:
-              name: 混合的第1、2阶段
+              name: 合成第1、2阶段
             Thinking Ahead to Implementation:
               name: 实现之前的思考
             Wrap-Up:
@@ -4597,10 +4620,11 @@ zh-CN:
             Prep With Your Modules:
               name: 准备您的模块
         csp3-support:
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 3.
           stages:
             Unit 3 Overview:
               name: 第3单元概述
@@ -4635,10 +4659,11 @@ zh-CN:
             External Style Sheets:
               name: 外部样式表
         csp4-support:
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 4.
           stages:
             Unit 3 Overview:
               name: 第3单元概述
@@ -4699,10 +4724,10 @@ zh-CN:
             Wrap-Up:
               name: 总结
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: '功能: 作曲'
@@ -4740,8 +4765,8 @@ zh-CN:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
           description_short: 计算机科学原理单元5的教师专业学习课程
-          description: 'COMING SOON: In mid-February, this page will host the CSP
-            Unit 5 Professional Learning Course. '
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 5.
           stages:
             Unit 5 Overview:
               name: 第5单元概述
@@ -4765,11 +4790,11 @@ zh-CN:
               name: 衡量学生学习
         csp6-support:
           stage: {}
-          title: Unit 6 Online Professional Learning Course
+          title: AP Preparation and Resources for Teachers
           description_audience: ''
           description_short: ''
-          description: 'COMING SOON: In mid-February, this page will host a set of
-            resources for teachers preparing for the AP exam'
+          description: 'COMING SOON: soon this page will host a set of resources for
+            teachers preparing for the AP exam'
           stages: {}
         csppostap-2017:
           title: 计算机科学原理课后AP - 数据库以及在你的应用里使用数据
@@ -4819,7 +4844,7 @@ zh-CN:
             Simple Sprite Movement:
               name: 简单的精灵运动
         csd6-draft:
-          title: Draft Unit 6
+          title: CSD Unit 6 Revisions Draft
           description_audience: ''
           description_short: ''
           description: ''
@@ -5627,7 +5652,7 @@ zh-CN:
             Introduction:
               name: 介绍
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Functions in Farmer:
               name: 农夫中的函数
             Conditionals and Functions in Bee:
@@ -5755,7 +5780,7 @@ zh-CN:
             D13 no If/While:
               name: D13 没有如果/当
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Bounce:
               name: 弹跳
             NewBounce:
@@ -5987,7 +6012,7 @@ zh-CN:
             The Power of Words:
               name: 语言的力量
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Envelope Variables:
               name: 封装变量
             Variables in Artist:
@@ -6654,7 +6679,11 @@ zh-CN:
           title: 计算机科学原理单元3：介绍编程（子目标）
           description_audience: ''
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
-          description: ''
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -7034,7 +7063,7 @@ zh-CN:
             The Power of Words:
               name: 语言的力量
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Conditionals in Minecraft:
               name: "《我的世界》中的条件"
             Envelope Variables:
@@ -7527,7 +7556,7 @@ zh-CN:
             The Power of Words:
               name: 语言的力量
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
             Conditionals in Minecraft:
               name: "《我的世界》中的条件"
             Envelope Variables:
@@ -8217,7 +8246,8 @@ zh-CN:
           title: 课程 B （2018）
           assignment_family_title: 课程 B
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
-          description_short: 为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)
+          description_short: An introduction to computer science for pre-readers.
+            Similar to Course A, but with added concept depth.
           description_audience: 年龄： 5-8
           stages:
             'Debugging: Unspotted Bugs':
@@ -8261,7 +8291,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: 艺术家里的循环
+              name: 用循环来画花园
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -8285,9 +8315,12 @@ zh-CN:
         coursed-2018:
           title: 新的课程D脚本
           assignment_family_title: 课程 D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Students develop their understanding of nested loops, while
+            loops, conditionals, and events. Beyond coding, students learn about digital
+            citizenship.
+          description_short: Learn about conditional statements and create your own
+            art, story or game.
+          description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: 图纸上编程
@@ -8650,7 +8683,8 @@ zh-CN:
           title: 课程 E （2018）
           assignment_family_title: 课程 E
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
-          description_short: 在课程C&D中快速覆盖概念，然后继续使用函数。
+          description_short: Review concepts in Courses C & D, then go further by
+            learning functions.
           description_audience: 年龄：8-12
           stages:
             'Programming: My Robotic Friends':
@@ -8833,7 +8867,7 @@ zh-CN:
               description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
               description_teacher: "学生们会考虑到，当他们沉浸在喜欢的网站上时，可能会由别的孩子的消息，让他们感到生气、受伤害、悲伤，或者害怕。他们会找到办法来处理网络霸凌，如何回应令人不安的在线语言。\n\n学生们讨论所有他们用来沟通的技术，并且探索面对面和在线沟通的相似和不同点。学生们然后会头脑风暴来回应网络霸凌。 "
             Ice Age Play Lab:
-              name: 冰河世界游戏实验室
+              name: 冰川时代实验室
               description_student: 想想你喜欢的电子游戏。有没有好奇过它是怎么做出来的？在这些关卡中，你会开发一个自己的冰川时代电子游戏！
               description_teacher: 这节课中，学生们会被指导通过一个冰河世纪故事中角色的故事。学生们会用事件、循环来让角色在屏幕上移动，然后会有机会在向导关卡后创造自己的游戏或故事。
             Conditionals in Minecraft:
@@ -9478,12 +9512,11 @@ zh-CN:
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions
+          description: The data-rich world we live in introduces many complex questions
             related to public policy, law, ethics and societal impact. The goals of
             this unit are to develop a well-rounded and balanced view about data in
             the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.\r\n\r\nThis unit was
-            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -10035,7 +10068,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: 艺术家里的循环
+              name: 用循环来画花园
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -10083,6 +10116,16 @@ zh-CN:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

@@ -2048,7 +2048,7 @@ sq:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Receta e Dizenjimit'
         AlgebraB:
-          title: Shkenëa Kompjuterike në Algjebër
+          title: 'Shkenëa Kompjuterike në Algjebër'
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_audience: ''
@@ -9530,6 +9530,16 @@ sq:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

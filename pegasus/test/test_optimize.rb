@@ -31,13 +31,11 @@ class OptimizeTest < Minitest::Test
 
     # Ensure future request returns optimized image.
     Timeout.timeout(10) do
-      begin
-        get('/images/logo.png')
-        raise 'not yet' unless last_response.content_length != LOGO_SIZE
-      rescue
-        sleep(0.1)
-        retry
-      end
+      get('/images/logo.png')
+      raise 'not yet' unless last_response.content_length != LOGO_SIZE
+    rescue
+      sleep(0.1)
+      retry
     end
 
     get('/images/logo.png')

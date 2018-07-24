@@ -505,7 +505,7 @@ fil:
               name: Wrap-up
         edit-code:
           title: Edit Code
-          description: ''
+          description: Edit Code
           description_short: Edit Code
           description_audience: ''
           stages:
@@ -585,13 +585,14 @@ fil:
             Puzzles:
               name: Mga palaisipan
         cspunit1:
-          title: CSP Unit 1
+          title: "(old) CS Principles Unit 1 - Digital Information"
           description: This unit explores the technical challenges and questions that
             arise from the need to represent digital information in computers and
             transfer it between people and computational devices. This unit is a pilot
             version and is no longer supported or updated. You can find the new units
             at code.org/educate/csp.
-          description_short: Make Black and White Images with the pixelation tool
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Binary Numbers:
               name: Binary na mga Numero
@@ -703,8 +704,8 @@ fil:
               name: Ano ang CSP?
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description: Lesson samples for csp
-          description_short: lesson samples for csp
+          description: Lesson samples for CSP
+          description_short: Lesson samples for CSP
           description_audience: ''
           stages:
             Lesson 14:
@@ -775,9 +776,14 @@ fil:
             PDK5 Intro:
               name: Panimula sa PDK5
         cspunit3:
-          title: CSP Unit 3 - Programming
-          description: Programming in Javascript and AppLap
-          description_short: Programming
+          title: "(old) CS Principles Unit 3 - Programming"
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             APIs and Function Parameters:
@@ -999,9 +1005,9 @@ fil:
             What to Expect:
               name: Ano ang Dapat Asahan
         sciencePD2:
-          title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          title: 'CS in Science: Part 2'
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           stages:
             Creating Breeds in Starlogo Nova:
               name: Paglikha ng mga Breeds sa Starlogo Nova
@@ -1018,9 +1024,9 @@ fil:
             Wrap-Up:
               name: Tapusin na
         sciencePD3:
-          title: Computer Science in Science PD
-          description: Phase 3 Professional Development
-          description_short: Phase 3 Professional Development
+          title: 'CS in Science: Part 3'
+          description: Academic Year Support - Semester 1
+          description_short: Academic Year Support - Semester 1
           stages:
             Decode and Share:
               name: Mag-decode at Magbahagi
@@ -1037,12 +1043,13 @@ fil:
               name: Testing
           description_audience: ''
         cspunit2:
-          title: CSP Unit 2 - The Internet
+          title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet
             and how it functions by building off the concepts learned when sending
             bits in Unit 1. This unit is a pilot version and is no longer supported
             or updated. You can find the new units at code.org/educate/csp.
-          description_short: The Internet
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Mahirap na mga Problema - Ang Problema ng Naglalakbay na Ahente
@@ -1121,7 +1128,10 @@ fil:
               name: Ang Resipe ng Pag-disenyo
         allthethings:
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test
+            applab levels (By design, applab levels only work if signed in. Normally,
+            we make people sign in, but this is only enforceable for a whole script
+            and would be annoying to do for this script).
           description_short: All the level types for UI testing
           description_audience: ''
           stages:
@@ -1320,9 +1330,9 @@ fil:
             Necessary Background:
               name: Kinakailangang Kaalaman
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          title: CS in Algebra Part 2
+          description: Academic Year Support
+          description_short: Academic Year Support
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1369,8 +1379,8 @@ fil:
               name: Kinakailangang Kaalaman
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1567,8 +1577,10 @@ fil:
               name: Vigenere
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description: CS in Algebra blended online school year study
-          description_short: CS in Algebra blended online school year study
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year
+            study'
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school
+            year study'
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1580,9 +1592,9 @@ fil:
             Updates - Tweaks and Polish:
               name: Mga Balita - Pag-aayos at Pagpapaganda
         sciencePD3_pre1:
-          title: Computer Science in Science PD Phase 3 Before 1st In-Person
-          description: Phase 3 Blended Summer Study (Segment One)
-          description_short: Phase 3 Blended Summer Study Pre 1
+          title: CS in Science PD3 Before 1st In-Person
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          description_short: 'Phase 3: Academic Year Development Pre 1'
           description_audience: ''
           stages:
             Prep With Your Modules:
@@ -1604,9 +1616,9 @@ fil:
               name: Kadalasan na Pagsusuri
           description_audience: ''
         ECSPD3-Unit2:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description: Academic Year Development
-          description_short: Academic Year Development
+          title: 'Exploring Computer Science: Unit 2'
+          description: Online Professional Development Course
+          description_short: Unit 2 Online PD
           description_audience: ''
           stages:
             Close & Next Steps:
@@ -1622,7 +1634,7 @@ fil:
             Unit 2 Challenge:
               name: Hamon ng Yunit 2
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 3'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1640,7 +1652,7 @@ fil:
             Unit 3 Day-by-Day:
               name: Yunit 3 Pang-araw-araw
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 4'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1758,7 +1770,7 @@ fil:
             Why Make Apps?:
               name: Bakit Gagawa ng mga App?
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
           description_short: Phase 3 Academic Year Development
           description_audience: ''
@@ -1777,8 +1789,8 @@ fil:
               name: Tapusin na
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description: CS in Algebra mid year lesson support
-          description_short: CS in Algebra mid year lesson support
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           description_audience: ''
           stages:
             Close and Next Steps:
@@ -1882,13 +1894,14 @@ fil:
             Unit 3 Overview:
               name: Yunit 3 Buod
         cspunit3temp:
-          title: CSP Unit 3 - Temp
+          title: "(old) CS Principles Unit 3 - Programming"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
             the programming environment to build apps, but the concepts learned in
             these lessons span all programming languages and tools.
-          description_short: Programming
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Canvas and Arrays in Apps:
@@ -1991,10 +2004,11 @@ fil:
             Wrap-Up:
               name: Tapusin na
         cspunit5:
-          title: CSP Unit 5 - Performance Tasks
+          title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore
             and Create Performance Tasks.
-          description_short: Performance Tasks
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Create PT:
               name: Maglikha ng PT
@@ -2006,16 +2020,17 @@ fil:
               name: Tuklasin ang PT Prep
           description_audience: ''
         cspunit4:
-          title: CSP Unit 4 - Data
-          description: Being able to digitally manipulate data, visualize it, identify
-            patterns, trends and possible meanings are important practical skills
-            that computer scientists do every day. The data rich world we live in
-            also introduces many complex questions related to public policy, law,
+          title: "(old) CS Principles Unit 4 - Data"
+          description: Being able to digitally manipulate data, visualize it, and
+            identify patterns, trends and possible meanings are important practical
+            skills that computer scientists do every day. The data-rich world we live
+            in also introduces many complex questions related to public policy, law,
             ethics and societal impact. Understanding where data comes from, having
             intuitions about what could be learned or extracted from it, and being
             able to use computational tools to manipulate data and communicate about
             it are the primary skills addressed in the unit.
-          description_short: Data
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Check Your Assumptions:
@@ -2168,7 +2183,7 @@ fil:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Ang Resipe ng Pagdisenyo'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: Alamin ang Functional na Pag-Programa sa pamamagitan ng Algebra
           description_short: Alamin ang Functional na Pag-Programa sa pamamagitan
             ng Algebra
@@ -2204,9 +2219,9 @@ fil:
             Middle_School_Hackathon:
               name: Gitnang_Paaralan_Hackathon
         algebraPD1:
-          title: Computer Science in Algebra PD
+          title: CS in Algebra Part 1
           description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description_short: 'Phase 1: Online Introduction'
           description_audience: ''
           stages:
             Course Overview:
@@ -2568,10 +2583,11 @@ fil:
             Post-Course Survey:
               name: Post-Course Survey
         csp6:
-          title: CS Principles Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create
             and Explore Performance Tasks.
-          description_short: Performance Tasks
+          description_short: Lessons guide students to prepare for and complete the
+            AP Performance Tasks.
           description_audience: ''
           stages:
             Create PT:
@@ -2651,7 +2667,7 @@ fil:
             Using the Game Design Process:
               name: Gamitin ang Proseso ng Pagdisenyo ng Laro
         2016_sciencePD_phase1:
-          title: Computer Science in Science PD 2016-2017
+          title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
           description_short: In Partnership with Project GUTS
           description_audience: ''
@@ -2872,10 +2888,14 @@ fil:
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
-          title: CS Principles Culminating Assessment
-          description: 'This 55-question multiple choice assessment covers questions
-            across 7 big ideas of computer science: Creativity, Abstraction, Data,
-            Algorithms, Programming, The Internet, and Global Impact. '
+          title: "[Deprecated] CS Principles Culminating Assessment"
+          description: 'This assessment has been deprecated and is scheduled for removal
+            in Summer of 2017.  Students may complete the test and see their own results,
+            but a teacher will not be able to see results for students in a section.  Please
+            use the official CSP practice exam from the College Board.  [This 55-question
+            multiple choice assessment covers questions across 7 big ideas of computer
+            science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet,
+            and Global Impact.]'
           description_short: This assessment has been deprecated and is scheduled
             for removal in Summer of 2017.
           description_audience: ''
@@ -3283,7 +3303,7 @@ fil:
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Pagsulat ng mga Awit na may mga Parameter'
         ecs-unit1:
-          title: ECS Part 1
+          title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
           description_short: 'Unit 1: Human-Computer Interaction'
           description_audience: ''
@@ -4364,10 +4384,10 @@ fil:
             Unit 5 Overview:
               name: Yunit 5 Buod
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing
-            to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 1.
           description_audience: ''
           stages:
             Unit 1 Overview:
@@ -4419,7 +4439,7 @@ fil:
               name: Simpleng Pag-encrypt
         fesbinary:
           title: Binary
-          description_audience: ''
+          description_audience: Falmouth Middle School
           description_short: ''
           description: ''
           stages:
@@ -4765,11 +4785,11 @@ fil:
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
         csp2-support:
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing
-            to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 2. '
           stages:
             Unit 2 Overview:
               name: Buod ng Yunit 2
@@ -5612,10 +5632,11 @@ fil:
             Prep With Your Modules:
               name: Paghahanda ng Iyong Mga Module
         csp3-support:
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 3.
           stages:
             Unit 3 Overview:
               name: Yunit 3 Buod
@@ -5651,10 +5672,11 @@ fil:
             External Style Sheets:
               name: External na mga Style Sheets
         csp4-support:
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 4.
           stages:
             Unit 3 Overview:
               name: Yunit 3 Buod
@@ -5715,10 +5737,10 @@ fil:
             Wrap-Up:
               name: Tapusin na
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Mga Function: Pagsusulat ng Awit'
@@ -5757,8 +5779,8 @@ fil:
           description_audience: ''
           description_short: Kurso ng Proseyonal na Pag-aaral ng mga Guro para sa
             CSP Yunit 5
-          description: 'COMING SOON: In mid-February, this page will host the CSP
-            Unit 5 Professional Learning Course. '
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 5.
           stages:
             Unit 5 Overview:
               name: Yunit 5 Buod
@@ -5838,7 +5860,7 @@ fil:
             Simple Sprite Movement:
               name: Simpleng Paggalaw ng Sprite
         csd6-draft:
-          title: Draft Unit 6
+          title: CSD Unit 6 Revisions Draft
           description_audience: ''
           description_short: ''
           description: ''
@@ -6054,7 +6076,7 @@ fil:
             Analog Input:
               name: Analog na Input
         coursee-ramp:
-          title: ''
+          title: coursee-ramp
           description_audience: ''
           description_short: ''
           description: ''
@@ -8933,8 +8955,13 @@ fil:
               name: Mangyaring kumpletohin ang CSP Kalagitnaang-kurso na surbey
           title: CSP Yunit 3 - Panimula sa Pag-program (subgoals)
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Learn the basics of programming in JavaScript through
+            a top-down design approach using classic turtle drawing.
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -10726,7 +10753,7 @@ fil:
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
                 na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
         coursea-2018:
-          title: Kursong A
+          title: Course A (2018)
           assignment_family_title: Kursong A
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
@@ -10756,7 +10783,7 @@ fil:
                 pang oras, huwag mag-atubiling ipalabas ang pagbuo at pagbago na yugto
                 ng gawain na Marble Run."
             'Real-life Algorithms: Plant a Seed':
-              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+              name: Plant a Seed
               description_student: ''
               description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay
                 sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay
@@ -10774,7 +10801,7 @@ fil:
                 uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
                 na mga palaisipan.
             'Programming: Happy Maps':
-              name: 'Pag-Program: Masayang mga Mapa'
+              name: Happy Maps
               description_student: ''
               description_teacher: Ang tulay mula sa mga algoritmo papunta sa pag-program
                 ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa
@@ -10804,7 +10831,7 @@ fil:
                 mga lugar online, ngunit kailangan nilang sumunod sa iilang mga tutunin
                 para manatiling ligtas.
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: Happy Loops
               description_student: ''
               description_teacher: Ang mga loop ay lubhang nakakatulong at makapangyarihan
                 na kagamitan sa pag-program. Para maunawaan kung paano nakakatulong
@@ -10812,14 +10839,14 @@ fil:
                 ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga
                 problema.
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: Ang pagbubuo sa konsepto ng paulit-ulit na mga
                 instruksyon mula sa "Masayang mga Loop", ang yugtong ito ay mag-uudyok
                 sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta
                 ng mga kayamanan sa Code.org.
             Loops in Artist:
-              name: Loops in Artist
+              name: Ocean Scene with Loops
               description_student: ''
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
                 gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
@@ -10829,14 +10856,14 @@ fil:
                 ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
                 ng kanilang sariling mga larawan gamit ang mga loop.
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag
                 ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na
                 ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto
                 kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
-              name: Events in Play Lab
+              name: On the Move with Events
               description_student: ''
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay
                 magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari
@@ -10846,11 +10873,11 @@ fil:
             Programming in Bee:
               name: Programming in Bee
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programming with Harvester
             Loops in Harvester:
               name: Mga Loops sa Harvester
             Sequencing in Maze:
-              name: Sequencing in Maze
+              name: Sequencing with Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie at ang Big Project
         express-2018:
@@ -10865,7 +10892,7 @@ fil:
           description_audience: 'Mga Edad: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              name: Graph Paper Programming
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -10885,7 +10912,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops:
@@ -10909,7 +10936,7 @@ fil:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Events in Star Wars:
@@ -11051,19 +11078,19 @@ fil:
             Envelope Variables:
               name: Balot ng mga Variables
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             For Loop Fun:
               name: Saya sa For Loop
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Binary Bracelets:
               name: Binary na mga Pulseras
             'Unplugged: Binary':
@@ -11071,20 +11098,19 @@ fil:
             Artist Binary:
               name: Artist na Binary
             Internet:
-              name: Internet
+              name: The Internet
             Crowdsourcing:
               name: Pag-crowdsourcing
             Relay Programming:
               name: Relay Programming
         courseb-2018:
-          title: Kursong B
+          title: Course B (2018)
           assignment_family_title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science
             at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling
             laro o istorya na maaari mong ibahagi.
-          description_short: Isang panimula sa computer science para sa mga hindi
-            marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba
-            para sa mga nakakatandang mga estudyante.)
+          description_short: An introduction to computer science for pre-readers.
+            Similar to Course A, but with added concept depth.
           description_audience: 'Mga Edad: 5-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -11124,40 +11150,43 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Drawing Castles with Loops
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: A Royal Battle with Events
               description_student: ''
               description_teacher: ''
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             Sequencing with Scrat:
               name: Sequencing with Scrat
             Move It, Move It:
               name: Galawin ito, Galawin ito
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
         coursed-2018:
           title: Bagong Kursong D na Iskript
           assignment_family_title: Kursong D
-          description: ''
-          description_short: ''
-          description_audience: ''
+          description: Students develop their understanding of nested loops, while
+            loops, conditionals, and events. Beyond coding, students learn about digital
+            citizenship.
+          description_short: Learn about conditional statements and create your own
+            art, story or game.
+          description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              name: Graph Paper Programming
               description_student: ''
               description_teacher: ''
             Introduction:
@@ -11177,7 +11206,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
@@ -11344,9 +11373,10 @@ fil:
           description_audience: ''
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment
-            questions that appeared in Units 1-5 in the course.  '
+            questions that appeared in Units 1-5 in the course.  Students may want
+            to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
-          title: Kursong C
+          title: Course C (2018)
           assignment_family_title: Kursong C
           description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops,
             at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang
@@ -11370,7 +11400,7 @@ fil:
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
-              name: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
+              name: Paper Planes
               description_student: ''
               description_teacher: ''
             Programming in Collector:
@@ -11390,7 +11420,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Loops in Harvester:
@@ -11398,7 +11428,7 @@ fil:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Build a Flappy Game:
@@ -11406,7 +11436,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Chase Game with Events
               description_student: ''
               description_teacher: ''
             Screen Out the Mean:
@@ -11531,14 +11561,14 @@ fil:
             'Project: Prototype an Innovation':
               name: 'Proyekto: Mag-Prototype ng isang Pagbabago'
         coursee-2018:
-          title: Kursong E
+          title: Course E (2018)
           assignment_family_title: Kursong E
           description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga
             kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function.
             Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone
             na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
-          description_short: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos
-            ay pumunta pa sa mga function.
+          description_short: Review concepts in Courses C & D, then go further by
+            learning functions.
           description_audience: 'Mga Edad: 8-12'
           stages:
             'Programming: My Robotic Friends':
@@ -11566,7 +11596,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops:
@@ -11601,7 +11631,7 @@ fil:
                 ang mga estudyante ay magsasanay sa kanilang pagsunod-sunod at pag-debg
                 na mga kakayahan sa Maze at Artist.
             Conditionals:
-              name: Mga conditional
+              name: Conditionals with the Farmer
               description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung
                 ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya
                 at mahirap na mga seryeng ito.
@@ -11666,7 +11696,7 @@ fil:
                 na mga landas, magkokolekta ng maraming mga nektar, at maggagawa ng
                 napakaraming mga pulot.
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: ''
               description_teacher: ''
             Determine the Concept:
@@ -11754,7 +11784,7 @@ fil:
                 aralin para sa lahat ng apat na mga yugto ng proseso ay maaaring makita
                 sa unang yugto ng proseso ng proyektong ito sa [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: Internet
+              name: The Internet
               description_student: Nagtataka ka na ba kung paano ang mga impormasyon
                 naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling
                 ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang
@@ -11782,15 +11812,15 @@ fil:
             Functions in Minecraft:
               name: Functions in Minecraft
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: Digital Sharing
         coursef-2018:
-          title: Kursong F
+          title: Course F (2018)
           assignment_family_title: Kursong F
           description: Matutong gumami sa iba't ibang uri ng mga loop, mga event,
             mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan
@@ -11827,7 +11857,7 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
@@ -12087,23 +12117,23 @@ fil:
             Conditionals with Cards:
               name: Mga Conditional gamit ang mga Card
             Conditionals:
-              name: Mga conditional
+              name: Conditionals with the Farmer
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
             Pet Giraffe with Sprite Lab:
-              name: Pet Giraffe with Sprite Lab
+              name: Pet Giraffe
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Conditionals in Farmer:
-              name: Mga Kondisyonal sa Farmer
+              name: Conditionals with the Farmer
         csp1-2018:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
@@ -13319,12 +13349,11 @@ fil:
               description_teacher: ''
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy
-          description: "The data-rich world we live in introduces many complex questions
+          description: The data-rich world we live in introduces many complex questions
             related to public policy, law, ethics and societal impact. The goals of
             this unit are to develop a well-rounded and balanced view about data in
             the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.\r\n\r\nThis unit was
-            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+            the basics of how and why modern encryption works.
           description_short: Explore the data-rich world we live, and how data impacts
             public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
@@ -13571,9 +13600,11 @@ fil:
             Virtual Pet - Interactions:
               name: Virtual Pet - Interactions
           title: Introduction to Sprite Lab (PILOT)
-          description_audience: ''
-          description_short: ''
-          description: ''
+          description_audience: Course E/F Students
+          description_short: This is a pilot course for Code.org's new Sprite Lab
+            tool for Courses E and F
+          description: This is a pilot course for Code.org's new Sprite Lab tool for
+            Courses E and F
         csd1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -13929,9 +13960,9 @@ fil:
               name: Day 3
             Day 4:
               name: Day 4
-          title: CS Principles Novice Reflections 2018-2019
+          title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Novice reflection materials for CS Principles facilitators
+          description_short: 'Apprentice reflection materials for CS Principles facilitators
             in training '
           description: This is the set of apprentice reflections for Code.org CS Principles
             facilitators in training during their 5-day summer workshop. Here you
@@ -13986,19 +14017,19 @@ fil:
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Drawing Castles with Loops
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: A Royal Battle with Events
               description_student: ''
               description_teacher: ''
             Spelling Bee:
@@ -14038,6 +14069,16 @@ fil:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

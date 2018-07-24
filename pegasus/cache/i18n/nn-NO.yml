@@ -490,7 +490,7 @@ nn-NO:
   playlab_iceage_title: Istid - Kjem snart
   playlab_iceage_title_live: Istid
   starwars_subtitle: Bygg ein galakse med kode
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Bruk dra-og-slepp-blokker og JavaScript.
   starwars_javascript_specs: Berre engelsk | Moderne nettlesarar | For dei som er
     11 år eller eldre
@@ -1175,7 +1175,7 @@ nn-NO:
   artist_name: Kunstnar
   monstercoding_name: Kodeoppdraget Mysterieøya
   allcancode_name: Kjør Marco!
-  csfirst_name: CS først
+  csfirst_name: CS First
   boxisland_name: Box Island
   codesters_name: Codesters
   texasinstruments_name: 10 minutter med kode
@@ -1221,9 +1221,9 @@ nn-NO:
   cspunit4_name: "(gammel) Eining 4: Data"
   cspunit5_name: "(gamal) Eining 5: Utforsk og lag PT"
   cspunit6_name: 'Post-AP: Databaser i appar'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Eining 5: Data og samfunn'
   csd6_name: 'Eining 6: Fysisk programmering'
@@ -1297,7 +1297,7 @@ nn-NO:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: Grunnleggande informatikk internasjonalt
   csf2_draft_category_name: 'Under utvikling: Kurs A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 Prinsipper i informatikk"
   csp17_category_name: Prinsipp i informatikk
@@ -1515,12 +1515,17 @@ nn-NO:
     inn i programmeringstema som vart introdusert i kursa før for å finne fleksible
     løsningar på kompliserte problem. Til slutt i dette kurset lagar elevane interaktive
     historier og spel som dei kan dele med andre. Tilrådd for 4.-8. klasse.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb_shortdescription_congrats: An introduction to computer science for pre-readers.
+    (Similar to Course A, but with more variety for older students.)
+  coursec_shortdescription_congrats: Learn the basics of computer science and create
+    your own art, stories, and games.
+  coursed_shortdescription_congrats: Quickly cover concepts from Course C, then go
+    further with algorithms, nested loops, conditionals, and more.
+  coursee_shortdescription_congrats: Quickly cover concepts in Course C & D and then
+    go further with functions.
+  coursef_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals
+    and create your own art, story or game.
   coursea-2017_shortdescription_congrats: An introduction to computer science for
     pre-readers.
   courseb-2017_shortdescription_congrats: An introduction to computer science for
@@ -2053,7 +2058,7 @@ nn-NO:
   hourofcode_shortcode: code
   flappy_shortcode: flaks
   infinity_shortcode: inf
-  playlab_shortcode: spel av
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Heim
   header_my_dashboard: Kontrollpanel

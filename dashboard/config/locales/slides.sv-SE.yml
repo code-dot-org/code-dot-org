@@ -1676,12 +1676,12 @@ sv:
           flyttar fram fem gånger till solrosen.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Du har hittills gjort en animation eller en berättelse som gör exakt
           samma sak varje gång du kör den. Nu kan du göra ett interaktivt spel som
           du faktiskt kan spela.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Där finns "när pilen" block och "flytta figur" block. Du kan sätta dessa
           block tillsammans för att flytta figurerna runt med piltangenterna.
     C3_songwriting_with_parameters:

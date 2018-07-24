@@ -115,9 +115,7 @@ ja:
         desc: この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。
       BinaryBracelets:
         title: バイナリブレスレット
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
+        desc: 生徒たちは各自の名前の最初の一文字を2進数（バイナリ）で表現したブレスレットを作成します。データの表現や格納方法は一つでないことを学びます。
       DigitalFootprint:
         title: あなたのデジタルフットプリント
         desc: Teachers introduce to students the idea that putting information about
@@ -128,17 +126,14 @@ ja:
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
       FunctionalSuncatchers:
-        title: Functional Suncatchers
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
+        title: 関数サンキャッチャー
+        desc: 生徒たちは変数と関数（何度も繰り返し使いたいコードの一部）を使ったアルゴリズムを作って、ひもとビーズでサンキャッチャーを作成します。
       SongwritingParameters:
-        title: Songwriting with Parameters
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        title: Songwriting
+        desc: Students use the concept of the chorus in a song to learn about defining
+          and calling functions.
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
+        title: 'Real Life Algorithms: Dice Race'
         desc: This lesson calls out ways we use algorithms in our daily lives. As
           part of that, students will identify and write down the algorithm for a
           dice race game.
@@ -193,22 +188,39 @@ ja:
           as images and colors) in binary, as well.
       VideoGamesCoordinatePlanes:
         title: ビデオゲームと座標平面
-        desc: Video Games and Coordinate Planes lesson description
+        desc: Discover how the video games you love to play are actually driven by
+          algebra! Explore how algebraic expressions and the coordinate plane can
+          help us understand how video games work, and then start planning for the
+          video game that you will create.
       Contracts:
-        title: Contracts
-        desc: Contracts unplugged lesson description
+        title: Contracts, Domain, and Range
+        desc: Contracts give us a way to understand and discuss functions. In this
+          lesson we'll look at how Contracts can help us make sense of a new programming
+          language or function.
       DesignRecipe:
         title: The Design Recipe
-        desc: Design Recipe lesson description
+        desc: In the last stage students wrote some very simple functions - but more
+          sophisticated functions demand a more thoughtful approach. The Design Recipe
+          is a structured approach to writing functions that includes writing test
+          cases to ensure that the function works as expected.
       Booleans:
         title: ブール値と論理
-        desc: Booleans lesson description
+        desc: Booleans are the fourth and final data type that you will learn about
+          in this course. In this activity you will learn about what Booleans are,
+          and how they can help us write functions that think logically
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: The parameters we pass to functions cause the outputs to vary based
+          on a very rigid pattern. Suppose we want parameters with some values to
+          create outputs using one pattern but other values to use a different pattern.
+          This is where conditionals are needed...
       CollisionDetection:
         title: 衝突検出とピタゴラスの定理
-        desc: Collision Detection lesson description
+        desc: Determining when objects on the screen touch is an important aspect
+          of most games. In this lesson we'll look at how the Pythagorean Theorem
+          and the Distance Formula can be used to measure the distance between two
+          points on the plane, and then decide whether those two points (or game characters)
+          are touching.
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -217,7 +229,7 @@ ja:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: コンピューターを使わない活動
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: コンピューターを使わない活動
@@ -226,7 +238,7 @@ ja:
         title: コンピューターを使わない活動
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: コンピューターを使わない活動
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: コンピューターを使わない活動
@@ -263,9 +275,7 @@ ja:
         desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。
       courseC_unplugged_binaryBracelets:
         title: バイナリブレスレット
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
+        desc: 生徒たちは各自の名前の最初の一文字を2進数（バイナリ）で表現したブレスレットを作成します。データの表現や格納方法は一つでないことを学びます。
       courseD_unplugged_graphPaperProgramming:
         title: プログラミングのグラフ用紙
         desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
@@ -373,43 +383,43 @@ ja:
           hit save and plush"
       courseB_unplugged_MRF_2018:
         title: 私のロボットの友だち
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 現実のアルゴリズム：種を植えましょう
         desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
@@ -456,9 +466,7 @@ ja:
         desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。
       BinaryBracelets_2018:
         title: バイナリブレスレット
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
+        desc: 生徒たちは各自の名前の最初の一文字を2進数（バイナリ）で表現したブレスレットを作成します。データの表現や格納方法は一つでないことを学びます。
       MoveItMoveIt_2018:
         title: 動かせ！動かせ！
         desc: ''

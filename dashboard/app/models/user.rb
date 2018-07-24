@@ -585,6 +585,17 @@ class User < ActiveRecord::Base
     find_by_hashed_email User.hash_email email
   end
 
+  # Given a cleartext email, finds the first user that has a matching email.
+  # This will not find users (students) who only have hashed_emails stored.
+  # For that, use #find_by_email_or_hashed_email.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
+  def self.find_by_email(email)
+    return nil if email.blank?
+    migrated_user = AuthenticationOption.find_by(email: email)&.user
+    migrated_user || User.find_by(email: email)
+  end
+
   # Given an email hash, finds the first user that has a matching email hash.
   # @param [String] hashed_email
   # @return [User|nil]
@@ -1345,13 +1356,11 @@ class User < ActiveRecord::Base
 
   def in_progress_and_completed_scripts
     user_scripts.compact.reject do |user_script|
-      begin
-        user_script.script.nil?
-      rescue
-        # Getting user_script.script can raise if the script does not exist
-        # In that case we should also reject this user_script.
-        true
-      end
+      user_script.script.nil?
+    rescue
+      # Getting user_script.script can raise if the script does not exist
+      # In that case we should also reject this user_script.
+      true
     end
   end
 
@@ -1667,7 +1676,7 @@ class User < ActiveRecord::Base
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
+      user_script.update!(assigned_at: Time.now)
       return user_script
     end
   end
@@ -1707,7 +1716,12 @@ class User < ActiveRecord::Base
       location: "/v2/users/#{id}",
       age: age,
       sharing_disabled: sharing_disabled?,
+      has_ever_signed_in: has_ever_signed_in?,
     }
+  end
+
+  def has_ever_signed_in?
+    current_sign_in_at.present?
   end
 
   def self.progress_queue
@@ -1986,6 +2000,14 @@ class User < ActiveRecord::Base
 
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
     restore(recursive: true, recovery_window: 5.minutes)
+  end
+
+  def depended_upon_for_login?
+    # Teacher is depended upon for login if student does not have a personal login
+    # and student has no other teachers.
+    students.any? do |student|
+      student.can_create_personal_login? && student.teachers.uniq.one?
+    end
   end
 
   private

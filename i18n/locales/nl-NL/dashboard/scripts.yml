@@ -2048,7 +2048,7 @@ nl:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Het ontwerp recept'
         AlgebraB:
-          title: Informatica in Algebra
+          title: 'Informatica in Algebra'
           description: Leer functioneel programmeren door Algebra
           description_short: Leer functioneel programmeren door Algebra
           description_audience: ''
@@ -9530,6 +9530,16 @@ nl:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

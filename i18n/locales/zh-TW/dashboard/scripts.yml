@@ -2042,7 +2042,7 @@ zh-TW:
             'Unplugged: The Design Recipe':
               name: '不插電活動 - 設計流程'
         AlgebraB:
-          title: 代數裡的計算機科學
+          title: '代數裡的計算機科學'
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
           description_audience: ''
@@ -9522,6 +9522,16 @@ zh-TW:
             Labyrinth:
               name: Labyrinth
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
           description_audience: ''
           description_short: ''
           description: ''

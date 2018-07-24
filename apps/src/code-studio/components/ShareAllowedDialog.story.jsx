@@ -1,7 +1,7 @@
 import React from 'react';
 import { UnconnectedShareAllowedDialog as ShareAllowedDialog } from './ShareAllowedDialog';
 import { action } from '@storybook/addon-actions';
-import publishDialog from '@cdo/apps/templates/publishDialog/publishDialogRedux';
+import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 
 const fakei18n = {
     t(s) {

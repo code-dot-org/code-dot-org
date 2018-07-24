@@ -811,7 +811,7 @@ fi:
           to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street
+        text: 'The Internet is a super fun place. But just like when you cross a street
           in your neighborhood, you also have to be careful when you go online. Here
           are three rules to remember. Rule number 1: Always ask your parents first.
           Rule number 2: Only talk to people you know. Rule number 3: Stick to places
@@ -1090,7 +1090,7 @@ fi:
         text: Use your heart to grow and grow, and to give yourself a healthy glow,
           and to make a valentine, tell someone that you'll be mine! Use your heart
           when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
+          respect, to be fair and nice on the Internet. From your head down to your
           toes, pause, think about it. From your feet up to your nose, pause and think
           online!
       3:
@@ -1671,12 +1671,12 @@ fi:
           forward five times to the yummy sunflower.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Tähän mennessä olemme tehneet animaation tai tarinan, joka tekee samat
           asiat joka kerta suoritettaessa. Nyt voit tehdä oman vuorovaikutteisen pelin,
           jota voi oikeasti pelata.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Tarjolla on "kun nuoli" ja "liikuta hahmoa" -lohkot. Voit laittaa nämä
           lohkot yhteen ja liikuttaa hahmoja ympäriinsä nuolinäppäimillä.
     C3_songwriting_with_parameters:
