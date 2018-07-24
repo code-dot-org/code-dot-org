@@ -1192,7 +1192,7 @@
         "course3_bee_debugging_challenge1_authored_hint": {
           "courseD_bee_debugging_challenge1_a": "Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?",
           "courseD_bee_debugging_challenge1_b": "On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?",
-          "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n* Repeat 2 times:\n  * Move forward\n  * Make 3 honey\n* Move backward"
+          "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n* Repeat 2 times:\n * Move forward\n * Make 3 honey\n* Move backward"
         },
         "course3_bee_functions_challenge1_authored_hint": {
           "courseE_bee_functions_challenge1_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
@@ -4008,12 +4008,12 @@
         "courseD_bee_debugging_challenge1_authored_hint": {
           "courseD_bee_debugging_challenge1_a": "Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?",
           "courseD_bee_debugging_challenge1_b": "On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?",
-          "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n* Repeat 2 times:\n  * Move forward\n  * Make 3 honey\n* Move backward"
+          "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n* Repeat 2 times:\n * Move forward\n * Make 3 honey\n* Move backward"
         },
         "courseD_bee_debugging_challenge1_2018_authored_hint": {
           "courseD_bee_debugging_challenge1_a": "Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?",
           "courseD_bee_debugging_challenge1_b": "On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?",
-          "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n* Repeat 2 times:\n  * Move forward\n  * Make 3 honey\n* Move backward"
+          "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n* Repeat 2 times:\n * Move forward\n * Make 3 honey\n* Move backward"
         },
         "courseD_bee_debugging_challenge1a_authored_hint": {
           "courseD_bee_debugging_challenge1_a": "Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?",
@@ -4023,7 +4023,7 @@
         "courseD_bee_debugging_challenge2_authored_hint": {
           "courseD_bee_debugging_challenge1_a": "Why the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?",
           "courseD_bee_debugging_challenge1_b": "On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?",
-          "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n* Repeat 2 times:\n  * Move forward\n  * Make 3 honey\n* Move backward"
+          "courseD_bee_debugging_challenge1_c": "After the bee makes it to the bottom row, have it repeat these commands:\n\n* Repeat 2 times:\n * Move forward\n * Make 3 honey\n* Move backward"
         },
         "courseD_bee_nestedLoops1_authored_hint": {
           "courseD_bee_nestedLoops1_a": "Not working?  Try using the \"Step\" button to see what happens line by line.",
