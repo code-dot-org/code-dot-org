@@ -363,6 +363,7 @@ zh-CN:
     current_password_hint: '（我们需要您的当前密码以确认您的更改）'
     delete: '删除帐号'
     delete_text: "删除账号会擦除连接到这个账号的所有信息和进度。"
+    delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
     delete_text_teacher_note: "请注意：删除你的帐号并不会同时删除你学生的帐号。"
     delete_confirm: '你确定删除这个帐号吗？'
     deleted_user: '已删除的用户'
@@ -1012,18 +1013,18 @@ zh-CN:
       last_name: 'Last Name'
       email: '电子邮件'
       email_alternate: 'Alternate Email'
-      gender: 'Gender Identity'
+      gender: '性别'
       school_name: '学校名称'
       school_city: '学校所在城市'
       school_country: '学校所在国家'
       ages: 'Which age(s) do you teach this year?'
       subjects: 'Which subject(s) do you teach this year?'
-      resources: 'Which of the following CS education resources do you use?'
-      robotics: 'Which of the following robotics resources do you use?'
+      resources: '您使用以下哪种计算机科学教育资源？'
+      robotics: '您使用以下哪种机器人设备？'
       workshop_organizer: 'Workshop Organizer'
       workshop_facilitator: 'Workshop Facilitator'
       workshop_course: 'Workshop Course'
-      email_opt_in: 'I agree that Code.org can share my contact information and aggregate data about my classes with the Code.org International Partner in my country.'
+      email_opt_in: '允许 Code.org 能与我国的 Code.org 国际合作伙伴分享我的联系信息和汇总班级数据。'
       legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
     form_entries:
       gender:
@@ -1033,21 +1034,21 @@ zh-CN:
         not_listed: '期望的术语未列出'
         none: '不愿回答'
       school_country:
-        canada: 'Canada'
-        chile: 'Chile'
-        israel: 'Israel'
-        malaysia: 'Malaysia'
-        mexico: 'Mexico'
-        thailand: 'Thailand'
+        canada: '加拿大'
+        chile: '智利'
+        israel: '以色列'
+        malaysia: '马来西亚'
+        mexico: '墨西哥'
+        thailand: '泰国'
       ages:
-        ages_under_6: '< 6 years old'
-        ages_7_8: '7-8 years old'
-        ages_9_10: '9-10 years old'
-        ages_11_12: '11-12 years old'
-        ages_13_14: '13-14 years old'
-        ages_15_16: '15-16 years old'
-        ages_17_18: '17-18 years old'
-        ages_19_over: '19+ years old'
+        ages_under_6: '6岁以下'
+        ages_7_8: '7-8岁'
+        ages_9_10: '9-10岁'
+        ages_11_12: '11-12岁'
+        ages_13_14: '13-14岁'
+        ages_15_16: '15-16岁'
+        ages_17_18: '17-18岁'
+        ages_19_over: '19岁以上'
       subjects:
         cs: '计算机科学'
         ict: 'ICT'
@@ -1063,7 +1064,7 @@ zh-CN:
         bootstrap: 'Bootstrap'
         codecademy: 'CodeCademy'
         csfirst: 'Google CS First'
-        khan: 'Khan Academy'
+        khan: '可汗学院'
         kodable: 'Kodable'
         lightbot: 'Lightbot'
         scratch: 'Scratch'
@@ -1076,25 +1077,27 @@ zh-CN:
         microbit: 'Microbit'
         ozobot: 'Ozobot'
         sphero: 'Sphero'
-        raspberry: 'Raspberry Pi'
+        raspberry: '树莓派'
         wonder: 'Wonder Workshop'
         other: "Other:"
       workshop_course:
         csf_af: 'CS Fundamentals (Courses A-F)'
         csf_express: 'CS Fundamentals (Pre-Express or Express)'
+        csd: '计算机科学发现'
+        csp: '计算机科学原理'
       email_opt_in:
         opt_in_yes: '是'
         opt_in_no: '不'
     international_opt_in:
-      title: 'Workshop Attendance for non-U.S. Teachers'
-      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
-      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that we can help to support your journey as a computer science teacher."
-      thanks: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at support@code.org or by posting on the teacher forum!"
+      title: 'Workshop Attendance'
+      intro: "非常感谢您抽出时间接受Code.org的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。"
+      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
+      thanks: "感谢您的提交！我们期待着能帮助您熟悉Code.org的课程及教学工具。如果您有任何问题和反馈，请及时告知我们。这包括向 support@code.org 发送邮件和在教师论坛发帖两种方法。"
     logged_out:
-      heading: 'Thanks for your interest in the Professional Learning Program!'
+      heading: '感谢您对专业学习计划的兴趣！'
       body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
     not_teacher:
-      body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either <a href="%{create_teacher}">create a teacher account</a> or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
+      body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
       more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
     no_teacher_email:
       body: 'Your account doesn’t have an email address. Please <a href="%{user_registration}">visit your account settings</a> to add your email address before completing this form.'
@@ -1110,4 +1113,3 @@ zh-CN:
     privacy_policy: '隐私条款'
     logout: '注销'
     yes: '是'
-

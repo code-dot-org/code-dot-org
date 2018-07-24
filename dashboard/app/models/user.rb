@@ -2003,11 +2003,13 @@ class User < ActiveRecord::Base
   end
 
   def depended_upon_for_login?
-    # Teacher is depended upon for login if student does not have a personal login
-    # and student has no other teachers.
-    students.any? do |student|
-      student.can_create_personal_login? && student.teachers.uniq.one?
-    end
+    students.any?(&:depends_on_teacher_for_login?)
+  end
+
+  def depends_on_teacher_for_login?
+    # Student depends on teacher for login if they do not have a personal login
+    # and only have one teacher.
+    student? && can_create_personal_login? && teachers.uniq.one?
   end
 
   private

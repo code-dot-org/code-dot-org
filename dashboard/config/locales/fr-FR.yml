@@ -106,8 +106,8 @@ fr:
       t'identifier en tapant ton mot de passe ci-dessous.
     use_clever: Désolé, votre compte Code.org n'est pas lié à votre %{provider}. Veuillez-vous
       connecter avec votre compte Clever.
-    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}.
-      Please try again.
+    unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
+      %{provider}. Veuillez réessayer s'il vous plaît.
   signup_form:
     student_count: "%{count} élèves se sont déjà inscrits."
     teacher_count: "%{count} enseignants se sont déjà inscrits."
@@ -424,12 +424,16 @@ fr:
       :'
     email_confirm_wrong_email: "(Adresse e-mail invalide ?)"
     email_resend_confirm: Renvoyer les instructions de confirmation
-    new_email_hint: "(make sure you can receive emails to this email address)"
+    new_email_hint: "(veuillez vous assurer que vous pouvez recevoir des courriers
+      à cette adresse email)"
     new_password_hint: "(laisser vide si rien n’est à changer)"
     current_password_hint: "(nous avons besoin de votre mot de passe pour confirmer
       les modifications)"
     delete: Supprimer votre compte
     delete_text: Cliquer sur le bouton ci-dessous supprimera votre compte.
+    delete_text_teacher_managed_note: You do not have permission to delete this account
+      because it is managed by your teacher. Your teacher(s) will need to remove you
+      from their sections before you can delete your account.
     delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
       pas les comptes de vos élèves.'
     delete_confirm: Êtes-vous sûr de vouloir supprimer votre compte ?
@@ -461,7 +465,7 @@ fr:
     enter_parent_email: Entrez l'adresse e-mail de vos parents ou de votre tuteur
       (pour la récupération de mot de passe)
     update: Mise à jour du compte
-    account_successfully_updated: Account successfully updated.
+    account_successfully_updated: Compte actualisé avec succès.
   user_level:
     completed: Terminé
     tried: A essayé
@@ -605,19 +609,25 @@ fr:
       Instagram ou Facebook en disant « Je passe l’examen #APCSP parce que... » Les
       meilleures propositions seront présentées dans notre vidéo et les étudiants
       gagnants recevront Code.org swag !"
-    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
-      you a gift</a>. Students can also encourage peers across the country in our
-      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
-    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
-      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
-      video</a> so your students can hear from their peers around the country who
-      are taking the exam.
+    announcement_apcsp_recruitment2: Cette année, l'examen pour le cours avancé sur
+      les principes des sciences informatiques est prêt à battre tous les records.
+      La participation des étudiants à celui-là pourrait drastiquement modifier la
+      diversité des cours avancés en sciences informatiques, mais nous avons besoin
+      de votre aide. Encouragez tous les étudiants du cours sur les Principes des
+      sciences informatiques à prendre l'examen du cours avancé et nous vous enverrons
+      <a href='%{gift_url}' target='_blank'>un cadeau</a>. Les étudiants peuvent également
+      encourager leurs pairs à travers le pays gràace à notre <a href='%{challenge_url}'
+      target='_blank'>#APCSP défi vidéo</a>.
+    announcement_apcsp_recruitment3: Cette année, l'examen pour le cours avancé sur
+      les principes des sciences informatiques est prêt à battre tous les records.
+      La participation des étudiants à celui-là pourrait drastiquement modifier la
+      diversité des cours avancés en sciences informatiques, mais nous avons besoin
+      de votre aide. Encouragez tous les étudiants du cours sur les Principes des
+      sciences informatiques à prendre l'examen du cours avancé et vous pourriez gagner
+      <a href='%{gift_url}' target='_blank'>a une carte cadeau, un ordinateur portable
+      et d'autres prix sympas</a>!  Partagé <a href='%{video_url}' target='_blank'>cette
+      vidéo</a> pour que vos étudiants entendent parler de ceux qui choisissent cet
+      examen.
     announcement_csp_deadline: Dernier appel pour les enseignants du lycée ! Menez
       l'enseignement de l’informatique dans votre école et demandez à participer à
       nos programmes d'enseignement de haute qualité <strong>absolument sans aucun
@@ -663,7 +673,7 @@ fr:
   gender:
     male: Masculin
     female: Femme
-    non_binary: Non-binary
+    non_binary: Non binaire
     not_listed: Preferred term not listed
     none: Préfère ne pas répondre
   user_type:
@@ -1215,7 +1225,7 @@ fr:
     csd5_2: 'Chapitre 2 : Résoudre des problèmes avec des données'
     csd6_1: 'Chapitre 1 : Matériel pour la sortie des données'
     csd6_2: 'Chapitre 2 : Matériel pour l''entrée des données'
-    csd_survey: Post-Course Survey
+    csd_survey: Suivi d'après cours
     csp1_1: 'Chapitre 1: Représentation et transmission de l''information'
     csp1_2: 'Chapitre 2: Créer l''Internet'
     csp2_1: 'Chapitre 1: Représentation et compression de données complexes'
@@ -1226,13 +1236,13 @@ fr:
     csp5_2: 'Chapitre 2 : Programmation avec des structures de données'
     cspSurvey: Sondage
     cspAssessment: Chapitre d'évaluation
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp_ap_1: 'Chapitre 1 : cours avancé Configuration Technique'
+    csp_ap_2: 'Chapitre 2 : cours avancé Explorer l''Evaluation des Connaissances'
+    csp_ap_3: 'Chapitre 3 : cours avancé Créer une Evaluation des Connaissances'
+    csp_postap_1: 'Chapitre1 : Manipulation et visualisation des données'
+    csp_postap_2: 'Chapitre 2 : Application et bases de données'
     csp2_1_2018: 'Unité 2: L’Information numérique'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
+    csp3_1_2018: 'Unité 3 : Introduction à la programmation'
     csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Reflection Prompts
   external_links:
@@ -1320,9 +1330,9 @@ fr:
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  stage_extras_teacher_message: You have Lesson Extras turned off for some of your
-    sections. Your students won’t see this page unless you turn them on. You can turn
-    Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher
+  stage_extras_teacher_message: Les leçons supplémentaires sont désactivées pour certains
+    de vos espaces. Vos étudiants ne verront pas cette page à moins de les réactiver.
+    Vous pouvez le faire en visitant votre <a href='http://code.org/teacher-dashboard'>Teacher
     Dashboard</a>.
   locked_stage: Les contenus ne sont pas visibles car cette étape est verrouillée
     pour l'instant. Ton professeur la déverrouillera lorsqu'il sera temps de travailler
@@ -1383,24 +1393,24 @@ fr:
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
     form_labels:
-      first_name: First Name
-      first_name_preferred: Preferred First Name
-      last_name: Last Name
+      first_name: Prénom
+      first_name_preferred: Prénom préféré
+      last_name: Nom
       email: E-mail
-      email_alternate: Alternate Email
-      gender: Gender Identity
+      email_alternate: Autre email
+      gender: Sexe
       school_name: Nom de l'école
       school_city: Ville de l’école
       school_country: Pays de l’école
-      ages: Which age(s) do you teach this year?
-      subjects: Which subject(s) do you teach this year?
+      ages: Quel est l'âge de vos étudiants cette année ?
+      subjects: Quel(s) matière(s) enseignez-vous cette année ?
       resources: Which of the following CS education resources do you use?
       robotics: Which of the following robotics resources do you use?
       workshop_organizer: Workshop Organizer
       workshop_facilitator: Workshop Facilitator
       workshop_course: Workshop Course
-      email_opt_in: I agree that Code.org can share my contact information and aggregate
-        data about my classes with the Code.org International Partner in my country.
+      email_opt_in: Can we email you about Code.org’s international program, updates
+        to our courses, or other computer science news?
       legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
         share information on how you use Code.org and the Professional Learning resources
         with the Code.org International Partner in your country, school district,
@@ -1416,7 +1426,7 @@ fr:
       gender:
         male: Masculin
         female: Femme
-        non_binary: Non-binary
+        non_binary: Non binaire
         not_listed: Preferred term not listed
         none: Préfère ne pas répondre
       school_country:
@@ -1469,23 +1479,26 @@ fr:
       workshop_course:
         csf_af: CS Fundamentals (Courses A-F)
         csf_express: CS Fundamentals (Pre-Express or Express)
+        csd: Découvertes de l'informatique
+        csp: Principes de CS 16-17
       email_opt_in:
         opt_in_yes: Oui
         opt_in_no: Non
     international_opt_in:
-      title: Workshop Attendance for non-U.S. Teachers
+      title: Workshop Attendance
       intro: Thank you for taking time to receive training on Code.org’s curriculum.
         Our mission to bring computer science education opportunities to all children
         in all schools around the world would not be possible without you.
       instructions: Please fill out the form below to indicate that 1) you attended
         a training workshop run by one of Code.org’s international partners, and 2)
         you agree to share your information with our international partner in your
-        country so that we can help to support your journey as a computer science
+        country so that they can help to support your journey as a computer science
         teacher.
       thanks: Thank you for submitting! We look forward to supporting you as you get
         to know Code.org’s curriculum and tools. Please keep sharing your questions
-        and feedback with us by writing to us at support@code.org or by posting on
-        the teacher forum!
+        and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a>
+        or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher
+        forum</a>!
     logged_out:
       heading: Thanks for your interest in the Professional Learning Program!
       body: To get started, you first need to be logged into your Code.org account.
@@ -1493,9 +1506,9 @@ fr:
         please check out the <a href="%{url}">Professional Learning Program overview</a>.
     not_teacher:
       body: Thanks for your interest in Code.org’s Professional Learning Program!
-        You’re currently signed into a student account. Please either <a href="%{create_teacher}">create
-        a teacher account</a> or <a href="%{user_settings}">go to your user settings</a>
-        to upgrade your account from student to teacher.
+        You’re currently signed into a student account. Please either create a teacher
+        account or <a href="%{user_settings}">go to your user settings</a> to upgrade
+        your account from student to teacher.
       more: If you’d like more information about the program before you start your
         application, please check out the <a href="%{pl_overview}">Professional Learning
         Program overview</a>.

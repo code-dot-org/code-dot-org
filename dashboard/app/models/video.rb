@@ -37,11 +37,12 @@ class Video < ActiveRecord::Base
   end
 
   def self.setup
+    videos = CSV.read('config/videos.csv', headers: true).map.with_index(1) do |row, id|
+      {id: id, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download']}
+    end
     transaction do
       reset_db
-      CSV.read('config/videos.csv', headers: true).each_with_index do |row, id|
-        create!(id: id + 1, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download'])
-      end
+      Video.import! videos
     end
     check_i18n_names
   end

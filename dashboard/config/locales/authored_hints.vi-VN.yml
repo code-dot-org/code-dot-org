@@ -5,11 +5,11 @@ vi:
       2-3 Artist 1 new_authored_hint:
         2-3_Artist_1_new_a: Nếu bạn sử dụng khối lệnh để tôi `di chuyển về phía trước
           100 pixel`, tôi sẽ tự động vẽ một đường thẳng.
-        2-3_Artist_1_new_b: Gặp khó khăn khi quẹo/rẽ ở góc? Hãy dùng block `quẹo/rẽ
-          90 độ`.
+        2-3_Artist_1_new_b: Gặp khó khăn khi rẽ ở góc? Hãy dùng block `rẽ phải 90
+          độ`.
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Gặp khó khăn với các góc độ? Bạn cần xoay 360 độ trong 8
-          lần. 360/8 bằng bao nhiêu? '
+        2-3_Artist_11_a: 'Gặp khó khăn với các góc? Bạn cần xoay 360 độ trong 8 lần.
+          360/8 bằng bao nhiêu? '
       2-3 Artist 12_authored_hint:
         2-3_Artist_12_a: Một vòng tròn có 360 độ, vì vậy nếu người hoạ sĩ xoay 1 độ
           mỗi lần trong loop code, anh ta sẽ cần xoay 360 lần.
@@ -60,68 +60,64 @@ vi:
         2-3_Artist_Debugging_3_b: Nếu chương trình chạy quá nhanh để xem chuyện gì
           đã xảy ra, hãy thử làm chậm nó lại với thành trượt.
       2-3 Artist Debugging 7_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump
-          backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Chuyện gì sẽ xảy ra nếu họa sĩ di chuyển hoặc nhảy
+          về sau khi ông vẽ nét đầu tiên?
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
+          Hình của tôi đã lặp lại bao nhiêu lần?
 
-          How many times *should* the shape repeat?
+          Hình đó *cần* lặp lại bao nhiêu lần?
 
-          Where can you change that in the program?
+          Bạn có thể thay đổi điều đó ở đâu trong chương trình?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left
-          before starting to draw!
-        2-3_Artist_Debugging_9_b: You don't need to add another block to get the full
-          turn, just add 60 degrees to the `turn left` block that's already there!
+        2-3_Artist_Debugging_9_a: Người họa sĩ cần quay thêm 60 độ về bên trái trước
+          khi bắt đầu vẽ!
+        2-3_Artist_Debugging_9_b: Bạn không cần phải thêm một khối khác để có một
+          vòng quay đầy đủ, bạn chỉ cần thêm 60 độ vào khối `rẽ trái bởi` đã có sẵn!
       2-3 Artist Functions 1 a_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: Mỗi hình vuông có cạnh dài 100 điểm ảnh, điều đó
+          có nghĩa là bạn cần đi về phía trước 175 điểm ảnh trước khi vẽ hình vuông
+          thứ hai.
+        2-3_Artist_Functions_1_b: Bạn có thể vẽ các nét trùng nhau để làm cái kính
+          của bạn.
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: Mỗi hình vuông có cạnh dài 100 điểm ảnh, điều đó
+          có nghĩa là bạn cần đi về phía trước 175 điểm ảnh trước khi vẽ hình vuông
+          thứ hai.
+        2-3_Artist_Functions_1_b: Bạn có thể vẽ các nét trùng nhau để làm cái kính
+          của bạn.
       2-3 Artist Functions 11 a_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and
-          length of sides within the function, but also the angle the artist turns
-          between each side.
+        2-3_Artist_Functions_11_a: Bạn sẽ cần thay đổi không chỉ các con số và chiều
+          dài cạnh trong hàm, mà còn là góc mà nhà họa sĩ rẽ giữa các cạnh.
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and
-          length of sides within the function, but also the angle the artist turns
-          between each side.
+        2-3_Artist_Functions_11_a: Bạn sẽ cần thay đổi không chỉ các con số và chiều
+          dài cạnh trong hàm, mà còn là góc mà nhà họa sĩ rẽ giữa các cạnh.
       2-3 Artist Functions 12 a_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need
-          to add.
+        2-3_Artist_Functions_12_a: Thử chạy mã để xem bạn cần thêm cái gì.
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need
-          to add.
+        2-3_Artist_Functions_12_a: Thử chạy mã để xem bạn cần thêm cái gì.
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Chương trình của bạn cần:
+          - Dùng hàm\
+          - Tiến về phía trước 100 + 75 điểm ảnh
+          - Dùng hàm
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Chương trình của bạn cần:
+          - Dùng hàm\
+          - Tiến về phía trước 100 + 75 điểm ảnh
+          - Dùng hàm
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 4 a_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each
-          square to complete this design.
+        2-3_Artist_Functions_4_a: Nhà họa sĩ cần quay 120 độ giữa những hình vuông
+          để hoàn thành thiết kế này.
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each
-          square to complete this design.
+        2-3_Artist_Functions_4_a: Nhà họa sĩ cần quay 120 độ giữa những hình vuông
+          để hoàn thành thiết kế này.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Hãy nhớ, đây là mã nguồn của câu đố lúc nãy:
@@ -167,107 +163,103 @@ vi:
           </next>
           </block>
           </xml>
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: Khối rẽ mới của bạn nên nằm ở phần **cuối** của
+          đoạn mã bên trong vòng lặp.
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to
-          turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will
-          need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees
-          to create a wide corner.
+        2-3_Artist Loops_New_12_a: Trước khi bắt đầu vẽ hình thoi, nhà họa sĩ cần
+          phải rẽ trái 60 độ để bắt đầu vẽ đúng hướng.
+        2-3_Artist Loops_New_12_b: Sau khi nhà họa sĩ tiến lên 100 điểm ảnh, ông sẽ
+          cần rẽ phải 120 độ để tạo ra góc nhọn.
+        2-3_Artist Loops_New_12_c: Nhà họa sĩ sẽ chỉ cần rẽ phải 60 độ để tạo ra góc
+          rộng.
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already
-          facing the right direction to start the next one.  \n\nBecause of this,
-          we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n-
-          move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen
-          do it all again!"
+        2-3_Artist_Loops_New_13_a: "Ở cuối mỗi hình thoi, nhà họa sĩ đã ở đúng góc
+          để bắt đầu hình tiếp theo. \n\n Do đó, chúng ta không cần thêm một khối
+          `rẽ trái bởi` trước khi bắt đầu lại."
+        2-3_Artist_Loops_New_13_b: "Để làm mỗi hình thoi, nhà họa sĩ cần: \n- đi\n-
+          rẽ phải 120 độ\n- đi\n- rẽ phải 60 độ \n\nXong rồi làm lại tất cả từ đầu!"
       2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right
-          before he starts drawing.
-        2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would
-          the code be to draw half of a square?
+        2-3_Artist_Loops_New_9_a: Nhà họa sĩ cần rẽ phải 45 độ trước khi bắt đầu vẽ.
+        2-3_Artist_Loops_New_9_b: Chữ V này thật ra chỉ là một nửa hình vuông.  Cái
+          gì sẽ là đoạn mã để vẽ một nửa hình vuông?
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside
-          of your loop.
+        2-3_Artist_Nested_Loops_1_a: Nhớ đặt các khối xám vào trong vòng lặp của bạn.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your
-          turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_a: "Cần trợ giúp với các góc? \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_b: Nhớ đặt tất cả các đoạn mã màu xám và khối rẽ
+          vào trong vòng lặp.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "Cần trợ giúp với các góc? \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from
-          the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        2-3_Artist_Nested_Loops_5_a: "Thử dùng khối `nhảy về phía trước` để đi từ
+          hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình
+          vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao
+          xa?"
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat
-          is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: "Bạn cần quay bao xa trong mỗi vong lặp? \n\n360/10
+          ra bao nhiêu?"
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: Cần trợ giúp tìm góc chính xác? ** 360 / 12 =
           30 **
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
-          \ \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
-          if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
-          \ - Make two honey"
+        2-3_Bee_Conditionals_14_a: Gặp khó khăn trong việc tìm cách đặt các khối?  Thử
+          coi bông hoa đỏ giống hệt bông hoa tím xem!
+        2-3_Bee_Conditionals_14_b: Nếu bông hoa đỏ có màu tím, bạn có thể tìm ra cách
+          dùng thêm một vòng lặp để giảm số khối trong mã không?
+        2-3_Bee_Conditionals_14_c: "Thử chia việc này thành hai việc riêng biệt: \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
+          Thu hoạch mật hoa 3 lần\n - Đi thẳng 5 lần\n - Kiểm tra xem có mật hoa không,
+          nếu có: thu hoạch nó\n - Rẽ trái\n \n2) Làm mật ong\n - Đi thẳng 1 lần\n
+          - Làm mật ong 2 lần"
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'Nhớ rằng: Những bông hoa tím có 0 hoặc 1 mật hoa
+          và nó có thể thay đổi mỗi làn bạn chạy chương trình.'
       2-3 Bee Conditionals 3_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: Đoạn mã sẽ ngắn nhất khi bạn dùng một vòng lặp mỗi
+          khi bạn tiến lên, một vòng lặp khác để thu hoạch mật hoa, và một cái nữa
+          để làm mật ong.
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Nhớ rằng: Những bông hoa tím thay đổi giữa 0 và
+          1 mật hoa khi bạn chạy chương trình!'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: Một khi bạn tìm ra và sửa được khối sai, bạn có nhìn
+          thấy mẫu nào mà có thể thu gọn được dùng vòng lặp không?
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: Một khi bạn tìm ra và sửa được khối sai, bạn có nhìn
+          thấy mẫu nào mà có thể thu gọn được dùng vòng lặp không?
       2-3 Bee Debugging 4_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that
-          doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: Có chỗ nào mà con ong làm điều gì đó vô lý không? Điều
+          gì xảy ra khi bạn đổi khối đó?
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving,
-          using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: Bạn không cần phải dùng một vòng lặp với hàm. Thử di
+          chuyển, dùng hàm, xong di chuyển và dùng hàm một lần nữa.
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving,
-          using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: Bạn không cần phải dùng một vòng lặp với hàm. Thử di
+          chuyển, dùng hàm, xong di chuyển và dùng hàm một lần nữa.
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của bạn
+          từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi thử
+          lại.  Sẽ có lúc bạn hoàn thành nó!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của bạn
+          từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi thử
+          lại.  Sẽ có lúc bạn hoàn thành nó!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          Nhớ xây dựng đoạn mã của bạn bên trong khối hàm màu xanh lá cây.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Bạn cần có bốn khối bên trong vòng lặp của bạn.
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Bạn cần có 6 khối bên trong vòng lặp.
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: Bạn sẽ cần hai vòng lặp khác nhau, một cái sau cái còn
+          lại.
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Bạn cần có năm khối bên trong vòng lặp của bạn.
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
+        2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách
+          viết mã ở phần cuối chương trình, bên ngoài vòng lặp của bạn.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
@@ -280,7 +272,7 @@ vi:
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       2-3 Maze 1_authored_hint:
@@ -294,7 +286,7 @@ vi:
           program inside of it.  \n\nConnect it all back to the `when run` block and
           you're good to go!"
       2-3 Maze 6_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: Có hai cách để giải câu đố này!
       2-3 Maze Loops 17_authored_hint:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out
           first and see what things repeat over and over before you put the loops
@@ -452,10 +444,9 @@ vi:
         after: When you're done with each "petal", be sure to `move forward` 20 pixels
           before you make a 60 degree rotation.
         solution: |-
-          **Solution**
-
-
-          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+          **Lời giải**
+          ![Hình ảnh của Lời Giải]
+          (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area
           out into the workspace and connect it to the `when run` block.
@@ -3858,10 +3849,9 @@ vi:
         after: When you're done with each "petal", be sure to `move forward` 20 pixels
           before you make a 60 degree rotation.
         solution: |-
-          **Solution**
-
-
-          ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+          **Lời giải**
+          ![Hình ảnh của Lời Giải]
+          (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       InspirationalArtwork_authored_hint: {}
       InspirationalArtwork_2018_authored_hint: {}
       K2.0 sequence 1_authored_hint:
@@ -4921,15 +4911,15 @@ vi:
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
+          hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
+          hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
+          hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
+          hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge3_authored_hint:
@@ -7741,7 +7731,7 @@ vi:
         courseB_maze_seq7_c: Can't get to the acorn?  Try this path!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
-        courseB_maze_seq8_b: There are two ways to solve this puzzle!
+        courseB_maze_seq8_b: Có hai cách để giải câu đố này!
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
@@ -9611,14 +9601,14 @@ vi:
         courseC_maze_programming5_c: The solution will have two `move forward` blocks,
           a turn, and two more `move forward` blocks.
       courseC_maze_programming6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Có hai cách để giải câu đố này!
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
           starts facing a wall.
         courseC_maze_programming6_d: Feel stuck?  Look at this path!
       courseC_maze_programming6_2018_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Có hai cách để giải câu đố này!
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
@@ -10015,10 +10005,10 @@ vi:
           blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Chương trình của bạn cần:
+          - Dùng hàm\
+          - Tiến về phía trước 100 + 75 điểm ảnh
+          - Dùng hàm
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -10104,19 +10094,19 @@ vi:
         courseD_artist_nestedLoops2_b: Remember to put the `turn` block inside of
           the loop so that the artist turns after each triangle.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get
-          from the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        courseD_artist_nestedLoops3_a: "Thử dùng khối `nhảy về phía trước` để đi từ
+          hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình
+          vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao
+          xa?"
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
           this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
           square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops3_2018_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get
-          from the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        courseD_artist_nestedLoops3_a: "Thử dùng khối `nhảy về phía trước` để đi từ
+          hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình
+          vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao
+          xa?"
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
           this puzzle quickly. '
         courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
@@ -12214,7 +12204,7 @@ vi:
       courseD_maze_ramp5d_authored_hint: {}
       courseD_maze_ramp5d_2018_authored_hint: {}
       courseD_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Có hai cách để giải câu đố này!
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to
           turn before you move.
         courseC_maze_programming6_c: Remember you can write one piece of the code
@@ -12521,14 +12511,14 @@ vi:
       courseD_scrat_ramp6_2018_authored_hint:
         courseC_maze_programming6a_a: Use a `repeat` loop to get Scrat moving!
       courseD_scrat_ramp7_authored_hint:
-        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_a: Có hai cách để giải câu đố này!
         courseD_scrat_programming6_b: Remember to turn first before moving, since
           Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
       courseD_scrat_ramp7_2018_authored_hint:
-        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_a: Có hai cách để giải câu đố này!
         courseD_scrat_programming6_b: Remember to turn first before moving, since
           Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -12618,11 +12608,11 @@ vi:
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: {}
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make
-          your glasses.
+        courseE_artist_functions1_a: Mỗi hình vuông có cạnh dài 100 điểm ảnh, điều
+          đó có nghĩa là bạn cần đi về phía trước 175 điểm ảnh trước khi vẽ hình vuông
+          thứ hai.
+        courseE_artist_functions1_b: Bạn có thể vẽ các nét trùng nhau để làm cái kính
+          của bạn.
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
           draw the square frames of the glasses.
       courseE_artist_functions10_authored_hint:
@@ -12644,11 +12634,11 @@ vi:
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions1_2018_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make
-          your glasses.
+        courseE_artist_functions1_a: Mỗi hình vuông có cạnh dài 100 điểm ảnh, điều
+          đó có nghĩa là bạn cần đi về phía trước 175 điểm ảnh trước khi vẽ hình vuông
+          thứ hai.
+        courseE_artist_functions1_b: Bạn có thể vẽ các nét trùng nhau để làm cái kính
+          của bạn.
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
           draw the square frames of the glasses.
       courseE_artist_functions2_authored_hint:
@@ -12658,10 +12648,10 @@ vi:
           Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Chương trình của bạn cần:
+          - Dùng hàm\
+          - Tiến về phía trước 100 + 75 điểm ảnh
+          - Dùng hàm
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_b: The function should not contain your whole program,
           just the part that draws a square with 100 pixel sides.
@@ -13122,40 +13112,40 @@ vi:
           move forward\n- collect all of the nectar\n- move backward\n- turn back
           to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6_2018_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          Nhớ xây dựng đoạn mã của bạn bên trong khối hàm màu xanh lá cây.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
           the path, collect the nectar, make the honey, then turn the bee around and
           bring him back.
       courseE_bee_functions7_2018_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          Nhớ xây dựng đoạn mã của bạn bên trong khối hàm màu xanh lá cây.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
@@ -13188,27 +13178,27 @@ vi:
         courseE_bee_functions9_b: Even though you know how much nectar some of the
           flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
+          hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
+          hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge1_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
+          hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
+          hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
+          hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
+          hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try
-          building your function a little at a time.  \n\nAdd some blocks, then try
-          it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
+          hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
+          hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_ramp14_authored_hint:
@@ -13293,6 +13283,13 @@ vi:
           the toolbar each time you try a new one.
         4-5_Artist_Patterns_3_b: If your code becomes too confusing, you can always
           click "Start Over" and try again!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets
+          you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached
+          the end of a path?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your
+          code multiple times for each straight path.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently
           this time! Click on the different categories to see which blocks you have.
@@ -13695,14 +13692,14 @@ vi:
         courseC_maze_programming5_c: You will need to turn left at the corner to get
           to the pig.
       courseE_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Có hai cách để giải câu đố này!
         courseC_maze_programming6_b: Remember to turn first before moving, since the
           bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
       courseE_maze_ramp6_2018_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Có hai cách để giải câu đố này!
         courseC_maze_programming6_b: Remember to turn first before moving, since the
           bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -16270,9 +16267,9 @@ vi:
         courseF_bee_functions6_c: Since you are turning within your function, you
           only need one `while` loop to get you through this maze.
       courseF_bee_functions6_2018_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseF_bee_functions6_b: Your function should check if there is a flower
           or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you
@@ -16288,21 +16285,21 @@ vi:
         courseF_bee_functions7_b: Try drawing a path through this maze with your finger.
           Where will the bee have to make a decision?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function
           editor.\n\n"
       courseF_bee_functions8a_2018_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function
           editor.\n\n"
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseF_bee_functions7_b: |
           Remember to build code inside of the green function block.
 
@@ -16318,9 +16315,9 @@ vi:
         courseF_bee_functions7_c: Which way should you turn if there is a honeycomb?
           What about a flower? What if there is nothing?
       courseF_bee_functionsPre7_2018_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
 
@@ -16561,9 +16558,9 @@ vi:
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building
-          your function a little at a time.  \n\nAdd some blocks, then try it out.
-          Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
+          bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
+          thử lại.  Sẽ có lúc bạn hoàn thành nó!"
         courseF_bee_functions8a_b: "Remember to build code inside of the function
           editor.\n\n"
       courseF_bee_fwp1_authored_hint:
@@ -17416,14 +17413,14 @@ vi:
         courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title
           name="TIMES">3</title></block></xml> loop for shorter code!
       courseF_maze_ramp6_authored_hint:
-        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_a: Có hai cách để giải câu đố này!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before
           moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
       courseF_maze_ramp6_2018_authored_hint:
-        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_a: Có hai cách để giải câu đố này!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before
           moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks
@@ -18023,7 +18020,7 @@ vi:
           and turn the opposite way. Move forward one more time to reach the pig.
       grade2_CaringForNewPet_3D_authored_hint: {}
       grade2_CaringForNewPet_4_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: Có hai cách để giải câu đố này!
       grade2_CaringForNewPet_5_authored_hint:
         grade2_CaringForNewPet_5_a: If you can't quite see what you need to do, try
           saying the steps that your bird will take out loud one-by-one and see if
@@ -18037,8 +18034,8 @@ vi:
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Nếu bạn sử dụng khối lệnh để tôi `di chuyển về phía trước
           100 pixel`, tôi sẽ tự động vẽ một đường thẳng.
-        2-3_Artist_1_new_b: Gặp khó khăn khi quẹo/rẽ ở góc? Hãy dùng block `quẹo/rẽ
-          90 độ`.
+        2-3_Artist_1_new_b: Gặp khó khăn khi rẽ ở góc? Hãy dùng block `rẽ phải 90
+          độ`.
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel
           sides.
@@ -18063,16 +18060,16 @@ vi:
           Remember that the code from the last puzzle was:
 
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: Khối rẽ mới của bạn nên nằm ở phần **cuối** của
+          đoạn mã bên trong vòng lặp.
       grade2_MakeDogTag_BFP_authored_hint: {}
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
+          Hình của tôi đã lặp lại bao nhiêu lần?
 
-          How many times *should* the shape repeat?
+          Hình đó *cần* lặp lại bao nhiêu lần?
 
-          Where can you change that in the program?
+          Bạn có thể thay đổi điều đó ở đâu trong chương trình?
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -18095,8 +18092,8 @@ vi:
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Gợi ý: Cứ mỗi ria mèo là 75 độ dài pixel.'
       grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump
-          backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Chuyện gì sẽ xảy ra nếu họa sĩ di chuyển hoặc nhảy
+          về sau khi ông vẽ nét đầu tiên?
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
@@ -18163,31 +18160,31 @@ vi:
           where the bee needs to move forward, then turn left several times to complete
           the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: Gặp khó khăn trong việc tìm cách đặt các khối?  Thử
+          coi bông hoa đỏ giống hệt bông hoa tím xem!
+        2-3_Bee_Conditionals_14_b: Nếu bông hoa đỏ có màu tím, bạn có thể tìm ra cách
+          dùng thêm một vòng lặp để giảm số khối trong mã không?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
           if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
           \ - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or
-          1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'Nhớ rằng: Những bông hoa tím có 0 hoặc 1 mật hoa
+          và nó có thể thay đổi mỗi làn bạn chạy chương trình.'
       grade3_Conditionals_2_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each
-          time you move forward, another loop to gather nectar, and another one to
-          make honey.
+        2-3_Bee_Conditionals_3_a: Đoạn mã sẽ ngắn nhất khi bạn dùng một vòng lặp mỗi
+          khi bạn tiến lên, một vòng lặp khác để thu hoạch mật hoa, và một cái nữa
+          để làm mật ong.
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Nhớ rằng: Những bông hoa tím thay đổi giữa 0 và
+          1 mật hoa khi bạn chạy chương trình!'
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1
-          nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'Nhớ rằng: Những bông hoa tím thay đổi giữa 0 và
+          1 mật hoa khi bạn chạy chương trình!'
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see
-          any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: Một khi bạn tìm ra và sửa được khối sai, bạn có nhìn
+          thấy mẫu nào mà có thể thu gọn được dùng vòng lặp không?
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Start by looking at just the first loop.
@@ -18243,10 +18240,10 @@ vi:
           the stair step pattern, try tracing it with your finger and saying the commands
           out loud. \n\nDon't forget to point out the direction of the turns!"
       grade3_Debugging_TeacherIDo_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that
-          doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: Có chỗ nào mà con ong làm điều gì đó vô lý không? Điều
+          gì xảy ra khi bạn đổi khối đó?
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Bạn cần có năm khối bên trong vòng lặp của bạn.
       grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
           away, start by coding out each move and look for a pattern.
@@ -18256,23 +18253,23 @@ vi:
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: Bạn sẽ cần hai vòng lặp khác nhau, một cái sau cái còn
+          lại.
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
+        2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách
+          viết mã ở phần cuối chương trình, bên ngoài vòng lặp của bạn.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Bạn cần có bốn khối bên trong vòng lặp của bạn.
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Bạn cần có 6 khối bên trong vòng lặp.
       grade3_RunningFarm_1_authored_hint:
         grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat
           loop.
@@ -18422,17 +18419,17 @@ vi:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: Mỗi hình vuông có cạnh dài 100 điểm ảnh, điều đó
+          có nghĩa là bạn cần đi về phía trước 175 điểm ảnh trước khi vẽ hình vuông
+          thứ hai.
+        2-3_Artist_Functions_1_b: Bạn có thể vẽ các nét trùng nhau để làm cái kính
+          của bạn.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Chương trình của bạn cần:
+          - Dùng hàm\
+          - Tiến về phía trước 100 + 75 điểm ảnh
+          - Dùng hàm
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks,
           create a `draw triangle` function and call that multiple times.
@@ -18576,15 +18573,15 @@ vi:
           forward\n- collect all of the nectar\n- turn around\n- move back to the
           main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của bạn
+          từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi thử
+          lại.  Sẽ có lúc bạn hoàn thành nó!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your
-          function a little at a time.  \n\nAdd some blocks, then try it out. Add
-          more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của bạn
+          từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi thử
+          lại.  Sẽ có lúc bạn hoàn thành nó!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          Nhớ xây dựng đoạn mã của bạn bên trong khối hàm màu xanh lá cây.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down
@@ -18629,8 +18626,8 @@ vi:
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Nếu bạn sử dụng khối lệnh để tôi `di chuyển về phía trước
           100 pixel`, tôi sẽ tự động vẽ một đường thẳng.
-        2-3_Artist_1_new_b: Gặp khó khăn khi quẹo/rẽ ở góc? Hãy dùng block `quẹo/rẽ
-          90 độ`.
+        2-3_Artist_1_new_b: Gặp khó khăn khi rẽ ở góc? Hãy dùng block `rẽ phải 90
+          độ`.
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'Để tạo những góc nhỏ này, bạn cần xoay *xa hơn* mỗi lần so
           với lúc bạn xoay hình vuông.   '
@@ -18639,12 +18636,12 @@ vi:
         2-3_Artist_6_c: Mỗi cạnh của hình tam giác có chiều dài tương tự như mỗi cạnh
           của hình vuông...100 pixels!
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: Bạn sẽ cần hai vòng lặp khác nhau, một cái sau cái còn
+          lại.
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Bạn cần có 6 khối bên trong vòng lặp.
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Bạn cần có năm khối bên trong vòng lặp của bạn.
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One
           counts up from 1 to 8, the other counts down from 8 to 1.
@@ -19116,7 +19113,7 @@ vi:
           have them happen immediately after the program starts.
       k1stickerfreeplay_authored_hint: {}
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Bạn cần có năm khối bên trong vòng lặp của bạn.
       level 'grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right
           away, start by coding out each move and look for a pattern.
@@ -19126,23 +19123,23 @@ vi:
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when
           you're done.
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
-          the other.
+        2-3_Bee_Loops_3B_a: Bạn sẽ cần hai vòng lặp khác nhau, một cái sau cái còn
+          lại.
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning,
           try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
-        2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing
-          code at the end of your program outside of your loop.
+        2-3_Bee_Loops_4A_a: Hành động đầu tiên sẽ là rẽ thay vì di chuyển.
+        2-3_Bee_Loops_4A_b: Phần cuối của chương trình có thể được kết thúc bằng cách
+          viết mã ở phần cuối chương trình, bên ngoài vòng lặp của bạn.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the
           long way first, then see what you can combine into a `repeat` loop at the
           end.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Bạn cần có bốn khối bên trong vòng lặp của bạn.
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Bạn cần có 6 khối bên trong vòng lặp.
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when
           run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"

@@ -33,7 +33,7 @@ he:
       2-3 Artist 8_instruction: השלם את החדרים לכל אחת מהחיות על ידי חלוקה של המלבן
         לשני ריבועים שוים בגודלם. רוחב המלבן 200 פיקסלים וגובהו 100 פיקסלים.
       2-3 Artist 9 NEW_instruction: השלם את העפיפון
-      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
+      2-3 Artist 9 REPLACEMENT_instruction: סיים לצבוע את המדרגות!
       2-3 Artist 9_instruction: השלם את העפיפון
       2-3 Artist Assessment 1_instruction: 'הערכה: סיים לצייר את השן האחרונה, אורכה
         25 פיקסלים וגובהה 25 פיקסלים.'
@@ -93,19 +93,20 @@ he:
         המרחק בין \nהפרחים הינו 100 פיקסלים)"
       2-3 Artist Functions 13_instruction: "סיפקנו לך 4 פונקציות. \nהשתמש בהן בתוך
         לולאה כדי ליצור תמונות אותן תחלוק עם חבריך.\nלחץ על הרץ כדי לראות דוגמה."
-      2-3 Artist Functions 2 a_instruction: 'Use the small green `draw a square` block
-        to call this new function and create the glasses. '
+      2-3 Artist Functions 2 a_instruction: 'השתמש בבלוק הירוק הקטן "צייר מרובע" לקרוא
+        לפונקציה וייצר את המשקפיים. '
       2-3 Artist Functions 2_instruction: "פונקציות מאפשרות לך ליצור בלוקים חדשים!\nהעברנו
         את הבלוקים המציירים ריבוע לתוך פונקציה הנקראת \"צייר ריבוע\".\nתוכל להשתמש
         ב \"צייר ריבוע\"רי ליצור את המשקפיים ? \nהריבועים מרוחקים 75 פיקסלים אחד מהשני."
-      2-3 Artist Functions 3 a_instruction: "Edit the \"draw a square\" function to
-        draw glasses with frames that are 115px on each side. \n\nThe squares are
-        now 45 pixels apart."
+      2-3 Artist Functions 3 a_instruction: |-
+        ערוך את הפונקציה "צייר ריבוע" לצייר משקפיים עם עדשות שהם 115 פיקסלים בכל צד.
+
+        כרגע הריבועים הם 45 פיקסלים בנפרד.
       2-3 Artist Functions 3_instruction: |-
         ערוך את הפונקציה כך שתצייר ריבוע בעל צלע צד של 115 פיקסלים וצייר את המשקפיים.
         הריבועים מרוחקים 45 פיקסלים אחד מהשני.
-      2-3 Artist Functions 4 a_instruction: Now, put the function inside of a loop
-        and add an extra turn to draw these three squares.
+      2-3 Artist Functions 4 a_instruction: כעת, הכנס את הפונקציה לתוך לולאה והוסף
+        פניה נוספת כדי לצייר את 3 הריבועים הללו.
       2-3 Artist Functions 4_instruction: השתמש בבלוק "חזור שוב" כדי לצייר 3 ריבועים.
       2-3 Artist Functions 7_instruction: 'השתמש בפונקציה "צייר בית" כדי לצייר 2 בתים
         בעלי פרמטרים שונים. (רמז: הבית הראשון בגודל 100 פיקסלים).'
@@ -356,9 +357,8 @@ he:
         תוכל להחליף את התשובה הקודמת בשני בלוקים בלבד ?
         (רמז: צור לולאה והשתמש בבלוק "חזור פעמים")
       2-3 Maze 12 (old)_instruction: תפוס את החזיר, השתמש בבלוק "חזור פעמים"!
-      2-3 Maze 12 - One Move Block_instruction: Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+      2-3 Maze 12 - One Move Block_instruction: תפוס את החזיר! אבל הפעם, תוכל להשתמש
+        רק בעזר הבלוק "זוז קדימה". האם אתה רואה בלוקים אחרים שיכולים לעזור לך?
       2-3 Maze 12_instruction: |-
         תוכל להחליף את חמשת הבלוקים בשני בלוקים בלבד ?
         (רמז: השתמש בלולאת "חזור פעמים" )
@@ -384,8 +384,8 @@ he:
       2-3 Maze 7_instruction: תוביל אותי לרוע הירוק!(תיזהר מדינמיט)
       2-3 Maze 8_instruction: הבא אותי אל החזיר!
       2-3 Maze 9_instruction: תוביל אותי לרוע הירוק!(תיזהר מדינמיט)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 of the same
-        kind of blocks?
+      2-3 Maze Loops 1_instruction: האם תוכל להביא אותי אל החזיר בעזרת 5 בלוקים מאותו
+        סוג?
       2-3 Maze Loops 17_instruction: הבא אותי אל החמניה!
       2-3 Maze Loops 18_instruction: הבא אותי אל החמניה!
       2-3 Maze Loops 19_instruction: הבא אותי אל החמניה!
@@ -434,26 +434,25 @@ he:
         to have on the while block. Move me along the field, and if there is a pile,
         remove it
       20hr_farmer_stage9_11_instruction: 'עדיין חשוך בחוץ. הזז אותי לאורך המגרש. אם
-        ישנה ערמת עפר הסר אותה, ואם ישנו חור, מלא אותו בעפר. רמז: השתמש בתפריט האפשרויות
-        הנפתח באבן הבנייה "אם".'
+        ישנה ערמת עפר הסר אותה, ואם ישנו בור, מלא אותו בעפר. רמז: השתמש בתפריט האפשרויות
+        הנפתח של הבלוק "אם".'
       20hr_farmer_stage9_2_instruction: עכשיו, תביא אותי לבור ותמלא אותו עם שני דליים
         של עפר, תוך שימוש בבלוק "למלא".
-      20hr_farmer_stage9_3_instruction: העבר אותי אל ערימת העפר, ותגיד לי כמה shovelfuls
-        יש להסיר על-ידי שימוש במספר הקטן ביותר של אבני בנייה.
-      20hr_farmer_stage9_4_instruction: 'תוכל לעזור לי להסיר את כל ארבע ערימות עפר?
-        רמז: השתמש באבן בנייה לפעולה שחוזרת על עצמה אם אתה יכול.'
-      20hr_farmer_stage9_5_instruction: 'עזור לי למלא את כל הבורות האלו עם shovelfuls
-        5 של עפר. רמז: את יכולה להשתמש באבן בנייה "פעולה חוזרת" בתוך אבן הבנייה "תוך
-        כדי".'
-      20hr_farmer_stage9_6_instruction: הסר את כל ערימות העפר, באמצעות אבני בנייה
-        מעטות ככל האפשר. האפשרויות החדשות בתפריט הנפתח על אבן הבנייה "תוך כדי" תאמר
-        לי אם אני עומדת על ערימה או חור.
+      20hr_farmer_stage9_3_instruction: העבר אותי אל ערימת העפר, ותגיד לי כמה דליים
+        צריך כדי להסיר תוך כדי שימוש במספר הקטן ביותר של בלוקים.
+      20hr_farmer_stage9_4_instruction: 'תוכל לעזור לי להסיר את כל ארבע ערימות העפר?
+        רמז: השתמש בבלוק לפעולה שחוזרת על עצמה אם אתה יכול.'
+      20hr_farmer_stage9_5_instruction: 'עזור לי למלא את כל הבורות האלו עם 5 דליים
+        של עפר. רמז: אתה יכול להשתמש בבלוק "פעולה חוזרת" בתוך בלוק "כל עוד".'
+      20hr_farmer_stage9_6_instruction: הסר את כל ערימות העפר באמצעות מספר בלוקים
+        מועט ככל האפשר. האפשרויות החדשות בתפריט הנפתח בבלוק "כל עוד" יעזרו לי לבדוק
+        האם אני עומדת על ערימה או על בור.
       20hr_farmer_stage9_7_instruction: וואו, מצאתי בור ממש עמוק! איני יודע כמה דליים
         של עפר אני צריך. האם אתה יכול לכתוב תוכנית תמלא את הבור עד שהאדמה תהיה מאוזנת?
-      20hr_farmer_stage9_8_instruction: עזור לי למלא את החור בקצה של השדה, באמצעות
-        אבני בנייה מעטות ככל האפשר.
+      20hr_farmer_stage9_8_instruction: עזור לי למלא את הבור בקצה השדה, באמצעות בלוקים
+        מעטים ככל האפשר.
       20hr_farmer_stage9_9_instruction: 'גרום לי להסיר את כל ערימות העפר האלו. נסה
-        להשתמש באבני בנייה מעטות ככל האפשר. רמז: נסה להשתמש באבן הבנייה "תוך כדי".'
+        להשתמש בבלוקים מעטים ככל האפשר. רמז: נסה להשתמש בבלוק "כל עוד".'
       20hr_maze_stage2_1_instruction: Can you help me to catch the naughty pig? Stack
         a couple of "move forward" blocks together and press "Run" to help me get
         there.
@@ -512,8 +511,8 @@ he:
         חזור על ההרצה מספיק פעמים כדי להשלים את הציור.
         הצבעים ישתנו מהרצה להרצה (ברוב המקרים).
       4-5 Artist 3_instruction: |-
-        לפרח מלבני זה היקף של 600 .
-        הצד הארוך הוא באורך 200. צייר את המלבן.
+        למלבן פרחים זה יש היקף של 600 פיקסלים.
+        הצד הארוך הוא באורך 200 פיקסלים. צייר את המלבן בעזרת הכי מעט בלוקים שתוכל.
       4-5 Artist 4_instruction: כמה מעלות יש בעיגול? השתמש בלולאה כדי ליצור עיגול
         של צבעים.
       4-5 Artist 5_instruction: באיזו זוית אתה משתמש ?
@@ -548,9 +547,9 @@ he:
         מישהו התחיל לכתוב את הקוד אבל הפסיק כשהבין שחייבת להיות דרך מהירה יותר!
         השתמש בלולאת "ספור עם" כדי להחליף את הבלוקים והשלם את הספירלה המשושה.
         (רמז: אורכה של השורה האחרונה 200 פיקסלים).
-      4-5 Artist For Loops 2_instruction: This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for" block.
+      4-5 Artist For Loops 2_instruction: זהו בלוק "עבור", במקום להקיש 10..... 1,2,3
+        לולאת ה"עבור" יכולה לחזור על הבלוק שבתוכה ולספור את המספרים עבורך. הקש את
+        המספר 10 ב-"ל" שבלולאת ה"עבור".
       4-5 Artist For Loops 3_instruction: |-
         איך נוכל לספור מ-1 ועד 50?
         ערוך את בלוק ה"ספור עם".
@@ -616,87 +615,85 @@ he:
       4-5 Artist Patterns 1_instruction: |-
         תוכל לצייר את הריבוע הזה בעזרת לולאה חוזרת?
         אורך כל צלע הוא 20 פיקסלים.
-      4-5 Artist Patterns 10_instruction: "This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. \n\nYou'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.\n"
-      4-5 Artist Patterns 11_instruction: 'How many times do you need to loop this
-        to draw a half circle? '
-      4-5 Artist Patterns 12_instruction: "If you create another loop like this one,
-        but turn left instead of right, what happens? \n\nCan you repeat all of that
-        to draw this wave?"
-      4-5 Artist Patterns 13_instruction: "Now let's loop that whole thing four times
-        to create this picture frame. Watch out for the corners - you can't just turn
-        90 degrees! \n\nIf looping a 3 degree turn 60 times makes a half circle, which
-        of these blocks of code will make an additional quarter circle for the corners?"
-      4-5 Artist Patterns 2_instruction: If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add as an outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: Now let's go one level deeper! We've nested
-        that whole block of code into another loop, but you need to get the artist
-        back in place to draw the next line. Which of these code blocks can you place
-        at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: "Repeat this code to make a row of 6 diamonds.
-        \n\nNotice that we changed our diamond code to repeat 3 times instead of 2
-        - why do you think that is?\n"
-      4-5 Artist Patterns 6_instruction: How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: Use a loop to draw this hexagon with 40 pixel
-        sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: Let's loop this code to draw two rows of
-        hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: "Now repeat this code 3 times and draw the
-        whole row. \n\nEach hexagon is 80 pixels wide from the furthest points left
-        to right."
-      4-5 Artist Patterns Free Play_instruction: Free play - try your hand at making
-        a pattern of your own!
+      4-5 Artist Patterns 10_instruction: "קוד זה מצייר 2 שורות של משושים - חזור על
+        חלק זה 4 פעמים כדי לצייר את כל הכוורת. \n\nתצטרך לקפוץ חזרה 120 פיקסלים בלולאה
+        החיצונית ביותר כדי לוודא שהאמן מצייר מחוץ למסך.\n"
+      4-5 Artist Patterns 11_instruction: 'כמה פעמים תצטרך לחזור על הלולאה כדי לצייר
+        חצי עיגול? '
+      4-5 Artist Patterns 12_instruction: |-
+        אם תיצור עוד לולאה כזאת, אבל תפנה שמאלה במקום ימינה, מה יקרה?
+
+        תוכל לחזור על כל זה כדי לצייר את הגל הזה?
+      4-5 Artist Patterns 13_instruction: "כעת נחזור על כל הדבר הזה ארבע פעמים כדי
+        ליצור את מסגרת התמונה הזו. היזהר מהפניות, לא תוכל רק לפנות ב90 מעלות! \n\nאם
+        חזרה במשך 60 פעם על פניה של 3 מעלות יוצרת חצי עיגול, מי מהבלוקים בקוד ייצרו
+        רבע עיגול עבור הפינות?"
+      4-5 Artist Patterns 2_instruction: אם תכניס את לולאת הריבוע שלך בתוך לולאה נוספת,
+        אנו נקרא לזה לולאה מקוננת. מה תזדקק להוסיף כלולאה חיצונית כדי לוודא שכל 15
+        הריבועים שתייצר יהיו בשורה אחד ליד השני?
+      4-5 Artist Patterns 3_instruction: כעת בוא נצלול שלב אחד פנימה! עטפנו בלולאה
+        את הלולאה קיימת שלנו, אבל אתה צריך להביא את האמן בחזרה למקום המתאים כדי לצייר
+        את הקו הבא. איזה מבלוקי הקוד הבאים תוכל לשים בסוף הלולאה החיצונית ביותר כדי
+        לצייר את הרשת כולה?
+      4-5 Artist Patterns 4_instruction: ליהלום זה פאות באורך 50 פיקסלים כל אחד וזוויות
+        של 120 ו-60 מעלות. השתמש בלולאה כדי לצייר אותו.
+      4-5 Artist Patterns 5.5_instruction: כמה פעמים תצטרך לחזור על בלוק זה כדי לצייר
+        רשת שלמה מלאה ביהלומים?
+      4-5 Artist Patterns 5_instruction: "חזור על קוד זה כדי לייצר שורה של 6 יהלומים.
+        \n\nשים לב ששיננו את קוד היהלום שלנו כדי שיחזור על עצמו 3 פעמים במקום 2 -
+        למה אתה חושב שעשינו זאת?\n"
+      4-5 Artist Patterns 6_instruction: כמה פעמים תצטרך לחזור על בלוק זה כדי לצייר
+        רשת שלמה מלאה ביהלומים?
+      4-5 Artist Patterns 7_instruction: בואו נשנה את הקוד מהחידה הקודמת כדי לייצר
+        את התבנית המורכבת הבאה. שים לב שהיהלומים חופפים עכשיו, נסה לשנות את המקטע
+        הראשון של "קפוץ אחורה" מ-100 ל-50 (חצי מרחק) - כעת מה המרחק שהאמן צריך ללכת
+        מיד לאחר "קפוץ אחורה"?
+      4-5 Artist Patterns 8_instruction: השתמש בלולאה כדי לצייר משושה עם אורך פאה
+        של 40 פיקסלים וזוויות בגודל 60 מעלות.
+      4-5 Artist Patterns 9.5_instruction: בואו נייצר לולאה של קוד כדי לצייר 2 שורות
+        של משושים. שים לב שהשורה השנייה הוזזה ימינה.
+      4-5 Artist Patterns 9_instruction: |-
+        עכשיו חזור על קוד זה 3 פעמים כדי לצייר את כל השורה.
+
+        כל משושה הוא ברוחב 80 פיקסלים מהקצוות המרוחקות משמאל לימין.
+      4-5 Artist Patterns Free Play_instruction: משחק חופשי - התנסה בעצמך בלייצר תבנית
+        משלך!
       4-5 Bee Conditionals - FC Test_instruction: The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
         it is hiding a flower. If it is, then you can gather nectar.
       4-5 Bee Conditionals 1 (copy 1)_instruction: The bee can't tell if this is a
         flower or a honeycomb. Gather nectar only from flowers, but first check if
         it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: This cloud is blocking my view! Check to
-        see if there's a flower under the cloud, and only get nectar if there's a
-        flower. Be careful, it can change!
+      4-5 Bee Conditionals 1_instruction: הענן הזה חוסים לי את הראיה! בדוק לראות אם
+        יש פרח מתחת לענן, ואסוף צוף אך ורק אם יש שם פרח. היזהר, זה יכול להשתנות!
       4-5 Bee Conditionals 2 (copy 1)_instruction: The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: "More clouds! \n\nCheck underneath every
-        cloud to see if it is hiding a flower before you get nectar.  \n\nRemember:
-        Not all clouds hide the same thing!"
-      4-5 Bee Conditionals 3_instruction: Now I just want to make honey. Some of these
-        clouds might have honeycombs under them. Be sure to check each cloud!
+      4-5 Bee Conditionals 2_instruction: "עוד עננים!\n\nבדוק מתחת לכל ענן כדי לבדוק
+        אם פרח מתחבא תחתיו בטרם תאסוף צוף. \n\nזכור: לא כל העננים מסתירים דבר דומה!"
+      4-5 Bee Conditionals 3_instruction: כעת אני רק רוצה לייצר דבש. תחת חלק מהעננים
+        מסתתרות כוורות. הקפד לבדוק כל ענן!
       4-5 Bee Conditionals 4 (copy 1)_instruction: The unknown object is either a
         flower or a honeycomb. Use the if/else block to collect nectar if it is a
         flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: Sometimes this cloud covers a flower, and
-        sometimes it covers a honeycomb! Use the if/else block to collect nectar if
-        it is a flower, else to make honey (because it is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: לפעמים הענן מכסה פרח, ולפעמים הוא מכסה כוורת!
+        השתמש בבלוק "אם/אחרת" כדי לאסוף צוף אם זה פרח, אחרת צור דבש (מכיוון שזוהי
+        כוורת).
       4-5 Bee Conditionals 5_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        תחת כל ענן יהיה או פרח או כוורת!
 
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        השתמש בבלוק "אם/אחרת" כדי לאסוף צוף אם יש שם פרח.
+        אחרת, צור דבש (מכיוון שיש כוורת).
       4-5 Bee Conditionals 6 (copy 1)_instruction: This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: "I am not sure how much nectar this flower
-        has, but I know it has either 1, 2, or 3 nectar. \n\nCombine the conditional
-        blocks (`if` and/or `if/else`) to only get as much nectar as the flower has.
-        \n\nRemember, the amount of nectar can change each time you run the puzzle!"
-      4-5 Bee Conditionals 7_instruction: "These flowers can have 3, 2, or 1 nectar.
-        \n\nComplete the `check purple flower` function and use it to collect all
-        of the nectar at the flowers."
+      4-5 Bee Conditionals 6_instruction: "אני לא בטוח כמה צוף יש בפרח הזה, אבל אני
+        יודע שזה יכול להכיל 1,2 או 3 צופים. \n\nצרף את בלוקי ההתניה (\"אם\" ו/או \"אם/אחרת\")
+        כדי לאסוף את כמות הצוף אשר יש בפרח. \n\nאל תשכח, הכמות של הצוף יכולה להשתנות
+        בכל פעם שתריץ את פתרון החידה מחדש!"
+      4-5 Bee Conditionals 7_instruction: "פרחים אלו יכולים להכיל 1,2 או 3 צופים.
+        \n\nהשלם את הפונקציה \"בדוק פרח סגול\" והשתמש בה כדי לאסוף את כל הצוף מהפרחים."
       4-5 Bee Conditionals 8_instruction: "Write the function for `check flower make
         honey`. \n\nYour function should check if the purple flower has 3, 2, or 1
         nectar and get all of the nectar. \nThen, move forward and make honey."
@@ -740,31 +737,29 @@ he:
       4-5 Bee Nested Loops Rows_instruction: Gather nectar from the rows of flowers!
         Use a nested loop.
       4-5 Maze 1 (copy 1)_instruction: איש יקר. אני זומבי. חייב.... להגיע.... לחמנית.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      4-5 Maze 1_instruction: אדון נכבד. אני זומבי. חייב... להגיע... לחמנייה.
       4-5 Maze 10_instruction: תוכל להגיע לחמניה בעזרת ארבעה בלוקים בלבד ?
       4-5 Maze 11_instruction: תוכל להגיע לחמנית בעזרת שישה בלוקים בלבד?
-      4-5 Maze 12_instruction: Ok, this is slightly different. Can you do it in only
-        six blocks?
+      4-5 Maze 12_instruction: טוב, זה שונה במקצת. האם תוכל לעשות זאת רק בעזרת 6 בלוקים?
       4-5 Maze 13_instruction: הבא אותי אל החזיר!
       4-5 Maze 14_instruction: קח אותי לחזיר! השתמש בבלוק "חזור עד ש".
-      4-5 Maze 2 (copy 1)_instruction: Get the zombie to the sunflower, but avoid
-        the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
-      4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
-      4-5 Maze 4_instruction: Use the "repeat" block to solve the puzzle quickly...
-      4-5 Maze 5 (copy 1)_instruction: Can you solve this puzzle using the fewest
-        number of blocks possible?
-      4-5 Maze 5_instruction: Can you solve this puzzle using the fewest number of
-        blocks possible?
-      4-5 Maze 6 (copy 1)_instruction: Can you solve this puzzle using the fewest
-        number of blocks possible?
+      4-5 Maze 2 (copy 1)_instruction: הבא את הזומבי אל החמנייה, אבל היזהר מצ'ומפר!
+      4-5 Maze 2_instruction: הבא את הזומבי אל החמנייה, אבל היזהר מצ'ומפר!
+      4-5 Maze 3 (copy 1)_instruction: חייב... להגיע... לחמנייה.
+      4-5 Maze 3_instruction: חייב... להגיע... לחמנייה.
+      4-5 Maze 4 (copy 1)_instruction: נסה "לחזור" על הבלוק בכדי להשתמש בפחות בלוקים...
+      4-5 Maze 4_instruction: השתמש בבלוק "חזרה" כדי לפתור את החידה במהירות...
+      4-5 Maze 5 (copy 1)_instruction: האם תוכל לפתור את החידה ע"י שימוש במספר המועט
+        ביותר של בלוקים אפשריים?
+      4-5 Maze 5_instruction: האם תוכל לפתור את החידה ע"י שימוש במספר המועט ביותר
+        של בלוקים אפשריים?
+      4-5 Maze 6 (copy 1)_instruction: האם תוכל לפתור את החידה ע"י שימוש במספר המועט
+        ביותר של בלוקים אפשריים?
       4-5 Maze 6_instruction: הבא אותי אל החמניה!
-      4-5 Maze 7_instruction: Get the zombie to the sunflower quickly!  Can you solve
-        the puzzle in fewer than 11 blocks?
-      4-5 Maze 8_instruction: "Get the zombie to the sunflower using as few blocks
-        as you can.  \n(Avoid the chompers!)"
+      4-5 Maze 7_instruction: הבא את הזומבי על החמנייה במהירות! האם תוכל לפתור את
+        החידה בפחות מ-11 בלוקים?
+      4-5 Maze 8_instruction: "הבא את הזומבי אל החמנייה בעזרת הכי מעט בלוקים שתוכל.
+        \n(הישמר מצ'ומפרים!)"
       4-5 Maze 9_instruction: "Now we have a new block called `repeat until`.  \nThis
         will let us keep looping commands until the zombie gets the sunflower.  \n\nUse
         the new `repeat until` block to solve this puzzle in as few commands as possible."
@@ -777,26 +772,31 @@ he:
         curvy path no matter the length!"
       4-5 Maze Conditionals 2_instruction: השתמש בבלוק "חזור עד ש" כדי להביא את הזומבי
         לחמנית.
-      4-5 Maze Conditionals 3_instruction: "Use the `if` block to help me decide when
-        to turn. \n"
+      4-5 Maze Conditionals 3_instruction: 'השתמש בבלוק "אם" כדי לעזור לי להחליט מתי
+        לפנות.
+
+'
       4-5 Maze Conditionals 4_instruction: |-
         אוקיי, זה בדיוק כמו החידה האחרונה.
         אבל תצטרך לזכור איך להשתמש בבלוק "אם" ובבלוק "חזור שוב" ביחד.
-      4-5 Maze Conditionals 5_instruction: "\"Me want sunflower!\"  \n\nUse an `if`
-        statement to get the zombie to the sunflower with the fewest number of blocks."
+      4-5 Maze Conditionals 5_instruction: |-
+        "אני לרצות חמנייה!"
+
+        השתמש בבלוק "אם" כדי לעזור לזומבי להגיע אל החמנייה עם המספר המועט ביותר של בלוקים.
       4-5 Maze Conditionals 6_instruction: |-
-        "Eat sunflower!"
+        "לאכול חמנייה!"
 
-        Use an `if` statement to get the zombie to the sunflower with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: The solution to this puzzle isn't very
-        different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: "The `if/else` block checks a condition,
-        and then does one thing OR another. \n\nUse this new block to get me to the
-        sunflower."
+        השתמש בבלוק "אם" כדי לעזור לזומבי להגיע אל החמנייה עם המספר המועט ביותר של בלוקים.
+      4-5 Maze Conditionals 7_instruction: הפתרון של החידה הזו לא ממש שונה, אבל היזהר
+        מהצ'ומפרים!
+      4-5 Maze Conditionals 8_instruction: |-
+        הבלוק "אם/אחרת" בודק תנאי, ולאחר מכאן מבצע דבר אחד או דבר שני בלבד.
+
+        השתמש בבלוק החדש כדי להביא אותי אל החמנייה.
       4-5 Maze Conditionals 9_instruction: |-
-        One more practice puzzle with the `if/else` block!
+        יאללה, עוד חידה אחת כדי לתרגל את הבלוק "אם/אחרת"!
 
-        Trace it with your finger to see if you can figure it out on your first try.
+        עקוב אחר הדרך עם האצבע כדי לראות אם תוכל למצוא את הפתרון בניסיון הראשון שלך.
       4-5 Maze Conditionals Assessment 1_instruction: "**Assessment:** Use a `repeat
         until` and an `if/else` block to get me to the sunflower in as few blocks
         as possible."
@@ -846,6 +846,10 @@ he:
         the ground flat?"
       4-5 While Loops Assessment 1_instruction: There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       Alien Defender_2018_instruction: 'Project Idea: Make a defender game in Play
@@ -1061,6 +1065,7 @@ he:
         make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and
         piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -1221,32 +1226,32 @@ he:
         face (click here to see the image)
       CSD U5 black white images pixelation 4_2018_instruction: Add eyebrows to the
         smiley face (click here to see the image)
-      CSD U5 black white images pixelation 5_instruction: Draw anything you like
-      CSD U5 black white images pixelation 5_2018_instruction: Draw anything you like
-      CSD U5 black white images pixelation_instruction: Complete the X shape by typing
-        0s and 1s
-      CSD U5 black white images pixelation_2018_instruction: Complete the X shape
-        by typing 0s and 1s
+      CSD U5 black white images pixelation 5_instruction: צייר מה שבא לך
+      CSD U5 black white images pixelation 5_2018_instruction: צייר מה שבא לך
+      CSD U5 black white images pixelation_instruction: השלם את צורת ה-X ע"י הקלדת
+        אפסים ואחדות
+      CSD U5 black white images pixelation_2018_instruction: השלם את צורת ה-X ע"י
+        הקלדת אפסים ואחדות
       CSD U6 params modify clouds_instruction: |-
-        # Clouds
+        # עננים
 
-        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+        תוכנית זאת גורמת לעננים לזוז כאשר את נושף על חיישן הקול, אבל זה לא גמור.
 
-        # Do This
-        * Create a new function `moveCloud(name)` that will move any cloud.
-        * (Hint: you will use almost all the same code as the `moveCloud0` function)
-        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+        # עשה כך
+        * צור פונקציה חדשה "הזזענן(שם)" אשר תזיז כל ענן.
+        * (רמז: תוכל להשתמש כמעט בכל הקוד הקיים בפונקציה "הזזענן0")
+        * קרא לפונקציה החדשה שלך "הזזענן(שם)" בתוך בלוק האירוע, אחד עבור כל שם ענן.
+        * (רמז: זה דומה לאיך שהפונקציה "לולאתעננים(שם)" נקראת מספר רב של פעמים).
       CSD U6 params modify clouds_2018_instruction: |-
-        # Clouds
+        # עננים
 
-        This program makes the clouds move when you blow on the sound sensor, but it's not finished.
+        תוכנית זאת גורמת לעננים לזוז כאשר את נושף על חיישן הקול, אבל זה לא גמור.
 
-        # Do This
-        * Create a new function `moveCloud(name)` that will move any cloud.
-        * (Hint: you will use almost all the same code as the `moveCloud0` function)
-        * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-        * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+        # עשה כך
+        * צור פונקציה חדשה "הזזענן(שם)" אשר תזיז כל ענן.
+        * (רמז: תוכל להשתמש כמעט בכל הקוד הקיים בפונקציה "הזזענן0")
+        * קרא לפונקציה החדשה שלך "הזזענן(שם)" בתוך בלוק האירוע, אחד עבור כל שם ענן.
+        * (רמז: זה דומה לאיך שהפונקציה "לולאתעננים(שם)" נקראת מספר רב של פעמים).
       CSD U6 params modify planes_instruction: |-
         # Multi-plane Controller
 
@@ -2653,11 +2658,11 @@ he:
         and error. You are not expected to get the image perfect the first time.   Want
         to see more hints?  Click here!
       Course 4 Artist 12_instruction: |-
-        Want a second peek at the inspiration design or the hints?  Click here!
+        רוצה הזדמנות שנייה על העיצוב המנחה או ברמזים? לחץ כאן!
 
-        Otherwise, make a design all your own!
-      Course 4 Artist 13_instruction: Still playing?  Here is a blank canvas where
-        you can design anything you want!
+        אחרת, בצע את העיצוב כולו לבדך!
+      Course 4 Artist 13_instruction: עדיין משחק? הנה קנבס ריק בו תוכל לצייר כל מה
+        שבא לך!
       Course 4 Artist 2_instruction: Can you use a loop to draw the greyed out square?  (Each
         side is 300px long)
       Course 4 Artist 20_instruction: Still playing?  Here is a blank canvas where
@@ -2699,18 +2704,18 @@ he:
       Course 4 Artist Binary 4_instruction: Each binary string represents one row
         of this picture. Can you rearrange them so it draws a smiley face instead
         of a frowny face?
-      Course 4 Artist Binary 5_instruction: Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: What is the shortest binary string that
-        you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
+      Course 4 Artist Binary 5_instruction: איזה רצף בינארי בין 6 ספרות, אשר חוזר
+        על עצמו 11 פעם, יצור את התמונה הזו?
+      Course 4 Artist Binary 6_instruction: על איזה רצף בינארי קטן ביותר ניתן לחזור
+        כדי לצייר תמונה זו?
+      Course 4 Artist Binary 7_instruction: השלם את הציור.
       Course 4 Artist Binary Free Play 2_instruction: 'Free Play: Here''s a blank
         canvas for you to draw on.  Have fun!'
       Course 4 Artist Binary Free Play 2a_instruction: |-
         Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!
 
         See what happens when we start to get creative with the bits?
-      Course 4 Artist Binary Free Play 2b_instruction: Click here to see hints.
+      Course 4 Artist Binary Free Play 2b_instruction: לחץ כאן כדי לראות תנאים.
       Course 4 Artist Binary Free Play_instruction: 'Free Play: Draw whatever you
         like with binary!'
       Course 4 Artist Binary pre1_instruction: Use the blocks below to have the artist
@@ -2791,8 +2796,8 @@ he:
         Free-Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.
 
         Need a hint? Click here.
-      Course 4 Artist Functions 1_instruction: Can you draw a square that is 100 pixels
-        in length, using a loop?
+      Course 4 Artist Functions 1_instruction: האם תוכל לצייר ריבוע שאורכו 100 פיקסלים
+        בעזרת לולאה?
       Course 4 Artist Functions 10_instruction: Which block do you need to add to
         get the triangle to sit on top of the square?
       Course 4 Artist Functions 11_instruction: Check out this code that draws a cube
@@ -2841,16 +2846,15 @@ he:
       Course 4 Artist Functions 9_instruction: We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
-      Course 4 Artist Functions Inspiration_instruction: Click here to see the hints
-        again.
-      Course 4 Artist Functions challenge_instruction: Click here to see the hints
-        again.
+      Course 4 Artist Functions Inspiration_instruction: לחץ כאן כדי לראות שוב את
+        הרמזים.
+      Course 4 Artist Functions challenge_instruction: לחץ כאן כדי לראות שוב את הרמזים.
       Course 4 Artist Functions inspire_instruction: Click here to see the inspiration
         picture again.
       Course 4 Artist Inspire_instruction: |-
-        Want a second peek at the inspiration design or the hints?  Click here!
+        רוצה הזדמנות שנייה על העיצוב המנחה או ברמזים? לחץ כאן!
 
-        Otherwise, make a design all your own!
+        אחרת, בצע את העיצוב כולו לבדך!
       Course 4 Artist Params 1_instruction: Let's edit a function that draws a square
         with 50 pixel sides
       Course 4 Artist Params 10_instruction: 'You can call functions from inside other
@@ -3090,10 +3094,10 @@ he:
       Course 4 Maze 3_instruction: 'תכנת את הציפור הכועסת להגיע לחזיר. '
       Course 4 Maze 4_instruction: Try the "repeat" block to use fewer blocks when
         solving this puzzle...
-      Course 4 Maze 5_instruction: Can you solve this puzzle using the fewest number
-        of blocks possible?
-      Course 4 Maze 6_instruction: Can you solve this puzzle using the fewest number
-        of blocks possible?
+      Course 4 Maze 5_instruction: האם תוכל לפתור את החידה ע"י שימוש במספר המועט ביותר
+        של בלוקים אפשריים?
+      Course 4 Maze 6_instruction: האם תוכל לפתור את החידה ע"י שימוש במספר המועט ביותר
+        של בלוקים אפשריים?
       Course 4 Play Lab For Loops 2_instruction: This time, let's try counting the
         odd numbers from 1 to 100.
       Course 4 Play Lab Params 1_instruction: Here's a function called `jump` that
@@ -4110,9 +4114,8 @@ he:
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       Mike Pair Programming_instruction: Here are the instructions
-      Mike Test Bee Conditionals 1_instruction: This cloud is blocking my view! Check
-        to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
+      Mike Test Bee Conditionals 1_instruction: הענן הזה חוסים לי את הראיה! בדוק לראות
+        אם יש פרח מתחת לענן, ואסוף צוף אך ורק אם יש שם פרח. היזהר, זה יכול להשתנות!
       Mike Test Bee Conditionals 2_instruction: Collect all of the nectar. You can
         only collect nectar from flowers, but you can check any space to see if there
         is a flower.
@@ -4502,7 +4505,7 @@ he:
       PDK5 Loops 3_instruction: Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      PS - test - pixelation_instruction: Complete the X shape by typing 0s and 1s
+      PS - test - pixelation_instruction: השלם את צורת ה-X ע"י הקלדת אפסים ואחדות
       PS FR test 7-25_instruction: 'Here are your instructions for this free response.  '
       PS Log test - Define and use turnAround_instruction: Define a function called
         turnAround. Call the function and then move the turtle forward. (Click to
@@ -6603,12 +6606,13 @@ he:
       aE5_instruction: Example of puzzle using highest difficulty level shape.
       aE6_instruction: 'How many times do you need to loop this to draw half  of a
         circle? '
-      aE7_instruction: "If you create another loop like this one, but turn left instead
-        of right, what happens? \n\nCan you repeat all of that to draw this wave?"
-      aE8_instruction: "Now let's loop that whole thing four times to create this
-        picture frame. Watch out for the corners - you can't just turn 90 degrees!
-        \n\nIf looping a 3 degree turn 60 times makes a half circle, which of these
-        blocks of code will make an additional quarter circle for the corners?"
+      aE7_instruction: |-
+        אם תיצור עוד לולאה כזאת, אבל תפנה שמאלה במקום ימינה, מה יקרה?
+
+        תוכל לחזור על כל זה כדי לצייר את הגל הזה?
+      aE8_instruction: "כעת נחזור על כל הדבר הזה ארבע פעמים כדי ליצור את מסגרת התמונה
+        הזו. היזהר מהפניות, לא תוכל רק לפנות ב90 מעלות! \n\nאם חזרה במשך 60 פעם על
+        פניה של 3 מעלות יוצרת חצי עיגול, מי מהבלוקים בקוד ייצרו רבע עיגול עבור הפינות?"
       aEfreeplay_instruction: Free Play!
       allHallows2017_instruction: Trap the Code.org employees in the crayon box by
         drawing a square with 320 pixel sides!
@@ -6913,9 +6917,8 @@ he:
       course3_bee_functions_challenge1_instruction: You are on your own for this challenge.
         This could "bee" harder than it looks!
       course3_bee_functions_challenge2_instruction: You are on your own for this challenge!
-      course3_bee_functions_challenge3_instruction: Create a new function to collect
-        all the nectar and honey while there is a path ahead. Use it to complete the
-        puzzle!
+      course3_bee_functions_challenge3_instruction: צור פונקציה חדשה כדי לאסוף את
+        כל הצוף והדבש כל עוד יש דרך לפניך. השתמש בפונקציה כדי להשלים את החידה!
       course3_bee_functions_challenge4_instruction: Use everything you have learned
         to complete this puzzle!
       course3_collector_debugging_challenge2_instruction: Are you an expert of nested
@@ -7440,6 +7443,7 @@ he:
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the
         acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat
         to the acorn.
@@ -8104,14 +8108,14 @@ he:
       courseD_artist_binary5_2018_instruction: "Each binary string below represents
         one row of this picture. \n\nCan you rearrange them so it draws a smiley face
         instead of a frown?"
-      courseD_artist_binary6_instruction: Which 6 digit binary string, repeated 11
-        times, will draw this image?
-      courseD_artist_binary6_2018_instruction: Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      courseD_artist_binary7_instruction: What is the shortest binary string that
-        you can repeat to draw this image?
-      courseD_artist_binary7_2018_instruction: What is the shortest binary string
-        that you can repeat to draw this image?
+      courseD_artist_binary6_instruction: איזה רצף בינארי בין 6 ספרות, אשר חוזר על
+        עצמו 11 פעם, יצור את התמונה הזו?
+      courseD_artist_binary6_2018_instruction: איזה רצף בינארי בין 6 ספרות, אשר חוזר
+        על עצמו 11 פעם, יצור את התמונה הזו?
+      courseD_artist_binary7_instruction: על איזה רצף בינארי קטן ביותר ניתן לחזור
+        כדי לצייר תמונה זו?
+      courseD_artist_binary7_2018_instruction: על איזה רצף בינארי קטן ביותר ניתן לחזור
+        כדי לצייר תמונה זו?
       courseD_artist_binary8_instruction: Finish the code to create this drawing.
       courseD_artist_binary8_2018_instruction: Finish the code to create this drawing.
       courseD_artist_binary8_predict1_instruction: Finish the code to create this
@@ -9053,10 +9057,12 @@ he:
         these paths.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each
         of these paths.
-      courseE_farmer_concept4_instruction: Now let's go one level deeper! We've nested
-        that whole block of code into another loop, but you need to get the artist
-        back in place to draw the next line. Which of these code blocks can you place
-        at the end of the outermost loop to draw the whole grid?
+      courseE_farmer_concept4_instruction: כעת בוא נצלול שלב אחד פנימה! עטפנו בלולאה
+        את הלולאה קיימת שלנו, אבל אתה צריך להביא את האמן בחזרה למקום המתאים כדי לצייר
+        את הקו הבא. איזה מבלוקי הקוד הבאים תוכל לשים בסוף הלולאה החיצונית ביותר כדי
+        לצייר את הרשת כולה?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each
+        of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will
@@ -9639,10 +9645,10 @@ he:
         that the bee can collect all of the honey and nectar.
       courseF_bee_functions_3_2018_instruction: Subtract one from the variable each
         time through the loop if you want to use the same function to solve this level.
-      courseF_bee_functions_challenge1_instruction: Create a new function to collect
-        all the nectar and honey while there is a path ahead.
-      courseF_bee_functions_challenge1_2018_instruction: Create a new function to
-        collect all the nectar and honey while there is a path ahead.
+      courseF_bee_functions_challenge1_instruction: צור פונקציה חדשה כדי לאסוף את
+        כל הצוף והדבש כל עוד יש דרך לפניך.
+      courseF_bee_functions_challenge1_2018_instruction: צור פונקציה חדשה כדי לאסוף
+        את כל הצוף והדבש כל עוד יש דרך לפניך.
       courseF_bee_functions_challenge2_instruction: Use everything you have learned
         to complete this puzzle!
       courseF_bee_functions_challenge2_2018_instruction: Use everything you have learned
@@ -10076,8 +10082,8 @@ he:
         Play with the blocks in the toolbox to see what they do!
       grade2_MakeDogTag_FP_instruction: 'Freeplay: What shape will you make the tag
         for your pet?'
-      grade2_PuppyLoops_1_instruction: Can you get me to the pig using 5 of the same
-        kind of blocks?
+      grade2_PuppyLoops_1_instruction: האם תוכל להביא אותי אל החזיר בעזרת 5 בלוקים
+        מאותו סוג?
       grade2_PuppyLoops_10_instruction: לא סיימתי את השבשבת שלי. כמה חזרות צריך כדי
         להשלים אותה?
       grade2_PuppyLoops_2_instruction: |-
@@ -10184,29 +10190,27 @@ he:
         clicking on each bird shows a new fact about your robot.
       grade3_AboutMyRobot_TeacherIDo_instruction: Run this puzzle and click on the
         robot to see what happens!
-      grade3_ConditionalsElse_1_instruction: This cloud is blocking my view! Check
-        to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
-      grade3_ConditionalsElse_2_instruction: "More clouds! \n\nCheck underneath every
-        cloud to see if it is hiding a flower before you get nectar.  \n\nRemember:
-        Not all clouds hide the same thing!"
-      grade3_ConditionalsElse_3_instruction: Now I just want to make honey. Some of
-        these clouds might have honeycombs under them. Be sure to check each cloud!
-      grade3_ConditionalsElse_4_instruction: Sometimes this cloud covers a flower,
-        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
-        if it is a flower, else to make honey (because it is a honeycomb).
+      grade3_ConditionalsElse_1_instruction: הענן הזה חוסים לי את הראיה! בדוק לראות
+        אם יש פרח מתחת לענן, ואסוף צוף אך ורק אם יש שם פרח. היזהר, זה יכול להשתנות!
+      grade3_ConditionalsElse_2_instruction: "עוד עננים!\n\nבדוק מתחת לכל ענן כדי
+        לבדוק אם פרח מתחבא תחתיו בטרם תאסוף צוף. \n\nזכור: לא כל העננים מסתירים דבר
+        דומה!"
+      grade3_ConditionalsElse_3_instruction: כעת אני רק רוצה לייצר דבש. תחת חלק מהעננים
+        מסתתרות כוורות. הקפד לבדוק כל ענן!
+      grade3_ConditionalsElse_4_instruction: לפעמים הענן מכסה פרח, ולפעמים הוא מכסה
+        כוורת! השתמש בבלוק "אם/אחרת" כדי לאסוף צוף אם זה פרח, אחרת צור דבש (מכיוון
+        שזוהי כוורת).
       grade3_ConditionalsElse_5_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        תחת כל ענן יהיה או פרח או כוורת!
 
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
-      grade3_ConditionalsElse_6_instruction: "I am not sure how much nectar this flower
-        has, but I know it has either 1, 2, or 3 nectar. \n\nCombine the conditional
-        blocks (`if` and/or `if/else`) to only get as much nectar as the flower has.
-        \n\nRemember, the amount of nectar can change each time you run the puzzle!"
-      grade3_ConditionalsElse_7_instruction: "These flowers can have 3, 2, or 1 nectar.
-        \n\nComplete the `check purple flower` function and use it to collect all
-        of the nectar at the flowers."
+        השתמש בבלוק "אם/אחרת" כדי לאסוף צוף אם יש שם פרח.
+        אחרת, צור דבש (מכיוון שיש כוורת).
+      grade3_ConditionalsElse_6_instruction: "אני לא בטוח כמה צוף יש בפרח הזה, אבל
+        אני יודע שזה יכול להכיל 1,2 או 3 צופים. \n\nצרף את בלוקי ההתניה (\"אם\" ו/או
+        \"אם/אחרת\") כדי לאסוף את כמות הצוף אשר יש בפרח. \n\nאל תשכח, הכמות של הצוף
+        יכולה להשתנות בכל פעם שתריץ את פתרון החידה מחדש!"
+      grade3_ConditionalsElse_7_instruction: "פרחים אלו יכולים להכיל 1,2 או 3 צופים.
+        \n\nהשלם את הפונקציה \"בדוק פרח סגול\" והשתמש בה כדי לאסוף את כל הצוף מהפרחים."
       grade3_ConditionalsElse_8_instruction: "Write the function for `check flower
         make honey`. \n\nYour function should check if the purple flower has 3, 2,
         or 1 nectar and get all of the nectar. \nThen, move forward and make honey."
@@ -10215,10 +10219,10 @@ he:
         the `get nectar or make honey` function, then call it to collect the nectar
         or honey. \n"
       grade3_ConditionalsElse_TeacherIDo_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        תחת כל ענן יהיה או פרח או כוורת!
 
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        השתמש בבלוק "אם/אחרת" כדי לאסוף צוף אם יש שם פרח.
+        אחרת, צור דבש (מכיוון שיש כוורת).
       grade3_Conditionals_1 BAD_instruction: השתמשו בלולאה בכדי לאסוף את כל הצוף.
       grade3_Conditionals_1_instruction: "הי, אני דבורה! עזור לי לאסוף את \nכל הצוף
         מכל הפרחים. השתמש בלולאה."
@@ -10376,8 +10380,8 @@ he:
       grade3_maze_loops3_instruction: הבא אותי אל החמניה!
       grade3_maze_loops4_instruction: הבא אותי אל החמניה!
       grade3_maze_loops5_instruction: הבא אותי אל החמניה!
-      grade3_maze_nestedLoops1_instruction: Can you get me to the pig using 5 of the
-        same kind of blocks?
+      grade3_maze_nestedLoops1_instruction: האם תוכל להביא אותי אל החזיר בעזרת 5 בלוקים
+        מאותו סוג?
       grade3_maze_nestedLoops2_instruction: |-
         תוכל להחליף את חמשת הבלוקים בשני בלוקים בלבד ?
         (רמז: השתמש בלולאת "חזור פעמים" )
@@ -10427,8 +10431,8 @@ he:
       grade3_robotFarmer_ConditionalsIntro_10a_instruction: 'Flatten all of these
         piles using as few blocks as possible. '
       grade3_robotFarmer_ConditionalsIntro_11_instruction: 'עדיין חשוך בחוץ. הזז אותי
-        לאורך המגרש. אם ישנה ערמת עפר הסר אותה, ואם ישנו חור, מלא אותו בעפר. רמז:
-        השתמש בתפריט האפשרויות הנפתח באבן הבנייה "אם".'
+        לאורך המגרש. אם ישנה ערמת עפר הסר אותה, ואם ישנו בור, מלא אותו בעפר. רמז:
+        השתמש בתפריט האפשרויות הנפתח של הבלוק "אם".'
       grade3_robotFarmer_ConditionalsIntro_11a_instruction: 'Flatten all of these
         piles using as few blocks as possible. '
       grade3_robotFarmer_ConditionalsIntro_2_instruction: Next, move to the hole and
@@ -10441,9 +10445,9 @@ he:
         Help the farmer remove this entire pile using a `while` loop.
       grade3_robotFarmer_ConditionalsIntro_5_instruction: 'Help me remove all of this
         dirt. '
-      grade3_robotFarmer_ConditionalsIntro_6_instruction: הסר את כל ערימות העפר, באמצעות
-        אבני בנייה מעטות ככל האפשר. האפשרויות החדשות בתפריט הנפתח על אבן הבנייה "תוך
-        כדי" תאמר לי אם אני עומדת על ערימה או חור.
+      grade3_robotFarmer_ConditionalsIntro_6_instruction: הסר את כל ערימות העפר באמצעות
+        מספר בלוקים מועט ככל האפשר. האפשרויות החדשות בתפריט הנפתח בבלוק "כל עוד" יעזרו
+        לי לבדוק האם אני עומדת על ערימה או על בור.
       grade3_robotFarmer_ConditionalsIntro_7_instruction: "Look at all of those holes!
         \ Each one needs a different amount of dirt.   \n\nYou can use the `while`
         loop to easily fill them all!"
@@ -10452,8 +10456,8 @@ he:
       grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Challenge:** Fill all
         of these holes using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'עזור לי למלא
-        את כל הבורות האלו עם shovelfuls 5 של עפר. רמז: את יכולה להשתמש באבן בנייה
-        "פעולה חוזרת" בתוך אבן הבנייה "תוך כדי".'
+        את כל הבורות האלו עם 5 דליים של עפר. רמז: אתה יכול להשתמש בבלוק "פעולה חוזרת"
+        בתוך בלוק "כל עוד".'
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo2_instruction: I'm working late,
         so it's dark out, and I can't tell how large the piles are. Now I don't have
         all the options I used to have on the while block. Move me along the field,
@@ -10609,24 +10613,23 @@ he:
       grade4_bee_conditionals_new3c_instruction: 'Help the bee collect all of the
         nectar and make all of the honey! Hint: Try using one loop inside of another
         loop.'
-      grade4_bee_conditionals_quantum1_instruction: This cloud is blocking my view!
-        Check to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
-      grade4_bee_conditionals_quantum2_instruction: "More clouds! \n\nCheck underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \n\nRemember:
-        Not all clouds hide the same thing!"
+      grade4_bee_conditionals_quantum1_instruction: הענן הזה חוסים לי את הראיה! בדוק
+        לראות אם יש פרח מתחת לענן, ואסוף צוף אך ורק אם יש שם פרח. היזהר, זה יכול להשתנות!
+      grade4_bee_conditionals_quantum2_instruction: "עוד עננים!\n\nבדוק מתחת לכל ענן
+        כדי לבדוק אם פרח מתחבא תחתיו בטרם תאסוף צוף. \n\nזכור: לא כל העננים מסתירים
+        דבר דומה!"
       grade4_bee_conditionals_quantum3_instruction: Now I just want to make honey.
         Some of these clouds might have honeycombs under them. The way we've been
         going about things won't work here. Be sure to check if a honeycomb is hiding
         behind each cloud!
-      grade4_bee_conditionals_quantum4_instruction: Sometimes this cloud covers a
-        flower, and sometimes it covers a honeycomb! Use the if/else block to collect
-        nectar if it is a flower, else to make honey (because it is a honeycomb).
+      grade4_bee_conditionals_quantum4_instruction: לפעמים הענן מכסה פרח, ולפעמים
+        הוא מכסה כוורת! השתמש בבלוק "אם/אחרת" כדי לאסוף צוף אם זה פרח, אחרת צור דבש
+        (מכיוון שזוהי כוורת).
       grade4_bee_conditionals_quantum5_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        תחת כל ענן יהיה או פרח או כוורת!
 
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        השתמש בבלוק "אם/אחרת" כדי לאסוף צוף אם יש שם פרח.
+        אחרת, צור דבש (מכיוון שיש כוורת).
       grade4_bee_functions_instruction: Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole.
       grade4_bee_functions1_instruction: אסוף את כל הצוף מכל פרח.
@@ -10788,7 +10791,7 @@ he:
         you with a grid of \"pixels\" that you can walk through and make designs by
         turning on only certain squares.  Can you have the artist draw \"01010101\"
         in binary in the first row?"
-      grade5_artist_binary10_instruction: Click here to see hints.
+      grade5_artist_binary10_instruction: לחץ כאן כדי לראות תנאים.
       grade5_artist_binary11_instruction: 'Free Play: Here''s a blank canvas for you
         to draw on.  Have fun!'
       grade5_artist_binary2_instruction: "Here's a function that takes a binary string
@@ -10803,11 +10806,11 @@ he:
       grade5_artist_binary5_instruction: Each binary string represents one row of
         this picture. Can you rearrange them so it draws a smiley face instead of
         a frowny face?
-      grade5_artist_binary6_instruction: Which 6 digit binary string, repeated 11
-        times, will draw this image?
-      grade5_artist_binary7_instruction: What is the shortest binary string that you
-        can repeat to draw this image?
-      grade5_artist_binary8_instruction: Finish this drawing.
+      grade5_artist_binary6_instruction: איזה רצף בינארי בין 6 ספרות, אשר חוזר על
+        עצמו 11 פעם, יצור את התמונה הזו?
+      grade5_artist_binary7_instruction: על איזה רצף בינארי קטן ביותר ניתן לחזור כדי
+        לצייר תמונה זו?
+      grade5_artist_binary8_instruction: השלם את הציור.
       grade5_artist_binary9_instruction: |-
         Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!
 
@@ -10940,9 +10943,9 @@ he:
 
         For even more effect, try playing with color!  Use random colors inside loops to see how it changes your design.
       grade5_artist_variables_freeplay15_instruction: |-
-        Want a second peek at the inspiration design or the hints?  Click here!
+        רוצה הזדמנות שנייה על העיצוב המנחה או ברמזים? לחץ כאן!
 
-        Otherwise, make a design all your own!
+        אחרת, בצע את העיצוב כולו לבדך!
       grade5_artist_variables_freeplay16_instruction: Still playing?  Here is a blank
         canvas where you can create whatever you want!
       grade5_artist_variables_hexagons1_instruction: "Let's try it again! \n\nCan

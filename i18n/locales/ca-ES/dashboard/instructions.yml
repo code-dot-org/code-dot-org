@@ -4,10 +4,12 @@ ca:
       2-3 Artist 1 new_instruction: Hola, sóc un artista. Pots escriure codi per fer-me dibuixar gairebé qualsevol cosa. Utilitza uns quants blocs per fer-me dibuixar sobre les línies grises de la imatge. (Cada línia fa 100 píxels de llarg)
       2-3 Artist 11_instruction: "Fes una vora al senyal d'stop dibuixant un octàgon amb vuit costats, cadascun de 100 píxels de llarg. Quants graus hauries de girar? (Pista: quant és 360 dividit per 8?) "
       2-3 Artist 12_instruction: |-
-        Fes que el bloc "repetir vegades" creï un cerca per tancar l'ull. Si cada moviment gira un grau a la dreta, quantes vegades cal repetir-ho per completar el cercle? 180? 360? 500?
+        Fes un cercle per acabar l'ull!
+        
+        Si l'artista gira un grau cada cop, quantes vegades cal repetir-ho per completar el cercle? 180? 360? 500?
       2-3 Artist 2 new_instruction: 'Aquesta casa té una paret a mig acabar. Cada costat fa 100, però la que està a mig acabar en fa només 50. Acaba la paret. '
       2-3 Artist 2_instruction: 'Aquesta casa té una paret a mig acabar. Cada costat fa 100, però la que està a mig acabar en fa només 50. Acaba la paret. '
-      2-3 Artist 3.4_instruction: El bloc de salt mou l'artista sense que dibuixi. Dibuixa la línia de ratlles usant tant els blocs de saltar com els de dibuixar.
+      2-3 Artist 3.4_instruction: El bloc de salt mou l'artista sense que dibuixi. Dibuixa la línia de ratlles usant tant els blocs de saltar com els de dibuixar. Cada línia fa 50 píxels de llarg.
       2-3 Artist 3_instruction: Aquest barret fa 100 píxels d'alt. Dibuixa un barret que faci 70 píxels menys.
       2-3 Artist 3new_instruction: "El barret vermell fa 100 píxels d'alt. Acaba de dibuixar el barret negre que és 70 píxels més curt. L'amplada del barret negre és de 50 píxels."
       2-3 Artist 4_instruction: Ajuda’m a construir la casa per a aquest gat.
@@ -76,7 +78,9 @@ ca:
       2-3 Artist Loops New 14_instruction: Ara dibuixa el diamant deu cops però gira 90 graus entre cada diamant.
       2-3 Artist Loops New 15_instruction: Dibuixa alguna cosa divertida.
       2-3 Artist Loops New 2_instruction: |-
-        Aquest és part del codi que has usat per dibuixar el quadrat. Què passa si uses el bloc de repetició per executar aquest codi quatre cops?
+        Aquest és el mateix problema que acabem de resoldre però, ara, només podem usar un bloc `avança` i un bloc `gira`.
+        
+        Pots usar un bloc `repeteix` per solucionar-ho?
       2-3 Artist Loops New 9_instruction: Dibuixa una simple V on els dos costats fan 50 píxels per completar la fletxa.
       2-3 Artist Match Hex Pic_instruction: 'Unir: Ajuda a acabar l''hexagon.'
       2-3 Artist Match Rho Pic_instruction: 'Relaciona: Acaba el codi que manca.'
@@ -171,16 +175,16 @@ ca:
       2-3 Maze 12 (copy 2)_instruction: 'Pots canviar la resposta anterior amb només dos blocs? (Pista: crea un bucle utilitzant un bloc "repeteix".)'
       2-3 Maze 12 (old)_instruction: Porta'm fins al porc, ara amb el bloc "repeteix"!
       2-3 Maze 12 - One Move Block_instruction: Get to the pig! But this time, you can only use one `move forward` block. Do you see any other blocks that could help you?
-      2-3 Maze 12_instruction: 'Pots substituir aquests cinc blocs amb només dos blocs? (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
+      2-3 Maze 12_instruction: Pots arribar al porc amb un bucle que només usi un bloc "avança" dins d'un "repeteix"?
       2-3 Maze 13 (old)_instruction: Porta'm fins al porc, ara amb el bloc "repeteix fins"!
       2-3 Maze 13_instruction: Porta'm fins al porc usant només dos blocs.
       2-3 Maze 14 (old)_instruction: Porta'm fins al porc amb el bloc "repeteix fins"!
       2-3 Maze 14_instruction: Porta'm fins al gira-sol! (On és aquest bloc "repeteix" quan el necessito?)
       2-3 Maze 15 (old)_instruction: Porta'm fins al porc amb el bloc "repeteix fins"!
-      2-3 Maze 15_instruction: Utilitza dos bucles per arribar al porc utilitzant menys blocs.
+      2-3 Maze 15_instruction: Ara, dos bucles "repeteix" t'ajudaran a arribar al porc amb el menor nombre possible de blocs!
       2-3 Maze 16 (old)_instruction: Porta'm fins al porc amb el bloc "repeteix fins"!
       2-3 Maze 16 before_instruction: Porta'm fins al porc.
-      2-3 Maze 16_instruction: Porta'm al girasol. Repeteix la seqüència!
+      2-3 Maze 16_instruction: Els bucles poden tenir més d'un bloc a dins! Pots fer un bucle per fer arribar el zombi fins al girasol?
       2-3 Maze 2_instruction: Aquest porc m'està tocant la pera. Ajuda'm a atrapar-lo!
       2-3 Maze 3_instruction: Traça el camí i porta'm fins al porc babau. Evita el TNT o em volaran les plomes!
       2-3 Maze 4_instruction: Guia'm al dimoni verd! (Ves en compte amb el TNT)
@@ -189,7 +193,7 @@ ca:
       2-3 Maze 7_instruction: Guia'm al dimoni verd! (Ves en compte amb el TNT)
       2-3 Maze 8_instruction: Porta'm fins al porc!
       2-3 Maze 9_instruction: Guia'm al dimoni verd! (Ves en compte amb el TNT)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 of the same kind of blocks?
+      2-3 Maze Loops 1_instruction: Pots dur-me fins al porc usant 5 blocs del mateix tipus?
       2-3 Maze Loops 17_instruction: Porta'm fins al girasol!
       2-3 Maze Loops 18_instruction: "Porta'm fins al girasol!"
       2-3 Maze Loops 19_instruction: "Porta'm fins al girasol!"
@@ -411,6 +415,10 @@ ca:
       4-5 While Loops 7_instruction: Wow, now there are three piles of dirt! Can you write a program that removes each of them until the ground is even?
       4-5 While Loops 8_instruction: " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?"
       4-5 While Loops Assessment 1_instruction: There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+        
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       Alien Defender_2018_instruction: 'Project Idea: Make a defender game in Play Lab!'
@@ -484,6 +492,7 @@ ca:
       C3-Farmer While Loops 7_instruction: Wow, now there are three piles of dirt! Can you write a program that removes each of them until the ground is even?
       C3-Farmer While Loops 8_instruction: " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -3391,6 +3400,7 @@ ca:
       courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat to the acorn.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -4271,6 +4281,7 @@ ca:
       courseE_farmer_concept3_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: Now let's go one level deeper! We've nested that whole block of code into another loop, but you need to get the artist back in place to draw the next line. Which of these code blocks can you place at the end of the outermost loop to draw the whole grid?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will become.  Use `if` statements to write the code to check and harvest each one.   '
       courseE_farmer_functions10a1_2018_instruction: Use everything that you've learned so far to solve this puzzle!
@@ -4805,7 +4816,7 @@ ca:
         
         Play with the blocks in the toolbox to see what they do!
       grade2_MakeDogTag_FP_instruction: 'Freeplay: What shape will you make the tag for your pet?'
-      grade2_PuppyLoops_1_instruction: Can you get me to the pig using 5 of the same kind of blocks?
+      grade2_PuppyLoops_1_instruction: Pots dur-me fins al porc usant 5 blocs del mateix tipus?
       grade2_PuppyLoops_10_instruction: |-
         El meu molinet de vent no està acabat. Quantes vegades he de repetir per acabar-lo?
       grade2_PuppyLoops_2_instruction: 'Pots substituir aquests cinc blocs amb només dos blocs? (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
@@ -4850,12 +4861,12 @@ ca:
         
         Play the game and move Waddles with the arrows until you score.
       grade2_playlab_project_6_instruction: Create your own story. When you're done, click "Finish" to share with friends.
-      grade2_puppy_loops2_instruction: 'Pots substituir aquests cinc blocs amb només dos blocs? (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
+      grade2_puppy_loops2_instruction: Pots arribar al porc amb un bucle que només usi un bloc "avança" dins d'un "repeteix"?
       grade2_puppy_loops3_instruction: |-
         "Get me to the pig!"
         
         Solve this puzzle by creating a loop!
-      grade2_puppy_loops4_instruction: Utilitza dos bucles per arribar al porc utilitzant menys blocs.
+      grade2_puppy_loops4_instruction: Ara, dos bucles "repeteix" t'ajudaran a arribar al porc amb el menor nombre possible de blocs!
       grade2_puppy_loops5_instruction: '"Get me to the pig as quickly as possible!"'
       grade2_puppy_loops6_instruction: |-
         "This pig is ruffling my feathers!"
@@ -4964,7 +4975,7 @@ ca:
       grade3_maze_loops3_instruction: Porta'm fins al girasol!
       grade3_maze_loops4_instruction: Porta'm fins al girasol!
       grade3_maze_loops5_instruction: Porta'm fins al girasol!
-      grade3_maze_nestedLoops1_instruction: Can you get me to the pig using 5 of the same kind of blocks?
+      grade3_maze_nestedLoops1_instruction: Pots dur-me fins al porc usant 5 blocs del mateix tipus?
       grade3_maze_nestedLoops2_instruction: 'Pots substituir aquests cinc blocs amb només dos blocs? (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
       grade3_maze_nestedLoops3_instruction: Porta'm fins al porc usant només dos blocs.
       grade3_maze_nestedLoops4_instruction: Utilitza dos bucles per arribar al porc utilitzant menys blocs.

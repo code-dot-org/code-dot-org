@@ -256,7 +256,7 @@ he:
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: Hi, I'm Makinde! Let's learn about the "while block."
+        text: 'היי, אני מקינדה! בואו נלמד יחד על בלוק "כל עוד" '
       2:
         image: notes/stage9_6.jpg
         text: בלוק ה״כל עוד" יבצע את מה שהכנסתם לתוכו כל עוד ההצהרה הרשומה בראשו הינה
@@ -539,9 +539,8 @@ he:
           more. So be sure to make as much honey as the honeycomb can hold.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: If you're able to get all the nectar and make all the honey, you succeed
-          and go to the next level. Otherwise, you need to try this puzzle again.
-          Play around a while and see what it feels like to "bee" a programmer!
+        text: אם ביכולתך לאסוף את כל הצוף ולייצר את כל הדבש, תצליח ותעבור לשלב הבא.
+          אחרת, תצטרך לנסות לפתור את החידה שוב. נסה קצת ותראה איך זה מרגיש לתכנת "דבורה"!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
@@ -1500,24 +1499,21 @@ he:
           to do even simple things that we can do without thinking about it.
       5:
         image: notes/C3_dice_race_5.png
-        text: An algorithm is the thinking behind what needs to happen while the program
-          is the actual instructions given to the computer to make it happen. An algorithm
-          has to be translated into a program before a computer can run it. Breaking
-          a task into steps called an algorithm is sometimes difficult. But like any
-          new skill, it gets easier and easier with practice.
+        text: אלגוריתם זה החשיבה מאחורי מה שצריך לקרות והתכנית זה אוסף ההוראות הניתנות
+          למחשב כדי לגרום לזה לקרות. אלגוריתם צריך להיות מתורגם לתוך תכנית לפני שמחשב
+          יוכל להריץ אותו. פיצול המשימה למשימות קטנות יכול להיות לעתים לא פשוט. אבל
+          כמו כל יכולת חדשה, זה נעשה פשוט יותר ככל שמתרגלים.
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: While loops are pretty similar to what you do in everyday life. Imagine
-          you are washing your car, you'll keep scrubbing until it's clean. While
-          it's not clean, continue to scrub. You're evaluating these things all the
-          time.
+        text: לולאות "כל עוד" דומות מאוד למה שאתה עושה ביום יום. תאר לעצמך שאתה שוטף
+          את הרכב שלך, אתה ממשיך לקרצף אותו עד אשר הוא נקי. כל עוד הוא לא נקי, אתה
+          ממשיך לקרצף. אתה חושב בצורה זו כל הזמן.
       2:
         image: notes/C3_farmer_while_2.png
-        text: We've got a new look to help your farmer out. It's called a while-block.
-          It's pretty simple actually. While a statement at the top is true, do something.
-          For example, while there's a pile move one hayful. Go ahead and give it
-          a try with your farmer.
+        text: יש לנו לולאה חדשה אשר תעזור לחוואי שלך. זה נקרא בלוק "כל עוד". זה דיי
+          פשוט למעשה. כל עוד ההשוואה שבשורה העליונה מתקיימת, עשה משהו. לדוגמה, כל
+          עוד יש מערום התקדם צעד אחד. אתה מוזמן לנסות את זה עם החוואי שלך.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
@@ -1688,14 +1684,13 @@ he:
           you put in the slot where it says else.
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: פקודות התניה (אם->אחרת) הם הדרך של המחשב לקבל החלטות. אנשים מייצרים
+          תנאים למחשב שאומרים אם המחשב נתקל במקרה אחד אז תעשה "כך" אחרת, תעשה "כך".
+          החלק העליון בבלוק אם/אחרת אומר "אם אתה בפרח", אבל הבלוק שלנו יכול לומר גם
+          דברים אחרים, נניח "אם צוף שווה ל-2" או "אם יש דרך לפניך", הבלוק שלנו יתנהג
+          באותה צורה. כלומר פקודת התניה בודקת אם התשובה היא אמת (נכונה) היא תעשה את
+          סט הפקודות הראשונות אבל אם אם התשובה היא שקר (לא נכונה) היא תעשה את סט הפקודות
+          השני.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
@@ -3598,13 +3593,12 @@ he:
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png
-        text: 'Everywhere you look, computers are changing the world. Whether they''re
-          on our desktops, in our homes, our pockets, or just about anywhere else.
-          But while most of us use this revolutionary technology daily, we don''t
-          often ask: "How do computers work?" In this series, you''re going to learn
-          how computers really work, starting with what makes a computer a computer.
-          Then, you''ll look at how information is represented inside the computer
-          using tiny electrical signals going on and off at mind-boggling speeds.'
+        text: 'לכל מקום שתתבונן, מחשבים משנים את העולם. לא משנה אם אתה במחשב, בבית
+          שלך, בכיס שלך או פחות או יותר בכל מקום אחר. אבל כל עוד רובנו משתמשים בטכנולוגיה
+          הזו ביום יום, אנחנו לא תמיד שואלים את עצמנו: איך מחשבים עובדים?". בסדרה
+          זו, אתה הולך ללמוד כיצד מחשבים באמת עובדים, נתחיל עם מה שהופך מחשב למחשב.
+          אח"כ תלמד כיצד מידע נשמר ומיוצג במחשב בעזרת אותות חשמליים אשר נדלקים ונכבים
+          במהירות בלתי נתפסת.'
       2:
         image: notes/csd_concept_how_computers_work_2.png
         text: After that, you'll learn how computers use circuits to do everything
