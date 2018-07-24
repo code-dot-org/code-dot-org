@@ -1793,6 +1793,18 @@ class User < ActiveRecord::Base
     student? && parent_email.present? && hashed_email.blank?
   end
 
+  # Temporary: Allow single-auth students with no email to add a parent email
+  # so it's possible to add a recovery option to their account.  Once they are
+  # on multi-auth they can just add an email or another SSO, so this is no
+  # longer needed.
+  def can_add_parent_email?
+    student? && # only students
+      !can_create_personal_login? && # mutually exclusive with personal login UI
+      hashed_email.blank? && # has no email
+      parent_email.blank? && # or parent email
+      !migrated? # only for single-auth
+  end
+
   def no_personal_email?
     under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
