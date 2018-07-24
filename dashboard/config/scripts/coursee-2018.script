@@ -130,7 +130,7 @@ stage 'Private and Personal Information', flex_category: 'csf_e_2'
 level 'courseE_unplugged_privateInformation_2018'
 
 stage 'Build a Star Wars Game', flex_category: 'csf_e_2'
-level 'bb8_skinOverview_C-F_video'
+level 'courseE_video_StarWarsProject'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video'
 skin 'hoc2015'

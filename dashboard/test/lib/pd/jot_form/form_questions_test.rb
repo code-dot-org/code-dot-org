@@ -107,22 +107,26 @@ module Pd
           'singleSelect' => {
             text: 'single select label',
             answer_type: ANSWER_SINGLE_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: nil
           },
           'singleSelectWithOther' => {
             text: 'single select with other label',
             answer_type: ANSWER_SINGLE_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: 'Other'
           },
           'multiSelect' => {
             text: 'multi select label',
             answer_type: ANSWER_MULTI_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: nil
           },
           'multiSelectWithOther' => {
             text: 'multi select with other label',
             answer_type: ANSWER_MULTI_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: 'Other'
           },
           'scale' => {
             text: 'scale label',
@@ -210,6 +214,13 @@ module Pd
         FormQuestions.expects(:new).with(@form_id, mock_constructed_questions)
 
         FormQuestions.deserialize(@form_id, fake_questions_array)
+      end
+
+      test 'question_ids' do
+        assert_equal(
+          [1, 2, 3, 4, 5, 6, 7, 8],
+          @form_questions.question_ids
+        )
       end
     end
   end

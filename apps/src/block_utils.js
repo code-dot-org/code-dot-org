@@ -624,7 +624,8 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
       if (inputConfig.type === Blockly.BlockValueType.STRING) {
-        code = `"${code}"`;
+        // Wraps the value in quotes, and escapes quotes/newlines
+        code = JSON.stringify(code);
       }
       return code;
     },
@@ -685,8 +686,6 @@ exports.interpolateInputs = interpolateInputs;
  * function call, method call, or other (hopefully simple) expression.
  *
  * @params {Blockly} blockly The Blockly object provided to install()
- * @params {string} blocksModuleName Module name that will be prefixed to all
- *   the block names
  * @params {string[]} strictTypes Input/output types that are always configerd
  *   with strict type checking.
  * @params {string} defaultObjectType Default type used for the 'THIS' input in
@@ -698,7 +697,6 @@ exports.interpolateInputs = interpolateInputs;
  */
 exports.createJsWrapperBlockCreator = function (
   blockly,
-  blocksModuleName,
   strictTypes,
   defaultObjectType,
   customInputTypes,
@@ -747,7 +745,8 @@ exports.createJsWrapperBlockCreator = function (
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
    * @param {boolean} opts.inline Render inputs inline, defaults to false
-   * @param {boolean} opts.simpleValue Just return the
+   * @param {boolean} opts.simpleValue Just return the field value of the block.
+   * @param {?string} helperCode The block's helper code, to verify the func.
    *
    * @returns {string} the name of the generated block
    */
@@ -767,9 +766,16 @@ exports.createJsWrapperBlockCreator = function (
     eventLoopBlock,
     inline,
     simpleValue,
-  }) => {
+  }, helperCode, pool) => {
+    if (!pool || pool === 'GamelabJr') {
+      pool = 'gamelab'; // Fix for users who already have the old blocks saved in their solutions.
+      // TODO: when we nuke per-level custom blocks, `throw new Error('No block pool specified');`
+    }
     if (!!func + !!expression + !!simpleValue !== 1) {
       throw new Error('Provide exactly one of func, expression, or simpleValue');
+    }
+    if (func && helperCode && !new RegExp(`function ${func}\\W`).test(helperCode)) {
+      throw new Error(`func '${func}' not found in helper code`);
     }
     if ((expression || simpleValue) && !name) {
       throw new Error('This block requires a name');
@@ -798,7 +804,7 @@ exports.createJsWrapperBlockCreator = function (
           `choose one of [${Object.keys(customInputTypes).join(', ')}]`);
       }
     });
-    const blockName = `${blocksModuleName}_${name || func}`;
+    const blockName = `${pool}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
       // just tack one onto the end
@@ -925,4 +931,41 @@ exports.createJsWrapperBlockCreator = function (
 
     return blockName;
   };
+};
+
+exports.installCustomBlocks = function ({blockly, blockDefinitions, customInputTypes}) {
+  const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
+    blockly,
+    [
+      // Strict Types
+      blockly.BlockValueType.SPRITE,
+      blockly.BlockValueType.BEHAVIOR,
+      blockly.BlockValueType.LOCATION,
+    ],
+    blockly.BlockValueType.SPRITE,
+    customInputTypes,
+  );
+
+  const blocksByCategory = {};
+  blockDefinitions.forEach(({name, pool, category, config, helperCode}) => {
+    const blockName = createJsWrapperBlock(config, helperCode, pool);
+    if (!blocksByCategory[category]) {
+      blocksByCategory[category] = [];
+    }
+    blocksByCategory[category].push(blockName);
+    if (name && blockName !== name) {
+      console.error(`Block config ${name} generated a block named ${blockName}`);
+    }
+  });
+
+  // TODO: extract Sprite-Lab-specific logic.
+  if (blockly.Blocks.gamelab_location_variable_set &&
+    blockly.Blocks.gamelab_location_variable_get) {
+    Blockly.Variables.registerGetter(Blockly.BlockValueType.LOCATION,
+      'gamelab_location_variable_get');
+    Blockly.Variables.registerSetter(Blockly.BlockValueType.LOCATION,
+      'gamelab_location_variable_set');
+  }
+
+  return blocksByCategory;
 };

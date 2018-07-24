@@ -271,12 +271,10 @@ class ActiveSupport::TestCase
   # exception with a message matching the regular expression.
   def assert_raises_matching(matcher)
     assert_raises do
-      begin
-        yield
-      rescue => err
-        assert_match matcher, err.to_s
-        raise err
-      end
+      yield
+    rescue => err
+      assert_match matcher, err.to_s
+      raise err
     end
   end
 
@@ -413,10 +411,8 @@ class ActionController::TestCase
       user_display_name =
         if user.is_a?(Proc)
           'supplied user'
-        elsif user.present?
-          user
         else
-          'not logged-in user'
+          user.presence || 'not logged-in user'
         end
 
       name = "#{user_display_name} calling #{method} #{action} should receive #{response}"
@@ -559,7 +555,7 @@ def storage_id(_)
 end
 
 def storage_id_for_user_id(user_id)
-  Random.new(user_id).rand(1_000_000)
+  Random.new(user_id.to_i).rand(1_000_000)
 end
 
 # A fake slogger implementation that captures the records written to it.

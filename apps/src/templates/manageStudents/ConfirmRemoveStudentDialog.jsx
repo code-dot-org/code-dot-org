@@ -10,6 +10,7 @@ import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '../../lib/util/urlHelpers';
 // A stub set of otherwise-required props for use in stories and unit tests.
 export const MINIMUM_TEST_PROPS = {
   isOpen: true,
+  studentName: 'Clark Kent',
   onConfirm: () => {},
   onCancel: () => {},
 };
@@ -22,19 +23,23 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
   static propTypes = {
     ..._.pick(BaseDialog.propTypes, propsFromBaseDialog),
     disabled: PropTypes.bool,
+    studentName: PropTypes.string.isRequired,
     hasEverSignedIn: PropTypes.bool,
+    dependsOnThisSectionForLogin: PropTypes.bool,
     onConfirm: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
   };
 
   headerText() {
-    return this.props.hasEverSignedIn ?
-      i18n.removeStudentHeaderNew() :
-      i18n.removeStudentHeader();
+    const {studentName, hasEverSignedIn} = this.props;
+    return hasEverSignedIn ?
+      i18n.removeStudentAndRecordsHeader({studentName}) :
+      i18n.removeUnusedStudentHeader({studentName});
   }
 
   render() {
-    const {disabled, hasEverSignedIn, onConfirm, onCancel} = this.props;
+    const {disabled, hasEverSignedIn, dependsOnThisSectionForLogin, onConfirm,
+      onCancel} = this.props;
     return (
       <BaseDialog
         {...(_.pick(this.props, propsFromBaseDialog))}
@@ -53,21 +58,25 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
                 {' '}
                 {i18n.removeStudentBody2()}
               </p>
-              <p>
-                {i18n.removeStudentBody3()}
-              </p>
-              <Button
-                text={i18n.removeStudentSendHomeInstructions()}
-                target="_blank"
-                href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-                color={Button.ButtonColor.blue}
-                size={Button.ButtonSize.large}
-                style={styles.sendHomeInstructionsButton}
-                tabIndex="1"
-              />
-              <p>
-                {i18n.removeStudentBody4()}
-              </p>
+              {dependsOnThisSectionForLogin &&
+                <div>
+                  <p>
+                    {i18n.removeStudentBody3()}
+                  </p>
+                  <Button
+                    text={i18n.removeStudentSendHomeInstructions()}
+                    target="_blank"
+                    href={ADD_A_PERSONAL_LOGIN_HELP_URL}
+                    color={Button.ButtonColor.blue}
+                    size={Button.ButtonSize.large}
+                    style={styles.sendHomeInstructionsButton}
+                    tabIndex="1"
+                  />
+                  <p>
+                    {i18n.removeStudentBody4()}
+                  </p>
+                </div>
+              }
             </div>
           }
           <ConfirmCancelFooter

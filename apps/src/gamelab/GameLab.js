@@ -15,6 +15,7 @@ import {
   injectErrorHandler
 } from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import BlocklyModeErrorHandler from '../BlocklyModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
@@ -120,10 +121,6 @@ var GameLab = function () {
 
   dropletConfig.injectGameLab(this);
 
-  injectErrorHandler(new JavaScriptModeErrorHandler(
-    () => this.JSInterpreter,
-    this
-  ));
   consoleApi.setLogMethod(this.log.bind(this));
 
   /** Expose for testing **/
@@ -190,11 +187,21 @@ GameLab.prototype.init = function (config) {
     this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
     this.skin.winAvatar = MEDIA_URL + 'avatar.png';
     this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
+
+    injectErrorHandler(new BlocklyModeErrorHandler(
+      () => this.JSInterpreter,
+      null,
+    ));
   } else {
     this.skin.smallStaticAvatar = null;
     this.skin.staticAvatar = null;
     this.skin.winAvatar = null;
     this.skin.failureAvatar = null;
+
+    injectErrorHandler(new JavaScriptModeErrorHandler(
+      () => this.JSInterpreter,
+      this,
+    ));
   }
   this.level = config.level;
 
