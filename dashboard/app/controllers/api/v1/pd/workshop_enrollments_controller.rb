@@ -6,6 +6,14 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   NOT_TEACHING = "I'm not teaching this year"
   EXPLAIN = "(Please Explain):"
 
+  RESPONSE_MESSAGES = {
+    SUCCESS: "success".freeze,
+    DUPLICATE: "duplicate".freeze,
+    OWN: "own".freeze,
+    CLOSED: "closed".freeze,
+    FULL: "full".freeze
+  }
+
   # GET /api/v1/pd/workshops/1/enrollments
   def index
     response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
@@ -34,28 +42,23 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
     if previous_enrollment
       # cancel_url = url_for action: :cancel, code: previous_enrollment.code
-      p "cancel bc duplicate"
-      # render :duplicate
+      render_unsuccessful RESPONSE_MESSAGES[:DUPLICATE]
     elsif workshop_owned_by? user
-      p "this is your own workshop"
-      # render :own
+      render_unsuccessful RESPONSE_MESSAGES[:OWN]
     elsif workshop_closed?
-      p "this workshop is closed"
-      # render :closed
+      render_unsuccessful RESPONSE_MESSAGES[:CLOSED]
     elsif workshop_full?
-      p "this workshop is full"
-      # render :full
+      render_unsuccessful RESPONSE_MESSAGES[:FULL]
     else
       enrollment = ::Pd::Enrollment.new workshop: @workshop
       enrollment.school_info_attributes = school_info_params
 
       if enrollment.update enrollment_params
-        p "updated, sending emails"
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
-        #redirect_to action: :thanks, code: enrollment.code, controller: 'pd/workshop_enrollment'
-        # else
-        # render :new
+        render json: {
+          submission_status: RESPONSE_MESSAGES[:SUCCESS]
+        }
       end
     end
   end
@@ -79,16 +82,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     }
   end
 
-  def process_grade(g)
-    if g == "#{OTHER} #{EXPLAIN}"
-      !params[:explain_teaching_other].blank? ? "#{OTHER}: #{params[:explain_teaching_other]}" : OTHER
-    elsif g == "#{NOT_TEACHING} #{EXPLAIN}"
-      !params[:explain_not_teaching].blank? ? "#{NOT_TEACHING}: #{params[:explain_not_teaching]}" : NOT_TEACHING
-    else
-      g
-    end
-  end
-
   def school_info_params
     params.require(:school_info).permit(
       :school_type,
@@ -99,6 +92,23 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       :school_name,
       :country
     )
+  end
+
+  def process_grade(g)
+    if g == "#{OTHER} #{EXPLAIN}"
+      !params[:explain_teaching_other].blank? ? "#{OTHER}: #{params[:explain_teaching_other]}" : OTHER
+    elsif g == "#{NOT_TEACHING} #{EXPLAIN}"
+      !params[:explain_not_teaching].blank? ? "#{NOT_TEACHING}: #{params[:explain_not_teaching]}" : NOT_TEACHING
+    else
+      g
+    end
+  end
+
+  def render_unsuccessful(error_message)
+    render json: {
+      submission_status: error_message
+    },
+    status: 409
   end
 
   def workshop_closed?
