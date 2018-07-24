@@ -14,6 +14,7 @@
     = render partial: 'levels/editors/all', locals: {f: f} unless @level.is_a? EvaluationMulti
     = render partial: 'levels/editors/md_instructions', locals: {f: f} unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
     = render partial: 'levels/editors/tts', locals: {f: f} unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
+    = render partial: 'levels/editors/droplet', locals: {f: f} if @level.uses_droplet?
     = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
     = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
     = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged

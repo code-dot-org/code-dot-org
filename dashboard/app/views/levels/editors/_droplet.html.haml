@@ -1,0 +1,42 @@
+.field
+  = f.label :edit_code,'Droplet level'
+.field
+  = f.label :code_functions, 'Edit Droplet Palette'
+  = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
+
+.field
+  = f.label :start_blocks, 'Edit Starting JavaScript Program'
+  .row
+    .span8
+      ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
+    #start-preview.span4
+.field
+  = f.label :palette_category_at_start
+  = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
+.field
+  = f.label :droplet_tooltips_disabled, "Hide droplet documentation tooltips"
+  = boolean_check_box f, :droplet_tooltips_disabled
+.field
+  = f.label :lock_zero_param_functions, "Don't allow parameters to be added to user-defined functions with no parameters"
+  = boolean_check_box f, :lock_zero_param_functions
+
+.field
+  = f.label :text_mode_at_start, 'Text mode (showing code) at start'
+  = f.radio_button :text_mode_at_start, 'false'
+  = f.label :text_mode_at_start, 'Start with user preferred setting', :value => 'false'
+  = f.radio_button :text_mode_at_start, 'blocks'
+  = f.label :text_mode_at_start, 'Always start with blocks', :value => 'blocks'
+  = f.radio_button :text_mode_at_start, 'true'
+  = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
+:ruby
+  script_data = {
+    pageOptions: {
+      app: @level.game.app,
+      solution_blocks: @level.respond_to?(:solution_blocks),
+      uses_droplet: @level.uses_droplet?,
+      original_palette: JSON.parse(@level.class.try(:palette) || "{}"),
+      shared_blocks: @level.shared_blocks,
+    }.to_json
+  }
+%script{src: minifiable_asset_path('js/levels/editors/_blockly.js'),
+        data: script_data}
