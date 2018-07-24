@@ -1,6 +1,8 @@
 require 'test_reporter'
 
-ActiveRecord::Migration&.check_pending!
+if defined? ActiveRecord
+  ActiveRecord::Migration&.check_pending!
+end
 
 # This is a workaround for https://github.com/kern/minitest-reporters/issues/230
 Minitest.load_plugins
