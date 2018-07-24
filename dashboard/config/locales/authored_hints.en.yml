@@ -4273,7 +4273,7 @@ en:
         courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside of your nested loop. Use 120 degree turns for your triangle.
         courseD_artist_nestedLoops_challenge1_c: |-
           Use a nested loop:
-           - Repeat 8 times
+            - Repeat 8 times
               - draw an octagon
               - draw a triangle
               - jump forward 50 pixels
@@ -4380,8 +4380,8 @@ en:
           After the bee makes it to the bottom row, have it repeat these commands:
 
           * Repeat 2 times:
-           * Move forward
-           * Make 3 honey
+            * Move forward
+            * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
@@ -8626,7 +8626,7 @@ en:
         courseD_artist_nestedLoops8_c: |-
           Use a nested loop:
 
-           - Repeat 8 times
+            - Repeat 8 times
               - draw a hexagon
               - jump forward 50 pixels
               - turn right 45 degrees
@@ -8636,7 +8636,7 @@ en:
         courseD_artist_nestedLoops8_c: |-
           Use a nested loop:
 
-           - Repeat 8 times
+            - Repeat 8 times
               - draw a hexagon
               - jump forward 50 pixels
               - turn right 45 degrees
@@ -8645,11 +8645,11 @@ en:
         courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end of the first set, but this time use triangles.
         courseD_artist_nestedLoops9_c: |-
           Use two nested loops:
-           - Repeat 8 times
+            - Repeat 8 times
               - draw a square
               - jump forward 50 pixels
               - turn right by 45 degrees
-           - Repeat 8 times
+            - Repeat 8 times
               - draw a triangle
               - jump forward 50 pixels
               - turn right by 45 degrees
@@ -8658,11 +8658,11 @@ en:
         courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end of the first set, but this time use triangles.
         courseD_artist_nestedLoops9_c: |-
           Use two nested loops:
-           - Repeat 8 times
+            - Repeat 8 times
               - draw a square
               - jump forward 50 pixels
               - turn right by 45 degrees
-           - Repeat 8 times
+            - Repeat 8 times
               - draw a triangle
               - jump forward 50 pixels
               - turn right by 45 degrees
@@ -9030,8 +9030,8 @@ en:
           After the bee makes it to the bottom row, have it repeat these commands:
 
           * Repeat 2 times:
-           * Move forward
-           * Make 3 honey
+            * Move forward
+            * Make 3 honey
           * Move backward
       courseD_bee_debugging_challenge1_2018_authored_hint:
         courseD_bee_debugging_challenge1_a: Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
@@ -9040,8 +9040,8 @@ en:
           After the bee makes it to the bottom row, have it repeat these commands:
 
           * Repeat 2 times:
-           * Move forward
-           * Make 3 honey
+            * Move forward
+            * Make 3 honey
           * Move backward
       courseD_bee_debugging_challenge1a_authored_hint:
         courseD_bee_debugging_challenge1_a: Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
@@ -9072,8 +9072,8 @@ en:
           After the bee makes it to the bottom row, have it repeat these commands:
 
           * Repeat 2 times:
-           * Move forward
-           * Make 3 honey
+            * Move forward
+            * Make 3 honey
           * Move backward
       courseD_bee_nestedLoops1_authored_hint:
         courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see what happens line by line.
@@ -9733,11 +9733,11 @@ en:
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: 'The best way to do this is to nest `if` statements by placing one inside of the other.  '
         courseD_farmer_condLoops2_b: For this puzzle, you should have one `if/else` statement and one plain `if` statement.
-        courseD_farmer_condLoops2_c: "Your `if` statement could look a lot like this:\n\n- if at corn\n - pick corn\n- else\n - if at lettuce\n  \t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+        courseD_farmer_condLoops2_c: "Your `if` statement could look a lot like this:\n\n- if at corn\n  - pick corn\n- else\n  - if at lettuce\n  \t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
       courseD_farmer_condLoops2_2018_authored_hint:
         courseD_farmer_condLoops2_a: 'The best way to do this is to nest `if` statements by placing one inside of the other.  '
         courseD_farmer_condLoops2_b: For this puzzle, you should have one `if/else` statement and one plain `if` statement.
-        courseD_farmer_condLoops2_c: "Your `if` statement could look a lot like this:\n\n- if at corn\n - pick corn\n- else\n - if at lettuce\n  \t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+        courseD_farmer_condLoops2_c: "Your `if` statement could look a lot like this:\n\n- if at corn\n  - pick corn\n- else\n  - if at lettuce\n  \t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
       courseD_farmer_condLoops3_authored_hint:
         courseD_farmer_condLoops3_a: |-
           To get all of the items, try nesting `if` statements three deep.
@@ -9870,12 +9870,12 @@ en:
         courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward and down several times in a stair-step pattern.
         courseD_farmer_conditionals6_c: |-
           The stair step pattern uses the following blocks
-           - move forward
-           - fill hole
-           - turn right
-           - move forward
-           - fill hole
-           - turn left
+            - move forward
+            - fill hole
+            - turn right
+            - move forward
+            - fill hole
+            - turn left
 
           How many times do you need to use this stair step pattern?
 
@@ -9885,12 +9885,12 @@ en:
         courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward and down several times in a stair-step pattern.
         courseD_farmer_conditionals6_c: |-
           The stair step pattern uses the following blocks
-           - move forward
-           - fill hole
-           - turn right
-           - move forward
-           - fill hole
-           - turn left
+            - move forward
+            - fill hole
+            - turn right
+            - move forward
+            - fill hole
+            - turn left
 
           How many times do you need to use this stair step pattern?
 
@@ -10404,7 +10404,7 @@ en:
           How would you use the `draw a line of squares` function to make this image?
         courseD_artist_functions8_d: |-
           To make a line of squares,
-           - repeat 3 times
+            - repeat 3 times
               - draw a square with a side length of **50 pixels**
               - jump forward **100 pixels**
         courseD_artist_functions8_b: |-
@@ -10421,7 +10421,7 @@ en:
           How would you use the `draw a line of squares` function to make this image?
         courseD_artist_functions8_d: |-
           To make a line of squares,
-           - repeat 3 times
+            - repeat 3 times
               - draw a square with a side length of **50 pixels**
               - jump forward **100 pixels**
         courseD_artist_functions8_b: |-
@@ -10436,7 +10436,7 @@ en:
         courseD_artist_functions8_a: Start by making a function for a square, then try making a function for a line of squares.
         courseD_artist_functions8_d: |-
           To make a line of squares,
-           - repeat 3 times
+            - repeat 3 times
               - draw a square
               - jump forward **100 pixels**
       courseE_artist_functions8c_2018_authored_hint:
@@ -10450,18 +10450,18 @@ en:
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
         courseD_artist_functions9_a: |-
           This puzzle can be broken into three parts:
-           - make the `draw a triangle` function
-           - make the `draw a line of triangles` function
-           - use your `draw a line of triangles` function four times to complete the drawing
+            - make the `draw a triangle` function
+            - make the `draw a line of triangles` function
+            - use your `draw a line of triangles` function four times to complete the drawing
         courseD_artist_functions9_b: This drawing is made by drawing a line of triangles 4 times and turning either 60 or 120 degrees before you draw the next triangle line.
         courseD_artist_functions9_c: |-
           To draw a line of triangles:
-           - repeat 4 times
+            - repeat 4 times
               - draw a triangle
               - jump forward 50 pixels
         courseD_artist_functions9_d: |-
           To draw the diamond:
-           - repeat 2 times
+            - repeat 2 times
               - draw a line of triangles
               - turn 60 degrees
               - draw a line of triangles
@@ -10473,18 +10473,18 @@ en:
           ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
         courseD_artist_functions9_a: |-
           This puzzle can be broken into three parts:
-           - make the `draw a triangle` function
-           - make the `draw a line of triangles` function
-           - use your `draw a line of triangles` function four times to complete the drawing
+            - make the `draw a triangle` function
+            - make the `draw a line of triangles` function
+            - use your `draw a line of triangles` function four times to complete the drawing
         courseD_artist_functions9_b: This drawing is made by drawing a line of triangles 4 times and turning either 60 or 120 degrees before you draw the next triangle line.
         courseD_artist_functions9_c: |-
           To draw a line of triangles:
-           - repeat 4 times
+            - repeat 4 times
               - draw a triangle
               - jump forward 50 pixels
         courseD_artist_functions9_d: |-
           To draw the diamond:
-           - repeat 2 times
+            - repeat 2 times
               - draw a line of triangles
               - turn 60 degrees
               - draw a line of triangles
@@ -10760,6 +10760,10 @@ en:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Be careful to pull out the full block of "code from the toolbar each time you try a new one.
         4-5_Artist_Patterns_3_b: If your code becomes too confusing, you can always click "Start Over" and try again!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached the end of a path?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your code multiple times for each straight path.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
@@ -15083,7 +15087,7 @@ en:
               - move forward
               - repeat 12
                 - get nectar
-           - turn right
+            - turn right
       grade4_bee_nestedLoops2a_authored_hint:
         grade4_bee_nestedLoops2a_a: Try using nested `repeat` loops to solve this puzzle.
       grade4_bee_nestedLoops4_authored_hint:

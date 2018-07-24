@@ -111,10 +111,6 @@ class ApiController < ApplicationController
     @user_header_options[:loc_prefix] = 'nav.user.'
   end
 
-  def user_hero
-    head :not_found unless current_user
-  end
-
   def update_lockable_state
     updates = params.require(:updates)
     updates.to_a.each do |item|
