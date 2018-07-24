@@ -39,7 +39,6 @@ nl:
       update_needs_confirmation: "Je account is met succes bijgewerkt, maar we moeten je nieuwe e-mailadres verifiëren. Check alsjeblieft je email en klik op de bevestigingslink om je nieuwe e-mailadres te bevestigen."
       updated: "Je account is met succes bijgewerkt."
     sessions:
-      signed_in: ""
       signed_out: "Je bent uitgelogd."
     unlocks:
       send_instructions: "Binnen een paar minuten krijg je een email met uitleg over het deblokkeren van je account."

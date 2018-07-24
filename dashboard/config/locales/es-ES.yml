@@ -46,7 +46,6 @@ es:
   previous_page: Página anterior
   next_page: Siguiente pagina
   next_resource: Siguiente recurso
-  done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: De acuerdo
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
@@ -104,8 +103,6 @@ es:
       Tendrás que iniciar sesión escribiendo tu contraseña debajo.
     use_clever: Lo sentimos, tu cuenta de Code.org no está conectada a tu %{provider}.
       Por favor inicia sesión a través de tu Portal Inteligente.
-    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}.
-      Please try again.
   signup_form:
     student_count: "%{count} estudiantes ya se han registrado."
     teacher_count: "%{count} profesores ya se han registrado."
@@ -318,7 +315,6 @@ es:
       free_play:
         playlab: Hacer una aplicación para el laboratorio de juegos
         artist: Dibuja Algo
-        calculate: Calculate something
         applab: Hacer una aplicación para el Laboratorio de Aplicaciones
         gamelab: Hacer un proyecto de laboratorio de Juegos
         weblab: Hacer un proyecto de laboratorio de Juegos (beta)
@@ -452,7 +448,6 @@ es:
     confirm_secret_words: Confirma que eres tú al ingresar tus palabras secretas actuales
     enter_parent_email: Ingresa el email de tu padre o tutor (para recuperar la clave)
     update: Actualizar cuenta de usuario
-    account_successfully_updated: Account successfully updated.
   user_level:
     completed: Completada
     tried: Prueba
@@ -839,8 +834,6 @@ es:
         las gallinas, ovejas, Creepers, zombis y más.
     hero:
       title: Minecraft
-      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
-        through Minecraft with code.
     sports:
       title: Спорт
       body: Crea un partido de baloncesto o una mezcla de otros deportes.
@@ -906,15 +899,11 @@ es:
     wrong_body: La respuesta no es correcta. ¡Inténtalo de nuevo!
     correct_title: Correcto
     correct_body: Esta respuesta es la correcta.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Gracias
     wrong_body: Gracias por enviarnos su respuesta.
     correct_title: Gracias
     correct_body: Gracias por enviarnos su respuesta.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Gracias
     wrong_body: Gracias por enviarnos su respuesta
@@ -1156,23 +1145,12 @@ es:
     instructor_feedback: Retroalimentación del instructor
     peer_feedback: Retroalimentación de los compañeros
     outdated: Esta retroalimientación se añadió para una versión previamente presentada
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Vista previa
     content: Contenido
     practice: El profesor practica
     peer_review: Revisión por pares
     ramp_up: Avanzar
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Curso principal
     extra_course_content: Contenido adicional del curso
     csf_e_1: Aavnzar al Curso E (Opcional)
@@ -1209,7 +1187,6 @@ es:
     csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
     csp2_1_2018: 'Unidad 2: Información Digital'
     csp3_1_2018: 'Unidad 3: Introducción a la Programación'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Preguntas para Reflexionar
   external_links:
     disclaimer: Descargo de responsabilidad
@@ -1282,23 +1259,6 @@ es:
     download_in_Vietnamese: 'Descargar en vietnamita:'
     windows: Windows (64-bit)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
-  stage_extras_teacher_message: You have Lesson Extras turned off for some of your
-    sections. Your students won’t see this page unless you turn them on. You can turn
-    Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher
-    Dashboard</a>.
   locked_stage: Los contenidos de esta etapa no son visibles ya que se encuentra actualmente
     bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar
     en ella o para revisar tus respuestas.
@@ -1310,83 +1270,11 @@ es:
   return_course_overview: Ir al resumen de la unidad
   view_all_units: Ver todas las unidades
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
     form_labels:
-      first_name: First Name
-      first_name_preferred: Preferred First Name
-      last_name: Last Name
       email: Correo electrónico
-      email_alternate: Alternate Email
-      gender: Gender Identity
       school_name: Nombre de la escuela
       school_city: Ciudad de la escuela
       school_country: País de escuela
-      ages: Which age(s) do you teach this year?
-      subjects: Which subject(s) do you teach this year?
-      resources: Which of the following CS education resources do you use?
-      robotics: Which of the following robotics resources do you use?
-      workshop_organizer: Workshop Organizer
-      workshop_facilitator: Workshop Facilitator
-      workshop_course: Workshop Course
-      email_opt_in: I agree that Code.org can share my contact information and aggregate
-        data about my classes with the Code.org International Partner in my country.
-      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
-        share information on how you use Code.org and the Professional Learning resources
-        with the Code.org International Partner in your country, school district,
-        and facilitators. We will share your contact information, which courses/units
-        you are using and aggregate data about your classes with these partners. This
-        includes the number of students in your classes, the demographic breakdown
-        of your classroom, and the name of your school and district. We will not share
-        any information about individual students with our partners: all student information
-        will be de-identified and aggregated. Our International Partners and facilitators
-        are contractually obliged to treat this information with the same level of
-        confidentiality as Code.org.'
     form_entries:
       gender:
         male: Varón
@@ -1394,90 +1282,19 @@ es:
         non_binary: No binario
         not_listed: Término preferido no listado
         none: Prefiero no contestar
-      school_country:
-        canada: Canada
-        chile: Chile
-        israel: Israel
-        malaysia: Malaysia
-        mexico: Mexico
-        thailand: Thailand
-      ages:
-        ages_under_6: "< 6 years old"
-        ages_7_8: 7-8 years old
-        ages_9_10: 9-10 years old
-        ages_11_12: 11-12 years old
-        ages_13_14: 13-14 years old
-        ages_15_16: 15-16 years old
-        ages_17_18: 17-18 years old
-        ages_19_over: 19+ years old
       subjects:
         cs: Ciencias de la computación
-        ict: ICT
         math: Matemáticas
         science: Ciencia
-        history: History / Social Studies
         la: Lengua
-        efl: English as a Foreign Language
-        music: Music
-        art: Art
-        other: 'Other:'
       resources:
-        bootstrap: Bootstrap
-        codecademy: CodeCademy
-        csfirst: Google CS First
-        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
-        scratch: Scratch
-        tynker: Tynker
-        other: 'Other:'
       robotics:
-        grok: Grok Learning
         kodable: Kodable
-        lego: LEGO Education
-        microbit: Microbit
-        ozobot: Ozobot
-        sphero: Sphero
-        raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: 'Other:'
-      workshop_course:
-        csf_af: CS Fundamentals (Courses A-F)
-        csf_express: CS Fundamentals (Pre-Express or Express)
       email_opt_in:
         opt_in_yes: Sí
         opt_in_no: 'No'
-    international_opt_in:
-      title: Workshop Attendance for non-U.S. Teachers
-      intro: Thank you for taking time to receive training on Code.org’s curriculum.
-        Our mission to bring computer science education opportunities to all children
-        in all schools around the world would not be possible without you.
-      instructions: Please fill out the form below to indicate that 1) you attended
-        a training workshop run by one of Code.org’s international partners, and 2)
-        you agree to share your information with our international partner in your
-        country so that we can help to support your journey as a computer science
-        teacher.
-      thanks: Thank you for submitting! We look forward to supporting you as you get
-        to know Code.org’s curriculum and tools. Please keep sharing your questions
-        and feedback with us by writing to us at support@code.org or by posting on
-        the teacher forum!
-    logged_out:
-      heading: Thanks for your interest in the Professional Learning Program!
-      body: To get started, you first need to be logged into your Code.org account.
-        If you’d like more information about the program before you start your application,
-        please check out the <a href="%{url}">Professional Learning Program overview</a>.
-    not_teacher:
-      body: Thanks for your interest in Code.org’s Professional Learning Program!
-        You’re currently signed into a student account. Please either <a href="%{create_teacher}">create
-        a teacher account</a> or <a href="%{user_settings}">go to your user settings</a>
-        to upgrade your account from student to teacher.
-      more: If you’d like more information about the program before you start your
-        application, please check out the <a href="%{pl_overview}">Professional Learning
-        Program overview</a>.
-    no_teacher_email:
-      body: Your account doesn’t have an email address. Please <a href="%{user_registration}">visit
-        your account settings</a> to add your email address before completing this
-        form.
   courses_category: Cursos Completos
   cookie_banner:
     message: Si continúas navegando en nuestro sitio web o haces clic en "Acepto",
