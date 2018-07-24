@@ -2,7 +2,6 @@ require_relative '../../deployment'
 require 'cdo/pegasus'
 require 'i18n'
 require 'i18n/backend/fallbacks'
-require 'cdo/i18n_backend'
 require 'logger'
 require 'bcrypt'
 require 'chronic'
@@ -46,8 +45,7 @@ end
 def load_pegasus_settings
   $log = Pegasus.logger
 
-  I18n.backend = CDO.i18n_backend
-  I18n.backend.class.send(:include, I18n::Backend::Fallbacks)
+  I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
   if rack_env?(:development) && !CDO.load_locales
     I18n.load_path += Dir[cache_dir('i18n/en-US.yml')]
     I18n.load_path += Dir[cache_dir('i18n/es-ES.yml')]
