@@ -912,6 +912,10 @@ fr:
         pour niveler le sol ?  Indice : Utilise la boucle «Tant que» pour les deux."
       4-5 While Loops Assessment 1_instruction: Il y a beaucoup de trous et de tas.  Aide-moi
         à les remplir et à les enlever pour niveler le sol.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Crée une fonction basée sur ton propre puzzle
         verbal.
       Alien Defender_instruction: 'Idée de projet: Faire un jeu de type Defender dans
@@ -1133,6 +1137,7 @@ fr:
         make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and
         piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -7737,6 +7742,7 @@ fr:
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the
         acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat
         to the acorn.
@@ -9377,6 +9383,8 @@ fr:
         dois remettre l'artiste en place pour dessiner la ligne suivante. Lequel de
         ces blocs de code peux-tu placer à la fin de la boucle ultrapériphérique pour
         dessiner la grille entière ?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each
+        of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will

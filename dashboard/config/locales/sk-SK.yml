@@ -421,6 +421,9 @@ sk:
       zmien)"
     delete: Zmazať svoj účet
     delete_text: Klinutím na tlačítko nižšie, vymažete svoj účet.
+    delete_text_teacher_managed_note: You do not have permission to delete this account
+      because it is managed by your teacher. Your teacher(s) will need to remove you
+      from their sections before you can delete your account.
     delete_text_teacher_note: 'Poznámka: vymazaním svojho účtu nevymažete účty Vašich
       študentov.'
     delete_confirm: Naozaj chcete odstrániť tento účet?
@@ -1414,6 +1417,8 @@ sk:
       workshop_course:
         csf_af: Základy informatiky (kurzy A-F)
         csf_express: Základy informatiky (skrátená verzia)
+        csd: CS Discoveries
+        csp: CS Principles
       email_opt_in:
         opt_in_yes: Áno
         opt_in_no: Nie

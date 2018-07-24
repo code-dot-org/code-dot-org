@@ -356,16 +356,15 @@ bg:
         с два блока? (Съвет: Създай повторение(цикъл), като използваш блока "повтори  пъти").'
       2-3 Maze 12 (old)_instruction: Заведи ме при прасето, този път като използваш
         блока за "повтори пъти"!
-      2-3 Maze 12 - One Move Block_instruction: Стигни до прасето! Но този път, можеш
-        да използваш само едно "върви напред" блокче. Виждаш ли други блокове, които
-        може да ти помогнат?
+      2-3 Maze 12 - One Move Block_instruction: Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
       2-3 Maze 12_instruction: Можеш ли да стигнеш до прасето чрез създаване на цикъл,
         който има само един "върви напред" блок в себе си за повтаряне?
       2-3 Maze 13 (old)_instruction: Заведи ме при прасето, този път използвай блока
         "повтори докато"!
-      2-3 Maze 13_instruction: "Заведи ме до прасето чрез добавяне само на два блока.
-        \r (Забележка: трябва да използваш магическият блок за повторение, за да минеш
-        това ниво)"
+      2-3 Maze 13_instruction: Get me to the pig! You can only use one move forward
+        block this time
       2-3 Maze 14 (old)_instruction: Заведи ме за прасето, като използваш "докато"
         блок!
       2-3 Maze 14_instruction: Заведи ме до слънчогледа! (Къде е този "повтори пъти"
@@ -390,7 +389,7 @@ bg:
       2-3 Maze 6_instruction: Запази спокойствие и ми помогни да намеря лошото прасе.
         Иначе ще се ядосам!
       2-3 Maze 7_instruction: Заведи ме до зелената лошотия! (Внимавай за динамит)
-      2-3 Maze 8_instruction: Заведи ме до прасето!
+      2-3 Maze 8_instruction: Get me to the pig!
       2-3 Maze 9_instruction: Заведи ме до зелената лошотия! (Внимавай за динамит)
       2-3 Maze Loops 1_instruction: Можеш ли да ме заведеш до прасето с 5 блока?
       2-3 Maze Loops 17_instruction: Използвай наученото, за да ме заведеш до слънчогледа!
@@ -875,6 +874,10 @@ bg:
         Използвайте цикъл и за двете.'
       4-5 While Loops Assessment 1_instruction: Има много ями и купчини.  Помогнете
         ми да ги запълня и премахна излишната почва, за да заравня земята.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       Alien Defender_2018_instruction: 'Project Idea: Make a defender game in Play
@@ -1097,6 +1100,7 @@ bg:
         make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and
         piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Щракнете, за да видите пълните инструкции)"
       CSD Hackathon Week 1_instruction: "(Щракнете, за да видите пълните инструкции)"
@@ -3826,22 +3830,17 @@ bg:
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Начертай къса линия нагоре и дълга линия
         вдясно!
-      K-1 Artist Loops 1_instruction: Направи тази линия чрез преместване на изток
-        4 пъти.
-      K-1 Artist Loops 2_instruction: Начертайте същата линия с цикъл.
-      K-1 Artist Loops 3_instruction: Можете ли да повторите тези блокове, за да начертаете
-        6 линии?
-      K-1 Artist Loops 4_instruction: Може ли с повторение да начертаеш  горната част
-        на този замък?
-      K-1 Artist Loops 5_instruction: Какво ще повторите 4 пъти, за да нарисувате
-        тези стъпала?
-      K-1 Artist Loops 6_instruction: 'Тук се нуждаете от два цикъла: един за качване
-        нагоре по стълбите и един за слизане.'
-      K-1 Artist Loops 7_instruction: Можете ли да завършите този модел с два цикъла?
-      K-1 Artist Loops 8_instruction: Това стълбище има по-широки стъпала.
-      K-1 Artist Loops 9_instruction: 'Оценка: Използвайте цикъл, за да начертаете
-        стълбите'
-      K-1 Artist Loops Free Play_instruction: Свободна игра, начертайте нещо забавно!
+      K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
+      K-1 Artist Loops 2_instruction: Now, draw the same line using a loop.
+      K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
+      K-1 Artist Loops 4_instruction: Could a loop help us draw the top of this castle?
+      K-1 Artist Loops 5_instruction: What can you loop 4 times to draw these stairs?
+      K-1 Artist Loops 6_instruction: 'This one needs two loops: one to go up the
+        stairs and one to go down.'
+      K-1 Artist Loops 7_instruction: Loops can help you finish this pattern.
+      K-1 Artist Loops 8_instruction: This staircase has longer steps.
+      K-1 Artist Loops 9_instruction: What is the easiest way to draw these stairs?
+      K-1 Artist Loops Free Play_instruction: Free play, draw something fun!
       K-1 Artist1 1_instruction: Начертайте стъпалото на човечето с една линия
       K-1 Artist1 10_instruction: Чертай и скочи по пунктираната линия към съкровището
         X
@@ -3928,72 +3927,73 @@ bg:
       K-1 Maze 10_instruction: Заобиколи ТНТ, за да мога да стигна  до прасето!
       K-1 Maze 11_instruction: 'Проследи пътя и ме заведи до прасето. Стой далече
         от динамита ( TNT) или ще хвърчи перушина! Подсказване: той е на Юг от мен.'
-      K-1 Maze 2_instruction: Премести ме на Изток, за да стигна до прасето!
-      K-1 Maze 3_instruction: Премести ме на Юг, за да стигна до прасето!
+      K-1 Maze 2_instruction: Премести ме на Изток за да стигна до прасето!
+      K-1 Maze 3_instruction: Премести ме на Юг за да стигна до праето!
       K-1 Maze 4_instruction: Премести ме на Север, за са стигна до прасето!
-      K-1 Maze 5_instruction: Премести ме на Изток, за да стигна до прасето!
-      K-1 Maze 6_instruction: Премести ме в една посока, после в друга, за да стигна
+      K-1 Maze 5_instruction: Премести ме на Изток за да стигна до прасето!
+      K-1 Maze 6_instruction: Премести ме в една посока , после в друга за да стигна
         до прасето!
-      K-1 Maze 7_instruction: Премести ме в една посока, после в друга, за да стигна
+      K-1 Maze 7_instruction: Премести ме в една посока , после в друга за да стигна
         до прасето!
-      K-1 Maze 8_instruction: Премести ме в една посока, после в друга, за да стигна
+      K-1 Maze 8_instruction: Премести ме в една посока , после в друга за да стигна
         до прасето!
-      K-1 Maze 9_instruction: Премести ме в една посока, после в друга, за да стигна
+      K-1 Maze 9_instruction: Премести ме в една посока , после в друга за да стигна
         до прасето!
       K-1 Maze Assessment 1_instruction: Задача- Заведи ме до прасето!
       K-1 Maze Assessment 12_instruction: Ниво с оценки
       K-1 Maze Assessment 13_instruction: Ниво с оценки
       K-1 Maze Assessment 2_instruction: Задача- Заведи ме до прасето!
       K-1 Maze Loops 1_instruction: Заведи ме до прасето!
-      K-1 Maze Loops 10_instruction: Заведи ме до прасето! Използвай цикъл.
+      K-1 Maze Loops 10_instruction: Get me to the pig! Using the `repeat` loop will
+        make it much easier.
       K-1 Maze Loops 11_instruction: "Заведи ме до прасето!  \rИзползвай цикъл."
       K-1 Maze Loops 12_instruction: Заведи ме до прасето! Използвай цикъл.
       K-1 Maze Loops 2_instruction: Използвай блока за повторение, за да стигна до
         прасето!
-      K-1 Maze Loops 3_instruction: Заведи ме до прасето! Използвай цикъл.
+      K-1 Maze Loops 3_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 4_instruction: Заведи ме до прасето!
-      K-1 Maze Loops 5_instruction: Заведи ме до прасето! Използвай цикъл.
-      K-1 Maze Loops 6_instruction: Заведи ме до прасето! Използвай цикъл.
-      K-1 Maze Loops 7_instruction: Заведи ме до прасето! Използвай цикъл.
+      K-1 Maze Loops 5_instruction: Get me to the pig! Be sure to use `repeat` loops.
+      K-1 Maze Loops 6_instruction: Get me to the pig! Be sure to use `repeat` loops.
+      K-1 Maze Loops 7_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 8_instruction: Заведи ме до прасето! Използвай цикъл.
       K-1 Maze Loops 9_instruction: Заведи ме до прасето!
       K-1 Maze Loops Assessment 1_instruction: Задача- Използвай цикли за да стигна
         до прасето!
-      K-1 Maze Loops Assessment 2_instruction: Задача- Използвай цикли за да стигна
-        до прасето!
+      K-1 Maze Loops Assessment 2_instruction: Use `repeat` loops to get me to the
+        pig!
       K-1 Maze Multi 14_instruction: Ниво с оценки
       K-1 Maze Multi 15_instruction: Ниво с оценки
-      K-1 Maze Sequence Assessment 1_instruction: "Да видим какво си научил!\r\"\nПремести
-        ме в една посока,\nпосле в друга, за да стигна до прасето."
+      K-1 Maze Sequence Assessment 1_instruction: "Така се тестват различни функции
+        \"test!\r\"\nПремести ме в една посока,\nпосле в друга за да стигна до прасето"
       K-1 Maze Sequence Assessment 2_instruction: |-
         Премести ме в една посока,
         после в друга, за да стигна до прасето.
-      K-1 Maze debug Assessment 1_instruction: Задача-Коригирай нивото като преместваш
-        и добавяш блокове, за да достигна до прасето!
+      K-1 Maze debug Assessment 1_instruction: Задача-Корегирай нивото като преместваш
+        и добавяш блокове за да достигна до прасето!
       K-1 artist 1 level 10_instruction: Начертай пунктирна линия с помощта на блокове
         за скок и чертане
       K-1 artist 1 level 9_instruction: Начертай това с три линии
-      K-1 maze debug 1_instruction: Промени кода, за да ме заведеш до прасето!
-      K-1 maze debug 10_instruction: Коригирай нивото като преместваш и добавяш блокове,
-        за да мога да достигна до прасето!
-      K-1 maze debug 11_instruction: "Така се тестват различни функции \"test!\r\"\nКоригирай
-        нивото като преместваш и добавяш блокове, за да мога да достигна до прасето."
+      K-1 maze debug 1_instruction: Change the code to get me to the pig!
+      K-1 maze debug 10_instruction: Корегирай нивото като преместваш и добавяш блокове
+        за да достигна до прасето!
+      K-1 maze debug 11_instruction: "Така се тестват различни функции \"test!\r\"\nКорегирай
+        нивото като преместваш и добавяш блокове за да достигна до прасето."
       K-1 maze debug 2_instruction: Отгатнете какво липсва и добавете необходимите
         блокове за да стигна до прасето!
-      K-1 maze debug 3_instruction: Отгатнете какво липсва и премахнете  излишните  блокове,
-        за да мога да стигна до прасето!
+      K-1 maze debug 3_instruction: Something is not quite right. REMOVE blocks to
+        get me to the pig!
       K-1 maze debug 4_instruction: Прегледайте блоковете и ги поправете! Мисля ,
         че отивам в неправилната посока.
-      K-1 maze debug 5_instruction: Коригирай нивото като преместваш и добавяш блокове,
-        за да мога да достигна до прасето!
-      K-1 maze debug 6_instruction: Коригирай нивото като преместваш и добавяш блокове,
-        за да мога да достигна до прасето!
-      K-1 maze debug 7_instruction: Коригирай нивото като преместваш и добавяш блокове,
-        за да мога да достигна до прасето!
+      K-1 maze debug 5_instruction: Корегирай нивото като преместваш и добавяш блокове
+        за да достигна до прасето!
+      K-1 maze debug 6_instruction: Корегирай нивото като преместваш и добавяш блокове
+        за да достигна до прасето!
+      K-1 maze debug 7_instruction: Корегирай нивото като преместваш и добавяш блокове
+        за да достигна до прасето!
       K-1 maze debug 8_instruction: Коригирай нивото като преместваш и добавяш блокове,
         за да мога да достигна до прасето!
-      K-1 maze debug 9_instruction: Коригирай нивото като преместваш и добавяш блокове,
-        за да мога да достигна до прасето!
+      K-1 maze debug 9_instruction: Корегирай нивото като преместваш и добавяш блокове
+        за да достигна до прасето!
       K2.0 sequence 1_instruction: Промени кода, за да ме заведеш до прасето!
       K2.0 sequence 10_instruction: 'Challenge: Move me around the TNT to get to the
         pig.'
@@ -4004,7 +4004,7 @@ bg:
       K2.0 sequence 4_instruction: Time for a shorter puzzle!  Move one way, then
         another to get me to the pig.
       K2.0 sequence 4a_instruction: Try this puzzle again from the start!
-      K2.0 sequence 5_instruction: Премести ме в една посока, после в друга, за да
+      K2.0 sequence 5_instruction: Премести ме в една посока , после в друга за да
         стигна до прасето!
       K2.0 sequence 6_instruction: Отгатнете какво липсва и добавете необходимите
         блокове за да стигна до прасето!
@@ -7592,6 +7592,7 @@ bg:
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the
         acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat
         to the acorn.
@@ -8023,8 +8024,8 @@ bg:
         the lettuce, and all of the pumpkins.
       courseC_maze_debugging1_instruction: Fix the code to help get Scrat get to the
         acorn.
-      courseC_maze_debugging10_instruction: Коригирай нивото като преместваш и добавяш
-        блокове, за да мога да достигна до прасето!
+      courseC_maze_debugging10_instruction: Корегирай нивото като преместваш и добавяш
+        блокове за да достигна до прасето!
       courseC_maze_debugging1_2018_instruction: Fix the code to help get Scrat get
         to the acorn.
       courseC_maze_debugging2_instruction: Use your debugging skills to get Scrat
@@ -9215,6 +9216,8 @@ bg:
         върнете художника обратно, за да нарисува следващата линия. Кои от тези блокове
         код може да поставите в края на последното повторение(цикъл), за да нарисувате
         цялата мрежа?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each
+        of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will
@@ -10205,7 +10208,7 @@ bg:
         together and click "Run" to watch it go!
       grade2_CaringForNewPet_1_instruction: Drag an extra `move forward` block out
         of the toolbox to finish your code.
-      grade2_CaringForNewPet_10_instruction: Заведи ме до прасето!
+      grade2_CaringForNewPet_10_instruction: Get me to the pig!
       grade2_CaringForNewPet_11_instruction: '"Keep calm and help me find the bad
         pig."'
       grade2_CaringForNewPet_2_instruction: |-
@@ -10220,7 +10223,7 @@ bg:
       grade2_CaringForNewPet_3D_instruction: '"Follow this path to get me to the pig!"'
       grade2_CaringForNewPet_4_instruction: '"Keep calm and help me find the bad pig.
         Otherwise I might get angry!"'
-      grade2_CaringForNewPet_5_instruction: Заведи ме до прасето!
+      grade2_CaringForNewPet_5_instruction: Get me to the pig!
       grade2_CaringForNewPet_6_instruction: 'Challenge: Guide me to the green evilness!
         (Watch out for TNT)'
       grade2_CaringForNewPet_7D_instruction: 'Challenge: This code has a lot of bugs.
@@ -11443,8 +11446,7 @@ bg:
       iceage_warn_ice_age_2018_instruction: Change the scene to an icy background
         and set Sid’s (actor 1) speed to fast.
       jessie-test_instruction: Lots of instructions
-      k-1 maze 1_instruction: Можеш ли да направиш така, че да отида на Запад и достигна
-        прасето?
+      k-1 maze 1_instruction: Can you make me move West to get to the pig?
       k1stickerfreeplay_instruction: The artist saw something funny in the distance.  Draw
         what you think he saw.
       kikiTesta_instruction: |-

@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
 import moment from "moment/moment";
+import queryString from 'query-string';
 
 const styles = {
   content: {
@@ -49,8 +50,8 @@ class TeacherFeedback extends Component {
 
   constructor(props) {
     super(props);
-    const search = window.location.search;
-    const studentId = search.split('&')[1].split("=")[1];
+    //Pull the student id from the url
+    const studentId = queryString.parse(window.location.search).user_id;
 
     this.state = {
       comment: "",

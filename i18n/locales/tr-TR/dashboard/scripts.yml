@@ -1139,6 +1139,8 @@ tr:
               name: Tek başına video
             Curriculum Reference:
               name: Öğretim programı
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -7554,7 +7556,7 @@ tr:
               description_student: ''
               description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
             'Events: The Big Event':
-              name: Büyük Olay
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar işte bunun içindir.
             Events in Play Lab:
@@ -7749,9 +7751,9 @@ tr:
             'Functions: Songwriting':
               name: Şarkı Yazarlığı
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with the Harvester
             Functions in Artist:
               name: Sanatçı- Fonksiyonlar
             Screen Out the Mean:
@@ -7842,7 +7844,7 @@ tr:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: Büyük Olay
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9478,7 +9480,7 @@ tr:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: Büyük Olay
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9496,15 +9498,15 @@ tr:
             Your Digital Footprint:
               name: Dijital İziniz
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: Rey ve BB-8 ile programlama
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie ve büyük proje
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9535,3 +9537,13 @@ tr:
           description_audience: ''
           description_short: ''
           description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.
