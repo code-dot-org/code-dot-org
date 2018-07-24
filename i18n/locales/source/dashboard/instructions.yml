@@ -625,7 +625,7 @@ en:
         * Create a new function `moveCloud(name)` that will move any cloud.
           * (Hint: you will use almost all the same code as the `moveCloud0` function)
         * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-         * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+          * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify clouds_2018_instruction: |-
         # Clouds
 
@@ -635,7 +635,7 @@ en:
         * Create a new function `moveCloud(name)` that will move any cloud.
           * (Hint: you will use almost all the same code as the `moveCloud0` function)
         * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-         * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+          * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes_instruction: |-
         # Multi-plane Controller
 

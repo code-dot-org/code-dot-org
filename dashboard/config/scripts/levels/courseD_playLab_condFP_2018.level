@@ -53,7 +53,7 @@
     "disable_if_else_editing": "true",
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
-    "markdown_instructions": "Now, build your own game to show off to your friends!\r\n\r\n---\r\n\r\nYou could:\r\n - Have the pirate and ninja work together to get points from the octopus\r\n - Have both octopuses follow the pirate, doing double damage to the ninja when they collide\r\n - Have each character disappear when touched by the ninja\r\n - Invent your own game!",
+    "markdown_instructions": "Now, build your own game to show off to your friends!\r\n\r\n---\r\n\r\nYou could:\r\n  - Have the pirate and ninja work together to get points from the octopus\r\n  - Have both octopuses follow the pirate, doing double damage to the ninja when they collide\r\n  - Have each character disappear when touched by the ninja\r\n  - Invent your own game!",
     "include_shared_functions": "false",
     "contained_level_names": null
   },
