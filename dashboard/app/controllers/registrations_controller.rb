@@ -75,7 +75,7 @@ class RegistrationsController < Devise::RegistrationsController
         }, status: :bad_request
         return
       end
-      current_user.destroy
+      destroy_dependent_users(current_user)
       Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
       return head :no_content
     else
@@ -369,5 +369,10 @@ class RegistrationsController < Devise::RegistrationsController
     end
     users << {id: user.id, name: user.name}
     users
+  end
+
+  def destroy_dependent_users(user)
+    user_ids_to_destroy = get_users_to_destroy(user).pluck(:id)
+    User.destroy(user_ids_to_destroy)
   end
 end
