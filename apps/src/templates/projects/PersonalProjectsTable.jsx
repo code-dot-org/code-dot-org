@@ -293,14 +293,23 @@ class PersonalProjectsTable extends React.Component {
       sort: orderBy,
     })(this.props.personalProjectsList);
 
+    const noProjects = this.props.personalProjectsList.length === 0;
+
     return (
-      <Table.Provider
-        columns={columns}
-        style={tableLayoutStyles.table}
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="channel" />
-      </Table.Provider>
+      <div>
+        {!noProjects &&
+          <Table.Provider
+            columns={columns}
+            style={tableLayoutStyles.table}
+          >
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="channel" />
+          </Table.Provider>
+        }
+        {noProjects &&
+          <h3>{i18n.noPersonalProjects()}</h3>
+        }
+      </div>
     );
   }
 }
