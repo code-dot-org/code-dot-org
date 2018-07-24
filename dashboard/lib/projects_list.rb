@@ -29,6 +29,7 @@ module ProjectsList
         project_data = get_project_row_data(project, channel_id)
         personal_projects_list << project_data if project_data
       end
+      personal_projects_list
     end
 
     # Look up every project of every student in the section, excluding those that are hidden.
