@@ -773,6 +773,10 @@ is:
         csd_gamelab_booleans: Rökyrðingar
         csd_gamelab_conditional_statements: Skilyrðingar
         csd_gamelab_if_else: Ef/Annars yrðingar
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

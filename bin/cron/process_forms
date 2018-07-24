@@ -143,12 +143,10 @@ def index_batch_of_forms
       SOLR.update(documents) unless documents.empty? || !SOLR
     rescue
       documents.each do |document|
-        begin
-          SOLR.update([document])
-        rescue => e
-          ChatClient.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color: 'red', notify: 1
-          raise
-        end
+        SOLR.update([document])
+      rescue => e
+        ChatClient.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color: 'red', notify: 1
+        raise
       end
     end
   end

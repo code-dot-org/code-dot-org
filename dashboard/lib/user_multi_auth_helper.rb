@@ -54,7 +54,7 @@ module UserMultiAuthHelper
     return true unless migrated?
 
     self.email = email
-    self.hashed_email = hashed_email.present? ? hashed_email : nil
+    self.hashed_email = hashed_email.presence
 
     credential_type = primary_contact_info&.credential_type
     if AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? credential_type

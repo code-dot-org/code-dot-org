@@ -51,10 +51,21 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  #
+  # GET /users/to_destroy
+  #
+  # Returns array of users that will be destroyed if current_user is destroyed
+  #
+  def users_to_destroy
+    return head :bad_request unless current_user&.can_delete_own_account?
+    render json: get_users_to_destroy(current_user)
+  end
+
   def destroy
     # TODO: (madelynkasula) Remove the new_destroy_flow check when the
     # ACCOUNT_DELETION_NEW_FLOW experiment is removed.
     if params[:new_destroy_flow]
+      return head :bad_request unless current_user.can_delete_own_account?
       password_required = current_user.encrypted_password.present?
       invalid_password = !current_user.valid_password?(params[:password_confirmation])
       if password_required && invalid_password
@@ -345,5 +356,18 @@ class RegistrationsController < Devise::RegistrationsController
         :email_preference_source,
         :email_preference_form_kind,
       )
+  end
+
+  def get_users_to_destroy(user)
+    users = []
+    if user.teacher?
+      user.students.each do |student|
+        if student.depends_on_teacher_for_login?
+          users << {id: student.id, name: student.name}
+        end
+      end
+    end
+    users << {id: user.id, name: user.name}
+    users
   end
 end

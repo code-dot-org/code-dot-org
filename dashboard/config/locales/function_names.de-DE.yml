@@ -23,9 +23,9 @@ de:
       draw head: draw head
       draw arms: draw arms
       jump to neck: jump to neck
-      draw O: draw O
-      draw D: draw D
-      draw E: draw E
+      draw O: O zeichnen
+      draw D: D zeichnen
+      draw E: E zeichnen
       draw ear stems: draw ear stems
       big gear: big gear
       small gear: small gear
@@ -33,9 +33,9 @@ de:
       draw a flower: zeichne eine Blume
       draw a square: zeichne ein Quadrat
       draw a snowflake: zeichne eine Schneeflocke
-      draw 3 hexagons: draw 3 hexagons
-      draw 4 hexagons: draw 4 hexagons
-      draw 5 hexagons: draw 5 hexagons
+      draw 3 hexagons: 3 Hexagone zeichnen
+      draw 4 hexagons: 4 Hexagone zeichnen
+      draw 5 hexagons: 5 Hexagone zeichnen
       get 2 nectar: get 2 nectar
       collect purple nectar: collect purple nectar
       get 5: get 5
@@ -49,7 +49,7 @@ de:
       draw triangle: draw triangle
       draw circle: draw circle
       draw goal: draw goal
-      graph: graph
+      graph: Graph
       draw waves: zeichne Wellen
       draw a wave: zeichne eine Welle
       draw a small triangle: zeichne ein kleines Dreieck
@@ -88,7 +88,7 @@ de:
       filter_pixel: filter_pixel
       draw_image: draw_image
       witch ending: witch ending
-      story: story
+      story: Handlung
       starting path: starting path
       jump: springen
       patrol: patrol
@@ -96,12 +96,12 @@ de:
       draw grid1: draw grid1
       draw lines: draw lines
       Draw a Square Line: Draw a Square Line
-      Draw a triangle: Draw a triangle
-      Draw a Cube: Draw a Cube
-      draw a cube: draw a cube
-      draw an octagon 20: draw an octagon 20
-      Draw a square: Draw a square
-      cube: cube
+      Draw a triangle: Zeichne ein Dreieck
+      Draw a Cube: Zeichne ein Würfel
+      draw a cube: zeichne ein Dreieck
+      draw an octagon 20: zeichne einen Oktagon 20
+      Draw a square: Zeichne ein Quader
+      cube: Würfel
       do something2: do something2
       jump upper right: jump upper right
       draw a line of  squares: draw a line of  squares
@@ -117,13 +117,13 @@ de:
       Draw a Triangle with length: Draw a Triangle with length
       draw a triangle wioth length: draw a triangle wioth length
       draw a sqaure: draw a sqaure
-      triangle: triangle
+      triangle: dreieck
       draw a spiral shape: draw a spiral shape
       get 3 nectar: get 3 nectar
       get many nectar: get many nectar
       get nectar make honey: get nectar make honey
-      draw an octagon: draw an octagon
-      draw octagons: draw octagons
+      draw an octagon: zeichne einen Oktagon
+      draw octagons: zeichne Oktagon
       shift down: shift down
       level_up: level_up
       score_points: score_points
@@ -138,7 +138,7 @@ de:
       patrol left right: patrol left right
       empty function: empty function
       check guess: check guess
-      Jump: Jump
+      Jump: Springen
       test: prüfe
       build bridge: build bridge
       run right: run right

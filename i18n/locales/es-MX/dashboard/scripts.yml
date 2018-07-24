@@ -1139,6 +1139,8 @@ es-MX:
               name: Video individual
             Curriculum Reference:
               name: Referencia del plan de estudios
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: 'Enseñar programación funcional a través de álgebra'
@@ -2042,7 +2044,7 @@ es-MX:
             'Unplugged: The Design Recipe':
               name: 'Desconectado: La receta de diseño'
         AlgebraB:
-          title: Ciencias de la computación en álgebra
+          title: 'Ciencias de la computación en álgebra'
           description: Aprender programación funcional a través del álgebra
           description_short: Aprender programación funcional a través del álgebra
           description_audience: ''
@@ -7554,7 +7556,7 @@ es-MX:
               description_student: ''
               description_teacher: Regresando a los ciclos, los estudiantes aprenden a dibujar imagenes ciclando secuencias simples de instrucciones. En la lección desconectada previa, los ciclos fueron usados para recorrer un laberinto y recoger tesoro. Aquí, los ciclos estan creando patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imagenes usando ciclos.
             'Events: The Big Event':
-              name: El gran evento
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo preescrito. A veces deseas que el programa responda al usuario exactamente cuando éste lo desea. Para esto son los eventos.
             Events in Play Lab:
@@ -7749,7 +7751,7 @@ es-MX:
             'Functions: Songwriting':
               name: Composicion musical con parámetros
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
               name: Funciones en Harvester
             Functions in Artist:
@@ -7842,7 +7844,7 @@ es-MX:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: El gran evento
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -8600,7 +8602,7 @@ es-MX:
               description_teacher: En esta lección, los alumnos consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Los grupos se asignan a un dispositivo informático y, según una definición de entrada y salida proporcionada por el maestro, enumeran las entradas y salidas de su dispositivo. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida) pero las discusiones posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o el hecho de que Internet puede servir como entrada y salida). A lo largo de la lección, el maestro registra las entradas y salidas que se identifican en un cuadro en el frente del salon. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan de la tabla las entradas y salidas utilizadas para esa actividad.
             Processing:
               name: Processing
-              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to puta deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
+              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to put a deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities to explore the meaning of processing and its relationship to problem-solving. The first activity has few constraints and is used to introduce a high-level definition of processing. The next introduces more constraints that force students to develop an algorithm that will always successfully process the cards. Students iteratively develop, test, and share their algorithms with classmates. A wrap-up discussion has students reflect on the different types of problem-solving they used in these activities and the value of producing an algorithm to solve a problem.
             Storage:
               name: Storage
@@ -9478,7 +9480,7 @@ es-MX:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: El gran evento
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9498,13 +9500,13 @@ es-MX:
             Programming in Ice Age:
               name: Programación en Ice Age
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
             Loops in Ice Age:
               name: Ciclos en Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie y el gran proyecto
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9525,3 +9527,23 @@ es-MX:
           description_audience: ''
           description_short: ''
           description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
+          description_audience: ''
+          description_short: ''
+          description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.

@@ -449,6 +449,10 @@ fil:
       4-5 While Loops 7_instruction: Wow, ngayon ay mayroong tatlong malaking mga tumpok ng dumi! Maaari ka bang magsulat ng programa na magtatanggal sa bawat isa nito hanggang sa mapatag ang lupa?
       4-5 While Loops 8_instruction: " Mayroong isang lubhang malalim na butas at isang malaking tumpok ng lupa. Ilang pala ng lupa ang kailangang ilipat para mapatag ang lupain?"
       4-5 While Loops Assessment 1_instruction: Mayroong napakaraming mga butas at tambak. Tulungan akong punan at magtanggal sa mga ito para mapatag ang lupain.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+        
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Ideya ng Proyekto: Gumawa ng isang tagapagtanggol na laro sa Play Lab!'
       Alien Defender_2018_instruction: 'Ideya ng Proyekto: Gumawa ng isang tagapagtanggol na laro sa Play Lab!'
@@ -522,6 +526,7 @@ fil:
       C3-Farmer While Loops 7_instruction: Wow, now there are three piles of dirt! Can you write a program that removes each of them until the ground is even?
       C3-Farmer While Loops 8_instruction: " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -556,6 +561,7 @@ fil:
       CSD U3 Simple Drawing - Background_instruction: Put all of your code into a draw() loop and then add set the background to blue with the background() block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: 'Predict: What two numbers will be displayed in the console?'
       CSD U3 Variable Arithmetic_instruction: Change the value "size" initialized to make a larger square.
@@ -2965,14 +2971,17 @@ fil:
       Underground Mining Coal_2018_instruction: Mahahanap mo ang dalawang napakahalagang mga kayamanan sa ilalim ng lupa, ngunit maaaring maging madilim ito. Maglagay ng hindi bababa sa 2 sulo at magmina ng hindi bababa sa 2 uling.
       Unicorn Tag_instruction: Take a look at this project.  Do you see how it was made?
       Valentine_artist2_01_instruction: I-program ang artist para gumuhit ng iilang mga damo para sa Love Bug.
-      Valentine_artist_01_instruction: 'Tulungan ang artist para tapusin ang kanyang puso ng liyama. '
+      Valentine_artist_01_instruction: Tulungan ang artist para tapusin ang kanyang puso ng liyama. 
       Valentine_playlab_01_instruction: 'I-program si Kiki (Aktor 1) para gumalaw pakaliwa at pakanan kapag ang kaliwa at kanang mga arrow ay napindot. Kapag si Kiki ay na-click. dapat siyang maghagis ng mga puso papunta sa kangyang mga kaibigan. '
       Vigenere_instruction: Test
       Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
@@ -3429,6 +3438,7 @@ fil:
       courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"May bug! Ayusin ang code para mapapunta ako sa baboy."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Magdagdag ng 2 mga bloke para mapapunta ang ibon sa baboy.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat to the acorn.
       courseB_maze_seq5_instruction: Ngayon ay subukan ang palaisipang ito mula sa simula!
@@ -4310,6 +4320,7 @@ fil:
       courseE_farmer_concept3_instruction: Punan ang butas sa dulo ng bawat isa sa mga landas na ito.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: Ngayon ay pupunta tayo nang mas malalim! Ating nai-nest ang buong bloke ng code sa isang loop, ngunit kailangan mong pabalikin ang artista sa lugar para maiguhit ang sunod na linya. Alin sa mga code na blokeng ito ang maaaring maglagay sa dulo ng pinakalabas na loop para maiguhit ang buong grid?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Tulungan ang magsasaka na makapunta sa kalabasa para pulotin ito.
       courseE_farmer_functions10_instruction: 'Walang nakakaalam kung ano ang magiging sa mga usbong na ito. Gamitin ang mga `if` na pahayag para magsulat ng code na magsusuri at mag-ani sa bawat isa.   '
       courseE_farmer_functions10a1_2018_instruction: Use everything that you've learned so far to solve this puzzle!

@@ -75,6 +75,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
   hasEverSignedIn: PropTypes.bool,
+  dependsOnThisSectionForLogin: PropTypes.bool,
   rowType: PropTypes.oneOf(Object.values(RowType)),
 });
 
@@ -253,7 +254,9 @@ class ManageStudentsTable extends Component {
         disableSaving={disableSaving}
         rowType={rowData.rowType}
         loginType={rowData.loginType}
+        studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
+        dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
       />
     );
   };

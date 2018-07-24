@@ -30,14 +30,14 @@ zh-TW:
         Jigsaw: 拼圖
         MazeStep: 迷宮 - 步進模式（Step Mode）
         Wordsearch: 字謎
-        Webapp: Webapp
+        Webapp: App Lab
         ArtistEC: 藝術家
         TextMatch: 文字相符
-        StudioEC: 播放實驗室
+        StudioEC: Play Lab
         Applab: App Lab
         NetSim: 網路模擬器
         Custom: 藝術家
-        CustomStudio: 播放實驗室
+        CustomStudio: Play Lab
         Gamelab: Game Lab
     trophy:
       name:
@@ -360,7 +360,7 @@ zh-TW:
         C4_function_parameters: 函式帶參數
         C4_conditionals: 條件判斷（Conditionals）
         C4_unplugged_algorithms: 演算法與七巧板
-        C4_unplugged_madlibs: 瘋狂字謎
+        C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: 信封裡的變數
         C4_unplugged_forloops: 計數迴圈（For Loops）
         C4_unplugged_parameters: 用參數寫歌
@@ -393,7 +393,7 @@ zh-TW:
         infinity_playlab_events: Play Lab - 事件（Evnets）
         infinity_playlab_repeat_forever: Play Lab - 重複無限次
         csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
         csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
@@ -550,6 +550,10 @@ zh-TW:
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
         csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

@@ -541,7 +541,7 @@ pt-BR:
         text: 'Alguns exemplos de eventos são: ouvir o clique de mouse, pressionar
           uma tecla de direção ou tocar a tela.'
       3:
-        image: notes/playlab_events_2.png
+        image: notes/playlab_events_3.png
         text: Agora, vamos fazer o robô espacial cumprimentar os terráqueos quando
           um jogador clicar nele. Nós usaremos o bloco "quando clicado" e conectaremos
           o bloco "diga" a ele. Quando o jogador clicar no robô espacial, tudo que
@@ -1707,12 +1707,12 @@ pt-BR:
           avançar cinco vezes para chegar ao saboroso girassol.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Até agora, você fez animações ou histórias que fazem exatamente as mesmas
           coisas quando você as executa. Agora, você pode fazer um jogo interativo
           e jogá-lo de verdade.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Existem alguns novos blocos para experimentar. Há os blocos "quando
           a seta estiver pressionada" e "mova o personagem". Você pode juntar esses
           blocos para mover os personagens com as setas do teclado. E há alguns blocos
@@ -3326,11 +3326,12 @@ pt-BR:
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
-        text: My name is Mei'lani. I'm an intern at code.org and I'm also a computer
-          science student. I like computer science because it's really creative. I
-          get to be the problem solver. I get to make everything function how I want
-          it to. But I also get to be the designer. I get to be the artist and choose
-          everything on the creative side of it.
+        text: Meu nome é Mei'lani. Eu faço estágio no code.org e também sou estudante
+          de ciência da computação. Eu gosto de ciência da computação porque é muito
+          criativo. Eu posso ser a solucionadora de problemas. Eu posso fazer tudo
+          funcionar da maneira como eu quero. Mas eu também posso ser a designer.
+          Eu posso ser a artista e escolher tudo no âmbito criativo da ciência da
+          computação.
       2:
         image: notes/applab_intro_welcome_2.png
         text: Making your own apps is easy with App Lab! Whether you're new to coding

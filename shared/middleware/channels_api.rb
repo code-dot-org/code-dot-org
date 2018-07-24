@@ -200,6 +200,40 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # POST /v3/channels/<channel-id>/disable_content_moderation
+  #
+  # Disables automatic content moderation.
+  #
+  post %r{/v3/channels/([^/]+)/disable-content-moderation} do |channel_id|
+    not_authorized unless project_validator?
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(storage_id('user')).set_content_moderation(channel_id, true)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {skip_content_moderation: value}.to_json
+  end
+
+  #
+  # POST /v3/channels/<channel-id>/enable_content_moderation
+  #
+  # Enables automatic content moderation.
+  #
+  post %r{/v3/channels/([^/]+)/enable-content-moderation} do |channel_id|
+    not_authorized unless project_validator?
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(storage_id('user')).set_content_moderation(channel_id, false)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {skip_content_moderation: value}.to_json
+  end
+
+  #
   # GET /v3/channels/<channel-id>/privacy-profanity
   #
   # Get an indication of privacy/profanity violation.
@@ -269,7 +303,7 @@ class ChannelsApi < Sinatra::Base
   #
   delete %r{/v3/channels/([^/]+)/abuse$} do |id|
     # UserPermission::PROJECT_VALIDATOR
-    not_authorized unless has_permission?('project_validator')
+    not_authorized unless project_validator?
 
     dont_cache
     content_type :json
@@ -282,5 +316,10 @@ class ChannelsApi < Sinatra::Base
   end
   post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
+  end
+
+  # This method is included here so that it can be stubbed in tests.
+  def project_validator?
+    has_permission?("project_validator")
   end
 end

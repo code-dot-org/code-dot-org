@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import i18n from '@cdo/locale';
@@ -6,6 +7,8 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import styleConstants from "@cdo/apps/styleConstants";
+import color from "@cdo/apps/util/color";
+import {setQuestionIndex} from "./sectionAssessmentsRedux";
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -33,6 +36,9 @@ const styles = {
     padding: 0,
     height: 40,
   },
+  link: {
+    color: color.teal,
+  }
 };
 
 const NOT_ANSWERED = 'notAnswered';
@@ -57,12 +63,6 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   );
 };
 
-const questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
-  return (
-    <div>{`${rowData.questionNumber}. ${question}`}</div>
-  );
-};
-
 const answerDataPropType = PropTypes.shape({
   multipleChoiceOption: PropTypes.string,
   percentAnswered: PropTypes.number,
@@ -83,6 +83,8 @@ export const multipleChoiceSurveyDataPropType = PropTypes.shape({
 class MultipleChoiceSurveyOverviewTable extends Component {
   static propTypes= {
     multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceSurveyDataPropType),
+    openDialog: PropTypes.func.isRequired,
+    setQuestionIndex: PropTypes.func.isRequired,
   };
 
   state = {
@@ -109,6 +111,21 @@ class MultipleChoiceSurveyOverviewTable extends Component {
         selectedColumn
       })
     });
+  };
+
+  selectQuestion = (index) => {
+    this.props.setQuestionIndex(index);
+    this.props.openDialog();
+  };
+
+  questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
+    return (
+      <div>
+        <a style={styles.link} onClick={()=>this.selectQuestion(rowData.questionNumber - 1)}>
+          {`${rowData.questionNumber}. ${question}`}
+        </a>
+      </div>
+    );
   };
 
   getNotAnsweredColumn = () => (
@@ -167,7 +184,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
-        format: questionFormatter,
+        format: this.questionFormatter,
         props: {
           style: {
             ...tableLayoutStyles.cell,
@@ -221,4 +238,10 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   }
 }
 
-export default MultipleChoiceSurveyOverviewTable;
+export const UnconnectedMultipleChoiceSurveyOverviewTable = MultipleChoiceSurveyOverviewTable;
+
+export default connect(state => ({}), dispatch => ({
+  setQuestionIndex(questionIndex) {
+    dispatch(setQuestionIndex(questionIndex));
+  },
+}))(MultipleChoiceSurveyOverviewTable);

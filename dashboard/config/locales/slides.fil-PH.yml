@@ -1883,12 +1883,12 @@ fil:
           masarap na mirasol.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Hanggang sa panahong ito, bumuo ka lang ng mga animasyon o mga kuwento
           na gumagawa ng parehong bagay bawat oras na patakbuhin mo ito. Ngayon, maaari
           ka nang lumikha ng isang inter-aktib na laro na talagang mapaglaruan mo.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: May mga ilang bagong mga bloke na dapat mong subukan. Mayroon ang "when
           arrow" na bloke at ang "move actor" na bloke. Maaari mong ilagay ang mga
           blokeng ito nang sabay-sabay para mapagalaw ang mga artista sa paligid gamit
