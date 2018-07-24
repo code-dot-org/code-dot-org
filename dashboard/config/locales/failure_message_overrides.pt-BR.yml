@@ -50,8 +50,8 @@ pt-BR:
       Code Studio Puzzle Challenge Var - Artist_failure_message_override: |-
         Boa tentativa!
         Tente novamente para acertar.
-      Course 4 Artist Vars 10_failure_message_override: Certifique-se de que está
-        a utilizar a variável de lados!
+      Course 4 Artist Vars 10_failure_message_override: Certifique-se que você está
+        usado a variável de lados!
       Course 4 Playlab For Loops 4b_failure_message_override: Lembre-se, ambos os
         personagens deverão chegar às bandeiras com o mesmo número de movimentos!
       Course 4 Playlab For Loops 5b_failure_message_override: Lembre-se, ambos os
@@ -69,13 +69,11 @@ pt-BR:
         virem-se aleatoriamente para a esquerda ou para a direita.
       MC HOC 2016 Level 5_failure_message_override: Experimente utilizar 'Fazer para
         sempre' com 'Mover um passo em direção ao jogador'.
-      MC HOC 2016 Level 6_failure_message_override: Utilize o comando 'criar zombi'
-        por baixo de 'quando à noite' para criar pelo menos três zumbis. Em seguida,
-        adicione 'Mover um passo em direção ao jogador' ao evento 'quando criados'
-        deles com ciclos para ajudá-los a persegui-lo. Se eles forem muito rápidos,
-        adicione um comando 'esperar' para abrandá-los.
-      MC HOC 2016 Level 8_failure_message_override: Você necessita utilizar o Creeper
-        a explodir para rebentar a parede, para que consiga alcançar as suas ovelhas.
+      MC HOC 2016 Level 6_failure_message_override: |-
+        Use o comando "invocar zumbi", abaixo de "quando for noite", para invocar ao menos três zumbis.
+        Em seguida, adicione com um loop o evento "andar um passo em direção ao jogador" no evento "quando invocado" de cada zumbi para ajudá-los a persegui-lo. Se eles estiverem muito rápidos, adicione um comando "aguardar" para deixá-los mais lentos.
+      MC HOC 2016 Level 8_failure_message_override: Você precisa usar o Creeper explosivo
+        para explodir a parede para que então você possa alcançar a ovelha.
       MC HOC 2016 New Drop_failure_message_override: Utilize as teclas das setas para
         andar até as ovelhas e pressione a barra de espaço ou clique no tabuleiro
         do jogo para usar as ovelhas. E não se esqueça de adicionar o bloco 'Largar'

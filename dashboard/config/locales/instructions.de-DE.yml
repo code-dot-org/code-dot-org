@@ -904,6 +904,10 @@ de:
       4-5 While Loops Assessment 1_instruction: Hier sind viele Löcher und Erdhaufen.  Hilf
         mir, die Löcher zu füllen und die Haufen zu entfernen und den Boden wieder
         zu ebnen.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Projekt Idee: Macht ein Verteidigungsspiel in Play
         Lab!'
@@ -1124,6 +1128,7 @@ de:
         make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and
         piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -7718,6 +7723,7 @@ de:
         das Schwein bekomme."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the
         acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat
         to the acorn.
@@ -9345,6 +9351,8 @@ de:
         aber du musst den Künstler wieder zurückholen, damit er die nächste Zeile
         zeichnet. Welchen dieser Code- Bausteine kannst du am Schluss der äußeren
         Schleife einfügen, damit das ganze Gitternetz gezeichnet wird?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each
+        of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will

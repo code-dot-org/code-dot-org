@@ -36,14 +36,14 @@ th:
       draw 4 hexagons: วาดรูปหกเหลี่ยม 4 รูป
       draw 5 hexagons: วาดรูปหกเหลี่ยม 5 รูป
       get 2 nectar: เก็บน้ำหวาน 2 ครั้ง
-      collect purple nectar: collect purple nectar
-      get 5: เก็บ 5
+      collect purple nectar: เก็บนำหวานจากเกสรสีม่วง
+      get 5: เก็บ 5 ครั้ง
       move and get nectar: บินไปและเก็บน้ำหวาน
-      move and get 4: บินไปและเก็บน้ำหวาน 4 ครั้ง
-      get 7 nectar make 7 honey: เก็บน้ำหวาน 7 ครั้งทำน้ำผึ้ง 7 ครั้ง
+      move and get 4: บินไปและเก็บ 4 ครั้ง
+      get 7 nectar make 7 honey: เก็บน้ำหวาน 7 ครั้ง ทำน้ำผึ้ง 7 ครั้ง
       get 7 make 7: เก็บ 7 ทำ 7
-      get 7: เก็บ 7
-      move and get 3: บินไปและเก็บ 3
+      get 7: เก็บ 7 ครั้ง
+      move and get 3: บินไปและเก็บ 3 ครั้ง
       draw a tree: วาดรูปต้นไม้
       draw triangle: draw triangle
       draw circle: draw circle
@@ -212,7 +212,7 @@ th:
       move and check: move and check
       win game: win game
       lose game: lose game
-      keep playing: keep playing
+      keep playing: เล่นอีกที
       Ask a question: Ask a question
       draw pinwheel: draw pinwheel
       draw background: draw background

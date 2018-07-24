@@ -14,7 +14,7 @@ sk:
         2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how tall the hat needs to be!
         2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: Pre dokončenie domu stačí, aby ste nakreslili štvorec!
       2-3 Artist 6_authored_hint:
         2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
         2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
@@ -24,23 +24,23 @@ sk:
       2-3 Artist 8_authored_hint:
         2-3_Artist_8_a: If you cut 200 in half, how many pixels wide does each square need to be?
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: Tento diamand je vlastne len štvorec položený na strane
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: Každý krok je 100 pixelov široký a 100 pixelov vysoký.
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
+        2-3_Artist_9_a: Tento diamand je vlastne len štvorec otočený o 45 stupňov.
         2-3_Artist_9_b: |-
-          Don't forget to turn the artist left by 45 degrees before you start drawing your square!
+          Nezabudnite otočiť umelca o 45 stupňov doľava predtým, než začnete kresliť Váš štvorec!
           
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Remember, you want the control panel 10 pixels *wider*...so be sure to **add** 10 to whatever number you change.
         2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you get too lost, just click \"Start over\" and your code will be reset."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Nápoveda: Každý fúz je 75 pixelov dlhý.'
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
-        2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening, try slowing it down with the slider.
+        2-3_Artist_Debugging_3_a: Každá z otočiek je o 15 stupňov primalá.
+        2-3_Artist_Debugging_3_b: Ak program bude prirýchly na to, aby ste videli, čo sa deje, skúste ho spomaliť posunutím ovládača smerom nadol.
       2-3 Artist Debugging 7_authored_hint:
         2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
       2-3 Artist Debugging 8_authored_hint:
@@ -64,9 +64,9 @@ sk:
       2-3 Artist Functions 11_authored_hint:
         2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
       2-3 Artist Functions 12 a_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: Skúste najprv spustiť kód, aby ste videli, čo treba pridať.
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: Skúste najprv spustiť kód, aby ste videli, čo treba pridať.
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Your program should:
@@ -145,17 +145,17 @@ sk:
       2-3 Artist Nested Loops 1_authored_hint:
         2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_a: "Potrebujete pomôcť s uhlami?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_b: Nezabudnite dať všetok šedý kód a Váš blok s otočkami dovnútra slučky.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "Potrebujete pomôcť s uhlami?  \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?"
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: "Ako veľmi by ste sa mali otočiť pri každom behu programu?  \n\nKoľko je 360/10?"
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+          Potrebujete pomoc s nájdením správneho uhlu?
           
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
@@ -212,7 +212,7 @@ sk:
         2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
         2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
       2-3 Maze 6_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       2-3 Maze Loops 17_authored_hint:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
@@ -311,7 +311,7 @@ sk:
           
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
-        4-5_While_Loops_8_a: Each item will need its own `while` loop.
+        4-5_While_Loops_8_a: Každý predmet potrebuje vlastnú slučku "while".
       AB_debug_Laurel1_authored_hint: { }
       AppLab Intro 3 - Change Screen Color_authored_hint: { }
       AppLab Intro 4 - Change Screen Color_authored_hint: { }
@@ -320,7 +320,7 @@ sk:
       AppLab Intro 7 - Change Screen Color_authored_hint: { }
       Artist Inspiration_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
+        double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
         specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
         after: When you're done with each "petal", be sure to `move forward` 20 pixels before you make a 60 degree rotation.
         solution: |-
@@ -425,7 +425,7 @@ sk:
         Course_4_Artist_For_Loops_Challenge_a: The largest shape has 19 sides. The smallest has just two.
         Course_4_Artist_For_Loops_Challenge_b: The `for` loop counts up by two each time through.
       Course 4 Artist For Loops Challenge_a_authored_hint:
-        Course_4_Artist_For_Loops_Challenge_a: The largest polygon has 19 sides.
+        Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
         Course_4_Artist_For_Loops_Challenge_b: Each polygon is incomplete, with one side fewer than it should have.
       Course 4 Artist For Loops inspire_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.
@@ -3530,7 +3530,7 @@ sk:
         pointer_harvester_test: What kind of block can I use to check something and make a decision?
       Inspirational Artwork_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
+        double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
         specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
         after: When you're done with each "petal", be sure to `move forward` 20 pixels before you make a 60 degree rotation.
         solution: |-
@@ -3673,7 +3673,7 @@ sk:
         NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times to figure out how the function works with different parameters.
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
+        double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
         specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
         after: When you're done with each "petal", be sure to `move forward` 20 pixels before you make a 60 degree rotation.
         solution: |-
@@ -6672,7 +6672,7 @@ sk:
         courseB_maze_seq7_c: Can't get to the acorn?  Try this path!
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
-        courseB_maze_seq8_b: There are two ways to solve this puzzle!
+        courseB_maze_seq8_b: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq8_2018_authored_hint:
         courseB_maze_seq8_a: Try adding one block at a time until you solve the puzzle.
@@ -8177,12 +8177,12 @@ sk:
         courseC_maze_programming5_b: The bird will need to make one turn to complete this puzzle. Can you figure out which way?
         courseC_maze_programming5_c: The solution will have two `move forward` blocks, a turn, and two more `move forward` blocks.
       courseC_maze_programming6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Follow your finger from the bird to the pig, which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird starts facing a wall.
         courseC_maze_programming6_d: Feel stuck?  Look at this path!
       courseC_maze_programming6_2018_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Follow your finger from the bird to the pig, which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird starts facing a wall.
         courseC_maze_programming6_d: Feel stuck?  Look at this path!
@@ -10019,7 +10019,7 @@ sk:
       courseD_maze_ramp5d_authored_hint: { }
       courseD_maze_ramp5d_2018_authored_hint: { }
       courseD_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to turn before you move.
         courseC_maze_programming6_c: Remember you can write one piece of the code at a time, then run it to figure out where you need to go from there.
       courseD_maze_ramp6a_authored_hint:
@@ -10207,11 +10207,11 @@ sk:
       courseD_scrat_ramp6_2018_authored_hint:
         courseC_maze_programming6a_a: Use a `repeat` loop to get Scrat moving!
       courseD_scrat_ramp7_authored_hint:
-        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseD_scrat_programming6_b: Remember to turn first before moving, since Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseD_scrat_ramp7_2018_authored_hint:
-        courseD_scrat_programming6_a: There are two ways to solve this puzzle!
+        courseD_scrat_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseD_scrat_programming6_b: Remember to turn first before moving, since Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseD_scrat_ramp8_authored_hint:
@@ -10710,6 +10710,10 @@ sk:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Be careful to pull out the full block of "code from the toolbar each time you try a new one.
         4-5_Artist_Patterns_3_b: If your code becomes too confusing, you can always click "Start Over" and try again!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached the end of a path?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your code multiple times for each straight path.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
@@ -10950,11 +10954,11 @@ sk:
         courseC_maze_programming5_b: How far do you need to move to get to the corner?
         courseC_maze_programming5_c: You will need to turn left at the corner to get to the pig.
       courseE_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Remember to turn first before moving, since the bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseE_maze_ramp6_2018_authored_hint:
-        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+        courseC_maze_programming6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseC_maze_programming6_b: Remember to turn first before moving, since the bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseE_maze_ramp7_authored_hint:
@@ -14110,11 +14114,11 @@ sk:
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
         courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml> loop for shorter code!
       courseF_maze_ramp6_authored_hint:
-        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseF_maze_ramp6_2018_authored_hint:
-        courseF_maze_ramp6_a: There are two ways to solve this puzzle!
+        courseF_maze_ramp6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before moving!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseF_maze_ramp7_authored_hint:
@@ -14609,7 +14613,7 @@ sk:
         hint3: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
       grade2_CaringForNewPet_3D_authored_hint: { }
       grade2_CaringForNewPet_4_authored_hint:
-        2-3_Maze_6_a: There are two ways to solve this puzzle!
+        2-3_Maze_6_a: Sú dve možnosti, ako vyriešiť túto úlohu!
       grade2_CaringForNewPet_5_authored_hint:
         grade2_CaringForNewPet_5_a: If you can't quite see what you need to do, try saying the steps that your bird will take out loud one-by-one and see if they match the blocks in the workspace.
       grade2_CaringForNewPet_6_authored_hint:
@@ -14660,7 +14664,7 @@ sk:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Nápoveda: Každý fúz je 75 pixelov dlhý.'
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
       grade2_collector_2_authored_hint:
@@ -15066,7 +15070,7 @@ sk:
           
           ![](https://images.code.org/585d2e24f3021ac2561aec6e96dde430-image-1475906135993.54.11.png)
       grade5_artist_for_loops10_authored_hint:
-        Course_4_Artist_For_Loops_Challenge_a: The largest polygon has 19 sides.
+        Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
         Course_4_Artist_For_Loops_Challenge_b: Each polygon is incomplete, with one side fewer than it should have.
       grade5_artist_for_loops1b_authored_hint:
         grade5_artist_for_loops1b_a: |-
@@ -15111,7 +15115,7 @@ sk:
           ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
       grade5_artist_functionparameters10_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
+        double_loop: Skúste vložiť slučku "for" dovnútra slučky "opakovať".
         specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
         after: When you're done with each "petal", be sure to `move forward` 20 pixels before you make a 60 degree rotation.
         solution: |-
