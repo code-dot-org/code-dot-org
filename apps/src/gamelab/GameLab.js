@@ -65,7 +65,7 @@ var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 // Number of ticks after which to capture a thumbnail image of the play space.
 const CAPTURE_TICK_COUNT = 250;
 
-const validationLibraryName = 'ValidationSetupCode.interpreted.js';
+const validationLibraryName = 'ValidationSetup';
 
 var ButtonState = {
   UP: 0,
