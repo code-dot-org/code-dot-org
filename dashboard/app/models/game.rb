@@ -284,16 +284,9 @@ class Game < ActiveRecord::Base
   )
 
   def self.setup
-    games_by_index, intro_video_keys = GAMES_BY_INDEX.inject([[], []]) do |memo, line|
-      games_by_index, intro_video_keys = memo
+    videos_by_key = Video.all.index_by(&:key)
+    games = GAMES_BY_INDEX.map.with_index(1) do |line, id|
       name, app, intro_video_key = line.split ':'
-      games_by_index << [name, app, intro_video_key]
-      intro_video_keys << intro_video_key unless intro_video_key.nil?
-      [games_by_index, intro_video_keys]
-    end
-    videos_by_key = Video.where(key: intro_video_keys).index_by(&:key)
-    games = games_by_index.map.with_index(1) do |game, id|
-      name, app, intro_video_key = game
       {id: id, name: name, app: app, intro_video_id: videos_by_key[intro_video_key]&.id}
     end
     transaction do
