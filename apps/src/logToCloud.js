@@ -1,7 +1,7 @@
-var utils = require('./utils');
+import { makeEnum } from './utils';
 import experiments from './util/experiments';
 
-var PageAction = utils.makeEnum(
+const PageAction = makeEnum(
   'DropletTransitionError',
   'FirebaseRateLimitExceeded',
   'SanitizedLevelHtml',
@@ -13,13 +13,13 @@ var PageAction = utils.makeEnum(
   'BrambleError'
 );
 
-var MAX_FIELD_LENGTH = 4095;
+const MAX_FIELD_LENGTH = 4095;
 const REPORT_PAGE_SIZE = experiments.isEnabled('logPageSize') ||
   Math.random() < 0.01;
 
 /**
- * Shims window.newrelic, which is only included in production. This causes us
- * to no-op in other environments.
+ * Wraps and adds functionality to window.newrelic, which is only included in
+ * production. This causes us to no-op in other environments.
  */
 module.exports = {
   PageAction: PageAction,
@@ -112,8 +112,6 @@ module.exports = {
           jsDownloadSize += resource.transferSize;
         }
       }
-      console.log(`Total Size transferred: ${totalDownloadSize}`);
-      console.log(`JS Size transferred: ${jsDownloadSize}`);
       if (!window.newrelic) {
         return;
       }
