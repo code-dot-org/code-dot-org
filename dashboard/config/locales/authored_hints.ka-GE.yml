@@ -62,7 +62,7 @@ ka:
         2-3_Artist_Debugging_3_a: მობრუნებებიდან ერთ-ერთი 15 გრადუსით უფრო პატარაა,
           ვიდრე საჭიროა.
         2-3_Artist_Debugging_3_b: თუ პროგრამა ზედმეტად სწრაფად გაიშვა იმისათვის, რომ
-          შეამჩნიოთ, რა მოხდა, სცადეთ მისი შენელება სლაიდერის საშუალებით.
+          შეამჩნიოთ, რა მოხდა, სცადეთ მისი შენელება ცოციის საშუალებით.
       2-3 Artist Debugging 7_authored_hint:
         2-3_Artist_Debugging_7_a: რა მოხთება, თუ პირველი ხაზის დახატვის შემდეგ, მხატვარს
           უკან გადაადგილებთ ან გადაახტუნებთ?
@@ -4531,12 +4531,12 @@ ka:
         artistLoopsK5_a: ამ თავსატეხის ამოსახსნელად 4-ივე საწყისი ბლოკი უნდა მოთავსდეს
           გამეორების ბლოკში.
       artistLoopsK6_authored_hint:
-        artistLoopsK6_a: სცადეთ კოდის გაშვება ბაგის საპოვნელად.
+        artistLoopsK6_a: სცადეთ კოდის გაშვება შეცდომის საპოვნელად.
       artistLoopsK7_authored_hint:
         artistLoopsK7_a: ამ თავსატეხში საჭირო ყველა ბლოკი უკვე განთავსებულია სამუშაო
           სივრცეში!
       artistLoopsK8_authored_hint:
-        artistLoopsK8_a: სცადეთ კოდის გაშვება ბაგის საპოვნელად.
+        artistLoopsK8_a: სცადეთ კოდის გაშვება შეცდომის საპოვნელად.
       artistLoopsK9_authored_hint:
         artistLoopsK9_a: ამ გამოწვევაში მიმდევრულად გამოიყენება ოთხი ციკლი!
       artistLoopsKA_authored_hint:
@@ -4559,7 +4559,7 @@ ka:
 
           ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
 
-          შექმენით თქვენი საკუთარი ან დააკლიკეთ აქ ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) იდეების მისაღებად!
+          შექმენით თქვენი საკუთარი ან დააწკაპუნეთ აქ ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) იდეების მისაღებად!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
@@ -4614,7 +4614,7 @@ ka:
             <block type="maze_moveEast"/><next>
             <block type="maze_moveEast"/></next>
             </xml>
-          ამის გაკეთება მხოლოდ 14 ბლოკის საშუალებით შეგიძლიათ. დააკლიკეთ კიდევ ერთი რჩევის სანახავად.
+          ამის გაკეთება მხოლოდ 14 ბლოკის საშუალებით შეგიძლიათ. დააწკაპუნეთ კიდევ ერთი რჩევის სანახავად.
         courseB_collector_loops_challenge1_d: |-
           სცადეთ ეს!
           <xml>
@@ -6181,7 +6181,7 @@ ka:
           გადაადგილება, შემდეგ კი ქვემოთ.'
         courseA_collector_loops5_c: თქვენ მოგიწევთ <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> ციკლით დაწყება, რომელიც
-          გადაადგილებს ლაურიელს დასავლეთისკენ და აგროვებს განძს.
+          გადაადგილებს ლორელს დასავლეთისკენ და აგროვებს განძს.
       courseA_collector_loops5_2018_authored_hint:
         courseA_collector_loops5_a: If you can't figure out the answer right away,
           try using a piece of paper to figure out what arrows you will need and look
@@ -6190,7 +6190,7 @@ ka:
           გადაადგილება, შემდეგ კი ქვემოთ.'
         courseA_collector_loops5_c: თქვენ მოგიწევთ <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> ციკლით დაწყება, რომელიც
-          გადაადგილებს ლაურიელს დასავლეთისკენ და აგროვებს განძს.
+          გადაადგილებს ლორელს დასავლეთისკენ და აგროვებს განძს.
       courseA_collector_loops6_authored_hint:
         courseA_collector_loops6_a: Can't figure out what's wrong? Try running the
           code a couple of times to see what happens.
@@ -8189,7 +8189,7 @@ ka:
       courseB_scrat_forVideo_authored_hint: {}
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: სცადეთ თითო ჯერზე თითო ბლოკი დაამატოთ, შემდეგ, იმის
-          სანახავად თუ რა მოხდება, დააკლიკეთ "გაშვებას".
+          სანახავად თუ რა მოხდება, დააწკაპუნეთ "გაშვებას".
         courseB_starWars_prog1_b: |
           ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ აღმოსავლეთით გადაადგილება. რა სიშორეზე უნდა გადაადგილდეთ?
           <xml><block type="studio_moveEast"/></xml>
@@ -8199,7 +8199,7 @@ ka:
       courseB_starWars_prog11_2018_authored_hint: {}
       courseB_starWars_prog1_2018_authored_hint:
         courseB_starWars_prog1_a: სცადეთ თითო ჯერზე თითო ბლოკი დაამატოთ, შემდეგ, იმის
-          სანახავად თუ რა მოხდება, დააკლიკეთ "გაშვებას".
+          სანახავად თუ რა მოხდება, დააწკაპუნეთ "გაშვებას".
         courseB_starWars_prog1_b: |
           ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ აღმოსავლეთით გადაადგილება. რა სიშორეზე უნდა გადაადგილდეთ?
           <xml><block type="studio_moveEast"/></xml>
@@ -11158,18 +11158,18 @@ ka:
 
           რას გეუბნებათ თქვენ ეს?
       courseD_collector_debugging3_authored_hint:
-        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლაურიელი უაზრო
+        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლორელი უაზრო
           რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?
         courseD_collector_debugging3_b: Try simplifying the code using nested loops.
       courseD_collector_debugging3_2018_authored_hint:
-        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლაურიელი უაზრო
+        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლორელი უაზრო
           რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?
         courseD_collector_debugging3_b: Try simplifying the code using nested loops.
       courseD_collector_debugging3a_authored_hint:
-        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლაურიელი უაზრო
+        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლორელი უაზრო
           რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?
       courseD_collector_debugging3a_2018_authored_hint:
-        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლაურიელი უაზრო
+        courseD_collector_debugging3_a: არის თუ არა რამე ადგილი სადაც ლორელი უაზრო
           რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?
       courseD_collector_debugging4_authored_hint:
         courseD_collector_debugging4_a: "Try using the debugging process a couple
@@ -11610,7 +11610,7 @@ ka:
         courseD_collector_ramp8_b: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
           ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
       courseD_collector_ramp9_authored_hint:
-        courseD_collector_ramp9_a: დაიწყეთ ლაურიელის პირველ განძთან მიყვანით და განძის
+        courseD_collector_ramp9_a: დაიწყეთ ლორელის პირველ განძთან მიყვანით და განძის
           შეგროვებით. შეგიძლიათ გაიმეოროთ ეს მიმდევრობა მეორე გროვის ასაღებად?
         courseD_collector_ramp9_b: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ
           ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
@@ -13349,9 +13349,16 @@ ka:
           სრული ბლოკის გამოწევას ცდილობთ.
         4-5_Artist_Patterns_3_b: თუ თქვენი კოდი ზედმეტად გაუგებარი გახდება, ყოველთვის
           შეგიძლიათ დაიწყოთ თავიდან და კიდევ სცადოთ!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets
+          you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: რა უნდა გააკეთოთ, როდესაც მიაღწევთ
+          გზის ბოლოს?
+        grade3_robotFarmer_ConditionalsIntro_8_c: გამოიყენეთ `გამეორების` ციკლი, რათა
+          გაუშვათ თქვენი კოდი რამდენჯერმე ყოველი სწორი გზისთვის.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა
-          ორგანიზებული. დააკლიკეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები
+          ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები
           გაქვთ.
         courseE_farmer_functions1_b: თქვენ გჭირდებათ მხოლოდ ერთი გოგრის შეგროვება,
           მაგრამ იქნება შეგეძლოთ გოგრამდე მისასვლელად ციკლის გამოყენება?
@@ -13372,7 +13379,7 @@ ka:
       courseE_farmer_functions13_2018_authored_hint: {}
       courseE_farmer_functions1_2018_authored_hint:
         courseE_farmer_functions1_a: ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა
-          ორგანიზებული. დააკლიკეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები
+          ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები
           გაქვთ.
         courseE_farmer_functions1_b: თქვენ გჭირდებათ მხოლოდ ერთი გოგრის შეგროვება,
           მაგრამ იქნება შეგეძლოთ გოგრამდე მისასვლელად ციკლის გამოყენება?
@@ -16280,12 +16287,12 @@ ka:
       courseF_bee_functions2_authored_hint:
         courseF_bee_functions2_a: The function has been written for you, but you will
           need to call it at each flower.
-        courseF_bee_functions2_b: დააკლიკეთ ლურჯ რედაქტირების ღილაკს `შეაგროვე მხოლოდ
+        courseF_bee_functions2_b: დააწკაპუნეთ ლურჯ რედაქტირების ღილაკს `შეაგროვე მხოლოდ
           ნექტარი` ფუნქციაზე, რათა ნახოთ თუ რას აკეთებს ის.
       courseF_bee_functions2_2018_authored_hint:
         courseF_bee_functions2_a: The function has been written for you, but you will
           need to call it at each flower.
-        courseF_bee_functions2_b: დააკლიკეთ ლურჯ რედაქტირების ღილაკს `შეაგროვე მხოლოდ
+        courseF_bee_functions2_b: დააწკაპუნეთ ლურჯ რედაქტირების ღილაკს `შეაგროვე მხოლოდ
           ნექტარი` ფუნქციაზე, რათა ნახოთ თუ რას აკეთებს ის.
       courseF_bee_functions3_authored_hint:
         courseF_bee_functions3_a: 'თქვენმა ფუნქციამ ამ თავსატეხში უნდა გააკეთოს მხოლოდ
@@ -17448,7 +17455,7 @@ ka:
       courseF_maze_predict1_authored_hint: {}
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: თუ ჩიტი ვერ აღწევს გოჭამდე, დარწმუნდით, რომ ყველა ბლოკი
-          სრულადაა დაკავშირებული ერთმანეთთან, შემდეგ კი ისევ დააკლიკეთ "გაშვებას".
+          სრულადაა დაკავშირებული ერთმანეთთან, შემდეგ კი ისევ დააწკაპუნეთ "გაშვებას".
         courseF_maze_ramp1_b: აქ არ გჭირდებათ დამატებითი ბლოკები ინსტრუმენტების პანელიდან!
       courseF_maze_ramp13_authored_hint:
         courseF_maze_ramp13_b: Don't forget to use the "Step" button to go through
@@ -17468,7 +17475,7 @@ ka:
           ერთი ბლოკი ან კოდის რაღაც ნაწილი.
       courseF_maze_ramp1_2018_authored_hint:
         courseF_maze_ramp1_a: თუ ჩიტი ვერ აღწევს გოჭამდე, დარწმუნდით, რომ ყველა ბლოკი
-          სრულადაა დაკავშირებული ერთმანეთთან, შემდეგ კი ისევ დააკლიკეთ "გაშვებას".
+          სრულადაა დაკავშირებული ერთმანეთთან, შემდეგ კი ისევ დააწკაპუნეთ "გაშვებას".
         courseF_maze_ramp1_b: აქ არ გჭირდებათ დამატებითი ბლოკები ინსტრუმენტების პანელიდან!
       courseF_maze_ramp2_authored_hint:
         courseF_maze_ramp2_a: ახალი ბლოკის გამოსაყენებლად გადმოათრიეთ ის ინსტრუმენტების

@@ -975,55 +975,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_script, response["script"]
   end
 
-  test "should get user_hero for teacher" do
-    sign_in @teacher
-    get :user_hero
-
-    assert_select '#welcome.teacher'
-    assert_select '.teacherdashboard'
-  end
-
-  test "should get user_hero for student with script" do
-    user_script = create(:user_script, script: Script.get_from_cache(Script::FLAPPY_NAME))
-    sign_in user_script.user
-
-    get :user_hero
-
-    assert_select '#welcome.student'
-    assert_select '#currentprogress', true, "Response was: #{@response.body}"
-  end
-
-  test "should get user_hero for student with no script" do
-    sign_in @student_1
-    get :user_hero
-
-    assert_select '#welcome.student'
-    assert_select '#suggestcourse', I18n.t('home.no_primary_course')
-  end
-
-  test "should get user_hero for student who completed all scripts" do
-    student = create :student
-    sign_in student
-    advertised_scripts = [
-      Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
-      Script.flappy_script, Script.playlab_script, Script.artist_script,
-      Script.course1_script, Script.course2_script, Script.course3_script,
-      Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
-      Script.starwars_blocks_script, Script.minecraft_script
-    ]
-    advertised_scripts.each do |script|
-      UserScript.create!(user_id: student.id, script_id: script.id, completed_at: Time.now)
-    end
-    get :user_hero
-
-    assert_select '#welcome.student'
-    assert_select '#suggestcourse', I18n.t(
-      'home.student_finished',
-      online_link: I18n.t('home.online'),
-      local_school_link: I18n.t('home.local_school')
-    )
-  end
-
   test "user menu should open pairing dialog if asked to in the session" do
     sign_in create(:student)
 

@@ -483,6 +483,10 @@ pt-BR:
       4-5 While Loops 7_instruction: "Uau, agora há três grandes montes de terra!\nVocê pode escrever um programa que remova cada um deles até que o solo fique nivelado?"
       4-5 While Loops 8_instruction: " Há um buraco realmente fundo e um monte de terra\nrealmente grande. Quantas pás cheias de terra são necessárias para\ntornar o solo plano?"
       4-5 While Loops Assessment 1_instruction: "Há um monte de buracos e\nmontes. Ajude-me a preenchê-los e removê-los para tornar o solo plano."
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+        
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       Alien Defender_2018_instruction: 'Project Idea: Make a defender game in Play Lab!'
@@ -556,6 +560,7 @@ pt-BR:
       C3-Farmer While Loops 7_instruction: "Uau, agora há três grandes montes de terra!\nVocê pode escrever um programa que remova cada um deles até que o solo fique nivelado?"
       C3-Farmer While Loops 8_instruction: " Há um buraco realmente fundo e um monte de terra\nrealmente grande. Quantas pás de terra são necessárias para\ntornar o solo plano? Dica: use o laço enquanto para ambos."
       C3-Farmer While Loops Assessment 1_instruction: "Há um monte de buracos e\nmontes. Ajude-me a preenchê-los e removê-los para tornar o solo plano."
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -3224,7 +3229,7 @@ pt-BR:
       course1_artist_loops_challenge2_instruction: Let's play a game! Draw as many X's as you can! Can you get 3 in a row?
       course1_artist_loops_challenge3_instruction: '"Você pode me ajudar a fazer duas casas de pássaros?"'
       course1_artist_loops_challenge4_instruction: '"It''s time to toss the dice! Can you help me draw these?"'
-      course1_collector_loops_challenge1_instruction: '"Can you help me spot some bugs? I know which way I want to go, but I''m not sure how many steps to take."'
+      course1_collector_loops_challenge1_instruction: '"Você pode me ajudar encontrar alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo dar."'
       course1_collector_loops_challenge2_instruction: 'This time you can only use one of each arrow block. Get all of the treasure! '
       course1_collector_loops_challenge3_instruction: 'This time you can only use one of each arrow block. Get all of the treasure! '
       course1_collector_loops_challenge4_instruction: Let's get the treasure! Help me across each row then come back to start the next row. Can you find a pattern?
@@ -3375,85 +3380,85 @@ pt-BR:
       courseA_collector_loops7_2018_instruction: O que você deve adicionar a este código para pegar todo o tesouro?
       courseA_collector_loops8_instruction: Escreva o código para pegar todo este tesouro.
       courseA_collector_loops8_2018_instruction: Escreva o código para pegar todo este tesouro.
-      courseA_collector_loops9_instruction: "**Challenge:** The treasure goes all the way up these stairs!  Write the code to help Laurel get it all."
-      courseA_collector_loops9_2018_instruction: "**Challenge:** The treasure goes all the way up these stairs!  Write the code to help Laurel get it all."
+      courseA_collector_loops9_instruction: "**Desafio:** O tesouro vai até o topo das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
+      courseA_collector_loops9_2018_instruction: "**Desafio:** O tesouro vai até o topo das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
       courseA_collector_loops_challenge1_instruction: '*"Você pode me ajudar a identificar alguns bugs?"*'
       courseA_collector_loops_challenge1_2018_instruction: '*"Você pode me ajudar a identificar alguns bugs?"*'
       courseA_collector_loops_challenge2_instruction: 'Pegar todos os tesouros! '
       courseA_collector_loops_challenge2kp_instruction: Colete pelo menos **3** peças do tesouro para passar este nível.
       courseA_collector_loops_challenge2kp_2018_instruction: Colete pelo menos **3** peças do tesouro para passar este nível.
       courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \n\nPress \"Run\" to see her walk up to the treasure and grab it."
-      courseA_collector_preLoops2_instruction: "Great!  Now you get to add code yourself!  \n\nSnap a `get treasure` block to the bottom of the program and click \"Run\"."
-      courseA_collector_preLoops3_instruction: Snap two `E -->` blocks and one `get treasure` block to the bottom of the program, then click "Run".
+      courseA_collector_preLoops2_instruction: "Ótimo! Agora você pode adicionar o código você mesmo! \n\nEncaixe um bloco `pegar tesouro` na parte inferior do programa e clique em \"Executar \"."
+      courseA_collector_preLoops3_instruction: Encaixe dois blocos `E -->` e um bloco `pegar tesouro` na parte inferior do programa, depois clique em "Executar".
       courseA_collector_preLoops4_instruction: Você consegue descobrir como resolver esse problema?
-      courseA_collector_preLoops5_instruction: Get 1 of these 2 gems to solve this puzzle.
+      courseA_collector_preLoops5_instruction: Pegar 1 desses 2 gemas para resolver este enigma.
       courseA_collector_preLoops6_instruction: Pegue ambas as peças do tesouro para resolver este enigma.
       courseA_collector_preLoops7_instruction: Pegue todas as três pilhas para passar esse nível.
       courseA_forVideoTest_artist_instruction: Use the `repeat` loop to add waves to the water.
-      courseA_harvester_forVideo_instruction: Can you pick all the corn using only **one** move block?
-      courseA_harvester_loops1_instruction: Help the harvester pick all the corn!
-      courseA_harvester_loops10_instruction: Help the harvester pick all five ears of corn!
-      courseA_harvester_loops11_instruction: 'Try one more on your own! '
+      courseA_harvester_forVideo_instruction: Você consegue pegar todo o milho usando apenas ** um ** bloco de movimento?
+      courseA_harvester_loops1_instruction: Ajude a colheitadeira a pegar todo o milho!
+      courseA_harvester_loops10_instruction: Ajude a colheitadeira a pegar todas as cinco espigas de milho!
+      courseA_harvester_loops11_instruction: 'Tente mais um por sua conta! '
       courseA_harvester_loops2_instruction: Certifique-se de pegar todo o milho!
-      courseA_harvester_loops3_instruction: Can you pick all the corn using only **one** move block?
-      courseA_harvester_loops4_instruction: Can you help the harvester find the bug in her code?
-      courseA_harvester_loops5_instruction: Try it yourself! Can you pick the corn at the end too?
-      courseA_harvester_loops5a_instruction: Look at all this corn! Can you pick it all by yourself?
-      courseA_harvester_loops5b_instruction: Can you change your code to make the harvester pick all the corn?
-      courseA_harvester_loops6_instruction: You will need **one** `Move South` block and **one** `Move West` block.
+      courseA_harvester_loops3_instruction: Você consegue pegar todo o milho usando apenas ** um ** bloco de movimento?
+      courseA_harvester_loops4_instruction: Você pode ajudar a colheitadeira a encontrar o bug no seu código?
+      courseA_harvester_loops5_instruction: Tente você mesmo! Você consegue pegar o milho que está no final também?
+      courseA_harvester_loops5a_instruction: Olha todo este milho! Você consegue pegar tudo sozinho?
+      courseA_harvester_loops5b_instruction: Você consegue modificar seu código para fazer a colheitadeira pegar todo o milho?
+      courseA_harvester_loops6_instruction: Você precisará de **um** bloco `Mover para o Sul` e **um** bloco `Mover para o Oeste`.
       courseA_harvester_loops7_instruction: 'Tente você mesmo! '
       courseA_harvester_loops8_instruction: Este é o mesmo enigma, mas agora você tem que repetir **três** vezes!
       courseA_harvester_loops9_instruction: Você consegue descobrir como pegar todo o milho?
-      courseA_harvester_seq1_instruction: Play with these blocks to help the harvester pick the piece of corn.
+      courseA_harvester_seq1_instruction: Brinque com estes blocos para ajudar a colheitadeira a pegar parte do milho.
       courseA_harvester_seq10_instruction: Certifique-se de pegar todo o milho!
       courseA_harvester_seq11_instruction: Tente você mesmo! Pegue todo o milho.
       courseA_harvester_seq12_instruction: Pegue todo o milho.
-      courseA_harvester_seq13_instruction: Play with these blocks to help the harvester pick corn.
+      courseA_harvester_seq13_instruction: Brinque com estes blocos para ajudar a colheitadeira a pegar o milho.
       courseA_harvester_seq2_instruction: Use três blocos 'mover para oeste' e um bloco 'pegar o milho' para resolver este enigma.
       courseA_harvester_seq3_instruction: Use três blocos 'Mover Para o Norte' e um bloco 'Pegar o Milho'.
-      courseA_harvester_seq4_instruction: Add one block to help the harvester pick the corn.
+      courseA_harvester_seq4_instruction: Adicione um bloco para ajudar a colheitadeira a pegar todo o milho.
       courseA_harvester_seq5_instruction: Encontrar o erro e o corrija!
       courseA_harvester_seq6_instruction: Tente você mesmo!
       courseA_harvester_seq7_instruction: Tente você mesmo!
-      courseA_harvester_seq8_instruction: Now the harvester needs to pick corn two times!
+      courseA_harvester_seq8_instruction: Agora a colheitadeira precisa pegar o milho duas vezes!
       courseA_harvester_seq9_instruction: Adicione dois blocos para terminar este enigma!
       courseA_maze_ramp2_2018_instruction: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "Executar".
       courseA_maze_ramp2a_2018_instruction: Encaixe todos os blocos juntos para finalizar seu código, em seguida clique em "Executar".
       courseA_maze_ramp3_2018_instruction: There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.
-      courseA_maze_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
-      courseA_maze_ramp3b_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "Run".
+      courseA_maze_ramp3a_2018_instruction: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "▶ Executar".
+      courseA_maze_ramp3b_2018_instruction: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "Executar".
       courseA_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseA_maze_ramp4a_2018_instruction: Você consegue descobrir qual bloco você precisa adicionar aos outros blocos para terminar este código?
-      courseA_maze_ramp5_2018_instruction: Avoid the TNT.
-      courseA_maze_ramp5a_2018_instruction: Get the bird to the pig!
+      courseA_maze_ramp5_2018_instruction: Desvie da TNT.
+      courseA_maze_ramp5a_2018_instruction: Leve o pássaro até o porco!
       courseA_maze_seq1_instruction: Leve o pássaro até o porco mau!
-      courseA_maze_seq10_instruction: 'Challenge: Go around the TNT to get the bird to the pig! '
+      courseA_maze_seq10_instruction: 'Desafio: Dê a volta na TNT para levar o pássaro até o porco! '
       courseA_maze_seq10_2018_instruction: 'Desafio: Evite a TNT para levar o pássaro até o porco! '
-      courseA_maze_seq11_instruction: Move one way, then another to get the bird to the pig.
-      courseA_maze_seq11_2018_instruction: Move one way, then another to get the bird to the pig.
-      courseA_maze_seq12_instruction: 'Get that pig! '
-      courseA_maze_seq12_2018_instruction: 'Get that pig! '
-      courseA_maze_seq13_instruction: Get the pig any way you can!
-      courseA_maze_seq13_2018_instruction: Get the pig any way you can!
+      courseA_maze_seq11_instruction: Mova-me por um caminho, e então por outro para levar o pássaro até o porco.
+      courseA_maze_seq11_2018_instruction: Mova-me por um caminho, e então por outro para levar o pássaro até o porco.
+      courseA_maze_seq12_instruction: 'Pegue aquele porco! '
+      courseA_maze_seq12_2018_instruction: 'Pegue aquele porco! '
+      courseA_maze_seq13_instruction: Pegue aquele porco da maneira que você conseguir!
+      courseA_maze_seq13_2018_instruction: Pegue aquele porco da maneira que você conseguir!
       courseA_maze_seq1_2018_instruction: Leve o pássaro até o porco mau!
       courseA_maze_seq2_instruction: Altere o código para me levar até o porco!
       courseA_maze_seq2_2018_instruction: Corrija o código para levar o pássaro até o porco.
-      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq3_2018_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
-      courseA_maze_seq4_2018_instruction: REMOVE a block to get the bird to the pig!
-      courseA_maze_seq4a_instruction: Get the bird to the pig using the fewest possible blocks.
+      courseA_maze_seq3_instruction: Corrija o código para levar o pássaro até o porco!
+      courseA_maze_seq3_2018_instruction: Corrija o código para levar o pássaro até o porco!
+      courseA_maze_seq4_instruction: REMOVA um bloco para levar o pássaro até o porco!
+      courseA_maze_seq4_2018_instruction: REMOVA um bloco para levar o pássaro até o porco!
+      courseA_maze_seq4a_instruction: Leve o pássaro até o porco usando o menor número de blocos possíveis.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq5_2018_instruction: Give this one a try.
+      courseA_maze_seq5_2018_instruction: Dê uma chance a este.
       courseA_maze_seq5a_2018_instruction: O que você pode adicionar ao final deste código para levar o pássaro até o porco?
-      courseA_maze_seq6_instruction: Move one way, then another to get the bird to the pig!
-      courseA_maze_seq6_2018_instruction: Move one way, then another to get the bird to the pig!
+      courseA_maze_seq6_instruction: Mova-me por um caminho, e então por outro para levar o pássaro até o porco!
+      courseA_maze_seq6_2018_instruction: Mova-me por um caminho, e então por outro para levar o pássaro até o porco!
       courseA_maze_seq7_instruction: Descubra o que está faltando e então adicione blocos para levar o pássaro até o porco!
       courseA_maze_seq7_2018_instruction: Descubra o que está faltando e então adicione blocos para levar o pássaro até o porco!
-      courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
-      courseA_maze_seq8_2018_instruction: Solve this level and get the bird to the pig!
-      courseA_maze_seq9_instruction: Debug this level by adding blocks to get the bird to the pig!
-      courseA_maze_seq9_2018_instruction: Debug this level by adding blocks to get the bird to the pig!
+      courseA_maze_seq8_instruction: Resolva este nível e leve o pássaro até o porco!
+      courseA_maze_seq8_2018_instruction: Resolva este nível e leve o pássaro até o porco!
+      courseA_maze_seq9_instruction: Analise este nível adicionando blocos para levar o pássaro até o porco!
+      courseA_maze_seq9_2018_instruction: Analise este nível adicionando blocos para levar o pássaro até o porco!
       courseA_maze_seq_challenge1_instruction: Alguma coisa está errada aqui. Ajude a corrigir o código para levar o pássaro até o porco!
       courseA_maze_seq_challenge1_2018_instruction: Alguma coisa está errada aqui. Ajude a corrigir o código para levar o pássaro até o porco!
       courseA_maze_seq_challenge2_instruction: Trace o caminho para levar o pássaro até o porco. Evite a TNT, ou penas vão voar!
@@ -3462,8 +3467,8 @@ pt-BR:
       courseA_playLab_events1_2018_instruction: This is a Play Lab level.  Move blocks to the workspace and see what happens!
       courseA_playLab_events2_instruction: Jorge the Dog wants to say "Hi there."  Can you help him?
       courseA_playLab_events2_2018_instruction: Jorge the Dog wants to say "Hi there."  Can you help him?
-      courseA_playLab_events3_instruction: Connect the `move left` block to the `when left` event block that is already in the workspace.
-      courseA_playLab_events3_2018_instruction: Connect the `move left` block to the `when left` event block that is already in the workspace.
+      courseA_playLab_events3_instruction: Conecte o bloco `mover para a esquerda` ao bloco de evento`quando esquerda` que já está na área de trabalho.
+      courseA_playLab_events3_2018_instruction: Conecte o bloco `mover para a esquerda` ao bloco de evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events4_instruction: Adicione blocos para mover para a direita quando o botão `direito` é clicado.
       courseA_playLab_events4_2018_instruction: Adicione outro bloco de evento para fazer Jorge mover para a direita quando o botão `direito` é clicado.
       courseA_playLab_events5_instruction: Add events to have Jorge move up and down when the `up` and `down` buttons are pressed.
@@ -3471,21 +3476,21 @@ pt-BR:
       courseA_playLab_events6_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events6_2018_instruction: Make this more interesting by changing the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: Add anything you want to this game.  Can you make the dinosaur disappear when Jorge runs into him?
-      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want to this game."
+      courseA_playLab_events7_2018_instruction: "*Jogo Livre*: Adicione o que você quiser neste jogo."
       courseA_playlab_events_challenge1_instruction: Você consegue escrever o código para mostrar o resto dos meus amigos? As dicas vão te ajudar a fazer isto passo a passo.
       courseA_playlab_events_challenge1_2018_instruction: Você consegue escrever o código para mostrar o resto dos meus amigos? As dicas vão te ajudar a fazer isto passo a passo.
-      courseA_playlab_events_challenge2_instruction: Give everyone something to do when you click on them.
-      courseA_playlab_events_challenge2_2018_instruction: Give everyone something to do when you click on them.
+      courseA_playlab_events_challenge2_instruction: Dê a todo mundo algo para fazer quando você clicar neles.
+      courseA_playlab_events_challenge2_2018_instruction: Dê a todo mundo algo para fazer quando você clicar neles.
       courseA_playlab_events_challengeClone_instruction: Onde meus amigos estão se escondendo? Você consegue escrever um código para mostrá-los?
       courseA_toMakeLoopsVideo_Collector_instruction: Loops let you do whatever is inside over and over again!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
       courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together and press "▶ Run"!
       courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "▶ Run".
-      courseB_Scrat_ramp3a_2018_instruction: Add a `North` block to the bottom of the other blocks to finish this code, then click "▶ Run".
+      courseB_Scrat_ramp3a_2018_instruction: Adicione um bloco `Norte` ao final dos outros blocos para terminar este código, depois clique em "▶ Executar".
       courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox to throw it away.\n\n"
       courseB_Scrat_ramp4a_2018_instruction: Você consegue descobrir qual bloco você precisa adicionar aos outros blocos para terminar este código?
-      courseB_Scrat_ramp5a_2018_instruction: Get the bird to the pig!
+      courseB_Scrat_ramp5a_2018_instruction: Leve o pássaro até o porco!
       courseB_artist_loops1_instruction: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque com o nível e desenhe algo divertido.
       courseB_artist_loops10_instruction: Use what you have learned to draw a picture of what you think the artist saw when he got home.
       courseB_artist_loops10_2018_instruction: Use what you have learned to draw a picture of what you think the artist saw when he got home.
@@ -3566,11 +3571,12 @@ pt-BR:
       courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat to the acorn.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
       courseB_maze_seq5_2018_instruction: Este enigma é um pouco complicado!
-      courseB_maze_seq6_instruction: Move one way, then another to get the bird to the pig!
+      courseB_maze_seq6_instruction: Mova-me por um caminho, e então por outro para levar o pássaro até o porco!
       courseB_maze_seq6_2018_instruction: Move one way, then another to get Scrat to the acorn!
       courseB_maze_seq7_instruction: Descubra o que está faltando e então adicione blocos para levar o pássaro até o porco!
       courseB_maze_seq7_2018_instruction: Figure out what is missing and then add blocks to get Scrat to the acorn!
@@ -3690,15 +3696,15 @@ pt-BR:
       courseC_artist_loops5_instruction: "Great!  Now it's time to make a fence inside to keep the animals out.   \n\n"
       courseC_artist_loops5a_instruction: Experimente novos adesivos!
       courseC_artist_loops5a_2018_instruction: Experimente novos adesivos!
-      courseC_artist_loops5b_instruction: Try adding lines!
-      courseC_artist_loops5b_2018_instruction: Try adding lines!
+      courseC_artist_loops5b_instruction: Tente adicionar linhas!
+      courseC_artist_loops5b_2018_instruction: Tente adicionar linhas!
       courseC_artist_loops6_instruction: "What should the zombie put inside of the garden?  \n\n\n"
       courseC_artist_loops6a_instruction: Add another sticker!
       courseC_artist_loops6a_2018_instruction: Add another sticker!
       courseC_artist_loops7a_instruction: Play with the loops and angles.
       courseC_artist_loops7a_2018_instruction: Play with the loops and angles.
-      courseC_artist_loops8a_instruction: Now try something on your own!
-      courseC_artist_loops8a_2018_instruction: Now try something on your own!
+      courseC_artist_loops8a_instruction: Agora tente algo você mesmo!
+      courseC_artist_loops8a_2018_instruction: Agora tente algo você mesmo!
       courseC_artist_loopsPre1a_instruction: Time to spin that line around!
       courseC_artist_loopsPre1a_2018_instruction: Time to spin that line around!
       courseC_artist_loopsPrePre1a_instruction: 'Get the artist to the center of the play area, then draw a line. '
@@ -3832,7 +3838,7 @@ pt-BR:
       courseC_maze_debugging_challenge2_instruction: Help Scrat reach the acorn with only four `turn` commands.
       courseC_maze_debugging_challenge2_2018_instruction: Help Scrat reach the acorn with only four `turn` commands.
       courseC_maze_loops1_instruction: Can you get the bird to the pig?
-      courseC_maze_loops10_instruction: You are doing great! Keep it up!
+      courseC_maze_loops10_instruction: Você está indo bem! Continuem assim!
       courseC_maze_loops11_instruction: You are almost there! This time, choose any path you like!
       courseC_maze_loops2_instruction: Can you get the bird to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?
       courseC_maze_loops3_instruction: Solve this puzzle by creating a loop!
@@ -3841,7 +3847,7 @@ pt-BR:
       courseC_maze_loops6_instruction: Loops even work with more than one block inside!  Can you loop this sequence?
       courseC_maze_loops7_instruction: Use what you learned in other puzzles!
       courseC_maze_loops8_instruction: 'Challenge: Combine ideas from the last few puzzles to complete this level.'
-      courseC_maze_loops9_instruction: You are doing great! Keep it up!
+      courseC_maze_loops9_instruction: Você está indo bem! Continuem assim!
       courseC_maze_loops_challenge1_instruction: 'Now Scrat wants to try using loops to find his acorn! '
       courseC_maze_loops_challenge1a_instruction: 'Now Scrat wants to try using loops to find his acorn! '
       courseC_maze_loops_challenge1a_2018_instruction: 'Now Scrat wants to try using loops to find his acorn! '
@@ -3854,12 +3860,12 @@ pt-BR:
       courseC_maze_programming3_2018_instruction: There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.
       courseC_maze_programming4_instruction: Avoid TNT or feathers will fly!
       courseC_maze_programming4_2018_instruction: Avoid TNT or feathers will fly!
-      courseC_maze_programming5_instruction: Avoid the TNT.
-      courseC_maze_programming5_2018_instruction: Avoid the TNT.
+      courseC_maze_programming5_instruction: Desvie da TNT.
+      courseC_maze_programming5_2018_instruction: Desvie da TNT.
       courseC_maze_programming6_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseC_maze_programming6_2018_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
-      courseC_maze_programming7_instruction: "**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others."
-      courseC_maze_programming7_2018_instruction: "**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others."
+      courseC_maze_programming7_instruction: "**Desafio:** Este código tem um monte de bugs. Você precisará remover alguns blocos e acrescentar outros."
+      courseC_maze_programming7_2018_instruction: "**Desafio:** Este código tem um monte de bugs. Você precisará remover alguns blocos e acrescentar outros."
       courseC_maze_programming8_instruction: '*"Keep calm and help me find the bad pig."*'
       courseC_maze_programming8_2018_instruction: '*"Keep calm and help me find the bad pig."*'
       courseC_maze_programming8_predict1_instruction: '*"Keep calm and help me find the bad pig."*'
@@ -3874,16 +3880,16 @@ pt-BR:
         Here's a game for you to play! To win, use your arrow keys to get the penguin to run into the octopus.
         
         Once you are done, you will learn how to make this game!
-      courseC_puppy_loops10_instruction: You are doing great! Keep it up!
+      courseC_puppy_loops10_instruction: Você está indo bem! Continuem assim!
       courseC_puppy_loops11_instruction: You are almost there! This time, choose any path you like!
       courseC_puppy_loops8_instruction: 'Challenge: Combine ideas from the last few puzzles to complete this level.'
       courseC_puppy_loops8courseC_maze_loops8_instruction: 'Challenge: Combine ideas from the last few puzzles to complete this level.'
-      courseC_puppy_loops9_instruction: You are doing great! Keep it up!
+      courseC_puppy_loops9_instruction: Você está indo bem! Continuem assim!
       courseC_starWars_loops1_instruction: BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.
-      courseC_starWars_loops10_instruction: You are doing great! Keep it up!
-      courseC_starWars_loops10_2018_instruction: You are doing great! Keep it up!
-      courseC_starWars_loops10_predict2_instruction: You are doing great! Keep it up!
-      courseC_starWars_loops10_predict2_2018_instruction: You are doing great! Keep it up!
+      courseC_starWars_loops10_instruction: Você está indo bem! Continuem assim!
+      courseC_starWars_loops10_2018_instruction: Você está indo bem! Continuem assim!
+      courseC_starWars_loops10_predict2_instruction: Você está indo bem! Continuem assim!
+      courseC_starWars_loops10_predict2_2018_instruction: Você está indo bem! Continuem assim!
       courseC_starWars_loops11_instruction: You are almost there! This time, choose any path you like!
       courseC_starWars_loops11_2018_instruction: You are almost there! This time, choose any path you like!
       courseC_starWars_loops1_2018_instruction: BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.
@@ -4174,8 +4180,8 @@ pt-BR:
       courseD_debugging_6_instruction: 'Challenge:  Fix the errors to collect all of the nectar and make all of the honey.'
       courseD_farmer_condLoops1_instruction: Use conditionals to make sure that you pick corn only when it's there.
       courseD_farmer_condLoops1_2018_instruction: Use conditionals to make sure that you pick corn only when it's there.
-      courseD_farmer_condLoops2_instruction: Help the harvester collect both corn and lettuce from the field.
-      courseD_farmer_condLoops2_2018_instruction: Help the harvester collect both corn and lettuce from the field.
+      courseD_farmer_condLoops2_instruction: Ajude a colheitadeira coletar o milho e o alface do campo.
+      courseD_farmer_condLoops2_2018_instruction: Ajude a colheitadeira coletar o milho e o alface do campo.
       courseD_farmer_condLoops3_instruction: '*"Corn, lettuce, AND pumpkins! Help me harvest them all."*'
       courseD_farmer_condLoops3_2018_instruction: '*"Corn, lettuce, AND pumpkins! Help me harvest them all."*'
       courseD_farmer_condLoops4_instruction: Help the harvester pick all of the lettuce in each cluster before moving on to the next bunch.
@@ -4269,8 +4275,8 @@ pt-BR:
       courseD_maze_ramp3_2018_instruction: There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.
       courseD_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseD_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
-      courseD_maze_ramp5_instruction: Avoid the TNT.
-      courseD_maze_ramp5_2018_instruction: Avoid the TNT.
+      courseD_maze_ramp5_instruction: Desvie da TNT.
+      courseD_maze_ramp5_2018_instruction: Desvie da TNT.
       courseD_maze_ramp5a_instruction: Pay attention to the sequence and see if you can figure out how to get to that pig!
       courseD_maze_ramp5a_2018_instruction: Pay attention to the sequence and see if you can figure out how to get to that pig!
       courseD_maze_ramp5b_instruction: Navigate this maze to help the bird find the pig!
@@ -4281,7 +4287,7 @@ pt-BR:
       courseD_maze_ramp5d_2018_instruction: Get the bird to the pig.
       courseD_maze_ramp6_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseD_maze_ramp6a_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
-      courseD_maze_ramp7_instruction: Get the bird to the pig!
+      courseD_maze_ramp7_instruction: Leve o pássaro até o porco!
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_2018_instruction: Help the zombie get to the sunflower.
@@ -4446,6 +4452,7 @@ pt-BR:
       courseE_farmer_concept3_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: "Agora, vamos nos aprofundar mais um nível!\nAninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o\nartista no lugar para desenhar a próxima reta. Qual desses blocos de código você\npode colocar no final do laço mais externo para desenhar toda a grade?"
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will become.  Use `if` statements to write the code to check and harvest each one.   '
       courseE_farmer_functions10a1_2018_instruction: Use everything that you've learned so far to solve this puzzle!
@@ -4458,8 +4465,8 @@ pt-BR:
       courseE_farmer_functions2_instruction: "Now, there will be a different number of pumpkins each time you run the program.   \n\nUse the `while` block to pick only as many pumpkins as you need."
       courseE_farmer_functions2a_instruction: We're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.
       courseE_farmer_functions2aALT_instruction: We're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.
-      courseE_farmer_functions2b_instruction: Help the harvester pick the corn and pumpkins.
-      courseE_farmer_functions2b_2018_instruction: Help the harvester pick the corn and pumpkins.
+      courseE_farmer_functions2b_instruction: Ajude a colheitadeira a pegar os milhos e as abóboras.
+      courseE_farmer_functions2b_2018_instruction: Ajude a colheitadeira a pegar os milhos e as abóboras.
       courseE_farmer_functions2ba_instruction: Help the farmer pick the corn and pumpkins using the `corn and pumpkin` function.
       courseE_farmer_functions2ba_2018_instruction: Help the farmer pick the corn and pumpkins using the `corn and pumpkin` function.
       courseE_farmer_functions3_instruction: "What happens when the paths to the pumpkins are all different lengths?   \n\nGet them all with as few blocks as possible."
@@ -4539,14 +4546,14 @@ pt-BR:
       courseE_maze_ramp3_2018_instruction: There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.
       courseE_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseE_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
-      courseE_maze_ramp5_instruction: Avoid the TNT.
-      courseE_maze_ramp5_2018_instruction: Avoid the TNT.
+      courseE_maze_ramp5_instruction: Desvie da TNT.
+      courseE_maze_ramp5_2018_instruction: Desvie da TNT.
       courseE_maze_ramp6_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseE_maze_ramp6_2018_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseE_maze_ramp7_instruction: Use what you've learned to get the bird to the pig!
       courseE_maze_ramp7_2018_instruction: Use what you've learned to get the bird to the pig!
       courseE_maze_ramp_predict1_instruction: This code includes a new block. What do you think would happen if you press the "Run" block?
-      courseE_multi_maze_ramp5_instruction: Avoid the TNT.
+      courseE_multi_maze_ramp5_instruction: Desvie da TNT.
       courseE_playLab_challenge1_instruction: "Something should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!"
       courseE_playLab_challenge1_2018_instruction: "Something should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!"
       courseE_playLab_embedded_instruction: This is an example game you can play around with. Move the dog with your arrow keys. When the dog touches one of the cats, he scores a point! Score 5 points to win!
@@ -4654,8 +4661,8 @@ pt-BR:
       courseF_artist_variables6_2018_instruction: 'Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  '
       courseF_artist_variables6a_instruction: Build this design where the squares have 80 pixel sides and the artist jumps 80 pixels over and down between each one.
       courseF_artist_variables6a_2018_instruction: Build this design where the squares have 80 pixel sides and the artist jumps 80 pixels over and down between each one.
-      courseF_artist_variables7_instruction: 'Draw a triangle with 150 pixels sides. '
-      courseF_artist_variables7_2018_instruction: 'Draw a triangle with 150 pixels sides. '
+      courseF_artist_variables7_instruction: 'Desenhar um triângulo com lados de 150 pixels. '
+      courseF_artist_variables7_2018_instruction: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables8_instruction: Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.
       courseF_artist_variables8_2018_instruction: Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.
       courseF_artist_variables9_instruction: See what happens when you repeat the code from the last puzzle 30 times instead of only 3!  Feel free to make your lines any color or pattern for some extra zest.
@@ -4704,13 +4711,13 @@ pt-BR:
       courseF_bee_for11_instruction: What should your increment be to collect 15, then 12, then 9, 6, 3 nectar?
       courseF_bee_for11_2018_instruction: What should your increment be to collect 15, then 12, then 9, 6, 3 nectar?
       courseF_bee_for1_2018_instruction: Colete o nectar de cada flor usando o menor número de blocos possíveis.
-      courseF_bee_for2_instruction: Write the code to help the bee collect all of the nectar.
-      courseF_bee_for2_2018_instruction: Write the code to help the bee collect all of the nectar.
+      courseF_bee_for2_instruction: Escrever o código para ajudar a abelha a coletar todo o néctar.
+      courseF_bee_for2_2018_instruction: Escrever o código para ajudar a abelha a coletar todo o néctar.
       courseF_bee_for3_instruction: Try this puzzle using the `for` loop and the `counter` variable to see how much shorter your code becomes.
       courseF_bee_for4_instruction: Help the bee collect all of the nectar.
       courseF_bee_for4_2018_instruction: Help the bee collect all of the nectar.
-      courseF_bee_for5_instruction: Use the `counter` variable twice to solve this puzzle.
-      courseF_bee_for5_2018_instruction: Use the `counter` variable twice to solve this puzzle.
+      courseF_bee_for5_instruction: Usar a variável `contador` duas vezes para resolver este enigma.
+      courseF_bee_for5_2018_instruction: Usar a variável `contador` duas vezes para resolver este enigma.
       courseF_bee_for6_instruction: Try gathering this nectar by counting down from 5 to 1 by 1.
       courseF_bee_for6_2018_instruction: Try gathering this nectar by counting down from 5 to 1 by 1.
       courseF_bee_for7_instruction: Try collecting these flowers using an increment of 2.
@@ -4787,8 +4794,8 @@ pt-BR:
       courseF_maze_ramp15_instruction: Use what you've learned to get the bird to the pig!
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
-      courseF_maze_ramp5_instruction: Avoid the TNT.
-      courseF_maze_ramp5_2018_instruction: Avoid the TNT.
+      courseF_maze_ramp5_instruction: Desvie da TNT.
+      courseF_maze_ramp5_2018_instruction: Desvie da TNT.
       courseF_maze_ramp6_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp6_2018_instruction: '"Keep calm and help me find the bad pig. Otherwise I might get angry!"'
       courseF_maze_ramp7_instruction: Use what you've learned to get the bird to the pig!
@@ -4836,7 +4843,7 @@ pt-BR:
       course_playlab_variables1_instruction: Esta é uma Perna de Pirata. Ele é muito difícil de entender nos dias de hoje!
       course_playlab_variables2_instruction: "Agora, decodifique a fala da Perna de Pirata mudando o valor das variáveis em apenas dois lugares! \\r\n"
       course_playlab_variables3_instruction: "Agora, decodifique a fala da Perna de Pirata mudando o valor das variáveis em apenas dois lugares! \\r\n"
-      coursea_maze_ramp1_2018_instruction: For this puzzle, snap the blocks together and click "▶ Run"!
+      coursea_maze_ramp1_2018_instruction: Para este enigma, junte os blocos e clique em "▶ Executar"!
       coursef_explore_CYOA_Witch_instruction: You can do whatever you want in play lab! Here's an example of choose your own adventure story in play lab.
       coursef_explore_playlab2_instruction: You can do whatever you want in play lab! Here's an example of story in play lab.
       coursef_explore_playlab_cat_game_instruction: You can do whatever you want in play lab! Here's an example of game you can make.
@@ -5007,7 +5014,7 @@ pt-BR:
       grade2_collector_6_instruction: Reorder the blocks to collect all of the treasure.
       grade2_collector_7_instruction: Challenge puzzle! Use blocks from the toolbox to collect all of the treasure.
       grade2_collector_8_instruction: '"Keep up the good work! Help me collect all of the coins."'
-      grade2_collector_9_instruction: '*"Let''s get all of the coins!"*'
+      grade2_collector_9_instruction: '*"Vamos pegar todas as moedas!"*'
       grade2_collector_9a_instruction: "**Challenge:** Grab all of the coins."
       grade2_collector_A_instruction: Help Laurel collect all of the treasure.
       grade2_collector_A_2018_instruction: Help Laurel collect all of the treasure.
@@ -5756,5 +5763,5 @@ pt-BR:
       testArtistForTestK_instruction: The Artist is trying to draw a line five times, but can't get it right.  Can you help?
       test_sarah_instruction: hi hi
       u3-old-drawing-view_instruction: DO This
-      valentine_artist_03_instruction: Now try something on your own!
+      valentine_artist_03_instruction: Agora tente algo você mesmo!
       weird_playLab_instruction: About My Robot Project! Write code so that clicking on each bird shows a new fact about your robot.

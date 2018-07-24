@@ -1139,6 +1139,8 @@ zh-CN:
               name: 独立视频
             Curriculum Reference:
               name: 教案参考
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: '第二阶段在线：混合的暑期学习'
@@ -7552,7 +7554,7 @@ zh-CN:
               description_student: ''
               description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             'Events: The Big Event':
-              name: 大事件
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
@@ -7840,7 +7842,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 大事件
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -7862,7 +7864,7 @@ zh-CN:
           assignment_family_title: 课程 D
           description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
           description_short: Learn about conditional statements and create your own art, story or game.
-          description_audience: 'Ages: 7-11'
+          description_audience: '年龄：7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: 图纸上编程
@@ -9476,7 +9478,7 @@ zh-CN:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 大事件
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9496,13 +9498,13 @@ zh-CN:
             Programming in Ice Age:
               name: 在冰河时代里编程
             Copyright and Creativity:
-              name: 版权和创造力
+              name: 创建并实践公平非常的伟大。
             Programming with Rey and BB-8:
               name: 与雷伊，BB-8一起编程
             Loops in Ice Age:
-              name: 冰河时代里的循环
+              name: 斯奎特和循环
             'Persistence & Frustration: Stevie and the Big Project':
-              name: '坚持与挫折：史蒂夫和大项目。'
+              name: 坚持与挫折：史蒂夫和大项目。
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9533,3 +9535,13 @@ zh-CN:
           description_audience: ''
           description_short: ''
           description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.

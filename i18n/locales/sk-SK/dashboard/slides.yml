@@ -147,7 +147,7 @@ sk:
         text: "Môžeme povedať, zombíkovi aby skontroloval, či je cesta na ľavej strane, a AK cestu vľavo nájde, môžme ho týmto smerom otočiť."
       4:
         image: 'notes/hoc4_4.jpg'
-        text: "To write the code for this, let's drag out our \"if\" block and put a \"turn left\" block inside it."
+        text: "Pre napísanie kódu pre toto vytiahnime von náš blok \"if\" a vložme doňho bloky \"zabočiť doľava\"."
       5:
         image: 'notes/hoc4_5.jpg'
         text: "Now, if we put a \"move forward\" block above it and a \"repeat\" block around everything, each time the zombie moves, he'll check if there's a path to the left and turn. The \"repeat\" command is critical, to check for a turn at every step."
@@ -198,7 +198,7 @@ sk:
         text: "The definition sits on the workspace, but our farmer won't run the function until we drag out our \"fill 5\" function block from functions category."
       5:
         image: 'notes/stage13_5.jpg'
-        text: "Let's put the \"fun\" back in \"FUNction!\" "
+        text: "Vráťme naspäť \"fun\" do \"FUNkcií!\" "
     loop_while:
       1:
         image: 'notes/stage9_5.jpg'
@@ -218,20 +218,20 @@ sk:
         text: "Toto je naša nová slučka \"počítadlo\". Bude robiť akcie dookola, pričom ich môžete jemne upraviť pri každom opakovaní."
       3:
         image: 'notes/stage11_3.jpg'
-        text: "In this example, our \"counter\" loop says \"count with counter from 50 to 90 by 10\" and inside it, we have our \"draw a square\" block. Drag the \"counter\" block from the \"Variables\" section into the \"length\" spot."
+        text: "V tomto prípade hovorí naša slučka \"počítadlo\" \"počítaj od 50 do 90 v násobkoch 10tich\" a vo vnútri nej máme blok \"nakresli štvorec\". Presuň blok \"počítadlo\" zo sekcie \"Premenné\" do pozície \"dĺžka\"."
       4:
         image: 'notes/stage11_4.jpg'
-        text: "This means our artist is going to draw a square that has 50 pixel length sides, then it will add 10 to that and draw a square with 60 pixel length sides. Then it will keep adding 10 and drawing squares until it reaches 90. So we'll have squares of 50, 60, 70, 80, and 90."
+        text: "To znamená, že náš umelec nakreslí štvorec so stranou dlhou 50 pixelov, potom pridá k nej 10 a nakreslí štvorec s dĺžkou 60 pixelov. Potom bude pridávať 10 a kresliť štvorce až kým nedosiahne hodnotu 90. Takto budeme mať štvorce dlhé 50, 60, 70, 80 a 90 pixelov."
     parameters:
       1:
         image: 'notes/stage15_1.jpg'
         text: "Ahoj, volám sa Janete, a som inžinierkou v spoločnosti Zynga."
       2:
         image: 'notes/stage15_2.jpg'
-        text: "What if we want to draw a bunch of triangles and have their lengths be different sizes?"
+        text: "Čo ak chceme nakresliť niekoľko trojuholníkov s rôznymi dĺžkami strán?"
       3:
         image: 'notes/stage15_3.jpg'
-        text: "We could write all that code out by hand or we can use a function with parameters."
+        text: "Môžeme napísať celý kód ručne alebo môžeme použiť funkcie s parametrami."
       4:
         image: 'notes/stage15_4.jpg'
         text: "To do this, click the blue star on the \"draw a triangle\" function definition. Then drag \"input name\" into the \"input\" block."
@@ -395,7 +395,7 @@ sk:
     C1_bee_loops:
       1:
         image: 'notes/C1_bee_loops_1.png'
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: "Slučka znamená opakovanie činnosti. Takže idúc do úľa na inšpekciu sa pozriem na snímku a potom ju vrátim, takže viackrát opakujem tú istú činnosť. To je vlastne slučka/cyklenie, robenie rovnakej činnosti viackrát."
       2:
         image: 'notes/C1_bee_loops_2.png'
         text: "In this level, we want the bee to collect three nectars from the flower. Instead of using three \"get nectar\" blocks, you're going to use the repeat block to get nectar three times. Hit \"Run\" and see if you got it right. Nice!"

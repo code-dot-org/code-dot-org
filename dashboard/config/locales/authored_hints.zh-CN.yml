@@ -10812,6 +10812,10 @@ zh-CN:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: 每次你试验新的时候，要小心的拖拽出整块代码。
         4-5_Artist_Patterns_3_b: 如果你的代码变得太乱了，随时可以点击“重新开始”来从头再来一遍。
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: 即使您不知道一条路径中有多少方块，`当前面有路时`模块会让你继续前进。
+        grade3_robotFarmer_ConditionalsIntro_8_b: 一旦到达路径的末尾, 你应该做什么？
+        grade3_robotFarmer_ConditionalsIntro_8_c: 使用`重复`循环运行多次代码来得到每条直线路径。
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: 这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。
         courseE_farmer_functions1_b: 你只需要捡起一个南瓜, 但你是否可以用一个循环来得到它？

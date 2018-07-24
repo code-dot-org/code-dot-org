@@ -402,6 +402,10 @@ es-MX:
       4-5 While Loops 7_instruction: '¡Wow, ahora hay tres montones de tierra! ¿Puedes escribir un programa que elimine cada uno de ellos hasta que la tierra quede plana?'
       4-5 While Loops 8_instruction: " Hay un hueco muy profundo y mucha tierra amontonada. ¿Cúantas paladas son necesarias para aplanar la tierra? Sugerencia: Utiliza el circuito de bloque \"while\" para ambas."
       4-5 While Loops Assessment 1_instruction: Existen un montón de huecos y pilotes. Ayúdame a llenarlos y removerlos para aplanar la tierra.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+        
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Idea del proyecto: ¡ Haz un juego de defensor en Play Lab!'
       Alien Defender_2018_instruction: 'Idea del proyecto: ¡ Haz un juego de defensor en Play Lab!'
@@ -475,6 +479,7 @@ es-MX:
       C3-Farmer While Loops 7_instruction: Wow, now there are three piles of dirt! Can you write a program that removes each of them until the ground is even?
       C3-Farmer While Loops 8_instruction: " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -3341,6 +3346,7 @@ es-MX:
       courseB_maze_seq1_2018_instruction: "¡Juega con estos bloques para ver lo que hacen que haga Scrat! \n\nLleva a Scrat a la bellota para completar el nivel."
       courseB_maze_seq2_instruction: '*"¡Un error! Arregla el código para llevarme hasta el cerdo."*'
       courseB_maze_seq2_2018_instruction: '¡Un error! Arregla el código para llevar a Scrat a la bellota!'
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Usa bloques de movimiento **2** para llevar a Scrat a la bellota.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -4215,6 +4221,7 @@ es-MX:
       courseE_farmer_concept3_instruction: Llena lo orificios al final de cada uno de estos caminos.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: Ahora vamos a un nivel más profundo. Hemos anidado todo el bloque de código en otro bucle, pero tienes que poner al artista en su lugar para dibujar la línea siguiente. ¿Cuál de estos bloques de código puede usted colocar al final del bucle exterior para dibujar la red entera?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Ayuda a la cosechadora a llegar a la calabaza y recogerla.
       courseE_farmer_functions10_instruction: 'Nadie sabe en que se convertirán estos brotes. Usa las afirmaciones ''si'' para escribir el código para revisar y cosechar cada uno.   '
       courseE_farmer_functions10a1_2018_instruction: '¡Usa todo lo que has apprendido hasta ahora para resolver este rompecabezas!'

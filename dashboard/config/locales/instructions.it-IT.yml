@@ -991,6 +991,10 @@ it:
       4-5 While Loops Assessment 1_instruction: Questo è un esercizio di riepilogo
         -- Ci sono molte buche e mucchi di terra. Aiutami a riempire le buche e a
         rimuovere i mucchi di terra per rendere livellato il terreno.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Idea di progetto: costruisci un gioco di difesa
         nel Laboratorio!'
@@ -1211,6 +1215,7 @@ it:
         make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and
         piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -3252,11 +3257,11 @@ it:
       Course 4 Bee Params 2_instruction: Modifica la funzione `get 3 nectar` (<i>prendi
         3 dosi di nettare</i>) per girare a destra, invece che a sinistra, così l'ape
         può arrivare ai fiori.
-      Course 4 Bee Params 3 (copy 1)_instruction: Ora ci sono fiori su entrambi i
-        lati! E' possibile utilizzare un parametro in modo che la stessa funzione
-        operi per i fiori su entrambi i lati. E' stata aggiunto un parametro denominato
-        "direzione" alla funzione. Se il parametro "direzione" è uguale a 0 si gira
-        a sinistra, se è 1 si gira a destra.
+      Course 4 Bee Params 3 (copy 1)_instruction: Now there are flowers on both sides!
+        Maybe you can use a parameter so that the same function works for flowers
+        on either side. I've added a parameter called "direction" to the function.
+        If the "direction" parameter equals 0 I should turn left, if it's 1 I should
+        turn right.
       Course 4 Bee Params 3_instruction: Ora ci sono fiori su entrambi i lati! Abbiamo
         aggiunto un parametro denominato `direction` (<i>direzione</i>) alla funzione
         `get 3 nectar` (<i>prendi 3 dosi di nettare</i>). Abbiamo anche aggiunto due
@@ -3264,17 +3269,14 @@ it:
         ogni volta la funzione con la direzione giusta. Modifica il codice della funzione
         in modo che l'ape giri nella direzione indicata dal parametro passato alla
         funzione.
-      Course 4 Bee Params 4 (copy 1)_instruction: Provare a utilizzare la nuova funzione
-        per raccogliere tutti i fiori. Ricordate, 0 = sinistra e 1 = destra.
-      Course 4 Bee Params 4 - Two WhenRun_instruction: |-
-        Prova ad utilizzare la tua nuova funzione
-        per raccogliere tutti i fiori. Ricordati di usare le variabili di sinstra e di destra.
-      Course 4 Bee Params 4 backup_instruction: In questo esercizio i fiori hanno
-        diversi quantitativi di nettare. Non sarebbe bello se potessimo raccogliere
-        tutto il nettare con una sola funzione? Prova ad aggiungere, alla tua funzione,
-        un nuovo parametro, chiamato "dosi di nettare", che ti consenta di controllare
-        la quantità di nettare da raccogliere. Probabilmente vorrai anche rinominare
-        la tua funzione!
+      Course 4 Bee Params 4 (copy 1)_instruction: Try using your new function to collect
+        all of the flowers. Remember, 0 = left and 1 = right.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: Try using your new function
+        to collect all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee Params 4 backup_instruction: Wouldn't it be nice if we could collect
+        all of these nectars with the a single function? Try adding a new parameter
+        to your function called "nectars" to control the amount of nectar to collect.
+        You'll probably want to rename the function too!
       Course 4 Bee Params 4_instruction: Usa la nuova versione della funzione `get
         3 nectar` (<i>prendi 3 dosi di nettare</i>) per raccogliere il nettare da
         tutti i fiori. Ricordati di usare le variabili `left` (<i>sinistra</i>) e
@@ -3282,8 +3284,8 @@ it:
       Course 4 Bee Params 5_instruction: Partiamo da zero! Riesci a creare una nuova
         funzione chiamata `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) che usa
         un nuovo parametro chiamato `direction` (<i>direzione </i>)?
-      Course 4 Bee Params 6 (copy 1)_instruction: Prova a utilizzare la nuova funzione
-        per raccogliere tutto questo nettare.
+      Course 4 Bee Params 6 (copy 1)_instruction: Try using your new function to collect
+        all of this nectar.
       Course 4 Bee Params 6_instruction: In questo esercizio, sui fiori si trovano
         quantità differenti di nettare e il codice che trovi già pronto non risolve
         l'esercizio. Non sarebbe bello se potessimo raccogliere tutto il nettare con
@@ -3292,8 +3294,8 @@ it:
         di nettare</i>), che specifica la quantità di nettare da raccogliere. Probabilmente
         sarà meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il
         nome anche ai parametri.
-      Course 4 Bee Params 7 (copy 1)_instruction: Prova a utilizzare la nuova funzione
-        per raccogliere tutto questo nettare.
+      Course 4 Bee Params 7 (copy 1)_instruction: Try using your new function to collect
+        all of this nectar.
       Course 4 Bee Params 7_instruction: Usa la nuova funzione `get many nectar` (<i>prendi
         molte dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8 Clone 2_instruction: Oooh, ora c'è miele di cui occuparsi!
@@ -3314,8 +3316,8 @@ it:
         e `nectar_units` (<i>dosi di nettare</i>), ha anche il nuovo parametro `honey_units`
         (<i>dosi di miele</i>). Come devi modificare il codice della funzione in modo
         da usare i valori di questi parametri per decidere cosa fare?'
-      Course 4 Bee Params Ex_instruction: Prova a utilizzare la nuova funzione per
-        raccogliere tutto questo nettare.
+      Course 4 Bee Params Ex_instruction: Try using your new function to collect all
+        of this nectar.
       Course 4 Binary 1_instruction: Ecco una funzione che accetta una stringa binaria
         di 1 e di 0 e istruisce l'agricoltore per attivare il movimento da sinistra
         a destra, dall'alto verso il basso, accendendo i quadrati in cui il numero
@@ -5444,8 +5446,8 @@ it:
         </xml>
 
         We also support Blockly XML as an inline element like so: <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>. The difference in input format being that this one is embedded within a paragraph, whereas the previous one is in a text block of its own. The difference in output is comparable.
-      Test embedded K1 Blockly in instructions_instruction: Usa tre blocchi `Vai verso
-        ovest` e un blocco `raccogli grano` per risolvere questo puzzle.
+      Test embedded K1 Blockly in instructions_instruction: Usa tre blocchi `O <--`
+        e un blocco `prendi pannocchia` per risolvere questo esercizio.
       Test of comment block_instruction: Drag out the subgoal label block you want.
       Testing Quantum Farmer_instruction: |-
         Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>
@@ -7192,15 +7194,17 @@ it:
         script and would be annoying to do for the allthethings script).'
       allthethings_ttscsp_instruction: Debug the program by fixing the logical error
         within the program. (Click to see full instructions)
-      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
+      artistDebugVideo1_instruction: Usa il ciclo `ripeti` per aggiungere le onde
+        all'acqua.
       artistFunctionsVideo1_instruction: Segui le istruzioni per costruire la tua
         funzione.
       artistLoopsK1_instruction: Questo è un nuovo tipo di esercizio chiamato "Artista".
         Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
         per passare all'esercizio successivo.
-      artistLoopsK2_instruction: Now, use a `repeat` loop to draw this line five times!
-      artistLoopsK2gradek_artist_loops3_instruction: Now, use a `repeat` loop to draw
-        this line five times!
+      artistLoopsK2_instruction: Ora, usa un ciclo `ripeti` per disegnare questa linea
+        cinque volte!
+      artistLoopsK2gradek_artist_loops3_instruction: Ora, usa un ciclo `ripeti` per
+        disegnare questa linea cinque volte!
       artistLoopsK3_instruction: Draw a line eight steps long. This will become the
         land for our kingdom!
       artistLoopsK4_instruction: Now we need a castle with a draw bridge.  Fix the
@@ -7392,8 +7396,9 @@ it:
         casette per gli uccelli?"'
       course1_artist_loops_challenge4_instruction: '"It''s time to toss the dice!
         Can you help me draw these?"'
-      course1_collector_loops_challenge1_instruction: '"Can you help me spot some
-        bugs? I know which way I want to go, but I''m not sure how many steps to take."'
+      course1_collector_loops_challenge1_instruction: '*"Mi aiuti a trovare alcuni
+        errori? So da che parte voglio andare, ma non sono sicura di quanti passi
+        debba fare."*'
       course1_collector_loops_challenge2_instruction: 'This time you can only use
         one of each arrow block. Get all of the treasure! '
       course1_collector_loops_challenge3_instruction: 'This time you can only use
@@ -7599,11 +7604,10 @@ it:
         cadere in acqua!
       courseA_artist_loops11_instruction: Aiutami a costruire i gradini per vedere
         la barca che salpa.
-      courseA_artist_loops11_2018_instruction: Help me build steps to watch the ship
-        sail away.
-      courseA_artist_loops12_instruction: L'Artista ha visto qualcosa di divertente
-        al largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi
-        "Termina" per completare la lezione.
+      courseA_artist_loops11_2018_instruction: Aiutami a costruire i gradini per vedere
+        la barca che salpa.
+      courseA_artist_loops12_instruction: The artist saw something funny in the distance.  Draw
+        what you think he saw.
       courseA_artist_loops12_2018_instruction: The artist saw something funny in the
         distance.  Draw what you think he saw.
       courseA_artist_loops1_2018_instruction: Questo è un nuovo tipo di esercizio
@@ -7617,28 +7621,29 @@ it:
       courseA_artist_loops3_2018_instruction: Disegna cinque volte una linea in avanti.
       courseA_artist_loops4_instruction: Ora, usa un ciclo `ripeti` per disegnare
         questa linea cinque volte!
-      courseA_artist_loops4_2018_instruction: Now, use a `repeat` loop to draw this
-        line five times!
+      courseA_artist_loops4_2018_instruction: Ora, usa un ciclo `ripeti` per disegnare
+        questa linea cinque volte!
       courseA_artist_loops5_instruction: Disegna una linea composta da sette segmenti.
         Questo diventerà il nostro orizzonte.
-      courseA_artist_loops5_2018_instruction: Draw a line seven steps long. This will
-        become our horizon.
+      courseA_artist_loops5_2018_instruction: Disegna una linea composta da sette
+        segmenti. Questo diventerà il nostro orizzonte.
       courseA_artist_loops6_instruction: Mettiamo una bella collina sullo sfondo.
-      courseA_artist_loops6_2018_instruction: Let's put a nice hill in the back.
+      courseA_artist_loops6_2018_instruction: Mettiamo una bella collina sullo sfondo.
       courseA_artist_loops7_instruction: Usa il ciclo `ripeti` per aggiungere le onde
         all'acqua.
-      courseA_artist_loops7_2018_instruction: Use the `repeat` loop to add waves to
-        the water.
-      courseA_artist_loops7_forVideo_instruction: Use the `repeat` loop to add waves
-        to the water.
+      courseA_artist_loops7_2018_instruction: Usa il ciclo `ripeti` per aggiungere
+        le onde all'acqua.
+      courseA_artist_loops7_forVideo_instruction: Usa il ciclo `ripeti` per aggiungere
+        le onde all'acqua.
       courseA_artist_loops8_instruction: Ci serve una scala per salire sulla barca.
-      courseA_artist_loops8_2018_instruction: We need a ladder up to the boat.
+      courseA_artist_loops8_2018_instruction: Ci serve una scala per salire sulla
+        barca.
       courseA_artist_loops9_instruction: 'Sfida: ripara la scaletta.'
       courseA_artist_loops9_2018_instruction: 'Sfida: ripara la scaletta.'
-      courseA_artist_loops_challenge1_instruction: Puoi disegnare una casa? Falla
-        proprio come ti piace!
-      courseA_artist_loops_challenge1_2018_instruction: Puoi disegnare una casa? Falla
-        proprio come ti piace!
+      courseA_artist_loops_challenge1_instruction: Riesci a disegnare una casa? Puoi
+        farla proprio come piace a te!
+      courseA_artist_loops_challenge1_2018_instruction: Riesci a disegnare una casa?
+        Puoi farla proprio come piace a te!
       courseA_artist_loops_challenge2_instruction: '"Puoi aiutarmi a costruire due
         casette per gli uccelli?"'
       courseA_artist_loops_challenge2a_instruction: '*"Aiutami a montare queste tre
@@ -7659,8 +7664,8 @@ it:
         `Prendi Nettare`.
       courseA_bee_seq2_instruction: Conduci l'ape verso il nettare!
       courseA_bee_seq3_instruction: Trova l'errore e correggilo!
-      courseA_bee_seq4_instruction: Prova tu!
-      courseA_bee_seq5_instruction: Prova tu!
+      courseA_bee_seq4_instruction: Prova da solo!
+      courseA_bee_seq5_instruction: Prova da solo!
       courseA_bee_seq6_instruction: Adesso l'ape deve raccogliere il nettare da due
         fiori!
       courseA_bee_seq7_instruction: Aggiungi due blocchi per competare l'esercizio!
@@ -7697,15 +7702,15 @@ it:
       courseA_collector_loops5_instruction: Usa quanto imparato sinora per raccogliere
         tutti i diamanti.
       courseA_collector_loops5_2018_instruction: Usa quanto imparato sinora per raccogliere
-        tutti i tesori.
+        tutti i diamanti.
       courseA_collector_loops6_instruction: Aggiungi dei blocchi a questo programma
         per raccogliere tutti i diamanti.
       courseA_collector_loops6_2018_instruction: Aggiungi dei blocchi a questo programma
-        per raccogliere tutti i tesori.
+        per raccogliere tutti i diamanti.
       courseA_collector_loops7_instruction: Cosa devi aggiungere al codice per raccogliere
         tutti i diamanti?
       courseA_collector_loops7_2018_instruction: Cosa devi aggiungere al codice per
-        raccogliere tutti i tesori?
+        raccogliere tutti i diamanti?
       courseA_collector_loops8_instruction: Scrivi del codice per raccogliere tutti
         i diamanti.
       courseA_collector_loops8_2018_instruction: Scrivi del codice per raccogliere
@@ -7715,16 +7720,15 @@ it:
       courseA_collector_loops9_2018_instruction: "**Sfida:** I diamanti salgono le
         scale! Scrivi il codice per aiutare Laura a raccoglierli tutti."
       courseA_collector_loops_challenge1_instruction: '*"Mi aiuti a trovare alcuni
-        errori? So da che parte voglio andare, ma non sono sicuro di quanti passi
-        devo fare."*'
+        errori?"*'
       courseA_collector_loops_challenge1_2018_instruction: '*"Mi aiuti a trovare alcuni
         errori? So da che parte voglio andare, ma non sono sicuro di quanti passi
         devo fare."*'
       courseA_collector_loops_challenge2_instruction: 'Raccogli tutti i diamanti! '
-      courseA_collector_loops_challenge2kp_instruction: Raccogli almeno *3* diamanti
+      courseA_collector_loops_challenge2kp_instruction: Raccogli almeno **3** diamanti
         per completare questo esercizio.
-      courseA_collector_loops_challenge2kp_2018_instruction: Raccogli almeno *3* pezzi
-        del tesoro per completare questo esercizio.
+      courseA_collector_loops_challenge2kp_2018_instruction: Raccogli almeno **3**
+        diamanti per completare questo esercizio.
       courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \n\nPress
         \"Run\" to see her walk up to the treasure and grab it."
       courseA_collector_preLoops2_instruction: |-
@@ -7740,50 +7744,51 @@ it:
         questo esercizio.
       courseA_collector_preLoops7_instruction: Raccogli tutte e tre le gemme per completare
         l'esercizio.
-      courseA_forVideoTest_artist_instruction: Use the `repeat` loop to add waves
-        to the water.
-      courseA_harvester_forVideo_instruction: Potresti raccogliere tutto il grano
-        utilizzando solo **un** blocco di movimento?
-      courseA_harvester_loops1_instruction: Help the harvester pick all the corn!
-      courseA_harvester_loops10_instruction: Help the harvester pick all five ears
-        of corn!
+      courseA_forVideoTest_artist_instruction: Usa il ciclo `ripeti` per aggiungere
+        le onde all'acqua.
+      courseA_harvester_forVideo_instruction: Riesci a raccogliere tutte le pannocchie
+        usando **un** solo blocco di movimento?
+      courseA_harvester_loops1_instruction: Aiuta la contadina a raccogliere tutte
+        le pannocchie!
+      courseA_harvester_loops10_instruction: Aiuta la contadina a raccogliere tutte
+        e cinque le pannocchie!
       courseA_harvester_loops11_instruction: 'Provane un altro da solo! '
-      courseA_harvester_loops2_instruction: Assicurati di raccogliere tutto il grano!
-      courseA_harvester_loops3_instruction: Potresti raccogliere tutto il grano utilizzando
-        solo **un** blocco di movimento?
-      courseA_harvester_loops4_instruction: Can you help the harvester find the bug
-        in her code?
-      courseA_harvester_loops5_instruction: Provalo! Potresti raccogliere anche il
-        grano alla fine?
-      courseA_harvester_loops5a_instruction: Dai un'occhiata a tutto questo grano!
-        Riusciresti a raccoglierlo tutto da solo?
-      courseA_harvester_loops5b_instruction: Can you change your code to make the
-        harvester pick all the corn?
-      courseA_harvester_loops6_instruction: Avrai bisogno solo di **un** blocco `Vai
-        verso Sud` ed **un** blocco `Vai verso Ovest`.
-      courseA_harvester_loops7_instruction: 'Provalo! '
+      courseA_harvester_loops2_instruction: Assicurati di raccogliere tutte le pannocchie!
+      courseA_harvester_loops3_instruction: Riesci a raccogliere tutte le pannocchie
+        usando **un** solo blocco di movimento?
+      courseA_harvester_loops4_instruction: Puoi aiutare la contadina a trovare l'errore
+        nel programma?
+      courseA_harvester_loops5_instruction: Prova da solo! Riesci a raccogliere anche
+        l'ultima pannocchia?
+      courseA_harvester_loops5a_instruction: Dai un'occhiata a tutte queste pannocchie!
+        Riusciresti a raccoglierle tutte da solo?
+      courseA_harvester_loops5b_instruction: Puoi modificare il programma per fare
+        in modo che la contadina raccolga tutte le pannocchie?
+      courseA_harvester_loops6_instruction: Avrai bisogno di **un** blocco verso Sud
+        `v S` ed **uno** verso Ovest `--> O`.
+      courseA_harvester_loops7_instruction: Prova da solo!
       courseA_harvester_loops8_instruction: Questo è lo stesso puzzle, ma ora dovrai
         ripeterlo **tre** volte!
       courseA_harvester_loops9_instruction: Riesci a capire come raccogliere tutto
         il grano?
-      courseA_harvester_seq1_instruction: Play with these blocks to help the harvester
-        pick the piece of corn.
-      courseA_harvester_seq10_instruction: Assicurati di raccogliere tutto il grano!
-      courseA_harvester_seq11_instruction: Prova tu stesso! Raccogli tutto il grano.
-      courseA_harvester_seq12_instruction: Raccogli tutto il grano.
+      courseA_harvester_seq1_instruction: Gioca con questi blocchi per aiutare la
+        contadina a raccogliere la pannocchia.
+      courseA_harvester_seq10_instruction: Assicurati di raccogliere tutte le pannocchie!
+      courseA_harvester_seq11_instruction: Prova da solo! Raccogli tutte le pannocchie.
+      courseA_harvester_seq12_instruction: Raccogli tutte le pannocchie.
       courseA_harvester_seq13_instruction: Play with these blocks to help the harvester
         pick corn.
-      courseA_harvester_seq2_instruction: Usa tre blocchi `Vai verso ovest` e un blocco
-        `raccogli grano` per risolvere questo puzzle.
-      courseA_harvester_seq3_instruction: Usa tre blocchi `Vai verso Nord` e un blocco
-        `Raccogli Grano` per risolvere questo puzzle.
-      courseA_harvester_seq4_instruction: Add one block to help the harvester pick
-        the corn.
+      courseA_harvester_seq2_instruction: Usa tre blocchi `O <--` e un blocco `prendi
+        pannocchia` per risolvere questo esercizio.
+      courseA_harvester_seq3_instruction: Usa tre blocchi `N ^` e un blocco `prendi
+        pannocchia`.
+      courseA_harvester_seq4_instruction: Aggiungi un blocco per aiutare la contadina
+        a raccogliere la pannocchia.
       courseA_harvester_seq5_instruction: Trova l'errore e correggilo!
-      courseA_harvester_seq6_instruction: Prova tu!
-      courseA_harvester_seq7_instruction: Prova tu!
-      courseA_harvester_seq8_instruction: Now the harvester needs to pick corn two
-        times!
+      courseA_harvester_seq6_instruction: Prova da solo!
+      courseA_harvester_seq7_instruction: Prova da solo!
+      courseA_harvester_seq8_instruction: Ora la contadina dovrà raccogliere pannocchie
+        due volte!
       courseA_harvester_seq9_instruction: Aggiungi due blocchi per competare l'esercizio!
       courseA_maze_ramp2_2018_instruction: Unisci tutti i blocchi per completare il
         programma, poi fai clic su "Esegui".
@@ -7792,10 +7797,11 @@ it:
       courseA_maze_ramp3_2018_instruction: |-
         C'è un blocco di troppo che fa andare a sbattere l'uccellino.
         Buttalo via trascinandolo nella cassetta degli attrezzi.
-      courseA_maze_ramp3a_2018_instruction: Aggiungi un blocco `Nord ^` come ultimo
-        blocco, poi clicca su "▶ Esegui".
-      courseA_maze_ramp3b_2018_instruction: C'è un blocco di troppo alla fine di questo
-        codice! Per eliminarlo, trascinarlo nella cassetta degli attrezzi.
+      courseA_maze_ramp3a_2018_instruction: Aggiungi un blocco verso Nord `N ^` come
+        ultimo blocco, poi clicca su "▶ Esegui".
+      courseA_maze_ramp3b_2018_instruction: Per completare il programma, aggiungi
+        in fondo al codice un blocco in direzione Nord `N ^`, infine clicca su "▶
+        Esegui".
       courseA_maze_ramp4_2018_instruction: Evita la dinamite (TNT) o ci lascio le
         penne!
       courseA_maze_ramp4a_2018_instruction: Riesci a capire quale blocco devi aggiungere
@@ -7860,11 +7866,11 @@ it:
         ci lascerà le penne!
       courseA_playLab_events1_instruction: Questo è il Laboratorio. Metti dei blocchi
         nell'area di lavoro e prova a vedere cosa succede!
-      courseA_playLab_events1_2018_instruction: This is a Play Lab level.  Move blocks
-        to the workspace and see what happens!
+      courseA_playLab_events1_2018_instruction: Questo è il Laboratorio. Metti dei
+        blocchi nell'area di lavoro e prova a vedere cosa succede!
       courseA_playLab_events2_instruction: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
-      courseA_playLab_events2_2018_instruction: Jorge the Dog wants to say "Hi there."  Can
-        you help him?
+      courseA_playLab_events2_2018_instruction: Il cane, vuole dire "Ciao". Riesci
+        ad aiutarlo?
       courseA_playLab_events3_instruction: Aggancia il blocco `sposta il cane a sinistra`
         al blocco verde dell'evento `quando si preme la freccia sinistra` che si trova
         già nell'area di lavoro.
@@ -7874,42 +7880,44 @@ it:
       courseA_playLab_events4_instruction: Ora fai muovere il cane a destra quando
         si preme la freccia a destra.
       courseA_playLab_events4_2018_instruction: Aggiungi un altro blocco evento per
-        far muovere Jorge verso destra quando il pulsante `destro` è premuto.
+        far muovere il cane a destra quando si preme la freccia a destra.
       courseA_playLab_events5_instruction: Aggiungi gli eventi per far muovere il
         cane su e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events5_2018_instruction: Add events to have Jorge move up and
-        down when the `up` and `down` buttons are pressed.
+      courseA_playLab_events5_2018_instruction: Aggiungi gli eventi per far muovere
+        il cane su e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events6_instruction: Rendi questa scena più interessante, cambiando
         lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
-      courseA_playLab_events6_2018_instruction: Make this more interesting by changing
-        the background and playing a random sound when Jorge is clicked.
+      courseA_playLab_events6_2018_instruction: Rendi questa scena più interessante,
+        cambiando lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
       courseA_playLab_events7_instruction: Aggiungi ciò che vuoi a questo gioco. Riesci
         a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui?
         (Quando sei soddisfatto, premi "Termina" per completare il corso.)
-      courseA_playLab_events7_2018_instruction: "*Freeplay:* Add anything you want
-        to this game."
-      courseA_playlab_events_challenge1_instruction: Can you write code to show the
-        rest of my friends? The hints will help you do this project step-by-step.
-      courseA_playlab_events_challenge1_2018_instruction: Can you write code to show
-        the rest of my friends? The hints will help you do this project step-by-step.
-      courseA_playlab_events_challenge2_instruction: Give everyone something to do
-        when you click on them.
-      courseA_playlab_events_challenge2_2018_instruction: Give everyone something
-        to do when you click on them.
+      courseA_playLab_events7_2018_instruction: "*Tempo di giocare:* Aggiungi ciò
+        che vuoi a questo gioco."
+      courseA_playlab_events_challenge1_instruction: Riesci a scrivere un programma
+        per mostrare gli altri miei amici? I suggerimenti ti aiuteranno a realizzare
+        questo progetto passo dopo passo.
+      courseA_playlab_events_challenge1_2018_instruction: Riesci a scrivere un programma
+        per mostrare gli altri miei amici? I suggerimenti ti aiuteranno a realizzare
+        questo progetto passo dopo passo.
+      courseA_playlab_events_challenge2_instruction: Dai ad ognuno di loro qualcosa
+        da fare quando ci clicchi sopra.
+      courseA_playlab_events_challenge2_2018_instruction: Dai ad ognuno di loro qualcosa
+        da fare quando ci clicchi sopra.
       courseA_playlab_events_challengeClone_instruction: Where are my friends hiding?
         Can you write code to show the rest of my friends?
       courseA_toMakeLoopsVideo_Collector_instruction: Loops let you do whatever is
         inside over and over again!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseA_video_events_2018_instruction: Need a better playlab/events combo
-      courseB_Scrat_ramp1_2018_instruction: For this puzzle, snap the blocks together
-        and press "▶ Run"!
-      courseB_Scrat_ramp2_2018_instruction: Snap all blocks together to finish your
-        code, then click "▶ Run".
-      courseB_Scrat_ramp3a_2018_instruction: Aggiungi un blocco `Nord ^` come ultimo
-        blocco, poi clicca su "▶ Esegui".
-      courseB_Scrat_ramp3b_2018_instruction: "Drag the extra block back to the toolbox
-        to throw it away.\n\n"
+      courseB_Scrat_ramp1_2018_instruction: Per risolvere questo esercizio, aggancia
+        insieme i blocchi e clicca su "▶ Esegui"!
+      courseB_Scrat_ramp2_2018_instruction: Unisci tutti i blocchi per finire il tuo
+        codice, poi fai click su "▶ Esegui".
+      courseB_Scrat_ramp3a_2018_instruction: Aggiungi un blocco verso Nord `N ^` come
+        ultimo blocco, poi clicca su "▶ Esegui".
+      courseB_Scrat_ramp3b_2018_instruction: Trascinarlo il blocco in eccesso nella
+        cassetta degli attrezzi per eliminarlo.
       courseB_Scrat_ramp4a_2018_instruction: Riesci a capire quale blocco devi aggiungere
         alla fine di questo programma per completare l'esercizio?
       courseB_Scrat_ramp5a_2018_instruction: Fai arrivare l'uccellino fino al maialino!
@@ -8069,6 +8077,7 @@ it:
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the
         acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Aggiungi 2 blocchi per far arrivare l'uccellino
         fino al maialino.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat
@@ -8820,7 +8829,7 @@ it:
         a square` (*disegna un quadrato*) per creare gli occhiali. '
       courseD_artist_functions3_instruction: Puoi realizzare questo disegno aggiungendo
         un blocco `ripeti ... volte`.
-      courseD_artist_functions4_instruction: Ora che sai disegnare una stella, provare
+      courseD_artist_functions4_instruction: Ora che sai disegnare una stella, prova
         a disegnarne quattro!
       courseD_artist_functions5_instruction: Devi disegnare solo queste tre stelle
         per completare questo esercizio.
@@ -9600,10 +9609,10 @@ it:
         un blocco `ripeti ... volte`.
       courseE_artist_functions3_2018_instruction: Build a function that will create
         this star.
-      courseE_artist_functions4_instruction: Ora che sai disegnare una stella, provare
+      courseE_artist_functions4_instruction: Ora che sai disegnare una stella, prova
         a disegnarne quattro!
       courseE_artist_functions4_2018_instruction: Ora che sai disegnare una stella,
-        provare a disegnarne quattro!
+        prova a disegnarne quattro!
       courseE_artist_functions5_instruction: Devi disegnare solo queste tre stelle
         per completare questo esercizio.
       courseE_artist_functions5_2018_instruction: Devi disegnare solo queste tre stelle
@@ -9762,6 +9771,8 @@ it:
         far tornare l'artista indietro in modo tale da disegnare le righe successive.
         Quale sequenza di blocchi devi posizionare alla fine del ciclo più esterno
         per raggiungere questo obiettivo?
+      courseE_farmer_elseif_test_instruction: Riempi la buca al termine di ogni tratto
+        di questo percorso.
       courseE_farmer_functions1_instruction: Aiuta la contadina a raggiungere la zucca
         e raccoglierla.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will
@@ -11332,7 +11343,7 @@ it:
       grade4_artist_functions_stars0_instruction: Puoi realizzare questo disegno aggiungendo
         un blocco `ripeti ... volte`.
       grade4_artist_functions_stars1_instruction: Ora che sai disegnare una stella,
-        provare a disegnarne quattro!
+        prova a disegnarne quattro!
       grade4_artist_functions_stars2_instruction: Devi disegnare solo queste tre stelle
         per completare questo esercizio.
       grade4_artist_functions_stars3_instruction: That last one is tough if you only
@@ -12025,22 +12036,23 @@ it:
         her around and get as much gold as you can!
       gradek_artist_loops1_instruction: 'Aiuta l''artista a disegnare questa linea:
         due volte avanti.'
-      gradek_artist_loops2_instruction: Our artist is trying to draw a line five times,
-        but can't get it right.  Can you help?
-      gradek_artist_loops3_instruction: Now, use a `repeat` loop to draw this line
-        five times!
-      gradek_artist_loops4_instruction: Draw a line seven steps long. This will become
-        our horizon.
-      gradek_artist_loops5_instruction: Let's put a nice hill in the back.
-      gradek_artist_loops6_instruction: Use the `repeat` loop to add waves to the
-        water.
-      gradek_artist_loops7_instruction: We need a ladder up to the boat.
-      gradek_artist_loops8_instruction: 'Challenge: The stairs down to the dock are
-        broken.  Help me fix them.'
-      gradek_artist_loops9_instruction: Time to head back to land. Help me put down
-        stones so I don't fall in!
-      gradek_artist_loopsA_instruction: Help me build steps to watch the ship sail
-        away.
+      gradek_artist_loops2_instruction: Il nostro artista sta cercando di disegnare
+        cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi
+        aiutarlo?
+      gradek_artist_loops3_instruction: Ora, usa un ciclo `ripeti` per disegnare questa
+        linea cinque volte!
+      gradek_artist_loops4_instruction: Disegna una linea composta da sette segmenti.
+        Questo diventerà il nostro orizzonte.
+      gradek_artist_loops5_instruction: Mettiamo una bella collina sullo sfondo.
+      gradek_artist_loops6_instruction: Usa il ciclo `ripeti` per aggiungere le onde
+        all'acqua.
+      gradek_artist_loops7_instruction: Ci serve una scala per salire sulla barca.
+      gradek_artist_loops8_instruction: 'Sfida: la scaletta per scendere al molo è
+        rotta, aiutami a ripararla.'
+      gradek_artist_loops9_instruction: È ora di tornare a terra. Aiutami a posizionare
+        le pietre così non cado in acqua!
+      gradek_artist_loopsA_instruction: Aiutami a costruire i gradini per vedere la
+        barca che salpa.
       gradek_artist_loopsFP_instruction: The artist saw something funny in the distance.  Draw
         what you think he saw.
       gradek_artist_loopsPre_instruction: Questo è un nuovo tipo di esercizio chiamato
@@ -12050,8 +12062,7 @@ it:
         is clicked.
       gradek_playlab_events1a_instruction: Add a block so that when you click the
         "up" button, Olive the Cat walks up.
-      gradek_playlab_events1c_instruction: Jorge the Dog wants to say "Hi there."  Can
-        you help him?
+      gradek_playlab_events1c_instruction: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
       gradek_playlab_events2_instruction: Edit the code so that when the second bird
         is clicked, your program plays a sound!
       gradek_playlab_events2a_instruction: Add a block so that when you click "down"
@@ -12071,20 +12082,20 @@ it:
         fourth bird is clicked. Be creative!
       gradek_playlab_events4a_instruction: Add a block so that Olive the Cat moves
         left when you click the "left" button.
-      gradek_playlab_events4c_instruction: Add events to have Jorge move up and down
-        when the `up` and `down` buttons are pressed.
+      gradek_playlab_events4c_instruction: Aggiungi gli eventi per far muovere il
+        cane su e giù quando si premono le frecce in su e in giù.
       gradek_playlab_events5_instruction: About My Robot Project! Write code so that
         clicking on each bird shows a new fact about your robot.
       gradek_playlab_events5a_instruction: About My Robot Project! Write code so that
         clicking on each bird shows a new fact about your robot.
-      gradek_playlab_events5c_instruction: Make this more interesting by changing
-        the background and playing a random sound when Jorge is clicked.
+      gradek_playlab_events5c_instruction: Rendi questa scena più interessante, cambiando
+        lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
       gradek_playlab_eventsA_instruction: Now, have the cat change to a random size
         AND have it play a random sound when you click the center button.
       gradek_playlab_eventsFP_instruction: Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
-      gradek_playlab_eventsPre_instruction: This is a Play Lab level.  Move blocks
-        to the workspace and see what happens!
+      gradek_playlab_eventsPre_instruction: Questo è il Laboratorio. Metti dei blocchi
+        nell'area di lavoro e prova a vedere cosa succede!
       group test_instruction: Make a game
       harvester_Kahoot_instruction: Now help the farmer pick the corn, lettuce, **and**
         pumpkin.
@@ -12154,8 +12165,9 @@ it:
       k-1 maze 1_instruction: |-
         Riesci a spostarmi verso Ovest per prendere il maialino?<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-4#VIDEO" target="_blank">Video doppiato in italiano</a>
-      k1stickerfreeplay_instruction: The artist saw something funny in the distance.  Draw
-        what you think he saw.
+      k1stickerfreeplay_instruction: L'artista ha visto qualcosa di divertente al
+        largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi "Termina"
+        per completare la lezione.
       kikiTesta_instruction: |-
         Our adventurer wants to collect coins.  But she can only use 4 blocks to get them.
 
@@ -12271,8 +12283,7 @@ it:
         the forward arrow.
       playEventsK6_instruction: Have Robin talk back to Jorge when you click on her.
       playEventsK7_instruction: What else can you do in this fun scene?
-      playLabDebugVideo1_instruction: Jorge the Dog wants to say "Hi there."  Can
-        you help him?
+      playLabDebugVideo1_instruction: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
       ramp_artist_loops1_instruction: Vai avanti di 60 pixel per completare l'esercizio.
       ramp_artist_loops1_2018_instruction: Vai avanti di 60 pixel per completare l'esercizio.
       ramp_artist_loops2_instruction: Vai avanti cinque volte e disegna queste linee
