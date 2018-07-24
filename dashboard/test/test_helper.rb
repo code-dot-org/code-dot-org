@@ -1,5 +1,7 @@
 require 'test_reporter'
 
+ActiveRecord::Migration&.check_pending!
+
 # This is a workaround for https://github.com/kern/minitest-reporters/issues/230
 Minitest.load_plugins
 Minitest.extensions.delete('rails')
