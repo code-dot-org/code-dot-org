@@ -303,7 +303,7 @@ class ChannelsApi < Sinatra::Base
   #
   delete %r{/v3/channels/([^/]+)/abuse$} do |id|
     # UserPermission::PROJECT_VALIDATOR
-    not_authorized unless has_permission?('project_validator')
+    not_authorized unless project_validator?
 
     dont_cache
     content_type :json

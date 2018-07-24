@@ -12,7 +12,6 @@ style_min: true
 ---
 %script{src: "https://cdn.optimizely.com/js/400912536.js"}
 =inline_css 'homepage.css'
-=inline_css 'user-hero.css'
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]
@@ -31,10 +30,6 @@ style_min: true
     = view :homepage_below_hero_announcement
     #petitionexpand{style: "display: block"}
       = view :petition_expand
-
-  #user_hero
-    .container_responsive
-      #user_hero
 
   = view :homepage_sections
   = view :homepage_gallery
