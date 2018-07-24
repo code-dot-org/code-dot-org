@@ -68,12 +68,12 @@ th:
         2-3_Artist_Debugging_9_b: คุณไม่จำเป็นต้องเพิ่มบล็อกเข้าไปอีกบล็อกหนึ่งเพื่อเพิ่มองศาการหัน
           เพียงแค่บวกอีก 60 องศาเข้าไปกับจำนวนองศาในบล็อก `หันซ้าย` ที่มีอยู่เดิม!
       2-3 Artist Functions 1 a_authored_hint:
-        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน 100 พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
-          175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมจตุรัสแต่ละกรอบมีด้าน 100 พิกเซล นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
+          175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ
         2-3_Artist_Functions_1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน ๑๐๐ พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
-          175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมจตุรัสแต่ละกรอบมีด้าน 100 พิกเซล นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
+          175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ
         2-3_Artist_Functions_1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
       2-3 Artist Functions 11 a_authored_hint:
         2-3_Artist_Functions_11_a: คุณจะต้องเปลี่ยนไม่เพียงแต่จำนวนและความยาวของด้านภายในฟังก์ชัน
@@ -353,11 +353,13 @@ th:
       4-5 Bee Conditionals 4_authored_hint:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       4-5 Bee Conditionals 5_authored_hint:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       4-5 Bee Conditionals 6_authored_hint:
         4-5 Bee Conditionals 6_a: คุณสามารถแก้ปริศนานี้โดยใช้เฉพาะบล็อกที่อยู่ในพื้นที่ทำงาน
           มันควรถูกจัดลำดับอย่างไร?
@@ -4188,13 +4190,11 @@ th:
         mc_4_b: The `destroy block` command cuts down the tree in front of you.
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: Click the arrow on the `place` block to choose what you want to place.
-        mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens,
-          even if you haven't solved the puzzle yet.
+        mc_6_b: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
         mc_6_c: You can put more than one block inside of a `repeat` loop.
       Overworld House Frame Chosen_2018_authored_hint:
         mc_6_a: Click the arrow on the `place` block to choose what you want to place.
-        mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens,
-          even if you haven't solved the puzzle yet.
+        mc_6_b: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
         mc_6_c: You can put more than one block inside of a `repeat` loop.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: 'The `move forward` block is at the top of the toolbox.  '
@@ -4208,14 +4208,12 @@ th:
         mc_5_a: Use the `place` block first, and then the `move` block.
         mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code
           more than once.
-        mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens,
-          even if you haven't solved the puzzle yet.
+        mc_5_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       Overworld Place Wall_2018_authored_hint:
         mc_5_a: Use the `place` block first, and then the `move` block.
         mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code
           more than once.
-        mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens,
-          even if you haven't solved the puzzle yet.
+        mc_5_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       Overworld Plant Crops_authored_hint:
         mc_7_a: Use the `plant crop` block to plant a crop in the space where you
           are standing.
@@ -4238,14 +4236,12 @@ th:
         mc_3_a: 'The `shear` block gets the sheep in front of you. Are you facing
           the sheep?  '
         mc_3_b: 'If you need to change the way you are facing, use a `turn` block.  '
-        mc_3_c: 'Don''t be afraid to make a mistake! Run the code to see what happens,
-          even if you haven''t solved the puzzle yet.  '
+        mc_3_c: 'ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม  '
       Overworld Shear Sheep_2018_authored_hint:
         mc_3_a: 'The `shear` block gets the sheep in front of you. Are you facing
           the sheep?  '
         mc_3_b: 'If you need to change the way you are facing, use a `turn` block.  '
-        mc_3_c: 'Don''t be afraid to make a mistake! Run the code to see what happens,
-          even if you haven''t solved the puzzle yet.  '
+        mc_3_c: 'ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม  '
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
           Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
@@ -4286,15 +4282,13 @@ th:
           you going to get over there?
         mc_10_b: When you are standing at the edge of the lava, use `place cobblestone
           ahead` to make a safe path. Then, you can walk over it!
-        mc_10_c: Don't be afraid to make a mistake! Run the code to see what happens,
-          even if you haven't solved the puzzle yet.
+        mc_10_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       Underground Iron_2018_authored_hint:
         mc_10_a: The iron blocks are the speckled spaces behind the torch! How are
           you going to get over there?
         mc_10_b: When you are standing at the edge of the lava, use `place cobblestone
           ahead` to make a safe path. Then, you can walk over it!
-        mc_10_c: Don't be afraid to make a mistake! Run the code to see what happens,
-          even if you haven't solved the puzzle yet.
+        mc_10_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       Underground Mining Coal_authored_hint:
         mc_9_a: Are you facing the right way? The `destroy block` mines the block
           in front of you.
@@ -8077,45 +8071,50 @@ th:
           Change the animals' moods!
       courseB_scrat_forVideo_authored_hint: {}
       courseB_starWars_prog1_authored_hint:
-        courseB_starWars_prog1_a: ลองเพิ่มบล็อกทีละครั้งจากนั้นเรียกใช้โค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น
+        courseB_starWars_prog1_a: ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น
         courseB_starWars_prog1_b: |
-          You will want to move East to solve this puzzle. How far do you need to move?
+          คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?
           <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog10_authored_hint: {}
       courseB_starWars_prog10_2018_authored_hint: {}
       courseB_starWars_prog11_authored_hint: {}
       courseB_starWars_prog11_2018_authored_hint: {}
       courseB_starWars_prog1_2018_authored_hint:
-        courseB_starWars_prog1_a: ลองเพิ่มบล็อกทีละครั้งจากนั้นเรียกใช้โค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น
+        courseB_starWars_prog1_a: ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น
         courseB_starWars_prog1_b: |
-          You will want to move East to solve this puzzle. How far do you need to move?
+          คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?
           <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2_authored_hint:
-        courseB_starWars_prog2_a: Split this problem into two parts. Get one one pile
-          of scrap metal, then figure out how to get to the other one.
+        courseB_starWars_prog2_a: ให้แบ่งปัญหาออกเป็นสองส่วน ส่วนแรกไปเอากองโลหะกองหนึ่งให้ได้
+          แล้วหาวิธีไปเอาอีกกองหนึ่ง
       courseB_starWars_prog2_2018_authored_hint:
-        courseB_starWars_prog2_a: Split this problem into two parts. Get one one pile
-          of scrap metal, then figure out how to get to the other one.
+        courseB_starWars_prog2_a: ให้แบ่งปัญหาออกเป็นสองส่วน ส่วนแรกไปเอากองโลหะกองหนึ่งให้ได้
+          แล้วหาวิธีไปเอาอีกกองหนึ่ง
       courseB_starWars_prog3_authored_hint:
-        courseB_starWars_prog3_a: You will need to move 3 ways to solve this puzzle.
-        courseB_starWars_prog3_b: Build one piece of code at a time. Run it to figure
-          out where to go from there.
+        courseB_starWars_prog3_a: คุณต้องมีการเคลื่อนไหวไปใน 3 ทิศทางเพื่อแก้ปริศนาด่านนี้
+        courseB_starWars_prog3_b: สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป
       courseB_starWars_prog3_2018_authored_hint:
-        courseB_starWars_prog3_a: You will need to move 3 ways to solve this puzzle.
-        courseB_starWars_prog3_b: Build one piece of code at a time. Run it to figure
-          out where to go from there.
+        courseB_starWars_prog3_a: คุณต้องมีการเคลื่อนไหวไปใน 3 ทิศทางเพื่อแก้ปริศนาด่านนี้
+        courseB_starWars_prog3_b: สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป
       courseB_starWars_prog4_authored_hint:
-        courseB_starWars_prog4_a: Build one piece of code at a time. Run it to figure
-          out where to go from there.
-        courseB_starWars_prog4_b: ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
+        courseB_starWars_prog4_a: สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป
+        courseB_starWars_prog4_b: |-
+          ลองใช้บล็อก `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog4_2018_authored_hint:
-        courseB_starWars_prog4_a: Build one piece of code at a time. Run it to figure
-          out where to go from there.
-        courseB_starWars_prog4_b: ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
+        courseB_starWars_prog4_a: สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป
+        courseB_starWars_prog4_b: |-
+          ลองใช้บล็อก `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog5_authored_hint:
-        courseB_starWars_prog5_a: รูปแบบดูเหมือนปริศนาที่แล้วไหม
-        courseB_starWars_prog5_b: BB-8 will grab the scrap metal as he rolls over
-          it.
+        courseB_starWars_prog5_a: รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม
+        courseB_starWars_prog5_b: บีบี-8 จะคว้าเศษซากโลหะตอนที่เขากลิ้งผ่านและทับมันไป
         courseB_starWars_prog5_c: Trace this pattern with your finger. Count the pieces
           of metal as you move.
         courseB_starWars_prog5_da: |-
@@ -8123,9 +8122,8 @@ th:
 
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2018_authored_hint:
-        courseB_starWars_prog5_a: รูปแบบดูเหมือนปริศนาที่แล้วไหม
-        courseB_starWars_prog5_b: BB-8 will grab the scrap metal as he rolls over
-          it.
+        courseB_starWars_prog5_a: รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม
+        courseB_starWars_prog5_b: บีบี-8 จะคว้าเศษซากโลหะตอนที่เขากลิ้งผ่านและทับมันไป
         courseB_starWars_prog5_c: Trace this pattern with your finger. Count the pieces
           of metal as you move.
         courseB_starWars_prog5_da: |-
@@ -8133,52 +8131,44 @@ th:
 
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog6_authored_hint:
-        courseB_starWars_prog6_a: This pattern is just a stair step with two moves
-          per direction!
-        courseB_starWars_prog6_b: ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
+        courseB_starWars_prog6_a: รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง
+        courseB_starWars_prog6_b: |-
+          ลองใช้บล็อก `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog6_2018_authored_hint:
-        courseB_starWars_prog6_a: This pattern is just a stair step with two moves
-          per direction!
-        courseB_starWars_prog6_b: ลองใช้บล็อก ' ทำซ้ำ ' เพื่อให้โค้ดสั้นลง
+        courseB_starWars_prog6_a: รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง
+        courseB_starWars_prog6_b: |-
+          ลองใช้บล็อก `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
+          <xml>  <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
       courseB_starWars_prog7_authored_hint:
-        courseB_starWars_prog7_a: รูปแบบดูเหมือนปริศนาที่แล้วไหม
-        courseB_starWars_prog7_b: BB-8 will grab the scrap metal as he rolls over
-          it.
-        courseB_starWars_prog7_c: ลองวาดรูปแบบขั้นตอนบันไดกับปริศนานี้ มันครอบคลุมเศษซากโลหะทั้งหมดหรือไม่
+        courseB_starWars_prog7_a: รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม
+        courseB_starWars_prog7_b: บีบี-8 จะคว้าเศษซากโลหะตอนที่เขากลิ้งผ่านและทับมันไป
+        courseB_starWars_prog7_c: ลองวาดรูปแบบขั้นบันไดให้ทับซ้อนไปบนปริศนานี้ ดูว่ามันครอบคลุมเศษซากโลหะทั้งหมดหรือไม่?
       courseB_starWars_prog7_2018_authored_hint:
-        courseB_starWars_prog7_a: รูปแบบดูเหมือนปริศนาที่แล้วไหม
-        courseB_starWars_prog7_b: BB-8 will grab the scrap metal as he rolls over
-          it.
-        courseB_starWars_prog7_c: ลองวาดรูปแบบขั้นตอนบันไดกับปริศนานี้ มันครอบคลุมเศษซากโลหะทั้งหมดหรือไม่
+        courseB_starWars_prog7_a: รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม
+        courseB_starWars_prog7_b: บีบี-8 จะคว้าเศษซากโลหะตอนที่เขากลิ้งผ่านและทับมันไป
+        courseB_starWars_prog7_c: ลองวาดรูปแบบขั้นบันไดให้ทับซ้อนไปบนปริศนานี้ ดูว่ามันครอบคลุมเศษซากโลหะทั้งหมดหรือไม่?
       courseB_starWars_prog8_authored_hint:
-        courseB_starWars_prog8_a: โอเคที่จะกลับไปใช้ที่ที่คุณได้เดินทางไปแล้วอีกทีหนึึ่ง
-        courseB_starWars_prog8_b: |-
-          Try using the `repeat` block to see what happens to the code that you put inside.
-
-          <xml>
-          <block type="controls_repeat_simplified">
-          <title name="TIMES">3</title>
-          </block>
-          </xml>
+        courseB_starWars_prog8_a: ไม่เป็นไร ที่คุณจะย้อนกลับไปใช้เส้นทางที่คุณได้เคลื่อนที่ผ่านไปแล้วอีกครั้งหนึ่ง
+        courseB_starWars_prog8_b: ลองใช้บล็อก ` ทำซ้ำ `เพื่อดูว่าเกิดอะไรขึ้นกับโค้ดที่คุณใส่เอาไว้ข้างในบล็อกนั้น
       courseB_starWars_prog8_2018_authored_hint:
-        courseB_starWars_prog8_a: โอเคที่จะกลับไปใช้ที่ที่คุณได้เดินทางไปแล้วอีกทีหนึึ่ง
-        courseB_starWars_prog8_b: |-
-          Try using the `repeat` block to see what happens to the code that you put inside.
-
-          <xml>
-          <block type="controls_repeat_simplified">
-          <title name="TIMES">3</title>
-          </block>
-          </xml>
+        courseB_starWars_prog8_a: ไม่เป็นไร ที่คุณจะย้อนกลับไปใช้เส้นทางที่คุณได้เคลื่อนที่ผ่านไปแล้วอีกครั้งหนึ่ง
+        courseB_starWars_prog8_b: ลองใช้บล็อก ` ทำซ้ำ `เพื่อดูว่าเกิดอะไรขึ้นกับโค้ดที่คุณใส่เอาไว้ข้างในบล็อกนั้น
       courseB_starWars_prog9_authored_hint:
-        courseB_starWars_prog9_a: Don't be afraid to make a mistake! Run the code
-          to see what happens, even if you haven't solved the puzzle yet.
-        courseB_starWars_prog9_b: There are many ways to solve this puzzle.
+        courseB_starWars_prog9_a: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น
+          แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
+        courseB_starWars_prog9_b: มีวิธีการแก้ปริศนานี้ได้ หลากหลายวิธี
         courseB_starWars_prog9_c: คุณสามารถใช้ลูป `ทำซ้ำ`ได้ที่นี่หรือไม่
       courseB_starWars_prog9_2018_authored_hint:
-        courseB_starWars_prog9_a: Don't be afraid to make a mistake! Run the code
-          to see what happens, even if you haven't solved the puzzle yet.
-        courseB_starWars_prog9_b: There are many ways to solve this puzzle.
+        courseB_starWars_prog9_a: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น
+          แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
+        courseB_starWars_prog9_b: มีวิธีการแก้ปริศนานี้ได้ หลากหลายวิธี
         courseB_starWars_prog9_c: คุณสามารถใช้ลูป `ทำซ้ำ`ได้ที่นี่หรือไม่
       courseC_PlayLab_embed_events9_authored_hint: {}
       courseC_PlayLab_events1_authored_hint:
@@ -9478,22 +9468,22 @@ th:
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_a: When BB-8 rolls over scrap metal he picks it up
           automatically.
-        courseC_starWars_loops1_b: Don't be afraid to make a mistake! Run the code
-          to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops1_b: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น
+          แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve
           this puzzle.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: รูปแบบนี้ดูเหมือนชุดที่ใหญ่กว่าของขั้นบันได? ดูว่าคุณสามารถใช้สิ่งที่คุณเรียนรู้จากปริศนาก่อนหน้านี้ที่เกี่ยวกับการเลี้ยวไปมาทางซ้ายทางขวามาใช้ที่นี่
         courseC_starWars_loops10_b: "If you want to use less code, you can put one
           `repeat` loop inside of another!   \nThis is called a **nested loop**."
-        courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code
-          to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops10_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น
+          แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       courseC_starWars_loops10_2018_authored_hint:
         courseC_starWars_loops10_a: รูปแบบนี้ดูเหมือนชุดที่ใหญ่กว่าของขั้นบันได? ดูว่าคุณสามารถใช้สิ่งที่คุณเรียนรู้จากปริศนาก่อนหน้านี้ที่เกี่ยวกับการเลี้ยวไปมาทางซ้ายทางขวามาใช้ที่นี่
         courseC_starWars_loops10_b: "If you want to use less code, you can put one
           `repeat` loop inside of another!   \nThis is called a **nested loop**."
-        courseC_starWars_loops10_c: Don't be afraid to make a mistake! Run the code
-          to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops10_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น
+          แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       courseC_starWars_loops10_predict2_authored_hint: {}
       courseC_starWars_loops10_predict2_2018_authored_hint: {}
       courseC_starWars_loops11_authored_hint: {}
@@ -9501,8 +9491,8 @@ th:
       courseC_starWars_loops1_2018_authored_hint:
         courseC_starWars_loops1_a: When BB-8 rolls over scrap metal he picks it up
           automatically.
-        courseC_starWars_loops1_b: Don't be afraid to make a mistake! Run the code
-          to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops1_b: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น
+          แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve
           this puzzle.
       courseC_starWars_loops2_authored_hint:
@@ -9546,15 +9536,15 @@ th:
           a simple stair step. Does that cover all of the scrap metal?
         courseC_starWars_loops7_b: If you are having trouble with this puzzle, try
           writing all of the moves on a piece of paper and looking for a pattern.
-        courseC_starWars_loops7_c: Don't be afraid to make a mistake! Run the code
-          to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops7_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น
+          แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       courseC_starWars_loops7_2018_authored_hint:
         courseC_starWars_loops7_a: This pattern looks harder than it is! Start with
           a simple stair step. Does that cover all of the scrap metal?
         courseC_starWars_loops7_b: If you are having trouble with this puzzle, try
           writing all of the moves on a piece of paper and looking for a pattern.
-        courseC_starWars_loops7_c: Don't be afraid to make a mistake! Run the code
-          to see what happens, even if you haven't solved the puzzle yet.
+        courseC_starWars_loops7_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น
+          แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       courseC_starWars_loops8_authored_hint:
         course_starWars_loops8_a: Try thinking about this problem in small parts.
           Take your time. You don't need to solve it on the first try!
@@ -10318,7 +10308,7 @@ th:
         courseD_bee_conditionals7_a: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
 
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
         courseD_bee_conditionals7_b: ถ้าไม่มีดอกไม้ภายใต้ก้อนเมฆ ก็ต้องมีรวงผึ้ง ดังนั้นไม่จำเป็นเลยที่จะต้องคิดถึงกรณีที่เป็นที่ว่าง
           ที่ไม่มีทั้งดอกไม้หรือรวงผึ้ง
         courseD_bee_conditionals7_hintVid2: ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา
@@ -10328,7 +10318,7 @@ th:
         courseD_bee_conditionals7_a: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
 
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
         courseD_bee_conditionals7_b: ถ้าไม่มีดอกไม้ภายใต้ก้อนเมฆ ก็ต้องมีรวงผึ้ง ดังนั้นไม่จำเป็นเลยที่จะต้องคิดถึงกรณีที่เป็นที่ว่าง
           ที่ไม่มีทั้งดอกไม้หรือรวงผึ้ง
         courseD_bee_conditionals7_hintVid2: ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา
@@ -10336,18 +10326,19 @@ th:
         courseD_bee_conditionals7_a: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
 
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       courseD_bee_conditionals7_predict2_2018_authored_hint:
         courseD_bee_conditionals7_a: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
 
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_hintVid1: ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม?
           ลองดูวิดีโอซิ!
         courseD_bee_conditionals8_a: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
 
@@ -10364,7 +10355,8 @@ th:
           ลองดูวิดีโอซิ!
         courseD_bee_conditionals8_a: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
 
@@ -12280,8 +12272,8 @@ th:
           </block></xml>
       courseE_artist_embed_functions8_authored_hint: {}
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน 100 พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
-          175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        courseE_artist_functions1_a: กรอบสี่เหลี่ยมจตุรัสแต่ละกรอบมีด้าน 100 พิกเซล
+          นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า 175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ
         courseE_artist_functions1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
           draw the square frames of the glasses.
@@ -12304,8 +12296,8 @@ th:
 
           ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions1_2018_authored_hint:
-        courseE_artist_functions1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน 100 พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
-          175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        courseE_artist_functions1_a: กรอบสี่เหลี่ยมจตุรัสแต่ละกรอบมีด้าน 100 พิกเซล
+          นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า 175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ
         courseE_artist_functions1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
         courseE_artist_functions1_c: For shorter code, try using a `repeat` loop to
           draw the square frames of the glasses.
@@ -12948,6 +12940,13 @@ th:
           the toolbar each time you try a new one.
         4-5_Artist_Patterns_3_b: If your code becomes too confusing, you can always
           click "Start Over" and try again!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets
+          you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached
+          the end of a path?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your
+          code multiple times for each straight path.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently
           this time! Click on the different categories to see which blocks you have.
@@ -15230,7 +15229,8 @@ th:
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
         courseF_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
 
@@ -15240,7 +15240,8 @@ th:
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
         courseF_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
 
@@ -17775,15 +17776,18 @@ th:
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       grade3_ConditionalsElse_5_authored_hint:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       grade3_ConditionalsElse_TeacherIDo_authored_hint:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       grade3_Conditionals_10 BAD_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle
           where the bee needs to move forward, then turn left several times to complete
@@ -17961,11 +17965,12 @@ th:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
 
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       grade3_bee_conditionals_quantum5_authored_hint:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
         grade3_bee_conditionals_quantum5_a: This puzzle is tricky, because you can't
           check blank squares, nectar *and* honey with a single conditional.
       grade3_maze_loops1_authored_hint:
@@ -18034,8 +18039,8 @@ th:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมแต่ละกรอบมีด้าน 100 พิกเซล, นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
-          175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ.
+        2-3_Artist_Functions_1_a: กรอบสี่เหลี่ยมจตุรัสแต่ละกรอบมีด้าน 100 พิกเซล นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า
+          175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ
         2-3_Artist_Functions_1_b: โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |
@@ -18161,11 +18166,13 @@ th:
       grade4_bee_conditionals_quantum4_authored_hint:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       grade4_bee_conditionals_quantum5_authored_hint:
         remember_quantum: |-
           **ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน
-          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/นอกจากนั้น(if/else)`) เพื่อแก้ปัญหาที่ท้าทาย
+
+          คุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้
       grade4_bee_functions1_authored_hint:
         grade4_bee_functions1_a: There is more than one right answer to this puzzle.
       grade4_bee_functions10_authored_hint:
