@@ -1,12 +1,7 @@
-import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';
 import commonBlocks from '@cdo/apps/blocksCommon';
-import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/DropletPaletteSelector';
-import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.
@@ -45,12 +40,10 @@ const fieldConfig = {
     blockPreview: 'recommended-preview',
   },
   toolboxEditor: {
-    hideWhen: data.uses_droplet,
     codemirror: 'level_toolbox_blocks',
     blockPreview: 'toolbox-preview',
   },
   initializationEditor: {
-    hideWhen: data.uses_droplet,
     codemirror: 'level_initialization_blocks',
     blockPreview: 'initialization-preview',
   },
@@ -58,11 +51,6 @@ const fieldConfig = {
     hideWhen: !data.solution_blocks,
     codemirror: 'level_solution_blocks',
     blockPreview: 'solution-preview',
-  },
-  codeFunctions: {
-    hideWhen: !data.uses_droplet,
-    codemirror: 'level_code_functions',
-    codemirrorMode: 'javascript',
   },
   inputOutputTable: {
     hideWhen: !data.input_output_table,
@@ -82,19 +70,3 @@ Object.keys(fieldConfig).forEach(key => {
     initializeBlockPreview(config.editor, document.getElementById(config.blockPreview));
   }
 });
-
-$("#plusAnswerContainedLevel").on("click", () => {
-  $("#plusAnswerContainedLevel").prev().clone().insertBefore("#plusAnswerContainedLevel");
-});
-
-if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
-  ReactDOM.render(
-    <DropletPaletteSelector
-      palette={data.original_palette}
-      editor={fieldConfig.codeFunctions.editor}
-    />,
-    $('<div></div>')
-      .insertAfter(`label[for="${fieldConfig.codeFunctions.codemirror}"]`)
-      .get(0)
-  );
-}
