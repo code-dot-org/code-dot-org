@@ -144,6 +144,7 @@ Dashboard::Application.routes.draw do
     delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
+    get '/users/to_destroy', to: 'registrations#users_to_destroy'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
