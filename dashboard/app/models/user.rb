@@ -1728,6 +1728,16 @@ class User < ActiveRecord::Base
     end
   end
 
+  def should_see_edit_email_link?
+    if migrated?
+      # Hide from students with no password (i.e., oauth-only and sponsored students)
+      # since we do not store their cleartext email address and email is not used for login.
+      can_edit_email? && !(student? && encrypted_password.blank?)
+    else
+      can_edit_email? && !oauth?
+    end
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
