@@ -674,8 +674,8 @@ he-IL:
   volunteer_engineer_submission_field_email_placeholder: כתובת דואר אלקטרוני
   volunteer_engineer_submission_field_email_preference: Can we email you about updates
     to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(ראה את מדיניות הפרטיות
+    שלנו)"
   volunteer_engineer_submission_field_email_preference_yes: כן
   volunteer_engineer_submission_field_email_preference_no: לא
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
@@ -1283,7 +1283,7 @@ he-IL:
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: מעבדת היישומים
-  gamelab_name: Game Lab
+  gamelab_name: מעבדת המשחקים
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
   applab_gradelevel: Ages 13+
@@ -1999,43 +1999,43 @@ he-IL:
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
-  header_home: Home
-  header_my_dashboard: My Dashboard
+  header_home: בית
+  header_my_dashboard: לוח הבקרה שלי
   header_courses: מסלולים
-  header_course_catalog: Course Catalog
+  header_course_catalog: קטלוג קורסים
   header_project_gallery: פרויקט
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_sections: קבוצות
+  header_professional_learning: לימוד מקצועי
+  header_educate_overview: סקירת המורה
+  header_educate_elementary: בית ספר יסודי
+  header_educate_middle: חטיבת ביניים
+  header_educate_high: תיכון
   header_educate_hoc: שעה של קוד
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_educate_partner: שותף יחד איתנו
+  header_educate_beyond: מעבר ל-Code.org
+  header_educate_inspire: הנחל השראה לתלמיד
+  header_educate_community: קהילה אינטרנטית
+  header_educate_tools: כלים וסרטונים
+  header_about_us: אודותינו
+  header_about_leadership: הנהגה
+  header_about_donors: תורמים
+  header_about_partners: שותפים
+  header_about_team: כל הקבוצה
+  header_about_news: חדר החדשות
+  header_about_evaluation: הערכה
+  header_about_jobs: עבודות
+  header_about_contact: צור קשר
+  header_about_faqs: שאלות נפוצות
+  header_learn: למד
+  header_teach: למד
   header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
+  header_help_us: עזור לנו
+  header_about: אודות
+  header_teacher_community: קהילת המורה
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_report_bug: דווח תקלה
+  header_tutorials: מדריכים
+  header_documentation: מסמכים
   csp_name: CS Principles
   csd_name: CS Discoveries
   csd_2018_name: CS Discoveries
@@ -2044,7 +2044,7 @@ he-IL:
   user_header_settings: החשבון שלי
   user_header_logout: התנתק
   user_header_signin: התחבר
-  view_all_sections: View all sections
+  view_all_sections: הצג את כל הקבוצות
   view_section: View Section
   view_named_section: View %{section_name}
   privacy_doc_explanation: Click here for our privacy document that can be shared
