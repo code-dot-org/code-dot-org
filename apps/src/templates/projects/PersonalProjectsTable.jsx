@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -8,7 +9,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
   personalProjectDataPropType,
-  PROJECT_TYPE_MAP
+  FEATURED_PROJECT_TYPE_MAP,
 } from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
@@ -133,7 +134,7 @@ const actionsFormatter = (actions, {rowData}) => {
 };
 
 const typeFormatter = (type) => {
-  return PROJECT_TYPE_MAP[type];
+  return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
 const dateFormatter = function (time) {
@@ -141,13 +142,13 @@ const dateFormatter = function (time) {
   return date.toLocaleDateString();
 };
 
-const isPublishedFormatter = (isPublished) => {
-  return isPublished ? (<FontAwesome icon="circle"/>) : '';
+const publishedAtFormatter = (publishedAt) => {
+  return publishedAt ? (<FontAwesome icon="circle"/>) : '';
 };
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
+    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
   };
 
   state = {
@@ -199,7 +200,7 @@ class PersonalProjectsTable extends React.Component {
         }
       },
       {
-        property: 'projectName',
+        property: 'name',
         header: {
           label: i18n.projectName(),
           props: {style: {
@@ -243,14 +244,14 @@ class PersonalProjectsTable extends React.Component {
         }
       },
       {
-        property: 'isPublished',
+        property: 'publishedAt',
         header: {
           label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          format: isPublishedFormatter,
+          format: publishedAtFormatter,
           props: {style: {
             ...tableLayoutStyles.cell,
             ...styles.centeredCell
@@ -290,7 +291,7 @@ class PersonalProjectsTable extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.projectList);
+    })(this.props.personalProjectsList);
 
     return (
       <Table.Provider
@@ -304,4 +305,8 @@ class PersonalProjectsTable extends React.Component {
   }
 }
 
-export default PersonalProjectsTable;
+export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
+
+export default connect(state => ({
+  personalProjectsList: state.projects.personalProjectsList.projects,
+}))(PersonalProjectsTable);

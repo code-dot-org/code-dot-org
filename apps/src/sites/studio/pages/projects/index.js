@@ -13,6 +13,7 @@ import projects, {
   selectGallery,
   setProjectLists,
   prependProjects,
+  setPersonalProjectsList,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer, {
   showPublishDialog,
@@ -67,12 +68,22 @@ $(document).ready(() => {
   });
 
   if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE)) {
-    ReactDOM.render(
-      <PersonalProjectsTable
-        projectList={[]}
-      />,
-    document.getElementById('react-my-projects')
-    );
+    const personalProjectsUrl = `/api/v1/projects/personal`;
+
+    $.ajax({
+      method: 'GET',
+      url: personalProjectsUrl,
+      dataType: 'json'
+    }).done(personalProjectsList => {
+      store.dispatch(setPersonalProjectsList(personalProjectsList));
+
+      ReactDOM.render(
+        <Provider store={store}>
+          <PersonalProjectsTable/>
+        </Provider>,
+       document.getElementById('react-my-projects')
+      );
+    });
   }
 
   const publishConfirm = document.getElementById('publish-confirm');
