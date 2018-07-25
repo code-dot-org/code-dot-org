@@ -371,6 +371,13 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
     "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
   @browser.execute_script(script)
+  next if @browser.execute_script("return $('.svgFlyoutGroup').get(0).style.display == 'block';")
+  @browser.execute_script("var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
+    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))")
 end
 
 And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
@@ -378,6 +385,12 @@ And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # Escaping those gives us \\\\ per-character
   category_selector = "#\\\\:#{id}\\\\.label"
   @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
+  next if @browser.execute_script("return $('.svgFlyoutGroup').get(0).style.display == 'block';")
+  @browser.execute_script("$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))")
 end
 
 When /^I press dropdown button with text "([^"]*)"$/ do |text|
