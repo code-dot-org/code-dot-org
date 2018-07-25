@@ -22,6 +22,7 @@ class TeacherFeedback < ApplicationRecord
   validates_presence_of :student_id, :level_id, :teacher_id
   belongs_to :student, class_name: 'User'
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
+  has_many :section_teachers, class_name: 'User', through: 'student_sections', source: 'user'
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
@@ -29,7 +30,7 @@ class TeacherFeedback < ApplicationRecord
     feedbacks = find(group(:teacher_id).maximum(:id).values)
 
     #Only select feedback from teachers who lead sections in which the student is still enrolled
-    feedbacks.select {|feedback| User.find_by(id: feedback.teacher_id).students.exists?(feedback.student_id)}
+    feedbacks.select {|feedback| feedback.section_teachers.include?(feedback.teacher)}
   end
 
   def self.latest
