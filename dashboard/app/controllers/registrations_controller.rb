@@ -116,6 +116,8 @@ class RegistrationsController < Devise::RegistrationsController
     params_to_pass = params.deep_dup
     # Set provider to nil to mark the account as self-managed
     user_params = params_to_pass[:user].merge!({provider: nil})
+    # User model normalizes and hashes email _after_ validation **rage**
+    user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
     can_update =
@@ -295,6 +297,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Accept only whitelisted params for update and upgrade.
   def upgrade_params(params)
     params.require(:user).permit(
+      :username,
       :parent_email,
       :email,
       :hashed_email,
