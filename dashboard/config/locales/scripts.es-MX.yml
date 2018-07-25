@@ -1198,6 +1198,8 @@ es-MX:
               name: Video individual
             Curriculum Reference:
               name: Referencia del plan de estudios
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -10178,7 +10180,7 @@ es-MX:
                 Al final de esta etapa, los estudiantes tendrán la oportunidad de
                 crear sus propias imagenes usando ciclos.
             'Events: The Big Event':
-              name: El gran evento
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Los eventos son una excelente manera de agregar
                 variedad a un algoritmo preescrito. A veces deseas que el programa
@@ -10381,7 +10383,7 @@ es-MX:
             'Functions: Songwriting':
               name: Composicion musical con parámetros
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
               name: Funciones en Harvester
             Functions in Artist:
@@ -10476,7 +10478,7 @@ es-MX:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: El gran evento
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -11543,7 +11545,7 @@ es-MX:
               name: Processing
               description_student: This lesson dives deeper into the concept of processing
                 that was introduced as part of the definition of a computer.  Pairs
-                work together to puta deck of cards in order, a form of processing
+                work together to put a deck of cards in order, a form of processing
                 information.  In the end, the class discusses what processing means
                 within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities
@@ -13052,7 +13054,7 @@ es-MX:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: El gran evento
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -13072,13 +13074,13 @@ es-MX:
             Programming in Ice Age:
               name: Programación en Ice Age
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: Programación con Rey y BB-8
             Loops in Ice Age:
               name: Ciclos en Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie y el gran proyecto
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -13109,3 +13111,13 @@ es-MX:
           description_audience: ''
           description_short: ''
           description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.

@@ -7522,6 +7522,10 @@ zh-TW:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: 每次你試新的積木時，在工具箱拖曳出來請小心別和當前程式攪和在一起。
         4-5_Artist_Patterns_3_b: 如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached the end of a path?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your code multiple times for each straight path.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?

@@ -26,13 +26,13 @@ he:
             'Artist: Loops':
               name: 'אמן: לולאות'
             'Artist: Sequence':
-              name: 'Artist: Sequence'
+              name: 'אמן: רצף'
             'Artist: Shapes':
               name: 'אמן: צורות'
             'Bee: Loops':
               name: 'דבורה: לולאות'
             'Bee: Sequence':
-              name: 'Bee: Sequence'
+              name: 'דבורה: רצף'
             Building a Foundation:
               name: Building a Foundation
             Getting Loopy:
@@ -42,7 +42,7 @@ he:
             Happy Maps:
               name: מפות שמחות
             'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
+              name: 'מסור: למד לגרור ולשחרר'
             'Maze: Debugging':
               name: 'מבוך: איתור באגים'
             'Maze: Loops':
@@ -56,14 +56,14 @@ he:
             Spelling Bee:
               name: תחרות איות
             'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
+              name: 'מעבדת המשחקים: צור סיפור'
             The Big Event:
               name: האירוע הגדול
         course2:
           title: קורס 2
           description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות. בקורס זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
-          description_short: Introduction to computer science for students who can read.
-          description_audience: Ages 6+ (reading required)
+          description_short: מבוא למדעי המחשב לתלמידים שיכולים לקרוא.
+          description_audience: גילאי 6+ (קריאה נדרשת)
           stages:
             'Artist: Debugging':
               name: 'אמן: איתור באגים'
@@ -72,7 +72,7 @@ he:
             'Artist: Nested Loops':
               name: 'אמן: לולאות מקוננות'
             'Artist: Sequence':
-              name: 'Artist: Sequence'
+              name: 'אמן: רצף'
             'Bee: Conditionals':
               name: 'דבורה: ההתניות'
             'Bee: Debugging':
@@ -98,33 +98,33 @@ he:
             Relay programming:
               name: Relay programming
             'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
+              name: 'מעבדת המשחקים: צור סיפור'
             The Big Event:
               name: האירוע הגדול
             Your Digital Footprint:
               name: Your Digital Footprint
         course3:
           title: קורס 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: קורס 3 מיועד לתלמידים אשר למדור את קורס 2. תלמידים יצללו עמוק אל תוך נושאים בתכנות אשר הוצגו בקורסים הקודמים כדי ליצור פתרונות דינמיים לבעיות מורכבות עוד יותר. עד סוף הקורס, תלמידים יצרו סיפורים אינטראקטיביים ומשחקים אשר יכולים לשתף עם כולם. מומלץ כיתות ד-ה.
           description_short: קורס 3 הינו המשך לקורס 2.
           description_audience: גילאי 8-18
           stages:
             Artist:
               name: אמן
             'Artist: Functions':
-              name: 'Artist: Functions'
+              name: 'אמן: פונקציות'
             'Artist: Nested Loops':
               name: 'אמן: לולאות מקוננות'
             'Artist: Patterns':
-              name: 'Artist: Patterns'
+              name: 'אמן: תבניות'
             'Bee: Conditionals':
               name: 'דבורה: ההתניות'
             'Bee: Debugging':
               name: 'דבורה: איתור באגים'
             'Bee: Functions':
-              name: 'Bee: Functions'
+              name: 'דבורה: פונקציות'
             'Bee: Nested Loops':
-              name: 'Bee: Nested Loops'
+              name: 'דבורה: לולאות מקוננות'
             Bounce:
               name: להקפיץ
             Computational Thinking:
@@ -136,7 +136,7 @@ he:
             Digital Citizenship:
               name: Digital Citizenship
             'Farmer: While Loops':
-              name: 'חקלאי: לולאות While'
+              name: 'חקלאי: לולאות "כל עוד"'
             Functional Suncatchers:
               name: Functional Suncatchers
             Internet:
@@ -148,9 +148,9 @@ he:
             Songwriting:
               name: Songwriting
             'Studio: Create a Game':
-              name: 'Play Lab: Create a Game'
+              name: 'מעבדת המשחקים: צור משחק'
             'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
+              name: 'מעבדת המשחקים: צור סיפור'
         playlab:
           title: מעבדת משחקים
           description: ליצור סיפור או משחק עם Play Lab!
@@ -182,7 +182,7 @@ he:
               name: אמן
         course4:
           title: קורס 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים ילמדו לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות ד-ו.
           description_short: Build more complex programs with concepts such as for loops and functions with parameters. This is a follow-up to Course 3.
           description_audience: גילאי 10-18
           stages:
@@ -193,19 +193,19 @@ he:
             'Artist: For Loops':
               name: 'אמן: לולאות For'
             'Artist: Functions':
-              name: 'Artist: Functions'
+              name: 'אמן: פונקציות'
             'Artist: Functions with Parameters':
               name: 'אמן: פונקציות עם פרמטרים'
             'Artist: Variables':
-              name: 'Artist: Variables'
+              name: 'אמן: משתנים'
             'Bee: For Loops':
-              name: 'Bee: For Loops'
+              name: 'דבורה: לולאות For'
             'Bee: Functions with Parameters':
-              name: 'Bee: Functions with Parameters'
+              name: 'דבורה: פונקציות עם פרמטרים'
             Extreme Challenge - Comprehensive:
               name: Extreme Challenge - Comprehensive
             Maze and Bee:
-              name: Maze and Bee
+              name: מבוך ודבורה
             'Play Lab: For Loops':
               name: 'Play Lab: For Loops'
             'Play Lab: Functions with Parameters':
@@ -237,21 +237,21 @@ he:
           description_audience: ''
           stages:
             'Artist: Functions':
-              name: 'Artist: Functions'
+              name: 'אמן: פונקציות'
             'Artist: Loops':
               name: 'אמן: לולאות'
             'Artist: Nested Loops':
               name: 'אמן: לולאות מקוננות'
             'Artist: Sequence':
-              name: 'Artist: Sequence'
+              name: 'אמן: רצף'
             'Bee: Conditionals':
               name: 'דבורה: ההתניות'
             'Bee: Debugging':
               name: 'דבורה: איתור באגים'
             'Bee: Nested Loops':
-              name: 'Bee: Nested Loops'
+              name: 'דבורה: לולאות מקוננות'
             'Farmer: While Loops':
-              name: 'חקלאי: לולאות While'
+              name: 'חקלאי: לולאות "כל עוד"'
             'Maze: Sequence':
               name: 'מבוך: רצף'
         usability:
@@ -782,7 +782,7 @@ he:
             Using Variables in Apps:
               name: Using Variables in Apps
             While Loops:
-              name: בעוד לולאות
+              name: לולאות "כל עוד"
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1130,7 +1130,7 @@ he:
             TextMatch:
               name: TextMatch
             Web Lab:
-              name: Web Lab
+              name: מעבדת האתרים
             Multi page assessment:
               name: Multi page assessment
             Single page assessment:
@@ -1139,6 +1139,8 @@ he:
               name: Standalone video
             Curriculum Reference:
               name: Curriculum Reference
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1810,7 +1812,7 @@ he:
             Processing Arrays:
               name: Processing Arrays
             While Loops:
-              name: בעוד לולאות
+              name: לולאות "כל עוד"
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -2347,7 +2349,7 @@ he:
             Using Variables in Apps:
               name: Using Variables in Apps
             While Loops:
-              name: בעוד לולאות
+              name: לולאות "כל עוד"
             Edited lessons ABOVE this line:
               name: Edited lessons ABOVE this line
             Buttons and Events:
@@ -2680,7 +2682,7 @@ he:
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: מעבדת המשחקים
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2969,7 +2971,7 @@ he:
             Fuzz Fiesta:
               name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
+              name: 'מסור: למד לגרור ולשחרר'
             Loops:
               name: לולאות
             Loops Intro:
@@ -2995,9 +2997,9 @@ he:
           description_audience: Ages 9-99
           stages:
             'Bee: Determine the Concept':
-              name: 'Bee: Determine the Concept'
+              name: 'דבורה: קבע את הרעיון'
             'Bee: Functions (Course 3)':
-              name: 'Bee: Functions (Course 3)'
+              name: 'דבורה: פונקציות (קורס 3)'
             Build a Star Wars Game!:
               name: Build a Star Wars Game!
             Digital Citizenship:
@@ -3015,7 +3017,7 @@ he:
             More Programming with Scratch:
               name: More Programming with Scratch
             'New Artist: Functions':
-              name: 'New Artist: Functions'
+              name: 'אמן חדש: פונקציות'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
@@ -3037,7 +3039,7 @@ he:
             Events Unplugged:
               name: Events Unplugged
             'Jigsaw: Learn to drag and drop':
-              name: 'Jigsaw: Learn to drag and drop'
+              name: 'מסור: למד לגרור ולשחרר'
             Loops:
               name: לולאות
             Loops Intro:
@@ -3071,11 +3073,11 @@ he:
             'Artist: Functions with Parameters':
               name: 'אמן: פונקציות עם פרמטרים'
             'Artist: Variables':
-              name: 'Artist: Variables'
+              name: 'אמן: משתנים'
             'Bee: For Loops':
-              name: 'Bee: For Loops'
+              name: 'דבורה: לולאות For'
             'Bee: Functions with Parameters':
-              name: 'Bee: Functions with Parameters'
+              name: 'דבורה: פונקציות עם פרמטרים'
             Digital Citizenship:
               name: Digital Citizenship
             Explore project ideas:
@@ -3231,7 +3233,7 @@ he:
           description_audience: Ages 5-18
           stages:
             " Bee: Conditionals":
-              name: " Bee: Conditionals"
+              name: "דבורה: התניות"
             'Artist: Nested Loops':
               name: 'אמן: לולאות מקוננות'
             Bee Debugging:
@@ -3249,11 +3251,11 @@ he:
             Farmer Impacts of Computing:
               name: Farmer Impacts of Computing
             'Farmer: While Loops':
-              name: 'חקלאי: לולאות While'
+              name: 'חקלאי: לולאות "כל עוד"'
             'Maze: Conditionals with Loops':
-              name: 'Maze: Conditionals with Loops'
+              name: 'מבוך: התניות עם לולאות'
             'Maze: Nested Loops':
-              name: 'Maze: Nested Loops'
+              name: 'מבוך: לולאות מקוננות'
             More Programming with CS4FN:
               name: More Programming with CS4FN
             Robot Running the Farm:
@@ -3502,7 +3504,7 @@ he:
             Variables:
               name: משתנים
             While Loops:
-              name: בעוד לולאות
+              name: לולאות "כל עוד"
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
@@ -4015,7 +4017,7 @@ he:
             'Programming: Happy Maps':
               name: 'Programming: Happy Maps'
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
             Being Safe Online:
               name: Being Safe Online
             'Loops: Happy Loops':
@@ -4053,7 +4055,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
@@ -4079,7 +4081,7 @@ he:
           description: In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 2nd grade.
           stages:
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
             Programming in Collector:
@@ -4089,7 +4091,7 @@ he:
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops in Maze:
-              name: Loops in Maze
+              name: לולאות במבוך
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Puppy Introduction:
@@ -4111,7 +4113,7 @@ he:
             Screen Out the Mean:
               name: Screen Out the Mean
             Debugging in Maze:
-              name: Debugging in Maze
+              name: איתור באגים במבוך
             Loops in Harvester:
               name: Loops in Harvester
         coursed-draft:
@@ -4125,7 +4127,7 @@ he:
             Events in Bounce:
               name: Events in Bounce
             Nested Loops in Maze:
-              name: Nested Loops in Maze
+              name: לולאות מקוננות במבוך
             Nested Loops in Artist:
               name: Nested Loops in Artist
             'Algorithms: Relay Programming':
@@ -4139,7 +4141,7 @@ he:
             Conditionals with Bee:
               name: Conditionals with Bee
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: ההתניות & לולאות במבוך
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Harvester
             Impacts of Computing:
@@ -5456,7 +5458,7 @@ he:
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
               description_student: ''
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
@@ -5474,7 +5476,7 @@ he:
             Loops in Artist:
               name: Loops in Artist
               description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
             'Events: The Big Event':
               name: 'Events: The Big Event'
               description_student: ''
@@ -5503,7 +5505,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Collector:
@@ -5515,7 +5517,7 @@ he:
             Events in Play Lab:
               name: Events in Play Lab
             More Programming in Maze:
-              name: More Programming in Maze
+              name: עוד תכנות במבוך
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
           title: Course B
@@ -5528,9 +5530,9 @@ he:
             Building a Foundation:
               name: 'Persistence: Building a Foundation'
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
             Debugging in Maze:
-              name: Debugging in Maze
+              name: איתור באגים במבוך
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
             Programming in Collector:
@@ -5540,7 +5542,7 @@ he:
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops in Maze:
-              name: Loops in Maze
+              name: לולאות במבוך
             Loops in Harvester:
               name: Loops in Harvester
             'Events: The Big Event':
@@ -5567,7 +5569,7 @@ he:
             Introduction:
               name: Introduction to Online Puzzles
               description_student: This lesson will give you practice in the skills you will need for this course.
-              description_teacher: 'In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org''s online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.'
+              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת היתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
             'Algorithms: Graph Paper Programming':
               name: 'Programming: Graph Paper Programming'
               description_student: In this lesson, you will program your friend to draw pictures!
@@ -5603,7 +5605,7 @@ he:
               description_student: 'Now that you understand conditionals, it''s time to program Bee to use them when collecting honey and nectar. '
               description_teacher: Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: ההתניות & לולאות במבוך
               description_student: You can do some amazing things when you use conditionals and loops together!
               description_teacher: 'In this lesson, students will be pairing together two key concepts: loops and conditionals. This set of puzzles bridges the gaps in understanding that occur when working on puzzles that use multiple kinds of blocks. By bringing two ideas together, students will create more complex code that shows both impressive creativity and critical thinking!'
             Conditionals & Loops in Farmer:
@@ -5724,7 +5726,7 @@ he:
             Functions in Farmer:
               name: Functions in Farmer
               description_student: Functions will save you lots of work as you help the farmer with her harvest!
-              description_teacher: Students have practiced creating impressive designs in Artist and navigating mazes in Bee, but today they will use functions to harvest crops in Farmer. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.
+              description_teacher: תלמידים תרגלו יצירת עיצובים מרשימים עם האמן וניווטו במבוך עם הדבורה, אבל היום הם ישתמשו בפונקציות לקצור את השדה עם החוואי. השיעור הזה יקדם את השימוש בפונקציות בדרך חדשה ע"י חיבור שלהם יחד עם לולאות "כל עוד" והתניות "אם/אחרת".
             Determine the Concept:
               name: Determine the Concept
               description_student: "We aren't giving away any secrets! \nThis lesson could use any of the skills you've learned so far."
@@ -5748,7 +5750,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: רצף במבוך
             Building a Foundation:
               name: Building a Foundation
             Debugging with Scrat:
@@ -5861,7 +5863,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: רצף במבוך
             Building a Foundation:
               name: Building a Foundation
             Debugging with Scrat:
@@ -6142,7 +6144,7 @@ he:
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: ההתניות & לולאות במבוך
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Conditionals & Loops in Farmer:
@@ -6192,7 +6194,7 @@ he:
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: ההתניות & לולאות במבוך
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             'For Loops: For Loop Fun':
@@ -6206,7 +6208,7 @@ he:
             Conditionals & Loops in Harvester:
               name: Conditionals & Loops in Harvester
             Until Loops in Maze:
-              name: Until Loops in Maze
+              name: לולאות "עד" במבוך
           title: Express Course
           assignment_family_title: Express Course
           description_audience: 'Ages: 9-18'
@@ -6227,7 +6229,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
             'Programming: Star Wars':
               name: 'Programming: Star Wars'
             'Loops: My Loopy Robotic Friends':
@@ -6396,7 +6398,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Sequence and Preview in Maze:
-              name: Sequence and Preview in Maze
+              name: רצף ותצוגה מקדימה במבוך
             Building a Foundation:
               name: Building a Foundation
             Debugging with Scrat:
@@ -6452,7 +6454,7 @@ he:
             Nested Loops in Bee/Zombie:
               name: Nested Loops in Bee/Zombie
             Sequence in Maze:
-              name: Sequence in Maze
+              name: רצף במבוך
           title: Course E & F Ramp
           description_audience: ''
           description_short: ''
@@ -6482,7 +6484,7 @@ he:
             Conditionals in Bee:
               name: Conditionals in Bee
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: ההתניות & לולאות במבוך
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Digital Citizenship:
@@ -6550,7 +6552,7 @@ he:
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: לולאות עם התניות במבוך
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Conditionals & Loops in Farmer:
@@ -6616,7 +6618,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: רצף במבוך
             Building a Foundation:
               name: Building a Foundation
             Debugging with Scrat:
@@ -6674,7 +6676,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: רצף במבוך
             Building a Foundation:
               name: Building a Foundation
             Debugging with Scrat:
@@ -7102,7 +7104,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: רצף במבוך
             Building a Foundation:
               name: Building a Foundation
             Debugging with Scrat:
@@ -7164,7 +7166,7 @@ he:
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Sequence in Maze:
-              name: Sequence in Maze
+              name: רצף במבוך
             Building a Foundation:
               name: Building a Foundation
             Debugging with Scrat:
@@ -7542,7 +7544,7 @@ he:
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: תכנות עם ציפורים כועסות
               description_student: ''
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
@@ -7560,9 +7562,9 @@ he:
             Loops in Artist:
               name: Ocean Scene with Loops
               description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
             'Events: The Big Event':
-              name: האירוע הגדול
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -7576,7 +7578,7 @@ he:
             Loops in Harvester:
               name: Loops with Harvester
             Sequencing in Maze:
-              name: Sequencing with Angry Birds
+              name: יצירת רצפים עם ציפורים כועסות
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie and the Big Project
         express-2018:
@@ -7655,7 +7657,7 @@ he:
               description_student: ''
               description_teacher: ''
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: לולאות עם התניות במבוך
               description_student: ''
               description_teacher: ''
             Conditionals in Minecraft:
@@ -7729,11 +7731,11 @@ he:
             Conditionals in Bee:
               name: If/Else with Bee
             Until Loops in Maze:
-              name: Until Loops in Maze
+              name: לולאות "עד" במבוך
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: תכנות עם ציפורים כועסות
             Debugging in Maze:
-              name: Debugging with Angry Birds
+              name: איתור באגים עם ציפורים כועסות
             Programming in Collector:
               name: Collecting Treasure with Laurel
             Programming in Artist:
@@ -7749,7 +7751,7 @@ he:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Nested Loops with Anna and Elsa
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Conditionals & Loops in Harvester:
@@ -7757,9 +7759,9 @@ he:
             'Functions: Songwriting':
               name: Songwriting
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with the Harvester
             Functions in Artist:
               name: Functions in Artist
             Screen Out the Mean:
@@ -7830,7 +7832,7 @@ he:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
               description_student: ''
               description_teacher: ''
             Programming with Rey and BB-8:
@@ -7850,7 +7852,7 @@ he:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: האירוע הגדול
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -7899,7 +7901,7 @@ he:
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Nested Loops in Maze
+              name: לולאות מקוננות במבוך
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -7919,7 +7921,7 @@ he:
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Maze:
-              name: Conditionals & Loops in Maze
+              name: ההתניות & לולאות במבוך
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Farmer:
@@ -7947,9 +7949,9 @@ he:
             Nested Loops in Frozen:
               name: Snowflakes with Anna and Elsa
             Until Loops in Maze:
-              name: Until Loops in Maze
+              name: לולאות "עד" במבוך
             Conditionals in Maze:
-              name: Conditionals in Maze
+              name: התניות במבוך
             Conditionals & Loops in Harvester:
               name: Harvesting with Conditionals
             Graph Paper Programming:
@@ -8070,11 +8072,11 @@ he:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: תכנות עם ציפורים כועסות
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
-              name: Debugging with Angry Birds
+              name: איתור באגים עם ציפורים כועסות
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
@@ -8241,7 +8243,7 @@ he:
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
-              name: Coding with Comments
+              name: קידוד עם הערות
               description_student: ''
               description_teacher: ''
             Building a Foundation:
@@ -8265,7 +8267,7 @@ he:
               description_student: ''
               description_teacher: ''
             Nested Loops:
-              name: Nested Loops in Maze
+              name: לולאות מקוננות במבוך
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -8369,7 +8371,7 @@ he:
               description_student: ''
               description_teacher: ''
             Sequence in Maze:
-              name: Coding with Comments
+              name: קידוד עם הערות
               description_student: ''
               description_teacher: ''
             Building a Foundation:
@@ -8393,7 +8395,7 @@ he:
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Maze
+              name: לולאות מקוננות במבוך
               description_student: ''
               description_teacher: ''
             Nested Loops with Frozen:
@@ -8608,7 +8610,7 @@ he:
               description_teacher: In this lesson students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device. Earlier in the activity students are prompted to focus on more obvious physical inputs and outputs (e.g. a keyboard as an input or a screen as an output) but later discussions lead students to consider less obvious examples (e.g. that a touch screen is both an input and output, or the fact that the Internet can serve as both input and output). Throughout the lesson the teacher records inputs and outputs that are identified on a T-Chart at the front of the room. To conclude the lesson students examine common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
             Processing:
               name: Processing
-              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to puta deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
+              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to put a deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities to explore the meaning of processing and its relationship to problem-solving. The first activity has few constraints and is used to introduce a high-level definition of processing. The next introduces more constraints that force students to develop an algorithm that will always successfully process the cards. Students iteratively develop, test, and share their algorithms with classmates. A wrap-up discussion has students reflect on the different types of problem-solving they used in these activities and the value of producing an algorithm to solve a problem.
             Storage:
               name: Storage
@@ -9047,7 +9049,7 @@ he:
               description_student: ''
               description_teacher: ''
             While Loops:
-              name: בעוד לולאות
+              name: לולאות "כל עוד"
               description_student: ''
               description_teacher: ''
             Loops and Simulations:
@@ -9466,7 +9468,7 @@ he:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming in Maze
+              name: תכנות במבוך
               description_student: ''
               description_teacher: ''
             'Programming: Star Wars':
@@ -9486,7 +9488,7 @@ he:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: האירוע הגדול
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9504,15 +9506,15 @@ he:
             Your Digital Footprint:
               name: Your Digital Footprint
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie and the Big Project
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9543,3 +9545,13 @@ he:
           description_audience: ''
           description_short: ''
           description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.

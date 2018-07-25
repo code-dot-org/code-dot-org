@@ -13229,6 +13229,14 @@ id:
           toolbar setiap kali anda mencoba yang baru.
         4-5_Artist_Patterns_3_b: Jika kode anda menjadi membingungkan, anda slalu
           dapat klik "mulai lagi" dan mencoba lagi!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: Blok `while path ahead` memungkinkan
+          anda terus berjalan, bahkan jika anda tidak tahu berapa banyak kotak berada
+          di jalan.
+        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached
+          the end of a path?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your
+          code multiple times for each straight path.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently
           this time! Click on the different categories to see which blocks you have.

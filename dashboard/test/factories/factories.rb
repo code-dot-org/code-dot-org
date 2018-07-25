@@ -84,7 +84,7 @@ FactoryGirl.define do
       end
       factory :facilitator do
         sequence(:name) {|n| "Facilitator Person #{n}"}
-        sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
+        email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
         end
@@ -97,7 +97,7 @@ FactoryGirl.define do
       end
       factory :workshop_organizer do
         sequence(:name) {|n| "Workshop Organizer Person #{n}"}
-        sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
+        email {("WorkshopOrganizer_#{(User.maximum(:id) || 0) + 1}@code.org")}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -443,6 +443,14 @@ FactoryGirl.define do
         auth.authentication_id = auth.hashed_email
       end
     end
+
+    factory :facebook_authentication_option do
+      credential_type AuthenticationOption::FACEBOOK
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
   end
 
   factory :districts_users do
@@ -616,7 +624,7 @@ FactoryGirl.define do
     end
     name {"gamelab_block#{index}"}
     category 'custom'
-    level_type 'fakeLevelType'
+    pool 'fakeLevelType'
     config do
       {
         func: "block#{index}",

@@ -1189,6 +1189,8 @@ ru:
               name: Standalone video
             Curriculum Reference:
               name: Ссылки на учебный план
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -10150,7 +10152,7 @@ ru:
                 loops are creating patterns. At the end of this stage, students will
                 be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: Большое Событие
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written
                 algorithm. Sometimes you want your program to be able to respond to
@@ -10327,7 +10329,7 @@ ru:
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Coding with Angry Birds
             Debugging in Maze:
               name: Debugging with Angry Birds
             Programming in Collector:
@@ -10345,7 +10347,7 @@ ru:
             Nested Loops in Bee:
               name: Вложенные циклы в Пчеле
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Nested Loops with Anna and Elsa
             Conditionals with Cards:
               name: Условные выражения с картами
             Conditionals & Loops in Harvester:
@@ -10353,9 +10355,9 @@ ru:
             'Functions: Songwriting':
               name: Написание песен с параметрами
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with the Harvester
             Functions in Artist:
               name: Functions in Artist
             Screen Out the Mean:
@@ -10448,7 +10450,7 @@ ru:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: Большое Событие
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -11541,7 +11543,7 @@ ru:
               name: Processing
               description_student: This lesson dives deeper into the concept of processing
                 that was introduced as part of the definition of a computer.  Pairs
-                work together to puta deck of cards in order, a form of processing
+                work together to put a deck of cards in order, a form of processing
                 information.  In the end, the class discusses what processing means
                 within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities
@@ -13043,7 +13045,7 @@ ru:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: Большое Событие
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -13061,15 +13063,15 @@ ru:
             Your Digital Footprint:
               name: Твой цифровой след
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Стиви и Большой Проект
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -13100,3 +13102,13 @@ ru:
           description_audience: ''
           description_short: ''
           description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.

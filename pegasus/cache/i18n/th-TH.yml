@@ -1286,7 +1286,7 @@ th-TH:
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: แอ๊ปแล็บ
-  gamelab_name: Game Lab
+  gamelab_name: เกมแล๊ป (Game Lab)
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
   applab_gradelevel: Ages 13+
@@ -1978,7 +1978,7 @@ th-TH:
   header_my_dashboard: My Dashboard
   header_courses: คอร์ส
   header_course_catalog: Course Catalog
-  header_project_gallery: Projects
+  header_project_gallery: โปรเจกต์
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview

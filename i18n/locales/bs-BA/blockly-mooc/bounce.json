@@ -22,7 +22,7 @@
   "elseCode": "inače",
   "finalLevel": "Čestitamo ! Riješili ste posljednji zadatak.",
   "heightParameter": "visina",
-  "ifCode": "ako",
+  "ifCode": "ako (jos jedna uslovna naredba koriscena u vise programskih jezika i ako se koristi kao iste nikako je ne prevoditi)",
   "ifPathAhead": "ako je put ispred",
   "ifTooltip": "Ako staza ide u zadanom smjeru, onda uradi neke akcije.",
   "ifelseTooltip": "Ako staza vodi u zadanom smjeru, onda uradi prvu grupu akcija, a inače uradi drugu grupu akcija.",

@@ -220,27 +220,8 @@ module Pd::WorkshopSurveyResultsHelper
             end
           else
             if response_section == :facilitator
-              # For facilitator specific responses, keep track of both a sum total of all
-              # responses, and the number of responses for that facilitator. Then divide
-              # sum by responses to get the average for that facilitator.
-              facilitator_response_sums = {}
-
-              surveys_for_session[:facilitator].each do |survey|
-                survey[q_key].each do |facilitator, answer|
-                  if facilitator_response_sums[facilitator].nil?
-                    facilitator_response_sums[facilitator] = {responses: 0, sum: 0}
-                  end
-                  facilitator_response_sums[facilitator][:responses] += 1
-                  facilitator_response_sums[facilitator][:sum] += answer
-                end
-              end
-
-              facilitator_response_averages = {}
-
-              facilitator_response_sums.each do |facilitator_id, response_sums|
-                facilitator_response_averages[facilitator_id] = (response_sums[:sum] / response_sums[:responses].to_f).round(2)
-              end
-              session_summary[:facilitator][q_key] = facilitator_response_averages.transform_keys {|k| facilitator_map[k]}
+              # Facilitator specific multiple choice answers are not currently supported
+              next
             else
               # For non facilitator specific responses, just return a frequency map with
               # nulls removed

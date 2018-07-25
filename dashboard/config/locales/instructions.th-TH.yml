@@ -17,7 +17,7 @@ th:
         is 100, but the half-finished wall is only 50. Complete the wall.
       2-3 Artist 3.4_instruction: |-
         บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป
-        วาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า...` และบล็อก `เดินไปข้างหน้า`
+        วาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า...` และบล็อก `ไปข้างหน้า`
         โดยแต่ละเส้นมีความยาว 50 พิกเซล
       2-3 Artist 3_instruction: หมวกใบนี้สูง 100 พิกเซล จงวาดหมวกที่สูงน้อยลง 70 พิกเซล
       2-3 Artist 3new_instruction: "หมวกสีแดงสูง 100 พิกเซล จงวาดหมวกสีดำที่สั้นกว่าหมวกสีแดง
@@ -176,7 +176,7 @@ th:
         ลองเปลี่ยนองศาที่คุณหันไปและจำนวนครั้งที่คุณวนลูป
       2-3 Artist Loops New 15_instruction: Now, draw anything you like!
       2-3 Artist Loops New 2_instruction: |-
-        "นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`เดินไปข้างหน้า` เพียงหนึ่งบล็อกและบล็อก` หันไป ` อีกเพียงหนึ่งบล็อกเท่านั้น
+        "นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`ไปข้างหน้า` เพียงหนึ่งบล็อกและบล็อก` หัน... ไป ` ได้อีกเพียงหนึ่งบล็อกเท่านั้น
 
         คุณสามารถใช้ ` ทำซ้ำ ` เพื่อแก้ปริศนานี้ได้ไหม?"
       2-3 Artist Loops New 9_instruction: วาดตัว V อย่างง่ายๆ (ที่ทั้งสองด้านยาว 50
@@ -495,9 +495,8 @@ th:
       20hr_maze_stage2_9_instruction: 'When a block is grey, that means you can''t
         delete it. Solve this puzzle using the "repeat" block that repeats 3 times.
         Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.'
-      4-5 Artist 1_instruction: |-
-        Help me finish drawing my box. (Each line is 300
-        pixels long)
+      4-5 Artist 1_instruction: 'ช่วยฉันวาดภาพกล่อง ของฉันให้เสร็จ (แต่ละด้านมีความยาว
+        300 พิกเซล) '
       4-5 Artist 10_instruction: Press "Run" to try the code. Then, repeat it enough
         times to complete the drawing. The colors will be different every time.
       4-5 Artist 11_instruction: วาดเส้นสีเขียวให้เสร็จ เส้นเหล่านี้ยาวเส้นละ 300
@@ -828,6 +827,10 @@ th:
       4-5 While Loops 7_instruction: ว้าว, ตอนนี้มีกองดิน 3 กอง! คุณสามารถเขียนโปรแกรมที่ตักเอาดินแต่ละกองออกไปจนหน้าดินราบเรียบได้หรือไม่?
       4-5 While Loops 8_instruction: " มีหลุมลึกจริงๆและกองดินขนาดใหญ่ด้วย ต้องตักดินเหล่านี้ออกไปเท่าใดเพื่อให้พื้นดินราบเรียบ?"
       4-5 While Loops Assessment 1_instruction: มีหลุมและกองดินมากมาย ช่วยฉันในการตักออกและกลบหลุมเพื่อให้พื้นดินราบเรียบ
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       Alien Defender_2018_instruction: 'Project Idea: Make a defender game in Play
@@ -1038,6 +1041,7 @@ th:
       C3-Farmer While Loops 7_instruction: ว้าว, ตอนนี้มีกองดิน 3 กอง! คุณสามารถเขียนโปรแกรมที่ตักเอาดินแต่ละกองออกไปจนหน้าดินราบเรียบได้หรือไม่?
       C3-Farmer While Loops 8_instruction: " มีหลุมลึกจริงๆและกองดินขนาดใหญ่ด้วย ต้องตักดินเหล่านี้ออกไปเท่าใดพื่อให้พื้นดินราบเรียบ?"
       C3-Farmer While Loops Assessment 1_instruction: มีหลุมและกองดินมากมาย ช่วยฉันตักออกและกลบหลุมเพื่อให้พื้นดินราบเรียบ
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -3764,9 +3768,9 @@ th:
         เพื่อทำน้ำหวาน
       K-1 Bee 10_instruction: เก็บน้ำหวานจากเกสรสี่ครั้ง แล้วทำน้ำผึ้งสองครั้ง
       K-1 Bee 11.5_instruction: Get four nectar to make four honey!
-      K-1 Bee 11_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งหนึ่งครั้ง
-      K-1 Bee 12_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งสองครั้ง!
-      K-1 Bee 13_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งหนึ่งครั้ง!
+      K-1 Bee 11_instruction: เก็บน้ำหวานสามครั้ง แล้วทำน้ำผึ้งหนึ่งครั้ง
+      K-1 Bee 12_instruction: เก็บน้ำหวานสามครั้ง แล้วทำน้ำผึ้งหนึ่งครั้ง
+      K-1 Bee 13_instruction: เก็บน้ำหวานสามครั้ง แล้วทำน้ำผึ้งหนึ่งครั้ง
       K-1 Bee 14_instruction: พาฉันไปที่เกสรดอกไม้เพื่อเก็บน้ำหวานมา แล้วพาฉันไปที่น้ำผึ้งและทำน้ำผึ้ง
       K-1 Bee 15_instruction: เก็บน้ำหวานจากเกสรสองครั้ง เพื่อทำน้ำผึ้งสองครั้ง!
       K-1 Bee 2_instruction: พาฉันไปที่ดอกไม้ เก็บน้ำหวานจากเกสร และพาฉันไปที่รังผึ้ง
@@ -3776,7 +3780,7 @@ th:
       K-1 Bee 4_instruction: เก็บน้ำหวานจากเกสรสองครั้ง แล้วทำน้ำผึ้งสองครั้ง!
       K-1 Bee 5_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งสามครั้ง!
       K-1 Bee 6_instruction: เก็บน้ำหวานจากเกสรสองครั้ง แล้วทำน้ำผึ้งสองครั้ง!
-      K-1 Bee 7_instruction: เก็บน้ำหวานจากเกสรสามครั้ง แล้วทำน้ำผึ้งสองครั้ง!
+      K-1 Bee 7_instruction: เก็บน้ำหวานสามครั้ง แล้วทำน้ำผึ้งหนึ่งครั้ง
       K-1 Bee 8_instruction: เก็บน้ำหวานจากเกสรสองครั้ง แล้วทำน้ำผึ้งสองครั้ง!
       K-1 Bee 9_instruction: เก็บน้ำหวานจากเกสรสองครั้ง แล้วทำน้ำผึ้งสองครั้ง!
       K-1 Bee Assessment 1_instruction: Get nectar to make honey!
@@ -3844,13 +3848,13 @@ th:
       K-1 Maze Sequence Assessment 2_instruction: ขยับฉันไปทางหนึ่ง แล้วก็ไปอีกทางหนึ่ง
         เพื่อที่จะพาฉันไปจัดการเจ้าหมูนั่น.
       K-1 Maze debug Assessment 1_instruction: การประเมินผล -- ตรวจแก้จุดบกพร่องในระดับนี้
-        ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
+        ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่ เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
       K-1 artist 1 level 10_instruction: ให้วาดเส้นประ โดยใช้ทั้ง บล็อกกระโดดและบล็อกลากเส้น
       K-1 artist 1 level 9_instruction: ให้วาดตามนี้ ใช้เส้นสามเส้น
       K-1 maze debug 1_instruction: |-
         เปลี่ยนโค้ด เพื่อพาฉันไปจัดการเจ้าหมูตัวนั้น!   N = North คือ ทิศเหนือ  S  = South  คือ ทิศใต้
         E  = East คือ ทิศตะวันออก  W = West คือ ทิศตะวันตก
-      K-1 maze debug 10_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
+      K-1 maze debug 10_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
         เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
       K-1 maze debug 11_instruction: นี่เป็นการทดสอบ! ตรวจแก้จุดบกพร่องระดับนี้โดยการจัดเรียงและเปลี่ยนบล็อก
         เพื่อที่จะได้พาฉันไปหาเจ้าหมูนั่น.
@@ -3860,15 +3864,15 @@ th:
       K-1 maze debug 3_instruction: มีบางสิ่งที่ยังไม่ค่อยจะถูกต้องนัก ต้องลบบล็อกออกไปเพื่อที่จะได้พาฉันไปจัดการกับเจ้าหมูนั่นได้!
       K-1 maze debug 4_instruction: ลองเรียกใช้งานผ่านบล็อกเหล่านี้ดู และทำการแก้ไขเสียใหม่!
         ฉันคิดว่าฉันอาจจะไปในทิศทางที่ไม่ถูกต้อง
-      K-1 maze debug 5_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
+      K-1 maze debug 5_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
         เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
-      K-1 maze debug 6_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
+      K-1 maze debug 6_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
         เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
-      K-1 maze debug 7_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
+      K-1 maze debug 7_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
         เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
-      K-1 maze debug 8_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
+      K-1 maze debug 8_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
         เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
-      K-1 maze debug 9_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
+      K-1 maze debug 9_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
         เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
       K2.0 sequence 1_instruction: A bug! Fix the code to get me to the pig.
       K2.0 sequence 10_instruction: 'Challenge: Move me around the TNT to get to the
@@ -7352,6 +7356,7 @@ th:
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the
         acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat
         to the acorn.
@@ -7442,28 +7447,28 @@ th:
         animals disappear when you click on them! You can also add sounds and score
         points to create a fun game of Animal Tag!
       courseB_scrat_forVideo_instruction: Get the acorn!
-      courseB_starWars_prog1_instruction: '"Go get the scrap metal, BB-8!"'
-      courseB_starWars_prog10_instruction: ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง
-      courseB_starWars_prog10_2018_instruction: ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง
-      courseB_starWars_prog11_instruction: ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง
-      courseB_starWars_prog11_2018_instruction: ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง
-      courseB_starWars_prog1_2018_instruction: '"Go get the scrap metal, BB-8!"'
-      courseB_starWars_prog2_instruction: Get all the metal.
-      courseB_starWars_prog2_2018_instruction: Get all the metal.
-      courseB_starWars_prog3_instruction: Get all the scrap metal
-      courseB_starWars_prog3_2018_instruction: Get all the scrap metal
-      courseB_starWars_prog4_instruction: Get all the scrap metal
-      courseB_starWars_prog4_2018_instruction: Get all the scrap metal
-      courseB_starWars_prog5_instruction: Get the scrap metal
-      courseB_starWars_prog5_2018_instruction: Get the scrap metal
-      courseB_starWars_prog6_instruction: Get all the scrap metal
-      courseB_starWars_prog6_2018_instruction: Get all the scrap metal
+      courseB_starWars_prog1_instruction: '"ไปเก็บเศษโลหะมาได้เลย บีบี-8!"'
+      courseB_starWars_prog10_instruction: ช่วย BB-8 รวบรวมเศษโลหะเรืองแสงให้ที
+      courseB_starWars_prog10_2018_instruction: ช่วย BB-8 รวบรวมเศษโลหะเรืองแสงให้ที
+      courseB_starWars_prog11_instruction: ช่วย BB-8 รวบรวมเศษโลหะเรืองแสงให้ที
+      courseB_starWars_prog11_2018_instruction: ช่วย BB-8 รวบรวมเศษโลหะเรืองแสงให้ที
+      courseB_starWars_prog1_2018_instruction: '"ไปเก็บเศษโลหะมาได้เลย บีบี-8!"'
+      courseB_starWars_prog2_instruction: ไปเอาโลหะมาให้หมด
+      courseB_starWars_prog2_2018_instruction: ไปเอาโลหะมาให้หมด
+      courseB_starWars_prog3_instruction: ไปเก็บเศษโลหะทั้งหมดได้เลย
+      courseB_starWars_prog3_2018_instruction: ไปเก็บเศษโลหะทั้งหมดได้เลย
+      courseB_starWars_prog4_instruction: ไปเก็บเศษโลหะทั้งหมดได้เลย
+      courseB_starWars_prog4_2018_instruction: ไปเก็บเศษโลหะทั้งหมดได้เลย
+      courseB_starWars_prog5_instruction: ไปเก็บเศษซากโลหะได้เลย
+      courseB_starWars_prog5_2018_instruction: ไปเก็บเศษซากโลหะได้เลย
+      courseB_starWars_prog6_instruction: ไปเก็บเศษโลหะทั้งหมดได้เลย
+      courseB_starWars_prog6_2018_instruction: ไปเก็บเศษโลหะทั้งหมดได้เลย
       courseB_starWars_prog7_instruction: Go get it!
       courseB_starWars_prog7_2018_instruction: Go get it!
-      courseB_starWars_prog8_instruction: "** การท้าทาย: ** ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง"
-      courseB_starWars_prog8_2018_instruction: "** การท้าทาย: ** ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง"
-      courseB_starWars_prog9_instruction: ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง
-      courseB_starWars_prog9_2018_instruction: ช่วย BB-8 รวบรวมเศษซากโลหะเรืองแสง
+      courseB_starWars_prog8_instruction: "** การท้าทาย: ** ช่วย บีบี-8 รวบรวมเศษโลหะเรืองแสงให้ที"
+      courseB_starWars_prog8_2018_instruction: "** การท้าทาย: ** ช่วย บีบี-8 รวบรวมเศษโลหะเรืองแสงให้ที"
+      courseB_starWars_prog9_instruction: ช่วย BB-8 รวบรวมเศษโลหะเรืองแสงให้ที
+      courseB_starWars_prog9_2018_instruction: ช่วย BB-8 รวบรวมเศษโลหะเรืองแสงให้ที
       courseC_PlayLab_events1_instruction: ทำให้ Jorge เจ้าสุนัข (นักแสดงที่ 1) พูดว่า
         "สวัสดี"
       courseC_PlayLab_events1_2018_instruction: ทำให้ จอร์จเจ้าสุนัข (นักแสดงที่ 1)
@@ -7727,7 +7732,7 @@ th:
       courseC_harvester_loops_forVid_instruction: เก็บรวบรวม ข้าวโพดและผักสลัดทั้งหมด
         แล้วคว้าฟักทองทั้งหมด
       courseC_maze_debugging1_instruction: แก้ไขโค้ดเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค
-      courseC_maze_debugging10_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ทำด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
+      courseC_maze_debugging10_instruction: ตรวจแก้จุดบกพร่องในระดับนี้ ด้วยการจัดเรียงและเปลี่ยนบล็อกใหม่
         เพื่อที่จะได้พาฉันไปจัดการเจ้าหมูนั่น!
       courseC_maze_debugging1_2018_instruction: แก้ไขโค้ดเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค
       courseC_maze_debugging2_instruction: ใช้ทักษะการดีบั๊กของคุณเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค
@@ -7831,36 +7836,34 @@ th:
       courseC_puppy_loops8courseC_maze_loops8_instruction: 'Challenge: Combine ideas
         from the last few puzzles to complete this level.'
       courseC_puppy_loops9_instruction: คุณกำลังทำได้ดี! ไปต่อเลย!
-      courseC_starWars_loops1_instruction: BB-8 จะเก็บเศษโลหะที่กองอยู่ตามเส้นทางที่เขาผ่านไป
-        ใช้บล็อกเดียวกัน 5 บล็อกเพื่อให้ BB-8 เก็บโลหะเศษซากในบริเวณ
+      courseC_starWars_loops1_instruction: บีบี-8 จะเก็บเศษโลหะที่กองอยู่ตามเส้นทางที่เขาเคลื่อนที่ผ่านไป
+        ใช้บล็อกเดียวกัน 5 บล็อกเพื่อให้ BB-8 เก็บเศษโลหะทั้งหมดในบริเวณนี้
       courseC_starWars_loops10_instruction: คุณกำลังทำได้ดี! ไปต่อเลย!
       courseC_starWars_loops10_2018_instruction: คุณกำลังทำได้ดี! ไปต่อเลย!
       courseC_starWars_loops10_predict2_instruction: คุณกำลังทำได้ดี! ไปต่อเลย!
       courseC_starWars_loops10_predict2_2018_instruction: คุณกำลังทำได้ดี! ไปต่อเลย!
       courseC_starWars_loops11_instruction: เกือบจะจบแล้ว! ตอนนี้, เลือกเส้นทางเส้นไหนก็ได้ที่คุณต้องการ!
       courseC_starWars_loops11_2018_instruction: เกือบจะจบแล้ว! ตอนนี้, เลือกเส้นทางเส้นไหนก็ได้ที่คุณต้องการ!
-      courseC_starWars_loops1_2018_instruction: BB-8 จะเก็บเศษโลหะที่กองอยู่ตามเส้นทางที่เขาผ่านไป
-        ใช้บล็อกเดียวกัน 5 บล็อกเพื่อให้ BB-8 เก็บโลหะเศษซากในบริเวณ
-      courseC_starWars_loops1_predict1_instruction: BB-8 จะเก็บเศษโลหะที่กองอยู่ตามเส้นทางที่เขาผ่านไป
-        ใช้บล็อกเดียวกัน 5 บล็อกเพื่อให้ BB-8 เก็บโลหะเศษซากในบริเวณ
-      courseC_starWars_loops1_predict1_2018_instruction: BB-8 จะเก็บเศษโลหะที่กองอยู่ตามเส้นทางที่เขาผ่านไป
-        ใช้บล็อกเดียวกัน 5 บล็อกเพื่อให้ BB-8 เก็บโลหะเศษซากในบริเวณ
-      courseC_starWars_loops2_instruction: เมื่อต้องการเก็บเศษโลหะทั้งหมดให้ลองสร้างลูปที่ใช้บล็อกเพียงบล็อกเดียว
-        อยู่ภายในบล็อก`ทำซ้ำ`
-      courseC_starWars_loops2_2018_instruction: เมื่อต้องการเก็บเศษโลหะทั้งหมดให้ลองสร้างลูปที่ใช้บล็อกเพียงบล็อกเดียว
-        อยู่ภายในบล็อก`ทำซ้ำ`
-      courseC_starWars_loops4_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้า
-        BB-8 ไปยังกองเศษโลหะ โดยใช้บล็อกจำนวนน้อยที่สุด!
-      courseC_starWars_loops4_2018_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้า
-        BB-8 ไปยังกองเศษโลหะ โดยใช้บล็อกจำนวนน้อยที่สุด!
-      courseC_starWars_loops5_instruction: ให้ BB-8 เก็บโลหะเศษซากทั้งหมดให้เร็วที่สุด!
-      courseC_starWars_loops5_2018_instruction: ให้ BB-8 เก็บโลหะเศษซากทั้งหมดให้เร็วที่สุด!
+      courseC_starWars_loops1_2018_instruction: บีบี-8 จะเก็บเศษโลหะที่กองอยู่ตามเส้นทางที่เขาเคลื่อนที่ผ่านไป
+        ใช้บล็อกเดียวกัน 5 บล็อกเพื่อให้ BB-8 เก็บเศษโลหะทั้งหมดในบริเวณนี้
+      courseC_starWars_loops1_predict1_instruction: บีบี-8 จะเก็บเศษโลหะที่กองอยู่ตามเส้นทางที่เขาเคลื่อนที่ผ่านไป
+        ใช้บล็อกเดียวกัน 5 บล็อกเพื่อให้ BB-8 เก็บเศษโลหะทั้งหมดในบริเวณนี้
+      courseC_starWars_loops1_predict1_2018_instruction: บีบี-8 จะเก็บเศษโลหะที่กองอยู่ตามเส้นทางที่เขาเคลื่อนที่ผ่านไป
+        ใช้บล็อกเดียวกัน 5 บล็อกเพื่อให้ BB-8 เก็บเศษโลหะทั้งหมดในบริเวณนี้
+      courseC_starWars_loops2_instruction: เมื่อต้องการเก็บเศษโลหะทั้งหมดให้ลองสร้างลูปที่ใช้บล็อกเพียงบล็อกเดียวให้อยู่ภายในบล็อก`ทำซ้ำ`
+      courseC_starWars_loops2_2018_instruction: เมื่อต้องการเก็บเศษโลหะทั้งหมดให้ลองสร้างลูปที่ใช้บล็อกเพียงบล็อกเดียวให้อยู่ภายในบล็อก`ทำซ้ำ`
+      courseC_starWars_loops4_instruction: สำหรับปริศนาด่านนี้ ลูป ` ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้า
+        บีบี-8 ไปยังกองเศษโลหะทั้งหมด ด้วยการใช้บล็อกจำนวนน้อยที่สุด!
+      courseC_starWars_loops4_2018_instruction: สำหรับปริศนาด่านนี้ ลูป ` ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้า
+        บีบี-8 ไปยังกองเศษโลหะทั้งหมด ด้วยการใช้บล็อกจำนวนน้อยที่สุด!
+      courseC_starWars_loops5_instruction: ให้ BB-8 เก็บเศษโลหะทั้งหมดให้ได้เร็วที่สุด!
+      courseC_starWars_loops5_2018_instruction: ให้ BB-8 เก็บเศษโลหะทั้งหมดให้ได้เร็วที่สุด!
       courseC_starWars_loops6_instruction: ลูปยังทำงานได้ เมื่อมีบล็อกมากกว่าหนึ่งบล็อกอยู่ภายใน!  คุณสามารถลูปลำดับคำสั่งเหล่านี้ได้หรือไม่
       courseC_starWars_loops6_2018_instruction: ลูปยังทำงานได้ เมื่อมีบล็อกมากกว่าหนึ่งบล็อกอยู่ภายใน!  คุณสามารถลูปลำดับคำสั่งเหล่านี้ได้หรือไม่
-      courseC_starWars_loops7_instruction: คุณสามารถเก็บเศษซากโลหะโดยใช้ลูปเพียงลูปเดียว?
-        ลองเขียนโปรแกรมทั้งหมดออกมา จากนั้นค้นหาโค้ดที่ซ้ำเพื่อใส่ในลูป
-      courseC_starWars_loops7_2018_instruction: คุณสามารถเก็บเศษซากโลหะโดยใช้ลูปเพียงลูปเดียว?
-        ลองเขียนโปรแกรมทั้งหมดออกมา จากนั้นค้นหาโค้ดที่ซ้ำเพื่อใส่ในลูป
+      courseC_starWars_loops7_instruction: คุณสามารถเก็บเศษโลหะโดยใช้ลูปเพียงลูปเดียวได้ไหม?
+        ลองเขียนโปรแกรมทั้งหมดออกมา จากนั้นค้นหาโค้ดที่ซ้ำเพื่อเอาไปใส่ไว้ในลูป
+      courseC_starWars_loops7_2018_instruction: คุณสามารถเก็บเศษโลหะโดยใช้ลูปเพียงลูปเดียวได้ไหม?
+        ลองเขียนโปรแกรมทั้งหมดออกมา จากนั้นค้นหาโค้ดที่ซ้ำเพื่อเอาไปใส่ไว้ในลูป
       courseC_starWars_loops9_instruction: ใช้สิ่งที่คุณได้เรียนรู้ เพื่อที่จะเก็บโลหะเศษซากออกไปให้หมด!
       courseC_starWars_loops9_2018_instruction: ใช้สิ่งที่คุณได้เรียนรู้ เพื่อที่จะเก็บโลหะเศษซากออกไปให้หมด!
       courseD_Frozen_nested1_instruction: 'วาดรูปทรงเล็กๆ ขนาดระหว่าง ** 20 และ 50
@@ -8764,6 +8767,8 @@ th:
       courseE_farmer_concept4_instruction: ตอนนี้ลองไปอีกหนึ่งระดับที่ลึกกว่าเก่าระดับหนึ่ง!
         เราได้ซ้อนทั้งบล็อกของโค้ดลงในลูปอีกลูปหนึ่ง, แต่คุณต้องการที่จะให้ศิลปินกลับมาในสถานที่เดิมก่อนที่จะวาดบรรทัดถัดไป.
         ซึ่งบล็อกรหัสเหล่านี้คุณสามารถวางในตอนท้ายของลูปที่อยู่ด้านนอกสุดเพื่อวาดตารางทั้งหมด?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each
+        of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will
@@ -10442,7 +10447,7 @@ th:
         ด้านทั้งสามด้านของสามเหลี่ยมมีความยาวเท่ากัน'
       grade4_review_artist3_instruction: |-
         บล็อกกระโดดจะเคลื่อนย้ายศิลปินโดยไม่มีการวาดรูป
-        วาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า...` และบล็อก `เดินไปข้างหน้า`
+        วาดเส้นประโดยใช้บล็อก `กระโดดไปข้างหน้า...` และบล็อก `ไปข้างหน้า`
         โดยแต่ละเส้นมีความยาว 50 พิกเซล
       grade4_review_bee1_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
       grade4_review_bee2_instruction: เก็บน้ำหวานจากเกสรแต่ละดอก และทำน้ำผึ้งที่รวงผึ้งแต่ละรวง

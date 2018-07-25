@@ -531,7 +531,7 @@ th:
     C1_pair_programming:
       1:
         image: 'notes/C1_pair_programming_1.png'
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: "วันนี้เรากำลังจะเรียนรู้เกี่ยวกับการเขียนโปรแกรมเป็นคู่ โดยการเขียนโปรแกรมเป็นคู่นั้น คุณจะทำงานเป็นทีม ถ้าถามว่าทำไมบุคคลสองคนจึงใช้คอมพิวเตอร์เครื่องเดียวกัน? ก็เพราะว่าสองหัวย่อมดีกว่าหัวเดียว ในการเขียนโปรแกรมเป็นคู่นั้น คุณและคู่ของคุณจะนั่งด้วยกันที่คอมพิวเตอร์เครื่องหนึ่งและคุณทั้งสองจะทำงานในโปรเจคเดียวกัน"
       2:
         image: 'notes/C1_pair_programming_2.png'
         text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
@@ -717,7 +717,7 @@ th:
         text: "ลูปคือการทำกิจกรรมซ้ำๆกัน เช่นการเข้าไปดูกล่องรังผึ้งเพื่อตรวจสอบ โดยฉันมองไปที่กรอบๆ หนึ่งแล้วฉันวางมันกลับไปไว้ที่เดิม ฉันทำกิจกรรมที่เหมือนๆกันนั้นซ้ำหลายๆ ครั้ง ซึ่งก็คือการทำกิจกรรมเดียวกันวนไปวนมาหลายๆรอบ"
       2:
         image: 'notes/C2_bee_loops_2.png'
-        text: "นี่คือบล็อกทำซ้ำ สิ่งที่คุณใส่ภายในบล็อกทำซ้ำจะทำภารกิจเหล่านั้นซ้ำอีกตามจำนวนครั้งที่คุณบอกให้ทำ ตัวอย่างเช่นในด่านนี้แทนที่จะลากบล็อกไปข้างหน้าและลากบล็อกเก็บหวานมาทีละบล็อกเป็นจำนวนสามบล็อก เราเพียงแค่ลากภารกิจเหล่านี้ออกมาครั้งเดียวและให้ทำภารกิจเหล่านั้นซ้ำสามครั้ง ซึ่งทำให้มันง่ายจริงๆ!"
+        text: "นี่คือบล็อกทำซ้ำ สิ่งที่คุณใส่ภายในบล็อกทำซ้ำจะทำภารกิจเหล่านั้นซ้ำอีกตามจำนวนครั้งที่คุณบอกให้ทำ ตัวอย่างเช่นในด่านนี้แทนที่จะลากบล็อกไปข้างหน้าและลากบล็อกเก็บน้ำหวานมาทีละบล็อกเป็นจำนวนสามบล็อก เราเพียงแค่ลากภารกิจเหล่านี้ออกมาครั้งเดียวและให้ทำภารกิจเหล่านั้นซ้ำสามครั้ง ซึ่งทำให้มันง่ายจริงๆ!"
     C2_maze_intro:
       1:
         image: 'notes/C2_maze_intro_1.png'
