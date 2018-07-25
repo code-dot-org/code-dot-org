@@ -123,7 +123,8 @@ class TeacherFeedback extends Component {
     }
 
     const latestFeedback = this.state.latestFeedback.length > 0 ? this.state.latestFeedback[0] : null;
-    const feedbackUnchanged = (latestFeedback && this.state.comment === latestFeedback.comment);
+    const feedbackUnchanged = (latestFeedback && this.state.comment === latestFeedback.comment) ||
+      (!latestFeedback && this.state.comment.length === 0);
 
     const buttonDisabled = feedbackUnchanged || this.state.submitting || this.state.errorState === ErrorType.Load;
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
