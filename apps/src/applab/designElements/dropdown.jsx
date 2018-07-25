@@ -35,6 +35,12 @@ class DropdownProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'options')}
         />
         <PropertyRow
+          desc={'index'}
+          isNumber={true}
+          initialValue={parseInt(element.selectedIndex, 10)}
+          handleChange={this.props.handleChange.bind(this, 'index')}
+        />
+        <PropertyRow
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
@@ -187,6 +193,9 @@ export default {
         // Overrides generic text setter and sets from the dropdown options
         element.value = value;
         break;
+      case 'index':
+        element.selectedIndex = value;
+        break;
       default:
         return false;
     }
@@ -197,6 +206,8 @@ export default {
     switch (name) {
       case 'value':
         return element.value;
+      case 'index':
+        return element.selectedIndex;
       default:
         throw `unknown property name ${name}`;
     }

@@ -69,6 +69,15 @@ module SetupTest
       any_instance.
       stubs(:static_credentials).
       returns(credentials)
+
+    # CDO.sources_s3_directory contains the commit hash when running in the test
+    # environment, so new projects created during UI tests will not already
+    # contain source code generated from previous test runs. However, this is
+    # not compatible with our unit tests which use VCR to stub out network
+    # requests to url paths which must be consistent across test runs.
+    # Therefore, remove the commit-specific part of this path only in unit tests.
+    CDO.stubs(:sources_s3_directory).returns('sources_test')
+
     VCR.use_cassette(cassette_name, record: record_mode) do
       PEGASUS_DB.transaction(rollback: :always) do
         AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)

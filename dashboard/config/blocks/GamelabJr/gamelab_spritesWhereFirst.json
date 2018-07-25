@@ -1,0 +1,13 @@
+{
+  "category": "",
+  "config": {
+    "func": "spritesWhereFirst",
+    "returnType": "Sprite",
+    "blockText": "first {VALUE}",
+    "args": [
+      {
+        "name": "VALUE"
+      }
+    ]
+  }
+}

@@ -32,6 +32,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

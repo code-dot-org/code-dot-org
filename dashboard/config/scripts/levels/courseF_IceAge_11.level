@@ -48,6 +48,7 @@
     "allow_sprites_outside_playspace": "false",
     "timeout_after_when_run": "false",
     "project_template_level_name": "courseF_IceAge_template",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

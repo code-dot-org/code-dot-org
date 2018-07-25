@@ -30,6 +30,7 @@
     "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]",
     "never_autoplay_video": "false",
     "examples_required": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

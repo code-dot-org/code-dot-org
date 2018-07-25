@@ -4,6 +4,7 @@
  * background. When we're a button on top of an image, we may want something different.
  */
 
+import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
@@ -50,6 +51,7 @@ const styles = {
     [ButtonColor.orange]: {
       color: 'white',
       backgroundColor: color.orange,
+      fontWeight: 'bold',
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.63)',
       ':hover': {
         color: color.orange,
@@ -74,12 +76,18 @@ const styles = {
     [ButtonColor.blue]: {
       color: color.white,
       backgroundColor: color.cyan,
+      fontWeight: 'bold',
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
       ':hover': {
         boxShadow: 'none',
         color: color.cyan,
         borderColor: color.cyan,
         backgroundColor: color.lightest_cyan
+      },
+      ':disabled': {
+        color: color.lighter_cyan,
+        backgroundColor: color.lightest_cyan,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
     [ButtonColor.white]: {
@@ -89,16 +97,25 @@ const styles = {
       ':hover': {
         boxShadow: 'none',
         backgroundColor: color.lightest_gray
+      },
+      ':disabled': {
+        backgroundColor: color.lightest_gray,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
     [ButtonColor.red]: {
       color: color.white,
       backgroundColor: color.red,
+      fontWeight: 'bold',
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
       ':hover': {
         boxShadow: 'none',
         color: color.red,
         borderColor: color.red,
+      },
+      ':disabled': {
+        backgroundColor: color.lightest_red,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
   },
@@ -134,6 +151,8 @@ class Button extends React.Component {
     onClick: PropTypes.func,
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    isPending: PropTypes.bool,
+    pendingText: PropTypes.string,
   };
 
   onKeyDown = (event) => {
@@ -147,7 +166,7 @@ class Button extends React.Component {
 
   render() {
     const { className, href, text, icon, iconClassName, iconStyle, target,
-      style, onClick, disabled, id, tabIndex } = this.props;
+      style, onClick, disabled, id, tabIndex, isPending, pendingText } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -162,7 +181,7 @@ class Button extends React.Component {
       <Tag
         className={className}
         style={[styles.main, styles.colors[color], styles.sizes[size], style]}
-        href={href}
+        href={disabled ? 'javascript:void(0);' : href}
         target={target}
         disabled={disabled}
         onClick={disabled ? null : onClick}
@@ -170,7 +189,7 @@ class Button extends React.Component {
         tabIndex={tabIndex}
         id={id}
       >
-        <div>
+        <div style={_.pick(style, ['textAlign'])}>
           {icon &&
             <FontAwesome
               icon={icon}
@@ -178,7 +197,15 @@ class Button extends React.Component {
               style={{...styles.icon, ...iconStyle}}
             />
           }
-          {text}
+          {isPending && pendingText &&
+            <span>
+              {pendingText}&nbsp;
+              <FontAwesome icon="spinner" className="fa-spin"/>
+            </span>
+          }
+          {!isPending &&
+            text
+          }
         </div>
       </Tag>
     );

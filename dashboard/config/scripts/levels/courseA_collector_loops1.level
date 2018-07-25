@@ -36,6 +36,7 @@
     "shape_shift": "false",
     "tts_markdown_instructions_override": "Free Play: This is Laurel the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

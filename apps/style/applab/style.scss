@@ -311,6 +311,21 @@ div#visualizationResizeBar {
   z-index: -1;
 }
 
+// While theses styles are already set by application.css (dashboard), it is
+// important to set them explicitly for the export scenario.
+#divApplab {
+  label, input, button, select, textarea {
+    font-size: 14px;
+  }
+  select {
+    height: 30px;
+    width: 220px;
+  }
+  button, input, select, textarea {
+    vertical-align: middle;
+  }
+}
+
 #divApplab.running {
   label {
     cursor: default;

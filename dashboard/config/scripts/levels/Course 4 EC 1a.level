@@ -28,9 +28,9 @@
     "step_speed": "1",
     "instructions": "No rules. No clues. Just the challenge!",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
-    "contained_level_names": null,
     "instructions_important": "true",
-    "maze_data": null
+    "hint_prompt_attempts_threshold": 8,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -15,6 +15,8 @@ Workshops are the core of Code.org's Teacher [Professional Learning Program](htt
 <img style="float: right; margin-left: 10px; width: 400px" src="/images/pd-2014-15.png"/>
 
 - **[Announcements](#announce)**
+- **[Local Summer Workshop Specific](#local)**
+- **[Academic Year Workshop Specific](#academic)**
 - **[Workshop Dashboard](#dashboard)**
 - Professional Learning Program [One-Pager](https://code.org/files/PLProgramsOverview_1-Pager.pdf)
 - 2016 'Planning Code.org Summer Workshops' webinar [slides](https://docs.google.com/presentation/d/1zFiNhlHqk6Gldzpbyc_MbgA0ovTswa4cns0AfT8jdAc/edit#slide=id.gdebb9aea3_0_101)
@@ -117,9 +119,13 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 </p>
 </details>
 
+<a id="local"></a>
+
 ### Local Summer Workshop Specific
 
-- **<a href="https://docs.google.com/document/d/1FQV4RD8egjVv5WUTaAlGDIt-vrmSHcsotAYiUrHw_Gs/edit" target=_blank>2018 Local Summer Workshop Process Manual</a>** - Everything you need to know to plan and run a local summer workshop!
+**<a href="https://docs.google.com/document/d/1YFHuan6wZWwqiN9YMymtzOKrAHMhiM7bOgRS8QPPF6w/edit?usp=sharing"target=_blank>2018 Local Summer Workshop Survey Guide</a>**
+
+**<a href="https://docs.google.com/document/d/1FQV4RD8egjVv5WUTaAlGDIt-vrmSHcsotAYiUrHw_Gs/edit" target=_blank>2018 Local Summer Workshop Process Manual</a>** - Everything you need to know to plan and run a local summer workshop!
 - <a href="https://docs.google.com/document/d/1E7_D2skkgfa3wRoNk_NO3VEUDB9vDuPzmnhZ81A8Qss/edit#heading=h.35jd6ttbmrgb" target=_blank>2018 Tips for Leading Multi-Cohort Local Summer Workshop</a>
 
 <details>
@@ -163,11 +169,12 @@ The Welcome Kits are located in our shared Google Drive, in the <a href="https:/
 </p>
 </details>
 
+<a id="academic"></a>
 
 
-### Academic-Year Workshops Specific
+### Academic Year Workshops Specific
 
-- 2018-2019 Process Document to come! ([2017-2018 Academic Year Workshop Process Document](https://docs.google.com/document/d/1lI8E7IE0MOYktAPsmssb6vRVI5--s_5zK8OkUAcw158/edit?disco=AAAAA_lL-1o&ts=59833f89))
+- **[2018-2019 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?ts=5b294bbb)**
 - **Plan & Schedule**: Use <a href="https://docs.google.com/presentation/d/1wrwpbY3qpeyRBuh8FMyqg106P_zVzLYwZ-r6EyApNA8/edit#slide=id.g31297c2138_0_2" target=_blank>these guidelines</a> to design your academic year cohorts and determine best dates to schedule your academic-year workshops. (Supporting worksheet available <a href="https://docs.google.com/document/d/1Si2OH4TunUTYK5qX5Ht0qGMGKtk75QrDhWyus7YdPgU/edit#heading=h.qvu3qthzi6uv" target=_blank>here</a>.)
 - **Academic Year PD Options**: Be sure to review the [Recommendations for Supporting Academic Year Workshop Challenges](https://docs.google.com/document/d/1gSCtI19On4slBun5EsiYcRXs6_P7K0dkk25_mMqvVmg/edit#). Formal plans to use any of these solutions must be set with your Regional Manager by May 18, 2018.
 

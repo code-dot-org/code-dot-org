@@ -6,6 +6,7 @@ import {
   FormGroup,
   Pagination,
 } from 'react-bootstrap';
+import i18n from '@cdo/locale';
 
 const styles = {
   pageButtons: {
@@ -211,14 +212,14 @@ export default class FormController extends React.Component {
           // and display the generic error header
           this.setState({
             errors: data.responseJSON.errors.form_data,
-            errorHeader: "Please correct the errors below."
+            errorHeader: i18n.formErrorsBelow()
           });
         }
       } else {
         // Otherwise, something unknown went wrong on the server
         this.setState({
           globalError: true,
-          errorHeader: "Something went wrong on our end; please try again later."
+          errorHeader: i18n.formServerError()
         });
       }
       this.setState({
@@ -405,7 +406,7 @@ export default class FormController extends React.Component {
   shouldShowSubmit() {
     return this.state.currentPage === this.getPageComponents().length - 1;
   }
-  static submitButtonText = "Submit";
+  static submitButtonText = i18n.submit();
 
   /**
    * @returns {Element}

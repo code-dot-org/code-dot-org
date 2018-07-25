@@ -61,15 +61,13 @@ module AWS
       end
 
       # Fully qualified domain name, with optional pre/postfix.
-      # prod_stack_name is used to control partially-migrated resources in production.
-      def subdomain(prefix = nil, postfix = nil, prod_stack_name: true)
-        name = (rack_env?(:production) && !prod_stack_name) ? nil : cname
-        subdomain = [prefix, name, postfix].compact.join('-')
+      def subdomain(prefix = nil, postfix = nil)
+        subdomain = [prefix, cname, postfix].compact.join('-')
         [subdomain.presence, DOMAIN].compact.join('.').downcase
       end
 
-      def studio_subdomain(prod_stack_name: true)
-        subdomain nil, 'studio', prod_stack_name: prod_stack_name
+      def studio_subdomain
+        subdomain nil, 'studio'
       end
 
       def adhoc_image_id

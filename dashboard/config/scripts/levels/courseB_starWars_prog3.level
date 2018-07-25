@@ -45,6 +45,7 @@
     "tts_markdown_instructions_override": "Help BB-8 gather all of the glowing scrap metal!  \r\nWatch out for walls and crates!  ",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to move 3 ways to solve this puzzle.\",\"hint_id\":\"courseB_starWars_prog3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/88fee5a80dbe657589621cbeed814b5b/courseB_starWars_prog3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Build one piece of code at a time. Run it to figure out where to go from there.\",\"hint_id\":\"courseB_starWars_prog3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89d0cf4934781e5a9e3303d0fefc175a/courseB_starWars_prog3.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

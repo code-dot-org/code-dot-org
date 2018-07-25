@@ -24,26 +24,25 @@ class Video < ActiveRecord::Base
   # YouTube video IDs must be 11 characters and contain no invalid characters, such as exclamation points or asterisks.
   # Ref: https://developers.google.com/youtube/iframe_api_reference (events|onError|2)
   YOUTUBE_ID_REGEX = /[^!*"&?\/ ]{11}/
-  # YouTube embed URL has the following format: http://www.youtube.com/embed/VIDEO_ID
+  # YouTube embed URL has the following format: http://www.youtube-nocookie.com/embed/VIDEO_ID
   # Ref: https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds
-  EMBED_URL_REGEX = /(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education)?)\.com\/embed\/(?<id>#{YOUTUBE_ID_REGEX})/
+  EMBED_URL_REGEX = /(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education|-nocookie)?)\.com\/embed\/(?<id>#{YOUTUBE_ID_REGEX})/
 
   def self.check_i18n_names
     video_keys = Video.all.collect(&:key)
-    i18n_keys = I18n.t('data.video.name').keys.collect(&:to_s)
-
-    missing_keys = video_keys - i18n_keys
+    missing_keys = video_keys.reject {|key| I18n.t("data.video.name.#{key}", default: nil)}
     unless missing_keys.empty?
       raise "Missing strings for video.name.#{missing_keys} in config/locales/data.en.yml, please add"
     end
   end
 
   def self.setup
+    videos = CSV.read('config/videos.csv', headers: true).map.with_index(1) do |row, id|
+      {id: id, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download']}
+    end
     transaction do
       reset_db
-      CSV.read('config/videos.csv', headers: true).each_with_index do |row, id|
-        create!(id: id + 1, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download'])
-      end
+      Video.import! videos
     end
     check_i18n_names
   end
@@ -72,7 +71,7 @@ class Video < ActiveRecord::Base
   end
 
   def self.youtube_base_url
-    'https://www.youtube.com'
+    'https://www.youtube-nocookie.com'
   end
 
   def self.s3_metadata(url)

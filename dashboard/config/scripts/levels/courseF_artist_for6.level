@@ -39,6 +39,7 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your `for` loop will count from 15 to 300 by 15.\",\"hint_id\":\"courseF_artist_for6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f2661b102762f535eb50e5275a55a836/courseF_artist_for6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Put a `move forward` and a `turn` block within this `for` loop.\",\"hint_id\":\"courseF_artist_for6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de274ec5912675d1a9da428790409716/courseF_artist_for6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"All you have to change is the number of degrees in the `turn` block.\",\"hint_id\":\"courseF_artist_for6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/292f1b4e5ef1b5c49bf25bfb8e1fb41c/courseF_artist_for6.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

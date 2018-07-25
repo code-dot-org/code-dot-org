@@ -46,6 +46,7 @@
     "tts_markdown_instructions_override": "Can you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
     "markdown_instructions": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"You can do it!\"_\r\n\r\nCan you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 16,
     "contained_level_names": null
   },
   "published": true,

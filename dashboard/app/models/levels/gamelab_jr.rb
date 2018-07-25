@@ -46,6 +46,7 @@ class GamelabJr < Gamelab
           use_default_sprites: true,
           hide_animation_mode: true,
           show_type_hints: true,
+          include_shared_functions: true,
         }
       )
     )
@@ -182,6 +183,7 @@ class GamelabJr < Gamelab
     <<-XML.chomp
 <category name="Category">
   <block type="category"></block>
+  <block type="custom_category"></block>
 </category>
 #{common_blocks(type)}
     XML

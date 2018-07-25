@@ -21,7 +21,6 @@ var ALLOWED_KEYS = new Set([
   'isSubmittable',
   'isSubmitted',
   'noInstructionsWhenCollapsed',
-  'hasInlineImages',
   'puzzleNumber',
   'stageTotal',
   'showDebugButtons',

@@ -422,6 +422,7 @@ class DashboardSection
     valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
+  # Used only in tests now, remove when no more usages.
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
@@ -470,25 +471,6 @@ class DashboardSection
     row
   end
 
-  # Soft deletes both the section with ID `id` and all associated followers
-  # relationships.
-  def self.delete_if_owner(id, user_id)
-    row = Dashboard.db[:sections].
-      where(id: id, user_id: user_id, deleted_at: nil).
-      first
-    return nil unless row
-
-    time_now = Time.now
-
-    Dashboard.db.transaction do
-      Dashboard.db[:followers].where(section_id: id, deleted_at: nil).
-        update(deleted_at: time_now)
-      Dashboard.db[:sections].where(id: id).update(deleted_at: time_now)
-    end
-
-    row
-  end
-
   def self.fetch_if_allowed(id, user_id)
     # TODO: Allow caller to specify fields that they want because the
     # joins are getting a bit out of control (eg. you don't want to
@@ -503,78 +485,6 @@ class DashboardSection
     section = new(row)
     return section if section.member?(user_id) || Dashboard.admin?(user_id)
     nil
-  end
-
-  def self.fetch_if_teacher(id, user_id)
-    return nil unless row = Dashboard.db[:sections].
-      select(*fields).
-      where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
-      first
-    section = new(row)
-    return section
-  end
-
-  def self.fetch_user_sections(user_id)
-    return if user_id.nil?
-
-    Dashboard.db[:sections].
-      join(:users, id: :user_id).
-      select(*fields).
-      where(sections__user_id: user_id, sections__deleted_at: nil).
-      map {|row| new(row).to_owner_hash}
-  end
-
-  def self.fetch_student_sections(student_id)
-    return if student_id.nil?
-
-    Dashboard.db[:sections].
-      select(*fields).
-      join(:followers, section_id: :id).
-      join(:users, id: :student_user_id).
-      where(student_user_id: student_id).
-      where(sections__deleted_at: nil, followers__deleted_at: nil).
-      map {|row| new(row).to_member_hash}
-  end
-
-  def add_student(student)
-    student_id = student[:id] || DashboardStudent.create(student)
-    return nil unless student_id
-    return nil if student[:admin]
-
-    time_now = DateTime.now
-
-    existing_follower = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).first
-    if existing_follower
-      Dashboard.db[:followers].where(id: existing_follower[:id]).update(deleted_at: nil, updated_at: time_now)
-      return student_id
-    end
-
-    Dashboard.db[:followers].insert(
-      {
-        section_id: @row[:id],
-        student_user_id: student_id,
-        created_at: time_now,
-        updated_at: time_now
-      }
-    )
-    student_id
-  end
-
-  def add_students(students)
-    student_ids = students.map {|i| add_student(i)}.compact
-    DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
-    return student_ids
-  end
-
-  # @param student_id [Integer] The user ID of the student to unenroll.
-  # @return [Boolean] Whether the student's enrollment was removed.
-  def remove_student(student_id)
-    # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
-
-    rows_deleted = Dashboard.db[:followers].
-      where(section_id: @row[:id], student_user_id: student_id, deleted_at: nil).
-      update(deleted_at: DateTime.now)
-    rows_deleted > 0
   end
 
   def member?(user_id)
@@ -660,47 +570,6 @@ class DashboardSection
       pairing_allowed: @row[:pairing_allowed],
       hidden: @row[:hidden],
     }
-  end
-
-  def self.update_if_owner(params)
-    section_id = params[:id]
-    return nil unless params[:user] && params[:user][:user_type] == 'teacher'
-    user_id = params[:user][:id]
-
-    fields = {updated_at: DateTime.now}
-    fields[:name] = params[:name] unless params[:name].nil_or_empty?
-    fields[:login_type] = params[:login_type] if valid_login_type?(params[:login_type])
-    fields[:grade] = params[:grade] if valid_grade?(params[:grade])
-    fields[:stage_extras] = params[:stage_extras]
-    fields[:pairing_allowed] = params[:pairing_allowed]
-    fields[:hidden] = params[:hidden] unless params[:hidden].nil?
-
-    if params[:course_id] && valid_course_id?(params[:course_id])
-      fields[:course_id] = params[:course_id].to_i
-      # explicitly clear script_id (unless we're also passed in a valid script id
-      # as a param
-      fields[:script_id] = nil
-    else
-      # If no valid course_id provided, make sure we clear any existing course_id
-      fields[:course_id] = nil
-    end
-
-    if params[:script] && valid_script_id?(params[:script][:id], user_id)
-      fields[:script_id] = params[:script][:id].to_i
-      DashboardUserScript.assign_script_to_section(fields[:script_id], section_id)
-      DashboardUserScript.assign_script_to_user(fields[:script_id], user_id)
-    elsif !params[:course_id] && !params[:script_id]
-      # If a null course (no choice or decide later) is chosen, then update the course and script to be nil
-      fields[:course_id] = nil
-      fields[:script_id] = nil
-    end
-
-    rows_updated = Dashboard.db[:sections].
-      where(id: section_id, user_id: user_id, deleted_at: nil).
-      update(fields)
-    return nil unless rows_updated > 0
-
-    fetch_if_allowed(section_id, user_id)
   end
 
   def self.fields

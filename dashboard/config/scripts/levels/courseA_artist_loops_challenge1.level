@@ -38,6 +38,7 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/733b12abb9852daa5b8c2ebb850960a6=levelbuilder/27781.png",
     "instructions": "Can you draw a house? Make it look just the way you like it!",
     "top_level_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

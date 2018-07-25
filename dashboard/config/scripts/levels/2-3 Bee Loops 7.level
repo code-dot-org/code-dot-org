@@ -33,13 +33,14 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
+    "hint_prompt_attempts_threshold": 12,
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
-    "repeat_loops": 1
+    "repeat_loops": 3
   }
 }]]></config>
   <blocks>

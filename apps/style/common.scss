@@ -477,7 +477,7 @@ html[dir='rtl'] .editor-column {
 }
 
 .ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
-  background-image: url('#{$common_root}/gutterError.png');
+  background-image: url('#{$common_root}gutterError.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
@@ -487,7 +487,7 @@ html[dir='rtl'] .editor-column {
 }
 
 .ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
-  background-image: url('#{$common_root}/gutterWarn.png');
+  background-image: url('#{$common_root}gutterWarn.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
