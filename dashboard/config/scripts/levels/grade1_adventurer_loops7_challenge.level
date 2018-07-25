@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "**Challenge: ** The gold goes all the way down these stairs!  Write the code to help me get it all.",
+    "instructions": "**Challenge:** The gold goes all the way down these stairs!  Write the code to help me get it all.",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out where to put the repeat loops, program it out step-by-step and look for a pattern. \",\"hint_id\":\"grade1_adventurer_loops7_challenge_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/71f06a7350271ddd193c9d6c11b1a6a0/grade1_adventurer_loops7_challenge.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Does the code feel a little long?  You can make it much shorter by moving two of your `repeat` loops inside of another loop.\",\"hint_id\":\"grade1_adventurer_loops7_challenge_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/826f7675c60d3ad4c16e6c886f25bce6/grade1_adventurer_loops7_challenge.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "10",
