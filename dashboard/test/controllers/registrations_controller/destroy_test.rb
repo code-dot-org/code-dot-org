@@ -144,12 +144,12 @@ module RegistrationsControllerTests
 
     test "sends email when teacher destroyed in new flow" do
       default_params = {
-          name: 'A name',
-          password: 'apassword',
-          email: 'an@email.address',
-          gender: 'F',
-          age: '21',
-          user_type: 'teacher'
+        name: 'A name',
+        password: 'apassword',
+        email: 'an@email.address',
+        gender: 'F',
+        age: '21',
+        user_type: 'teacher'
       }
       teacher_params = default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
       assert_creates(User) do
