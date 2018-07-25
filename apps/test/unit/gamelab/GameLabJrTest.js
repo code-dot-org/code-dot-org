@@ -11,7 +11,6 @@ whenTouching
 */
 
 import _ from 'lodash';
-import GameLabJrLib from '@cdo/interpreted/GameLabJr.interpreted.js';
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
 import {expect} from '../../util/configuredChai';
 import {stub} from 'sinon';
@@ -48,16 +47,7 @@ describe('Game Lab Jr Helper Library', () => {
       window[propName] = value;
     }
 
-    // Awful hack :(
-    // Declarations within eval() aren't applied to the calling scope in
-    // strict mode. Replace global variable/function declarations with explicit
-    // window property declarations.
-    const lib = GameLabJrLib
-        .replace(/}function (\w+)/gm, '};window.$1 = function ')
-        .replace(/\bfunction (\w+)/gm, 'window.$1 = function ')
-        .replace(/\bvar /gm, 'window.');
-
-    eval(lib); // eslint-disable-line no-eval
+    require('!!script-loader!@cdo/interpreted/GameLabJr.interpreted.js');
 
     const newKeys = Object.keys(window);
     extraKeys = _.difference(newKeys, oldKeys);
