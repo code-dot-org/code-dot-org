@@ -237,8 +237,20 @@ module Pd
         # Collect errors by submission id
         errors = {}
         count = 0
+        synced_question_form_ids = Set.new
         placeholders.find_each do |placeholder|
-          placeholder.sync_from_jotform
+          begin
+            placeholder.sync_from_jotform
+          rescue
+            # This form has already had its questions re-synced. Fail out.
+            raise if synced_question_form_ids.include? placeholder.form_id
+
+            # The first time a sync fails for a particular form id, try to re-sync the questions and try again.
+            synced_question_form_ids << form_id
+            placeholder.force_sync_questions
+            placeholder.sync_from_jotform
+          end
+
           count += 1
         rescue => e
           # Store message and first line of backtrace for context
@@ -267,10 +279,10 @@ module Pd
       # @raise when missing an expected unique attribute
       # @return [Hash] pass through attrs merged with any static_attribute_values
       def validate_unique_attributes(attrs)
-        missing = unique_attributes_with_form_id - attrs.keys
-        raise "Missing required attributes #{missing} in #{attrs}" if missing.any?
-
-        attrs.merge(static_attribute_values)
+        attrs.merge(static_attribute_values).tap do |attrs_with_statics|
+          missing = unique_attributes_with_form_id - attrs_with_statics.keys
+          raise "Missing required attributes #{missing} in #{attrs_with_statics}" if missing.any?
+        end
       end
 
       def response_exists?(attrs)

@@ -1421,14 +1421,24 @@ class UserTest < ActiveSupport::TestCase
     assert student.sponsored?
   end
 
-  test 'can_edit_password? is true for user with password' do
-    assert @student.can_edit_password?
+  test 'can_edit_password? is true for user with or without a password' do
+    student1 = create :student
+    refute_empty student1.encrypted_password
+    assert student1.can_edit_password?
+
+    student1 = create :student, encrypted_password: ''
+    assert_empty student1.encrypted_password
+    assert student1.can_edit_password?
   end
 
-  test 'can_edit_password? is false for user without password' do
-    user = create :student
-    user.update_attribute(:encrypted_password, '')
-    refute user.can_edit_password?
+  test 'can_edit_password? is false for a sponsored student' do
+    student1 = create :student_in_picture_section
+    assert student1.sponsored?
+    refute student1.can_edit_password?
+
+    student2 = create :student_in_word_section
+    assert student2.sponsored?
+    refute student2.can_edit_password?
   end
 
   test 'can_edit_password? is true for migrated student without a password' do
@@ -2571,14 +2581,17 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'assign_script does not overwrite assigned_at if pre-existing' do
+  test 'assign_script does overwrite assigned_at if pre-existing' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
       UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
     end
-    assert_does_not_create(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
-      assert_equal '2017-01-02 12:00:00 UTC', user_script.assigned_at.to_s
+
+    Timecop.travel(2018, 3, 4, 12, 0, 0) do
+      assert_does_not_create(UserScript) do
+        user_script = @student.assign_script(Script.first)
+        assert_equal Script.first.id, user_script.script_id
+        assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
+      end
     end
   end
 

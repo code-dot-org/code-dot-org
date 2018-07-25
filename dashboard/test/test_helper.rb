@@ -1,5 +1,9 @@
 require 'test_reporter'
 
+if defined? ActiveRecord
+  ActiveRecord::Migration&.check_pending!
+end
+
 # This is a workaround for https://github.com/kern/minitest-reporters/issues/230
 Minitest.load_plugins
 Minitest.extensions.delete('rails')
@@ -555,7 +559,7 @@ def storage_id(_)
 end
 
 def storage_id_for_user_id(user_id)
-  Random.new(user_id).rand(1_000_000)
+  Random.new(user_id.to_i).rand(1_000_000)
 end
 
 # A fake slogger implementation that captures the records written to it.
