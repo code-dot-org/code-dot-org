@@ -3,35 +3,35 @@ az:
     course:
       name:
         csp-2017:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('17-'18)
+          assignment_family_title: İnformatikanın Əsasları
+          title: İnformatikanın Əsasları ('17-'18)
           version_title: "'17-'18"
-          description_student: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
-          description_teacher: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
-          description_short: Learn foundational computer science concepts.
+          description_student: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu, AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini hazırlamışdır.
+          description_teacher: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu, AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini hazırlamışdır.
+          description_short: Əsas informatika anlayışlarını öyrənin.
         csd-2017:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries ('17-'18)
+          assignment_family_title: İnformatika Kəşfləri
+          title: İnformatika Kəşfləri ('17-'18)
           version_title: "'17-'18"
-          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
+          description_teacher: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
+          description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir giriş informatika kursu.
         allthethingscourse:
-          title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer description for students
-          description_teacher: This is a course for allthethings and has a longer description for teachers
+          title: bütübhərşeyinkursu
+          description_short: Bu bütünhərşey üçün kursdur
+          description_student: Bu bütünhərşey üçün bir kursdur və tələbələr üçün daha uzun təsvirə malikdir
+          description_teacher: Bu bütünhərşey üçün bir kursdur və müəllimlər üçün daha uzun təsvirə malikdir
         csd-2018:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries ('18-'19)
+          assignment_family_title: İnformatika Kəşfləri
+          title: İnformatika Kəşfləri ('18-'19)
           version_title: "'18-'19"
-          description_short: An introductory computer science course that empowers students to create authentic artifacts.
-          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_short: Tələbələrə əsl əsərlər yaratmaq üçün imkan verən bir giriş informatika kursu.
+          description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
+          description_teacher: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
         csp-2018:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('18-'19)
+          assignment_family_title: İnformatikanın Əsasları
+          title: İnformatikanın Əsasları ('18-'19)
           version_title: "'18-'19"
-          description_short: Learn foundational computer science concepts.
-          description_student: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
-          description_teacher: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_short: Əsas informatika anlayışlarını öyrənin.
+          description_student: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu, AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini hazırlamışdır.
+          description_teacher: 2016-cı ilin payızında Kollec Şurası yeni AP® kursunu, AP İnformatikanın Əsasları kursunu başlatdı. Kurs tələbələrə informatikanın əsas anlayışlarını təqdim edir və hesablama və texnologiyanın dünyaya necə təsir edə biləcəyini kəşf etmələrinə yarayır. AP Proqramı, informatika sahələrində liderlər yaratmaq və ənənəvi olaraq əsas məlumatlandırma vasitələri və disiplinlər arası əlaqə qurmaq məqsədi ilə AP İnformatika Prinsiplərini hazırlamışdır.

@@ -451,6 +451,10 @@ en:
       4-5 While Loops 7_instruction: Wow, now there are three piles of dirt! Can you write a program that removes each of them until the ground is even?
       4-5 While Loops 8_instruction: " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?"
       4-5 While Loops Assessment 1_instruction: There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       Alien Defender_2018_instruction: 'Project Idea: Make a defender game in Play Lab!'
@@ -526,6 +530,7 @@ en:
       C3-Farmer While Loops 7_instruction: Wow, now there are three piles of dirt! Can you write a program that removes each of them until the ground is even?
       C3-Farmer While Loops 8_instruction: " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -620,7 +625,7 @@ en:
         * Create a new function `moveCloud(name)` that will move any cloud.
           * (Hint: you will use almost all the same code as the `moveCloud0` function)
         * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-         * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+          * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify clouds_2018_instruction: |-
         # Clouds
 
@@ -630,7 +635,7 @@ en:
         * Create a new function `moveCloud(name)` that will move any cloud.
           * (Hint: you will use almost all the same code as the `moveCloud0` function)
         * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-         * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+          * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes_instruction: |-
         # Multi-plane Controller
 
@@ -3535,6 +3540,7 @@ en:
       courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat to the acorn.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -4421,6 +4427,7 @@ en:
       courseE_farmer_concept3_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: Now let's go one level deeper! We've nested that whole block of code into another loop, but you need to get the artist back in place to draw the next line. Which of these code blocks can you place at the end of the outermost loop to draw the whole grid?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will become.  Use `if` statements to write the code to check and harvest each one.   '
       courseE_farmer_functions10a1_2018_instruction: Use everything that you've learned so far to solve this puzzle!

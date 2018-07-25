@@ -17,7 +17,8 @@
   border-right: none;
   border-radius: 10px 0 0 10px;
 
-  z-index: 100;
+  /* must appear in front of ProgressBubble */
+  z-index: 1000;
 
   .hide-handle,
   .show-handle {

@@ -125,14 +125,12 @@ sk:
         nové bloky! \n\nPresunuli sme bloky potrebné na nakreslenie štvorca do funkcie
         \"nakresli štvorec\". Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie
         okuliarí.\n\nŠtvorce sú od seba vzdialené 75 pixelov."
-      2-3 Artist Functions 3 a_markdown_instruction: "Edit the \"draw a square\" function
-        to draw glasses with frames that are 115px on each side. \n\nThe squares are
-        now 45 pixels apart."
-      2-3 Artist Functions 3_markdown_instruction: "Edit the function to draw a square
-        with a side length of 115 to draw the bigger glasses. \n\nThe squares are
-        now 45 pixels apart."
-      2-3 Artist Functions 4 a_markdown_instruction: Now, put the function inside
-        of a loop and add an extra turn to draw these three squares.
+      2-3 Artist Functions 3 a_markdown_instruction: Uprav funkciu "nakresliť štvorec"
+        pre nakreslenie okuliarov s rámami v dĺžke 115 pixelov na každej strane.
+      2-3 Artist Functions 3_markdown_instruction: Uprav funkciu pre nakreslenie štvorca
+        s dĺžkou strany 115 pre nakreslenie väčších okuliarov.
+      2-3 Artist Functions 4 a_markdown_instruction: Teraz vložme funckiu dovnútra
+        slučky a pridajme extra zabočenia pre nakreslenie týchto troch štvorcov.
       2-3 Artist Functions 4_markdown_instruction: Teraz vlož funkciu do cyklu, aby
         si nakreslil tri štvorce.
       2-3 Artist Functions 9_markdown_instruction: "**Freeplay:** Here is a snowflake
@@ -156,9 +154,9 @@ sk:
         dlhými 100 pixelov.
 
 '
-      2-3 Artist Loops New 13_markdown_instruction: "We are going to start you with
-        some code (in grey) to make one diamond. \n\nLoop the grey code to create
-        a fun pattern!"
+      2-3 Artist Loops New 13_markdown_instruction: "Začneme s nejakým kódom (v šedom)
+        pre vytvorenie jedného diamantu. \n\nZopakujte šedý kód slučkou pre vytvorenie
+        veselého vzoru!"
       2-3 Artist Loops New 14_markdown_instruction: "Play around with the code for
         the diamond and see what other patterns you can make. \n\nTry changing how
         many degrees you turn and how many times you loop."
@@ -271,9 +269,9 @@ sk:
         a function to turn, move forward and make 3 honey, then return the bee to
         where it started and turn back."
       2-3 Bee Loops 1_markdown_instruction: |-
-        Those flowers look tasty!
+        Tieto kvetinky vyzerajú lákavo!
 
-        Collect nectar from each of the flowers using the fewest blocks possible.
+        Pozbierajte nektár z každej kvetinky použitím čo možno najmenej blokov.
       2-3 Bee Loops 13_markdown_instruction: "**Assessment:** Collect all of the nectar
         using the fewest blocks possible."
       2-3 Bee Loops 3A_markdown_instruction: Použite slučku "opakovať" pre pozbieranie
@@ -311,9 +309,9 @@ sk:
         forward` block this time
       2-3 Maze 15_markdown_instruction: In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
-      2-3 Maze Loops 18_markdown_instruction: "Get me to the sunflower using the fewest
-        blocks possible!  \n\nTry using one `repeat` loop inside of another to cut
-        down on the amount of code you need."
+      2-3 Maze Loops 18_markdown_instruction: "Dostaňte ma k slnečnici použitím čo
+        najmenšieho možného počtu blokov!  \n\nSkúste použiť jednu slučku \"opakovať\"
+        vo vnútri druhej pre zníženie množstva kódu, ktoré potrebujete."
       2-3 Maze Loops 19_markdown_instruction: "Let's take this to another level! \n\nUse
         loops to get me to the sunflower with the fewest loops possible."
       2-3 Maze Loops Assessment 1_markdown_instruction: "**Assessment:**  Get me to
@@ -334,10 +332,10 @@ sk:
         as few blocks as possible."
       4-5 Artist 4_markdown_instruction: "How many degrees are in a circle?  \n\nLoop
         the blocks to create a circle of colors."
-      4-5 Artist 5_markdown_instruction: What can we replace "???" with to make sure
-        that the zombie completes this drawing using the loop provided?
-      4-5 Artist 6_markdown_instruction: This equilateral triangle has angles of 60,
-        60, and 60 degrees. Each side is 200 pixels. Complete the drawing.
+      4-5 Artist 5_markdown_instruction: Čím môžeme nahradiť "???" tak, aby bolo isté,
+        že zomík dokončí túto kresbu použitím poskytnutej slučky?
+      4-5 Artist 6_markdown_instruction: Tento rovnostranný trojuholník má uhly 60,
+        60 a 60 stupňov Každá strana je 200 pixelov dlhá. Dokončite kresbu.
       4-5 Artist 7_markdown_instruction: "This right triangle has angles of 30, 60,
         and 90 degrees.  The slanted side's length (length of the hypotenuse) is 200
         pixels. \n\nComplete the drawing."
@@ -362,21 +360,20 @@ sk:
         draw off the screen."
       4-5 Artist Patterns 11_markdown_instruction: How many times do you need to loop
         this to draw a half circle?
-      4-5 Artist Patterns 12_markdown_instruction: "If you create another loop like
-        this one, but turn left instead of right, what happens? \n\nCan you repeat
-        all of that to draw this wave?"
-      4-5 Artist Patterns 13_markdown_instruction: "Now let's loop that whole thing
-        four times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! \n\nIf looping a 3 degree turn 60 times makes a half
-        circle, which of these blocks of code will make an additional quarter circle
-        for the corners?"
+      4-5 Artist Patterns 12_markdown_instruction: "Ak spravíte ďaľšiu takúto slučku,
+        ale zabočíte doľava namiesto doprava, čo sa stane? \n\nViete to celé zopakovať
+        pre nakreslenie tejto vlny?"
+      4-5 Artist Patterns 13_markdown_instruction: "A teraz zopakujme celú vec štyrikrát
+        pre vytvorenie tohto rámika obrázku. Pozor na rohy - nemôžete jednoducho zabočiť
+        o 90 stupňov! \n\nAk zopakovanie 3 otočiek o 60 stupňov spraví polkruh, ktorý
+        z týchto blokov spraví dodatočný štvrťkruh pre rohy?"
       4-5 Artist Patterns 2_markdown_instruction: "If you place your square loop inside
         another loop, we call that a nested loop. \n\nWhat do you need to add as an
         outer loop to make sure all 15 squares line up next to each other?"
-      4-5 Artist Patterns 3_markdown_instruction: Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
+      4-5 Artist Patterns 3_markdown_instruction: A poďme o level hlbšie? Vložili
+        sme celý blok s kódom do ďaľšej slučky, ale pre nakreslenie ďaľšej čiary potrebujete
+        dostať umelca naspäť na miesto. Ktorý z týchto blokov s kódom treba dať na
+        koniec najkrajnejšej slučky pre nakreslenie celej mriežky?
       4-5 Artist Patterns 4_markdown_instruction: "This diamond has 50 pixel sides
         and angles of 120 and 60 degrees. \n\nUse a loop to draw it."
       4-5 Artist Patterns 5_markdown_instruction: "Repeat this code to make a row
@@ -388,42 +385,42 @@ sk:
         last puzzle to make this more complex pattern. Notice how the diamonds overlap
         now, try changing the first \"jump backwards\" from 100 to 50 (half as far)
         - now how far should the artist go in the second \"jump backwards\"?\n\n"
-      4-5 Artist Patterns 8_markdown_instruction: Use a loop to draw this hexagon
-        with 40 pixel sides and 60 degree angles.
+      4-5 Artist Patterns 8_markdown_instruction: Použite slučku pre nakreslenie šesťuholníka
+        so stranou 40 pixelov a uhlami 60 stupňov.
       4-5 Artist Patterns 9.5_markdown_instruction: "Let's loop this code to draw
         two rows of hexagons. \n\nNotice how our second row is shifted to the right."
-      4-5 Artist Patterns 9_markdown_instruction: "Now repeat this code 3 times and
-        draw the whole row. \n\nEach hexagon is 80 pixels wide from the furthest points
-        left to right."
+      4-5 Artist Patterns 9_markdown_instruction: "A teraz zopakujte tento kód 3x
+        a nakreslite celý riadok. \n\nKaždý šesťuholník je v najširšom mieste zľava
+        doprava široký 80 stupňov."
       4-5 Artist Patterns Free Play_markdown_instruction: Voľná hra - vyskúšajte svoju
         ruku nakreslením vlastného vzoru!
       4-5 Bee Conditionals 1_markdown_instruction: "This cloud is blocking my view!
         \n\nCheck to see if there's a flower under the cloud, and only get nectar
         if there's a flower.   \nBe careful, it can change!"
-      4-5 Bee Conditionals 2_markdown_instruction: "More clouds! \n\nCheck underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \n\nRemember:
-        Not all clouds hide the same thing!"
+      4-5 Bee Conditionals 2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte
+        pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate
+        nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
       4-5 Bee Conditionals 4_markdown_instruction: "Sometimes this cloud covers a
         flower, and sometimes it covers a honeycomb! \n\nUse the `if/else` block to
         collect nectar only if it is a flower.  \nElse, make honey (because it is
         a honeycomb)."
       4-5 Bee Conditionals 5_markdown_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        Pod každým z týchto oblakov bude buď kvetinka, alebo úľ!
 
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
-      4-5 Bee Conditionals 6_markdown_instruction: "I am not sure how much nectar
-        this flower has, but I know it has either 1, 2, or 3 nectar. \n\nCombine the
-        conditional blocks (`if` and/or `if/else`) to only get as much nectar as the
-        flower has. \n\nRemember, the amount of nectar can change each time you run
-        the puzzle!"
-      4-5 Bee Conditionals 7_markdown_instruction: "These flowers can have 3, 2, or
-        1 nectar. \n\nComplete the `check purple flower` function and use it to collect
-        all of the nectar at the flowers."
-      4-5 Bee Conditionals 8_markdown_instruction: "Write the function for `check
-        flower make honey`. \n\nYour function should check if the purple flower has
-        3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make
-        honey."
+        Použite blok "if/else" pre pozbieranie nektáru, ak tam je kvetinka.
+        V opačnom prípade spravte med (keďže tam bude úľ).
+      4-5 Bee Conditionals 6_markdown_instruction: "Nie som si istý, koľko nektáru
+        má táto kvetinka, ale viem, že to bude 1, 2 alebo 3 nektáry. \n\nSkombinujte
+        podmieňovacie bloky (\"if\" a/alebo \"if/else\") pre získanie práve toľko
+        nektáru, koľko ho má kvetinka. \n\nZapamätajte si, množstvo nektáru sa môže
+        pri každom spustení programu zmeniť!"
+      4-5 Bee Conditionals 7_markdown_instruction: "Tieto kvetinky môžu mať 3, 2 alebo
+        1 nektár. \n\nDokončite funkciu \"skontrolovať fialovú kvetinku\" a použite
+        ju pre pozbieranie všetkého nektáru z kvetiniek."
+      4-5 Bee Conditionals 8_markdown_instruction: "Napíšte funkciu na \"skontrolovať
+        kvetinku spraviť med\". \n\nVaša funkcia by mala skontrolovať, či má fialová
+        kvetinka 3, 2 alebo 1 nektár a pozbierať všetok nektár. \nPotom sa posuňte
+        dopredu a spravte med."
       4-5 Bee Conditionals Assessment 1_markdown_instruction: "**Assessment:** This
         cloud is either hiding a flower with one nectar or a honeycomb that needs
         one honey.  \n\nComplete the `get nectar or make honey` function, then call
@@ -440,48 +437,49 @@ sk:
         code."
       4-5 Bee Nested Loops 2_markdown_instruction: "Collect all of the nectar from
         each flower. \n\nUse a nested loop. "
-      4-5 Bee Nested Loops 4_markdown_instruction: "Collect all of the nectar from
-        each flower and make honey at the honeycomb. \n\nUse a nested loop. "
+      4-5 Bee Nested Loops 4_markdown_instruction: "Pozbierajte všetok nektár z každej
+        kvetinky a spravte med v plástoch. \n\nPoužite vnorenú slučku. "
       4-5 Bee Nested Loops Assessment 1_markdown_instruction: "**Hodnotenie:** Pozbierajte
         všetok nektár a spravte všetok med pomocou slučiek."
       4-5 Maze 7_markdown_instruction: "Get the zombie to the sunflower quickly!  \n\nCan
         you solve the puzzle in fewer than 11 blocks?"
-      4-5 Maze 9_markdown_instruction: "Now we have a new block called `repeat until`.
-        \ \nThis will let us keep looping commands until the zombie gets the sunflower.
-        \ \n\nUse the new `repeat until` block to solve this puzzle in as few commands
-        as possible."
+      4-5 Maze 9_markdown_instruction: "A teraz máme nový blok \"opakovať dokiaľ\".
+        \ \nToto nám umožní opakovať príkazy až kým sa zombík nedostane k slnečnici.
+        \ \n\nPoužite nový blok \"opakovať dokiaľ\" pre vyriešenie tejto úlohy s čo
+        najmenším možným počtom príkazov."
       4-5 Maze Assessment 1_markdown_instruction: "**Assessment:** Get to the sunflower
         using as few blocks as possible."
-      4-5 Maze Conditionals 1_markdown_instruction: Use the `repeat until` block to
-        get the zombie to the sunflower.
-      4-5 Maze Conditionals 10_markdown_instruction: "Can you add just 3 blocks to
-        help the zombie solve a more complex maze? \n\nIf you do it right, he can
-        walk any curvy path no matter the length!"
-      4-5 Maze Conditionals 2_markdown_instruction: Use the `repeat until` block to
-        get the zombie to the sunflower.
+      4-5 Maze Conditionals 1_markdown_instruction: Použite blok "opakovať dokiaľ",
+        aby sa zombík dostal k slnečnici.
+      4-5 Maze Conditionals 10_markdown_instruction: "Viete pridať len 3 bloky a pomôcť
+        zombíkovi dostať sa cez zložitejšie bludisko? \n\nAk to urobíte správne, môže
+        prejsť všetkými krivolakými cestami bez ohľadu na ich dĺžku!"
+      4-5 Maze Conditionals 2_markdown_instruction: Použite blok "opakovať dokiaľ",
+        aby sa zombík dostal k slnečnici.
       4-5 Maze Conditionals 3_markdown_instruction: 'Použite blok "if" pre pomoc s
         rozhodnutím sa, kedy mám zabočiť.
 
 '
-      4-5 Maze Conditionals 4_markdown_instruction: Ok, solve this one just like the
-        last puzzle, but you need to remember how you used the `if` and `repeat until`
-        blocks together.
-      4-5 Maze Conditionals 5_markdown_instruction: "\"Me want sunflower!\"  \n\nUse
-        an `if` statement to get the zombie to the sunflower with the fewest number
-        of blocks."
+      4-5 Maze Conditionals 4_markdown_instruction: Ok, toto vyriešte tak ako poslednú
+        úlohu, ale musíte si spomenúť, ako ste spolu používali bloky "if" a "opakovať
+        dokiaľ".
+      4-5 Maze Conditionals 5_markdown_instruction: |-
+        "Ja chcieť slnečnica!"
+
+        Použite výraz "if", aby sa zombík dostal k slnečnici s čo najmenším počtom blokov.
       4-5 Maze Conditionals 6_markdown_instruction: |-
-        "Eat sunflower!"
+        "Zjedzte slnečnicu!"
 
-        Use an `if` statement to get the zombie to the sunflower with the fewest number of blocks.
-      4-5 Maze Conditionals 7_markdown_instruction: The solution to this puzzle isn't
-        very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_markdown_instruction: "The `if/else` block checks a
-        condition, and then does one thing OR another. \n\nUse this new block to get
-        me to the sunflower."
+        Použite výraz "if", aby sa zombík dostal k slnečnici s čo najmenším počtom blokov.
+      4-5 Maze Conditionals 7_markdown_instruction: Riešenie tejto úlohy nie je až
+        tak odlišné, ale pozor na zloduchov!
+      4-5 Maze Conditionals 8_markdown_instruction: "Blok \"if/else\" skontroluje
+        podmienku a potom spraví jednu alebo druhú vec. \n\nPoužite tento nový blok,
+        aby ste ma dostali k slnečnici."
       4-5 Maze Conditionals 9_markdown_instruction: |-
-        One more practice puzzle with the `if/else` block!
+        Ešte jedna cvičná úloha s blokom "if/else"!
 
-        Trace it with your finger to see if you can figure it out on your first try.
+        Sledujte ju svojim prstom, aby ste videli, či ju dokážete vyriešiť na prvý pokus.
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "**Assessment:** Use
         a `repeat until` and an `if/else` block to get me to the sunflower in as few
         blocks as possible."
@@ -500,23 +498,23 @@ sk:
       4-5 Nested Loops 5_markdown_instruction: Loop the given code to create a windmill.
       4-5 Nested Loops 6_markdown_instruction: Can you draw a hexagon by looping the
         triangle code?
-      4-5 Nested Loops 7_markdown_instruction: "Loop this design 10 times. \n\nHow
-        much do you have to turn each time you loop?"
-      4-5 Nested Loops 8_markdown_instruction: "Loop this shape 6 times. \n\nHow much
-        do you have to turn each time you loop? "
+      4-5 Nested Loops 7_markdown_instruction: "Zopakujte tento dizajn 10 krát. \n\nO
+        koľko sa musíte otočiť pri každej slučke?"
+      4-5 Nested Loops 8_markdown_instruction: "Zopakujte tento tvar 6 krát. \n\nO
+        koľko sa musíte otočiť pri každej slučke? "
       4-5 Nested Loops 9_markdown_instruction: Draw the teeth in the alligator's mouth!
       4-5 Nested Loops Assessment 1_markdown_instruction: "**Assessment:** Use a nested
         loop to complete the design."
-      4-5 While Loops 1_markdown_instruction: Move me to the hole and fill it with
-        two shovelfuls of dirt, using the `fill` block.
-      4-5 While Loops 2_markdown_instruction: Move me to the pile of dirt and remove
-        it with 5 shovel scoops, using the `remove 1` block.
-      4-5 While Loops 3_markdown_instruction: "Use as few blocks as possible to complete
-        this puzzle!  \n\nMove me to the pile and remove all the dirt, then move to
-        the hole and fill it completely."
-      4-5 While Loops 4_markdown_instruction: "Wow, look at that! \n\nI don't know
-        how many shovelfuls of dirt this hole needs.  \nCan you write a program that
-        keeps using the `fill` block until the ground is even?  "
+      4-5 While Loops 1_markdown_instruction: Dostaňte ma k jame a naplnťe ju dvoma
+        lopatami hliny použitím bloku "naplniť".
+      4-5 While Loops 2_markdown_instruction: Dostaňte ma ku kope hliny a odstráňte
+        ju pomocou 5 plných lopát použitím bloku "odstrániť 1".
+      4-5 While Loops 3_markdown_instruction: "Použite čo možno najmenej blokov pre
+        dokončenie tejto úlohy!  \n\nDostaňte ma ku kope a odstráňte všetku hlinu,
+        potom ma posuňte k jame a celú ju zasypte."
+      4-5 While Loops 4_markdown_instruction: "Fíha, pozrite sa na toto!\n\nNeviem,
+        koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program,
+        ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
       AWS applab_markdown_instruction: |-
         # Do this stuff now
 
@@ -937,7 +935,6 @@ sk:
         **How:** You know how to use `"background-color"`, `"font-size"`, `"text-color"`, `"text"`, `playSound()`, and `onEvent()`. Use them to set the look of your app and make it change when your user clicks the buttons. Click "Share" to send it to a friend.
 
         **Show Me:** ![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)
-      AppLab Intro 4 - video onEvent_markdown_instruction: "# Using onEvent"
       AppLab Intro 5 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\n\\t<img
         src=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54
         AM.png\" style=\"height:150px\"> \n</div>\n\n**Goal:** Make the screen `\"red\"`.
@@ -2068,7 +2065,7 @@ sk:
 
         # Use Paragraph Tags
 
-        The `<p>` tag or "paragraph" tag is placed around text to indicate that it is part of a paragraph. Placing text in a paragraph tag lets the computer know that it should be displayed differently, usually just by spacing it out from other text.
+        The `<p>` `</p>` tags or "paragraph" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be displayed differently, usually just by spacing it out from other text.
 
         # Do This
 
@@ -2911,7 +2908,7 @@ sk:
         <br />
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a>
         </p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
@@ -2953,10 +2950,10 @@ sk:
         <div style="font-size: 16px">
         <br />
         <details><summary>**Where can I see the whole range of color types?**</summary>
-        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp">W3Schools - HTML Color Picker</a></details>
+        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_new">W3Schools - HTML Color Picker</a></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -2994,7 +2991,7 @@ sk:
         <br />
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -3036,7 +3033,7 @@ sk:
         <p>To make a color lighter, you need to add more light (increase the level of the slider).  If you have already added the maximum amount of blue light, you will need to add more red and green light to make your blue lighter.</p></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -3792,11 +3789,11 @@ sk:
         </details>
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details>
         <details>
         <summary>**What does the `background-color` property do?**</summary>
-        The `background-color` property determines the color of the background of an element.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools - CSS background-color Property</a>
+        The `background-color` property determines the color of the background of an element.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp" target="_new">W3Schools - CSS background-color Property</a>
         </details>
         <details>
         <summary>**What if an element inside the page has a different background color from the body?**</summary>
@@ -3886,23 +3883,23 @@ sk:
         </details>
         <details>
         <summary>**What does the `color` property do?**</summary>
-        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp"> W3Schools - CSS color Property</a>
+        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>
         </details>
         <details>
         <summary>**What does the `text-align` property do?**</summary>
-        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**What does the `text-decoration` property do?**</summary>
-        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**What does the `font-family` property do?**</summary>
-        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3chools - CSS font-family Property</a>
+        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
         </details>
         <details>
         <summary>**What does the `font-size` property do?**</summary>
-        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size Property</a>
+        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
         </details>
         <details>
         <summary>**What is a stylesheet?**</summary>
@@ -3974,7 +3971,7 @@ sk:
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details>
         <details>
         <summary>**How does the code work?**</summary>
@@ -3992,15 +3989,15 @@ sk:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
 
@@ -4064,15 +4061,15 @@ sk:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
 
@@ -4122,7 +4119,7 @@ sk:
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
 
@@ -4239,7 +4236,7 @@ sk:
         </details>
         <details>
         <summary>**What does the `margin` property do?**</summary>
-        The `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_margin.asp">W3Schools - CSS margin Property</a>
+        The `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_margin.asp" target="_new">W3Schools - CSS margin Property</a>
         </details>
         <details>
         <summary>**What does `px` mean / What is a pixel?**</summary>
@@ -4291,15 +4288,15 @@ sk:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
 
@@ -4365,11 +4362,11 @@ sk:
         </details>
         <details>
         <summary>**What does the `width` property do?**</summary>
-        The `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_dim_width.asp">W3Schools - CSS width Property</a>
+        The `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_dim_width.asp" target="_new">W3Schools - CSS width Property</a>
         </details>
         <details>
         <summary>**What does the `height` property do?**</summary>
-        The `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_dim_height.asp">W3Schools - CSS width Property</a>
+        The `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_dim_height.asp" target="_new">W3Schools - CSS height Property</a>
         </details>
         <details>
         <summary>**What does `px` mean / What is a pixel?**</summary>
@@ -4901,7 +4898,7 @@ sk:
         </details>
         <details>
         <summary>**What are the possible values for text decoration?**</summary>
-        You can choose between "underline", "overline", and "line-through".  You can read more about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        You can choose between "underline", "overline", and "line-through".  You can read more about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -4997,7 +4994,7 @@ sk:
         </details>
         <details>
         <summary>**What are the possible values for font family?**</summary>
-        You can choose between "serif", "sans-serif", "cursive", "fantasy", and "monospace".  You can also try more specific fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools - CSS Web Safe Font Combinations</a>
+        You can choose between "serif", "sans-serif", "cursive", "fantasy", and "monospace".  You can also try more specific fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_new">W3Schools - CSS Web Safe Font Combinations</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -5131,7 +5128,7 @@ sk:
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details><details>
         <summary>**How does the code work?**</summary>
         Here is the code that is making the `h1` heading red:
@@ -5515,7 +5512,7 @@ sk:
         </details>
         <details>
         <summary>**What are the possible values for text align?**</summary>
-        You can choose between "left", "right", and "center".  You can read more about the text-align property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        You can choose between "left", "right", and "center".  You can read more about the text-align property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -28971,7 +28968,7 @@ sk:
         * Try: Implement your improvements to your personal website.
         * Reflect: Get feedback from a classmate and decide what of that feedback to act on.
 
-        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/">website </a>.*)
+        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/" target="_new">website </a>.*)
       Final Room Escape App_markdown_instruction: "# You've done it!\n\nYou made a
         room escape! Now its time to customize it. \n\nConsider:\n\n* Add more style
         to the room\n* Adding more things users can interact with in the room\n* Try
@@ -32735,9 +32732,9 @@ sk:
         ## instructions
 
         Drag out the subgoal label block you want.
-      Testing Quantum Farmer_markdown_instruction: "Wow, look at that! \n\nI don't
-        know how many shovelfuls of dirt this hole needs.  \nCan you write a program
-        that keeps using the `fill` block until the ground is even?  "
+      Testing Quantum Farmer_markdown_instruction: "Fíha, pozrite sa na toto!\n\nNeviem,
+        koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program,
+        ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
       Text Compression 1_markdown_instruction: |-
         Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.
 
@@ -47573,6 +47570,7 @@ sk:
         frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n__Reflect on the prompts
         below:__ \n\n- What types of information does Siri respond to in the video?\n-
         What do you think Siri is paying attention to in order to create these answers?\n"
+      allthethings_fish_tank_markdown_instruction: All-the-things test level.
       allthethings_moviebot_markdown_instruction: |
         # Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
         # Introduction to the Digital Assistant
@@ -50810,10 +50808,10 @@ sk:
         Take the same path as before, but this time, use a repeat loop to collect treasure when you get to it.
       courseE_collector_ramp9_markdown_instruction: 'Take the same path as before,
         but this time collect all of the treasure as you find it.  '
-      courseE_farmer_concept4_markdown_instruction: Now let's go one level deeper!
-        We've nested that whole block of code into another loop, but you need to get
-        the artist back in place to draw the next line. Which of these code blocks
-        can you place at the end of the outermost loop to draw the whole grid?
+      courseE_farmer_concept4_markdown_instruction: A poďme o level hlbšie? Vložili
+        sme celý blok s kódom do ďaľšej slučky, ale pre nakreslenie ďaľšej čiary potrebujete
+        dostať umelca naspäť na miesto. Ktorý z týchto blokov s kódom treba dať na
+        koniec najkrajnejšej slučky pre nakreslenie celej mriežky?
       courseE_farmer_functions1_markdown_instruction: |-
         *"Have we met before? I'm the harvester!"*
 
@@ -55333,6 +55331,9 @@ sk:
         * What are facilitators doing?
         * What are teachers doing?
         * What strategies did you see facilitators use to keep teachers engaged?
+      farmer-test-lb_markdown_instruction: |-
+        # Making A Function
+        1. Do this thing
       feel-monday_markdown_instruction: |
         # Day 1: Feel
 
@@ -55361,6 +55362,22 @@ sk:
 
         * What factors seemed to contribute to those feelings?
         * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      fit-dlp-example_markdown_instruction: "<br><br>\n\n# FIT Deeper Learning Example\n\nThis
+        is where instructions for the prompt will be.\n\n> **Prompt:** Is a hotdog
+        a sandwich?\n\n## Getting Credit for Completing this Reflection \n\n- Once
+        you submit your reflection, your response to the prompt above will be shared
+        anonymously and read by your peers, and you will read the work done by other
+        facilitators. This give facilitators a chance to learn from each other.\n-
+        Your submission will also be given to an expert reviewer. Expert reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\n- In order to get credit for completing
+        this prompt, your expert review needs to say \"Yes\" responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available."
       frozen circle function in circle_markdown_instruction: Teraz si vytvorme 20
         prekrývajúcich sa kruhov, medzi každým z nich sa otočíme o 18 stupňov.
       frozen circle function with parameter_markdown_instruction: Tu je blok "Vytvoriť
@@ -55682,39 +55699,39 @@ sk:
       grade3_ConditionalsElse_1_markdown_instruction: "This cloud is blocking my view!
         \n\nCheck to see if there's a flower under the cloud, and only get nectar
         if there's a flower.   \nBe careful, it can change!"
-      grade3_ConditionalsElse_2_markdown_instruction: "More clouds! \n\nCheck underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \n\nRemember:
-        Not all clouds hide the same thing!"
+      grade3_ConditionalsElse_2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte
+        pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate
+        nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
       grade3_ConditionalsElse_4_markdown_instruction: "Sometimes this cloud covers
         a flower, and sometimes it covers a honeycomb! \n\nUse the `if/else` block
         to collect nectar only if it is a flower.  \nElse, make honey (because it
         is a honeycomb)."
       grade3_ConditionalsElse_5_markdown_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        Pod každým z týchto oblakov bude buď kvetinka, alebo úľ!
 
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
-      grade3_ConditionalsElse_6_markdown_instruction: "I am not sure how much nectar
-        this flower has, but I know it has either 1, 2, or 3 nectar. \n\nCombine the
-        conditional blocks (`if` and/or `if/else`) to only get as much nectar as the
-        flower has. \n\nRemember, the amount of nectar can change each time you run
-        the puzzle!"
-      grade3_ConditionalsElse_7_markdown_instruction: "These flowers can have 3, 2,
-        or 1 nectar. \n\nComplete the `check purple flower` function and use it to
-        collect all of the nectar at the flowers."
-      grade3_ConditionalsElse_8_markdown_instruction: "Write the function for `check
-        flower make honey`. \n\nYour function should check if the purple flower has
-        3, 2, or 1 nectar and get all of the nectar. \nThen, move forward and make
-        honey."
+        Použite blok "if/else" pre pozbieranie nektáru, ak tam je kvetinka.
+        V opačnom prípade spravte med (keďže tam bude úľ).
+      grade3_ConditionalsElse_6_markdown_instruction: "Nie som si istý, koľko nektáru
+        má táto kvetinka, ale viem, že to bude 1, 2 alebo 3 nektáry. \n\nSkombinujte
+        podmieňovacie bloky (\"if\" a/alebo \"if/else\") pre získanie práve toľko
+        nektáru, koľko ho má kvetinka. \n\nZapamätajte si, množstvo nektáru sa môže
+        pri každom spustení programu zmeniť!"
+      grade3_ConditionalsElse_7_markdown_instruction: "Tieto kvetinky môžu mať 3,
+        2 alebo 1 nektár. \n\nDokončite funkciu \"skontrolovať fialovú kvetinku\"
+        a použite ju pre pozbieranie všetkého nektáru z kvetiniek."
+      grade3_ConditionalsElse_8_markdown_instruction: "Napíšte funkciu na \"skontrolovať
+        kvetinku spraviť med\". \n\nVaša funkcia by mala skontrolovať, či má fialová
+        kvetinka 3, 2 alebo 1 nektár a pozbierať všetok nektár. \nPotom sa posuňte
+        dopredu a spravte med."
       grade3_ConditionalsElse_9_markdown_instruction: "**Assessment:** This cloud
         is either hiding a flower with one nectar or a honeycomb that needs one honey.
         \ \n\nComplete the `get nectar or make honey` function, then call it to collect
         the nectar or honey. \n"
       grade3_ConditionalsElse_TeacherIDo_markdown_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        Pod každým z týchto oblakov bude buď kvetinka, alebo úľ!
 
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        Použite blok "if/else" pre pozbieranie nektáru, ak tam je kvetinka.
+        V opačnom prípade spravte med (keďže tam bude úľ).
       grade3_Conditionals_1_markdown_instruction: "I'm a hungry bee! \n\n\nHelp me
         collect all of the nectar from the flowers using the fewest number of blocks."
       grade3_Conditionals_10_markdown_instruction: 'Zbieraj nektár a urob med. Tip:
@@ -55791,13 +55808,13 @@ sk:
         úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie
         tejto úlohy s čo najmenším počtom blokov."
       grade3_Loops_7_markdown_instruction: |-
-        Those flowers look tasty!
+        Tieto kvetinky vyzerajú lákavo!
 
-        Collect nectar from each of the flowers using the fewest blocks possible.
+        Pozbierajte nektár z každej kvetinky použitím čo možno najmenej blokov.
       grade3_Loops_TeacherIDo_markdown_instruction: |-
-        Those flowers look tasty!
+        Tieto kvetinky vyzerajú lákavo!
 
-        Collect nectar from each of the flowers using the fewest blocks possible.
+        Pozbierajte nektár z každej kvetinky použitím čo možno najmenej blokov.
       grade3_RunningFarm_1_markdown_instruction: |-
         *"Corn you help me harvest today?"*
 
@@ -55844,9 +55861,9 @@ sk:
         *"This cloud is blocking my view!"*
 
         Check to see if there's a flower under the cloud. If there's a flower, get nectar.
-      grade3_bee_conditionals_quantum2_markdown_instruction: "More clouds! \n\nCheck
-        underneath every cloud to see if it is hiding a flower before you get nectar.
-        \ \n\nRemember: Not all clouds hide the same thing!"
+      grade3_bee_conditionals_quantum2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte
+        pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate
+        nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
       grade3_bee_conditionals_quantum3_markdown_instruction: |-
         *"Now I just want to make honey."*
 
@@ -55890,10 +55907,10 @@ sk:
         a nested loop to complete the design."
       grade4_arist_nested_loop_flags1_markdown_instruction: Loop the given code to
         create a windmill.
-      grade4_arist_nested_loop_polygons1_markdown_instruction: "Loop this design 10
-        times. \n\nHow much do you have to turn each time you loop?"
-      grade4_arist_nested_loop_polygons2_markdown_instruction: "Loop this shape 6
-        times. \n\nHow much do you have to turn each time you loop? "
+      grade4_arist_nested_loop_polygons1_markdown_instruction: "Zopakujte tento dizajn
+        10 krát. \n\nO koľko sa musíte otočiť pri každej slučke?"
+      grade4_arist_nested_loop_polygons2_markdown_instruction: "Zopakujte tento tvar
+        6 krát. \n\nO koľko sa musíte otočiť pri každej slučke? "
       grade4_arist_nested_loop_squares1_markdown_instruction: "Can you draw these
         10 squares of this sidewalk using a nested loop? \n\nEach square is 30 pixels."
       grade4_arist_nested_loop_triangles2_markdown_instruction: "Now nest this loop
@@ -56021,8 +56038,8 @@ sk:
         a nested loop to complete the design."
       grade4_artist_nested_loop_flags1_markdown_instruction: Loop the given code to
         create a windmill.
-      grade4_artist_nested_loop_polygons1_markdown_instruction: "Loop this design
-        10 times. \n\nHow much do you have to turn each time you loop?"
+      grade4_artist_nested_loop_polygons1_markdown_instruction: "Zopakujte tento dizajn
+        10 krát. \n\nO koľko sa musíte otočiť pri každej slučke?"
       grade4_artist_nested_loop_polygons2_markdown_instruction: "Hi, I'm the Artist!
         Let's create some drawings together! For starters, try repeating this shape
         6 times. \n\nHow much do you have to turn each time you loop? "
@@ -56076,18 +56093,18 @@ sk:
       grade4_bee_conditionals_quantum1_markdown_instruction: "This cloud is blocking
         my view! \n\nCheck to see if there's a flower under the cloud, and only get
         nectar if there's a flower.   \nBe careful, it can change!"
-      grade4_bee_conditionals_quantum2_markdown_instruction: "More clouds! \n\nCheck
-        underneath every cloud to see if it is hiding a flower before you get nectar.
-        \ \n\nRemember: Not all clouds hide the same thing!"
+      grade4_bee_conditionals_quantum2_markdown_instruction: "Viac oblakov!\n\nSkontrolujte
+        pod každým oblakom, či sa tam neschováva kvetinka predtým, ako pozbierate
+        nektár.  \n\nZapamätajte si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
       grade4_bee_conditionals_quantum4_markdown_instruction: "Sometimes this cloud
         covers a flower, and sometimes it covers a honeycomb! \n\nUse the `if/else`
         block to collect nectar only if it is a flower.  \nElse, make honey (because
         it is a honeycomb)."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-
-        There will be either a flower or a honeycomb under each of those clouds!
+        Pod každým z týchto oblakov bude buď kvetinka, alebo úľ!
 
-        Use the `if/else` block to collect nectar if there is a flower.
-        Otherwise, make honey (because there is a honeycomb).
+        Použite blok "if/else" pre pozbieranie nektáru, ak tam je kvetinka.
+        V opačnom prípade spravte med (keďže tam bude úľ).
       grade4_bee_functions2_markdown_instruction: "Functions are blocks of code that
         perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar
         from each flower."
@@ -56907,9 +56924,9 @@ sk:
         v tejto úlohe? \n\nSlučky sú Vašimi kamarátmi! Použite ich niekoľko pre dokončenie
         tejto úlohy s čo najmenším počtom blokov."
       level 'grade3_Loops_7_markdown_instruction: |-
-        Those flowers look tasty!
+        Tieto kvetinky vyzerajú lákavo!
 
-        Collect nectar from each of the flowers using the fewest blocks possible.
+        Pozbierajte nektár z každej kvetinky použitím čo možno najmenej blokov.
       loop pet test 2_markdown_instruction: |-
         **CHALLENGE!** When Daisy gets a carrot, she gets excited. Can you make Daisy start doing a dance party? She should never stop, even after you take the carrot away.
 

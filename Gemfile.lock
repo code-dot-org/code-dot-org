@@ -73,8 +73,8 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/i18n.git
-  revision: f366d62ad73bd0fee939ed9aa38ab88c9f94a8df
-  branch: cdo
+  revision: 4260c62cf628d60bd9fd45dd1315629c653cd8ab
+  branch: simple_numeric_keys
   specs:
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
@@ -450,7 +450,6 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     little-plugger (1.1.4)
-    lmdb (0.4.8)
     logging (2.2.2)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
@@ -860,7 +859,6 @@ DEPENDENCIES
   kaminari
   launchy
   le (~> 2.2)
-  lmdb
   lograge
   loofah (~> 2.2.1)
   marked-rails
