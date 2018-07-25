@@ -1571,17 +1571,6 @@ class UserTest < ActiveSupport::TestCase
     refute student_with_oauth.teacher_managed_account?
   end
 
-  test 'teacher_managed_account? is true for student with no password in rostered section' do
-    google_sso_student = create :student, :unmigrated_google_sso, encrypted_password: nil
-
-    # join google classroom section
-    google_classroom_section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-    create :follower, student_user: google_sso_student, section: google_classroom_section
-    google_sso_student.reload
-
-    assert google_sso_student.teacher_managed_account?
-  end
-
   test 'teacher_managed_account? is true for user account with password but no e-mail' do
     # These types of accounts happen when teachers created username/password accounts
     # without e-mails for students (this is no longer allowed)
@@ -3535,5 +3524,15 @@ class UserTest < ActiveSupport::TestCase
     section.students << student
 
     assert teacher.depended_upon_for_login?
+  end
+
+  test 'depended_upon_for_login? if teacher has a roster-managed student with no other teachers' do
+    student = create :student, :unmigrated_google_sso
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    another_section = create :section, user: section.teacher, login_type: Section::LOGIN_TYPE_EMAIL
+    another_section.students << student
+
+    assert section.teacher.depended_upon_for_login?
   end
 end
