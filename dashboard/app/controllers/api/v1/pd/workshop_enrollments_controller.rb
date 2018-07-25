@@ -41,10 +41,11 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     # See if a previous enrollment exists for this email
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
     if previous_enrollment
-      # cancel_url = url_for action: :cancel, code: previous_enrollment.code
-      render_unsuccessful RESPONSE_MESSAGES[:DUPLICATE]
+      cancel_url = url_for action: :cancel, controller: '/pd/workshop_enrollment', code: previous_enrollment.code
+      render_unsuccessful RESPONSE_MESSAGES[:DUPLICATE], {cancel_url: cancel_url}
     elsif workshop_owned_by? user
-      render_unsuccessful RESPONSE_MESSAGES[:OWN]
+      workshop_url = CDO.studio_url("/pd/workshop_dashboard/workshops#{@workshop.id}")
+      render_unsuccessful RESPONSE_MESSAGES[:OWN], {workshop_url: workshop_url}
     elsif workshop_closed?
       render_unsuccessful RESPONSE_MESSAGES[:CLOSED]
     elsif workshop_full?
@@ -56,8 +57,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       if enrollment.update enrollment_params
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
+
         render json: {
-          submission_status: RESPONSE_MESSAGES[:SUCCESS]
+          submission_status: RESPONSE_MESSAGES[:SUCCESS],
+          account_exists: enrollment.resolve_user.present?,
+          sign_up_url: url_for('/users/sign_up'),
+          cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
       end
     end
@@ -104,11 +109,9 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
   end
 
-  def render_unsuccessful(error_message)
-    render json: {
-      submission_status: error_message
-    },
-    status: 409
+  def render_unsuccessful(error_message, options={})
+    render json: options.merge({submission_status: error_message}),
+      status: 409
   end
 
   def workshop_closed?
