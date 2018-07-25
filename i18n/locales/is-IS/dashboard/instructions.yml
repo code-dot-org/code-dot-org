@@ -447,6 +447,10 @@ is:
       4-5 While Loops 7_instruction: Nú eru þrír haugar af mold! Getur þú skrifað forrit til að fjarlægja þá alveg?
       4-5 While Loops 8_instruction: "Hér er mjög djúp hola og mjög stór moldarhaugur. Hve mörg skóflufylli þarf að flytja til að slétta yfirborðið?"
       4-5 While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar. Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+        
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Búðu til fall út frá þínu eigin orðadæmi.
       Alien Defender_instruction: 'Hugmynd að verkefni: Búðu til Defender leik í Leikjasmiðjunni!'
       Alien Defender_2018_instruction: 'Hugmynd að verkefni: Búðu til Defender leik í Leikjasmiðjunni!'
@@ -520,6 +524,7 @@ is:
       C3-Farmer While Loops 7_instruction: Nú eru þrír haugar af mold! Getur þú skrifað forrit til að fjarlægja þá alveg?
       C3-Farmer While Loops 8_instruction: " Hér er mjög djúp hola og mjög stór moldarhaugur. Hve mörg skóflufylli þarf að flytja til að slétta yfirborðið? Vísbending: Notaðu \"meðan\" lykkju fyrir bæði."
       C3-Farmer While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar. Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -554,6 +559,7 @@ is:
       CSD U3 Simple Drawing - Background_instruction: Put all of your code into a draw() loop and then add set the background to blue with the background() block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: 'Predict: What two numbers will be displayed in the console?'
       CSD U3 Variable Arithmetic_instruction: Change the value "size" initialized to make a larger square.
@@ -2960,14 +2966,17 @@ is:
       Underground Mining Coal_2018_instruction: Þú finnur dýrmætasta hráefnið neðanjarðar, en það getur orðið dimmt. Settu upp minnst 2 kyndla og grafðu út minnst 2 af kolum.
       Unicorn Tag_instruction: Take a look at this project.  Do you see how it was made?
       Valentine_artist2_01_instruction: Forritaðu listamanninn svo hann teikni gras fyrir Love Bug.
-      Valentine_artist_01_instruction: 'Hjálpaðu listamanninum að klára llama-hjartað. '
+      Valentine_artist_01_instruction: Hjálpaðu listamanninum að klára llama-hjartað. 
       Valentine_playlab_01_instruction: 'Forritaðu Kiki (leikmann 1) að færast til vinstri og hægri þegar ýtt er á vinstri og hægri örvarlyklana. Þegar smellt er á Kiki, ætti hún að kasta hjörtum í átt til vina sinna. '
       Vigenere_instruction: Test
       Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1_instruction: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra" og smellir svo á hana?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
@@ -3424,6 +3433,7 @@ is:
       courseB_maze_seq1_2018_instruction: "Leiktu þér með þessa kubba til að sjá hvað þeir láta Scrat gera!\n\nKomdu Scrat til akarnsins til að ljúka borðinu."
       courseB_maze_seq2_instruction: '*"Villa! Lagaðu kóðann svo ég komist til svínsins."*'
       courseB_maze_seq2_2018_instruction: Villa! Lagaðu kóðann svo Scrat komist að akarninu!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Notaðu **2** kubba fyrir hreyfingu til að færa Scrat til akarnsins.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -4304,6 +4314,7 @@ is:
       courseE_farmer_concept3_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: Nú skulum við fara dýpra! Allur kóðinn er faldaður í annarri lykkju, en við þurfum að koma listamanninum aftur á sama stað til að teikna næstu línu. Hvaða kóða vantar í endann á ytri lykkjunni til að teikna alla grindina?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will become.  Use `if` statements to write the code to check and harvest each one.   '
       courseE_farmer_functions10a1_2018_instruction: Use everything that you've learned so far to solve this puzzle!

@@ -14,8 +14,13 @@
     =link_to 'Build a Sprite Lab Level', new_level_path(type: 'GamelabJr')
     %ul
       %li
-        Sprite Lab is still pre-alpha and subject to change. Anything you
+        Sprite Lab is still in beta and subject to change. Anything you
         build could break or be deleted without notice.
+  %li
+    =link_to 'Build a Dance Lab Level', new_level_path(type: 'Dancelab')
+    %ul
+      %li
+        Hour of Code 2018. Edit #{link_to 'library', edit_library_path(id: 'DanceLab')}, #{link_to 'blocks', blocks_path}.
   %li= link_to 'Build a Minecraft Level', new_level_path(type: 'Craft')
   %li= link_to 'Build a Star Wars Grid Level', new_level_path(type: 'StarWarsGrid')
 

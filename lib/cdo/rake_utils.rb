@@ -46,16 +46,14 @@ module RakeUtils
     if OS.linux? && CDO.chef_managed
       success = false
       (1..retry_count + 1).each do |i|
-        begin
-          if sudo('service', id.to_s, 'stop-with-status')
-            success = true
-            ChatClient.log "Successfully stopped service #{id}"
-            break
-          end
-        rescue RuntimeError # sudo call raises a RuntimeError if it fails
-          ChatClient.log "Service #{id} failed to stop, retrying (attempt #{i})"
-          next
+        if sudo('service', id.to_s, 'stop-with-status')
+          success = true
+          ChatClient.log "Successfully stopped service #{id}"
+          break
         end
+      rescue RuntimeError # sudo call raises a RuntimeError if it fails
+        ChatClient.log "Service #{id} failed to stop, retrying (attempt #{i})"
+        next
       end
       unless success
         # Alert the relevant room that the service may be hung...
@@ -341,12 +339,11 @@ module RakeUtils
     pipe_r.sync = true
     output = StringIO.new('', 'w')
     reader = Thread.new do
-      begin
-        loop do
-          output << pipe_r.readpartial(1024)
-        end
-      rescue EOFError
+      loop do
+        output << pipe_r.readpartial(1024)
       end
+    rescue EOFError
+      # Do nothing.
     end
     STDOUT.reopen(pipe_w)
     STDERR.reopen(pipe_w)

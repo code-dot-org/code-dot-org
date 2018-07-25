@@ -7,11 +7,11 @@ ka:
         csf_category_name: CS საფუძვლები
         csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
-        csf2_draft_category_name: 'დამუშავების ქვეშ: კურსები A - F'
+        csf2_draft_category_name: 'დამუშავების პროცესში: კურსები A - F'
         csp_category_name: "'15-'16 CS საფუძვლები"
         csp_2018_category_name: CS Principles ('18-'19)
         cspexams_category_name: CS საფუძვლების სავარჯიშო ტესტი
-        csp17_category_name: CS საფუძვლები
+        csp17_category_name: CS საფუძვლები ('17-'18)
         full_course_category_name: ყველა კურსი
         hoc_category_name: კოდის ერთი საათი
         math_category_name: მათემატიკა
@@ -44,7 +44,7 @@ ka:
             'Jigsaw: Learn to drag and drop':
               name: 'ფაზლი: ისწავლეთ გადმოტანა და ჩასმა'
             'Maze: Debugging':
-              name: 'ლაბირინთი: ბაგების გამოსწორება'
+              name: 'ლაბირინთი: შეცდომების გამოსწორება'
             'Maze: Loops':
               name: 'ლაბირინთი: ციკლები'
             'Maze: Sequence':
@@ -66,7 +66,7 @@ ka:
           description_audience: 'ასაკი: 6+ (უნდა შეეძლოს კითხვა)'
           stages:
             'Artist: Debugging':
-              name: 'მხატვარი: ბაგების გამოსწორება'
+              name: 'მხატვარი: შეცდომების გამოსწორება'
             'Artist: Loops':
               name: 'მხატვარი: ციკლები'
             'Artist: Nested Loops':
@@ -76,7 +76,7 @@ ka:
             'Bee: Conditionals':
               name: 'ფუტკარი: პირობითი ბრძანებები'
             'Bee: Debugging':
-              name: 'ფუტკარი: ბაგების გამოსწორება'
+              name: 'ფუტკარი: შეცდომების გამოსწორება'
             'Bee: Loops':
               name: 'ფუტკარი: ციკლები'
             Binary Bracelets:
@@ -120,7 +120,7 @@ ka:
             'Bee: Conditionals':
               name: 'ფუტკარი: პირობითი ბრძანებები'
             'Bee: Debugging':
-              name: 'ფუტკარი: ბაგების გამოსწორება'
+              name: 'ფუტკარი: შეცდომების გამოსწორება'
             'Bee: Functions':
               name: 'ფუტკარი: ფუნქციები'
             'Bee: Nested Loops':
@@ -247,7 +247,7 @@ ka:
             'Bee: Conditionals':
               name: 'ფუტკარი: პირობითი ბრძანებები'
             'Bee: Debugging':
-              name: 'ფუტკარი: ბაგების გამოსწორება'
+              name: 'ფუტკარი: შეცდომების გამოსწორება'
             'Bee: Nested Loops':
               name: 'ფუტკარი: ჩასმული ციკლები'
             'Farmer: While Loops':
@@ -591,7 +591,7 @@ ka:
             Teacher Dashboard:
               name: მასწავლებლის მართვის პანელი
             Why Computer Science belongs in Algebra:
-              name: რატო მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
+              name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -774,9 +774,9 @@ ka:
             The Need For Programming Languages:
               name: პროგრამირების ენების საჭიროება
             Understanding Program Flow and Logic:
-              name: პროგრამის მიმდინარეობის და ლოგიკის გაგება
+              name: პროგრამის მიმდინარეობისა და ლოგიკის გაგება
             User Input and Strings:
-              name: მომხმარებლის მიერ შეყვანილი ინფორმაცია და რიგები
+              name: მომხმარებლის მიერ შეყვანილი ინფორმაცია და სტრინგები
             Using Simple Commands:
               name: მარტივი ბრძანებების გამოყენება
             Using Variables in Apps:
@@ -859,7 +859,7 @@ ka:
             Teacher Dashboard:
               name: მასწავლებლის მართვის პანელი
             Why Computer Science belongs in Algebra:
-              name: რატო მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
+              name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -878,7 +878,7 @@ ka:
             Teacher Dashboard:
               name: მასწავლებლის მართვის პანელი
             Why Computer Science belongs in Algebra:
-              name: რატო მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
+              name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -1017,7 +1017,7 @@ ka:
             Routers and Redundancy:
               name: Routers and Redundancy
             Tell Me a Secret - Encrypting Text:
-              name: ენკრიფციის საჭიროება
+              name: გაშიფვრის საჭიროება
             The Internet:
               name: ინტერნეტი ყველასთვისაა
             The Need for Addressing:
@@ -1139,6 +1139,8 @@ ka:
               name: Standalone video
             Curriculum Reference:
               name: Curriculum Reference
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'ფაზა 2 ონლაინ: ფუნქციური პროგრამირების ალგებრის სწავლა'
@@ -1583,7 +1585,7 @@ ka:
             Getting Started:
               name: დაწყება
             Introduction to the Unit 5 Challenge:
-              name: შესავალი მე-5-ე თავის გამოწვევაში
+              name: შესავალი მე-5 თავის გამოწვევაში
             Share out and Submit:
               name: Share out and Submit
             Unit 5 Overview:
@@ -1597,7 +1599,7 @@ ka:
           description_audience: ''
           stages:
             Alternative Ideas for Unit 6:
-              name: ალტერნატიული იდეები მე-6-ე თავისთვის
+              name: ალტერნატიული იდეები მე-6 თავისთვის
             Getting Started:
               name: დაწყება
             Share out and Submit:
@@ -1623,7 +1625,7 @@ ka:
             Creating Javascript Objects:
               name: ჯავასკრიპტ ობიექტების შექმნა
             Creating Summary Tables:
-              name: ამჯამავი ცხრილების შექმნა
+              name: შეჯამების ცხრილების შექმნა
             Data, Security, and Privacy:
               name: მონაცემები, უსაფრთხოება და კონფიდენციალურობა
             Designing Data Collection:
@@ -1911,7 +1913,7 @@ ka:
             Cleaning Data:
               name: მონაცემთა გასუფთავება
             Creating Summary Tables:
-              name: ამჯამავი ცხრილების შექმნა
+              name: შეჯამების ცხრილების შექმნა
             Discover a Data Story:
               name: აღმოაჩინეთ მონაცემთა ისტორია
             Finding Trends with Visualizations:
@@ -2048,7 +2050,7 @@ ka:
             'Unplugged: The Design Recipe':
               name: 'გაკვეთილი კომპიუტერის გარეშე: დიზაინის რეცეპტი'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით
           description_short: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით
           description_audience: ''
@@ -2099,7 +2101,7 @@ ka:
             Teacher Dashboard:
               name: მასწავლებლის მართვის პანელი
             Why Computer Science belongs in Algebra:
-              name: რატო მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
+              name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         algebraPD3c:
           title: Computer Science in Algebra PD
           description: CS in Algebra end of year reflection
@@ -2173,7 +2175,7 @@ ka:
             Cleaning Data:
               name: მონაცემთა გასუფთავება
             Creating Summary Tables:
-              name: ამჯამავი ცხრილების შექმნა
+              name: შეჯამების ცხრილების შექმნა
             Discover a Data Story:
               name: აღმოაჩინეთ მონაცემთა ისტორია
             Encode a Complex Thing:
@@ -2341,9 +2343,9 @@ ka:
             Processing Arrays:
               name: მასივების დამუშავება
             Understanding Program Flow and Logic:
-              name: პროგრამის მიმდინარეობის და ლოგიკის გაგება
+              name: პროგრამის მიმდინარეობისა და ლოგიკის გაგება
             User Input and Strings:
-              name: მომხმარებლის მიერ შეყვანილი ინფორმაცია და რიგები
+              name: მომხმარებლის მიერ შეყვანილი ინფორმაცია და სტრინგები
             Using Variables in Apps:
               name: აპლიკაციებში ცვლადების გამოყენება
             While Loops:
@@ -2391,7 +2393,7 @@ ka:
             'Building an App: Clicker Game':
               name: 'აპლიკაციის შექმნა: წკაპა თამაში'
             'Building an App: Image Scroller':
-              name: 'აპლიკაციის შექმნა: სურათების სქროლერი'
+              name: 'აპლიკაციის შექმნა: სურათების ცოცია ("სქროლერი")'
             'Building an App: Canvas Painter':
               name: 'Building an App: Canvas Painter'
             Unit 5 Assessment 5 - Practice AP questions:
@@ -2573,7 +2575,7 @@ ka:
             Teacher Dashboard:
               name: მასწავლებლის მართვის პანელი
             Why Computer Science belongs in Algebra:
-              name: რატო მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
+              name: რატომ მიეკუთვნება კომპიუტერული მეცნიერება ალგებრას
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -2815,7 +2817,7 @@ ka:
             Clean Code and Debugging:
               name: Clean Code and Debugging
             Describing Webpages:
-              name: ვებგვერდების აღწერა
+              name: ვებ-გვერდების აღწერა
             Designing Code for Computers:
               name: Designing Code for Computers
             Digital Footprint:
@@ -2825,17 +2827,17 @@ ka:
             'Personal Website: Finalizing Site':
               name: 'Personal Website: Finalizing Site'
             Quality Websites:
-              name: ხარისხიანი ვებსაიტები
+              name: ხარისხიანი ვებ-საიტები
             Text on the Web:
               name: ტექსტი ვებში
             Website Design:
-              name: ვებსაიტის დიზაინი
+              name: ვებ-საიტის დიზაინი
             Intellectual Property:
               name: ინტელექტუალური ქონება
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             'Personal Website: Connecting Pages':
-              name: 'პერსონალური ვებსაიტი: გვერდების დაკავშირება'
+              name: 'პერსონალური ვებ-საიტი: გვერდების დაკავშირება'
             Classes and External Style Sheets:
               name: Classes and External Style Sheets
             Box Model and Page Layout:
@@ -2851,13 +2853,13 @@ ka:
             Headers and Lists:
               name: სათაურები და სიები
             Designing Web Pages:
-              name: ვებ გვერდების დიზაინის შექმნა
+              name: ვებ-გვერდების დიზაინის შექმნა
             Holding:
               name: Holding
             Describing Web pages:
               name: Describing Web pages
             Multi-Page Websites:
-              name: მრავალგვერდიანი ვებსაიტები
+              name: მრავალგვერდიანი ვებ-საიტები
             Classes:
               name: კლასები
             External Style Sheets:
@@ -2867,7 +2869,7 @@ ka:
             Peer Review:
               name: თანატოლის კომენტარი
             Describing Web Pages:
-              name: ვებ გვერდების აღწერა
+              name: ვებ-გვერდების აღწერა
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -2961,7 +2963,7 @@ ka:
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: დებაგირება
+              name: გამართვა
             Events:
               name: მოვლენები
             Events Unplugged:
@@ -3013,7 +3015,7 @@ ka:
             'Final Project - Work Day: Build Project Online':
               name: 'Final Project - Work Day: Build Project Online'
             More Programming with Scratch:
-              name: მეტრი პროგრამირება Scratch-ით
+              name: მეტი პროგრამირება Scratch-ით
             'New Artist: Functions':
               name: 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
@@ -3031,7 +3033,7 @@ ka:
             Being Safe Online:
               name: Being Safe Online
             Debugging:
-              name: დებაგირება
+              name: გამართვა
             Events:
               name: მოვლენები
             Events Unplugged:
@@ -3055,7 +3057,7 @@ ka:
             Sequences & Algorithms:
               name: მიმდევრობები და ალგორითმები
             Unspotted Bugs:
-              name: შეუჩმნეველი ბაგები
+              name: შეუჩმნეველი შეცდომები
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3193,7 +3195,7 @@ ka:
             Getting Started:
               name: დაწყება
             Introduction to the Unit 5 Challenge:
-              name: შესავალი მე-5-ე თავის გამოწვევაში
+              name: შესავალი მე-5 თავის გამოწვევაში
             Share out and Submit:
               name: Share out and Submit
             Unit 5 Overview:
@@ -3211,7 +3213,7 @@ ka:
           description_audience: ''
           stages:
             Alternative Ideas for Unit 6:
-              name: ალტერნატიული იდეები მე-6-ე თავისთვის
+              name: ალტერნატიული იდეები მე-6 თავისთვის
             Getting Started:
               name: დაწყება
             Share out and Submit:
@@ -3235,7 +3237,7 @@ ka:
             'Artist: Nested Loops':
               name: 'მხატვარი: ჩასმული ციკლები'
             Bee Debugging:
-              name: ფუტკრის ბაგების გამოსწორება
+              name: ფუტკრის შეცდომების გამოსწორება
             Bounce:
               name: Bounce
             Build a Game:
@@ -3257,7 +3259,7 @@ ka:
             More Programming with CS4FN:
               name: მეტი პროგრამირება CS4FN-ით
             Robot Running the Farm:
-              name: ფერმის მომვლელი რობოტი
+              name: ფერმერი რობოტი
             Unplugged Conditionals with Loops:
               name: Unplugged Conditionals with Loops
         alltheplcthings:
@@ -3293,7 +3295,7 @@ ka:
         csd3-2017:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
-          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშების და თამაშების დაპროგრამება თამაშების ლაბორატორიაში."
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -3306,8 +3308,8 @@ ka:
               name: ხატვის ციკლი და შემთხვევითობა
             Drawing in Game Lab:
               name: ხატვა თამაშების ლაბორატორიაში
-              description_student: კლასი ეცნობა თამაშების ლაბორატორიას, ამ თავისთვის საჭირო პროგრამირების გარემოს და იწყებს მის გამოყენებას, რათა განალაგოს ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების და დებაგირების საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლო კლასი შექმნის წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
-              description_teacher: მოსწავლეები ეცნობიან თამაშების ლაბორატორიას, ამ თავისთვის საჭირო პროგრამირების გარემოს და იწყებენ მის გამოყენებას, რათა განალაგონ ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების და დებაგირების საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლოს მოსწავლეები შექმნიან წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
+              description_student: კლასი ეცნობა თამაშების ლაბორატორიას, ამ თავისთვის საჭირო პროგრამირების გარემოს და იწყებს მის გამოყენებას, რათა განალაგოს ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობებისა და გამართვის საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლო კლასი შექმნის წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
+              description_teacher: მოსწავლეები ეცნობიან თამაშების ლაბორატორიას, ამ თავისთვის საჭირო პროგრამირების გარემოს და იწყებენ მის გამოყენებას, რათა განალაგონ ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების და გამართვის საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლოს მოსწავლეები შექმნიან წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
             'Project: Interactive Card':
               name: 'პროექტი: ინტერაქტიული ბარათი'
             Sprites and Images:
@@ -3320,8 +3322,8 @@ ka:
               name: ცვლადები და ანიმაცია
             Velocity:
               name: სიჩქარე
-              description_student: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის შემდეგ, კლასი გაეცნობა იმ თვისებებს, რომლებიც გამოიყენებიან სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო side scroller ტიპის თამაშის შექმნას.
-              description_teacher: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის შემდეგ, მოსწავლეების გაეცნობიან იმ თვისებებს, რომლებიც გამოიყენებიან სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო side scroller ტიპის თამაშის შექმნას.
+              description_student: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის შემდეგ კლასი გაეცნობა იმ თვისებებს, რომლებიც გამოიყენება სიჩქარისა და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო side scroller ტიპის თამაშის შექმნას.
+              description_teacher: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის შემდეგ, მოსწავლეების გაეცნობიან იმ თვისებებს, რომლებიც გამოიყენება სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო side scroller ტიპის თამაშის შექმნას.
             Collision Detection:
               name: შეჯახების აღმოჩენა
               description_student: The class learns about collision detection on the computer.  Pairs explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  The class then uses the isTouching() block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
@@ -3555,7 +3557,7 @@ ka:
               description_teacher: This lesson introduces the formal problem solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the aluminum boats problem from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.
             Exploring Problem Solving:
               name: Exploring Problem Solving
-              description_student: 'ამ გაკვეთილში კლასი იყენებს პრობლემის გადაწყვეტის პროცესს სამი პრობლემის გადასაწყვეტად: სიტყვის ძებნა, დაბადების დღის წვეულების დასაგეგმარებელი კრები და მოგზაურობის დაგეგმარება. ეს პრობლემები მიმდევრულად რთულდება და ცუდადაა აღწერილი, რათა ხაზი გავუსვათ იმას, თუ რამდენად არის პრობლემების გადაწყვეტის პროცესი გამოყენებადი ამ სახის პრობლემებთან მუშაობისას.'
+              description_student: 'ამ გაკვეთილში კლასი იყენებს პრობლემის გადაწყვეტის პროცესს სამი პრობლემის გადასაწყვეტად: სიტყვის ძებნა, დაბადების დღის წვეულებაზე სკამების დაგეგმარება და მოგზაურობის დაგეგმვა. ეს პრობლემები მიმდევრულად რთულდება და ცუდადაა აღწერილი, რათა ხაზი გავუსვათ იმას, თუ რამდენად გვეხმარება პრობლემების გადაწყვეტის პროცესიამ სახის პრობლემებთან მუშაობისას.'
               description_teacher: |-
                 In this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and plan a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.
                 
@@ -3753,9 +3755,9 @@ ka:
             new stage:
               name: ახალი დონე
             Quality Websites:
-              name: ხარისხიანი ვებსაიტები
+              name: ხარისხიანი ვებ-საიტები
             Website Design:
-              name: ვებსაიტის დიზაინი
+              name: ვებ-საიტის დიზაინი
             Describing Web pages:
               name: Describing Web pages
             Text on the Web:
@@ -3764,12 +3766,12 @@ ka:
               name: სურათები ვებში
             Clean Code and Debugging:
               name: Clean Code and Debugging
-              description_student: ეს დონე მოიცავს პრობლემებს, რომლებიც ხშირად იჩენენ თავს HTML ვებ გვერდების დიზაინის დროს. კლასი შეასწორებს შეცდომებს მიმდევრობითად გართულებად ვებ გვერდებში, რომლებიც Code Studio-ზე არიან განთავსებულნი. კლასი ასევე შეისწავლის კომენტარების, ცარიელი ტექსტური სივრცეების და ინდენტაციის მნიშვნელობას და პრაქტიკულობას ვებ გვერდების წაკითხვადობის გასაუმჯობესებლად.
+              description_student: ეს დონე მოიცავს პრობლემებს, რომლებიც ხშირად იჩენენ თავს HTML ვებ-გვერდების დიზაინის დროს. კლასი შეასწორებს შეცდომებს მიმდევრობითად გართულებად ვებ-გვერდებში, რომლებიც Code Studio-ზე არიან განთავსებულნი. კლასი ასევე შეისწავლის კომენტარების, თეთრი სივრცის (შორისის) და დაშორების მნიშვნელობასა და პრაქტიკულობას ვებ-გვერდების წაკითხვადობის გასაუმჯობესებლად.
               description_teacher: Students deal with common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             Multi-Page Websites:
-              name: მრავალგვერდიანი ვებსაიტები
+              name: მრავალგვერდიანი ვებ-საიტები
             Classes:
               name: კლასები
             External Style Sheets:
@@ -3793,23 +3795,23 @@ ka:
             'Personal Website: Finalizing Site':
               name: 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website':
-              name: 'პროექტი: პირადი პორტფოლიოს ვებსაიტი'
+              name: 'პროექტი: პირადი პორტფოლიოს ვებ-საიტი'
             Images in HTML:
               name: სურათები HTML-ში
             Styling Text with CSS:
-              name: ტექსტის გასტილვა CSS-ით
-              description_student: ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე. საბოლოოდ, ყველა გამოიყენებს ტექსტურ სტილებს საკუთარ პირად ვებსაიტებზე.
-              description_teacher: "ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე. ისინი იმუშავებენ HTML გვერდზე, რომელიც გვიამბობს გინესის რეკორდების მფლობელებზე, კერძოდ კი დაამატებენ მოწოდებულ გვერდს თავის სტილებს. ბოლო დონეზე, მოსწავლეები გამოიყენებენ ახალ ინფორმაციას საკუთარ პირად ვებ გვერდზე ტექსტური ელემენტების სტილების განსასაზღვრად."
+              name: ტექსტის სტილის მორგება CSS-ით
+              description_student: ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტურ ელემენტებზე. საბოლოოდ, ყველა გამოიყენებს ტექსტურ სტილებს საკუთარ პირად ვებ-საიტზე.
+              description_teacher: "ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის მორგების გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე. ისინი იმუშავებენ HTML გვერდზე, რომელიც გვიამბობს გინესის რეკორდების მფლობელებზე, კერძოდ კი დაამატებენ მოწოდებულ გვერდს თავის სტილებს. ბოლო დონეზე მოსწავლეები გამოიყენებენ ახალ ინფორმაციას საკუთარ პირად ვებ-გვერდზე ტექსტური ელემენტების სტილების განსასაზღვრად.\\r\n\\r\n"
             Styling Elements with CSS:
-              name: ელემენტების გასტილვა CSS-ით
+              name: ელემენტების სტილის მორგება CSS-ით
               description_student: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. The class begins by investigating and modifying the new CSS styles on a Desserts of the World page. Afterwards, everyone applies this new knowledge to their personal websites.
               description_teacher: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to do more styling of their personal websites.
             Exploring Websites:
-              name: ვებსაიტების გამოკვლევა
+              name: ვებ-საიტების გამოკვლევა
               description_student: This lesson covers the purposes that a website might serve, both for the users and the creators. The class explores a handful of the most-used websites in the United States and discusses how each of those sites is useful for users and how it might also serve its creators.
-              description_teacher: ყოველ ვებსაიტს აქვს დანიშნულება, მიზანი რომლისთვისაც ის ვიღაცამ შექმნა და ვიღაცა იყენებს. ამ გაკვეთილში, მოსწავლეები დაიწყებენ საიტის შესაძლო დანიშნულებების გათვალისწინებას, როგორც მომხმარებლების, ასევე შემქნელების მხრიდან. მოსწავლეები გამოიკვლევენ რამდენიმე ამერიკის შეერთებულ შტატებში ყველაზე მეტად გამოყენებად ვებსაიტს და ეცდებიან გაიგონ თუ რა მხრივ არიან ისინი გამოყენებადი მომხარებლებისთვის და როგორ შეიძლება ემსახურონ თავიანთ შექმნელებს.
+              description_teacher: ყოველ ვებ-საიტს აქვს დანიშნულება, მიზანი რომლისთვისაც ის ვიღაცამ შექმნა და ვიღაცა იყენებს. ამ გაკვეთილში მოსწავლეები დაიწყებენ საიტის შესაძლო დანიშნულებების გათვალისწინებას, როგორც მომხმარებლების, ასევე შემქნელების მხრიდან. მოსწავლეები გამოიკვლევენ ამერიკის შეერთებულ შტატებში რამდენიმე ყველაზე მეტად გამოყენებად ვებ-საიტს და ეცდებიან, გაიგონ თუ რა მხრივ არიან ისინი გამოყენებადი მომხარებლებისთვის და როგორ შეიძლება ემსახურონ თავიანთ შექმნელებს.
             'Websites for Expression ':
-              name: 'ვებსაიტები გამოხატვისათვის '
+              name: 'ვებ-საიტები გამოხატვისათვის '
               description_student: 'This lesson introduces websites as a means of personal expression.  The class first discusses different ways that people express and share their interests and ideas, then looks at a few exemplar websites made by students from a previous course. Finally everyone brainstorms and shares a list of topics and interests to include, creating a resource for developing a personal website in the rest of the unit. '
               description_teacher: In this lesson students investigate ways to use websites as a means of personal expression and develop a list of topics and interests that they would want to include on a personal website. To begin the lesson students brainstorm different ways that people express and share their interests and ideas. Students then look at a few exemplar websites made by students from a previous CS Discoveries course to identify ways they are expressing their ideas. Finally students brainstorm and share a list of topics and interests they might want to include on a personal website which they can reference for ideas as they progress through the unit.
             Intro to HTML:
@@ -3822,22 +3824,22 @@ ka:
               description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headers.  Students learn how the different header elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
             Lists:
               name: სიები
-              description_student: ეს დონე წარმოგვიდგენს დალაგებულ და დაულაგებელ სიებს და შესაბამის  &lt;ul&gt;, &lt;ol&gt;, და &lt;li&gt; HTML ტეგებს. კლასი ვარჯიშობს ტეგების გამოყენებაზე, შემდეგ კი უბრუნდება პირადი ვებ გვერდის პროექტს, რათა დაამატოთ ახალი HTML გვერდი, რომლებიც შეიცავს ახალ ტაგებს.
+              description_student: ეს დონე წარმოგვიდგენს დალაგებულ და დაულაგებელ სიებს და შესაბამის  &lt;ul&gt;, &lt;ol&gt;, და &lt;li&gt; HTML ტეგებს. კლასი ვარჯიშობს ტეგების გამოყენებაზე, შემდეგ კი უბრუნდება პირადი ვებ-გვერდის პროექტს, რათა დაამატოთ ახალი HTML გვერდი, რომლებიც შეიცავს ახალ ტეგებს.
               description_teacher: Students are introduced to ordered and unordered lists in HTML and work through a few levels in which they use the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags.  They then go back to their project, where they add a new HTML page.  Inside the new page, they write the HTML to display a recipe, top ten list, or any other content that uses the new tags that they have learned.
             Intellectual Property and Images:
               name: ინტელექტუალური საკუთრება და სურათები
-              description_student: ეს გაკვეთილი მოიცავს სხვების მიერ შექმნილი მედიას ( სურათების, ვიდეოს ან მუსიკის) შემქნელების უფლებების პატივიცემით გამოყენებას. Creative Commons ლიცენზირების შესწავლის შემდეგ, კლასი ისწავლის ვებ გვერდზებზე სურათების დამატებას და ამავე დროს საავტორო უფლებების სწორად მითითებას.
+              description_student: ეს გაკვეთილი მოიცავს სხვების მიერ შექმნილი მედიის ( სურათების, ვიდეოს ან მუსიკის) შემქნელების უფლებების პატივიცემით გამოყენებას. Creative Commons ლიცენზირების შესწავლის შემდეგ, კლასი ისწავლის ვებ-გვერდზებზე სურათების დამატებას და ამავე დროს საავტორო უფლებების სწორად მითითებას.
               description_teacher: "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \\r\n\\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
-              name: პროექტი - მრავალგვერდიანი ვებსაიტები
-              description_student: 'ეს დონე მოიცავს ჰიპერბმულებს, რომლებიც აძლევენ საშუალებას ვებ დეველოპერებს დაუკავშირონ ერთმანეთს გვერდები ერთიან ვებსაიტის შესაქმნელად. მთლიანი საიტის ვებში გამოქვეყნებამდე, კლასი ააწყობს ერთ პროექტს ყველა წინა გვერდის ერთმანეთთან დაკავშირებით და შექმნის სანავიგაციო პანელს ყოველი გვერდისთვის.  '
+              name: პროექტი - მრავალგვერდიანი ვებ-საიტები
+              description_student: 'ეს დონე მოიცავს ჰიპერბმულებს, რომლებიც  ვებ დეველოპერებს აძლევენ საშუალებას, დაუკავშირონ ერთმანეთს გვერდები ერთიანი ვებ-საიტის შესაქმნელად. მთლიანი საიტის ვებში გამოქვეყნებამდე კლასი ააწყობს ერთ პროექტს ყველა წინა გვერდის ერთმანეთთან დაკავშირებით და შექმნის ნავიგაციის ზოლს ყოველი გვერდისთვის.  '
               description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \\r\n\\r\n"
             RGB Colors and Classes:
               name: RGB ფერები და კლასები
               description_student: This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then use them to style their personal websites.
               description_teacher: In this lesson, students first learn how to specify custom colors using their RGB (red, green, blue) values.  They then apply these colors to a new Four Seasons web page, which uses CSS classes.  CSS classes allow web developers to treat groups of elements they want styled differently than other elements of the same type. Using classes, students add more styles to the Four Seasons web page, then use them to style their personal websites.
             Project - Personal Portfolio Website:
-              name: პროექტი - პირადი პორტფოლიოს ვებსაიტი
+              name: პროექტი - პირადი პორტფოლიოს ვებ-საიტი
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
             Headings:
@@ -4005,7 +4007,7 @@ ka:
           description: "Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \\r\nRecommended for grade K."
           stages:
             'Debugging: Bugs in Codeville':
-              name: 'დებაგირება: ხოჭოები კოდვილში'
+              name: 'გამართვა: ხოჭოები კოდვილში'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
@@ -4111,7 +4113,7 @@ ka:
             Screen Out the Mean:
               name: Screen Out the Mean
             Debugging in Maze:
-              name: დებაგირება ლაბირინთში
+              name: გამართვა ლაბირინთში
             Loops in Harvester:
               name: Loops in Harvester
         coursed-draft:
@@ -4131,7 +4133,7 @@ ka:
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Bee:
-              name: დებაგირება ფუტკარში
+              name: გამართვა ფუტკარში
             While Loops in Farmer:
               name: While ციკლები ფერმერში
             Conditionals with Cards:
@@ -4165,7 +4167,7 @@ ka:
             Nested Loops Project in Artist:
               name: ჩადგმული ციკლების პროექტი მხატვარში
             Debugging in Collector:
-              name: დებაგირება შემგროვებელში
+              name: გამართვა შემგროვებელში
         coursee-draft:
           title: 'CS Fundamentals: Course E'
           description_audience: ''
@@ -4197,7 +4199,7 @@ ka:
             Present Your Project:
               name: წარმოადგინეთ თქვენი პროექტი
             More Programming with Scratch:
-              name: მეტრი პროგრამირება Scratch-ით
+              name: მეტი პროგრამირება Scratch-ით
             Private and Personal Information:
               name: კონფიდენციალური და პირადი ინფორმაცია
             Internet:
@@ -4379,7 +4381,7 @@ ka:
             new stage:
               name: ახალი დონე
             Introduction to Styling with CSS (2.7):
-              name: შესავალი CSS-ით გასტილვაში (2.7)
+              name: შესავალი CSS-ით სტილის მორგებაში (2.7)
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             External Style Sheets:
@@ -4397,7 +4399,7 @@ ka:
             'Lessons 1 - 4: Data in the Real World':
               name: 'გაკვეთილები 1 - 4: მონაცემები რეალურ სამყაროში'
             'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption':
-              name: 'გაკვეთილები 5 - 7: უსაფრთხოება, სიმეტრიალი და ასიმეტრიული ენკრიფცია'
+              name: 'გაკვეთილები 5 - 7: უსაფრთხოება, სიმეტრიული და ასიმეტრიული დაშიფვრა'
             'Lessons 8 - 9: Practice PT':
               name: 'Lessons 8 - 9: Practice PT'
             Group Work and Peer Learning:
@@ -4688,7 +4690,7 @@ ka:
             Making Decisions with Data:
               name: გადაწყვეტილების მიღება მონაცემებთან ერთად
             Automating Data Decisions:
-              name: ავტომატური მონაცემთა გადაწყვეტილებები
+              name: მონაცემთა გადაწყვეტილებების ავტომატიზირება
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
@@ -4702,8 +4704,8 @@ ka:
             Structuring Data:
               name: Structuring Data
         applab-1hour:
-          title: აპლიკაციების ლაბორატორია 1 საათიანი სახელოსნო
-          description_audience: საშუალო და უფროსი კლასების მოსწავლეები
+          title: აპლიკაციების ლაბორატორია 1-საათიანი სახელოსნო
+          description_audience: საშუალო და დამამთავრებელი კლასების მოსწავლეები
           description_short: ''
           description: This workshop is designed to give students a basic introduction to app lab in 1 hour. Students should be able to come in with different backgrounds in computer science and have fun creating something.
           stages:
@@ -4724,8 +4726,8 @@ ka:
             Extra:
               name: დამატებითი
         applab-2hour:
-          title: აპლიკაციების ლაბორატორია 2 საათიანი სახელოსნო
-          description_audience: საშუალო და უფროსი კლასების მოსწავლეები
+          title: აპლიკაციების ლაბორატორია 2-საათიანი სახელოსნო
+          description_audience: საშუალო და დამამთავრებელი კლასების მოსწავლეები
           description_short: ''
           description: This workshop is designed to give students a basic introduction to app lab in 2 hours. Students should be able to come in with different backgrounds in computer science and have fun creating something.
           stages:
@@ -5062,7 +5064,7 @@ ka:
               description_student: Students begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor.  They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend.  They are then introduced to cross tabulation, which allows them to graph relationships to different preferences.  They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.
               description_teacher: Students begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor.  They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend.  They are then introduced to cross tabulation, which allows them to graph relationships to different preferences.  They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.
             Automating Data Decisions:
-              name: ავტომატური მონაცემთა გადაწყვეტილებები
+              name: მონაცემთა გადაწყვეტილებების ავტომატიზირება
               description_student: In this lesson students look at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that could suggest a vacation spot.  Students then create rules, or an algorithm, that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. They then use their rules on data from their classmates to test whether their rules would make the same decision that  a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.
               description_teacher: In this lesson students look at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that could suggest a vacation spot.  Students then create rules, or an algorithm, that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. They then use their rules on data from their classmates to test whether their rules would make the same decision that  a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.
             Problem Solving with Big Data:
@@ -5174,9 +5176,9 @@ ka:
             Images in HTML:
               name: სურათები HTML-ში
             Exploring Websites:
-              name: ვებსაიტების გამოკვლევა
+              name: ვებ-საიტების გამოკვლევა
             'Websites for Expression ':
-              name: 'ვებსაიტები გამოხატვისათვის '
+              name: 'ვებ-საიტები გამოხატვისათვის '
             Intro to HTML:
               name: შესავალი HTML-ში
             Headers and Lists:
@@ -5188,17 +5190,17 @@ ka:
             Clean Code and Debugging:
               name: Clean Code and Debugging
             Project - Multi-Page Websites:
-              name: პროექტი - მრავალგვერდიანი ვებსაიტები
+              name: პროექტი - მრავალგვერდიანი ვებ-საიტები
             Styling Text with CSS:
-              name: ტექსტის გასტილვა CSS-ით
+              name: ტექსტის სტილის მორგება CSS-ით
             Styling Elements with CSS:
-              name: ელემენტების გასტილვა CSS-ით
+              name: ელემენტების სტილის მორგება CSS-ით
             Sources and Search Engines:
               name: Sources and Search Engines
             RGB Colors and Classes:
               name: RGB ფერები და კლასები
             Project - Personal Portfolio Website:
-              name: პროექტი - პირადი პორტფოლიოს ვებსაიტი
+              name: პროექტი - პირადი პორტფოლიოს ვებ-საიტი
             Headers:
               name: ჰედერები
             Intellectual Property and Images:
@@ -5360,9 +5362,9 @@ ka:
         csd2-old:
           stages:
             Quality Websites:
-              name: ხარისხიანი ვებსაიტები
+              name: ხარისხიანი ვებ-საიტები
             Website Design:
-              name: ვებსაიტის დიზაინი
+              name: ვებ-საიტის დიზაინი
             Describing Web pages:
               name: Describing Web pages
             Text on the Web:
@@ -5372,11 +5374,11 @@ ka:
             Clean Code and Debugging:
               name: Clean Code and Debugging
             Styling Text with CSS:
-              name: ტექსტის გასტილვა CSS-ით
+              name: ტექსტის სტილის მორგება CSS-ით
             Styling Elements with CSS:
-              name: ელემენტების გასტილვა CSS-ით
+              name: ელემენტების სტილის მორგება CSS-ით
             Multi-Page Websites:
-              name: მრავალგვერდიანი ვებსაიტები
+              name: მრავალგვერდიანი ვებ-საიტები
             Classes:
               name: კლასები
             Peer Review:
@@ -5390,7 +5392,7 @@ ka:
             Intellectual Property:
               name: ინტელექტუალური ქონება
             'Project: Personal Portfolio Website':
-              name: 'პროექტი: პირადი პორტფოლიოს ვებსაიტი'
+              name: 'პროექტი: პირადი პორტფოლიოს ვებ-საიტი'
           title: CSD Unit 2 (DEPRECATED)
           description_audience: ''
           description_short: Web Development
@@ -5450,11 +5452,11 @@ ka:
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''
-              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
             'Programming: Happy Maps':
               name: 'პროგრამირება: ბედნიერი რუკები'
               description_student: ''
-              description_teacher: ხიდი, რომელიც აკავშირებს ალგორითმებს და პროგრამირებას შეიძლება იყო მოკლე, თუ მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს მიიღონ გამოცდილება ფსევდოკოდის წაკითხვასა და დაწერაში.
+              description_teacher: ალგორითმებიდან და პროგრამირებამდე მოკლე გზაა, თუ მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს, მიიღონ გამოცდილება ფსევდოკოდის წაკითხვასა და დაწერაში.
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
               description_student: ''
@@ -5470,7 +5472,7 @@ ka:
             Loops in Collector:
               name: ციკლები შემგროვებელში
               description_student: ''
-              description_teacher: განმეორებადი ინსტრუქციების შესახებ, "ბედნიერი ციკლებიდან" მიღებული ცოდნის საფუძველზე, ამ ეტაპზე მოსწავლეები ციკლებს Code.org-ზე განძეულობის უფრო ეფექტურად შესაგროვებლად გამოიყენებენ.
+              description_teacher: განმეორებადი ინსტრუქციების შესახებ "ბედნიერი ციკლებიდან" მიღებული ცოდნის საფუძველზე, ამ ეტაპზე მოსწავლეები ციკლებს Code.org-ზე განძის უფრო ეფექტურად შესაგროვებლად გამოიყენებენ.
             Loops in Artist:
               name: ციკლები მხატვარში
               description_student: ''
@@ -5482,12 +5484,12 @@ ka:
             Events in Play Lab:
               name: მოვლენები სათამაშო ლაბორატორიაში
               description_student: ''
-              description_teacher: ამ ონლაინ აქტივობაში, მოსწავლეებს ექნებათ საშუალება შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
+              description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება, შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
           title: კურსი A
           assignment_family_title: კურსი A
           description_audience: 'ასაკი: 4-7'
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა არ იცის.
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5522,7 +5524,7 @@ ka:
           assignment_family_title: კურსი B
           description_audience: 'ასაკი: 5-8'
           description_short: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
         coursec-2017:
           stages:
             Building a Foundation:
@@ -5530,7 +5532,7 @@ ka:
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Debugging in Maze:
-              name: დებაგირება ლაბირინთში
+              name: გამართვა ლაბირინთში
             'Real-life Algorithms: Paper Planes':
               name: 'ცხოვრებისეული ალგორითმები: ქაღალდის თვითმფრინავები'
             Programming in Collector:
@@ -5561,7 +5563,7 @@ ka:
           assignment_family_title: კურსი C
           description_audience: 'ასაკი: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ სხვადასხვა პრობლემის გადაჭრის ტექნიკა და ისწავლეთ თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ.
+          description: შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
         coursed-2017:
           stages:
             Introduction:
@@ -5589,7 +5591,7 @@ ka:
               description_student: Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!
               description_teacher: This activity will begin with a short review of "Graph Paper Programming," then will quickly move to a race against the clock, as students break into teams and work together to write a program one instruction at a time.
             Debugging in Bee:
-              name: დებაგირება ფუტკარში
+              name: გამართვა ფუტკარში
             While Loops in Farmer:
               name: While ციკლები ფერმერში
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
@@ -5634,7 +5636,7 @@ ka:
               description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
               description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             Debugging in Collector:
-              name: დებაგირება შემგროვებელში
+              name: გამართვა შემგროვებელში
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
           title: კურსი D
@@ -5680,11 +5682,11 @@ ka:
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \n\nIn the explore stage, students will be able to view pre-built examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
             The Design Process:
               name: დიზაინის პროცესი
-              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ გრძელ დაგეგმარებას. აქ, თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ, რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
+              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ გრძელ დაგეგმარებას. აქ თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ, რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: ააწყვეთ თქვენი პროექტი
-              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა დაიწყოთ თქვენი პროექტის აწყობა.
+              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ თქვენი პროექტის აწყობა.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
               name: გადახედეთ თქვენს პროექტს
@@ -5708,7 +5710,7 @@ ka:
             Build a Star Wars Game:
               name: ააწყვეთ ვარსკვლავური ომების თამაში
               description_student: შეიგრძენით ძალა, როდესაც შექმნით თქვენს საკუთარ ვარსკვლავური ომების თამაშს ამ გაკვეთილში.
-              description_teacher: ამ გაკვეთილში მოსწავლეები ივარჯიშებენ მოვლენების გამოყენებაზე. მოვლენების საშუალებით ისინი შეძლებენ ისეთი თამაშის აწყობას, რომელსაც შემდგომში გაუზიარებენ სხვებს ონლაინში. R2-D2 და სხვა ვარსკვლავური ომების პერსონაჟებთან ერთად, მოსწავლეებს შეასწავლიან მოვლენების მთავარ პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება შექმნან საკუთარი თამაში.
+              description_teacher: ამ გაკვეთილში მოსწავლეები ივარჯიშებენ მოვლენების გამოყენებაზე. მოვლენების საშუალებით ისინი შეძლებენ ისეთი თამაშის აწყობას, რომელსაც შემდგომში გაუზიარებენ სხვებს ონლაინ. R2-D2 და სხვა ვარსკვლავური ომების პერსონაჟებთან ერთად, მოსწავლეები შეისწავლიან მოვლენების მთავარ პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება, შექმნან საკუთარი თამაში.
             'Functions: Songwriting':
               name: 'ფუნქციები: სიმღერების დაწერა'
               description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები. ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების გამოყენებით.
@@ -5716,7 +5718,7 @@ ka:
             Functions in Artist:
               name: ფუნქციები მხატვარში
               description_student: Make complex drawings more easily with functions!
-              description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე. ფუნქციების საშუალებით, "მხატვრის" პროგრამაში შეიქმნება და შესწორდება არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან ფუნქციების ჩადგმის პრინციპებს ( ერთი ფუნქციიდან მეორის გამოძახებას).
+              description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე. ფუნქციების საშუალებით "მხატვრის" პროგრამაში შეიქმნება და შესწორდება არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან ფუნქციების ჩადგმის პრინციპებს (ერთი ფუნქციიდან მეორის გამოძახებას).
             Functions in Bee:
               name: ფუნქციები ფუტკარში
               description_student: Don't write too much code to gather all of the nectar and honey. Use functions instead!
@@ -5744,7 +5746,7 @@ ka:
             Crowdsourcing:
               name: 'Beyond Programming: Crowdsourcing'
               description_student: ეს გაკვეთილი შეგასწავლით მოხალისეების სამუშაო პროცესში ჩართვის შესახებ, ანუ გუნდთთან ერთად პროექტზე მუშაობის შესახებ.
-              description_teacher: კომპიუტერულ მეცნიერებაში, ჩვენ ვხვდებით ძალიან დიდ, გამომწვევ პრობლემებს. თითქმის შეუძლებელია ერთმა ადამიანმა ხელსაწყოების გარეშე იპოვოს ძალიან დიდი მარტივი რიცხვი ან გამოითვალოს დნმ-ის მიმდევრობები. სხვა ადამიანების დახმარება რეალურს ხდის ამ დავალებების შესრულებას. ეს გაკვეთილი აჩვენებს მოსწავლეებს, თუ როგორი გამოსადეგარი შეიძლება იყოს ჯგუფური მუშაობა ისეთ სფეროში, როგორიცაა კომპიუტერული მეცნიერება.
+              description_teacher: კომპიუტერულ მეცნიერებაში ჩვენ ვხვდებით ძალიან დიდ, გამომწვევ პრობლემებს. თითქმის შეუძლებელია, ერთმა ადამიანმა ხელსაწყოების გარეშე იპოვოს ძალიან დიდი მარტივი რიცხვი ან გამოითვალოს დნმ-ის მიმდევრობები. სხვა ადამიანების დახმარება რეალურს ხდის ამ დავალებების შესრულებას. ეს გაკვეთილი აჩვენებს მოსწავლეებს, თუ როგორი გამოსადეგი შეიძლება იყოს ჯგუფური მუშაობა ისეთ სფეროში, როგორიცაა კომპიუტერული მეცნიერება.
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Sequence in Maze:
@@ -5752,7 +5754,7 @@ ka:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: My Loopy Robotic Friends':
@@ -5784,11 +5786,11 @@ ka:
               description_teacher: 'In this lesson, students will be introduced to sequences, loops, and nested loops to prepare them for more complicated concepts in the later part of the course. This "ramp up" lesson equalizes the playing field between the experts and the beginners in your class. '
             The Power of Words:
               name: 'Digital Citizenship: The Power of Words'
-              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით თუ რისი გაკეთება შეიძლება და რისი არა ონლაინში ყოფნისას.
+              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით, თუ რისი გაკეთება შეიძლება ონლაინ და რისი - არა.
               description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
             Ice Age Play Lab:
               name: Events in Ice Age
-              description_student: გაიფიქრეთ თქვენს საყვარელ ვიდეო თამაშზე. არასდროს გიფიქრიათ თუ როგორაა ის გაკეთებული? ამ თავსატეხებში, თქვენ შექმნით თქვენს საკუთარ ვიდეო თამაშს თქვენს მეგობრებთან, გამყინვარების პერიოდის გმირებთან ერთად!
+              description_student: გაიხსენეთ თქვენი საყვარელი ვიდეო თამაში. არასდროს გიფიქრიათ, თუ როგორაა ის გაკეთებული? ამ თავსატეხებში თქვენ შექმნით თქვენს საკუთარ ვიდეო თამაშს თქვენს მეგობრებთან, გამყინვარების პერიოდის გმირებთან ერთად!
               description_teacher: In this lesson, students are guided through a story featuring characters from Ice Age. Students will work with events and loops to make characters move on the screen, and will get the chance to create their own game or story after the guided levels.
             Envelope Variables:
               name: 'ცვლადები: ცვლადები კონვერტებში'
@@ -5836,11 +5838,11 @@ ka:
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \n\nIn the explore stage, students will be able to view examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is most likely the longest stage of the project). Students will then revise their projects, after testing and extra thought. Finally, students will be able to present their finished work to their peers."
             The Design Process:
               name: დიზაინის პროცესი
-              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ გრძელ დაგეგმარებას. აქ, თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ, რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
+              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ გრძელ დაგეგმარებას. აქ თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ, რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
               name: ააწყვეთ თქვენი პროექტი
-              description_student: საბოლოოდ თქვენ შეგიძლიათ დაიწყოთ თქვენი პროექტის აწყობა!
+              description_student: საბოლოოდ თქვენ შეგიძლიათ, დაიწყოთ თქვენი პროექტის აწყობა!
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
               name: გადახედეთ თქვენს პროექტს
@@ -5865,7 +5867,7 @@ ka:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: My Loopy Robotic Friends':
@@ -6211,7 +6213,7 @@ ka:
           assignment_family_title: დაჩქარებული კურსი
           description_audience: 'ასაკი: 9-18'
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -6246,7 +6248,7 @@ ka:
           assignment_family_title: Pre-reader Express
           description_audience: 'ასაკი: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -6400,7 +6402,7 @@ ka:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: My Loopy Robotic Friends':
@@ -6474,7 +6476,7 @@ ka:
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Collector:
-              name: დებაგირება შემგროვებელში
+              name: გამართვა შემგროვებელში
             While Loops in Farmer:
               name: While ციკლები ფერმერში
             Conditionals with Cards:
@@ -6524,7 +6526,7 @@ ka:
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Collector:
-              name: დებაგირება შემგროვებელში
+              name: გამართვა შემგროვებელში
             'Loops: My Loopy Robotic Friends':
               name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
             Loops in Artist:
@@ -6588,7 +6590,7 @@ ka:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
             Nested Loops:
               name: ჩასმული ციკლები
             Loops in Artist (UPDATED!):
@@ -6620,7 +6622,7 @@ ka:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: My Loopy Robotic Friends':
@@ -6678,7 +6680,7 @@ ka:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: My Loopy Robotic Friends':
@@ -6758,7 +6760,7 @@ ka:
             Interpreting Data:
               name: მონაცემთა ინტერპრეტაცია
             Automating Data Decisions:
-              name: ავტომატური მონაცემთა გადაწყვეტილებები
+              name: მონაცემთა გადაწყვეტილებების ავტომატიზირება
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
             Project - Solve a Data Problem:
@@ -7106,7 +7108,7 @@ ka:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: My Loopy Robotic Friends':
@@ -7168,7 +7170,7 @@ ka:
             Building a Foundation:
               name: ფუნდამენტის აშენება
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
             Programming in Artist:
               name: პროგრამირება მსახიობში
             'Loops: My Loopy Robotic Friends':
@@ -7329,7 +7331,7 @@ ka:
               name: CS Discoveries End of Semester Survey
           title: CSD Unit 3 - Animations and Games
           description_audience: ''
-          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშების და თამაშების დაპროგრამება თამაშების ლაბორატორიაში."
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
         textbook:
           stages:
@@ -7352,7 +7354,7 @@ ka:
         csd3-2018:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
-          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშების და თამაშების დაპროგრამება თამაშების ლაბორატორიაში."
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
           description_audience: ''
           stages:
             Programming for Entertainment:
@@ -7365,8 +7367,8 @@ ka:
               description_teacher: Students explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity quickly demonstrates the challenges of communicating position without some shared reference point. In the main activity students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. Students optionally create their own image to communicate before a debrief discussion.
             Drawing in Game Lab:
               name: ხატვა თამაშების ლაბორატორიაში
-              description_student: კლასი ეცნობა თამაშების ლაბორატორიას, ამ თავისთვის საჭირო პროგრამირების გარემოს და იწყებს მის გამოყენებას, რათა განალაგოს ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების და დებაგირების საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლო კლასი შექმნის წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
-              description_teacher: მოსწავლეები ეცნობიან თამაშების ლაბორატორიას, ამ თავისთვის საჭირო პროგრამირების გარემოს და იწყებენ მის გამოყენებას, რათა განალაგონ ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების და დებაგირების საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლოს მოსწავლეები შექმნიან წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
+              description_student: კლასი ეცნობა თამაშების ლაბორატორიას, ამ თავისთვის საჭირო პროგრამირების გარემოს და იწყებს მის გამოყენებას, რათა განალაგოს ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობებისა და გამართვის საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლო კლასი შექმნის წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
+              description_teacher: მოსწავლეები ეცნობიან თამაშების ლაბორატორიას, ამ თავისთვის საჭირო პროგრამირების გარემოს და იწყებენ მის გამოყენებას, რათა განალაგონ ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების და გამართვის საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლოს მოსწავლეები შექმნიან წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
             Shapes and Randomization:
               name: Shapes and Randomization
               description_student: ''
@@ -7418,8 +7420,8 @@ ka:
               description_teacher: In this cumulative project for Chapter 1, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point.
             Velocity:
               name: სიჩქარე
-              description_student: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის შემდეგ, კლასი გაეცნობა იმ თვისებებს, რომლებიც გამოიყენებიან სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო side scroller ტიპის თამაშის შექმნას.
-              description_teacher: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის შემდეგ, მოსწავლეების გაეცნობიან იმ თვისებებს, რომლებიც გამოიყენებიან სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო side scroller ტიპის თამაშის შექმნას.
+              description_student: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის შემდეგ კლასი გაეცნობა იმ თვისებებს, რომლებიც გამოიყენება სიჩქარისა და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო side scroller ტიპის თამაშის შექმნას.
+              description_teacher: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის შემდეგ, მოსწავლეების გაეცნობიან იმ თვისებებს, რომლებიც გამოიყენება სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო side scroller ტიპის თამაშის შექმნას.
             Collision Detection:
               name: შეჯახების აღმოჩენა
               description_student: The class learns about collision detection on the computer.  Pairs explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  The class then uses the isTouching() block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
@@ -7459,11 +7461,11 @@ ka:
           description_audience: ''
           stages:
             Exploring Websites:
-              name: ვებსაიტების გამოკვლევა
+              name: ვებ-საიტების გამოკვლევა
               description_student: This lesson covers the purposes that a website might serve, both for the users and the creators. The class explores a handful of the most-used websites in the United States and discusses how each of those sites is useful for users and how it might also serve its creators.
-              description_teacher: ყოველ ვებსაიტს აქვს დანიშნულება, მიზანი რომლისთვისაც ის ვიღაცამ შექმნა და ვიღაცა იყენებს. ამ გაკვეთილში, მოსწავლეები დაიწყებენ საიტის შესაძლო დანიშნულებების გათვალისწინებას, როგორც მომხმარებლების, ასევე შემქნელების მხრიდან. მოსწავლეები გამოიკვლევენ რამდენიმე ამერიკის შეერთებულ შტატებში ყველაზე მეტად გამოყენებად ვებსაიტს და ეცდებიან გაიგონ თუ რა მხრივ არიან ისინი გამოყენებადი მომხარებლებისთვის და როგორ შეიძლება ემსახურონ თავიანთ შექმნელებს.
+              description_teacher: ყოველ ვებ-საიტს აქვს დანიშნულება, მიზანი რომლისთვისაც ის ვიღაცამ შექმნა და ვიღაცა იყენებს. ამ გაკვეთილში მოსწავლეები დაიწყებენ საიტის შესაძლო დანიშნულებების გათვალისწინებას, როგორც მომხმარებლების, ასევე შემქნელების მხრიდან. მოსწავლეები გამოიკვლევენ ამერიკის შეერთებულ შტატებში რამდენიმე ყველაზე მეტად გამოყენებად ვებ-საიტს და ეცდებიან, გაიგონ თუ რა მხრივ არიან ისინი გამოყენებადი მომხარებლებისთვის და როგორ შეიძლება ემსახურონ თავიანთ შექმნელებს.
             'Websites for Expression ':
-              name: 'ვებსაიტები გამოხატვისათვის '
+              name: 'ვებ-საიტები გამოხატვისათვის '
               description_student: 'This lesson introduces websites as a means of personal expression.  The class first discusses different ways that people express and share their interests and ideas, then looks at a few exemplar websites made by students from a previous course. Finally everyone brainstorms and shares a list of topics and interests to include, creating a resource for developing a personal website in the rest of the unit. '
               description_teacher: In this lesson students investigate ways to use websites as a means of personal expression and develop a list of topics and interests that they would want to include on a personal website. To begin the lesson students brainstorm different ways that people express and share their interests and ideas. Students then look at a few exemplar websites made by students from a previous CS Discoveries course to identify ways they are expressing their ideas. Finally students brainstorm and share a list of topics and interests they might want to include on a personal website which they can reference for ideas as they progress through the unit.
             Intro to HTML:
@@ -7480,26 +7482,26 @@ ka:
               description_teacher: "As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \\r\n\\r\nStudents begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\\r\n\\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web."
             Lists:
               name: სიები
-              description_student: ეს დონე წარმოგვიდგენს დალაგებულ და დაულაგებელ სიებს და შესაბამის  &lt;ul&gt;, &lt;ol&gt;, და &lt;li&gt; HTML ტეგებს. კლასი ვარჯიშობს ტეგების გამოყენებაზე, შემდეგ კი უბრუნდება პირადი ვებ გვერდის პროექტს, რათა დაამატოთ ახალი HTML გვერდი, რომლებიც შეიცავს ახალ ტაგებს.
+              description_student: ეს დონე წარმოგვიდგენს დალაგებულ და დაულაგებელ სიებს და შესაბამის  &lt;ul&gt;, &lt;ol&gt;, და &lt;li&gt; HTML ტეგებს. კლასი ვარჯიშობს ტეგების გამოყენებაზე, შემდეგ კი უბრუნდება პირადი ვებ-გვერდის პროექტს, რათა დაამატოთ ახალი HTML გვერდი, რომლებიც შეიცავს ახალ ტეგებს.
               description_teacher: Students are introduced to ordered and unordered lists in HTML and work through a few levels in which they use the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags.  They then go back to their project, where they add a new HTML page.  Inside the new page, they write the HTML to display a recipe, top ten list, or any other content that uses the new tags that they have learned.
             Intellectual Property and Images:
               name: ინტელექტუალური საკუთრება და სურათები
-              description_student: ეს გაკვეთილი მოიცავს სხვების მიერ შექმნილი მედიას ( სურათების, ვიდეოს ან მუსიკის) შემქნელების უფლებების პატივიცემით გამოყენებას. Creative Commons ლიცენზირების შესწავლის შემდეგ, კლასი ისწავლის ვებ გვერდზებზე სურათების დამატებას და ამავე დროს საავტორო უფლებების სწორად მითითებას.
+              description_student: ეს გაკვეთილი მოიცავს სხვების მიერ შექმნილი მედიის ( სურათების, ვიდეოს ან მუსიკის) შემქნელების უფლებების პატივიცემით გამოყენებას. Creative Commons ლიცენზირების შესწავლის შემდეგ, კლასი ისწავლის ვებ-გვერდზებზე სურათების დამატებას და ამავე დროს საავტორო უფლებების სწორად მითითებას.
               description_teacher: "Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \\r\n\\r\nFinally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag."
             Clean Code and Debugging:
               name: Clean Code and Debugging
-              description_student: ეს დონე მოიცავს პრობლემებს, რომლებიც ხშირად იჩენენ თავს HTML ვებ გვერდების დიზაინის დროს. კლასი შეასწორებს შეცდომებს მიმდევრობითად გართულებად ვებ გვერდებში, რომლებიც Code Studio-ზე არიან განთავსებულნი. კლასი ასევე შეისწავლის კომენტარების, ცარიელი ტექსტური სივრცეების და ინდენტაციის მნიშვნელობას და პრაქტიკულობას ვებ გვერდების წაკითხვადობის გასაუმჯობესებლად.
+              description_student: ეს დონე მოიცავს პრობლემებს, რომლებიც ხშირად იჩენენ თავს HTML ვებ-გვერდების დიზაინის დროს. კლასი შეასწორებს შეცდომებს მიმდევრობითად გართულებად ვებ-გვერდებში, რომლებიც Code Studio-ზე არიან განთავსებულნი. კლასი ასევე შეისწავლის კომენტარების, თეთრი სივრცის (შორისის) და დაშორების მნიშვნელობასა და პრაქტიკულობას ვებ-გვერდების წაკითხვადობის გასაუმჯობესებლად.
               description_teacher: Students deal with common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
             Project - Multi-Page Websites:
-              name: პროექტი - მრავალგვერდიანი ვებსაიტები
-              description_student: 'ეს დონე მოიცავს ჰიპერბმულებს, რომლებიც აძლევენ საშუალებას ვებ დეველოპერებს დაუკავშირონ ერთმანეთს გვერდები ერთიან ვებსაიტის შესაქმნელად. მთლიანი საიტის ვებში გამოქვეყნებამდე, კლასი ააწყობს ერთ პროექტს ყველა წინა გვერდის ერთმანეთთან დაკავშირებით და შექმნის სანავიგაციო პანელს ყოველი გვერდისთვის.  '
+              name: პროექტი - მრავალგვერდიანი ვებ-საიტები
+              description_student: 'ეს დონე მოიცავს ჰიპერბმულებს, რომლებიც  ვებ დეველოპერებს აძლევენ საშუალებას, დაუკავშირონ ერთმანეთს გვერდები ერთიანი ვებ-საიტის შესაქმნელად. მთლიანი საიტის ვებში გამოქვეყნებამდე კლასი ააწყობს ერთ პროექტს ყველა წინა გვერდის ერთმანეთთან დაკავშირებით და შექმნის ნავიგაციის ზოლს ყოველი გვერდისთვის.  '
               description_teacher: "After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \\r\n\\r\n"
             Styling Text with CSS:
-              name: ტექსტის გასტილვა CSS-ით
-              description_student: ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე. საბოლოოდ, ყველა გამოიყენებს ტექსტურ სტილებს საკუთარ პირად ვებსაიტებზე.
-              description_teacher: "ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე. ისინი იმუშავებენ HTML გვერდზე, რომელიც გვიამბობს გინესის რეკორდების მფლობელებზე, კერძოდ კი დაამატებენ მოწოდებულ გვერდს თავის სტილებს. ბოლო დონეზე, მოსწავლეები გამოიყენებენ ახალ ინფორმაციას საკუთარ პირად ვებ გვერდზე ტექსტური ელემენტების სტილების განსასაზღვრად."
+              name: ტექსტის სტილის მორგება CSS-ით
+              description_student: ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტურ ელემენტებზე. საბოლოოდ, ყველა გამოიყენებს ტექსტურ სტილებს საკუთარ პირად ვებ-საიტზე.
+              description_teacher: "ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების სტილის მორგების გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე. ისინი იმუშავებენ HTML გვერდზე, რომელიც გვიამბობს გინესის რეკორდების მფლობელებზე, კერძოდ კი დაამატებენ მოწოდებულ გვერდს თავის სტილებს. ბოლო დონეზე მოსწავლეები გამოიყენებენ ახალ ინფორმაციას საკუთარ პირად ვებ-გვერდზე ტექსტური ელემენტების სტილების განსასაზღვრად.\\r\n\\r\n"
             Styling Elements with CSS:
-              name: ელემენტების გასტილვა CSS-ით
+              name: ელემენტების სტილის მორგება CSS-ით
               description_student: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. The class begins by investigating and modifying the new CSS styles on a Desserts of the World page. Afterwards, everyone applies this new knowledge to their personal websites.
               description_teacher: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to do more styling of their personal websites.
             Sources and Search Engines:
@@ -7511,18 +7513,18 @@ ka:
               description_student: This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then use them to style their personal websites.
               description_teacher: In this lesson, students first learn how to specify custom colors using their RGB (red, green, blue) values.  They then apply these colors to a new Four Seasons web page, which uses CSS classes.  CSS classes allow web developers to treat groups of elements they want styled differently than other elements of the same type. Using classes, students add more styles to the Four Seasons web page, then use them to style their personal websites.
             Project - Personal Portfolio Website:
-              name: პროექტი - პირადი პორტფოლიოს ვებსაიტი
+              name: პროექტი - პირადი პორტფოლიოს ვებ-საიტი
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
         coursea-2018:
           title: Course A (2018)
           assignment_family_title: კურსი A
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა არ იცის.
           description_audience: 'ასაკი: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: შეუჩმნეველი ბაგები
+              name: შეუჩმნეველი შეცდომები
               description_student: ''
               description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
@@ -7536,11 +7538,11 @@ ka:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
-              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
             'Programming: Happy Maps':
               name: ბედნიერი რუკები
               description_student: ''
-              description_teacher: ხიდი, რომელიც აკავშირებს ალგორითმებს და პროგრამირებას შეიძლება იყო მოკლე, თუ მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს მიიღონ გამოცდილება ფსევდოკოდის წაკითხვასა და დაწერაში.
+              description_teacher: ალგორითმებიდან და პროგრამირებამდე მოკლე გზაა, თუ მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს, მიიღონ გამოცდილება ფსევდოკოდის წაკითხვასა და დაწერაში.
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
               description_student: ''
@@ -7556,19 +7558,19 @@ ka:
             Loops in Collector:
               name: ციკლები შემგროვებელში
               description_student: ''
-              description_teacher: განმეორებადი ინსტრუქციების შესახებ, "ბედნიერი ციკლებიდან" მიღებული ცოდნის საფუძველზე, ამ ეტაპზე მოსწავლეები ციკლებს Code.org-ზე განძეულობის უფრო ეფექტურად შესაგროვებლად გამოიყენებენ.
+              description_teacher: განმეორებადი ინსტრუქციების შესახებ "ბედნიერი ციკლებიდან" მიღებული ცოდნის საფუძველზე, ამ ეტაპზე მოსწავლეები ციკლებს Code.org-ზე განძის უფრო ეფექტურად შესაგროვებლად გამოიყენებენ.
             Loops in Artist:
               name: ციკლები მხატვარში
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: დიდი მოვლენა
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
               name: მოვლენები სათამაშო ლაბორატორიაში
               description_student: ''
-              description_teacher: ამ ონლაინ აქტივობაში, მოსწავლეებს ექნებათ საშუალება შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
+              description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება, შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
             Programming in Bee:
               name: Programming in Bee
             Programming in Harvester:
@@ -7582,7 +7584,7 @@ ka:
         express-2018:
           title: დაჩქარებული კურსი
           assignment_family_title: დაჩქარებული კურსი
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
           description_audience: 'ასაკი: 9-18'
           stages:
@@ -7599,7 +7601,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Debugging in Collector:
-              name: დებაგირება შემგროვებელში
+              name: გამართვა შემგროვებელში
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
@@ -7733,11 +7735,11 @@ ka:
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Debugging in Maze:
-              name: დებაგირება ლაბირინთში
+              name: გამართვა ლაბირინთში
             Programming in Collector:
-              name: პროგრამირება შემგროვებელში
+              name: განძის შეგროვება ლორელთან ერთად
             Programming in Artist:
-              name: პროგრამირება მსახიობში
+              name: კოდის მეშვეობით ხელოვნების შექმნა
             'Loops: Getting Loopy':
               name: ჩაციკლვა
             Loops with Rey and BB-8:
@@ -7749,17 +7751,17 @@ ka:
             Nested Loops in Bee:
               name: ჩადგმული ციკლები ფუტკარში
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Nested Loops with Anna and Elsa
             Conditionals with Cards:
               name: პირობები ბარათებით
             Conditionals & Loops in Harvester:
-              name: პირობითი წინადადებები და ციკლები ფერმერში
+              name: მოსავლის აღება პირობითი წინადადებებით
             'Functions: Songwriting':
               name: სიმღერის დაწერა პარამეტრების გამოყენებით
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with the Harvester
             Functions in Artist:
               name: ფუნქციები მხატვარში
             Screen Out the Mean:
@@ -7801,7 +7803,7 @@ ka:
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: კურსი B
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'ასაკი: 5-8'
           stages:
@@ -7826,7 +7828,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Programming: My Robotic Friends':
-              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: 'პროგრამირება: ჩემი რობოტი მეგობრები.'
               description_student: ''
               description_teacher: ''
             Programming in Maze:
@@ -7838,7 +7840,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები.'
               description_student: ''
               description_teacher: ''
             Loops in Collector:
@@ -7846,11 +7848,11 @@ ka:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: ციკლები მხატვარში
+              name: ეზოების ხატვა ციკლებით
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: დიდი მოვლენა
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -7887,7 +7889,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Debugging in Collector:
-              name: დებაგირება შემგროვებელში
+              name: გამართვა ლორელთან ერთად
               description_student: ''
               description_teacher: ''
             Events in Bounce:
@@ -7903,7 +7905,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
-              name: ჩადგმული ციკლები მხატვარში
+              name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
@@ -7931,7 +7933,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Build a Play Lab Game:
-              name: შექმენით სათამაშო ლაბორატორიის თამაში
+              name: ნინძები და პირატები - თამაში
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
@@ -7951,7 +7953,7 @@ ka:
             Conditionals in Maze:
               name: Conditionals in Maze
             Conditionals & Loops in Harvester:
-              name: პირობითი წინადადებები და ციკლები ფერმერში
+              name: მოსავლის აღება პირობითი წინადადებებით
             Graph Paper Programming:
               name: გრაფიკული პროგრამირება
             Relay Programming:
@@ -8061,7 +8063,7 @@ ka:
         coursec-2018:
           title: Course C (2018)
           assignment_family_title: კურსი C
-          description: შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ სხვადასხვა პრობლემის გადაჭრის ტექნიკა და ისწავლეთ თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ.
+          description: შექმენით პროგრამები ციკლებით, მოვლენებით და პირობითი წინადადებებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'ასაკი: 6-10'
           stages:
@@ -8074,7 +8076,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
-              name: დებაგირება ლაბირინთში
+              name: გამართვა ლაბირინთში
               description_student: ''
               description_teacher: ''
             'Real-life Algorithms: Paper Planes':
@@ -8082,11 +8084,11 @@ ka:
               description_student: ''
               description_teacher: ''
             Programming in Collector:
-              name: პროგრამირება შემგროვებელში
+              name: განძის შეგროვება ლორელთან ერთად
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: პროგრამირება მსახიობში
+              name: კოდის მეშვეობით ხელოვნების შექმნა
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
@@ -8249,15 +8251,15 @@ ka:
               description_student: ''
               description_teacher: ''
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: პროგრამირება მსახიობში
+              name: კოდის მეშვეობით ხელოვნების შექმნა
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები'
               description_student: ''
               description_teacher: ''
             Loops in Artist:
@@ -8294,7 +8296,7 @@ ka:
             Build a Star Wars Game:
               name: ააწყვეთ ვარსკვლავური ომების თამაში
               description_student: შეიგრძენით ძალა, როდესაც შექმნით თქვენს საკუთარ ვარსკვლავური ომების თამაშს ამ გაკვეთილში.
-              description_teacher: ამ გაკვეთილში მოსწავლეები ივარჯიშებენ მოვლენების გამოყენებაზე. მოვლენების საშუალებით ისინი შეძლებენ ისეთი თამაშის აწყობას, რომელსაც შემდგომში გაუზიარებენ სხვებს ონლაინში. R2-D2 და სხვა ვარსკვლავური ომების პერსონაჟებთან ერთად, მოსწავლეებს შეასწავლიან მოვლენების მთავარ პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება შექმნან საკუთარი თამაში.
+              description_teacher: ამ გაკვეთილში მოსწავლეები ივარჯიშებენ მოვლენების გამოყენებაზე. მოვლენების საშუალებით ისინი შეძლებენ ისეთი თამაშის აწყობას, რომელსაც შემდგომში გაუზიარებენ სხვებს ონლაინ. R2-D2 და სხვა ვარსკვლავური ომების პერსონაჟებთან ერთად, მოსწავლეები შეისწავლიან მოვლენების მთავარ პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება, შექმნან საკუთარი თამაში.
             'Functions: Songwriting':
               name: სიმღერის დაწერა პარამეტრების გამოყენებით
               description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები. ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების გამოყენებით.
@@ -8302,7 +8304,7 @@ ka:
             Functions in Artist:
               name: ფუნქციები მხატვარში
               description_student: Make complex drawings more easily with functions!
-              description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე. ფუნქციების საშუალებით, "მხატვრის" პროგრამაში შეიქმნება და შესწორდება არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან ფუნქციების ჩადგმის პრინციპებს ( ერთი ფუნქციიდან მეორის გამოძახებას).
+              description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე. ფუნქციების საშუალებით "მხატვრის" პროგრამაში შეიქმნება და შესწორდება არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან ფუნქციების ჩადგმის პრინციპებს (ერთი ფუნქციიდან მეორის გამოძახებას).
             Functions in Bee:
               name: ფუნქციები ფუტკარში
               description_student: Don't write too much code to gather all of the nectar and honey. Use functions instead!
@@ -8325,11 +8327,11 @@ ka:
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \n\nIn the explore stage, students will be able to view pre-built examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
             The Design Process:
               name: დიზაინის პროცესი
-              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ გრძელ დაგეგმარებას. აქ, თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ, რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
+              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ გრძელ დაგეგმარებას. აქ თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ, რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: ააწყვეთ თქვენი პროექტი
-              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა დაიწყოთ თქვენი პროექტის აწყობა.
+              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ თქვენი პროექტის აწყობა.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Present Your Project:
               name: წარმოადგინეთ თქვენი პროექტი
@@ -8342,7 +8344,7 @@ ka:
             Crowdsourcing:
               name: ქრაუდსორსინგი
               description_student: ეს გაკვეთილი შეგასწავლით მოხალისეების სამუშაო პროცესში ჩართვის შესახებ, ანუ გუნდთთან ერთად პროექტზე მუშაობის შესახებ.
-              description_teacher: კომპიუტერულ მეცნიერებაში, ჩვენ ვხვდებით ძალიან დიდ, გამომწვევ პრობლემებს. თითქმის შეუძლებელია ერთმა ადამიანმა ხელსაწყოების გარეშე იპოვოს ძალიან დიდი მარტივი რიცხვი ან გამოითვალოს დნმ-ის მიმდევრობები. სხვა ადამიანების დახმარება რეალურს ხდის ამ დავალებების შესრულებას. ეს გაკვეთილი აჩვენებს მოსწავლეებს, თუ როგორი გამოსადეგარი შეიძლება იყოს ჯგუფური მუშაობა ისეთ სფეროში, როგორიცაა კომპიუტერული მეცნიერება.
+              description_teacher: კომპიუტერულ მეცნიერებაში ჩვენ ვხვდებით ძალიან დიდ, გამომწვევ პრობლემებს. თითქმის შეუძლებელია, ერთმა ადამიანმა ხელსაწყოების გარეშე იპოვოს ძალიან დიდი მარტივი რიცხვი ან გამოითვალოს დნმ-ის მიმდევრობები. სხვა ადამიანების დახმარება რეალურს ხდის ამ დავალებების შესრულებას. ეს გაკვეთილი აჩვენებს მოსწავლეებს, თუ როგორი გამოსადეგი შეიძლება იყოს ჯგუფური მუშაობა ისეთ სფეროში, როგორიცაა კომპიუტერული მეცნიერება.
             Conditionals with Cards:
               name: პირობები ბარათებით
             Minecraft Hour of Code:
@@ -8377,15 +8379,15 @@ ka:
               description_student: ''
               description_teacher: ''
             Debugging with Scrat:
-              name: დებაგირება სკრეტთან ერთად
+              name: გამართვა სკრეტთან ერთად
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: პროგრამირება მსახიობში
+              name: კოდის მეშვეობით ხელოვნების შექმნა
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები'
               description_student: ''
               description_teacher: ''
             Loops in Artist:
@@ -8410,11 +8412,11 @@ ka:
               description_teacher: 'In this lesson, students will be introduced to sequences, loops, and nested loops to prepare them for more complicated concepts in the later part of the course. This "ramp up" lesson equalizes the playing field between the experts and the beginners in your class. '
             The Power of Words:
               name: სიტყვების ძალა
-              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით თუ რისი გაკეთება შეიძლება და რისი არა ონლაინში ყოფნისას.
+              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით, თუ რისი გაკეთება შეიძლება ონლაინ და რისი - არა.
               description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
             Ice Age Play Lab:
               name: გამყინვარების პერიოდი - თამაშების ლაბორატორია
-              description_student: გაიფიქრეთ თქვენს საყვარელ ვიდეო თამაშზე. არასდროს გიფიქრიათ თუ როგორაა ის გაკეთებული? ამ თავსატეხებში, თქვენ შექმნით თქვენს საკუთარ ვიდეო თამაშს თქვენს მეგობრებთან, გამყინვარების პერიოდის გმირებთან ერთად!
+              description_student: გაიხსენეთ თქვენი საყვარელი ვიდეო თამაში. არასდროს გიფიქრიათ, თუ როგორაა ის გაკეთებული? ამ თავსატეხებში თქვენ შექმნით თქვენს საკუთარ ვიდეო თამაშს თქვენს მეგობრებთან, გამყინვარების პერიოდის გმირებთან ერთად!
               description_teacher: In this lesson, students are guided through a story featuring characters from Ice Age. Students will work with events and loops to make characters move on the screen, and will get the chance to create their own game or story after the guided levels.
             Conditionals in Minecraft:
               name: პირობითი წინადადებები Minecraft-ში
@@ -8466,11 +8468,11 @@ ka:
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \n\nIn the explore stage, students will be able to view examples of projects in both Artist and Play Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in either Artist or Play Lab (this is most likely the longest stage of the project). Students will then revise their projects, after testing and extra thought. Finally, students will be able to present their finished work to their peers."
             The Design Process:
               name: დიზაინის პროცესი
-              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ გრძელ დაგეგმარებას. აქ, თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ, რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
+              description_student: ასეთი დიდი პროექტები საჭიროებენ დიდ დროს და საკმაოდ გრძელ დაგეგმარებას. აქ თქვენ შეისწავლით იმ დიზაინის პროცესის შესახებ, რომელსაც გამოიყენებთ თქვენი ქმნილების ასაწყობად.
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
               name: ააწყვეთ თქვენი პროექტი
-              description_student: საბოლოოდ თქვენ შეგიძლიათ დაიწყოთ თქვენი პროექტის აწყობა!
+              description_student: საბოლოოდ თქვენ შეგიძლიათ, დაიწყოთ თქვენი პროექტის აწყობა!
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
               name: გადახედეთ თქვენს პროექტს
@@ -8596,7 +8598,7 @@ ka:
               description_teacher: This lesson introduces the formal problem solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the aluminum boats problem from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.
             Exploring Problem Solving:
               name: Exploring Problem Solving
-              description_student: 'ამ გაკვეთილში კლასი იყენებს პრობლემის გადაწყვეტის პროცესს სამი პრობლემის გადასაწყვეტად: სიტყვის ძებნა, დაბადების დღის წვეულების დასაგეგმარებელი კრები და მოგზაურობის დაგეგმარება. ეს პრობლემები მიმდევრულად რთულდება და ცუდადაა აღწერილი, რათა ხაზი გავუსვათ იმას, თუ რამდენად არის პრობლემების გადაწყვეტის პროცესი გამოყენებადი ამ სახის პრობლემებთან მუშაობისას.'
+              description_student: 'ამ გაკვეთილში კლასი იყენებს პრობლემის გადაწყვეტის პროცესს სამი პრობლემის გადასაწყვეტად: სიტყვის ძებნა, დაბადების დღის წვეულებაზე სკამების დაგეგმარება და მოგზაურობის დაგეგმვა. ეს პრობლემები მიმდევრულად რთულდება და ცუდადაა აღწერილი, რათა ხაზი გავუსვათ იმას, თუ რამდენად გვეხმარება პრობლემების გადაწყვეტის პროცესიამ სახის პრობლემებთან მუშაობისას.'
               description_teacher: "In this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and plan a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\\r\n\\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day."
             What is a Computer?:
               name: რა არის კომპიუტერი?
@@ -8608,7 +8610,7 @@ ka:
               description_teacher: In this lesson students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device. Earlier in the activity students are prompted to focus on more obvious physical inputs and outputs (e.g. a keyboard as an input or a screen as an output) but later discussions lead students to consider less obvious examples (e.g. that a touch screen is both an input and output, or the fact that the Internet can serve as both input and output). Throughout the lesson the teacher records inputs and outputs that are identified on a T-Chart at the front of the room. To conclude the lesson students examine common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
             Processing:
               name: დამუშავება
-              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to puta deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
+              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to put a deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities to explore the meaning of processing and its relationship to problem-solving. The first activity has few constraints and is used to introduce a high-level definition of processing. The next introduces more constraints that force students to develop an algorithm that will always successfully process the cards. Students iteratively develop, test, and share their algorithms with classmates. A wrap-up discussion has students reflect on the different types of problem-solving they used in these activities and the value of producing an algorithm to solve a problem.
             Storage:
               name: საცავი
@@ -8755,7 +8757,7 @@ ka:
               description_student: Students begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor.  They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend.  They are then introduced to cross tabulation, which allows them to graph relationships to different preferences.  They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.
               description_teacher: Students begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor.  They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend.  They are then introduced to cross tabulation, which allows them to graph relationships to different preferences.  They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.
             Automating Data Decisions:
-              name: ავტომატური მონაცემთა გადაწყვეტილებები
+              name: მონაცემთა გადაწყვეტილებების ავტომატიზირება
               description_student: In this lesson students look at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that could suggest a vacation spot.  Students then create rules, or an algorithm, that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. They then use their rules on data from their classmates to test whether their rules would make the same decision that  a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.
               description_teacher: In this lesson students look at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that could suggest a vacation spot.  Students then create rules, or an algorithm, that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. They then use their rules on data from their classmates to test whether their rules would make the same decision that  a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.
             Project - Solve a Data Problem:
@@ -8825,7 +8827,7 @@ ka:
               description_student: ''
               description_teacher: ''
             Creating Summary Tables:
-              name: ამჯამავი ცხრილების შექმნა
+              name: შეჯამების ცხრილების შექმნა
               description_student: ''
               description_teacher: ''
             Practice PT - Tell a Data Story:
@@ -9023,7 +9025,7 @@ ka:
               description_student: ''
               description_teacher: ''
             User Input and Strings:
-              name: მომხმარებლის მიერ შეყვანილი ინფორმაცია და რიგები
+              name: მომხმარებლის მიერ შეყვანილი ინფორმაცია და სტრინგები
               description_student: ''
               description_teacher: ''
             '"If" Statements Unplugged':
@@ -9059,7 +9061,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Building an App: Image Scroller':
-              name: 'აპლიკაციის შექმნა: სურათების სქროლერი'
+              name: 'აპლიკაციის შექმნა: სურათების ცოცია ("სქროლერი")'
               description_student: ''
               description_teacher: ''
             Unit 5 Assessment 3:
@@ -9151,7 +9153,7 @@ ka:
             Cleaning Data:
               name: მონაცემთა გასუფთავება
             Creating Summary Tables:
-              name: ამჯამავი ცხრილების შექმნა
+              name: შეჯამების ცხრილების შექმნა
             Project - Tell a Data Story:
               name: Project - Tell a Data Story
             Unit 2 Chapter 2 Assessment:
@@ -9437,12 +9439,12 @@ ka:
         pre-express-2018:
           title: Pre-reader Express (2018)
           assignment_family_title: Pre-reader Express
-          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებას შეძლებთ.
+          description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'ასაკი: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: შეუჩმნეველი ბაგები
+              name: შეუჩმნეველი შეცდომები
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
@@ -9462,7 +9464,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Programming: My Robotic Friends':
-              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: 'პროგრამირება: ჩემი რობოტი მეგობრები.'
               description_student: ''
               description_teacher: ''
             Programming in Maze:
@@ -9474,7 +9476,7 @@ ka:
               description_student: ''
               description_teacher: ''
             'Loops: My Loopy Robotic Friends':
-              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები.'
               description_student: ''
               description_teacher: ''
             Loops in Collector:
@@ -9482,11 +9484,11 @@ ka:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: ციკლები მხატვარში
+              name: ეზოების ხატვა ციკლებით
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: დიდი მოვლენა
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9504,15 +9506,15 @@ ka:
             Your Digital Footprint:
               name: თქვენი ციფრული ნაკვალევი
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: სტივი და დიდი პროექტი
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9533,3 +9535,23 @@ ka:
           description_audience: ''
           description_short: ''
           description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
+          description_audience: ''
+          description_short: ''
+          description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.

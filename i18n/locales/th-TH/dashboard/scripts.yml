@@ -32,7 +32,7 @@ th:
             'Bee: Loops':
               name: 'ผึ้ง: ลูป'
             'Bee: Sequence':
-              name: 'ผึ้ง: Sequence'
+              name: 'ผึ้ง: การจัดลำดับ'
             Building a Foundation:
               name: สร้างพื้นฐาน
             Getting Loopy:
@@ -1139,6 +1139,8 @@ th:
               name: Standalone video
             Curriculum Reference:
               name: Curriculum Reference
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -2048,7 +2050,7 @@ th:
             'Unplugged: The Design Recipe':
               name: 'Unplugged: The Design Recipe'
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 'Computer Science in Algebra: Course B'
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
           description_audience: ''
@@ -2680,7 +2682,7 @@ th:
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: เกมแล๊ป (Game Lab)
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -2895,7 +2897,7 @@ th:
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: ศิลปิน Functions
+              name: ฟังก์ชั่น ศิลปิน
             Sample Stage:
               name: Sample Stage
             The same thing with named levels:
@@ -3055,7 +3057,7 @@ th:
             Sequences & Algorithms:
               name: การจัดลำดับก่อนหลัง & อัลกอริทึม
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: บั๊กที่รอดหูรอดตาไป
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             'Events Unplugged: The Big Event':
@@ -3981,8 +3983,8 @@ th:
         minecraft:
           title: นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft
           description_audience: ''
-          description_short: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง
-          description: เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง
+          description_short: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
+          description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           stages:
             Minecraft Hour of Code Designer:
               name: นักออกแบบชั่วโมงแห่งโค้ดด้วย Minecraft
@@ -5438,11 +5440,11 @@ th:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+              description_teacher: 'บทเรียนนี้จะช่วยนักเรียนเรียนรู้ขั้นตอนของการตรวจแก้จุดบกพร่องหรือดีบั๊ก  นักเรียนจะได้เรียนรู้สิ่งที่เรียกได้ว่าเป็นคัมภีร์เกี่ยวกับ:  "สิ่งที่ได้เกิดขึ้นมาแล้ว? หรือ สิ่งที่ควรจะเกิดขึ้น? หรือ สิ่งนั้นบอกอะไรให้กับคุณได้บ้าง? "'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
+              description_teacher: "เมื่อนักเรียนเผชิญกับอุปสรรคในขณะที่กำลังตอบคำถามหรือทำงานอยู่กับโปรเจค ก็เป็นสิ่งที่ธรรมดาที่พวกเขาจะได้รับความผิดหวังและล้มเลิกความตั้งใจ  บทเรียนนี้จะแนะนำนักเรียนให้รู้ว่าอุปสรรคความยุ่งยากนั้นอาจเป็นส่วนที่สำคัญของการเรียนรู้ สำหรับเราแล้วความท้อแท้ใจนั้นถูกมองว่าเป็นขั้นตอนหนึ่งในกระบวนการสร้างสรรค์มากกว่าที่จะเป็นสัญญาณของความล้มเหลว \\r\n\\r\nบทเรียนนี้สามารถนำเสนอในชั้นได้ในหนึ่งช่วงเวลาเรียนหรือสองช่วงเวลาเรียนหากคุณมีเวลามากขึ้น ก็สามารถใช้เวลาให้เต็มที่ได้เลย"
             'Real-life Algorithms: Plant a Seed':
               name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
               description_student: ''
@@ -5450,7 +5452,7 @@ th:
             Learn to Drag and Drop:
               name: Sequencing with Drag and Drop
               description_student: ''
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์ แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
             'Programming: Happy Maps':
               name: 'Programming: Happy Maps'
               description_student: ''
@@ -5487,7 +5489,7 @@ th:
           assignment_family_title: คอร์ส A
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5522,7 +5524,7 @@ th:
           assignment_family_title: คอร์ส B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         coursec-2017:
           stages:
             Building a Foundation:
@@ -6211,7 +6213,7 @@ th:
           assignment_family_title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -6246,7 +6248,7 @@ th:
           assignment_family_title: Pre-reader Express
           description_audience: 'Ages: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -6981,7 +6983,7 @@ th:
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
               name: ชั่วโมงแห่งการโค้ดด้วย Minecraft
-          title: 'Minecraft: Hero''s Journey'
+          title: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
           description_audience: ''
           description_short: Minecraft is back with a brand new activity for Hour of Code!
           description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
@@ -7517,18 +7519,18 @@ th:
         coursea-2018:
           title: Course A (2018)
           assignment_family_title: คอร์ส A
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
-              name: Unspotted Bugs
+              name: บั๊กที่รอดหูรอดตาไป
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+              description_teacher: 'บทเรียนนี้จะช่วยนักเรียนเรียนรู้ขั้นตอนของการตรวจแก้จุดบกพร่องหรือดีบั๊ก  นักเรียนจะได้เรียนรู้สิ่งที่เรียกได้ว่าเป็นคัมภีร์เกี่ยวกับ:  "สิ่งที่ได้เกิดขึ้นมาแล้ว? หรือ สิ่งที่ควรจะเกิดขึ้น? หรือ สิ่งนั้นบอกอะไรให้กับคุณได้บ้าง? "'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie and the Big Project
               description_student: ''
-              description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
+              description_teacher: "เมื่อนักเรียนเผชิญกับอุปสรรคในขณะที่กำลังตอบคำถามหรือทำงานอยู่กับโปรเจค ก็เป็นสิ่งที่ธรรมดาที่พวกเขาจะได้รับความผิดหวังและล้มเลิกความตั้งใจ  บทเรียนนี้จะแนะนำนักเรียนให้รู้ว่าอุปสรรคความยุ่งยากนั้นอาจเป็นส่วนที่สำคัญของการเรียนรู้ สำหรับเราแล้วความท้อแท้ใจนั้นถูกมองว่าเป็นขั้นตอนหนึ่งในกระบวนการสร้างสรรค์มากกว่าที่จะเป็นสัญญาณของความล้มเหลว \\r\n\\r\nบทเรียนนี้สามารถนำเสนอในชั้นได้ในหนึ่งช่วงเวลาเรียนหรือสองช่วงเวลาเรียนหากคุณมีเวลามากขึ้น ก็สามารถใช้เวลาให้เต็มที่ได้เลย"
             'Real-life Algorithms: Plant a Seed':
               name: Plant a Seed
               description_student: ''
@@ -7536,7 +7538,7 @@ th:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์ แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
             'Programming: Happy Maps':
               name: แผนที่แห่งความสุข
               description_student: ''
@@ -7562,7 +7564,7 @@ th:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: เหตุการณ์ใหญ่
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -7582,7 +7584,7 @@ th:
         express-2018:
           title: Express Course (2018)
           assignment_family_title: Express Course
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
           stages:
@@ -7731,7 +7733,7 @@ th:
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Coding with Angry Birds
             Debugging in Maze:
               name: Debugging with Angry Birds
             Programming in Collector:
@@ -7757,9 +7759,9 @@ th:
             'Functions: Songwriting':
               name: Songwriting
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with the Harvester
             Functions in Artist:
               name: Functions in Artist
             Screen Out the Mean:
@@ -7801,7 +7803,7 @@ th:
         courseb-2018:
           title: Course B (2018)
           assignment_family_title: คอร์ส B
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
           stages:
@@ -7850,7 +7852,7 @@ th:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: เหตุการณ์ใหญ่
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -8608,7 +8610,7 @@ th:
               description_teacher: In this lesson students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device. Earlier in the activity students are prompted to focus on more obvious physical inputs and outputs (e.g. a keyboard as an input or a screen as an output) but later discussions lead students to consider less obvious examples (e.g. that a touch screen is both an input and output, or the fact that the Internet can serve as both input and output). Throughout the lesson the teacher records inputs and outputs that are identified on a T-Chart at the front of the room. To conclude the lesson students examine common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
             Processing:
               name: Processing
-              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to puta deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
+              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to put a deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities to explore the meaning of processing and its relationship to problem-solving. The first activity has few constraints and is used to introduce a high-level definition of processing. The next introduces more constraints that force students to develop an algorithm that will always successfully process the cards. Students iteratively develop, test, and share their algorithms with classmates. A wrap-up discussion has students reflect on the different types of problem-solving they used in these activities and the value of producing an algorithm to solve a problem.
             Storage:
               name: Storage
@@ -9437,12 +9439,12 @@ th:
         pre-express-2018:
           title: Pre-reader Express (2018)
           assignment_family_title: Pre-reader Express
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
-              name: Unspotted Bugs
+              name: บั๊กที่รอดหูรอดตาไป
               description_student: ''
               description_teacher: ''
             'Persistence & Frustration: Stevie and the Marbles':
@@ -9486,7 +9488,7 @@ th:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: เหตุการณ์ใหญ่
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9504,15 +9506,15 @@ th:
             Your Digital Footprint:
               name: Your Digital Footprint
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie and the Big Project
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9533,3 +9535,23 @@ th:
           description_audience: ''
           description_short: ''
           description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
+          description_audience: ''
+          description_short: ''
+          description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.

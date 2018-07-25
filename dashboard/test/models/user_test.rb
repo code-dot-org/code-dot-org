@@ -1421,14 +1421,24 @@ class UserTest < ActiveSupport::TestCase
     assert student.sponsored?
   end
 
-  test 'can_edit_password? is true for user with password' do
-    assert @student.can_edit_password?
+  test 'can_edit_password? is true for user with or without a password' do
+    student1 = create :student
+    refute_empty student1.encrypted_password
+    assert student1.can_edit_password?
+
+    student1 = create :student, encrypted_password: ''
+    assert_empty student1.encrypted_password
+    assert student1.can_edit_password?
   end
 
-  test 'can_edit_password? is false for user without password' do
-    user = create :student
-    user.update_attribute(:encrypted_password, '')
-    refute user.can_edit_password?
+  test 'can_edit_password? is false for a sponsored student' do
+    student1 = create :student_in_picture_section
+    assert student1.sponsored?
+    refute student1.can_edit_password?
+
+    student2 = create :student_in_word_section
+    assert student2.sponsored?
+    refute student2.can_edit_password?
   end
 
   test 'can_edit_password? is true for migrated student without a password' do
@@ -2571,14 +2581,17 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'assign_script does not overwrite assigned_at if pre-existing' do
+  test 'assign_script does overwrite assigned_at if pre-existing' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
       UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
     end
-    assert_does_not_create(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
-      assert_equal '2017-01-02 12:00:00 UTC', user_script.assigned_at.to_s
+
+    Timecop.travel(2018, 3, 4, 12, 0, 0) do
+      assert_does_not_create(UserScript) do
+        user_script = @student.assign_script(Script.first)
+        assert_equal Script.first.id, user_script.script_id
+        assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
+      end
     end
   end
 
@@ -2829,10 +2842,23 @@ class UserTest < ActiveSupport::TestCase
         secret_picture_path: @student.secret_picture.path,
         location: "/v2/users/#{@student.id}",
         age: @student.age,
-        sharing_disabled: false
+        sharing_disabled: false,
+        has_ever_signed_in: @student.has_ever_signed_in?
       },
       @student.summarize
     )
+  end
+
+  test 'has_ever_signed_in? is false with no current_sign_in_at' do
+    student = create :student
+    assert_nil student.current_sign_in_at
+    refute student.has_ever_signed_in?
+  end
+
+  test 'has_ever_signed_in? is true with current_sign_in_at' do
+    student = create :student, current_sign_in_at: DateTime.now.utc
+    refute_nil student.current_sign_in_at
+    assert student.has_ever_signed_in?
   end
 
   test 'under 13 students have sharing off by default' do
@@ -3310,6 +3336,44 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user, User.find_by_email_or_hashed_email(email)
   end
 
+  test 'find_by_email returns nil when no user is found' do
+    assert_nil User.find_by_email 'fake_email'
+  end
+
+  test 'find_by_email returns nil when input is blank' do
+    create :student_in_picture_section
+    assert_nil User.find_by_email nil
+    assert_nil User.find_by_email ''
+  end
+
+  test 'find_by_email locates a single-auth teacher by email' do
+    teacher = create :teacher
+    assert_equal teacher, User.find_by_email(teacher.email)
+  end
+
+  test 'find_by_email does not locate a single-auth student by email' do
+    email = 'student@example.org'
+    create :student, email: email
+    assert_nil User.find_by_email email
+  end
+
+  test 'find_by_email locates a multi-auth teacher by email' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
+    assert_equal teacher, User.find_by_email(teacher.email)
+  end
+
+  test 'find_by_email locates a multi-auth teacher by non-primary email' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
+    second_option = create :email_authentication_option, user: teacher
+    assert_equal teacher, User.find_by_email(second_option.email)
+  end
+
+  test 'find_by_email does not locate a multi-auth student by email' do
+    email = 'student@example.org'
+    create :student, :with_migrated_email_authentication_option, email: email
+    assert_nil User.find_by_email email
+  end
+
   test 'find_by_hashed_email returns nil when no user is found' do
     assert_nil User.find_by_hashed_email 'fake_hash'
   end
@@ -3372,5 +3436,35 @@ class UserTest < ActiveSupport::TestCase
         type: AuthenticationOption::CLEVER,
         id: user.uid
       )
+  end
+
+  test 'not depended_upon_for_login? for student' do
+    student = create :student
+    refute student.depended_upon_for_login?
+  end
+
+  test 'not depended_upon_for_login? for teacher with student with personal login' do
+    student = create :student, :in_email_section
+    teacher = student.sections_as_student.first.teacher
+    refute teacher.depended_upon_for_login?
+  end
+
+  test 'not depended_upon_for_login? for teacher with student that has other teachers' do
+    student = create :student, :in_picture_section
+    teacher = student.sections_as_student.first.teacher
+    student.sections_as_student << create(:section)
+
+    student.reload
+    assert_equal 2, student.sections_as_student.size
+    refute teacher.depended_upon_for_login?
+  end
+
+  test 'depended_upon_for_login? if teacher has a teacher-managed student with no other teachers' do
+    student = create :student_in_picture_section
+    teacher = student.sections_as_student.first.teacher
+    section = create :section, user: teacher
+    section.students << student
+
+    assert teacher.depended_upon_for_login?
   end
 end

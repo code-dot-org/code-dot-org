@@ -574,7 +574,6 @@ zh-CN:
         **如何做到：**您知道了怎样使用`"background-color"`（背景颜色）、`"font-size"`（字体大小）、`"text-color"`（文本颜色）、`"text"`（文本）、`playSound()`（播放声音）和`onEvent()`（当事件发生时）。用它们来设置应用程序的外观, 并在用户单击按钮时进行更改。单击 "共享" 将其发送给朋友.\r
         \r
         **让我看看：**![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)
-      AppLab Intro 4 - video onEvent_markdown_instruction: "# 使用onEvent（当事件发生时）"
       AppLab Intro 5 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\\r\n\\t<img\nsrc=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54\nAM.png\" style=\"height:150px\"> \\r\n</div>\\r\n\\r\n**目标：**将屏幕改为`\"red\"`（红色）。\\r\n\\r\n**如何做到：**拖进模块中，更改颜色, 然后点击 \"运行\" \\r\n\\r\n**让我看看：** ![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif)"
       AppLab Intro 5 - Change Text 2_markdown_instruction: "<div style=\"float:right\">\\r\n<img\nsrc=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29\nPM.png\" style=\"height:150px;\">\\r\n</div>\\r\n\\r\n** 目标: ** 使文本变大并成为蓝色\\r\n\\r\n**如何做到：** 给`\"label1\"`（标签1）一个 80的 `\"font-size\"`（字体大小） 和 `\"blue\"`（蓝色）的 `\"text-color\"`（文本颜色）\\r\n\\r\n**让我看看：**![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>"
       AppLab Intro 5 - Change Text_markdown_instruction: "<div style=\"float:right\">\\r\n\\t<img\nsrc=\"https://images.code.org/7435f9effd46381a1d7d0c9078d6db78-image-1506554154216.15.23\nPM.png\" style=\"height:150px\">\\r\n</div>\\r\n\\r\n**目标：** 使文本变大\\r\n\\r\n**如何做到：**拖进模块中, 然后给`\"label1\"`（标签1）选择更大的`\"font-size\"`（字体大小）。\\r\n\\r\n**让我看看：** ![expandable](https://images.code.org/6125888ad13353978132b19dfca8cc49-image-1505953367275.gif)"
@@ -688,12 +687,12 @@ zh-CN:
         ** 目标: ** 在这个测验App中建立三问题 。你随时可以通过复制屏幕来提出更多的问题。然后发送给朋友! \r
         \r
         **如何做到：**先运行应用程序, 然后尝试单击所有按钮以查看它的工作原理。然后, 从设计模式中, 您可以更改问题和按钮的默认文本。在代码模式下, 创建当用户单击不同的按钮时响应文本。自定义颜色或添加图像!
-      AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**目标：**在屏幕上添加第二个按钮，说\"对\"！\\r\\r\n** 如何: ** 在设计模式中拖进新按钮。定位并调整其大小。然后设置其 `\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）\\r\n\\r\n** 让我看看: ** "
+      AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**目标：**在屏幕上添加第二个按钮，说\"右边\"！\\r\\r\n** 如何: ** 在设计模式中拖进新按钮。定位并调整其大小。然后设置其 `\"text\"`（文本）、`\"background-color\"`（背景颜色）和`\"font-size\"`（字体大小）\\r\n\\r\n** 让我看看: ** "
       AppLab Intro 6 - thisOrThatAddButton_markdown_instruction: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png" style="float:right;height:200px">\r
         \r
-        ** 目标: ** 在屏幕上添加第二个按钮，说："对“！\r
+        ** 目标: ** 在屏幕上添加第二个按钮，说："右边“！\r
         \r
         **如何做到：**在设计模式中拖进新按钮。定位并调整其大小。然后设置其`"text"`（文本）、`"background-color"`（背景颜色）和`"font-size"`（字体大小）\r
         \r 
@@ -770,7 +769,7 @@ zh-CN:
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png" style="float:right;height:200px">\r
         \r
-        ** 目标: ** 在屏幕上添加第二个按钮，说："对“！将其`"id"`标识设置为`"rightButton"`（"对"按钮）\r
+        ** 目标: ** 在屏幕上添加第二个按钮，说："右边“！将其`"id"`标识设置为`"rightButton"`（"右边"按钮）\r
         \r
         **如何做到：**
         在设计模式中拖进新按钮。定位并调整其大小。然后设置其`"text"`（文本）、`"background-color"`（背景颜色）和`"font-size"`（字体大小）。\r
@@ -1747,10 +1746,10 @@ zh-CN:
         <div style="font-size: 16px">
         <br />
         <details><summary>**Where can I see the whole range of color types?**</summary>
-        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp">W3Schools - HTML Color Picker</a></details>
+        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_new">W3Schools - HTML Color Picker</a></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -2623,23 +2622,23 @@ zh-CN:
         </details>
         <details>
         <summary>**What does the `color` property do?**</summary>
-        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp"> W3Schools - CSS color Property</a>
+        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>
         </details>
         <details>
         <summary>**What does the `text-align` property do?**</summary>
-        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**What does the `text-decoration` property do?**</summary>
-        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**What does the `font-family` property do?**</summary>
-        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3chools - CSS font-family Property</a>
+        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
         </details>
         <details>
         <summary>**What does the `font-size` property do?**</summary>
-        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size Property</a>
+        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
         </details>
         <details>
         <summary>**What is a stylesheet?**</summary>
@@ -2815,15 +2814,15 @@ zh-CN:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2873,7 +2872,7 @@ zh-CN:
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -3018,7 +3017,7 @@ zh-CN:
         \r
         在下一关中，你会更改并添加这个页面中的新样式。
       CSD U2 layout style width_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
-      CSD U2 layout style width_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
+      CSD U2 layout style width_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\" target=\"_new\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\" target=\"_new\">W3Schools - CSS height Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
       CSD U2 link demo_markdown_instruction: |-
         # 制作多个网页的网站\r
         \r
@@ -6446,9 +6445,9 @@ zh-CN:
       CSD U3 Mouse Input Bee 2_markdown_instruction: "# 随机围绕某点\\r\n\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\r\n\\r\n现在你能让蜜蜂跟随鼠标了，让我们像右边的图一样，让蜜蜂在鼠标周围飞行。要做到这样，你需要**增加一个-50到50的随机数到`mouseX`或`mouseY`上**。\\r\n\\r\n# 这样做\\r\n你已经有了一个跟随鼠标的蜜蜂精灵了。\\r\n\\r\n* 更新x和y的位置，让它随机的靠近鼠标。\\r\n\\t* 添加一个-50到50的随机数到`World.mouseX`和`World.mouseY`。\\r\n* 如果需要的话，可以用`World.frameRate`模块来减缓动画，找到最佳帧率。\\r\n\\r\n_挑战\n再**增加3只蜜蜂**以同样的方法来跟随鼠标，从而形成蜂群。_"
       CSD U3 Mouse Input Bee 2_2018_markdown_instruction: "# 随机围绕某点\\r\n\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\r\n\\r\n现在你能让蜜蜂跟随鼠标了，让我们像右边的图一样，让蜜蜂在鼠标周围飞行。要做到这样，你需要**增加一个-50到50的随机数到`mouseX`或`mouseY`上**。\\r\n\\r\n# 这样做\\r\n你已经有了一个跟随鼠标的蜜蜂精灵了。\\r\n\\r\n* 更新x和y的位置，让它随机的靠近鼠标。\\r\n\\t* 添加一个-50到50的随机数到`World.mouseX`和`World.mouseY`。\\r\n* 如果需要的话，可以用`World.frameRate`模块来减缓动画，找到最佳帧率。\\r\n\\r\n_挑战\n再**增加3只蜜蜂**以同样的方法来跟随鼠标，从而形成蜂群。_"
       CSD U3 Movement Fish challenge_2018_markdown_instruction: |-
-        # More fish!
+        # 更多鱻!
         
-        This time, try updating the the rotation of each fish as it moves to make it look even more like it is swimming.  You can also try adding extra features, such as bubbles that rise up through the water.
+        调整鱼在游动时的旋转，让它看起来更像是在游动而不是平移。你还可以通过加入新特性（比如鱼缸中上升的泡泡）来让这个场景更逼真。
       CSD U3 Movement Fish_markdown_instruction: |-
         <img src="https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif"
         style="float: right; margin-left: 20px;">\r
@@ -7233,6 +7232,7 @@ zh-CN:
         \r
         程序应该已经创建了两个新精灵，一个在屏幕左边，另一个在右边。但是它只画出了一个。**你不需要增加任何代码**，仅通过重新排列代码来让两个精灵都像右边的图片一样显示出来。
       CSD U3 Sprites intro sprites_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
+      CSD U3 Sprites intro sprites_2018 - Validation Test_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
       CSD U3 Sprites intro sprites_2018_markdown_instruction: "# Sprites\n\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\n\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\n\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\n\n# Do This\n\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\n\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\n\\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\n* Add `drawSprites()` under the comment `Drawing`.\n* **Run the code** to draw your first sprite on the screen.\n\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._"
       CSD U3 Sprites make template_markdown_instruction: |-
         # Make Your Own Sprite
@@ -20100,7 +20100,7 @@ zh-CN:
         
       Dance Party 1-validated_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Dance Party 1_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
-      Dance Party 2 Validated_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move side-to-side. Can you change the behavior inside the `begins` block to make her start spinning around?
+      Dance Party 2 Validated_markdown_instruction: 这个外星人对自己在火星上的舞技非常自信，但现在她只能左右移动了。你能在 ‘开始’ 模块中改变行为让她可以旋转吗？
       Dance Party 2_markdown_instruction: "这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。 \n\n你能在<xml><block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"sprite_variables_get\">\n<title name=\"VAR\">alien1</title>\n</block>\n</value>\n</block></xml>中改变行为，让它可以旋转吗？  "
       Dance Party 3 - Validated_markdown_instruction: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。  "
       Dance Party 3_markdown_instruction: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。  "
@@ -20296,7 +20296,7 @@ zh-CN:
         * Try: Implement your improvements to your personal website.
         * Reflect: Get feedback from a classmate and decide what of that feedback to act on.
         
-        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/">website </a>.*)
+        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/" target="_new">website </a>.*)
       Final Room Escape App_markdown_instruction: "# 你做到了！\\r\n\\r\n你制作了一个密室逃脱游戏！现在是时候定制它了。 \\r\n\\r\n考虑一下：\\r\n\\r\n*\n给房间添加更多样式\\r\n* 添加更多能够交互的物品\\r\n* 让密码是随机的\\r\n* 添加更多的房间"
       Finalize Your Chaser Game v.1_markdown_instruction: |+
         # Add an Image and Make a Chaser Game!
@@ -20438,7 +20438,7 @@ zh-CN:
         * Use the dragger to resize your preview area to see how your website adapts.
         * Shrink the size of the instructions area to resize how tall the web page is
       Harvesting_markdown_instruction: "哦，不，我的地图丢了，我不记得我中了什么了！每一个新芽都有可能长成**玉米** ![玉米的图片](https://images.code.org/cac3133c40781553a70066a67298b2b5-image-1472493202556.png)\n, **豆子** ![豆子的图片](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)\n, 或者**南瓜** ![南瓜的图片](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)。你能写一些代码来捡起所有的庄稼吗？不管他们是什么。"
-      HoCAB_labyrinth1_markdown_instruction: "Use the blocks to solve this maze!\n\n<xml><block type=\"simple_move_down\"/></xml><xml><block type=\"simple_move_up\"/></xml><xml><block type=\"simple_move_right\"/></xml><xml><block type=\"simple_move_left\"/></xml>   \n\n---"
+      HoCAB_labyrinth1_markdown_instruction: "用这些模块通过迷宫！\n\n<xml><block type=\"simple_move_down\"/></xml><xml><block type=\"simple_move_up\"/></xml><xml><block type=\"simple_move_right\"/></xml><xml><block type=\"simple_move_left\"/></xml>   \n\n---"
       'How to: Setup your Class Data Tracker_markdown_instruction': "## Setting up your copy of the Class Data Tracker\n\nThe second chapter of unit 2 dives into data collection, analysis, and visualization. Starting in lesson 7 you will set up and use a class data tracker, which students will fill out each day until lesson 13, when they start cleaning the data they've been collecting.\n\nLesson 7 includes the following detailed guide that walks you through setting up your shared data tracker from the template provided in the curriculum. Feel free to check out this instructions and setup your tracker now! "
       'How to: Use Google Trends_markdown_instruction': "## How to Use Google Trends\n\nIn lesson 8, students will use Google Trends as a tool to visualize the relationship between historical google search data. If you're not familiar with Google Trends, check out the following How-to guide that details how to explore trends using the tool! "
       If and If-Else part 1_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
@@ -20641,6 +20641,7 @@ zh-CN:
       Luigi's Pizza 3_markdown_instruction: That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the _else_ clause so that we charge them a premium for toppings that we don't normally offer? Let's charge $10,000 for a topping we don't carry.
       Luigi's Pizza 4_markdown_instruction: "Free Play: What can you do to make Luigi's cost function even more useful? Try one (or more) of the following:  \n\n- Create a new function to display an image of the chosen pizza\n- Create a function that allows for ordering multiple pizzas (the same, or with different toppings)\n- Create a function that allows you to add a coupon code for a 30% discount"
       MC Agent Freeplay_markdown_instruction: "**自由游戏时间：** 现在得靠您自己了！使用代理人的代码帮助您探索这个世界。"
+      MC HOC 2016 SCORE LEVEL_markdown_instruction: "Some games let you keep score. Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n    <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself a point when you tag them.  \n  \n  Reach five points to win!"
       MC_2017_Ryan_02_markdown_instruction: "使用循环可以让这样的代码变得更短！\\r\n\\r\n使用`重复`循环来帮助代理前进，让他到达压力板。"
       MC_HOC_2017 Agent Test_markdown_instruction: "点击“运行”并使用**方向键**移动玩家。 \\r\n\\r\n为了通关，您需要抵达门边上并打开它（使用**空格键**），这样您就可以抵达内部的橙色方形区域。"
       MC_HOC_2017_01_markdown_instruction: "点击“运行”并使用**方向键**移动玩家。 \\r\n\\r\n为了通关，您需要抵达门边上并打开它（使用**空格键**），这样您就可以抵达内部的橙色方形区域。"
@@ -27592,18 +27593,21 @@ zh-CN:
       Video. Introduction to Conditionals - Part 2_markdown_instruction: "### Points to pay attention to:\n\n* **NOTE:** Stop play at 1:37.  \n    It's all you need for the exercises that follow.  You'll watch the remainder of the video after that.\n\n* An IF statement can have an else clause, but an ELSE clause cannot exist on its own.\n* With an else clause you are *guaranteeing* that one of two portions of code will run.\n\n"
       Vigenere_markdown_instruction: "# Encrypt and decrypt a message with the Vigenère cipher\n\nThis is an interactive version of the Vigenère cipher that animates the encryption and decryption as it’s happening, given a piece of text to encrypt or decrypt and the key.\n\n# Do this\n### Encrypt a message\nClick Step several times, and trace what’s happening. Pay attention to:\n\n- How the ciphertext is being produced\n- What happens when you get to the last character of the key\n- After you’ve stepped through a few characters click Play to watch the rest animate\n- Hit Restart and play the animation again. You can use the speed slider to speed it up or slow it down  \n\n![](https://images.code.org/06858f88ac12997bba73f4f76638a068-image-1443574425185.gif)\n\n### Decrypt a message\nEncrypt a message as above, then:  \n\n- Highlight and copy the ciphertext\n- Paste it into the plaintext area. Note: Don’t change the key\n- Change the Encrypt/Decrypt toggle to Decrypt\n- Hit Step a few times, and then Play\n\nYou should see the original text emerge.  \n![](https://images.code.org/dc89d6c19c17adb23b6b5ff9a62c4583-image-1443574425182.gif)\n\n\nHow hard would it be to crack a message encrypted with this cipher? Does the length of the key make a difference?\n"
       Virtual Pet 1 Predict_markdown_instruction: |
-        **Make a prediction:** This is Geraldine, your new pet giraffe.
+        **做预测：**这是杰拉尔丁，你的宠物长颈鹿。
         
-        What do you think will happen if you press "▶ Run" and then click on her?
-      Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
-      Virtual Pet 1_markdown_instruction: "This is Geraldine, your new pet giraffe.  \n\nWhat do you think will happen if you press \"▶ Run\" and then click on her? \n\n---"
-      Virtual Pet 2_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \n\n---"
-      Virtual Pet 3_markdown_instruction: "We can’t have a dirty giraffe wandering around!  \n\n1)  Add a new soap sprite to the screen.  \n2)  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\n\n---\n\nTo reset the color, use this block:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
-      Virtual Pet 4_markdown_instruction: "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!\n"
-      Virtual Pet 5_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
-      Virtual Pet 6_markdown_instruction: "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  \n"
-      Virtual Pet Freeplay_markdown_instruction: "Freeplay: What more can you make your giraffe do? \n\n- Can you add more special items for your virtual pet?  \n- Can you give her some friends?  "
-      Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?"
+        你觉得在按下"▶ 运行"之后点击她会发生什么事？
+      Virtual Pet 1-validated_markdown_instruction: 这是杰拉尔丁，你的宠物长颈鹿。你觉得按下运行之后点击她会发生什么事？
+      Virtual Pet 1_markdown_instruction: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
+      Virtual Pet 2 - Validated_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
+      Virtual Pet 2_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
+      Virtual Pet 3_markdown_instruction: "我们不能让脏兮兮的长颈鹿到处走来走去!  \n\n1) 在屏幕上添加一个新的 肥皂 精灵。  \n2) 你能否使长颈鹿和肥皂接触的时候变回正常的颜色？ \n\n---\n\n要重置颜色, 请使用此模块:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
+      Virtual Pet 4_markdown_instruction: "我们不希望每次都要等着长颈鹿花时间清理它自己。  \n\n为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。\n"
+      Virtual Pet 5 - Validated_markdown_instruction: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵碰撞时，她的尺寸减小5.\n"
+      Virtual Pet 5_markdown_instruction: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵碰撞时，她的尺寸减小5.\n"
+      Virtual Pet 6_markdown_instruction: "均衡的饮食非常重要，我们需要给长颈鹿喂食好让她恢复体力。  \n\n在屏幕上添加一个苹果，并使得苹果和长颈鹿相碰时，长颈鹿变回原来的大小。\n"
+      Virtual Pet Freeplay_markdown_instruction: "自由发挥：你还能让长颈鹿做些什么？ \n\n-你能添加更多特殊组件吗？  \n-你能为她找几个朋友吗？  "
+      Virtual Pet Predict_markdown_instruction: "**做预测：**这是杰拉尔丁，你的宠物长颈鹿。你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Visual Accessibility_markdown_instruction: |-
         # Visual Accessibility: Color Contrast
         
@@ -27796,6 +27800,7 @@ zh-CN:
       allthethings level dataTables_markdown_instruction: Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_markdown_instruction: "# Drawing Rules\n\nSo what did you discover on the last level?\n\n* What do each of the 4 openings control?\n\n\\t* First Opening - controls the **location of the rectangle from left to right** - we call this the **x position**\n    * Second Opening - controls the **location of the rectangle from top to bottom** - we call this the **y position**\n    * Third Opening - controls the **width** of the rectangle\n    * Fourth Opening - controls the **height** of the rectangle\n\n* What is the size of the drawing area?\n\n\\t* Width - 400\n    * Height - 400\n\n* So where is (0,0) or x = 0 and y = 0?\n\n\\t* The **upper left corner of the grid!**\n\n# Do This\n\nWe have provided you with code for a rectangle that draws in the upper left corner when you run the program. Using your new knowledge of the workspace and the inputs for a rectangle:\n\n* **Change the width and height of the rectangle so that it fills the whole drawing area**\n* **HINT:** Remember that the rectangle block is `rect(x, y, width, height)` in that order"
       allthethings_embed_video_markdown_instruction: "Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below. \n\n<iframe width=\"637px\" height=\"375px\" src=\"https://www.youtube.com/embed/8ciagGASro0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n__Reflect on the prompts below:__ \n\n- What types of information does Siri respond to in the video?\n- What do you think Siri is paying attention to in order to create these answers?\n"
+      allthethings_fish_tank_markdown_instruction: All-the-things test level.
       allthethings_moviebot_markdown_instruction: |
         # Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
         # Introduction to the Digital Assistant
@@ -29428,7 +29433,7 @@ zh-CN:
       courseD_bee_conditionals7_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\\r\n\\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：如果有花，蜜蜂只需要采*一次*花蜜。如果有蜂窝，蜜蜂也只需要酿*一次*蜂蜜。"
       courseD_bee_conditionals7_2018_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\\r\n\\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：如果有花，蜜蜂只需要采*一次*花蜜。如果有蜂窝，蜜蜂也只需要酿*一次*蜂蜜。"
       courseD_bee_conditionals7_predict2_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\\r\n\\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。"
-      courseD_bee_conditionals7_predict2_2018_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\\r\n\\r\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。"
+      courseD_bee_conditionals7_predict2_2018_markdown_instruction: "有时，云覆盖了一朵花，有时覆盖了一个蜂窝！\n\n用`如果/否则`模块在花那里采花蜜，并在蜂窝那里酿蜂蜜。记住：每朵云那里只会有*一个*蜂窝或*一朵*花。"
       courseD_bee_conditionals8_markdown_instruction: |-
         **挑战：** 这些云下面要么有一朵花，要么有一个蜂窝！\r
         \r
@@ -30975,7 +30980,7 @@ zh-CN:
       csd-novice-tuesday-1_markdown_instruction: "# Tuesday Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
       csd-novice-wednesday-1_markdown_instruction: "# Wednesday Question 1\n\nThink back on your experience today.\n\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\n* What factors contributed to you feeling that way? \n* Did you feel supported as a teacher today? \n\\t* If yes, why?\n\\t* If no, why? What would have improved your experience?\n"
       csd-post-survey-2017-FR_markdown_instruction: 有什么别的你想说的，关于在课程中的体验吗？
-      csd-post-survey-2017-FR_2018_markdown_instruction: Please provide any other feedback you have about your experience in the course.
+      csd-post-survey-2017-FR_2018_markdown_instruction: 请提供你对本课程的反馈。
       csd-post-survey-2018-topics-liked-FR_markdown_instruction: 请提供你对本课程的反馈。
       csd-post-survey-2018-topics-want-FR_markdown_instruction: 有哪些主题是你有兴趣并打算在将来学习的？
       csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: 有什么你想让老师知道别的事情吗？
@@ -31703,6 +31708,9 @@ zh-CN:
         * What are facilitators doing?
         * What are teachers doing?
         * What strategies did you see facilitators use to keep teachers engaged?
+      farmer-test-lb_markdown_instruction: |-
+        # Making A Function
+        1. Do this thing
       feel-monday_markdown_instruction: |
         # 第1天: 感受
         
@@ -31731,6 +31739,7 @@ zh-CN:
         
         * 哪些事情促使大家有了这样的情绪？
         * 从你的视角来看，今天，引导员做了什么来处理它们或支持参与者的体验？
+      fit-dlp-example_markdown_instruction: "<br><br>\n\n# FIT Deeper Learning Example\n\nThis is where instructions for the prompt will be.\n\n> **Prompt:** Is a hotdog a sandwich?\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       frozen circle function in circle_markdown_instruction: 现在让我们创建20个交叠的圆圈，在每圆圈之间转18度。
       frozen circle function with parameter_markdown_instruction: 这里有一个“创建圆圈”的模块，可以画不同大小的圆圈。你可以用它来创建一个5像素的小圆圈和10像素的大圆圈吗?
       frozen circle function_markdown_instruction: 使用新的"创建一个圆"块来创建 10 个相互重叠的圆圈。画圈之间别忘了跳一下哦。

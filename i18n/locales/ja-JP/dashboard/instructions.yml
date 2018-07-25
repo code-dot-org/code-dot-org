@@ -406,6 +406,10 @@ ja:
       4-5 While Loops 7_instruction: 今そこに３つの土の山を見つけたわよ！地面と同じくらい平らになるまであれらの山をなくすプログラムをあなはた作れるかしら？
       4-5 While Loops 8_instruction: " かなり大きな穴１つとびっくりするほど大きな土の山が１つあります。地面と同じ高さにするために、どれくらいの数、土を運びいれ、土を取り除く必要があるでしょうか。ヒント：「以下の間繰り返し（while loop）」を両方に使ってみてください。"
       4-5 While Loops Assessment 1_instruction: たくさんの穴と土で盛り上がった所があります。平たい地面にするために土を埋めたり、取り除いたりするのを手伝ってください。
+      AB_Debug_PlayLab2_instruction: |-
+        Why doesn't this game do anything?
+        
+        Can you find any "hidden" bugs?  Some are easier than others.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'プロジェクトのアイデア: Play Labでディフェンダーゲームを作ろう！'
       Alien Defender_2018_instruction: 'プロジェクトのアイデア: Play Labでディフェンダーゲームを作ろう！'
@@ -479,6 +483,7 @@ ja:
       C3-Farmer While Loops 7_instruction: Wow, now there are three piles of dirt! Can you write a program that removes each of them until the ground is even?
       C3-Farmer While Loops 8_instruction: " There is a really deep hole and a really large pile of dirt.  How many shovelfuls of dirt need to be moved around to make the ground flat?  Hint: Use the while loop for both."
       C3-Farmer While Loops Assessment 1_instruction: There are a lot of holes and piles.  Help me to fill and remove them to make the ground flat.
+      CDEF_debugging_flappy2_instruction: Why doesn't this game work?
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
       CSD Hackathon Pt 2_instruction: "(Click to see full instructions)"
       CSD Hackathon Week 1_instruction: "(Click to see full instructions)"
@@ -513,6 +518,7 @@ ja:
       CSD U3 Simple Drawing - Background_instruction: Put all of your code into a draw() loop and then add set the background to blue with the background() block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018 - Validation Test_instruction: Do This
       CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: 'Predict: What two numbers will be displayed in the console?'
       CSD U3 Variable Arithmetic_instruction: Change the value "size" initialized to make a larger square.
@@ -2861,8 +2867,8 @@ ja:
       U4 Model Design 1_instruction: Add a large red button to your screen using Design Mode. (Click for full instructions.)
       U4 Model Design 1_2018_instruction: Add a large red button to your screen using Design Mode. (Click for full instructions.)
       U4 vigenere cipher 2_instruction: 'やり方:'
-      U4L02 - Objects - Template1_instruction: Template
-      U4L02 - Objects - Template1_2018_instruction: Template
+      U4L02 - Objects - Template1_instruction: テンプレート
+      U4L02 - Objects - Template1_2018_instruction: テンプレート
       U4L02 - Objects - createObject_instruction: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
       U4L02 - Objects - eventParameter_instruction: Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. As you play around make sure you can explain the purpose of each of the circled parts of the diagram.\n\n"
@@ -2907,14 +2913,17 @@ ja:
       Underground Mining Coal_2018_instruction: 地下は暗いけれども、貴重な資源があります。松明を2つ以上置いて、石炭を2個以上掘りましょう。
       Unicorn Tag_instruction: Take a look at this project.  Do you see how it was made?
       Valentine_artist2_01_instruction: Program the artist to draw some grass for the Love Bug.
-      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_artist_01_instruction: Help the artist finish his llama heart.
       Valentine_playlab_01_instruction: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere_instruction: Test
       Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 5 - Validated_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
@@ -3154,8 +3163,8 @@ ja:
       courseA_bee_seq14_instruction: Use three `Move North` blocks and one `Get Nectar` block.
       courseA_bee_seq2_instruction: Help the bee get the nectar!
       courseA_bee_seq3_instruction: Find the bug and fix it!
-      courseA_bee_seq4_instruction: Try it yourself!
-      courseA_bee_seq5_instruction: Try it yourself!
+      courseA_bee_seq4_instruction: 自分でやってみよう！
+      courseA_bee_seq5_instruction: 自分でやってみよう！
       courseA_bee_seq6_instruction: Now the bee needs to get nectar from two flowers!
       courseA_bee_seq7_instruction: Add two blocks to finish this puzzle!
       courseA_bee_seq8_instruction: Make sure to get nectar from every flower!
@@ -3184,7 +3193,7 @@ ja:
       courseA_collector_loops9_2018_instruction: "**Challenge:** The treasure goes all the way up these stairs!  Write the code to help Laurel get it all."
       courseA_collector_loops_challenge1_instruction: '*"Can you help me spot some bugs?"*'
       courseA_collector_loops_challenge1_2018_instruction: '*"Can you help me spot some bugs?"*'
-      courseA_collector_loops_challenge2_instruction: 'Get all of the treasure! '
+      courseA_collector_loops_challenge2_instruction: '宝を全部ゲットしよう！ '
       courseA_collector_loops_challenge2kp_instruction: Collect at least **3** pieces of treasure to pass this level.
       courseA_collector_loops_challenge2kp_2018_instruction: Collect at least **3** pieces of treasure to pass this level.
       courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \n\nPress \"Run\" to see her walk up to the treasure and grab it."
@@ -3218,8 +3227,8 @@ ja:
       courseA_harvester_seq3_instruction: Use three `Move North` blocks and one `Pick Corn` block.
       courseA_harvester_seq4_instruction: Add one block to help the harvester pick the corn.
       courseA_harvester_seq5_instruction: Find the bug and fix it!
-      courseA_harvester_seq6_instruction: Try it yourself!
-      courseA_harvester_seq7_instruction: Try it yourself!
+      courseA_harvester_seq6_instruction: 自分でやってみよう！
+      courseA_harvester_seq7_instruction: 自分でやってみよう！
       courseA_harvester_seq8_instruction: Now the harvester needs to pick corn two times!
       courseA_harvester_seq9_instruction: Add two blocks to finish this puzzle!
       courseA_maze_ramp2_2018_instruction: Snap all blocks together to finish your code, then click "Run".
@@ -3371,6 +3380,7 @@ ja:
       courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat to the acorn.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -3765,8 +3775,8 @@ ja:
       courseD_artist_binary_challenge2_instruction: Are you persistent enough to restore this logo back to normal?
       courseD_artist_binary_challenge2_2018_instruction: Are you persistent enough to restore this logo back to normal?
       courseD_artist_binary_challenge3_instruction: Are you persistent enough to restore this logo back to normal?
-      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
-      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
+      courseD_artist_embed_frozen_instruction: 雪の結晶のデザインを見るには実行を押しましょう！
+      courseD_artist_embed_frozen2_instruction: 雪の結晶のデザインを見るには実行を押しましょう。
       courseD_artist_functions10_instruction: This time, use lines of 8 hexagons with 25 pixel sides.
       courseD_artist_functions2_instruction: "This time, use the `draw a square` function to create the glasses. \n"
       courseD_artist_functions3_instruction: You can make this drawing by adding a repeat block.
@@ -4251,6 +4261,7 @@ ja:
       courseE_farmer_concept3_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: "では次のレベルに進みましょう！\n入れ子のくりかえしで、この図形を書いて下さい。\n横一列を書き終えたら、アーティストのいちをもどして、それから次の一列を書くようにします。\nこれらのブロックたちの、どれかを、くりかえしで使います。"
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will become.  Use `if` statements to write the code to check and harvest each one.   '
       courseE_farmer_functions10a1_2018_instruction: Use everything that you've learned so far to solve this puzzle!

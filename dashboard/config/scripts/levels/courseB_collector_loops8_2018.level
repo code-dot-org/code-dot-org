@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "**Challenge: ** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
+    "instructions": "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out where to put the repeat loops, write out the code step-by-step and look for a pattern.\",\"hint_id\":\"courseB_collector_loops8_challenge_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7af8d740769e2cb1246b43c6aa1daf15/courseB_collector_loops8.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "10",

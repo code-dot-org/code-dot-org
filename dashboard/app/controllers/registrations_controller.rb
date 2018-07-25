@@ -51,6 +51,39 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  #
+  # GET /users/to_destroy
+  #
+  # Returns array of users that will be destroyed if current_user is destroyed
+  #
+  def users_to_destroy
+    return head :bad_request unless current_user&.can_delete_own_account?
+    render json: get_users_to_destroy(current_user)
+  end
+
+  def destroy
+    # TODO: (madelynkasula) Remove the new_destroy_flow check when the
+    # ACCOUNT_DELETION_NEW_FLOW experiment is removed.
+    if params[:new_destroy_flow]
+      return head :bad_request unless current_user.can_delete_own_account?
+      password_required = current_user.encrypted_password.present?
+      invalid_password = !current_user.valid_password?(params[:password_confirmation])
+      if password_required && invalid_password
+        current_user.errors.add :current_password
+        render json: {
+          error: current_user.errors.as_json(full_messages: true)
+        }, status: :bad_request
+        return
+      end
+      TeacherMailer.delete_teacher_email(current_user).deliver_now if current_user.teacher?
+      destroy_dependent_users(current_user)
+      Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
+      return head :no_content
+    else
+      super
+    end
+  end
+
   def sign_up_params
     super.tap do |params|
       if params[:user_type] == "teacher"
@@ -324,5 +357,23 @@ class RegistrationsController < Devise::RegistrationsController
         :email_preference_source,
         :email_preference_form_kind,
       )
+  end
+
+  def get_users_to_destroy(user)
+    users = []
+    if user.teacher?
+      user.students.each do |student|
+        if student.depends_on_teacher_for_login?
+          users << {id: student.id, name: student.name}
+        end
+      end
+    end
+    users << {id: user.id, name: user.name}
+    users
+  end
+
+  def destroy_dependent_users(user)
+    user_ids_to_destroy = get_users_to_destroy(user).pluck(:id)
+    User.destroy(user_ids_to_destroy)
   end
 end

@@ -3,37 +3,37 @@ he:
     callouts:
       2-3 Artist 1 new_callout: { }
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: Artist doesn't have a "Step" button, but you can drag the slider left to watch your program run more carefully.
+        2-3_Artist_Debugging_1_a: אין אפשרות להזיז את האמן רק צעד אחד בכל פעם, אבל אתה יכול לגרור את המחוון שמאלה כדי שהתוכנית תרוץ לאט יותר.
       2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't know until you run the code!
+        Bee_Cond_5_1a: פרחים סגולים יכולים להכיל או 0 או 1 צופים... אבל אתה לא תדע כמה עד שלא תריץ את הקוד!
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Click and drag a "Text Area" onto the screen
-        screenSelectorCallout3: Pick the screen you made
+        dragTextAreaIn: לחץ וגרור "אזור טקסט" לתוך המסך
+        screenSelectorCallout3: בחר את המסך שיצרת
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: This is the screen selector
-        changePlace1ID: Change the id of your screen here.
+        screenSelectorCallout2: זהו בוחרן המסכים
+        changePlace1ID: שנה את הזיהוי של המסך כאן.
       AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: Click the title of your app
-        appLabIntro2_designMenu: Use these menus to change your app's "text"
-        appLabIntro2_textColor: Scroll down to change the "text color"
+        applabIntro2_1: לחץ על הכותרת של האפליקציה שלך
+        appLabIntro2_designMenu: השתמש בתפריטים אלו כדי לשנות את הטקסט של האפליקציה
+        appLabIntro2_textColor: גלול מטה כדי לשנות את "צבע הטקסט"
       AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: Click the story text on this screen
-        appLabIntro2_editStoryText: Drag out the bottom right hand corner of this text box for more space. Then fill in your story text
-        appLabIntro2_textColor: Try out some of the different properties you can change below
+        applabIntro2storyText: לחץ על טקסט הסיפור שעל המסך הזה
+        appLabIntro2_editStoryText: גרור את הפינה התחתונה של קופסת הטקסט כדי לקבל עוד מקום. אז כתוב את טקסט הסיפור שלך
+        appLabIntro2_textColor: נסה לשנות חלק מן האפשרויות הקיימות כאן למטה
       AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Drag a button onto your screen.
-        changeButtonID: Choose a clear "id" for your button. For example "callFriendButton" or "goOutsideButton"
-        screenSelectorCallout3: Go to your "startScreen"
+        designToolboxCallOut: גרור כפתור אל תוך המסך.
+        changeButtonID: בחר במזהה ברור לכפתור שלך. לדוגמא, "כפתורהתקשרלחבר" או "לךמחוץלכפתור" ("callFriendButton" or "goOutsideButton")
+        screenSelectorCallout3: גש למסך ההתחלה שלך
       AppLab Intro 2 - add more buttons 2_callout: { }
       AppLab Intro 2 - add more buttons_callout: { }
       AppLab Intro 2 - add onEvent_callout:
-        onEventFirstTime: Click and drag an "onEvent" block into the workspace to the right
+        onEventFirstTime: לחץ וגרור בלוק "onEvent" לתוך איזור העבודה בצד ימין
         setScreenFirstTime: Click and drag into the space in your "onEvent" block
       AppLab Intro 7 - Change Screen Color_callout:
         applab_hoc_finish: Did the screen turn green? If so, hit 'Finish'. If not, hit 'Reset', change your code, and hit 'Run' again.
@@ -170,6 +170,7 @@ he:
       CSD U3 Sprites intro predict_callout: { }
       CSD U3 Sprites intro predict_2018_callout: { }
       CSD U3 Sprites intro sprites_callout: { }
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: { }
       CSD U3 Sprites intro sprites_2018_callout: { }
       CSD U3 Sprites scene challenge_callout: { }
       CSD U3 Sprites scene challenge_2018_callout: { }
@@ -606,11 +607,11 @@ he:
       Function intro Ryan_callout:
         Function_intro_Ryan_1: This little instruction tells the computer to run the BIG chunk of code with the same name in the workspace.
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       Geometric Sun_2018_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Play a sound when this event occurs.
       Infinity_move_directions_callout:
@@ -741,11 +742,11 @@ he:
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
       PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't know until you run the code!
+        Bee_Cond_5_1a: פרחים סגולים יכולים להכיל או 0 או 1 צופים... אבל אתה לא תדע כמה עד שלא תריץ את הקוד!
       PS copy CSD U3 Variables Predict Where XY_callout:
         grid: Click here to show the grid.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       Play Lab Rocket 2_callout:
         pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
         play lab rocket 2: Define your rocket-height function here
@@ -762,9 +763,9 @@ he:
       Robot Doodle_2018_callout:
         4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this label to leave yourself notes inside your program!
       Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
@@ -772,9 +773,9 @@ he:
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
       SG Add Subgoals practice_callout: { }
       SG U3L08 how to add comments_callout:
         comment_highlight: Drag a comment block from here into your code
@@ -1119,13 +1120,13 @@ he:
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
       courseD_artist_ramp12_callout: { }
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_2018_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
       courseD_bee_conditionals2_test_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
         4_5_Bee_Conditionals_2_2: Need a little help?  Click here to see our new VIDEO HINTS!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
@@ -1156,7 +1157,7 @@ he:
       courseD_farmer_until_challenge2_callout: { }
       courseD_farmer_until_challenge2_2018_callout: { }
       courseD_farmer_while7_2018_callout:
-        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
+        courseD_farmer_while7_2018_PathAhead: תצטרך להשתמש בבלוק "כל עוד דרך לפניך" כדי לפתור את החידה.
       courseD_harvester_nested_loops_challenge1-broken_callout: { }
       courseD_maze_loops_challenge1_callout: { }
       courseD_maze_ramp1_callout:
@@ -1701,30 +1702,30 @@ he:
       grade2_puppy_loops2_callout:
         grade2_puppy_loops2_callout1: You only have one of these blocks available in this puzzle.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
       grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't know until you run the code!
+        Bee_Cond_5_1a: פרחים סגולים יכולים להכיל או 0 או 1 צופים... אבל אתה לא תדע כמה עד שלא תריץ את הקוד!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
       grade3_playLab_buildGame_1_callout:
         Playlab_cond_1_1: Think of this block as the computer's way of rolling a die, and you get to decide how many sides the die has.
       grade3_playLab_buildGame_2_callout:
         Playlab_cond_2_1: 'This block is your way to tell the computer to remember your value: when you use the block labeled `j`, the program will give you the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create the first square.
       grade4_artist_functions2_callout:
         grade4_artist_funcions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Click edit to add a parameter in your function
         add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_1: זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Use this drop-down to create different snowflakes!
       grade4_frozen_functions3_callout:
@@ -1756,7 +1757,7 @@ he:
         grade5_artist_for_loops1b_1: The toolbox has been changed into "category" mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: { }
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in here.
       grade5_artist_functionparameters_6_callout:

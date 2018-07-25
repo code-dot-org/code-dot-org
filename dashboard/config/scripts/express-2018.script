@@ -1,4 +1,6 @@
+hidden false
 hideable_stages true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/express/standards/"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}'
@@ -7,6 +9,7 @@ project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses bullhorn", "type"=>"bullhorn"}]
 family_name 'express'
 version_year '2018'
+is_stable true
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming_2018'

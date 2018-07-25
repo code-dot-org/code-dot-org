@@ -21,13 +21,17 @@ module Pd
     end
 
     test 'duplicate?' do
-      submission = WorkshopDailySurvey.new submission_id: FAKE_SUBMISSION_ID, **placeholder_params
+      # not a duplicate
+      create :pd_workshop_daily_survey
+
+      submission = build :pd_workshop_daily_survey, placeholder_params
       refute submission.duplicate?
 
       submission.save!
 
       # Same user, workshop, day, & form. New submission id
-      new_submission = WorkshopDailySurvey.new submission_id: FAKE_SUBMISSION_ID + 1, **placeholder_params
+      new_submission = build :pd_workshop_daily_survey, placeholder_params
+      refute submission.duplicate?
       assert new_submission.duplicate?
       refute new_submission.valid?
     end

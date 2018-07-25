@@ -24,13 +24,17 @@ module Pd
     end
 
     test 'duplicate?' do
-      submission = WorkshopFacilitatorDailySurvey.new submission_id: FAKE_SUBMISSION_ID, **placeholder_params
+      # not a duplicate
+      create :pd_workshop_facilitator_daily_survey
+
+      submission = build :pd_workshop_facilitator_daily_survey, params
       refute submission.duplicate?
 
       submission.save!
 
       # Same user, workshop, day, & form. New submission id
-      new_submission = WorkshopFacilitatorDailySurvey.new submission_id: FAKE_SUBMISSION_ID + 1, **placeholder_params
+      new_submission = build :pd_workshop_facilitator_daily_survey, params
+      refute submission.duplicate?
       assert new_submission.duplicate?
       refute new_submission.valid?
     end
@@ -48,6 +52,10 @@ module Pd
 
     def placeholder_params
       @placeholder_params ||= existence_params.merge(day: 1)
+    end
+
+    def params
+      @params ||= placeholder_params.merge(pd_workshop_id: @pd_workshop.id)
     end
   end
 end

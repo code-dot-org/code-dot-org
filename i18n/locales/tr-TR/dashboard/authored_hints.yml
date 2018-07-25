@@ -288,6 +288,7 @@ tr:
           Bu tasarım 360 derece için 6 kez dönmelidir. ** 360 / 6 =? **
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Her öğe kendi 'süresince' döngüsüne ihtiyaç duymaktadır.
+      AB_debug_Laurel1_authored_hint: { }
       AppLab Intro 3 - Change Screen Color_authored_hint: { }
       AppLab Intro 4 - Change Screen Color_authored_hint: { }
       AppLab Intro 5 - Change Screen Color_authored_hint: { }
@@ -7433,6 +7434,10 @@ tr:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Araç kutusundan her seferinde tüm kod bloğunu çekmeyi unutmayın.
         4-5_Artist_Patterns_3_b: Kodunuz çok kafa karıştırıcı hale gelirse, "Baştan Başla"'yı tıklayın ve yeniden deneyin!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: Bir yolun sonuna geldiğinizde ne yapmanız gerekir?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Her düz yolda bir çok defa kodunuzu çalıştırmak için 'tekrarla' döngüsü kullanın.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: Araç kutusu bu sefer küçük farkla düzenlendi! Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
         courseE_farmer_functions1_b: Sadece bir kabak alman gerekiyor, ama onu bir döngü kullanarak alabilir misin?

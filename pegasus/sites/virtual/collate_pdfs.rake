@@ -37,13 +37,11 @@ end
 all_output_files = []
 
 Dir.glob(pegasus_dir('sites/**/*.collate')).each do |collate_file|
-  begin
-    all_output_files << collate_to_pdf_to_fetch_file(collate_file)
-  rescue Exception => e
-    ChatClient.log "PDF generation failure for #{collate_file}"
-    ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
-    raise
-  end
+  all_output_files << collate_to_pdf_to_fetch_file(collate_file)
+rescue Exception => e
+  ChatClient.log "PDF generation failure for #{collate_file}"
+  ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+  raise
 end
 
 task default: all_output_files

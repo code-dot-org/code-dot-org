@@ -970,7 +970,7 @@ pt-BR:
             Mystery Model:
               name: Mystery Model
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
         Testing:
           title: Testando
           description: Testando
@@ -997,11 +997,11 @@ pt-BR:
             Cracking the Code:
               name: Cracking the Code
             DNS in the Real World:
-              name: DNS in the Real World
+              name: DNS no mundo Real
             Encryption Algorithms:
               name: Keys and Passwords
             HTTP and Abstraction:
-              name: HTTP and Abstraction on the Internet
+              name: HTTP e Abstração na Internet
             Invent an Addressing Protocol:
               name: Invent an Addressing Protocol
             One Way Functions - Ice Cream Vans:
@@ -1017,11 +1017,11 @@ pt-BR:
             Routers and Redundancy:
               name: Routers and Redundancy
             Tell Me a Secret - Encrypting Text:
-              name: The Need for Encryption
+              name: A Necessidade de Encriptar
             The Internet:
               name: A Internet
             The Need for Addressing:
-              name: The Need for Addressing
+              name: A Necessidade de Endereçar
             The Need for DNS:
               name: The Need for DNS
           description_audience: ''
@@ -1139,6 +1139,8 @@ pt-BR:
               name: Standalone video
             Curriculum Reference:
               name: Curriculum Reference
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1216,7 +1218,7 @@ pt-BR:
             Next Steps:
               name: Próximas etapas
             Planning:
-              name: Planning
+              name: Planejamento
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1224,21 +1226,19 @@ pt-BR:
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: Unit 1, Day 10 Telling a Story with Data
+              name: Unidade 1, Dia 10 Contando uma História com Dados
             Unit 1, Day 11-14 Data Modeling and Design:
               name: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions:
               name: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: Unit 1, Day 17-19 What Is Intelligence?
+              name: Unidade 1, Dia 17-19 O Que é Inteligência?
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unidade 1, Dias 1-2 O Que é um Computador?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
-              name: Unit 1, Days 3-4 Buying a Computer
+              name: Unidade 1, Dias 3-4 Comprando um Computador
             Unit 1, Days 5-7 Searching and Web 2:
               name: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
@@ -1364,21 +1364,19 @@ pt-BR:
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: Unit 1, Day 10 Telling a Story with Data
+              name: Unidade 1, Dia 10 Contando uma História com Dados
             Unit 1, Day 11-14 Data Modeling and Design:
               name: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions:
               name: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: Unit 1, Day 17-19 What Is Intelligence?
+              name: Unidade 1, Dia 17-19 O Que é Inteligência?
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unidade 1, Dias 1-2 O Que é um Computador?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
-              name: Unit 1, Days 3-4 Buying a Computer
+              name: Unidade 1, Dias 3-4 Comprando um Computador
             Unit 1, Days 5-7 Searching and Web 2:
               name: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
@@ -1393,21 +1391,19 @@ pt-BR:
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: Unit 1, Day 10 Telling a Story with Data
+              name: Unidade 1, Dia 10 Contando uma História com Dados
             Unit 1, Day 11-14 Data Modeling and Design:
               name: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions:
               name: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: Unit 1, Day 17-19 What Is Intelligence?
+              name: Unidade 1, Dia 17-19 O Que é Inteligência?
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unidade 1, Dias 1-2 O Que é um Computador?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
-              name: Unit 1, Days 3-4 Buying a Computer
+              name: Unidade 1, Dias 3-4 Comprando um Computador
             Unit 1, Days 5-7 Searching and Web 2:
               name: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
@@ -1509,7 +1505,7 @@ pt-BR:
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
@@ -1535,7 +1531,7 @@ pt-BR:
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 2 Challenge:
-              name: Unit 2 Challenge
+              name: Unidade 2 Desafio
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description: Academic Year Development
@@ -1551,9 +1547,9 @@ pt-BR:
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 3 Challenge:
-              name: Unit 3 Challenge
+              name: Unidade 3 Desafio
             Unit 3 Day-by-Day:
-              name: Unit 3 Day-by-Day
+              name: Unidade 3 Dia-a-Dia
         ECSPD3-Unit4:
           title: 'Exploring Computer Science: Unit 4'
           description: Academic Year Development
@@ -1569,9 +1565,9 @@ pt-BR:
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 4 Challenge:
-              name: Unit 4 Challenge
+              name: Unidade 4 Desafio
             Unit 4 Day-by-Day:
-              name: Unit 4 Day-by-Day
+              name: Unidade 4 Dia-a-Dia
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1579,7 +1575,7 @@ pt-BR:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Introduction to the Unit 5 Challenge:
@@ -1603,7 +1599,7 @@ pt-BR:
             Share out and Submit:
               name: Share out and Submit
             Unit 6 Challenge:
-              name: Unit 6 Challenge
+              name: Unidade 6 Desafio
             Unit 6 Overview:
               name: Unit 6 Overview
             Unit 6 lessons:
@@ -1625,7 +1621,7 @@ pt-BR:
             Creating Summary Tables:
               name: Creating Summary Tables
             Data, Security, and Privacy:
-              name: Data, Security, and Privacy
+              name: Dados, Segurança e Privacidade
             Designing Data Collection:
               name: Designing Data Collection
             Designing for Your User:
@@ -1639,9 +1635,9 @@ pt-BR:
             How is Data Collected?:
               name: How is Data Collected?
             Import, Export, and Visualize Data:
-              name: Import, Export, and Visualize Data
+              name: Importar, Exportar e Visualizar Dados
             Interpreting Data Visualizations:
-              name: Interpreting Data Visualizations
+              name: Interpretando Visualização de Dados
             Making Data Visualizations:
               name: Making Data Visualizations
             Permanent Data Storage:
@@ -1667,7 +1663,7 @@ pt-BR:
             Web Requests and APIs:
               name: Web Requests and APIs
             What Data Can Tell Us:
-              name: What Data Can Tell Us
+              name: O Que Os Dados Podem Nos Dizer
             Why Make Apps?:
               name: Why Make Apps?
         ScienceP3OLPT2:
@@ -1717,7 +1713,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Share out and Submit:
@@ -1729,7 +1725,7 @@ pt-BR:
           description: Testing some tools for teaching with Arduinos
           stages:
             Basic Circuits:
-              name: Basic Circuits
+              name: Circuitos Básicos
             Blinky Lights:
               name: Blinky Lights
             JunkBot:
@@ -1780,7 +1776,7 @@ pt-BR:
             Chunk 5 Overview:
               name: Chunk 5 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Practice Performance Task:
@@ -1869,7 +1865,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Share out and Submit:
               name: Share out and Submit
         ScienceP3OLPT3:
@@ -1946,7 +1942,7 @@ pt-BR:
             Chapter 2 Overview:
               name: Chapter 2 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Practice Performance Tasks:
@@ -1986,7 +1982,7 @@ pt-BR:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Create PT Breakdown:
               name: Create PT Breakdown
             Explore PT Breakdown:
@@ -2048,7 +2044,7 @@ pt-BR:
             'Unplugged: The Design Recipe':
               name: 'Offline: a receita de design'
         AlgebraB:
-          title: Ciência da computação em álgebra
+          title: 'Ciência da computação em álgebra'
           description: Aprenda programação funcional com álgebra
           description_short: Aprenda programação funcional com álgebra
           description_audience: ''
@@ -2145,7 +2141,7 @@ pt-BR:
             The Internet:
               name: A Internet
             The Need for Addressing:
-              name: The Need for Addressing
+              name: A Necessidade de Endereçar
             The Need for DNS:
               name: The Need for DNS
             Unit 1 Chapter 1 Assessment:
@@ -2159,7 +2155,7 @@ pt-BR:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp2-2017:
           title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2209,7 +2205,7 @@ pt-BR:
             Practice PT - Encode an Experience:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp3-2017:
           title: CSP Unidade 3 - Programação
           description: "Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação."
@@ -2255,7 +2251,7 @@ pt-BR:
             Please complete the CSP Mid-course survey!:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\\r\n\\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2297,7 +2293,7 @@ pt-BR:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
             Student Post-Course Survey:
               name: Student Post-Course Survey
         csp5-2017:
@@ -2411,7 +2407,7 @@ pt-BR:
             Boolean Expressions and "if" Statements:
               name: Boolean Expressions and "if" Statements
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -2479,7 +2475,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Functions:
               name: Funções
             Platform Jumper:
@@ -2792,7 +2788,7 @@ pt-BR:
             Planning for Improvements:
               name: Planning for Improvements
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Improvizando e Interagindo
             App Presentation Prep:
               name: App Presentation Prep
             App Presentation:
@@ -3015,7 +3011,7 @@ pt-BR:
             More Programming with Scratch:
               name: More Programming with Scratch
             'New Artist: Functions':
-              name: 'New Artist: Functions'
+              name: 'Novo Artista: Funções'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
@@ -3105,21 +3101,19 @@ pt-BR:
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
-              name: Unit 1, Day 10 Telling a Story with Data
+              name: Unidade 1, Dia 10 Contando uma História com Dados
             Unit 1, Day 11-14 Data Modeling and Design:
               name: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions:
               name: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?:
-              name: Unit 1, Day 17-19 What Is Intelligence?
+              name: Unidade 1, Dia 17-19 O Que é Inteligência?
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unidade 1, Dias 1-2 O Que é um Computador?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
-              name: Unit 1, Days 3-4 Buying a Computer
+              name: Unidade 1, Dias 3-4 Comprando um Computador
             Unit 1, Days 5-7 Searching and Web 2:
               name: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
@@ -3145,7 +3139,7 @@ pt-BR:
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 2 Challenge:
-              name: Unit 2 Challenge
+              name: Unidade 2 Desafio
         ecs-unit3:
           title: ECS Unit 3
           description: 'Unit 3: Web Design'
@@ -3161,9 +3155,9 @@ pt-BR:
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 3 Challenge:
-              name: Unit 3 Challenge
+              name: Unidade 3 Desafio
             Unit 3 Day-by-Day:
-              name: Unit 3 Day-by-Day
+              name: Unidade 3 Dia-a-Dia
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -3179,9 +3173,9 @@ pt-BR:
             Teaching Strategies:
               name: Estratégias de ensino
             Unit 4 Challenge:
-              name: Unit 4 Challenge
+              name: Unidade 4 Desafio
             Unit 4 Day-by-Day:
-              name: Unit 4 Day-by-Day
+              name: Unidade 4 Dia-a-Dia
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -3189,7 +3183,7 @@ pt-BR:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Complete o Desafio
             Getting Started:
               name: Getting Started
             Introduction to the Unit 5 Challenge:
@@ -3201,7 +3195,7 @@ pt-BR:
             Unit 5 lessons:
               name: Unit 5 lessons
             Unit 5 Challenge:
-              name: Unit 5 Challenge
+              name: Unidade 5 Desafio
             Close & Next Steps:
               name: Close & Next Steps
         ecs-unit6:
@@ -3217,7 +3211,7 @@ pt-BR:
             Share out and Submit:
               name: Share out and Submit
             Unit 6 Challenge:
-              name: Unit 6 Challenge
+              name: Unidade 6 Desafio
             Unit 6 Overview:
               name: Unit 6 Overview
             Unit 6 lessons:
@@ -3231,7 +3225,7 @@ pt-BR:
           description_audience: Ages 5-18
           stages:
             " Bee: Conditionals":
-              name: " Bee: Conditionals"
+              name: " Abelha: Condicionais"
             'Artist: Nested Loops':
               name: 'Artista: Laços Aninhados'
             Bee Debugging:
@@ -3317,7 +3311,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Velocity:
               name: Velocidade
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
@@ -3937,7 +3931,7 @@ pt-BR:
               description_student: Teams run another round of user testing, this time with their interactive prototype. Feedback gathered from this round of testing will inform the final iteration of the app prototypes.
               description_teacher: 'By the end of the previous lesson each team should have a minimum viable prototype of their app. The primary purpose of this lesson is to have the team actually test the app with other people, preferably from the target audience the app is intended for, or from different teams in the class while observers from the team will record the results on the worksheets they used in the planning phase. As with testing the paper prototypes, teams will start by planning for the specific scenarios before running and observing tests. '
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Improvizando e Interagindo
               description_student: Using the feedback from the last round of testing, teams implement changes that address the needs of their users. Each team tracks and prioritizes the features they want to add and the bugs they need to fix.
               description_teacher: Teams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student has the opportunity to plan for and implement improvements to the team app. Depending on the time you have available, and student interest, you can run the cycle of testing and iteration as many times as you see fit.
             App Presentation:
@@ -3953,7 +3947,7 @@ pt-BR:
               description_student: Users have been testing an app, and they have lots of feedback for the developer. The class needs to sort through all of this feedback, identify the common themes and needs, and start revising the prototype to make it better meet the users' needs.
               description_teacher: In this lesson students use feedback from "users" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.
             Identifying User Needs:
-              name: Identifying User Needs
+              name: Identificando Necessidades do Usuário
               description_student: Up to this point the users that the class has considered have all been remote, and the only information from users has come through text or role playing. Now the class will rely on each other as potential users, and pairs will get to interview each other to identify needs that could be addressed by developing an app.
               description_teacher: 'Up to this point students have focused on designing for users who are, to some degree, distanced from them. Whether through brainstorming, profiles, or text feedback, the connection to an end user has never been direct. This is distance is designed to help students get outside their own head when thinking about users, but in order to get information more directly from an actual user, students need to rely on their classmates. In this lesson students pair up to become users (and designers) for each other, allowing everyone to directly interview their end user and ask questions to better inform their design. Each student pair interviews each other, attempting to identify a specific need that could be addressed by an app. '
             Project - Paper Prototype:
@@ -3965,7 +3959,7 @@ pt-BR:
               description_student: Building on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.
               description_teacher: In this lesson teams combine the screens that they designed in the previous lesson into a single app, which they can then link together using code. Students learn basic event driven programming by building up the model app that they started in the previous lesson. In addition to the screen that students designed yesterday, they'll learn how to create additional screens and even import screens made by others.
             User Interfaces:
-              name: User Interfaces
+              name: Interfaces de Usuário
               description_student: See how a paper prototype can be used to test and get feedback on software before writing any code. To help out a developer with their idea, the class tests and provides an app prototype made of paper.
               description_teacher: Following the mini design project, students look towards the next phase of design - prototyping a product that attempts to address user needs. In teams, students examine a paper prototype for a chat app called "Txt Ur Grndkdz". Through using this paper prototype, students get a chance to see how a simple paper prototype can be used to quickly test ideas and assumptions before we ever get to the computer. After "using" the provided prototype students begin to identify ways to improve the next iteration.
             Feedback and Testing:
@@ -3999,7 +3993,7 @@ pt-BR:
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         coursea-draft:
-          title: 'CS Fundamentals: Course A'
+          title: 'Fundamentos de Ciência da Computação: Curso A'
           description_audience: ''
           description_short: Uma introdução à ciência da computação para novos leitores.
           description: "Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \\r\nRecommended for grade K."
@@ -4341,7 +4335,7 @@ pt-BR:
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: Bem-vindo(a) de volta!
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -4544,7 +4538,7 @@ pt-BR:
             Final Project:
               name: Final Project
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -5108,7 +5102,7 @@ pt-BR:
             Variables Unplugged:
               name: Variables Unplugged
             Variables and Animation:
-              name: Variables and Animation
+              name: Variáveis e Animação
             Sprites and Properties:
               name: Sprites and Properties
             Sprites and Images:
@@ -5438,51 +5432,51 @@ pt-BR:
             'Debugging: Unspotted Bugs':
               name: 'Depuração: Bugs não encontrados'
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+              description_teacher: 'Essa aula irá guiar os estudantes em uma série de etapas sobre depuração. Os estudantes irão aprender o mantra: "O que aconteceu? O que esperavamos que acontecesse? O que isso significa?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistência: Stevie e o grande projeto'
               description_student: ''
-              description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
+              description_teacher: "Quando os alunos se deparam com uma barreira ao responder uma pergunta ou trabalhar em um projeto, é muito fácil ficar frustrado e desistir. Essa lição apresentará aos alunos a ideia de que a frustração pode ser uma parte importante do aprendizado. Aqui, frustração está presente como um passo no processo criativo, ao invés de um sinal de fracasso.\\r\n\\r\nEssa lição pode ser feita em uma ou duas aulas. Se você tiver mais tempo, sinta-se livre para desenhar as fases de construção e revisão da atividade do Marble Run."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
               description_student: ''
-              description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
+              description_teacher: "Nesta lição, os alunos relacionarão o conceito de algoritmos às atividades cotidianas da vida real, plantando uma semente real. O objetivo aqui é começar a construir as habilidades para traduzir situações do mundo real para cenários on-line e vice-versa.\\r\n"
             Learn to Drag and Drop:
               name: Sequenciando com arrastar e soltar
               description_student: ''
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
             'Programming: Happy Maps':
               name: 'Programação: Mapas felizes'
               description_student: ''
-              description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
+              description_teacher: A ponte de algoritmos para programação pode ser curta se os alunos entenderem a diferença entre planejar uma sequência e programar esta sequência em uma linguagem apropriada. Esta atividade irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos abreviados.
             Programming in Maze:
               name: Programação no labirinto
               description_student: ''
-              description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
+              description_teacher: Nesta série de quebra-cabeças online, os alunos irão construir o entendimento de algoritmos, depuração, e alfabetização geral em computadores. Com a apresentação de personagens do jogo Angry Birds, os alunos irão desenvolver algoritmos sequenciais para levar o pássaro até o porco sem bater nas paredes ou explosivos. Depurações de quebra-cabeças também foram misturadas neste nível para adicionar a prática com resolução de problemas e pensamento crítico.
             Going Places Safely:
               name: 'Cidadania digital: indo a lugares com segurança'
               description_student: ''
-              description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
+              description_teacher: Em colaboração com [r common-sense-media], esta lição ajuda os alunos aprenderem que muitos websites pedem informações que são privadas e discute como lidar de forma responsável com tais situações. Os alunos também descobrem que podem ir a lugares incríveis online, mas que eles precisam de seguir certas regras para se manterem seguros.
             'Loops: Happy Loops':
               name: 'Loops: Happy Loops'
               description_student: ''
-              description_teacher: Loops are a very helpful and powerful tool in programming. To understand how helpful loops can be, students will need to be driven to want an easier way to solve mundane problems.
+              description_teacher: Repetições são uma ferramenta muito útil e poderosa em programação. Para entender como repetições úteis podem ser, os alunos precisarão ser levados a desejar uma maneira mais fácil de resolver problemas mundanos.
             Loops in Collector:
               name: Loops in Collector
               description_student: ''
-              description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
+              description_teacher: Aproveitando o conceito de repetição de instruções da aula "Repetições Felizes", este nível os alunos irão usar repetições para coletar tesouro de uma forma mais eficiente no Code.org.
             Loops in Artist:
               name: Loops in Artist
               description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.
             'Events: The Big Event':
               name: 'Events: The Big Event'
               description_student: ''
-              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+              description_teacher: "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem."
             Events in Play Lab:
               name: Events in Play Lab
               description_student: ''
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+              description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
           title: Curso A
           assignment_family_title: Curso A
           description_audience: 'Idade: de 4 a 7 anos'
@@ -6330,7 +6324,7 @@ pt-BR:
             Feedback and Prototypes:
               name: Feedback and Prototypes
             Identifying User Needs:
-              name: Identifying User Needs
+              name: Identificando Necessidades do Usuário
             Project - Paper Prototype:
               name: Project - Paper Prototype
             Designing Apps for Good:
@@ -6350,7 +6344,7 @@ pt-BR:
             Testing the App:
               name: Testing the App
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Improvizando e Interagindo
             App Presentation:
               name: App Presentation
             Linking Screens:
@@ -6532,7 +6526,7 @@ pt-BR:
             Nested Loops Project in Frozen:
               name: Nested Loops Project in Frozen
             'How it Works: The Internet':
-              name: 'How it Works: The Internet'
+              name: 'Como Isto Funciona: A Internet'
             'Common Sense Education: Digital Citizenship':
               name: 'Common Sense Education: Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
@@ -6832,7 +6826,7 @@ pt-BR:
             Feedback and Prototypes:
               name: Feedback and Prototypes
             Identifying User Needs:
-              name: Identifying User Needs
+              name: Identificando Necessidades do Usuário
             Project - Paper Prototype:
               name: Project - Paper Prototype
             Designing Apps for Good:
@@ -6852,7 +6846,7 @@ pt-BR:
             Testing the App:
               name: Testing the App
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Improvizando e Interagindo
             App Presentation:
               name: App Presentation
           title: "(DEPRECATED) CSD Unit 4 - The Design Process"
@@ -6908,7 +6902,7 @@ pt-BR:
             Simple Encryption:
               name: Criptografia simples
             Web Development - Creating Webpages:
-              name: Web Development - Creating Webpages
+              name: Desenvolvimento Web - Criando Páginas Web
             App Development Unplugged - User Interfaces:
               name: App Development Unplugged - User Interfaces
             App Development - Intro to App Lab:
@@ -6916,7 +6910,7 @@ pt-BR:
             Creating Webpages:
               name: Creating Webpages
             User Interfaces:
-              name: User Interfaces
+              name: Interfaces de Usuário
             Intro to App Lab:
               name: Intro to App Lab
             Smart Clothing Design:
@@ -7022,7 +7016,7 @@ pt-BR:
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital Portfolio and Other Tools'
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
           title: Explore - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
@@ -7038,7 +7032,7 @@ pt-BR:
             Create PT - Complete the Task:
               name: Create PT - Complete the Task
             Post-Course Survey:
-              name: Post-Course Survey
+              name: Pesquisa Pós-Curso
           title: Create - AP Performance Task Prep
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
@@ -7524,59 +7518,59 @@ pt-BR:
             'Debugging: Unspotted Bugs':
               name: Erros Não Reportados
               description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
+              description_teacher: 'Essa aula irá guiar os estudantes em uma série de etapas sobre depuração. Os estudantes irão aprender o mantra: "O que aconteceu? O que esperavamos que acontecesse? O que isso significa?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie e o Grande Projeto
               description_student: ''
-              description_teacher: "When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r\n\\r\nThis lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity."
+              description_teacher: "Quando os alunos se deparam com uma barreira ao responder uma pergunta ou trabalhar em um projeto, é muito fácil ficar frustrado e desistir. Essa lição apresentará aos alunos a ideia de que a frustração pode ser uma parte importante do aprendizado. Aqui, frustração está presente como um passo no processo criativo, ao invés de um sinal de fracasso.\\r\n\\r\nEssa lição pode ser feita em uma ou duas aulas. Se você tiver mais tempo, sinta-se livre para desenhar as fases de construção e revisão da atividade do Marble Run."
             'Real-life Algorithms: Plant a Seed':
-              name: Plant a Seed
+              name: Plante uma semente
               description_student: ''
-              description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
+              description_teacher: "Nesta lição, os alunos relacionarão o conceito de algoritmos às atividades cotidianas da vida real, plantando uma semente real. O objetivo aqui é começar a construir as habilidades para traduzir situações do mundo real para cenários on-line e vice-versa.\\r\n"
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
               description_student: ''
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
             'Programming: Happy Maps':
               name: Mapas divertidos
               description_student: ''
-              description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
+              description_teacher: A ponte de algoritmos para programação pode ser curta se os alunos entenderem a diferença entre planejar uma sequência e programar esta sequência em uma linguagem apropriada. Esta atividade irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos abreviados.
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
               description_student: ''
-              description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
+              description_teacher: Nesta série de quebra-cabeças online, os alunos irão construir o entendimento de algoritmos, depuração, e alfabetização geral em computadores. Com a apresentação de personagens do jogo Angry Birds, os alunos irão desenvolver algoritmos sequenciais para levar o pássaro até o porco sem bater nas paredes ou explosivos. Depurações de quebra-cabeças também foram misturadas neste nível para adicionar a prática com resolução de problemas e pensamento crítico.
             Going Places Safely:
               name: Navegando com segurança
               description_student: ''
-              description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
+              description_teacher: Em colaboração com [r common-sense-media], esta lição ajuda os alunos aprenderem que muitos websites pedem informações que são privadas e discute como lidar de forma responsável com tais situações. Os alunos também descobrem que podem ir a lugares incríveis online, mas que eles precisam de seguir certas regras para se manterem seguros.
             'Loops: Happy Loops':
-              name: Happy Loops
+              name: Repetições Felizes
               description_student: ''
-              description_teacher: Loops are a very helpful and powerful tool in programming. To understand how helpful loops can be, students will need to be driven to want an easier way to solve mundane problems.
+              description_teacher: Repetições são uma ferramenta muito útil e poderosa em programação. Para entender como repetições úteis podem ser, os alunos precisarão ser levados a desejar uma maneira mais fácil de resolver problemas mundanos.
             Loops in Collector:
-              name: Loops with Laurel
+              name: Repetições com Laurel
               description_student: ''
-              description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
+              description_teacher: Aproveitando o conceito de repetição de instruções da aula "Repetições Felizes", este nível os alunos irão usar repetições para coletar tesouro de uma forma mais eficiente no Code.org.
             Loops in Artist:
-              name: Ocean Scene with Loops
+              name: Cena do Oceano com Repetições
               description_student: ''
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.
             'Events: The Big Event':
-              name: O grande evento
+              name: The Big Event Jr.
               description_student: ''
-              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+              description_teacher: "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem."
             Events in Play Lab:
-              name: On the Move with Events
+              name: Em Movimento com os Eventos
               description_student: ''
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+              description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
             Programming in Bee:
-              name: Programming in Bee
+              name: Programação em Abelha
             Programming in Harvester:
-              name: Programming with Harvester
+              name: Programação com Colheitadeira
             Loops in Harvester:
-              name: Loops with Harvester
+              name: Repetições com Colheitadeira
             Sequencing in Maze:
-              name: Sequencing with Angry Birds
+              name: Sequenciando com Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie e o Grande Projeto
         express-2018:
@@ -7619,7 +7613,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             'How it Works: The Internet':
-              name: 'How it Works: The Internet'
+              name: 'Como Isto Funciona: A Internet'
               description_student: ''
               description_teacher: ''
             'Common Sense Education: Digital Citizenship':
@@ -7731,7 +7725,7 @@ pt-BR:
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
             Debugging in Maze:
               name: Debugging with Angry Birds
             Programming in Collector:
@@ -7749,7 +7743,7 @@ pt-BR:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Nested Loops with Anna and Elsa
             Conditionals with Cards:
               name: Condicionais com cartas
             Conditionals & Loops in Harvester:
@@ -7757,9 +7751,9 @@ pt-BR:
             'Functions: Songwriting':
               name: Composição de música com parâmetros
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with the Harvester
             Functions in Artist:
               name: Functions in Artist
             Screen Out the Mean:
@@ -7799,7 +7793,7 @@ pt-BR:
             Relay Programming:
               name: Programação Relay
         courseb-2018:
-          title: Course B (2018)
+          title: Curso B (2018)
           assignment_family_title: Curso B
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
@@ -7842,7 +7836,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops with Laurel
+              name: Repetições com Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
@@ -7850,7 +7844,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: O grande evento
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -7868,7 +7862,7 @@ pt-BR:
             Copyright and Creativity:
               name: It's Great to Create and Play Fair
         coursed-2018:
-          title: Course D (2018)
+          title: Curso D (2018)
           assignment_family_title: Curso D
           description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
           description_short: Learn about conditional statements and create your own art, story or game.
@@ -8059,7 +8053,7 @@ pt-BR:
           description_short: CS Principles AP Exam Prep
           description: 'This page contains copies of all the multiple choice assessment questions that appeared in Units 1-5 in the course.  Students may want to practice for the multiple choice exam by re-taking these little tests.  '
         coursec-2018:
-          title: Course C (2018)
+          title: Curso C (2018)
           assignment_family_title: Curso C
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
@@ -8070,7 +8064,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Programando com Angry Birds
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
@@ -8230,7 +8224,7 @@ pt-BR:
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
         coursee-2018:
-          title: Course E (2018)
+          title: Curso E (2018)
           assignment_family_title: Curso E
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
           description_short: Review concepts in Courses C & D, then go further by learning functions.
@@ -8358,7 +8352,7 @@ pt-BR:
             Copyright and Creativity:
               name: Digital Sharing
         coursef-2018:
-          title: Course F (2018)
+          title: Curso F (2018)
           assignment_family_title: Curso F
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
@@ -8547,7 +8541,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             The Need for Addressing:
-              name: The Need for Addressing
+              name: A Necessidade de Endereçar
               description_student: ''
               description_teacher: ''
             Routers and Redundancy:
@@ -8608,7 +8602,7 @@ pt-BR:
               description_teacher: In this lesson students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device. Earlier in the activity students are prompted to focus on more obvious physical inputs and outputs (e.g. a keyboard as an input or a screen as an output) but later discussions lead students to consider less obvious examples (e.g. that a touch screen is both an input and output, or the fact that the Internet can serve as both input and output). Throughout the lesson the teacher records inputs and outputs that are identified on a T-Chart at the front of the room. To conclude the lesson students examine common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
             Processing:
               name: Processing
-              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to puta deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
+              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to put a deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities to explore the meaning of processing and its relationship to problem-solving. The first activity has few constraints and is used to introduce a high-level definition of processing. The next introduces more constraints that force students to develop an algorithm that will always successfully process the cards. Students iteratively develop, test, and share their algorithms with classmates. A wrap-up discussion has students reflect on the different types of problem-solving they used in these activities and the value of producing an algorithm to solve a problem.
             Storage:
               name: Storage
@@ -8645,7 +8639,7 @@ pt-BR:
               description_student: In small groups, the class uses the design process to come up with ideas for smart clothing. From brainstorming, to identifying users, to finally proposing a design, this is the first of several opportunities in this unit to practicing designing a solution for the needs of others.
               description_teacher: This lesson guides students through an abbreviated version of the design process they will be seeing throughout this unit. Students first brainstorm a list of potential users of smart clothing. As a class, they then group these ideas into broad categories and each group will choose one category of user. Groups repeat this process to brainstorm needs or concerns of their user, eventually categorizing these needs and choosing one to focus on. Finally, students design a piece of smart clothing, using the specific needs and concerns they brainstormed to guide their decision making. At the end of the class students quickly share their decision-making process and get feedback on how well their product addresses the user need they selected.
             User Interfaces:
-              name: User Interfaces
+              name: Interfaces de Usuário
               description_student: See how a paper prototype can be used to test and get feedback on software before writing any code. To help out a developer with their idea, the class tests and provides an app prototype made of paper.
               description_teacher: Following the mini design project, students look towards the next phase of design - prototyping a product that attempts to address user needs. In teams, students examine a paper prototype for a chat app called "Txt Ur Grndkdz". Through using this paper prototype, students get a chance to see how a simple paper prototype can be used to quickly test ideas and assumptions before we ever get to the computer. After "using" the provided prototype students begin to identify ways to improve the next iteration.
             Feedback and Testing:
@@ -8653,7 +8647,7 @@ pt-BR:
               description_student: Users have been testing an app, and they have lots of feedback for the developer. The class needs to sort through all of this feedback, identify the common themes and needs, and start revising the prototype to make it better meet the users' needs.
               description_teacher: In this lesson students use feedback from "users" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.
             Identifying User Needs:
-              name: Identifying User Needs
+              name: Identificando Necessidades do Usuário
               description_student: Up to this point the users that the class has considered have all been remote, and the only information from users has come through text or role playing. Now the class will rely on each other as potential users, and pairs will get to interview each other to identify needs that could be addressed by developing an app.
               description_teacher: 'Up to this point students have focused on designing for users who are, to some degree, distanced from them. Whether through brainstorming, profiles, or text feedback, the connection to an end user has never been direct. This is distance is designed to help students get outside their own head when thinking about users, but in order to get information more directly from an actual user, students need to rely on their classmates. In this lesson students pair up to become users (and designers) for each other, allowing everyone to directly interview their end user and ask questions to better inform their design. Each student pair interviews each other, attempting to identify a specific need that could be addressed by an app. '
             Project - Paper Prototype:
@@ -8689,7 +8683,7 @@ pt-BR:
               description_student: Teams run another round of user testing, this time with their interactive prototype. Feedback gathered from this round of testing will inform the final iteration of the app prototypes.
               description_teacher: 'By the end of the previous lesson each team should have a minimum viable prototype of their app. The primary purpose of this lesson is to have the team actually test the app with other people, preferably from the target audience the app is intended for, or from different teams in the class while observers from the team will record the results on the worksheets they used in the planning phase. As with testing the paper prototypes, teams will start by planning for the specific scenarios before running and observing tests. '
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Improvizando e Interagindo
               description_student: Using the feedback from the last round of testing, teams implement changes that address the needs of their users. Each team tracks and prioritizes the features they want to add and the bugs they need to fix.
               description_teacher: Teams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student has the opportunity to plan for and implement improvements to the team app. Depending on the time you have available, and student interest, you can run the cycle of testing and iteration as many times as you see fit.
             Project - App Presentation:
@@ -9339,19 +9333,19 @@ pt-BR:
             Wrap Up:
               name: Wrap Up
             Friday:
-              name: Friday
+              name: Sexta-Feira
             Novice Reflection Overview:
               name: Novice Reflection Overview
             Monday:
-              name: Monday
+              name: Segunda-Feira
             Day 1:
-              name: Day 1
+              name: Dia 1
             Day 2:
-              name: Day 2
+              name: Dia 2
             Day 3:
-              name: Day 3
+              name: Dia 3
             Day 4:
-              name: Day 4
+              name: Dia 4
           title: CS Discoveries Novice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
@@ -9371,13 +9365,13 @@ pt-BR:
             Apprentice Reflection Overview:
               name: Apprentice Reflection Overview
             Day 1:
-              name: Day 1
+              name: Dia 1
             Day 2:
-              name: Day 2
+              name: Dia 2
             Day 3:
-              name: Day 3
+              name: Dia 3
             Day 4:
-              name: Day 4
+              name: Dia 4
           title: CS Discoveries Apprentice Reflections 2018-2019
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
@@ -9395,15 +9389,15 @@ pt-BR:
             Wrap Up:
               name: Wrap Up
             Monday:
-              name: Monday
+              name: Segunda-Feira
             Day 1:
-              name: Day 1
+              name: Dia 1
             Day 2:
-              name: Day 2
+              name: Dia 2
             Day 3:
-              name: Day 3
+              name: Dia 3
             Day 4:
-              name: Day 4
+              name: Dia 4
           title: CS Principles Novice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators in training '
@@ -9423,13 +9417,13 @@ pt-BR:
             Apprentice Reflection Overview:
               name: Apprentice Reflection Overview
             Day 1:
-              name: Day 1
+              name: Dia 1
             Day 2:
-              name: Day 2
+              name: Dia 2
             Day 3:
-              name: Day 3
+              name: Dia 3
             Day 4:
-              name: Day 4
+              name: Dia 4
           title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
@@ -9478,7 +9472,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops with Laurel
+              name: Repetições com Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
@@ -9486,7 +9480,7 @@ pt-BR:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: O grande evento
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9504,15 +9498,15 @@ pt-BR:
             Your Digital Footprint:
               name: Seu rastro digital
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
             Loops in Ice Age:
-              name: Repetições na Era do gelo
+              name: Loops with Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie e o Grande Projeto
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9533,3 +9527,23 @@ pt-BR:
           description_audience: ''
           description_short: ''
           description: ''
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Debugging for AB Educators
+            Debugging for CDEF Educators:
+              name: Debugging for CDEF Educators
+          title: Debugging Lessons for Educators
+          description_audience: ''
+          description_short: ''
+          description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.
