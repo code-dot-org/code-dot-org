@@ -38,6 +38,7 @@
     "tts_markdown_instructions_override": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r\nTry using the `set pattern` block before you start your loop to make a work of art!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to set the pattern of your lines:\\n\\n<xml>\\n<block type=\\\"draw_line_style_pattern\\\">\\n    <title name=\\\"VALUE\\\">DEFAULT</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseC_artist_loops5b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5389cf8ef3a9293dba5d43d1e0d2eae/courseC_artist_loops5b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To make a design like the one above, you will want to move backward the same amount that you move forward.\",\"hint_id\":\"courseC_artist_loops5b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d35c2d4fd760381a74ac79e33a051b0b/courseC_artist_loops5b.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

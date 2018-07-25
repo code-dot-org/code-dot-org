@@ -1,0 +1,13 @@
+{
+  "category": "",
+  "config": {
+    "func": "spritesWhereRandom",
+    "returnType": "Sprite",
+    "blockText": "random in group {VALUE}",
+    "args": [
+      {
+        "name": "VALUE"
+      }
+    ]
+  }
+}

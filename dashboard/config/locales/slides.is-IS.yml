@@ -1671,12 +1671,12 @@ is:
           mun færast áfram fimm sinnum að ljúffenga sólblóminu.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Hingað til hefur þú verið að búa til hreyfimynd eða sögu sem gerir nákvæmlega
           það sama í hvert sinn sem þú keyrir hana. Nú getur þú búið til gagnvirkan
           leik sem hægt er að spila.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: Það er nokkrir nýjir kubbar til að prófa. Það er kubburinn "þegar ör"
           og kubburinn "færa leikveru". Þú getur sett þessa kubba saman til að færa
           leikverurnar með örvarlyklunum. Og það eru kubbar sem gera eitthvað þegar

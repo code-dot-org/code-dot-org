@@ -48,6 +48,7 @@
     "video_key": "CSF_bb8_loops_C-F",
     "top_level_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

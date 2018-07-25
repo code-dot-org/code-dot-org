@@ -25,7 +25,7 @@ bg:
         Artist5: Художникът 5
         Unplug11: Заключение
         MazeEC: Лабиринт
-        Bounce: Скачане
+        Bounce: Bounce
         Flappy: Flappy птица
         Jigsaw: Мозайка
         MazeStep: Лабиринт - стъпки
@@ -312,8 +312,8 @@ bg:
           поле, за да направите свое собствено ниво. Натиснете "Старт" когато сте
           готови.
         jigsaw_1: Щракнете върху блока
-        jigsaw_2: Плъзнете блока до целта
-        jigsaw_3: Подредете блоковете за оформяне на изображение
+        jigsaw_2: Drag the block to the target
+        jigsaw_3: Arrange the blocks to form the image
         jigsaw_4: Подредете блоковете за оформяне на изображение
         jigsaw_5: Подредете блоковете за оформяне на изображение
         jigsaw_6: Подредете блоковете за оформяне на изображение
@@ -321,9 +321,9 @@ bg:
         jigsaw_8: Подредете блоковете за оформяне на изображение
         jigsaw_9: Подредете блоковете за оформяне на изображение
         jigsaw_10: Подредете блоковете за оформяне на изображение
-        jigsaw_11: Подредете блоковете за формиране на изображение
+        jigsaw_11: Put these blocks in order by number
         jigsaw_12: Подредете блоковете за формиране на изображение
-        jigsaw_13: Реши пъзела!
+        jigsaw_13: Fix the puzzle!
         mazestep_1: Лабиринт- описание на стъпката
         mazestep_2: Лабиринт- описание на стъпката
         mazestep_3: Лабиринт- описание на стъпката
@@ -799,6 +799,11 @@ bg:
         CSF_loops_AB: Цикли
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

@@ -15,6 +15,7 @@ import {
   injectErrorHandler
 } from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import BlocklyModeErrorHandler from '../BlocklyModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
@@ -120,10 +121,6 @@ var GameLab = function () {
 
   dropletConfig.injectGameLab(this);
 
-  injectErrorHandler(new JavaScriptModeErrorHandler(
-    () => this.JSInterpreter,
-    this
-  ));
   consoleApi.setLogMethod(this.log.bind(this));
 
   /** Expose for testing **/
@@ -184,10 +181,28 @@ GameLab.prototype.init = function (config) {
   }
 
   this.skin = config.skin;
-  this.skin.smallStaticAvatar = null;
-  this.skin.staticAvatar = null;
-  this.skin.winAvatar = null;
-  this.skin.failureAvatar = null;
+  if (this.studioApp_.isUsingBlockly()) {
+    const MEDIA_URL = '/blockly/media/spritelab/';
+    this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.winAvatar = MEDIA_URL + 'avatar.png';
+    this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
+
+    injectErrorHandler(new BlocklyModeErrorHandler(
+      () => this.JSInterpreter,
+      null,
+    ));
+  } else {
+    this.skin.smallStaticAvatar = null;
+    this.skin.staticAvatar = null;
+    this.skin.winAvatar = null;
+    this.skin.failureAvatar = null;
+
+    injectErrorHandler(new JavaScriptModeErrorHandler(
+      () => this.JSInterpreter,
+      this,
+    ));
+  }
   this.level = config.level;
 
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
@@ -252,9 +267,10 @@ GameLab.prototype.init = function (config) {
     }.bind(this)
   };
 
-  // Provide a way for us to have top pane instructions disabled by default, but
-  // able to turn them on.
-  config.noInstructionsWhenCollapsed = true;
+  // Display CSF-style instructions when using Blockly. Otherwise provide a way
+  // for us to have top pane instructions disabled by default, but able to turn
+  // them on.
+  config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;

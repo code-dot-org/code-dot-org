@@ -263,8 +263,8 @@ fil:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Sinubukang gawin ang bug na inulat ni Brooke\\r\nna proseso gaya ng sumunod:\\r\n1. nagsimula sa isang `unplugged` na antas. Naglagay ng mga impormasyon. Pinindot ang save and publish.\\r\n2. \"Nasira\" ang antas\\r\n3. Gumawa ng `markdown` na antas na may kaparehong nilalaman at parehong pangalan. Nilagyan ng tsek ang kahon para i-encrypt ito. Pinindot ang save at publish"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: Ang Robot Kong Mga Kaibigan
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
         title:
         desc:

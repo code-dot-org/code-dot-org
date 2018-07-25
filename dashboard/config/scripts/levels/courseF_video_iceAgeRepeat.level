@@ -8,7 +8,8 @@
     "video_key": "iceage_repeat",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "hint_prompt_attempts_threshold": 2
   },
   "published": true,
   "notes": ""

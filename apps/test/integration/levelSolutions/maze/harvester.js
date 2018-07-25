@@ -27,6 +27,8 @@ module.exports = {
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       customValidator: function () {
+        // Don't run all 10,000 steps...
+        Maze.executionInfo.steps_.length = 0;
         return Maze.executionInfo.terminationValue() === constants.BeeTerminationValue.INFINITE_LOOP;
       },
       xml: '<xml>' +

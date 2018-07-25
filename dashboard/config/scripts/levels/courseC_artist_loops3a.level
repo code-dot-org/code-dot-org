@@ -38,6 +38,7 @@
     "tts_markdown_instructions_override": "So much fun!  \r\n\r\nNow, add a bat sticker right after the bird to make an image like the one below.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to add just one block inside of your loop, after the bird sticker.\",\"hint_id\":\"courseC_artist_loops3a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9a95ef3118b30251c9146a394344a187/courseC_artist_loops3a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the drop down menu on the `draw sticker` block to find the bat sticker.\",\"hint_id\":\"courseC_artist_loops3a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/41ce9c71ece948bdc7db9e41f74c8536/courseC_artist_loops3a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

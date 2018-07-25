@@ -188,6 +188,7 @@ nn:
       CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro predict_2018_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: {}
       CSD U3 Sprites intro sprites_2018_callout: {}
       CSD U3 Sprites scene challenge_callout: {}
       CSD U3 Sprites scene challenge_2018_callout: {}
@@ -430,7 +431,6 @@ nn:
         CSD_U3_rect_c2: Her er "Køyr"-knappen.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Her er koden
-        CSD_U3_rect_c2: Her er "Køyr"-knappen.
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Her er koden
         CSD_U3_rect_c2: Dra denne blokka inn i kodeområdet.
@@ -664,6 +664,7 @@ nn:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: {}
+      Fish Tank 2-validated_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
       Frozen Project Toolbox (Old)_callout:
@@ -768,9 +769,9 @@ nn:
         create_function: Klikk her for å åpne "Funksjonar"-menyen og klikk deretter
           "Opprette ein funksjon"-knappen.
       NEW Course 4 Artist Params 2_callout:
-        create_function: ''
-        name_function: ''
-        write_draw_triangle_function: ''
+        create_function: 
+        name_function: 
+        write_draw_triangle_function: 
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Klikk Rediger for å legge til ein parameter i funksjonen
           din
@@ -1088,6 +1089,7 @@ nn:
           them away.
         stone_block_2: Grå blokker er laga av stein og kan ikkje bli kasta.
       courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -1135,6 +1137,7 @@ nn:
           start your program.
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
+      courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
       courseB_Scrat_ramp5a_2018_callout: {}
       courseB_artist_loops3_callout:
@@ -1146,9 +1149,7 @@ nn:
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Dette talet betyr at det ikkje er fleire blokker
           att i verktøykassa.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: Dette talet betyr at det ikkje er fleire blokker
-          att i verktøykassa.
+      courseB_artist_loops5_2018_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det
           heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
@@ -1364,6 +1365,9 @@ nn:
       courseD_collector_until_challenge1_callout: {}
       courseD_farmer_until_challenge2_callout: {}
       courseD_farmer_until_challenge2_2018_callout: {}
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead`
+          block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:
@@ -1671,21 +1675,21 @@ nn:
       courseF_IceAge_10_callout: {}
       courseF_IceAge_11_callout: {}
       courseF_IceAge_2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       courseF_IceAge_3_callout: {}
       courseF_IceAge_4_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       courseF_IceAge_5_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       courseF_IceAge_6_callout: {}
       courseF_IceAge_7_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_IceAge_8_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Legg til blokkene dine her
       courseF_IceAge_template_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       courseF_artist_embed_variables9_callout: {}
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room
@@ -1951,8 +1955,8 @@ nn:
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Slik setter du verdien for variabelen.
       coursea_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: After snapping all the blocks together, press
+          "Run" to start your program.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
@@ -2232,38 +2236,38 @@ nn:
       iceage_free_play_2018_callout: {}
       iceage_free_playcourseF_IceAge_11_callout: {}
       iceage_hello1_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello1_2018_callout:
-        playlab_drag_say: ''
+        playlab_drag_say: 
       iceage_hello2_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_hello2_2018_callout:
-        playlab_use_twice: ''
+        playlab_use_twice: 
       iceage_move_events_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_events_2018_callout:
-        arrows_move_actor: ''
+        arrows_move_actor: 
       iceage_move_to_actor_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_actor_2018_callout:
-        playlab_play_sound: ''
+        playlab_play_sound: 
       iceage_move_to_flag_callout: {}
       iceage_move_to_flag_2018_callout: {}
       iceage_repeat_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_repeat_2018_callout:
-        playlab_add_move: ''
+        playlab_add_move: 
       iceage_sound_and_points_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_sound_and_points_2018_callout:
-        playlab_add_score: ''
+        playlab_add_score: 
       iceage_throw_hearts_callout: {}
       iceage_throw_hearts_2018_callout: {}
       iceage_warn_embed_ice_age_callout: {}
       iceage_warn_ice_age_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       iceage_warn_ice_age_2018_callout:
-        playlab_add_blocks: ''
+        playlab_add_blocks: 
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.
       playLabDebugVideo1_callout: {}

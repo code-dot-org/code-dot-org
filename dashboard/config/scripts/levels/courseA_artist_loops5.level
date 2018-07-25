@@ -41,6 +41,7 @@
     "disable_if_else_editing": "false",
     "tts_markdown_instructions_override": "Draw a line seven steps long. This will become our horizon.",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

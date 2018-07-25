@@ -52,9 +52,9 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 [col-33]
 
-[<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](/files/CSDiscoveries-Curriculum-Guide.pdf)</center>
+[<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](https://docs.google.com/document/d/1hzG2yKUrvXKGq_ee0E1fAyxbzRL_8-bbldgyLG7m_X4/edit#)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">The  <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
+<div style="margin-left: 15px; margin-top: 5px;">The  <a href="https://docs.google.com/document/d/1hzG2yKUrvXKGq_ee0E1fAyxbzRL_8-bbldgyLG7m_X4/edit#", target=_"blank">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
 
 [/col-33]
 

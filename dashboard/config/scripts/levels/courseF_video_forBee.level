@@ -7,7 +7,8 @@
   "properties": {
     "video_key": "C4_for_loops_bee",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "hint_prompt_attempts_threshold": 2
   },
   "published": true,
   "notes": "",

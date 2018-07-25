@@ -6,46 +6,47 @@ he:
       Loops: לולאות
       Functions: פונקציות
       Color: צבע
-      Brushes: Brushes
+      Brushes: מברשות
       Math: מתמטיקה
       Logic: הגיון
       Variables: משתנים
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: מספר
+      String: מחרוזת
+      Image: תמונה
+      Boolean: ערך בוליאני
       Conditionals: תנאים
       Events: אירועים
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: משחק/נקודות
+      Comments: תגובות
+      Category: קטגוריות
+      Prebuilt: טרום בניה
       Text: טקסט
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
+      Picker: בוחר
+      Comment: תגובה
+      'Variables ': 'משתנים '
+      everythingelse: כלהשאר
+      numbers: מספרים
+      Numbers: מספרים
       Input: Input
-      Default: Default
+      Default: ברירת מחדל
+      World: עולם
       Sprites: Sprites
-      Behaviors: Behaviors
-      World: World
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Behaviors: התנהגויות
+      Advanced: מתקדם
+      Sprite: מסך
+      Brush: מברשת
+      Make Sprite: צור מסך
+      Movement: תנועה
       Start: התחל
-      Groups: Groups
+      Groups: קבוצות
       Booleans: Booleans
-      Functional: Functional
-      Predefined: Predefined
+      Functional: תפקוד
+      Predefined: מוגדרים מראש
       test: בדיקה
-      test2: test2
+      test2: בדיקה2
       Foo: Foo
       Name: שם
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: בלוקים חדשים
+      'Functions ': 'פונקציות '
+      Game/Score: משחק/נקודות
       Function: פונקציה

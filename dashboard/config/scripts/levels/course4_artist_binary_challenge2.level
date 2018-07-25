@@ -36,6 +36,7 @@
     "disable_if_else_editing": "false",
     "markdown_instructions": "There are 256 bits represented on this grid - that means it's easy for a small change to cause big problems. Are you persistent enough to restore this logo back to normal?\r\n\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.\\n\\nThere are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!\",\"hint_id\":\"courseD_artist_binary_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/adcbd743d1563c394c9617897db2347f/course4_artist_binary_challenge2.mp3\"}]",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

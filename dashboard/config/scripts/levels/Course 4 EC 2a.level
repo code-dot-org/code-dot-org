@@ -34,6 +34,7 @@
     "fast_get_nectar_animation": "false",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
     "step_speed": "1",
+    "hint_prompt_attempts_threshold": 12,
     "contained_level_names": null
   },
   "published": true,

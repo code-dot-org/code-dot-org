@@ -14,6 +14,35 @@ export function generateFakePersonalProjects(n) {
   ));
 }
 
+export const stubFakePersonalProjectData = [
+  {
+    name: "Personal Project 1",
+    updatedAt: '2015-12-31T23:59:59.999-08:00',
+    type: 'gamelab',
+    channel: 'abcd1',
+    publishedAt: '2015-12-31T23:59:59.999-08:00'
+  },
+  {
+    name: "Personal Project 2",
+    updatedAt: '2016-11-30T23:59:59.999-08:00',
+    type: 'applab',
+    channel: 'abcd2',
+  },
+  {
+    name: "Personal Project 3 has a super extra long name let's see how it looks in the table",
+    updatedAt: '2016-10-31T23:59:59.999-08:00',
+    type: 'artist',
+    channel: 'abcd3',
+    publishedAt: '2015-12-31T23:59:59.999-08:00'
+  },
+  {
+    name: "Personal Project 4",
+    updatedAt: '2016-09-14T23:59:59.999-08:00',
+    type: 'playlab',
+    channel: 'abcd4',
+  },
+];
+
 export const stubFakeFeaturedProjectData = [
   {
     projectName: "Featured Project 1",

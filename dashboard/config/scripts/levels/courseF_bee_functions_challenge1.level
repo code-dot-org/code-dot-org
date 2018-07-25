@@ -43,6 +43,7 @@
     "honey_goal": "14",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

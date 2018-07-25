@@ -38,7 +38,7 @@ he:
         NetSim: מדמה אינטרנט
         Custom: אמן
         CustomStudio: מעבדת משחקים
-        Gamelab: Game Lab
+        Gamelab: מעבדת המשחקים
     trophy:
       name:
         Bronze: ארד
@@ -130,46 +130,44 @@ he:
           20 פיקסלים?
         turtle_4_7: 'הנה הקוד עבור ציור הריבוע מהפאזל האחרון. האם תוכל לחזור עליו
           ולצייר 10 משבצות סמוכות כמו סולם? רמז: אתה צריך רק עוד שני בלוקים .'
-        turtle_4_8: הנה הפתרון לחידה הקודמת. האם תוכל להוסיף עוד 2 אבני בנייה כדי
-          להשלים את הציור?
+        turtle_4_8: הנה הפתרון לחידה הקודמת. האם תוכל להוסיף עוד 2 בלוקים כדי להשלים
+          את הציור?
         turtle_4_9: הנה הפתרון לחידה הקודמת. כמה מעלות עליך להסתובב כדי להשלים את
           הציור?(אתה ודאי תצטרך לנחש מס' פעמים)
         turtle_4_10: הנה הפתרון לחידה הקודמת. כמה פעמים עלייך לחזור על הפעולה בכדי
           להשלים את הציור?
-        turtle_4_11: נסה לשנות את המספרים של אבני הבנייה המורות על "סיבוב" ו "חזור"
-          ליצירת דפוסים שונים. נסה לשנות את כל יתר הקוד כדי לצייר כל דבר אחר שאתה
-          רוצה.
+        turtle_4_11: נסה לשנות את המספרים של הבלוקים המורים על "סיבוב" ו "חזור" ליצירת
+          דפוסים שונים. נסה לשנות את כל יתר הקוד כדי לצייר כל דבר אחר שאתה רוצה.
         maze_karel_1_1: . היי, אני חקלאי. אני זקוק לעזרתך כדי לשטח את השדה בחווה שלי
           על מנת להכין אותו לנטיעה. תקדם אותי אל ערימת העפר ותשתמש בבלוק "הסר" כדי
           להסיר אותו.
         maze_karel_1_2: עכשיו, תביא אותי לבור ותמלא אותו עם שני דליים של עפר, תוך
           שימוש בבלוק "למלא".
-        maze_karel_1_3: העבר אותי אל ערימת העפר, ותגיד לי כמה shovelfuls יש להסיר
-          על-ידי שימוש במספר הקטן ביותר של אבני בנייה.
-        maze_karel_1_4: 'תוכל לעזור לי להסיר את כל ארבע ערימות עפר? רמז: השתמש באבן
-          בנייה לפעולה שחוזרת על עצמה אם אתה יכול.'
-        maze_karel_1_5: 'עזור לי למלא את כל הבורות האלו עם shovelfuls 5 של עפר. רמז:
-          את יכולה להשתמש באבן בנייה "פעולה חוזרת" בתוך אבן הבנייה "תוך כדי".'
-        maze_karel_1_6: הסר את כל ערימות העפר, באמצעות אבני בנייה מעטות ככל האפשר.
-          האפשרויות החדשות בתפריט הנפתח על אבן הבנייה "תוך כדי" תאמר לי אם אני עומדת
-          על ערימה או חור.
+        maze_karel_1_3: העבר אותי אל ערימת העפר, ותגיד לי כמה דליים צריך כדי להסיר
+          תוך כדי שימוש במספר הקטן ביותר של בלוקים.
+        maze_karel_1_4: 'תוכל לעזור לי להסיר את כל ארבע ערימות העפר? רמז: השתמש בבלוק
+          לפעולה שחוזרת על עצמה אם אתה יכול.'
+        maze_karel_1_5: 'עזור לי למלא את כל הבורות האלו עם 5 דליים של עפר. רמז: אתה
+          יכול להשתמש בבלוק "פעולה חוזרת" בתוך בלוק "כל עוד".'
+        maze_karel_1_6: הסר את כל ערימות העפר באמצעות מספר בלוקים מועט ככל האפשר.
+          האפשרויות החדשות בתפריט הנפתח בבלוק "כל עוד" יעזרו לי לבדוק האם אני עומדת
+          על ערימה או על בור.
         maze_karel_1_7: וואו, מצאתי בור ממש עמוק! איני יודע כמה דליים של עפר אני צריך.
           האם אתה יכול לכתוב תוכנית תמלא את הבור עד שהאדמה תהיה מאוזנת?
-        maze_karel_1_8: עזור לי למלא את החור בקצה של השדה, באמצעות אבני בנייה מעטות
-          ככל האפשר.
-        maze_karel_1_9: 'גרום לי להסיר את כל ערימות העפר האלו. נסה להשתמש באבני בנייה
-          מעטות ככל האפשר. רמז: נסה להשתמש באבן הבנייה "תוך כדי".'
+        maze_karel_1_8: עזור לי למלא את הבור בקצה השדה, באמצעות בלוקים מעטים ככל האפשר.
+        maze_karel_1_9: 'גרום לי להסיר את כל ערימות העפר האלו. נסה להשתמש בבלוקים
+          מעטים ככל האפשר. רמז: נסה להשתמש בבלוק "כל עוד".'
         maze_karel_1_10: אני עובד עד מאוחר, כך שבחוץ חשוך ואני לא יכול לומר עד כמה
-          גדולות ערימות העפר האלו. כעת, אין לי את כל האפשרויות שהיו לי במסגרת אבן
-          הבנייה "תוך כדי". הזז אותי לאורך המגרש ואם ישנה ערמת עפר הזז אותה מהדרך.
+          גדולות ערימות העפר האלו. כעת, אין לי את כל האפשרויות שהיו לי בבלוק "כל עוד".
+          הזז אותי לאורך השדה ואם ישנה ערימת עפר הסר אותה מהדרך.
         maze_karel_1_11: 'עדיין חשוך בחוץ. הזז אותי לאורך המגרש. אם ישנה ערמת עפר
-          הסר אותה, ואם ישנו חור, מלא אותו בעפר. רמז: השתמש בתפריט האפשרויות הנפתח
-          באבן הבנייה "אם".'
+          הסר אותה, ואם ישנו בור, מלא אותו בעפר. רמז: השתמש בתפריט האפשרויות הנפתח
+          של הבלוק "אם".'
         turtle_2_1: 'שלום. אני אומן זומבי. אני אוהב לצייר! עזור לי לצייר ריבוע בצבע
-          מיוחד. הערה חשובה: יש לך את אותם אבני בנייה אבל כעת הן מסודרות בקטגוריות.'
-        turtle_2_2: ברוכים הבאים לשימוש בפונקציות., אשר ייתנו לך את האפשרות להגדיר
-          אבני בנייה חדשות! נסו את אבן הבנייה "צייר ריבוע", היא נמצאת בקטגורית הפונקציות,
-          כדי לצייר ריבוע קטן ירוק 50X50.
+          מיוחד. הערה חשובה: יש לך את אותם בלוקים אבל כעת הם מסודרים בקטגוריות.'
+        turtle_2_2: ברוכים הבאים לשימוש בפונקציות. הפונקציות יאפשרו לך להגדיר בלוקים
+          חדשים! נסו את הבלוק "צייר ריבוע", הוא נמצא בקטגורית הפונקציות, כדי לצייר
+          ריבוע קטן ירוק בגודל 50X50.
         turtle_2_3: תשתמש בבלוק "חזור שוב" (בקטגוריית חזרות) על מנת לצייר 3 מרובעים
           בגודל 100, כל אחד במרחק 120 מעלות מהשני. עשה זאת בשלושה צבעים אקראיים.
         turtle_2_4: 'עכשיו אנחנו הולכים להשביח את הקוד. נשנה את הקוד כדי לייצור 36
@@ -178,11 +176,11 @@ he:
         turtle_2_5: צייר מס' ריבועים עם צלעות ברוחב של 50, 60, 70, 80, ו-90 פיקסלים
           בכל פעם. תצטרך להשתמש בפונקציות "צייר ריבוע" חמש פעמים.
         turtle_2_6: 'בסדר, תכנית זו תשתמש במונה, כדי לצייר את אותם הריבועים כמו בפעם
-          הקודמת. אתה רוצה שהריבוע יהיה באותו הגודל כמו המונה, לכן השתמש באבן בנייה
-          "מונה". רמז: הוא נמצא בקטגוריות המשתנים. '
-        turtle_2_7: הנה תכנית ליצירת ספירלה, אבל אבני הבנייה מנוטרלות ולכן לא יריצו
-          אותה. צור תכנית חדשה על ידי השימוש באבן בנייה "ספור עם"(בקטגורית לופים)
-          ובאבן בנייה "מונה" (בקטגורית משתנים) על-מנת לצייר את אותה הספירלה.
+          הקודמת. אתה רוצה שהריבוע יהיה באותו הגודל כמו המונה, לכן השתמש בבלוק "מונה"
+          (counter). רמז: הוא נמצא בקטגוריות המשתנים.'
+        turtle_2_7: הנה תכנית ליצירת ספירלה, אבל הבלוקים מנוטרלים ולכן התכנית לא תרוץ.
+          צור תכנית חדשה על ידי השימוש בבלוק "עבור" (בקטגורית לולאות) ובבלוק "מונה"
+          (בקטגורית משתנים) על-מנת לצייר את אותה הספירלה.
         turtle_2_7_5: ישנה פונקציה חדשה בשם "צייר איש שלג"(בקטגורית הפונקציות). צייר
           שני אנשי שלג, האחד בגובה 250 והשני בגובה 100.
         turtle_2_8: זה אחד קצת מטעה. השתמש בפונקציה "צייר איש שלג" ובבלוק החדשה "קפוץ
@@ -196,7 +194,7 @@ he:
           את כל הבורות באדמה. נסה להשתמש בלולאות במקום להשתמש ביותר מדי בלוקים. רמז:
           אתה יכול לשים לולאה בתוך לולאה.'
         maze_karel_2_2: אנחנו הגדרנו את הבלוק שלנו שנקרא "מלא 5", שעכשיו בקטגוריית
-          הפונקציות. השתמש בזה כדי לעזור לי למלא את החור הזה.
+          הפונקציות. השתמש בזה כדי לעזור לי למלא את הבור הזה.
         maze_karel_2_3: השתמש בפונקציה החדשה "מלא 5" כדי לגרום לי למלא את כל הבורות.
           תצטרך לגרור את הבלוק "מלא 5" מתוך קטגוריית הפונקציות.
         maze_karel_2_4: הגדר פונקציה חדשה שמסירה 7 דליים. אז השתמש בזה כדי לכתוב תוכנה
@@ -230,9 +228,8 @@ he:
           אחר-כך, צייר משולשים בגדלים שונים. (רמז: לחץ על הכוכב כדי להוסיף קלט לפונקציה)'
         turtle_3_7: הוסף קלט בשם "אורך" ל"צייר בית" ובנה בית גדול לפיל (עם צדדים באורך
           150 פיקסלים)
-        turtle_3_8: להלן כל הבלוקים של החידה הקודמת.  שנה את "צייר בית" כך שאני אסיים
-          בפינה הימנית התחתונה לאחר ציור בית חדש. השתמש בפונקציה ששונתה כדי לצייר
-          שלושה בתים.
+        turtle_3_8: Modify "draw a house" so I end up at the bottom right corner after
+          drawing a new house. Use this modified function to draw three houses.
         turtle_3_9: האם תוכל ליצור מחדש את פונקציית "צייר בית" ללא עזרה? נסה את זה
           ולאחר מכן צייר שורת בתים.
         turtle_3_10: למדת הרבה! עתה השתמש בזה כדי לצייר את מה שאתה רוצה. נסה לצייר
@@ -245,7 +242,7 @@ he:
         maze_karel_debug_repeat: נפה את התוכנה הזאת בשבילי כדי שהשדה שלי יהיה ישר
           וחלק.
         maze_karel_debug_while: כיצד תוכל לשנות את התוכנית בשביל שתוכל לעזור לי למלא
-          את החור?
+          את הבור?
         maze_karel_debug_if: עזרה! תקן את התוכנית בשביל שהחלקה שלי תהיה ישרה לחלוטין.
         maze_karel_debug_if_else: נפה את התוכנה הזאת בשבילי כדי שאוכל למלא את הבורות
           ולהסיר את כל הערימות.
@@ -304,13 +301,12 @@ he:
           / למטה / ימינה/שמאלה כדי להגיע לכל המטרות?
         studio_c2_7: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have the penguin say "Ouch!" and play a "hit" sound if
-          he runs into the dinosaur, and then move him with the arrows to make that
-          happen?
-        studio_c2_9: Can you add a block to score a point when the penguin runs into
-          the octopus, and then move him with the arrows until you score?
+        studio_c2_8: Can you have Waddles say "Ouch!" and play a "hit" sound if he
+          runs into the dinosaur, and then move him with the arrows to make that happen?
+        studio_c2_9: Can you add a block to score a point when Waddles runs into the
+          octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of
-          the penguin, and then move him with the arrows until you score?
+          Waddles, and then move him with the arrows until you score?
         studio_c2_11: Create your own story. When you're done, click Finish to let
           friends try your story on their phones.
         studio_c3_story_1: Can you make this dog say "hello world"?
@@ -328,13 +324,13 @@ he:
           למעלה / למטה / ימינה/שמאלה כדי להגיע לכל המטרות?
         studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have the penguin say "Ouch!" and play a "hit" sound
+        studio_c3_game_4: Can you have Waddles say "Ouch!" and play a "hit" sound
           if he runs into the dinosaur, and then move him with the arrows to make
           that happen?
-        studio_c3_game_5: Can you add a block to score a point when the penguin runs
-          into the octopus, and then move him with the arrows until you score?
+        studio_c3_game_5: Can you add a block to score a point when Waddles runs into
+          the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Can you add blocks to change the background and the speed
-          of the penguin, and then move him with the arrows until you score?
+          of Waddles, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
         studio_playlab_1: פינגווין רוצה לומר "שלום" - יכולים לעזור לו?
@@ -358,15 +354,15 @@ he:
         studio_playlab_10: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
         studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
+          you help him say "hello" by dragging the "say" block out into the work area
           and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
+        studio_iceage_hello2: Manny (actor 1) found Sid (actor 2) and wants to invite
+          him on the adventure. Help them greet each other by using the the "actor
           say" block twice.
         studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
           last 200 pixels using the "move" block.
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          2). Help Diego move 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
           when they find each other.
         studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
@@ -384,8 +380,8 @@ he:
           event to make it so that you both play a sound and score a point when Sid
           and Granny collide? Press Run to play the game.
         studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
+          is coming! Change the background to an icy background and set Sid’s speed
+          to fast, then press Run and move him to Diego to warn him.
         studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
           that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
           hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
@@ -397,12 +393,12 @@ he:
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
         studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
+          are heading to school.  Help them greet each other by using the "actor say"
+          block twice.
         studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
           him go the last 200 pixels using the "move" block.
         studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          for the field day! Help Gumball move 200 pixels down to Darwin using the
           "move actor" block.  Next, connect a block to the "when actor touches" event
           to play a sound when they find each other.
         studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
@@ -470,7 +466,7 @@ he:
         if_else: בלוק אם/אחרת
         if_else_scrat: בלוק אם/אחרת
         function: פונקציות
-        loop_while: בלוק בעת
+        loop_while: בלוק "כל עוד"
         loop_for: בלוק ספירה
         parameters: פונקציות ופרמטרים
         hoc_wrapup: סיום שעה של קוד
@@ -525,7 +521,7 @@ he:
         C3_bee_conditionals: Bee Conditionals
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: בעוד לולאות
+        C3_farmer_while: לולאות "כל עוד"
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
         C3_bounce: להקפיץ
@@ -583,7 +579,7 @@ he:
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
         csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
         csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
@@ -739,6 +735,11 @@ he:
         CSF_loops_AB: לולאות
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

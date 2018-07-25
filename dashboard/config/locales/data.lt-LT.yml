@@ -30,11 +30,11 @@ lt:
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
         Wordsearch: Žodžių paieška
-        Webapp: Programėlių laboratorija
+        Webapp: App Lab
         ArtistEC: Menininkas
         TextMatch: Teksto Atitikmuo
         StudioEC: Laboratorija
-        Applab: Programėlių laboratorija
+        Applab: App Lab
         NetSim: Interneto simuliatorius
         Custom: Menininkas
         CustomStudio: Laboratorija
@@ -392,15 +392,15 @@ lt:
         studio_playlab_10: Sukurk savo žaidimą. Kai baigsi, nuspausk „Baigti“ ir duok
           draugams išmėginti žaidimą savo telefonuose.
         studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
+          you help him say "hello" by dragging the "say" block out into the work area
           and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
+        studio_iceage_hello2: Manny (actor 1) found Sid (actor 2) and wants to invite
+          him on the adventure. Help them greet each other by using the the "actor
           say" block twice.
         studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
           last 200 pixels using the "move" block.
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          2). Help Diego move 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
           when they find each other.
         studio_iceage_repeat: Blokelis „kartok visada“ leis vykdyti nurodytus veiksmus
@@ -417,8 +417,8 @@ lt:
           kodą ir prie blokelio „kai veikėjas liečia“ pridėti tinkamus blokelius taip,
           kad susidūrus senutei ir Sidui, būtų grojamas garsas ir gaunamas taškas?
         studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
+          is coming! Change the background to an icy background and set Sid’s speed
+          to fast, then press Run and move him to Diego to warn him.
         studio_iceage_throw_hearts: Sidas nori, kad jo močiutė sužinotų, kad jis ją
           myli. Panaudok komandą „veikėjas meta“, kad Sidas (veikėjas 1) mestų širdeles
           į močiutę (veikėjas 2)! Nustatyk močiutės nuotaiką į laimingą, kai ją palies
@@ -430,12 +430,12 @@ lt:
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
         studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the the "actor
-          say" block twice.
+          are heading to school.  Help them greet each other by using the "actor say"
+          block twice.
         studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
           him go the last 200 pixels using the "move" block.
         studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
-          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          for the field day! Help Gumball move 200 pixels down to Darwin using the
           "move actor" block.  Next, connect a block to the "when actor touches" event
           to play a sound when they find each other.
         studio_gumball_repeat: Blokelis „kartok visada“ leis vykdyti nurodytus veiksmus
@@ -621,7 +621,7 @@ lt:
         infinity_playlab_events: Žaidimų laboratorija – įvykiai
         infinity_playlab_repeat_forever: Žaidimų laboratorija – amžinas kartojimas
         csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
         csd_concept_binary_data: 'How Computers Work: Binary & Data'
         csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
         csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
@@ -777,6 +777,11 @@ lt:
         CSF_loops_AB: Kartojimas
         csd_gamelab_booleans: Boolean Expressions
         csd_gamelab_conditional_statements: Conditional Statements
+        csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
+        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
+        CDEF_Video_SpritesInAction: Sprites in Action
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat

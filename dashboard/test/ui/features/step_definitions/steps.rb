@@ -8,11 +8,9 @@ MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rg
 
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
-    begin
-      yield
-    rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
-      false
-    end
+    yield
+  rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+    false
   end
 end
 
@@ -80,6 +78,18 @@ When /^I go to the newly opened tab$/ do
   # Wait for Safari to finish switching to the new tab. We can't wait_short
   # because @browser.title takes 30 seconds to timeout.
   wait_until {@browser.title rescue nil}
+end
+
+When /^I open a new tab$/ do
+  @browser.execute_script('window.open();')
+end
+
+When /^I close the current tab$/ do
+  @browser.close
+end
+
+When /^I switch to tab index (\d+)$/ do |tab_index|
+  @browser.switch_to.window(@browser.window_handles[tab_index.to_i])
 end
 
 When /^I switch to the first iframe$/ do
@@ -260,13 +270,11 @@ When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ 
   end
 
   page_load(load) do
-    begin
-      @element.click
-    rescue
-      # Single retry to compensate for element changing between find and click
-      @element = @browser.find_element(:css, selector)
-      @element.click
-    end
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
   end
 end
 
@@ -275,13 +283,11 @@ When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector,
     @element = @browser.find_element(:css, selector)
   end
   page_load(load) do
-    begin
-      @element.click
-    rescue
-      # Single retry to compensate for element changing between find and click
-      @element = @browser.find_element(:css, selector)
-      @element.click
-    end
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
   end
 end
 
@@ -362,6 +368,15 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
   # editor is open, the first if it isn't
+  @browser.execute_script(
+    "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
+    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))"
+  )
+rescue
   script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
     "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
   @browser.execute_script(script)
@@ -371,6 +386,14 @@ And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # jQuery needs \\s to allow :s and .s in ID selectors
   # Escaping those gives us \\\\ per-character
   category_selector = "#\\\\:#{id}\\\\.label"
+  @browser.execute_script(
+    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))"
+  )
+rescue
   @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
 end
 
@@ -418,14 +441,12 @@ When /^I click selector "([^"]*)" once I see it$/ do |selector|
 end
 
 When /^I click selector "([^"]*)" if I see it$/ do |selector|
-  begin
-    wait_until(5) do
-      @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
-    end
-    @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
-  rescue Selenium::WebDriver::Error::TimeOutError
-    # Element never appeared, ignore it
+  wait_until(5) do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
+  @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
+rescue Selenium::WebDriver::Error::TimeOutError
+  # Element never appeared, ignore it
 end
 
 When /^I focus selector "([^"]*)"$/ do |jquery_selector|
@@ -647,10 +668,6 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
 
-Then /^element "([^"]*)" exists/ do |selector|
-  expect(element_exists?(selector)).to eq(true)
-end
-
 Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
 end
@@ -779,14 +796,12 @@ end
 
 def wait_for_jquery
   wait_until do
-    begin
-      @browser.execute_script("return (typeof jQuery !== 'undefined');")
-    rescue Selenium::WebDriver::Error::ScriptTimeOutError
-      puts "execute_script timed out after 30 seconds, likely because this is \
+    @browser.execute_script("return (typeof jQuery !== 'undefined');")
+  rescue Selenium::WebDriver::Error::ScriptTimeOutError
+    puts "execute_script timed out after 30 seconds, likely because this is \
 Safari and the browser was still on about:blank when wait_for_jquery \
 was called. Ignoring this error and continuing to wait..."
-      false
-    end
+    false
   end
 end
 
@@ -1401,14 +1416,6 @@ Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
     return document.querySelectorAll('.uitest-owned-sections tbody tr').length;
   SCRIPT
   expect(row_count.to_i).to eq(expected_row_count.to_i)
-end
-
-Then /^the section table row at index (\d+) has grade "([^"]+)"$/ do |row_index, expected_grade|
-  field_cell = @browser.execute_script(
-    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(2)');"
-  )
-  actual_grade = field_cell.first.text
-  expect(actual_grade).to eq(expected_grade)
 end
 
 Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|

@@ -85,12 +85,13 @@ it:
     facebook: 'Facebook'
     windowslive: 'Account Microsoft'
     clever: 'Account Clever'
-    powerschool: 'Powerschool Account'
+    powerschool: 'Account Powerschool'
     forgot_password: 'Hai dimenticato la tua password?'
     need_confirmation: "Non hai ricevuto le istruzioni di conferma?"
     need_unlock: "Non hai ricevuto le istruzioni di sblocco?"
     not_linked: "Purtroppo il tuo account Code.org non è collegato al tuo %{provider}. Dovrai accedere digitando la password qui sotto."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "Purtroppo il tuo account Code.org non è collegato al tuo %{provider}. Per favore, accedi dal portale Clever."
+    unable_to_connect_provider: "Impossibile collegare il tuo account Code.org con il tuo %{provider}. Per favore, riprova più tardi."
   signup_form:
     student_count: '%{count} studenti si sono già iscritti.'
     teacher_count: '%{count} insegnanti si sono già iscritti.'
@@ -182,7 +183,7 @@ it:
       email: 'Indirizzo di posta elettronica'
       submit: 'Invia'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Completa il CAPTCHA per impostare una nuova password.'
       invalid_email: 'Sembra tu ti sia loggato con un indirizzo email non valido. Invia una mail a support@code.org per ricevere il link per il recupero della password.'
     change_form:
       title: 'Cambia la tua password'
@@ -360,10 +361,12 @@ it:
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email} non è stato confermato:'
     email_confirm_wrong_email: '(Indirizzo di posta elettronica sbagliato?)'
     email_resend_confirm: 'Reinvia le istruzioni di conferma'
+    new_email_hint: '(assicurarti di poter ricevere messaggi a questo indirizzo email)'
     new_password_hint: "(lascialo vuoto se non vuoi cambiarlo)"
     current_password_hint: '(inserisci la tua password corrente per confermare i cambiamenti)'
     delete: 'Elimina il tuo account'
     delete_text: "Cliccando sul pulsante qua sotto elimini il tuo account."
+    delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
     delete_text_teacher_note: "Nota che eliminando il tuo account non verranno eliminati gli account dei tuoi studenti."
     delete_confirm: 'Sei sicuro di voler eliminare il tuo account?'
     deleted_user: 'utente eliminato'
@@ -380,6 +383,7 @@ it:
     confirm_secret_words: 'Conferma la tua identità inserendo le tue parole segrete'
     enter_parent_email: "Inserisci l'email del tuo genitore o tutore (per il recupero della password)"
     update: "Aggiorna Account"
+    account_successfully_updated: "Account aggiornato con successo."
   user_level:
     completed: 'Completato'
     tried: 'Provato'
@@ -447,8 +451,8 @@ it:
     announcement_csf_pilot: "<strong>Insegnanti di scuola elementare:</strong> Partecipate all'aggiornamento dei nostri corsi di Fondamenti di Informatica! Cerchiamo insegnanti per guidare un curriculum di Fondamenti di Informatica durante l'inverno e primavera del 2017. Non vediamo l'ora di ascoltare il tuo feedback prima che questi aggiornamenti vengano applicati ad Agosto 2017."
     announcement_student_privacy: "In Code.org prendiamo la privacy dei nostri studenti molto seriamente. Per proteggere la privacy dei tuoi studenti, abbiamo apportato modifiche alla pagina di accesso della tua sezione per evitare di mostrare i nomi completi. Sebbene questo aggiornamento dovrebbe ridurre le preoccupazioni circa la privacy per la pagina di accesso, invitiamo ancora gli utenti a <i>non usare nomi per gli studenti</i>."
     announcement_apcsp_recruitment: "<strong>Insegnanti di Principi di Informatica:</strong> I tuoi studenti potrebbero figurare nel prossimo video virale di Code.org incoraggiando gli studenti all'esame di Principi di Informatica di quest'anno. Stiamo invitando tutti gli studenti di Principi di Informatica ad inviare a una clip video di 10-20 secondi su Twitter, Instagram, o Facebook dicendo \"Sto sostenendo l'esame di #PrincipiDiInformatica perché...\". I migliori compariranno nel nostro video e gli studenti vincitori riceveranno il premio Code.org!"
-    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
-    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
+    announcement_apcsp_recruitment2: "Quest'anno si aspettano numeri da record all'esame avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata, ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti di Principi d'Informatica a sostenere l'esame. Per ringraziarti, ti <a href='%{gift_url}' target='_blank'>manderemo un regalo</a>. Gli studenti possono anche incoraggiare i compagni in tutto il Paese con la nostra <a href='%{challenge_url}' target='_blank'>#APCSP video sfida</a>."
+    announcement_apcsp_recruitment3: "Quest'anno si aspettano numeri da record all'esame avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata, ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti di Principi d'Informatica a sostenere l'esame e potresti vincere <a href='%{gift_url}' target='_blank'>una carta regalo, un laptop, o un altro bel regalo</a>! Condividi <a href='%{video_url}' target='_blank'>questo video</a> acciocché i tuoi studenti possano sentire l'incoraggiamento di altri studenti in tutto il Paese già iscritti all'esame."
     announcement_csp_deadline: "Richiamo finale per gli insegnanti di scuola superiore! Prendi il comando dell'Informatica nella tua scuola e metti in pratica i nostri programmi di apprendimento professionali e di alta qualità <strong>senza assolutamente nessun costo per te e la tua scuola</strong>. Le richiesti di partecipazione si chiudono il 14 Aprile."
     announcement_applab_export: "Sviluppo App, il nostro ambiente di programmazione basato sul web, ora supporta l'esportazione di codice! È possibile iniziare a creare App lavorando con i blocchi, quindi esportare il codice per modificarlo in qualsiasi ambiente di sviluppo professionale desiderato."
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
@@ -863,13 +867,13 @@ it:
     practice: 'Pratiche d''insegnante'
     peer_review: 'Valutazioni dei parigrado'
     ramp_up: 'Ramp-Up'
-    end_of_course_project: 'End of Course Project'
+    end_of_course_project: 'Progetto di Fine Corso'
     optional_stages: 'Optional Stages'
     main_course: 'Corso principale'
-    extra_course_content: 'Contenuti extra corso'
-    csf_e_1: 'Approfondimenti al Corso E (facoltativo)'
+    extra_course_content: 'Contenuti supplementari'
+    csf_e_1: 'Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)'
     csf_e_2: 'Contenuti del Corso E'
-    csf_f_1: 'Approfondimenti al Corso F (facoltativo)'
+    csf_f_1: 'Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi precedenti)'
     csf_f_2: 'Contenuti del Corso F'
     csd1_1: 'Capitolo 1: il Problem Solving'
     csd1_2: 'Capitolo 2: Computers e Problem Solvig'
@@ -897,7 +901,7 @@ it:
     csp_ap_1: 'Capitolo 1: Installazione di AP Tech'
     csp_ap_2: 'Capitolo 2: AP analizzare il Task Performance'
     csp_ap_3: 'Capitolo 3: AP creare il Task Performance'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
+    csp_postap_1: 'Capitolo 1: Manipolare e visualizzare dati'
     csp_postap_2: 'Chapter 2: Apps and Databases'
     csp2_1_2018: 'Unità 2: Informazioni digitali'
     csp3_1_2018: 'Unit 3: Intro to Programming'
@@ -970,6 +974,7 @@ it:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
+  stage_extras_teacher_message: "In alcune delle tue classi, gli Esercizi Supplementari sono disabilitati. Se non li abiliti, i tuoi studenti non potranno vedere queste pagine. Puoi gestire queste abilitazioni dalla tua <a href='http://code.org/teacher-dashboard'>pagina di controllo</a>."
   locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
   hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
   hidden_script: "Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore, chiedigli in quale lezione dovresti essere."
@@ -1005,6 +1010,100 @@ it:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+    form_labels:
+      first_name: 'Nome'
+      first_name_preferred: 'Nome preferito'
+      last_name: 'Cognome'
+      email: 'Indirizzo di posta elettronica'
+      email_alternate: 'Email alternativa'
+      gender: 'Identità di genere'
+      school_name: 'Nome della scuola'
+      school_city: 'Città della scuola'
+      school_country: 'Paese della Scuola'
+      ages: 'Qual è l''età degli studenti a cui insegni quest''anno?'
+      subjects: 'Quali materie insegni quest''anno?'
+      resources: 'Quali delle seguenti risorse di informatica utilizzi?'
+      robotics: 'Quali delle seguenti risorse di robotica utilizzi?'
+      workshop_organizer: 'Organizzatore del laboratorio'
+      workshop_facilitator: 'Moderatore del laboratorio'
+      workshop_course: 'Laboratorio'
+      email_opt_in: 'Acconsento che Code.org condivida i miei dati personali e i dati aggregati delle mie classi con il Partner Internazionale di Code.org nel mio paese.'
+      legal_opt_in: 'Inviando questo modulo, acconsenti che Code.org condivida i tuoi dati di utilizzo di Code.org e le risorse relative al Professional Learning con il Partner Internazionale di Code.org nel tuo paese, distretti scolastici e facilitatori. Condivideremo con questi partner i tuoi dati personali, quali corsi/lezioni stai usando e i dati aggregati delle tue classi. Ciò comprende il numero di studenti delle tue classi, la relativa situazione demografica e il nome della tua scuola. Non condivideremo alcun dato personale degli studenti con i nostri partner: tutti i dati degli studenti verranno resi anonimi e aggregati. I nostri Partner Internazionali e i facilitatori sono contrattualmente tenuti a trattare questi dati con il medesimo livello di confidenzialità di Code.org.'
+    form_entries:
+      gender:
+        male: 'Maschile'
+        female: 'Femminile'
+        non_binary: 'Non-binario'
+        not_listed: 'Preferred term not listed'
+        none: 'Preferisco non rispondere'
+      school_country:
+        canada: 'Canada'
+        chile: 'Cile'
+        israel: 'Israele'
+        malaysia: 'Malesia'
+        mexico: 'Messico'
+        thailand: 'Tailandia'
+      ages:
+        ages_under_6: 'Fino a 6 anni'
+        ages_7_8: '7 -8 anni'
+        ages_9_10: '9-10 anni'
+        ages_11_12: '11-12 anni'
+        ages_13_14: '13-14 anni'
+        ages_15_16: '15-16 anni'
+        ages_17_18: '17-18 anni'
+        ages_19_over: 'Più di 18 anni'
+      subjects:
+        cs: 'Informatica'
+        ict: 'Informatica'
+        math: 'Matematica'
+        science: 'Scienza'
+        history: 'Storia'
+        la: 'Linguaggi Artistici'
+        efl: 'Inglese come lingua straniera'
+        music: 'Musica'
+        art: 'Arte'
+        other: "Altro:"
+      resources:
+        bootstrap: 'Bootstrap'
+        codecademy: 'CodeCademy - l''Accademia del Codice'
+        csfirst: 'Google CS First'
+        khan: 'Khan Academy'
+        kodable: 'Kodable'
+        lightbot: 'Lightbot'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "Altro:"
+      robotics:
+        grok: 'Grok Learning'
+        kodable: 'Kodable'
+        lego: 'LEGO Education'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        wonder: 'Wonder Workshop'
+        other: "Altro:"
+      workshop_course:
+        csf_af: 'Fondamenti di Informatica (Corsi A-F)'
+        csf_express: 'Fondamenti di Informatica (Corsi rapidi)'
+        csd: 'CS Discoveries'
+        csp: '''16-''17 principi d''informatica'
+      email_opt_in:
+        opt_in_yes: 'Sì'
+        opt_in_no: 'No'
+    international_opt_in:
+      title: 'Workshop Attendance'
+      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
+      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
+      thanks: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a> or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher forum</a>!"
+    logged_out:
+      heading: 'Thanks for your interest in the Professional Learning Program!'
+      body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
+    not_teacher:
+      body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
+      more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
+    no_teacher_email:
+      body: 'Al tuo account non è associato alcun indirizzo email. Per favore, prima di completare questo modulo, <a href="%{user_registration}">vai alle impostazioni del tuo account</a> per aggiungere i tuoi indirizzi email.'
   courses_category: 'Corsi Avanzati'
   cookie_banner:
     message: 'Continuando a navigare nel nostro sito o cliccando su "Accetto", accetti la memorizzazione dei cookie sul tuo computer o dispositivo.'

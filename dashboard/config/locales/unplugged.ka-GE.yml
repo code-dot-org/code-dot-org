@@ -289,23 +289,23 @@ ka:
         desc: ამ გაკვეთილში თქვენ `დააპროპგრამებთ` მეგობრებთან ერთად!
       courseB_unplugged_loopyMRF:
         title: აქტივობა უკომპიუტეროდ
-        desc: ზუსტად ისე, როგორც "ჩემს რობოტულ მეგობრებში" თქვენ "დააპროგრამებთ" თქვენს
-          მეგობრებთან ერთად, თუმცა ამჯერად ციკლების საშუალებით!
+        desc: ზუსტად ისე, როგორც "ჩემს რობოტულ მეგობრებში", თქვენ "დააპროგრამებთ"
+          თქვენს მეგობრებთან ერთად, თუმცა ამჯერად ციკლების საშუალებით!
       courseC_Unplugged_ScreenOutTheMean:
         title: აქტივობა უკომპიუტეროდ
         desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ
-          ონლაინში.
+          ონლაინ.
       courseD_unplugged_digitalCitizenship:
         title: აქტივობა უკომპიუტეროდ
-        desc: დღეს თქვენ გაიგებთ თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა.
+        desc: დღეს თქვენ გაიგებთ, თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა.
       courseE_unplugged_privateInformation:
         title: 'სტანდარტული უნარების კურსი: კონფიდენციალური და პირადი ინფორმაცია '
-        desc: დღეს თქვენ ისწავლით განსხვავებას კონფიდენციალური და პირადი ინფორმაციის
+        desc: დღეს თქვენ ისწავლით განსხვავებას კონფიდენციალურ და პირად ინფორმაციას
           შორის!
       courseF_unplugged_powerOfWords:
         title: აქტივობა უკომპიუტეროდ
         desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ
-          ონლაინში.
+          ონლაინ.
       deeper learning description:
         title: ''
         desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.desc'
@@ -463,44 +463,44 @@ ka:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: ჩემი რობოტი-მეგობრები
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       DiceRace_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Internet_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
         desc: ამ გაკვეთილში ნაჩვენებია, თუ როგორ ვიყენებთ ალგორითმებს ყოველდღიურ ცხოვრებაში,
@@ -529,11 +529,11 @@ ka:
           (მითითებების სიას), რათა თავიანთ კლასელებს ნახატი დაახატვინონ.
       courseD_unplugged_digitalCitizenship_2018:
         title: აქტივობა უკომპიუტეროდ
-        desc: დღეს თქვენ გაიგებთ თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა.
+        desc: დღეს თქვენ გაიგებთ, თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: აქტივობა უკომპიუტეროდ
         desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ
-          ონლაინში.
+          ონლაინ.
       Conditionals_2018:
         title: პირობითი ბრძანებები
         desc: 'პირობითი ბრძანებების სასწავლად მოსწავლეები თამაშობენ კარტს და ქმნიან

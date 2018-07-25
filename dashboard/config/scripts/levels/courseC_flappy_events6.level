@@ -40,6 +40,7 @@
     "markdown_instructions": "Click the down arrow inside of the `flap a normal amount` block to pick a different flapping power.  \r\n\r\nSee if you can still score a point after making Flappy flap either a smaller or larger amount each time you click.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try connecting the `flap a ____ amount` block to the `when click` event.\",\"hint_id\":\"courseC_flappy_events6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/678b9515d180327ba1c2f9f1c036d81a/courseC_flappy_events6.mp3\"}]",
     "project_template_level_name": "courseC_flappy_events_template",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

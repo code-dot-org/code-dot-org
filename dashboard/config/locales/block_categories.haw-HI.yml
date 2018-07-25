@@ -29,9 +29,10 @@ haw:
       Numbers: Numbers
       Input: Input
       Default: Default
+      World: World
       Sprites: Sprites
       Behaviors: Behaviors
-      World: World
+      Advanced: Advanced
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite

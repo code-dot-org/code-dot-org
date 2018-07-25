@@ -1,4 +1,5 @@
 require 'google/apis/classroom_v1'
+require 'honeybadger'
 
 class ApiController < ApplicationController
   layout false
@@ -108,10 +109,6 @@ class ApiController < ApplicationController
     @user_header_options[:show_pairing_dialog] = show_pairing_dialog
     @user_header_options[:session_pairings] = session[:pairings]
     @user_header_options[:loc_prefix] = 'nav.user.'
-  end
-
-  def user_hero
-    head :not_found unless current_user
   end
 
   def update_lockable_state
@@ -252,8 +249,6 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    data = {}
-
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
     page = [params[:page].to_i, 1].max
@@ -268,17 +263,43 @@ class ApiController < ApplicationController
     end
 
     # Get the level progress for each student
-    paged_students.each do |student|
-      data[student.id] = user_progress_for_levels(script, student)
-    end
     render json: {
-      students: data,
+      students: script_progress_for_users(paged_students, script),
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
         per: per,
       }
     }
+  end
+
+  # Get level progress for a set of users within this script.
+  # @param [Enumerable<User>] users
+  # @param [Script] script
+  # @return [Hash]
+  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
+  #   {
+  #     "1": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     },
+  #     "2": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     }
+  #   }
+  private def script_progress_for_users(users, script)
+    user_levels = User.user_levels_by_user_by_level(users, script)
+    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
+    users.inject({}) do |progress_by_user, user|
+      progress_by_user[user.id] = merge_user_progress_by_level(
+        script: script,
+        user: user,
+        user_levels_by_level: user_levels[user.id],
+        paired_user_levels: paired_user_levels_by_user[user.id]
+      )
+      progress_by_user
+    end
   end
 
   def student_progress
@@ -400,119 +421,6 @@ class ApiController < ApplicationController
     end.flatten
 
     render json: data
-  end
-
-  # For each student, return an array of each long-assessment LevelGroup in progress or submitted.
-  # Each such array contains an array of individual level results, matching the order of the LevelGroup's
-  # levels.  For each level, the student's answer content is in :student_result, and its correctness
-  # is in :correct.
-  # TODO(caleybrock): remove once the assessments tab is in react
-  def section_assessments
-    section = load_section
-    script = load_script(section)
-
-    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
-
-    data = section.students.map do |student|
-      student_hash = {id: student.id, name: student.name}
-
-      level_group_script_levels.map do |script_level|
-        next unless script_level.long_assessment?
-
-        # Don't allow somebody to peek inside an anonymous survey using this API.
-        next if script_level.anonymous?
-
-        # Get the UserLevel for the last attempt.  This approach does not check
-        # for the script and so it'll find the student's attempt at this level for
-        # any script in which they have encountered that level.
-        last_attempt = student.last_attempt_for_any(script_level.levels)
-
-        # Get the LevelGroup itself.
-        level_group = last_attempt.try(:level) || script_level.oldest_active_level
-
-        # Get the response which will be stringified JSON.
-        response = last_attempt.try(:level_source).try(:data)
-
-        next unless response
-
-        # Parse the response string into an object.
-        response_parsed = JSON.parse(response)
-
-        # Summarize some key data.
-        multi_count = 0
-        multi_count_correct = 0
-
-        # And construct a listing of all the individual levels and their results.
-        level_results = []
-
-        level_group.levels.each do |level|
-          if level.is_a? Multi
-            multi_count += 1
-          end
-
-          level_response = response_parsed[level.id.to_s]
-
-          level_result = {}
-
-          if level_response
-            case level
-            when TextMatch, FreeResponse
-              student_result = level_response["result"]
-              level_result[:student_result] = student_result
-              level_result[:correct] = "free_response"
-            when Multi
-              answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes
-              student_result = level_response["result"].split(",").sort.join(",")
-
-              # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-              level_result[:student_result] = student_result.split(',').map {|k| Multi.value_to_letter(k.to_i)}.join(', ')
-
-              if student_result == "-1"
-                level_result[:student_result] = ""
-                level_result[:correct] = "unsubmitted"
-              elsif student_result == answer_indexes
-                multi_count_correct += 1
-                level_result[:correct] = "correct"
-              else
-                level_result[:correct] = "incorrect"
-              end
-            end
-          else
-            level_result[:correct] = "unsubmitted"
-          end
-
-          level_results << level_result
-        end
-
-        submitted = last_attempt[:submitted]
-        timestamp = last_attempt[:updated_at].to_formatted_s
-
-        {
-          student: student_hash,
-          stage: script_level.stage.localized_title,
-          puzzle: script_level.position,
-          question: level_group.properties["title"],
-          url: build_script_level_url(script_level, section_id: section.id, user_id: student.id),
-          multi_correct: multi_count_correct,
-          multi_count: multi_count,
-          submitted: submitted,
-          timestamp: timestamp,
-          level_results: level_results
-        }
-      end.compact
-    end.flatten
-
-    render json: data
-  end
-
-  # Return results for surveys, which are long-assessment LevelGroup levels with the anonymous property.
-  # At least five students in the section must have submitted answers.  The answers for each contained
-  # sublevel are shuffled randomly.
-  def section_surveys
-    section = load_section
-    script = load_script(section)
-
-    render json: LevelGroup.get_survey_results(script, section)
   end
 
   private

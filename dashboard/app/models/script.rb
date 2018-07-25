@@ -135,6 +135,7 @@ class Script < ActiveRecord::Base
     stage_extras_available
     has_verified_resources
     has_lesson_plan
+    curriculum_path
     script_announcements
     version_year
     is_stable
@@ -217,7 +218,7 @@ class Script < ActiveRecord::Base
     if user_experiments_enabled
       scripts = scripts.map do |script|
         alternate_script = script.alternate_script(user)
-        alternate_script.present? ? alternate_script : script
+        alternate_script.presence || script
       end
     end
 
@@ -354,7 +355,7 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id_or_name, version_year: nil)
+  def self.get_without_cache(id_or_name)
     # Also serve any script by its new_name, if it has one.
     script = id_or_name && Script.find_by(new_name: id_or_name)
     return script if script
@@ -368,8 +369,8 @@ class Script < ActiveRecord::Base
 
     unless is_id
       # We didn't find a script matching id_or_name. Next, look for a script
-      # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2017.
-      script_with_redirect = Script.get_script_family_redirect(id_or_name, version_year: version_year)
+      # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2018.
+      script_with_redirect = Script.get_script_family_redirect(id_or_name)
       return script_with_redirect if script_with_redirect
     end
 
@@ -383,37 +384,30 @@ class Script < ActiveRecord::Base
   #   get_from_cache('11') --> script_cache['11'] = <Script id=11, name=...>
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
   #   get_from_cache('csp1') --> script_cache['csp1'] = <Script redirect_to="csp1-2018">
-  #   get_from_cache('csp1', version_year: '2017') --> script_cache['csp1/2017'] = <Script redirect_to="csp1-2017">
   #
   # @param id_or_name [String|Integer] script id, script name, or script family name.
-  # @param version_year [String] If specified, when looking for a script to redirect
-  #   to within a script family, redirect to this version rather than the latest.
-  def self.get_from_cache(id_or_name, version_year: nil)
-    return get_without_cache(id_or_name, version_year: version_year) unless should_cache?
-    cache_key_suffix = version_year ? "/#{version_year}" : ''
-    cache_key = "#{id_or_name}#{cache_key_suffix}"
-    script_cache.fetch(cache_key) do
+  def self.get_from_cache(id_or_name)
+    return get_without_cache(id_or_name) unless should_cache?
+    script_cache.fetch(id_or_name.to_s) do
       # Populate cache on miss.
-      script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year)
+      script_cache[id_or_name.to_s] = get_without_cache(id_or_name)
     end
   end
 
   # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family, or to a specific
-  # version_year if one is specified.
+  # pointing toward the latest stable script in that family.
   # @param family_name [String] The name of the script family to search in.
-  # @param version_year [String] Version year to return. Optional.
   # @return [Script|nil] A dummy script object, not persisted to the database,
   #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil)
-    scripts =
+  def self.get_script_family_redirect(family_name)
+    script_name =
       Script.
         where(family_name: family_name).
         all.
         select(&:is_stable).
-        sort_by(&:version_year)
-    scripts.select! {|s| s.version_year == version_year} if version_year
-    script_name = scripts.last.try(:name)
+        sort_by(&:version_year).
+        last.
+        try(:name)
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
@@ -474,6 +468,48 @@ class Script < ActiveRecord::Base
     ScriptConstants.script_in_category?(:minecraft, name)
   end
 
+  def k5_draft_course?
+    ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
+  def csf_international?
+    ScriptConstants.script_in_category?(:csf_international, name)
+  end
+
+  def k5_course?
+    (
+      Script::CATEGORIES[:csf_international] +
+      Script::CATEGORIES[:csf] +
+      Script::CATEGORIES[:csf_2018]
+    ).include? name
+  end
+
+  def csf?
+    k5_course? || twenty_hour?
+  end
+
+  def cs_in_a?
+    name.match(Regexp.union('algebra', 'Algebra'))
+  end
+
+  def k1?
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
+      Script::COURSE1_NAME
+    ].include?(name)
+  end
+
+  def beta?
+    Script.beta? name
+  end
+
+  def self.beta?(name)
+    name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
   def get_script_level_by_id(script_level_id)
     script_levels.find {|sl| sl.id == script_level_id.to_i}
   end
@@ -506,24 +542,6 @@ class Script < ActiveRecord::Base
     end
 
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
-  end
-
-  def beta?
-    Script.beta? name
-  end
-
-  def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft'
-  end
-
-  def k1?
-    [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::COURSE1_NAME
-    ].include?(name)
   end
 
   private def csf_tts_level?
@@ -576,37 +594,24 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def k5_course?
-    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef express pre-express).include? name
-  end
-
-  def k5_draft_course?
-    %w(coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include? name
-  end
-
-  def csf?
-    k5_course? || twenty_hour?
-  end
-
-  def csf_international?
-    %w(course1 course2 course3 course4).include? name
-  end
-
-  def cs_in_a?
-    name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
   def has_lesson_pdf?
-    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
+    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
 
-    k5_course? || %w(csp1-2017 csp2-2017 csp3-2017 cspunit1 cspunit2 cspunit3).include?(name)
+    k5_course? || [
+      Script::CSP17_UNIT1_NAME,
+      Script::CSP17_UNIT2_NAME,
+      Script::CSP17_UNIT3_NAME,
+      Script::CSP_UNIT1_NAME,
+      Script::CSP_UNIT2_NAME,
+      Script::CSP_UNIT3_NAME,
+    ].include?(name)
   end
 
   def freeplay_links
@@ -635,13 +640,15 @@ class Script < ActiveRecord::Base
 
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this script.
-  def has_other_version_progress?(user)
-    return nil unless user && family_name
+  def has_older_version_progress?(user)
+    return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Script.
       # select only scripts in the same script family.
       where(family_name: family_name).
+      # select only older versions.
+      where("properties -> '$.version_year' < ?", version_year).
       # exclude the current script.
       where.not(id: id).
       # select only scripts which the user has progress in.
@@ -1039,8 +1046,10 @@ class Script < ActiveRecord::Base
       }
     end
 
-    has_other_course_progress = course.try(:has_other_version_progress?, user)
-    has_other_script_progress = has_other_version_progress?(user)
+    has_older_course_progress = course.try(:has_older_version_progress?, user)
+    has_older_script_progress = has_older_version_progress?(user)
+    user_script = user && user_scripts.find_by(user: user)
+
     summary = {
       id: id,
       name: name,
@@ -1064,10 +1073,11 @@ class Script < ActiveRecord::Base
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
       has_lesson_plan: has_lesson_plan?,
+      curriculum_path: curriculum_path,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
-      show_course_unit_version_warning: has_other_course_progress,
-      show_script_version_warning: !has_other_course_progress && has_other_script_progress,
+      show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
+      show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
     }
 
@@ -1175,7 +1185,8 @@ class Script < ActiveRecord::Base
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
       has_lesson_plan: !!script_data[:has_lesson_plan],
-      script_announcements: script_data[:script_announcements],
+      curriculum_path: script_data[:curriculum_path],
+      script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
     }.compact
@@ -1238,7 +1249,8 @@ class Script < ActiveRecord::Base
   # Get all script levels that are level groups, and return a list of those that are
   # not anonymous assessments.
   def get_assessment_script_levels
-    level_group_script_levels = script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
-    level_group_script_levels.select {|script_level| script_level.long_assessment? && !script_level.anonymous?}
+    script_levels.select do |sl|
+      sl.levels.first.is_a?(LevelGroup) && sl.long_assessment? && !sl.anonymous?
+    end
   end
 end
