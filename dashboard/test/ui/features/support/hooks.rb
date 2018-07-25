@@ -50,10 +50,8 @@ After do
 end
 
 Around do |_, block|
-  begin
-    block.call
-  rescue Selenium::WebDriver::Error::TimeOutError => e
-    check_window_for_js_errors('after timeout')
-    raise e
-  end
+  block.call
+rescue Selenium::WebDriver::Error::TimeOutError => e
+  check_window_for_js_errors('after timeout')
+  raise e
 end

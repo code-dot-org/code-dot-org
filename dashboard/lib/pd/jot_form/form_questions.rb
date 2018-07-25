@@ -13,6 +13,10 @@ module Pd
         @questions_by_name = questions.index_by(&:name)
       end
 
+      def question_ids
+        @questions_by_id.keys
+      end
+
       # Construct from an array of serialized questions (hashes)
       # @param form_id [Integer]
       # @param serialized_questions [Array<Hash>]

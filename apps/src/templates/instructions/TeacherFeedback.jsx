@@ -1,27 +1,12 @@
 import React, {PropTypes, Component} from 'react';
 import { connect } from 'react-redux';
-import color from "../../util/color";
 import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
-import FeedbacksList from './FeedbacksList';
+import moment from "moment/moment";
+import queryString from 'query-string';
 
 const styles = {
-  container: {
-    margin: 20,
-    borderWidth: 5,
-    borderStyle: 'solid',
-    borderColor: color.cyan,
-    backgroundColor: color.lightest_cyan,
-    borderRadius: 5
-  },
-  header: {
-    color: color.white,
-    backgroundColor: color.cyan,
-    padding: 5,
-    fontSize: 18,
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
   content: {
     padding: 10
   },
@@ -37,6 +22,12 @@ const styles = {
   errorIcon: {
     color: 'red',
     margin: 10
+  },
+  time:{
+    margin: 10,
+    fontStyle: 'italic',
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 
@@ -59,8 +50,8 @@ class TeacherFeedback extends Component {
 
   constructor(props) {
     super(props);
-    const search = window.location.search;
-    const studentId = search.split('&')[1].split("=")[1];
+    //Pull the student id from the url
+    const studentId = queryString.parse(window.location.search).user_id;
 
     this.state = {
       comment: "",
@@ -80,7 +71,8 @@ class TeacherFeedback extends Component {
     }).done((data, textStatus, request) => {
       this.setState({
         latestFeedback: request.status === 204 ? [] : [data],
-        token: request.getResponseHeader('csrf-token')
+        token: request.getResponseHeader('csrf-token'),
+        comment: request.status === 204 ? "" : data.comment
       });
     }).fail((jqXhr, status) => {
       this.setState({errorState: ErrorType.Load});
@@ -126,12 +118,15 @@ class TeacherFeedback extends Component {
       return null;
     }
 
-    const buttonDisabled = this.state.comment.length <= 0 || this.state.submitting || this.state.errorState === ErrorType.Load;
+    const latestFeedback = this.state.latestFeedback.length > 0 ? this.state.latestFeedback[0] : null;
+    const feedbackUnchanged = (latestFeedback && this.state.comment === latestFeedback.comment);
 
-    // Placeholder for upcoming feedback input
+    const buttonDisabled = feedbackUnchanged || this.state.submitting || this.state.errorState === ErrorType.Load;
+    const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
+    const placeholderText = latestFeedback ? latestFeedback.comment : i18n.feedbackPlaceholder();
+
     return (
-      <div style={styles.container}>
-        <div style={styles.header}>{i18n.forTeachersOnly()}</div>
+      <div>
         {!this.props.withUnreleasedFeatures &&
           <div style={styles.content}>
             Coming soon: You’ll be able to use this tab to give feedback to your students about their work.
@@ -139,14 +134,9 @@ class TeacherFeedback extends Component {
         }
         {this.props.withUnreleasedFeatures &&
           <div>
-            {this.state.latestFeedback.length > 0 &&
-              <FeedbacksList
-                feedbacks={this.state.latestFeedback}
-              />
-            }
             {this.state.errorState === ErrorType.Load &&
               <span>
-                <i className="fa fa-warning" style={styles.errorIcon}></i>
+                <i className="fa fa-warning" style={styles.errorIcon}/>
                 {i18n.feedbackLoadError()}
               </span>
             }
@@ -154,23 +144,30 @@ class TeacherFeedback extends Component {
               id="ui-test-feedback-input"
               style={styles.textInput}
               onChange={this.onCommentChange}
-              type="text"
-              placeholder={i18n.feedbackPlaceholder()}
+              placeholder={placeholderText}
+              value={this.state.comment}
             />
-            <div style={styles.button}>
-              <Button
-                id="ui-test-submit-feedback"
-                text={i18n.saveAndShare()}
-                onClick={this.onSubmitFeedback}
-                color={Button.ButtonColor.blue}
-                disabled={buttonDisabled}
-              />
-              {this.state.errorState === ErrorType.Save &&
-                <span>
-                  <i className="fa fa-warning" style={styles.errorIcon}></i>
-                  {i18n.feedbackSaveError()}
-                </span>
+            <div style={styles.footer}>
+              {this.state.latestFeedback.length > 0 &&
+                <div style={styles.time}>
+                  {i18n.lastUpdated({time: moment(latestFeedback.created_at).fromNow()})}
+                </div>
               }
+              <div style={styles.button}>
+                <Button
+                  id="ui-test-submit-feedback"
+                  text={buttonText}
+                  onClick={this.onSubmitFeedback}
+                  color={Button.ButtonColor.blue}
+                  disabled={buttonDisabled}
+                />
+                {this.state.errorState === ErrorType.Save &&
+                  <span>
+                    <i className="fa fa-warning" style={styles.errorIcon}/>
+                    {i18n.feedbackSaveError()}
+                  </span>
+                }
+              </div>
             </div>
           </div>
         }

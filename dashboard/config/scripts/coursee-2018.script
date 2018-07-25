@@ -1,5 +1,6 @@
 hidden false
 hideable_stages true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursee/standards/"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursee/{LESSON}'
@@ -129,7 +130,7 @@ stage 'Private and Personal Information', flex_category: 'csf_e_2'
 level 'courseE_unplugged_privateInformation_2018'
 
 stage 'Build a Star Wars Game', flex_category: 'csf_e_2'
-level 'bb8_skinOverview_C-F_video'
+level 'courseE_video_StarWarsProject'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video'
 skin 'hoc2015'

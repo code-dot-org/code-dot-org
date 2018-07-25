@@ -10,6 +10,8 @@
 #  pd_workshop_id :integer          not null
 #  answers        :text(65535)
 #  day            :integer          not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 # Indexes
 #
@@ -39,7 +41,14 @@ module Pd
       }
     end
 
-    before_validation :set_day_from_form_id, if: -> {day.nil?}
+    # @override
+    def map_answers_to_attributes
+      super
+
+      # Make sure we have a day, in case the form doesn't provide it
+      set_day_from_form_id if day.nil?
+    end
+
     def set_day_from_form_id
       self.day = self.class.get_day_for_form_id(form_id)
     end
@@ -71,30 +80,8 @@ module Pd
       end
     end
 
-    def self.response_exists?(user_id:, pd_workshop_id:, day:, form_id:)
-      exists?(
-        user_id: user_id,
-        pd_workshop_id: pd_workshop_id,
-        day: day,
-        form_id: form_id
-      )
-    end
-
-    def self.create_placeholder!(user_id:, pd_workshop_id:, day:, form_id:, submission_id:)
-      find_or_create_by!(
-        user_id: user_id,
-        pd_workshop_id: pd_workshop_id,
-        day: day,
-        form_id: form_id,
-        submission_id: submission_id
-      )
-    end
-
-    # @override
-    def duplicate?
-      # See if this user already has a submission for this workshop, day, & form.
-      # Note: this duplicate record would fail the uniqueness validation
-      self.class.exists?(attributes.slice(:user_id, :pd_workshop_id, :day, :form_id))
+    def self.unique_attributes
+      [:user_id, :pd_workshop_id, :day]
     end
   end
 end

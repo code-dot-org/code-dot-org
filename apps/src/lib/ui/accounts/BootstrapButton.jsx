@@ -13,12 +13,26 @@ const styles = {
   },
 };
 
+const BUTTON_TYPE = {
+  DANGER: 'danger',
+};
+
 export default class BootstrapButton extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onClick: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    type: PropTypes.oneOf(Object.values(BUTTON_TYPE)),
+  };
+
+  buttonClasses = () => {
+    switch (this.props.type) {
+      case BUTTON_TYPE.DANGER:
+        return 'btn btn-danger';
+      default:
+        return 'btn';
+    }
   };
 
   render() {
@@ -26,7 +40,7 @@ export default class BootstrapButton extends React.Component {
 
     return (
       <button
-        className="btn"
+        className={this.buttonClasses()}
         style={{...styles.button, ...style}}
         onClick={onClick}
         tabIndex="1"

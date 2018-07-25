@@ -130,14 +130,18 @@ module Pd
         included_answers = jotform_submission['answers'].select do |answer_id, answer_data|
           next false unless answer_data.key? 'answer'
 
-          # We have seen (matrix) answers sometimes show up with a false value, and don't know how to interpret that
+          # We have seen (matrix) answers sometimes show up with a false or null value,
+          # and don't know how to interpret those.
           # See https://www.jotform.com/answers/1482175-API-Integration-Matrix-answer-returning-false-in-the-API#1
-          if answer_data['answer'] == false
+          if answer_data['answer'] == false || answer_data['answer'].nil?
             # For now, ignore / skip these
             # TODO(Andrew): update after followup with JotForm API support
-            CDO.log.warn "Encountered JotForm false answer, id #{answer_id} in submission: #{submission_id}"
+            CDO.log.warn "Encountered JotForm false or null answer, id #{answer_id} in submission: #{submission_id}"
             next false
           end
+
+          # Skip empty answers
+          next false if answer_data['answer'].blank?
 
           true
         end

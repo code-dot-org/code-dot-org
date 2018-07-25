@@ -105,11 +105,9 @@ def main
   # Run the build command and exit if it didn't do anything.
   status = 0
   log = RakeUtils.capture do
-    begin
-      status = build
-    rescue => e
-      status = "Error: #{e.message}\n#{CDO.backtrace e}"
-    end
+    status = build
+  rescue => e
+    status = "Error: #{e.message}\n#{CDO.backtrace e}"
   end
   return status if status == 0 && log.empty?
 

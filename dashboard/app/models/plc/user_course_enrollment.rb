@@ -80,7 +80,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
       courseName: plc_course.name,
       link: Rails.application.routes.url_helpers.course_path(plc_course.get_url_name),
       status: status,
-      courseUnits: plc_unit_assignments.map do |unit_assignment|
+      courseUnits: plc_unit_assignments.sort_by {|a| a.plc_course_unit.unit_order || 0}.map do |unit_assignment|
         {
           unitName: unit_assignment.plc_course_unit.unit_name,
           link: Rails.application.routes.url_helpers.script_path(unit_assignment.plc_course_unit.script),

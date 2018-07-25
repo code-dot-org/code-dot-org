@@ -5,24 +5,24 @@ video_player: true
 ---
 <a id="top"></a>
 
-<p align="center"><img src="/images/fit-970/forum-banner1.png"></p> 
+<p align="center"><img style="max-width: 100%" src="/images/fit-970/forum-banner.png"></p>
 
 
 ## Join Us September 27-28, 2018
 
-The annual State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year's forum is co-hosted by [Code.org](https://code.org/promote) and the Computer Science Teachers Association ([CSTA](https://www.csteachers.org/)). 
+The annual State Policy Forum brings together legislators, education officials, state advocates, industry, national organizations, and representatives from state executive offices committed to K-12 computer science education. This year's forum is co-hosted by [Code.org](https://code.org/promote) and the Computer Science Teachers Association ([CSTA](https://www.csteachers.org/)).
 
 The forum is composed of two experiences, a pre-forum for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) immediately followed by a main forum for all participants. Join us for lively discussions on policy and implementation, hands-on workshops, flash talks, and unique networking opportunities. The forum takes place at the [JW Marriott Denver Cherry Creek](http://www.jwmarriottdenver.com/").
 
-The **pre-forum** begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon. 
- 
-The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 4:00 pm on Friday, September 28. 
+The **pre-forum** begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon.
+
+The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 4:00 pm on Friday, September 28.
 
 ## Application Details
 
-* The pre-forum is for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) and those interested in [joining](https://bit.ly/joinadvocacycoalition) the advocacy coalition. 
+* The pre-forum is for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) and those interested in [joining](https://bit.ly/joinadvocacycoalition) the advocacy coalition.
 * All may apply to attend the main forum and applications will be approved on a rolling basis. Space is limited, so apply soon.
-* Conference fees and meals during the forum are provided at no-cost for participants by Code.org, but **travel, lodging, and expenses will be the responsibility of the attendee**. 
+* Conference fees and meals during the forum are provided at no-cost for participants by Code.org, but **travel, lodging, and expenses will be the responsibility of the attendee**.
 * A limited number of scholarships are available based on need and can be requested in the application form.
 * The application deadline is **August 3, 2018**.
 
@@ -52,12 +52,12 @@ The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 
   <br>
 ### Pre-Forum Workshop (Code.org Advocacy Coalition members)
 
-The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. Sessions include: 
- 
+The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. Sessions include:
+
 * The Advocacy Year in Review and Year Ahead
 * State of Your State
 * Workshops: Funding Advocacy, Grassroots, Communications, Legislation 101
-* Networking 
+* Networking
 * Team Planning Time
 
 </p>
@@ -68,10 +68,10 @@ The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the op
   <summary>**What is the schedule for the main forum?**</summary>
   <p>
   <br>
-### Main Forum (All Participants) 
- 
-The main forum begins at 3:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 4:00 pm on Friday, September 28. Sessions include: 
- 
+### Main Forum (All Participants)
+
+The main forum begins at 3:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 4:00 pm on Friday, September 28. Sessions include:
+
 * The State of K-12 CS
 * Flash Talks: Data and Accountability, Reaching Rural Areas, Certification, Managing Grant Programs, State and Local Boards, Legislative Successes/Failures
 * Workshops: Standards, State Plan, Legislation, Microcredentials, Advocacy
@@ -92,7 +92,7 @@ The main forum begins at 3:00 pm on Thursday, September 27 following the pre-for
 <a href="http://www.jwmarriottdenver.com/", target=_"blank">JW Marriott Denver Cherry Creek</a>
 <br> 150 Clayton Lane
 <br> Denver, Colorado 80206
-  
+
 </p>
 </details>
 
@@ -100,7 +100,7 @@ The main forum begins at 3:00 pm on Thursday, September 27 following the pre-for
 <summary>**Should I reserve my own flights?**</summary>
   <p>
   <br>
-  Yes. All approved participants, unless receiving a scholarship, are responsible for booking their own flights and covering their own airfare. The Denver International Airport (airport code: DEN) is a large international airport that services non-stop flights from many cities around the nation. Forum sessions will begin on Thursday September 27 at 9:00 am for pre-forum attendees, while the main forum begins later at 3:00 pm. 
+  Yes. All approved participants, unless receiving a scholarship, are responsible for booking their own flights and covering their own airfare. The Denver International Airport (airport code: DEN) is a large international airport that services non-stop flights from many cities around the nation. Forum sessions will begin on Thursday September 27 at 9:00 am for pre-forum attendees, while the main forum begins later at 3:00 pm.
 
 </p>
 </details>
@@ -112,7 +112,7 @@ The main forum begins at 3:00 pm on Thursday, September 27 following the pre-for
   There are two options for reserving accommodations.
   <ul>
     <li>Code.org and the JW Marriott Denver Cherry Creek are pleased to offer a discounted rate of $199 per night (not including taxes and fees). If you would like to take advantage of the discounted rate, Code.org will make the reservation on your behalf, and you can pay the hotel by credit card at the end of your stay.</li>
-    <li> If you prefer to find accommodations at a different hotel, you will be responsible for making your own arrangements.</li> 
+    <li> If you prefer to find accommodations at a different hotel, you will be responsible for making your own arrangements.</li>
   </ul>
   <p>
   You can indicate your accommodation preferences on the <a href="https://goo.gl/forms/EFcuR6C9Tf6m26AM2" target=_"blank">application form</a>.
@@ -126,15 +126,15 @@ The main forum begins at 3:00 pm on Thursday, September 27 following the pre-for
   <br>
 The hotel is located 26 miles or about 35 min from the Denver International Airport (DEN).  Uber and Lyft both provide service in the Denver area including to/from the Denver International Airport via their mobile apps. Please call the hotel at (303) 316-2700 to inquire about town car or shuttle transportation services and fees.
 
-For more information on hotel directions or transportation, please visit the hotel's [website](http://www.jwmarriottdenver.com/Denver-Luxury-Hotel/Directions-87.html). 
-</p> 
+For more information on hotel directions or transportation, please visit the hotel's [website](http://www.jwmarriottdenver.com/Denver-Luxury-Hotel/Directions-87.html).
+</p>
 </details>
 
 <details>
 <summary>**What expenses are covered during the forum?**</summary>
   <p>
   <br>
-Code.org is happy to cover the costs of the following: 
+Code.org is happy to cover the costs of the following:
 
 * Registration fee for all participants accepted to the forum
 * Meals during the forum
@@ -171,11 +171,11 @@ Please bring your own laptop/tablet, as we will be accessing online resources. W
 
 
 ## Contact Us
-Email us at [events@code.org](mailto:events@code.org) with any questions or comments. 
+Email us at [events@code.org](mailto:events@code.org) with any questions or comments.
 
 <br>
 <br>
 [**Back to the top**](#top)
 <br/>
 
-  
+

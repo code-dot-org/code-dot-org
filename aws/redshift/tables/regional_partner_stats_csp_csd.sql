@@ -1,18 +1,3 @@
---CHANGES
--- addition of school years beyond 2017
--- removed 'location'
-
--- CHANGED DEPENDENCIES
--- before using this code to update analysis.regional_partner_stats_csp_csd, certain other tables need to have their names changed, and their references updated here
--- similarly, the tables analysis.teacher_most_progress and analysis.student_activity need to be updated and then their references in this file replaced with the originals
--- these two also need to be updated on Github
-
--- NOTES ON HOW TO UPDATE 
--- after updating at the dependencies listed above and noted with 'PUBLIC' in the code....
--- replace all instances of 'public.regional_partner_stats_csp_csd_test' with 'analysis.regional_partner_stats_csp_csd' and re-run table creation
--- this table will be generated daily from code hosted on github, so need to talk to Ben about how to update that process
-
-;
 drop table if exists analysis_pii.regional_partner_stats_csp_csd;
 
 create table analysis_pii.regional_partner_stats_csp_csd 

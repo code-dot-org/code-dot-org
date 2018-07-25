@@ -45,7 +45,7 @@ fil-PH:
     na makapag-aral ng computer science.
   og_description_celeb: Subukan ang mga bagong tutoryal, manalo ng isang celebrity
     video na chat para sa iyong sarili o sa iyong klase!
-  csedweek_og_title: The Hour of Code is here
+  csedweek_og_title: Computer Science Education Week
   csedweek_og_description: Ika 4-10 ng Disyembre, 2017. Ang computer science ay isang
     pundasyon na dapat pag-aralan ng bawat estudyante.
   csedweek_og_description_soon: Ang Hour of Code ay paparating na ngayong ika 4-10
@@ -544,7 +544,7 @@ fil-PH:
   playlab_iceage_title: Ice Age - Paparating Na
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Paglikha ng Galaxy sa pamamagitan ng Code
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Gamitin ang mga drag-drop na mga bloke at Javascript.
   starwars_javascript_specs: Englis lang | Modernong mga browser | Edad 11+
   starwars_blocks_title: Mga block
@@ -1332,9 +1332,9 @@ fil-PH:
   cspunit4_name: "(luma) Yunit 5: Datos"
   cspunit5_name: "(luma) Yunit 5: Pagtuklas at Paglikha ng PT"
   cspunit6_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Yunit 5: Mga Datos at Lipunan'
   csd6_name: 'Yunit 6: Pisikal na Computing'
@@ -1408,7 +1408,7 @@ fil-PH:
   csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: Internasyonal na CS Fundamentals
   csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: CS Discoveries ('17-'18)
   csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
   csp17_category_name: Mga Prinsipyo ng CS
@@ -2276,13 +2276,13 @@ fil-PH:
     ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa
     sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan
     mo na may mga sira na mga functionality.
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: flap
   infinity_shortcode: inf
-  playlab_shortcode: i-play
+  playlab_shortcode: lab
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: Aking Dashboard
