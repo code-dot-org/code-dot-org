@@ -1195,10 +1195,11 @@ GameLab.prototype.onP5ExecutionStarting = function () {
 GameLab.prototype.onP5Preload = function () {
   this.level.helperLibraries = this.level.helperLibraries || [];
 
-  this.loadLibraries_(this.level.helperLibraries).then(() => Promise.all([
+  Promise.all([
+      this.loadLibraries_(this.level.helperLibraries),
       this.preloadAnimations_(),
-      this.runPreloadEventHandler_()
-  ])).then(() => {
+  ]).then(() => this.runPreloadEventHandler_()
+  ).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
   });
   return false;
