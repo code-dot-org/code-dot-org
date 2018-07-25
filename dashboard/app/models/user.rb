@@ -1755,11 +1755,7 @@ class User < ActiveRecord::Base
   # users that don't have a password because they authenticate via oauth, secret
   # picture, or some other unusual method
   def can_edit_password?
-    if migrated?
-      !sponsored?
-    else
-      encrypted_password.present?
-    end
+    !sponsored?
   end
 
   # Whether the current user has permission to change their own account type
@@ -1805,6 +1801,18 @@ class User < ActiveRecord::Base
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
+  end
+
+  # Temporary: Allow single-auth students with no email to add a parent email
+  # so it's possible to add a recovery option to their account.  Once they are
+  # on multi-auth they can just add an email or another SSO, so this is no
+  # longer needed.
+  def can_add_parent_email?
+    student? && # only students
+      !can_create_personal_login? && # mutually exclusive with personal login UI
+      hashed_email.blank? && # has no email
+      parent_email.blank? && # or parent email
+      !migrated? # only for single-auth
   end
 
   def no_personal_email?
