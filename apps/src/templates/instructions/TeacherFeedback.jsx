@@ -28,6 +28,10 @@ const styles = {
     fontStyle: 'italic',
     display: 'flex',
     alignItems: 'center'
+  },
+  footer:{
+    display: 'flex',
+    justifyContent: 'flex-end'
   }
 };
 
