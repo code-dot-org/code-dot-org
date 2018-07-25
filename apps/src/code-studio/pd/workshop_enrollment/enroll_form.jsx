@@ -65,7 +65,8 @@ export default class EnrollForm extends React.Component {
     workshop_course: PropTypes.string,
     logged_in: PropTypes.bool,
     first_name: PropTypes.string,
-    email: PropTypes.string
+    email: PropTypes.string,
+    onSubmissionComplete: PropTypes.func
   };
 
   constructor(props) {
@@ -161,8 +162,14 @@ export default class EnrollForm extends React.Component {
       url: `/api/v1/pd/workshops/${this.props.workshop_id}/enrollments`,
       contentType: 'application/json',
       data: JSON.stringify(params),
-      complete: () => {
-        console.log('complete');
+      complete: (result) => {
+        this.props.onSubmissionComplete({
+          submissionStatus: result.responseJSON.submission_status,
+          cancelUrl: result.responseJSON.cancel_url,
+          accountExists: result.responseJSON.account_exists,
+          signUpUrl: result.responseJSON.sign_up_url,
+          workshopUrl: result.responseJSON.workshop_url
+        });
       }
     });
   }
