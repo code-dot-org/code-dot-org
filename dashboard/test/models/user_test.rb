@@ -1571,6 +1571,17 @@ class UserTest < ActiveSupport::TestCase
     refute student_with_oauth.teacher_managed_account?
   end
 
+  test 'teacher_managed_account? is true for student with no password in rostered section' do
+    google_sso_student = create :student, :unmigrated_google_sso, encrypted_password: nil
+
+    # join google classroom section
+    google_classroom_section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    create :follower, student_user: google_sso_student, section: google_classroom_section
+    google_sso_student.reload
+
+    assert google_sso_student.teacher_managed_account?
+  end
+
   test 'teacher_managed_account? is true for user account with password but no e-mail' do
     # These types of accounts happen when teachers created username/password accounts
     # without e-mails for students (this is no longer allowed)
@@ -1594,6 +1605,64 @@ class UserTest < ActiveSupport::TestCase
       student_without_password.reload
       assert student_without_password.teacher_managed_account?
     end
+  end
+
+  test 'roster_managed_account? is false for teacher' do
+    teacher = create :teacher
+    refute teacher.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student with more than one authentication option' do
+    student = create :student, :with_migrated_google_authentication_option
+    student.authentication_options << create(:authentication_option)
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student not in an externally rostered section' do
+    student = create :student, :with_migrated_google_authentication_option
+    section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is true for migrated student in an externally rostered section' do
+    student = create :student, :with_migrated_google_authentication_option
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    assert student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for unmigrated student in an externally rostered section with a password' do
+    student = create :student, :unmigrated_google_sso, encrypted_password: 'abcdef'
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for unmigrated student not in an externally rostered section' do
+    student = create :student, :unmigrated_google_sso
+    section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is true for unmigrated student in an externally rostered section without a password' do
+    student = create :student, :unmigrated_google_sso, encrypted_password: nil
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    assert student.roster_managed_account?
   end
 
   test 'update_with_password does not require current password for users without passwords' do

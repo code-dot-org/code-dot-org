@@ -1791,12 +1791,24 @@ class User < ActiveRecord::Base
 
   def teacher_managed_account?
     return false unless student?
+    # If student account is managed by a rostered section, it is teacher-managed
+    return true if roster_managed_account?
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
-    # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
+    # Lastly, we check for oauth.
     !oauth?
+  end
+
+  def roster_managed_account?
+    return false unless student?
+    if migrated?
+      return false unless authentication_options.one?
+      sections_as_student.any?(&:externally_rostered?)
+    else
+      sections_as_student.any?(&:externally_rostered?) && encrypted_password.blank?
+    end
   end
 
   def parent_managed_account?
