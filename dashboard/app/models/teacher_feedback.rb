@@ -26,7 +26,10 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :teacher, class_name: 'User'
 
   def self.latest_per_teacher
-    find(group(:teacher_id).maximum(:id).values)
+    feedbacks = find(group(:teacher_id).maximum(:id).values)
+
+    #Only select feedback from teachers who lead sections in which the student is still enrolled
+    feedbacks.select {|feedback| User.find_by(id: feedback.teacher_id).students.exists?(feedback.student_id)}
   end
 
   def self.latest
