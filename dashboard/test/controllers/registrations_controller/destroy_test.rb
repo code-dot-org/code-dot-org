@@ -69,5 +69,33 @@ module RegistrationsControllerTests
       end
       assert_response :success
     end
+
+    test "sends email when teacher destroyed in new flow" do
+      default_params = {
+        name: 'A name',
+        password: 'apassword',
+        email: 'an@email.address',
+        gender: 'F',
+        age: '21',
+        user_type: 'teacher'
+      }
+      teacher_params = default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+      assert_creates(User) do
+        post '/users', params: {user: teacher_params}
+      end
+
+      user = User.last
+      sign_in user
+      assert_destroys(User) do
+        delete '/users', params: {new_destroy_flow: true, password_confirmation: 'apassword'}
+      end
+
+      assert_equal 2, ActionMailer::Base.deliveries.length
+      mail = ActionMailer::Base.deliveries.last
+      assert_equal I18n.t('teacher_mailer.delete_teacher_subject'), mail.subject
+      assert_equal [user.email], mail.to
+      assert_equal ['noreply@code.org'], mail.from
+      assert_match 'Your account has been deleted', mail.body.encoded
+    end
   end
 end

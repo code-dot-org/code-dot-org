@@ -75,6 +75,7 @@ class RegistrationsController < Devise::RegistrationsController
         }, status: :bad_request
         return
       end
+      TeacherMailer.delete_teacher_email(current_user).deliver_now if current_user.teacher?
       current_user.destroy
       Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
       return head :no_content
