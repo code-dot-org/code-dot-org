@@ -242,6 +242,11 @@ FactoryGirl.define do
           user.reload
         end
       end
+
+      trait :without_email do
+        email ''
+        hashed_email nil
+      end
     end
 
     trait :unmigrated_sso do
