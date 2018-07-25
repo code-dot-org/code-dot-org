@@ -134,7 +134,7 @@ class RegistrationsController < Devise::RegistrationsController
         false
       end
 
-    successfully_updated = can_update && current_user.update(update_params(params_to_pass))
+    successfully_updated = can_update && current_user.update(upgrade_params(params_to_pass))
     has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
     success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
 
@@ -292,7 +292,18 @@ class RegistrationsController < Devise::RegistrationsController
       params[:user][:password].present?
   end
 
-  # Accept only whitelisted params for update.
+  # Accept only whitelisted params for update and upgrade.
+  def upgrade_params(params)
+    params.require(:user).permit(
+      :parent_email,
+      :email,
+      :hashed_email,
+      :password,
+      :password_confirmation,
+      :provider
+    )
+  end
+
   def update_params(params)
     params.require(:user).permit(
       :parent_email,
