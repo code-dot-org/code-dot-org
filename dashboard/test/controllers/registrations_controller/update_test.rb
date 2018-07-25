@@ -140,7 +140,7 @@ module RegistrationsControllerTests
       refute user.hashed_email == new_hashed_email
     end
 
-    test "single-auth student with no email or parent email can add a parent email" do
+    test "single-auth student can add a parent email" do
       # so it's possible to add a recovery option to their account.  Once they are
       # on multi-auth they can just add an email or another SSO, so this is no
       # longer needed.
