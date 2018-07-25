@@ -1210,9 +1210,13 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
   }
 };
 
+let libraryPreload;
 GameLab.prototype.loadLibraries_ = function (libraries) {
-  this.loadValidationCodeIfNeeded_();
-  return Promise.all(libraries.map(this.loadLibrary_.bind(this)));
+  if (!libraryPreload) {
+    this.loadValidationCodeIfNeeded_();
+    libraryPreload = Promise.all(libraries.map(this.loadLibrary_.bind(this)));
+  }
+  return libraryPreload;
 };
 
 GameLab.prototype.loadLibrary_ = function (name) {
