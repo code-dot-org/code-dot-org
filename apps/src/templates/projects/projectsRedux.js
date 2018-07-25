@@ -2,7 +2,7 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
 import { Galleries } from './projectConstants';
-
+import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 // Action types
 
 const TOGGLE_GALLERY = 'projects/TOGGLE_GALLERY';
@@ -91,6 +91,18 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       return {
         ...state,
         projects: action.personalProjectsList,
+      };
+    case PUBLISH_SUCCESS:
+      var channelOfInterest = action.lastPublishedProjectData.channel;
+
+      var publishedProjectIndex = state.projects.findIndex(project => project.channel === channelOfInterest);
+
+      var updatedProjects = state.projects;
+      updatedProjects[publishedProjectIndex].publishedAt = action.lastPublishedAt;
+
+      return {
+        ...state,
+        projects: updatedProjects
       };
     default:
       return state;

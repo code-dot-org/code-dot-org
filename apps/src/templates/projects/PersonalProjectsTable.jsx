@@ -115,7 +115,8 @@ const publishedAtFormatter = (publishedAt) => {
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
+    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
+    lastPublishedAt: PropTypes.string,
   };
 
   state = {
@@ -285,4 +286,5 @@ export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
 
 export default connect(state => ({
   personalProjectsList: state.projects.personalProjectsList.projects,
+  lastPublishedAt: state.publishDialog.lastPublishedAt
 }))(PersonalProjectsTable);
