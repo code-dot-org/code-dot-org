@@ -1791,8 +1791,6 @@ class User < ActiveRecord::Base
 
   def teacher_managed_account?
     return false unless student?
-    # If student account is managed by a rostered section, it is teacher-managed
-    return true if roster_managed_account?
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
@@ -2025,9 +2023,9 @@ class User < ActiveRecord::Base
   end
 
   def depends_on_teacher_for_login?
-    # Student depends on teacher for login if they do not have a personal login
+    # Student depends on teacher for login if their account is teacher-managed or roster-managed
     # and only have one teacher.
-    student? && can_create_personal_login? && teachers.uniq.one?
+    student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
   end
 
   private
