@@ -380,14 +380,14 @@ GameLab.prototype.init = function (config) {
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
-  ReactDOM.render((
+  return this.loadLibraries_().then(() => ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
       />
     </Provider>
-  ), document.getElementById(config.containerId));
+  ), document.getElementById(config.containerId)));
 };
 
 /**
@@ -1193,13 +1193,10 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  *         loading the game.
  */
 GameLab.prototype.onP5Preload = function () {
-  this.level.helperLibraries = this.level.helperLibraries || [];
-
   Promise.all([
-      this.loadLibraries_(this.level.helperLibraries),
       this.preloadAnimations_(),
-  ]).then(() => this.runPreloadEventHandler_()
-  ).then(() => {
+      this.runPreloadEventHandler_()
+  ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
   });
   return false;
@@ -1212,17 +1209,17 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
 };
 
 let libraryPreload;
-GameLab.prototype.loadLibraries_ = function (libraries) {
+GameLab.prototype.loadLibraries_ = function () {
   if (!libraryPreload) {
     this.loadValidationCodeIfNeeded_();
-    libraryPreload = Promise.all(libraries.map(this.loadLibrary_.bind(this)));
+    libraryPreload = Promise.all(this.level.helperLibraries.map(this.loadLibrary_.bind(this)));
   }
   return libraryPreload;
 };
 
 GameLab.prototype.loadLibrary_ = function (name) {
   if (this.libraries[name]) {
-    return;
+    return Promise.resolve();
   }
 
   return new Promise((resolve, error) => {
