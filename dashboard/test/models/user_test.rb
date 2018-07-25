@@ -1421,14 +1421,24 @@ class UserTest < ActiveSupport::TestCase
     assert student.sponsored?
   end
 
-  test 'can_edit_password? is true for user with password' do
-    assert @student.can_edit_password?
+  test 'can_edit_password? is true for user with or without a password' do
+    student1 = create :student
+    refute_empty student1.encrypted_password
+    assert student1.can_edit_password?
+
+    student1 = create :student, encrypted_password: ''
+    assert_empty student1.encrypted_password
+    assert student1.can_edit_password?
   end
 
-  test 'can_edit_password? is false for user without password' do
-    user = create :student
-    user.update_attribute(:encrypted_password, '')
-    refute user.can_edit_password?
+  test 'can_edit_password? is false for a sponsored student' do
+    student1 = create :student_in_picture_section
+    assert student1.sponsored?
+    refute student1.can_edit_password?
+
+    student2 = create :student_in_word_section
+    assert student2.sponsored?
+    refute student2.can_edit_password?
   end
 
   test 'can_edit_password? is true for migrated student without a password' do
