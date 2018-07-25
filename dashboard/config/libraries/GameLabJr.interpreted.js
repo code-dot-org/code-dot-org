@@ -317,7 +317,10 @@ function draw() {
       });
     });
 
-    var i, eventType, event, param;
+    var i;
+    var eventType;
+    var event;
+    var param;
 
     // Run key events
     for (i = 0; i < inputEvents.length; i++) {
