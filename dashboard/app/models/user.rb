@@ -1355,14 +1355,12 @@ class User < ActiveRecord::Base
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
-    section_courses.map do |course|
-      {
-        name: course[:name],
-        title: data_t_suffix('course.name', course[:name], 'title'),
-        description: data_t_suffix('course.name', course[:name], 'description_short'),
-        link: course_path(course),
-      }
-    end
+    section_courses.map(&:summarize_short)
+  end
+
+  # Returns the set of courses the user has been assigned to or has progress in.
+  def courses_as_student
+    scripts.map(&:course).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1391,7 +1389,7 @@ class User < ActiveRecord::Base
     primary_script_id = primary_script.try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
     user_scripts = in_progress_and_completed_scripts.
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
@@ -1413,7 +1411,9 @@ class User < ActiveRecord::Base
       end
     end.compact
 
-    assigned_courses + user_script_data
+    user_course_data = courses_as_student.map(&:summarize_short)
+
+    user_course_data + user_script_data
   end
 
   # Figures out the unique set of courses assigned to sections that this user
@@ -1725,6 +1725,16 @@ class User < ActiveRecord::Base
       authentication_options.empty? && encrypted_password.blank?
     else
       provider == PROVIDER_SPONSORED
+    end
+  end
+
+  def should_see_edit_email_link?
+    if migrated?
+      # Hide from students with no password (i.e., oauth-only and sponsored students)
+      # since we do not store their cleartext email address and email is not used for login.
+      can_edit_email? && !(student? && encrypted_password.blank?)
+    else
+      can_edit_email? && !oauth?
     end
   end
 
