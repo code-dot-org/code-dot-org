@@ -5,6 +5,7 @@ import {stubFakePersonalProjectData} from './generateFakeProjects';
 export default storybook => {
   storybook
     .storiesOf('Projects/PersonalProjectsTable', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'Personal Project Table',

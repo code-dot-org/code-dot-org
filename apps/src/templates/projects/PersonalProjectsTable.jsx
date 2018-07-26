@@ -11,9 +11,8 @@ import {
   personalProjectDataPropType,
   FEATURED_PROJECT_TYPE_MAP,
 } from './projectConstants';
-import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
+import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -69,9 +68,6 @@ export const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
-  xIcon: {
-    paddingRight: 5,
-  },
 };
 
 // Cell formatters.
@@ -96,40 +92,11 @@ const nameFormatter = (projectName, {rowData}) => {
 
 const actionsFormatter = (actions, {rowData}) => {
   return (
-    <QuickActionsCell>
-      <PopUpMenu.Item
-        onClick={() => console.log("Rename was clicked")}
-      >
-        {i18n.rename()}
-      </PopUpMenu.Item>
-      <PopUpMenu.Item
-        onClick={() => console.log("Remix was clicked")}
-      >
-        {i18n.remix()}
-      </PopUpMenu.Item>
-      {!!rowData.isPublished && (
-        <PopUpMenu.Item
-          onClick={() => console.log("Unpublish was clicked")}
-        >
-          {i18n.unpublish()}
-        </PopUpMenu.Item>
-      )}
-      {!rowData.isPublished && (
-        <PopUpMenu.Item
-          onClick={() => console.log("Publish was clicked")}
-        >
-          {i18n.publish()}
-        </PopUpMenu.Item>
-      )}
-      <MenuBreak/>
-      <PopUpMenu.Item
-        onClick={() => console.log("Delete was clicked")}
-        color={color.red}
-      >
-        <FontAwesome icon="times-circle" style={styles.xIcon}/>
-        {i18n.delete()}
-      </PopUpMenu.Item>
-    </QuickActionsCell>
+    <PersonalProjectsTableActionsCell
+      isPublished = {!!rowData.publishedAt}
+      projectId = {rowData.channel}
+      projectType = {rowData.type}
+    />
   );
 };
 
@@ -148,7 +115,7 @@ const publishedAtFormatter = (publishedAt) => {
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
+    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
   };
 
   state = {
