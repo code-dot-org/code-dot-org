@@ -1211,6 +1211,7 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
 let libraryPreload;
 GameLab.prototype.loadLibraries_ = function () {
   if (!libraryPreload) {
+    this.level.helperLibraries = this.level.helperLibraries || [];
     this.loadValidationCodeIfNeeded_();
     libraryPreload = Promise.all(this.level.helperLibraries.map(this.loadLibrary_.bind(this)));
   }
