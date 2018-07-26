@@ -1795,23 +1795,30 @@ class User < ActiveRecord::Base
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
-    # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
+    # Lastly, we check for oauth.
     !oauth?
+  end
+
+  def roster_managed_account?
+    return false unless student?
+    if migrated?
+      return false unless authentication_options.one?
+      sections_as_student.any?(&:externally_rostered?)
+    else
+      sections_as_student.any?(&:externally_rostered?) && encrypted_password.blank?
+    end
   end
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
   end
 
-  # Temporary: Allow single-auth students with no email to add a parent email
-  # so it's possible to add a recovery option to their account.  Once they are
-  # on multi-auth they can just add an email or another SSO, so this is no
-  # longer needed.
+  # Temporary: Allow single-auth students to add a parent email so it's possible
+  # to add a recovery option to their account.  Once they are on multi-auth they
+  # can just add an email or another SSO, so this is no longer needed.
   def can_add_parent_email?
     student? && # only students
       !can_create_personal_login? && # mutually exclusive with personal login UI
-      hashed_email.blank? && # has no email
-      parent_email.blank? && # or parent email
       !migrated? # only for single-auth
   end
 
@@ -2013,9 +2020,9 @@ class User < ActiveRecord::Base
   end
 
   def depends_on_teacher_for_login?
-    # Student depends on teacher for login if they do not have a personal login
+    # Student depends on teacher for login if their account is teacher-managed or roster-managed
     # and only have one teacher.
-    student? && can_create_personal_login? && teachers.uniq.one?
+    student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
   end
 
   private

@@ -292,7 +292,7 @@ class TopInstructions extends Component {
             {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl &&
               <InlineAudio src={ttsUrl} style={audioStyle}/>
             }
-            {this.props.documentationUrl &&
+            {(this.props.documentationUrl && (this.state.tabSelected !== TabType.COMMENTS)) &&
               <PaneButton
                 iconClass="fa fa-book"
                 label={msg.documentation()}
