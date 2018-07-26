@@ -189,6 +189,9 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
   test 'serializer returns teacher name' do
     @teacher1 = create :teacher, name: 'Test Name'
+    @section1 = create :section, user: @teacher1
+    @section1.add_student(@student)
+
     teacher_sign_in_and_comment(@teacher1, @student, @level, COMMENT1)
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
