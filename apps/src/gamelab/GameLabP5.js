@@ -4,7 +4,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
-import {oscillator} from './DanceLabP5';
+import {getDanceAPI} from './DanceLabP5';
 
 const defaultFrameRate = 30;
 
@@ -927,9 +927,7 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   propList.World = [this.gameLabWorld, this];
 
   // Create a 'Dance' object in the global namespace:
-  propList.Dance = [{
-    oscillator,
-  }, this];
+  propList.Dance = [getDanceAPI(this.p5), this];
 
   return propList;
 };
