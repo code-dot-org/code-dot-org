@@ -22,6 +22,7 @@ require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
 require 'sass'
 require 'sass/plugin'
+require 'contentful'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -217,6 +218,12 @@ class Documents < Sinatra::Base
     image_data[:content]
   end
 
+  # Contentful
+  get_head_or_post '/contentful/*' do |uri|
+    path = "/#{uri}"
+    contentful_document path
+  end
+
   # Documents
   get_head_or_post '*' do |uri|
     pass unless path = resolve_document(uri)
@@ -305,6 +312,24 @@ class Documents < Sinatra::Base
       # Append rendered header to error message.
       e.message << "\n#{yaml}" if yaml
       raise
+    end
+
+    def contentful_client
+      @contentful_client = Contentful::Client.new(
+        space: CDO.contentful_space,
+        access_token: CDO.contentful_access_token,
+        dynamic_entries: :auto,
+        raise_errors: true
+      )
+    end
+
+    def contentful_document(path)
+      entries = contentful_client.entries(content_type: 'pegasusDocument')
+      pass unless entry = entries.find {|e| e.fields[:path] == path}
+      content = entry.fields[:body]
+      @header['social'] = social_metadata
+      response.headers['X-Pegasus-Version'] = '3'
+      render_(content, '.md', path)
     end
 
     def document(path)

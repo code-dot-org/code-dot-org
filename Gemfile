@@ -300,5 +300,7 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
+gem 'contentful'
+
 gem 'activerecord-import'
 gem 'colorize'
