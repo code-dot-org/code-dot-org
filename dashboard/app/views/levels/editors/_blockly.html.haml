@@ -5,7 +5,6 @@
     = javascript_include_tag "js/en_us/common_locale"
     = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
 
-= render partial: 'levels/editors/_curriculum_specific', locals: {f: f}
 = render partial: 'levels/editors/authored_hints', locals: {f: f}
 .field
   = f.label :edit_code,'Blockly level'
