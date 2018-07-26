@@ -387,7 +387,7 @@ GameLab.prototype.init = function (config) {
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
-  return this.loadLibraries_().then(() => ReactDOM.render((
+  const loader = this.loadLibraries_().then(() => ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
@@ -395,6 +395,11 @@ GameLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId)));
+
+  if (IN_UNIT_TEST) {
+    return loader.catch(() => {});
+  }
+  return loader;
 };
 
 /**
