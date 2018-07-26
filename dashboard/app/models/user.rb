@@ -247,6 +247,7 @@ class User < ActiveRecord::Base
 
   has_many :user_geos, -> {order 'updated_at desc'}
 
+  before_validation :normalize_parent_email
   validate :validate_parent_email
 
   after_create :associate_with_potential_pd_enrollments
@@ -2078,6 +2079,10 @@ class User < ActiveRecord::Base
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys
     end
+  end
+
+  def normalize_parent_email
+    self.parent_email = nil if parent_email.blank?
   end
 
   # Parent email is not required, but if it is present, it must be a

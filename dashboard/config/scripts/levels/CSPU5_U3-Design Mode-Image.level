@@ -41,10 +41,10 @@
     "execute_palette_apis_only": "false",
     "encrypted_examples": "dHbUA3gk7VhtRBEgitVJ2G4KY6h18bhOvNAJ0+jx68nrIGq1KrFqaRrTcN45\ngr6b\n",
     "project_template_level_name": "U3L12 Chaser Template",
-    "contained_level_names": null,
     "instructions_important": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
