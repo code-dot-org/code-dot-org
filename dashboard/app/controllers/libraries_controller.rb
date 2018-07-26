@@ -25,6 +25,11 @@ class LibrariesController < ApplicationController
     end
   end
 
+  def destroy
+    @library.destroy
+    redirect_to(libraries_path, notice: 'Library Deleted')
+  end
+
   private
 
   def library_params
