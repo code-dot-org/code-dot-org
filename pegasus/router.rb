@@ -218,7 +218,13 @@ class Documents < Sinatra::Base
     image_data[:content]
   end
 
-  # Contentful
+  # Contentful preview content
+  get_head_or_post '/contentful-preview/*' do |uri|
+    path = "/#{uri}"
+    contentful_document path, is_preview: true
+  end
+
+  # Contentful published content
   get_head_or_post '/contentful/*' do |uri|
     path = "/#{uri}"
     contentful_document path
@@ -315,7 +321,7 @@ class Documents < Sinatra::Base
     end
 
     def contentful_client
-      @contentful_client = Contentful::Client.new(
+      @contentful_client ||= Contentful::Client.new(
         space: CDO.contentful_space,
         access_token: CDO.contentful_access_token,
         dynamic_entries: :auto,
@@ -323,8 +329,19 @@ class Documents < Sinatra::Base
       )
     end
 
-    def contentful_document(path)
-      entries = contentful_client.entries(content_type: 'pegasusDocument')
+    def contentful_preview_client
+      @contentful_preview_client ||= Contentful::Client.new(
+        api_url: 'preview.contentful.com',
+        space: CDO.contentful_space,
+        access_token: CDO.contentful_preview_token,
+        dynamic_entries: :auto,
+        raise_errors: true
+      )
+    end
+
+    def contentful_document(path, is_preview: false)
+      client = is_preview ? contentful_preview_client : contentful_client
+      entries = client.entries(content_type: 'pegasusDocument')
       pass unless entry = entries.find {|e| e.fields[:path] == path}
       content = entry.fields[:body]
       headers = entry.fields[:headers]&.stringify_keys
