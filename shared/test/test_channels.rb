@@ -301,11 +301,13 @@ class ChannelsTest < Minitest::Test
     delete "/v3/channels/#{channel_id}/abuse"
     assert last_response.unauthorized?
 
-    # Ideally we would also test that deleting abuse works when we're an admin
-    # but don't currently have a way to simulate admin from tests
-    # TODO (Erin B) confirm if this is accurate and update tests if needed.
-    # You might not need to be an admin, you might need project validator
-    # permissions.
+    ChannelsApi.any_instance.stubs(:project_validator?).returns(true)
+
+    delete "/v3/channels/#{channel_id}/abuse"
+    assert last_response.ok?
+    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+
+    ChannelsApi.any_instance.unstub(:project_validator?)
   end
 
   def test_disable_and_enable_content_moderation

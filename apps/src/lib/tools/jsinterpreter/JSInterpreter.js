@@ -243,6 +243,7 @@ export default class JSInterpreter {
    */
   calculateCodeInfo(code) {
     this.codeInfo = {};
+    this.codeInfo.code = code;
     this.codeInfo.userCodeStartOffset = 0;
     this.codeInfo.userCodeLength = code.length;
     this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(code);
