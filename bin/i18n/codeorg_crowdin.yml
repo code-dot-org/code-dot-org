@@ -31,13 +31,20 @@ files: [
   #
   "ignore" : [
     "/source/hourofcode/**",
-    "/source/dashboard/dsls.yml"
+    "/source/dashboard/dsls.yml",
+    "/source/dashboard/authored_hints.yml",
+    "/source/dashboard/instructions.yml",
+    "/source/dashboard/markdown_instructions.yml",
   ],
 
   #
   # The parameter "update_option" is optional. If it is not set, translations for changed strings will be lost. Useful for typo fixes and minor changes in source strings.
   # e.g. "update_as_unapproved" or "update_without_changes"
   #
+  "update_option" : "update_as_unapproved"
+ }, {
+  "source" : "/redacted/**/*.yml",
+  "translation" : "/%language%/**/%original_file_name%",
   "update_option" : "update_as_unapproved"
  }, {
   "source" : "/source/**/*.json",
