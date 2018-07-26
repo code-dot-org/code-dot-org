@@ -181,6 +181,14 @@
       #plusAnswerContainedLevel
         %i.fa.fa-plus-circle
 
+      = render partial: 'levels/editors/hide_share_and_remix', locals: {f: f}
+
+      .field
+        = f.label :failure_message_override, 'Failure Message Override'
+        %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
+        = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
+
+
 - if @level.respond_to? :free_play
   .field
     = f.label :free_play, 'Free Play'
@@ -201,11 +209,3 @@
   .field
     = f.label :coordinate_grid_background, 'Coordinate grid background'
     = boolean_check_box f, :coordinate_grid_background
-
-- unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged) || @level.is_a?(StandaloneVideo)
-  = render partial: 'levels/editors/hide_share_and_remix', locals: {f: f}
-
-  .field
-    = f.label :failure_message_override, 'Failure Message Override'
-    %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
-    = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
