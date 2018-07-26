@@ -220,12 +220,14 @@ class Documents < Sinatra::Base
 
   # Contentful preview content
   get_head_or_post '/contentful-preview/*' do |uri|
+    dont_cache
     path = "/#{uri}"
     contentful_document path, is_preview: true
   end
 
   # Contentful published content
   get_head_or_post '/contentful/*' do |uri|
+    dont_cache
     path = "/#{uri}"
     contentful_document path
   end
