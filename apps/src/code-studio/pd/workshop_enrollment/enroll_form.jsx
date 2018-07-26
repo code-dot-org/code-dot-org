@@ -72,17 +72,19 @@ export default class EnrollForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    let initialState = {
       school_id: null,
       errors: {}
     };
 
     if (this.props.logged_in) {
-      this.setState = {
-        firstName: this.props.first_name,
+      initialState = Object.assign(initialState, {
+        first_name: this.props.first_name,
         email: this.props.email
-      };
+      });
     }
+
+    this.state = initialState;
   }
 
   handleChange = (change) => {
@@ -408,7 +410,7 @@ export default class EnrollForm extends React.Component {
 
     let requiredFields = ['first_name', 'last_name', 'email', 'school_id'];
 
-    if (!this.state.logged_in) {
+    if (!this.props.logged_in) {
       requiredFields.push('confirm_email');
     }
 
@@ -442,7 +444,7 @@ export default class EnrollForm extends React.Component {
       if (!isEmail(this.state.email)) {
         errors.email = "Must be a valid email address";
       }
-      if (!this.state.logged_in && this.state.email !== this.state.confirm_email) {
+      if (!this.props.logged_in && this.state.email !== this.state.confirm_email) {
         errors.confirm_email = "Email addresses do not match";
       }
     }
