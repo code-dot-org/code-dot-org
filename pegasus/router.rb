@@ -327,6 +327,8 @@ class Documents < Sinatra::Base
       entries = contentful_client.entries(content_type: 'pegasusDocument')
       pass unless entry = entries.find {|e| e.fields[:path] == path}
       content = entry.fields[:body]
+      headers = entry.fields[:headers]&.stringify_keys
+      @header.merge!(headers) if headers
       @header['social'] = social_metadata
       response.headers['X-Pegasus-Version'] = '3'
       render_(content, '.md', path)
