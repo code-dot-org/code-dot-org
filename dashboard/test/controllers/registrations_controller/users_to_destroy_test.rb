@@ -84,6 +84,8 @@ module RegistrationsControllerTests
     test "returns students without personal logins that have no other teachers" do
       student = create :student_in_word_section
       teacher = student.teachers.first
+      another_word_section = create :section, user: teacher, login_type: Section::LOGIN_TYPE_WORD
+      another_word_section.students << student
 
       expected_users = [
         {"id" => student.id, "name" => student.name},
