@@ -1,8 +1,14 @@
-const osc = new window.p5.Oscillator();
+/* global p5 */
 
-export const oscillator = {
-  start: () => osc.start(),
-  stop: () => osc.stop(),
-  freq: value => osc.freq(value),
-  amp: value => osc.amp(value),
-};
+export function getDanceAPI(p5Inst) {
+  const osc = new p5.Oscillator();
+
+  return {
+    oscillator: {
+      start: () => osc.start(),
+      stop: () => osc.stop(),
+      freq: value => osc.freq(value),
+      amp: value => osc.amp(value),
+    }
+  };
+}
