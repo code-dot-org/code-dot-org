@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import _ from 'lodash';
 import { Galleries } from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
+import {UNPUBLISH_SUCCESS} from '../../code-studio/components/shareDialogRedux';
 // Action types
 
 const TOGGLE_GALLERY = 'projects/TOGGLE_GALLERY';
@@ -104,6 +105,18 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         ...state,
         projects: updatedProjects
       };
+    case UNPUBLISH_SUCCESS:
+      var unpublishedChannel = action.projectId;
+
+      var unpublishedProjectIndex = state.projects.findIndex(project => project.channel === unpublishedChannel);
+
+      var newProjects = [...state.projects];
+      newProjects[unpublishedProjectIndex].publishedAt = null;
+
+      return {
+        ...state,
+        projects: newProjects
+      };
     default:
       return state;
   }
@@ -167,4 +180,8 @@ export function setPersonalProjectsList(personalProjectsList) {
 export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
   return {type: PUBLISH_SUCCESS, lastPublishedAt,
   lastPublishedProjectData};
+}
+
+export function unpublishSuccess(projectId) {
+  return {type: UNPUBLISH_SUCCESS, projectId};
 }

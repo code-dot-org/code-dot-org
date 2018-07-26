@@ -66,7 +66,10 @@ export function unpublishProject(projectId) {
         'POST',
         'unpublish',
         () => {
-          dispatch({type: UNPUBLISH_SUCCESS});
+          dispatch({
+            type: UNPUBLISH_SUCCESS,
+            channel: projectId,
+          });
           resolve();
         },
         err => {
@@ -78,4 +81,3 @@ export function unpublishProject(projectId) {
     });
   };
 }
-
