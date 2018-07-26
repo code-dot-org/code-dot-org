@@ -16,15 +16,7 @@ require_relative 'i18n_script_utils'
 def sync_in
   localize_level_content
   run_bash_script "bin/i18n-codeorg/in.sh"
-  %w(
-    authored_hints
-    instructions
-    markdown_instructions
-  ).each do |content_type|
-    source = "i18n/locales/source/dashboard/#{content_type}.yml"
-    dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
-    redact(source, dest)
-  end
+  redact_level_content
 end
 
 def copy_to_yml(label, data)
@@ -38,6 +30,21 @@ end
 # CRLF -> LF conversion, but could be extended to do more
 def sanitize(string)
   return string.gsub(/\r(\n)?/, "\n")
+end
+
+def redact_level_content
+  FileUtils.mkdir_p 'i18n/locales/redacted/dashboard'
+  puts "Redacting"
+  %w(
+    authored_hints
+    instructions
+    markdown_instructions
+  ).each do |content_type|
+    puts "\t#{content_type}"
+    source = "i18n/locales/source/dashboard/#{content_type}.yml"
+    dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
+    redact(source, dest)
+  end
 end
 
 # Pull in various fields for levelbuilder levels from .level files and
