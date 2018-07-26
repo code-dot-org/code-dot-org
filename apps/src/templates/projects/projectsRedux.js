@@ -97,7 +97,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       var publishedProjectIndex = state.projects.findIndex(project => project.channel === channelOfInterest);
 
-      var updatedProjects = state.projects;
+      var updatedProjects = [...state.projects];
       updatedProjects[publishedProjectIndex].publishedAt = action.lastPublishedAt;
 
       return {

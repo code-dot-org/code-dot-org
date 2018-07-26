@@ -15,10 +15,10 @@ export const styles = {
 
 class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
-    isPublished: PropTypes.bool,
-    projectId: PropTypes.string,
-    projectType: PropTypes.string,
-    showPublishDialog: PropTypes.func,
+    isPublished: PropTypes.bool.isRequired,
+    projectId: PropTypes.string.isRequired,
+    projectType: PropTypes.string.isRequired,
+    showPublishDialog: PropTypes.func.isRequired,
   };
 
   state = {
