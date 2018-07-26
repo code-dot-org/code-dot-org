@@ -24,7 +24,7 @@
       .field
         = f.label :parent_email, class: "label-bold"
         = f.email_field :parent_email, autocomplete: 'off', maxlength: 255
-    - else
+    - if !current_user.parent_managed_account?
       .field
         = f.label :email, class: "label-bold"
         - if current_user.migrated? && !current_user.student?

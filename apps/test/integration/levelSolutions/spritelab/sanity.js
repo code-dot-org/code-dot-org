@@ -1,8 +1,7 @@
 import { TestResults } from '@cdo/apps/constants';
-import GameLabJr from '@cdo/apps/gamelab/GameLabJr.interpreted.js';
 
 const levelDef = {
-  customHelperLibrary: GameLabJr,
+  helperLibraries: ['GameLabJr'],
   sharedBlocks: [{
     name: "gamelab_setBackground",
     config: {
