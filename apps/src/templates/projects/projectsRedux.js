@@ -163,3 +163,8 @@ export function setHasOlderProjects(hasOlderProjects, projectType) {
 export function setPersonalProjectsList(personalProjectsList) {
   return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
 }
+
+export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
+  return {type: PUBLISH_SUCCESS, lastPublishedAt,
+  lastPublishedProjectData};
+}
