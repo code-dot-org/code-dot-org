@@ -22,7 +22,8 @@
     -# Temporary: Allow single-auth students with no email to add a parent email
     - if current_user.parent_managed_account? || current_user.can_add_parent_email?
       .field
-        = f.label :parent_email, class: "label-bold"
+        = f.label t('user.parent_email_label'), class: "label-bold"
+        %em= t('user.parent_email_hint')
         = f.email_field :parent_email, autocomplete: 'off', maxlength: 255
     - else
       .field
