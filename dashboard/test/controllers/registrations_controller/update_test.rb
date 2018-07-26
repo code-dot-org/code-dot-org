@@ -230,8 +230,8 @@ module RegistrationsControllerTests
 
       sign_in student
       put '/users', params: {
-          format: 'json',
-          user: {parent_email: '', age: '9'}
+        format: 'json',
+        user: {parent_email: '', age: '9'}
       }
       assert_response :no_content
 
