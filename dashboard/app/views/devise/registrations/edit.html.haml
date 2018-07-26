@@ -24,6 +24,7 @@
       .field
         = f.label t('user.parent_email_label'), class: "label-bold"
         %em= t('user.parent_email_hint')
+        %br/
         = f.email_field :parent_email, autocomplete: 'off', maxlength: 255
     - else
       .field
