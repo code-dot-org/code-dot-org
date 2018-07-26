@@ -1141,6 +1141,8 @@ en:
               name: Standalone video
             Curriculum Reference:
               name: Curriculum Reference
+            Sprite Lab:
+              name: Sprite Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -7566,7 +7568,7 @@ en:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: The Big Event
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -7735,7 +7737,7 @@ en:
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Coding with Angry Birds
             Debugging in Maze:
               name: Debugging with Angry Birds
             Programming in Collector:
@@ -7753,7 +7755,7 @@ en:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Nested Loops with Anna and Elsa
             Conditionals with Cards:
               name: Conditionals with Cards
             Conditionals & Loops in Harvester:
@@ -7761,9 +7763,9 @@ en:
             'Functions: Songwriting':
               name: Songwriting
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with the Harvester
             Functions in Artist:
               name: Functions in Artist
             Screen Out the Mean:
@@ -7854,7 +7856,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: The Big Event
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -8612,7 +8614,7 @@ en:
               description_teacher: In this lesson students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device. Earlier in the activity students are prompted to focus on more obvious physical inputs and outputs (e.g. a keyboard as an input or a screen as an output) but later discussions lead students to consider less obvious examples (e.g. that a touch screen is both an input and output, or the fact that the Internet can serve as both input and output). Throughout the lesson the teacher records inputs and outputs that are identified on a T-Chart at the front of the room. To conclude the lesson students examine common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
             Processing:
               name: Processing
-              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to puta deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
+              description_student: This lesson dives deeper into the concept of processing that was introduced as part of the definition of a computer.  Pairs work together to put a deck of cards in order, a form of processing information.  In the end, the class discusses what processing means within the context of solving information problems.
               description_teacher: Students complete two unplugged card sorting activities to explore the meaning of processing and its relationship to problem-solving. The first activity has few constraints and is used to introduce a high-level definition of processing. The next introduces more constraints that force students to develop an algorithm that will always successfully process the cards. Students iteratively develop, test, and share their algorithms with classmates. A wrap-up discussion has students reflect on the different types of problem-solving they used in these activities and the value of producing an algorithm to solve a problem.
             Storage:
               name: Storage
@@ -9490,7 +9492,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: The Big Event
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9508,15 +9510,15 @@ en:
             Your Digital Footprint:
               name: Your Digital Footprint
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie and the Big Project
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9547,3 +9549,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.

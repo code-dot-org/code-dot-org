@@ -215,6 +215,13 @@ module Pd
 
         FormQuestions.deserialize(@form_id, fake_questions_array)
       end
+
+      test 'question_ids' do
+        assert_equal(
+          [1, 2, 3, 4, 5, 6, 7, 8],
+          @form_questions.question_ids
+        )
+      end
     end
   end
 end

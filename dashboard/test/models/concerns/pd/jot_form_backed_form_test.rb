@@ -193,17 +193,27 @@ module Pd
     end
 
     test 'fill_placeholders collects errors and re-raises at the end' do
-      failed_submission_id = get_submission_id
+      form_id = get_form_id
+      failed_submission_ids = 2.times.map {get_submission_id}
 
       mock_placeholders = [
         mock {|_mock_successful_placeholder| expects(:sync_from_jotform)},
-        mock do |_mock_failed_placeholder|
-          expects(:sync_from_jotform).raises('Test error 1')
-          expects(:submission_id).returns(failed_submission_id)
+        mock do |_first_mock_failed_placeholder|
+          expects(:sync_from_jotform).raises('Test error 1').twice
+          expects(:submission_id).returns(failed_submission_ids[0])
+          expects(:form_id).returns(form_id)
+          expects(:force_sync_questions)
+        end,
+        mock do |_second_mock_failed_placeholder|
+          expects(:sync_from_jotform).raises('Test error 2').once
+          expects(:submission_id).returns(failed_submission_ids[1])
+          expects(:form_id).returns(form_id)
+          expects(:force_sync_questions).never
         end,
         mock {|_mock_successful_placeholder| expects(:sync_from_jotform)}
       ]
 
+      DummyForm.expects(:form_id).returns(form_id)
       DummyForm.expects(:placeholders).returns(
         mock do |mock_query|
           mock_query.expects(:find_each).multiple_yields(*mock_placeholders)
@@ -216,7 +226,8 @@ module Pd
       end
 
       assert e.message.include? 'Errors filling Pd::DummyForm placeholders:'
-      assert e.message.include? "  Submission #{failed_submission_id}: Test error 1"
+      assert e.message.include? "  Submission #{failed_submission_ids[0]}: Test error 1"
+      assert e.message.include? "  Submission #{failed_submission_ids[1]}: Test error 2"
     end
 
     test 'placeholder sync_from_jotform updates answers from JotForm API' do

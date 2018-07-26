@@ -11,6 +11,7 @@ import * as utils from '@cdo/apps/utils';
 const DEFAULT_PROPS = {
   isPasswordRequired: true,
   isTeacher: false,
+  hasStudents: false,
 };
 
 describe('DeleteAccount', () => {
@@ -70,8 +71,8 @@ describe('DeleteAccount', () => {
     });
 
     describe('for teachers', () => {
-      it('is disabled if not all checkboxes are checked', () => {
-        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true}/>);
+      it('is disabled if not all checkboxes are checked for teacher that has students', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true} hasStudents={true}/>);
         let checkboxes = buildCheckboxMap();
         checkboxes[1].checked = true;
         wrapper.setState({
@@ -106,6 +107,17 @@ describe('DeleteAccount', () => {
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes
+        });
+        const confirmButton = wrapper.find('Button').at(0);
+        expect(confirmButton).to.not.have.attr('disabled');
+      });
+
+      it('is enabled if checkboxes not required, verification string is correct, and password provided and required', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true} hasStudents={false}/>);
+        wrapper.setState({
+          isDeleteAccountDialogOpen: true,
+          password: 'password',
+          deleteVerification: DELETE_VERIFICATION_STRING
         });
         const confirmButton = wrapper.find('Button').at(0);
         expect(confirmButton).to.not.have.attr('disabled');

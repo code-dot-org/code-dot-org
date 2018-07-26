@@ -10700,6 +10700,10 @@ nn:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Pass på at du tar ut heile blokka på "kode fra vertøylinja" kvar gong du prøver ein ny.
         4-5_Artist_Patterns_3_b: Viss det blir altfor forvirrande kode, kan du alltid klikke "Start på nytt" og prøve ein gong til!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.
+        grade3_robotFarmer_ConditionalsIntro_8_b: What should you do once you've reached the end of a path?
+        grade3_robotFarmer_ConditionalsIntro_8_c: Use a `repeat` loop to run your code multiple times for each straight path.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.
         courseE_farmer_functions1_b: You only need to pick one pumpkin, but could you use a loop to get to it?
