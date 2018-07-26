@@ -16,6 +16,15 @@ require_relative 'i18n_script_utils'
 def sync_in
   localize_level_content
   run_bash_script "bin/i18n-codeorg/in.sh"
+  %w(
+    authored_hints
+    instructions
+    markdown_instructions
+  ).each do |content_type|
+    source = "i18n/locales/source/dashboard/#{content_type}.yml"
+    dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
+    redact(source, dest)
+  end
 end
 
 def copy_to_yml(label, data)
