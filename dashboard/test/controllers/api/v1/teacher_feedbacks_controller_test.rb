@@ -194,7 +194,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
 
     teacher_sign_in_and_comment(@teacher1, @student, @level, COMMENT1)
     sign_in @student
-
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
 
     assert_equal 'Test Name', parsed_response[0]['teacher_name']
