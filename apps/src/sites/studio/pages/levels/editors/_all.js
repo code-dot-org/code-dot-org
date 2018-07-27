@@ -50,6 +50,10 @@ function initPage() {
     $("#plusAnswerReference").prev().clone().insertBefore("#plusAnswerReference");
   });
 
+  $("#plusAnswerContainedLevel").on("click", () => {
+    $("#plusAnswerContainedLevel").prev().clone().insertBefore("#plusAnswerContainedLevel");
+  });
+
   var videoInfos = config.video_infos;
 
   function updateVideoPreview() {
