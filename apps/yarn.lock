@@ -5,6 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
+"@cdo/interpreted@file:../dashboard/config/libraries":
+  version "0.0.0"
+
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
