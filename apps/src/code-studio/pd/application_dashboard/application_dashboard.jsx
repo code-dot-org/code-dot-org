@@ -14,6 +14,7 @@ import regionalPartnerReducers, {
   setRegionalPartnerGroup,
   getInitialRegionalPartnerFilter
 } from '../components/regional_partners_reducers';
+import {UNMATCHED_PARTNER_OPTION} from '../components/regional_partner_dropdown';
 import Header from '../components/header';
 import {
   Router,
@@ -68,7 +69,7 @@ export default class ApplicationDashboard extends React.Component {
 
   componentWillMount() {
     store.dispatch(setRegionalPartners(this.props.regionalPartners));
-    store.dispatch(setRegionalPartnerFilter(getInitialRegionalPartnerFilter(this.props.isWorkshopAdmin, this.props.regionalPartners)));
+    store.dispatch(setRegionalPartnerFilter(getInitialRegionalPartnerFilter(this.props.isWorkshopAdmin, this.props.regionalPartners, UNMATCHED_PARTNER_OPTION)));
 
     // Use the group from the first partner. Usually there will only be a single partner anyway, or admin.
     // We shouldn't see mixed group multi-partners
