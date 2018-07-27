@@ -24,4 +24,24 @@
 #
 
 class Dancelab < GamelabJr
+  def self.create_from_level_builder(params, level_params)
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.gamelab,
+        level_num: 'custom',
+        properties: {
+          helper_libraries: [
+            "DanceLab",
+          ],
+          hide_animation_mode: true,
+          show_type_hints: true,
+          use_modal_function_editor: true,
+        }
+      )
+    )
+  end
+
+  def common_blocks(type)
+  end
 end
