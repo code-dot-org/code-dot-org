@@ -208,6 +208,8 @@ GameLab.prototype.init = function (config) {
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
     !this.level.edit_blocks;
 
+  this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
+
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
     this.startAnimations = defaultSprites;

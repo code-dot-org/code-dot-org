@@ -906,7 +906,7 @@ GameLabP5.prototype.getMarshallableP5Properties = function () {
   return propNames;
 };
 
-GameLabP5.prototype.getGlobalPropertyList = function () {
+GameLabP5.prototype.getGlobalPropertyList = function (danceLab) {
   const propList = {};
 
   // Include every property on the p5 instance in the global property list
@@ -926,8 +926,10 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // Create a 'World' object in the global namespace:
   propList.World = [this.gameLabWorld, this];
 
-  // Create a 'Dance' object in the global namespace:
-  propList.Dance = [getDanceAPI(this.p5), this];
+  if (danceLab) {
+    // Create a 'Dance' object in the global namespace:
+    propList.Dance = [getDanceAPI(this.p5), this];
+  }
 
   return propList;
 };
