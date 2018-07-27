@@ -106,7 +106,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: updatedProjects
       };
     case UNPUBLISH_SUCCESS:
-      var unpublishedChannel = action.projectId;
+      var unpublishedChannel = action.channel;
 
       var unpublishedProjectIndex = state.projects.findIndex(project => project.channel === unpublishedChannel);
 
