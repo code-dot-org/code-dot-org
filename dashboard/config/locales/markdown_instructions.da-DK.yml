@@ -903,7 +903,6 @@ da:
         **How:** You know how to use `"background-color"`, `"font-size"`, `"text-color"`, `"text"`, `playSound()`, and `onEvent()`. Use them to set the look of your app and make it change when your user clicks the buttons. Click "Share" to send it to a friend.
 
         **Show Me:** ![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)
-      AppLab Intro 4 - video onEvent_markdown_instruction: "# Using onEvent"
       AppLab Intro 5 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\n\\t<img
         src=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54
         AM.png\" style=\"height:150px\"> \n</div>\n\n**Goal:** Make the screen `\"red\"`.
@@ -2034,7 +2033,7 @@ da:
 
         # Use Paragraph Tags
 
-        The `<p>` tag or "paragraph" tag is placed around text to indicate that it is part of a paragraph. Placing text in a paragraph tag lets the computer know that it should be displayed differently, usually just by spacing it out from other text.
+        The `<p>` `</p>` tags or "paragraph" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be displayed differently, usually just by spacing it out from other text.
 
         # Do This
 
@@ -2877,7 +2876,7 @@ da:
         <br />
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a>
         </p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
@@ -2919,10 +2918,10 @@ da:
         <div style="font-size: 16px">
         <br />
         <details><summary>**Where can I see the whole range of color types?**</summary>
-        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp">W3Schools - HTML Color Picker</a></details>
+        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_new">W3Schools - HTML Color Picker</a></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -2960,7 +2959,7 @@ da:
         <br />
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -3002,7 +3001,7 @@ da:
         <p>To make a color lighter, you need to add more light (increase the level of the slider).  If you have already added the maximum amount of blue light, you will need to add more red and green light to make your blue lighter.</p></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -3758,11 +3757,11 @@ da:
         </details>
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details>
         <details>
         <summary>**What does the `background-color` property do?**</summary>
-        The `background-color` property determines the color of the background of an element.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools - CSS background-color Property</a>
+        The `background-color` property determines the color of the background of an element.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp" target="_new">W3Schools - CSS background-color Property</a>
         </details>
         <details>
         <summary>**What if an element inside the page has a different background color from the body?**</summary>
@@ -3852,23 +3851,23 @@ da:
         </details>
         <details>
         <summary>**What does the `color` property do?**</summary>
-        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp"> W3Schools - CSS color Property</a>
+        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>
         </details>
         <details>
         <summary>**What does the `text-align` property do?**</summary>
-        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**What does the `text-decoration` property do?**</summary>
-        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**What does the `font-family` property do?**</summary>
-        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3chools - CSS font-family Property</a>
+        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
         </details>
         <details>
         <summary>**What does the `font-size` property do?**</summary>
-        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size Property</a>
+        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
         </details>
         <details>
         <summary>**What is a stylesheet?**</summary>
@@ -3940,7 +3939,7 @@ da:
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details>
         <details>
         <summary>**How does the code work?**</summary>
@@ -3958,15 +3957,15 @@ da:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
 
@@ -4030,15 +4029,15 @@ da:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
 
@@ -4088,7 +4087,7 @@ da:
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
 
@@ -4205,7 +4204,7 @@ da:
         </details>
         <details>
         <summary>**What does the `margin` property do?**</summary>
-        The `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_margin.asp">W3Schools - CSS margin Property</a>
+        The `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_margin.asp" target="_new">W3Schools - CSS margin Property</a>
         </details>
         <details>
         <summary>**What does `px` mean / What is a pixel?**</summary>
@@ -4257,15 +4256,15 @@ da:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
 
@@ -4331,11 +4330,11 @@ da:
         </details>
         <details>
         <summary>**What does the `width` property do?**</summary>
-        The `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_dim_width.asp">W3Schools - CSS width Property</a>
+        The `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_dim_width.asp" target="_new">W3Schools - CSS width Property</a>
         </details>
         <details>
         <summary>**What does the `height` property do?**</summary>
-        The `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_dim_height.asp">W3Schools - CSS width Property</a>
+        The `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_dim_height.asp" target="_new">W3Schools - CSS height Property</a>
         </details>
         <details>
         <summary>**What does `px` mean / What is a pixel?**</summary>
@@ -4867,7 +4866,7 @@ da:
         </details>
         <details>
         <summary>**What are the possible values for text decoration?**</summary>
-        You can choose between "underline", "overline", and "line-through".  You can read more about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        You can choose between "underline", "overline", and "line-through".  You can read more about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -4963,7 +4962,7 @@ da:
         </details>
         <details>
         <summary>**What are the possible values for font family?**</summary>
-        You can choose between "serif", "sans-serif", "cursive", "fantasy", and "monospace".  You can also try more specific fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools - CSS Web Safe Font Combinations</a>
+        You can choose between "serif", "sans-serif", "cursive", "fantasy", and "monospace".  You can also try more specific fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_new">W3Schools - CSS Web Safe Font Combinations</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -5097,7 +5096,7 @@ da:
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details><details>
         <summary>**How does the code work?**</summary>
         Here is the code that is making the `h1` heading red:
@@ -5481,7 +5480,7 @@ da:
         </details>
         <details>
         <summary>**What are the possible values for text align?**</summary>
-        You can choose between "left", "right", and "center".  You can read more about the text-align property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        You can choose between "left", "right", and "center".  You can read more about the text-align property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -28937,7 +28936,7 @@ da:
         * Try: Implement your improvements to your personal website.
         * Reflect: Get feedback from a classmate and decide what of that feedback to act on.
 
-        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/">website </a>.*)
+        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/" target="_new">website </a>.*)
       Final Room Escape App_markdown_instruction: "# You've done it!\n\nYou made a
         room escape! Now its time to customize it. \n\nConsider:\n\n* Add more style
         to the room\n* Adding more things users can interact with in the room\n* Try
@@ -47537,6 +47536,7 @@ da:
         frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n__Reflect on the prompts
         below:__ \n\n- What types of information does Siri respond to in the video?\n-
         What do you think Siri is paying attention to in order to create these answers?\n"
+      allthethings_fish_tank_markdown_instruction: All-the-things test level.
       allthethings_moviebot_markdown_instruction: |
         # Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
         # Introduction to the Digital Assistant
@@ -55298,6 +55298,9 @@ da:
         * What are facilitators doing?
         * What are teachers doing?
         * What strategies did you see facilitators use to keep teachers engaged?
+      farmer-test-lb_markdown_instruction: |-
+        # Making A Function
+        1. Do this thing
       feel-monday_markdown_instruction: |
         # Day 1: Feel
 
@@ -55326,6 +55329,22 @@ da:
 
         * What factors seemed to contribute to those feelings?
         * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      fit-dlp-example_markdown_instruction: "<br><br>\n\n# FIT Deeper Learning Example\n\nThis
+        is where instructions for the prompt will be.\n\n> **Prompt:** Is a hotdog
+        a sandwich?\n\n## Getting Credit for Completing this Reflection \n\n- Once
+        you submit your reflection, your response to the prompt above will be shared
+        anonymously and read by your peers, and you will read the work done by other
+        facilitators. This give facilitators a chance to learn from each other.\n-
+        Your submission will also be given to an expert reviewer. Expert reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\n- In order to get credit for completing
+        this prompt, your expert review needs to say \"Yes\" responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available."
       frozen circle function in circle_markdown_instruction: Lad os nu lave 20 overlappende
         cirkler mens vi drejer 18 grader mellem hver cirkel.
       frozen circle function with parameter_markdown_instruction: Her er en "Lav cirkel"

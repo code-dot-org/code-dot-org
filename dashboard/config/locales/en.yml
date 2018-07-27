@@ -226,6 +226,7 @@ en:
     student_associated_subject: 'Login information for Code.org'
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
+    delete_teacher_subject: 'Code.org notification: Your account has been deleted'
   section:
     your_section:
       one: 'Your section:'
@@ -404,6 +405,8 @@ en:
     create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    parent_email_label: "Parent/guardian email (optional)"
+    parent_email_hint: "(this can be used for password recovery)"
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
     account_successfully_updated: "Account successfully updated."

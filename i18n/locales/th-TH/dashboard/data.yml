@@ -37,7 +37,7 @@ th:
         NetSim: เครื่องจำลองอินเตอร์เน็ต
         Custom: ศิลปิน
         CustomStudio: Play Lab
-        Gamelab: Game Lab
+        Gamelab: เกมแล๊ป (Game Lab)
     trophy:
       name:
         Bronze: ทองแดง
@@ -83,7 +83,7 @@ th:
         turtle_1_5: แบบฝึกหัด วาดรูปสามเหลี่ยม จากนั้นสี่เหลี่ยมเพื่อให้เป็นรูปซองจดหมาย
         turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
         turtle_1_7: Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!
-        turtle_1_8: Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.
+        turtle_1_8: พยายามหาว่าจะเกิดอะไรขึ้นถ้าคุณเรียกใช้งานโค้ดส่วนนี้ (หรือเพียงแค่กด " เริ่ม " และลองใช้งานดูว่าเป็นอย่างไร) ถัดไปให้ทำซ้ำโค้ดด้วยจำนวนครั้งให้เพียงพอเพื่อวาดภาพให้เสร็จสิ้น สีจะแตกต่างกันไปในแต่ละครั้ง
         turtle_1_9: คิดออกไหมว่าต้องใส่เลขอะไรลงไปแทนเครื่องหมาย ? เพื่อที่จะวาดวงกลม?
         turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "set width" block. Have fun!'
         turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a "repeat" block.'
@@ -240,16 +240,16 @@ th:
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he gets there.
         studio_k1_5: คุณสามารถเพิ่มบล็อกที่จะทำให้ปลาหมึกมีความสุขได้หรือไม่
         studio_k1_6: Create your own story! Move around the cat and dog, and make them say things.
-        maze_wordsearch_k_1: พาฉันบินไปสะกดคำว่าทิศตะวันออกเป็นภาษาอังกฤษ EAST
-        maze_wordsearch_k_2: พาฉันบินไปสะกดคำว่าทิศใต้เป็นภาษาอังกฤษ SOUTH
-        maze_wordsearch_k_3: พาฉันบินไปสะกดคำว่าทิศตะวันตกเป็นภาษาอังกฤษ WEST
-        maze_wordsearch_k_4: พาฉันบินไปสะกดคำว่าทิศเหนือเป็นภาษาอังกฤษ NORTH
-        maze_wordsearch_k_6: พาฉันบินไปทางทิศตะวันออกแล้วก็ทิศใต้เพื่อสะกดคำว่ากระโดดเป็นภาษาอังกฤษ JUMP
-        maze_wordsearch_k_9: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่าโค้ดเป็นภาษาอังกฤษ CODE
+        maze_wordsearch_k_1: พาฉันบินไปสะกดคำว่า "ทิศตะวันออก" เป็นภาษาอังกฤษ
+        maze_wordsearch_k_2: พาฉันบินไปสะกดคำว่า "ทิศใต้" เป็นภาษาอังกฤษ
+        maze_wordsearch_k_3: พาฉันบินไปสะกดคำว่า "ทิศตะวันตก" เป็นภาษาอังกฤษ
+        maze_wordsearch_k_4: พาฉันบินไปสะกดคำว่า "ทิศเหนือ" เป็นภาษาอังกฤษ
+        maze_wordsearch_k_6: พาฉันบินไปทางทิศตะวันออกแล้วก็ทิศใต้เพื่อสะกดคำว่า "กระโดด" เป็นภาษาอังกฤษ
+        maze_wordsearch_k_9: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่า "โค้ด" เป็นภาษาอังกฤษ
         maze_wordsearch_k_13: พาฉันบินไปทางหนึ่ง แล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่าดีบั๊กเป็นภาษาอังกฤษ DEBUG
-        maze_wordsearch_k_15: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่าอยู่ข้างบนเป็นภาษาอังกฤษ ABOVE
-        maze_wordsearch_k_16: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่า อยู่ข้างล่างเป็นภาษาอังกฤษ BELOW
-        maze_wordsearch_k_20: นี่คือการทดสอบ! พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่าเรื่องราวเป็นภาษาอังกฤษ STORY
+        maze_wordsearch_k_15: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่า "ข้างบน" เป็นภาษาอังกฤษ
+        maze_wordsearch_k_16: พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่า "ข้างล่าง" เป็นภาษาอังกฤษ
+        maze_wordsearch_k_20: นี่คือแบบทดสอบ! พาฉันบินไปทางหนึ่งแล้วก็บินไปอีกทางหนึ่ง เพื่อสะกดคำว่า "เรื่องราว" เป็นภาษาอังกฤษ
         applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "penColor" block.'
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new "penWidth" block. Have fun!'
@@ -366,7 +366,7 @@ th:
         CSF_Power_of_Words: Power of Words
         CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
+        CSF_unspotted_bugs: บั๊กที่รอดหูรอดตาไป
         CSF_zuck_loops_short: ลูปทำซ้ำ (Repeat Loop)
         frozen_intro: Hour of Code Intro
         frozen_loops: ลูปเบื้องต้น

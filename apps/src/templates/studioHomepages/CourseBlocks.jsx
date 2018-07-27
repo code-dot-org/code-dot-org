@@ -3,6 +3,7 @@ import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksTools from './CourseBlocksTools';
+import CourseBlocksInternationalGradeBands from './CourseBlocksInternationalGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -175,6 +176,10 @@ export class CourseBlocksAll extends Component {
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
+
+        {!this.props.isEnglish && (
+          <CourseBlocksInternationalGradeBands/>
+        )}
 
         <CourseBlocksTools
           isEnglish={this.props.isEnglish}

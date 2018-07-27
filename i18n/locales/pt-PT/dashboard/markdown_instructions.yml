@@ -528,7 +528,6 @@ pt:
         **How:** You know how to use `"background-color"`, `"font-size"`, `"text-color"`, `"text"`, `playSound()`, and `onEvent()`. Use them to set the look of your app and make it change when your user clicks the buttons. Click "Share" to send it to a friend.
         
         **Show Me:** ![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)
-      AppLab Intro 4 - video onEvent_markdown_instruction: "# Using onEvent"
       AppLab Intro 5 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\n\\t<img src=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54 AM.png\" style=\"height:150px\"> \n</div>\n\n**Goal:** Make the screen `\"red\"`. \n\n**How:** Drag in the block, change the color, then hit \"Run\"\n\n**Show Me:** ![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif)"
       AppLab Intro 5 - Change Text 2_markdown_instruction: "<div style=\"float:right\">\n<img src=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png\" style=\"height:150px;\">\n</div>\n\n**Goal:** Make the text bigger and blue \n\n**How:**  Give `\"label1\"` a `\"font-size\"` of `80` and `\"text-color\"` of `\"blue\"`.\n\n**Show Me:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>"
       AppLab Intro 5 - Change Text_markdown_instruction: "<div style=\"float:right\">\n\\t<img src=\"https://images.code.org/7435f9effd46381a1d7d0c9078d6db78-image-1506554154216.15.23 PM.png\" style=\"height:150px\">\n</div>\n\n**Goal:** Make the text bigger\n\n**How:** Drag in the block and then choose a bigger `\"font-size\"` of `\"label1\"`.\n\n**Show Me:** ![expandable](https://images.code.org/6125888ad13353978132b19dfca8cc49-image-1505953367275.gif)"
@@ -1287,7 +1286,7 @@ pt:
         
         # Use Paragraph Tags
         
-        The `<p>` tag or "paragraph" tag is placed around text to indicate that it is part of a paragraph. Placing text in a paragraph tag lets the computer know that it should be displayed differently, usually just by spacing it out from other text.
+        The `<p>` `</p>` tags or "paragraph" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be displayed differently, usually just by spacing it out from other text.
         
         # Do This
         
@@ -1560,7 +1559,7 @@ pt:
         <br />
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a>
         </p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
@@ -1602,10 +1601,10 @@ pt:
         <div style="font-size: 16px">
         <br />
         <details><summary>**Where can I see the whole range of color types?**</summary>
-        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp">W3Schools - HTML Color Picker</a></details>
+        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_new">W3Schools - HTML Color Picker</a></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -1643,7 +1642,7 @@ pt:
         <br />
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -1685,7 +1684,7 @@ pt:
         <p>To make a color lighter, you need to add more light (increase the level of the slider).  If you have already added the maximum amount of blue light, you will need to add more red and green light to make your blue lighter.</p></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -2319,11 +2318,11 @@ pt:
         </details>
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details>
         <details>
         <summary>**What does the `background-color` property do?**</summary>
-        The `background-color` property determines the color of the background of an element.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools - CSS background-color Property</a>
+        The `background-color` property determines the color of the background of an element.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp" target="_new">W3Schools - CSS background-color Property</a>
         </details>
         <details>
         <summary>**What if an element inside the page has a different background color from the body?**</summary>
@@ -2413,23 +2412,23 @@ pt:
         </details>
         <details>
         <summary>**What does the `color` property do?**</summary>
-        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp"> W3Schools - CSS color Property</a>
+        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>
         </details>
         <details>
         <summary>**What does the `text-align` property do?**</summary>
-        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**What does the `text-decoration` property do?**</summary>
-        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**What does the `font-family` property do?**</summary>
-        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3chools - CSS font-family Property</a>
+        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
         </details>
         <details>
         <summary>**What does the `font-size` property do?**</summary>
-        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size Property</a>
+        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
         </details>
         <details>
         <summary>**What is a stylesheet?**</summary>
@@ -2501,7 +2500,7 @@ pt:
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details>
         <details>
         <summary>**How does the code work?**</summary>
@@ -2519,15 +2518,15 @@ pt:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2591,15 +2590,15 @@ pt:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2649,7 +2648,7 @@ pt:
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2723,7 +2722,7 @@ pt:
         
         We encourage you to use more than three, though!  Explore additional CSS properties and add them to your page.
       CSD U2 layout style margin_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is putting extra space around the images:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `margin: 10px;` is the rule that puts 10 pixels of space around the image.\n</details>\n<details>\n<summary>**What does the `margin` property do?**</summary>\nThe `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n</div>\n# Margin\n\nMargins specify how much space should be around an element.\n\n* Find the `margin` property in the `img` rule-set.\n* Change the margin to be larger, and discuss the effect with a partner.\n* Choose another element type and give it a margin, too."
-      CSD U2 layout style margin_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is putting extra space around the images:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `margin: 10px;` is the rule that puts 10 pixels of space around the image.\n</details>\n<details>\n<summary>**What does the `margin` property do?**</summary>\nThe `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n</div>\n# Margin\n\nMargins specify how much space should be around an element.\n\n* Find the `margin` property in the `img` rule-set.\n* Change the margin to be larger, and discuss the effect with a partner.\n* Choose another element type and give it a margin, too."
+      CSD U2 layout style margin_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is putting extra space around the images:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `margin: 10px;` is the rule that puts 10 pixels of space around the image.\n</details>\n<details>\n<summary>**What does the `margin` property do?**</summary>\nThe `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\" target=\"_new\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n</div>\n# Margin\n\nMargins specify how much space should be around an element.\n\n* Find the `margin` property in the `img` rule-set.\n* Change the margin to be larger, and discuss the effect with a partner.\n* Choose another element type and give it a margin, too."
       CSD U2 layout style sample_markdown_instruction: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -2762,15 +2761,15 @@ pt:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2785,7 +2784,7 @@ pt:
         
         In the next few levels, you'll be changing and adding new styles on this page.
       CSD U2 layout style width_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
-      CSD U2 layout style width_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
+      CSD U2 layout style width_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\" target=\"_new\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\" target=\"_new\">W3Schools - CSS height Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
       CSD U2 link demo_markdown_instruction: |-
         # Making a Multi-page Site
         
@@ -3246,7 +3245,7 @@ pt:
         </details>
         <details>
         <summary>**What are the possible values for text decoration?**</summary>
-        You can choose between "underline", "overline", and "line-through".  You can read more about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        You can choose between "underline", "overline", and "line-through".  You can read more about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -3342,7 +3341,7 @@ pt:
         </details>
         <details>
         <summary>**What are the possible values for font family?**</summary>
-        You can choose between "serif", "sans-serif", "cursive", "fantasy", and "monospace".  You can also try more specific fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools - CSS Web Safe Font Combinations</a>
+        You can choose between "serif", "sans-serif", "cursive", "fantasy", and "monospace".  You can also try more specific fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_new">W3Schools - CSS Web Safe Font Combinations</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -3476,7 +3475,7 @@ pt:
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details><details>
         <summary>**How does the code work?**</summary>
         Here is the code that is making the `h1` heading red:
@@ -3822,7 +3821,7 @@ pt:
         </details>
         <details>
         <summary>**What are the possible values for text align?**</summary>
-        You can choose between "left", "right", and "center".  You can read more about the text-align property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        You can choose between "left", "right", and "center".  You can read more about the text-align property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -19355,7 +19354,7 @@ pt:
         * Try: Implement your improvements to your personal website.
         * Reflect: Get feedback from a classmate and decide what of that feedback to act on.
         
-        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/">website </a>.*)
+        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/" target="_new">website </a>.*)
       Final Room Escape App_markdown_instruction: "# You've done it!\n\nYou made a room escape! Now its time to customize it. \n\nConsider:\n\n* Add more style to the room\n* Adding more things users can interact with in the room\n* Try to make your secret code random\n* Adding more rooms"
       Finalize Your Chaser Game v.1_markdown_instruction: |+
         # Add an Image and Make a Chaser Game!
@@ -26735,6 +26734,7 @@ pt:
       allthethings level dataTables_markdown_instruction: Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_markdown_instruction: "# Drawing Rules\n\nSo what did you discover on the last level?\n\n* What do each of the 4 openings control?\n\n\\t* First Opening - controls the **location of the rectangle from left to right** - we call this the **x position**\n    * Second Opening - controls the **location of the rectangle from top to bottom** - we call this the **y position**\n    * Third Opening - controls the **width** of the rectangle\n    * Fourth Opening - controls the **height** of the rectangle\n\n* What is the size of the drawing area?\n\n\\t* Width - 400\n    * Height - 400\n\n* So where is (0,0) or x = 0 and y = 0?\n\n\\t* The **upper left corner of the grid!**\n\n# Do This\n\nWe have provided you with code for a rectangle that draws in the upper left corner when you run the program. Using your new knowledge of the workspace and the inputs for a rectangle:\n\n* **Change the width and height of the rectangle so that it fills the whole drawing area**\n* **HINT:** Remember that the rectangle block is `rect(x, y, width, height)` in that order"
       allthethings_embed_video_markdown_instruction: "Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below. \n\n<iframe width=\"637px\" height=\"375px\" src=\"https://www.youtube.com/embed/8ciagGASro0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n__Reflect on the prompts below:__ \n\n- What types of information does Siri respond to in the video?\n- What do you think Siri is paying attention to in order to create these answers?\n"
+      allthethings_fish_tank_markdown_instruction: All-the-things test level.
       allthethings_moviebot_markdown_instruction: |
         # Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
         # Introduction to the Digital Assistant
@@ -30412,6 +30412,9 @@ pt:
         * What are facilitators doing?
         * What are teachers doing?
         * What strategies did you see facilitators use to keep teachers engaged?
+      farmer-test-lb_markdown_instruction: |-
+        # Making A Function
+        1. Do this thing
       feel-monday_markdown_instruction: |
         # Day 1: Feel
         
@@ -30440,6 +30443,7 @@ pt:
         
         * What factors seemed to contribute to those feelings?
         * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      fit-dlp-example_markdown_instruction: "<br><br>\n\n# FIT Deeper Learning Example\n\nThis is where instructions for the prompt will be.\n\n> **Prompt:** Is a hotdog a sandwich?\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       frozen circle function in circle_markdown_instruction: "Agora vamos criar 20 círculos\nsobrepostos, virando 18 graus entre cada círculo."
       frozen circle function with parameter_markdown_instruction: "Temos aqui um bloco \"crie um círculo\"\nque pode fazer círculos de tamanhos diferentes. Você pode usar isso para criar\num pequeno círculo de tamanho 5 e um círculo maior de tamanho 10?"
       frozen circle function_markdown_instruction: "Use o novo bloco \"crie um círculo\" para\ncriar 10 círculos sobrepostos. Não se esqueça de avançar entre os círculos."

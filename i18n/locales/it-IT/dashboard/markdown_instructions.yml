@@ -70,8 +70,8 @@ it:
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-7#VIDEO" target="_blank">Video doppiato in italiano</a>
       2-3 Artist Loops New 9_markdown_instruction: Per completare la freccia disegna semplicemente una V i cui lati siano entrambi di 50 pixel.
       2-3 Artist Nested Loops 1_markdown_instruction: |+
-        Hai già utilizzato i cicli per disegnare, ma sapevi che puoi inserire un ciclo all'interno di un altro ciclo?<br>
-        <br>
+        Hai già utilizzato i cicli per disegnare, ma sapevi che puoi inserire un ciclo all'interno di un altro ciclo?
+        
         Crea un ciclo che ripete per 3 volte tutti i blocchi di codice in grigio, allo scopo di disegnare la figura indicata.
       2-3 Artist Nested Loops 10_markdown_instruction: Ripeti 12 volte questo codice per completare la figura.
       2-3 Artist Nested Loops 11_markdown_instruction: Ripeti 4 volte questo codice per completare la figura, girando di 90 gradi alla fine di ciascun cerchio.
@@ -520,7 +520,6 @@ it:
         **How:** You know how to use `"background-color"`, `"font-size"`, `"text-color"`, `"text"`, `playSound()`, and `onEvent()`. Use them to set the look of your app and make it change when your user clicks the buttons. Click "Share" to send it to a friend.
         
         **Show Me:** ![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)
-      AppLab Intro 4 - video onEvent_markdown_instruction: "# Using onEvent"
       AppLab Intro 5 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\n\\t<img src=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54 AM.png\" style=\"height:150px\"> \n</div>\n\n**Goal:** Make the screen `\"red\"`. \n\n**How:** Drag in the block, change the color, then hit \"Run\"\n\n**Show Me:** ![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif)"
       AppLab Intro 5 - Change Text 2_markdown_instruction: "<div style=\"float:right\">\n<img src=\"https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png\" style=\"height:150px;\">\n</div>\n\n**Goal:** Make the text bigger and blue \n\n**How:**  Give `\"label1\"` a `\"font-size\"` of `80` and `\"text-color\"` of `\"blue\"`.\n\n**Show Me:** ![expandable](https://images.code.org/70f1ef9698ff41c15f9825755fde3782-image-1505958989565.gif)</details>"
       AppLab Intro 5 - Change Text_markdown_instruction: "<div style=\"float:right\">\n\\t<img src=\"https://images.code.org/7435f9effd46381a1d7d0c9078d6db78-image-1506554154216.15.23 PM.png\" style=\"height:150px\">\n</div>\n\n**Goal:** Make the text bigger\n\n**How:** Drag in the block and then choose a bigger `\"font-size\"` of `\"label1\"`.\n\n**Show Me:** ![expandable](https://images.code.org/6125888ad13353978132b19dfca8cc49-image-1505953367275.gif)"
@@ -1280,7 +1279,7 @@ it:
         
         # Use Paragraph Tags
         
-        The `<p>` tag or "paragraph" tag is placed around text to indicate that it is part of a paragraph. Placing text in a paragraph tag lets the computer know that it should be displayed differently, usually just by spacing it out from other text.
+        The `<p>` `</p>` tags or "paragraph" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be displayed differently, usually just by spacing it out from other text.
         
         # Do This
         
@@ -1553,7 +1552,7 @@ it:
         <br />
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a>
         </p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
@@ -1595,10 +1594,10 @@ it:
         <div style="font-size: 16px">
         <br />
         <details><summary>**Where can I see the whole range of color types?**</summary>
-        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp">W3Schools - HTML Color Picker</a></details>
+        You can find many options for colors at <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_new">W3Schools - HTML Color Picker</a></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -1636,7 +1635,7 @@ it:
         <br />
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -1678,7 +1677,7 @@ it:
         <p>To make a color lighter, you need to add more light (increase the level of the slider).  If you have already added the maximum amount of blue light, you will need to add more red and green light to make your blue lighter.</p></details>
         <details>
         <summary>**Why do red and green make yellow?**</summary>
-        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia - Additive Color</a></p> </details>
+        <p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color" target="_new">Wikipedia - Additive Color</a></p> </details>
         <details>
         <summary>**How many colors can I make with RGB color mixing?**</summary>
         <p>You can make make over sixteen million different colors with RGB color mixing.</p></details>
@@ -2312,11 +2311,11 @@ it:
         </details>
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details>
         <details>
         <summary>**What does the `background-color` property do?**</summary>
-        The `background-color` property determines the color of the background of an element.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools - CSS background-color Property</a>
+        The `background-color` property determines the color of the background of an element.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_background-color.asp" target="_new">W3Schools - CSS background-color Property</a>
         </details>
         <details>
         <summary>**What if an element inside the page has a different background color from the body?**</summary>
@@ -2406,23 +2405,23 @@ it:
         </details>
         <details>
         <summary>**What does the `color` property do?**</summary>
-        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp"> W3Schools - CSS color Property</a>
+        The `color` property specifies the color of the text.  If there’s no text, it won’t do anything. Read more at <a href="http://www.w3schools.com/cssref/pr_text_color.asp" target="_new"> W3Schools - CSS color Property</a>
         </details>
         <details>
         <summary>**What does the `text-align` property do?**</summary>
-        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        The `text-align` property aligns the text to the left, right, or center. You can read more at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**What does the `text-decoration` property do?**</summary>
-        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        The `text-decoration` property puts a line over, under, or through a piece of text.  You can read more about the property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**What does the `font-family` property do?**</summary>
-        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3chools - CSS font-family Property</a>
+        The `font-family` property changes the font of the text.  It gives a general description of the type of font that should be used, but each browser might display the font slightly differently.  Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp" target="_new">W3chools - CSS font-family Property</a>
         </details>
         <details>
         <summary>**What does the `font-size` property do?**</summary>
-        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size Property</a>
+        The `font-size` property changes the size of the text.  You can use general terms, such as `small`, `medium`, and `large`, or you can specify the exact size in pixels, such as `20px`. Read more at <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp" target="_new">W3Schools - CSS font-size Property</a>
         </details>
         <details>
         <summary>**What is a stylesheet?**</summary>
@@ -2494,7 +2493,7 @@ it:
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details>
         <details>
         <summary>**How does the code work?**</summary>
@@ -2512,15 +2511,15 @@ it:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2584,15 +2583,15 @@ it:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2642,7 +2641,7 @@ it:
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2716,7 +2715,7 @@ it:
         
         We encourage you to use more than three, though!  Explore additional CSS properties and add them to your page.
       CSD U2 layout style margin_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is putting extra space around the images:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `margin: 10px;` is the rule that puts 10 pixels of space around the image.\n</details>\n<details>\n<summary>**What does the `margin` property do?**</summary>\nThe `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n</div>\n# Margin\n\nMargins specify how much space should be around an element.\n\n* Find the `margin` property in the `img` rule-set.\n* Change the margin to be larger, and discuss the effect with a partner.\n* Choose another element type and give it a margin, too."
-      CSD U2 layout style margin_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is putting extra space around the images:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `margin: 10px;` is the rule that puts 10 pixels of space around the image.\n</details>\n<details>\n<summary>**What does the `margin` property do?**</summary>\nThe `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n</div>\n# Margin\n\nMargins specify how much space should be around an element.\n\n* Find the `margin` property in the `img` rule-set.\n* Change the margin to be larger, and discuss the effect with a partner.\n* Choose another element type and give it a margin, too."
+      CSD U2 layout style margin_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is putting extra space around the images:\n\n<pre>img {\n\\tmargin: 10px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `margin: 10px;` is the rule that puts 10 pixels of space around the image.\n</details>\n<details>\n<summary>**What does the `margin` property do?**</summary>\nThe `margin` property determines how much space will be around the image.  Most of the time, you will define in the margin in pixels.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\" target=\"_new\">W3Schools - CSS margin Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n</div>\n# Margin\n\nMargins specify how much space should be around an element.\n\n* Find the `margin` property in the `img` rule-set.\n* Change the margin to be larger, and discuss the effect with a partner.\n* Choose another element type and give it a margin, too."
       CSD U2 layout style sample_markdown_instruction: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -2755,15 +2754,15 @@ it:
         </details>
         <details>
         <summary>**What does the `border-style` property do?**</summary>
-        The `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style Property</a>
+        The `border-style` property determines what kind of border (solid, dotted, dashed, etc.) the element has.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_new">W3Schools - CSS border-style Property</a>
         </details>
         <details>
         <summary>**What does the `border-radius` property do?**</summary>
-        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius property</a>
+        The `border-radius` property determines the radius of the curves at the corners of the element.  A bigger radius makes a bigger, softer curve, and a smaller radius makes a smaller, sharper curve.  A radius of zero makes a regular corner.  You can read more about this property at <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp" target="_new">W3Schools - CSS3 border-radius property</a>
         </details>
         <details>
         <summary>**What does the `float` property do?**</summary>
-        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float Property</a>
+        The `float` property makes an element "float", meaning that the elements that come after it all flow around it.  If the `float` value is `left`, the element will float to the left, and the elements after it will show up on its right.  If the `float` value is `right`, the element will float to the right, and the elements after it will show up on its left.  You can read more about this property at <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float Property</a>
         </details>
         </div>
         
@@ -2778,7 +2777,7 @@ it:
         
         In the next few levels, you'll be changing and adding new styles on this page.
       CSD U2 layout style width_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
-      CSD U2 layout style width_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
+      CSD U2 layout style width_2018_markdown_instruction: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**How does the code work?**</summary>\nHere is the code that is making the image its current size:\n\n<pre>img {\n\\twidth: 250px;\n}</pre>\n\n* `img` is the _selector_.  It specifies which elements will have to follow the rules inside the curly braces, in this case, the images.\n* `width: 250px` is the rule that makes the image 250 pixels wide.  It also changes the height so that the image does not stretch.\n</details>\n<details>\n<summary>**What does the `width` property do?**</summary>\nThe `width` property determines how wide the element will be.  Most of the time, you will define in the width in pixels, which makes the element take up an exact amount of space on the screen.  Defining the width will also change the height so that the image does not stretch, unless you have also defined the height.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\" target=\"_new\">W3Schools - CSS width Property</a>\n</details>\n<details>\n<summary>**What does the `height` property do?**</summary>\nThe `height` property determines how tall the element will be.  Most of the time, you will define in the height in pixels, which makes the element take up an exact amount of space on the screen.  Defining the height will also change the width so that the image does not stretch, unless you have also defined the width.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\" target=\"_new\">W3Schools - CSS height Property</a>\n</details>\n<details>\n<summary>**What does `px` mean / What is a pixel?**</summary>\nPixel, which is abbreviated `px`, is how elements are measured in CSS.  It’s the size of a single point of light on the screen.\n</details>\n<details>\n<summary>**Why does using a width and height rule at the same time sometimes stretch out the image?**</summary>\nWhen the width of an images changes, the height must change by the same percentage, otherwise the image will stretch.  For example, if you double the width of an image, you must also double the height, or the image will be stretched horizonally.  When you only define the width or the height, the computer will automatically change the other property so that the image looks the same.\n</details>\n</div>\n\n# Width and Height\n\n* Find the property in the style sheet that controls the width of the images.\n* Change the width of the images to be larger or smaller.\n* Create a new rule with a `height` property to control the height of the images.\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs."
       CSD U2 link demo_markdown_instruction: |-
         # Making a Multi-page Site
         
@@ -3239,7 +3238,7 @@ it:
         </details>
         <details>
         <summary>**What are the possible values for text decoration?**</summary>
-        You can choose between "underline", "overline", and "line-through".  You can read more about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration Property</a>
+        You can choose between "underline", "overline", and "line-through".  You can read more about the text-decoration property at <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="_new">W3Schools - CSS text-decoration Property</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -3335,7 +3334,7 @@ it:
         </details>
         <details>
         <summary>**What are the possible values for font family?**</summary>
-        You can choose between "serif", "sans-serif", "cursive", "fantasy", and "monospace".  You can also try more specific fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools - CSS Web Safe Font Combinations</a>
+        You can choose between "serif", "sans-serif", "cursive", "fantasy", and "monospace".  You can also try more specific fonts as described in <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_new">W3Schools - CSS Web Safe Font Combinations</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -3469,7 +3468,7 @@ it:
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
         <summary>**What colors can I use in CSS?**</summary>
-        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS Legal Color Values</a>
+        CSS includes most common color names (red, blue, green, etc.), and many uncommon ones.  You can see a full list of CSS color names at <a href="http://www.w3schools.com/colors/colors_names.asp" target="_new">W3Schools - HTML Color Names</a>.  You can still use colors that are not included in the named list, but you will need to use their RGB values.  You can read more about using colors in CSS at <a href="http://www.w3schools.com/cssref/css_colors_legal.asp" target="_new">W3Schools - CSS Legal Color Values</a>
         </details><details>
         <summary>**How does the code work?**</summary>
         Here is the code that is making the `h1` heading red:
@@ -3815,7 +3814,7 @@ it:
         </details>
         <details>
         <summary>**What are the possible values for text align?**</summary>
-        You can choose between "left", "right", and "center".  You can read more about the text-align property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align Property</a>
+        You can choose between "left", "right", and "center".  You can read more about the text-align property at <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp" target="_new">W3Schools - CSS text-align Property</a>
         </details>
         <details>
         <summary>**Why do I need all the punctuation?**</summary>
@@ -19127,7 +19126,7 @@ it:
         See how long it takes you to crack the cipher! Is this a good method of encrypting secret data?
         
         <img src="http://code.org/api/hour/begin_encryption.png">
-      D_Frozen_nested3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let’s make it into a snowflake.\"_\n\nNext, jump Elsa back to the center using the `jump to 200 over and 200 down` block, and spin her around to draw the line of shapes again and again in a bunch of different directions.   \n\nWhat amazing snowflakes you can make!\n<hr/>\nTake a look at these examples with polygons:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstract shapes might make a snowflake more like one of these:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      D_Frozen_nested3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe fiocchi spettacolari che puoi realizzare!\n<hr/>\nGuarda questi esempi con diversi poligoni:\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       D_Frozen_nested4_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Cosa succede se disegniamo i fiocchi di neve uno sopra l'altro?\"_\n\nProva a sovrapporre due diverse figure di fiocchi di neve una sopra l'altra con una piccola rotazione tra le due - guarda cosa ottieni!"
       D_Frozen_nested5_markdown_instruction: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Dai spazio alla tua creatività, divertiti con forme e angoli per disegnare nuovi fiocchi di neve! "_'
       D_Frozen_nested6_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Proviamo qualcosa di nuovo. Questa volta, pattina a  zig-zag\"_\n\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\nDisegna uno schema a scalinata che utilizza angoli compresi tra 75 e 105 gradi -- ma assicurati che le curve a sinistra e a destra utilizzino lo stesso angolo.\n(Dopo scoprirai perché.)"
@@ -19347,7 +19346,7 @@ it:
         * Try: Implement your improvements to your personal website.
         * Reflect: Get feedback from a classmate and decide what of that feedback to act on.
         
-        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/">website </a>.*)
+        Don't forget to take a screenshot of your home page and save it somewhere on your computer so you can find it later (*Need help with how to screenshot? Check out this <a href="http://www.take-a-screenshot.org/" target="_new">website </a>.*)
       Final Room Escape App_markdown_instruction: "# You've done it!\n\nYou made a room escape! Now its time to customize it. \n\nConsider:\n\n* Add more style to the room\n* Adding more things users can interact with in the room\n* Try to make your secret code random\n* Adding more rooms"
       Finalize Your Chaser Game v.1_markdown_instruction: |+
         # Add an Image and Make a Chaser Game!
@@ -26723,6 +26722,7 @@ it:
       allthethings level dataTables_markdown_instruction: Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_markdown_instruction: "# Drawing Rules\n\nSo what did you discover on the last level?\n\n* What do each of the 4 openings control?\n\n\\t* First Opening - controls the **location of the rectangle from left to right** - we call this the **x position**\n    * Second Opening - controls the **location of the rectangle from top to bottom** - we call this the **y position**\n    * Third Opening - controls the **width** of the rectangle\n    * Fourth Opening - controls the **height** of the rectangle\n\n* What is the size of the drawing area?\n\n\\t* Width - 400\n    * Height - 400\n\n* So where is (0,0) or x = 0 and y = 0?\n\n\\t* The **upper left corner of the grid!**\n\n# Do This\n\nWe have provided you with code for a rectangle that draws in the upper left corner when you run the program. Using your new knowledge of the workspace and the inputs for a rectangle:\n\n* **Change the width and height of the rectangle so that it fills the whole drawing area**\n* **HINT:** Remember that the rectangle block is `rect(x, y, width, height)` in that order"
       allthethings_embed_video_markdown_instruction: "Siri is a digital assistant built into Apple's iOS devices, including iPhones and iPads. Watch the advertisement for Siri, below. \n\n<iframe width=\"637px\" height=\"375px\" src=\"https://www.youtube.com/embed/8ciagGASro0\" frameborder=\"0\" allowfullscreen></iframe>\n\n<br/>\n__Reflect on the prompts below:__ \n\n- What types of information does Siri respond to in the video?\n- What do you think Siri is paying attention to in order to create these answers?\n"
+      allthethings_fish_tank_markdown_instruction: All-the-things test level.
       allthethings_moviebot_markdown_instruction: |
         # Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
         # Introduction to the Digital Assistant
@@ -27014,12 +27014,12 @@ it:
         
         Check the hints if you need help with these challenges!
       courseA_artist_loops10_markdown_instruction: |-
-        ## È ora di tornare a terra. Aiutami a posizionare le pietre così non cado in acqua!\r
-        \r
+        ## È ora di tornare a terra. Aiutami a posizionare le pietre così non cado in acqua!
+        
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops10_2018_markdown_instruction: |-
-        ## È ora di tornare a terra. Aiutami a posizionare le pietre così non cado in acqua!\r
-        \r
+        ## È ora di tornare a terra. Aiutami a posizionare le pietre così non cado in acqua!
+        
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops11_markdown_instruction: |-
         ## Aiutami a costruire i gradini per vedere la barca che salpa.\r 
@@ -27030,89 +27030,89 @@ it:
         \r 
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops12_markdown_instruction: |-
-        L'artista ha visto qualcosa di divertente al largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi "Termina" per completare la lezione.\r
-        \r
-        ___\r
-        ### Alcune idee:\r
-        \r
-        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
-        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
-        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
+        L'artista ha visto qualcosa di divertente al largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi "Termina" per completare la lezione.
+        
+        ___
+        ### Alcune idee:
+        
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops12_2018_markdown_instruction: |-
-        L'artista ha visto qualcosa di divertente al largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi "Termina" per completare la lezione.\r
-        \r
-        ___\r
-        ### Alcune idee:\r
-        \r
-        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
-        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
-        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
+        L'artista ha visto qualcosa di divertente al largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi "Termina" per completare la lezione.
+        
+        ___
+        ### Alcune idee:
+        
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2_markdown_instruction: |-
-        Aiuta l'artista a disegnare questa linea: due volte avanti.\r
-        \r
+        Aiuta l'artista a disegnare questa linea: due volte avanti.
+        
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops2_2018_markdown_instruction: |-
-        Aiuta l'artista a disegnare questa linea: due volte avanti.\r
-        \r
+        Aiuta l'artista a disegnare questa linea: due volte avanti.
+        
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops3_markdown_instruction: |-
-        Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?\r
-        \r
+        Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
+        
         ![expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops3_2018_markdown_instruction: |-
-        Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?\r
-        \r
+        Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
+        
         ![expandable] (https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!\r
-        \r
+        name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
+        
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2018_markdown_instruction: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!\r
-        \r
+        name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
+        
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
-        ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. \r
-        \r
+        ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. 
+        
         ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2018_markdown_instruction: |-
-        ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. \r
-        \r
+        ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte. 
+        
         ![expandable] (https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6_markdown_instruction: |-
-        ## Mettiamo una bella collina sullo sfondo.\r
-        \r
+        ## Mettiamo una bella collina sullo sfondo.
+        
         ![expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops6_2018_markdown_instruction: |-
-        ## Mettiamo una bella collina sullo sfondo.\r
-        \r
+        ## Mettiamo una bella collina sullo sfondo.
+        
         ![expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.\r
-        \r
+        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018_markdown_instruction: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.\r
-        \r
+        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_forVideo_markdown_instruction: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.\r
-        \r
+        name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
+        
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8_markdown_instruction: |-
-        ## Ci serve una scala per salire sulla barca.\r
-        \r
+        ## Ci serve una scala per salire sulla barca.
+        
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops8_2018_markdown_instruction: |-
-        ## Ci serve una scala per salire sulla barca.\r
-        \r
+        ## Ci serve una scala per salire sulla barca.
+        
         ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9_markdown_instruction: |-
         **Sfida:** la scaletta per scendere al molo è rotta, aiutami a ripararla.\r 
@@ -27123,19 +27123,19 @@ it:
         \r 
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1_markdown_instruction: |-
-        You can use a loop to draw many lines in a row.
+        Puoi usare un ciclo per disegnare molte linee di seguito.
         
-        Can you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!
+        Riesci a disegnare una casa? Falla proprio come ti piace! Prova a cercare schemi che si ripetono!
         
-        Here are some ideas:
+        Ecco qualche idea:
         
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge1_2018_markdown_instruction: |-
-        You can use a loop to draw many lines in a row.
+        Puoi usare un ciclo per disegnare molte linee di seguito.
         
-        Can you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!
+        Riesci a disegnare una casa? Falla proprio come ti piace! Prova a cercare schemi che si ripetono!
         
-        Here are some ideas:
+        Ecco qualche idea:
         
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2_markdown_instruction: |-
@@ -27143,13 +27143,13 @@ it:
         
         *"Can you help me make two bird houses?"*
       courseA_artist_loops_challenge2a_markdown_instruction: |-
-        *"Help me get the camp site ready!"*
+        *"Aiutami a preparare il campeggio!"*
         
-        Use the blocks in the toolbox to draw these three tents.
+        Usa i blocchi nella cassetta degli attrezzi per disegnare queste tre tende.
       courseA_artist_loops_challenge2a_2018_markdown_instruction: |-
-        *"Help me get the camp site ready!"*
+        *"Aiutami a preparare il campeggio!"*
         
-        Use the blocks in the toolbox to draw these three tents.
+        Usa i blocchi nella cassetta degli attrezzi per disegnare queste tre tende.
       courseA_bee_seq1_markdown_instruction: Help the bee get one nectar!
       courseA_bee_seq10_markdown_instruction: Prova tu! Raccogli tutto il nettare.
       courseA_bee_seq11_markdown_instruction: You've been a busy bee! Get all the nectar.
@@ -27164,31 +27164,31 @@ it:
         Use <xml><block type="maze_moveNorth"/></xml> **three** times to get the bee to the flower! Don't forget to get nectar at the end.
       courseA_bee_seq2_markdown_instruction: Add *one* block to help the bee get nectar from the flower.
       courseA_bee_seq3_markdown_instruction: Can you figure out what is wrong with this code? Help the bee get to the flower!
-      courseA_bee_seq4_markdown_instruction: Prova tu!
+      courseA_bee_seq4_markdown_instruction: Prova da solo!
       courseA_bee_seq5_markdown_instruction: You have to move in two directions to get to the flower! Help the bee pick the right direction.
       courseA_bee_seq6_markdown_instruction: Adesso l'ape deve raccogliere il nettare da due fiori!
       courseA_bee_seq7_markdown_instruction: Aggiungi due blocchi per competare l'esercizio!
       courseA_bee_seq8_markdown_instruction: This maze looks familiar... can you figure out what looks different?
       courseA_bee_seq9_markdown_instruction: This bee needs nectar! Do you see a pattern?
       courseA_collector_loops1_markdown_instruction: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.\r
-        \r
-        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.\r
-        \r
+        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        
+        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
+        
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
-      courseA_collector_loops12_markdown_instruction: "*\"Evviva! Raccogli più diamanti che puoi!\"* \\r\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
-      courseA_collector_loops12_2018_markdown_instruction: "*\"Evviva! Raccogli più diamanti che puoi!\"* \\r\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
+      courseA_collector_loops12_markdown_instruction: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
+      courseA_collector_loops12_2018_markdown_instruction: "*\"Evviva! Raccogli più diamanti che puoi!\"*\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
       courseA_collector_loops1_2018_markdown_instruction: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.\r
-        \r
-        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.\r
-        \r
+        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        
+        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
+        
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops2_markdown_instruction: |2
-        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:\r
+        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
          <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_markdown_instruction: |2
-        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:\r
+        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
          <xml><block type="collector_collect"/></xml>
       courseA_collector_loops3_markdown_instruction: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
       courseA_collector_loops3_2018_markdown_instruction: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
@@ -27201,40 +27201,40 @@ it:
         Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
          <xml><block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_markdown_instruction: Repeat loops work for Artist, too!
-      courseA_harvester_forVideo_markdown_instruction: Potresti raccogliere tutto il grano utilizzando solo **un** blocco di movimento?
-      courseA_harvester_loops1_markdown_instruction: Help the harvester pick all the corn!
-      courseA_harvester_loops10_markdown_instruction: Help the harvester pick all five ears of corn!
+      courseA_harvester_forVideo_markdown_instruction: Riesci a raccogliere tutte le pannocchie usando **un** solo blocco di movimento?
+      courseA_harvester_loops1_markdown_instruction: Aiuta la contadina a raccogliere tutte le pannocchie!
+      courseA_harvester_loops10_markdown_instruction: Aiuta la contadina a raccogliere tutte e cinque le pannocchie!
       courseA_harvester_loops11_markdown_instruction: 'Provane un altro da solo! '
-      courseA_harvester_loops2_markdown_instruction: The harvester needs to pick all the corn! Do you see a pattern?
-      courseA_harvester_loops3_markdown_instruction: Potresti raccogliere tutto il grano utilizzando solo **un** blocco di movimento?
+      courseA_harvester_loops2_markdown_instruction: La contadina deve raccogliere tutte le pannocchie! Riesci ad individuare il percorso?
+      courseA_harvester_loops3_markdown_instruction: Riesci a raccogliere tutte le pannocchie usando **un** solo blocco di movimento?
       courseA_harvester_loops4_markdown_instruction: |-
-        *"I need help to find what's wrong!"*
+        *"Ho bisogno di aiuto per capire cosa c'è di sbagliato!"*
         
-        Can you help the harvester find the bug in her code?
-      courseA_harvester_loops5_markdown_instruction: Provalo! Potresti raccogliere anche il grano alla fine?
-      courseA_harvester_loops5a_markdown_instruction: Look at all this corn? Can you pick it all by yourself?
-      courseA_harvester_loops5b_markdown_instruction: Can you change your code to make the harvester pick all the corn?
-      courseA_harvester_loops6_markdown_instruction: You will need **one** <xml><block type="maze_moveWest"></block></xml> block and **one** <xml><block type="maze_moveNorth"></block></xml> block to finish this puzzle!
-      courseA_harvester_loops7_markdown_instruction: 'Provalo! '
+        Puoi aiutare la contadina a trovare l'errore nel programma?
+      courseA_harvester_loops5_markdown_instruction: Prova da solo! Riesci a raccogliere anche l'ultima pannocchia?
+      courseA_harvester_loops5a_markdown_instruction: Dai un'occhiata a tutte queste pannocchie! Riusciresti a raccoglierle tutte da solo?
+      courseA_harvester_loops5b_markdown_instruction: Puoi modificare il programma per fare in modo che la contadina raccolga tutte le pannocchie?
+      courseA_harvester_loops6_markdown_instruction: Avrai bisogno di **un** blocco <xml><block type="maze_moveWest"></block></xml> e di **un** blocco <xml><block type="maze_moveNorth"></block></xml> per finire questo esercizio!
+      courseA_harvester_loops7_markdown_instruction: 'Prova da solo!'
       courseA_harvester_loops8_markdown_instruction: |-
         This is the same puzzle, but now you have to repeat **three** times instead of two! Use this block:
         
         <xml><block type="controls_repeat_simplified_dropdown">
         <title name="TIMES" config="2-10">3</title>
         </block></xml>
-      courseA_harvester_loops9_markdown_instruction: Can you figure out how to pick *all* this corn?
-      courseA_harvester_seq1_markdown_instruction: Help the harvester pick the piece of corn!
-      courseA_harvester_seq10_markdown_instruction: The harvester needs to pick all the corn! Do you see a pattern?
-      courseA_harvester_seq11_markdown_instruction: Prova tu stesso! Raccogli tutto il grano.
-      courseA_harvester_seq12_markdown_instruction: "*Thank you for helping me!* \n\nPick all the corn."
-      courseA_harvester_seq13_markdown_instruction: Help the harvester pick corn!
-      courseA_harvester_seq2_markdown_instruction: 'Use <xml><block type="maze_moveWest"/></xml> **three** times to get the harvester to the corn! '
-      courseA_harvester_seq3_markdown_instruction: Use <xml><block type="maze_moveNorth"/></xml> **three** times to get the harvester to the corn! Don't forget to pick the corn at the end.
-      courseA_harvester_seq4_markdown_instruction: Add *one* block to help the harvester pick the corn.
-      courseA_harvester_seq5_markdown_instruction: Can you figure out what is wrong with this code? Help the harvester pick the corn!
-      courseA_harvester_seq6_markdown_instruction: Prova tu!
-      courseA_harvester_seq7_markdown_instruction: You have to move in two directions to get to the corn! Help the harvester pick the right direction.
-      courseA_harvester_seq8_markdown_instruction: Now the harvester needs to pick corn two times!
+      courseA_harvester_loops9_markdown_instruction: Riesci a capire come raccogliere *tutte* le pannocchie?
+      courseA_harvester_seq1_markdown_instruction: Aiuta la contadina a raccogliere la pannocchia!
+      courseA_harvester_seq10_markdown_instruction: La contadina deve raccogliere tutte le pannocchie! Riesci ad individuare il percorso?
+      courseA_harvester_seq11_markdown_instruction: Prova da solo! Raccogli tutte le pannocchie.
+      courseA_harvester_seq12_markdown_instruction: "*Grazie dell'aiuto!*\n\nRaccogli tutte le pannocchie."
+      courseA_harvester_seq13_markdown_instruction: Aiuta la contadina a raccogliere le pannocchie!
+      courseA_harvester_seq2_markdown_instruction: 'Usa **tre** volte il blocco <xml><block type="maze_moveWest"/></xml> per far arrivare la contadina fino alla pannocchia!'
+      courseA_harvester_seq3_markdown_instruction: Usa **tre** volte il blocco <xml><block type="maze_moveNorth"/></xml> per fare in modo che la contadina raggiunga la pannocchia! E alla fine non dimenticare di raccogliere la pannocchia.
+      courseA_harvester_seq4_markdown_instruction: Aggiungi *un* blocco per aiutare la contadina a raccogliere la pannocchia.
+      courseA_harvester_seq5_markdown_instruction: Riesci a capire cosa c'è di sbagliato in questo programma? Aiuta la contadina a raccogliere la pannocchia!
+      courseA_harvester_seq6_markdown_instruction: Prova da solo!
+      courseA_harvester_seq7_markdown_instruction: Bisogna muoversi in due direzioni per raggiungere la pannocchia! Aiuta la contadina a prendere la direzione giusta.
+      courseA_harvester_seq8_markdown_instruction: Ora la contadina dovrà raccogliere pannocchie due volte!
       courseA_harvester_seq9_markdown_instruction: Aggiungi due blocchi per competare l'esercizio!
       courseA_maze_ramp2_2018_markdown_instruction: "Per completare l'esercizio, connetti entrambi i blocchi <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>, quindi clicca su  \"▶ Esegui\".  \n\n\n---\n"
       courseA_maze_ramp2a_2018_markdown_instruction: Attach both <xml><block type="maze_moveEast"/></xml> blocks to <xml><block type="when_run"/></xml> to finish your code, then click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
@@ -27323,26 +27323,26 @@ it:
       courseA_maze_seq_challenge1_markdown_instruction: Correggi gli errori in questo programma. Togli i blocchi di troppo e aggiungi quelli che mancano. Fai arrivare l'uccellino fino al maialino!
       courseA_maze_seq_challenge1_2018_markdown_instruction: Correggi gli errori in questo programma. Togli i blocchi di troppo e aggiungi quelli che mancano. Fai arrivare l'uccellino fino al maialino!
       courseA_playLab_events3_markdown_instruction: |2
-        Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">\r
-            <title name="SPRITE">1</title>\r
+        Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
             <title
-        name="DIR">8</title>\r
-          </block></xml> al blocco evento <xml><block type="studio_whenArrow">\r
+        name="DIR">8</title>
+          </block></xml> al blocco evento <xml><block type="studio_whenArrow">
             <title
-        name="VALUE">left</title>\r
-          </block></xml> che si trova già nell'area di lavoro.\r
-        \r
+        name="VALUE">left</title>
+          </block></xml> che si trova già nell'area di lavoro.
+        
         Fai arrivare il cane alla bandierina per completare l'esercizio!
       courseA_playLab_events3_2018_markdown_instruction: |2
-        Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">\r
-            <title name="SPRITE">1</title>\r
+        Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
             <title
-        name="DIR">8</title>\r
-          </block></xml> al blocco evento <xml><block type="studio_whenArrow">\r
+        name="DIR">8</title>
+          </block></xml> al blocco evento <xml><block type="studio_whenArrow">
             <title
-        name="VALUE">left</title>\r
-          </block></xml> che si trova già nell'area di lavoro.\r
-        \r
+        name="VALUE">left</title>
+          </block></xml> che si trova già nell'area di lavoro.
+        
         Fai arrivare il cane alla bandierina per completare l'esercizio!
       courseA_playLab_events4_markdown_instruction: Ora fai muovere il cane a destra quando si preme la freccia a destra.
       courseA_playLab_events4_2018_markdown_instruction: Ora fai muovere il cane a destra quando si preme la freccia a destra.
@@ -27350,15 +27350,15 @@ it:
       courseA_playLab_events5_2018_markdown_instruction: Aggiungi gli eventi per far muovere il cane su e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events7_2018_markdown_instruction: "*Tempo di giocare:* Aggiungi ciò che vuoi a questo gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando sei soddisfatto, premi \"Termina\" per completare il corso.)"
       courseA_playlab_events_challenge1_markdown_instruction: |-
-        Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?
+        Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
         
-        In this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!
+        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
         
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge1_2018_markdown_instruction: |-
-        Clicking Olive will make Robin appear! Can you write code to show the rest of the characters too?
+        Cliccando sul gatto apparirà l'uccellino! Puoi scrivere un programma per mostrare anche gli altri personaggi?
         
-        In this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!
+        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee per realizzare questo progetto passo dopo passo.
         
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge1a_markdown_instruction: |-
@@ -27369,15 +27369,15 @@ it:
         
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge2_markdown_instruction: |-
-        Give everyone something to do when you click on them. What will the animals say? What else will happen?
+        Dai ad ognuno di loro qualcosa da fare quando ci clicchi sopra. Cosa diranno gli animali? Cos'altro succederà?
         
-        In this puzzle, make sure to click for hints. The hints will give you fun things to try!
+        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee!
         
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challenge2_2018_markdown_instruction: |-
-        Give everyone something to do when you click on them. What will the animals say? What else will happen?
+        Dai ad ognuno di loro qualcosa da fare quando ci clicchi sopra. Cosa diranno gli animali? Cos'altro succederà?
         
-        In this puzzle, make sure to click for hints. The hints will give you fun things to try!
+        In questo esercizio, clicca sui suggerimenti: ci troverai delle belle idee!
         
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
       courseA_playlab_events_challengeClone_markdown_instruction: |-
@@ -27387,13 +27387,13 @@ it:
         In this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!
         
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
-      courseB_Scrat_ramp1_2018_markdown_instruction: "To get Scrat to the acorn, snap the <xml><block type=\"maze_moveEast\"/></xml> block to the bottom of the <xml><block type=\"when_run\"/></xml> block, then press \"▶ Run\"!  \n\n---\n"
-      courseB_Scrat_ramp2_2018_markdown_instruction: "Snap both <xml><block type=\"maze_moveEast\"/></xml> blocks to the bottom of the <xml><block type=\"when_run\"/></xml> block to finish your code, then click \"▶ Run\".  \n\n---\n"
+      courseB_Scrat_ramp1_2018_markdown_instruction: "Per far arrivare Scrat fino alla ghianda, trascina il blocco <xml><block type=\"maze_moveEast\"/></xml> sotto al blocco <xml><block type=\"when_run\"/></xml>, poi premi \"▶ Esegui\"!  \n\n\n---\n"
+      courseB_Scrat_ramp2_2018_markdown_instruction: "Per completare l'esercizio, connetti entrambi i blocchi <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>, quindi clicca su  \"▶ Esegui\".  \n\n\n---\n"
       courseB_Scrat_ramp3a_2018_markdown_instruction: "Per completare il programma, trascina un blocco <xml><block type=\"maze_moveNorth\"/></xml> dalla cassetta degli attrezzi e aggiungilo sotto a tutti gli altri, poi clicca su \"▶ Esegui\". \n\n---\n"
       courseB_Scrat_ramp3b_2018_markdown_instruction: |-
-        There's an extra block at the end of this code!
+        C'è un blocco di troppo alla fine di questo codice!
         
-        Drag it back to the toolbox to throw it away.
+        Per eliminarlo, trascinarlo nella cassetta degli attrezzi.
       courseB_Scrat_ramp4a_2018_markdown_instruction: Riesci a capire quale blocco devi aggiungere alla fine di questo programma per completare l'esercizio?
       courseB_Scrat_ramp5a_2018_markdown_instruction: Questo esercizio prova a risolverlo completamente da solo!
       courseB_artist_loops10_markdown_instruction: |-
@@ -27425,10 +27425,10 @@ it:
       courseB_artist_loops_challenge2_markdown_instruction: Draw as many X's as you can. Can you get 3 in a row?
       courseB_artist_loops_challenge2_2018_markdown_instruction: Draw as many X's as you can. Can you get 3 in a row?
       courseB_collector_loops1_markdown_instruction: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.\r
-        \r
-        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.\r
-        \r
+        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        
+        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
+        
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseB_collector_loops1_2018_markdown_instruction: "**Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.\\r\n\\r\nTrascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.\\r\n\\r\n(Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\")"
       courseB_collector_loops2_markdown_instruction: |-
@@ -27942,7 +27942,7 @@ it:
         Sfrutta ciò che hai imparato per recuperare tutti i rottami metallici!
       courseD_Frozen_nested1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
       courseD_Frozen_nested2_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Ora, ne disegniamo più di una.\"_\n\nOra parti dalla tua figura e disegnane due o tre di fila saltando in avanti un certo numero di pixel.\n\n- Se salti in avanti **meno** della larghezza della tua figura, le immagini potrebbero sovrapporsi.\n- Se salti in avanti **più** della larghezza della tua figura, otterrai uno spazio vuoto.\n\n<hr/>\n\nLa tua fila potrebbe venire come una di queste:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\nOppure, le tue figure potrebbero distribuirsi come una di queste:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
-      courseD_Frozen_nested3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let’s make it into a snowflake.\"_\n\nNext, jump Elsa back to the center using the `jump to 200 over and 200 down` block, and spin her around to draw the line of shapes again and again in a bunch of different directions.   \n\nWhat amazing snowflakes you can make!\n<hr/>\nTake a look at these examples with polygons:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstract shapes might make a snowflake more like one of these:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_Frozen_nested3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe fiocchi spettacolari che puoi realizzare!\n<hr/>\nGuarda questi esempi con diversi poligoni:\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_Frozen_nested4_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Cosa succede se disegniamo i fiocchi di neve uno sopra l'altro?\"_\n\nProva a sovrapporre due diverse figure di fiocchi di neve una sopra l'altra con una piccola rotazione tra le due - guarda cosa ottieni!"
       courseD_Frozen_nested5_markdown_instruction: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Dai spazio alla tua creatività, divertiti con forme e angoli per disegnare nuovi fiocchi di neve! "_'
       courseD_Frozen_nested6_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Proviamo qualcosa di nuovo. Questa volta, pattina a  zig-zag\"_\n\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\nDisegna uno schema a scalinata che utilizza angoli compresi tra 75 e 105 gradi -- ma assicurati che le curve a sinistra e a destra utilizzino lo stesso angolo.\n(Dopo scoprirai perché.)"
@@ -28036,7 +28036,7 @@ it:
       courseD_artist_functions2_markdown_instruction: "Le funzioni ti permettono di definire nuovi blocchi!\n\nAbbiamo spostato i blocchi per disegnare un quadrato all'interno di una funzione chiamata `draw a square` (*disegna un quadrato*). Puoi usare la funzione `draw a square` per creare gli occhiali?\n___\n\nI quadrati sono distanti 75 pixel."
       courseD_artist_functions3_markdown_instruction: "Torneremo alle funzioni tra poco. Ora facciamo una breve pausa esercitandoci a disegnare questa stella.\n\nPuoi realizzare questo disegno aggiungendo un blocco `ripeti ... volte`."
       courseD_artist_functions4_markdown_instruction: |-
-        Ora che sai disegnare una stella, provare a disegnarne quattro!
+        Ora che sai disegnare una stella, prova a disegnarne quattro!
         
         - Ogni raggio della stella è lungo 25 pixel.
         - Gira di 45 gradi tra un raggio e l'altro.
@@ -28160,8 +28160,8 @@ it:
       courseD_artist_project2_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Ora, ne disegniamo più di una.\"_\n\nOra parti dalla tua figura e disegnane due o tre di fila saltando in avanti un certo numero di pixel.\n\n- Se salti in avanti **meno** della larghezza della tua figura, le immagini potrebbero sovrapporsi.\n- Se salti in avanti **più** della larghezza della tua figura, otterrai uno spazio vuoto.\n\n<hr/>\n\nLa tua fila potrebbe venire come una di queste:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\nOppure, le tue figure potrebbero distribuirsi come una di queste:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_artist_project2a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Ora girati e torna da dove siamo venuti.\"_\n\nRuota di 180 gradi e disegna di nuovo lo stesso schema a scalinata!\n\n- Il resto di questa lezione sarà più facile se metti tutto il codice dentro ad un ciclo per far disegnare Elsa: ruota di 180 gradi, disegna, quindi ruota di nuovo di 180 gradi.\n\n<hr/>\n\nEcco un esempio di scale che usa un angolo di 76 gradi:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
       courseD_artist_project2a_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Ora girati e torna da dove siamo venuti.\"_\n\nRuota di 180 gradi e disegna di nuovo lo stesso schema a scalinata!\n\n- Il resto di questa lezione sarà più facile se metti tutto il codice dentro ad un ciclo per far disegnare Elsa: ruota di 180 gradi, disegna, quindi ruota di nuovo di 180 gradi.\n\n<hr/>\n\nEcco un esempio di scale che usa un angolo di 76 gradi:\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
-      courseD_artist_project3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let’s make it into a snowflake.\"_\n\nNext, jump Elsa back to the center using the `jump to 200 over and 200 down` block, and spin her around to draw the line of shapes again and again in a bunch of different directions.   \n\nWhat amazing snowflakes you can make!\n<hr/>\nTake a look at these examples with polygons:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstract shapes might make a snowflake more like one of these:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
-      courseD_artist_project3_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Let’s make it into a snowflake.\"_\n\nNext, jump Elsa back to the center using the `jump to 200 over and 200 down` block, and spin her around to draw the line of shapes again and again in a bunch of different directions.   \n\nWhat amazing snowflakes you can make!\n<hr/>\nTake a look at these examples with polygons:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nAbstract shapes might make a snowflake more like one of these:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe fiocchi spettacolari che puoi realizzare!\n<hr/>\nGuarda questi esempi con diversi poligoni:\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe fiocchi spettacolari che puoi realizzare!\n<hr/>\nGuarda questi esempi con diversi poligoni:\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_artist_project3a_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Gira e trasforma la figura in un fiocco di neve."_
         
@@ -28312,21 +28312,21 @@ it:
         Watch how the bee gets the nectar. Can you use the same kind of pattern to help the bee make all of the honey?
       courseD_bee_debugging_challenge2_markdown_instruction: Watch how the bees gets the nectar. Can you use the same kind of pattern to help the bee make all of honey?
       courseD_bee_nestedLoops1_markdown_instruction: |-
-        *"This is going to **BEE** great!"*
+        *`Ora facciamo qualcosa di grandioso!`*
         
-        Help the bee collect all of the nectar.
+        Aiuta l'ape a raccogliere tutto il nettare.
       courseD_bee_nestedLoops1_2018_markdown_instruction: |-
-        *"This is going to **BEE** great!"*
+        *`Ora facciamo qualcosa di grandioso!`*
         
-        Help the bee collect all of the nectar.
+        Aiuta l'ape a raccogliere tutto il nettare.
       courseD_bee_nestedLoops1a_markdown_instruction: |-
-        *"This is going to **BEE** great!"*
+        *`Ora facciamo qualcosa di grandioso!`*
         
-        Help the bee collect all of the nectar.
+        Aiuta l'ape a raccogliere tutto il nettare.
       courseD_bee_nestedLoops1a_2018_markdown_instruction: |-
-        *"This is going to **BEE** great!"*
+        *`Ora facciamo qualcosa di grandioso!`*
         
-        Help the bee collect all of the nectar.
+        Aiuta l'ape a raccogliere tutto il nettare.
       courseD_bee_nestedLoops2_markdown_instruction: Questa volta, aiuta l'ape a raccogliere tutto il nettare usando il minor numero possibile di blocchi.
       courseD_bee_nestedLoops2_2018_markdown_instruction: Questa volta, aiuta l'ape a raccogliere tutto il nettare usando il minor numero possibile di blocchi.
       courseD_bee_nestedLoops2_predict1_markdown_instruction: Questa volta, aiuta l'ape a raccogliere tutto il nettare usando il minor numero possibile di blocchi.
@@ -28850,13 +28850,13 @@ it:
         - You need to turn 45 degrees to get 8 arms
         - It is okay to go forward and backward over the same arm
       courseE_artist_functions4_markdown_instruction: |-
-        Ora che sai disegnare una stella, provare a disegnarne quattro!
+        Ora che sai disegnare una stella, prova a disegnarne quattro!
         
         - Ogni raggio della stella è lungo 25 pixel.
         - Gira di 45 gradi tra un raggio e l'altro.
         - Salta avanti di 100 pixel tra una stella e l'altra.
       courseE_artist_functions4_2018_markdown_instruction: |-
-        Ora che sai disegnare una stella, provare a disegnarne quattro!
+        Ora che sai disegnare una stella, prova a disegnarne quattro!
         
         - Ogni raggio della stella è lungo 25 pixel.
         - Gira di 45 gradi tra un raggio e l'altro.
@@ -30418,6 +30418,9 @@ it:
         * What are facilitators doing?
         * What are teachers doing?
         * What strategies did you see facilitators use to keep teachers engaged?
+      farmer-test-lb_markdown_instruction: |-
+        # Making A Function
+        1. Do this thing
       feel-monday_markdown_instruction: |
         # Day 1: Feel
         
@@ -30446,6 +30449,7 @@ it:
         
         * What factors seemed to contribute to those feelings?
         * What did you see the lead facilitators do to address or support the general participant experience throughout the day?
+      fit-dlp-example_markdown_instruction: "<br><br>\n\n# FIT Deeper Learning Example\n\nThis is where instructions for the prompt will be.\n\n> **Prompt:** Is a hotdog a sandwich?\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       frozen circle function in circle_markdown_instruction: Ora disegniamo 20 cerchi sovrapposti, girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?
       frozen circle function with parameter_markdown_instruction: In questo esercizio il blocco "disegna un cerchio" può creare cerchi di diverse dimensioni. Usalo per disegnare un cerchio piccolo di dimensione 5 e un cerchio più grande di dimensione 10.
       frozen circle function_markdown_instruction: Usa il nuovo blocco "disegna un cerchio" per disegnare 10 cerchi sovrapposti. Devi capire di quanto saltare in avanti tra un cerchio e l'altro.
@@ -30833,7 +30837,7 @@ it:
         </table>
       grade4_artist_functions_stars0_markdown_instruction: "Torneremo alle funzioni tra poco. Ora facciamo una breve pausa esercitandoci a disegnare questa stella.\n\nPuoi realizzare questo disegno aggiungendo un blocco `ripeti ... volte`."
       grade4_artist_functions_stars1_markdown_instruction: |-
-        Ora che sai disegnare una stella, provare a disegnarne quattro!
+        Ora che sai disegnare una stella, prova a disegnarne quattro!
         
         - Ogni raggio della stella è lungo 25 pixel.
         - Gira di 45 gradi tra un raggio e l'altro.
@@ -31128,11 +31132,11 @@ it:
         
         ![](https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif)
       gradek_artist_loops1_markdown_instruction: |-
-        Help the artist draw this line two times forward.
+        Aiuta l'artista a disegnare questa linea: due volte avanti.
         
         ![](https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif)
       gradek_artist_loops2_markdown_instruction: |-
-        Our artist is trying to draw a line five times, but can't get it right. Can you help?
+        Il nostro artista sta cercando di disegnare cinque volte una linea in avanti, ma non riesce a farlo correttamente. Puoi aiutarlo?
         
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       gradek_artist_loops3_markdown_instruction: |-
@@ -31210,7 +31214,7 @@ it:
         
         </tr>
         </table>
-      gradek_playlab_events1c_markdown_instruction: Jorge the Dog wants to say "Hi there."  Can you help him?
+      gradek_playlab_events1c_markdown_instruction: Il cane, vuole dire "Ciao". Riesci ad aiutarlo?
       gradek_playlab_events2c_markdown_instruction: Help Jorge the Dog get moving by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png) event block that is already in the workspace.
       gradek_playlab_events3c_markdown_instruction: Now, get Jorge to move right when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png) button is clicked.
       gradek_playlab_events4c_markdown_instruction: Add events to have Jorge move up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png) and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png) buttons are pressed.

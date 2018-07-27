@@ -116,10 +116,10 @@ export default class DeleteAccount extends React.Component {
   };
 
   isValid = () => {
-    const {isPasswordRequired, isTeacher} = this.props;
+    const {isPasswordRequired, isTeacher, hasStudents} = this.props;
     const {password, deleteVerification} = this.state;
     const isPasswordValid = isPasswordRequired ? (password.length > 0) : true;
-    const areCheckboxesValid = isTeacher ? this.allCheckboxesChecked() : true;
+    const areCheckboxesValid = isTeacher && hasStudents ? this.allCheckboxesChecked() : true;
     const isDeleteVerificationValid = deleteVerification === DELETE_VERIFICATION_STRING;
 
     return isPasswordValid && areCheckboxesValid && isDeleteVerificationValid;
