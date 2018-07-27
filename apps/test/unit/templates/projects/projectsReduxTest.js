@@ -32,6 +32,7 @@ describe('projectsRedux', () => {
     it('sets the publishedAt field for the recently unpublished project to null', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
+      assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
       const nextAction = unpublishSuccess('abcd3');
       const nextNextState = projects(nextState, nextAction);
       assert.deepEqual(nextNextState.personalProjectsList.projects[2].channel, 'abcd3');
