@@ -282,6 +282,7 @@ module LevelsHelper
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
+        use_p5sound: @level.is_a?(Gamelab),
         hide_source: hide_source,
         static_asset_base_path: app_options[:baseUrl]
       }
