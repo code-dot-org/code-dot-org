@@ -31,10 +31,13 @@ import workshopDashboardReducers, {
 import regionalPartnerReducers, {
   setRegionalPartners,
   setRegionalPartnerFilter,
-  getInitialRegionalPartnerFilter
+  getInitialRegionalPartnerFilter,
 } from '../components/regional_partners_reducers';
 import {WorkshopAdmin} from './permission';
-import {RegionalPartnerShape} from "../components/regional_partner_dropdown";
+import {
+  RegionalPartnerShape,
+  ALL_PARTNERS_OPTION
+} from "../components/regional_partner_dropdown";
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
@@ -71,7 +74,15 @@ export default class WorkshopDashboard extends React.Component {
     }
 
     store.dispatch(setRegionalPartners(this.props.regionalPartners));
-    store.dispatch(setRegionalPartnerFilter(getInitialRegionalPartnerFilter(props.permissionList.includes(WorkshopAdmin), this.props.regionalPartners)));
+    store.dispatch(
+      setRegionalPartnerFilter(
+        getInitialRegionalPartnerFilter(
+          props.permissionList.includes(WorkshopAdmin),
+          this.props.regionalPartners,
+          ALL_PARTNERS_OPTION
+        )
+      )
+    );
   }
 
   render() {
