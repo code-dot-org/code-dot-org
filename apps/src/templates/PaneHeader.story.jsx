@@ -1,5 +1,5 @@
 import React from 'react';
-import PaneHeader, {PaneSection} from './PaneHeader';
+import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
 
 const styles = {
   header: {
@@ -30,6 +30,12 @@ export default storybook => {
               <PaneSection style={styles.header}>
                 <span>Section2</span>
               </PaneSection>
+              <PaneButton
+                headerHasFocus={false}
+                iconClass="fa fa-arrow-down"
+                label="Button"
+                isRtl={false}
+              />
             </div>
           </PaneHeader>
         )
@@ -37,7 +43,9 @@ export default storybook => {
       {
         name:'PaneHeader - does not have focus',
         story: () => (
-          <PaneHeader hasFocus={false}>
+          <PaneHeader
+            hasFocus={false}
+          >
             <div style={styles.flex}>
               <PaneSection style={styles.header}>
                 <span>Section1</span>
@@ -45,6 +53,12 @@ export default storybook => {
               <PaneSection style={styles.header}>
                 <span>Section2</span>
               </PaneSection>
+              <PaneButton
+                headerHasFocus={false}
+                iconClass="fa fa-arrow-down"
+                label="Button"
+                isRtl={false}
+              />
             </div>
           </PaneHeader>
         )
@@ -52,7 +66,10 @@ export default storybook => {
       {
         name:'PaneHeader - teacher only',
         story: () => (
-          <PaneHeader hasFocus={true} teacherOnly={true}>
+          <PaneHeader
+            hasFocus={true}
+            teacherOnly={true}
+          >
             <div style={styles.flex}>
               <PaneSection style={styles.header}>
                 <span>Section1</span>
@@ -60,6 +77,60 @@ export default storybook => {
               <PaneSection style={styles.header}>
                 <span>Section2</span>
               </PaneSection>
+              <PaneButton
+                headerHasFocus={false}
+                iconClass="fa fa-arrow-down"
+                label="Button"
+                isRtl={false}
+              />
+            </div>
+          </PaneHeader>
+        )
+      },
+      {
+        name:'PaneHeader - teacher only, does not have focus',
+        story: () => (
+          <PaneHeader
+            hasFocus={false}
+            teacherOnly={true}
+          >
+            <div style={styles.flex}>
+              <PaneSection style={styles.header}>
+                <span>Section1</span>
+              </PaneSection>
+              <PaneSection style={styles.header}>
+                <span>Section2</span>
+              </PaneSection>
+              <PaneButton
+                headerHasFocus={false}
+                iconClass="fa fa-arrow-down"
+                label="Button"
+                isRtl={false}
+              />
+            </div>
+          </PaneHeader>
+        )
+      },
+      {
+        name:'PaneHeader - with RTL and LTR buttons',
+        story: () => (
+          <PaneHeader
+            hasFocus={false}
+            teacherOnly={true}
+          >
+            <div style={styles.flex}>
+              <PaneButton
+                headerHasFocus={false}
+                iconClass="fa fa-arrow-down"
+                label="ButtonRTL"
+                isRtl={true}
+              />
+              <PaneButton
+                headerHasFocus={false}
+                iconClass="fa fa-arrow-down"
+                label="ButtonLTR"
+                isRtl={false}
+              />
             </div>
           </PaneHeader>
         )
