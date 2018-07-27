@@ -5,6 +5,7 @@ import {enrollmentShape} from "../types";
 import {workshopEnrollmentStyles as styles} from "../workshop_enrollment_styles";
 
 const CSF = "CS Fundamentals";
+const NA = "N/A";
 
 export default class WorkshopEnrollmentSchoolInfo extends React.Component {
   constructor(props) {
@@ -74,8 +75,8 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.email}</td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
-          {this.props.workshopCourse === CSF && <td>{enrollment.role ? enrollment.role : "No Response"}</td>}
-          {this.props.workshopCourse === CSF && <td>{enrollment.grades_teaching ? enrollment.grades_teaching : "No Response"}</td>}
+          {this.props.workshopCourse === CSF && <td>{enrollment.role ? enrollment.role : NA}</td>}
+          {this.props.workshopCourse === CSF && <td>{enrollment.grades_teaching ? enrollment.grades_teaching : NA}</td>}
           {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
         </tr>
       );

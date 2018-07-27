@@ -388,8 +388,6 @@ export default class EnrollForm extends React.Component {
   getMissingRequiredFields() {
     const schoolInfoFields = [
       'school_name',
-      'school_address',
-      'school_city',
       'school_state',
       'school_zip',
       'school_type'
