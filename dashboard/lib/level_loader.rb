@@ -31,6 +31,13 @@ class LevelLoader
           compact.
           select(&:changed?)
 
+      # activerecord-import (with MySQL, anyway) doesn't save associated
+      # models, so we've got to do this manually.
+      changed_level_concept_difficulties = changed_levels.map(&:level_concept_difficulty).compact
+      lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
+          reject {|column| %i{id level_id created_at}.include? column}
+      LevelConceptDifficulty.import! changed_level_concept_difficulties, on_duplicate_key_update: lcd_update_columns
+
       # activerecord-import doesn't trigger before_save and before_create hooks
       # for imported models, so we trigger these manually to make sure they're
       # set up the same way they would be otherwise.
