@@ -51,12 +51,12 @@ export const setRegionalPartners = (partners) => ({
   partners
 });
 
-export function getInitialRegionalPartnerFilter(isWorkshopAdmin, regionalPartners) {
+export function getInitialRegionalPartnerFilter(isWorkshopAdmin, regionalPartners, defaultAdminFilter) {
   let regionalPartnerFilter = JSON.parse(sessionStorage.getItem("regionalPartnerFilter"));
 
   if (!regionalPartnerFilter) {
     if (isWorkshopAdmin) {
-      regionalPartnerFilter = UNMATCHED_PARTNER_OPTION;
+      regionalPartnerFilter = defaultAdminFilter || UNMATCHED_PARTNER_OPTION;
     } else if (regionalPartners.length === 1) {
       regionalPartnerFilter = {label: regionalPartners[0].name, value: regionalPartners[0].id};
     } else {
