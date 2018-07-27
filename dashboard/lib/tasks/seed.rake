@@ -100,6 +100,7 @@ namespace :seed do
     :dsls,
     :blocks,
     :shared_blockly_functions,
+    :libraries,
   ].freeze
 
   task scripts: SCRIPTS_DEPENDENCIES do
