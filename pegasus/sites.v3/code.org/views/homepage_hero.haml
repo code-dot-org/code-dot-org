@@ -60,7 +60,7 @@
       .col-66.desktop-feature{style: "position:relative;"}
         - heroes_arranged.each_with_index do |entry, index|
           - unless entry[:text].nil_or_empty? || show_census_layout
-            - text = I18n.t(entry[:text])
+            - text = "#{I18n.t(entry[:text])}"
 
             -# Replace special tags
             - text.gsub!("#student_count", format_integer_with_commas(fetch_user_metrics['number_students']))
