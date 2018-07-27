@@ -31,16 +31,6 @@
   = boolean_check_box f, :hide_custom_blocks
 
 .field
-  = f.label :helper_libraries
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple).
-  = f.select :helper_libraries, (Library.distinct.pluck(:name) + @level.helper_libraries).uniq.sort, {}, {multiple: true}
-
-.field
   =f.label 'Custom helper library code'
   %p
     This code will be injected between the official helper library and the student's code
