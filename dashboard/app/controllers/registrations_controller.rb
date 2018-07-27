@@ -379,7 +379,7 @@ class RegistrationsController < Devise::RegistrationsController
   def get_users_to_destroy(user)
     users = []
     if user.teacher?
-      user.students.each do |student|
+      user.students.uniq.each do |student|
         if student.depends_on_teacher_for_login?
           users << {id: student.id, name: student.name}
         end
