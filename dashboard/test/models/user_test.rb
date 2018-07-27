@@ -1421,14 +1421,24 @@ class UserTest < ActiveSupport::TestCase
     assert student.sponsored?
   end
 
-  test 'can_edit_password? is true for user with password' do
-    assert @student.can_edit_password?
+  test 'can_edit_password? is true for user with or without a password' do
+    student1 = create :student
+    refute_empty student1.encrypted_password
+    assert student1.can_edit_password?
+
+    student1 = create :student, encrypted_password: ''
+    assert_empty student1.encrypted_password
+    assert student1.can_edit_password?
   end
 
-  test 'can_edit_password? is false for user without password' do
-    user = create :student
-    user.update_attribute(:encrypted_password, '')
-    refute user.can_edit_password?
+  test 'can_edit_password? is false for a sponsored student' do
+    student1 = create :student_in_picture_section
+    assert student1.sponsored?
+    refute student1.can_edit_password?
+
+    student2 = create :student_in_word_section
+    assert student2.sponsored?
+    refute student2.can_edit_password?
   end
 
   test 'can_edit_password? is true for migrated student without a password' do
@@ -1584,6 +1594,64 @@ class UserTest < ActiveSupport::TestCase
       student_without_password.reload
       assert student_without_password.teacher_managed_account?
     end
+  end
+
+  test 'roster_managed_account? is false for teacher' do
+    teacher = create :teacher
+    refute teacher.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student with more than one authentication option' do
+    student = create :student, :with_migrated_google_authentication_option
+    student.authentication_options << create(:authentication_option)
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student not in an externally rostered section' do
+    student = create :student, :with_migrated_google_authentication_option
+    section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is true for migrated student in an externally rostered section' do
+    student = create :student, :with_migrated_google_authentication_option
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    assert student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for unmigrated student in an externally rostered section with a password' do
+    student = create :student, :unmigrated_google_sso, encrypted_password: 'abcdef'
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for unmigrated student not in an externally rostered section' do
+    student = create :student, :unmigrated_google_sso
+    section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is true for unmigrated student in an externally rostered section without a password' do
+    student = create :student, :unmigrated_google_sso, encrypted_password: nil
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    assert student.roster_managed_account?
   end
 
   test 'update_with_password does not require current password for users without passwords' do
@@ -3456,5 +3524,15 @@ class UserTest < ActiveSupport::TestCase
     section.students << student
 
     assert teacher.depended_upon_for_login?
+  end
+
+  test 'depended_upon_for_login? if teacher has a roster-managed student with no other teachers' do
+    student = create :student, :unmigrated_google_sso
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    another_section = create :section, user: section.teacher, login_type: Section::LOGIN_TYPE_EMAIL
+    another_section.students << student
+
+    assert section.teacher.depended_upon_for_login?
   end
 end

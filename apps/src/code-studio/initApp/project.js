@@ -849,6 +849,7 @@ var projects = module.exports = {
         }
         currentSourceVersionId = response.versionId;
         replaceCurrentSourceVersion = true;
+        current.migratedToS3 = true;
 
         this.updateChannels_(callback);
       }.bind(this));
@@ -893,6 +894,7 @@ var projects = module.exports = {
       name: "New Project",
     }, (err, channelData) => {
       sources.put(channelData.id, JSON.stringify({ source }), SOURCE_FILE, (err, sourceData) => {
+        channelData.migratedToS3 = true;
         channels.update(channelData.id, channelData, (err, finalChannelData) => {
           executeCallback(callback, finalChannelData);
         });
@@ -1305,7 +1307,7 @@ function fetchSource(channelData, callback, version, useSourcesApi) {
   current = channelData;
 
   projects.setTitle(current.name);
-  if (useSourcesApi) {
+  if (useSourcesApi && channelData.migratedToS3) {
     var url = current.id + '/' + SOURCE_FILE;
     if (version) {
       url += '?version=' + version;
