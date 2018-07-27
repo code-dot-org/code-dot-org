@@ -7,8 +7,8 @@ export function getDanceAPI(p5Inst) {
     oscillator: {
       start: () => osc.start(),
       stop: () => osc.stop(),
-      freq: value => osc.freq(value),
-      amp: value => osc.amp(value),
+      freq: (freq, rampTime, timeFromNow) => osc.freq(freq, rampTime, timeFromNow),
+      amp: (vol, rampTime, timeFromNow) => osc.amp(vol, rampTime, timeFromNow),
     }
   };
 }
