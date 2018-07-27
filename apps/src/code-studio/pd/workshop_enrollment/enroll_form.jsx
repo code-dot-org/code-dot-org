@@ -10,15 +10,6 @@ import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {STATES} from '../../../geographyConstants';
 
-const styles = {
-  indented: {
-    marginLeft: 20
-  },
-  outdented: {
-    marginLeft: -20
-  }
-};
-
 const TEACHING_ROLES = [
   "Classroom Teacher",
   "Librarian",
@@ -54,8 +45,6 @@ const SCHOOL_TYPES = [
 const OTHER_SCHOOL_VALUE = "-1";
 
 const CSF = "CS Fundamentals";
-
-const REQUIRED = "Required";
 
 const ERROR = 'error';
 
@@ -183,7 +172,7 @@ export default class EnrollForm extends React.Component {
     if (missingRequiredFields.length || Object.keys(errors).length) {
       let requiredFieldsErrors = {};
       missingRequiredFields.forEach((f) => {
-        requiredFieldsErrors[f] = REQUIRED;
+        requiredFieldsErrors[f] = '';
       });
       errors = Object.assign(errors, requiredFieldsErrors);
       this.setState({errors: errors});
@@ -219,12 +208,12 @@ export default class EnrollForm extends React.Component {
       }
     ]);
     return (
-      <form>
+      <form id="enroll-form">
         <p>
           Fields marked with a<span className="form-required-field"> * </span>
           are required.
         </p>
-        <FormGroup style={styles.indented}>
+        <FormGroup>
           <FieldGroup
             id="first_name"
             label="First Name"
@@ -271,7 +260,6 @@ export default class EnrollForm extends React.Component {
         {this.state.school_id !== OTHER_SCHOOL_VALUE &&
           <FormGroup
             id="school_id"
-            style={styles.indented}
             validationState={this.state.errors.hasOwnProperty("school_id") ? ERROR : null}
           >
             <Row>
@@ -283,7 +271,7 @@ export default class EnrollForm extends React.Component {
               </Col>
             </Row>
             <Row>
-              <Col md={6}>
+              <Col md={12}>
                 <SchoolAutocompleteDropdown
                   value={this.state.school_id}
                   onChange={this.handleSchoolChange}
@@ -294,7 +282,7 @@ export default class EnrollForm extends React.Component {
           </FormGroup>
         }
         {this.state.school_id && this.state.school_id === OTHER_SCHOOL_VALUE &&
-          <FormGroup style={styles.indented}>
+          <FormGroup>
             <FieldGroup
               id="school_name"
               label="School Name"
@@ -306,7 +294,6 @@ export default class EnrollForm extends React.Component {
             />
             <FormGroup
               id="school_state"
-              style={styles.outdented}
               validationState={this.state.errors.hasOwnProperty("school_state") ? ERROR : null}
             >
               <ControlLabel>School State<span className="form-required-field"> *</span></ControlLabel>
