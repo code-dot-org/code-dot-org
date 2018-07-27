@@ -8,7 +8,7 @@ const SHOW_SHARE_DIALOG = 'shareDialog/SHOW_SHARE_DIALOG';
 const HIDE_SHARE_DIALOG = 'shareDialog/HIDE_SHARE_DIALOG';
 
 const UNPUBLISH_REQUEST  = 'shareDialog/UNPUBLISH_REQUEST';
-const UNPUBLISH_SUCCESS  = 'shareDialog/UNPUBLISH_SUCCESS';
+export const UNPUBLISH_SUCCESS  = 'shareDialog/UNPUBLISH_SUCCESS';
 const UNPUBLISH_FAILURE  = 'shareDialog/UNPUBLISH_FAILURE';
 
 // Reducer
@@ -35,7 +35,7 @@ export default function reducer(state = initialState, action) {
       };
     case UNPUBLISH_SUCCESS:
       return {
-        ...initialState,
+        ...state,
         didUnpublish: true,
       };
     case UNPUBLISH_FAILURE:
