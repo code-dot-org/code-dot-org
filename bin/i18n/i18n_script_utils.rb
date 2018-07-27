@@ -48,7 +48,14 @@ end
 
 def redact(source, dest)
   data = YAML.load_file(source)
-  stdout, _status = Open3.capture2('bin/i18n/node_modules/.bin/redact -c bin/i18n/plugins/nonCommonmarkLinebreak.js', stdin_data: JSON.generate(data))
+  stdout, _status = Open3.capture2(
+    [
+      'bin/i18n/node_modules/.bin/redact',
+      '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
+      '-p bin/i18n/plugins/nonPedanticEmphasis.js'
+    ].join(" "),
+    stdin_data: JSON.generate(data)
+  )
   data = JSON.parse(stdout)
   File.open(dest, "w+") do |file|
     file.write(data.to_yaml(line_width: -1))
@@ -68,9 +75,10 @@ def restore(source, redacted, dest)
     [
       'bin/i18n/node_modules/.bin/restore',
       '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
+      '-p bin/i18n/plugins/nonPedanticEmphasis.js',
       "-s #{source_json.path}",
-      "-s #{source_json.path}",
-    ]
+      "-r #{redacted_json.path}",
+    ].join(" ")
   )
   restored_data = JSON.parse(stdout)
   File.open(dest, "w+") do |file|
