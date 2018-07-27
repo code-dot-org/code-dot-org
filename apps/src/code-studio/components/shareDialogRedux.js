@@ -37,6 +37,8 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         didUnpublish: true,
+        isOpen: false,
+        isUnpublishPending: false,
       };
     case UNPUBLISH_FAILURE:
       return {
