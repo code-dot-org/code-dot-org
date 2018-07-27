@@ -18,8 +18,8 @@ const styles = {
   dropdown: {
     border: `1px solid ${color.charcoal}`,
     position: 'absolute',
-    // without this, this will be below some content
-    zIndex: 1,
+    // without this, this will be below some content, such as ProgressBubble.
+    zIndex: 1000,
   },
   anchor: {
     padding: 10,

@@ -270,6 +270,7 @@ class LevelsController < ApplicationController
       {contained_level_names: []},
       {examples: []},
       {reference_links: []},
+      {helper_libraries: []},
       :map_reference,
 
       # Minecraft-specific
@@ -288,6 +289,7 @@ class LevelsController < ApplicationController
       :if_block_options,
       :place_block_options,
       :play_sound_options,
+      :helper_libraries,
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array

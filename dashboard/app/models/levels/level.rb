@@ -279,6 +279,7 @@ class Level < ActiveRecord::Base
     'Bounce', # no ideal solution
     'ContractMatch', # dsl defined, covered in dsl
     'CurriculumReference', # no user submitted content
+    'Dancelab', # no ideal solution
     'DSLDefined', # dsl defined, covered in dsl
     'EvaluationMulti', # unknown
     'External', # dsl defined, covered in dsl

@@ -15,6 +15,7 @@ import {
   injectErrorHandler
 } from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import BlocklyModeErrorHandler from '../BlocklyModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
@@ -57,19 +58,15 @@ import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
-import GameLabJrLib from './GameLabJr.interpreted';
 import defaultSprites from './defaultSprites.json';
 import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
-import ValidationSetupCode from './ValidationSetup.interpreted.js';
-
-const LIBRARIES = {
-  'GameLabJr': GameLabJrLib,
-};
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
 // Number of ticks after which to capture a thumbnail image of the play space.
 const CAPTURE_TICK_COUNT = 250;
+
+const validationLibraryName = 'ValidationSetup';
 
 var ButtonState = {
   UP: 0,
@@ -108,6 +105,7 @@ var GameLab = function () {
   this.Globals = {};
   this.btnState = {};
   this.dPadState = {};
+  this.libraries = {};
   this.currentCmdQueue = null;
   this.interpreterStarted = false;
   this.globalCodeRunsDuringPreload = false;
@@ -120,10 +118,6 @@ var GameLab = function () {
 
   dropletConfig.injectGameLab(this);
 
-  injectErrorHandler(new JavaScriptModeErrorHandler(
-    () => this.JSInterpreter,
-    this
-  ));
   consoleApi.setLogMethod(this.log.bind(this));
 
   /** Expose for testing **/
@@ -190,16 +184,30 @@ GameLab.prototype.init = function (config) {
     this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
     this.skin.winAvatar = MEDIA_URL + 'avatar.png';
     this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
+
+    injectErrorHandler(new BlocklyModeErrorHandler(
+      () => this.JSInterpreter,
+      null,
+    ));
   } else {
     this.skin.smallStaticAvatar = null;
     this.skin.staticAvatar = null;
     this.skin.winAvatar = null;
     this.skin.failureAvatar = null;
+
+    injectErrorHandler(new JavaScriptModeErrorHandler(
+      () => this.JSInterpreter,
+      this,
+    ));
   }
   this.level = config.level;
 
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
     !this.level.edit_blocks;
+
+
+  this.level.helperLibraries = this.level.helperLibraries || [];
+  this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
 
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
@@ -383,14 +391,19 @@ GameLab.prototype.init = function (config) {
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
-  ReactDOM.render((
+  const loader = this.loadLibraries_().then(() => ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
         onMount={onMount}
       />
     </Provider>
-  ), document.getElementById(config.containerId));
+  ), document.getElementById(config.containerId)));
+
+  if (IN_UNIT_TEST) {
+    return loader.catch(() => {});
+  }
+  return loader;
 };
 
 /**
@@ -1069,7 +1082,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
 GameLab.prototype.initInterpreter = function (attachDebugger=true) {
 
   const injectGamelabGlobals = () => {
-    const propList = this.gameLabP5.getGlobalPropertyList();
+    const propList = this.gameLabP5.getGlobalPropertyList(this.isDanceLab);
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
       // propListItem[0] - a native property value
@@ -1102,12 +1115,9 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
     getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   }
   let code = '';
-  if (this.level.validationCode) {
-    code += ValidationSetupCode + '\n';
-  }
   if (this.level.helperLibraries) {
     code += this.level.helperLibraries
-      .map((lib) => LIBRARIES[lib])
+      .map((lib) => this.libraries[lib])
       .join("\n") + '\n';
   }
   if (this.level.sharedBlocks) {
@@ -1206,6 +1216,38 @@ GameLab.prototype.onP5Preload = function () {
     this.gameLabP5.notifyPreloadPhaseComplete();
   });
   return false;
+};
+
+GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
+  if (this.level.validationCode && !this.level.helperLibraries.some(name => name === validationLibraryName)) {
+    this.level.helperLibraries.unshift(validationLibraryName);
+  }
+};
+
+let libraryPreload;
+GameLab.prototype.loadLibraries_ = function () {
+  if (!libraryPreload) {
+    this.loadValidationCodeIfNeeded_();
+    libraryPreload = Promise.all(this.level.helperLibraries.map(this.loadLibrary_.bind(this)));
+  }
+  return libraryPreload;
+};
+
+GameLab.prototype.loadLibrary_ = function (name) {
+  if (this.libraries[name]) {
+    return Promise.resolve();
+  }
+
+  return new Promise((resolve, error) => {
+    $.ajax({
+      url: '/libraries/' + name,
+      success: response => {
+        this.libraries[name] = response;
+        resolve();
+      },
+      error,
+    });
+  });
 };
 
 /**
