@@ -13,13 +13,15 @@ For more information about our goals and approach to professional learning, chec
 
 [col-50]
 
-The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops.
+## Spots still open for 2018!
 
-This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd). 
+- **Step 1**: Check [the list below](#openings) to see if applications are still being accepted in your area.
+- **Step 2**: Read about the [Program Features and Commitments](#features).
+- **Step 3**: Check out the course page for [CS Discoveries](/educate/csd).
+- **Step 4**: Set aside 10 - 15 minutes to complete the application.
+[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
 
-**Applications for the 2018-19 [CS Discoveries Professional Learning Program](/files/PLProgramsOverview_1-Pager.pdf) will open in January, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
-
-[<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
+Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
 [/col-50]
 

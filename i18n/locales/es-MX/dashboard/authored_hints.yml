@@ -4937,7 +4937,7 @@ es-MX:
       course4_collector_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: No olvide que puede `repetir` un solo comando o un patrón más largo. Incluso se puede `` repetir` un repetir` bloque!
         courseD_bee_nested_loops_challenge2_b: Para obtener las 4 gemas, primero use un ciclo para alejarse del centro. Gire a la izquierda o a la derecha, luego use un ciclo anidado para pasar de la primera pila de tesoros a la segunda. Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor de la * cueva completa *!
-        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solución:**
           <xml>
@@ -8442,7 +8442,7 @@ es-MX:
         courseD_bee_conditionals8_a: "** Recuerde: ** Este rompecabezas  cambia cada vez que se ejecuta.   \n\nUsted querrá utilizar un condicional de bloque ( ` si 'o' si / else`) para resolver el desafío."
         courseD_bee_conditionals8_b: |-
           Este enigma es complicado, porque no puedes verificar cuadrados en blanco, néctar, * y * miel con solo un único condicional. Sólo echa de néctar y la miel al final de su camino.
-        courseD_bee_conditionals8_c: '¿Cómo se puede hacer seguro para viajar hasta el final de cada ruta, no importa cuánto tiempo de camino es?'
+        courseD_bee_conditionals8_c: How can you make sure to travel to the end every path, no matter how long the path is?
         courseD_bee_conditionals8_d: |-
           Aunque hay una nube justo frente a ti, no tienes que visitarla primero. Intenta comenzar con la nube en la parte inferior derecha del cuadrado. ! [] (https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Mire este video para ayudar a resolver este rompecabezas.
@@ -8451,7 +8451,7 @@ es-MX:
         courseD_bee_conditionals8_a: "** Recuerde: ** Este rompecabezas  cambia cada vez que se ejecuta.   \n\nUsted querrá utilizar un condicional de bloque ( ` si 'o' si / else`) para resolver el desafío."
         courseD_bee_conditionals8_b: |-
           Este enigma es complicado, porque no puedes verificar cuadrados en blanco, néctar, * y * miel con solo un único condicional. Sólo echa de néctar y la miel al final de su camino.
-        courseD_bee_conditionals8_c: '¿Cómo se puede hacer seguro para viajar hasta el final de cada ruta, no importa cuánto tiempo de camino es?'
+        courseD_bee_conditionals8_c: How can you make sure to travel to the end every path, no matter how long the path is?
         courseD_bee_conditionals8_d: |-
           Aunque hay una nube justo frente a ti, no tienes que visitarla primero. Intenta comenzar con la nube en la parte inferior derecha del cuadrado. ! [] (https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Mire este video para ayudar a resolver este rompecabezas.
@@ -8512,7 +8512,7 @@ es-MX:
       courseD_bee_debugging5_authored_hint:
         courseD_bee_debugging5_a: |-
           Comience mirando solo el primer ciclo. ¿Qué hace? ¿Qué se supone que haga? ¿Qué te dice eso?
-        courseD_bee_debugging5_b: Una vez que tiene el primer ciclo, ¿cómo quiere qué quede en su código?
+        courseD_bee_debugging5_b: Once you have the first loop the way you want it, what is left over in your code?
         courseD_bee_debugging5_c: |-
           Intente envolver el ciclo sobrante alrededor del resto de su código completo. ¿funciona ahora?
           
@@ -8544,7 +8544,7 @@ es-MX:
           Después de que la abeja llegue a la fila inferior, haz que repita estos comandos: * Repite 2 veces: * Avanza * Haz 3 mieles * Mueve hacia atrás
       courseD_bee_debugging_challenge1a_authored_hint:
         courseD_bee_debugging_challenge1_a: '¿Por qué funciona la primera mitad de este programa? Piensa por qué la abeja necesita moverse hacia atrás. ¿Cuánto néctar recoge la abeja cada vez que se mueve sobre una flor?'
-        courseD_bee_debugging_challenge1_b: Para resolver este enigma, haga que la abeja siga el mismo patrón para hacer miel que cuando recolecta néctar.
+        courseD_bee_debugging_challenge1_b: To solve this puzzle, have the bee follow the same pattern to make honey that it does when collecting nectar.
         courseD_bee_debugging_challenge1_c: |-
           Después de que la abeja llegue a la fila inferior, haga que repita estos comandos:
           <xml><block type="controls_repeat">
@@ -8570,11 +8570,11 @@ es-MX:
           Después de que la abeja llegue a la fila inferior, haz que repita estos comandos: * Repite 2 veces: * Avanza * Haz 3 mieles * Mueve hacia atrás
       courseD_bee_nestedLoops1_authored_hint:
         courseD_bee_nestedLoops1_a: '¿No funciona? Intenta usar el botón "Paso" para ver lo que sucede línea por línea.'
-        courseD_bee_nestedLoops1_b: Intenta escribir código para un lado del cuadrado primero. ¿Puedes repetir esto para obtener todo el néctar?
+        courseD_bee_nestedLoops1_b: Try writing code for one side of the square first. Can you loop this to get all of the nectar?
         courseD_bee_nestedLoops1_c: Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor.
       courseD_bee_nestedLoops1_2018_authored_hint:
         courseD_bee_nestedLoops1_a: '¿No funciona? Intenta usar el botón "Paso" para ver lo que sucede línea por línea.'
-        courseD_bee_nestedLoops1_b: Intenta escribir código para un lado del cuadrado primero. ¿Puedes repetir esto para obtener todo el néctar?
+        courseD_bee_nestedLoops1_b: Try writing code for one side of the square first. Can you loop this to get all of the nectar?
         courseD_bee_nestedLoops1_c: Recuerda usar el bloque `obtener néctar` una vez que estés en un cuadrado con una flor.
       courseD_bee_nestedLoops1a_authored_hint:
         courseD_bee_nestedLoops1_a: '¿No funciona? Intenta usar el botón "Paso" para ver lo que sucede línea por línea.'
@@ -8602,7 +8602,7 @@ es-MX:
       courseD_bee_nestedLoops6_2018_authored_hint:
         courseD_maze_nestedLoops6_a: Si estas atorado, intenta escribir el código sin ciclos primero y busca patrones.
         courseD_maze_nestedLoops6_b: Poner un ciclo de repetición dentro de otro puede ayudar a disminuir la cantidad de bloques utilizados.
-        courseD_maze_nestedLoops6_c: Tomará dos conjuntos de ciclos 'repetir´anidados para resolver este acertijo.
+        courseD_maze_nestedLoops6_c: It will take two sets of nested `repeat` loops to solve this puzzle.
       courseD_bee_nestedLoops7_authored_hint:
         courseD_bee_nestedLoops7_a: Necesitarás repetir `obtener néctar` dentro de otra repetición que también tenga el bloque `avanzar` dentro de ella.
         courseD_bee_nestedLoops7_b: Tendrá que usar los tres bloques de `repetición` disponibles para resolver este rompecabezas.
@@ -8622,7 +8622,7 @@ es-MX:
       courseD_bee_nested_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge2_a: No olvide que puede `repetir` un solo comando o un patrón más largo. Incluso se puede `` repetir` un repetir` bloque!
         courseD_bee_nested_loops_challenge2_b: Para obtener las 4 gemas, primero use un ciclo para alejarse del centro. Gire a la izquierda o a la derecha, luego use un ciclo anidado para pasar de la primera pila de tesoros a la segunda. Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor de la * cueva completa *!
-        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
       courseD_bee_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: No olvide que puede `repetir` un solo comando o un patrón más largo. Incluso se puede `` repetir` un repetir` bloque!
         courseD_bee_nested_loops_challenge2_b: Para obtener las 4 gemas, primero use un ciclo para alejarse del centro. Luego gire a la izquierda o derecha y use un bucle anidado para pasar de la primera pila de tesoros a la segunda.
@@ -8746,12 +8746,20 @@ es-MX:
         courseD_collector_debugging2a_a: |-
           Use el botón "Paso" para ver si todo está bien en el primer paso. ¿Qué tal el segundo? ¿Dónde va mal?
         courseD_collector_debugging2a_c: |-
-          ¿Lo que pasa? ¿Qué se supone que va a pasar? ¿Qué te dice eso?
+          What happens?
+          
+          What is supposed to happen?
+          
+          What does that tell you?
       courseD_collector_debugging2a_2018_authored_hint:
         courseD_collector_debugging2a_a: |-
           Use el botón "Paso" para ver si todo está bien en el primer paso. ¿Qué tal el segundo? ¿Dónde va mal?
         courseD_collector_debugging2a_c: |-
-          ¿Lo que pasa? ¿Qué se supone que va a pasar? ¿Qué te dice eso?
+          What happens?
+          
+          What is supposed to happen?
+          
+          What does that tell you?
       courseD_collector_debugging3_authored_hint:
         courseD_collector_debugging3_a: '¿Hay algún lugar donde Laurel haga algo que no tiene sentido? ¿Qué pasa cuando cambias esos bloques?'
         courseD_collector_debugging3_b: Intente simplificar el código utilizando ciclos anidados.
@@ -8779,11 +8787,11 @@ es-MX:
       courseD_collector_debugging5_authored_hint:
         courseD_collector_debugging5_a: |-
           Comience mirando solo el primer ciclo. ¿Qué hace? ¿Qué se supone que haga? ¿Qué te dice eso?
-        courseD_collector_debugging5_b: Una vez que tiene el primer ciclo, ¿cómo quiere qué quede en su código?
+        courseD_collector_debugging5_b: Once you have the first loop the way you want it, what is left over in your code?
       courseD_collector_debugging5_2018_authored_hint:
         courseD_collector_debugging5_a: |-
           Comience mirando solo el primer ciclo. ¿Qué hace? ¿Qué se supone que haga? ¿Qué te dice eso?
-        courseD_collector_debugging5_b: Una vez que tiene el primer ciclo, ¿cómo quiere qué quede en su código?
+        courseD_collector_debugging5_b: Once you have the first loop the way you want it, what is left over in your code?
       courseD_collector_debugging5a_authored_hint:
         courseD_collector_debugging5a_a: |-
           ¿Qué hace? ¿Qué se supone que haga? ¿Qué te dice eso?
@@ -8987,7 +8995,7 @@ es-MX:
       courseD_collector_nested_loops_challenge2_2018_authored_hint:
         courseD_bee_nested_loops_challenge2_a: No olvide que puede `repetir` un solo comando o un patrón más largo. Incluso se puede `` repetir` un repetir` bloque!
         courseD_bee_nested_loops_challenge2_b: Para obtener las 4 gemas, primero use un ciclo para alejarse del centro. Gire a la izquierda o a la derecha, luego use un ciclo anidado para pasar de la primera pila de tesoros a la segunda. Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor de la * cueva completa *!
-        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solución:**
           <xml>
@@ -9081,7 +9089,7 @@ es-MX:
       courseD_debugging_5_authored_hint:
         courseD_debugging_5_a: |-
           Comience mirando solo el primer ciclo. ¿Qué hace? ¿Qué se supone que haga? ¿Qué te dice eso?
-        courseD_debugging_5_b: Una vez que tiene el primer ciclo, ¿cómo quiere qué quede en su código?
+        courseD_debugging_5_b: Once you have the first loop the way you want it, what is left over in your code?
         courseD_debugging_5_c: |-
           Intente envolver el ciclo sobrante alrededor del resto de su código completo. ¿funciona ahora?
           
@@ -9092,27 +9100,27 @@ es-MX:
         courseD_debugging_6_b: Parece que todos los pasos correctos están aquí, solo necesita más de ellos. ¿Cómo puedes repetir las acciones `get néctar` y` make honey` varias veces?
       courseD_external_cond_authored_hint: { }
       courseD_farmer_condLoops1_authored_hint:
-        courseD_farmer_condLoops1_a: Usted tendrá que buscar para el maíz 5 veces, utilizando una repetición del ciclo.
-        courseD_farmer_condLoops1_b: Asegúrese de usar un bloque de 'si en maíz'!
+        courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using a repeat loop.
+        courseD_farmer_condLoops1_b: Make sure to use an `if at corn` block or you might try to pick something that's not there!
       courseD_farmer_condLoops1_2018_authored_hint:
-        courseD_farmer_condLoops1_a: Usted tendrá que buscar para el maíz 5 veces, utilizando una repetición del ciclo.
-        courseD_farmer_condLoops1_b: Asegúrese de usar un bloque de 'si en maíz'!
+        courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using a repeat loop.
+        courseD_farmer_condLoops1_b: Make sure to use an `if at corn` block or you might try to pick something that's not there!
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: 'La mejor manera de hacer esto es anidar las declaraciones de ''si'' ubicando uno dentro del otro.  '
-        courseD_farmer_condLoops2_b: Para este rompecabezas, usted debe tener una ' si / else` declaración y uno sencillo ` si ` comunicado.
+        courseD_farmer_condLoops2_b: For this puzzle, you should have one `if/else` statement and one plain `if` statement.
         courseD_farmer_condLoops2_c: "Su declaración` si '  podría parecerse mucho a esto: \n- Si en el maíz\n - la recolección de maíz - cosa\n - si en la lechuga\n \\ t - recoger lechugas\n\n Si no hay nada allí, no comprar alguna cosa!"
       courseD_farmer_condLoops2_2018_authored_hint:
         courseD_farmer_condLoops2_a: 'La mejor manera de hacer esto es anidar las declaraciones de ''si'' ubicando uno dentro del otro.  '
-        courseD_farmer_condLoops2_b: Para este rompecabezas, usted debe tener una ' si / else` declaración y uno sencillo ` si ` comunicado.
+        courseD_farmer_condLoops2_b: For this puzzle, you should have one `if/else` statement and one plain `if` statement.
         courseD_farmer_condLoops2_c: "Su declaración` si '  podría parecerse mucho a esto: \n- Si en el maíz\n - la recolección de maíz - cosa\n - si en la lechuga\n \\ t - recoger lechugas\n\n Si no hay nada allí, no comprar alguna cosa!"
       courseD_farmer_condLoops3_authored_hint:
         courseD_farmer_condLoops3_a: |-
           Para obtener todos los elementos, intente anidar declaraciones ' if ' tres profundas. Esto significa que debe poner un ` si ' declaración dentro de otro, a continuación, poner una tercera` si ' declaración dentro de la segunda.
-        courseD_farmer_condLoops3_b: Para este rompecabezas, usted debe tener dos ` if/ else` declaraciones y una llanura` if ` comunicado.
+        courseD_farmer_condLoops3_b: For this puzzle, you should have two `if/else` statements and one plain `if` statement.
       courseD_farmer_condLoops3_2018_authored_hint:
         courseD_farmer_condLoops3_a: |-
           Para obtener todos los elementos, intente anidar declaraciones ' if ' tres profundas. Esto significa que debe poner un ` si ' declaración dentro de otro, a continuación, poner una tercera` si ' declaración dentro de la segunda.
-        courseD_farmer_condLoops3_b: Para este rompecabezas, usted debe tener dos ` if/ else` declaraciones y una llanura` if ` comunicado.
+        courseD_farmer_condLoops3_b: For this puzzle, you should have two `if/else` statements and one plain `if` statement.
       courseD_farmer_condLoops4_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
           Nadie sabe cuántas cabezas de lechuga crecerá de cada brote. Utilizar un ciclo 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.
@@ -9127,14 +9135,14 @@ es-MX:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
           Nadie sabe cuántas cabezas de lechuga crecerá de cada brote. Utiliza un ciclo 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.
       courseD_farmer_condLoops5_authored_hint:
-        courseD_farmer_condLoops5_a: 'Hay un nuevo ciclo: `repetir calabaza ''. ¿Puedes ver cómo usarlo en este rompecabezas?'
+        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until at pumpkin`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: Podría haber más de una planta de maíz o lechuga en cada lugar. Utilizar un ciclo `while`para reunir todos ellos!
       courseD_farmer_condLoops5_2018_authored_hint:
-        courseD_farmer_condLoops5_a: 'Hay un nuevo ciclo: `repetir calabaza ''. ¿Puedes ver cómo usarlo en este rompecabezas?'
+        courseD_farmer_condLoops5_a: 'There is a new loop: `repeat until at pumpkin`. Can you see how to use it in this puzzle?'
         courseD_farmer_condLoops5_b: Podría haber más de una planta de maíz o lechuga en cada lugar. Utilizar un ciclo `while`para reunir todos ellos!
       courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Utilizar un ciclo «mientras camino por delante» para mover al agricultor hacia abajo en cada parte de la espiral.
-        courseD_farmer_condLoops6_b: Sólo necesita el control del maíz durante la mayor parte de la cosecha. Sólo debes elegir una calabaza al final de su programa.
+        courseD_farmer_condLoops6_a: Use a `while there is corn` loop to make sure you get all of the corn along the way. This block won't do anything if there's no corn to pick.
+        courseD_farmer_condLoops6_b: Make sure to check `if` there's a path ahead before you take your next step!
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Utilizar un ciclo «mientras camino por delante» para mover al agricultor hacia abajo en cada parte de la espiral.
         courseD_farmer_condLoops6_b: Sólo necesita el control del maíz durante la mayor parte de la cosecha. Sólo debes elegir una calabaza al final de su programa.
@@ -9175,8 +9183,8 @@ es-MX:
         courseD_farmer_conditionals8_a: El bloque `camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en una ruta.
       courseD_farmer_conditionals8_authored_hint:
         courseD_farmer_conditionals8_a: Usted va a tener que utilizar más de un ciclo`while`.
-        courseD_farmer_conditionals8_b: Cada hoyo se encuentra al final de un camino, por lo que debes utilizar `while antes de usar` antes de usar` mientras hay un hoyo `.
-        courseD_farmer_conditionals8_c: Tenga en cuenta que necesita repetir el `while camino por delante`,` mientras que hay un hoyo `seis veces.
+        courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.
+        courseD_farmer_conditionals8_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
       courseD_farmer_conditionals9_authored_hint: { }
       courseD_farmer_until_challenge2_authored_hint: { }
       courseD_farmer_until_challenge2_2018_authored_hint: { }
@@ -9221,19 +9229,33 @@ es-MX:
       courseD_farmer_while6_authored_hint:
         courseD_farmer_conditionals6_a: Asegúrese de que esté utilizando el ciclo 'while' y averiguare cuántas veces lo necesita para llenar cada agujero.
         courseD_farmer_conditionals6_b: Observe que el agricultor necesita avanzar y descender varias veces en un patrón de escalera.
-        courseD_farmer_conditionals6_c: |2
-          El patrón de escalón de escalera utiliza los siguientes bloques:
-           avance hacia adelante, orificio de llenado, gire hacia la derecha, avance hacia adelante, orificio de llenado, gire hacia la izquierda. ¿Cuántas veces necesita usar este patrón de escalón de escalera?
+        courseD_farmer_conditionals6_c: |-
+          The stair step pattern uses the following blocks
+          - move forward
+          - fill hole
+          - turn right
+          - move forward
+          - fill hole
+          - turn left
           
-          Hacer seguro de que está utilizando el `mientras que hay un agujero ` para llenar el agujero.
+          How many times do you need to use this stair step pattern?
+          
+          Make sure you are using the `while there is a hole` to fill the hole.
       courseD_farmer_while6_2018_authored_hint:
         courseD_farmer_conditionals6_a: Asegúrese de que esté utilizando el ciclo 'while' y averiguare cuántas veces lo necesita para llenar cada agujero.
         courseD_farmer_conditionals6_b: Observe que el agricultor necesita avanzar y descender varias veces en un patrón de escalera.
-        courseD_farmer_conditionals6_c: |2
-          El patrón de escalón de escalera utiliza los siguientes bloques:
-           avance hacia adelante, orificio de llenado, gire hacia la derecha, avance hacia adelante, orificio de llenado, gire hacia la izquierda. ¿Cuántas veces necesita usar este patrón de escalón de escalera?
+        courseD_farmer_conditionals6_c: |-
+          The stair step pattern uses the following blocks
+          - move forward
+          - fill hole
+          - turn right
+          - move forward
+          - fill hole
+          - turn left
           
-          Hacer seguro de que está utilizando el `mientras que hay un agujero ` para llenar el agujero.
+          How many times do you need to use this stair step pattern?
+          
+          Make sure you are using the `while there is a hole` to fill the hole.
       courseD_farmer_while7_authored_hint:
         courseD_farmer_conditionals8_a: El bloque `camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en una ruta.
         courseD_farmer_conditionals8_b: Poner un ciclo `mientras camino adelante` dentro de un ciclo de repetición puede ayudarlo en este acertijo.
@@ -9244,12 +9266,12 @@ es-MX:
         courseD_farmer_conditionals8_c: '¿Qué necesitas hacer al final de cada ruta?'
       courseD_farmer_while8_authored_hint:
         courseD_farmer_conditionals8_a: Usted va a tener que utilizar más de un ciclo`while`.
-        courseD_farmer_conditionals8_b: Cada hoyo se encuentra al final de un camino, por lo que debes utilizar `while antes de usar` antes de usar` mientras hay un hoyo `.
-        courseD_farmer_conditionals8_c: Tenga en cuenta que necesita repetir el `while camino por delante`,` mientras que hay un hoyo `seis veces.
+        courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.
+        courseD_farmer_conditionals8_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
       courseD_farmer_while8_2018_authored_hint:
         courseD_farmer_conditionals8_a: Usted va a tener que utilizar más de un ciclo`while`.
-        courseD_farmer_conditionals8_b: Cada hoyo se encuentra al final de un camino, por lo que debes utilizar `while antes de usar` antes de usar` mientras hay un hoyo `.
-        courseD_farmer_conditionals8_c: Tenga en cuenta que necesita repetir el `while camino por delante`,` mientras que hay un hoyo `seis veces.
+        courseD_farmer_conditionals8_b: Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.
+        courseD_farmer_conditionals8_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
       courseD_farmer_while9_authored_hint: { }
       courseD_farmer_while9_2018_authored_hint: { }
       courseD_farmer_while_challenge1_authored_hint:
@@ -9303,14 +9325,14 @@ es-MX:
         courseD_iceage_loops4_b: Intenta anotar los pasos que Scrat tomaría para llegar a la bellota. ¿Ves un patrón?
         courseD_iceage_loops4_c: Este es el camino que Scrat deberia tomar.
       courseD_iceage_loops6_authored_hint:
-        courseD_iceage_loops6_a: Tu código final tendrá ** tres ** bloques de movimiento.
+        courseD_iceage_loops6_a: Your final code will have **three** `move forward` blocks.
         courseD_iceage_loops6_b: '¡Solo necesita agregar un ciclo más!'
         courseD_iceage_loops6_c: La ruta final debe verse así.
       courseD_iceage_loops7_authored_hint:
         courseB_iceage_loops7_a: Si te quedas atascado, prueba a escribir pasos en una hoja de papel. ¿Ves un patrón?
         courseB_iceage_loops7_b: Este es el camino que Scrat debe tomar para llegar a la bellota.
       courseD_iceage_loops8_authored_hint:
-        courseD_iceage_loops8_a: '¿Los bloques de movimiento son correctos? ¿Qué más puedes cambiar?'
+        courseD_iceage_loops8_a: Are the `turn` blocks right? What else can you change?
         courseD_iceage_loops8_b: El primer ciclo deberia repetirse **3** veces, el segundo **5** veces, el cuarto **4** veces, y el último **4** veces.
         courseD_iceage_loops8_c: Utiliza ciclos para ayudar a Scrat a que siga este camino.
       courseD_iceage_loops9_authored_hint:
@@ -9320,7 +9342,7 @@ es-MX:
       courseD_maze_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge1_a: No olvide que puede `repetir` un solo comando o un patrón más largo. Incluso se puede `` repetir` un repetir` bloque!
         courseD_bee_nested_loops_challenge1_b: Para obtener las 4 gemas, primero use un ciclo para alejarse del centro. Gire a la izquierda o a la derecha, luego use un ciclo anidado para pasar de la primera pila de tesoros a la segunda. Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor de la * cueva completa *!
-        courseD_bee_nested_loops_challenge1_c: El programa más corto que alcanza todo el tesoro usa solo un bloque `colectar` y dos turnos.
+        courseD_bee_nested_loops_challenge1_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
       courseD_maze_nestedLoops3_authored_hint:
         courseD_maze_nestedLoops3_a: Para resolver este acertijo, deberá anidar un ciclo de 'repetición' dentro de otro.
         courseD_maze_nestedLoops3_b: '¿No sabes dónde colocar el ciclo? Trata de escribir el código paso a paso, y buscar un patrón.'
@@ -9352,11 +9374,11 @@ es-MX:
       courseD_maze_nestedLoops6_authored_hint:
         courseD_maze_nestedLoops6_a: Si estas atorado, intenta escribir el código sin ciclos primero y busca patrones.
         courseD_maze_nestedLoops6_b: Poner un ciclo de repetición dentro de otro puede ayudar a disminuir la cantidad de bloques utilizados.
-        courseD_maze_nestedLoops6_c: Tomará dos conjuntos de ciclos 'repetir´anidados para resolver este acertijo.
+        courseD_maze_nestedLoops6_c: It will take two sets of nested `repeat` loops to solve this puzzle.
       courseD_maze_nestedLoops6_2018_authored_hint:
         courseD_maze_nestedLoops6_a: Si estas atorado, intenta escribir el código sin ciclos primero y busca patrones.
         courseD_maze_nestedLoops6_b: Poner un ciclo de repetición dentro de otro puede ayudar a disminuir la cantidad de bloques utilizados.
-        courseD_maze_nestedLoops6_c: Tomará dos conjuntos de ciclos 'repetir´anidados para resolver este acertijo.
+        courseD_maze_nestedLoops6_c: It will take two sets of nested `repeat` loops to solve this puzzle.
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_a: Si el pájaro no está llegando al cerdo, asegurate de que los bloques están totalmente juntos, a continuación, y haz clic en "Ejecutar" de nuevo.
         courseC_maze_programming1_b: '¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas.'
@@ -9365,10 +9387,10 @@ es-MX:
         courseC_maze_programming1_b: '¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas.'
       courseD_maze_ramp2_authored_hint:
         courseC_maze_programming2_a: Para usar un bloque 'avanzar', arrástralo desde el área de la barra de herramientas al espacio de trabajo y conéctalo al bloque`al ejecutar`.
-        courseC_maze_programming2_b: Asegúrate de que los 3 bloques estan embonados y unidos al bloque 'al ejecutar'.
+        courseC_maze_programming2_b: Make sure all 3 blocks are clicked together and attached to the `when run` block.
       courseD_maze_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
-        courseC_maze_programming2_b: Asegúrate de que los 3 bloques estan embonados y unidos al bloque 'al ejecutar'.
+        courseC_maze_programming2_b: Make sure all 3 blocks are clicked together and attached to the `when run` block.
       courseD_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \n\nPara eliminar un bloque del medio de su código, arrastra todos los bloques debajo de él hacia la derecha y permite que se queden en el espacio de trabajo por un tiempo. \n\nHaz clic en el bloque que desea eliminar y arrástralo nuevamente a la caja de herramientas. \n\nFinalmente, coloca los otros bloques en su lugar.\n"
       courseD_maze_ramp3_2018_authored_hint:
@@ -9418,14 +9440,14 @@ es-MX:
         courseD_maze_ramp7_a: Usa bloques de repetición para ejecutar un solo bloque o un fragmento de código una y otra vez.
         courseD_maze_ramp7_c: Si quiere simplificar su código, ¡puede poner un ciclo de repetición dentro de otro! Esto se llama un ** ciclo anidado **.
       courseD_maze_until1_authored_hint:
-        courseD_maze_until1_a: '¿Existen secuencias que puedas ciclar para hacer tu código más corto?'
+        courseD_maze_until1_a: Are there any sequences you can loop to make your code shorter?
         courseD_maze_until1_b: Intenta usar un ciclo anidado para resolver este acertijo.
       courseD_maze_until10_authored_hint: { }
       courseD_maze_until10_2018_authored_hint: { }
       courseD_maze_until10_predict2_authored_hint: { }
       courseD_maze_until10_predict2_2018_authored_hint: { }
       courseD_maze_until1_2018_authored_hint:
-        courseD_maze_until1_a: '¿Existen secuencias que puedas ciclar para hacer tu código más corto?'
+        courseD_maze_until1_a: Are there any sequences you can loop to make your code shorter?
         courseD_maze_until1_b: Intenta usar un ciclo anidado para resolver este acertijo.
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: '¡Un ciclo ''hasta puerco'' te ayudara a seguir hasta lograrlo!'
@@ -9437,7 +9459,7 @@ es-MX:
           - ¿Qué se supone que haga? 
           - ¿Qué te dice eso?
         courseD_maze_until3_b: Si te estas atorando, intenta escribir todos los pasos en una hoja de papel y buscar donde se repiten.
-        courseD_maze_until3_c: '¿Hay un patrón de escaleras que puedas seguir para este acertijo?'
+        courseD_maze_until3_c: Is there a stair step pattern you can follow for this puzzle?
         courseD_maze_until3_d: No olvides usar el ciclo ´repetir hasta´para hacer tu código más corto.
       courseD_maze_until3_2018_authored_hint:
         courseD_maze_until3_a: |-
@@ -9445,7 +9467,7 @@ es-MX:
           - ¿Qué se supone que haga? 
           - ¿Qué te dice eso?
         courseD_maze_until3_b: Si te estas atorando, intenta escribir todos los pasos en una hoja de papel y buscar donde se repiten.
-        courseD_maze_until3_c: '¿Hay un patrón de escaleras que puedas seguir para este acertijo?'
+        courseD_maze_until3_c: Is there a stair step pattern you can follow for this puzzle?
         courseD_maze_until3_d: No olvides usar el ciclo ´repetir hasta´para hacer tu código más corto.
       courseD_maze_until4_authored_hint:
         courseD_maze_until4_a: |-
@@ -9454,7 +9476,7 @@ es-MX:
           - ¿Todo funciona en el primer paso?
           - ¿Todo funciona en el segundo paso?
           - ¿Dónde ocurre el error?
-        courseD_maze_until4_b: '¿Hay un patrón de escaleras que puedas seguir para este acertijo?'
+        courseD_maze_until4_b: Is there a stair step pattern you can follow for this puzzle?
         courseD_maze_until4_c: No olvides usar el ciclo ´repetir hasta´para hacer tu código más corto.
       courseD_maze_until4_2018_authored_hint:
         courseD_maze_until4_a: |-
@@ -9463,7 +9485,7 @@ es-MX:
           - ¿Todo funciona en el primer paso?
           - ¿Todo funciona en el segundo paso?
           - ¿Dónde ocurre el error?
-        courseD_maze_until4_b: '¿Hay un patrón de escaleras que puedas seguir para este acertijo?'
+        courseD_maze_until4_b: Is there a stair step pattern you can follow for this puzzle?
         courseD_maze_until4_c: No olvides usar el ciclo ´repetir hasta´para hacer tu código más corto.
       courseD_maze_until5_authored_hint:
         courseD_maze_until5_a: No te olvides de usar 'si camino a la izquierda´para evitar que el zombie revise a donde voltear.
@@ -9612,11 +9634,11 @@ es-MX:
         courseD_maze_ramp7_a: Usa bloques de repetición para ejecutar un solo bloque o un fragmento de código una y otra vez.
         courseD_maze_ramp7_c: '¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el rompecabezas.'
       courseE_artist_concept1_authored_hint:
-        courseE_artist_concept1_a: Los hexágonos tienen 50 lados de píxeles y 60 grados de vueltas a la derecha.
+        courseE_artist_concept1_a: The hexagons have 50 pixel sides and 60 degree turns to the right.
         courseE_artist_concept1_b: Intente utilizar una función aquí para que no tenga que escribir el código de un hexágono una y otra vez.
         courseE_artist_concept1_c: Utilice el bloque ` establecer ancho` antes de cada llamada de función para cambiar el ancho del lápiz.
       courseE_artist_concept1_2018_authored_hint:
-        courseE_artist_concept1_a: Los hexágonos tienen 50 lados de píxeles y 60 grados de vueltas a la derecha.
+        courseE_artist_concept1_a: The hexagons have 50 pixel sides and 60 degree turns to the right.
         courseE_artist_concept1_b: Intente utilizar una función aquí para que no tenga que escribir el código de un hexágono una y otra vez.
         courseE_artist_concept1_c: Utilice el bloque ` establecer ancho` antes de cada llamada de función para cambiar el ancho del lápiz.
       courseE_artist_concept4_authored_hint:
@@ -10039,6 +10061,10 @@ es-MX:
       courseE_farmer_concept4_authored_hint:
         4-5_Artist_Patterns_3_a: Ten cuidado de sacar el bloque completo de código de la barra de herramientas cada vez que pruebes uno nuevo.
         4-5_Artist_Patterns_3_b: Si su código se vuelve demasiado confuso, siempre puede hacer clic en "Comenzar de nuevo" y ¡volver a intentarlo!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: El bloque `camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en una ruta.
+        grade3_robotFarmer_ConditionalsIntro_8_b: '¿Qué debes hacer una vez que hayas llegado al final de un camino?'
+        grade3_robotFarmer_ConditionalsIntro_8_c: Utiliza un cicle 'repetir' para ejecutar el código varias veces para cada camino recto.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: '¡La caja de herramientas está organizado un poco diferente esta vez! Haz clic en las diferentes categorías para ver que bloques tienes.'
         courseE_farmer_functions1_b: Sólo tienes que escoger una calabaza, ¿pero podrías utilizar un ciclo para llegar a ella?
@@ -14033,7 +14059,7 @@ es-MX:
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Comience mirando solo el primer ciclo. ¿Qué hace? ¿Qué se supone que haga? ¿Qué te dice eso?
-        grade3_Debugging_10_b: Una vez que tiene el primer ciclo, ¿cómo quiere qué quede en su código?
+        grade3_Debugging_10_b: Once you have the first loop the way you want it, what is left over in your code?
         grade3_Debugging_10_c: |-
           Intente envolver el ciclo sobrante alrededor del resto de su código completo. ¿funciona ahora?
           
@@ -14079,19 +14105,19 @@ es-MX:
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu loop.
       grade3_RunningFarm_1_authored_hint:
-        grade3_RunningFarm_1_a: Usted tendrá que buscar para el maíz 5 veces, utilizando una repetición del ciclo.
-        grade3_RunningFarm_1_b: Asegúrese de usar un bloque de 'si en maíz'!
+        grade3_RunningFarm_1_a: You will need to look for corn 5 times, using a repeat loop.
+        grade3_RunningFarm_1_b: Make sure to use an `if at corn` block or you might try to pick something that's not there!
       grade3_RunningFarm_10_authored_hint:
         grade3_RunningFarm_10_a: This puzzle uses almost the exact same code as the last level, except you only need to repeat 4 times.
       grade3_RunningFarm_11a_authored_hint:
         grade3_RunningFarm_11a_a: You shouldn't need the `while path ahead` loop this time.
       grade3_RunningFarm_2_authored_hint:
         grade3_RunningFarm_2_a: 'La mejor manera de hacer esto es anidar las declaraciones de ''si'' ubicando uno dentro del otro.  '
-        grade3_RunningFarm_2_b: Para este rompecabezas, usted debe tener una ' si / else` declaración y uno sencillo ` si ` comunicado.
+        grade3_RunningFarm_2_b: For this puzzle, you should have one `if/else` statement and one plain `if` statement.
       grade3_RunningFarm_3_authored_hint:
         grade3_RunningFarm_3_a: |-
           Para obtener todos los elementos, intente anidar declaraciones ' if ' tres profundas. Esto significa que debe poner un ` si ' declaración dentro de otro, a continuación, poner una tercera` si ' declaración dentro de la segunda.
-        grade3_RunningFarm_3_b: Para este rompecabezas, usted debe tener dos ` if/ else` declaraciones y una llanura` if ` comunicado.
+        grade3_RunningFarm_3_b: For this puzzle, you should have two `if/else` statements and one plain `if` statement.
       grade3_RunningFarm_4_authored_hint:
         grade3_RunningFarm_4_a: |-
           Nadie sabe cuántas cabezas de lechuga crecerá de cada brote. Utilizar un ciclo 'mientras hay lechuga' para seguir recogiendo hasta que cada pieza haya sido recolectada.
@@ -14139,7 +14165,7 @@ es-MX:
       grade3_maze_loops3_authored_hint:
         2-3_Maze_Loops_19_a: Si estas atorado, intenta escribir el código sin ciclos primero y busca patrones.
         2-3_Maze_Loops_19_b: Poner un ciclo de repetición dentro de otro puede ayudar a disminuir la cantidad de bloques utilizados.
-        2-3_Maze_Loops_19_c: Tomará dos conjuntos de ciclos 'repetir´anidados para resolver este acertijo.
+        2-3_Maze_Loops_19_c: It will take two sets of nested `repeat` loops to solve this puzzle.
       grade3_maze_loops4_authored_hint:
         2-3_Maze_Loops_20_a: Busca un patrón de escalera en este laberinto para encontrar dónde puede usarse un ciclo anidado.
       grade3_maze_loops5_authored_hint:
@@ -14155,8 +14181,8 @@ es-MX:
         grade3_robotFarmer_ConditionalsIntro_8_a: El bloque `camino por delante` te permite seguir, incluso si no sabes cuántos cuadrados hay en una ruta.
       grade3_robotFarmer_ConditionalsIntro_9_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_9_a: Usted va a tener que utilizar más de un ciclo`while`.
-        grade3_robotFarmer_ConditionalsIntro_9_b: Cada hoyo se encuentra al final de un camino, por lo que debes utilizar `while antes de usar` antes de usar` mientras hay un hoyo `.
-        grade3_robotFarmer_ConditionalsIntro_9_c: Tenga en cuenta que necesita repetir el `while camino por delante`,` mientras que hay un hoyo `seis veces.
+        grade3_robotFarmer_ConditionalsIntro_9_b: Every hole is at the end of a path, so use `while path ahead` before using `while there is a hole`.
+        grade3_robotFarmer_ConditionalsIntro_9_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
       grade4_arist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Este diseño hará un loop 10 veces sobre 360 grados.

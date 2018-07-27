@@ -25,6 +25,9 @@
   %script{src: minifiable_asset_path('js/p5play/p5.js')}
   %script{src: minifiable_asset_path('js/p5play/p5.play.js')}
 
+- if use_p5sound
+  %script{src: asset_path('js/p5play/p5.sound.min.js')}
+
 -# Droplet script dependencies (only when editor present)
 - if use_droplet && !hide_source
   %script{src: "#{static_asset_base_path}js/ace/ace.js"}

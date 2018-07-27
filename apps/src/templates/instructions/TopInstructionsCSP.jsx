@@ -292,7 +292,7 @@ class TopInstructions extends Component {
             {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl &&
               <InlineAudio src={ttsUrl} style={audioStyle}/>
             }
-            {this.props.documentationUrl &&
+            {(this.props.documentationUrl && (this.state.tabSelected !== TabType.COMMENTS)) &&
               <PaneButton
                 iconClass="fa fa-book"
                 label={msg.documentation()}
@@ -331,6 +331,7 @@ class TopInstructions extends Component {
               <CollapserIcon
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
+                teacherOnly={teacherOnly}
               />}
           </div>
         </PaneHeader>

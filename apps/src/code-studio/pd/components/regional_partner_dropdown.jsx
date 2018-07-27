@@ -17,7 +17,7 @@ const styles = {
   }
 };
 
-export const ALL_PARTNERS_LABEL = "All Regional Partners' Applications";
+export const ALL_PARTNERS_LABEL = "All Regional Partners";
 export const ALL_PARTNERS_VALUE = "all";
 export const UNMATCHED_PARTNER_LABEL = "No Partner/Unmatched";
 export const UNMATCHED_PARTNER_VALUE = "none";

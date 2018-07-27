@@ -2,7 +2,7 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
 import { Galleries } from './projectConstants';
-
+import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 // Action types
 
 const TOGGLE_GALLERY = 'projects/TOGGLE_GALLERY';
@@ -10,6 +10,7 @@ const APPEND_PROJECTS = 'projects/APPEND_PROJECTS';
 const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
+const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
 
 // Reducers
 
@@ -82,10 +83,37 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
   }
 }
 
+const initialPersonalProjectsList = [];
+
+function personalProjectsList(state = initialPersonalProjectsList, action) {
+  switch (action.type) {
+    case SET_PERSONAL_PROJECTS_LIST:
+      return {
+        ...state,
+        projects: action.personalProjectsList,
+      };
+    case PUBLISH_SUCCESS:
+      var channelOfInterest = action.lastPublishedProjectData.channel;
+
+      var publishedProjectIndex = state.projects.findIndex(project => project.channel === channelOfInterest);
+
+      var updatedProjects = [...state.projects];
+      updatedProjects[publishedProjectIndex].publishedAt = action.lastPublishedAt;
+
+      return {
+        ...state,
+        projects: updatedProjects
+      };
+    default:
+      return state;
+  }
+}
+
 const reducer = combineReducers({
   selectedGallery,
   projectLists,
   hasOlderProjects,
+  personalProjectsList
 });
 export default reducer;
 
@@ -130,4 +158,13 @@ export function setProjectLists(projectLists) {
 
 export function setHasOlderProjects(hasOlderProjects, projectType) {
   return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
+}
+
+export function setPersonalProjectsList(personalProjectsList) {
+  return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
+}
+
+export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
+  return {type: PUBLISH_SUCCESS, lastPublishedAt,
+  lastPublishedProjectData};
 }

@@ -1,0 +1,31 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+  = stylesheet_link_tag asset_path('css/common.css'), media: 'all'
+
+%h1= @library.new_record? ? 'New Library' : 'Editing Library'
+
+.library-edit-container
+  .editor
+    = form_for(@library,
+      url: @library.new_record? ? libraries_path : library_path(id: @library.name),
+      html: {id: 'edit-library-form', method: @library.new_record? ? 'post' : 'patch'},
+    ) do |f|
+      = f.label :name
+      = f.text_field :name
+      = f.label :content
+      = f.text_area :content
+      %div
+        = f.submit class: 'btn', id: 'library_submit'
+
+    - unless @library.new_record?
+      = form_for(@library,
+        url: library_path(id: @library.name),
+        html: {id: 'delete-library-form', method: 'delete'},
+      ) do |f|
+        = f.submit 'Delete Library',
+            data: {confirm: 'Are you sure you want to delete this library?'},
+            class: 'btn btn-danger'
+
+= link_to 'Back', libraries_path
+
+%script{src: minifiable_asset_path('js/libraries/edit.js')}

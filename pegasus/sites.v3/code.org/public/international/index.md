@@ -10,9 +10,9 @@ Do you want to help students in your country learn computer science? Whether you
 
 ## Sign up for our mailing list 
 
-Stay up to date with the global momentum behind computer science! Get all the latest news, important updates, newest resources, and more in our newsletter. 
+Stay up to date with the global momentum behind computer science! Get all the latest news, important updates, newest resources, and more in our quarterly newsletter. 
 
-[Sign up to receive our newsletter.](https://goo.gl/forms/FopyqDJHJacZaVSs1)
+[Sign up to receive our newsletter.](http://go.pardot.com/l/153401/2018-07-20/lfw71d)
 
 *** 
 

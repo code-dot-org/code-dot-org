@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
 import moment from "moment/moment";
+import queryString from 'query-string';
 
 const styles = {
   content: {
@@ -27,6 +28,10 @@ const styles = {
     fontStyle: 'italic',
     display: 'flex',
     alignItems: 'center'
+  },
+  footer:{
+    display: 'flex',
+    justifyContent: 'flex-end'
   }
 };
 
@@ -49,8 +54,8 @@ class TeacherFeedback extends Component {
 
   constructor(props) {
     super(props);
-    const search = window.location.search;
-    const studentId = search.split('&')[1].split("=")[1];
+    //Pull the student id from the url
+    const studentId = queryString.parse(window.location.search).user_id;
 
     this.state = {
       comment: "",
@@ -118,7 +123,8 @@ class TeacherFeedback extends Component {
     }
 
     const latestFeedback = this.state.latestFeedback.length > 0 ? this.state.latestFeedback[0] : null;
-    const feedbackUnchanged = (latestFeedback && this.state.comment === latestFeedback.comment);
+    const feedbackUnchanged = (latestFeedback && this.state.comment === latestFeedback.comment) ||
+      (!latestFeedback && this.state.comment.length === 0);
 
     const buttonDisabled = feedbackUnchanged || this.state.submitting || this.state.errorState === ErrorType.Load;
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();

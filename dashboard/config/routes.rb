@@ -144,6 +144,7 @@ Dashboard::Application.routes.draw do
     delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
+    get '/users/to_destroy', to: 'registrations#users_to_destroy'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -207,8 +208,8 @@ Dashboard::Application.routes.draw do
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :blocks, constraints: {id: /[^\/]+/}
-
   resources :shared_blockly_functions, path: '/functions'
+  resources :libraries
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
@@ -577,6 +578,8 @@ Dashboard::Application.routes.draw do
       get 'regional_partners/capacity', to: 'regional_partners#capacity'
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+
+      get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

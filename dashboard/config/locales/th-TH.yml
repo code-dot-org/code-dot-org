@@ -312,7 +312,7 @@ th:
       my_dashboard: My Dashboard
       courses: คอร์ส
       course_catalog: Course Catalog
-      project_gallery: Projects
+      project_gallery: โปรเจกต์
       sections: Sections
       help_support: การช่วยเหลือและสนับสนุน
       report_bug: Report bug
@@ -407,6 +407,9 @@ th:
     delete: Delete Account
     delete_text: Deleting your account will erase all information and progress connected
       to this account.
+    delete_text_teacher_managed_note: You do not have permission to delete this account
+      because it is managed by your teacher. Your teacher(s) will need to remove you
+      from their sections before you can delete your account.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
@@ -662,8 +665,8 @@ th:
     translate: ช่วยแปลเป็นภาษาของคุณ
     support: สนับสนุน
     support_url: http://support.code.org
-    tos_short: Terms
-    tos: Terms of Service
+    tos_short: เงื่อนไข
+    tos: เงื่อนไขการให้บริการ
     privacy: นโยบายความเป็นส่วนตัว
     secure: Secure Version
     report_abuse: รายงานการละเมิด
@@ -696,9 +699,8 @@ th:
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
-      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
-        with a mouse and keyboard. You may experience issues using this tool on your
-        current device.
+      gamelab_unsupported_tablet: เกมแล็ป (Game Lab) จะทำงานได้ดีเมื่อคุณใช้คอมพิวเตอร์แบบตั้งโต๊ะหรือแล๊ปท๊อปที่มีเมาส์และคีย์บอร์ด
+        คุณอาจเจอปัญหาในการใช้เครื่องมือนี้กับอุปกรณ์ปัจจุบันที่คุณใช้อยู่
       weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
         with loading Web Lab on this browser. You may want to use a different browser
         until this is resolved. Sorry for the inconvenience.
@@ -710,7 +712,7 @@ th:
   next_stage: Finished! Continue to next stage
   download_pdf: Open Lesson Plan
   lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
+  view_lesson_plan: มาดูแผนการเรียนการสอน
   pdf_download: Download PDF
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
@@ -771,9 +773,9 @@ th:
       title: แกลเลอรี่
       body: View a gallery of app and artist images created by our users
     gamelab:
-      title: Game Lab
-      body: Game Lab is a programming environment where you can make simple animations
-        and games with objects and characters that interact with each other.
+      title: เกมแล๊ป (Game Lab)
+      body: เกมแลป(Game Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถสร้างภาพเคลื่อนไหวหรือที่เรียกกันว่าแอนนิเมชั่นแบบง่ายๆ
+        หรือเกมที่มีวัตถุและตัวแสดงต่างๆ ที่สามารถโต้ตอบซึ่งกันและกันได้
       audience: Ages 13+
       cta: Learn how
     hoc-encryption:
@@ -955,7 +957,7 @@ th:
       asked to confirm that your school has parental consent for the collection of
       the student’s personal information for the use and benefit of the school, including
       educational programs such as Code Studio.
-    tos: Terms of Service
+    tos: เงื่อนไขการให้บริการ
     privacy: นโยบายความเป็นส่วนตัว
     privacy_notice: Privacy Notice
     accept_label: I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a>
@@ -1006,7 +1008,7 @@ th:
     completed_courses: Completed courses
     all_courses: All courses
   project:
-    projects: Projects
+    projects: โปรเจกต์
     create: Create Project
     create_a_project: 'Create a new project:'
     new: สร้างใหม่
@@ -1023,7 +1025,7 @@ th:
       try again.
     exit: Return to Course
     my_projects: โปรเจคของฉัน
-    project_gallery: Projects
+    project_gallery: โปรเจกต์
     publish: เผยแพร่
     unpublish: ไม่เผยแพร่
     share: แบ่งปัน
@@ -1041,7 +1043,7 @@ th:
     more: เพิ่มเติม
     name: ชื่อ
     updated: Updated
-    project_type: Project Type
+    project_type: ประเภทโปรเจกต์
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
       below to start a new project!<br/>You can come back and work on your projects
       at any time.
@@ -1328,8 +1330,8 @@ th:
       workshop_organizer: Workshop Organizer
       workshop_facilitator: Workshop Facilitator
       workshop_course: Workshop Course
-      email_opt_in: I agree that Code.org can share my contact information and aggregate
-        data about my classes with the Code.org International Partner in my country.
+      email_opt_in: Can we email you about Code.org’s international program, updates
+        to our courses, or other computer science news?
       legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
         share information on how you use Code.org and the Professional Learning resources
         with the Code.org International Partner in your country, school district,
@@ -1398,23 +1400,26 @@ th:
       workshop_course:
         csf_af: CS Fundamentals (Courses A-F)
         csf_express: CS Fundamentals (Pre-Express or Express)
+        csd: CS Discoveries
+        csp: CS Principles
       email_opt_in:
         opt_in_yes: ใช่
         opt_in_no: ไม่ใช่
     international_opt_in:
-      title: Workshop Attendance for non-U.S. Teachers
+      title: Workshop Attendance
       intro: Thank you for taking time to receive training on Code.org’s curriculum.
         Our mission to bring computer science education opportunities to all children
         in all schools around the world would not be possible without you.
       instructions: Please fill out the form below to indicate that 1) you attended
         a training workshop run by one of Code.org’s international partners, and 2)
         you agree to share your information with our international partner in your
-        country so that we can help to support your journey as a computer science
+        country so that they can help to support your journey as a computer science
         teacher.
       thanks: Thank you for submitting! We look forward to supporting you as you get
         to know Code.org’s curriculum and tools. Please keep sharing your questions
-        and feedback with us by writing to us at support@code.org or by posting on
-        the teacher forum!
+        and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a>
+        or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher
+        forum</a>!
     logged_out:
       heading: Thanks for your interest in the Professional Learning Program!
       body: To get started, you first need to be logged into your Code.org account.
@@ -1422,9 +1427,9 @@ th:
         please check out the <a href="%{url}">Professional Learning Program overview</a>.
     not_teacher:
       body: Thanks for your interest in Code.org’s Professional Learning Program!
-        You’re currently signed into a student account. Please either <a href="%{create_teacher}">create
-        a teacher account</a> or <a href="%{user_settings}">go to your user settings</a>
-        to upgrade your account from student to teacher.
+        You’re currently signed into a student account. Please either create a teacher
+        account or <a href="%{user_settings}">go to your user settings</a> to upgrade
+        your account from student to teacher.
       more: If you’d like more information about the program before you start your
         application, please check out the <a href="%{pl_overview}">Professional Learning
         Program overview</a>.
