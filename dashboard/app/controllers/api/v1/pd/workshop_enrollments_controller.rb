@@ -14,6 +14,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     FULL: "full".freeze
   }
 
+  TEACHING_ROLES = [
+    "Classroom Teacher",
+    "Librarian",
+    "Tech Teacher/Media Specialist"
+  ]
+
   # GET /api/v1/pd/workshops/1/enrollments
   def index
     response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
@@ -78,13 +84,18 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   private
 
   def enrollment_params
-    {
+    enrollment_data = {
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
       role: params[:role],
-      grades_teaching: params[:grades_teaching] ? params[:grades_teaching].map {|g| process_grade(g)}.join(", ") : nil
     }
+
+    if TEACHING_ROLES.include? params[:role]
+      enrollment_data[:grades_teaching] = params[:grades_teaching] ? params[:grades_teaching].map {|g| process_grade(g)}.join(", ") : nil
+    end
+
+    enrollment_data
   end
 
   def school_info_params
