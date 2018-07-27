@@ -203,6 +203,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'lib',
+          src: ['p5.sound.min.js'],
+          dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
           // our dest ends up with an empty set of directories matching the path
           // If we provide it as a relative path, that does not happen
