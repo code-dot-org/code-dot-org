@@ -26,14 +26,6 @@ Feature: Using the teacher dashboard
     And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
     And I click selector "a:contains('New Section')" once I see it
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
-    And I wait until element "#uitest-summary-view" is visible
-    And I click selector "#uitest-toggle-detail-view" once I see it
-    And I wait until element "#uitest-detail-view" is visible
-    And I wait until element "a[href*='/s/allthethings/stage/2/puzzle/1']" is in the DOM
-    # Completed bubble is green
-    Then element "a[href*='/s/allthethings/stage/2/puzzle/1'] .uitest-bubble" has css property "background-color" equal to "rgb(14, 190, 14)"
-    # Not started bubble is gray
-    Then element "a[href*='/s/allthethings/stage/2/puzzle/2'] .uitest-bubble" has css property "background-color" equal to "rgb(254, 254, 254)"
 
     # Stats tab
     And I click selector "#learn-tabs a:contains('Stats')" once I see it
