@@ -205,6 +205,10 @@ GameLab.prototype.init = function (config) {
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
     !this.level.edit_blocks;
 
+
+  this.level.helperLibraries = this.level.helperLibraries || [];
+  this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
+
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
     this.startAnimations = defaultSprites;
@@ -1078,7 +1082,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
 GameLab.prototype.initInterpreter = function (attachDebugger=true) {
 
   const injectGamelabGlobals = () => {
-    const propList = this.gameLabP5.getGlobalPropertyList();
+    const propList = this.gameLabP5.getGlobalPropertyList(this.isDanceLab);
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
       // propListItem[0] - a native property value
@@ -1223,7 +1227,6 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
 let libraryPreload;
 GameLab.prototype.loadLibraries_ = function () {
   if (!libraryPreload) {
-    this.level.helperLibraries = this.level.helperLibraries || [];
     this.loadValidationCodeIfNeeded_();
     libraryPreload = Promise.all(this.level.helperLibraries.map(this.loadLibrary_.bind(this)));
   }
