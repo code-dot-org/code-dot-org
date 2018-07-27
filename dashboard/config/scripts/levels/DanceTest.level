@@ -14,10 +14,6 @@
     "hide_animation_mode": "true",
     "show_type_hints": "true",
     "include_shared_functions": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -47,7 +43,8 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "hide_custom_blocks": "false"
+    "hide_custom_blocks": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
