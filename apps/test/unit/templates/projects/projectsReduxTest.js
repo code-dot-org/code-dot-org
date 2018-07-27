@@ -33,6 +33,8 @@ describe('projectsRedux', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
       assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
+      assert.deepEqual(nextState.personalProjectsList.projects[2].channel, 'abcd3');
+      assert.deepEqual(nextState.personalProjectsList.projects[2].publishedAt, '2015-12-31T23:59:59.999-08:00');
       const nextAction = unpublishSuccess('abcd3');
       const nextNextState = projects(nextState, nextAction);
       assert.deepEqual(nextNextState.personalProjectsList.projects[2].channel, 'abcd3');
