@@ -271,7 +271,7 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
-    use_dance = @level.is_a?(Gamelab) && @level.helper_libraries.include?('DanceLab')
+    use_dance = @level.is_a?(Gamelab) && @level.helper_libraries.try(:include?, 'DanceLab')
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
       locals: {
