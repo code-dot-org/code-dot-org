@@ -103,8 +103,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def school_info_params
     params.require(:school_info).permit(
       :school_type,
-      :state,
-      :zip,
+      :school_state,
+      :school_zip,
       :school_district_id,
       :school_id,
       :school_name,
