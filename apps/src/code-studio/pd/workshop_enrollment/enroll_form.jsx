@@ -103,8 +103,8 @@ export default class EnrollForm extends React.Component {
           school_id: selection.school.nces_id,
           school_district_id: selection.school.school_district_id,
           school_name: selection.school.name,
-          state: selection.school.state,
-          zip: selection.school.zip,
+          school_state: selection.school.state,
+          school_zip: selection.school.zip,
           school_type: selection.school.school_type
         }
       });
@@ -138,8 +138,8 @@ export default class EnrollForm extends React.Component {
         school_id: this.state.school_info.school_id,
         school_district_id: this.state.school_info.school_district_id,
         school_name: this.state.school_info.school_name,
-        state: this.state.school_info.state,
-        zip: this.state.school_info.zip,
+        school_state: this.state.school_info.school_state,
+        school_zip: this.state.school_info.school_zip,
         school_type: this.state.school_info.school_type,
         country: "US" // we currently only support enrollment in pd for US schools
       },
