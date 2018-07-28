@@ -81,6 +81,16 @@ export default class WorkshopEnrollment extends React.Component {
     );
   }
 
+  renderNotFound() {
+    return (
+      <div>
+        <p>
+          Sorry, this workshop could not be found.
+        </p>
+      </div>
+    );
+  }
+
   renderSuccess() {
     return (
       <div>
@@ -182,6 +192,8 @@ export default class WorkshopEnrollment extends React.Component {
       return this.renderClosed();
     } else if (this.state.submissionStatus === "full") {
       return this.renderFull();
+    } else if (this.state.submissionStatus === "not found") {
+      return this.renderNotFound();
     } else if (this.state.submissionStatus === "success") {
       return this.renderSuccess();
     }
