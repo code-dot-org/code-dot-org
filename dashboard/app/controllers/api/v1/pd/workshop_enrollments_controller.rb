@@ -11,7 +11,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     DUPLICATE: "duplicate".freeze,
     OWN: "own".freeze,
     CLOSED: "closed".freeze,
-    FULL: "full".freeze
+    FULL: "full".freeze,
+    NOT_FOUND: "not found".freeze
   }
 
   TEACHING_ROLES = [
@@ -38,7 +39,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def create
     @workshop = Pd::Workshop.find_by_id params[:workshop_id]
     if @workshop.nil?
-      p "404 bc workshop nil"
+      return render json: {submission_status: RESPONSE_MESSAGES[:NOT_FOUND]},
+        status: 404
     end
 
     enrollment_email = params[:email]
