@@ -100,7 +100,8 @@ class PaneHeader extends React.Component {
         ...style,
         ...commonStyles.purpleHeader,
         ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
-        ...(teacherOnly && commonStyles.teacherBlueHeader)
+        ...(teacherOnly && commonStyles.teacherBlueHeader),
+        ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused)
     };
 
     return (
