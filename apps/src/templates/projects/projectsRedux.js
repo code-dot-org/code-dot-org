@@ -94,9 +94,9 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: action.personalProjectsList,
       };
     case PUBLISH_SUCCESS:
-      var channelOfInterest = action.lastPublishedProjectData.channel;
+      var publishedChannel = action.lastPublishedProjectData.channel;
 
-      var publishedProjectIndex = state.projects.findIndex(project => project.channel === channelOfInterest);
+      var publishedProjectIndex = state.projects.findIndex(project => project.channel === publishedChannel);
 
       var updatedProjects = [...state.projects];
       updatedProjects[publishedProjectIndex].publishedAt = action.lastPublishedAt;
@@ -106,7 +106,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: updatedProjects
       };
     case UNPUBLISH_SUCCESS:
-      var unpublishedChannel = action.channel;
+      var unpublishedChannel = action.projectId;
 
       var unpublishedProjectIndex = state.projects.findIndex(project => project.channel === unpublishedChannel);
 
