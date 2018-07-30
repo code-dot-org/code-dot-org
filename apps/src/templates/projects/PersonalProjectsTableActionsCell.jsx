@@ -6,7 +6,7 @@ import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
 import {showPublishDialog} from './publishDialog/publishDialogRedux';
-import {unpublishProject} from '../../code-studio/components/shareDialogRedux';
+import {unpublishProject} from './projectsRedux';
 
 export const styles = {
   xIcon: {
