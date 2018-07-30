@@ -328,7 +328,13 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 </div>
                 <div className="social-buttons">
-                  {getNextFrame && <DownloadAsGif getNextFrame={getNextFrame} />}
+                  {getNextFrame &&
+                    <DownloadAsGif
+                      getNextFrame={getNextFrame}
+                      styles={styles}
+                      className="no-mc"
+                    />
+                  }
                   <a id="sharing-phone" href="" onClick={wrapShareClick(this.showSendToPhone.bind(this), 'send-to-phone')}>
                     <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
                     <span>Send to phone</span>
