@@ -102,6 +102,7 @@
     "firebase-bolt": "^0.8.0",
     "firebase-mock": "^1.0.5",
     "firmata": "0.16.0",
+    "gif.js": "^0.2.0",
     "glob": "5.0.14",
     "grunt": "0.4.5",
     "grunt-cli": "0.1.13",
