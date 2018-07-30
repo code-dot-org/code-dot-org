@@ -100,8 +100,7 @@ class PaneHeader extends React.Component {
         ...style,
         ...commonStyles.purpleHeader,
         ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
-        ...(teacherOnly && commonStyles.teacherBlueHeader),
-        ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused)
+        ...(teacherOnly && commonStyles.teacherBlueHeader)
     };
 
     return (
@@ -163,9 +162,8 @@ export const PaneButton = Radium(function (props) {
     >
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
-        {!props.isRtl && <i className={props.iconClass} style={iconStyle}/>}
+        <i className={props.iconClass} style={iconStyle}/>
         <span style={styles.noPadding}>{label}</span>
-        {props.isRtl && <i className={props.iconClass} style={iconStyle}/>}
       </span>
     </div>
   );
