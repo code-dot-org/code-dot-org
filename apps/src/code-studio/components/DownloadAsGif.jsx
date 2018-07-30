@@ -1,21 +1,31 @@
 import React, {PropTypes} from 'react';
+import throttle from 'lodash/debounce';
+
+const State = {
+  initial: 'Download as .gif',
+  capturing: 'Capturing...',
+  rendering: 'Rendering...',
+  done: 'Finished!',
+};
 
 export default class DownloadAsGif extends React.Component {
   static propTypes = {
     getNextFrame: PropTypes.func.isRequired,
     framesToCapture: PropTypes.number,
     delayBetweenFrames: PropTypes.number,
+    styles: PropTypes.object,
   };
 
-  state = {downloadState: 'notStarted', percent: 0};
+  state = {downloadState: State.initial, percent: 0};
 
   prepareGif = () => {
-    this.setState({downloadState: 'capturing'});
+    this.setState({downloadState: State.capturing});
     setTimeout(this.captureGif, 0);
   };
 
   captureGif = () => {
     const gif = window.createGifCapture();
+    gif.on('progress', this.handleProgress);
     gif.on('finished', this.finishGif);
 
     const delay = this.props.delayBetweenFrames || 33;
@@ -23,25 +33,30 @@ export default class DownloadAsGif extends React.Component {
       gif.addFrame(this.props.getNextFrame(), {copy: true, delay});
     }
 
-    this.setState({downloadState: 'rendering'});
+    this.setState({downloadState: State.rendering});
     setTimeout(() => gif.render(), 0);
   };
 
   finishGif = blob => {
-    this.setState({downloadState: 'done'});
+    this.handleProgress.cancel();
+    this.setState({downloadState: State.done});
 
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = 'export.gif';
     link.click();
-
-    console.log(link.href);
   };
 
+  handleProgress = throttle(percent => {
+    this.setState({downloadState: `${State.rendering} ${Math.round(percent * 100)}%`});
+  }, 100);
+
   render() {
+    const disabled = this.state.downloadState !== State.initial;
     return (
       <button
-        disabled={this.state.downloadState !== 'notStarted'}
+        style={disabled ? this.props.styles.buttonDisabled : this.props.styles.button}
+        disabled={disabled}
         onClick={this.prepareGif}
       >
         {this.state.downloadState}
