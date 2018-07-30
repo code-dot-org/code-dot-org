@@ -1,6 +1,18 @@
 require 'test_helper'
 
 class AuthenticationOptionTest < ActiveSupport::TestCase
+  test 'after create sets primary_contact_info on user if contact info is nil' do
+    user = create :user, primary_contact_info: nil
+    auth_option = create :authentication_option, user: user
+    assert_equal auth_option, user.primary_contact_info
+  end
+
+  test 'after create does not set primary_contact_info on user if contact info is present' do
+    user = create :user, primary_contact_info: create(:authentication_option)
+    auth_option = create :authentication_option, user: user
+    refute_equal auth_option, user.primary_contact_info
+  end
+
   test 'migrated user email and hashed email look at authentication_options' do
     original_teacher_email = 'testteacher@xyz.foo'
     new_teacher_email = 'awesometeacher@xyz.foo'
