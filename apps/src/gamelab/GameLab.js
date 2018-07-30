@@ -53,6 +53,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
+import { setGetNextFrame } from '../code-studio/components/shareDialogRedux';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
@@ -240,6 +241,13 @@ GameLab.prototype.init = function (config) {
     onSetup: this.onP5Setup.bind(this),
     onDraw: this.onP5Draw.bind(this)
   });
+
+  if (this.studioApp_.isUsingBlockly()) {
+    getStore().dispatch(setGetNextFrame(() => {
+      this.gameLabP5.p5._draw();
+      return this.gameLabP5.p5.canvas;
+    }));
+  }
 
   config.afterClearPuzzle = function () {
     getStore().dispatch(setInitialAnimationList(this.startAnimations));
