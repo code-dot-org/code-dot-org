@@ -52,7 +52,6 @@ uz:
         jo‘natgan xabardagi link bo‘yicha yangi pochtangizni tasdiqlang.
       updated: Hisobingizni muvaffaqiyatli yangiladingiz.
     sessions:
-      signed_in: ''
       signed_out: Tizimdan muvaffaqiyatli chiqdingiz.
     unlocks:
       send_instructions: Sanoqli daqiqalarda pochtangizga hisobingizni qulfdan chiqarish
