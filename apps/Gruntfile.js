@@ -210,8 +210,8 @@ describe('entry tests', () => {
         {
           expand: true,
           cwd: './node_modules/gif.js/dist',
-          src: ['*.js'],
-          dest: 'build/package/js/gif.js/'
+          src: ['gif.worker.js'],
+          dest: 'build/package/js/dance/'
         },
         {
           expand: true,
@@ -551,6 +551,7 @@ describe('entry tests', () => {
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
+    dance: './src/gamelab/dance.js',
   };
 
   // Create a config for each of our bundles
