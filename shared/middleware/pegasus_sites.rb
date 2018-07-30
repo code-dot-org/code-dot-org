@@ -27,11 +27,11 @@ class PegasusSites
     path = request.path
 
     # Match against standard Pegasus hosts.
-    if @pegasus_hosts.any? {|host| host.include? request.host}
-      backend = :pegasus
-    else
-      backend = :dashboard
-    end
+    backend = if @pegasus_hosts.any? {|host| host.include? request.host}
+                :pegasus
+              else
+                :dashboard
+              end
 
     # Process HTTP-cache `proxy` values for path-specific behavior.
     config = @config[backend][:behaviors] + [@config[backend][:default]]
