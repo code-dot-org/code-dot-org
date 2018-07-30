@@ -3,6 +3,8 @@ import { combineReducers } from 'redux';
 import _ from 'lodash';
 import { Galleries } from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
+import {channels as channelsApi} from '../../clientApi';
+
 // Action types
 
 const TOGGLE_GALLERY = 'projects/TOGGLE_GALLERY';
@@ -11,6 +13,10 @@ const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
+
+const UNPUBLISH_REQUEST  = 'projects/UNPUBLISH_REQUEST';
+const UNPUBLISH_SUCCESS  = 'projects/UNPUBLISH_SUCCESS';
+const UNPUBLISH_FAILURE  = 'projects/UNPUBLISH_FAILURE';
 
 // Reducers
 
@@ -93,9 +99,9 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: action.personalProjectsList,
       };
     case PUBLISH_SUCCESS:
-      var channelOfInterest = action.lastPublishedProjectData.channel;
+      var publishedChannel = action.lastPublishedProjectData.channel;
 
-      var publishedProjectIndex = state.projects.findIndex(project => project.channel === channelOfInterest);
+      var publishedProjectIndex = state.projects.findIndex(project => project.channel === publishedChannel);
 
       var updatedProjects = [...state.projects];
       updatedProjects[publishedProjectIndex].publishedAt = action.lastPublishedAt;
@@ -103,6 +109,28 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       return {
         ...state,
         projects: updatedProjects
+      };
+    case UNPUBLISH_REQUEST:
+      return {
+        ...state,
+        isUnpublishPending: true,
+      };
+    case UNPUBLISH_SUCCESS:
+      var unpublishedChannel = action.projectId;
+
+      var unpublishedProjectIndex = state.projects.findIndex(project => project.channel === unpublishedChannel);
+
+      var newProjects = [...state.projects];
+      newProjects[unpublishedProjectIndex].publishedAt = null;
+
+      return {
+        ...state,
+        projects: newProjects
+      };
+    case UNPUBLISH_FAILURE:
+      return {
+        ...state,
+        isUnpublishPending: false,
       };
     default:
       return state;
@@ -164,7 +192,35 @@ export function setPersonalProjectsList(personalProjectsList) {
   return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
 }
 
+export function unpublishProject(projectId) {
+  return dispatch => {
+    dispatch({type: UNPUBLISH_REQUEST});
+    return new Promise((resolve, reject) => {
+      channelsApi.withProjectId(projectId).ajax(
+        'POST',
+        'unpublish',
+        () => {
+          dispatch({
+            type: UNPUBLISH_SUCCESS,
+            projectId: projectId,
+          });
+          resolve();
+        },
+        err => {
+          dispatch({type: UNPUBLISH_FAILURE});
+          reject(err);
+        },
+        null
+      );
+    });
+  };
+}
+
 export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
   return {type: PUBLISH_SUCCESS, lastPublishedAt,
   lastPublishedProjectData};
+}
+
+export function unpublishSuccess(projectId) {
+  return {type: UNPUBLISH_SUCCESS, projectId};
 }
