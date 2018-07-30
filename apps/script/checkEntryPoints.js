@@ -86,6 +86,7 @@ const SILENCED = [
   'weblab',
   'learn/index',
   'cookieBanner',
+  'dance',
 ];
 const SITES_CONFIG = {
   'studio': {
