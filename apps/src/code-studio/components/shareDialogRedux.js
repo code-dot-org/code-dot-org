@@ -70,7 +70,7 @@ export function unpublishProject(projectId) {
         () => {
           dispatch({
             type: UNPUBLISH_SUCCESS,
-            channel: projectId,
+            projectId: projectId,
           });
           resolve();
         },
