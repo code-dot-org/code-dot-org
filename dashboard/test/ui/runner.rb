@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# -*- coding: utf-8 -*-
 require_relative '../../../deployment'
 
 ROOT = File.expand_path('../../../..', __FILE__)
