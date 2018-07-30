@@ -328,7 +328,7 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 </div>
                 <div className="social-buttons">
-                  {getNextFrame &&
+                  {window.createGifCapture && getNextFrame &&
                     <DownloadAsGif
                       getNextFrame={getNextFrame}
                       styles={styles}
