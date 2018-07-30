@@ -2,7 +2,7 @@
   "category": "",
   "config": {
     "func": "distance",
-    "blockText": "distance from {LOCATION1} to {LOCATION2}",
+    "blockText": "distance between {LOCATION1} and {LOCATION2}",
     "returnType": "Number",
     "args": [
       {
