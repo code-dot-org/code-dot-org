@@ -23,11 +23,15 @@ export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_SHARE_DIALOG:
       return {
+        ...state,
         ...initialState,
         isOpen: true,
       };
     case HIDE_SHARE_DIALOG:
-      return initialState;
+      return {
+        ...state,
+        ...initialState,
+      };
     case UNPUBLISH_REQUEST:
       return {
         ...state,
@@ -35,6 +39,7 @@ export default function reducer(state = initialState, action) {
       };
     case UNPUBLISH_SUCCESS:
       return {
+        ...state,
         ...initialState,
         didUnpublish: true,
       };
