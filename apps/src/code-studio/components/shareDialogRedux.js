@@ -8,7 +8,7 @@ const SHOW_SHARE_DIALOG = 'shareDialog/SHOW_SHARE_DIALOG';
 const HIDE_SHARE_DIALOG = 'shareDialog/HIDE_SHARE_DIALOG';
 
 const UNPUBLISH_REQUEST  = 'shareDialog/UNPUBLISH_REQUEST';
-export const UNPUBLISH_SUCCESS  = 'shareDialog/UNPUBLISH_SUCCESS';
+const UNPUBLISH_SUCCESS  = 'shareDialog/UNPUBLISH_SUCCESS';
 const UNPUBLISH_FAILURE  = 'shareDialog/UNPUBLISH_FAILURE';
 
 // Reducer
@@ -35,10 +35,8 @@ export default function reducer(state = initialState, action) {
       };
     case UNPUBLISH_SUCCESS:
       return {
-        ...state,
+        ...initialState,
         didUnpublish: true,
-        isOpen: false,
-        isUnpublishPending: false,
       };
     case UNPUBLISH_FAILURE:
       return {
@@ -68,10 +66,7 @@ export function unpublishProject(projectId) {
         'POST',
         'unpublish',
         () => {
-          dispatch({
-            type: UNPUBLISH_SUCCESS,
-            projectId: projectId,
-          });
+          dispatch({type: UNPUBLISH_SUCCESS});
           resolve();
         },
         err => {
