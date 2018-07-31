@@ -32,13 +32,11 @@ end
 # CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
 # https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
 # Detect Circle environment just to be safe.
-def sources_s3_dir(environment)
+def sources_s3_dir(environment, project_directory)
   if environment == :production
     'sources'
-  # Check that we're executing in a Rack environment and not a standalone script, because cron jobs execute as root
-  # which are not in the project directory and can't shell out to get the current git revision.
-  elsif environment == :test && !ENV['CIRCLECI'] && ENV['RACK_ENV']
-    "sources_#{environment}/#{GitUtils.git_revision_short}"
+  elsif environment == :test && !ENV['CIRCLECI']
+    "sources_#{environment}/#{GitUtils.git_revision_short(project_directory)}"
   else
     "sources_#{environment}"
   end
@@ -126,7 +124,7 @@ def load_configuration
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
-    'sources_s3_directory'        => sources_s3_dir(rack_env),
+    'sources_s3_directory'        => sources_s3_dir(rack_env, root_dir),
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
