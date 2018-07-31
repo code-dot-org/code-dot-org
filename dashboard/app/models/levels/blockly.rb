@@ -293,13 +293,6 @@ class Blockly < Level
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
         level_prop['sharedFunctions'] = shared_functions if include_shared_functions
-
-        if should_localize?
-          xml_blocks.each do |category|
-            prop_name = overrides[category.to_sym] || category.camelize(:lower)
-            level_prop[prop_name] = localize_function_blocks(level_prop[prop_name]) if level_prop.key?(prop_name)
-          end
-        end
       end
 
       if is_a? Applab
