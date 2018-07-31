@@ -15,8 +15,6 @@ class Library < ApplicationRecord
   SUBDIRECTORY_ATTRIBUTES = []
   EXTENSION = 'interpreted.js'
 
-  after_save {@@all_library_names = nil}
-
   def file_content
     content
   end
