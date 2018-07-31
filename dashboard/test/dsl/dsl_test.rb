@@ -27,6 +27,7 @@ class DslTest < ActiveSupport::TestCase
     family_name: nil,
     version_year: nil,
     is_stable: nil,
+    supported_locales: [],
   }
 
   test 'test Script DSL' do
