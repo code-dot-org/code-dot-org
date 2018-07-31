@@ -227,9 +227,8 @@ module Pd
         raise KeyError, "Missing jotform form category #{category}" unless CDO.jotform_forms&.key? category
         forms = CDO.jotform_forms[category]
 
-        # Fail for no form_id value, even if the name key is present
         raise KeyError, "Mising jotform form: #{category}.#{name}" unless forms[name].present?
-        forms[name].to_i
+        forms[name]&.to_i
       end
 
       # Download answers from JotForm for any placeholders in the current scope

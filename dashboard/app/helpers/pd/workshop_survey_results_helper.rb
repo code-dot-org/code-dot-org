@@ -245,24 +245,24 @@ module Pd::WorkshopSurveyResultsHelper
         general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, day: 0).map(&:form_data_hash)
       },
       'Day 1' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_1'], day: 1).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 1).map {|x| x.form_data_hash(show_hidden_questions: true)}
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['day_1'], day: 1).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['facilitator'], day: 1).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
       'Day 2' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_2'], day: 2).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 2).map {|x| x.form_data_hash(show_hidden_questions: true)}
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['day_2'], day: 2).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['facilitator'], day: 2).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
       'Day 3' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_3'], day: 3).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 3).map {|x| x.form_data_hash(show_hidden_questions: true)}
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['day_3'], day: 3).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['facilitator'], day: 3).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
       'Day 4' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_4'], day: 4).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 4).map {|x| x.form_data_hash(show_hidden_questions: true)}
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['day_4'], day: 4).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['facilitator'], day: 4).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
       'Day 5' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_5'], day: 5).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 5).map {|x| x.form_data_hash(show_hidden_questions: true)}
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['day_5'], day: 5).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local_summer']['facilitator'], day: 5).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
     }
 
@@ -276,27 +276,27 @@ module Pd::WorkshopSurveyResultsHelper
   def get_questions_for_forms(workshop)
     {
       'Pre Workshop' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_0'], workshop)
+        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_0'], workshop)
       },
       'Day 1' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_1'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_1'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
       },
       'Day 2' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_2'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_2'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
       },
       'Day 3' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_3'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_3'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
       },
       'Day 4' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_4'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_4'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
       },
       'Day 5' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_5'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_5'], workshop),
+        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
       }
     }
   end
