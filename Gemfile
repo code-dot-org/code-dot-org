@@ -217,7 +217,21 @@ gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
-gem 'aws-sdk', '~> 2'
+
+# AWS SDK and associated service APIs.
+gem 'aws-sdk-acm', '~> 1'
+gem 'aws-sdk-cloudformation', '~> 1'
+gem 'aws-sdk-cloudfront', '~> 1'
+gem 'aws-sdk-cloudwatch', '~> 1'
+gem 'aws-sdk-cloudwatchlogs', '~> 1'
+gem 'aws-sdk-core', '~> 3'
+gem 'aws-sdk-dynamodb', '~> 1'
+gem 'aws-sdk-ec2', '~> 1'
+gem 'aws-sdk-firehose', '~> 1'
+gem 'aws-sdk-rds', '~> 1'
+gem 'aws-sdk-route53', '~> 1'
+gem 'aws-sdk-s3', '~> 1'
+gem 'aws-sdk-sqs', '~> 1'
 
 # Lint tools
 group :development, :staging do
@@ -246,7 +260,7 @@ gem 'oj'
 gem 'rest-client', '~> 2.0'
 
 # Generate SSL certificates.
-gem 'acmesmith'
+gem 'acmesmith', '~> 0'
 
 gem 'addressable'
 gem 'bcrypt'
