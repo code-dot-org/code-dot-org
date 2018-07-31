@@ -98,7 +98,7 @@
   "setSpeed": "жылдамдықты орнату",
   "setSpeedTooltip": "Деңгей жылдамдығын орнату",
   "shareFlappyTwitter": "Мен жасаған Flappy ойынын ойнап көріңіз. Мен бұны @codeorg-та жасадым",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "",
   "shareGame": "Ойыныңызбен бөлісіңіз:",
   "soundRandom": "кездейсоқ",
   "soundBounce": "кері серпіліс",

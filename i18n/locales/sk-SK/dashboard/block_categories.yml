@@ -26,10 +26,8 @@ sk:
       everythingelse: všetko ostatné
       numbers: čisla
       Numbers: Čísla
-      Input: Input
       Default: Predvolené
       World: Svet
-      Sprites: Sprites
       Behaviors: Správanie
       Advanced: Pokročilé
       Sprite: Objekt
@@ -38,12 +36,10 @@ sk:
       Movement: Pohyb
       Start: Spustiť
       Groups: Skupiny
-      Booleans: Booleans
       Functional: Funkcie
       Predefined: Preddefinované
       test: test
       test2: test2
-      Foo: Foo
       Name: Meno
       NEW BLOCKS: NOVÉ BLOKY
       'Functions ': 'Funkcie '

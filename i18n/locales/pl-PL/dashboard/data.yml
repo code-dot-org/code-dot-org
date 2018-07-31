@@ -351,7 +351,6 @@ pl:
         C4_unplugged_forloops: Pętle dla (for)
         C4_unplugged_parameters: Pisanie piosenek z parametrami
         C4_unplugged_binary: Binarny
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Kąty w Artyście
         CSF_collector_k1_blocks: 'Podstawy Informatyki: Kolektor'
         CSF_collector_repeat_loops: Kolektor pętli powtórz
@@ -389,52 +388,16 @@ pl:
         csd_external_netflix_data: Jak NetFlix tworzy TV Show i Movie Suggestions?
         csd_external_waze_data: Dlaczego tylu użytkowników ma obsesję na punkcie Waze?
         csd_gamelab_animation_tab: Karta Animacji
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Prędkość
         csd_weblab_intro_1: Wprowadzenie do Web Lab - Część 1
         csd_weblab_intro_2: Wprowadzenie do Web Lab - Część 2
         csd_weblab_css_1: Wprowadzenie do CSS - Część 1
         csd_weblab_css_2: Wprowadzenie do CSS - Część 2
         csd_weblab_intro_3: Wprowadzenie do Web Lab - Część 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Wprowadzenie do Funkcji
         csp_applab_functions_parameters: Funkcje z parametrami
         csp_applab_loops: Pętle
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Trochę o pikselach
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
         csp_pixelation_color_2: Pokoloruj pikselowy gadżet - część 2
         csp_pixelation_color_3: Pokoloruj pikselowy gadżet - część 3
@@ -442,9 +405,6 @@ pl:
         csp_U1L14_tipstricks: Jednostka 1 lekcja 14 Porady & Sztuczki Nauczycieli
         csp_textcompression: Gadżet do kompresji tekstu
         csp_textcompression_new: Gadżet do kompresji tekstu
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: Informatyka w algebrze - wprowadzenie
         alg_2_eval_block: Informatyka w algebrze - bloki ewaluacji
         alg_3_pemdas: Informatyka w algebrze -  kolejność operacji
@@ -519,24 +479,9 @@ pl:
         applab_intro_share: App Lab - Udostępnij Swoją Apkę
         csd_applab_arrays: Wprowadzenie do tablic
         CSF_skinOverview_Harvester: Kombajn
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Pętle z BB-8
         CSF_harvester_skinOverview_K-1: Kombajn
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: Pętle
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
-        CSF_SpriteLabIntro_CDEF: This is Sprite Lab
-        CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
-        CDEF_Video_SpritesInAction: Sprites in Action
-        CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

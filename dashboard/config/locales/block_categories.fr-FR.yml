@@ -30,7 +30,6 @@ fr:
       Input: Entrée
       Default: Par défaut
       World: Monde
-      Sprites: Sprites
       Behaviors: Comportements
       Advanced: Avancé
       Sprite: Lutin
@@ -44,7 +43,6 @@ fr:
       Predefined: Prédéfini
       test: test
       test2: test2
-      Foo: Foo
       Name: Nom
       NEW BLOCKS: NOUVEAUX BLOCS
       'Functions ': 'Fonctions '
