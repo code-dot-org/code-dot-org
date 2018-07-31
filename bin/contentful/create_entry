@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+
+require_relative '../../deployment'
+require 'contentful/management'
+
+unless Dir.pwd =~ %r{pegasus/sites.v3/code.org/public$}
+  raise "must be run from pegasus/sites.v3/code.org/public"
+end
+
+if ARGV.length != 1
+  $stderr.puts "usage: #{$0} <file-to-upload>"
+  exit 1
+end
+
+def main
+  filename = ARGV[0]
+  unless filename =~ /\.md$/
+    $stderr.puts "filename must end with .md"
+    exit 1
+  end
+
+  # strip .md suffix
+  path = "/#{filename[0..-4]}"
+  body = IO.read filename
+
+  upload(body, path)
+end
+
+def upload(body, path)
+  space = client.spaces.find(CDO.contentful_space)
+  pd = space.content_types.find('pegasusDocument')
+  entry = pd.entries.create(
+    path: path,
+    body: body
+  )
+  entry.publish
+end
+
+def client
+  $client ||= Contentful::Management::Client.new(CDO.contentful_management_token)
+end
+
+main
