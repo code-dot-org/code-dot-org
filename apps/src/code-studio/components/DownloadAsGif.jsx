@@ -16,10 +16,10 @@ export default class DownloadAsGif extends React.Component {
     styles: PropTypes.object,
   };
 
-  state = {downloadState: State.initial, percent: 0};
+  state = {statusMessage: State.initial, percent: 0};
 
   prepareGif = () => {
-    this.setState({downloadState: State.capturing});
+    this.setState({statusMessage: State.capturing});
     setTimeout(this.captureGif, 0);
   };
 
@@ -33,13 +33,13 @@ export default class DownloadAsGif extends React.Component {
       gif.addFrame(this.props.getNextFrame(), {copy: true, delay});
     }
 
-    this.setState({downloadState: State.rendering});
+    this.setState({statusMessage: State.rendering});
     setTimeout(() => gif.render(), 0);
   };
 
   finishGif = blob => {
     this.handleProgress.cancel();
-    this.setState({downloadState: State.done});
+    this.setState({statusMessage: State.done});
 
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
@@ -48,18 +48,18 @@ export default class DownloadAsGif extends React.Component {
   };
 
   handleProgress = throttle(percent => {
-    this.setState({downloadState: `${State.rendering} ${Math.round(percent * 100)}%`});
+    this.setState({statusMessage: `${State.rendering} ${Math.round(percent * 100)}%`});
   }, 100);
 
   render() {
-    const disabled = this.state.downloadState !== State.initial;
+    const disabled = this.state.statusMessage !== State.initial;
     return (
       <button
         style={disabled ? this.props.styles.buttonDisabled : this.props.styles.button}
         disabled={disabled}
         onClick={this.prepareGif}
       >
-        {this.state.downloadState}
+        {this.state.statusMessage}
       </button>
     );
   }
