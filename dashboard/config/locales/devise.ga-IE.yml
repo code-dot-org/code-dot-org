@@ -53,7 +53,6 @@ ga:
         an nasc sa teachtaireacht uainn chun do sheoladh ríomhphoist nua a dheimhniú.
       updated: D'éirigh leat do chuntas a nuashonrú.
     sessions:
-      signed_in: ''
       signed_out: Tá tú logáilte amach anois.
     unlocks:
       send_instructions: Gheobhaidh tú ríomhphost ina bhfuil treoracha maidir le díghlasáil

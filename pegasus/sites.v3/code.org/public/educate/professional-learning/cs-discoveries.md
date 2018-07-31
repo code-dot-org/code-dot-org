@@ -19,7 +19,7 @@ The program kicks off with a 5-day summer workshop where you'll have an opportun
 
 This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd). 
 
-**Applications for the 2019-20 will open in January, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
+**Applications for the 2019-20 will open after October, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
 [<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
 

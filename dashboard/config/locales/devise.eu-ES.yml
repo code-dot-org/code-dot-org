@@ -50,7 +50,6 @@ eu:
         baieztapen esteka zure helbide berria baieztatzen bukatzeko.
       updated: Zure kontua ondo eguneratu da.
     sessions:
-      signed_in: ''
       signed_out: Kanpoan zaude.
     unlocks:
       send_instructions: Posta mezu bat jasoko duzu minutu gutxi barru zure kontua

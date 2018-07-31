@@ -2,7 +2,9 @@
 
 require_relative '../../dashboard/config/environment'
 require_relative '../../lib/cdo/only_one'
-require 'aws-sdk'
+require 'aws-sdk-cloudformation'
+require 'aws-sdk-cloudwatch'
+require 'aws-sdk-ec2'
 require 'cdo/chat_client'
 
 StackStatus = Struct.new(

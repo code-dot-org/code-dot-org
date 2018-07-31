@@ -27,10 +27,8 @@ he:
       everythingelse: כלהשאר
       numbers: מספרים
       Numbers: מספרים
-      Input: Input
       Default: ברירת מחדל
       World: עולם
-      Sprites: Sprites
       Behaviors: התנהגויות
       Advanced: מתקדם
       Sprite: מסך
@@ -39,12 +37,10 @@ he:
       Movement: תנועה
       Start: התחל
       Groups: קבוצות
-      Booleans: Booleans
       Functional: תפקוד
       Predefined: מוגדרים מראש
       test: בדיקה
       test2: בדיקה2
-      Foo: Foo
       Name: שם
       NEW BLOCKS: בלוקים חדשים
       'Functions ': 'פונקציות '

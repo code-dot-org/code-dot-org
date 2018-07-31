@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "createSpriteWith",
+    "inline": false,
+    "blockText": "create sprite with:\n{STATEMENT}",
+    "args": [
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ]
+  }
+}

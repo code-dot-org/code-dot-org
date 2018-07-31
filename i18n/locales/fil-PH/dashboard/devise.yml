@@ -39,7 +39,6 @@ fil:
       update_needs_confirmation: "Na update mo ang iyong  account na matagumpay, ngunit kailangan naming i-verify ang iyong bagong email address. Mangyaring tingnan ang iyong email at i-click ang link sa pagkumpirma upang i-finalize ang iyong bagong email address."
       updated: "Ang pag-update mo ang iyong  account ay matagumpay."
     sessions:
-      signed_in: ""
       signed_out: "Matagumpay na-sign out."
     unlocks:
       send_instructions: "Makakatanggap ka ng isang email na may mga tagubilin tungkol sa kung paano i-unlock ang iyong  account sa loob ng ilang minuto."
