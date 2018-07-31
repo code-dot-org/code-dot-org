@@ -30,6 +30,27 @@ export const StudentWarning = () => {
   );
 };
 
+export const getCheckboxes = (dependedUponForLogin, hasStudents) => {
+  let ids = [];
+  if (dependedUponForLogin) {
+    ids = [1,2,3,4,5];
+  } else if (hasStudents) {
+    ids = [1];
+  }
+  return buildCheckboxMap(ids);
+};
+
+const buildCheckboxMap = (checkboxIds) => {
+  let checkboxMap = {};
+  checkboxIds.forEach(id => {
+    checkboxMap[id] = {
+      checked: false,
+      label: getLabelForCheckbox(id)
+    };
+  });
+  return checkboxMap;
+};
+
 export const getLabelForCheckbox = (id) => {
   switch (id) {
     case 1:
