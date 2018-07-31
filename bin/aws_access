@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../deployment'
-require 'aws-sdk'
+require 'aws-sdk-sts'
 
 unless (provider = Aws::CredentialProviderChain.new.current_provider) == :google_credentials
   puts "WARNING: AWS is currently using #{provider}, not google_credentials."
