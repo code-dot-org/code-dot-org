@@ -1,7 +1,6 @@
 require_relative '../../../deployment'
 require 'digest'
 require 'securerandom'
-require 'aws-sdk'
 require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 require 'active_support/core_ext/object/try'
@@ -82,6 +81,7 @@ module AWS
     end
 
     def self.invalidate_caches
+      require 'aws-sdk-cloudfront'
       puts 'Creating CloudFront cache invalidations...'
       cloudfront = Aws::CloudFront::Client.new(
         logger: Logger.new(dashboard_dir('log/cloudfront.log')),

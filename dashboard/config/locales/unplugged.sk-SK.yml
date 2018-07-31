@@ -11,9 +11,6 @@ sk:
           slov, ktoré nasledujú, avšak skúste ich deťom odprezentovať v zábavnej či
           hravej forme, čo je omnoho viac produktívne ako čakanie na pokročilejšie
           možnosti.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Algoritmické myslenie
         desc: Stačia papiere a fixky na to, aby sa študenti naučili štyri kroky algoritmického
@@ -25,9 +22,6 @@ sk:
           pre iný tím, ktorý má nakresliť konkrétnu príšerku. Tímy si navzájom vymenia
           návody a pokúsia sa nakresliť príšerku podľa uvedeného návodu. Je kresba
           tomu, čo si pôvodný tím vybral?
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Programovanie na milimetrovom papieri
         desc: '"Naprogramovaním" jeden druhého, aby kreslili obrázky, študenti začnú
@@ -35,9 +29,6 @@ sk:
           budú navzájom hovoriť inštrukcie ako vyfarbiť štvorčeky na milimetrovom
           papieri za účelom reprodukovania existujúceho obrázka. Ak nemáte dostatok
           času, hodina sa môže skončiť obrázkami, ktoré študenti vytvorili sami.'
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmy
         desc: Táto lekcia zahŕňa algoritmy. Pomocou tangramov a štvorčekového papiera
@@ -45,9 +36,6 @@ sk:
           a jednoznačné. Následne trieda bude skúmať, koľkými možnými spôsobmi môžeme
           zložiť papier do obdĺžnika s tým, že si zaznačia koľko záhybov bolo potrebné
           urobiť, aby sa dostali k cieľu.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Funkcie
         desc: Na tejto hodine si študenti vytvoria hramonickú závesnú dekoráciu z
@@ -60,17 +48,11 @@ sk:
           k im špecifickým materiálom a musia si tak vytvoriť skupinu pojmov pre jednotlivé
           pomôcky. Toto použitie generovaných zístupných symbolov je krásny úvod do
           problematiky premenných.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Podmienky
         desc: Toto je triedna hra. Po predstavení čo sú podmienky, výrazy ak a cykly,
           trieda môže jednotlivé termíny precvičiť využitím predpripraveného programu,
           balíčka kariet a stávkou do lotérie.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Napísanie piesne
         desc: Čítanie textu je pre väčšinu študentov viacmenej intuitívne. Vyberieme
@@ -78,39 +60,24 @@ sk:
           školenie na definovanie a zavolanie funkcií. Keď sa študenti oboznámia s
           procesom definovania/zavolania funkcií, pridáme ďaľšie funkcie zadávania
           parametrov, ktoré idú ruka v ruke s volaniami funkcií.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstrakcia
         desc: Táto aktivita kombinuje každodennú rutinu vašich študentov a Mad-Lib
           herný štýl myslenia, aby pomohlo vašej triede dozvedieť sa o účinnosti abstrakcie.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Štafetové programovanie
         desc: Táto lekcia sa inšpiruje predošlou aktivitou (4. programovanie na štvorčekovom
           papieri) a používa schopnosti z nej pre zdôraznenie dokončenia programov,
           ktoré pracujú v sekvencií a častej kontroly programov pre "chyby".
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: Internet
         desc: V tejto lekcii budú študenti predstierať, že putujú internetom, počas
           čoho sa budú učiť o internetových adresách, protokoloch a DNS.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Zhrnutie
         desc: Konečné zhrnutie prvej 20-hodinovej série pomôže študentov pripomenúť
           si ich obľúbené momenty a zároveň im poskytne návod, ako ďalej pokračovať
           v informatike, ak ich zaujala.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Veselé mapy
         desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
@@ -276,7 +243,6 @@ sk:
           vzorec na vzdialenosť môžu použiť pre zmeranie vzdialenosti medzi dvoma
           bodmi a na rozhodnutie, či sa tieto body (alebo herné postavy) dotýkajú.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: V tejto lekcií sa naučíte niečo o slučkách!
       courseB_unplugged_MRF:
         title: Aktivity bez počítača
@@ -298,7 +264,6 @@ sk:
         title: Aktivity bez počítača
         desc: Dnes sa naučíte, čo robiť, ak je niekto drzý v online svete.
       deeper learning description:
-        title: ''
         desc: 'chýbajúci preklad: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmus z reálneho života: Zasaď semienko'
@@ -451,42 +416,6 @@ sk:
       courseB_unplugged_MRF_2018:
         title: Moji robotickí priatelia
         desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
-      BuildingAFoundation_2018:
-        title: 
-        desc: 
-      courseB_unplugged_loopyMRF_2018:
-        title: 
-        desc: 
-      DiceRace_2018:
-        title: 
-        desc: 
-      courseE_unplugged_privateInformation_2018:
-        title: 
-        desc: 
-      SongwritingParameters_2018:
-        title: 
-        desc: 
-      Internet_2018:
-        title: 
-        desc: 
-      Crowdsourcing_2018:
-        title: 
-        desc: 
-      TangramAlgorithms_2018:
-        title: 
-        desc: 
-      courseF_unplugged_powerOfWords_2018:
-        title: 
-        desc: 
-      EnvelopeVariables_2018:
-        title: 
-        desc: 
-      ForLoopFun_2018:
-        title: 
-        desc: 
-      SongwritingWithParameters_2018:
-        title: 
-        desc: 
       PlantASeed_2018:
         title: 'Algoritmus z reálneho života: Zasaď semienko'
         desc: Táto lekcia ozrejmuje spôsoby, akými používame algoritmy v každodennom
@@ -501,7 +430,6 @@ sk:
         desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
           ako bezpečne surfovať po Internete.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: V tejto lekcií sa naučíte niečo o slučkách!
       BigEvent_2018:
         title: Veľká udalosť
@@ -554,7 +482,6 @@ sk:
           viac ako jedným spôosobom.
       MoveItMoveIt_2018:
         title: Posuň to, Posuň to
-        desc: ''
       courseB_unplugged_CnC_2018:
         title: Je super tvoriť a hrať férovo
         desc: Vďaka tímu z oddelenia Duševných práv a kreativity, ktorý poskytol svoje

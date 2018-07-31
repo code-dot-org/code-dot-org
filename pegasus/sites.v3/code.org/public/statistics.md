@@ -7,23 +7,26 @@ style_min: true
 
 # Code.org Statistics
 
-We're on a mission to give every student the opportunity to learn computer science. And we're off to a great start! 
+We're on a mission to give every student the opportunity to learn computer science.  
 
 ***
 
-## Code.org is reaching teachers
-Over 800,000 teachers are on Code.org. And that's not all - over 70,000 teachers have enrolled in our hands-on professional learning workshops offered locally across the United States.
+## Statistics at a glance
+Code.org partners with researchers on a variety of studies. Want more? [View our in-depth research using Code.org data.](/research) 
+
+### Teachers are taking on computer science
+Over 800,000 teachers have taken steps to bring computer science to their schools. 
 <%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B57&headers=1", width: 1000, height: 500 %>
 Does your local school teach computer science? [Encourage them to start today](/yourschool)!  
 
 <br>
 
-## Hour of Code is a worldwide phenomenom
-Since 2013, the [Hour of Code](https://hourofcode.com) has reached 10% of students globally.
+### The Hour of Code goes global
+With over [200 partners](https://hourofcode.com/partners), since 2013, the [Hour of Code](https://hourofcode.com) has reached 10% of students around the world.
 <%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E57&headers=1", width: 1000, height: 500 %>
 
-## We set big goals for ourselves
-And we're proud of the progress we've seen over the last five years.
+## What we're doing
+Tracking the work of thousands of teachers and millions of students.
 <br>
 <br>
 

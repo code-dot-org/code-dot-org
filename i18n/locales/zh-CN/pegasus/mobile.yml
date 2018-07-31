@@ -203,7 +203,6 @@
   just_did_coursef: "我刚完成了课程F - 来看看吧！ @codeorg"
   just_did_accelerated: "我刚完成加速课程- 来看看！ @codeorg"
   just_did_hoc_donor: '我刚刚参加了#HourOfCode - 来看看吧！（感谢 %{donor_twitter} 支持 @codeorg)'
-  just_did_course_donor: "I just finished %{course} - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。"
   twitter_cs_foundational: "计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。"
   learn_hoc: "学习编程一小时"
@@ -311,7 +310,6 @@
   homepage_banner_link_prizes: '加入史上最大的学习盛会 '
   homepage_banner_text_main: "Code.org和大学理事会是一个以增加电脑科学的多样性的联盟。"
   homepage_banner_text_link: "了解详情"
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "了解详情"
   homepage_banner_20k_teachers: "两万名老师经过训练后，正在课堂上传授计算机科学。"
   homepage_banner_20k_teachers_link: "了解详情"
@@ -319,7 +317,6 @@
   homepage_banner_congress_link: "添加您的支持"
   homepage_banner_emailprivacy: "我们正在对如何支持学生的隐私做一项重要的改进。"
   homepage_banner_emailprivacy_link: "阅读更多"
-  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "了解详情"
   homepage_slot_text_title_hoc: "编程一小时"
   homepage_slot_text_blurb_hoc: "任何人都可学习。立即开始"
@@ -469,7 +466,6 @@
   sports_athlete_Chris: "克里斯 · 波什，奥运会金牌得主和NBA 总冠军，来自迈阿密热火队。"
   sports_athlete_Harrison: "哈里森 · 巴恩斯，奥运金牌得主、NBA 总冠军，来自达拉斯小牛队。"
   watch_inspirational_videos: "在开始之前，看一段鼓舞人心的视频"
-  video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "鼓励女生参与"
   video_title_cs_intro: "计算机科学简介"
   video_title_schools_dont_teach: "大部分学校没有教的内容"
@@ -601,7 +597,6 @@
   dashboard_middle_courses_desc: "在中学数学和理科范围内，我们中学课程使用计算机科学及编程，作为一种工具来教导数学和科学理念。注册开发专业研讨会，申请与 Code.org <a href=\"/educate/districts\"> 建立全区合作伙伴关系</a>。"
   dashboard_high_courses: "为期一年的高中课程"
   dashboard_high_courses_desc: "通过面向现有教学人员提供这一新领域的培训，我们的高中组项目能帮助学区提供全年计算机科学类编写课程。注册开发专业研讨会，申请与 Code.org 的 <a href=\"/educate/districts\"> 全区建立合作伙伴关系</a>。"
-  dashboard_course_csina: "Computer Science in Algebra"
   dashboard_course_csina_desc: "Code.org 与Bootstrap教程合作，开发一套通过计算机编程教授代数和几何概念的课程。"
   dashboard_course_csins: "理科中的计算机科学"
   dashboard_course_csins_desc: "Code.org 与GUTS项目合作交付计算机科学概念导论，范围包括建模与仿真。"
@@ -857,7 +852,6 @@
   starwars_name: '星球大战: 用代码构建一个星系'
   codeorg_name: "经典迷宫"
   codeintl_name: "经典迷宫"
-  thinkersmithspanish_name: "Mis Amigos Roboticos"
   khan_name: "JavaScript 简介"
   khanes_name: "JavaScript 简介"
   khanpt_name: "JavaScript 简介"
@@ -866,13 +860,9 @@
   khanpl_name: "JavaScript 简介"
   tynker_name: "创造你自己的游戏"
   scratch_name: "用编程发挥创意"
-  lightbot_name: "Lightbot"
   thinkersmith_name: "我的机器人朋友"
   condcards_name: "用 扑克牌 的 条件子句"
-  lightbotintl_name: "Lightbot"
   codehs_name: "同小狗卡莱尔一起学编程"
-  codecademy_name: "Codecademy"
-  codecombat_name: "CodeCombat"
   codemonkey_name: "代码猴"
   codeavengers_name: "用JavaScript创建一个游戏"
   processing_name: "用代码来画画"
@@ -886,11 +876,8 @@
   flappy_name: "制作一个Flappy类游戏"
   bitsbox_name: "Bitsbox - 制作游戏"
   makeschool_name: "在您的浏览器中创建一个iPhone游戏！"
-  touchdevelop_name: "TouchDevelop"
   appinventor_name: "应用发明者 编程一小时"
   blockly_name: "模块化"
-  thinkersmith2_name: "Binary Baubles"
-  kodableunplugged_name: "fuzzFamily Frenzy"
   projguts_name: "石头、剪子、布"
   hourofcode_name: "经典迷宫"
   playlab_name: "游戏实验室"
@@ -900,7 +887,6 @@
   allcancode_name: "运行马可！"
   csfirst_name: "计算机科学当先"
   boxisland_name: "盒子岛"
-  codesters_name: "Codesters"
   texasinstruments_name: "编程十分钟"
   teacherled_name: "由老师引导的教案"
   course1_name: "课程 1:"
@@ -944,48 +930,26 @@
   cspunit4_name: "（旧版）第4单元︰ 数据"
   cspunit5_name: "（旧版）第5单元︰ 探索和创建 PT"
   cspunit6_name: 'Post-AP：应用程序中的数据库'
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
   csd5_name: '单元 5︰ 数据和社会'
   csd6_name: '单元 6︰ 物理计算'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
   csd5-2017_name: '单元 5︰ 数据和社会'
   csd6-2017_name: '单元 6︰ 物理计算'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: '单元 5︰ 数据和社会'
   csd6-2018_name: '单元 6︰ 物理计算'
   csp1-2017_name: '第1单元：互联网'
   csp2-2017_name: '第2单元︰ 数字信息'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
   csp-explore-2017_name: 'AP：探索表演任务的准备工作'
   csp-create-2017_name: 'AP：创建表演任务'
   csppostap-2017_name: 'Post AP: App中的数据库'
   csp1-2018_name: '第1单元：互联网'
   csp2-2018_name: '第2单元︰ 数字信息'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
   csp-explore-2018_name: 'AP：探索表演任务的准备工作'
   csp-create-2018_name: 'AP：创建表演任务'
   csppostap-2018_name: 'Post AP: App中的数据库'
   csp1_name: '第1单元：互联网'
   csp2_name: '第2单元︰ 数字信息'
-  csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: '单元 3: 编程介绍 (版本 A)'
   csp3-research-mxghyt_name: '单元 3: 编程介绍 (子目标)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP 性能任务
   csppostap_name: 'Post AP: App中的数据库'
   csp-post-survey_name: 学生课程后调查
@@ -995,7 +959,6 @@
   cspexam1-mWU7ilDYM9_name: 测试部分 1 - 25 个问题
   cspexam2-AKwgAh1ac5_name: 测试部分 2 - 25 个问题
   cspunit3_gradelevel: "9-12年级"
-  cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   20-hour_name: 加速课程
   algebra_name: "代数课程中的计算机科学"
   AlgebraA_name: "计算机代数 课程A"
@@ -1005,10 +968,7 @@
   iceage_name: "冰河世纪"
   minecraft_name: "我的世界"
   starwarsblocks_name: "星球大战(块)"
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: 简单加密
-  text-compression_name: Text Compression
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
   csf_category_name: "计算机科学基本原理"
@@ -1016,13 +976,11 @@
   csf_2018_category_name: "计算机科学基础课程（2018）"
   csf_international_category_name: "计算机基础国际版"
   csf2_draft_category_name: '开发中：课程A - F'
-  csd_category_name: "CS Discoveries ('17-'18)"
   csd_2018_category_name: "计算机科学发现 (' 18-' 19)"
   csp_category_name: "15-16 计算机原理"
   csp17_category_name: "计算机原理('17-'18)"
   csp_2018_category_name: "计算机科学原理 ('18-'19)"
   cspexams_category_name: "计算机原理练习测试"
-  research_studies_category_name: "Research Studies"
   applab_name: "应用实验室"
   gamelab_name: "游戏实验室"
   basketball_name: "进行一场篮球赛"
@@ -1031,7 +989,6 @@
   applab_shortdescription_congrats: "应用实验室是一个可以让你使用简单的应用程序的编程环境。用代码块或 JavaScript来设计应用程序，然后马上分享您的应用程序。"
   codeorg_gradelevel: "适合年龄 4 岁以上"
   codeintl_gradelevel: "适合年龄 4 岁以上"
-  thinkersmithspanish_gradelevel: "Por todos"
   khan_gradelevel: "中学及以上"
   khanes_gradelevel: "中学及以上"
   khanpt_gradelevel: "中学及以上"
@@ -1127,7 +1084,6 @@
   groklearning_platformtext: "现代网络浏览器"
   quorum_platformtext: "支持最新的网页浏览器，屏幕阅读器"
   codespark_platformtext: "iOS，安卓（或网络浏览器）"
-  kodable_platformtext: "iPad"
   tynkerapp_platformtext: "iPad，安卓平板电脑"
   robomindnl_platformtext: "现代的网络浏览器，移动网络"
   flappy_platformtext: "最新的浏览器，智能手机，平板电脑"
@@ -1152,7 +1108,6 @@
   teacherled_platformtext: "最新的浏览器，智能手机，平板电脑"
   codeorg_shortdescription: "与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！"
   codeintl_shortdescription: "与马克 · 扎克伯格和愤怒的小鸟一起学习如何编程 ！"
-  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "学习如何用JavaScript绘画"
   khanes_shortdescription: "学习如何在JavaScript中作画"
   khanpt_shortdescription: "学习如何在JavaScript中作画"
@@ -1223,7 +1178,6 @@
   coursef-2018_shortdescription_congrats: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
   codeorg_longdescription: "通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样的自学教程，并由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。通过学习，会了解到重复，循环，条件和基本算法。"
   codeintl_longdescription: "通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。"
-  thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
   khan_longdescription: "在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！"
   khanes_longdescription: "在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！"
   khanpt_longdescription: "在用代码创造有趣的图画的同时学习基础的JavaScript编程知识。独自完成或者和你的同学一起做！"
@@ -1273,8 +1227,6 @@
   khan_beyond_name: "学习电脑程序设计"
   tynker_beyond_name: "在家学习电脑程序设计"
   scratch_beyond_name: "用编程发挥创意"
-  lightbot_beyond_name: "LightBot"
-  codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "ScratchJR适合学龄前读者"
   hopscotch_beyond_name: 'Hopscotch:在你的 iPad 上设计程式'
@@ -1284,28 +1236,16 @@
   robomind_beyond_name: "给一个虚拟机器人编程"
   makeschool_beyond_name: "在你的浏览器中创建一个iPhone游戏！"
   appinventor_beyond_name: "AppInventor 编程一小时"
-  touchdevelop_beyond_name: "TouchDevelop"
   codehs_beyond_name: "同小狗卡莱尔一起学编程"
   udemy_beyond_name: "在线程序设计课程"
   lynda_beyond_name: "在线编程课程"
   edx_beyond_name: "哈佛大学 CS50 课堂"
   coursera_beyond_name: "斯坦福大学 CS 101 课程"
-  udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "网上大学课程"
-  kodu_beyond_name: "Kodu"
-  cargobot_beyond_name: "Cargobot"
-  kidsruby_beyond_name: "KidsRuby"
   w3schools_beyond_name: "学习 HTML"
   codeavengers_beyond_name: "学习网站程序设计"
-  mozilla_beyond_name: "Webmaker"
-  codecombat_beyond_name: "CodeCombat"
-  codea_beyond_name: "Codea"
-  lego_beyond_name: "Mindstorms"
-  finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduino与Sparkfun"
   processing_beyond_name: "处理过程"
-  alice_beyond_name: "Alice"
-  sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "适合年龄 4 岁以上"
   khan_beyond_gradelevel: "中学及以上"
   tynker_beyond_gradelevel: "适合年龄 5-13"
@@ -1349,9 +1289,6 @@
   scratch_beyond_platformtext: "任何浏览器"
   lightbot_beyond_platformtext: "iOS，Android（或浏览器）"
   codecademy_beyond_platformtext: "现代网络浏览器。iOS，安卓应用程序"
-  kodable_beyond_platformtext: "iPad"
-  scratchjr_beyond_platformtext: "iPad"
-  hopscotch_beyond_platformtext: "iPad"
   pocketcode_beyond_platformtext: "移动应用程序"
   groklearning_beyond_platformtext: "现代网络浏览器"
   hacketyhack_beyond_platformtext: "桌面安装"
@@ -1366,14 +1303,11 @@
   coursera_beyond_platformtext: "现代的浏览器"
   udacity_beyond_platformtext: "现代的浏览器"
   teachingtree_beyond_platformtext: "基于网络的"
-  kodu_beyond_platformtext: "Windows, xBox"
-  cargobot_beyond_platformtext: "iPad"
   kidsruby_beyond_platformtext: "桌面安装"
   w3schools_beyond_platformtext: "现代的网络浏览器"
   codeavengers_beyond_platformtext: "现代的网络浏览器"
   mozilla_beyond_platformtext: "现代的网络浏览器"
   codecombat_beyond_platformtext: "基于网络的 (Firefox，Chrome，Safari，IE9 +)"
-  codea_beyond_platformtext: "iPad"
   lego_beyond_platformtext: "机器人购买"
   finch_beyond_platformtext: "机器人购买"
   arduino_beyond_platformtext: "网络浏览器，然后购买套件"
@@ -1456,14 +1390,7 @@
   sphero_beyond_longdescription: "无论你是教育工作者或者是父母，SPRK课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。"
   compatibility_hide_this_warning: "隐藏此警告"
   compatibility_unsupported_browser: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}', target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。"
-  starwars_shortcode: "star"
-  mc_shortcode: "mc"
-  frozen_shortcode: "frzn"
-  hourofcode_shortcode: "code"
   flappy_shortcode: "拍翅膀"
-  infinity_shortcode: "inf"
-  playlab_shortcode: "lab"
-  artist_shortcode: "art"
   header_home: "首页"
   header_my_dashboard: "我的控制面板"
   header_courses: "课程"
