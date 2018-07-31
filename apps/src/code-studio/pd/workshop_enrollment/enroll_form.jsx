@@ -3,12 +3,12 @@
  */
 import React, {PropTypes} from 'react';
 import {FormGroup, Button, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap';
-import {ButtonList} from '../form_components/ButtonList.jsx';
 import Select from "react-select";
+import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import {STATES} from '../../../geographyConstants';
+import CustomSchoolInfo from '../components/CustomSchoolInfo';
 
 const TEACHING_ROLES = [
   "Classroom Teacher",
@@ -35,18 +35,11 @@ const GRADES_TEACHING = [
   "Grade 9-12"
 ];
 
-const SCHOOL_TYPES = [
-  "Public school",
-  "Private school",
-  "Charter school",
-  "Other"
-];
-
 const OTHER_SCHOOL_VALUE = "-1";
 
 const CSF = "CS Fundamentals";
 
-const ERROR = 'error';
+const ERROR = "error";
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
@@ -282,51 +275,12 @@ export default class EnrollForm extends React.Component {
           </FormGroup>
         }
         {this.state.school_id && this.state.school_id === OTHER_SCHOOL_VALUE &&
-          <FormGroup>
-            <FieldGroup
-              id="school_name"
-              label="School Name"
-              type="text"
-              required={true}
-              onChange={this.handleSchoolInfoChange}
-              validationState={this.state.errors.hasOwnProperty("school_name") ? ERROR : null}
-              errorMessage={this.state.errors.school_name}
-            />
-            <FormGroup
-              id="school_state"
-              validationState={this.state.errors.hasOwnProperty("school_state") ? ERROR : null}
-            >
-              <ControlLabel>School State<span className="form-required-field"> *</span></ControlLabel>
-              <Select
-                value={this.state.school_info ? this.state.school_info.school_state : null}
-                onChange={this.handleSchoolStateChange}
-                options={STATES.map(v => ({value: v, label: v}))}
-                clearable={false}
-              />
-              <HelpBlock>{this.state.errors.school_state}</HelpBlock>
-            </FormGroup>
-            <FieldGroup
-              id="school_zip"
-              label="School Zip Code"
-              type="text"
-              required={true}
-              onChange={this.handleSchoolInfoChange}
-              validationState={this.state.errors.hasOwnProperty("school_zip") ? ERROR : null}
-              errorMessage={this.state.errors.school_zip}
-            />
-            <ButtonList
-              key="school_type"
-              answers={SCHOOL_TYPES}
-              groupName="school_type"
-              label="My school is a"
-              onChange={this.handleSchoolInfoChange}
-              selectedItems={this.state.school_info.school_type}
-              validationState={this.state.errors.hasOwnProperty("school_type") ? ERROR : null}
-              errorText={this.state.errors.school_type}
-              type="radio"
-              required={true}
-            />
-          </FormGroup>
+          <CustomSchoolInfo
+            schoolInfo={this.state.school_info}
+            handleSchoolInfoChange={this.handleSchoolInfoChange}
+            handleSchoolStateChange={this.handleSchoolStateChange}
+            errors={this.state.errors}
+          />
         }
         {this.props.workshop_course === CSF &&
           <FormGroup

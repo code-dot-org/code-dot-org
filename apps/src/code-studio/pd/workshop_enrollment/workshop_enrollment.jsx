@@ -91,6 +91,17 @@ export default class WorkshopEnrollment extends React.Component {
     );
   }
 
+  renderUnknownError() {
+    return (
+      <div>
+        <p>
+          Sorry, an error occurred and we were unable to enroll you in this workshop.
+          Please contact <a href="mailto:support@code.org">support@code.org</a>.
+        </p>
+      </div>
+    );
+  }
+
   renderSuccess() {
     return (
       <div>
@@ -196,6 +207,8 @@ export default class WorkshopEnrollment extends React.Component {
       return this.renderNotFound();
     } else if (this.state.submissionStatus === "success") {
       return this.renderSuccess();
+    } else {
+      return this.renderUnknownError();
     }
   }
 }
