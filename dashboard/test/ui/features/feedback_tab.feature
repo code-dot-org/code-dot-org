@@ -6,13 +6,7 @@ Background:
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
   Then I rotate to landscape
   And I wait to see "#runButton"
-
-  # Submit something.
-  And I press "runButton"
-  And I wait to see "#submitButton"
-  And I press "submitButton"
-  And I wait to see ".modal"
-  And I press "confirm-button" to load a new page
+  And I submit this level
 
 # This scenario will be removed when stable flag is deprecated.
 Scenario: With stable flag, 'Feedback' tab is not visible for students and displays coming soon text to teachers
