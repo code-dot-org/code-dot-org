@@ -78,4 +78,3 @@ export function unpublishProject(projectId) {
     });
   };
 }
-
