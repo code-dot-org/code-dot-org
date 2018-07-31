@@ -5,15 +5,13 @@
 require 'logger'
 
 puts "Booting..."
-require 'aws-sdk'
-Aws.eager_autoload!
 
-require_relative '../../config/environment'
 require 'json'
 require 'pp'
 
 require 'sqs/queue_processor_config'
 require 'sqs/queue_processor'
+require_relative '../../config/environment'
 
 # A manager for starting and stopping a set of queue processors based
 # on a JSON config file.

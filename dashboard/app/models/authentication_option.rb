@@ -29,6 +29,8 @@ class AuthenticationOption < ApplicationRecord
   before_validation :normalize_email, :hash_email,
     :remove_student_cleartext_email, :fill_authentication_id
 
+  after_create :set_primary_contact_info
+
   validate :email_must_be_unique
   validate :hashed_email_must_be_unique
 
@@ -64,6 +66,10 @@ class AuthenticationOption < ApplicationRecord
 
   def fill_authentication_id
     self.authentication_id = hashed_email if EMAIL == credential_type
+  end
+
+  def set_primary_contact_info
+    user.update(primary_contact_info: self) if user.primary_contact_info.nil?
   end
 
   def normalize_email
