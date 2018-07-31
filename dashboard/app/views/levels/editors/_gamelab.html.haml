@@ -107,7 +107,7 @@
   = f.label :start_animations, 'Starting animation list JSON'
   %p
     This should be equivalent to the animation JSON created by the animation tab.
-    <a href="#" onClick="toggleBlock('start_animations_more'); return false">Read more...</a>
+    <a href="#" onClick="$('start_animations_more').toggle(); return false">Read more...</a>
   #start_animations_more{style: 'display: none'}
     %p
       You can generate this by getting the animation tab into the desired state,
@@ -144,14 +144,6 @@
       %li <tt>looping</tt> is true is if the animation plays repeatedly or false if it plays once.
   ~ f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
   #level-start-animations-validation
-
-:javascript
-  window.toggleBlock = function (elementId) {
-    var element = document.getElementById(elementId);
-    if (element) {
-      element.style.display = element.style.display === 'none' ? 'block' : 'none';
-    }
-  };
 
 = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
 

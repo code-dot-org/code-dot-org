@@ -19,6 +19,27 @@
       = f.label 'Name'
       = f.text_field :name
       = f.label 'Config'
+      <a href="#" onClick="$('#custom_blocks_more').toggle(); return false">Show tips...</a>
+      %br/
+      #custom_blocks_more{style: 'display: none'}
+        %p
+          Here is an example.
+        %pre
+          :preserve
+            {
+              "func": "isDestroyed",
+              "inline": true,
+              "args": [{
+                "name": "SPRITE"
+              }],
+              "blockText": "{SPRITE} is destroyed?",
+              "returnType": "Boolean"
+            }
+        %p
+          Some notes:
+        %ul
+          %li <code>returnType</code> and <code>args[].type</code> can be any of 'String', 'Number', 'Image', 'Boolean', 'Function', 'Colour', or 'Array'. If none of those apply, or you don't want to enforce a type, just use 'None'.
+          %li <code>blockText</code> must contain a placeholder for every argument in the <code>args</code> list.
       = f.text_area :config
       = f.label 'Helper Code'
       = f.text_area :helper_code
