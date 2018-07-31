@@ -9119,11 +9119,11 @@ en:
           Nest your blocks three deep, like this:
 
           - repeat 4
-            - repeat 3
-              - repeat 12
-                - get nectar
-              - move forward
-            - turn right
+             - repeat 3
+                - repeat 12
+                    - get nectar
+                - move forward
+             - turn right
       courseD_bee_nestedLoops7_2018_authored_hint:
         courseD_bee_nestedLoops7_a: You will need to repeat `get nectar` inside of another `repeat` that also has the `move forward` block inside of it.
         courseD_bee_nestedLoops7_b: You will need to use all three of the available `repeat` blocks to solve this puzzle.
@@ -9131,11 +9131,11 @@ en:
           Nest your blocks three deep, like this:
 
           - repeat 4
-            - repeat 3
-              - repeat 12
-                - get nectar
-              - move forward
-            - turn right
+             - repeat 3
+                - repeat 12
+                    - get nectar
+                - move forward
+             - turn right
       courseD_bee_nestedLoops8_authored_hint: {}
       courseD_bee_nestedLoops8_2018_authored_hint: {}
       courseD_bee_nestedLoops9_authored_hint: {}
@@ -15083,11 +15083,11 @@ en:
           Nest your blocks three deep, like this:
 
           - repeat 3
-            - repeat 3
-              - move forward
-              - repeat 12
-                - get nectar
-            - turn right
+             - repeat 3
+                - move forward
+                - repeat 12
+                    - get nectar
+             - turn right
       grade4_bee_nestedLoops2a_authored_hint:
         grade4_bee_nestedLoops2a_a: Try using nested `repeat` loops to solve this puzzle.
       grade4_bee_nestedLoops4_authored_hint:

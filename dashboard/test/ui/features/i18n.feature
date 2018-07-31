@@ -139,3 +139,19 @@ Scenario: Toolbox Categories in Arabic (RTL)
   Then element ".blocklyTreeRoot #\\:9" has "ar-SA" text from key "data.block_categories.Text"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
+
+Scenario: English fallback for missing dashboard or pegasus strings in Azerbaijani
+  Given I am on "http://studio.code.org/lang/az-az"
+  And I wait to see ".headerlink"
+  Then element "#header-non-en-projects" contains text "Layihə qalereyası"
+  But element "#header-non-en-courses" contains text "Course Catalog"
+  Given I am on "http://code.org"
+  And I wait to see ".headerlink"
+  Then element "#header-non-en-projects" contains text "Layihə qalereyası"
+  But element "#header-non-en-courses" contains text "Course Catalog"
+
+Scenario: English fallback for missing apps string in Azerbaijani
+  Given I am on "http://studio.code.org/s/sports/stage/1/puzzle/8/lang/az-az"
+  And I wait for the page to fully load
+  Then block "7" contains text "yeni top at"
+  But block "8" contains text "set basketball scene"

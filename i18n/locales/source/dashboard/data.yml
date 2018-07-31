@@ -539,6 +539,7 @@ en:
         CSF_Spritelab_MakeSprite_CDEF: How to Make a Sprite in Sprite Lab
         CDEF_Video_SpritesInAction: Sprites in Action
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
+        CSF_StarWars_ProjectIntro: Intro to Star Wars Project
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

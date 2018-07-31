@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 module RegistrationsControllerTests
@@ -84,12 +83,31 @@ module RegistrationsControllerTests
     test "returns students without personal logins that have no other teachers" do
       student = create :student_in_word_section
       teacher = student.teachers.first
+      another_word_section = create :section, user: teacher, login_type: Section::LOGIN_TYPE_WORD
+      another_word_section.students << student
 
       expected_users = [
         {"id" => student.id, "name" => student.name},
         {"id" => teacher.id, "name" => teacher.name}
       ]
       sign_in teacher
+
+      get '/users/to_destroy'
+      assert_response :success
+      returned_users = JSON.parse(@response.body)
+      assert_equal expected_users, returned_users
+    end
+
+    test "returns students in rostered sections without passwords that have no other teachers" do
+      student = create :student, :unmigrated_google_sso, encrypted_password: nil
+      section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+      section.students << student
+
+      expected_users = [
+        {"id" => student.id, "name" => student.name},
+        {"id" => section.teacher.id, "name" => section.teacher.name}
+      ]
+      sign_in section.teacher
 
       get '/users/to_destroy'
       assert_response :success

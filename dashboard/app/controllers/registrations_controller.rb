@@ -116,6 +116,8 @@ class RegistrationsController < Devise::RegistrationsController
     params_to_pass = params.deep_dup
     # Set provider to nil to mark the account as self-managed
     user_params = params_to_pass[:user].merge!({provider: nil})
+    # User model normalizes and hashes email _after_ validation **rage**
+    user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
     can_update =
@@ -134,7 +136,7 @@ class RegistrationsController < Devise::RegistrationsController
         false
       end
 
-    successfully_updated = can_update && current_user.update(update_params(params_to_pass))
+    successfully_updated = can_update && current_user.update(upgrade_params(params_to_pass))
     has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
     success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
 
@@ -285,14 +287,29 @@ class RegistrationsController < Devise::RegistrationsController
       user.email != params[:user][:email]
     hashed_email_is_changing = params[:user][:hashed_email].present? &&
       user.hashed_email != params[:user][:hashed_email]
+    parent_email_is_changing = params[:user][:parent_email].present? &&
+      user.parent_email != params[:user][:parent_email]
     new_email_matches_hashed_email = email_is_changing &&
       User.hash_email(params[:user][:email]) == user.hashed_email
     (email_is_changing && !new_email_matches_hashed_email) ||
       hashed_email_is_changing ||
+      parent_email_is_changing ||
       params[:user][:password].present?
   end
 
-  # Accept only whitelisted params for update.
+  # Accept only whitelisted params for update and upgrade.
+  def upgrade_params(params)
+    params.require(:user).permit(
+      :username,
+      :parent_email,
+      :email,
+      :hashed_email,
+      :password,
+      :password_confirmation,
+      :provider
+    )
+  end
+
   def update_params(params)
     params.require(:user).permit(
       :parent_email,
@@ -362,7 +379,7 @@ class RegistrationsController < Devise::RegistrationsController
   def get_users_to_destroy(user)
     users = []
     if user.teacher?
-      user.students.each do |student|
+      user.students.uniq.each do |student|
         if student.depends_on_teacher_for_login?
           users << {id: student.id, name: student.name}
         end

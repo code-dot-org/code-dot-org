@@ -3503,8 +3503,8 @@ en:
       courseB_collector_loops6_2018_instruction: Figure out the code to help Laurel get all of the treasure!
       courseB_collector_loops7_instruction: Write the code to get all of this treasure.
       courseB_collector_loops7_2018_instruction: Write the code to get all of this treasure.
-      courseB_collector_loops8_instruction: "**Challenge: ** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all."
-      courseB_collector_loops8_2018_instruction: "**Challenge: ** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all."
+      courseB_collector_loops8_instruction: "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all."
+      courseB_collector_loops8_2018_instruction: "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all."
       courseB_collector_loops9_instruction: '*"Help me get the treasure from this deep valley."*'
       courseB_collector_loops9_2018_instruction: '*"Help me get the treasure from this deep valley."*'
       courseB_collector_loops_challenge1_instruction: 'This time you have limited blocks. Get all of the treasure! '
@@ -3649,7 +3649,7 @@ en:
 
         Play the game and move Waddles with the arrows until you score enough points.
       courseC_artist_loop1_instruction: Let's add some pizazz!
-      courseC_artist_loop1_2018_instruction: Let's add some pizazz!
+      courseC_artist_loop1_2018_instruction: Let's add some pizazz with a `set pattern` block.
       courseC_artist_loops1_instruction: "*\"Zombie.  Draw!\"*\n\nThe zombie wants to draw a line from where he is to the garden of sunflowers.  Can you help him?  \n*(The garden is 250 pixels away)*  "
       courseC_artist_loops1a_instruction: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
       courseC_artist_loops1a_2018_instruction: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
@@ -4873,7 +4873,7 @@ en:
       grade1_adventurer_loops4_instruction: 'Add to the code from the last puzzle to get all of the gold. '
       grade1_adventurer_loops5_instruction: What should you add to this code to get all of the gold?
       grade1_adventurer_loops6_instruction: Write the code to get all of this gold.
-      grade1_adventurer_loops7_challenge_instruction: "**Challenge: ** The gold goes all the way down these stairs!  Write the code to help me get it all."
+      grade1_adventurer_loops7_challenge_instruction: "**Challenge:** The gold goes all the way down these stairs!  Write the code to help me get it all."
       grade1_adventurer_loops8_challenge_instruction: 'Challenge: Try this staircase now! It has an extra spike at the end you''ll have to climb.'
       grade1_adventurer_loops9_instruction: Help me get the gold from this deep valley.
       grade1_adventurer_loopsFP_instruction: Eureka!  Collect as much gold as you can!

@@ -53,6 +53,7 @@ namespace :seed do
     'csp-create-2018',
     'csppostap-2018',
     'events',
+    'express-2017',
     'flappy',
     'frozen',
     'hero',
@@ -100,6 +101,7 @@ namespace :seed do
     :dsls,
     :blocks,
     :shared_blockly_functions,
+    :libraries,
   ].freeze
 
   task scripts: SCRIPTS_DEPENDENCIES do
