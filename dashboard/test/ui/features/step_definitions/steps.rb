@@ -898,16 +898,7 @@ def generate_user(name)
   return email, password
 end
 
-def generate_teacher_student(name, teacher_authorized)
-  email, password = generate_user(name)
-
-  steps %Q{
-    Given I create a teacher named "Teacher_#{name}"
-  }
-
-  # enroll in a plc course as a way of becoming an authorized teacher
-  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
-
+def create_section_and_join_as_student(name, email, password)
   individual_steps %Q{
     Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
@@ -925,6 +916,54 @@ def generate_teacher_student(name, teacher_authorized)
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+def generate_teacher_student(name, teacher_authorized)
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "Teacher_#{name}"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
+
+  create_section_and_join_as_student(name, email, password)
+end
+
+def generate_two_teachers_per_student(name, teacher_authorized)
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "First_Teacher"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["First_Teacher"][:email]) if teacher_authorized
+
+  create_section_and_join_as_student(name, email, password)
+
+  steps %Q{
+    Given I create a teacher named "Second_Teacher"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Second_Teacher"][:email]) if teacher_authorized
+
+  individual_steps %Q{
+    Then I am on "http://studio.code.org/home"
+    And I dismiss the language selector
+
+    Then I see the section set up box
+    And I create a new section
+    And I save the section url
+  }
+  individual_steps %Q{
+    Then I sign out
+    And I sign in as "#{name}"
+    And I am on "#{@section_url}"
     And I wait until I am on "http://studio.code.org/home"
   }
 end
@@ -981,6 +1020,10 @@ end
 
 And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   generate_teacher_student(name, false)
+end
+
+And(/^I create two teachers associated with a student named "([^"]*)"$/) do |name|
+  generate_two_teachers_per_student(name, false)
 end
 
 And(/^I create an authorized teacher-associated student named "([^"]*)"$/) do |name|
