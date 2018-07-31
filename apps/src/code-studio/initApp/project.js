@@ -251,6 +251,22 @@ var projects = module.exports = {
     return currentSourceVersionId;
   },
 
+  disableAutoContentModeration() {
+    return new Promise((resolve, reject) => {
+      channels.update(`${this.getCurrentId()}/disable-content-moderation`, null, (err) => {
+        err ? reject(err) : resolve();
+      });
+    });
+  },
+
+  enableAutoContentModeration() {
+    return new Promise((resolve, reject) => {
+      channels.update(`${this.getCurrentId()}/enable-content-moderation`, null, (err) => {
+        err ? reject(err) : resolve();
+      });
+    });
+  },
+
   /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */

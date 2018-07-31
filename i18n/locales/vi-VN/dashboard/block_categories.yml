@@ -26,10 +26,8 @@ vi:
       everythingelse: thứ khác
       numbers: các con số
       Numbers: Các con số
-      Input: Input
       Default: Mặc định
       World: Thế giới
-      Sprites: Sprites
       Behaviors: Hành vi
       Advanced: Nâng cao
       Sprite: Ma
@@ -43,7 +41,6 @@ vi:
       Predefined: Xác định trước
       test: kiểm thử
       test2: bàikiểmtra2
-      Foo: Foo
       Name: Tên
       NEW BLOCKS: NHỮNG KHỐI MỚI
       'Functions ': 'Chức năng '

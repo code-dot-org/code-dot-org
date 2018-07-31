@@ -220,27 +220,8 @@ module Pd::WorkshopSurveyResultsHelper
             end
           else
             if response_section == :facilitator
-              # For facilitator specific responses, keep track of both a sum total of all
-              # responses, and the number of responses for that facilitator. Then divide
-              # sum by responses to get the average for that facilitator.
-              facilitator_response_sums = {}
-
-              surveys_for_session[:facilitator].each do |survey|
-                survey[q_key].each do |facilitator, answer|
-                  if facilitator_response_sums[facilitator].nil?
-                    facilitator_response_sums[facilitator] = {responses: 0, sum: 0}
-                  end
-                  facilitator_response_sums[facilitator][:responses] += 1
-                  facilitator_response_sums[facilitator][:sum] += answer
-                end
-              end
-
-              facilitator_response_averages = {}
-
-              facilitator_response_sums.each do |facilitator_id, response_sums|
-                facilitator_response_averages[facilitator_id] = (response_sums[:sum] / response_sums[:responses].to_f).round(2)
-              end
-              session_summary[:facilitator][q_key] = facilitator_response_averages.transform_keys {|k| facilitator_map[k]}
+              # Facilitator specific multiple choice answers are not currently supported
+              next
             else
               # For non facilitator specific responses, just return a frequency map with
               # nulls removed
@@ -261,27 +242,27 @@ module Pd::WorkshopSurveyResultsHelper
   def get_surveys_for_workshops(workshop)
     responses = {
       'Pre Workshop' => {
-        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, day: 0).map(&:form_data_hash)
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, day: 0).map(&:form_data_hash)
       },
       'Day 1' => {
-        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_1'], day: 1).map(&:form_data_hash),
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_1'], day: 1).map(&:form_data_hash),
         facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 1).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
       'Day 2' => {
-        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_2'], day: 2).map(&:form_data_hash),
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_2'], day: 2).map(&:form_data_hash),
         facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 2).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
       'Day 3' => {
-        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_3'], day: 3).map(&:form_data_hash),
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_3'], day: 3).map(&:form_data_hash),
         facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 3).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
       'Day 4' => {
-        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_4'], day: 4).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 4).map {|x| x.form_data_hash(show_hidden_questions: true)}
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_4'], day: 4).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 4).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
       'Day 5' => {
-        general: Pd::WorkshopDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_5'], day: 5).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 5).map {|x| x.form_data_hash(show_hidden_questions: true)}
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_5'], day: 5).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 5).map {|x| x.form_data_hash(show_hidden_questions: true)}
       },
     }
 

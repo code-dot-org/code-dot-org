@@ -160,7 +160,6 @@ pt-BR:
       move: mova
       function 1: função 1
       function 2: função 2
-      turn corner: virar esquina
       destroy and move: destruir e mover
       clear path: limpar o caminho
       clear cacti: retirar cactos
@@ -173,6 +172,7 @@ pt-BR:
       fix right corner: consertar canto superior direito
       fix left corner: consertar canto superior esquerdo
       make segment: fazer segmento
+      turn corner: virar esquina
       fix long path: consertar caminho longo
       fix short path: consertar caminho curto
       place 3 tracks: colocar 3 faixas
@@ -224,7 +224,7 @@ pt-BR:
       booster: impulsionador
       draw line of triangles: desenhar fila de triângulos
       draw a window: desenhar uma janela
-      stop_everything: stop_everything
+      stop_everything: parar_tudo
       draw a plane of squares: desenhar um plano de quadrados
       draw hexagon: desenhar um hexágono
       draw line of hexagons: desenhar fila de hexágonos

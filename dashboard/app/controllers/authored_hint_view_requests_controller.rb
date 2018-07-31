@@ -34,8 +34,8 @@ class AuthoredHintViewRequestsController < ApplicationController
     hints.each do |hint|
       # Add :user.
       hint[:user] = current_user
-      # Convert camelCase strings to snake_case symbols.
-      hint.transform_keys! {|key| key.underscore.to_sym}
+      # Convert camelCase to snake_case.
+      hint.transform_keys!(&:underscore)
     end
 
     objects = AuthoredHintViewRequest.create(hints)

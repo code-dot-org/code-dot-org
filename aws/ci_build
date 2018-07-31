@@ -34,6 +34,7 @@ require 'cdo/test_server_status'
 require 'cdo/only_one'
 require 'cdo/metrics_helper'
 require 'dynamic_config/dcdo'
+require 'aws-sdk-cloudwatch'
 
 STARTED = 'build-started'.freeze
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
@@ -105,11 +106,9 @@ def main
   # Run the build command and exit if it didn't do anything.
   status = 0
   log = RakeUtils.capture do
-    begin
-      status = build
-    rescue => e
-      status = "Error: #{e.message}\n#{CDO.backtrace e}"
-    end
+    status = build
+  rescue => e
+    status = "Error: #{e.message}\n#{CDO.backtrace e}"
   end
   return status if status == 0 && log.empty?
 

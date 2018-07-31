@@ -37,7 +37,6 @@ es:
   previous_page: Página anterior
   next_page: Siguiente pagina
   next_resource: Siguiente recurso
-  done_with_module: Done with this Learning Module
   cancel: "Cancelar"
   okay: "De acuerdo"
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
@@ -257,7 +256,6 @@ es:
       free_play:
         playlab: 'Hacer una aplicación para el laboratorio de juegos'
         artist: 'Dibuja Algo'
-        calculate: 'Calculate something'
         applab: 'Hacer una aplicación para el Laboratorio de Aplicaciones'
         gamelab: 'Hacer un proyecto de laboratorio de Juegos'
         weblab: 'Hacer un proyecto de laboratorio de Juegos (beta)'
@@ -601,7 +599,6 @@ es:
       body: "Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
     hero:
       title: "Minecraft"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Спорт"
       body: "Crea un partido de baloncesto o una mezcla de otros deportes."
@@ -650,15 +647,11 @@ es:
     wrong_body: "La respuesta no es correcta. ¡Inténtalo de nuevo!"
     correct_title: "Correcto"
     correct_body: "Esta respuesta es la correcta."
-    toofew_title: "Too few answers."
-    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "Gracias"
     wrong_body: "Gracias por enviarnos su respuesta."
     correct_title: "Gracias"
     correct_body: "Gracias por enviarnos su respuesta."
-    toofew_title: "Too few answers."
-    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "Gracias"
     wrong_body: "Gracias por enviarnos su respuesta"
@@ -844,22 +837,12 @@ es:
     instructor_feedback: 'Retroalimentación del instructor'
     peer_feedback: 'Retroalimentación de los compañeros'
     outdated: 'Esta retroalimientación se añadió para una versión previamente presentada'
-    review_in_progress: 'Ready to review'
-    link_to_submitted_review: 'Link to submitted review'
-    reviews_unavailable: 'Reviews unavailable at this time'
-    review_count: 'You must complete %{review_count} reviews for this unit'
-    must_be_enrolled: 'You must be enrolled in this course to review peers'
-    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
-    review_submitted: 'Your peer review was submitted'
-    review_new_submission: 'Review a new submission'
   flex_category:
     required: 'Vista previa'
     content: 'Contenido'
     practice: 'El profesor practica'
     peer_review: 'Revisión por pares'
     ramp_up: 'Avanzar'
-    end_of_course_project: 'End of Course Project'
-    optional_stages: 'Optional Stages'
     main_course: 'Curso principal'
     extra_course_content: 'Contenido adicional del curso'
     csf_e_1: 'Aavnzar al Curso E (Opcional)'
@@ -896,7 +879,6 @@ es:
     csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
     csp2_1_2018: 'Unidad 2: Información Digital'
     csp3_1_2018: 'Unidad 3: Introducción a la Programación'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: 'Preguntas para Reflexionar'
   external_links:
     disclaimer: Descargo de responsabilidad
@@ -956,15 +938,6 @@ es:
     download_in_Vietnamese: 'Descargar en vietnamita:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
-  plc:
-    preview_assignments:
-      content_focus_header: 'Content Focus Area'
-      practice_focus_header: 'Practice Focus Area'
-      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
-      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
-      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
-      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
-      confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Los contenidos de esta etapa no son visibles ya que se encuentra actualmente bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar en ella o para revisar tus respuestas.'
   hidden_stage: "Tu maestro no espera que estés aquí. Por favor pregúntale a tu maestro en cual lección deberías estar."
   hidden_script: "Tu maestro no esparaba que estuvieras aquí. Por favor pregúntale a tu maestro en cual unidad deberías estar."
@@ -972,34 +945,34 @@ es:
   return_course_overview: 'Ir al resumen de la unidad'
   view_all_units: 'Ver todas las unidades'
   pd:
-    survey:
-      number_teachers: 'Number of attending teachers'
-      response_count: 'Number of survey responses'
-      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
-      teacher_engagement: 'Teacher Engagement (out of 5)'
-      overall_success: 'Overall Success Score (out of 6)'
-      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
-      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
-      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
-      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
-      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
-      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
-      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
-      how_much_participated_s: 'During your workshop, how much did you participate?'
-      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
-      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
-      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
-      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
-      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
-      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
-      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
-      would_recommend_s: 'I would recommend this professional development to others.'
-      part_of_community_s: 'I feel like I am a part of a community of teachers.'
-      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
-      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
-      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
-      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
-      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+    form_labels:
+      email: 'Correo electrónico'
+      school_name: 'Nombre de la escuela'
+      school_city: 'Ciudad de la escuela'
+      school_country: 'País de escuela'
+    form_entries:
+      gender:
+        male: 'Varón'
+        female: 'Mujer'
+        non_binary: 'No binario'
+        not_listed: 'Término preferido no listado'
+        none: 'Prefiero no contestar'
+      subjects:
+        cs: 'Ciencias de la computación'
+        math: 'Matemáticas'
+        science: 'Ciencia'
+        la: 'Lengua'
+      resources:
+        kodable: 'Kodable'
+        lightbot: 'Lightbot'
+      robotics:
+        kodable: 'Kodable'
+      workshop_course:
+        csd: 'Descubrimientos de la informática'
+        csp: '''16-''17 Principios de CS'
+      email_opt_in:
+        opt_in_yes: 'Sí'
+        opt_in_no: 'No'
   courses_category: 'Cursos Completos'
   cookie_banner:
     message: 'Si continúas navegando en nuestro sitio web o haces clic en "Acepto", aceptas que se almacenes cookies en tu ordenador o dispositivo.'

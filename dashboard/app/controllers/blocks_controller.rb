@@ -3,6 +3,7 @@ class BlocksController < ApplicationController
   load_and_authorize_resource find_by: :name
 
   def new
+    @block.pool = params[:pool]
     render 'edit'
   end
 
@@ -35,6 +36,6 @@ class BlocksController < ApplicationController
   end
 
   def update_params
-    params['block'].permit(:name, :level_type, :category, :config, :helper_code)
+    params['block'].permit(:name, :pool, :category, :config, :helper_code)
   end
 end

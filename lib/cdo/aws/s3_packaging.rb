@@ -1,5 +1,5 @@
 require 'active_support/core_ext/string' # Get String#underscore
-require 'aws-sdk'
+require 'aws-sdk-s3'
 require 'logger'
 
 #
@@ -171,11 +171,9 @@ class S3Packaging
       # https://github.com/aws/aws-sdk-ruby/issues/1149
       url = Aws::S3::Bucket.new(BUCKET_NAME).object(s3_key).public_url
       File.open(package, 'wb') do |file|
-        begin
-          IO.copy_stream open(url), file
-        rescue OpenURI::HTTPError
-          raise Aws::S3::Errors::NoSuchKey.new(nil, file)
-        end
+        IO.copy_stream open(url), file
+      rescue OpenURI::HTTPError
+        raise Aws::S3::Errors::NoSuchKey.new(nil, file)
       end
     end
     @logger.info "Downloaded"

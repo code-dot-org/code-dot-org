@@ -52,7 +52,6 @@ et:
         vajuta kinnituslinki, et meili uuendamine lõpule viia.
       updated: Kasutajakonto andmed edukalt uuendatud.
     sessions:
-      signed_in: ''
       signed_out: Väljalogimine õnnestus.
     unlocks:
       send_instructions: Mõne minuti jooksul saadetakse sulle meil juhistega, kuidas

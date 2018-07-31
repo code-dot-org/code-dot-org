@@ -188,11 +188,6 @@ Rails/Output:
 Rails/OutputSafety:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Rails/Presence:
-  Enabled: false
-
 # Offense count: 24
 # Cop supports --auto-correct.
 # Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.
@@ -299,11 +294,6 @@ Style/MultilineTernaryOperator:
 # Offense count: 120
 # Cop supports --auto-correct.
 Style/MutableConstant:
-  Enabled: false
-
-# Offense count: 36
-# Cop supports --auto-correct.
-Style/RedundantBegin:
   Enabled: false
 
 # Offense count: 52

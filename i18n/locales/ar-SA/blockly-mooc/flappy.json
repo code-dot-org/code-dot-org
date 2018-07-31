@@ -98,7 +98,7 @@
   "setSpeed": "تعيين السرعة",
   "setSpeedTooltip": "تعيين سرعة المستوى",
   "shareFlappyTwitter": "هل تريد تجربة لعبة فلابي التي قمت بتصميمها؟ لقد كتبتها بنفسي باستخدام @codeorg",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "",
   "shareGame": "شارك لعبتك:",
   "soundRandom": "عشوائي",
   "soundBounce": "ارتداد",

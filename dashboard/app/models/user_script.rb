@@ -11,6 +11,7 @@
 #  last_progress_at :datetime
 #  created_at       :datetime
 #  updated_at       :datetime
+#  properties       :text(65535)
 #
 # Indexes
 #
@@ -19,8 +20,16 @@
 #
 
 class UserScript < ActiveRecord::Base
+  include SerializedProperties
+
   belongs_to :user
   belongs_to :script
+
+  validates_presence_of :user, :script
+
+  serialized_attrs %w(
+    version_warning_dismissed
+  )
 
   def script
     Script.get_from_cache(script_id)

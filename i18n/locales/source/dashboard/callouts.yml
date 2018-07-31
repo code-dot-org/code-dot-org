@@ -171,6 +171,7 @@ en:
       CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro predict_2018_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: {}
       CSD U3 Sprites intro sprites_2018_callout: {}
       CSD U3 Sprites scene challenge_callout: {}
       CSD U3 Sprites scene challenge_2018_callout: {}
@@ -1030,7 +1031,7 @@ en:
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog1_2018_callout:
-        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them in another lesson.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog7_2018_callout:

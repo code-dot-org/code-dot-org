@@ -4,9 +4,6 @@ fi:
     course:
       name:
         csp-2017:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('17-'18)
-          version_title: "'17-'18"
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP®
             kurssin, AP Tietojenkäsittelyn periaatteet. Kurssi tutustuttaa opiskelijat
             perustavanlatuisten tietojenkäsittelyopin käsitteisiin ja haastaa tutkimaan,
@@ -24,38 +21,7 @@ fi:
             ovat perinteisesti aliedustettuina välttämätömillä tietojenkäsittelytieteiden
             työkaluilla ja monialaisilla mahdollisuuksilla.
           description_short: Opi perustavanlaatuisia teitojenkäsittelytieteiden käsitteitä.
-        csd-2017:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries ('17-'18)
-          version_title: "'17-'18"
-          description_student: Computer Science Discoveries (CS Discoveries) is an
-            introductory computer science course that empowers students to create
-            authentic artifacts and engage with computer science as a medium for creativity,
-            communication, problem solving, and fun.
-          description_teacher: Computer Science Discoveries (CS Discoveries) is an
-            introductory computer science course that empowers students to create
-            authentic artifacts and engage with computer science as a medium for creativity,
-            communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers
-            students to create authentic artifacts.
-        allthethingscourse:
-          title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer
-            description for students
-          description_teacher: This is a course for allthethings and has a longer
-            description for teachers
-        csd-2018:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries 2018
-          version_title: "'18-'19"
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
         csp-2018:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('18-'19)
-          version_title: "'18-'19"
           description_short: Opi perustavanlaatuisia teitojenkäsittelytieteiden käsitteitä.
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP®
             kurssin, AP Tietojenkäsittelyn periaatteet. Kurssi tutustuttaa opiskelijat

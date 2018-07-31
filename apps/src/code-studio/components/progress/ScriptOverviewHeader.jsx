@@ -9,6 +9,7 @@ import ScriptAnnouncements from './ScriptAnnouncements';
 import { announcementShape } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -24,8 +25,16 @@ const styles = {
   title: {
     display: 'inline-block',
   },
+  versionWrapper: {
+    display: 'flex',
+    alignItems: 'baseline',
+  },
+  versionLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 15,
+    color: color.charcoal,
+  },
   versionDropdown: {
-    display: 'inline-block',
     marginBottom: 13,
   },
   description: {
@@ -48,6 +57,7 @@ class ScriptOverviewHeader extends Component {
       courseViewPath: PropTypes.string.isRequired,
     }),
     announcements: PropTypes.arrayOf(announcementShape),
+    scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
     scriptDescription: PropTypes.string.isRequired,
@@ -74,6 +84,18 @@ class ScriptOverviewHeader extends Component {
     if (scriptName !== this.props.scriptName) {
       window.location.href = `/s/${scriptName}`;
     }
+  };
+
+  onDismissVersionWarning = () => {
+    // Fire and forget. If this fails, we'll have another chance to
+    // succeed the next time the warning is dismissed.
+    $.ajax({
+      method: 'PATCH',
+      url: `/api/v1/user_scripts/${this.props.scriptId}`,
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({version_warning_dismissed: true}),
+    });
   };
 
   render() {
@@ -131,6 +153,7 @@ class ScriptOverviewHeader extends Component {
             details={versionWarningDetails}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
+            onDismiss={this.onDismissVersionWarning}
           />
         }
         <div id="lesson">
@@ -144,18 +167,21 @@ class ScriptOverviewHeader extends Component {
                 }
               </h1>
               {versions.length > 1 &&
-                <select
-                  onChange={this.onChangeVersion}
-                  value={scriptName}
-                  style={styles.versionDropdown}
-                  id="version-selector"
-                >
-                  {versions.map(version => (
-                    <option key={version.name} value={version.name}>
-                      {version.version_year}
-                    </option>
-                  ))}
-                </select>
+                <span style={styles.versionWrapper}>
+                  <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
+                  <select
+                    onChange={this.onChangeVersion}
+                    value={scriptName}
+                    style={styles.versionDropdown}
+                    id="version-selector"
+                  >
+                    {versions.map(version => (
+                      <option key={version.name} value={version.name}>
+                        {version.version_year}
+                      </option>
+                    ))}
+                  </select>
+                </span>
               }
             </div>
             <p style={styles.description}>
@@ -176,6 +202,7 @@ export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
   announcements: state.scriptAnnouncements || [],
+  scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,

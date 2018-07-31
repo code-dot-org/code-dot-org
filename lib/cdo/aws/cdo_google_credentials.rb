@@ -2,6 +2,12 @@ require_relative './google_credentials'
 
 module Cdo
   module CdoCredentialProvider
+    def current_provider
+      providers.find do |method_name, options|
+        send(method_name, options.merge(config: @config))&.set?
+      end.first
+    end
+
     def google_credentials(options)
       if CDO.aws_role &&
         CDO.google_client_id &&
