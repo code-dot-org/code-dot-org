@@ -10,11 +10,11 @@ require_relative '../../utils/selenium_constants'
 # See http://support.applitools.com/customer/en/portal/articles/2099488-match-timeout
 MATCH_TIMEOUT = 5
 
-When(/^I open my eyes to test "([^"]*)"( in test environment only)?$/) do |test_name, test_environment_only|
-  # Temporarily disable Eyes in CircleCI environments for tests that specify " in test environment only" because
-  # they generate different checkpoint images in the dedicated test environment vs in CircleCI builds.
+When(/^I open my eyes to test "([^"]*)"( except in circle)?$/) do |test_name, except_in_circle|
+  # Temporarily disable Eyes in CircleCI environments for tests that specify " except in circle" because
+  # they generate different checkpoint images in the dedicated test server vs in CircleCI builds.
   # TODO: (suresh) remove the optional environment argument when there are no more tests using this option.
-  next if CDO.disable_all_eyes_running || (test_environment_only && ENV['IS_CIRCLE'] == 'true')
+  next if CDO.disable_all_eyes_running || (except_in_circle && ENV['IS_CIRCLE'] == 'true')
   ensure_eyes_available
 
   batch = Applitools::BatchInfo.new(ENV['BATCH_NAME'])
@@ -44,11 +44,11 @@ When(/^I open my eyes to test "([^"]*)"( in test environment only)?$/) do |test_
   @eyes.open(config)
 end
 
-And(/^I close my eyes( in test environment only)?$/) do |test_environment_only|
-  # Temporarily disable Eyes in CircleCI environments for tests that specify " in test environment only" because
-  # they generate different checkpoint images in the dedicated test environment vs in CircleCI builds.
+And(/^I close my eyes( except in circle)?$/) do |except_in_circle|
+  # Temporarily disable Eyes in CircleCI environments for tests that specify " except in circle" because
+  # they generate different checkpoint images in the dedicated test server vs in CircleCI builds.
   # TODO: (suresh) remove the optional environment argument when there are no more tests using this option.
-  next if CDO.disable_all_eyes_running || (test_environment_only && ENV['IS_CIRCLE'] == 'true')
+  next if CDO.disable_all_eyes_running || (except_in_circle && ENV['IS_CIRCLE'] == 'true')
 
   @browser = @original_browser
   fail_on_mismatch = !CDO.ignore_eyes_mismatches
@@ -59,11 +59,11 @@ And(/^I close my eyes( in test environment only)?$/) do |test_environment_only|
   end
 end
 
-And(/^I see no difference for "([^"]*)"( in test environment only)?$/) do |identifier, test_environment_only|
-  # Temporarily disable Eyes in CircleCI environments for tests that specify " in test environment only" because
-  # they generate different checkpoint images in the dedicated test environment vs in CircleCI builds.
+And(/^I see no difference for "([^"]*)"( except in circle)?$/) do |identifier, except_in_circle|
+  # Temporarily disable Eyes in CircleCI environments for tests that specify " except in circle" because
+  # they generate different checkpoint images in the dedicated test server vs in CircleCI builds.
   # TODO: (suresh) remove the optional environment argument when there are no more tests using this option.
-  next if CDO.disable_all_eyes_running || (test_environment_only && ENV['IS_CIRCLE'] == 'true')
+  next if CDO.disable_all_eyes_running || (except_in_circle && ENV['IS_CIRCLE'] == 'true')
 
   @eyes.check_window(identifier, MATCH_TIMEOUT)
 end
