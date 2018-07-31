@@ -11,3 +11,4 @@ milestone-cache_v2.json
 /.sass-cache
 /cloudfront_aliases*.json
 mysql-status-cache.json
+i18n/cache
