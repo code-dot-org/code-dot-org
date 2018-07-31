@@ -305,6 +305,21 @@ class Documents < Sinatra::Base
       request.user_id
     end
 
+    def parse_yaml_header_from_content(content)
+      match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
+      return [{}, content] unless match
+
+      yaml = erb(match[:yaml])
+      header = YAML.load(yaml) || {}
+      raise "YAML header error: expected Hash, not #{header.class}" unless header.is_a?(Hash)
+      remaining_content = match.post_match
+      [header, remaining_content]
+    rescue => e
+      # Append rendered header to error message.
+      e.message << "\n#{yaml}" if yaml
+      raise
+    end
+
     def parse_yaml_header(path)
       content = IO.read path
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
@@ -345,12 +360,16 @@ class Documents < Sinatra::Base
       client = is_preview ? contentful_preview_client : contentful_client
       entries = client.entries(content_type: 'pegasusDocument')
       pass unless entry = entries.find {|e| e.fields[:path] == path}
-      content = entry.fields[:body]
-      headers = entry.fields[:headers]&.stringify_keys
-      @header.merge!(headers) if headers
+      entry_body = entry.fields[:body]
+      header, content = parse_yaml_header_from_content(entry_body)
+      @header.merge!(header)
+
+      headers_from_json = entry.fields[:headers]&.stringify_keys || {}
+      @header.merge!(headers_from_json)
+
       @header['social'] = social_metadata
       response.headers['X-Pegasus-Version'] = '3'
-      render_(content, '.md', path)
+      render_(content, '.md')
     end
 
     def document(path)
