@@ -14,8 +14,16 @@ require 'cdo/only_one'
 # @param question [Hash] the questions asked as part of a survey, with the
 #   text of the question as well as some additional metadata.
 # @returns [String] the text of the question that was asked
-def get_question_text(question_key, questions)
-  return questions[question_key][:text]
+def get_question_details(question_key, questions)
+  return questions[question_key][:text], questions[question_key][:options]
+end
+
+def write_file(processed_answers)
+  CSV.open("jotform_daily_surveys.tsv", "w", headers: processed_answers.first.keys, col_sep: "\t") do |csv|
+    processed_answers.each do |h|
+      csv << h.values
+    end
+  end
 end
 
 def main
@@ -24,17 +32,30 @@ def main
     answers = submission.form_data_hash
     questions = submission.questions.summarize
     answers.each do |question_key, answer_value|
-      question_text = get_question_text(question_key, questions)
+      question_text, _question_options = get_question_details(question_key, questions)
 
+      if question_key = 'whatLicense52'
+        next
+      end
+
+      # known issues:
+      # whatLicense52 resulting in new line?
+      # answer options has double quotes in it, resulting in huge white spaces I can't trim via strip?
       processed_answers << {
         user_id: submission.user_id,
+        pd_workshop_id: submission.pd_workshop_id,
+        pd_session_id: submission.pd_session_id,
+        day: submission.day,
+        form_id: submission.form_id,
+        submission_id: submission.submission_id,
         question_id: question_key,
         question_text: question_text,
+        # answer_options: question_options,
         answer_value:  answer_value
       }
     end
   end
-  puts processed_answers
+  write_file(processed_answers)
 end
 
 main if only_one_running?(__FILE__)
