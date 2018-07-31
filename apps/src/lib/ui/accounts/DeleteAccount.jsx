@@ -48,7 +48,7 @@ export default class DeleteAccount extends React.Component {
   static propTypes = {
     isPasswordRequired: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    dependedUponForLogin: PropTypes.bool,
+    dependedUponForLogin: PropTypes.bool.isRequired,
     hasStudents: PropTypes.bool.isRequired,
   };
 
