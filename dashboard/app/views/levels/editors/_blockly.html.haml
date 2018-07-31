@@ -5,6 +5,8 @@
     = javascript_include_tag "js/en_us/common_locale"
     = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
 
+- collapse_box = "collapse_box_xml"
+
 = render partial: 'levels/editors/authored_hints', locals: {f: f}
 .field
   = f.label :edit_code,'Blockly level'
@@ -90,9 +92,11 @@
 
 .field
   = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-  .row
+  .min_max_label{data: {toggle: "collapse", target: "#toolbox_xml"}}
+    Open/Close
+  .row.collapse.in{id: "toolbox_xml"}
     .span8
-      ~ f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+      ~ f.text_area :toolbox_blocks,  placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
     #toolbox-preview.span4
 
 .field
@@ -100,7 +104,9 @@
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-  .row
+    .min_max_label{data: {toggle: "collapse", target: "#start_xml"}}
+      Open/Close
+  .row.collapse.in{id: "start_xml"}
     .span8
       ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
     #start-preview.span4
@@ -110,7 +116,9 @@
     = f.label :required_blocks,'Edit Required Blocks'
   - else
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
-  .row
+    .min_max_label{data: {toggle: "collapse", target: "#required_xml"}}
+      Open/Close
+  .row.collapse.in{id: "required_xml"}
     .span8
       ~ f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
     #required-preview.span4
@@ -120,7 +128,9 @@
     = f.label :recommended_blocks, 'Edit Recommended Blocks'
   - else
     = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
-  .row
+    .min_max_label{data: {toggle: "collapse", target: "#recommended_xml"}}
+      Open/Close
+  .row.collapse.in{id: "recommended_xml"}
     .span8
       ~ f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
     #recommended-preview.span4
@@ -128,7 +138,9 @@
 - unless @level.uses_droplet?
   .field
     = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
-  .row
+    .min_max_label{data: {toggle: "collapse", target: "#initialization_xml"}}
+      Open/Close
+  .row.collapse.in{id: "initialization_xml"}
     .span8
       ~ f.text_area :initialization_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('initialization')
     #initialization-preview.span4
@@ -155,7 +167,9 @@
       = f.label :solution_blocks, 'Edit Solution Blocks'
     - else
       = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
-    .row
+      .min_max_label{data: {toggle: "collapse", target: "#solution_xml"}}
+        Open/Close
+    .row.collapse.in{id: "solution_xml"}
       .span8
         ~ f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
       #solution-preview.span4
