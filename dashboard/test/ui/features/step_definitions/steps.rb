@@ -1105,6 +1105,16 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
   }
 end
 
+And(/^I submit this level$/) do
+  steps %Q{
+    And I press "runButton"
+    And I wait to see "#submitButton"
+    And I press "submitButton"
+    And I wait to see ".modal"
+    And I press "confirm-button" to load a new page
+  }
+end
+
 And(/^I give user "([^"]*)" hidden script access$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
