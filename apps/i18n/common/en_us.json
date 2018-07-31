@@ -360,7 +360,7 @@
   "deleteAccountDialog_button": "Delete my Account",
   "deleteAccountDialog_button_studentWarning": "Delete my and my students' accounts",
   "deleteAccountDialog_checkboxPreface": "I understand that by deleting my account, ",
-  "deleteAccountDialog_checkboxTitle": "Please verify the following statements before you can delete your account:",
+  "deleteAccountDialog_checkboxTitle": "Please verify the following {numCheckboxes, plural, one {statement} other {statements}} before you can delete your account:",
   "deleteAccountDialog_checkbox1_1": "I have the authority to delete the education records ",
   "deleteAccountDialog_checkbox1_2": "of the students in my sections (or release it to them, if they have a personal login).",
   "deleteAccountDialog_checkbox2_1": "I am aware of the ",
