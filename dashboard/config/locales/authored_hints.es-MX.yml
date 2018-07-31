@@ -394,7 +394,6 @@ es-MX:
           Busca patrones en tus bloques. ¿Ves algo que se repita? Intenta colocar un loop en su lugar!
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "** 360/36 =? **"
-      4-5 Nested Loops 2_authored_hint: {}
       4-5 Nested Loops 6_authored_hint:
         4-5_Nested_Loops_6_a: "No olvides girar luego de tu loop interno.\n\nEstarás
           haciendo un loop de 6 triángulos de 360 grados. \n\n**360 / 6 = ?**"
@@ -410,12 +409,6 @@ es-MX:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Cada elemento necesitará su propio "while" loop.
-      AB_debug_Laurel1_authored_hint: {}
-      AppLab Intro 3 - Change Screen Color_authored_hint: {}
-      AppLab Intro 4 - Change Screen Color_authored_hint: {}
-      AppLab Intro 5 - Change Screen Color_authored_hint: {}
-      AppLab Intro 6 - Change Screen Color_authored_hint: {}
-      AppLab Intro 7 - Change Screen Color_authored_hint: {}
       Artist Inspiration_authored_hint:
         brush_width: Establecemos el grosor del pincel a 1, luego el color azul antes
           de hacer cualquier otra cosa.
@@ -503,7 +496,6 @@ es-MX:
       Course 4 Artist 6_authored_hint:
         Course_4_Artist_6_a: Hay 3 triángulos dentro de la rotación de 360 grados...
           ¿Cuántas veces entran 3 en 360?
-      Course 4 Artist 7_authored_hint: {}
       Course 4 Artist 8a_authored_hint:
         Course_4_Artist_8a: |-
           ¿Necesitas ayuda para calcular qué tan lejos girar?
@@ -964,7 +956,6 @@ es-MX:
       Course 4 Play Labs For Loops 2_authored_hint:
         Course_4_Play_Labs_For_Loops_2_a: ¿Qué agregarías a tu "for" loop cada vez
           para omitir los números pares?
-      Course 4 Playlab For Loop Freeplay_authored_hint: {}
       Course 4 Playlab For Loops 4b_authored_hint:
         Course_4_Playlab_For_Loops_4b_a: Las banderas están a unos 330 píxeles de
           distancia de los personajes.
@@ -979,7 +970,6 @@ es-MX:
           centro.
         Course_4_Playlab_For_Loops_5b_b: Recuerde, el próximo paso de un personaje
           será más largo que el anterior, ya que el contador sigue creciendo.
-      Course 4 Playlab For Loops 6b_authored_hint: {}
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tiene lados de 40 pixeles.
         Course_4_SCF_1_b: Hay un salto de 120 píxeles entre cada hexágono en cada
@@ -3554,11 +3544,6 @@ es-MX:
           <img src = "https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width = "200px" />
         courseD_artist_project1a_b: Estos patrones son muy parecidos a los pasos de
           la escalera de otros acertijos, pero usando un ángulo diferente.
-      D_Frozen_nested7_authored_hint:
-        courseD_artist_project2a_a: |
-          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
-
-          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       D_Frozen_nested8_authored_hint:
         courseD_artist_project3a_a: "¡Puedes elegir diferentes cantidades para rotar
           tu forma! ¿Qué tal 18 veces con un giro de 20 grados en el medio?"
@@ -3596,26 +3581,17 @@ es-MX:
           píxeles antes de hacer una rotación de 60 grados.
         solution: "** Solución **! [ Imagen de Bloques de Solución ] (https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-
           image -1469641375258.png)"
-      InspirationalArtwork_authored_hint: {}
-      InspirationalArtwork_2018_authored_hint: {}
       K2.0 sequence 1_authored_hint:
         K2.0_sequence_1_a: Este programa falta un bloque. ¿Puedes averiguar cuál?
       K2.0 sequence 10_authored_hint:
         K2.0_sequence_10_a: Si tiene problemas, primero intente anotar los pasos en
           una hoja de papel.
-        K2.0_sequence_10_b: You will need three different kinds of arrows to solve
-          this puzzle.
-      K2.0 sequence 12_authored_hint:
-        K2.0_sequence_12_a: If the pig isn't moving far enough, try adding another
-          block.
       K2.0 sequence 2_authored_hint:
         K2.0_sequence_2_a: Uno de los bloques está moviendo al pájaro en la dirección
           incorrecta. ¿Puedes averiguar cuál y reemplazarlo con el bloque correcto?
       K2.0 sequence 3_authored_hint:
         K2.0_sequence_3_a: Si tiene problemas, intente descubrir cuál es la ruta correcta
           y luego elimine el bloque que no encaja.
-      K2.0 sequence 4_authored_hint:
-        K2.0_sequence_4_a: Use 2 different arrow blocks to solve this puzzle!
       K2.0 sequence 5_authored_hint:
         K2.0_sequence_5: Tu código final debe tener tres bloques de movimiento.
       K2.0 sequence 6_authored_hint:
@@ -3632,14 +3608,9 @@ es-MX:
       K2.0 sequence 9_authored_hint:
         K2.0_sequence_9_a: Si tiene problemas, primero intente anotar los pasos en
           una hoja de papel.
-        K2.0_sequence_9_b: You will need to go three different directions to solve
-          this puzzle.
       K2.0 sequence FP_authored_hint:
         K2.0_sequence_FP_a: Si el camino que necesita no está claro, use su dedo para
           seguir el camino del pájaro hasta el cerdo.
-      K2.0 sequence pre_authored_hint:
-        K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
-          sure blocks are connected under `when run`.
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Intenta que el Agent construya algunos caminos minecart
           para que puedas explorar el mundo!
@@ -3751,17 +3722,9 @@ es-MX:
           algunas!"
         MC_HOC_2017_08_RY_c: Intenta seguir la línea de puntos para obtener un camino
           simple a través de la lava.
-      MC_HOC_2017_FP10x10_authored_hint: {}
-      MC_HOC_2017_FP10x10_RE_authored_hint: {}
       MC_HOC_2017_FP20x20_authored_hint:
         MC_HOC_2017_13_Cole_a: Intenta que el Agent construya algunos caminos minecart
           para que puedas explorar el mundo!
-      MikeStar_authored_hint:
-        hint1: Don't give up!
-      MikeStarHard_authored_hint:
-        hint1: Don't give up!
-      MikeStarNested_authored_hint:
-        hint1: Don't give up!
       NEW Course 4 Artist Functions 13_authored_hint:
         NEW_Course_4_Artist_Functions_13_a: Intenta editar la función de 'dibujar
           una línea de cuadrados' para que no tengas que llamar dos veces.
@@ -3910,8 +3873,6 @@ es-MX:
       NEW Course 4 Bee For Loops 10a_authored_hint:
         NEW_Course_4_Bee_For_Loops_10a_a: "¿Puedes encontrar un patrón entre el número
           de pasos que necesitas tomar y el numero de nectares a recolectar?"
-        NEW_Course_4_Bee_For_Loops_10a_b: You'll need to have 2 repeats, one will
-          use a math block.
       NEW Course 4 Bee For Loops 7_authored_hint:
         NEW_Course_4_Bee_For_Loops_7_a: |-
           Intenta hacer algúnos cálculos con la variable contador.
@@ -4026,7 +3987,6 @@ es-MX:
           que hacer en cada panal?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Esta es una pista de prueba.
-      Test embedded K1 Blockly in instructions_authored_hint: {}
       Underground Avoiding Lava_authored_hint:
         mc_11_a: Todo el código está en su lugar para asegurarnos de la lava y enfrentarla.
           Todo lo que necesitas hacer es agregar un bloque para moverte.
@@ -4119,7 +4079,6 @@ es-MX:
         Valentine_playlab_01_b: Utiliza el bloque "mover el actor 1 a la izquierda"
           haciendo clic en el lugar abajo de el evento cuando "haga clic en la flecha
           izquierda".
-      aE1_authored_hint: {}
       aE2_authored_hint:
         aE2_a: Considere que como las servilletas tienen 20 pixeles de largo, necesitará
           saltar 20 pixeles antes de iniciar su próximo loop.
@@ -4171,7 +4130,6 @@ es-MX:
           repeticiones de profundidad.
         aE4_d: Si su código se vuelve demasiado confuso, siempre puede hacer clic
           en "Comenzar de nuevo" y ¡volver a intentarlo!
-      aE5_authored_hint: {}
       aE6_authored_hint:
         aE6_a: Si hay 180 grados en un semicírculo y cada loop de artista gira 3 grados,
           ¿cuántas veces necesitarás hacer un loop para dibujar la mitad de un circulo
@@ -4199,7 +4157,6 @@ es-MX:
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: "¿Puede imaginar donde colocar el loop? Intente escribir
           el código paso a paso y busque un patrón."
-      artistFunctionsVideo1_authored_hint: {}
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: Si desea que el loop se repita más de 4 veces, puede cambiar
           el número en la parte superior del bloque.
@@ -4229,13 +4186,11 @@ es-MX:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del loop para resolver este
           puzzle.
-      artistLoopsKFP_authored_hint: {}
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Los comentarios también son útiles cuando otras
           personas intentan leer su código.
         courseC_maze_programming4_b: 'Agregue un comentario cuando cambie de dirección:
           ¿qué hubiera pasado si hubiera girado en sentido contrario?'
-      conditionals_forvideo_harvester_authored_hint: {}
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: 'Puede usar ciclo como este para crear
           las paredes y el techo. Intenta repetir diferentes bloques . ! [] (https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
@@ -4556,33 +4511,6 @@ es-MX:
         courseC_harvester_loops_challenge1_b: Puedes repetir 'mover hacia adelante'
           y 'elegir maíz' todas las veces que necesites hacerlo, luego haz 'gira a
           la derecha' en cada esquina.
-        courseC_harvester_loops_challenge1_c: |-
-          The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></next></block></xml>
       course2_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Una forma de resolver esto parece un
           zig-zag. Otra parece un espiral. Hay muchas soluciones distintas para un
@@ -4607,7 +4535,6 @@ es-MX:
           a la izquierda`, luego` mover adelante adelante` unas pocas veces. ¡No te
           rindas! ! [] (https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34
           PM.png)
-      course2_maze_programming_challenge1_authored_hint: {}
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: "* ¡Si me envías hacia atrás, sé muy
           cuidadoso de que me dirija al camino correcto! *"
@@ -4857,7 +4784,6 @@ es-MX:
       course3_farmer_condLoops_challenge2_authored_hint:
         courseD_farmer_condLoops_challenge2_a: La cantidad de cada vegetal en cada
           espacio varía. Usa "while" loops para éstos.
-      course3_farmer_until_challenge2_authored_hint: {}
       course3_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: "¿Izquierda o derecha? ¡Es tu decisión!"
         courseC_maze_debugging_challenge1_b: El camino de Scrat es la forma de un
@@ -4873,7 +4799,6 @@ es-MX:
           Hay dos caminos diferentes que puedes seguir usando "avanzar", y solamente cuatro giros. Si encuentras una forma de usar el bloque "repetir", podrían haber incluso más!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
-      course3_maze_until_challenge1_authored_hint: {}
       course3_playLab_challenge1_authored_hint:
         courseE_playLab_challenge1_a: 'Aquí hay algunas cosas que podría hacer cuando
           el jugador gana el juego: * Hacer que el dinosaurio desaparezca. * Detener
@@ -4970,7 +4895,6 @@ es-MX:
             </block>
             </xml>
           Este bloque 'salto' le permite mover el artista zombie a cualquier píxel en la cuadrícula, siempre que lo desee. Funciona moviéndolo un número de píxeles hacia la derecha y una cantidad de píxeles hacia abajo. Esto siempre se cuenta desde la esquina superior izquierda, lo que significa que no importa dónde esté * el artista zombi * * ¡se ejecuta el comando! ! [] (https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
-      course4_artist_fwp_challenge1_authored_hint: {}
       course4_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Cada línea vertical tiene una longitud
           de '10'. Cada línea horizontal debe tener una longitud de la 'longitud'.
@@ -5030,7 +4954,6 @@ es-MX:
           **Solución:**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
-      course4_bee_for_challenge1_authored_hint: {}
       course4_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           El programa principal sería algo como esto:
@@ -5381,8 +5304,6 @@ es-MX:
           use un ciclo anidado para pasar de la primera pila de tesoros a la segunda.
           Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor
           de la * cueva completa *!
-        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo
-          el tesoro usa solo un bloque `colectar` y dos turnos.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solución:**
           <xml>
@@ -5517,13 +5438,6 @@ es-MX:
           Cuando todo esté terminado, deberias poder hacer clic en cualquier actor y obtener hasta 8 mensajes diferentes. ¿Es posible expandirlo aún más?
 
           ¡Haz que un amigo pruebe tu apliación cuando termines!
-      courseA_artist_loops10_authored_hint: {}
-      courseA_artist_loops10_2018_authored_hint: {}
-      courseA_artist_loops11_authored_hint: {}
-      courseA_artist_loops11_2018_authored_hint: {}
-      courseA_artist_loops11_predict2_authored_hint: {}
-      courseA_artist_loops12_authored_hint: {}
-      courseA_artist_loops12_2018_authored_hint: {}
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: ¿No sabes cómo dibujar una línea? Comience unir bloques
           a la <xml><block type="when_run"/></xml> para ver qué pasa.
@@ -5641,8 +5555,6 @@ es-MX:
           </xml>.
         courseA_artist_loops9_c: Si no imagina donde colocar el loop, intente escribir
           su código paso a paso y busque patrones.
-      courseA_artist_loops_challenge1_authored_hint: {}
-      courseA_artist_loops_challenge1_2018_authored_hint: {}
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: Bloques como este <xml>  <block type="simple_move_up_left"/></xml>
           le permitirán a su artista moverse de forma inclinada!
@@ -5672,35 +5584,18 @@ es-MX:
           <xml>
           <block type="maze_nectar"/>
           </xml>
-      courseA_bee_seq10_authored_hint: {}
-      courseA_bee_seq11_authored_hint: {}
       courseA_bee_seq12_authored_hint:
         courseA_bee_seq1_a: |-
           Usa este bloque para obtener néctar una vez que la abeja encuentre una flor.
           <xml>
           <block type="maze_nectar"/>
           </xml>
-      courseA_bee_seq13_authored_hint: {}
-      courseA_bee_seq14_authored_hint: {}
-      courseA_bee_seq2_authored_hint: {}
-      courseA_bee_seq3_authored_hint: {}
-      courseA_bee_seq4_authored_hint: {}
-      courseA_bee_seq5_authored_hint: {}
-      courseA_bee_seq6_authored_hint: {}
-      courseA_bee_seq7_authored_hint: {}
-      courseA_bee_seq8_authored_hint: {}
-      courseA_bee_seq9_authored_hint: {}
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
           Despúes de que te hayas mudado a un cuadrado con tesoro, usa este bloque para recogerlo.
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una solución simple sería moverse al este 2 veces,
           luego obtener el tesoro.
-      courseA_collector_loops10_authored_hint: {}
-      courseA_collector_loops10_2018_authored_hint: {}
-      courseA_collector_loops11_authored_hint: {}
-      courseA_collector_loops11_2018_authored_hint: {}
-      courseA_collector_loops11_predict2_authored_hint: {}
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
           Despúes de que te hayas mudado a un cuadrado con tesoro, usa este bloque para recogerlo.
@@ -5733,7 +5628,6 @@ es-MX:
           Recuerda que puedes poner más de un bloque en un ciclo <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml>.
-      courseA_collector_loops3_predict1_authored_hint: {}
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: Para cambiar qué tan lejos va Laurel, cambie la
           cantidad de veces que se ejecuta el ciclo.
@@ -5871,9 +5765,6 @@ es-MX:
           solución.
         courseA_collector_loops_challenge2kp_a: "¿Puedes usar loops para resolver
           este puzzle?"
-      courseA_collector_preLoops1_authored_hint: {}
-      courseA_collector_preLoops2_authored_hint: {}
-      courseA_collector_preLoops3_authored_hint: {}
       courseA_collector_preLoops4_authored_hint:
         courseA_collector_preLoops4_a: "Para agarrar el tesoro, ¡encaje dos! [] (Https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
           ¡ bloques y uno! [] (Https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-
@@ -5889,7 +5780,6 @@ es-MX:
         courseA_collector_loops2_b: |-
           Despúes de que te hayas mudado a un cuadrado con tesoro, usa este bloque para recogerlo.
           <xml>  <block type="collector_collect"/></xml>
-      courseA_forVideoTest_artist_authored_hint: {}
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           Use un bloque de repetición como este para ayudarlo.
@@ -5900,8 +5790,6 @@ es-MX:
         courseA_harvester_loops1_a: |-
           ¡Una vez que se mueva hacia el maíz, use este bloque para recogerlo!
           <xml><block type="harvester_corn"/></xml>
-      courseA_harvester_loops10_authored_hint: {}
-      courseA_harvester_loops11_authored_hint: {}
       courseA_harvester_loops2_authored_hint:
         courseA_harvester_loops2_a: 'Su código tendrá ** cuatro ** bloques `de mover
           el oeste` y ** cuatro ** bloques de` selección de maíz`. '
@@ -5945,7 +5833,6 @@ es-MX:
       courseA_harvester_loops7_authored_hint:
         courseA_harvester_loops7_a: Necesitará dos loops de repetición, uno tras otro!
         courseA_harvester_loops7_b: Utiliza dos loops para seguir este camino.
-      courseA_harvester_loops8_authored_hint: {}
       courseA_harvester_loops9_authored_hint:
         courseA_harvester_loops9_a: Divide este rompecabezas en tres partes diferentes.
           Una parte en la primera esquina, una parte en la segunda esquina y una parte
@@ -5970,8 +5857,6 @@ es-MX:
         courseA_harvester_seq10_b: Necesitas `Mover al este`, luego` Mover al norte`.
           Haz esto dos veces. ¡No te olvides de obtener todo el maíz también!
         courseA_harvester_seq10_c: "¡Utiliza esta ruta para recoger todo el maíz."
-      courseA_harvester_seq11_authored_hint: {}
-      courseA_harvester_seq12_authored_hint: {}
       courseA_harvester_seq13_authored_hint:
         courseA_bee_seq1_a: Utiliza este bloque para recoger maiz una vez que la cosechadora
           llegue ahí
@@ -6007,7 +5892,6 @@ es-MX:
           parte antes de la esquina y una parte después de la esquina.
         courseA_harvester_seq7_b: "¿Tienes problemas? Este es el camino que debe tomar
           la cosechadora."
-      courseA_harvester_seq8_authored_hint: {}
       courseA_harvester_seq9_authored_hint:
         courseA_harvester_seq9_a: Ejecute el código varias veces para ver qué sucede.
           ¿Dónde se detiene la cosechadora?
@@ -6076,12 +5960,6 @@ es-MX:
           </next>
           </block>
           </xml>
-      courseA_maze_ramp4_2018_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point
-          of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one
-          way, then move again and turn the opposite way. Move forward one more time
-          to reach the pig.
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Su código debe verse así:
@@ -6143,11 +6021,6 @@ es-MX:
           en una hoja de papel.
         courseA_maze_seq10_b: Tendrá que ir en 3 direcciones diferentes para resolver
           este rompecabezas.
-      courseA_maze_seq11_authored_hint: {}
-      courseA_maze_seq11_2018_authored_hint: {}
-      courseA_maze_seq12_authored_hint: {}
-      courseA_maze_seq12_2018_authored_hint: {}
-      courseA_maze_seq12_predict2_authored_hint: {}
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Si el camino que necesita no está claro, use su dedo
           para seguir el camino del pájaro hasta el cerdo.
@@ -6181,7 +6054,6 @@ es-MX:
         courseA_maze_seq2_a: A este programa le falta 1 bloque. ¿Puede averiguar cuál?
         courseA_maze_seq2_b: Intenta ejecutar el código primero, para ver dónde termina
           el pájaro. ¿A dónde necesitar ir desde allí?
-      courseA_maze_seq2_predict1_authored_hint: {}
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: 1 de los bloques está moviendo al pájaro en la dirección
           incorrecta. ¿Puedes averiguar cuál y reemplazarlo con el bloque correcto?
@@ -6414,7 +6286,6 @@ es-MX:
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
-      courseA_playlab_challengeTemplate_authored_hint: {}
       courseA_playlab_events_challenge1_authored_hint:
         courseA_playlab_events_challenge1_a: "¡Haz que Waddles the Penguin se muestre
           al hacer clic en Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
@@ -6589,7 +6460,6 @@ es-MX:
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-      courseA_toMakeLoopsVideo_Collector_authored_hint: {}
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': Si Scrat no está haciendo lo que quieres, asegúrate se has hecho clic
           en ambos bloques al mismo tiempo, luego haz clic en "ejecutar" otra vez.
@@ -6683,8 +6553,6 @@ es-MX:
           </next>
           </block>
           </xml>
-      courseB_artist_loops10_authored_hint: {}
-      courseB_artist_loops10_2018_authored_hint: {}
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: Si desea que el loop se repita más de 4 veces, puede
           cambiar el número en la parte superior del bloque.
@@ -6783,7 +6651,6 @@ es-MX:
           la escalera?"
         courseB_artist_loops8_b: Intenta ejecutar el código que se te ha dado para
           ver lo que hace.
-      courseB_artist_loops8_predict1_authored_hint: {}
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_a: Recuerde que los bloques de salto se pueden usar
           para moverse sin dibujar una línea.
@@ -7291,22 +7158,16 @@ es-MX:
         courseB_maze_seq10_a: Trate de anotar primero los pasos en una hoja de papel.
         courseB_maze_seq10_b: Tendrá que moverse en dos direcciones diferentes para
           llegar al cerdo.
-      courseB_maze_seq10_2018_authored_hint: {}
-      courseB_maze_seq10_predict1_authored_hint: {}
-      courseB_maze_seq10_predict1_2018_authored_hint: {}
       courseB_maze_seq11_authored_hint:
         courseB_maze_seq11_a: Trate de anotar primero los pasos en una hoja de papel.
         courseB_maze_seq11_b: 'Resuelve el rompecabezas en dos partes: una antes de
           la esquina y otra después de la esquina.'
-      courseB_maze_seq11_2018_authored_hint: {}
       courseB_maze_seq1_2018_authored_hint:
         courseB_maze_seq1_a: Conecta los bloques al bloque <xml><block type="when_run"/></xml>
           Scrat hará movimiento!
         courseB_maze_seq1_b: Arrastre tres de estas <xml><block type="maze_moveSouth"/></xml>
           flechas y conectalas al bloque <xml><block type="when_run"/></xml> para
           que Scrat llegue a la bellota.
-      courseB_maze_seq1_predict1_authored_hint: {}
-      courseB_maze_seq1_predict1_2018_authored_hint: {}
       courseB_maze_seq2_authored_hint:
         courseB_maze_seq2_a: Este programa falta un bloque. ¿Puedes averiguar cuál?
         courseB_maze_seq2_b: Intenta ejecutar el código que se te da para ver qué
@@ -7393,7 +7254,6 @@ es-MX:
           a medida que lo construyes.
         courseB_maze_seq9_c: Hay dos formas de resolver este rompecabezas.
         courseB_maze_seq9_d: "¿Atascado? ¡Prueba este camino!"
-      courseB_maze_seq9_challenge1_authored_hint: {}
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: "¿Atascado? Intenta trazar el camino del pájaro con
           tu dedo."
@@ -7423,8 +7283,6 @@ es-MX:
           resolver este rompecabezas.
         courseB_maze_seq_challenge2_b: Reorganiza los bloques y toma la ruta del patrón
           de la escalera.
-      courseB_playlab_challenge1_Template_authored_hint: {}
-      courseB_playlab_challenge1_Template_2018_authored_hint: {}
       courseB_playlab_events2_authored_hint:
         courseB_playlab_events2_a: |-
           Este es el bloque para que Margarita diga algo:
@@ -7538,10 +7396,6 @@ es-MX:
           <title name="VALUE">down</title>
           </block>
           </xml>
-        courseB_playlab_events6_b: |-
-          Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.
-
-          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: "¡Llega a todas las banderas para pasar!"
       courseB_playlab_events6_2018_authored_hint:
         courseB_playlab_events6_a: |-
@@ -7554,10 +7408,6 @@ es-MX:
           <title name="VALUE">down</title>
           </block>
           </xml>
-        courseB_playlab_events6_b: |-
-          Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.
-
-          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: "¡Llega a todas las banderas para pasar!"
       courseB_playlab_events7_authored_hint:
         courseB_playlab_events7_a: |-
@@ -7605,8 +7455,6 @@ es-MX:
           <title name="SPRITE">1</title>
           </block>
           </xml>
-      courseB_playlab_eventsTemplate_authored_hint: {}
-      courseB_playlab_eventsTemplate_2018_authored_hint: {}
       courseB_playlab_eventsToolbox_authored_hint:
         courseB_playlab_events7_a: Este es el bloque de eventos que necesitará:! []
           (Https://images.code.org/2ed42b3a3108c6affdfc866de57f2eec-image-1475624565390.42.18.png)
@@ -7780,17 +7628,12 @@ es-MX:
 
           Haz que algunos animales den más puntos que otros. Usa diferentes sonidos.
           ¡Cambia los estados de ánimo de los animales!
-      courseB_scrat_forVideo_authored_hint: {}
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: Intenta agregar bloques de uno en uno, luego haz
           clic en "Ejecutar" para ver qué sucede.
         courseB_starWars_prog1_b: |
           Querrás moverte hacia el este para resolver este rompecabezas. ¿Qué tan lejos necesita moverse?
           <xml><block type="studio_moveEast"/></xml>
-      courseB_starWars_prog10_authored_hint: {}
-      courseB_starWars_prog10_2018_authored_hint: {}
-      courseB_starWars_prog11_authored_hint: {}
-      courseB_starWars_prog11_2018_authored_hint: {}
       courseB_starWars_prog1_2018_authored_hint:
         courseB_starWars_prog1_a: Intenta agregar bloques de uno en uno, luego haz
           clic en "Ejecutar" para ver qué sucede.
@@ -7903,7 +7746,6 @@ es-MX:
           código para ver qué sucede, incluso si aún no ha resuelto el acertijo."
         courseB_starWars_prog9_b: Hay muchas formas de resolver este rompecabezas.
         courseB_starWars_prog9_c: "¿Podría un ciclo de repetición ayudar aquí?"
-      courseC_PlayLab_embed_events9_authored_hint: {}
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Fije este bloque a bloque 'cuando corre':
@@ -8307,8 +8149,6 @@ es-MX:
         courseC_artist_loopsPrePre1a_b: Para avanzar 50 píxeles , utiliza este bloque
           :! [] (Https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27
           AM.png)
-      courseC_artist_prog1_authored_hint: {}
-      courseC_artist_prog1_2018_authored_hint: {}
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: Si utilizas un bloque que me ayude a "avanzar 100
           pixeles". Dibujaré una línea automáticamente.
@@ -8391,8 +8231,6 @@ es-MX:
           parado en su esquina.
         courseC_artist_prog6_c: Como este diamante también es cuadrado, asegúrese
           de girar 90 grados en las esquinas.
-      courseC_artist_prog6_predict1_authored_hint: {}
-      courseC_artist_prog6_predict1_2018_authored_hint: {}
       courseC_artist_prog7_authored_hint:
         courseC_artist_prog7_a: Cada ángulo es 45 o 90 grados.
         courseC_artist_prog7_b: "¿Funciona en el primer paso?   \n¿Qué tal el segundo?
@@ -8417,8 +8255,6 @@ es-MX:
         courseC_artist_prog7_e: "¡No tengas miedo de cometer un error! Intenta agregar
           bloques y ejecutar el código para ver qué sucederá, incluso si crees que
           aún no has resuelto el rompecabezas."
-      courseC_artist_prog8_authored_hint: {}
-      courseC_artist_prog8_2018_authored_hint: {}
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Usa ángulos de 60 grados para hacer el techo.
       courseC_artist_prog_challenge1_authored_hint:
@@ -8550,10 +8386,6 @@ es-MX:
           se mueva en la dirección correcta? Toma uno de la caja de herramientas."
         courseC_collector_prog7_c: "¿Tiene problemas para ver una ruta para recoger
           todo el tesoro? ¡Prueba este camino!"
-      courseC_collector_prog8_authored_hint: {}
-      courseC_collector_prog8_2018_authored_hint: {}
-      courseC_collector_prog9_authored_hint: {}
-      courseC_collector_prog9_2018_authored_hint: {}
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: Intente utilizar el botón "Paso" para ir a través
           de su código línea por línea.
@@ -8573,7 +8405,6 @@ es-MX:
           en cada espacio.
         courseC_collector_prog_challenge1_b: Perdió su camino? ¡Prueba este camino
           para resolver el rompecabezas!
-      courseC_external_events_authored_hint: {}
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "! [] (https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -8632,22 +8463,6 @@ es-MX:
       courseC_flappy_events9_2018_authored_hint:
         courseC_flappy_events9_a: Conecte el bloque "establecer puntaje 0" al evento
           "al chocar con un obstáculo" para pasar este nivel.
-      courseC_flappy_events_template_authored_hint: {}
-      courseC_flappy_events_template_2018_authored_hint: {}
-      courseC_harvester_loops1_authored_hint:
-        courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block
-          type="harvester_pumpkin"/></xml> to collect it.
-        courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml>
-          block to pick more than one pumpkin from a square.
-      courseC_harvester_loops10_authored_hint: {}
-      courseC_harvester_loops10_2018_authored_hint: {}
-      courseC_harvester_loops11_authored_hint: {}
-      courseC_harvester_loops11_2018_authored_hint: {}
-      courseC_harvester_loops1_2018_authored_hint:
-        courseC_harvester_loops1_a: Once you have moved to a pumpkin, use <xml><block
-          type="harvester_pumpkin"/></xml> to collect it.
-        courseC_harvester_loops1_b: You can use a loop with the <xml><block type="harvester_pumpkin"/></xml>
-          block to pick more than one pumpkin from a square.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Si te quedas atascado, intenta escribir los pasos
           en un papel y busca los patrones que se repiten.
@@ -8734,40 +8549,11 @@ es-MX:
           la cosecha a lo largo del camino."
         courseC_harvester_loops8_b: Si quieres simplificar tu código, ¡puedes poner
           un ciclo dentro de otro! Esto se llama un ** ciclo anidado **.
-      courseC_harvester_loops9_authored_hint: {}
-      courseC_harvester_loops9_2018_authored_hint: {}
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: "¡Esto es demasiado dificil sin ciclos!"
         courseC_harvester_loops_challenge1_b: Puedes repetir 'mover hacia adelante'
           y 'recoger maíz' todas las veces que necesites hacerlo, luego gira a la
           derecha en cada esquina.
-        courseC_harvester_loops_challenge1_c: |-
-          The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="harvester_corn"/>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block></next></block></xml>
       courseC_harvester_loops_challenge1a_authored_hint:
         courseC_harvester_loops_challenge1_a: "¡Esto es demasiado dificil sin ciclos!"
         courseC_harvester_loops_challenge1_b: Puedes repetir 'mover hacia adelante'
@@ -8854,7 +8640,6 @@ es-MX:
           El patrón de espiral puede programarse con solo 18 bloques.
 
           ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
-      courseC_harvester_loops_forVid_authored_hint: {}
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
           -¿Funciona todo después del primer paso?
@@ -8870,8 +8655,6 @@ es-MX:
         courseC_maze_debugging1_b: Hay un bloque que necesitas agregar para completar
           este acertijo.
       courseC_maze_debugging2_authored_hint:
-        courseC_maze_debugging2_a: There is a lot of valuable code in the workspace.  Don't
-          just delete it all and start over!
         courseC_maze_debugging2_b: |-
           -¿Funciona todo después del primer paso?
           -¿Funciona despues del segundo?
@@ -8879,8 +8662,6 @@ es-MX:
         courseC_maze_debugging2_c: "¿No puede descubrir qué pasa? Intenta ejecutar
           el código un par de veces para ver qué pasa."
       courseC_maze_debugging2_2018_authored_hint:
-        courseC_maze_debugging2_a: There is a lot of valuable code in the workspace.  Don't
-          just delete it all and start over!
         courseC_maze_debugging2_b: |-
           -¿Funciona todo después del primer paso?
           -¿Funciona despues del segundo?
@@ -8931,8 +8712,6 @@ es-MX:
           Hay muchos bloques utiles en el area de trabajo. ¡No los borres!
 
           Usa el boton "paso" para ir a traves del código y averiguar donde hay un error.
-        courseC_maze_debugging5_c: You can change the direction of the turn block
-          by clicking on the dropdown.
         courseC_maze_debugging5_b: Intenta decir lo que Scrat deberia hacer en voz
           alta. ¿Es lo mismo que el código en el area de trabajo? ¿Dónde falla?
       courseC_maze_debugging6_authored_hint:
@@ -8982,10 +8761,6 @@ es-MX:
           - ¿Qué se supone que haga Scrat?
           - ¿Qué hace Scrat?
           - ¿Qué te dice eso?
-      courseC_maze_debugging8_predict1_authored_hint: {}
-      courseC_maze_debugging8_predict1_2018_authored_hint: {}
-      courseC_maze_debugging9_authored_hint: {}
-      courseC_maze_debugging9_2018_authored_hint: {}
       courseC_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: "¿Izquierda o derecha? ¡Es tu decisión!"
         courseC_maze_debugging_challenge1_b: "¡El camino de Scrat tiene la forma de
@@ -9012,9 +8787,6 @@ es-MX:
           seguir simplemente avanzando y girando cuatro veces. Si encuentra una forma
           de usar un ciclo , ¡puede haber aún más! ! [] (https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05
           PM.png)
-      courseC_maze_loops10_authored_hint: {}
-      courseC_maze_loops10_predict2_authored_hint: {}
-      courseC_maze_loops11_authored_hint: {}
       courseC_maze_loops2_authored_hint:
         courseC_maze_loops2_a: Puede resolver este rompecabezas con tres bloques,
           incluyendo 'cuando ejecute'.
@@ -9183,10 +8955,6 @@ es-MX:
         courseC_maze_programming8_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
-      courseC_maze_programming8_predict1_authored_hint: {}
-      courseC_maze_programming8_predict1_2018_authored_hint: {}
-      courseC_maze_programming9_authored_hint: {}
-      courseC_maze_programming9_2018_authored_hint: {}
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: Hay muchas maneras de llegar al cerdo.
           ¡Usa tu dedo para encontrar un camino y luego programarlo!
@@ -9194,21 +8962,15 @@ es-MX:
         courseC_maze_programming_challenge1_a: Hay muchas maneras de llegar al cerdo.
           ¡Usa tu dedo para encontrar un camino y luego programarlo!
       courseC_maze_programming_challenge2_authored_hint:
-        courseC_maze_programming_challenge2_a: '*"If you send me backwards, be extra
-          careful that I turn the correct way!"*'
         courseC_maze_programming_challenge2_b: |-
           La solución más corta usa solo 5 bloques, pero usa este bloque:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
-        courseC_maze_programming_challenge2_a: '*"If you send me backwards, be extra
-          careful that I turn the correct way!"*'
         courseC_maze_programming_challenge2_b: |-
           La solución más corta usa solo 5 bloques, pero usa este bloque:
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
-      courseC_playLab_embedded_authored_hint: {}
       courseC_puppy_loops10_authored_hint:
         courseC_puppy_loops9_1: Necesito mover dos o tres veces entre cada giro.
-      courseC_puppy_loops11_authored_hint: {}
       courseC_puppy_loops8_authored_hint:
         2-3_Maze_Loops_17_a: Trate de pensar sobre este problema en pequeñas partes.
           Tómate tu tiempo. ¡No es necesario resolver en el primer intento!
@@ -9253,10 +9015,6 @@ es-MX:
           **."
         courseC_starWars_loops10_c: "¡No tengas miedo de cometer un error! Ejecute
           el código para ver qué sucede, incluso si aún no ha resuelto el acertijo."
-      courseC_starWars_loops10_predict2_authored_hint: {}
-      courseC_starWars_loops10_predict2_2018_authored_hint: {}
-      courseC_starWars_loops11_authored_hint: {}
-      courseC_starWars_loops11_2018_authored_hint: {}
       courseC_starWars_loops1_2018_authored_hint:
         courseC_starWars_loops1_a: Cuando BB-8 rueda sobre metal lo recoge automaticamente.
         courseC_starWars_loops1_b: "¡No tengas miedo de cometer un error! Ejecute
@@ -9375,11 +9133,6 @@ es-MX:
           <img src = "https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width = "200px" />
         courseD_artist_project1a_b: Estos patrones son muy parecidos a los pasos de
           la escalera de otros acertijos, pero usando un ángulo diferente.
-      courseD_Frozen_nested7_authored_hint:
-        courseD_artist_project2a_a: |
-          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
-
-          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_Frozen_nested8_authored_hint:
         courseD_artist_project3a_a: "¡Puedes elegir diferentes cantidades para rotar
           tu forma! ¿Qué tal 18 veces con un giro de 20 grados en el medio?"
@@ -9397,17 +9150,9 @@ es-MX:
           que "saltar" no.
         courseD_artist_project1_a: "¡Puedes utilizar el menú desplegable en los bloques
           de 'giro' para ver qué ángulo necesitas!"
-      courseD_artist_3_2018_authored_hint: {}
-      courseD_artist_4_2018_authored_hint: {}
       courseD_artist_5_2018_authored_hint:
         '1': "¡Si estás cambiando las formas no olvides que tendrás que cambiar sus
           ángulos también!"
-      courseD_artist_6_2018_authored_hint: {}
-      courseD_artist_7_2018_authored_hint:
-        courseD_artist_project2a_a: |
-          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
-
-          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_8_2018_authored_hint:
         courseD_artist_project3a_a: "¡Puedes elegir diferentes cantidades para rotar
           tu forma! ¿Qué tal 18 veces con un giro de 20 grados en el medio?"
@@ -9415,7 +9160,6 @@ es-MX:
         courseD_artist_project4a_a: |
           Aquí hay dos longitudes diferentes de copo de nieve, dibujadas una tras otra (con un giro de 30 grados en el medio).
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
-      courseD_artist_Template_2018_authored_hint: {}
       courseD_artist_binary1_authored_hint:
         courseD_artist_binary1_a: Reemplace la "???" en el bloque de texto con la
           imagen binaria que quieras, en ceros y unos.
@@ -9451,29 +9195,17 @@ es-MX:
       courseD_artist_binary4_authored_hint:
         courseD_artist_binary4_a: Mira los primeros tres cuadrados en la fila superior.
           ¿Podría repetir estos tres para obtener el patrón completo?
-        courseD_artist_binary4_b: Don't be afraid to make a mistake! Try writing binary
-          and running the code to see what will happen, even if you don't think you've
-          solved the puzzle yet.
       courseD_artist_binary4_2018_authored_hint:
         courseD_artist_binary4_a: Mira los primeros tres cuadrados en la fila superior.
           ¿Podría repetir estos tres para obtener el patrón completo?
-        courseD_artist_binary4_b: Don't be afraid to make a mistake! Try writing binary
-          and running the code to see what will happen, even if you don't think you've
-          solved the puzzle yet.
       courseD_artist_binary5_authored_hint:
         courseD_artist_binary5_a: Intenta ejecutar el código primero para ver con
           qué tienes que trabajar.
         courseD_artist_binary5_b: Solo necesita cambiar dos filas para hacer una sonrisa.
-        courseD_artist_binary5_c: If you are having trouble figuring this puzzle out,
-          try writing the binary lines down on a piece of paper and looking for a
-          pattern.
       courseD_artist_binary5_2018_authored_hint:
         courseD_artist_binary5_a: Intenta ejecutar el código primero para ver con
           qué tienes que trabajar.
         courseD_artist_binary5_b: Solo necesita cambiar dos filas para hacer una sonrisa.
-        courseD_artist_binary5_c: If you are having trouble figuring this puzzle out,
-          try writing the binary lines down on a piece of paper and looking for a
-          pattern.
       courseD_artist_binary6_authored_hint:
         courseD_artist_binary6_a: Comience en la parte superior izquierda. ¿Qué tan
           lejos debe leer antes de que el patrón comience a repetirse?
@@ -9493,9 +9225,6 @@ es-MX:
       courseD_artist_binary7_2018_authored_hint:
         courseD_artist_binary7_a: Comience en la parte superior izquierda. ¿Qué tan
           lejos debe leer antes de que el patrón comience a repetirse?
-        courseD_artist_binary7_b: Don't be afraid to make a mistake! Try writing binary
-          and running the code to see what will happen, even if you don't think you've
-          solved the puzzle yet.
       courseD_artist_binary8_authored_hint:
         courseD_artist_binary8_a: La espiral puede ser confusa a veces. Aísle cada
           línea horizontal en su mente mientras crea este diseño.
@@ -9512,9 +9241,6 @@ es-MX:
         courseD_artist_binary8_c: "¡No tengas miedo de cometer un error! Intenta escribir
           binario y ejecuta el código para ver qué sucederá, incluso si aún no has
           resuelto el acertijo."
-      courseD_artist_binaryFP_authored_hint: {}
-      courseD_artist_binaryFP8_authored_hint: {}
-      courseD_artist_binaryFP_2018_authored_hint: {}
       courseD_artist_binary_challenge2_authored_hint:
         courseD_artist_binary_challenge2_a: Solo hay unas pocas líneas incorrectas
           en el programa original.
@@ -9526,9 +9252,6 @@ es-MX:
           presionar `⟲ Start Over` si comienza a ponerse realmente desordenado. Solo
           hay unas pocas líneas incorrectas en el programa original. Si falla un enfoque,
           haz una copia de seguridad y vuelve a intentarlo. ¡Hay una solucion!
-      courseD_artist_embed_frozen_authored_hint: {}
-      courseD_artist_embed_frozen2_authored_hint: {}
-      courseD_artist_embedded_project1a_authored_hint: {}
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: Este dibujo es muy parecido al último, excepto
           que la función dibuja un tipo diferente de línea.
@@ -9549,8 +9272,6 @@ es-MX:
         courseD_artist_functions4_a: Intenta usar una función!
       courseD_artist_functions5_authored_hint:
         courseD_artist_functions5_a: No te rindas! Recuerda lo que has estado aprendiendo.
-        courseD_artist_functions5_b: Functions make it easy to call saved code at
-          any time, not just from inside a loop!
       courseD_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_a: Concéntrese solo en hacer una ventana
           por ahora. Vamos a crear una función para el siguiente rompecabezas.
@@ -9574,9 +9295,6 @@ es-MX:
         courseD_artist_functions8_c: Debe mover al artista hacia atrás un número de
           píxeles diferente para las líneas pares que para las impares.
       courseD_artist_functions9_authored_hint:
-        courseD_artist_functions9_a: To get around the need to have multiple `move
-          forward` blocks, create a `draw triangle` function and call that multiple
-          times.
         courseD_artist_functions9_b: Este dibujo se hace con la creación de una línea
           de triángulos y girando 60 o 120 grados cada vez que dibuja la línea del
           triángulo.
@@ -9587,8 +9305,6 @@ es-MX:
           de 'repetición' con dos bloques adentro. ¿Qué bloques necesitas?
         courseD_artist_nestedLoops1_c: Trate de escribir los pasos en el papel y en
           busca de patrones que se pueden simplificar con ciclos.
-      courseD_artist_nestedLoops10_authored_hint: {}
-      courseD_artist_nestedLoops10_2018_authored_hint: {}
       courseD_artist_nestedLoops1_2018_authored_hint:
         courseD_artist_nestedLoops1_a: La forma más fácil de dibujar esto es avanzar
           y usar giros a la derecha.
@@ -9600,9 +9316,6 @@ es-MX:
         courseD_artist_nestedLoops1a_a: Deberá dibujar un total de 6 triángulos. Después
           de terminar cada triángulo, gírelo 60 grados y muévalo para comenzar el
           siguiente triángulo. ! [] (https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
-        courseD_artist_nestedLoops1a_b: If you create your triangle with a loop, the
-          artist should be facing the same way as they started. This will make the
-          60 degree turns a lot easier.
         courseD_artist_nestedLoops1a_c: Si quieres colores, utiliza el bloque de 'set
           color' en el código. No es necesario que coincida con los colores de la
           imagen de la plantilla.
@@ -9610,20 +9323,13 @@ es-MX:
         courseD_artist_nestedLoops1a_a: Deberá dibujar un total de 6 triángulos. Después
           de terminar cada triángulo, gírelo 60 grados y muévalo para comenzar el
           siguiente triángulo. ! [] (https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
-        courseD_artist_nestedLoops1a_b: If you create your triangle with a loop, the
-          artist should be facing the same way as they started. This will make the
-          60 degree turns a lot easier.
         courseD_artist_nestedLoops1a_c: Si quieres colores, utiliza el bloque de 'set
           color' en el código. No es necesario que coincida con los colores de la
           imagen de la plantilla.
       courseD_artist_nestedLoops2_authored_hint:
-        courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle
-          code with another `repeat` loop.
         courseD_artist_nestedLoops2_b: Recuerde poner el bloque de 'girar' dentro
           del ciclo para que el artista se giré después de cada triángulo.
       courseD_artist_nestedLoops2_2018_authored_hint:
-        courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle
-          code with another `repeat` loop.
         courseD_artist_nestedLoops2_b: Recuerde poner el bloque de 'girar' dentro
           del ciclo para que el artista se giré después de cada triángulo.
       courseD_artist_nestedLoops3_authored_hint:
@@ -9632,29 +9338,19 @@ es-MX:
           Si tus cuadrados tienen 20 pixeles de alto y están separados 20 pixeles, ¿cuánto necesitas saltar?
         courseD_artist_nestedLoops3_b: 'No te olvides de usar un ciclo anidado para
           resolver este rompecabezas rápidamente. '
-        courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
-          square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops3_2018_authored_hint:
         courseD_artist_nestedLoops3_a: |-
           Intenta usar el bloque "jump forward" para ir desde la parte superior de un cuadrado hasta el lugar donde comenzarás el siguiente.
           Si tus cuadrados tienen 20 pixeles de alto y están separados 20 pixeles, ¿cuánto necesitas saltar?
         courseD_artist_nestedLoops3_b: 'No te olvides de usar un ciclo anidado para
           resolver este rompecabezas rápidamente. '
-        courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
-          square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
-        courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move
-          **before** you turn, or else your circles will be off by the tiniest little
-          amount!
         courseD_artist_nestedLoops4_a: "Para hacer un círculo: - Repite 360 ​​veces
           - Avanza 1 píxel \n- Gira a la izquierda 1 grado"
         courseD_artist_nestedLoops4_b: No te olvides de saltar 50 píxeles entre círculos.
         courseD_artist_nestedLoops4_c: Use un ciclo anidado para dibujar sus círculos
           4 veces.
       courseD_artist_nestedLoops4_2018_authored_hint:
-        courseD_artist_nestedLoops4_d: To solve this correctly, you'll need to move
-          **before** you turn, or else your circles will be off by the tiniest little
-          amount!
         courseD_artist_nestedLoops4_a: "Para hacer un círculo: - Repite 360 ​​veces
           - Avanza 1 píxel \n- Gira a la izquierda 1 grado"
         courseD_artist_nestedLoops4_b: No te olvides de saltar 50 píxeles entre círculos.
@@ -9727,13 +9423,7 @@ es-MX:
           un cuadrado salte 50 píxeles hacia adelante, gire hacia la derecha 45 grados
           Repita 8 veces dibuje un triángulo \nsalte hacia adelante 50 píxeles \ngire
           a la derecha 45 grados"
-      courseD_artist_nestedLoops9_predict1_authored_hint: {}
-      courseD_artist_nestedLoops9_predict1_2018_authored_hint: {}
       courseD_artist_nestedLoopsFP_authored_hint:
-        courseD_artist_nestedLoopsFP_a: |-
-          <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
-
-          This image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.
         courseD_artist_nestedLoopsFP_b: "<img src = \"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\"
           width = \"200px\" /> \n\nEsta imagen se hizo usando un código similar a
           otros niveles que ya has hecho anteriormente, pero con círculos (repita
@@ -9742,10 +9432,6 @@ es-MX:
           width = \"200px\" /> \n\nEsta imagen se hizo usando un único ciclo anidado
           que repite un pentágono (con lados de 50px) 15 veces con un giro de 48 grados."
       courseD_artist_nestedLoopsFP_2018_authored_hint:
-        courseD_artist_nestedLoopsFP_a: |-
-          <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
-
-          This image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.
         courseD_artist_nestedLoopsFP_b: "<img src = \"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\"
           width = \"200px\" /> \n\nEsta imagen se hizo usando un código similar a
           otros niveles que ya has hecho anteriormente, pero con círculos (repita
@@ -9753,22 +9439,13 @@ es-MX:
         courseD_artist_nestedLoopsFP_c: "<img src = \"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\"
           width = \"200px\" /> \n\nEsta imagen se hizo usando un único ciclo anidado
           que repite un pentágono (con lados de 50px) 15 veces con un giro de 48 grados."
-      courseD_artist_nestedLoopsPre1_authored_hint: {}
       courseD_artist_nestedLoops_challenge1_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Start by changing the color to blue,
-          then create an octagon with 50 pixel sides and 45 degree left turns.
-        courseD_artist_nestedLoops_challenge1_b: Add the code to change the color
-          to green, and make a triangle with 50 pixel sides and 120 degree left turns.
         courseD_artist_nestedLoops_challenge1_c: Después de que haya dibujado ambas
           formas, tendrá que saltar 50 píxeles hacia delante antes de girar 90 grados
           hacia la derecha.
         courseD_artist_nestedLoops_challenge1_d: Coloca todo tu código dentro de un
           ciclo `repeat 4 times` para terminarlo.
       courseD_artist_nestedLoops_challenge1_2018_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Start by changing the color to blue,
-          then create an octagon with 50 pixel sides and 45 degree left turns.
-        courseD_artist_nestedLoops_challenge1_b: Add the code to change the color
-          to green, and make a triangle with 50 pixel sides and 120 degree left turns.
         courseD_artist_nestedLoops_challenge1_c: Después de que haya dibujado ambas
           formas, tendrá que saltar 50 píxeles hacia delante antes de girar 90 grados
           hacia la derecha.
@@ -9813,23 +9490,11 @@ es-MX:
           mientras que 'salta adelante' no.
         courseD_artist_project2_b: Después de dibujar y mover la primera vez, puede
           repetir el código agregando un ciclo alrededor del exterior.
-      courseD_artist_project2Template_authored_hint: {}
-      courseD_artist_project2Template_2018_authored_hint: {}
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Recuerda que 'mover adelante' dibuja una línea,
           mientras que 'salta adelante' no.
         courseD_artist_project2_b: Después de dibujar y mover la primera vez, puede
           repetir el código agregando un ciclo alrededor del exterior.
-      courseD_artist_project2a_authored_hint:
-        courseD_artist_project2a_a: |
-          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
-
-          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
-      courseD_artist_project2a_2018_authored_hint:
-        courseD_artist_project2a_a: |
-          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
-
-          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
         courseD_artist_project3_a: "¡Puedes utilizar el menú desplegable en los bloques
           de 'giro' para ver qué ángulo necesitas!"
@@ -9886,9 +9551,6 @@ es-MX:
         courseD_artist_project4_a: |
           Líneas de 2 hexágonos y 4 triángulos:
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
-      courseD_artist_projectTemplate_authored_hint: {}
-      courseD_artist_projectTemplate_2018_authored_hint: {}
-      courseD_artist_project_embedded_authored_hint: {}
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Para dibujar un lado, utilice el bloque `se mueven
           hacia adelante por 100 pixeles `, y cambiar el 100 a un 200.
@@ -9907,8 +9569,6 @@ es-MX:
         courseD_bee_conditionals1_a: Usted tendrá que utilizar un bloque ` si ` para
           comprobar si hay una flor debajo de la nube antes de tratar de obtener el
           néctar.
-      courseD_bee_conditionals10_authored_hint: {}
-      courseD_bee_conditionals10_2018_authored_hint: {}
       courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: Usted tendrá que utilizar un bloque ` si ` para
           comprobar si hay una flor debajo de la nube antes de tratar de obtener el
@@ -9920,11 +9580,6 @@ es-MX:
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_hintVid1: "¿Necesita ayuda para comenzar? ¡Ver el
           vídeo!"
-        courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
-        courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path
-          ahead` to move through this maze.
         courseD_bee_conditionals2_c: No tienes ningún comprobador para panales, solo
           habrá flores o espacios en blanco debajo de las nubes.
         courseD_bee_conditionals2_hintVid2: Mire este video para ayudar a resolver
@@ -9932,11 +9587,6 @@ es-MX:
       courseD_bee_conditionals2_2018_authored_hint:
         courseD_bee_conditionals2_hintVid1: "¿Necesita ayuda para comenzar? ¡Ver el
           vídeo!"
-        courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
-        courseD_bee_conditionals2_b: You can use a `repeat` loop or a `while path
-          ahead` to move through this maze.
         courseD_bee_conditionals2_c: No tienes ningún comprobador para panales, solo
           habrá flores o espacios en blanco debajo de las nubes.
         courseD_bee_conditionals2_hintVid2: Mire este video para ayudar a resolver
@@ -9956,8 +9606,6 @@ es-MX:
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_hintVid1: "¿Necesita ayuda para comenzar? ¡Ver el
           vídeo!"
-        courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
-          space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: Puede utilizar un ciclo de repetición o un ciclo`
           while` para mantener que la abeja se mueva hacia adelante. ¡Usa el que más
           te guste!
@@ -9969,8 +9617,6 @@ es-MX:
       courseD_bee_conditionals3_2018_authored_hint:
         courseD_bee_conditionals3_hintVid1: "¿Necesita ayuda para comenzar? ¡Ver el
           vídeo!"
-        courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each
-          space to see if it has either a flower or nothing.
         courseD_bee_conditionals3_b: Puede utilizar un ciclo de repetición o un ciclo`
           while` para mantener que la abeja se mueva hacia adelante. ¡Usa el que más
           te guste!
@@ -10100,8 +9746,6 @@ es-MX:
         courseD_bee_conditionals8_b: Este enigma es complicado, porque no puedes verificar
           cuadrados en blanco, néctar, * y * miel con solo un único condicional. Sólo
           echa de néctar y la miel al final de su camino.
-        courseD_bee_conditionals8_c: "¿Cómo se puede hacer seguro para viajar hasta
-          el final de cada ruta, no importa cuánto tiempo de camino es?"
         courseD_bee_conditionals8_d: Aunque hay una nube justo frente a ti, no tienes
           que visitarla primero. Intenta comenzar con la nube en la parte inferior
           derecha del cuadrado. ! [] (https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
@@ -10116,15 +9760,11 @@ es-MX:
         courseD_bee_conditionals8_b: Este enigma es complicado, porque no puedes verificar
           cuadrados en blanco, néctar, * y * miel con solo un único condicional. Sólo
           echa de néctar y la miel al final de su camino.
-        courseD_bee_conditionals8_c: "¿Cómo se puede hacer seguro para viajar hasta
-          el final de cada ruta, no importa cuánto tiempo de camino es?"
         courseD_bee_conditionals8_d: Aunque hay una nube justo frente a ti, no tienes
           que visitarla primero. Intenta comenzar con la nube en la parte inferior
           derecha del cuadrado. ! [] (https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: Mire este video para ayudar a resolver
           este rompecabezas.
-      courseD_bee_conditionals9_authored_hint: {}
-      courseD_bee_conditionals9_2018_authored_hint: {}
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: "¿Puedes encontrar un camino que llegue
           a cada flor y panal sin golpear ningún árbol? El mejor camino es una espiral."
@@ -10194,8 +9834,6 @@ es-MX:
       courseD_bee_debugging5_authored_hint:
         courseD_bee_debugging5_a: Comience mirando solo el primer ciclo. ¿Qué hace?
           ¿Qué se supone que haga? ¿Qué te dice eso?
-        courseD_bee_debugging5_b: Una vez que tiene el primer ciclo, ¿cómo quiere
-          qué quede en su código?
         courseD_bee_debugging5_c: |-
           Intente envolver el ciclo sobrante alrededor del resto de su código completo. ¿funciona ahora?
 
@@ -10226,7 +9864,6 @@ es-MX:
           \   \n\n! [] (https://images.code.org/d3dfd710961b9ff8571816a97d76ae46-image-1501012931437.59.18.png)
           ¿Puedes construir cualquiera de estos con lo que está en el área de trabajo
           y en la caja de herramientas?\n\n"
-      courseD_bee_debugging9_predict1_authored_hint: {}
       courseD_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: "¿Por qué funciona la primera mitad de
           este programa? Piensa por qué la abeja necesita moverse hacia atrás. ¿Cuánto
@@ -10251,8 +9888,6 @@ es-MX:
         courseD_bee_debugging_challenge1_a: "¿Por qué funciona la primera mitad de
           este programa? Piensa por qué la abeja necesita moverse hacia atrás. ¿Cuánto
           néctar recoge la abeja cada vez que se mueve sobre una flor?"
-        courseD_bee_debugging_challenge1_b: Para resolver este enigma, haga que la
-          abeja siga el mismo patrón para hacer miel que cuando recolecta néctar.
         courseD_bee_debugging_challenge1_c: |-
           Después de que la abeja llegue a la fila inferior, haga que repita estos comandos:
           <xml><block type="controls_repeat">
@@ -10284,15 +9919,11 @@ es-MX:
       courseD_bee_nestedLoops1_authored_hint:
         courseD_bee_nestedLoops1_a: ¿No funciona? Intenta usar el botón "Paso" para
           ver lo que sucede línea por línea.
-        courseD_bee_nestedLoops1_b: Intenta escribir código para un lado del cuadrado
-          primero. ¿Puedes repetir esto para obtener todo el néctar?
         courseD_bee_nestedLoops1_c: Recuerda usar el bloque `obtener néctar` una vez
           que estés en un cuadrado con una flor.
       courseD_bee_nestedLoops1_2018_authored_hint:
         courseD_bee_nestedLoops1_a: ¿No funciona? Intenta usar el botón "Paso" para
           ver lo que sucede línea por línea.
-        courseD_bee_nestedLoops1_b: Intenta escribir código para un lado del cuadrado
-          primero. ¿Puedes repetir esto para obtener todo el néctar?
         courseD_bee_nestedLoops1_c: Recuerda usar el bloque `obtener néctar` una vez
           que estés en un cuadrado con una flor.
       courseD_bee_nestedLoops1a_authored_hint:
@@ -10319,8 +9950,6 @@ es-MX:
           Trate de escribir el código en el papel paso a paso y buscar un patrón."
         courseD_bee_nestedLoops2_c: Recuerde que puede poner más de un bloque dentro
           de un ciclo.
-      courseD_bee_nestedLoops2_predict1_authored_hint: {}
-      courseD_bee_nestedLoops2_predict1_2018_authored_hint: {}
       courseD_bee_nestedLoops3_authored_hint:
         grade4_bee_nestedLoops1_a: Si no entiende cómo usar los ciclos anidados aquí,
           intente escribir las instrucciones paso a paso en un pedazo de papel. Encierra
@@ -10332,14 +9961,11 @@ es-MX:
         grade4_bee_nestedLoops4_b: Necesitarás un ciclo anidado para avanzar y obtener
           néctar, pero solo un ciclo para recolectar miel al final. En total, deberías
           usar 3 ciclos.
-      courseD_bee_nestedLoops6_authored_hint: {}
       courseD_bee_nestedLoops6_2018_authored_hint:
         courseD_maze_nestedLoops6_a: Si estas atorado, intenta escribir el código
           sin ciclos primero y busca patrones.
         courseD_maze_nestedLoops6_b: Poner un ciclo de repetición dentro de otro puede
           ayudar a disminuir la cantidad de bloques utilizados.
-        courseD_maze_nestedLoops6_c: Tomará dos conjuntos de ciclos 'repetir´anidados
-          para resolver este acertijo.
       courseD_bee_nestedLoops7_authored_hint:
         courseD_bee_nestedLoops7_a: Necesitarás repetir `obtener néctar` dentro de
           otra repetición que también tenga el bloque `avanzar` dentro de ella.
@@ -10358,12 +9984,6 @@ es-MX:
           3 - repite 12 - obtén néctar - avanza - gira a la derecha
 
 '
-      courseD_bee_nestedLoops8_authored_hint: {}
-      courseD_bee_nestedLoops8_2018_authored_hint: {}
-      courseD_bee_nestedLoops9_authored_hint: {}
-      courseD_bee_nestedLoops9_2018_authored_hint: {}
-      courseD_bee_nestedLoops9_predict2_authored_hint: {}
-      courseD_bee_nestedLoops9_predict2_2018_authored_hint: {}
       courseD_bee_nested_loops_challenge1_authored_hint:
         courseD_bee_nested_loops_challenge2_a: No olvide que puede `repetir` un solo
           comando o un patrón más largo. Incluso se puede `` repetir` un repetir`
@@ -10373,8 +9993,6 @@ es-MX:
           use un ciclo anidado para pasar de la primera pila de tesoros a la segunda.
           Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor
           de la * cueva completa *!
-        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo
-          el tesoro usa solo un bloque `colectar` y dos turnos.
       courseD_bee_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: No olvide que puede `repetir` un solo
           comando o un patrón más largo. Incluso se puede `` repetir` un repetir`
@@ -10484,8 +10102,6 @@ es-MX:
         courseD_bounce_events7s_a: "¡Puedes agregar sonidos en más lugares si te apetece!"
       courseD_bounce_events7s_2018_authored_hint:
         courseD_bounce_events7s_a: "¡Puedes agregar sonidos en más lugares si te apetece!"
-      courseD_bounce_events_template_authored_hint: {}
-      courseD_bounce_events_template_2018_authored_hint: {}
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: Use el botón "Paso" para ver si todo está
           bien en el primer paso. ¿Qué tal el segundo? ¿Dónde va mal?
@@ -10539,13 +10155,9 @@ es-MX:
       courseD_collector_debugging2a_authored_hint:
         courseD_collector_debugging2a_a: Use el botón "Paso" para ver si todo está
           bien en el primer paso. ¿Qué tal el segundo? ¿Dónde va mal?
-        courseD_collector_debugging2a_c: "¿Lo que pasa? ¿Qué se supone que va a pasar?
-          ¿Qué te dice eso?"
       courseD_collector_debugging2a_2018_authored_hint:
         courseD_collector_debugging2a_a: Use el botón "Paso" para ver si todo está
           bien en el primer paso. ¿Qué tal el segundo? ¿Dónde va mal?
-        courseD_collector_debugging2a_c: "¿Lo que pasa? ¿Qué se supone que va a pasar?
-          ¿Qué te dice eso?"
       courseD_collector_debugging3_authored_hint:
         courseD_collector_debugging3_a: "¿Hay algún lugar donde Laurel haga algo que
           no tiene sentido? ¿Qué pasa cuando cambias esos bloques?"
@@ -10601,13 +10213,9 @@ es-MX:
       courseD_collector_debugging5_authored_hint:
         courseD_collector_debugging5_a: Comience mirando solo el primer ciclo. ¿Qué
           hace? ¿Qué se supone que haga? ¿Qué te dice eso?
-        courseD_collector_debugging5_b: Una vez que tiene el primer ciclo, ¿cómo quiere
-          qué quede en su código?
       courseD_collector_debugging5_2018_authored_hint:
         courseD_collector_debugging5_a: Comience mirando solo el primer ciclo. ¿Qué
           hace? ¿Qué se supone que haga? ¿Qué te dice eso?
-        courseD_collector_debugging5_b: Una vez que tiene el primer ciclo, ¿cómo quiere
-          qué quede en su código?
       courseD_collector_debugging5a_authored_hint:
         courseD_collector_debugging5a_a: "¿Qué hace? ¿Qué se supone que haga? ¿Qué
           te dice eso?"
@@ -10664,8 +10272,6 @@ es-MX:
           un ciclo?"
         courseD_collector_debugging8_b: Trate de usar un ciclo anidado para hacer
           el código más corto.
-      courseD_collector_debugging8a_authored_hint: {}
-      courseD_collector_debugging8a_2018_authored_hint: {}
       courseD_collector_debugging9_authored_hint:
         courseD_collector_debugging9_a: Hay varias formas de resolver este problema...
           ¡pero todas involucran giros!
@@ -10678,8 +10284,6 @@ es-MX:
         courseD_collector_debugging9_b: Averigua cómo resolverías el acertijo, luego
           muévete paso a paso para intentar que el código coincida con lo que tienes
           en la cabeza.
-      courseD_collector_debugging9a_authored_hint: {}
-      courseD_collector_debugging9a_2018_authored_hint: {}
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_a: "Comience recogiendo solo ** dos
           ** gemas de cada una de las primeras ** dos ** pilas . ! [] (https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
@@ -10883,8 +10487,6 @@ es-MX:
           use un ciclo anidado para pasar de la primera pila de tesoros a la segunda.
           Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor
           de la * cueva completa *!
-        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo
-          el tesoro usa solo un bloque `colectar` y dos turnos.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solución:**
           <xml>
@@ -10947,14 +10549,6 @@ es-MX:
         courseD_collector_nested_loops_challenge2a_b: "¿Puedes descubrir cómo obtener
           las cuatro gemas sin usar más bloques de los necesarios para obtener dos?"
       courseD_collector_ramp10_authored_hint:
-        courseD_artist_ramp10_a: |-
-          Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
-          <xml><block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          </block></xml>
         courseD_artist_ramp10_b: "¡No te olvides de recoger una pieza del tesoro,
           luego gire para comenzar en un nuevo lado de la plaza!"
         courseD_artist_ramp10_c: Si quiere simplificar su código, ¡puede poner un
@@ -10971,7 +10565,6 @@ es-MX:
           luego recójalo. ¿Puedes repetir esta secuencia para obtener el segundo montón?
         courseD_collector_ramp9_b: Si quiere simplificar su código, ¡puede poner un
           ciclo de repetición dentro de otro! Esto se llama un ** ciclo anidado **.
-      courseD_collector_until_challenge1_authored_hint: {}
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: Use el botón "Paso" para ver si todo está bien en el
           primer paso. ¿Qué tal el segundo? ¿Dónde va mal?
@@ -10996,8 +10589,6 @@ es-MX:
       courseD_debugging_5_authored_hint:
         courseD_debugging_5_a: Comience mirando solo el primer ciclo. ¿Qué hace? ¿Qué
           se supone que haga? ¿Qué te dice eso?
-        courseD_debugging_5_b: Una vez que tiene el primer ciclo, ¿cómo quiere qué
-          quede en su código?
         courseD_debugging_5_c: |-
           Intente envolver el ciclo sobrante alrededor del resto de su código completo. ¿funciona ahora?
 
@@ -11008,20 +10599,9 @@ es-MX:
         courseD_debugging_6_b: Parece que todos los pasos correctos están aquí, solo
           necesita más de ellos. ¿Cómo puedes repetir las acciones `get néctar` y`
           make honey` varias veces?
-      courseD_external_cond_authored_hint: {}
-      courseD_farmer_condLoops1_authored_hint:
-        courseD_farmer_condLoops1_a: Usted tendrá que buscar para el maíz 5 veces,
-          utilizando una repetición del ciclo.
-        courseD_farmer_condLoops1_b: Asegúrese de usar un bloque de 'si en maíz'!
-      courseD_farmer_condLoops1_2018_authored_hint:
-        courseD_farmer_condLoops1_a: Usted tendrá que buscar para el maíz 5 veces,
-          utilizando una repetición del ciclo.
-        courseD_farmer_condLoops1_b: Asegúrese de usar un bloque de 'si en maíz'!
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: 'La mejor manera de hacer esto es anidar las
           declaraciones de ''si'' ubicando uno dentro del otro.  '
-        courseD_farmer_condLoops2_b: Para este rompecabezas, usted debe tener una
-          ' si / else` declaración y uno sencillo ` si ` comunicado.
         courseD_farmer_condLoops2_c: "Su declaración` si '  podría parecerse mucho
           a esto: \n- Si en el maíz\n - la recolección de maíz - cosa\n - si en la
           lechuga\n \\ t - recoger lechugas\n\n Si no hay nada allí, no comprar alguna
@@ -11029,8 +10609,6 @@ es-MX:
       courseD_farmer_condLoops2_2018_authored_hint:
         courseD_farmer_condLoops2_a: 'La mejor manera de hacer esto es anidar las
           declaraciones de ''si'' ubicando uno dentro del otro.  '
-        courseD_farmer_condLoops2_b: Para este rompecabezas, usted debe tener una
-          ' si / else` declaración y uno sencillo ` si ` comunicado.
         courseD_farmer_condLoops2_c: "Su declaración` si '  podría parecerse mucho
           a esto: \n- Si en el maíz\n - la recolección de maíz - cosa\n - si en la
           lechuga\n \\ t - recoger lechugas\n\n Si no hay nada allí, no comprar alguna
@@ -11040,15 +10618,11 @@ es-MX:
           declaraciones ' if ' tres profundas. Esto significa que debe poner un `
           si ' declaración dentro de otro, a continuación, poner una tercera` si '
           declaración dentro de la segunda.
-        courseD_farmer_condLoops3_b: Para este rompecabezas, usted debe tener dos
-          ` if/ else` declaraciones y una llanura` if ` comunicado.
       courseD_farmer_condLoops3_2018_authored_hint:
         courseD_farmer_condLoops3_a: Para obtener todos los elementos, intente anidar
           declaraciones ' if ' tres profundas. Esto significa que debe poner un `
           si ' declaración dentro de otro, a continuación, poner una tercera` si '
           declaración dentro de la segunda.
-        courseD_farmer_condLoops3_b: Para este rompecabezas, usted debe tener dos
-          ` if/ else` declaraciones y una llanura` if ` comunicado.
       courseD_farmer_condLoops4_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: Nadie sabe cuántas cabezas
           de lechuga crecerá de cada brote. Utilizar un ciclo 'mientras hay lechuga'
@@ -11072,21 +10646,11 @@ es-MX:
           de lechuga crecerá de cada brote. Utiliza un ciclo 'mientras hay lechuga'
           para seguir recogiendo hasta que cada pieza haya sido recolectada.
       courseD_farmer_condLoops5_authored_hint:
-        courseD_farmer_condLoops5_a: 'Hay un nuevo ciclo: `repetir calabaza ''. ¿Puedes
-          ver cómo usarlo en este rompecabezas?'
         courseD_farmer_condLoops5_b: Podría haber más de una planta de maíz o lechuga
           en cada lugar. Utilizar un ciclo `while`para reunir todos ellos!
       courseD_farmer_condLoops5_2018_authored_hint:
-        courseD_farmer_condLoops5_a: 'Hay un nuevo ciclo: `repetir calabaza ''. ¿Puedes
-          ver cómo usarlo en este rompecabezas?'
         courseD_farmer_condLoops5_b: Podría haber más de una planta de maíz o lechuga
           en cada lugar. Utilizar un ciclo `while`para reunir todos ellos!
-      courseD_farmer_condLoops6_authored_hint:
-        courseD_farmer_condLoops6_a: Utilizar un ciclo «mientras camino por delante»
-          para mover al agricultor hacia abajo en cada parte de la espiral.
-        courseD_farmer_condLoops6_b: Sólo necesita el control del maíz durante la
-          mayor parte de la cosecha. Sólo debes elegir una calabaza al final de su
-          programa.
       courseD_farmer_condLoops6_2018_authored_hint:
         courseD_farmer_condLoops6_a: Utilizar un ciclo «mientras camino por delante»
           para mover al agricultor hacia abajo en cada parte de la espiral.
@@ -11103,12 +10667,6 @@ es-MX:
           llegar a todos los cultivos sigue siendo una espiral. ! [] (https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
         courseD_farmer_condLoops7_b: Intente usar `cuando camino adelante` para mantener
           la cosechadora moviéndose el número correcto de pasos.
-      courseD_farmer_condLoops8_authored_hint: {}
-      courseD_farmer_condLoops8_2018_authored_hint: {}
-      courseD_farmer_condLoops9_authored_hint: {}
-      courseD_farmer_condLoops9_2018_authored_hint: {}
-      courseD_farmer_condLoops9_predict1_authored_hint: {}
-      courseD_farmer_condLoops9_predict1_2018_authored_hint: {}
       courseD_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: El botón "Paso" podría ser muy útil
           en este desafío.
@@ -11127,8 +10685,6 @@ es-MX:
       courseD_farmer_condLoops_challenge2_2018_authored_hint:
         courseD_farmer_condLoops_challenge2_a: La cantidad de cada vegetal en cada
           espacio puede cambiar. Un ciclo `while` puede ayudar!
-      courseD_farmer_condLoops_challenge2_clone_authored_hint: {}
-      courseD_farmer_conditionals10_authored_hint: {}
       courseD_farmer_conditionals4_authored_hint:
         courseD_farmer_conditionals4_a: En lugar de utilizar un ciclo de`repetición`,
           utilizar un ciclo` while` para mantener la excavación hasta que la pila
@@ -11146,23 +10702,11 @@ es-MX:
           seguir, incluso si no sabes cuántos cuadrados hay en una ruta.
       courseD_farmer_conditionals8_authored_hint:
         courseD_farmer_conditionals8_a: Usted va a tener que utilizar más de un ciclo`while`.
-        courseD_farmer_conditionals8_b: Cada hoyo se encuentra al final de un camino,
-          por lo que debes utilizar `while antes de usar` antes de usar` mientras
-          hay un hoyo `.
-        courseD_farmer_conditionals8_c: Tenga en cuenta que necesita repetir el `while
-          camino por delante`,` mientras que hay un hoyo `seis veces.
-      courseD_farmer_conditionals9_authored_hint: {}
-      courseD_farmer_until_challenge2_authored_hint: {}
-      courseD_farmer_until_challenge2_2018_authored_hint: {}
       courseD_farmer_while1_authored_hint:
         courseD_farmer_while1_a: Tendrá que avanzar cuatro veces para llegar a la
           pila. ¿Puedes usar un ciclo de 'repetición' para esto?
         courseD_farmer_while1_b: Usa el bloque `quita 1` cuando estés parado en la
           pila de tierra para quitarlo.
-      courseD_farmer_while10_authored_hint: {}
-      courseD_farmer_while10_2018_authored_hint: {}
-      courseD_farmer_while10_predict2_authored_hint: {}
-      courseD_farmer_while10_predict2_2018_authored_hint: {}
       courseD_farmer_while1_2018_authored_hint:
         courseD_farmer_while1_a: Tendrá que avanzar cuatro veces para llegar a la
           pila. ¿Puedes usar un ciclo de 'repetición' para esto?
@@ -11196,8 +10740,6 @@ es-MX:
           se ha ido.
         courseD_farmer_conditionals4_b: Esto se ve muy similar a un rompecabezas anterior,
           la única diferencia es qué ciclo necesita.
-      courseD_farmer_while4_predict1_authored_hint: {}
-      courseD_farmer_while4_predict1_2018_authored_hint: {}
       courseD_farmer_while5_authored_hint:
         courseD_farmer_conditionals5a_a: Trate de anidar un ciclo `while` en el interior
           de un ciclo de repetición.
@@ -11219,21 +10761,11 @@ es-MX:
           'while' y averiguare cuántas veces lo necesita para llenar cada agujero.
         courseD_farmer_conditionals6_b: Observe que el agricultor necesita avanzar
           y descender varias veces en un patrón de escalera.
-        courseD_farmer_conditionals6_c: |
-          El patrón de escalón de escalera utiliza los siguientes bloques:
-           avance hacia adelante, orificio de llenado, gire hacia la derecha, avance hacia adelante, orificio de llenado, gire hacia la izquierda. ¿Cuántas veces necesita usar este patrón de escalón de escalera?
-
-          Hacer seguro de que está utilizando el `mientras que hay un agujero ` para llenar el agujero.
       courseD_farmer_while6_2018_authored_hint:
         courseD_farmer_conditionals6_a: Asegúrese de que esté utilizando el ciclo
           'while' y averiguare cuántas veces lo necesita para llenar cada agujero.
         courseD_farmer_conditionals6_b: Observe que el agricultor necesita avanzar
           y descender varias veces en un patrón de escalera.
-        courseD_farmer_conditionals6_c: |
-          El patrón de escalón de escalera utiliza los siguientes bloques:
-           avance hacia adelante, orificio de llenado, gire hacia la derecha, avance hacia adelante, orificio de llenado, gire hacia la izquierda. ¿Cuántas veces necesita usar este patrón de escalón de escalera?
-
-          Hacer seguro de que está utilizando el `mientras que hay un agujero ` para llenar el agujero.
       courseD_farmer_while7_authored_hint:
         courseD_farmer_conditionals8_a: El bloque `camino por delante` te permite
           seguir, incluso si no sabes cuántos cuadrados hay en una ruta.
@@ -11248,20 +10780,8 @@ es-MX:
         courseD_farmer_conditionals8_c: "¿Qué necesitas hacer al final de cada ruta?"
       courseD_farmer_while8_authored_hint:
         courseD_farmer_conditionals8_a: Usted va a tener que utilizar más de un ciclo`while`.
-        courseD_farmer_conditionals8_b: Cada hoyo se encuentra al final de un camino,
-          por lo que debes utilizar `while antes de usar` antes de usar` mientras
-          hay un hoyo `.
-        courseD_farmer_conditionals8_c: Tenga en cuenta que necesita repetir el `while
-          camino por delante`,` mientras que hay un hoyo `seis veces.
       courseD_farmer_while8_2018_authored_hint:
         courseD_farmer_conditionals8_a: Usted va a tener que utilizar más de un ciclo`while`.
-        courseD_farmer_conditionals8_b: Cada hoyo se encuentra al final de un camino,
-          por lo que debes utilizar `while antes de usar` antes de usar` mientras
-          hay un hoyo `.
-        courseD_farmer_conditionals8_c: Tenga en cuenta que necesita repetir el `while
-          camino por delante`,` mientras que hay un hoyo `seis veces.
-      courseD_farmer_while9_authored_hint: {}
-      courseD_farmer_while9_2018_authored_hint: {}
       courseD_farmer_while_challenge1_authored_hint:
         courseD_farmer_while_challenge1_a: Cada hoyo o pila se encuentra un espacio
           ** hacia atrás ** desde el final de la ruta.
@@ -11347,7 +10867,6 @@ es-MX:
           a la bellota. ¿Ves un patrón?
         courseD_iceage_loops4_c: Este es el camino que Scrat deberia tomar.
       courseD_iceage_loops6_authored_hint:
-        courseD_iceage_loops6_a: Tu código final tendrá ** tres ** bloques de movimiento.
         courseD_iceage_loops6_b: "¡Solo necesita agregar un ciclo más!"
         courseD_iceage_loops6_c: La ruta final debe verse así.
       courseD_iceage_loops7_authored_hint:
@@ -11356,8 +10875,6 @@ es-MX:
         courseB_iceage_loops7_b: Este es el camino que Scrat debe tomar para llegar
           a la bellota.
       courseD_iceage_loops8_authored_hint:
-        courseD_iceage_loops8_a: "¿Los bloques de movimiento son correctos? ¿Qué más
-          puedes cambiar?"
         courseD_iceage_loops8_b: El primer ciclo deberia repetirse **3** veces, el
           segundo **5** veces, el cuarto **4** veces, y el último **4** veces.
         courseD_iceage_loops8_c: Utiliza ciclos para ayudar a Scrat a que siga este
@@ -11376,8 +10893,6 @@ es-MX:
           use un ciclo anidado para pasar de la primera pila de tesoros a la segunda.
           Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor
           de la * cueva completa *!
-        courseD_bee_nested_loops_challenge1_c: El programa más corto que alcanza todo
-          el tesoro usa solo un bloque `colectar` y dos turnos.
       courseD_maze_nestedLoops3_authored_hint:
         courseD_maze_nestedLoops3_a: Para resolver este acertijo, deberá anidar un
           ciclo de 'repetición' dentro de otro.
@@ -11427,15 +10942,11 @@ es-MX:
           sin ciclos primero y busca patrones.
         courseD_maze_nestedLoops6_b: Poner un ciclo de repetición dentro de otro puede
           ayudar a disminuir la cantidad de bloques utilizados.
-        courseD_maze_nestedLoops6_c: Tomará dos conjuntos de ciclos 'repetir´anidados
-          para resolver este acertijo.
       courseD_maze_nestedLoops6_2018_authored_hint:
         courseD_maze_nestedLoops6_a: Si estas atorado, intenta escribir el código
           sin ciclos primero y busca patrones.
         courseD_maze_nestedLoops6_b: Poner un ciclo de repetición dentro de otro puede
           ayudar a disminuir la cantidad de bloques utilizados.
-        courseD_maze_nestedLoops6_c: Tomará dos conjuntos de ciclos 'repetir´anidados
-          para resolver este acertijo.
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_a: Si el pájaro no está llegando al cerdo, asegurate
           de que los bloques están totalmente juntos, a continuación, y haz clic en
@@ -11444,9 +10955,6 @@ es-MX:
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
       courseD_maze_ramp1_2018_authored_hint:
-        courseC_maze_programming1_a: If the bird isn't getting to the pig, make sure
-          all three of the blocks have been fully clicked together, then click "Run"
-          again.
         courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
@@ -11454,13 +10962,6 @@ es-MX:
         courseC_maze_programming2_a: Para usar un bloque 'avanzar', arrástralo desde
           el área de la barra de herramientas al espacio de trabajo y conéctalo al
           bloque`al ejecutar`.
-        courseC_maze_programming2_b: Asegúrate de que los 3 bloques estan embonados
-          y unidos al bloque 'al ejecutar'.
-      courseD_maze_ramp2_2018_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
-        courseC_maze_programming2_b: Asegúrate de que los 3 bloques estan embonados
-          y unidos al bloque 'al ejecutar'.
       courseD_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
           \n\nPara eliminar un bloque del medio de su código, arrastra todos los bloques
@@ -11482,12 +10983,6 @@ es-MX:
         courseC_maze_programming4_b: Para seguir el camino, avanza y gira en un sentido,
           luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
           para alcanzar al cerdo.
-      courseD_maze_ramp4_2018_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point
-          of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one
-          way, then move again and turn the opposite way. Move forward one more time
-          to reach the pig.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Intente usar el botón "Paso" para ejecutar su
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
@@ -11536,10 +11031,6 @@ es-MX:
         courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
-      courseD_maze_ramp5c_authored_hint: {}
-      courseD_maze_ramp5c_2018_authored_hint: {}
-      courseD_maze_ramp5d_authored_hint: {}
-      courseD_maze_ramp5d_2018_authored_hint: {}
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseC_maze_programming6_b: El pájaro comienza mirando a la pared, ¡así que
@@ -11558,29 +11049,17 @@ es-MX:
         courseD_maze_ramp7_c: Si quiere simplificar su código, ¡puede poner un ciclo
           de repetición dentro de otro! Esto se llama un ** ciclo anidado **.
       courseD_maze_until1_authored_hint:
-        courseD_maze_until1_a: "¿Existen secuencias que puedas ciclar para hacer tu
-          código más corto?"
         courseD_maze_until1_b: Intenta usar un ciclo anidado para resolver este acertijo.
-      courseD_maze_until10_authored_hint: {}
-      courseD_maze_until10_2018_authored_hint: {}
-      courseD_maze_until10_predict2_authored_hint: {}
-      courseD_maze_until10_predict2_2018_authored_hint: {}
       courseD_maze_until1_2018_authored_hint:
-        courseD_maze_until1_a: "¿Existen secuencias que puedas ciclar para hacer tu
-          código más corto?"
         courseD_maze_until1_b: Intenta usar un ciclo anidado para resolver este acertijo.
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: "¡Un ciclo 'hasta puerco' te ayudara a seguir hasta
           lograrlo!"
-      courseD_maze_until2_predict1_authored_hint: {}
-      courseD_maze_until2_predict1_2018_authored_hint: {}
       courseD_maze_until3_authored_hint:
         courseD_maze_until3_a: "- ¿Qué hace el código? \n- ¿Qué se supone que haga?
           \n- ¿Qué te dice eso?"
         courseD_maze_until3_b: Si te estas atorando, intenta escribir todos los pasos
           en una hoja de papel y buscar donde se repiten.
-        courseD_maze_until3_c: "¿Hay un patrón de escaleras que puedas seguir para
-          este acertijo?"
         courseD_maze_until3_d: No olvides usar el ciclo ´repetir hasta´para hacer
           tu código más corto.
       courseD_maze_until3_2018_authored_hint:
@@ -11588,8 +11067,6 @@ es-MX:
           \n- ¿Qué te dice eso?"
         courseD_maze_until3_b: Si te estas atorando, intenta escribir todos los pasos
           en una hoja de papel y buscar donde se repiten.
-        courseD_maze_until3_c: "¿Hay un patrón de escaleras que puedas seguir para
-          este acertijo?"
         courseD_maze_until3_d: No olvides usar el ciclo ´repetir hasta´para hacer
           tu código más corto.
       courseD_maze_until4_authored_hint:
@@ -11599,8 +11076,6 @@ es-MX:
           - ¿Todo funciona en el primer paso?
           - ¿Todo funciona en el segundo paso?
           - ¿Dónde ocurre el error?
-        courseD_maze_until4_b: "¿Hay un patrón de escaleras que puedas seguir para
-          este acertijo?"
         courseD_maze_until4_c: No olvides usar el ciclo ´repetir hasta´para hacer
           tu código más corto.
       courseD_maze_until4_2018_authored_hint:
@@ -11610,8 +11085,6 @@ es-MX:
           - ¿Todo funciona en el primer paso?
           - ¿Todo funciona en el segundo paso?
           - ¿Dónde ocurre el error?
-        courseD_maze_until4_b: "¿Hay un patrón de escaleras que puedas seguir para
-          este acertijo?"
         courseD_maze_until4_c: No olvides usar el ciclo ´repetir hasta´para hacer
           tu código más corto.
       courseD_maze_until5_authored_hint:
@@ -11661,8 +11134,6 @@ es-MX:
         courseD_maze_until8_c: 'Con su bloque ` if / else`: si no hay un camino por
           delante, ¿en qué dirección debe girar?'
       courseD_maze_until9_authored_hint:
-        courseD_maze_until8_a: Si usas ` if camino adelante` te mantendrá adelante
-          siempre que sea posible, ayudándote a perder los caminos con chompers.
         courseD_maze_until8_b: "¿En qué dirección debes girar si no hay un camino
           hacia adelante?"
         courseD_maze_until8_c: Recuerda usar el bloque `repetir hasta` para llevarte
@@ -11670,11 +11141,6 @@ es-MX:
       courseD_maze_until9_2018_authored_hint:
         courseD_maze_until8_c: Recuerda usar el bloque `repetir hasta` para llevarte
           al girasol!
-      courseD_maze_until_challenge_authored_hint: {}
-      courseD_maze_until_challenge1-delete-this-copy_authored_hint: {}
-      courseD_maze_until_challenge1_authored_hint: {}
-      courseD_maze_until_challenge1_2018_authored_hint: {}
-      courseD_maze_until_challenge2_authored_hint: {}
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: Para resolver este problema, coloque el bloque de
           'subir el actor 1' el evento 'cuando flecha arriba' y, a continuación, haga
@@ -11691,12 +11157,6 @@ es-MX:
           y 'mover el agente' para cambiar la dirección en que van.
         courseD_playLab_cond1_c: Recuerde mover a Pegleg a ambas banderas una vez
           que haga clic en "Ejecutar"!
-      courseD_playLab_cond2_authored_hint:
-        courseD_playLab_cond2_a: Para tener éxito con este rompecabezas, usar el bloque
-          puntuación de punto de la 'cuando el actor 1 toque 2' evento de actor.
-      courseD_playLab_cond2_2018_authored_hint:
-        courseD_playLab_cond2_a: Para tener éxito con este rompecabezas, usar el bloque
-          puntuación de punto de la 'cuando el actor 1 toque 2' evento de actor.
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: Usted tendrá que agregar dos bloques a su ciclo 'repite
           por siempre'. Uno elegirá una emoción al azar para el dragón (actor 2) y
@@ -11732,27 +11192,17 @@ es-MX:
         courseD_playLab_cond4_c: Poner el bloque `final del juego como una pérdida`
           debajo del actor de 1 toque` cuando el actor 3` evento.
       courseD_playLab_cond5_authored_hint:
-        courseD_playLab_cond5_a: Utilizar un ` si ` comunicado que compara si `` score`
-          es> `5 de resolver este desafío.
         courseD_playLab_cond5_b: Puede tener más de un ciclo ` repita siempre ` en
           el espacio de trabajo.
       courseD_playLab_cond5_2018_authored_hint:
-        courseD_playLab_cond5_a: Utilizar un ` si ` comunicado que compara si `` score`
-          es> `5 de resolver este desafío.
         courseD_playLab_cond5_b: Puede tener más de un ciclo ` repita siempre ` en
           el espacio de trabajo.
       courseD_playLab_cond6_authored_hint:
         courseD_playLab_cond6_a: Agrega el bloque ` establecer velocidad de ninja
           enmascarada` al comienzo del programa para ayudar a frenar al ninja.
-        courseD_playLab_cond6_b: Usted tendrá que utilizar un ` si el actor 1 y la
-          posición> 255` bloque dentro de un` repita siempre ` para comprobar siempre
-          si el pirata es por debajo de los pulpos.
       courseD_playLab_cond6_2018_authored_hint:
         courseD_playLab_cond6_a: Agrega el bloque ` establecer velocidad de ninja
           enmascarada` al comienzo del programa para ayudar a frenar al ninja.
-        courseD_playLab_cond6_b: Usted tendrá que utilizar un ` si el actor 1 y la
-          posición> 255` bloque dentro de un` repita siempre ` para comprobar siempre
-          si el pirata es por debajo de los pulpos.
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: Agregar un bloque 'espere 1 segundo' en la parte
           superior del ciclo 'repetir por siempre' que comprueba la posición del pirata
@@ -11773,21 +11223,11 @@ es-MX:
           superior del ciclo 'repetir por siempre' que comprueba la posición del pirata
           (pero no dentro de la instrucción 'si') para evitar que los puntos se eliminen
           muy rápidamente.
-      courseD_playLab_embed_cond6a_authored_hint: {}
-      courseD_playLab_embedded_authored_hint: {}
-      courseD_scrat_predict1_authored_hint: {}
-      courseD_scrat_predict1_2018_authored_hint: {}
       courseD_scrat_ramp1_authored_hint:
-        courseC_maze_programming1_a: Si Scrat no es llegar a la bellota, asegura que
-          los tres bloques han sido totalmente encajados, a continuación, haga clic
-          en "Ejecutar" de nuevo.
         courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
       courseD_scrat_ramp1_2018_authored_hint:
-        courseC_maze_programming1_a: Si Scrat no es llegar a la bellota, asegura que
-          los tres bloques han sido totalmente encajados, a continuación, haga clic
-          en "Ejecutar" de nuevo.
         courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
@@ -11798,8 +11238,6 @@ es-MX:
         courseC_maze_programming2_b: Hacer que los tres bloques`movimiento adelante`
           estén unidos al bloque` cuando corra`.
       courseD_scrat_ramp2_2018_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
         courseC_maze_programming2_b: Hacer que los tres bloques`movimiento adelante`
           se encuentren unidos al bloque`` cuando corra`.
       courseD_scrat_ramp3_authored_hint:
@@ -11854,12 +11292,6 @@ es-MX:
           a la esquina?"
         courseC_maze_programming5_c: Tendrá que girar a la izquierda en la esquina
           para llegar a la bellota.
-      courseD_scrat_ramp6_authored_hint:
-        courseC_maze_programming6a_a: Utilizar un ciclo de repetición para obtener
-          Scrat en movimiento!
-      courseD_scrat_ramp6_2018_authored_hint:
-        courseC_maze_programming6a_a: Utilizar un ciclo de repetición para obtener
-          Scrat en movimiento!
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseD_scrat_programming6_b: Recuerde girar primero antes de moverse, ya
@@ -11891,15 +11323,11 @@ es-MX:
           bloques y ejecutar el código para ver qué sucederá, incluso si crees que
           aún no has resuelto el rompecabezas."
       courseE_artist_concept1_authored_hint:
-        courseE_artist_concept1_a: Los hexágonos tienen 50 lados de píxeles y 60 grados
-          de vueltas a la derecha.
         courseE_artist_concept1_b: Intente utilizar una función aquí para que no tenga
           que escribir el código de un hexágono una y otra vez.
         courseE_artist_concept1_c: Utilice el bloque ` establecer ancho` antes de
           cada llamada de función para cambiar el ancho del lápiz.
       courseE_artist_concept1_2018_authored_hint:
-        courseE_artist_concept1_a: Los hexágonos tienen 50 lados de píxeles y 60 grados
-          de vueltas a la derecha.
         courseE_artist_concept1_b: Intente utilizar una función aquí para que no tenga
           que escribir el código de un hexágono una y otra vez.
         courseE_artist_concept1_c: Utilice el bloque ` establecer ancho` antes de
@@ -11956,7 +11384,6 @@ es-MX:
           <xml>  <block type="jump_to">
           <title name="VALUE">???</title>
           </block></xml>
-      courseE_artist_embed_functions8_authored_hint: {}
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Los cuadrados tienen 100 pixeles por lado cada
           uno, eso significa que tendrás que moverte hacia adelante 175 pixeles antes
@@ -11968,15 +11395,11 @@ es-MX:
       courseE_artist_functions10_authored_hint:
         courseD_artist_functions10_b: Este dibujo es muy similar a la anterior, pero
           la función ` dibujar line` está dibujando una forma diferente.
-        courseD_artist_functions10_a: Para evitar el uso de múltiples bloques`mover
-          adelante`, crear una función` dibujar hexágono`y llamarla múltiples veces.
         courseD_artist_functions10_c: "¿Ves dónde este dibujo podría usar una función
           llamada `línea de hexágonos`? ! [] (https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
       courseE_artist_functions10_2018_authored_hint:
         courseD_artist_functions10_b: Este dibujo es muy similar a la anterior, pero
           la función ` dibujar line` está dibujando una forma diferente.
-        courseD_artist_functions10_a: Para evitar el uso de múltiples bloques`mover
-          adelante`, crear una función` dibujar hexágono`y llamarla múltiples veces.
         courseD_artist_functions10_c: "¿Ves dónde este dibujo podría usar una función
           llamada `línea de hexágonos`? ! [] (https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
       courseE_artist_functions1_2018_authored_hint:
@@ -12016,7 +11439,6 @@ es-MX:
           Si no puede recordar cuál era el código de inicio, haga clic en "comenzar de nuevo" en la esquina superior derecha del espacio de trabajo.
         courseD_artist_functions3_b: Su ciclo debe tener los 3 bloques de código de
           inicio dentro de él.
-      courseE_artist_functions3_2018_authored_hint: {}
       courseE_artist_functions4_authored_hint:
         courseD_artist_functions4_a: Intenta usar una función!
         courseD_artist_functions4_b: Arrastre el bloque de función ` dibujar una estrella`
@@ -12037,15 +11459,11 @@ es-MX:
           hacia adelante entre cada estrella!
       courseE_artist_functions5_authored_hint:
         courseD_artist_functions5_a: No te rindas! Recuerda lo que has estado aprendiendo.
-        courseD_artist_functions5_b: Functions make it easy to call saved code at
-          any time, not just from inside a loop!
         courseD_artist_functions5_c: Comience arrastrando el código de una forma de
           estrella en la función ` dibujar una estrella de Estados Unidos, a continuación,
           utilizar esta función para dibujar las tres estrellas!
       courseE_artist_functions5_2018_authored_hint:
         courseD_artist_functions5_a: No te rindas! Recuerda lo que has estado aprendiendo.
-        courseD_artist_functions5_b: Functions make it easy to call saved code at
-          any time, not just from inside a loop!
         courseD_artist_functions5_c: Comience arrastrando el código de una forma de
           estrella en la función ` dibujar una estrella de Estados Unidos, a continuación,
           utilizar esta función para dibujar las tres estrellas!
@@ -12076,12 +11494,7 @@ es-MX:
       courseE_artist_functions7_2018_authored_hint:
         courseD_artist_functions7_a: Trate de crear su función primero y luego agregar
           ventanas de uno a la vez.
-        courseD_artist_functions7_b: No debería necesitar agregar ningún ciclo de
-          repetición adicional. Simplemente salta al artista 100 píxeles entre cada
-          ventana superior, luego baja 150 píxeles para llegar a las ventanas inferiores.
       courseE_artist_functions8_authored_hint:
-        courseD_artist_functions8_f: Usted necesita solamente una cuadra de 'avanzar',
-          pero habrá bastantes 'salto adelante' o 'salto atrás' ¡bloques!
         courseD_artist_functions8_a: Comience haciendo una función para un cuadrado,
           luego intente hacer una función para una línea de cuadrados. ¿Cómo usarías
           la función ` dibujar una línea de cuadrados` para hacer esta imagen?
@@ -12097,8 +11510,6 @@ es-MX:
           línea de cuadrados.
         courseD_artist_functions8_g: "! [] (https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2018_authored_hint:
-        courseD_artist_functions8_f: Usted necesita solamente una cuadra de 'avanzar',
-          pero habrá bastantes 'salto adelante' o 'salto atrás' ¡bloques!
         courseD_artist_functions8_a: Comience haciendo una función para un cuadrado,
           luego intente hacer una función para una línea de cuadrados. ¿Cómo usarías
           la función ` dibujar una línea de cuadrados` para hacer esta imagen?
@@ -12113,7 +11524,6 @@ es-MX:
           tendrá que saltar hacia abajo y hacia atrás antes de dibujar la siguiente
           línea de cuadrados.
         courseD_artist_functions8_g: "! [] (https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
-      courseE_artist_functions8a_2018_authored_hint: {}
       courseE_artist_functions8b_2018_authored_hint:
         courseD_artist_functions8_f: Si lo hace correctamente, solo necesita avanzar
           un bloque!
@@ -12135,10 +11545,6 @@ es-MX:
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_e: ¿Puedes ver los cuatro lugares donde se puede
           usar la "línea de triángulos" en este dibujo ? ! [] (https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_a: "Este rompecabezas puede romper en tres partes:
-          - hacer el ` dibujar un triángulo ` función \n- hacer que el ` dibujar una
-          línea de triangles` función \n- usar su función` dibujar una línea de triángulos`
-          cuatro veces para completar el dibujo"
         courseD_artist_functions9_b: Este dibujo se hizo mediante la elaboración de
           una línea de triángulos 4 veces y girando ya sea 60 o 120 grados antes de
           dibujar la línea siguiente triángulo.
@@ -12150,10 +11556,6 @@ es-MX:
       courseE_artist_functions9_2018_authored_hint:
         courseD_artist_functions9_e: ¿Puedes ver los cuatro lugares donde se puede
           usar la "línea de triángulos" en este dibujo ? ! [] (https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_a: "Este rompecabezas puede romper en tres partes:
-          - hacer el ` dibujar un triángulo ` función \n- hacer que el ` dibujar una
-          línea de triangles` función \n- usar su función` dibujar una línea de triángulos`
-          cuatro veces para completar el dibujo"
         courseD_artist_functions9_b: Este dibujo se hizo mediante la elaboración de
           una línea de triángulos 4 veces y girando ya sea 60 o 120 grados antes de
           dibujar la línea siguiente triángulo.
@@ -12162,7 +11564,6 @@ es-MX:
         courseD_artist_functions9_d: 'Para dibujar el diamante: - repite 2 veces -
           dibuja una línea de triángulos - gira 60 grados - dibuja una línea de triángulos
           - gira 120 grados'
-      courseE_artist_functionsProj_2018_authored_hint: {}
       courseE_artist_functions_challenge_authored_hint:
         courseE_artist_functions_challenge_a: Si llama a la función una vez más, puede
           crear el mismo diseño en la esquina final. ¡También puedes "saltar a" otras
@@ -12197,12 +11598,6 @@ es-MX:
             </block>
             </xml>
           Este bloque 'salto' le permite mover el artista zombie a cualquier píxel en la cuadrícula, siempre que lo desee. Funciona moviéndolo un número de píxeles hacia la derecha y una cantidad de píxeles hacia abajo. Esto siempre se cuenta desde la esquina superior izquierda, lo que significa que no importa dónde esté * el artista zombi * * ¡se ejecuta el comando! ! [] (https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
-      courseE_artist_functions_predict1_authored_hint: {}
-      courseE_artist_functions_predict1_2018_authored_hint: {}
-      courseE_artist_functions_predict2_authored_hint: {}
-      courseE_artist_functions_predict2_2018_authored_hint: {}
-      courseE_artist_predict1_authored_hint: {}
-      courseE_artist_predict1_2018_authored_hint: {}
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: No olvide girar 60 grados después de cada triángulo.
           ¿Qué ciclo necesitas para poner esa instrucción adentro?
@@ -12561,14 +11956,6 @@ es-MX:
           primero, despues añade el "si/entonces" y el ciclo "mientras" para buscar
           flores y panales.
       courseE_collector_ramp10_authored_hint:
-        courseD_artist_ramp10_a: |-
-          Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
-          <xml><block type="controls_repeat">
-          <title name="TIMES">4</title>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          </block></xml>
         courseD_artist_ramp10_b: "¡No te olvides de recoger una pieza del tesoro,
           luego gira despues de cada conjunto de escalones!"
       courseE_farmer_concept1_authored_hint:
@@ -12616,14 +12003,19 @@ es-MX:
           de la barra de herramientas cada vez que pruebes uno nuevo.
         4-5_Artist_Patterns_3_b: Si su código se vuelve demasiado confuso, siempre
           puede hacer clic en "Comenzar de nuevo" y ¡volver a intentarlo!
+      courseE_farmer_elseif_test_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a: El bloque `camino por delante` te
+          permite seguir, incluso si no sabes cuántos cuadrados hay en una ruta.
+        grade3_robotFarmer_ConditionalsIntro_8_b: "¿Qué debes hacer una vez que hayas
+          llegado al final de un camino?"
+        grade3_robotFarmer_ConditionalsIntro_8_c: Utiliza un cicle 'repetir' para
+          ejecutar el código varias veces para cada camino recto.
       courseE_farmer_functions1_authored_hint:
         courseE_farmer_functions1_a: "¡La caja de herramientas está organizado un
           poco diferente esta vez! Haz clic en las diferentes categorías para ver
           que bloques tienes."
         courseE_farmer_functions1_b: Sólo tienes que escoger una calabaza, ¿pero podrías
           utilizar un ciclo para llegar a ella?
-      courseE_farmer_functions10_authored_hint: {}
-      courseE_farmer_functions10a1_2018_authored_hint: {}
       courseE_farmer_functions10b_authored_hint:
         courseE_farmer_functions10b_a: Deberás volver a crear tu primera función.
         courseE_farmer_functions10b_b: "¿Qué necesitas hacer después de la primera
@@ -12636,9 +12028,6 @@ es-MX:
           calabaza?"
         courseE_farmer_functions10b_c: Revisa el ultimo acertijo si necesitas ayuda
           para hacer la función.
-      courseE_farmer_functions11_predict_authored_hint: {}
-      courseE_farmer_functions11_predict_2018_authored_hint: {}
-      courseE_farmer_functions13_2018_authored_hint: {}
       courseE_farmer_functions1_2018_authored_hint:
         courseE_farmer_functions1_a: "¡La caja de herramientas está organizado un
           poco diferente esta vez! Haz clic en las diferentes categorías para ver
@@ -12655,8 +12044,6 @@ es-MX:
           a paso. ¿Que debes hacer si estas parado en una planta de maíz?
         courseE_farmer_functions1a_b: ¡Utiliza un bloque "repetir hasta" para llegar
           a la calabaza!
-      courseE_farmer_functions2a_authored_hint: {}
-      courseE_farmer_functions2aALT_authored_hint: {}
       courseE_farmer_functions2b_authored_hint:
         courseE_farmer_functions2b_a: Puesdes utilizar un 'repetir hasta calabaza'
           para llegar al final de los dos caminos.
@@ -12676,25 +12063,12 @@ es-MX:
           llamar a esta función.
         courseE_farmer_functions2ba_b: Arrastra todos los bloques del espacio de trabajo
           junto con 'al ejecutar' para ver cómo funciona esta función.
-      courseE_farmer_functions2ba_2018_authored_hint:
-        courseE_farmer_functions2ba_a: Use el bloque verde `maíz y calabaza` para
-          llamar a esta función.
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: Intenta usar un ciclo "mientras haya camino por
           delante" para llegar a donde necesitas.
-      courseE_farmer_functions3b_authored_hint:
-        courseE_farmer_functions1a_a: "'si' y ' si/entonces' realmente ayudarán aquí."
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: "¿Qué secuencia se repite a menudo en este programa?
           ¿Puedes arrastrar estos bloques a la función?"
-        courseE_farmer_functions3c_b: No olvides llamar a tu función en el programa
-          principal donde quitaste los bloques.
-      courseE_farmer_functions3c1_2018_authored_hint:
-        coursee_farmer_functions3c1_2018_a: You'll need to use the `pick along path`
-          function three times to solve this puzzle.
-        coursee_farmer_functions3c1_2018_b: What code do you need to add to get around
-          the corners?
-      courseE_farmer_functions3c_2018_authored_hint: {}
       courseE_farmer_functions4_authored_hint:
         courseE_farmer_functions4_a: Arrastra todo el código fuera de tu ciclo 'repetir'
           y en la función 'ir a buscar calabazas'.
@@ -12715,64 +12089,37 @@ es-MX:
         courseE_farmer_functions4b_b: Recuerda dar vuelta despues de cada cámino.
         courseE_farmer_functions4b_c: Los bloques 'calabaza y maiz' esta en la pestaña
           de funciones de la caja de herramientas.
-      courseE_farmer_functions5_authored_hint: {}
-      courseE_farmer_functions5a_authored_hint: {}
       courseE_farmer_functions5b_authored_hint:
         courseE_farmer_functions5b_a: Tendrás que usar un ciclo 'mientras maiz', un
           ciclo 'mientras lechuga' y 'mientras calabaza' para asegurarte de que consigues
           todo.
       courseE_farmer_functions5c_authored_hint:
-        courseE_farmer_functions5c_a: "¿Hay más patrones que puedas ciclar en este
-          acertijo?"
         courseE_farmer_functions5c_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún
           no has resuelto el rompecabezas."
       courseE_farmer_functions5c_2018_authored_hint:
-        courseE_farmer_functions5c_a: "¿Hay más patrones que puedas ciclar en este
-          acertijo?"
         courseE_farmer_functions5c_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si aún
           no has resuelto el rompecabezas."
-      courseE_farmer_functions6_authored_hint: {}
-      courseE_farmer_functions6b_authored_hint: {}
       courseE_farmer_functions6c_authored_hint:
         courseE_farmer_functions6c_a: Edita tu función para revisar la lechuga también.
-        courseE_farmer_functions6c_b: ¿Podria un bloque "si/entonces" ayudarte a saber
-          si hay una lechuga en un espacio?
         courseE_farmer_functions6c_c: "¡No olvides seguir buscando maiz!"
       courseE_farmer_functions6c_2018_authored_hint:
         courseE_farmer_functions6c_a: Edita tu función para revisar la lechuga también.
-        courseE_farmer_functions6c_b: ¿Podria un bloque "si/entonces" ayudarte a saber
-          si hay una lechuga en un espacio?
         courseE_farmer_functions6c_c: "¡No olvides seguir buscando maiz!"
-      courseE_farmer_functions7_authored_hint: {}
-      courseE_farmer_functions7a1_2018_authored_hint:
-        courseE_farmer_functions7a1_2018_a: Create your function under the `functions`
-          section in the toolbox.
-        courseE_farmer_functions7a1_2018_b: Don't forget to use your function when
-          you're done making it!
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: "¡No necesitas una función aquí, pero puedes
           hacer una si te ayuda!"
-        courseE_farmer_functions7b_b: Usa un "si/entonces" para buscar cultivos, luego
-          voltea basandote en que cultivo encontraste.
         courseE_farmer_functions7b_c: Un ciclo 'repetir hasta calabaza' puede ayudarte
           a llegar al final del laberinto.
       courseE_farmer_functions7b_2018_authored_hint:
         courseE_farmer_functions7b_a: "¡No necesitas una función aquí, pero puedes
           hacer una si te ayuda!"
-        courseE_farmer_functions7b_b: Usa un "si/entonces" para buscar cultivos, luego
-          voltea basandote en que cultivo encontraste.
         courseE_farmer_functions7b_c: Un ciclo 'repetir hasta calabaza' puede ayudarte
           a llegar al final del laberinto.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Crea una función que lleva al agricultor al maíz,
           obtiene todo el maíz, da la vuelta y vuelve.
-      courseE_farmer_functions8a1_2018_authored_hint:
-        courseE_farmer_functions8a1_2018a: Start this puzzle off by coding the same
-          function you made in the last puzzle.
-        courseE_farmer_functions8a1_2018b: After the function runs the first time,
-          you'll need to make one extra turn before you can run it again.
       courseE_farmer_functions8b_authored_hint:
         courseE_farmer_functions8b_a: Intenta ejecutar el código dado para ver lo
           que hace. ¿Qué se necesita después de esto?
@@ -12788,14 +12135,6 @@ es-MX:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Crea una función que lleva al agricultor al maíz,
           obtiene todo el maíz, da la vuelta y vuelve.
-      courseE_farmer_functions9a1_2018_authored_hint:
-        courseE_farmer_functions9a1_2018a: You'll use the same function that you made
-          in the last couple of puzzles.
-        courseE_farmer_functions9a1_2018b: Use the same steps from the previous puzzle
-          to solve the first half of this puzzle.
-        courseE_farmer_functions9a1_2018c: You'll need to `turn` a few times and `move
-          forward` to get to the last crop of lettuce before you can call your function
-          again.
       courseE_farmer_functions9b_authored_hint:
         courseE_farmer_functions9b_a: "¿Puede utilizar 'si' y ' si/entonces' anidados
           para avanzar por el camino?"
@@ -12810,7 +12149,6 @@ es-MX:
           todos los caminos.
         courseE_farmer_functions9b_c: Tienes que avanzar por los caminos como si fueran
           cuadrados haciendose más grandes después de cada ciclo.
-      courseE_farmer_functions9b_clone_authored_hint: {}
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: No dudes en volver al último acertijo si necesitas
           un recordatorio de cómo recoger cultivos solo **mientras** hay cultivos
@@ -12819,8 +12157,6 @@ es-MX:
         courseE_farmer_ramp12a: No dudes en volver al último acertijo si necesitas
           un recordatorio de cómo recoger cultivos solo **mientras** hay cultivos
           para recoger.
-      courseE_farmer_predict2_authored_hint: {}
-      courseE_farmer_predict2_2018_authored_hint: {}
       courseE_farmer_ramp11_authored_hint:
         courseE_farmer_ramp11_a: Si tienes problemas para ver donde van los ciclos,
           intenta programarlo y buscar patrones.
@@ -12878,8 +12214,6 @@ es-MX:
           resuelto el rompecabezas."
         courseE_farmer_ramp12d: Solo habrá lechuga, por lo que no tendrá que preocuparse
           por los espacios vacíos, el maíz o las calabazas.
-      courseE_farmer_ramp12b_authored_hint: {}
-      courseE_farmer_ramp12b_2018_authored_hint: {}
       courseE_farmer_ramp12c_authored_hint:
         courseE_farmer_ramp12b_b: Todavía necesitará usar primero un ciclo 'hasta',
           luego use un ciclo 'while' una vez que llegue a la lechuga.
@@ -12922,8 +12256,6 @@ es-MX:
           así que asegúrese de usar los ciclos`while` para elegirlos a todos!
         courseE_farmer_ramp13_b: Utilizar un ciclo de repetición de modo que usted
           no tiene que escribir una por separado si la declaración de cada cuadrado.
-        courseE_farmer_ramp13_c: If you can't figure out where to put the loops, try
-          writing your code step-by-step and look for patterns.
       courseE_farmer_ramp15_authored_hint:
         courseE_farmer_ramp15_a: Usar el bloque de 'repetir hasta en calabaza' para
           llegar al final de la ruta.
@@ -12946,8 +12278,6 @@ es-MX:
           ¿Qué pasa si no hay nada?
         courseE_farmer_ramp16_c: Use un bloque `if / else` para seguir avanzando.
           ¿De qué manera debes girar cuando la ruta de avance está bloqueada?
-      courseE_maze_predict1_authored_hint: {}
-      courseE_maze_predict1_2018_authored_hint: {}
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: Si el pájaro no está recibiendo al cerdo, hacer
           seguro de los tres de los bloques han sido totalmente hecho clic en conjunto,
@@ -12960,9 +12290,6 @@ es-MX:
         courseD_maze_ramp11_a: Usa bloques repetidos para ejecutar un solo bloque
           o un fragmento de código una y otra vez.
       courseE_maze_ramp1_2018_authored_hint:
-        courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure
-          all three of the blocks have been fully clicked together, then click "Run"
-          again.
         courseC_maze_programming1_b: "¡No necesitas ningún bloque adicional de la
           caja de herramientas para este rompecabezas!"
       courseE_maze_ramp2_authored_hint:
@@ -12972,8 +12299,6 @@ es-MX:
         courseC_maze_programming2_b: Hacer que los tres bloques`movimiento adelante`
           se encuentren unidos al bloque`` cuando corra`.
       courseE_maze_ramp2_2018_authored_hint:
-        courseC_maze_programming2_a: To use a `move forward` block, drag it from the
-          toolbox out into the workspace and connect it to the `when run` block.
         courseC_maze_programming2_b: Hacer que los tres bloques`movimiento adelante`
           se encuentren unidos al bloque`` cuando corra`.
       courseE_maze_ramp3_authored_hint:
@@ -13005,11 +12330,6 @@ es-MX:
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
       courseE_maze_ramp4_2018_authored_hint:
-        courseC_maze_programming4_a: You can turn right or left from the bird's point
-          of view. If you are facing right, turning right will make you point downwards.
-        courseC_maze_programming4_b: To follow the path, move forward and turn one
-          way, then move again and turn the opposite way. Move forward one more time
-          to reach the pig.
         courseC_maze_programming4_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
@@ -13057,7 +12377,6 @@ es-MX:
         courseD_maze_ramp7_c: "¡No tengas miedo de cometer un error! Intenta agregar
           bloques y ejecutar el código para ver qué sucederá, incluso si crees que
           aún no has resuelto el rompecabezas."
-      courseE_maze_ramp_predict1_authored_hint: {}
       courseE_multi_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Intente usar el botón "Paso" para ejecutar su
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
@@ -13083,7 +12402,6 @@ es-MX:
           a las ardillas. * Haz que el dinosaurio diga algo. * Establecer un nuevo
           fondo. * Haz desaparecer a todos los actores y muestra un mensaje de "Game
           Over".'
-      courseE_playLab_embed_scaffold5_authored_hint: {}
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: El 'set actor 1 ??? imagen 'bloque puede usarse
           para agregar actor al escenario.
@@ -13112,8 +12430,6 @@ es-MX:
           eventos, con una dirección para abrir debajo de cada uno.
         courseE_playLab_scaffold1_c: Cuando hayas terminado, ¡podrás mover a tu héroe
           con las teclas de flecha!
-      courseE_playLab_scaffold3_authored_hint: {}
-      courseE_playLab_scaffold3_2018_authored_hint: {}
       courseE_playLab_scaffold4_authored_hint:
         courseE_playLab_scaffold4_a: Use `score point` para agregar un punto, y` remove
           point` para restar uno.
@@ -13296,8 +12612,6 @@ es-MX:
           este acertijo a donde debe estar. '
         iceage_warn_ice_age_b: Añade los dos nuevos bloques debajo del evento 'al
           ejecutar' para que ocurran imediatamente después de que inicie el programa.
-      courseF_IceAge_template_authored_hint: {}
-      courseF_artist_embed_for7_authored_hint: {}
       courseF_artist_for1_authored_hint:
         courseF_artist_for1_a: |-
           Puedes dibujar algo como esto:
@@ -13479,8 +12793,6 @@ es-MX:
           </next>
           </block>
           </xml>
-      courseF_artist_for10_predict1_authored_hint: {}
-      courseF_artist_for10_predict1_2018_authored_hint: {}
       courseF_artist_for1_2018_authored_hint:
         courseF_artist_for1_a: |-
           Puedes dibujar algo como esto:
@@ -14148,8 +13460,6 @@ es-MX:
           y usalo dentro de tu bloque 'avanzar'!
         courseF_artist_fwp2_b: "¡Cuando llamas una función, usa un ciclo 'for' para
           tener el mejor código posible!"
-      courseF_artist_fwp2_predict1_authored_hint: {}
-      courseF_artist_fwp2_predict1_2018_authored_hint: {}
       courseF_artist_fwp3_authored_hint:
         courseF_artist_fwp3_a: Esto se vuelve más sencillo si pones todo dentro de
           un ciclo 'for'.
@@ -14266,8 +13576,6 @@ es-MX:
           ** Solución: **
 
           ! [Bloques de solución] (https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
-      courseF_artist_predict1_authored_hint: {}
-      courseF_artist_predict1_2018_authored_hint: {}
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: No olvide girar 60 grados después de cada triángulo.
           ¿Qué ciclo necesitas para poner esa instrucción adentro?
@@ -14677,30 +13985,18 @@ es-MX:
           o miel en cada espacio.
         courseF_bee_conditionals10_c: "¿Ayudaría un ciclo 'mientras' para llegar al
           final de este camino?"
-      courseF_bee_conditionals1_predict1_authored_hint: {}
-      courseF_bee_conditionals1_predict1_2018_authored_hint: {}
       courseF_bee_conditionals2_authored_hint:
-        courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
         courseF_bee_conditionals2_b: Intentar escribir la secuencia para llegar a
           todos los espacios, luego agrega la instrucción 'si'.
       courseF_bee_conditionals2_2018_authored_hint:
-        courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
-          won't.  If you want your code to run in both cases, make sure to use an
-          `if` statement.
         courseF_bee_conditionals2_b: Intentar escribir la secuencia para llegar a
           todos los espacios, luego agrega la instrucción 'si'.
       courseF_bee_conditionals3_authored_hint:
-        courseF_bee_conditionals3_a: Be sure to use an `if` statement to check each
-          space to see if it has either a flower or nothing.
         courseF_bee_conditionals3_b: Un ciclo 'repetir' sera util para que solo tengas
           que usar un bloque 'si'.
         courseF_bee_conditionals3_c: Intenta escribir código para revisar la primera
           nube. ¿Puedes ciclar esto para revisarlos todos?
       courseF_bee_conditionals3_2018_authored_hint:
-        courseF_bee_conditionals3_a: Be sure to use an `if` statement to check each
-          space to see if it has either a flower or nothing.
         courseF_bee_conditionals3_b: Un ciclo 'repetir' sera util para que solo tengas
           que usar un bloque 'si'.
         courseF_bee_conditionals3_c: Intenta escribir código para revisar la primera
@@ -14751,8 +14047,6 @@ es-MX:
         courseF_bee_conditionals5_d: Para continuar por el camino, la abeja deberá
           'avanzar'. Mientras está en el camino, la abeja necesita buscar una flor.
           ¿Qué debería hacer la abeja si hay una flor?
-      courseF_bee_conditionals7_predict2_authored_hint: {}
-      courseF_bee_conditionals7_predict2_2018_authored_hint: {}
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "** Recuerde: ** Este rompecabezas  cambia cada
           vez que se ejecuta.   \n\nUsted querrá utilizar un condicional de bloque
@@ -14801,7 +14095,6 @@ es-MX:
           **2**. \n\nEn este dibujo, nota que hay **7** cuadros rojos, **5** cuadros
           naranjas, **3** cuadros verdes y **1** bloque azul.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
           Hint Drawing.png)\n\n¿Cómo se relacionan los números?"
-        courseF_bee_for10_d: You'll need to have 2 repeats, one will use a math block.
       courseF_bee_for11_authored_hint:
         courseF_bee_for11_a: |-
           ¿Cuánto menos es 12 que 15?
@@ -14832,8 +14125,6 @@ es-MX:
           donde se recolecta el nectar para resolver este acertijo. '
         courseF_bee_for3_b: Tu ciclo 'for' necesitará contar de 1 a 5 con un incremento
           de 1.
-      courseF_bee_for3_predict1_authored_hint: {}
-      courseF_bee_for3_predict1_2018_authored_hint: {}
       courseF_bee_for4_authored_hint:
         courseF_bee_for4_a: Utiliza un ciclo 'for' que vaya de 1 a 7 con un incremento
           de 1 para resolver este acertijo.
@@ -14846,8 +14137,6 @@ es-MX:
           de 1 para resolver este acertijo.
         courseF_bee_for4_b: Dentro de tu ciclo 'for', querras tener un comando 'mover
           hacia adelante' y un ciclo para recolectar nectar.
-        courseF_bee_for4_c: Make sure to use the `counter` variable inside your nested
-          `repeat` loop to get enough nectar!
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_a: Esta vez, tu bloque 'avanzar hacia adelante' y tu bloque
           'obtener nectar' tendrán que estar en ciclos 'repetir' separados, ambos
@@ -14928,8 +14217,6 @@ es-MX:
           iteración del ciclo si quieres resolver el acertijo.
         courseF_bee_for9_b: "**Recuerda.** Si tu ciclo esta contando hacia arriba,
           el incremento se añade a tu variable 'contador' cada vez."
-      courseF_bee_for_challenge1_authored_hint: {}
-      courseF_bee_for_challenge1_2018_authored_hint: {}
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: |-
           Eche un vistazo a esta opción de movimiento:
@@ -15490,9 +14777,6 @@ es-MX:
           de función verde. \n\n! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
         courseF_bee_functions7_c: "¿De qué manera deberías girar si hay un panal?
           ¿Qué tal una flor? ¿Qué pasa si no hay nada?"
-      courseF_bee_functions_1_2018_authored_hint: {}
-      courseF_bee_functions_2_2018_authored_hint: {}
-      courseF_bee_functions_3_2018_authored_hint: {}
       courseF_bee_functions_challenge1_authored_hint:
         courseF_bee_functions_challenge1_a: Puedes usar las funciones en la caja de
           herramientas para ayudarlo. ¡Puedes llamar a una función dentro de la definición
@@ -15824,9 +15108,6 @@ es-MX:
         courseF_bee_fwp8_a: "¿Como ayudaría un ciclo 'for' en este acertijo?"
         courseF_bee_fwp8_b: Dado que la espiral disminuye a medida que avanza, su
           ciclo 'for' debe contar hacia abajo.
-      courseF_bee_fwp9_authored_hint: {}
-      courseF_bee_fwp9_predict1_authored_hint: {}
-      courseF_bee_fwp9_predict1_2018_authored_hint: {}
       courseF_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           El programa principal sería algo como esto:
@@ -16511,14 +15792,6 @@ es-MX:
           </block>
           </next>
           </block></xml>
-      courseF_bee_variables_1_2018_authored_hint: {}
-      courseF_bee_variables_2_2018_authored_hint: {}
-      courseF_bee_variables_3_2018_authored_hint: {}
-      courseF_bee_variables_4_2018_authored_hint: {}
-      courseF_bee_variables_5_2018_authored_hint: {}
-      courseF_bee_variables_6_2018_authored_hint: {}
-      courseF_bee_variables_7_2018_authored_hint: {}
-      courseF_bee_variables_8_2018_authored_hint: {}
       courseF_farmer_ramp11_authored_hint:
         courseF_farmer_ramp11_a: Si tienes problemas para ver donde van los ciclos,
           intenta programarlo y buscar patrones.
@@ -16539,7 +15812,6 @@ es-MX:
           la lechuga. ¡Solo arrastra el ciclo de repetición de recolección de lechugas
           dentro de otro ciclo con un bloue <xml><block type="maze_moveForward"/></xml>
           y lo lograrás!
-      courseF_maze_predict1_authored_hint: {}
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: Si el pájaro no está llegando al cerdo, asegurate de
           que los bloques están totalmente juntos y haz clic en "Ejecutar" de nuevo.
@@ -16589,8 +15861,6 @@ es-MX:
           bloques y ejecutar el código para ver qué sucederá, incluso si aún no has
           resuelto el rompecabezas."
       courseF_maze_ramp4_2018_authored_hint:
-        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
-          view. If you are facing right, turning right will make you point downwards.
         courseF_maze_ramp4_b: Para seguir el camino, avanza y gira en un sentido,
           luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
           para alcanzar al cerdo.
@@ -17118,9 +16388,6 @@ es-MX:
         grade1_adventurer_loops7_challenge_b: "¿El código se siente un poco largo?
           Puede hacerlo mucho más corto moviendo dos de tus bucles `repetir` dentro
           de otro bucle."
-      grade1_adventurer_loops8_challenge_authored_hint:
-        grade1_adventurer_loops8_challenge_a: Can you find a pattern in the steps?  Where
-          can you use a repeat?
       grade1_adventurer_loops9_authored_hint:
         grade1_adventurer_loops9_a: "¿Esto parece demasiado difícil? Divídelo en 4
           pequeños problemas para que se sienta más fácil."
@@ -17130,17 +16397,11 @@ es-MX:
       grade1_artist_loops2_authored_hint:
         grade1_artist_loops2_a: ¡Recuerde usar un loop de "repetición" para un mejor
           código!
-      grade1_artist_loops3_authored_hint: {}
       grade1_artist_loops4_authored_hint:
         grade1_artist_loops4_a: Arrastre un loop de "repetición", luego coloque los
           otros bloques dentro de él. ¿Cuántas veces necesita repetir?
-      grade1_artist_loops5_authored_hint: {}
       grade1_artist_loops6_authored_hint:
         grade1_artist_loops6_a: "¡Este desafío utiliza CUATRO loops, uno tras otro!"
-        grade1_artist_loops6_b: |-
-          Notice that every loop makes a stair pattern that travels in a different direction.
-
-          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         grade1_artist_loops6_c: |-
           Los loops deberían hacer esto:
           Loo 1
@@ -17158,13 +16419,8 @@ es-MX:
           -Loop 4:
           -Izquierda
           -Abajo
-      grade1_artist_loops7_authored_hint: {}
       grade1_artist_loops7a_authored_hint:
         artistLoopsK9_a: "¡Este desafío utiliza CUATRO loops, uno tras otro!"
-        artistLoopsK9_b: |-
-          Notice that every loop makes a stair pattern that travels in a different direction.
-
-          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
         artistLoopsK9_c: |-
           Los loops deberían hacer esto:
           Loo 1
@@ -17185,9 +16441,6 @@ es-MX:
       grade1_artist_loops7b_authored_hint:
         grade1_artist_loops7b_a: "¿Cuántas veces debes repetir el patrón para hacer
           la escalera?"
-      grade1_artist_loops8_authored_hint: {}
-      grade1_artist_loops9_authored_hint: {}
-      grade1_artist_loopsFP_authored_hint: {}
       grade1_maze_sequence1_authored_hint:
         grade1_maze_sequence1_a: Este programa falta un bloque. ¿Puedes averiguar
           cuál?
@@ -17227,14 +16480,6 @@ es-MX:
       grade1_maze_sequenceC_authored_hint:
         grade1_maze_sequenceC_a: Si tiene problemas, primero intente anotar los pasos
           en una hoja de papel.
-      grade2_CaringForNewPet_0_authored_hint:
-        grade2_CaringForNewPet_0: If the bird isn't getting to the pig, make sure
-          all three of the blocks have been fully clicked together, then click "Run"
-          again.
-      grade2_CaringForNewPet_1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbox out
-          into the workspace and connect it to the `when run` block.
-      grade2_CaringForNewPet_11_authored_hint: {}
       grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
           \n\nPara eliminar un bloque del medio de su código, arrastra todos los bloques
@@ -17242,23 +16487,8 @@ es-MX:
           por un tiempo. \n\nHaz clic en el bloque que desea eliminar y arrástralo
           nuevamente a la caja de herramientas. \n\nFinalmente, coloca los otros bloques
           en su lugar.\n"
-      grade2_CaringForNewPet_3_authored_hint:
-        hint1: You can turn right or left from the bird's point of view. If you are
-          facing right, turning right will make you point downwards.
-        hint2: This path is a zig-zag. You need to move forward 3 times and turn 2
-          times.
-        hint3: To follow the path, move forward and turn one way, then move again
-          and turn the opposite way. Move forward one more time to reach the pig.
-      grade2_CaringForNewPet_3D_authored_hint: {}
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: "¡Hay dos formas de resolver este rompecabezas!"
-      grade2_CaringForNewPet_5_authored_hint:
-        grade2_CaringForNewPet_5_a: If you can't quite see what you need to do, try
-          saying the steps that your bird will take out loud one-by-one and see if
-          they match the blocks in the workspace.
-      grade2_CaringForNewPet_6_authored_hint:
-        grade2_CaringForNewPet_6_a: You don't have to code the whole solution at once!  Try
-          running the code as you go to make sure it works at each step.
       grade2_CaringForNewPet_7D_authored_hint:
         grade2_CaringForNewPet_7D_a: No se olvide de utilizar el botón "Step" para
           ir bloque por bloque buscando errores.
@@ -17267,13 +16497,9 @@ es-MX:
           Dibujaré una línea automáticamente.
         2-3_Artist_1_new_b: ¿Tienes problemas para girar en la esquina? Utiliza el
           bloque "girar a la derecha 90 grados".
-      grade2_MakeDogTag_2_authored_hint:
-        2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel
-          sides.
       grade2_MakeDogTag_3_authored_hint:
         2-3_Artist_4_a: Para terminar el cohete, ¡simplemente dibuja el triángulo
           en la parte superior!
-      grade2_MakeDogTag_4_authored_hint: {}
       grade2_MakeDogTag_5_authored_hint:
         grade2_MakeDogTag_5a: El artista ya se está enfrentando a la forma correcta
           de dibujar su primera línea.
@@ -17285,16 +16511,9 @@ es-MX:
         grade2_MakeDogTag_6a: Cada ángulo es 45 o 90 grados.
         grade2_MakeDogTag_6b: "¿Funciona en el primer paso?   \n¿Qué tal el segundo?
           \  \n¿Dónde va mal?"
-      grade2_MakeDogTag_7_authored_hint:
-        2-3_Artist_11_a: The exterior angles on this triangle are 120 degrees each.
       grade2_MakeDogTag_9_authored_hint:
-        2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
-
-          ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
         2-3_Artist_Loops_New_11_b: Tu nuevo giro deberá ir al **final** del código
           dentro del loop.
-      grade2_MakeDogTag_BFP_authored_hint: {}
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           ¿Cuántas veces se repitió mi forma?
@@ -17305,7 +16524,6 @@ es-MX:
       grade2_PuppyLoops_3_authored_hint:
         hint1: Este rompecabezas es muy similar al último.
         hint2: Use el bloque "repetir 5 veces" para crear el loop.
-        hint3: Place a `move forward` block inside the `repeat block`.
       grade2_PuppyLoops_5_authored_hint:
         hint1: La mejor solución usa dos comandos "avanzar" y un loop.
       grade2_PuppyLoops_6_authored_hint:
@@ -17327,14 +16545,6 @@ es-MX:
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: "¿Qué pasa si haces que el artista se mueva o salte
           hacia atrás después de que dibuje la primera línea?"
-      grade2_collector_2_authored_hint:
-        hint1: You can use four `move forward` blocks or use the `repeat 4 times`
-          block to make your program shorter.
-      grade2_collector_A_authored_hint: {}
-      grade2_collector_A_2018_authored_hint: {}
-      grade2_maze_debuggingFP_authored_hint: {}
-      grade2_maze_intro4_authored_hint:
-        hint_1: Connect a "move forward" block to the bottom of the program.
       grade2_playlab_project_6_authored_hint:
         idea1: "* ¿Necesitas una idea? * ** ¿Quién está ahí? ** Haz que los personajes
           aparezcan con imágenes aleatorias , para que nadie sepa quién aparece a
@@ -17355,7 +16565,6 @@ es-MX:
       grade2_puppy_loops3_authored_hint:
         hint1: Este rompecabezas es muy similar al último.
         hint2: Use el bloque "repetir 5 veces" para crear el loop.
-        hint3: Place a `move forward` block inside the `repeat block`.
       grade2_puppy_loops4_authored_hint:
         hint1: No todos los bloques de comando deben repetirse.
         hint2: Use dos bloques de repetición establecidos en diferentes números.
@@ -17395,11 +16604,6 @@ es-MX:
           ¡Intenta tratar a la flor roja de la misma manera que la flor morada!"
         2-3_Bee_Conditionals_14_b: Si la flor roja fuese morada, podrías imaginar
           cómo usar un extra "repeat" loop para acortar el código?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
-          \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
-          Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
-          if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n
-          \ - Make two honey"
       grade3_Conditionals_12_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Recuerda: las flores moradas solo tienen 0 o 1
           de néctar, y pueden cambiar cada vez que ejecutes el programa.'
@@ -17418,8 +16622,6 @@ es-MX:
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: Comience mirando solo el primer ciclo. ¿Qué hace? ¿Qué
           se supone que haga? ¿Qué te dice eso?
-        grade3_Debugging_10_b: Una vez que tiene el primer ciclo, ¿cómo quiere qué
-          quede en su código?
         grade3_Debugging_10_c: |-
           Intente envolver el ciclo sobrante alrededor del resto de su código completo. ¿funciona ahora?
 
@@ -17481,35 +16683,18 @@ es-MX:
         2-3_Bee_Loops_2_a: Deberías finalizar con cuatro bloques dentro de tu loop.
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu loop.
-      grade3_RunningFarm_1_authored_hint:
-        grade3_RunningFarm_1_a: Usted tendrá que buscar para el maíz 5 veces, utilizando
-          una repetición del ciclo.
-        grade3_RunningFarm_1_b: Asegúrese de usar un bloque de 'si en maíz'!
-      grade3_RunningFarm_10_authored_hint:
-        grade3_RunningFarm_10_a: This puzzle uses almost the exact same code as the
-          last level, except you only need to repeat 4 times.
-      grade3_RunningFarm_11a_authored_hint:
-        grade3_RunningFarm_11a_a: You shouldn't need the `while path ahead` loop this
-          time.
       grade3_RunningFarm_2_authored_hint:
         grade3_RunningFarm_2_a: 'La mejor manera de hacer esto es anidar las declaraciones
           de ''si'' ubicando uno dentro del otro.  '
-        grade3_RunningFarm_2_b: Para este rompecabezas, usted debe tener una ' si
-          / else` declaración y uno sencillo ` si ` comunicado.
       grade3_RunningFarm_3_authored_hint:
         grade3_RunningFarm_3_a: Para obtener todos los elementos, intente anidar declaraciones
           ' if ' tres profundas. Esto significa que debe poner un ` si ' declaración
           dentro de otro, a continuación, poner una tercera` si ' declaración dentro
           de la segunda.
-        grade3_RunningFarm_3_b: Para este rompecabezas, usted debe tener dos ` if/
-          else` declaraciones y una llanura` if ` comunicado.
       grade3_RunningFarm_4_authored_hint:
         grade3_RunningFarm_4_a: Nadie sabe cuántas cabezas de lechuga crecerá de cada
           brote. Utilizar un ciclo 'mientras hay lechuga' para seguir recogiendo hasta
           que cada pieza haya sido recolectada.
-      grade3_RunningFarm_5_authored_hint:
-        grade3_RunningFarm_5_a: You will need to check for each type of crop that
-          the farmer can pick.  Try using two `if/else` statements and one  `if` block.
       grade3_RunningFarm_6_authored_hint:
         grade3_RunningFarm_6_a: Utilizar un ciclo «mientras camino por delante» para
           mover al agricultor hacia abajo en cada parte de la espiral.
@@ -17518,34 +16703,13 @@ es-MX:
       grade3_RunningFarm_7_authored_hint:
         grade3_RunningFarm_7_a: Tenga en cuenta que el camino más fácil para llegar
           a todos los cultivos sigue siendo una espiral. ! [] (https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
-        grade3_RunningFarm_7_b: Try using `when path ahead` to keep the farmer moving
-          the right number of steps.
-        grade3_RunningFarm_7_c: 'Use nested `if` statements and `while there is` loops
-          to check each space for corn and lettuce, then pick only a single pumpkin
-          at the end. '
-      grade3_bee_Conditionals_new4_authored_hint:
-        grade3_bee_Conditionals_new4_a: Don't forget that you can use loops for shorter
-          code!
-      grade3_bee_conditionals_new1a_authored_hint:
-        grade3_bee_conditionals_new1a_a: Be sure to use an `if` statement to check
-          each space to see if it has a flower or nothing.
       grade3_bee_conditionals_new2a_authored_hint:
         grade3_bee_conditionals_new2a_a: Todavía puede tratar cada espacio como si
           hubiera una nube sobre él, aunque puede ver todo el camino.
-        grade3_bee_conditionals_new2a_b: 'Use an `if` statement inside your loop to
-          check each space. '
-      grade3_bee_conditionals_new3a_authored_hint:
-        grade3_bee_conditionals_new3a_a: In this puzzle, you know that each square
-          has either a flower or a honeycomb.  That means you can repeat your `if/else`
-          conditional at each square.
       grade3_bee_conditionals_quantum1_authored_hint:
         grade3_bee_conditionals_quantum1_a: Usted tendrá que utilizar un bloque `
           si ` para comprobar si hay una flor debajo de la nube antes de tratar de
           obtener el néctar.
-      grade3_bee_conditionals_quantum2_authored_hint:
-        grade3_bee_conditionals_quantum2_a: Sometimes a flower will be there, sometimes
-          it won't.  If you want your code to run in both cases, make sure to use
-          an `if` statement.
       grade3_bee_conditionals_quantum3_authored_hint:
         grade3_bee_conditionals_quantum3: Asegúrese de utilizar una declaración` si
           ' para comprobar el nido de abeja debajo de cada nube.
@@ -17557,15 +16721,7 @@ es-MX:
         remember_quantum: "** Recuerde: ** Este rompecabezas  cambia cada vez que
           se ejecuta.   \n\nUsted querrá utilizar un condicional de bloque ( ` si
           'o' si / else`) para resolver el desafío."
-        grade3_bee_conditionals_quantum5_a: This puzzle is tricky, because you can't
-          check blank squares, nectar *and* honey with a single conditional.
-      grade3_maze_loops1_authored_hint:
-        grade3_maze_loops1_a: Try using the "Step" button to find errors.
       grade3_maze_loops2_authored_hint:
-        grade3_maze_loops2_a: |-
-          Try using this path through the maze.
-
-          ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
         grade3_maze_loops2_b: Si el patrón es difícil de ver, intenta codificar todo
           primero e identifica qué es lo que se repite una y otra vez antes de colocar
           los loops.
@@ -17579,16 +16735,12 @@ es-MX:
           primero y busca patrones.
         2-3_Maze_Loops_19_b: Poner un ciclo de repetición dentro de otro puede ayudar
           a disminuir la cantidad de bloques utilizados.
-        2-3_Maze_Loops_19_c: Tomará dos conjuntos de ciclos 'repetir´anidados para
-          resolver este acertijo.
       grade3_maze_loops4_authored_hint:
         2-3_Maze_Loops_20_a: Busca un patrón de escalera en este laberinto para encontrar
           dónde puede usarse un ciclo anidado.
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: Si tienes problemas para encontrar el patrón de escalera,
           intenta cubrir los caminos bloqueados con tu dedo.
-      grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: {}
-      grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: {}
       grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_5a: Trate de anidar un ciclo `while`
           en el interior de un ciclo de repetición.
@@ -17604,11 +16756,6 @@ es-MX:
       grade3_robotFarmer_ConditionalsIntro_9_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_9_a: Usted va a tener que utilizar más
           de un ciclo`while`.
-        grade3_robotFarmer_ConditionalsIntro_9_b: Cada hoyo se encuentra al final
-          de un camino, por lo que debes utilizar `while antes de usar` antes de usar`
-          mientras hay un hoyo `.
-        grade3_robotFarmer_ConditionalsIntro_9_c: Tenga en cuenta que necesita repetir
-          el `while camino por delante`,` mientras que hay un hoyo `seis veces.
       grade4_arist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Este diseño hará un loop 10 veces sobre 360 grados.
@@ -17619,7 +16766,6 @@ es-MX:
           Estarás haciendo 6 loops en esta figura por sobre los 360 grados.
 
           **360 / 6 = ?**
-      grade4_arist_nested_loop_triangles2_authored_hint: {}
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: "No olvides girar luego de tu loop interno.\n\nEstarás
           haciendo un loop de 6 triángulos de 360 grados. \n\n**360 / 6 = ?**"
@@ -17637,12 +16783,6 @@ es-MX:
           - Usar la función
           - Avanzar 100 + 75 pixeles
           - Usar la función
-      grade4_artist_functions2a_authored_hint:
-        grade4_artist_functions2a_a: To get around using multiple `move forward` blocks,
-          create a `draw triangle` function and call that multiple times.
-      grade4_artist_functions3a_authored_hint:
-        grade4_artist_functions2a_a: To get around using multiple `move forward` blocks,
-          create a `draw triangle` function and call that multiple times.
       grade4_artist_functions3b_authored_hint:
         grade4_artist_functions2a_a: Para evitar la necesidad de bloques múltiples
           'avanzar', cree una función de 'dibujar triángulo' y llamar varias veces.
@@ -17667,10 +16807,6 @@ es-MX:
           a la derecha 60 grados y avanzar 40 píxeles. Una vez que estás en la ubicación
           vertical correcta, debes volver a girar en tu artista y retroceder 440 píxeles
           (120 píxeles más que tu función de desplazamiento ''hacia abajo / adelante''). '
-        Course_4_SCF_1_e: |-
-          **Solution:**
-
-          ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
       grade4_artist_functions_challenge2_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tiene lados de 40 pixeles.
         Course_4_SCF_1_b: Hay un salto de 120 píxeles entre cada hexágono en cada
@@ -17683,10 +16819,6 @@ es-MX:
           a la derecha 60 grados y avanzar 40 píxeles. Una vez que estás en la ubicación
           vertical correcta, debes volver a girar en tu artista y retroceder 440 píxeles
           (120 píxeles más que tu función de desplazamiento ''hacia abajo / adelante''). '
-        Course_4_SCF_1_e: |-
-          **Solution:**
-
-          ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
       grade4_artist_functions_stars0_authored_hint:
         grade4_artist_functions_stars0_a: |-
           Para resolver este rompecabezas, solo necesita agregar un ciclo que repita el código de inicio 8 veces.
@@ -17697,10 +16829,6 @@ es-MX:
       grade4_artist_functions_stars2_authored_hint:
         grade4_artist_functions_stars2_a: No te rindas! Recuerda lo que has estado
           aprendiendo.
-        grade4_artist_functions_stars2_b: Functions make it easy to call saved code
-          at any time, not just from inside a loop!
-      grade4_artist_functions_stars3_authored_hint:
-        hint1: Don't give up!
       grade4_artist_functions_windows0_authored_hint:
         grade4_artist_functions_windows0_a: Concéntrese solo en hacer una ventana
           por ahora. Vamos a crear una función para el siguiente rompecabezas.
@@ -17729,22 +16857,9 @@ es-MX:
           Estarás haciendo 6 loops en esta figura por sobre los 360 grados.
 
           **360 / 6 = ?**
-      grade4_artist_nested_loop_triangles2_authored_hint: {}
-      grade4_artist_nested_loop_triangles3_authored_hint:
-        4-5_Nested_Loops_6_a: |-
-          Don't forget to make a turn after your inner loop.
-
-          You'll be looping 6 triangles over 360 degrees.
-
-          **6 x ? = 360**
       grade4_artist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "** 360/36 =? **"
-      grade4_bee_conditionals_new1a_authored_hint:
-        grade4_bee_conditionals_new1a_a: An `if` block will help you out in this puzzle.
       grade4_bee_conditionals_new2_authored_hint:
-        grade4_bee_conditionals_new2_a: 'The flowers follow a rectangular path.  You
-          can trace that rectangle using `while path ahead` even with a different
-          number of squares per side. '
         grade4_bee_conditionals_new2_b: Puede comprobar todas los espacios de una
           flor usando el bloque ` si `, incluso si usted ya sabe que no hay nada allí.
       grade4_bee_conditionals_new3b_authored_hint:
@@ -17758,8 +16873,6 @@ es-MX:
         remember_quantum: "** Recuerde: ** Este rompecabezas  cambia cada vez que
           se ejecuta.   \n\nUsted querrá utilizar un condicional de bloque ( ` si
           'o' si / else`) para resolver el desafío."
-      grade4_bee_functions1_authored_hint:
-        grade4_bee_functions1_a: There is more than one right answer to this puzzle.
       grade4_bee_functions10_authored_hint:
         grade4_bee_functions10_a: Puedes usar exactamente la misma función  para este
           rompecabezas que hiciste en el último rompecabezas. Todo lo que necesitas
@@ -17771,16 +16884,9 @@ es-MX:
       grade4_bee_functions3_authored_hint:
         grade4_bee_functions3_a: 'Tu función para este rompecabezas solo necesita
           hacer miel, no debería tener bloque de ''avanzar'' o ''girar''. '
-      grade4_bee_functions4_authored_hint:
-        grade4_bee_functions4_a: Your function will travel down the side paths and
-          return the bee back to the main road.  You don't need to add that part to
-          your program.
       grade4_bee_functions6_authored_hint:
         grade4_bee_functions6_a: Edite la función para que resuelva el acertijo sin
           tener que cambiar el programa principal.
-        grade4_bee_functions6_b: "Your function should make the bee: \n- turn\n- move
-          forward\n- collect all of the nectar\n- turn around\n- move back to the
-          main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: "Si el rompecabezas parece desafiante, intente construir
           su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
@@ -17796,9 +16902,6 @@ es-MX:
           el camino, recoger el néctar, hacer la miel, girar la abeja y traerlo de
           regreso.
       grade4_bee_functions9_authored_hint:
-        grade4_bee_functions9_a: Your function will only need to collect nectar...
-          but this time, you will need to use a `while` loop instead of a `repeat`
-          loop.
         grade4_bee_functions9_b: Use `mientras el néctar> 0` para recibir todo el
           néctar.
       grade4_bee_nestedLoops1_authored_hint:
@@ -17810,15 +16913,6 @@ es-MX:
           otra repetición que también tenga el bloque `avanzar` dentro de ella.
         grade4_bee_nestedLoops2_b: Tendrá que usar los tres bloques de `repetición`
           disponibles para resolver este rompecabezas.
-        grade4_bee_nestedLoops2_c: |-
-          Nest your blocks three deep, like this:
-
-          - repeat 3
-          - repeat 3
-          - move forward
-          - repeat 12
-          - get nectar
-          - turn right
       grade4_bee_nestedLoops2a_authored_hint:
         grade4_bee_nestedLoops2a_a: Intenta usar los ciclos anidados de repetición
           para resolver este rompecabezas.
@@ -17829,8 +16923,6 @@ es-MX:
         grade4_bee_nestedLoops4_b: Necesitarás un ciclo anidado para avanzar y obtener
           néctar, pero solo un ciclo para recolectar miel al final. En total, deberías
           usar 3 ciclos.
-      grade4_bee_nestedLoops5_authored_hint:
-        grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Si utilizas un bloque que me ayude a "avanzar 100 pixeles".
           Dibujaré una línea automáticamente.
@@ -17858,14 +16950,6 @@ es-MX:
           el 0s en el medio, y el tercero dibuja el 1s a la derecha.
         Course_4_Artist_Binary_Free_Play_2b_c: En cada repetición necesitas `contador`
           para 1s y` 16- (contador 2x) `para 0s.
-        Course_4_Artist_Binary_Free_Play_2b_d: |-
-          **Solution:**
-          ![solution](https://images.code.org/866a92e042a546de3afcf462a8b5c695-image-1444438735003.58.28.png)
-      grade5_artist_for_loops1_authored_hint:
-        grade5_artist_for_loops1_a: |-
-          If you use this `for` loop, it will run just like a `repeat 3 times` loop.
-
-          ![](https://images.code.org/585d2e24f3021ac2561aec6e96dde430-image-1475906135993.54.11.png)
       grade5_artist_for_loops10_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: El polígono más grande tiene 19 lados.
         Course_4_Artist_For_Loops_Challenge_b: Cada polígono está incompleto, con
@@ -17875,16 +16959,6 @@ es-MX:
           Puedes dibujar algo como esto:
 
           ! [] (https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)
-      grade5_artist_for_loops2_authored_hint:
-        grade5_artist_for_loops2_a: |-
-          Use `counter` for the length of your triangles inside your `repeat` loop.
-
-          ![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)
-      grade5_artist_for_loops3_authored_hint:
-        Course_4_Artist_For_Loops_3_a: |-
-          To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
-
-          ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
       grade5_artist_for_loops4_authored_hint:
         Course_4_Artist_For_Loops_4_a: |-
           **¿Cuál es el número más pequeño que necesitarás?
@@ -17892,16 +16966,11 @@ es-MX:
           ¿Qué tanto aumenta cada vez?**
 
           Esas son las preguntas que se tiene que hacer para completar los espacios del loop "for".
-      grade5_artist_for_loops5_authored_hint:
-        grade5_artist_for_loops5_a: You don't need the traditional repeat loop when
-          making this spiral!
       grade5_artist_for_loops7_authored_hint:
         grade5_artist_for_loops7_a: La pluma es más fina en este rompecabezas. Tendrás
           que configurarla a '1' antes de empezar.
         grade5_artist_for_loops7_b: "¡Nota que esta espiral gira a la derecha en vez
           de a la izquierda!"
-      grade5_artist_for_loops7a_authored_hint: {}
-      grade5_artist_for_loops7b_authored_hint: {}
       grade5_artist_for_loops8_authored_hint:
         Course_4_Artist_For_Loops_11_a: "¡El ángulo de giro cambiará con cada forma!\n\nUse
           el bloque matemático para ingresar 360 dividido por el número de lados que
@@ -17919,17 +16988,12 @@ es-MX:
         Course_4_Artist_For_Loops_inspire_c: Hay dos iteraciones del mismo bucle de
           repetición dentro del bucle 'for', pero la segunda repetición gira en la
           dirección opuesta.
-        Course_4_Artist_For_Loops_inspire_d: "**Solution:**  ![Solution](https://images.code.org/d619892fc17ff491c201d86bb917e523-image-1441005190828.12.30.png) "
       grade5_artist_for_loopsfreeplay12_authored_hint:
         grade5_artist_for_loopsfreeplay12_a: La imagen en el dibujo se hizo utilizando
           un contador para el 'establecer alfa' y 'contador' / 10 como un tamaño de
           pincel.
         grade5_artist_for_loopsfreeplay12_b: La imagen en el dibujo utiliza una vuelta
           de 61 grados.
-        grade5_artist_for_loopsfreeplay12_c: |-
-          Want to know how the sample image was done?
-
-          ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
       grade5_artist_functionparameters10_authored_hint:
         brush_width: Establecemos el grosor del pincel a 1, luego el color azul antes
           de hacer cualquier otra cosa.
@@ -17940,10 +17004,6 @@ es-MX:
           El bloque "set alpha" utiliza la división para ir atenuando el color a medida que el contador aumenta.
         after: Cuando hayas terminado con cada "pétalo", asegúrate de "avanzar" 20
           píxeles antes de hacer una rotación de 60 grados.
-        solution: |-
-          **Solution**
-
-          ![](https://images.code.org/7e9f4be39d45726d537fe8e6e9147986-image-1456445254361.png)
       grade5_artist_functionparameters8_authored_hint:
         NEW_Course_4_Artist_Params_13_a: La longitud de los lados de cada forma es
           7 veces el número de lados que tiene.
@@ -17953,9 +17013,6 @@ es-MX:
         grade5_artist_functionparameters9_b: No es necesario añadir bloques 'mover'
           o 'girar' para terminar este código.
       grade5_artist_functionparameters9a_authored_hint:
-        grade5_artist_functionparameters9a_a: 'Did the code get so scrambled up that
-          it''s no longer recognizable?  Try clicking the "Start over" button in the
-          upper righthand corner. '
         grade5_artist_functionparameters9a_b: La nueva variable 'min' debe ir en la
           primera ranura en tu ciclo 'for', dentro de la función.
       grade5_artist_functionparameters9b_authored_hint:
@@ -17964,8 +17021,6 @@ es-MX:
         grade5_artist_functionparameters9b_b: Lo único que necesitas hacer entre llamadas
           de función es cambiar el color de la línea.
       grade5_artist_functionparameters_6_authored_hint:
-        grade5_artist_functionparameters_6_a: Use a `for` loop to get the code as
-          smooth as you can.
         grade5_artist_functionparameters_6_b: Recuerda **añadir** un parámetro. ¡No
           elimines el que ya esta ahí!
       grade5_artist_parameters_squares1a_authored_hint:
@@ -17986,8 +17041,6 @@ es-MX:
           'longitud' y usalo dentro de tu bloque 'avanzar'!
         grade5_artist_parameters_squares2a_b: "¡Cuando llamas una función, usa un
           ciclo 'for' para tener el mejor código posible!"
-      grade5_artist_parameters_stars1_authored_hint:
-        hint1: Don't give up!
       grade5_artist_variables_freeplay10_authored_hint:
         Course_4_Artist_Vars_8_a: Si divide su longitud inicial por el número de lados,
           la longitud de cada lado se acortará a medida que el número de lados aumente.
@@ -17999,9 +17052,6 @@ es-MX:
           a un molinete.
         Course_4_Artist_Inspire_c: Cada molinete también se repite cuatro veces, con
           un giro a la derecha de ** 360 / lados **.
-        Course_4_Artist_Inspire_d: |-
-          **Solution:**
-          ![Blocks for solution](https://images.code.org/1865aaf1b4a8ba84a5e8a7408401092d-image-1440060930335.43.39.png)
       grade5_artist_variables_octagons13_authored_hint:
         Course_4_Artist_Vars_13_a: Necesita dos loops de repetición (uno dentro de
           otro) ambos repitiendo "lados" veces.
@@ -18038,8 +17088,6 @@ es-MX:
       grade5_bee_for_loops11_authored_hint:
         NEW_Course_4_Bee_For_Loops_10a_a: "¿Puedes encontrar un patrón entre el número
           de pasos que necesitas tomar y el numero de nectares a recolectar?"
-        NEW_Course_4_Bee_For_Loops_10a_b: You'll need to have 2 repeats, one will
-          use a math block.
       grade5_bee_for_loops3_authored_hint:
         grade5_bee_for_loops3_a: 'Utiliza la variable ''contador'' dentro del ciclo
           ''repetir'' donde se recolecta el nectar para resolver este acertijo. '
@@ -18048,11 +17096,6 @@ es-MX:
       grade5_bee_for_loops4_authored_hint:
         grade5_bee_for_loops4_a: Utiliza un ciclo 'for' que vaya de 1 a 7 con un incremento
           de 1 para resolver este acertijo.
-        grade5_bee_for_loops4_b: Make sure to use the `counter` variable inside your
-          nested `repeat` loop to get enough nectar!
-      grade5_bee_for_loops5_authored_hint:
-        grade5_bee_for_loops5_a: This time, your `move forward` block and your `get
-          nectar` block will need to be in separate `repeat` loops.
       grade5_bee_for_loops6_authored_hint:
         grade5_bee_for_loops6_a: No te olvides de utilizar una variable 'contador'
           dentro de tu ciclo 'for'.
@@ -18069,8 +17112,6 @@ es-MX:
           Intenta hacer algúnos cálculos con la variable contador.
 
           ¿Qué tienes que hacerle al contador en cada flor para alcanzar la cantidad de nectar que necesitas recolectar?
-        NEW_Course_4_Bee_For_Loops_7_b: 'Remember: If your loop is counting up, the
-          increment is added to your `counter` variable each time through.'
       grade5_bee_parameters_new1_authored_hint:
         grade5_bee_parameters_new1_a: Utiliza declaraciones 'si' para asegurarte de
           que solo obtienes nectar de una flor.
@@ -18096,14 +17137,6 @@ es-MX:
       grade5_bee_parameters_new7_authored_hint:
         grade5_bee_parameters_new7_a: No necesitas un segundo parámetro para esta
           función, solo una segunda declaración si'.
-      grade5_bee_parameters_new8a_authored_hint:
-        grade5_bee_parameters_new8a_a: This spiral can be simplified with a `for`
-          loop.
-      grade5_bee_parameters_new9a_authored_hint:
-        grade5_bee_parameters_new9a_a: A `for` loop can help you with this stair step
-          pattern, too!
-        grade5_bee_parameters_new9a_b: For each stair, you'll need to call the function
-          once, turn right, call the function again, then turn left.
       grade5_playlab_variables2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asegúrese de establecer el número de `velocidad_perro`a
           algo más grande que` velocidad_gato`.
@@ -18119,31 +17152,13 @@ es-MX:
         gradek_adventurer_loops4_a: Si usted no puede encontrar la respuesta de inmediato,
           trate de usar un trozo de papel para averiguar las flechas que se necesita
           y mirar un patrón.
-      gradek_adventurer_loops4a_authored_hint:
-        gradek_adventurer_loops4a_a: Can't figure out what's wrong? Try running the
-          code to see what happens.
       gradek_adventurer_loops5_authored_hint:
         gradek_adventurer_loops5_a: Si no puede descubrir qué viene después, intente
           ejecutar el código para ver dónde termina Laurel.
-      gradek_adventurer_loops6_authored_hint:
-        gradek_adventurer_loops6_a: If you are having trouble figuring this puzzle
-          out, try writing the moves down on a piece of paper and look for a pattern.
       gradek_adventurer_loops7_challenge_authored_hint:
         gradek_adventurer_loops7_challenge_a: "¿El código se siente realmente largo?
           Intenta poner dos de tus bucles `repetir` dentro de otro bucle para hacerlo
           mucho más corto!"
-      gradek_adventurer_loops8_authored_hint:
-        gradek_adventurer_loops8_a: If you can't figure out where to put the loops,
-          try writing the code out step-by-step and look for a pattern.
-      gradek_adventurer_loops9_authored_hint:
-        gradek_adventurer_loops9_a: If you can't figure out where to put the loops,
-          try writing your code step-by-step and look for patterns.
-      gradek_artist_loops1_authored_hint:
-        gradek_artist_loops1_a: Can't figure out how to draw a line?  Start attaching
-          blocks to the `when run` block to see what happens.
-      gradek_artist_loops2_authored_hint:
-        gradek_artist_loops2_a: Is something not quite right?  Use the "Step" button
-          to see where things go wrong.
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Si desea que el loop se repita más de 4 veces, puede cambiar
           el número en la parte superior del bloque.
@@ -18162,68 +17177,15 @@ es-MX:
         gradek_artist_loops7_b: "¿Cómo enlazarías el código que se te ha dado?"
         gradek_artist_loops7_c: "¿Qué hace el código?   \n¿Qué se supone que haga?
           \  \n¿Qué te dice eso?"
-      gradek_artist_loops8_authored_hint:
-        gradek_artist_loops8_a: 'You don''t have to delete everything!  Some of the
-          code is good. Use it to build the rest of the stairs. '
       gradek_artist_loops9_authored_hint:
         artistLoopsKA_a: Use el bloque de salto para avanzar sin dibujar una línea.
-      gradek_artist_loopsA_authored_hint:
-        artistLoopsKB_a: There should be 2 blocks inside of your loop to solve this
-          puzzle.
-      gradek_artist_loopsFP_authored_hint: {}
-      gradek_playlab_events1a_authored_hint:
-        gradek_playlab_events1a_a: Attach the `move up` block to the `when click`
-          event so that the cat moves up when the "up" button is pressed.
-      gradek_playlab_events1c_authored_hint:
-        gradek_playlab_events1c_a: "Here is the block you should connect to the `when
-          run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
-      gradek_playlab_events2c_authored_hint:
-        gradek_playlab_events2c_a: drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
-          and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
-      gradek_playlab_events3c_authored_hint:
-        gradek_playlab_events3c_a: |-
-          Here is the event block that you will need to get Jorge to move right:
-
-          ![](https://images.code.org/cfc4b696b1ad5762ff40c1c8a17a194d-image-1478141370249.png)
-        gradek_playlab_events3c_b: |-
-          Here is the block you should connect to the `when right` event:
-
-          ![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)
-      gradek_playlab_events4c_authored_hint:
-        gradek_playlab_events4c_a: "Here are the event blocks that you will need to
-          use to move Jorge up and down:\n\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\nand
-          \n![](https://images.code.org/bb2a117cef485e79119a63e5d027968e-image-1478140979742.png)"
-      gradek_playlab_events5c_authored_hint:
-        gradek_playlab_events5c_a: |-
-          Here is the event block that you would use to have Jorge do something when clicked:
-
-          ![](https://images.code.org/6e3a654378643fd0590307ec3a0e429c-image-1478140058859.png)
-        gradek_playlab_events5c_b: |-
-          Here is the block you would use to change the background:
-
-          ![](https://images.code.org/3f6d7a642b37c3abffe7b0de062ea076-image-1478140261440.png)
-        gradek_playlab_events5c_c: |-
-          Here is the block you would use to play a random sound:
-
-          ![](https://images.code.org/81a8ef4f64023039438199fef67bb56b-image-1478140125332.png)
-      gradek_playlab_eventsA_authored_hint:
-        gradek_playlab_eventsA_a: |-
-          If this seems like too much to do, try breaking it down into steps:
-
-          1)  Have the actor change to a random size on click.
-          2) Play a random sound when you click the actor.
-
-          Now, make sure both of those actions are attached underneath the same event!
       harvester_Kahoot_authored_hint:
         courseE_farmer_functions1a_a: Piensa en las declaraciónes "si/entonces" paso
           a paso. ¿Que debes hacer si estas parado en una planta de maíz?
         courseE_farmer_functions1a_b: ¡Utiliza un bloque "repetir hasta" para llegar
           a la calabaza!
-      harvey_snowflake_artist1_authored_hint: {}
-      harvey_snowflake_artist2_authored_hint: {}
       harvey_tictactoe_authored_hint:
         harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
-      iceAgeLoopsforVideo_authored_hint: {}
       iceage_click_hello_authored_hint:
         iceage_click_hello_a: Añade un bloque 'actor 1 dice' o más al evento 'al hacer
           clic' para completar este acertijo.
@@ -18326,7 +17288,6 @@ es-MX:
         iceage_throw_hearts_b: Para que la abuela sea feliz cuando reciba un corazón,
           necesitas conectar el bloque 'establecer humor de actor 2 a feliz' debajo
           del evento 'cuando actor 2 toca el proyectil'.
-      iceage_warn_embed_ice_age_authored_hint: {}
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: 'Solo deberias tener que añadir dos bloques para llevar
           este acertijo a donde debe estar. '
@@ -18337,7 +17298,6 @@ es-MX:
           este acertijo a donde debe estar. '
         iceage_warn_ice_age_b: Añade los dos nuevos bloques debajo del evento 'al
           ejecutar' para que ocurran imediatamente después de que inicie el programa.
-      k1stickerfreeplay_authored_hint: {}
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Deberías terminar con cinco bloques dentro de tu bucle.
       level 'grade3_Loops_11_authored_hint:
@@ -18368,23 +17328,3 @@ es-MX:
       playLabDebugVideo1_authored_hint:
         courseA_playLab_events2_a: Aquí está el bloque debes conectar al bloque 'al
           ejecutar':! [] (https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)
-      sample3_authored_hint:
-        sample3_a: |-
-          Try writing the code once and looping it seven times:
-
-          ![](https://images.code.org/2a116e75e31ee3a8a8683349c9460286-image-1464307689813.gif)
-      sample5_authored_hint:
-        sample5_a: Did you know that you can put as many blocks inside of a repeat
-          loop as you want to?
-        sample5_b: |-
-          The bee is looping these actions over and over again:
-          - move forward
-          - make honey
-          - turn left
-          - move forward
-          - turn right
-      sample6_authored_hint:
-        sample6_a: Did you know that you can use more than one repeat loop in a puzzle?
-        sample6_b: Sometimes repeat loops have lots of blocks inside, and sometimes
-          they might only have one!
-      sample7assessment_authored_hint: {}

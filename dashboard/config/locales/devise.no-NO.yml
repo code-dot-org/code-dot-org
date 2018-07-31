@@ -52,7 +52,6 @@
         å bekrefte din nye e-postadresse.
       updated: Kontoen din er blitt oppdatert.
     sessions:
-      signed_in: ''
       signed_out: Logget ut.
     unlocks:
       send_instructions: Du vil motta en e-post om noen få minutter som beskriver

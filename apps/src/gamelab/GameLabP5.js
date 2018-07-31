@@ -4,6 +4,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
+import {getDanceAPI} from './DanceLabP5';
 
 const defaultFrameRate = 30;
 
@@ -75,6 +76,7 @@ GameLabP5.prototype.init = function (options) {
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
   this.scale = options.scale || 1;
+  this.song = options.song;
 
   var self = this;
 
@@ -715,6 +717,10 @@ GameLabP5.prototype.startExecution = function () {
         // Set default frameRate to 30 instead of 60.
         p5obj.frameRate(defaultFrameRate);
 
+        if (this.song) {
+          p5obj.defaultSong = p5obj.loadSound(this.song);
+        }
+
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has
           // not completed, so we need to grab increment p5's preloadCount by
@@ -905,7 +911,7 @@ GameLabP5.prototype.getMarshallableP5Properties = function () {
   return propNames;
 };
 
-GameLabP5.prototype.getGlobalPropertyList = function () {
+GameLabP5.prototype.getGlobalPropertyList = function (danceLab) {
   const propList = {};
 
   // Include every property on the p5 instance in the global property list
@@ -924,6 +930,11 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
 
   // Create a 'World' object in the global namespace:
   propList.World = [this.gameLabWorld, this];
+
+  if (danceLab) {
+    // Create a 'Dance' object in the global namespace:
+    propList.Dance = [getDanceAPI(this.p5), this];
+  }
 
   return propList;
 };

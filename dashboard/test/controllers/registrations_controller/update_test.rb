@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 module RegistrationsControllerTests
@@ -140,18 +139,117 @@ module RegistrationsControllerTests
       refute user.hashed_email == new_hashed_email
     end
 
+    test "single-auth student without a password can set parent_email without a password" do
+      # so it's possible to add a recovery option to their account.  Once they are
+      # on multi-auth they can just add an email or another SSO, so this is no
+      # longer needed.
+      student = create :student, :unmigrated_clever_sso
+      assert_nil student.parent_email
+      assert_nil student.encrypted_password
+
+      sign_in student
+      put '/users', params: {
+        format: 'json',
+        user: {parent_email: 'parent@example.com'}
+      }
+      assert_response :no_content
+
+      student.reload
+      assert_equal 'parent@example.com', student.parent_email
+    end
+
+    test "single-auth student with a password can set parent_email with a password" do
+      # so it's possible to add a recovery option to their account.  Once they are
+      # on multi-auth they can just add an email or another SSO, so this is no
+      # longer needed.
+      password = 'drowssap'
+      student = create :student, password: password
+      assert_nil student.parent_email
+      refute_nil student.encrypted_password
+
+      sign_in student
+      put '/users', params: {
+        format: 'json',
+        user: {
+          parent_email: 'parent@example.com',
+          current_password: password
+        }
+      }
+      assert_response :no_content
+
+      student.reload
+      assert_equal 'parent@example.com', student.parent_email
+    end
+
+    test "single-auth student with a password cannot set parent_email without a password" do
+      # so it's possible to add a recovery option to their account.  Once they are
+      # on multi-auth they can just add an email or another SSO, so this is no
+      # longer needed.
+      student = create :student, password: 'drowssap'
+      assert_nil student.parent_email
+      refute_nil student.encrypted_password
+
+      sign_in student
+      put '/users', params: {
+        format: 'json',
+        user: {parent_email: 'parent@example.com'}
+      }
+      assert_response :unprocessable_entity
+
+      student.reload
+      assert_nil student.parent_email
+    end
+
+    test "single-auth student with a password cannot set parent_email with the wrong password" do
+      # so it's possible to add a recovery option to their account.  Once they are
+      # on multi-auth they can just add an email or another SSO, so this is no
+      # longer needed.
+      student = create :student, password: 'drowssap'
+      assert_nil student.parent_email
+      refute_nil student.encrypted_password
+
+      sign_in student
+      put '/users', params: {
+        format: 'json',
+        user: {
+          parent_email: 'parent@example.com',
+          current_password: 'wrong-password'
+        }
+      }
+      assert_response :unprocessable_entity
+
+      student.reload
+      assert_nil student.parent_email
+    end
+
+    test "single-auth student can update with a blank parent email without password" do
+      student = create :student, :unmigrated_clever_sso
+      assert_nil student.hashed_email
+      assert_nil student.parent_email
+
+      sign_in student
+      put '/users', params: {
+        format: 'json',
+        user: {parent_email: '', age: '9'}
+      }
+      assert_response :no_content
+
+      student.reload
+      assert_nil student.parent_email
+    end
+
     # The next several tests explore profile changes for users with or without
     # passwords.  Examples of users without passwords are users that authenticate
     # via oauth (a third-party account), or students with a picture password.
 
-    test "editing password of student-without-password is not allowed" do
-      student_without_password = create :student
-      student_without_password.update_attribute(:encrypted_password, '')
+    test "editing password of student-without-password is allowed" do
+      student_without_password = create :student, encrypted_password: ''
       assert student_without_password.encrypted_password.blank?
 
-      refute can_edit_password_without_password? student_without_password
-      refute can_edit_password_with_password? student_without_password, 'wrongpassword'
-      refute can_edit_password_with_password? student_without_password, ''
+      assert can_edit_password_without_password? student_without_password
+      # Current password is entirely ignored in this case
+      assert can_edit_password_with_password? student_without_password, 'wrongpassword'
+      assert can_edit_password_with_password? student_without_password, ''
     end
 
     test "editing password of student-with-password requires current password" do
@@ -161,14 +259,14 @@ module RegistrationsControllerTests
       assert can_edit_password_with_password? student_with_password, 'oldpassword'
     end
 
-    test "editing password of teacher-without-password is not allowed" do
-      teacher_without_password = create :teacher
-      teacher_without_password.update_attribute(:encrypted_password, '')
+    test "editing password of teacher-without-password is allowed" do
+      teacher_without_password = create :teacher, encrypted_password: ''
       assert teacher_without_password.encrypted_password.blank?
 
-      refute can_edit_password_without_password? teacher_without_password
-      refute can_edit_password_with_password? teacher_without_password, 'wrongpassword'
-      refute can_edit_password_with_password? teacher_without_password, ''
+      assert can_edit_password_without_password? teacher_without_password
+      # Current password is entirely ignored in this case
+      assert can_edit_password_with_password? teacher_without_password, 'wrongpassword'
+      assert can_edit_password_with_password? teacher_without_password, ''
     end
 
     test "editing password of teacher-with-password requires current password" do

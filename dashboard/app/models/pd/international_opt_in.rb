@@ -31,7 +31,6 @@ class Pd::InternationalOptIn < ApplicationRecord
       :school_country,
       :ages,
       :subjects,
-      :resources,
       :workshop_organizer,
       :workshop_facilitator,
       :workshop_course,
@@ -48,7 +47,7 @@ class Pd::InternationalOptIn < ApplicationRecord
       subjects: %w(cs ict math science history la efl music art other),
       resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other),
       robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder other),
-      workshopCourse: %w(csf_af csf_express),
+      workshopCourse: %w(csf_af csf_express csd csp),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
     }

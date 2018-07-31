@@ -1,7 +1,5 @@
-# coding: utf-8
 require 'cdo/url_converter'
 
-# coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
@@ -368,6 +366,15 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
   # editor is open, the first if it isn't
+  @browser.execute_script(
+    "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
+    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))"
+  )
+rescue
   script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
     "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
   @browser.execute_script(script)
@@ -377,6 +384,14 @@ And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # jQuery needs \\s to allow :s and .s in ID selectors
   # Escaping those gives us \\\\ per-character
   category_selector = "#\\\\:#{id}\\\\.label"
+  @browser.execute_script(
+    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))"
+  )
+rescue
   @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
 end
 
