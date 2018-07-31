@@ -313,7 +313,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
     CDO.expects(:jotform_forms).times(11).returns( # 6 for general, 5 for facilitator
       {
-        'local' => {
+        'local_summer' => {
           'day_0' => FORM_IDS[:pre_workshop],
           'day_1' => FORM_IDS[:day_1],
           'day_2' => FORM_IDS[:day_2],
@@ -331,14 +331,20 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   test 'generate workshop survey summary works as expected' do
     CDO.stubs(:jotform_forms).returns(
       {
-        'local' => {
-          'day_0' => FORM_IDS[:pre_workshop]
+        'local_summer' => {
+          'day_0' => FORM_IDS[:pre_workshop],
+          'day_1' => FORM_IDS[:day_1],
+          'day_2' => FORM_IDS[:day_2],
+          'day_3' => FORM_IDS[:day_3],
+          'day_4' => FORM_IDS[:day_4],
+          'day_5' => FORM_IDS[:day_5],
+          'facilitator' => FORM_IDS[:facilitator]
         }
       }
     )
 
     common_survey_hash = {
-      form_id: CDO.jotform_forms['local']['day_0'],
+      form_id: CDO.jotform_forms['local_summer']['day_0'],
       pd_workshop: @workshop,
       day: 0
     }

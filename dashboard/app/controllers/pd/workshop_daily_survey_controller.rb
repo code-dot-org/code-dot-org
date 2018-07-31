@@ -2,6 +2,7 @@ module Pd
   class WorkshopDailySurveyController < ApplicationController
     include WorkshopConstants
     include JotForm::EmbedHelper
+    include Pd::JotForm::Constants
 
     # The POST submit route will be redirected to from JotForm, after form submission
     skip_before_action :verify_authenticity_token, only: %w(submit_general submit_facilitator)
@@ -24,10 +25,12 @@ module Pd
       return render_404 if day < 0 || day > 4
 
       workshop = Workshop.
-        where(ended_at: nil, subject: [SUBJECT_TEACHER_CON, SUBJECT_SUMMER_WORKSHOP]).
+        where(ended_at: nil, course: [COURSE_CSD, COURSE_CSP]).
+        where.not(subject: SUBJECT_FIT).
         nearest_attended_or_enrolled_in_by(current_user)
 
       return render :not_enrolled unless workshop
+      return render_404 if day == 0 && [SUBJECT_TEACHER_CON, SUBJECT_SUMMER_WORKSHOP].exclude?(workshop.subject)
 
       session = nil
       if day > 0
@@ -38,7 +41,7 @@ module Pd
         return render :no_attendance unless session.attendances.exists?(teacher: current_user)
       end
 
-      @form_id = WorkshopDailySurvey.get_form_id_for_day day
+      @form_id = WorkshopDailySurvey.get_form_id_for_day_and_subject workshop.subject, day
 
       # Pass these params to the form and to the submit redirect to identify unique responses
       key_params = {
@@ -103,7 +106,7 @@ module Pd
       # Out of facilitators? Done.
       return redirect_to action: :thanks unless facilitator
 
-      @form_id = WorkshopFacilitatorDailySurvey.form_id
+      @form_id = WorkshopFacilitatorDailySurvey.form_id workshop.subject
 
       # Pass these params to the form and to the submit redirect to identify unique responses
       key_params = {
@@ -156,7 +159,7 @@ module Pd
       return render_404 unless session
 
       return redirect_to :pd_workshop_survey_thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop, day: LAST_DAY)
-      @form_id = WorkshopDailySurvey.get_form_id_for_day LAST_DAY
+      @form_id = WorkshopDailySurvey.get_form_id_for_day_and_subject workshop.subject, LAST_DAY
 
       # Pass these params to the form and to the submit redirect to identify unique responses
       key_params = {
