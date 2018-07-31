@@ -54,7 +54,7 @@ export default class DeleteAccountDialog extends React.Component {
     checkboxes: PropTypes.objectOf(PropTypes.shape({
       checked: PropTypes.bool.isRequired,
       label: PropTypes.object.isRequired,
-    })),
+    })).isRequired,
     password: PropTypes.string.isRequired,
     passwordError: PropTypes.string,
     deleteVerification: PropTypes.string.isRequired,
