@@ -1,5 +1,5 @@
 @no_mobile
-Feature: Feedback Tab Visibility
+Feature: Manage Assets
 
 # This scenario will be removed when the feature is released.
   Scenario: With the experiment flag off, the manage assets dialog does not contain the option to record audio.
