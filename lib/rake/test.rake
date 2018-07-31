@@ -6,6 +6,7 @@ require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require 'parallel'
+require 'aws-sdk-s3'
 
 namespace :test do
   desc 'Runs apps tests.'

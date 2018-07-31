@@ -17,10 +17,6 @@ commonStyles.purpleHeader = {
   userSelect: 'none',
 };
 
-commonStyles.purpleHeaderReadOnly = {
-  backgroundColor: color.charcoal,
-};
-
 commonStyles.purpleHeaderUnfocused = {
   backgroundColor: color.lighter_purple,
   color: color.dark_charcoal,
@@ -29,6 +25,10 @@ commonStyles.purpleHeaderUnfocused = {
 commonStyles.teacherBlueHeader = {
   backgroundColor: color.cyan,
   color: color.lightest_cyan
+};
+
+commonStyles.teacherHeaderUnfocused = {
+  color: color.dark_charcoal,
 };
 
 commonStyles.button = {

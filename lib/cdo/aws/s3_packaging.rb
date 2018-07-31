@@ -1,5 +1,5 @@
 require 'active_support/core_ext/string' # Get String#underscore
-require 'aws-sdk'
+require 'aws-sdk-s3'
 require 'logger'
 
 #
