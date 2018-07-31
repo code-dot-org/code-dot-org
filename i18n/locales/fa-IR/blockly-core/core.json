@@ -113,7 +113,7 @@
     "LISTS_CREATE_WITH_TOOLTIP": "یک فهرست با هر تعداد سر فصل که میخواهی بساز.",
     "LISTS_GET_INDEX_FIRST": "اولین",
     "LISTS_GET_INDEX_FROM_END": "# از انتها",
-    "LISTS_GET_INDEX_FROM_START": "#",
+    "LISTS_GET_INDEX_FROM_START": "",
     "LISTS_GET_INDEX_GET": "بگیر",
     "LISTS_GET_INDEX_GET_REMOVE": "بگیر و حذف‌کن",
     "LISTS_GET_INDEX_LAST": "آخرین",

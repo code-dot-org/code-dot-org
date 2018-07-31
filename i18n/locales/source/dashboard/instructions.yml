@@ -625,7 +625,7 @@ en:
         * Create a new function `moveCloud(name)` that will move any cloud.
           * (Hint: you will use almost all the same code as the `moveCloud0` function)
         * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-         * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+          * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify clouds_2018_instruction: |-
         # Clouds
 
@@ -635,7 +635,7 @@ en:
         * Create a new function `moveCloud(name)` that will move any cloud.
           * (Hint: you will use almost all the same code as the `moveCloud0` function)
         * Call your new `moveCloud(name)` function inside the event block, once for each cloud name.
-         * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
+          * (Hint: this is similar to how the `loopCloud(name)` function is called many times.
       CSD U6 params modify planes_instruction: |-
         # Multi-plane Controller
 
@@ -3503,8 +3503,8 @@ en:
       courseB_collector_loops6_2018_instruction: Figure out the code to help Laurel get all of the treasure!
       courseB_collector_loops7_instruction: Write the code to get all of this treasure.
       courseB_collector_loops7_2018_instruction: Write the code to get all of this treasure.
-      courseB_collector_loops8_instruction: "**Challenge: ** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all."
-      courseB_collector_loops8_2018_instruction: "**Challenge: ** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all."
+      courseB_collector_loops8_instruction: "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all."
+      courseB_collector_loops8_2018_instruction: "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all."
       courseB_collector_loops9_instruction: '*"Help me get the treasure from this deep valley."*'
       courseB_collector_loops9_2018_instruction: '*"Help me get the treasure from this deep valley."*'
       courseB_collector_loops_challenge1_instruction: 'This time you have limited blocks. Get all of the treasure! '
@@ -3540,6 +3540,7 @@ en:
       courseB_maze_seq1_2018_instruction: "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level."
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq2_2018_instruction: A bug! Fix the code to get Scrat to the acorn!
+      courseB_maze_seq3_instruction: '"Fix the code to get me to the pig!"'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq4_2018_instruction: Use **2** movement blocks to get the Scrat to the acorn.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
@@ -3648,7 +3649,7 @@ en:
 
         Play the game and move Waddles with the arrows until you score enough points.
       courseC_artist_loop1_instruction: Let's add some pizazz!
-      courseC_artist_loop1_2018_instruction: Let's add some pizazz!
+      courseC_artist_loop1_2018_instruction: Let's add some pizazz with a `set pattern` block.
       courseC_artist_loops1_instruction: "*\"Zombie.  Draw!\"*\n\nThe zombie wants to draw a line from where he is to the garden of sunflowers.  Can you help him?  \n*(The garden is 250 pixels away)*  "
       courseC_artist_loops1a_instruction: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
       courseC_artist_loops1a_2018_instruction: 'Get the artist to the center of the play area, then draw a bird using a sticker. '
@@ -4426,6 +4427,7 @@ en:
       courseE_farmer_concept3_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept3_2018_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_concept4_instruction: Now let's go one level deeper! We've nested that whole block of code into another loop, but you need to get the artist back in place to draw the next line. Which of these code blocks can you place at the end of the outermost loop to draw the whole grid?
+      courseE_farmer_elseif_test_instruction: Fill in the hole at the end of each of these paths.
       courseE_farmer_functions1_instruction: Help the harvester get to the pumpkin and pick it.
       courseE_farmer_functions10_instruction: 'No one knows what these sprouts will become.  Use `if` statements to write the code to check and harvest each one.   '
       courseE_farmer_functions10a1_2018_instruction: Use everything that you've learned so far to solve this puzzle!
@@ -4871,7 +4873,7 @@ en:
       grade1_adventurer_loops4_instruction: 'Add to the code from the last puzzle to get all of the gold. '
       grade1_adventurer_loops5_instruction: What should you add to this code to get all of the gold?
       grade1_adventurer_loops6_instruction: Write the code to get all of this gold.
-      grade1_adventurer_loops7_challenge_instruction: "**Challenge: ** The gold goes all the way down these stairs!  Write the code to help me get it all."
+      grade1_adventurer_loops7_challenge_instruction: "**Challenge:** The gold goes all the way down these stairs!  Write the code to help me get it all."
       grade1_adventurer_loops8_challenge_instruction: 'Challenge: Try this staircase now! It has an extra spike at the end you''ll have to climb.'
       grade1_adventurer_loops9_instruction: Help me get the gold from this deep valley.
       grade1_adventurer_loopsFP_instruction: Eureka!  Collect as much gold as you can!

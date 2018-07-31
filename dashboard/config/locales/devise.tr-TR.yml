@@ -53,7 +53,6 @@ tr:
         bağlantısına tıkla ve eposta hesabını onaylama işlemini bitir.
       updated: Hesabınızı başarı ile güncelleştirdiniz.
     sessions:
-      signed_in: ''
       signed_out: Başarıyla oturum kapatıldı.
     unlocks:
       send_instructions: Birkaç dakika içinde hesabınızın kilidini nasıl açacağınızı

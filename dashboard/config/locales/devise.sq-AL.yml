@@ -56,7 +56,6 @@ sq:
         konfirmimin e adresës tuaj të re të emailit.
       updated: Ju përditësuat llogarinë tuaj me sukses.
     sessions:
-      signed_in: ''
       signed_out: Ju dolët me sukses.
     unlocks:
       send_instructions: Ju do të merrni një email me udhëzime se si të zhbllokoni

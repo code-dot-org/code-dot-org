@@ -5,7 +5,6 @@ zh-TW:
       Loops: 迴圈
       Functions: 函式
       Color: 顏色
-      Brushes: Brushes
       Math: 運算
       Logic: 邏輯
       Variables: 變數
@@ -18,12 +17,8 @@ zh-TW:
       Games/Score: 遊戲/評分
       Comments: 評論
       Category: 類別
-      Prebuilt: Prebuilt
       Text: 文字
-      Picker: Picker
-      Comment: Comment
       'Variables ': '變數 '
-      everythingelse: everythingelse
       numbers: 數字
       Numbers: 數字
       Input: 輸入
@@ -32,20 +27,11 @@ zh-TW:
       Sprites: 角色
       Behaviors: 行為
       Advanced: 進階設定
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
       Start: 開始
-      Groups: Groups
       Booleans: 布林值
-      Functional: Functional
-      Predefined: Predefined
       test: 測試
       test2: test2
       Foo: Foo
       Name: 你的名字
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
       Game/Score: 遊戲/評分
       Function: 函式
