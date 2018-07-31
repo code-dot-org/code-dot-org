@@ -234,8 +234,14 @@ GameLab.prototype.init = function (config) {
     showRateLimitAlert: this.studioApp_.showRateLimitAlert
   });
 
+  let song;
+  if (this.isDanceLab) {
+    song = '/api/v1/sound-library/category_background/jazzy_beats.mp3';
+  }
+
   this.gameLabP5.init({
     gameLab: this,
+    song,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
