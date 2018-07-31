@@ -7,12 +7,12 @@ import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import { WorkshopTypes } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {StatusColors} from './constants';
 import {
-  StatusColors,
   UNMATCHED_PARTNER_VALUE,
   ALL_PARTNERS_VALUE,
-  RegionalPartnerPropType,
-} from './constants';
+  RegionalPartnerPropType
+} from '../components/regional_partner_dropdown';
 
 const styles = {
   table: {
@@ -271,8 +271,8 @@ export class CohortViewTable extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerGroup: state.regionalPartnerGroup,
-  isWorkshopAdmin: state.permissions.workshopAdmin,
-  regionalPartnerFilter: state.regionalPartnerFilter,
-  regionalPartners: state.regionalPartners
+  regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,
+  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
+  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
+  regionalPartners: state.regionalPartners.regionalPartners
 }))(CohortViewTable);

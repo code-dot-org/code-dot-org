@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -8,11 +9,10 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
   personalProjectDataPropType,
-  PROJECT_TYPE_MAP
+  FEATURED_PROJECT_TYPE_MAP,
 } from './projectConstants';
-import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
-import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
+import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -68,9 +68,6 @@ export const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
-  xIcon: {
-    paddingRight: 5,
-  },
 };
 
 // Cell formatters.
@@ -95,45 +92,16 @@ const nameFormatter = (projectName, {rowData}) => {
 
 const actionsFormatter = (actions, {rowData}) => {
   return (
-    <QuickActionsCell>
-      <PopUpMenu.Item
-        onClick={() => console.log("Rename was clicked")}
-      >
-        {i18n.rename()}
-      </PopUpMenu.Item>
-      <PopUpMenu.Item
-        onClick={() => console.log("Remix was clicked")}
-      >
-        {i18n.remix()}
-      </PopUpMenu.Item>
-      {!!rowData.isPublished && (
-        <PopUpMenu.Item
-          onClick={() => console.log("Unpublish was clicked")}
-        >
-          {i18n.unpublish()}
-        </PopUpMenu.Item>
-      )}
-      {!rowData.isPublished && (
-        <PopUpMenu.Item
-          onClick={() => console.log("Publish was clicked")}
-        >
-          {i18n.publish()}
-        </PopUpMenu.Item>
-      )}
-      <MenuBreak/>
-      <PopUpMenu.Item
-        onClick={() => console.log("Delete was clicked")}
-        color={color.red}
-      >
-        <FontAwesome icon="times-circle" style={styles.xIcon}/>
-        {i18n.delete()}
-      </PopUpMenu.Item>
-    </QuickActionsCell>
+    <PersonalProjectsTableActionsCell
+      isPublished = {!!rowData.publishedAt}
+      projectId = {rowData.channel}
+      projectType = {rowData.type}
+    />
   );
 };
 
 const typeFormatter = (type) => {
-  return PROJECT_TYPE_MAP[type];
+  return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
 const dateFormatter = function (time) {
@@ -141,13 +109,13 @@ const dateFormatter = function (time) {
   return date.toLocaleDateString();
 };
 
-const isPublishedFormatter = (isPublished) => {
-  return isPublished ? (<FontAwesome icon="circle"/>) : '';
+const publishedAtFormatter = (publishedAt) => {
+  return publishedAt ? (<FontAwesome icon="circle"/>) : '';
 };
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
+    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
   };
 
   state = {
@@ -199,7 +167,7 @@ class PersonalProjectsTable extends React.Component {
         }
       },
       {
-        property: 'projectName',
+        property: 'name',
         header: {
           label: i18n.projectName(),
           props: {style: {
@@ -243,14 +211,14 @@ class PersonalProjectsTable extends React.Component {
         }
       },
       {
-        property: 'isPublished',
+        property: 'publishedAt',
         header: {
           label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          format: isPublishedFormatter,
+          format: publishedAtFormatter,
           props: {style: {
             ...tableLayoutStyles.cell,
             ...styles.centeredCell
@@ -290,18 +258,31 @@ class PersonalProjectsTable extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.projectList);
+    })(this.props.personalProjectsList);
+
+    const noProjects = this.props.personalProjectsList.length === 0;
 
     return (
-      <Table.Provider
-        columns={columns}
-        style={tableLayoutStyles.table}
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="channel" />
-      </Table.Provider>
+      <div>
+        {!noProjects &&
+          <Table.Provider
+            columns={columns}
+            style={tableLayoutStyles.table}
+          >
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="channel" />
+          </Table.Provider>
+        }
+        {noProjects &&
+          <h3>{i18n.noPersonalProjects()}</h3>
+        }
+      </div>
     );
   }
 }
 
-export default PersonalProjectsTable;
+export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
+
+export default connect(state => ({
+  personalProjectsList: state.projects.personalProjectsList.projects,
+}))(PersonalProjectsTable);

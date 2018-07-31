@@ -1,0 +1,16 @@
+{
+  "category": "",
+  "config": {
+    "color": [
+      15,
+      0.9,
+      0.65
+    ],
+    "func": "onPointerDrag",
+    "blockText": "on pointer drag",
+    "args": [
+
+    ],
+    "eventBlock": true
+  }
+}

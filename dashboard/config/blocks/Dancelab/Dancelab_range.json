@@ -1,0 +1,21 @@
+{
+  "category": "",
+  "config": {
+    "func": "range",
+    "inline": false,
+    "blockText": "{RANGE} ... {DOMAIN}",
+    "returnType": "Array",
+    "args": [
+      {
+        "name": "RANGE",
+        "type": "Array",
+        "field": true
+      },
+      {
+        "name": "DOMAIN",
+        "type": "Array",
+        "field": true
+      }
+    ]
+  }
+}
