@@ -12,13 +12,14 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     OWN: "own".freeze,
     CLOSED: "closed".freeze,
     FULL: "full".freeze,
-    NOT_FOUND: "not found".freeze
+    NOT_FOUND: "not found".freeze,
+    ERROR: "error".freeze
   }
 
   TEACHING_ROLES = [
-    "Classroom Teacher",
-    "Librarian",
-    "Tech Teacher/Media Specialist"
+    "Classroom Teacher".freeze,
+    "Librarian".freeze,
+    "Tech Teacher/Media Specialist".freeze
   ]
 
   # GET /api/v1/pd/workshops/1/enrollments
@@ -61,7 +62,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     else
       enrollment = ::Pd::Enrollment.new workshop: @workshop
       enrollment.school_info_attributes = school_info_params
-
       if enrollment.update enrollment_params
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
@@ -72,6 +72,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
           sign_up_url: url_for('/users/sign_up'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
+      else
+        render_unsuccessful RESPONSE_MESSAGES[:ERROR]
       end
     end
   end
@@ -101,15 +103,15 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   end
 
   def school_info_params
-    params.require(:school_info).permit(
-      :school_type,
-      :school_state,
-      :school_zip,
-      :school_district_id,
-      :school_id,
-      :school_name,
-      :country
-    )
+    {
+      school_type: params[:school_info][:school_type] ? params[:school_info][:school_type].split.first.downcase : nil,
+      school_state: params[:school_info][:school_state],
+      school_zip: params[:school_info][:school_zip],
+      school_district_id: params[:school_info][:school_district_id],
+      school_id: params[:school_info][:school_id],
+      school_name: params[:school_info][:school_name],
+      country: params[:school_info][:country]
+    }
   end
 
   def process_grade(g)
