@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
-import color from "../../util/color";
+import Button from "../../templates/Button";
+import i18n from '@cdo/locale';
 
 const styles = {
   buttonRow: {
@@ -8,11 +9,8 @@ const styles = {
     justifyContent: 'space-between',
   },
   button: {
-    marginRight: 30
-  },
-  blueButton: {
-    background: color.default_blue,
-    color: color.white
+    marginRight: 30,
+    borderRadius: 4
   }
 };
 
@@ -31,28 +29,27 @@ export default class AudioRecorder extends React.Component {
 
   render() {
     if (this.props.visible) {
-      return <div></div>;
+      return null;
     }
 
     return (
       <div style={styles.buttonRow}>
         <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}></input>
         <span>
-          <button
-            onClick={this.onStopClick}
+          <Button
+            onClick={()=>{}}
             id="stop-record"
-            style={{...styles.blueButton, ...styles.button}}
-          >
-            <i className="fa fa-stop" />
-            &nbsp;Stop
-          </button>
-          <button
+            style={styles.button}
+            color={Button.ButtonColor.blue}
+            icon="stop"
+            text={i18n.stop()}
+          />
+          <Button
             onClick={()=>{}}
             id="cancel-record"
             style={styles.button}
-          >
-            Cancel
-          </button>
+            text={i18n.cancel()}
+          />
         </span>
       </div>
     );
