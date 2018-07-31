@@ -95,7 +95,7 @@ export default function (app, levels, options) {
           customInputTypes: options.blocksModule.customInputTypes,
         });
 
-        if (valueOr(level.hideCustomBlocks, true) && !options.level.edit_blocks) {
+        if (!valueOr(level.hideCustomBlocks, true) || options.level.edit_blocks) {
           level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
         }
       }
