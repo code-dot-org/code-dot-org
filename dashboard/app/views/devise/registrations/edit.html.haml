@@ -163,18 +163,7 @@
 
 - if current_user.can_delete_own_account?
   -# Mount point for React DeleteAccount component.
-  -# If the ACCOUNT_DELETION_NEW_FLOW experiment is enabled, DeleteAccount will replace the Rails
-  -# confirmation dialog below.
   %div#delete-account
-    %hr.danger.account-page-section-break
-    %h2.danger= t('user.delete')
-    %p
-      = t('user.delete_text')
-      - if current_user.teacher?
-        = t('user.delete_text_teacher_note')
-      .farSide
-        - data_hash = { confirm: t('user.delete_confirm') }
-        = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
 - else
   %hr.danger.account-page-section-break
   %h2.danger= t('user.delete')

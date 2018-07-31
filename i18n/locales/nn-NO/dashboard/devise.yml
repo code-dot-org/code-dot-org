@@ -39,7 +39,6 @@ nn:
       update_needs_confirmation: "Du har oppdatert kontoen din, men vi må verifisere den nye e-postadressa du. Sjekk e-posten din og klikk på linken for å stadfesta den nye e-postadressa."
       updated: "Kontoen din er blitt oppdatert."
     sessions:
-      signed_in: ""
       signed_out: "Logga av utan problem."
     unlocks:
       send_instructions: "Du vil om nokre få minutt motta ein e-post med instruksjonar om korleis du kan låse opp kontoen din igjen."

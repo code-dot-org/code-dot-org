@@ -98,7 +98,7 @@
   "setSpeed": "ezarri abiadura",
   "setSpeedTooltip": "Eszenatokiaren abiadura ezartzen du",
   "shareFlappyTwitter": "Azter ezazu nik sortutako Flappy jokoa. Nik bakarrik idatzi dut @codeorg-ekin",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "",
   "shareGame": "Partekatu zure jokoa:",
   "soundRandom": "ausazkoa",
   "soundBounce": "errebotatu",

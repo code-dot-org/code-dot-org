@@ -1,6 +1,4 @@
 module.exports = function (grunt) {
-  'use strict';
-
   var path = require('path');
   var MessageFormat = require('messageformat');
   var EOL = require('os').EOL;
@@ -12,6 +10,11 @@ module.exports = function (grunt) {
         var namespace = path.basename(filePair.dest).split('.js')[0];
         var englishData = grunt.file.readJSON(src.replace(locale, 'en_us'));
         var localeData = grunt.file.readJSON(src);
+        Object.keys(localeData).forEach(function (key) {
+          if (localeData[key] === "") {
+            delete localeData[key];
+          }
+        });
         var finalData = Object.assign(englishData, localeData);
         try {
           var formatted = process(locale, namespace, finalData);

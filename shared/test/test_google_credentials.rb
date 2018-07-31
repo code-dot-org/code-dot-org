@@ -128,7 +128,7 @@ describe Cdo::GoogleCredentials do
       Aws::STS::Client.new.config.credentials
     end
 
-    describe 'invalid Google auth' do
+    describe 'valid Google auth, no AWS permissions' do
       before do
         config[:client].stub_responses(
           :assume_role_with_web_identity,
@@ -146,13 +146,36 @@ describe Cdo::GoogleCredentials do
         Aws::STS::Client.new.config.credentials
       end
 
-      it 'raises error on invalid Google auth' do
+      it 'raises error on invalid AWS permissions' do
         Google::Auth.expects(:get_application_default).returns(nil)
         Cdo::GoogleCredentials.any_instance.expects(:google_oauth).times(2).returns(oauth, nil)
         err = assert_raises(Aws::STS::Errors::AccessDenied) do
           Aws::STS::Client.new.config.credentials
         end
         err.message.must_match /Your Google ID does not have access to the requested AWS Role./
+      end
+    end
+
+    describe 'invalid (expired/revoked) Google auth' do
+      it 'creates new Google refresh token when expired' do
+        token_uri = 'http://example.com/token'
+        m = Signet::OAuth2::Client.new(
+          token_credential_uri: token_uri
+        )
+        Google::Auth.stubs(:get_application_default).returns(m)
+        token_post = stub_request(:post, token_uri).to_return(
+          status: 400,
+          body: {
+            error: 'invalid_grant',
+            error_description: 'Token has been expired or revoked.'
+          }.to_json,
+          headers: {
+            content_type: 'application/json'
+          }
+        )
+        Cdo::GoogleCredentials.any_instance.expects(:google_oauth).returns(oauth)
+        Aws::STS::Client.new.config.credentials
+        assert_requested(token_post)
       end
     end
   end

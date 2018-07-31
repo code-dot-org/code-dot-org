@@ -3,14 +3,14 @@ require_relative '../helpers/asset_helpers'
 
 class AssetHelpersTest < Minitest::Test
   UNMINIFIED_ASSET_NAME = 'js/public/abcxyz/index.js'.freeze
-  UNDIGESTED_ASSET_PATH = "#{CDO.studio_url}/assets/js/public/abcxyz/index.js".freeze
-  UNMINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/public/abcxyz/"\
+  UNDIGESTED_ASSET_PATH = "/assets/js/public/abcxyz/index.js".freeze
+  UNMINIFIED_ASSET_PATH = "/assets/js/public/abcxyz/"\
     'index-ef90e2acd9003ff8b8bac522e6ce107da641d3b85aba5f58c77d5d28f77a496a.js'.freeze
-  MINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/public/abcxyz/"\
+  MINIFIED_ASSET_PATH = "/assets/js/public/abcxyz/"\
     'index.min-5bb3b68c6f92cf8409eb7d0649cf572ffa0c66fca1b02b887b4454cab553daef.js'.freeze
   UNMINIFIED_ASSET_NOT_IN_MAP = 'foo.js'.freeze
   MINIFIED_ASSET_NOT_IN_MAP = 'foo.min.js'.freeze
-  UNDIGESTED_ASSET_PATH_NOT_IN_MAP = "#{CDO.studio_url}/assets/foo.js".freeze
+  UNDIGESTED_ASSET_PATH_NOT_IN_MAP = "/assets/foo.js".freeze
 
   def setup
     CDO.stubs(:pegasus_skip_asset_map).returns(false)
