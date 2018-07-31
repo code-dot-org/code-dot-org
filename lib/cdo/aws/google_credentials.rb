@@ -1,4 +1,4 @@
-require 'aws-sdk'
+require 'aws-sdk-core'
 require 'googleauth'
 require 'google/api_client/auth/storage'
 require 'google/api_client/auth/storages/file_store'
@@ -125,14 +125,14 @@ module Cdo
             role_session_name: token_params['email']
           )
         )
+      rescue Signet::AuthorizationError => e
+        (@google_client = google_oauth) && retry || raise
       rescue Aws::STS::Errors::AccessDenied => e
-        if (@google_client = google_oauth)
-          retry
-        end
+        retry if (@google_client = google_oauth)
         raise e, "\nYour Google ID does not have access to the requested AWS Role. Ask your administrator to provide access.
 Role: #{@assume_role_params[:role_arn]}
 Email: #{token_params['email']}
-Google ID: #{token_params['sub']}"
+Google ID: #{token_params['sub']}", e.backtrace
       end
       c = assume_role.credentials
       @credentials = Aws::Credentials.new(

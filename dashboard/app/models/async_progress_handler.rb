@@ -1,6 +1,7 @@
+require 'aws-sdk-sqs'
+
 # An SQS messages handler for asynchronous user level progress operations. These
 # include activities, user_level, and user_proficiencies updates.
-
 class AsyncProgressHandler
   # Returns a thread-local SQS queue for handle asynchronous user progress operations
   # (Activity, UserLevel, and UserProficiency updates.) The queue is

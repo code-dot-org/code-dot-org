@@ -1,6 +1,6 @@
 require_relative './test_helper'
 require 'securerandom'
-require 'aws-sdk'
+require 'aws-sdk-s3'
 require 'cdo/rake_utils'
 
 require_relative '../../lib/cdo/aws/s3_packaging'

@@ -22,7 +22,6 @@ experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdownNewSearch';
-experiments.ACCOUNT_DELETION_NEW_FLOW = 'accountDeletionNewFlow';
 experiments.REACT_PROJECTS_TABLE = 'reactProjectsTable';
 
 // This is a per user experiment and is defined in experiments.rb
