@@ -32,18 +32,19 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # Configure development only filters.
-  if Rails.env.development?
-    # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
-    # pp='disabled' will disable it; any other value will enable it.
-    before_action :maybe_enable_profiler
-    def maybe_enable_profiler
-      pp = params['pp']
-      if pp
-        ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on'
+  if CDO.rack_mini_profiler_enabled
+    before_action :check_profiler
+    def check_profiler
+      # Authorize the mini profiler when the rack_mini_profiler_enabled setting is enabled
+      # for admins in production (and other environments), and in all cases in development
+      if CDO.rack_mini_profiler_enabled && (Rails.env.development? || current_user&.admin?)
+        Rack::MiniProfiler.authorize_request
       end
     end
+  end
 
+  # Configure development only filters.
+  if Rails.env.development?
     before_action :configure_web_console
     # Enable the Rails web console if params['dbg'] is set, or disable it
     # if params['dbg'] is 'off'.
