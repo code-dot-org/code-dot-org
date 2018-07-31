@@ -1507,6 +1507,11 @@ def get_section_id_from_table(row_index)
   section_id
 end
 
+And /^element "([^"]*)" contains text matching "([^"]*)"$/ do |selector, regex_text|
+  contents = @browser.execute_script("return $(#{selector.dump}).text();")
+  expect(contents.match(regex_text).nil?).to eq(false)
+end
+
 Then /^I scroll the "([^"]*)" element into view$/ do |selector|
   @browser.execute_script("$('#{selector}')[0].scrollIntoView(true)")
 end

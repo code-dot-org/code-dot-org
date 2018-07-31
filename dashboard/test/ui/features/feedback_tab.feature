@@ -62,8 +62,7 @@ Scenario: With dev flag, as teacher, tab is invisible when not reviewing student
   And I reload the page
   And I wait for the page to fully load
   And I wait until ".editor-column" contains text "Nice!"
-  And element "#ui-test-feedback-time" contains text "Last updated"
-  And element "#ui-test-feedback-time" contains text "ago"
+  And element ".editor-column" contains text matching "Last updated .* ago"
   And element "#ui-test-submit-feedback" contains text "Update"
 
   #As student, latest feedback from teacher is displayed
@@ -72,7 +71,5 @@ Scenario: With dev flag, as teacher, tab is invisible when not reviewing student
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=devCommentBoxTab"
   And I press the first ".uitest-feedback" element
   And I wait until ".editor-column" contains text "Nice!"
-  And element ".editor-column" contains text "Feedback from Teacher_Lillian"
-  And element ".editor-column" contains text "(From"
-  And element ".editor-column" contains text "ago):"
+  And element ".editor-column" contains text matching "Feedback from Teacher_Lillian\(From .* ago\)"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=devCommentBoxTab"
