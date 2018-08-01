@@ -77,11 +77,10 @@ class LevelLoader
   # as the one we have on file in the db.
   #
   # @param [String] level_path
-  # @param [Hash] level_md5s_by_name (optional) - can be passed in to avoid
-  #   generating this index on every call.
+  # @param [Hash] level_md5s_by_name for levels in db
   # @return [Level]
   #
-  def self.load_custom_level(level_path, level_md5s_by_name = Hash[Level.pluck(:name, :md5)])
+  private_class_method def self.load_custom_level(level_path, level_md5s_by_name)
     name = level_name_from_path level_path
     # Only reload level data when file contents change
     level_data = File.read(level_path)
