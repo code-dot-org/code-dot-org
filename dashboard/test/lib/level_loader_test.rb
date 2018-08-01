@@ -86,4 +86,10 @@ class LevelLoaderTest < ActiveSupport::TestCase
     refute_nil level.ideal_level_source
     assert_equal level.solution_blocks, level.ideal_level_source.data
   end
+
+  test 'debugging info for exceptions in load_custom_level' do
+    LevelLoader.load_custom_level('xxxxx')
+  rescue Exception => e
+    assert_includes e.message, "in level"
+  end
 end

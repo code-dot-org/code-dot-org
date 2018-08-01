@@ -221,12 +221,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 3, level.level_concept_difficulty.sequencing
   end
 
-  test 'debugging info for exceptions in load_custom_level' do
-    LevelLoader.load_custom_level('xxxxx')
-  rescue Exception => e
-    assert_includes e.message, "in level"
-  end
-
   test 'prioritize property over column data in merged update' do
     level = Level.create(instructions: 'test', type: 'Maze')
     level.update(maze: '', properties: {maze: 'maze'})
