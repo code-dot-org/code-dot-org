@@ -858,6 +858,7 @@ class User < ActiveRecord::Base
     end
 
     self.user_type = TYPE_TEACHER
+    # Make matching AuthenticationOption user's primary
     self.primary_contact_info = match
     transaction do
       # Update AuthenticationOption to have cleartext email

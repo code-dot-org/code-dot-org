@@ -1842,6 +1842,34 @@ class UserTest < ActiveSupport::TestCase
     assert_equal original_primary_contact_info, user.primary_contact_info
   end
 
+  test 'downgrade_to_student sets user_type to student and clears cleartext emails' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    assert user.downgrade_to_student
+    user.reload
+    assert_equal User::TYPE_STUDENT, user.user_type
+    assert_empty user.email
+  end
+
+  test 'upgrade_to_teacher is false if matching authentication option is not found' do
+    user = create :student, :with_migrated_google_authentication_option
+    refute user.upgrade_to_teacher('some_fake@email.com')
+    user.reload
+    assert_equal ["Email is invalid"], user.errors.full_messages
+  end
+
+  test 'upgrade_to_teacher is true if matching authentication option is found' do
+    user = create :student, :with_migrated_google_authentication_option
+    auth_option = create :authentication_option, user: user, email: 'example@email.com'
+    assert_empty auth_option.email
+
+    assert user.upgrade_to_teacher('example@email.com')
+    user.reload
+    auth_option.reload
+    assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal auth_option, user.primary_contact_info
+    assert_equal 'example@email.com', auth_option.email
+  end
+
   test 'google_classroom_student? is true if user belongs to a google classroom section as a student' do
     section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
     user = create(:follower, section: section).student_user
