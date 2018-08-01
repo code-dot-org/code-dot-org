@@ -3,8 +3,6 @@ title: Community and Support
 theme: responsive
 style_min: true
 ---
-<!-- Twitter button -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 # Community
 <img src="/images/code-group.jpg" width="100%"/>
@@ -13,13 +11,14 @@ style_min: true
 
 Join this teacher-led movement to ensure that every student in every school has the opportunity to learn computer science. Share your passion and get the latest information, tips, and tools on social media.
 
-<div style="float: left;">
-<a href="https://twitter.com/teachcode" class="twitter-follow-button" data-show-count="false">Follow @teachcode</a>
-
-<a href="http://teacherblog.code.org/" target="_blank"><button style="height: 20px; margin-top: 0px; vertical-align: top; font: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif; padding: 0px 5px 10px 5px; background-color: #36465D; border-color: #36465D"><i class="fa fa-tumblr"></i>&nbsp;&nbsp;Follow our teacher blog</button></a>
-</div>
-
-<div style="clear: both;"></div>
+<a href="https://twitter.com/teachcode" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+&nbsp; &nbsp;
+<a href="http://teacherblog.code.org/" target="_blank"><i class="fa fa-tumblr fa-lg"></i></a>
+&nbsp; &nbsp;
+<a href="https://www.facebook.com/Code.org/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+&nbsp; &nbsp;
+<a href="https://www.instagram.com/codeorg/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+&nbsp; &nbsp;
 
 Join the conversation with other teachers using Code Studio on our forum.
 

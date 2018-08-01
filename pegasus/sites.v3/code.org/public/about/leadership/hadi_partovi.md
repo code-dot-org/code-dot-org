@@ -22,11 +22,7 @@ Educators: [Request a visit to your school assembly](/visit)
 
 <iframe src="//www.facebook.com/plugins/follow.php?href=http%3A%2F%2Fwww.facebook.com%2Fhadi&amp;width=600&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;show_faces=true&amp;appId=516556435052145" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:600px; height:80px;" allowTransparency="true"></iframe>
 
-<a href="https://twitter.com/hadip" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @hadip</a>
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-
+<a href="https://twitter.com/hadip" target="_blank">Follow @hadip on Twitter <i class="fa fa-twitter fa-lg"></i></a>
 
 <br/><br/>
 
