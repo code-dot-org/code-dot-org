@@ -8,7 +8,7 @@ import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import CustomSchoolInfo from '../components/CustomSchoolInfo';
+import CustomSchoolInfo from '../components/customSchoolInfo';
 
 const TEACHING_ROLES = [
   "Classroom Teacher",
