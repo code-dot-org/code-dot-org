@@ -7,11 +7,28 @@ style_min: true
 
 # Code.org Statistics
 
-### Code.org is reaching teachers across the country
-<iframe width="907.5" height="486.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTceJlcFJuVxdqc3yPnxhQ2e2femXGK8B5LclUmWCzkIjScU96zpBbP-rd3Vh-rNk3oS4X2Ye9ia-Vt/pubchart?oid=509326798&amp;format=interactive"></iframe>
+We're on a mission to give every student the opportunity to learn computer science.  
 
-### Hour of Code is a worldwide phenomenom
-<iframe width="907.5" height="486.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTceJlcFJuVxdqc3yPnxhQ2e2femXGK8B5LclUmWCzkIjScU96zpBbP-rd3Vh-rNk3oS4X2Ye9ia-Vt/pubchart?oid=1452583638&amp;format=interactive"></iframe>
+***
+
+## Statistics at a glance
+Code.org partners with researchers on a variety of studies. Want more? [View our in-depth research using Code.org data.](/research) 
+
+### Teachers are taking on computer science
+Over 800,000 teachers have taken steps to bring computer science to their schools. 
+<%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B57&headers=1", width: 1000, height: 500 %>
+Does your local school teach computer science? [Encourage them to start today](/yourschool)!  
+
+<br>
+
+### The Hour of Code goes global
+With over [200 partners](https://hourofcode.com/partners), since 2013, the [Hour of Code](https://hourofcode.com) has reached 10% of students around the world.
+<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E57&headers=1", width: 1000, height: 500 %>
+
+## What we're doing
+Tracking the work of thousands of teachers and millions of students.
+<br>
+<br>
 
 | Code.org Goal                                                                         | End of 2013                          | End of 2014                               | End of 2015                               | End of 2016                                                                                                                    | End of 2017                                                                                                                        |
 | --------------------------------------------------------------------------------------| -------------------------------------| ------------------------------------------| ------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------| -----------------------------------------------------------------------------------------------------------------------------------|
@@ -27,21 +44,35 @@ style_min: true
 
 <br>
 
-<div class="col-33" style="padding-right: 20px;">
-
-<a href="/images/statistics/double-enrollment.png"><img src="/images/statistics/fit-250/double-enrollment.png"></a>
-
-</div>
+## Help us continue to make an impact! 
+Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share your favorite stats. Click each photo to retweet. 
+<br>
+<br>
 
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="/images/statistics/distribution.png"><img src="/images/statistics/fit-250/distribution.png"></a>
+<br>
+
+Code.org teachers <a href="https://medium.com/@codeorg/code-org-reaches-us-rural-students-for-the-first-time-7193905d8b2a">match the distribution of teachers across the United States</a>.
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="/images/statistics/balance.png"><img src="/images/statistics/fit-250/balance.png"></a>
+<a href="https://twitter.com/codeorg/status/964571108627300352"><img src="/images/statistics/fit-250/double-enrollment.png"></a>
+<br>
+
+And this double enrollment means more girls and underrepresented minorities are taking AP Computer Science than ever before!
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<a href="https://twitter.com/codeorg/status/983763631711154177"><img src="/images/statistics/fit-250/balance.png"></a>
+<br>
+
+We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de">change this way before then</a>.
 
 </div>
 
@@ -51,20 +82,26 @@ style_min: true
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="/images/statistics/less-cs.png"><img src="/images/statistics/fit-250/less-cs.png"></a>
+<a href="https://twitter.com/codeorg/status/903629740640149505"><img src="/images/statistics/fit-250/less-cs.png"></a>
+<br>
+
+We've prepared more teachers to teach computer science <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa">than universities have</a>.
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="/images/statistics/student-proficient.png"><img src="/images/statistics/fit-250/student-proficient.png"></a>
+<a href="https://twitter.com/codeorg/status/959441286397751299"><img src="/images/statistics/fit-250/student-proficient.png"></a>
+<br>
+
+And over 800,000 of those students are female.
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
-
-
 
 </div>
 
 <div style="clear: both;"></div>
+
+<br>

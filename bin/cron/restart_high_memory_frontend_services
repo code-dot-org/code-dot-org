@@ -2,7 +2,8 @@
 
 require_relative '../../dashboard/config/environment'
 require_relative '../../lib/cdo/only_one'
-require 'aws-sdk'
+require 'aws-sdk-ec2'
+require 'aws-sdk-cloudwatch'
 require 'cdo/chat_client'
 require 'fileutils'
 require 'sshkit'

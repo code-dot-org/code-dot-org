@@ -27,6 +27,7 @@ createEdgeSprites();
 var inputEvents = [];
 var touchEvents = [];
 var collisionEvents = [];
+var callbacks = [];
 var loops = [];
 var sprites = [];
 var score = 0;
@@ -193,6 +194,12 @@ function forever(loop) {
   loops.push({'condition': function () {return true;}, 'loop': loop});
 }
 
+// Draw loop callbacks
+
+function register(callback) {
+  callbacks.push(callback);
+}
+
 // Sprite and Group creation
 
 function makeNewSpriteLocation(animation, loc) {
@@ -308,6 +315,10 @@ function shouldUpdate() {
 
 function draw() {
   background(World.background_color || "white");
+  
+  callbacks.forEach(function (callback) {
+    callback();
+  });
 
   if (shouldUpdate()) {
     // Perform sprite behaviors

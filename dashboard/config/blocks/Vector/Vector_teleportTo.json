@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "teleportTo",
+    "blockText": "teleport to {POSITION}",
+    "args": [
+      {
+        "name": "POSITION",
+        "type": "Location"
+      }
+    ],
+    "methodCall": true
+  }
+}

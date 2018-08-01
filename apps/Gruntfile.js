@@ -203,6 +203,18 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'lib',
+          src: ['p5.sound.min.js'],
+          dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: './node_modules/gif.js/dist',
+          src: ['gif.worker.js'],
+          dest: 'build/package/js/dance/'
+        },
+        {
+          expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
           // our dest ends up with an empty set of directories matching the path
           // If we provide it as a relative path, that does not happen
@@ -452,6 +464,7 @@ describe('entry tests', () => {
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'levels/_external_link':        './src/sites/studio/pages/levels/_external_link.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
+    'levels/editors/_droplet':      './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'projects/index':               './src/sites/studio/pages/projects/index.js',
@@ -539,6 +552,7 @@ describe('entry tests', () => {
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
+    dance: './src/gamelab/dance.js',
   };
 
   // Create a config for each of our bundles

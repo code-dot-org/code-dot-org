@@ -53,6 +53,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
+import { setGetNextFrame } from '../code-studio/components/shareDialogRedux';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
@@ -206,6 +207,10 @@ GameLab.prototype.init = function (config) {
   this.shouldAutoRunSetup = config.level.autoRunSetup &&
     !this.level.edit_blocks;
 
+
+  this.level.helperLibraries = this.level.helperLibraries || [];
+  this.isDanceLab = this.level.helperLibraries.some(name => name === 'DanceLab');
+
   this.level.softButtons = this.level.softButtons || {};
   if (this.level.useDefaultSprites) {
     this.startAnimations = defaultSprites;
@@ -230,13 +235,26 @@ GameLab.prototype.init = function (config) {
     showRateLimitAlert: this.studioApp_.showRateLimitAlert
   });
 
+  let song;
+  if (this.isDanceLab) {
+    song = '/api/v1/sound-library/category_background/jazzy_beats.mp3';
+  }
+
   this.gameLabP5.init({
     gameLab: this,
+    song,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
     onDraw: this.onP5Draw.bind(this)
   });
+
+  if (this.studioApp_.isUsingBlockly()) {
+    getStore().dispatch(setGetNextFrame(() => {
+      this.gameLabP5.p5._draw();
+      return this.gameLabP5.p5.canvas;
+    }));
+  }
 
   config.afterClearPuzzle = function () {
     getStore().dispatch(setInitialAnimationList(this.startAnimations));
@@ -1080,7 +1098,7 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
 
   const injectGamelabGlobals = () => {
     wrap(this.gameLabP5.p5);
-    const propList = this.gameLabP5.getGlobalPropertyList();
+    const propList = this.gameLabP5.getGlobalPropertyList(this.isDanceLab);
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
       // propListItem[0] - a native property value
@@ -1225,7 +1243,6 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
 let libraryPreload;
 GameLab.prototype.loadLibraries_ = function () {
   if (!libraryPreload) {
-    this.level.helperLibraries = this.level.helperLibraries || [];
     this.loadValidationCodeIfNeeded_();
     libraryPreload = Promise.all(this.level.helperLibraries.map(this.loadLibrary_.bind(this)));
   }
