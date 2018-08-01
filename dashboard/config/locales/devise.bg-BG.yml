@@ -12,7 +12,6 @@ bg:
       already_authenticated: Вече сте влезли.
       inactive: Вашият акаунт все още не е активиран.
       invalid: Невалиден имейл или парола.
-      invalid_token: Невалиден код за удостоверяване.
       locked: Вашият акаунт е заключен.
       not_found_in_database: Невалиден имейл или парола.
       timeout: Вашата сесия е изтекла, моля, влезте отново, за да продължите.
@@ -55,7 +54,6 @@ bg:
         на новия имейл адрес.
       updated: Вие успешно обновихте профила си.
     sessions:
-      signed_in: ''
       signed_out: Успешно излязохте.
     unlocks:
       send_instructions: До няколко минути, Вие ще получите имейл с инструкции как
@@ -83,9 +81,6 @@ bg:
       new:
         header: Изпращане на покана
         submit_button: Изпратете покана
-      edit:
-        header: Задайте паролата си
-        submit_button: Задаване парола
     mailer:
       invitation_instructions:
         subject: Инструкции за покана

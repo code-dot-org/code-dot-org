@@ -88,8 +88,8 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :bad_request
   end
 
-  test 'disconnect: deletes the AuthenticationOption if it exists' do
-    user = create :user, :multi_auth_migrated
+  test 'disconnect: destroys the AuthenticationOption if it exists and is not primary' do
+    user = create :user, :multi_auth_migrated, primary_contact_info: create(:authentication_option)
     auth_option = create :authentication_option, user: user
     sign_in user
 

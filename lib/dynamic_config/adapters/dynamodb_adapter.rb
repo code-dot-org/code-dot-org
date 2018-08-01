@@ -1,6 +1,6 @@
 # A DynamoDB adapter class that allows us to use
 # dynamodb as a persistent store with the datastore_cache.
-require 'aws-sdk'
+require 'aws-sdk-dynamodb'
 require 'oj'
 
 class DynamoDBAdapter

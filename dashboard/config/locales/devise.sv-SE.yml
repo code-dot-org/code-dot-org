@@ -51,7 +51,6 @@ sv:
         för att slutföra bekräftelsen.
       updated: Du har uppdaterat ditt konto.
     sessions:
-      signed_in: ''
       signed_out: Utloggad.
     unlocks:
       send_instructions: Du kommer få ett mail med instruktioner om hur du bekräftar

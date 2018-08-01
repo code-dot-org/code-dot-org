@@ -53,6 +53,7 @@ namespace :seed do
     'csp-create-2018',
     'csppostap-2018',
     'events',
+    'express-2017',
     'flappy',
     'frozen',
     'hero',

@@ -39,7 +39,6 @@ fr:
       update_needs_confirmation: "Tu as réussi à mettre à jour ton compte, mais nous devons vérifier ta nouvelle adresse e-mail. Vérifie bien ton e-mail et de clique sur le lien de confirmation pour finaliser la confirmation de ta nouvelle adresse e-mail."
       updated: "Tu as réussi à mettre à jour ton compte."
     sessions:
-      signed_in: ""
       signed_out: "Déconnecté avec succès."
     unlocks:
       send_instructions: "Dans quelques minutes, tu vas recevoir un e-mail contenant les instructions sur la façon de déverrouiller ton compte."

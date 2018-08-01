@@ -10,7 +10,7 @@
 # as for estimating our future data storage and transfer costs.
 #
 
-require 'aws-sdk'
+require 'aws-sdk-dynamodb'
 require_relative '../deployment'
 require 'cdo/db'
 require_relative '../shared/middleware/helpers/storage_id'
