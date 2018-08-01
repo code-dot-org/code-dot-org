@@ -1140,9 +1140,6 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
       .filter(helperCode => helperCode)
       .join("\n") + '\n';
   }
-  if (this.level.customHelperLibrary) {
-    code += this.level.customHelperLibrary + '\n';
-  }
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,

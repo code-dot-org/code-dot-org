@@ -9,9 +9,3 @@
 .field
   = f.label :hide_custom_blocks, 'Do not automatically add block pool and custom blocks to the toolbox'
   = boolean_check_box f, :hide_custom_blocks
-
-.field
-  =f.label 'Custom helper library code'
-  %p
-    This code will be injected between the official helper library and the student's code
-  ~ f.text_area :custom_helper_library, placeholder: 'Add some arbitrary javascript', rows: 4, value: @level.custom_helper_library

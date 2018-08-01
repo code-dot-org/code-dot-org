@@ -25,7 +25,6 @@
 
 class GamelabJr < Gamelab
   serialized_attrs %w(
-    custom_helper_library
     hide_custom_blocks
     use_default_sprites
   )
