@@ -79,8 +79,21 @@ export default class EnrollForm extends React.Component {
     this.setState({school_info: school_info});
   };
 
-  handleSchoolInfoChange = (selection) => {
-    let school_info = Object.assign(this.state.school_info, selection);
+  handleSchoolInfoChange = (change) => {
+    let school_info = Object.assign(this.state.school_info, change);
+    this.setState({school_info: school_info});
+  };
+
+  handleSchoolDistrictChange = (change) => {
+    let school_info = Object.assign(this.state.school_info, change);
+    school_info.school_district_other = "true";
+    this.setState({school_info: school_info});
+  };
+
+  handleSchoolTypeChange = (change) => {
+    let school_info = Object.assign(this.state.school_info, change);
+    delete(school_info.school_district_other);
+    delete(school_info.school_district_name);
     this.setState({school_info: school_info});
   };
 
@@ -94,7 +107,6 @@ export default class EnrollForm extends React.Component {
       this.setState({
         school_info: {
           school_id: selection.school.nces_id,
-          school_district_id: selection.school.school_district_id,
           school_name: selection.school.name,
           school_state: selection.school.state,
           school_zip: selection.school.zip,
@@ -129,7 +141,8 @@ export default class EnrollForm extends React.Component {
       email: this.state.email,
       school_info: {
         school_id: this.state.school_info.school_id,
-        school_district_id: this.state.school_info.school_district_id,
+        school_district_name: this.state.school_info.school_district_name,
+        school_district_other: this.state.school_info.school_district_other,
         school_name: this.state.school_info.school_name,
         school_state: this.state.school_info.school_state,
         school_zip: this.state.school_info.school_zip,
@@ -279,6 +292,8 @@ export default class EnrollForm extends React.Component {
             schoolInfo={this.state.school_info}
             handleSchoolInfoChange={this.handleSchoolInfoChange}
             handleSchoolStateChange={this.handleSchoolStateChange}
+            handleSchoolDistrictChange={this.handleSchoolDistrictChange}
+            handleSchoolTypeChange={this.handleSchoolTypeChange}
             errors={this.state.errors}
           />
         }
@@ -340,7 +355,7 @@ export default class EnrollForm extends React.Component {
   }
 
   getMissingRequiredFields() {
-    const schoolInfoFields = [
+    let schoolInfoFields = [
       'school_name',
       'school_state',
       'school_zip',
@@ -354,6 +369,9 @@ export default class EnrollForm extends React.Component {
     }
 
     if (this.state.school_id === OTHER_SCHOOL_VALUE) {
+      if (["Public school", "Charter school"].includes(this.state.school_info.school_type)) {
+        schoolInfoFields = schoolInfoFields.concat('school_district_name');
+      }
       requiredFields = requiredFields.concat(schoolInfoFields);
     }
 
