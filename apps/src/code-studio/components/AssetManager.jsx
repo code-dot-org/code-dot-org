@@ -26,6 +26,21 @@ function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
 
+const RecordButton = ({onSelectRecord}) => (
+  <Button
+    onClick={onSelectRecord}
+    id="record-asset"
+    className="share"
+    text={i18n.recordAudio()}
+    icon="microphone"
+    style={styles.buttonStyle}
+  />
+);
+
+RecordButton.propTypes = {
+  onSelectRecord: PropTypes.func,
+};
+
 const styles = {
   emptyText: {
     margin: '1em 0',
@@ -166,17 +181,6 @@ export default class AssetManager extends React.Component {
       </span>
     </div>);
 
-    const recordButton = (
-      <Button
-        onClick={this.onSelectRecord}
-        id="record-asset"
-        className="share"
-        text={i18n.recordAudio()}
-        icon="microphone"
-        style={styles.buttonStyle}
-      />
-    );
-
     const buttons = (
       <div>
         {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
@@ -184,7 +188,7 @@ export default class AssetManager extends React.Component {
         }
         <span style={styles.buttonRow}>
           {uploadButton}
-          {experiments.isEnabled('recordAudio') && recordButton}
+          {experiments.isEnabled('recordAudio') && <RecordButton onSelectRecord={this.onSelectRecord}/>}
         </span>
       </div>
     );
