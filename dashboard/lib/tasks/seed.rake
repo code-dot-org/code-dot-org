@@ -160,10 +160,6 @@ namespace :seed do
     end
   end
 
-  task import_custom_levels: :environment do
-    LevelLoader.load_custom_levels
-  end
-
   task blocks: :environment do
     Block.load_records
   end
