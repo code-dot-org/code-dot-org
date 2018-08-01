@@ -20,7 +20,6 @@
 
 class Block < ApplicationRecord
   include MultiFileSeeded
-  after_save {@@all_pool_names = nil}
 
   def self.all_pool_names
     @@all_pool_names ||= Block.distinct.pluck(:pool)
@@ -31,10 +30,12 @@ class Block < ApplicationRecord
   end
 
   def self.load_and_cache_by_pool(pool)
-    if Block.all_pool_names.include? pool
-      Rails.cache.fetch("blocks/#{pool}", force: !Script.should_cache?) do
-        Block.where(pool: pool).map(&:block_options)
-      end
+    if Script.should_cache? && !Block.all_pool_names.include?(pool)
+      return nil
+    end
+
+    Rails.cache.fetch("blocks/#{pool}", force: !Script.should_cache?) do
+      Block.where(pool: pool).map(&:block_options)
     end
   end
 
