@@ -201,13 +201,21 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user][:user_type].nil?
 
     successfully_updated =
-      if forbidden_change?(current_user, params)
-        false
-      elsif needs_password?(current_user, params)
-        # Guaranteed to fail, but sets appropriate user errors for response
-        current_user.update_with_password(set_user_type_params)
+      if current_user.migrated?
+        if forbidden_change?(current_user, params)
+          false
+        else
+          update_user_type(current_user, set_user_type_params)
+        end
       else
-        current_user.update_without_password(set_user_type_params)
+        if forbidden_change?(current_user, params)
+          false
+        elsif needs_password?(current_user, params)
+          # Guaranteed to fail, but sets appropriate user errors for response
+          current_user.update_with_password(set_user_type_params)
+        else
+          current_user.update_without_password(set_user_type_params)
+        end
       end
 
     if successfully_updated
@@ -392,5 +400,15 @@ class RegistrationsController < Devise::RegistrationsController
   def destroy_dependent_users(user)
     user_ids_to_destroy = get_users_to_destroy(user).pluck(:id)
     User.destroy(user_ids_to_destroy)
+  end
+
+  def update_user_type(user, params)
+    if params[:user_type] == User::TYPE_STUDENT
+      user.downgrade_to_student
+    elsif params[:user_type] == User::TYPE_TEACHER
+      user.upgrade_to_teacher(params[:email])
+    else
+      false # Unexpected user type
+    end
   end
 end

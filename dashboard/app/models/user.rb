@@ -217,7 +217,7 @@ class User < ActiveRecord::Base
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
-  has_many :authentication_options, dependent: :destroy
+  has_many :authentication_options, dependent: :destroy, autosave: true
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
 
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
@@ -839,6 +839,31 @@ class User < ActiveRecord::Base
     end
 
     success
+  end
+
+  def downgrade_to_student
+    return true if student? # No-op if user is already a student
+    update(user_type: TYPE_STUDENT)
+  end
+
+  def upgrade_to_teacher(email)
+    return true if teacher? # No-op if user is already a teacher
+    return false unless email.present?
+
+    hashed_email = User.hash_email(email)
+    match = authentication_options.find_by_hashed_email(hashed_email)
+    if match.nil?
+      errors.add(:email, I18n.t('activerecord.errors.messages.invalid'))
+      return false
+    end
+
+    self.user_type = TYPE_TEACHER
+    self.primary_contact_info = match
+    transaction do
+      # Update AuthenticationOption to have cleartext email
+      match.update!(email: email)
+      save!
+    end
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
