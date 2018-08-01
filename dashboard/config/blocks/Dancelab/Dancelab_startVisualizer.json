@@ -2,6 +2,6 @@
   "category": "",
   "config": {
     "func": "startVisualizer",
-    "blockText": "start visualizer"
+    "blockText": "show visualizer"
   }
 }
