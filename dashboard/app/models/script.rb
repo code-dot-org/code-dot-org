@@ -234,7 +234,7 @@ class Script < ActiveRecord::Base
 
   # @return [Array<Script>] An array of moden elementary scripts.
   def self.modern_elementary_courses
-    Script::CATEGORIES[:csf_2018].map {|name| Script.find_by_name(name)}
+    Script::CATEGORIES[:csf_2018].map {|name| Script.get_from_cache(name)}
   end
 
   # @param locale [String] A "xx-YY" locale string.
