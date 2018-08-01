@@ -354,7 +354,7 @@ function draw() {
       }
       if (a.overlap(b)) {
         if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(sprite1, sprite2);
+          collisionEvent.event(a, b);
         }
         collisionEvent.touching = true;
       } else {
