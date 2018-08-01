@@ -344,13 +344,6 @@ function draw() {
       }
     }
 
-    var createCollisionHandler = function (collisionEvent) {
-      return function (sprite1, sprite2) {
-        if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(sprite1, sprite2);
-        }
-      };
-    };
     // Run collision events
     for (i = 0; i<collisionEvents.length; i++) {
       var collisionEvent = collisionEvents[i];
@@ -359,7 +352,10 @@ function draw() {
       if (!a || !b) {
         continue;
       }
-      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
+      if (a.overlap(b)) {
+        if (!collisionEvent.touching || collisionEvent.keepFiring) {
+          collisionEvent.event(a, b);
+        }
         collisionEvent.touching = true;
       } else {
         if (collisionEvent.touching && collisionEvent.eventEnd) {
