@@ -1,4 +1,4 @@
-require 'aws-sdk'
+require 'aws-sdk-core'
 require 'googleauth'
 require 'google/api_client/auth/storage'
 require 'google/api_client/auth/storages/file_store'
