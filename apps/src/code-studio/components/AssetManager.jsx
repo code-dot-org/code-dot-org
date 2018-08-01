@@ -8,6 +8,8 @@ import assetListStore from '../assets/assetListStore';
 import AudioRecorder from './AudioRecorder';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from "../../templates/Button";
+import i18n from '@cdo/locale';
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -33,6 +35,13 @@ const styles = {
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
+  },
+  buttonStyle: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    margin: 5,
+    borderRadius: 4,
+    fontSize: 'large'
   }
 };
 
@@ -127,6 +136,10 @@ export default class AssetManager extends React.Component {
     );
   };
 
+  onSelectRecord = () => {
+    this.setState({recordingAudio: true});
+  };
+
   deleteAssetRow = (name) => {
     assetListStore.remove(name);
     if (this.props.assetsChanged) {
@@ -153,22 +166,21 @@ export default class AssetManager extends React.Component {
       </span>
     </div>);
 
-    const recordButton = (<div>
-      <button
-        onClick={()=>{}}
+    const recordButton = (
+      <Button
+        onClick={this.onSelectRecord}
         id="record-asset"
         className="share"
-      >
-        <i className="fa fa-microphone" />
-        &nbsp;Record Audio
-      </button>
-      </div>
+        text={i18n.recordAudio()}
+        icon="microphone"
+        style={styles.buttonStyle}
+      />
     );
 
     const buttons = (
       <div>
-        {experiments.isEnabled('recordAudio') &&
-          <AudioRecorder isVisible={this.state.recordingAudio}/>
+        {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
+          <AudioRecorder/>
         }
         <span style={styles.buttonRow}>
           {uploadButton}

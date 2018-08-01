@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
 
@@ -15,10 +15,6 @@ const styles = {
 };
 
 export default class AudioRecorder extends React.Component {
-  static propTypes = {
-    visible: PropTypes.bool
-  };
-
   state = {
     audioName: 'mysound'
   };
@@ -28,10 +24,6 @@ export default class AudioRecorder extends React.Component {
   };
 
   render() {
-    if (this.props.visible) {
-      return null;
-    }
-
     return (
       <div style={styles.buttonRow}>
         <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}></input>
