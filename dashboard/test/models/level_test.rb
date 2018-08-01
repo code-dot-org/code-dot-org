@@ -206,7 +206,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    level = LevelLoader.load_custom_level(LevelLoader.level_file_path('K-1 Bee 2'))
+    level = LevelLoader.load_custom_level(Level.level_file_path('K-1 Bee 2'))
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
       level.properties['initial_dirt']

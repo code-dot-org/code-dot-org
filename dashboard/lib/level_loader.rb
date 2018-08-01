@@ -1,26 +1,37 @@
 require 'set'
 
 class LevelLoader
-  def self.file_paths(glob)
-    Dir.glob(Rails.root.join(glob)).sort
-  end
-
-  def self.for_each_file(path, &block)
-    file_paths(path).map(&block)
-  end
-
+  # Top-level entry point, called by rake seed:custom_levels
   def self.load_custom_levels
+    import_levels 'config/scripts/**/*.level'
+  end
+
+  #
+  # Loads a group of level files from disk and imports them into the database.
+  #
+  # - Level files not found in the database will be created.
+  # - Level files found in the database will be updated if they don't match the
+  #   file as loaded from disk.
+  #
+  # @param [String] level_file_glob - dashboard-relative, wildcard-friendly path
+  #   to one or more .level files.
+  #   Examples:
+  #     'config/scripts/levels/K-1 Bee 2.level'
+  #     'config/scripts/**/*.level'
+  #
+  def self.import_levels(level_file_glob)
+    level_file_paths = file_paths_from_glob(level_file_glob)
+
     # Use a transaction because loading levels requires two separate imports.
     Level.transaction do
       level_md5s_by_name = Hash[Level.pluck(:name, :md5)]
       existing_level_names = level_md5s_by_name.keys.to_set
-      level_file_paths = file_paths('config/scripts/**/*.level')
 
       # First, save stubs of any new levels - they'll need to have ids in
       # order to create certain associations (in particular
       # level_concept_difficulty) when we bulk-load the level properties.
       new_level_names = level_file_paths.
-        map {|path| name_from_path path}.
+        map {|path| level_name_from_path path}.
         reject {|name| existing_level_names.include? name}
       Level.import! new_level_names.map {|name| {name: name}}
 
@@ -33,10 +44,10 @@ class LevelLoader
 
       # activerecord-import (with MySQL, anyway) doesn't save associated
       # models, so we've got to do this manually.
-      changed_level_concept_difficulties = changed_levels.map(&:level_concept_difficulty).compact
+      changed_lcds = changed_levels.map(&:level_concept_difficulty).compact
       lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
           reject {|column| %i{id level_id created_at}.include? column}
-      LevelConceptDifficulty.import! changed_level_concept_difficulties, on_duplicate_key_update: lcd_update_columns
+      LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns
 
       # activerecord-import doesn't trigger before_save and before_create hooks
       # for imported models, so we trigger these manually to make sure they're
@@ -54,18 +65,24 @@ class LevelLoader
     end
   end
 
-  def self.name_from_path(path)
-    File.basename(path, File.extname(path))
-  end
-
-  def self.level_file_path(name)
-    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level"))
-    raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
-    level_paths.first || Rails.root.join("config/scripts/levels/#{name}.level")
-  end
-
+  #
+  # Loads an individual .level file from disk into memory, using the existing
+  # copy from the database as a starting point if it's available, or initializing
+  # a new level if it's not.
+  #
+  # Does NOT actually save the level to the database; instead, returns the new
+  # or updated level for bulk-import at a later time.
+  #
+  # Does not parse level XML at all if the level on disk has the same checksum
+  # as the one we have on file in the db.
+  #
+  # @param [String] level_path
+  # @param [Hash] level_md5s_by_name (optional) - can be passed in to avoid
+  #   generating this index on every call.
+  # @return [Level]
+  #
   def self.load_custom_level(level_path, level_md5s_by_name = Hash[Level.pluck(:name, :md5)])
-    name = name_from_path level_path
+    name = level_name_from_path level_path
     # Only reload level data when file contents change
     level_data = File.read(level_path)
     md5 = Digest::MD5.hexdigest(level_data)
@@ -106,5 +123,13 @@ class LevelLoader
         game: unplugged_game
       )
     end
+  end
+
+  private_class_method def self.level_name_from_path(path)
+    File.basename(path, File.extname(path))
+  end
+
+  private_class_method def self.file_paths_from_glob(glob)
+    Dir.glob(Rails.root.join(glob)).sort
   end
 end
