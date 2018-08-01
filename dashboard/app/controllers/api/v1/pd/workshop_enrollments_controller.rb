@@ -107,7 +107,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       school_type: params[:school_info][:school_type] ? params[:school_info][:school_type].split.first.downcase : nil,
       school_state: params[:school_info][:school_state],
       school_zip: params[:school_info][:school_zip],
-      school_district_id: params[:school_info][:school_district_id],
+      school_district_name: params[:school_info][:school_district_name],
+      school_district_other: params[:school_info][:school_district_other],
       school_id: params[:school_info][:school_id],
       school_name: params[:school_info][:school_name],
       country: params[:school_info][:country]
