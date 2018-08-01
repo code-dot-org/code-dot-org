@@ -1476,6 +1476,13 @@ GameLab.prototype.runValidationCode = function () {
   }
 };
 
+GameLab.prototype.measureDrawLoop = function (name, callback) {
+  mark(`${name}_start`);
+  callback();
+  measure(name, `${name}_start`);
+  this.spriteTotalCount += this.gameLabP5.p5.allSprites.length;
+};
+
 /**
  * This is called while this.gameLabP5 is in a draw() call. We call the user's
  * draw function.
@@ -1484,12 +1491,9 @@ GameLab.prototype.onP5Draw = function () {
   if (this.JSInterpreter && this.eventHandlers.draw) {
     this.drawInProgress = true;
     if (getStore().getState().runState.isRunning) {
-      mark(DRAW_LOOP_START);
-
-      this.eventHandlers.draw.apply(null);
-
-      measure(DRAW_LOOP_MEASURE, DRAW_LOOP_START);
-      this.spriteTotalCount += this.gameLabP5.p5.allSprites.length;
+      this.measureDrawLoop(DRAW_LOOP_MEASURE, () => {
+        this.eventHandlers.draw.apply(null);
+      });
       this.runValidationCode();
     } else if (this.shouldAutoRunSetup) {
       switch (this.level.autoRunSetup) {
