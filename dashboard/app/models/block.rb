@@ -4,7 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  name        :string(255)      not null
-#  pool        :string(255)      not null
+#  pool        :string(255)      default(""), not null
 #  category    :string(255)
 #  config      :text(65535)
 #  helper_code :text(65535)
