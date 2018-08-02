@@ -4,6 +4,7 @@ export function getDanceAPI(p5Inst) {
   const osc = new p5.Oscillator();
   const fft = new p5.FFT(0.7, 128);
   const peakDetect = new p5.PeakDetect(3000, 5000, 0.1, 3);
+  const customPeakDetects = [];
 
   return {
     oscillator: {
@@ -17,10 +18,12 @@ export function getDanceAPI(p5Inst) {
       analyze: () => {
         const spectrum = fft.analyze();
         peakDetect.update(fft);
+        customPeakDetects.forEach(pd => pd.update(fft));
         return spectrum || [];
       },
       getEnergy: (freq1, freq2) => fft.getEnergy(freq1, freq2),
-      isPeak: () => peakDetect.isDetected,
+      isPeak: n => (customPeakDetects[n] || peakDetect).isDetected,
+      createPeakDetect: (...args) => customPeakDetects.push(new p5.PeakDetect(...args)) - 1,
     },
 
     song: {
