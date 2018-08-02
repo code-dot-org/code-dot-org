@@ -1,10 +1,11 @@
 const trackedProps = ['x', 'y'];
+const log = [];
 
 export default function wrap(p5) {
   const original = p5.createSprite;
+  log.length = 0;
 
   p5.createSprite = function () {
-    console.log('called createSprite with', arguments);
     const sprite = original.apply(p5, arguments);
 
     for (let prop of trackedProps) {
@@ -12,7 +13,8 @@ export default function wrap(p5) {
       Object.defineProperty(sprite, prop, {
         get: descriptor.get ? descriptor.get : () => descriptor.value,
         set: value => {
-          console.log('set ' + prop + ' to ' + value + ' on ' + sprite);
+          log[p5.frameCount] = log[p5.frameCount] || [];
+          log[p5.frameCount].push({sprite, prop, value});
           if (descriptor.set) {
             descriptor.set(value);
           } else {
@@ -24,3 +26,22 @@ export default function wrap(p5) {
     return sprite;
   };
 }
+
+export function replay(gameLabInst) {
+  let frame = 0;
+
+  gameLabInst.stopTickTimer();
+  gameLabInst.JSInterpreter.seenReturnFromCallbackDuringExecution = true;
+  gameLabInst.eventHandlers.draw = () => {
+    const entry = log[frame % log.length];
+    if (entry) {
+      entry.forEach(({sprite, prop, value}) => {
+        sprite[prop] = value;
+      });
+    }
+    gameLabInst.gameLabP5.p5.drawSprites();
+    frame++;
+  };
+}
+
+window.replay = replay;
