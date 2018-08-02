@@ -86,6 +86,7 @@ export default class DeleteAccountDialog extends React.Component {
       deleteUser,
       deleteError,
     } = this.props;
+    const checkboxesLength = Object.keys(checkboxes).length;
 
     return (
       <BaseDialog
@@ -118,9 +119,11 @@ export default class DeleteAccountDialog extends React.Component {
               }
             </div>
           </div>
-          {warnAboutDeletingStudents &&
+          {checkboxesLength > 0 &&
             <div style={styles.section}>
-              <strong>{i18n.deleteAccountDialog_checkboxTitle()}</strong>
+              <strong>
+                {i18n.deleteAccountDialog_checkboxTitle({numCheckboxes: checkboxesLength})}
+              </strong>
               {Object.keys(checkboxes).map(id => {
                 return (
                   <div key={id} style={styles.checkboxContainer}>
