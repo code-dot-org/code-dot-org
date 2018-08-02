@@ -22,7 +22,7 @@ const FAKE_VERSION_LIST_RESPONSE = {
       },
       {
         versionId: FAKE_PREVIOUS_VERSION,
-        lastModified: Date.now(),
+        lastModified: Date.now() - 1,
         isLatest: false,
       }
     ]

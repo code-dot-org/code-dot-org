@@ -21,7 +21,9 @@ export default class VersionHistory extends React.Component {
    *     lastModified: Date,
    *     isLatest: boolean,
    *     versionId: string
-   *   }[])
+   *   }[]),
+   *   showSpinner: boolean,
+   *   confirmingClearPuzzle: boolean,
    * }
    */
   state = {
