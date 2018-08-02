@@ -19,6 +19,9 @@ const UNPUBLISH_REQUEST  = 'projects/UNPUBLISH_REQUEST';
 const UNPUBLISH_SUCCESS  = 'projects/UNPUBLISH_SUCCESS';
 const UNPUBLISH_FAILURE  = 'projects/UNPUBLISH_FAILURE';
 
+const START_RENAMING_PROJECT = 'projects/START_RENAMING_PROJECT';
+const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
+
 // Reducers
 
 const initialSelectedGalleryState = Galleries.PUBLIC;
@@ -145,6 +148,32 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         ...state,
         projects: projects,
       };
+    case START_RENAMING_PROJECT:
+      var projectBeingRenamed = action.projectId;
+
+      var projectBeingRenamedIndex = state.projects.findIndex(project => project.channel = projectBeingRenamed);
+
+      var updatedEditing = [...state.projects];
+      updatedEditing[projectBeingRenamedIndex].isEditing = true;
+
+      updatedEditing[projectBeingRenamedIndex].updatedName = action.updatedName;
+
+      return {
+        ...state,
+        projects: updatedEditing,
+      };
+    case CANCEL_RENAMING_PROJECT:
+      var projectNoLongerBeingRenamed = action.projectId;
+
+      var projectNoLongerBeingRenamedIndex = state.projects.findIndex(project => project.channel = projectNoLongerBeingRenamed);
+
+      var updatedNotEditing = [...state.projects];
+      updatedNotEditing[projectNoLongerBeingRenamedIndex].isEditing = false;
+
+      return {
+        ...state,
+        projects: updatedNotEditing ,
+      };
     default:
       return state;
   }
@@ -240,4 +269,12 @@ export function unpublishSuccess(projectId) {
 
 export function deleteSuccess(projectId) {
   return {type: DELETE_SUCCESS, projectId};
+}
+
+export function startRenamingProject(projectId, updatedName) {
+  return {type: START_RENAMING_PROJECT, projectId, updatedName};
+}
+
+export function cancelRenamingProject(projectId) {
+  return {type: CANCEL_RENAMING_PROJECT, projectId};
 }
