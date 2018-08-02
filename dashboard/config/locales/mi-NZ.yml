@@ -719,14 +719,13 @@ mi:
       ki te whakapai i te kanorautanga o te pūtaiao rorohiko'
     message: Please tell us your race (check all that apply)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
-    - 
-    - opt_out: Kāore i te hiahia kia uruparetia
+      white: White
+      black: Black or African American
+      hispanic: Hispanic or Latino
+      asian: Asian
+      hawaiian: Native Hawaiian or other Pacific Islander
+      american_indian: American Indian/Alaska Native
+      opt_out: Kāore i te hiahia kia uruparetia
     submit: Tāpaetia
     decline: Kati
   zendesk_too_young_message: Kia manawanui mai, kāore e whakaae ana mā te tamaiti

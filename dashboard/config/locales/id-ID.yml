@@ -1002,14 +1002,14 @@ id:
       ilmu komputer'
     message: Silakan beritahu kami ras (periksa semua yang berlaku)
     races:
-    - white: Kaukasia
-    - black: Hitam atau Afrika Amerika
-    - hispanic: Hispanik atau Latino
-    - asian: Orang Asia
-    - hawaiian: Penduduk asli Hawaii atau Kepulauan Pasifik
-    - american_indian: Orang Indian Amerika/Penduduk Asli Alaska
-    - other: Lain
-    - opt_out: Memilih untuk tidak menjawab
+      white: Kaukasia
+      black: Hitam atau Afrika Amerika
+      hispanic: Hispanik atau Latino
+      asian: Orang Asia
+      hawaiian: Penduduk asli Hawaii atau Kepulauan Pasifik
+      american_indian: Orang Indian Amerika/Penduduk Asli Alaska
+      other: Lain
+      opt_out: Memilih untuk tidak menjawab
     submit: Kirim
     decline: Tutup
   zendesk_too_young_message: Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs

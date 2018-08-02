@@ -750,14 +750,14 @@ ro:
       diversitatii in domeniu.'
     message: Va rog sa ne spuneti rasa dvs
     races:
-    - white: Alb
-    - black: Negru sau afro-americani
-    - hispanic: Hispanic sau Latino
-    - asian: Asiatic
-    - hawaiian: Nativ hawaian sau din zona Pacificului
-    - american_indian: American Indian/Nativ Alaska
-    - other: Alte
-    - opt_out: Prefer să nu răspund
+      white: Alb
+      black: Negru sau afro-americani
+      hispanic: Hispanic sau Latino
+      asian: Asiatic
+      hawaiian: Nativ hawaian sau din zona Pacificului
+      american_indian: American Indian/Nativ Alaska
+      other: Alte
+      opt_out: Prefer să nu răspund
     submit: Trimite
     decline: Închide
   zendesk_too_young_message: Ne pare rău, însă utilizatorii mai tineri nu au voie

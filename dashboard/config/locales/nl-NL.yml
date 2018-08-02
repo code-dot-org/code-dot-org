@@ -768,14 +768,12 @@ nl:
     save: Opslaan
   race_interstitial:
     races:
-    - white: Wit
-    - black: Zwart of African American
-    - hispanic: Hispanic of Latino
-    - asian: Aziatisch
-    - 
-    - 
-    - other: Anders
-    - opt_out: Wil ik liever niet zeggen
+      white: Wit
+      black: Zwart of African American
+      hispanic: Hispanic of Latino
+      asian: Aziatisch
+      other: Anders
+      opt_out: Wil ik liever niet zeggen
     submit: Insturen
     decline: Afsluiten
   zendesk_too_young_message: Sorry, jeugdige gebruikers mogen niet inloggen op onze

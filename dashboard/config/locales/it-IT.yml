@@ -1009,14 +1009,14 @@ it:
       in informatica'
     message: Si prega di riferirci la gara (controllare che tutti partecipino)
     races:
-    - white: Bianco
-    - black: Neri o afroamericani
-    - hispanic: Ispano o Latino
-    - asian: Asiatico
-    - hawaiian: Nativi hawaiani o altre isole del Pacifico
-    - american_indian: Nativo Americano Indiano/Alaska
-    - other: Altro
-    - opt_out: Preferisco non dirlo
+      white: Bianco
+      black: Neri o afroamericani
+      hispanic: Ispano o Latino
+      asian: Asiatico
+      hawaiian: Nativi hawaiani o altre isole del Pacifico
+      american_indian: Nativo Americano Indiano/Alaska
+      other: Altro
+      opt_out: Preferisco non dirlo
     submit: Invia
     decline: Chiudi
   zendesk_too_young_message: Siamo spiacenti, gli utenti più giovani non possono accedere

@@ -717,14 +717,14 @@ fi:
     title: 'Valinnainen: Auta meitä seuraamaan edistymistämme kohti monimuotoista
       tietojenkäsittelyä'
     races:
-    - white: Valkoinen
-    - black: Musta tai afroamerikkalainen
-    - hispanic: Hispaano tai Latino
-    - asian: Aasialainen
-    - hawaiian: Havaijilainen tai muilta Tyynenmeren saarilta
-    - american_indian: Amerikan intiaani/Alaskalainen
-    - other: Muut
-    - opt_out: En halua vastata
+      white: Valkoinen
+      black: Musta tai afroamerikkalainen
+      hispanic: Hispaano tai Latino
+      asian: Aasialainen
+      hawaiian: Havaijilainen tai muilta Tyynenmeren saarilta
+      american_indian: Amerikan intiaani/Alaskalainen
+      other: Muut
+      opt_out: En halua vastata
     submit: Jatka
     decline: Sulje
   zendesk_too_young_message: Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua

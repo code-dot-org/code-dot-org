@@ -652,14 +652,10 @@ ar:
     save: حفظ
   race_interstitial:
     races:
-    - white: أبيض
-    - black: أسود أو أمريكي من أصل أفريقي
-    - 
-    - asian: آسيوي
-    - 
-    - 
-    - other: أخرى
-    - 
+      white: أبيض
+      black: أسود أو أمريكي من أصل أفريقي
+      asian: آسيوي
+      other: أخرى
     submit: تسجيل
     decline: إغلاق
   zendesk_too_young_message: عذراً، لا يمكن للمستخدمين الصغار تسجيل الدخول إلى موقع

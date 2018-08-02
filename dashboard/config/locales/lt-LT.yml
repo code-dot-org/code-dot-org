@@ -634,14 +634,14 @@ lt:
   race_interstitial:
     message: Nurodykite savo rasę (pažymėkite visus tinkamus variantus)
     races:
-    - white: Baltasis
-    - black: Juodasis arba Afroamerikietis
-    - hispanic: Ispanas arba Latino
-    - asian: Azijietis
-    - hawaiian: Havajų arba kitų Ramiojo vandenyno salų gyventojas
-    - american_indian: Amerikos indėnas/Aliaskos gyventojas
-    - other: Kita
-    - opt_out: Nenoriu sakyti
+      white: Baltasis
+      black: Juodasis arba Afroamerikietis
+      hispanic: Ispanas arba Latino
+      asian: Azijietis
+      hawaiian: Havajų arba kitų Ramiojo vandenyno salų gyventojas
+      american_indian: Amerikos indėnas/Aliaskos gyventojas
+      other: Kita
+      opt_out: Nenoriu sakyti
     submit: Pateikti
     decline: Užverti
   zendesk_too_young_message: Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti
