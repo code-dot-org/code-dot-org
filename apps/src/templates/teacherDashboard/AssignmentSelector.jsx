@@ -3,16 +3,13 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
 import { assignmentId, assignmentFamilyFields } from './teacherSectionsRedux';
+import AssignmentVersionSelector from './AssignmentVersionSelector';
 
 const styles = {
   family: {
     display: 'inline-block',
     marginTop: 4,
     marginRight: 6,
-  },
-  version: {
-    display: 'inline-block',
-    marginTop: 4,
   },
   secondary: {
     marginTop: 6
@@ -253,27 +250,13 @@ export default class AssignmentSelector extends Component {
         </select>
         </span>
         {versions.length > 1 && (
-          <span style={styles.version}>
-            <div style={styles.dropdownLabel}>{i18n.assignmentSelectorVersion()}</div>
-            <select
-              id="assignment-version-year"
-              value={selectedVersion.year}
-              onChange={this.onChangeVersion}
-              style={dropdownStyle}
-              disabled={disabled}
-            >
-              {
-                versions.map(version => (
-                  <option
-                    key={version.year}
-                    value={version.year}
-                  >
-                    {version.isRecommended ? `${version.title} (Recommended)` : version.title}
-                  </option>
-                ))
-              }
-            </select>
-          </span>
+          <AssignmentVersionSelector
+            dropdownStyle={dropdownStyle}
+            selectedVersion={selectedVersion}
+            versions={versions}
+            onChangeVersion={this.onChangeVersion}
+            disabled={disabled}
+          />
         )}
         {secondaryOptions && (
           <div style={styles.secondary}>
