@@ -64,43 +64,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
   end
 
-  # POST /pd/workshops/1/enroll
-  def create
-    @workshop = ::Pd::Workshop.find_by_id params[:workshop_id]
-    if @workshop.nil?
-      render_404
-      return
-    end
-
-    enrollment_email = enrollment_params[:email]
-    user = User.find_by_email_or_hashed_email enrollment_email
-
-    # See if a previous enrollment exists for this email
-    previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
-    if previous_enrollment
-      @cancel_url = url_for action: :cancel, code: previous_enrollment.code
-      render :duplicate
-    elsif workshop_owned_by? user
-      render :own
-    elsif workshop_closed?
-      render :closed
-    elsif workshop_full?
-      render :full
-    else
-      @enrollment = ::Pd::Enrollment.new workshop: @workshop
-
-      @enrollment.school_info_attributes = school_info_params
-
-      if @enrollment.update enrollment_params
-        Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
-        Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
-        redirect_to action: :thanks, code: @enrollment.code, controller: 'pd/workshop_enrollment'
-      else
-        render :new
-      end
-    end
-  end
-
   # GET /pd/workshop_enrollment/:code
   def show
     @enrollment = ::Pd::Enrollment.find_by_code params[:code]
@@ -109,16 +72,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @cancel_url = url_for action: :cancel, code: @enrollment.code
       @workshop = @enrollment.workshop
-    end
-  end
-
-  def thanks
-    @enrollment = ::Pd::Enrollment.find_by_code params[:code]
-    if @enrollment.nil?
-      render_404
-    else
-      @cancel_url = url_for action: :cancel, code: @enrollment.code
-      @account_exists = @enrollment.resolve_user.present?
     end
   end
 
@@ -185,11 +138,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   def workshop_full?
     @workshop.enrollments.count >= @workshop.capacity
-  end
-
-  def workshop_owned_by?(user)
-    return false unless user
-    @workshop.organizer_or_facilitator? user
   end
 
   # Gets the workshop enrollment associated with the current user id or email if one exists.

@@ -516,9 +516,7 @@ Dashboard::Application.routes.draw do
     get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
-    post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
-    get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
 
     get 'workshop_materials/:enrollment_code', action: 'new', controller: 'workshop_material_orders'
