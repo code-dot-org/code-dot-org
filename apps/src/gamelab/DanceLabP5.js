@@ -19,12 +19,16 @@ export function getDanceAPI(p5Inst) {
         peakDetect.update(fft);
         return spectrum || [];
       },
+      getEnergy: (freq1, freq2) => fft.getEnergy(freq1, freq2),
       isPeak: () => peakDetect.isDetected,
     },
 
     song: {
       start: () => p5Inst.defaultSong.play(),
       stop: () => p5Inst.defaultSong.stop(),
+      isPlaying: () => p5Inst.defaultSong.isPlaying(),
+      currentTime: () => p5Inst.defaultSong.currentTime(),
+      duration: () => p5Inst.defaultSong.duration(),
     },
   };
 }
