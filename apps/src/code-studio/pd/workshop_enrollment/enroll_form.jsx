@@ -9,37 +9,14 @@ import FieldGroup from '../form_components/FieldGroup';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import CustomSchoolInfo from '../components/customSchoolInfo';
-
-const TEACHING_ROLES = [
-  "Classroom Teacher",
-  "Librarian",
-  "Tech Teacher/Media Specialist"
-];
-
-const ROLES = TEACHING_ROLES.concat([
-  "Parent",
-  "School Administrator",
-  "District Administrator",
-  "Other"
-]);
-
-const GRADES_TEACHING = [
-  "Pre-K",
-  "Kindergarten",
-  "Grade 1",
-  "Grade 2",
-  "Grade 3",
-  "Grade 4",
-  "Grade 5",
-  "Grade 6-8",
-  "Grade 9-12"
-];
-
-const OTHER_SCHOOL_VALUE = "-1";
-
-const CSF = "CS Fundamentals";
-
-const ERROR = "error";
+import {
+  TEACHING_ROLES,
+  ROLES,
+  GRADES_TEACHING,
+  OTHER_SCHOOL_VALUE,
+  CSF,
+  ERROR
+} from './enrollmentConstants';
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
@@ -147,7 +124,6 @@ export default class EnrollForm extends React.Component {
         school_state: this.state.school_info.school_state,
         school_zip: this.state.school_info.school_zip,
         school_type: this.state.school_info.school_type,
-        country: "US" // we currently only support enrollment in pd for US schools
       },
       role: this.state.role,
       grades_teaching: this.state.grades_teaching,
