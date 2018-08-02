@@ -46,8 +46,6 @@ describe('VersionRow', () => {
     );
   });
 
-
-
   it('calls onChoose when restore button is clicked', () => {
     const onChoose = sinon.spy();
     const wrapper = shallow(
