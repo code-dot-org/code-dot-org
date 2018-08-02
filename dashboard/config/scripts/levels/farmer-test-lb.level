@@ -36,8 +36,8 @@
     "fast_get_nectar_animation": "false",
     "markdown_instructions": "# Making A Function\r\n1. Do this thing",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L08 - Under the sea.gif",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Testing 123\",\"hint_id\":\"hint_1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7c4e078a8fe2773fdaf1de3b2acfcd03/farmer-test-lb.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Pointing 123\",\"hint_id\":\"hint_2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/308e79c489dcad9cf524f9f9d5196b79/farmer-test-lb.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Testing 123\",\"hint_id\":\"hint_1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7c4e078a8fe2773fdaf1de3b2acfcd03/farmer-test-lb.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Pointing 123\",\"hint_id\":\"hint_2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/308e79c489dcad9cf524f9f9d5196b79/farmer-test-lb.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
