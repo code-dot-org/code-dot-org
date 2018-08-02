@@ -159,6 +159,15 @@ module ScriptConstants
     ],
   }.freeze
 
+  ANY_CSP_CSD_COURSE_OR_SCRIPT = CATEGORIES[:full_course] +
+  CATEGORIES[:csd_2018] + CATEGORIES[:csd] + CATEGORIES[:csp_2018] + CATEGORIES[:csp] + CATEGORIES[:csp17]
+
+  puts ">>>>"
+  puts
+  print ANY_CSP_CSD_COURSE_OR_SCRIPT
+  puts
+  puts ">>>>>"
+
   DEFAULT_VERSION_YEAR = '2017'
 
   def self.script_in_category?(category, script)
