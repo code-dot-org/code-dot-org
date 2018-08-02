@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksInternationalGradeBands from './CourseBlocksInternationalGradeBands';
+import {NotificationResponsive} from '@cdo/apps/templates/Notification';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -69,6 +70,24 @@ class CourseBlocksCsfModern extends Component {
           </div>
         </ContentContainer>
 
+        <NotificationResponsive
+          type="bullhorn"
+          notice={i18n.courseBlocksLegacyNotificationHeading()}
+          details={i18n.courseBlocksLegacyNotificationBody()}
+          dismissible={false}
+          buttons={[
+            {
+              text: i18n.courseBlocksLegacyNotificationButtonTransitionGuide(),
+              link: "https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing",
+              newWindow: true,
+            },
+            {
+              text: i18n.courseBlocksLegacyNotificationButtonCourses(),
+              link: pegasus("/educate/curriculum/cs-fundamentals-international"),
+              newWindow: true,
+            }
+          ]}
+        />
       </div>
     );
   }
