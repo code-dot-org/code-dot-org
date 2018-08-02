@@ -61,6 +61,7 @@ import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import defaultSprites from './defaultSprites.json';
 import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
+import wrap from './debugger/replay';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -1096,6 +1097,9 @@ GameLab.prototype.execute = function (keepTicking = true) {
 GameLab.prototype.initInterpreter = function (attachDebugger=true) {
 
   const injectGamelabGlobals = () => {
+    if (experiments.isEnabled('replay')) {
+      wrap(this.gameLabP5.p5);
+    }
     const propList = this.gameLabP5.getGlobalPropertyList(this.isDanceLab);
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
