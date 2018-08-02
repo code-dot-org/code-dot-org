@@ -64,7 +64,7 @@ end
 
 def restore(source, redacted, dest)
   source_data = YAML.load_file(source)
-  redacted_data = YAML.load_file(source)
+  redacted_data = YAML.load_file(redacted)
   source_json = Tempfile.new(['source', '.json'])
   redacted_json = Tempfile.new(['redacted', '.json'])
 
