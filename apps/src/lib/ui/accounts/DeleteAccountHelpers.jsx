@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -30,45 +31,69 @@ export const StudentWarning = () => {
   );
 };
 
-export const getLabelForCheckbox = (id) => {
-  switch (id) {
-    case 1:
-      return (
-        <span>
-          <strong>{i18n.deleteAccountDialog_checkbox1_1()}</strong>
-          {i18n.deleteAccountDialog_checkbox1_2()}
-        </span>
-      );
-    case 2:
-      return (
-        <span>
-          {i18n.deleteAccountDialog_checkbox2_1()}
-          <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
-            {i18n.deleteAccountDialog_checkbox2_2()}
-          </a>
-          {i18n.deleteAccountDialog_checkbox2_3()}
-        </span>
-      );
-    case 3:
-      return (
-        <span>
-          {i18n.deleteAccountDialog_checkboxPreface()}
-          <strong>{i18n.deleteAccountDialog_checkbox3()}</strong>
-        </span>
-      );
-    case 4:
-      return (
-        <span>
-          {i18n.deleteAccountDialog_checkboxPreface()}
-          <strong>{i18n.deleteAccountDialog_checkbox4()}</strong>
-        </span>
-      );
-    case 5:
-      return (
-        <span>
-          {i18n.deleteAccountDialog_checkboxPreface()}
-          <strong>{i18n.deleteAccountDialog_checkbox5()}</strong>
-        </span>
-      );
+export const getCheckboxes = (dependedUponForLogin, hasStudents) => {
+  let ids = [];
+  if (dependedUponForLogin) {
+    ids = TEACHER_DEPENDED_UPON_FOR_LOGIN_CHECKBOXES;
+  } else if (hasStudents) {
+    ids = TEACHER_WITH_STUDENTS_CHECKBOXES;
+  }
+
+  return _.pick(CHECKBOX_MAP, ids);
+};
+
+// Teacher that has students who depend on them to log in is required to see/check all 5 checkboxes to delete their account.
+const TEACHER_DEPENDED_UPON_FOR_LOGIN_CHECKBOXES = [1,2,3,4,5];
+// Teacher with students is only required to see/check the first checkbox to delete their account.
+const TEACHER_WITH_STUDENTS_CHECKBOXES = [1];
+
+const CHECKBOX_MAP = {
+  1: {
+    checked: false,
+    label: (
+      <span>
+        <strong>{i18n.deleteAccountDialog_checkbox1_1()}</strong>
+        {i18n.deleteAccountDialog_checkbox1_2()}
+      </span>
+    )
+  },
+  2: {
+    checked: false,
+    label: (
+      <span>
+        {i18n.deleteAccountDialog_checkbox2_1()}
+        <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
+          {i18n.deleteAccountDialog_checkbox2_2()}
+        </a>
+        {i18n.deleteAccountDialog_checkbox2_3()}
+      </span>
+    )
+  },
+  3: {
+    checked: false,
+    label: (
+      <span>
+        {i18n.deleteAccountDialog_checkboxPreface()}
+        <strong>{i18n.deleteAccountDialog_checkbox3()}</strong>
+      </span>
+    )
+  },
+  4: {
+    checked: false,
+    label: (
+      <span>
+        {i18n.deleteAccountDialog_checkboxPreface()}
+        <strong>{i18n.deleteAccountDialog_checkbox4()}</strong>
+      </span>
+    )
+  },
+  5: {
+    checked: false,
+    label: (
+      <span>
+        {i18n.deleteAccountDialog_checkboxPreface()}
+        <strong>{i18n.deleteAccountDialog_checkbox5()}</strong>
+      </span>
+    )
   }
 };

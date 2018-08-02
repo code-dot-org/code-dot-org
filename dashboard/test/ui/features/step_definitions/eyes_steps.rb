@@ -5,6 +5,7 @@ require 'open-uri'
 require 'json'
 require 'rinku'
 require_relative '../../utils/selenium_constants'
+require 'logger'
 
 # Override default match timeout (2 seconds) to help prevent laggy UI from breaking eyes tests.
 # See http://support.applitools.com/customer/en/portal/articles/2099488-match-timeout
@@ -75,4 +76,5 @@ def ensure_eyes_available
   # Force eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   @eyes.host_os = ENV['APPLITOOLS_HOST_OS']
+  @eyes.log_handler = Logger.new('../../log/eyes.log')
 end

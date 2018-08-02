@@ -17,6 +17,7 @@ CLEAR = "\r\033[K"
 
 def sync_out
   rename_from_crowdin_name_to_locale
+  restore_redacted_files
   distribute_translations
   copy_untranslated_apps
   rebuild_blockly_js_files
@@ -32,6 +33,23 @@ def rename_from_crowdin_name_to_locale
     if File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
       FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
       FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
+    end
+  end
+end
+
+def restore_redacted_files
+  Languages.get_locale.each_with_index do |prop, i|
+    locale = prop[:locale_s]
+    print "#{CLEAR}Restoring #{locale} (#{i}/#{total_locales})"
+    $stdout.flush
+    next if locale == 'en-US'
+    next unless File.directory?("i18n/locales/#{locale}/")
+
+    Dir.glob("i18n/locales/redacted/**/*.*").each do |redacted_path|
+      source_path = redacted_path.sub("redacted", "source")
+      translated_path = redacted_path.sub("redacted", locale)
+
+      restore(source_path, translated_path, translated_path)
     end
   end
 end
