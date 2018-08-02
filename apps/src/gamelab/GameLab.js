@@ -1097,7 +1097,9 @@ GameLab.prototype.execute = function (keepTicking = true) {
 GameLab.prototype.initInterpreter = function (attachDebugger=true) {
 
   const injectGamelabGlobals = () => {
-    wrap(this.gameLabP5.p5);
+    if (experiments.isEnabled('replay')) {
+      wrap(this.gameLabP5.p5);
+    }
     const propList = this.gameLabP5.getGlobalPropertyList(this.isDanceLab);
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
