@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-var VersionRow = require('./VersionRow');
+import VersionRow from './VersionRow';
 var sourcesApi = require('../clientApi').sources;
 var filesApi = require('../clientApi').files;
 import project from '@cdo/apps/code-studio/initApp/project';
