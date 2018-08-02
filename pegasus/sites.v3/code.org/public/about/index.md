@@ -121,12 +121,7 @@ Code.org IRS form 990 for [2014](/files/irs-form.pdf), [2015](/files/irs-form-20
 ## Follow us
 [Sign up to receive status updates](http://go.pardot.com/l/153401/2018-01-12/k555vp) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
 
-<a href="https://www.facebook.com/Code.org/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-&nbsp; &nbsp;
-<a href="https://twitter.com/codeorg" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-&nbsp; &nbsp;
-<a href="https://www.instagram.com/codeorg/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
-&nbsp; &nbsp;
+<%= view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg" %>
 
 <hr/>
 

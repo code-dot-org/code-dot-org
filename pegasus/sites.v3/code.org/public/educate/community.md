@@ -11,14 +11,7 @@ style_min: true
 
 Join this teacher-led movement to ensure that every student in every school has the opportunity to learn computer science. Share your passion and get the latest information, tips, and tools on social media.
 
-<a href="https://twitter.com/teachcode" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-&nbsp; &nbsp;
-<a href="http://teacherblog.code.org/" target="_blank"><i class="fa fa-tumblr fa-lg"></i></a>
-&nbsp; &nbsp;
-<a href="https://www.facebook.com/Code.org/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-&nbsp; &nbsp;
-<a href="https://www.instagram.com/codeorg/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
-&nbsp; &nbsp;
+<%= view :social_media, facebook: "Code.org", twitter: "teachcode", tumblr: "http://teacherblog.code.org", instagram: "codeorg" %>
 
 Join the conversation with other teachers using Code Studio on our forum.
 
