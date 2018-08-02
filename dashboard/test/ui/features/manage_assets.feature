@@ -14,6 +14,6 @@ Feature: Manage Assets
     And I start a new Game Lab project
     And I append "?enableExperiments=recordAudio" to the URL
     And I open the Manage Assets dialog
-    Then I wait until element "#record-asset" is visible
+    Then I click selector "#record-asset" once I see it
     And I wait until element "#stop-record" is visible
     And I am on "http://studio.code.org/home?disableExperiments=recordAudio"
