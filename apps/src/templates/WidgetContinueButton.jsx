@@ -1,32 +1,32 @@
 /** @file Button that continues to the next puzzle when clicked */
 import React from 'react';
 import i18n from '@cdo/locale';
-import {processResults} from '../code-studio/levels/dialogHelper';
+import * as dialogHelper from '../code-studio/levels/dialogHelper';
 
-const ContinueButton = React.createClass({
-  getInitialState() {
-    return {submitting: false};
-  },
+export default class ContinueButton extends React.Component {
+  state = {
+    submitting: false
+  };
 
-  onClick() {
+  onClick = () => {
     this.setState({submitting: true});
-    processResults(willRedirect => {
+    dialogHelper.processResults(willRedirect => {
       if (!willRedirect) {
         this.setState({submitting: false});
       }
     });
-  },
+  };
 
   render() {
+    const {submitting} = this.state;
     return (
       <button
         className="btn btn-primary pull-right"
-        disabled={!!this.state.submitting}
-        onClick={this.state.submitting ? null : this.onClick}
+        disabled={submitting}
+        onClick={submitting ? null : this.onClick}
       >
         {i18n.continue()}
       </button>
     );
   }
-});
-export default ContinueButton;
+}
