@@ -668,9 +668,12 @@ class TopInstructions extends React.Component {
                 />
               }
               {this.props.overlayVisible &&
-                <LegacyButton type="primary" onClick={this.props.hideOverlay}>
-                  {msg.dialogOK()}
-                </LegacyButton>
+                <div>
+                  <hr/>
+                  <LegacyButton type="primary" onClick={this.props.hideOverlay}>
+                    {msg.dialogOK()}
+                  </LegacyButton>
+                </div>
               }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
