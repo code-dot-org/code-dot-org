@@ -7,8 +7,8 @@ import {installCustomBlocks} from '@cdo/apps/block_utils';
 const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.
 if (window.Blockly && !data.uses_droplet) {
-  window.Blockly.Css.styleSheet_ = window.goog.cssom.addCssText(Blockly.Css.CONTENT.join("\n")).sheet;
   window.Blockly.assetUrl = path => `/assets/${path}`;
+  Blockly.Css.inject(document);
   const appBlocks = require('@cdo/apps/' + data.app + '/blocks');
   const skinsModule = require('@cdo/apps/' + data.app + '/skins');
   const options = {
@@ -22,7 +22,7 @@ if (window.Blockly && !data.uses_droplet) {
     installCustomBlocks({
       blockly: window.Blockly,
       blockDefinitions: data.shared_blocks,
-      customInputTypes: options.blocksModule.customInputTypes,
+      customInputTypes: appBlocks.customInputTypes,
     });
   }
 }
