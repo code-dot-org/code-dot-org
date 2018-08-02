@@ -17,12 +17,12 @@ const FAKE_VERSION_LIST_RESPONSE = {
     [
       {
         versionId: FAKE_CURRENT_VERSION,
-        lastModified: Date.now(),
+        lastModified: new Date('2018-08-01T03:00:00'),
         isLatest: true,
       },
       {
         versionId: FAKE_PREVIOUS_VERSION,
-        lastModified: Date.now() - 1,
+        lastModified: new Date('2018-07-31T02:00:00'),
         isLatest: false,
       }
     ]
