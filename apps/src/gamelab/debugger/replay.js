@@ -1,4 +1,4 @@
-const trackedProps = ['x', 'y'];
+const trackedProps = ['x', 'y', 'tint'];
 const log = [];
 
 export default function wrap(p5) {
@@ -9,7 +9,7 @@ export default function wrap(p5) {
     const sprite = original.apply(p5, arguments);
 
     for (let prop of trackedProps) {
-      const descriptor = Object.getOwnPropertyDescriptor(sprite, prop);
+      const descriptor = Object.getOwnPropertyDescriptor(sprite, prop) || {};
       Object.defineProperty(sprite, prop, {
         get: descriptor.get ? descriptor.get : () => descriptor.value,
         set: value => {
@@ -28,7 +28,7 @@ export default function wrap(p5) {
 }
 
 export function replay(gameLabInst) {
-  let frame = 0;
+  let frame = 1;
 
   gameLabInst.stopTickTimer();
   gameLabInst.JSInterpreter.seenReturnFromCallbackDuringExecution = true;
