@@ -22,8 +22,11 @@ export function getDanceAPI(p5Inst) {
         return spectrum || [];
       },
       getEnergy: (freq1, freq2) => fft.getEnergy(freq1, freq2),
+      getCentroid: () => fft.getCentroid(),
+      waveform: bins => fft.waveform(bins),
       isPeak: n => (customPeakDetects[n] || peakDetect).isDetected,
       createPeakDetect: (...args) => customPeakDetects.push(new p5.PeakDetect(...args)) - 1,
+      onPeak: (n, callback) => (customPeakDetects[n] || peakDetect).onPeak(callback),
     },
 
     song: {
@@ -32,6 +35,9 @@ export function getDanceAPI(p5Inst) {
       isPlaying: () => p5Inst.defaultSong.isPlaying(),
       currentTime: () => p5Inst.defaultSong.currentTime(),
       duration: () => p5Inst.defaultSong.duration(),
+      processPeaks: (...args) => p5Inst.defaultSong.processPeaks(...args),
+      addCue: (...args) => p5Inst.defaultSong.addCue(...args),
+      clearCues: () => p5Inst.defaultSong.clearCues(),
     },
   };
 }
