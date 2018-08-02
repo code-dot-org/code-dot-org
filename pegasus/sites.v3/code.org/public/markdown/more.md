@@ -93,12 +93,7 @@ Cu vis minim imperdiet. Vel cu phaedrum adolescens, vim te assentior delicatissi
 ### How to point to Code.org's social media sites
 Do not use any Facebook, Twitter, etc. widgets that connect users to like or follow Code.org on social media. These widgets use cookies, which violates our privacy policy. Instead, you can show an icon or image of the social media platform's logo and link to Code.org's social media accounts.
 
-<a href="https://www.facebook.com/Code.org/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-&nbsp; &nbsp;
-<a href="https://twitter.com/codeorg" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-&nbsp; &nbsp;
-<a href="https://www.instagram.com/codeorg/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
-&nbsp; &nbsp;
+<%= view :social_media, facebook: "Code.org", twitter: "codeorg", tumblr: "http://teacherblog.code.org", instagram: "codeorg" %>
 
 ### What your page looks like when shared on social media
 ***
