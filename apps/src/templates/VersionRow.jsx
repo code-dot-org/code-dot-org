@@ -8,7 +8,7 @@ var msg = require('@cdo/locale');
 var VersionRow = React.createClass({
   propTypes: {
     versionId: PropTypes.string.isRequired,
-    lastModified: PropTypes.instanceOf(Date),
+    lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool,
     onChoose: PropTypes.func
   },
