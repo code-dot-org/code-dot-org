@@ -217,6 +217,10 @@ function makeNewSprite(animation, x, y) {
   sprite.patrolling = false;
   sprite.things_to_say = [];
   sprite.behaviors = [];
+  sprite.baseScale = 100 / Math.max(1,
+    sprite.animation.getHeight(),
+    sprite.animation.getWidth());
+  sprite.scale = sprite.baseScale;
 
   sprite.setSpeed = function (speed) {
     sprite.speed = speed;
@@ -254,9 +258,12 @@ function makeNewSprite(animation, x, y) {
     }
   };
   sprite.setScale = function (scale) {
-    sprite.scale = scale;
+    sprite.scale = scale * sprite.baseScale;
   };
-
+  sprite.getScale = function () {
+    return sprite.scale / sprite.baseScale;
+  };
+  
   sprite.say = function (text, time) {
     time = time || 50;
     sprite.things_to_say.push([text, time]);
@@ -315,7 +322,7 @@ function shouldUpdate() {
 
 function draw() {
   background(World.background_color || "white");
-  
+
   callbacks.forEach(function (callback) {
     callback();
   });
