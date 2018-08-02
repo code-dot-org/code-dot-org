@@ -759,14 +759,14 @@ zh-TW:
     title: 非必填：幫助我們追蹤我們的進展以改善在計算機科學的多樣性
     message: 請告訴我們你的種族（選擇）
     races:
-    - white: 白人
-    - black: 黑人/非裔美國人
-    - hispanic: 西班牙裔或拉丁裔
-    - asian: 亞裔
-    - hawaiian: 夏威夷原住民或其他太平洋群島原住民
-    - american_indian: 美國印地安人/阿拉斯加原住民
-    - other: 其它
-    - opt_out: 不想說
+      white: 白人
+      black: 黑人/非裔美國人
+      hispanic: 西班牙裔或拉丁裔
+      asian: 亞裔
+      hawaiian: 夏威夷原住民或其他太平洋群島原住民
+      american_indian: 美國印地安人/阿拉斯加原住民
+      other: 其它
+      opt_out: 不想說
     submit: 提交
     decline: 關閉
   zendesk_too_young_message: 抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。

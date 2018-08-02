@@ -966,14 +966,14 @@ tr:
       ilerlememizi izlememize yardımcı olun'
     message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
-    - white: Beyaz
-    - black: Siyahi veya Afrika kökenli Amerikalı
-    - hispanic: İspanyol veya Latin
-    - asian: Asyalı
-    - hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
-    - american_indian: Amerikalı Kızılderili / Alaska Yerlisi
-    - other: Diğer
-    - opt_out: Söylememek istemiyorum
+      white: Beyaz
+      black: Siyahi veya Afrika kökenli Amerikalı
+      hispanic: İspanyol veya Latin
+      asian: Asyalı
+      hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
+      american_indian: Amerikalı Kızılderili / Alaska Yerlisi
+      other: Diğer
+      opt_out: Söylememek istemiyorum
     submit: Gönder
     decline: Kapat
   zendesk_too_young_message: Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar.

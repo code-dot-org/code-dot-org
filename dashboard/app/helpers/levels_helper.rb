@@ -465,6 +465,18 @@ module LevelsHelper
       end
       set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
       set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
+
+      %w(
+        initializationBlocks
+        startBlocks
+        toolbox
+        levelBuilderRequiredBlocks
+        levelBuilderRecommendedBlocks
+        solutionBlocks
+      ).each do |xml_block_prop|
+        next unless level_options.key? xml_block_prop
+        set_unless_nil(level_options, xml_block_prop, l.localize_function_blocks(level_options[xml_block_prop]))
+      end
     end
 
     # Script-dependent option

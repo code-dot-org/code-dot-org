@@ -5,7 +5,11 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetRow from './AssetRow';
 import AssetUploader from './AssetUploader';
 import assetListStore from '../assets/assetListStore';
+import AudioRecorder from './AudioRecorder';
+import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from "../../templates/Button";
+import i18n from '@cdo/locale';
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -22,11 +26,37 @@ function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
 
+const RecordButton = ({onSelectRecord}) => (
+  <Button
+    onClick={onSelectRecord}
+    id="record-asset"
+    className="share"
+    text={i18n.recordAudio()}
+    icon="microphone"
+    style={styles.buttonStyle}
+  />
+);
+
+RecordButton.propTypes = {
+  onSelectRecord: PropTypes.func,
+};
+
 const styles = {
   emptyText: {
     margin: '1em 0',
     fontSize: '16px',
     lineHeight: '20px'
+  },
+  buttonRow: {
+    display: 'flex',
+    flexFlow: 'row',
+  },
+  buttonStyle: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    margin: 5,
+    borderRadius: 4,
+    fontSize: 'large'
   }
 };
 
@@ -48,7 +78,8 @@ export default class AssetManager extends React.Component {
     super(props);
     this.state = {
       assets: null,
-      statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled
+      statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
+      recordingAudio: false
     };
   }
 
@@ -120,6 +151,10 @@ export default class AssetManager extends React.Component {
     );
   };
 
+  onSelectRecord = () => {
+    this.setState({recordingAudio: true});
+  };
+
   deleteAssetRow = (name) => {
     assetListStore.remove(name);
     if (this.props.assetsChanged) {
@@ -146,6 +181,18 @@ export default class AssetManager extends React.Component {
       </span>
     </div>);
 
+    const buttons = (
+      <div>
+        {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
+          <AudioRecorder/>
+        }
+        <span style={styles.buttonRow}>
+          {uploadButton}
+          {experiments.isEnabled('recordAudio') && <RecordButton onSelectRecord={this.onSelectRecord}/>}
+        </span>
+      </div>
+    );
+
     let assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
     // empty, the asset list has loaded and there are no assets in the current
@@ -168,7 +215,7 @@ export default class AssetManager extends React.Component {
           <div style={styles.emptyText}>
             {emptyText}
           </div>
-          {uploadButton}
+          {buttons}
         </div>
       );
     } else {
@@ -199,7 +246,7 @@ export default class AssetManager extends React.Component {
               </tbody>
             </table>
           </div>
-          {uploadButton}
+          {buttons}
         </div>
       );
     }

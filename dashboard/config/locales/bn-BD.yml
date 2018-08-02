@@ -332,14 +332,7 @@ bn:
     save: সংরক্ষন করন
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: অন্যান্য
-    - 
+      other: অন্যান্য
     submit: জমা করুন
     decline: বন্ধ
   progress:

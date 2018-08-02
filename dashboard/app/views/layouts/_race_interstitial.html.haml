@@ -7,11 +7,10 @@
       .left.full-width
         = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
           .form-group
-            - t('race_interstitial.races').map do |entry|
-              - entry.map do |race, race_i8n|
-                = f.label "races_#{race}" do
-                  = f.check_box "races", {class: 'race-checkbox', multiple: true}, race, nil
-                  = race_i8n
+            - User::DISPLAY_RACES.map do |race|
+              = f.label "races_#{race}" do
+                = f.check_box "races", {class: 'race-checkbox', multiple: true}, race, nil
+                = t(race, scope: 'race_interstitial.races')
             = f.label 'closed_dialog', {id: 'closed-dialog-label'} do
               = f.check_box "races", {class: 'race-checkbox', multiple: true}, 'closed_dialog', nil
           .form-group

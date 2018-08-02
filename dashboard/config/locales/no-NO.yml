@@ -944,14 +944,14 @@
       innen programmering'
     message: Oppgi din etnisitet (kryss av alle som passer)
     races:
-    - white: Hvit
-    - black: Afrikansk
-    - hispanic: Latinamerikansk
-    - asian: Asiatisk
-    - hawaiian: Hawaii eller stillehavsøyene
-    - american_indian: Amerikansk urbefolkning
-    - other: Andre
-    - opt_out: Ønsker ikke å si
+      white: Hvit
+      black: Afrikansk
+      hispanic: Latinamerikansk
+      asian: Asiatisk
+      hawaiian: Hawaii eller stillehavsøyene
+      american_indian: Amerikansk urbefolkning
+      other: Andre
+      opt_out: Ønsker ikke å si
     submit: Send
     decline: Lukk
   zendesk_too_young_message: Beklager, yngre brukere kan ikke logge på nettstedet

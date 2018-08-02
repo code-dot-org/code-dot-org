@@ -719,14 +719,7 @@ pt:
     save: Guardar
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Outros
-    - 
+      other: Outros
     submit: OK
     decline: Fechar
   zendesk_too_young_message: Pedimos desculpa, mas os utilizadores mais jovens não

@@ -986,14 +986,14 @@ ga:
       a rianú'
     message: Cad é do chine (cuir tic le gach a mbaineann leatsa)
     races:
-    - white: Den chine geal
-    - black: Den chine gorm nó Afra-Mheiriceánach
-    - hispanic: Easpáinneach nó Latinx
-    - asian: Áiseach
-    - hawaiian: Haváíoch Dúchasach nó Oileánach an Aigéin Chiúin
-    - american_indian: Bundúchasach Meiriceánach/Alascach
-    - other: Eile
-    - opt_out: B'fhearr liom gan freagra a thabhairt
+      white: Den chine geal
+      black: Den chine gorm nó Afra-Mheiriceánach
+      hispanic: Easpáinneach nó Latinx
+      asian: Áiseach
+      hawaiian: Haváíoch Dúchasach nó Oileánach an Aigéin Chiúin
+      american_indian: Bundúchasach Meiriceánach/Alascach
+      other: Eile
+      opt_out: B'fhearr liom gan freagra a thabhairt
     submit: Seol
     decline: Dún
   zendesk_too_young_message: Ár leithscéal, ach níl cead ag úsáideoirí óga logáil
