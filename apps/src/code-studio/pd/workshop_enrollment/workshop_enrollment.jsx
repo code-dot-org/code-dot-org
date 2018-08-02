@@ -6,6 +6,7 @@ import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import SignInPrompt from './sign_in_prompt';
 import EnrollForm from './enroll_form';
+import {SUBMISSION_STATUSES} from './enrollmentConstants';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
@@ -21,7 +22,7 @@ export default class WorkshopEnrollment extends React.Component {
     super(props);
 
     this.state = {
-      submissionStatus: "unsubmitted"
+      submissionStatus: SUBMISSION_STATUSES.UNSUBMITTED
     };
   }
 
@@ -62,7 +63,7 @@ export default class WorkshopEnrollment extends React.Component {
           Sorry, this workshop is full.
         </p>
         <p>
-          For more information, please contact the organizer: {this.props.workshop.organizer.email}
+          For more information, please contact the organizer: <a href={`mailto:${this.props.workshop.organizer.email}`}>{this.props.workshop.organizer.email}</a>
         </p>
       </div>
     );
@@ -75,7 +76,7 @@ export default class WorkshopEnrollment extends React.Component {
           Sorry, this workshop is closed.
         </p>
         <p>
-          For more information, please contact the organizer: {this.props.workshop.organizer.email}
+          For more information, please contact the organizer: <a href={`mailto:${this.props.workshop.organizer.email}`}>{this.props.workshop.organizer.email}</a>
         </p>
       </div>
     );
@@ -142,7 +143,7 @@ export default class WorkshopEnrollment extends React.Component {
   }
 
   render() {
-    if (this.state.submissionStatus === "unsubmitted") {
+    if (this.state.submissionStatus === SUBMISSION_STATUSES.UNSUBMITTED) {
       return (
         <div>
           <h1>
@@ -195,17 +196,17 @@ export default class WorkshopEnrollment extends React.Component {
           </div>
         </div>
       );
-    } else if (this.state.submissionStatus === "duplicate") {
+    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.DUPLICATE) {
       return this.renderDuplicate();
-    } else if (this.state.submissionStatus === "own") {
+    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.OWN) {
       return this.renderOwn();
-    } else if (this.state.submissionStatus === "closed") {
+    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.CLOSED) {
       return this.renderClosed();
-    } else if (this.state.submissionStatus === "full") {
+    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.FULL) {
       return this.renderFull();
-    } else if (this.state.submissionStatus === "not found") {
+    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.NOT_FOUND) {
       return this.renderNotFound();
-    } else if (this.state.submissionStatus === "success") {
+    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.SUCCESS) {
       return this.renderSuccess();
     } else {
       return this.renderUnknownError();

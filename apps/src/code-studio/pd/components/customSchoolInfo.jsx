@@ -4,15 +4,7 @@ import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {STATES} from '../../../geographyConstants';
-
-const SCHOOL_TYPES = [
-  "Public school",
-  "Private school",
-  "Charter school",
-  "Other"
-];
-
-const ERROR = "error";
+import {SCHOOL_TYPES, ERROR} from '../workshop_enrollment/enrollmentConstants';
 
 export default class CustomSchoolInfo extends React.Component {
   static propTypes = {
@@ -38,7 +30,7 @@ export default class CustomSchoolInfo extends React.Component {
         />
         <ButtonList
           key="school_type"
-          answers={SCHOOL_TYPES}
+          answers={Object.values(SCHOOL_TYPES)}
           groupName="school_type"
           label="My school is a"
           onChange={this.props.handleSchoolTypeChange}
@@ -49,7 +41,7 @@ export default class CustomSchoolInfo extends React.Component {
           required={true}
         />
         {
-          ['Public school', 'Charter school'].includes(this.props.schoolInfo.school_type) &&
+          [SCHOOL_TYPES.PUBLIC, SCHOOL_TYPES.CHARTER].includes(this.props.schoolInfo.school_type) &&
           <FieldGroup
             id="school_district_name"
             label="School District"

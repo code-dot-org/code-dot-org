@@ -111,7 +111,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       school_district_other: params[:school_info][:school_district_other],
       school_id: params[:school_info][:school_id],
       school_name: params[:school_info][:school_name],
-      country: params[:school_info][:country]
+      country: "US" # we currently only support enrollment in pd for US schools
+
     }
   end
 
