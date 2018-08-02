@@ -4,6 +4,7 @@ var sourcesApi = require('../clientApi').sources;
 var filesApi = require('../clientApi').files;
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import * as utils from '../utils';
 
 /**
  * A component for viewing project version history.
@@ -59,7 +60,7 @@ var VersionHistory = React.createClass({
    * Called when the server responds to a request to restore a previous version.
    */
   onRestoreSuccess: function () {
-    location.reload();
+    utils.reload();
   },
 
   /**
@@ -105,7 +106,7 @@ var VersionHistory = React.createClass({
 
     this.props.handleClearPuzzle()
       .then(() => project.save(true))
-      .then(() => location.reload());
+      .then(() => utils.reload());
   },
 
   render: function () {
