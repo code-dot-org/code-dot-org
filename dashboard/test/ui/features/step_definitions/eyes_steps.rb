@@ -76,7 +76,5 @@ def ensure_eyes_available
   # Force eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   @eyes.host_os = ENV['APPLITOOLS_HOST_OS']
-  # Temporarily enable logging to diagnose intermittent HTTP 408 errors being returned by the Applitools web service.
-  # TODO: (suresh) - Revert this pull request.
-  @eyes.log_handler = Logger.new('dashboard/log/eyes.log')
+  @eyes.log_handler = Logger.new('../../log/eyes.log')
 end
