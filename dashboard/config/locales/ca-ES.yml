@@ -533,14 +533,7 @@ ca:
     save: Desa
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Altres
-    - 
+      other: Altres
     submit: Envia
     decline: Tancar
   zendesk_too_young_message: Lamentablement, els usuaris més joves no poden registrar-se

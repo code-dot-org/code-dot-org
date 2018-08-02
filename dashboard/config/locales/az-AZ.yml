@@ -450,14 +450,9 @@ az:
     save: Yadda saxla
   race_interstitial:
     races:
-    - white: Ağ
-    - 
-    - 
-    - asian: Asyalı
-    - 
-    - 
-    - other: Digər
-    - 
+      white: Ağ
+      asian: Asyalı
+      other: Digər
     submit: Göndər
     decline: Bağla
   progress:

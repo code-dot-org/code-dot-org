@@ -906,14 +906,14 @@ de:
       in der Informatik zu besser verfolgen'
     message: Bitte verrate uns deine Ethnie (Zutreffendes bitte ankreuzen)
     races:
-    - white: Weiß
-    - black: Schwarz
-    - hispanic: Spanisch oder Latino
-    - asian: Asiatisch
-    - hawaiian: Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner
-    - american_indian: Indianer oder eingeborener Alaskaner
-    - other: Andere
-    - opt_out: Das geht Euch nichts an
+      white: Weiß
+      black: Schwarz
+      hispanic: Spanisch oder Latino
+      asian: Asiatisch
+      hawaiian: Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner
+      american_indian: Indianer oder eingeborener Alaskaner
+      other: Andere
+      opt_out: Das geht Euch nichts an
     submit: Absenden
     decline: Schließen
   zendesk_too_young_message: Tut uns leid, jüngere Benutzer dürfen sich für unsere

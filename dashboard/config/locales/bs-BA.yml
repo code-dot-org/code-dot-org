@@ -594,14 +594,7 @@ bs:
     save: Snimi
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Ostalo
-    - 
+      other: Ostalo
     submit: Potvrdi
     decline: Zatvori
   zendesk_too_young_message: Nažalost, mlađi korisnici se ne mogu prijaviti na našu

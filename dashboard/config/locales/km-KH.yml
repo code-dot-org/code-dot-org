@@ -483,14 +483,7 @@ km:
     save: រក្សា​ទុក
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: ផ្សេងៗ
-    - 
+      other: ផ្សេងៗ
     submit: ដាក់ស្នើរ
   project:
     save: រក្សា​ទុក

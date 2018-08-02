@@ -120,14 +120,7 @@ tg:
       link: Маълумоти бештар
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Дигар
-    - 
+      other: Дигар
     submit: Пешниҳод кардан
     decline: Пӯшидан
   project:

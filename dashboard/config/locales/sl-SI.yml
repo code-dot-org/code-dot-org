@@ -588,14 +588,14 @@ sl:
     save: Shrani
   race_interstitial:
     races:
-    - white: Bela
-    - black: Črna ali Afroameričan
-    - hispanic: Hispanic ali Latino
-    - asian: Azijske
-    - hawaiian: Domorodec Havajev ali drugega Pacifiškega otoka
-    - american_indian: Ameriški indijanec/Alaskin domorodec
-    - other: Drugi
-    - opt_out: Raje ne bi odgovoril
+      white: Bela
+      black: Črna ali Afroameričan
+      hispanic: Hispanic ali Latino
+      asian: Azijske
+      hawaiian: Domorodec Havajev ali drugega Pacifiškega otoka
+      american_indian: Ameriški indijanec/Alaskin domorodec
+      other: Drugi
+      opt_out: Raje ne bi odgovoril
     submit: Pošlji
     decline: Zapri
   zendesk_too_young_message: Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa

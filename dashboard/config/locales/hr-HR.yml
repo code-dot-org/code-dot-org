@@ -535,14 +535,7 @@ hr:
     save: Spremi
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Ostalo
-    - 
+      other: Ostalo
     submit: Pošalji
     decline: Zatvori
   zendesk_too_young_message: Nažalost, mlađi korisnici se ne mogu prijaviti na našu

@@ -713,14 +713,7 @@ el:
     save: Αποθήκευση
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Άλλα
-    - 
+      other: Άλλα
     submit: Υποβολή
     decline: Κλείσιμο
   zendesk_too_young_message: Συγγνώμη, νεαρότεροι χρήστες δεν μπορείτε να συνδεθείτε

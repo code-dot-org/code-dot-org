@@ -583,14 +583,7 @@ fa:
     save: ذخيره
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: دیگر
-    - 
+      other: دیگر
     submit: ارسال کنید
     decline: ببند
   zendesk_too_young_message: با عرض پوزش ، کاربران کم سن ممکن است نتوانند به بخش پشتیبانی

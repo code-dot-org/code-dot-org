@@ -610,14 +610,7 @@ hy:
     save: Save
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Այլ
-    - 
+      other: Այլ
     submit: Հաստատել
     decline: փակել
   zendesk_too_young_message: Ներեցեք, երիտասարդ օգտագործողները չեն կարող մուտք գործել

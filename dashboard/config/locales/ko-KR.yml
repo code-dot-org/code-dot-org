@@ -788,14 +788,14 @@ ko:
     title: '선택사항: 컴퓨터과학의 다양성 개선에 대한 우리의 진행 상황을 추적하도록 도와주세요.'
     message: 당신의 민족을 알려주세요 (해당사항에 모두 체크)
     races:
-    - white: 백인
-    - black: 흑인 또는 아프리카계 미국인
-    - hispanic: 히스패닉 또는 라틴계
-    - asian: 동양인
-    - hawaiian: 하와이 태생 또는 다른 태평양제도 태생
-    - american_indian: 아메리칸 인디언/알래스카 원주민
-    - other: 기타
-    - opt_out: 말하지 않는 것을 선호한다
+      white: 백인
+      black: 흑인 또는 아프리카계 미국인
+      hispanic: 히스패닉 또는 라틴계
+      asian: 동양인
+      hawaiian: 하와이 태생 또는 다른 태평양제도 태생
+      american_indian: 아메리칸 인디언/알래스카 원주민
+      other: 기타
+      opt_out: 말하지 않는 것을 선호한다
     submit: 제출하기
     decline: 닫기
   zendesk_too_young_message: 어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a

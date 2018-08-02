@@ -738,14 +738,14 @@ et:
       arvutiteaduses'
     message: Palun ütle meile, millisesse rassi kuulud (märgi kõik, millega end identifitseerid)
     races:
-    - white: Valge
-    - black: Mustanahaline või afroameeriklane
-    - hispanic: Hispaania või ladina päritolu
-    - asian: aasialane
-    - hawaiian: Havai põlisrahvusest või pärit vaikse ookeani saartelt
-    - american_indian: põlisameeriklane või Alaska põliselanik
-    - other: Muu
-    - opt_out: Ei soovi vastata
+      white: Valge
+      black: Mustanahaline või afroameeriklane
+      hispanic: Hispaania või ladina päritolu
+      asian: aasialane
+      hawaiian: Havai põlisrahvusest või pärit vaikse ookeani saartelt
+      american_indian: põlisameeriklane või Alaska põliselanik
+      other: Muu
+      opt_out: Ei soovi vastata
     submit: Esita
     decline: Sulge
   zendesk_too_young_message: Vabandame, nooremad kasutajad ei saa meie kasutajatoe

@@ -978,14 +978,14 @@ vi:
     message: Vui lòng cho chúng tôi biết chủng tộc của bạn (hãy đánh dấu vào tất cả
       các mục thích hợp)
     races:
-    - white: Màu trắng
-    - black: Người da đen hoặc người Mỹ gốc Phi
-    - hispanic: Người Hispanic hoặc Latino
-    - asian: Châu á
-    - hawaiian: Người bản địa hoặc người Đảo Thái Bình Dương khác
-    - american_indian: Thổ Dân Mỹ Da Đỏ/Alaska
-    - other: Khác
-    - opt_out: Không thích nói
+      white: Màu trắng
+      black: Người da đen hoặc người Mỹ gốc Phi
+      hispanic: Người Hispanic hoặc Latino
+      asian: Châu á
+      hawaiian: Người bản địa hoặc người Đảo Thái Bình Dương khác
+      american_indian: Thổ Dân Mỹ Da Đỏ/Alaska
+      other: Khác
+      opt_out: Không thích nói
     submit: Gửi
     decline: Đóng
   zendesk_too_young_message: Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang

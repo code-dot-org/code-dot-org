@@ -857,14 +857,14 @@ he:
       המחשב'
     message: אנא ספר לנו על הגזע שלך (סמן את כל המתאימים)
     races:
-    - white: לבן
-    - black: שחור או אפרואמריקאי
-    - hispanic: היספני או לטיני
-    - asian: אסייתי
-    - hawaiian: יליד הוואי או כל אי פסיפי אחר
-    - american_indian: אינדיאני אמריקאי/יליד אלסקה
-    - other: אחר
-    - opt_out: מעדיף שלא לומר
+      white: לבן
+      black: שחור או אפרואמריקאי
+      hispanic: היספני או לטיני
+      asian: אסייתי
+      hawaiian: יליד הוואי או כל אי פסיפי אחר
+      american_indian: אינדיאני אמריקאי/יליד אלסקה
+      other: אחר
+      opt_out: מעדיף שלא לומר
     submit: שלח
     decline: סגור
   zendesk_too_young_message: מצטערים, משתמשים צעירים אינם יכולים להתחבר לאתר התמיכה
