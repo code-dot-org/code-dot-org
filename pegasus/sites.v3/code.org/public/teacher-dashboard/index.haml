@@ -65,6 +65,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
   gdpr_data[:show_gdpr_dialog] = (request.gdpr? || force_eu) && !already_accepted
   gdpr_data[:current_user_id] = request.user_id
   data[:gdpr] = gdpr_data
+  data[:csd_csp_courses_and_scripts] = ScriptConstants::ANY_CSP_CSD_COURSE_OR_SCRIPT
 
 #gdpr-dialog
 
