@@ -49,6 +49,7 @@ const styles = {
 export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool,
     isPasswordRequired: PropTypes.bool.isRequired,
     warnAboutDeletingStudents: PropTypes.bool.isRequired,
     checkboxes: PropTypes.objectOf(PropTypes.shape({
@@ -70,6 +71,7 @@ export default class DeleteAccountDialog extends React.Component {
   render() {
     const {
       isOpen,
+      isTeacher,
       isPasswordRequired,
       warnAboutDeletingStudents,
       checkboxes,
@@ -84,6 +86,7 @@ export default class DeleteAccountDialog extends React.Component {
       deleteUser,
       deleteError,
     } = this.props;
+    const checkboxesLength = Object.keys(checkboxes).length;
 
     return (
       <BaseDialog
@@ -103,7 +106,10 @@ export default class DeleteAccountDialog extends React.Component {
               <strong>{i18n.deleteAccountDialog_body1()}</strong>
               {i18n.deleteAccountDialog_body2()}
               <strong style={styles.dangerText}>{i18n.deleteAccountDialog_body3()}</strong>
-              {i18n.deleteAccountDialog_body4()}
+              {isTeacher
+                ? i18n.deleteAccountDialog_body4_teacher()
+                : i18n.deleteAccountDialog_body4_student()
+              }
               {warnAboutDeletingStudents &&
                 <span>
                   {i18n.deleteAccountDialog_body5()}
@@ -113,9 +119,11 @@ export default class DeleteAccountDialog extends React.Component {
               }
             </div>
           </div>
-          {warnAboutDeletingStudents &&
+          {checkboxesLength > 0 &&
             <div style={styles.section}>
-              <strong>{i18n.deleteAccountDialog_checkboxTitle()}</strong>
+              <strong>
+                {i18n.deleteAccountDialog_checkboxTitle({numCheckboxes: checkboxesLength})}
+              </strong>
               {Object.keys(checkboxes).map(id => {
                 return (
                   <div key={id} style={styles.checkboxContainer}>

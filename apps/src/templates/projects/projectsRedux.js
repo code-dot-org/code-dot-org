@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import _ from 'lodash';
 import { Galleries } from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
+import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
 
 // Action types
@@ -132,6 +133,18 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         ...state,
         isUnpublishPending: false,
       };
+    case DELETE_SUCCESS:
+      var deletedChannel = action.projectId;
+
+      var deletedProjectIndex = state.projects.findIndex(project => project.channel === deletedChannel);
+
+      var projects = [...state.projects];
+      projects.splice(deletedProjectIndex, 1);
+
+      return {
+        ...state,
+        projects: projects,
+      };
     default:
       return state;
   }
@@ -223,4 +236,8 @@ export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
 
 export function unpublishSuccess(projectId) {
   return {type: UNPUBLISH_SUCCESS, projectId};
+}
+
+export function deleteSuccess(projectId) {
+  return {type: DELETE_SUCCESS, projectId};
 }

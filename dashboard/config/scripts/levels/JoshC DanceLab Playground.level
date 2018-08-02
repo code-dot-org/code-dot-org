@@ -13,17 +13,13 @@
     "hide_animation_mode": "false",
     "show_type_hints": "true",
     "use_modal_function_editor": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
-    "disable_param_editing": "true",
+    "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -48,13 +44,159 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
-    "use_default_sprites": "false"
+    "use_default_sprites": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"856e1137-b13b-442b-8a55-b6e03609c96f\",\r\n    \"e4f0ffc1-782b-49a1-9e41-db25121c943c\",\r\n    \"e1f76f7b-e395-4948-9ccd-768b79783915\",\r\n    \"8d9a8d4b-bcce-4073-8e3b-b594e284e5f8\",\r\n    \"611ebc26-7cf5-42eb-b2b8-eecd84b4464c\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"856e1137-b13b-442b-8a55-b6e03609c96f\": {\r\n      \"name\": \"alien\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/GpAq-IpyPeDk5KN-iKNdOg/856e1137-b13b-442b-8a55-b6e03609c96f.png?version=GXJSt9siB1x6cl5VOQcXdS8SfFiNdc0U\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 92\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"GXJSt9siB1x6cl5VOQcXdS8SfFiNdc0U\"\r\n    },\r\n    \"e4f0ffc1-782b-49a1-9e41-db25121c943c\": {\r\n      \"name\": \"alien_climb\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/GpAq-IpyPeDk5KN-iKNdOg/e4f0ffc1-782b-49a1-9e41-db25121c943c.png?version=U2HIRXQWwFiRF4MzK2UHAlms21Nux7es\",\r\n      \"frameSize\": {\r\n        \"x\": 68,\r\n        \"y\": 94\r\n      },\r\n      \"frameCount\": 4,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"U2HIRXQWwFiRF4MzK2UHAlms21Nux7es\"\r\n    },\r\n    \"e1f76f7b-e395-4948-9ccd-768b79783915\": {\r\n      \"name\": \"alien_duck\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/GpAq-IpyPeDk5KN-iKNdOg/e1f76f7b-e395-4948-9ccd-768b79783915.png?version=j6n0A.7KtfLWn3JtHvqG0g7PJj_B2FG1\",\r\n      \"frameSize\": {\r\n        \"x\": 69,\r\n        \"y\": 92\r\n      },\r\n      \"frameCount\": 3,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"j6n0A.7KtfLWn3JtHvqG0g7PJj_B2FG1\"\r\n    },\r\n    \"8d9a8d4b-bcce-4073-8e3b-b594e284e5f8\": {\r\n      \"name\": \"alien_jump\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/GpAq-IpyPeDk5KN-iKNdOg/8d9a8d4b-bcce-4073-8e3b-b594e284e5f8.png?version=kTthlb6zix5xA4vT7AaoNBUPlDtIeRAv\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 3,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"kTthlb6zix5xA4vT7AaoNBUPlDtIeRAv\"\r\n    },\r\n    \"611ebc26-7cf5-42eb-b2b8-eecd84b4464c\": {\r\n      \"name\": \"alien_walk\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/GpAq-IpyPeDk5KN-iKNdOg/611ebc26-7cf5-42eb-b2b8-eecd84b4464c.png?version=Pb3f4qN0xbitQh_QOql46LK3oMlapnmL\",\r\n      \"frameSize\": {\r\n        \"x\": 72,\r\n        \"y\": 98\r\n      },\r\n      \"frameCount\": 4,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"Pb3f4qN0xbitQh_QOql46LK3oMlapnmL\"\r\n    }\r\n  }\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-31 17:59:03 +0000\",\"changed\":[\"notes\",\"helper_libraries\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-31 17:59:03 +0000\",\"changed\":[\"notes\",\"helper_libraries\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-07-31 22:19:13 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"disable_param_editing\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-07-31 22:23:39 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"include_shared_functions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-07-31 22:24:19 +0000\",\"changed\":[\"helper_libraries\",\"contained_level_names\",\"encrypted_examples\",\"include_shared_functions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-07-31 22:24:42 +0000\",\"changed\":[\"helper_libraries\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 03:46:20 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 03:55:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:07:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:08:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:14:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:19:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:25:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:25:31 +0000\",\"changed\":[\"start_animations\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:31:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:37:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-08-01 04:50:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="Dancelab_startSong">
+              <next>
+                <block type="Dancelab_startVisualizer">
+                  <next>
+                    <block type="Dancelab_createNewDanceSprite">
+                      <title name="COSTUME">"alien"</title>
+                      <title name="NAME">red</title>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <title name="LOCATION">{"x":65,"y":195}</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setProp">
+                          <title name="PROPERTY">"tint"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_variables_get">
+                              <title name="VAR">red</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="colour_picker">
+                              <title name="COLOUR">#ff0000</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="Dancelab_createNewDanceSprite">
+                              <title name="COSTUME">"alien"</title>
+                              <title name="NAME">green</title>
+                              <value name="LOCATION">
+                                <block type="gamelab_location_picker">
+                                  <title name="LOCATION">{"x":188,"y":182}</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_setProp">
+                                  <title name="PROPERTY">"tint"</title>
+                                  <value name="SPRITE">
+                                    <block type="sprite_variables_get">
+                                      <title name="VAR">green</title>
+                                    </block>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="colour_picker">
+                                      <title name="COLOUR">#33ff33</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="Dancelab_createNewDanceSprite">
+                                      <title name="COSTUME">"alien"</title>
+                                      <title name="NAME">blue</title>
+                                      <value name="LOCATION">
+                                        <block type="gamelab_location_picker">
+                                          <title name="LOCATION">{"x":337,"y":194}</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_setProp">
+                                          <title name="PROPERTY">"tint"</title>
+                                          <value name="SPRITE">
+                                            <block type="sprite_variables_get">
+                                              <title name="VAR">blue</title>
+                                            </block>
+                                          </value>
+                                          <value name="VAL">
+                                            <block type="colour_picker">
+                                              <title name="COLOUR">#33ffff</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whileJoystick">
+          <statement name="DO">
+            <block type="gamelab_moveToward">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">red</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <value name="TARGET">
+                <block type="gamelab_joystickDirection"/>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="Dancelab_whenPeak">
+          <next>
+            <block type="Dancelab_changeMove">
+              <title name="MOVE">"rand"</title>
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">red</title>
+                </block>
+              </value>
+              <next>
+                <block type="Dancelab_changeMove">
+                  <title name="MOVE">"rand"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_variables_get">
+                      <title name="VAR">green</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="Dancelab_changeMove">
+                      <title name="MOVE">"rand"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <title name="VAR">blue</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
 </Dancelab>
