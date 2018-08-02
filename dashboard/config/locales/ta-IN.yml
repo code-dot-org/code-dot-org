@@ -124,14 +124,7 @@ ta:
     print: அச்சிடு
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: வேறு
-    - 
+      other: வேறு
     submit: சமர்ப்பிக்க
   project:
     share: பகிர்

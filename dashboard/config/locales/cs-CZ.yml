@@ -736,14 +736,14 @@ cs:
     title: 'Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity'
     message: Prosím vyberte vaši rasovou příslušnost (označte všechna platná políčka)
     races:
-    - white: Běloch
-    - black: Černoch nebo Afroameričan
-    - hispanic: Hispánec nebo Latino
-    - asian: Asiat
-    - hawaiian: Rodilý havajčan nebo ostrovan z Pacifiku
-    - american_indian: Indián/Aljašan
-    - other: Ostatní
-    - opt_out: Preferujeme neuvést
+      white: Běloch
+      black: Černoch nebo Afroameričan
+      hispanic: Hispánec nebo Latino
+      asian: Asiat
+      hawaiian: Rodilý havajčan nebo ostrovan z Pacifiku
+      american_indian: Indián/Aljašan
+      other: Ostatní
+      opt_out: Preferujeme neuvést
     submit: Odeslat
     decline: Zavřít
   zendesk_too_young_message: Promiň, mladší uživatelé se nemohou přihlásit do našeho

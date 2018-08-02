@@ -1043,14 +1043,14 @@ fr:
       de la diversité en informatique'
     message: Veuillez nous dire votre ethnicité (plusieurs choix possibles)
     races:
-    - white: Blanc
-    - black: Noir ou afro-américain
-    - hispanic: Hispanique ou latino
-    - asian: Asiatique
-    - hawaiian: Hawaïen indigène ou autres îles du Pacifique
-    - american_indian: Indien d'Amérique ou Alaska
-    - other: Autres
-    - opt_out: Préfère ne pas le dire
+      white: Blanc
+      black: Noir ou afro-américain
+      hispanic: Hispanique ou latino
+      asian: Asiatique
+      hawaiian: Hawaïen indigène ou autres îles du Pacifique
+      american_indian: Indien d'Amérique ou Alaska
+      other: Autres
+      opt_out: Préfère ne pas le dire
     submit: Envoyer
     decline: Fermer
   zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas accéder

@@ -579,14 +579,10 @@ kk:
     save: Сақтау
   race_interstitial:
     races:
-    - white: Ақ
-    - 
-    - 
-    - asian: Азиялық
-    - 
-    - 
-    - other: Басқасы
-    - opt_out: Жауап беруден бас тартамын
+      white: Ақ
+      asian: Азиялық
+      other: Басқасы
+      opt_out: Жауап беруден бас тартамын
     submit: Жіберу
     decline: Жабу
   zendesk_too_young_message: Кешіріңіз, кішкентай қолданушылар біздің көмек көрсету
