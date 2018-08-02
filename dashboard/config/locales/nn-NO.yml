@@ -935,14 +935,14 @@ nn:
       programmering.'
     message: Oppgi din etnisitet (kryss av alle som passar)
     races:
-    - white: Kvit
-    - black: Afrikansk
-    - hispanic: Latinamerikansk
-    - asian: Asiatisk
-    - hawaiian: Hawaii eller Stillehavsøyane
-    - american_indian: Amerikansk urbefolkning
-    - other: Anna
-    - opt_out: Ynskjer ikkje å svare
+      white: Kvit
+      black: Afrikansk
+      hispanic: Latinamerikansk
+      asian: Asiatisk
+      hawaiian: Hawaii eller Stillehavsøyane
+      american_indian: Amerikansk urbefolkning
+      other: Anna
+      opt_out: Ynskjer ikkje å svare
     submit: Send inn
     decline: Lukk
   zendesk_too_young_message: Beklager, yngre brukarar kan ikkje logge inn på nettstaden

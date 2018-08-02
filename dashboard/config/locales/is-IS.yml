@@ -963,14 +963,14 @@ is:
       flesta hópa með í tölvunarfræði'
     message: Segðu okkur frá kynþætti þínum (merktu við allt sem á við)
     races:
-    - white: Hvít/ur
-    - black: Svartur/svört eða afrísk-amerísk/ur
-    - hispanic: Latnesk-amerísk/ur
-    - asian: Asísk/ur
-    - hawaiian: Hawaii frumbyggi eða af annarri Kyrrahafsþjóð
-    - american_indian: Amerískur indíáni / Alaska frumbyggi
-    - other: Annað
-    - opt_out: Vil ekki gefa upp
+      white: Hvít/ur
+      black: Svartur/svört eða afrísk-amerísk/ur
+      hispanic: Latnesk-amerísk/ur
+      asian: Asísk/ur
+      hawaiian: Hawaii frumbyggi eða af annarri Kyrrahafsþjóð
+      american_indian: Amerískur indíáni / Alaska frumbyggi
+      other: Annað
+      opt_out: Vil ekki gefa upp
     submit: Senda inn
     decline: Loka
   zendesk_too_young_message: Því miður mega yngri notendur ekki skrá sig á hjálparvefinn.

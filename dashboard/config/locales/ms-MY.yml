@@ -334,14 +334,7 @@ ms:
     save: Simpan
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Lain-lain
-    - 
+      other: Lain-lain
     submit: Hantar
   project:
     save: Simpan

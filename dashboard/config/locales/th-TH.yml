@@ -422,14 +422,7 @@ th:
     save: บันทึก
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: อาชีพอื่น ๆ
-    - 
+      other: อาชีพอื่น ๆ
     submit: ส่ง
   project:
     projects: โปรเจกต์

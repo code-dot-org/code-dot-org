@@ -681,14 +681,7 @@ gl:
     save: Salvar
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Outros
-    - 
+      other: Outros
     submit: Enviar
     decline: Pechar
   zendesk_too_young_message: Pedimos desculpa, pero os usuarios máis novos non poden

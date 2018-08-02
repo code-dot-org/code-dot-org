@@ -1026,14 +1026,14 @@ pt-BR:
       na ciência da computação'
     message: Diga-nos qual é sua raça (marque todas as opções aplicáveis)
     races:
-    - white: Branco
-    - black: Negro ou Afro-americano
-    - hispanic: Hispânico ou Latino
-    - asian: Asiático
-    - hawaiian: Nativo do Havaí ou de outra ilha do Pacífico
-    - american_indian: Índio Americano/Nativo do Alaska
-    - other: Outros
-    - opt_out: Prefiro não responder
+      white: Branco
+      black: Negro ou Afro-americano
+      hispanic: Hispânico ou Latino
+      asian: Asiático
+      hawaiian: Nativo do Havaí ou de outra ilha do Pacífico
+      american_indian: Índio Americano/Nativo do Alaska
+      other: Outros
+      opt_out: Prefiro não responder
     submit: Enviar
     decline: Fechar
   zendesk_too_young_message: Desculpe, usuários mais jovens não podem se inscrever

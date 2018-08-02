@@ -154,14 +154,7 @@ uz:
     save: Saqlash
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Boshqa
-    - 
+      other: Boshqa
     submit: Taqdim qilmoq
   project:
     save: Saqlash

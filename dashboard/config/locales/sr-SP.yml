@@ -410,14 +410,7 @@ sr:
     save: Сачувај
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Други
-    - 
+      other: Други
     submit: Пошаљи
   project:
     save: Сачувај
