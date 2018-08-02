@@ -92,11 +92,13 @@ class User < ActiveRecord::Base
   #   american_indian: "American Indian/Alaska Native"
   #   other: "Other"
   #   opt_out: "Prefer not to say" (but selected this value and hit "Submit")
+  #
+  # Depending on the user's actions, the following values may also be applied:
   #   closed_dialog: This is a special value indicating that the user closed the
   #     dialog rather than selecting a race.
   #   nonsense: This is a special value indicating that the user chose
   #     (strictly) more than five races.
-  VALID_RACES = %w(
+  DISPLAY_RACES = %w(
     white
     black
     hispanic
@@ -105,6 +107,9 @@ class User < ActiveRecord::Base
     american_indian
     other
     opt_out
+  ).freeze
+
+  VALID_RACES = DISPLAY_RACES + %w(
     closed_dialog
     nonsense
   ).freeze
