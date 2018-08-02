@@ -3,6 +3,7 @@ import projects, {
   setPersonalProjectsList,
   publishSuccess,
   unpublishSuccess,
+  deleteSuccess,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 
@@ -39,6 +40,18 @@ describe('projectsRedux', () => {
       const nextNextState = projects(nextState, nextAction);
       assert.deepEqual(nextNextState.personalProjectsList.projects[2].channel, 'abcd3');
       assert.deepEqual(nextNextState.personalProjectsList.projects[2].publishedAt, null);
+    });
+  });
+
+  describe('deleteSuccess', () => {
+    it('removes the recently deleted project from the projects list', () => {
+      const action = setPersonalProjectsList(stubFakePersonalProjectData);
+      const nextState = projects(initialState, action);
+      assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
+      assert.deepEqual(nextState.personalProjectsList.projects.length, 4);
+      const nextAction = deleteSuccess('abcd3');
+      const nextNextState = projects(nextState, nextAction);
+      assert.deepEqual(nextNextState.personalProjectsList.projects.length, 3);
     });
   });
 });

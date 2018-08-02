@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import experiments from '@cdo/apps/util/experiments';
 import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
+import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
@@ -18,6 +19,7 @@ import projects, {
 import publishDialogReducer, {
   showPublishDialog,
 } from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import { AlwaysPublishableProjectTypes, AllPublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
@@ -25,7 +27,7 @@ $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
   const projectsData = JSON.parse(script.dataset.projects);
 
-  registerReducers({projects, publishDialog: publishDialogReducer});
+  registerReducers({projects, publishDialog: publishDialogReducer, deleteDialog: deleteDialogReducer});
   const store = getStore();
   setupReduxSubscribers(store);
   const projectsHeader = document.getElementById('projects-header');
@@ -93,6 +95,15 @@ $(document).ready(() => {
       <PublishDialog/>
     </Provider>,
     publishConfirm
+  );
+
+  const deleteConfirm = document.getElementById('delete-confirm');
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <DeleteProjectDialog/>
+    </Provider>,
+    deleteConfirm
   );
 });
 
