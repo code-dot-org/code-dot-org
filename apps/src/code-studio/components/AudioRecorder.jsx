@@ -1,6 +1,13 @@
 import React from 'react';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
+import {assets as assetsApi} from '@cdo/apps/clientApi';
+
+const ErrorType = {
+  NONE: 'none',
+  INITIALIZE: 'initialize',
+  SAVE: 'save'
+};
 
 const styles = {
   buttonRow: {
@@ -27,7 +34,7 @@ export default class AudioRecorder extends React.Component {
     this.state = {
       audioName: 'mysound',
       recording: false,
-      errorInitialize: false
+      error: ErrorType.NONE
     };
   }
 
@@ -49,6 +56,7 @@ export default class AudioRecorder extends React.Component {
 
   initializeMediaRecorder = (stream) => {
     // Set newly initialized mediaRecorder to instance variable
+    // Media Recorder API: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
     this.recorder = new MediaRecorder(stream);
 
     // Set method to save the data when it becomes available
@@ -60,8 +68,23 @@ export default class AudioRecorder extends React.Component {
     this.recorder.onstop = (e) => {
       let blob = new Blob(this.slices, {'type': 'audio/mpeg'});
       this.slices = [];
-      console.log(blob);
+      this.saveAudio(blob)
+        .then(() => {console.log('Audio Saved');})
+        .catch(() => {this.setState({error: ErrorType.SAVE});});
     };
+  };
+
+  saveAudio = (blob) => {
+    return new Promise((resolve, reject) => {
+      assetsApi.putAsset(this.state.audioName + ".mp3", blob,
+      () => {
+        this.setState({error: ErrorType.NONE});
+        resolve();
+      }, error => {
+        this.setState({error: ErrorType.SAVE});
+        reject(`Audio Failed to Save: ${error}`);
+      });
+    });
   };
 
   startRecord = () => {
@@ -74,7 +97,7 @@ export default class AudioRecorder extends React.Component {
 
   recordError = (err) => {
     console.log('Audio Initializing Error: ' + err);
-    this.setState({errorInitialize: true});
+    this.setState({error: ErrorType.INITIALIZE});
   };
 
   onNameChange = (event) => {
@@ -93,8 +116,11 @@ export default class AudioRecorder extends React.Component {
   render() {
     return (
       <div style={styles.buttonRow}>
-        {!this.state.errorInitialize &&
+        {this.state.error !== ErrorType.INITIALIZE &&
           <div>
+            {this.state.error === ErrorType.SAVE &&
+              <div>{i18n.audioSaveError()}</div>
+            }
             <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}/>
             <span>
               <Button
@@ -117,7 +143,7 @@ export default class AudioRecorder extends React.Component {
             </span>
           </div>
         }
-        {this.state.errorInitialize &&
+        {this.state.error === ErrorType.INITIALIZE &&
           <div>{i18n.audioInitializeError()}</div>
         }
       </div>
