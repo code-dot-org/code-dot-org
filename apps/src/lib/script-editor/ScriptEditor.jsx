@@ -320,7 +320,7 @@ const ScriptEditor = React.createClass({
             ref={select => this.supportedLocaleSelect = select}
           >
             {this.props.locales.filter(locale => !locale[1].startsWith("en")).map(locale =>
-              <option key={locale[1]} value={locale[1]}>{locale[0]}</option>
+              <option key={locale[1]} value={locale[1]}>{locale[1]}</option>
             )}
           </select>
         </label>
