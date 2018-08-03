@@ -33,9 +33,11 @@ $(document).ready(() => {
     emailChangedCallback: onEmailChanged,
   });
 
+  const hashedEmails = authenticationOptions.map(ao => ao.hashed_email);
   new ChangeUserTypeController(
     $('#change-user-type-modal-form'),
     userType,
+    hashedEmails,
   );
 
   const addPasswordMountPoint = document.getElementById('add-password-fields');
