@@ -842,9 +842,10 @@ class User < ActiveRecord::Base
   end
 
   def set_user_type(user_type, email = nil, email_preference = nil)
-    if user_type == TYPE_TEACHER
+    case user_type
+    when TYPE_TEACHER
       upgrade_to_teacher(email, email_preference)
-    elsif user_type == TYPE_STUDENT
+    when TYPE_STUDENT
       downgrade_to_student
     else
       false # Unexpected user type
