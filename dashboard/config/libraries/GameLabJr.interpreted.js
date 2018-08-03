@@ -211,15 +211,17 @@ function makeNewSprite(animation, x, y) {
 
   if (animation) {
     sprite.setAnimation(animation);
+    sprite.baseScale = 100 / Math.max(100,
+      sprite.animation.getHeight(),
+      sprite.animation.getWidth());
+  } else {
+    sprite.baseScale = 1;
   }
   sprites.push(sprite);
   sprite.speed = 10;
   sprite.patrolling = false;
   sprite.things_to_say = [];
   sprite.behaviors = [];
-  sprite.baseScale = 100 / Math.max(1,
-    sprite.animation.getHeight(),
-    sprite.animation.getWidth());
   sprite.scale = sprite.baseScale;
 
   sprite.setSpeed = function (speed) {
