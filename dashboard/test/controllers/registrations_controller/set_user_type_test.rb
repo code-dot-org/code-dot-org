@@ -218,7 +218,7 @@ module RegistrationsControllerTests
       assert_equal test_email, student.email
       assert_equal original_hashed_email, student.hashed_email
 
-      # refute EmailPreference.find_by_email(test_email)
+      refute EmailPreference.find_by_email(test_email)
     end
 
     test "converting migrated student to teacher with positive email opt-in" do
@@ -237,12 +237,12 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      # preference = EmailPreference.find_by_email(test_email)
-      # refute_nil preference
-      # assert_equal true, preference.opt_in
-      # assert_equal request.ip, preference.ip_address
-      # assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
-      # assert_equal "0", preference.form_kind
+      preference = EmailPreference.find_by_email(test_email)
+      refute_nil preference
+      assert_equal true, preference.opt_in
+      assert_equal request.ip, preference.ip_address
+      assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
+      assert_equal "0", preference.form_kind
     end
 
     test "converting migrated student to teacher with negative email opt-in" do
@@ -265,12 +265,12 @@ module RegistrationsControllerTests
       assert_equal 'teacher', student.user_type
       assert_equal test_email, student.email
 
-      # preference = EmailPreference.find_by_email(test_email)
-      # refute_nil preference
-      # assert_equal false, preference.opt_in
-      # assert_equal request.ip, preference.ip_address
-      # assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
-      # assert_equal "0", preference.form_kind
+      preference = EmailPreference.find_by_email(test_email)
+      refute_nil preference
+      assert_equal false, preference.opt_in
+      assert_equal request.ip, preference.ip_address
+      assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
+      assert_equal "0", preference.form_kind
     end
 
     test "converting migrated student to teacher fails when email doesn't match" do
@@ -294,7 +294,7 @@ module RegistrationsControllerTests
       assert_empty student.email
       assert_equal original_hashed_email, student.hashed_email
 
-      # refute EmailPreference.find_by_email(test_email)
+      refute EmailPreference.find_by_email(test_email)
     end
 
     test "converting migrated student to teacher doesn't cause email opt-in when email doesn't match" do
@@ -313,7 +313,7 @@ module RegistrationsControllerTests
       }
       assert_response :unprocessable_entity
 
-      # refute EmailPreference.find_by_email(test_email)
+      refute EmailPreference.find_by_email(test_email)
     end
 
     test "converting migrated teacher to student succeeds" do
@@ -338,7 +338,7 @@ module RegistrationsControllerTests
       assert_empty teacher.email
       assert_equal original_hashed_email, teacher.hashed_email
 
-      # refute EmailPreference.find_by_email(test_email)
+      refute EmailPreference.find_by_email(test_email)
     end
 
     test "converting migrated teacher to student ignores email opt-in" do
@@ -357,7 +357,7 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      # refute EmailPreference.find_by_email(test_email)
+      refute EmailPreference.find_by_email(test_email)
     end
   end
 end
