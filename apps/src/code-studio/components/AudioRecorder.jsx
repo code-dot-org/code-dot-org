@@ -9,38 +9,51 @@ const styles = {
     justifyContent: 'space-between',
   },
   button: {
-    marginRight: 30,
-    borderRadius: 4
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginRight: 10,
+    borderRadius: 4,
+    fontSize: 'large',
+    fontWeight: 'lighter',
+    boxShadow: 'none',
   }
 };
 
 export default class AudioRecorder extends React.Component {
   state = {
-    audioName: 'mysound'
+    audioName: 'mysound',
+    recording: false
   };
 
   onNameChange = (event) => {
     this.setState({audioName: event.target.value});
   };
 
+  toggleRecord = () => {
+    this.setState({recording: !this.state.recording});
+  };
+
   render() {
     return (
       <div style={styles.buttonRow}>
-        <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}></input>
+        <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}/>
         <span>
           <Button
-            onClick={()=>{}}
-            id="stop-record"
+            onClick={this.toggleRecord}
+            id="start-stop-record"
             style={styles.button}
             color={Button.ButtonColor.blue}
-            icon="stop"
-            text={i18n.stop()}
+            icon={this.state.recording ? "stop" : "circle"}
+            text={this.state.recording ? i18n.stop() : i18n.record()}
+            size="large"
           />
           <Button
             onClick={()=>{}}
             id="cancel-record"
             style={styles.button}
+            color={Button.ButtonColor.gray}
             text={i18n.cancel()}
+            size="large"
           />
         </span>
       </div>
