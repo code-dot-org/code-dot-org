@@ -403,6 +403,43 @@ class UserTest < ActiveSupport::TestCase
     user.valid?
   end
 
+  test "saving non-migrated teacher does not remove cleartext email addresses" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    teacher = create :teacher, email: 'teacher@email.com'
+    teacher.reload
+    assert_equal 'teacher@email.com', teacher.email
+  end
+
+  test "saving migrated teacher does not remove cleartext email addresses" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'teacher@email.com'
+    teacher.reload
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal 'teacher@email.com', teacher.authentication_options.first.email
+  end
+
+  test "saving non-migrated student does not call remove_cleartext_emails" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    create :student, email: 'student@email.com'
+  end
+
+  test "saving migrated student that was previously a teacher removes cleartext email addresses" do
+    user = create :teacher, :with_migrated_email_authentication_option, email: 'example@email.com'
+    user.authentication_options << create(:authentication_option, email: 'another@email.com')
+    user.authentication_options.last.destroy
+
+    # Change user to student to make sure any previous cleartext emails are empty
+    # (including deleted ones and those created when user was a teacher)
+    user.update!(user_type: User::TYPE_STUDENT)
+    user.authentication_options << create(:authentication_option, email: 'third@email.com')
+    user.reload
+    all_auth_options = user.authentication_options.with_deleted
+    assert_equal 3, all_auth_options.count
+    all_auth_options.each do |ao|
+      assert_empty ao.email
+    end
+  end
+
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       assert_creates(User) do
