@@ -19,9 +19,9 @@ export default class WorkshopDetails extends React.Component {
   };
 
   workshopCourse() {
-    if (this.props.workshop.course_target) {
+    if (this.props.workshop.course_url) {
       return (
-        <a href={this.props.workshop.course_target}>
+        <a href={this.props.workshop.course_url}>
           {this.props.workshop.course}
         </a>
       );
