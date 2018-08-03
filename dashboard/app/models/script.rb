@@ -78,7 +78,6 @@ class Script < ActiveRecord::Base
     }
 
   include SerializedProperties
-  include SerializedProperties
 
   after_save :generate_plc_objects
 
@@ -139,6 +138,7 @@ class Script < ActiveRecord::Base
     script_announcements
     version_year
     is_stable
+    supported_locales
   )
 
   def self.twenty_hour_script
@@ -230,6 +230,20 @@ class Script < ActiveRecord::Base
   # @return [Boolean] Whether this is a valid script ID
   def self.valid_script_id?(user, script_id)
     valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
+  end
+
+  # @return [Array<Script>] An array of modern elementary scripts.
+  def self.modern_elementary_courses
+    Script::CATEGORIES[:csf].map {|name| Script.get_from_cache(name)}
+  end
+
+  # @param locale [String] An "xx-YY" locale string.
+  # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
+  def self.modern_elementary_courses_available?(locale)
+    @modern_elementary_courses_available = modern_elementary_courses.all? do |script|
+      supported_languages = script.supported_locales || []
+      supported_languages.any? {|s| locale.casecmp?(s)}
+    end
   end
 
   def starting_level
@@ -1079,6 +1093,7 @@ class Script < ActiveRecord::Base
       show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
+      supported_locales: supported_locales
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1189,6 +1204,7 @@ class Script < ActiveRecord::Base
       script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
+      supported_locales: script_data[:supported_locales]
     }.compact
   end
 
