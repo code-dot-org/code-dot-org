@@ -217,7 +217,7 @@ class User < ActiveRecord::Base
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
-  has_many :authentication_options, dependent: :destroy, autosave: true
+  has_many :authentication_options, dependent: :destroy
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
 
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
@@ -489,6 +489,7 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -564,6 +565,12 @@ class User < ActiveRecord::Base
         self.terms_of_service_version = nil
       end
     end
+  end
+
+  # Remove all cleartext email addresses (including soft-deleted ones)
+  # in migrated students' AuthenticationOptions.
+  def remove_cleartext_emails
+    authentication_options.with_deleted.update_all(email: '')
   end
 
   # Given a cleartext email finds the first user that has a matching email or hash.
