@@ -307,8 +307,8 @@ Artist.prototype.init = function (config) {
 
   if (
     config.embed &&
-    config.level.markdownInstructions &&
-    !config.level.instructions
+    config.level.longInstructions &&
+    !config.level.shortInstructions
   ) {
     // if we are an embedded level with markdown instructions but no regular
     // instructions, we want to display CSP-style instructions and not be

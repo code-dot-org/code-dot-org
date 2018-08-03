@@ -203,7 +203,7 @@ export function setupApp(appOptions) {
       }
 
       var hasVideo = !!appOptions.autoplayVideo;
-      var hasInstructions = !!(appOptions.level.instructions ||
+      var hasInstructions = !!(appOptions.level.shortInstructions ||
                                appOptions.level.aniGifURL);
       var noAutoplay = !!queryString.parse(location.search).noautoplay;
 
