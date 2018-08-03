@@ -237,8 +237,8 @@ class Script < ActiveRecord::Base
     Script::CATEGORIES[:csf_2018].map {|name| Script.get_from_cache(name)}
   end
 
-  # @param locale [String] A "xx-YY" locale string.
-  # @return [Boolean] Whether all the new CSF courses are avilable in the given locale.
+  # @param locale [String] An "xx-YY" locale string.
+  # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
   def self.modern_elementary_courses_available?(locale)
     @modern_elementary_courses_available = modern_elementary_courses.all? do |script|
       supported_languages = script.supported_locales || []
