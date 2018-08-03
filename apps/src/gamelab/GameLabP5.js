@@ -76,7 +76,6 @@ GameLabP5.prototype.init = function (options) {
   this.onSetup = options.onSetup;
   this.onDraw = options.onDraw;
   this.scale = options.scale || 1;
-  this.song = options.song;
 
   var self = this;
 
@@ -716,10 +715,6 @@ GameLabP5.prototype.startExecution = function () {
         p5obj.angleMode(p5obj.DEGREES);
         // Set default frameRate to 30 instead of 60.
         p5obj.frameRate(defaultFrameRate);
-
-        if (this.song) {
-          p5obj.defaultSong = p5obj.loadSound(this.song);
-        }
 
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has
