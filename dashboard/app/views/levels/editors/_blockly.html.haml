@@ -90,31 +90,21 @@
 
 .field
   = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-  .min_max_label{data: {toggle: "collapse", target: "#toolbox_xml"}}
-    Open/Close
-  .row.collapse.in{id: "toolbox_xml"}
-    .span8
-      ~ f.text_area :toolbox_blocks,  placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
-    #toolbox-preview.span4
+  = render partial: 'levels/editors/collapsed', locals: {f: f, collapse_xml: 'toolbox_xml', xml_id: 'toolbox'}
 
 .field
   - if @level.uses_droplet?
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsed', locals: {f: f, collapse_xml: 'start_xml'}
+    = render partial: 'levels/editors/collapsed', locals: {f: f, collapse_xml: 'start_xml', xml_id: 'start'}
 
 .field
   - if @level.uses_droplet?
     = f.label :required_blocks,'Edit Required Blocks'
   - else
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
-    .min_max_label{data: {toggle: "collapse", target: "#required_xml"}}
-      Open/Close
-  .row.collapse.in{id: "required_xml"}
-    .span8
-      ~ f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
-    #required-preview.span4
+    = render partial: 'levels/editors/collapsed', locals: {f: f, collapse_xml: 'required_xml', xml_id: 'required'}
 
 .field
   - if @level.uses_droplet?
