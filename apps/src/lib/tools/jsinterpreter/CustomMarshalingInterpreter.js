@@ -787,7 +787,19 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
           }
         }
       }
-      var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
+      try {
+        var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
+      } catch (e) {
+        if (e instanceof Error) {
+          console.error(e.stack);
+        } else {
+          console.warn('Error does not have stack information. Throw `new Error()` instead of a string to get a full stack trace.');
+          console.error(`Exception thrown when calling ${nativeFunc} on ${nativeParentObj}`);
+          e = new Error(e);
+        }
+        e.native = true;
+        throw e;
+      }
       return this.marshalNativeToInterpreter(
         nativeRetVal,
         null,
