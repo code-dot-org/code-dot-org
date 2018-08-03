@@ -162,13 +162,6 @@ export default class EnrollForm extends React.Component {
     return true;
   }
 
-  readOnlyEmail() {
-    if (this.props.email) {
-      return true;
-    }
-    return false;
-  }
-
   render() {
     let roleLabel = (
       <div>
@@ -221,8 +214,8 @@ export default class EnrollForm extends React.Component {
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
-            readOnly={this.readOnlyEmail()}
-            title={this.readOnlyEmail() ? "Email can be changed in account settings" : ""}
+            readOnly={!!this.props.email}
+            title={this.props.email ? "Email can be changed in account settings" : ""}
             validationState={this.state.errors.hasOwnProperty("email") ? ERROR : null}
             errorMessage={this.state.errors.email}
           />
