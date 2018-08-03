@@ -16,5 +16,5 @@ Feature: Manage Assets
     And I wait for the page to fully load
     And I open the Manage Assets dialog
     Then I click selector "#record-asset" once I see it
-    And I wait until element "#stop-record" is visible
+    And I wait until element "#start-stop-record" is visible
     And I am on "http://studio.code.org/home?disableExperiments=recordAudio"
