@@ -767,14 +767,14 @@ zh-CN:
     title: 可选︰ 帮助我们跟踪进展来提高在计算机科学中的多元化。
     message: 请告诉我们您的种族（选择所有适用的项目）
     races:
-    - white: 白人
-    - black: 黑人或非裔美国人
-    - hispanic: 西班牙裔或拉丁裔
-    - asian: 亚裔
-    - hawaiian: 夏威夷土著或其他太平洋岛民
-    - american_indian: 美国印第安/阿拉斯加原住民
-    - other: 其他
-    - opt_out: 不想说
+      white: 白人
+      black: 黑人或非裔美国人
+      hispanic: 西班牙裔或拉丁裔
+      asian: 亚裔
+      hawaiian: 夏威夷土著或其他太平洋岛民
+      american_indian: 美国印第安/阿拉斯加原住民
+      other: 其他
+      opt_out: 不想说
     submit: 提交
     decline: 关闭
   zendesk_too_young_message: 对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org">

@@ -996,14 +996,14 @@ pl:
       w informatyce'
     message: Określ swoja przynależność rasową (zaznacz wszystko, co dotyczy Ciebie)
     races:
-    - white: Biały
-    - black: Murzyn lub Afroamerykanin
-    - hispanic: Hiszpanie lub Latynosi
-    - asian: Azjata
-    - hawaiian: Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku
-    - american_indian: Native American Indian/Alaska
-    - other: Inni/inne
-    - opt_out: Wolę nie mówić
+      white: Biały
+      black: Murzyn lub Afroamerykanin
+      hispanic: Hiszpanie lub Latynosi
+      asian: Azjata
+      hawaiian: Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku
+      american_indian: Native American Indian/Alaska
+      other: Inni/inne
+      opt_out: Wolę nie mówić
     submit: Wyślij
     decline: Zamknij
   zendesk_too_young_message: Przepraszamy, młodsi użytkownicy nie mogą logować się

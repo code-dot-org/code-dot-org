@@ -623,14 +623,7 @@ da:
     save: Gem
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Andre
-    - 
+      other: Andre
     submit: Indsend
     decline: Luk
   zendesk_too_young_message: Beklager, yngre brugere kan ikke logge på vores websted.

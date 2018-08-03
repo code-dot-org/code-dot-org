@@ -5,8 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@cdo/interpreted@file:../dashboard/config/libraries":
+"@cdo/interpreted@link:../dashboard/config/libraries":
   version "0.0.0"
+  uid ""
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"

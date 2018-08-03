@@ -1011,14 +1011,14 @@ es:
       en informática'
     message: Por favor díganos su raza (marque todo lo que aplique)
     races:
-    - white: Blanco
-    - black: Negro o Afroamericano
-    - hispanic: Hispano o Latino
-    - asian: Asiático
-    - hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
-    - american_indian: Indio Americano/Nativo de Alaska
-    - other: Otros
-    - opt_out: Prefiero no decir
+      white: Blanco
+      black: Negro o Afroamericano
+      hispanic: Hispano o Latino
+      asian: Asiático
+      hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
+      american_indian: Indio Americano/Nativo de Alaska
+      other: Otros
+      opt_out: Prefiero no decir
     submit: Enviar
     decline: Cerrar
   zendesk_too_young_message: Lo sentimos, los usuarios más jóvenes no pueden registrarse

@@ -702,14 +702,14 @@ sq:
       diversitetit në shkenca kompjuterike'
     message: Ju lutem na tregoni garën tuaj (kontrollo të gjitha aplikimet)
     races:
-    - white: E bardhë
-    - black: I zi ose Afrikano American
-    - hispanic: Hispanik ose Latin
-    - asian: Aziatik
-    - hawaiian: Vendas Havajan ose banues të  tjetër të Paqësorit
-    - american_indian: Amerikano-Indian/Vendas nga Alaska
-    - other: Tjetër
-    - opt_out: Preferoj të mos përgjigjem
+      white: E bardhë
+      black: I zi ose Afrikano American
+      hispanic: Hispanik ose Latin
+      asian: Aziatik
+      hawaiian: Vendas Havajan ose banues të  tjetër të Paqësorit
+      american_indian: Amerikano-Indian/Vendas nga Alaska
+      other: Tjetër
+      opt_out: Preferoj të mos përgjigjem
     submit: Dorëzo
     decline: Mbyll
   zendesk_too_young_message: Na vjen keq, përdoruesit e vegjël nuk mund të futen tek

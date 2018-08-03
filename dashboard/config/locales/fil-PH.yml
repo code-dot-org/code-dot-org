@@ -1032,14 +1032,14 @@ fil:
     message: Mangyaring sabihan niyo kami sa iyong lahi (lagyan ng tsek ang angkop
       sa iyo)
     races:
-    - white: Puti
-    - black: Itim o Aprikano-Amerikano
-    - hispanic: Hispano o Latino
-    - asian: Asyano
-    - hawaiian: Katutubong Hawayano o ibang pang nasa Pasipiko
-    - american_indian: Amerikanong-Indiyano/Katutubong Alaska
-    - other: Iba
-    - opt_out: Mas gustong hindi sabihin
+      white: Puti
+      black: Itim o Aprikano-Amerikano
+      hispanic: Hispano o Latino
+      asian: Asyano
+      hawaiian: Katutubong Hawayano o ibang pang nasa Pasipiko
+      american_indian: Amerikanong-Indiyano/Katutubong Alaska
+      other: Iba
+      opt_out: Mas gustong hindi sabihin
     submit: Ipasa
     decline: Isara
   zendesk_too_young_message: Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi
