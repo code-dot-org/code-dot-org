@@ -245,7 +245,7 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_NAME_OVERRIDES[course] || course
   end
 
-  def course_target
+  def course_url
     COURSE_URLS_MAP[course]
   end
 
