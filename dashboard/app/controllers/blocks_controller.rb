@@ -12,6 +12,10 @@ class BlocksController < ApplicationController
   end
 
   def update
+    if params[:commit] == 'Save as Clone'
+      @block = @block.dup
+    end
+
     @block.update! update_params
     redirect_to(
       edit_block_path(id: @block.name),
