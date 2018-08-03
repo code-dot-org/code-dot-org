@@ -23,6 +23,9 @@ module RegistrationsControllerTests
       assert_response :bad_request
     end
 
+    #
+    # Tests for non-migrated users
+    #
     test 'update rejects unwanted parameters' do
       user = create :teacher, name: 'non-admin'
       sign_in user
@@ -188,6 +191,173 @@ module RegistrationsControllerTests
       assert_response :success
 
       refute EmailPreference.find_by_email(test_email)
+    end
+
+    #
+    # Tests for migrated users
+    #
+    test "converting migrated student to teacher" do
+      test_email = 'example@email.com'
+      student = create :student, :multi_auth_migrated
+      create :authentication_option, user: student, email: test_email
+      original_hashed_email = student.hashed_email
+      assert_empty student.email
+      sign_in student
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'teacher',
+          email: test_email,
+          hashed_email: student.hashed_email
+        }
+      }
+      assert_response :success
+
+      student.reload
+      assert_equal 'teacher', student.user_type
+      assert_equal test_email, student.email
+      assert_equal original_hashed_email, student.hashed_email
+
+      # refute EmailPreference.find_by_email(test_email)
+    end
+
+    test "converting migrated student to teacher with positive email opt-in" do
+      test_email = 'example@email.com'
+      student = create :student, :multi_auth_migrated
+      create :authentication_option, user: student, email: test_email
+      sign_in student
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'teacher',
+          email: test_email,
+          hashed_email: student.hashed_email,
+          email_preference_opt_in: 'yes'
+        }
+      }
+      assert_response :success
+
+      # preference = EmailPreference.find_by_email(test_email)
+      # refute_nil preference
+      # assert_equal true, preference.opt_in
+      # assert_equal request.ip, preference.ip_address
+      # assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
+      # assert_equal "0", preference.form_kind
+    end
+
+    test "converting migrated student to teacher with negative email opt-in" do
+      test_email = 'example@email.com'
+      student = create :student, :multi_auth_migrated
+      create :authentication_option, user: student, email: test_email
+      sign_in student
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'teacher',
+          email: test_email,
+          hashed_email: student.hashed_email,
+          email_preference_opt_in: 'no'
+        }
+      }
+      assert_response :success
+
+      student.reload
+      assert_equal 'teacher', student.user_type
+      assert_equal test_email, student.email
+
+      # preference = EmailPreference.find_by_email(test_email)
+      # refute_nil preference
+      # assert_equal false, preference.opt_in
+      # assert_equal request.ip, preference.ip_address
+      # assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
+      # assert_equal "0", preference.form_kind
+    end
+
+    test "converting migrated student to teacher fails when email doesn't match" do
+      test_email = 'example@email.com'
+      student = create :student, :multi_auth_migrated
+      create :authentication_option, user: student, email: test_email
+      original_hashed_email = student.hashed_email
+      sign_in student
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'teacher',
+          email: 'wrong_email@example.com',
+          hashed_email: student.hashed_email
+        }
+      }
+      assert_response :unprocessable_entity
+
+      student.reload
+      assert_equal 'student', student.user_type
+      assert_empty student.email
+      assert_equal original_hashed_email, student.hashed_email
+
+      # refute EmailPreference.find_by_email(test_email)
+    end
+
+    test "converting migrated student to teacher doesn't cause email opt-in when email doesn't match" do
+      test_email = 'example@email.com'
+      student = create :student, :multi_auth_migrated
+      create :authentication_option, user: student, email: test_email
+      sign_in student
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'teacher',
+          email: 'wrong_email@example.com',
+          hashed_email: student.hashed_email,
+          email_preference_opt_in: 'yes'
+        }
+      }
+      assert_response :unprocessable_entity
+
+      # refute EmailPreference.find_by_email(test_email)
+    end
+
+    test "converting migrated teacher to student succeeds" do
+      test_email = 'example@email.com'
+      teacher = create :teacher, :multi_auth_migrated
+      teacher.authentication_options << create(:authentication_option, user: teacher, email: test_email)
+      original_hashed_email = teacher.hashed_email
+      sign_in teacher
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'student',
+          email: '',
+          hashed_email: teacher.hashed_email
+        }
+      }
+      assert_response :success
+
+      teacher.reload
+      teacher.authentication_options.reload
+      assert_equal 'student', teacher.user_type
+      assert_empty teacher.email
+      assert_equal original_hashed_email, teacher.hashed_email
+
+      # refute EmailPreference.find_by_email(test_email)
+    end
+
+    test "converting migrated teacher to student ignores email opt-in" do
+      test_email = 'example@email.com'
+      teacher = create :teacher, :multi_auth_migrated
+      teacher.authentication_options << create(:authentication_option, user: teacher, email: test_email)
+      sign_in teacher
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'student',
+          email: '',
+          hashed_email: teacher.hashed_email,
+          email_preference_opt_in: 'yes'
+        }
+      }
+      assert_response :success
+
+      # refute EmailPreference.find_by_email(test_email)
     end
   end
 end
