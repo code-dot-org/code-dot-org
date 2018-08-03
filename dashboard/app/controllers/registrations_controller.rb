@@ -205,7 +205,11 @@ class RegistrationsController < Devise::RegistrationsController
         if forbidden_change?(current_user, params)
           false
         else
-          update_user_type(current_user, set_user_type_params)
+          current_user.set_user_type(
+            set_user_type_params[:user_type],
+            set_user_type_params[:email],
+            email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
+          )
         end
       else
         if forbidden_change?(current_user, params)
@@ -400,15 +404,5 @@ class RegistrationsController < Devise::RegistrationsController
   def destroy_dependent_users(user)
     user_ids_to_destroy = get_users_to_destroy(user).pluck(:id)
     User.destroy(user_ids_to_destroy)
-  end
-
-  def update_user_type(user, params)
-    if params[:user_type] == User::TYPE_STUDENT
-      user.downgrade_to_student
-    elsif params[:user_type] == User::TYPE_TEACHER
-      user.upgrade_to_teacher(params[:email])
-    else
-      false # Unexpected user type
-    end
   end
 end

@@ -841,12 +841,22 @@ class User < ActiveRecord::Base
     success
   end
 
+  def set_user_type(user_type, email = nil, email_preference = nil)
+    if user_type == TYPE_TEACHER
+      upgrade_to_teacher(email, email_preference)
+    elsif user_type == TYPE_STUDENT
+      downgrade_to_student
+    else
+      false # Unexpected user type
+    end
+  end
+
   def downgrade_to_student
     return true if student? # No-op if user is already a student
     update(user_type: TYPE_STUDENT)
   end
 
-  def upgrade_to_teacher(email)
+  def upgrade_to_teacher(email, email_preference)
     return true if teacher? # No-op if user is already a teacher
     return false unless email.present?
 
@@ -857,13 +867,13 @@ class User < ActiveRecord::Base
       return false
     end
 
-    self.user_type = TYPE_TEACHER
-    # Make matching AuthenticationOption user's primary
-    self.primary_contact_info = match
     transaction do
+      self.user_type = TYPE_TEACHER
+      # Make matching AuthenticationOption user's primary
+      self.primary_contact_info = match
       # Update AuthenticationOption to have cleartext email
       match.update!(email: email)
-      save!
+      update!(email_preference)
     end
   end
 
