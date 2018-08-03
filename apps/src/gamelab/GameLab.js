@@ -1505,6 +1505,9 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber, outputString) {
   outputError(outputString, lineNumber);
+  if (err.native) {
+    console.error(err.stack);
+  }
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
 };
