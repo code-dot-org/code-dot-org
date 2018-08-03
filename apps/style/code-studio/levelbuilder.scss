@@ -155,6 +155,10 @@ table.checkboxes {
 }
 
  [data-toggle="collapse"] {
+   cursor: pointer;
+   padding: 2%;
+   padding-left: 0;
+   
   &:after {
     content: "";
     display: inline-block;
@@ -173,10 +177,4 @@ table.checkboxes {
     /* Icon when the collapsible content is hidden */
     background-position: -313px -119px;
   }
-}
-
-.min_max_label{
-  cursor: pointer;
-  padding: 2%;
-  padding-left: 0;
 }
