@@ -87,14 +87,6 @@ export default class AudioRecorder extends React.Component {
     });
   };
 
-  startRecord = () => {
-    this.recorder.start();
-  };
-
-  stopRecord = () => {
-    this.recorder.stop();
-  };
-
   recordInitializationError = (err) => {
     console.log('Audio Initializing Error: ' + err);
     this.setState({error: ErrorType.INITIALIZE});
@@ -106,9 +98,9 @@ export default class AudioRecorder extends React.Component {
 
   toggleRecord = () => {
     if (this.state.recording) {
-      this.stopRecord();
+      this.recorder.stop();
     } else {
-      this.startRecord();
+      this.recorder.start();
     }
     this.setState({recording: !this.state.recording});
   };
