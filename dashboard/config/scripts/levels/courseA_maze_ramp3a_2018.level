@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Your code should look like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\">\\n    <next>\\n      <block type=\\\"maze_moveEast\\\">\\n        <next>\\n          <block type=\\\"maze_moveEast\\\">\\n            <next>\\n              <block type=\\\"maze_moveNorth\\\"/>\\n            </next>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\\n\",\"hint_id\":\"1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/301e08a6f8097357169fd2910f3bb0a6/courseA_maze_ramp3a_2018.mp3\"}]",
-    "markdown_instructions": "Grab a <xml><block type=\"maze_moveNorth\"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\". \r\n\r\n---\r\n",
+    "markdown_instructions": "Grab a <xml><block type=\"maze_moveNorth\"/></xml> from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
