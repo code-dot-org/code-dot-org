@@ -130,6 +130,8 @@ var GameLab = function () {
   this.gameLabP5 = new GameLabP5();
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
+  this.reportPerf = experiments.isEnabled('reportGameLabPerf') ||
+    Math.random() < 0.05;
 
   dropletConfig.injectGameLab(this);
 
@@ -1477,10 +1479,15 @@ GameLab.prototype.runValidationCode = function () {
 };
 
 GameLab.prototype.measureDrawLoop = function (name, callback) {
-  mark(`${name}_start`);
-  callback();
-  measure(name, `${name}_start`);
-  this.spriteTotalCount += this.gameLabP5.p5.allSprites.length;
+  if (this.reportPerf) {
+    mark(`${name}_start`);
+    callback();
+    measure(name, `${name}_start`);
+    clearMarks(`${name}_start`);
+    this.spriteTotalCount += this.gameLabP5.p5.allSprites.length;
+  } else {
+    callback();
+  }
 };
 
 /**
@@ -1493,8 +1500,8 @@ GameLab.prototype.onP5Draw = function () {
     if (getStore().getState().runState.isRunning) {
       this.measureDrawLoop(DRAW_LOOP_MEASURE, () => {
         this.eventHandlers.draw.apply(null);
+        this.runValidationCode();
       });
-      this.runValidationCode();
     } else if (this.shouldAutoRunSetup) {
       switch (this.level.autoRunSetup) {
         case GamelabAutorunOptions.draw_loop:
