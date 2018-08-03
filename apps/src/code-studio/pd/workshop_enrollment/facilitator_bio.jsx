@@ -1,12 +1,14 @@
 /**
  * Facilitator bio as used on the workshop enrollment form
  */
-import React, {PropTypes} from 'react';
+import React from 'react';
 import marked from 'marked';
+import {FacilitatorPropType} from './enrollmentConstants';
+
 
 export default class FacilitatorBio extends React.Component {
   static propTypes = {
-    facilitator: PropTypes.object
+    facilitator: FacilitatorPropType
   };
 
   image = () => {

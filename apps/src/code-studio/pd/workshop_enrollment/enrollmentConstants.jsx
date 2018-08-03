@@ -1,3 +1,5 @@
+import {PropTypes} from 'react';
+
 const TEACHING_ROLES = [
   "Classroom Teacher",
   "Librarian",
@@ -46,6 +48,29 @@ const SCHOOL_TYPES = {
   OTHER: "Other"
 };
 
+const WorkshopPropType = PropTypes.shape({
+  id: PropTypes.number,
+  course: PropTypes.string,
+  course_url: PropTypes.string,
+  location_name: PropTypes.string,
+  location_address: PropTypes.string,
+  subject: PropTypes.string,
+  notes: PropTypes.string,
+  regional_partner: PropTypes.shape({
+    name: PropTypes.string
+  }),
+  organizer: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string
+  }),
+});
+
+const FacilitatorPropType = PropTypes.shape({
+  email: PropTypes.string,
+  image_path: PropTypes.string,
+  bio: PropTypes.string
+});
+
 export {
   TEACHING_ROLES,
   ROLES,
@@ -54,5 +79,7 @@ export {
   CSF,
   ERROR,
   SUBMISSION_STATUSES,
-  SCHOOL_TYPES
+  SCHOOL_TYPES,
+  WorkshopPropType,
+  FacilitatorPropType
 };

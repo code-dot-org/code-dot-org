@@ -53,7 +53,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       cancel_url = url_for action: :cancel, controller: '/pd/workshop_enrollment', code: previous_enrollment.code
       render_unsuccessful RESPONSE_MESSAGES[:DUPLICATE], {cancel_url: cancel_url}
     elsif workshop_owned_by? user
-      workshop_url = CDO.studio_url("/pd/workshop_dashboard/workshops#{@workshop.id}")
+      workshop_url = CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}")
       render_unsuccessful RESPONSE_MESSAGES[:OWN], {workshop_url: workshop_url}
     elsif workshop_closed?
       render_unsuccessful RESPONSE_MESSAGES[:CLOSED]
