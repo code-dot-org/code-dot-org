@@ -105,6 +105,16 @@ class CollectionsApi {
       fn();
     }
   }
+
+  /*
+   * Register a hook that will be called before the first write to the project
+   * using the files API. (This allows the starting project data to be written
+   * on a deferred basis, thereby preventing writes to user projects with
+   * default starting data)
+   */
+  registerBeforeFirstWriteHook(hook) {
+    this._beforeFirstWriteHook = hook;
+  }
 }
 
 class AssetsApi extends CollectionsApi {
@@ -191,15 +201,9 @@ class AssetsApi extends CollectionsApi {
    * @param success {Function} callback when successful (includes xhr parameter)
    * @param error {Function} callback when failed
    */
-  putAsset(filename, data, success, error) {
+  putAsset(filename, data, success = () => {}, error = () => {}) {
     this._withBeforeFirstWriteHook(() => {
-      ajaxInternal('PUT', this.basePath(filename), xhr => {
-          if (success) {
-            success(xhr);
-          }
-        },
-        error,
-        data);
+      ajaxInternal('PUT', this.basePath(filename), success, error, data);
     });
   }
 }
@@ -349,16 +353,6 @@ class FilesApi extends CollectionsApi {
         }
       },
       error);
-  }
-
-  /*
-   * Register a hook that will be called before the first write to the project
-   * using the files API. (This allows the starting project data to be written
-   * on a deferred basis, thereby preventing writes to user projects with
-   * default starting data)
-   */
-  registerBeforeFirstWriteHook(hook) {
-    this._beforeFirstWriteHook = hook;
   }
 
   /*
