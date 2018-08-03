@@ -68,7 +68,7 @@ See all past [news and announcements](/about/news).
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled.                                                                    |
 | Prep new CS teachers | We've prepared 72,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).                                                                                                                                                                                    |
 | Change school district curriculum | We've partnered with [180 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a regional partner](/educate/districts).|
-| Set up policies to support CS | Policies changed in 43 U.S. states to establish CS education standards, make CS courses count towards high school graduation, etc. (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                          |
+| Set up policies to support CS | <a href="https://advocacy.code.org" target="_blank">Policies changed in 44 U.S. states</a> to establish CS education standards, make CS courses count towards high school graduation, etc. ([details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                          |
 | Go global | Our courses are available in over 50 languages, used in 180+ countries.                                                                                                                                                                                                                                           |
 <center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
 
@@ -113,7 +113,7 @@ Code’s accomplishments (above) demonstrate our ability to leverage those dolla
 
 Please [contact us](/contact) if you, your company, or your foundation is interested in talking with our leadership team further to better understand our program and to explore options for investing in our work.
 
-Code.org IRS form 990 for [2014](/files/irs-form.pdf), [2015](/files/irs-form-2015.pdf), and [2016](/files/irs-form-2016.pdf).
+Code.org IRS form 990 for [2014](/files/irs-form.pdf), [2015](/files/irs-form-2015.pdf), [2016](/files/irs-form-2016.pdf), and [2017](/files/irs-form-2017.pdf).
 
 <hr/>
 

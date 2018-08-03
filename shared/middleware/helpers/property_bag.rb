@@ -1,4 +1,4 @@
-require 'aws-sdk'
+require 'aws-sdk-dynamodb'
 
 class DynamoPropertyBag
   class NotFound < Sinatra::NotFound

@@ -72,6 +72,14 @@ class HttpCache
       pegasus: {
         behaviors: [
           {
+            # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
+            #
+            path: '/assets/*',
+            proxy: 'cdo-assets',
+            headers: [],
+            cookies: 'none'
+          },
+          {
             path: '/api/hour/*',
             headers: WHITELISTED_HEADERS,
             # Allow the company cookie to be read and set to track company users for tutorials.
@@ -79,7 +87,7 @@ class HttpCache
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /assets/* /fonts/*),
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
             headers: [],
             cookies: 'none'
           },

@@ -128,7 +128,7 @@ class OwnedSections extends React.Component {
             {viewHidden && hiddenSectionIds.length > 0 &&
               <div>
                 <div style={styles.hiddenSectionLabel}>
-                  {i18n.hiddenSections()}
+                  {i18n.archivedSections()}
                 </div>
                 <OwnedSectionsTable
                   sectionIds={hiddenSectionIds}

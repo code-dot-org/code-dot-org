@@ -44,7 +44,6 @@ pl:
   previous_page: Poprzednia strona
   next_page: Następna strona
   next_resource: Kolejne zasoby
-  done_with_module: Done with this Learning Module
   cancel: Anuluj
   okay: OK
   heading_x_of_y: "%{heading} (strona %{x} z%{y})"
@@ -94,7 +93,6 @@ pl:
     facebook: Facebooka
     windowslive: Konto Microsoft
     clever: Konto Clever
-    powerschool: Powerschool Account
     forgot_password: Nie pamiętasz swojego hasła?
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
     need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
@@ -102,8 +100,6 @@ pl:
       %{provider}. Będziesz musiał się zalogować, wpisując swoje hasło poniżej.
     use_clever: Przepraszamy, twoje konto Code.org nie jest podłączone do twojego
       %{provider}. Prosimy o zalogowanie się poprzez Portal Clever.
-    unable_to_connect_provider: Unable to connect your Code.org account to your %{provider}.
-      Please try again.
   signup_form:
     student_count: "%{count} uczniów już się zarejestrowało."
     teacher_count: "%{count} nauczycieli już się zarejestrowało."
@@ -141,8 +137,6 @@ pl:
     valid_password: Prawidłowe hasło!
     invalid_password: Hasło musi zawierać przynajmniej 6 znaków
     mismatch_password: Dwa hasła, które podałeś, nie są zgodne
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
     under_13_consent: Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub
       opiekun prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services.
     agree_us_website: Zgadzam się na korzystanie ze strony, której siedziba znajduje
@@ -161,7 +155,6 @@ pl:
       usług oferowanych przez Code.org. Aby uzyskać więcej informacji na temat prywatności,
       zobacz naszą <a href='http://code.org/privacy'> politykę prywatności</a>.
     additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
-    user_type_button: Update Account Type
     user_type_label: Typ konta
     user_type_teacher: Nauczyciel
     user_type_student: Uczeń
@@ -174,7 +167,6 @@ pl:
     email_preference_privacy: "(Zobacz naszą politykę prywatności)"
     email_preference_yes: Tak
     email_preference_no: Nie
-    email_preference_required: You must specify an email preference.
   school_info:
     title: Informacja o Szkole (opcjonalne)
     school_country: Kraj
@@ -225,7 +217,6 @@ pl:
       email: Adres e-mail
       submit: Wyślij
     reset_errors:
-      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Wygląda na to, że zarejestrowałeś się na niepoprawny adres e-mail.
         Wyślij e-mail pod adres support@code.org, aby uzyskać link do odzyskiwania
         hasła.
@@ -414,15 +405,11 @@ pl:
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
     email_confirm_wrong_email: "(Zły adres e-mail?)"
     email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
-    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(zostaw puste, jeśli nie chcesz tego zmienić)"
     current_password_hint: "(potrzebujemy Twojego aktualnego hasła, aby potwierdzić
       Twoje zmiany)"
     delete: Usuń swoje konto
     delete_text: Kliknięcie na poniższym przycisku spowoduje usunięcie Twojego konta.
-    delete_text_teacher_managed_note: You do not have permission to delete this account
-      because it is managed by your teacher. Your teacher(s) will need to remove you
-      from their sections before you can delete your account.
     delete_text_teacher_note: 'Uwaga: usunięcie Twojego konta nie spowoduje usunięcia
       kont Twoich uczniów.'
     delete_confirm: Czy na pewno chcesz usunąć swoje konto?
@@ -452,8 +439,6 @@ pl:
     confirm_secret_words: Potwierdź, że to ty, wprowadzając swoje aktualne sekretne
       słowa
     enter_parent_email: Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)
-    update: Update Account
-    account_successfully_updated: Account successfully updated.
   user_level:
     completed: Ukończono
     tried: Próbowano
@@ -643,8 +628,6 @@ pl:
       do sekcji.
     already_enrolled_in_new_section: Nie można przenieść tych uczniów, ponieważ ten
       nauczyciel ma ich już w innej sekcji.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
   share:
     title: Ucz się z Code Studio
     description: Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę.
@@ -652,8 +635,6 @@ pl:
   gender:
     male: Mężczyzna
     female: Kobieta
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
     none: Wolę nie odpowiadać
   user_type:
     student: Uczeń
@@ -845,7 +826,6 @@ pl:
       title: Zawody
       body: Stwórz grę w koszykówkę albo włąsną mieszankę różnych sportów.
     text-compression:
-      title: Text Compression
       body: W tej lekcji uczniowie użyją Widżetu Kompresji Tekstu, by skompresować
         tekst, zastępując wzorce symbolami.
     unplugged:
@@ -905,15 +885,11 @@ pl:
     wrong_body: Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!
     correct_title: Poprawnie
     correct_body: To jest poprawna odpowiedź.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Dziękujemy
     wrong_body: Dziękujemy za przesłanie odpowiedzi.
     correct_title: Dziękujemy
     correct_body: Dziękujemy za przesłanie odpowiedzi.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Dziękujemy
     wrong_body: Dziękujemy za przesłanie odpowiedzi.
@@ -1020,14 +996,14 @@ pl:
       w informatyce'
     message: Określ swoja przynależność rasową (zaznacz wszystko, co dotyczy Ciebie)
     races:
-    - white: Biały
-    - black: Murzyn lub Afroamerykanin
-    - hispanic: Hiszpanie lub Latynosi
-    - asian: Azjata
-    - hawaiian: Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku
-    - american_indian: Native American Indian/Alaska
-    - other: Inni/inne
-    - opt_out: Wolę nie mówić
+      white: Biały
+      black: Murzyn lub Afroamerykanin
+      hispanic: Hiszpanie lub Latynosi
+      asian: Azjata
+      hawaiian: Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku
+      american_indian: Native American Indian/Alaska
+      other: Inni/inne
+      opt_out: Wolę nie mówić
     submit: Wyślij
     decline: Zamknij
   zendesk_too_young_message: Przepraszamy, młodsi użytkownicy nie mogą logować się
@@ -1153,23 +1129,11 @@ pl:
     instructor_feedback: Opinie instruktora
     peer_feedback: Wzajemne opinie
     outdated: Ta opinia została dodana do wcześniej zgłoszonej wersji
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Streszczenie
     content: Treści
     practice: Doświadczenia nauczycieli
     peer_review: Wzajemne recenzje
-    ramp_up: Ramp-Up
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Kurs Główny
     extra_course_content: Dodatki do Kursu
     csf_e_1: Przygotuj się do Kursu E (opcjonalnie)
@@ -1188,7 +1152,6 @@ pl:
     csd5_2: 'Rozdział 2: Rozwiązywanie Problemów z Danymi'
     csd6_1: 'Rozdział 1: Wyjście Sprzętowe'
     csd6_2: 'Rozdział 2: Wejście Sprzętowe'
-    csd_survey: Post-Course Survey
     csp1_1: 'Rozdział 1: Reprezentowanie i Przekazywanie Informacji'
     csp1_2: 'Rozdział 2: Wynalezienie Internetu'
     csp2_1: 'Rozdział 1: Kodowanie i Kompresja Złożonych Danych'
@@ -1202,11 +1165,7 @@ pl:
     csp_ap_1: 'Rozdział 1: AP Konfiguracja Techniczna'
     csp_ap_2: 'Rozdział 2: AP Zbadaj Wydajność'
     csp_ap_3: 'Rozdział 3: AP Utwórz Zadanie Wydajnościowe'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
     csp2_1_2018: 'Unit 2: Cyfrowe informacje'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Wskazówki
   external_links:
     disclaimer: Uwaga
@@ -1279,23 +1238,6 @@ pl:
     download_in_Vietnamese: 'Pobierz po wietnamsku:'
     windows: Windows (64-bitowy)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
-  stage_extras_teacher_message: You have Lesson Extras turned off for some of your
-    sections. Your students won’t see this page unless you turn them on. You can turn
-    Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher
-    Dashboard</a>.
   locked_stage: Zawartość tego etapu nie jest widoczna, ponieważ ten etap jest obecnie
     zablokowany. Twój nauczyciel może odblokować ten etap, kiedy przyjdzie czas, aby
     nad nim pracować lub by przejrzeć Twoje odpowiedzi.
@@ -1307,188 +1249,33 @@ pl:
   return_course_overview: Przejdź do omówienia jednostki
   view_all_units: Zobacz wszystkie jednostki
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
     form_labels:
-      first_name: First Name
-      first_name_preferred: Preferred First Name
-      last_name: Last Name
       email: Email
-      email_alternate: Alternate Email
-      gender: Gender Identity
       school_name: Nazwa szkoły
       school_city: Miasto Szkoły
       school_country: Kraj
-      ages: Which age(s) do you teach this year?
-      subjects: Which subject(s) do you teach this year?
-      resources: Which of the following CS education resources do you use?
-      robotics: Which of the following robotics resources do you use?
-      workshop_organizer: Workshop Organizer
-      workshop_facilitator: Workshop Facilitator
-      workshop_course: Workshop Course
-      email_opt_in: Can we email you about Code.org’s international program, updates
-        to our courses, or other computer science news?
-      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
-        share information on how you use Code.org and the Professional Learning resources
-        with the Code.org International Partner in your country, school district,
-        and facilitators. We will share your contact information, which courses/units
-        you are using and aggregate data about your classes with these partners. This
-        includes the number of students in your classes, the demographic breakdown
-        of your classroom, and the name of your school and district. We will not share
-        any information about individual students with our partners: all student information
-        will be de-identified and aggregated. Our International Partners and facilitators
-        are contractually obliged to treat this information with the same level of
-        confidentiality as Code.org.'
     form_entries:
       gender:
         male: Mężczyzna
         female: Kobieta
-        non_binary: Non-binary
-        not_listed: Preferred term not listed
         none: Wolę nie odpowiadać
-      school_country:
-        canada: Canada
-        chile: Chile
-        israel: Israel
-        malaysia: Malaysia
-        mexico: Mexico
-        thailand: Thailand
-      ages:
-        ages_under_6: "< 6 years old"
-        ages_7_8: 7-8 years old
-        ages_9_10: 9-10 years old
-        ages_11_12: 11-12 years old
-        ages_13_14: 13-14 years old
-        ages_15_16: 15-16 years old
-        ages_17_18: 17-18 years old
-        ages_19_over: 19+ years old
       subjects:
         cs: Informatyka
-        ict: ICT
         math: Matematyka
         science: Nauka/Przyroda
-        history: History / Social Studies
         la: Sztuki języków
-        efl: English as a Foreign Language
-        music: Music
-        art: Art
-        other: 'Other:'
       resources:
-        bootstrap: Bootstrap
-        codecademy: CodeCademy
-        csfirst: Google CS First
-        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
-        scratch: Scratch
-        tynker: Tynker
-        other: 'Other:'
       robotics:
-        grok: Grok Learning
         kodable: Kodable
-        lego: LEGO Education
-        microbit: Microbit
-        ozobot: Ozobot
-        sphero: Sphero
-        raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: 'Other:'
       workshop_course:
-        csf_af: CS Fundamentals (Courses A-F)
-        csf_express: CS Fundamentals (Pre-Express or Express)
-        csd: CS Discoveries
         csp: Podstawy Informatyki '16-'17
       email_opt_in:
         opt_in_yes: Tak
         opt_in_no: Nie
-    international_opt_in:
-      title: Workshop Attendance
-      intro: Thank you for taking time to receive training on Code.org’s curriculum.
-        Our mission to bring computer science education opportunities to all children
-        in all schools around the world would not be possible without you.
-      instructions: Please fill out the form below to indicate that 1) you attended
-        a training workshop run by one of Code.org’s international partners, and 2)
-        you agree to share your information with our international partner in your
-        country so that they can help to support your journey as a computer science
-        teacher.
-      thanks: Thank you for submitting! We look forward to supporting you as you get
-        to know Code.org’s curriculum and tools. Please keep sharing your questions
-        and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a>
-        or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher
-        forum</a>!
-    logged_out:
-      heading: Thanks for your interest in the Professional Learning Program!
-      body: To get started, you first need to be logged into your Code.org account.
-        If you’d like more information about the program before you start your application,
-        please check out the <a href="%{url}">Professional Learning Program overview</a>.
-    not_teacher:
-      body: Thanks for your interest in Code.org’s Professional Learning Program!
-        You’re currently signed into a student account. Please either create a teacher
-        account or <a href="%{user_settings}">go to your user settings</a> to upgrade
-        your account from student to teacher.
-      more: If you’d like more information about the program before you start your
-        application, please check out the <a href="%{pl_overview}">Professional Learning
-        Program overview</a>.
-    no_teacher_email:
-      body: Your account doesn’t have an email address. Please <a href="%{user_registration}">visit
-        your account settings</a> to add your email address before completing this
-        form.
   courses_category: Pełne Kursy
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
     accept: Zgadzam się
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
     true: Tak
