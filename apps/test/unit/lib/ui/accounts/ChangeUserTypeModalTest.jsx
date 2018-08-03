@@ -14,6 +14,7 @@ describe('ChangeUserTypeModal', () => {
   const EMAIL_OPT_IN_SELECTOR = 'select';
 
   const DEFAULT_PROPS = {
+    currentHashedEmails: [],
     handleSubmit: () => {},
     handleCancel: () => {},
   };
@@ -79,10 +80,10 @@ describe('ChangeUserTypeModal', () => {
       expect(wrapper.text()).to.include(i18n.changeUserTypeModal_currentEmail_invalid());
     });
 
-    it('checks that email is the same as the current email', () => {
+    it('checks that email matches one of the user\'s current emails', () => {
       const email = 'validEmail@example.com';
-      const hashedEmail = hashEmail(email);
-      wrapper.setProps({currentHashedEmail: hashedEmail});
+      const currentHashedEmails = [hashEmail(email), hashEmail('another@example.com')];
+      wrapper.setProps({currentHashedEmails});
       wrapper.setState({
         values: {
           currentEmail: 'differentEmail@example.com',
@@ -111,7 +112,7 @@ describe('ChangeUserTypeModal', () => {
     it('checks that email opt-in is present', () => {
       const email = 'validEmail@example.com';
       const hashedEmail = hashEmail(email);
-      wrapper.setProps({currentHashedEmail: hashedEmail});
+      wrapper.setProps({currentHashedEmails: [hashedEmail]});
       wrapper.setState({
         values: {
           currentEmail: email,
@@ -125,7 +126,7 @@ describe('ChangeUserTypeModal', () => {
     it('reports email opt-in server errors', () => {
       const email = 'validEmail@example.com';
       const hashedEmail = hashEmail(email);
-      wrapper.setProps({currentHashedEmail: hashedEmail});
+      wrapper.setProps({currentHashedEmails: [hashedEmail]});
       const serverError = 'test-email-opt-in-server-error';
       wrapper.setState({
         values: {
@@ -153,9 +154,8 @@ describe('ChangeUserTypeModal', () => {
 
     it('enables the submit button when form passes validation', () => {
       const email = 'me@example.com';
-      wrapper.setProps({
-        currentHashedEmail: hashEmail(email)
-      });
+      const hashedEmail = hashEmail(email);
+      wrapper.setProps({currentHashedEmails: [hashedEmail]});
       wrapper.setState({
         values: {
           currentEmail: email,

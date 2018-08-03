@@ -142,7 +142,6 @@ describe('ChangeUserTypeController', () => {
     form = $(`
       <form>
         <input type="hidden" id="change-user-type_user_email"/>
-        <input type="hidden" id="change-user-type_user_hashed_email"/>
         <input type="hidden" id="change-user-type_user_email_preference_opt_in"/>
         <select id="change-user-type_user_user_type">
           <option value="student">Student</option>
@@ -153,6 +152,7 @@ describe('ChangeUserTypeController', () => {
       </form>
     `);
     stub(form, 'submit');
+    const hashedEmails = [];
 
     dropdown = form.find('#change-user-type_user_user_type');
     dropdown.val(userType);
@@ -161,6 +161,6 @@ describe('ChangeUserTypeController', () => {
 
     status = form.find('#change-user-type-status');
 
-    controller = new ChangeUserTypeController(form, userType);
+    controller = new ChangeUserTypeController(form, userType, hashedEmails);
   }
 });
