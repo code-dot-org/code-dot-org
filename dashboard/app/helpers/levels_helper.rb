@@ -271,6 +271,7 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_dance = @level.is_a?(Gamelab) && @level.helper_libraries.try(:include?, 'DanceLab')
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
       locals: {
@@ -282,7 +283,7 @@ module LevelsHelper
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
-        use_p5sound: @level.is_a?(Gamelab),
+        use_dance: use_dance,
         hide_source: hide_source,
         static_asset_base_path: app_options[:baseUrl]
       }
@@ -464,6 +465,18 @@ module LevelsHelper
       end
       set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
       set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
+
+      %w(
+        initializationBlocks
+        startBlocks
+        toolbox
+        levelBuilderRequiredBlocks
+        levelBuilderRecommendedBlocks
+        solutionBlocks
+      ).each do |xml_block_prop|
+        next unless level_options.key? xml_block_prop
+        set_unless_nil(level_options, xml_block_prop, l.localize_function_blocks(level_options[xml_block_prop]))
+      end
     end
 
     # Script-dependent option

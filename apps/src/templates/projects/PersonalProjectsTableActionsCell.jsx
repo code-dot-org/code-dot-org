@@ -6,6 +6,8 @@ import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
 import {showPublishDialog} from './publishDialog/publishDialogRedux';
+import {unpublishProject} from './projectsRedux';
+import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 
 export const styles = {
   xIcon: {
@@ -19,6 +21,8 @@ class PersonalProjectsTableActionsCell extends Component {
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
     showPublishDialog: PropTypes.func.isRequired,
+    unpublishProject: PropTypes.func.isRequired,
+    showDeleteDialog: PropTypes.func.isRequired
   };
 
   state = {
@@ -31,6 +35,14 @@ class PersonalProjectsTableActionsCell extends Component {
 
   onPublish = () => {
     this.props.showPublishDialog(this.props.projectId, this.props.projectType);
+  };
+
+  onUnpublish = () => {
+    this.props.unpublishProject(this.props.projectId);
+  };
+
+  onDelete = () => {
+    this.props.showDeleteDialog(this.props.projectId);
   };
 
   render() {
@@ -48,7 +60,7 @@ class PersonalProjectsTableActionsCell extends Component {
         </PopUpMenu.Item>
         {this.props.isPublished && (
           <PopUpMenu.Item
-            onClick={() => console.log("Unpublish was clicked")}
+            onClick={this.onUnpublish}
           >
             {i18n.unpublish()}
           </PopUpMenu.Item>
@@ -62,7 +74,7 @@ class PersonalProjectsTableActionsCell extends Component {
         )}
         <MenuBreak/>
         <PopUpMenu.Item
-          onClick={() => console.log("Delete was clicked")}
+          onClick={this.onDelete}
           color={color.red}
         >
           <FontAwesome icon="times-circle" style={styles.xIcon}/>
@@ -77,4 +89,10 @@ export default connect(state => ({}), dispatch => ({
   showPublishDialog(projectId, projectType) {
     dispatch(showPublishDialog(projectId, projectType));
   },
+  unpublishProject(projectId) {
+    dispatch(unpublishProject(projectId));
+  },
+  showDeleteDialog(projectId) {
+    dispatch(showDeleteDialog(projectId));
+  }
 }))(PersonalProjectsTableActionsCell);

@@ -27,6 +27,7 @@ createEdgeSprites();
 var inputEvents = [];
 var touchEvents = [];
 var collisionEvents = [];
+var callbacks = [];
 var loops = [];
 var sprites = [];
 var score = 0;
@@ -193,6 +194,12 @@ function forever(loop) {
   loops.push({'condition': function () {return true;}, 'loop': loop});
 }
 
+// Draw loop callbacks
+
+function register(callback) {
+  callbacks.push(callback);
+}
+
 // Sprite and Group creation
 
 function makeNewSpriteLocation(animation, loc) {
@@ -308,6 +315,10 @@ function shouldUpdate() {
 
 function draw() {
   background(World.background_color || "white");
+  
+  callbacks.forEach(function (callback) {
+    callback();
+  });
 
   if (shouldUpdate()) {
     // Perform sprite behaviors
@@ -344,6 +355,13 @@ function draw() {
       }
     }
 
+    var createCollisionHandler = function (collisionEvent) {
+      return function (sprite1, sprite2) {
+        if (!collisionEvent.touching || collisionEvent.keepFiring) {
+          collisionEvent.event(sprite1, sprite2);
+        }
+      };
+    };
     // Run collision events
     for (i = 0; i<collisionEvents.length; i++) {
       var collisionEvent = collisionEvents[i];
@@ -352,10 +370,7 @@ function draw() {
       if (!a || !b) {
         continue;
       }
-      if (a.overlap(b)) {
-        if (!collisionEvent.touching || collisionEvent.keepFiring) {
-          collisionEvent.event(a, b);
-        }
+      if (a.overlap(b, createCollisionHandler(collisionEvent))) {
         collisionEvent.touching = true;
       } else {
         if (collisionEvent.touching && collisionEvent.eventEnd) {
