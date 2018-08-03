@@ -9,8 +9,13 @@ const styles = {
     justifyContent: 'space-between',
   },
   button: {
-    marginRight: 30,
-    borderRadius: 4
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginRight: 10,
+    borderRadius: 4,
+    fontSize: 'large',
+    fontWeight: 'lighter',
+    boxShadow: 'none',
   }
 };
 
@@ -40,12 +45,15 @@ export default class AudioRecorder extends React.Component {
             color={Button.ButtonColor.blue}
             icon={this.state.recording ? "stop" : "circle"}
             text={this.state.recording ? i18n.stop() : i18n.record()}
+            size="large"
           />
           <Button
             onClick={()=>{}}
             id="cancel-record"
             style={styles.button}
+            color={Button.ButtonColor.gray}
             text={i18n.cancel()}
+            size="large"
           />
         </span>
       </div>
