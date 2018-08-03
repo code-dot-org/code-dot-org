@@ -232,7 +232,7 @@ class Script < ActiveRecord::Base
     valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
   end
 
-  # @return [Array<Script>] An array of moden elementary scripts.
+  # @return [Array<Script>] An array of modern elementary scripts.
   def self.modern_elementary_courses
     Script::CATEGORIES[:csf_2018].map {|name| Script.get_from_cache(name)}
   end
