@@ -33,6 +33,9 @@ function safeStepInterpreter(jsi) {
   try {
     jsi.interpreter.step();
   } catch (err) {
+    if (err.native) {
+      throw err;
+    }
     return err;
   }
 }
