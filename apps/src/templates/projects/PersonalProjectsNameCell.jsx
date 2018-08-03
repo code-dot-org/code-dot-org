@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {tableLayoutStyles} from "../tables/tableConstants";
-import {startRenamingProject} from './projectsRedux';
+import {updateProjectName} from './projectsRedux';
 
 const styles = {
   inputBox: {
@@ -16,11 +16,13 @@ class PersonalProjectsNameCell extends Component {
     projectName: PropTypes.string.isRequired,
     isEditing: PropTypes.bool,
     updatedName: PropTypes.string,
-    startRenamingProject: PropTypes.func.isRequired,
+    updateProjectName: PropTypes.func.isRequired,
   };
+
    onChangeName = (e) => {
-    this.props.startRenamingProject(this.props.projectId, e.target.value);
+    this.props.updateProjectName(this.props.projectId, e.target.value);
   };
+
   render() {
     const {projectId, projectType, projectName, updatedName, isEditing} = this.props;
     const url = `/projects/${projectType}/${projectId}/`;
@@ -46,7 +48,7 @@ class PersonalProjectsNameCell extends Component {
 }
 
  export default connect(state => ({}), dispatch => ({
-  startRenamingProject(projectId, updatedName) {
-    dispatch(startRenamingProject(projectId, updatedName));
+  updateProjectName(projectId, updatedName) {
+    dispatch(updateProjectName(projectId, updatedName));
   },
 }))(PersonalProjectsNameCell);

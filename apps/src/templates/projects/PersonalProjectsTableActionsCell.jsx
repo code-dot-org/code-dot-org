@@ -55,7 +55,7 @@ class PersonalProjectsTableActionsCell extends Component {
   };
 
   onRename = () => {
-    this.props.startRenamingProject(this.props.projectId, this.props.updatedName);
+    this.props.startRenamingProject(this.props.projectId);
   };
 
   onCancel = () => {

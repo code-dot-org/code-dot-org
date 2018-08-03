@@ -20,6 +20,7 @@ const UNPUBLISH_SUCCESS  = 'projects/UNPUBLISH_SUCCESS';
 const UNPUBLISH_FAILURE  = 'projects/UNPUBLISH_FAILURE';
 
 const START_RENAMING_PROJECT = 'projects/START_RENAMING_PROJECT';
+const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
 const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 
 // Reducers
@@ -149,26 +150,48 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: projects,
       };
     case START_RENAMING_PROJECT:
-      var projectBeingRenamed = action.projectId;
+      var projectToRename = action.projectId;
 
-      var projectBeingRenamedIndex = state.projects.findIndex(project => project.channel = projectBeingRenamed);
+      var projectToRenameIndex = state.projects.findIndex(project => project.channel === projectToRename);
 
       var updatedEditing = [...state.projects];
-      updatedEditing[projectBeingRenamedIndex].isEditing = true;
 
-      updatedEditing[projectBeingRenamedIndex].updatedName = action.updatedName;
+      updatedEditing[projectToRenameIndex] = {
+        ...updatedEditing[projectToRenameIndex],
+        isEditing: true,
+      };
 
       return {
         ...state,
         projects: updatedEditing,
       };
+    case UPDATE_PROJECT_NAME:
+      var projectBeingRenamed = action.projectId;
+
+      var projectBeingRenamedIndex = state.projects.findIndex(project => project.channel === projectBeingRenamed);
+
+      var projectsWithRename = [...state.projects];
+
+      projectsWithRename[projectBeingRenamedIndex] = {
+        ...projectsWithRename[projectBeingRenamedIndex],
+        updatedName: action.updatedName
+      };
+
+      return {
+        ...state,
+        projects: projectsWithRename,
+      };
     case CANCEL_RENAMING_PROJECT:
       var projectNoLongerBeingRenamed = action.projectId;
 
-      var projectNoLongerBeingRenamedIndex = state.projects.findIndex(project => project.channel = projectNoLongerBeingRenamed);
+      var projectNoLongerBeingRenamedIndex = state.projects.findIndex(project => project.channel === projectNoLongerBeingRenamed);
 
       var updatedNotEditing = [...state.projects];
-      updatedNotEditing[projectNoLongerBeingRenamedIndex].isEditing = false;
+
+      updatedNotEditing[projectNoLongerBeingRenamedIndex] = {
+        ...updatedNotEditing[projectNoLongerBeingRenamedIndex],
+        isEditing: false,
+      };
 
       return {
         ...state,
@@ -271,8 +294,12 @@ export function deleteSuccess(projectId) {
   return {type: DELETE_SUCCESS, projectId};
 }
 
-export function startRenamingProject(projectId, updatedName) {
-  return {type: START_RENAMING_PROJECT, projectId, updatedName};
+export function startRenamingProject(projectId) {
+  return {type: START_RENAMING_PROJECT, projectId};
+}
+
+export function updateProjectName(projectId, updatedName) {
+  return {type: UPDATE_PROJECT_NAME, projectId, updatedName};
 }
 
 export function cancelRenamingProject(projectId) {
