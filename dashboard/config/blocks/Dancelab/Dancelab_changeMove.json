@@ -1,0 +1,42 @@
+{
+  "category": "Moves",
+  "config": {
+    "func": "changeMove",
+    "blockText": "change {SPRITE} dance move to {MOVE}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "MOVE",
+        "options": [
+          [
+            "Neutral",
+            "\"\""
+          ],
+          [
+            "Climb",
+            "\"_climb\""
+          ],
+          [
+            "Duck",
+            "\"_duck\""
+          ],
+          [
+            "Jump",
+            "\"_jump\""
+          ],
+          [
+            "Walk",
+            "\"_walk\""
+          ],
+          [
+            "Random",
+            "\"rand\""
+          ]
+        ]
+      }
+    ]
+  }
+}

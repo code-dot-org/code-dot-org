@@ -795,14 +795,14 @@ ja:
     title: 'オプション: コンピュータ ・ サイエンスにおける多様性の向上の取り組みのため、ご協力ください'
     message: あなたの人種 (該当するものすべてチェック) を教えてください。
     races:
-    - white: 白人
-    - black: 黒人、またはアフリカ系アメリカ人
-    - hispanic: ヒスパニックまたはラテン系
-    - asian: アジア系
-    - hawaiian: ハワイおよび他の太平洋諸島系
-    - american_indian: アメリカインディアン/アラスカ ネイティブ
-    - other: その他
-    - opt_out: 答えたくない
+      white: 白人
+      black: 黒人、またはアフリカ系アメリカ人
+      hispanic: ヒスパニックまたはラテン系
+      asian: アジア系
+      hawaiian: ハワイおよび他の太平洋諸島系
+      american_indian: アメリカインディアン/アラスカ ネイティブ
+      other: その他
+      opt_out: 答えたくない
     submit: 送信
     decline: 閉じる
   zendesk_too_young_message: ご迷惑致しますが、若い方はこのサポートサイトのサインインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をサインインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。

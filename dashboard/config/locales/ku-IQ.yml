@@ -134,14 +134,7 @@ ku:
     save: پاشه‌كه‌وت بكە
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: هی تر
-    - 
+      other: هی تر
     submit: بنێرە
   project:
     save: پاشه‌كه‌وت بكە

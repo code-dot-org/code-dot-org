@@ -541,14 +541,7 @@ eu:
     save: Gorde
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Beste bat
-    - 
+      other: Beste bat
     submit: Bidali
     decline: Itxi
   zendesk_too_young_message: Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen

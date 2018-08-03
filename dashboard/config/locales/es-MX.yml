@@ -1014,14 +1014,14 @@ es-MX:
       en ciencias de la computación'
     message: Por favor dinos tu raza (marca todo lo que aplique)
     races:
-    - white: Blanco
-    - black: Negro o Afroamericano
-    - hispanic: Hispano o Latino
-    - asian: Asiático
-    - hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
-    - american_indian: Indígena Americano/Nativo de Alaska
-    - other: Otros
-    - opt_out: Prefiero no contestar
+      white: Blanco
+      black: Negro o Afroamericano
+      hispanic: Hispano o Latino
+      asian: Asiático
+      hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
+      american_indian: Indígena Americano/Nativo de Alaska
+      other: Otros
+      opt_out: Prefiero no contestar
     submit: Enviar
     decline: Cerrar
   zendesk_too_young_message: Lo sentimos, los usuarios más jóvenes no pueden registrarse

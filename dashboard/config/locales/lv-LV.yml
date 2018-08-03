@@ -475,14 +475,7 @@ lv:
     save: Saglabāt
   race_interstitial:
     races:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - other: Citi
-    - 
+      other: Citi
     submit: Iesniegt
   zendesk_too_young_message: Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties
     mūsu atbalsta lapā. Tu vari pārlūkot <a href="http://support.code.org">support.code.org</a>

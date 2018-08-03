@@ -749,14 +749,10 @@ sv:
     title: 'Tillval: Hjälp oss att följa våra framsteg med att förbättra mångfalden
       inom datavetenskapen'
     races:
-    - white: Vit
-    - black: Svart eller afroamerikansk
-    - 
-    - 
-    - 
-    - 
-    - other: Annat
-    - opt_out: Föredrar att inte svara
+      white: Vit
+      black: Svart eller afroamerikansk
+      other: Annat
+      opt_out: Föredrar att inte svara
     submit: Skicka in
     decline: Avsluta
   zendesk_too_young_message: Tyvärr, yngre användare kan inte logga in på vår supportsida.
