@@ -30,12 +30,6 @@ export default class WorkshopDetails extends React.Component {
     }
   }
 
-  workshopSubject() {
-    if (this.props.workshop.subject) {
-      return this.props.workshop.subject;
-    }
-  }
-
   sessionDates() {
     return (
       <div className="row">
@@ -89,7 +83,7 @@ export default class WorkshopDetails extends React.Component {
         <div className="span2">
           {this.workshopCourse()}
           <br/>
-          {this.workshopSubject()}
+          {this.props.workshop.subject}
         </div>
       </div>
     );
