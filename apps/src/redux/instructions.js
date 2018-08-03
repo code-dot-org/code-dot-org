@@ -285,6 +285,9 @@ export const determineInstructionsConstants = config => {
     }
     shortInstructions = undefined;
   } else {
+    shortInstructions = instructions;
+    shortInstructions2 = instructions2;
+
     if (
       shortInstructions &&
       !experiments.isEnabled('i18nMarkdownInstructions')
@@ -295,9 +298,6 @@ export const determineInstructionsConstants = config => {
     } else {
       longInstructions = markdownInstructions;
     }
-
-    shortInstructions = instructions;
-    shortInstructions2 = instructions2;
 
     // if the two sets of instructions are identical, only use the short
     // version (such that we dont end up minimizing/expanding between
