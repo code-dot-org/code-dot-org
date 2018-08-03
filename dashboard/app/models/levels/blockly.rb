@@ -273,6 +273,8 @@ class Blockly < Level
         ani_gif_url: 'aniGifURL',
         success_condition: 'fn_successCondition',
         failure_condition: 'fn_failureCondition',
+        markdown_instructions: 'longInstructions',
+        instructions: 'shortInstructions',
       }
       properties.keys.each do |dashboard|
         blockly = overrides[dashboard.to_sym] || dashboard.camelize(:lower)
