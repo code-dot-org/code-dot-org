@@ -1852,7 +1852,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'upgrade_to_teacher is false if matching authentication option is not found' do
     user = create :student, :with_migrated_google_authentication_option
-    refute user.upgrade_to_teacher('some_fake@email.com')
+    refute user.upgrade_to_teacher('some_fake@email.com', {})
     user.reload
     assert_equal ["Email is invalid"], user.errors.full_messages
   end
@@ -1860,14 +1860,25 @@ class UserTest < ActiveSupport::TestCase
   test 'upgrade_to_teacher is true if matching authentication option is found' do
     user = create :student, :with_migrated_google_authentication_option
     auth_option = create :authentication_option, user: user, email: 'example@email.com'
+    email_preference_params = {
+      email_preference_opt_in: 'yes',
+      email_preference_request_ip: '127.0.0.1',
+      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
+      email_preference_form_kind: '0',
+    }
     assert_empty auth_option.email
 
-    assert user.upgrade_to_teacher('example@email.com')
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
     user.reload
     auth_option.reload
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal auth_option, user.primary_contact_info
     assert_equal 'example@email.com', auth_option.email
+    email_preference = EmailPreference.find_by_email('example@email.com')
+    assert email_preference.opt_in
+    assert_equal '127.0.0.1', email_preference.ip_address
+    assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, email_preference.source
+    assert_equal '0', email_preference.form_kind
   end
 
   test 'google_classroom_student? is true if user belongs to a google classroom section as a student' do
