@@ -403,6 +403,43 @@ class UserTest < ActiveSupport::TestCase
     user.valid?
   end
 
+  test "saving non-migrated teacher does not remove cleartext email addresses" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    teacher = create :teacher, email: 'teacher@email.com'
+    teacher.reload
+    assert_equal 'teacher@email.com', teacher.email
+  end
+
+  test "saving migrated teacher does not remove cleartext email addresses" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'teacher@email.com'
+    teacher.reload
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal 'teacher@email.com', teacher.authentication_options.first.email
+  end
+
+  test "saving non-migrated student does not call remove_cleartext_emails" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    create :student, email: 'student@email.com'
+  end
+
+  test "saving migrated student that was previously a teacher removes cleartext email addresses" do
+    user = create :teacher, :with_migrated_email_authentication_option, email: 'example@email.com'
+    user.authentication_options << create(:authentication_option, email: 'another@email.com')
+    user.authentication_options.last.destroy
+
+    # Change user to student to make sure any previous cleartext emails are empty
+    # (including deleted ones and those created when user was a teacher)
+    user.update!(user_type: User::TYPE_STUDENT)
+    user.authentication_options << create(:authentication_option, email: 'third@email.com')
+    user.reload
+    all_auth_options = user.authentication_options.with_deleted
+    assert_equal 3, all_auth_options.count
+    all_auth_options.each do |ao|
+      assert_empty ao.email
+    end
+  end
+
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       assert_creates(User) do
@@ -1852,7 +1889,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'upgrade_to_teacher is false if matching authentication option is not found' do
     user = create :student, :with_migrated_google_authentication_option
-    refute user.upgrade_to_teacher('some_fake@email.com')
+    refute user.upgrade_to_teacher('some_fake@email.com', {})
     user.reload
     assert_equal ["Email is invalid"], user.errors.full_messages
   end
@@ -1860,14 +1897,25 @@ class UserTest < ActiveSupport::TestCase
   test 'upgrade_to_teacher is true if matching authentication option is found' do
     user = create :student, :with_migrated_google_authentication_option
     auth_option = create :authentication_option, user: user, email: 'example@email.com'
+    email_preference_params = {
+      email_preference_opt_in: 'yes',
+      email_preference_request_ip: '127.0.0.1',
+      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
+      email_preference_form_kind: '0',
+    }
     assert_empty auth_option.email
 
-    assert user.upgrade_to_teacher('example@email.com')
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
     user.reload
     auth_option.reload
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal auth_option, user.primary_contact_info
     assert_equal 'example@email.com', auth_option.email
+    email_preference = EmailPreference.find_by_email('example@email.com')
+    assert email_preference.opt_in
+    assert_equal '127.0.0.1', email_preference.ip_address
+    assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, email_preference.source
+    assert_equal '0', email_preference.form_kind
   end
 
   test 'google_classroom_student? is true if user belongs to a google classroom section as a student' do
