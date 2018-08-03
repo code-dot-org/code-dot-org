@@ -285,12 +285,17 @@ export const determineInstructionsConstants = config => {
     }
     shortInstructions = undefined;
   } else {
-    if (experiments.isEnabled('i18nMarkdownInstructions')) {
-      longInstructions = markdownInstructions;
-    } else {
-      // CSF mode - For non-English folks, only use the non-markdown instructions
+    if (
+      shortInstructions &&
+      !experiments.isEnabled('i18nMarkdownInstructions')
+    ) {
+      // CSF mode - For non-English folks, if we have non-markdown instructions
+      // then use only those (and hide the markdown instructions)
       longInstructions = (!locale || locale === ENGLISH_LOCALE) ? markdownInstructions : undefined;
+    } else {
+      longInstructions = markdownInstructions;
     }
+
     shortInstructions = instructions;
     shortInstructions2 = instructions2;
 
