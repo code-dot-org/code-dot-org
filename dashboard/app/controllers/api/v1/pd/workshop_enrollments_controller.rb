@@ -1,5 +1,6 @@
 class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include Api::CsvDownload
+  include ::Pd::WorkshopConstants
   load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: 'create'
 
   OTHER = "Other"
@@ -117,9 +118,9 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   def process_grade(g)
     if g == "#{OTHER} #{EXPLAIN}"
-      !params[:explain_teaching_other].blank? ? "#{OTHER}: #{params[:explain_teaching_other]}" : OTHER
+      params[:explain_teaching_other].present? ? "#{OTHER}: #{params[:explain_teaching_other]}" : OTHER
     elsif g == "#{NOT_TEACHING} #{EXPLAIN}"
-      !params[:explain_not_teaching].blank? ? "#{NOT_TEACHING}: #{params[:explain_not_teaching]}" : NOT_TEACHING
+      params[:explain_not_teaching].present? ? "#{NOT_TEACHING}: #{params[:explain_not_teaching]}" : NOT_TEACHING
     else
       g
     end
@@ -131,7 +132,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   end
 
   def workshop_closed?
-    @workshop.state == ::Pd::Workshop::STATE_ENDED
+    @workshop.state == STATE_ENDED
   end
 
   def workshop_full?

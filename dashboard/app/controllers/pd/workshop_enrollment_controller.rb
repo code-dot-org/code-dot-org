@@ -27,7 +27,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
 
       facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO: Retire old K5 dashboard, and come up with more permanent solution that doesn't require cross-project file dependency.
+        # TODO: Come up with more permanent solution that doesn't require cross-project file dependency.
         bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
         image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
 
