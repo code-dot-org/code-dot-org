@@ -47,10 +47,10 @@ export default class AudioRecorder extends React.Component {
           this.initializeMediaRecorder(stream);
         })
         .catch((err) => {
-          this.recordError(err);
+          this.recordInitializationError(err);
         });
     } else {
-      this.recordError();
+      this.recordInitializationError();
     }
   };
 
@@ -95,7 +95,7 @@ export default class AudioRecorder extends React.Component {
     this.recorder.stop();
   };
 
-  recordError = (err) => {
+  recordInitializationError = (err) => {
     console.log('Audio Initializing Error: ' + err);
     this.setState({error: ErrorType.INITIALIZE});
   };
@@ -115,12 +115,13 @@ export default class AudioRecorder extends React.Component {
 
   render() {
     return (
-      <div style={styles.buttonRow}>
+      <div>
+        {this.state.error === ErrorType.SAVE &&
+          <div>{i18n.audioSaveError()}</div>
+        }
         {this.state.error !== ErrorType.INITIALIZE &&
-          <div>
-            {this.state.error === ErrorType.SAVE &&
-              <div>{i18n.audioSaveError()}</div>
-            }
+          <div style={styles.buttonRow}>
+
             <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}/>
             <span>
               <Button
