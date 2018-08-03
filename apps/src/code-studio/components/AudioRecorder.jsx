@@ -22,7 +22,33 @@ const styles = {
 export default class AudioRecorder extends React.Component {
   state = {
     audioName: 'mysound',
-    recording: false
+    recording: false,
+    errorInitialize: false
+  };
+
+  componentDidMount = () => {
+    //Initialize the media recorder when the component loads
+    this.initializeMediaRecorder();
+  };
+
+  initializeMediaRecorder = () => {
+    //Check if the user has mediaDevices and request permission to use the microphone
+    if (navigator.mediaDevices) {
+      navigator.mediaDevices.getUserMedia({audio: true})
+        .then((stream) => {
+          let mediaRecorder = new MediaRecorder(stream);
+        })
+        .catch((err) => {
+          this.recordError(err);
+        });
+    } else {
+      this.recordError();
+    }
+  };
+
+  recordError = (err) => {
+    console.log('Audio Initializing Error: ' + err);
+    this.setState({errorInitialize: true});
   };
 
   onNameChange = (event) => {
@@ -36,26 +62,33 @@ export default class AudioRecorder extends React.Component {
   render() {
     return (
       <div style={styles.buttonRow}>
-        <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}/>
-        <span>
-          <Button
-            onClick={this.toggleRecord}
-            id="start-stop-record"
-            style={styles.button}
-            color={Button.ButtonColor.blue}
-            icon={this.state.recording ? "stop" : "circle"}
-            text={this.state.recording ? i18n.stop() : i18n.record()}
-            size="large"
-          />
-          <Button
-            onClick={()=>{}}
-            id="cancel-record"
-            style={styles.button}
-            color={Button.ButtonColor.gray}
-            text={i18n.cancel()}
-            size="large"
-          />
-        </span>
+        {!this.state.errorInitialize &&
+          <div>
+            <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}/>
+            <span>
+              <Button
+                onClick={this.toggleRecord}
+                id="start-stop-record"
+                style={styles.button}
+                color={Button.ButtonColor.blue}
+                icon={this.state.recording ? "stop" : "circle"}
+                text={this.state.recording ? i18n.stop() : i18n.record()}
+                size="large"
+              />
+              <Button
+                onClick={()=>{}}
+                id="cancel-record"
+                style={styles.button}
+                color={Button.ButtonColor.gray}
+                text={i18n.cancel()}
+                size="large"
+              />
+            </span>
+          </div>
+        }
+        {this.state.errorInitialize &&
+          <div>{i18n.audioInitializeError()}</div>
+        }
       </div>
     );
   }
