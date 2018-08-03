@@ -50,7 +50,7 @@
     "custom_helper_library": "var wanderTargetPoint={};\r\n\r\n\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\n\r\nfunction moveToward(sprite,distance,target) {\r\n  //The canvas coordinate system is different, hence the need to negate things\r\n  var angleOfMovement=Math.atan2((-1*target.y+sprite.y),(-1*target.x+sprite.x));\r\n  var dx = distance*Math.cos(angleOfMovement);\r\n  var dy = distance*Math.sin(angleOfMovement);\r\n  sprite.x-=dx;\r\n  sprite.y-=dy;\r\n}\r\nfunction followingSprite(target) {\r\n  var behavior = function(sprite) {\r\n    moveToward(sprite,5,target);\r\n  }\r\n  behavior.name = 'followingSprite';\r\n  return behavior;\r\n}",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14390,
-    "markdown_instructions": "There's a mud puddle over in the corner.  \r\n\r\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.  \r\n\r\n---",
+    "markdown_instructions": "There's a mud puddle over in the corner.  \r\n\r\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
     "show_type_hints": "true",
     "instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
     "include_shared_functions": "false",

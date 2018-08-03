@@ -31,7 +31,7 @@ const styles = {
   },
   footer:{
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-start'
   }
 };
 
@@ -153,11 +153,6 @@ class TeacherFeedback extends Component {
               value={this.state.comment}
             />
             <div style={styles.footer}>
-              {this.state.latestFeedback.length > 0 &&
-                <div style={styles.time}>
-                  {i18n.lastUpdated({time: moment(latestFeedback.created_at).fromNow()})}
-                </div>
-              }
               <div style={styles.button}>
                 <Button
                   id="ui-test-submit-feedback"
@@ -173,6 +168,11 @@ class TeacherFeedback extends Component {
                   </span>
                 }
               </div>
+              {this.state.latestFeedback.length > 0 &&
+                <div style={styles.time} id="ui-test-feedback-time">
+                  {i18n.lastUpdated({time: moment(latestFeedback.created_at).fromNow()})}
+                </div>
+              }
             </div>
           </div>
         }

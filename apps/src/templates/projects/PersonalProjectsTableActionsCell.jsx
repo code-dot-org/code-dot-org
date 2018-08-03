@@ -7,6 +7,7 @@ import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
 import {showPublishDialog} from './publishDialog/publishDialogRedux';
 import {unpublishProject} from './projectsRedux';
+import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 
 export const styles = {
   xIcon: {
@@ -21,6 +22,7 @@ class PersonalProjectsTableActionsCell extends Component {
     projectType: PropTypes.string.isRequired,
     showPublishDialog: PropTypes.func.isRequired,
     unpublishProject: PropTypes.func.isRequired,
+    showDeleteDialog: PropTypes.func.isRequired
   };
 
   state = {
@@ -37,6 +39,10 @@ class PersonalProjectsTableActionsCell extends Component {
 
   onUnpublish = () => {
     this.props.unpublishProject(this.props.projectId);
+  };
+
+  onDelete = () => {
+    this.props.showDeleteDialog(this.props.projectId);
   };
 
   render() {
@@ -68,7 +74,7 @@ class PersonalProjectsTableActionsCell extends Component {
         )}
         <MenuBreak/>
         <PopUpMenu.Item
-          onClick={() => console.log("Delete was clicked")}
+          onClick={this.onDelete}
           color={color.red}
         >
           <FontAwesome icon="times-circle" style={styles.xIcon}/>
@@ -86,4 +92,7 @@ export default connect(state => ({}), dispatch => ({
   unpublishProject(projectId) {
     dispatch(unpublishProject(projectId));
   },
+  showDeleteDialog(projectId) {
+    dispatch(showDeleteDialog(projectId));
+  }
 }))(PersonalProjectsTableActionsCell);
