@@ -27,8 +27,8 @@ describe('projectsRedux', () => {
       const nextState = projects(initialState, action);
       const nextAction = publishSuccess('2016-11-30T23:59:59.999-08:00', {channel: 'abcd2'});
       const nextNextState = projects(nextState, nextAction);
-      assert.deepEqual(nextNextState.personalProjectsList.projects[1].channel, 'abcd2');
-      assert.deepEqual(nextNextState.personalProjectsList.projects[1].publishedAt, '2016-11-30T23:59:59.999-08:00');
+      assert.equal(nextNextState.personalProjectsList.projects[1].channel, 'abcd2');
+      assert.equal(nextNextState.personalProjectsList.projects[1].publishedAt, '2016-11-30T23:59:59.999-08:00');
     });
   });
 
@@ -37,12 +37,12 @@ describe('projectsRedux', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
       assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
-      assert.deepEqual(nextState.personalProjectsList.projects[2].channel, 'abcd3');
-      assert.deepEqual(nextState.personalProjectsList.projects[2].publishedAt, '2015-12-31T23:59:59.999-08:00');
+      assert.equal(nextState.personalProjectsList.projects[2].channel, 'abcd3');
+      assert.equal(nextState.personalProjectsList.projects[2].publishedAt, '2015-12-31T23:59:59.999-08:00');
       const nextAction = unpublishSuccess('abcd3');
       const nextNextState = projects(nextState, nextAction);
-      assert.deepEqual(nextNextState.personalProjectsList.projects[2].channel, 'abcd3');
-      assert.deepEqual(nextNextState.personalProjectsList.projects[2].publishedAt, null);
+      assert.equal(nextNextState.personalProjectsList.projects[2].channel, 'abcd3');
+      assert.equal(nextNextState.personalProjectsList.projects[2].publishedAt, null);
     });
   });
 
@@ -51,10 +51,10 @@ describe('projectsRedux', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
       assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
-      assert.deepEqual(nextState.personalProjectsList.projects.length, 4);
+      assert.equal(nextState.personalProjectsList.projects.length, 4);
       const nextAction = deleteSuccess('abcd3');
       const nextNextState = projects(nextState, nextAction);
-      assert.deepEqual(nextNextState.personalProjectsList.projects.length, 3);
+      assert.equal(nextNextState.personalProjectsList.projects.length, 3);
     });
   });
 
@@ -65,7 +65,7 @@ describe('projectsRedux', () => {
       assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
       const nextAction = startRenamingProject('abcd3');
       const nextNextState = projects(nextState, nextAction);
-      assert.deepEqual(nextNextState.personalProjectsList.projects[2].isEditing, true);
+      assert.equal(nextNextState.personalProjectsList.projects[2].isEditing, true);
     });
   });
 
@@ -76,7 +76,7 @@ describe('projectsRedux', () => {
       assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
       const nextAction = updateProjectName('abcd3', "new name");
       const nextNextState = projects(nextState, nextAction);
-      assert.deepEqual(nextNextState.personalProjectsList.projects[2].updatedName, "new name");
+      assert.equal(nextNextState.personalProjectsList.projects[2].updatedName, "new name");
     });
   });
 
@@ -87,10 +87,10 @@ describe('projectsRedux', () => {
       assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
       const nextAction = startRenamingProject('abcd3');
       const nextNextState = projects(nextState, nextAction);
-      assert.deepEqual(nextNextState.personalProjectsList.projects[2].isEditing, true);
+      assert.equal(nextNextState.personalProjectsList.projects[2].isEditing, true);
       const nextNextAction = cancelRenamingProject('abcd3');
       const nextNextNextState = projects(nextNextState, nextNextAction);
-      assert.deepEqual(nextNextNextState.personalProjectsList.projects[2].isEditing, false);
+      assert.equal(nextNextNextState.personalProjectsList.projects[2].isEditing, false);
     });
   });
 });
