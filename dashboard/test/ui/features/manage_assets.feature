@@ -13,6 +13,7 @@ Feature: Manage Assets
     Given I am a student
     And I start a new Game Lab project
     And I append "?enableExperiments=recordAudio" to the URL
+    And I wait for the page to fully load
     And I open the Manage Assets dialog
     Then I click selector "#record-asset" once I see it
     And I wait until element "#stop-record" is visible
