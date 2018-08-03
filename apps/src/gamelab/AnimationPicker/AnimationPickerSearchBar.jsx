@@ -43,6 +43,10 @@ export default class AnimationPickerSearchBar extends React.Component {
 
   onChange = (evt) => this.props.onChange(evt.target.value);
 
+  componentDidMount() {
+    this.searchBox.focus();
+  }
+
   render() {
     return (
       <div style={styles.search}>
@@ -52,6 +56,7 @@ export default class AnimationPickerSearchBar extends React.Component {
           placeholder="Search for images"
           value={this.props.value}
           onChange={this.onChange}
+          ref={(input) => { this.searchBox = input; }}
         />
       </div>
     );

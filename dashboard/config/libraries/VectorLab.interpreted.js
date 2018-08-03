@@ -5,10 +5,9 @@ function register(callback) {
 }
 
 function draw() {
+  background('#444');
   callbacks.forEach(function (callback) {
     callback();
   });
-
-  background('#444');
   drawSprites();
 }
