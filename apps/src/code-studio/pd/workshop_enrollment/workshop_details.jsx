@@ -2,6 +2,7 @@
  * Workshop Details section of the workshop enrollment form
  */
 import React, {PropTypes} from 'react';
+import {WorkshopPropType} from './enrollmentConstants';
 
 const styles = {
   label: {
@@ -14,7 +15,7 @@ const styles = {
 
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
-    workshop: PropTypes.object,
+    workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string)
   };
 

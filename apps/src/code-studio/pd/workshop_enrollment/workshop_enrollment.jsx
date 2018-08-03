@@ -6,15 +6,25 @@ import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import SignInPrompt from './sign_in_prompt';
 import EnrollForm from './enroll_form';
-import {SUBMISSION_STATUSES} from './enrollmentConstants';
+import {
+  SUBMISSION_STATUSES,
+  WorkshopPropType,
+  FacilitatorPropType
+} from './enrollmentConstants';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
-    workshop: PropTypes.object,
+    workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
-    enrollment: PropTypes.object,
-    facilitators: PropTypes.arrayOf(PropTypes.object),
-    sign_in_prompt_data: PropTypes.object
+    enrollment: PropTypes.shape({
+      email: PropTypes.string,
+      first_name: PropTypes.string
+    }),
+    facilitators: PropTypes.arrayOf(FacilitatorPropType),
+    sign_in_prompt_data: PropTypes.shape({
+      info_icon: PropTypes.string,
+      sign_in_url: PropTypes.string
+    })
   };
 
   constructor(props) {
