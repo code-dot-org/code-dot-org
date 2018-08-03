@@ -22,7 +22,6 @@ export default class EnrollForm extends React.Component {
   static propTypes = {
     workshop_id: PropTypes.number.isRequired,
     workshop_course: PropTypes.string,
-    logged_in: PropTypes.bool,
     first_name: PropTypes.string,
     email: PropTypes.string,
     onSubmissionComplete: PropTypes.func
@@ -36,7 +35,7 @@ export default class EnrollForm extends React.Component {
       errors: {}
     };
 
-    if (this.props.logged_in) {
+    if (this.props.email) {
       initialState = Object.assign(initialState, {
         first_name: this.props.first_name,
         email: this.props.email
@@ -105,7 +104,7 @@ export default class EnrollForm extends React.Component {
     this.setState({explain_teaching_other: input});
   };
 
-  onRegister = () => {
+  handleClickRegister = () => {
     if (this.validateRequiredFields()) {
       this.submit();
     }
@@ -227,7 +226,7 @@ export default class EnrollForm extends React.Component {
             validationState={this.state.errors.hasOwnProperty("email") ? ERROR : null}
             errorMessage={this.state.errors.email}
           />
-          {!this.props.logged_in &&
+          {!this.props.email &&
             <FieldGroup
               id="confirm_email"
               label="Confirm Email Address"
@@ -318,7 +317,7 @@ export default class EnrollForm extends React.Component {
           confidentiality as Code.org.
         </p>
         <Button
-          onClick={this.onRegister}
+          onClick={this.handleClickRegister}
         >
           Register
         </Button>
@@ -340,7 +339,7 @@ export default class EnrollForm extends React.Component {
 
     let requiredFields = ['first_name', 'last_name', 'email', 'school_id'];
 
-    if (!this.props.logged_in) {
+    if (!this.props.email) {
       requiredFields.push('confirm_email');
     }
 
@@ -377,7 +376,7 @@ export default class EnrollForm extends React.Component {
       if (!isEmail(this.state.email)) {
         errors.email = "Must be a valid email address";
       }
-      if (!this.props.logged_in && this.state.email !== this.state.confirm_email) {
+      if (!this.props.email && this.state.email !== this.state.confirm_email) {
         errors.confirm_email = "Email addresses do not match";
       }
     }

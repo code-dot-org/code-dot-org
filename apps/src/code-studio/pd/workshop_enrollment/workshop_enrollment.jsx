@@ -14,7 +14,6 @@ export default class WorkshopEnrollment extends React.Component {
     session_dates: PropTypes.arrayOf(PropTypes.string),
     enrollment: PropTypes.object,
     facilitators: PropTypes.arrayOf(PropTypes.object),
-    logged_in: PropTypes.bool,
     sign_in_prompt_data: PropTypes.object
   };
 
@@ -175,7 +174,7 @@ export default class WorkshopEnrollment extends React.Component {
                   <div className ="span6">
                     <h2>Your Information</h2>
                     {
-                      !this.props.logged_in &&
+                      !this.props.enrollment.email &&
                       <SignInPrompt
                         info_icon={this.props.sign_in_prompt_data.info_icon}
                         sign_in_url={this.props.sign_in_prompt_data.sign_in_url}
@@ -184,7 +183,6 @@ export default class WorkshopEnrollment extends React.Component {
                     <EnrollForm
                       workshop_id={this.props.workshop.id}
                       workshop_course={this.props.workshop.course}
-                      logged_in={this.props.logged_in}
                       first_name={this.props.enrollment.first_name}
                       email={this.props.enrollment.email}
                       onSubmissionComplete={this.onSubmissionComplete}
