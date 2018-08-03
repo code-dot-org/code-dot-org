@@ -76,9 +76,6 @@ const styles = {
   buttonsMobile: {
     width: '100%'
   },
-  buttonsDesktop: {
-
-  },
   button: {
     marginLeft: 25,
     marginRight: 25,
@@ -233,7 +230,7 @@ class Notification extends Component {
                 {details}
               </div>
             </div>
-            <div style={desktop ? styles.buttonsDesktop : styles.buttonsMobile}>
+            <div style={desktop ? null : styles.buttonsMobile}>
               {buttonText && (
                 <Button
                   href={buttonLink}
