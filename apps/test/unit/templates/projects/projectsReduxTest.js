@@ -4,6 +4,9 @@ import projects, {
   publishSuccess,
   unpublishSuccess,
   deleteSuccess,
+  startRenamingProject,
+  updateProjectName,
+  cancelRenamingProject
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 
@@ -52,6 +55,42 @@ describe('projectsRedux', () => {
       const nextAction = deleteSuccess('abcd3');
       const nextNextState = projects(nextState, nextAction);
       assert.deepEqual(nextNextState.personalProjectsList.projects.length, 3);
+    });
+  });
+
+  describe('startRenamingProject', () => {
+    it('startRenamingProject sets isEditing to true', () => {
+      const action = setPersonalProjectsList(stubFakePersonalProjectData);
+      const nextState = projects(initialState, action);
+      assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
+      const nextAction = startRenamingProject('abcd3');
+      const nextNextState = projects(nextState, nextAction);
+      assert.deepEqual(nextNextState.personalProjectsList.projects[2].isEditing, true);
+    });
+  });
+
+  describe('updateProjectName', () => {
+    it('updateProjectName saves the new name as updatedName', () => {
+      const action = setPersonalProjectsList(stubFakePersonalProjectData);
+      const nextState = projects(initialState, action);
+      assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
+      const nextAction = updateProjectName('abcd3', "new name");
+      const nextNextState = projects(nextState, nextAction);
+      assert.deepEqual(nextNextState.personalProjectsList.projects[2].updatedName, "new name");
+    });
+  });
+
+  describe('cancelRenamingProject', () => {
+    it('cancelRenamingProject sets isEditing to false', () => {
+      const action = setPersonalProjectsList(stubFakePersonalProjectData);
+      const nextState = projects(initialState, action);
+      assert.deepEqual(nextState.personalProjectsList.projects, stubFakePersonalProjectData);
+      const nextAction = startRenamingProject('abcd3');
+      const nextNextState = projects(nextState, nextAction);
+      assert.deepEqual(nextNextState.personalProjectsList.projects[2].isEditing, true);
+      const nextNextAction = cancelRenamingProject('abcd3');
+      const nextNextNextState = projects(nextNextState, nextNextAction);
+      assert.deepEqual(nextNextNextState.personalProjectsList.projects[2].isEditing, false);
     });
   });
 });
