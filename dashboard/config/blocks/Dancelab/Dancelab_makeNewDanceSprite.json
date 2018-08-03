@@ -1,7 +1,7 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "createNewDanceSprite",
+    "func": "makeNewDanceSprite",
     "inline": false,
     "blockText": "make a new {COSTUME} sprite \n called {NAME} at {LOCATION}",
     "color": [
@@ -14,8 +14,8 @@
         "name": "COSTUME",
         "options": [
           [
-            "Alien",
-            "\"alien\""
+            "Circle",
+            "\"circle\""
           ]
         ]
       },
