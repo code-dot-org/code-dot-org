@@ -20,23 +20,24 @@ const styles = {
 };
 
 export default class AudioRecorder extends React.Component {
-  state = {
-    audioName: 'mysound',
-    recording: false,
-    errorInitialize: false
-  };
+  constructor(props) {
+    super(props);
+    this.recorder = null;
+    this.slices = [];
+    this.state = {
+      audioName: 'mysound',
+      recording: false,
+      errorInitialize: false
+    };
+  }
 
   componentDidMount = () => {
     //Initialize the media recorder when the component loads
-    this.initializeMediaRecorder();
-  };
-
-  initializeMediaRecorder = () => {
     //Check if the user has mediaDevices and request permission to use the microphone
     if (navigator.mediaDevices) {
       navigator.mediaDevices.getUserMedia({audio: true})
         .then((stream) => {
-          let mediaRecorder = new MediaRecorder(stream);
+          this.initializeMediaRecorder(stream);
         })
         .catch((err) => {
           this.recordError(err);
@@ -44,6 +45,31 @@ export default class AudioRecorder extends React.Component {
     } else {
       this.recordError();
     }
+  };
+
+  initializeMediaRecorder = (stream) => {
+    // Set newly initialized mediaRecorder to instance variable
+    this.recorder = new MediaRecorder(stream);
+
+    // Set method to save the data when it becomes available
+    this.recorder.ondataavailable = (e) => {
+      this.slices.push(e.data);
+    };
+
+    // Set method to create data blob after recording has stopped
+    this.recorder.onstop = (e) => {
+      let blob = new Blob(this.slices, {'type': 'audio/mpeg'});
+      this.slices = [];
+      console.log(blob);
+    };
+  };
+
+  startRecord = () => {
+    this.recorder.start();
+  };
+
+  stopRecord = () => {
+    this.recorder.stop();
   };
 
   recordError = (err) => {
@@ -56,6 +82,11 @@ export default class AudioRecorder extends React.Component {
   };
 
   toggleRecord = () => {
+    if (this.state.recording) {
+      this.stopRecord();
+    } else {
+      this.startRecord();
+    }
     this.setState({recording: !this.state.recording});
   };
 
