@@ -15,7 +15,15 @@ require 'cdo/only_one'
 #   text of the question as well as some additional metadata.
 # @returns [String] the text of the question that was asked
 def get_question_details(question_key, questions)
-  return questions[question_key][:text], questions[question_key][:options]
+  return questions[question_key][:text], questions[question_key][:options].to_s
+end
+
+# @param unsanitized [String, nil] the unsanitized string
+# @returns [String, nil] the sanitized version of the string, with newlines stripped and double
+#   quotations escaped. Returns nil on nil input.
+def sanitize_string_for_db(unsanitized)
+  return nil if unsanitized.nil?
+  unsanitized.to_s.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
 end
 
 def write_file(processed_answers)
@@ -32,26 +40,22 @@ def main
     answers = submission.form_data_hash
     questions = submission.questions.summarize
     answers.each do |question_key, answer_value|
-      question_text, _question_options = get_question_details(question_key, questions)
-
-      if question_key = 'whatLicense52'
-        next
-      end
+      question_text, question_options = get_question_details(question_key, questions)
 
       # known issues:
       # whatLicense52 resulting in new line?
       # answer options has double quotes in it, resulting in huge white spaces I can't trim via strip?
       processed_answers << {
-        user_id: submission.user_id,
-        pd_workshop_id: submission.pd_workshop_id,
-        pd_session_id: submission.pd_session_id,
-        day: submission.day,
-        form_id: submission.form_id,
-        submission_id: submission.submission_id,
-        question_id: question_key,
-        question_text: question_text,
-        # answer_options: question_options,
-        answer_value:  answer_value
+        user_id: sanitize_string_for_db(submission.user_id),
+        pd_workshop_id: sanitize_string_for_db(submission.pd_workshop_id),
+        pd_session_id: sanitize_string_for_db(submission.pd_session_id),
+        day: sanitize_string_for_db(submission.day),
+        form_id: sanitize_string_for_db(submission.form_id),
+        submission_id: sanitize_string_for_db(submission.submission_id),
+        question_id: sanitize_string_for_db(question_key),
+        question_text: sanitize_string_for_db(question_text),
+        answer_options: sanitize_string_for_db(question_options),
+        answer_value:  sanitize_string_for_db(answer_value)
       }
     end
   end
