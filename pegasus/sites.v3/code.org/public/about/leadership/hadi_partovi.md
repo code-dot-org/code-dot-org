@@ -46,3 +46,10 @@ Follow Hadi &nbsp;&nbsp;
 <%= view :display_video_thumbnail, id: "commencement", video_code: "mVMKC6t0c8I", caption: "Hadi and Ali Partovi return to their high school as commencement speakers", play_button: 'center' %>
 
 [/col-50]
+
+[col-50]
+
+<%= view :display_video_thumbnail, id: "bloomber", video_code: "BKKZWJV_OOI", caption: "
+Ali and Hadi Partovi on Bloomberg Studio 1.0", play_button: 'center' %>
+
+[/col-50]
