@@ -1236,6 +1236,18 @@ endvariants
     assert_equal assessment_script_levels[0], script_level
   end
 
+  test "self.modern_elementary_courses_available?" do
+    course1_modern = create(:script, name: 'course1-modern', supported_locales: ["en-us", "it-it"])
+    course2_modern = create(:script, name: 'course2-modern', supported_locales: ["fr-fr", "en-us"])
+
+    Script.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
+
+    assert Script.modern_elementary_courses_available?("en-us")
+    assert_not Script.modern_elementary_courses_available?("ch-ch")
+    assert_not Script.modern_elementary_courses_available?("it-it")
+    assert_not Script.modern_elementary_courses_available?("fr-fr")
+  end
+
   private
 
   def has_hidden_script?(scripts)
