@@ -5,8 +5,6 @@
     = javascript_include_tag "js/en_us/common_locale"
     = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
 
-- collapse_box = "collapse_box_xml"
-
 = render partial: 'levels/editors/authored_hints', locals: {f: f}
 .field
   = f.label :edit_code,'Blockly level'
@@ -104,12 +102,7 @@
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-    .min_max_label{data: {toggle: "collapse", target: "#start_xml"}}
-      Open/Close
-  .row.collapse.in{id: "start_xml"}
-    .span8
-      ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
-    #start-preview.span4
+    = render partial: 'levels/editors/collapsed', locals: {f: f, collapse_xml: 'start_xml'}
 
 .field
   - if @level.uses_droplet?
@@ -130,10 +123,10 @@
     = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
     .min_max_label{data: {toggle: "collapse", target: "#recommended_xml"}}
       Open/Close
-  .row.collapse.in{id: "recommended_xml"}
-    .span8
-      ~ f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
-    #recommended-preview.span4
+    .row.collapse.in{id: "recommended_xml"}
+      .span8
+        ~ f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
+      #recommended-preview.span4
 
 - unless @level.uses_droplet?
   .field
