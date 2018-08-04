@@ -43,12 +43,8 @@ export default class AudioRecorder extends React.Component {
     //Check if the user has mediaDevices and request permission to use the microphone
     if (navigator.mediaDevices) {
       navigator.mediaDevices.getUserMedia({audio: true})
-        .then((stream) => {
-          this.initializeMediaRecorder(stream);
-        })
-        .catch((err) => {
-          this.recordInitializationError(err);
-        });
+        .then(this.initializeMediaRecorder)
+        .catch(this.recordInitializationError);
     } else {
       this.recordInitializationError();
     }
@@ -66,11 +62,10 @@ export default class AudioRecorder extends React.Component {
 
     // Set method to create data blob after recording has stopped
     this.recorder.onstop = (e) => {
-      let blob = new Blob(this.slices, {'type': 'audio/mpeg'});
+      const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
       this.slices = [];
       this.saveAudio(blob)
-        .then(() => {console.log('Audio Saved');})
-        .catch(() => {this.setState({error: ErrorType.SAVE});});
+        .then(() => console.log('Audio Saved'));
     };
   };
 
@@ -88,7 +83,7 @@ export default class AudioRecorder extends React.Component {
   };
 
   recordInitializationError = (err) => {
-    console.log('Audio Initializing Error: ' + err);
+    console.error('Audio Initializing Error: ' + err);
     this.setState({error: ErrorType.INITIALIZE});
   };
 
