@@ -46,10 +46,15 @@ he:
         desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
       ComputationalThinking:
         title: חשיבה חישובית
+      SongwritingParameters:
+        title: כתיבת שירים
       Internet:
         title: אינטרנט
       TangramAlgorithms:
         title: טנגרם אלגוריתמים
+      ForLoopFun:
+        title: כיף עם לולאת "עבור"
+        desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב, אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות עם מבנה מתוחכם יותר.
       BinaryImages:
         title: תמונות בינאריות
       DesignRecipe:
@@ -88,8 +93,13 @@ he:
         title: תמונות בינאריות
       courseE_unplugged_internet:
         title: אינטרנט
+      courseE_unplugged_songwriting:
+        title: כתיבת שירים
       courseF_unplugged_tangrams:
         title: טנגרם אלגוריתמים
+      courseF_unplugged_forLoopFun:
+        title: כיף עם לולאת "עבור"
+        desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב, אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות עם מבנה מתוחכם יותר.
       courseB_unplugged_MRF_2018:
         title: חברי הרובוטיים
       PlantASeed_2018:
