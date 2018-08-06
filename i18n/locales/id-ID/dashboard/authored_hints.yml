@@ -1066,6 +1066,10 @@ id:
           Kamu mungkin perlu membaca petunjuk ini beberapa kali untuk memahaminya. Dalam bagian ** bold ** adalah petunjuk tentang bagaimana menggunakan dua loop `repeat` yang kamu perlukan.
       course4_bee_fwp_challenge2_authored_hint:
         courseF_bee_fwp_challenge2_b: "Apakah Anda kehabisan blok 'move forward`?\nCoba gunakan * detik * `for loop` di program utama anda. ** Catatan: ** Berhati-hatilah untuk tidak membingungkan `counter` dengan` counter2` dalam kode anda."
+      course4_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Jangan lupa bahwa anda bisa `repeat` satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` sebuah blok `repeat'!
+        courseD_bee_nested_loops_challenge2_b: Untuk mendapatkan semua 4 permata, pertama gunakan sebuah loop untuk menjauh dari pusat. Belok kiri atau kanan, kemudian gunakan sebuah loop bersarang untuk berpindah dari tumpukan harta pertama ke yang kedua. Jika anda mengulangi loop bersarang cukup waktu, kolektor akan bergerak mengelilingi gua * keseluruhan *!
+        courseD_bee_nested_loops_challenge2_c: Program terpendek yang mencapai semua harta hanya menggunakan satu blok `collect` dan dua putaran.
       course4_harvester_nested_loops_challenge1_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: Anda mungkin telah menggunakan sebuah loop untuk membuat pola zig-zag. Jika anda ingat algoritma itu, anda bisa membuat beberapa tambahan di sini.
       courseA_artist_loops2_authored_hint:
@@ -1103,13 +1107,13 @@ id:
       courseA_artist_loops6_2018_authored_hint:
         courseA_artist_loops6_b: Anda akan perlu 2 blok dalam 2 arah untuk memecahkan teka-teki ini.
       courseA_artist_loops7_authored_hint:
-        courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+        courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
         courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.
       courseA_artist_loops7_2018_authored_hint:
-        courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+        courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
         courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.
       courseA_artist_loops7_forVideo_authored_hint:
-        courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+        courseA_artist_loops7_a: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
         courseA_artist_loops7_b: Tuliskan kode untuk satu gelombang terlebih dahulu, lalu ulangi untuk menggambar dua yang lain.
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Cobalah menjalankan kode untuk melihat apa yang telah ditulis untuk anda.
@@ -1260,6 +1264,9 @@ id:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
+        courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -1282,7 +1289,7 @@ id:
       courseA_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
-        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -1517,11 +1524,11 @@ id:
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_a: Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.
         courseB_artist_loops9_b: Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.
-        courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+        courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
       courseB_artist_loops9_2018_authored_hint:
         courseB_artist_loops9_a: Ingat bahwa melompat blok dapat digunakan untuk memindahkan tanpa menggambar sebuah garis.
         courseB_artist_loops9_b: Anda akan ingin menggunakan blok W untuk memecahkan teka-teki ini.
-        courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+        courseB_artist_loops9_c: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_b: Bila Anda menyelesaikan salah satu dadu, `melompat` ke berikutnya!
         courseB_artist_loops_challenge1_c: 'Anda akan perlu untuk ` langkah ` atau `jump` lebih beberapa garis yang sama dua kali. '
@@ -1904,7 +1911,7 @@ id:
         courseC_artist_prog5_c: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
         courseC_artist_prog5_d: Setiap putaran harus 90 derajat ke kanan.
       courseC_artist_prog5_2018_authored_hint:
-        courseC_artist_prog5_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_artist_prog5_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
         courseC_artist_prog5_c: Anda bisa menggunakan menu drop dwon pada blok `ubah` untuk melihat sudut mana yang Anda butuhkan!
         courseC_artist_prog5_d: Setiap putaran harus 90 derajat ke kanan.
       courseC_artist_prog6_authored_hint:
@@ -1942,7 +1949,7 @@ id:
           - berbelok ke kanan 45 derajat
           
           Ulang pola ini sebanyak 2 kali!
-        courseC_artist_prog7_e: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_artist_prog7_e: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Gunakan sudut 60 derajat untuk membuat atap.
       courseC_artist_prog_challenge1_authored_hint:
@@ -1966,7 +1973,7 @@ id:
       courseC_collector_prog2_authored_hint:
         courseC_collector_prog2_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseC_collector_prog2_2018_authored_hint:
-        courseC_collector_prog2_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_collector_prog2_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseC_collector_prog3_authored_hint:
         courseC_collector_prog3_b: Coba gunakan tombol "step" untuk menjalankan kode satu baris sekaligus. Apakah anda melihat di mana kode yang salah?
         courseC_collector_prog3_c: Jika anda mempunyai masalah untuk memecahkan teka-teki ini, cobalah menulis langkah di selembar kertas.
@@ -1979,7 +1986,7 @@ id:
         courseC_collector_prog4_c: Mencoba opsi ini untuk sebuah jalan.
       courseC_collector_prog4_2018_authored_hint:
         courseC_collector_prog4_a: Jika Anda terjebak, mencoba menulis langkah-langkah pada suatu selembar kertas.
-        courseC_collector_prog4_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_collector_prog4_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
         courseC_collector_prog4_c: Mencoba opsi ini untuk sebuah jalan.
       courseC_collector_prog5_authored_hint:
         courseC_collector_prog5_b: Jika anda memperbaiki satu bug dan program tetap tidak bekerja, gunakan langkah-langkah di atas untuk menemukan lebih banyak bug.
@@ -2186,7 +2193,7 @@ id:
         courseC_maze_loops7_a: Jika pola sulit untuk dilihat, cobalah semua pengkodean pertama dan lihat apakah ulang lagi dan lagi sebelum anda memasukkan loop.
       courseC_maze_loops8_authored_hint:
         courseC_puppy_loops8courseC_maze_loops8_a: Coba pikirkan tentang masalah ini di bagian kecil. Gunakan waktumu. Anda tidak perlu menyelesaikannya pada percobaan pertama!
-        courseC_puppy_loops8courseC_maze_loops8_b: Paruh pertama jalan ini mirip dengan tangga dari teka-teki terakhir, tapi ia menuju ke arah yang berbeda.
+        courseC_puppy_loops8courseC_maze_loops8_b: Paruh pertama jalan ini mirip dengan tangga dari teka-teki terakhir, tetapi ia menuju ke arah yang berbeda.
         courseC_puppy_loops8courseC_maze_loops8_c: "Ada berbagai cara untuk mengatasinya. \nAnda akan ingin menggunakan setidaknya dua loop, dan mengulang satu set tindakan di langkah pertama, kemudian satu `move forward` di sisi lain."
       courseC_maze_loops9_authored_hint:
         courseC_maze_loops9_1: 'Jika anda mengalami masalah saat menemukan di mana kode harus diulang, cobalah menuliskannya di selembar kertas dan mencari sebuah pola. '
@@ -2244,10 +2251,10 @@ id:
         courseC_maze_programming7_b: Jika anda mempunyai masalah untuk memecahkan teka-teki ini, cobalah menulis langkah di selembar kertas.
       courseC_maze_programming8_authored_hint:
         courseC_maze_programming8_a: Ingat Anda bisa menggunakan tombol "Langkah" untuk melihat-lihat kode Anda secara garis demi garis jika Anda terjebak.
-        courseC_maze_programming8_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming8_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseC_maze_programming8_2018_authored_hint:
         courseC_maze_programming8_a: Ingat Anda bisa menggunakan tombol "Langkah" untuk melihat-lihat kode Anda secara garis demi garis jika Anda terjebak.
-        courseC_maze_programming8_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming8_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseC_maze_programming_challenge1_authored_hint:
         courseC_maze_programming_challenge1_a: "Ada banyak cara untuk sampai ke babi. \nGunakan jari Anda untuk menemukan sebuah jalan program itu!"
       courseC_maze_programming_challenge1_2018_authored_hint:
@@ -2663,11 +2670,11 @@ id:
           Bagaimana dengan yang kedua?
           Di mana salahnya?
       courseD_bee_debugging3_authored_hint:
-        courseD_bee_debugging3_a: Adakah tempat dimana lebah melakukan sesuatu yang tidak masuk akal? Apa yang terjadi bila anda mengubah blok tersebut?
+        courseD_bee_debugging3_a: Adakah tempat dimana lebah melakukan sesuatu yang tidak masuk akal? apa yang terjadi bila anda mengubah blok tersebut?
         courseD_bee_debugging3_b: Cobalah menyederhanakan kode menggunakan loop bersarang.
       courseD_bee_debugging4_authored_hint:
         courseD_bee_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
-        courseD_bee_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
+        courseD_bee_debugging4_b: "Jika anda mengalami kesulitan untuk mencari tahu bagaimana membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. Jangan lupa tunjukkan arah belokan!"
       courseD_bee_debugging5_authored_hint:
         courseD_bee_debugging5_b: Setelah anda memiliki loop pertama seperti yang anda inginkan, apa yang tersisa dalam kode anda?
         courseD_bee_debugging5_c: |-
@@ -2678,7 +2685,7 @@ id:
           Coba jalankan melalui kode menggunakan tombol "step". Apakah semuanya baik pada langkah pertama?
           Bagaimana dengan yang kedua?
           Di mana ada yang salah?
-        courseD_bee_debugging6_b: Sepertinya semua langkah yang benar ada di sini, anda hanya butuh lebih banyak dari mereka. Bagaimana anda bisa mengulangi `mendapatkan nektar` dan tindakan`membuat madu ' berkali-kali?
+        courseD_bee_debugging6_b: Sepertinya semua langkah yang benar ada di sini, anda hanya butuh lebih banyak dari mereka. Bagaimana anda bisa mengulangi `get nektar` dan`make honey'  tindakan beberapa kali?
       courseD_bee_debugging7_authored_hint:
         courseD_bee_debugging7_a: "Coba gunakan tombol \"step\". Apakah semuanya benar pada langkah pertama?  \nBagaimana dengan yang kedua?  \nDi mana yang salahnya?  "
         courseD_bee_debugging7_b: Jika ada sesuatu yang perlu terjadi beberapa kali, coba tambahkan loop `repeat`.
@@ -2736,6 +2743,13 @@ id:
         courseD_maze_nestedLoops6_a: Jika anda terjebak, coba tuliskan kode di atas kertas tanpa loop terlebih dulu dan temukan pola.
         courseD_maze_nestedLoops6_b: Loop bersarang `repeat` dapat membantu mengurangi jumlah blok yang digunakan.
         courseD_maze_nestedLoops6_c: Ini akan mengambil dua set loop bertasarang `repeat` untuk menyelesaikan teka-teki ini.
+      courseD_bee_nested_loops_challenge1_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Jangan lupa bahwa anda bisa `repeat` satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` sebuah blok `repeat'!
+        courseD_bee_nested_loops_challenge2_b: Untuk mendapatkan semua 4 permata, pertama gunakan sebuah loop untuk menjauh dari pusat. Belok kiri atau kanan, kemudian gunakan sebuah loop bersarang untuk berpindah dari tumpukan harta pertama ke yang kedua. Jika anda mengulangi loop bersarang cukup waktu, kolektor akan bergerak mengelilingi gua * keseluruhan *!
+        courseD_bee_nested_loops_challenge2_c: Program terpendek yang mencapai semua harta hanya menggunakan satu blok `collect` dan dua putaran.
+      courseD_bee_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Jangan lupa bahwa anda bisa `repeat` satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` sebuah blok `repeat'!
+        courseD_bee_nested_loops_challenge2_d: Program terpendek yang mencapai semua harta hanya menggunakan satu blok `collect` dan dua putaran.
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
           Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
@@ -2798,18 +2812,18 @@ id:
         courseD_collector_debugging3_a: Adakah tempat dimana Laurel melakukan suatu hal yang tidak masuk akal? apa yang terjadi ketika kamu mengganti blok tersebut?
       courseD_collector_debugging4_authored_hint:
         courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
-        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
+        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan untuk mencari tahu bagaimana membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. Jangan lupa tunjukkan arah belokan!"
         courseD_collector_debugging4_c: Loop ini hanya kehilangan satu blok. Bisakah kamu temukan?
       courseD_collector_debugging4_2018_authored_hint:
         courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
-        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
+        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan untuk mencari tahu bagaimana membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. Jangan lupa tunjukkan arah belokan!"
         courseD_collector_debugging4_c: Loop ini hanya kehilangan satu blok. Bisakah kamu temukan?
       courseD_collector_debugging4a_authored_hint:
         courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
-        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
+        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan untuk mencari tahu bagaimana membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. Jangan lupa tunjukkan arah belokan!"
       courseD_collector_debugging4a_2018_authored_hint:
         courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
-        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
+        courseD_collector_debugging4_b: "Jika anda mengalami kesulitan untuk mencari tahu bagaimana membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. Jangan lupa tunjukkan arah belokan!"
       courseD_collector_debugging5_authored_hint:
         courseD_collector_debugging5_b: Setelah anda memiliki loop pertama seperti yang anda inginkan, apa yang tersisa dalam kode anda?
       courseD_collector_debugging5_2018_authored_hint:
@@ -2870,6 +2884,14 @@ id:
       courseD_collector_debugging9_2018_authored_hint:
         courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah ini... tapi mereka semuanya melibatkan belokan!
         courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode sesuai dengan apa yang ada di kepala anda.
+      courseD_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Jangan lupa bahwa anda bisa `repeat` satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` sebuah blok `repeat'!
+        courseD_bee_nested_loops_challenge2_b: Untuk mendapatkan semua 4 permata, pertama gunakan sebuah loop untuk menjauh dari pusat. Belok kiri atau kanan, kemudian gunakan sebuah loop bersarang untuk berpindah dari tumpukan harta pertama ke yang kedua. Jika anda mengulangi loop bersarang cukup waktu, kolektor akan bergerak mengelilingi gua * keseluruhan *!
+        courseD_bee_nested_loops_challenge2_c: Program terpendek yang mencapai semua harta hanya menggunakan satu blok `collect` dan dua putaran.
+      courseD_collector_nested_loops_challenge2_2018_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Jangan lupa bahwa anda bisa `repeat` satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` sebuah blok `repeat'!
+        courseD_bee_nested_loops_challenge2_b: Untuk mendapatkan semua 4 permata, pertama gunakan sebuah loop untuk menjauh dari pusat. Belok kiri atau kanan, kemudian gunakan sebuah loop bersarang untuk berpindah dari tumpukan harta pertama ke yang kedua. Jika anda mengulangi loop bersarang cukup waktu, kolektor akan bergerak mengelilingi gua * keseluruhan *!
+        courseD_bee_nested_loops_challenge2_c: Program terpendek yang mencapai semua harta hanya menggunakan satu blok `collect` dan dua putaran.
       courseD_collector_nested_loops_challenge2a_authored_hint:
         courseD_collector_nested_loops_challenge2a_a: Jangan lupa bahwa anda bisa `repeat` satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` blok `repeat`!
         courseD_collector_nested_loops_challenge2a_b: Bisakah anda mencari cara untuk mendapatkan keempat permata tanpa menggunakan blok lagi dari pada yang dibutuhkan untuk mendapatkan dua?
@@ -3096,65 +3118,75 @@ id:
         courseD_maze_nestedLoops6_c: Ini akan mengambil dua set loop bertasarang `repeat` untuk menyelesaikan teka-teki ini.
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_a: Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
-        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp1_2018_authored_hint:
-        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming1_a: Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
+        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp2_authored_hint:
         courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam workspace dan hubungkan ke blok` when run`.
         courseC_maze_programming2_b: Pastikan semua 3 blok diklik bersama dan dilekatkan pada blok `when run`.
       courseD_maze_ramp2_2018_authored_hint:
+        courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
         courseC_maze_programming2_b: Pastikan semua 3 blok diklik bersama dan dilekatkan pada blok `when run`.
       courseD_maze_ramp4_authored_hint:
+        courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
+        courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
+      courseD_maze_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
         courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
-        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
-        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp5a_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
-        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp5a_2018_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
-        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp5b_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
-        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp5b_2018_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
-        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
       courseD_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
         courseD_maze_ramp7_c: Jika Anda ingin menyederhanakan kode Anda, Anda bisa memasukkan satu lingkaran pengulangan di bagian lain! Ini disebut sebuah bersarang ** lingkaran **.
       courseD_playLab_cond6_authored_hint:
+        courseD_playLab_cond6_a: Tambahkan blok `set masked ninja speed` ke awal program untuk membantu memperlambat ninja.
         courseD_playLab_cond6_b: Anda akan perlu menggunakan sebuah blok `if actor 1 y position > 255` di dalam sebuah blok 'repeat forever' untuk selalu memeriksa apakah bajak laut berada di bawah gurita.
       courseD_playLab_cond6_2018_authored_hint:
+        courseD_playLab_cond6_a: Tambahkan blok `set masked ninja speed` ke awal program untuk membantu memperlambat ninja.
         courseD_playLab_cond6_b: Anda akan perlu menggunakan sebuah blok `if actor 1 y position > 255` di dalam sebuah blok 'repeat forever' untuk selalu memeriksa apakah bajak laut berada di bawah gurita.
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam pernyataan` if`) untuk mtnjaga poin agar tidak dihapus terlalu cepat.
       courseD_playLab_cond6a_2018_authored_hint:
-        courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam pernyataan` if`) untuk menjaga poin agar tidak dihapus terlalu cepat.
+        courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam pernyataan` if`) untuk mtnjaga poin agar tidak dihapus terlalu cepat.
       courseD_playLab_cond6cloneForTest_authored_hint:
         courseD_playLab_cond6_a: Tambahkan blok `set masked ninja speed` ke awal program untuk membantu memperlambat ninja.
         courseD_playLab_cond6_b: Anda akan perlu menggunakan sebuah blok `if actor 1 y position > 255` di dalam sebuah blok 'repeat forever' untuk selalu memeriksa apakah bajak laut berada di bawah gurita.
-        courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam pernyataan` if`) untuk menjaga poin agar tidak dihapus terlalu cepat.
+        courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam pernyataan` if`) untuk mtnjaga poin agar tidak dihapus terlalu cepat.
       courseD_scrat_ramp1_authored_hint:
         courseC_maze_programming1_a: Jika Scrat tidak sampai ke acorn, pastikan ketiga blok itu telah sepenuhnya bentak bersamaan, lalu klik "Run" lagi.
-        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp1_2018_authored_hint:
         courseC_maze_programming1_a: Jika Scrat tidak sampai ke acorn, pastikan ketiga blok itu telah sepenuhnya bentak bersamaan, lalu klik "Run" lagi.
-        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp2_authored_hint:
+        courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
+        courseC_maze_programming2_b: Pastikan ketiga blok 'move forward` terpasang pada blok `when run`.
+      courseD_scrat_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
         courseC_maze_programming2_b: Pastikan ketiga blok 'move forward` terpasang pada blok `when run`.
       courseD_scrat_ramp3_authored_hint:
@@ -3164,27 +3196,27 @@ id:
       courseD_scrat_ramp4_authored_hint:
         courseC_maze_programming4_a: Anda dapat belok kanan atau kiri dari sudut pandang Scrat. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
         courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau acorn.
-        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: Anda dapat belok kanan atau kiri dari sudut pandang Scrat. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
         courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau acorn.
-        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp5_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
       courseD_scrat_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
-        courseD_scrat_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseD_scrat_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
-        courseD_scrat_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseD_scrat_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp8_authored_hint:
         courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
-        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp8_2018_authored_hint:
         courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
-        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'Setengah segi enam memiliki **panjang 30** dan belok kanan **60 derajat**.  '
         courseE_artist_concept_challenge1_b: 'Segitiga 2/3 memiliki **panjang 80** dan belok kanan **120 derajat**. '
@@ -3294,6 +3326,10 @@ id:
         4-5_Artist_Patterns_3_b: Jika kode anda menjadi membingungkan, anda slalu dapat klik "mulai lagi" dan mencoba lagi!
       courseE_farmer_elseif_test_authored_hint:
         grade3_robotFarmer_ConditionalsIntro_8_a: Blok `while path ahead` memungkinkan anda terus berjalan, bahkan jika anda tidak tahu berapa banyak kotak berada di jalan.
+      courseE_farmer_functions1_authored_hint:
+        courseE_farmer_functions1_a: Kali ini kotak peralatan disusun agak sedikit berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa yang kamu miliki.
+      courseE_farmer_functions1_2018_authored_hint:
+        courseE_farmer_functions1_a: Kali ini kotak peralatan disusun agak sedikit berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa yang kamu miliki.
       courseE_farmer_functions4b_authored_hint:
         courseE_farmer_functions4b_a: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseE_farmer_functions4b_2018_authored_hint:
@@ -3306,28 +3342,42 @@ id:
         courseE_farmer_ramp12c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseE_farmer_ramp12a_2018_authored_hint:
         courseE_farmer_ramp12c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
+      courseE_maze_ramp1_authored_hint:
+        courseC_maze_programming1_0: Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
       courseE_maze_ramp13_authored_hint:
         courseD_maze_ramp11_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
+      courseE_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_0: Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
+      courseE_maze_ramp2_authored_hint:
+        courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
+        courseC_maze_programming2_b: Pastikan ketiga blok 'move forward` terpasang pada blok `when run`.
+      courseE_maze_ramp2_2018_authored_hint:
+        courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
+        courseC_maze_programming2_b: Pastikan ketiga blok 'move forward` terpasang pada blok `when run`.
       courseE_maze_ramp4_authored_hint:
-        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
+        courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
+        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseE_maze_ramp4_2018_authored_hint:
-        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
+        courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
+        courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseE_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
       courseE_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
-        courseC_maze_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
-        courseC_maze_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseC_maze_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseE_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
-        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseE_maze_ramp7_2018_authored_hint:
         courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
-        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseE_multi_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
       courseF_artist_for3_authored_hint:
@@ -3436,9 +3486,11 @@ id:
       courseF_maze_ramp15_authored_hint:
         courseF_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
       courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
         courseF_maze_ramp4_b: Untuk mengikuti jalannya, bergerak maju dan berbelok ke satu arah, kemudian bergerak tiga kali sebelum berbalik ke arah berlawanan. Bergerak maju satu kali lagi untuk menjangkau babi.
         courseF_maze_ramp4_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
         courseF_maze_ramp4_b: Untuk mengikuti jalannya, bergerak maju dan berbelok ke satu arah, kemudian bergerak tiga kali sebelum berbalik ke arah berlawanan. Bergerak maju satu kali lagi untuk menjangkau babi.
         courseF_maze_ramp4_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki itu.
       courseF_maze_ramp5_authored_hint:
@@ -3447,13 +3499,13 @@ id:
         courseF_maze_ramp5_a: Coba gunakan tombol "step" untuk menjalankan kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
-        courseF_maze_ramp6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseF_maze_ramp6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
-        courseF_maze_ramp6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseF_maze_ramp6_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseF_maze_ramp7_authored_hint:
         courseF_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok demi blok dan mencari kesalahan.
-        courseF_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda belum berpikir bahwa anda belum menyelesaikan teka-teki itu.
+        courseF_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseF_playlab_variables_challenge2_authored_hint:
         courseF_playlab_variables_challenge2_b: Anda dapat mengubah parameter seberapa jauh sprite anda bergerak salah satu tombol panah ditekan setiap kali.
       courseF_playlab_variables_challenge2_2018_authored_hint:
@@ -3498,6 +3550,13 @@ id:
         grade1_maze_sequenceB_a: Jika anda mengalami masalah, coba tuliskan langkah-langkah di selembar kertas terlebih dahulu.
       grade1_maze_sequenceC_authored_hint:
         grade1_maze_sequenceC_a: Jika anda mengalami masalah, coba tuliskan langkah-langkah di selembar kertas terlebih dahulu.
+      grade2_CaringForNewPet_0_authored_hint:
+        grade2_CaringForNewPet_0: Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
+      grade2_CaringForNewPet_1_authored_hint:
+        2-3_Maze_1_a: Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
+      grade2_CaringForNewPet_3_authored_hint:
+        hint1: Anda bisa belok kanan atau kiri dari sudut pandang burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk ke bawah.
+        hint3: Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau babi.
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
       grade2_CaringForNewPet_7D_authored_hint:
@@ -3584,7 +3643,7 @@ id:
           Coba jalankan melalui kode menggunakan tombol "step". Apakah semuanya baik pada langkah pertama?
           Bagaimana dengan yang kedua?
           Di mana ada yang salah?
-        grade3_Debugging_11_b: Sepertinya semua langkah yang benar ada di sini, anda hanya butuh lebih banyak dari mereka. Bagaimana anda bisa mengulangi `mendapatkan nektar` dan tindakan`membuat madu ' berkali-kali?
+        grade3_Debugging_11_b: Sepertinya semua langkah yang benar ada di sini, anda hanya butuh lebih banyak dari mereka. Bagaimana anda bisa mengulangi `get nektar` dan`make honey'  tindakan beberapa kali?
       grade3_Debugging_2_authored_hint:
         grade3_Debugging_2_a: |-
           Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
@@ -3598,11 +3657,11 @@ id:
           Di mana salahnya?
         grade3_Debugging_3_b: Apakah anda melihat pola? Coba gunakan loop bersarang untuk memecahkan teka-teki ini.
       grade3_Debugging_4_authored_hint:
-        grade3_Debugging_4_a: Adakah tempat dimana lebah melakukan sesuatu yang tidak masuk akal? Apa yang terjadi bila anda mengubah blok tersebut?
+        grade3_Debugging_4_a: Adakah tempat dimana lebah melakukan sesuatu yang tidak masuk akal? apa yang terjadi bila anda mengubah blok tersebut?
         grade3_Debugging_4_b: Cobalah menyederhanakan kode menggunakan loop bersarang.
       grade3_Debugging_8_authored_hint:
         grade3_Debugging_8_a: "Coba gunakan proses debug beberapa kali berturut-turut. \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki, apa yang salah?"
-        grade3_Debugging_8_b: "Jika anda mengalami kesulitan memikirkan cara membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. \nJangan lupa tunjukkan arah belokan!"
+        grade3_Debugging_8_b: "Jika anda mengalami kesulitan untuk mencari tahu bagaimana membuat pola langkah tangga, cobalah menelusuri dengan jari anda dan ucapkan perintah dengan suara keras. Jangan lupa tunjukkan arah belokan!"
       grade3_Debugging_TeacherIDo_authored_hint:
         2-3_Bee_Debugging_4_a: Ada beberapa tempat di mana lebah melakukan sesuatu yang tidak masuk akal? Apa yang terjadi jika anda mengubah blok?
       grade3_Loops_10_authored_hint:
@@ -3817,7 +3876,7 @@ id:
       gradek_artist_loops4_authored_hint:
         artistLoopsK3_a: Coba gunakan apa yang telah Anda pelajari tentang blok berulang untuk menyelesaikan teka-teki ini!
       gradek_artist_loops6_authored_hint:
-        gradek_artist_loops6_a: Tidak tahu di mana harus meletakkan loop? Coba tulis kode langkah demi langkah dan cari sebuah pola.
+        gradek_artist_loops6_a: Tidak tahu di mana harus meletakkan lingkaran? Coba tulis kode step-by-step dan cari sebuah pola.
       gradek_artist_loops7_authored_hint:
         gradek_artist_loops7_a: Cobalah menjalankan kode untuk melihat apa yang telah ditulis untuk anda.
         gradek_artist_loops7_b: Bagaimana anda akan mengulang kode loop yang telah diberikan kepada anda?

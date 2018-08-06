@@ -132,7 +132,7 @@ id:
             Computational Thinking:
               name: Berpikir secara komputasi
             Crowdsourcing:
-              name: Kerumunan
+              name: Sumber kerumunan
             Dice Race:
               name: Dadu ras
             Digital Citizenship:
@@ -140,7 +140,7 @@ id:
             'Farmer: While Loops':
               name: 'Petani: Ketika Pengulangan'
             Functional Suncatchers:
-              name: Fungsional Penangakap Matahari
+              name: Fungsional pengkap matahari
             Internet:
               name: Internet
             Maze:
@@ -148,7 +148,7 @@ id:
             'Maze: Conditionals':
               name: 'Labirin: Kondisional'
             Songwriting:
-              name: Penulisan lagu dengan Parameter
+              name: Menulis lagu
             'Studio: Create a Game':
               name: 'Lab Bermain: Buat sebuah Game'
             'Studio: Create a Story':
@@ -283,7 +283,7 @@ id:
             Intro:
               name: Intro
             Variables:
-              name: Variabel
+              name: variabel
         algebra:
           title: Ilmu Komputer dalam Aljabar
           description: Belajar pemrograman fungsional melalui aljabar
@@ -436,13 +436,13 @@ id:
             Conditionals:
               name: Kondisi
             Functions:
-              name: Fungsi
+              name: fungsi
             Graph Paper Programming:
               name: Pemrograman grafis diatas kertas
             Introduction to Computer Science:
-              name: Pengantar Ilmu Komputer
+              name: Perkenalan ilmu komputer
             Relay Programming:
-              name: Pemrograman relay
+              name: Pemrograman bergiliran
             Song Writing:
               name: Menulis lagu
             The Artist:
@@ -546,7 +546,7 @@ id:
           description: Unit ini membahas tantangan teknis dan pertanyaan yang muncul
             dari kebutuhan untuk mewakili informasi digital di komputer dan mentransferkannya
             antara manusia dan perangkat komputasi.
-          description_short: Jelajahi bagaimana informasi digital diwakili dan ditransfer
+          description_short: Pemrograman
           stages:
             Binary Numbers:
               name: Bilangan Biner
@@ -709,7 +709,14 @@ id:
             PDK5 Intro:
               name: Introduksi PDK5
         cspunit3:
-          description_short: Jelajahi bagaimana informasi digital diwakili dan ditransfer
+          description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer,
+            agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif.
+            kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi
+            lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang
+            dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat
+            pemograman. \r\n\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017.
+            baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
+          description_short: Pemrograman
           stages:
             APIs and Function Parameters:
               name: API dan fungsi parameter
@@ -926,7 +933,7 @@ id:
             Welcome Back!:
               name: Selamat datang kembali!
         cspunit2:
-          description_short: Jelajahi bagaimana informasi digital diwakili dan ditransfer
+          description_short: Pemrograman
           stages:
             Algorithms Detour - How Routers Learn:
               name: Bagaimana belajar router
@@ -1112,7 +1119,7 @@ id:
             Best Practices for Teaching Computer Science:
               name: Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer
             Computer Science Fundamentals:
-              name: Dasar-dasar Ilmu Komputer
+              name: Dasar-dasar ilmu komputer
             Getting Started:
               name: Dapat Dimulai
             Looking Ahead:
@@ -1326,7 +1333,7 @@ id:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Songwriting:
-              name: Penulisan lagu dengan Parameter
+              name: Menulis lagu
             The Big Event:
               name: Acara besar
         vigenere:
@@ -1586,6 +1593,13 @@ id:
             Unit 3 Overview:
               name: 3 satuan ikhtisar
         cspunit3temp:
+          description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer,
+            agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif.
+            kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi
+            lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang
+            dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat
+            pemograman. \r\n\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017.
+            baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
           description_short: Pemrograman
           stages:
             Canvas and Arrays in Apps:
@@ -1670,9 +1684,9 @@ id:
             Wrap-Up:
               name: Penutupan
         cspunit5:
-          description_short: Jelajahi bagaimana informasi digital diwakili dan ditransfer
+          description_short: Pemrograman
         cspunit4:
-          description_short: Jelajahi bagaimana informasi digital diwakili dan ditransfer
+          description_short: Pemrograman
           stages:
             Check Your Assumptions:
               name: Periksa asumsi anda
@@ -2092,7 +2106,7 @@ id:
             Variables and Animation:
               name: Variabel dan Animasi
             Functions:
-              name: Fungsi
+              name: fungsi
             Platform Jumper:
               name: Peloncat platform
             Defender:
@@ -2466,7 +2480,7 @@ id:
             'New Artist: Functions':
               name: 'Seniman baru: fungsi'
             Songwriting:
-              name: Penulisan lagu dengan Parameter
+              name: Menulis lagu
             'Unplugged: Funky Functions':
               name: 'Dicabut: fungsi funky'
         grade1:
@@ -2719,7 +2733,7 @@ id:
             Collisions:
               name: Tumbukan
             Functions:
-              name: Fungsi
+              name: fungsi
             The Game Design Process:
               name: Proses perancangan permainan
               description_student: Pelajaran ini memperkenalkan proses kelas yang
@@ -2750,7 +2764,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: Variabel
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -2831,15 +2845,15 @@ id:
             For Loops:
               name: Untuk Pengulangan
             Functions:
-              name: Fungsi
+              name: fungsi
             Functions with Parameters:
               name: Fungsi dengan parameter
             Loops:
               name: Loop
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
             Variables:
-              name: Variabel
+              name: variabel
             While Loops:
               name: Perulangan Selagi
         algebrapdnext:
@@ -3129,7 +3143,7 @@ id:
             Artist Binary:
               name: Artis Biner
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
             Introduction:
               name: Pendahuluan
         coursee-draft:
@@ -3143,7 +3157,7 @@ id:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Kerumunan
+              name: Sumber kerumunan
             Introduction:
               name: Pendahuluan
             Conditionals:
@@ -3440,7 +3454,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: Variabel
+              name: variabel
             Programming for Entertainment:
               name: Pemrograman untuk Hiburan
             Conditionals:
@@ -3454,7 +3468,7 @@ id:
             Collisions:
               name: Tumbukan
             Functions:
-              name: Fungsi
+              name: fungsi
             The Game Design Process:
               name: Proses perancangan permainan
             Using the Game Design Process:
@@ -3496,7 +3510,7 @@ id:
             Collisions:
               name: Tumbukan
             Functions:
-              name: Fungsi
+              name: fungsi
             The Game Design Process:
               name: Proses perancangan permainan
             Using the Game Design Process:
@@ -3562,7 +3576,7 @@ id:
             Shapes and Randomness:
               name: Bentuk dan keserampangan
             Variables:
-              name: Variabel
+              name: variabel
             Conditionals:
               name: Kondisi
             'Project: Interactive Card':
@@ -3574,7 +3588,7 @@ id:
             Collisions:
               name: Tumbukan
             Functions:
-              name: Fungsi
+              name: fungsi
             The Game Design Process:
               name: Proses perancangan permainan
             Using the Game Design Process:
@@ -3649,7 +3663,7 @@ id:
             Introduction:
               name: Pengantar teka-Teki secara Online
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
           title: Kursus D
           assignment_family_title: Kursus D
         coursee-2017:
@@ -3696,7 +3710,7 @@ id:
             Building a Foundation:
               name: Membangun dasar
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
           title: Kursus E
           assignment_family_title: Kursus E
         coursef-2017:
@@ -3802,7 +3816,7 @@ id:
             Building a Foundation:
               name: Membangun dasar
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -3838,6 +3852,13 @@ id:
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
           description_short: Pemrograman
+          description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer,
+            agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif.
+            kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi
+            lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang
+            dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat
+            pemograman. \r\n\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017.
+            baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
         csd4-draft:
           stages:
             Analysis of Design:
@@ -3859,7 +3880,7 @@ id:
             Building a Foundation:
               name: Membangun dasar
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
             Conditionals:
               name: Kondisi
             Present Your Project:
@@ -3867,7 +3888,7 @@ id:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Kerumunan
+              name: Sumber kerumunan
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3875,7 +3896,7 @@ id:
             Introduction:
               name: Pendahuluan
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
             Conditionals with Cards:
               name: Bersyarat dengan kartu
             Digital Citizenship:
@@ -3899,7 +3920,7 @@ id:
             Building a Foundation:
               name: Membangun dasar
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
         new-e:
           stages:
             Building a Foundation:
@@ -3911,7 +3932,7 @@ id:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Kerumunan
+              name: Sumber kerumunan
         new-f:
           stages:
             Building a Foundation:
@@ -4029,7 +4050,7 @@ id:
             Building a Foundation:
               name: Membangun dasar
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
             Introduction:
               name: Pendahuluan
             Conditionals:
@@ -4039,7 +4060,7 @@ id:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Kerumunan
+              name: Sumber kerumunan
         course-f-2018:
           stages:
             Building a Foundation:
@@ -4077,7 +4098,7 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
-              name: Variabel
+              name: variabel
             Booleans Unplugged:
               name: Booleans dicabut
             Conditionals:
@@ -4091,7 +4112,7 @@ id:
             Collisions:
               name: Tumbukan
             Functions:
-              name: Fungsi
+              name: fungsi
             The Game Design Process:
               name: Proses perancangan permainan
             Using the Game Design Process:
@@ -4113,7 +4134,7 @@ id:
                 mampu untuk gambar program seperti yang mereka buat dengan alat gambar
                 pada pelajaran sebelumnya.
             Variables:
-              name: Variabel
+              name: variabel
               description_student: Pelajaran ini memperkenalkan variabel sebagai cara
                 untuk label nomor pada sebuah program atau menyimpan nilai secara
                 acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
@@ -4187,7 +4208,7 @@ id:
             Collisions:
               name: Tumbukan
             Functions:
-              name: Fungsi
+              name: fungsi
             The Game Design Process:
               name: Proses perancangan permainan
               description_student: Pelajaran ini memperkenalkan proses kelas yang
@@ -4271,7 +4292,7 @@ id:
             Building a Foundation:
               name: Membangun dasar
             Nested Loops:
-              name: Perulangan bertingkat
+              name: Perulangan bercabang
             'Events: The Big Event':
               name: Acara besar
             Revise Your Project:
@@ -4285,7 +4306,7 @@ id:
             Conditionals with Cards:
               name: Bersyarat dengan kartu
             'Functions: Songwriting':
-              name: Penulisan lagu dengan Parameter
+              name: Menulis lagu
             Screen Out the Mean:
               name: Berarti keluar layar
             The Power of Words:
@@ -4303,9 +4324,9 @@ id:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Kerumunan
+              name: Sumber kerumunan
             Relay Programming:
-              name: Pemrograman relay
+              name: Pemrograman bergiliran
         courseb-2018:
           assignment_family_title: Kursus B
           stages:
@@ -4335,7 +4356,7 @@ id:
             Graph Paper Programming:
               name: Pemrograman grafis diatas kertas
             Relay Programming:
-              name: Pemrograman relay
+              name: Pemrograman bergiliran
             Introduction to Online Puzzles:
               name: Pengantar teka-Teki secara Online
         coursec-2018:
@@ -4386,7 +4407,7 @@ id:
               description_student: Merasakan kekuatan seperti yang anda membangun
                 anda sendiri Peran Bintang Permainan dalam pelajaran ini.
             'Functions: Songwriting':
-              name: Penulisan lagu dengan Parameter
+              name: Menulis lagu
             Determine the Concept:
               description_student: "Kami tidak memberikan rahasia! \nPelajaran ini
                 bisa menggunakan semua keterampilan yang telah anda pelajari sejauh
@@ -4407,7 +4428,7 @@ id:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Kerumunan
+              name: Sumber kerumunan
             Conditionals with Cards:
               name: Bersyarat dengan kartu
             Minecraft Hour of Code:
