@@ -2,8 +2,9 @@ import zip from 'lodash/zip';
 import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
-import { install, installCustomBlocks } from '@cdo/apps/gamelab/blocks';
+import { install, customInputTypes } from '@cdo/apps/gamelab/blocks';
 import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
+import { installCustomBlocks } from '@cdo/apps/block_utils';
 
 const customSimpleDialog = function ({bodyText, prompt, promptPrefill, onCancel: callback}) {
   if (prompt) {
@@ -28,7 +29,11 @@ Blockly.inject(document.getElementById('blockly-container'), {
 
 const blockPool = JSON.parse(document.querySelector('script[data-blockpool').dataset.blockpool);
 install(Blockly);
-installCustomBlocks(Blockly, {}, blockPool, null, true);
+installCustomBlocks({
+  blockly: Blockly,
+  blockDefinitions: blockPool,
+  customInputTypes, // TODO: generalize for other app types.
+});
 
 const DEFAULT_NAME = 'acting';
 

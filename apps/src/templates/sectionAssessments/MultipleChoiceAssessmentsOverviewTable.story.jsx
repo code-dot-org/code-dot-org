@@ -1,5 +1,5 @@
 import React from 'react';
-import MultipleChoiceAssessmentsOverviewTable from './MultipleChoiceAssessmentsOverviewTable';
+import {UnconnectedMultipleChoiceAssessmentsOverviewTable} from './MultipleChoiceAssessmentsOverviewTable';
 import i18n from '@cdo/locale';
 
 const multipleChoiceData = [
@@ -67,8 +67,10 @@ export default storybook => {
         name: 'Assessment multiple choice with 7 answers',
         description: 'Ability to see assessment overview for a section',
         story: () => (
-            <MultipleChoiceAssessmentsOverviewTable
+            <UnconnectedMultipleChoiceAssessmentsOverviewTable
               questionAnswerData={multipleChoiceData}
+              openDialog={()=>{}}
+              setQuestionIndex={()=>{}}
             />
         )
       },
@@ -76,13 +78,15 @@ export default storybook => {
         name: 'Assessment multiple choice with 3 answers',
         description: 'Ability to see assessment overview for a section',
         story: () => (
-            <MultipleChoiceAssessmentsOverviewTable
+            <UnconnectedMultipleChoiceAssessmentsOverviewTable
               questionAnswerData={multipleChoiceData.map(question => {
                 return {
                   ...question,
                   answers: question.answers.slice(0,2),
                 };
               })}
+              openDialog={()=>{}}
+              setQuestionIndex={()=>{}}
             />
         )
       },

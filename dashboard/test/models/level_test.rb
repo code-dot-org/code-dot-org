@@ -212,6 +212,15 @@ class LevelTest < ActiveSupport::TestCase
       level.properties['initial_dirt']
   end
 
+  test 'creating custom level from file sets level_concept_difficulty' do
+    Level.find_by_name('K-1 Bee 2')&.destroy
+    assert_nil Level.find_by_name('K-1 Bee 2')
+    level = LevelLoader.load_custom_level(LevelLoader.level_file_path('K-1 Bee 2'))
+    refute_nil Level.find_by_name('K-1 Bee 2')
+
+    assert_equal 3, level.level_concept_difficulty.sequencing
+  end
+
   test 'debugging info for exceptions in load_custom_level' do
     LevelLoader.load_custom_level('xxxxx')
   rescue Exception => e
@@ -577,7 +586,10 @@ EOS
     custom_i18n = {
       'data' => {
         'callouts' => {
-          "#{level_name}_callout" => []
+          "#{level_name}_callout" => {
+            first: nil,
+            second: nil
+          }
         }
       }
     }

@@ -16,6 +16,7 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
     totalStudentCount: PropTypes.number,
     totalStudentSubmissions: PropTypes.number,
     studentId: PropTypes.number,
+    openDialog: PropTypes.func.isRequired,
   };
 
   render() {
@@ -32,6 +33,7 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
             </h2>
             <MultipleChoiceAssessmentsOverviewTable
               questionAnswerData={questionAnswerData}
+              openDialog={this.props.openDialog}
             />
           </div>
         }

@@ -13,7 +13,7 @@
 #   usage. Given the complexity of the code base, we decided not to try to fork it
 #   to add the needed features.
 
-require 'aws-sdk'
+require 'aws-sdk-sqs'
 require 'logger'
 require_relative 'messages_handler'
 require_relative 'metrics'

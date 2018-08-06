@@ -1,7 +1,5 @@
-# coding: utf-8
 require 'cdo/url_converter'
 
-# coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
@@ -368,6 +366,15 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
   # editor is open, the first if it isn't
+  @browser.execute_script(
+    "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
+    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))"
+  )
+rescue
   script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
     "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
   @browser.execute_script(script)
@@ -377,6 +384,14 @@ And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # jQuery needs \\s to allow :s and .s in ID selectors
   # Escaping those gives us \\\\ per-character
   category_selector = "#\\\\:#{id}\\\\.label"
+  @browser.execute_script(
+    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))"
+  )
+rescue
   @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
 end
 
@@ -881,16 +896,7 @@ def generate_user(name)
   return email, password
 end
 
-def generate_teacher_student(name, teacher_authorized)
-  email, password = generate_user(name)
-
-  steps %Q{
-    Given I create a teacher named "Teacher_#{name}"
-  }
-
-  # enroll in a plc course as a way of becoming an authorized teacher
-  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
-
+def create_section_and_join_as_student(name, email, password)
   individual_steps %Q{
     Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
@@ -908,6 +914,54 @@ def generate_teacher_student(name, teacher_authorized)
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+def generate_teacher_student(name, teacher_authorized)
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "Teacher_#{name}"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
+
+  create_section_and_join_as_student(name, email, password)
+end
+
+def generate_two_teachers_per_student(name, teacher_authorized)
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "First_Teacher"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["First_Teacher"][:email]) if teacher_authorized
+
+  create_section_and_join_as_student(name, email, password)
+
+  steps %Q{
+    Given I create a teacher named "Second_Teacher"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Second_Teacher"][:email]) if teacher_authorized
+
+  individual_steps %Q{
+    Then I am on "http://studio.code.org/home"
+    And I dismiss the language selector
+
+    Then I see the section set up box
+    And I create a new section
+    And I save the section url
+  }
+  individual_steps %Q{
+    Then I sign out
+    And I sign in as "#{name}"
+    And I am on "#{@section_url}"
     And I wait until I am on "http://studio.code.org/home"
   }
 end
@@ -964,6 +1018,10 @@ end
 
 And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   generate_teacher_student(name, false)
+end
+
+And(/^I create two teachers associated with a student named "([^"]*)"$/) do |name|
+  generate_two_teachers_per_student(name, false)
 end
 
 And(/^I create an authorized teacher-associated student named "([^"]*)"$/) do |name|
@@ -1042,6 +1100,16 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button" to load a new page
     And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I submit this level$/) do
+  steps %Q{
+    And I press "runButton"
+    And I wait to see "#submitButton"
+    And I press "submitButton"
+    And I wait to see ".modal"
+    And I press "confirm-button" to load a new page
   }
 end
 
@@ -1439,6 +1507,11 @@ def get_section_id_from_table(row_index)
   section_id
 end
 
+And /^element "([^"]*)" contains text matching "([^"]*)"$/ do |selector, regex_text|
+  contents = @browser.execute_script("return $(#{selector.dump}).text();")
+  expect(contents.match(regex_text).nil?).to eq(false)
+end
+
 Then /^I scroll the "([^"]*)" element into view$/ do |selector|
   @browser.execute_script("$('#{selector}')[0].scrollIntoView(true)")
 end
@@ -1470,4 +1543,11 @@ Then /^I sign out using jquery$/ do
   JAVASCRIPT
   @browser.execute_script(code)
   wait_short_until {@browser.execute_script('return window.signOutComplete;')}
+end
+
+Then /^I open the Manage Assets dialog$/ do
+  steps <<-STEPS
+    Then I click selector ".settings-cog"
+    And I click selector ".pop-up-menu-item"
+  STEPS
 end

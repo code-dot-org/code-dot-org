@@ -31,6 +31,13 @@ namespace :seed do
     'course3',
     'course4',
     'coursea-2017',
+    'courseb-2017',
+    'coursec-2017',
+    'coursed-2017',
+    'coursee-2017',
+    'coursef-2017',
+    'express-2017',
+    'pre-express-2017',
     'coursea-2018',
     'csp1-2017',
     'csp2-2017',
@@ -53,6 +60,7 @@ namespace :seed do
     'csp-create-2018',
     'csppostap-2018',
     'events',
+    'express-2017',
     'flappy',
     'frozen',
     'hero',
@@ -100,6 +108,7 @@ namespace :seed do
     :dsls,
     :blocks,
     :shared_blockly_functions,
+    :libraries,
   ].freeze
 
   task scripts: SCRIPTS_DEPENDENCIES do
@@ -168,6 +177,10 @@ namespace :seed do
 
   task shared_blockly_functions: :environment do
     SharedBlocklyFunction.load_records
+  end
+
+  task libraries: :environment do
+    Library.load_records
   end
 
   # Generate the database entry from the custom levels json file
