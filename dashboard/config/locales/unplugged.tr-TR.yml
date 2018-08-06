@@ -150,7 +150,7 @@ tr:
           tekrar kullanmak istediğiniz kod parçalarını) kullanıyorlar. İp ve boncuk
           kullanarak kolye yapın.
       SongwritingParameters:
-        title: Şarkı Yazarlığı
+        title: Şarkı yazma
         desc: Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl parametre
           geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme).
       DiceRace:
@@ -244,24 +244,24 @@ tr:
         title: Bağımsız (Unplugged) Döngüler
         desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
       courseB_unplugged_MRF:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bu derste arkadaşlarınızı 'programlayacaksınız'!
       courseB_unplugged_loopyMRF:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Tıpkı 'Benim Robot Arkadaşlarım'da olduğu gibi, arkadaşlarınızı programlayacaksınız,
           ama bu kez döngülerle!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
           öğreneceksiniz.
       courseD_unplugged_digitalCitizenship:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education: Özel ve Kişisel Bilgi '
         desc: Bugün, özel ve kişisel bilgiler arasındaki farkı öğreneceksiniz!
       courseF_unplugged_powerOfWords:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
           öğreneceksiniz.
       deeper learning description:
@@ -308,7 +308,7 @@ tr:
         desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor.
           Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
       courseD_unplugged_graphPaperProgramming:
-        title: Grafikli Kağıdıyla Programlama
+        title: Grafik Kağıdı Programlama
         desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
           kullanarak sınfı bir çizim oluşturmaya yönlendirir.
       courseD_unplugged_relayProgramming:
@@ -346,7 +346,7 @@ tr:
         desc: Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler.
           Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır.
       courseE_unplugged_songwriting:
-        title: Şarkı Yazarlığı
+        title: Şarkı yazma
         desc: Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl parametre
           geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme).
       courseF_unplugged_tangrams:
@@ -430,14 +430,14 @@ tr:
           öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve
           öğrenciler basılan tuşa göre eylemde bulunacak.
       GraphPaperProgramming_2018:
-        title: Grafikli Kağıdıyla Programlama
+        title: Grafik Kağıdı Programlama
         desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
           kullanarak sınfı bir çizim oluşturmaya yönlendirir.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
           öğreneceksiniz.
       Conditionals_2018:

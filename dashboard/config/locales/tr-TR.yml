@@ -23,13 +23,13 @@ tr:
       user:
         name: Görünen İsim
         name_example: Görüntü adı <br/> (Süpe Kodcu veya Irmak K.)
-        email: E-posta
+        email: e-posta
         parent_email: Veli e-posta
         personal_email: |
           Kişisel e-posta adresi<a href="%{url}">(eğer kişisel e-posta adresiniz yoksa buraya tıklayın)</a>
            
         username: kullanıcı adı
-        password: şifre
+        password: Parola
         password_confirmation: Şifre doğrulama
         current_password: Geçerli Şifre
         locale: Dil
@@ -70,7 +70,7 @@ tr:
   courses_page:
     title_student: Code Studio'da Öğrenin
     title_teacher: Kod Stüdyo ile öğret
-  unplugged_activity: Bağlantısız Etkinlik
+  unplugged_activity: Bilgisayarsız Etkinlik
   of: "/"
   more: DAHA FAZLA
   less: DAHA AZ
@@ -191,7 +191,7 @@ tr:
     school_organization_zip: Okul/Kuruluş Posta Kodu
   signin_form:
     title: Zaten bir hesabınız var mı? Oturum Aç
-    login: E-posta
+    login: e-posta
     login_username: E-posta veya Kullanıcı Adı
     password: Parola
     remember: Beni hatırla
@@ -248,7 +248,7 @@ tr:
     type:
       picture: Görsel Şifre
       word: Gizli Sözcük
-      email: E-posta
+      email: e-posta
       google_classroom: Google Sınıf
       clever: Clever
   follower:
@@ -318,7 +318,7 @@ tr:
       teacher_community: Öğretmen topluluğu
       professional_learning: Profesyonel öğrenme
       documentation: Belgeler
-      tutorials: Öğreticiler
+      tutorials: Eğitmler
       educate_overview: Eğitimci genel bakış
       educate_elementary: İlköğretim Okulu
       educate_middle: Ortaokul
@@ -652,7 +652,7 @@ tr:
     more: Daha Fazla
     feedback: Geri besleme sağla
     translate: Kendi dilinize çevirmemiz için bize yardım edin
-    support: Destek
+    support: Yardım ve Topluluk
     support_url: http://support.code.org
     tos_short: Koşullar
     tos: Şartlar
@@ -754,7 +754,7 @@ tr:
       body_short: Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış kurslarımızda
         öğrenin.
     hoc2014:
-      try_new_tutorial: Yeni Kodlama Saati öğreticimizi beta halinde deneyin
+      try_new_tutorial: Yeni Kod Saati eğitimimizi beta halinde deneyin
       try_frozen: Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı
     gallery:
       title: Galeri
@@ -762,8 +762,8 @@ tr:
         görsellerine göz atın
     gamelab:
       title: Oyun Laboratuvarı
-      body: Oyun labı basit animasyonları ve oyunları nesnelerle ve etkilesimli karakterlerle
-        beraber programlayabileceğin bir uygulama geliştirme ortamıdır.
+      body: Oyun labaratuarı basit animasyonları ve oyunları nesnelerle ve etkileşimli
+        karakterlerle beraber programlayabileceğin bir uygulama geliştirme ortamıdır.
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
     hoc-encryption:
@@ -776,7 +776,7 @@ tr:
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
     frozen:
-      title: Donmuş
+      title: Karlar Ülkesi
     starwars:
       title: Yıldız Savaşları
     infinity:
@@ -785,10 +785,10 @@ tr:
         Lab'i kullanın.
     minecraft:
       title: Minecraft
-      body: Kod aracılığıyla Minecraft dünyasını keşfedin.
+      body: Minecraft dünyasını kodlamayla keşfet
     minecraft2016:
       title: Minecraft
-      body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde
+      body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde
         programla.
     hero:
       title: Minecraft
@@ -848,7 +848,7 @@ tr:
     help_resources: Yardım ve kaynaklar
     help_support: Yardım ve Destek
     documentation: Belgeler
-    tutorials: Öğreticiler
+    tutorials: Eğitmler
   multi:
     wrong_title: Yanlış cevap
     wrong_body: Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!
@@ -966,14 +966,7 @@ tr:
       ilerlememizi izlememize yardımcı olun'
     message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
-      white: Beyaz
-      black: Siyahi veya Afrika kökenli Amerikalı
-      hispanic: İspanyol veya Latin
-      asian: Asyalı
-      hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
-      american_indian: Amerikalı Kızılderili / Alaska Yerlisi
       other: Diğer
-      opt_out: Söylememek istemiyorum
     submit: Gönder
     decline: Kapat
   zendesk_too_young_message: Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar.
@@ -1214,7 +1207,7 @@ tr:
   view_all_units: Tüm üniteleri göster
   pd:
     form_labels:
-      email: E-posta
+      email: e-posta
       school_name: Okulun Adı
       school_city: Okulun bulunduğu şehir
       school_country: Okulun bulunduğu ülke
@@ -1241,4 +1234,6 @@ tr:
   cookie_banner:
     accept: Kabul ediyorum
   gdpr_dialog:
+    message: Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne
+      gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
     true: Evet

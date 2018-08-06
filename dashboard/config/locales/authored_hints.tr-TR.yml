@@ -1668,9 +1668,9 @@ tr:
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       course3_bee_debugging_challenge1_authored_hint:
-        courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışıyor?
-          Arıların neden geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde
-          ne kadar nektar toplamalı?
+        courseD_bee_debugging_challenge1_a: Bu programın neden ilk yarısı çalıştı?
+          Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden
+          her geçtiklerinde arılar ne kadar nektar toplarlar?
         courseD_bee_debugging_challenge1_b: Dönüş yolunda arının aynı deseni takip
           etmesini sağlayın. Arının peteğin üzerinde hareket ettiği her defasında
           ne kadar bal yapmaya ihtiyacı var?
@@ -4048,7 +4048,7 @@ tr:
         courseB_starWars_prog4_a: Bir defada bir parça kod yazabileceğinizi ve oradan
           nereye gideceğinizi bulmak için kodu çalıştırabileceğinizi unutmayın.
         courseB_starWars_prog4_b: |-
-          Daha kısa kod için `tekrar et` bloğunu kullanmayı deneyin.
+          Daha kısa bir program için "tekrarla" bloğu kullanabilir misin?
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -4057,7 +4057,7 @@ tr:
         courseB_starWars_prog4_a: Bir defada bir parça kod yazabileceğinizi ve oradan
           nereye gideceğinizi bulmak için kodu çalıştırabileceğinizi unutmayın.
         courseB_starWars_prog4_b: |-
-          Daha kısa kod için `tekrar et` bloğunu kullanmayı deneyin.
+          Daha kısa bir program için "tekrarla" bloğu kullanabilir misin?
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -4093,7 +4093,7 @@ tr:
         courseB_starWars_prog6_a: Daha kısa kod için `tekrar et` bloğunu kullanmayı
           deneyin.
         courseB_starWars_prog6_b: |-
-          Daha kısa kod için `tekrar et` bloğunu kullanmayı deneyin.
+          Daha kısa bir program için "tekrarla" bloğu kullanabilir misin?
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -5776,9 +5776,9 @@ tr:
           Bunların ikisini çalışma alanındakiler ve araç kutusu ile yapabilir misiniz?
 
       courseD_bee_debugging_challenge1_authored_hint:
-        courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışıyor?
-          Arıların neden geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde
-          ne kadar nektar toplamalı?
+        courseD_bee_debugging_challenge1_a: Bu programın neden ilk yarısı çalıştı?
+          Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden
+          her geçtiklerinde arılar ne kadar nektar toplarlar?
         courseD_bee_debugging_challenge1_b: Dönüş yolunda arının aynı deseni takip
           etmesini sağlayın. Arının peteğin üzerinde hareket ettiği her defasında
           ne kadar bal yapmaya ihtiyacı var?
@@ -5789,9 +5789,9 @@ tr:
           * 3 bal yap
           * Geriye git
       courseD_bee_debugging_challenge1_2018_authored_hint:
-        courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışıyor?
-          Arıların neden geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde
-          ne kadar nektar toplamalı?
+        courseD_bee_debugging_challenge1_a: Bu programın neden ilk yarısı çalıştı?
+          Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden
+          her geçtiklerinde arılar ne kadar nektar toplarlar?
         courseD_bee_debugging_challenge1_b: Dönüş yolunda arının aynı deseni takip
           etmesini sağlayın. Arının peteğin üzerinde hareket ettiği her defasında
           ne kadar bal yapmaya ihtiyacı var?
