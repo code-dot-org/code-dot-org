@@ -559,7 +559,7 @@ mi:
         e whakaatu ana i ngā pūāhua Disney Infinity.
     minecraft:
       title: Mahimaina
-      body: Tūhuratia tētahi ao Mahimaina mā roto mai i te waehere.
+      body: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
     minecraft2016:
       title: Mahimaina
       body: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga
@@ -718,14 +718,6 @@ mi:
     title: 'He kōwhiringa: Tēnā āwhinatia mātou ki te aroturuki i tō mātou whanaketanga
       ki te whakapai i te kanorautanga o te pūtaiao rorohiko'
     message: Please tell us your race (check all that apply)
-    races:
-      white: White
-      black: Black or African American
-      hispanic: Hispanic or Latino
-      asian: Asian
-      hawaiian: Native Hawaiian or other Pacific Islander
-      american_indian: American Indian/Alaska Native
-      opt_out: Kāore i te hiahia kia uruparetia
     submit: Tāpaetia
     decline: Kati
   zendesk_too_young_message: Kia manawanui mai, kāore e whakaae ana mā te tamaiti
