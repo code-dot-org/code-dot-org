@@ -237,7 +237,7 @@ sl:
       classroom: Učiteljeva domača stran
       district_dashboard: Nadzorna plošča za okrožje
       label: Živjo %{username}
-      stats: Moj napredek
+      stats: Studio za kodiranje
       settings: Moj račun
       logout: Izpis
       signin: Prijava
@@ -399,7 +399,7 @@ sl:
     more: Več
     feedback: Povratne informacije
     translate: Pomagajte nam prevesti v vaš jezik
-    support: Podpora
+    support: Pomoč in Skupnosti
     support_url: http://support.code.org/
     tos_short: Pravila
     tos: Pogoje storitve
@@ -498,9 +498,11 @@ sl:
       title: Neskončen igralni laboratorij
     minecraft:
       title: Minecraft
-      body: Raziskuj Minecraft svet s pomočjo kode.
+      body: Razišči svet Minecraft-a s pomočjo kode
     minecraft2016:
       title: Minecraft
+      body: Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici
+        Minecrafta.
     hero:
       title: Minecraft
     unplugged:
@@ -588,14 +590,7 @@ sl:
     save: Shrani
   race_interstitial:
     races:
-      white: Bela
-      black: Črna ali Afroameričan
-      hispanic: Hispanic ali Latino
-      asian: Azijske
-      hawaiian: Domorodec Havajev ali drugega Pacifiškega otoka
-      american_indian: Ameriški indijanec/Alaskin domorodec
       other: Drugi
-      opt_out: Raje ne bi odgovoril
     submit: Pošlji
     decline: Zapri
   zendesk_too_young_message: Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa

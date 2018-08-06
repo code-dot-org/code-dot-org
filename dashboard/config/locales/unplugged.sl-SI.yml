@@ -83,6 +83,7 @@ sl:
           ki jih želimo uporabiti večkrat), da sestavijo lovilce svetlobe s pomočjo
           nitk in koraldic.
       SongwritingParameters:
+        title: Napiši pesem
         desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju
           in klicanju funkcije.
       DiceRace:
@@ -194,6 +195,7 @@ sl:
           da bi dokončali nalogo kot razred, kar je bolj učinkovito kot če bi učenec
           poskušal nalogo rešiti sam.
       courseE_unplugged_songwriting:
+        title: Napiši pesem
         desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju
           in klicanju funkcije.
       courseF_unplugged_tangrams:
