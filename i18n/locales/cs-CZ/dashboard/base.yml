@@ -17,7 +17,7 @@ cs:
         name_example: 'Zobrazované jméno <br/> (např. Cool kodér nebo Jana S.)'
         email: 'E-mail'
         username: 'uživatelské jméno'
-        password: 'heslo'
+        password: 'Heslo'
         password_confirmation: 'Potvrzení hesla'
         current_password: 'Současné heslo'
         locale: 'Jazyk'
@@ -316,7 +316,7 @@ cs:
     teacher_student_count_one: Máš %{count} studenta.
     teacher_student_count: Máš %{count} studentů.
     teacher_averages: Tví studenti v průměru získali %{trophy_average} z %{trophy_max} trofejí "Mistrovství Pojetí".
-    teacher_print_certificates: 'Vytisknout  osvědčení pro studenty, kteří dokončili tento kurz'
+    teacher_print_certificates: 'Vytisknout certifikáty pro studenty, kteří dokončili tento kurz'
     teacher_read_blog: Přečti si o novinkách a aktualizacích našich materiálů na našem blogu Educator
     classroom: Tvá třída
     student_progress: Tvůj pokrok v učení
@@ -387,7 +387,7 @@ cs:
     more: 'Více'
     feedback: 'Poskytnout zpětnou vazbu'
     translate: 'Pomozte nám v překladu do vašehojazyka'
-    support: 'Podpora'
+    support: 'Nápověda a Komunita'
     support_url: 'http://support.code.org'
     tos_short: 'Podmínky'
     tos: 'Podmínky'
@@ -487,7 +487,7 @@ cs:
       body: "Použij Play Lab k vytvoření příběhu nebo hry s Disney Infinity postavami."
     minecraft:
       title: "Minecraft"
-      body: "Prozkoumejte svět Minecraftu prostřednictvím kódu."
+      body: "Prozkoumej svět Minecraftu pomocí kódu"
     minecraft2016:
       title: "Minecraft"
       body: "Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu."
@@ -602,22 +602,7 @@ cs:
     title: "Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity"
     message: "Prosím vyberte vaši rasovou příslušnost (označte všechna platná políčka)"
     races:
-      - 
-        white: "Běloch"
-      - 
-        black: "Černoch nebo Afroameričan"
-      - 
-        hispanic: "Hispánec nebo Latino"
-      - 
-        asian: "Asiat"
-      - 
-        hawaiian: "Rodilý havajčan nebo ostrovan z Pacifiku"
-      - 
-        american_indian: "Indián/Aljašan"
-      - 
-        other: "Ostatní"
-      - 
-        opt_out: "Preferujeme neuvést"
+      other: "Ostatní"
     submit: "Odeslat"
     decline: "Zavřít"
   zendesk_too_young_message: 'Promiň, mladší uživatelé se nemohou přihlásit do našeho webového serveru podpory. Můžeš procházet <a href="http://support.code.org"> support.code.org</a> bez přihlášení nebo požádat rodiče nebo učitele, aby nás kontaktovali.'
