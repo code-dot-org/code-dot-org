@@ -181,23 +181,30 @@ az:
       courses: "marşrutlar"
       project_gallery: "Layihə qalereyası"
       sections: "Bölmələr"
+      teacher_community: "Müəllim icması"
+      professional_learning: "Peşəkar təhsil"
+      documentation: "Təlimat və sənədlər"
       tutorials: "Dərsliklər"
+      educate_overview: "Təlimçi üçün xülasə"
       educate_elementary: "İbtidai məktəb"
       educate_middle: "Orta məktəb"
-      educate_high: "Yuxarı siniflər"
+      educate_high: "Orta məktəbin yuxarı sinifləri"
       educate_hoc: "Kod Saatı"
       educate_partner: "Bizə tərəfadaş olun"
       educate_inspire: "Bir şagirdi həvəsləndirin"
+      educate_community: "Onlayn icma"
+      educate_tools: "Alətlər və videolar"
       about_us: "Haqqımızda"
       about_leadership: "Rəhbərlik"
       about_donors: "Donorlar"
       about_partners: "Tərəfdaşlar"
-      about_team: "Bütün komanda"
+      about_team: "Tam komanda"
       about_news: "Xəbər otağı"
       about_evaluation: "Qiymətləndirmə"
       about_jobs: "Vakansiyalar"
-      about_contact: "Bizimlə əlaqə"
+      about_contact: "Bizimlə əlaqə saxlayın"
       about_faqs: "Tez-tez verilən suallar"
+      learn: "Öyrənin"
       stats: "Göstəricilər"
       help_us: "Bizə kömək edin"
       teach: "Öyrədin"
@@ -357,6 +364,7 @@ az:
       title: "Star Wars"
     minecraft:
       title: "Minecraft"
+      body: "Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin"
     minecraft2016:
       title: "Minecraft"
     hero:
@@ -377,6 +385,8 @@ az:
   landing:
     support: "Kömək istə"
     support_url: "//support.code.org"
+    documentation: "Təlimat və sənədlər"
+    tutorials: "Dərsliklər"
   multi:
     wrong_title: "Yanlış cavab"
     wrong_body: "Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!"
@@ -423,17 +433,7 @@ az:
     save: "Yadda saxla"
   race_interstitial:
     races:
-      - 
-        white: "Ağ"
-      - 
-      - 
-      - 
-        asian: "Asyalı"
-      - 
-      - 
-      - 
-        other: "Digər"
-      - 
+      other: "Digər"
     submit: "Göndər"
     decline: "Bağla"
   progress:
@@ -447,14 +447,14 @@ az:
     completed_courses: "Tamamlanmış kurslar"
     all_courses: "Bütün kurslar"
   project:
-    projects: "Layihələr"
+    projects: "Layihə qalereyası"
     create_a_project: 'Yeni bir layihə düzəlt:'
     new: "Yenisini düzəlt"
     rename: "Adını dəyiş"
     save: "Yadda saxla"
     delete: "Sil"
     my_projects: "Mənim layihələrim"
-    project_gallery: "Layihələr"
+    project_gallery: "Layihə qalereyası"
     share: "Bölüşün"
     embed: "Yerləşdir"
     close: "Bağla"
