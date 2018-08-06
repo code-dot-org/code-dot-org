@@ -525,6 +525,7 @@ vi:
             Puzzles:
               name: Câu đố
         cspunit1:
+          description_short: Lập trình
           stages:
             Binary Numbers:
               name: Số nhị phân
@@ -665,6 +666,7 @@ vi:
             PDK5 Intro:
               name: Giới thiệu PDK5
         cspunit3:
+          description_short: Lập trình
           stages:
             APIs and Function Parameters:
               name: API và các thông số chức năng
@@ -871,6 +873,7 @@ vi:
             Welcome Back!:
               name: Chào mừng trở lại!
         cspunit2:
+          description_short: Lập trình
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Vấn đề khó khăn - các vấn đề nhân viên bán hàng đi du lịch
@@ -1067,7 +1070,7 @@ vi:
             Best Practices for Teaching Computer Science:
               name: Những thực hành tốt nhất cho việc dạy Khoa học máy tính
             Computer Science Fundamentals:
-              name: Khoa học máy tính cơ bản
+              name: Máy tính khoa học cơ bản
             Getting Started:
               name: Bắt đầu
             Looking Ahead:
@@ -1633,6 +1636,7 @@ vi:
             Wrap-Up:
               name: Tổng hợp
         cspunit5:
+          description_short: Lập trình
           stages:
             Create PT:
               name: Tạo PT
@@ -1643,6 +1647,7 @@ vi:
             Explore PT Prep:
               name: Khám phá phần chuẩn bị PT
         cspunit4:
+          description_short: Lập trình
           stages:
             Check Your Assumptions:
               name: Kiểm tra các giả định của bạn
@@ -2932,7 +2937,7 @@ vi:
             AP Preparation and Support:
               name: AP chuẩn bị và hỗ trợ
         basketball:
-          title: Chọn nhóm của bạn và chơi một trò chơi bóng rổ
+          title: Chọn đội của bạn và chơi một trò chơi bóng rổ
           description_short: Chọn đội của bạn và chơi một trò chơi bóng rổ
           description: Chọn đội của bạn và chơi một trò chơi bóng rổ
           stages:
@@ -3893,7 +3898,9 @@ vi:
               name: Giới thiệu về AppLab
             'Lesson 1: App Lab Intro':
               name: 'Bài 1: Giới thiệu App Lab'
-          title: Giới thiệu App Lab (Beta)
+          title: Giới thiệu về AppLab
+          description_short: Những bài học giới thiệu bạn đến App Lab thông qua một
+            loạt các dự án sáng tạo.
           description: Những bài học giới thiệu bạn đến App Lab thông qua một loạt
             các dự án sáng tạo.
         e-f-ramp:
@@ -4091,7 +4098,7 @@ vi:
             What is a Computer?:
               name: Máy tính là gì?
             Intro to App Lab:
-              name: Giới thiệu App Lab (Beta)
+              name: Giới thiệu về AppLab
         hero:
           stages:
             Minecraft Hour of Code:
@@ -4113,7 +4120,7 @@ vi:
             Intro to AppLab - Getting Started:
               name: Giới thiệu về AppLab - bắt đầu
             Intro to App Lab:
-              name: Giới thiệu App Lab (Beta)
+              name: Giới thiệu về AppLab
         csp-explore-2017:
           stages:
             new stage:
