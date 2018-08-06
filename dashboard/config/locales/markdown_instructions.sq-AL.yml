@@ -461,6 +461,9 @@ sq:
         lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops8_2018_markdown_instruction: "Mblidh gjithë nektarin
         nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
+      courseD_bounce_events1_markdown_instruction: Shko te flamuri! Bashkangjit një
+        bllok te blloku "kur shigjeta majtas" dhe shtypni "Run" për të lëvizur lojtarin
+        te flamuri.
       courseD_maze_nestedLoops4_markdown_instruction: Më ço tek luledielli!
       courseD_maze_nestedLoops4_2018_markdown_instruction: Më ço tek luledielli!
       courseE_bee_functions3_markdown_instruction: |-
@@ -620,16 +623,14 @@ sq:
       grade4_arist_nested_loop_polygons2_markdown_instruction: 'Ciklo këtë dizenjo
         6 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është
         360 e ndarë në 6-she?)'
-      grade4_arist_nested_loop_triangles3_markdown_instruction: |-
-        A mund të vizatosh një gjashtëkëndësh duke cikluar
-        kodin e trekëndorit?
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Mund te vizatosh një
+        gjashtëkëndesh duke cikluar kodin e trekëndëshit?
       grade4_arist_nested_loop_triangles4_markdown_instruction: Vizato dhëmbët në
         gojën e krokodilit!
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Formo një diell duke
         mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r"
-      grade4_arist_nested_loop_triangles6_markdown_instruction: |-
-        A mund ti vizatosh këto 36 trekëndorë duke përdorur
-        një cikël të mbivendosur?
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Mund të vizatosh 36
+        trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_functions2_markdown_instruction: |-
         Funksionet të lejojnë ty të përcaktosh blloqe të reja! Ne kemi
         lëvizur blloqet për të vizatuar një katror brenda një funksioni të quajtur "vizato një katror".
@@ -642,9 +643,8 @@ sq:
         360 e ndarë në 10-she?)'
       grade4_artist_nested_loop_triangles5_markdown_instruction: "Formo një diell
         duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r"
-      grade4_artist_nested_loop_triangles6_markdown_instruction: |-
-        A mund ti vizatosh këto 36 trekëndorë duke përdorur
-        një cikël të mbivendosur?
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Mund të vizatosh
+        36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_parameters_triangles2_markdown_instruction: A vure re diçka ndryshe
         te keto blloqe funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.
       grade4_bee_conditionals_quantum2_markdown_instruction: "Bleta dëshiron vetëm
@@ -660,8 +660,8 @@ sq:
         përdorësh një cikël për të arritur një numërim blloku ideal, gjithashtu.
       grade4_bee_nestedLoops4_markdown_instruction: "Mblidh gjithë nektarin nga secila
         lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
-      grade4_frozen_freeplay_markdown_instruction: Zyrtarisht je një mjeshtër artesh!
-        Krijo një botë imagjinare dimërore.
+      grade4_frozen_freeplay_markdown_instruction: Ti zyrtarisht je bërë një mjeshtër!
+        Krijo një dimër në një botë çudirash.
       grade4_frozen_functions0_markdown_instruction: "Një rreth është një formë e
         veçantë. A mund të gjesh \nse me çfarë numri të zëvendësosh pikëpyetjet për
         të vizatuar një rreth?"

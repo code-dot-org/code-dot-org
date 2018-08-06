@@ -22,20 +22,20 @@ sq:
         current_password: 'Fjalëkalimi aktual'
         locale: 'Gjuha'
         age: 'Mosha'
-        gender: 'Gjinia'
+        gender: 'Gjini'
         edit_header: 'Ndrysho detajet e llogarisë'
         error:
           future: nuk mund të jetë në të ardhmen
-  hello: "Përshëndetje Botë"
+  hello: "Pershendetje Botë"
   welcome_back: "Mirë se erdhët sërish, %{name}"
   your_professional_learning_plan: "Plani Juaj Profesional i Mësimit"
   see_your_learning_plan: "Shikoni planin juaj të mësimit"
   submit: Dorëzo
-  unsubmit: E pa dërguar
+  unsubmit: Mos dërgo
   previous_page: Faqja e kaluar
   next_page: Faqja tjetër
   next_resource: Burimi tjetër
-  cancel: "Anullo"
+  cancel: "Anulo"
   okay: "Në rregull"
   heading_x_of_y: "%{heading} (faqja %{x} nga %{y})"
   add_teacher_form:
@@ -111,13 +111,13 @@ sq:
     additional_information: "Kemi nevojë për disa informacione shtesë për të vazhduar me rregjistrimin tuaj."
     user_type_label: "Lloji i llogarisë"
     user_type_teacher: "Mësues"
-    user_type_student: "student"
+    user_type_student: "Student"
     field_is_required: "E domosdoshme"
     accept_terms: "Ju duhet të jeni dakord për të krijuar një llogari"
     email_preference_yes: "Po"
     email_preference_no: "Jo"
   school_info:
-    other: 'Tjetër'
+    other: 'Të tjera/ë'
   signin_form:
     title: 'Ke një llogari ekzistuese? Logohu'
     login: 'Email'
@@ -244,14 +244,14 @@ sq:
     student_teacher_disassociated: 'Ju e keni hequr %{teacher_name} si mësuesi juaj.'
     panel:
       answer_viewer: 'Paneli i mësuesit'
-      student: 'student'
+      student: 'Student'
       viewing_solution: 'Duke parë zgjidhjen'
       try_it_yourself: 'Bëje vetë'
       section: 'Pjesë'
       example: 'Shëmbuj Zgjidhjesh'
       example_with_number: 'Shëmbuj Zgjidhjesh %{solution_number}'
       submitted_on: 'Dërguar në:'
-      unsubmit: 'E pa dërguar'
+      unsubmit: 'Mos dërgo'
       worked_with: 'Ka punuar me'
       update_lock_settings: 'Përditeso parametrat e bllokimit këtu.'
       clear_response: 'Përgjigja e qartë'
@@ -284,8 +284,8 @@ sq:
     teacher_student_count_one: Ju keni %{count} student.
     teacher_student_count: Ju keni %{count} studentë.
     teacher_averages: Mesatarisht, studentët tuaj kanë fituar %{trophy_average} nga %{trophy_max} trofetë "Concept Mastery".
-    teacher_print_certificates: 'Printo certifikatat për studentët që mbarojnë këtë kurs'
-    teacher_read_blog: Lexo rreth të rejave dhe përditësimeve të materialeve tona në Educator Blog
+    teacher_print_certificates: 'Printo çertifikatat për studentët që mbarojnë këtë kurs'
+    teacher_read_blog: Lexo rreth të rejave dhe përditësimeve të materialeve tona në Blogun Educator
     classroom: Klasa jote
     student_progress: Progresi yt në të mësuar
     student_stats: Ti ke fituar %{trophy_count} trofe nga %{trophy_max} trofetë "Concept Mastery".
@@ -297,10 +297,10 @@ sq:
     view_course: Shiko kursin
     prize_info: 'Çmimet për pjesmarrje (vetëm mësues të shkollave publike në SHBA): Mbi 1000$ shpërblime për klasën.'
     tryfirst: 'Ose, mund ta provosh ne fillim, dhe rregjistrohesh më vonë:'
-    trynow: 'Provo tani'
+    trynow: 'Mëso më Shumë'
     add_hint_help: 'Ju lutem na ndihmoni të shtojmë udhëzime më të goditura për tutorialet e Code.org'
     20hour_overview: 'Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.'
-    test_videos_help: 'Testoni video player-in e ri në shkollën tuaj'
+    test_videos_help: 'Testoni video playerin e ri në shkollën tuaj'
     try_beta_courses: 'E re! Provo kurset tona beta për studentët e K-5'
     use_as_teacher: 'Përdore këtë faqe si një mësues'
     heading_hoc2014: "<h2>Ora e Kodimit për</h2><h1>Të gjitha moshat</h1>"
@@ -313,7 +313,7 @@ sq:
     choose_next_course: "Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë"
     print_certificate: "Printo Certifikatën"
     announcement_learn_more_button: "Mëso më shumë"
-    announcement_try_now_button: "Provo tani"
+    announcement_try_now_button: "Mëso më Shumë"
     announcement_host_an_hour_button: "Të organizojë një Orën"
     announcement_petition: "Si mësues, ju jeni duke udhëhequr në mënyrë që t'i jepni çdo nxënësi në çdo shkollë mundësi për të mësuar shkencën kompjuterike. Tani, është koha që përfaqësuesit tuaj të dëgjojmë nga ju. Këtë javë, liderët e arsimit, 28 qeveritarët dhe CEOs të kompanive më të mëdha të Amerikës u bashkuan së bashku në një letër të hapur duke i kërkuar Kongresit SH.B.A. për të financuar K-12 shkolla të shkencave kompjuterike."
     announcement_petition_button: "Shto emrin tuaj"
@@ -352,14 +352,14 @@ sq:
     more: 'Më shumë'
     feedback: 'Jepni feedback-un tuaj'
     translate: 'Na ndihmoni të përkthejmë në gjuhën tuaj'
-    support: 'Mbështetje'
+    support: 'Ndihma dhe Komuniteti'
     support_url: 'http://support.code.org'
     tos_short: 'Termat'
     tos: 'Kushtet e shërbimit'
     privacy: 'Rregullat e Privatësisë'
     secure: 'Versioni i Sigurtë'
     report_abuse: 'Raporto abuzimin'
-    built_on_code_studio: 'Krijo në Code Studio'
+    built_on_code_studio: 'Mëso në Code Studio'
     make_my_own_app: 'Ndërtoj aplikacionin tim'
     how_it_works: 'Si funksionon'
     try_hour_of_code: 'Provo një Orë Kodimi!'
@@ -423,7 +423,7 @@ sq:
       title: 'Labirint Klasik'
       body: 'Provo bazat e shkencave kompjuterike. Miliona veta e kanë provuar.'
     flappy:
-      title: 'Flappy Code'
+      title: 'Kodi Flappy'
       body: 'Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë Flappy Code!'
     20-hour:
       title: 'Kurs i Avancuar'
@@ -462,7 +462,7 @@ sq:
       body: "Ne kemi përpiluar një listë të mësimeve të shkëputura për ju për ti përdorur në klasën tuaj. Tani ju mund të mësoni bazat e shkencave kompjuterike edhe në qoftë se nuk keni kompjuter në klasën tuaj ! Provoni të përdorni këto mësime si një kurs më vete apo si mësime  plotësuese për çdo kurs të shkenca kompjuterike."
       body_short: "Nëse ju nuk keni kompjutera, provoni këto mësime të shkëputura në klasën tuaj."
     unplugged_conditionals:
-      title: "Kushtoret"
+      title: "Kushtet"
     widgets:
       cta: "Mëso si "
   gallery:
@@ -537,7 +537,7 @@ sq:
     startover_title: "A jeni i sigurt që doni të filloni nga fillimi?"
     startover_body: "Kjo do ta rikthejë formuesen në gjëndjen fillestare dhe do të fshijë të gjitha blloqet që ke shtuar ose ndryshuar."
     startover_ok: "Fillo nga fillimi "
-    startover_cancel: "Anullo"
+    startover_cancel: "Anulo"
   time:
     hour: '1 orë'
     day: 'ditë'
@@ -565,22 +565,7 @@ sq:
     title: "Opsionale: Na ndihmoni të ndjekim progresin tonë drejt përmirësimit të diversitetit në shkenca kompjuterike"
     message: "Ju lutem na tregoni garën tuaj (kontrollo të gjitha aplikimet)"
     races:
-      - 
-        white: "E bardhë"
-      - 
-        black: "I zi ose Afrikano American"
-      - 
-        hispanic: "Hispanik ose Latin"
-      - 
-        asian: "Aziatik"
-      - 
-        hawaiian: "Vendas Havajan ose banues të  tjetër të Paqësorit"
-      - 
-        american_indian: "Amerikano-Indian/Vendas nga Alaska"
-      - 
-        other: "Tjetër"
-      - 
-        opt_out: "Preferoj të mos përgjigjem"
+      other: "Të tjera/ë"
     submit: "Dorëzo"
     decline: "Mbyll"
   zendesk_too_young_message: 'Na vjen keq, përdoruesit e vegjël nuk mund të futen tek faqja jonë e suportit. Ju mund të shfletosh në <a href="http://support.code.org">support.code.org</a> pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.'
@@ -626,7 +611,7 @@ sq:
     delete_no: 'Jo'
     saved: "E ruajtur"
     not_saved: "E pa ruajtur"
-    cancel: 'Anullo'
+    cancel: 'Anulo'
     delete_confirm_title: A jeni i sugurt që dëshironi ta fshini këtë projekt?
     delete_confirm_text: "Duke fshirë projektin, ju do ta hiqni përfundisht nga lista e projekteve. Të gjithë njerëzit me të cilët e ke shpërndarë, nuk do të munden më ta shohin atë."
     view_all: 'Shfaq projektet e mia'
@@ -651,7 +636,7 @@ sq:
           harassment: 'Kërcënimet, bullizmi në internet, ngacmimi'
           offensive: 'Përmbajtje fyese'
           infringement: 'Shkelja e së Drejtës së Autorit'
-          other: 'Tjetër'
+          other: 'Të tjera/ë'
         detail: 'Ju lutemi jepni sa më shumë detaje të jetë e mundur në lidhje me përmbajtjen që ju jeni duke raportuar.'
         acknowledge: 'Duke dërguar këtë informacion, ju duhet ta dini se do të trajtohen në përputhje me kushtet e %{link_start_privacy} Rregullave të privatësisë%{link_end} dhe %{link_start_tos} Kushtet e Shërbimit %{link_end}.'
   peer_review:
