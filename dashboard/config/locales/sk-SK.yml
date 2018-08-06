@@ -989,14 +989,7 @@ sk:
     title: 'Dobrovoľné: Pomôžte nám sledovať náš pokrok ku zlepšeniu diverzity v informatike'
     message: Prosím zvoľte vašu rasu (označte všetky ktoré platia)
     races:
-      white: Biela
-      black: Africká alebo Afroamerická
-      hispanic: Hispánska alebo Latinoamerická
-      asian: Ázijská
-      hawaiian: Pôvodná havajská alebo iná tichomorská
-      american_indian: Pôvodná americká alebo alijašská
       other: Ostatné
-      opt_out: Preferujem neodpovedať
     submit: Odoslať
     decline: Zatvoriť
   zendesk_too_young_message: Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu
@@ -1300,7 +1293,7 @@ sk:
       subjects:
         cs: Počítačová veda
         ict: IT
-        math: Matematika
+        math: Matematické
         science: Veda
         history: História / Sociálne vedy
         la: Jazykové umenia
