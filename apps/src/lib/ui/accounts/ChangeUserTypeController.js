@@ -30,9 +30,10 @@ export default class ChangeUserTypeController {
    *   children of that form element.
    * @param {!string} initialUserType
    */
-  constructor(form, initialUserType) {
+  constructor(form, initialUserType, hashedEmails) {
     this.form = form;
     this.initialUserType = initialUserType;
+    this.hashedEmails = hashedEmails;
     this.dropdown = form.find('#change-user-type_user_user_type');
     this.button = form.find('#change-user-type-button');
     this.status = form.find('#change-user-type-status');
@@ -85,7 +86,6 @@ export default class ChangeUserTypeController {
       return; // Idempotent show
     }
 
-    const userHashedEmail= this.form.find('#change-user-type_user_hashed_email').val();
     const handleSubmit = (values) => (
       this.submitUserTypeChange(values)
         .then(() => utils.reload())
@@ -95,7 +95,7 @@ export default class ChangeUserTypeController {
     document.body.appendChild(this.mountPoint);
     ReactDOM.render(
       <ChangeUserTypeModal
-        currentHashedEmail={userHashedEmail}
+        currentHashedEmails={this.hashedEmails}
         handleSubmit={handleSubmit}
         handleCancel={this.hideChangeUserTypeModal}
       />,
