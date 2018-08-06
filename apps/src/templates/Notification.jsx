@@ -53,7 +53,7 @@ const styles = {
   dismiss: {
     color: color.lighter_gray,
     marginTop: 5,
-    marginRight: 10,
+    marginRight: 0,
     marginLeft: 10,
     cursor: 'pointer',
   },
@@ -64,7 +64,9 @@ const styles = {
     float: 'left',
   },
   contentBox: {
-    width: 'calc(100% - 72px)',
+    // The subtracted 100px leaves room for both the icon column on the left and
+    // the dismiss X icon column on the right.
+    width: 'calc(100% - 100px)',
     display: 'flex',
     flexFlow: 'wrap'
   },
