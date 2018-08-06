@@ -214,13 +214,29 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         isSaving: false,
         isEditing: false,
       };
+
       return {
         ...state,
         projects: savedProjects,
       };
     case SAVE_FAILURE:
+      var saveAttemptProjectId = action.projectId;
+
+      var saveAttemptProjectIndex = state.projects.findIndex(project => project.channel === saveAttemptProjectId);
+
+      var unsavedProjects = [...state.projects];
+
+      var saveAttemptProject =
+        unsavedProjects[saveAttemptProjectIndex];
+
+      unsavedProjects[saveAttemptProjectIndex] = {
+        ...saveAttemptProject,
+        isSaving: false,
+        isEditing: false,
+      };
       return {
         ...state,
+        projects: unsavedProjects,
       };
     default:
       return state;
