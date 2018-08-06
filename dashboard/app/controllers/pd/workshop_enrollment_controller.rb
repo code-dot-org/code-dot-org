@@ -13,9 +13,23 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     if @workshop.nil?
       render_404
     elsif workshop_closed?
-      render :closed
+      @script_data = {
+        props: {
+          workshop: {
+            organizer: @workshop.organizer
+          },
+          workshop_enrollment_status: "closed"
+        }.to_json
+      }
     elsif workshop_full?
-      render :full
+      @script_data = {
+        props: {
+          workshop: {
+            organizer: @workshop.organizer
+          },
+          workshop_enrollment_status: "full"
+        }.to_json
+      }
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
@@ -57,7 +71,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
-          sign_in_prompt_data: sign_in_prompt_data
+          sign_in_prompt_data: sign_in_prompt_data,
+          workshop_enrollment_status: "unsubmitted"
         }.to_json
       }
     end

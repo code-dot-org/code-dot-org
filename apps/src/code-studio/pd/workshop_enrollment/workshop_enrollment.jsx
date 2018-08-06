@@ -24,14 +24,15 @@ export default class WorkshopEnrollment extends React.Component {
     sign_in_prompt_data: PropTypes.shape({
       info_icon: PropTypes.string,
       sign_in_url: PropTypes.string
-    })
+    }),
+    workshop_enrollment_status: PropTypes.string
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      submissionStatus: SUBMISSION_STATUSES.UNSUBMITTED
+      workshopEnrollmentStatus: this.props.workshop_enrollment_status || SUBMISSION_STATUSES.UNSUBMITTED
     };
   }
 
@@ -152,7 +153,7 @@ export default class WorkshopEnrollment extends React.Component {
   }
 
   render() {
-    switch (this.state.submissionStatus) {
+    switch (this.state.workshopEnrollmentStatus) {
       case SUBMISSION_STATUSES.UNSUBMITTED:
         return (
           <div>

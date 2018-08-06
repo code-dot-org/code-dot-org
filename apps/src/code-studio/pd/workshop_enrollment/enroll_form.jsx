@@ -136,7 +136,7 @@ export default class EnrollForm extends React.Component {
       data: JSON.stringify(params),
       complete: (result) => {
         this.props.onSubmissionComplete({
-          submissionStatus: result.responseJSON.submission_status,
+          workshopEnrollmentStatus: result.responseJSON.workshop_enrollment_status,
           cancelUrl: result.responseJSON.cancel_url,
           accountExists: result.responseJSON.account_exists,
           signUpUrl: result.responseJSON.sign_up_url,
