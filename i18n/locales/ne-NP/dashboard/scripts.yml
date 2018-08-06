@@ -298,7 +298,7 @@ ne:
             Introduction to Computer Science:
               name: Introduction to Computer Science
             Relay Programming:
-              name: Relay Programming
+              name: Relay programming
             Song Writing:
               name: Song Writing
             The Artist:
@@ -1143,7 +1143,7 @@ ne:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Relay Programming
+              name: Relay programming
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1171,7 +1171,7 @@ ne:
             Graph Paper Programming:
               name: Graph Paper Programming
             Relay Programming:
-              name: Relay Programming
+              name: Relay programming
         coursec-2018:
           stages:
             Building a Foundation:
