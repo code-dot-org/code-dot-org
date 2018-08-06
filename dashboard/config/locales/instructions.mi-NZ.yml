@@ -595,8 +595,8 @@ mi:
         mātiti katoa?
       4-5 Artist Patterns 4_instruction: E 50 pika ngā tapa o tēnei taimana he koki
         120 me te 60 putu. Whakamahia tētahi koromeke hei tuhi mai.
-      4-5 Artist Patterns 5.5_instruction: E hia ngā tōaitanga o te paraka hei tuhi
-        mai i te katoa o te mātiti taimana?
+      4-5 Artist Patterns 5.5_instruction: Kia hia ngā tōaitanga hei tā i te katoa
+        o te mātiti taimana?
       4-5 Artist Patterns 5_instruction: "Tōaitia tēnei waehere kia hanga rārangi
         he 6 taimana.\n\r\n\r\nTirohia ake ngā panonitanga o te waehere taimana kia
         tōaitia e 3 ngā wā kaua ko ngā wā e 2 - he aha i pēnei ai?\r\n"
@@ -729,9 +729,26 @@ mi:
         taea rānei e koe tētahi papatono te tā e tango ana i ia putu kia papatahi
         te papa?"
       App Lab test_instruction: whakamātautau
+      Artist - Nested Loops 11_instruction: Ka taea rānei e koe ngā tapawhā 10 o te
+        ara hikoi nei te tā mā te koromeke tauroto? He 30 pika ia tapawhā.
+      Artist - Nested Loops 12_instruction: Ka taea rānei e koe ngā tapatoru nei te
+        tā mā te koromeke tauroto?
+      Artist - Nested Loops 6_instruction: Ka taea rānei e koe te tā tapaono mā te
+        koromeke i te waehere tapatoru?
       Bergeron Robot Maze1_instruction: 'E taea tēnei e koe te āwhina ki te hopu i
         te poaka hīanga. Putuhia ētahi paraka ‘neke whakamua’ i raro i te paraka ‘ka
         oma ana’ me te paraka ‘whakahaere’. '
+      C3-Farmer While Loops 5_instruction: Anana, e rua ngā rua hohonu ināianei! Ka
+        taea rānei e koe tētahi papatono te tā e whakakī ana i ngā mea e rua kia papatahi
+        te papa?
+      C3-Farmer While Loops 6_instruction: Anana, he putu oneone rarahi ināianei!
+        Ka taea rānei e koe tētahi papatono te tā e tangohia katoatia ana kia papatahi
+        te papa?
+      C3-Farmer While Loops 7_instruction: "Anana, E toru ngā putu oneone ināianei!
+        \nKa taea rānei e koe tētahi papatono te tā e tango ana i ia putu kia papatahi
+        te papa?"
+      Course 2 Bee Loops 1_instruction: 'Kia ora, he pī ahau. Māu ahau e āwhina ki
+        te kohi waihonga i ēnei putiputi? '
       Course 4 Artist 8_instruction: Tāngia tēnei rā mā te koromeke i te paraka waehere
         ki tini ngā wā.
       Course 4 Artist 8a_instruction: Maumaharatia te āhua nei?  Ināianei e wātea
@@ -789,6 +806,16 @@ mi:
       Mike Test Bee Conditionals 1_instruction: E ārai ana te kapua nei i taku aro.
         Tirohia mēnā he putiputi kei raro i te kapua, ā, mēnā he putiputi ka tiki
         waihonga anake!
+      New Basketball Project_instruction: Waihangahia tō ake kēmu Poitūkohu. E whakaae
+        ana kia panonihia ngā ture. Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria
+        e ō hoa ki ā rātou waea.
+      New Bounce Project_instruction: Waihangahia tō ake kēmu Bounce. E whakaae ana
+        kia panonihia ata me ngā ture. Mutu ana, pāwhiritia te Mutu kia wātea kia
+        whakamātauria e ō hoa ki ā rātou waea.
+      New Sports Project_instruction: 'Waihangahia tō ake kēmu! Ko koe te rangatira:
+        e whakaae ana kia panonihia ngā ture, kia whakawhenumi hoki i ngā momo tākaro,
+        kia auaha! Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria e ō hoa
+        ki ā rātou waea.'
       PS copy 2-3 Bee Conditionals 5_instruction: "Kia tūpato ki te kohi waihonga
         i ngā putiputi waiporoporo ina karekau. \r \nMe titiro tuatahi ina e ōrite
         ana te waihonga ki te 1 mā te whakamahinga o te paraka 'ina waihonga'."
@@ -860,6 +887,9 @@ mi:
         e rua ngā wā!
       bounce_12_instruction: Waihangahia tō ake kēmu Bounce. E whakaae ana kia panonihia
         ata me ngā ture. Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria
+        e ō hoa ki ā rātou waea.
+      bounce_12_2018_instruction: Waihangahia tō ake kēmu Bounce. E whakaae ana kia
+        panonihia ata me ngā ture. Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria
         e ō hoa ki ā rātou waea.
       bounce_12_basketball_instruction: Waihangahia tō ake kēmu Poitūkohu. E whakaae
         ana kia panonihia ngā ture. Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria
@@ -980,6 +1010,9 @@ mi:
         ngā wāhi maha. Hei āpiti atu, tēnā panonihia te tirohanga, te tere rānei o
         te patu me te pōro me te kite e hia piro ka riro i a koe i mua i tō hoariri
         riro piro e rua ngā wā.
+      courseD_bounce_events12_instruction: Waihangahia tō ake kēmu Bounce. E whakaae
+        ana kia panonihia ata me ngā ture. Mutu ana, pāwhiritia te Mutu kia wātea
+        kia whakamātauria e ō hoa ki ā rātou waea.
       courseD_bounce_events2_instruction: Whakapiri i tētahi paraka ki te paraka "ina
         pere matau" me te paraka "ina pere mauī". Nekehia te patu kia tae atu ki ngā
         ūnga whakamutunga e rua.
@@ -1267,13 +1300,19 @@ mi:
         kia 10 ngā wā. \r\n\r\nKia hia ngā huri i ia wā e koromekehia ana?"
       grade4_arist_nested_loop_polygons2_instruction: "Koromekehia tēnei āhua kia
         6 ngā wā. \r\n\r\nKia hia ngā huri i ia wā e koromekehia ana? "
+      grade4_arist_nested_loop_squares1_instruction: Ka taea rānei e koe ngā tapawhā
+        10 o te ara hikoi nei te tā mā te koromeke tauroto? He 30 pika ia tapawhā.
       grade4_arist_nested_loop_triangles2_instruction: 'Ināianei ka whakanohoia tēnei
         koromeke ki roto i tētahi atu koromeke hei tā i ngā tapatoru 10. He koromeke
         "tauroto" tēnei.  '
+      grade4_arist_nested_loop_triangles3_instruction: Ka taea rānei e koe te tā tapaono
+        mā te koromeke i te waehere tapatoru?
       grade4_arist_nested_loop_triangles5_instruction: "Waihangahia tētahi rā mā te
         whakanoho i te waehere whakataki ki roto i tētahi atu koromeke. \r\n\r\nKia
         riro i a koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua
         mā te roanga o te tapatoru i mua i te huri."
+      grade4_arist_nested_loop_triangles6_instruction: Ka taea rānei e koe ngā tapatoru
+        nei te tā mā te koromeke tauroto?
       grade4_artist_functions2_instruction: "Ko tā te taumahi he whakamahuki i ngā
         paraka hou! \r\n\r\nKua nekehia e mātou ētahi paraka tā tapawhā hei taumahi
         ‘tāngia he tapawhā’. I konei, whakamahia te taumahi ‘tāngia he tapawhā’ ki
@@ -1282,10 +1321,14 @@ mi:
         koromeke tauroto hei whakaoti i te hoahoatanga.'
       grade4_artist_nested_loop_polygons1_instruction: "Koromekehia tēnei hoahoatanga
         kia 10 ngā wā. \r\n\r\nKia hia ngā huri i ia wā e koromekehia ana?"
+      grade4_artist_nested_loop_squares1_instruction: Ka taea rānei e koe ngā tapawhā
+        10 o te ara hikoi nei te tā mā te koromeke tauroto? He 30 pika ia tapawhā.
       grade4_artist_nested_loop_triangles5_instruction: "Waihangahia tētahi rā mā
         te whakanoho i te waehere whakataki ki roto i tētahi atu koromeke. \r\n\r\nKia
         riro i a koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua
         mā te roanga o te tapatoru i mua i te huri."
+      grade4_artist_nested_loop_triangles6_instruction: Ka taea rānei e koe ngā tapatoru
+        nei te tā mā te koromeke tauroto?
       grade4_bee_conditionals_quantum1_instruction: E ārai ana te kapua nei i taku
         aro. Tirohia mēnā he putiputi kei raro i te kapua, ā, mēnā he putiputi ka
         tiki waihonga anake!
