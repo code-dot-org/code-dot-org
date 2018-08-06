@@ -6,7 +6,7 @@ si:
         csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
         cspexams_category_name: පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය
         csp17_category_name: '''16-''17 පරිගණක විද්‍යාවේ මූලිකාංග'
-        hoc_category_name: පැයේ කේතය
+        hoc_category_name: Hour of Code
         math_category_name: ගණිත
       name:
         course1:
@@ -137,7 +137,7 @@ si:
             'Maze: Conditionals':
               name: 'අවුල් ජාලය: කොන්දෙසිගත'
             Songwriting:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
+              name: ගීත ලිවීම
             'Studio: Create a Game':
               name: 'ක්‍රීඩා පරීක්ෂණාගාරය: ක්‍රීඩාවක් සාදන්න'
             'Studio: Create a Story':
@@ -157,7 +157,7 @@ si:
             Artist:
               name: කලාකරු
         hourofcode:
-          title: පැරණි වංකගිරිය
+          title: සම්භාව්‍ය අවුල් ජාලය
           description: Angry Birds, Plants vs. Zombies, Ice Age වල චරිත ඇසුරෙන් පරිගණක විද්‍යාවේ මූලික කරුණු ඉගෙනගන්න!
           description_short: පරිගණක විද්යාව පිළිබඳ මූලික දේ විනෝදාත්මක චරිත සමග උත්සාහ කරන්න!
           stages:
@@ -256,6 +256,7 @@ si:
             Variables:
               name: විචල්‍යන්
         algebra:
+          title: වීජ ගණිතය තුළින් පරිගණක විද්‍යාව
           stages:
             'Eval: Boolean Operators':
               name: බූලියන් මෙහෙයුම් සංකේත
@@ -384,12 +385,12 @@ si:
             Studio:
               name: ස්ටූඩියෝව
         flappy:
-          title: Flappy Code
+          title: ෆ්ලැපි කේතය
           description: විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද? අපගේ Flappy Code නිබන්දනය කියවන්න!
           description_short: ඔබේම ෆ්ලැපී බර්ඩ් ගේම් එකක් විනාඩි 10කින් හදන්න!
           stages:
             Flappy Code:
-              name: Flappy Code
+              name: ෆ්ලැපි කේතය
         jigsaw:
           title: පින්තූර ප්‍රෙහේලිකාව
           description: අපේ ජිග්සෝ පාඩම උත්සාහ කර බලන්න
@@ -518,7 +519,7 @@ si:
             Maze:
               name: පැටලිලි සහිත මාර්ගය
             Minecraft:
-              name: මයින්ක්‍රාෆ්ට්
+              name: Minecraft
             Multi:
               name: බහුවිධ
             Studio:
@@ -626,9 +627,11 @@ si:
             'Real-life Algorithms: Plant a Seed':
               name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
             Songwriting:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
+              name: ගීත ලිවීම
             The Big Event:
               name: විශාල සිදුවීම
+        cspunit4draft:
+          description_short: දත්ත
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -733,6 +736,8 @@ si:
           stages:
             Peer Review:
               name: සමූහ විමර්ශනය
+        CSDU5-Draft:
+          description_short: දත්ත
         MikeTest:
           stages:
             Artist Functions:
@@ -760,7 +765,7 @@ si:
             Digital Citizenship:
               name: ඩිජිටල් පුරවැසිකම
             Songwriting:
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
+              name: ගීත ලිවීම
         grade1:
           stages:
             Events:
@@ -884,7 +889,7 @@ si:
         flappy-impact-study:
           stages:
             Flappy Code:
-              name: Flappy Code
+              name: ෆ්ලැපි කේතය
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1280,7 +1285,7 @@ si:
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
             'Functions: Songwriting':
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
+              name: ගීත ලිවීම
             Envelope Variables:
               name: ආවරණය කරන ලද විචල්‍ය
             For Loop Fun:
@@ -1348,7 +1353,7 @@ si:
             Introduction:
               name: හැදින්වීම
             'Functions: Songwriting':
-              name: පරාමිතීන් සමඟ ගීත ලිවීම
+              name: ගීත ලිවීම
             Internet:
               name: අන්තර්ජාලය
             Crowdsourcing:
