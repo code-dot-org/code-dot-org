@@ -112,7 +112,7 @@ const NoClassroomsFound = ({provider}) => {
           <p>
             {locale.noClassroomsFound()}
           </p>
-          <a href="https://classroom.google.com/">
+          <a href="https://clever.com/">
             {locale.addRemoveCleverClassrooms()}
           </a>
         </div>
