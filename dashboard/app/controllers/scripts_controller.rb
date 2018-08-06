@@ -122,6 +122,7 @@ class ScriptsController < ApplicationController
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
+      supported_locales: [],
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]
