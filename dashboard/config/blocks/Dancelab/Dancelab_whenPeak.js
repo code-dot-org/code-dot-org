@@ -1,3 +1,7 @@
 function whenPeak(range, event) {
-  inputEvents.push({type: Dance.fft.isPeak, event: event, params: beat_detectors[range]});
+  /*
+  // This approach only allows one event handler per beat detector
+  Dance.fft.onPeak(range, event);
+  */
+  inputEvents.push({type: Dance.fft.isPeak, event: event, param: range});
 }
