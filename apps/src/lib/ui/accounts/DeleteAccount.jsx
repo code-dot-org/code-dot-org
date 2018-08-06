@@ -127,7 +127,6 @@ export default class DeleteAccount extends React.Component {
 
   deleteUser = () => {
     const payload = {
-      new_destroy_flow: true,
       password_confirmation: this.state.password
     };
 

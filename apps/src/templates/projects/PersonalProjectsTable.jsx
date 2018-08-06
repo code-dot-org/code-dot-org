@@ -13,6 +13,7 @@ import {
 } from './projectConstants';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
+import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -86,16 +87,26 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
-  const url = `/projects/${rowData.type}/${rowData.channel}/`;
-  return <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>;
+  return (
+    <PersonalProjectsNameCell
+      id={rowData.id}
+      projectId={rowData.channel}
+      projectType={rowData.type}
+      projectName={projectName}
+      isEditing={rowData.isEditing}
+      updatedName={rowData.updatedName}
+    />
+  );
 };
 
 const actionsFormatter = (actions, {rowData}) => {
   return (
     <PersonalProjectsTableActionsCell
-      isPublished = {!!rowData.publishedAt}
-      projectId = {rowData.channel}
-      projectType = {rowData.type}
+      isPublished={!!rowData.publishedAt}
+      projectId={rowData.channel}
+      projectType={rowData.type}
+      isEditing={rowData.isEditing}
+      updatedName={rowData.updatedName}
     />
   );
 };

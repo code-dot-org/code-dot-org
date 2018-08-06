@@ -5,6 +5,7 @@ export function getDanceAPI(p5Inst) {
   const fft = new p5.FFT(0.7, 128);
   const peakDetect = new p5.PeakDetect(3000, 5000, 0.1, 3);
   const customPeakDetects = [];
+  const songs = [];
 
   return {
     oscillator: {
@@ -30,14 +31,16 @@ export function getDanceAPI(p5Inst) {
     },
 
     song: {
-      start: () => p5Inst.defaultSong.play(),
-      stop: () => p5Inst.defaultSong.stop(),
-      isPlaying: () => p5Inst.defaultSong.isPlaying(),
-      currentTime: () => p5Inst.defaultSong.currentTime(),
-      duration: () => p5Inst.defaultSong.duration(),
-      processPeaks: (...args) => p5Inst.defaultSong.processPeaks(...args),
-      addCue: (...args) => p5Inst.defaultSong.addCue(...args),
-      clearCues: () => p5Inst.defaultSong.clearCues(),
+      load: song => songs.push(p5Inst.loadSound(song)) - 1,
+      start: (n = 0) => songs[n].play(),
+      stop: (n = 0) => songs[n].stop(),
+      isPlaying: (n = 0) => songs[n].isPlaying(),
+      currentTime: (n = 0) => songs[n].currentTime(),
+      duration: (n = 0) => songs[n].duration(),
+      processPeaks: (n = 0, ...args) => songs[n].processPeaks(...args),
+      addCue: (n, ...args) => songs[n].addCue(...args),
+      clearCues: (n = 0) => songs[n].clearCues(),
+      setVolume: (n = 0, vol, rampTime) => songs[n].setVolume(vol, rampTime),
     },
   };
 }

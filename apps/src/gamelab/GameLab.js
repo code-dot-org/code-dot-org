@@ -62,6 +62,14 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import defaultSprites from './defaultSprites.json';
 import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import wrap from './debugger/replay';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {
+  clearMarks,
+  clearMeasures,
+  getEntriesByName,
+  mark,
+  measure
+} from '@cdo/apps/util/performance';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -83,6 +91,9 @@ var ArrowIds = {
   SPACE: 'studio-space-button',
 };
 
+const DRAW_LOOP_START = 'drawLoopStart';
+const DRAW_LOOP_MEASURE = 'drawLoop';
+
 /**
  * An instantiable GameLab class
  * @constructor
@@ -93,6 +104,8 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
+  this.drawLoopTotalTime = 0;
+  this.spriteTotalCount = 0;
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -117,6 +130,8 @@ var GameLab = function () {
   this.gameLabP5 = new GameLabP5();
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
+  this.reportPerf = experiments.isEnabled('reportGameLabPerf') ||
+    Math.random() < 0.05;
 
   dropletConfig.injectGameLab(this);
 
@@ -235,14 +250,8 @@ GameLab.prototype.init = function (config) {
     showRateLimitAlert: this.studioApp_.showRateLimitAlert
   });
 
-  let song;
-  if (this.isDanceLab) {
-    song = '/api/v1/sound-library/category_background/jazzy_beats.mp3';
-  }
-
   this.gameLabP5.init({
     gameLab: this,
-    song,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
@@ -562,6 +571,11 @@ GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
 };
 
 GameLab.prototype.haltExecution_ = function () {
+  this.reportMetrics();
+  clearMarks(DRAW_LOOP_START);
+  clearMeasures(DRAW_LOOP_MEASURE);
+  this.spriteTotalCount = 0;
+
   this.eventHandlers = {};
   this.stopTickTimer();
   this.tickCount = 0;
@@ -1427,6 +1441,49 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
   }
 };
 
+GameLab.prototype.runValidationCode = function () {
+  if (this.level.validationCode) {
+    try {
+      const validationResult =
+        this.JSInterpreter.interpreter.marshalInterpreterToNative(
+          this.JSInterpreter.evalInCurrentScope(`
+            (function () {
+              validationState = null;
+              validationResult = null;
+              ${this.level.validationCode}
+              return {
+                state: validationState,
+                result: validationResult
+              };
+            })();
+          `)
+        );
+      if (validationResult.state === 'succeeded') {
+        const testResult = validationResult.result ||
+            TestResults.ALL_PASS;
+        this.onPuzzleComplete(false, testResult);
+      } else if (validationResult === 'failed') {
+        // TODO(ram): Show failure feedback
+      }
+    } catch (e) {
+      // If validation code errors, assume it was neither a success nor failure
+      console.error(e);
+    }
+  }
+};
+
+GameLab.prototype.measureDrawLoop = function (name, callback) {
+  if (this.reportPerf) {
+    mark(`${name}_start`);
+    callback();
+    measure(name, `${name}_start`);
+    clearMarks(`${name}_start`);
+    this.spriteTotalCount += this.gameLabP5.p5.allSprites.length;
+  } else {
+    callback();
+  }
+};
+
 /**
  * This is called while this.gameLabP5 is in a draw() call. We call the user's
  * draw function.
@@ -1435,36 +1492,10 @@ GameLab.prototype.onP5Draw = function () {
   if (this.JSInterpreter && this.eventHandlers.draw) {
     this.drawInProgress = true;
     if (getStore().getState().runState.isRunning) {
-      this.eventHandlers.draw.apply(null);
-      if (this.level.validationCode) {
-        try {
-          const validationResult =
-            this.JSInterpreter.interpreter.marshalInterpreterToNative(
-              this.JSInterpreter.evalInCurrentScope(`
-                (function () {
-                  validationState = null;
-                  validationResult = null;
-                  ${this.level.validationCode}
-                  return {
-                    state: validationState,
-                    result: validationResult
-                  };
-                })();
-              `)
-            );
-          if (validationResult.state === 'succeeded') {
-            console.log('success!');
-            const testResult = validationResult.result ||
-                TestResults.ALL_PASS;
-            this.onPuzzleComplete(false, testResult);
-          } else if (validationResult === 'failed') {
-            // TODO(ram): Show failure feedback
-          }
-        } catch (e) {
-          // If validation code errors, assume it was neither a success nor failure
-          console.error(e);
-        }
-      }
+      this.measureDrawLoop(DRAW_LOOP_MEASURE, () => {
+        this.eventHandlers.draw.apply(null);
+        this.runValidationCode();
+      });
     } else if (this.shouldAutoRunSetup) {
       switch (this.level.autoRunSetup) {
         case GamelabAutorunOptions.draw_loop:
@@ -1494,6 +1525,31 @@ GameLab.prototype.captureInitialImage = function () {
   captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
 };
 
+/**
+ * Log some performance numbers to firehose
+ */
+GameLab.prototype.reportMetrics = function () {
+  const drawLoopTimes = getEntriesByName(DRAW_LOOP_MEASURE)
+    .map(entry => entry.duration)
+    .sort();
+  if (!drawLoopTimes.length) {
+    return;
+  }
+
+  const levelType =
+    this.level.editCode ? 'GameLab' :
+    this.level.helperLibraries && this.level.helperLibraries[0];
+  firehoseClient.putRecord({
+    study: 'gamelab_performance',
+    event: 'performance_report',
+    data_string: levelType,
+    data_json: JSON.stringify({
+      drawLoopAverageMs: drawLoopTimes[Math.floor(drawLoopTimes.length / 2)],
+      spriteAverageCount: this.spriteTotalCount / drawLoopTimes.length,
+    }),
+  });
+};
+
 
 GameLab.prototype.completeRedrawIfDrawComplete = function () {
   if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
@@ -1505,6 +1561,9 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber, outputString) {
   outputError(outputString, lineNumber);
+  if (err.native) {
+    console.error(err.stack);
+  }
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
 };
