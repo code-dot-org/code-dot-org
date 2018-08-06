@@ -11,7 +11,7 @@ sr:
       draw a triangle: нацртај троугао
       draw a house: нацртај кућу
       draw a star: нацртајте звезду
-      do something: уради нешто
+      do something: урадити нешто
       jump: скок
       set score: постави резултат
       get nectar: узми нектар
@@ -22,6 +22,6 @@ sr:
       move up: помери се горе
       move down: помери доле
       move left: помери лево
-      turn left: окрени се улево
+      turn left: окрени се лево
       move forward: помери се напред
-      turn right: окрени се удесно
+      turn right: окрени се десно
