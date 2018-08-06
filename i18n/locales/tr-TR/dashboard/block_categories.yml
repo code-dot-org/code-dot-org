@@ -1,7 +1,7 @@
 tr:
   data:
     block_categories:
-      Actions: Eylemler
+      Actions: İşlemler
       Loops: Döngüler
       Functions: Fonksiyonlar
       Color: Renk
