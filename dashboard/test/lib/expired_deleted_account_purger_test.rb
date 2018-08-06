@@ -4,12 +4,6 @@ require 'expired_deleted_account_purger'
 class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   freeze_time
 
-  setup_all do
-    # No soft-deleted users and no purged users, to begin with.
-    assert_empty User.with_deleted.where(purged_at: nil).where.not(deleted_at: nil)
-    assert_empty User.with_deleted.where.not(purged_at: nil)
-  end
-
   test 'can construct with no arguments - all defaults' do
     edap = ExpiredDeletedAccountPurger.new
     assert_equal false, edap.dry_run?
@@ -147,10 +141,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'with two eligible and two ineligible accounts' do
-    create :student, deleted_at: 1.day.ago
-    create :student, deleted_at: 3.days.ago
-    create :student, deleted_at: 3.days.ago
-    create :student, deleted_at: 5.days.ago
+    student_a = create :student, deleted_at: 1.day.ago
+    student_b = create :student, deleted_at: 3.days.ago
+    student_c = create :student, deleted_at: 3.days.ago
+    student_d = create :student, deleted_at: 5.days.ago
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
@@ -159,41 +153,44 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     AccountPurger.stubs(:new).returns(FakeAccountPurger.new)
 
     NewRelic::Agent.stubs(:record_metric).
-      once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", 2)
+      once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/AccountsPurged", 2)
     NewRelic::Agent.stubs(:record_metric).
-      once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", 0)
+      once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
     edap.purge_expired_deleted_accounts!
 
-    assert_equal 2, User.with_deleted.where(purged_at: nil).where.not(deleted_at: nil).count
-    assert_equal 2, User.with_deleted.where.not(purged_at: nil).count
+    purged = User.with_deleted.where.not(purged_at: nil)
+    refute_includes purged, student_a
+    assert_includes purged, student_b
+    assert_includes purged, student_c
+    refute_includes purged, student_d
   end
 
   test 'moves account to queue when purge fails' do
-    create :student, deleted_at: 3.days.ago
-    error_student = create :student, deleted_at: 3.days.ago
+    student_a = create :student, deleted_at: 3.days.ago
+    student_b = create :student, deleted_at: 3.days.ago
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
       deleted_before: 2.days.ago
 
-    AccountPurger.stubs(:new).returns(FakeAccountPurger.new(fails_on: error_student))
+    AccountPurger.stubs(:new).returns(FakeAccountPurger.new(fails_on: student_b))
 
     NewRelic::Agent.stubs(:record_metric).
-      once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", 1)
+      once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/AccountsPurged", 1)
     # TODO: Test moved to manual review queue
     NewRelic::Agent.stubs(:record_metric).
-      once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", 0)
+      once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
     edap.purge_expired_deleted_accounts!
 
-    assert_equal 1, User.with_deleted.where(purged_at: nil).where.not(deleted_at: nil).count
-    assert_equal 1, User.with_deleted.where.not(purged_at: nil).count
-    # TODO: Test manual review queue
+    purged = User.with_deleted.where.not(purged_at: nil)
+    assert_includes purged, student_a
+    refute_includes purged, student_b
   end
 
   test 'dry-run behavior' do
@@ -232,13 +229,13 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     # Still sends metrics to New Relic
     # Finds 6 soft-deleted accounts since we didn't delete any
     NewRelic::Agent.stubs(:record_metric).
-      once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", 6)
+      once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
     # Records no purged accounts
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/AccountsPurged", 0)
     # Nothing moved to manual review queue
     NewRelic::Agent.stubs(:record_metric).
-      once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", 0)
+      once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
     raised = assert_raises ExpiredDeletedAccountPurger::SafetyConstraintViolation do
       edap.purge_expired_deleted_accounts!
