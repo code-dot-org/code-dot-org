@@ -105,6 +105,9 @@ Scenario: Course unit family names redirect to their latest stable version
 
 @as_student
 @no_mobile
-Scenario: Script levels in renamed scripts redirect to latest stable version
+Scenario: Script levels in renamed scripts redirect to their original version
   When I am on "http://studio.code.org/s/csp3/stage/9/puzzle/11"
-  And I get redirected to "/s/csp3-2018/stage/9/puzzle/11" via "dashboard"
+  # Keep redirecting to the original version of a script level after a later
+  # script version becomes stable, because a user with a deep link to a specific
+  # level will most likely expect to see their previous progress there.
+  And I get redirected to "/s/csp3-2017/stage/9/puzzle/11" via "dashboard"

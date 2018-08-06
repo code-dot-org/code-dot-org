@@ -10,6 +10,7 @@ import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -34,6 +35,7 @@ const RecordButton = ({onSelectRecord}) => (
     text={i18n.recordAudio()}
     icon="microphone"
     style={styles.buttonStyle}
+    size="large"
   />
 );
 
@@ -54,9 +56,12 @@ const styles = {
   buttonStyle: {
     paddingLeft: 10,
     paddingRight: 10,
-    margin: 5,
+    marginTop: 5,
     borderRadius: 4,
-    fontSize: 'large'
+    fontSize: 'large',
+    fontWeight: 'lighter',
+    boxShadow: 'none',
+    borderColor: color.orange
   }
 };
 
