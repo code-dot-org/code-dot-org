@@ -90,33 +90,33 @@
 
 .field
   = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-  = render partial: 'levels/editors/collapsed', locals: {f: f, xml_id: 'toolbox'}
+  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'toolbox'}
 
 .field
   - if @level.uses_droplet?
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsed', locals: {f: f, xml_id: 'start'}
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'start'}
 
 .field
   - if @level.uses_droplet?
     = f.label :required_blocks,'Edit Required Blocks'
   - else
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsed', locals: {f: f, xml_id: 'required'}
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
 
 .field
   - if @level.uses_droplet?
     = f.label :recommended_blocks, 'Edit Recommended Blocks'
   - else
     = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsed', locals: {f: f, xml_id: 'recommended'}
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
 
 - unless @level.uses_droplet?
   .field
     = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsed', locals: {f: f, xml_id: 'initialization'}
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
 
 .field
   = f.label :ideal, 'Ideal block number'
@@ -140,7 +140,7 @@
       = f.label :solution_blocks, 'Edit Solution Blocks'
     - else
       = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
-      = render partial: 'levels/editors/collapsed', locals: {f: f, xml_id: 'solution'}
+      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'solution'}
 
 :ruby
   script_data = {
