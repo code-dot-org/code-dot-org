@@ -71,7 +71,7 @@ lt:
       FunctionalSuncatchers:
         title: Sekų suvokimas
       SongwritingParameters:
-        title: Dainų rašymas su parametrais
+        title: Dainų rašymas
         desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
       DiceRace:
         title: 'Algoritmai realiame gyvenime: kauliukų lenktynės'
@@ -145,7 +145,7 @@ lt:
       courseE_unplugged_crowdsourcing:
         title: Komandinis programavimas
       courseE_unplugged_songwriting:
-        title: Dainų rašymas su parametrais
+        title: Dainų rašymas
         desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
       courseF_unplugged_songwritingParameters:
         title: Dainų rašymas su parametrais
