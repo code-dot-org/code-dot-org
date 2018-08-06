@@ -156,7 +156,7 @@ zh-CN:
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: 将这些变量设置为1或0，也被称作设置“标志”。标志能够给我们的函数发出信号，来让蜜蜂往需要的方向前进。
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: 点击"运行"以尝试您的程序
+        Course 4 Maze 1_callout1: 点击“运行”，试试你的程序
         Course 4 Maze 1_callout2: 拖动“向前移动”模块到工作区中，并将它接到其它模块的下面。
       Course 4 Maze 4_callout:
         repeat: 在循环中放入模块来重复执行命令
@@ -273,10 +273,10 @@ zh-CN:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: 此代码将开始建造你的房子。你能完成吗？
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: 点击"运行"以尝试您的程序
+        craft_run_button_callout: 点击“运行”，试试你的程序
         craft_drag_block_callout: 拖动一个“向前移动”模块并接到其他模块下方
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: 点击"运行"以尝试您的程序
+        craft_run_button_callout: 点击“运行”，试试你的程序
         craft_drag_block_callout: 拖动一个“向前移动”模块并接到其他模块下方
       Overworld Place Wall_callout:
         craft_inside_repeat: 将方块放在这里可以重复行动
@@ -424,14 +424,14 @@ zh-CN:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseA_maze_ramp2a_2018_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseA_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
         stone_block_2: 灰色的块是石头做的, 不能扔掉。
       courseA_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: 当您需要提示时点击灯泡!
       courseA_maze_seq1_2018_callout:
@@ -519,19 +519,19 @@ zh-CN:
       courseC_maze_programming1_2018_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseC_maze_programming2_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseC_maze_programming2_2018_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
         courseC_maze_programming3_3: 这些块是石头, 不能扔掉。
       courseC_maze_programming3_2018_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
         courseC_maze_programming3_3: 这些块是石头, 不能扔掉。
       courseC_maze_programming4_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseC_maze_programming4_2018_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
         courseC_maze_programming7_2: 这些块是石头做的, 不能扔掉。
@@ -585,17 +585,17 @@ zh-CN:
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseD_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
         stone_block_2: 灰色的块是石头做的, 不能扔掉。
       courseD_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
         stone_block_2: 灰色的块是石头做的, 不能扔掉。
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseD_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_maze_ramp6a_callout:
@@ -613,17 +613,17 @@ zh-CN:
       courseD_scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseD_scrat_ramp2_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseD_scrat_ramp2_2018_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseD_scrat_ramp3_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       courseD_scrat_ramp3_2018_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       courseD_scrat_ramp4_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseD_scrat_ramp4_2018_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseD_scrat_ramp6_callout:
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp6_2018_callout:
@@ -705,17 +705,17 @@ zh-CN:
       courseE_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseE_maze_ramp2_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseE_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseE_maze_ramp3_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       courseE_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       courseE_maze_ramp4_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseE_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseE_maze_ramp6_2018_callout:
@@ -841,13 +841,13 @@ zh-CN:
       courseF_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseF_maze_ramp2_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseF_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseF_maze_ramp4_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseF_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseF_maze_ramp6_callout:
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseF_maze_ramp6_2018_callout:
@@ -891,9 +891,9 @@ zh-CN:
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       coursef_maze_ramp3_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       coursef_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: 用“创建圆圈”模块，并且改变大小。
       frozen cross rotate_callout:
@@ -929,13 +929,13 @@ zh-CN:
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       grade2_CaringForNewPet_1_callout:
-        grade2_CaringForNewPet_1_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+        grade2_CaringForNewPet_1_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       grade2_CaringForNewPet_2_callout:
-        grade2_CaringForNewPet_2_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        grade2_CaringForNewPet_2_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       grade2_CaringForNewPet_2courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+        courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       grade2_CaringForNewPet_3_callout:
-        grade2_CaringForNewPet_3_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+        grade2_CaringForNewPet_3_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       grade2_collector_7_callout:
         grade2_collector_7_1: 如果你需要的话，可以从工具箱里取更多的模块！
       grade2_puppy_loops2_callout:
