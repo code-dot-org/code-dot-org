@@ -40,6 +40,7 @@ export function getDanceAPI(p5Inst) {
       processPeaks: (n = 0, ...args) => songs[n].processPeaks(...args),
       addCue: (n, ...args) => songs[n].addCue(...args),
       clearCues: (n = 0) => songs[n].clearCues(),
+      setVolume: (n = 0, vol, rampTime) => songs[n].setVolume(vol, rampTime),
     },
   };
 }
