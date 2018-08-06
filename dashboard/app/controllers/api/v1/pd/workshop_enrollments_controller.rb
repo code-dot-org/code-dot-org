@@ -128,7 +128,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   def render_unsuccessful(error_message, options={})
     render json: options.merge({workshop_enrollment_status: error_message}),
-      status: 409
+      status: 400
   end
 
   def workshop_closed?

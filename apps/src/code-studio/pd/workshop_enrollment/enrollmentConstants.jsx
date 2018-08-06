@@ -38,7 +38,8 @@ const SUBMISSION_STATUSES = {
   CLOSED: "closed",
   FULL: "full",
   NOT_FOUND: "not found",
-  SUCCESS: "success"
+  SUCCESS: "success",
+  UNKNOWN_ERROR: "error"
 };
 
 const SCHOOL_TYPES = {
