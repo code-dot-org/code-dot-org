@@ -367,6 +367,8 @@ sr-SP:
     6-10
   minecraft_designer: Дизајнер игрице Minecraft
   minecraft_agent_button: Покрени
+  minecraft_designer_description: Програмирај животиње и друга Minecraft створења
+    у својој верзији Minecraft-а.
   minecraft_designer_button: Покрени
   minecraft_adventurer_button: Покрени
   minecraft_no_internet: Немаш приступ интернету?
@@ -849,6 +851,7 @@ sr-SP:
   scratch_beyond_name: Будите креативни с програмирањем
   robomind_beyond_name: Програмирајте виртуелног робота
   codehs_beyond_name: Научите да програмирате са Карелом псом
+  teachingtree_beyond_name: Унивезетски курсеви на интернету
   lightbot_beyond_gradelevel: Сви узрасти
   codecademy_beyond_gradelevel: Средња школа
   kodable_beyond_gradelevel: Основна школа (од 1. до 4. разреда)

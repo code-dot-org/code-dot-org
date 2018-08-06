@@ -266,7 +266,7 @@ nl-NL:
   studiobar_title_nolink: ontdek Code Studio
   studiobar_elementary_title: Cursussen voor gevorderden
   studiobar_elementary_body: Onze drie Nieuwe Cursussen voor K&#8209;5
-  studiobar_hoc_title: Het Hour of Code
+  studiobar_hoc_title: Het Uur Code
   studiobar_hoc_body: Leer te programmeren met Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Maak en deel je eigen Flappy spel
@@ -457,6 +457,8 @@ nl-NL:
   minecraft_tutorials: Minecraft Code Uur handleidingen
   minecraft_specs: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
   minecraft_agent_button: Start
+  minecraft_designer_description: Ga dieren en andere Minecraft wezens programmeren
+    in je eigen Minecraft omgeving.
   minecraft_designer_button: Start
   minecraft_adventurer_description: Gebruik code om Alex of Steve op avontuur te laten
     gaan.
@@ -737,7 +739,7 @@ nl-NL:
     een student  resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen.
     Een nieuwe geheime afbeelding zal worden gegenereerd welke  gebruikt moet worden
     wanneer ze inloggen.
-  dashboard_students_secret_word_title: Wachtwoord
+  dashboard_students_secret_word_title: Geheime woorden
   dashboard_students_secret_word: Wachtwoord
   dashboard_students_reset_word: "U kan op elk moment de wachtwoord van een student
     \ resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen. Een nieuwe
@@ -806,7 +808,7 @@ nl-NL:
   stats_hoc_2013_heading: 'Ongelooflijke statistieken voor de ''Hour of Code'' van
     vorig jaar. In één week alleen al:'
   stats_hoc_2013_image_alt: Statistieken van de 'Hour of Code' van 2013
-  dashboard_teacher: Leerkracht
+  dashboard_teacher: Leraar
   dashboard_student: Leerling
   dashboard_sections_email_question: Hebben alle studenten een geldig e-mailadres?
   dashboard_sections_account_creation_question: Wie maakt her account voor de leerlingen?
@@ -896,7 +898,7 @@ nl-NL:
   codeorg_name: Klassiek doolhof
   codeintl_name: Klassiek doolhof
   thinkersmithspanish_name: Mijn Robotvriend
-  khan_name: Een inleiding in JavaScript
+  khan_name: Een inleiding tot JavaScript
   khanes_name: Een inleiding in JavaScript
   khanpt_name: Een inleiding tot JavaScript
   khanhe_name: Een inleiding in JavaScript
@@ -923,7 +925,7 @@ nl-NL:
   robomindnl_name: Programmeer een virtuele robot
   flappy_name: Maak een Flappy spel
   bitsbox_name: Bitsbox - Maak een spel
-  makeschool_name: Bouw een iPhonespel in je browser!
+  makeschool_name: Maak een iPhone spel in je browser!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
@@ -950,7 +952,7 @@ nl-NL:
   classicmaze_name: Klassiek doolhof
   iceage_name: Ice Age
   minecraft_name: Minecraft
-  math_category_name: Wiskunde
+  math_category_name: wiskundige
   hoc_category_name: Uur Code
   csp17_category_name: CW Principes
   cspexams_category_name: CW Principes Praktische Test
@@ -988,7 +990,7 @@ nl-NL:
   kodable_gradelevel: Basis
   tynkerapp_gradelevel: Leeftijden 5-13
   robomindnl_gradelevel: Leeftijden 8-13
-  flappy_gradelevel: Leeftijden 4-104
+  flappy_gradelevel: Leeftijd 6+
   bitsbox_gradelevel: Basis
   makeschool_gradelevel: Middelbare school
   touchdevelop_gradelevel: Middelbare school
@@ -998,7 +1000,7 @@ nl-NL:
   kodableunplugged_gradelevel: Leeftijden 8-13
   projguts_gradelevel: Leeftijden van 10-13
   hourofcode_gradelevel: Leeftijden 4-104
-  frozen_gradelevel: Leeftijden 8 +
+  frozen_gradelevel: Leeftijden 4-104
   starwars_gradelevel: Leeftijd 6+
   playlab_gradelevel: Leeftijden 4-104
   infinity_gradelevel: Leeftijden 4-104
@@ -1627,7 +1629,7 @@ nl-NL:
   header_my_dashboard: Mijn Dashboard
   header_courses: Cursussen
   header_course_catalog: Cursuscatalogus
-  header_project_gallery: Projecten
+  header_project_gallery: Projecten overzicht
   header_sections: Secties
   header_professional_learning: Professioneel Leren
   header_educate_elementary: Basisschool

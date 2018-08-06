@@ -64,7 +64,7 @@ hi-IN:
   csedweek_map_legend_event: कोड घंटे की कड़ियाँ
   csedweek_map_legend_cs_tech_jam: विशेष घटना
   cded_try_it: कर के देखे
-  try_now: अब कोशिश करे
+  try_now: अधिक जानें
   california_heading: कंप्यूटर विज्ञान पढ़ाने के लिए अपने स्कूल से पूछो
   california_text: किसी भी शिक्षक हमारे <a href='http://studio.code.org/'> मुफ्त पाठ्यक्रमों</a>
     को इस्तेमाल कर सकते हैं।  कोई भी प्राथमिक स्कूल <a href='http://code.org/educate/k5'>
@@ -163,6 +163,10 @@ hi-IN:
   class_submission_level_high_school: उच्च विद्यालय
   class_submission_level_college: कॉलेज
   starwars_javascript_title: जावास्क्रिप्ट
+  mc_longdescription: इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
+    को ले जाने के लिए कोड ब्लॉक का उपयोग करें
+  mc_shortdescription: इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
+    को ले जाने के लिए कोड ब्लॉक का उपयोग करें
   mc_gradelevel: उम्र 6-106
   minecraft_agent_button: शुरू करें
   minecraft_designer_button: शुरू करें

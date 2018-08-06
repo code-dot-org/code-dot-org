@@ -59,7 +59,7 @@ km-KH:
   csedweek_map_legend_cs_tech_jam: "​ព្រឹត្តិការណ៍ពិសេស"
   cded_sign_up: ចុះឈ្មោះ
   cded_try_it: សាកល្បង
-  try_now: សាកល្បង​ឥឡូវ
+  try_now: រៀនបន្ថែមទៀត
   california_heading: ស្នើសុំសាលារបស់អ្នកដើម្បីបង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័រ
   california_text: គ្រូបង្រៀនទាំងអស់អាចទទួលបាន <a href='http://studio.code.org/'>មេរៀនដោយឥតគិតថ្លៃ</a>។  គ្រូបង្រៀនបឋមសិក្សាទាំងអស់អាច
     <a href='http://code.org/educate/k5'>បង្រៀនវិទ្យាសាស្រ្តកុំព្យូទ័របាន</a>។ ស្នើសុំវិទ្យាល័យ
@@ -401,6 +401,8 @@ km-KH:
   homepage_header_donors: Code.org សូមថ្លែងអំណរគុណដល់អ្នកគាំទ្រ
   homepage_donors_seall: មើលទាំងអស់
   homepage_donors_donate: បរិចាក
+  homepage_below_hero_announcement_text: យើងខ្ញុំយកចិត្តទុកដាក់ដល់ភាពឯកជនរបស់អ្នកប្រើប្រាស់
+    យើងខ្ញុំនឹងធើ្វការកែរប្រែរទៅលើគោលការឯកជន, មានប្រសិទ្ធភាពពីថៃ្ងឧសភា ២៥ ។
   homepage_below_hero_announcement_link_text: សិក្សាបន្ថែម
   contact_form_topic_student: ខ្ញុំគឺជាសិស្ស
   contact_form_topic_parent: ខ្ញុំគឺជាឪពុកម្តាយ
@@ -617,6 +619,7 @@ km-KH:
   volunteer_engineer_submission_field_email: អាសយដ្ឋាន​អ៊ីមែល
   volunteer_engineer_submission_field_email_desc: អាសយដ្ឋានអ៊ីមែលរបស់អ្នកនឹងមិនត្រូវបានចែករំលែកទេប៉ុន្តែយើងនឹងផ្ញើសំណើពីគ្រូទៅកាន់អ្នក។
   volunteer_engineer_submission_field_email_placeholder: អាសយដ្ឋាន​អ៊ីមែល
+  volunteer_engineer_submission_field_email_preference_privacy: "(សូមមើលគោលនយោបាយឯកភាពរបស់យើងខ្ញុំ)"
   volunteer_engineer_submission_field_email_preference_yes: យល់ព្រម
   volunteer_engineer_submission_field_email_preference_no: ទេ
   volunteer_engineer_submission_final_paragraph: អ្នកនឹងត្រូវបានចុះបញ្ជីនៅលើផែនទីសម្រាប់គ្រូបង្រៀនក្នុងតំបន់ដើម្បីទាក់ទងអ្នកសម្រាប់កម្មវិធី
@@ -741,6 +744,7 @@ km-KH:
   dashboard_students_name: ឈ្មោះ
   dashboard_students_male: ប្រុស
   dashboard_students_female: ស្រី
+  dashboard_students_secret_word_title: ពាក្យដែលរក្សារជាការសម្ងាត់
   dashboard_grade_other: ផ្សេងៗ
   dashboard_login_none: អ៊ីមែល
   dashboard_stage: ដំណាក់​កាល
@@ -751,7 +755,7 @@ km-KH:
   learn_sign_up_button: ចុះឈ្មោះ
   blockly_name: Blockly
   iceage_name: Ice Age
-  math_category_name: គណិតវិទ្យា
+  math_category_name: គណិត​វិទ្យា
   hoc_category_name: ពេលវេលា​នៃ​កូដ
   basketball_name: បង្កើតហ្គេមបោះបាល់
   lightbot_gradelevel: គ្រប់​អាយុ
@@ -784,6 +788,7 @@ km-KH:
   header_my_dashboard: ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ
   header_courses: វគ្គ​សិក្សា
   header_course_catalog: មុខវិទ្យាដោយផ្នែក
+  header_project_gallery: គម្រោង
   header_sections: វគ្គ
   header_professional_learning: ការរៀនដោយមានវិជ្ជាជីវ
   header_educate_elementary: សាលាបឋម

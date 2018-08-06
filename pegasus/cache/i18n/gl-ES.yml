@@ -5,7 +5,7 @@ gl-ES:
   'yes': Si
   'no': Non
   select_language: Por favor escolle a túa linguaxe
-  upgrade_ie_link: Aprende máis
+  upgrade_ie_link: Aprender máis
   en: Informática
   computer_science_edweek: Semana da Educación en Informática
   csedweek_dates: 8-14 de decembro de 2014
@@ -254,10 +254,10 @@ gl-ES:
   homepage_banner_link_prizes: 'Xúntate ao maior evento de aprendizaxe da historia. '
   homepage_banner_text_main: A Code.org e a College Board forman unha alianza para
     aumentar a diversidade na informática.
-  homepage_banner_text_link: Aprende máis
-  homepage_banner_privacy_link: Aprende máis
-  homepage_banner_20k_teachers_link: Aprende máis
-  homepage_banner_40k_teachers_link: Aprende máis
+  homepage_banner_text_link: Aprender máis
+  homepage_banner_privacy_link: Aprender máis
+  homepage_banner_20k_teachers_link: Aprender máis
+  homepage_banner_40k_teachers_link: Aprender máis
   homepage_slot_text_title_hoc: Hora de Código
   homepage_slot_text_blurb_hoc: Calquera persoa pode aprender. Comeza hoxe mesmo
   homepage_slot_text_link_hoc: Proba a Hora do Código
@@ -285,7 +285,7 @@ gl-ES:
   homepage_header_donors: A Code.org agradece aos seus colaboradores
   homepage_donors_seall: Ver todos
   homepage_donors_donate: Fai unha doazón
-  homepage_below_hero_announcement_link_text: Aprende máis
+  homepage_below_hero_announcement_link_text: Aprender máis
   contact_form_topic_student: Son un estudante
   contact_form_topic_parent: Son un pai
   contact_form_topic_teacher: Son un profesor/educador
@@ -342,10 +342,10 @@ gl-ES:
     | De 6 a 10 anos
   starwars_platform_text: Navegadores Web modernos, smartphones, tablets
   mc_name: Hora do Código Minecraft
-  mc_longdescription: Usa bloques de código para levar ao Steve ou ao Alex a unha
-    aventura polo mundo do Minecraft.
-  mc_shortdescription: Usa bloques de código para levar ao Steve ou ao Alex a unha
-    aventura polo mundo do Minecraft.
+  mc_longdescription: Usa bloques de código para acompañar a Steve ou a Alex nunha
+    aventura polo mundo de Minecraft
+  mc_shortdescription: Usa bloques de código para acompañar a Steve ou a Alex nunha
+    aventura polo mundo de Minecraft
   mc_gradelevel: De 6 a 106 anos
   mc_platformtext: Navegadores Web modernos, smartphones, tablets
   mc_specs: Moitos idiomas | Navegadores modernos e tablets | Maiores de 6 anos
@@ -468,7 +468,7 @@ gl-ES:
   volunteer_engineer_submission_type_task_mentor: Estou en busca dun mentor para me
     axudar a me preparar para programar cos meus alumnos
   petition_age: Idade
-  dashboard_announce_learn_more_button: Aprende máis
+  dashboard_announce_learn_more_button: Aprender máis
   dashboard_landing_title: Páxina inicial do profesor
   dashboard_landing_welcome: Benvido ao novo panel do profesor.
   dashboard_landing_video: Ve este vídeo
@@ -613,7 +613,7 @@ gl-ES:
   dashboard_students_reset_picture: Podse redefinir a imaxe secreta dun alumno a calquera
     hora usando <b>Mostrar segredo</b>, e entón <b>Redefinir o segredo</b>. Unha nova
     imaxe secreta vai ser xerada para ese alumno cando entre.
-  dashboard_students_secret_word_title: Palabra secreta
+  dashboard_students_secret_word_title: Palabras secretas
   dashboard_students_secret_word: Esta sección usa <b>palabra</b> como o teu tipo
     secreto. Iso significa que cada un dos teus alumnos ten un par de palabras secretas
     en vez dun contrasinal para se conectar. Os alumnos deben usar o enderezo de acceso
