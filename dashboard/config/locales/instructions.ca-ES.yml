@@ -18,7 +18,6 @@ ca:
         fa 100, però la que està a mig acabar en fa només 50. Acaba la paret. '
       2-3 Artist 3.4_instruction: El bloc de salt mou l'artista sense que dibuixi.
         Dibuixa la línia de ratlles usant tant els blocs de saltar com els de dibuixar.
-        Cada línia fa 50 píxels de llarg.
       2-3 Artist 3_instruction: Aquest barret fa 100 píxels d'alt. Dibuixa un barret
         que faci 70 píxels menys.
       2-3 Artist 3new_instruction: El barret vermell fa 100 píxels d'alt. Acaba de
@@ -155,10 +154,9 @@ ca:
       2-3 Artist Loops New 14_instruction: Ara dibuixa el diamant deu cops però gira
         90 graus entre cada diamant.
       2-3 Artist Loops New 15_instruction: Dibuixa alguna cosa divertida.
-      2-3 Artist Loops New 2_instruction: |-
-        Aquest és el mateix problema que acabem de resoldre però, ara, només podem usar un bloc `avança` i un bloc `gira`.
-
-        Pots usar un bloc `repeteix` per solucionar-ho?
+      2-3 Artist Loops New 2_instruction: Aquest és part del codi que has usat per
+        dibuixar el quadrat. Què passa si uses el bloc de repetició per executar aquest
+        codi quatre cops?
       2-3 Artist Loops New 9_instruction: Dibuixa una simple V on els dos costats
         fan 50 píxels per completar la fletxa.
       2-3 Artist Match Hex Pic_instruction: 'Unir: Ajuda a acabar l''hexagon.'
@@ -324,12 +322,12 @@ ca:
       2-3 Maze 11_instruction: Porta'm fins a la flor, tinc gana! Quantes vegades
         has de repetir un bloc?
       2-3 Maze 12 (copy 1)_instruction: 'Pots canviar la resposta anterior amb només
-        dos blocs? (Pista: crea un bucle utilitzant un bloc "repeteix".)'
+        dos blocs? (Pista: Crea un bucle usar un bloc "repeteix".)'
       2-3 Maze 12 (copy 2)_instruction: 'Pots canviar la resposta anterior amb només
-        dos blocs? (Pista: crea un bucle utilitzant un bloc "repeteix".)'
+        dos blocs? (Pista: Crea un bucle usar un bloc "repeteix".)'
       2-3 Maze 12 (old)_instruction: Porta'm fins al porc, ara amb el bloc "repeteix"!
-      2-3 Maze 12_instruction: Pots arribar al porc amb un bucle que només usi un
-        bloc "avança" dins d'un "repeteix"?
+      2-3 Maze 12_instruction: 'Pots substituir aquests cinc blocs amb només dos blocs?
+        (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
       2-3 Maze 13 (old)_instruction: Porta'm fins al porc, ara amb el bloc "repeteix
         fins"!
       2-3 Maze 13_instruction: Porta'm fins al porc usant només dos blocs.
@@ -337,8 +335,8 @@ ca:
       2-3 Maze 14_instruction: Porta'm fins al gira-sol! (On és aquest bloc "repeteix"
         quan el necessito?)
       2-3 Maze 15 (old)_instruction: Porta'm fins al porc amb el bloc "repeteix fins"!
-      2-3 Maze 15_instruction: Ara, dos bucles "repeteix" t'ajudaran a arribar al
-        porc amb el menor nombre possible de blocs!
+      2-3 Maze 15_instruction: Utilitza dos bucles per arribar al porc utilitzant
+        menys blocs.
       2-3 Maze 16 (old)_instruction: Porta'm fins al porc amb el bloc "repeteix fins"!
       2-3 Maze 16 before_instruction: Porta'm fins al porc.
       2-3 Maze 16_instruction: Els bucles poden tenir més d'un bloc a dins! Pots fer
@@ -358,7 +356,8 @@ ca:
       2-3 Maze Loops 17_instruction: Porta'm fins al girasol!
       2-3 Maze Loops 18_instruction: Porta'm fins al girasol!
       2-3 Maze Loops 19_instruction: Porta'm fins al girasol!
-      2-3 Maze Loops 20_instruction: Porta'm fins al girasol!
+      2-3 Maze Loops 20_instruction: Pots resoldre aquest trencaclosques usant el
+        menor nombre de blocs possible?
       2-3 Maze Loops 21_instruction: Porta'm fins al girasol!
       2-3 Maze Loops Assessment 1_instruction: 'Avaluació: Porta''m fins al girasol
         usant només 5 blocs! '
@@ -547,6 +546,8 @@ ca:
       App Lab test_instruction: prova
       Bergeron Robot Maze1_instruction: 'Pots ajudar-me a atrapar el porc dolent?
         Apila un parell de blocs "avança" i prem "Executar". '
+      Course 2 Bee Loops 1_instruction: 'Hola, sóc una abella. Em pots ajudar a recollir
+        el nèctar de les flors? '
       Course 4 Artist 1_instruction: 'Ajuda''m a acabar de dibuixar la capsa. (Cada
         línia fa 200 píxels de llarg) '
       Course 4 Artist 10_instruction: |-
@@ -653,6 +654,9 @@ ca:
       Kiki_StarWars_Test_4_instruction: text
       Kiki_StarWars_Test_5_instruction: text
       Kiki_StarWars_Test_5_Example_instruction: text
+      New Bounce Project_instruction: Fes el teu propi joc de botar. Pots canviar
+        totes els efectes visuals i les normes. Quan estiguis, fes clic a Finalitza
+        per a què els teus amics hi juguin al seus mòbils.
       New Gumball Project_instruction: Crea qualsevol cosa que t'agradi i comparteix-la!
       New Ice Age Project_instruction: Crea qualsevol cosa que t'agradi i comparteix-la!
       New Infinity Project_instruction: Crea qualsevol cosa que t'agradi i comparteix-la!
@@ -775,6 +779,9 @@ ca:
       bounce_12_instruction: Fes el teu propi joc de botar. Pots canviar totes els
         efectes visuals i les normes. Quan estiguis, fes clic a Finalitza per a què
         els teus amics hi juguin al seus mòbils.
+      bounce_12_2018_instruction: Fes el teu propi joc de botar. Pots canviar totes
+        els efectes visuals i les normes. Quan estiguis, fes clic a Finalitza per
+        a què els teus amics hi juguin al seus mòbils.
       bounce_1_2018_instruction: Uneix un altre bloc al de "quan tecla a l'esquerra"  i
         prem "Executar". Mou la pala utilitzant la fletxa esquerra per arribar a l'objectiu
         final.
@@ -859,6 +866,9 @@ ca:
         Has de col·locar el nou bloc "Llança nova pilota" a més d'un lloc. A més a
         més, prova de canviar l'escena o la velocitat de la pala i la pilota i mira
         quants punts pots fer abans que el teu oponent en faci dos.
+      courseD_bounce_events12_instruction: Fes el teu propi joc de botar. Pots canviar
+        totes els efectes visuals i les normes. Quan estiguis, fes clic a Finalitza
+        per a què els teus amics hi juguin al seus mòbils.
       courseD_bounce_events2_instruction: Uneix un altre bloc als de "quan tecla a
         la dreta" i "quan tecla a la esquerra". Mou la pala per arribar a tots dos
         objectius finals.
@@ -1038,10 +1048,10 @@ ca:
         bigotis.'
       grade2_PuppyLoops_9_instruction: Sembla que la C al codi està dibuixada al revés.
         Pots fer que sembli una C?
-      grade2_puppy_loops2_instruction: Pots arribar al porc amb un bucle que només
-        usi un bloc "avança" dins d'un "repeteix"?
-      grade2_puppy_loops4_instruction: Ara, dos bucles "repeteix" t'ajudaran a arribar
-        al porc amb el menor nombre possible de blocs!
+      grade2_puppy_loops2_instruction: 'Pots substituir aquests cinc blocs amb només
+        dos blocs? (Pista: creaa un bucle utilitzant un bloc "repeteix".)'
+      grade2_puppy_loops4_instruction: Utilitza dos bucles per arribar al porc utilitzant
+        menys blocs.
       grade3_ConditionalsElse_3_instruction: Ala l'abella només vol fer mel. Assegura't
         de fer la mel tan sols a les bresques.
       grade3_ConditionalsElse_5_instruction: |-
